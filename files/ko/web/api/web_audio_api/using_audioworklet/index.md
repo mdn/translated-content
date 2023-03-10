@@ -1,19 +1,8 @@
 ---
 title: AudioWorklet을 사용하는 백그라운드 오디오 프로세싱
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Examples
-  - Guide
-  - Processing
-  - Web Audio
-  - Web Audio API
-  - WebAudio API
-  - sound
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API가 처음 브라우저에 소개되었을 때, 이것은 실시간으로 오디오를 조작하는 사용자 정의 오디오 프로세서를 생성하기 위해 JavaScript 코드를 사용하고 있었습니다. `ScriptProcessorNode`의 문제점은 단순했습니다: 이것은 메인 스레드에서 실행되기 때문에 실행을 마치기 전까지 다른 모든 동작을 막았습니다. 이러한 방식은 이상적이지 않았습니다. 특히 오디오 프로세싱같이 계산적으로 비용이 많이 들 수 있는 무언가에 대해서 말입니다.
@@ -28,11 +17,11 @@ JavaScript를 사용해 오디오 프로세서를 생성하고, 오디오 workle
 
 단계별 기초를 밟아가며 AudioWorklet의 사용법을 알아보기 전에, 여기에 무엇이 관련되어 있는지 간략한 고수준의 개요를 살펴보며 시작합시다.
 
-1.  하나 이상의 들어오는 소스에서 오디오를 취하고, 데이터에 대해 작업을 수행하고, 결과로 오디오 데이터를 출력하는 {{domxref("AudioWorkletProcessor")}}를 상속받는 오디오 worklet 프로세서 클래스를 정의하는 모듈을 만듭니다.
-2.  오디오 컨텍스트의 {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} 속성을 통해 오디오 컨텍스트의 {{domxref("AudioWorklet")}}에 접근하고, 오디오 worklet의 {{domxref("Worklet.addModule", "addModule()")}} 메서드를 호출하여 오디오 worklet 프로세서 모듈을 설치합니다.
-3.  필요한 대로, (모듈에 의해 정의된) 프로세서의 이름을 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} 생성자에 전달함으로써 오디오 프로세싱 노드를 생성합니다.
-4.  {{domxref("AudioWorkletNode")}}가 필요로 하는, 또는 여러분이 설정하기를 원하는 오디오 파라미터들을 설정합니다. 이 파라미터들은 오디오 worklet 프로세서 모듈 내에 정의되어 있습니다.
-5.  다른 노드처럼, 생성된 `AudioWorkletNode`를 오디오 프로세싱 파이프라인에 연결하고, 오디오 파이프라인을 평상시처럼 사용합니다.
+1. 하나 이상의 들어오는 소스에서 오디오를 취하고, 데이터에 대해 작업을 수행하고, 결과로 오디오 데이터를 출력하는 {{domxref("AudioWorkletProcessor")}}를 상속받는 오디오 worklet 프로세서 클래스를 정의하는 모듈을 만듭니다.
+2. 오디오 컨텍스트의 {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} 속성을 통해 오디오 컨텍스트의 {{domxref("AudioWorklet")}}에 접근하고, 오디오 worklet의 {{domxref("Worklet.addModule", "addModule()")}} 메서드를 호출하여 오디오 worklet 프로세서 모듈을 설치합니다.
+3. 필요한 대로, (모듈에 의해 정의된) 프로세서의 이름을 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} 생성자에 전달함으로써 오디오 프로세싱 노드를 생성합니다.
+4. {{domxref("AudioWorkletNode")}}가 필요로 하는, 또는 여러분이 설정하기를 원하는 오디오 파라미터들을 설정합니다. 이 파라미터들은 오디오 worklet 프로세서 모듈 내에 정의되어 있습니다.
+5. 다른 노드처럼, 생성된 `AudioWorkletNode`를 오디오 프로세싱 파이프라인에 연결하고, 오디오 파이프라인을 평상시처럼 사용합니다.
 
 이 글의 마지막까지 우리는 이 과정들을 예제와 함께 더욱 자세하게 살펴볼 것입니다 (직접 시도해볼 수 있는 작동하는 예제를 포함합니다).
 
@@ -187,15 +176,15 @@ process(inputList, outputList, parameters) {
 
 `process()` 메서드로부터 `false`를 반환하는 것은 API에게 보통의 로직을 따르고 만약 프로세서 노드를 종료하는 것이 적절하다고 여겨지면 그렇게 해야 한다고 말해주는 것입니다. 만약 API가 여러분의 노드가 더 이상 필요없다고 결정한다면, `process()`는 다시 호출되지 않을 것입니다.
 
-<div class="notecard note"><p><strong>참고:</strong> 이 시점에서, 불행하게도, Chrome은 어떤 의미로는 현재 표준에 일치하는 이 알고리즘을 구현하지 않았습니다. 대신, Chrome은 만약 여러분이 <code>true</code>를 반환하면 노드를 살려두고 <code>false</code>를 반환하면 끕니다. 따라서 호환성의 이유로 적어도 Chrome에서는 여러분은 항상 반드시 <code>process()</code>에서 <code>true</code>를 반환해야 합니다. 그러나, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=921354">이 Chrome 이슈</a>가 수정되고 나면, 이것은 성능에 약간 부정적인 영향을 가질지도 모르므로 여러분은 만약 가능하다면 이 동작을 변경하고자 할 것입니다.</p></div>
+> **참고:** 이 시점에서, 불행하게도, Chrome은 어떤 의미로는 현재 표준에 일치하는 이 알고리즘을 구현하지 않았습니다. 대신, Chrome은 만약 여러분이 `true` 를 반환하면 노드를 살려두고 `false` 를 반환하면 끕니다. 따라서 호환성의 이유로 적어도 Chrome에서는 여러분은 항상 반드시 `process()` 에서 `true` 를 반환해야 합니다. 그러나, [이 Chrome 이슈](https://bugs.chromium.org/p/chromium/issues/detail?id=921354)가 수정되고 나면, 이것은 성능에 약간 부정적인 영향을 가질지도 모르므로 여러분은 만약 가능하다면 이 동작을 변경하고자 할 것입니다.
 
 ## 오디오 프로세서 worklet 노드 생성하기
 
 {{domxref("AudioWorkletProcessor")}}를 통해 오디오 데이터 블럭을 채우는 오디오 노드를 생성하려면, 여러분은 다음의 간단한 단계를 따를 필요가 있습니다:
 
-1.  오디오 프로세서 모듈을 로드하고 설치하기
-2.  프로세서의 이름으로 사용할 오디오 프로세서 모듈을 명시하며, {{domxref("AudioWorkletNode")}} 생성하기
-3.  `AudioWorkletNode`에 입력을 연결하고 이 노드의 출력을 적절한 destination에 연결하기 (이는 다른 노드거나 {{domxref("AudioContext")}} 객체의 {{domxref("AudioContext.destination", "destination")}} 속성입니다).
+1. 오디오 프로세서 모듈을 로드하고 설치하기
+2. 프로세서의 이름으로 사용할 오디오 프로세서 모듈을 명시하며, {{domxref("AudioWorkletNode")}} 생성하기
+3. `AudioWorkletNode`에 입력을 연결하고 이 노드의 출력을 적절한 destination에 연결하기 (이는 다른 노드거나 {{domxref("AudioContext")}} 객체의 {{domxref("AudioContext.destination", "destination")}} 속성입니다).
 
 오디오 worklet 프로세서를 사용하기 위해서, 여러분은 다음과 유사한 코드를 사용할 수 있습니다:
 

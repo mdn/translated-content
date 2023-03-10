@@ -1,9 +1,6 @@
 ---
 title: SVG graphics
 slug: Web/SVG/Tutorial/SVG_and_CSS
-tags:
-  - CSS:Getting_Started
-translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/CSS/Getting_Started/SVG_graphics
 ---
 이 페이지는 그래픽을 만들기 위한 특별한 언어 SVG를 설명합니다.
@@ -21,7 +18,7 @@ _SVG_
 
 또한, 다른 문서 마크업 언어들과 함께 사용되는 스타일 시트들도 이미지가 요구되는 곳에 SVG 그래픽의 URL을 지정할 수 있습니다. 예를들면, HTML 문서와 함께 사용하는 스타일 시트에서 `background` 속성 값에 SVG값의 URL을 지정할 수 있습니다.
 
-| 이글을 쓰는 시점에서(2005년 중반), 모질라 브라우저의 몇몇 최근 빌드만이 SVG 지원을 내장하고 있었습니다.[Adobe](http://www.adobe.com/svg/viewer/install/main.html)에서 제공되는 것 같은 플럭인(plugin)을 인스톨하면 다른 버전에서도 SVG 지원을 추가할 수 있습니다.모질라에서의 SVG에 관한 더많은 정보를 원하시면, 이 위키안의 [SVG](ko/SVG) 페이지를 보세요. |
+| 이글을 쓰는 시점에서(2005년 중반), 모질라 브라우저의 몇몇 최근 빌드만이 SVG 지원을 내장하고 있었습니다.[Adobe](http://www.adobe.com/svg/viewer/install/main.html)에서 제공되는 것 같은 플럭인(plugin)을 인스톨하면 다른 버전에서도 SVG 지원을 추가할 수 있습니다.모질라에서의 SVG에 관한 더많은 정보를 원하시면, 이 위키안의 [SVG](/ko/SVG) 페이지를 보세요. |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ### 액션: SVG 예제
@@ -185,4 +182,4 @@ svg {
 
 If you had difficulty understanding this page, or if you have other comments about it, please contribute to its Discussion page.
 
-이 예제에서 SVG 기능이 있는(SVG enabled) 브라우저는 이미 SVG 엘리먼트를 디스플레이하는 방법을 알고 있습니다. 스타일 시트는 단지 그 디스플레이를 특정 방식으로 수정할 뿐 입니다. 그러나 디스플레이하는 방식이 미리 지정되어 있지 않은 범용(general-purpose) XML 문서를 위해서 CSS를 사용할 수있습니다. 다음 페이지에서는 이를 실행해 봅니다: **[XML data](ko/CSS/Getting_Started/XML_data)**
+이 예제에서 SVG 기능이 있는(SVG enabled) 브라우저는 이미 SVG 엘리먼트를 디스플레이하는 방법을 알고 있습니다. 스타일 시트는 단지 그 디스플레이를 특정 방식으로 수정할 뿐 입니다. 그러나 디스플레이하는 방식이 미리 지정되어 있지 않은 범용(general-purpose) XML 문서를 위해서 CSS를 사용할 수있습니다. 다음 페이지에서는 이를 실행해 봅니다: **[XML data](/ko/CSS/Getting_Started/XML_data)**

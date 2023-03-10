@@ -10,6 +10,7 @@ tags:
   - Propriété
 translation_of: Web/API/NodeIterator/root
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`NodeIterator.root`** représente le {{DOMxref("Node")}} qui est la racine de ce que le {{DOMxref("NodeIterator")}} traverse.

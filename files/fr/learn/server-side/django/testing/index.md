@@ -13,6 +13,7 @@ tags:
   - unit tests
 translation_of: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 Quant un site web grandit, il devient plus difficile à tester manuellement. Non seulement il y a plus de choses à tester, mais encore, comme les interactions entres ses composants deviennent plus complexes, un léger changement dans une partie de l'application peut affecter les autres parties, si bien qu'il va être nécessaire de faire beaucoup de modifications pour s'assurer que tout continue de fonctionner, et qu'aucune erreur ne sera introduite quand il y aura encore plus de modifications. Une façon de limiter ces problèmes est d'écrire des tests automatiques qui puissent être lancés d'une manière simple et fiable à chaque fois que vous faites une modification. Ce tutoriel montre comment automatiser des _tests unitaires_ sur votre site web en utilisant le framework de tests de Django.
@@ -229,6 +230,7 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
+
 Ran 3 tests in 0.075s
 
 FAILED (failures=1)
@@ -937,7 +939,7 @@ Dans ce tutoriel, nous vous avons montré comment écrire et lancer des tests po
 
 Le prochain (et dernier) tutoriel montre comment vous pouvez déployer votre merveilleux (et entièrement testé !) site web Django.
 
-## À voir également
+## Voir aussi
 
 - [Writing and running tests](https://docs.djangoproject.com/en/2.1/topics/testing/overview/) (Django docs)
 - [Writing your first Django app, part 5 > Introducing automated testing](https://docs.djangoproject.com/en/2.1/intro/tutorial05/) (Django docs)

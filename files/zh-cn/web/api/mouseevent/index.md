@@ -2,9 +2,10 @@
 title: 鼠标事件
 slug: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
-**`MouseEvent`** 接口指用户与指针设备（如鼠标）交互时发生的事件。使用此接口的常见事件包括：{{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}}、{{event("mousedown")}}。
+**`MouseEvent`** 接口指用户与指针设备（如鼠标）交互时发生的事件。使用此接口的常见事件包括：[`click`](/zh-CN/docs/Web/API/Element/click_event)、[`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)、[`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)、[`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)。
 
 `MouseEvent` 派生自 {{domxref("UIEvent")}}，{{domxref("UIEvent")}} 派生自 {{domxref("Event")}}。虽然 `MouseEvent.initMouseEvent()` 方法保持向后兼容性，但是应该使用 `MouseEvent()` 构造函数创建一个 `MouseEvent` 对象。
 
@@ -38,9 +39,9 @@ _这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型�
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
   - : 当鼠标事件触发时，如果 <kbd>meta</kbd> 键被按下，则返回 true；
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : 鼠标指针相对于最后{{event("mousemove")}}事件位置的 X 坐标。
+  - : 鼠标指针相对于最后[`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)事件位置的 X 坐标。
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : 鼠标指针相对于最后{{event("mousemove")}}事件位置的 Y 坐标。
+  - : 鼠标指针相对于最后[`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)事件位置的 Y 坐标。
 - {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
   - : 鼠标指针相对于目标节点内边位置的 X 坐标
 - {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}
@@ -127,7 +128,7 @@ document.getElementById("button").addEventListener('click', simulateClick);
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent")}}
+{{Compat}}
 
 ## 参考
 

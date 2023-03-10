@@ -2,6 +2,7 @@
 title: URL.origin
 slug: Web/API/URL/origin
 ---
+
 {{APIRef("URL API")}}
 
 **`URL.origin`** 是一个只读属性，返回一个 {{domxref("USVString")}} 类型值，包含 URL 源经过 Unicode 序列化之后的值，也就是：
@@ -31,7 +32,7 @@ var result = new URL("blob:https://mozilla.org:443/").origin;
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.origin")}}
+{{Compat}}
 
 ## See also
 

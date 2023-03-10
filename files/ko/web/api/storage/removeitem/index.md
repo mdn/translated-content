@@ -1,20 +1,17 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - 메소드
-  - 스토리지
-  - 웹 스토리지
-  - 참고
-translation_of: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} 인터페이스의 removeItem() 메소드에 키 이름을 파라미터로 전달하면 스토리지에서 해당 키를 삭제합니다.
 
 ## 문법
 
-    storage.removeItem(keyName);
+```js
+storage.removeItem(keyName);
+```
 
 ### 파라미터
 
@@ -39,13 +36,11 @@ function populateStorage() {
 }
 ```
 
-> **참고:** **주**: 실 사용 예제는 [Web Storage Demo](https://github.com/mdn/web-storage-demo)를 참고하시기 바랍니다.
+> **참고:** 실 사용 예제는 [Web Storage Demo](https://github.com/mdn/web-storage-demo)를 참고하시기 바랍니다.
 
-## 사양
+## 명세서
 
-| 사양                                                                                         | 상태                             | 비고 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('Web Storage', '#dom-storage-removeitem', 'removeItem()')}} | {{Spec2('Web Storage')}} |      |
+{{Specifications}}
 
 ## 브라우저 호환성
 

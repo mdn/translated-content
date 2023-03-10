@@ -1,7 +1,8 @@
 ---
-title: HTML 表格 入门
+title: HTML 表格基础
 slug: Learn/HTML/Tables/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 本文将从 HTML 表格开始，介绍一些基本的内容，如行和单元格、标题、使单元格跨越多个列和行，以及如何将列中的所有单元组合在一起进行样式化。
@@ -11,10 +12,7 @@ slug: Learn/HTML/Tables/Basics
     <tr>
       <th scope="row">前置知识：</th>
       <td>
-        HTML 基本概念 (参见
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 介绍</a
-        >)。
+        HTML 基本概念（参见<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 介绍</a>）。
       </td>
     </tr>
     <tr>
@@ -26,7 +24,7 @@ slug: Learn/HTML/Tables/Basics
 
 ## 什么是表格？
 
-表格是由行和列组成的结构化数据集 (表格数据)，它能够使你简捷迅速地查找某个表示不同类型数据之间的某种关系的值 。比如说，某个人和他的年龄，一天或是一周，当地游泳池的时间表 。
+表格是由行和列组成的结构化数据集（表格数据），它让你快速简单地查找某个表示不同类型数据之间的某种关系的值。比如说，某个人和他的年龄，一天或是一周，当地游泳池的时间表。
 
 ![A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
@@ -125,7 +123,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 1. 首先，将 [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 文件拷贝到你的本地环境上。
 2. 每一个表格的内容都包含在这两个标签中：**[`<table></table>`](/zh-CN/docs/Web/HTML/Element/table)**。在你的 HTML 的 {{htmlelement("body")}} 中添加这些内容。
-3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中 'td' 代表 'table data'）。把下面的内容添加到你的表格标签中：
+3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中“td”代表“table data”）。把下面的内容添加到你的表格标签中：
 
     ```html
     <td>Hi, I'm your first cell.</td>
@@ -142,7 +140,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 你会看到，单元格不会放置在彼此的下方，而是自动与同一行上的其他单元格对齐。每个 `<td>` 元素 创建一个单独单元格，它们共同组成了第一行。我们添加的每个单元格都使行的长度变长。
 
-如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)** 元素（其中 'tr' 代表 'table row'）。让我们现在来证实一下。
+如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)** 元素（其中“tr”代表“table row”）。让我们现在来证实一下。
 
 1. 把你已经创建好的 4 个单元格放入 `<tr>` 标签，就像这样：
 
@@ -374,7 +372,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 </table>
 ```
 
-我们使用了两个 `<col>` 来定义“列的样式”，每一个 `<col>` 都会制定每列的样式，对于第一列，我们没有采取任何样式，但是我们仍然需要添加一个空的 `<col>` 元素，如果不这样做，那么我们的样式就会应用到第一列上，这和我们预想的不一样。
+我们使用了两个 `<col>` 来定义“列的样式”，每一个 `<col>` 都会指定每列的样式，对于第一列，我们没有采取任何样式，但是我们仍然需要添加一个空的 `<col>` 元素，如果不这样做，那么我们的样式就会应用到第一列上，这和我们预想的不一样。
 
 如果你想把这种样式信息应用到每一列，我们可以只使用一个 `<col>` 元素，不过需要包含 span 属性，像这样：
 
@@ -384,7 +382,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 </colgroup>
 ```
 
-就像 `colspan` 和 `rowspan` 一样，`span` 需要一个无单位的数字值，用来制定你想要让这个样式应用到表格中多少列。
+就像 `colspan` 和 `rowspan` 一样，`span` 需要一个无单位的数字值，用来指定让这个样式应用到表格中多少列。
 
 ### 动手练习：colgroup and col
 
@@ -412,9 +410,3 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 本章节仅仅包含了 HTML 表格的基础。在下一篇文章中，我们将介绍一些稍微更高级的表格功能，并开始考虑方便视力障碍的人士的访问。
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## 在本单元中
-
-- [HTML 表格入门](/zh-CN/docs/Learn/HTML/Tables/Basics)
-- [HTML 表格高级特性和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced)
-- [作业：构建行星数据](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)

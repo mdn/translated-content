@@ -2,6 +2,7 @@
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## 概述
@@ -12,8 +13,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 ## 语法
 
-```plain
-arr.lastIndexOf(searchElement[, fromIndex])
+```js
+lastIndexOf(searchElement)
+lastIndexOf(searchElement, fromIndex)
 ```
 
 ### 参数
@@ -25,7 +27,7 @@ arr.lastIndexOf(searchElement[, fromIndex])
 
 ### 返回值
 
-数组中该元素最后一次出现的索引，如未找到返回-1。
+数组中该元素最后一次出现的索引，如未找到返回 -1。
 
 ## 描述
 
@@ -131,7 +133,8 @@ if (!Array.prototype.lastIndexOf) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}

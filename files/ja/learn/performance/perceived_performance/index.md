@@ -1,7 +1,8 @@
 ---
 title: 知覚されるパフォーマンス
-slug: Learn/Performance/perceived_performance
+slug: Learn/Performance/Perceived_performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
 
 **[知覚されるパフォーマンス](/ja/docs/Glossary/Perceived_performance)**は、ユーザーから見てウェブサイトがどれくらい速く感じられるかを表します。ユーザーがパフォーマンスをどのように知覚するかは、具体的な統計値と同じくらい、あるいはどんな具体的な統計値よりも重要ですが、それは主観的で簡単に計測できるものではありません。知覚されるパフォーマンスはユーザーの視点であり、計測される値ではありません。

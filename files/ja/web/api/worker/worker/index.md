@@ -1,64 +1,70 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
+l10n:
+  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
+
 {{APIRef("Web Workers API")}}
 
-**`Worker()`** コンストラクターは引数の URL で指定されたスクリプトを実行する {{domxref("Worker")}} オブジェクトを作成します。このスクリプトは [同一生成元ポリシー](/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript") (SOP) に従わなければいけません。
+**`Worker()`** コンストラクターは、指定された URL で指定されたスクリプトを実行する {{domxref("Worker")}} オブジェクトを作成します。このスクリプトは [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従わなければいけません。
 
-引数の URL が無効な構文だったり SOP に違反したりしている場合、`SECURITY_ERR` 型の {{domxref("DOMException")}} を返します。
-
-> **Note:** **注記**: data URI が SOP に違反するかどうかをブラウザーベンダーの間で合意されていません。Gecko 10.0 {{geckoRelease("10.0")}} とそれより後のリリースでは data URI を受け入れますが、すべてのブラウザーでは、そうならない場合があります。
+> **メモ:** data URL が 同一オリジンであるかどうかについては、ブラウザーベンダーの間で合意されていません。 Firefox 10 以降のリリースでは data URL を受け入れますが、すべてのブラウザーでそうなるとは限りません。
 
 ## 構文
 
 ```js
-var myWorker = new Worker(aURL, options);
+new Worker(aURL)
+new Worker(aURL, options)
 ```
 
 ### 引数
 
-- _aURL_
-  - : Worker オブジェクトが後に実行するスクリプトの URL の {{domxref("USVString")}} です。SOP に従っていなければいけません。
-- _options_ {{optional_inline}}
+- `aURL`
+  - : 文字列で、ワーカーが実行するスクリプトの URL を表します。同一オリジンポリシーに従っていなければいけません。
+- `options` {{optional_inline}}
 
-  - : オブジェクトを作成するときに設定できるオプションプロパティを持つオブジェクトです。以下のプロパティを使用できます:
+  - : オブジェクトを作成するときに設定できるオプションプロパティを持つオブジェクトです。以下のプロパティが使用できます。
 
-    - `type`: 作成する worker のタイプを指定する {{domxref("DOMString")}}。使用できる値は `classic` または `module` です。指定しない場合の既定値は `classic` です。
-    - `credentials`: worker を使用するためのクレデンシャルのタイプを指定する {{domxref("DOMString")}} です。使用できる値は `omit`、`same-origin`、`include` です。指定しない場合、または worker が `classic` タイプである場合はの既定値は `omit` (クレデンシャルは不要) です。
-    - `name`: worker のスコープを表す {{domxref("DedicatedWorkerGlobalScope")}} を識別する名前を示す {{domxref("DOMString")}} です。これは主に、デバッグで役に立ちます。
+    - `type`
+      - : 文字列で、作成するワーカーの種類を指定します。使用できる値は `classic` または `module` です。指定しない場合の既定値は `classic` です。
+    - `credentials`
+      - : 文字列で、ワーカーで使用する資格情報の種類を指定します。使用できる値は `omit`、`same-origin`、`include` です。指定しない場合、または type が `classic` である場合、既定値は `omit` （資格情報は不要）です。
+    - `name`
+      - : 文字列で、ワーカーのスコープを表す {{domxref("DedicatedWorkerGlobalScope")}} を識別する名前を指定します。これは主に、デバッグで役に立ちます。
 
 ### 例外
 
-- ドキュメントが worker の開始を許可されていない場合に、`SecurityError` が発生します。
-- スクリプトのひとつの MIME タイプが `text/csv`, `image/*`, `video/*`, or `audio/*` である場合に `NetworkError` が発生します。これは常に `text/javacript` であるべきです。
-- _aURL_ をパースできない場合に `SyntaxError` が発生します。
+- `SecurityError` {{domxref("DOMException")}}
+  - : 文書がワーカーを起動することが許可されていない場合、例えば、 URL が不正な構文であったり、同一オリジンポリシーに違反していたりした場合に発生します。
+- `NetworkError` {{domxref("DOMException")}}
+  - : ワーカースクリプトの MIME タイプが不正な場合に発生します。これは常に `text/javascript` であるべきです（経緯上、[他の JavaScript の MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_の歴史的な_mime_タイプ)も受け入れられる場合があります）。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : _aURL_ が解釈できなかった場合に発生します。
 
 ## 例
 
 次のコードスニペットは `Worker()` コンストラクターを使って {{domxref("Worker")}} オブジェクトを作成し、続いてそのオブジェクトの使い方を表しています。
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```
 
-完全な例を見るには、[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)) を参照してください。
+完全な例を見るには、[基本的な専用ワーカーの例](https://github.com/mdn/simple-web-worker)（[専用ワーカーを実行](https://mdn.github.io/simple-web-worker/)）を参照してください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                   | 策定状況                         | コメント |
-| ------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "#dom-worker", "Worker()")}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
-{{Compat("api.Worker.Worker")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
-{{domxref("Worker")}} インタフェースに属しています。
+所属する {{domxref("Worker")}} インターフェイス。

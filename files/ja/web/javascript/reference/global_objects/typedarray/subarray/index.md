@@ -1,14 +1,8 @@
 ---
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 ---
+
 {{JSRef}}
 
 **`subarray()`** メソッドは、同じ {{jsxref("ArrayBuffer")}} ストアで、この _TypedArray_ オブジェクトと同じ要素の型をもつ新しい _TypedArray_ を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。 _TypedArray_ は[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
@@ -56,9 +50,7 @@ console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

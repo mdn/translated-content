@@ -1,14 +1,8 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 **`static`** キーワードは、クラスに静的メソッドや静的プロパティを定義します。静的メソッドも静的プロパティもクラスのインスタンスからは呼び出されません。その代わりに、クラスそのものから呼び出されます。静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
@@ -107,9 +101,7 @@ class StaticMethodCall {
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

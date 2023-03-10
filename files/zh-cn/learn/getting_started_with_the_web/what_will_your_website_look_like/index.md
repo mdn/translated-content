@@ -2,6 +2,7 @@
 title: 设计网站外观
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 *设计网站外观？* 在为网站编写代码之前必须进行规划和设计工作，包括“网站提供什么信息？”、“想要什么字体和颜色？”、“网站是做什么的？”
@@ -64,14 +65,3 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 3. 关于使用谷歌字体的更多细节，请参见[本页面](https://developers.google.com/fonts/docs/getting_started)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
-
-## 本章目录
-
-- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [设计网站外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [发布你的网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [万维网是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

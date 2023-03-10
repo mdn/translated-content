@@ -7,6 +7,7 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Content-Length
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête (_header_) **`Content-Length`** indique la taille en octets (exprimée en base 10) du corps de la réponse envoyée au client.
@@ -37,13 +38,11 @@ Content-Length: <longueur>
 
 ## Spécifications
 
-| Spécification                                            | Titre                                                              |
-| -------------------------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Content-Length", "3.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/headers/content-length")}}
+{{Compat}}
 
 ## Voir aussi
 

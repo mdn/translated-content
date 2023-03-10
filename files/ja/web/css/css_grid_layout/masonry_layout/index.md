@@ -1,18 +1,13 @@
 ---
 title: 組積レイアウト
 slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - 実験的
-  - 組積
-translation_of: Web/CSS/CSS_Grid_Layout/Masonry_Layout
 ---
+
 {{CSSRef}}
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)仕様書の Level 3 では、 `masonry` の値が {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} に含まれています。このガイドでは、組積 (masonry) レイアウトとは何か、どのように使用するかについて詳しく説明します。
 
-> **Warning:** この機能は Firefox でのみ実装されており、テストやフィードバックを可能にするために、 `about:config` でフラグ `layout.css.grid-template-masonry-value.enabled` を `true` に設定することで有効になります。
+> **警告:** この機能は Firefox でのみ実装されており、テストやフィードバックを可能にするために、 `about:config` でフラグ `layout.css.grid-template-masonry-value.enabled` を `true` に設定することで有効になります。
 
 組積レイアウトとは、一方の軸（多くの場合は列）が一般的な厳格なグリッドレイアウトを使用し、もう一方の軸が組積レイアウトを使用するレイアウト方法です。組積レイアウトでは、短いアイテムの後に隙間ができるような厳密なグリッドではなく、次の行のアイテムが隙間を完全に埋めるように立ち上がっていきます。
 

@@ -1,25 +1,15 @@
 ---
 title: ユーザ入力とコントロール
 slug: Web/Guide/User_input_methods
-tags:
-  - Screen Orientation
-  - contenteditable
-  - drag and drop
-  - fullscreen
-  - keyboard
-  - mouse
-  - pointer lock
-  - touch
-  - user input
-translation_of: Web/Guide/User_input_methods
 ---
+
 現代のウェブのユーザー入力は、単純なマウスやキーボードだけではありません。この記事では、ユーザー入力を管理し、オープンなウェブアプリに制御を実装するための推奨事項を、FAQ、実例、および基礎となる技術について、より詳細な情報を必要とする人のための詳細な情報へのリンクとともに提供します。関連する API とイベントには、[タッチイベント](/ja/docs/Web/API/Touch_events)、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API)、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)、[Fullscreen API](/ja/docs/Web/API/Fullscreen_API)、[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) などがあります。
 
 ## ユーザー入力とコントロールのワークフロー
 
 次の図式は、ユーザー入力の仕組みを実装するための典型的なワークフローを説明しています。
 
-![](https://mdn.mozillademos.org/files/8085/user-input-and-controls.png)
+![](user-input-and-controls.png)
 
 最初に、マウス、キーボード、指でのタッチなどから、アプリケーションで対象としたい入力の仕組みをどれにするかを決める必要があります。入力の仕組みを決めたのであれば、ウェブプラットフォームや JavaScript ライブラリーによって提供されているツールを使い、制御することができます。
 
@@ -29,7 +19,7 @@ translation_of: Web/Guide/User_input_methods
 
 - デバイスの中にはタッチスクリーンディスプレイを提供するものがあります。そのウェブプラットフォームは、タッチを基にしたユーザーインターフェースで指の動きを解釈するための[タッチイベント](/ja/docs/Web/API/Touch_events)を提供します。
 - ポインターを操作する方法としてマウスやタッチパッドを提供しているデバイスの場合、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) が一人称視点の 3D ゲームの実装や、他のアプリがポイントを合わせているデバイスの全ての制御を要求するのに役立ちます。そして [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) は、あなたのアプリを全画面モードで表示するのに役立ちます。
-- [コンテンツが編集可能な要素（contentEditable など）](/ja/docs/Web/Guide/HTML/Editable_content)のような機能を使うことで、速いリッチテキストエディターを実装することができ、そして[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、[Screen Orientation API ](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
+- [コンテンツが編集可能な要素（contentEditable など）](/ja/docs/Web/Guide/HTML/Editable_content)のような機能を使うことで、速いリッチテキストエディターを実装することができ、そして[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
 - キーボードのアクセシビリティが適切か常に気に掛ける必要があります。多くのユーザーはキーボードのみを使いウェブサイトやアプリを操作します。ですので、あなたのシステムの機能性からそれを除外することは良くない考えです。
 
 以下は推奨事項一式であり、オープンなウェブアプリでそのようなツールを利用するためのベストプラクティスです。
@@ -47,7 +37,7 @@ window.addEventListener("keyup", handleKeyUp, true);
 
 `handleKeyDown` と `handleKeyUp` は、`keydown` と `keyup` イベントについての制御を実装する関数です。
 
-> **Note:** キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Reference/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
+> **メモ:** キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Reference/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
 
 #### マウス
 
@@ -70,13 +60,13 @@ element.addEventListener("touchmove", handleMove, false);
 
 ここでの `element` は、あなたがタッチイベントを登録したい DOM 要素です。
 
-> **Note:** タッチイベントでできることについての更なる情報は、[タッチイベントガイド](/ja/docs/Web/API/Touch_events)を読んでください。
+> **メモ:** タッチイベントでできることについての更なる情報は、[タッチイベントガイド](/ja/docs/Web/API/Touch_events)を読んでください。
 
 #### ポインターイベント
 
 マウス、指でのタッチ、ペン入力など複数の入力形式が内蔵されているデバイスを扱う時、これら全ての異なる制御の仕組みを機能させるソリューションを開発することは難しいかもしれません。[Pointer Events](http://www.w3.org/TR/pointerevents/) は、デバイス毎の扱いを標準化することにより、開発者がデバイスを横断してイベントを管理することをより簡単にするのに役立ちます。マウスカーソル、ペン、タッチ（マルチタッチを含む）、またはその他のポインティング入力デバイスによって、ポインターはスクリーン上のあらゆる接点となることができます。汎用的なポインター入力を扱うためのイベントは、`pointerdown`、`pointermove`、`pointerup`、`pointerover`、`pointerout` などのマウス用のイベントとよく似ています。
 
-> **Note:** Pointer Events はまだ広くサポートされていませんが、[pointer.js polyfill](https://github.com/mozilla/pointer.js) は Mozilla Github で利用可能です。
+> **メモ:** Pointer Events はまだ広くサポートされていませんが、[pointer.js polyfill](https://github.com/mozilla/pointer.js) は Mozilla Github で利用可能です。
 
 ### コントロールの実装
 
@@ -90,7 +80,7 @@ element.addEventListener("touchmove", handleMove, false);
 element.requestPointerLock();
 ```
 
-> **Note:** 全てのチュートリアルとリファレンスは、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) のページを読んでください。
+> **メモ:** 全てのチュートリアルとリファレンスは、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) のページを読んでください。
 
 #### 画面の向き
 
@@ -98,7 +88,7 @@ element.requestPointerLock();
 
 画面の向きのデータは {{domxref("screen.orientation")}} 属性、または [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を通して取得することができます。`screen.orientation` が変化した時、{{domxref("screen.orientationchange")}} イベントがスクリーンオブジェクトで発火されます。{{domxref("screen.lockOrientation")}} メソッドを呼ぶことで画面の向きを固定することができます。また、{{domxref("screen.unlockOrientation")}} メソッドはそれまで設定されていた画面のロックを全て解除します。
 
-> **Note:** Screen Orientation API についてのより多くの情報は[画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)で確認することができます。
+> **メモ:** Screen Orientation API についてのより多くの情報は[画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)で確認することができます。
 
 #### 全画面
 
@@ -117,7 +107,7 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note:** 全画面の機能性をあなたのアプリケーションに追加することについてもっと知るには、私たちの[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)についてのドキュメントを読んでください。
+> **メモ:** 全画面の機能性をあなたのアプリケーションに追加することについてもっと知るには、私たちの[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)についてのドキュメントを読んでください。
 
 #### ドラッグ＆ドロップ
 
@@ -128,7 +118,7 @@ if (elem.requestFullscreen) {
 ```html
 <div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
     This text <strong>may</strong> be dragged.
- </div>
+</div>
 ```
 
 私たちが実装する点は以下です:
@@ -136,7 +126,7 @@ if (elem.requestFullscreen) {
 - ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#attr-draggable) 属性を true にセットします。
 - [`dragstart`](/ja/docs/Web/API/Document/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
-> **Note:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
+> **メモ:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
 
 #### コンテンツを編集可能にする
 
@@ -148,7 +138,7 @@ if (elem.requestFullscreen) {
 </div>
 ```
 
-> **Note:** 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/Guide/HTML/Editable_content)で確認することができます。
+> **メモ:** 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/Guide/HTML/Editable_content)で確認することができます。
 
 ## 例
 

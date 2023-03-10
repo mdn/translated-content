@@ -1,23 +1,13 @@
 ---
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-browser-compat: javascript.builtins.String.fontcolor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`fontcolor()`** メソッドは、文字列を指定された色で表示させる HTML の {{HTMLElement("font")}} 要素を生成します。
 
-> **Note:** **注:** \<font> 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
+> **メモ:** \<font> 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
 ## 構文
 

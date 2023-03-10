@@ -2,6 +2,7 @@
 title: align-self
 slug: Web/CSS/align-self
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 属性 **`align-self`** 会对齐当前 grid 或 flex 行中的元素，并覆盖已有的 [`align-items`](/zh-CN/docs/Web/CSS/align-items) 的值。In Grid, it aligns the item inside the [grid area](/zh-CN/docs/Glossary/Grid_Areas). 在 Flexbox 中，会按照 [cross axis](/zh-CN/docs/Glossary/Cross_Axis)（当前 flex 元素排列方向的垂直方向）进行排列。
@@ -116,7 +117,7 @@ div:nth-child(3) {
 
 ### 结果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

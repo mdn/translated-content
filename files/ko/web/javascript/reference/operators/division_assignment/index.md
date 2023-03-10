@@ -1,14 +1,6 @@
 ---
 title: 나누기 할당 (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Division_assignment
-browser-compat: javascript.operators.division_assignment
 ---
 {{jsSidebar("Operators")}}
 

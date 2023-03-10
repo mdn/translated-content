@@ -2,11 +2,12 @@
 title: DocumentOrShadowRoot.activeElement
 slug: Web/API/Document/activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 {{domxref("Document")}} 和 {{domxref("ShadowRoot")}} 接口的 **`activeElement`** 只读属性，用来返回当前在 DOM 或者 shadow DOM 树中处于聚焦状态的{{domxref("Element")}}。
 
-通常情况下，如果 {{domxref("HTMLInputElement")}} 或者 {{domxref("HTMLTextAreaElement")}}元素中有文字被选中时， `activeElement`属性就会返回该元素 。这时，你可以调用该元素的{{domxref("Document.selectionStart", "selectionStart")}} 和 {{domxref("Document.selectionEnd", "selectionEnd")}} 属性获取更多选中文字的信息。其他情况下，焦点元素也可能是{{HTMLElement("select")}}元素 (menu) 或者一个别的 {{HTMLElement("input")}} 元素，比如 `"button"`, `"checkbox"`, 或者 `"radio"`.
+通常情况下，如果 {{domxref("HTMLInputElement")}} 或者 {{domxref("HTMLTextAreaElement")}}元素中有文字被选中时， `activeElement`属性就会返回该元素。这时，你可以调用该元素的{{domxref("Document.selectionStart", "selectionStart")}} 和 {{domxref("Document.selectionEnd", "selectionEnd")}} 属性获取更多选中文字的信息。其他情况下，焦点元素也可能是{{HTMLElement("select")}}元素 (menu) 或者一个别的 {{HTMLElement("input")}} 元素，比如 `"button"`、`"checkbox"` 或者 `"radio"`。
 
 通常用户可以使用 tab 键来切换页面中的焦点元素获得焦点，使用空格键使元素 active (比如按下一个按钮或者 切换一个 radio). 具体哪些元素可以获得焦点与系统和浏览器的设置有关。比如，在 macOS 系统上，不是 text input 元素默认情况下是不能获得焦点的。
 

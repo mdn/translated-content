@@ -1,23 +1,6 @@
 ---
 title: Firefox 2 para desarrolladores
 slug: Mozilla/Firefox/Releases/2
-tags:
-  - CSS
-  - Complementos
-  - DOM
-  - Desarrollo_Web
-  - Estándares_Web
-  - HTML
-  - JavaScript
-  - RDF
-  - SVG
-  - Servicios_Web_XML
-  - Todas_las_Categorías
-  - XML
-  - XSLT
-  - XUL
-  - extensiones
-translation_of: Mozilla/Firefox/Releases/2
 original_slug: Firefox_2_para_desarrolladores
 ---
 
@@ -31,95 +14,44 @@ Firefox 2 aporta gran cantidad de funcionalidades nuevas, este artículo proporc
 
 - [MicroResúmenes (en)](https://wiki.mozilla.org/Microsummaries)
   - : Son breves recopilaciones actualizables de la información más importante en una página Web. Pueden ser proporcionados por los desarrolladores del sitio o por terceros. Cuando se añade a marcadores una página con esta funcionalidad, los usuarios pueden escoger que se muestre este microresúmen en vez del típico título estático.
-
-<!---->
-
-- [Cómo crear un Microresumen](/es/Como_crear_un_Microresumen "es/Como_crear_un_Microresumen")
+- [Cómo crear un Microresumen](/es/Como_crear_un_Microresumen)
   - : Tutorial sobre cómo crear un generador de microresúmenes.
-
-<!---->
-
-- [Marcado XML en los microresúmenes](/es/Marcado_XML_en_los_microres%C3%BAmenes "es/Marcado_XML_en_los_microresúmenes")
+- [Marcado XML en los microresúmenes](/es/Marcado_XML_en_los_microres%C3%BAmenes)
   - : Una guía de referencia sobre el marcado XML usado para crear microresúmenes.
-
-<!---->
-
 - [Soporte OpenSearch](https://opensearch.a9.com/)
   - : Firefox 2 admite el formato de búsqueda OpenSearch.
-
-<!---->
-
-- [Creación de plugins MozSearch](/es/Creaci%C3%B3n_de_plugins_MozSearch "es/Creación_de_plugins_MozSearch")
+- [Creación de plugins MozSearch](/es/Creaci%C3%B3n_de_plugins_MozSearch)
   - : Firefox 2 soporta MozSearch, un plugin de búsqueda basado en OpenSearch, pero previsto sólo para uso interno.
-
-<!---->
-
-- [Permitir sugerencias en los plugins de búsqueda](/es/Permitir_sugerencias_en_los_plugins_de_b%C3%BAsqueda "es/Permitir_sugerencias_en_los_plugins_de_búsqueda")
+- [Permitir sugerencias en los plugins de búsqueda](/es/Permitir_sugerencias_en_los_plugins_de_b%C3%BAsqueda)
   - : Cómo hacer que su plugin MozSearch ofrezca sugerencias de búsqueda en una ventana emergente cuando usamos la barra de búsqueda.
-
-<!---->
-
-- [Novedades en JavaScript 1.7](/es/Novedades_en_JavaScript_1.7 "es/Novedades_en_JavaScript_1.7")
+- [Novedades en JavaScript 1.7](/es/Novedades_en_JavaScript_1.7)
   - : Firefox 2 soporta JavaScript 1.7, que incluye nuevas características como `let`, asignación desestructurada, generadores e iteradores, y "array comprehensions".
-
-<!---->
-
-- [WHATWG Sesiones del lado cliente y el almacenamiento continuo (Almacenamiento DOM)](/es/docs/DOM/Almacenamiento "es/DOM/Almacenamiento")
+- [WHATWG Sesiones del lado cliente y el almacenamiento continuo (Almacenamiento DOM)](/es/docs/DOM/Almacenamiento)
   - : Las sesiones del lado cliente y el almacenamiento continuo permiten que las aplicaciones web puedan almacenar datos estructurados en el lado del cliente.
-
-<!---->
-
-- [SVG en Firefox](/es/SVG_en_Firefox "es/SVG_en_Firefox")
+- [SVG en Firefox](/es/SVG_en_Firefox)
   - : Firefox 2 mejora el soporte a Gráficos Vectoriales Escalables (SVG), implementando el elemento `<textPath>` y aumentando el número de atributos soportados.
-
-<!---->
-
-- [Control de la corrección ortográfica en formularios HTML](/es/Control_de_la_correcci%C3%B3n_ortogr%C3%A1fica_en_formularios_HTML "es/Control_de_la_corrección_ortográfica_en_formularios_HTML")
+- [Control de la corrección ortográfica en formularios HTML](/es/Control_de_la_correcci%C3%B3n_ortogr%C3%A1fica_en_formularios_HTML)
   - : Firefox 2 incluye soporte para la revisión ortográfica en línea de los campos y áreas de texto. Este artículo describe cómo escribir HTML para activar o desactivar la revisión ortográfica en los elementos del formulario de manera individual.
-
-<!---->
-
-- [Seguridad en Firefox 2](/es/Seguridad_en_Firefox_2 "es/Seguridad_en_Firefox_2")
+- [Seguridad en Firefox 2](/es/Seguridad_en_Firefox_2)
   - : Firefox 2 cambia los protocolos de seguridad que están activos por defecto.
 
 ### Para desarrolladores XUL y de extensiones
 
-- [API de restauración de sesión](/es/API_de_restauraci%C3%B3n_de_sesi%C3%B3n "es/API_de_restauración_de_sesión")
+- [API de restauración de sesión](/es/API_de_restauraci%C3%B3n_de_sesi%C3%B3n)
   - : Aporta métodos para poder guardar y restaurar entre sesiones en Firefox.
-
-<!---->
-
-- [API de acceso a canales](/es/API_de_acceso_a_canales "es/API_de_acceso_a_canales")
+- [API de acceso a canales](/es/API_de_acceso_a_canales)
   - : API que permite al desarrollador tener acceso y parsear canales Atom y RSS.
-
-<!---->
-
-- [SAX](/es/SAX "es/SAX")
+- [SAX](/es/SAX)
   - : API de parseo basado en eventos XML.
-
-<!---->
-
-- [Instalación de motores de búsqueda desde páginas web](/es/Instalaci%C3%B3n_de_motores_de_b%C3%BAsqueda_desde_p%C3%A1ginas_web "es/Instalación_de_motores_de_búsqueda_desde_páginas_web")
+- [Instalación de motores de búsqueda desde páginas web](/es/Instalaci%C3%B3n_de_motores_de_b%C3%BAsqueda_desde_p%C3%A1ginas_web)
   - : Un código JavaScript puede indicarle a Firefox cómo instalar el plugin de un nuevo motor de búsqueda escrito en formato Sherlock u OpenSearch.
-
-<!---->
-
-- [Añadir datos para la protección anti-phishing](/es/A%C3%B1adir_datos_para_la_protecci%C3%B3n_anti-phishing "es/Añadir_datos_para_la_protección_anti-phishing")
+- [Añadir datos para la protección anti-phishing](/es/A%C3%B1adir_datos_para_la_protecci%C3%B3n_anti-phishing)
   - : Es posible aumentar la protección anti-phishing de Firefox añadiendo datos adicionales del proveedor para un sistema de navegación seguro.
-
-<!---->
-
-- [Añadir lectores de canales a Firefox](/es/A%C3%B1adir_lectores_de_canales_a_Firefox "es/Añadir_lectores_de_canales_a_Firefox")
+- [Añadir lectores de canales a Firefox](/es/A%C3%B1adir_lectores_de_canales_a_Firefox)
   - : Puedes añadir más lectores de canales a Firefox, ya sean webs o aplicaciones.
-
-<!---->
-
-- [Almacenamiento](/es/Almacenamiento "es/Almacenamiento")
+- [Almacenamiento](/es/Almacenamiento)
   - : Firefox 2 presenta mozStorage, una arquitectura de base de datos basada en sqlite.
-
-<!---->
-
-- [Cambios del tema en Firefox 2](/es/Cambios_del_tema_en_Firefox_2 "es/Cambios_del_tema_en_Firefox_2")
+- [Cambios del tema en Firefox 2](/es/Cambios_del_tema_en_Firefox_2)
   - : Comenta los cambios necesarios para actualizar temas existentes para que funcionen en Firefox 2.
 
 ## Nuevas características para usuarios finales
@@ -142,4 +74,4 @@ Firefox 2.0 proporciona una versión mejorada de la limpia interfaz que ofrecía
 
 ### Vea también
 
-- [Firefox 1.5 para Desarrolladores](/es/Firefox_1.5_para_Desarrolladores "es/Firefox_1.5_para_Desarrolladores")
+- [Firefox 1.5 para Desarrolladores](/es/Firefox_1.5_para_Desarrolladores)

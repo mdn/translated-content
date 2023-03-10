@@ -1,13 +1,8 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-tags:
-  - Caching
-  - HTTP
-  - ヘッダー
-  - レスポンス
-translation_of: Web/HTTP/Headers/Age
 ---
+
 {{HTTPSidebar}}
 
 **`Age`** ヘッダーには、プロキシーのキャッシュに入ってからの経過時間（秒）が含まれています。

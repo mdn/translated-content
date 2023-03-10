@@ -2,6 +2,7 @@
 title: Web 遊戲開發介紹
 slug: Games/Introduction
 ---
+
 {{GamesSidebar}}現有 Web 環境已成為多元的平台，不只可建構令人驚艷的高品質遊戲，也是發佈這些遊戲的重要媒介。可供撰寫的遊種類......
 
 現有的 Web 技術再搭配最新版瀏覽器，就能打造出絕佳的 Web 遊戲，而且我們講的可不是用 Flash® 寫的簡單卡牌遊戲，或是多人的社交遊戲而已。卻是可打趴一堆平面遊戲的 3D 動作射擊或角色扮演遊戲。多虧 [JavaScript](/docs/JavaScript) 的即時 (Just-in-time，JIT) 技術與新 API 雙雙大幅提升其效能，你所撰寫的遊戲已可於瀏覽器 (或支援 [HTML5](/docs/HTML/HTML5) 的裝置，即如 [Firefox OS](/docs/Mozilla/Firefox_OS)) 中執行，卻又不致犧牲任何效能。

@@ -3,6 +3,7 @@ title: DocumentOrShadowRoot.styleSheets
 slug: Web/API/Document/styleSheets
 original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
+
 {{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
 {{domxref("DocumentOrShadowRoot")}} インターフェイスの **`styleSheets`** 読み取り専用プロパティは、 {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。ドキュメントに明示的にリンクまたは埋め込まれたスタイルシートの場合。
@@ -29,9 +30,7 @@ function getStyleSheet(unique_title) {
 
 ## 仕様
 
-| 仕様                                                                                                                             | ステータス                       | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}} | {{Spec2('Shadow DOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

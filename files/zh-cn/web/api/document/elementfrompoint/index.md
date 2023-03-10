@@ -2,6 +2,7 @@
 title: DocumentOrShadowRoot.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 ---
+
 {{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 
 {{domxref("DocumentOrShadowRoot")}} 接口的 **`elementFromPoint()`** 方法返回给定坐标点下最上层的 {{domxref('element')}} 元素。

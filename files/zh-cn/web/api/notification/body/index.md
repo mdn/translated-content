@@ -1,7 +1,8 @@
 ---
 title: Notification.body
-slug: Web/API/notification/body
+slug: Web/API/Notification/body
 ---
+
 {{APIRef("Web Notifications")}}
 
 {{domxref("Notification")}} 的只读属性 body 返回了构造函数{{domxref("Notification")}}实例化时，options 所使用的 body 值。
@@ -42,4 +43,4 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 相关链接
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

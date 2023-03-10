@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.blendEquation()
 slug: Web/API/WebGLRenderingContext/blendEquation
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.blendEquation()`** 方法用于将 RGB 混合方程和阿尔法混合方程设置为单个方程。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.blendEquation()`** 方法用于将 RGB 混合方程和阿尔法混合方程设置为单个方程。
 
 混合方程式确定新像素如何与 {{domxref("WebGLFramebuffer")}} 中的像素组合。
 
@@ -18,7 +19,7 @@ void gl.blendEquation(mode);
 
 - `mode`
 
-  - : {{domxref("GLenum")}} 指定源和目标颜色的组合方式。 必须是：
+  - : {{domxref("GLenum")}} 指定源和目标颜色的组合方式。必须是：
 
     - `gl.FUNC_ADD`: 源 + 目的地（默认值），
     - `gl.FUNC_SUBTRACT`: 源 - 目的地，
@@ -51,7 +52,7 @@ gl.blendEquation(gl.FUNC_SUBTRACT);
 gl.blendEquation(gl.FUNC_REVERSE_SUBTRACT);
 ```
 
-要获得混合方程，请查询返回 gl.FUNC_ADD，gl.FUNC_SUBTRACT，gl.FUNC_REVERSE_SUBTRACT 或 {{domxref("EXT_blend_minmax")}} 的 BLEND_EQUATION，BLEND_EQUATION_RGB 和 BLEND_EQUATION_ALPHA 常量：ext.MIN_EXT 或 ext.MAX_EXT 。
+要获得混合方程，请查询返回 gl.FUNC_ADD，gl.FUNC_SUBTRACT，gl.FUNC_REVERSE_SUBTRACT 或 {{domxref("EXT_blend_minmax")}} 的 BLEND_EQUATION，BLEND_EQUATION_RGB 和 BLEND_EQUATION_ALPHA 常量：ext.MIN_EXT 或 ext.MAX_EXT。
 
 ```js
 gl.getParameter(gl.BLEND_EQUATION_RGB) === gl.FUNC_ADD;
@@ -67,7 +68,7 @@ gl.getParameter(gl.BLEND_EQUATION_ALPHA) === gl.FUNC_ADD;
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.blendEquation")}}
+{{Compat}}
 
 ## 另见
 

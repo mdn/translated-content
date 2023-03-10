@@ -2,9 +2,10 @@
 title: <audio>
 slug: Web/HTML/Element/audio
 ---
-{{HTMLRef}}
 
-**HTML `<audio>` **元素用于在文档中嵌入音频内容。 `<audio>` 元素可以包含一个或多个音频资源， 这些音频资源可以使用 `src` 属性或者{{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。
+{{HTMLSidebar}}
+
+**HTML `<audio>` **元素用于在文档中嵌入音频内容。 `<audio>` 元素可以包含一个或多个音频资源，这些音频资源可以使用 `src` 属性或者{{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。
 
 {{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
 
@@ -25,7 +26,7 @@ slug: Web/HTML/Element/audio
 - {{htmlattrdef("crossorigin")}}
   - : 枚举属性 展示音频资源是否可以通过 CORS 加载。[支持 CORS 的资源](/zh-CN/docs/CORS_Enabled_Image)可以被 {{HTMLElement("canvas")}} 元素复用而不污染。可选值如下：
     - `anonymous`
-      - : 在发送跨域请求时不携带验证信息。换句话说，浏览器在发送`Origin:` HTTP 请求首部时将不携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 `Access-Control-Allow-Origin:` 响应首部），那么图片就被认为是污染的，它就会被限制使用。
+      - : 在发送跨域请求时不携带验证信息。换句话说，浏览器在发送`Origin:` HTTP 请求首部时将不携带 cookie、X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 `Access-Control-Allow-Origin:` 响应首部），那么图片就被认为是污染的，它就会被限制使用。
     - `use-credentials`
       - : 在发送跨域请求时携带验证信息。换句话说，在发送`Origin:` HTTP 请求首部时将携带 cookie、安全令牌、并且执行 HTTP 基本认证。如果服务器没有给予源站信任（通过设置`Access-Control-Allow-Credentials:` 响应首部）那么图片就被认为是污染的，它就会被限制使用。在未指定时，资源将不通过 CORS 请求来获取（也就是不发送 `Origin:`请求首部），以保护 {{HTMLElement('canvas')}} 元素中未污染的内容。如果验证失败，它会表现的好像 **anonymous** 选项是选中的。查看 [CORS settings attributes](/zh-CN/docs/HTML/CORS_settings_attributes) 来获取更多信息。
 - {{htmlattrdef("currentTime")}}
@@ -53,16 +54,16 @@ slug: Web/HTML/Element/audio
     > - 浏览器并不被强制遵循该属性的规范，该属性只是一个建议与提示。
 
 - {{htmlattrdef("src")}}
-  - : 嵌入的音频的 URL。 该 URL 应遵从 [HTTP access controls](/zh-CN/docs/HTTP_access_control). 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。
+  - : 嵌入的音频的 URL。该 URL 应遵从 [HTTP access controls](/zh-CN/docs/HTTP_access_control). 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。
 
 ## 事件
 
 | 事件名称                                                                                     | 触发时机                                                                                                                           |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| {{Event("audioprocess")}}                                                             | 一个 {{DOMxRef("ScriptProcessorNode")}} 的输入缓冲区已经准备开始处理。                                                   |
+| [`audioprocess`](/zh-CN/docs/Web/API/ScriptProcessorNode/audioprocess_event)                                                             | 一个 {{DOMxRef("ScriptProcessorNode")}} 的输入缓冲区已经准备开始处理。                                                   |
 | {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}                 | 浏览器已经可以播放媒体，但是预测已加载的数据不足以在不暂停的情况下顺利将其播放到结尾（即预测会在播放时暂停以获取更多的缓冲区内容） |
 | {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} | 浏览器预测已经可以在不暂停的前提下将媒体播放到结束。                                                                               |
-| {{Event("complete")}}                                                                 | 一个 {{DOMxRef("OfflineAudioContext")}} 的渲染已经中止。                                                                 |
+| [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event)                                                                 | 一个 {{DOMxRef("OfflineAudioContext")}} 的渲染已经中止。                                                                 |
 | {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} | `duration` 属性发生了变化。                                                                                                        |
 | {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                 | 媒体置空。举个例子，当一个媒体已经加载（或部分加载）的情况下话调用 `load()` 方法，这个事件就将被触发。                             |
 | {{domxref("HTMLMediaElement.ended_event", 'ended')}}                         | 播放到媒体的结束位置，播放停止。                                                                                                   |
@@ -118,7 +119,7 @@ slug: Web/HTML/Element/audio
 
 ### 检测音轨添加和移除
 
-你能够通过 {{event("addtrack")}} and {{event("removetrack")}} 事件来检测何时音轨从 `<audio>` 元素中添加和移除了。然而，这些事件并不是直接传递给 `<audio>` 元素自己的。相反，它们是发送给 `<audio>` 元素的{{domxref("HTMLMediaElement")}} 中的音轨列表对象的。这些对象与添加进元素的音轨类型一一对应。
+你能够通过 {{domxref("AudioTrackList/addtrack_event", "addtrack")}} 和 {{domxref("AudioTrackList/removetrack_event", "removetrack")}} 事件来检测何时音轨从 `<audio>` 元素中添加和移除了。然而，这些事件并不是直接传递给 `<audio>` 元素自己的。相反，它们是发送给 `<audio>` 元素的{{domxref("HTMLMediaElement")}} 中的音轨列表对象的。这些对象与添加进元素的音轨类型一一对应。
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : 一个 {{domxref("AudioTrackList")}} 包含所有的媒体对象的音轨。你能在为 `addtrack` 事件添加监听，以在新音轨添加进元素时获得通知。
@@ -145,7 +146,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 这份代码监听音轨从目标元素中添加删除的事件，并且调用了一个轨道编辑器上的虚拟函数，来从编辑器上的可用音轨列表中注册和移除音轨。
 
-你也可以使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来监听 {{event("addtrack")}} 和 {{event("removetrack")}} 事件。
+你也可以使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来监听 {{domxref("AudioTrackList/addtrack_event", "addtrack")}} 和 {{domxref("AudioTrackList/removetrack_event", "removetrack")}} 事件。
 
 ## 示例
 
@@ -262,7 +263,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
   </tr>
   <tr>
    <th scope="row">合法 de ARIA roles</th>
-   <td>{{ARIARole("application")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>

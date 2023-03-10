@@ -1,16 +1,11 @@
 ---
-title: <label>
+title: '<label>: 入力欄ラベル要素'
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/label
+l10n:
+  sourceCommit: d2758b52647c72eab555b05941c8bc613a1e65d2
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<label>` 要素**は、ユーザーインターフェイスの項目のキャプションを表します。
 
@@ -31,24 +26,35 @@ translation_of: Web/HTML/Element/label
 </label>
 ```
 
-その他の使用上の注意事項
+ラベルがラベル付けするフォームコントロールは、 label 要素の _ラベル対象コントロール_ と呼ばれます。複数のラベルを同じフォームコントロールに関連付けることができます。
 
-- label がラベル付けするフォームコントロールは*ラベル付きコントロール* (labeled control) と呼ばれます。一つの入力欄に複数のラベルを関連付けることができます。
-- `<label>` がクリックやタップされ、それがフォームのコントロールに関連付けられていた場合は、 `click` イベントが関連付けられたコントロールにも発生するようになります。
+```html
+<label for="username">名前を入力してください:</label>
+<input id="username">
+<label for="username">名前を忘れてしまいましたか？</label>
+```
+
+`<label>` 要素に関連付けることができる要素には {{HTMLElement('button')}}, {{HTMLElement('input')}} (`type="hidden"` を除く), {{HTMLElement('meter')}}, {{HTMLElement('output')}}, {{HTMLElement('progress')}}, {{HTMLElement('select')}}, {{HTMLElement('textarea')}} があります。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("for")}}
+- {{HTMLAttrDef("for")}}
 
-  - : `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能)フォーム関連要素の {{htmlattrxref("id")}}。文書中の `for` 属性の値と合致する `id` を持つ最初の要素がラベル付け可能な要素であれば、このラベル要素の示す*ラベル付きコントロール*となります。[ラベル付け可能要素](https://html.spec.whatwg.org/multipage/forms.html#category-label)でなければ、 `for` 属性は効果がありません。一致する `id` 値を持つ他の要素が文書内のその後にあったとしても、考慮されません。
+  - : `for` 属性の値は単一の {{htmlattrxref("id")}} でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
 
-    > **Note:** `<label>` 要素は、 `for` 属性が指す要素が包含するコントロール要素である場合、 `for` 属性を持ちつつ、中にコントロール要素を含めることができます。
+    > **メモ:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
+
+    文書内で `for` 属性の値に一致する `id` 属性を持つ最初の要素が、この `label` 要素の _ラベル対象コントロール_ になります（その `id` を持つ要素が実際に [ラベル付け可能要素](https://html.spec.whatwg.org/multipage/forms.html#category-label) である場合）。このラベル付け可能な要素でない場合は、 `for` 属性は何も効果がありません。もし、文書の後半に `id` の値に一致する他の要素があったとしても、それらは考慮されません。
+
+    複数の `label` 要素の `for` 属性に同じ値を指定することができます。そうすると、関連するフォームコントロール（`for` 値が参照するフォームコントロール）は複数のラベルを持つことになります。
+
+    > **メモ:** `<label>` 要素は、包含するコントロール要素が `for` 属性が指す要素である場合、 `for` 属性を持ちつつ、中にコントロール要素を含めることができます。
 
 ## CSS のスタイル付け
 
-`<label>` には特殊なスタイル上の考慮事項はありません。 — 構造的に単純なインライン要素であり、ほとんどは {{htmlelement("span")}} や {{htmlelement("a")}} 要素と同じ方法でスタイルを適用します。テキストが読みにくくならない限り、あらゆる方法でスタイルを適用することができます。
+`<label>` には特殊なスタイル上の考慮事項はありません。構造的に単純なインライン要素であり、ほとんどは {{htmlelement("span")}} や {{htmlelement("a")}} 要素と同じ方法でスタイルを適用します。テキストが読みにくくならない限り、あらゆる方法でスタイルを適用することができます。
 
 ## 例
 
@@ -73,7 +79,7 @@ translation_of: Web/HTML/Element/label
 
 ### 対話型コンテンツ
 
-`label` の中に{{HTMLElement("a", "アンカー")}}や{{HTMLElement("button", "ボタン")}}のような対話型要素を配置しないでください。そのようにすると、ユーザーが `label` に関連したフォーム入力欄を有効化する事が難しくなります。
+`label` の中に{{HTMLElement("a", "アンカー")}}や{{HTMLElement("button", "ボタン")}}のような対話型要素を配置しないでください。そのようにすると、ユーザーが `label` に関連したフォーム入力欄を有効化しにくくなります。
 
 #### 悪い例
 
@@ -98,9 +104,9 @@ translation_of: Web/HTML/Element/label
 
 ### 見出し
 
-見出しは一般的に[ナビゲーションエイド](/ja/docs/Web/HTML/Element/Heading_Elements#Navigation)として使用されるため、 `<label>` の中に[ヘッダー要素](/ja/docs/Web/HTML/Element/Heading_Elements)を配置すると、数多くの種類の支援技術を妨げることになります。ラベルの文字列を視覚的に調整する必要がある場合は、代わりに `<label>` 要素に CSS クラスを適用してください。
+`<label>` の中に[ヘッダー要素](/ja/docs/Web/HTML/Element/Heading_Elements)を配置すると、数多くの種類の支援技術を妨げることになります。見出しは一般的に[ナビゲーションエイド](/ja/docs/Web/HTML/Element/Heading_Elements#ナビゲーション)として使用されるためです。ラベルの文字列を視覚的に調整する必要がある場合は、代わりに `<label>` 要素に CSS クラスを適用してください。
 
-[フォーム](/ja/docs/Web/HTML/Element/form)、またはフォームのセクションにタイトルが必要な場合は、 {{HTMLElement("fieldset")}} の中に {{HTMLElement("legend")}} を配置して使用してください。
+[フォーム](/ja/docs/Web/HTML/Element/form)、またはフォームのセクションにタイトルが必要な場合は、 {{HTMLElement("legend")}} を {{HTMLElement("fieldset")}} の中に配置して使用してください。
 
 #### 悪い例
 
@@ -130,7 +136,7 @@ translation_of: Web/HTML/Element/label
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -193,13 +199,8 @@ translation_of: Web/HTML/Element/label
 
 ## 仕様書
 
-| 仕様書                                                                                                         | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}}           | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-label-element', '&lt;label&gt;')}}       | {{Spec2('HTML5 W3C')}}     |          |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}               | {{Spec2('HTML4.01')}}     |          |
-| [HTML 4.0 Specification \<label> の定義](https://www.w3.org/TR/REC-html40-971218/interact/forms.html#h-17.9.1) | {{Spec2('HTML4.01')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.label")}}
+{{Compat}}

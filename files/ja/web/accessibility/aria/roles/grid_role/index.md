@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: grid ロール'
-slug: Web/Accessibility/ARIA/Roles/Grid_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
+slug: Web/Accessibility/ARIA/Roles/grid_role
 ---
+
 グリッド (`grid`) ロールは、1 つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。
 
 ```html
@@ -70,7 +66,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
 - [aria-readonly](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
   - : ユーザーがグリッドをナビゲートできるが、グリッドの値を変更できない場合は、`aria-readonly` を `true` に設定するべきです。 デフォルト値は `false` です。
 
-> **Note:** 多くのユースケースでは、HTML の表 ([`table`](/ja/docs/Web/HTML/Element/table)) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。
+> **メモ:** 多くのユースケースでは、HTML の表 ([`table`](/ja/docs/Web/HTML/Element/table)) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。
 
 ### キーボードインタラクション
 
@@ -591,10 +587,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 ## 仕様
 
-| 仕様                                                                             | 状態                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#grid","Role Grid")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#grid","Role Grid")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

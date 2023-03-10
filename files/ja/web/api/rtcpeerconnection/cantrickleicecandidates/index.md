@@ -15,7 +15,7 @@ slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 論理値で、リモートピアーがトリクル ICE 候補を受け入れることができる場合は `true`、受け入れることができない場合は `false` となります。リモートピアーが確立されていない場合、この値は `null` となります。
 
-> **Note:** このプロパティの値は、ローカルピアーが {{domxref("RTCPeerConnection.setRemoteDescription()") }}を呼び出した時点で決定されます。
+> **メモ:** このプロパティの値は、ローカルピアーが {{domxref("RTCPeerConnection.setRemoteDescription()") }}を呼び出した時点で決定されます。
 ICE　エージェントがリモートピアーがトリクル ICE 候補に対応しているかどうかを判断するために、指定された説明が使用されます。
 
 ## 例

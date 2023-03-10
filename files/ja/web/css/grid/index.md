@@ -1,15 +1,8 @@
 ---
 title: grid
 slug: Web/CSS/grid
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid
-translation_of: Web/CSS/grid
 ---
+
 {{CSSRef}}
 
 **`grid`** は CSS のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
@@ -18,7 +11,7 @@ translation_of: Web/CSS/grid
 
 {{EmbedInteractiveExample("pages/css/grid.html")}}
 
-> **Note:** 指定しないサブプロパティは、通常の一括指定と同様に初期値に設定されます。また、溝に関するプロパティはこの一括指定では初期化されません。
+> **メモ:** 指定しないサブプロパティは、通常の一括指定と同様に初期値に設定されます。また、溝に関するプロパティはこの一括指定では初期化されません。
 
 ## 構成要素のプロパティ
 

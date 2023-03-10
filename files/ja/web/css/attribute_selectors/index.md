@@ -1,14 +1,8 @@
 ---
 title: 属性セレクター
 slug: Web/CSS/Attribute_selectors
-tags:
-  - 属性セレクター
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.attribute
-translation_of: Web/CSS/Attribute_selectors
 ---
+
 {{CSSRef}}
 
 CSS の**属性セレクター** (attribute selector) は、指定された属性が存在するかどうか、またはその値に基づいて要素を選択します。
@@ -47,7 +41,7 @@ a[class~="logo"] {
 - `[attr=value]`
   - : _attr_ という名前の属性の値が正確に _value_ である要素を表します。
 - `[attr~=value]`
-  - : _attr_ という名前の属性の値が正確に _value_ と一致する要素を表します。空白区切りの語のリストの形で、複数の _value_ を含めることができます。
+  - : _attr_ という名前の属性の値が空白区切りの語のリストであり、その内の 1 つが正確に _value_ と一致する要素を表します。
 - `[attr|=value]`
   - : _attr_ という名前の属性の値が正確に _value_ と一致するか、 _value_ で始まり直後にハイフン (`-` (U+002D)) が続く要素を表します。言語のサブコードの一致によく使われます。
 - `[attr^=value]`

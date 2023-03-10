@@ -4,6 +4,7 @@ slug: Web/API/console/timeStamp
 l10n:
   sourceCommit: a6c0c23f7972d85c4bdba384f79c9c6a79f07c13
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 **`console.timeStamp`** メソッドは、単一のマーカーをブラウザーのパフォーマンスツール（[Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)）に追加します。これにより、コード内のポイントを、タイムライン上に記録されたほかのポイント、例えばレイアウトや描画のイベントなどと結びつけることができます。

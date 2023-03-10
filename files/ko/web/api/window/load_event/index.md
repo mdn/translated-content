@@ -1,12 +1,9 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-tags:
-  - Event
-  - 이벤트
-translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
+
 `load` 이벤트는 리소스와 그것에 의존하는 리소스들의 로딩이 완료되면 실행됩니다.
 
 ## 예제

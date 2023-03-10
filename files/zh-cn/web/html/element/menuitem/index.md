@@ -2,7 +2,8 @@
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
 ---
-{{HTMLRef}}{{Deprecated_Header("HTML5.2")}}
+
+{{HTMLSidebar}}{{Deprecated_Header("HTML5.2")}}
 
 用户可以通过**HTML `<menuitem>` 元素**生成一个弹出式菜单。这包括上下文菜单，以及按钮可能附带的菜单。
 
@@ -62,7 +63,7 @@ slug: Web/HTML/Element/menuitem
     - `checkbox`：代表一个命令可以在两个不同状态之间的切换。
     - `radio`：代表一组单选按钮，可切换为命令中的一个选择。
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -99,7 +100,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("Example", '100%', 80)}}
+{{EmbedLiveSample("示例", '100%', 80)}}
 
 ## 规范
 

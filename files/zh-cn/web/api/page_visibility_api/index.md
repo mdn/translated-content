@@ -2,13 +2,14 @@
 title: 页面可见性 API
 slug: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 使用选项卡式浏览，任何给定网页都有可能在后台，因此对用户不可见。页面可见性 API 提供了您可以观察的事件，以便了解文档何时可见或隐藏，以及查看页面当前可见性状态的功能。
 
 > **备注：** 页面可见性 API 对于节省资源和提高性能特别有用，它使页面在文档不可见时避免执行不必要的任务。
 
-当用户最小化窗口或切换到另一个选项卡时，API 会发送{{event("visibilitychange")}}事件，让监听者知道页面状态已更改。你可以检测事件并执行某些操作或行为不同。例如，如果您的网络应用正在播放视频，则可以在用户将标签放入背景时暂停视频，并在用户返回标签时恢复播放。 用户不会在视频中丢失位置，视频的音轨不会干扰新前景选项卡中的音频，并且用户在此期间不会错过任何视频。
+当用户最小化窗口或切换到另一个选项卡时，API 会发送[`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件，让监听者知道页面状态已更改。你可以检测事件并执行某些操作或行为不同。例如，如果您的网络应用正在播放视频，则可以在用户将标签放入背景时暂停视频，并在用户返回标签时恢复播放。用户不会在视频中丢失位置，视频的音轨不会干扰新前景选项卡中的音频，并且用户在此期间不会错过任何视频。
 
 {{HTMLElement("iframe")}}的可见性状态与父文档相同。使用 CSS 属性（例如{{cssxref("display", "display: none;")}}）隐藏`<iframe>`不会触发可见性事件或更改框架中包含的文档的状态。
 
@@ -21,7 +22,7 @@ slug: Web/API/Page_Visibility_API
 - 页面想要检测是否正在渲染，以便可以准确的计算网页浏览量
 - 当设备进入待机模式时，网站想要关闭设备声音（用户按下电源键关闭屏幕）
 
-开发者在过去使用不完善的代理来检测页面的可见性。比如，通过监听 {{event("blur")}} 和 {{event("focus")}} 事件来了解页面是否处于活动状态，但是它并没有告诉你页面是对用户隐藏的。页面可见性 API 解决了这个问题。
+开发者在过去使用不完善的代理来检测页面的可见性。比如，通过监听 [`blur`](/zh-CN/docs/Web/API/Element/blur_event) 和 [`focus`](/zh-CN/docs/Web/API/Element/focus_event) 事件来了解页面是否处于活动状态，但是它并没有告诉你页面是对用户隐藏的。页面可见性 API 解决了这个问题。
 
 > **备注：** 虽然{{domxref("GlobalEventHandlers.onblur", "onblur")}}和{{domxref("GlobalEventHandlers.onfocus", "onfocus")}}会告诉你用户是否切换窗口，但不一定意味着它是隐藏的。当用户切换选项卡或最小化包含选项卡的浏览器窗口时，页面才会隐藏。
 
@@ -41,7 +42,7 @@ slug: Web/API/Page_Visibility_API
 
 Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
 
-- Tabs which are playing audio are considered foreground and aren’t throttled.
+- Tabs which are playing audio are considered foreground and aren't throttled.
 - Tabs running code that's using real-time network connections ([WebSockets](/zh-CN/docs/Web/API/WebSockets_API) and [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
 - [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
 
@@ -106,14 +107,14 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 
   - : 是一个用来展示文档当前的可见性的{{domxref("DOMString")}} 。该属性的值为以下值之一：
 
-    - `visible` : 页面内容至少是部分可见。 在实际中，这意味着页面是非最小化窗口的前景选项卡。
-    - `hidden` : 页面内容对用户不可见。 在实际中，这意味着文档可以是一个后台标签，或是最小化窗口的一部分，或是在操作系统锁屏激活的状态下。
-    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其它值转为该值。
+    - `visible` : 页面内容至少是部分可见。在实际中，这意味着页面是非最小化窗口的前景选项卡。
+    - `hidden` : 页面内容对用户不可见。在实际中，这意味着文档可以是一个后台标签，或是最小化窗口的一部分，或是在操作系统锁屏激活的状态下。
+    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其他值转为该值。
     - 注释：有的浏览器不支持此功能`unloaded` : 页面正在从内存中卸载。
     - 注释：有的浏览器不支持此功能
 
 - {{domxref("Document.onvisibilitychange")}}
-  - : {{domxref("EventListener")}} 提供在{{event("visibilitychange")}} 事件被触发时要调用的代码。
+  - : {{domxref("EventListener")}} 提供在[`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件被触发时要调用的代码。
 
 ```js
 //startSimulation 和 pauseSimulation 在其他地方定义
@@ -136,7 +137,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ### `Document.visibilityState`
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## 参考
 

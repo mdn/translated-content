@@ -2,15 +2,16 @@
 title: <label>
 slug: Web/HTML/Element/label
 ---
-{{HTMLRef}}
 
-**HTML `<label>` 元素（标签）**表示用户界面中某个元素的说明。
+{{HTMLSidebar}}
+
+**HTML `<label>` 元素**（标签）表示用户界面中某个元素的说明。
 
 {{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
 将一个 `<label>` 和一个 {{htmlelement("input")}} 元素相关联主要有这些优点：
 
-- 标签文本不仅与其相应的文本输入元素在视觉上相关联，程序中也是如此。 这意味着，当用户聚焦到这个表单输入元素时，屏幕阅读器可以读出标签，让使用辅助技术的用户更容易理解应输入什么数据。
+- 标签文本不仅与其相应的文本输入元素在视觉上相关联，程序中也是如此。这意味着，当用户聚焦到这个表单输入元素时，屏幕阅读器可以读出标签，让使用辅助技术的用户更容易理解应输入什么数据。
 - 你可以点击关联的标签来聚焦或者激活这个输入元素，就像直接点击输入元素一样。这扩大了元素的可点击区域，让包括使用触屏设备在内的用户更容易激活这个元素。
 
 将一个 `<label>` 和一个 `<input>` 元素匹配在一起，你需要给 `<input>` 一个 `id` 属性。而 `<label>` 需要一个 `for` 属性，其值和 `<input>` 的 `id` 一样。
@@ -33,7 +34,7 @@ slug: Web/HTML/Element/label
 该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("for")}}
-  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](zh-CN/docs/Web/Guide/HTML/Content_categories#Form_labelable) 的 {{htmlattrxref("id")}}。 文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
+  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](/zh-CN/docs/Web/Guide/HTML/Content_categories#可标记的元素（labelable）) 的 {{htmlattrxref("id")}}。文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
 
     > **备注：** `<label>` 元素可同时有一个 `for` 属性和一个子代控件元素，只是 `for` 属性需要指向这个控件元素。
 - {{htmlattrdef("form")}}
@@ -158,7 +159,7 @@ slug: Web/HTML/Element/label
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.label")}}
+{{Compat}}
 
 ## 参见
 

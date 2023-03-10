@@ -2,15 +2,16 @@
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
 ---
+
 ## 概要
 
-**`border-top-left-radius`** 用来设置元素左上角的圆角效果。这段圆弧（角）可以是圆或椭圆的一部分。如果其中有一个值为 0，那么将无圆角效果（见**`border-top-left-radius取值方式`**`)。`
+**`border-top-left-radius`** 用来设置元素左上角的圆角效果。这段圆弧（角）可以是圆或椭圆的一部分。如果其中有一个值为 0，那么将无圆角效果（见 **`border-top-left-radius`** 取值方式)。
 
-![border-radius.png](/@api/deki/files/6132/=border-radius.png)
+![border-radius.png](border-radius.png)
 
 盒模型的背景，可以是一张图片或一种颜色，会在边框处被剪裁，更甚至可以是一个圆；剪切的额外定位通过另一个 CSS 属性"background-clip"来定义。
 
-> **备注：** 在 border-top-left-radius 属性值之后，如果作用的元素上没有设置“border-radius”属性，那么这个属性值就会通过[简写属性](https://developer.mozilla.org/en/CSS/Shorthand_properties)重新设置成它的初始值。
+> **备注：** 在 border-top-left-radius 属性值之后，如果作用的元素上没有设置“border-radius”属性，那么这个属性值就会通过[简写属性](/zh-CN/CSS/Shorthand_properties)重新设置成它的初始值。
 
 ## 语法
 
@@ -38,7 +39,7 @@ border-top-left-radius: inherit;
 ### 取值
 
 - `<length>`
-  - [: `<length>`](/zh-CN/docs/Web/CSS/length) 定义圆形半径或椭圆的半长轴，半短轴。不能用负值。
+  - : [`<length>`](/zh-CN/docs/Web/CSS/length) 定义圆形半径或椭圆的半长轴，半短轴。不能用负值。
 - `<percentage>`
   - : 使用百分数定义圆形半径或椭圆的半长轴，半短轴。水平半轴相对于盒模型的宽度；垂直半轴相对于盒模型的高度。不能用负值。
 

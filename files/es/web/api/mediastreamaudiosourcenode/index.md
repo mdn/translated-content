@@ -1,10 +1,9 @@
 ---
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
-browser-compat: api.MediaStreamAudioSourceNode
-translation_of: Web/API/MediaStreamAudioSourceNode
 original_slug: Web/API/MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 La interfaz **`MediaStreamAudioSourceNode`** es un tipo de {{domxref("AudioNode")}} que funciona como una fuente de audio cuyo contenido multimedia se recibe de un {{domxref("MediaStream")}} obtenido mediante WebRTC o las API de captura y transmisión de medios.

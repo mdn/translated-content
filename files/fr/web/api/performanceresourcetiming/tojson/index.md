@@ -11,6 +11,7 @@ tags:
   - toJSON()
 translation_of: Web/API/PerformanceResourceTiming/toJSON
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La méthode **`toJSON()`** est un _sérialiseur_ qui retourne une représentation JSON de l'objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming).

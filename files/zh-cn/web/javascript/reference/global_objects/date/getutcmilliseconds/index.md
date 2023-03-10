@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`getUTCMilliseconds()`** 方法以世界时为标准，返回一个指定的日期对象的毫秒数。

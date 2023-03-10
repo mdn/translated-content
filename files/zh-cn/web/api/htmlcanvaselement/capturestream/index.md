@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 ---
+
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 该 **`HTMLCanvasElement.captureStream()`** 方法返回的 {{domxref("CanvasCaptureMediaStream")}} 是一个实时视频捕获的画布。
@@ -31,7 +32,7 @@ var canvasElt = document.querySelector('canvas');
 var stream = canvasElt.captureStream(25); // 25 FPS
 
 //使用媒体流
-// E.g.使用 RTCPeerConnection 来传输给其它的电脑
+// E.g.使用 RTCPeerConnection 来传输给其他的电脑
 // 下面的 pc 是其他地方创建的一个 RTCPeerConnection
 pc.addStream(stream);
 ```
@@ -42,7 +43,7 @@ pc.addStream(stream);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.captureStream")}}
+{{Compat}}
 
 ## 看看其他
 

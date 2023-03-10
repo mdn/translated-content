@@ -1,9 +1,9 @@
 ---
 title: 공통된 CSS 질문들
 slug: Learn/CSS/Howto/CSS_FAQ
-translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
+
 ## 왜 유효한 내 CSS가 왜 올바르게 그려지지 않는가?
 
 Browsers use the `DOCTYPE` declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern `DOCTYPE` declaration at the start of your HTML will improve browser standards compliance.
@@ -13,25 +13,30 @@ Modern browsers have two main rendering modes:
 - _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
 - _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
 
-Gecko-based browsers, have a third _[Almost Standards Mode](/ko/docs/Gecko's\_"Almost_Standards"\_Mode "Gecko's_\"Almost*Standards\"\_Mode")* that has only a few minor quirks.
+Gecko-based browsers, have a third _[Almost Standards Mode](/ko/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
 
-This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
+The standard `DOCTYPE` declaration that will trigger standards mode is:
 
+```html
+<!DOCTYPE html>
 ```
-<!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
-                   parser, this is the recommended doctype */
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+```
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+```
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## 왜 유효한 내 CSS는 모두 랜더링 되지 않는가?
@@ -63,7 +68,7 @@ h1 { color: red; }
 h1 { color: black; }
 ```
 
-이것은 CSS 2에서 변경되었다. 키워드 [initial](https://developer.mozilla.org/es/CSS/initial "initial")은 이제 CSS 속성에서 유효한 값이다. 지정된 속성의 CSS 사양에 정의 된 기본값으로 재설정된다.
+이것은 CSS 2에서 변경되었다. 키워드 [initial](/ko/CSS/initial)은 이제 CSS 속성에서 유효한 값이다. 지정된 속성의 CSS 사양에 정의 된 기본값으로 재설정된다.
 
 ```
 /* Heading default color is black */

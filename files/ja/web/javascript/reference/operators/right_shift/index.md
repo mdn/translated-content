@@ -1,15 +1,8 @@
 ---
 title: 右シフト (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.right_shift
-translation_of: Web/JavaScript/Reference/Operators/Right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 **右シフト演算子 (`>>`)** は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。最も左のビットをコピーしながらずれて入ります。最も左のビットが以前の最も左のビットと同じになるため、符号ビット (最も左のビット) は変化しません。よって「符号維持」という名前です。

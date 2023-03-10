@@ -2,81 +2,66 @@
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
-## 概述
+{{JSRef}}
 
 **`ReferenceError`**（引用错误）对象代表当一个不存在（或尚未初始化）的变量被引用时发生的错误。
 
-## 语法
+`ReferenceError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{domxref("structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
 
-```plain
-new ReferenceError([message[, fileName[, lineNumber]]])
-```
+## 构造函数
 
-### 参数
+- {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
+  - : 创建一个新的 `ReferenceError` 对象。
 
-- `message`
-  - : 可选。描述可读的错误信息
-- `fileName` {{non-standard_inline}}
-  - : 可选。包含引起异常代码的文件名
-- `lineNumber` {{non-standard_inline}}
-  - : 可选。引起异常的代码行号
+## 实例属性
 
-## 描述
+- {{jsxref("Error.prototype.message")}}
+  - : 错误消息。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.name")}}
+  - : 错误名称。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.cause")}}
+  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+  - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
 
-当你尝试引用一个未被定义的变量时，将会抛出一个 `ReferenceError` 。
+## 示例
 
-## 属性
-
-- {{jsxref("ReferenceError.prototype")}}
-  - : Allows the addition of properties to an `ReferenceError` object.
-
-## 方法
-
-全局的 `ReferenceError` 本身并不包含有方法，但是他可以从原型链上继承一些方法
-
-## `ReferenceError` 实例
-
-### 属性
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
-
-### 方法
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
-
-## 例子
-
-### 例：捕获一个 `ReferenceError`
+### 捕获一个 ReferenceError
 
 ```js
 try {
-  var a = undefinedVariable;
+  let a = undefinedVariable
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "undefinedVariable is not defined"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "Scratchpad/1"
-  console.log(e.lineNumber);                // 2
-  console.log(e.columnNumber);              // 6
-  console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
+  console.log(e instanceof ReferenceError)  // true
+  console.log(e.message)                    // "undefinedVariable is not defined"
+  console.log(e.name)                       // "ReferenceError"
+  console.log(e.fileName)                   // "Scratchpad/1"
+  console.log(e.lineNumber)                 // 2
+  console.log(e.columnNumber)               // 6
+  console.log(e.stack)                      // "@Scratchpad/2:2:7\n"
 }
 ```
 
-### 例：创建一个 `ReferenceError`
+### 创建一个 ReferenceError
 
 ```js
 try {
-  throw new ReferenceError('Hello', 'someFile.js', 10);
+  throw new ReferenceError('Hello', 'someFile.js', 10)
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "Hello"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "someFile.js"
-  console.log(e.lineNumber);                // 10
-  console.log(e.columnNumber);              // 0
-  console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof ReferenceError)  // true
+  console.log(e.message)                    // "Hello"
+  console.log(e.name)                       // "ReferenceError"
+  console.log(e.fileName)                   // "someFile.js"
+  console.log(e.lineNumber)                 // 10
+  console.log(e.columnNumber)               // 0
+  console.log(e.stack)                      // "@Scratchpad/2:2:9\n"
 }
 ```
 
@@ -88,7 +73,6 @@ try {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error")}}
-- {{jsxref("ReferenceError.prototype")}}

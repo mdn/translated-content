@@ -2,6 +2,7 @@
 title: 旧式浏览器中的 HTML 表单
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
 ---
+
 {{LearnSidebar}}
 
 所有 web 开发者很快就会（有时候是痛苦地）发现 Web 是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到“旧式浏览器”时，脑海中出现就是 Safari 和 Internet Explorer……但是，这远远不是全部。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。
@@ -186,18 +187,6 @@ Modernizr 团队按照惯例维护着[一个优秀的 polyfill 列表](https://g
 正如你所看到的，处理旧式浏览器不仅仅是表单问题。而是一整套技术；但是掌握所有这些技术超出了本文的范围。基本的前提是，在开始挑战之前，要考虑改变默认的实现方式是否值得做这些工作。
 
 如果你阅读了 [HTML 表单指南](/zh-CN/docs/Learn/Forms)中的所有文章，你应该可以放心的使用表单了。如果你想探索新技术，请帮助我们提升指南的写作水平。
-
-## 本章目录
-
-- [创建我的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 进阶内容
 

@@ -3,6 +3,7 @@ title: 代理自动配置文件（PAC）文件
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
+
 {{HTTPSidebar}}
 
 **代理自动配置（PAC）**文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：
@@ -88,7 +89,7 @@ application/x-ns-proxy-autoconfig
 
 > **备注：** PAC 文件的 JavaScript 代码应该总是单独保存到 .pac 文件中，而不是嵌入到 HTML 文件或是任何其他文件之中。
 >
-> - 本文档末尾的示例都是完整的，使用时不需要增加任何其它代码，直接保存应用即可。（当然，你需要改成你自己的域名/子域）
+> - 本文档末尾的示例都是完整的，使用时不需要增加任何其他代码，直接保存应用即可。（当然，你需要改成你自己的域名/子域）
 
 ## 预定义的函数与环境
 
@@ -121,7 +122,7 @@ application/x-ns-proxy-autoconfig
 
 - 日志记录功能函数
 
-  - [`alert()`](/en-US/docs/Web/API/Window/alert)
+  - [`alert()`](/zh-CN/docs/Web/API/Window/alert)
 
 - 同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
 
@@ -130,7 +131,7 @@ application/x-ns-proxy-autoconfig
 > **备注：** pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
 >
 > - PAC 文件保存为 `proxy.pac`
-> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。`
+> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org`。
 >
 >   - 该命令中， `host` 参数为 `www.mozilla.org` ， `url` 参数为`http://www.mozilla.org`。
 
@@ -700,7 +701,7 @@ function FindProxyForURL(url, host) {
 >
 > ```
 
-> **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS 。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
+> **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
 
 ## 历史与实现
 

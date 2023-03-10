@@ -2,6 +2,7 @@
 title: Document.documentElement
 slug: Web/API/Document/documentElement
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.documentElement`** は、その {{domxref("document")}} のルート要素 (例えば、 HTML 文書の場合は {{HTMLElement("html")}} 要素) である {{domxref("Element")}} を返します。
@@ -31,9 +32,7 @@ for (const child of firstTier) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG','#dom-document-documentelement','Document.documentElement')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

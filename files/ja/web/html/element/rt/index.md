@@ -1,18 +1,9 @@
 ---
 title: '<rt>: ルビ文字列要素'
 slug: Web/HTML/Element/rt
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
-browser-compat: html.elements.rt
-translation_of: Web/HTML/Element/rt
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML のルビ文字列 (`<rt>`) 要素**は、ルビによる注釈（振り仮名）のルビ文字列の部分を定義し、東アジアの組版において発音、翻訳、音写などの情報を提供するために使用します。 `<rt>` 要素は常に {{HTMLElement("ruby")}} 要素の中で使用されます。
 
@@ -69,7 +60,7 @@ translation_of: Web/HTML/Element/rt
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
 ## 例
 

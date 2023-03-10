@@ -2,6 +2,7 @@
 title: border-top
 slug: Web/CSS/border-top
 ---
+
 {{CSSRef}}
 
 CSS 属性 **border-top**是属性 {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, 和{{Cssxref("border-top-width")}} 的三者的缩写。这些属性都是在描述一个元素的上方的边框[`border`](/zh-CN/docs/Web/CSS/border)。
@@ -43,7 +44,7 @@ border-top: medium dashed green;
 - `{{cssxref("&lt;color&gt;")}}`
   - : 请参阅 {{Cssxref("border-top-color")}}.
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
@@ -66,12 +67,12 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Applying_a_top_border') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

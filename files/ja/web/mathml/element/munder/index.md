@@ -1,14 +1,8 @@
 ---
 title: <munder>
 slug: Web/MathML/Element/munder
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
-browser-compat: mathml.elements.munder
-translation_of: Web/MathML/Element/munder
 ---
+
 {{MathMLRef}}
 
 MathML の `<munder>` 要素は式の下にアクセントや範囲を付けるために使用します。これは `<munder> base underscript </munder>` のように使用します。

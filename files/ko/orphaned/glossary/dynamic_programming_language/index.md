@@ -1,9 +1,9 @@
 ---
 title: 동적 프로그래밍 언어
 slug: orphaned/Glossary/Dynamic_programming_language
-translation_of: Glossary/Dynamic_programming_language
 original_slug: Glossary/Dynamic_programming_language
 ---
+
 A **dynamic programming language** is a programming language in which operations otherwise done at compile-time can be done at run-time. For example, in JavaScript it is possible to change the type of a variable or add new properties or methods to an object while the program is running.
 
 This is opposed to so-called static programming languages, in which such changes are normally not possible.

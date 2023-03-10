@@ -1,13 +1,8 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/grid-area
 ---
+
 **`grid-area`** 속성은 {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} and {{cssxref("grid-column-end")}} 값을 한번에 설정하는 [shorthand](/ko/docs/Web/CSS/Shorthand_properties) property 입니다. 해당 속성값은 grid item의 크기와 위치를 결정합니다., specifying a grid item’s size and location within the {{glossary("grid rows", "grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-area.html")}}
@@ -64,7 +59,7 @@ grid-area: unset;
 
 - `<integer> && <custom-ident>?`
 
-  - : Contributes the \_n_th grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
+  - : Contributes the n-th grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
 
@@ -119,13 +114,13 @@ grid-area: unset;
 
 {{EmbedLiveSample("Example", "100%", "150px")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

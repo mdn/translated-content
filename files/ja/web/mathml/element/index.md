@@ -1,11 +1,8 @@
 ---
 title: MathML 要素リファレンス
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - MathML Reference
-translation_of: Web/MathML/Element
 ---
+
 これは、MathML **プレゼンテーション** 要素のアルファベット順のリストです。
 
 **プレゼンテーションマークアップ** という用語は、数学的表記のレイアウト構造を記述するために使用するのに対して、**コンテンツマークアップ** という用語は、その基礎をなす数学的な意味を提供します。これは、MarhML パーザーによる描画を想定するものではありません ({{bug(276028)}} 参照)。コンテンツマークアップについて詳しく学びたい場合は、 [MathML 3 仕様](http://www.w3.org/TR/MathML3/) の [第 4 章](http://www.w3.org/TR/MathML3/chapter4.html) を調べてください。

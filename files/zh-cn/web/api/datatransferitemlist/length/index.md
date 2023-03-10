@@ -2,6 +2,9 @@
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
 ---
+
+{{APIRef("HTML Drag and Drop API")}}
+
 {{domxref("DataTransferItemList")}} 接口的只读属性**`length`** 返回当前拖动项列表中项目的数量。
 
 ## 语法
@@ -16,7 +19,7 @@ length = DataTransferItemList.length;
 
 ## 示例
 
-这个例子演示了`length` 属性的用法。
+这个例子演示了 `length` 属性的用法。
 
 ### JavaScript
 
@@ -102,16 +105,12 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample('Example_Drag_and_Drop')}}
-
-{{LiveSampleLink('Example_Drag_and_Drop', 'Drag and Drop demo link')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("api.DataTransferItemList.length")}}
-
-{{APIRef("HTML Drag and Drop API")}}
+{{Compat}}

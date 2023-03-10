@@ -1,11 +1,11 @@
 ---
 title: Aplicación de estilo a listas
 slug: Learn/CSS/Styling_text/Styling_lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Las [listas](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
+Las [listas](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
 
 <table>
   <tbody>
@@ -155,7 +155,7 @@ ol {
 
 Esto nos da el aspecto siguiente:
 
-![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](https://mdn.mozillademos.org/files/12962/outer-bullets.png)
+![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](outer-bullets.png)
 
 Puedes encontrar muchas más opciones si echas un vistazo a la página de referencia de {{cssxref("list-style-type")}}.
 
@@ -172,7 +172,7 @@ ol {
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](https://mdn.mozillademos.org/files/12958/inner-bullets.png)
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
 ### Uso de una imagen personalizada como viñeta
 
@@ -217,7 +217,7 @@ Aquí hemos hecho lo siguiente:
 
 Esto nos da el resultado siguiente:
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/12956/image-bullets.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### Propiedad abreviada list-style
 
@@ -233,9 +233,11 @@ ul {
 
 Podría reemplazarse por esto:
 
-    ul {
-      list-style: square url(example.png) inside;
-    }
+```css
+ul {
+  list-style: square url(example.png) inside;
+}
+```
 
 Los valores pueden escribirse en cualquier orden, y puedes usar uno, dos o los tres (los valores por defecto que se utilizan para las propiedades que no están incluidas son `disc`, `none` y `outside`). Si se especifican tanto `type` como `image`, el tipo se usa como una segunda opción en el caso de que la imagen no sea posible cargar la imagen por cualquier motivo.
 
@@ -302,10 +304,10 @@ Da el resultado siguiente:
 
 En esta sesión de aprendizaje activo, queremos que tomes lo que has aprendido arriba y pruebes a aplicar estilo a una lista anidada. Te hemos provisto con un HTML, y queremos que hagas lo siguiente:
 
-1.  Poner viñetas cuadradas en la lista no ordenada.
-2.  Establecer un interlineado de 1,5 con respecto al tamaño de la letra tanto para la lista ordenada como para la lista no ordenada.
-3.  Poner letras minúsculas en la lista ordenada.
-4.  Juega con el ejemplo, libremente y cuanto quieras, experimenta con los tipos de viñetas, los espacios, o cualquier otra cosa con que te encuentres.
+1. Poner viñetas cuadradas en la lista no ordenada.
+2. Establecer un interlineado de 1,5 con respecto al tamaño de la letra tanto para la lista ordenada como para la lista no ordenada.
+3. Poner letras minúsculas en la lista ordenada.
+4. Juega con el ejemplo, libremente y cuanto quieras, experimenta con los tipos de viñetas, los espacios, o cualquier otra cosa con que te encuentres.
 
 Si te equivocas, puedes volver a empezar con el botón _Reinicio_. Si te quedas encallado, pulsa el botón _Mostrar la solución_ para ver una posible solución.
 
@@ -393,4 +395,4 @@ La aplicación de estilo a listas se domina con relativa facilidad una vez que c
 - [Aplicar estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Aplicar estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
 - [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Escribir una página de inicio para la comunidad escolar](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

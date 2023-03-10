@@ -1,13 +1,8 @@
 ---
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Method
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer[@@species]`** アクセサープロパティは、`ArrayBuffer` コンストラクターを返します。
@@ -39,9 +34,7 @@ class MyArrayBuffer extends ArrayBuffer {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

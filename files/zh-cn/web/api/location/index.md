@@ -2,6 +2,7 @@
 title: Location
 slug: Web/API/Location
 ---
+
 {{APIRef("URLUtils")}}
 
 **`Location`** 接口表示其链接到的对象的位置（URL）。所做的修改反映在与之相关的对象上。 {{domxref("Document")}} 和 {{domxref("Window")}} 接口都有这样一个链接的 Location，分别通过 {{domxref("Document.location")}}和{{domxref("Window.location")}} 访问。
@@ -21,11 +22,11 @@ _`Location` 接口不继承任何属性，但是实现了那些来自 {{domxref(
 - {{domxref("Location.port")}}
   - : 包含端口号的一个{{domxref("DOMString")}}。
 - {{domxref("Location.pathname")}}
-  - : 包含 URL 中路径部分的一个{{domxref("DOMString")}}，开头有一个“`/"。`
+  - : 包含 URL 中路径部分的一个{{domxref("DOMString")}}，开头有一个 `/`。
 - {{domxref("Location.search")}}
   - : 包含 URL 参数的一个{{domxref("DOMString")}}，开头有一个`“?”`。
 - {{domxref("Location.hash")}}
-  - : 包含块标识符的{{domxref("DOMString")}}，开头有一个`“#”。`
+  - : 包含块标识符的{{domxref("DOMString")}}，开头有一个 `#`。
 - {{domxref("Location.username")}}
   - : 包含 URL 中域名前的用户名的一个{{domxref("DOMString")}}。
 - {{domxref("Location.password")}}
@@ -44,7 +45,7 @@ _`Location` 没有继承任何方法_，但实现了来自{{domxref("URLUtils")}
 - {{domxref("Location.replace()")}}
   - : 用给定的 URL 替换掉当前的资源。与 `assign()` 方法不同的是用 `replace()`替换的新页面不会被保存在会话的历史 {{domxref("History")}}中，这意味着用户将不能用后退按钮转到该页面。
 - {{domxref("Location.toString()")}}
-  - : 返回一个{{domxref("DOMString")}}，包含整个 URL。 它和读取{{domxref("URLUtils.href")}}的效果相同。但是用它是不能够修改 Location 的值的。
+  - : 返回一个{{domxref("DOMString")}}，包含整个 URL。它和读取{{domxref("URLUtils.href")}}的效果相同。但是用它是不能够修改 Location 的值的。
 
 ## 例子
 
@@ -70,7 +71,7 @@ console.log(url.origin);    // https://developer.mozilla.org
 
 ## 浏览器兼容性
 
-{{Compat("api.Location")}}
+{{Compat}}
 
 ## 另见
 

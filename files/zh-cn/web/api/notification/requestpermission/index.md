@@ -1,10 +1,11 @@
 ---
 title: Notification.requestPermission()
-slug: Web/API/notification/requestPermission
+slug: Web/API/Notification/requestPermission
 ---
+
 {{APIRef("Web Notifications")}}
 
-{{domxref("Notification")}} 接口的 **`requestPermission()` **方法请求用户当前来源的权限以显示通知。
+{{domxref("Notification")}} 接口的 **`requestPermission()`** 方法请求用户当前来源的权限以显示通知。
 
 ## 语法
 
@@ -22,12 +23,12 @@ Notification.requestPermission(callback);
 
 ### 参数
 
-- `callback` {{optional_inline}} {{deprecated_inline("gecko46")}}
+- `callback` {{optional_inline}} {{deprecated_inline}}
   - : 一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 Promise 的语法。
 
 ### 返回值
 
-一个 {{jsxref("Promise")}} ，将解析为一个 {{domxref("DOMString")}} ，它是用户对权限请求的选择。这个字符串可以是 `granted`（被授予）， `denied`（被拒绝） 或者 `default`（默认）。
+一个 {{jsxref("Promise")}} ，将解析为一个 {{domxref("DOMString")}} ，它是用户对权限请求的选择。这个字符串可以是 `granted`（被授予）， `denied`（被拒绝）或者 `default`（默认）。
 
 ## 实例
 
@@ -53,7 +54,7 @@ Notification.requestPermission().then(function(result) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.requestPermission")}}
+{{Compat}}
 
 ## 参见
 

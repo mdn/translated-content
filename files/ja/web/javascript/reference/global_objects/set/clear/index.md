@@ -1,16 +1,8 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - set
-browser-compat: javascript.builtins.Set.clear
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
+
 {{JSRef}}
 
 **`clear()`** メソッドは、 `Set` オブジェクトからすべての要素を取り除きます。

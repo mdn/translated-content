@@ -13,6 +13,7 @@ tags:
   - rejectionhandled
 translation_of: Web/API/Window/rejectionhandled_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'événement **`rejectionhandled`** est envoyé à la portée globale du script (généralement {{domxref("window")}} mais aussi {{domxref("Worker")}}) chaque fois qu'un JavaScript {{jsxref("Promise")}} est rejeté mais après que le rejet de la promesse a été traité.

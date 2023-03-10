@@ -2,6 +2,7 @@
 title: Window.localStorage
 slug: Web/API/Window/localStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 **`localStorage`** 為一唯讀屬性, 此屬性允許您存取目前文件({{DOMxRef("Document")}})隸屬網域來源的 {{DOMxRef("Storage")}} 物件; 與 sessionStorage 不同的是其儲存資料的可存取範圍為跨瀏覽頁狀態(Browser Sessions). `localStorage` 的應用與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似, 除了 `localStorage` 的儲存資料並無到期的限制, 而 `sessionStorage` 的儲存資料於目前瀏覽頁狀態結束的同時將一併被清除 — 也就是目前瀏覽器頁面被關閉的同時.
@@ -60,7 +61,7 @@ localStorage.clear();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.localStorage")}}
+{{Compat}}
 
 ## See also
 

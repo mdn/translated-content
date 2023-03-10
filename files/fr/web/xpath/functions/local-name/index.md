@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/local-name
 original_slug: Web/XPath/Fonctions/local-name
 ---
+
 {{ XsltRef() }}
 
 La fonction `local-name` retourne une chaîne représentant le nom local du premier nœud d'un ensemble de nœuds donné.

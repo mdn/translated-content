@@ -1,11 +1,8 @@
 ---
 title: クリッピングとマスキング
 slug: Web/SVG/Tutorial/Clipping_and_masking
-tags:
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Clipping_and_masking
 ---
+
 {{PreviousNext("SVG/Tutorial/Basic_Transformations", "SVG/Tutorial/Other_content_in_SVG")}}
 
 苦労して作成したオブジェクトの一部を消去することは、一見矛盾しているように見えます。ところが SVG で半円を作成しようとすると、以下のプロパティを使うことにすぐ気がつくでしょう。

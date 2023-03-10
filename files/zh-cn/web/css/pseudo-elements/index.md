@@ -2,6 +2,7 @@
 title: 伪元素
 slug: Web/CSS/Pseudo-elements
 ---
+
 {{ CSSRef() }}
 
 伪元素是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。下例中的 {{CSSxRef("::first-line")}} 伪元素可改变段落首行文字的样式。
@@ -28,20 +29,52 @@ selector::pseudo-element {
 >
 > **注意：**按照规范，应该使用双冒号（`::`）而不是单个冒号（`:`），以便区分伪类和伪元素。但是，由于旧版本的 W3C 规范并未对此进行特别区分，因此目前绝大多数的浏览器都同时支持使用这两种方式来表示伪元素。
 
-## 标准伪元素索引
+## 字母索引
+
+一组 CSS 规范定义的伪元素包括以下内容：
+
+A
 
 - {{CSSxRef("::after", "::after (:after)")}}
-- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
+
+B
+
+- {{CSSxRef("::backdrop")}}
 - {{CSSxRef("::before", "::before (:before)")}}
-- {{CSSxRef("::cue", "::cue (:cue)")}}
+
+C
+
+- {{CSSxRef("::cue")}}
+- {{CSSxRef("::cue-region")}}
+
+F
+
 - {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
 - {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::file-selector-button")}}
+
+G
+
 - {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
-- {{CSSxRef("::marker")}} {{Experimental_Inline}}
-- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+
+M
+
+- {{CSSxRef("::marker")}}
+
+P
+
+- {{CSSxRef("::part", "::part()")}}
+- {{CSSxRef("::placeholder")}}
+
+S
+
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
 - {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
+
+T
+
+- {{CSSxRef("::target-text")}} {{Experimental_Inline}}
 
 ## 规范
 

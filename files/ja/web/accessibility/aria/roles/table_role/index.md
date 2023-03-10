@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: table ロール'
-slug: Web/Accessibility/ARIA/Roles/Table_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Table_Role
+slug: Web/Accessibility/ARIA/Roles/table_role
 ---
+
 \\{{ariaref}}
 
 ARIA の role 属性の table 値は、このロールを含む要素を、ネイティブの {{htmlelement("table")}} HTML 要素と同様に、行と列に配置されたデータを含む非インタラクティブな表構造を持つものとして識別します。
@@ -37,7 +33,7 @@ ARIA の role 属性の table 値は、このロールを含む要素を、ネ�
 
 `role="table"` を持つ要素はセルを含む行を持つ静的な表構造です。 表の個々のセル内のウィジェットはインタラクティブになることがありますが、セルはフォーカス可能または選択可能ではありません。 可能な限りネイティブの HTML {{htmlelement("table")}} 要素を使用することを強くお勧めします。
 
-> **Warning:** 表が選択状態を維持している場合、2 次元ナビゲーションを使用している場合、またはユーザーがセルの順序を並べ替えることができる場合は、代わりにグリッド（[`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)）またはツリーグリッド（[`treegrid`](/ja/docs/)）を使用します。
+> **警告:** 表が選択状態を維持している場合、2 次元ナビゲーションを使用している場合、またはユーザーがセルの順序を並べ替えることができる場合は、代わりにグリッド（[`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)）またはツリーグリッド（[`treegrid`](/ja/docs/)）を使用します。
 
 ARIA の表を作成するには、`role="table"` をコンテナ要素に追加します。 そのコンテナ内では、各行に `role="row"` を設定し、子セルを含ませます。 各セルには、列ヘッダー（`columnheader`）、行ヘッダー（`rowheader`）、または単なるセル（[`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role)）のいずれかのロールがあります。 行は、表の子になることも、行グループ（[`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)）内になることもあります。
 
@@ -47,7 +43,7 @@ ARIA の表を作成するには、`role="table"` をコンテナ要素に追加
 
 表構造を持つインタラクティブなウィジェットを作成するには、代わりにグリッドパターンを使用してください。 インタラクションが個々のセルの選択状態を提供する場合、左から右へ、上から下へのナビゲーションを提供する場合、またはユーザーインターフェイスでセルの順序の並べ替えやドラッグアンドドロップなどの個々のセルの順序の変更を許可する場合、代わりに [`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role) または [`treegrid`](/ja/docs/) を使用してください。
 
-> **Note:** 可能な限りネイティブの [HTML の表要素](/ja/docs/Learn/HTML/Tables/Advanced)を使用することを強くお勧めします。
+> **メモ:** 可能な限りネイティブの [HTML の表要素](/ja/docs/Learn/HTML/Tables/Advanced)を使用することを強くお勧めします。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
@@ -72,7 +68,7 @@ ARIA の表を作成するには、`role="table"` をコンテナ要素に追加
 
 無し。 ソート可能な列については、 [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role) ロールを参照してください。
 
-> **Note:** ARIA の最初のルールは、要素を再定義し、ARIA のロール、ステート、プロパティを**追加して**アクセス可能にするのではなく、すでに組み込まれている意味論と挙動を持つネイティブな機能を使用できることです。 可能な限り、ARIA の `table` ロールの代わりに HTML の {{htmlelement("table")}} 要素を使用してください。
+> **メモ:** ARIA の最初のルールは、要素を再定義し、ARIA のロール、ステート、プロパティを**追加して**アクセス可能にするのではなく、すでに組み込まれている意味論と挙動を持つネイティブな機能を使用できることです。 可能な限り、ARIA の `table` ロールの代わりに HTML の {{htmlelement("table")}} 要素を使用してください。
 
 ## 例
 
@@ -118,10 +114,7 @@ ARIA の表を作成するには、`role="table"` をコンテナ要素に追加
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                                             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#table","ARIA Table Role")}}                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#table","ARIA Table Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 関連情報
 

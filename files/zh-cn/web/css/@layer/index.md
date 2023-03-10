@@ -2,9 +2,10 @@
 title: '@layer'
 slug: Web/CSS/@layer
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/en-US/docs/Web/CSS) [@规则](/en-US/docs/Web/CSS/At-rule) 中的`@layer`声明了一个 _级联层_， 同一层内的规则将级联在一起， 这给予了开发者对层叠机制的更多控制。
+[CSS](/zh-CN/docs/Web/CSS) [@规则](/zh-CN/docs/Web/CSS/At-rule) 中的`@layer`声明了一个 _级联层_，同一层内的规则将级联在一起，这给予了开发者对层叠机制的更多控制。
 
 ```css
 @layer utilities {
@@ -90,13 +91,13 @@ slug: Web/CSS/@layer
 
 那么则称为创建了一个匿名层。除创建后无法向其添加规则外，该层和其他命名层功能一致。
 
-## 标准语法
+## 形式语法
 
 {{CSSSyntax}}
 
-## 例子
+## 示例
 
-### 基本例子
+### 基本示例
 
 下方的例子创建了两条 CSS 规则。其中一条为 `type` 层内部的 {{htmlelement("p")}} 元素创建。另一条规则创建于级联层外部，作用于 `.box p`。
 
@@ -130,7 +131,7 @@ p {
 
 #### 结果
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("基本示例")}}
 
 ### 向已存在的层中添加规则
 
@@ -167,7 +168,7 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
 
 #### 结果
 
-{{EmbedLiveSample("Assigning_rules_to_existing_layers")}}
+{{EmbedLiveSample("向已存在的层中添加规则")}}
 
 ## 规范
 

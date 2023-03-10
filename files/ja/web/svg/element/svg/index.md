@@ -1,19 +1,15 @@
 ---
 title: svg
 slug: Web/SVG/Element/svg
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Container
-  - Web
-translation_of: Web/SVG/Element/svg
 ---
+
 {{SVGRef}}
 
 `svg` 要素は、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Attribute/viewBox)を定義するコンテナです。これは SVG ドキュメントの最も外側の要素として使用されますが、SVG または HTML ドキュメントの中に SVG フラグメントを埋め込むためにも使用できます。
 
-> **Note:** `xmlns` 属性は *SVG ドキュメント*の最も外側の `svg` 要素にのみ必要です。内部の `svg` 要素や HTML 文書の内部には不要です。
+> **メモ:** `xmlns` 属性は *SVG ドキュメント*の最も外側の `svg` 要素にのみ必要です。内部の `svg` 要素や HTML 文書の内部には不要です。
+
+## 例
 
 ```css hidden
 html,body,svg { height:100% }
@@ -30,17 +26,17 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Exeemple', 150, '100%')}}
+{{EmbedLiveSample('Example', 300, 100)}}
 
 ## 属性
 
-- {{SVGAttr("baseProfile")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : 文書が要求する最小の SVG 言語プロファイル
     _値の型_: **\<string>** ; _初期値_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
   - : SVG フラグメントで用いられる初期記述言語
     _値の型_: **\<string>** ; _初期値_: `application/ecmascript`; _アニメーション可否_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
   - : SVG フラグメントで用いられる初期のスタイルシート言語
     _値の型_: **\<string>** ; _初期値_: `text/css`; _アニメーション可否_: **no**
 - {{SVGAttr("height")}}
@@ -49,7 +45,7 @@ html,body,svg { height:100% }
 - {{SVGAttr("preserveAspectRatio")}}
   - : 異なるアスペクト比での表示時に、`svg`フラグメントがどう変形されるか
     _値の型_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _初期値_: `xMidYMid meet`; _アニメーション可否_: **yes**
-- {{SVGAttr("version")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("version")}} {{deprecated_inline}}
   - : 要素内の内容にどのバージョンの SVG が用いられるか
     _値の型_: **[\<number>](/ja/docs/Web/SVG/Content_type#Number)** ; _初期値_: none; _アニメーション可否_: **no**
 - {{SVGAttr("viewBox")}}
@@ -65,7 +61,7 @@ html,body,svg { height:100% }
   - : SVG コンテナが表示される y 座標。最も外側の`SVG`要素では効果ありません。
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _初期値_: `0`; _Animatable_: **yes**
 
-> **Note:** SVG2 で開始する場合には、`x`, `y`, `width`, `height` は、*ジオメトリプロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。
+> **メモ:** SVG2 で開始する場合には、`x`, `y`, `width`, `height` は、*ジオメトリプロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。
 
 ### グローバル属性
 
@@ -88,10 +84,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                     | コメント   |
-| ------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+{{Specifications}}
 
 ## ブラウザの実装状況
 

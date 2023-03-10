@@ -2,6 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素")}}来支持基础的媒体相关的能力，就像 audio 和 video 一样。{{domxref("HTMLVideoElement", "HTML 视频元素")}}和 {{domxref("HTMLAudioElement", "HTML 音频元素")}}元素都继承自此接口。{{InheritanceDiagram(600, 180)}}
 
 ## 特性
@@ -69,7 +70,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
           href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes"
           >CORS 设置</a
         >的{{ domxref("DOMString") }}。从
-        <a href="/en-US/docs/HTML/CORS_settings_attributes"
+        <a href="/zh-CN/docs/HTML/CORS_settings_attributes"
           >CORS settings attributes</a
         >
         查看更多详情
@@ -177,7 +178,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
         {{htmlelement("audio")}} or {{htmlelement("video")}}
         element will play in, on a Firefox OS device. See
         <a
-          href="/en-US/docs/Web/API/AudioChannels_API/Using_the_AudioChannels_API"
+          href="/zh-CN/docs/Web/API/AudioChannels_API/Using_the_AudioChannels_API"
           >Using the AudioChannels API</a
         >
         for more details.
@@ -229,7 +230,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("MediaStream")}}</td>
       <td>
         Lets you set or get the
-        <a href="/en-US/docs/WebRTC/MediaStream_API">Media Stream</a> to be
+        <a href="/zh-CN/docs/WebRTC/MediaStream_API">Media Stream</a> to be
         played or being played.
       </td>
     </tr>
@@ -490,9 +491,9 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
           <p>
             <strong>Note:</strong> Previously
             <code>canPlayType('video/webm')</code> returned
-            <code>'probably'</code>. Starting with Gecko 28
-            {{geckoRelease(28)}}, it returns <code>'maybe'</code>.
-            ({{ bug(884275) }})
+            <code>'probably'</code>. Starting with Gecko 28,
+            it returns <code>'maybe'</code>.
+            (<a href="https://bugzil.la/884275">Firefox bug 884275</a>)
           </p>
         </div>
       </td>
@@ -585,7 +586,7 @@ Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

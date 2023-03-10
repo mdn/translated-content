@@ -1,13 +1,9 @@
 ---
 title: Consola
-slug: Web/API/Console
-page-type: web-api-interface
-translation_of: Web/API/Console
+slug: Web/API/console
 original_slug: Web/API/Console
-browser-compat: api.console
-l10n:
-  sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
+
 {{APIRef("Console API")}}
 
 El objeto **`console`** provee acceso a la consola de depuración de los navegadores (p. ej. la [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) en Firefox). Los detalles de como funciona varían de navegador en navegador, pero hay un conjunto de características que _de facto_ son proporcionadas generalmente.
@@ -18,7 +14,7 @@ El objeto `console` puede ser accedido desde cualquier objeto global. {{domxref(
 console.log("Falló al abrir el enlace especificado")
 ```
 
-Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
+Esta página documenta los [Métodos](#métodos) disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
 
 {{AvailableInWorkers}}
 
@@ -71,18 +67,17 @@ Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `cons
 - {{domxref("console.warn()")}}
   - : Muestra un mensaje de advertencia.Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
 
-
 ## Ejemplos
 
 ### Enviar texto a la consola
 
-La característica mas utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
+La característica más utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
 
-Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o mas sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
+Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o más sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
 
 #### Mostrando un solo objeto
 
-La manera mas simple de utilizar los métodos de registro es mostrar un solo objeto:
+La manera más simple de utilizar los métodos de registro es mostrar un solo objeto:
 
 ```js
 var someObject = { str: "Algún texto", id: 5 };
@@ -228,13 +223,12 @@ Registrará el tiempo necesitado por el usuario para descartar el cuadro de aler
 
 Nótese que el nombre del temporizador es mostrado tanto cuando el temporizador es iniciado como cuando es detenido.
 
-
 > **Nota:** Es importante saber que si estas usando esto para registrar el tiempo del trafico de red, el temporizador reportará el tiempo total para la transacción, mientras que el tiempo listado en el panel de conexiones o panel de red es solo la cantidad de tiempo requerida para obtener la cabecera.
 > Si en cambio tienes el registro de cuerpo (`response body logging`) habilitado, el tiempo listado para la respuesta de la cabecera y el cuerpo combinados debiera coincidir con lo que ves en la salida de la consola.
 
 ### Trazas de pila
 
-El objeto consola tambien soporta la salida de una traza de pila; esto te mostrará  la ruta de llamadas tomadas hasta alcanzar el punto de tu llamada {{domxref("console.trace()")}}. Dado un código como el siguiente:
+El objeto consola tambien soporta la salida de una traza de pila; esto te mostrará la ruta de llamadas tomadas hasta alcanzar el punto de tu llamada {{domxref("console.trace()")}}. Dado un código como el siguiente:
 
 ```js
 function foo() {
@@ -274,4 +268,3 @@ La salida en la consola se verá como esto:
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
 - [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
 - [Inspector Web Safari](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
-

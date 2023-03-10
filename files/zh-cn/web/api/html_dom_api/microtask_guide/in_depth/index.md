@@ -2,6 +2,7 @@
 title: 深入：微任务与 Javascript 运行时环境
 slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
 ---
+
 {{APIRef("HTML DOM")}}
 
 当你在调试的时候，或者在决定如何以最佳的方式为任务队列和微任务队列安排调度顺序的时候，如果你了解关于 JavaScript 运行时是如何在背后执行这一切的，那将对你的理解会非常有帮助。这就是本节涵盖的内容。
@@ -21,7 +22,7 @@ JavaScript 本质上是一门单线程语言。对于在它被设计出来的那
 当一段 JavaScript 代码在运行的时候，它实际上是运行在**执行上下文**中。下面 3 种类型的代码会创建一个新的执行上下文：
 
 - 全局上下文是为运行代码主体而创建的执行上下文，也就是说它是为那些存在于 JavaScript 函数之外的任何代码而创建的。
-- 每个函数会在执行的时候创建自己的执行上下文。这个上下文就是通常说的 “本地上下文”。
+- 每个函数会在执行的时候创建自己的执行上下文。这个上下文就是通常说的“本地上下文”。
 - 使用 {{jsxref("Global_Objects/eval", "eval()")}} 函数也会创建一个新的执行上下文。
 
 每一个上下文在本质上都是一种作用域层级。每个代码段开始执行的时候都会创建一个新的上下文来运行它，并且在代码退出的时候销毁掉。看看下面这段 JavaScript 程序：
@@ -64,12 +65,12 @@ greetUser("Veronica");
 
   - 当执行到 `greetUser("Mike")` 的时候会为 `greetUser()` 函数创建一个它的上下文。这个执行上下文会被推入执行上下文栈中。
 
-    - 当 `greetUser()` 调用 `localGreeting()`的时候会为该方法创建一个新的上下文。并且在 `localGreeting()` 退出的时候它的上下文也会从执行栈中弹出并销毁。 程序会从栈中获取下一个上下文并恢复执行， 也就是从 `greetUser()` 剩下的部分开始执行。
+    - 当 `greetUser()` 调用 `localGreeting()`的时候会为该方法创建一个新的上下文。并且在 `localGreeting()` 退出的时候它的上下文也会从执行栈中弹出并销毁。程序会从栈中获取下一个上下文并恢复执行，也就是从 `greetUser()` 剩下的部分开始执行。
     - `greetUser()` 执行完毕并退出，其上下文也从栈中弹出并销毁。
 
   - 当 `greetUser("Teresa")` 开始执行时，程序又会为它创建一个上下文并推入栈顶。
 
-    - 当 `greetUser()` 调用 `localGreeting()`的时候另一个上下文被创建并用于运行该函数。 当 `localGreeting()` 退出的时候它的上下文也从栈中弹出并销毁。 `greetUser()` 得到恢复并继续执行剩下的部分。
+    - 当 `greetUser()` 调用 `localGreeting()`的时候另一个上下文被创建并用于运行该函数。当 `localGreeting()` 退出的时候它的上下文也从栈中弹出并销毁。 `greetUser()` 得到恢复并继续执行剩下的部分。
     - `greetUser()` 执行完毕并退出，其上下文也从栈中弹出并销毁。
 
   - 然后执行到 `greetUser("Veronica")` 又再为它创建一个上下文并推入栈顶。
@@ -85,7 +86,7 @@ greetUser("Veronica");
 
 ## JavaScript 运行时
 
-在执行 JavaScript 代码的时候，JavaScript 运行时实际上维护了一组用于执行 JavaScript 代码的**代理**。每个代理由一组执行上下文的集合、执行上下文栈、主线程、一组可能创建用于执行 worker 的额外的线程集合、一个任务队列以及一个微任务队列构成。除了主线程（某些浏览器在多个代理之间共享的主线程）之外，其它组成部分对该代理都是唯一的。
+在执行 JavaScript 代码的时候，JavaScript 运行时实际上维护了一组用于执行 JavaScript 代码的**代理**。每个代理由一组执行上下文的集合、执行上下文栈、主线程、一组可能创建用于执行 worker 的额外的线程集合、一个任务队列以及一个微任务队列构成。除了主线程（某些浏览器在多个代理之间共享的主线程）之外，其他组成部分对该代理都是唯一的。
 
 现在我们来更加详细的了解一下运行时是如何工作的。
 
@@ -93,7 +94,7 @@ greetUser("Veronica");
 
 每个代理都是由**事件循环**驱动的，事件循环负责收集用事件（包括用户事件以及其他非用户事件等）、对任务进行排队以便在合适的时候执行回调。然后它执行所有处于等待中的 JavaScript 任务（宏任务），然后是微任务，然后在开始下一次循环之前执行一些必要的渲染和绘制操作。
 
-网页或者 app 的代码和浏览器本身的用户界面程序运行在相同的 **{{Glossary("线程")}}**中， 共享相同的 **事件循环**。 该线程就是 **{{Glossary("main thread", "主线程")}}**，它除了运行网页本身的代码之外，还负责收集和派发用户和其它事件，以及渲染和绘制网页内容等。
+网页或者 app 的代码和浏览器本身的用户界面程序运行在相同的 **{{Glossary("线程")}}**中，共享相同的 **事件循环**。该线程就是 **{{Glossary("main thread", "主线程")}}**，它除了运行网页本身的代码之外，还负责收集和派发用户和其他事件，以及渲染和绘制网页内容等。
 
 然后，事件循环会驱动发生在浏览器中与用户交互有关的一切，但在这里，对我们来说更重要的是需要了解它是如何负责调度和执行在其线程中执行的每段代码的。
 
@@ -102,11 +103,11 @@ greetUser("Veronica");
 - Window 事件循环
   - : window 事件循环驱动所有同源的窗口 (though there are further limits to this as described elsewhere in this article XXXX ????).
 - Worker 事件循环
-  - : worker 事件循环顾名思义就是驱动 worker 的事件循环。这包括了所有种类的 worker：最基本的 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 以及 [shared worker](/zh-CN/docs/Web/API/SharedWorker) 和 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)。 Worker 被放在一个或多个独立于 “主代码” 的代理中。浏览器可能会用单个或多个事件循环来处理给定类型的所有 worker。
+  - : worker 事件循环顾名思义就是驱动 worker 的事件循环。这包括了所有种类的 worker：最基本的 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 以及 [shared worker](/zh-CN/docs/Web/API/SharedWorker) 和 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)。Worker 被放在一个或多个独立于“主代码”的代理中。浏览器可能会用单个或多个事件循环来处理给定类型的所有 worker。
 - Worklet 事件循环
-  - [: worklet](/zh-CN/docs/Web/API/Worklet) 事件循环用于驱动运行 worklet 的代理。这包含了 {{domxref("Worklet")}}、{{domxref("AudioWorklet")}} 以及 {{domxref("PaintWorklet")}}。
+  - : [worklet](/zh-CN/docs/Web/API/Worklet) 事件循环用于驱动运行 worklet 的代理。这包含了 {{domxref("Worklet")}}、{{domxref("AudioWorklet")}} 以及 {{domxref("PaintWorklet")}}。
 
-多个同{{Glossary("源")}}（译者注：此处同源的源应该不是指同源策略中的源，而是指由同一个窗口打开的多个子窗口或同一个窗口中的多个 iframe 等，意味着起源的意思，下一段内容就会对这里进行说明）窗口可能运行在相同的事件循环中，每个队列任务进入到事件循环中以便处理器能够轮流对它们进行处理。记住这里的网络术语 “window” 实际上指的用于运行网页内容的浏览器级容器，包括实际的 window，一个 tab 标签或者一个 frame。
+多个同{{Glossary("源")}}（译者注：此处同源的源应该不是指同源策略中的源，而是指由同一个窗口打开的多个子窗口或同一个窗口中的多个 iframe 等，意味着起源的意思，下一段内容就会对这里进行说明）窗口可能运行在相同的事件循环中，每个队列任务进入到事件循环中以便处理器能够轮流对它们进行处理。记住这里的网络术语“window”实际上指的用于运行网页内容的浏览器级容器，包括实际的 window，一个 tab 标签或者一个 frame。
 
 在特定情况下，同源窗口之间共享事件循环，例如：
 
@@ -118,7 +119,7 @@ greetUser("Veronica");
 
 #### 任务 vs 微任务
 
-一个**任务**就是指计划由标准机制来执行的任何 JavaScript，如程序的初始化、事件触发的回调等。 除了使用事件，你还可以使用 {{domxref("window.setTimeout", "setTimeout()")}} 或者 {{domxref("window.setInterval", "setInterval()")}} 来添加任务**。**
+一个**任务**就是指计划由标准机制来执行的任何 JavaScript，如程序的初始化、事件触发的回调等。除了使用事件，你还可以使用 {{domxref("window.setTimeout", "setTimeout()")}} 或者 {{domxref("window.setInterval", "setInterval()")}} 来添加任务**。**
 
 任务队列和微任务队列的区别很简单，但却很重要：
 
@@ -139,7 +140,7 @@ greetUser("Veronica");
 
 微任务是另一种解决该问题的方案，通过将代码安排在下一次事件循环开始之前运行而不是必须要等到下一次开始之后才执行，这样可以提供一个更好的访问级别。
 
-微任务队列已经存在有一段时间了，但之前它仅仅被内部使用来驱动诸如 promise 这些。`queueMicrotask()`的加入可以让开发者创建一个统一的微任务队列，它能够在任何时候即便是当 JavaScript 执行上下文栈中没有执行上下文剩余时也可以将代码安排在一个安全的时间运行。 在多个实例、所有浏览器以及运行时中，一个标准的微任务队列机制意味着这些微任务可以非常可靠的以相同的顺序执行，从而避免一些潜在的难以发现的错误。
+微任务队列已经存在有一段时间了，但之前它仅仅被内部使用来驱动诸如 promise 这些。`queueMicrotask()`的加入可以让开发者创建一个统一的微任务队列，它能够在任何时候即便是当 JavaScript 执行上下文栈中没有执行上下文剩余时也可以将代码安排在一个安全的时间运行。在多个实例、所有浏览器以及运行时中，一个标准的微任务队列机制意味着这些微任务可以非常可靠的以相同的顺序执行，从而避免一些潜在的难以发现的错误。
 
 ## 更多
 

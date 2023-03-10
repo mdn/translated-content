@@ -1,14 +1,6 @@
 ---
 title: JavaScript 구성요소
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - 가이드
-  - 국제화
-  - 소개
-  - 자바스크립트
-  - 초보자
-  - 함수
-translation_of: Learn/JavaScript/Building_blocks
 ---
 {{LearnSidebar}}
 

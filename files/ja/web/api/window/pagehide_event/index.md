@@ -2,6 +2,7 @@
 title: 'Window: pagehide イベント'
 slug: Web/API/Window/pagehide_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`pagehide`** イベントは、ブラウザーがセッションの履歴から他のページを表示する過程において、現在のページを非表示にしたときに {{domxref("Window")}} へ送られます。例えば、ユーザーがブラウザーの戻るボタンをクリックしたとき、現在のページはひとつ前のページが表示される前に `pagehide` イベントを受け取ります。
@@ -51,10 +52,7 @@ window.onpagehide = event => {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pagehide', 'pagehide')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
-| {{SpecName('HTML5 W3C', 'browsers.html#event-pagehide', 'pagehide')}}             | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

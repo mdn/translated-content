@@ -2,6 +2,7 @@
 title: Range.deleteContents()
 slug: Web/API/Range/deleteContents
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.deleteContents()`** 移除来自 {{ domxref("Document") }}的{{ domxref("Range") }} 内容。
@@ -28,8 +29,8 @@ range.deleteContents();
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.deleteContents")}}
+{{Compat}}
 
 ## 参考
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

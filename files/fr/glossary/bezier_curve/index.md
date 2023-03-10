@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Bézier_curve
 original_slug: Glossary/Bézier_curve
 ---
+
 Une **courbe de Bézier** est une courbe décrite mathématiquement utilisée en infographie et en animation. Dans {{Glossary("vector image", "vector images")}}, elles sont utilisées pour modéliser des courbes lisses qui peuvent être redimensionnées indéfiniment.
 
 La courbe est définie par un ensemble de points de contrôle avec un minimum de deux. Les graphiques et animations Web utilisent Cubic Béziers, qui sont des courbes avec quatre points de contrôle P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, et P<sub>3</sub>.
@@ -23,7 +24,7 @@ Pour tracer la courbe, deux lignes imaginaires sont tracées l'une de P<sub>0</s
 
 - [courbe de Bézier sur Wikipédia](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier)
 
-### En savoir plus
+### Voir aussi
 
 - [Fonctions de synchronisation Cubic Bézier en CSS](</fr/docs/Web/CSS/timing-function#The_cubic-bezier()_class_of_timing_functions>)
 - {{SVGAttr("keySplines")}} Attribut SVG

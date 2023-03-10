@@ -2,6 +2,7 @@
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
 ---
+
 {{HTTPSidebar}}
 
 **HTTP 的 `OPTIONS 方法`** 用于获取目的资源所支持的通信选项。客户端可以对特定的 URL 使用 OPTIONS 方法，也可以对整站（通过将 URL 设置为“\*”）使用该方法。

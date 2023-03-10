@@ -2,6 +2,7 @@
 title: 创建种类表单
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
+
 本章节演示如何定义我们的页面，创建`Genre` 物件（这是一个很好的起点，因为类型只有一个字段，它的名称`name`，没有依赖项）。像任何其他页面一样，我们需要设置路由，控制器和视图。
 
 ## 引入验证与无害化方法
@@ -204,7 +205,7 @@ block content
 
 ![](locallibary_express_genre_create_error.png)
 
-> **备注：** 我们的验证使用`trim()`，来确保不接受空格作为种类名称。我们还可以在表单中 ​​ 的字段定义中，添加值`required='true'`，来验证客户端字段不为空：
+> **备注：** 我们的验证使用`trim()`，来确保不接受空格作为种类名称。我们还可以在表单中 的字段定义中，添加值`required='true'`，来验证客户端字段不为空：
 >
 > ```js
 > input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )

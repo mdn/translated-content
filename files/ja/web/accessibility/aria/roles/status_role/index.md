@@ -1,13 +1,9 @@
 ---
 title: status ロールの使用
 slug: Web/Accessibility/ARIA/Roles/status_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 ---
+
 ### 説明
 
 このテクニックは、[`status`](https://www.w3.org/TR/wai-aria/#status) ロールを使用する方法を示し、ブラウザーと支援技術に及ぼす影響について説明します。
@@ -30,7 +26,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 - スクリーンリーダーは、現在のステータスをアナウンスするための特別なキーを提供することがあり、これはステータスのライブリージョンの内容を提示するべきです。 `aria-live="assertive"` が設定されている場合を除いて、ユーザーがアイドル状態になったときにアナウンスするべきです。
 - スクリーン拡大鏡でステータスが拡大されることがあります。
 
-> **Note:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+> **メモ:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ### 例
 

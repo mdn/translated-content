@@ -1,14 +1,8 @@
 ---
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/length
 ---
+
 {{JSRef}}
 
 **`length`** アクセサープロパティは、型付き配列の長さを (要素数で) 表します。
@@ -38,9 +32,7 @@ uint8.length; // 6 (due to the offset of the constructed Uint8Array)
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.length', 'TypedArray.prototype.length')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

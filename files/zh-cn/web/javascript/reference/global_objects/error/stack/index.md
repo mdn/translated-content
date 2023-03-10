@@ -2,6 +2,7 @@
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 {{jsxref("Error")}}对象作为一个非标准的栈属性提供了一种函数追踪方式。无论这个函数被被调用，处于什么模式，来自于哪一行或者哪个文件，有着什么样的参数。这个栈产生于最近一次调用最早的那次调用，返回原始的全局作用域调用
@@ -12,9 +13,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
 
 注意这是 Firefox 定义的格式，并没有标准的定义。但是 Safari 6+ 和 Opera 12- 定义了一种非常相似的格式。其他使用 JavaScript V8 引擎的浏览器（例如 Chrome、Opera 15+，安卓浏览器）和 IE 10+，定义了一种不同的格式（可参见 [error.stack](http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) 文档）
 
-堆栈中的参数值： Firefox 14 版本之前是 ({{bug("744842")}}) 函数名会随着参数值会在添加 @符号之前被立即转换成用圆括号包裹的 string 类型。然而对象或者数组等其他类型似乎会被转换成`"[object Object]"`并且这种格式不能回退到之前实际上的对象，而纯值会被渲染（或许这种在 Firefox 14 中仍有这种可能，使用 `arguments.callee.caller.arguments` 更加简单。因为函数名可以使用 `arguments.callee.caller.name` 渲染）。`"undefined"` 被显示为 `"(void 0)"` 不过要注意的是如果是字符串类型的参数会直接以类似 `"@"`, `"("`, `")"` 格式通过编译（或者是包含在文件名中）。你不能简单的依赖这些将它分成多个组件，但是，对于 Firefox 14 及以后的版本来说，这些都不是问题
+堆栈中的参数值：Firefox 14 版本之前是 ({{bug("744842")}}) 函数名会随着参数值会在添加 @符号之前被立即转换成用圆括号包裹的 string 类型。然而对象或者数组等其他类型似乎会被转换成`"[object Object]"`并且这种格式不能回退到之前实际上的对象，而纯值会被渲染（或许这种在 Firefox 14 中仍有这种可能，使用 `arguments.callee.caller.arguments` 更加简单。因为函数名可以使用 `arguments.callee.caller.name` 渲染）。`"undefined"` 被显示为 `"(void 0)"` 不过要注意的是如果是字符串类型的参数会直接以类似 `"@"`, `"("`, `")"` 格式通过编译（或者是包含在文件名中）。你不能简单的依赖这些将它分成多个组件，但是，对于 Firefox 14 及以后的版本来说，这些都不是问题
 
-不同的浏览器会在不同时期设置这个值。例如，Firefox 在创建{{jsxref("Error")}}对象时设置它，然而 PhantomJS 是在当且仅当它抛出 {{jsxref("Error")}}时， 并且[MSDN docs](http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) 似乎也实现了 PhantomJS 的方式。
+不同的浏览器会在不同时期设置这个值。例如，Firefox 在创建{{jsxref("Error")}}对象时设置它，然而 PhantomJS 是在当且仅当它抛出 {{jsxref("Error")}}时，并且[MSDN docs](http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) 似乎也实现了 PhantomJS 的方式。
 
 ## 示例
 
@@ -76,7 +77,7 @@ a("first call, firstarg")@file:///C:/example.html:19
 
 ### Stack of eval'ed code
 
-Firefox30 以{{geckoRelease("30")}}格式开头，`Function()` 和 `eval()` 调用产生的错误代码堆栈，现在在调用内部通过行号和列号以更加详细的格式向我们展示出来。函数调用显示为`"> Function"` 而 eval 调用则是 `"> eval"`这样。下面来看这个{{bug("332176")}}.
+Firefox30 以 Gecko 30 格式开头，`Function()` 和 `eval()` 调用产生的错误代码堆栈，现在在调用内部通过行号和列号以更加详细的格式向我们展示出来。函数调用显示为`"> Function"` 而 eval 调用则是 `"> eval"`这样。下面来看这个{{bug("332176")}}.
 
 ```js
 try {
@@ -100,7 +101,7 @@ try {
 // @file:///C:/example.html:7:6
 ```
 
-你也可以使用`//# sourceURL` 命名 eval 源的指令。 也可以查看在 [Debugger](/en-US/docs/Tools/Debugger)文档中的[Debug eval 源](/en-US/docs/Tools/Debugger/How_to/Debug_eval_sources)和[blog post 博客 。](http://fitzgeraldnick.com/weblog/59/)
+你也可以使用`//# sourceURL` 命名 eval 源的指令。也可以查看在 [Debugger](/zh-CN/docs/Tools/Debugger)文档中的[Debug eval 源](/zh-CN/docs/Tools/Debugger/How_to/Debug_eval_sources)和[blog post 博客。](http://fitzgeraldnick.com/weblog/59/)
 
 ## 规范
 
@@ -108,11 +109,11 @@ try {
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.Error.stack")}}
+{{Compat}}
 
 ## 另请参阅
 
-- [Components.stack](/en-US/docs/Components.stack)
+- [Components.stack](/zh-CN/docs/Components.stack)
 - 外部项目：[TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)
 - MSDN：[error.stack](http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) docs
 - [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)

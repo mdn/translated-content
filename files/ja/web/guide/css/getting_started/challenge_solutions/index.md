@@ -1,11 +1,11 @@
 ---
 title: Challenge solutions
 slug: Web/Guide/CSS/Getting_started/Challenge_solutions
-translation_of: Web/Guide/CSS/Getting_started/Challenge_solutions
 ---
+
 このページは、 [CSS Getting Started](/ja/CSS/Getting_Started) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
 
-## [CSS をなぜ用いるか](/ja/CSS/Getting_Started/Why_use_CSS "MDC")
+## CSS をなぜ用いるか
 
 ### Colors
 
@@ -14,7 +14,7 @@ translation_of: Web/Guide/CSS/Getting_started/Challenge_solutions
 - Solution
   - : CSS supports common color names like `orange`, `yellow`, `blue`, `green`, or `black`. It also supports some more exotic color names like `chartreuse`, `fuschia`, or `burlywood`. See [CSS Color value](/ja/CSS/color_value) for a complete list as well as other ways of specifying colors.
 
-## [どのように CSS は動作するのか](/ja/CSS/Getting_Started/How_CSS_works "MDC")
+## どのように CSS は動作するのか
 
 ### DOM inspector
 
@@ -23,7 +23,7 @@ translation_of: Web/Guide/CSS/Getting_started/Challenge_solutions
 - Solution
   - : In the menu above the right-hand pane, choose **CSS Rules**. You see two items listed, one that references an internal resource and one that references your stylesheet file. The internal resource defines the **font-weight** property as `bolder`; your stylesheet defines the **color** property as `red`.
 
-## [接続と継承](/ja/CSS/Getting_Started/Cascading_and_inheritance "MDC")
+## 接続と継承
 
 ### Inherited styles
 
@@ -40,7 +40,7 @@ translation_of: Web/Guide/CSS/Getting_started/Challenge_solutions
 
 Later sections of this tutorial describe style rules and declarations in greater detail.
 
-## [セレクター](/ja/CSS/Getting_Started/Selectors "MDC")
+## セレクター
 
 ### Second paragraph blue
 
@@ -70,7 +70,7 @@ Later sections of this tutorial describe style rules and declarations in greater
 
 The rules for the other colors all have more specific selectors, so they override the blue of the paragraph.
 
-## [読みやすい CSS](/ "MDC")
+## 読みやすい CSS
 
 ### Commenting out a rule
 
@@ -88,7 +88,7 @@ The rules for the other colors all have more specific selectors, so they overrid
     */
     ```
 
-## [文章のスタイル](/ "MDC")
+## 文章のスタイル
 
 ### Big initial letters
 
@@ -104,7 +104,7 @@ The rules for the other colors all have more specific selectors, so they overrid
 
     If you use separate declarations for `font-size` and `font-family`, then the `font-style` setting on the first paragraph is _not_ overridden.
 
-## [色](/ "MDC")
+## 色
 
 ### Three-digit color codes
 
@@ -134,7 +134,7 @@ The rules for the other colors all have more specific selectors, so they overrid
     }
     ```
 
-## [コンテンツ](/ "MDC")
+## コンテンツ
 
 ### 画像の追加
 
@@ -150,7 +150,7 @@ The rules for the other colors all have more specific selectors, so they overrid
     }
     ```
 
-## [リスト](/ja/CSS/Getting_Started/Lists "MDC")
+## リスト
 
 ### 小文字のローマ数字
 
@@ -183,7 +183,7 @@ The rules for the other colors all have more specific selectors, so they overrid
     }
     ```
 
-## [ボックス](/ja/CSS/Getting_Started/Boxes "MDC")
+## ボックス
 
 ### 海の境界線
 
@@ -199,7 +199,7 @@ The rules for the other colors all have more specific selectors, so they overrid
     }
     ```
 
-## [レイアウト](/ja/CSS/Getting_Started/Layout "MDC")
+## レイアウト
 
 ### デフォルトの画像位置
 
@@ -225,7 +225,7 @@ The rules for the other colors all have more specific selectors, so they overrid
     }
     ```
 
-## [表](/ja/CSS/Getting_Started/Tables)
+## 表
 
 ### Borders on data cells only
 
@@ -241,7 +241,7 @@ The rules for the other colors all have more specific selectors, so they overrid
     }
     ```
 
-## [メディア](/ja/CSS/Getting_Started/Media "MDC")
+## メディア
 
 ### Separate print style file
 

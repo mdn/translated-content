@@ -1,86 +1,135 @@
 ---
-title: GlobalEventHandlers.ondrop
+title: HTMLElement：drop 事件
 slug: Web/API/HTMLElement/drop_event
 ---
-drop 事件的全局处理函数
+
+{{APIRef}}
+
+**`drop`** 事件在元素或选中的文本被放置在有效的放置目标上时被触发。
 
 ## 语法
 
-```plain
-var dropHandler = targetElement.ondrop;
-```
-
-### 返回值
-
-- `dropHandler`
-  - : 目标元素的 drop 事件处理函数。
-
-## Example
-
-下面这个示例演示了 ondrop 属性的用法来指定 drop 事件的处理函数。
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-<!DOCTYPE html>
-<html lang=en>
-<title>Examples of using the ondrag Global Event Attribute</title>
-<meta content="width=device-width">
-<style>
-  div {
-    margin: 0em;
-    padding: 2em;
-  }
-  #source {
-    color: blue;
-    border: 1px solid black;
-  }
-  #target {
-    border: 1px solid black;
-  }
-</style>
-</head>
-<script>
-function drag_handler(ev) {
- console.log("Drag");
-}
+addEventListener('drop', (event) => {});
 
-function dragstart_handler(ev) {
- console.log("dragStart");
- ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop_handler(ev) {
- console.log("Drop");
- ev.currentTarget.style.background = "lightyellow";
-
- ev.preventDefault();
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
-}
-
-function dragover_handler(ev) {
- console.log("dragOver");
- ev.preventDefault();
-}
-</script>
-<body>
-<h1>Examples of <code>ondrag</code>, <code>ondrop</code>, <code>ondragstart</code>, <code>ondragover</code></h1>
- <div class="source">
-   <p id="source" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
- </div>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
-</body>
-</html>
+ondrop = (event) => { };
 ```
 
-## Specifications
+## 事件类型
+
+一个 {{domxref("DragEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("DragEvent")}}
+
+## 事件属性
+
+_除了下面列出的属性外，还可以使用父接口 {{domxref("Event")}} 的属性。_
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : 在进行拖放操作时，传输的数据。
+
+## 示例
+
+### 一个最小的拖放示例
+
+在此示例中，我们在容器内有一个可拖动元素。尝试抓住这个元素，将其拖到另一个容器中，然后释放它。
+
+我们在这里使用了三个事件处理器：
+
+- 在 `dragstart` 事件处理器中，我们获得对用户拖动的元素的引用。
+- 在目标容器的 `dragover` 事件处理器中，我们调用 `event.preventDefault()`，以使得该元素能够接收 `drop` 事件。
+- 在放置区域的 `drop` 事件处理器中，我们将可拖动元素从原先的容器移动到该放置区域。
+
+完整的拖放示例，请参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件。
+
+#### HTML
+
+```html
+<div class="dropzone">
+  <div id="draggable" draggable="true">
+    这个 div 可以拖动
+  </div>
+</div>
+<div class="dropzone" id="droptarget"></div>
+```
+
+#### CSS
+
+```css
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+.dropzone {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  margin: 10px;
+  padding: 10px;
+}
+```
+
+#### JavaScript
+
+```js
+let dragged = null;
+
+const source = document.getElementById("draggable");
+source.addEventListener("dragstart", (event) => {
+  // store a ref. on the dragged elem
+  dragged = event.target;
+});
+
+const target = document.getElementById("droptarget");
+target.addEventListener("dragover", (event) => {
+  // prevent default to allow drop
+  event.preventDefault();
+});
+
+target.addEventListener("drop", (event) => {
+  // prevent default action (open as link for some elements)
+  event.preventDefault();
+  // move dragged element to the selected drop target
+  if (event.target.className === "dropzone") {
+    dragged.parentNode.removeChild(dragged);
+    event.target.appendChild(dragged);
+  }
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample('一个最小的拖放示例')}}
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.ondrop")}}
+{{Compat}}
 
-## See also
+## 参见
 
-- {{event("drop")}}
+- 其他拖放事件：
+
+  - {{domxref("HTMLElement/drag_event", "drag")}}
+  - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+  - {{domxref("HTMLElement/dragend_event", "dragend")}}
+  - {{domxref("HTMLElement/dragover_event", "dragover")}}
+  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+
+- 其他目标上的此事件：
+
+  - {{domxref("Window")}}：{{domxref("Window/drop_event", "drop")}} 事件
+  - {{domxref("Document")}}：{{domxref("Document/drop_event", "drop")}} 事件
+  - {{domxref("SVGElement")}}：{{domxref("SVGElement/drop_event", "drop")}} 事件

@@ -1,13 +1,8 @@
 ---
 title: <xsl:attribute-set>
 slug: Web/XSLT/Element/attribute-set
-tags:
-  - XSLT
-  - attribute-set
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/attribute-set
 ---
+
 {{ XsltRef() }}
 
 `<xsl:attribute-set>` 要素は名前付き属性のセットを作成します。属性のセットは、CSS の名前付きスタイルに類似した方法で出力ドキュメント全体に適用されます。

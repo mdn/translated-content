@@ -1,10 +1,6 @@
 ---
 title: 접근성
 slug: Web/Accessibility
-tags:
-  - Accessibility
-  - Landing
-translation_of: Web/Accessibility
 ---
 
 웹 개발에서의 **접근성**은 사람들의 능력이 어느 정도 제한되어 있더라도, 가능한 많은 사람이 웹사이트를 사용 할 수 있도록 하는 것 입니다.

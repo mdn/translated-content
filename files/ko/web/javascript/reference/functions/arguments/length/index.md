@@ -1,8 +1,8 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-translation_of: Web/JavaScript/Reference/Functions/arguments/length
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.length`** 속성은 함수에 전달된 인수의 수를 포함하고 있습니다.

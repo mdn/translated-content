@@ -2,6 +2,7 @@
 title: TouchList
 slug: Web/API/TouchList
 ---
+
 {{APIRef("Touch Events")}}
 
 **`TouchList`** インターフェイスは、タッチ面上の接触点のリストを表します。例えば、ユーザーがタッチ面 (画面やトラックパッドなど) を 3 本指で操作している場合、対応する `TouchList` オブジェクトは 1 本の指あたり 1 つの {{domxref("Touch")}} オブジェクトを持ち、全部で 3 要素になります。
@@ -24,10 +25,7 @@ slug: Web/API/TouchList
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 | 備考                |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Touch Events 2','#touchlist-interface')}} | {{Spec2('Touch Events 2')}} | Non-stable version. |
-| {{SpecName('Touch Events', '#touchlist-interface')}}     | {{Spec2('Touch Events')}}     | 初回定義            |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

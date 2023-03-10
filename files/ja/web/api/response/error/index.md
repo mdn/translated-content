@@ -1,28 +1,32 @@
 ---
 title: Response.error()
 slug: Web/API/Response/error
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
+
 {{APIRef("Fetch")}}
 
-{{domxref("Response")}} インターフェイスの **`error()`** メソッドはネットワークエラーに関連付けられた新規の `Response` オブジェクトを返します。
+**`error()`** は {{domxref("Response")}} インターフェイスのメソッドで、ネットワークエラーに関連付けられた新規の `Response` オブジェクトを返します。
 
-> **Note:** これは主に [ServiceWorkers](/ja/docs/Web/API/ServiceWorker_API) に関連しています。エラーメソッドは、必要に応じてエラーを返す為に使用されます。 エラーレスポンスの {{domxref("Response.type","type")}} は `error` に設定されています。
+> **メモ:** これは主に[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)に関連しています。エラーメソッドは、必要に応じてエラーを返す為に使用されます。
+> エラーレスポンスの {{domxref("Response.type","type")}} は `error` に設定されています。
 
-> **Note:** "エラー" `Response` は実際にスクリプトに公開されません。 {{domxref("GlobalFetch.fetch","fetch()")}} に対するそのような応答は、 promise を拒否します。
+> **メモ:** "エラー" の `Response` は実際にスクリプトに公開されません。 {{domxref("fetch()")}} に対するそのようなレスポンスは、プロミスを拒否します。
 
 ## 構文
 
-```
-var errorResponse = Response.error();
+```js-nolint
+error()
 ```
 
 ### 引数
 
-無し
+なし。
 
-### 返り値
+### 返値
 
-{{domxref("Response")}} オブジェクト
+{{domxref("Response")}} オブジェクト。
 
 ## 例
 
@@ -30,16 +34,14 @@ TBD (まだどこでもサポートされていません。)
 
 ## 仕様
 
-| 仕様                                                                     | 状態                     | コメント |
-| ------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('Fetch','#dom-response-error','error()')}} | {{Spec2('Fetch')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("api.Response.error")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

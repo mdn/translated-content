@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 ---
+
 {{JSRef}}
 
 **`filter()`** メソッドは、提供された関数によって実装されたテストに合格したすべての要素を含む新しい型付き配列を生成します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.filter()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。
@@ -74,9 +67,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

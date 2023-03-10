@@ -1,15 +1,8 @@
 ---
 title: アットルール
 slug: Web/CSS/At-rule
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls:
-  - https://drafts.csswg.org/css-conditional-3/
-  - https://compat.spec.whatwg.org/#css-at-rules
-translation_of: Web/CSS/At-rule
 ---
+
 {{CSSRef}}
 
 **アットルール**は [CSS の文](/ja/docs/Web/CSS/Syntax#css_statements)のうち、CSS の動作を既定するものです。アットルールはアットマーク、'`@`' (`U+0040 COMMERCIAL AT`) で始まり、それに続く識別子から、次のセミコロン、 '`;`' (`U+003B SEMICOLON`) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/Syntax#css_declarations_blocks)のどちらかが現れるまでの部分からなります。
@@ -58,7 +51,7 @@ translation_of: Web/CSS/At-rule
 
 プロパティの値と同様に、アットルールはそれぞれ異なる構文を持っています。しかし、いくつかのアットルールは **条件付きグループルール**という特別なカテゴリーに分類されます。これらの文は構文が共通しており、どれも*内側の文*—*規則セット*または*内側のアットルール*を入れることができます。さらに言えば、それらはすべて共通の意味合いがあります。 — すべては常に**真**か**偽**かで判定される何らかの条件と結びついています。条件が**真**であれば、条件付きグループルール内の文全部が適用されます。
 
-条件付きグループルールは  [CSS Conditionals Level 3](https://drafts.csswg.org/css-conditional-3/) で定義されており、以下の規則があります。
+条件付きグループルールは [CSS Conditionals Level 3](https://drafts.csswg.org/css-conditional-3/) で定義されており、以下の規則があります。
 
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}

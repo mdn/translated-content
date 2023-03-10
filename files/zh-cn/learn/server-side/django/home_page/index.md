@@ -3,9 +3,10 @@ title: 'Django Tutorial Part 5: 主页构建'
 slug: Learn/Server-side/Django/Home_page
 original_slug: learn/Server-side/Django/主页构建
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
-我们现在可以添加代码来显示我们的第一个完整页面 - [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模板的实践经验。
+我们现在可以添加代码来显示我们的第一个完整页面 - [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模板的实践经验。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -13,7 +14,7 @@ original_slug: learn/Server-side/Django/主页构建
       <th scope="row">前提：</th>
       <td>
         读 the
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/Introduction"
           >Django Introduction</a
         >. 完成上章节 (including
         <a href="/zh-CN/docs/Learn/Server-side/Django/Admin_site"
@@ -54,7 +55,7 @@ original_slug: learn/Server-side/Django/主页构建
 - `catalog/` — 主页
 - `catalog/books/` — 书单页
 - `catalog/authors/` — 作者页
-- `catalog/book/<id>` — 主键字段 ID 的具体书（默认） —详细视图。如下例子 `／catalog／book／3`，第三本书。
+- `catalog/book/<id>` — 主键字段 ID 的具体书（默认） —详细视图。如下例子 `/catalog/book/3`，第三本书。
 - `catalog/author/<id>` — 主键字段 ID 的具体作者（默认） —详细视图。如下例子 `/catalog/author/11`，第 11 个作者。
 
 前三个 URL 用于列出索引，书籍和作者。这些不会对任何附加信息进行编码，而返回的结果将取决于数据库中的内容，运行获取信息的查询将始终保持一致。
@@ -75,7 +76,7 @@ original_slug: learn/Server-side/Django/主页构建
 
 ### URL 映射
 
-在我们创建的[基础网站](/en-US/docs/Learn/Server-side/Django/skeleton_website)上，更新 **/locallibrary/urls.py** 文件。以确保每当收到以 **`catalog/`** 开头的 URL 时，URLConf 模块中的 **catalog.urls** 会处理剩余的字符串。
+在我们创建的[基础网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)上，更新 **/locallibrary/urls.py** 文件。以确保每当收到以 **`catalog/`** 开头的 URL 时，URLConf 模块中的 **catalog.urls** 会处理剩余的字符串。
 
 打开 catalog/**urls.py** ，复制下面代码
 
@@ -95,9 +96,9 @@ urlpatterns = [
 > ]
 > ```
 >
-> 每当 Django 使用 include() （[`django.conf.urls.include()），`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)`它排除与该点 匹配URL的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。`
+> 每当 Django 使用 include() （[`django.conf.urls.include()`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)），它排除与该点匹配 URL 的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。
 >
-> 匹配的 URL 实际上是 `catalog/`+<空字符串> （`/catalog/` 假定是因为 `include()`是使用的方法）。如果我们收到一个 URL 的 HTTP 请求，我们的第一个视图函数将被调用`/catalog/。`
+> 匹配的 URL 实际上是 `catalog/`+<空字符串> （`/catalog/` 假定是因为 `include()` 是使用的方法）。如果我们收到一个 URL 的 HTTP 请求，我们的第一个视图函数将被调用`/catalog/`。
 
 此函数还说明了一个`name`参数，此唯一标识指定 URL 映射。你可以使用 "reverse" 映射—去动态创建指定映射设计处理的资源的一个 URL。例如，我们现在可以通过在我们的模版中创建以下链接到我们的主页：
 
@@ -143,7 +144,7 @@ def index(request):
     )
 ```
 
-视图函数的第一部分使用`objects.all()`模型类的属性来获取记录计数。它还会获取一个`BookInstance`状态字段值为“a”（可用）的对象列表。您可以在前面的教程 ([Django Tutorial Part 3: Using models > Searching for records](/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records)) 中找到更多关于如何访问模型的信息。
+视图函数的第一部分使用`objects.all()`模型类的属性来获取记录计数。它还会获取一个`BookInstance`状态字段值为“a”（可用）的对象列表。您可以在前面的教程 ([Django Tutorial Part 3: Using models > Searching for records](/zh-CN/docs/Learn/Server-side/Django/Models#Searching_for_records)) 中找到更多关于如何访问模型的信息。
 
 在函数结束时，我们将该函数称为`render()`创建和返回 HTML 页面作为响应（此快捷方式函数包含许多其他函数，简化了这种非常常见的用例）。它将原始`request`对象（an HttpRequest）作为参数，具有数据占位符的 HTML 模板以及`context`变量（包含要插入到这些占位符中的数据的 Python 字典）。
 
@@ -311,7 +312,7 @@ return render(
 <img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="My image" style="width:555px;height:540px;"/>
 ```
 
-> **备注：** 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
+> **备注：** 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/zh-CN/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
 
 更多内容—[Managing static files](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs).
 

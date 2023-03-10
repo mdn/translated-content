@@ -2,7 +2,8 @@
 title: <li>
 slug: Web/HTML/Element/li
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<li>` 元素** （或称 _HTML 列表条目元素）_ 用于表示列表里的条目。它必须包含在一个父元素里：一个有序列表 ({{HTMLElement("ol")}})，一个无序列表 ({{HTMLElement("ul")}})，或者一个菜单 ({{HTMLElement("menu")}})。在菜单或者无序列表里，列表条目通常用点排列显示；在有序列表里，列表条目通常在左边显示按升序排列的计数，例如数字或者字母。
 
@@ -22,7 +23,7 @@ slug: Web/HTML/Element/li
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>{{HTMLElement("ul")}}、 {{HTMLElement("ol")}}、 或者 {{HTMLElement("menu")}} 元素。过时的 {{HTMLElement("dir")}} 也可以作为父元素，但是并不提倡。</td>
+   <td>{{HTMLElement("ul")}}、 {{HTMLElement("ol")}}、或者 {{HTMLElement("menu")}} 元素。过时的 {{HTMLElement("dir")}} 也可以作为父元素，但是并不提倡。</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -44,7 +45,7 @@ slug: Web/HTML/Element/li
 
     > **备注：** 这个属性在 HTML 4 中废弃，但是在 HTML 5 中重新引入。
 
-    > **备注：** 在 {{Gecko("9.0")}} 之前，负值会错误地转换为 0。{{Gecko("9.0")}} 开始，所有整数值都可以正确解析。
+    > **备注：** 在 Gecko 9.0 之前，负值会错误地转换为 0。Gecko 9.0 开始，所有整数值都可以正确解析。
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
   - : 这个字符型属性表明了数字的类型：
 
@@ -92,13 +93,13 @@ slug: Web/HTML/Element/li
 
 ## 浏览兼容性
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## 另见
 
-- 其它列表相关的 HTML 元素： {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}, 和过时的 {{HTMLElement("dir")}}；
+- 其他列表相关的 HTML 元素： {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}, 和过时的 {{HTMLElement("dir")}}；
 - 可能特定用于排版 `<li>` 元素的 CSS 属性：
 
   - {{cssxref("list-style")}} 属性，用于选择序号的展示方式，
-  - [CSS 计数器](/Web/Guide/CSS/Counters)，用于处理复杂的嵌套列表，
+  - [CSS 计数器](/zh-CN/docs/Web/Guide/CSS/Counters)，用于处理复杂的嵌套列表，
   - {{cssxref("margin")}} 属性，用于控制列表条目的缩进。

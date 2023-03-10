@@ -2,11 +2,12 @@
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 ---
+
 {{ APIRef("CSSOM") }} {{deprecated_header}}
 
 **CSSStyleDeclaration.getPropertyCSSValue()** メソッドインターフェイスは、プロパティの CSS 値を含む {{domxref('CSSValue')}} を返します。プロパティ名が一括指定プロパティの場合は `null` を返すことに注意して下さい。
 
-> **Note:** **注:** このインターフェースは、型付けされた CSS オブジェクトモデルを作成する試みの一部でした。この試みは放棄されており、ほとんどのブラウザーは実装していません。
+> **メモ:** このインターフェースは、型付けされた CSS オブジェクトモデルを作成する試みの一部でした。この試みは放棄されており、ほとんどのブラウザーは実装していません。
 >
 > この目的を達成するには、以下のものを使用することができます。
 >

@@ -2,6 +2,7 @@
 title: EffectTiming.easing
 slug: Web/API/KeyframeEffect/KeyframeEffect
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 这个{{domxref("EffectTiming")}} 词的 **`easing`** 属性在 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 指定用于缩放时间以产生缓和效果的计时函数，_easing_ 是动画随时间变化的速率。
@@ -32,7 +33,7 @@ A string defining the timing function to use for easing transitions during the a
 - `ease-in`
   - : An accelerated rate of change, going from slow to fast. Equivalent to `cubic-bezier(0.42, 0, 1, 1)`.
 - `ease-out`
-  - : 变化速率变慢了，从快到慢， 等价于`cubic-bezier(0, 0, 0.58, 1)`.
+  - : 变化速率变慢了，从快到慢，等价于`cubic-bezier(0, 0, 0.58, 1)`.
 - `ease-in-out`
   - : This rate of change speeds up in the middle. Equivalent to `cubic-bezier(0.42, 0, 0.58, 1)`.
 - `frames(<integer>)`
@@ -83,4 +84,4 @@ spriteFrames, {
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("AnimationEffect.updateTiming()")}} all accept an object of timing properties including this one.
 - The value of this property corresponds to the one in {{domxref("EffectTiming")}} (which is returned from {{domxref("AnimationEffect.getTiming()")}} and {{domxref("AnimationEffect.getComputedTiming()")}}).
-- CSS's [`animation-timing-function`](/en-US/docs/Web/CSS/animation-timing-function) and [`transition-timing-function`](/en-US/docs/Web/CSS/transition-timing-function).
+- CSS's [`animation-timing-function`](/zh-CN/docs/Web/CSS/animation-timing-function) and [`transition-timing-function`](/zh-CN/docs/Web/CSS/transition-timing-function).

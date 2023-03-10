@@ -2,6 +2,7 @@
 title: Document.enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 現在のスタイルシートセットの中で指定された名前に一致するスタイルシートを有効化し、それ以外のスタイルシートを (常に有効になるタイトルなしのものを除いて) 無効化します。

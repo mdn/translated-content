@@ -1,13 +1,6 @@
 ---
 title: URL.href
 slug: Web/API/URL/href
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/href
 ---
 {{ApiRef("URL API")}}
 
@@ -17,8 +10,10 @@ translation_of: Web/API/URL/href
 
 ## 구문
 
-    const urlString = url.href
-    url.href = newUrlString
+```js
+const urlString = url.href
+url.href = newUrlString
+```
 
 ### 값
 

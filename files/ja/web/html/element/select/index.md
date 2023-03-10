@@ -1,18 +1,9 @@
 ---
 title: '<select>: HTML 選択要素'
 slug: Web/HTML/Element/select
-tags:
-  - HTML
-  - HTML フォーム
-  - Reference
-  - events
-  - ウェブ
-  - フォーム
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/select
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<select>` 要素**は、選択式のメニューを提供するコントロールを表します。
 
@@ -54,7 +45,7 @@ translation_of: Web/HTML/Element/select
 
   - : コントロールがスクロールするリストボックスとして表示される場合 (つまり、 `multiple` が指定されている場合)、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は `0` です。
 
-    > **Note:** HTML5 の仕様によると、 size 属性の初期値は `1` であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 Mozilla は当分の間、 Firefox でも `0` を返し続けることを選択しました。
+    > **メモ:** HTML5 の仕様によると、 size 属性の初期値は `1` であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 Mozilla は当分の間、 Firefox でも `0` を返し続けることを選択しました。
 
 ## 使用上の注意
 
@@ -64,7 +55,7 @@ translation_of: Web/HTML/Element/select
 
 マウスを使用すると、 <kbd>Ctrl</kbd>, <kbd>Command</kbd>, <kbd>Shift</kbd> キー (オペレーティングシステムによって異なります) を押しながらクリックすることで、複数の項目を選択または解除することができます。
 
-> **Warning:** **警告**: キーボードから連続していない複数の項目を選択する仕組みは、今のところ Firefox でしか動作しないようです。
+> **警告:** キーボードから連続していない複数の項目を選択する仕組みは、今のところ Firefox でしか動作しないようです。
 >
 > **注:** macOS では、 <kbd>Ctrl</kbd> + <kbd>↑</kbd> および <kbd>Ctrl</kbd> + <kbd>↓</kbd> のショートカットが、 OS 既定の _Mission Control_ および _Application windows_ のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。
 
@@ -189,7 +180,7 @@ Also see the "Customizing select styles" example below for an example of you cou
 - 親ラッパーの `<select>` のコンテキスト ({{HTMLElement("option")}}}) を複製し、追加の HTML 要素と JavaScript を使用して標準の期待される動作を再実装します。これには、キーボードアクセシビリティを提供するための基本的なタブの動作が含まれます。
 - 状態と CSS を管理するために、いくつかの標準ネイティブの `属性` を新しい要素の `data-attributes` に対応付けします。
 
-> **Note:** すべてのネイティブ機能をサポートしているわけではありません。これは標準的な HTML から始まりますが、 JSON データ、カスタム HTML、または他のソリューションから始めても同じ結果を得ることができます。
+> **メモ:** すべてのネイティブ機能をサポートしているわけではありません。これは標準的な HTML から始まりますが、 JSON データ、カスタム HTML、または他のソリューションから始めても同じ結果を得ることができます。
 
 #### HTML
 
@@ -284,166 +275,166 @@ Also see the "Customizing select styles" example below for an example of you cou
 
 ```css
 body {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .select:focus {
-	border-color: blue;
+  border-color: blue;
 }
 
 html body form fieldset#custom div.select[data-multiple] div.header {
-	display: none;
+  display: none;
 }
 
 html body form fieldset#custom div.select div.header {
-	content: '↓';
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	padding: 0;
-	position: relative;
+  content: '↓';
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
 }
 
 html body form fieldset#custom div.select div.header::after {
-	content: '↓';
-	align-self: stretch;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	justify-items: center;
-	align-items: center;
-	padding: .5em;
+  content: '↓';
+  align-self: stretch;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: .5em;
 }
 
 html body form fieldset#custom div.select div.header:hover:after {
-	background-color: blue;
+  background-color: blue;
 }
 
 .select .header select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	font-family: inherit;
-	font-size: inherit;
-	padding: 0;
-	border-width: 0;
-	width: 100%;
-	flex: 1;
-	display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  border-width: 0;
+  width: 100%;
+  flex: 1;
+  display: none;
 }
 
 .select .header select optgroup {
-	display: none;
+  display: none;
 }
 
 .select select div.option {
-	display: none;
+  display: none;
 }
 
 html body form fieldset#custom div.select {
-	user-select: none;
-	box-sizing: border-box;
-	position: relative;
-	border-radius: 4px;
-	border-style: solid;
-	border-width: 0;
-	border-color: gray;
-	width: auto;
-	display: inline-block;
+  user-select: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 0;
+  border-color: gray;
+  width: auto;
+  display: inline-block;
 }
 
 html body form fieldset#custom div.select:focus {
-	border-color: blue;
+  border-color: blue;
 }
 
 html body form fieldset#custom div.select:hover {
-	border-color: blue;
+  border-color: blue;
 }
 
 html body form fieldset#custom div.select[data-open] {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 html body form fieldset#custom div.select[data-open] datalist {
-	display: initial;
+  display: initial;
 }
 
 html body form fieldset#custom div.select datalist {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	position: absolute;
-	border-style: solid;
-	border-width: 1px;
-	border-color: gray;
-	left: 0;
-	display: none;
-	width: 100%;
-	box-sizing: border-box;
-	z-index: 2;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  left: 0;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 html body form fieldset#custom div.select datalist div.option {
-	background-color: white;
-	margin-bottom: 1px;
-	cursor: pointer;
-	padding: 0.5em;
-	border-width: 0;
+  background-color: white;
+  margin-bottom: 1px;
+  cursor: pointer;
+  padding: 0.5em;
+  border-width: 0;
 }
 
 html body form fieldset#custom div.select datalist div.option:hover {
-	background-color: blue;
-	color: white;
+  background-color: blue;
+  color: white;
 }
 
 html body form fieldset#custom div.select datalist div.option:focus {
-	background-color: blue;
-	color: white;
+  background-color: blue;
+  color: white;
 }
 
 html body form fieldset#custom div.select datalist div.option:checked {
-	background-color: blue;
-	color: white;
+  background-color: blue;
+  color: white;
 }
 
 html body form fieldset#custom div.select div.optgroup div.option[data-disabled] {
-	color: gray;
+  color: gray;
 }
 
 html body form fieldset#custom div.select div.optgroup div.option[data-checked] {
-	background-color: blue;
-	color: white;
+  background-color: blue;
+  color: white;
 }
 
 html body form fieldset#custom div.select div.optgroup div.label {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 html body form fieldset#custom div.select div.optgroup div.option div.label {
-	font-weight: normal;
-	padding: .25em;
+  font-weight: normal;
+  padding: .25em;
 }
 
 html body form fieldset#custom div.select div.header {
-	flex: 1;
-	display: flex;
-	width: auto;
-	box-sizing: border-box;
-	border-width: 1px;
-	border-style: inherit;
-	border-color: inherit;
-	border-radius: inherit;
+  flex: 1;
+  display: flex;
+  width: auto;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: inherit;
+  border-color: inherit;
+  border-radius: inherit;
 }
 
 html body form fieldset#custom div.select div.header span {
-	flex: 1;
-	padding: .5em;
+  flex: 1;
+  padding: .5em;
 }
 ```
 
@@ -639,8 +630,8 @@ document.forms[0].onsubmit = function(e) {
       <td>
         <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
         <code>size</code> 属性が<strong>ない</strong>ならば
-        {{ARIARole("combobox")}}、それ以外の場合は
-        {{ARIARole("listbox")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>、それ以外の場合は
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>
       </td>
     </tr>
     <tr>
@@ -648,7 +639,7 @@ document.forms[0].onsubmit = function(e) {
       <td>
         <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
         <code>size</code> 属性が<strong>ない</strong>ならば
-        {{ARIARole("menu")}}、それ以外の場合は許可されている
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>、それ以外の場合は許可されている
         <code>role</code> はなし
       </td>
     </tr>
@@ -661,11 +652,7 @@ document.forms[0].onsubmit = function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-select-element', '&lt;select&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-select-element', '&lt;select&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}             | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,13 +1,8 @@
 ---
 title: <xsl:text>
 slug: Web/XSLT/Element/text
-tags:
-  - Text
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/text
 ---
+
 {{ XsltRef() }}
 
 `<xsl:text>` 要素はリテラルテキストを出力ツリーに書き込みます。 `#PCDATA`、リテラルテキスト、およびエンティティ参照を含むことがあります。

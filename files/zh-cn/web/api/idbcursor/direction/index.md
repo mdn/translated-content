@@ -2,6 +2,7 @@
 title: IDBCursor.direction
 slug: Web/API/IDBCursor/direction
 ---
+
 {{ APIRef("IDBCursor") }}
 
 {{domxref("IDBCursor")}} 的方向属性是一个 {{domxref("DOMString")}} ，表示游标遍历的方向， (比如可以通过 {{domxref("IDBObjectStore.openCursor")}} 设置). 查看下文中[取值](#取值)章节获取可取值。
@@ -33,7 +34,7 @@ prev
 
 > **备注：** 我们不能改变游标的取值，因为这是个只读属性；应该在{{domxref("IDBObjectStore.openCursor")}}方法调用的第二个参数指定游标遍历的方向；
 
-使用游标遍历数据时，可以不需要我们指定在特定字段选择数据；我们可以直接获取所有数据，同时在每次循环迭代过程当中，我们可以通过 cursor.value.foo 获取数据，如下是一个完整的游标遍历数据的例子； [IDBCursor example](https://github.com/mdn/IDBcursor-example/) ([view example live](http://mdn.github.io/IDBcursor-example/).)
+使用游标遍历数据时，可以不需要我们指定在特定字段选择数据；我们可以直接获取所有数据，同时在每次循环迭代过程当中，我们可以通过 cursor.value.foo 获取数据，如下是一个完整的游标遍历数据的例子； [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([view example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function backwards() {
@@ -63,7 +64,7 @@ function backwards() {
 
 ## 浏览器兼容性
 
-{{Compat("api.IDBCursor.direction")}}
+{{Compat}}
 
 ## 参考资料
 
@@ -73,4 +74,4 @@ function backwards() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

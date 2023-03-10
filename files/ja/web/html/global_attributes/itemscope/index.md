@@ -1,24 +1,19 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-translation_of: Web/HTML/Global_attributes/itemscope
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope**` 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
+**`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope`** 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
 
-関連する属性である [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype) は、アイテムおよびそのプロパティのコンテキストを記述する語彙 ([schema.org](https://schema.org/) など) の有効な URL を指定するために使用されます。以下のそれぞれの例では、 [schema.org](https://schema.org/) からの語彙を使用しています。
+関連する属性である [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype) は、アイテムおよびそのプロパティのコンテキストを記述する語彙（[schema.org](https://schema.org/) など）の有効な URL を指定するために使用されます。以下のそれぞれの例では、 [schema.org](https://schema.org/) からの語彙を使用しています。
 
 あらゆる HTML 要素に `itemscope` 属性を設定することができます。 `itemscope` 要素が `itemtype` を持たない場合は、関連付けられた `itemref` を持つ必要があります。
 
-> **Note:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
+> **メモ:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
 
 ### itemscope の id 属性
 
@@ -68,7 +63,8 @@ translation_of: Web/HTML/Global_attributes/itemscope
 ```html
 <div itemscope itemtype="https://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
+  <span>Director: <span itemprop="director">James Cameron</span> (born August 16,
+    1954)</span>
   <span itemprop="genre">Science fiction</span>
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
@@ -76,7 +72,7 @@ translation_of: Web/HTML/Global_attributes/itemscope
 
 ### レシピの構造化データの表現
 
-以下の例には 4 つの `itemscope` 属性があります。それぞれの `itemscope` 属性は、対応する `itemtype` 属性のスコープを設定しています。以下の例にある `Recipe`, `AggregateRating`, `NutritionInformation` の `itemtype` は、レシピのための [schema.org](www.schema.org) 構造化データの一部であり、最初の `itemtype`, http\://schema.org/Recipe として定義されています。
+以下の例には 4 つの `itemscope` 属性があります。それぞれの `itemscope` 属性は、対応する `itemtype` 属性のスコープを設定しています。以下の例にある `Recipe`, `AggregateRating`, `NutritionInformation` の `itemtype` は、レシピのための [schema.org](www.schema.org) 構造化データの一部であり、最初の `itemtype`, `http://schema.org/Recipe` として定義されています。
 
 <table class="standard-table">
   <tbody>
@@ -98,7 +94,7 @@ translation_of: Web/HTML/Global_attributes/itemscope
     <tr>
       <td>itemprop</td>
       <td>datePublished</td>
-      <td>2009-11-05</td>
+      <td>2022-11-05</td>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -193,7 +189,7 @@ translation_of: Web/HTML/Global_attributes/itemscope
   </tbody>
 </table>
 
-> **Note:** 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
+> **メモ:** 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
 </div>
 
 #### HTML
@@ -201,40 +197,58 @@ translation_of: Web/HTML/Global_attributes/itemscope
 ```html
 <div itemscope itemtype="https://schema.org/Recipe">
   <h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
-  <img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" />
+  <img
+    itemprop="image"
+    src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg"
+    width="50"
+    height="50" />
   <p>
-    By <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+    By
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
       <span itemprop="name">Carol Smith</span>
     </span>
   </p>
   <p>
-    Published: <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
+    Published:
+    <time datetime="2022-11-05" itemprop="datePublished">November 5, 20022</time>
   </p>
-  <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</span>
-  <br>
-  <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews
+  <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of
+    nutmeg.</span>
+  <br />
+  <span
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="https://schema.org/AggregateRating">
+    <span itemprop="ratingValue">4.0</span> stars based on
+    <span itemprop="reviewCount">35</span> reviews
   </span>
-  <br>
-  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time><br>
-  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hou</time>r<br>
-  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time><br>
-  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span><br>
-  <span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
-    Serving size: <span itemprop="servingSize">1 medium slice</span><br>
-    Calories per serving: <span itemprop="calories">250 cal</span><br>
-    Fat per serving: <span itemprop="fatContent">12 g</span><br>
+  <br />
+  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time>
+  <br />
+  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hour</time>
+  <br />
+  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time>
+  <br />
+  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span>
+  <br />
+  <span
+    itemprop="nutrition"
+    itemscope
+    itemtype="https://schema.org/NutritionInformation">
+    Serving size: <span itemprop="servingSize">1 medium slice</span><br />
+    Calories per serving: <span itemprop="calories">250 cal</span><br />
+    Fat per serving: <span itemprop="fatContent">12 g</span><br />
   </span>
   <p>
-    Ingredients:<br>
-    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
-    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
+    Ingredients:<br />
+    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br /></span>
+    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br /></span>
     …
   </p>
-  Directions: <br>
+  Directions: <br />
   <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br>
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
+    1. Cut and peel apples<br />
+    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br />
     …
   </div>
 </div>

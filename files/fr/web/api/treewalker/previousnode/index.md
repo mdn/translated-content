@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/previousNode
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.previousNode()`** déplace le {{domxref("Node")}} courant vers le noeud précédent _visible_ dans l'ordre du document et renvoie le noeud trouvé. Elle déplace aussi le noeud courant vers celui-ci. S'il n'en existe aucun ou s'il est avant le _noeud racine_ défini lors de la construction de l'objet, elle renvoie `null` et le noeud actuel n'est pas changé.

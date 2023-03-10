@@ -1,65 +1,90 @@
 ---
 title: HTML を始めよう
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
+l10n:
+  sourceCommit: a4c58f2ffffe6a19f36069202c7f5cccd833522a
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 この記事では HTML の不変的な基礎を扱って、始められるようにします。要素や属性などの重要な用語 (すでに聞き覚えはあるかもしれません)、それらが言語にどう組み込まれているか説明します。また、HTML 要素の構造、典型的な HTML ページの構造を見せて、その他の重要な基礎言語機能について説明します。それでは、 HTML の例とともに見ていきましょう。
 
-| 前提条件: | 基礎的なコンピュータリテラシー、[基本的なソフトウェアのインストール](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、[ファイル取扱い](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)の基礎理解。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | HTML 言語の基礎習得と、いくつかの HTML 要素を書く練習                                                                                                                                                                           |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基礎的なコンピューターリテラシー、
+        <a
+          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >基本的なソフトウェアのインストール</a
+        >、
+        <a
+          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >ファイルの取り扱い</a
+        >に関する基本的な理解、
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        HTML の基本的な知識を身につけ、いくつかの HTML 要素を書く練習をする。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## HTML とは？
 
-{{glossary("HTML")}} (ハイパーテキスト・マークアップ・ランゲージ／Hypertext Markup Language) はプログラミング言語ではありません。HTML 言語は、訪れたウェブサイトの構成をブラウザーに対して伝えるために使うマークアップ言語です。HTML 言語はウェブ開発者が望むこと次第で、複雑なものにも簡単なものにもなります。HTML は{{glossary("Element", "要素")}}の集まりからなり、コンテンツの一部を要素で囲む（*マークアップ*する）ことで、特定の見せ方・動かし方に変えられます。囲むための{{glossary("Tag", "タグ")}}は、コンテンツの一部をハイパーリンク (ウェブ上の別ページへリンクすること) にしたり、単語を斜体にしたりすることができます。たとえば、次の一行を見てください：
+{{glossary("HTML")}} (ハイパーテキスト・マークアップ・ランゲージ／Hypertext Markup Language) は、訪れたウェブサイトの構成をブラウザーに対して伝えるために使うマークアップ言語です。 HTML 言語はウェブ開発者が望むこと次第で、複雑なものにも簡単なものにもなります。HTML は{{glossary("Element", "要素")}}の集まりからなり、コンテンツの一部を要素で囲む（*マークアップ*する）ことで、特定の見せ方・動かし方に変えられます。囲むための{{glossary("Tag", "タグ")}}は、コンテンツの一部をハイパーリンク (ウェブ上の別ページへリンクすること) にしたり、単語を斜体にしたりすることができます。たとえば、次の一行を見てください。
 
 ```
 My cat is very grumpy
 ```
 
-この行を独立させたい場合、それを段落タグ ({{htmlelement("p")}}) 要素で囲んで段落指定することで実現できます:
+この行を独立させたい場合、それを段落要素 ({{htmlelement("p")}}) で囲んで段落であることを指定することができます。
 
 ```html
 <p>My cat is very grumpy</p>
 ```
 
-> **Note:** HTML の要素は大文字小文字を区別しません。つまり大文字でも小文字でも書くことができます。例えば {{htmlelement("title")}} 要素は `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` などと書くことができて、どれも正しく動作します。最も良いのは、一貫性や信頼性、その他の理由のためにすべての要素を小文字で書くことです。
+> **メモ:** HTML の要素は大文字小文字を区別しません。つまり大文字でも小文字でも書くことができます。例えば {{htmlelement("title")}} 要素は `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` などと書くことができて、どれも正しく動作します。しかし、すべての要素を小文字で書くことが、一貫性や信頼性、その他の理由のために最良の習慣です。
 
-## HTML 要素の分解
+## HTML 要素の構成
 
-先ほどの段落タグの要素についてもう少し詳しく見ていきましょう:
+前段で紹介した段落要素についてもう少し詳しく見ていきましょう。
 
-![](grumpy-cat-small.png)
+![HTML の要素の構造を示すサンプルコード。 <p> My cat is very grumpy </p>.](grumpy-cat-small.png)
 
-この要素の主要な部分は次のとおりです:
+この要素の主要な部分は次のとおりです。
 
-1. **開始タグ(Opening tag):** 要素名 (この場合は "p")、囲んでいる開き**山括弧**と閉じ**山括弧**で構成されています。これは要素が始まってその効果が開始する位置を宣言しますーこの場合、段落が始まる位置です。
-2. **終了タグ(Closing tag):** 要素名の前に一つのスラッシュが含まれることを除けば、開始タグと同じです。これは要素の終了を宣言しますーこの場合、段落が終わる位置です。終了タグを忘れるのは初心者にありがちなミスで、おかしな結果になってしまいます。
-3. **内容(Content):** これは要素の内容で、この場合、テキストそのものです。
-4. **要素(Element):** 開始タグ + 内容 + 終了タグが要素になります。
+- **開始タグ (Opening tag):** 要素名（この場合は段落を表す _p_）、囲んでいる開き山括弧と閉じ山括弧で構成されます。これは要素が始まってその効果が開始する位置を宣言します。この場合、段落が始まる位置です。
+- **内容 (Content):** これは要素の内容です。この例の場合、段落のテキストです。
+- **終了タグ (Closing tag):** 開始タグと同じですが、要素名の前にスラッシュを記載します。これは、要素の終わりを示すものです。終了タグを記載し忘れるのは、初心者にありがちなミスで、おかしな結果を生むことがあります。
+
+要素は開始タグ、内容、終了タグが続いたものです。
 
 ### 実習: 最初の HTML 要素を作ってみる
 
-以下の Input 欄にある行を `<em>` と `</em>` で囲んでください (要素を開始するために行の先頭に `<em>` を、要素を終了するために行の末尾に `</em>` をそれぞれ置きます) — これによりその行はイタリック体 (斜体) によって強調表示されるはずです！　この変化は Output 欄でリアルタイムで確認できているはずです。
+下記の「編集可能なコード」内の行を `<em>` および `</em>` タグで囲むよう編集してください。要素を開始するには、開始タグ `<em>` を行の先頭に付けてください。要素を終了するには、行の最後に終了タグ `</em>` を付けてください。こうすることで、行がイタリック体（斜体）で書式化されるはずです。変更した内容が _Output_ 領域に反映されるのを確認してください。
 
-もし入力ミスをしても、_Reset_ ボタンを押すことでいつでもリセットできます。立ち往生してしまっても _Show solution_ ボタンを押せばいつでもカンニングできます。
+もし入力ミスをしても、_リセット_ ボタンを押すことでいつでもリセットできます。本当に行き詰ってしまったら、 _答えを見る_ ボタンを押せば答えを見ることができます。
 
 ```html hidden
-<h2>Live output</h2>
+<h2>ライブ出力</h2>
 <div class="output" style="min-height: 50px;">
 </div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<h2>編集可能なコード</h2>
+<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
 
 <textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
   This is my text.
 </textarea>
 
 <div class="controls">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを見る" />
 </div>
 ```
 
@@ -86,46 +111,45 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<em>This is my text.</em>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = '答えを見る';
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === '答えを見る') {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = '答えを見る';
   }
   updateCode();
 });
 
-var htmlSolution = '<em>This is my text.</em>';
-var solutionEntry = htmlSolution;
-
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function(e){
+// テキストエリアでのタブキーによるタブ移動を止め、
+// 代わりにキャレット位置にタブを書くようにします。
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -137,25 +161,25 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// ユーザーがテキストエリアのコードを更新するたびに、保存されている userCode を更新します。
 
-textarea.onkeyup = function(){
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+textarea.onkeyup = () => {
+  // ユーザーコードが表示されているときのみ状態を保存したい。
+  // 答えがユーザーコードのを上書きして保存されることはありません。
+  if (solution.value === '答えを見る') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -165,32 +189,34 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Active_learning_creating_your_first_HTML_element', 700, 400, "", "") }}
 
-### 要素のネスト
+### 要素を入れ子にする
 
-要素の中に要素を入れることができますーこれは“**ネスト**” (入れ子) と呼ばれています。たとえば “My cat is **very** grumpy.” と記述したい場合、“very” という語を {{htmlelement("strong")}} 要素で囲むことができ、それはその語がより強く強調表示されることを意味します：
+要素の中に要素を入れることができます。これは**入れ子**（ネスト）と呼ばれています。たとえば “My cat is **very** grumpy.” と記述したい場合、“very” という語を {{htmlelement("strong")}} 要素で囲むことができ、その語がより強く強調表示されることを意味します。
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
 ```
 
-ただし、要素が正しくネストされていることを確認する必要はあります: 上の例では、開始タグは最初に `p` 要素、その次に `strong` 要素が来ますから、終了タグは最初に `strong` 要素を、一番最後に `p` 要素を置くことになります。次は間違った例です:
+入れ子にする方法には、正しい方法と間違った方法があります。上の例では、最初に `p` 要素を始め、次に `strong` 要素を始めました。適切に入れ子にするには、先に `strong` 要素を閉じてから `p` を閉じなければなりません。
+
+次のものは、間違った入れ子の例です。
 
 ```html example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
-タグのセットが互いに内側か外側なのかがはっきり分かるように、要素の開始と終了は正しく配置する必要があります。もし上の例のように互いに “掛け違って” しまっている場合、ブラウザーはそのマークアップが本来意図していただろうことを出来るだけ読み取ろうとはしますが、予期しない結果となることは当然に想定されます。ですからこうした “掛け違い” はやめましょう！
+**タグを開始および終了するには、互いの内側または外側にあるような形にしなければなりません**。上の例のような重ね方では、ブラウザーはあなたの意図を推測しなければなりません。このような推測は、予期しない結果をもたらす可能性があります。
 
 ### ブロック要素とインライン要素
 
-HTML の要素には 2 つの重要なカテゴリーがあり、それは知っておくべきことです。すなわち、ブロックレベル要素とインライン要素です。
+HTML の要素には知っておくべき 2 つの重要なカテゴリーがあります。ブロックレベル要素とインライン要素です。
 
-- ブロックレベル要素はウェブページ上で視認できるブロックを形成します — それらはそれより前にあるいかなるコンテンツに対しても新たな行におけるコンテンツとして表示され、そのブロックの後に来るいかなるコンテンツもまた新たな行で表示されることになります。ブロックレベル要素はそのウェブページの構造、たとえば段落・リスト・ナビゲーションメニュー・フッターなどを表すことに使用される傾向があります。ブロックレベル要素はインライン要素の中にネストされることはできませんが、他のブロックレベル要素にネストされることがあります。
-- インライン要素はブロックレベル要素の中に包含され、なおかつ、段落全体やコンテンツのグループではなく、ドキュメントの内容の小さな部分だけを囲む要素です。インライン要素はドキュメント内に新たな行を表示させません; それらは通常、例えば、{{htmlelement("a")}} 要素 (ハイパーリンク) 又は {{htmlelement("em")}} や {{htmlelement("strong")}} といった強調要素のように、テキスト段落の中で表示されます。
+- ブロックレベル要素は、ページ上で目に見えるブロックを形成します。ブロックレベル要素は、その前のコンテンツから改行して現れます。ブロックレベル要素に続く内容も新しい行に現れます。ブロックレベル要素は通常、ページ上の構造的要素になります。例えば、ブロックレベル要素は見出し・段落・リスト・ナビメニュー・フッターを表すかもしれません。ブロックレベル要素はインライン要素の中に入れ子になることはありませんが、別のブロックレベル要素の中に入れ子になることはあります。
+- インライン要素はブロックレベル要素の中に包含され、なおかつ、段落全体やコンテンツのグループではなく、文書の内容の小さな部分だけを囲む要素です。インライン要素は文書内で改行を行いません。通常、例えば、{{htmlelement("a")}} 要素（ハイパーリンク）や {{htmlelement("em")}} や {{htmlelement("strong")}} といった強調要素のように、テキストと共に使用されます。
 
-次の例で考えてみましょう:
+次の例を考えてみましょう。
 
 ```html
 <em>first</em><em>second</em><em>third</em>
@@ -198,72 +224,83 @@ HTML の要素には 2 つの重要なカテゴリーがあり、それは知っ
 <p>fourth</p><p>fifth</p><p>sixth</p>
 ```
 
-{{htmlelement("em")}} 要素はインライン要素なので、以下で確認できるように、最初の 3 つの要素は同じ行で他の要素と互いにスペースを空けずにたたずんでいます。一方で、{{htmlelement("p")}} 要素はブロックレベル要素なので、各要素はその上下にスペースを伴った新たな行で表示されます (この間隔はブラウザーが段落に対して適用するデフォルトの [CSS のスタイル](/ja/docs/Learn/CSS/Introduction_to_CSS)によるものです)。
+{{htmlelement("em")}} 要素はインライン要素です。以下で確認できるように、最初の 3 つの要素は同じ行で他の要素と互いに空間を空けずにたたずんでいます。一方で、{{htmlelement("p")}} 要素はブロックレベル要素です。各要素はその上下に空間を伴った新たな行で表示されます（この間隔はブラウザーが段落に対して適用する既定の [CSS のスタイル設定](/ja/docs/Learn/CSS/First_steps)によるものです)。
 
 {{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}
 
-> **Note:** HTML5 においては要素カテゴリが再定義されています: [要素のコンテンツ・カテゴリー](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)を見てください。これらの定義は従来のものに比べてより正確で、なおかつ曖昧さが少ないものとなっていますが、一方では、それらは “ブロックレベル要素” と “インライン要素” の対比よりも遥かに理解することが難しくなっています。このため、私たちはここのトピックを通じて従来の分類を堅持するつもりです。
+> **メモ:** HTML5 においては要素のカテゴリーが再定義されています。詳しくは[要素のコンテンツカテゴリー](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)を参照してください。これらの定義は、以前の定義よりも正確で曖昧さもありませんが、新しい定義は、 _ブロック_ と _インライン_ よりも理解するのがかなり複雑です。この記事では、この 2 つの用語に留めます。
 
-> **Note:** このトピックで使っている “ブロック” と “インライン” の用語は [CSS ボックスのタイプ](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)と同じ名前で混同するでしょう。既定ではこれらは関係ありますが、CSS の表示タイプの変更は要素のカテゴリーを変更しませんし、どの要素が入っているべきでどの要素に入れられるべきかにも影響しません。HTML5 でこの用語が落とされた理由は、このとてもよくある混同を防ぐためです。
+> **メモ:** この記事で使用している _ブロック_ と _インライン_ という用語は、 [CSS ボックスの種類](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ブロックボックスとインラインボックス)と同じ名前ですが、混同しないでください。既定では名前が関係ありますが、 CSS の表示型を変更しても要素のカテゴリーは変わらず、どの要素を含むことができるか、どの要素に含まれるかは変わりません。 HTML5 でこれらの用語を削除した理由の 1 つは、このかなり一般的な混乱を防ぐためでした。
 
-> **Note:** ブロックレベル要素とインライン要素のリストを含む有用なリファレンスページがあります — [ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)と[インライン要素](/ja/docs/Web/HTML/Inline_elements)をご覧ください。
+> **メモ:** ブロックレベル要素とインライン要素の一覧を含む有用なリファレンスページがあります。[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)と[インライン要素](/ja/docs/Web/HTML/Inline_elements)をご覧ください。
 
 ### 空要素
 
-全ての要素が上述の開始タグ・コンテンツ・終了タグのパターンに従っているわけではありません。いくつかの要素は 1 つのタグのみで構成され、それは通常、ドキュメント内でそれが含まれている場所に何かを挿入したり埋め込むために使用されます。例えば、以下の {{htmlelement("img")}} 要素はウェブページ上のそれが含まれた場所に 1 つの画像ファイルを埋め込みます:
+全ての要素が上述の開始タグ、コンテンツ、終了タグのパターンに従っているわけではありません。要素によっては単一のタグのみで構成され、通常、文書内でそれが含まれている場所に何かを挿入したり埋め込んだりするために使用されます。例えば、以下の {{htmlelement("img")}} 要素はウェブページ上のそれが含まれた場所に 1 つの画像ファイルを埋め込みます。
 
 ```html
 <img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
 ```
 
-これはページに次の画像を出力するはずです:
+これはページに次の画像を出力するはずです。
 
-{{ EmbedLiveSample('Empty_elements', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Empty_elements', 700, 300, "", "") }}
 
-> **Note:** 空要素 (Empty elements) は Void 要素 (Void elements) と呼ばれていることがあります。
+> **メモ:** 空要素 (Empty elements) は void 要素と呼ばれることもあります。
+
+> **メモ:** HTML では、例えば `<img src="images/cat.jpg" alt="cat" />` のように、空要素のタグの末尾に `/` を追加する必要はありません。しかし、これは有効な構文であり、 HTML を有効な XML にしたい場合に使うことがあります。
 
 ## 属性
 
-要素は次のように属性(Attribute)を持つこともできます:
+要素は次のように属性 (Attribute) を持つこともできます。
 
-![&amp;lt;p class="editor-note">My cat is very grumpy&amp;lt;/p>](grumpy-cat-attribute-small.png)
+![&lt;p class="editor-note">My cat is very grumpy&lt;/p>](grumpy-cat-attribute-small.png)
 
-属性は実際のコンテンツの中で表示させたくない「要素に関する追加情報」を保有します。上のケースでは `class` 属性は、その要素に後でスタイル情報などが適用される対象であることを示すものとして使用できるような、固有の名前を持つことを許容します。
+属性は実際のコンテンツの中で表示させたくない、要素に関する追加情報を保有します。この例では、**`class`** 属性は、要素をスタイル情報の対象とするために使用される識別名です。
 
-各属性は次の要件を満たす必要があります:
+各属性は次の要件を満たす必要があります。
 
-1. 属性名と要素名の間に 1 つの半角スペース (その要素内にすでに 1 つ以上の属性が設定されている場合は、併せて各属性名の間)
+1. 属性名と要素名の間に 1 つの半角スペース（その要素内にすでに 1 つ以上の属性が設定されている場合は、併せて各属性名の間）
 2. 属性名とそれに続く等号 (=)
-3. 属性値。始端から終端までをクォーテーションマーク (引用符) で囲む
+3. 属性値、先頭と末尾を引用符で囲む
 
 ### 実習: 要素に属性を追加する
 
-要素のもう一つの例として {{htmlelement("a")}} (これを「アンカー」と言って、テキストの一部を囲んでハイパーリンクにするものです) を考えます。アンカー要素は多くの属性を持つことができますが、例えばこれらのものが使われます:
+要素のもう一つの例は{{htmlelement("a")}}です。これは_anchor_の略です。アンカーは、それが囲んでいるテキストをハイパーリンクにすることができます。アンカーは様々な属性を受け取ることができますが、以下のようなものがあります。
 
-- `href`: この属性にはリンクが参照するウェブ上のアドレスを指定します。またはリンクをクリックしたときにブラウザーが遷移する場所のことです。例えば、`href="https://www.mozilla.org/"` のように指定します。
-- `title`: この属性にはリンクについての追加情報（リンク先のページが何であるかなど）を記載します。例えば、`title="The Mozilla homepage"` のように書きます。この内容はリンクにマウスカーソルを重ねた (マウスホバー) 時にツールチップとして表示されるでしょう。
-- `target`: リンク先の内容を表示する場所 (ブラウジングコンテキスト) を指定します。例えば、`target="_blank"` と指定すると、リンク先の内容を新しいタブに表示します。現在のタブにリンク先の内容を表示させたい場合は `target`属性を省略します。
+- `href`
+  - : この属性の値は、リンク先のウェブアドレスを指定します。例えば、`href="https://www.mozilla.org/"` です。
+- `title`
+  - : この属性にはリンクについての追加情報（リンク先のページが何であるかなど）を記載します。例えば、`title="The Mozilla homepage"` のように書きます。この内容は、リンクにマウスカーソルを当てた時にツールチップとして表示されます。
+- `target`
+  - : リンク先の内容を表示する場所（閲覧コンテキスト）を指定します。例えば、 `target="_blank"` と指定すると、リンク先の内容を新しいタブに表示します。現在のタブにリンク先の内容を表示させたい場合は、この属性を省略します。
 
-それでは以下の Input 欄を編集して、あなたの好きなサイトのリンクを張ってみましょう。まず、`<a>` 要素を追加します。次に、`<a>` 要素に `href` 属性と `title` 属性を追加します。最後に、新しいタブでリンク先を開くために `target` 属性を追加します。この変化は Output 欄でリアルタイムで確認できているはずです。まずテキストがハイパーリンクに変わります。そのリンクをホバーしてやる (マウスホバー) と `title` 属性のコンテンツが表示されます。そのリンクをクリックすると `href` 属性で指定したページに遷移します。要素名と各属性の間に半角スペースを挿入することに気を付けてください。
+それでは以下の入力欄を編集して、好きなサイトのリンクを張ってみましょう。
 
-もし入力ミスをしても、Reset ボタンを押すことでいつでもリセットできます。立ち往生してしまっても Show solution ボタンを押せばいつでもカンニングできます。
+1. `<a>` 要素を追加してください。
+2. `href` 属性と `title` 属性を追加してください。
+3. 新しいタブでリンク先を開くために `target` 属性を追加してください。
+
+変更した内容が _ライブ出力_ 領域に反映されるのを見ることができます。リンクが表示され、マウスを当てると `title` 属性の値が表示され、クリックすると `href` 属性にあるウェブアドレスに移動することが確認できるはずです。要素名と各属性の間にはスペースを記載する必要があることを覚えておいてください。
+
+もし、間違えた場合は、常に _リセット_ ボタンを使用してリセットすることができます。実に困ったときは、_答えを見る_ ボタンを押して、答えを見ることができます。
 
 ```html hidden
-<h2>Live output</h2>
+<h2>ライブ出力</h2>
 
 <div class="output" style="min-height: 50px;">
 </div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<h2>編集可能なコード</h2>
+<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
-  &lt;p&gt;A link to my favourite website.&lt;/p&gt;
+  &lt;p&gt;A link to my favorite website.&lt;/p&gt;
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="リセット">
+  <input id="solution" type="button" value="答えを見る">
 </div>
 ```
 
@@ -290,38 +327,38 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = '答えを見る';
   updateCode();
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if(solution.value === '答えを見る') {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = '答えを見る';
   }
   updateCode();
 });
-
-var htmlSolution = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favourite website</a>.</p>';
-var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -329,7 +366,7 @@ window.addEventListener('load', updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -341,13 +378,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -356,10 +393,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if(solution.value === '答えを見る') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -369,86 +406,82 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Playable_code2', 700, 360, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Active_learning_Adding_attributes_to_an_element', 700, 400, "", "") }}
 
-### 真偽値属性
+### 論理属性
 
-沢山の HTML ソースを見ていくうちに、属性値のない属性を発見するでしょう。このことは文法的に許されています。こういった属性のことを「真偽値属性」と言います。真偽値属性は一般的に属性名と同じ属性値だけを取ることができます。例えば、`input` 要素の {{htmlattrxref("disabled", "input")}} 属性は真偽値属性ですが、下記のように記述した場合、 input 要素が "使用不可能に" (disabled, グレーアウト表示) なり、データを入力することができなくなります。
+沢山の HTML ソースを見ていくうちに、属性値のない属性を見かけることがあるでしょう。これは文法的に許されています。これらは「論理属性」と呼ばれています。論理属性は一般的に属性名と同じ属性値だけを取ることができます。例えば、 {{htmlattrxref("disabled", "input")}} 属性は `input` 要素に指定することができる論理属性と考えてください。（これを使用して、ユーザーが入力できないようにフォームの入力要素を「無効」にします。無効にされた要素は、通常グレーアウトした外見になります。）
 
-```
+```html
 <input type="text" disabled="disabled">
 ```
 
-真偽値属性は、略記法として次のように書くことが文法的に許されています。比較のために "使用不可能に" (disabled, グレーアウト表示) しなかった場合の `input` 要素も併記しています。
+略式で、以下のように書いても受け入れられます。
 
 ```html
+<!-- disabled 属性を使用すると、エンドユーザーが入力ボックスにテキストを入力できないようにします。 -->
 <input type="text" disabled>
 
+<!-- disabled 属性がないため、テキスト入力が許可されます。 -->
 <input type="text">
 ```
 
-上記の HTML コードの結果は下記のようになります。
+参考までに、上記の例では無効ではないフォームの入力要素も記載しています。上の例の HTML は、このような結果になります。
 
-{{ EmbedLiveSample('Boolean_attributes', 700, 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "") }}
 
-> **Warning:** 訳者注：下記の様な真偽値属性の属性名と属性値を一致させない記述は HTML の仕様としては誤りです。このような誤りを防ぐために、真偽値属性の真偽値は必ず省略するようにしましょう。
->
-> ```
-> <input type="text" disabled="foo bar baz">
-> ```
+### 属性値を引用符で囲むことの省略
 
-### 属性値のクォーテーションマークを省略することについて
+他にも多くのサイトのコードを見ていると、引用符を使わない属性値など、奇妙なマークアップのスタイルに出会うことがあります。これは特定の状況では許されることですが、他にもマークアップが崩れてしまうことがあります。例えば、先ほどのリンクの例をもう一度見てみると、 `href` 属性だけを使った基本的なバージョンを次のように書くことができます。
 
-ウェブ (正式にはワールド・ワイド・ウェブ) 上の HTML 文章の中には奇妙なマークアップスタイルで記述されているものもあります。その一つとして、「属性値をクォーテーションマークで囲まない」というのがあります。このスタイルでは正しく動作する場合としない場合があります。先ほどの `<a>` タグの例で言うと、このような `href` 属性だけの基本的な使い方では正しく動作します。
-
-```
-<a href=https://www.mozilla.org/>favourite website</a>
+```html
+<a href=https://www.mozilla.org/>favorite website</a>
 ```
 
 しかし、例えば次のように半角スペースの入った `title` 属性を追加すると動作がおかしくなります。
 
 ```html example-bad
-<a href=https://www.mozilla.org/ title=The Mozilla homepage>favourite website</a>
+<a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
 ```
 
-この場合だと「`title` 属性は "The" という属性値を持ち、それとは別に `<a>`要素が `Mozilla` と `homepage` という真偽値属性を持つ」というようにブラウザーは誤解します。このように、「属性値をクォーテーションマークで囲まない」ことによる違いは HTML を見ただけでは分からないので、コードのエラーや予期しない動作の原因となります。このコードをブラウザーに解釈させたものを下に用意しましたので、このリンク上をホバーしてツールチップに表示される文字がどうなっているかを確認してみましょう。
+この場合だと「`title` 属性は "The" という属性値を持ち、それとは別に `<a>` 要素が `Mozilla` と `homepage` という論理属性を持つ」というようにブラウザーは誤解します。明らかに、これは意図したものではありません。以下のライブ例でわかるように、エラーや予期せぬ動作を発生させます。リンクの上にマウスを当てて、タイトルテキストを表示してみてください。
 
-{{EmbedLiveSample('Omitting_quotes_around_attribute_values', 700, 100, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Omitting_quotes_around_attribute_values', 700, 100, "", "") }}
 
-安全なコードを書くために、必ず属性値にはクォーテーションマークをつけましょう。そうすれば、先ほどのような問題を避けることができ、コードの可読性も向上します。
+安全なコードを書くために、必ず属性値には引用符をつけましょう。そうすれば、先ほどのような問題を避けることができ、コードの可読性も向上します。
 
-### ダブルクォートかシングルクォートか？
+### 二重引用符か単一引用符か
 
-この記事では属性を囲むクォーテーションマークとしてすべてダブルクォート ( `"` ) を使用しています。しかし誰かの HTML でシングルクォート ( `'` ) を見ることがあるかもしれません。これは書き方の問題なので、属性値はダブルクォートで囲んでもシングルクォートで囲んでも構いません。例えば次の 2 つの行は等価です。
+この記事では、属性を囲む引用符としてすべて二重引用符 (`"`) を使用しています。しかし HTML コードによってはで単一引用符 (`'`) を見ることがあるかもしれません。これは書き方の問題なので、属性値は二重引用符で囲んでも単一引用符で囲んでも構いません。例えば次の 2 つの行は等価です。
 
 ```html
-<a href="http://www.example.com">A link to my example.</a>
+<a href="https://www.example.com">A link to my example.</a>
 
-<a href='http://www.example.com'>A link to my example.</a>
+<a href='https://www.example.com'>A link to my example.</a>
 ```
 
-但し、これらを混在させて使うことはできません。次の記述は誤りです。
+単一引用符と二重引用符を混在させることはできないことに注意してください。この（以下の）例は引用符を混在させたもので、間違った動作をします。
 
 ```html example-bad
-<a href="http://www.example.com'>A link to my example.</a>
+<a href="https://www.example.com'>A link to my example.</a>
 ```
 
-属性値をダブルクォートで囲んでいる場合は、その内部でシングルクォートを書くこともできますし、シングルクォートの中でダブルクォートを書くこともできます。
+しかし、一方の型の引用符を使用している場合、属性値の _中_ にもう一方の型の引用符を記載することができます。
 
 ```html
-<a href="http://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
 ```
 
-ただし、両方の引用符が同じ種類 (一重引用符または二重引用符) の引用符の中に引用符を含める場合は、引用符に [HTML エンティティを使用する](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_Including_special_characters_in_HTML)必要があります。たとえば、これは壊れます：
+引用符を同じ種類の引用符（単一引用符または二重引用符）の中で使用する場合は、 [HTML エンティティ](#実体参照_html_に特殊文字を含める)を使用する必要があります。例えば、このようにすると壊れてしまいます。
 
 ```html example-bad
-<a href='http://www.example.com' title='Isn't this fun?'>A link to my example.</a>
+<a href='https://www.example.com' title='Isn't this fun?'>A link to my example.</a>
 ```
 
-だからあなたはこのようにする必要があります：
+代わりに、このようにしてください。
 
 ```html
-<a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+<a href='https://www.example.com' title='Isn&apos;t this fun?'>A link to my example.</a>
 ```
 
 ## HTML 文書の構成
@@ -457,7 +490,7 @@ textarea.onkeyup = function(){
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
@@ -470,56 +503,52 @@ textarea.onkeyup = function(){
 
 上記の HTML 文書を例に、順に解説していきます。
 
-1. `<!DOCTYPE html>`: いわゆる "doctype" というものです。 HTML の黎明期(1991 ～ 1992 年あたり)には、 "doctype" というものは HTML の文法セットへのリンクとしての役割を持っていました。当時の "doctype" の記述は自動エラーチェックが容易であるなどの長所も持っていました。当時の "doctype" は、次のようなものでした。
+1. `<!DOCTYPE html>`: 文書型定義です。 HTML の黎明期（1991 ～ 1992 年ごろ）には、文書型定義は、 HTML ページが良い HTML とみなされるために従わなければならない一連のルールへのリンクとして機能するものでした。文書型定義は、以前は次のような形で使用されていました。
 
-    ```
+    ```html
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     ```
 
-    しかし、今日においては誰も HTML における "doctype" の本来的な役割なんて考えていません。 "doctype" はつじつま合わせのための歴史的な産物です。今日においてには `<!DOCTYPE html>` は正しい "doctype" と認識させるための最も簡潔な記述です。 "doctype" について、これ以上知る必要はありません。
+    最近は、文書型定義は歴史的な遺物であり、他のすべてが正しく動作するために記載する必要があるものです。`<!DOCTYPE html>` は、有効な文書型定義としてカウントされる最も短い文字列です。知っておくことがあることはこれだけです。
 
-2. `<html></html>`: {{htmlelement("html")}} 要素。 HTML 文書は`<html>`要素 1 つだけからなります。この要素はページ全体であり、`<html>` タグはページ全体を囲んでいます。`<html>` 要素はルート要素とも呼ばれます。
-3. `<head></head>`: {{htmlelement("head")}} 要素。この要素は、HTML ページに入れておきたいが見せたくないすべてのものを入れておくコンテナーの働きをします。例えば、検索結果に出したいページのキーワードや説明や、ページのスタイルを指定するための CSS や、文字エンコーディングの定義などが含まれます。より詳しくは、このシリーズの次の記事で詳しく説明します。
-4. `<meta charset="utf-8">`: この要素はこの文書が UTF-8 という文字コードを使用しているということをブラウザーに伝えるためのものです。UTF-8 は世界中の自然言語の大半をカバーしている文字コードです。重要なこととしてあらゆるテキストコンテンツを扱うことができます。文字コードとして UTF-8 を指定しない手はなく、そうしておけば後で説明する問題を回避できます。
-5. `<title></title>`: {{htmlelement("title")}} 要素。これはページのタイトルを指定するもので、ページが読み込まれたブラウザーのタブに表示されます。また、このページをブラウザー上でブックマークしたりお気に入りに追加したりすると `<title>` 要素の内容がページの説明として使われます。
-6. `<body></body>`: {{htmlelement("body")}} 要素。この中にユーザーがページを訪問した時に表示したいコンテンツ (例えば、テキスト、画像、ビデオ、ゲーム、オーディオトラック等) を記述します。
+2. `<html></html>`: {{htmlelement("html")}} 要素。ページ上のすべての内容を囲む要素です。ルート要素と呼ばれることもあります。
+3. `<head></head>`: {{htmlelement("head")}} 要素。この要素は、 HTML ページに記載する、ページが閲覧者に見せる**コンテンツではないもの**すべてを入れるコンテナーとして機能します。これには、検索結果に現れるキーワードやページの説明文、内容をスタイル設定するための CSS、文字セットの宣言などが記載されます。これについては、次の記事で詳しく説明します。
+4. `<meta charset="utf-8">`: {{htmlelement("meta")}} この要素は、 {{htmlelement("base")}}, {{htmlelement("link")}}, {{htmlelement("script")}}, {{htmlelement("style")}} または {{htmlelement("title")}} など、他の HTML メタ関連の要素では表現できないメタデータを表現します。htmlattrxref("charset", "meta")}} 属性は、文書の文字セットを UTF-8 に設定します。これは、人間の書いた言語の大半の文字を含むものです。この設定により、ページは、それが含むかもしれないあらゆるテキスト内容を扱うことができます。これを設定しない理由はありませんし、後でいくつかの問題を回避するのに役立ちます。
+5. `<title></title>`: {{htmlelement("title")}} 要素。ページのタイトルを設定します。このタイトルは、ページが読み込まれたブラウザータブに表示されるタイトルです。また、ページタイトルは、そのページがブックマークされたときの説明にも使用されます。
+6. `<body></body>`: {{htmlelement("body")}} 要素。テキスト、画像、動画、ゲーム、再生可能な音声トラックなど、ページに表示される**すべての**コンテンツがこの中に記載されます。
 
-> **Note:** 訳者注: 1. の "doctype" は文書型宣言(DTD)と呼ばれております。 HTML 以外のマークアップ言語(XML, SVG, MathML 等)においては今日においても重要な意味を持っています。
+### 実習: HTML 文書にいくつかの機能を追加
 
-### 実習: HTML 文書をカスタマイズする
+もし HTML 文書を書く練習をローカルコンピューターで試したい場合は、次のようにしてください。
 
-もし HTML 文書を書く練習をローカルコンピューターで試したい場合は、次のようにします。
-
-1. 上記の HTML ページのコードサンプルの全体を選択して「コピー」します。
-2. テキストエディタ上で新規ファイルを作成します。
-3. 新規テキストファイルの中で「貼り付け」、または「ペースト」します。
+1. 上記の HTML ページのコードサンプル全体を選択して「コピー」します。
+2. テキストエディター上で新規ファイルを作成します。
+3. 新規テキストファイルの中で「貼り付け」します。
 4. `index.html` という名前でファイルを保存します。
 
-> **Note:** **脚注**: 元となる HTML テンプレートは [MDN ラーニングエリア GitHub リポジトリ](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)にも置いてあります。
+> **メモ:** 元となる HTML テンプレートは [MDN 学習領域 GitHub リポジトリー](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)にも置いてあります。
 
-ウェブブラウザーでこのファイルを開くとレンダリングされた HTML 文書が表示されます。コードを編集した場合は、ブラウザー上でページの更新 (または、再読み込み) を行うと編集結果が反映されます。最初はこんな表示です。
+ウェブブラウザーでこのファイルを開くとレンダリングされた HTML 文書が表示されます。コードを編集した場合は、ブラウザー上でページの更新（または、再読み込み）を行うと編集結果が反映されます。最初はこんな表示です。
 
-![A simple HTML page that says This is my page](template-screenshot.png)この実習では、 上に示したようにあなたのコンピューター内部でコード編集してもいいですが、この節の下の方に編集できるフォーム (Input, Output と付されているものです) を使うこともできます。スマートフォンなどで学習する際はこのフォームが役に立つと思います。この節のフォームの Input の部分は、 {{htmlelement("body")}} 要素の中身を表しています。以下の手順を踏んで、ページをカスタマイズしてみましょう。
+![This is my page と書かれたシンプルな HTML ページ](template-screenshot.png)このアクティブラーニングでは、前述のようにコンピューター上でコードをローカルに編集することもできますし、下のサンプルウィンドウで編集することもできます（編集可能なサンプルウィンドウは、この場合 {{htmlelement("body")}} 要素の内容だけを表しています）。以下の作業を実装するために、腕を磨いてください。
 
-> **Note:** 訳者注: 下記の演習項目は後で詳しく学習できますので、できなくても構いません。
+- {{htmlelement("body")}} 要素の開始タグの直下にページのメインタイトルを書きましょう。このメインタイトルは `<h1>` 開始タグと `</h1>` 終了タグで囲んでください。
+- 段落の内容を編集して、自分が興味を持っている話題についてテキストを記入しましょう。
+- 重要な言葉は、 `<strong>` 開始タグと `</strong>` 終了タグで囲み、太字で目立たせるようにしましょう。
+- [この記事の前の方](#実習_要素に属性を追加する)で説明したリンクを段落に追加してみましょう。
+- 文書に画像を追加しましょう。[この記事の前の方](#空要素)で説明したように、段落の下に配置しましょう。別の画像（コンピューターのローカル、またはウェブのどこか）にリンクすることができれば、ボーナスポイントを獲得できます。
 
-- {{htmlelement("body")}} 要素の開始タグ以降にページのメインタイトルを書きます。このメインタイトルは `<h1>` 開始タグと `</h1>` 終了タグで囲みます。ちなみにこれは `head` 要素の中に記述する `title` 要素とは異なります。実際にやってみると理解できると思います。フォームで編集する場合はすでに `body` 要素の中なので、コードの先頭にメインタイトルを記述する形になります。
-- すでに`<p>`要素が記述されていますので、その段落を好きな内容にしてみましょう。また、新しい段落を好きなように追加してみましょう。
-- 段落 (`<p>`要素) 内で重要な言葉は `<strong>` 開始タグと `</strong>` 終了タグで囲んで太字で強調しましょう。
-- [この記事の前半あたり](/ja/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element)で説明したリンクを段落のどれかに張ってみましょう。
-- [この記事の前半あたり](/ja/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements)で説明した方法を使って、段落の下に画像を挿入しましょう。説明では Firefox のロゴ画像を使用しましたが、他の画像を持ってくることにチャレンジしてもいいと思います。自分のコンピューターの中のファイルやウェブ上のどこか他の場所にある画像リンクといったものです。
-
-間違えた場合は _Reset_ ボタンを押すことで元に戻すことができます。分からない場合は Show solution ボタンを押して答えを見てみましょう。
+間違えた場合は _リセット_ ボタンを押すことで元に戻すことができます。分からない場合は 答えを見る ボタンを押して答えを見てみましょう。
 
 ```html hidden
-<h2>Live output</h2>
+<h2>ライブ出力</h2>
 
 <div class="output" style="min-height: 50px;">
 </div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<h2>編集可能なコード</h2>
+<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
   &lt;p&gt;This is my page&lt;/p&gt;
@@ -527,13 +556,17 @@ textarea.onkeyup = function(){
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="solution" type="button" value="答えを見る">
 </div>
 ```
 
 ```css hidden
 html {
   font-family: sans-serif;
+}
+
+h1 {
+ color: blue;
 }
 
 h2 {
@@ -558,38 +591,38 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+const output = document.querySelector('.output');
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>. My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener('click', () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = '答えを見る';
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener('click', () => {
+  if (solution.value === '答えを見る') {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = '答えを見る';
   }
   updateCode();
 });
-
-var htmlSolution = '<p>I really enjoy <strong>playing the drums</strong>. One of my favourite drummers is Neal Peart, who\ plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\ My favourite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
-var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -597,7 +630,7 @@ window.addEventListener('load', updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret('\t');
@@ -609,13 +642,13 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -623,11 +656,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if(solution.value === '答えを見る') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -637,11 +669,11 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Playable_code3', 700, 360, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Active_learning_Adding_some_features_to_an_HTML_document', 700, 1075, "", "") }}
 
-### HTML 内の空白
+### HTML 内のホワイトスペース
 
-上記の例において、大量の半角スペースが挿入されていることに気づいたかもしれません。大量の半角スペースはあっても無くても構わないものです。次の２つのコードスニペット (それ単体では動作しないコード例のこと) は等価です。
+上記の例において、大量の（半角）ホワイトスペース（空白文字）がコード内にあることに気づいたかもしれません。これは無くても構いません。次の 2 つのコードスニペットは等価です。
 
 ```html
 <p>Dogs are silly.</p>
@@ -650,46 +682,29 @@ textarea.onkeyup = function(){
          silly.</p>
 ```
 
-半角スペースをどれ程入力しても (そして、どれ程改行しても)、 HTML パーサはそれを１つの半角スペースとして認識します。ではどうして半角スペースを沢山入力するのでしょうか。それは HTML コードの可読性を向上させるためです。 HTML のコードがいいフォーマット(書式)で記述されていて、１行の中に沢山タグをゴチャゴチャに詰め込まなければ、そのコードの中がどうなっているかが分かりやすくなります。この記事ではインデント(字下げ)として半角スペース２文字分を挿入しています。 HTML のフォーマット(例えば、インデントとして半角スペース何文字分を挿入するのか等)については HTML の書き手によって様々ですが、フォーマットを意識して記述しなければなりません。
+HTML 要素の内容でどれだけホワイトスペースを使用したとしても（1 つ以上の空白文字だけでなく、改行も含みます）、 HTML パーサーはコードをレンダリングする際に、ホワイトスペースの並びを 1 文字の空白に縮小します。では、なぜこれほど多くのホワイトスペースを使用するのでしょうか。その答えは、読みやすさにあります。
 
-> **Warning:** 訳者注: 全角スペースは、 HTML の文法としては半角スペースや改行とは全く異なる扱いになるので、全角スペースを用いてインデントを行ったりしないでください。また、日本語の文章を段落要素`<p>`の中で改行すると、半角スペースが挿入されます。
->
-> ```
-> <p>私は日本人です。
-> 四季を好みます。</p>
-> ```
->
-> 従って、段落要素(`<p>`)の中では一切改行はしないでください。ただ、長い文章では段落要素の中身が横に長くなってしまいます。その場合は、テキストエディタで「右端で折り返す」などの設定を行ってみてください。
->
-> ```
-> <p>私は日本人です。四季を好みます。</p>
-> ```
->
-> 段落要素の中で改行したい場合は、改行要素`<br>`を用います(文章内の会話や、詩などに用います)。
->
-> ```
-> <p>彼は言いました。<br>
-> 「私は日本人です。四季を好みます。」<br>
-> 私は彼の発した突然の一言にはっと驚きました。</p>
-> ```
+> **メモ:** 訳注: 全角空白はホワイトスペースに含まれず、空白の縮小の対象にもなりません。
+
+コードをきれいに整形すると、何をしようとしているのかがわかりやすくなります。この HTML では、入れ子になっている各要素を、中に入っている要素よりも空白 2 文字分多く字下げしています。整形スタイル（それぞれの字下げレベルを空白何文字分にするか、など）はあなた次第ですが、書式化は検討した方がいいでしょう。
 
 ## 実体参照: HTML に特殊文字を含める
 
-> **Note:** 訳者注: HTML エンティティ、実体参照、文字参照、文字実体参照、は、それぞれほぼ同じ意味で用いられます。
+HTMLでは、`<`、`>`、`"`、`'`、`&` の各文字が特殊文字として扱われます。これらは HTML の構文の一部です。では、これらの特殊文字をどのようにテキストに記述するのでしょうか？例えば、アンパサンドや小なり記号を使用したい場合、コードとして解釈されないようにするには、次のようにします。
 
-HTML では`<`、`>`、`"`、`'`、`&`の５つの文字は特殊文字と呼ばれています。これら５つの文字は HTML の文法自身の一部です。ではこれらの文字そのものを組版したい場合はどうすればいいのでしょうか。例えば「 You & Me 」や「 x < y 」等の表記をしたい場合です。
-
-そのような場合は、「文字参照」を使用する必要があります。文字参照とは「文字を表す特別なコード」のことであり、これを使うことで正確な組版を行うことができます。文字参照は必ずアンパサンド (&) で始まり、セミコロン(;)で終わります。
+そのためには、文字参照（実体参照、エンティティ、とも）を使用します。これは文字を表す特別なコードで、まさにそのような状況で使用するためのものです。それぞれの文字参照は、アンパサンド(&)で始まり、セミコロン(;)で終わります。
 
 | 実際の文字 | 等価な文字参照 |
 | ---------- | -------------- |
-| <          | \&lt;          |
-| >          | \&gt;          |
-| "          | \&quot;        |
-| '          | \&apos;        |
-| &          | \&amp;         |
+| <          | `&lt;`         |
+| >          | `&gt;`         |
+| "          | `&quot;`       |
+| '          | `&apos;`       |
+| &          | `&amp;`        |
 
-次の例では Web 技術について記述している段落要素を２つ並べています。
+等価な文字参照は、 '\&lt;' は未満 (less than)、 '\&quot;' は引用 (quotation) という具合に思い出しやすくできています。実体参照についての詳細は、[XMLとHTMLの文字実体参照一覧](https://ja.wikipedia.org/wiki/文字参照) （ウィキペディア）を参照してください。
+
+以下の例では、 2 つの段落があります。
 
 ```html
 <p>HTML では、<p>要素で段落を定義します。</p>
@@ -697,48 +712,50 @@ HTML では`<`、`>`、`"`、`'`、`&`の５つの文字は特殊文字と呼ば
 <p>HTML では、&lt;p&gt;要素で段落を定義します。</p>
 ```
 
-上記の例をブラウザーに解釈させたものを下記に出力しています。１つ目の段落の出力が間違っていることが分かるかと思います。2 つ目の `<p>` を新しい段落の始まりとして認識しているためです。２つ目の段落は正しく出力されています。山括弧(`<`、`>`)を文字参照に置き換えているためです。
+上記の例をブラウザーに解釈させたものを下記に出力しています。 1 つ目の段落の出力が間違っていることが分かるかと思います。2 つ目の `<p>` が新しい段落の始まりとして認識されているためです。 2 つ目の段落は、山括弧を文字参照に置き換えているため、正しく表示されます。
 
-{{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "") }}
 
-> **Note:** 脚注: HTML で使用することのできる文字実体参照のリストはこの Wikipedia の記事で確認することができます: [List of XML and HTML character entity references](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references).
+> **メモ:** 他の記号に実体参照を使用する必要はありません。現代のブラウザーは、 HTML の[文字エンコーディングが UTF-8 に設定](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#html_文書の文字コードを指定する)されていれば、実際の記号を正しく扱うことができるからです。
 
-## HTML におけるコメント
+## HTML のコメント
 
-大抵のプログラミング言語同様、HTML においてもコード内にコメントを書くことができます。コメントはブラウザーによって無視されるので、組版には反映されません。コメントの目的としては、 HTML コードがどのように動作するのかや、コードの別の部分がどのように動作するのかを述べるることできます。コメントは、 HTML のコードを書いて半年以上経ってから自分で見返して、自分が何をしたのかを思い出すことができない時に大変有用となります。また、自分のコードを他の人に読んでもらう時にも有用です。
+HTML には、コードにコメントを書く仕組みがあります。ブラウザーはコメントを無視するので、事実上、ユーザーからはコメントが見えません。コメントのそのため、自分の論理やコーディングを説明するためのメモをコードに記載することができます。これは、コードベースを完全に覚えていないほど長い間離れていた後に、コードベースに戻った場合にとても役に立ちます。同様に、コメントは、さまざまな人が変更や更新を行う際に非常に重要です。
 
-HTML ファイル内の一部をコメントにするには、その箇所を特別なマーカーの `<!--` と `-->` で囲みます。例えば次のような感じです。
+HTML のコメントを書くには、特別なマーカーの `<!--` と `-->` で囲んで下さい。例えば以下のようにします。
 
 ```html
-<p>私はコメントの外にいます。</p>
+<p>コメントの外にいます。</p>
 
-<!-- <p>私はコメントの中にいます。</p> -->
+<!-- <p>コメントの中にいます。</p> -->
 ```
 
 下記を見ると、最初の段落は表示されますが、次の段落は表示されないことが分かります。
 
-{{ EmbedLiveSample('HTML_comments', 700, 100) }}
+{{ EmbedLiveSample('HTML_comments', 700, 100, "", "") }}
 
-## 要約
+## まとめ
 
-この記事の最後にたどり着きました — HTML のほんの初歩のツアーを楽しんでこられたことを望んでいます！ここではこの言語がどのようなものか、基本的にどうやって動作するのかを理解し、いくつかの要素と属性を書くことができるようになったでしょう。あなたがいる場所は完璧な場所です、続きの記事ではすでに見てきたことをもっと詳細に経験して、いくつか新しい言語機能を紹介します。引き続き注目！
+記事の最後までたどり着きました。 HTML の基本を楽しんでいただけたでしょうか。
 
-> **Note:** **脚注**: さて、 HTML についてより深く学習するために [CSS](/ja/docs/Learn/CSS) (Cascading Style Sheets)の基礎についても理解しておきましょう。 CSS はウェブページのスタイルをカスタマイズするために使用します。具体的には、テキストのフォントや色を変えたり、ページレイアウトを設定したりといったことがあげられます。 HTML と CSS は相互補完、つまり２つで１つです。両方学習するとすぐ気づくでしょう。
+この時点で、あなたは HTML がどのようなものか、そしてどのように動作するのか、基本的なレベルで理解できたはずです。また、いくつかの要素や属性を書くことができるようになっているはずです。このモジュールの後続の記事では、ここで紹介したトピックのいくつかをさらに詳しく説明し、また、この言語の他の概念も表示する予定です。
+
+> **メモ:** HTML を学び始めたら、 [CSS](/ja/docs/Learn/CSS) の基本を学ぶことも検討してみてください。 CSS は、ウェブページのスタイル設定に使用される言語です。例えば、フォントや色を変更したり、ページのレイアウトを変更したりすることができます。 HTML と CSS がうまく協調しながら動作することがおわかりいただけると思います。
 
 ## 関連情報
 
-- [CSS を使って HTML 要素に色をつける](/ja/docs/Web/HTML/Applying_color)
+- [CSS を使って HTML 要素に色をつける](/ja/docs/Web/CSS/CSS_Colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 ## このモジュール内
 
-- [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Head とは？HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクを作成する](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [上級のテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [ドキュメントとウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML をデバッグする](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙をマークアップする](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツページを構造化する](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

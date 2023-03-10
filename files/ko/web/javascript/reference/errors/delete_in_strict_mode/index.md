@@ -3,13 +3,8 @@ title: >-
   SyntaxError: applying the 'delete' operator to an unqualified name is
   deprecated
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
-tags:
-  - 가비지 컬렉터
-  - 구문 에러
-  - 변수 삭제
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지
@@ -30,9 +25,9 @@ translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 
 `delete` 연산자는 오직 객체의 속성만을 삭제할 수 있습니다. 객체 속성은 설정할 수 있는 경우 "수식"될 수 있습니다.
 
-일반적인 생각과 다르게 `delete` 연산자는 메모리 해제와 직접적인 연관이 없습니다. 메모리 관리는 참조가 깨짐에 따라 간접적으로 수행됩니다. 자세한 내용은 [메모리 관리](https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_Management) 페이지와 [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 연산자 페이지를 참조하십시오.
+일반적인 생각과 다르게 `delete` 연산자는 메모리 해제와 직접적인 연관이 없습니다. 메모리 관리는 참조가 깨짐에 따라 간접적으로 수행됩니다. 자세한 내용은 [메모리 관리](/ko/docs/Web/JavaScript/Memory_Management) 페이지와 [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 연산자 페이지를 참조하십시오.
 
-이 에러는 오직 [엄격 모드 코드](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode)에서만 발생합니다. 엄격하지 않은 모드에서 해당 연산자는 단순히 `false` 를 반환합니다.
+이 에러는 오직 [엄격 모드 코드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서만 발생합니다. 엄격하지 않은 모드에서 해당 연산자는 단순히 `false` 를 반환합니다.
 
 ## 예제
 

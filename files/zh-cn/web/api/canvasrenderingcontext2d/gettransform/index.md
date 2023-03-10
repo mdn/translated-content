@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.getTransform()
 slug: Web/API/CanvasRenderingContext2D/getTransform
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.getTransform()`** 方法获取当前被应用到上下文的转换矩阵
@@ -66,7 +67,7 @@ ctx2.fill();
 
 #### 结果
 
-{{ EmbedLiveSample('Examples', "100%", 180) }}
+{{ EmbedLiveSample('示例', "100%", 180) }}
 
 ## 规范
 
@@ -74,7 +75,7 @@ ctx2.fill();
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.getTransform")}}
+{{Compat}}
 
 ## 参见
 

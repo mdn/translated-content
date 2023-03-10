@@ -2,6 +2,7 @@
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -44,7 +45,7 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948734
+Math.cbrt(2);  // 1.2599210498948732
 ```
 
 ## Polyfill

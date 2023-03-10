@@ -2,6 +2,7 @@
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
 ---
+
 {{ APIRef("HTML DOM") }}
 
 {{domxref("HTMLElement", "HTML 元素")}}的 **`hidden`** 属性是一个 {{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，就将值设置为 `true`，否则就将值设置为`false`。这完全不同于使用 CSS 属性 {{cssxref("display")}} 来控制一个元素的可见性。
@@ -12,13 +13,13 @@ slug: Web/API/HTMLElement/hidden
 
 - 目前还不相关但将来可能会被用到的内容
 - 之前还需要但现在不再被需要用到的内容
-- 以类似于模板的方式被页面的其它部分所重复使用的内容
+- 以类似于模板的方式被页面的其他部分所重复使用的内容
 - 创建一个屏幕上不可见的画布来作为绘制的缓冲区
 
 不适用的情况，包括
 
 - 隐藏选项卡的对话框中的面板
-- 隐藏一个演示文稿中的内容，同时又希望这个内容在其它演示文稿中是可见的
+- 隐藏一个演示文稿中的内容，同时又希望这个内容在其他演示文稿中是可见的
 
 > **备注：** Elements that are not `hidden` must not link to elements which are.
 
@@ -104,17 +105,17 @@ h1 {
 }
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('示例', 560, 200) }}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.HTMLElement.hidden")}}
+{{Compat}}
 
 ## 参见
 

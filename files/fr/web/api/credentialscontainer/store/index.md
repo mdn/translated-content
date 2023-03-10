@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/CredentialsContainer/store
 ---
+
 {{APIRef("")}}{{SeeCompatTable}}
 
 La méthode **`store()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, enregistre un ensemble d'informations d'authentification pour l'utilisateur dans une instance {{domxref("Credential")}} et renvoie cette instance au travers d'une promesse ({{domxref("Promise")}}).

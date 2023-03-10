@@ -2,6 +2,7 @@
 title: mousedown
 slug: Web/API/Element/mousedown_event
 ---
+
 {{APIRef}}
 
 `mousedown` 事件在指针设备按钮按下时触发。
@@ -9,7 +10,7 @@ slug: Web/API/Element/mousedown_event
 ## 常规信息
 
 - 规范
-  - [: DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
 - 接口
   - : {{domxref("MouseEvent")}}
 - 是否冒泡
@@ -32,7 +33,7 @@ slug: Web/API/Element/mousedown_event
 | `view` {{readonlyInline}}          | {{domxref("WindowProxy")}} | {{domxref("document.defaultView")}} (文档 `window`)                                                                                                                                                                                               |
 | `detail` {{readonlyInline}}        | `long` (`float`)                     | 短时间内通过连续点击每次加一自增的计数值                                                                                                                                                                                                                       |
 | `currentTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 挂载监听器的节点                                                                                                                                                                                                                                               |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 对于 `mouseover`, `mouseout`, `mouseenter` 及 `mouseleave` 事件： 该事件及其互补事件（如 `mouseleave` 对应 `mouseenter` 事件)。不存在时为 `null`                                                                                                               |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 对于 `mouseover`, `mouseout`, `mouseenter` 及 `mouseleave` 事件：该事件及其互补事件（如 `mouseleave` 对应 `mouseenter` 事件)。不存在时为 `null`                                                                                                               |
 | `screenX` {{readonlyInline}}       | long                                 | 全局屏幕坐标系下鼠标指针的 X 轴坐标值                                                                                                                                                                                                                          |
 | `screenY` {{readonlyInline}}       | long                                 | 全局屏幕坐标系下鼠标指针的 Y 轴坐标值                                                                                                                                                                                                                          |
 | `clientX` {{readonlyInline}}       | long                                 | 当前（DOM 元素）坐标系下鼠标指针的 X 轴坐标值                                                                                                                                                                                                                  |
@@ -51,17 +52,17 @@ slug: Web/API/Element/mousedown_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.mousedown_event")}}
+{{Compat}}
 
 ## 参见
 
-- {{Event("mousedown")}}
-- {{Event("mouseup")}}
-- {{Event("mousemove")}}
-- {{Event("click")}}
-- {{Event("dblclick")}}
-- {{Event("mouseover")}}
-- {{Event("mouseout")}}
-- {{Event("mouseenter")}}
-- {{Event("mouseleave")}}
-- {{Event("contextmenu")}}
+- [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)
+- [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)
+- [`click`](/zh-CN/docs/Web/API/Element/click_event)
+- [`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)
+- [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)
+- [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)
+- [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/zh-CN/docs/Web/API/Element/contextmenu_event)

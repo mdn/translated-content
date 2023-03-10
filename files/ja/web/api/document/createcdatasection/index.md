@@ -2,6 +2,7 @@
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
 ---
+
 {{APIRef("DOM")}}
 
 **`createCDATASection()`** は、新しい CDATA セクションを生成して返します。

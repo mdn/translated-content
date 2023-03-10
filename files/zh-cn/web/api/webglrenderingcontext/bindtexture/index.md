@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindTexture()`** 方法将给定的 {{domxref("WebGLTexture")}} 绑定到目标（绑定点）。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindTexture()`** 方法将给定的 {{domxref("WebGLTexture")}} 绑定到目标（绑定点）。
 
 ## 语法
 
@@ -16,7 +17,7 @@ void gl.bindTexture(target, texture);
 
 - target
 
-  - : {{domxref("GLenum")}} 指定绑定点（目标）。 可能的值：
+  - : {{domxref("GLenum")}} 指定绑定点（目标）。可能的值：
 
     - `gl.TEXTURE_2D`: 二维纹理。
     - `gl.TEXTURE_CUBE_MAP`: 立方体映射纹理。
@@ -34,7 +35,7 @@ void gl.bindTexture(target, texture);
 
 ### 异常
 
-如果目标不是 gl.TEXTURE_2D ，gl.TEXTURE_CUBE_MAP，gl.TEXTURE_3D 或 gl.TEXTURE_2D_ARRAY ，则会抛出 gl.INVALID_ENUM 错误。
+如果目标不是 gl.TEXTURE_2D，gl.TEXTURE_CUBE_MAP，gl.TEXTURE_3D 或 gl.TEXTURE_2D_ARRAY，则会抛出 gl.INVALID_ENUM 错误。
 
 ## 示例
 
@@ -62,7 +63,7 @@ gl.getParameter(gl.TEXTURE_BINDING_2D);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindTexture")}}
+{{Compat}}
 
 ## 另见
 

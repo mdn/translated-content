@@ -1,19 +1,8 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
-page-type: web-api-static-method
-tags:
-  - API
-  - Blob
-  - DOM
-  - File
-  - Method
-  - Object URL
-  - URL
-  - URL API
-  - createObjectURL
-browser-compat: api.URL.createObjectURL
 ---
+
 ---
 
 {{APIRef("URL API")}}
@@ -73,8 +62,8 @@ Em versões antigas da especificação Media Source, anexar stream a um elemento
 
 ## Veja também
 
-- [Usando arquivos de aplicativos da web](/en-US/docs/Web/API/File/Using_files_from_web_applications)
-- [Usando objetos URLs para exibir imagens](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- [Usando arquivos de aplicativos da web](/pt-BR/docs/Web/API/File/Using_files_from_web_applications)
+- [Usando objetos URLs para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

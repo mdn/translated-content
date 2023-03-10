@@ -217,7 +217,7 @@ a::after {
 }
 
 #mdn::before {
-  content: url("https://mdn.mozillademos.org/files/7691/mdn-favicon16.png") ;
+  content: url("mdn-favicon16.png") ;
 }
 
 li {
@@ -243,7 +243,7 @@ li {
 
 ```css
 #replaced {
-  content: url("https://mdn.mozillademos.org/files/12668/MDN.svg");
+  content: url("mdn.svg");
 }
 
 #replaced::after { /* не будет отображаться, если замена элемента поддерживается */

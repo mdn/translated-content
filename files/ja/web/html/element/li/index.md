@@ -1,14 +1,9 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/li
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<li>` 要素**は、リストの項目を表すために用いられます。この要素は、その項目が属する順序付きリスト ({{HTMLElement("ol")}})、順序なしリスト ({{HTMLElement("ul")}})、メニュー ({{HTMLElement("menu")}}) のいずれかの子要素として配置する必要があります。メニュー要素および順序なしリスト内においては、リストの項目は通常、行頭文字伴って表示され、順序付きリスト内では、数字や文字による連番のリストマーカーを伴って表示されます。
 
@@ -61,12 +56,12 @@ translation_of: Web/HTML/Element/li
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("radio")}}, {{ARIARole("separator")}},
-        {{ARIARole("tab")}}, {{ARIARole("treeitem")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code>
       </td>
     </tr>
     <tr>
@@ -84,7 +79,7 @@ translation_of: Web/HTML/Element/li
 
   - : これは整数値の属性で、 {{HTMLElement("ol")}} 要素で定義されたリスト項目の序数値を示します。リストがローマ数字や文字で表示される場合であっても、この属性は数値のみが指定できます。続くリスト項目は、その番号から続いて採番されます。順序なしリスト ({{HTMLElement("ul")}}) やメニュー ({{HTMLElement("menu")}}) では **value** 属性は意味がありません。
 
-    > **Note:** この属性は HTML4 で非推奨とされましたが、 HTML5 で再導入されました。
+    > **メモ:** この属性は HTML4 で非推奨とされましたが、 HTML5 で再導入されました。
 
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
 
@@ -98,7 +93,7 @@ translation_of: Web/HTML/Element/li
 
     もし親の {{HTMLElement("ol")}} 要素で使用されていた場合は、それよりも優先されます。
 
-    > **Note:** **注意:** この属性は非推奨になっています。代わりに CSS の {{cssxref("list-style-type")}} プロパティを使用してください。
+    > **メモ:** この属性は非推奨になっています。代わりに CSS の {{cssxref("list-style-type")}} プロパティを使用してください。
 
 ## 例
 
@@ -142,11 +137,7 @@ translation_of: Web/HTML/Element/li
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML WHATWG')}} |                             |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML5 W3C')}}     |                             |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;li&gt;')}}                 | {{Spec2('HTML4.01')}}     | `type` 属性を非推奨にした。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

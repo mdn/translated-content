@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext.uniform[1234][uif][v]()
 slug: Web/API/WebGL2RenderingContext/uniform
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGL2RenderingContext.uniform[1234][uif][v]()`** 方法提供了 uniform（es）变量的详细值
@@ -51,7 +52,7 @@ void gl.uniform4uiv(location, data, optional srcOffset, optional srcLength);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.uniform1ui")}}
+{{Compat}}
 
 ## 详见
 

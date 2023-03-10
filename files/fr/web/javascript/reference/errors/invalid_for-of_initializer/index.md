@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 original_slug: Web/JavaScript/Reference/Erreurs/Invalid_for-of_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

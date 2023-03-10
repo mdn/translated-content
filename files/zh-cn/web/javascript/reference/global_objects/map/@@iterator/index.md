@@ -3,6 +3,7 @@ title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** 属性的初始值与 {{jsxref("Map.prototype.entries()", "entries")}} 属性的初始值是同一个函数对象。

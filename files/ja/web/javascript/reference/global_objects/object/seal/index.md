@@ -1,15 +1,8 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
+
 {{JSRef}}
 
 **`Object.seal()`** メソッドは、オブジェクトを封印して、新しいオブジェクトを追加することを抑制し、すべての既存のプロパティを設定変更不可にします。現存するプロパティの値は、書き込み可能である限り変更できます。
@@ -35,7 +28,7 @@ Object.seal(obj)
 
 既定では、オブジェクトは{{jsxref("Object.isExtensible()", "拡張可能", "", 1)}} (新しいプロパティを追加できる状態) です。オブジェクトを封印することで、新しいオブジェクトの追加を抑制し、すべての既存のプロパティを設定変更を不可にします。これは、オブジェクトにあるプロパティ一式を固定かつ不変にする効果があります。プロパティを設定変更不可にすることで、データプロパティからアクセサプロパティへの変換やその逆を抑制しますが、データプロパティの値の変更は抑制しません。封印されたオブジェクトでプロパティの削除や追加、あるいはデータプロパティからアクセサプロパティへの変換およびその逆を試みると、暗黙的あるいは {{jsxref("TypeError")}} エラーを発生させて (もっとも一般的には {{jsxref("Strict_mode", "strict mode", "", 1)}} において、ただしこれに限定はされません) 失敗します。
 
-プロトタイプチェインには手をつけず、そのままにします。ただし、 {{jsxref("Object.proto", "__proto__")}} プロパティは同様に封印されます。
+プロトタイプチェインには手をつけず、そのままにします。ただし、[`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティは同様に封印されます。
 
 ### Object.freeze() との比較
 
@@ -106,9 +99,7 @@ Object.seal(1);
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,7 +2,8 @@
 title: <hr>
 slug: Web/HTML/Element/hr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML** 的** `<hr>` 元素**代表在段落層級的焦點轉換（如故事中的場景轉換或某個小節裡的主題移轉）。在之前的 HTML 版本，它代表著一條水平標線。在視覺瀏覽器裡，它現在可能還是以水平標線的型式呈現；但它已經被重新定義為一個語義上的用詞，而不是呈現上的。
 
@@ -17,15 +18,15 @@ slug: Web/HTML/Element/hr
 
 這個元素支持[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : 設罝頁面上標線的對齊方式。如果沒有指定，預設值是：`left。`
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : 用色彩名或 16 進位值設罝標線的顏色。
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : 設置這個標線沒有陰影。
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : 設置標線的高度，單位是 px。.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : 設置標線的長度，單位是 px；或者也可以用頁面寛度的百分比 (%)表示。
 
 ## 範例
@@ -58,7 +59,7 @@ This is second paragraph of text. This is second paragraph of text. This is seco
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.hr")}}
+{{Compat}}
 
 ## 參照 （see also)
 

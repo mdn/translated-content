@@ -2,6 +2,7 @@
 title: 古いブラウザーのサポート
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
@@ -71,7 +72,7 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 
 {{ EmbedLiveSample('Example1', '100%', '200') }}
 
-> **Note:** クリアされた項目がグリッド項目になると、{{cssxref("clear")}} プロパティも無効になります。 そのため、フッターがクリアされたレイアウトを作成し、それをグリッドレイアウトにすることができます。
+> **メモ:** クリアされた項目がグリッド項目になると、{{cssxref("clear")}} プロパティも無効になります。 そのため、フッターがクリアされたレイアウトを作成し、それをグリッドレイアウトにすることができます。
 
 ### 代替手段の方法
 

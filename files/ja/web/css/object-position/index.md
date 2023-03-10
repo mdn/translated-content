@@ -1,20 +1,8 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - レイアウト
-  - 位置
-  - Reference
-  - 置換要素
-  - css レイアウト
-  - object-position
-  - recipe:css-property
-browser-compat: css.properties.object-position
-translation_of: Web/CSS/object-position
 ---
+
 {{CSSRef}}
 
 **`object-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックス内における[置換要素](/ja/docs/Web/CSS/Replaced_element)の中身の配置を指定します。ボックスの領域内で置換要素のオブジェクトに覆われていない部分は、要素の背景が表示されます。
@@ -42,7 +30,7 @@ object-position: unset;
 - {{cssxref("&lt;position&gt;")}}
   - : 要素のボックスの端に対する 2D 上の位置を表す、1 個から 4 個の値です。相対値または絶対値のオフセットを指定できます。
 
-> **Note:** 置換要素がボックス外にはみ出る位置も指定できます。
+> **メモ:** 置換要素がボックス外にはみ出る位置も指定できます。
 
 ## 公式定義
 

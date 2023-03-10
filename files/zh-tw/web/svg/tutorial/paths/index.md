@@ -3,13 +3,14 @@ title: 路徑
 slug: Web/SVG/Tutorial/Paths
 original_slug: Web/SVG/Tutorial/路径
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
-[`<path>`](/en-US/Web/SVG/Element/path) 元件可說是 SVG 程式庫中最強大的[基本形狀](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)了，你可以用它來產生線條、曲線、圓弧等形狀。
+[`<path>`](/zh-TW/Web/SVG/Element/path) 元件可說是 SVG 程式庫中最強大的[基本形狀](/zh-TW/docs/Web/SVG/Tutorial/Basic_Shapes)了，你可以用它來產生線條、曲線、圓弧等形狀。
 
-路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由[折線](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline)組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用 XML 編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。
+路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由[折線](/zh-TW/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline)組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用 XML 編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。
 
-path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考[基本形狀](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) ）。 `"d"` 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。
+path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考[基本形狀](/zh-TW/docs/Web/SVG/Tutorial/Basic_Shapes) ）。 `"d"` 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。
 
 Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (10, 10). The "Move to" command is called with the letter M. When the parser runs into this letter, it knows you want to move to a point. So, to move to (10,10) you would use the command "M 10 10". After that, the parser begins reading for the next command.
 
@@ -33,7 +34,7 @@ m dx dy
 
 In the following example we only have a point at (10,10). Note, though, that it wouldn't show up if you were just drawing the path normally. For example:
 
-![](/@api/deki/files/45/=Blank_Path_Area.png)
+![](blank_path_area.png)
 
 ```xml
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +62,7 @@ V y (or v dy)
 
 An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a `<rect>` element). It's composed of horizontal and vertical lines only:
 
-![](/@api/deki/files/292/=Path_Line_Commands.png)
+![](path_line_commands.png)
 
 ```xml
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +193,7 @@ A rx ry x-axis-rotation large-arc-flag sweep-flag x y
 a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 ```
 
-At its start, the arc element takes in two arguments for the x-radius and y-radius. If you need to, look up [ellipses](/en-US/Web/SVG/Element/ellipse) to see how they behave. The final two arguments designate the x and y coordinates to end the stroke. Together, these four values define the basic structure of the arc.
+At its start, the arc element takes in two arguments for the x-radius and y-radius. If you need to, look up [ellipses](/zh-TW/Web/SVG/Element/ellipse) to see how they behave. The final two arguments designate the x and y coordinates to end the stroke. Together, these four values define the basic structure of the arc.
 
 The third parameter describes the rotation of the arc. This is best explained with an example:
 
@@ -236,7 +237,7 @@ If the start->end points are farther than the ellipse's x and y radius can reach
 
 The four different paths mentioned above are determined by the next two argument flags. As mentioned earlier, there are still two possible ellipses for the path to travel around and two different possible paths on both ellipses, giving four possible paths. The first argument is the large-arc-flag. It simply determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle. The second argument is the sweep-flag. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles you will travel around. The example below shows all four possible combinations, along with the two circles for each case.
 
-![](/@api/deki/files/345/=SVGArcs_Flags.png)
+![](svgarcs_flags.png)
 
 ```xml
 <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
@@ -257,6 +258,6 @@ The four different paths mentioned above are determined by the next two argument
 
 Arcs are an easy way to create pieces of circles or ellipses in your drawings. For instance, a pie chart would require a different arc for each piece.
 
-If you're transitioning to SVG from [Canvas](/en/HTML/Canvas), arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are actually the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of your path slightly askew, and then connecting them with another path segment. For example, you can make a circle with an arc for each semicircle. At that point, it's often easier to use a real circle or ellipse node instead. This interactive demo might help you understand the concepts behind SVG arcs: <http://codepen.io/lingtalfi/pen/yaLWJG> (tested in chrome and firefox only, might not work in your browser)
+If you're transitioning to SVG from [Canvas](/zh-TW/HTML/Canvas), arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are actually the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of your path slightly askew, and then connecting them with another path segment. For example, you can make a circle with an arc for each semicircle. At that point, it's often easier to use a real circle or ellipse node instead. This interactive demo might help you understand the concepts behind SVG arcs: <http://codepen.io/lingtalfi/pen/yaLWJG> (tested in chrome and firefox only, might not work in your browser)
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

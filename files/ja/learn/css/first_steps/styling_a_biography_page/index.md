@@ -3,6 +3,7 @@ title: 新しい知識を使う
 slug: Learn/CSS/First_steps/Styling_a_biography_page
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 先のいくつかのレッスンで、あなたは CSS を使ってシンプルなテキストドキュメントにスタイルを追加してフォーマットする方法を学びました。ここでは、それを実際に行ってみましょう。
@@ -15,7 +16,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 下の Live エディタで試すこともできますし、[我々の Github リポジトリ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)からサンプルファイルをダウンロードして試してみることもできます。ここで使うサンプルはシンプルな一ページの HTML で、頭にはとりあえずシンプルな CSS が埋め込まれています。もしローカルで動かすとき HTML と CSS が一緒になっているのが嫌だったら別々のファイルに分割しても構いません。あるいは、[CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) といったオンラインエディタを使うこともできます。
 
-> **Note:** 注記: もし途中で詰まったら、私達に気兼ねなく相談してください！詳しくはこの記事の一番下にある「アセスメントとさらなるヘルプ」の部分を見てください。
+> **メモ:** もし途中で詰まったら、私達に気兼ねなく相談してください！詳しくはこの記事の一番下にある「アセスメントとさらなるヘルプ」の部分を見てください。
 
 ## CSS を少し試してみよう
 

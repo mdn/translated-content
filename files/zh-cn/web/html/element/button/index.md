@@ -2,7 +2,8 @@
 title: <button>
 slug: Web/HTML/Element/button
 ---
-**HTML `<button>` 元素**表示一个可点击的按钮，可以用在[表单](/zh-CN/docs/Learn/HTML/Forms)或文档其它需要使用简单标准按钮的地方。 默认情况下，HTML 按钮的显示样式接近于 {{Glossary("user agent")}} 所在的宿主系统平台（用户操作系统）的按钮， 但你可以使用 [CSS](/zh-CN/docs/Web/CSS) 来改变按钮的样貌。
+
+**HTML `<button>` 元素**表示一个可点击的按钮，可以用在[表单](/zh-CN/docs/Learn/HTML/Forms)或文档其他需要使用简单标准按钮的地方。默认情况下，HTML 按钮的显示样式接近于 {{Glossary("user agent")}} 所在的宿主系统平台（用户操作系统）的按钮，但你可以使用 [CSS](/zh-CN/docs/Web/CSS) 来改变按钮的样貌。
 
 <table class="properties">
  <tbody>
@@ -24,7 +25,7 @@ slug: Web/HTML/Element/button
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("checkbox")}}, {{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -40,9 +41,9 @@ slug: Web/HTML/Element/button
 - {{htmlattrdef("autofocus")}}
   - : 一个布尔属性，用于指定当页面加载时按钮必须有输入焦点，除非用户重写，例如通过不同控件键入。只有一个表单关联元素可以指定该属性。
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : 该属性在 {{HTMLElement("button")}}上的使用并未标准化，只有 Firefox 允许。不像其它浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态（[Firefox persists the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ）。将此属性设置为`off` (i.e. `autocomplete="off"`) 关闭此特性。参见 {{bug(654072)}}。
+  - : 该属性在 {{HTMLElement("button")}}上的使用并未标准化，只有 Firefox 允许。不像其他浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态（[Firefox persists the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ）。将此属性设置为`off` (i.e. `autocomplete="off"`) 关闭此特性。参见 [Firefox bug 654072](https://bugzil.la/654072)。
 - {{htmlattrdef("disabled")}}
-  - : 此布尔属性表示用户不能与 button 交互。如果属性值未指定，button 继承包含元素，例如{{HTMLElement("fieldset")}}；如果没有设置**disabled**属性的包含元素，button 将可交互。不像其它浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态。使用{{htmlattrxref("autocomplete","button")}}属性可控制此特性。
+  - : 此布尔属性表示用户不能与 button 交互。如果属性值未指定，button 继承包含元素，例如{{HTMLElement("fieldset")}}；如果没有设置**disabled**属性的包含元素，button 将可交互。不像其他浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态。使用{{htmlattrxref("autocomplete","button")}}属性可控制此特性。
 - {{htmlattrdef("form")}}
   - : 表示 button 元素关联的 form 元素（它的表单拥有者）。此属性值必须为同一文档中的一个{{HTMLElement("form")}}元素的**id**属性。如果此属性未指定，\<button>元素必须是 form 元素的后代。利用此属性，你可以将\<button>元素放置在文档内的任何位置，而不仅仅是作为他们 form 元素的后代。
 - {{htmlattrdef("formaction")}}
@@ -89,11 +90,11 @@ IE7 在使用 `<button type="submit" name="myButton" value="foo">Click me</butto
 IE6 的 BUG 更糟糕，在提交表单的时候会把表单内所有的按钮都提交上去，同时还有和 IE7 一样的 BUG。
 IE8 已经修复了这个问题。
 
-Firefox 出于使用方便的目的，会在获得焦点的按钮上添加一个细小的虚线框。 这个边框由浏览器内部的样式表中的 CSS 定义，但如果有必要的话，你可以用 `button{{cssxref("::-moz-focus-inner")}} { }` 重写这个样式。
+Firefox 出于使用方便的目的，会在获得焦点的按钮上添加一个细小的虚线框。这个边框由浏览器内部的样式表中的 CSS 定义，但如果有必要的话，你可以用 `button{{cssxref("::-moz-focus-inner")}} { }` 重写这个样式。
 
-Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [保持动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ，这个行为在其它浏览器上是没有的。将 {{htmlattrxref("autocomplete","button")}} 属性设置为 `off` 可以禁用这项特性。参见 {{bug(654072)}}。
+Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [保持动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ，这个行为在其他浏览器上是没有的。将 {{htmlattrxref("autocomplete","button")}} 属性设置为 `off` 可以禁用这项特性。参见 [Firefox bug 654072](https://bugzil.la/654072)。
 
-安卓系统上的 Firefox <35 会为每个按钮设置一个默认的 {{ cssxref("background-image") }} 渐变背景（参见 {{bug(763671)}}）。这项可以通过 `background-image: none` 禁用。
+安卓系统上的 Firefox <35 会为每个按钮设置一个默认的 {{ cssxref("background-image") }} 渐变背景（参见 [Firefox bug 763671](https://bugzil.la/763671)）。这项可以通过 `background-image: none` 禁用。
 
 ### 点击和焦点
 
@@ -120,7 +121,7 @@ Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [�
 
 {{ EmbedLiveSample('示例', 200, 64) }}
 
-请注意上例中应用了 CSS 。
+请注意上例中应用了 CSS。
 
 ## 规范
 
@@ -128,10 +129,10 @@ Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.button")}}
+{{Compat}}
 
 ## 参见
 
 Other elements that are used for creating forms: {{HTMLElement("form")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

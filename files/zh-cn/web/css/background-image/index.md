@@ -2,6 +2,7 @@
 title: background-image
 slug: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`background-image`** 属性用于为一个元素设置一个或者多个背景图像。
@@ -25,7 +26,7 @@ slug: Web/CSS/background-image
 ```css
 background-image:
   linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('https://mdn.mozillademos.org/files/7693/catfront.png');
+  url('catfront.png');
 ```
 
 ### 取值
@@ -70,20 +71,20 @@ p {
 
 div {
   background-image:
-      url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+      url("mdn_logo_only_color.png");
 }
 
 .catsandstars {
   background-image:
-      url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
-      url("https://mdn.mozillademos.org/files/7693/catfront.png");
+      url("startransparent.gif"),
+      url("catfront.png");
   background-color: transparent;
 }
 ```
 
-#### 运行结果
+#### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 无障碍相关
 
@@ -100,7 +101,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-image")}}
+{{Compat}}
 
 \[1] 如果 `about:config` 中 `browser.display.use_document_colors` 被设置为 `false`, 背景图像将不会展示。
 

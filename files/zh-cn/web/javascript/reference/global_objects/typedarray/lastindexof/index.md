@@ -2,9 +2,10 @@
 title: TypedArray.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 ---
+
 {{JSRef}}
 
-**`lastIndexOf()`** 方法返回在类型数组中可以找到给定元素的最后一个索引，如果不存在，则返回-1。 方法具有与 {{jsxref("Array.prototype.lastIndexOf()")}} 相同的算法。 TypedArray 是这里的[类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
+**`lastIndexOf()`** 方法返回在类型数组中可以找到给定元素的最后一个索引，如果不存在，则返回 -1。方法具有与 {{jsxref("Array.prototype.lastIndexOf()")}} 相同的算法。TypedArray 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
 ## 语法
 
@@ -25,7 +26,7 @@ typedarray.lastIndexOf(searchElement[, fromIndex = typedarray.length])
 
 ## 描述
 
-`lastIndexOf`使用[严格相等](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) （由 === 或三等号运算符使用的相同方法）比较`searchElement`和类型化数组的元素。
+`lastIndexOf`使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) （由 === 或三等号运算符使用的相同方法）比较`searchElement`和类型化数组的元素。
 
 ## 示例
 

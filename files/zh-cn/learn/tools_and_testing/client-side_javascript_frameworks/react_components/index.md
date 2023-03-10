@@ -2,6 +2,7 @@
 title: 组件化我们的 React App
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 此时，我们的 App 是一个单体。在我们能使用它之前，我们需要把它分解成可管理的、可描述的组件。React 对于什么是组件和什么不是组件并没有任何硬性规定，这完全取决于你！在这篇文章，我们将向你展示一种合理分解 App 的方法。
@@ -134,7 +135,7 @@ import Todo from "./components/Todo";
 
 当你刷新浏览器，你会看到和以前完全一样的东西。我们给了 `<Todo />` 一些 props，但还没有使用它们。让我们回到 `Todo.js` 修改一下。
 
-首先修改你的 `Todo()` 函数定义，使其接受 `props` 参数 。如果你想检查 `props` 是否被组件正确接收，你可以像之前那样使用 `console.log()` 检查你的 `props`。
+首先修改你的 `Todo()` 函数定义，使其接受 `props` 参数。如果你想检查 `props` 是否被组件正确接收，你可以像之前那样使用 `console.log()` 检查你的 `props`。
 
 一旦你确信你的组件得到了它的 `props`，你就可以用 `name` prop 来替换每次出现的 `Eat`。记住：当你在 JSX 表达式的中，你可以使用大括号来注入一个变量的值。
 
@@ -191,7 +192,7 @@ export default function Todo(props) {
 
 ### 请给我一些 `id`
 
-我们的 `<Todo />` 组件给每个任务的 `id` 属性都设为 `todo-0` 了。这是个不好的 HTML写法，因为 [`id` 属性](/zh-CN/docs/Web/HTML/Global_attributes/id)必须是不同的（它们被CSS、JavaScript等用作文档片段的唯一标识符）。这意味着我们需要给每一个 `Todo` 组件一个不同 `id` prop。
+我们的 `<Todo />` 组件给每个任务的 `id` 属性都设为 `todo-0` 了。这是个不好的 HTML 写法，因为 [`id` 属性](/zh-CN/docs/Web/HTML/Global_attributes/id)必须是不同的（它们被 CSS、JavaScript 等用作文档片段的唯一标识符）。这意味着我们需要给每一个 `Todo` 组件一个不同 `id` prop。
 
 为了遵循最初的规则，让我们给每个 `<Todo />` 组件实例一个 `todo-i` 格式的 ID，其中数字 `i` 每次增加一。
 
@@ -232,7 +233,7 @@ const DATA = [
 ];
 ```
 
-然后，我们将 `DATA` 作为一个 prop 传入  `<App />`，叫做 `tasks`。`src/index.js` 的最后一行看起来应该像这样：
+然后，我们将 `DATA` 作为一个 prop 传入 `<App />`，叫做 `tasks`。`src/index.js` 的最后一行看起来应该像这样：
 
 ```js
 ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
@@ -274,7 +275,7 @@ const taskList = props.tasks?.map((task) => task.name);
  const taskList = props.tasks.map((task) => <Todo />);
 ```
 
-回顾一下你的 App；现在你的任务看起来更像以前的样子，不过它们缺少自身的名字。记住，我们映射的每个任务都有 `id`、`name` 和  `checked` 属性，我们要把这些属性传递给 `<Todo />` 组件。如果你把它们放在一起，我们就会得到这样的代码：
+回顾一下你的 App；现在你的任务看起来更像以前的样子，不过它们缺少自身的名字。记住，我们映射的每个任务都有 `id`、`name` 和 `checked` 属性，我们要把这些属性传递给 `<Todo />` 组件。如果你把它们放在一起，我们就会得到这样的代码：
 
 ```js
 const taskList = props.tasks.map((task) => (
@@ -430,65 +431,10 @@ function App(props) {
 export default App;
 ```
 
-有了这些，我们*几乎*已经准备好在 React App 中处理一些交互性问题了!
+有了这些，我们*几乎*已经准备好在 React App 中处理一些交互性问题了！
 
 ## 总结
 
 本文到此为止——我们已经深入探讨了如何将你的 App 很好地分解成组件，并有效地渲染它们。现在我们将继续研究如何在 React 中处理事件，并添加一些交互性。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 本章目录
-
-- [客户端架构介绍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架的主要特性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [开始使用 React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [开始我们的 React 待办清单](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [组件化我们的 React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React 交互：事件和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React 交互：编辑、筛选、条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 中的无障碍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [开始使用 Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember 应用结构和组件化](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember 交互性：Events, classes 和 state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember 交互性：Footer functionality 和条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 资源和疑问解答](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [开始使用 Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [创建第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Vue 列表渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [待办事项表单：Vue 时间、方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [用 CSS 装饰 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [聚焦 Vue refs](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Svelte 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [开始我们的 Svelte 待办清单应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 动态表现：变量和 props](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [组织我们的 Svelte 应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [高级 Svelte：响应式、生命周期和无障碍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Svelte 存储](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 对 TypeScript 的支持](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署和下一步](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [开始我们的 Angular todo 列表应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [样式化我们的 Angular 应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [创建一个事项组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [筛选 todo 事项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [构建 Angular 应用以及更多资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

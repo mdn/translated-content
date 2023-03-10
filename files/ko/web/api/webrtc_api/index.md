@@ -1,19 +1,6 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - Audio
-  - Landing
-  - Media
-  - NeedsTranslation
-  - Networking
-  - TopicStub
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
-translation_of: Web/API/WebRTC_API
 ---
 {{APIRef("WebRTC")}}
 
@@ -72,23 +59,21 @@ WebRTC는 다양한 작업을 수행하기 위해 함께 동작하는 인터페�
 - {{domxref("RTCTrackEvent")}}
   - : 새롭게 수신된 {{domxref ( "MediaStreamTrack")}}이 생성되고 관련 {{domxref ( "RTCRtpReceiver")}} 개체가 {{domxref ( "RTCPeerConnection")}} 개체에 추가되었음을 나타냅니다.
 - {{DOMxRef("RTCSctpTransport")}}
-  - : 스트림 제어 전송 프로토콜(_Stream Control Transmission Protocol,_ **{{Glossary("SCTP")}}**) 전송을 설명하는 정보를 제공하고, 모든 [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection "The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.") 데이터 채널에 대한 SCTP 패킷이 송수신되는 기본 데이터그램 전송 보안 계층 프로토콜(Datagram Transport Layer Security, **{{Glossary("DTLS")}}**) 전송에 접근하기 위한 방법을 제공합니다.
-- #### Dictionaries
+  - : 스트림 제어 전송 프로토콜(_Stream Control Transmission Protocol,_ **{{Glossary("SCTP")}}**) 전송을 설명하는 정보를 제공하고, 모든 [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) 데이터 채널에 대한 SCTP 패킷이 송수신되는 기본 데이터그램 전송 보안 계층 프로토콜(Datagram Transport Layer Security, **{{Glossary("DTLS")}}**) 전송에 접근하기 위한 방법을 제공합니다.
 
-  {{DOMxRef("RTCConfiguration")}}
+#### Dictionaries
 
-  - : [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection "The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.") 구성 옵션을 제공하는데 사용됩니다.
-
+- {{DOMxRef("RTCConfiguration")}}
+  - : [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection) 구성 옵션을 제공하는데 사용됩니다.
 - {{DOMxRef("RTCIceServer")}}
   - : Defines how to connect to a single {{Glossary("ICE")}} server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server).
 - {{DOMxRef("RTCRtpContributingSource")}}
   - : Contains information about a given contributing source (CSRC) including the most recent time a packet that the source contributed was played out.
-- #### Types
 
-  {{DOMxRef("RTCSctpTransportState")}}
+#### Types
 
+- {{DOMxRef("RTCSctpTransportState")}}
   - : Indicates the state of an {{DOMxRef("RTCSctpTransport")}} instance.
-
 - {{DOMxRef("RTCSessionDescriptionCallback")}}
   - : The RTCSessionDescriptionCallback is passed into the {{DOMxRef("RTCPeerConnection")}} object when requesting it to create offers or answers.
 
@@ -167,7 +152,7 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 - [An Offer/Answer Model with Session Description Protocol (SDP)](https://tools.ietf.org/html/rfc3264)
 - [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

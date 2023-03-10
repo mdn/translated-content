@@ -1,16 +1,8 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 **`visibility`** は CSS のプロパティで、文書のレイアウトを変更することなく要素を表示したり非表示にしたりします。このプロパティは {{HTMLElement("table")}} の行や列を隠すこともできます。
@@ -43,7 +35,7 @@ visibility: unset;
   - : 要素のボックスは不可視になります (描画されません) が、レイアウトには通常通り影響します。子孫要素は `visibility` が `visible` に設定されていれば可視になります。([タブ順](/ja/docs/Web/HTML/Global_attributes/tabindex)で操作された時などに) 要素はフォーカスを受け取ることができません。
 - `collapse`
 
-  - :&#x20;
+  - : &#x20;
 
     - {{HTMLElement("table")}} の行、列、列グループ、行グループでは、行や列が不可視になり、 (表の列や行に `{{Cssxref("display")}}: none` が適用された場合のように) 占めていた領域も除去されます。しかし、他の行や列の寸法は、不可視になった行や列のセルが存在するときのように計算されます。この値は表全体の幅や高さを強制的に再計算することなく、すばやく行や列を不可視にすることができます。
     - フレックス項目では、不可視になり、占めていた領域は削除されます。
@@ -141,10 +133,7 @@ td {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                             | 備考                                                 |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}} | {{Spec2('CSS3 Flexbox')}} | フレックスアイテムに適用する `collapse` の値を定義。 |
-| {{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}     | {{Spec2('CSS2.1')}}         | 初回定義                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

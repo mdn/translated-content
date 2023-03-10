@@ -3,6 +3,7 @@ title: Cascade
 slug: Web/CSS/Cascade
 translation_of: Web/CSS/Cascade
 ---
+
 {{ CSSRef() }}
 
 Каскадность это алгоритм, который определяет как совмещать и сочетать значения свойств происходящих из различных источников(CSS-правила могут располагаться как в самом веб-документе, так и во внешних файлах). Данный алгоритм лежит в основе CSS, как можно понять из его названия: _Cascading_ Style Sheets(_Каскадные_ Таблицы Стилей). Данная статья объясняет что такое каскадность, порядок в котором определяется какие свойства будут в конечном итоге выполнены и как это затрагивает вас, веб разработчика.
@@ -29,8 +30,8 @@ Though style sheets come from these different origins, they overlap in scope: th
 
 The cascading algorithm determines how to find the value to apply for each property for each document element.
 
-1.  It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate media at-rule.
-2.  Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
+1. It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate media at-rule.
+2. Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
 
     |     | Origin         | Importance   |
     | --- | -------------- | ------------ |
@@ -44,9 +45,7 @@ The cascading algorithm determines how to find the value to apply for each prope
 
     \* based on [w3.org CSS3 specs](https://www.w3.org/TR/css-cascade-3/#importance)
 
-<!---->
-
-1.  In case of equality, the [specificity](/ru/docs/CSS/Specificity) of a value is considered to choose one or the other.
+3. In case of equality, the [specificity](/ru/docs/CSS/Specificity) of a value is considered to choose one or the other.
 
 ## CSS animations and the cascade
 
@@ -60,54 +59,85 @@ Also note that values within `@keyframes` at-rules overwrite all normal values b
 
 **User-agent CSS:**
 
-    li { margin-left: 10px }
+```css
+li { margin-left: 10px }
+```
 
 **Author CSS 1:**
 
-    li { margin-left: 0 } /* This is a reset */
+```css
+li { margin-left: 0 } /* This is a reset */
+```
 
 **Author CSS 2:**
 
-    @media screen {
-      li { margin-left: 3px }
-    }
+```css
+@media screen {
+    li { margin-left: 3px }
+}
 
-    @media print {
-      li { margin-left: 1px }
-    }
+@media print {
+    li { margin-left: 1px }
+}
+```
 
 **User CSS:**
 
-    .specific { margin-left: 1em }
+```css
+.specific { margin-left: 1em }
+```
 
 **HTML:**
 
-    <ul>
-      <li class="specific">1<sup>st</sup></li>
-      <li>2<sup>nd</sup></li>
-    </ul>
+```html
+<ul>
+    <li class="specific">1<sup>st</sup></li>
+    <li>2<sup>nd</sup></li>
+</ul>
+```
 
 In this case, declarations inside `li` and `.specific` rules should apply. No declaration is marked as `!important` so the precedence order is author style sheets before user style sheets or user-agent stylesheet.
 
 So three declarations are in competition:
 
-    margin-left: 0
+```css
+margin-left: 0
+```
 
-<!---->
+```css
+margin-left: 3px
+```
 
-    margin-left: 3px
-
-<!---->
-
-    margin-left: 1px
+```css
+margin-left: 1px
+```
 
 The last one is ignored (on a screen), and the two first have the same selector, hence the same specificity: it is the last one that is then selected:
 
-    margin-left: 3px
+```css
+margin-left: 3px
+```
 
 Note that the declaration defined in the user CSS, though having a greater specifity, is not chosen as the cascade algorithm is applied before the specifity algorithm.
 
 ## See also
 
-- The very simple [introduction](/ru/docs/CSS/Getting_Started/Cascading_and_inheritance "/en-US/docs/") of cascading in the CSS Tutorial.
-- {{CSS_Key_Concepts()}}
+- The very simple [introduction](/ru/docs/CSS/Getting_Started/Cascading_and_inheritance) of cascading in the CSS Tutorial.
+- Ключевые концепции CSS
+  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/Comments)
+  - [специфичность](/ru/docs/Web/CSS/Specificity)
+  - [наследование](/ru/docs/Web/CSS/inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Значения
+    - [начальные](/ru/docs/Web/CSS/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/computed_value)
+    - [используемые](/ru/docs/Web/CSS/used_value)
+    - [действительные](/ru/docs/Web/CSS/actual_value)
+  - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)

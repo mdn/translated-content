@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController.desiredSize
 slug: Web/API/ReadableStreamDefaultController/desiredSize
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} 接口的只读属性 **`desiredSize`** 返回填充满流的内部队列需要的大小。

@@ -1,13 +1,8 @@
 ---
 title: <xsl:output>
 slug: Web/XSLT/Element/output
-tags:
-  - XSLT
-  - output
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/output
 ---
+
 {{ XsltRef() }}
 
 `<xsl:output>` 要素は出力文書の特性を制御します。Netscape で正しく機能するには、method 属性を持つこの要素を使用する必要があります。 7.0 より `method="text"` は期待通りに機能します。

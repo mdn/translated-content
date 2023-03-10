@@ -2,11 +2,12 @@
 title: WebGL
 slug: Web/API/WebGL_API
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL (Web Graphics Library) 是一個透過瀏覽器渲染 3D 及 2D 圖像的 JavaScript API ，且不需要安裝任何插件。 WebGL 透過與 OpenGL ES 2.0 緊密連結的 API，將 3D 圖像帶入 HTML5 中，並可透過 canvas 元素呈現於瀏覽器中
 
-Support for WebGL is present in [Firefox](/en-US/Firefox) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari](http://www.apple.com/safari/) 5.1+ 以及 [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+; 然而，使用者的 GPU 也必須支援。
+Support for WebGL is present in [Firefox](/zh-TW/Firefox) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari](http://www.apple.com/safari/) 5.1+ 以及 [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+; 然而，使用者的 GPU 也必須支援。
 
 ## Development topics
 
@@ -74,7 +75,7 @@ In addition to the browser, the GPU itself also needs to support the feature. So
 
 #### WebGL debugging and testing
 
-Starting with Gecko 10.0 {{geckoRelease("10.0")}}, there are two preferences available which let you control the capabilities of WebGL for testing purposes:
+Starting with Gecko 10.0, there are two preferences available which let you control the capabilities of WebGL for testing purposes:
 
 - `webgl.min_capability_mode`
   - : A Boolean property that, when `true`, enables a minimum capability mode. When in this mode, WebGL is configured to only support the bare minimum feature set and capabilities required by the WebGL specification. This lets you ensure that your WebGL code will work on any device or browser, regardless of their capabilities. This is `false` by default.

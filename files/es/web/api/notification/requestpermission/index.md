@@ -1,16 +1,8 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission
-tags:
-  - API
-  - Method
-  - Notification
-  - Notifications
-  - Notifications API
-  - Reference
-translation_of: Web/API/Notification/requestPermission
-browser-compat: api.Notification.requestPermission
 ---
+
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
 > **Nota:** Safari aún usa la sintaxis callback para obtener el permiso. Lee [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API) para un buen ejemplo de como detectar esto y ejecutar el código de forma apropiada.
@@ -82,7 +74,7 @@ function notifyMe() {
 }
 ```
 
-Ya no mostramos ejemplos corriendo en tiempo real en esta página, ya que Chrome y Firefox ya no conceden permisos de notificación para ser solicitados desde el origen {{htmlelement("iframe")}}, para seguir con otros navegadores. Para ver un ejemplo en acción, revisa nuestro [Ejemplo de lista de Todos](https://github.com/mdn/to-do-notifications/tree/gh-pages) (véase también [la app corriendo en vivo](https://mdn.github.io/to-do-notifications/).)
+Ya no mostramos ejemplos corriendo en tiempo real en esta página, ya que Chrome y Firefox ya no conceden permisos de notificación para ser solicitados desde el origen {{htmlelement("iframe")}}, para seguir con otros navegadores. Para ver un ejemplo en acción, revisa nuestro [Ejemplo de lista de Todos](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (véase también [la app corriendo en vivo](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 > **Nota:** En el ejemplo de arriba generamos notificaciones en respuesta a una acción del usuario (hacer click en un botón). Esta no es la única mejor práctica — no deberias molestar a los usuarios con notificaciones que ellos no aceptaron — pero pronto los navegadores explicitamente deshabilitaran las notificaciones que no son ejecutadas en respuesta a una acción del usuario. Firefox ya está haciendo esto desde la versión 72, por ejemplo.
 

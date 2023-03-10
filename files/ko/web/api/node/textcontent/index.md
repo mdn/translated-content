@@ -1,13 +1,6 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-tags:
-  - API
-  - DOM
-  - Node
-  - Property
-  - Reference
-translation_of: Web/API/Node/textContent
 ---
 {{APIRef("DOM")}}
 
@@ -17,8 +10,10 @@ translation_of: Web/API/Node/textContent
 
 ## 구문
 
-    let text = someNode.textContent
-    someOtherNode.textContent = string
+```js
+let text = someNode.textContent
+someOtherNode.textContent = string
+```
 
 ### 값
 

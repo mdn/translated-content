@@ -1,13 +1,13 @@
 ---
 title: Example 4
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
-original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_4
 ---
-这是解释 [如何构建自定义表单小部件](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets) 的第四个示例。
+
+这是解释 [如何构建自定义表单小部件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets) 的第四个示例。
 
 ## 改变状态
 
-### HTML 内容
+### HTML
 
 ```html
 <form class="no-widget">
@@ -32,7 +32,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_4
 </form>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 .widget select,
@@ -159,7 +159,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_4
 }
 ```
 
-### JavaScript 内容
+### JavaScript
 
 ```js
 // ------- //
@@ -292,4 +292,4 @@ window.addEventListener('load', function () {
 
 ### 结果
 
-{{ EmbedLiveSample('Change_states') }}
+{{ EmbedLiveSample('改变状态') }}

@@ -1,17 +1,9 @@
 ---
 title: La web y los estándares web
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Estándares web
-  - Front-end
-  - Interfáz de Usuario
-  - Novato
-  - Principiante
-  - Web
-  - aprende
-translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
 original_slug: Learn/Getting_started_with_the_web/La_web_y_los_estandares_web
 ---
+
 {{learnsidebar}}
 
 Este artículo proporciona algunos antecedentes útiles sobre la Web — cómo surgió, qué son las tecnologías web estándar, cómo funcionan juntas, por qué "desarrollador web" es una gran carrera para elegir y qué tipos de mejores prácticas aprenderás a través de este curso.
@@ -20,17 +12,17 @@ Este artículo proporciona algunos antecedentes útiles sobre la Web — cómo s
 
 Mantendremos esto muy breve, ya que hay muchos artículos (más) detallados de la historia de la web, a los que enlazaremos más adelante (también intenta buscar "historia de la web" en tu motor de búsqueda favorito y ve lo que obtienes, si estás interesado en más detalles).
 
-A fines de la década de 1960, las fuerzas armadas de EE. UU. desarrollaron una red de comunicación llamada {{Glossary("Arpanet")}}. Esta se puede considerar una precursora de la Web, ya que trabajó en la {{interwiki("wikipedia", "conmutación de paquetes")}} y presentó la primera implementación de la {{interwiki("wikipedia", "Familia de protocolos de internet")}} TCP/IP. Estas dos tecnologías forman la base de la infraestructura sobre la que se construye Internet.
+A fines de la década de 1960, las fuerzas armadas de EE. UU. desarrollaron una red de comunicación llamada {{Glossary("Arpanet")}}. Esta se puede considerar una precursora de la Web, ya que trabajó en la [conmutación de paquetes](https://es.wikipedia.org/wiki/conmutación_de_paquetes) y presentó la primera implementación de la [Familia de protocolos de internet](https://es.wikipedia.org/wiki/Familia_de_protocolos_de_internet) TCP/IP. Estas dos tecnologías forman la base de la infraestructura sobre la que se construye Internet.
 
 En 1980, Tim Berners-Lee (a menudo denominado TimBL) escribió un programa de block de notas llamado ENQUIRE, que presentaba el concepto de enlaces entre diferentes nodos. ¿Te suena familiar?
 
 Avanzó rápidamente hasta 1989, y TimBL escribió [Gestión de la información: una propuesta](https://www.w3.org/History/1989/proposal.html) e hipertexto en el CERN; estas dos publicaciones juntas proporcionaron los antecedentes de cómo funcionaría la web. Recibieron una buena cantidad de interés, suficiente para convencer a los jefes de TimBL de que le permitieran seguir adelante y creara un sistema de hipertexto global.
 
-A finales de 1990, TimBL había creado todo lo necesario para ejecutar la primera versión de la web: {{web.link("/es/docs/Web/HTTP", "HTTP")}}, {{web.link("/es/docs/Web/HTML", "HTML")}}, el primer navegador web, que se llamaba {{interwiki("wikipedia", "WorldWideWeb")}}, un servidor HTTP y algunas páginas web para mirar.
+A finales de 1990, TimBL había creado todo lo necesario para ejecutar la primera versión de la web: [HTTP](/es/docs/Web/HTTP), [HTML](/es/docs/Web/HTML), el primer navegador web, que se llamaba [WorldWideWeb](https://es.wikipedia.org/wiki/WorldWideWeb), un servidor HTTP y algunas páginas web para mirar.
 
 En los años siguientes, la web explotó, se lanzaron varios navegadores, se instalaron miles de servidores web y se crearon millones de páginas web. Bien, este es un muy sencillo resumen de lo que sucedió, pero les prometí un breve resumen.
 
-Un último dato importante para compartir es que en 1994, TimBL fundó el {{interwiki("wikipedia", "World Wide Web Consortium")}} (W3C), una organización que reúne a representantes de muchas empresas de tecnología diferentes para trabajar juntos en la creación de especificaciones de tecnología web. Después de eso, siguieron otras tecnologías como {{web.link("/es/docs/Web/CSS", "CSS")}} y {{web.link("/es/docs/Web/JavaScript", "JavaScript")}}, y la web comenzó a parecerse más a la web que conocemos hoy.
+Un último dato importante para compartir es que en 1994, TimBL fundó el [World Wide Web Consortium](https://es.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), una organización que reúne a representantes de muchas empresas de tecnología diferentes para trabajar juntos en la creación de especificaciones de tecnología web. Después de eso, siguieron otras tecnologías como [CSS](/es/docs/Web/CSS) y [JavaScript](/es/docs/Web/JavaScript), y la web comenzó a parecerse más a la web que conocemos hoy.
 
 ## Estándares web
 
@@ -66,7 +58,7 @@ Ahora eres un creativo digital. Disfruta de la experiencia y el potencial de gan
 
 ## Descripción de las tecnologías web modernas
 
-Hay una serie de tecnologías que debes aprender si deseas ser un desarrollador web front-end. En esta sección las describiremos brevemente. Para obtener una explicación más detallada de cómo funcionan juntas algunas de ellas, lee nuestro artículo {{web.link("/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works", "Cómo funciona la web")}}.
+Hay una serie de tecnologías que debes aprender si deseas ser un desarrollador web front-end. En esta sección las describiremos brevemente. Para obtener una explicación más detallada de cómo funcionan juntas algunas de ellas, lee nuestro artículo [Cómo funciona la web](/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works).
 
 ### Navegadores
 
@@ -74,7 +66,7 @@ Probablemente estés leyendo estas palabras dentro de un navegador web en este m
 
 ### HTTP
 
-El Protocolo de transferencia de hipertexto, o {{web.link("/es/docs/Web/HTTP/Basics_of_HTTP", "HTTP")}}, es un protocolo de mensajería que permite a los navegadores web comunicarse con los servidores web (donde se almacenan los sitios web). Una conversación típica es algo así como
+El Protocolo de transferencia de hipertexto, o [HTTP](/es/docs/Web/HTTP/Basics_of_HTTP), es un protocolo de mensajería que permite a los navegadores web comunicarse con los servidores web (donde se almacenan los sitios web). Una conversación típica es algo así como
 
 ```bash
 "Hola servidor web. ¿Me puedes dar los archivos que necesito para renderizar bbc.co.uk"?
@@ -88,7 +80,7 @@ La sintaxis real de los mensajes HTTP (llamados peticiones y respuestas) no es t
 
 ### HTML, CSS y JavaScript
 
-{{web.link("/es/docs/Web/HTML", "HTML")}}, {{web.link("/es/docs/Web/CSS", "CSS")}} y {{web.link("/es/docs/Web/JavaScript", "JavaScript")}} son las tres tecnologías principales que utilizarás para crear un sitio web:
+[HTML](/es/docs/Web/HTML), [CSS](/es/docs/Web/CSS) y [JavaScript](/es/docs/Web/JavaScript) son las tres tecnologías principales que utilizarás para crear un sitio web:
 
 - El lenguaje de marcado de hipertexto, o **HTML**, es un lenguaje de marcado que consta de diferentes elementos en los que puedes ajustar (marcar) el contenido para darle significado (semántica) y estructura. El HTML simple se ve así:
 
@@ -97,7 +89,7 @@ La sintaxis real de los mensajes HTTP (llamados peticiones y respuestas) no es t
 
   <p>Este es un párrafo de texto.</p>
 
-  <img src="cat.jpg" alt="Una imagen de mi gato">
+  <img src="cat.jpg" alt="Una imagen de mi gato" />
   ```
 
   Si adoptamos una analogía de la construcción de casas, HTML sería como los cimientos y las paredes de la casa, que le dan estructura y la mantienen unida.
@@ -105,7 +97,7 @@ La sintaxis real de los mensajes HTTP (llamados peticiones y respuestas) no es t
 - Hojas de estilo en cascada (**CSS** por "_Cascading Style Sheets_") es un lenguaje basado en reglas que se utiliza para aplicar estilos a tu HTML, por ejemplo, establecer colores del texto y del fondo, agregar bordes, animar cosas o diseñar una página de cierta manera. Como un sencillo ejemplo, el siguiente código convertirá nuestro párrafo HTML en rojo:
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```
@@ -115,8 +107,8 @@ La sintaxis real de los mensajes HTTP (llamados peticiones y respuestas) no es t
 - **JavaScript** es el lenguaje de programación que usamos para agregar interactividad a los sitios web, desde el cambio de estilo dinámico hasta la obtención de actualizaciones desde el servidor, pasando por gráficos complejos en 3D. El siguiente JavaScript simple almacenará en la memoria una referencia a nuestro párrafo y cambiará el texto dentro de él:
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  '¡Cambiamos el texto!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "¡Cambiamos el texto!";
   ```
 
   En la analogía de la casa, JavaScript es como la cocina, el televisor, el microondas o la secadora de pelo — las cosas que le dan a tu casa una útil funcionalidad.
@@ -125,8 +117,8 @@ La sintaxis real de los mensajes HTTP (llamados peticiones y respuestas) no es t
 
 Una vez que hayas aprendido las tecnologías "sin procesar" que se pueden usar para crear páginas web (como HTML, CSS y JavaScript), pronto comenzarás a encontrar varias herramientas que puedes usar para hacer tu trabajo más fácil y/o más eficiente. Algunos ejemplos incluyen:
 
-- Las {{web.link("/es/docs/Learn/Common_questions/What_are_browser_developer_tools", "herramientas de desarrollo")}} dentro de los navegadores modernos que se pueden usar para depurar tu código.
-- {{web.link("/es/docs/Learn/Tools_and_testing/Cross_browser_testing", "Herramientas de prueba")}} que puedes usar para ejecutar pruebas y mostrar si tu código se está comportando como lo esperabas.
+- Las [herramientas de desarrollo](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) dentro de los navegadores modernos que se pueden usar para depurar tu código.
+- [Herramientas de prueba](/es/docs/Learn/Tools_and_testing/Cross_browser_testing) que puedes usar para ejecutar pruebas y mostrar si tu código se está comportando como lo esperabas.
 - Bibliotecas y marcos de desarrollo construidos sobre JavaScript que te permiten crear ciertos tipos de sitios web de manera mucho más rápida y efectiva.
 - Las llamadas "Linternas" (`Linters` en inglés), que toman un conjunto de reglas, examinan tu código y resaltan los lugares donde no has seguido las reglas correctamente.
 - Minificadores, que eliminan todos los espacios en blanco de tus archivos de código fuente para que sean más pequeños y, por lo tanto, se descarguen del servidor más rápidamente.
@@ -163,5 +155,5 @@ Encontrarás los siguientes conceptos en algún momento de tus estudios.
 
 ## Ve también
 
-- {{interwiki("wikipedia", "Historia de la World Wide Web")}}
-- {{web.link("/es/docs/Learn/Common_questions/How_does_the_Internet_work", "¿Cómo funciona la internet?")}}
+- [Historia de la World Wide Web](https://es.wikipedia.org/wiki/Historia_de_la_World_Wide_Web)
+- [¿Cómo funciona la internet?](/es/docs/Learn/Common_questions/How_does_the_Internet_work)

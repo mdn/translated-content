@@ -4,6 +4,7 @@ slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C
 ---
+
 Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier l'arbre de contenu de documents. Il est géré dans Mozilla (sur lequel Firefox et Netscape sont basés) et (pour la plus grande partie) dans Internet Explorer 5 pour Windows. Il s'agit d'une base essentielle du scripting sur le Web dans l'avenir.
 
 ## Définition d'un arbre de contenu

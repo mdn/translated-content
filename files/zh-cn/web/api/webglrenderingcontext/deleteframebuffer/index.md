@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.deleteFramebuffer()
 slug: Web/API/WebGLRenderingContext/deleteFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.deleteFramebuffer()`** 方法用来删除给定的{{domxref("WebGLFramebuffer")}} 对象。如果帧缓冲区已被删除，则此方法无效。.
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.deleteFramebuffer()`** 方法用来删除给定的{{domxref("WebGLFramebuffer")}} 对象。如果帧缓冲区已被删除，则此方法无效。.
 
 ## 语法
 
@@ -41,7 +42,7 @@ gl.deleteFramebuffer(framebuffer);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.deleteFramebuffer")}}
+{{Compat}}
 
 ## 另见
 

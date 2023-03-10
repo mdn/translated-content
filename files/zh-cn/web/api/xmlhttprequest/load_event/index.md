@@ -2,6 +2,7 @@
 title: 'XMLHttpRequest: load event'
 slug: Web/API/XMLHttpRequest/load_event
 ---
+
 {{APIRef}}
 
 当一个{{domxref("XMLHttpRequest")}}请求完成的时候会触发`load` 事件。
@@ -92,7 +93,7 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
+    runXHR('dgszyjnxcaipwzy.jpg');
 });
 
 xhrButtonError.addEventListener('click', () => {
@@ -100,13 +101,13 @@ xhrButtonError.addEventListener('click', () => {
 });
 
 xhrButtonAbort.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
+    runXHR('dgszyjnxcaipwzy.jpg').abort();
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('在线例子', '100%', '150px') }}
 
 ## 规范
 
@@ -114,9 +115,9 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.load_event")}}
+{{Compat}}
 
 **了解更多**
 
-- 相关事件: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [监测进度](/Web/API/XMLHttpRequest/Using_XMLHttpRequest#监测进度)
+- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [监测进度](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#监测进度)

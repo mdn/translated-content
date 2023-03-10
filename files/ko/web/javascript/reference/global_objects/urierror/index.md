@@ -1,13 +1,6 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - URIError
-browser-compat: javascript.builtins.URIError
 ---
 {{JSRef}}
 

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.createImageData()`** 是 Canvas 2D API 创建一个新的、空白的、指定大小的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。
@@ -35,7 +36,7 @@ ImageData ctx.createImageData(imagedata);
 
 ### 使用 `createImageData` 方法
 
-这是一段简单地使用 `createImageData` 方法的代码片段。 获取更多信息，请看 [canvas 像素控制](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
+这是一段简单地使用 `createImageData` 方法的代码片段。获取更多信息，请看 [canvas 像素控制](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
 
 #### HTML
 
@@ -61,11 +62,11 @@ console.log(ctx.createImageData(100, 100));
 
 ## 浏览器兼容
 
-{{Compat("api.CanvasRenderingContext2D.createImageData")}}
+{{Compat}}
 
 ### 兼容性注解
 
-- 从 {{geckoRelease("5.0")}}开始：
+- 从 Gecko 5.0 开始：
 
   - 如果矩形小于指定的 1 个像素，`createImageData()` 会返回图像数据至少 1 个像素值。
   - 当调用 `createImageData()` 指定非限制值时，会抛出`NOT_SUPPORTED_ERR` exception 异常。
@@ -75,4 +76,4 @@ console.log(ctx.createImageData(100, 100));
 
 - 接口定义，{{domxref("CanvasRenderingContext2D")}}.
 - {{domxref("ImageData")}}
-- [canvas 像素控制](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [canvas 像素控制](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

@@ -1,14 +1,10 @@
 ---
 title: aria-activedescendant 属性の使用
-slug: web/Accessibility/ARIA/Attributes/aria-activedescendant
-tags:
-  - ARIA
-  - Accessibility
-translation_of: >-
-  Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
+slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
 original_slug: >-
   Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
 ---
+
 この記事では、[`aria-activedescendant`](https://www.w3.org/TR/wai-aria/#aria-activedescendant) プロパティについて説明します。
 
 ### 説明
@@ -19,7 +15,7 @@ original_slug: >-
 
 ユーザーエージェントは、検索、レンダリング、およびエンドユーザーとウェブコンテンツとのやりとりを容易にするソフトウェアで、`aria-activedescendant` プロパティを使用して、フォーカスを持っているアクティブな子について支援技術に通知します。 `aria-activedescendant` プロパティを使用するこのアクティブな子は、常に画面上に表示され、ドキュメントオブジェクトモデルのコンテナの子孫でなければなりません。
 
-> **Note:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 以下に示す情報は、これらの意見の 1 つで、したがって規範的ではありません。
+> **メモ:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 以下に示す情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ### 例
 

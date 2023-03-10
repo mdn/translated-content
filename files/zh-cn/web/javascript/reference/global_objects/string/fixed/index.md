@@ -2,6 +2,7 @@
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 fixed() 方法创建了一个 \<tt> 标签元素将字符串包裹起来，从而让这个字符串里面的内容具有固定间距。
@@ -12,7 +13,7 @@ fixed() 方法创建了一个 \<tt> 标签元素将字符串包裹起来，从�
 str.fixed()
 ```
 
-### Return value
+### 返回值
 
 返回一个表示 {{HTMLElement("tt")}} HTML 元素的字符串。
 

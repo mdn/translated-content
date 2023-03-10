@@ -2,6 +2,7 @@
 title: 使用全螢幕模式
 slug: Web/API/Fullscreen_API
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓您能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。
@@ -51,7 +52,7 @@ if (elem.requestFullscreen) {
 
 ### 通知
 
-如果成功進入全螢幕模式，包含該元素的文件將會接收到 {{ event("fullscreenchange") }} 事件。當離開全螢幕模式時，則會收到 {{ event("fullscreenchange") }} 事件。注意 {{ event("fullscreenchange") }} 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。
+如果成功進入全螢幕模式，包含該元素的文件將會接收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。當離開全螢幕模式時，則會收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。注意 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。
 
 ### 全螢幕要求失敗
 

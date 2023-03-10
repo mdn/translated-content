@@ -1,13 +1,8 @@
 ---
 title: 関数宣言
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - Function
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
+
 {{jsSidebar("Statements")}}
 
 **関数宣言** (関数文) は、指定された引数を使用して関数を定義します。
@@ -127,9 +122,7 @@ function calc_sales(units_a, units_b, units_c) {
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

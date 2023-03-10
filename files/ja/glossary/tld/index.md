@@ -28,5 +28,5 @@ Here org is the TLD; mozilla.org is the second-level domain name; and developer 
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "TLD")}} on Wikipedia
+- [トップレベルドメイン](https://ja.wikipedia.org/wiki/トップレベルドメイン) (Wikipedia)
 - [List of top-level domains](http://www.iana.org/domains/root/db)

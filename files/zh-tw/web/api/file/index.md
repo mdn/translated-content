@@ -2,6 +2,7 @@
 title: File
 slug: Web/API/File
 ---
+
 {{APIRef}}
 
 **`File`** 介面提供了檔案的資訊並且允許網頁中的 JavaScript 存取檔案的內容。
@@ -54,13 +55,13 @@ _`File` 介面沒有定義任何方法，但繼承了 {{domxref("Blob")}} 介面
 
 ## 瀏覽器相容性
 
-{{Compat("api.File")}}
+{{Compat}}
 
 ### 實作備註
 
-- In Gecko, you can use this API from within chrome code. See [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) for details. To use it from chrome code, JSM and Bootstrap scope, you have to import it using `Cu.importGlobalProperties(['File']);`
-- Starting from Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an `nsIFile` object to the DOM `File` constructor to specify the file to reference.
-- Starting from Gecko 8.0 {{geckoRelease("8.0")}}, you can use `new File` to create `File` objects from XPCOM component code instead of having to instantiate the `nsIDOMFile` object directly. The constructor takes, in contrast to {{domxref("Blob")}}, as second argument the filename. The filename can be any String.
+- In Gecko, you can use this API from within chrome code. See [Using the DOM File API in chrome code](/zh-TW/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) for details. To use it from chrome code, JSM and Bootstrap scope, you have to import it using `Cu.importGlobalProperties(['File']);`
+- Starting from Gecko 6.0, privileged code (such as extensions) can pass an `nsIFile` object to the DOM `File` constructor to specify the file to reference.
+- Starting from Gecko 8.0, you can use `new File` to create `File` objects from XPCOM component code instead of having to instantiate the `nsIDOMFile` object directly. The constructor takes, in contrast to {{domxref("Blob")}}, as second argument the filename. The filename can be any String.
 
   ```plain
   new File(
@@ -70,7 +71,7 @@ _`File` 介面沒有定義任何方法，但繼承了 {{domxref("Blob")}} 介面
   );
   ```
 
-- The following non-standard properties and methods were removed in Gecko 7 {{geckoRelease("7.0")}}: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Standard properties {{domxref("File.name")}}, {{domxref("Blob.size")}}, and methods on {{domxref("FileReader")}} should be used instead.
+- The following non-standard properties and methods were removed in Gecko 7: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Standard properties {{domxref("File.name")}}, {{domxref("Blob.size")}}, and methods on {{domxref("FileReader")}} should be used instead.
 
 ## 參見
 

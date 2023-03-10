@@ -2,6 +2,7 @@
 title: Navigator.mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
 ---
+
 {{SeeCompatTable}}
 
 **`Navigator.mediaCapabilities`** プロパティは読み取り専用で、 [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API) で定義されているように、指定された形式のエンコードとデコードおよび出力能力についての情報を取得することができる {{domxref("MediaCapabilities")}} オブジェクトを返します。
@@ -37,9 +38,7 @@ navigator.mediaCapabilities.decodingInfo({
 
 ## 仕様書
 
-| 仕様書                                       | 状態                                     | 備考     |
-| -------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Media Capabilities')}} | {{Spec2('Media Capabilities')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

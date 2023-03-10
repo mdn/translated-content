@@ -1,15 +1,8 @@
 ---
 title: 通知とプッシュを利用して PWA を再エンゲージ可能にするには
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-tags:
-  - Notifications
-  - PWAs
-  - Progressive web apps
-  - Push
-  - js13kGames
-  - progressive
-translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 
 アプリのコンテンツをキャッシュできるようにしてオフラインで動作させるのは、すばらしい機能です。 ユーザーがホーム画面にウェブアプリをインストールできるようにすることは、もっと良いことです。 しかし、ユーザーの操作のみに頼らず、プッシュメッセージと通知を使用すれば、さらに自動的に再エンゲージを行い新しいコンテンツが利用できるようになるたびに配信することができるようになります。
@@ -72,7 +65,7 @@ function randomNotification() {
 
 プッシュは通知よりも複雑です — データをアプリに送り返すサーバーを購読（subscribe）する必要があります。 アプリのサービスワーカーはプッシュサーバーからデータを受け取ります。 このデータは通知システム、または必要に応じて別のメカニズムを使用して表示できます。
 
-技術はまだ非常に初期段階にあります — いくつかの実用的な例は Google Cloud Messaging プラットフォームを使用しますが、[VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)（Voluntary Application Server Identification、自発的アプリケーションサーバー識別）をサポートするように書き直されています。 [サービスワーカークックブックの例](https://serviceworke.rs/push-payload.html)（英語）を調べたり、[Firebase](https://firebase.google.com/) を使用してプッシュメッセージングサーバーをセットアップしたり、（例えば Node.js を使用して）独自のサーバーを構築したりすることができます。
+技術はまだ非常に初期段階にあります — いくつかの実用的な例は Google Cloud Messaging プラットフォームを使用しますが、[VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)（Voluntary Application Server Identification、自発的アプリケーションサーバー識別）をサポートするように書き直されています。 [サービスワーカークックブックの例](https://github.com/mdn/serviceworker-cookbook/push-payload.html)（英語）を調べたり、[Firebase](https://firebase.google.com/) を使用してプッシュメッセージングサーバーをセットアップしたり、（例えば Node.js を使用して）独自のサーバーを構築したりすることができます。
 
 前述のように、プッシュメッセージを受信できるようにするには、サービスワーカーが必要です。 その基本については、[サービスワーカーで PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)の記事で既に説明しています。 サービスワーカーの内部には、プッシュサービス購読機構（push service subscription mechanism）が作成されています。
 
@@ -94,7 +87,7 @@ self.addEventListener('push', function(e) { /* ... */ });
 
 ### プッシュの例
 
-プッシュにはサーバー部分が機能する必要があるため、静的ファイルのみのホスティングを提供する GitHub Pages でホスティングされる js13kPWA の例に含めることはできません。 それはすべて[サービスワーカークックブック](https://serviceworke.rs/)（英語）で説明されています — [Push Payload Demo](https://serviceworke.rs/push-payload.html) を参照してください。
+プッシュにはサーバー部分が機能する必要があるため、静的ファイルのみのホスティングを提供する GitHub Pages でホスティングされる js13kPWA の例に含めることはできません。 それはすべて[サービスワーカークックブック](https://github.com/mdn/serviceworker-cookbook/)（英語）で説明されています — [Push Payload Demo](https://github.com/mdn/serviceworker-cookbook/push-payload.html) を参照してください。
 
 このデモは 3 つのファイルで構成されています。
 
@@ -208,7 +201,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 }
 
 webPush.setVapidDetails(
-  'https://serviceworke.rs/',
+  'https://github.com/mdn/serviceworker-cookbook/',
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );
@@ -265,7 +258,7 @@ self.addEventListener('push', function(event) {
 
 {{domxref("ServiceWorkerGlobalScope/push_event", "push")}} イベントのリスナーを追加し、データから取得したテキストからなる `payload` 変数を作成し（またはデータが空の場合に使用する文字列を作成し）、通知がユーザーに表示されるまで待ちます。
 
-それらがどのように処理されるかを知りたい場合は、[サービスワーカークックブック](https://serviceworke.rs/)（英語）の残りの例を調べてください — [完全なソースコードは GitHub で入手できます](https://github.com/mozilla/serviceworker-cookbook/)。 一般的な使い方だけでなく、ウェブプッシュ、キャッシュ戦略、パフォーマンス、オフラインでの作業など、多数の実用的な例があります。
+それらがどのように処理されるかを知りたい場合は、[サービスワーカークックブック](https://github.com/mdn/serviceworker-cookbook/)（英語）の残りの例を調べてください — [完全なソースコードは GitHub で入手できます](https://github.com/mozilla/serviceworker-cookbook/)。 一般的な使い方だけでなく、ウェブプッシュ、キャッシュ戦略、パフォーマンス、オフラインでの作業など、多数の実用的な例があります。
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 

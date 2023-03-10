@@ -2,13 +2,14 @@
 title: 通过通知推送让 PWA 可重用
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 
 以本地缓存实现离线应用是一个强大的特性。允许用户在主屏幕上安装 Web 应用程序则显得更了不起。但除了单纯依赖用户手动打开应用之外，我们还可以走得更远，利用通知和消息推送提高用户参与度，并且随时提供新的内容。
 
 ## 两个 API，一个目标
 
-[推送 API](/en-US/docs/Web/API/Push_API)和[通知 API](/en-US/docs/Web/API/Notifications_API)是两个相互独立的 API，但在提高用户参与度这件事上，它们可以配合得很好。推送 API 可以用来从服务端推送新的内容而无需客户端介入，它是由应用的 Service Worker 来实现的；通知功能则可以通过 Service Worker 来向用户展示一些新信息，或者至少提醒用户应用已经更新了某些功能。
+[推送 API](/zh-CN/docs/Web/API/Push_API)和[通知 API](/zh-CN/docs/Web/API/Notifications_API)是两个相互独立的 API，但在提高用户参与度这件事上，它们可以配合得很好。推送 API 可以用来从服务端推送新的内容而无需客户端介入，它是由应用的 Service Worker 来实现的；通知功能则可以通过 Service Worker 来向用户展示一些新信息，或者至少提醒用户应用已经更新了某些功能。
 
 跟 Service Worker 一样，这些工作是在浏览器外部实现的，所以即使应用被隐藏到后台甚至被关闭了，我们仍然能够推送更新或者通知给用户。
 
@@ -64,9 +65,9 @@ function randomNotification() {
 
 推送比通知要复杂一些，我们需要从服务端订阅一个服务，之后服务端会推送数据到客户端应用。应用的 Service Worker 将会接收到从服务端推送的数据，这些数据可以用来做通知推送，或者实现其他的需求。
 
-这个技术还处在非常初级的阶段，一些可用示例使用了谷歌云的消息推送平台，但它们正在被重写以支持 [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification)，它能为你的应用提供一层额外的安全防护。你可以看一下 [Service Workers Cookbook 里的一些例子](https://serviceworke.rs/push-payload.html)，尝试用 [Firebase](https://firebase.google.com/) 配置一个消息推送服务，或者构建自己的推送服务（例如使用 Node.js）。
+这个技术还处在非常初级的阶段，一些可用示例使用了谷歌云的消息推送平台，但它们正在被重写以支持 [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification)，它能为你的应用提供一层额外的安全防护。你可以看一下 [Service Workers Cookbook 里的一些例子](https://github.com/mdn/serviceworker-cookbook/push-payload.html)，尝试用 [Firebase](https://firebase.google.com/) 配置一个消息推送服务，或者构建自己的推送服务（例如使用 Node.js）。
 
-之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](https://developer.mozilla.org/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
+之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
 
 ```js
 registration.pushManager.getSubscription() .then( /* ... */ );
@@ -76,7 +77,7 @@ registration.pushManager.getSubscription() .then( /* ... */ );
 
 从服务端的角度来看，出于安全的目的，这整个过程必须使用非对称加密技术进行保护：允许任何人用你的应用发送未加密的消息就大有问题了。你可以通过阅读[Web 推送数据加密测试页](https://jrconlin.github.io/WebPushDataTestPage/)里面的详细信息来保护你的服务器。当用户订阅服务时，服务器会储存所有接收到的信息，以便在后续需要的时候能将信息推送出去。
 
-为了能够接收到推送的消息，我们需要在 Service Worker 文件里面监听 {{event("push")}} 事件：
+为了能够接收到推送的消息，我们需要在 Service Worker 文件里面监听 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 事件：
 
 ```js
 self.addEventListener('push', function(e) { /* ... */ });
@@ -86,7 +87,7 @@ self.addEventListener('push', function(e) { /* ... */ });
 
 ### 推送例子
 
-推送需要服务端，但因为应用托管在 GitHub 上，而 GitHub 只提供静态页面托管，我们没办法将服务端的例子包含进 js13kPWA 这个应用里面。[Service Worker Cookbook](https://serviceworke.rs/) 这个页面上有详细的说明，demo 请看 [Push Payload Demo](https://serviceworke.rs/push-payload.html)。
+推送需要服务端，但因为应用托管在 GitHub 上，而 GitHub 只提供静态页面托管，我们没办法将服务端的例子包含进 js13kPWA 这个应用里面。[Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 这个页面上有详细的说明，demo 请看 [Push Payload Demo](https://github.com/mdn/serviceworker-cookbook/push-payload.html)。
 
 这个 demo 包含三个文件：
 
@@ -200,7 +201,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 }
 
 webPush.setVapidDetails(
-  'https://serviceworke.rs/',
+  'https://github.com/mdn/serviceworker-cookbook/',
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );
@@ -255,9 +256,9 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-它做的就只是监听 {{event("push")}} 事件，创建 payload 变量，这个变量包含了来自 event.data 的文本（如果 data 是空的，就设置成 "no payload" 字符串），然后一直等到通知推送给用户为止。
+它做的就只是监听 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 事件，创建 payload 变量，这个变量包含了来自 event.data 的文本（如果 data 是空的，就设置成 "no payload" 字符串），然后一直等到通知推送给用户为止。
 
-如果你想知道它们具体是怎么处理的，请随意探索 [Service Worker Cookbook](https://serviceworke.rs/) 里面剩下的例子。[GitHub 上面提供了完整的源代码](https://github.com/mozilla/serviceworker-cookbook/)，也有大量的示例展示了各种用法，包括 Web 推送、缓存策略、性能、离线运行等等。
+如果你想知道它们具体是怎么处理的，请随意探索 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 里面剩下的例子。[GitHub 上面提供了完整的源代码](https://github.com/mozilla/serviceworker-cookbook/)，也有大量的示例展示了各种用法，包括 Web 推送、缓存策略、性能、离线运行等等。
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 

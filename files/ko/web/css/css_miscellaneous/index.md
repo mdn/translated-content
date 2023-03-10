@@ -1,12 +1,8 @@
 ---
 title: CSS Miscellaneous
 slug: Web/CSS/CSS_Miscellaneous
-tags:
-  - CSS
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Miscellaneous
 ---
+
 {{CSSRef}}
 
 이 페이지는 한참 실험 중이거나 다른 어떤 부류와도 맞지 않은 CSS 속성을 포함합니다.

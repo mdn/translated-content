@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Pointer_Lock_API
 original_slug: WebAPI/Pointer_Lock
 ---
+
 {{DefaultAPISidebar("Pointer Lock API")}}
 
 **Pointer lock** (en français _Verrouillage du pointeur_, précedement appelé mouse lock) permet d'obtenir des informations sur le déplacement de la souris à travers le temps, et ne se cantonne pas à fournir la position absolue du curseur sur l'écran. Cette interface donne accès aux données brutes de la souris, permet de verrouiller la cible des évènements à un élément unique, limiter jusqu'où le mouvement de la souris peut aller dans une direction donnée et cacher le curseur de la vue.
@@ -46,9 +47,9 @@ canvas.requestPointerLock()
 
 ### pointerLockElement et exitPointerLock()
 
-L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}}  est utilisée pour libérer le verrou du pointeur.
+L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}} est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}} est utilisée pour libérer le verrou du pointeur.
 
-La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
+La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}} est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
 
 Voici un exemple d'utilisation de `pointerLockElement`:
 
@@ -70,7 +71,7 @@ if (document.pointerLockElement === someElement) {
 }
 ```
 
-La méthode {{domxref("Document.exitPointerLock()")}} est utilisée pour libérer le verrouillage du pinteur, et, comme {{domxref("Element.requestPointerLock","requestPointerLock")}}, marche de manière asynchrone, on utilise les événements {{event("pointerlockchange")}} et {{event("pointerlockerror")}}, que vous verrez plus en détails ci-dessous.
+La méthode {{domxref("Document.exitPointerLock()")}} est utilisée pour libérer le verrouillage du pinteur, et, comme {{domxref("Element.requestPointerLock","requestPointerLock")}}, marche de manière asynchrone, on utilise les événements [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event) et [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event), que vous verrez plus en détails ci-dessous.
 
 ```js
 document.exitPointerLock = document.exitPointerLock    ||
@@ -83,7 +84,7 @@ document.exitPointerLock();
 
 ## Événement pointerlockchange
 
-Quand l'état de verrouillage du pointeur change — par exemple quand on appelle {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, que l'utilisateur presse la touche ECHAP, etc.—l'événement {{event("pointerlockchange")}} est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
+Quand l'état de verrouillage du pointeur change — par exemple quand on appelle {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, que l'utilisateur presse la touche ECHAP, etc.—l'événement [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event) est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
 
 ```js
 document.pointerLockElement = document.pointerLockElement    ||
@@ -105,7 +106,7 @@ document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
 
 ## Événement pointerlockerror
 
-Quand une erreur est causée par l'appel de {{domxref("Element.requestPointerLock","requestPointerLock()")}} ou {{domxref("Document.exitPointerLock","exitPointerLock()")}}, l'événement {{event("pointerlockerror")}} est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
+Quand une erreur est causée par l'appel de {{domxref("Element.requestPointerLock","requestPointerLock()")}} ou {{domxref("Document.exitPointerLock","exitPointerLock()")}}, l'événement [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event) est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
 
 ```js
 document.addEventListener('pointerlockerror', lockError, false);
@@ -121,7 +122,7 @@ function lockError(e) {
 
 ## Extensions aux événements de souris
 
-L'API Pointer lock étend l'interface {{domxref("MouseEvent")}} normale avec les attributs de mouvement. Deux nouveaux attributs sont ajoutés aux événements de souris —{{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}}— fournissant le changement de position de la souris. Ces paramètres ont pour valeur les différences entre les valeurs des propriétés de {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}} stockées dans les événements {{event("mousemove")}}, `eNow` et `ePrevious`. En d'autres termes, `movementX = eNow.screenX - ePrevious.screenX`.
+L'API Pointer lock étend l'interface {{domxref("MouseEvent")}} normale avec les attributs de mouvement. Deux nouveaux attributs sont ajoutés aux événements de souris —{{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}}— fournissant le changement de position de la souris. Ces paramètres ont pour valeur les différences entre les valeurs des propriétés de {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}} stockées dans les événements [`mousemove`](/fr/docs/Web/API/Element/mousemove_event), `eNow` et `ePrevious`. En d'autres termes, `movementX = eNow.screenX - ePrevious.screenX`.
 
 ### État verrouillé
 

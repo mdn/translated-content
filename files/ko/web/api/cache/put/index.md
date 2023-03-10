@@ -1,17 +1,8 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - put
-translation_of: Web/API/Cache/put
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`put()`** method of the {{domxref("Cache")}} interface allows key/value pairs to be added to the current {{domxref("Cache")}} object.
@@ -77,11 +68,11 @@ var cachedResponse = caches.match(event.request).catch(function() {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

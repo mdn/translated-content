@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: application ロール'
-slug: Web/Accessibility/ARIA/Roles/Application_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Application_Role
+slug: Web/Accessibility/ARIA/Roles/application_role
 ---
+
 アプリケーション (`application`) ロールは、要素とその全ての子要素をデスクトップアプリケーションと同様に扱うべきであり、伝統的な HTML 解釈手法を使用するべきでないと支援技術に指示します。 このロールは、とても動的でデスクトップ的なウェブアプリケーションを定義するためにのみ使用するべきです。
 
 ```html
@@ -61,7 +57,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Application_Role
 - 属性値の変更
   - : `aria-activedescendant` は、アプリケーションコンテナー内のフォーカスを管理するために使用します。 フォーカスやインタラクションのポイントを変更するキーボードやその他のアプリケーションのイベントに応じて設定します。
 
-> **Note:** アプリケーション (`application`) ロールには、関連する HTML ウィジェットがないため、完全に自由形式です。 アプリケーションの作成者は、ユーザーがフォーカスのリンボに拘束されたり、ユーザーが抜け出せないものの中にフォーカスを閉じ込められたりしないようにするために全面的な責任を負う必要があります。 ページの他の部分にある通常のウェブコンテンツに戻ることを含む、インタラクションの全ての側面を処理する必要があります。 賢明に、そして慎重に使用してください！
+> **メモ:** アプリケーション (`application`) ロールには、関連する HTML ウィジェットがないため、完全に自由形式です。 アプリケーションの作成者は、ユーザーがフォーカスのリンボに拘束されたり、ユーザーが抜け出せないものの中にフォーカスを閉じ込められたりしないようにするために全面的な責任を負う必要があります。 ページの他の部分にある通常のウェブコンテンツに戻ることを含む、インタラクションの全ての側面を処理する必要があります。 賢明に、そして慎重に使用してください！
 
 ## 例
 
@@ -77,9 +73,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Application_Role
 
 ## 仕様
 
-| 仕様                                                             | 状態                     |
-| ---------------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#application","application")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## 優先順位
 

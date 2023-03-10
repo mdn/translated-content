@@ -5,6 +5,7 @@ original_slug: MDN_at_ten
 i10n:
   sourceCommit: 0160aac0e623dacdce4019205f32f7b3d3e58019
 ---
+
 ウェブのドキュメントを作り続けて 10 周年
 
 ## MDN のあゆみ

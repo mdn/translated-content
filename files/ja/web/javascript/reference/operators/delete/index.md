@@ -1,19 +1,8 @@
 ---
 title: delete 演算子
 slug: Web/JavaScript/Reference/Operators/delete
-tags:
-  - JavaScript
-  - 言語機能
-  - メモリーー管理
-  - Object
-  - Operator
-  - リファレンス
-  - 解放
-  - Unary
-  - delete
-browser-compat: javascript.operators.delete
-translation_of: Web/JavaScript/Reference/Operators/delete
 ---
+
 {{jsSidebar("Operators")}}
 
 JavaScript の **`delete` 演算子**は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されていない場合は、自動的に解放されます。

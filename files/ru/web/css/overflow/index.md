@@ -3,13 +3,14 @@ title: overflow
 slug: Web/CSS/overflow
 translation_of: Web/CSS/overflow
 ---
+
 {{ CSSRef() }}
 
 ## Резюме
 
 Свойство CSS `overflow` определяет, необходимо ли для переполненного блочного элемента содержимое обрезать, предоставить полосы прокрутки или просто отобразить.
 
-Использование свойства `overflow` со значениями, отличными от `visible`, (значение, принятое по умолчанию), создаёт новый [блочный контекст форматирования](/ru/docs/CSS/block_formatting_context "CSS/block_formatting_context"). Это технически необходимо, поскольку если бы float пересекался с элементом прокрутки, это потребовало бы обеспечить обтекание содержимого прокручиваемого элемента вокруг вторгающихся float'ов. Обтекание при этом было бы необходимо производить после каждого шага прокрутки заново, что привело бы к заметному замедлению прокрутки. Обратите внимание, что при программной установке атрибута `scrollTop` для соответствующего HTML-элемента, даже если `overflow` имеет значение `hidden`, элемент, возможно, придётся прокрутить.
+Использование свойства `overflow` со значениями, отличными от `visible`, (значение, принятое по умолчанию), создаёт новый [блочный контекст форматирования](/ru/docs/CSS/block_formatting_context). Это технически необходимо, поскольку если бы float пересекался с элементом прокрутки, это потребовало бы обеспечить обтекание содержимого прокручиваемого элемента вокруг вторгающихся float'ов. Обтекание при этом было бы необходимо производить после каждого шага прокрутки заново, что привело бы к заметному замедлению прокрутки. Обратите внимание, что при программной установке атрибута `scrollTop` для соответствующего HTML-элемента, даже если `overflow` имеет значение `hidden`, элемент, возможно, придётся прокрутить.
 
 {{cssinfo}}
 
@@ -17,12 +18,14 @@ translation_of: Web/CSS/overflow
 
 [Формат синтаксиса](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("overflow")}}
 
-    overflow: visible
-    overflow: hidden
-    overflow: scroll
-    overflow: auto
+```css
+overflow: visible
+overflow: hidden
+overflow: scroll
+overflow: auto
 
-    overflow: inherit
+overflow: inherit
+```
 
 ### Значения
 
@@ -37,11 +40,11 @@ translation_of: Web/CSS/overflow
 
 #### Расширения Mozilla
 
-- `-moz-scrollbars-none `{{ obsolete_inline() }}
+- `-moz-scrollbars-none`
   - : Используйте `overflow:hidden`.
-- `-moz-scrollbars-horizontal `{{ Deprecated_inline() }}
+- `-moz-scrollbars-horizontal` {{ Deprecated_inline() }}
   - : Использование {{ Cssxref("overflow-x") }} и {{ Cssxref("overflow-y") }} предпочтительнее.
-- `-moz-scrollbars-vertical `{{ Deprecated_inline() }}
+- `-moz-scrollbars-vertical` {{ Deprecated_inline() }}
   - : Использование {{ Cssxref("overflow-x") }} и {{ Cssxref("overflow-y") }} предпочтительнее.
 - \-moz-hidden-unscrollable {{ non-standard_inline() }}
   - : Главным образом предназначен для внутреннего использования и для тем. Отключает прокрутку XML root элементов и `<html>`, `<body>` клавишами со стрелками и колесом мыши.
@@ -60,17 +63,23 @@ p {
 `visible` (default)
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-    p { overflow: hidden; /* полосы прокрутки не предоставляются */ }
+```css
+p { overflow: hidden; /* полосы прокрутки не предоставляются */ }
+```
 
 `overflow: hidden`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-    p { overflow: scroll; /* всегда показывать полосы прокрутки */ }
+```css
+p { overflow: scroll; /* всегда показывать полосы прокрутки */ }
+```
 
 `overflow: scroll`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-    p { overflow: auto; /* добавить полосы прокрутки, если это необходимо */ }
+```css
+p { overflow: auto; /* добавить полосы прокрутки, если это необходимо */ }
+```
 
 `overflow: auto`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
@@ -93,7 +102,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ### Internet Explorer Примечания
 
-Internet Explorer 4 - 6 `увеличивает элемент с overflow:visible `(значение по умолчанию), чтобы заполнить содержимое в нём.` height/width `действуют подобно` min-height/min-width`.
+Internet Explorer 4 - 6 увеличивает элемент с `overflow:visible` (значение по умолчанию), чтобы заполнить содержимое в нём. `height/width` действуют подобно `min-height/min-width`.
 
 ## Смотрите также
 

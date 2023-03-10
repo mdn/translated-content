@@ -2,9 +2,8 @@
 title: object-fit
 slug: Web/CSS/object-fit
 ---
-{{CSSRef}}
 
-## Summary
+{{CSSRef}}
 
 The **`object-fit`** CSS property specifies how the contents of a replaced element should be fitted to the box established by its used height and width.
 
@@ -52,29 +51,29 @@ object-fit: unset;
 ```html
 <div>
   <h2>object-fit: fill</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
 
   <h2>object-fit: contain</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
 
   <h2>object-fit: cover</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
 
   <h2>object-fit: none</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
 
   <h2>object-fit: scale-down</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
 
 </div>
 ```
@@ -139,7 +138,7 @@ img {
 
 ## Browser compatibility
 
-{{Compat("css.properties.object-fit")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: 'HTMLElement: beforeinput event'
 slug: Web/API/HTMLElement/beforeinput_event
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 DOM 事件 **`beforeinput`** 在{{HTMLElement("input")}}, {{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 的值即将被修改前触发。这个事件也可以在 {{domxref("HTMLElement.contentEditable", "contenteditable")}} 被设置为 `true` 的元素和打开 {{domxref("Document.designMode", "designMode")}} 后的任何元素上被触发。
@@ -75,8 +76,8 @@ function updateValue(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.beforeinput_event")}}
+{{Compat}}
 
 ## 参见
 
-- 相关事件：[`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- 相关事件：[`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)

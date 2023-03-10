@@ -1,23 +1,9 @@
 ---
 title: '<a>: アンカー要素'
 slug: Web/HTML/Element/a
-tags:
-  - コンテンツ
-  - 要素
-  - HTML
-  - HTML テキストレベルの意味づけ
-  - HTML:フローコンテンツ
-  - HTML:対話的コンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - インライン要素
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.a
-translation_of: Web/HTML/Element/a
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<a>`** は [HTML](/ja/docs/Web/HTML) の要素（*アンカー*要素）で、 [`href` 属性](#attr-href)を用いて、別のウェブページ、ファイル、メールアドレス、同一ページ内の場所、または他の URL へのハイパーリンクを作成します。
 
@@ -41,7 +27,7 @@ translation_of: Web/HTML/Element/a
 
     - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
 
-    > **Note:**
+    > **メモ:**
     >
     > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
     > - ブラウザーがダウンロードをどのように扱うかは、ブラウザー、ユーザーの設定、その他の要因によって異なります。ダウンロードを開始する前にユーザーにプロンプトが表示されたり、ファイルが自動的に保存されたり、外部のアプリケーションまたはブラウザー自体で自動的に開いたりすることがあります。
@@ -87,7 +73,7 @@ translation_of: Web/HTML/Element/a
     - `_parent`: 現在の親の閲覧コンテキストです。親がない場合は、 `_self` と同じ振る舞いをします。
     - `_top`: 最上位の閲覧コンテキスト（現在のコンテキストの祖先である "最上位" のコンテキスト）です。親の閲覧コンテキストがない場合は、 `_self` と同じ動作をします。
 
-    > **Note:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Link_types/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。対応状況については[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+    > **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Link_types/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。対応状況については[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 - {{HTMLAttrDef("type")}}
   - : リンク先 URL の {{Glossary("MIME type", "MIME タイプ")}}の形式を表すヒントです。組み込まれている機能はありません。
@@ -98,7 +84,7 @@ translation_of: Web/HTML/Element/a
 
   - : リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
 
-    > **Note:** この属性は廃止されており、**ページ作者が使用すべきではありません**。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
+    > **メモ:** この属性は廃止されており、**ページ作者が使用すべきではありません**。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
 - {{HTMLAttrDef("coords")}}{{Deprecated_Inline}}
   - : [`shape` 属性](#shape)とともに使用されます。カンマ区切りの座標のリストです。
@@ -106,7 +92,7 @@ translation_of: Web/HTML/Element/a
 
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
-    > **Note:** 代わりにグローバル属性の {{HTMLAttrxRef("id")}} を使用してください。
+    > **メモ:** 代わりにグローバル属性の {{HTMLAttrxRef("id")}} を使用してください。
 
 - {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
@@ -114,7 +100,7 @@ translation_of: Web/HTML/Element/a
 
   - : イメージマップ内のハイパーリンクの領域の形状です。
 
-    > **Note:** イメージマップについては {{HTMLElement("area")}} 要素を使用してください。
+    > **メモ:** イメージマップについては {{HTMLElement("area")}} 要素を使用してください。
 
 ## プロパティ
 
@@ -158,7 +144,7 @@ translation_of: Web/HTML/Element/a
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        {{ARIARole("link")}} （<code>href</code> 属性がある場合）、
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code> （<code>href</code> 属性がある場合）、
         それ以外は<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
       </td>
     </tr>
@@ -167,16 +153,16 @@ translation_of: Web/HTML/Element/a
       <td>
         <p><code>href</code> 属性がある場合</p>
         <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code></li>
         </ul>
         <p><code>href</code> 属性がない場合</p>
         <ul>
@@ -237,7 +223,7 @@ a { display: block; margin-bottom: 0.5em }
 <h2 id="Section_further_down">Section further down</h2>
 ```
 
-> **Note:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
+> **メモ:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
 
 ### メールアドレスへのリンク
 
@@ -247,7 +233,7 @@ a { display: block; margin-bottom: 0.5em }
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-件名、本文、他の定義済みコンテンツを含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links)または {{RFC(6068)}} をご覧ください。
+件名、本文、他の定義済みコンテンツを含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#メールのリンク)または {{RFC(6068)}} をご覧ください。
 
 ### 電話番号へのリンク
 

@@ -2,6 +2,7 @@
 title: TransformStream()
 slug: Web/API/TransformStream/TransformStream
 ---
+
 {{APIRef("Streams")}}
 
 **`TransformStream()`** 构造函数创建一个新的 {{domxref("TransformStream")}} 对象，该对象表示一对流：一个 {{domxref("WritableStream")}} 表示可写端，和一个 {{domxref("ReadableStream")}} 表示可读端。
@@ -41,7 +42,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 - `readableStrategy`{{Optional_Inline}}
 
-  - : 一个定义了队列策略的可选对象。它需要两个参数:
+  - : 一个定义了队列策略的可选对象。它需要两个参数：
 
     - `highWaterMark`
       - : 一个非负整数。它定义了在应用背压之前内部队列包含的分块的总数。

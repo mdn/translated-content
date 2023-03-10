@@ -3,15 +3,16 @@ title: '@supports'
 slug: Web/CSS/@supports
 translation_of: Web/CSS/@supports
 ---
+
 {{ CSSRef() }}
 
 ## Описание
 
-The `@supports` [CSS](/en/CSS "CSS") [at-rule](/en/CSS/At-rule "en/CSS/At-rule") associates a set of nested statements, in a CSS block, that is delimited by curly braces, with a condition consisting of testing of CSS declarations, that is property-value pairs, combined with arbitrary conjunctions, disjunctions, and negations of them. Such a condition is called a _supports condition_.
+The `@supports` [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) associates a set of nested statements, in a CSS block, that is delimited by curly braces, with a condition consisting of testing of CSS declarations, that is property-value pairs, combined with arbitrary conjunctions, disjunctions, and negations of them. Such a condition is called a _supports condition_.
 
 `@supports` gives CSS the ability to perform a _feature query_.
 
-The `@supports` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules") and can be accessed via the CSS object model interface {{domxref("CSSSupportsRule")}}.
+The `@supports` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en/CSS/At-rule#Conditional_Group_Rules) and can be accessed via the CSS object model interface {{domxref("CSSSupportsRule")}}.
 
 ## Синтаксис
 
@@ -46,7 +47,7 @@ not ( not ( transform-origin: 2px ) )
 (display: flexbox) and ( not (display: inline-grid) )
 ```
 
-> **Примечание:** **Предупреждение:** there is no need to enclose the `not` operator between two parentheses when at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
+> **Предупреждение:** there is no need to enclose the `not` operator between two parentheses when at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
 
 ### Оператор and
 
@@ -90,7 +91,7 @@ is equivalent to:
 (( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))
 ```
 
-> **Примечание:** **Предупреждение**: when using both `and` and `or` operators, the parentheses must be used in order to define the order in which they apply. If not, the condition is invalid leading to the whole at-rule to be ignored.
+> **Предупреждение:** when using both `and` and `or` operators, the parentheses must be used in order to define the order in which they apply. If not, the condition is invalid leading to the whole at-rule to be ignored.
 
 ### Формальный синтаксис
 

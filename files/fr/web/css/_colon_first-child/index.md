@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:first-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:first-child`** permet de cibler un élément qui est le premier élément fils par rapport à son élément parent.
@@ -92,15 +93,11 @@ li:first-child{
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires                                                               |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#first-child-pseudo', ':first-child')}} | {{Spec2('CSS4 Selectors')}} | Les éléments correspondants ne doivent pas avoir nécessairement de parent. |
-| {{SpecName('CSS3 Selectors', '#first-child-pseudo', ':first-child')}} | {{Spec2('CSS3 Selectors')}} | Aucune modification.                                                       |
-| {{SpecName('CSS2.1', 'selector.html#first-child', ':first-child')}}     | {{Spec2('CSS2.1')}}             | Définition initiale.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.first-child")}}
+{{Compat}}
 
 ## Voir aussi
 

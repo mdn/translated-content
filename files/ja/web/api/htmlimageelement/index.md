@@ -2,6 +2,7 @@
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLImageElement`** インターフェイスは HTML の {{HTMLElement("img")}} 要素を表現し、画像要素を操作するためのプロパティとメソッドを提供します。

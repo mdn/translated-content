@@ -1,7 +1,10 @@
 ---
-title: 'HTMLMedia​Element: canplaythrough イベント'
+title: 'HTMLMediaElement: canplaythrough イベント'
 slug: Web/API/HTMLMediaElement/canplaythrough_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `canplaythrough` イベントは、ユーザーエージェントがメディアを再生可能なときに発生し、コンテンツをさらにバッファリングするために再生を停止することなく、メディアを最後まで再生するのに十分なデータが読み込まれたと推定します。
@@ -13,9 +16,9 @@ slug: Web/API/HTMLMediaElement/canplaythrough_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('canplaythrough', event => { });
+addEventListener('canplaythrough', (event) => { });
 
-oncanplaythrough = event => { };
+oncanplaythrough = (event) => { };
 ```
 
 ## イベント型
@@ -26,7 +29,7 @@ oncanplaythrough = event => { };
 
 これらの例では、 HTMLMediaElement の `canplaythrough` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
 const video = document.querySelector('video');
@@ -36,7 +39,7 @@ video.addEventListener('canplaythrough', (event) =&gt; {
       '動画全体を再生できると思います。');
 });</pre>
 
-`oncanplaythrough` イベントハンドラープロパティを使用する場合
+`oncanplaythrough` イベントハンドラープロパティを使用する場合:
 
 ```js
 const video = document.querySelector('video');

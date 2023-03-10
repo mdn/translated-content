@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
+
 {{AddonSidebar()}}
 
 Obtient tous les onglets qui ont les propriétés spécifiées, ou tous les onglets si aucune propriété n'est spécifiée.
@@ -40,7 +41,7 @@ var querying = browser.tabs.query(
     - `autoDiscardable`{{optional_inline}}
       - : `boolean`. Si les onglets peuvent être supprimés automatiquement par le navigateur lorsque les ressources sont faibles.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Utilisez cette option pour renvoyer uniquement les onglets dont l'ID est `cookieStoreId`. Cette option n'est disponible que si l'extension à la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies"`
+      - : `string`. Utilisez cette option pour renvoyer uniquement les onglets dont l'ID est `cookieStoreId`. Cette option n'est disponible que si l'extension à la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies"`
     - `currentWindow`{{optional_inline}}
       - : `boolean`. Si les onglets sont dans la fenêtre actuelle.
     - `discarded`{{optional_inline}}
@@ -66,7 +67,7 @@ var querying = browser.tabs.query(
     - `url`{{optional_inline}}
       - : `string` ou `array de string`. Faites correspondre les onglets avec un ou plusieurs [modèle de correspondance](/fr/Add-ons/WebExtensions/Match_patterns). Notez que les identificateurs de fragment ne sont pas appariés.
     - `windowId`{{optional_inline}}
-      - : `integer`. L'ID de la fenêtre parente, ou  {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} pour la fenêtre en cours.
+      - : `integer`. L'ID de la fenêtre parente, ou {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} pour la fenêtre en cours.
     - `windowType`{{optional_inline}}
       - : {{WebExtAPIRef('tabs.WindowType')}}. Le type de fenêtre dans lequel les onglets y sont.
 
@@ -150,9 +151,9 @@ querying.then(logTabs, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.query")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -160,7 +161,8 @@ querying.then(logTabs, onError);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -187,4 +189,4 @@ querying.then(logTabs, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

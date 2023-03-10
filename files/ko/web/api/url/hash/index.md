@@ -1,13 +1,6 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/hash
 ---
 {{ APIRef("URL API") }}
 
@@ -19,8 +12,10 @@ translation_of: Web/API/URL/hash
 
 ## 구문
 
-    const string = url.hash
-    url.hash = newHash
+```js
+const string = url.hash
+url.hash = newHash
+```
 
 ### 값
 

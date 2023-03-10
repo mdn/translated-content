@@ -2,9 +2,10 @@
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
 ---
+
 {{HTTPSidebar}}
 
-Save-Data 请求头字段是一个布尔值，在请求中，表示客户端对减少数据使用量的偏好。 这可能是传输成本高，连接速度慢等原因。
+Save-Data 请求头字段是一个布尔值，在请求中，表示客户端对减少数据使用量的偏好。这可能是传输成本高，连接速度慢等原因。
 
 值为 on 时，明确表示用户选择使用客户端简化数据使用模式，并且当与源进行通信时允许他们提供替代内容以减少下载的数据，例如较小的图像和视频资源，不同的标记和样式，禁用轮询和自动更新等。
 
@@ -19,7 +20,7 @@ Save-Data: <sd-token>
 ## 指令
 
 - <`sd-token`>
-  - : 一个数值，表示客户端是否想要选择简化数据使用模式。 on 表示是，而 off（默认值）表示不。
+  - : 一个数值，表示客户端是否想要选择简化数据使用模式。on 表示是，而 off（默认值）表示不。
 
 ## 示例
 
@@ -78,7 +79,7 @@ Content-Type: image/jpeg
 
 ## 参见
 
-- [Help Your Users \`Save-Data\` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
+- [Help Your Users `Save-Data` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
 - [Delivering Fast and Light Applications with Save-Data - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
 - [Network Information API - WICG](https://wicg.github.io/netinfo/#save-data-request-header-field)
 - Header to indicate that the content served varies by `Save-Data`: {{HTTPHeader("Vary")}}

@@ -12,6 +12,7 @@ tags:
   - setImageData
 translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
+
 {{AddonSidebar()}}
 
 Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.
@@ -44,9 +45,9 @@ browser.clipboard.setImageData(imageData, imageType)
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments si l'opération a réussi, ou rejetée, s'il y a une erreur (par exemple parce que les données ne représentaient pas une image valide).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.clipboard.setImageData", 10)}}
+{{Compat}}
 
 ## Exemples
 

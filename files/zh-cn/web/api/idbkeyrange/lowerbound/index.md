@@ -2,9 +2,10 @@
 title: IDBKeyRange.lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound
 ---
+
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBKeyRange")}} 接口的**`lowerBound()`**方法创建一个只有下限的新的键范围。默认情况下，它包含较低的端点值。
+{{domxref("IDBKeyRange")}} 接口的 **`lowerBound()`** 方法创建一个只有下限的新的键范围。默认情况下，它包含较低的端点值。
 
 {{AvailableInWorkers}}
 
@@ -38,7 +39,7 @@ var myIDBKeyRange = IDBKeyRange.lowerBound(lower, open);
 
 下面的示例演示如何使用下限键范围。在这里，我们声明`keyRangeValue = IDBKeyRange.lowerBound("F", false);`— 一个包含值“F”及其后所有内容的范围。我们打开一个事务（使用 {{domxref("IDBTransaction")}}）和一个对象存储，并使用 {{domxref("IDBObjectStore.openCursor")}}打开一个游标，声明`keyRangeValue` 为其可选的键范围值。这意味着光标将只检索键值为“F”及其后面的所有记录。如果使用`IDBKeyRange.lowerBound("F", true);`，则该范围将不包括端点“F”，仅包括其后面的值。
 
-> **备注：** 要获得一个更完整的示例，使您能够使用键范围进行实验，请查看我们的 [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange)（[实时查看该示例](https://mdn.github.io/indexeddb-examples/idbkeyrange/)）。
+> **备注：** 要获得一个更完整的示例，使您能够使用键范围进行实验，请查看我们的 [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange)（[实时查看该示例](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)）。
 
 ```js
 function displayData() {
@@ -78,4 +79,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

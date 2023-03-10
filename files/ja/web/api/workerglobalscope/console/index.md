@@ -1,42 +1,39 @@
 ---
 title: WorkerGlobalScope.console
 slug: Web/API/WorkerGlobalScope/console
+l10n:
+  sourceCommit: cc1f5c3bd1a9976a0668eeee016f6afc144533b0
 ---
+
 {{APIRef("Web Workers API")}}{{Non-standard_header}}
 
-{{domxref("Console")}} インターフェイスの読み取り専用 `console` プロパティは、ワーカーにブラウザコンソールへのアクセスを提供する {{domxref("Console")}} オブジェクトを返します。
+**`console`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、このワーカーのブラウザーコンソールへのアクセスをアクセスを提供する {{domxref("console")}} オブジェクトを返します。
 
-## 構文
+## 値
 
-```js
-var consoleObj = self.console;
-```
-
-### 値
-
-{{domxref("Console")}} オブジェクト
+{{domxref("console")}} オブジェクトです。
 
 ## 例
 
-このプロパティはワーカー内でデバッグのためにブラウザコンソールへアクセスすることを可能にします。よって、例えばこのようにコールできます
+このプロパティはワーカー内でデバッグのためにブラウザコンソールへアクセスすることを可能にします。よって、例えば、
 
 ```js
 console.log('test');
 ```
 
-inside a worker (which would basically be the equivalent of `self.console.log('test');`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), to return a test message out to the browser console.
+ワーカーの中からこのように呼び出して（これは基本的に `self.console.log('test');` と同じです。 {{domxref("WorkerGlobalScope.self")}} で参照できるワーカーのスコープで呼び出されるためです）、テストメッセージをブラウザーのコンソールに出力することができます。
 
-If you are calling `console.log()` from a {{domxref("DedicatedWorkerGlobalScope")}} or other worker scope that acts on a single loaded window, that tab's web console will receive the logs. However, If you are calling `console.log()` from a {{domxref("SharedWorkerGlobalScope")}}, the global browser console will receive the logs.
+もし、 `console.log()` を読み込まれた単一のウィンドウで動作する {{domxref("DedicatedWorkerGlobalScope")}} や他のワーカースコープから呼び出しているのであれば、そのタブのウェブコンソールがログを受け取ります。しかし、 `console.log()` を {{domxref("SharedWorkerGlobalScope")}} から呼び出している場合、グローバルブラウザーコンソールがログを受信します。
 
-## 仕様
+## 仕様書
 
-仕様の一部ではありません。
+どの仕様書にも含まれていません。
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("api.WorkerGlobalScope.console")}}
+{{Compat}}
 
-## 関連
+## 関連情報
 
-- {{domxref("Console")}}
+- {{domxref("console")}}
 - {{domxref("WorkerGlobalScope")}}

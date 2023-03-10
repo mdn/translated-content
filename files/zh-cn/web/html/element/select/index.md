@@ -2,7 +2,8 @@
 title: <select>
 slug: Web/HTML/Element/select
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<select>` 元素**表示一个提供选项菜单的控件：
 
@@ -23,7 +24,7 @@ slug: Web/HTML/Element/select
 包括下列[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("autocomplete")}}
-  - : 一个 {{domxref("DOMString")}}，为 {{Glossary("user agent", "用户代理")}} 提供自动填充功能的线索。 关于该值的完整列表以及如何使用自动填充的详细信息，请参阅 [HTML 自动完成属性](/zh-CN/docs/Web/HTML/Attributes/自动完成属性)。
+  - : 一个 {{domxref("DOMString")}}，为 {{Glossary("user agent", "用户代理")}} 提供自动填充功能的线索。关于该值的完整列表以及如何使用自动填充的详细信息，请参阅 [HTML 自动完成属性](/zh-CN/docs/Web/HTML/Attributes/自动完成属性)。
 - {{htmlattrdef("autofocus")}}
   - : 这个布尔值属性能够让一个对象在页面加载的时候获得焦点。一个文档中只有一个对象可以有这个属性。
 - {{htmlattrdef("disabled")}}
@@ -40,7 +41,7 @@ slug: Web/HTML/Element/select
 - {{htmlattrdef("size")}}
   - : 如果控件显示为滚动列表框（如声明了 `multiple`），则此属性表示为控件中同时可见的行数。浏览器不需要将选择元素呈现为滚动列表框。默认值为 0。
 
-> **备注：** 根据 HTML5 规范，默认值应该为 1；但是，在实践中，这样会影响到一些网站，同时其它浏览器也没有那么处理，所以 Mozilla 在 Firefox 中选择继续使用默认值 0。
+> **备注：** 根据 HTML5 规范，默认值应该为 1；但是，在实践中，这样会影响到一些网站，同时其他浏览器也没有那么处理，所以 Mozilla 在 Firefox 中选择继续使用默认值 0。
 
 ## 使用笔记
 
@@ -116,7 +117,7 @@ slug: Web/HTML/Element/select
 
 众所周知，`<select>`元素很难用 CSS 进行高效的设计。你可以像其他元素一样改变某些方面——例如，调整 [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)、[显示的字体](/zh-CN/docs/Web/CSS/CSS_Fonts) 等，你还可以使用 {{cssxref("appearance")}} 属性来去除默认的系统外观。
 
-但是，这些属性的表现在不同浏览器之间并不一致，而且有些事情难以很好地处理，例如在一列中顺序排列不同类型的表单元素。 `<select>`元素的内部结构复杂，难以控制。 如果你想完全控制，你应该考虑使用一个在修改表单部件样式方面拥有强大能力的库，或者尝试使用非语义元素和 JavaScript 来制作下拉菜单，再使用 [WAI-ARIA](/zh-CN/docs/learn/Accessibility/WAI-ARIA_basics) 来提供语义。
+但是，这些属性的表现在不同浏览器之间并不一致，而且有些事情难以很好地处理，例如在一列中顺序排列不同类型的表单元素。 `<select>`元素的内部结构复杂，难以控制。如果你想完全控制，你应该考虑使用一个在修改表单部件样式方面拥有强大能力的库，或者尝试使用非语义元素和 JavaScript 来制作下拉菜单，再使用 [WAI-ARIA](/zh-CN/docs/learn/Accessibility/WAI-ARIA_basics) 来提供语义。
 
 有关样式`<select>`的更多有用信息，请参阅：
 
@@ -138,7 +139,7 @@ slug: Web/HTML/Element/select
 
 #### 结果
 
-{{EmbedLiveSample("Basic_select", "", "100")}}
+{{EmbedLiveSample("基本选择", "", "100")}}
 
 ### 使用多选的进阶选择
 
@@ -161,7 +162,7 @@ slug: Web/HTML/Element/select
 </label>
 ```
 
-{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
+{{EmbedLiveSample("使用多选的进阶选择", "", "100")}}
 
 你会看见：
 
@@ -192,11 +193,11 @@ slug: Web/HTML/Element/select
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("combobox")}} with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise {{ARIARole("listbox")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("menu")}} with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -215,5 +216,5 @@ slug: Web/HTML/Element/select
 
 ## 参见
 
-- 其它表单对象: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- 其他表单对象：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
 - 由 `<select>` 触发的事件： {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}

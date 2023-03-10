@@ -2,7 +2,8 @@
 title: '<video>: 视频嵌入元素'
 slug: Web/HTML/Element/video
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<video>` 元素** 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 `<video>` 标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。
 
@@ -14,7 +15,7 @@ slug: Web/HTML/Element/video
 
 ## 属性
 
-类似于所有其它 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+类似于所有其他 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("autoplay")}}
   - : 布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
@@ -29,9 +30,9 @@ slug: Web/HTML/Element/video
 - {{htmlattrdef("crossorigin")}}
   - : 该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image) 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
     - anonymous
-      - : 在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将不会携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。
+      - : 在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将不会携带 cookie、X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。
     - use-credentials
-      - : 在发送跨域请求时携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将会携带 cookie、安全令牌、并且执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 **anonymous** 一样使用。 查看 [CORS 设置属性](/zh-CN/docs/HTML/CORS_settings_attributes) 获取更多信息。
+      - : 在发送跨域请求时携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将会携带 cookie、安全令牌、并且执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 **anonymous** 一样使用。查看 [CORS 设置属性](/zh-CN/docs/HTML/CORS_settings_attributes) 获取更多信息。
 - {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}
   - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。该属性可以禁用 `video` 元素的画中画特性，右键菜单中的“画中画”选项会被禁用
 - {{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}
@@ -78,9 +79,9 @@ slug: Web/HTML/Element/video
 | {{domxref("HTMLMediaElement.playing_event", 'playing ')}}                                             | 由于缺乏数据而暂停或延迟后，播放准备开始。                                                                                                                       |
 | {{domxref("HTMLMediaElement.progress_event", 'progress')}}                                             | 在浏览器加载资源时周期性触发。                                                                                                                                   |
 | {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}                                     | 播放速率发生变化。                                                                                                                                               |
-| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                                                 | *跳帧（seek）*操作完成。                                                                                                                                         |
-| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                                             | *跳帧（seek）*操作开始。                                                                                                                                         |
-| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                                             | 用户代理（user agent）正在尝试获取媒体数据, 但数据意外未出现。                                                                                                   |
+| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                                                 | _跳帧_（seek）操作完成。                                                                                                                                         |
+| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                                             | _跳帧_（seek）操作开始。                                                                                                                                         |
+| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                                             | 用户代理（user agent）正在尝试获取媒体数据，但数据意外未出现。                                                                                                   |
 | {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}                                             | 媒体数据加载已暂停。                                                                                                                                             |
 | {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}                                     | `currentTime` 属性指定的时间发生变化。                                                                                                                           |
 | {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}                                 | 音量发生变化。                                                                                                                                                   |
@@ -124,7 +125,7 @@ slug: Web/HTML/Element/video
 </video>
 ```
 
-第一个例子播放一个视频，视频一收到，允许播放的时候就会立马开始播放，而不会停下来直到下载更多内容。 图片 "posterimage.jpg" 会一直展示在视频区域，直到开始播放。
+第一个例子播放一个视频，视频一收到，允许播放的时候就会立马开始播放，而不会停下来直到下载更多内容。图片 "posterimage.jpg" 会一直展示在视频区域，直到开始播放。
 
 第二个例子允许用户选择不同的字幕。
 
@@ -132,7 +133,7 @@ slug: Web/HTML/Element/video
 
 如果视频的 MIME 类型设置不正确，视频可能不会显示，或者显示包含一个 X 的灰色盒子（如果启用了 JavaScript 的话）。
 
-如果你提供的视频是 Ogg Theora 格式的，在 Apache Web 服务器上， 你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的 “AddType 的” 配置指令，把视频文件的扩展名 (最常见的是".ogm", ".ogv", or ".ogg") 添加到 MIME 类型 "video/ogg"， 来解决这个问题。
+如果你提供的视频是 Ogg Theora 格式的，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的“AddType 的”配置指令，把视频文件的扩展名 (最常见的是".ogm", ".ogv", or ".ogg") 添加到 MIME 类型 "video/ogg"，来解决这个问题。
 
 ```plain
 AddType video/ogg .ogm
@@ -140,7 +141,7 @@ AddType video/ogg .ogv
 AddType video/ogg .ogg
 ```
 
-如果你以 WebM 格式提供视频，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的 “AddType 的” 配置指令，把视频文件的扩展名 (最常见的是".webm") 添加到 MIME 类型 "video/webm"， 来解决这个问题。
+如果你以 WebM 格式提供视频，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的“AddType 的”配置指令，把视频文件的扩展名 (最常见的是".webm") 添加到 MIME 类型 "video/webm"，来解决这个问题。
 
 ```plain
 AddType video/webm .webm
@@ -169,5 +170,3 @@ AddType video/webm .webm
 - [使用 HTML5 audio 和 video](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [使用 canvas 操作 video](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Ogg 格式媒体文件的服务器配置](/zh-CN/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
-
-{{HTMLRef}}

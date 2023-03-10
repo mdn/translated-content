@@ -1,24 +1,13 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - Iterate
-  - Iteration
-  - JavaScript
-  - Reference
-  - Statement
-  - asynchronous
-  - await
-  - 文
-  - 繰り返し
-  - 非同期
-translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for await...of` 文**は非同期および同期の[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を使用して、反復処理を行うループを作成します。たとえば、組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列風オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}}, {{domxref("NodeList")}} など), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, さらに、ユーザー定義の非同期・同期の反復可能オブジェクトを使用することができます。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。 {{jsxref("Operators/await", "await")}} 演算子と同様に、この分は{{jsxref("Statements/async_function", "非同期関数", "", 1)}}の中でのみ使用されます。
 
-> **Note:** `for await...of` は非同期の反復可能オブジェクトではない非同期イテレーターでは動作しません。
+> **メモ:** `for await...of` は非同期の反復可能オブジェクトではない非同期イテレーターでは動作しません。
 
 ## 構文
 
@@ -161,7 +150,7 @@ for (let numOrPromise of generator()) {
 // 4
 ```
 
-> **Note:** **注**: 同期のジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、 `for await...of` は拒否されたプロミスを消費するので、ジェネレーター内の `finally` ブロックが呼び出されません。これは、確保したリソースを `try/finally` で解放する必要がある場合は望ましくない動作になる可能性があります。
+> **メモ:** 同期のジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、 `for await...of` は拒否されたプロミスを消費するので、ジェネレーター内の `finally` ブロックが呼び出されません。これは、確保したリソースを `try/finally` で解放する必要がある場合は望ましくない動作になる可能性があります。
 
 ```js
 function* generatorWithRejectedPromises() {
@@ -230,9 +219,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

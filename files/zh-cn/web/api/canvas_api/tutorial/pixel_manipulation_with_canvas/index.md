@@ -2,7 +2,8 @@
 title: 像素操作
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 到目前为止，我们尚未深入了解 Canvas 画布真实像素的原理，事实上，你可以直接通过 ImageData 对象操纵像素数据，直接读取或将数据数组写入该对象中。稍后我们也将深入了解如何控制图像使其平滑（反锯齿）以及如何从 Canvas 画布中保存图像。
 
@@ -39,7 +40,7 @@ imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];
 var numBytes = imageData.data.length;
 ```
 
-## 创建一个`ImageData对象`
+## 创建一个 ImageData 对象
 
 去创建一个新的，空白的 ImageData`对象`，你应该会使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 方法。有 2 个版本的 createImageData() 方法。
 
@@ -80,7 +81,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js hidden
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 img.onload = function() {
@@ -168,7 +169,7 @@ ctx.putImageData(myImageData, 0, 0);
 
 ```js hidden
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };
@@ -294,7 +295,7 @@ zoomctx.drawImage(canvas,
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };

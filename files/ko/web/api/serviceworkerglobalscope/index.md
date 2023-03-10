@@ -1,19 +1,8 @@
 ---
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerGlobalScope
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerGlobalScope` interface of the [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API) represents the global execution context of a service worker.
@@ -110,11 +99,11 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

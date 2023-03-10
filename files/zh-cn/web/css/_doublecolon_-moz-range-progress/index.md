@@ -2,6 +2,7 @@
 title: '::-moz-range-progress'
 slug: Web/CSS/::-moz-range-progress
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 `type="range"` 类型的 {{HTMLElement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。
@@ -31,7 +32,7 @@ input[type=range]::-moz-range-progress {
 
 ### 结果
 
-{{EmbedLiveSample("Example", 300, 50)}}
+{{EmbedLiveSample("示例", 300, 50)}}
 
 使用了这个样式的进度条可能会看起来这样：
 
@@ -43,9 +44,9 @@ input[type=range]::-moz-range-progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-moz-range-progress")}}
+{{Compat}}
 
-## 相关阅读
+## 参见
 
 - Gecko 用于设置范围输入的其他部分样式的伪元素：
 

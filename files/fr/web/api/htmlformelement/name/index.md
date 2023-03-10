@@ -3,6 +3,7 @@ title: HTMLFormElement.name
 slug: Web/API/HTMLFormElement/name
 translation_of: Web/API/HTMLFormElement/name
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété `HTMLFormElement.name` représente le nom de l'élément `form` sous la forme d'une chaîne de caratères.

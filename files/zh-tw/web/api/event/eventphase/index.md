@@ -2,6 +2,7 @@
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 表示事件物件目前於事件流（Event Flow）中傳遞的進度為哪一個階段。

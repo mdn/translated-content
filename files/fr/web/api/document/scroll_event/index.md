@@ -9,6 +9,7 @@ tags:
   - requestAnimationFrame
 translation_of: Web/API/Document/scroll_event
 ---
+
 {{APIRef}}
 
 L’évènement **`scroll`** (défilement) est émis lorsque l’on fait défiler le document ou un élément.

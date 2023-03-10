@@ -11,6 +11,7 @@ tags:
   - Sécurité
 translation_of: Web/HTTP/Headers/Content-Security-Policy/report-uri
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-uri`** demande à l'agent utilisateur de rapporter les violations de règles CSP. Ces rapports de violation sont constituées d'un document JSON envoyé via une requête HTTP POST à l'URI fournie.
@@ -104,14 +105,11 @@ if ($json_data = json_decode($json_data)) {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-report-uri", "report-uri")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-report-uri", "report-uri")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.report-uri")}}
+{{Compat}}
 
 ## Voir aussi
 

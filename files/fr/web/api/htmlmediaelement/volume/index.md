@@ -12,6 +12,7 @@ tags:
   - sound
 translation_of: Web/API/HTMLMediaElement/volume
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLMediaElement.volume`** définit le volume auquel le média doit être lu.

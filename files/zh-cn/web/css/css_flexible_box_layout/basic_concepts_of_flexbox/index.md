@@ -2,6 +2,7 @@
 title: flex 布局的基本概念
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 ---
+
 {{CSSRef}}
 
 Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。它给 flexbox 的子元素之间提供了强大的空间分布和对齐能力。本文给出了 flexbox 的主要特性，更多的细节将在别的文档中探索。
@@ -61,7 +62,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 ## Flex 容器
 
-文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 `flex` 或者 `inline-flex`。 完成这一步之后，容器中的直系子元素就会变为 **flex 元素**。所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：
+文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 `flex` 或者 `inline-flex`。完成这一步之后，容器中的直系子元素就会变为 **flex 元素**。所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：
 
 - 元素排列为一行 (`flex-direction` 属性的初始值是 `row`)。
 - 元素从主轴的起始线开始。
@@ -110,7 +111,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-在这里，我们只会大概介绍一下它们的用法，更详细的细节请参阅其它的文章。
+在这里，我们只会大概介绍一下它们的用法，更详细的细节请参阅其他的文章。
 
 在考虑这几个属性的作用之前，需要先了解一下 **可用空间** available space 这个概念。这几个 flex 属性的作用其实就是改变了 flex 容器中的可用空间的行为。同时，可用空间对于 flex 元素的对齐行为也是很重要的。
 
@@ -122,13 +123,13 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 ### Flex 元素属性：`flex-basis`
 
-`flex-basis` 定义了该元素的**空间大小（**the size of that item in terms of the space**）**，flex 容器里除了元素所占的空间以外的富余空间就是**可用空间** available space。 该属性的默认值是 `auto` 。此时，浏览器会检测这个元素是否具有确定的尺寸。 在上面的例子中，所有元素都设定了宽度（width）为 100px，所以 `flex-basis` 的值为 100px。
+`flex-basis` 定义了该元素的**空间大小**（**the size of that item in terms of the space**），flex 容器里除了元素所占的空间以外的富余空间就是**可用空间** available space。该属性的默认值是 `auto` 。此时，浏览器会检测这个元素是否具有确定的尺寸。在上面的例子中，所有元素都设定了宽度（width）为 100px，所以 `flex-basis` 的值为 100px。
 
 如果没有给元素设定尺寸，`flex-basis` 的值采用元素内容的尺寸。这就解释了：我们给只要给 Flex 元素的父元素声明 `display: flex` ，所有子元素就会排成一行，且自动分配小大以充分展示元素的内容。
 
 ### Flex 元素属性：`flex-grow`
 
-`flex-grow` 若被赋值为一个正整数， flex 元素会以 `flex-basis` 为基础，沿主轴方向增长尺寸。这会使该元素延展，并占据此方向轴上的可用空间（available space）。如果有其他元素也被允许延展，那么他们会各自占据可用空间的一部分。
+`flex-grow` 若被赋值为一个正整数，flex 元素会以 `flex-basis` 为基础，沿主轴方向增长尺寸。这会使该元素延展，并占据此方向轴上的可用空间（available space）。如果有其他元素也被允许延展，那么他们会各自占据可用空间的一部分。
 
 如果我们给上例中的所有元素设定 `flex-grow` 值为 1，容器中的可用空间会被这些元素平分。它们会延展以填满容器主轴方向上的空间。
 
@@ -163,7 +164,7 @@ flex-grow 属性可以按比例分配空间。如果第一个元素 `flex-grow` 
 
 `flex: none` 可以把 flex 元素设置为不可伸缩。它和设置为 `flex: 0 0 auto` 是一样的。元素既不能拉伸或者收缩，但是元素会按具有 `flex-basis: auto` 属性的 flexbox 进行布局。
 
-你在教程中常看到的 `flex: 1` 或者 `flex: 2` 等等。它相当于`flex: 1 1 0`。元素可以在`flex-basis`为 0 的基础上伸缩。
+你在教程中常看到的 `flex: 1` 或者 `flex: 2` 等等。它相当于`flex: 1 1 0` 或者 `flex: 2 1 0`。元素可以在 `flex-basis` 为 0 的基础上伸缩。
 
 尝试在下面的实例中应用这些简写值。
 

@@ -1,18 +1,8 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した {{jsxref("Intl.DateTimeFormat")}} フォーマッターが生成する文字列のロケールを考慮した書式化を可能にします。

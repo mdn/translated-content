@@ -1,15 +1,17 @@
 ---
 title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
-translation_of: Web/API/HTMLElement/accessKeyLabel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.accessKeyLabel`** 읽기 전용 속성은 엘리먼트의 할당된 접근키를 나타내는 {{jsxref("String")}} 를 반환합니다. 존재하지 않는 경우 빈 문자열을 반환합니다.
 
 ## 구문
 
-    label = element.accessKeyLabel
+```js
+label = element.accessKeyLabel
+```
 
 ## 예시
 

@@ -2,6 +2,7 @@
 title: CSS Basic User Interface
 slug: Web/CSS/CSS_Basic_User_Interface
 ---
+
 {{CSSRef}}
 
 **CSS Basic User Interface** 是 CSS 的一个模块，用于定义与用户界面相关的特性的渲染和实现。

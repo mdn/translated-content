@@ -1,7 +1,10 @@
 ---
 title: Firefox 44 for developers
 slug: Mozilla/Firefox/Releases/44
+l10n:
+  sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/)Firefox 44 は、米国時間 2016 年 1 月 26 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
@@ -14,7 +17,7 @@ slug: Mozilla/Firefox/Releases/44
 
 - [メモリーツール](https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html)
 - [アニメーションインスペクターの改良](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
-- [新しいウォーターフォールマーカー: DomContentLoaded、load、ワーカーメッセージ](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#markers)
+- [新しいウォーターフォールマーカー: DomContentLoaded、load、ワーカーメッセージ](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#markers)
 
 [Firefox 43 と Firefox 44 の間で修正された開発ツールのすべてのバグ。](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-11-03&query_format=advanced&chfield=resolution&chfieldfrom=2015-09-19&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678)
 
@@ -33,7 +36,7 @@ slug: Mozilla/Firefox/Releases/44
 
 - 非標準のプロパティ {{cssxref("-moz-math-display")}} および {{cssxref("-moz-window-shadow")}} は、ウェブコンテンツで使用できなくなりました ({{bug(1207002)}}、{{bug(1211040)}}、{{bug(1212607)}})。
 - {{cssxref("font-style")}} で、`oblique` と `italic` の両方を使用できる場合は、両者を区別するようになりました ({{bug(543715)}})。
-- 未対応であるにもかかわらず {{cssxref("marks")}}、{{cssxref("orphans")}}、{{cssxref("page")}}、{{cssxref("size")}}、{{cssxref("widows")}} の各プロパティがパースされ、{{cssxref("@supports")}} で誤って対応済みであると報告していました。この問題を修正してパースしないように、また対応済みとしないようになりました ({{bug(1215702)}})。
+- 未対応であるにもかかわらず {{cssxref("@page/marks")}}、{{cssxref("orphans")}}、{{cssxref("page")}}、{{cssxref("size")}}、{{cssxref("widows")}} の各プロパティがパースされ、{{cssxref("@supports")}} で誤って対応済みであると報告していました。この問題を修正してパースしないように、また対応済みとしないようになりました ({{bug(1215702)}})。
 - 内部で使用する値 `-moz-mac-unified-toolbar` を、{{cssxref("appearance")}} プロパティで使用できる値から外しました ({{bug(1206468)}})。
 - いくつかの `-webkit` 接頭辞付きプロパティおよび値を、ウェブ互換性のために対応しました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です ({{bug(837211)}})。
 
@@ -89,7 +92,7 @@ slug: Mozilla/Firefox/Releases/44
 #### 廃止
 
 - 非標準の [`let` ブロック](/ja/docs/Web/JavaScript/Reference/Statements/let#let_blocks)を廃止しました ({{bug(1167029)}})。
-- 非標準かつ非推奨である {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} プロパティを削除しました ({{bug(683218)}})。
+- 非標準かつ非推奨である `Object.prototype.__noSuchMethod__` プロパティを削除しました ({{bug(683218)}})。
 
 ### インターフェイス/API/DOM
 
@@ -102,7 +105,7 @@ slug: Mozilla/Firefox/Releases/44
 - 廃止した `DocumentType.internalSubset` プロパティを削除しました ({{bug(801545)}})。
 - 既存のサイトとの互換性を確保するため {{domxref("Window.orientation")}} プロパティ、{{domxref("Window.onorientationchange")}} プロパティおよび {{domxref("Window.orientationchange_event", "orientationchange")}} イベントを実装しました ({{bug(920734)}})。
 - 明示的に全画面表示を要求した {{HTMLElement("iframe")}} は、暗黙的に全画面表示が解除されないようになりました ({{bug(1187801)}})。
-- イベント {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}}, {{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} が、無効化したフォーム要素で発生するようになりました ({{bug(218093)}})。
+- イベント {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("Element/pointermove_event", "pointermove")}}, {{domxref("Element/pointerover_event", "pointerover")}}, {{domxref("Element/pointerout_event", "pointerout")}}, {{domxref("Element/pointerenter_event", "pointerenter")}}, {{domxref("Element/pointerleave_event", "pointerleave")}} が、無効化したフォーム要素で発生するようになりました ({{bug(218093)}})。
 - 相互運用性を高めるため、{{domxref("Element.webkitMatchesSelector()")}} メソッドを追加しました ({{bug(1216193)}})。
 - 仕様書に合致させるため、{{domxref("Document.createAttribute()")}} は入力内容を小文字に変換するようになりました ({{bug(1176313)}})。
 - {{domxref("Window.open()")}} の非標準機能である `dialog` はウェブコンテンツで使用できなくなりました。拡張機能や chrome 特権を持つコードでは引き続き使用可能です ({{bug(1095236)}})。
@@ -122,7 +125,7 @@ slug: Mozilla/Firefox/Releases/44
 
 #### IndexedDB
 
-- {{domxref("IDBIndex.getAll()")}} および {{domxref("IDBIndex.getAllKeys()")}} を、既定で有効にしました ({{bug(1196841)}})。
+- {{domxref("IDBIndex.getAll()")}} および {{domxref("IDBIndex.getAllKeys()")}}、それに反対側の {{domxref("IDBObjectStore")}} を既定で有効にしました ({{bug(1196841)}})。
 
 #### サービスワーカー
 
@@ -135,7 +138,7 @@ slug: Mozilla/Firefox/Releases/44
 - {{domxref("ServiceWorkerGlobalScope.beforeevicted_event", "onbeforeevicted")}} および {{domxref("ServiceWorkerGlobalScope.evicted_event", "onevicted")}} イベントハンドラーは、仕様書に準拠していなかったので削除されました。将来的に再導入される予定ですが、削除することで期待通りの機能検出が可能になります ({{bug(1218142)}})。
 - {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} コンストラクターで、 `isReload` が options 辞書に存在しなかった場合の既定値が `false` になりました ({{bug(1216401)}})。
 - {{domxref("Client.frameType")}} プロパティが正しいインターフェイスに実装されました。以前は {{domxref("WindowClient")}} にありました ({{bug(1218146)}})。
-- AppCache がページをオフラインに対応させるために使用された場合、コンソールに警告メッセージを表示し、開発者に[サービスワーカー](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)を使用するよう助言するようになりました ({{bug("1204581")}})。
+- AppCache がページをオフラインに対応させるために使用された場合、コンソールに警告メッセージを表示し、開発者に[サービスワーカー](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)を使用するよう助言するようになりました ({{bug("1204581")}})。
 - Gecko で、サービスワーカーが既定で有効化されました。
 
 #### WebRTC
@@ -146,7 +149,7 @@ slug: Mozilla/Firefox/Releases/44
   - `mozRTCIceCandidate` が {{domxref("RTCIceCandidate")}} になりました。
   - `mozRTCSessionDescription` が {{domxref("RTCSessionDescription")}} になりました。
 
-- {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}、{{domxref("RTCDataChannel.onbufferedamountlow")}} プロパティおよび {{event("bufferedamountlow")}} イベントを実装しました ({{bug(1178091)}})。
+- {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} プロパティおよび {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} イベントを実装しました ({{bug(1178091)}})。
 - {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} 属性を追加して、非標準メソッド {{domxref("RTCPeerConnection.updateIce()")}} を削除しました ({{bug(1209744)}})。
 - {{domxref("MediaStream")}} インターフェイスで {{domxref("MediaStream.addTrack()")}} および {{domxref("MediaStream.removeTrack()")}} メソッドに対応しました ({{bug(1103188)}})。
 - {{domxref("MediaStream.MediaStream", "MediaStream()")}} コンストラクタを実装しました ({{bug(1070216)}})。
@@ -208,7 +211,7 @@ _変更なし。_
 
 ### XPCOM
 
-- `nsIDOMWindow` インターフェイスが空になりました。存在していたアイテムは使用されない、他のインターフェイスに移転、あるいは C++ に限り使用するものになりました。C++ コードから利用できるアイテムは、`{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}` インターフェイスに存在しています ({{bug(1216401)}})。
+- `nsIDOMWindow` インターフェイスが空になりました。存在していたアイテムは使用されない、他のインターフェイスに移転、あるいは C++ に限り使用するものになりました。C++ コードから利用できるアイテムは、[nsPIDOMWindow](https://dxr.mozilla.org/mozilla-central/source/dom/base/nsPIDOMWindow.h) インターフェイスに存在しています ({{bug(1216401)}})。
 
 ### その他
 

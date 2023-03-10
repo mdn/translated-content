@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** メソッドは、オブジェクトを表す文字列を返します。このメソッドは、ロケール固有の目的のために派生オブジェクトによって上書きするためのものです。
@@ -90,9 +84,7 @@ let frNumber = testNumber.toLocaleString('fr');
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

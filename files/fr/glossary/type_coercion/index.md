@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Type_coercion
 original_slug: Glossaire/Type_coercion
 ---
+
 La _type coercion_ (en français, coercition de type) est la conversion automatique ou implicite de valeurs d'un type de données à un autre (par exemple : de string à nombre). La *{{Glossary("type conversion")}}* est similaire à la *type coercion* puisque les deux convertissent des valeurs d'un type de données à un autre. La différence fondamentale entre elles est que la _type coercion_ est implicite alors que la _type conversion_ peut être implicite ou explicite.
 
 ## Exemples

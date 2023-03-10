@@ -3,6 +3,7 @@ title: Properly Configuring Server MIME Types
 slug: Learn/Server-side/Configuring_server_MIME_types
 original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
 ---
+
 ## Background
 
 默认情况下，许多 web 服务器会为那些未知内容类型的文件配置一个默认 MIME 类型`text/plain` 或者`application/octet-stream` 。当一种新的内容类型被创造或者被添加到 web 服务器上，web 管理者在添加它到 web 服务器配置中可能会失败。主要原因是用户使用 Gecko-based 的浏览器，而这种浏览器只相信由 web 服务器和 web 应用所发布的 MIME 类型
@@ -33,7 +34,7 @@ MIME 类型描述了邮件或者 web 服务器或者 web 应用中的媒体内�
 
 出于安全原因，使用正确的 MIME 类型的服务内容也是重要的；恶意内容可能会影响用户的计算机，假装它是一个安全类型文档，实际上不是。
 
-> **备注：** 从历史角度，只要 HTML 文档请求处理 CSS 文件，Firefox 能够正常加载 CSS 即使它设置了错误的 MIME 类型。处于安全原因，{{ gecko("2.0") }} 对于从请求文档不同来源加载的样式表，将不再这样做。如果 CSS 来自于不同来源，你必须设置它的正确 MIME 类型 (`text/css`).
+> **备注：** 从历史角度，只要 HTML 文档请求处理 CSS 文件，Firefox 能够正常加载 CSS 即使它设置了错误的 MIME 类型。处于安全原因，Gecko 2.0 对于从请求文档不同来源加载的样式表，将不再这样做。如果 CSS 来自于不同来源，你必须设置它的正确 MIME 类型 (`text/css`).
 >
 > Gecko 1.9.1.11 (Firefox 3.5.11) 和 Gecko 1.9.2.5 (Firefox 3.6.5) 同样实施这种安全措施，但是提高它的实用性。如果样式表中的第一行看起来是一个很好的 CSS 构造，则存在允许加载的临时启发式算法。在 Firefox 4 中已经删除了启发式，您必须正确设置`text/css` 的 MIME 类型，才能够识别 CSS。
 
@@ -83,7 +84,7 @@ MIME 类型猜测导致 IE 浏览器的安全漏洞（通过利用 IE 能够将�
 
 ### Related Links
 
-- [Incorrect MIME Type for CSS Files](/en/Incorrect_MIME_Type_for_CSS_Files)
+- [Incorrect MIME Type for CSS Files](/zh-CN/Incorrect_MIME_Type_for_CSS_Files)
 - [IANA | MIME Media Types](http://www.iana.org/assignments/media-types/index.html)
 - [Hypertext Transfer Protocol — HTTP/1.1](http://www.w3.org/Protocols/HTTP/1.1/spec.html)
 - [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](http://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)

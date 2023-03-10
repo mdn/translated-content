@@ -2,6 +2,7 @@
 title: ':last-of-type'
 slug: Web/CSS/:last-of-type
 ---
+
 {{ CSSRef() }}
 
 ## 概述
@@ -54,7 +55,7 @@ p em:last-of-type {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.last-of-type")}}
+{{Compat}}
 
 ## 参见
 

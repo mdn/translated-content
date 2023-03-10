@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 ---
+
 {{AddonSidebar}}
 
 Utilisez l'API d'identité pour obtenir un code d'autorisation ou un jeton d'accès [OAuth2](https://oauth.net/2/), qu'une extension peut ensuite utiliser pour accéder aux données utilisateur d'un service prenant en charge l'accès à OAuth2 (tel qu'un compte Google ou Facebook).
@@ -35,7 +36,7 @@ L'[URL de redirection](https://www.oauth.com/oauth2-servers/redirect-uris/) repr
 
 Vous pouvez obtenir une URL de redirection en appelant {{WebExtAPIRef("identity.getRedirectURL()")}}. Cette fonction dérive une URL de redirection à partir de l'ID du module, donc si vous voulez l'utiliser, vous devez probablement définir explicitement l'ID de votre module en utilisant la clé des [`applications`](/fr/Add-ons/WebExtensions/manifest.json/applications) (sinon, chaque fois que vous [installez temporairement le module complémentaire](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), vous obtiendrez une URL de redirection différente).
 
-Vous n'avez pas besoin d'utiliser l'URL de redirection retournée par  `identity.getRedirectURL()`: vous pouvez fournir la vôtre, et cela peut être tout ce que le service redirigera. Cependant, il devrait utiliser un domaine que vous contrôlez.
+Vous n'avez pas besoin d'utiliser l'URL de redirection retournée par `identity.getRedirectURL()`: vous pouvez fournir la vôtre, et cela peut être tout ce que le service redirigera. Cependant, il devrait utiliser un domaine que vous contrôlez.
 
 Vous utiliserez l'URL de redirection à deux endroits :
 
@@ -46,7 +47,7 @@ Vous utiliserez l'URL de redirection à deux endroits :
 
 Avant de pouvoir utiliser OAuth2 avec un fournisseur de services, vous devez enregistrer l'extension auprès du fournisseur en tant que client OAuth2.
 
-Cela aura tendance à être spécifique au fournisseur de services, mais en général cela signifie créer une entrée pour votre extension sur le site Web du fournisseur. Dans ce processus, vous fournirez votre URL de redirection, et recevrez un identifiant de client (et parfois aussi un secret). Vous devrez passer les deux dans  {{WebExtAPIRef("identity.launchWebAuthFlow()")}}.
+Cela aura tendance à être spécifique au fournisseur de services, mais en général cela signifie créer une entrée pour votre extension sur le site Web du fournisseur. Dans ce processus, vous fournirez votre URL de redirection, et recevrez un identifiant de client (et parfois aussi un secret). Vous devrez passer les deux dans {{WebExtAPIRef("identity.launchWebAuthFlow()")}}.
 
 ## Fonctions
 
@@ -55,9 +56,9 @@ Cela aura tendance à être spécifique au fournisseur de services, mais en gén
 - {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
   - : Lancement WAF.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -67,7 +68,8 @@ Cela aura tendance à être spécifique au fournisseur de services, mais en gén
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,4 +96,4 @@ Cela aura tendance à être spécifique au fournisseur de services, mais en gén
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -4,6 +4,7 @@ slug: Web/SVG/Element/animate
 translation_of: Web/SVG/Element/animate
 browser-compat: svg.elements.animate
 ---
+
 {{SVGRef}}
 
 L'élément SVG **`<animate>`** permet d'animer un attribut d'un élément au fil du temps.

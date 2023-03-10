@@ -1,13 +1,8 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
 ---
+
 {{jsSidebar("Statements")}}
 
 **`break` 文**は現在のループや {{jsxref("Statements/switch", "switch")}} 文や{{jsxref("Statements/label", "ラベル", "", 1)}}文を中断し、中断した文の次の文にプログラムの制御を移します。
@@ -134,9 +129,7 @@ block_1: {
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-break-statement', 'Break statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

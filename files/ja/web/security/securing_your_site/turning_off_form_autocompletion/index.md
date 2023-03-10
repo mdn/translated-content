@@ -1,13 +1,8 @@
 ---
 title: フォームの自動補完を無効にするには
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
-tags:
-  - フォーム
-  - ガイド
-  - セキュリティ
-  - ウェブ開発
-translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
+
 この記事では、フォーム入力欄の自動補完をウェブサイト側から無効にする方法を説明します。
 
 既定では、ウェブサイト上の {{HTMLElement("input")}} 欄を通じてユーザーが送信した情報はブラウザーによって記憶されます。これよってブラウザーは、自動補完 (入力を受けた入力欄の補完候補をユーザーに提示する機能) や、オートフィル (読み込まれた入力欄をあらかじめブラウザーが補完する機能) を実現しています。

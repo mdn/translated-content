@@ -3,6 +3,7 @@ title: JavaScript 言語情報
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
 original_slug: Web/JavaScript/Language_Resources
 ---
+
 {{JsSidebar}}
 
 **ECMAScript** は [JavaScript](/ja/docs/JavaScript) の基礎を成すスクリプト言語です。ECMAScript は標準化団体 [ECMA International](http://www.ecma-international.org/) によって **ECMA-262 および ECMA-402 specifications** として標準化されています。次のような ECMAScript 標準が承認済みおよび策定中です:
@@ -233,9 +234,9 @@ ECMAScript の歴史に関する詳しい情報は [Wikipedia の ECMAScript の
 
 ## 実装
 
-- [SpiderMonkey](/ja/docs/SpiderMonkey "SpiderMonkey") - Firefox などの Mozilla 製品で使われている JavaScript エンジン
-- [Rhino](/ja/docs/Rhino "Rhino") - Java で書かれた JavaScript エンジン
-- [Tamarin](/ja/docs/Tamarin "Tamarin") - ActionScript 仮想マシン (Adobe® Flash® Player で使われている)
+- [SpiderMonkey](/ja/docs/SpiderMonkey) - Firefox などの Mozilla 製品で使われている JavaScript エンジン
+- [Rhino](/ja/docs/Rhino) - Java で書かれた JavaScript エンジン
+- [Tamarin](/ja/docs/Tamarin) - ActionScript 仮想マシン (Adobe® Flash® Player で使われている)
 - [その他の実装](http://en.wikipedia.org/wiki/List_of_ECMAScript_engines) (Wikipedia)
 
 ## 関連情報

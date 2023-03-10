@@ -2,6 +2,7 @@
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 創建一個新的文字節點.
@@ -50,4 +51,4 @@ function addTextNode(text) {
 
 ## Browser compatibility
 
-{{Compat("api.Document.createTextNode")}}
+{{Compat}}

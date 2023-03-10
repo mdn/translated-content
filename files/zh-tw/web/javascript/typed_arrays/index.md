@@ -2,9 +2,10 @@
 title: JavaScript 型別陣列
 slug: Web/JavaScript/Typed_arrays
 ---
+
 {{JsSidebar("Advanced")}}
 
-當 Webapp 有了視頻、[音頻操作](/zh_tw/Introducing_the_Audio_API_Extension)及用 [WebSockets](/zh_tw/WebSockets) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh_tw/Core_JavaScript_1.5_教學/預先定義的核心物件/String_物件)並用 [`charCodeAt()`](/en/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
+當 Webapp 有了視頻、[音頻操作](/zh_tw/Introducing_the_Audio_API_Extension)及用 [WebSockets](/zh_tw/WebSockets) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh_tw/Core_JavaScript_1.5_教學/預先定義的核心物件/String_物件)並用 [`charCodeAt()`](/zh-TW/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
 
 然而，由於需要多次型別轉換（特別是二進制資料並非以位元組計算，如 32 位元整數或浮點數），這個解法既慢又容易發生錯誤。
 
@@ -26,7 +27,17 @@ JavaScript 型別陣列提供了存取二進制資料更有效率的機制。
 
 型別陣列視圖具有自述性名稱，並為所有常用的數字類型（如 `Int8`, `Uint32`, `Float64` 等）提供視圖。 有一個特殊的型別陣列視圖 `Uint8ClampedArray`。 它的範圍值在 0 到 255 之間。它對於 [Canvas 的資料處理](/zh-TW/docs/Web/API/Canvas_API/Tutorial)非常有用。
 
-{{page("/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
+| Type                                     | Value Range               | Size in bytes | Description                                                               | Web IDL type          | Equivalent C type |
+| ---------------------------------------- | ------------------------- | ------------- | ------------------------------------------------------------------------- | --------------------- | ----------------- |
+| {{jsxref("Int8Array")}}         | -128 to 127               | 1             | 8-bit two's complement signed integer                                     | `byte`                | `int8_t`          |
+| {{jsxref("Uint8Array")}}         | 0 to 255                  | 1             | 8-bit unsigned integer                                                    | `octet`               | `uint8_t`         |
+| {{jsxref("Uint8ClampedArray")}} | 0 to 255                  | 1             | 8-bit unsigned integer (clamped)                                          | `octet`               | `uint8_t`         |
+| {{jsxref("Int16Array")}}         | -32768 to 32767           | 2             | 16-bit two's complement signed integer                                    | `short`               | `int16_t`         |
+| {{jsxref("Uint16Array")}}         | 0 to 65535                | 2             | 16-bit unsigned integer                                                   | `unsigned short`      | `uint16_t`        |
+| {{jsxref("Int32Array")}}         | -2147483648 to 2147483647 | 4             | 32-bit two's complement signed integer                                    | `long`                | `int32_t`         |
+| {{jsxref("Uint32Array")}}         | 0 to 4294967295           | 4             | 32-bit unsigned integer                                                   | `unsigned long`       | `uint32_t`        |
+| {{jsxref("Float32Array")}}     | 1.2x10^-38 to 3.4x10^38   | 4             | 32-bit IEEE floating point number ( 7 significant digits e.g. 1.1234567)  | `unrestricted float`  | `float`           |
+| {{jsxref("Float64Array")}}     | 5.0x10^-324 to 1.8x10^308 | 8             | 64-bit IEEE floating point number (16 significant digits e.g. 1.123...15) | `unrestricted double` | `double`          |
 
 ### DataView
 
@@ -98,11 +109,11 @@ int16View[0] = 32;
 console.log("現在32位元陣列的欄位0是" + int32View[0]);
 ```
 
-輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/en/JavaScript_typed_arrays/ArrayBufferView#Typed_array_subclasses) 也是同樣的情形。
+輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/zh-TW/JavaScript_typed_arrays/ArrayBufferView#Typed_array_subclasses) 也是同樣的情形。
 
 ### 處理複雜的資料結構
 
-在單一個緩衝使用不同型別、不同起始偏移的多個視圖以操作資料物件含有的多個資料型別。這個方法可以用在使用 [WebGL](/en/WebGL) 、資料檔案、[js-ctypes](/en/js-ctypes) 時遇到的複雜的資料結構。
+在單一個緩衝使用不同型別、不同起始偏移的多個視圖以操作資料物件含有的多個資料型別。這個方法可以用在使用 [WebGL](/zh-TW/WebGL) 、資料檔案、[js-ctypes](/zh-TW/js-ctypes) 時遇到的複雜的資料結構。
 
 考慮這個 C 結構：
 

@@ -1,13 +1,8 @@
 ---
 title: XSLT による XML の変換
 slug: Web/XSLT/Transforming_XML_with_XSLT
-tags:
-  - NeedsMigration
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT
 ---
+
 {{XSLTRef}}
 
 ## [概要](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview)

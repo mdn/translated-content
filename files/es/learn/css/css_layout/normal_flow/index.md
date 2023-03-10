@@ -1,9 +1,9 @@
 ---
 title: Flujo normal
 slug: Learn/CSS/CSS_layout/Normal_Flow
-translation_of: Learn/CSS/CSS_layout/Normal_Flow
 original_slug: Learn/CSS/CSS_layout/Flujo_normal
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
@@ -59,7 +59,7 @@ Echemos un vistazo a un ejemplo sencillo que explica todo esto:
 
 <p>Estamos separados por nuestros márgenes. Debido al colapso del margen, estamos separados por el ancho de uno de nuestros márgenes, no por ambos.</p>
 
-<p>Los elementos en línea <span>como este</span> y <span>este otro</span> se ubican en la misma y la de los nodos de texto adyacentes, mientras hay espacio en la misma línea. Si un elemento en línea desborda, <span>sigue por la línea siguiente, si es posible (como la que contiene este texto)</span>, o simplemente pasa a una línea nueva, como hace esta imagen: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>Los elementos en línea <span>como este</span> y <span>este otro</span> se ubican en la misma y la de los nodos de texto adyacentes, mientras hay espacio en la misma línea. Si un elemento en línea desborda, <span>sigue por la línea siguiente, si es posible (como la que contiene este texto)</span>, o simplemente pasa a una línea nueva, como hace esta imagen: <img src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow/long.jpg"></p>
 ```
 
 ```css

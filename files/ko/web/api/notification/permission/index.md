@@ -1,15 +1,6 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-browser-compat: api.Notification.permission
-translation_of: Web/API/Notification/permission
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

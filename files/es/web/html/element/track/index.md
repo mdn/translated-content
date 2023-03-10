@@ -1,11 +1,10 @@
 ---
 title: '<track>: El elemento pista de texto incrustado'
 slug: Web/HTML/Element/track
-translation_of: Web/HTML/Element/track
 original_slug: Web/HTML/Element/track
-browser-compat: html.elements.track
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento [HTML](/es/docs/Web/HTML) **`<track>`** se utiliza como elemento hijo de los elementos multimedia, {{HTMLElement("audio")}} y {{HTMLElement("video")}}. Le permite especificar pistas de texto cronometradas (o datos basados en el tiempo), por ejemplo, para manejar subtítulos automáticamente. Las pistas están formateadas en [formato WebVTT](/es/docs/Web/API/WebVTT_API) (archivos `.vtt`): _Web Video Text Tracks_ (pistas de texto de video web).
 
@@ -28,7 +27,7 @@ El elemento [HTML](/es/docs/Web/HTML) **`<track>`** se utiliza como elemento hij
     <tr>
       <th scope="row">Omisión de la etiqueta</th>
       <td>
-        Como es un elemento vacío, la etiqueta de inicio debe estar presente y 
+        Como es un elemento vacío, la etiqueta de inicio debe estar presente y
         no debe tener la etiqueta de cierre.
       </td>
     </tr>
@@ -36,7 +35,7 @@ El elemento [HTML](/es/docs/Web/HTML) **`<track>`** se utiliza como elemento hij
       <th scope="row">Padres permitidos</th>
       <td>
         <p>
-          Un elemento multimedia, {{HTMLElement("audio")}} o 
+          Un elemento multimedia, {{HTMLElement("audio")}} o
           {{HTMLElement("video")}}.
         </p>
       </td>

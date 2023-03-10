@@ -1,13 +1,8 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
+
 {{JSRef}}
 
 **`handler.has()`** は {{jsxref("Operators/in", "in")}} 演算子に対するトラップです。
@@ -91,9 +86,7 @@ const p = new Proxy(obj, {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

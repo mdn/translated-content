@@ -5,6 +5,7 @@ translation_of: Web/API/Element/error_event
 original_slug: Web/Events/error
 browser-compat: api.Element.error_event
 ---
+
 {{APIRef}}
 
 L'évènement `error` est déclenché sur un objet [`Element`](/fr/docs/Web/API/Element) lorsque le chargement d'une ressource a échoué ou qu'elle ne peut pas être utilisée. Cela peut, par exemple, se produire lors d'une erreur d'exécution d'un script ou lorsqu'une image ne peut être trouvée ou si elle est invalide.

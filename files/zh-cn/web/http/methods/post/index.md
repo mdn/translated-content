@@ -2,6 +2,7 @@
 title: POST
 slug: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `POST` 方法** 发送数据给服务器。请求主体的类型由 {{HTTPHeader("Content-Type")}} 首部指定。
@@ -25,9 +26,9 @@ PUT 和{{HTTPMethod("POST")}}方法的区别是，PUT 方法是幂等的：连�
 | 请求是否有主体                   | 是                                        |
 | -------------------------------- | ----------------------------------------- |
 | 成功的响应是否有主体             | 是                                        |
-| {{Glossary("安全")}}     | 否                                        |
-| {{Glossary("幂等")}}     | 否                                        |
-| {{Glossary("可缓存")}} | Only if freshness information is included |
+| {{Glossary("Safe/HTTP", "安全")}}     | 否                                        |
+| {{Glossary("Idempotent", "幂等")}}     | 否                                        |
+| {{Glossary("Cacheable", "可缓存")}} | Only if freshness information is included |
 | HTML 表单是否支持                | 是                                        |
 
 ## 语法

@@ -2,6 +2,7 @@
 title: top
 slug: Web/CSS/top
 ---
+
 {{CSSRef}}
 
 **`top`**[样式](/zh-CN/docs/Web/CSS)属性定义了定位元素的上外边距边界与其包含块上边界之间的偏移，非定位元素设置此属性无效。
@@ -30,7 +31,7 @@ top: unset;
 - 当`position`设置为`sticky`时，如果元素在 viewport 里面，`top`属性的效果和 position 为`relative`等同；如果元素在 viewport 外面，`top`属性的效果和 position 为`fixed`等同。
 - 当`position`设置为`static`时，`top`属性无效。
 
-当`top`和{{cssxref("bottom")}}同时指定时，并且 {{cssxref("height")}}没有被指定或者指定为`auto`的时候，`top`和{{cssxref("bottom")}}​​​​​ 都会生效，在其他情况下，如果 {{cssxref("height")}}被限制，则{{cssxref("top")}}属性会优先设置，`bottom`属性则会被忽略。
+当`top`和{{cssxref("bottom")}}同时指定时，并且 {{cssxref("height")}}没有被指定或者指定为`auto`的时候，`top`和{{cssxref("bottom")}} 都会生效，在其他情况下，如果 {{cssxref("height")}}被限制，则{{cssxref("top")}}属性会优先设置，`bottom`属性则会被忽略。
 
 {{cssinfo}}
 
@@ -75,11 +76,11 @@ div {
 }
 ```
 
-```plain
+```html
 <div>The size of this content is determined by the position of its edges.</div>
 ```
 
-{{EmbedLiveSample('Example','100%','200')}}​​​​​​
+{{EmbedLiveSample('示例','100%','200')}}
 
 ## 规范
 

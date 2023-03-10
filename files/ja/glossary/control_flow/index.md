@@ -2,6 +2,7 @@
 title: Control flow (制御フロー)
 slug: Glossary/Control_flow
 ---
+
 _制御フロー_（制御の流れ）は、コンピューターがスクリプト内の文を実行する順序です。
 
 条件やループなどの（非常によく出てくる）制御フローを変更する構造にコンピューターが出合わない限り、コードはファイルの最初の行から順に最後の行まで実行します。
@@ -26,7 +27,7 @@ if (field==empty) {
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "制御構造")}}
+- Wikipedia 上の [制御構造](https://ja.wikipedia.org/wiki/制御構造)
 
 ### 技術文書
 

@@ -3,6 +3,7 @@ title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
 translation_of: Web/API/IDBObjectStore/add
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`add()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée un [clone structurel](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur et stocke la valeur clonée dans le magasin d'objet. Cette méthode permet d'ajouter de nouveaux enregistrements dans un magasin d'objet.
@@ -49,7 +50,7 @@ Cette méthode peut lever une exception {{domxref("DOMException")}} ayant l'un d
     <tr>
       <td><code>TransactionInactiveError</code></td>
       <td>
-        La transaction pour cet objet  {{domxref("IDBObjectStore")}}
+        La transaction pour cet objet {{domxref("IDBObjectStore")}}
         est inactive.
       </td>
     </tr>
@@ -148,7 +149,7 @@ function addData() {
 };
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/to-do-notifications/) ([exemple](https://mdn.github.io/to-do-notifications/)).
+> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -166,4 +167,4 @@ function addData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

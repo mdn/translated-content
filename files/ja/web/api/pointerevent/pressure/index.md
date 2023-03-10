@@ -1,32 +1,28 @@
 ---
 title: PointerEvent.pressure
 slug: Web/API/PointerEvent/pressure
+l10n:
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
+
 {{ APIRef("Pointer Events") }}
 
-{{domxref("PointerEvent")}} インターフェイスの **`pressure`** 読み取り専用プロパティは、ポインタ入力の正規化された圧力を示します。
+**`pressure`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、ポインター入力の正規化された圧力を示します。
 
-## 構文
+## 値
 
-```
-var pressure = pointerEvent.pressure;
-```
-
-### 戻り値
-
-- `pressure`
-  - : `0` から `1` までの範囲のポインタ入力の正規化された圧力。 ここで、`0` と `1` は、それぞれハードウェアが検出できる最小圧力と最大圧力を表します。 マウスなど、圧力をサポートしていないハードウェアの場合、値はポインタがアクティブボタン状態のときは `0.5`、それ以外のときは `0` です。
+ポインター入力の `0` から `1` までの範囲に正規化された圧力。ここで、`0` と `1` は、それぞれハードウェアが検出できる最小圧力と最大圧力を表します。 マウスなど、圧力に対応していないハードウェアの場合、値はポインターのボタンの状態がアクティブであるときは `0.5`、それ以外のときは `0` です。
 
 ## 例
 
-このスニペットでは、{{event("pointerdown")}} イベントが発生すると、そのイベントの `pressure` プロパティの値に応じてさまざまな関数が呼び出されます。
+このスニペットでは、{{domxref("Element/pointerdown_event", "pointerdown")}} イベントが発生すると、そのイベントの `pressure` プロパティの値に応じてさまざまな関数が呼び出されます。
 
 ```js
-someElement.addEventListener('pointerdown', function(event) {
-  if (event.pressure == 0) {
+someElement.addEventListener('pointerdown', (event) => {
+  if (event.pressure === 0) {
     // 圧力なし
     process_no_pressure(event);
-  } else if (event.pressure == 1) {
+  } else if (event.pressure === 1) {
     // 最大圧力
     process_max_pressure(event);
   } else {
@@ -36,16 +32,13 @@ someElement.addEventListener('pointerdown', function(event) {
 }, false);
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                             | 状態                                     | コメント |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-pointerevent-pressure', 'pressure')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#dom-pointerevent-pressure', 'pressure')}} | {{Spec2('Pointer Events')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PointerEvent.pressure")}}
+{{Compat}}
 
 ## 関連情報
 

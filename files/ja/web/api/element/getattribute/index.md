@@ -2,6 +2,7 @@
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 **`getAttribute()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素の指定された属性の値を返します。

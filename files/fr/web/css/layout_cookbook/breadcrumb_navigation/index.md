@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 original_slug: Web/CSS/Layout_cookbook/Navigation_Breadcrumb
 ---
+
 {{CSSRef}}
 
 La navigation avec un fil d'Ariane (_breadcrumb_) permet à un utilisateur de comprendre l'emplacement auquel il se trouve au sein du site web en fournissant un fil d'Ariane permettant de revenir à la page de départ.
@@ -33,9 +34,7 @@ On utilise ici les attributs `aria-label` et `aria-current` afin d'aider les uti
 
 ## Compatibilité des navigateurs
 
-### Boîtes flexibles
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Voir aussi
 

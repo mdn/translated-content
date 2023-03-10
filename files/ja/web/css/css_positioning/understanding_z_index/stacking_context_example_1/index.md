@@ -1,13 +1,8 @@
 ---
 title: 重ね合わせコンテキストの例 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Understanding_CSS_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
+
 {{CSSRef}}
 
 « [CSS](/ja/docs/Web/CSS) « [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
@@ -37,7 +32,7 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 
-> **Note:** DIV #1 と DIV #3 は半透明ではありません。位置指定された要素に1未満の不透明度を与えると、ちょうど z-index 値を追加したのと同じように、暗黙的に重ね合わせコンテキストが作られることを忘れないのは大切です。また、この例は、親要素が重ね合わせコンテキストを作らないときに、何が起こるのかを示しています。
+> **メモ:** DIV #1 と DIV #3 は半透明ではありません。位置指定された要素に1未満の不透明度を与えると、ちょうど z-index 値を追加したのと同じように、暗黙的に重ね合わせコンテキストが作られることを忘れないのは大切です。また、この例は、親要素が重ね合わせコンテキストを作らないときに、何が起こるのかを示しています。
 
 ## 例
 

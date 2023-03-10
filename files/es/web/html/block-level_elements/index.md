@@ -1,15 +1,8 @@
 ---
 title: Elementos en bloque
 slug: Web/HTML/Block-level_elements
-tags:
-  - Guía
-  - HTML
-  - HTML5
-  - Principiante
-  - Web
-  - desarrollo
-translation_of: Web/HTML/Block-level_elements
 ---
+
 Los elementos, en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Language**) usualmente son elementos "en bloque" o [elementos "en línea"](/es/docs/Web/HTML/Elementos_en_línea). Un elemento en bloque ocupa todo el espacio de su elemento padre (contenedor), creando así un "bloque". Este artículo ayuda a explicar lo que esto significa.
 
 Los navegadores suelen mostrar el elemento a nivel de bloque con un salto de línea antes y después del elemento. El siguiente ejemplo demuestra la influencia elementos en bloque:
@@ -51,15 +44,15 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 
 - {{ HTMLElement("address") }}
   - : Información de contacto.
-- {{ HTMLElement("article") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("article") }}
   - : Contenido de Articulo.
-- {{ HTMLElement("aside") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("aside") }}
   - : Contenido adicional.
-- {{ HTMLElement("audio") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("audio") }}
   - : Reproductor de audio
 - {{ HTMLElement("blockquote") }}
   - : Bloque de "cita".
-- {{ HTMLElement("canvas") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("canvas") }}
   - : Dibujo canvas.
 - {{ HTMLElement("dd") }}
   - : Descripción de definición.
@@ -70,19 +63,19 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 - {{ HTMLElement("fieldset") }}
   - : Etiqueta de conjunto de campos.
 
-- {{ HTMLElement("figcaption") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("figcaption") }}
   - : Leyenda de figura.
-- {{ HTMLElement("figure") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("figure") }}
   - : Grupos contenido multimedia con una leyenda (ver {{ HTMLElement("figcaption") }}).
-- {{ HTMLElement("footer") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("footer") }}
   - : Sección o pie de página.
 - {{ HTMLElement("form") }}
   - : Formulario de entrada.
 - {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
   - : Niveles de cabecera 1-6.
-- {{ HTMLElement("header") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("header") }}
   - : Sección o cabecera de página.
-- {{ HTMLElement("hgroup") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("hgroup") }}
   - : Grupos información de encabezado.
 - {{ HTMLElement("hr") }}
   - : Regla Horizontal (línea divisoria).
@@ -97,13 +90,13 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
   - : Contenido para ser usado si los scripts no son soportados o permitidos.
 - {{ HTMLElement("ol") }}
   - : Lista ordenada.
-- {{ HTMLElement("output") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("output") }}
   - : Formulario de salida.
 - {{ HTMLElement("p") }}
   - : Párrafo.
 - {{ HTMLElement("pre") }}
   - : Texto preformateado.
-- {{ HTMLElement("section") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("section") }}
   - : Sección de una página web.
 - {{ HTMLElement("table") }}
   - : Tabla.
@@ -111,7 +104,7 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
   - : Pie de tabla.
 - {{ HTMLElement("ul") }}
   - : Lista no ordenada.
-- {{ HTMLElement("video") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("video") }}
   - : Reproductor de vídeo.
 
 ### Ver también

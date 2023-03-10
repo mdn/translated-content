@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/12
 original_slug: Mozilla/Firefox/Versions/12
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume les principaux changements dans Firefox 12 qui sont utiles aux développeurs.
@@ -55,7 +56,7 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### MathML
 
-- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/Special:Tags?tag=MathML:Token+Elements). C'est particulièrement important pour certaines [notations mathématiques Arabes](http://www.w3.org/TR/arabic-math/).
+- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/fr/docs/Web/MathML/Element#éléments_textuels). C'est particulièrement important pour certaines [notations mathématiques Arabes](https://www.w3.org/TR/arabic-math/).
 - L'attribut d'alignement `align` definit dans MathML3 a été implementé pour {{MathMLElement("munder")}}, {{MathMLElement("mover")}} et {{MathMLElement("munderover")}}.
 
 ### Réseau
@@ -86,7 +87,7 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 ### XUL
 
-- La définition des valeurs pour l'attribut {{XULAttr("chromemargin")}} a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
+- La définition des valeurs pour l'attribut `chromemargin` a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
 
 ### XPCOM
 

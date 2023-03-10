@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
 browser-compat: javascript.builtins.Uint8Array.Uint8Array
 ---
+
 {{JSRef}}
 
 Le constructeur **`Uint8Array()`** crée un tableau typé contenant des entiers non-signés sur 8 bits. Le contenu de ces éléments est initialisé à `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation usuelle pour les tableaux avec les crochets.

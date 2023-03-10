@@ -2,6 +2,7 @@
 title: JavaScript 初探
 slug: Learn/JavaScript/First_steps
 ---
+
 {{LearnSidebar}}
 
 帶領各位開始體驗撰寫 JavaScript 前，在第一個 JavaScript 單元中，我們首先來回答一些基本的問題，像是「什麼是 JavaScript 啊？」、「它長什麼樣子？」以及「它能拿來做什麼？」。之後我們會詳細討論幾個關鍵元素，諸如變量(variables)、字串(strings)、數字(numbers)和陣列(arrays)。
@@ -14,7 +15,7 @@ slug: Learn/JavaScript/First_steps
 - [HTML 簡介](/zh-TW/docs/Learn/HTML/Introduction_to_HTML).
 - [CSS 簡介](/zh-TW/docs/Learn/CSS/Introduction_to_CSS).
 
-> **備註：** 假如你正在使用 電腦/平板/其他裝置，你還不需要知道如何建立自己的檔案，你可以在線上程式撰寫系統來嘗試範例程式，像是 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/).
+> **備註：** 假如你正在使用 電腦/平板/其他裝置，你還不需要知道如何建立自己的檔案，你可以在線上程式撰寫系統來嘗試範例程式，像是 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 
 ## 概觀
 

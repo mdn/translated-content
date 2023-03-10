@@ -1,12 +1,8 @@
 ---
 title: MathML の編集
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
-translation_of: Web/MathML/Authoring
 ---
+
 本稿では MathML を用いて数式を表現する方法を説明します。 HTML と同じように、 MathML はタグと属性によって記述されます。文書中に箇条書きや表のような高度な構造がある場合 HTML は煩雑になってしまいますが、幸いなことに単純な記法で表を生成することができるツールや、 WYSIWYG な編集ができるツール、その他さまざまなコンテンツ管理システムであったりと，ウェブページを書き下ろすのに助けになるものはたくさんあります。
 
 数式を表現しようと思うともっと複雑です。数学には分数や平方根、行列など独自のタグが必要になるような構造がいろいろあるからです。ですから、優良な MathML エディターが求められます。以下ではその幾つかについて述べていきます。取り分け、 Mozilla の MathML 開発チームが開発中の [TeXZilla](https://github.com/TeXZilla/) は、 JavaScript 製 Unicode LaTeX-MathML コンバーターであり、本稿で紹介されているような多くの場面で用いられることを想定しています。無論、本稿のツール紹介ではすべてを網羅している訳ではありませんから、是非とも W3C が発行する [MathML ソフトウェア一覧](https://www.w3.org/Math/Software/)をチェックして他のツールも見てみてください。
@@ -60,9 +56,9 @@ HTML5 文書内部では表示 (presentation) MathML が使えます。
 </html>
 ```
 
-> **Note:** To use MathML in XML documents (e.g. XHTML, EPUB or OpenDocument) place an explicit `xmlns="http://www.w3.org/1998/Math/MathML"` attribute on each `<math>` element.
+> **メモ:** To use MathML in XML documents (e.g. XHTML, EPUB or OpenDocument) place an explicit `xmlns="http://www.w3.org/1998/Math/MathML"` attribute on each `<math>` element.
 
-> **Note:** Some email or instant messaging clients are able to send and receive messages in the HTML format. It is thus possible to embed mathematical formulas inside such messages, as long as MathML tags are not filtered out by markup sanitizers.
+> **メモ:** Some email or instant messaging clients are able to send and receive messages in the HTML format. It is thus possible to embed mathematical formulas inside such messages, as long as MathML tags are not filtered out by markup sanitizers.
 
 #### MathML に対応していないブラウザー向けの代替策
 
@@ -84,11 +80,11 @@ Alternatively, you can also just display a warning at the top of the page for br
 <script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"></script>
 ```
 
-> **Note:** これら 2 つのスクリプトは [mspace](/ja/docs/Web/MathML/Element/mspace) または [mpadded](/ja/docs/Web/MathML/Element/mpadded) 要素の機能検出を行うことに注意してください (これらのページのブラウザー互換性表を参照してください)。また、良好な MathML の対応のないブラウザーのためにページの上部に警告を表示し、ユーザーに上記のフォールバックのいずれかを選択させるための同様のスクリプトもあります。
+> **メモ:** これら 2 つのスクリプトは [mspace](/ja/docs/Web/MathML/Element/mspace) または [mpadded](/ja/docs/Web/MathML/Element/mpadded) 要素の機能検出を行うことに注意してください (これらのページのブラウザー互換性表を参照してください)。また、良好な MathML の対応のないブラウザーのためにページの上部に警告を表示し、ユーザーに上記のフォールバックのいずれかを選択させるための同様のスクリプトもあります。
 
 #### 数学記号用のフォント
 
-As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Fonts) article, mathematical fonts are instrumental to render MathML content. It's thus always a good idea to share the [installation instructions for such fonts](/en-US/docs/Web/MathML/Fonts#installation_instructions) or to provide them as [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
+As explained on the [MathML Fonts](/ja/docs/Web/MathML/Fonts) article, mathematical fonts are instrumental to render MathML content. It's thus always a good idea to share the [installation instructions for such fonts](/ja/docs/Web/MathML/Fonts#installation_instructions) or to provide them as [Web fonts](/ja/docs/Learn/CSS/Styling_text/Web_fonts).
 
 The [MathFonts page](https://fred-wang.github.io/MathFonts/) provides such Web fonts together with proper style sheets. For example, just insert the following line in your document header in order to select the Latin Modern fonts with fallback Web fonts:
 
@@ -102,7 +98,7 @@ Several fonts are proposed and you can just select a different style, for exampl
  <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css">
 ```
 
-> **Note:** The fonts and stylesheets from that MathFonts page are distributed under open source licenses, so feel free to copy them on your own server and adapt them to your need.
+> **メモ:** The fonts and stylesheets from that MathFonts page are distributed under open source licenses, so feel free to copy them on your own server and adapt them to your need.
 
 ## 簡易記法からの変換
 
@@ -112,7 +108,7 @@ In this section, we review some tools to convert MathML from a [lightweight mark
 
 With this approach, formulas are written directly in Web pages and a JavaScript library takes care of performing their conversion to MathML. This is probably the easiest option, but it also has some issues: extra JavaScript code must be loaded and executed, authors must escape reserved characters, Web crawlers won't have access to the MathML output...
 
-A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/Web_Components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
+A [custom element](/ja/docs/Web/Web_Components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/ja/docs/Web/Web_Components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
 
 ```html
 <!DOCTYPE html>
@@ -200,10 +196,10 @@ Instead of generating MathML expression at page load, you can instead rely on co
 </html>
 ```
 
-That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
+That page does contain any [`script`](/ja/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
-$ cat input.html | node TeXZilla.js streamfilter > output.html
+cat input.html | node TeXZilla.js streamfilter > output.html
 ```
 
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
@@ -245,7 +241,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/msp
 latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
 ```
 
-> **Note:** Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mathoid).
+> **メモ:** Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mathoid).
 
 ## グラフィカルインターフェイス
 
@@ -253,17 +249,17 @@ In this section, we review a few editing tools providing graphical interfaces.
 
 ### 入力欄
 
-A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example,  [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
+A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example, [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
 
 ![LaTeX input box in Thunderbird ](thunderbird.png)
 
-> **Note:** You can also use the **Insert > HTML** command to paste any MathML content.
+> **メモ:** You can also use the **Insert > HTML** command to paste any MathML content.
 
 [LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the *StartMath* syntax provides extra equation panels to insert pre-defined mathematical constructions.
 
 ![StarMath input box in Libre Office](libreoffice.png)
 
-> **Note:** To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
+> **メモ:** To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
 
 ### WYSIYWG なエディター
 
@@ -273,7 +269,7 @@ Other editors provide math editing features that are directly integrated into th
 
 ![TeXmacs example](texmacs.png)
 
-> **Note:** By default Lyx and TeXmacs will use images of formulas in their HTML output. To choose MathML instead, [follow these instructions](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx) for the former and select `User preference > Convert > Export mathematical formulas as MathML` for the latter.
+> **メモ:** By default Lyx and TeXmacs will use images of formulas in their HTML output. To choose MathML instead, [follow these instructions](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx) for the former and select `User preference > Convert > Export mathematical formulas as MathML` for the latter.
 
 ## 光学文字認識・手書き文字認識
 

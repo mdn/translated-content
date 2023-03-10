@@ -8,6 +8,7 @@ tags:
   - namespaceURI
 translation_of: Web/API/Attr/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace de nom de l'attribut, ou `null` si l'élément n'est pas dans un espace de noms.

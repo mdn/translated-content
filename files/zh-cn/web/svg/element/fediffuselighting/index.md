@@ -2,11 +2,12 @@
 title: feDiffuseLighting
 slug: Web/SVG/Element/feDiffuseLighting
 ---
+
 {{SVGRef}}
 
 滤镜光照一个图像，使用 alpha 通道作为隆起映射。结果图像，是一个 RGBA 不透明图像，取决于光的颜色、光的位置以及输入隆起映射的表面几何形状。
 
-滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重`arithmetic 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。`
+滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重 `arithmetic` 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。
 
 ## 用法
 
@@ -65,21 +66,17 @@ slug: Web/SVG/Element/feDiffuseLighting
 </svg>
 ```
 
-预计的呈现：
-
-![Expected rendering for the example](/files/4447/feDiffuseLighting.png)
-
 实时呈现：
 
-{{EmbedLiveSample("Example",470,170)}}
+{{EmbedLiveSample("示例",470,170)}}
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -92,7 +89,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 ## DOM 接口
 
-该元素实现了[`SVGFEDiffuseLightingElement`](/en/DOM/SVGFEDiffuseLightingElement)接口。
+该元素实现了[`SVGFEDiffuseLightingElement`](/zh-CN/DOM/SVGFEDiffuseLightingElement)接口。
 
 ## 参见
 
@@ -115,4 +112,4 @@ slug: Web/SVG/Element/feDiffuseLighting
 - {{ SVGElement("feSpotLight") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

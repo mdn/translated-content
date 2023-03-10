@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/CSS/Comprendre_z-index/Empilement_de_couches
 ---
+
 {{CSSRef}}
 
 Le **contexte d'empilement** est une conceptualisation en trois dimensions de la façon dont les éléments HTML sont placés sur un axe de profondeur relatif à la personne qui fait face à la page web. Les éléments HTML s'organisent dans ce volume selon un ordre construit à partir des attributs de l'élément.

@@ -1,14 +1,6 @@
 ---
 title: 일급 함수
 slug: Glossary/First-class_Function
-tags:
-  - 1급객체
-  - 1급함수
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - 일급객체
-translation_of: Glossary/First-class_Function
 ---
 함수를 다른 변수와 동일하게 다루는 언어는 **일급 함수**를 가졌다고 표현합니다. 예를 들어, 일급 함수를 가진 언어에서는 함수를 다른 함수에 인수로 제공하거나, 함수가 함수를 반환할 수 있으며, 변수에도 할당할 수 있습니다.
 

@@ -1,14 +1,8 @@
 ---
 title: CSS オーバーフロー
 slug: Web/CSS/CSS_Overflow
-tags:
-  - CSS
-  - ガイド
-  - overflow
-  - スクロールバー
-  - スクロール
-translation_of: Web/CSS/CSS_Overflow
 ---
+
 {{CSSRef}}
 
 **CSS オーバーフロー**モジュールは、視覚メディアにおけるスクロール可能なオーバーフローの処理に関連した CSS の機能を含んでいます。 CSS では、ボックスの内容がボックスの辺の 1 つ以上を越えてはみ出した場合にオーバーフローが発生します。
@@ -46,33 +40,7 @@ CSS で時に管理しなければならないオーバーフローを**スク�
 
 ## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}}
-      </td>
-      <td>{{Spec2('CSS3 Overflow')}}</td>
-      <td>
-        <p>構文を 1 つだけでなく 1 つまたは 2 つのキーワードに変更した</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}
-      </td>
-      <td>{{Spec2('CSS2.1')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## 関連情報
 

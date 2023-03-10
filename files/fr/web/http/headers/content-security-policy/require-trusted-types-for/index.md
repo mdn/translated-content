@@ -13,6 +13,7 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** {{experimental_inline}} directive informe l'agent utilisateur de contrôler les données passées au puits de fonctions XSS du DOM, tel que le mutateur [Element.innerHTML](/fr/docs/Web/API/Element/innerHTML).
@@ -54,13 +55,11 @@ Une [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webap
 
 ## Spécifications
 
-| Spécification                                                             | Statut | Commentaire          |
-| ------------------------------------------------------------------------- | ------ | -------------------- |
-| [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) | Draft  | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.trusted-types")}}
+{{Compat}}
 
 ## Voir aussi
 

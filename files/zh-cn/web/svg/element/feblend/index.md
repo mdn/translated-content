@@ -2,6 +2,7 @@
 title: feBlend
 slug: Web/SVG/Element/feBlend
 ---
+
 {{SVGRef}}
 
 `feBlend`滤镜把两个对象组合在一起，使它们受特定的混合模式控制。这类似于图像编辑软件中混合两个图层。该模式由属性{{ SVGAttr("mode") }}定义。
@@ -10,15 +11,13 @@ slug: Web/SVG/Element/feBlend
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -30,13 +29,13 @@ slug: Web/SVG/Element/feBlend
 
 ## DOM 接口
 
-该元素实现了[`SVGFEBlendElement`](/en/DOM/SVGFEBlendElement)接口。
+该元素实现了[`SVGFEBlendElement`](/zh-CN/DOM/SVGFEBlendElement)接口。
 
 ## 示例
 
 ### SVG
 
-```plain
+```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -53,9 +52,9 @@ slug: Web/SVG/Element/feBlend
 </svg>
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", 200, 200)}}
+{{EmbedLiveSample("示例", 200, 200)}}
 
 ## 参见
 
@@ -77,4 +76,4 @@ slug: Web/SVG/Element/feBlend
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG tutorial: Filter effects](/en/SVG/Tutorial/Filter_effects)
+- [SVG tutorial: Filter effects](/zh-CN/SVG/Tutorial/Filter_effects)

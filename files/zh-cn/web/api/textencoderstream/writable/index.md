@@ -2,6 +2,7 @@
 title: TextEncoderStream.writable
 slug: Web/API/TextEncoderStream/writable
 ---
+
 {{APIRef("Encoding API")}}
 
 {{domxref("TextEncoderStream")}} 接口的只读属性 **`writable`** 返回一个 {{domxref("WritableStream")}}。

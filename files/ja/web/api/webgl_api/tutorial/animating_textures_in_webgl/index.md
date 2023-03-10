@@ -2,7 +2,8 @@
 title: WebGL でのテクスチャのアニメーティング
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+
+{{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 今回のデモンストレーションでは、前回の例で用いた静的なテクスチャを Ogg ビデオファイルのフレームに置き換えます。実はこれを行うのはとても簡単ですが、見ていて楽しいです。さっそく始めましょう。なお同様のコードを、どんな種類のデータ ({{HTMLElement("canvas")}} など) をテクスチャのソースとして用いる場合でも使用することができます。
 
@@ -105,6 +106,6 @@ function updateTexture() {
 
 ## 関連情報
 
-- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Using_HTML5_audio_and_video "Using audio and video in Firefox")
+- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Using_HTML5_audio_and_video)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

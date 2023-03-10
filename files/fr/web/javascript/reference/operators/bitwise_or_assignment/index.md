@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_or_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'affectation après OU binaire (`|=`) utilise la représentation binaire des deux opérandes et effectue un OU logique entre chaque puis affecte le résultat à la variable représentée par l'opérande gauche.
@@ -32,6 +33,7 @@ a |= 2; // 7
 // 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
 // -----------------------------------
+
 // 7: 00000000000000000000000000000111
 ```
 

@@ -2,6 +2,7 @@
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`forEach()`** メソッドを使用すると、コールバック関数を介してこのオブジェクトに含まれるすべての値を反復処理できます。
@@ -44,9 +45,7 @@ value2 key2
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                 | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | -------- |
-| {{SpecName('URL', '#interface-urlsearchparams', "forEach() (see \"iterable\")")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

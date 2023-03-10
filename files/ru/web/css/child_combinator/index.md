@@ -11,7 +11,9 @@ translation_of: Web/CSS/Child_combinator
 
 ## Синтаксис
 
-    selector1 > selector2 { style properties }
+```
+selector1 > selector2 { style properties }
+```
 
 ## Пример
 

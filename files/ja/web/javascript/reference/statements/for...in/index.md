@@ -1,12 +1,8 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for...in` 文**は、キーが文字列であるオブジェクトの[列挙可能プロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)すべてに対して、継承された列挙可能プロパティも含めて反復処理を行います ([Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) がキーになったものは無視します)。
@@ -39,7 +35,7 @@ for (variable in object)
 
 ### 配列の繰り返しと for...in
 
-> **Note:** **注:** `for...in` はインデックスの順序が重要となる {{jsxref("Array", "配列")}} の繰り返しには使うべきではありません。
+> **メモ:** `for...in` はインデックスの順序が重要となる {{jsxref("Array", "配列")}} の繰り返しには使うべきではありません。
 
 配列のインデックスは単に整数値の名前で列挙できるプロパティであり、そうでないと一般的なオブジェクトのプロパティとして一意になりません。 `for...in` は特定の順序で並べられる保証はありません。 `for...in` ループ文はすべての列挙できるプロパティを返し、その中には非整数型やそれを引き継いだインデックス名があります。
 
@@ -101,9 +97,7 @@ for (const prop in obj) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...in statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

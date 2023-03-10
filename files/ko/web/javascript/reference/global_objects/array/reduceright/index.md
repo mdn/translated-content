@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
+
 {{JSRef}}
 
 **`reduceRight()`** 메서드는 누적기에 대해 함수를 적용하고 배열의 각 값 (오른쪽에서 왼쪽으로)은 값을 단일 값으로 줄여야합니다.

@@ -2,13 +2,14 @@
 title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
 ---
+
 Firefox 7 は 2011 年 9 月 27 日にリリースされました。このページは Firefox 7 のリリースにあたり、開発者に関係する変更についてまとめたものです。
 
 ## Web 開発者向けの変更点一覧
 
 ### HTML
 
-- {{ domxref("HTMLHeadElement") }} の `profile` プロパティが削除されました。このプロパティは {{ gecko("2.0") }} から非推奨となっていました。
+- {{ domxref("HTMLHeadElement") }} の `profile` プロパティが削除されました。このプロパティは Gecko 2.0 から非推奨となっていました。
 - {{ domxref("HTMLImageElement") }} の `x` プロパティと `y` プロパティが削除されました。
 - {{ domxref("HTMLSelectElement") }} の `add()` メソッドの `before` 引数が optional となりました。
 - {{ HTMLElement("body") }} の {{ htmlattrxref("background", "body") }} 属性が URI として解決されなくなりました。この変更は HTML 仕様への準拠によるものです。
@@ -81,7 +82,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 これらの変更は、アドオン開発者と、Mozilla 本体のコードに関わっている開発者の双方に影響するものです。アドオン開発者は [アドオンの Firefox 7 対応](/ja/docs/Firefox/Updating_extensions_for_Firefox_7) に書かれている追加情報も参照してください。
 
-> **Note:** Firefox 7 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> **メモ:** Firefox 7 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### JavaScript コードモジュール
 

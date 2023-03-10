@@ -1,14 +1,8 @@
 ---
 title: プログレッシブ読み込み
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - Loading
-  - PWA
-  - Progressive web apps
-  - js13kGames
-  - progressive
-translation_of: Web/Progressive_web_apps/Loading
 ---
+
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 前回の記事では、[js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) の例をプログレッシブウェブアプリケーションにするのに役立つ API について説明しました — [サービスワーカー](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)、[ウェブマニフェスト](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)、[通知、およびプッシュ](/ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)です。 この記事では、リソースを徐々に読み込せて、アプリのパフォーマンスをさらに向上させます。
@@ -157,7 +151,7 @@ if('IntersectionObserver' in window) {
 
 ## 最終的な考え
 
-このチュートリアルのシリーズではこれですべてです — [js13kPWA サンプルアプリのソースコード](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)を調べて、[紹介](/ja/docs/Web/Progressive_web_apps/Introduction)、[PWA の構造](/ja/docs/Web/Progressive_web_apps/App_structure)、[サービスワーカーでのオフライン可用性](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)、[インストール可能な PWA](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)、そして最後に[通知](/ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)など、プログレッシブウェブアプリ機能の使用方法について学びました。 また、[サービスワーカークックブック](https://serviceworke.rs/)（英語）の助けを借りてプッシュを説明しました。 そしてこの記事では、[Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) を利用した興味深い例を含めて、プログレッシブ読み込みの概念を調べました。
+このチュートリアルのシリーズではこれですべてです — [js13kPWA サンプルアプリのソースコード](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)を調べて、[紹介](/ja/docs/Web/Progressive_web_apps/Introduction)、[PWA の構造](/ja/docs/Web/Progressive_web_apps/App_structure)、[サービスワーカーでのオフライン可用性](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)、[インストール可能な PWA](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)、そして最後に[通知](/ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)など、プログレッシブウェブアプリ機能の使用方法について学びました。 また、[サービスワーカークックブック](https://github.com/mdn/serviceworker-cookbook/)（英語）の助けを借りてプッシュを説明しました。 そしてこの記事では、[Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) を利用した興味深い例を含めて、プログレッシブ読み込みの概念を調べました。
 
 コードを試したり、PWA 機能を使用して既存のアプリを拡張したり、まったく新しいものを自分で作成したりしてください。 PWA は通常のウェブアプリよりも大きな利点をもたらします。
 

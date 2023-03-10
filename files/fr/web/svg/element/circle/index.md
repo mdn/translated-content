@@ -7,6 +7,7 @@ tags:
   - SVG Reference
 translation_of: Web/SVG/Element/circle
 ---
+
 {{SVGRef}}
 
 L'élément `circle` est un élément de la catégorie des Formes simples, utilisé pour créer des cercles, en se basant sur un centre et un rayon.
@@ -54,9 +55,9 @@ L'élément `circle` est un élément de la catégorie des Formes simples, utili
 
 Cet élément implémente l'interface {{ domxref("SVGCircleElement") }}.
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("svg.elements.circle")}}
+{{Compat}}
 
 ## Corrélat
 

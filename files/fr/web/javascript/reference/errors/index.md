@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors
 original_slug: Web/JavaScript/Reference/Erreurs
 ---
+
 {{jsSidebar("Errors")}}
 
 _Errare ECMAScript est_…

@@ -2,7 +2,10 @@
 title: ウェブサイトの公開
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
 original_slug: Learn/Getting_started_with_the_web/ウェブサイトを公開する
+l10n:
+  sourceCommit: ca3bd6f9ad181ea03b5b66bd7ca294559e169d83
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
 ウェブサイトを構成するコードやファイルの整理が終わったら、それをオンラインで公開して、人々が見つけられるようにする必要があります。この記事では、簡単なサンプルコードを手軽にオンラインに公開する方法を説明します。
@@ -20,9 +23,9 @@ original_slug: Learn/Getting_started_with_the_web/ウェブサイトを公開す
 
 多くのプロの手によるウェブサイトはこんな風にして、公開されているわけです。
 
-さらに、ウェブサイトのファイルを実際にサーバーに転送するには、{{Glossary("FTP", "File Transfer Protocol (FTP、ファイル転送プロトコル)")}} のプログラム (詳しくは、[どのくらいコストがかかりますか: ソフトウェア](/ja/docs/Learn/Common_questions/How_much_does_it_cost#software)を参照) が必要です。 FTP プログラムの種類は様々ですが、一般的には、ホスティング会社から提供された詳細情報 (通常、ユーザー名、パスワード、ホスト名) を使ってウェブサーバーに接続する必要があります。その後、プログラムはローカルファイルとウェブサーバーのファイルを 2 つのウィンドウに表示し、ファイルのやり取りを行うことができます。
+さらに、ウェブサイトのファイルを実際にサーバーに転送するには、{{Glossary("FTP", "File Transfer Protocol (FTP、ファイル転送プロトコル)")}} のプログラム（詳しくは、[どのくらいコストがかかりますか: ソフトウェア](/ja/docs/Learn/Common_questions/How_much_does_it_cost#ソフトウェア)を参照）が必要です。 FTP プログラムの種類は様々ですが、一般的には、ホスティング会社から提供された詳細情報（通常、ユーザー名、パスワード、ホスト名）を使ってウェブサーバーに接続する必要があります。その後、プログラムはローカルファイルとウェブサーバーのファイルを 2 つのウィンドウに表示し、ファイルのやり取りを行うことができます。
 
-![](ftp.jpg)
+![ウェブサイトのすべてのファイルやフォルダーを表示し、サーバーにアップロードするFTPクライアント](ftp.jpg)
 
 #### ホスティングとドメインを見つけるためのヒント
 
@@ -51,7 +54,7 @@ original_slug: Learn/Getting_started_with_the_web/ウェブサイトを公開す
 - [JS Bin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
-![](jsbin-screen.png)
+![JS Bin のウェブベースの IDE のスクリーンショット](jsbin-screen.png)
 
 ## GitHub 経由での公開
 
@@ -60,16 +63,16 @@ original_slug: Learn/Getting_started_with_the_web/ウェブサイトを公開す
 1. まず、 [GitHub にサインアップして](https://github.com/)、メールアドレスの認証を受けましょう。
 2. 次に ファイルを入れるための[リポジトリーを作成](https://github.com/new)しましょう。
 3. このページ上の、 _Repository name_ ボックスに _ユーザー名_.github.io と入力してください。 _ユーザー名_ はあなたのユーザー名です。例えば、私の友達の Bob Smith であれば _bobsmith.github.io_ と入力します。
-    さらに、 "Initialize this repository with a README" ボックスをチェックし、 "Create repository" をクリックしてください。![](github-create-repo.png)
+    さらに、 _"Initialize this repository with a README"_ ボックスをチェックし、 _Create repository_ をクリックしてください。![](github-create-repo.png)
 4. ウェブサイトのフォルダーをリポジトリーの中にドラッグアンドドロップしたら、 _Commit changes_ をクリックしましょう。
 
-    > **Note:** フォルダーの中に `index.html` ファイルがあるかを確認しましょう。
+    > **メモ:** フォルダーの中に `index.html` ファイルがあるかを確認しましょう。
 
-5. では、ウェブサイトをオンライン上で見るために、ブラウザーから username.github.io に移動しましょう。例えば、ユーザーネームが chrisdavidmills なら、[chrisdavidmills.github.io](https://chrisdavidmills.github.io/) に移動しましょう。
+5. では、ウェブサイトをオンライン上で見るために、ブラウザーから username.github.io に移動しましょう。例えば、ユーザー名が chrisdavidmills なら、[chrisdavidmills.github.io](https://chrisdavidmills.github.io/) に移動しましょう。
 
-    > **Note:** ウェブサイトに使えるようになるには少し時間がかかるかもしれません。ウェブサイトがすぐに表示されない場合は、少し待ってみてください。そしてもう一度試してみましょう。
+    > **メモ:** ウェブサイトに使えるようになるには少し時間がかかるかもしれません。ウェブサイトがすぐに表示されない場合は、少し待ってみてください。そしてもう一度試してみましょう。
 
-もっと詳しく知りたい人は [GitHub Pages Help](https://help.github.com/categories/github-pages-basics/) を見てください。
+もっと詳しく知りたい人は [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages) を見てください。
 
 ## 参考文献
 

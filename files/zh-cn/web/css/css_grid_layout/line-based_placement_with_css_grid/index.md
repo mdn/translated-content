@@ -2,6 +2,7 @@
 title: CSS 网格中基于线的定位
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
+
 {{CSSRef}}
 
 在[探讨网格布局的基础概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)一文中，我们了解了如何使用线编号来排列元素，本文则会全面探索这个基础特性如何工作。

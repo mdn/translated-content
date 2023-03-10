@@ -1,23 +1,16 @@
 ---
 title: translateX()
 slug: Web/CSS/transform-function/translateX
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/translateX()
 original_slug: Web/CSS/transform-function/translateX()
-browser-compat: css.types.transform-function.translateX
 ---
+
 {{CSSRef}}
 
 **`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 ![](transform-functions-translatex_2.png)
 
-> **Note:** `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
+> **メモ:** `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
 
 ## 構文
 

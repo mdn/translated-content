@@ -1,9 +1,9 @@
 ---
 title: Fuentes web
 slug: Learn/CSS/Styling_text/Web_fonts
-translation_of: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/Styling_text/Fuentes_web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 En el primer artículo del módulo, exploramos las características básicas del CSS disponibles para aplicar estilos a tipos de letra y al texto. En este artículo vamos a ir más lejos: exploraremos en detalle las tipografías web, que permiten que te descargues tipos de letra personalizados junto con tu página web para lograr un estilo de texto más variado y personalizado.
@@ -70,8 +70,8 @@ La sintaxis es un poco más compleja; más adelante la veremos más detalladamen
 
 Hay dos cosas importantes a tener en cuenta acerca de las tipografías web:
 
-1.  Los navegadores admiten diferentes formatos de tipos de letra, por lo que necesitarás más de un formato de tipos de letra para conseguir una compatibilidad decente entre navegadores. Por ejemplo, la mayoría de los navegadores modernos admiten WOFF/WOFF2 (Web Open Font Format, versiones 1 y 2), el formato más eficiente disponible. Pero las versiones antiguas de Internet Explorer solo admiten tipos de letra con formato EOT (Embedded Open Type) y es posible que debas incluir una versión SVG del tipo de letra para soportar versiones antiguas de navegadores iPhone y Android. A continuación te mostraremos cómo generar el código necesario.
-2.  Generalmente las fuentes no son de uso gratuito. Debes pagar por ellas y/o respetar otras condiciones de licencia, como acreditar al creador del tipo de letra en el código (o en tu sitio web). Los tipos de letra no deben robarse, ni debes utilizarlos sin otorgar a su creador el crédito apropiado.
+1. Los navegadores admiten diferentes formatos de tipos de letra, por lo que necesitarás más de un formato de tipos de letra para conseguir una compatibilidad decente entre navegadores. Por ejemplo, la mayoría de los navegadores modernos admiten WOFF/WOFF2 (Web Open Font Format, versiones 1 y 2), el formato más eficiente disponible. Pero las versiones antiguas de Internet Explorer solo admiten tipos de letra con formato EOT (Embedded Open Type) y es posible que debas incluir una versión SVG del tipo de letra para soportar versiones antiguas de navegadores iPhone y Android. A continuación te mostraremos cómo generar el código necesario.
+2. Generalmente las fuentes no son de uso gratuito. Debes pagar por ellas y/o respetar otras condiciones de licencia, como acreditar al creador del tipo de letra en el código (o en tu sitio web). Los tipos de letra no deben robarse, ni debes utilizarlos sin otorgar a su creador el crédito apropiado.
 
 > **Nota:** ¡Los tipos de letra seguros para web como tecnología han sido compatibles con Internet Explorer desde su versión 4!
 
@@ -99,11 +99,11 @@ En cada caso, descomprime el paquete de tipos de letra (las tipografías web gen
 
 Ahora deberás generar el código que necesitas (y aplicar el estilo al tipo de letra). Para cada tipo de letra, sigue estos pasos:
 
-1.  Asegúrate de cumplir con todos los requisitos de la licencia, sobre todo si vas a usarlo en un proyecto comercial y/o en una web.
-2.  Ve a [Webfont Generator ](https://www.fontsquirrel.com/tools/webfont-generator)de Fontsquirrel.
-3.  Sube tus dos archivos de tipo de letra con el botón _Cargar Fuentes_.
-4.  Marca la casilla de verificación con el texto «Sí, las fuentes que elijo pueden utilizarse legalmente para una página web».
-5.  Haz clic en _Descarga tu paquete_.
+1. Asegúrate de cumplir con todos los requisitos de la licencia, sobre todo si vas a usarlo en un proyecto comercial y/o en una web.
+2. Ve a [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de Fontsquirrel.
+3. Sube tus dos archivos de tipo de letra con el botón _Cargar Fuentes_.
+4. Marca la casilla de verificación con el texto «Sí, las fuentes que elijo pueden utilizarse legalmente para una página web».
+5. Haz clic en _Descarga tu paquete_.
 
 Una vez que el generador haya finalizado el procesamiento, deberías obtener un archivo ZIP para descargar; guárdalo en el mismo directorio que tus archivos HTML y CSS.
 
@@ -117,10 +117,10 @@ En este punto, descomprime el paquete con los tipos de letra web que acabas de g
 
 Para implementar estos tipos de letra en tu ejemplo de demostración, sigue estos pasos:
 
-1.  Cambia el nombre del directorio descomprimido a algo fácil y simple, como `fonts`.
-2.  Abre el archivo `stylesheet.css` y copia los dos bloques `@font-face` incluidos en tu archivo `web-font-start.css`. Debes ponerlos en la parte superior, antes de cualquier elemento CSS, ya que los tipos de letra deben importarse antes que los puedas utilizar en tu sitio web.
-3.  Cada una de las funciones `url()` apunta a un archivo de tipo de letra que tenemos que importar a nuestro CSS. Necesitamos asegurarnos de que las rutas a los archivos son correctas, así que añade `fonts/` al inicio de cada ruta (ajusta la ruta como sea necesario).
-4.  Ahora puedes usar estos tipos de letra en tu lista de tipos de letra, al igual que cualquier tipo de letra seguro o predeterminado del sistema. Por ejemplo:
+1. Cambia el nombre del directorio descomprimido a algo fácil y simple, como `fonts`.
+2. Abre el archivo `stylesheet.css` y copia los dos bloques `@font-face` incluidos en tu archivo `web-font-start.css`. Debes ponerlos en la parte superior, antes de cualquier elemento CSS, ya que los tipos de letra deben importarse antes que los puedas utilizar en tu sitio web.
+3. Cada una de las funciones `url()` apunta a un archivo de tipo de letra que tenemos que importar a nuestro CSS. Necesitamos asegurarnos de que las rutas a los archivos son correctas, así que añade `fonts/` al inicio de cada ruta (ajusta la ruta como sea necesario).
+4. Ahora puedes usar estos tipos de letra en tu lista de tipos de letra, al igual que cualquier tipo de letra seguro o predeterminado del sistema. Por ejemplo:
 
     ```css
     font-family: 'zantrokeregular', serif;
@@ -128,7 +128,7 @@ Para implementar estos tipos de letra en tu ejemplo de demostración, sigue esto
 
 Con tu ejemplo de demostración, deberías obtener una página con unos agradables tipos de letra. Debido a que los tipos de letra se crean en diferentes tamaños, es posible que tengas que ajustar el tamaño, el espaciado, etc., para conseguir una apariencia más ordenada.
 
-![](https://mdn.mozillademos.org/files/12984/web-font-example.png)
+![](web-font-example.png)
 
 > **Nota:** Si tienes problemas para lograr que esto funcione, no dudes en comparar tu versión con nuestros archivos terminados, consulta [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) y [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([ejecuta el ejemplo terminado en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
 
@@ -138,12 +138,12 @@ Los servicios de tipos de letra en línea en general guardan tipos de letra y lo
 
 La mayoría de estos servicios son fáciles de usar, por lo que no vamos a exponerlos en gran detalle. Vamos a echar un vistazo rápido a las fuentes de Google, para que te hagas una idea. De nuevo, usa copias de `web-font-start.html` y `web-font-start.css` como punto de partida.
 
-1.  Ve a [Google Fonts](https://www.google.com/fonts).
-2.  Usa los filtros del lado izquierdo para indicar los tipos de letra que deseas escoger y elige un par de tipos de letra que te gusten.
-3.  Para seleccionar una familia de tipos de letra, pulsa el botón ⊕ que encontrarás al lado.
-4.  Cuando hayas elegido las familias de tipos de letra, pulsa la barra _\[número] familias seleccionadas_ que encontrarás en la parte inferior de la página.
-5.  En la pantalla resultante, primero debes copiar la línea de código HTML que se muestra y pegarla en el encabezado de tu archivo HTML. Ponlo encima del elemento {{HTMLElement("link")}}, de modo que el tipo de letra se importe correctamente antes de intentar utilizarlo en tu CSS.
-6.  Luego, debes copiar las declaraciones CSS enumeradas en tu CSS según corresponda para aplicar los tipos de letra personalizados a tu HTML.
+1. Ve a [Google Fonts](https://www.google.com/fonts).
+2. Usa los filtros del lado izquierdo para indicar los tipos de letra que deseas escoger y elige un par de tipos de letra que te gusten.
+3. Para seleccionar una familia de tipos de letra, pulsa el botón ⊕ que encontrarás al lado.
+4. Cuando hayas elegido las familias de tipos de letra, pulsa la barra _\[número] familias seleccionadas_ que encontrarás en la parte inferior de la página.
+5. En la pantalla resultante, primero debes copiar la línea de código HTML que se muestra y pegarla en el encabezado de tu archivo HTML. Ponlo encima del elemento {{HTMLElement("link")}}, de modo que el tipo de letra se importe correctamente antes de intentar utilizarlo en tu CSS.
+6. Luego, debes copiar las declaraciones CSS enumeradas en tu CSS según corresponda para aplicar los tipos de letra personalizados a tu HTML.
 
 > **Nota:** Puedes encontrar una versión completa en [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) y [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), si necesitas comparar tu trabajo con el nuestro ([consúltalo en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
 
@@ -189,4 +189,4 @@ Ahora que has leído nuestros artículos sobre nociones de aplicación de estilo
 - [Dar estilo a las listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Dar estilo a los enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
 - [Las fuentes web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composición tipográfica de una página de inicio de una escuela comunitaria](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Composición tipográfica de una página de inicio de una escuela comunitaria](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -3,6 +3,7 @@ title: Селекторы по ID
 slug: Web/CSS/ID_selectors
 translation_of: Web/CSS/ID_selectors
 ---
+
 {{ CSSRef() }}
 
 ## Краткое описание
@@ -11,11 +12,15 @@ translation_of: Web/CSS/ID_selectors
 
 ## Синтаксис
 
-    #id_value { style properties }
+```
+#id_value { style properties }
+```
 
 То же самое — {{ Cssxref("Attribute_selectors", "селектор по атрибутам") }}:
 
-    [id=id_value] { style properties }
+```
+[id=id_value] { style properties }
+```
 
 ## Пример
 

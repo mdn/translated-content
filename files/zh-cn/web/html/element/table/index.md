@@ -2,9 +2,10 @@
 title: <table>
 slug: Web/HTML/Element/table
 ---
-{{HTMLRef}}
 
-**HTML**的 **`table` **元素表示表格数据 — 即通过二维数据表表示的信息。
+{{HTMLSidebar}}
+
+[HTML](/zh-CN/docs/Web/HTML) **`table`** 元素表示表格数据——即通过二维数据表表示的信息。
 
 {{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}
 
@@ -52,7 +53,7 @@ slug: Web/HTML/Element/table
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何支持<a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        任何支持<a href="/zh-CN/docs/HTML/Content_categories#Flow_content"
           >流内容</a
         >的元素
       </td>
@@ -76,32 +77,32 @@ slug: Web/HTML/Element/table
   - : 这个枚举属性指定了包含在文档中的表格必须如何对齐。有如下值：
 
     - left，表格将在文档左侧显示；
-    - center， 表格将在文档中央显示；
-    - right， 表格将在文档右侧显示；
+    - center，表格将在文档中央显示；
+    - right，表格将在文档右侧显示；
 
     > **备注：** 不要使用这个属性，它已经不赞成被使用。{{HTMLElement("table")}} 元素应该使用[CSS](/zh-CN/docs/CSS) 制定样式。设置 {{cssxref("margin-left")}} 、{{cssxref("margin-right")}} 为 `auto` ( 或者 {{cssxref("margin")}} `设置为 0 auto`) 来实现类似于 align 属性的效果。
     >
-    > Firefox 4 之前的版本，在 quirks mode 模式下它还支持 `middle，` `absmiddle` `和近似于 center 的 abscenter`。
+    > Firefox 4 之前的版本，在 quirks mode 模式下它还支持 `middle`，`absmiddle` 和近似于 `center` 的 `abscenter`。
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
-  - : 这个属性定义了表格的背景颜色。 它是一个 6 位的十六进制编码，定义于 [sRGB](http://www.w3.org/Graphics/Color/sRGB)，需要加上'#'作为前缀。 当然也可以使用下面已经被预先定义的字符串，来表示常用的 16 种颜色。
+  - : 这个属性定义了表格的背景颜色。它是一个 6 位的十六进制编码，定义于 [sRGB](http://www.w3.org/Graphics/Color/sRGB)，需要加上'#'作为前缀。当然也可以使用下面已经被预先定义的字符串，来表示常用的 16 种颜色。
 
     > **备注：** 不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 [CSS](/zh-CN/docs/CSS) 定制样式。 [CSS](/zh-CN/docs/CSS) 中的 {{cssxref("background-color")}} 属性能够和 bgcolor 属性达到一样的效果。
 - {{htmlattrdef("border")}} {{Deprecated_inline}}
-  - : 这个整型元素使用像素，定义了表格边框的大小。 如果设置为 0，这意味着{{htmlattrxref("frame", "table")}} 属性被设置为空。如果设置为 1，表示表格具有 1px 大小的边框。
+  - : 这个整型元素使用像素，定义了表格边框的大小。如果设置为 0，这意味着{{htmlattrxref("frame", "table")}} 属性被设置为空。如果设置为 1，表示表格具有 1px 大小的边框。
 
     > **备注：** 不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 [CSS](/zh-CN/docs/CSS) 定制样式。 [CSS](/zh-CN/docs/CSS) 属性 {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} 和 {{cssxref("border-style")}} 可实现相同效果。
 
 - {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
   - : 这个属性定义了表格单元的内容和边框之间的空间。如果它是一个像素长度单位，这个像素将被应用到所有的四个侧边；如果它是一个百分比的长度单位，内容将被作为中心，总的垂直（上和下）长度将代表这个百分比。这同样适用于总的水平（左和右）空间。
 
-    > **备注：** 不要使用这个属性，因为它已经被废弃。 {{HTMLElement("table")}} 元素应该使用 [CSS](/zh-CN/docs/CSS) 定制样式。 在{{HTMLElement("table")}} 元素上使用 [CSS](/zh-CN/docs/CSS) 属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}，以达到类似于 cellpadding 的效果。
+    > **备注：** 不要使用这个属性，因为它已经被废弃。 {{HTMLElement("table")}} 元素应该使用 [CSS](/zh-CN/docs/CSS) 定制样式。在{{HTMLElement("table")}} 元素上使用 [CSS](/zh-CN/docs/CSS) 属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}，以达到类似于 cellpadding 的效果。
 - {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
   - : 这个属性（使用百分比或像素）定义了两个单元格之间空间的大小（从水平和垂直方向上），包括了表格的顶部与第一行的单元格，表的左边与第一列单元格，表的右边与最后一列的单元格，表的底部与最后一行单元格之间的空间。
 
     > **备注：** 不要使用这个属性，因为它已经被废弃。{{HTMLElement("table")}} 元素应该使用 [CSS](/zh-CN/docs/CSS) 定制样式。在 {{HTMLElement("table")}} 元素上使用 CSS 的属性 {{cssxref("border-spacing")}} ，以达到类似于 cellspacing 的效果。
 - {{htmlattrdef("frame")}} {{Deprecated_inline}}
   - : 这个枚举属性定义了包围在表格周围的框架的哪个边必须显示。它可能有下列值：
-  
+
     - above
     - below
     - hsides
@@ -118,7 +119,7 @@ slug: Web/HTML/Element/table
   - : 这个枚举属性定义了在一个表格中规则的显示位置。它可以有以下值：:
 
     - none，这表明没有规格将被显示；这是默认的值；
-    - groups，这将使规则只显示在行组（row groups，通过 {{HTMLElement("thead")}} ， {{HTMLElement("tbody")}} 和 {{HTMLElement("tfoot")}} 元素定义）和列组（ column groups，通过{{HTMLElement("col")}} 和 {{HTMLElement("colgroup")}} 元素定义）之间
+    - groups，这将使规则只显示在行组（row groups，通过 {{HTMLElement("thead")}} ， {{HTMLElement("tbody")}} 和 {{HTMLElement("tfoot")}} 元素定义）和列组（column groups，通过{{HTMLElement("col")}} 和 {{HTMLElement("colgroup")}} 元素定义）之间
     - rows，这将使规则在行之间显示；
     - columns，这将使规则在列之间显示；
     - all，这将使规则在列和行之间显示；
@@ -134,8 +135,8 @@ slug: Web/HTML/Element/table
     > - Use prose around the table (this method is less semantic).
     > - 在表格的 {{HTMLElement("caption")}} 元素中添加描述。
     > - 在表格的 {{HTMLElement("caption")}} 元素中，添加一个带有描述的 {{HTMLElement("details")}} 元素。
-    > - 将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在旁边添加散文（prose ）描述。
-    > - 将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在 {{HTMLElement("thead")}} 元素中添加散文（prose ）描述。
+    > - 将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在旁边添加散文（prose）描述。
+    > - 将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在 {{HTMLElement("thead")}} 元素中添加散文（prose）描述。
     > - 调整表格，以便不需要这样的描述 (比如，使用 {{HTMLElement("th")}} 和 {{HTMLElement("thead")}} 元素)。
 
 - {{htmlattrdef("width")}} {{Deprecated_inline}}
@@ -320,7 +321,7 @@ Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will
 
 ### Complicated tables
 
-Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
+Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
 
 Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the `colspan` and `rowspan` attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
 
@@ -337,11 +338,11 @@ If the table cannot be broken apart, use a combination of the {{htmlattrxref("id
 
 ## Browser compatibility
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 相关
 
-- 其它表格相关的 HTML 元素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
+- 其他表格相关的 HTML 元素：{{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
 - 可能特别有用的关于设定表格元素样式的 CSS 属性：
 
   - {{cssxref("width")}} 控制表格的宽度；

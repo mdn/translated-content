@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Responsive_Design
 original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}
 
 Aux débuts de la conception Web, les pages étaient construites pour cibler une taille d'écran particulière. Si l'utilisateur avait un écran plus grand ou plus petit que celui du concepteur, les résultats attendus pouvaient aller de barres de défilement indésirables, à des longueurs de lignes trop longues, et à une mauvaise utilisation de l'espace. À mesure que des tailles d'écran plus variées devenaient disponibles, le concept de _responsive web design_ (RWD) est apparu, un ensemble de pratiques qui permet aux pages Web de modifier leur disposition et leur apparence pour s'adapter à différentes largeurs d'écran, résolutions, etc. C'est une idée qui a changé notre façon de concevoir pour un web multi-périphériques, et dans cet article nous vous aiderons à comprendre les principales techniques que vous devez connaître pour la maîtriser.
@@ -25,7 +26,7 @@ Aux débuts de la conception Web, les pages étaient construites pour cibler une
         Les bases du HTML (étudier
         <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
-        >), et une idée du fonctionnement du CSS (édutier
+        >), et une idée du fonctionnement du CSS (étudier
         <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a> et
         <a href="/fr/docs/Apprendre/CSS/Building_blocks">Blocs de base en CSS</a
         >.)
@@ -76,7 +77,7 @@ Zoe Mickley Gillenwater a grandement contribué au travail de description et de 
 Le terme de responsive design a été [inventé par Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), et décrit la combinaison de trois techniques.
 
 1. La première était l'idée des grilles fluides, une idée déjà explorée par Gillenwater, que l'on peut lire dans l'article de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publié en 2009 sur A List Apart).
-2. La deuxième technique était l'idée [d'images fluides](http://unstoppablerobotninja.com/entry/fluid-images). En utilisant une technique très simple de réglage de la propriété `max-width` à `100%`,  les images deviennent plus petites si leur colonne de contenu devient plus étroite que la taille intrinsèque de l'image, mais ne deviennent jamais plus grandes. Cela permet à une image de se réduire pour s'intégrer dans une colonne de taille flexible, plutôt que de la déborder, mais de ne pas s'agrandir et de devenir pixélisée si la colonne devient plus large que l'image.
+2. La deuxième technique était l'idée [d'images fluides](http://unstoppablerobotninja.com/entry/fluid-images). En utilisant une technique très simple de réglage de la propriété `max-width` à `100%`, les images deviennent plus petites si leur colonne de contenu devient plus étroite que la taille intrinsèque de l'image, mais ne deviennent jamais plus grandes. Cela permet à une image de se réduire pour s'intégrer dans une colonne de taille flexible, plutôt que de la déborder, mais de ne pas s'agrandir et de devenir pixélisée si la colonne devient plus large que l'image.
 3. Le troisième élément clé était la [media query](/fr/docs/Web/CSS/Media_Queries). Les Media Queries permettent de changer le type de mise en page que Cameron Adams avait précédemment exploré en utilisant JavaScript, en utilisant uniquement CSS. Au lieu d'avoir une seule mise en page pour toutes les tailles d'écran, la mise en page pouvait être modifiée. Les barres latérales pouvaient être repositionnées pour l'écran plus petit, ou une autre navigation pouvait être affichée.
 
 Il est important de comprendre que **le responsive web design n'est pas une technologie à part** - c'est un terme utilisé pour décrire une approche de la conception web, ou un ensemble de bonnes pratiques, utilisées pour créer une mise en page qui peut correspondre à l'appareil utilisé pour visualiser le contenu. Dans la recherche initiale de Marcotte, cela impliquait des grilles flexibles (en utilisant des flotteurs) et des média queries, mais depuis la rédaction de cet article, il y a presque 10 ans, le concept de responsive design est devenu la norme. Les méthodes modernes de mise en page CSS sont par nature responsives, et nous avons intégré de nouvelles choses à la plateforme Web pour faciliter la conception de sites responsives.
@@ -109,7 +110,7 @@ Les sites responsives ne se contentent pas de changer leur mise en page entre le
 
 En utilisant une grille flexible, vous n'avez qu'à ajouter un point d'arrêt et à modifier le design au moment où le contenu commence à avoir une piètre apparence. Par exemple, si la longueur des lignes devient illisible à mesure que la taille de l'écran augmente, ou si une boîte se retrouve écrasée avec deux mots sur chaque ligne lorsqu'elle se rétrécit.
 
-Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser [floats](/fr/docs/Apprendre/CSS/CSS_layout/Floats). Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser des flotteurs. Des mises en page flottantes flexibles ont été réalisées en donnant à chaque élément un pourcentage de largeur et en s'assurant que les totaux ne dépassent pas 100 % dans toute la mise en page. Dans sa publication originale sur les grilles fluides, Marcotte a détaillé une formule pour convertir en pourcentages une mise en page conçue à l'aide de pixels.
+Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser [des flotteurs](/fr/docs/Apprendre/CSS/CSS_layout/Floats). Des mises en page flottantes flexibles ont été réalisées en donnant à chaque élément un pourcentage de largeur et en s'assurant que les totaux ne dépassent pas 100 % dans toute la mise en page. Dans sa publication originale sur les grilles fluides, Marcotte a détaillé une formule pour convertir en pourcentages une mise en page conçue à l'aide de pixels.
 
 ```
 target / context = result
@@ -200,7 +201,7 @@ img {
 
 Cette approche présente des inconvénients évidents. L'image peut être affichée à une taille beaucoup plus petite que sa taille réelle, ce qui est un gaspillage de bande passante - un utilisateur mobile peut télécharger une image dont la taille est beaucoup plus grande que ce qu'il voit réellement dans la fenêtre du navigateur. De plus, il se peut que vous ne vouliez pas le même rapport hauteur/largeur de l'image sur le mobile que sur le bureau. Par exemple, il peut être agréable d'avoir une image carrée pour le mobile, mais de montrer la même image en format paysage sur le bureau. Ou, en tenant compte de la taille plus petite d'une image sur le mobile, vous pouvez vouloir montrer une image différente, qui est plus facile à comprendre sur un écran de petite taille. Ces choses ne peuvent pas être réalisées par une simple réduction de la taille d'une image.
 
-Les images responsives, en utilisant l'élément {{htmlelement("picture")}}  et les attributs {{htmlelement("img")}} `srcset` et `sizes`  permettent de résoudre ces deux problèmes. Vous pouvez fournir plusieurs tailles ainsi que des " indices " (méta-données qui décrivent la taille de l'écran et la résolution pour lesquelles l'image est la mieux adaptée), et le navigateur choisira l'image la plus appropriée pour chaque dispositif, en s'assurant qu'un utilisateur téléchargera une taille d'image appropriée pour le dispositif qu'il utilise.
+Les images responsives, en utilisant l'élément {{htmlelement("picture")}} et les attributs {{htmlelement("img")}} `srcset` et `sizes`  permettent de résoudre ces deux problèmes. Vous pouvez fournir plusieurs tailles ainsi que des " indices " (méta-données qui décrivent la taille de l'écran et la résolution pour lesquelles l'image est la mieux adaptée), et le navigateur choisira l'image la plus appropriée pour chaque dispositif, en s'assurant qu'un utilisateur téléchargera une taille d'image appropriée pour le dispositif qu'il utilise.
 
 Vous pouvez également créer des images directes utilisées à différentes tailles, ce qui permet d'obtenir un recadrage différent ou une image complètement différente pour différentes tailles d'écran.
 

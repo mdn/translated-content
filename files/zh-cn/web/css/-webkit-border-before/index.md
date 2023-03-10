@@ -2,9 +2,10 @@
 title: '-webkit-border-before'
 slug: Web/CSS/-webkit-border-before
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-**`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) 属性 是一种用于简写的属性。它用于在样式表的单个位置设置各个起始边框属性值。
+**`-webkit-border-before`** [CSS](/zh-CN/docs/Web/CSS) 属性 是一种用于简写的属性。它用于在样式表的单个位置设置各个起始边框属性值。
 
 ```css
 /* Border values */
@@ -45,7 +46,7 @@ slug: Web/CSS/-webkit-border-before
 - `<'color'>`
   - : 参考 {{cssxref("color")}}
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
@@ -74,17 +75,17 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+{{EmbedLiveSample("示例", 140, 140)}}
 
 ## 规范
 
 尽管它和 {{cssxref("border-block-start")}} 属性有关，但现在并不存在与任何一标准规范。
 
-## 兼容性
+## 浏览器兼容性
 
-{{Compat("css.properties.-webkit-border-before")}}
+{{Compat}}
 
-## 参考
+## 参见
 
 - {{cssxref("border-block-start")}}
 - The mapped physical properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, and {{cssxref("border-left")}}

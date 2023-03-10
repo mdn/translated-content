@@ -2,9 +2,10 @@
 title: 'Django Tutorial Part 8: User authentication and permissions'
 slug: Learn/Server-side/Django/Authentication
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
-在本教程中，我們將會展示如何允許用戶使用自己的帳戶登入到您的網站，以及如何根據用戶是否已登入和權限的不同來控制他們可以執行和查看的內容。作為展示的一部分，我們會擴展 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，添加登入頁面和登出頁面，以及用來查看已借閱的圖書的頁面 - 分為用戶與員工兩種不同頁面。
+在本教程中，我們將會展示如何允許用戶使用自己的帳戶登入到您的網站，以及如何根據用戶是否已登入和權限的不同來控制他們可以執行和查看的內容。作為展示的一部分，我們會擴展 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，添加登入頁面和登出頁面，以及用來查看已借閱的圖書的頁面 - 分為用戶與員工兩種不同頁面。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -12,7 +13,7 @@ slug: Learn/Server-side/Django/Authentication
       <th scope="row">前提:</th>
       <td>
         完成至
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Sessions"
           >Django 線上教學 7: 會話(Sessions)框架</a
         >為止的所有主題。
       </td>
@@ -400,7 +401,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 如您所見，我們使用 `if`-`else`-`endif` 模板標籤根據 `\{{ user.is_authenticated }}` \ {{user.is_authenticated}}是否為真來有條件地顯示文本。 如果用戶通過了身份驗證，那麼我們知道我們有一個有效的用戶，因此我們調用 **\\{{ user.get_username }}** 來顯示其名稱。
 
-我們使用`url` 模板標記和相應 URL 配置的名稱來創建登錄和註銷鏈接 URL。 還要注意我們如何將`?next=\{{request.path}}`附加到 URL 的末尾。 這是在鏈接的 URL 的末尾添加一個 URL 參數，其中包含當前頁面的地址（URL）。 用戶成功登錄/註銷後，視圖將使用此\`\``next`''值將用戶重定向到他們首先單擊 login/logout 鏈接的頁面。
+我們使用 `url` 模板標記和相應 URL 配置的名稱來創建登錄和註銷鏈接 URL。 還要注意我們如何將`?next=\{{request.path}}`附加到 URL 的末尾。 這是在鏈接的 URL 的末尾添加一個 URL 參數，其中包含當前頁面的地址（URL）。 用戶成功登錄/註銷後，視圖將使用此 `next` 值將用戶重定向到他們首先單擊 login/logout 鏈接的頁面。
 
 > **備註：** 試試看！ 如果您在主頁上，然後單擊側欄中的“Login/Logout”，那麼在操作完成後，您應該回到同一頁面。
 
@@ -685,21 +686,3 @@ class MyView(PermissionRequiredMixin, View):
 - [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

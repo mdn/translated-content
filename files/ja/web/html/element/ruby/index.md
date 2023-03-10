@@ -1,16 +1,9 @@
 ---
 title: <ruby>
 slug: Web/HTML/Element/ruby
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - 日本語処理
-translation_of: Web/HTML/Element/ruby
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **HTML `<ruby>` element** はベーステキストの上、下、隣に描画される小さな注釈で、よく東アジアの文字の発音を表すのに使われます。他の種類の注釈にも使われることがありますが、この使い方はあまり一般的ではありません。
 
@@ -99,10 +92,7 @@ The **HTML `<ruby>` element** はベーステキストの上、下、隣に描�
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-ruby-element', '&lt;ruby&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-ruby-element', '&lt;ruby&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

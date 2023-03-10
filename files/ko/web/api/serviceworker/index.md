@@ -1,21 +1,11 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
-  - 서비스 워커
-  - 워커
-translation_of: Web/API/ServiceWorker
 ---
+
 {{APIRef("Service Workers API")}}
 
-[Service Worker API](/ko/docs/Web/API/Service_Worker_API)의 **`ServiceWorker`** 인터페이스는 서비스 워커로의 참조를 제공합니다. 다수의 {{glossary("browsing context", "브라우징 맥락")}}(e.g. 페이지, 다른 워커, 등등)는 고유한` ServiceWorker` 객체를 통해 동일한 서비스 워커와 연결할 수 있습니다.
+[Service Worker API](/ko/docs/Web/API/Service_Worker_API)의 **`ServiceWorker`** 인터페이스는 서비스 워커로의 참조를 제공합니다. 다수의 {{glossary("browsing context", "브라우징 맥락")}}(e.g. 페이지, 다른 워커, 등등)는 고유한 `ServiceWorker` 객체를 통해 동일한 서비스 워커와 연결할 수 있습니다.
 
 `ServiceWorker` 객체는 {{domxref("ServiceWorkerRegistration.active")}} 속성과 {{domxref("ServiceWorkerContainer.controller")}} 속성으로 접근할 수 있습니다. `controller`는 활성화되어 페이지를 통제 중인 서비스 워커입니다.
 
@@ -84,7 +74,7 @@ if ('serviceWorker' in navigator) {
 
 ## 같이 보기
 
-- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/ko/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service worker basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

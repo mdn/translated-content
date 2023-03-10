@@ -3,9 +3,10 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 translation_of: Web/CSS/flex-wrap
 ---
+
 {{ CSSRef}}
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
+Свойство [CSS](/ru/docs/CSS) **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
 
 ```css
 flex-wrap: nowrap;
@@ -112,7 +113,7 @@ flex-wrap: unset;
 
 ### Results
 
-{{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
+{{ EmbedLiveSample('Examples', '100%', '700') }}
 
 ## Specifications
 

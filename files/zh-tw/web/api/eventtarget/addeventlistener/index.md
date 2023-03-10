@@ -3,6 +3,7 @@ title: EventListener
 slug: Web/API/EventTarget/addEventListener
 original_slug: Web/API/EventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 **`EventListener`** 介面表示一個可以處理由 {{domxref("EventTarget")}} 物件分派事件的物件。
@@ -49,7 +50,7 @@ buttonElement.addEventListener('click', {
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('範例')}}
 
 ### 檢閱相關:
 

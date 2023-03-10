@@ -2,21 +2,22 @@
 title: MessageEvent
 slug: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent`** 是接口代表一段被目标对象接收的消息。
 
 用来代表下列情况的消息
 
-- [Server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) (参见{{domxref("EventSource.onmessage")}}).
-- [Web sockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (参见 [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket) 接口的 `onmessage` 属性).
+- [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events) (参见{{domxref("EventSource.onmessage")}}).
+- [Web sockets](/zh-CN/docs/Web/API/WebSockets_API) (参见 [WebSocket](/zh-CN/docs/Web/API/WebSocket) 接口的 `onmessage` 属性).
 - Cross-document messaging (参见 {{domxref("Window.postMessage()")}} 和 {{domxref("Window.onmessage")}}).
-- [Channel messaging](https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API) (参见 {{domxref("MessagePort.postMessage()")}} 和{{domxref("MessagePort.onmessage")}}).
+- [Channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API) (参见 {{domxref("MessagePort.postMessage()")}} 和{{domxref("MessagePort.onmessage")}}).
 - Cross-worker/document messaging (参见上面两个入口，还有 {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, 等等.)
-- [Broadcast channels](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) (参见 {{domxref("Broadcastchannel.postMessage()")}}) 和 {{domxref("BroadcastChannel.onmessage")}}).
+- [Broadcast channels](/zh-CN/docs/Web/API/Broadcast_Channel_API) (参见 {{domxref("Broadcastchannel.postMessage()")}}) 和 {{domxref("BroadcastChannel.onmessage")}}).
 - WebRTC data channels (参见 {{domxref("RTCDataChannel.onmessage")}}).
 
-通过这个事件触发的动作被定义为一个函数，该函数作为相关{{event("message")}}事件 (例如使用前文所列的`onmessage` 处理器) 的事件处理器。
+通过这个事件触发的动作被定义为一个函数，该函数作为相关[`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)事件 (例如使用前文所列的`onmessage` 处理器) 的事件处理器。
 
 {{AvailableInWorkers}}
 
@@ -38,7 +39,7 @@ _继承其父类 {{domxref("Event")}} 的属性。_
 - {{domxref("MessageEvent.source")}}
   - : `MessageEventSource` (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 代表消息发送者。
 - {{domxref("MessageEvent.ports")}}
-  - : {{domxref("MessagePort")}}对象数组，表示消息正通过特定通道（数据通道）发送的相关端口（适用于通道消息传输或者向一个共享线程（shared work ）发送消息时）。
+  - : {{domxref("MessagePort")}}对象数组，表示消息正通过特定通道（数据通道）发送的相关端口（适用于通道消息传输或者向一个共享线程（shared work）发送消息时）。
 
 ## 方法
 
@@ -82,7 +83,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-在 worker 内部我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在 {{event("connect")}} 事件的 `ports` 属性中访问到 — 接着我们使用 {{domxref("MessagePort")}} `start()` 方法打开端口，`onmessage` 处理器来处理主线程传来的消息。
+在 worker 内部我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在 {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} 事件的 `ports` 属性中访问到——接着我们使用 {{domxref("MessagePort")}} `start()` 方法打开端口，`onmessage` 处理器来处理主线程传来的消息。
 
 ```js
 onconnect = function(e) {
@@ -103,4 +104,4 @@ onconnect = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageEvent")}}
+{{Compat}}

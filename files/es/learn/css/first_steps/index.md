@@ -1,14 +1,8 @@
 ---
 title: Primeros pasos en CSS
 slug: Learn/CSS/First_steps
-tags:
-  - Aprender
-  - CSS
-  - Principiante
-  - modulo
-  - primeros pasos
-translation_of: Learn/CSS/First_steps
 ---
+
 {{LearnSidebar}}
 
 CSS (Cascading Style Sheets - en español Hojas de Estilo en Cascadas) es usado para darle estilo y diseño a las páginas Web — por ejemplo, para cambiar la fuente de letra, color, tamaño y el espaciado de tu contenido; dividir en múltiples columnas, o agregar animaciones y otras propiedades decorativas. Este modulo provee un inicio suave para tu ruta de aprendizaje hacia el dominio de CSS con su funcionamiento básico, como luce su sintaxis, y cómo puedes comenzar a utilizarlo y añadir estilo a HTML.
@@ -17,9 +11,9 @@ CSS (Cascading Style Sheets - en español Hojas de Estilo en Cascadas) es usado 
 
 Antes de comenzar este módulo, deberías:
 
-1.  Estar familiarizado y tener conocimiento básico sobre el uso de computadores e internet básico (p.ej. navegando, consumiendo contenido en Internet.)
-2.  Un entorno básico de trabajo configurado, como se detalla en la sección de [Instalación de software básico](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), y saber como crear y administrar archivos, o lo puedes ver en el módulo [Manejando los archivos](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos).
-3.  Conocimiento básico de HTML, como se muestra en [Introducción a HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML).
+1. Estar familiarizado y tener conocimiento básico sobre el uso de computadores e internet básico (p.ej. navegando, consumiendo contenido en Internet.)
+2. Un entorno básico de trabajo configurado, como se detalla en la sección de [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), y saber como crear y administrar archivos, o lo puedes ver en el módulo [Manejando los archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos).
+3. Conocimiento básico de HTML, como se muestra en [Introducción a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
 
 > **Nota:** Si estás trabajando en un computador/tabla/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
 
@@ -40,5 +34,5 @@ Este módulo contiene los siguientes artículos, que te guiarán a través de to
 
 ## Ver también
 
-- [Conocimiento práctico intermedio Web 1: Introducción a CSS (en Inglés)](https://teach.mozilla.org/activities/intermediate-web-lit/)
-  - : Aprende acerca de como agregar estilo a los elementos HTML en una página web, selectores CSS, atributos, y valores.
+- [Usa tu nuevo conocimiento](/es/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+  - : Con lo que has aprendido en los últimos artículos, deberías descubrir que puede formatear documentos de texto simples usando CSS para agregarles su propio estilo. Esta evaluación te da la oportunidad de hacerlo.

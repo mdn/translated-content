@@ -2,7 +2,8 @@
 title: 怪异模式和标准模式
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 在很久以前的网络上，页面通常有两种版本：为网景（Netscape）的 Navigator 准备的版本，以及为微软（Microsoft）的 Internet Explorer 准备的版本。当 W3C 创立网络标准后，为了不破坏当时既有的网站，浏览器不能直接弃用这些标准。因此，浏览器采用了两种模式，用以把能符合新规范的网站和老旧网站区分开。
 

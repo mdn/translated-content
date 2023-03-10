@@ -2,6 +2,7 @@
 title: HTMLLinkElement.referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 HTMLLinkElement.referrerPolicy 反映了 {{HTMLElement("link")}} 元素的 HTML 属性 {{htmlattrxref("referrerpolicy","link")}} 的定义，这个属性定义了{{HTMLElement("link")}} 元素在获取资源时的引用方式。
@@ -27,7 +28,7 @@ links[0].referrerPolicy; // "no-referrer"
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLLinkElement.referrerPolicy")}}
+{{Compat}}
 
 ## 相关
 

@@ -7,6 +7,7 @@ browser-compat: javascript.builtins.Array.flat
 l10n:
   sourceCommit: f6fe4043bfc7ace3b8caa757547b7d0cb3ad5cc1
 ---
+
 {{JSRef}}
 
 La méthode **`flat()`** permet de créer un nouveau tableau contenant les éléments des sous-tableaux du tableau passé en argument, qui sont concaténés récursivement pour atteindre une profondeur donnée.

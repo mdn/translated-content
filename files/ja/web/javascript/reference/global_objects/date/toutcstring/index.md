@@ -1,26 +1,22 @@
 ---
 title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`toUTCString()`** メソッドは、協定世界時 (UTC) のタイムゾーンに基づき、日付を文字列へ変換します。
 
-[rfc7231](https://tools.ietf.org/html/rfc7231#section-7.1.1.1) と [ecma-262 toUTCString](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring) の改訂に基づき、 [2021 版](https://tc39.es/ecma262/#sec-date.prototype.toutcstring)では負の数が可能になります。
+[rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) と [ECMA-262 toUTCString](https://tc39.es/ecma262/#sec-date.prototype.toutcstring) の改訂に基づくと、負の数が可能です。
 
 {{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}
 
 ## 構文
 
-```
-dateObj.toUTCString()
+```js-nolint
+toUTCString()
 ```
 
 ### 返値
@@ -41,26 +37,22 @@ UTC タイムゾーンに基づき、与えられた日付を表す文字列。
 | `mm`       | 分、必要に応じて先頭に 0 が付いた 2 桁の数字で表す     |
 | `ss`       | 秒、必要に応じて先頭に 0 が付いた 2 桁の数字で表す     |
 
-ECMAScript 2018 以前では、返値の書式はプラットフォームによって様々です。もっとも一般的な返値は RFC-1123 形式の日付であり、これは RFC-822 形式の日付をわずかに改訂したものでした。
-
 ## 例
 
-### toUTCString() を使う
+### toUTCString() の使用
 
 ```js
-let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
-let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
+const today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+const UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.toUTCString")}}
+{{Compat}}
 
 ## 関連情報
 

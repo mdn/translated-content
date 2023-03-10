@@ -1,7 +1,10 @@
 ---
 title: HTMLMediaElement.playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.playbackRate`** プロパティは、メディアが再生されるレートを設定します。これはユーザーが早送りやスローモーションなどのユーザー制御を実装するために使用されます。通常の再生レートにこの値を掛けて現在のレートが求められるため、 1.0 の値が通常の速度です。
@@ -19,7 +22,7 @@ slug: Web/API/HTMLMediaElement/playbackRate
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.playbackRate); // Expected Output: 1
 ```
 

@@ -2,9 +2,10 @@
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
 ---
+
 {{APIRef("DOM")}}
 
-**`insertAdjacentElement()` **方法将一个给定的元素节点插入到相对于被调用的元素的给定的一个位置。
+**`insertAdjacentElement()`** 方法将一个给定的元素节点插入到相对于被调用的元素的给定的一个位置。
 
 ## 语法
 
@@ -49,7 +50,7 @@ foo
 <!-- afterend -->
 ```
 
-> **备注：** 当节点处于 DOM 树中而且有一个父元素的时候 `beforebegin` 和 `afterend 操作才能起作用。`
+> **备注：** 当节点处于 DOM 树中而且有一个父元素的时候 `beforebegin` 和 `afterend` 操作才能起作用。
 
 ## 例子
 
@@ -69,7 +70,7 @@ afterBtn.addEventListener('click', function() {
 });
 ```
 
-看看我们在 Github（也可以参考 [源码](https://github.com/mdn/insert-adjacent/blob/master/insertAdjacentElement.html)）上的 [insertAdjacentElement.html](http://mdn.github.io/insert-adjacent/insertAdjacentElement.html) 演示。在一个容器当中我们有一组{{htmlelement("div")}} 元素。 点击其中一个 div 时，这个容器会处于选中状态，然后你就可以按下*Insert before* 或*Insert after* 按钮通过 `insertAdjacentElement() 方法`来把一个新的 divs 插入到选中的元素前面或者后面。
+看看我们在 Github（也可以参考 [源码](https://github.com/mdn/insert-adjacent/blob/master/insertAdjacentElement.html)）上的 [insertAdjacentElement.html](http://mdn.github.io/insert-adjacent/insertAdjacentElement.html) 演示。在一个容器当中我们有一组{{htmlelement("div")}} 元素。点击其中一个 div 时，这个容器会处于选中状态，然后你就可以按下*Insert before* 或*Insert after* 按钮通过 `insertAdjacentElement() 方法`来把一个新的 divs 插入到选中的元素前面或者后面。
 
 ## 规范
 
@@ -77,7 +78,7 @@ afterBtn.addEventListener('click', function() {
 
 ## 浏览器兼容
 
-{{Compat("api.Element.insertAdjacentElement")}}
+{{Compat}}
 
 ## 参见
 

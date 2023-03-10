@@ -1,7 +1,6 @@
 ---
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 {{AddonSidebar}}
 
@@ -15,20 +14,20 @@ manifest.json 파일은 모든 확장앱이 가져야하는 유일한 파일입�
 
 - [Background pages](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): (브라우저 창의 수명과 독립적으로) 오랜 시간 실행되는 로직 구현.
 - 확장앱의 아이콘 및 기타 버튼들.
-- [사이드바, 팝업, 옵션 페이지](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): UI 컴포넌트를 제공하는 HTML 파일들
+- [사이드바, 팝업, 옵션 페이지](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): UI 컴포넌트를 제공하는 HTML 파일들
 - [컨텐츠 스크립트](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): 웹페이지에 주입할 자바스크립트 파일
 
-![](https://mdn.mozillademos.org/files/13669/webextension-anatomy.png)
+![](webextension-anatomy.png)
 
 세부 내용: [manifest.json](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 참조.
 
-manifest에 참조 된 항목 외에도, [Extension pages](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages)와 해당 페이지의 리소스가 확장앱 번들에 포함될 수 있습니다.
+manifest에 참조 된 항목 외에도, [Extension pages](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages)와 해당 페이지의 리소스가 확장앱 번들에 포함될 수 있습니다.
 
 ## Background scripts
 
 확장앱은 종종 특정 웹 페이지나 브라우저 창의 수명과 독립적으로 장기간 상태를 유지하거나 작업을 수행해야 합니다. 그때 필요한 것이 백그라운드 스크립트입니다.
 
-백그라운드 스크립트는 확장앱이 로드 되자마자 로드되며 확장앱이 다시 비활성화 또는 제거될 때까지 로드된 상태를 유지합니다. 적절한 [권한](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions)을 요청했다면 이 스크립트에서 [WebExtension APIs](/en-US/Add-ons/WebExtensions/API)를 사용할 수 있습니다.
+백그라운드 스크립트는 확장앱이 로드 되자마자 로드되며 확장앱이 다시 비활성화 또는 제거될 때까지 로드된 상태를 유지합니다. 적절한 [권한](/en-US/Add-ons/WebExtensions/manifest.json/permissions)을 요청했다면 이 스크립트에서 [WebExtension APIs](/en-US/Add-ons/WebExtensions/API)를 사용할 수 있습니다.
 
 ### 백그라운드 스크립트 정의
 

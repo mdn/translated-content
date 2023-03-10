@@ -2,9 +2,10 @@
 title: 类
 slug: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
-类是用于创建对象的模板。他们用代码封装数据以处理该数据。 JS 中的类建立在原型上，但也具有某些语法和语义未与 ES5 类相似语义共享。
+类是用于创建对象的模板。他们用代码封装数据以处理该数据。JS 中的类建立在原型上，但也具有某些语法和语义未与 ES5 类相似语义共享。
 
 ## 定义类
 
@@ -56,7 +57,7 @@ let Rectangle = class Rectangle2 {
   }
 };
 console.log(Rectangle.name);
-// 输出: "Rectangle2"
+// 输出："Rectangle2"
 ```
 
 > **备注：** 类**表达式**也同样受到[类声明](/zh-CN/docs/Web/JavaScript/Reference/Classes#Class_declarations)部分中提到的类型提升的限制。
@@ -71,7 +72,7 @@ console.log(Rectangle.name);
 
 ### 构造函数
 
-[constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为 “constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
+[constructor](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为“constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
 
 一个构造函数可以使用 `super` 关键字来调用一个父类的构造函数。
 
@@ -103,7 +104,7 @@ console.log(square.area);
 
 ### 静态方法
 
-[`static`](/zh-CN/docs/Web/JavaScript/Reference/Classes/static) 关键字用来定义一个类的一个静态方法。调用静态方法不需要[实例化](</zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)>)该类，但不能通过一个类实例调用静态方法。静态方法通常用于为一个应用程序创建工具函数。
+[`static`](/zh-CN/docs/Web/JavaScript/Reference/Classes/static) 关键字用来定义一个类的一个静态方法。调用静态方法不需要[实例化](</zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)>) 该类，但不能通过一个类实例调用静态方法。静态方法通常用于为一个应用程序创建工具函数。
 
 ```js
 class Point {
@@ -247,7 +248,7 @@ class Rectangle {
 
 私有字段不能通过在之后赋值来创建它们，这种方式只适用普通属性。
 
-更多信息，请看[class fields](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields).
+更多信息，请看[class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Class_fields).
 
 ## 使用 `extends` 扩展子类
 
@@ -367,7 +368,7 @@ class Lion extends Cat {
 
 ## Mix-ins / 混入
 
-抽象子类或者 mix-ins 是类的模板。 一个 ECMAScript 类只能有一个单超类，所以想要从工具类来多重继承的行为是不可能的。子类继承的只能是父类提供的功能性。因此，例如，从工具类的多重继承是不可能的。该功能必须由超类提供。
+抽象子类或者 mix-ins 是类的模板。一个 ECMAScript 类只能有一个单超类，所以想要从工具类来多重继承的行为是不可能的。子类继承的只能是父类提供的功能性。因此，例如，从工具类的多重继承是不可能的。该功能必须由超类提供。
 
 一个以超类作为输入的函数和一个继承该超类的子类作为输出可以用于在 ECMAScript 中实现混合：
 
@@ -400,7 +401,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 无法重新定义类。尝试这样做会产生一个 `SyntaxError`.
 
-如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 {{Bug(1428672)}}.) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
+如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 [Firefox bug 1428672](https://bugzil.la/1428672).) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## 参见
 

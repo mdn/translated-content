@@ -2,6 +2,7 @@
 title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
+
 {{AddonSidebar()}}
 
 イメージをクリップボードにコピーします。イメージはクリップボードに書き込まれる前に再エンコードされます。イメージが無効な場合、クリップボードは修正されません。
@@ -64,4 +65,4 @@ fetch(browser.runtime.getURL('image.png'))
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.
+> **メモ:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

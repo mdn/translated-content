@@ -9,6 +9,7 @@ tags:
   - évènements
 translation_of: Web/API/KeyboardEvent/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent")}}.

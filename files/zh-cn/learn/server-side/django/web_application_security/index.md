@@ -2,9 +2,10 @@
 title: Django Web 应用安全
 slug: Learn/Server-side/Django/web_application_security
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 
-保护用户数据是任何网站设计的重要部分。我们之前在文章[web 安全](/en-US/docs/Web/Security)中解释了一些更常见的安全威胁--本文提供了 Django 的内置保护如何处理这些威胁的实际演示。
+保护用户数据是任何网站设计的重要部分。我们之前在文章[web 安全](/zh-CN/docs/Web/Security)中解释了一些更常见的安全威胁--本文提供了 Django 的内置保护如何处理这些威胁的实际演示。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -32,7 +33,7 @@ slug: Learn/Server-side/Django/web_application_security
 
 [web 安全](/zh-CN/docs/Web/Security)主題提供一个概述，说明了网站安全对于服务器端设计的意义，以及以及一些需要应对的常见威胁。本文中包含一个关键的概念：如果网站信任任何来自浏览器的数据，几乎所有的攻击方法都会成功。
 
-> **警告：** 切记，对于网站安全来说最重要一点就是“**永远不要相信浏览器端提交的数据**”。 这些数据包括使用 `GET` 方式请求时 URL 中的参数，`POST` 方式请求的数据，HTTP headers 和 cookies，以及用户上传的文件等等。请确保一定要检查和清洗这些提交的数据。对于网站安全来说，总是要做好最坏的打算。
+> **警告：** 切记，对于网站安全来说最重要一点就是“**永远不要相信浏览器端提交的数据**”。这些数据包括使用 `GET` 方式请求时 URL 中的参数，`POST` 方式请求的数据，HTTP headers 和 cookies，以及用户上传的文件等等。请确保一定要检查和清洗这些提交的数据。对于网站安全来说，总是要做好最坏的打算。
 
 对 Django 用户来说，好消息是 Django 框架已经处理了大量的常见威胁。请阅读 Django 官方文档中的"[Security in Django](https://docs.djangoproject.com/en/2.0/topics/security/)"部分来了解 Django 的安全细节，以及如何确保基于 Django 的网站的安全。
 
@@ -115,9 +116,9 @@ Django 还提供了很多其他形式的防护措施 (大部分不是很容易�
 - SQL 注入防护
   - : SQL 注入漏洞可以让攻击者直接对网站数据库执行构造好的 SQL 语句，在无需用户权限的情况下即可实现对数据的访问、修改甚至是删除。绝大多数的情况下，使用 Django 的查询集/模型直接进行数据库访问时，实际使用的 SQL 语句已经被底层的数据库驱动妥善地进行了转义。如果必须要直接执行自定义的 SQL 语句，那么也请一定要注意防范 SQL 注入的问题。
 - 点击劫持防护
-  - : 点击劫持是指攻击者通过诱导用户，用户本意要访问 A 网站，最终却访问到了 B 网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的[\<iframe>](/en-US/docs/Web/HTML/Element/iframe) 标签，以此来窃取用户的登录信息。Django 通过 [`X-Frame-Options`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware)中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在 iframe 中显示。
+  - : 点击劫持是指攻击者通过诱导用户，用户本意要访问 A 网站，最终却访问到了 B 网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的[\<iframe>](/zh-CN/docs/Web/HTML/Element/iframe) 标签，以此来窃取用户的登录信息。Django 通过 [`X-Frame-Options`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware)中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在 iframe 中显示。
 - 强制 SSL/HTTPS
-  - : web 服务器可通过启用 SSL/HTTPS 来加密网站和浏览器之间的所有通信流量，包括了身份认证及其他通过纯文本方式来发送的数据流量(强烈建议启用 HTTPS)。如果 HTTPS 已启用，Django 还提供了一起实用的保护措施:
+  - : web 服务器可通过启用 SSL/HTTPS 来加密网站和浏览器之间的所有通信流量，包括了身份认证及其他通过纯文本方式来发送的数据流量 (强烈建议启用 HTTPS)。如果 HTTPS 已启用，Django 还提供了一起实用的保护措施：
 
 - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) 设置可以用于检查内容是否安全，可用于代理和 Django 之间使用非 HTTPS 方式通讯的情况下。
 - [`SECURE_SSL_REDIRECT`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_SSL_REDIRECT) 可以将所有 HTTP 的请求重定向到 HTTPS。
@@ -131,7 +132,7 @@ Django 还提供了很多其他形式的防护措施 (大部分不是很容易�
 
 ## 总结
 
-Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS 和 CSRF 攻击。本文中，我们已经使用本地图书馆网站来了演示 Django 如何处理一些特定的攻击。我们也提供了关于其它保护措施的简单概述。
+Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS 和 CSRF 攻击。本文中，我们已经使用本地图书馆网站来了演示 Django 如何处理一些特定的攻击。我们也提供了关于其他保护措施的简单概述。
 
 但这仅仅是对网站安全的一个入门。我们强烈建议您阅读 [Django 中的安全](https://docs.djangoproject.com/en/2.0/topics/security/) 以获得更加深入的理解。
 
@@ -140,26 +141,8 @@ Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS
 ## 参阅
 
 - [Security in Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django 官方文档)
-- [Server side website security](/en-US/docs/Web/Security) (MDN)
-- [Web security](/en-US/docs/Web/Security) (MDN)
-- [Securing your site](/en-US/docs/Web/Security/Securing_your_site) (MDN)
+- [Server side website security](/zh-CN/docs/Web/Security) (MDN)
+- [Web security](/zh-CN/docs/Web/Security) (MDN)
+- [Securing your site](/zh-CN/docs/Web/Security/Securing_your_site) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

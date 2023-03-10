@@ -2,11 +2,12 @@
 title: User interface
 slug: Mozilla/Add-ons/WebExtensions/user_interface
 ---
+
 {{AddonSidebar}}
 
 为了能给用户提供在不同场景下都具有价值的功能，WebExtensions 提供了许多的用户界面选项。下面是这些选项的摘要，在本章中将会对每个选项做出更详细的说明。
 
-> **备注：** 想要使你的扩展能提供良好的用户体验吗？请查看文章[用户体验的最佳实践](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices) .
+> **备注：** 想要使你的扩展能提供良好的用户体验吗？请查看文章[用户体验的最佳实践](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices) .
 
 <table class="standard-table">
   <thead>
@@ -37,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
           >带有弹出面板的工具栏按钮</a
         >
       </td>
@@ -73,7 +74,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         带有<a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
           >弹出面板</a
         >的地址栏菜单按钮
       </td>
@@ -103,7 +104,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
           >侧边栏</a
         >
       </td>
@@ -124,7 +125,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
           >选项页面</a
         >
       </td>
@@ -141,7 +142,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages"
           >扩展页面</a
         >
       </td>
@@ -178,7 +179,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
           >地址栏建议</a
         >
       </td>
@@ -193,7 +194,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
           >开发者工具面板</a
         >
       </td>
@@ -210,7 +211,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
 
 以下的操作指南提供了一些创建用户界面选项的指导;
 
-- [在工具栏中添加一个按钮](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [实现一个设置页面](/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-- [扩展开发人员工具](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [浏览器样式](/en-US/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [在工具栏中添加一个按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [实现一个设置页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [扩展开发人员工具](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [浏览器样式](/zh-CN/Add-ons/WebExtensions/user_interface/Browser_styles)

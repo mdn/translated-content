@@ -2,6 +2,7 @@
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
 ---
+
 {{APIRef}}
 
 **`Window.resizeBy()`** メソッドは、現在のウィンドウを指定した大きさにリサイズします。

@@ -1,8 +1,8 @@
 ---
 title: Marking up a letter
 slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}우리 모두 글자를 쓸 줄 압니다. 이제 글을 포멧팅하는 방법을 익혀 보도록 합니다. 이 장에서는 주어진 글을 HTML 기본/혹은 고급 텍스트 포멧팅 방식에 맞춰 다듬는 연습을 할 예정입니다. 예를 들어, 하이퍼링크라든지 \<head> 컨텐츠 등을 말이지요.
 
 <table class="learn-box standard-table">
@@ -70,7 +70,7 @@ Inline semantics:
 - The five acronyms/abbreviations in the main text of the letter should be marked up to provide expansions of each acronym/abbreviation.
 - The six sub/superscripts should be marked up appropriately — in the chemical formulae, and the numbers 103 and 104 (they should be 10 to the power or 3 and 4, respectively).
 - Try to mark up at least two appropriate words in the text with strong importance/emphasis.
-- There are two places where a hyperlink should be added; add appropriate links with titles. For the location that the links point to, just use http\://example.com.
+- There are two places where a hyperlink should be added; add appropriate links with titles. For the location that the links point to, just use `http://example.com`.
 - The university motto quote and citation should be marked up with appropriate elements.
 
 The head of the document:
@@ -88,22 +88,10 @@ The head of the document:
 
 The following screenshot shows an example of what the letter might look like after being marked up.
 
-![Example](https://mdn.mozillademos.org/files/15811/Letter%20screengrab%202.png)
+![Example](letter_screengrab_2.png)
 
 ## 프로젝트
 
 If you are following this assessment as part of an organized course, you should be able to give your work to your teacher/mentor for marking. If you are self-learning, then you can get the marking guide fairly easily by asking on the [discussion thread about this exercise](https://discourse.mozilla.org/t/marking-up-a-letter-assignment/24676), or in the [#mdn](irc://irc.mozilla.org/mdn) IRC channel on [Mozilla IRC](https://wiki.mozilla.org/IRC). Try the exercise first — there is nothing to be gained by cheating!
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

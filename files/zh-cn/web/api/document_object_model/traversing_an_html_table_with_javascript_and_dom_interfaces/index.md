@@ -3,6 +3,7 @@ title: 使用 Javascript 和 DOM Interfaces 来处理 HTML
 slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
+
 ### 简介
 
 本文概述了一些强大的，基本的 DOM 1 级别中的方法以及如何在 JavaScript 中使用它们。你将会如何动态地创建，访问，控制以及移除 HTML 元素。这里提到的 DOM 方法，并非是 HTML 专有的；它们在 XML 中同样适用。这里所有的示例，在任何全面支持 DOM level1 的浏览器里都能正常工作；例如 Mozilla 浏览器或者其他基于 Mozilla 的浏览器，像网景公司的下一代导航者（Navigatior）浏览器等。这里的示例代码在 IE5 中也能正常工作。
@@ -112,7 +113,7 @@ slug: >-
 
 下面是由代码生成的 TABLE 及其子元素的 DOM 对象树：
 
-![Image:sample1-tabledom.jpg](/@api/deki/files/2677/=Sample1-tabledom.jpg)
+![Image:sample1-tabledom.jpg](sample1-tabledom.jpg)
 
 你可以只用一些 DOM 方法来创建这个表格和它内部的子元素。请在脑海中时刻保留你想要创建的数据结构的树之模型，这样有利于更简便的写出必须的代码。在图 1 的 TABLE 树中，TABLE 有一个子元素 TBODY。TBODY 有两个子元素。每一个 TR 又含有两个子元素（TD）。最后，每一个 TD 有一个子元素 -- 文本节点。
 
@@ -120,7 +121,7 @@ slug: >-
 
 `getElementByTagName`是文档接口（Document interface）和元素接口（Element interface）的中的方法，所以不管是根文档对象还是所有的元素对象都含有方法`getElementByTagName`。用来通过它们的标签名称（tag name）来获得某些元素的一系列子元素。你可以使用的方法是：`element.getElementsByTagName(tagname)`。
 
-`getElementsByTagName`返回一个有特定标签名称（tagname）的子元素列表。从这个子元素列表中，你可以通过调用`item`和你想得到的元素的下标，来获得单个元素。列表中第一个元素的下标是 0。上面的方法很简单，但是当你操作一个巨大的数据结构时还是应该小心一些。 OK，我们下一个话题中要继续对我们的表格例子进行修改。下面的示例更加简单，它意图展示一些基础的方法：
+`getElementsByTagName`返回一个有特定标签名称（tagname）的子元素列表。从这个子元素列表中，你可以通过调用`item`和你想得到的元素的下标，来获得单个元素。列表中第一个元素的下标是 0。上面的方法很简单，但是当你操作一个巨大的数据结构时还是应该小心一些。OK，我们下一个话题中要继续对我们的表格例子进行修改。下面的示例更加简单，它意图展示一些基础的方法：
 
 ```
 <html>
@@ -172,7 +173,7 @@ slug: >-
     myP=myBodyElements.item(1);
     ```
 
-![Image:sample2a2.jpg](https://developer.mozilla.org/@api/deki/files/834/=Sample2a2.jpg)
+![Image:sample2a2.jpg](sample2a2.jpg)
 
 一旦你取得了 HTML 元素的 DOM 对象，你就可以设置它的属性了。比如，如果你希望设置背景色属性，你只需要添加：
 
@@ -193,28 +194,28 @@ myTextNode=document.createTextNode("world");
 
 #### 使用 appendChild(..) 插入元素
 
-那么，通过调用 myP.appendChild({{ mediawiki.external('node_element') }}) 你可以将这个元素设置成为第二个 P 的一个新的子元素。
+那么，通过调用 `myP.appendChild(node_element)` 你可以将这个元素设置成为第二个 P 的一个新的子元素。
 
-```
+```js
 myP.appendChild(myTextNode);
 ```
 
 在测试了这个例子之后，我们注意到，hello 和 world 单词被组合在了一个：helloworld。事实上，当你看到 HTML 页面时，hello 和 world 两个文字节点看起来更像是一个节点。但是请记住它们在文档模型中的形式 -- 是两个节点。第二个节点是一个 TEXT_NODE 类型的新节点，也是第二个 P 标签的第二个子元素。下面的图标将在文档树种展示最近创建的文本节点对象。
 
-![Image:sample2b2.jpg](https://developer.mozilla.org/@api/deki/files/835/=Sample2b2.jpg)
+![Image:sample2b2.jpg](sample2b2.jpg)
 
 > **备注：** createTextNode 和 appendChild 是在单词 hello 和 world 之间设置空格的一个简单方法。另外一个重要的注意事项是：appendChild 方法将把新的子节点接在最后一个子节点之后，正如 world 被加在了 hello 之后。所以如果你想在 hello 和 world 中间添加一个文本节点的话，你应该使用 insertBefore 而不是 appendChild.
 
 #### 使用文档对象和 createElement(..) 方法创建新的元素
 
-你可以使用 createElement 来创建新的 HTML 元素或者任何其它你想要的元素。比如，如果你想要创建一个新的 P 作为 BODY 的子元素，你可以使用前面例子的 myBody 并给它接上一个新的元素节点。使用 document.createElement("tagname") 可以方便的创建一个节点。如下：
+你可以使用 createElement 来创建新的 HTML 元素或者任何其他你想要的元素。比如，如果你想要创建一个新的 P 作为 BODY 的子元素，你可以使用前面例子的 myBody 并给它接上一个新的元素节点。使用 document.createElement("tagname") 可以方便的创建一个节点。如下：
 
 ```
 myNewPTAGnode=document.createElement("p");
 myBody.appendChild(myNewPTAGnode);
 ```
 
-![Image:sample2c.jpg](https://developer.mozilla.org/@api/deki/files/836/=Sample2c.jpg)
+![Image:sample2c.jpg](sample2c.jpg)
 
 #### 使用 removeChild(..) 方法移除节点
 
@@ -232,7 +233,7 @@ myNewPTAGnode.appendChild(myTextNode);
 
 被修改的对象树的最后的状态如下：
 
-![Image:sample2d.jpg](https://developer.mozilla.org/@api/deki/files/837/=Sample2d.jpg)
+![Image:sample2d.jpg](sample2d.jpg)
 
 ### 动态创建一个表格 (回到 Sample1.html)
 
@@ -240,7 +241,7 @@ myNewPTAGnode.appendChild(myTextNode);
 
 #### 复习一下 HTML 表格结构
 
-![Image:sample1-tabledom.jpg](https://developer.mozilla.org/@api/deki/files/833/=Sample1-tabledom.jpg)
+![Image:sample1-tabledom.jpg](sample1-tabledom.jpg)
 
 #### 创建元素节点并将他们插入到文档树中
 

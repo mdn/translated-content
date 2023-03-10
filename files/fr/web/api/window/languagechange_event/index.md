@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/languagechange_event
 ---
+
 {{APIRef}}
 
 L'événement **`languagechange`** est déclenché sur l'objet d'étendue globale lorsque la langue préférée de l'utilisateur change.

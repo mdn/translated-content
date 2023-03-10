@@ -1,12 +1,8 @@
 ---
 title: HTTP のリダイレクト
 slug: Web/HTTP/Redirections
-tags:
-  - Guide
-  - HTTP
-  - redirects
-translation_of: Web/HTTP/Redirections
 ---
+
 {{HTTPSidebar}}
 
 *URL リダイレクト*は、 *URL 転送*とも呼ばれ、ページ、フォーム、ウェブアプリケーション全体などに二つ以上の URL のアドレスを与える技術です。 HTTP ではこの操作のために、特別な種類のレスポンスである ***HTTP リダイレクト***を提供しています。
@@ -26,9 +22,9 @@ HTTP では、リダイレクトはリクエストに対して、サーバーが
 
 リダイレクトには何種類かがありますが、3 つのカテゴリに分類することができます。
 
-1.  [恒久的リダイレクト](#Permanent_redirections)
-2.  [一時的リダイレクト](#Temporary_redirections)
-3.  [特殊リダイレクト](#Special_redirections)
+1. [恒久的リダイレクト](#Permanent_redirections)
+2. [一時的リダイレクト](#Temporary_redirections)
+3. [特殊リダイレクト](#Special_redirections)
 
 ### 恒久的リダイレクト
 
@@ -68,8 +64,8 @@ HTTP では、リダイレクトはリクエストに対して、サーバーが
 
 HTTP リダイレクトは、リダイレクトを定義する唯一の手段ではありません。他にも二つの方法があります。
 
-1.  {{HTMLElement("meta")}} 要素を使用する HTML リダイレクト
-2.  [DOM](/ja/docs/Web/API/Document_Object_Model) による JavaScript リダイレクト
+1. {{HTMLElement("meta")}} 要素を使用する HTML リダイレクト
+2. [DOM](/ja/docs/Web/API/Document_Object_Model) による JavaScript リダイレクト
 
 ### HTML リダイレクト
 
@@ -99,9 +95,9 @@ HTML リダイレクトと同様にすべてのリソースでは動作できず
 
 リダイレクトを起動する方法が 3 種類あり、同時に複数の方法を指定できますが、どのリダイレクトが最初に適用されるのでしょうか？
 
-1.  HTTP リダイレクトが常に最初に動作します。 — 転送されるページがない場合でも存在するからです。
-2.  HTTP リダイレクトが存在しなければ、HTML リダイレクト ({{HTMLElement("meta")}}) が動作します。
-3.  JavaScript リダイレクトが最後に、 JavaScript が有効であれば実行されます。
+1. HTTP リダイレクトが常に最初に動作します。 — 転送されるページがない場合でも存在するからです。
+2. HTTP リダイレクトが存在しなければ、HTML リダイレクト ({{HTMLElement("meta")}}) が動作します。
+3. JavaScript リダイレクトが最後に、 JavaScript が有効であれば実行されます。
 
 可能であれば常に HTTP リダイレクトを使用して、{{HTMLElement("meta")}} は追加しないようにしましょう。誰かが HTTP リダイレクトを変更して HTML リダイレクトを変更し忘れると、リダイレクトが同一ではなくなったり、無限ループになったり、その他の問題が発生したりします。
 
@@ -126,7 +122,7 @@ HTML リダイレクトと同様にすべてのリソースでは動作できず
 
 外部のリンクは貴重なユーザーを連れてきてくれるし、 SEO にも役立つため、リンクを壊したくはありません。よって、古い URL から新しい URL へのリダイレクトを設定します。
 
-> **Note:** この手法は内部のリンクにも有効ですが、内部のリダイレクトは避けるようにしてください。リダイレクトは (追加の HTTP リクエストを行うため) 性能の負担がかなりあります。内部のリンクを修正することでこれを避けられるのであれば、リンクを修正してください。
+> **メモ:** この手法は内部のリンクにも有効ですが、内部のリダイレクトは避けるようにしてください。リダイレクトは (追加の HTTP リクエストを行うため) 性能の負担がかなりあります。内部のリンクを修正することでこれを避けられるのであれば、リンクを修正してください。
 
 ### 安全でないリクエストへの一時的なレスポンス
 
@@ -150,8 +146,8 @@ HTML リダイレクトと同様にすべてのリソースでは動作できず
 
 ```
 <VirtualHost *:443>
-	ServerName example.com
-	Redirect / https://www.example.com
+  ServerName example.com
+  Redirect / https://www.example.com
 </VirtualHost>
 ```
 
@@ -181,9 +177,9 @@ Nginx では、リダイレクトしたいコンテンツ用の server ブロッ
 
 ```
 server {
-	listen 80;
-	server_name example.com;
-	return 301 $scheme://www.example.com$request_uri;
+  listen 80;
+  server_name example.com;
+  return 301 $scheme://www.example.com$request_uri;
 }
 ```
 

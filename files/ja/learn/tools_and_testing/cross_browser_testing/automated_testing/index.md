@@ -2,6 +2,7 @@
 title: 自動テストのイントロダクション
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 1 日に数回、複数のブラウザーやデバイスで手動でテストを実行すると、面倒で時間がかかる場合があります。これを効率的に処理するには、自動化ツールに慣れておく必要があります。この記事では、利用可能なもの、タスクランナーの使い方、そして Sauce Labs や Browser Stack などの市販のブラウザーテスト自動化アプリケーションの基本的な使い方を見ていきます。
@@ -21,7 +22,7 @@ We agree — testing all the things we've looked at in previous articles manuall
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
-> **Note:** the above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs via an API, run cross browser tests, and return results. We will look at this below as well.
+> **メモ:** the above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs via an API, run cross browser tests, and return results. We will look at this below as well.
 
 ## Using a task runner to automate testing tools
 
@@ -46,7 +47,7 @@ Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to in
     npm install npm@latest -g
     ```
 
-> **Note:** If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) should sort you out.
+> **メモ:** If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) should sort you out.
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
 
@@ -150,7 +151,7 @@ Inside the array goes the names of all the tasks you want Gulp to run, once you 
     npm install --save-dev gulp-htmltidy
     ```
 
-    > **Note:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it as, it has been added to the `devDependencies` property.
+    > **メモ:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it as, it has been added to the `devDependencies` property.
 
 2. Add the following dependencies to `gulpfile.js`:
 
@@ -268,9 +269,9 @@ gulp.task('watch', function(){
 
 Now try entering the `gulp watch` command into your terminal. Gulp will now watch your directory, and run the appropriate tasks whenever you save a change to an HTML, CSS, or JavaScript file.
 
-> **Note:** The `*` character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example `gulp.src('src/*.css')` would grab all your CSS files and then run piped tasks on them.
+> **メモ:** The `*` character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example `gulp.src('src/*.css')` would grab all your CSS files and then run piped tasks on them.
 
-> **Note:** One problem with our watch command above is that our CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.
+> **メモ:** One problem with our watch command above is that our CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.
 
 There's a lot more you can do with Gulp. The [Gulp plugin directory](http://gulpjs.com/plugins/) has literally thousands of plugins to search through.
 
@@ -289,7 +290,7 @@ The basic premise with such applications is that the company that runs each one 
 
 You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.
 
-> **Note:** There are other commercial browser testing systems available but in this article, we'll focus on Sauce Labs and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
+> **メモ:** There are other commercial browser testing systems available but in this article, we'll focus on Sauce Labs and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
 
 ### Sauce Labs
 
@@ -318,7 +319,7 @@ The [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/manual) has a lo
 
 Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took , watch a video of the session, and view data logs for the session for example.
 
-> **Note:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+> **メモ:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
 
 #### Advanced: The Sauce Labs API
 
@@ -400,7 +401,7 @@ Clicking on one of those browser icons will load up your choice of platform/devi
 
 ![](browserstack-test-device-sized.png)
 
-> **Note:** The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
+> **メモ:** The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
 
 You'll find that you can enter URLs into the address bar, and use the other controls like you'd expect on a real device. You can even do things like copy and paste from the device to your clipboard, scroll up and down by dragging with the mouse, or use appropriate gestures (e.g. pinch/zoom, two fingers to scroll) on the touchpads of supporting devices (e.g. Macbook). Note that not all features are available on all devices.
 
@@ -422,7 +423,7 @@ The features here are as follows:
 - _Features_ — Shows you what features the current configuration supports, e.g. copy to clipboard, gesture support, etc.
 - _Stop_ — Ends the session.
 
-> **Note:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+> **メモ:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
 
 #### Other basic features
 

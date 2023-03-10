@@ -1,21 +1,24 @@
 ---
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
+l10n:
+  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
 ---
+
 {{APIRef("UI Events")}}
 
-> **Warning:** このメソッドを使わないでください。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
+> **警告:** このメソッドを使わないでください。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
 >
 > このメソッドは DOM 仕様から削除され、現在のどのブラウザーも対応していません。
 > Firefox はバージョン 93 からこのメソッドを環境設定 (`dom.keyboardevent.init_key_event.enabled`) に隠蔽しており、その後まもなく削除される予定になっています。
 
 {{deprecated_header}}
 
-**`KeyboardEvent.initKeyEvent()`** メソッドは {{domxref("document.createEvent")}}`("KeyboardEvent")` を使用して作成されたイベントの値を初期化するために使用されます。この方法で初期化されるイベントは {{domxref("document.createEvent")}}`("KeyboardEvent")` メソッドで作成しておく必要があります。 `initKeyEvent()` はイベントが[配信](/ja/docs/Web/API/EventTarget/dispatchEvent)される前に呼び出して設定する必要があります。
+**`KeyboardEvent.initKeyEvent()`** メソッドは {{domxref("document.createEvent")}} `("KeyboardEvent")` を使用して作成されたイベントの値を初期化するために使用されます。この方法で初期化されるイベントは {{domxref("document.createEvent")}} `("KeyboardEvent")` メソッドで作成しておく必要があります。 `initKeyEvent()` はイベントが[配信](/ja/docs/Web/API/EventTarget/dispatchEvent)される前に呼び出して設定する必要があります。
 
 ## 構文
 
-```js
+```js-nolint
 initKeyEvent (type, bubbles, cancelable, view,
                     ctrlKey, altKey, shiftKey, metaKey,
                     keyCode, charCode)
@@ -51,12 +54,12 @@ initKeyEvent (type, bubbles, cancelable, view,
 ## 例
 
 ```js
-var event = document.createEvent('KeyboardEvent'); // create a key event
+const event = document.createEvent('KeyboardEvent'); // create a key event
 // define the event
 event.initKeyEvent("keypress",       // typeArg,
                    true,             // canBubbleArg,
                    true,             // cancelableArg,
-                   null,             // viewArg,  Specifies UIEvent.view. This value may be null.
+                   null,             // viewArg, Specifies UIEvent.view. This value may be null.
                    false,            // ctrlKeyArg,
                    false,            // altKeyArg,
                    false,            // shiftKeyArg,

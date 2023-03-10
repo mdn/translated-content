@@ -2,9 +2,10 @@
 title: CSSRule.cssText
 slug: Web/API/CSSRule/cssText
 ---
+
 {{ APIRef("CSSOM") }}概述
 
-**cssText** 返回样式规则所包含的实际文本。想要能够动态的设置一个样式表规则，查看[使用动态样式信息。](/en-US/docs/DOM/Using_dynamic_styling_information)
+**cssText** 返回样式规则所包含的实际文本。想要能够动态的设置一个样式表规则，查看[使用动态样式信息。](/zh-CN/docs/DOM/Using_dynamic_styling_information)
 
 ## 语法
 

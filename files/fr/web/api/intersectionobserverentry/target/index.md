@@ -9,6 +9,7 @@ tags:
   - target
 translation_of: Web/API/IntersectionObserverEntry/target
 ---
+
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`target`** de l'interface {{domxref("IntersectionObserverEntry")}} indique quel {{domxref("Element")}} ciblé a changé sa proportion d'intersection avec l'élément racine.

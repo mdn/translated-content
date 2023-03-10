@@ -2,6 +2,7 @@
 title: ':scope'
 slug: Web/CSS/:scope
 ---
+
 {{CSSRef}}
 
 **`:scope`** 属于 [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)，它表示作为选择器要匹配的参考点的元素。
@@ -92,7 +93,7 @@ document.getElementById('results').innerHTML = Array.prototype.map.call(selected
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.scope")}}
+{{Compat}}
 
 ## 参见
 

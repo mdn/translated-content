@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/clear
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.clear()`** de [l'API WebGL](/fr/docs/Web/API/WebGL_API) efface les tampons avec des valeurs prédéfinies.

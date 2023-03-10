@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ---
+
 {{JSRef}}
 
 **`global`** プロパティは "`g`" フラグが正規表現で使われているかどうかを返します。`global` は個々の正規表現インスタンスの読取専用プロパティです。
@@ -46,9 +39,7 @@ console.log(str2);  // Output: examplefoo
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.global', 'RegExp.prototype.global')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

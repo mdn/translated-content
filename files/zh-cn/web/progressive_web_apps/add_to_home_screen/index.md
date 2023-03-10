@@ -3,6 +3,7 @@ title: 添加到主屏幕
 slug: Web/Progressive_web_apps/Add_to_home_screen
 original_slug: Web/Progressive_web_apps/添加到主屏幕
 ---
+
 添加到主屏幕（Add to Home Screen，简称 A2HS）是现代智能手机浏览器中的一项功能，使开发人员可以轻松便捷地将自己喜欢的 Web 应用程序（或网站）的快捷方式添加到主屏幕中，以便用户随后可以通过单击访问它。本指南说明了 A2HS 的使用方式，以及作为开发人员为使用户能利用 A2HS 所需做的事情。
 
 ## 为什么选择 A2HS？
@@ -23,11 +24,11 @@ Mobile Chrome / Android Webview 从 31 版开始支持 A2HS，Opera for Android 
 
 点击此按钮将显示一个确认横幅，按下大大的“添加到主屏幕”按钮即可将应用添加到主屏幕。（注意：在 Android 8 及更高版本中，将首先显示系统级的“添加到主屏幕”权限对话框。）
 
-![确认横幅](https://mdn.mozillademos.org/files/15772/fx-a2hs-banner.png)
+![确认横幅](fx-a2hs-banner.png)
 
 使用 Mobile Chrome 的体验则略有不同；加载我们的网站后，您会看到一个弹出安装横幅，询问您是否要将此应用添加到主屏幕。
 
-![Mobile Chrome 上的 A2HS 提示](https://mdn.mozillademos.org/files/15771/chrome-a2hs-banner.png)
+![Mobile Chrome 上的 A2HS 提示](chrome-a2hs-banner.png)
 
 > **备注：** 您可以在“[Web App 安装横幅](https://developers.google.com/web/fundamentals/app-install-banners/)”一文中找到有关 Chrome 安装横幅的更多信息。
 
@@ -57,8 +58,8 @@ Web manifest 以标准 JSON 格式编写，应放置在应用程序目录中的�
 A2HS 所需的字段如下：
 
 - `background_color`：指定在某些应用程序上下文中使用的背景色。与 A2HS 最相关的一个是在点击主屏幕上的应用程序图标并首次开始加载时显示的初始屏幕（目前仅在通过 Chrome 将应用添加到主屏幕时显示）。
-- `display`：指定应如何显示应用。 为了使它看起来像一个应用程序而非网页，这里应该填写像是 `fullscreen` （根本不显示任何 UI）或 `standalone`（与前者非常相似，但是状态栏这样的系统级 UI 元素可能是可见的）的值。
-- `icons`：指定在不同位置（例如，在任务切换器上或更重要的是在主屏幕上）表示应用程序时浏览器使用的图标。 我们的演示中仅包含一个。
+- `display`：指定应如何显示应用。为了使它看起来像一个应用程序而非网页，这里应该填写像是 `fullscreen` （根本不显示任何 UI）或 `standalone`（与前者非常相似，但是状态栏这样的系统级 UI 元素可能是可见的）的值。
+- `icons`：指定在不同位置（例如，在任务切换器上或更重要的是在主屏幕上）表示应用程序时浏览器使用的图标。我们的演示中仅包含一个。
 - `name`/`short_name`：这些字段提供了在不同位置表示应用程序时要显示的应用程序名称。`name` 提供完整的应用名称。`short_name` 则是当没有足够的空间显示全名时，提供的缩写名称。如果您的应用程序名称特别长，建议您同时提供两者。
 - `start_url`：提供启动添加到主屏幕应用程序时应加载的资源的路径。请注意，这必须是一个相对 manifest 指向网站主页的相对路径。另请注意，Chrome 需要这条字段才能显示安装标语，而 Firefox 即使没有这条字段也会显示用于添加到主屏的含加号的主页图标。
 
@@ -88,7 +89,7 @@ A2HS 所需的字段如下：
 
 请注意，每个图标对象中的 `type` 成员都指定了该图标的 MIME 类型，因此浏览器可以快速读取该图标的类型，并在不支持此类型时将其忽略并采用其他图标。
 
-在设计图标方面，您应该遵循与任何 Android 图标相同的最佳做法（请参阅 [Android 图标设计指南](https://developer.android.com/guide/practices/ui_guidelines/icon_design.html)）。
+在设计图标方面，您应该遵循与任何 Android 图标相同的最佳做法（请参阅 [Google Play 图标设计规范](https://developer.android.google.cn/distribute/google-play/resources/icon-design-specifications)）。
 
 ### 将 HTML 链接到 manifest
 
@@ -185,7 +186,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 于是，点击按钮后安装提示就会消失。
 
-![应用安装提示](https://mdn.mozillademos.org/files/16281/chrome-desktop-a2hs-banner.png)
+![应用安装提示](chrome-desktop-a2hs-banner.png)
 
 如果用户选择安装，则将安装该应用程序（可作为独立的桌面应用程序使用），并且不再显示“安装”按钮（如果已经安装了该应用程序，则将不再触发 `onbeforeinstallprompt` 事件）。当您打开应用程序时，它将显示在其自己的窗口中：
 

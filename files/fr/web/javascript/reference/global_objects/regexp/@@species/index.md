@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@species
 ---
+
 {{JSRef}}
 
 La propriété accesseur **`RegExp[@@species]`** renvoie le constructeur `RegExp`.
@@ -47,14 +48,11 @@ class MaRegExp extends RegExp {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-regexp-@@species', 'get RegExp [ @@species ]')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-regexp-@@species', 'get RegExp [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.@@species")}}
+{{Compat}}
 
 ## Voir aussi
 

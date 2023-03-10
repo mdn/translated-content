@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/while
 original_slug: Web/JavaScript/Reference/Instructions/while
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.
@@ -51,17 +52,11 @@ Une fois que la troisième itération est exécutée, la condition `n` < 3 n'est
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaires        |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-while-statement', 'while statement')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-while-statement', 'while statement')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-12.6.2', 'while statement')}}                 | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES3', '#sec-12.6.2', 'while statement')}}                 | {{Spec2('ES3')}}         |                     |
-| {{SpecName('ES1', '#sec-12.6.1', 'while statement')}}                 | {{Spec2('ES1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.while")}}
+{{Compat}}
 
 ## Voir aussi
 

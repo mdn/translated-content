@@ -1,16 +1,9 @@
 ---
 title: <frame>
 slug: Web/HTML/Element/frame
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
-browser-compat: html.elements.frame
-translation_of: Web/HTML/Element/frame
 ---
-{{HTMLRef}}{{Deprecated_header}}
+
+{{HTMLSidebar}}{{Deprecated_header}}
 
 `<frame>` は、別の HTML 文書を表示できる個々の領域を定義する HTML 要素です。 frame 要素は {{HTMLElement("frameset")}} の内部で使用します。
 

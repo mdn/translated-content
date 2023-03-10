@@ -2,6 +2,7 @@
 title: AnalyserNode.fftSize
 slug: Web/API/AnalyserNode/fftSize
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AnalyserNode") }} 接口的 `fftSize` 属性的值是一个无符号长整型的值，表示（信号）样本的窗口大小。当执行[快速傅里叶变换](/zh-CN/docs/)（Fast Fourier Transfor (FFT)）时，这些（信号）样本被用来获取频域数据。
@@ -85,7 +86,7 @@ function draw() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.fftSize")}}
+{{Compat}}
 
 ## 相关内容
 

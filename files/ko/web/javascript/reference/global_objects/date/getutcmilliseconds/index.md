@@ -1,9 +1,8 @@
 ---
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
-browser-compat: javascript.builtins.Date.getUTCMilliseconds
 ---
+
 {{JSRef}}
 
 **getUTCMilliseconds()** 메서드는 표준시에 따라 지정된 날짜의 밀리 초를 반환합니다.

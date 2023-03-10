@@ -1,92 +1,91 @@
 ---
 title: <input type="color">
-slug: Web/HTML/Element/Input/color
+slug: Web/HTML/Element/input/color
 ---
-**`<input type="color">`元素**是{{HTMLElement("input")}}元素中的一个特定种类，用来创建一个允许用户使用颜色选择器，或输入兼容 CSS 语法的颜色代码的区域。（不支持 Alpha 通道）
 
-此元素的外观会因浏览器不同而不同，可能是简单的验证颜色输入格式的文本框，也可能使用平台原生或自定义样式的颜色选择器。其 UI 除要能接收文本格式的颜色外，未要求其他特性。（[更多信息](https://www.w3.org/TR/html5/forms.html#color-state-%28type=color%29)）
+{{HTMLSidebar}}
+
+**`color`** 类型的 {{HTMLElement("input")}} 元素为用户提供了指定颜色的用户界面，或使用可视化颜色选择器，或以 `#rrggbb` 十六进制格式输入颜色值。
+
+虽然 CSS 颜色有很多格式（如颜色名称、功能表记和含有透明通道的十六进制），但是这里只支持简单颜色（无透明通道）。
+
+此元素的外观会因浏览器不同而不同，它可能是一个简单的文本输入，自动验证以确保颜色信息以正确的格式输入，或一个平台标准的颜色选择器，或某种自定义的颜色选择器窗口。
+
+{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流动区域</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_listed">列表</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_submittable">可提交</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form_resettable">可重置</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Form-associated_content">表单相关元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语内容</a>, 可标记元素，可触摸元素。</td>
+    <td><strong><a href="#value">值</a></strong></td>
+    <td>
+        长度为 7 的指定 {{cssxref("&lt;color&gt;")}} 值的小写十六进制字符串
+    </td>
   </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>无，这是一个 {{Glossary("empty element")}}。</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>必须有开始标签，必须没有结束标签。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父级元素</th>
-   <td>任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语内容</a>的元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLInputElement")}}</td>
-  </tr>
+    <tr>
+      <td><strong>事件</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} 和
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>支持的公共属性</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}} 和
+        {{htmlattrxref("list", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>list</code> 和 <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM 接口</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>方法</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
  </tbody>
 </table>
 
-## 属性
+## 值
 
-该元素具有下面属性及其他的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+`color` 类型的 {{HTMLElement("input")}} 元素的 {{htmlattrxref("value", "input")}} 总是包含一个 7 个字符的字符串，它以 16 进制格式指定 RGB 颜色。虽然你可以用大写字母或小写字母输入颜色，但它将以小写字母形式存储。该值从不以任何其他形式出现，也从不为空。
 
-- {{htmlattrdef("autocomplete")}}
-  - : 设置颜色区域的 autocomplete 值。如果为 true，则将自动填充颜色选择器上次存储的值。
-- {{htmlattrdef("autofocus")}}
-  - : 此布尔值属性使你可以指定当页面加载时，表单区域是否应当获得输入焦点。除非用户的操作覆盖这个属性，例如：在其他区域内进行输入。在整个文档中，只有一个元素可以拥有**autofocus**属性，值为布尔值。
-- {{htmlattrdef("disabled")}}
-  - : 此布尔值标明颜色选择其是否不可用于交互。另外，disabled 时的值不会随表单提交。
-- {{htmlattrdef("name")}}
-  - : 随表单一起提交的颜色选择器的 name。
-- {{htmlattrdef("value")}}
-  - : 颜色选择器的 value，指定颜色选择器默认选择的颜色。input 的 value 值必须是长度为 7 的字符串，以#开始，包含 16 进制格式的颜色值。例如：#FF0000 为红色的 16 进制值。
+> **备注：** 将该值设置为任何不是有效的、完全不透明的、RGB 颜色的*十六进制表示*，都将导致该值被设置为 `#000000`。特别是，你不能使用 CSS 的标准化颜色名称或任何 CSS 函数语法来设置该值（记住，HTML 和 CSS 是独立的语言和规范）。此外，不支持带有透明通道的颜色；用 9 个字符的十六进制表示（例如 `#009900aa`）指定颜色，也会导致颜色被设置为 `#000000`。
 
-## 使用
+## 使用 color 输入
 
-`"color"`类型的输入内容比较简单。
+由于有限的支持属性，`color` 类型的输入内容比较简单。
 
-```html
-<input type="color" />
-```
+### 提供默认颜色
 
-### 默认值
-
-你可以给上面的例子添加一个默认值，对元素本身和选色器都生效。
+你可以更新上面的简单例子，设置一个默认值，这样颜色井就会预先填上默认的颜色，颜色选择器（如果有的话）也会默认为这个颜色。
 
 ```html
 <input type="color" value="#ff0000" />
 ```
 
-上述代码会创建一个默认选择红色的颜色选择器。
+{{EmbedLiveSample("提供默认颜色", 700, 30)}}
 
-{{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
-
-下面的图片展示了 macOS 平台 Chrome 浏览器的颜色选择器：
-
-![This is how an input type color looks on Mac and within Chrome](https://mdn.mozillademos.org/files/12311/Input_Type_Color_sample.png)
-
-如果你没有手动指定的话，元素的默认值为`"#000000"`，即黑色。输入必须为 7 个字符，以"#"符号开始，后跟代表红、绿、蓝的十六进制字符各 2 个，形如`"#rrggbb"`。如果你想输入的颜色是其他格式（比如 CSS 中的`rgb()`或`rgba()`记法），在设定`value`值时必须将其转换为这种格式。
+如果你没有手动指定的话，其默认值为 `#000000`，即黑色。输入必须为 7 个字符的十六进制表示，意味着需要以“#”符号开始，后跟代表红、绿、蓝的十六进制字符各 2 个（形如 `#rrggbb`）。如果你想输入的颜色是其他格式（比如 CSS 颜色名称或 CSS 颜色函数如 `rgb()` 或 `rgba()` 记法），在设定 `value` 值时必须将其转换为这种格式。
 
 ### 监听颜色变化
 
-正如其他类型的{{HTMLElement("input")}}元素，有两个和值的改变相关的事件，{{event("input")}}和{{event("change")}}：
+正如其他类型的 {{HTMLElement("input")}} 元素，有两个和值的改变相关的事件，{{domxref("HTMLElement/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 {{htmlattrxref("value", "input")}} 属性获取新值。
 
-- 每次颜色变更都会触发元素上的`input`事件。
-- 用户关闭选色器之后会触发`change`事件。
-
-对于这两个事件，都可以通过{{domxref("HTMLInputElement.value", "value")}}属性获取新值。
+以下代码为监听颜色值变化的示例：
 
 ```js
 colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach((p) => {
     p.style.color = event.target.value;
   });
 }
@@ -94,29 +93,103 @@ function watchColorPicker(event) {
 
 ### 选取值
 
-如果浏览器的实现不支持为`"color"`类型的{{HTMLElement("input")}}元素提供选色器而只有一个文本框，可以使用{{domxref("HTMLInputElement.select", "select()")}}方法选取输入内容。如果浏览器提供了选色器，`select()`方法将会什么也不做。因此，需要留心这两种情况下方法行为的差异。
+当浏览器不支持颜色选择器接口时，它对颜色输入的实现将是一个自动验证内容以确保数值的格式正确的文本框。在这种情况下，你可以使用 {{domxref("HTMLInputElement.select", "select()")}} 方法来选择当前编辑栏中的文本。
+
+如果浏览器提供了选色器，`select()` 方法将会什么也不做。因此，需要留心这两种情况下方法行为的差异。
 
 ```js
 colorWell.select();
 ```
 
-### 实现差异
-
-如上文所说，如果浏览器不提供选色器，此元素将会显示为一个具备输入验证功能的文本框。例如，在 Safari 10.1 中，你将会看到以下内容：
-
-![Screenshot of the example taken in Safari.](https://mdn.mozillademos.org/files/14899/input-color-safari.png)
-
-而相同的内容在 Firefox 55 下则会显示成：
-
-![Screenshot of the example taken in Firefox 55 for macOS](https://mdn.mozillademos.org/files/14901/input-color-firefox.png)
-
-如果点击元素，则会弹出选色器，在此例中，为 macOS 平台的选色器。
-
-![Screenshot of the element with the color picker open in Firefox Mac.](https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png)
-
 ## 验证
 
-如果当前的{{Glossary("user agent")}}下，用户输入无法转换为 7 个字符的十六进制 RGB 形式，会被判定为非法输入。在这种情况下，{{cssxref(":invalid")}}伪类会生效。
+如果当前的{{Glossary("user agent","用户代理")}}下，用户输入无法转换为 7 个字符的十六进制 RGB 形式，会被判定为非法输入。在这种情况下，{{cssxref(":invalid")}} 伪类会作用于该元素上。
+
+## 示例
+
+让我们创建一个例子，通过跟踪 {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}} 事件，对颜色输入做一些处理，将新颜色应用到文档中的每个 {{HTMLElement("p")}} 元素。
+
+### HTML
+
+这个 HTML 是相当简单的——有若干包含描述材料的段落和一个 ID 为 `colorWell` 的 `color` {{HTMLElement("input")}}，我们将用它来改变段落文本的颜色。
+
+```html
+<p>
+  An example demonstrating the use of the
+  <code>&lt;input type="color"&gt;</code> control.
+</p>
+
+<label for="colorWell">Color:</label>
+<input type="color" value="#ff0000" id="colorWell" />
+
+<p>
+  Watch the paragraph colors change when you adjust the color picker. As you
+  make changes in the color picker, the first paragraph's color changes, as a
+  preview (this uses the <code>input</code> event). When you close the color
+  picker, the <code>change</code> event fires, and we detect that to change
+  every paragraph to the selected color.
+</p>
+```
+
+### JavaScript
+
+首先是一些设置，这里我们建立了一些变量，设置了一个包含我们在第一次加载时要设置的颜色井的变量，然后设置了 {{domxref("Window/load_event", "load")}} 处理器，在页面完全加载后做主要的启动工作。
+
+```js
+let colorWell;
+const defaultColor = "#0000ff";
+
+window.addEventListener("load", startup, false);
+```
+
+#### 初始化
+
+一旦页面完全加载，就会调用我们的 `load` 事件处理器 `startup()`：
+
+```js
+function startup() {
+  colorWell = document.querySelector("#colorWell");
+  colorWell.value = defaultColor;
+  colorWell.addEventListener("input", updateFirst, false);
+  colorWell.addEventListener("change", updateAll, false);
+  colorWell.select();
+}
+```
+
+在一个叫做 `colorWell` 的变量中获得对颜色 `<input>` 元素的引用，然后将颜色输入的值设置为 `defaultColor` 中的值。然后颜色输入的 {{domxref("HTMLElement/input_event", "input")}} 事件被设置为调用我们的 `updateFirst()` 函数，而 {{domxref("HTMLElement/change_event", "change")}} 事件被设置为调用 `updateAll()`。这些都在下面看到。
+
+最后，如果控件被实现为文本字段，我们调用 {{domxref("HTMLInputElement.select", "select()")}} 来选择颜色输入的文本内容（如果提供的是颜色选择器接口，这就没有效果）。
+
+#### 对颜色变化作出反应
+
+我们提供了两个处理颜色变化的函数。`updateFirst()` 函数是为了响应 `input` 事件而调用的。它改变文档中第一个段落元素的颜色，以匹配颜色输入的新值。由于每次对数值进行调整时都会触发 `input` 事件（例如，如果增加了颜色的亮度），在使用颜色选择器时，这些事件会重复发生。
+
+```js
+function updateFirst(event) {
+  const p = document.querySelector("p");
+  if (p) {
+    p.style.color = event.target.value;
+  }
+}
+```
+
+当退出颜色选择器时，表明值不会再改变（除非用户重新打开颜色选择器），会向该元素发送 `change` 事件。我们使用 `updateAll()` 函数来处理该事件，使用 {{htmlattrxref("value", "input", "Event.target.value")}} 来获得最终选择的颜色：
+
+```js
+function updateAll(event) {
+  document.querySelectorAll("p").forEach((p) => {
+    p.style.color = event.target.value;
+  });
+}
+```
+
+这将设置每个 {{HTMLElement("p")}} 区块的颜色，使其 {{cssxref("color")}} 属性与颜色输入的当前值相匹配，颜色输入是用 {{domxref("Event.target", "event.target")}} 引用的。
+
+### 结果
+
+最终的运行结果如下所示：
+
+{{EmbedLiveSample("示例", 700, 200)}}
 
 ## 规范
 
@@ -125,3 +198,7 @@ colorWell.select();
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

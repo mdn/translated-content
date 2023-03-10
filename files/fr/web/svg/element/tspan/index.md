@@ -8,6 +8,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/tspan
 ---
+
 {{SVGRef}}
 
 A l'intérieur d'un élément {{SVGElement("text")}}, les propriétés du texte et des polices, ainsi que la position actuelle du texte, peuvent être ajustées de façon absolue ou relative à partir des coodonnées précisées dans un élément `tspan`.
@@ -67,14 +68,11 @@ Cet élément implémente l'interface [`SVGTSpanElement`](/fr/docs/Web/API/SVGTS
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                   | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}     | {{Spec2('SVG2')}} |                      |
-| {{SpecName('SVG1.1', 'text.html#TSpanElement', '&lt;tspan&gt;')}} | {{Spec2('SVG1.1')}} | Définition originale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.tspan")}}
+{{Compat}}
 
 ## Voir aussi
 

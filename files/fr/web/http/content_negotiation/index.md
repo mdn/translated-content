@@ -3,6 +3,7 @@ title: La négociation de contenu
 slug: Web/HTTP/Content_negotiation
 translation_of: Web/HTTP/Content_negotiation
 ---
+
 {{HTTPSidebar}}
 
 En [HTTP](/fr/docs/Glossary/HTTP), la **_négociation de contenu_** est le mécanisme utilisé pour fournir différentes représentations d'une ressource à la même URI, afin que l'agent utilisateur puisse spécifier celle qui convient le mieux à l'utilisateur (par exemple, la langue d'un document, le format d'image, ou l'encodage du contenu).

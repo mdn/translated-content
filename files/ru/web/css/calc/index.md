@@ -6,6 +6,7 @@ tags:
 translation_of: Web/CSS/calc()
 original_slug: Web/CSS/calc()
 ---
+
 {{CSSRef}}
 
 `calc()` - это функция CSS, которая даёт возможность рассчитать значения свойств CSS во время их определения. Она может быть использована везде, где применимы {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, или {{cssxref("&lt;integer&gt;")}}.
@@ -27,14 +28,16 @@ original_slug: Web/CSS/calc()
 
 Операнды в expression могут быть различными выражениями {{cssxref("&lt;length&gt;")}}. Если пожелаете, то можете использовать разные единицы измерения для каждого из операндов. Вы также можете использовать скобки, чтобы указать порядок вычисления.
 
-> **Примечание:** **Внимание:** Деление на ноль выдаст ошибку при парсинге HTML.
+> **Примечание:** Деление на ноль выдаст ошибку при парсинге HTML.
 
 > **Примечание:** Операторы + и - всегда должны быть по обеим сторонам отделены пробелом. Выражение `calc(50% -8px)` будет интерпретировано как величина в процентах и следующее за ним отрицательное число в пикселях (не верное выражение), в то время как `calc(50% - 8px)` - правильное выражение, будет интерпретировано как вычитание из процентов длины в пикселях.
 > Операторы \* и / не требуют отделения от операндов знаком пробела, но это не запрещено и даже приветствуется.
 
 ### Формальный синтаксис
 
-    calc(expression)
+```
+calc(expression)
+```
 
 ## Примеры
 
@@ -102,12 +105,14 @@ input {
 
 Вы также можете использовать `calc()` с CSS переменными. Рассмотрим пример кода:
 
-    .foo {
-      --widthA: 100px;
-      --widthB: calc(var(--widthA) / 2);
-      --widthC: calc(var(--widthB) / 2);
-      width: var(--widthC);
-    }
+```css
+.foo {
+  --widthA: 100px;
+  --widthB: calc(var(--widthA) / 2);
+  --widthC: calc(var(--widthB) / 2);
+  width: var(--widthC);
+}
+```
 
 ## Спецификации
 
@@ -119,4 +124,4 @@ input {
 
 ## Смотрите также
 
-- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/ "Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog")
+- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)

@@ -4,6 +4,7 @@ slug: Web/API/console/error
 l10n:
   sourceCommit: d19d68bf6078c23d527b6e1355925795e745d124
 ---
+
 {{APIRef("Console API")}}
 
 **`console.error()`** メソッドは、エラーメッセージをウェブコンソールに出力します。

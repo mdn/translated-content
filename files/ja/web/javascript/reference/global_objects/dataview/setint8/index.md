@@ -1,14 +1,8 @@
 ---
 title: DataView.prototype.setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 ---
+
 {{JSRef}}
 
 **`setInt8()`** メソッドは、符号付き 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
@@ -50,9 +44,7 @@ dataview.getInt8(1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setint8', 'DataView.prototype.setInt8')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

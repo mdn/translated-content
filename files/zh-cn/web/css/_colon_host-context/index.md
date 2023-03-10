@@ -2,6 +2,7 @@
 title: ':host-context()'
 slug: Web/CSS/:host-context
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`:host-context()`** [CSS 伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)的作用是选择 shadow DOM 中 shadow host，这个伪类内可以写关于该 shadow host 的 CSS 规则。 (我们可以从 shadow DOM 中选择一个自定义元素 custom element) — 但前提是，在 DOM 层级中，括号中的选择器参数必须和 shadow host 的祖先相匹配。

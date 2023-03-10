@@ -2,6 +2,7 @@
 title: 運算式與運算子
 slug: Web/JavaScript/Guide/Expressions_and_Operators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 這個章節將講述 JavaScript 的運算式與運算子，包括賦值運算子，比較運算子，算術運算子，位元運算子， 邏輯運算子, 字串運算子, 條件(三元)運算子 以及更多運算子.
@@ -94,7 +95,7 @@ var var2 = 4;
 
 | 運算子                                                                                                                  | 描述                                                                                                                                                              | 會回傳 True 的例子                   |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                             | 假如運算元等價就回傳 True。                                                                                                                                       | ` 3 == var1``"3" == var1``3 == '3' ` |
+| [等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                             | 假如運算元等價就回傳 True。                                                                                                                                       | `3 == var1` `"3" == var1` `3 == '3'` |
 | [不等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality) (`!=`)                         | 假如運算元等價就回傳 True。                                                                                                                                       | `var1 != 4 var2 != "3"`              |
 | [嚴格等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) (`===`)                        | 假如運算元具有相同型態且等價則回傳 True。參考 {{jsxref("Object.is")}} 及 [JS 中的等價性](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness)。 | `3 === var1`                         |
 | [嚴格不等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity) (`!==`)                   | 假如運算元具有相同型態但不等價，或是具有不同型態，回傳 True。                                                                                                     | `var1 !== "3" 3 !== '3'`             |
@@ -288,7 +289,7 @@ for (var i = 0, j = 9; i <= j; i++, j--)
 
 #### `delete`
 
-[`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 運算子會刪除物件，物件的性質，或是陣列中指定 index 的物件。 語法是:
+[`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 運算子會刪除物件，物件的性質，或是陣列中指定 index 的物件。 語法是:
 
 ```js
 delete 物件名稱;
@@ -299,7 +300,7 @@ delete 性質; // 只有在 with 陳述句中可以使用
 
 `物件名稱` 是物件的名稱， 性質 是物件中的一個特性， 索引 是用來表示物件在陣列中位置的一個整數。
 
-第四種形式只有在 [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) 陳述句中可用， 用來刪除物件中的一個特性。
+第四種形式只有在 [`with`](/zh-TW/docs/Web/JavaScript/Reference/Statements/with) 陳述句中可用， 用來刪除物件中的一個特性。
 
 你可以用 `delete` 運算子來刪除隱式宣告的變數， 但不適用於使用 var 宣告的變數。
 

@@ -7,6 +7,7 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Content-Disposition
 ---
+
 {{HTTPSidebar}}
 
 Dans une réponse HTTP régulière, l'en-tête de réponse `Content-Disposition` est un en-tête indiquant si le contenu devrait être affiché en ligne dans le navigateur, c'est-à-dire en tant que page Web, dans une page Web ou en pièce jointe qui sera téléchargé et enregistré localement.
@@ -114,19 +115,11 @@ value2
 
 ## Spécifications
 
-| Spécification        | Titre                                                                                                                    |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| {{RFC("7578")}} | Retour des valeurs à partir des formulaires: multipart / form-data                                                       |
-| {{RFC("6266")}} | Utilisation du champ Header Content-Disposition dans le protocole de transfert hypertexte (HTTP)                         |
-| {{RFC("2183")}} | Communiquer des informations de présentation dans les messages Internet: le champ de l'en-tête de disposition de contenu |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/headers/content-disposition")}}
-
-## Notes de compatibilité
-
-- Firefox 5 gère l'en-tête de réponse HTTP `Content-Disposition` plus efficacement si les deux paramètres du nom de fichier et du nom de fichier sont fournis. Il examine tous les noms fournis, en utilisant le paramètre \* du nom de fichier, s'il est disponible, même si un paramètre de nom de fichier est inclus en premier. Auparavant, le premier paramètre correspondant serait utilisé, empêchant ainsi un nom plus approprié d'être utilisé. Voir {{bug (588781)}}.
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,8 @@
 ---
 title: CSS グリッドレイアウトとプログレッシブエンハンスメント
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
-tags:
-  - CSS
-  - CSS グリッド
-  - デザイン
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 ---
+
 {{CSSRef}}
 
 2017 年春、グリッドのようなメジャーな仕様がほぼ同時にブラウザーに搭載されるのを初めて目の当たりにし、現在までに Firefox、Chrome、Opera、Safari、Edge の公式バージョンで CSS グリッドレイアウトに対応しています。しかし、現役のブラウザー、すなわち多くのユーザーがとてもすばやくグリッドレイアウトの対応にあずかれる一方で、古い対応していないブラウザーもあります。このガイドでは、対応のためのさまざまな戦略を説明します。

@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: complementary ロール'
-slug: Web/Accessibility/ARIA/Roles/Complementary_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Complementary_role
+slug: Web/Accessibility/ARIA/Roles/complementary_role
 ---
+
 補足 (`complementary`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、メインコンテンツに関連する補助セクションを指定するために使用され、しかも分離しても単独で成り立つことができます。 これらのセクションは、サイドバーやコールアウトボックスとして表示されることがよくあります。 可能であれば、代わりに HTML の {{htmlelement("aside")}} 要素を使用してください。
 
 ```html
@@ -22,7 +18,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Complementary_role
 
 補足 (`complementary`) ロールは[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)です。 ランドマーク (landmark) は、支援技術によって使用され、文書の大きなセクションを迅速に識別してナビゲートすることができます。 補足 (`complementary`) ランドマークロールを持つコンテナー内にリストされたコンテンツは、文書のメインのコンテンツから分離されている場合でも意味をなすべきです。
 
-> **Note:** {{htmlelement("aside")}} 要素を使用すると、自動的にセクションが補足 (`complementary`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきです。
+> **メモ:** {{htmlelement("aside")}} 要素を使用すると、自動的にセクションが補足 (`complementary`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきです。
 
 ## 例
 
@@ -79,10 +75,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Complementary_role
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#complementary","ARIA: Complementary role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_complementary","Complementary landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

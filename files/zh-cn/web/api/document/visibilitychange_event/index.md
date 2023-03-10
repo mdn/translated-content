@@ -2,6 +2,7 @@
 title: visibilitychange
 slug: Web/API/Document/visibilitychange_event
 ---
+
 {{APIRef}}
 
 当其选项卡的内容变得可见或被隐藏时，会在文档上触发 `visibilitychange` (能见度更改) 事件。
@@ -23,9 +24,9 @@ slug: Web/API/Document/visibilitychange_event
 
 该事件不包括文档的更新的可见性状态，但是您可以从文档的 {{domxref("Document.visibilityState", "visibilityState")}} 属性中获取该信息。
 
-> **警告：** 当 visibleStateState 属性的值转换为 `hidden` 时，Safari 不会按预期触发 `visibilitychange`； 因此，在这种情况下，您还需要包含代码以侦听 [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event) 事件。
+> **警告：** 当 visibleStateState 属性的值转换为 `hidden` 时，Safari 不会按预期触发 `visibilitychange`；因此，在这种情况下，您还需要包含代码以侦听 [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event) 事件。
 
-> **警告：** 出于兼容性原因，请确保使用 `document.addEventListener` 而不是 `window.addEventListener` 来注册回调。 Safari <14.0 仅支持前者。
+> **警告：** 出于兼容性原因，请确保使用 `document.addEventListener` 而不是 `window.addEventListener` 来注册回调。Safari <14.0 仅支持前者。
 
 ## 属性
 

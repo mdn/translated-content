@@ -1,7 +1,6 @@
 ---
 title: Drag Operations
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: Web/API/HTML_드래그_앤_드롭_API/Drag_operations
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -58,11 +57,11 @@ XUL 요소에 대해서는 `{{htmlattrxref("draggable")}}` 속성을 사용할 �
 
 드래그가 발생할 때, 데이터는 어떤 것이 드래그되는지를 구분할 수 있는 드래그와 연관되어야 합니다(When a drag occurs, data must be associated with the drag which identifies _what_ is being dragged). 예를 들어, 선택된 텍스트가 드래그될 경우 드래그 데이터 항목에 연관된 데이터는 텍스트 자체입니다. 이와 유사하게, 웹 페이지 상의 링크가 드래그될 경우에 드래그 데이터 항목은 링크의 URL이됩니다.
 
-{{domxref("DataTransfer","drag data")}}는 두 가지 정보를 담고 있는데, 데이터의 유형(또는 형식)과 데이터 값입니다. 형식은 (텍스트 데이터에 해당하는 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text "text/plain")과 같은) 형식 문자열(type string) 값이고, 값은 텍스트의 문자열입니다. 드래그가 시작되면, 데이터와 형식을 제공하는 데이터를 추가해야 합니다. 드래그되는 동안, `{{event("dragenter")}}` 이벤트와 `{{event("dragover")}}` 이벤트에 대한 이벤트 리스너에서 드래그되는 데이터의 형식을 사용해 드랍이 허용되는지 확인할 수 있습니다. 예를 들어, 링크가 허용되는 드랍 대상(drop target)은 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link "text/uri-list") 형식의 링크인지 확인합니다. 드랍 이벤트 동안 리스너는 드래그 대상(being dragged)으로부터 데이터를 추출해 드랍되는 위치에 삽입합니다.
+{{domxref("DataTransfer","drag data")}}는 두 가지 정보를 담고 있는데, 데이터의 유형(또는 형식)과 데이터 값입니다. 형식은 (텍스트 데이터에 해당하는 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text)과 같은) 형식 문자열(type string) 값이고, 값은 텍스트의 문자열입니다. 드래그가 시작되면, 데이터와 형식을 제공하는 데이터를 추가해야 합니다. 드래그되는 동안, `{{event("dragenter")}}` 이벤트와 `{{event("dragover")}}` 이벤트에 대한 이벤트 리스너에서 드래그되는 데이터의 형식을 사용해 드랍이 허용되는지 확인할 수 있습니다. 예를 들어, 링크가 허용되는 드랍 대상(drop target)은 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link) 형식의 링크인지 확인합니다. 드랍 이벤트 동안 리스너는 드래그 대상(being dragged)으로부터 데이터를 추출해 드랍되는 위치에 삽입합니다.
 
-{{domxref("DataTransfer","drag data's")}}의 {{domxref("DataTransfer.types","types")}} 속성은 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text "text/plain") or [image/jpeg](/ko/docs/DragDrop/Recommended_Drag_Types#image "image/jpeg")과 같은 {{domxref("DOMString")}} MIME-type 목록을 반환홥니다. 여러분은 자신만의 형식을 만들 수도 있습니다. 가장 흔하게 사용되는 형식은 권장 드래그 데이터 형식([Recommended Drag Types](/ko/docs/DragDrop/Recommended_Drag_Types))에서 소개하고 있습니다.
+{{domxref("DataTransfer","drag data's")}}의 {{domxref("DataTransfer.types","types")}} 속성은 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text) or [image/jpeg](/ko/docs/DragDrop/Recommended_Drag_Types#image)과 같은 {{domxref("DOMString")}} MIME-type 목록을 반환홥니다. 여러분은 자신만의 형식을 만들 수도 있습니다. 가장 흔하게 사용되는 형식은 권장 드래그 데이터 형식([Recommended Drag Types](/ko/docs/DragDrop/Recommended_Drag_Types))에서 소개하고 있습니다.
 
-드래그에는 여러 가지 다른 형식의 데이터 항목이 포함될 수 있습니다. 이를 통해 사용자 정의 형식(custom types)과 같은 보다 특정한 형식의 데이터를 주로 제공하지만, 특정한 유형을 지원하지 않는 드롭 대상에 대해 대체 데이터(fallback data)를 제공할 수도 있습니다. [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text "text/plain") 형식의 일반적인 텍스트 데이터가 가장 단순한 형식의 데이터일 것입니다.이 형식의 데이터는 단순히 텍스트 형식으로 표시될 것입니다.
+드래그에는 여러 가지 다른 형식의 데이터 항목이 포함될 수 있습니다. 이를 통해 사용자 정의 형식(custom types)과 같은 보다 특정한 형식의 데이터를 주로 제공하지만, 특정한 유형을 지원하지 않는 드롭 대상에 대해 대체 데이터(fallback data)를 제공할 수도 있습니다. [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text) 형식의 일반적인 텍스트 데이터가 가장 단순한 형식의 데이터일 것입니다.이 형식의 데이터는 단순히 텍스트 형식으로 표시될 것입니다.
 
 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 내에 드래그 데이터 항목(drag data item)을 설정하기 위해서는 {{domxref("DataTransfer.setData","setData()")}} 메서드를 이용합니다. 이 메서드는 각각 데이터 형식과 데이터 값인 두 개의 인자가 필요합니다. 예를 들어:
 
@@ -70,7 +69,7 @@ XUL 요소에 대해서는 `{{htmlattrxref("draggable")}}` 속성을 사용할 �
 event.dataTransfer.setData("text/plain", "Text to drag");
 ```
 
-이 경우, 데이터 값은 "Text to drag"이고 형식은 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text "text/plain")입니다.
+이 경우, 데이터 값은 "Text to drag"이고 형식은 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text)입니다.
 
 여러 형식의 데이터를 제공할 수도 있습니다. 이를 위해서는 서로 다른 형식으로 {{domxref("DataTransfer.setData","setData()")}} 메서드를 여러 번 호출합니다. 이 때, 가장 세부적인 형식에서 덜 세부적인 형식의 순으로 호출해야 합니다.
 
@@ -83,7 +82,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 여기서 데이터는 세가지 유형으로 추가됩니다. 첫번째 형식의 'application2x-bookmark'는 사용자 지정 형식입니다. 다른 응용 프로그램에서는 이 형식을 지원하지 않지만 동일한 사이트 또는 응용 프로그램의 영역 간 드래그할 경우, 이 사용자 지정 형식을 사용할 수 있습니다. 또한 다른 형식의 데이터를 제공함으로써 덜 세부적인 형태로 다른 애플리케이션으로의 드래그도 지원할 수 있습니다. 다른 형식이 하나의 URL또는 텍스트 형식만 제공할 때, 'application2x-bookmark' 형식은 해당 어플리케이션 내에서 사용될 경우 더 상세한 데이터를 제공할 수 있습니다
 
-이 예제에서 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link "text/uri-list")와 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text "text/plain")은 동일한 데이터를 담고있음에 주목하시기 바랍니다. 이렇게 해도 되지만, 꼭 이럴 필요는 없습니다.
+이 예제에서 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link)와 [text/plain](/ko/docs/DragDrop/Recommended_Drag_Types#text)은 동일한 데이터를 담고있음에 주목하시기 바랍니다. 이렇게 해도 되지만, 꼭 이럴 필요는 없습니다.
 
 동일한 형식으로 데이터를 두 번 추가하려고 하면 새로운 데이터가 기존 데이터를 대체하지만 형식 목록 내에서 이전 데이터(old data)와 같은 위치에 있게 됩니다.
 
@@ -127,31 +126,6 @@ function dragWithCustomImage(event) {
 ```
 
 이 예제에서, 드래그 이미지를 표시할 캔버스를 하나 생성합니다. 캔버스는 너비가 와 높이가 모두 50 픽셀이고, 마우스 포인터가 이미지의 중앙에 위치하도록 옵셋(offsets)을 너비와 높이의 절반(25)으로 설정했습니다.
-
-Gecko 개발자일 경우 (Mozilla 어플리케이션 개발자든 add-on 개발자든 상관 없이), Gecko 9.0 {{geckoRelease("9.0")}}에 드래그 피드백 이미지로 XUL {{XULElem("panel")}} 요소를 사용할 수 있도록 하는 지원이 추가되었습니다. 간단히 {{XULElem("panel")}} 요소를 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 메서드로 전달하기만 하면 됩니다.
-
-다음 XUL {{XULElem("panel")}}를 살펴보시기 바랍니다:
-
-```xml
-<panel id="panel" style="opacity: 0.6">
-  <description id="pb">Drag Me</description>
-</panel>
-
-<vbox align="start" style="border: 1px solid black;" ondragstart="startDrag(event)">
-  <description>Drag Me</description>
-</vbox>
-```
-
-위의 예에서 사용자가 {{XULElem("vbox")}}를 클릭하고 드래그하기 시작하면, 아래의 `startDrag()` 함수가 호출됩니다.
-
-```js
-function startDrag(event) {
-  event.dataTransfer.setData("text/plain", "<strong>Body</strong>");
-  event.dataTransfer.setDragImage(document.getElementById("panel"), 20, 20);
-}
-```
-
-이 함수는 해당 패널을 드래그 이미지로 사용하고, HTML 형식의 "\<strong>Body\</strong>"을 데이터로 가집니다. 텍스트 편집기에 패널을 드랍하면 "**Body**"라는 텍스트가 드랍된 위치에 삽입됩니다.
 
 ## 드래그 효과
 
@@ -231,7 +205,7 @@ function doDragOver(event) {
 }
 ```
 
-이 예제에서 형식 목록 내에 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link "text/uri-list") 형식이 존재하는지 확인하기 위해 `contains` 메서드를사용합니다. 존재할 경우에는 드랍을 허용하기 위해 이벤트가 취소될 것입니다. 드래그 데이터가 링크를 포함하지 않았다면, 해당 이벤트는 취소되지 않을 것이고 그 위치에 대한 드랍이 발생하지 않을 것입니다.
+이 예제에서 형식 목록 내에 [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link) 형식이 존재하는지 확인하기 위해 `contains` 메서드를사용합니다. 존재할 경우에는 드랍을 허용하기 위해 이벤트가 취소될 것입니다. 드래그 데이터가 링크를 포함하지 않았다면, 해당 이벤트는 취소되지 않을 것이고 그 위치에 대한 드랍이 발생하지 않을 것입니다.
 
 수행되어야 하는 작업 형식을 더 세부적으로 설정하길 원한다면, {{domxref("DataTransfer.effectAllowed","effectAllowed")}}나 {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성을 각각 설정하거나 동시에 둘 다를 설정하고 싶을 것입니다. 두 속성을 변경하더라도 해당 이벤트를 취소하지 않으면 아무런 영향이 없을 것입니다.
 
@@ -263,7 +237,7 @@ However, you can also update the user interface with an insertion point or highl
 
 In this example, the element with the class `droparea` will receive a 1 pixel black border while it is a valid drop target, that is, if the {{domxref("Event.preventDefault","preventDefault()")}} method was called during the `{{event("dragenter")}}` event. Note that you must cancel the `{{event("dragenter")}}` event for this pseudoclass to apply, as this state is not checked for the `{{event("dragover")}}` event.
 
-For more complex visual effects, you can also perform other operations during the `{{event("dragenter")}}` event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [image](/ko/docs/XUL/image "image") or [separator](/ko/docs/XUL/separator "separator") element, for example, and simply insert it into the document during the `{{event("dragenter")}}` event.
+For more complex visual effects, you can also perform other operations during the `{{event("dragenter")}}` event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [image](/ko/docs/XUL/image) or [separator](/ko/docs/XUL/separator) element, for example, and simply insert it into the document during the `{{event("dragenter")}}` event.
 
 The `{{event("dragover")}}` event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a `{{event("dragover")}}` event as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.
 
@@ -291,7 +265,7 @@ In the example here, once we have retrieved the data, we insert the string as th
 
 In a web page, you should call the {{domxref("Event.preventDefault","preventDefault()")}} method of the event if you have accepted the drop so that the default browser handling does not handle the dropped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behavior will be prevented.
 
-You can retrieve other types of data as well. If the data is a link, it should have the type [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link "text/uri-list"). You could then insert a link into the content.
+You can retrieve other types of data as well. If the data is a link, it should have the type [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link). You could then insert a link into the content.
 
 ```js
 function doDrop(event) {
@@ -309,7 +283,7 @@ function doDrop(event) {
 }
 ```
 
-This example inserts a link from the dragged data. As you might be able to guess from the name, the [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link "text/uri-list") type actually may contain a list of URLs, each on a separate line. In this code, we use the [split](/ko/docs/JavaScript/Reference/Global_Objects/String/split "split") to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.
+This example inserts a link from the dragged data. As you might be able to guess from the name, the [text/uri-list](/ko/docs/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. In this code, we use the [split](/ko/docs/JavaScript/Reference/Global_Objects/String/split) to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.
 
 For simple cases, you can use the special type `URL` just to retrieve the first valid URL in the list. For example:
 
@@ -348,11 +322,11 @@ A drop can occur inside the same window or over another application. The `{{even
 
 After the `{{event("dragend")}}` event has finished propagating, the drag and drop operation is complete.
 
-\[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801 "New D&D API: dragend is not dispatched if the source node was moved or removed during the drag session")
+\[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801)
 
 ## See also
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API "HTML Drag and Drop API")
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items "Dragging and Dropping Multiple Items")
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types "Recommended Drag Types")
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd "Drag and Drop Standard")
+- [HTML Drag and Drop API (Overview)](/ko/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Dragging and Dropping Multiple Items](/ko/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Recommended Drag Types](/ko/docs/Web/Guide/HTML/Recommended_Drag_Types)
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

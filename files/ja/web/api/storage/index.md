@@ -2,6 +2,7 @@
 title: Storage
 slug: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 Web Storage API の `Storage` インターフェイスは、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供して、例えば保存されているデータアイテムを追加、変更、削除することができます。
@@ -16,22 +17,19 @@ Web Storage API の `Storage` インターフェイスは、特定のドメイ�
 ## メソッド
 
 - {{domxref("Storage.key()")}}
-  - : このメソッドは数値 n を渡すと、ストレージ内で n 番目のキーの名称を返します。
-
-<!---->
-
+  - : 数値 n を渡すと、ストレージ内で n 番目のキーの名称を返します。
 - {{domxref("Storage.getItem()")}}
   - : キーの名称を渡すと、キーに対する値を返します。
 - {{domxref("Storage.setItem()")}}
-  - : キーの名称と値を渡すと、ストレージにキーを追加する、または既存のキーに対する値を更新します。
+  - : キーの名称と値を渡すと、ストレージにキーを追加し、または既存のキーに対する値を更新します。
 - {{domxref("Storage.removeItem()")}}
   - : キーの名称を渡すと、ストレージからキーを削除します。
 - {{domxref("Storage.clear()")}}
-  - : このメソッドを呼び出すと、ストレージからすべてのキーを消去します。
+  - : ストレージからすべてのキーを消去します。
 
 ## 例
 
-ここでは、`localStorage` を呼び出して `Storage` オブジェクトにアクセスしています。始めに `!localStorage.getItem('bgcolor')` というコードを使用して、ローカルストレージにデータアイテムが含まれているかを確認します。含まれている場合は、{{domxref("Storage.getItem()")}} を使用してデータアイテムを取得して、さらにそのデータを使用してページのスタイルを更新する `setStyles()` 関数を実行します。含まれていない場合は `populateStorage()` 関数を実行します。こちらは {{domxref("Storage.setItem()")}} を使用してアイテムの値を設定してから、`setStyles()` を実行します。
+ここでは、`localStorage` を呼び出して `Storage` オブジェクトにアクセスしています。始めに `!localStorage.getItem('bgcolor')` というコードを使用して、ローカルストレージにデータアイテムが含まれているかを確認します。含まれている場合は、{{domxref("Storage.getItem()")}} を使用してデータアイテムを取得して、さらにそのデータを使用してページのスタイルを更新する `setStyles()` 関数を実行します。含まれていない場合は `populateStorage()` 関数を実行します。こちらは {{domxref("Storage.setItem()")}} を使用してアイテムの値を設定してから、`setStyles()` 関数を実行します。
 
 ```js
 if(!localStorage.getItem('bgcolor')) {
@@ -60,15 +58,13 @@ function setStyles() {
 }
 ```
 
-> **Note:** **注意**: 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
+> **メモ:** 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                   | 策定状況                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Storage")}}
 

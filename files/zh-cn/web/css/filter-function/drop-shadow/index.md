@@ -3,6 +3,7 @@ title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
 original_slug: Web/CSS/filter-function/drop-shadow()
 ---
+
 {{cssref}}
 
 The **`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) function applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
@@ -11,7 +12,7 @@ The **`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) function applies a drop shado
 
 投影实际上是输入图像的 alpha 蒙版的一个模糊的、偏移的版本，用特定的颜色绘制并合成在图像下面。
 
-> **备注：** 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性. `box-shadow` 属性在元素的整个框后面创建一个矩形阴影，而 `drop-shadow()` 过滤器则是创建一个符合图像本身形状 (alpha 通道) 的阴影。
+> **备注：** 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性。`box-shadow` 属性在元素的整个框后面创建一个矩形阴影，而 `drop-shadow()` 过滤器则是创建一个符合图像本身形状 (alpha 通道) 的阴影。
 
 ## Syntax
 

@@ -2,6 +2,7 @@
 title: 编写 MathML
 slug: Web/MathML/Authoring
 ---
+
 {{MathMLRef}}
 
 本文解释了如何利用 MathML 语言编写数学公式。就像 HTML 或 SVG 一样，MathML 是用标签和属性描述的。当你的文档包含了较为复杂的内容时，文本会变得很冗长，因此需要[适当的编写工具](https://www.w3.org/wiki/Math_Tools#Authoring_tools)，例如从[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)转换，或[所见即所得](https://zh.wikipedia.org/wiki/所见即所得)的公式编辑器。有很多类似的工具可用，我们无法给出一个详尽的清单。相反，本文重点介绍常见的方法和示例。
@@ -132,7 +133,7 @@ slug: Web/MathML/Authoring
 </html>
 ```
 
-对于不熟悉 LaTex 的作者，可以使用其它的输入方法，例如 [ASCIIMath](http://asciimath.org/#syntax) 或 [jqMath](https://mathscribe.com/author/jqmath.html) 语法。请记得加载 JavaScript 库并使用正确的分隔符：
+对于不熟悉 LaTex 的作者，可以使用其他的输入方法，例如 [ASCIIMath](http://asciimath.org/#syntax) 或 [jqMath](https://mathscribe.com/author/jqmath.html) 语法。请记得加载 JavaScript 库并使用正确的分隔符：
 
 ```html
 <!DOCTYPE html>
@@ -196,7 +197,7 @@ slug: Web/MathML/Authoring
 该网页包含了一些 [`script`](/zh-CN/docs/Web/HTML/Element/script) 标签。我们可以使用以下命令，利用 [Node.js](https://nodejs.org/) 和 [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) 完成转换：
 
 ```bash
-$ cat input.html | node TeXZilla.js streamfilter > output.html
+cat input.html | node TeXZilla.js streamfilter > output.html
 ```
 
 在执行完成上述命令后，将创建一个包含 HTML 输出的 `output.html` 文件。以美元分隔的公式将转换为 MathML：
@@ -260,7 +261,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 ### 所见即所得编辑器
 
-其它的编辑器直接将编辑数学公式的功能集成到其所见即所得界面。以下截图来自 [LyX](https://www.lyx.org/) 和 [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html)，它们都支持导出 HTML：
+其他的编辑器直接将编辑数学公式的功能集成到其所见即所得界面。以下截图来自 [LyX](https://www.lyx.org/) 和 [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html)，它们都支持导出 HTML：
 
 ![Lyx 的示例](lyx.png)
 

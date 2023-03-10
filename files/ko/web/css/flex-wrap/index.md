@@ -1,12 +1,6 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/flex-wrap
 ---
 {{ CSSRef}}
 
@@ -41,7 +35,7 @@ flex-wrap: unset;
   - : `flex-item` 요소들이 내부 로직에 의해 분할되어 여러 행에 걸쳐서 배치됩니다. `nowrap` 속성과 마찬가지로 요소가 배치되는 시작점은 {{cssxref("flex-direction")}} 에 의해 결정됩니다. 일반적으로 위에서 아래로 쌓이는 순서입니다.
 - `wrap-reverse`
   - : `wrap` 속성값과 동일하지만, 요소가 나열되는 시작점과 끝점의 기준이 반대로 배치됩니다.
-  
+
 ### Formal syntax
 
 {{csssyntax}}
@@ -119,13 +113,13 @@ flex-wrap: unset;
 
 {{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

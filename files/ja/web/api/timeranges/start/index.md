@@ -2,6 +2,7 @@
 title: TimeRanges.start()
 slug: Web/API/TimeRanges/start
 ---
+
 {{APIRef("DOM")}}
 
 **`start()`** は {{domxref("TimeRanges")}} インターフェイスのメソッドで、指定した時間範囲が開始する時刻オフセットを返します。

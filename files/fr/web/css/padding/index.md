@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/padding
 ---
+
 {{CSSRef}}
 
 La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. [les boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes)). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
@@ -55,9 +56,13 @@ Les valeurs permettent de définir une, deux, trois ou quatre valeurs pour les �
 - `<percentage>`
   - : Définit un écart relatif à la **largeur** du bloc englobant. Voir la page {{cssxref("&lt;percentage&gt;")}} pour plus d'informations sur les valeurs de ce type.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -88,18 +93,11 @@ h3 {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------- |
-| {{SpecName('CSS3 Box', '#the-padding', 'padding')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement.           |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding')}} | {{Spec2('CSS3 Transitions')}} | `padding` peut être animée. |
-| {{SpecName('CSS2.1', 'box.html#propdef-padding', 'padding')}}     | {{Spec2('CSS2.1')}}                 | Aucun changement.           |
-| {{Specname('CSS1', '#padding', 'padding')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding")}}
+{{Compat}}
 
 ## Voir aussi
 

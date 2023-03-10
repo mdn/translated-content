@@ -2,6 +2,7 @@
 title: AbortSignal.onabort
 slug: Web/API/AbortSignal/abort_event
 ---
+
 {{APIRef("DOM")}}
 
 当事件关联的请求被中止时，触发 {{domxref("AbortSignal")}} 接口的 **`abort`** 事件，例如，调用 {{domxref("AbortController.abort()")}}。

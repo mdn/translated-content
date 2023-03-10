@@ -1,9 +1,9 @@
 ---
 title: Node server without framework
 slug: Learn/Server-side/Node_server_without_framework
-translation_of: Learn/Server-side/Node_server_without_framework
 original_slug: Node_server_without_framework
 ---
+
 ## 소개
 
 물론 [Node](https://nodejs.org/en/) 는 서버를 만들고 실행하는데 도움을 주는 많은 프레임워크가 있습니다, 예를 들면:

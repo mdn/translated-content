@@ -1,14 +1,8 @@
 ---
 title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
-tags:
-  - Attribute
-  - Attributes
-  - Constraint Validation API
-  - HTML
-  - Reference
-translation_of: Web/HTML/Attributes/pattern
 ---
+
 {{HTMLSidebar}}
 
 **`pattern`** 属性は、フォームコントロールの値が一致すべき[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を指定します。 `null` 以外の値が `pattern` 値によって設定された制約に適合しない場合、 {{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが真になります。
@@ -19,7 +13,7 @@ translation_of: Web/HTML/Attributes/pattern
 
 パターンが指定されていないか無効な場合、正規表現は適用されず、この属性は無視されます。
 
-> **Note:** **ヒント:** {{htmlattrxref("title", "input")}} 属性を使用すると、ほとんどのブラウザーがパターンに一致するための要件を説明するためにツールチップとして表示するテキストを指定することができます。説明をツールチップだけに頼っては**いけません**。ユーザービリティについての詳細は以下を参照してください。
+> **メモ:** {{htmlattrxref("title", "input")}} 属性を使用すると、ほとんどのブラウザーがパターンに一致するための要件を説明するためにツールチップとして表示するテキストを指定することができます。説明をツールチップだけに頼っては**いけません**。ユーザービリティについての詳細は以下を参照してください。
 
 pattern 属性に対応している入力型の中には、特に {{HTMLElement("input/email", "email")}} および {{HTMLElement("input/url", "url")}} 入力型のように、一致しなければならない期待値の構文を持っているものがあります。 pattern 属性が存在せず、値がその値型の期待される構文と一致しない場合、 {{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.typeMismatch','typeMismatch')}} プロパティが真になります。
 
@@ -121,11 +115,7 @@ This renders like so:
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML WHATWG')}} |      |
-| {{ SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'pattern') }}     | {{Spec2('HTML5.1')}}     |      |
-| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

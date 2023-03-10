@@ -2,6 +2,7 @@
 title: place-content
 slug: Web/CSS/place-content
 ---
+
 {{CSSRef}}
 
 **`place-content`** 属性是{{CSSxRef("align-content")}} 和 {{CSSxRef("justify-content")}}的简写。使用这两个属性的值可以用于任何的布局情况。
@@ -49,10 +50,10 @@ place-content: unset;
   - : 所有的子元素堆叠在父元素上合适的轴线上的终点对齐
 - `flex-start`
   - : 所有的子元素堆叠在父元素的主轴或交叉轴上起点对齐，主要取决于 flex-direction 的设置。
-    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-start将被视为start`
+    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-start` 将被视为 `start`
 - `flex-end`
   - : 所有的子元素堆叠在父元素的主轴或交叉轴上终点对齐，主要取决于 flex-direction 的设置。
-    仅适用于 flex 布局的子元素.。如果父元素没有设置为 flex，`flex-end将被视为end`
+    仅适用于 flex 布局的子元素。如果父元素没有设置为 flex，`flex-end` 将被视为 `end`
 - `center`
   - : 所有的子元素堆叠在父元素的中间对齐
 - `left`
@@ -72,18 +73,102 @@ place-content: unset;
 - `stretch`
   - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container
 
-### Formal syntax
+### 形式语法
 
 {{CSSSyntax}}
 
-## 举例
+## 示例
 
-### CSS
+### 将内容放入弹性容器中
+
+```html
+<div id="container">
+  <div class="small">Lorem</div>
+  <div class="small">Lorem<br />ipsum</div>
+  <div class="large">Lorem</div>
+  <div class="large">Lorem<br />ipsum</div>
+  <div class="large"></div>
+  <div class="large"></div>
+</div>
+```
+
+```html hidden
+<code>writing-mode:</code><select id="writingMode">
+  <option value="horizontal-tb" selected>horizontal-tb</option>
+  <option value="vertical-rl">vertical-rl</option>
+  <option value="vertical-lr">vertical-lr</option>
+  <option value="sideways-rl">sideways-rl</option>
+  <option value="sideways-lr">sideways-lr</option>
+</select><code>;</code><br />
+
+<code>direction:</code><select id="direction">
+  <option value="ltr" selected>ltr</option>
+  <option value="rtl">rtl</option></select
+><code>;</code><br />
+
+<code>place-content:</code><select id="alignContentAlignment">
+  <option value="normal">normal</option>
+  <option value="first baseline">first baseline</option>
+  <option value="last baseline">last baseline</option>
+  <option value="baseline">baseline</option>
+  <option value="space-between">space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly" selected>space-evenly</option>
+  <option value="stretch">stretch</option>
+  <option value="center">center</option>
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="safe">safe</option>
+  <option value="unsafe">unsafe</option>
+</select>
+<select id="justifyContentAlignment">
+  <option value="normal">normal</option>
+  <option value="space-between">space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly">space-evenly</option>
+  <option value="stretch">stretch</option>
+  <option value="center" selected>center</option>
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="left">left</option>
+  <option value="right">right</option>
+  <option value="safe">safe</option>
+  <option value="unsafe">unsafe</option></select><code>;</code>
+```
+
+```js hidden
+function update() {
+  document.getElementById("container").style.placeContent = `${document.getElementById("alignContentAlignment").value} `
+    + `${document.getElementById("justifyContentAlignment").value}`;
+}
+
+const alignContentAlignment = document.getElementById("alignContentAlignment");
+alignContentAlignment.addEventListener("change", update);
+
+const justifyContentAlignment = document.getElementById("justifyContentAlignment");
+justifyContentAlignment.addEventListener("change", update);
+
+const writingM = document.getElementById("writingMode");
+writingM.addEventListener("change", (evt) => {
+   document.getElementById("container").style.writingMode = evt.target.value;
+});
+
+const direction = document.getElementById("direction");
+direction.addEventListener("change", (evt) => {
+   document.getElementById("container").style.direction = evt.target.value;
+});
+```
+
+#### CSS
 
 ```css
 #container {
   display: flex;
-  height:240px;
+  height: 240px;
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;
@@ -109,90 +194,9 @@ div > div {
 }
 ```
 
-### HTML
+#### 结果
 
-```html
-<div id="container">
-  <div class="small">Lorem</div>
-  <div class="small">Lorem<br/>ipsum</div>
-  <div class="large">Lorem</div>
-  <div class="large">Lorem<br/>impsum</div>
-  <div class="large"></div>
-  <div class="large"></div>
-</div>
-```
-
-```html hidden
-<code>writing-mode:</code><select id="writingMode">
-  <option value="horizontal-tb" selected>horizontal-tb</option>
-  <option value="vertical-rl">vertical-rl</option>
-  <option value="vertical-lr">vertical-lr</option>
-  <option value="sideways-rl">sideways-rl</option>
-  <option value="sideways-lr">sideways-lr</option>
-</select><code>;</code><br/>
-<code>direction:</code><select id="direction">
-  <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option>
-</select><code>;</code><br/>
-<code>place-content:</code><select id="alignContentAlignment">
-  <option value="normal">normal</option>
-  <option value="first baseline">first baseline</option>
-  <option value="last baseline">last baseline</option>
-  <option value="baseline">baseline</option>
-  <option value="space-between">space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly" selected>space-evenly</option>
-  <option value="stretch">stretch</option>
-  <option value="center">center</option>
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-  <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option>
-</select>
-﻿<select id="justifyContentAlignment">
-  <option value="normal">normal</option>
-  <option value="space-between">space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly">space-evenly</option>
-  <option value="stretch">stretch</option>
-  <option value="center" selected>center</option>
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-  <option value="left">left</option>
-  <option value="right">right</option>
-  <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option>
-</select><code>;</code>
-```
-
-```js hidden
-var update = function () {
-   document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
-}
-
-var alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change",  update);
-
-var justifyContentAlignment = document.getElementById("justifyContentAlignment");
-justifyContentAlignment.addEventListener("change", update);
-
-var writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", function (evt) {
-   document.getElementById("container").style.writingMode = evt.target.value;
-});
-var direction = document.getElementById("direction");
-direction.addEventListener("change", function (evt) {
-   document.getElementById("container").style.direction = evt.target.value;
-});
-```
-
-### Result
-
-{{EmbedLiveSample("Example", "370", "300")}}
+{{EmbedLiveSample("将内容放入弹性容器中", "370", "300")}}
 
 ## 规范
 

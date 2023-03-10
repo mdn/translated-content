@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de {{jsxref("Instructions/if...else")}}.
@@ -115,16 +116,11 @@ var func2 = function( .. ) {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                       | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-conditional-operator', 'Conditional Operator')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES1', '#sec-11.12', 'The conditional operator')}}                     | {{Spec2('ES1')}}         | Définition initiale, implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.conditional")}}
+{{Compat}}
 
 ## Voir aussi
 

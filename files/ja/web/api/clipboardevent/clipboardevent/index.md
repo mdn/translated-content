@@ -2,6 +2,7 @@
 title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}}
 
 **`ClipboardEvent()`** コンストラクターは、新たに生成された {{domxref("ClipboardEvent")}} を返します。これは、{{domxref("Element/cut_event", "cut")}} や {{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントで変更されたクリップボード関連の情報を提供するイベントを表します。

@@ -2,6 +2,7 @@
 title: 展开语法
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
+
 {{jsSidebar("Operators")}}**展开语法 (Spread syntax),** 可以在函数调用/数组构造时，将数组表达式或者 string 在语法层面展开；还可以在构造字面量对象时，将对象表达式按 key-value 的方式展开。(**译者注**: 字面量一般指 `[1, 2, 3]` 或者 `{name: "mdn"}` 这种简洁的构造方式){{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
 ## 语法
@@ -155,7 +156,7 @@ var arr2 = [3, 4, 5];
 Array.prototype.unshift.apply(arr1, arr2) // arr1 现在是 [3, 4, 5, 0, 1, 2]
 ```
 
-如果使用展开语法，代码如下: \[请注意，这里使用展开语法创建了一个新的 `arr1` 数组， {{jsxref("Array.unshift")}} 方法则是修改了原本存在的 `arr1` 数组]:
+如果使用展开语法，代码如下：\[请注意，这里使用展开语法创建了一个新的 `arr1` 数组， {{jsxref("Array.unshift")}} 方法则是修改了原本存在的 `arr1` 数组]:
 
 ```js
 var arr1 = [0, 1, 2];
@@ -174,10 +175,10 @@ var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
 var clonedObj = { ...obj1 };
-// 克隆后的对象: { foo: "bar", x: 42 }
+// 克隆后的对象：{ foo: "bar", x: 42 }
 
 var mergedObj = { ...obj1, ...obj2 };
-// 合并后的对象: { foo: "baz", x: 42, y: 13 }
+// 合并后的对象：{ foo: "baz", x: 42, y: 13 }
 ```
 
 **提示**: {{jsxref("Object.assign()")}} 函数会触发 [setters](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，而展开语法则不会。
@@ -196,7 +197,7 @@ var mergedObj = merge ( {}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-在这段代码中，展开操作符 (spread operator) 并没有按预期的方式执行: 而是先将多个解构变为剩余参数 (rest parameter), 然后再将剩余参数展开为字面量对象。
+在这段代码中，展开操作符 (spread operator) 并没有按预期的方式执行：而是先将多个解构变为剩余参数 (rest parameter), 然后再将剩余参数展开为字面量对象。
 
 ### 只能用于可迭代对象
 
@@ -209,11 +210,11 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ### 展开多个值
 
-在函数调用时使用展开语法，请注意不能超过 JavaScript 引擎限制的最大参数个数。更多详细信息，请参考: [`apply()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)。
+在函数调用时使用展开语法，请注意不能超过 JavaScript 引擎限制的最大参数个数。更多详细信息，请参考：[`apply()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)。
 
 ## 剩余语法（剩余参数）
 
-剩余语法 (Rest syntax) 看起来和展开语法完全相同，不同点在于，剩余参数用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：展开语法将数组展开为其中的各个元素，而剩余语法则是将多个元素收集起来并“凝聚”为单个元素。 请参考: [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
+剩余语法 (Rest syntax) 看起来和展开语法完全相同，不同点在于，剩余参数用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：展开语法将数组展开为其中的各个元素，而剩余语法则是将多个元素收集起来并“凝聚”为单个元素。请参考：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
 
 ## 规范
 

@@ -1,15 +1,8 @@
 ---
 title: ':in-range'
 slug: Web/CSS/:in-range
-tags:
-  - CSS
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.in-range
-translation_of: 'Web/CSS/:in-range'
 ---
+
 {{CSSRef}}
 
 **`:in-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在の値が {{htmlattrxref("min", "input")}} および {{htmlattrxref("max","input")}} 属性による制限範囲内にある {{htmlelement("input")}} 要素を表します。
@@ -24,11 +17,13 @@ input:in-range {
 
 この擬似クラスは、入力欄の現在の値が許可された範囲内にあることをユーザーに視覚的に示すのに便利です。
 
-> **Note:** この擬似クラスは範囲制限を持つ（または設定できる）要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。
+> **メモ:** この擬似クラスは範囲制限を持つ（または設定できる）要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。
 
 ## 構文
 
-{{csssyntax}}
+```
+:in-range
+```
 
 ## 例
 
@@ -79,7 +74,7 @@ input:out-of-range + label::after {
 
 {{EmbedLiveSample('Examples', 600, 140)}}
 
-> **Note:** 空の `<input>` は範囲外としてカウントされず、 `:out-of-range` 擬似クラスセレクターで選択されることはありません。空の入力を選択するための [`:blank`](/ja/docs/Web/CSS/:blank) 擬似クラスがありますが、この記事を書いている時点では、実験的で対応が十分ではありません。また、 `required` 属性と [`:invalid`](/ja/docs/Web/CSS/:invalid) 擬似クラスを使用すると、入力を必須にするためのより一般的なロジックとスタイルを提供できます (`:invalid` は空白_および_範囲外の入力のスタイルを指定します)。
+> **メモ:** 空の `<input>` は範囲外としてカウントされず、 `:out-of-range` 擬似クラスセレクターで選択されることはありません。空の入力を選択するための [`:blank`](/ja/docs/Web/CSS/:blank) 擬似クラスがありますが、この記事を書いている時点では、実験的で対応が十分ではありません。また、 `required` 属性と [`:invalid`](/ja/docs/Web/CSS/:invalid) 擬似クラスを使用すると、入力を必須にするためのより一般的なロジックとスタイルを提供できます (`:invalid` は空白_および_範囲外の入力のスタイルを指定します)。
 
 ## 仕様書
 

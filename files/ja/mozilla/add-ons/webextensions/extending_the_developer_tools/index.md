@@ -2,9 +2,10 @@
 title: developer tools の拡張
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
+
 {{AddonSidebar}}
 
-> **Note:** このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)を参照してください。
+> **メモ:** このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)を参照してください。
 
 WebExtensions API を使用して、ブラウザの組み込み開発者ツールを拡張できます。 devtools 拡張機能を作成するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) に "[devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" キーを含めます:
 
@@ -75,9 +76,9 @@ browser.devtools.panels.create(
 
 これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを挿入することに似ていますが、1 つの重要な違いがあります:
 
-- コンテンツスクリプトとは異なり、`devtools.inspectedWindow.eval()`\*\* **を使用してロードされたスクリプトは「[DOM のクリーンビュー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access)」を取得**しません\*\*。つまり、ページスクリプトによって行われたページの変更を確認できます。
+- コンテンツスクリプトとは異なり、**`devtools.inspectedWindow.eval()`** を使用してロードされたスクリプトは「[DOM のクリーンビュー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access)」を取得**しません**。つまり、ページスクリプトによって行われたページの変更を確認できます。
 
-> **Note:** DOM のクリーンビューはセキュリティ機能であり、ネイティブ DOM 関数の動作を再定義することにより、悪意のあるページが拡張機能をだますことを防ぐのに役立つことに注意してください。これは eval() を使用する際に非常に注意する必要があることを意味し、可能であれば通常のコンテンツスクリプトを使用する必要があります。
+> **メモ:** DOM のクリーンビューはセキュリティ機能であり、ネイティブ DOM 関数の動作を再定義することにより、悪意のあるページが拡張機能をだますことを防ぐのに役立つことに注意してください。これは eval() を使用する際に非常に注意する必要があることを意味し、可能であれば通常のコンテンツスクリプトを使用する必要があります。
 
 `devtools.inspectedWindow.eval()` を使用してロードされたスクリプトも、コンテンツスクリプトで定義された JavaScript 変数を認識しません。
 

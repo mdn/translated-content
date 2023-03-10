@@ -1,21 +1,9 @@
 ---
 title: '<strong>: 強い重要性要素'
 slug: Web/HTML/Element/strong
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Strong Importance
-  - Urgency
-  - Web
-  - strong
-translation_of: Web/HTML/Element/strong
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 HTML の**強い重要性要素** (**`<strong>`**) は、内容の重要性、重大性、または緊急性が高いテキストを表します。ブラウザーは一般的に太字で描画します。
 
@@ -130,11 +118,7 @@ HTML5 ではどちらも有効で意味のある要素であり、ほとんど�
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-strong-element', '&lt;strong&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-strong-element', '&lt;strong&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-STRONG', '&lt;strong&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,12 +1,8 @@
 ---
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Status/416
-tags:
-  - Client error
-  - HTTP
-  - Status code
-translation_of: Web/HTTP/Status/416
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) **`416 Range Not Satisfiable`** エラーレスポンスコードは、サーバーがリクエストされた範囲を提供できないことを示します。最も可能性の高い理由は、文書にそのような範囲が含まれていないか、または {{HTTPHeader("Range")}} ヘッダー値が構文的には正しいものの、意味をなさないということです。

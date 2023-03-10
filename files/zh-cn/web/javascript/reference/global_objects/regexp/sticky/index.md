@@ -2,9 +2,10 @@
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
+
 {{JSRef}}
 
-**`sticky`** 属性反映了搜索是否具有粘性（ 仅从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性表示的索引处搜索 ）。`sticky` 是正则表达式对象的只读属性。
+**`sticky`** 属性反映了搜索是否具有粘性（仅从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性表示的索引处搜索）。`sticky` 是正则表达式对象的只读属性。
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
 
@@ -33,7 +34,7 @@ regex.lastIndex; // 0（匹配失败后重置）
 
 ### 锚定的 sticky 标志
 
-火狐的 SpiderMonkey 引擎的几个版本有一个 [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687)，处理 `^` 断言和 sticky 标志时，会允许使用了 sticky 标志的表达式从 `^` 断言开始匹配，这是不对的。这个 bug 是在 Firefox 3.6 之后的某个版本引入的（which had the sticky flag but not the bug）并于 2015 年修复。 可能正因为这个 bug， ES2015 规范 [特别指出](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion)：
+火狐的 SpiderMonkey 引擎的几个版本有一个 [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687)，处理 `^` 断言和 sticky 标志时，会允许使用了 sticky 标志的表达式从 `^` 断言开始匹配，这是不对的。这个 bug 是在 Firefox 3.6 之后的某个版本引入的（which had the sticky flag but not the bug）并于 2015 年修复。可能正因为这个 bug，ES2015 规范 [特别指出](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion)：
 
 > 当使用带有 `y` 标识的匹配模式时，^ 断言总是会匹配输入的开始位置或者（如果是多行模式）每一行的开始位置。
 

@@ -2,6 +2,7 @@
 title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetWidth`** 是一个只读属性，返回一个元素的布局宽度。一个典型的（译者注：各浏览器的 offsetWidth 可能有所不同）offsetWidth 是测量包含元素的边框 (border)、水平线上的内边距 (padding)、竖直方向滚动条 (scrollbar)（如果存在的话）、以及 CSS 设置的宽度 (width) 的值。
@@ -18,7 +19,7 @@ var offsetWidth =element.offsetWidth;
 
 ## 示例
 
-![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
+![Image:Dimensions-offset.png](dimensions-offset.png)
 
 ## 规范
 
@@ -32,4 +33,4 @@ var offsetWidth =element.offsetWidth;
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/en-US/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/zh-CN/docs/Determining_the_dimensions_of_elements)

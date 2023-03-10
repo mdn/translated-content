@@ -2,6 +2,7 @@
 title: JavaScript オブジェクトの基本
 slug: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 この記事では、基本的な JavaScript オブジェクトの構文を学び、このコースで以前に見た一部の JavaScript の機能を復習し、すでに提供された多くの機能がオブジェクトであるという事実を再確認します。
@@ -60,7 +61,7 @@ person.greeting()
 
 オブジェクトから、データと機能を追加することができました。これで簡単な書き方で情報が引き出せます。
 
-> **Note:** もし動かないようなら、完成版のソースコードと見比べてみてください (完成版: [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) さらに[ライブ版もあります](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)) 。ライブ版は空白の画面ですが、それで OK です。また開発ツールを開いて上記のコマンドを入力してオブジェクトの構造を見てみます。
+> **メモ:** もし動かないようなら、完成版のソースコードと見比べてみてください (完成版: [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) さらに[ライブ版もあります](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)) 。ライブ版は空白の画面ですが、それで OK です。また開発ツールを開いて上記のコマンドを入力してオブジェクトの構造を見てみます。
 
 さて、何が起きているのでしょうか。オブジェクトには複数のメンバーがあり、それぞれに名前がついていて(例えば上の例では `name` や `age`)、それぞれに値 (`['Bob', 'Smith']` や `32`) があります。それぞれの名前と値の組はカンマ ( , ) で区切られていて、名前と値はコロン ( : ) で区切られています。常にそのように書きます。
 
@@ -270,7 +271,7 @@ const myNotification = new Notification('Hello!');
 
 コンストラクターは後の記事でもう一度見ることができます。
 
-> **Note:** オブジェクトのやり取りを**メッセージの受け渡し**と考えると便利です。オブジェクトが他のオブジェクトにある処理の実行を要求したとき、そのオブジェクトはメソッドを通じて他のオブジェクトにメッセージを送信して、そして応答を待ちます。ご存知の通り、応答とは返り値のことです。
+> **メモ:** オブジェクトのやり取りを**メッセージの受け渡し**と考えると便利です。オブジェクトが他のオブジェクトにある処理の実行を要求したとき、そのオブジェクトはメソッドを通じて他のオブジェクトにメッセージを送信して、そして応答を待ちます。ご存知の通り、応答とは返り値のことです。
 
 ## スキルをテストしましょう!
 

@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: durationchange 事件'
 slug: Web/API/HTMLMediaElement/durationchange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `durationchange` 事件会在 `duration` 属性更新时被触发。
@@ -76,7 +77,7 @@ video.ondurationchange = (event) => {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.durationchange_event")}}
+{{Compat}}
 
 ## Related Events
 

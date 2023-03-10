@@ -1,16 +1,8 @@
 ---
 title: オプショナルチェーン (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-tags:
-  - Chaining
-  - JavaScript
-  - Language feature
-  - Operator
-  - Optional chaining
-  - Reference
-browser-compat: javascript.operators.optional_chaining
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 **オプショナルチェーン** (optional chaining) 演算子 (**`?.`**) は、接続されたオブジェクトチェーンの深くに位置するプロパティの値を、チェーン内の各参照が正しいかどうかを明示的に確認せずに読み込むことを可能にします。
@@ -70,10 +62,10 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 let result = someInterface.customMethod?.();
 ```
 
-> **Note:** 関数ではない名前のプロパティがあった場合、 `?.` を使用すると {{JSxRef("TypeError")}} 例外が発生します
+> **メモ:** 関数ではない名前のプロパティがあった場合、 `?.` を使用すると {{JSxRef("TypeError")}} 例外が発生します
 > (`someInterface.customMethod is not a function`)。
 
-> **Note:** `someInterface` 自体が `null` または `undefined` である場合にも、 {{JSxRef("TypeError")}} 例外が発生します (`someInterface is null`)。 `someInterface` 自体が `null` または `undefined` である可能性がある場合は、この位置にも `?.` を使用して `someInterface?.customMethod?.()` のようにする必要があります。
+> **メモ:** `someInterface` 自体が `null` または `undefined` である場合にも、 {{JSxRef("TypeError")}} 例外が発生します (`someInterface is null`)。 `someInterface` 自体が `null` または `undefined` である可能性がある場合は、この位置にも `?.` を使用して `someInterface?.customMethod?.()` のようにする必要があります。
 
 #### 省略可能なコールバックやイベントハンドラーの扱い
 

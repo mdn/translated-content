@@ -2,6 +2,7 @@
 title: Document.plugins
 slug: Web/API/Document/plugins
 ---
+
 {{APIRef("DOM")}}{{domxref("Document")}}接口的**插件**只读属性返回一个{{domxref("HTMLCollection")}} 对象，该对象包含一个或多个{{domxref("HTMLEmbedElement")}}s 表示当前文档中的{{HTMLElement("embed")}} 元素。
 
 > **备注：** 对于已安装的插件列表，请使用 [NavigatorPlugins.plugins](/zh-CN/docs/Web/API/NavigatorPlugins/plugins) 插件。
@@ -22,7 +23,7 @@ embedArrayObj = document.plugins
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.plugins")}}
+{{Compat}}
 
 ## 另请参见
 

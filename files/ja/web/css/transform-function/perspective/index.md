@@ -1,16 +1,9 @@
 ---
 title: perspective()
 slug: Web/CSS/transform-function/perspective
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/perspective()
 original_slug: Web/CSS/transform-function/perspective()
-browser-compat: css.types.transform-function.perspective
 ---
+
 {{CSSRef}}
 
 **`perspective()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、ユーザーと z=0 平面との間の距離を定義し、閲覧者からの視点は二次元のインターフェイスが三次元であったかのようになります。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

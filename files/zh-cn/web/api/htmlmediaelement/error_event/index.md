@@ -1,33 +1,27 @@
 ---
-title: 'HTMLMediaElement: error event'
+title: HTMLMediaElement：error 事件
 slug: Web/API/HTMLMediaElement/error_event
 ---
+
 {{APIRef}}
 
-事件 **`error`** 会在因为一些错误（如网络连接错误）导致无法加载资源的时候触发。
+**`error`** 事件会在因为一些错误（如网络连接错误）导致无法加载资源的时候触发。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">起泡</th>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">可取消</th>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">事件处理器属性</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+事件不可取消也不会冒泡。
+
+## 语法
+
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener('error', (event) => {});
+
+onerror = (event) => { };
+```
+
+## 事件类型
+
+一个通用的 {{domxref("Event")}}。
 
 ## 示例
 
@@ -48,9 +42,9 @@ video.setAttribute('src', videoSrc);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.error_event")}}
+{{Compat}}
 
-## 更多
+## 参见
 
 - {{domxref("HTMLAudioElement")}}
 - {{domxref("HTMLVideoElement")}}

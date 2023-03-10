@@ -1,16 +1,6 @@
 ---
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
-tags:
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - Web
-translation_of: Web/API/Navigator/mediaDevices
 ---
 {{APIRef("Media Capture and Streams")}}
 
@@ -18,7 +8,9 @@ translation_of: Web/API/Navigator/mediaDevices
 
 ## 구문
 
-    var mediaDevices = navigator.mediaDevices;
+```js
+var mediaDevices = navigator.mediaDevices;
+```
 
 ### 반환 값
 

@@ -1,14 +1,8 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - 例外
-  - JavaScript
-  - 言語機能
-  - 文
-browser-compat: javascript.statements.try_catch
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 **`try...catch`** 文は、試す文のブロックをマークし、例外が発生したときの応答を指定します。
@@ -106,7 +100,7 @@ try {
 
 ### 例外識別子
 
-例外が `try` ブロックの中で発生したときは、_`exception_var`_ (たとえば、`catch (e)` における `e`) が例外の値を保持します。この識別子を使用して、発生した例外についての情報を取得することができます。この識別子は `catch` ブロックの{{Glossary("Scope", "スコープ")}}でのみ利用できます。例外の値が必要ない場合にはこれは省略できます。
+例外が `try` ブロックの中で発生したときは、`exception_var` (たとえば、`catch (e)` における `e`) が例外の値を保持します。この識別子を使用して、発生した例外についての情報を取得することができます。この識別子は `catch` ブロックの{{Glossary("Scope", "スコープ")}}でのみ利用できます。例外の値が必要ない場合にはこれは省略できます。
 
 ```js
 function isValidJSON(text) {

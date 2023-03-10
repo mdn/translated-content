@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}**CanvasRenderingContext2D** 介面被使用於繪製矩形、文字、影像以及其它基於 canvas 元素的物件。此介面提供了繪製 {{ HTMLElement("canvas") }} 元素外觀的 2D 渲染環境。
 
 要取得此實作此介面的實體物件，可以於一個 `<canvas>` 元素上以 "2d" 為參數呼叫 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 方法：
@@ -311,11 +312,11 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 ## 瀏覽器相容性
 
-{{Compat("api.CanvasRenderingContext2D")}}
+{{Compat}}
 
 ## 相容性註記
 
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
+- Starting with Gecko 5.0, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: AudioBuffer.duration
 slug: Web/API/AudioBuffer/duration
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{domxref("AudioBuffer")}}接口的 duration 属性返回一个双精度数，表示缓冲区中存储的 PCM 数据的持续时间（以秒为单位）
@@ -51,7 +52,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer.duration")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: ReadableStream
 slug: Web/API/ReadableStream
 ---
+
 {{APIRef("Fetch")}}
 
 [流操作 API](/zh-CN/docs/Web/API/Streams_API) 中的`ReadableStream` 接口呈现了一个可读取的二进制流操作。[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 通过 {{domxref("Response")}} 的属性 {{domxref("Body.body", "body")}} 提供了一个具体的 `ReadableStream` 对象。
@@ -77,7 +78,7 @@ fetch('https://www.example.org')
 
 ### Async iterator to stream
 
-将 [(async) 迭代器](zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators) 转换为可读流：
+将[（async）迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)转换为可读流：
 
 ```js
 function iteratorToStream(iterator) {

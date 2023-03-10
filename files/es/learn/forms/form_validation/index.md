@@ -1,17 +1,9 @@
 ---
 title: Validación de formularios de datos
 slug: Learn/Forms/Form_validation
-tags:
-  - Ejemplo
-  - Guía
-  - HTML
-  - Intermedio
-  - JavaScript
-  - Web
-  - formulários
-translation_of: Learn/Forms/Form_validation
 original_slug: Learn/HTML/Forms/Validacion_formulario_datos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Antes de enviar datos al servidor, es importante asegurarse de que se completan todos los controles de formulario requeridos, y en el formato correcto. Esto se denomina **validación de formulario en el lado del cliente** y ayuda a garantizar que los datos que se envían coinciden con los requisitos establecidos en los diversos controles de formulario. Este artículo te guiará por los conceptos básicos y ejemplos de validación de formularios en el lado del cliente.
@@ -619,7 +611,7 @@ Antes de validar el formulario, hazte estas preguntas:
   - : Para reducir la frustración del usuario, es muy importante proporcionar tanta información útil como sea posible para guiarlo a fin de que corrija sus entradas de datos. Debes ofrecer sugerencias por adelantado para que sepan lo que se espera de ellos, así como mensajes de error claros. Si deseas profundizar en los requisitos de interfaz de usuario para la validación de formularios, aquí hay algunos artículos útiles que debes leer:
 
     - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/) \[Validación de campo de formulario: El enfoque de solo errores]
-    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials ](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)\[Validación de formularios web: Buenas prácticas y tutoriales]
+    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/) \[Validación de formularios web: Buenas prácticas y tutoriales]
     - Six Revision: [Best Practices for Hints and Validation in Web Forms](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/) \[Buenas prácticas para sugerencias y validación de formularios web]
     - A List Apart: [Inline Validation in Web Forms](http://www.alistapart.com/articles/inline-validation-in-web-forms/) \[Validación en línea de formularios web]
 

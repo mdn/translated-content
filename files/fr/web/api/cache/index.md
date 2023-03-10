@@ -13,6 +13,7 @@ tags:
   - hors ligne
 translation_of: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}} {{SeeCompatTable}}
 
 L'interface `Cache` fournit un mécanisme de stockage pour les paires d'objets [`Request`](http://fetch.spec.whatwg.org/#request)/[`Response`](http://fetch.spec.whatwg.org/#response) qui sont mises en cache, par exemple dans le cadre du cycle de vie {{domxref("ServiceWorker")}}. Il est à noter que l'interface `Cache` est exposée à des portées fenêtrées ainsi qu'à des service workers. Vous n'êtes pas obligé de l'utiliser avec des services workers, même si elle est définie dans la spécification relative aux services workers.

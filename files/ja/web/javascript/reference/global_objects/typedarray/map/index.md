@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 ---
+
 {{JSRef}}
 
 **`map()`** メソッドは、与えられた関数を型付き配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。このメソッドは、{{jsxref("Array.prototype.map()")}}と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
@@ -84,9 +77,7 @@ const doubles = numbers.map(function(num) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

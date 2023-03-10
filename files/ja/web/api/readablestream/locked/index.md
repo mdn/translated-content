@@ -1,40 +1,38 @@
 ---
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
+
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStream")}} インターフェイスの **`locked`** 読み取り専用プロパティは、読み取り可能なストリームが[リーダーにロックされている](https://streams.spec.whatwg.org/#lock)かどうかを返します。
+**`locked`** は {{domxref("ReadableStream")}} インターフェイスの読み取り専用プロパティで、読み取り可能なストリームがリーダーにロックされているかどうかを返します。
 
-## 構文
+読み取り可能なストリームは、一度に最大 1 つのアクティブなリーダーを持つことができ、それが解放されるまでそのリーダーにロックされます。
+リーダーは [`ReadableStream.getReader()`](/ja/docs/Web/API/ReadableStream/getReader) を使用して取得し、リーダーの `releaseLock()` メソッドを使用して解放することができます。
 
-```
-var locked = readableStream.locked;
-```
+## 値
 
-### 値
-
-読み取り可能なストリームがロックされているかどうかを示す {{jsxref("Boolean")}}。
+論理値で、読み取り可能なストリームがロックされているかどうかを示します。
 
 ## 例
 
 ```js
 const stream = new ReadableStream({
-  ...
+  // ...
 });
 
 const reader = stream.getReader();
 
 stream.locked
-// ストリームがリーダーにロックされているため、true を返すべきです
+// ストリームがリーダーにロックされているため、true が返されるはずです
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                         | 状態                         | コメント |
-| ------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-locked","locked")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStream.locked")}}
+{{Compat}}

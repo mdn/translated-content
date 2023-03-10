@@ -1,15 +1,8 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Property
-  - Reference
-  - Stylesheets
-translation_of: Web/API/Document/styleSheetSets
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 **`styleSheetSets`**의 읽기 전용 속성은 현재 사용 가능한 모든 스타일 시트 세트의 live 리스트를 반환합니다.

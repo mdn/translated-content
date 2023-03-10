@@ -1,14 +1,6 @@
 ---
 title: Window
 slug: Web/API/Window
-tags:
-  - API
-  - DOM
-  - Interface
-  - JavaScript
-  - Reference
-  - Window
-translation_of: Web/API/Window
 ---
 {{APIRef("DOM")}}
 
@@ -24,7 +16,7 @@ JavaScript 코드에 노출된 전역 변수 `window`는 현재 스크립트가 
 
 ## 생성자
 
-[DOM 인터페이스](/ko/docs/Web/API/Document_Object_Model#DOM_인터페이스 "/en-US/docs/DOM/DOM_Reference")도 참고하세요.
+[DOM 인터페이스](/ko/docs/Web/API/Document_Object_Model#DOM_인터페이스)도 참고하세요.
 
 - {{domxref("DOMParser")}}
   - : `DOMParser`는 문자열에 저장한 XML 또는 HTML 소스 코드를 DOM {{domxref("Document")}}로 구문 분석할 수 있습니다. `DOMParser`는 [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/) 명세의 일부입니다.
@@ -469,7 +461,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/offline_event", "offline")}}
   - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
     Also available via the {{domxref("WindowEventHandlers.onoffline", "onoffline")}} property.
-- {{domxref("Window/online_event", "online ")}}[``](/en-US/docs/Web/API/Window/online_event)
+- {{domxref("Window/online_event", "online ")}}
   - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
     Also available via the {{domxref("WindowEventHandlers.ononline", "ononline")}} property.
 
@@ -603,7 +595,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## 인터페이스
 
-[DOM 인터페이스](/ko/docs/Web/API/Document_Object_Model#DOM_인터페이스 "/en-US/docs/DOM/DOM_Reference")를 참고하세요.
+[DOM 인터페이스](/ko/docs/Web/API/Document_Object_Model#DOM_인터페이스)를 참고하세요.
 
 ## 브라우저 호환성
 

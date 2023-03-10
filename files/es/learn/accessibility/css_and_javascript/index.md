@@ -1,8 +1,8 @@
 ---
 title: Buenas prácticas de accesibilidad CSS y JavaScript
 slug: Learn/Accessibility/CSS_and_JavaScript
-translation_of: Learn/Accessibility/CSS_and_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 CSS y JavaScript, cuando se usan correctamente, también tienen el potencial de permitir experiencias web accesibles... o pueden dañar significativamente la accesibilidad si se usan incorrectamente. Este artículo describe algunas de las mejores prácticas de CSS y JavaScript que deben tenerse en cuenta para garantizar que incluso el contenido complejo sea lo más accesible posible.
@@ -149,9 +149,9 @@ a:active {
 
 Las convenciones de enlace estándar son subrayado y un color diferente (predeterminado: azul) en su estado estándar, otra variación de color cuando el enlace ha sido visitado anteriormente (predeterminado: púrpura) y otro color más cuando el enlace está activado (predeterminado: rojo) . Además, el puntero del ratón cambia a un ícono de puntero cuando se pasa el ratón sobre los enlaces, y el enlace recibe un resaltado cuando se enfoca (por ejemplo, mediante tabulación) o se activa. La siguiente imagen muestra el resaltado tanto en Firefox (contorno punteado) como en Chrome (contorno azul):
 
-![](https://mdn.mozillademos.org/files/14371/focus-highlight-firefox.png)
+![](focus-highlight-firefox.png)
 
-![](https://mdn.mozillademos.org/files/14369/focus-highlight-chrome.png)
+![](focus-highlight-chrome.png)
 
 Puedes ser creativo con los estilos de enlaces, siempre y cuando sigas dando información a los usuarios cuando interactúan con los enlaces. Definitivamente, algo debería suceder cuando los estados cambian, y no debes deshacerte del cursor del puntero o del contorno; ambos son ayudas de accesibilidad muy importantes para quienes usan los controles del teclado.
 
@@ -194,7 +194,7 @@ Otro consejo es no confiar solo en el color para las señales / información, ya
 
 Hay muchos casos en los que un diseño visual requerirá que no se muestre todo el contenido a la vez. Por ejemplo, en nuestro ejemplo de [cuadro de información con pestañas](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (ver [código fuente](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) tenemos tres paneles de información, pero los colocamos uno encima del otro y proporcionamos pestañas en las que se puede hacer clic para mostrar cada uno (también es accesible desde el teclado - pues usar alternativamente Tab y Enter / Return para seleccionarlos).
 
-![](https://mdn.mozillademos.org/files/13368/tabbed-info-box.png)
+![](tabbed-info-box.png)
 
 A los usuarios de lectores de pantalla no les importa nada de esto: están contentos con el contenido siempre que el orden del código fuente tenga sentido y puedan acceder a todo. El posicionamiento absoluto (como se usa en este ejemplo) generalmente se considera uno de los mejores mecanismos para ocultar contenido para lograr un efecto visual, porque no impide que los lectores de pantalla accedan a él.
 
@@ -217,7 +217,7 @@ JavaScript también puede romper la accesibilidad, dependiendo de cómo se use.
 
 El JavaScript moderno es un lenguaje poderoso, y podemos hacer mucho con él actualmente, desde contenido simple y actualizaciones de la interfaz de usuario hasta juegos 2D y 3D completos. No existe una regla que diga que todo el contenido debe ser 100% accesible para todas las personas; solo debe hacer lo que pueda y hacer que sus aplicaciones sean lo más accesibles posible.
 
-Se puede decir que el contenido y la funcionalidad simples son fáciles de hacer accesibles; por ejemplo, texto, imágenes, tablas, formularios y botones que activan funciones. Como vimos en nuestro artículo [HTML: Una buena base para la accesibilidad](https://developer.mozilla.org/es/docs/Learn/Accessibility/HTML), las consideraciones clave son:
+Se puede decir que el contenido y la funcionalidad simples son fáciles de hacer accesibles; por ejemplo, texto, imágenes, tablas, formularios y botones que activan funciones. Como vimos en nuestro artículo [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML), las consideraciones clave son:
 
 - Buena semántica: usar el elemento correcto para el trabajo correcto. Por ejemplo, asegúrate de usar encabezados y párrafos, y elementos {{htmlelement ("button")}} y {{htmlelement ("a")}}
 - Asegurarse de que el contenido esté disponible como texto, ya sea directamente como contenido de texto, buenas etiquetas de texto para los elementos de formulario o alternativas de texto, p.ej. texto alternativo para imágenes.
@@ -300,16 +300,18 @@ function createLink(testItem) {
 
 Cada enlace tiene un doble propósito: te dice cuál es el error, y además puedes hacer clic en él / activarlo para ir directamente al elemento de entrada en cuestión y corregir la entrada.
 
-> **Nota:** La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte {{bug (277178)}}).
+> **Nota:** La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte [Error 277178 en Firefox](https://bugzil.la/277178)).
 
 Además, el `errorField` se coloca en la parte superior del orden de código (aunque se coloca de manera diferente en la interfaz de usuario usando CSS), lo que significa que los usuarios pueden averiguar exactamente qué está mal con los envíos de sus formularios y acceder a los elementos de entrada en cuestión retrocediendo hasta el inicio de la página.
 
 Como nota final, hemos utilizado algunos atributos WAI-ARIA en nuestra demostración para ayudar a resolver los problemas de accesibilidad causados por áreas de contenido que se actualizan constantemente sin recargar la página (los lectores de pantalla no captan esto ni alertan a los usuarios de forma predeterminada):
 
-    <div class="errors" role="alert" aria-relevant="all">
-      <ul>
-      </ul>
-    </div>
+```html
+<div class="errors" role="alert" aria-relevant="all">
+  <ul>
+  </ul>
+</div>
+```
 
 Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics) con mucho más detalle.
 

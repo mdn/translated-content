@@ -2,6 +2,7 @@
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
+
 {{JSRef("Global_Objects", "WeakMap")}}
 
 ## 概述

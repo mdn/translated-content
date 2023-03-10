@@ -2,9 +2,10 @@
 title: GamepadEvent.gamepad
 slug: Web/API/GamepadEvent/gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
-**{{domxref("GamepadEvent")}} interface** 的 **`GamepadEvent.gamepad`** 属性返回一个 {{domxref("Gamepad")}} 对象，为触发 {{event("gamepadconnected")}} 和{{event("gamepaddisconnected")}} 事件提供相关联控制器数据的访问。
+**{{domxref("GamepadEvent")}} interface** 的 **`GamepadEvent.gamepad`** 属性返回一个 {{domxref("Gamepad")}} 对象，为触发 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 和[`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件提供相关联控制器数据的访问。
 
 ## 语法
 
@@ -34,8 +35,8 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.GamepadEvent.gamepad")}}
+{{Compat}}
 
 ## 另请参阅
 
-[使用 Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)
+[使用 Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)

@@ -11,6 +11,7 @@ tags:
   - 'y'
 translation_of: Web/API/DOMPointReadOnly/y
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`y`** de l'interface **`DOMPointReadOnly`** représente la coordonnée y d'un point.

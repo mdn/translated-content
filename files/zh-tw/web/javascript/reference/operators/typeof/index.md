@@ -2,6 +2,7 @@
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 ---
+
 {{jsSidebar("Operators")}}
 
 ## 摘要

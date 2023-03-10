@@ -2,6 +2,7 @@
 title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## 概述

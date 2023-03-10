@@ -11,6 +11,7 @@ tags:
   - description
 translation_of: Web/API/PerformanceServerTiming/description
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`description`** retourne une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) décrivant la métrique spécifiée par le serveur, ou une chaîne vide.

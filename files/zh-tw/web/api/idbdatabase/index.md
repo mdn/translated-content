@@ -2,6 +2,7 @@
 title: IDBDatabase
 slug: Web/API/IDBDatabase
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a database](/zh-TW/docs/IndexedDB#database_connection); you can use an `IDBDatabase` object to open a [transaction](/zh-TW/docs/IndexedDB#gloss_transaction) on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
@@ -45,7 +46,7 @@ Inherits from: [EventTarget](/zh-TW/docs/DOM/EventTarget)
 
 ## 範例
 
-In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
+In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 // Let us open our database
@@ -107,7 +108,7 @@ This next line opens up a transaction on the Database, then opens an object stor
 
 ## Browser compatibility
 
-{{Compat("api.IDBDatabase")}}
+{{Compat}}
 
 ## 閱讀更多
 
@@ -117,4 +118,4 @@ This next line opens up a transaction on the Database, then opens an object stor
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

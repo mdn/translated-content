@@ -1,20 +1,15 @@
 ---
 title: Keep-Alive
 slug: Web/HTTP/Headers/Keep-Alive
-tags:
-  - General Header
-  - HTTP
-  - HTTP Header
-  - Reference
-translation_of: Web/HTTP/Headers/Keep-Alive
 ---
+
 {{HTTPSidebar}}
 
 **`Keep-Alive`** 一般ヘッダーは、送信者が接続の仕組みや、タイムアウト値と最大リクエスト数の設定に使用される可能性があることをヒントとすることができます。
 
-> **Note:** このヘッダーが意味を持つためには、 {{HTTPHeader("Connection")}} ヘッダーを "keep-alive" に設定する必要があります。
+> **メモ:** このヘッダーが意味を持つためには、 {{HTTPHeader("Connection")}} ヘッダーを "keep-alive" に設定する必要があります。
 
-> **Warning:** {{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは [HTTP/2 では禁止されています](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)。 Chrome と Firefox は HTTP/2 レスポンスでこれらを無視しますが、 Safari は HTTP/2 仕様の要件に準拠しており、これらを含むレスポンスは読み込まれません。
+> **警告:** {{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは [HTTP/2 では禁止されています](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)。 Chrome と Firefox は HTTP/2 レスポンスでこれらを無視しますが、 Safari は HTTP/2 仕様の要件に準拠しており、これらを含むレスポンスは読み込まれません。
 
 <table class="properties">
   <tbody>

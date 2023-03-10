@@ -13,6 +13,7 @@ tags:
   - cookie
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
+
 {{AddonSidebar()}}
 
 Le type `Cookie` de l'API {{WebExtAPIRef("cookies")}} représente des informations sur un cookie HTTP.
@@ -28,7 +29,7 @@ Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés su
 - `firstPartyDomain`
   - : Une `chaîne` représentant le domaine de la première partie associé au cookie. Cela sera une chaine vide si le cookie a été défini alors que l'isolation de la première partie est désactivée. Voir [Isolement de la première partie](/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie).
 - `hostOnly`
-  - : Un `booléen`, `true` si le cookie est un cookie hôte uniquement (c'est à dire que l'hôte de la requête doit correspondre exactement au domaine du cookie), ou  `false` dans la case contraire.
+  - : Un `booléen`, `true` si le cookie est un cookie hôte uniquement (c'est à dire que l'hôte de la requête doit correspondre exactement au domaine du cookie), ou `false` dans la case contraire.
 - `httpOnly`
   - : Un `booléen`, `true` si le cookie est marqué comme HttpOnly (c'est à dire le cookie est inaccessible aux scripts côté client), ou `false` dans le cas contraire.
 - `name`
@@ -46,9 +47,9 @@ Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés su
 - `value`
   - : Une `chaîne` représentant la valeur du cookie.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.Cookie")}}
+{{Compat}}
 
 ## Exemples
 
@@ -78,7 +79,8 @@ gettingAll.then(logCookies);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,4 +107,4 @@ gettingAll.then(logCookies);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

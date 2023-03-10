@@ -1,13 +1,8 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef}}
 
 **`Math.cbrt()`** 関数は、引数として与えた数の立方根を返します。すなわち、
@@ -68,9 +63,7 @@ Math.cbrt(2);  // 1.2599210498948732
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

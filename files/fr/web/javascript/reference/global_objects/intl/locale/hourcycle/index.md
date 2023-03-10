@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/hourCycle
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.hourCycle`** est une propriété accessible via un accesseur qui renvoie la convention pour le format des heures utilisée par la locale courante.
@@ -48,13 +49,11 @@ console.log(us12hour.hourCycle); // Affichera "h12" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                      | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.hourCycle) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.hourCycle")}}
+{{Compat}}
 
 ## Voir aussi
 

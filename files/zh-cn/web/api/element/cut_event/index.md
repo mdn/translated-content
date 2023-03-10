@@ -2,6 +2,7 @@
 title: cut
 slug: Web/API/Element/cut_event
 ---
+
 > **警告：** This page needs to be updated to match the currently specified behaviour. In the meantime please refer to the specification: [https://www.w3.org/TR/clipboard-apis/#the-cut-action](https://www.w3.org/TR/clipboard-apis/#the-paste-action)
 
 **`cut`** 事件在将选中内容从文档中删除并将其添加到剪贴板后触发。
@@ -11,7 +12,7 @@ slug: Web/API/Element/cut_event
 ## 基本信息
 
 - 规范
-  - [: Clipboard](http://www.w3.org/TR/clipboard-apis/#cut-event)
+  - : [Clipboard](http://www.w3.org/TR/clipboard-apis/#cut-event)
 - 接口
   - : {{domxref("ClipboardEvent")}}
 - 是否冒泡
@@ -39,12 +40,12 @@ slug: Web/API/Element/cut_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.cut_event")}}
+{{Compat}}
 
 ## 相关
 
 - {{domxref("HTMLElement.oncut")}}
 - Related events
 
-  - {{event("copy")}}
-  - {{event("paste")}}
+  - [`copy`](/zh-CN/docs/Web/API/Element/copy_event)
+  - [`paste`](/zh-CN/docs/Web/API/Element/paste_event)

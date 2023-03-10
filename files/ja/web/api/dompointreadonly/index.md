@@ -2,6 +2,7 @@
 title: DOMPointReadOnly
 slug: Web/API/DOMPointReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMPointReadOnly`** インターフェイスは、 {{domxref("DOMPoint")}} が座標系で二次元または三次元の点を定義するために使用する座標フィールドと透視図フィールドを指定するものです。

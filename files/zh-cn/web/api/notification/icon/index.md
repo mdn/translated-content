@@ -1,7 +1,8 @@
 ---
 title: Notification.icon
-slug: Web/API/notification/icon
+slug: Web/API/Notification/icon
 ---
+
 {{APIRef("Web Notifications")}}
 
 {{domxref("Notification")}}的只读属性**icon**使得包含`icon`的 URL 被显示成通知的一部分，如同指定{{domxref("Notification.Notification","Notification()")}}构造函数中`icon`的属性。
@@ -38,8 +39,8 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.icon")}}
+{{Compat}}
 
 ## 参见
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

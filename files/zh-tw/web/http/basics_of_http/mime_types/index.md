@@ -2,6 +2,7 @@
 title: MIME 類別 (IANA 媒體類別)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 **媒體類別**(多用途網際網路郵件擴展或是**MIME 類別**)是一種表示文件、檔案或各式位元組的標準。它被定義並規範在 IETF 的 {{RFC(6838)}}。
@@ -92,7 +93,7 @@ There are two multipart types:
 
 All HTML content should be served with this type. Alternative MIME types for XHTML (like `application/xhtml+xml`) are mostly useless nowadays.
 
-> **備註：** Use `application/xml` or `application/xhtml+xml` if you want XML’s strict parsing rules, [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
+> **備註：** Use `application/xml` or `application/xhtml+xml` if you want XML’s strict parsing rules, [`<![CDATA[…]]>`](/zh-TW/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
 
 ### text/javascript
 
@@ -123,9 +124,20 @@ Some content you find may have a `charset` parameter at the end of the `text/jav
 
 ### Image types
 
-Files whose MIME type is `image` contain image data. The subtype specifies which specific image file format the data represents. Only a few image types are used commonly enough to be considered safe for use on web pages:
+Files whose MIME type is `image` contain image data.
+The subtype specifies which specific image file format the data represents.
 
-{{page("en-US/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
+The following image types are used commonly enough to be considered _safe_ for use on web pages:
+
+- [`image/apng`](/zh-TW/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics): Animated Portable Network Graphics (APNG)
+- [`image/avif`](/zh-TW/docs/Web/Media/Formats/Image_types#avif_image) : AV1 Image File Format (AVIF)
+- [`image/gif`](/zh-TW/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format): Graphics Interchange Format (GIF)
+- [`image/jpeg`](/zh-TW/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image): Joint Photographic Expert Group image (JPEG)
+- [`image/png`](/zh-TW/docs/Web/Media/Formats/Image_types#png_portable_network_graphics): Portable Network Graphics (PNG)
+- [`image/svg+xml`](/zh-TW/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
+- [`image/webp`](/zh-TW/docs/Web/Media/Formats/Image_types#webp_image): Web Picture format (WEBP)
+
+The [Image file type and format guide](/zh-TW/docs/Web/Media/Formats/Image_types#common_image_file_types) provides information and recommendations about when to use the different image formats.
 
 ### Audio and video types
 

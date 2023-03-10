@@ -2,9 +2,10 @@
 title: 画中画（Picture-in-Picture）API
 slug: Web/API/Picture-in-Picture_API
 ---
+
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
-**画中画 API** 允许网站总是在其它窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
+**画中画 API** 允许网站总是在其他窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
 
 ## 接口
 
@@ -39,7 +40,7 @@ slug: Web/API/Picture-in-Picture_API
 ### Document 接口的属性
 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
-  - : `pictureInPictureEnabled` 属性告诉你是否可以使用画中画模式。如果画中画模式因任何原因不可用（例如[`"画中画"`功能](/zh-CN/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture) 不被接受，或者不支持画中画模式），则是 `false` 。
+  - : `pictureInPictureEnabled` 属性告诉你是否可以使用画中画模式。如果画中画模式因任何原因不可用（例如[`"画中画"`功能](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture) 不被接受，或者不支持画中画模式），则是 `false` 。
 
 ### Document 或 ShadowRoot 接口的属性
 

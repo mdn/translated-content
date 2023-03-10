@@ -4,6 +4,7 @@ slug: Web/CSS/@layer
 translation_of: Web/CSS/@layer
 browser-compat: css.at-rules.layer
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
@@ -44,7 +45,7 @@ La première façon consiste à créer une couche de cascade nommée et qui cont
 }
 ```
 
-La seconde méthode consiste à créer une couche de cascade nommée sans lui affecter de styles. Il peut s'agit d'une seule couche&nbsp;:
+La seconde méthode consiste à créer une couche de cascade nommée sans lui affecter de styles. Il peut s'agir d'une seule couche&nbsp;:
 
 ```css
 @layer utilities;
@@ -152,7 +153,7 @@ p {
 
 ### Affecter des règles à des couches existantes
 
-Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis les règles CSS sont appliquées aux deux couches. La couche `base` définit  des valeurs pour les propriétés `color`, `border`, `font-size`, et `padding`. La couche `special` définit une couleur différente. `special` arrivant en dernier lors de la définition des couches, c'est la couleur qu'elle fournit qui est utilisée et le texte est affiché avec la couleur `rebeccapurple`. Toutes les autres règles de `base` continuent de s'appliquer.
+Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis les règles CSS sont appliquées aux deux couches. La couche `base` définit des valeurs pour les propriétés `color`, `border`, `font-size`, et `padding`. La couche `special` définit une couleur différente. `special` arrivant en dernier lors de la définition des couches, c'est la couleur qu'elle fournit qui est utilisée et le texte est affiché avec la couleur `rebeccapurple`. Toutes les autres règles de `base` continuent de s'appliquer.
 
 #### HTML
 

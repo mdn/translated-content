@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut {{htmlattrxref("id")}} correspond au fragment d'identifiant de l'URI du document.
@@ -213,15 +214,11 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------------------- |
-| {{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}} | {{Spec2("HTML WHATWG")}}     | Définition de la sémantique relative à HTML. |
-| {{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}             | {{Spec2("CSS4 Selectors")}} | Aucune modification.                         |
-| {{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}                 | {{Spec2("CSS3 Selectors")}} | Définition initiale.                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.target")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 ---
+
 {{JSRef}}
 
 **`multiline`** プロパティは、正規表現で "`m`" フラグが使用されているかどうかを示します。`multiline` は正規表現インスタンスごとの読み取り専用プロパティです。
@@ -34,9 +27,7 @@ console.log(regex.multiline); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

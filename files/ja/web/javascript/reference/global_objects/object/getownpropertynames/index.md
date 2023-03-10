@@ -1,15 +1,8 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyNames()`** メソッドは、与えられたオブジェクトで発見されたすべての直接のプロパティを含む配列を (シンボルを使用したものを除き、列挙不可能なプロパティを含んで) 返します。
@@ -130,9 +123,7 @@ console.log(nonenum_only);
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

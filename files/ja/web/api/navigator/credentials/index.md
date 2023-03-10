@@ -2,6 +2,7 @@
 title: Navigator.credentials
 slug: Web/API/Navigator/credentials
 ---
+
 {{securecontext_header}}{{APIRef("")}}
 
 **`credentials`** は {{domxref("Navigator")}} インターフェイスのプロパティで、リクエストの資格情報のメソッドを公開する {{domxref("CredentialsContainer")}} インターフェイスを返します。 {{domxref("CredentialsContainer")}} インターフェイスはサインインやサインアウトに成功した場合など、興味深いイベントが発生したことをユーザーエージェントに通知したりもします。このインターフェイスは機能検出に使用することができます。
@@ -31,9 +32,7 @@ if ('credentials' in navigator) {
 
 ## 仕様書
 
-| 仕様書                                           | 状態                                         | 備考     |
-| ------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

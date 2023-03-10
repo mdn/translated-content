@@ -1,15 +1,8 @@
 ---
 title: URL.searchParams
 slug: Web/API/URL/searchParams
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URLSearchParams
-translation_of: Web/API/URL/searchParams
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`searchParams`** 읽기 전용 속성은 URL 내의 {{httpmethod("GET")}} 디코딩 된 쿼리 매개변수에 접근할 수 있는 {{domxref("URLSearchParams")}} 객체를 반환합니다.
@@ -18,7 +11,9 @@ translation_of: Web/API/URL/searchParams
 
 ## 구문
 
-    const urlSearchParams = url.searchParams
+```js
+const urlSearchParams = url.searchParams
+```
 
 ### 값
 

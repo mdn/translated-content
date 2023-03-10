@@ -2,6 +2,7 @@
 title: XRRigidTransform
 slug: Web/API/XRRigidTransform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 **`XRRigidTransform`** は、位置と向きによって記述される 3D 幾何学的変換を表す [WebXR API](/ja/docs/Web/API/WebXR_API) のインターフェイスです。
@@ -53,9 +54,7 @@ xrSession.requestReferenceSpace(refSpaceType)
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("WebXR","#xrrigidtransform-interface","XRRigidTransform")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau.
@@ -227,15 +228,11 @@ mots.forEach(function(mot) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.18', 'Array.prototype.forEach')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

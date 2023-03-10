@@ -1,7 +1,10 @@
 ---
 title: MessageEvent.data
 slug: Web/API/MessageEvent/data
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`data`** は {{domxref("MessageEvent")}} インターフェイスのプロパティで、このメッセージの送信元が送信するデータを表します。
@@ -13,7 +16,7 @@ slug: Web/API/MessageEvent/data
 ## 例
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
 };

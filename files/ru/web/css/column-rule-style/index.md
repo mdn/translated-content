@@ -5,6 +5,7 @@ tags:
   - мультиколоночная вёрстка
 translation_of: Web/CSS/column-rule-style
 ---
+
 {{ CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`column-rule-style`** устанавливает стиль линии, расположенной между колонками при мультиколоночной вёрстке.

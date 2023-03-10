@@ -2,6 +2,7 @@
 title: XRReferenceSpace.getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 {{domxref("XRReferenceSpace")}} インターフェイスの **`getOffsetReferenceSpace()`** メソッドは、メソッドが呼び出されたオブジェクトと 3D 空間内の特定の点との間の位置の相対的な違いを表す新しい参照空間オブジェクトを返します。 `getOffsetReferenceSpace()` によって返されるオブジェクトは、{{domxref("XRReferenceSpace")}} で呼び出された場合は `XRReferenceSpace` であり、{{domxref("XRBoundedReferenceSpace")}} で呼び出された場合は `XRBoundedReferenceSpace` です。
@@ -112,9 +113,7 @@ function applyMouseMovement(refSpace) {
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrreferencespace-getoffsetreferencespace','getOffsetReferenceSpace()')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

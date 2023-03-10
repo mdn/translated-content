@@ -2,6 +2,7 @@
 title: DOMTokenList
 slug: Web/API/DOMTokenList
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMTokenList`** 介面表示了一個以空格作為分隔的內容集，通常來自 {{domxref("Element.classList")}}、{{domxref("HTMLLinkElement.relList")}}、{{domxref("HTMLAnchorElement.relList")}} 或 {{domxref("HTMLAreaElement.relList")}} 等屬性。本介面與 {{jsxref("Array")}} 同樣是由 `0` 開始索引，且 `DOMTokenList` 是區分大小寫的。
@@ -18,7 +19,7 @@ _This interface doesn't inherit any property._
 _This interface doesn't inherit any method._
 
 - {{domxref("DOMTokenList.item()")}}
-  - : Returns an item in the list by its index (or undefined if the number is greater than or equal to the length of the list, prior to {{gecko("7.0")}} returned null)
+  - : Returns an item in the list by its index (or undefined if the number is greater than or equal to the length of the list, prior to Gecko 7.0 returned null)
 - {{domxref("DOMTokenList.contains()")}}
   - : Returns `true` if the underlying string contains _token_, otherwise `false`
 - {{domxref("DOMTokenList.add()")}}
@@ -38,7 +39,7 @@ _This interface doesn't inherit any method._
 
 ## 瀏覽器相容性
 
-{{Compat("api.DOMTokenList")}}
+{{Compat}}
 
 ## 參見
 

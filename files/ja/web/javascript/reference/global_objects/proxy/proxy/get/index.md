@@ -1,13 +1,8 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
+
 {{JSRef}}
 
 **`handler.get()`** はプロパティの値を取得することに対するトラップです。
@@ -97,9 +92,7 @@ p.a; // TypeError is thrown
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

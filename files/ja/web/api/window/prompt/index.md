@@ -2,6 +2,7 @@
 title: Window.prompt()
 slug: Web/API/Window/prompt
 ---
+
 {{ApiRef("Window")}}
 
 `window.prompt()` は、ユーザーにテキストを入力するように促すダイアログをオプションのメッセージと共に表示し、ユーザーがテキストを送信するかダイアログをキャンセルするまで待機するようにブラウザーに指示します。

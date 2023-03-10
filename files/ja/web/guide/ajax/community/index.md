@@ -1,10 +1,8 @@
 ---
 title: コミュニティ
 slug: Web/Guide/AJAX/Community
-tags:
-  - AJAX
-translation_of: Web/Guide/AJAX/Community
 ---
+
 AJAX に関する有用なメーリングリスト、ニュースグループ、フォーラム、その他のコミュニティを御存知の場合は、リンクを追加してください。
 
 ## AJAX リソース
@@ -16,4 +14,4 @@ AJAX に関する有用なメーリングリスト、ニュースグループ、
 - [community.tableau.com](https://community.tableau.com/search.jspa?q=ajax): Community support forum and courses available for Ajax
 - [codementor.io](https://www.codementor.io/community/search?q=ajax): Social platform with Ajax forums and tutorials
 - [lynda.com](https://www.lynda.com/search?q=ajax): Tutorials available for learning the fundamentals of Ajax
-- [Ajax Interview Questions and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/)[ and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/)Interwiki links
+- [Ajax Interview Questions and answer and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/) Interwiki links

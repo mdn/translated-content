@@ -1,11 +1,8 @@
 ---
 title: Forms
 slug: Web/Accessibility/ARIA/forms
-tags:
-  - ARIA
-  - 접근성
-translation_of: Web/Accessibility/ARIA/forms
 ---
+
 아래의 페이지에서는 Web Form의 접근성을 향상시키는 여러 가지 테크닉을 소개합니다.
 
 - [Basic form hints](/en/Accessibility/ARIA/Basic_form_hints): 무효 값 혹은 필수 필드에 힌트나 설명을 추가합니다.

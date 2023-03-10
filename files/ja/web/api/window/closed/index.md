@@ -2,6 +2,7 @@
 title: window.closed
 slug: Web/API/Window/closed
 ---
+
 {{ApiRef}}
 
 ## 概要

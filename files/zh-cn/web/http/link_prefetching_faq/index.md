@@ -2,6 +2,7 @@
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
 ---
+
 ### 什么是链接预取？
 
 链接预取是一种浏览器机制，其利用浏览器空闲时间来下载或预取用户在不久的将来可能访问的文档。网页向浏览器提供一组预取提示，并在浏览器完成当前页面的加载后开始静默地拉取指定的文档并将其存储在缓存中。当用户访问其中一个预取文档时，便可以快速的从浏览器缓存中得到。
@@ -14,17 +15,17 @@ slug: Web/HTTP/Link_prefetching_FAQ
 
 浏览器会查找关系类型 (rel) 为 next 或 prefetch 的 HTML{{ HTMLElement("link") }} 或 [HTTP `Link:` header](/zh-CN/docs/Web/HTTP/Headers)。下面是一个使用 link 标签的例子：
 
-```plain
+```html
 <link rel="prefetch" href="/images/big.jpeg">
 ```
 
-同样效果的使用 HTTP Link: header 的例子：
+同样效果的使用 HTTP `Link:` header 的例子：
 
 ```plain
 Link: </images/big.jpeg>; rel=prefetch
 ```
 
-Link: header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
+`Link:` header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
 
 ```plain
 <meta http-equiv="Link" content="</images/big.jpeg>; rel=prefetch">
@@ -65,7 +66,7 @@ Link: header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
 
 ### 对预取内容是否有限制？
 
-是的，只有 http\:// (从 {{ Gecko("1.9.1") }} 开始支持 https\:// ) 的 URL 可以被预取。其他协议（如 FTP）没有对客户端缓存提供足够的支持。
+是的，只有 http\:// (从 Gecko 1.9.1 开始支持 https\:// ) 的 URL 可以被预取。其他协议（如 FTP）没有对客户端缓存提供足够的支持。
 
 ### Mozilla 能够预取不同宿主的文档吗？
 
@@ -75,7 +76,7 @@ Link: header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
 
 是的，预取的请求包含一个 HTTP `Referer:` header，指示从中提取预取提示的文档。
 
-这可能会影响许多站点上常用的引荐来源跟踪。 因此，链接预取可能不适用于所有内容。 但是，可以通过指定 `Cache-control: must-revalidate` HTTP response header，指示 Mozilla 在用户遵循 href 到预提取文档时验证预提取文档。 此标头可启用缓存，但在从浏览器的缓存中提供文档之前，需要 `If-Modified-Since` 或 `If-None-Match` 验证请求。
+这可能会影响许多站点上常用的引荐来源跟踪。因此，链接预取可能不适用于所有内容。但是，可以通过指定 `Cache-control: must-revalidate` HTTP response header，指示 Mozilla 在用户遵循 href 到预提取文档时验证预提取文档。此标头可启用缓存，但在从浏览器的缓存中提供文档之前，需要 `If-Modified-Since` 或 `If-None-Match` 验证请求。
 
 ### 作为服务器管理员，我可以区分预取请求和普通请求吗？
 
@@ -85,17 +86,17 @@ Link: header 也可以通过使用 HTML meta 标签定义在 HTML 文档中：
 X-moz: prefetch
 ```
 
-Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://bugs.webkit.org/show_bug.cgi?id=46529).当然，此请求标头根本不是标准化的，并且在将来的 Mozilla 版本中可能会更改。 Chrome 使用“ X-Purpose: prefetch”或“Purpose: prefetch 的[header](https://bugs.webkit.org/show_bug.cgi?id=46529)。
+Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://bugs.webkit.org/show_bug.cgi?id=46529).当然，此请求标头根本不是标准化的，并且在将来的 Mozilla 版本中可能会更改。Chrome 使用“X-Purpose: prefetch”或“Purpose: prefetch 的[header](https://bugs.webkit.org/show_bug.cgi?id=46529)。
 
 ### 是否有禁用链接预取的首选项？
 
-是的，您可以设置一个隐藏的首选项来禁用链接预取。 将此行添加到位于配置文件目录中的 prefs.js 文件中（或通过[about:config](/about:config)进行适当的更改）：
+是的，您可以设置一个隐藏的首选项来禁用链接预取。将此行添加到位于配置文件目录中的 prefs.js 文件中（或通过[about:config](/about:config)进行适当的更改）：
 
 ```plain
 user_pref("network.prefetch-next", false);
 ```
 
-但是，从理论上讲，如果需要禁用链接预取，实现就一定会存在问题。 如果它不能正确运行，我们宁愿改进实现，也不希望用户找到并调整一些隐藏的偏好。
+但是，从理论上讲，如果需要禁用链接预取，实现就一定会存在问题。如果它不能正确运行，我们宁愿改进实现，也不希望用户找到并调整一些隐藏的偏好。
 
 ### 那些按网络流量付费的人呢？
 
@@ -103,13 +104,13 @@ Basically, there are two ways of looking at this issue: websites can already cau
 
 It is important that websites adopt `<link>` tag based prefetching instead of trying to roll-in silent downloading using various JS/DOM hacks. The `<link>` tag gives the browser the ability to know what sites are up to, and we can use this information to better prioritize document prefetching. The user preference to disable `<link>` tag prefetching may simply encourage websites to stick with JS/DOM hacks, and that would not be good for users. This is one reason why prefetching is enabled by default.
 
-基本上，有两种方法可以解决此问题：网站可以使用 JS / DOM 之类的 hacks 方式静默下载内容。 预取是浏览器功能； 用户应该能够轻松禁用它。
+基本上，有两种方法可以解决此问题：网站可以使用 JS / DOM 之类的 hacks 方式静默下载内容。预取是浏览器功能；用户应该能够轻松禁用它。
 
-网站采用基于`<link>`标记的预取非常重要，而不是尝试使用各种 JS / DOM 之类的 hacks 方式进行静默下载。 `<link>`标记使浏览器能够知道正在访问哪些站点，我们可以使用此信息更好地确定文档预取的优先级。 用户偏好禁用`<link>`标记预取可能只是鼓励网站坚持使用 JS / DOM 之类的 hacks 方式，这对用户不利。 这是默认情况下启用预取的原因之一。
+网站采用基于`<link>`标记的预取非常重要，而不是尝试使用各种 JS / DOM 之类的 hacks 方式进行静默下载。 `<link>`标记使浏览器能够知道正在访问哪些站点，我们可以使用此信息更好地确定文档预取的优先级。用户偏好禁用`<link>`标记预取可能只是鼓励网站坚持使用 JS / DOM 之类的 hacks 方式，这对用户不利。这是默认情况下启用预取的原因之一。
 
 ### 哪些浏览器支持链接预取？
 
-基于 Mozilla 1.2（或更高版本）的浏览器以及基于 Mozilla 1.0.2（或更高版本）的浏览器均支持预取。 这包括 Firefox 和 Netscape 7.01+。 截至 2003 年 3 月，Camino 构建基于 Mozilla 1.0.1，因此不支持预取。 测试您的浏览器是否支持链接预取。
+基于 Mozilla 1.2（或更高版本）的浏览器以及基于 Mozilla 1.0.2（或更高版本）的浏览器均支持预取。这包括 Firefox 和 Netscape 7.01+。截至 2003 年 3 月，Camino 构建基于 Mozilla 1.0.1，因此不支持预取。测试您的浏览器是否支持链接预取。
 
 ### 隐私问题
 

@@ -2,6 +2,7 @@
 title: 物件原型
 slug: Learn/JavaScript/Objects/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
 JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且與典型的物件導向 (OO) 程式語言相較，其運作方式有所差異。我們將透過本文說明相異之處、解釋原型鍊 (Prototype chain) 運作的方式，並了解原型屬性是如何將函式新增至現有的建構子 (Constructor) 之中。
@@ -12,12 +13,12 @@ JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且�
       <th scope="row">必備條件：</th>
       <td>
         基本的電腦素養、已初步了解 HTML 與 CSS、熟悉 JavaScript (參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/First_steps"
+          href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >First steps</a
-        >〉與〈<a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >〉以及 OOJS 基礎概念 (參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >〉。
       </td>
@@ -66,7 +67,7 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 
 ![](object-available-members.png)
 
-在此列表中，可以看到 `person1` 原型物件上所定義的成員，也就是 `Person()` 建構子 — `name`、`age`、`gender`、`interests`、`bio`、`greeting`。你也會看到其他如 `watch`、`valueOf 等，同樣也是定義在` `Person()` 建構子原型物件之上的成員，如此構成 [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)。下圖顯示原型鍊的運作方式。
+在此列表中，可以看到 `person1` 原型物件上所定義的成員，也就是 `Person()` 建構子 — `name`、`age`、`gender`、`interests`、`bio`、`greeting`。你也會看到其他如 `watch`、`valueOf` 等，同樣也是定義在 `Person()` 建構子原型物件之上的成員，如此構成 [`Object`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object)。下圖顯示原型鍊的運作方式。
 
 ![](mdn-graphics-person-person-object-2.png)
 
@@ -84,19 +85,19 @@ person1.valueOf()
 
 > **備註：** 再次重申，在原型鍊中的函式與屬性並**不是**從任一物件複製到另一個物件，而是如上述的，沿著該原型鍊向上存取而得。
 
-> **備註：** 直接存取物件的原型物件，並沒有一定的方式。原型鍊中，項目之間的「連結」均定義於內部屬性之內，即 JavaScript 規格中的 `[[prototype]]` (可參閱 {{glossary("ECMAScript")}})。新版瀏覽器均具備所謂的「[`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (兩邊都是 2 個底線)」屬性，其中就包含了物件的原型物件。舉例來說，你可嘗試「`person1.__proto__」`與「`person1.__proto__.__proto__`」看看程式碼中的鍊會是什麼樣子！
+> **備註：** 直接存取物件的原型物件，並沒有一定的方式。原型鍊中，項目之間的「連結」均定義於內部屬性之內，即 JavaScript 規格中的 `[[prototype]]` (可參閱 {{glossary("ECMAScript")}})。新版瀏覽器均具備所謂的「[`__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (兩邊都是 2 個底線)」屬性，其中就包含了物件的原型物件。舉例來說，你可嘗試「`person1.__proto__」`與「`person1.__proto__.__proto__`」看看程式碼中的鍊會是什麼樣子！
 
 ## 原型屬性也定義所要繼承的成員
 
-所以該在哪裡定義所要繼承的屬性與函式呢？若看一下 [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) 參考頁面，你就會看到左邊列出許多屬性與函式，遠超過上方擷圖所列 `person1` 物件所繼承的成員數量。有些繼承了，有些則無？為什麼呢？
+所以該在哪裡定義所要繼承的屬性與函式呢？若看一下 [`Object`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object) 參考頁面，你就會看到左邊列出許多屬性與函式，遠超過上方擷圖所列 `person1` 物件所繼承的成員數量。有些繼承了，有些則無？為什麼呢？
 
-原因在於，繼承的成員就是在 `prototype` 屬性 (你也能稱之為子命名空間 sub namespace) 中定義的成員，也就是以「` Object.prototype.」開頭的成員；並非只以「``Object.」開頭的成員。``prototype ` 屬性值就是 1 個物件，基本上儲存了許多我們想「讓原型鍊上的物件一路繼承下去」的屬性與函式。
+原因在於，繼承的成員就是在 `prototype` 屬性 (你也能稱之為子命名空間 sub namespace) 中定義的成員，也就是以「`Object.prototype`.」開頭的成員；並非只以「`Object`.」開頭的成員。`prototype` 屬性值就是 1 個物件，基本上儲存了許多我們想「讓原型鍊上的物件一路繼承下去」的屬性與函式。
 
-所以如 [`Object.prototype.watch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch)、[`Object.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 等等，均可用於繼承自 `Object()` 的任何物件類型，包含以建構子建立的新物件實例。
+所以如 [`Object.prototype.watch()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/watch)、[`Object.prototype.valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 等等，均可用於繼承自 `Object()` 的任何物件類型，包含以建構子建立的新物件實例。
 
-[`Object.is()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is)、[`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)，及其他未於 `prototype` 內定義的成員，也就不會繼承至 1). 物件實例或 2). 從 `Object() 繼承而來的物件類型。`這些函式＼屬性都只能用於 `Object()` 建構子本身。
+[`Object.is()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is)、[`Object.keys()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)，及其他未於 `prototype` 內定義的成員，也就不會繼承至 1). 物件實例或 2). 從 `Object()` 繼承而來的物件類型。這些函式、屬性都只能用於 `Object()` 建構子本身。
 
-> **備註：** 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) 建構子參考以進一步了解。
+> **備註：** 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 [`Function()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function) 建構子參考以進一步了解。
 
 1. 你可自行檢查現有的原型屬性。回到我們之前的範例，試著於 JavaScript 主控台中輸入：
 
@@ -112,19 +113,19 @@ person1.valueOf()
 
 這樣就會看到 `Object` 的 `prototype` 屬性中所定義的許多函式，而繼承自 `Object` 的物件也能找到這些函式。
 
-只要試著尋找如 [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)、[`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)、[`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)、[`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 等全域物件的原型上定義的函式與屬性，就會看到 JavaScript 中的其他原型鍊繼承範例。這些物件都在其原型上定義了多個成員，因此可作為你建立字串時的範例：
+只要試著尋找如 [`String`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)、[`Date`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date)、[`Number`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number)、[`Array`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array) 等全域物件的原型上定義的函式與屬性，就會看到 JavaScript 中的其他原型鍊繼承範例。這些物件都在其原型上定義了多個成員，因此可作為你建立字串時的範例：
 
 ```js
 var myString = 'This is my string.';
 ```
 
-`myString` 上立刻就有多個有用的函式，如 [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)、[`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)、[`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 等。
+`myString` 上立刻就有多個有用的函式，如 [`split()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/split)、[`indexOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)、[`replace()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 等。
 
 > **警告：** `prototype` 這個屬性，是 JavaScript 中最讓人混淆的名稱之一。你可能會認為`this`屬性即指目前物件(current object)的原型物件(prototype object)，但它其實不是原型 (應該是可透過 `__proto__` 存取的內部物件(internal object)才對，記得上面說過的嗎？)。`prototype`是一個物件(object)，內含了你定義所應該繼承的成員。
 
 ## 再次溫習 create()
 
-我們先前講過用 [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 函式建立新物件實例的方法。
+我們先前講過用 [`Object.create()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 函式建立新物件實例的方法。
 
 1. 舉例來說，你可先在前面的 JavaScript 主控台範例中試著輸入：
 
@@ -142,7 +143,7 @@ var myString = 'This is my string.';
 
 ## 建構子的屬性
 
-每個物件實例都具備 1 個[`建構子`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)屬性，指向「用以建立實例」的原始建構子函式。
+每個物件實例都具備 1 個[`建構子`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)屬性，指向「用以建立實例」的原始建構子函式。
 
 1. 舉例來說，若在主控台中輸入下列指令：
 
@@ -171,7 +172,7 @@ var myString = 'This is my string.';
 
 這樣運作得還不差。你不需常常用這方法，但當你要建立新的實例，又因為某些原因找不到原始建構子的參照，這就特別有用了。
 
-此外，[`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 屬性還有其他用處。舉例來說，如果你有個物件實例，並要回傳建構子 (本身就是實例) 的名稱，就透過：
+此外，[`constructor`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 屬性還有其他用處。舉例來說，如果你有個物件實例，並要回傳建構子 (本身就是實例) 的名稱，就透過：
 
 ```js
 instanceName.constructor.name

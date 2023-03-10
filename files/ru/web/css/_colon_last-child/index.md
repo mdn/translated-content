@@ -3,6 +3,7 @@ title: ':last-child'
 slug: Web/CSS/:last-child
 translation_of: Web/CSS/:last-child
 ---
+
 {{CSSRef}}
 
 ## Описание
@@ -11,7 +12,9 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:last-child` на
 
 ## Синтаксис
 
-    element:last-child { style properties }
+```
+element:last-child { style properties }
+```
 
 ## Пример
 

@@ -1,16 +1,8 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - SVG
-  - SVG フィルター
-  - recipe:css-property
-browser-compat: css.properties.filter
-translation_of: Web/CSS/filter
 ---
+
 {{CSSRef}}
 
 **`filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ぼかしや色変化などのグラフィック効果を要素に適用します。フィルターは画像、背景、境界の描画を調整するためによく使われます。

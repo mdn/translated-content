@@ -1,30 +1,9 @@
 ---
 title: HTML で使われる日付や時刻の形式
 slug: Web/HTML/Date_and_time_formats
-tags:
-  - Date
-  - Element
-  - Format
-  - HTML
-  - ISO 8601
-  - Input
-  - Reference
-  - String
-  - Time
-  - Week
-  - datetime
-  - datetime-local
-  - del
-  - ins
-  - month
-  - month-year
-  - week-year
-  - 日付
-  - 時刻
-  - 週
-translation_of: Web/HTML/Date_and_time_formats
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 一部の HTML 要素は日付や時刻の値を使用します。この記事ではこれらの値を指定する文字列の形式について説明しています。このような形式を使用する要素には、ユーザーに日付、時刻、またはその両方を選択または指定させる {{HTMLElement("input")}} 要素の一部の形、同様に {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素で、 {{htmlattrxref("datetime", "ins")}} 属性によって内容の挿入または削除が行われた日付や日時を指定しているものなどがあります。
 
@@ -124,11 +103,11 @@ translation_of: Web/HTML/Date_and_time_formats
 
 ## 基本
 
-HTML 要素で使用される文字列に関する日付や時刻のさまざまな形式を見てみる前に、これらの定義方法についての基本的な事実をいくつか理解してしておくと役に立ちます。 HTML では、日付や時刻の文字列に {{interwiki("wikipedia", "ISO 8601")}} 標準の一種を使用します。 HTML 仕様書には、実際に ISO 8601 よりも詳細に文字列を解析するアルゴリズムが含まれており、日付と時刻の外見について微妙な違いがある可能性があるので、文字列が実際に HTML と互換性があることを確認するためには、使用している形式の説明を確認する価値があります。
+HTML 要素で使用される文字列に関する日付や時刻のさまざまな形式を見てみる前に、これらの定義方法についての基本的な事実をいくつか理解してしておくと役に立ちます。 HTML では、日付や時刻の文字列に [ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) 標準の一種を使用します。 HTML 仕様書には、実際に ISO 8601 よりも詳細に文字列を解析するアルゴリズムが含まれており、日付と時刻の外見について微妙な違いがある可能性があるので、文字列が実際に HTML と互換性があることを確認するためには、使用している形式の説明を確認する価値があります。
 
 ### 文字セット
 
-HTML において、日付と時刻は常に {{interwiki("wikipedia", "ASCII")}} 文字セットを使用した文字列です。
+HTML において、日付と時刻は常に [ASCII](https://ja.wikipedia.org/wiki/ASCII) 文字セットを使用した文字列です。
 
 ### 年
 
@@ -142,7 +121,7 @@ HTML の日付の目的上、年は常に 4 桁以上の長さになります。
 
 #### 閏年
 
-**閏年**は 400 で割れる年、\_または\_4 で割れる年で 100 で割れない年です。暦年の長さは通常 365 日ですが、実際には地球が太陽の周りを一周するのにおよそ 365.2422 日かかります。閏年は、惑星の軌道上の実際の位置に合わせてカレンダーを調整するのに役立ちます。4 年ごとに 1 日を加えると、平均的な 1 年の長さは 365.25 日になり、これはほぼ正確に近くなります。
+**閏年**は 400 で割れる年、または 4 で割れる年で 100 で割れない年です。暦年の長さは通常 365 日ですが、実際には地球が太陽の周りを一周するのにおよそ 365.2422 日かかります。閏年は、惑星の軌道上の実際の位置に合わせてカレンダーを調整するのに役立ちます。4 年ごとに 1 日を加えると、平均的な 1 年の長さは 365.25 日になり、これはほぼ正確に近くなります。
 
 アルゴリズムの調整 (年を 400 で割ることができる場合は閏年とし、年を 100 で割ることができる場合はうるう年としない) は、平均をさらに正しい日数 (365.2425 日) に近づけるのに役立ちます。科学者たちは、残りの 1 万分の 3 日を処理し、地球の自転が自然に徐々に遅くなるのを補うために、閏秒をカレンダーに追加することがあります (真面目な話)。
 
@@ -253,13 +232,13 @@ When you set the {{htmlattrxref("value", "input")}} of a `datetime-local` input,
 | `1986-01-28 11:38:00.010` | `1986-01-28T11:38:00.01`[1](#datetime-local-footnote1) | January 28, 1986 at 11:38:00.01 AM |
 | `0170-07-31T22:00:00`     | `0170-07-31T22:00`[2](#datetime-local-footnote2)       | July 31, 170 at 10:00 PM           |
 
-1.  Notice that&#x20;
+1. Notice that&#x20;
 
     after normalization
 
     , this is the same string as the previous `datetime-local` string. The space has been replaced with the "`T`" character and the trailing zero in the fraction of a second has been removed to make the string as short as possible.
 
-2.  Note that the&#x20;
+2. Note that the&#x20;
 
     normalized form
 
@@ -273,15 +252,15 @@ A global date and time string specifies a date and time as well as the time zone
 
 A time zone offset string specifies the offset in either a positive or a negative number of hours and minutes from the standard time base. There are two standard time bases, which are very close to the same, but not exactly the same:
 
-- For dates after the establishment of {{interwiki("wikipedia", "Coordinated Universal Time")}} (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
-- For dates prior to UTC, the time base is instead expressed in terms of {{interwiki("wikipedia", "UT1")}}, which is the contemporary Earth solar time at the prime meridian.
+- For dates after the establishment of [Coordinated Universal Time](https://ja.wikipedia.org/wiki/Coordinated_Universal_Time) (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
+- For dates prior to UTC, the time base is instead expressed in terms of [UT1](https://ja.wikipedia.org/wiki/UT1), which is the contemporary Earth solar time at the prime meridian.
 
 The time zone string is appended immediately following the time in the date and time string. You can specify simply "`Z`" as the time zone offset string to indicate that the time is specified in UTC. Otherwise, the time zone string is constructed as follows:
 
-1.  A character indicating the sign of the offset: the plus character ("`+`", or U+002B) for time zones to the east of the prime meridian or the minus character ("`-`", or U+002D) for time zones to the west of the prime meridian.
-2.  A two-digit number of hours that the time zone is offset from the prime meridian. This value must be between `00` and `23`.
-3.  An optional colon ("`:`") character.
-4.  A two-digit number of minutes past the hour; this value must be between `00` and `59`.
+1. A character indicating the sign of the offset: the plus character ("`+`", or U+002B) for time zones to the east of the prime meridian or the minus character ("`-`", or U+002D) for time zones to the west of the prime meridian.
+2. A two-digit number of hours that the time zone is offset from the prime meridian. This value must be between `00` and `23`.
+3. An optional colon ("`:`") character.
+4. A two-digit number of minutes past the hour; this value must be between `00` and `59`.
 
 While this format allows for time zones between -23:59 and +23:59, the current range of time zone offsets is -12:00 to +14:00, and no time zones are currently offset from the hour by anything other than `00`, `30`, or `45` minutes. This may change at more or less anytime, since countries are free to tamper with their time zones at any time and in any way they wish to do so.
 

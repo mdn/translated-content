@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibilité
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Tournons maintenant notre attention vers l'accessibilité, les informations sur les problèmes communs, comment faire des tests simples, et comment faire pour utiliser les outils d'audit/automatisation pour trouver les problèmes d'accessibilités.

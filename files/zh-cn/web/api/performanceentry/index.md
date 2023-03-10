@@ -2,9 +2,10 @@
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
 ---
+
 {{APIRef("Performance Timeline API")}}
 
-**`PerformanceEntry`** 对象代表了 performance 时间列表中的单个 metric 数据。每一个 _performance entry 都可以在应用运行过程中通过手动构建_ _{{domxref("PerformanceMark","mark")}}_ 或者 _{{domxref("PerformanceMeasure","measure")}}_ (例如调用 {{domxref("Performance.mark","mark()")}} 方法) 生成。此外， Performance entries 在资源加载的时候，也会被动生成（例如图片、script、css 等资源加载）
+**`PerformanceEntry`** 对象代表了 performance 时间列表中的单个 metric 数据。每一个 _performance entry 都可以在应用运行过程中通过手动构建_ _{{domxref("PerformanceMark","mark")}}_ 或者 _{{domxref("PerformanceMeasure","measure")}}_ (例如调用 {{domxref("Performance.mark","mark()")}} 方法) 生成。此外，Performance entries 在资源加载的时候，也会被动生成（例如图片、script、css 等资源加载）
 
 Note: Performance 对象暴露给了 {{domxref("Window")}} 和 {{domxref("Worker")}}. 同时该对象扩展了几个其他对象的属性，包括 {{domxref("PerformanceMark")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceFrameTiming")}}, {{domxref("PerformanceNavigationTiming")}} 以及 {{domxref("PerformanceResourceTiming")}}.
 
@@ -62,4 +63,4 @@ function print_PerformanceEntry(perfEntry) {
 
 ## Browser compatibility
 
-{{Compat("api.PerformanceEntry")}}
+{{Compat}}

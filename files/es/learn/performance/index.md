@@ -1,8 +1,8 @@
 ---
 title: Rendimiento web
 slug: Learn/Performance
-translation_of: Learn/Performance
 ---
+
 {{LearnSidebar}}
 
 La construcción de sitios web requiere HTML, CSS y JavaScript. Para crear sitios web y aplicaciones que la gente quiera usar, que atraigan y retengan a los usuarios, debe crear una buena experiencia de usuario. Parte de la buena experiencia del usuario es garantizar que el contenido se cargue rápidamente y responda a la interacción del usuario. Esto se conoce como rendimiento web, y en este módulo aprenderá todo lo que necesita para crear sitios web de rendimiento.
@@ -17,11 +17,11 @@ Existen herramientas, API y mejores prácticas que nos ayudan a medir y mejorar 
 
 Si bien es necesario conocer HTML, CSS y JavaScript para implementar muchas recomendaciones de mejora del rendimiento web, saber cómo crear aplicaciones no es una condición previa necesaria para comprender y medir el rendimiento web.
 
-Varios de los módulos introductorios a continuación no requieren conocimientos de programación, aunque se necesita una comprensión de HTML para el módulo de rendimiento y HTML, se necesita una comprensión de CSS para el módulo de rendimiento y CSS, etc. Recomendamos que trabaje con nuestros módulos introductorios. primero, comenzando con [qué es el rendimiento web ](/es/docs/Learn/Performance/What_is_Performance)primero. Los módulos introductorios proporcionan una visión general del rendimiento web. Los tres primeros deben considerarse como lectura obligatoria si usted es un desarrollador o gerente de proyectos. Los módulos enfocados en temas de tecnología son más apropiados para los desarrolladores que utilizan estas tecnologías.
+Varios de los módulos introductorios a continuación no requieren conocimientos de programación, aunque se necesita una comprensión de HTML para el módulo de rendimiento y HTML, se necesita una comprensión de CSS para el módulo de rendimiento y CSS, etc. Recomendamos que trabaje con nuestros módulos introductorios. primero, comenzando con [qué es el rendimiento web](/es/docs/Learn/Performance/What_is_Performance)primero. Los módulos introductorios proporcionan una visión general del rendimiento web. Los tres primeros deben considerarse como lectura obligatoria si usted es un desarrollador o gerente de proyectos. Los módulos enfocados en temas de tecnología son más apropiados para los desarrolladores que utilizan estas tecnologías.
 
 Los módulos avanzados profundizan en los temas que se resumen en los módulos introductorios y proporcionan una visión general de las API de rendimiento, las herramientas de análisis y prueba y los problemas de cuellos de botella en el rendimiento.
 
-Se recomienda que trabajes a través de [Empezando con la web ](/es/docs/Learn/Getting_started_with_the_web)antes de proceder con este tema. Sin embargo, hacerlo no es absolutamente necesario.
+Se recomienda que trabajes a través de [Empezando con la web](/es/docs/Learn/Getting_started_with_the_web) antes de proceder con este tema. Sin embargo, hacerlo no es absolutamente necesario.
 
 ## Modulos de introducción
 
@@ -46,7 +46,7 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 - [Mejores prácticas de rendimiento en JavaScript](/es/docs/Learn/Performance/JavaScript)
   - : JavaScript, cuando se usa correctamente, puede permitir experiencias web interactivas e inmersivas, o puede dañar significativamente el tiempo de descarga, el tiempo de procesamiento, el rendimiento dentro de la aplicación, la duración de la batería y la experiencia del usuario. Este artículo describe algunas de las mejores prácticas de JavaScript que deben tenerse en cuenta para garantizar que incluso el contenido complejo tenga el mayor rendimiento posible.
 - Rendimiento de fuentes web
-  - : Un aspecto que a menudo se pasa por alto en el panorama del rendimiento son las fuentes web. Las fuentes web son más prominentes que nunca en el diseño web, sin embargo, muchos desarrolladores simplemente las incorporan desde un servicio de terceros y no piensan en ello. En este artículo, cubriremos métodos para obtener sus archivos de fuentes lo más pequeños posible con una configuración y sub configuración de archivos eficientes. A partir de ahí, continuaremos hablando sobre cómo los navegadores envían mensajes de texto y cómo puede usar las funciones de CSS y JavaScript para garantizar que sus fuentes se representen rápidamente y con una interrupción mínima de la experiencia del usuario. 
+  - : Un aspecto que a menudo se pasa por alto en el panorama del rendimiento son las fuentes web. Las fuentes web son más prominentes que nunca en el diseño web, sin embargo, muchos desarrolladores simplemente las incorporan desde un servicio de terceros y no piensan en ello. En este artículo, cubriremos métodos para obtener sus archivos de fuentes lo más pequeños posible con una configuración y sub configuración de archivos eficientes. A partir de ahí, continuaremos hablando sobre cómo los navegadores envían mensajes de texto y cómo puede usar las funciones de CSS y JavaScript para garantizar que sus fuentes se representen rápidamente y con una interrupción mínima de la experiencia del usuario.
 
 - [Rendimiento móvil](/es/docs/Learn/Performance/Mobile)
   - : Dado que el acceso a la web en dispositivos móviles es tan popular, y que todas las plataformas móviles tienen navegadores web completos, pero es posible que el ancho de banda, la CPU y la vida útil de la batería sean limitados, es importante considerar el rendimiento de su contenido web en estas plataformas. Este artículo analiza las consideraciones de rendimiento específicas para dispositivos móviles.
@@ -66,20 +66,19 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 - [Perfilando con el perfilador incorporado](/es/docs/Performance/Profiling_with_the_Built-in_Profiler)
   - : Aprenda cómo perfilar el rendimiento de la aplicación con el generador de perfiles integrado de Firefox.
 - Gráficos de rendimiento de lectura
-  - : Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer [tablas de cascada](/es/docs/Tools/Performance/Waterfall), [árboles de llamadas, ](/es/docs/Tools/Performance/Call_Tree)Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer, [tablas de llamas](/es/docs/Tools/Performance/Flame_Chart), y [localizaciones](/es/docs/Tools/Performance/Allocations) en su navegador, las herramientas de desarrollo lo ayudarán a comprender los gráficos de cascada y llama en otras herramientas de rendimiento.
-- [Rendimiento de animaciones en CSS y JavaScript](/en-US/Apps/Build/Performance/CSS_JavaScript_animation_performance)
+  - : Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer [tablas de cascada](/es/docs/Tools/Performance/Waterfall), [árboles de llamadas,](/es/docs/Tools/Performance/Call_Tree)Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer, [tablas de llamas](/es/docs/Tools/Performance/Flame_Chart), y [localizaciones](/es/docs/Tools/Performance/Allocations) en su navegador, las herramientas de desarrollo lo ayudarán a comprender los gráficos de cascada y llama en otras herramientas de rendimiento.
+- [Rendimiento de animaciones en CSS y JavaScript](/es/Apps/Build/Performance/CSS_JavaScript_animation_performance)
   - : Las animaciones son críticas para una experiencia de usuario placentera. Este artículo analiza las diferencias de rendimiento entre CSS y animaciones basadas en JavaScript.
 - Analizando paquetes de JavaScript
   - : Sin duda, JavaScript es una gran parte del desarrollo web moderno. Si bien siempre debe esforzarse por reducir la cantidad de JavaScript que utiliza en sus aplicaciones, puede ser difícil saber dónde comenzar. En esta guía, le mostraremos cómo analizar los paquetes de scripts de su aplicación, para que sepa qué está utilizando y cómo detectar si hay scripts duplicados entre paquetes en su aplicación.
 - Lazy-loading JavaScript con importaciones dinámicas
-  - : Cuando los desarrolladores escuchan el término "carga perezosa", inmediatamente piensan en imágenes que se cargan por la mitad inferior de la página cuando se desplaza hacia la ventana gráfica. ¿Pero sabías que también puedes cargar JavaScript de forma perezosa? En esta guía hablaremos sobre la declaración dinámica de importación (), que es una característica de los navegadores modernos que carga un módulo de JavaScript a pedido. Por supuesto, ya que esta función no está disponible en todas partes, también le mostraremos cómo puede configurar sus herramientas para usar esta función de una manera ampliamente compatible. 
-
+  - : Cuando los desarrolladores escuchan el término "carga perezosa", inmediatamente piensan en imágenes que se cargan por la mitad inferior de la página cuando se desplaza hacia la ventana gráfica. ¿Pero sabías que también puedes cargar JavaScript de forma perezosa? En esta guía hablaremos sobre la declaración dinámica de importación (), que es una característica de los navegadores modernos que carga un módulo de JavaScript a pedido. Por supuesto, ya que esta función no está disponible en todas partes, también le mostraremos cómo puede configurar sus herramientas para usar esta función de una manera ampliamente compatible.
 - Controlar la entrega de recursos con sugerencias de recursos
   - : Los navegadores a menudo saben mejor que nosotros cuando se trata de la priorización y la entrega de recursos, pero están lejos de ser clarividentes. Las características nativas del navegador nos permiten sugerirle al navegador cuándo debe conectarse a otro servidor, o precargar un recurso antes de que el navegador sepa que lo necesita. Cuando se usa juiciosamente, esto puede hacer que la experiencia rápida parezca aún más rápida. En este artículo, cubrimos las características nativas del navegador como rel = preconnect, rel = dns-prefetch, rel = prefetch, y rel = precarga, y cómo usarlas para su ventaja.
 
 ## Ver también
 
 - [Mobile performance checklist](/es/docs/Web/Performance/Mobile_performance_checklist)
-- [Optimizing Startup Performance](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)[](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
+- [Optimizing Startup Performance](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
 
 {{LandingPageListSubpages}}

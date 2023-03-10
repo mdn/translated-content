@@ -1,17 +1,8 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - Parsing
-  - Property
-  - Reference
-  - Serializing
-translation_of: Web/API/Element/outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 `outerHTML` 속성은 요소(element)의 자식 요소를 포함하여 요소를 나타내는 직렬화된 HTML 파편을 가져옵니다. 또한 주어진 문자열에서 파싱한 노드로 요소를 대체할 수 있습니다.

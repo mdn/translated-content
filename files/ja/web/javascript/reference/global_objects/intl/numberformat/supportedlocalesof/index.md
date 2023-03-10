@@ -1,13 +1,8 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - NumberFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含む配列を返します。
@@ -54,9 +49,7 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.supportedlocalesof', 'Intl.NumberFormat.supportedLocalesOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

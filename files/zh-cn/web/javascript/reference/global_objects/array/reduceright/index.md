@@ -1,7 +1,8 @@
 ---
 title: Array.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
+
 {{JSRef}}
 
 **`reduceRight()`** 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。
@@ -12,8 +13,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 ## 语法
 
-```plain
-arr.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue])
+```js
+// 箭头函数
+reduceRight((accumulator, currentValue) => { /* … */ } )
+reduceRight((accumulator, currentValue, index) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
+
+// 回调函数
+reduceRight(callbackFn)
+reduceRight(callbackFn, initialValue)
+
+// 内联回调函数
+reduceRight(function(accumulator, currentValue) { /* … */ })
+reduceRight(function(accumulator, currentValue, index) { /* … */ })
+reduceRight(function(accumulator, currentValue, index, array){ /* … */ })
+reduceRight(function(accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### 参数
@@ -294,6 +309,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reduce()")}}

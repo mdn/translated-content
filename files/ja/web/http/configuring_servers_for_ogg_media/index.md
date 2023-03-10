@@ -1,13 +1,8 @@
 ---
 title: Ogg メディア用のサーバーの設定
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
-tags:
-  - Audio
-  - Media
-  - Ogg
-  - Video
-translation_of: Web/HTTP/Configuring_servers_for_Ogg_media
 ---
+
 {{HTTPSidebar}}
 
 HTML {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を使用すると、ユーザーはプラグインやその他のソフトウェアをインストールする必要なくメディアを表示できます。サーバーが Ogg メディアを正しく配信するためには、いくつか設定が必要な場合があります。
@@ -42,7 +37,7 @@ When Gecko seeks through Ogg media to a specified time, it has to seek to the ne
 
 By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
 
-> **Note:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
+> **メモ:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
 
 ## preload 属性の使用を検討する
 
@@ -54,7 +49,7 @@ The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide 
 
 ### Serve X-Content-Duration headers
 
-> **Note:** As of [Firefox 41](/ja/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See {{Bug(1160695)}} for more details.
+> **メモ:** As of [Firefox 41](/ja/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See {{Bug(1160695)}} for more details.
 
 The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
 
@@ -76,7 +71,7 @@ One common way to reduce the load on a web server is to use [gzip or deflate com
 
 Also, Apache servers don't send the Content-Length response header if gzip encoding is used.
 
-> **Note:** Starting in {{Gecko("2.0") }}, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.
+> **メモ:** Starting in Gecko 2.0, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.
 
 ### Getting the duration of Ogg media
 

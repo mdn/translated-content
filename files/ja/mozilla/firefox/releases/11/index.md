@@ -2,6 +2,7 @@
 title: Firefox 11 for developers
 slug: Mozilla/Firefox/Releases/11
 ---
+
 Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました。この記事は Web 開発者とアドオン開発者向けに、今回のリリースにおける新機能と修正された重要なバグについての情報とより詳細なドキュメントへのリンクをまとめています。
 
 ## Web 開発者向けの変更点一覧

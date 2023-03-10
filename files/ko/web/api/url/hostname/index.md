@@ -1,24 +1,19 @@
 ---
 title: URL.hostname
 slug: Web/API/URL/hostname
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/hostname
 ---
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의** `hostname`** 속성은 URL의 {{glossary("domain name", "도메인 이름")}}을 담은 {{domxref("USVString")}}을 반환합니다.
+{{domxref("URL")}} 인터페이스의 **`hostname`** 속성은 URL의 {{glossary("domain name", "도메인 이름")}}을 담은 {{domxref("USVString")}}을 반환합니다.
 
 {{AvailableInWorkers}}
 
 ## 구문
 
-    const domain = url.hostname
-    url.hostname = domain
+```js
+const domain = url.hostname
+url.hostname = domain
+```
 
 ### 값
 

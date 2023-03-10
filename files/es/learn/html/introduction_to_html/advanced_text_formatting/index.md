@@ -1,24 +1,12 @@
 ---
 title: Formateo de texto avanzado
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-tags:
-  - CodingScripting
-  - Guía
-  - HTML
-  - Lista de descripción
-  - Novato
-  - Principiante
-  - Texto
-  - abreviatura
-  - aprende
-  - cita
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 original_slug: Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-Hay muchos otros elementos en HTML para dar formato al texto, que no expusimos en el artículo {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Fundamentos de texto HTML")}}. Los elementos descritos en este artículo son menos conocidos, pero aún así es muy útil conocerlos (no obstante, no es una lista completa de ninguna manera). Aquí aprenderás cómo marcar citas, listas de descripción, código de computadora y otro texto relacionado, subíndices y superíndices, información de contacto y mucho más.
+Hay muchos otros elementos en HTML para dar formato al texto, que no expusimos en el artículo [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Los elementos descritos en este artículo son menos conocidos, pero aún así es muy útil conocerlos (no obstante, no es una lista completa de ninguna manera). Aquí aprenderás cómo marcar citas, listas de descripción, código de computadora y otro texto relacionado, subíndices y superíndices, información de contacto y mucho más.
 
 <table>
   <tbody>
@@ -26,10 +14,10 @@ Hay muchos otros elementos en HTML para dar formato al texto, que no expusimos e
       <th scope="row">Prerrequisitos:</th>
       <td>
         Estar familiarizado con HTML, cubierto en
-        {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started", "Empezar con HTML")}}.
+        [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started).
         Aplicación de formato a texto en documentos HTML, según lo expuesto en
         la sección
-        {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Fundamentos de texto HTML")}}.
+        [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals).
       </td>
     </tr>
     <tr>
@@ -44,7 +32,7 @@ Hay muchos otros elementos en HTML para dar formato al texto, que no expusimos e
 
 ## Listas de descripciones
 
-En los fundamentos del texto HTML, explicamos cómo {{web.link("/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists", "marcar listas básicas")}} en HTML, pero no mencionamos el tercer tipo de lista con la que te encontrarás ocasionalmente: **listas de descripción**. El propósito de estas listas es marcar un conjunto de elementos y sus descripciones asociadas, como términos y definiciones, o preguntas y respuestas. Veamos un ejemplo de un conjunto de términos y definiciones:
+En los fundamentos del texto HTML, explicamos cómo [marcar listas básicas](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) en HTML, pero no mencionamos el tercer tipo de lista con la que te encontrarás ocasionalmente: **listas de descripción**. El propósito de estas listas es marcar un conjunto de elementos y sus descripciones asociadas, como términos y definiciones, o preguntas y respuestas. Veamos un ejemplo de un conjunto de términos y definiciones:
 
 ```bash
 soliloquio
@@ -60,11 +48,23 @@ Las listas de descripción utilizan un contenedor diferente al de los otros tipo
 ```html
 <dl>
   <dt>soliloquio</dt>
-  <dd>En las obras dramáticas, corresponde a cuando un personaje se habla a sí mismo para representar sus pensamientos o sentimientos internos y, en el proceso, transmitirlos a la audiencia (pero no a otros personajes).</dd>
+  <dd>
+    En las obras dramáticas, corresponde a cuando un personaje se habla a sí
+    mismo para representar sus pensamientos o sentimientos internos y, en el
+    proceso, transmitirlos a la audiencia (pero no a otros personajes).
+  </dd>
   <dt>monólogo</dt>
-  <dd>En las obras dramáticas, corresponde a cuando un personaje habla de sus pensamientos en voz alta para compartirlos con el público y cualquier otro personaje presente.</dd>
+  <dd>
+    En las obras dramáticas, corresponde a cuando un personaje habla de sus
+    pensamientos en voz alta para compartirlos con el público y cualquier otro
+    personaje presente.
+  </dd>
   <dt>aparte</dt>
-  <dd>En las obras dramáticas, corresponde a cuando un personaje comparte un comentario solo con la audiencia para dar efecto cómico o dramático. Suele ser un sentimiento, un pensamiento o información adicional.</dd>
+  <dd>
+    En las obras dramáticas, corresponde a cuando un personaje comparte un
+    comentario solo con la audiencia para dar efecto cómico o dramático. Suele
+    ser un sentimiento, un pensamiento o información adicional.
+  </dd>
 </dl>
 ```
 
@@ -72,15 +72,24 @@ Los estilos predeterminados del navegador mostrarán listas de descripciones con
 
 {{ EmbedLiveSample('listas-de-descripciones-ejemplo-activo-1', '100%', '285px', '', '', 'hide-codepen-jsfiddle') }}
 
-#
+## Ejemplo
 
 Ten en cuenta que un solo término puede tener múltiples descripciones, por ejemplo:
 
 ```html
 <dl>
   <dt>aparte</dt>
-  <dd>En las obras dramáticas, corresponde a cuando un personaje comparte un comentario solo con la audiencia para dar efecto cómico o dramático. Suele ser un sentimiento, un pensamiento o información adicional.</dd>
-  <dd>Si la obra es impresa, es una sección de contenido que se relaciona con el tema, pero no encaja directamente en el flujo principal de contenido, de modo que se presenta por separado (a menudo en una caja de texto en el margen).</dd>
+  <dd>
+    En las obras dramáticas, corresponde a cuando un personaje comparte un
+    comentario solo con la audiencia para dar efecto cómico o dramático. Suele
+    ser un sentimiento, un pensamiento o información adicional.
+  </dd>
+  <dd>
+    Si la obra es impresa, es una sección de contenido que se relaciona con el
+    tema, pero no encaja directamente en el flujo principal de contenido, de
+    modo que se presenta por separado (a menudo en una caja de texto en el
+    margen).
+  </dd>
 </dl>
 ```
 
@@ -95,11 +104,13 @@ Si cometes un error, siempre puedes restablecer el código anterior pulsando el 
 ```html hidden
 <h2>Salida en vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editable</h2>
-<p class="a11y-label">Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de tabulación).</p>
+<p class="a11y-label">
+  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
+  tabulación).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 Tocino
@@ -108,113 +119,118 @@ Huevos
 El pegamento que une el pastel.
 Café
 La bebida que hace que el mundo funcione por la mañana.
-Un color marrón claro.</textarea>
+Un color marrón claro.</textarea
+>
 
 <div class="playable-buttons">
-<input id="reset" type="button" value="Restablecer">
-<input id="solution" type="button" value="Mostrar solución">
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
 ```css hidden
 html {
-font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 const userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Mostrar solución';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Mostrar solución";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Mostrar solución') {
-textarea.value = solutionEntry;
-solution.value = 'Ocultar solución';
-} else {
-textarea.value = userEntry;
-solution.value = 'Mostrar solución';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solución") {
+    textarea.value = solutionEntry;
+    solution.value = "Ocultar solución";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Mostrar solución";
+  }
+  updateCode();
 });
 
-const htmlSolution = '<dl>\n <dt>Tocino</dt>\n <dd>El pegamento que une al mundo.</dd>\n <dt>Huevos</dt>\n <dd>El pegamento que une el pastel.</dd>\n <dt>Café</dt>\n <dd>La bebida que hace que el mundo funcione por la mañana.</dd>\n <dd>Un color marrón claro.</dd>\n</dl>';
+const htmlSolution =
+  "<dl>\n <dt>Tocino</dt>\n <dd>El pegamento que une al mundo.</dd>\n <dt>Huevos</dt>\n <dd>El pegamento que une el pastel.</dd>\n <dt>Café</dt>\n <dd>La bebida que hace que el mundo funcione por la mañana.</dd>\n <dd>Un color marrón claro.</dd>\n</dl>";
 const solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // captura la tecla de tabulación en el área de texto y en su lugar
 // hace que se escriba una tabulación en la posición del cursor
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-const scrollPos = textarea.scrollTop;
-const caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  const caretPos = textarea.selectionStart;
 
-const front = (textarea.value).substring(0, caretPos);
-const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
 
-textarea.onkeyup = function(){
-// Solo queremos guardar el estado cuando se muestra el código de usuario,
-// no es la solución, por lo que la solución no se guarda sobre el código del usuario
-if(solution.value === 'Mostrar solución') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
+  if (solution.value === "Mostrar solución") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 
@@ -224,24 +240,32 @@ updateCode();
 
 HTML también dispone de elementos para el marcado de citas; cual elemento utilices depende de si estás marcando la cita como un bloque o como un elemento en línea.
 
-### Cita en bloque independiente (_blockquote_)
+### Cita en bloque independiente (blockquote)
 
 Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo {{HTMLAttrxRef("cite", "blockquote")}}. Por ejemplo, el siguiente marcado tomado de la página del elemento `<blockquote>` de MDN:
 
 ```html
-<p>El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o <em>elemento HTML de cita
-en bloque independiente</em>) indica que el texto al que delimita es una cita ampliada.</p>
+<p>
+  El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
+  <em>elemento HTML de cita en bloque independiente</em>) indica que el texto al
+  que delimita es una cita ampliada.
+</p>
 ```
 
-##
+## Ejemplo
 
 Para convertir esto en una cita en bloque independiente, simplemente harías lo siguiente:
 
 ```html
 <p>A continuación se muestra una cita en bloque independiente...</p>
-<blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
-  <p>El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o <em>elemento HTML de cita
-  en bloque independiente</em>) indica que el texto al que delimita es una cita ampliada.</p>
+<blockquote
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
+>
+  <p>
+    El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
+    <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
+    al que delimita es una cita ampliada.
+  </p>
 </blockquote>
 ```
 
@@ -254,8 +278,12 @@ El estilo predeterminado del navegador lo mostrará como un párrafo con sangrí
 Las citas en línea funcionan exactamente de la misma manera, excepto que usan el elemento {{HTMLElement("q")}}. Por ejemplo, el siguiente fragmento de marcado contiene una cita `<q>` de la página MDN:
 
 ```html
-<p>El elemento de cita — <code>&lt;q&gt;</code> — se <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">utiliza en
-para citas breves que no requieren saltos de párrafo.</q></p>
+<p>
+  El elemento de cita — <code>&lt;q&gt;</code> — se
+  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+    >utiliza en para citas breves que no requieren saltos de párrafo.</q
+  >
+</p>
 ```
 
 El estilo predeterminado del navegador lo representará como texto normal entre comillas para indicar una cita, así:
@@ -269,18 +297,33 @@ El contenido del atributo {{HTMLAttrxRef("cite", "blockquote")}} suena útil, pe
 Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el título del recurso que se cita, p. ej. el nombre del libro. Sin embargo, no hay razón por la que no puedas vincular el texto dentro de `<cite>` a la fuente de la cita de alguna manera:
 
 ```html
-<p>De acuerdo con <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
-<cite>página de citas en bloque independiente de MDN</cite></a>:
+<p>
+  De acuerdo con
+  <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+    <cite>página de citas en bloque independiente de MDN</cite></a
+  >:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
-  <p>El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o <em>elemento HTML de cita
-  en bloque independiente</em>) indica que el texto al que delimita es una cita ampliada.</p>
+<blockquote
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
+>
+  <p>
+    El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
+    <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
+    al que delimita es una cita ampliada.
+  </p>
 </blockquote>
 
-<p>El elemento de cita — <code>&lt;q&gt;</code> — se <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">utiliza en
-citas breves que no requieren saltos de párrafo.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
-<cite>página q de MDN</cite></a>.</p>
+<p>
+  El elemento de cita — <code>&lt;q&gt;</code> — se
+  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+    >utiliza en citas breves que no requieren saltos de párrafo.</q
+  >
+  --
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+    <cite>página q de MDN</cite></a
+  >.
+</p>
 ```
 
 Las citas se escriben en cursiva de forma predeterminada.
@@ -291,25 +334,27 @@ Las citas se escriben en cursiva de forma predeterminada.
 
 ¡Es hora de otro ejemplo de aprendizaje activo! En este ejemplo, nos gustaría que:
 
-1.  Conviertas el párrafo del medio en una cita en bloque independiente, que incluya un atributo `cite`.
-2.  Conviertas "La necesidad de eliminar el diálogo interno negativo" en el tercer párrafo en una cita en línea e incluya un atributo `cite`.
-3.  Envuelvas el título de cada fuente en etiquetas `<cite>` y conviertas cada una en un enlace a esa fuente.
+1. Conviertas el párrafo del medio en una cita en bloque independiente, que incluya un atributo `cite`.
+2. Conviertas "La necesidad de eliminar el diálogo interno negativo" en el tercer párrafo en una cita en línea e incluya un atributo `cite`.
+3. Envuelvas el título de cada fuente en etiquetas `<cite>` y conviertas cada una en un enlace a esa fuente.
 
 Las fuentes de citación que necesitas son:
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html para la citas de Confucio
-- http\://www\.affirmationsforpositivethinking.com para "La necesidad de eliminar el diálogo interno negativo".
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` para la citas de Confucio
+- `http://www.affirmationsforpositivethinking.com` para "La necesidad de eliminar el diálogo interno negativo".
 
 Si cometes un error, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente encallado, pulsa el botón _Mostrar solución_ para ver una buena propuesta.
 
 ```html hidden
 <h2>Salida en vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editable</h2>
-<p class="a11y-label">Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de tabulación).</p>
+<p class="a11y-label">
+  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
+  tabulación).
+</p>
 
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
 <p>Hola y bienvenido a mi página de motivación. Como dice el sitio de citas de Confucio:</p>
@@ -318,110 +363,114 @@ Si cometes un error, siempre puedes restablecer el código anterior pulsando el 
 </textarea>
 
 <div class="playable-buttons">
-<input id="reset" type="button" value="Restablecer">
-<input id="solution" type="button" value="Mostrar solución">
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
 ```css hidden
 html {
-font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 const userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Mostrar solución';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Mostrar solución";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Mostrar solución') {
-textarea.value = solutionEntry;
-solution.value = 'Ocultar solución';
-} else {
-textarea.value = userEntry;
-solution.value = 'Mostrar solución';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solución") {
+    textarea.value = solutionEntry;
+    solution.value = "Ocultar solución";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Mostrar solución";
+  }
+  updateCode();
 });
 
-const htmlSolution = '<p>Hola y bienvenido a mi página de motivación. Como dice <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>el sitio de citas de Confucio:</cite></a>:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n<p>No importa qué tan lento vayas siempre que no te detengas.</p>\n</blockquote>\n\n<p>También me encanta el concepto de pensamiento positivo y <q cite="http://www.affirmationsforpositivethinking.com">La necesidad de eliminar el diálogo interno negativo</q> (como se menciona en <a href="http://www.affirmationsforpositivethinking.com"><cite>Afirmaciones para el pensamiento positivo</cite></a>).</p>';
+const htmlSolution =
+  '<p>Hola y bienvenido a mi página de motivación. Como dice <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>el sitio de citas de Confucio:</cite></a>:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n<p>No importa qué tan lento vayas siempre que no te detengas.</p>\n</blockquote>\n\n<p>También me encanta el concepto de pensamiento positivo y <q cite="http://www.affirmationsforpositivethinking.com">La necesidad de eliminar el diálogo interno negativo</q> (como se menciona en <a href="http://www.affirmationsforpositivethinking.com"><cite>Afirmaciones para el pensamiento positivo</cite></a>).</p>';
 const solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // captura la tecla de tabulación en el área de texto y en su lugar
 // hace que se escriba una tabulación en la posición del cursor
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-const scrollPos = textarea.scrollTop;
-const caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  const caretPos = textarea.selectionStart;
 
-const front = (textarea.value).substring(0, caretPos);
-const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
 
-textarea.onkeyup = function(){
-// Solo queremos guardar el estado cuando se muestra el código de usuario,
-// no es la solución, por lo que la solución no se guarda sobre el código del usuario
-if(solution.value === 'Mostrar solución') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
+  if (solution.value === "Mostrar solución") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 
@@ -432,9 +481,15 @@ updateCode();
 Otro elemento bastante común que encontrarás cuando busques en la Web es {{HTMLElement("abbr")}} — se usa para envolver una abreviatura o acrónimo, y proporcionar una expansión completa del término (incluida dentro de un atributo {{HTMLAttrxRef("title")}}. Veamos un par de ejemplos:
 
 ```html
-<p>Usamos <abbr title="Lenguaje de marcado de hipertexto">HTML</abbr> para estructurar nuestros documentos web.</p>
+<p>
+  Usamos <abbr title="Lenguaje de marcado de hipertexto">HTML</abbr> para
+  estructurar nuestros documentos web.
+</p>
 
-<p>Creo que el <abbr title="Reverendo">Rev.</abbr> Green lo hizo en la cocina con la motosierra.</p>
+<p>
+  Creo que el <abbr title="Reverendo">Rev.</abbr> Green lo hizo en la cocina con
+  la motosierra.
+</p>
 ```
 
 Estos saldrán con un aspecto similar a este (la expansión aparecerá en una descripción emergente cuando se coloque el cursor sobre el término):
@@ -450,121 +505,127 @@ Para esta simple tarea de aprendizaje activo, nos gustaría que simplemente marc
 ```html hidden
 <h2>Salida en vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editable</h2>
-<p class="a11y-label">Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de tabulación).</p>
+<p class="a11y-label">
+  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
+  tabulación).
+</p>
 
 <textarea id="code" class="input" style="min-height: 50px; width: 95%">
 <p>La NASA sin duda hace un interesante trabajo.</p>
 </textarea>
 
 <div class="playable-buttons">
-<input id="reset" type="button" value="Restablecer">
-<input id="solution" type="button" value="Mostrar solución">
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
 ```css hidden
 html {
-font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 const userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Mostrar solución';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Mostrar solución";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Mostrar solución') {
-textarea.value = solutionEntry;
-solution.value = 'Ocultar solución';
-} else {
-textarea.value = userEntry;
-solution.value = 'Mostrar solución';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solución") {
+    textarea.value = solutionEntry;
+    solution.value = "Ocultar solución";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Mostrar solución";
+  }
+  updateCode();
 });
 
-const htmlSolution = '<p>La <abbr title="Administración Nacional de Aeronáutica y del Espacio">NASA</abbr> sin duda hace un interesante trabajo.</p>';
+const htmlSolution =
+  '<p>La <abbr title="Administración Nacional de Aeronáutica y del Espacio">NASA</abbr> sin duda hace un interesante trabajo.</p>';
 const solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // captura la tecla de tabulación en el área de texto y en su lugar
 // hace que se escriba una tabulación en la posición del cursor
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-const scrollPos = textarea.scrollTop;
-const caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  const caretPos = textarea.selectionStart;
 
-const front = (textarea.value).substring(0, caretPos);
-const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
 
-textarea.onkeyup = function(){
-// Solo queremos guardar el estado cuando se muestra el código de usuario,
-// no es la solución, por lo que la solución no se guarda sobre el código del usuario
-if(solution.value === 'Mostrar solución') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
+  if (solution.value === "Mostrar solución") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 
@@ -585,9 +646,9 @@ También podrías incluir un marcado más complejo y otras formas de informació
 ```html
 <address>
   <p>
-    Chris Mills<br>
-    Manchester<br>
-    The Grim North<br>
+    Chris Mills<br />
+    Manchester<br />
+    The Grim North<br />
     Reino Unido
   </p>
 
@@ -612,7 +673,10 @@ En ocasiones, necesitarás utilizar superíndice y subíndice al marcar elemento
 
 ```html
 <p>Nací el 25<sup>th</sup> de mayo de 2001.</p>
-<p>La fórmula química de la cafeína es C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+<p>
+  La fórmula química de la cafeína es
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+</p>
 <p>If x<sup>2</sup> es 9, x debe ser igual 3 o -3.</p>
 ```
 
@@ -639,12 +703,19 @@ para.onclick = function() {
   alert('¡Guau!, ¡deja de apretar!');
 }</code></pre>
 
-<p>No debes utilizar elementos de presentación como <code>&lt;font&gt;</code> y <code>&lt;center&gt;</code>.</p>
+<p>
+  No debes utilizar elementos de presentación como <code>&lt;font&gt;</code> y
+  <code>&lt;center&gt;</code>.
+</p>
 
-<p>En el ejemplo de JavaScript anterior, <var>para</var> representa un elemento de párrafo.</p>
+<p>
+  En el ejemplo de JavaScript anterior, <var>para</var> representa un elemento
+  de párrafo.
+</p>
 
-
-<p>Selecciona todo el texto con <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+<p>
+  Selecciona todo el texto con <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.
+</p>
 
 <pre>$ <kbd>ping mozilla.org</kbd>
 <samp>PING mozilla.org (63.245.215.20): 56 bytes de datos
@@ -693,29 +764,31 @@ El ejemplo básico anterior solo proporciona una fecha simple legible por la má
 <!-- Fecha y hora -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 Enero 2016</time>
 <!-- Fecha y hora con desplazamiento de zona horaria -->
-<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 Enero 2016 es 8.30pm en Francia</time>
+<time datetime="2016-01-20T19:30+01:00"
+  >7.30pm, 20 Enero 2016 es 8.30pm en Francia</time
+>
 <!-- Llamar a un número de semana específico -->
 <time datetime="2016-W04">La cuarta semana de 2016</time>
 ```
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar; consulta {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text", "Pon a prueba tus habilidades: Texto HTML avanzado")}}.
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar; consulta [Pon a prueba tus habilidades: Texto HTML avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text).
 
 ## Resumen
 
-Esto marca el final de nuestro estudio de la semántica del texto HTML. Ten en cuenta que lo que has visto durante este curso no es una lista exhaustiva de elementos de texto HTML — quisimos tratar de cubrir los aspectos esenciales y algunos de los más comunes que verás en la naturaleza, o al menos podrían resultarte interesantes. Para encontrar muchos más elementos HTML, puedes echarle un vistazo a nuestra {{web.link("/es/docs/Web/HTML/Element", "referencia de elementos HTML")}} (la {{web.link("/es/docs/Web/HTML/Element#Inline_text_semantics", "La sección Semántica de texto en línea")}} sería un gran lugar para comenzar). En el próximo artículo veremos los elementos HTML que usarás para estructurar las diferentes partes de un documento HTML.
+Esto marca el final de nuestro estudio de la semántica del texto HTML. Ten en cuenta que lo que has visto durante este curso no es una lista exhaustiva de elementos de texto HTML — quisimos tratar de cubrir los aspectos esenciales y algunos de los más comunes que verás en la naturaleza, o al menos podrían resultarte interesantes. Para encontrar muchos más elementos HTML, puedes echarle un vistazo a nuestra [referencia de elementos HTML](/es/docs/Web/HTML/Element) (la [La sección Semántica de texto en línea](/es/docs/Web/HTML/Element#Inline_text_semantics) sería un gran lugar para comenzar). En el próximo artículo veremos los elementos HTML que usarás para estructurar las diferentes partes de un documento HTML.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 ## En este módulo
 
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started", "Empezar con HTML")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "¿Qué hay en el «head»? Metadatos en HTML")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Fundamentos de texto HTML")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Crear hipervínculos")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Formateo de texto avanzado")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Estructura web y documentación")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Depurar HTML")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Marcado para una carta")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Estructuración del contenido de una página")}}
+- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

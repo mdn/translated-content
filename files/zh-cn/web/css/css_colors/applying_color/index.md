@@ -3,7 +3,8 @@ title: 使用 CSS 为 HTML 元素应用颜色
 slug: Web/CSS/CSS_Colors/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element) 添加颜色，以创建所需的外观。本文是一篇入门文章，介绍了 CSS 颜色在 HTML 中的各种使用方法。
 
@@ -28,7 +29,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 - {{cssxref("background-color")}}
   - : The text's background color.
 - {{cssxref("text-shadow")}}
-  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} to learn more.
+  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#文字阴影) to learn more.
 - {{cssxref("text-decoration-color")}}
   - : By default, text decorations (such as underlines, strikethroughs, etc) use the `color` property as their colors. However, you can override that behavior and use a different color for them with the `text-decoration-color` property.
 - {{cssxref("text-emphasis-color")}}
@@ -51,7 +52,7 @@ Every element is a box with some sort of content, and has a background and a bor
 
 ### 边框
 
-Any element can have a [border](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) drawn around it. A basic element border is a line drawn around the edges of the element's content. See {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) to learn more about applying styles to borders.
+Any element can have a [border](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) drawn around it. A basic element border is a line drawn around the edges of the element's content. See [Margins, padding, and borders](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#盒子模型和内联盒子) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
 
 You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/zh-CN/docs/Web/CSS/border-width), [style](/zh-CN/docs/Web/CSS/border-style) (solid, dashed, etc.), and so forth.
 
@@ -64,9 +65,9 @@ You can use the {{cssxref("border")}} shorthand property, which lets you configu
 - {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
   - : These let you color the edges of the border closest to to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
 
-### 其它方式
+### 其他方式
 
-CSS 并不是唯一支持颜色的 web 技术。同时还有其它支持颜色的图形技术。
+CSS 并不是唯一支持颜色的 web 技术。同时还有其他支持颜色的图形技术。
 
 - HTML [Canvas API](/zh-CN/docs/Web/API/Canvas_API)
   - : Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) to learn more.
@@ -85,7 +86,7 @@ For more detailed discussion of each of the color value types, see the reference
 
 A set of standard color names have been defined, letting you use these keywords instead of numeric representations of colors if you choose to do so and there's a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`.
 
-See {{SectionOnPage("/en-US/docs/Web/CSS/color_value", "Color keywords", "code")}} for a list of all available color keywords.
+See [Named colors](/zh-CN/docs/Web/CSS/named-color) for more information on color keywords.
 
 ### RGB 值
 
@@ -125,7 +126,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255, 0, 0
 
 Designers and artists often prefer to work using the [HSL](https://zh.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The `hsl()` CSS function is very similar to the `rgb()` function in usage otherwise.
 
-![HSL color cylinder](https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png)
+![HSL color cylinder](1200px-hsl_color_solid_cylinder_alpha_lowgamma.png)
 
 _**Figure 1. An HSL color cylinder.** Hue defines the actual color based on the position along a circular color wheel representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://www.wikipedia.org/), distributed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) license._
 
@@ -199,7 +200,7 @@ th {
 </table>
 ```
 
-{{EmbedLiveSample("hsl-swatches", 300, 260)}}
+{{EmbedLiveSample("HSL 函数表示法s", 300, 260)}}
 
 > **备注：** Note that when you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
@@ -213,7 +214,7 @@ The easiest way to apply color to elements—and the way you'll usually do it—
 
 Let's take a look at an example, starting by looking at the results we're trying to achieve:
 
-{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}
+{{EmbedLiveSample("在样式表中指定颜色", 650, 150)}}
 
 #### HTML
 
@@ -316,7 +317,7 @@ The `<input>` element represents a color only in the [hexadecimal string notatio
 
 Let's look at a simple example, in which the user can choose a color. As the user adjusts the color, the border around the example changes to reflect the new color. After finishing up and picking the final color, the color picker's value is displayed.
 
-{{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
+{{EmbedLiveSample("示例：选择一个颜色", 525, 275)}}
 
 > **备注：** On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
 
@@ -348,7 +349,7 @@ The CSS simply establishes a size for the box and some basic styling for appeara
 
 #### JavaScript
 
-The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
+The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color) element.
 
 ```js
 let colorPicker = document.getElementById("colorPicker");
@@ -366,9 +367,9 @@ colorPicker.addEventListener("change", function(event) {
 }, false);
 ```
 
-The {{event("input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
+The [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
 
-The {{event("change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
+The [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
 
 ## 机智地运用颜色
 
@@ -469,7 +470,7 @@ You can set `color-adjust` to `exact` to tell the browser that the element or el
 
 > **备注：** There is no guarantee, though, that `color-adjust: exact` will result in your CSS being used exactly as given. If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `color-adjust`.
 
-## 相关链接
+## 参见
 
 - [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/zh-CN/docs/Web/Guide/Graphics)

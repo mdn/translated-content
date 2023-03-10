@@ -2,6 +2,7 @@
 title: <basic-shape>
 slug: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 **`<basic-shape>`** 是一种表现基础图形的 CSS 数据类型，作用于{{cssxref("clip-path")}} 与 {{cssxref("shape-outside")}} 属性中。
@@ -12,17 +13,17 @@ slug: Web/CSS/basic-shape
 
 **`<basic-shape>`**数据类型可以由下列函数得到。
 
-当构建一个图形时，运用了**`<basic-shape>`**值的属性就会定义一个相关的盒模型。基础图形使用的坐标系统即设置相关的盒模型左上角顶点为原点，该坐标轴的 x 轴正方向为右、y 轴的正方向为下。所有以百分比定义的长度将通过相关盒模型与使用的维度重定义。
+当构建一个图形时，运用了 **`<basic-shape>`** 值的属性就会定义一个相关的盒模型。基础图形使用的坐标系统即设置相关的盒模型左上角顶点为原点，该坐标轴的 x 轴正方向为右、y 轴的正方向为下。所有以百分比定义的长度将通过相关盒模型与使用的维度重定义。
 
 ### 图形函数
 
 以下为当前支持的图形。所有\<basic-shape>值都由函数表达式定义，并且遵循属性值定义语法（[value definition syntax](/zh-CN/docs/Web/CSS/Value_definition_syntax)）。
 
-- `inset()`
+- {{cssxref("basic-shape/inset","inset()")}}
 
   - : 定义了一个插进的长方形。
 
-    ```
+    ```css
     inset( <shape-arg>{1,4} [round <border-radius>]? )
     ```
 
@@ -32,7 +33,7 @@ slug: Web/CSS/basic-shape
 
     如果一对插进图形在通过堆叠产生的高于当前使用维度的维度中（例如，左右插进图像相叠 75%）将会定义一个包围不了任何区域的图形。这种情况会在元素中产生一个空白且平坦的区域。
 
-- `circle()`
+- {{cssxref("basic-shape/circle","circle()")}}
 
   - : 使用一个半径和一个位置定义一个圆形。
 
@@ -40,11 +41,11 @@ slug: Web/CSS/basic-shape
     circle( [<shape-radius>]? [at <position>]? )
     ```
 
-    `<shape-radius>` 参数代表了 _r，_ 即圆形的半径， 不接受负数作为该参数的值。一个以百分比表示的值将以公式 `sqrt(width^2+height^2)/sqrt(2)`计算，其中 width 与 height 为相关盒模型的宽与高。
+    `<shape-radius>` 参数代表了 _r，_ 即圆形的半径，不接受负数作为该参数的值。一个以百分比表示的值将以公式 `sqrt(width^2+height^2)/sqrt(2)`计算，其中 width 与 height 为相关盒模型的宽与高。
 
     {{cssxref("&lt;position&gt;")}} 参数定义了圆心的位置。省缺值为盒模型的中心。
 
-- `ellipse()`
+- {{cssxref("basic-shape/ellipse","ellipse()")}}
 
   - : 使用两个半径和一个位置定义一个椭圆。
 
@@ -56,7 +57,7 @@ slug: Web/CSS/basic-shape
 
     \<position>参数定义了椭圆形圆心的位子。其省缺值为盒模型的中心。
 
-- `polygon()`
+- {{cssxref("basic-shape/polygon","polygon()")}}
 
   - : 使用一个 SVG {{SVGAttr("fill-rule")}} 和一组顶点定义一个多边形，
 
@@ -64,30 +65,30 @@ slug: Web/CSS/basic-shape
     polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
     ```
 
-    `<fill-rule>` 代表了填充规则（ [filling rule](/zh-CN/docs/Web/SVG/Attribute/fill-rule) ），即，如何填充该多边形。 可选值为 nonzero 和 evenodd。该参数的省缺值为 nonzero。
+    `<fill-rule>` 代表了填充规则（ [filling rule](/zh-CN/docs/Web/SVG/Attribute/fill-rule) ），即，如何填充该多边形。可选值为 nonzero 和 evenodd。该参数的省缺值为 nonzero。
 
-    每一对在列表中的参数都代表了多边形顶点的坐标， _xi_ 与 _yi_ ，i 代表顶点的编号，即，第 i 个顶点。
+    每一对在列表中的参数都代表了多边形顶点的坐标，_xi_ 与 _yi_，i 代表顶点的编号，即，第 i 个顶点。
 
-- `path()`{{Experimental_Inline}}
+- {{cssxref("path","path()")}}
 
-  - : 使用一个 SVG {{SVGAttr("fill-rule")}} 和 SVG \[路径定义]\(/en-US/docs/Web/SVG/Attribute/d)定义一个形状。
+  - : 使用一个 SVG {{SVGAttr("fill-rule")}} 和 SVG [路径定义](/zh-CN/docs/Web/SVG/Attribute/d)来定义一个形状。
 
-    ```
+    ```css
     path( [<fill-rule>,]? <string>)
     ```
 
-    可选的 `<fill-rule>` 表示 [filling rule](/zh-CN/docs/Web/SVG/Attribute/fill-rule) 填充规则。可选 `nonzero`（非零环绕规则）和 `evenodd`（奇偶规则） 。 默认是（Default value when omitted）`nonzero`。
+    可选的 `<fill-rule>` 表示 {{SVGAttr("fill-rule")}} 填充规则。可选 `nonzero`（非零环绕规则）和 `evenodd`（奇偶规则）。如果省略，则默认是 `nonzero`。
 
     参数 \<string> 是用引号包含的 [SVG Path](/zh-CN/docs/SVG/Attribute/d) 字符串
 
 上文未曾解释的参数如下：
 
-```
+```css
 <shape-arg> = <length> | <percentage>
 <shape-radius> = <length> | <percentage> | closest-side | farthest-side
 ```
 
-为一个圆形或椭圆形定义一个半径。其省缺值为 `closest-side。`
+为一个圆形或椭圆形定义一个半径。其省缺值为 `closest-side`。
 
 `closest-side` 即图形中心到盒模型最近一条边之间的距离。对于圆形，该值在任意维度都表示最近的一条边。对于椭圆形，该值为半径维度最近的一条边。
 
@@ -103,7 +104,7 @@ slug: Web/CSS/basic-shape
 
 ## 基础图形的插值
 
-`<basic-shape>` 值之间的动画变化将会遵循以下规则。图形函数的值会被放进一个插入的简易列表中。这些列表中的值将会尽可能地被当作 [`<length>`](/zh-CN/docs/Web/CSS/length)、[`<percentage>`](https://developer.mozilla.org/en-US/docs/Web/CSS/percentage)、 或 [`calc()`](/zh-CN/docs/Web/CSS/calc) 类型插入.。如果列表中的值不为上述三种类型中的一种，然而却是相同的（比如 `nonzero` 类型的值在多个列表的相同位置出现)，那么这些值将不会被作为插值。
+`<basic-shape>` 值之间的动画变化将会遵循以下规则。图形函数的值会被放进一个插入的简易列表中。这些列表中的值将会尽可能地被当作 [`<length>`](/zh-CN/docs/Web/CSS/length)、[`<percentage>`](/zh-CN/docs/Web/CSS/percentage)、或 [`calc()`](/zh-CN/docs/Web/CSS/calc) 类型插入.。如果列表中的值不为上述三种类型中的一种，然而却是相同的（比如 `nonzero` 类型的值在多个列表的相同位置出现)，那么这些值将不会被作为插值。
 
 - 一对的图形需要使用一样的盒模型。
 - 如果一对图形是同一种类型，例如， `ellipse()` 或 `circle()`，并且没有任何半径使用了 `closest-side` 或 `farthest-side` 关键值，那么这些值将会成为相应的图形函数的插值。

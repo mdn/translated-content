@@ -2,6 +2,7 @@
 title: 使用 XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
+
 要送出一個 HTTP 請求，需要建立一個 {{domxref("XMLHttpRequest")}} 物件、開啟一個 URL，並發起一個請求。在交易（transaction）完成後，`XMLHttpRequest` 物件將會包含如回應內容（response body）及 [HTTP 狀態](/docs/Web/HTTP/Status)等等請求結果中的有用資訊。本頁概述了一些常見的、甚至略為難理解的 `XMLHttpRequest` 物件使用案例。
 
 ```js
@@ -19,7 +20,7 @@ oReq.send();
 
 透過 `XMLHttpRequest` 建立的請求，其取得資料的方式可以為非同步（asynchronously）或同步（synchronously）兩種之一。請求的種類是由 {{domxref("XMLHttpRequest.open()")}} 方法的選擇性參數 `async`（第三個參數）決定。若 `async` 參數為 `true` 或是未指定，`XMLHttpRequest` 會被設定為非同步，相反的若為 `false` 則會被設定為同步。這兩種請求類型的細節討論與示範可以在[同步與非同步請求](/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)頁面中找到。一般來說，很少會使用到同步請求。
 
-> **備註：** 自 Gecko 30.0 {{ geckoRelease("30.0") }} 開始，在主執行緒上的同步請求因其差勁的使用者體驗已被棄用。
+> **備註：** 自 Gecko 30.0 開始，在主執行緒上的同步請求因其差勁的使用者體驗已被棄用。
 
 ## 處理回應
 
@@ -134,9 +135,9 @@ oReq.open();
 
 > **備註：** `progress` 事件無法用於 `file:` 通訊協定。
 
-> **備註：** 自 {{Gecko("9.0")}} 開始，接收到每一個資料的區塊（chunk）時，`progress` 事件都會被觸發。包括在 `progress` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `progress` 事件。這代表我們可以僅關注 `progress` 事件即能夠可靠的監視進度。
+> **備註：** 自 Gecko 9.0 開始，接收到每一個資料的區塊（chunk）時，`progress` 事件都會被觸發。包括在 `progress` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `progress` 事件。這代表我們可以僅關注 `progress` 事件即能夠可靠的監視進度。
 
-> **備註：** 在 {{Gecko("12.0")}} 中，如果 `XMLHttpRequest` 的 `responseType` 屬性為「moz-blob」，那麼 `progress` 事件觸發時的 `XMLHttpRequest.response` 值會是一個目前包含了所接收資料的 {{domxref("Blob")}}。
+> **備註：** 在 Gecko 12.0 中，如果 `XMLHttpRequest` 的 `responseType` 屬性為「moz-blob」，那麼 `progress` 事件觸發時的 `XMLHttpRequest.response` 值會是一個目前包含了所接收資料的 {{domxref("Blob")}}。
 
 我們也可以透過 `loadend` 事件來偵測到所有之三種下載結束狀況（`abort`、`load` 或 `error`）：
 
@@ -518,7 +519,7 @@ AJAXSubmit(myForm);
 
 > **備註：** 傳送二進位檔案的最佳方式是藉由 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 結合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法來送出，如果可以也能搭配 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法先進行讀取。但因為這段程式指令碼（script）的目的是要處理[可字串化的](/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)原始資料，所以使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法結合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。就其本身來看，以上的指令碼只有在處理小型檔案時才有意義。假如不打算上傳二進位內容，請考慮使用 `FormData` API。
 
-> **備註：** 非標準的 `sendAsBinary` 方法在 Gecko 31 {{geckoRelease(31)}} 已被認為是棄用的（deprecated），並且即將被移除。而標準的 `send(Blob data)` 方法可以作為替代。
+> **備註：** 非標準的 `sendAsBinary` 方法在 Gecko 31 已被認為是棄用的（deprecated），並且即將被移除。而標準的 `send(Blob data)` 方法可以作為替代。
 
 ### 使用 FormData 物件
 
@@ -726,10 +727,6 @@ oReq.send(null);
 
 ## 安全性
 
-{{fx_minversion_note(3, "Firefox 3 之前的版本允許在偏好設定中設定 <code>capability.policy.&lt;policyname&gt;.XMLHttpRequest.open&lt;/policyname&gt;</code> 為 <code>allAccess</code> 來讓指定的網域能夠跨網域存取。現已不再支援。")}}
-
-{{fx_minversion_note(5, "Firefox 5 之前的版本可以使用 <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> 來發送跨網域存取請求。現已不再支援，即使它不會有警告並且依然會顯示允許請求的權限對話框。")}}
-
 開啟跨網域指令碼（script）的建議方式是於 XMLHttpRequest 的回應中使用 `Access-Control-Allow-Origin` HTTP 標頭。
 
 ### 被中止的 XMLHttpRequest
@@ -756,11 +753,9 @@ var oReq = new XMLHttpRequest();
 
 ## 參見
 
-1. [MDN AJAX 介紹](/docs/AJAX/Getting_Started)
-2. [HTTP 存取控制](/docs/Web/HTTP/Access_control_CORS)
-3. [How to check the security state of an XMLHTTPRequest over SSL](/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-4. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-5. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
-6. [Apple developers' reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Articles/XHR.html)
-7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8. [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)
+- [MDN AJAX 介紹](/zh-TW/docs/Web/Guide/AJAX/Getting_Started)
+- [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

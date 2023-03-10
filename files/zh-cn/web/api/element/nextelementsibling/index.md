@@ -2,11 +2,12 @@
 title: NonDocumentTypeChildNode.nextElementSibling
 slug: Web/API/Element/nextElementSibling
 ---
+
 {{ ApiRef() }}
 
 ## 概述
 
-**nextElementSibling** 返回当前元素在其父元素的子元素节点中的后一个元素节点，如果该元素已经是最后一个元素节点，则返回`null,`该属性是只读的。
+**`nextElementSibling`** 返回当前元素在其父元素的子元素节点中的后一个元素节点，如果该元素已经是最后一个元素节点，则返回 `null`, 该属性是只读的。
 
 ## 语法
 
@@ -93,7 +94,7 @@ if(!("nextElementSibling" in document.documentElement)){
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.nextElementSibling")}}
+{{Compat}}
 
 ## 相关链接
 

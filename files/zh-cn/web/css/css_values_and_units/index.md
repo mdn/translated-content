@@ -2,9 +2,10 @@
 title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
 ---
+
 {{CSSRef}}
 
-所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。 下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
+所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
 
 ## 文本数据类型
 
@@ -44,7 +45,7 @@ slug: Web/CSS/CSS_Values_and_Units
 }
 ```
 
-大多数时候你可以随心所欲地创建任何名称作为标识符，甚至包括使用 emoji 表情。然而标识符不能是 `none`，`unset`，`initial`， 或者 `inherit`，以两条短横线开头。并且，你也不可以使用任何已经预定义的 CSS 关键字。查看 {{cssxref("&lt;custom-ident&gt;")}} 和 {{cssxref("&lt;string&gt;")}} 页面了解更多信息。
+大多数时候你可以随心所欲地创建任何名称作为标识符，甚至包括使用 emoji 表情。然而标识符不能是 `none`，`unset`，`initial`，或者 `inherit`，以两条短横线开头。并且，你也不可以使用任何已经预定义的 CSS 关键字。查看 {{cssxref("&lt;custom-ident&gt;")}} 和 {{cssxref("&lt;string&gt;")}} 页面了解更多信息。
 
 ### 预定义的关键值
 
@@ -123,7 +124,7 @@ CSS 使用尺寸来指定：
 
 一个距离单位，或这也称为长度（length），允许作为属性的值。它被描述为 {{cssxref("&lt;length&gt;")}} 类型。CSS 中有两种长度：相对和绝对。
 
-相对长度单位基于其它元素的长度。例如 `em` 基于该元素的字号大小，`vh` 则与设备视口的高度有关。
+相对长度单位基于其他元素的长度。例如 `em` 基于该元素的字号大小，`vh` 则与设备视口的高度有关。
 
 | 单位   | 基于...                                                                                                                               |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -258,5 +259,5 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 ## See also
 
-- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Basic Data Types](/zh-CN/docs/Web/CSS/CSS_Types)
+- [Introduction to CSS: Values and Units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)

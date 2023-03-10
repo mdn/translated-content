@@ -1,19 +1,8 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerRegistration
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -49,7 +38,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 ### Event handlers
 
 - {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/ko/docs/Web/API/EventListener "This method is called whenever an event occurs of the type for which the EventListener interface was registered.") property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+  - : An [`EventListener`](/ko/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Methods
 
@@ -91,11 +80,11 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

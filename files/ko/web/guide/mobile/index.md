@@ -1,12 +1,6 @@
 ---
 title: Mobile Web Development
 slug: Web/Guide/Mobile
-tags:
-  - Intermediate
-  - NeedsExample
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/Guide/Mobile
 ---
 이 페이지에는 모바일 기기에서도 잘 작동하는 웹 사이트를 디자인하기 위한 몇 가지의 방법과 노하우가 담겨 있습니다. Mozilla Firefox OS 프로젝트에 대한 정보를 찾고 계신다면, [Firefox OS](/en/Mozilla/Firefox_OS) 페이지를 참고하세요. 아니면 [Firefox for Android](/en/Mozilla/Firefox_for_Android)에 대한 자세한 정보를 찾아보실 수도 있습니다.
 

@@ -2,6 +2,7 @@
 title: TouchEvent
 slug: Web/API/TouchEvent
 ---
+
 {{ ApiRef() }}
 
 `TouchEvent` 是一类描述手指在触摸平面（触摸屏、触摸板等）的状态变化的事件。这类事件用于描述一个或多个触点，使开发者可以检测触点的移动，触点的增加和减少，等等。
@@ -77,17 +78,17 @@ _{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domx
 {{SeeCompatTable}}
 
 - {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
-  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理{{event("touchstart")}} 事件。
+  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理[`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件。
 - {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
-  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 {{event("touchend")}} 事件。
+  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) 事件。
 - {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}
-  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 {{event("touchmove")}} 事件。
+  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件。
 - {{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}
-  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 {{event("touchcancel")}} 事件。
+  - : 使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event) 事件。
 
 ## 实例
 
-请看 [example on the main Touch events article](/en/DOM/Touch_events#Example).
+请看 [example on the main Touch events article](/zh-CN/DOM/Touch_events#Example).
 
 ## 规范
 

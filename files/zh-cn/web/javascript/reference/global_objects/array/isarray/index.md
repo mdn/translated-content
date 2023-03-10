@@ -2,6 +2,7 @@
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
+
 {{JSRef}}
 
 **`Array.isArray()`** 用于确定传递的值是否是一个 {{jsxref("Array")}}。
@@ -83,6 +84,8 @@ arr instanceof Array; // false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.isArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

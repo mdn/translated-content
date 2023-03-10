@@ -1,15 +1,8 @@
 ---
 title: min-content
 slug: Web/CSS/min-content
-tags:
-  - CSS
-  - キーワード
-  - リファレンス
-  - min-content
-  - 大きさ
-browser-compat: css.properties.width.min-content
-translation_of: min-content
 ---
+
 `min-content` は大きさのキーワードで、コンテンツの内在的な最小幅を表しています。テキストコンテンツの場合は、コンテンツがすべてのソフトラッピングの機会を使用した場合に、最も長い単語と同じくらい小さくなることを意味します。
 
 ## 構文

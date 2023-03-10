@@ -1,60 +1,69 @@
 ---
 title: Response()
 slug: Web/API/Response/Response
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
+
 {{APIRef("Fetch")}}
 
 **`Response()`** コンストラクターは、新しい {{domxref("Response")}} オブジェクトを生成します。
 
 ## 構文
 
-```
-var myResponse = new Response(body, init);
+```js-nolint
+new Response()
+new Response(body)
+new Response(body, options)
 ```
 
 ### 引数
 
-- _body_ {{optional_inline}}
+- `body` {{optional_inline}}
 
-  - : *body*オブジェクトに*は、*レスポンスの本体を定義する。なお、これは `null` でも問題ない:
+  - : レスポンスの本体を定義するオブジェクトです。これは `null` （既定値）か、以下のうちのいずれかです。
 
     - {{domxref("Blob")}}
-    - {{domxref("BufferSource")}}
+    - {{jsxref("ArrayBuffer")}}
+    - {{jsxref("TypedArray")}}
+    - {{jsxref("DataView")}}
     - {{domxref("FormData")}}
     - {{domxref("ReadableStream")}}
     - {{domxref("URLSearchParams")}}
-    - {{domxref("USVString")}}
+    - {{jsxref("String")}}
+    - 文字列リテラル
 
-- _init_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : レスポンスに適用したオプションで、カスタム設定したい場合の可能なオプションは、次のとおりです。:
 
-    - `status`: レスポンス\[応答]のステータスコードです。（例： `200`）
-    - `statusText`: ステータスメッセージは次のようなものです。（例：`OK`など)
-    - `headers`: レスポンス\[応答]に追加するヘッダーは、{{domxref("ByteString")}} のキーと値のペアか、もしくは{{domxref("Headers")}} 、または文字どおりの状態で含まれます。（詳細は、[HTTP headers](/ja/docs/Web/HTTP/Headers)を参照）
+    - `status`
+      - : このレスポンスのステータスコードです。（例: `200`）
+    - `statusText`
+      - : ステータスコードに関連付けられたステータスメッセージです（例: `OK`など)
+    - `headers`
+      - : レスポンスに追加したいヘッダーです。{{domxref("Headers")}} オブジェクト、または {{jsxref("String")}} キー/値ペアのオブジェクトリテラルに含まれています（参考として [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)をご覧ください）。
 
 ## 例
 
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) we create a new `Response` object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom `status` and `statusText`:
+[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) （[Fetch Response のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-response/)を参照）では、コンストラクターを使用して新しい `Response` オブジェクトを作成します。その際、新しい {{domxref("Blob")}} を本体として、またカスタム `status` と `statusText` を含む init オブジェクトを渡します。
 
 ```js
-var myBlob = new Blob();
-var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);
+const myBlob = new Blob();
+const myOptions = { status: 200, statusText: 'SuperSmashingGreat!' };
+const myResponse = new Response(myBlob, myOptions);
 ```
 
-## 仕様
+## 仕様書
 
-| Specification                                                        | Status                   | Comment            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-response','Response()')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.Response.Response")}}
+{{Compat}}
 
 ## 関連情報
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

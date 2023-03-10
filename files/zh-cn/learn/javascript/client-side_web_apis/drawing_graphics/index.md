@@ -2,6 +2,7 @@
 title: 绘图
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 浏览器包含一些非常强大的图形编程工具，从可缩放矢量图形（Scalable Vector Graphics，简称 [SVG](/zh-CN/docs/Web/SVG)）语言到用于在 HTML {{htmlelement("canvas")}} 元素上绘制图形的 API（参阅 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API)）。本文对 {{htmlelement("canvas")}} 进行介绍，并提供更多的学习资源。
@@ -98,7 +99,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
     你还可以看到我们使用了多个等号为多个变量进行连续赋值，这在 JavaScript 中是允许的，很适合为多个变量同时赋一个相同的值。后文中你会发现，使用 `width` 和 `height` 变量可以更快捷地访问画布的长宽（比如在画布正中央绘制一条垂直线）。
 
-4. 如果现在保存文件，浏览器中什么也不会显示，这并没有问题，但是滚动条还是可见的，这就是问题了。原因是我们的“全窗尺寸画布”包含 {{htmlelement("body")}} 元素的外边距（{{cssxref("margin")}}），使得文档比窗口略宽。 为使滚动条消失，需要删除 {{htmlelement("body")}} 元素的 {{cssxref("margin")}} 并将 {{cssxref("overflow")}} 设置为 `hidden`。在文档的 {{htmlelement("head")}} 中添加以下代码即可：
+4. 如果现在保存文件，浏览器中什么也不会显示，这并没有问题，但是滚动条还是可见的，这就是问题了。原因是我们的“全窗尺寸画布”包含 {{htmlelement("body")}} 元素的外边距（{{cssxref("margin")}}），使得文档比窗口略宽。为使滚动条消失，需要删除 {{htmlelement("body")}} 元素的 {{cssxref("margin")}} 并将 {{cssxref("overflow")}} 设置为 `hidden`。在文档的 {{htmlelement("head")}} 中添加以下代码即可：
 
     ```html
     <style>
@@ -353,7 +354,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 1. 同上，下载画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）以绘制新的示例。这里还需要在同一目录下保存一个示例图片文件：[firefox.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/firefox.png)。
 
-    {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。 最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
+    {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
 
 2. 将图片源嵌入画布中，代码如下：
 
@@ -398,7 +399,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 ### 创建一个循环
 
-在画布中使用循环是件有趣的事，你可以在 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) 循环中运行画布命令，和其他 JS 代码一样。
+在画布中使用循环是件有趣的事，你可以在 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环中运行画布命令，和其他 JS 代码一样。
 
 我们来创建一个简单的示例。
 
@@ -508,7 +509,7 @@ loop();
 
 我们在代码底部运行了一次 `loop()` 函数，它启动了整个循环，绘制了第一帧动画。接着 `loop()` 函数接管了`requestAnimationFrame(loop)` 的调用工作，即运行下一帧、再下一帧……的动画。
 
-请注意每一帧我们都整体清除画布并重新渲染所有内容。（每帧创建一个新球（25 个封顶），然后绘制每个球，更新它们的位置，检查是否撞到了其它球。）向画布中绘制的新图形不能像 DOM 元素那样单独操作。你无法再画布中单独操作某一个球，因为只要绘制完毕了，它就是画布的一部分，而不是一个单独的球。你需要擦除再重画，可以将整帧擦除再重画整个画面，也可通过编程选择最小的部分进行擦除和重画。
+请注意每一帧我们都整体清除画布并重新渲染所有内容。（每帧创建一个新球（25 个封顶），然后绘制每个球，更新它们的位置，检查是否撞到了其他球。）向画布中绘制的新图形不能像 DOM 元素那样单独操作。你无法再画布中单独操作某一个球，因为只要绘制完毕了，它就是画布的一部分，而不是一个单独的球。你需要擦除再重画，可以将整帧擦除再重画整个画面，也可通过编程选择最小的部分进行擦除和重画。
 
 优化图形动画是另一个编程主题，需要好多奇技淫巧。这超出我们的讨论范围啦。
 
@@ -520,7 +521,7 @@ loop();
 4. 使用 {{domxref("CanvasRenderingContext2D.restore", "restore()")}} 恢复第 2 步中保存的状态。
 5. 调用 `requestAnimationFrame()` 准备下一帧动画。
 
-> **备注** `save()` 和 `restore()` 这里暂不展开，可以访问 [变形](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations) 教程（及后续内容）来获取详细信息。
+> **备注** `save()` 和 `restore()` 这里暂不展开，可以访问 [变形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations) 教程（及后续内容）来获取详细信息。
 
 ### 一个简单的人物动画
 
@@ -594,9 +595,9 @@ loop();
       }
     ```
 
-    将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用“模（`%`）运算符”（即 [求余运算符](</en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()>)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
+    将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用“模（`%`）运算符”（即 [求余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
 
-    外部程序块中用一个 [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。 如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
+    外部程序块中用一个 [`if ... else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
 
 9. 下一步要算出每帧 `posX` 的值，在上文代码末尾添加以下内容：
 
@@ -687,17 +688,17 @@ draw();
 
 2D 内容告一段落，现在简单了解一下 3D 画布。3D 画布内容可通过的 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API 实现，尽管它和 2D canvas API 都可在 {{htmlelement("canvas")}} 元素上进行渲染，但两者是彼此独立的。
 
-WebGL 基于 [OpenGL](/en-US/docs/Glossary/OpenGL) 图形编程语言实现，可直接与 [GPU](/en-US/docs/Glossary/GPU) 通信，基于此，编写纯 WebGL 代码与常规的 JavaScript 不尽相同，更像 C++ 那样的底层语言，更加复杂，但无比强大。
+WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，可直接与 [GPU](/zh-CN/docs/Glossary/GPU) 通信，基于此，编写纯 WebGL 代码与常规的 JavaScript 不尽相同，更像 C++ 那样的底层语言，更加复杂，但无比强大。
 
 ### 使用库
 
-由于 3D 绘图的复杂性，大多数人写代码时会使用第三方 JavaScript 库（比如 [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)、[PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 或 [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)）。大多数库的原理都基本类似，提供创建基本的、自定义性状的功能、视图定位摄影和光效、表面纹理覆盖，等等。库负责 与 WebGL 通信，你只需完成更高阶工作。
+由于 3D 绘图的复杂性，大多数人写代码时会使用第三方 JavaScript 库（比如 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)、[PlayCanvas](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 或 [Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)）。大多数库的原理都基本类似，提供创建基本的、自定义性状的功能、视图定位摄影和光效、表面纹理覆盖，等等。库负责 与 WebGL 通信，你只需完成更高阶工作。
 
 接触任何一个库都意味着要学一套全新的 API（这里是第三方的版本），但与纯 WebGL 编程都大同小异。
 
 ### 创建魔方
 
-我们来看一个简单的示例，用一套 WebGL 库（这里我们选择 [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)，最流行的 3D 绘图库之一）来创建我们在本文开头看到的旋转魔方。
+我们来看一个简单的示例，用一套 WebGL 库（这里我们选择 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)，最流行的 3D 绘图库之一）来创建我们在本文开头看到的旋转魔方。
 
 1. 首先，下载 [index.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/index.html)、[metal003.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/metal003.png) 并保存在同一个文件夹。图片将用于魔方的表面纹理。
 2. 然后，继续在同一个文件夹内创建 `main.js` 文件。
@@ -760,7 +761,7 @@ WebGL 基于 [OpenGL](/en-US/docs/Glossary/OpenGL) 图形编程语言实现，�
     内容很多，我们来剥丝抽茧：
 
     - 首先，创建一个全局变量 `cube`，这样就可以在代码任意位置访问我们的魔方。
-    - 然后，创建一个 [`TextureLoader`](https://threejs.org/docs/index.html#Reference/Loaders/TextureLoader) 对象，并调用 `load()`。这里 `load()` 包含两个参数（其它情况可以有更多参数）：需要调用的纹理图（PNG 文件）和纹理加载成功后调用的函数。
+    - 然后，创建一个 [`TextureLoader`](https://threejs.org/docs/index.html#Reference/Loaders/TextureLoader) 对象，并调用 `load()`。这里 `load()` 包含两个参数（其他情况可以有更多参数）：需要调用的纹理图（PNG 文件）和纹理加载成功后调用的函数。
     - 函数内部，我们用 [`texture`](https://threejs.org/docs/index.html#Reference/Textures/Texture) 对象的属性指明我们要在魔方的每个面渲染 2 × 2 的图片，然后创建一个 [`BoxGeometry`](https://threejs.org/docs/index.html#Reference/Geometries/BoxGeometry) 对象和一个 [`MeshLambertMaterial`](https://threejs.org/docs/index.html#Reference/Materials/MeshLambertMaterial) 对象，将两者作为 [`Mesh`](https://threejs.org/docs/index.html#Reference/Objects/Mesh) 的参数来创建我们的魔方。 [`Mesh`](https://threejs.org/docs/index.html#Reference/Objects/Mesh) 一般就需要两个参数：一个几何（形状）和一个素材（形状表面外观）。
     - 最后，将魔方添加进场景中，调用我们的 `draw()` 函数开始动画。
 
@@ -810,7 +811,7 @@ WebGL 基于 [OpenGL](/en-US/docs/Glossary/OpenGL) 图形编程语言实现，�
 
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)：一个详尽的教程系列，更细致深入地讲解了 2D 画布所需的知识。必读。
 - [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)：纯 WebGL 编程教程系列。
-- [用 Three.js 创建一个简单的示例](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)：Three.js 基础教程。我们还提供 [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 和 [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) 的基础教程。
+- [用 Three.js 创建一个简单的示例](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)：Three.js 基础教程。我们还提供 [PlayCanvas](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 和 [Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) 的基础教程。
 - [游戏开发](/zh-CN/docs/Games)：MDN web 游戏开发目录页。提供与 2D、3D 画布相关的实用教程和技术，可参考“技术”和“教程”菜单项。
 
 ## 示例
@@ -819,13 +820,3 @@ WebGL 基于 [OpenGL](/en-US/docs/Glossary/OpenGL) 图形编程语言实现，�
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic)：用画布为 Web 音频 API 产生的音效提供实时的视觉效果。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本章目录
-
-- [web API 简介](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文档操作](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [从服务器获得数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [第三方 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [绘图](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [视频 API 和 音频 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

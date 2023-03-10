@@ -2,6 +2,7 @@
 title: 要素・クラス・ID によるセレクター
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
 
 このレッスンでは、利用できる最も簡単にみえるセレクタをとりあげます。これは今後あなたが作業でよく使うことになります。
@@ -76,7 +77,7 @@ ID セレクタは ピリオドではなく `#` で始めますが、それ以�
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 
-> **Note:** このレッスンの特例で学んだように ID は非常に特別なもので、他のセレクタを上書きすることがあります。これは対応が難しくなることがあります。多くの場合、ID を使用する代りにクラスを追加するほうが望ましいです。しかしその要素を対象にする方法が ID を使うしかないような場合、例えばそのマークアップにあなたがアクセスできず、編集できないような場合、この方法を使用できます。
+> **メモ:** このレッスンの特例で学んだように ID は非常に特別なもので、他のセレクタを上書きすることがあります。これは対応が難しくなることがあります。多くの場合、ID を使用する代りにクラスを追加するほうが望ましいです。しかしその要素を対象にする方法が ID を使うしかないような場合、例えばそのマークアップにあなたがアクセスできず、編集できないような場合、この方法を使用できます。
 
 ## 次の記事
 

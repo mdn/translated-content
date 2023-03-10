@@ -1,128 +1,83 @@
 ---
-title: GlobalEventHandlers.onpointerdown
+title: 'Element: pointerdown イベント'
 slug: Web/API/Element/pointerdown_event
-original_slug: Web/API/GlobalEventHandlers/onpointerdown
+original_slug: Web/API/Document/pointerdown_event
+l10n:
+  sourceCommit: 1732201134d732af9bfd49ee9e10f7e2086cc783
 ---
-{{APIRef("HTML DOM")}}
 
-**`ontransitioncancel`** は {{domxref("GlobalEventHandlers")}} のイベントハンドラーで、ポインティングデバイスが最初に押されたときに発生する {{event("pointerdown")}} イベントのイベントハンドラーを指定するために使用します。このイベントは {{domxref("Window")}}, {{domxref("Document")}}, {{domxref("Element")}} の各オブジェクトに送信されることがあります。
+{{APIRef}}
 
-これは、マウスまたはマウスと互換性のあるデバイスでユーザーが操作したために生成された場合の {{event("mousedown")}} イベントと機能的に同等です。 `pointerdown` イベントが {{domxref("Event.preventDefault", "preventDefault()")}} の呼び出しによってキャンセルされなかった場合、ほとんどのユーザーエージェントは `mousedown` イベントを発生させるので、ポインターイベントを使用していないサイトでも機能します。
+`pointerdown` イベントは、ポインターがアクティブになったときに発生します。マウスでは、その機器のボタンが押されていない状態から 1 つ以上のボタンが押されている状態に遷移したときに発生します。タッチ操作では、デジタイザーに物理的な接触が行われたときに発生します。ペンでは、スタイラスがデジタイザーに物理的に接触したときに発生します。
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、 `pointerdown` イベントのリスナーを追加することもできます。
+> **メモ:** [直接操作](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)ができるタッチ画面のブラウザーでは、 `pointerdown` イベントで[暗黙的なポインターキャプチャ](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)が発生するため、ターゲットが以降のすべてのポインターイベントをキャプチャし、キャプチャターゲット上で発生したかのように扱います。そのため、 `pointerover`, `pointerenter`, `pointerleave`, `pointerout` はこのキャプチャーが発生している間は**発生しません**。このキャプチャはターゲット要素上で {{domxref('element.releasePointerCapture')}} を呼び出すことで手動で解除することができ、 `pointerup` または `pointercancel` イベントの後で暗黙的に解除されます。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('pointerdown', (event) => {});
+
+onpointerdown = (event) => { };
 ```
-target.onpointerdown = downHandler;
 
-var downHandler = target.onpointerdown;
-```
+## イベント型
 
-### 値
+{{domxref("PointerEvent")}} です。 {{domxref("Event")}} を継承しています。
 
-関数 ({{jsxref("Function")}}) で、 `pointerdown` イベントが`target` で指定された {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}} に送られた場合に処理するためのものです。これは入力として `pointerdown` イベントを記述する {{domxref("PointerEvent")}} を受け取ります。
+{{InheritanceDiagram("PointerEvent")}}
+
+## イベントプロパティ
+
+_このインターフェイスは {{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{ domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
+  - : イベントを発生させたポインターの固有の識別子です。
+- {{ domxref('PointerEvent.width')}} {{ReadOnlyInline}}
+  - : ポインターが接触するジオメトリーの幅（X 軸の大きさ、CSS ピクセル単位）。
+- {{ domxref('PointerEvent.height')}} {{ReadOnlyInline}}
+  - : ポインターが接触するジオメトリーの高さ（Y 軸の大きさ、CSS ピクセル単位）。
+- {{ domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
+  - : ポインター入力の正規化された圧力で、範囲は `0` から `1` です。ここで `0` と `1` は、それぞれハードウェアが検出可能な最小圧力と最大圧力を表します。
+- {{ domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
+  - : ポインタ入力の正規化された接線圧力（バレル圧力またはシリンダー応力（[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)）とも呼ばれます）で、 `-1` から `1` の範囲であり、 `0` はコントロールの中立位置です。
+- {{ domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
+  - : Y-Z 平面と、ポインター（ペンスタイラスなど）の軸と Y 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
+- {{ domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
+  - : X-Z 平面と、ポインター（ペンスタイラスなど）の軸と X 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
+- {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
+  - : ポインター（ペンスタイラスなど）の長軸を中心とした時計回りの回転の度数（`0` から `359` の範囲の値）。
+- {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+  - : イベントの原因となった機器の種類（マウス、ペン、タッチなど）を示します。
+- {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
+  - : このポインターがこのポインター種別の主ポインターを表すかどうかを示します。
 
 ## 例
 
-この例では、`onpointerdown` を使用して `pointerdown` イベントを監視し、それに基づいて行動する方法を示します。 もちろん、`addEventListener()` を使うこともできます。
-
-#### JavaScript
-
-まず、`pointerdown` イベントを処理する JavaScript コードを見てみましょう。
+`addEventListener()` を使用した例です。
 
 ```js
-var targetBox = document.getElementById("target");
+const para = document.querySelector('p');
 
-targetBox.onpointerdown = handleDown;
-
-function handleDown(evt) {
-  var action;
-
-  switch(evt.pointerType) {
-    case "mouse":
-      action = "clicking";
-      break;
-    case "pen":
-      action = "tapping";
-      break;
-    case "touch":
-      action = "touching";
-      break;
-    default:
-      action = "interacting with";
-      break;
-  }
-
-  targetBox.innerHTML = "<strong>Thanks for " + action + " me!</strong>";
-  evt.preventDefault();
-}
+para.addEventListener('pointerdown', (event) => {
+  console.log('Pointer down event');
+});
 ```
 
-これは単に `pointerdown` イベントのイベントハンドラとして関数 `handleDown()` を確立するために `onpointerdown` を使います。
-
-`handleDown()` 関数は、今度は {{domxref("PointerEvent.pointerType", "pointerType")}} の値を調べて使用されているポインティングデバイスの種類を判断し、その情報を使用して文字列をカスタマイズしてターゲットボックスの内容を置き換えます。
-
-それから、イベントの {{domxref("Event.preventDefault", "preventDefault()")}} メソッドを呼び出して、`mousedown` イベントがトリガーされないようにします。 そうしないで、ポインターイベントのサポートが欠けている場合に備えて、それらのイベント用のハンドラを持っていると、イベントが 2 回処理される可能性があります。
-
-{{event("pointerup")}} イベント用のハンドラーもあります。
+`onpointerdown` イベントハンドラープロパティを使用した例です。
 
 ```js
-targetBox.onpointerup = handleUp;
+const para = document.querySelector('p');
 
-function handleUp(evt) {
-  targetBox.innerHTML = "Tap me, click me, or touch me!";
-  evt.preventDefault();
-}
+para.onpointerdown = (event) => {
+  console.log('Pointer down event');
+};
 ```
-
-このコードの役割は、ユーザーによる要素の操作が終了した後 (例えば、マウスボタンを放したとき、またはスタイラスや指を画面から離したときなど) に、元のテキストをターゲットボックスに復元することです。
-
-さらに、`mouseup` イベントが不必要にトリガーされないようにするために、イベントの {{domxref("Event.preventDefault", "preventDefault()")}} メソッドを呼び出します。
-
-#### HTML
-
-HTML は次のように非常に単純です。
-
-```html
-<div id="target">
-  Tap me, click me, or touch me!
-</div>
-```
-
-#### CSS
-
-CSS は単にターゲットの外観を設定するだけで、その機能にはまったく影響しません。
-
-```css
-#target {
-  width: 400px;
-  height: 30px;
-  text-align: center;
-  font: 16px "Open Sans", "Helvetica", sans-serif;
-  color: white;
-  background-color: blue;
-  border: 2px solid darkblue;
-  cursor: pointer;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-```
-
-#### 結果
-
-結果の出力は次の通りです。 ボックスをタップ、クリック、タッチして、何が起こるかを確認してください。 最大の効果を得るには、さまざまなポインタタイプで試してください。
-
-{{EmbedLiveSample("Example", 450, 50)}}
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                                     | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerdown', 'onpointerdown')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerdown', 'onpointerdown')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -130,8 +85,14 @@ CSS は単にターゲットの外観を設定するだけで、その機能に�
 
 ## 関連情報
 
-- [ポインターイベント](/ja/docs/Web/API/Pointer_events)
-- [ポインターイベントの使用](/ja/docs/Web/API/Pointer_events/Using_Pointer_Events)
-- [座標系](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems)
-- [`Document: pointerdown`](/ja/docs/Web/API/Document/pointerdown_event) イベント
-- [`HTMLElement: pointerdown`](/ja/docs/Web/API/HTMLElement/pointerdown_event) イベント
+- 関連イベント
+
+  - [`gotpointercapture`](/ja/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/ja/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/ja/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/ja/docs/Web/API/Element/pointerenter_event)
+  - [`pointermove`](/ja/docs/Web/API/Element/pointermove_event)
+  - [`pointercancel`](/ja/docs/Web/API/Element/pointercancel_event)
+  - [`pointerup`](/ja/docs/Web/API/Element/pointerup_event)
+  - [`pointerout`](/ja/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/ja/docs/Web/API/Element/pointerleave_event)

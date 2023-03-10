@@ -2,6 +2,7 @@
 title: Credential
 slug: Web/API/Credential
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
 **`Credential`** は [Credential Management API](/ja/docs/Web/API/Credential_Management_API) のインターフェイスで、信頼の決定に必要なエンティティについての情報を提供します。
@@ -29,9 +30,7 @@ slug: Web/API/Credential
 
 ## 仕様書
 
-| 仕様書                                           | 状態                                         | 備考     |
-| ------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

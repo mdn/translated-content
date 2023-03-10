@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Media_Streams_API
 original_slug: Web/API/Media_Streams_API
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 L'**API Processing MediaStream**, souvent appelée _Media Stream API_ ou _Stream API_, est la partie de [WebRTC](/fr/docs/WebRTC) décrivant un flux de données audio ou vidéo, les méthodes pour les manipuler, les contraintes associées au type de données, les erreurs et succès des callbacks avec les données asynchrones, et les évènements déclenchés durant le processus.
@@ -51,13 +52,12 @@ Les premières versions de la spécification pour Media Capture and Streams API 
 
 ## Évènements
 
-- {{event("addtrack")}}
-- {{event("ended")}}
-- {{event("muted")}}
-- {{event("overconstrained")}}
-- {{event("removetrack")}}
-- {{event("started")}}
-- {{event("unmuted")}}
+- [`addtrack`](/fr/docs/Web/API/MediaStream/addtrack_event)
+- [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event)
+- [`mute`](/fr/docs/Web/API/MediaStreamTrack/mute_event)
+- [`overconstrained`](/fr/docs/Web/API/MediaStreamTrack.overconstrained_event)
+- [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event)
+- [`unmute`](/fr/docs/Web/API/MediaStreamTrack/unmute_event)
 
 ## Guides et tutorials
 
@@ -67,7 +67,7 @@ Les articles qui suivent fournissent des manuels et guides pour utiliser cette A
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## Voir aussi
 

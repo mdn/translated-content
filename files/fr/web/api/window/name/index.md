@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Window/name
 ---
+
 {{APIRef}}
 
 ## En bref

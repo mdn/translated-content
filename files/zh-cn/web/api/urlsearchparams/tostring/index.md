@@ -2,6 +2,7 @@
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
 ---
+
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 
 {{domxref("URLSearchParams")}} 接口的 toString() 方法 返回适用在 URL 中的查询字符串。
@@ -34,7 +35,7 @@ console.log(params.toString());
 
 ## 浏览器兼容
 
-{{Compat("api.URLSearchParams.toString")}}
+{{Compat}}
 
 ## 参考
 

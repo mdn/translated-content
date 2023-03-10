@@ -2,6 +2,7 @@
 title: ClipboardItem.getType()
 slug: Web/API/ClipboardItem/getType
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **`getType()`** は {{domxref("ClipboardItem")}} インターフェイスのメソッドで、要求された {{Glossary("MIME type", "MIME タイプ")}} の {{domxref("Blob")}} で解決するプロミス ({{jsxref("Promise")}}) を返します。 MIME タイプが見つからない場合はエラーになります。

@@ -1,89 +1,97 @@
 ---
-title: notification
-slug: Web/API/notification
+title: Notification
+slug: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 的**通知**接口用于向用户配置和显示桌面通知。
+[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 的接口 `Notification` 用于配置以向用户显示桌面通知。
 
-## 构造方法
+这些通知的外观和功能因平台而异，但通常它们会提供一种异步向用户提供信息的方式。
 
-```
-let notification = new Notification(title, options)
-```
+{{InheritanceDiagram}}
 
-### 参数
+## 构造函数
 
-- `title`
-  - : 一定会被显示的通知标题
-- `options` {{optional_inline}}
+- {{domxref("Notification.Notification", "Notification()")}}
+  - : 创建一个新的 `Notification` 实例对象。
 
-  - : 一个被允许用来设置通知的对象。它包含以下属性：
+## 静态属性
 
-    - `dir` : 文字的方向；它的值可以是 `auto（自动）`, `ltr（从左到右）`, or `rtl`（从右到左）
-    - `lang`: 指定通知中所使用的语言。这个字符串必须在 [BCP 47 language tag](http://tools.ietf.org/html/bcp47) 文档中是有效的。
-    - `body`: 通知中额外显示的字符串
-    - `tag`: 赋予通知一个 ID，以便在必要的时候对通知进行刷新、替换或移除。
-    - `icon`: 一个图片的 URL，将被用于显示通知的图标。
+这些属性只能用于 `Notification` 对象自身。
 
-## 属性
+- {{domxref("Notification.permission")}} {{ReadOnlyInline}}
 
-### 静态属性
+  - : 一个字符串，表示当前显示通知的权限。可能的值是：
 
-这些属性仅在 `Notification` 对象上有效。
+    - `denied`——用户拒绝显示通知。
+    - `granted`——用户接受显示通知。
+    - `default`——用户选择是未知的，因此浏览器的行为类似于值是 denied。
 
-- {{domxref("Notification.permission")}} {{readonlyinline}}
-  - : 一个用于表明当前通知显示授权状态的字符串。可能的值包括：`denied` (用户拒绝了通知的显示), `granted` (用户允许了通知的显示), 或 `default` (因为不知道用户的选择，所以浏览器的行为与 denied 时相同).
+- {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 设备和用户代理支持的最大的操作数量。
 
-### 实例属性
+## 实例属性
 
-这些属性仅在 `Notification` 的实例中有效。
+这些属性仅用于 `Notification` 实例对象上。
 
-- {{domxref("Notification.title")}} {{readonlyinline}} (moz only)
-  - : 在构造方法中指定的 title 参数。
-- {{domxref("Notification.dir")}} {{readonlyinline}}
-  - : 通知的文本显示方向。在构造方法的 options 中指定。
-- {{domxref("Notification.lang")}} {{readonlyinline}}
-  - : 通知的语言。在构造方法的 options 中指定。
-- {{domxref("Notification.body")}} {{readonlyinline}}
-  - : 通知的文本内容。在构造方法的 options 中指定。
-- {{domxref("Notification.tag")}} {{readonlyinline}}
-  - : 通知的 ID。在构造方法的 options 中指定。
-- {{domxref("Notification.icon")}} {{readonlyinline}}
-  - : 通知的图标图片的 URL 地址。在构造方法的 options 中指定。
+- {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 在构造函数的 `options` 参数中指定的通知的操作数组。
+- {{domxref("Notification.badge")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 当没有足够的空间去显示通知自身时，用于表示通知图像的 URL。
+- {{domxref("Notification.body")}} {{ReadOnlyInline}}
+  - : 在构造函数的 `options` 参数中指定的通知的正文字符串。
+- {{domxref("Notification.data")}} {{ReadOnlyInline}}
+  - : 返回一个通知数据的结构化克隆。
+- {{domxref("Notification.dir")}} {{ReadOnlyInline}}
+  - : 在构造函数的 `options` 参数中指定的通知的文本方向。
+- {{domxref("Notification.lang")}} {{ReadOnlyInline}}
+  - : 在构造函数的 `options` 参数中指定的通知的语言。
+- {{domxref("Notification.tag")}} {{ReadOnlyInline}}
+  - : 在构造函数的 `options` 参数中指定的通知的 ID（如果有的话）。
+- {{domxref("Notification.icon")}} {{ReadOnlyInline}}
+  - : 在构造函数的 `options` 参数中用作指定通知图标的图像 URL。
+- {{domxref("Notification.image")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 作为通知的一部分显示的图像 URL，在构造函数的选项参数中指定。
+- {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 指定在新通知取代旧通知后，是否应该通知用户。
+- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 一个布尔值，表示通知应该保持活动状态，直到用户点击或者关掉它，而不是自动关闭。
+- {{domxref("Notification.silent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 指定通知是否应该静音——即，无论设备的设置如何，都不应发出声音和摆动。
+- {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 指定通知创建或者应用时（过去、现在或者未来）的时间。
+- {{domxref("Notification.title")}} {{ReadOnlyInline}}
+  - : 在构造函数第一个参数中指定的通知标题。
+- {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 为拥有振动硬件的终端设备指定振动模式。
 
-#### 事件处理
+## 静态方法
 
-- {{domxref("Notification.onclick")}}
-  - : 处理 {{event("click")}} 事件的处理。每当用户点击通知时被触发。
-- {{domxref("Notification.onshow")}}
-  - : 处理 {{event("show")}} 事件的处理。当通知显示的时候被触发。
-- {{domxref("Notification.onerror")}}
-  - : 处理 {{event("error")}} 事件的处理。每当通知遇到错误时被触发。
-- {{domxref("Notification.onclose")}}
-  - : 处理 {{event("close")}} 事件的处理。当用户关闭通知时被触发。
-
-## 方法
-
-### 静态方法
-
-这些方法仅在 `Notification` 对象中有效。
+这些属性只能用于 `Notification` 对象自身。
 
 - {{domxref("Notification.requestPermission()")}}
-  - : 用于当前页面向用户申请显示通知的权限。这个方法只能被用户行为调用（比如：onclick 事件），并且不能被其他的方式调用。
+  - : 请求用户允许显示通知。
 
-### 实例方法
+## 实例方法
 
-这些方法仅在 `Notification` 实例或其 [`prototype`](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 中有效。
+这些属性仅用于 `Notification` 实例对象或者通过 [`prototype`](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 提供。`Notification` 对象也继承自 {{domxref("EventTarget")}} 接口。
 
 - {{domxref("Notification.close()")}}
-  - : 用于关闭通知。
+  - : 以编程方式关闭通知实例。
 
-`Notification` 对象继承自 {{domxref("EventTarget")}} 接口。
+## 事件
 
-{{page("/en-US/docs/Web/API/EventTarget","Methods")}}
+- {{domxref("Notification.click_event", "click")}}
+  - : 当用户点击通知时触发。
+- {{domxref("Notification.close_event", "close")}}
+  - : 当用户关闭通知时触发。
+- {{domxref("Notification.error_event", "error")}}
+  - : 当通知发生错误时触发。
+- {{domxref("Notification.show_event", "show")}}
+  - : 当通知显示时触发。
 
-## Example
+## 示例
 
 假定有如下 HTML：
 
@@ -91,61 +99,46 @@ let notification = new Notification(title, options)
 <button onclick="notifyMe()">Notify me!</button>
 ```
 
-接下来发送一条通知：
+可能按以下方式发送通知——在这里，我们提供了一个相当冗长且完整的代码，如果你想要首先检查通知是否受支持，然后检查用户是否已授予当前来源发送通知的权限，然后根据需要请求权限，最后发送一个通知。
 
 ```js
 function notifyMe() {
-  // 先检查浏览器是否支持
   if (!("Notification" in window)) {
+    // Check if the browser supports notifications
     alert("This browser does not support desktop notification");
-  }
-
-  // 检查用户是否同意接受通知
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
-  }
-
-  // 否则我们需要向用户获取权限
-  else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
-      // 如果用户接受权限，我们就可以发起一条消息
+  } else if (Notification.permission === "granted") {
+    // Check whether notification permissions have already been granted;
+    // if so, create a notification
+    const notification = new Notification("Hi there!");
+    // …
+  } else if (Notification.permission !== "denied") {
+    // We need to ask the user for permission
+    Notification.requestPermission().then((permission) => {
+      // If the user accepts, let's create a notification
       if (permission === "granted") {
-         var notification = new Notification("Hi there!");
+        const notification = new Notification("Hi there!");
+        // …
       }
     });
   }
 
-
-  // 最后，如果执行到这里，说明用户已经拒绝对相关通知进行授权
-  // 出于尊重，我们不应该再打扰他们了
+  // At last, if the user has denied notifications, and you
+  // want to be respectful there is no need to bother them anymore.
 }
 ```
 
-### See the live result
+在这里，我们不再展示一个在线实例，因为 Chrome 和 Firefox 不再允许从跨域的 {{htmlelement("iframe")}} 请求通知权限，其他浏览器会陆续跟进。要查看实际示例，请查看我们的[待办事项示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（参见[在线运行的应用程序](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+> **备注：** 在上面的示例中，我们生成了响应用户手势的的通知（点击按钮）。这是最佳实践——你不应该向用户发送它们不同意的通知——而且未来浏览器将明确的禁止未响应用户手势发出的通知。例如， Firefox 已经从版本 72 开始就这么做了。
 
 ## 规范
 
 {{Specifications}}
 
-## 权限
-
-当你要在开放 web 应用中使用通知时，请确保将 `desktop-notification` 权限添加到你的 manifest 文件中。通知可以被用于任何权限级别，hosted 或更高。
-
-```
-"permissions": {
-    "desktop-notification":{}
-}
-```
-
 ## 浏览器兼容性
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
-## 请参见
+## 参见
 
-- [使用 Web Notifications](/zh-CN/docs/Web/API/notification/Using_Web_Notifications)
-- [Firefox OS 图片上传器示例 App](https://github.com/soapdog/firefoxos-sample-app-image-uploader)
-- <https://codepen.io/xgqfrms/pen/vxaQKe>
+- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

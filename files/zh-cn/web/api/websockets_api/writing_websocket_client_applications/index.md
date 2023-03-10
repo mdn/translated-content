@@ -2,15 +2,16 @@
 title: 编写 WebSocket 客户端应用
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
+
 WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 WebSocket 服务器通信。
 
 {{AvailableInWorkers}}
 
-> **警告：** 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)，then [也可以在这里试一试](https://mdn-samples.mozilla.org/s/websocket-chat)。现在示例中有一个 bug，使用不安全的 WebSockets 连接需要更新使用安全的 WebSocket，我们将很快修复。
+> **警告：** 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
 
 ## 创建 WebSocket 对象
 
-为了使用 WebSocket 协议通信，你需要创建一个 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 对象；这将会自动地尝试建立与服务器的连接。
+为了使用 WebSocket 协议通信，你需要创建一个 [`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) 对象；这将会自动地尝试建立与服务器的连接。
 
 WebSocket 构造函数接受一个必要参数和一个可选参数：
 
@@ -33,9 +34,9 @@ WebSocket WebSocket(
 
 ### 连接错误
 
-如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 对象（然后调用其`onerror` handler），然后 [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) 被发送给[`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) （然后调用其 `onclose` handler）以说明连接关闭的原因。
+如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 [`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) 对象（然后调用其`onerror` handler），然后 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 被发送给[`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) （然后调用其 `onclose` handler）以说明连接关闭的原因。
 
-在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
+在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
 
 ### 示例
 
@@ -65,7 +66,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protoco
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer)来发送。
+你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer)来发送。
 
 > **备注：** 在版本 11 之前，Firefox 只支持以字符串的形式发送数据。
 
@@ -79,12 +80,12 @@ exampleSocket.onopen = function (event) {
 
 ### 使用 JSON 发送对象
 
-你可以方便地使用[JSON](/en/JSON) 来向服务器发送复杂一些的数据。例如一个聊天程序与服务器交互的协议可以通过封装在 JSON 里的数据来实现：
+你可以方便地使用[JSON](/zh-CN/JSON) 来向服务器发送复杂一些的数据。例如一个聊天程序与服务器交互的协议可以通过封装在 JSON 里的数据来实现：
 
 ```js
 // 服务器向所有用户发送文本
 function sendText() {
-  // 构造一个 msg 对象， 包含了服务器处理所需的数据
+  // 构造一个 msg 对象，包含了服务器处理所需的数据
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
@@ -158,17 +159,17 @@ exampleSocket.onmessage = function(event) {
 };
 ```
 
-这里我们使用 [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
+这里我们使用 [`JSON.parse()`](/zh-CN/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
 
 ### 文本数据的格式
 
 通过 WebSocket 连接收到的文本是 UTF-8 格式的。
 
-在 Gecko 9.0 {{ geckoRelease("9.0") }} 之前，一部分有效的 UTF-8 文本中的非字符将导致连接被中断。现在 Gecko 已经允许这些值。
+在 Gecko 9.0 之前，一部分有效的 UTF-8 文本中的非字符将导致连接被中断。现在 Gecko 已经允许这些值。
 
 ## 关闭连接
 
-当你不需要再用 WebSocket 连接了，调用 WebSocket [`close()`](</en/WebSockets/WebSockets_reference/WebSocket#close()>)方法：
+当你不需要再用 WebSocket 连接了，调用 WebSocket [`close()`](</en/WebSockets/WebSockets_reference/WebSocket#close()>) 方法：
 
 ```js
 exampleSocket.close();

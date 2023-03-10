@@ -1,13 +1,8 @@
 ---
 title: Server-Timing
 slug: Web/HTTP/Headers/Server-Timing
-tags:
-  - HTTP
-  - Reference
-  - パフォーマンス
-  - ヘッダー
-translation_of: Web/HTTP/Headers/Server-Timing
 ---
+
 {{HTTPSidebar}}
 
 **`Server-Timing`** ヘッダーは、指定されたリクエスト－レスポンスのサイクルについての 1 つ以上のメトリックと説明を通信します。ユーザーのブラウザーの開発ツール内や、 {{domxref("PerformanceServerTiming")}} インターフェイス内で、任意のバックエンドサーバーのタイミングメトリック (データベースの読み書き、 CPU 時間、ファイルシステムアクセス、など) を表面化させるために使用します。
@@ -64,9 +59,7 @@ Server-Timing: total;dur=123.4
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                                 | 題名     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Server Timing','#the-server-timing-header-field', 'Server-Timing Header Field')}} | {{Spec2("Server Timing")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

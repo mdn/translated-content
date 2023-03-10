@@ -1,12 +1,6 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-tags:
-  - API
-  - HTML
-  - Window
-  - 레퍼런스
-translation_of: Web/API/Window/location
 ---
 {{APIRef}}
 
@@ -16,8 +10,10 @@ Though `Window.location` is a _read-only_ `Location` object, you can also assign
 
 ## 문법
 
-    var oldLocation = location;
-    location = newLocation;
+```js
+var oldLocation = location;
+location = newLocation;
+```
 
 ## 예제
 
@@ -140,7 +136,7 @@ span.intLink {
 </html>
 ```
 
-> **참고:** The function `showNode` is also an example of the use of the [`for`](/en/JavaScript/Reference/Statements/for "en/JavaScript/Reference/Statements/for") cycle without a `statement` section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
+> **참고:** The function `showNode` is also an example of the use of the [`for`](/en/JavaScript/Reference/Statements/for) cycle without a `statement` section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
 
 아래는 같은 역할을 하지만, 애니메이션 스크롤이 들어간 버전…:
 
@@ -186,7 +182,7 @@ var showBookmark = (function () {
 })();
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -198,5 +194,5 @@ var showBookmark = (function () {
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the document, {{domxref("Document.location")}}.
-- [Manipulating the browser history](/en/DOM/Manipulating_the_browser_history "en/DOM/Manipulating the browser history")
+- [Manipulating the browser history](/en/DOM/Manipulating_the_browser_history)
 - [hashchange](/ko/docs/DOM/Mozilla_event_reference/hashchange)

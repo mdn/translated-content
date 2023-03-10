@@ -1,16 +1,8 @@
 ---
 title: Notification.permission
-slug: Web/API/notification/permission
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-translation_of: Web/API/Notification/permission
-browser-compat: api.Notification.permission
+slug: Web/API/Notification/permission
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propiedad de solo lectura `permission` de la interfaz {{domxref("Notification")}} indica el permiso concedido por el usuario al origen actual para mostrar notificaciones web.

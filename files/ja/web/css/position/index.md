@@ -1,15 +1,8 @@
 ---
 title: position
 slug: Web/CSS/position
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.position
-translation_of: Web/CSS/position
 ---
+
 {{CSSRef}}
 
 **`position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文書内で要素がどのように配置されるかを設定します。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティが、配置された要素の最終的な位置を決めます。

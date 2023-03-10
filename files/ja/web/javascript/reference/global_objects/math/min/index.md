@@ -1,20 +1,8 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-tags:
-  - JavaScript
-  - Lowest Number
-  - Lowest Value
-  - Math
-  - Method
-  - Minimum
-  - Reference
-  - Smallest
-  - Smallest Number
-  - Smallest Value
-  - min
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
+
 {{JSRef}}
 
 **`Math.min()`** は静的関数で、引数で渡されたもののうち最小の値を返します。または引数のいずれかが数値以外で、数値に変換できない場合は {{jsxref("NaN")}} を返します。
@@ -77,9 +65,7 @@ var x = Math.min(f(foo), boundary);
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.min', 'Math.min')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

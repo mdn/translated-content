@@ -2,6 +2,7 @@
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
 ---
+
 {{HTTPSidebar}}
 
 **`Proxy-Authorization`** 是一个请求首部，其中包含了用户代理提供给代理服务器的用于身份验证的凭证。这个首部通常是在服务器返回了 {{HTTPStatus("407")}} `Proxy Authentication Required` 响应状态码及 {{HTTPHeader("Proxy-Authenticate")}} 首部后发送的。

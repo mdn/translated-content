@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - プロトタイプ
-browser-compat: javascript.builtins.Object.propertyIsEnumerable
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 **`propertyIsEnumerable()`** メソッドは、指定されたプロパティが列挙可能で、かつオブジェクト自身のプロパティであるかどうかを示す論理値を返します。
@@ -34,7 +28,7 @@ propertyIsEnumerable(prop)
 
 すべてのオブジェクトは `propertyIsEnumerable` メソッドを持っています。このメソッドはあるオブジェクトのプロパティが、プロトタイプチェーンを通じて継承されたプロパティを除いて {{jsxref("Statements/for...in", "for...in")}} ループで列挙可能かどうかを特定することができます。もしオブジェクトが指定されたプロパティを持っていない場合、このメソッドは `false` を返します。
 
-> **Note:** 列挙可能なプロパティは {{jsxref("Statements/for...in", "for...in")}} ループで反復処理されますが、 {{jsxref("Global_Objects/Symbol", "Symbol")}} は含まれないことに留意してください。
+> **メモ:** 列挙可能なプロパティは {{jsxref("Statements/for...in", "for...in")}} ループで反復処理されますが、 {{jsxref("Global_Objects/Symbol", "Symbol")}} は含まれないことに留意してください。
 
 ## 例
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-repeat
 ---
+
 {{CSSRef}}
 
 Свойство **`background-repeat`** устанавливает, как фоновые изображения будет повторяться. Они могут повторяться по горизонтальной и вертикальной оси или не повторяться вовсе.
@@ -20,24 +21,26 @@ translation_of: Web/CSS/background-repeat
 
 ## Синтаксис
 
-    /*Ключевые значения*/
-    background-repeat: repeat-x;
-    background-repeat: repeat-y;
-    background-repeat: repeat;
-    ​​​​​​​background-repeat: space;
-    ​​​​​​​background-repeat: round;
-    ​​​​​​​background-repeat: no-repeat;
+```css
+/*Ключевые значения*/
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+background-repeat: repeat;
+background-repeat: space;
+background-repeat: round;
+background-repeat: no-repeat;
 
-    /*Два значения: горизонтальное | вертикальное*/
-    background-repeat: repeat space;
-    background-repeat: repeat repeat;
-    background-repeat: round space;
-    background-repeat: no-repeat round;
+/*Два значения: горизонтальное | вертикальное*/
+background-repeat: repeat space;
+background-repeat: repeat repeat;
+background-repeat: round space;
+background-repeat: no-repeat round;
 
-    /* Глобальные значения */
-    background-repeat: inherit;
-    background-repeat: initial;
-    background-repeat: unset;
+/* Глобальные значения */
+background-repeat: inherit;
+background-repeat: initial;
+background-repeat: unset;
+```
 
 ### Значения
 
@@ -85,7 +88,7 @@ translation_of: Web/CSS/background-repeat
 /* Совместно для всех DIVS в примере */
 li {margin-bottom: 12px;}
 div {
-    background-image: url(https://mdn.mozillademos.org/files/12005/starsolid.gif);
+    background-image: url(starsolid.gif);
     width: 144px;
     height: 84px;
 }
@@ -106,7 +109,7 @@ div {
 
 /* Несколько изображений */
 .five {
-    background-image:  url(https://mdn.mozillademos.org/files/12005/starsolid.gif),
+    background-image:  url(starsolid.gif),
                        url(https://developer.mozilla.org/static/img/favicon32.png);
     background-repeat: repeat-x,
                        repeat-y;
@@ -132,4 +135,4 @@ div {
 
 ## Смотрите также
 
-- [Использование нескольких CSS фонов](/ru/docs/CSS/Using_CSS_multiple_backgrounds "CSS/Using_CSS_multiple_backgrounds")
+- [Использование нескольких CSS фонов](/ru/docs/CSS/Using_CSS_multiple_backgrounds)

@@ -1,14 +1,8 @@
 ---
 title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 ---
+
 {{JSRef}}
 
 **`Math.log2()`** 関数は、数値の 2 を底とした対数を返します。
@@ -65,9 +59,7 @@ Math.log2(1024); // 10
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

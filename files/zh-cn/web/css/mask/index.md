@@ -2,6 +2,7 @@
 title: mask
 slug: Web/CSS/mask
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`mask`** 允许使用者通过遮罩或者裁切特定区域的图片的方式来隐藏一个元素的部分或者全部可见区域。
@@ -75,7 +76,7 @@ mask: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.mask")}}
+{{Compat}}
 
 ## 参见
 

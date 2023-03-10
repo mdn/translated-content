@@ -1,11 +1,8 @@
 ---
 title: lengthAdjust
 slug: Web/SVG/Attribute/lengthAdjust
-tags:
-  - NeedsCompatTable
-  - SVG
-translation_of: Web/SVG/Attribute/lengthAdjust
 ---
+
 SVG の `<text>` 要素または `<tspan>` 要素が特定の長さを有している場合、それは `textLength` 属性を使って設定したものである訳ですが、`lengthAdjust` 属性は、テキストをその長さに引き延ばすかあるいはその長さに圧縮する方法を制御します。
 
 この属性で可能な二つの値は、 **`spacing`** と **`spacingAndGlyphs`** です。`spacing` (デフォルト値) を使うと、文字の形が保たれる一方で、文字同士の間のスペースが伸び縮みします。`spacingAndGlyphs` を使うと、テキスト要素全体が、そのテキストの方向に沿って引き延ばされます。

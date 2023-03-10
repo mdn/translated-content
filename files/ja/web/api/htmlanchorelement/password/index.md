@@ -3,6 +3,7 @@ title: HTMLAnchorElement.password
 slug: Web/API/HTMLAnchorElement/password
 original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.password`** プロパティは、ドメイン名の前で指定されたパスワードが入った文字列です。

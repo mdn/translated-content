@@ -2,6 +2,7 @@
 title: Encoding API 编码
 slug: Web/API/Encoding_API/Encodings
 ---
+
 {{DefaultAPISidebar("Encoding API")}}
 
 {{domxref("TextDecoder")}} 和 {{domxref("TextDecoderStream")}} 构造函数可以传递一个可选的 `label`，表示使用的编码。默认是 `UTF-8`。

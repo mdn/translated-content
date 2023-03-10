@@ -7,6 +7,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/foreignObject
 ---
+
 {{SVGRef}}
 
 L'élément **`<foreignObject>`** permet d'inclure des éléments d'un espace de noms XML différent à l'intérieur du [SVG](/fr/docs/Web/SVG). Dans le contexte d'un navigateur, il s'agit généralement d'inclure du XHTML/HTML.
@@ -54,16 +55,16 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("height")}}
   - : Cet attribut détermine la hauteur du rectangle.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
 - {{SVGAttr("width")}}
   - : Cet attribut détermine la largeur du rectangle.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
 - {{SVGAttr("x")}}
   - : Cet attribut détermine la coordonnée x du rectangle.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("y")}}
   - : Cet attribut détermine la coordonnée y du rectangle.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
 
 > **Note :** À partir de SVG2 `x`, `y`, `width`, et `height` sont des _Propriétés Géometriques_, ce qui signifie que ces attributs peuvent également être utilisés comme des propriétés CSS pour cet élément.
 
@@ -88,11 +89,8 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                   | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}} |                     |
-| {{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.foreignObject")}}
+{{Compat}}

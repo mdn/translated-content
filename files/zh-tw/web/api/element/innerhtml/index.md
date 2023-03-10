@@ -2,6 +2,7 @@
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 [Element](/zh-TW/docs/Glossary/Element) 的「innerHTML」屬性獲取或設置元素中包含的 HTML 或 XML 標記。
@@ -121,7 +122,7 @@ log("Logging mouse events inside this container...");
 
 The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text. Then the message is appended to the box with the class `"log"`.
 
-We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as {{event("mousedown")}}, {{event("click")}}, and {{event("mouseenter")}}):
+We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as [`mousedown`](/zh-TW/docs/Web/API/Element/mousedown_event), [`click`](/zh-TW/docs/Web/API/Element/click_event), and [`mouseenter`](/zh-TW/docs/Web/API/Element/mouseenter_event)):
 
 ```js
 function logEvent(event) {
@@ -188,7 +189,7 @@ The resulting content looks like this. You can see output into the log by moving
 
 ## Browser compatibility
 
-{{Compat("api.Element.innerHTML")}}
+{{Compat}}
 
 ## See also
 

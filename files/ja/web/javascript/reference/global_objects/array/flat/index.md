@@ -1,15 +1,10 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - flat
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
+l10n:
+  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
 ---
+
 {{JSRef}}
 
 **`flat()`** メソッドは、すべてのサブ配列の要素を指定した深さで再帰的に結合した新しい配列を生成します。
@@ -45,7 +40,7 @@ arr.reduce((acc, val) => acc.concat(val), []);
 // [1, 2, 3, 4]
 
 // または、分割代入の構文を使用して
-const flattened = arr => [].concat(...arr);
+const flattened = (arr) => [].concat(...arr);
 ```
 
 ### reduce + concat + isArray + 再帰
@@ -55,9 +50,13 @@ const arr = [1, 2, [3, 4, [5, 6]]];
 
 // reduce と concat の再帰によって深いレベルを平坦化することができる
 function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
-};
+  if (!Array.isArray(arr)) {
+    return arr;
+  }
+  return d > 0
+    ? arr.reduce((acc, val) => acc.concat(flatDeep(val, d - 1)), [])
+    : arr.slice();
+}
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]
@@ -72,10 +71,10 @@ flatDeep(arr, Infinity);
 function flatten(input) {
   const stack = [...input];
   const res = [];
-  while(stack.length) {
+  while (stack.length) {
     // pop value from stack
     const next = stack.pop();
-    if(Array.isArray(next)) {
+    if (Array.isArray(next)) {
       // push back array items, won't modify the original input
       stack.push(...next);
     } else {
@@ -95,16 +94,17 @@ flatten(arr);
 
 ```js
 function* flatten(array, depth) {
-    if(depth === undefined) {
-      depth = 1;
+  if (depth === undefined) {
+    depth = 1;
+  }
+
+  for (const item of array) {
+    if (Array.isArray(item) && depth > 0) {
+      yield* flatten(item, depth - 1);
+    } else {
+      yield item;
     }
-    for(const item of array) {
-        if(Array.isArray(item) && depth > 0) {
-          yield* flatten(item, depth - 1);
-        } else {
-          yield item;
-        }
-    }
+  }
 }
 
 const arr = [1, 2, [3, 4, [5, 6]]];
@@ -146,17 +146,17 @@ arr5.flat();
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.flat', 'Array.prototype.flat')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Array.flat")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`Array.prototype.flat` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

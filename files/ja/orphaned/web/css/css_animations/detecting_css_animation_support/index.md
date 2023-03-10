@@ -1,17 +1,9 @@
 ---
 title: CSS アニメーション対応の検出
 slug: orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
-tags:
-  - 上級者
-  - CSS
-  - CSS アニメーション
-  - ガイド
-  - JavaScript
-  - Junk
-  - リファレンス
-translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 original_slug: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 ---
+
 {{CSSRef}}
 
 CSS アニメーションでは CSS だけを使用してコンテンツの創造的なアニメーションを行うことができます。しかし、この機能が利用できないことがよくあり、この場合には同様の効果を JavaScript コードで実現したいと思うかもしれません。この記事では、[このブログ投稿](https://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/) (Chris Heilmann 著) に基づいて、これを行うためのテクニックを紹介します。

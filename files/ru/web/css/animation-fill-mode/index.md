@@ -11,7 +11,7 @@ translation_of: Web/CSS/animation-fill-mode
 
 ## Описание
 
-[CSS](/en/CSS "CSS") свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
+[CSS](/en/CSS) свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
 
 {{cssinfo}}
 
@@ -46,7 +46,7 @@ animation-fill-mode: both, forwards, none;
   - | : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}: | `animation-direction` | первый ключевой кадр |
     | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------- |
     | `normal` или `alternate`                                                                                                                                                                                                              | `0%` или `from`       |
-    | `reverse` или `alternate-reverse`                                                                                                                                                                                                     | ` 100% или ``to`      |
+    | `reverse` или `alternate-reverse`                                                                                                                                                                                                     | `100%` или `to`      |
 - `both`
   - : Анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.
 
@@ -112,5 +112,5 @@ animation-fill-mode: both, forwards, none;
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

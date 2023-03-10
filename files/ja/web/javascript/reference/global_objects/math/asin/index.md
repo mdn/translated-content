@@ -1,13 +1,8 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
 ---
+
 {{JSRef}}
 
 **`Math.asin()`** 関数は、引数として与えた数値の逆正弦 (アークサイン) をラジアン単位で返します。
@@ -54,9 +49,7 @@ Math.asin(2);   // NaN
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.asin', 'Math.asin')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

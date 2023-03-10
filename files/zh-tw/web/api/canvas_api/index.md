@@ -2,11 +2,12 @@
 title: Canvas API
 slug: Web/API/Canvas_API
 ---
-{{CanvasSidebar}}
+
+{{DefaultAPISidebar("Canvas API")}}
 
 **{{HTMLElement("canvas")}}** 是 [HTML5](/zh-TW/docs/HTML) 的新元素，可透過 Script（通常是 [JavaScript](/zh-TW/docs/JavaScript)）繪製圖形。例如，可以用來繪圖、合成圖照片、建立動畫、甚至處理即時的影片播放。
 
-Mozilla 應用程式從 Gecko 1.8（也就是 [Firefox 1.5](/en/Firefox_1.5_for_developers)）起開始支援 `<canvas>`。這個元素最初由蘋果 OS X [Dashboard](http://www.apple.com/macosx/features/dashboard/) 和 Safari 引入。Internet Explorer 9 以上版本也有支援 `<canvas>`，但較舊的 IE 版本則須嵌入 Google [Explorer Canvas](http://excanvas.sourceforge.net/) 專案中的程式腳本，才能得到有效的支援。Opera 9 也支援 `<canvas>`。
+Mozilla 應用程式從 Gecko 1.8（也就是 [Firefox 1.5](/zh-TW/Firefox_1.5_for_developers)）起開始支援 `<canvas>`。這個元素最初由蘋果 OS X [Dashboard](http://www.apple.com/macosx/features/dashboard/) 和 Safari 引入。Internet Explorer 9 以上版本也有支援 `<canvas>`，但較舊的 IE 版本則須嵌入 Google [Explorer Canvas](http://excanvas.sourceforge.net/) 專案中的程式腳本，才能得到有效的支援。Opera 9 也支援 `<canvas>`。
 
 `<canvas>` 元素通常也被 [WebGL](/zh-TW/docs/Web/WebGL) 用來在網頁上顯示使用硬體加速繪製的 3D 圖形。
 
@@ -69,7 +70,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('範例', 700, 360) }}
 
 ## 參考
 
@@ -123,7 +124,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 規範
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## 參見
 

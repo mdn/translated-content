@@ -3,6 +3,7 @@ title: Web 字体
 slug: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/为文本添加样式/Web_字体
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 在模块的第一篇文章中，我们探讨了用于样式化字体和文本的基本 CSS 特性。在这篇文章中，我们将更进一步，详细地探索 web 字体——它们允许您下载自定义字体和您的 web 页面，以允许更多不同的、自定义的文本样式。
@@ -13,12 +14,12 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
       <th scope="row">预备知识：</th>
       <td>
         基本计算机素养，HTML 基础 (学习
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >), CSS 基础 (学习<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        >), CSS 基础 (学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >),
-        <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS 文本和字体基础 </a
         >。
       </td>
@@ -34,7 +35,7 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
 
 ## 字体种类回顾
 
-正如我们在[基本文本和字体样式](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)中所看到的那样，应用到您的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。您需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。
+正如我们在[基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)中所看到的那样，应用到您的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。您需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。
 
 ```css
 p {
@@ -42,7 +43,7 @@ p {
 }
 ```
 
-这个系统运行良好，但是对于传统的 web 开发人员来说，字体选择是有限的。只有少数几种字体可以保证兼容所有流行的操作系统——这就是所谓的 [Web-safe 字体](/en-US/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts)。您可以使用字体堆栈来指定可选择的字体，后面是 Web-safe 的替代选项，然后是默认的系统字体，但是为了确保您的设计在每种字体中都显示正常，这样增加了测试的开销。
+这个系统运行良好，但是对于传统的 web 开发人员来说，字体选择是有限的。只有少数几种字体可以保证兼容所有流行的操作系统——这就是所谓的 [Web-safe 字体](/zh-CN/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts)。您可以使用字体堆栈来指定可选择的字体，后面是 Web-safe 的替代选项，然后是默认的系统字体，但是为了确保您的设计在每种字体中都显示正常，这样增加了测试的开销。
 
 ## Web 字体
 

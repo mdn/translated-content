@@ -1,24 +1,20 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
-**`toString()`** メソッドは、指定した {{jsxref("Date")}} オブジェクトを表す文字列を返します。
+**`toString()`** メソッドは、指定した {{jsxref("Date")}} オブジェクトをローカルタイムゾーンで解釈したものを表す文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
+{{EmbedInteractiveExample("pages/js/date-tostring.html","shorter")}}
 
 ## 構文
 
-```
-dateObj.toString()
+```js-nolint
+toString()
 ```
 
 ### 返値
@@ -27,66 +23,35 @@ dateObj.toString()
 
 ## 解説
 
-{{jsxref("Date")}} のインスタンスは `toString()` メソッドを {{jsxref("Date.prototype")}} から継承しており、 {{jsxref("Object.prototype")}} から継承しているわけではありません。 `Date.prototype.toString()` は Date を表す文字列を、 ECMA-262 で指定された以下のような書式で返します。
+{{jsxref("Date")}} オブジェクトは、 {{jsxref("Object")}} の `toString()` メソッドを上書きします。`Date.prototype.toString()` は、日付と時刻の両方を含む、ローカルタイムゾーンで解釈される Date の文字列表現を返します。これは [`toDateString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString) と [`toTimeString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString) で指定した文字列表現を結合し、間に空白を追加したものです。
 
-- 曜日: 3 文字の英語の曜日名。例 "Sat"
-- 空白
-- 月名: 3 文字の英語の月名。例 "Sep"
-- 空白
-- 日: 2 桁の日。例 "01"
-- 空白
-- 年: 4 桁の年。例 "2018"
-- 空白
-- 時: 2 桁の時。例 "14"
-- コロン
-- 分: 2 桁の分。例 "53"
-- コロン
-- 秒: 2 桁の秒。例 "26"
-- 空白
-- 文字列 "GMT"
-- タイムゾーンのオフセット記号。以下のどちらかです。
+例: "Thu Jan 01 1970 04:42:04 GMT+0000 (Coordinated Universal Time)"
 
-  - "+" 正のオフセット (0 以上)
-  - "-" 負のオフセット (0 未満)
+`toString()` メソッドは、`const today = 'Today is ' + new Date()` のように、日付を文字列に変換する際に自動的に呼び出されます。
 
-- 2 桁の時間のオフセット。例 "14"
-- 2 桁の分のオフセット。例 "00"
-- 任意で、以下の形のタイムゾーン名。
+`Date.prototype.toString()` は {{jsxref("Date")}} インスタンスに対して呼び出されなければなりません。もし `this` 値が `Date.prototype` を継承していない場合、 {{jsxref("TypeError")}} が発生します。
 
-  - 空白
-  - 左括弧、すなわち "("
-  - タイムゾーンを表す実装依存の文字列で、省略形の場合も完全な名前の場合もあります (タイムゾーンに名前や省略形の標準はありません。例 "Line Islands Time" または "LINT"
-  - 右括弧、すなわち ")"
-
-例 "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"
-
-ECMAScript 2018 (第 9 編) まで、 `Date.prototype.toString` が返す文字列の書式は実装に依存していました。したがって、指定された書式通りであることに頼ってはいけません。
-
-`toString()` メソッドは、日付がテキスト値で表現されるとき、例えば `console.log(new Date())`、または日付が文字列に強制変換されるとき、例えば `var today = 'Today is ' + new Date()` などで自動的に呼び出されます。
-
-`toString()` は汎用メソッドです。 `this` が {{jsxref("Date")}} インスタンスある必要はありません。しかし、ネイティブの JavaScript を使用して構築することができない内部の `[[TimeValue]]` プロパティを持っている必要があるため、事実上は {{jsxref("Date")}} インスタンスでの使用に限定されています。日付でないインスタンスで呼び出された場合、 {{jsxref("TypeError")}} が発生します。
+- _日付_ の部分を取得したい場合は、 [`toDateString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString) を使用してください。
+- _時刻_ の部分を取得したい場合は、 [`toTimeString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString) を使用してください。
+- 日付をローカルタイムゾーンではなく UTC として解釈したい場合は、 [`toUTCString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString) を使用してください。
+- 日付をもっとユーザーが読みやすい形式（例えばローカライズ）で整形したい場合は、 [`toLocaleString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) を使用してください。
 
 ## 例
 
 ### toString() の使用
 
-次の例は、{{jsxref("Date")}} オブジェクトの `toString()` 値を `myVar` に代入します。
-
 ```js
-var x = new Date();
-var myVar = x.toString(); // 次のような値を myVar に代入します:
-                          // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
+const x = new Date();
+console.log(x.toString()); // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.toString")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -2,13 +2,14 @@
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("AbortController")}} 接口的 **`abort()`** 方法会在 DOM 请求完成之前中止它。它能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)、各种响应主体或者流的消耗。
 
 ## 语法
 
-```js
+```js-nolint
 abort()
 abort(reason)
 ```
@@ -28,29 +29,31 @@ abort(reason)
 
 我们首先使用 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数创建一个 controller，然后使用 {{domxref("AbortController.signal")}} 属性获取到它关联的 {{domxref("AbortSignal")}} 对象的引用。
 
-当 [fetch 请求](/zh-CN/docs/Web/API/fetch) 初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
+当 [fetch 请求](/zh-CN/docs/Web/API/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
-var downloadBtn = document.querySelector('.download');
-var abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', function() {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
-  // …
-  fetch(url, {signal}).then(function(response) {
-    // …
-  }).catch(function(e) {
-    reports.textContent = `Download error: ${e.message}`;
-  })
+  fetch(url, { signal })
+    .then((response) => {
+      console.log("Download complete", response);
+    })
+    .catch((err) => {
+      console.error(`Download error: ${err.message}`);
+    });
 }
 ```
 

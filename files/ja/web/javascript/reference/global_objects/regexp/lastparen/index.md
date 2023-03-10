@@ -1,16 +1,8 @@
 ---
 title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 標準外の **`lastParen`** プロパティは静的かつ読み取り専用の正規表現のプロパティで、最後に一致した括弧で括られた部分文字列を含みます。 `RegExp.$+` はこのプロパティに対するエイリアスです。
@@ -36,9 +28,7 @@ RegExp['$+'];     // "hi"
 
 ## 仕様書
 
-| 仕様書                                               |
-| ---------------------------------------------------- |
-| {{SpecName('Legacy RegExp features')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

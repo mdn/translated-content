@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: ratechange'
 slug: Web/API/HTMLMediaElement/ratechange_event
 ---
+
 `ratechange` 事件將在播放速度改變時被觸發
 
 ## 基本資訊
@@ -34,21 +35,21 @@ slug: Web/API/HTMLMediaElement/ratechange_event
 
 ## 相關事件
 
-- {{event("playing")}}
-- {{event("waiting")}}
-- {{event("seeking")}}
-- {{event("seeked")}}
-- {{event("ended")}}
-- {{event("loadedmetadata")}}
-- {{event("loadeddata")}}
-- {{event("canplay")}}
-- {{event("canplaythrough")}}
-- {{event("durationchange")}}
-- {{event("timeupdate")}}
-- {{event("play")}}
-- {{event("pause")}}
-- {{event("ratechange")}}
-- {{event("volumechange")}}
-- {{event("suspend")}}
-- {{event("emptied")}}
-- {{event("stalled")}}
+- [`playing`](/zh-TW/docs/Web/API/HTMLMediaElement/playing_event)
+- [`waiting`](/zh-TW/docs/Web/API/HTMLMediaElement/waiting_event)
+- [`seeking`](/zh-TW/docs/Web/API/HTMLMediaElement/seeking_event)
+- [`seeked`](/zh-TW/docs/Web/API/HTMLMediaElement/seeked_event)
+- [`ended`](/zh-TW/docs/Web/API/HTMLMediaElement/ended_event)
+- [`loadedmetadata`](/zh-TW/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
+- [`loadeddata`](/zh-TW/docs/Web/API/HTMLMediaElement/loadeddata_event)
+- [`canplay`](/zh-TW/docs/Web/API/HTMLMediaElement/canplay_event)
+- [`canplaythrough`](/zh-TW/docs/Web/API/HTMLMediaElement/canplaythrough_event)
+- [`durationchange`](/zh-TW/docs/Web/API/HTMLMediaElement/durationchange_event)
+- [`timeupdate`](/zh-TW/docs/Web/API/HTMLMediaElement/timeupdate_event)
+- [`play`](/zh-TW/docs/Web/API/HTMLMediaElement/play_event)
+- [`pause`](/zh-TW/docs/Web/API/HTMLMediaElement/pause_event)
+- [`ratechange`](/zh-TW/docs/Web/API/HTMLMediaElement/ratechange_event)
+- [`volumechange`](/zh-TW/docs/Web/API/HTMLMediaElement/volumechange_event)
+- [`suspend`](/zh-TW/docs/Web/API/HTMLMediaElement/suspend_event)
+- [`emptied`](/zh-TW/docs/Web/API/HTMLMediaElement/emptied_event)
+- [`stalled`](/zh-TW/docs/Web/API/HTMLMediaElement/stalled_event)

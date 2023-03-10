@@ -5,6 +5,7 @@ tags:
   - Rectangle
 translation_of: Web/API/SVGRect
 ---
+
 ## Interface SVG rect
 
 `SVGRect` représente la géométrie rectangulaire. Les rectangles consistent en une paire de coordonnées (x,y) correspondant à une valeur X minimale, une valeur Y minimale, et une largeur et hauteur, lesquelles sont habituellement positives.

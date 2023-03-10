@@ -1,13 +1,8 @@
 ---
 title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
+
 {{JSRef}}
 
 **`TypedArray.BYTES_PER_ELEMENT`** プロパティは、型付き配列内の各要素の大きさをバイト単位で表します。
@@ -36,9 +31,7 @@ Float64Array.BYTES_PER_ELEMENT;      // 8
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-typedarray.bytes_per_element', 'TypedArray.BYTES_PER_ELEMENT')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

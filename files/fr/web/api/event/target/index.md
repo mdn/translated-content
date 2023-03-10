@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Event/target
 ---
+
 {{ ApiRef("DOM") }}
 
 C'est une référence à l'objet qui a envoyé l'événement. C'est une propriété différente de {{domxref("event.currentTarget")}} lorsque le gestionnaire d'événements est appelé au cours de la phase de propagation ou de la phase de capture de l'événement.

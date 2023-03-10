@@ -2,6 +2,7 @@
 title: DOMRectReadOnly.bottom
 slug: Web/API/DOMRectReadOnly/bottom
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`bottom`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の下端の座標値を返します。（`y + height` と同じか、 `height` が負の数であれば `y` と同じ値です。）

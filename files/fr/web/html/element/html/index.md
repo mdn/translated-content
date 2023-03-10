@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/html
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.
 
@@ -95,15 +96,11 @@ Ajouter un attribut `lang` valide au sein de l'élément HTML permet également 
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}} | {{Spec2('HTML WHATWG')}} |                                                                              |
-| {{SpecName('HTML5 W3C', 'semantics.html#the-html-element', '&lt;html&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Ajout de l'attribut `manifest`. L'attribut `version` est désormais obsolète. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.3', '&lt;html&gt;')}}             | {{Spec2('HTML4.01')}}     | L'attribut `version` est désormais déprécié.                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.html")}}
+{{Compat}}
 
 ## Voir aussi
 

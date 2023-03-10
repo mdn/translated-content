@@ -1,14 +1,9 @@
 ---
 title: <footer>
 slug: Web/HTML/Element/footer
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-translation_of: Web/HTML/Element/footer
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<footer>` 要素**は、直近の[区分コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_root)要素のフッターを表します。フッターには通常、そのセクションの著作者に関する情報、関連文書へのリンク、著作権情報等を含めます。
 
@@ -81,8 +76,8 @@ translation_of: Web/HTML/Element/footer
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}},
-        {{ARIARole("none")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>
       </td>
     </tr>
     <tr>
@@ -99,7 +94,7 @@ translation_of: Web/HTML/Element/footer
 ## 使用上のメモ
 
 - セクションの著作者や編集者の連絡先情報は、多くの場合 `<footer>` 要素内に {{HTMLElement("address")}} 要素として配置します。
-- `<footer>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document")を生成することはありません。
+- `<footer>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document)を生成することはありません。
 
 ## 例
 
@@ -118,10 +113,7 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#the-footer-element', '&lt;footer&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-footer-element', '&lt;footer&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

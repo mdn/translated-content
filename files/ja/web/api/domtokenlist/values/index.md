@@ -2,6 +2,7 @@
 title: DOMTokenList.values()
 slug: Web/API/DOMTokenList/values
 ---
+
 {{APIRef("DOM")}}
 
 **`values()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、開発者がこの `DOMTokenList` に含まれるすべての値を処理することができる{{jsxref("Iteration_protocols","反復子","",1)}}を返します。それぞれの値は文字列です。

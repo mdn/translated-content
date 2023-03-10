@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 original_slug: Web/CSS/Comprendre_z-index/Empilement_sans_z-index
 ---
+
 {{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
 
 ## Empilement sans `z-index`

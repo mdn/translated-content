@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: missing name after . operator'
 slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing name after . operator" は、[プロパティアクセス](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)のためのドット演算子 (`.`) の使い方に問題があった場合に発生します。

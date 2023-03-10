@@ -1,22 +1,15 @@
 ---
 title: border-right-style
 slug: Web/CSS/border-right-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-right-style
-translation_of: Web/CSS/border-right-style
 ---
+
 {{CSSRef}}
 
 **`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) の形状を設定します。
 
 {{EmbedInteractiveExample("pages/css/border-right-style.html")}}
 
-> **Note:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
+> **メモ:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 

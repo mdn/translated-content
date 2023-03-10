@@ -2,6 +2,7 @@
 title: 全屏 API
 slug: Web/API/Fullscreen_API
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 **`全屏 API`** 为使用用户的整个屏幕展现网络内容提供了一种简单的方式，并且在不需要时退出全屏模式。这种 API 让你可以简单地控制浏览器，使得一个元素与其子元素，如果存在的话，可以占据整个屏幕，并在此期间，从屏幕上隐藏所有的浏览器用户界面以及其他应用。
@@ -26,7 +27,7 @@ slug: Web/API/Fullscreen_API
 ### Element 中的方法
 
 - {{DOMxRef("Element.requestFullscreen()")}}
-  - : 请求浏览器（user agent）将特定元素（甚至延伸到它的后代元素）置为全屏模式，隐去屏幕上的浏览器所有 UI 元素，以及其它应用。返回一个 {{jsxref("Promise")}}，并会在全屏模式被激活的时候变成 resolved 状态。
+  - : 请求浏览器（user agent）将特定元素（甚至延伸到它的后代元素）置为全屏模式，隐去屏幕上的浏览器所有 UI 元素，以及其他应用。返回一个 {{jsxref("Promise")}}，并会在全屏模式被激活的时候变成 resolved 状态。
 
 ## 属性
 
@@ -42,21 +43,21 @@ _{{DOMxRef("Document")}} 提供了可以用于判断是否支持和启用全屏�
 
 Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和关闭，以及在全屏和窗口模式之间切换过程中发生的错误。_{{DOMxRef("Document")}}_ 和 _{{DOMxRef("Element")}}_ 接口提供了这些事件的事件处理函数。
 
-> **备注：** 这些事件处理函数特性不可以当成 HTML 内容属性来使用。换句话说，你无法在 HTML 内容中为 {{Event("fullscreenchange")}} 和 {{Event("fullscreenerror")}} 指定事件处理程序，你必须通过 JavaScript 代码添加它们。
+> **备注：** 这些事件处理函数特性不可以当成 HTML 内容属性来使用。换句话说，你无法在 HTML 内容中为 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 和 [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 指定事件处理程序，你必须通过 JavaScript 代码添加它们。
 
 #### Document 上的事件处理程序
 
 - {{DOMxRef("Document.onfullscreenchange")}}
-  - : {{Event("fullscreenchange")}} 事件的处理程序，当进入全屏或退出全屏时，事件将被发送到{{DOMxRef("Document")}}上。此处理程序仅在整个文档全屏模式更改时有效。
+  - : [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 事件的处理程序，当进入全屏或退出全屏时，事件将被发送到{{DOMxRef("Document")}}上。此处理程序仅在整个文档全屏模式更改时有效。
 - {{DOMxRef("Document.onfullscreenerror")}}
-  - : {{Event("fullscreenerror")}} 事件的处理程序，当进入全屏或退出全屏出错时，事件将被发送到 {{DOMxRef("Document")}} 上，仅对整个文档的全屏模式更改出错时候有效。
+  - : [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 事件的处理程序，当进入全屏或退出全屏出错时，事件将被发送到 {{DOMxRef("Document")}} 上，仅对整个文档的全屏模式更改出错时候有效。
 
 #### Element 上的事件处理程序
 
 - {{DOMxRef("Element.onfullscreenchange")}}
   - : 当全屏事件发生时，该事件会被发送到该元素，表明该元素进入或退出全屏模式
 - {{DOMxRef("Element.onfullscreenerror")}}
-  - : {{Event("fullscreenerror")}} 事件的处理程序，当指定的 {{DOMxRef("Element")}} 改变全屏模式时候出现错误，该事件将被发送到指定的 {{DOMxRef("Element")}} 上。
+  - : [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 事件的处理程序，当指定的 {{DOMxRef("Element")}} 改变全屏模式时候出现错误，该事件将被发送到指定的 {{DOMxRef("Element")}} 上。
 
 ### 废弃属性
 
@@ -70,9 +71,9 @@ Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和�
 
 全屏 API 定义了两个事件：1.可用来检测全屏模式何时打开和关闭。2.在全屏模式和窗口模式之间切换过程中何时发生错误。
 
-- {{Event("fullscreenchange")}}
+- [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event)
   - : 当全屏或退出全屏时发送消息给（监听的）的 {{DOMxRef("Document")}} 或 {{DOMxRef("Element")}} 。
-- {{Event("fullscreenerror")}}
+- [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event)
   - : 当全屏或退出全屏是发生了错误时，将错误消息发送给（监听的）的 {{DOMxRef("Document")}} 或 {{DOMxRef("Element")}} 。
 
 ## Dictionaries
@@ -88,7 +89,7 @@ Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和�
 
 ## 使用说明
 
-用户通过按 <kbd>ESC</kbd> 键（或 <kbd>F11）</kbd>即可退出全屏模式，而不是等着站点或应用的代码来做这件事。确定你在你的用户界面里提供合适的界面元素来告知用户这个可选项。
+用户通过按 <kbd>ESC</kbd> 键（或 <kbd>F11</kbd>）即可退出全屏模式，而不是等着站点或应用的代码来做这件事。确定你在你的用户界面里提供合适的界面元素来告知用户这个可选项。
 
 > **备注：** 当处在全屏模式中，浏览其他页面，切换标签页，或者切换到其他应用（例如使用 <kbd>Alt</kbd>-<kbd>Tab</kbd>）也会导致退出全屏模式。
 
@@ -114,7 +115,7 @@ document.addEventListener("keydown", function(e) {
 
 当用户按下 <kbd>Enter</kbd> 键时，这段代码会被调用，像上面看到的那样。
 
-```
+```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
@@ -126,7 +127,7 @@ function toggleFullScreen() {
 }
 ```
 
-这段代码首先检查 [`document`](/zh-CN/docs/Web/API/Document) 的 `fullscreenElement` 属性的值（亦要检查带有前缀 `moz`、` ms、``webkit `）。如果其为 `null`，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用 [`element.requestFullscreen()`](/zh-CN/docs/Web/API/Element/requestFullscreen)，可以切换到全屏模式。
+这段代码首先检查 [`document`](/zh-CN/docs/Web/API/Document) 的 `fullscreenElement` 属性的值（亦要检查带有前缀 `moz`、`ms`、`webkit`）。如果其为 `null`，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用 [`element.requestFullscreen()`](/zh-CN/docs/Web/API/Element/requestFullscreen)，可以切换到全屏模式。
 
 如果全屏模式已经激活（`fullscreenElement` 不为 `null`），我们可以调用 [`document.exitFullscreen()`](/zh-CN/docs/Web/API/Document/exitFullscreen)（或其前缀化的版本，这取决于你使用的浏览器）。
 

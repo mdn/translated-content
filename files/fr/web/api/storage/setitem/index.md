@@ -8,6 +8,7 @@ tags:
   - Stockage Web
 translation_of: Web/API/Storage/setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 La méthode `setItem()` de l'interface {{domxref("Storage")}}, lorsque lui sont passées le duo clé-valeur, les ajoute à l'emplacement de stockage, sinon elle met à jour la valeur si la clé existe déjà.

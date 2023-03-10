@@ -1,15 +1,8 @@
 ---
 title: Float32Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - コンストラクター
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
 ---
+
 {{JSRef}}
 
 **`Float32Array()`** は型付き配列のコンストラクターで、新しい {{jsxref("Float32Array")}} オブジェクト、すなわち 32 ビット浮動小数点数 (C 言語の `float` データ型に相当) の配列をプラットフォームのバイトオーダーで生成します。バイトオーダーを制御する必要がある場合は、代わりに {{jsxref("DataView")}} を使用してください。生成後は、オブジェクトのメソッドや、標準の配列の添字構文 (すなわち角括弧表記) を用いて配列の要素を参照することができます。
@@ -68,9 +61,7 @@ var float32 = new Float32Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 **`Error`** 建構函式能用來建立一個 error 物件。當執行期間發生錯誤時，`Error` 物件實體會被拋出。`Error` 物件也可作為自訂例外的基礎物件，請參考下方的標準內建錯誤類型。
@@ -29,7 +30,7 @@ This page documents the use of the `Error` object itself and its use as a constr
 
 ### 錯誤類型
 
-Besides the generic `Error` constructor, there are six other core error constructors in JavaScript. For client-side exceptions, see [Exception Handling Statements](/en-US/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
+Besides the generic `Error` constructor, there are six other core error constructors in JavaScript. For client-side exceptions, see [Exception Handling Statements](/zh-TW/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
 
 - {{jsxref("EvalError")}}
   - : Creates an instance representing an error that occurs regarding the global function {{jsxref("Global_Objects/eval", "eval()")}}.
@@ -57,15 +58,31 @@ The global `Error` object contains no methods of its own, however, it does inher
 
 ## `Error` 實體
 
-{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
+Runtime errors result in new `Error` objects being created and thrown.
+
+`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/zh-TW/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ### 屬性
 
-{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
+- {{jsxref("Error.prototype.message")}}
+  - : Error message. For user-created `Error` objects, this is the string provided as the constructor's first argument.
+- {{jsxref("Error.prototype.name")}}
+  - : Error name. This is determined by the constructor function.
+- {{jsxref("Error.prototype.cause")}}
+  - : Error cause indicating the reason why the current error is thrown — usually another caught error. For user-created `Error` objects, this is the value provided as the `cause` property of the constructor's second argument.
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+  - : A non-standard Mozilla property for the path to the file that raised this error.
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+  - : A non-standard Mozilla property for the line number in the file that raised this error.
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+  - : A non-standard Mozilla property for the column number in the line that raised this error.
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+  - : A non-standard property for a stack trace.
 
 ### 方法
 
-{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
+- {{jsxref("Error.prototype.toString()")}}
+  - : Returns a string representing the specified object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 
 ## 範例
 

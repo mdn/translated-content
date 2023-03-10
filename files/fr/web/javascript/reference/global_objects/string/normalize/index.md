@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/normalize
 ---
+
 {{JSRef}}
 
 La méthode **`normalize()`** permet de renvoyer la forme normalisée Unicode d'une chaîne de caractères.
@@ -90,14 +91,11 @@ str.normalize("NFKD"); // "\u0073\u0323\u0307"
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.normalize")}}
+{{Compat}}
 
 ## Voir aussi
 

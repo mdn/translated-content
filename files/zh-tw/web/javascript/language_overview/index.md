@@ -3,6 +3,7 @@ title: 重新介紹 JavaScript
 slug: Web/JavaScript/Language_Overview
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 ## 介紹

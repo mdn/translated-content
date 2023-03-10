@@ -10,6 +10,7 @@ tags:
   - Méthode
 translation_of: Web/API/Console/timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 Arrête un chronomètre (_timer_) précédemment démarré par {{domxref("console.time()")}}.

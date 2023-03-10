@@ -1,9 +1,9 @@
 ---
 title: API 레퍼런스의 사이드바
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-translation_of: MDN/Structures/API_references/API_reference_sidebars
 original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 ---
+
 {{MDNSidebar}}
 
 API 레퍼런스 문서에는 수정 가능한 사이드바 를 추가할 수 있습니다. 이 사이드바에 인터페이스, 튜토리얼, 혹은 API와 관련된 자료 링크를 노출합니다. 그 사용법을 설명합니다.
@@ -62,13 +62,13 @@ GitHub 사용법을 잘 모르겠으면 [호환성 테이블 가이드](/ko/docs
 
 GroupData 엔트리에 추가할 수 있는 하위 멤버 목록입니다.
 
-리스트업된 하위 멤버값 대부분은 링크걸 텍스트와 링크 생성을 위해 메인 API 색인 페이지(https\://developer.mozilla.org/_\<language-code>_/docs/Web/API) 끝에 추가될 슬러그입니다. 예를 들어 en-US 로케일에서 "Body"는 아래 링크를 만듭니다.
+리스트업된 하위 멤버값 대부분은 링크걸 텍스트와 링크 생성을 위해 메인 API 색인 페이지(`https://developer.mozilla.org/<language-code>/docs/Web/API`) 끝에 추가될 슬러그입니다. 예를 들어 en-US 로케일에서 "Body"는 아래 링크를 만듭니다.
 
 ```html
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">Body</a></li>
 ```
 
-몇가지 예외가 있습니다.. 예를 들어 "guides" 하위 멤버는 가이드/튜토리얼 관련 링크를 정의할 하나이상의 링크 정보(타이틀과 슬러그)를 갖고 있는데, 이경우 슬러그는 MDN 어디든 추가될 수 있도록 MDN 문서 루트(https\://developer.mozilla.org/_\<language-code>_/docs)의 끝에 추가됩니다.
+몇가지 예외가 있습니다.. 예를 들어 "guides" 하위 멤버는 가이드/튜토리얼 관련 링크를 정의할 하나이상의 링크 정보(타이틀과 슬러그)를 갖고 있는데, 이경우 슬러그는 MDN 어디든 추가될 수 있도록 MDN 문서 루트(`https://developer.mozilla.org/<language-code>/docs`)의 끝에 추가됩니다.
 
 사용가능한 멤버들입니다. 로케일은 en-US로 가정합니다.
 

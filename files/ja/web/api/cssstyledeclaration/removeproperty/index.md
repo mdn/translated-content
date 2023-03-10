@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleDeclaration.removeProperty()`** メソッドインターフェイスは、 CSS スタイル宣言オブジェクトからプロパティを削除します。

@@ -2,9 +2,10 @@
 title: transition-duration
 slug: Web/CSS/transition-duration
 ---
+
 {{CSSRef}}
 
-**`transition-duration`** [CSS](/en/CSS) 屬性指定轉場動畫所需經歷的時間，以秒或是毫秒為單位。默認值為 0，表示沒有任何轉場動畫。
+**`transition-duration`** [CSS](/zh-TW/CSS) 屬性指定轉場動畫所需經歷的時間，以秒或是毫秒為單位。默認值為 0，表示沒有任何轉場動畫。
 
 {{EmbedInteractiveExample("pages/css/transition-duration.html")}}
 
@@ -36,7 +37,7 @@ transition-duration: unset;
 
 ## 範例
 
-`transition-duration: 0.5s`
+### `transition-duration: 0.5s`
 
 ```html hidden
  <div class="parent">
@@ -99,9 +100,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("duration_0_5s",275,150)}}
+{{EmbedLiveSample("transition-duration: 0.5s",275,150)}}
 
-`transition-duration: 1s`
+### `transition-duration: 1s`
 
 ```html hidden
  <div class="parent">
@@ -164,9 +165,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("duration_1s",275,150)}}
+{{EmbedLiveSample("transition-duration: 1s",275,150)}}
 
-`transition-duration: 2s`
+### `transition-duration: 2s`
 
 ```html hidden
  <div class="parent">
@@ -229,9 +230,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("duration_2s",275,150)}}
+{{EmbedLiveSample("transition-duration: 2s",275,150)}}
 
-`transition-duration: 4s`
+### `transition-duration: 4s`
 
 ```html hidden
  <div class="parent">
@@ -294,7 +295,7 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("duration_4s",275,150)}}
+{{EmbedLiveSample("transition-duration: 4s",275,150)}}
 
 ## 規範
 
@@ -304,7 +305,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 瀏覽器支援情形
 
-{{Compat("css.properties.transition-duration")}}
+{{Compat}}
 
 ## 更多資訊
 

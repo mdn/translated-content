@@ -1,7 +1,6 @@
 ---
 title: Clients.claim()
 slug: Web/API/Clients/claim
-translation_of: Web/API/Clients/claim
 ---
 {{SeeCompatTable}}{{APIRef("Service Worker Clients")}}
 
@@ -33,11 +32,11 @@ self.addEventListener('activate', event => {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

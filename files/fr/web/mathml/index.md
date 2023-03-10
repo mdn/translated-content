@@ -4,6 +4,7 @@ slug: Web/MathML
 translation_of: Web/MathML
 browser-compat: mathml.elements.math
 ---
+
 {{MathMLRef}}
 
 **Mathematical Markup Language (MathML)** est un langage basé sur [XML](/fr/docs/Web/XML) permettant de décrire des formules mathématiques.

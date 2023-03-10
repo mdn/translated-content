@@ -1,14 +1,8 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - レスポンスヘッダー
-  - 範囲リクエスト
-translation_of: Web/HTTP/Headers/Accept-Ranges
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Accept-Ranges`** レスポンスヘッダーは、サーバーが部分的なリクエストに対応していることを周知するために使用するマーカーです。このフィールドの値は、範囲の定義に使用できる単位を示します。

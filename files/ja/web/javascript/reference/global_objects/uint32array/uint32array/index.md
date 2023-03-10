@@ -1,13 +1,8 @@
 ---
 title: Uint32Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
 ---
+
 {{JSRef}}
 
 **`Uint32Array()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 32 ビット符号なし整数値の配列を生成します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
@@ -66,9 +61,7 @@ var uint32 = new Uint32Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

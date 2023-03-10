@@ -1,21 +1,17 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-tags:
-  - API
-  - DOM
-  - Method
-  - Navigator
-  - Reference
-translation_of: Web/API/Navigator/registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 **`Navigator.registerProtocolHandler()`** 메서드는 웹 사이트가 특정 {{glossary("URL")}} 스킴("프로토콜")을 열거나 처리할 수 있도록 등록합니다. 이를테면, 이메일 사이트가 `mailto:` URL에, VoIP 사이트가 `tel:` URL에 자신을 등록할 때 사용할 수 있습니다.
 
 ## 구문
 
-    navigator.registerProtocolHandler(protocol, url, title);
+```js
+navigator.registerProtocolHandler(protocol, url, title);
+```
 
 ### 매개변수
 

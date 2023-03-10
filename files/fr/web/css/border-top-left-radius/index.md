@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top-left-radius
 ---
+
 {{CSSRef}}
 
 La propriété **`border-top-left-radius`** définit le rayon de courbure de la bordure pour le coin en haut à gauche de la boîte. L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut `0`, aucun arrondi n'a lieu et le coin est un angle droit.Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.
@@ -44,9 +45,13 @@ Cette propriété peut prendre deux formes :
 - `<length-percentage>`
   - : La mesure du rayon ou de l'un des demi-axes de l'ellipse. Une valeur absolue peut être exprimée dans n'importe quelle unité autorisée pour le type {{cssxref("&lt;length&gt;")}}. Les valeurs exprimées en pourcentage font référence à la hauteur de la boîte pour les valeurs verticales et à la largeur de la boîte pour les valeurs horizontales. Les valeurs négatives ne sont pas autorisées.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -95,15 +100,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-radius', 'border-top-left-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-top-left-radius")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -7,6 +7,7 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 L'élément SVG **`<a>`** crée un hyperlien vers d'autres pages web, fichiers, emplacements dans la page en cours, adresses email, ou toute autre URL.
@@ -84,7 +85,7 @@ svgns|a:hover, svgns|a:active {
 - {{htmlattrxref("rel", "a")}} {{experimental_inline}}
 - {{SVGAttr("target")}}
 - {{htmlattrxref("type", "a")}}
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## Contexte d'utilisation
 
@@ -96,12 +97,8 @@ Cet élément implémente l'interface [`SVGAElement`](/fr/docs/DOM/SVGAElement).
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                               | Commentaire                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Ajoute l'attribut `referrerpolicy`.                                               |
-| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}                                                                 | {{Spec2("SVG2")}}             | Remplace l'attribut {{SVGAttr("xlink:href")}} par {{SVGAttr("href")}} |
-| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}}                                                             | {{Spec2("SVG1.1")}}             | Définition initiale                                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.a")}}
+{{Compat}}

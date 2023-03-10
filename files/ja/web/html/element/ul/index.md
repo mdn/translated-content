@@ -1,14 +1,9 @@
 ---
 title: '<ul>: 順序なしリスト要素'
 slug: Web/HTML/Element/ul
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/ul
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<ul>` 要素**は、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
 
@@ -65,12 +60,12 @@ translation_of: Web/HTML/Element/ul
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}},
-        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
-        {{ARIARole("toolbar")}}, {{ARIARole("tree")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>
       </td>
     </tr>
     <tr>
@@ -88,7 +83,7 @@ translation_of: Web/HTML/Element/ul
 
   - : この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。
 
-    > **Warning:** **警告:** この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
+    > **警告:** この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
 
 - {{ htmlattrdef("type") }} {{Deprecated_inline}}
 
@@ -102,12 +97,12 @@ translation_of: Web/HTML/Element/ul
 
     この属性が存在せず、 [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティがその要素に適用されていない場合は、ユーザーエージェントが行頭記号の種類を、リストの入れ子階層に応じて選択します。
 
-    > **Warning:** **警告:** この属性は非推奨なので使用しないでください。代替として [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティを使用してください。
+    > **警告:** この属性は非推奨なので使用しないでください。代替として [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティを使用してください。
 
 ## 使用上のメモ
 
 - `<ul>` 要素は、数的な順序がなく、その配置順に意味を持たない項目を持つリストを表します。通常、順序なしリストの項目はドット、円形、四角形などいくつかの形式による行頭記号を伴って描画されます。行頭記号のスタイルは HTML 仕様書のページでは定義されていませんが、 CSS の {{ cssxref("list-style-type") }} プロパティを用いて変更することが可能です。
-- `<ul>` 要素と {{HTMLElement("ol")}} 要素は、必要なだけ深く入れ子にすることができます。さらに言えば、入れ子になったリストが `<ol>` と `<ul>` の間で変化することにで制限はありません。
+- `<ul>` 要素と {{HTMLElement("ol")}} 要素は、必要なだけ深く入れ子にすることができます。さらに言えば、入れ子になったリストが `<ol>` と `<ul>` の間で変化することに制限はありません。
 - {{ HTMLElement("ol") }} と `<ul>` は、どちらも項目のリストを表します。両者の違いは、 {{ HTMLElement("ol") }} 要素では順序に意味があることです。使い分けの目安としては、項目の順序を変更してみてください。意味が変わるようであれば {{ HTMLElement("ol") }} 要素を使用し、そうでない場合は `<ul>` 要素を使用することができます。
 
 ## 例
@@ -180,10 +175,7 @@ translation_of: Web/HTML/Element/ul
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-ul-element', '&lt;ul&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-ul-element', '&lt;ul&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

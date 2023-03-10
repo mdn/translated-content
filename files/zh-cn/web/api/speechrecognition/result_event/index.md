@@ -2,6 +2,7 @@
 title: 'SpeechRecognition: result event'
 slug: Web/API/SpeechRecognition/result_event
 ---
+
 {{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
 The **`result`** event of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) is fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app
@@ -24,7 +25,7 @@ The **`result`** event of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_AP
       <th scope="row">Event handler property</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/SpeechRecognition/onresult"
+          ><a href="/zh-CN/docs/Web/API/SpeechRecognition/onresult"
             >onresult</a
           ></code
         >
@@ -35,9 +36,9 @@ The **`result`** event of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_AP
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
-You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
+You can use the `result` event in an [`addEventListener`](/zh-CN/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
 var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
@@ -49,7 +50,7 @@ recognition.addEventListener('result', function(event) {
 });
 ```
 
-Or use the [`onresult`](/en-US/docs/Web/API/SpeechRecognition/onresult) event handler property:
+Or use the [`onresult`](/zh-CN/docs/Web/API/SpeechRecognition/onresult) event handler property:
 
 ```js
 recognition.onresult = function(event) {
@@ -65,7 +66,7 @@ recognition.onresult = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.SpeechRecognition.result_event")}}
+{{Compat}}
 
 ## See also
 

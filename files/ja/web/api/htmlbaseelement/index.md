@@ -2,6 +2,7 @@
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBaseElement`** インターフェイスは、文書の基底 URI を持ちます。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスで定められているすべてのプロパティとメソッドを継承します。

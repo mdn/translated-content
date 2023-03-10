@@ -2,6 +2,7 @@
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.remove()`** 方法从一个 select 元素中删除指定序数的 option 元素。没有传参时为删除当前元素本身：[ChildNode.remove()](/zh-CN/docs/Web/API/ChildNode/remove)。
@@ -46,7 +47,7 @@ sel.remove(1);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement.remove")}}
+{{Compat}}
 
 ## 参考
 

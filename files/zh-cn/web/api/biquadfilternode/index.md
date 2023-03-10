@@ -2,9 +2,10 @@
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
-`BiquadFilterNode接口表示一个简单低阶滤波器(双二阶滤波器)`, 通过 {{ domxref("AudioContext.createBiquadFilter()") }} 方法创建。它是一个能表示不同类型的过滤器，声调控制设备，图形均衡器的{{domxref("AudioNode")}} . 一个`BiquadFilterNode(`双二阶滤波器`)` 总是恰好有一个输入和一个输出。
+`BiquadFilterNode` 接口表示一个简单低阶滤波器（双二阶滤波器），通过 {{ domxref("AudioContext.createBiquadFilter()") }} 方法创建。它是一个能表示不同类型的过滤器，声调控制设备，图形均衡器的 {{domxref("AudioNode")}}。一个`BiquadFilterNode`（双二阶滤波器）总是恰好有一个输入和一个输出。
 
 <table class="properties">
   <tbody>

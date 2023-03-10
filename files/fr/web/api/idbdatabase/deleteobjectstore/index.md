@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/deleteObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`deleteObjectStore()`** de l'interface {{domxref("IDBDatabase")}} supprime un magasin d'objet et ses index de la base de données.
@@ -37,7 +38,7 @@ Cette méthode peut lever une {{domxref("DOMException")}} d'un de ces types suiv
 
 | Exception                  | Description                                                                                                                                                                                                                                                      |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError`        | Levée si la méthode n'est pas appelée lors d'une transaction en mode `versionchange`. Pour les anciens navigateurs basés sur WebKit, il faut d'abord appeler la méthode  {{domxref("IDBVersionChangeRequest.setVersion")}}.                       |
+| `InvalidStateError`        | Levée si la méthode n'est pas appelée lors d'une transaction en mode `versionchange`. Pour les anciens navigateurs basés sur WebKit, il faut d'abord appeler la méthode {{domxref("IDBVersionChangeRequest.setVersion")}}.                       |
 | `TransactionInactiveError` | Levée si la méthode est appelée sur une base de données qui n'existe pas (ex. elle a été effacée). Pour les versions antérieures à Firefox 41, ce dernier déclenchait une erreur `InvalidStateError`, cela est désormais corrigé (cf. {{bug("1176165")}}). |
 | `NotFoundError`            | Levée lors de la suppression d'un magasin d'objets qui n'existe pas. Les noms sont sensibles à la casse.                                                                                                                                                         |
 
@@ -100,4 +101,4 @@ Dans cet exemple, on ouvre une connexion à la base de données et dans le gesti
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

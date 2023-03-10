@@ -1,61 +1,73 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
+
 {{JSRef}}
 
-**`entries()`** 메서드는 배열의 각 인덱스에 대한 키/값 쌍을 가지는 새로운 **`Array Iterator`\*\*** \*\*객체를 반환합니다.
+**`entries()`** 메서드는 배열의 각 인덱스에 대한 키/값 쌍을 가지는 새로운 **`Array Iterator`** 객체를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
 ## 구문
 
 ```js
-    arr.entries()
+entries()
 ```
 
 ### 반환 값
 
 {{jsxref("Array")}} 반복자 인스턴스 객체.
 
+## 설명
+
+sparse arrays와 사용하면 **`entries()`** 메서드가 빈 슬롯을 **`undefined`** 가 있는 것처럼 순회합니다.
+
 ## 예시
 
-### 인덱스와 요소 이터레이팅
+### 인덱스와 요소 순회하기
 
 ```js
-    const a = ['a', 'b', 'c'];
+const a = ["a", "b", "c"];
 
-    for (const [index, element] of a.entries())
-      console.log(index, element);
+for (const [index, element] of a.entries()) {
+  console.log(index, element);
+}
 
-    // 0 'a'
-    // 1 'b'
-    // 2 'c'
+// 0 'a'
+// 1 'b'
+// 2 'c'
 ```
 
 ### [for…of](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 루프 사용
 
 ```js
-var a = ['a', 'b', 'c'];
-var iterator = a.entries();
+const array = ["a", "b", "c"];
+const arrayEntries = array.entries();
 
-for (let e of iterator) {
-  console.log(e);
+for (const element of arrayEntries) {
+  console.log(element);
 }
+
 // [0, 'a']
 // [1, 'b']
 // [2, 'c']
 ```
 
-## Specifications
+### sparse arrays 순회하기
+
+**`entires()`** 는 빈 슬롯을 `undefined`인 것처럼 접근합니다.
+
+```js
+for (const element of [, "a"].entries()) {
+  console.log(element);
+}
+// [0, undefined]
+// [1, 'a']
+
+```
+
+## 명세서
 
 {{Specifications}}
 

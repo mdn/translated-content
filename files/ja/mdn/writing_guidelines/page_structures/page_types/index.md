@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Page_types
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 MDN には繰り返し使用されるいくつかの種類のページがあります。
@@ -67,7 +68,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ## API リファレンスページ
 
-> **Note:** *インターフェイスランディングページ*とも呼ばれます。
+> **メモ:** *インターフェイスランディングページ*とも呼ばれます。
 
 **API リファレンスページ**は、特定のインターフェイスやクラスのメンバーであるすべてのメソッド、プロパティ、イベントなどを列挙します。
 クラスまたはインターフェイスが何を行うか、または何のために使用されるかの概要を提供し、これらの各メンバーのドキュメントへのリンクを提供します。
@@ -161,7 +162,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 ### 例
 
 - [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)
-- [ウェブ音声 API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+- [ウェブオーディオ API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [CSS のカスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
 ## 用語集ページ

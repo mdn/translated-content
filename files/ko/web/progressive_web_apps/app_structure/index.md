@@ -1,17 +1,8 @@
 ---
 title: 프로그레시브 웹 앱 구조
 slug: Web/Progressive_web_apps/App_structure
-tags:
-  - App shell
-  - PWA
-  - Service Workers
-  - Streams
-  - js13kGames
-  - 구조
-  - 프로그레시브
-  - 프로그레시브 웹 앱
-translation_of: Web/Progressive_web_apps/App_structure
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
 
 이제 우리는 PWA의 원리에 대해 알고 있습니다. 실제 앱의 권장 구조에 대해 살펴봅시다. 우리는 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 어플리케이션을 왜 그렇게 구축하였는지, 그리고 무슨 이점이 있는지 분석하는 것으로 시작할 것입니다.
@@ -65,7 +56,7 @@ Streams API는 개발자가 서버로부터의 데이터 스트리밍에 직접 
 
 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 웹 사이트 구조는 아주 간단합니다. 하나의 HTML 파일([index.html](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html))과 기본적인 CSS 스타일링([style.css](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)), 몇 가지 이미지, 스크립트, 폰트로 구성되어 있습니다. 폴더 구조는 다음과 같습니다.
 
-![Folder structure of js13kPWA.](https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png)
+![Folder structure of js13kPWA.](js13kpwa-directory.png)
 
 ### HTML
 
@@ -75,33 +66,33 @@ HTML의 관점에서보면 app shell은 컨텐츠 섹션 외부의 모든 영역
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>js13kGames A-Frame entries</title>
-	<meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-	<meta name="author" content="end3r">
-	<meta name="theme-color" content="#B12A34">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="icons/icon-512.png">
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="style.css">
-	<link rel="manifest" href="js13kpwa.webmanifest">
-	<script src="data/games.js" defer></script>
-	<script src="app.js" defer></script>
+  <meta charset="utf-8">
+  <title>js13kGames A-Frame entries</title>
+  <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
+  <meta name="author" content="end3r">
+  <meta name="theme-color" content="#B12A34">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="icons/icon-512.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="js13kpwa.webmanifest">
+  <script src="data/games.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
 <header>
-	<p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
+  <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
 </header>
 <main>
-	<h1>js13kGames A-Frame entries</h1>
-	<p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
-	<button id="notifications">Request dummy notifications</button>
-	<section id="content">
-		// Content inserted in here
-	</section>
+  <h1>js13kGames A-Frame entries</h1>
+  <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
+  <button id="notifications">Request dummy notifications</button>
+  <section id="content">
+    // Content inserted in here
+  </section>
 </main>
 <footer>
-	<p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
+  <p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
 </footer>
 </body>
 </html>

@@ -1,13 +1,10 @@
 ---
 title: Localization
 slug: Glossary/Localization
-tags:
-  - Localization
-translation_of: Glossary/Localization
 original_slug: Localization
 ---
 
-**현지화(l10n)**는 소프트웨어 사용자 인터페이스를 특정 문화에 적응시키는 과정이다.
+**현지화**(**l10n**)는 소프트웨어 사용자 인터페이스를 특정 문화에 적응시키는 과정이다.
 
 다음은 고려해야 할 일반적인 요인입니다.
 

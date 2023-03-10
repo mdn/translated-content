@@ -8,6 +8,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBuffer/copyFromChannel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode `copyFromChannel()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) copie les échantillons de l'un des canaux de l'`AudioBuffer` dans un tableau.

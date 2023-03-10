@@ -1,348 +1,359 @@
 ---
 title: クライアント側ストレージ
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+l10n:
+  sourceCommit: e1f571eced916f60ca387ecb562271f6235beb5c
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-モダン・ウェブブラウザーは、ユーザーの許可のもとにウェブサイトがユーザーのコンピューター上にデータを保存して必要なときにそのデータを取得するための、いくつもの方法をサポートしています。このことにより、長期記憶のためにデータを存続させること、オフライン利用のためにサイトまたは文書を保存すること、サイトについてのユーザー独自の設定を保持すること、などなどが可能になります。本記事では、これらがどのようにして機能するのかについてのごく基本的な点を説明します。
+現代のブラウザーは、ウェブサイトがユーザーの許可を得た上で、ユーザーのコンピューターにデータを格納し、必要なときにそれを取得するためのさまざまな方法に対応しています。これにより、データを長期保存したり、サイトや文書をオフラインで使用するために保存したり、サイトのユーザー固有の設定を保持したりと、さまざまなことが可能になります。この記事では、これらがどのように動作するのか、ごく基本的なことを説明します。
 
-| 前提知識: | JavaScript の基本 ([JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)、[JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)、 [JavaScript オブジェクト入門](/ja/docs/Learn/JavaScript/Objects) を参照)、[ウェブ API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 学習目標: | アプリケーション・データを保存するためのクライアント側のストレージ API の使い方を学ぶこと                                                                                                                                                                                                                        |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        JavaScript の基本
+        （<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、
+        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
+          >構成要素</a
+        >,
+        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript のオブジェクト</a>）、
+        <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+          >クライアントサイド API の基本</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        アプリケーションデータを格納するために、クライアント側ストレージ API を使用する方法について学ぶ。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## クライアント側での保存って?
+## クライアント側ストレージとは
 
-MDN 学習エリアの他の箇所で、[静的なサイト](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites) と [動的なサイト](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites) の違いについて述べました。ほとんどの主要なモダン・ウェブサイトは動的です。つまり、ある種のデータベース (サーバー側のストレージ) を使ってデータをサーバー上に記憶し、必要なデータを取得するために[サーバー側](/ja/docs/Learn/Server-side) のコードを実行し、そのデータを静的なページ雛型に挿入し、結果として出来上がった HTML をクライアントに提供して、それがユーザーのブラウザーによって表示されるようにします。
+MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview#静的サイト)と[動的サイト](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview#動的サイト)の違いについて説明しました。現代の主要なウェブサイトのほとんどは動的です。何らかのデータベース（サーバー側ストレージ）を使用してサーバーにデータを格納し、[サーバー側](/ja/docs/Learn/Server-side)コードを動作させて必要なデータを取得し、静的なページテンプレートに挿入し、結果の HTML をクライアントに提供してユーザーのブラウザーで表示させています。
 
-クライアント側での保存は類似の原理に基づいて機能しますが、これにはいくつかの異なる使い道があります。クライアント側での保存は、クライアント上に (つまりユーザーのマシン上に) データを保存して必要なときにそのデータを取得できるようにしてくれる、いくつかの JavaScript API から構成されています。クライアント側での保存には、たとえば以下のように多くの異なる用途があります。
+クライアント側ストレージは、同様の原理で動作しますが、用途は異なります。これは、クライアント（つまりユーザーのマシン）上にデータを格納し、必要なときにそれを取得することを可能にする JavaScript API で構成されています。これには、以下のような多くの明確な用途があります。
 
-- サイトの環境設定を個人に合わせる (たとえば、カスタム・ウィジェット、カラースキーム、またはフォントサイズについて、ユーザーが選択したものを表示する、など)
-- 以前のサイト上の行動を存続させる (たとえば、前回のセッションからの買い物かごの中身を記憶しておく、ユーザーが以前ログインしたかどうかを憶えておく、など)
-- サイトをより速く (かつ、潜在的にはより費用をかけずに) ダウンロードできるように、または、ネットワーク接続なしでサイトが利用可能となるように、データと資産をローカルに保存する
-- ウェブ・アプリケーションが生成した文書を、オフラインで利用するために、ローカルに保存する
+- サイトの環境設定のパーソナライズ（ユーザーが選択したカスタムウィジェット、配色、フォントサイズの表示など）。
+- 前回のサイト活動の維持（前回のセッションからショッピングカートの内容を格納する、ユーザーが以前ログインしていたかどうかを記憶する、など）。
+- データや資産をローカルに保存することで、サイトのダウンロードを高速化（低コスト化）したり、ネットワーク接続がなくても使用できるようにしたりする。
+- ウェブアプリケーションで作成した文書をオフラインで使用するための、ローカルへの保存
 
-クライアント側での保存とサーバ側での保存は、しばしば共に使われます。たとえば、複数の音楽ファイル (おそらくウェブゲームまたは音楽プレーヤー・アプリに使われる) をダウンロードし、それらの音楽ファイルをクライアント側のデータベース内に保存し、必要に応じて再生する、といったことが可能でしょう。ユーザーは、それらの音楽ファイルをただ一度ダウンロードするだけで済むでしょう。その後の訪問では、音楽ファイルは、ダウンロードされる代わりにデータベースから取得されるでしょう。
+クライアント側とサーバー側のストレージが一緒に使用されることがよくあります。例えば、音楽ファイル（ウェブゲームや音楽プレーヤーアプリケーションで使用できる）を一括してダウンロードし、クライアント側のデータベースに格納し、必要に応じて再生できるようにすることができます。ユーザーが音楽ファイルをダウンロードするのは最初だけで、その後でアクセスした場合はデータベースから取得することになります。
 
-> **Note:** クライアント側のストレージ API を使って保存できるデータの量には、上限があります (もしかすると、個別の API ごとの上限と、累積的な上限の双方があるかもしれません)。正確な上限は、ブラウザーごとに異なりますし、もしかすると、ユーザーの設定によることもあるかもしれません。より詳しくは、[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) を参照。
+> **メモ:** クライアント側ストレージ API を使用して格納できるデータの量には上限があります（おそらく個々の API ごとと、総量の両方）。正確な上限はブラウザーによって異なり、またユーザーの設定に基づく可能性もあります。詳細な情報は[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)を参照してください。
 
-### 旧式な方法: クッキー
+### 古い流儀: クッキー
 
-クライアント側での保存という考え方には、長い歴史があります。ウェブの初期から、ウェブサイト上でのユーザー体験を個別化するための情報を記憶するべく、サイトは [クッキー](/ja/docs/Web/HTTP/Cookies) を使ってきました。そうしたクッキーは、ウェブ上で一般的に使われるクライアント側での保存の、最初期の形式です。
+クライアント側ストレージの概念は、昔からありました。ウェブの初期から、サイトは[クッキー](/ja/docs/Web/HTTP/Cookies)を使用して、ウェブサイトでのユーザー操作をパーソナライズするために情報を格納してきました。これは、ウェブで一般的に使用されているクライアント側ストレージの最も初期の形態です。
 
-最近では、クライアント側のデータを保存するためのより簡単な仕組みが利用できるため、この記事ではクッキーの使用方法については説明しません。ただし、これはクッキーが現代のウェブで完全に役に立たないことを意味するわけではありません。クッキーは、ユーザーの個別化や状態に関連するデータを保存するために今でも一般的に使用されています。たとえば、セッション ID やアクセストークンです。クッキーの詳細については、[HTTP cookies](/ja/docs/Web/HTTP/Cookies) の記事を参照してください。
+最近では、クライアント側のデータを格納するために利用できるより簡単な仕組みがあるため、この記事ではクッキーを使用する方法を教えません。しかし、これはクッキーが現代のウェブで完全に無用であるという意味ではありません。クッキーは、セッション ID やアクセストークンのような、ユーザーの個人設定や状態に関連するデータを格納するために、今でも一般的に使用されています。クッキーについての詳細情報は、 [HTTP クッキーの使用](/ja/docs/Web/HTTP/Cookies)の記事を参照してください。
 
-### 新方式派: ウェブストレージと IndexedDB
+### 新しい流儀: ウェブストレージと IndexedDB
 
-前述の「簡単な」機能には次のものがあります:
+上で触れた「簡単な」機能には、以下のものがあります。
 
-- [Web Storage API](/ja/docs/Web/API/Web_Storage_API) は、名前とそれに対応する値とからなる小規模なデータ項目を保存したり取り出したりするための、とても簡潔な構文を提供しています。これは、ユーザーの名前、ユーザーがログインしているかどうか、画面の背景にどの色を使うべきか、といったような、何らかの単純なデータを記憶するだけでよい場合に有用です。
-- [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) は、複雑なデータを保存するための完全なデータベース・システムをブラウザーに提供しています。これは、顧客レコードの完全な集合から、音声ファイルまたは動画ファイルのような複雑なデータ型にいたるまでの、種々の物事に対して使えます。
+- [ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) は、名前とそれに対応する値からなる、より小さなデータ項目を格納し、取得するための仕組みを提供します。これは、ユーザーの名前、ログインしているかどうか、画面の背景で使う色など、簡単なデータだけを格納する必要がある場合に有用です。
+- [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) は、複雑なデータを格納するための完全なデータベースシステムをブラウザーに提供します。これは、顧客レコードの完全な集合から、音声ファイルや動画ファイルのような複雑なデータ型にまで使用することができます。
 
 以下ではこれらの API について学ぶことになります。
 
-### 将来: キャッシュ API
+### キャッシュ API
 
-いくつかのモダン・ブラウザーは、新しい {{domxref("Cache")}} API をサポートしています。この API は、特定の要求に対する HTTP 応答を記憶しておくために設計されています。 また、ネットワーク接続なしに後でサイトを利用できるように、ウェブサイト資産をオフラインに記憶しておく、といったようなことをするうえで非常に有用です。キャッシュは通常、[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) と組み合わせて利用します。もっとも、必ずそうしなくてはならないというわけではありません。
+{{domxref("Cache", "キャッシュ", "", 1)}} API は、特定のリクエストに対する HTTP レスポンスを格納するために設計されており、ウェブサイトの資産をオフラインで格納し、その後ネットワーク接続なしでサイトを使用できるようにするようなことを行うのに、とても有用です。 Cache は通常、サービスワーカー API と組み合わせて使用されますが、必ずしもそうでなければならないというわけではありません。
 
-キャッシュとサービスワーカーの利用は先進的な話題であり、この記事ではそれほど詳しくは扱いません。とは言うものの、後述の [Offline asset storage](#offline_asset_storage) の節では、簡単な例をお見せします。
+キャッシュとサービスワーカーの使用は高度なトピックであるため、この記事ではあまり詳しく説明しませんが、以下の[オフライン資産ストレージ](#オフライン資産ストレージ)のセクションで例を示す予定です。
 
-## 単純なデータを保存する——ウェブストレージ
+## 単純なデータの保存 — ウェブストレージ
 
-[Web Storage API](/ja/docs/Web/API/Web_Storage_API) は大変使いやすいものです。(文字列や数などに限定された) データからなる単純な名前／値のペアを保存し、必要なときにその値を取り出します。
+[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) はとても簡単に使えます。（文字列や数などに限定された）データからなる単純な名前／値のペアを保存し、必要なときにその値を取り出します。
 
 ### 基本的構文
 
 以下に方法を示しましょう。
 
-1. まず、GitHub 上の [ウェブストレージの空白テンプレート](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) へ行ってください (新規タブで開いてください)。
-2. ブラウザーのデベロッパー・ツールの JavaScript コンソールを開いてください。
-3. ウェブストレージ・データのすべては、ブラウザー内部の二つのオブジェクト的な構造体の中に含まれます。つまり、{{domxref("Window.sessionStorage", "sessionStorage")}} と {{domxref("Window.localStorage", "localStorage")}} の中です。前者は、ブラウザーが開いている限り、データを存続させます (ブラウザーを閉じるとデータは失われます)。後者は、ブラウザーを閉じて、それから再びブラウザーを開いた後でさえも、データを存続させます。一般的には後者の方がより有用なので、本記事では後者を使います。
+1. まず、GitHub 上の[ウェブストレージの空白テンプレート](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html)へ行ってください（新規タブで開いてください）。
+2. ブラウザーの開発者ツールの JavaScript コンソールを開いてください。
+3. ウェブストレージのデータはすべて、ブラウザーの中にある 2 つのオブジェクト風の構造、 {{domxref("Window.sessionStorage", "sessionStorage")}} と {{domxref("Window.localStorage", "localStorage")}} の中に入っています。前者は、ブラウザーを開いている間だけデータを維持し（ブラウザーを閉じるとデータは失われる）、後者はブラウザーを閉じてから再び開いた後でもデータを維持するものです。一般的には後者の方が有用なので、この記事では後者を使用することにします。
 
-    {{domxref("Storage.setItem()")}} メソッドによって、ストレージ内にデータ項目を保存できます。このメソッドは二つの引数をとります。すなわち、その項目の名前と、その値です。JavaScript コンソールに以下のように打ち込んでみてください (もしお望みなら、値は御自分のお名前に変更してくださいね!)
+   {{domxref("Storage.setItem()")}} メソッドによって、ストレージ内にデータ項目を保存できます。このメソッドは 2 つの引数をとります。すなわち、その項目の名前と、その値です。JavaScript コンソールに以下のように打ち込んでみてください（もし良ければ、値は自分の名前に変更してください）。
 
-    ```js
-    localStorage.setItem('name','Chris');
-    ```
+   ```js
+   localStorage.setItem('name','Chris');
+   ```
 
-4. {{domxref("Storage.getItem()")}} メソッドは一つの引数をとります。つまり、取り出したいデータ項目の名前です。そして、このメソッドは、その項目の値を返します。今度は JavaScript コンソールに以下の行を打ち込んでください。
+4. {{domxref("Storage.getItem()")}} メソッドは 1 つの引数をとります。つまり、取り出したいデータ項目の名前です。そして、このメソッドは、その項目の値を返します。今度は JavaScript コンソールに以下の行を打ち込んでください。
 
-    ```js
-    let myName = localStorage.getItem('name');
-    myName
-    ```
+   ```js
+   let myName = localStorage.getItem('name');
+   myName
+   ```
 
-    2 行目を入力すると、`myName` という変数が今や `name` というデータ項目の値を保有していることが分かるはずです。
+   2 行目を入力すると、`myName` という変数が今や `name` というデータ項目の値を保有していることが分かるはずです。
 
-5. {{domxref("Storage.removeItem()")}} メソッドは一つの引数をとります。つまり、削除したいデータ項目の名前です。このメソッドは、ウェブストレージからその項目を削除します。JavaScript コンソールに以下の行を打ち込んでください。
+5. {{domxref("Storage.removeItem()")}} メソッドは 1 つの引数をとります。つまり、削除したいデータ項目の名前です。このメソッドは、ウェブストレージからその項目を削除します。 JavaScript コンソールに以下の行を打ち込んでください。
 
-    ```js
-    localStorage.removeItem('name');
-    let myName = localStorage.getItem('name');
-    myName
-    ```
+   ```js
+   localStorage.removeItem('name');
+   myName = localStorage.getItem('name');
+   myName
+   ```
 
-    3 行目は、今度は `null` を返すはずです。というのも、もはや `name` という項目はウェブストレージ内に存在しないからです。
+   3 行目は、今度は `null` を返すはずです。というのも、もはや `name` という項目はウェブストレージ内に存在しないからです。
 
-### データが存続する!
+### データの持続
 
-ウェブストレージの一つの重要な特徴は、ページ・ロードをまたいで (さらに、`localStorage` の場合には、ブラウザーを終了させてさえも) データが存続する、という点です。この特徴が機能しているところを見てみましょう。
+ウェブストレージの一つの重要な特徴は、ページの読み込みまたいで（さらに、`localStorage` の場合には、ブラウザーを終了させた場合も）データが持続する、という点です。この点を見てみましょう。
 
-1. もう一度、ウェブストレージの空白テンプレートを開いてください。ただし今回は、本チュートリアルを開いたのとは別のブラウザーで開いてください! こうすることで、取り扱いがしやすくなるでしょう。
+1. もう一度、ウェブストレージの空白テンプレートを開いてください。ただし今回は、本チュートリアルを開いたのとは別のブラウザーで開いてください。こうすることで、扱いやすくなります。
 2. 以下の行をブラウザーの JavaScript コンソールに打ち込んでください。
 
-    ```js
-    localStorage.setItem('name','Chris');
-    let myName = localStorage.getItem('name');
-    myName
-    ```
+   ```js
+   localStorage.setItem('name','Chris');
+   let myName = localStorage.getItem('name');
+   myName
+   ```
 
-    `name` という項目が返されるのが分かるはずです。
+   name という項目が返されるのが分かるはずです。
 
 3. さてここでブラウザーを終了させてから再び起動して開いてください。
 4. 再び、以下の行を入力してください。
 
-    ```js
-    let myName = localStorage.getItem('name');
-    myName
-    ```
+   ```js
+   let myName = localStorage.getItem('name');
+   myName
+   ```
 
-    ブラウザーを終了させてから再び開いたというのに、それでも依然として値が利用可能である、ということが分かるはずです。
+   ブラウザーを終了させてから再び開いたのに、それでも値が利用可能である、ということが分かるはずです。
 
-### ドメインごとに別々のストレージ
+### ストレージはドメインごとに独立
 
-ドメインごとに (ブラウザーにロードされた別々のウェブ・アドレスごとに)、別々のデータストアがあります。二つのウェブサイト (たとえば google.com と amazon.com) をロードして、一方のウェブサイトで項目を保存してみると、その項目は他方のウェブサイトでは利用できない、と分かるでしょう。
+データストアはドメインごと（ブラウザーに読み込まれるウェブアドレスが別個のものごと）に用意されています。 2 つのウェブサイト（例えば google.com と amazon.com）を読み込んで、 1 つのウェブサイトにアイテムを格納しようとすると、それは他のウェブサイトでは利用できないことが分かるでしょう。
 
-これには意義があります。もしウェブサイト同士がお互いのデータを見ることが可能であったら起こるであろうセキュリティ問題を想像できますよね!
+これは理にかなっています。もしウェブサイトがお互いのデータを見ることができたら、セキュリティ上の問題が発生することは想像に難くありません。
 
-### さらに込み入った例
+### より踏み込んだ例
 
-どのようにウェブストレージを使えるのかについてお教えするために、簡単で基礎的な事例を書くことによって、(ドメインごとのストレージという) この新たに得た知識を応用してみましょう。この事例では、名前を入力できるようにします。その入力の後、個人に合わせた挨拶を表示するべく、ページが更新されます。この状態は、ページ／ブラウザーのリロードをまたいでも存続するでしょう。なぜなら、名前がウェブストレージに記憶されているからです。
+この新しく得た知識を応用して、ウェブストレージがどのように使用できるかを知るために、 動作する例を書いてみましょう。この例では、名前を入力すると、ページが更新された後でパーソナライズされた挨拶ができるようになります。名前はウェブストレージに格納されているので、この状態はページやブラウザーが再読み込みされたときにも維持されます。
 
-この例の HTML を [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) で入手できます。これは、ヘッダーとコンテンツとフッターを備えた簡素なウェブサイトと、名前を入力するためのフォームとを含みます。
+この例の HTML を [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) で入手できます。これは、ヘッダーとコンテンツとフッターを備えた簡素なウェブサイトと、名前を入力するためのフォームとを含みます。
 
-![](web-storage-demo.png)
+![ヘッダー、コンテンツ、フッターのセクションがあるウェブサイトのスクリーンショットです。ヘッダーは、左側にウェルカムテキスト、右側に「忘れる」とラベル付けされたボタンがあります。コンテンツには、見出しと、それに続く2段落のダミーテキストがあります。フッターには、 'Copyright nobody. Use the code as you like' とあります。](web-storage-demo.png)
 
 この例を組み上げましょう。すると、これがどのように機能するのか理解できるでしょう。
 
-1. まず、御自分のコンピュータ上の新規ディレクトリーに、[personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) というファイルのローカルコピーを作ってください。
-2. 次に、`index.js` と呼ばれる JavaScript ファイルを、HTML がどのように参照しているのかに注意してください (40 行目を参照)。これ (`index.js`) を作成して、そこに JavaScript コードを書き込む必要があります。HTML ファイルと同じディレクトリーに `index.js` というファイルを作成してください。
-3. この例で操作する必要のある HTML 項目 (features) のすべてに対する参照を作るところから取り掛かりましょう。それらの参照のすべてを定数として作ります。なぜなら、これらの参照は、アプリのライフサイクル内で変化する必要がないからです。以下の行を JavaScript ファイルに追加してください。
+1. まず、自分のコンピューターの新しいディレクトリーに、 [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) ファイルのローカルコピーを作成してください。
+2. 次に、 HTML が JavaScript ファイルの `index.js` を `<script src="index.js" defer></script>` のような行で参照している方法に注意してください。このファイルを作成し、 JavaScript のコードをそこに書く必要があります。 HTML ファイルと同じディレクトリーに `index.js` ファイルを作成してください。
+3. まず、この例で操作する必要のあるすべての HTML の機能への参照を作成します。これらの参照はアプリのライフサイクルで変更する必要がないため、すべて定数として作成します。以下の行を JavaScript ファイルに追加してください。
 
-    ```js
-    // 必要な定数を作ります。
-    const rememberDiv = document.querySelector('.remember');
-    const forgetDiv = document.querySelector('.forget');
-    const form = document.querySelector('form');
-    const nameInput = document.querySelector('#entername');
-    const submitBtn = document.querySelector('#submitname');
-    const forgetBtn = document.querySelector('#forgetname');
+   ```js
+   // 必要な定数を作成
+   const rememberDiv = document.querySelector('.remember');
+   const forgetDiv = document.querySelector('.forget');
+   const form = document.querySelector('form');
+   const nameInput = document.querySelector('#entername');
+   const submitBtn = document.querySelector('#submitname');
+   const forgetBtn = document.querySelector('#forgetname');
 
-    const h1 = document.querySelector('h1');
-    const personalGreeting = document.querySelector('.personal-greeting');
-    ```
+   const h1 = document.querySelector('h1');
+   const personalGreeting = document.querySelector('.personal-greeting');
+   ```
 
-4. 次に、送信ボタンが押されたときにフォームが実際にこのフォーム自体を送信することをやめさせるための、小規模なイベント・リスナーを含める必要があります。というのも、こうした送信は所望の振る舞いではないからです。以下に示すスニペットを、前のコードに追加してください。
+4. 次は、送信ボタンが押されたときにフォームが実際に送信されるのを阻止するために、小さなイベントリスナーを記載する必要があります。これは私たちが望むような動作ではないからです。前回のコードの下に、次のスニペットを追加してください。
 
-    ```js
-    // ボタンが押されたときにフォームが送信することをやめさせます。
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-    });
-    ```
+   ```js
+   // ボタンが押されたときにフォームを送信しないようにする
+   form.addEventListener('submit', (e) => e.preventDefault());
+   ```
 
-5. さてここで、イベント・リスナーを追加せねばなりません。そのイベント・リスナーのハンドラー関数は、"Say hello" ボタンがクリックされたときに実行されます。それぞれの断片が何を行うのかはコメントで詳しく説明してありますが、本質的にここでは、ユーザーがテキスト入力ボックスに入力した名前をとってきて、`setItem()` を用いてその名前をウェブストレージに保存し、その後、実際のウェブサイト上のテキストの更新を扱う `nameDisplayCheck()` と呼ばれる関数を実行しています。これをコードの末尾に加えてください。
+5. 次に、イベントリスナーを追加する必要があります。このイベントリスナーのハンドラー関数は、"Say hello" ボタンがクリックされたときに動作するようにします。コメントでそれぞれが何を行うか詳細に説明していますが、要するにここではユーザーがテキスト入力ボックスに入力した名前を受け取り、 `setItem()` を使用してウェブストレージに保存し、次に `nameDisplayCheck()` という関数を呼び出して実際のウェブサイトの更新を処理しているのです。これをコードの一番下に追加してください。
 
-    ```js
-    // 'Say hello' ボタンがクリックされたら関数を実行します。
-    submitBtn.addEventListener('click', function() {
-      // 入力された名前をウェブストレージに保存します。
-      localStorage.setItem('name', nameInput.value);
-      // 個人に合わせた挨拶を表示するとともにフォーム表示を更新する
-      // 措置をとるべく、nameDisplayCheck() を実行します。
-      nameDisplayCheck();
-    });
-    ```
+   ```js
+   // 'Say hello' ボタンがクリックされたら関数を実行する
+   submitBtn.addEventListener('click', () => {
+     // 入力された名前をウェブストレージに保存
+     localStorage.setItem('name', nameInput.value);
+     // nameDisplayCheck() を動作させ、パーソナライズされた挨拶の表示と、
+     // フォームの表示を更新する
+     nameDisplayCheck();
+   });
+   ```
 
-6. この時点で、"Forget" ボタンがクリックされたときに関数を実行するためのイベント・ハンドラーも必要です。"Forget" ボタンは、"Say hello" ボタンがクリックされた後にのみ表示されます (二つのフォーム状態が行ったり来たり切り替わります)。この関数では、`removeItem()` を用いてウェブストレージから `name` という項目を削除し、その後、表示を更新するために `nameDisplayCheck()` を再び実行します。これを末尾に付け加えてください。
+6. この時点で、"Forget" ボタンがクリックされたときに関数を実行するためのイベントハンドラーも必要です。 "Forget" ボタンは、 "Say hello" ボタンがクリックされた後にのみ表示されます（二つのフォーム状態が行ったり来たり切り替わります）。この関数では、`removeItem()` を用いてウェブストレージから `name` という項目を削除し、その後、表示を更新するために `nameDisplayCheck()` を再び実行します。これを末尾に付け加えてください。
 
-    ```js
-    // 'Forget' ボタンがクリックされたら関数を実行します。
-    forgetBtn.addEventListener('click', function() {
-      // 保存してある名前をウェブストレージから削除します。
-      localStorage.removeItem('name');
-      // 再び一般的な挨拶を表示するとともにフォーム表示を更新する
-      // 措置をとるべく、nameDisplayCheck() を実行します。
-      nameDisplayCheck();
-    });
-    ```
+   ```js
+   // 'Forget' ボタンがクリックされたら関数を実行する
+   forgetBtn.addEventListener('click', () => {
+     // 保存してある名前をウェブストレージから削除
+     localStorage.removeItem('name');
+     // 再び nameDisplayCheck() を実行して、一般的な挨拶を表示するとともに
+     // フォーム表示を更新する
+     nameDisplayCheck();
+   });
+   ```
 
-7. さて今や `nameDisplayCheck()` という関数そのものを定義すべきときです。ここでは、`localStorage.getItem('name')` を条件テストとして用いることにより、`name` という項目がウェブストレージに保存済みかどうかを調べます。もし保存済みなら、この呼び出しは `true` と評価されるでしょう。もし保存済みでなければ、`false` になるでしょう。もし `true` なら、個人に合わせた挨拶を表示し、フォームの "forget" の部分を表示し、フォームの "Say hello" の部分を隠します。もし `false` なら、一般的な挨拶を表示し、逆のことをします (フォームの "forget" の部分を隠し、フォームの "Say hello" の部分を表示します)。またもや末尾に以下のコードを追加してください。
+7. 次に `nameDisplayCheck()` 関数そのものを定義する時が来ました。ここでは、条件テストとして `localStorage.getItem('name')` を使用して、 name 項目がウェブストレージに格納されているかどうかを調べています。 name が格納されていれば、この呼び出しを `true` と評価し、格納されていなければ、`false` と評価します。呼び出しが `true` と評価された場合、パーソナライズされた挨拶を表示し、フォームの "forget" 部分を表示し、フォームの "Say hello" 部分は非表示にします。呼び出した結果が `false` ならば、一般的な挨拶を表示し、その逆の処理を行います。再び、以下に示すコードを一番下に記述する。
 
-    ```js
-    // nameDisplayCheck() という関数を定義します。
-    function nameDisplayCheck() {
-      // 'name' というデータ項目がウェブストレージに保存されているかどうかを調べます。
-      if(localStorage.getItem('name')) {
-        // もし保存されていたら、個人に合わせた挨拶を表示します。
-        let name = localStorage.getItem('name');
-        h1.textContent = 'Welcome, ' + name;
-        personalGreeting.textContent = 'Welcome to our website, ' + name + '! We hope you have fun while you are here.';
-        // フォームのうち 'remember' の部分を隠し、'forget' の部分を表示します。
-        forgetDiv.style.display = 'block';
-        rememberDiv.style.display = 'none';
-      } else {
-        // もし保存されていなければ、一般的な挨拶を表示します。
-        h1.textContent = 'Welcome to our website ';
-        personalGreeting.textContent = 'Welcome to our website. We hope you have fun while you are here.';
-        // フォームのうち 'forget' の部分を隠し、'remember' の部分を表示します。
-        forgetDiv.style.display = 'none';
-        rememberDiv.style.display = 'block';
-      }
-    }
-    ```
+   ```js
+   // nameDisplayCheck() という関数を定義する
+   function nameDisplayCheck() {
+     // 'name' というデータ項目がウェブストレージに保存されているかどうかを調べる
+     if (localStorage.getItem('name')) {
+      // もし保存されていたら、個人に合わせた挨拶を表示
+       const name = localStorage.getItem('name');
+       h1.textContent = `Welcome, ${name}`;
+       personalGreeting.textContent = `Welcome to our website, ${name}! We hope you have fun while you are here.`;
+       // フォームのうち 'remember' の部分を隠し、'forget' の部分を表示
+       forgetDiv.style.display = 'block';
+       rememberDiv.style.display = 'none';
+     } else {
+       // もし保存されていなければ、一般的な挨拶を表示
+       h1.textContent = 'Welcome to our website ';
+       personalGreeting.textContent = 'Welcome to our website. We hope you have fun while you are here.';
+       // フォームのうち 'forget' の部分を隠し、'remember' の部分を表示
+       forgetDiv.style.display = 'none';
+       rememberDiv.style.display = 'block';
+     }
+   }
+   ```
 
-8. 最後に、ページがロードされるたびに `nameDisplayCheck()` という関数を実行せねばなりません。もしそうしなければ、個人に合わせた挨拶は、ページのリロードをまたがってまでは持続しなくなってしまうでしょう。以下のものをコードの末尾に追加してください。
+8. 最後になりますが、ページが読み込まれたときに `nameDisplayCheck()` 関数を実行する必要があります。これを行わないと、パーソナライズされた挨拶文はページの再読み込み時に維持されません。コードの一番下に以下のように追加してください。
 
-    ```js
-    document.body.onload = nameDisplayCheck;
-    ```
+   ```js
+   nameDisplayCheck();
+   ```
 
-例が完成しました。よくできましたね! 現時点で残っているのは、コードを保存して HTML ページをブラウザーでテストすることだけです。[ライブ実行される完成版をここで](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 見られます。
+例が完成しました。よくできましたね! 現時点で残っているのは、コードを保存して HTML ページをブラウザーでテストすることだけです。[ライブ実行される完成版をここで](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html)見られます。
 
-> **Note:** [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
+> **メモ:** [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
 
-> **Note:** 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページをロードし終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
+> **メモ:** 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページを読み込み終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
 
-## 複雑なデータを保存する—— IndexedDB
+## 複雑なデータを保存する — IndexedDB
 
-[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) (ときには IDB と省略します) は、ブラウザーで利用可能であり、複雑で関係性のあるデータを保存できる、完全なデータベース・システムです。そしてそのデータの型は、文字列または数値のような単純な値に限定されません。動画や静止画像、そして、その他のものもほとんどすべて、IndexedDB インスタンスに保存できます。
+[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) （ときには IDB と省略します）は、ブラウザーで利用可能であり、複雑で関係性のあるデータを保存できる、完全なデータベースシステムです。そのデータの型は、文字列または数値のような単純な値に限定されません。動画や静止画像、そして、その他のものもほとんどすべて、 IndexedDB インスタンスに保存することができます。
 
-しかし、これは高くつきます。IndexedDB の使用は、ウェブストレージ API の使用よりも遥かに複雑なのです。本節では、IndexedDB ができることのうち本当に表面的なところに触れるだけですが、始めるのに十分なだけのことは、お伝えしましょう。
+しかし、これには代償があります。IndexedDB はウェブストレージ API よりも使うのがはるかに複雑です。この節では、実際にそれが可能なことの表面に触れるだけですが、 始めるには十分な情報を提供します。
 
-### メモ書きの保存の事例を通して作業します
+### メモのストレージの例での作業
 
-ここでは、メモ書きをブラウザーに保存して好きなときにそれを見たり消したりできるようにする事例を、見ていただきましょう。その際、その例は御自分で組み立てていただきますが、進行に合わせて、IDB の最も根本的な部分について御説明します。
+ここでは、ブラウザーの中にメモを格納し、好きな時に閲覧・削除できるようにする例を実行し ましょう。自分で構築してもらい、IDB の最も基本的な部分を説明しながら、進めていきます。
 
-当該アプリは、以下のような見かけをしています。
+アプリは、次のような外見です。
 
-![](idb-demo.png)
+![IndexDBメモのデモ画面では、4つのセクションがあります。最初のセクションはヘッダーです。2つ目のセクションは、作成されたすべてのメモを掲載しています。2 つのメモがあり、それぞれに削除ボタンがあります。3 つ目のセクションはフォームで、'Note title' と 'Note text' の 2 つの入力欄と 'Create new note' と書かれたボタンがあります。一番下のセクションのフッターには、'Copyright nobody. Use the code as you like' とあります。](idb-demo.png)
 
 メモ書きの各々には題名と何らかの本文があり、題名と本文のそれぞれは別々に編集できます。以下で見てゆく JavaScript コードには、何が起きているのかを理解する手助けとなる詳しいコメントがあります。
 
-### 始めますよ
+### 始めましょう
 
-1. まず、[`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html) と [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css) と [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) というファイルのローカルコピーを、ローカルマシンの新規ディレクトリー内に作成してください。
-2. ファイルを見てください。HTML がかなり簡潔なのがお分かりでしょう。これは、ヘッダーとフッターのあるウェブサイトです。また、メモ書きを表示する場所と、データベースに新たなメモ書きを入力するためのフォームとを含む、本文コンテンツ領域もあります。 CSS は、何が起きているのかをより明瞭にするための、ある種の簡素なスタイルづけを提供しています。JavaScript ファイルは、宣言された五つの定数を含んでいます。つまり、 内部にメモ書きを表示することになる {{htmlelement("ul")}} 要素への参照と、題名および本文の {{htmlelement("input")}} 要素への参照と、{{htmlelement("form")}} 自体への参照と、{{htmlelement("button")}} への参照とを含んでいます。
+1. まず、[`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.html)、 [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/style.css)、 [`index-start.js`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) というファイルのローカルコピーを、ローカルマシンの新規ディレクトリー内に作成してください。
+2. ファイルを見てください。 HTML は、ヘッダーとフッター、そしてメモを表示する場所とデータベースに新しいメモを入力するフォームを含むメインコンテンツエリアを持つウェブサイトを定義していることがわかるでしょう。 CSS は、何が起こっているかを明確にするために、いくつかのスタイル設定を提供しています。 JavaScript ファイルには、メモが表示される {{htmlelement("ul")}} 要素、タイトルと本文の {{htmlelement("input")}} 要素、 {{htmlelement("form")}} 自体、および {{htmlelement("button")}} への参照を含む 5 つの宣言済み定数が含まれています。
 3. JavaScript ファイルの名前を `index.js` に変更してください。コードをそこに追加し始める準備がこれで整いました。
 
 ### データベースの初期設定
 
-では、実際にデータベースを設定するために最初にすべきことを見てみましょう。
+では、実際にデータベースを設定するには、最初の段階で何をしなければならないかを見てみましょう。
 
 1. 定数の宣言の下に、以下の行を追加してください。
 
-    ```js
-    // 開いたデータベースを記憶しておくためのデータベース・オブジェクトのインスタンスを作成します。
-    let db;
-    ```
+   ```js
+   // 開いているデータベースを格納するために、 db オブジェクトのインスタンスを作成します。
+   let db;
+   ```
 
     ここでは、`db` と呼ばれる変数を宣言しています。これは後に、データベースを表すオブジェクトを記憶するのに使われます。この変数を何箇所かで使うつもりなので、物事を容易にするために、ここでこの変数を大域的に宣言しておきました。
 
 2. 次に、以下のものをコードの末尾に加えてください。
 
-    ```js
-    window.onload = function() {
+   ```js
+   // データベースを開きます。データベースがまだ存在しない場合は作成されます。
+   // （後述の upgradeneed ハンドラーを参照）。
+   const openRequest = window.indexedDB.open('notes_db', 1);
+   ```
 
-    };
-    ```
+   この行は、 `notes_db` というデータベースのバージョン `1` を開くためのリクエストを作成します。もしこれがまだ存在しない場合は、後続のコードで作成されます。このリクエストパターンは、 IndexedDB 全体でとても多く使用されるでしょう。データベース処理には時間がかかります。結果を待つ間にブラウザーがハングアップするのは避けたいので、データベースの操作は{{Glossary("asynchronous", "非同期")}}です。つまり、すぐに実行するのではなく、将来のある時点で実行し、実行が完了したら通知を受け取ります。
 
-    続きのコードはすべて、この `window.onload` イベント・ハンドラー関数——ウィンドウの {{event("load")}} イベントが発火したときに呼ばれます——の中に書いてゆきます。アプリが完全にロード動作を終えるよりも前には IndexedDB 機能を使おうとはしないよう保証するために、そうしています (もしそう保証しなかったら、失敗する可能性があります)。
+   IndexedDB でこれを扱うには、リクエストオブジェクトを作成します（これは好きなように名付けることができます。ここでは `openRequest` と名付けているので、何のためのオブジェクトかは明らかでしょう）。そして、リクエストが完全に完了したり、失敗したりしたときにコードを実行するために、イベントハンドラーを使用します。
 
-3. `window.onload` ハンドラーの中に、以下のものを追加してください。
+    > **メモ:** バージョン番号は重要です。もし、データベースをアップグレードしたい場合（例えば、テーブル構造を変更するなど）、バージョンを上げ、 `upgradeneeded` ハンドラー（下記参照）の内部で異なるスキーマを指定するなどして、コードを再度実行する必要があります。このチュートリアルでは、データベースのアップグレードについては触れません。
 
-    ```js
-    // データベースを開きます。データベースは、まだ存在していない場合には
-    // 新規作成されます (後述の onupgradeneeded を参照)。
-    let request = window.indexedDB.open('notes', 1);
-    ```
+3. 前回追加した部分のすぐ下に、次のイベントハンドラーを追加してください。
 
-    この行では、`notes` と呼ばれるデータベースのバージョン `1` を開く `request` (要求) を作成します。もしそのデータベースがまだ存在しなければ、後述のコードによって新規作成されます。IndexedDB の全体を通じて、この要求パターンが非常に高頻度で使われることが、いずれお分かりになるでしょう。データベース操作には時間がかかります。その結果を待つ間、ブラウザーをハングさせることはお望みでないでしょうから、データベース操作は {{Glossary("asynchronous")}} (非同期) となっています。このことが意味するのは、結果は直ちに生じるのではなく、将来のいずれかの時点で生じるだろうということ、および、結果が出たときには通知されるということです。
+   ```js
+   // error ハンドラーは、データベースがうまく開けなかったことを意味します。
+   openRequest.addEventListener('error', () => console.error('Database failed to open'));
 
-    こういったことを IndexedDB で扱うために、要求オブジェクト (何とでも好きなように呼んで構いませんが、何を目的としたものなのかが明白になるので、`request` (要求) と呼んでおきました) を作成します。それから、要求が完了する、失敗する、などの際にコードを実行するために、いくつかのイベント・ハンドラーを使います。この点については、使用されているところを後で見ることになります。
+   // success ハンドラーは、データベースがうまく開けたことを意味します。
+   openRequest.addEventListener('success', () => {
+     console.log('Database opened successfully');
 
-    > **Note:** バージョン番号は重要です。(たとえばテーブル構造を変更することによって) データベースをアップグレードしたい場合には、上げたバージョン番号や、`onupgradeneeded` ハンドラー (下記参照) の内部で指定される別のスキーマなどを使って、コードを再度実行せねばなりません。この簡単なチュートリアルでは、データベースのアップグレードは扱いません。
+     // 開いたデータベースオブジェクトを db という変数に記憶します。これは以降で頻繁に使われます。
+     db = openRequest.result;
 
-4. さて今度は、前に追加した分のすぐ下に、以下のイベント・ハンドラーを追加してください。今度もまた、`window.onload` ハンドラーの中への追加です。
+     // IDB 内の既存のメモ書きを表示するために、 displayData() 関数を実行します。
+     displayData();
+   });
+   ```
 
-    ```js
-    // onerror ハンドラーは、データベースがうまく開けなかったことを意味します。
-    request.onerror = function() {
-      console.log('Database failed to open');
-    };
+   {{domxref("IDBRequest/error_event", "error")}} イベントハンドラーは、システムがリクエストに失敗したと言って戻ってきたときに実行されます。これによって、この問題に対応することができます。この例では、 JavaScript のコンソールにメッセージを表示するだけです。
 
-    // onsuccess ハンドラーは、データベースがうまく開けたことを意味します。
-    request.onsuccess = function() {
-      console.log('Database opened successfully');
+   {{domxref("IDBRequest/success_event", "success")}} イベントハンドラーは、リクエストが正常に返された場合、つまりデータベースが正常に開かれた場合に実行されます。この場合、開いたデータベースを表すオブジェクトが {{domxref("IDBRequest.result", "openRequest.result")}} プロパティで利用できるようになり、データベースを操作することができるようになります。後で使用するために、先に作成した `db` 変数にこの値を格納しておきます。また、 `displayData()` という関数も呼び出し、 {{HTMLElement("ul")}} の中にデータベースのデータを表示します。ここでは、ページを読み込むとすぐにデータベースにあるメモが表示されるように、この関数を実行しています。後で `displayData()` を定義したものを見ることになります。
 
-      // 開いたデータベース・オブジェクトを、db という変数に記憶します。この変数は、以下でたくさん使われます。
-      db = request.result;
+4. この節の最後に、データベースを設定するためのおそらく最も重要なイベントハンドラーを追加します。 {{domxref("IDBOpenDBRequest/upgradeneeded_event", "upgradeneed")}} です。このハンドラーは、データベースがまだ設定されていない場合、またはデータベースが既存の格納されたデータベースよりも大きなバージョン番号で開かれた場合（アップグレードを実行する場合）実行されます。前回のハンドラーの下に、以下のコードを追加してください。
 
-      // IDB 内の既存のメモ書きを表示するために、displayData() 関数を実行します。
-      displayData();
-    };
-    ```
+   ```js
+   // データベースのテーブルがまだ存在しない場合は、それを設定します。
+   openRequest.addEventListener('upgradeneeded', (e) => {
 
-    要求は失敗した、と伝えつつシステムが戻ってくる場合には、{{domxref("IDBRequest.onerror", "request.onerror")}} というハンドラーが実行されます。これによって、(要求が失敗したという) この問題に対処できるようになります。この簡単な例では、単に JavaScript コンソールにメッセージを印字します。
+     // 開いたデータベースの参照を取得します。
+     db = e.target.result;
 
-    他方、{{domxref("IDBRequest.onsuccess", "request.onsuccess")}} ハンドラーは、要求が成功裡に戻ってくる場合、つまりデータベースをうまく開けた場合に、実行されます。この場合、開いたデータベースを表すオブジェクトが、{{domxref("IDBRequest.result", "request.result")}} というプロパティで利用可能となります。それにより、データベースを操作できるようになります。後で使うために、と事前に作っておいた `db` という変数に、このオブジェクトを保存します。また、`displayData()` と呼ばれるカスタム関数も実行します。この関数は、データベース内のデータを {{HTMLElement("ul")}} 内部に表示します。すでにデータベース内にあるメモ書きが、ページがロードされ次第すぐに表示されるように、ここでこの関数を実行しています。この関数を定義する様子は、後で見ることにしましょう。
+     // 自動増加するキーを含んだ、メモを格納するための objectStore を
+     // 作成します（基本的に単一の表のように）。
+     const objectStore = db.createObjectStore('notes_os', { keyPath: 'id', autoIncrement:true });
 
-5. 本節の最後では、データベースを設定するためには多分もっとも重要なイベント・ハンドラーを追加しましょう。つまり、{{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupgradeneeded")}} です。このハンドラーは、データベースがまだ設定されていなかった場合、あるいは、保存済みの既存のデータベースよりも上のバージョン番号でデータベースが開かれた場合 (アップグレードを行う場合) に、実行されます。前のハンドラーの下に、以下のコードを追加してください。
+     // objectStore にどのようなデータ項目を格納するかを定義します。
+     objectStore.createIndex('title', 'title', { unique: false });
+     objectStore.createIndex('body', 'body', { unique: false });
 
-    ```js
-    // これがまだ実行されていない場合に、データベースのテーブルを設定します。
-    request.onupgradeneeded = function(e) {
-      // 開いたデータベースに対する参照を求めます。
-      let db = e.target.result;
+     console.log('Database setup complete');
+   });
+   ```
 
-      // 自動的にインクリメントするキーを含んでおり、メモ書きを中に保存するための
-      // (基本的に一つのテーブルに類似した) objectStore を、作成します。
-      let objectStore = db.createObjectStore('notes', { keyPath: 'id', autoIncrement:true });
+   ここでは、データベースのスキーマ（構造）、つまり、データベースに含まれるカラム（またはフィールド）の集合を定義します。ここでは、まず既存のデータベースへの参照を、イベントのターゲット (`e.target.result`) の `result` プロパティ (`request` オブジェクト) から取得します。これは `success` イベントハンドラーの `db = openRequest.result;` という行と同じですが、ここでは別個に行う必要があります。それは、`upgradeneeded` イベントハンドラーが（必要なら） `success` イベントハンドラーの前に実行されるためです。つまり、この処理を行わない場合は `db` の値を利用することはできないのです。
 
-      // objectStore が含むことになるデータ項目を定義します。
-      objectStore.createIndex('title', 'title', { unique: false });
-      objectStore.createIndex('body', 'body', { unique: false });
+   次に {{domxref("IDBDatabase.createObjectStore()")}} を使用して、呼び出されたデータベースの中に `notes_os` という名前の新しいオブジェクトストアを作成します。これは、従来のデータベースシステムにおける単一の表に相当します。これに notes という名前をつけて、 `id` という `autoIncrement` キーフィールドも指定しました。新しいレコードが作成されるたびに、このフィールドに自動的に値が増加するので、開発者は明示的にこのフィールドを設定する必要はありません。キーである `id` フィールドは、レコードを削除するときや表示するときなど、レコードを一意に識別するために使用されます。
 
-      console.log('Database setup complete');
-    };
-    ```
+    他にも {{domxref("IDBObjectStore.createIndex()")}} メソッドを使用して、`title` （それぞれのメモのタイトルを格納）と `body` （メモの本文を格納）の 2 つのインデックス（フィールド）も作成しています。
 
-    ここは、データベースのスキーマ (構造) ——すなわち、データベースが含む列 (ないしフィールド) の集合——を定義している箇所です。ここではまず、`e.target.result` (イベント・ターゲットの `result` というプロパティ) から、既存のデータベースへの参照を求めていますが、これ (`e.target` というイベント・ターゲット) は、`request` というオブジェクトです。この行は、`onsuccess` ハンドラーの中の `db = request.result;` という行と等価です。しかし、それとは別に、ここでこのようにする必要があります。なぜなら、`onupgradeneeded` ハンドラーは、(もし必要な場合には) `onsuccess` ハンドラーよりも前に実行されることになる——つまり、もしここでこのようにしておかなければ、`db` の値を利用できない——からです。
+このデータベーススキーマを設定した上で、データベースにレコードを追加し始めると、各レコードはこのようなオブジェクトとして表わされることになります。
 
-    それから、{{domxref("IDBDatabase.createObjectStore()")}} を用いて、開いたデータベースの内部に新たなオブジェクト・ストアを作成します。これは、従来のデータベース・システムにおける一つのテーブルと等価です。このオブジェクト・ストアには `notes` という名前をつけました。また、`id` と呼ばれる `autoIncrement` キーのフィールドも指定しました。新規レコードの各々において、このフィールドには、インクリメントされた値が自動的に与えられ、開発者は、このフィールドを明示的に設定する必要がありません。キーであるがゆえに、`id` フィールドは、たとえばレコードを削除または表示する際に、レコードを一意に識別するのに使われることでしょう。
-
-    {{domxref("IDBObjectStore.createIndex()")}} メソッドを用いて、別の二つのインデックス (フィールド) も作成します。すなわち、`title` (それぞれのメモ書きの題名を含むことになります) と、`body` (そのメモ書きの本文を含むことになります) を作成します。
-
-以上のようにこの簡素なデータベース・スキーマを設定したので、データベースにレコードを追加し始めれば、それぞれのレコードは、以下の行のようなオブジェクトとして表現されることでしょう。
-
-```js
+```json
 {
-  title: "Buy milk",
-  body: "Need both cows milk and soy.",
-  id: 8
+  "title": "Buy milk",
+  "body": "Need both cows milk and soy.",
+  "id": 8
 }
 ```
 
-### データをデータベースに追加します
+### データをデータベースに追加
 
-それでは、どのようにしたらデータベースにレコードを追加できるか、その方法を見てみましょう。これは、ページ上のフォームを使って行われます。
+では、データベースにレコードを追加する方法を見てみましょう。これは、ページ上のフォームを使用して行われます。
 
-前のイベント・ハンドラーの下に (ただし、やはり `window.onload` ハンドラーの内部に)、 以下の行を追加してください。以下の行では、フォームが送信された際に (送信 {{htmlelement("button")}} が押され、成功したフォーム送信、という結果に至ったときに)、`addData()` と呼ばれる関数を実行する、`onsubmit` ハンドラーを設定しています。
+前のイベントハンドラーの下に、次の行を追加してください。これは、 `submit` イベントハンドラーを設定し、 `addData()` という関数を、フォームが送信されたとき（送信ボタン ({{htmlelement("button")}}) が押されてフォーム送信が成功したとき）に実行するようにします。
 
 ```js
-// フォームが送信されたときに addData() 関数が実行されるように、onsubmit ハンドラーを作成します。
-form.onsubmit = addData;
+// submit イベントハンドラーを作成し、フォームが送信されたときに addData() 関数が実行されるようにします。
+form.addEventListener('submit', addData);
 ```
 
 では、`addData()` 関数を定義しましょう。上記の行の下に、以下のものを追加してください。
@@ -350,73 +361,72 @@ form.onsubmit = addData;
 ```js
 // addData() 関数を定義します。
 function addData(e) {
-  // デフォルト動作を防止します。従来通りの方法でフォームを送信したくはないからです。
+  // 既定の動作を抑止します。従来通りの方法でフォームを送信したくはないからです。
   e.preventDefault();
 
-  // フォーム・フィールドに入力された値を求めます。そして、それらの値を、データベースへ挿入すべく準備してあるオブジェクトに保存します。
-  let newItem = { title: titleInput.value, body: bodyInput.value };
+  // フォームのフィールドに入力された値を取得し、 DB に挿入できるようにオブジェクトに格納します。
+  const newItem = { title: titleInput.value, body: bodyInput.value };
 
-  // 読み書きのデータベース・トランザクションを開いて、データの追加に備えます。
-  let transaction = db.transaction(['notes'], 'readwrite');
+  // 読み書きのデータベーストランザクションを開いて、データの追加に備えます。
+  const transaction = db.transaction(['notes_os'], 'readwrite');
 
-  // データベースに追加済みのオブジェクト・ストアを呼び出します。
-  let objectStore = transaction.objectStore('notes');
+  // すでにデータベースに追加されているオブジェクトストアを呼び出すします。
+  const objectStore = transaction.objectStore('notes_os');
 
-  // newItem というオブジェクトをオブジェクト・ストアに追加するための要求を作ります。
-  let request = objectStore.add(newItem);
-  request.onsuccess = function() {
-    // フォームをクリアして、次のエントリーの追加に備えます。
+  // newItem オブジェクトをオブジェクトストアに追加するリクエストを行います。
+  const addRequest = objectStore.add(newItem);
+
+  addRequest.addEventListener('success', () => {
+    // フォームをクリアして、次の項目の追加に備えます。
     titleInput.value = '';
     bodyInput.value = '';
-  };
+  });
 
-  // すべてが済んだら、完了するトランザクションの成功を報告します。
-  transaction.oncomplete = function() {
+  // トランザクションが完了し、完全に終了した場合の成功を報告します。
+  transaction.addEventListener('complete', () => {
     console.log('Transaction completed: database modification finished.');
 
-    // displayData() を再度実行することによって、データの表示を更新して、新たに追加した項目を表示します。
+    // 表示データの更新を行い、新しく追加された項目を表示するために、再度 displayData() を実行します。
     displayData();
-  };
+  });
 
-  transaction.onerror = function() {
-    console.log('Transaction not opened due to error');
-  };
+  transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
 }
 ```
 
-これは割と複雑ですね。噛み砕くと、以下の通りです。
+これはかなり複雑です。分解すると、以下のことを行います。
 
-- フォームが実際に従来通りの方法で送信してしまうこと (これはページ・リフレッシュを引き起こし、体験をそこなうでしょう) を防ぐために、イベント・オブジェクトに対して {{domxref("Event.preventDefault()")}} を実行します。
-- データベースに入力すべきレコードを表すオブジェクトを作成します。その際、そのオブジェクトには、フォーム入力からの値を埋め込みます。`id` の値を明示的に含める必要がないことに注意してください。以前説明したとおり、これは自動的に埋め込まれます。
-- {{domxref("IDBDatabase.transaction()")}} メソッドを用いて、`notes` というオブジェクト・ストアに対する`readwrite` (読み書き) トランザクションを開きます。このトランザクション・オブジェクトのおかげでオブジェクト・ストアにアクセスできるようになり、オブジェクト・ストアに対して何か——たとえば新規レコードの追加など——を行えるようになります。
-- {{domxref("IDBTransaction.objectStore()")}}メソッドを用いてオブジェクト・ストアにアクセスし、その結果を `objectStore` という変数に保存します。
-- {{domxref("IDBObjectStore.add()")}} を用いて、データベースに新規レコードを追加します。これは、以前見たのと同様の方法で、要求オブジェクトを作り出します。
-- ライフサイクル内での重大な時点 (クリティカル・ポイント) においてコードを実行するために、`request` (要求) と `transaction` (トランザクション) に対する一群のイベント・ハンドラーを追加します。要求が成功したら、次のメモ書きの入力に備えてフォーム入力をクリアします。トランザクションが完了したら、ページ上のメモ書きの表示を更新するために、`displayData()` 関数を再び実行します。
+- イベントオブジェクトに対して {{domxref("Event.preventDefault()")}} を実行し、従来の方法で実際にフォームを送信しないようにします（これではページの更新が発生し、使い勝手が損なわれてしまいます）。
+- データベースに入力するレコードを表すオブジェクトを作成し、フォームの入力値からそのオブジェクトに値を入力します。明示的に `id` 値を記載する必要はないことに注意してください。先ほど説明したように、この値は自動で含まれます。
+- `readwrite` トランザクションを `notes_os` オブジェクト ストアに対して、 {{domxref("IDBDatabase.transaction()")}} メソッドを使用して格納するために開いてください。このトランザクションオブジェクトによって、オブジェクトストアにアクセスすることができ、新しいレコードを追加するなど、何かを行うことができます。
+- {{domxref("IDBTransaction.objectStore()")}} メソッドを用いてオブジェクトストアにアクセスし、その結果を `objectStore` 変数に格納します。
+- 新しいレコードを {{domxref("IDBObjectStore.add()")}} を使用してデータベースに追加します。これは、前に見たのと同じ方法で、リクエストオブジェクトを作成します。
+- ライフサイクルの重要なポイントでコードを実行するために、 `request` および `transaction` オブジェクトにいくつものイベントハンドラーを追加します。リクエストが成功したら、次のメモを入力するためにフォームの入力をクリアします。トランザクションが完了したら、 `displayData()` 関数を再び実行して、ページ上のメモの表示を更新しています。
 
-### データを表示します
+### データの表示
 
-すでにコード内で `displayData()` を二度も参照したからには、多分これを定義すべきでしょうね。以下のものをコードに (今までの関数定義の下に) 追加してください。
+すでにコードの中で `displayData()` を 2 回も参照しているので、定義しておいたほうがよさそうです。前回の関数定義の下に、次のコードを追加してください。
 
 ```js
 // displayData() 関数を定義します。
 function displayData() {
-  // ここでは、表示を更新するたびにリスト要素の中身を空にします。
-  // もしこのようにしなかったら、新たなメモ書きを追加するたびに複製を列挙する羽目になるでしょう。
+  // ここでは、表示が更新されるたびに、リスト要素の中身を空にしています。
+  // これを行わないと、新しいメモが追加されるたびに、重複して掲載されてしまいます。
   while (list.firstChild) {
     list.removeChild(list.firstChild);
   }
 
-  // オブジェクト・ストアを開き、それから、カーソルを取得します。
-  // カーソルは、ストア内の異なるデータ項目のすべてにわたって反復処理を行うものです。
-  let objectStore = db.transaction('notes').objectStore('notes');
-  objectStore.openCursor().onsuccess = function(e) {
-    // カーソルへの参照を求めます。
-    let cursor = e.target.result;
+  // オブジェクトストアを開き、カーソルを取得します。カーソルはストア内の
+  // 異なるデータ項目をすべて反復処理します。
+  const objectStore = db.transaction('notes_os').objectStore('notes_os');
+  objectStore.openCursor().addEventListener('success', (e) => {
+    // カーソルへの参照を取得します。
+    const cursor = e.target.result;
 
     // 反復処理を行うべき別のデータ項目がまだあれば、このコードを実行し続けます。
-    if(cursor) {
-      // 各データ項目を表示する際にそのデータ項目を中に入れるための、リスト項目と h3 と p とを作成します。
-      // HTML 断片を組み立てて、それをリスト内の最後に追加します。
+    if (cursor) {
+      // リスト項目、h3、p を作成し、表示する際に各データ項目を中に入れます。
+      // HTML フラグメントを構成し、リストの中に追加します。
       const listItem = document.createElement('li');
       const h3 = document.createElement('h3');
       const para = document.createElement('p');
@@ -430,7 +440,7 @@ function displayData() {
       para.textContent = cursor.value.body;
 
       // listItem の属性内部に、このデータ項目の ID を保存します。こうすると、
-      // listItem がどの項目に対応しているのかがわかります。これは、後で項目を削除したくなったときに有用です。
+      // どの項目に対応しているのかがわかります。これは、後で項目を削除したくなったときに有用です。
       listItem.setAttribute('data-note-id', cursor.value.id);
 
       // ボタンを作成し、それを各 listItem の内部に設置します。
@@ -439,310 +449,309 @@ function displayData() {
       deleteBtn.textContent = 'Delete';
 
       // ボタンがクリックされたら deleteItem() 関数が実行されるように、
-      // イベント・ハンドラーを設定します。
-      deleteBtn.onclick = deleteItem;
+      // イベントハンドラーを設定します。
+      deleteBtn.addEventListener('click', deleteItem);
 
-      // カーソルにおける次の項目へと反復処理を進めます。
+      // カーソルの次の項目へ反復処理を行います。
       cursor.continue();
     } else {
-      // またもや、リスト項目が空であれば、'No notes stored' (メモ書きは何も保存されていません) というメッセージを表示します。
-      if(!list.firstChild) {
+      // Again, if list item is empty, display a 'No notes stored' message
+      if (!list.firstChild) {
         const listItem = document.createElement('li');
-        listItem.textContent = 'No notes stored.';
+        listItem.textContent = 'No notes stored.'
         list.appendChild(listItem);
       }
-      // 反復処理をすべきカーソル項目がこれ以上ない場合、そのように示します。
+      // 反復処理をすべきカーソルの項目がこれ以上ない場合、そのように示します。
       console.log('Notes all displayed');
     }
-  };
+  });
 }
 ```
 
-再びになりますが、これを噛み砕いてみましょう。
+改めて、分解してみましょう。
 
-- まず、更新した中身を埋め込む前に、{{htmlelement("ul")}} 要素の中身を空っぽにします。これを行わないと、遂には、更新のたびに追加された複製された中身からなる巨大なリストができあがってしまいます。
-- 次に、{{domxref("IDBDatabase.transaction()")}} と {{domxref("IDBTransaction.objectStore()")}} を用いて、`addData()` で行ったのと同様にして (ただしここではこれらを繋いで 1 行にまとめている点が異なりますが)、`notes` というオブジェクト・ストアへの参照を求めます。
-- 次の段階は、{{domxref("IDBObjectStore.openCursor()")}} メソッドを使って、カーソルに対する要求を開くことです。カーソルとは、オブジェクト・ストア内の全レコードにわたって反復処理を行うのに使える構造体です。コードをより簡潔にするために、この行の最後に `onsuccess` ハンドラーを繋げています。カーソルが成功裡に返されると、このハンドラーが実行されます。
-- `let cursor = e.target.result` を用いて、カーソル自体 ({{domxref("IDBCursor")}} オブジェクト) に対する参照を求めています。
-- 次に、カーソルがデータストアのレコードを含むか否かを調べます (`if(cursor){ ... }`)。もし含むなら、DOM 断片を作成し、その断片にレコードのデータを埋め込み、ページ内に (`<ul>` 要素の内部に) その断片を挿入します。また、クリックされたら `deleteItem()` 関数を実行することによって当該メモ書きを削除するような削除ボタンも含めておきます。この関数は、次の節で見ることにします。
-- `if` ブロックの最後では、{{domxref("IDBCursor.continue()")}} メソッドを用いてカーソルをデータストア内の次のレコードへと進め、`if` ブロックの中身を再び実行します。反復処理をすべき別のレコードがある場合には、こうすることにより、その別のレコードがページに挿入されることになり、その後また `continue()` が実行され、以下同様に続きます。
-- 反復処理をすべき対象のレコードがもうない場合、`cursor` は `undefined` を返すことになります。よって、`if` ブロックの代わりに `else` ブロックが実行されることになります。このブロックでは、`<ul>` に何らかのメモ書きが挿入されたかどうかを調べます。もし何も挿入されていなければ、何もメモ書きが保存されていなかった旨を述べるメッセージを挿入します。
+- 最初に {{htmlelement("ul")}} 要素の中身を空にしてから、更新された内容で埋めています。これを行わないと、更新のたびに追加される重複した内容の膨大なリストが出来上がってしまいます。
+- 次に、 `notes_os` オブジェクトストアへの参照を取得します。これは `addData()`で行ったように {{domxref("IDBDatabase.transaction()")}} と {{domxref("IDBTransaction.objectStore()")}} を使用しますが、ここでは 1 行にまとめて記述しています。
+- 次の段階では、カーソルのリクエストを開くために {{domxref("IDBObjectStore.openCursor()")}} メソッドを使用します。これは、オブジェクトストア内のレコードを反復処理するために使用できる構造体です。コードを簡潔にするために、この行の終わりに `success` イベントハンドラーを連結しています。カーソルが正常に返されたときに、ハンドラーが実行されます。
+- カーソル自身への参照（{{domxref("IDBCursor")}} オブジェクト）は、 `const cursor = e.target.result` を使用して取得します。
+- 次に、カーソルにデータストアのレコードがあるかどうかを調べます (`if (cursor){ }`)。もしあれば、 DOM フラグメントを作成し、レコードのデータを入れて、ページへ挿入します（`<ul>` 要素の中）。また、削除ボタンも追加しています。このボタンをクリックすると、次の節で説明する `deleteItem()` 関数が実行され、そのメモが削除されます。
+- `if` ブロックの最後では {{domxref("IDBCursor.continue()")}} メソッドを使用して、データストアの次のレコードにカーソルを進め、再び `if` ブロックの中身を実行しています。反復処理する別のレコードがあれば、それがページに挿入され、再び `continue()` が実行され、以下同様となります。
+- 反復処理するレコードがなくなると、 `cursor` は `undefined` を返しますので、 `if` ブロックの代わりに `else` ブロックが実行されます。このブロックは `<ul>` に何かメモが挿入されたかどうかを調べます。もし挿入されていない場合は、メモが格納されていなかったというメッセージを挿入します。
 
-### メモ書きを削除します
+### メモの削除
 
-上述のとおり、メモ書きの削除ボタンが押されると、そのメモ書きは削除されます。これは、`deleteItem()` 関数により達成されます。この関数は以下のようなものです。
+上述のとおり、メモの削除ボタンが押されると、そのメモは削除されます。これは、 `deleteItem()` 関数により実現できます。この関数は以下のようなものです。
 
 ```js
 // deleteItem() 関数を定義します。
 function deleteItem(e) {
-  // 削除したいタスクの名前 (訳注: ID の間違い?) を取り出します。
-  // それを IDB で使おうとする前に、数値に変換する必要があります。
-  // IDB のキーの値には、型による区別があるのです。
-  let noteId = Number(e.target.parentNode.getAttribute('data-note-id'));
+  // 削除したいタスクの名前を取得します。
+  // IDB で使用する前に、これを数値に変換する必要があります。
+  // IDB のキー値は型が重視されます。
+  const noteId = Number(e.target.parentNode.getAttribute('data-note-id'));
 
-  // データベース・トランザクションを開き、当該タスクを削除します。その際、上記で取得した ID を用いて、当該タスクを見つけます。
-  let transaction = db.transaction(['notes'], 'readwrite');
-  let objectStore = transaction.objectStore('notes');
-  let request = objectStore.delete(noteId);
+  // データベーストランザクションを開き、タスクを削除します。上で取得した id を使用してタスクを探します。
+  const transaction = db.transaction(['notes_os'], 'readwrite');
+  const objectStore = transaction.objectStore('notes_os');
+  const deleteRequest = objectStore.delete(noteId);
 
   // データ項目を削除したことを報告します。
-  transaction.oncomplete = function() {
-    // ボタンの親——リスト項目——を削除します。
-    // すると、それはもはや表示されなくなります。
+  transaction.addEventListener('complete', () => {
+    // ボタンの親、すなわちリスト項目を削除します。
+    // すると、それは表示されなくなります。
     e.target.parentNode.parentNode.removeChild(e.target.parentNode);
-    console.log('Note ' + noteId + ' deleted.');
+    console.log(`Note ${noteId} deleted.`);
 
-    // 再びになりますが、リスト項目が空の場合は、'No notes stored' (メモ書きは何も保存されていません) というメッセージを表示します。
-    if(!list.firstChild) {
-      let listItem = document.createElement('li');
+    // この場合も、リスト項目が空であれば、「メモが格納されていません」というメッセージを表示します。
+    if (!list.firstChild) {
+      const listItem = document.createElement('li');
       listItem.textContent = 'No notes stored.';
       list.appendChild(listItem);
     }
-  };
+  });
 }
 ```
 
-- これの最初の部分は説明を要します。 `Number(e.target.parentNode.getAttribute('data-note-id'))` を用いて、削除すべきレコードの ID を取り出します。レコードの ID は、最初にその `<li>` が表示された際にその `<li>` の `data-note-id` という属性に保存されている、ということを思い出してください。しかし、その属性は、 [Number()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number) というグローバル・ビルトイン・オブジェクトを通じて渡す必要があります。なぜなら、属性は今のところ文字列であり、こうしなければデータベースに認識されないからです。
-- それから、以前に見たのと同じパターンを使って、オブジェクト・ストアへの参照を求めます。そして、{{domxref("IDBObjectStore.delete()")}} メソッドを用いて、データベースから当該レコードを削除します。その際、データベースには ID を渡します。
-- データベース・トランザクションが完了したら、当該メモ書きの `<li>` を DOM から削除します。そして再び、`<ul>` が現時点で空かどうかを調べ、適宜注記を挿入します。
+- 最初の部分は少し説明が必要かもしれません。削除するレコードの ID を `Number(e.target.parentNode.getAttribute('data-note-id'))` を使用して取得します。レコードの ID は `<li>` が最初に表示されたときに `data-note-id` 属性で保存されていたことを思い出しましょう。しかし、この属性はグローバルな組み込みの [`Number()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number) オブジェクトを通して渡す必要があります。これはデータ型が文字列なので、数字を期待するデータベースからは認識されないためです。
+- 次に、前回と同じパターンでオブジェクトストアへの参照を取得し、 {{domxref("IDBObjectStore.delete()")}} メソッドを使用して、 ID を渡しながらデータベースからレコードを削除しています。
+- データベーストランザクションが完了したら、メモの `<li>` を DOM から削除し、再び `<ul>` が空になったかどうかを調べて、適切なメモを挿入します。
 
-さあ、これで全部終わりです! あなたの例は今やちゃんと動くはずですよ。
+というわけで、これで完了です。この例はこれでうまく動作するはずです。
 
-もし問題があれば、気軽に [ライブ例と突き合わせてみてください](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/) ([ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js) も参照してください)。
+もし問題があれば、気軽に [ライブ例と突き合わせてみてください](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/) （[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.js) も参照してください）。
 
-### IndexedDB を通じて複雑なデータを保存します
+### IndexedDB を通じて複雑なデータを格納
 
-上述のとおり、IndexedDB は、単純なテキスト文字列以上のものを保存するのに使えます。望むものはほとんど何でも——動画や静止画像のブロブ (blob) のような、複雑なオブジェクトまで含めて——保存できるのです。しかも、他のどの型のデータと比べても、達成するのがずっと困難だという訳でもないのです。
+上で述べたように、IndexedDB は文字列以外のものも格納するために使用することができます。動画や画像 Blob のような複雑なオブジェクトを含め、ほぼ全てのものを格納することができます。そして、それを実現するのは、他の型のデータよりもそれほど難しいことではありません。
 
-やり方を実演するために、[IndexedDB 動画ストア](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/indexeddb/video-store) と呼ばれる別の例を書きました ([ここでライブで動いているところも](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/) 参照してください)。この例を最初に実行すると、すべての動画をネットワークからダウンロードして IndexedDB データベースに保存し、それから、{{htmlelement("video")}} 要素内部の UI の中に動画を表示します。二度目に実行すると、動画を表示する前に、データベース内の動画を見つけ出し、(ネットワークからダウンロードする) 代わりにそこから動画を取ってきます。こうすることにより、後続のロードは高速化され、帯域幅をあまり食わなくなります。
+その方法を示すために、私たちは [IndexedDB 動画ストレージ](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/indexeddb/video-store) という別の例を書きました（これを[ここでライブ実行する](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)もご覧ください）。この例を最初に実行すると、ネットワークからすべての動画をダウンロードして IndexedDB データベースに格納し、UI の {{htmlelement("video")}} 要素の中に動画を表示します。2 回目に実行したときは、データベース内の動画を見つけて、代わりにそこから取得してから表示します。これにより、その後の読み込みがはるかに速くなり、帯域幅を消費することもなくなります。
 
-この例のもっとも興味深い部分を見て回りましょう。すべては見ないことにします。というのも、多くの部分は前の例に類似しており、コードにはちゃんとコメントがつけてありますから。
+この例で最も注目される部分を見ていきましょう。すべてを見ていくわけではありません。多くは前回の例と同様で、コードには十分なコメントがつけられています。
 
-1. この単純な例のために、取得すべき動画の名前をオブジェクトの配列の形で保存しておきました。
+1. この例では、取得する動画の名前をオブジェクトの配列に格納しました。
 
-    ```js
-    const videos = [
-      { 'name' : 'crystal' },
-      { 'name' : 'elf' },
-      { 'name' : 'frog' },
-      { 'name' : 'monster' },
-      { 'name' : 'pig' },
-      { 'name' : 'rabbit' }
-    ];
-    ```
+   ```js
+   const videos = [
+     { 'name' : 'crystal' },
+     { 'name' : 'elf' },
+     { 'name' : 'frog' },
+     { 'name' : 'monster' },
+     { 'name' : 'pig' },
+     { 'name' : 'rabbit' }
+   ];
+   ```
 
-2. まずはじめに、データベースを成功裡に開くことができたら、`init()` 関数を実行します。これは、異なる動画の名前をループしてゆきますが、その際、それぞれの名前で識別されるレコードを `videos` というデータベースからロードしようと試みます。
+2. 始めるには、データベースを正常に開くために、`init()`関数を実行します。これは、さまざまな動画の名前をループして、 `videos` データベースからそれぞれの名前で指定されたレコードを読み込もうとするものです。
 
-    各々の動画がデータベース内で見つかったら (これは、`request.result` が `true` と評価されるかどうかを調べることにより、容易に確認できます。もしレコードが存在しなければ、`undefined` となります)、その動画ファイル (ブロブとして保存されています) および動画の名前が、UI に配置するために、すぐに `displayVideo()` 関数へと渡されます。もし動画がデータベース内で見つからなければ、動画の名前が `fetchVideoFromNetwork()` 関数に渡されます。それが何のためか、見当がついていることでしょうが……そう、その動画をネットワークから取ってくるためです。
+   それぞれの動画がデータベースで見つかった場合（`request.result` の評価値が `true` かどうかで確認します。記録が存在しない場合は `undefined` となります）、その動画ファイル（blob として格納されています）と動画名が `displayVideo()` 関数に直接渡され、UI に配置されます。存在しない場合、動画名は `fetchVideoFromNetwork()` 関数に渡され、ご想像のとおり、ネットワークから動画を取得します。
 
-    ```js
-    function init() {
-      // 動画の名前を一つずつループしてゆきます。
-      for(let i = 0; i < videos.length; i++) {
-        // トランザクションを開き、オブジェクト・ストアを取得し、名前によって各動画を get() します。
-        let objectStore = db.transaction('videos').objectStore('videos');
-        let request = objectStore.get(videos[i].name);
-        request.onsuccess = function() {
-          // もし結果がデータベース内に存在したら (存在しなければ undefined)、
-          if(request.result) {
-            // displayVideo() を用いて、動画を IDB から取り出して表示します。
-            console.log('taking videos from IDB');
-            displayVideo(request.result.mp4, request.result.webm, request.result.name);
-          } else {
-            // 動画をネットワークから取ってきます。
-            fetchVideoFromNetwork(videos[i]);
-          }
-        };
-      }
-    }
-    ```
+   ```js
+   function init() {
+     // 動画の名前を一つずつループ処理してゆきます。
+     for(const video of videos) {
+      // トランザクションを開き、オブジェクトストアを取得し、名前によって各動画を get() します。
+       const objectStore = db.transaction('videos_os').objectStore('videos_os');
+       const request = objectStore.get(video.name);
+       request.addEventListener('success', () => {
+         // もし結果がデータベース内に存在したら（存在しなければ undefined）
+         if (request.result) {
+           // displayVideo() を用いて、動画を IDB から取り出して表示します。
+           console.log('taking videos from IDB');
+           displayVideo(request.result.mp4, request.result.webm, request.result.name);
+         } else {
+           // 動画をネットワークから取ってきます。
+           fetchVideoFromNetwork(video);
+         }
+       });
+     }
+   }
+   ```
 
-3. 以下のスニペットは、`fetchVideoFromNetwork()` の内部から取ったものです。ここでは、二つの別々の {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}} 要求を用いて、MP4 版の動画と WebM 版の動画を取ってきます。それから、{{domxref("blob()", "Body.blob()")}} メソッドを用いて、それぞれの応答の本体をブロブとして抽出します。このブロブは、保存して後で表示することの可能な、動画のオブジェクト表現を与えてくれます。
+3. 以下のスニペットは、`fetchVideoFromNetwork()` 内から引用したものです。ここでは、2 つの別々の {{domxref("fetch()")}} 要求を用いて MP4 版と WebM 版の動画を読み込んでいます。次に {{domxref("Response.blob()")}} メソッドを使用してそれぞれのレスポンスの本文を blob として抽出し、後で格納したり表示したりできる動画のオブジェクト表現を得ています。
 
-    しかし、ここで問題があります。これらの二つの要求はどちらも非同期的なのですが、双方のプロミスが成立 (fulfill) した場合にだけ動画を表示もしくは保存しようと試みたいのです。幸い、そうした問題を扱うビルトイン・メソッドがあります。すなわち {{jsxref("Promise.all()")}} です。これは一つの引数——成立したかどうかを調べたい個々のプロミスすべてに対する参照を配列に入れたもの——をとり、これ自体がプロミスに基づいています。
+    しかし、ここで問題があります。これらの二つの要求はどちらも非同期的なのですが、双方のプロミスが履行された (fulfilled) 場合にだけ動画を表示もしくは保存しようと試みたいのです。幸い、そうした問題を扱う組み込みメソッドがあります。すなわち {{jsxref("Promise.all()")}} です。これは一つの引数 — 成立したかどうかを調べたい個々のプロミスすべてに対する参照を配列に入れたもの — をとり、これ自体がプロミスに基づいています。
 
-    それらのプロミスすべてが成立したら、成立した個々の値すべてを含む配列をともなって、`all()` プロミスも成立します。`all()` のブロック内部では、以前 UI に動画を表示するために行ったのと同様にして `displayVideo()` 関数を呼び出していること、そして、それらの動画をデータベース内に保存するために `storeVideo()` 関数も呼び出していることが、お分かりでしょう。
+   このプロミスの `then()` ハンドラー内で、先ほどと同様に `displayVideo()` 関数を呼び出して動画を UI に表示し、さらに `storeVideo()` 関数を呼び出して動画をデータベース内に格納しています。
 
-    ```js
-    let mp4Blob = fetch('videos/' + video.name + '.mp4').then(response =>
-      response.blob()
-    );
-    let webmBlob = fetch('videos/' + video.name + '.webm').then(response =>
-      response.blob()
-    );
+   ```js
+   // fetch() 関数を使用して MP4 版と WebM 版の動画を取得し、そのレスポンス本体を blob として公開します。
+   const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) => response.blob());
+   const webmBlob = fetch(`videos/${video.name}.webm`).then((response) => response.blob());
 
-    // 双方のプロミスが成立したときのみ、次のコードを実行します。
-    Promise.all([mp4Blob, webmBlob]).then(function(values) {
-      // ネットワークから取ってきた動画を、displayVideo() により表示します。
-      displayVideo(values[0], values[1], video.name);
-      // storeVideo() を用いて、その動画を IDB に保存します。
-      storeVideo(values[0], values[1], video.name);
-    });
-    ```
+   // 両方のプロミスが履行されたときのみ、次のコードを実行します。
+   Promise.all([mp4Blob, webmBlob]).then((values) => {
+     // ネットワークから取ってきた動画を、 displayVideo() により表示します。
+     displayVideo(values[0], values[1], video.name);
+     // storeVideo() を用いて、その動画を IDB に保存します。
+     storeVideo(values[0], values[1], video.name);
+   });
+   ```
 
-4. まず `storeVideo()` を見ましょう。これは、データベースにデータを追加するための上記の例で見たパターンに、とてもよく似ています。つまり、`readwrite` (読み書き) トランザクションを開き、`videos` に対するオブジェクト・ストア参照を求め、データベースに追加すべきレコードを表すオブジェクトを作成し、それから、{{domxref("IDBObjectStore.add()")}} を用いてそのオブジェクトを単純に追加しています。
+4. まず `storeVideo()` を見ましょう。これは、データベースにデータを追加するための上記の例で見たパターンに、とてもよく似ています。つまり、`readwrite` (読み書き) トランザクションを開き、`videos_os` に対するオブジェクトストアへの参照を求め、データベースに追加すべきレコードを表すオブジェクトを作成し、それから、 {{domxref("IDBObjectStore.add()")}} を用いてそのオブジェクトを単純に追加しています。
 
-    ```js
-    function storeVideo(mp4Blob, webmBlob, name) {
-      // トランザクションを開き、オブジェクト・ストアを求めます。IDB に書き込めるようにするために、これは読み書きトランザクションにしておきます。
-      let objectStore = db.transaction(['videos'], 'readwrite').objectStore('videos');
-      // IDB に追加するレコードを作成します。
-      let record = {
-        mp4 : mp4Blob,
-        webm : webmBlob,
-        name : name
-      }
+   ```js
+   // storeVideo() 関数を定義します。
+   function storeVideo(mp4, webm, name) {
+     // トランザクションを開き、オブジェクトストアを取得し、IDB に書き込めるように読み書きできるようにします。
+     const objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
 
-      // add() を使ってレコードを IDB に追加します。
-      let request = objectStore.add(record);
+     // add() を使ってレコードを IDB に追加します。
+     const request = objectStore.add({ mp4, webm, name });
 
-      ...
-
-    };
-    ```
+     request.addEventListener('success', () => console.log('Record addition attempt finished'));
+     request.addEventListener('error', () => console.error(request.error));
+   }
+   ```
 
 5. 最後に、`displayVideo()` があります。これは、UI に動画を挿入するのに必要な DOM 要素を作成してから、それらの DOM 要素をページに追加します。これの一番面白い部分は、以下に示した箇所です。`<video>` 要素内に動画ブロブを実際に表示するには、{{domxref("URL.createObjectURL()")}} メソッドを使って、オブジェクト URL (メモリに記憶されている動画ブロブを指し示す内部 URL) を作成せねばならないのです。それが済んだら、オブジェクト URL を {{htmlelement("source")}} 要素の `src` 属性の値として設定できて、物事がうまく機能します。
 
-    ```js
-    function displayVideo(mp4Blob, webmBlob, title) {
-      // ブロブからオブジェクト URL を作成します。
-      let mp4URL = URL.createObjectURL(mp4Blob);
-      let webmURL = URL.createObjectURL(webmBlob);
+   ```js
+   // displayVideo() 関数を定義します。
+   function displayVideo(mp4Blob, webmBlob, title) {
+     // Blob からオブジェクト URL を作成する
+     const mp4URL = URL.createObjectURL(mp4Blob);
+     const webmURL = URL.createObjectURL(webmBlob);
 
-      ...
+     // ページに動画を埋め込むための DOM 要素を作成する
+     const article = document.createElement('article');
+     const h2 = document.createElement('h2');
+     h2.textContent = title;
+     const video = document.createElement('video');
+     video.controls = true;
+     const source1 = document.createElement('source');
+     source1.src = mp4URL;
+     source1.type = 'video/mp4';
+     const source2 = document.createElement('source');
+     source2.src = webmURL;
+     source2.type = 'video/webm';
 
-      const video = document.createElement('video');
-      video.controls = true;
-      const source1 = document.createElement('source');
-      source1.src = mp4URL;
-      source1.type = 'video/mp4';
-      const source2 = document.createElement('source');
-      source2.src = webmURL;
-      source2.type = 'video/webm';
+     // DOM 要素のページへの埋め込み
+     section.appendChild(article);
+     article.appendChild(h2);
+     article.appendChild(video);
+     video.appendChild(source1);
+     video.appendChild(source2);
+   }
+   ```
 
-      ...
-    }
-    ```
+## オフライン資産ストレージ
 
-## オフラインでの資産の保存
+上記の例では、大きな資産を IndexedDB データベースに格納し、複数回ダウンロードする必要を避けるアプリを作成する方法を既に示しました。これはすでにユーザー体験の大きな改善ですが、まだ一つ足りないことがあります。メインの HTML、CSS、JavaScript ファイルは、サイトにアクセスするたびにダウンロードする必要があり、ネットワーク接続がないときには動作しないことを意味します。
 
-上記の例は、IndexedDB データベース内に大規模な資産を保存するアプリの作り方を既に示しており、こうすることで、それらの大規模な資産を二度以上ダウンロードする必要性をなくしています。これは既にユーザー体験にとっての多大なる進歩ではありますが、まだ一つ欠けていることがあります。すなわち、依然として、主たる HTML と CSS と JavaScript のファイルを、サイトにアクセスするたびにダウンロードせねばならないのです。これが意味することは、ネットワーク接続がない場合にはサイトが動作しないということです。
+![Firefoxのオフライン画面の内側へ、右手に2ピンプラグ、左手に2ピンソケットを持った漫画のキャラクターのイラストが描かれています。右側の辺には、オフラインモードのメッセージと「再試行」と書かれたボタンがあります。](ff-offline.png)
 
-![](ff-offline.png)
+ここは、 [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)およびそれと緊密に関連した [キャッシュ API](/ja/docs/Web/API/Cache) の出番です。
 
-ここは、 [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) およびそれと緊密に関連した [キャッシュ API](/ja/docs/Web/API/Cache) の出番です。
+サービスワーカーとは、ブラウザーからアクセスされたときに、特定のオリジン（ウェブサイト、または特定のドメインにあるウェブサイトの一部）に対して登録される JavaScript のファイルです。登録されると、そのオリジンで利用できるページを制御することができます。読み込まれたページとネットワークの間に位置し、そのオリジンを対象としたネットワークリクエストに介入することでこれを行います。
 
-サービスワーカーとは、ただ単に置いてあって、特定のオリジン (ウェブサイト、または、あるドメインにあるウェブサイトの一部) に対して、そこにブラウザーでアクセスした際に登録される、JavaScript ファイルのことです。登録されれば、サービスワーカーは、当該オリジンで利用可能なページを制御できます。サービスワーカーは、ロードされたページとネットワークとの間に位置して、当該オリジン宛のネットワーク要求を横取りすることにより、こうした制御を行います。
+リクエストに介入した場合、望むことは何でもできますが（[用途のアイディア](/ja/docs/Web/API/Service_Worker_API#その他の使用例)を参照）、よくある例は、ネットワークのレスポンスをオフラインで保存して、ネットワークからのレスポンスの代わりにリクエストに応答するものを提供することです。事実上、これはウェブサイトを完全にオフラインで動作させることを可能にします。
 
-サービスワーカーが要求を横取りすると、その要求に対して望むことは何でも行えますが ([使用例の案](/ja/docs/Web/API/Service_Worker_API#Other_use_case_ideas) を参照)、典型例では、ネットワーク応答をオフラインに保存しており、その後、要求に応じて、ネットワークからの応答の代わりに、保存してあるそれらの応答を提供しています。これによって事実上、ウェブサイトを完全にオフラインで機能させることが可能になります。
-
-キャッシュ API は、クライアント側での保存のもう一つの仕組みですが、これにはちょっとした相違点があります。キャッシュ API は HTTP 応答を保存するように設計されているのです。そのため、サービスワーカーと一緒に使うと、とてもうまく機能します。
-
-> **Note:** サービスワーカーとキャッシュは、現在、ほとんどのモダン・ブラウザーでサポートされています。執筆時点では、Safari はまだ実装するのに忙しかったのですが、もうすぐサポートされるはずです。
+Cache API もクライアント側のストレージ機構ですが、少し異なる点があります。 HTTP レスポンスを保存するように設計されているため、サービスワーカーと一緒に非常にうまく動作します。
 
 ### サービスワーカーの例
 
-これがどのような感じなのかについて少しばかりお教えするために、例を見ましょう。前節で見た動画ストアの例の、別のバージョンを作っておきました。このバージョンは、サービスワーカーを介してキャッシュ API で HTML と CSS と JavaScript も保存する点を除いて、同等に機能しますが、この点のおかげで、この例がオフラインで実行できるようになるのです!
+例を見て、これがどのように見えるかを少し考えてみましょう。前の章で見たビデオストアの例の別バージョンを作成しました。この例は、HTML、CSS、JavaScript をサービスワーカー経由で Cache API に保存し、例をオフラインで実行できるようにした以外は、まったく同じように機能します。
 
-[サービスワーカーを用いた IndexedDB 動画ストアがライブで実行中のところ](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/) をご覧ください。また、[ソースコードも参照してください](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/cache-sw/video-store-offline)。
+[サービスワーカーを用いた IndexedDB ビデオストアがライブで実行中のところ](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/) をご覧ください。また、[ソースコードも参照してください](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/cache-sw/video-store-offline)。
 
-#### サービスワーカーを登録します
+#### サービスワーカーの登録
 
-注意すべき第一の点は、主たる JavaScript ファイル中に追加のコードが少々ある点です ([index.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js) を参照)。まず、{{domxref("Navigator")}} オブジェクトにおいて `serviceWorker` メンバーが利用可能かどうかを調べる機能検出検査を行います。もしこれが true を返したら、サービスワーカーの少なくとも基本部分がサポートされていることが分かります。ここの内部では、{{domxref("ServiceWorkerContainer.register()")}} メソッドを用いて、`sw.js` ファイルに含まれるサービスワーカーを、このファイルのあるオリジンに対して登録します。すると、同一ディレクトリーまたは下位ディレクトリーにあるページを制御できるようになります。このメソッドのプロミスが成立すると、サービスワーカーは登録されたものと見なされます。
+最初に注意すべきことは、メインの JavaScript ファイルに余分なコードが格納されていることです（[index.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js) を参照してください）。最初に機能検出テストを行うために、 `serviceWorker` メンバーが {{domxref("Navigator")}} オブジェクトで利用できるかどうかを確認します。これが true を返した場合、少なくともサービスワーカーの基本は対応していることが分かります。この内部では {{domxref("ServiceWorkerContainer.register()")}} メソッドを使用して、 `sw.js` ファイルに含まれるサービスワーカーをそれが存在するオリジンに対して登録し、それと同じディレクトリーまたはサブディレクトリーのページを制御できるようにします。プロミスが履行されると、サービスワーカーは登録されたものとみなされます。
 
 ```js
-  // サイトがオフラインで動くようにする処理を制御するために、サービスワーカーを登録します。
-
-  if('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js')
-             .then(function() { console.log('Service Worker Registered'); });
-  }
+// サイトがオフラインで動くようにする処理を制御するために、サービスワーカーを登録します。
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js')
+    .then(() => console.log('Service Worker Registered'));
+}
 ```
 
-> **Note:** `sw.js` ファイルに至るまでの、与えられたパスは、サイト・オリジンに対して相対的なのであり、上記コードを含む JavaScript ファイルに対して相対的なのではありません。サービスワーカーは `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` にあります。オリジンは `https://mdn.github.io` です。よって、与えられるパスは、`/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` でなくてはなりません。もしこの例を御自分のサーバーにホストしたいとお思いでしたら、それに合わせて、ここを変更せねばなりません。これはやや混乱を招くところですが、セキュリティ上の理由から、この方法で動作する必要があるのです。
+> **メモ:** 指定された `sw.js` ファイルへのパスは、コードを含む JavaScript ファイルではなく、サイトのオリジンからの相対パスです。サービスワーカーは `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` にあります。オリジンは `https://mdn.github.io` なので、指定されたパスは `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` である必要があります。もし、この例を自分自身でホスティングしたい場合は、これを適宜変更する必要があります。これはかなり紛らわしいですが、セキュリティ上の理由からこのように作業する必要があるのです。
 
-#### サービスワーカーをインストールします
+#### サービスワーカーのインストール
 
-サービスワーカーの制御下にあるいずれかのページが次にアクセスされた際には (たとえば、この例がリロードされたときには)、サービスワーカーがそのページに対してインストールされます。それが意味することは、サービスワーカーがそのページを制御し始めるだろう、ということです。これが起きると、サービスワーカーに対して `install` イベントを発火させます。サービスワーカー自体の内部には、当該インストールに応じるコードを書くことができます。
+次にサービスワーカーが制御するページがアクセスされたとき（例：リロードされたとき）、サービスワーカーはそのページに対してインストールされます。つまり、そのページを制御し始めることになります。このとき、サービスワーカーに対して `install` イベントが発行されます。サービスワーカー自身の内部で、インストールに応答するコードを書くことができます。
 
-[sw.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js) ファイル (サービスワーカー) 内の例を見てみましょう。`self` に対して `install` リスナーが登録されるのがお分かりでしょう。この `self` というキーワードは、サービスワーカー・ファイルの内部からサービスワーカーのグローバル・スコープを参照する手段です。
+例として、[sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js) ファイル（サービスワーカー）の中を見てみましょう。インストールを待ち受けするために、`self`というキーワードが登録されているのがわかります。この `self` キーワードは、サービスワーカーファイルの内部から、サービスワーカーのグローバルスコープを参照するためのものです。
 
-`install` ハンドラーの内部では、{{domxref("ExtendableEvent.waitUntil()")}}メソッド——イベント・オブジェクト上で使えます——を用いて、当メソッドの内部のプロミスが成功して成立するまではブラウザーはサービスワーカーのインストールを完了させるべきではない、と知らせます。
+`install` ハンドラーの内部では、イベントオブジェクトで利用できる {{domxref("ExtendableEvent.waitUntil()")}} メソッドを使用して、ブラウザーはサービスワーカーのインストールを、イベント内のプロミスが正常に履行されるまで完了すべきでないことを通知しています。
 
-ここは、キャッシュ API が動作しているのが見られる箇所です。応答を保存できる新規キャッシュ・オブジェクト (IndexedDB オブジェクト・ストアと似ています) を開くために、{{domxref("CacheStorage.open()")}} メソッドを使います。このプロミスは、`video-store` というキャッシュを表現する {{domxref("Cache")}} オブジェクトをともなって成立します。その後、一連の資源を取ってきて、その応答をキャッシュに追加するために、{{domxref("Cache.addAll()")}} メソッドを使います。
+ここで、キャッシュ API の動作を確認します。Domxref("CacheStorage.open()")}} メソッドを使用して、レスポンスを格納できる新しいキャッシュオブジェクトを開いています（IndexedDB オブジェクトストアのようなものです）。このプロミスは `video-store` キャッシュを表す {{domxref("Cache")}} オブジェクトで履行されます。次に {{domxref("Cache.addAll()")}} メソッドを使用して、一連のアセットをフェッチし、そのレスポンスをキャッシュに追加しています。
 
 ```js
-self.addEventListener('install', function(e) {
- e.waitUntil(
-   caches.open('video-store').then(function(cache) {
-     return cache.addAll([
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css'
-     ]);
-   })
- );
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    caches
+      .open('video-store')
+      .then((cache) =>
+        cache.addAll([
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
+          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css',
+        ])
+      )
+  );
 });
 ```
 
 さて、これで終わりです。インストールが済みました。
 
-#### さらなる要求に応答します
+#### さらなるリクエストへの応答
 
-HTML ページに対してサービスワーカーが登録されてインストールされ、関連する資産がすべてキャッシュに追加されれば、ほぼ開始準備が整っています。すべきことは、あと一つだけです。つまり、さらなるネットワーク要求に応答するための何らかのコードを書くことです。
+サービスワーカーが登録され、 HTML ページに対してインストールされ、関連するアセットがすべてキャッシュに追加されたので、ほぼ準備が整いました。やるべきことはもう一つあります。さらなるネットワークリクエストに応答するためのコードを書くことです。
 
-`sw.js` における第二のちょっとしたコードがしていることは、こうです。すなわち、サービスワーカーのグローバル・スコープにもう一つのリスナーを追加し、これにより、`fetch` イベントが生じたときにハンドラー関数を実行します。このイベントは、サービスワーカーの登録先のディレクトリー内の資産に対してブラウザーが要求を出す際には、いつでも生じます。
+これが `sw.js` の 2 つ目のコードの役割です。サービスワーカーのグローバルスコープに別のリスナーを追加して、`fetch` イベントが発生したときにハンドラー関数を実行するようにします。これは、ブラウザーが、サービスワーカーが登録されているディレクトリーにある資産に対してリクエストを行うたびに発生します。
 
-ハンドラーの内部では、要求された資産の URL をまず記録します。それから、{{domxref("FetchEvent.respondWith()")}} メソッドを使って、その要求に対するカスタム応答を提供します。
+ハンドラーの内部では、まずリクエストされた資産の URL をログ出力します。次に、{{domxref("FetchEvent.respondWith()")}} メソッドを使用して、リクエストに対する独自のレスポンスを提供しています。
 
-このブロックの内部では、{{domxref("CacheStorage.match()")}} を用いて、マッチング要求 (URL にマッチします) がいずれかのキャッシュの中に見つかるかどうかを調べます。このプロミスは、マッチが見つからなければ (訳注: 正しくは「見つかれば」?) そのマッチする応答をともなって成立し、マッチが見つからなければ `undefined` となります。
+このブロックの中では {{domxref("CacheStorage.match()")}} を使用して、一致するリクエスト（すなわち URL に一致する）がいずれかのキャッシュで得られるかどうかを調べています。このプロミスは、一致するものが得られた場合は一致するレスポンスで履行され、そうでない場合は `undefined` となります。
 
-もしマッチが見つかれば、単純にそれをカスタム応答として返します。もしマッチが見つからなければ、代わりに、ネットワークから応答を [fetch()](/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch) して、それを返します。
+一致するものが見つかった場合、それを独自のレスポンスとして返します。そうでない場合は、ネットワークからのレスポンスを [fetch()](/ja/docs/Web/API/fetch) して、代わりにそれを返します。
 
 ```js
-self.addEventListener('fetch', function(e) {
+self.addEventListener('fetch', (e) => {
   console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
+    caches.match(e.request).then((response) => response || fetch(e.request))
   );
 });
 ```
 
-これで私たちの単純なサービスワーカーは終わりです。サービスワーカーを使ってできる、もっと多くのことがありますが、より詳しくは、[service worker cookbook](https://serviceworke.rs/) を参照してください。また、[ウェブアプリへの Service Worker とオフラインの追加](https://developers.google.com/web/fundamentals/codelabs/offline/) という記事について、著者の Paul Kinlan さんに感謝します。あの記事のおかげで、この単純な例の着想を得られました。
+これでサービスワーカーは終わりです。
+サービスワーカーを使ってできることはまだたくさんあります。詳しくは [service worker cookbook](https://github.com/mdn/serviceworker-cookbook) を参照してください。
+この例のインスピレーションを与えてくれた Paul Kinlan の記事 [Adding a Service Worker and Offline into your Web App](https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0) に多くの感謝を捧げます。
 
-#### この例をオフラインで試します
+#### この例をオフラインで試す
 
-[サービスワーカー の例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/) を試すには、それが確実にインストールされるように、二、三度ロードする必要があるでしょう。それが済んだら、以下のことができます。
+[サービスワーカーの例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/)を試すには、それが確実にインストールされるように、2、3 度読み込む必要があるでしょう。それが済んだら、以下のことができます。
 
 - ネットワーク接続ケーブルを抜いてみましょう。あるいは、Wi-Fi を切ってみましょう。
 - Firefox を使っているなら、\[ファイル] > \[オフライン作業] を選択してください。
 - Chrome を使っているなら、\[デベロッパーツール] へ進み、 \[_Application] > \[Service Workers]_ を選び、それから、\[_Offline]_ のチェックボックスをチェックしてください。
 
-この例のページをもう一度リフレッシュすれば、当該ページが依然として、まさに申し分なくロードされているところを見ることになるはずです。あらゆるものがオフラインに保存されています。すなわち、ページ資産はキャッシュに保存されており、動画は IndexedDB データベースに保存されています。
+例のページをもう一度更新しても、問題なく読み込まれるはずです。ページ資産はキャッシュに、動画は IndexedDB データベースにと、すべてオフラインで格納されています。
 
 ## まとめ
 
 これで終わりです。クライアント側での保存の技術についてのこの概要を、皆さんが有用だと思ってくださったのであれば良いな、と望んでいます。
 
-## あわせて参照
+## 関連情報
 
-- [Web storage API](/ja/docs/Web/API/Web_Storage_API)
+- [ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/ja/docs/Web/API/IndexedDB_API)
-- [Cookies](/ja/docs/Web/HTTP/Cookies)
-- [Service worker API](/ja/docs/Web/API/Service_Worker_API)
+- [クッキー](/ja/docs/Web/HTTP/Cookies)
+- [ウェブワーカー API](/ja/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 ## このモジュール
 
 - [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [ドキュメントの操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [サーバからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [サードパーティ API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
 - [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- **クライアント側ストレージ**

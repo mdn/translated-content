@@ -2,6 +2,7 @@
 title: IdleDeadline.timeRemaining()
 slug: Web/API/IdleDeadline/timeRemaining
 ---
+
 {{APIRef("Background Tasks")}}{{SeeCompatTable}}
 
 The **`timeRemaining()`** method on the {{domxref("IdleDeadline")}} interface returns the estimated number of milliseconds remaining in the current idle period. The callback can call this method at any time to determine how much time it can continue to work before it must return. For example, if the callback finishes a task and has another one to begin, it can call `timeRemaining()` to see if there's enough time to complete the next task. If there isn't, the callback can just return immediately, or look for other work to do with the remaining time.
@@ -22,7 +23,7 @@ If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
 
 ## Example
 
-See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+See our [complete example](/zh-CN/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/zh-CN/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 
@@ -30,11 +31,11 @@ See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#Example) in 
 
 ## Browser compatibility
 
-{{Compat("api.IdleDeadline.timeRemaining")}}
+{{Compat}}
 
 ## See also
 
-- [Collaborative Scheduling of Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
+- [Collaborative Scheduling of Background Tasks](/zh-CN/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
 - {{domxref("Window.requestIdleCallback()")}}
 - {{domxref("Window.cancelIdleCallback()")}}

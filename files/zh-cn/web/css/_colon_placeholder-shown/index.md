@@ -2,6 +2,7 @@
 title: ':placeholder-shown'
 slug: Web/CSS/:placeholder-shown
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`:placeholder-shown`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 在 {{htmlElement("input")}} 或 {{htmlElement("textarea")}} 元素显示 [placeholder text](/zh-CN/docs/Web/HTML/Element/input#attr-placeholder) 时生效。
@@ -19,9 +20,9 @@ slug: Web/CSS/:placeholder-shown
 :placeholder-shown
 ```
 
-## 样例
+## 示例
 
-### 基础样例
+### 基础示例
 
 #### HTML
 
@@ -44,11 +45,11 @@ input:placeholder-shown {
 
 #### 结果
 
-{{EmbedLiveSample('Basic_example', 200, 60)}}
+{{EmbedLiveSample('基础示例', 200, 60)}}
 
-### 超出文本
+### 文本溢出
 
-在分辨率较小的设备上，输入框或者其他表单控件可能会变的很窄。这个选择器可以使得占位符文本缩短. 这个选择器经常和 {{cssxref("text-overflow")}} 一起使用。
+在分辨率较小的设备上，输入框或者其他表单控件可能会变的很窄。这个选择器可以使得占位符文本缩短。这个选择器经常和 {{cssxref("text-overflow")}} 一起使用。
 
 #### HTML
 
@@ -66,7 +67,7 @@ input:placeholder-shown {
 
 #### 结果
 
-{{EmbedLiveSample("Overflowing_text", 200, 60)}}
+{{EmbedLiveSample("文本溢出", 200, 60)}}
 
 ## 规范
 
@@ -74,7 +75,7 @@ input:placeholder-shown {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.placeholder-shown")}}
+{{Compat}}
 
 ## 参见
 

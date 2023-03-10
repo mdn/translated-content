@@ -1,14 +1,10 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`Date.UTC()`** メソッドは、コンストラクターと同じ最も長い書式の引数を受け入れ、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間を表す {{jsxref("Date")}} オブジェクトのミリ秒単位の数値を返します。
@@ -17,24 +13,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 
 ## 構文
 
-**ECMAScript 2017 より:**
-
+```js-nolint
+Date.UTC(year)
+Date.UTC(year, month)
+Date.UTC(year, month, day)
+Date.UTC(year, month, day, hour)
+Date.UTC(year, month, day, hour, minute)
+Date.UTC(year, month, day, hour, minute, second)
+Date.UTC(year, month, day, hour, minute, second, millisecond)
 ```
-Date.UTC(year[, month[, day[, hour[, minute[, second[, millisecond]]]]]])
-```
-
-**ECMAScript 2016 以前:** _(`month` が必須であった)_
-
-```
-Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]])
-```
-
-### 引数
 
 - `year`
-  - : 完全な形の「年」
-- `month`
-  - : 「月」を表す `0` (1 月) から `11` (12 月) までの整数値。 _(ECMAScript 2016 まで、 `month` は必須の引数でした。 ES2017 では必須ではなくなりました。)_
+
+  - : 整数値で、年を表します。
+
+    `0` から `99` までの値は `1900` から `1999` までに対応付けられます。それ以外の値はすべて、実際の年を表します。
+    [例](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#2_桁の年の補完)を参照してください。
+
+- `month` {{optional_inline}}
+  - : `0` (1 月) から `11` (12 月) までの整数値で、月を表します。 ECMAScript 2017 以降では、省略時の既定値は `0` です。 _（ECMAScript 2016 までは、 `month` は必須の引数でした。 ES2017 では必須ではなくなりました。_
 - `day` {{optional_inline}}
   - : 「日」を表す `1` から `31` までの整数値。省略された場合の既定値は `1` です。
 - `hour` {{optional_inline}}
@@ -59,11 +56,11 @@ Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]])
 この `UTC()` メソッドは {{jsxref("Date")}} コンストラクターと 2 つの点で異なります。
 
 1. `Date.UTC()` は地方時ではなく、協定世界時を用います。
-2. `Date.UTC()` は `Date` オブジェクトを生成せず、時刻値を整数で返します。
+2. `Date.UTC()` は {{jsxref("Date")}} オブジェクトを生成せず、時刻値を整数で返します。
 
 引数が日時に期待される範囲を超えている場合、 `UTC()` メソッドは指定した値を受け入れるよう他の引数を更新します。例えば `15` が `month` に使用された場合、年が 1 つ増加し `(year + 1)`、月には `3` が使われます。
 
-`UTC` は {{jsxref("Date")}} の静的メソッドなので、生成した `Date` オブジェクトのメソッドとしてではなく、常に `Date.UTC()` のように使用してください。
+`UTC()` は {{jsxref("Date")}} の静的メソッドなので、 {{jsxref("Date")}} インスタンスのメソッドとしてではなく、常に `Date.UTC()` のように使用してください。
 
 ## 例
 
@@ -72,20 +69,18 @@ Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]])
 以下の文では、地方時の代わりに UTC を用いて {{jsxref("Date")}} オブジェクトを生成します。
 
 ```js
-let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
+const utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
 ```
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.utc', 'Date.UTC')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.UTC")}}
+{{Compat}}
 
-### 互換性ノート
+### 互換性メモ
 
 #### Date.UTC() の引数が 2 つ未満であった場合
 

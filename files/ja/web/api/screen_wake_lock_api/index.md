@@ -2,6 +2,7 @@
 title: 画面起動ロック API
 slug: Web/API/Screen_Wake_Lock_API
 ---
+
 {{DefaultAPISidebar("Screen Wake Lock API")}}
 
 画面起動ロック API は、アプリケーションの実行を継続する必要がある場合に、端末が画面を暗くしたり、ロックしたりするのを防ぐ方法を提供します。

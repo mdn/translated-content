@@ -14,6 +14,7 @@ tags:
   - referrer
 translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quantité d'[informations sur le référent (referrer)](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (envoyées par l'en-tête {{HTTPHeader("Referer")}}) incluses dans la requête.
@@ -99,7 +100,7 @@ Autrement, une [relation de lien](/fr/docs/Web/HTML/Link_types) définie à `nor
 
 CSS peut demander des ressources référencées dans des feuilles de styles. Ces ressources suivent une règle de référent aussi :
 
-- Les feuilles de styles CSS externes utilisant la règle par défaut (`no-referrer-when-downgrade`),  moins qu'elle soit remplacée un l'en-tête HTTP `Referrer-Policy` dans la réponse de la feuille de styles CSS.
+- Les feuilles de styles CSS externes utilisant la règle par défaut (`no-referrer-when-downgrade`), moins qu'elle soit remplacée un l'en-tête HTTP `Referrer-Policy` dans la réponse de la feuille de styles CSS.
 - Pour les éléments {{HTMLElement("style")}} ou [attributs `style`](/fr/docs/Web/API/HTMLElement/style), la règle de référent du propriétaire du document est utilisée.
 
 ## Exemples
@@ -216,25 +217,11 @@ Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'
 
 ## Spécifications
 
-| Spécification                                                                              | Statut                  |
-| ------------------------------------------------------------------------------------------ | ----------------------- |
-| [Referrer Policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-header) | Brouillon de l'éditeur. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Referrer-Policy")}}
-
-> **Note :**
->
-> - Version 53 et plus, Gecko offre la possibilité aux utilisateurs de définir leur valeur par défaut de `Referrer-Policy` dans `about:config`, l'option s'appelant `network.http.referer.userControlPolicy`.
-> - Version 59 et plus (Voir [#587523](https://bugzilla.mozilla.org/show_bug.cgi?id=587523)), il a été remplacé par `network.http.referer.defaultPolicy` et `network.http.referer.defaultPolicy.pbmode`.
->
-> Les valeurs permises sont :
->
-> - 0 — `no-referrer`
-> - 1 — `same-origin`
-> - 2 — `strict-origin-when-cross-origin`
-> - 3 — `no-referrer-when-downgrade` (par défaut)
+{{Compat}}
 
 ## Voir aussi
 

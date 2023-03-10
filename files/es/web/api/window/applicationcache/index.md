@@ -1,10 +1,8 @@
 ---
 title: Window.applicationCache
 slug: Web/API/Window/applicationCache
-translation_of: Web/API/Window/applicationCache
-page-type: web-api-instance-property
-browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
+
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}{{securecontext_header}}
 
 > **Advertencia**: La memoria caché de la aplicación se está eliminando de la plataforma web. Considere usar [service workers](/es/docs/Web/API/Service_Worker_API) en su lugar.
@@ -18,4 +16,3 @@ Una referencia de objeto a un `OfflineResourceList`.
 ## Compatibilidad con navegadores
 
 {{Compat}}
-

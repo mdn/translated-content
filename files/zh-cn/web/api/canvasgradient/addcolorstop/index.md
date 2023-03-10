@@ -2,6 +2,7 @@
 title: CanvasGradient.addColorStop()
 slug: Web/API/CanvasGradient/addColorStop
 ---
+
 {{APIRef("Canvas")}}
 
 **`CanvasGradient.addColorStop()`** 方法添加一个由**偏移值**和**颜色值**指定的断点到渐变。如果偏移值不在`0`到`1`之间，将抛出`INDEX_SIZE_ERR`错误，如果颜色值不能被解析为有效的 CSS 颜色值 {{cssxref("&lt;color&gt;")}}，将抛出`SYNTAX_ERR`错误。
@@ -21,7 +22,7 @@ void gradient.addColorStop(offset, color);
 
 ## 示例
 
-### 使用`addColorStop`方法
+### 使用 `addColorStop` 方法
 
 一个使用{{domxref("CanvasGradient")}}对象的`addColorStop` 方法的简单例子
 
@@ -86,7 +87,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('使用 addColorStop 方法', 700, 360) }}
 
 ## 标准
 
@@ -94,9 +95,9 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasGradient.addColorStop")}}
+{{Compat}}
 
-## 请参阅
+## 参见
 
 - 接口定义 {{domxref("CanvasGradient")}}
 - {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}

@@ -1,9 +1,8 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-translation_of: Web/CSS/will-change
-browser-compat: css.properties.will-change
 ---
+
 {{CSSRef}}
 
 ## 요약

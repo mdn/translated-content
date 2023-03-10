@@ -1,27 +1,9 @@
 ---
 title: Crear hipervínculos
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Aprender
-  - CodingScripting
-  - Guía
-  - HTML
-  - HTTP
-  - Novato
-  - Principiante
-  - Title
-  - URL
-  - enlace
-  - hiperenlaces
-  - hipervínculos
-  - href
-  - referencia absoluta
-  - referencia relativa
-  - título
-  - urls
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 Los hipervínculos (o enlaces) son elementos verdaderamente importantes — son los que hacen que la web sea _**web**_. Este artículo expone la sintaxis necesaria para crear un enlace, además contiene un catálogo de buenas prácticas para crearlos.
@@ -32,10 +14,10 @@ Los hipervínculos (o enlaces) son elementos verdaderamente importantes — son 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Estar familiarizado con HTML, cubierto en
-        {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started", "Empezar con HTML")}}.
+        [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started).
         Aplicación de formato a texto en documentos HTML, según lo expuesto en
         la sección
-        {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "fundamentos de texto HTML")}}.
+        [fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals).
       </td>
     </tr>
     <tr>
@@ -56,15 +38,16 @@ Los hipervínculos son una de las innovaciones más interesantes que ofrece la W
 
 El sitio web de la BBC, por ejemplo, contiene una gran cantidad de enlaces que apuntan a multitud de noticias en diferentes zonas de el sitio (funcionalidad de navegación), zonas de acceso/registro (herramientas de usuario) y otras.
 
-![Portada de bbc.co.uk, que muestra muchas noticias y la funcionalidad del menú de navegación](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![Portada de bbc.co.uk, que muestra muchas noticias y la funcionalidad del menú de navegación](updated-bbc-website.png)
 
 ## Anatomía de un enlace
 
 Un enlace básico se crea incluyendo el texto (o cualquier otro contenido, ve [Convertir bloques de contenido en enlaces](#convertir_bloques_de_contenido_en_enlaces)), que queramos convertir en un enlace usando un elemento ancla {{HTMLElement("a")}}, dándole un atributo {{HTMLAttrxRef("href", "a")}} (también conocido como «**_Hypertext Reference_**», «**_target_**» u **objetivo**) que contendrá la dirección web hacia dónde queremos que apunte el enlace.
 
 ```html
-<p>Crea un enlace a
-<a href="https://www.mozilla.org/es-ES/">la página de inicio de Mozilla</a>.
+<p>
+  Crea un enlace a
+  <a href="https://www.mozilla.org/es-ES/">la página de inicio de Mozilla</a>.
 </p>
 ```
 
@@ -77,16 +60,20 @@ Crea un enlace a <a class="ignore-external" href="https://www.mozilla.org/es-ES/
 Otro atributo que posiblemente quieras agregar a tus enlaces es `title`. El título contiene información adicional sobre el enlace, como qué tipo de información contiene la página o cosas que debes tener en cuenta en el sitio web.
 
 ```html
-<p>Crea un enlace a
-<a href="https://www.mozilla.org/es-ES/"
-   title="El mejor lugar para encontrar más información acerca de la misión de Mozilla
-          y cómo contribuir">la página de inicio de Mozilla</a>.
+<p>
+  Crea un enlace a
+  <a
+    href="https://www.mozilla.org/es-ES/"
+    title="El mejor lugar para encontrar más información acerca de la misión de Mozilla
+          y cómo contribuir"
+    >la página de inicio de Mozilla</a
+  >.
 </p>
 ```
 
 Este código producirá el siguiente resultado (el título se mostrará al pasar el ratón sobre el texto del enlace):
 
-Crea un enlace a [la página de inicio de Mozilla](https://www.mozilla.org/es-ES/ "El mejor lugar para encontrar más información sobre la misión de Mozilla y cómo contribuir").
+Crea un enlace a [la página de inicio de Mozilla](https://www.mozilla.org/es-ES/).
 
 > **Nota:** El título de un enlace solo será visible al pasar el ratón por encima, lo cual significa que los usuarios que naveguen usando los controles de sus teclados, o pantallas táctiles, tendrán dificultades para acceder a la información proporcionada por el título. Si la información del título es verdaderamente importante para el uso de la página, deberemos presentar el título de manera que sea accesible a todos los usuarios, por ejemplo incluyéndola como parte del texto del enlace.
 
@@ -100,11 +87,14 @@ Es momento del aprendizaje activo — crea un documento HTML con tu editor de c�
 
 ### Convertir bloques de contenido en enlaces
 
-Como hemos mencionado anteriormente, puedes convertir cualquier contenido en un enlace, incluso {{web.link("/es/docs/Learn/HTML/Getting_started#Elementos_de_bloque_y_elementos_en_línea", "Elementos de bloque y elementos en línea")}}. Si quieres convertir una imagen en un enlace, simplemente usa el elemento {{HTMLElement("a")}} encerrando el elemento {{HTMLElement("img")}} entre `<a>` y `</a>`.
+Como hemos mencionado anteriormente, puedes convertir cualquier contenido en un enlace, incluso [Elementos de bloque y elementos en línea](/es/docs/Learn/HTML/Getting_started#Elementos_de_bloque_y_elementos_en_línea). Si quieres convertir una imagen en un enlace, simplemente usa el elemento {{HTMLElement("a")}} encerrando el elemento {{HTMLElement("img")}} entre `<a>` y `</a>`.
 
 ```html
 <a href="https://www.mozilla.org/es-ES/">
-  <img src="mozilla-image.png" alt="Logotipo de Mozilla que dirige a la página inicial de Mozilla">
+  <img
+    src="mozilla-image.png"
+    alt="Logotipo de Mozilla que dirige a la página inicial de Mozilla"
+  />
 </a>
 ```
 
@@ -118,7 +108,7 @@ Una localizadora uniforme de recursos (URL, de las iniciales en inglés de «_Un
 
 Las URLs utilizan rutas para encontrar los archivos. Las rutas especifican dónde se encuentra el archivo que buscas dentro del sistema de archivos. Veamos un ejemplo de una estructura de directorios (ve el directorio [creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks)).
 
-![Una estructura de directorios simple. El directorio principal se llama creating-hyperlinks y contiene dos archivos llamados index.html y contacts.html, y dos directorios llamados projects y pdfs, que contiene un archivo index.html y un archivo project-brief.pdf, respectivamente](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![Una estructura de directorios simple. El directorio principal se llama creating-hyperlinks y contiene dos archivos llamados index.html y contacts.html, y dos directorios llamados projects y pdfs, que contiene un archivo index.html y un archivo project-brief.pdf, respectivamente](simple-directory.png)
 
 Al directorio **raíz** de esta estructura de directorios lo hemos llamado `creating-hyperlinks`. Al trabajar en modo local en una web, habrá un directorio que contendrá toda la información. En nuestro ejemplo, dentro de la raíz, encontramos el archivo `index.html` y el archivo `contacts.html`. En una web real, `index.html` es el punto de entrada a la web, lo que se conoce como _página de inicio_.
 
@@ -127,20 +117,26 @@ Observamos también dos directorios dentro de nuestro directorio raíz que son: 
 - **En el mismo directorio**: Si queremos incluir un hipervínculo dentro del archivo `index.html` (el `index.html` del nivel más alto) que apunte al archivo `contacts.html`, simplemente especificaremos el nombre del archivo al que hacemos referencia, porque se encuentra en el mismo directorio en el que se encuentra el archivo `index.html` desde donde lo queremos llamar. Por lo tanto, usamos la URL `contacts.html` — veamos el código:
 
   ```html
-  <p>¿Quieres contactar con un miembro específico del personal?
-  Encuentra los detalles en nuestra <a href="contacts.html">página de contactos</a>.</p>
+  <p>
+    ¿Quieres contactar con un miembro específico del personal? Encuentra los
+    detalles en nuestra <a href="contacts.html">página de contactos</a>.
+  </p>
   ```
 
 - **Bajando por la estructura de subdirectorios**: Si queremos incluir un hipervínculo dentro del archivo `index.html` (el `index.html` de nivel más alto) que apunta a `projects/index.html`, debemos bajar hasta el directorio `projects` antes de indicar al archivo al que queremos enlazar. Para ello especificamos el nombre del directorio y le añadimos una barra inclinada hacia adelante, y a continuación el nombre del archivo. Por lo tanto, utilizaremos la URL `projects/index.html`:
 
   ```html
-  <p>Visita mi <a href="projects/index.html">página de inicio del proyecto</a>.</p>
+  <p>
+    Visita mi <a href="projects/index.html">página de inicio del proyecto</a>.
+  </p>
   ```
 
 - **Subiendo por nuestro sistema de directorios**: Si ahora queremos incluir un hipervínculo dentro del archivo `projects/index.html` que apunte a `pdfs/project-brief.pdf`, hay que subir un nivel en nuestro sistema de directorios, para luego bajar al directorio `pdf`. Para «Subir un nivel» utilizamos los dos puntos — (`..`) — por lo que usamos la URL `../pdfs/project-brief.pdf`:
 
   ```html
-  <p>Un enlace a mi<a href="../pdfs/project-brief.pdf">resumen del proyecto</a>.</p>
+  <p>
+    Un enlace a mi<a href="../pdfs/project-brief.pdf">resumen del proyecto</a>.
+  </p>
   ```
 
 > **Nota:** Podemos combinar más de una instancia de estas características y generar URLs más complejas, si es necesario, por ejemplo: `../../../ruta/compleja/a/mi/archivo.html`.
@@ -156,13 +152,19 @@ Es posible apuntar hacia una parte concreta de un documento HTML en vez de a tod
 Posteriormente para hacer referencia a este `id` concreto, lo añadiremos al final de la URL precedido por una almohadilla — veamos el ejemplo:
 
 ```html
-<p>¿Quieres mandarnos una carta? Aquí tienes nuestra <a href="contacts.html#Dirección_de_envío">Dirección de envío</a>.</p>
+<p>
+  ¿Quieres mandarnos una carta? Aquí tienes nuestra
+  <a href="contacts.html#Dirección_de_envío">Dirección de envío</a>.
+</p>
 ```
 
 También podemos usar esta referencia a un fragmento de documento para apuntar hacia otra _parte del mismo documento_:
 
 ```html
-<p>La <a href="#Dirección_de_envío">Dirección de envío de la empresa</a> se encuentra al final de esta página.</p>
+<p>
+  La <a href="#Dirección_de_envío">Dirección de envío de la empresa</a> se
+  encuentra al final de esta página.
+</p>
 ```
 
 ### URLs absolutas y relativas
@@ -196,18 +198,13 @@ Veamos un ejemplo concreto:
 _**Buen** texto en un enlace_: [Descargar Firefox](https://firefox.com)
 
 ```html
-<p><a href="https://firefox.com/">
-  Descargar Firefox
-</a></p>
+<p><a href="https://firefox.com/"> Descargar Firefox </a></p>
 ```
 
 _**Mal** texto en un enlace_: [Pulsar aquí](https://firefox.com/) para descargar Firefox
 
 ```html
-<p><a href="https://firefox.com/">
-  Haz clic aquí
-</a>
-para descargar Firefox</p>
+<p><a href="https://firefox.com/"> Haz clic aquí </a> para descargar Firefox</p>
 ```
 
 Otras indicaciones:
@@ -222,7 +219,7 @@ Otras indicaciones:
 A partir de las indicaciones anteriores podemos llegar a pensar que es mejor utilizar referencias absolutas en todos los casos; después de todo, estas no se rompen cuando la página se traslada como ocurre con las referencias relativas. Sin embargo, debes utilizar enlaces relativos siempre que sea posible cuando enlaces a otras ubicaciones dentro del _mismo sitio web_. Cuando vinculas a otro sitio web, deberás utilizar un vínculo absoluto.
 
 - Primero, porque el código es mucho más fácil de leer — las URLs relativas suelen ser mucho más cortas que las absolutas, lo que hace que el código sea mucho más fácil de leer.
-- Segundo, resulta más eficiente utilizar URLs relativas cuando sea posible. Cuando usas una URL absoluta, el navegador comienza buscando la ubicación real del servidor en el Sistema de nombres de dominio ({{Glossary("DNS")}}), consulta {{web.link("/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works", "Cómo funciona la web")}} para obtener más información). Entonces va a ese servidor y busca el archivo solicitado. En cambio, con una URL relativa, el navegador simplemente busca el archivo solicitado en el mismo servidor. Si usas URLs absolutas donde las URLs relativas lo harían, constantemente estás haciendo que tu navegador haga un trabajo adicional, lo cual significa que funcionará de manera menos eficiente.
+- Segundo, resulta más eficiente utilizar URLs relativas cuando sea posible. Cuando usas una URL absoluta, el navegador comienza buscando la ubicación real del servidor en el Sistema de nombres de dominio ({{Glossary("DNS")}}), consulta [Cómo funciona la web](/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works) para obtener más información). Entonces va a ese servidor y busca el archivo solicitado. En cambio, con una URL relativa, el navegador simplemente busca el archivo solicitado en el mismo servidor. Si usas URLs absolutas donde las URLs relativas lo harían, constantemente estás haciendo que tu navegador haga un trabajo adicional, lo cual significa que funcionará de manera menos eficiente.
 
 ### Indica claramente los recursos no HTML
 
@@ -236,17 +233,24 @@ Por ejemplo:
 Veamos algunos ejemplos, para ver qué texto puede ser aconsejable en estos casos:
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
-  Descarga el informe de ventas (PDF, 10MB)
-</a></p>
+<p>
+  <a href="http://www.example.com/large-report.pdf">
+    Descarga el informe de ventas (PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/video-stream/">
-  Reproduce el vídeo (el flujo de datos se abre en una pestaña independiente, calidad HD)
-</a></p>
+<p>
+  <a href="http://www.example.com/video-stream/">
+    Reproduce el vídeo (el flujo de datos se abre en una pestaña independiente,
+    calidad HD)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/car-game">
-  Juega al juego del automóvil (requiere Flash)
-</a></p>
+<p>
+  <a href="http://www.example.com/car-game">
+    Juega al juego del automóvil (requiere Flash)
+  </a>
+</p>
 ```
 
 ### Utiliza el atributo `download` al enlazar una descarga
@@ -254,8 +258,10 @@ Veamos algunos ejemplos, para ver qué texto puede ser aconsejable en estos caso
 Si queremos hacer referencia a una descarga en lugar de a algo que abra el navegador, disponemos del atributo `download` para proporcionar un nombre predeterminado al archivo a guardar. Veamos un ejemplo con un enlace a la descarga de la versión para Windows de Firefox:
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=es-MX"
-   download="firefox-latest-64bit-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=es-MX"
+  download="firefox-latest-64bit-installer.exe"
+>
   Descarga la última versión de Firefox para Windows (64 bits) (Español, es-MX)
 </a>
 ```
@@ -273,14 +279,14 @@ Tendrás que hacer copias locales, en el mismo directorio, de las cuatro siguien
 
 A continuación:
 
-1.  Añade una lista no ordenada en el lugar adecuado de la página, que contenga los nombres de las páginas a las que enlazas. Un menú de navegación normalmente es una lista de enlaces (_links_), por lo que esto es semánticamente correcto.
-2.  Convierte cada nombre en un enlace a esa página.
-3.  Copia el menú de navegación en cada una de las páginas.
-4.  En cada página, elimina solo el enlace que hace referencia a sí mismo (es confuso y no tiene sentido que una página se llame a sí misma, y la falta del enlace actúa como recordatorio de la página en la que se está en cada momento).
+1. Añade una lista no ordenada en el lugar adecuado de la página, que contenga los nombres de las páginas a las que enlazas. Un menú de navegación normalmente es una lista de enlaces (_links_), por lo que esto es semánticamente correcto.
+2. Convierte cada nombre en un enlace a esa página.
+3. Copia el menú de navegación en cada una de las páginas.
+4. En cada página, elimina solo el enlace que hace referencia a sí mismo (es confuso y no tiene sentido que una página se llame a sí misma, y la falta del enlace actúa como recordatorio de la página en la que se está en cada momento).
 
 El ejercicio terminado debería crear una página como la siguiente:
 
-![Un ejemplo de un menú de navegación HTML simple, con inicio, imágenes, proyectos y elementos del menú social](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![Un ejemplo de un menú de navegación HTML simple, con inicio, imágenes, proyectos y elementos del menú social](navigation-example.png)
 
 > **Nota:** Si ahora encallas, o no estás seguro de haberlo conseguido, revisa el directorio [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver la respuesta correcta.
 
@@ -291,7 +297,9 @@ Es posible crear enlaces o botones que, cuando se pulsan, abren un nuevo correo 
 En su forma más básica, un enlace `mailto:` simplemente contiene la dirección de correo electrónico de los destinatarios. Por ejemplo:
 
 ```html
-<a href="mailto:nowhere@mozilla.org">Enviar correo electrónico a ninguna parte</a>
+<a href="mailto:nowhere@mozilla.org"
+  >Enviar correo electrónico a ninguna parte</a
+>
 ```
 
 Esto da como resultado un enlace que se ve así: [Enviar correo electrónico a ninguna parte](mailto:nowhere@mozilla.org).
@@ -305,12 +313,14 @@ Además de la dirección de correo electrónico, puedes proporcionar otra inform
 Veamos un ejemplo que incluye estos campos:
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"
+>
   Enviar un correo electrónico cc, bcc, asunto y cuerpo
 </a>
 ```
 
-> **Nota:** Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) {{Interwiki("wikipedia", "Código porciento")}}. También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee {{web.link("/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method", "el método GET")}} para comprender mejor qué notación de consulta URL se usa comúnmente.
+> **Nota:** Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) [Código porciento](https://es.wikipedia.org/wiki/Código_porciento). También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
 
 A continuación otros ejemplos de utilización de enlaces `mailto`:
 
@@ -322,7 +332,7 @@ A continuación otros ejemplos de utilización de enlaces `mailto`:
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encuentra más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante; consulta {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links", "Pon a prueba tus habilidades: Enlaces")}}.
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encuentra más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante; consulta [Pon a prueba tus habilidades: Enlaces](/es/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links).
 
 ## Resumen
 
@@ -332,12 +342,12 @@ Eso es todo en cuanto a enlaces, ¡por ahora! Volveremos a ellos más tarde en e
 
 ## En este módulo
 
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started", "Empezar con HTML")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "¿Qué hay en el «head»? Metadatos en HTML")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Fundamentos de texto HTML")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Crear hipervínculos")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Formateo de texto avanzado")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Estructura web y documentación")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Depurar HTML")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Marcado para una carta")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Estructuración del contenido de una página")}}
+- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

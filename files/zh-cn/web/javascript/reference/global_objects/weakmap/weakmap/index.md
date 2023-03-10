@@ -61,7 +61,7 @@ wm1.has(o1);   // false
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.WeakMap")}}
+{{Compat}}
 
 ## 相关链接
 

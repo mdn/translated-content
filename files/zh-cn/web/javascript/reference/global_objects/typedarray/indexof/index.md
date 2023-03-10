@@ -2,9 +2,10 @@
 title: TypedArray.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 ---
+
 {{JSRef}}
 
-**`indexOf()`** 方法返回在类型数组中可以找到给定元素的第一个索引，如果不存在，则返回-1。 方法具有与 {{jsxref("Array.prototype.indexOf()")}} 相同的算法。 TypedArray 是这里的[类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
+**`indexOf()`** 方法返回在类型数组中可以找到给定元素的第一个索引，如果不存在，则返回 -1。方法具有与 {{jsxref("Array.prototype.indexOf()")}} 相同的算法。TypedArray 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
 ## 语法
 
@@ -25,7 +26,7 @@ typedarray.indexOf(searchElement[, fromIndex = 0])
 
 ## 描述
 
-`indexOf`使用[严格相等](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) （由 === 或三等号运算符使用的相同方法）比较`searchElement`和类型化数组的元素。
+`indexOf`使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) （由 === 或三等号运算符使用的相同方法）比较`searchElement`和类型化数组的元素。
 
 ## 示例
 

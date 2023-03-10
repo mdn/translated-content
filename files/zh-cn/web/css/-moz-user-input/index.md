@@ -2,11 +2,10 @@
 title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
-## Summary
-
-在 Mozilla 应用程序中，**`-moz-user-input`** 决定元素是否将接受用户输入。 A 类似的属性 **`user-focus`** 是在[CSS3 UI 规范的前身的早期草案](http://www.w3.org/TR/2000/WD-css3-userint-20000216)中提出的，但被工作组拒绝。
+在 Mozilla 应用程序中，**`-moz-user-input`** 决定元素是否将接受用户输入。A 类似的属性 **`user-focus`** 是在[CSS3 UI 规范的前身的早期草案](http://www.w3.org/TR/2000/WD-css3-userint-20000216)中提出的，但被工作组拒绝。
 
 {{cssinfo}}
 
@@ -35,7 +34,7 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 - enabled
   - : The element accepts user input. For textboxes, this is the default behavior.
 - disabled
-  - : The element does not accept user input. However, this is not the same as setting {{XULAttr("disabled")}} to true, in that the element is drawn normally.
+  - : The element does not accept user input. However, this is not the same as setting `disabled` to true, in that the element is drawn normally.
 
 ### Formal syntax
 

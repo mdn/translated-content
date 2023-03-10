@@ -3,6 +3,7 @@ title: <feGaussianBlur>
 slug: Web/SVG/Element/feGaussianBlur
 translation_of: Web/SVG/Element/feGaussianBlur
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feGaussianBlur>`** applique un effet de flou à l'image en entrée. La quantité de flou est contrôlée par {{SVGAttr("stdDeviation")}}.
@@ -86,14 +87,11 @@ Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire                                        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('Filters 1.0', '#feGaussianBlurElement', '&lt;feGaussianBlur&gt;')}}             | {{Spec2('Filters 1.0')}} | Ajoute l'attribut {{SVGAttr("edgeMode")}} |
-| {{SpecName('SVG1.1', 'filters.html#feGaussianBlurElement', '&lt;feGaussianBlur&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feGaussianBlur")}}
+{{Compat}}
 
 ## Voir aussi
 

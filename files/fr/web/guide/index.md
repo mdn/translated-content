@@ -7,6 +7,7 @@ tags:
   - Web
 translation_of: Web/Guide
 ---
+
 **Ces articles sont des tutoriels et guides pratiques permettant d'utiliser certaines API et technologies web.**
 
 - [Apprendre - HTML](/fr/docs/Apprendre/HTML)

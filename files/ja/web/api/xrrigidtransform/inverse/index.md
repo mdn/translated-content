@@ -2,6 +2,7 @@
 title: XRRigidTransform.inverse
 slug: Web/API/XRRigidTransform/inverse
 ---
+
 {{APIRef("WebXR Device API")}}
 
 {{domxref("XRRigidTransform")}} インターフェイスの **`inverse`** 読み取り専用プロパティは、それ自体の変換の逆である別の {{domxref("XRRigidTransform")}} オブジェクトを返します。 つまり、逆を明示的に生成する代わりに、`inverse` プロパティを使用して、`XRRigidTransform` の逆をいつでも取得できます。
@@ -43,9 +44,7 @@ for (let view of pose.view) {
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                     | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName("WebXR","#dom-xrrigidtransform-inverse","XRRigidTransform.inverse")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

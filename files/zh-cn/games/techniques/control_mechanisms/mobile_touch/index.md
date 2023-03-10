@@ -1,13 +1,13 @@
 ---
 title: 移动端触摸控制
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
-original_slug: Games/Techniques/Control_mechanisms/移动端触摸控制
 ---
+
 {{GamesSidebar}}
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
-未来手游一定是 Web 的天下，许多开发在游戏开发过程中首先选择手游 — 既然如此，触摸控制是不可少的。我们将在本教程中了解怎样简单地在移动端 H5 游戏中实现触摸控制 ，只要移动端支持触摸，你就可以尽情的玩。
+未来手游一定是 Web 的天下，许多开发在游戏开发过程中首先选择手游 — 既然如此，触摸控制是不可少的。我们将在本教程中了解怎样简单地在移动端 H5 游戏中实现触摸控制，只要移动端支持触摸，你就可以尽情的玩。
 
 **说明**：游戏 [Captain Rogers: Battle at Andromeda](http://rogers2.enclavegames.com/demo/) 是基于[Phaser](http://phaser.io/) 和 Phaser-based 管理控制，但它也可以用纯 JavaScript 实现。使用 Phaser 的好处它提供了辅助变量和方法可以直接调用，有助于快速的开发游戏，这需要根据项目实际情况选择。
 
@@ -23,14 +23,14 @@ el.addEventListener("touchend", handleEnd);
 el.addEventListener("touchcancel", handleCancel);
 ```
 
-这样，在移动设备上屏幕上触摸游戏的 {{htmlelement("canvas")}} 将触发这些事件，因为我们就可以随意操控游戏（如：移动太空船）。 事件如下所示：
+这样，在移动设备上屏幕上触摸游戏的 {{htmlelement("canvas")}} 将触发这些事件，因为我们就可以随意操控游戏（如：移动太空船）。事件如下所示：
 
-- [touchstart](/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart) 当用户手指放在屏幕上触发。
-- [touchmove](/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove) 当他们在屏幕上移动手指时触发。
-- [touchend](/en-US/docs/Web/API/GlobalEventHandlers/ontouchend) 当用户在屏幕上停止移动时触发。
-- [touchcancel](/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel) 触摸被取消是触发，例如当用户将他们的手指移动到屏幕之外时。
+- [touchstart](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchstart) 当用户手指放在屏幕上触发。
+- [touchmove](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchmove) 当他们在屏幕上移动手指时触发。
+- [touchend](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchend) 当用户在屏幕上停止移动时触发。
+- [touchcancel](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchcancel) 触摸被取消是触发，例如当用户将他们的手指移动到屏幕之外时。
 
-> **备注：** 这篇 [touch events](/en-US/docs/Web/API/Touch_events) 参考文章提供了更多的实例和介绍。
+> **备注：** 这篇 [touch events](/zh-CN/docs/Web/API/Touch_events) 参考文章提供了更多的实例和介绍。
 
 ### 纯 JavaScript 示例
 
@@ -72,7 +72,7 @@ A [pointer](http://phaser.io/docs/2.6.1/Phaser.Pointer.html) represents a single
 
 You can add more pointers to the game by using; `this.game.input.addPointer` up to ten pointers can be managed simultaneously. The most recently used pointer is available in the `this.game.input.activePointer` object — the most recent finger active on the screen.
 
-If you need to access a specific pointer, they are all available at, ` this.game.input.pointer1``this.game.input.pointer2 `, etc. They are assigned dynamically, so if you put three fingers on the screen, then, ` pointer1``pointer2 `, and `pointer3` will be active. Removing the second finger, for example, won't affect the other two, and setting it back again will use the first available property, so `pointer2` will be used again.
+If you need to access a specific pointer, they are all available at, `this.game.input.pointer1`, `this.game.input.pointer2`, etc. They are assigned dynamically, so if you put three fingers on the screen, then, `pointer1`, `pointer2`, and `pointer3` will be active. Removing the second finger, for example, won't affect the other two, and setting it back again will use the first available property, so `pointer2` will be used again.
 
 You can quickly get the coordinates of the most recently active pointer via the `this.game.input.x` and `this.game.input.y` variables.
 

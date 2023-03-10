@@ -1,13 +1,8 @@
 ---
 title: <xsl:param>
 slug: Web/XSLT/Element/param
-tags:
-  - XSLT
-  - param
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/param
 ---
+
 {{ XsltRef() }}
 
 `<xsl:param>` 要素はパラメータを名前で設定し、オプションでそのパラメータのデフォルト値を設定します。最上位要素として使用される場合、パラメータはグローバルです。`<xsl:template>` 要素内で使用される場合、パラメータはそのテンプレートに対してローカルです。この場合、テンプレートの最初の子要素でなければなりません。

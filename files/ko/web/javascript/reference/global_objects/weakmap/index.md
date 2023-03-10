@@ -1,16 +1,8 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - WeakMap
-  - Polyfill
-browser-compat: javascript.builtins.WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
+
 {{JSRef}}
 
 **`WeakMap`** 은 키에 대한 강력한 참조를 생성하지 않는 키/값 쌍의 모음으로 키는 반드시 객체이며, 값은 임의의 [JavaScript 타입](/ko/docs/Web/JavaScript/Data_structures#javascript_types)입니다. 강력한 참조를 생성하지 않는 이유는 객체가 `WeakMap`의 키로 존재한다고 해도 가비지 컬렉터로 수집되는 것을 막을 수 없기에 키로 사용되던 객체가 수집되면 `WeakMap`의 해당 값도 다른 곳에서 강력하게 참조되지 않는 한 수집의 대상이 되기 때문입니다.

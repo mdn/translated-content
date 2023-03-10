@@ -1,9 +1,9 @@
 ---
 title: Selectores de atributo
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_atributos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
 Como ya explicamos en los artículos de HTML, los elementos pueden tener atributos que proporcionan un nivel de detalle mayor sobre el elemento que delimitan. En el CSS puedes utilizar selectores de atributo para seleccionar elementos definidos con unos atributos determinados. En este artículo veremos cómo utilizar estos selectores tan útiles.
@@ -89,21 +89,21 @@ Ahora que hemos terminado con los selectores de atributo, puedes avanzar al art�
 
 ## En este módulo
 
-1.  [La cascada y la herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
+1. [La cascada y la herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Las pseudoclases y los pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Operadores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [El modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [El modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

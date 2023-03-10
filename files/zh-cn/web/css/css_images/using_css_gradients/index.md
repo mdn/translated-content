@@ -3,6 +3,7 @@ title: 使用 CSS 渐变
 slug: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: Web/Guide/CSS/Using_CSS_gradients
 ---
+
 {{CSSRef}}
 
 **CSS 渐变** {{cssxref("&lt;image&gt;")}} 类型的一种特殊类型 {{cssxref("&lt;gradient&gt;")}} 表示，由两种或多种颜色之间的渐进过渡组成。您可以选择三种类型的渐变：线性 (由 {{cssxref("linear-gradient")}} 函数创建)，径向 (由 {{cssxref("radial-gradient")}} 函数创建) 和圆锥 (由 {{cssxref("conic-gradient")}} 函数创建)。您还可以使用 {{cssxref("repeating-linear-gradient")}} 和 {{cssxref("repeating-radial-gradient")}} 函数创建重复渐变。
@@ -36,11 +37,11 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('A_basic_linear_gradient', 120, 120) }}
+{{ EmbedLiveSample('基础线性渐变', 120, 120) }}
 
 ### 改变渐变方向
 
-默认情况下，线性渐变的方向是从上到下， 你可以指定一个值来改变渐变的方向。
+默认情况下，线性渐变的方向是从上到下，你可以指定一个值来改变渐变的方向。
 
 ```html hidden
 <div class="horizontal-gradient"></div>
@@ -59,7 +60,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Changing_the_direction', 120, 120) }}
+{{ EmbedLiveSample('改变渐变方向', 120, 120) }}
 
 ### 对角线渐变
 
@@ -82,7 +83,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Diagonal_gradients', 200, 100) }}
+{{ EmbedLiveSample('对角线渐变', 200, 100) }}
 
 ### 设置渐变角度
 
@@ -105,9 +106,9 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Using_angles', 120, 120) }}
+{{ EmbedLiveSample('设置渐变角度', 120, 120) }}
 
-在使用角度的时候，`0deg` 代表渐变方向为从下到上，`90deg` 代表渐变方向为从左到右，诸如此类正角度都属于顺时针方向。 而负角度意味着逆时针方向。
+在使用角度的时候，`0deg` 代表渐变方向为从下到上，`90deg` 代表渐变方向为从左到右，诸如此类正角度都属于顺时针方向。而负角度意味着逆时针方向。
 
 ![linear_redangles.png](/files/3811/linear_red_angles.png)
 
@@ -117,7 +118,7 @@ div {
 
 ### 使用多种颜色
 
-无需局限于使用两种颜色，你想使用多少种颜色都可以！ 默认情况下，所设置颜色会均匀分布在渐变路径中。
+无需局限于使用两种颜色，你想使用多少种颜色都可以！默认情况下，所设置颜色会均匀分布在渐变路径中。
 
 ```html hidden
 <div class="auto-spaced-linear-gradient"></div>
@@ -136,11 +137,11 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Using_more_than_two_colors', 120, 120) }}
+{{ EmbedLiveSample('使用多种颜色', 120, 120) }}
 
 ### 颜色终止位置
 
-你不需要让你设置的颜色在默认位置终止。 你可以通过给每个颜色设置 0，1% 或者 2% 或者其他的绝对数值来调整它们的位置。如果你将位置设置为百分数， `0%` 表示起始点，而 100% 表示终点，但是如果需要的话你也可以设置这个范围之外的其他值来达到你想要的效果。如果有些位置你没有明确设置，那么它将会被自动计算，第一种颜色会在 0% 处停止，而最后一种颜色是 100%，至于其他颜色则是在它邻近的两种颜色的中间停止。
+你不需要让你设置的颜色在默认位置终止。你可以通过给每个颜色设置 0，1% 或者 2% 或者其他的绝对数值来调整它们的位置。如果你将位置设置为百分数， `0%` 表示起始点，而 100% 表示终点，但是如果需要的话你也可以设置这个范围之外的其他值来达到你想要的效果。如果有些位置你没有明确设置，那么它将会被自动计算，第一种颜色会在 0% 处停止，而最后一种颜色是 100%，至于其他颜色则是在它邻近的两种颜色的中间停止。
 
 ```html hidden
 <div class="multicolor-linear"></div>
@@ -159,7 +160,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Positioning_color_stops', 120, 120) }}
+{{ EmbedLiveSample('颜色终止位置', 120, 120) }}
 
 ### 创建实线
 
@@ -182,11 +183,11 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Creating_hard_lines', 120, 120) }}
+{{ EmbedLiveSample('创建实线', 120, 120) }}
 
 ### 渐变提示
 
-默认情况下，渐变会平滑地从一种颜色过渡到另一种颜色。你可以通过设置一个值来将渐变的中心点移动到指定位置。 在如下示例中，我们将渐变的中心点由 50% 设为 10%。
+默认情况下，渐变会平滑地从一种颜色过渡到另一种颜色。你可以通过设置一个值来将渐变的中心点移动到指定位置。在如下示例中，我们将渐变的中心点由 50% 设为 10%。
 
 ```html hidden
 <div class="color-hint"></div>
@@ -209,7 +210,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Gradient_hints', 120, 120) }}
+{{ EmbedLiveSample('渐变提示', 120, 120) }}
 
 ### 创建色带和条纹
 
@@ -243,7 +244,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Creating_color_bands_stripes', 120, 120) }}
+{{ EmbedLiveSample('创建色带和条纹', 120, 120) }}
 
 In the first example above, the lime goes from the 0% mark, which is implied, to the 20% mark, transitions from lime to red over the next 10% of the width of the gradient, reach solid red at the 30% mark, and staying solid red up until 45% through the gradient, where it fades to cyan, being fully cyan for 15% of the gradient, and so on.
 
@@ -296,7 +297,7 @@ div {
 ```css
 .layered-image {
   background: linear-gradient(to right, transparent, mistyrose),
-      url("https://mdn.mozillademos.org/files/15525/critters.png");
+      url("critters.png");
 }
 ```
 

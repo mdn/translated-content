@@ -1,14 +1,8 @@
 ---
 title: 複数の背景画像の利用
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - CSS 背景
-  - 例
-  - ガイド
-  - リファレンス
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 ---
+
 {{CSSRef}}
 
 **複数の背景画像**を要素に適用できます。これらは、最初に記述した背景が一番上になり、後に記述した背景がその下になるように重ね合わされます。最後の背景にだけ、背景色が指定できます。

@@ -1,17 +1,9 @@
 ---
 title: '<progress>: 進捗表示要素'
 slug: Web/HTML/Element/progress
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
-browser-compat: html.elements.progress
-translation_of: Web/HTML/Element/progress
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<progress>` 要素**は、タスクの進捗状況を表示します。プログレスバーとしてよく表示されます。
 
@@ -55,7 +47,7 @@ translation_of: Web/HTML/Element/progress
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("progressbar")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/progressbar_role">progressbar</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
@@ -77,9 +69,9 @@ translation_of: Web/HTML/Element/progress
 - {{ htmlattrdef("value") }}
   - : この属性は、タスクの進捗状況を設定します。値は `0` から `max` までの間、または `max` を省略する場合は `0` から `1` までの間の、有効な浮動小数点数値であることが必要です。`value` 属性がない場合は、プログレスバーは不定、タスクは処理中であるものの完了までが予想できない状態になります。
 
-> **Note:** {{htmlelement("meter")}} 要素とは異なり、最小値は常に 0 で、`min` 属性は `<progress>` 要素では許可されていません。
+> **メモ:** {{htmlelement("meter")}} 要素とは異なり、最小値は常に 0 で、`min` 属性は `<progress>` 要素では許可されていません。
 
-> **Note:** {{cssxref(":indeterminate")}} 擬似クラスは、不定状態のプログレスバーにマッチします。プログレスバーを値がある状態から不定の状態に変更するには、 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}. で value 属性を削除しなければなりません。
+> **メモ:** {{cssxref(":indeterminate")}} 擬似クラスは、不定状態のプログレスバーにマッチします。プログレスバーを値がある状態から不定の状態に変更するには、 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}. で value 属性を削除しなければなりません。
 
 ## 例
 

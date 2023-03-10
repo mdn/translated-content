@@ -8,6 +8,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 Fait défiler le document dans la fenêtre du nombre de pixels passé en paramètre.

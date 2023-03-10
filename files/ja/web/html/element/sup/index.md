@@ -1,18 +1,9 @@
 ---
 title: '<sup>: 上付き文字要素'
 slug: Web/HTML/Element/sup
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 HTML の **上付き文字要素** (**`<sup>`**) は、表記上の理由で上付き文字として表示するべき行内文字列を指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。
 
@@ -80,12 +71,12 @@ HTML の **上付き文字要素** (**`<sup>`**) は、表記上の理由で上�
 
 `<sup>` 要素は、単純に表現や表示の結果を得るためではなく、表記規則上の理由、つまり、表記上の習慣や規則でテキストの位置を変更する必要がある場合にのみ使用してください。
 
-例えば、高いベースラインを使用しているビジネスや製品の{{interwiki("wikipedia", "ワードマーク")}}をスタイル付けするには、 `<sup>` ではなく CSS を使用してください (例えば {{cssxref("vertical-align")}})。例えば、 `vertical-align: super` とするか、ベースラインを 50%上げるのであれば、 `vertical-align: 50%` とするかしてください。
+例えば、高いベースラインを使用しているビジネスや製品の[ワードマーク](https://ja.wikipedia.org/wiki/ワードマーク)をスタイル付けするには、 `<sup>` ではなく CSS を使用してください (例えば {{cssxref("vertical-align")}})。例えば、 `vertical-align: super` とするか、ベースラインを 50%上げるのであれば、 `vertical-align: 50%` とするかしてください。
 
 `<sup>` の適切な使用例には次のようなものがあります (但し、制約するものではありません)。
 
 - べき乗の表示、例えば "x3"。これには、特に複雑な場合には、 [MathML](/ja/docs/Web/MathML) の使用を検討する価値があるかもしれません。以下の[例](#examples)の[べき乗](#exponents)を参照してください
-- 一部の言語で特定の略語を表示する際の {{interwiki("wikipedia", "superior letter", "superior lettering")}}。例えば、フランス語では、 "mademoiselle" は "Mlle" のように略すことができます。例は [Superior lettering](#superior_lettering) を参照してください。
+- 一部の言語で特定の略語を表示する際の [Superior letter](https://en.wikipedia.org/wiki/Superior_letter)。例えば、フランス語では、 "mademoiselle" は "Mlle" のように略すことができます。例は [Superior lettering](#superior_lettering) を参照してください。
 - 序数の表現、たとえば "fourth." を "4th" と表現すること。例は [Ordinal numbers](#ordinal_numbers) を参照してください。
 
 ## 例
@@ -134,10 +125,7 @@ languages as follows:</p>
 
 ## 仕様書
 
-| 仕様書                                                                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

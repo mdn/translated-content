@@ -2,13 +2,14 @@
 title: 使用对象
 slug: Web/JavaScript/Guide/Working_with_Objects
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript 的设计是一个简单的基于对象的范式。一个对象就是一系列属性的集合，一个属性包含一个名和一个值。一个属性的值可以是函数，这种情况下属性也被称为*方法*。除了浏览器里面预定义的那些对象之外，你也可以定义你自己的对象。本章节讲述了怎么使用对象、属性、函数和方法，怎样实现自定义对象。
 
 ## 对象概述
 
-javascript 中的对象 (物体)，和其它编程语言中的对象一样，可以比照现实生活中的对象 (物体) 来理解它。 javascript 中对象 (物体) 的概念可以比照着现实生活中实实在在的物体来理解。
+javascript 中的对象 (物体)，和其他编程语言中的对象一样，可以比照现实生活中的对象 (物体) 来理解它。javascript 中对象 (物体) 的概念可以比照着现实生活中实实在在的物体来理解。
 
 在 javascript 中，一个对象可以是一个单独的拥有属性和类型的实体。我们拿它和一个杯子做下类比。一个杯子是一个对象 (物体)，拥有属性。杯子有颜色，图案，重量，由什么材质构成等等。同样，javascript 对象也有属性来定义它的特征。
 
@@ -62,7 +63,7 @@ myObj[""]               = "Even an empty string";
 console.log(myObj);
 ```
 
-请注意，方括号中的所有键都将转换为字符串类型，因为 JavaScript 中的对象只能使用 String 类型作为键类型。 例如，在上面的代码中，当将键 obj 添加到 myObj 时，JavaScript 将调用 obj.toString() 方法，并将此结果字符串用作新键。
+请注意，方括号中的所有键都将转换为字符串类型，因为 JavaScript 中的对象只能使用 String 类型作为键类型。例如，在上面的代码中，当将键 obj 添加到 myObj 时，JavaScript 将调用 obj.toString() 方法，并将此结果字符串用作新键。
 
 你也可以通过存储在变量中的字符串来访问属性：
 
@@ -123,7 +124,7 @@ function listAllProperties(o){
 }
 ```
 
-这在展示 “隐藏”（在原型中的不能通过对象访问的属性，因为另一个同名的属性存在于原型链的早期）的属性时很有用。如果只想列出可访问的属性，那么只需要去除数组中的重复元素即可。
+这在展示“隐藏”（在原型中的不能通过对象访问的属性，因为另一个同名的属性存在于原型链的早期）的属性时很有用。如果只想列出可访问的属性，那么只需要去除数组中的重复元素即可。
 
 ## 创建新对象
 
@@ -143,7 +144,7 @@ var obj = { property_1:   value_1,   // property_# 可以是一个标识符...
             "property n": value_n }; // 或一个字符串
 ```
 
-这里 `obj` 是新对象的名称，每一个 `property_i` 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 `value_i` 是一个其值将被赋予 property\__i_ 的表达式。`obj` 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）
+这里 `obj` 是新对象的名称，每一个 `property_i` 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 `value_i` 是一个其值将被赋予 `property_i` 的表达式。`obj` 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）
 
 如果一个对象是通过在顶级脚本的对象初始化器创建的，则 JavaScript 在每次遇到包含该对象字面量的表达式时都会创建对象。同样的，在函数中的初始化器在每次函数调用时也会被创建。
 
@@ -277,9 +278,9 @@ fish.displayType(); // Output:Fishes
 
 在 JavaScript 1.0 中，你可以通过名称或序号访问一个属性。但是在 JavaScript 1.1 及之后版本中，如果你最初使用名称定义了一个属性，则你必须通过名称来访问它；而如果你最初使用序号来定义一个属性，则你必须通过索引来访问它。
 
-这个限制发生在你通过构造函数创建一个对象和它的属性（就象我们之前通过 `Car` 对象类型所做的那样）并且显式地定义了单独的属性（如 `m`yCar.color = "red"）之时。如果你最初使用索引定义了一个对象属性，例如 `myCar[5] = "25"`，则你只可能通过 `myCar[5]` 引用它。
+这个限制发生在你通过构造函数创建一个对象和它的属性（就象我们之前通过 `Car` 对象类型所做的那样）并且显式地定义了单独的属性（如 `myCar.color = "red"`）之时。如果你最初使用索引定义了一个对象属性，例如 `myCar[5] = "25"`，则你只可能通过 `myCar[5]` 引用它。
 
-这条规则的例外是从与 HTML 对应的对象，例如 `forms` 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 `<form>` 标签有一个 `NAME` 属性且值为 `"myForm"`，访问该 `form` 的方式可以是 `document.forms[1]`，`document.forms["myForm"]` 或 document.myForm。`
+这条规则的例外是从与 HTML 对应的对象，例如 `forms` 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 `<form>` 标签有一个 `NAME` 属性且值为 `"myForm"`，访问该 `form` 的方式可以是 `document.forms[1]`，`document.forms["myForm"]` 或 `document.myForm`。
 
 为对象类型定义属性
 
@@ -506,12 +507,12 @@ fruit == fruitbear // return false
 fruit === fruitbear // return false
 ```
 
-> **备注：** "===" 运算符用来检查数值是否相等: 1 === "1"返回 false，而 1 == "1" 返回 true
+> **备注：** "===" 运算符用来检查数值是否相等：1 === "1"返回 false，而 1 == "1" 返回 true
 
 ```js
 // 两个变量，同一个对象
 var fruit = {name: "apple"};
-var fruitbear = fruit;  // 将 fruit 的对象引用(reference) 赋值给 fruitbear
+var fruitbear = fruit;  // 将 fruit 的对象引用 (reference) 赋值给 fruitbear
                         // 也称为将 fruitbear“指向”fruit 对象
 // fruit 与 fruitbear 都指向同样的对象
 fruit == fruitbear // return true

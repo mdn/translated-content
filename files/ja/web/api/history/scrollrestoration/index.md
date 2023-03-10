@@ -2,6 +2,7 @@
 title: History.scrollRestoration
 slug: Web/API/History/scrollRestoration
 ---
+
 {{APIRef("History API")}}
 
 **`scrollRestoration`** は {{DOMxRef("History")}} インターフェイスのプロパティで、ウェブアプリケーションが履歴の移動の動作で既定のスクロール位置の復元を明示的に設定できるようにします。

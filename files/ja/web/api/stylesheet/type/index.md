@@ -1,28 +1,28 @@
 ---
 title: StyleSheet.type
 slug: Web/API/StyleSheet/type
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
-{{ApiRef}}
 
-## 概要
+{{APIRef("CSSOM")}}
 
-そのスタイルシートの `type` 属性の値を取得 / 設定します。
+**`type`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、このスタイルシートのスタイルシート言語を指定します。
 
-## 構文
+## 値
 
-```
-string = stylesheet.type;
-```
+文字列です。
 
 ## 例
 
 ```js
-var ss = document.styleSheets[0]; // 文書中の最初のスタイルシートを参照
-
-ss.type = "text/css"; // 設定
-alert( ss.type ); // 取得
+ myStyleSheet.type = 'text/css';
 ```
 
 ## 仕様書
 
-- [type](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-type)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

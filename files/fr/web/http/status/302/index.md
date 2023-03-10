@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/302
 translation_of: Web/HTTP/Status/302
 browser-compat: http.status.302
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse de redirection **`302 Found`** indique que la ressource est temporairement déplacée vers l'URL contenue dans l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location). Un navigateur redirige vers cette page, mais les moteurs de recherche ne mettent pas à jour leurs liens vers la ressource (en termes de référencement, cela indique que le flux de référencement n'est pas envoyé vers la nouvelle URL).

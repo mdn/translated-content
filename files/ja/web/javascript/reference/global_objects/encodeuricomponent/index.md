@@ -1,13 +1,8 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - URI
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 **`encodeURIComponent()`** 関数は、 {{glossary("URI")}} (Uniform Resource Identifier) 構成要素を特定の文字を {{glossary("UTF-8")}} 文字エンコーディングで表された 1 個から 4 個のエスケープシーケンスに置き換えることでエンコードします (サロゲートペアで構成される文字のみ 4 個のエスケープシーケンスになります)。
@@ -75,7 +70,7 @@ console.log(encodeURIComponent('\uDFFF'));
 
 例えば、ユーザーが `Jack & Jill` と入力した場合、テキストは `Jack &amp; Jill` とエンコードされる可能性があります。`encodeURIComponent()` を使用しない場合は "&" が新しいフィールドの始まりとしてサーバー上で解釈され、データの完全性が損なわれる可能性があります。
 
-[`application/x-www-form-urlencoded`](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm) では、スペースは `+` に置換されます。そのため、`encodeURIComponent()` による置換に加えて `%20` を `+` に置き換えることが望まれるかもしれません。
+[`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm) では、スペースは `+` に置換されます。そのため、`encodeURIComponent()` による置換に加えて `%20` を `+` に置き換えることが望まれるかもしれません。
 
 ( ! ' ( ) \* が予約語になっている) [RFC 3986](http://tools.ietf.org/html/rfc3986) 仕様を忠実に順守するには、これらの URI 区切り文字としての役目が失われてしまうものの、以下の例が問題なく使用できます。
 
@@ -128,9 +123,7 @@ function encodeRFC5987ValueChars2(str) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

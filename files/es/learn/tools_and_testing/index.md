@@ -1,24 +1,9 @@
 ---
 title: Herramientas y pruebas
 slug: Learn/Tools_and_testing
-tags:
-  - Accesibilidad
-  - Aprender
-  - Aterrizaje
-  - CSS
-  - CodificaciónDeSecuenciasDeComandos
-  - HTML
-  - Herramientas
-  - JavaScript
-  - Navegador cruzado
-  - Principiante
-  - Pruebas de usuario
-  - Tema
-  - Testing
-  - automatización
-translation_of: Learn/Tools_and_testing
 original_slug: Learn/Herramientas_y_pruebas
 ---
+
 {{LearnSidebar}}
 
 Una vez que haya comenzado a sentirse cómodo programando con tecnologías web básicas (como HTML, CSS y JavaScript), y comience a adquirir más experiencia, leer más recursos y aprender más trucos y consejos, comenzará a encontrar todos tipo de herramientas, desde CSS y JavaScript ya enrollados, aplicaciones de prueba y automatización, y muchas más. A medida que sus proyectos web se vuelvan más grandes y complejos, querrá comenzar a aprovechar algunas de estas herramientas y elaborar planes de prueba confiables para su código. Esta parte del área de aprendizaje tiene como objetivo brindarle lo que necesita para comenzar y tomar decisiones informadas.

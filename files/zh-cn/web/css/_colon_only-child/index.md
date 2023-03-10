@@ -2,6 +2,7 @@
 title: ':only-child'
 slug: Web/CSS/:only-child
 ---
+
 {{CSSRef}}
 
 CSS[伪类](/zh-CN/docs/CSS/Pseudo-classes)`:only-child` 匹配没有任何兄弟元素的元素。等效的选择器还可以写成 `:first-child:last-child`或者`:nth-child(1):nth-last-child(1)`,当然，前者的权重会低一点。
@@ -95,7 +96,7 @@ li:only-child {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.only-child")}}
+{{Compat}}
 
 ## 参见
 

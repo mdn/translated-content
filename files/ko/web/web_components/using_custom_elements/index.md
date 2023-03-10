@@ -1,15 +1,6 @@
 ---
 title: 사용자 정의 요소 사용하기
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - Classes
-  - Guide
-  - HTML
-  - Web Components
-  - autonomous
-  - custom elements
-  - customized
-translation_of: Web/Web_Components/Using_custom_elements
 ---
 {{DefaultAPISidebar("Web Components")}}
 
@@ -40,9 +31,9 @@ class WordCount extends HTMLParagraphElement {
   constructor() {
     // 항상 super를 생성자에서 먼저 호출합니다
     super();
-    
+
     // 요소 기능은 여기 작성됩니다
-    
+
     ...
   }
 }
@@ -72,9 +63,9 @@ class PopUpInfo extends HTMLElement {
   constructor() {
     // 항상 super를 생성자에서 먼저 호출합니다
     super();
-    
+
     // 요소 기능을 여기 작성합니다
-    
+
     ...
   }
 }
@@ -159,9 +150,9 @@ class ExpandingList extends HTMLUListElement {
   constructor() {
     // 항상 super를 생성자에서 먼저 호출합니다
     super();
-    
+
     // 요소 기능을 여기 작성합니다
-    
+
     ...
   }
 }

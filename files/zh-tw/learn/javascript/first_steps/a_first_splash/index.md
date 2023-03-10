@@ -2,6 +2,7 @@
 title: 初次接觸Javascript
 slug: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 目前你已經學會了一些 JavaScript 的理論，以及你能用它做些什麼。我們現在要透過一個完整的實際範例給你一個 JavaScript 基本功能的速成班。你將能一步一步地做出一個簡單的"猜數字"遊戲
@@ -252,7 +253,7 @@ let resetButton;
 
 - 最後兩個變數，一個儲存回合數 1，另一個儲存指向重新開始按鈕的參照 (按鈕現在還不存在，之後會加上的)。
 
-> **備註：** 從[下一篇文章](/en-US/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
+> **備註：** 從[下一篇文章](/zh-TW/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
 
 ### 函式
 
@@ -684,15 +685,3 @@ guessField.focus();
 這就是我們的範例 — 你順利地來到結尾了，做得不錯！試試你的最終成品，或試試[我們的版本](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。如果你仍然有困難沒有解決，再看看[我們的原始碼](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
-
-## 在這個學習模組中
-
-- [什麼是 JavaScript?](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [和 JavaScript 的第一次接觸](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [什麼出錯了？ JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
-- [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
-- [附錄：笑話產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)

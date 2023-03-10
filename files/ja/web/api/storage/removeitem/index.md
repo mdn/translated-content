@@ -2,13 +2,14 @@
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} インターフェイスの **`removeItem()`** メソッドは、キーの名称を渡すと、指定された `Storage` からキーを削除します。指定されたキーに関連付けられた項目がない場合、このメソッドは何もしません。
 
 ## 構文
 
-```
+```js
 storage.removeItem(keyName);
 ```
 
@@ -19,11 +20,11 @@ storage.removeItem(keyName);
 
 ### 返値
 
-{{jsxref("undefined")}}。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-以下の関数はローカルストレージに 3 個のデータ項目を作成して、 `image` データ項目を削除します。
+以下の関数はローカルストレージに 3 個のデータ項目を作成した後、データ項目 `image` を削除します。
 
 ```js
 function populateStorage() {
@@ -35,15 +36,13 @@ function populateStorage() {
 }
 ```
 
-> **Note:** **メモ**: 実際の例として、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> **メモ:** 実際の例として、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.Storage.removeItem")}}
 

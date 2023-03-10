@@ -1,8 +1,8 @@
 ---
 title: 'ReferenceError: deprecated caller or arguments usage'
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지

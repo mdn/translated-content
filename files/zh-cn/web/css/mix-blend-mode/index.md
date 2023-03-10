@@ -2,6 +2,7 @@
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 ---
+
 {{CSSRef()}}
 
 **`mix-blend-mode`** CSS 属性描述了元素的内容应该与元素的直系父元素的内容和元素的背景如何混合。
@@ -558,7 +559,7 @@ html,body {
 .luminosity .item  { mix-blend-mode: luminosity; }
 ```
 
-{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("不同 mix-blend-mode 值的效果", "100%", 1600, "", "", "example-outcome-frame")}}
 
 ### HTML 中使用 mix-blend-mode
 
@@ -604,9 +605,9 @@ html,body {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Using_mix-blend-mode_with_HTML", "100%", "180")}}
+{{EmbedLiveSample("HTML 中使用 mix-blend-mode", "100%", "180")}}
 
 ### SVG 中使用 mix-blend-mode
 
@@ -629,9 +630,9 @@ circle { mix-blend-mode: screen; }
 .isolate { isolation: isolate; } /* Without isolation, the background color will be taken into account */
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Using_mix-blend-mode_with_SVG", "100%", "180")}}
+{{EmbedLiveSample("SVG 中使用 mix-blend-mode", "100%", "180")}}
 
 ## 规范
 
@@ -639,9 +640,9 @@ circle { mix-blend-mode: screen; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}
 
-## 另见
+## 参见
 
 - {{cssxref("&lt;blend-mode&gt;")}}
 - {{cssxref("background-blend-mode")}}

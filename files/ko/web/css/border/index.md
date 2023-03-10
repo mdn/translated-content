@@ -1,15 +1,8 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/border
 ---
+
 {{CSSRef("CSS Borders")}}
 
 [CSS](/ko/docs/Web/CSS) **`border`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 테두리를 설정합니다. {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}의 값을 설정합니다.

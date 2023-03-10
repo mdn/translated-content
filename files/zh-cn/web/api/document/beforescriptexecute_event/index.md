@@ -2,11 +2,12 @@
 title: element.onbeforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
 ---
+
 {{ApiRef}}
 
 ## 概述
 
-当 HTML 文档中的[`<script>`](../HTML/Element/script)标签内的代码将要执行时触发该事件，如果这个`script`标签是用`appendChild()`等方法动态添加上去的，则不会触发该事件。
+当 HTML 文档中的[`<script>`](/zh-CN/docs/Web/HTML/Element/script)标签内的代码将要执行时触发该事件，如果这个`script`标签是用`appendChild()`等方法动态添加上去的，则不会触发该事件。
 
 ## 语法
 

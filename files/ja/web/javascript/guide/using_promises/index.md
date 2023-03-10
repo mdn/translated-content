@@ -1,16 +1,8 @@
 ---
 title: プロミスの使用
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Promise
-  - Promises
-  - asynchronous
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Using_promises
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 プロミス ({{jsxref("Promise")}}) は、非同期処理の最終的な完了もしくは失敗を表すオブジェクトです。多くの人々は既存の用意されたプロミスを使うことになるため、このガイドでは、プロミスの作成方法の前に、関数が返すプロミスの使い方から説明します。
@@ -370,7 +362,7 @@ doSomethingCritical()
 
 インデントではなく外側の `(` および `)` によってオプションの処理が入れ子になっていることに注意してください。
 
-内側の `catch` 文は `doSomethingOptional()` と `doSomethingExtraNice()` からの失敗だけを捕捉し、捕捉したあと `moreCriticalStuff()` へと処理が続きます。重要なのは、もし `doSomethingCritical()` が失敗したらそのエラーは最後 (外側) の  `catch` によってだけ捕捉されるということです。
+内側の `catch` 文は `doSomethingOptional()` と `doSomethingExtraNice()` からの失敗だけを捕捉し、捕捉したあと `moreCriticalStuff()` へと処理が続きます。重要なのは、もし `doSomethingCritical()` が失敗したらそのエラーは最後 (外側) の `catch` によってだけ捕捉されるということです。
 
 ## よくある間違い
 

@@ -2,6 +2,7 @@
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`append()`** メソッドは、指定されたキー/値のペアを新しい検索パラメーターとして追加します。
@@ -40,9 +41,7 @@ params.append('foo', 4);
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                 | コメント |
-| ------------------------------------------------------------------------------------ | -------------------- | -------- |
-| {{SpecName('URL', '#dom-urlsearchparams-append', "append()")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

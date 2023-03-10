@@ -1,13 +1,8 @@
 ---
 title: 'InternalError: too much recursion'
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
-tags:
-  - Error
-  - Errors
-  - InternalError
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外である "too much recursion" または "Maximum call stack size exceeded" は、関数の呼び出しが多すぎる場合や、関数に基礎ケースがない場合に発生します。
@@ -94,7 +89,7 @@ set name(name){
 }
 ```
 
-> **Note:** この例では、セッターが呼び出されたとき、同じことを再度行うように指示されます。*つまり、処理しているのと同じプロパティに設定します。*これにより、関数は何度も何度も自分自身を呼び出し、無限に再帰が行われます。
+> **メモ:** この例では、セッターが呼び出されたとき、同じことを再度行うように指示されます。*つまり、処理しているのと同じプロパティに設定します。*これにより、関数は何度も何度も自分自身を呼び出し、無限に再帰が行われます。
 
 この問題は同じ変数がゲッターに使用される場合にも発生します。
 

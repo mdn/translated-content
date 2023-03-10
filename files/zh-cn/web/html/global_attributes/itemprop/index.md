@@ -2,9 +2,10 @@
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-全局属性 **`itemprop`**被用于向一个物体中添加属性。每一个 HTML 元素都可以指定一个 itemprop 属性，一个`itemprop`属性由 name-value 对组成。每一个键值对称为一个属性，一个元素可以有一个或者多个属性。属性值可以是一个 string 或者一个 URL，并且可以和大部分元素进行组合，包括{{HTMLElement("audio")}}， {{HTMLElement("embed")}}， {{HTMLElement("iframe")}}， {{HTMLElement("img")}}， {{HTMLElement("link")}}， {{HTMLElement("object")}}， {{HTMLElement("source")}} ， {{HTMLElement("track")}}， 和 {{HTMLElement("video")}}。
+全局属性 **`itemprop`**被用于向一个物体中添加属性。每一个 HTML 元素都可以指定一个 itemprop 属性，一个`itemprop`属性由 name-value 对组成。每一个键值对称为一个属性，一个元素可以有一个或者多个属性。属性值可以是一个 string 或者一个 URL，并且可以和大部分元素进行组合，包括{{HTMLElement("audio")}}， {{HTMLElement("embed")}}， {{HTMLElement("iframe")}}， {{HTMLElement("img")}}， {{HTMLElement("link")}}， {{HTMLElement("object")}}， {{HTMLElement("source")}} ， {{HTMLElement("track")}}，和 {{HTMLElement("video")}}。
 
 ## 样例
 
@@ -61,7 +62,7 @@ slug: Web/HTML/Global_attributes/itemprop
 
 ## 属性
 
-属性拥有的值可能是字符串又或者是 URL。当一个字符串值是一个 URL 的时候，它被用 {{HTMLElement("a")}} 及它的属性值 {{htmlattrxref("href", "a")}} 、{{HTMLElement("img")}} 及它的属性值 {{htmlattrxref("src", "img")}} 、或者其它被链接到或嵌入外部的资源的元素来表述。
+属性拥有的值可能是字符串又或者是 URL。当一个字符串值是一个 URL 的时候，它被用 {{HTMLElement("a")}} 及它的属性值 {{htmlattrxref("href", "a")}} 、{{HTMLElement("img")}} 及它的属性值 {{htmlattrxref("src", "img")}} 、或者其他被链接到或嵌入外部的资源的元素来表述。
 
 ### Three properties with values that are strings
 
@@ -147,7 +148,7 @@ ID 不是人性化的，所以产品的名字是用的人所能看懂的文字�
 </div>
 ```
 
-上面的外层项有两个属性，“name” 和 “band”。“name” 的值是 “Amanda”, “band” 的值是一个在它右侧的项决定的，它有两个属性，“name” 和 “size”。乐队的 “name” 的值是 “Jazz Band”，“size” 的值是 “12”。这个例子的外层项是顶级微数据标签。不是其他项的项被称为顶级微数据项。
+上面的外层项有两个属性，“name”和“band”。“name”的值是“Amanda”, “band”的值是一个在它右侧的项决定的，它有两个属性，“name”和“size”。乐队的“name”的值是“Jazz Band”，“size”的值是“12”。这个例子的外层项是顶级微数据标签。不是其他项的项被称为顶级微数据项。
 
 ### All the properties separated from their items
 
@@ -225,7 +226,7 @@ ID 不是人性化的，所以产品的名字是用的人所能看懂的文字�
 </figure>
 ```
 
-两者都是拥有标题的图，并且都同时， 和图完全无关地，有一个 名字是 "name" 并且值是"The Castle"的键值对的物体项。唯一的区别是如果用户把图片标题拖拽出文档的话，这个项会包含在拖拽的数据中。图像相关的项不会被包括。
+两者都是拥有标题的图，并且都同时，和图完全无关地，有一个 名字是 "name" 并且值是"The Castle"的键值对的物体项。唯一的区别是如果用户把图片标题拖拽出文档的话，这个项会包含在拖拽的数据中。图像相关的项不会被包括。
 
 ## 名字和值
 
@@ -290,7 +291,7 @@ ID 不是人性化的，所以产品的名字是用的人所能看懂的文字�
 
     1. 一个不含 "**.**" (U+002E 句号) 和 "**:**" (U+003A 冒号) 并且被用作一个所有权项的属性名（没有公共规范定义的）
 
-**注意：** 上面的规则不允许 ":" 在没有 URL 的值中 是因为否则它们没法和 URL 作区分。带有"." 的值被保留作为将来可能的拓展。 空格也不被允许是因为否则值就会被解析为多个序列。
+**注意：** 上面的规则不允许 ":" 在没有 URL 的值中 是因为否则它们没法和 URL 作区分。带有"." 的值被保留作为将来可能的拓展。空格也不被允许是因为否则值就会被解析为多个序列。
 
 ## 值
 

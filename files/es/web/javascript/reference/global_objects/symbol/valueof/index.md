@@ -1,12 +1,11 @@
 ---
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
-browser-compat: javascript.builtins.Symbol.valueOf
 l10n:
   sourceCommit: cf607d68522cd35ee7670782d3ee3a361eaef2e4
 ---
+
 {{JSRef}}
 
 El método **`valueOf()`** devuelve el valor primitivo de un objeto Symbol.
@@ -47,4 +46,3 @@ sym === sym.valueOf(); // true
 ## Véase también
 
 - {{jsxref("Object.prototype.valueOf()")}}
-

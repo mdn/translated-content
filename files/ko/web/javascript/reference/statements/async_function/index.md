@@ -1,14 +1,8 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - JavaScript
-  - Promise
-  - async
-  - await
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 **`async function`** 선언은 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}객체를 반환하는 하나의 비동기 함수를 정의합니다. 비동기 함수는 이벤트 루프를 통해 비동기적으로 작동하는 함수로, 암시적으로 {{jsxref("Promise")}}를 사용하여 결과를 반환합니다. 그러나 비동기 함수를 사용하는 코드의 구문과 구조는, 표준 동기 함수를 사용하는것과 많이 비슷합니다.
@@ -38,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 `async` 함수에는 {{jsxref ( "Operators / await", "await")}}식이 포함될 수 있습니다. 이 식은 `async` 함수의 실행을 일시 중지하고 전달 된 `Promise`의 해결을 기다린 다음 `async` 함수의 실행을 다시 시작하고 완료후 값을 반환합니다.
 
-> **Note:** `await` 키워드는 `async` 함수에서만 유효하다는 것을 기억하십시오. `async` 함수의 본문 외부에서 사용하면 [SyntaxError](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다.
+> **Note:** `await` 키워드는 `async` 함수에서만 유효하다는 것을 기억하십시오. `async` 함수의 본문 외부에서 사용하면 [SyntaxError](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다.
 
 > **Note:** async/await함수의 목적은 사용하는 여러 promise의 동작을 동기스럽게 사용할 수 있게 하고, 어떠한 동작을 여러 promise의 그룹에서 간단하게 동작하게 하는 것이다. promise가 구조화된 callback과 유사한 것 처럼 `async/await` 또한 제네레이터(generator)와 프로미스(promise)를 묶는것과 유사하다.
 
@@ -181,11 +175,11 @@ async function getProcessedData(url) {
 
 위 예제에서는 return 구문에 await 구문이 없다는 것에 주목하자. 이는 async function의 반환값이 암묵적으로 {{jsxref("Promise.resolve")}}로 감싸지기 때문이다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

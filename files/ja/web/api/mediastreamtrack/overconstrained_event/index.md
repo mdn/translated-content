@@ -3,6 +3,7 @@ title: 'MediaStreamTrack: overconstrained イベント'
 slug: Web/API/MediaStreamTrack/overconstrained_event
 original_slug: Web/API/MediaStreamTrack/onoverconstrained
 ---
+
 {{ APIRef("Media Capture and Streams") }}{{deprecated_header}}
 
 **`overconstrained`** イベントは、トラックに制約の競合が多く発生しすぎたときに発行されます。

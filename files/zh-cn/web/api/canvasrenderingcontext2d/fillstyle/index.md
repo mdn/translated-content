@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fillStyle`** 是 Canvas 2D API 使用内部方式描述颜色和样式的属性。默认值是 `#000` （黑色）。
@@ -27,7 +28,7 @@ ctx.fillStyle = pattern;
 
 ## 示例
 
-### 使用 `fillStyle` 属性设置不同的颜色
+### 改变形状的填充颜色
 
 这是一段简单的代码片段，使用 `fillStyle` 属性设置不同的颜色。
 
@@ -40,57 +41,20 @@ ctx.fillStyle = pattern;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.fillStyle = "blue";
-ctx.fillRect(10, 10, 100, 100);</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('改变形状的填充颜色', 700, 160) }}
 
 ### `fillStyle` 使用 `for` 循环的例子
 
-在这个例子中， 我们使用两个 `for` 循环绘制一个矩形表格，每个单元格都有不同的颜色。 最终的结果图像看起来像屏幕截图，其实没有令人惊叹的事情发生。我们使用两个变量 i 和 j 为每一个单元格生成唯一的 RGB 颜色，并且只改变红色和绿色的数值。蓝色通道的值是固定不变的。通过修改这些通道，你能生成各种各样的调色板。通过逐步地增加，你能实现类似 Photoshop 的调色板。
+在这个例子中，我们使用两个 `for` 循环绘制一个矩形表格，每个单元格都有不同的颜色。最终的结果图像看起来像屏幕截图，其实没有令人惊叹的事情发生。我们使用两个变量 i 和 j 为每一个单元格生成唯一的 RGB 颜色，并且只改变红色和绿色的数值。蓝色通道的值是固定不变的。通过修改这些通道，你能生成各种各样的调色板。通过逐步地增加，你能实现类似 Photoshop 的调色板。
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -109,7 +73,7 @@ for (var i=0;i<6;i++){
 
 结果看起来像是这样的：
 
-{{EmbedLiveSample("fillStyle_使用_for_循环的例子", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("fillStyle_使用_for_循环的例子", 160, 160, "canvas_fillstyle.png")}}
 
 ## 规格描述
 
@@ -117,11 +81,11 @@ for (var i=0;i<6;i++){
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.fillStyle")}}
+{{Compat}}
 
 ### WebKit/Blink-specific 注解
 
-- 支持 WebKit- 和 Blink-based 的浏览器中， 有一个不标准的、被反对的方法 `ctx.setFillColor()` 已经实现。
+- 支持 WebKit- 和 Blink-based 的浏览器中，有一个不标准的、被反对的方法 `ctx.setFillColor()` 已经实现。
 
   ```js
   setFillColor(color, optional alpha);

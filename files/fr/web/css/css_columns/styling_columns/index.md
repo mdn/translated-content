@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns/Styling_Columns
 original_slug: Web/CSS/CSS_Columns/Mettre_en_forme_les_colonnes
 ---
+
 {{CSSRef}}
 
 Les boîtes de colonne créées au sein des conteneurs multi-colonnes sont des boîtes anonymes et leur mise en forme est donc limitée. Elle n'est toutefois pas inexistante. Dans ce guide nous verrons comment modifier l'espace entre les colonnes et comment mettre en forme une ligne entre les colonnes.

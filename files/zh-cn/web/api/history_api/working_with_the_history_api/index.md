@@ -2,6 +2,7 @@
 title: Working with the History API
 slug: Web/API/History_API/Working_with_the_History_API
 ---
+
 HTML5 引入了{{DOMxRef("History.pushState","pushState()")}}和{{DOMxRef("History.replaceState","replaceState()")}}方法，分别用于添加和修改历史记录。这些方法与{{domxref("Window.onpopstate","onpopstate")}} 事件一起工作。
 
 ## 添加和修改历史记录
@@ -44,7 +45,7 @@ Let's examine each of these three parameters in more detail.
 - **URL**
   - : The new history entry's URL is given by this parameter. Note that the browser won't attempt to load this URL after a call to `pushState()`, but it might attempt to load the URL later, for instance after the user restarts the browser. The new URL does not need to be absolute; if it's relative, it's resolved relative to the current URL. The new URL must be of the same origin as the current URL; otherwise, `pushState()` will throw an exception. This parameter is optional; if it isn't specified, it's set to the document's current URL.
 
-> **备注：** In Gecko 2.0 {{ geckoRelease("2.0") }} through Gecko 5.0 {{ geckoRelease("5.0") }}, the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using [the structured clone algorithm](/en/DOM/The_structured_clone_algorithm). This allows a wider variety of objects to be safely passed.
+> **备注：** In Gecko 2.0 through Gecko 5.0, the passed object is serialized using JSON. Starting in Gecko 6.0, the object is serialized using [the structured clone algorithm](/zh-CN/DOM/The_structured_clone_algorithm). This allows a wider variety of objects to be safely passed.
 
 In a sense, calling `pushState()` is similar to setting `window.location = "#foo"`, in that both will also create and activate another history entry associated with the current document.
 
@@ -67,7 +68,7 @@ In other documents, it creates an element with a `null` namespace URI.
 
 `replaceState()` is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.
 
-> **备注：** In Gecko 2.0 {{ geckoRelease("2.0") }} through Gecko 5.0 {{ geckoRelease("5.0") }}, the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using [the structured clone algorithm](/en/DOM/The_structured_clone_algorithm). This allows a wider variety of objects to be safely passed.
+> **备注：** In Gecko 2.0 through Gecko 5.0, the passed object is serialized using JSON. Starting in Gecko 6.0, the object is serialized using [the structured clone algorithm](/zh-CN/DOM/The_structured_clone_algorithm). This allows a wider variety of objects to be safely passed.
 
 ### Example of replaceState() method
 

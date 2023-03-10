@@ -11,6 +11,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEventTiming
 ---
+
 {{APIRef("Event Timing API")}}
 
 L'interface `PerformanceEventTiming` des événements de l'`Event Timing API` fournit des informations de chronométrage pour les types d'événements énumérés ci-dessous.

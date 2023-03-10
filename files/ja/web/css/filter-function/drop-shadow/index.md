@@ -1,16 +1,9 @@
 ---
 title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/drop-shadow()
 original_slug: Web/CSS/filter-function/drop-shadow()
-browser-compat: css.types.filter-function.drop-shadow
 ---
+
 {{CSSRef}}
 
 **`drop-shadow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像にドロップシャドウ効果を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
@@ -19,7 +12,7 @@ browser-compat: css.types.filter-function.drop-shadow
 
 ドロップシャドウは効果的にぼけ、入力画像のアルファマスクのバージョンからずれ、特定の色で描かれて画像の下に混合されます。
 
-> **Note:** この関数はいくらか {{Cssxref("box-shadow")}} プロパティと似ています。 `box-shadow` プロパティは要素の*ボックス全体*の背後に長方形の影を作成しますが、 `drop-shadow()` フィルター関数は*画像自体*の形 (アルファチャネル) に合った影を作成します。
+> **メモ:** この関数はいくらか {{Cssxref("box-shadow")}} プロパティと似ています。 `box-shadow` プロパティは要素の*ボックス全体*の背後に長方形の影を作成しますが、 `drop-shadow()` フィルター関数は*画像自体*の形 (アルファチャネル) に合った影を作成します。
 
 ## 構文
 

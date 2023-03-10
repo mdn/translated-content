@@ -2,9 +2,10 @@
 title: DOMPoint.x
 slug: Web/API/DOMPoint/x
 ---
+
 {{APIRef("DOM")}}
 
-**`DOMPoint`** 的 x 属性表示该点的水平坐标。 通常， `x` 的正值表示右边，负值表示左边，除非改变了默认的轴方向。
+**`DOMPoint`** 的 x 属性表示该点的水平坐标。通常， `x` 的正值表示右边，负值表示左边，除非改变了默认的轴方向。
 
 ## 语法
 
@@ -22,7 +23,7 @@ var xPos = DOMPoint.x;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPointReadOnly.x")}}
+{{Compat}}
 
 ## 相关链接
 

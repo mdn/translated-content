@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 **`CanvasRenderingContext2D.direction`** 是 Canvas 2D API 用来在绘制文本时，描述当前文本方向的属性。
@@ -23,11 +24,11 @@ ctx.direction = "ltr" || "rtl" || "inherit";
 - inherit
   - : 根据情况继承 {{HTMLElement("canvas")}} 元素或者 {{domxref("Document")}} 。
 
-默认值是`inherit。`
+默认值是 `inherit`。
 
 ## 示例
 
-### 使用`direction` 属性
+### 使用 `direction` 属性
 
 这是一段简单的代码片段，对文本设置不同的 direction 数值。
 
@@ -65,15 +66,15 @@ ctx.fillText('Hi!', 150, 130);
 
 #### 结果
 
-{{ EmbedLiveSample('Playable_code', 700, 180) }}
+{{ EmbedLiveSample('使用 direction 属性', 700, 180) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.direction")}}
+{{Compat}}
 
 ## 参见
 

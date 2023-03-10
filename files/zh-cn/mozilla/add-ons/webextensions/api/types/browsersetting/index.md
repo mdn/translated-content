@@ -2,6 +2,7 @@
 title: BrowserSetting
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 ---
+
 {{AddonSidebar()}}
 
 A `BrowserSetting` is an object representing a browser setting.
@@ -26,7 +27,7 @@ Note that while this object is based on the [ChromeSetting](https://developer.ch
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.types.BrowserSetting")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

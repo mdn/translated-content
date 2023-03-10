@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 ---
+
 {{JSRef}}
 
 **`reduce()`** メソッドは、アキュームレーターと型付き配列のそれぞれの値に対して (左から右へ) 関数を適用していき、単一の値にまとめます。このメソッドは、{{jsxref("Array.prototype.reduce()")}}と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
@@ -69,9 +62,7 @@ var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

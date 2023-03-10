@@ -56,7 +56,7 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
     ```
 
 - {{htmlattrdef("defer")}}
-  - : 这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后，触发 {{event("DOMContentLoaded")}} 事件前执行。
+  - : 这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后，触发 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event) 事件前执行。
     有 `defer` 属性的脚本会阻止 `DOMContentLoaded` 事件，直到脚本被加载并且解析完成。
     > **警告：** 如果缺少 `src` 属性（即内嵌脚本），该属性不应被使用，因为这种情况下它不起作用。`defer` 属性对模块脚本没有作用 —— 他们默认 defer。
 - {{htmlattrdef("integrity")}}
@@ -82,17 +82,17 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
   - : 该属性定义 script 元素包含或`src`引用的脚本语言。属性的值为 MIME 类型; 支持的 MIME 类型包括`text/javascript`, `text/ecmascript`, `application/javascript`, 和`application/ecmascript`。如果没有定义这个属性，脚本会被视作 JavaScript。
     如果 MIME 类型不是 JavaScript 类型（上述支持的类型），则该元素所包含的内容会被当作数据块而不会被浏览器执行。
     如果 type 属性为`module`，代码会被当作 JavaScript 模块 {{experimental_inline}}。请参见[ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
-    在 Firefox 中可以通过定义 type=application/javascript;version=1.8 来使用如 let 声明这类的 JS 高版本中的先进特性。 但请注意这是个非标准功能，其他浏览器，特别是基于 Chrome 的浏览器可能会不支持。
-    关于如何引入特殊编程语言，请参见[这篇文章](/en-US/Add-ons/Code_snippets/Rosetta)。
+    在 Firefox 中可以通过定义 type=application/javascript;version=1.8 来使用如 let 声明这类的 JS 高版本中的先进特性。但请注意这是个非标准功能，其他浏览器，特别是基于 Chrome 的浏览器可能会不支持。
+    关于如何引入特殊编程语言，请参见[这篇文章](/zh-CN/Add-ons/Code_snippets/Rosetta)。
 - {{htmlattrdef("text")}}
   - : 和 textContent 属性类似，本属性用于设置元素的文本内容。但和 textContent 不一样的是，本属性在节点插入到 DOM 之后，此属性被解析为可执行代码。
 
 ### Deprecated attributes
 
 - {{htmlattrdef("charset")}} {{Deprecated_inline}}
-  - : 如果存在，值必须和 “`utf-8`” 不区分大小写的匹配。当然声明 `charset` 是没有必要的，因为页面文档必须使用 UTF-8，而 `script` 元素会从页面文档中继承这个属性。
+  - : 如果存在，值必须和“`utf-8`”不区分大小写的匹配。当然声明 `charset` 是没有必要的，因为页面文档必须使用 UTF-8，而 `script` 元素会从页面文档中继承这个属性。
 - {{htmlattrdef("language")}} {{Deprecated_inline}}
-  - : 和 type 属性类似，这个属性定义脚本使用的语言。 但是与 type 不同的是，这个属性的可能值从未被标准化过。请用`type`属性代替这个属性。
+  - : 和 type 属性类似，这个属性定义脚本使用的语言。但是与 type 不同的是，这个属性的可能值从未被标准化过。请用`type`属性代替这个属性。
 
 ## 示例
 
@@ -123,11 +123,11 @@ Browsers that support the `module` value for the `type` attribute ignore any scr
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.script")}}
+{{Compat}}
 
 ## 参见
 
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

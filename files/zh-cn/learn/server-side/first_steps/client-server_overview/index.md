@@ -2,6 +2,7 @@
 title: 客户端服务端交互概述
 slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 既然你已经了解了服务器端编程的目的和潜在的好处，接下来我们将非常细致地去说明当服务器接收到了来自浏览器的“动态请求”时到底发生了什么。因为大多数的服务器端代码通过相似的方式来处理请求并做出响应，这将帮助你理解当编写你自己的大量代码时你需要做什么。
@@ -26,7 +27,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
 ## 网络服务器和 HTTP（入门）
 
-网络浏览器通过超文本标记语言传输协议（[HTTP](/en-US/docs/Web/HTTP)）与网络服务器（[web servers](/en-US/docs/Learn/Common_questions/What_is_a_web_server)）。 当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
+网络浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）与网络服务器（[web servers](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)）。当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
 
 这个请求包含：
 
@@ -46,7 +47,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
   - POST 数据：POST 请求会增加新的资源，这些数据将会在请求体中编码。
   - 客户端 cookie：cookies 包含与客户相关的会话数据，服务器可以用这些数据来判断用户的登录状态以及用户是否有访问资源的权限。
 
-网络服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 HTTP 响应状态码（[HTTP Response status code](/en-US/docs/Web/HTTP/Status)）来暗示请求是否成功 (比如 "`200 OK`" 连接成功， "`404 Not Found`" 资源没有找到，"`403 Forbidden`" 用户没有被授权查看资源，等等). 一个成功的响应主体，会包含 GET 请求所请求的资源。
+网络服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 HTTP 响应状态码（[HTTP Response status code](/zh-CN/docs/Web/HTTP/Status)）来暗示请求是否成功 (比如 "`200 OK`" 连接成功， "`404 Not Found`" 资源没有找到，"`403 Forbidden`" 用户没有被授权查看资源，等等). 一个成功的响应主体，会包含 GET 请求所请求的资源。
 
 当一个 HTML 页面被返时，页面会被网络浏览器呈现出来。作为处理工作的一部分，浏览器会发现指向其他资源的链接（比如，一个 HTML 页面通常会参考 Javascript 和 CSS 页面），并且会发送独立的 HTTP 请求来下载这些文件。
 
@@ -60,7 +61,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
 #### 请求
 
-每一行请求都包含着相关信息。第一部分被称为**header**，并且包含着关于这个请求的有用信息，同样地一个[HTML head](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
+每一行请求都包含着相关信息。第一部分被称为**header**，并且包含着关于这个请求的有用信息，同样地一个[HTML head](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
 
 ```plain
 GET https://developer.mozilla.org/en-
@@ -83,7 +84,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 - 请求类型（GET）。
 - 目标资源的 URL（`/en-US/search`）。
-- URL 参数（`q=client%2Bserver%2Boverview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev）。`
+- URL 参数（`q=client%2Bserver%2Boverview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev`）。
 - 目标网站（developer.mozilla.org）。
 - 第一行的末尾也包含了一个简短的包含了标识协议版本的字符串（`HTTP/1.1`）。
 
@@ -103,7 +104,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 针对这个请求的回应的第一部分内容展示如下。The header 包含了如下信息：
 
 - 第一行包括了回应状态码 200 OK，这告诉我们请求是成功的。
-- 我们可以看到回应是文本`/html格式的`(`Content-Type`).
+- 我们可以看到回应是文本 `html` 格式的（`Content-Type`）。
 - 我们也可以看到它使用的是 UTF-8 字符集 (`Content-Type: text/html; charset=utf-8`).
 - The head 也告诉我们它有多大 (`Content-Length: 41823`).
 
@@ -186,13 +187,13 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **备注：** 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<http://web-sniffer.net/>）或者使用浏览器扩展例如 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/)。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 [Network Monitor](/en-US/docs/Tools/Network_Monitor) 工具)。
+> **备注：** 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<http://web-sniffer.net/>）或者使用浏览器扩展例如 [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/)。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 [Network Monitor](/zh-CN/docs/Tools/Network_Monitor) 工具)。
 
 ## 静态网站
 
 静态网站是指每当请求一个特定的资源时，会从服务器返回相同的硬编码内容。因此，例如，如果您在 `/static/myproduct1.html` 有一个关于产品的页面，则该页面将返回给每个用户。如果您添加另一个类似的产品到您的网站，您将需要添加另一个页面（例如 `myproduct2.html` ）等。这可能开始变得非常低效：当您访问数千个产品页面时会发生什么——你会在每个页面（基本的页面模板，结构等等）上重复很多代码，如果你想改变页面结构的任何东西，比如添加一个新的“相关产品”部分，必须单独更改每个页面。
 
-> **备注：** 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择， 然而随着页面数量的增加，它们的维护成本也会很高。
+> **备注：** 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择，然而随着页面数量的增加，它们的维护成本也会很高。
 
 让我们回顾一下在上一篇文章中看到的静态网站架构图，看看它是如何工作的。
 

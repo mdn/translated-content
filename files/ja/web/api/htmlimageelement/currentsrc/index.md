@@ -2,6 +2,7 @@
 title: HTMLImageElement.currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`currentSrc`** プロパティは読み取り専用で、表す {{HTMLElement("img")}} 要素で現在表示されている画像の URL を表します。

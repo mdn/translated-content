@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
-translation_of: Web/API/RTCPeerConnection/createAnswer
 ---
 {{APIRef("WebRTC")}}
 
@@ -9,9 +8,11 @@ translation_of: Web/API/RTCPeerConnection/createAnswer
 
 ## Syntax
 
-    aPromise = RTCPeerConnection.createAnswer([options]);
+```js
+aPromise = RTCPeerConnection.createAnswer([options]);
 
-    RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]); {{deprecated_inline}}
+RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]);
+```
 
 ### 매개 변수
 
@@ -20,7 +21,7 @@ translation_of: Web/API/RTCPeerConnection/createAnswer
 
 ### 더 이상 사용되지 않는 매개 변수
 
-이전 버전의 문서에서는 이 함수를 콜백 기반으로 사용하도록 되어있습니다. 콜백 기반 함수는 이제 더 이상 사용되지 않으며, **사용하지 않는 것을 권장**합니다. 이미 사용 중이라면, [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise 개체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다.") 버전인 `createAnswer()`를 사용하도록 코드를 업데이트 하십시오. 이전 버전의 코드를 업데이트 하는 것을 쉽게 하기 위해 고안된 `createAnswer()`의 특정 변수에 대해 아래에서 설명합니다.
+이전 버전의 문서에서는 이 함수를 콜백 기반으로 사용하도록 되어있습니다. 콜백 기반 함수는 이제 더 이상 사용되지 않으며, **사용하지 않는 것을 권장**합니다. 이미 사용 중이라면, [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) 버전인 `createAnswer()`를 사용하도록 코드를 업데이트 하십시오. 이전 버전의 코드를 업데이트 하는 것을 쉽게 하기 위해 고안된 `createAnswer()`의 특정 변수에 대해 아래에서 설명합니다.
 
 - `successCallback` {{deprecated_inline}}
   - : 신규 생성된 answer를 설명하는 단일 {{domxref("RTCSessionDescription")}} 객체에 전달되는 {{domxref("RTCSessionDescriptionCallback")}} 입니다.
@@ -60,7 +61,7 @@ pc.createAnswer().then(function(answer) {
 
 이 과정이 성공하면, answer는 적당한 아무 프로토콜을 사용해서 시그널링 서버에 전달됩니다. 그리고 {{jsxref("Promise.catch()")}}는 에러를 잡아내고 처리하기 위해 사용됩니다.
 
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Handling the invitation")}}를 확인해서 전체 코드를 확인해보십시오. 이 문서를 보면 시그널링 과정 및 answer가 어떻게 작동하는지를 이해 할 수 있습니다.
+[Handling the invitation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)를 확인해서 전체 코드를 확인해보십시오. 이 문서를 보면 시그널링 과정 및 answer가 어떻게 작동하는지를 이해 할 수 있습니다.
 
 ## 명세
 

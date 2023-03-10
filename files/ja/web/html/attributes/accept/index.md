@@ -1,15 +1,8 @@
 ---
 title: 'HTML 属性: accept'
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Attribute
-  - File
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Attributes/accept
 ---
+
 {{HTMLSidebar}}
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。 accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlelement("input")}} 要素のプロパティです。もとは {{htmlelement("form")}} 要素で対応していましたが、 HTML5 で削除され、 {{HTMLElement("input/file", "file")}} に変更されました。
@@ -41,17 +34,17 @@ translation_of: Web/HTML/Attributes/accept
 
 ```html
 <p>
-	<label for="soundFile">Select an audio file:</label>
-	<input type="file" id="soundFile" accept="audio/*">
-	</p>
-	<p>
-	<label for="videoFile">Select a video file:</label>
-	<input type="file" id="videoFile" accept="video/*">
-	</p>
-	<p>
-	<label for="imageFile">Select some images:</label>
-	<input type="file" id="imageFile" accept="image/*" multiple>
-	</p>
+  <label for="soundFile">Select an audio file:</label>
+  <input type="file" id="soundFile" accept="audio/*">
+  </p>
+  <p>
+  <label for="videoFile">Select a video file:</label>
+  <input type="file" id="videoFile" accept="video/*">
+  </p>
+  <p>
+  <label for="imageFile">Select some images:</label>
+  <input type="file" id="imageFile" accept="image/*" multiple>
+  </p>
 ```
 
 {{EmbedLiveSample('simple_example', '100%', 200)}}
@@ -100,7 +93,7 @@ div {
 
 {{EmbedLiveSample('A_basic_example', 650, 60)}}
 
-> **Note:** この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
+> **メモ:** この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
 ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されす。
 
@@ -142,10 +135,7 @@ div {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

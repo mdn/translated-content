@@ -2,6 +2,7 @@
 title: pkcs11
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
 ---
+
 {{AddonSidebar}}
 
 `pkcs11` API は拡張機能にセキュリティモジュール [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) の列挙を可能とし、キーの元と証明書としてブラウザーからアクセスできるようにします。

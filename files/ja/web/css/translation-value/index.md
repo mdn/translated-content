@@ -1,15 +1,8 @@
 ---
 title: <translation-value>
 slug: Web/CSS/translation-value
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Data Type
-  - Reference
-browser-compat: css.types.transform-function
-translation_of: Web/CSS/translation-value
 ---
+
 {{CSSRef}}
 
 **`<translation-value>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、特定の座標変換関数 ({{cssxref("transform")}})、たとえば [`translate()`](/ja/docs/Web/CSS/transform-function/translate()), [`translateX()`](/ja/docs/Web/CSS/transform-function/translateX()), [`translateY()`](/ja/docs/Web/CSS/transform-function/translateY()), [`translate3d()`](/ja/docs/Web/CSS/transform-function/translate3d()) の引数で使用されます。

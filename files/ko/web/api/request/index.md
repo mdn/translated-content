@@ -1,11 +1,10 @@
 ---
 title: Request
 slug: Web/API/Request
-translation_of: Web/API/Request
 ---
 {{APIRef("Fetch")}}
 
-[Fetch API](/ko/docs/Web/API/Fetch_API)의 **`Request`**는 리퀘스트 리소스를 표현해주는 인터페이스입니다.
+[Fetch API](/ko/docs/Web/API/Fetch_API)의 **`Request`** 는 리퀘스트 리소스를 표현해주는 인터페이스입니다.
 
 {{domxref("Request.Request()")}} 생성자 메서드를 사용하는 것으로, 새로운 `Request`오브젝트를 생성할 수 있습니다. 이 인터페이스는 그리 자주 사용되지 않는 것으로 service worker의 {{domxref("FetchEvent.request")}}와 같은 별개의 API와 만나는 경우가 더 잦을 것입니다.
 
@@ -64,7 +63,9 @@ translation_of: Web/API/Request
 - {{domxref("Body.text()")}}
   - : {{domxref("USVString")}}에 대한 결정(resolve 상태인 Promise객체가 반환됩니다.
 
-> **참고:** {{domxref("Body")}} 함수는 한번밖에 실행할 수 없습니다. 두번째부터는 빈 문자열, 혹은 ArrayBuffer이 반환됩니다.
+> **참고:** {{domxref("Body")}} 함수는 한번밖에 실행할 수 없습니다.
+>
+> 두번째부터는 빈 문자열, 혹은 ArrayBuffer이 반환됩니다.
 
 ## 예시
 
@@ -126,7 +127,7 @@ fetch(myRequest)
 
 {{Specifications}}
 
-## 브라우저 지원
+## 브라우저 호환성
 
 {{Compat}}
 

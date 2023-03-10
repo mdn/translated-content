@@ -2,7 +2,8 @@
 title: <q>
 slug: Web/HTML/Element/q
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用的文本。这个标签是用来引用短的文本，所以请不要引入换行符; 对于长的文本的引用请使用 {{HTMLElement("blockquote")}} 替代。
 
@@ -60,7 +61,7 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.q")}}
+{{Compat}}
 
 ## 另见
 

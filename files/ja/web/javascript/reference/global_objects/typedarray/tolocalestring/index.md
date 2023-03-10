@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** メソッドは、型付き配列の要素を表す文字列を返します。要素は文字列に変換され、ロケール固有の文字列 (カンマ "," など) で区切られます。このメソッドは {{jsxref("Array.prototype.toLocaleString()")}} と同じアルゴリズムを持ち、型付き配列の要素は数値なので、各要素に対して {{jsxref("Number.prototype.toLocaleString()")}} と同じアルゴリズムが適用されます。ここで _TypedArray_ は[型指定された](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)配列型の 1 つです。
@@ -50,9 +43,7 @@ uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tolocalestring', 'TypedArray.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

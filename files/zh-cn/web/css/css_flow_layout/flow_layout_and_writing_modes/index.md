@@ -2,7 +2,8 @@
 title: Flow Layout and Writing Modes 流布局和书写模式
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
 ---
-The CSS 2.1 specification, which details how normal flow behaves, assumes a horizontal writing mode. [Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) properties should work in the same way in vertical writing modes. In this guide, we look at how flow layout behaves when used with different document writing modes.
+
+The CSS 2.1 specification, which details how normal flow behaves, assumes a horizontal writing mode. [Layout](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) properties should work in the same way in vertical writing modes. In this guide, we look at how flow layout behaves when used with different document writing modes.
 CSS 2.1 规范详细描述了正常流的行为，它采用了水平写入模式。布局属性在垂直写入模式中的工作方式应该相同。在本指南中，我们将研究流布局在与不同的文档写入模式一起使用时的行为。
 
 This is not a comprehensive guide to the use of writing modes in CSS, the aim here is to document the areas where flow layout interacts with writing modes in possibly unanticipated ways. The [external resources](#External_Resources) and [see also](#See_Also) sections of this document link to more writing modes resources.
@@ -29,7 +30,7 @@ While certain languages will use a particular writing mode or text direction, we
 
 ## The `writing-mode` property and block flow<br>写入模式属性和块流
 
-The {{cssxref("writing-mode")}} property accepts the values `horizontal-tb`, `vertical-rl` and `vertical-lr`. These values control the direction that blocks flow on the page. The initial value is `horizontal-tb,` which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages. such as Arabic, are all `horizontal-tb`.
+The {{cssxref("writing-mode")}} property accepts the values `horizontal-tb`, `vertical-rl` and `vertical-lr`. These values control the direction that blocks flow on the page. The initial value is `horizontal-tb`, which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages. such as Arabic, are all `horizontal-tb`.
 写入模式属性接受值水平 tb、垂直 rl 和垂直 lr。这些值控制阻止页面流动的方向。初始值是水平 tb，这是一个顶部到底部的块流方向，具有水平的内联方向。从左到右的语言，如英语和从右到左的语言。如阿拉伯语，都是水平结核。
 
 The following example shows blocks using `horizontal-tb`.
@@ -73,12 +74,12 @@ Once you are working in writing modes other than `horizontal-tb` many of the pro
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/width.html", '100%', 720)}}
 
-Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn’t matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
+Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn't matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
 因此，我们有了块大小和内联大小的新属性。如果我们给块一个 100px 的内联大小，不管我们是处于水平还是垂直写入模式，内联大小总是指内联方向的大小。
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 
-The [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties) specification includes logical versions of the properties that control margins, padding and borders as well as other mappings for things that we have typically used physical directions to specify.
+The [CSS Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_Logical_Properties) specification includes logical versions of the properties that control margins, padding and borders as well as other mappings for things that we have typically used physical directions to specify.
 CSS 逻辑属性和值规范包括用于控制页边距、填充和边框的属性的逻辑版本，以及用于我们通常使用物理方向指定的内容的其他映射。
 
 ## Summary 总结
@@ -88,7 +89,7 @@ In most cases, flow layout works as you would expect it to when changing the wri
 
 ## See Also 另请参见
 
-- [Writing Modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)
+- [Writing Modes](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)
 
 ## External Resources 外部资源
 

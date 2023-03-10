@@ -3,6 +3,7 @@ title: InputEvent
 slug: Web/API/InputEvent
 translation_of: Web/API/InputEvent
 ---
+
 {{APIRef("DOM Events")}} {{SeeCompatTable}}
 
 L’interface **`InputEvent`** représente un évènement notifiant la modification d’un contenu éditable.
@@ -25,7 +26,7 @@ Cette interface hérite des propriétés de ses parents, {{domxref("UIEvent")}} 
 - {{domxref("InputEvent.inputType")}}{{readonlyinline}}
   - : Retourne le type de modification du le contenu éditable tel que, par exemple, l’insertion, la suppression ou le formatage de texte. Voir la page de la propriété pour une liste complète des types de modification.
 - {{domxref("InputEvent.isComposing")}}{{readOnlyInline}}
-  - : Retourne une valeur {{jsxref("Boolean", "booléenne")}} indiquant si l’évènement est émis après {{event("compositionstart")}} et avant {{event("compositionend")}}.
+  - : Retourne une valeur {{jsxref("Boolean", "booléenne")}} indiquant si l’évènement est émis après [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event) et avant [`compositionend`](/fr/docs/Web/API/Element/compositionend_event).
 
 ## Méthodes
 
@@ -44,5 +45,5 @@ Cette interface hérite des méthodes de ses parents, {{domxref("UIEvent")}} et 
 
 ## Voir aussi
 
-- {{ event("beforeinput") }}
-- [l’évènement `input`](/docs/Web/API/InputEvent/input_event)
+- L'évènement [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
+- L'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event)

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/color
 ---
+
 {{CSSRef}}
 
 **`color`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur est le nombre de bits par composante de couleur du périphérique de sortie, ou zéro si ce dernier ne gère pas les couleurs.
@@ -58,14 +59,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                            | État                                     | Commentaires                                                                        |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Media Queries', '#color', 'color')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale, la valeur ne peut pas être négative.                           |
-| {{SpecName('CSS4 Media Queries', '#color', 'color')}} | {{Spec2('CSS4 Media Queries')}} | La valeur peut désormais être négative (ce qui correspond alors à un booléen faux). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.color")}}
+{{Compat}}
 
 ## Voir aussi
 

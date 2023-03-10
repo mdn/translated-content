@@ -1,15 +1,8 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - メソッド
-  - Number
-  - Prototype
-  - ポリフィル
-browser-compat: javascript.builtins.Number.toExponential
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
+
 {{JSRef}}
 
 **`toExponential()`** メソッドは {{jsxref("Number")}} オブジェクトを指数表記で表した文字列を返します。

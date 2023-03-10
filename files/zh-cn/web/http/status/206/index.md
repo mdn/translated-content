@@ -2,6 +2,7 @@
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`206 Partial Content`** 成功状态响应代码表示请求已成功，并且主体包含所请求的数据区间，该数据区间是在请求的 {{HTTPHeader("Range")}} 首部指定的。

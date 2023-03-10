@@ -2,6 +2,7 @@
 title: 查找并解决 JavaScript 代码的错误
 slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 上一节中你创建了“猜数字”游戏，但它可能没有正常工作。别担心，本节将为你提供一些简单的提示，来帮助你查找并修复 JavaScript 程序中的错误，从而让你远离困扰。
@@ -45,7 +46,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
 1. 打开 `number-game-errors.html` 所在的标签页，然后打开 JavaScript 控制台。你将看到以下出错信息：
 
-    ![不是函数](https://mdn.mozillademos.org/files/16256/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-17_20.27.08.png)
+    ![不是函数](屏幕快照_2018-10-17_20.27.08.png)
 
 2. 这个错误很容易跟踪，浏览器为你提供了几条有用的信息（截图来自 Firefox，其他浏览器也提供类似信息）。从左到右依次为：
 
@@ -69,7 +70,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 ### 语法错误：第二轮
 
 1. 保存页面并刷新，可以看到出错信息不见了。
-2. 现在，如果尝试输入一个数字并按确定按钮，你会看到...另一个错误！ ![](https://mdn.mozillademos.org/files/16264/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-17_21.56.00.png)
+2. 现在，如果尝试输入一个数字并按确定按钮，你会看到...另一个错误！ ![](屏幕快照_2018-10-17_21.56.00.png)
 3. 此次出错信息为“TypeError：lowOrHi is null”（“类型错误：lowOrHi 为 null”），在第 78 行。
 
     > **备注：** [`Null`](/zh-CN/docs/Glossary/Null)是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
@@ -96,7 +97,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
     > **备注：** [`console.log()`](/zh-CN/docs/Web/API/Console/log) 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 `lowOrHi` 的值打印至控制台。
 
-7. 保存并刷新，你将在控制台看到 `console.log()` 的执行结果：![](https://mdn.mozillademos.org/files/16275/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-18_16.43.40.png) 显然，此处 `lowOrHi` 的值为 `null`，所以第 48 行肯定有问题。
+7. 保存并刷新，你将在控制台看到 `console.log()` 的执行结果：![](屏幕快照_2018-10-18_16.43.40.png) 显然，此处 `lowOrHi` 的值为 `null`，所以第 48 行肯定有问题。
 8. 我们来思考问题有哪些可能。第 48 行使用 [`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector) 方法和一个 CSS 选择器来取得一个元素的引用。进一步查看我们的文件，我们可以找到有问题的段落：
 
     ```js
@@ -168,7 +169,7 @@ Math.floor(Math.random() * 100) + 1;
 
 将上述两行内容替换为此，然后保存刷新，游戏终于如期运行了！
 
-## 其它常见错误
+## 其他常见错误
 
 代码中还会遇到其他常见错误。本节将指出其中的大部分。
 
@@ -254,15 +255,3 @@ function checkGuess( {
 - 如果你在阅读了本文之后遇到了一些错误但不知如何解决，你能够得到别人的帮助！可以到 [学习区](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) 或者 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 聊天室来提问。告诉我们你遇到的错误是什么，我们会尽量帮助你。附加一段你的代码也是很有用的。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
-
-## 本章目录
-
-- [JavaScript 是什么？](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [课程评估：笑话机](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

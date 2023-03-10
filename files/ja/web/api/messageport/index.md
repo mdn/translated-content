@@ -2,6 +2,7 @@
 title: MessagePort
 slug: Web/API/MessagePort
 ---
+
 {{APIRef("HTML DOM")}}
 
 [Channel Messaging API](/ja/docs/Web/API/Channel_Messaging_API) の **`MessagePort`** インターフェースは、{{domxref("MessageChannel")}} の 2 つのポートの一方を表し、片方のポートから送信されるメッセージをもう片方のポートで受信待機できます。
@@ -63,9 +64,7 @@ function onMessage(e) {
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                         | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#message-ports','Message ports')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザの実装状況
 

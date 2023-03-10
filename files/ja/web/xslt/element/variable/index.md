@@ -1,13 +1,8 @@
 ---
 title: <xsl:variable>
 slug: Web/XSLT/Element/variable
-tags:
-  - XSLT
-  - variable
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/variable
 ---
+
 {{ XsltRef() }}
 
 `<xsl:variable>` 要素はスタイルシートにグローバル変数またはローカル変数を宣言し、値を与えます。XSLT は副作用を許さないため、変数の値が設定されると、変数がスコープから外れるまでは変わりません

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-type-x
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`scroll-snap-type-x`** définit la « force » avec laquelle les points d'accroche sont respectés lors d'un défilement horizontal.
@@ -51,4 +52,4 @@ Cette propriété ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-type-x")}}
+{{Compat}}

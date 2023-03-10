@@ -3,6 +3,7 @@ title: Object Manipulation Statements
 slug: orphaned/Web/JavaScript/Guide/Object_Manipulation_Statements
 original_slug: Web/JavaScript/Guide/Object_Manipulation_Statements
 ---
+
 ### オブジェクト操作文
 
 JavaScript はオブジェクトの操作に `for...in`、`for each...in` および `with` 文を使用します。

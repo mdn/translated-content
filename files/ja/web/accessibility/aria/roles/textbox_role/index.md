@@ -1,13 +1,9 @@
 ---
 title: 'ARIA: textbox ロール'
 slug: Web/Accessibility/ARIA/Roles/textbox_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/textbox_role
 ---
-\\{{ariaref}}`textbox` ロールは、自由形式テキストの入力を可能にする要素を識別するために使用されます。 可能であれば、このロールを使用するのではなく、単一行入力の場合は [`type="text"`](/ja/docs/Web/HTML/Element/input/text) の {{HTMLElement("input")}} 要素を使用し、複数行入力の場合は {{HTMLElement("textarea")}} 要素を使用してください。
+
+`textbox` ロールは、自由形式テキストの入力を可能にする要素を識別するために使用されます。 可能であれば、このロールを使用するのではなく、単一行入力の場合は [`type="text"`](/ja/docs/Web/HTML/Element/input/text) の {{HTMLElement("input")}} 要素を使用し、複数行入力の場合は {{HTMLElement("textarea")}} 要素を使用してください。
 
 ## 説明
 
@@ -92,7 +88,7 @@ translation_of: Web/Accessibility/ARIA/Roles/textbox_role
 - フォーカスイベントハンドラと aria-activedescendent 属性
   - : テキストボックスとリストボックスで構成されるコンボボックスなどの複合ウィジェットを実装する場合は、ハンドラを使用して `aria-activedescendent` 属性を管理する必要があります。 この手法を使用する前に、ターゲットとするブラウザーが現在サポートしていることを確認してください。 詳細については、[aria-descendent の仕様](https://www.w3.org/TR/wai-aria/#aria-activedescendant)（英語）を参照してください。
 
-> **Note:** ARIA の `textbox` ロールの代わりに `type="text"` の {{HTMLElement("input")}} 要素、または {{HTMLElement("textarea")}} 要素を使用する方が良い方法です。 どちらの意味論的な要素を使用する場合でも、ARIA の `textbox` ロールは必要ありません。 [HTML で ARIA を使用する場合の注意](https://www.w3.org/TR/aria-in-html/)（英語）を参照してください。
+> **メモ:** ARIA の `textbox` ロールの代わりに `type="text"` の {{HTMLElement("input")}} 要素、または {{HTMLElement("textarea")}} 要素を使用する方が良い方法です。 どちらの意味論的な要素を使用する場合でも、ARIA の `textbox` ロールは必要ありません。 [HTML で ARIA を使用する場合の注意](https://www.w3.org/TR/aria-in-html/)（英語）を参照してください。
 
 ## ユーザーエージェントと支援技術への影響
 
@@ -106,7 +102,7 @@ translation_of: Web/Accessibility/ARIA/Roles/textbox_role
 - スクリーンリーダーは、フォーカスが最初にテキストボックスに着くと、そのラベルとロールをアナウンスするべきです。 コンテンツも含まれている場合は、これを通常のテキストボックスの場合と同様にアナウンスするべきです。
 - スクリーン拡大鏡でテキストボックスが拡大されることがあります。
 
-> **Note:** 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+> **メモ:** 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ## 例
 

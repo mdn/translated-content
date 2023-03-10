@@ -1,13 +1,8 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:要素
-translation_of: Web/MathML/Element/math
 ---
+
 {{MathMLRef}}
 
 MathML における最上位の要素は `<math>` です。有効な MathML のインスタンスはすべて `<math>` タグに囲まれています。加えて、 `<math>` 要素を入れ子状に配置してはなりませんが、中にその他の子要素をいくつでも持つことができます。
@@ -119,10 +114,7 @@ MathML における最上位の要素は `<math>` です。有効な MathML の�
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                         | 備考       |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{ SpecName('MathML3', 'chapter2.html#interf.toplevel', 'The Top-Level math Element') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter7.html#interf.toplevel', 'The Top-Level math Element') }} | {{ Spec2('MathML2') }} | 初期の仕様 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

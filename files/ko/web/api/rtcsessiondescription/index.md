@@ -1,20 +1,8 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Interface
-  - Media
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Video
-  - Web
-  - WebRTC
-translation_of: Web/API/RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`RTCSessionDescription`** interface describes one end of a connection—or potential connection—and how it's configured. Each `RTCSessionDescription` consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
@@ -53,7 +41,7 @@ _The `RTCSessionDescription` doesn't inherit any methods._
 - {{domxref("RTCSessionDescription.toJSON()")}}
   - : Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
 
-## Example<span id="cke_bm_72C" class="hidden"></span>
+## Example
 
 ```js
 signalingChannel.onmessage = function (evt) {
@@ -73,15 +61,15 @@ signalingChannel.onmessage = function (evt) {
 };
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
 - {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}

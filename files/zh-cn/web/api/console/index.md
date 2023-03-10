@@ -1,7 +1,8 @@
 ---
 title: Console
-slug: Web/API/Console
+slug: Web/API/console
 ---
+
 {{APIRef("Console API")}}
 
 **`Console`** 对象提供了浏览器控制台调试的接口（如：Firefox 的 [Web Console](/zh-CN/docs/Tools/Web_Console)）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。
@@ -67,7 +68,7 @@ console.log("Failed to open the specified link")
 - {{domxref("Console.warn()")}}
   - : 打印一个警告信息，可以使用 [string substitution](/zh-CN/docs/Web/API/console#Using_string_substitutions) 和额外的参数。
 
-## 用法
+## 示例
 
 ### 输出文本到控制台
 
@@ -113,9 +114,9 @@ console.info("My first car was a", car, ". The object is:", someObject);
 | Substitution string | Description                                                                                              |
 | ------------------- | -------------------------------------------------------------------------------------------------------- |
 | `%o` or `%O`        | 打印 JavaScript 对象。在审阅器点击对象名字可展开更多对象的信息。                                         |
-| `%d` or `%i`        | 打印整数。支持数字格式化。例如，`console.log("Foo %.2d", 1.1)` 会输出有先导 0 的两位有效数字: `Foo 01`。 |
+| `%d` or `%i`        | 打印整数。支持数字格式化。例如，`console.log("Foo %.2d", 1.1)` 会输出有先导 0 的两位有效数字：`Foo 01`。 |
 | `%s`                | 打印字符串。                                                                                             |
-| `%f`                | 打印浮点数。支持格式化，比如 `console.log("Foo %.2f", 1.1)` 会输出两位小数: `Foo 1.10`                   |
+| `%f`                | 打印浮点数。支持格式化，比如 `console.log("Foo %.2f", 1.1)` 会输出两位小数：`Foo 1.10`                   |
 
 > **备注：** Chrome 不支持精确格式化。
 
@@ -195,7 +196,7 @@ console.debug("Back to the outer level");
 
 ### 定时器
 
-你可以使用定时器来计算一段特定操作的周期。使用 ` console.time``() ` 方法以创建一个计时器，其唯一的参数表示了计时器的名字。使用 ` console.timeEnd``() ` 方法以关闭计时器，并获取经过的毫秒数，其同样以计时器的名字作为参数。一个页面最多同时只能有 10,000 个计数器运行。
+你可以使用定时器来计算一段特定操作的周期。使用 `console.time()` 方法以创建一个计时器，其唯一的参数表示了计时器的名字。使用 `console.timeEnd()` 方法以关闭计时器，并获取经过的毫秒数，其同样以计时器的名字作为参数。一个页面最多同时只能有 10,000 个计数器运行。
 
 示例：:
 
@@ -244,7 +245,7 @@ foo();
 
 ## 注意
 
-- 在 Firefox 浏览器中，如果页面中自己定义了 `console` 对象，那么它会覆盖掉浏览器内置的 `console`对象，在其它浏览器可能也是。
+- 在 Firefox 浏览器中，如果页面中自己定义了 `console` 对象，那么它会覆盖掉浏览器内置的 `console`对象，在其他浏览器可能也是。
 
 ## 相关文档
 

@@ -2,6 +2,7 @@
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.readyState** 屬性會回傳一個 XMLHttpRequest 客戶端物件目前的狀態。一個 XHR 客戶端可以為下列其中一種狀態：
@@ -53,4 +54,4 @@ xhr.send(null);
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest.readyState")}}
+{{Compat}}

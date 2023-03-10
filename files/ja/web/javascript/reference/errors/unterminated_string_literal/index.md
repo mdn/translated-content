@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: unterminated string literal'
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript のエラー "unterminated string literal" は、どこかに終了していない[文字列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)があった場合に発生します。文字列リテラルは単一引用符 (`'`) または二重引用符 (`"`) で囲む必要があります。

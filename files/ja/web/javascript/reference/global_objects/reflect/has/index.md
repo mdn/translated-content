@@ -1,14 +1,8 @@
 ---
 title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.has()`** メソッドは、機能としては [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)のように動作します。
@@ -71,9 +65,7 @@ Reflect.has(c, 'foo') // true
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.has', 'Reflect.has')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

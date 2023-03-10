@@ -1,13 +1,8 @@
 ---
 title: 基本シェイプ
 slug: Web/CSS/CSS_Shapes/Basic_Shapes
-tags:
-  - CSS
-  - CSS シェイプ
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Shapes/Basic_Shapes
 ---
+
 {{CSSRef}}
 
 CSS のシェイプは {{cssxref("&lt;basic-shape&gt;")}} 型を使用して定義することができ、このガイドでは、この方で受け入れられる様々な値のそれぞれが、どのように動作するかを説明します。単純な円から複雑な多角形までがあります。

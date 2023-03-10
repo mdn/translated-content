@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 ---
+
 {{JSRef}}
 
 **`reduceRight()`** メソッドは、アキュームレーターと型付きのそれぞれの値に対して (右から左へ) 関数を適用していき、単一の値にまとめます。このメソッドは、{{jsxref("Array.prototype.reduceRight()")}}と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
@@ -71,9 +64,7 @@ var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduceright', '%TypedArray%.prototype.reduceRight')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

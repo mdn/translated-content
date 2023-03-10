@@ -1,8 +1,8 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
-translation_of: Web/CSS/@font-face/font-display
 ---
+
 {{CSSRef}}
 
 **`font-display`** 설명자(descriptor)는 font face가 표시되는 방법을 결정합니다. 이는 다운로드 여부와 사용 시기에 따라 다릅니다.
@@ -61,11 +61,11 @@ font-display: optional;
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

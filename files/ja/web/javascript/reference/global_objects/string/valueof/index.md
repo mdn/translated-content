@@ -1,14 +1,8 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、{{jsxref("String")}} オブジェクトのプリミティブ値を返します。
@@ -42,9 +36,7 @@ console.log(x.valueOf()); // "Hello world" を表示します
 
 ## 仕様
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

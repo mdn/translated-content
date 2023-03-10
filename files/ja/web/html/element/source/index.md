@@ -1,17 +1,9 @@
 ---
 title: '<source>: メディアまたは画像のソース要素'
 slug: Web/HTML/Element/source
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Media
-  - Reference
-  - Web
-  - Web Performance
-translation_of: Web/HTML/Element/source
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<source>` 要素**は、 {{HTMLElement("picture")}} 要素、 {{HTMLElement("audio")}} 要素、 {{HTMLElement("video")}} 要素に対し、複数のメディアリソースを指定します。この要素は空要素であり、つまり中身も閉じタグもありません。[画像ファイル形式](/ja/docs/Web/Media/Formats/Image_types)や[メディアファイル形式](/ja/docs/Web/Media/Formats)の対応状況が様々であるブラウザーの幅広い互換性を確保するために、同じメディアコンテンツを複数のファイル形式で提供することはよくあることです。
 
@@ -72,7 +64,7 @@ translation_of: Web/HTML/Element/source
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
 - {{htmlattrdef("media")}}
   - : リソースの志向するメディアの[メディアクエリ](/ja/docs/Web/CSS/Media_queries)。この属性は {{HTMLElement("picture")}} 要素の内部でのみ使用します。
@@ -88,9 +80,9 @@ translation_of: Web/HTML/Element/source
 
   - : 1 つ以上の文字列をカンマ区切りで並べたリストであり、ブラウザーが使用できる画像のセットを示します。それぞれの文字列の構成は以下のとおりです。
 
-    1.  画像を指定する URL を 1 つ
-    2.  幅記述子。これは正の整数に `"w"` を付加した文字列で、例えば `300w` のようになります。指定しない場合の既定値は無限大です。
-    3.  画素密度記述子。これは直後に `"x"` を付加した正の浮動小数点数です。指定しない場合の既定値は `1x` です。
+    1. 画像を指定する URL を 1 つ
+    2. 幅記述子。これは正の整数に `"w"` を付加した文字列で、例えば `300w` のようになります。指定しない場合の既定値は無限大です。
+    3. 画素密度記述子。これは直後に `"x"` を付加した正の浮動小数点数です。指定しない場合の既定値は `1x` です。
 
     リスト内の各々の文字列は、少なくとも幅記述子か画素密度記述子がなければ不正な値になります。リスト内には、幅記述子と画素密度記述子の組が同じ値である文字列を複数置いてはなりません。ブラウザーは、表示する時点でもっとも適切な画像を選択します。
 
@@ -142,9 +134,7 @@ translation_of: Web/HTML/Element/source
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-source-element', '&lt;source&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

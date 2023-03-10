@@ -2,6 +2,7 @@
 title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
 ---
+
 Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされました。その直後に見つかったクラッシュバグを修正した Mac 版および Linux 版のバージョン 9.0.1 は、2011 年 12 月 21 日にリリースされました。
 
 ## Web 開発者向けの変更点一覧
@@ -11,7 +12,7 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 - [`<li>`](/ja/docs/Web/HTML/Element/li) 要素の `value` 属性が負の値を取れるようになりました。これは HTML5 仕様に基づくもので、HTML5 以前は 0 に変換されていました。
 - [`<audio>`](/ja/docs/Web/HTML/Element/audio) と [`<video>`](/ja/docs/Web/HTML/Element/video) 要素を用いるときのメディアの URI において、[メディアの開始時間と終了時間を指定](/ja/docs/Using_HTML5_audio_and_video#Specifying_playback_range) できるようになりました。
 - [`<input>`](/ja/docs/Web/HTML/Element/input) 要素と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素が、スペルチェッカーの実行において [`lang` 属性の値を加味](/ja/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language)するようになりました。
-- Android 版 Firefox において、 `t``ype="file"` と `accept="image/*" を指定している`[`<input>`](/ja/docs/Web/HTML/Element/input) 要素`のときに`、ユーザがブラウザからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。
+- Android 版 Firefox において、 `type="file"` と `accept="image/*" を指定している`[`<input>`](/ja/docs/Web/HTML/Element/input) 要素`のときに`、ユーザがブラウザからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。
 - Windows Vista スタイル PNG ICO イメージがサポートされるようになりました。
 - CORS が許可されているときに、CORS アクセスを要求するために [`crossorigin`](/ja/docs/HTML/CORS_settings_attributes) 属性 を用いた画像を描いても、不正に [Canvas を制限状態に](/ja/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F)しないようになりました。
 - [`rowspan`](/ja/docs/Web/HTML/Element/td#attr-rowspan) 属性に指定できる値の最大値が 8190 から 65,534 になりました。
@@ -20,7 +21,7 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 
 - [`font-stretch`](/ja/docs/Web/CSS/font-stretch) プロパティがサポートされました。
 - [`columns`](/ja/docs/Web/CSS/columns) プロパティが [-moz](/ja/docs/Web/Guide/Prefixes) 接頭辞付きでサポートされました。このプロパティは [`column-width`](/ja/docs/Web/CSS/column-width) と [`column-count`](/ja/docs/Web/CSS/column-count) をまとめて記述する短縮形プロパティです。
-- [`<link>`](/ja/docs/Web/HTML/Element/link 'HTML 外部リソースへのリンク要素 (<link>) は、現在の文書と外部のリソースとの関係を指定します。この要素はスタイルシートへのリンクに最もよく使用されますが、サイトのアイコン ("favicon" スタイルのアイコンとモバイルのホーム画面/アプリのアイコンの両方) の確立や、その他のことにも使用されます。') 要素を用いて取り込まれたスタイルシートが完全にロードされてパースされたとき (しかしまだドキュメントに適用されていない状態)、[`load` イベント](/ja/docs/HTML/Element/link#Stylesheet_load_events) が発生するようになりました。また、スタイルシートの処理においてエラーが起きた場合、`error` イベントが発生します。
+- [`<link>`](/ja/docs/Web/HTML/Element/link) 要素を用いて取り込まれたスタイルシートが完全にロードされてパースされたとき (しかしまだドキュメントに適用されていない状態)、[`load` イベント](/ja/docs/HTML/Element/link#Stylesheet_load_events) が発生するようになりました。また、スタイルシートの処理においてエラーが起きた場合、`error` イベントが発生します。
 - [`text-overflow`](/ja/docs/Web/CSS/text-overflow) 向けの 2 つの値を指定できる新しい構文を用いて、左端と右端の両方のオーバフロー設定を指定できるようになりました。
 
 ### DOM

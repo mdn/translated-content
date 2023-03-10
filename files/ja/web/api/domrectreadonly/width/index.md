@@ -2,6 +2,7 @@
 title: DOMRectReadOnly.width
 slug: Web/API/DOMRectReadOnly/width
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`width`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の幅を表します。

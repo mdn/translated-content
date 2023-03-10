@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
-translation_of: Web/API/RTCPeerConnection/setLocalDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.setLocalDescription()`** 메소드는 연결 인터페이스와 관련이 있는 로컬 설명 (local description)을 변경합니다. 로컬 설명은 미디어 형식을 포함하는 연결의 로컬 엔드에 대한 속성을 명시합니다.
@@ -13,9 +13,11 @@ translation_of: Web/API/RTCPeerConnection/setLocalDescription
 
 ## Syntax
 
-    aPromise = RTCPeerConnection.setLocalDescription(sessionDescription);
+```js
+aPromise = RTCPeerConnection.setLocalDescription(sessionDescription);
 
-    pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{deprecated_inline}}
+pc.setLocalDescription(sessionDescription, successCallback, errorCallback);
+```
 
 ### 매개 변수
 
@@ -44,7 +46,7 @@ myPeerConnection.createOffer().then(myPeerConnection.setLocalDescription);
 
 {{domxref("RTCPeerConnection.localDescription")}}의 값이 성공적으로 바뀌거나 혹은 변환이 불가능한 경우 거절되면 fulfill 되는 {{jsxref("Promise")}}입니다. 거절되는 예로는 명시한 설명이 연결에 존재하는 하나 혹은 양쪽 모두의 피어들과 호환이 불가능하면 발생하기도 합니다. 참고로 프로미스의 fulfillment 핸들러는 입력 매개 변수를 받지 않습니다.
 
-> **참고:** 설명을 바꾸는 과정은 변경이 실패해도 연결 상태를 잃지 않게 보장하도록 WebRTC 레이어에 의해서 처리되는 중간 단계를 거칩니다. 이 과정에 대한 자세한 설명은 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}를 참조하십시오.
+> **참고:** 설명을 바꾸는 과정은 변경이 실패해도 연결 상태를 잃지 않게 보장하도록 WebRTC 레이어에 의해서 처리되는 중간 단계를 거칩니다. 이 과정에 대한 자세한 설명은 [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity)를 참조하십시오.
 
 ### 지원이 중단된 매개 변수
 
@@ -84,12 +86,9 @@ function handleNegotiationNeededEvent() {
 
 이 함수는 {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}를 호출하여 offer를 생성하면서 시작됩니다. 이 과정이 성공하면, `setLocalDescription()`를 호출합니다. 프로미스에 대한 fulfillment 핸들러는 시그널링 서버를 사용해서 다른 유저에게 신규 생성된 offer를 전송할 수 있게 됩니다.
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                                                                                                                                                                                                                   | 상태                             | 코멘트                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{ SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-setLocalDescription-void-RTCSessionDescription-description-VoidFunction-successCallback-RTCPeerConnectionErrorCallback-failureCallback', 'RTCPeerConnection.setLocalDescription()') }} | {{ Spec2('WebRTC 1.0') }} | Initial specification. |
-| {{SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-setLocalDescription-Promise-void--RTCSessionDescriptionInit-description', 'RTCPeerConnection.setLocalDescription()')}}                                                                                         | {{Spec2('WebRTC 1.0')}} | Initial specification. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

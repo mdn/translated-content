@@ -1,17 +1,8 @@
 ---
 title: '-webkit-border-before'
 slug: Web/CSS/-webkit-border-before
-tags:
-  - '-webkit-border-before'
-  - CSS
-  - CSS プロパティ
-  - CSS:WebKit 拡張
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-webkit-border-before
-translation_of: Web/CSS/-webkit-border-before
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-border-before`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理ブロックの境界の先頭側のプロパティ値をスタイルシートの一箇所で設定するための一括指定プロパティです。

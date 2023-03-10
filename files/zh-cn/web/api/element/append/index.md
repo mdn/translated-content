@@ -2,6 +2,7 @@
 title: Element.append()
 slug: Web/API/Element/append
 ---
+
 {{APIRef("DOM")}}**`Element.append`** 方法在 `Element`的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。被插入的 {{domxref("DOMString")}} 对象等价为 {{domxref("Text")}} 节点。与 {{domxref("Node.appendChild()")}} 的差异：
 
 - `Element.append()`允许追加 {{domxref("DOMString")}} 对象，而 `Node.appendChild()` 只接受 {{domxref("Node")}} 对象。
@@ -105,7 +106,7 @@ with(parent) {
 
 ## 浏览器兼容
 
-{{Compat("api.Element.append")}}
+{{Compat}}
 
 ## 相关链接
 

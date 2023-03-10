@@ -1,16 +1,8 @@
 ---
 title: system
 slug: Web/CSS/@counter-style/system
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.system
-translation_of: Web/CSS/@counter-style/system
 ---
+
 {{CSSRef}}
 
 **`system`** 記述子は、整数値のカウンターを文字列表現に変換するために使用するアルゴリズムを指定します。これは {{cssxref("@counter-style")}} で使用され、定義されたスタイルの動作を定義するために使用されます。

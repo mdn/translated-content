@@ -1,13 +1,6 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Node
-  - Property
-translation_of: Web/API/Node/nextSibling
 ---
 {{APIRef("DOM")}}
 
@@ -15,12 +8,14 @@ translation_of: Web/API/Node/nextSibling
 
 ## Syntax
 
-    nextNode = node.nextSibling
+```js
+nextNode = node.nextSibling
+```
 
 ## Notes
 
 Gecko 기반 브라우저는 소스 마크업에서 공백을 나타내기 위해 문서 내에 텍스트 노드를 삽입합니다.
-그러므로 예를 들어 [`Node.firstChild`](/ko/docs/Web/API/Node/firstChild "트리에서 노드의 첫 번째 자식이나 null(노드가 자식이 없으면)을 반환합니다.")나 [`Node.previousSibling`](/ko/docs/Web/API/Node/previousSibling "Node.previousSibling은 읽기전용 속성이며 현재 호출하는 노드가 속해 있는 부모의 childNodes 목록에서 특정 자식 노드를 리턴하거나 childNodes 목록의 첫번째 노드일 경우 Null값을 리턴합니다.")을 통해서 얻은 노드는 작성자가 얻으려 한 실제 요소와는
+그러므로 예를 들어 [`Node.firstChild`](/ko/docs/Web/API/Node/firstChild)나 [`Node.previousSibling`](/ko/docs/Web/API/Node/previousSibling)을 통해서 얻은 노드는 작성자가 얻으려 한 실제 요소와는
 달리 공백 텍스트 노드를 참조할 지도 모릅니다.
 
 더 많은 정보는 [Whitespace in the DOM](/ko/docs/Whitespace_in_the_DOM)과

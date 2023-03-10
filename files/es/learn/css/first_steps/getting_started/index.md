@@ -1,19 +1,9 @@
 ---
 title: Empezar con CSS
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - Aprender
-  - CSS
-  - Clases
-  - Ejemplo
-  - Elementos
-  - Estado
-  - Principiante
-  - Selectores
-  - Sintaxis
-translation_of: Learn/CSS/First_steps/Getting_started
 original_slug: Learn/CSS/First_steps/Comenzando_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 En este artículo aplicaremos CSS a un documento HTML sencillo para aprender algunos elementos prácticos sobre este lenguaje.
@@ -296,8 +286,8 @@ En el próximo artículo, veremos cómo se estructura el CSS.
 
 ## En este módulo
 
-1.  [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Empezar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Empezar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
+3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

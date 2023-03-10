@@ -2,9 +2,8 @@
 title: column-fill
 slug: Web/CSS/column-fill
 ---
-{{CSSRef("CSS Multi-columns")}}
 
-## Summary
+{{CSSRef("CSS Multi-columns")}}
 
 The `column-fill` CSS property controls how contents are partitioned into columns. Contents are either balanced, which means that contents in all columns will have the same height or, when using `auto`, just take up the room the content needs.
 
@@ -50,4 +49,4 @@ column-fill: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.column-fill")}}
+{{Compat}}

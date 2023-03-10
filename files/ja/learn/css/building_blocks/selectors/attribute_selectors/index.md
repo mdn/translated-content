@@ -2,6 +2,7 @@
 title: 属性セレクター
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
 HTML の学習で学んだように、要素はマークアップについてさらに詳細な情報を提供する属性を持つことがあります。 CSS では、属性セレクターを使用して、ある種類の属性のある要素を対象に指定できます。このレッスンでは、これらのとても便利なセレクターの使い方を紹介します。
@@ -55,7 +56,7 @@ HTML の学習で学んだように、要素はマークアップについてさ
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
 
-> **Note:** 新しい値 `s` もあります。これは、通常大文字と小文字が区別されないコンテキストで大文字と小文字を区別するマッチングを強制しますが、これはブラウザーではあまりサポートされておらず、HTML コンテキストではあまり役に立ちません。
+> **メモ:** 新しい値 `s` もあります。これは、通常大文字と小文字が区別されないコンテキストで大文字と小文字を区別するマッチングを強制しますが、これはブラウザーではあまりサポートされておらず、HTML コンテキストではあまり役に立ちません。
 
 ## やってみよう
 
@@ -67,7 +68,7 @@ HTML の学習で学んだように、要素はマークアップについてさ
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-links.html", '100%', 800)}}
 
-> **Note:** [ここで解答を見ることができます](https://github.com/mdn/css-examples/blob/master/learn/solutions.md)が、まずは自分で考えてみてください。
+> **メモ:** [ここで解答を見ることができます](https://github.com/mdn/css-examples/blob/master/learn/solutions.md)が、まずは自分で考えてみてください。
 
 ## 次のステップ
 

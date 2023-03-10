@@ -2,6 +2,7 @@
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.callee`** 属性包含当前正在执行的函数。
@@ -10,7 +11,7 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 
 **`callee`** 是 `arguments` 对象的一个属性。它可以用于引用该函数的函数体内当前正在执行的函数。这在函数的名称是未知时很有用，例如在没有名称的函数表达式 (也称为“匿名函数”) 内。
 
-> **警告：** 在[严格模式](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode)下，第 5 版 ECMAScript (**ES5**) 禁止使用 `arguments.callee()`。当一个函数必须调用自身的时候，避免使用 `arguments.callee()`，通过`要么`给函数表达式一个名字，要么使用一个函数声明。
+> **警告：** 在[严格模式](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode)下，第 5 版 ECMAScript (**ES5**) 禁止使用 `arguments.callee()`。当一个函数必须调用自身的时候，避免使用 `arguments.callee()`，通过`要么`给函数表达式一个名字，要么使用一个函数声明。
 
 ## 为什么 arguments.callee 从 ES5 严格模式中删除了？
 
@@ -44,7 +45,7 @@ function factorial (n) {
 });
 ```
 
-然而，这实际上是一个非常糟糕的解决方案，因为这 (以及其它的 `arguments`, `callee`, 和 `caller` 问题) 使得在通常的情况（你可以通过调试一些个别例子去实现它，但即使最好的代码也是次优选项，因为 (JavaScript 解释器) 做了不必要的检查）不可能实现内联和尾递归。另外一个主要原因是递归调用会获取到一个不同的 `this` 值，例如：
+然而，这实际上是一个非常糟糕的解决方案，因为这 (以及其他的 `arguments`, `callee`, 和 `caller` 问题) 使得在通常的情况（你可以通过调试一些个别例子去实现它，但即使最好的代码也是次优选项，因为 (JavaScript 解释器) 做了不必要的检查）不可能实现内联和尾递归。另外一个主要原因是递归调用会获取到一个不同的 `this` 值，例如：
 
 ```js
 var global = this;
@@ -87,9 +88,9 @@ function f (a, b, c, d, e) { return a ? b * c : d * e; }
 
 ### 在匿名递归函数中使用 `arguments.callee`
 
-递归函数必须能够引用它本身。很典型的，函数通过自己的名字调用自己。然而，匿名函数 (通过 [函数表达式](/en-US/docs/JavaScript/Reference/Operators/function) 或者 `函数构造器 创建`) 没有名称。因此如果没有可访问的变量指向该函数，唯一能引用它的方式就是通过 `arguments.callee`。
+递归函数必须能够引用它本身。很典型的，函数通过自己的名字调用自己。然而，匿名函数 (通过 [函数表达式](/zh-CN/docs/JavaScript/Reference/Operators/function) 或者 `函数构造器 创建`) 没有名称。因此如果没有可访问的变量指向该函数，唯一能引用它的方式就是通过 `arguments.callee`。
 
-下面的例子定义了一个函数，按流程，定义并返回了一个阶乘函数。该例并不是很实用，并且几乎都能够用 [命名函数表达式](/en-US/docs/JavaScript/Reference/Operators/function) 实现同样结果的例子，and there are nearly no cases where the same result cannot be achieved with .
+下面的例子定义了一个函数，按流程，定义并返回了一个阶乘函数。该例并不是很实用，并且几乎都能够用 [命名函数表达式](/zh-CN/docs/JavaScript/Reference/Operators/function) 实现同样结果的例子，and there are nearly no cases where the same result cannot be achieved with .
 
 ```js
 function create() {

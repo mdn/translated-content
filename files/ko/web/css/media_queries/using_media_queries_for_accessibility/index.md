@@ -1,14 +1,8 @@
 ---
 title: 접근성을 위한 미디어 쿼리 사용하기
 slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
-tags:
-  - '@media'
-  - CSS
-  - 미디어 속성
-  - 접근성
-translation_of: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 ---
-**미디어쿼리(Media Queries)**는 장애를 가진 사용자가 웹사이트를 더 쉽게 이해할 수 있도록 도울 수 있습니다.
+**미디어쿼리**(**Media Queries**)는 장애를 가진 사용자가 웹사이트를 더 쉽게 이해할 수 있도록 도울 수 있습니다.
 
 ## 애니메이션 동작 축소하기(Reduced Motion)
 

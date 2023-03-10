@@ -3,6 +3,7 @@ title: Les types de champs de formulaire HTML5
 slug: Learn/Forms/HTML5_input_types
 translation_of: Learn/Forms/HTML5_input_types
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 Dans [l'article précédent](/fr/docs/Learn/Forms/Basic_native_form_controls), nous avons vu l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input) et les types qu'il pouvait avoir depuis les origines de HTML. Voyons ici, en détails, les fonctionnalités offertes par les contrôles de formulaire plus récents, dont certains ont été ajoutés en HTML5 et qui permettent de récupérer des données d'un certain type.

@@ -1,8 +1,8 @@
 ---
 title: 배경 및 테두리
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
-translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 이번 수업에서는 CSS 배경과 테두리로 할 수 있는 창의적인 작업을 살펴보겠습니다. 그라데이션 (gradients), 배경 이미지, 둥근 테두리를 추가하는 것에서 배경과 테두리는 CSS 의 많은 스타일 질문에 대한 답입니다.
@@ -310,24 +310,3 @@ background-position: 10px 20px,  top right;
 다음 수업에서는 문서의 쓰기 모드가 CSS 와 어떻게 상호 작용하는지 알아봅니다. 텍스트가 왼쪽에서 오른쪽으로 표시되지 않으면 어떻게 됩니까?
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
-
-## 이번 강의에서는
-
-1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

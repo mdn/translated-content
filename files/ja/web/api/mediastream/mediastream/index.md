@@ -2,6 +2,7 @@
 title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStream()`** コンストラクターは、新しく生成された {{domxref("MediaStream")}} を返し、これはそれぞれが {{domxref("MediaStreamTrack")}} オブジェクトで表されるメディアトラックのコレクションとして機能します。

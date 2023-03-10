@@ -1,13 +1,8 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-tags:
-  - DataView
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
+
 {{JSRef}}
 
 **`DataView`** 뷰는 플랫폼의 자체 {{glossary("endianness", "엔디언")}}(바이트 정렬 방법)에 신경 쓰지 않으면서 {{jsxref("ArrayBuffer")}}에서 다양한 숫자 자료형의 데이터를 읽고 쓰기 위한 저수준 인터페이스를 제공합니다.

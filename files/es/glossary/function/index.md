@@ -1,14 +1,9 @@
 ---
 title: Función
 slug: Glossary/Function
-tags:
-  - CodingScripting
-  - Glosario
-  - IIFE
-  - JavaScript
-translation_of: Glossary/Function
 original_slug: Glossary/Función
 ---
+
 Una **función** es un fragmento de código que puede ser llamado por otro código o por sí mismo, o por una {{Glossary("variable")}} que haga referencia a la función. Cuando se llama a una función, los {{Glossary("Argument", "argumentos")}} se pasan a la función como entrada, y la función puede devolver opcionalmente una salida. Una función en {{glossary("JavaScript")}} es también un {{glossary("object", "objeto")}}.
 
 El nombre de la función es un {{Glossary("identifier", "identificador")}} declarado como parte de una declaración de función o expresión de función. El {{Glossary("scope", "ámbito")}} de la función depende de si el nombre de la función es una declaración o una expresión.
@@ -68,7 +63,7 @@ Una **expresión de una función que se invoca inmediatamente** ({{glossary("IIF
 ```js
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */
@@ -88,5 +83,5 @@ Si desea obtener más información sobre las IIFE, consulte la siguiente página
 
 ### Referencias técnicas
 
-- [Funciones](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions "en-US/docs/Web/JavaScript/Guide/Functions")
-- [Funciones de flecha](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
+- [Funciones de flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

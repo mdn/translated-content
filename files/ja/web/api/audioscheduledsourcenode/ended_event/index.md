@@ -1,44 +1,71 @@
 ---
-title: AudioBufferSourceNode.onended
+title: "AudioScheduledSourceNode: ended イベント"
 slug: Web/API/AudioScheduledSourceNode/ended_event
 original_slug: Web/API/AudioScheduledSourceNode/onended
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
-{{ APIRef("AudioBufferSourceNode") }}
 
-`AudioBufferSourceNodeの` `onended` イベントハンドラーは{{event("ended_(Web_Audio)", "ended")}} イベントに関するコ − ルバック関数を格納します。これによりオーディオトラックの再生終了時に実行するコードを設定することができます。
+{{DefaultAPISidebar("Web Audio API")}}
 
-> **Note:** **注**: `onended` ハンドラーは loop プロパティーが true に設定されている場合はオーディオが再生終了することが無いので効果がありません。このような場合にこの機能を有効にするには {{ domxref("AudioBufferSourceNode.stop()") }}　を使用してください。
+`ended` は {{domxref("AudioScheduledSourceNode")}} インターフェイスのイベントで、ソースノードの再生が停止したときに発生します。
+
+このイベントは、{{domxref("AudioScheduledSourceNode")}}の再生が停止したときに発生します。理由は、所定の停止時刻に達したか、音声の全時間が再生されたか、またはバッファーの全体が再生されたかのいずれかです。
+
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-```js
-var source = audioCtx.createBufferSource();
-source.onended = function() { ... };
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js-nolint
+addEventListener("ended", (event) => { })
+
+onended = (event) => { }
 ```
 
-## 用例
+## イベント型
+
+一般的な {{domxref("Event")}} です。
+
+## 例
+
+この単純な例では、 `ended` イベントに対するイベントリスナーを設定し、ノードの再生が停止したときにユーザーインターフェースに［Start］ボタンを表示できるようにしています。
 
 ```js
-source.start();
-source.onended = function() {
-  console.log('Your audio has finished playing');
-}
+node.addEventListener("ended", () => {
+  document.getElementById("startButton").disabled = false;
+});
 ```
 
-## プロパティ
+また、 `onended` プロパティを使用してイベントハンドラーを設定することもできます。
 
-有りません。
+```js
+node.onended = () => {
+  document.getElementById("startButton").disabled = false;
+};
+```
+
+ended イベントの使用例は、 [audio-buffer の例 (GitHub)](https://mdn.github.io/webaudio-examples/audio-buffer/) を参照してください。
 
 ## 仕様
 
-| Specification                                                                                            | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-onended', 'onended')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザー互換性
 
-{{Compat("api.AudioScheduledSourceNode.onended")}}
+{{Compat}}
+
+## 関連イベント
+
+- [audioprocess](/ja/docs/Web/API/ScriptProcessorNode/audioprocess_event)
+- [complete](/ja/docs/Web/API/OfflineAudioContext/complete_event)
 
 ## 関連情報
 
-- [Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)を使う
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}
+- HTMLMediaElement の {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
+- MediaStreamTrack の {{domxref("MediaStreamTrack.ended_event", 'ended')}} イベント

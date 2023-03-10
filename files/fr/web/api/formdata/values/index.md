@@ -12,6 +12,7 @@ tags:
   - values
 translation_of: Web/API/FormData/values
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`FormData.values()`** renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de passer en revue toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("USVString")}} ou {{domxref("Blob")}}.

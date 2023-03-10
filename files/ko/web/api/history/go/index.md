@@ -1,7 +1,6 @@
 ---
 title: History.go()
 slug: Web/API/History/go
-translation_of: Web/API/History/go
 ---
 {{APIRef("History API")}}
 
@@ -11,7 +10,9 @@ translation_of: Web/API/History/go
 
 ## 구문
 
-    history.go([delta])
+```js
+history.go([delta])
+```
 
 ### Parameters
 

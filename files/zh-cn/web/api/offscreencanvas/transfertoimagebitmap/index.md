@@ -2,6 +2,7 @@
 title: OffscreenCanvas.transferToImageBitmap()
 slug: Web/API/OffscreenCanvas/transferToImageBitmap
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`OffscreenCanvas.transferToImageBitmap()`** 方法使用`offscreenCanvas`最近渲染得到的图片创建一个{{domxref("ImageBitmap")}} 对象。
@@ -34,7 +35,7 @@ offscreen.transferToImageBitmap();
 
 ## 浏览器兼容
 
-{{Compat("api.OffscreenCanvas.transferToImageBitmap")}}
+{{Compat}}
 
 ## 浏览相关
 

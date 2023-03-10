@@ -2,9 +2,10 @@
 title: contain
 slug: Web/CSS/contain
 ---
+
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS)** `contain`** 属性允许开发者声明当前元素和它的内容尽可能的*独立*于 DOM 树的其他部分。这使得浏览器在重新计算布局、样式、绘图、大小或这四项的组合时，只影响到有限的 DOM 区域，而不是整个页面，可以有效改善性能。
+[CSS](/zh-CN/docs/Web/CSS) **`contain`** 属性允许开发者声明当前元素和它的内容尽可能的*独立*于 DOM 树的其他部分。这使得浏览器在重新计算布局、样式、绘图、大小或这四项的组合时，只影响到有限的 DOM 区域，而不是整个页面，可以有效改善性能。
 
 这个属性在包含大量独立组件的页面非常实用，它可以防止某个小部件的 CSS 规则改变对页面上的其他东西造成影响。
 
@@ -65,11 +66,11 @@ The `contain` property is specified as either one of the following:
   - : 表示这个元素的子孙节点不会在它边缘外显示。如果一个元素在视窗外或因其他原因导致不可见，则同样保证它的子孙节点不会被显示。
     Indicates that descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. And if a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 形式化语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -105,7 +106,7 @@ article {
 }
 ```
 
-{{EmbedLiveSample('Simple_layout', '100%', '300')}}
+{{EmbedLiveSample('简单布局', '100%', '300')}}
 
 ### 浮动干涉
 
@@ -138,7 +139,7 @@ article {
 
 As you can see, because of the way floats work, the first image ends up inside the area of the second article:
 
-{{EmbedLiveSample('Float_interference', '100%', '300')}}
+{{EmbedLiveSample('浮动干涉', '100%', '300')}}
 
 ### Fixing with contain
 
@@ -180,7 +181,7 @@ This also means that the first image no longer floats down to the second article
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.contain")}}
+{{Compat}}
 
 ## 参见
 

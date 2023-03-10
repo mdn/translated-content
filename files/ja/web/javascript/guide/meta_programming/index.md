@@ -1,15 +1,8 @@
 ---
 title: メタプログラミング
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
 ECMAScript 2015 から、JavaScript には {{jsxref("Proxy")}} オブジェクトと {{jsxref("Reflect")}} オブジェクトがサポートされました。これらは基本的な言語操作 (例えば、プロパティ参照、代入、列挙、関数呼び出しなど) に割り込み、動作をカスタマイズすることができます。この 2 つのオブジェクトのおかげで、JavaScript でメタレベルのプログラミングが行えます。
@@ -32,7 +25,7 @@ p.a = 1
 console.log(p.a, p.b) // 1, 42
 ```
 
-この `Proxy` オブジェクトは _`target`_ (ここでは空オブジェクト) と _`handler`_ オブジェクトを定義し、その中に `get` トラップが実装されています。ここで、プロキシーとなったオブジェクトは未定義のプロパティを取得しようとした時に `undefined` を返さず、代わりに数値 `42` を返します。
+この `Proxy` オブジェクトは `target` (ここでは空オブジェクト) と `handler` オブジェクトを定義し、その中に `get` トラップが実装されています。ここで、プロキシーとなったオブジェクトは未定義のプロパティを取得しようとした時に `undefined` を返さず、代わりに数値 `42` を返します。
 
 それ以外の例は {{jsxref("Proxy")}} のリファレンスページを参照してください。
 

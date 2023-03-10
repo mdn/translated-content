@@ -2,11 +2,12 @@
 title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
 ---
+
 Firefox 4 （6 月後半にベータ版リリースが予定されています）では、パフォーマンスが向上し、 HTML 5 やその他の革新的な Web 技術のさらなるサポートが追加され、さらには、セキュリティも改善しています。 この記事では、この次期リリースについてのとっかかりの情報と、 Web 開発者、アドオン開発者、そして、Gecko プラットフォーム開発者向けに利用可能になる機能の一覧を提供します。
 
 これらの機能の多くはすでに [Firefox 4 beta](http://www.mozilla.com/en-US/firefox/beta/) リリース、もしくは（冒険心にあふれているなら）[ナイトリー trunk ビルド](http://nightly.mozilla.org/) で試すことできます。
 
-> **Note:** この記事は作成中であり、このページからリンクされている記事もまた同様です。多くの記事名が仮名であり、いくつかのトピックは複数の記事に分割されるかもしれません。
+> **メモ:** この記事は作成中であり、このページからリンクされている記事もまた同様です。多くの記事名が仮名であり、いくつかのトピックは複数の記事に分割されるかもしれません。
 
 ## Web 開発者向け機能
 
@@ -213,7 +214,7 @@ JavaScript 1.8.5 で実装される変更の概要については、[JavaScript 
 - [Web コンソールの利用](/ja/docs/Using_the_Web_Console)
   - : Web コンソールツールは Web 開発者および拡張開発者のデバッグ作業の補助に役立ちます。
 
-> **Note:** Gecko 2.0 のメモ(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)エラーコンソールは Firefox 4 からデフォルトで無効化されます。`devtools.errorconsole.enabled 設定を` `true` に変更し、ブラウザを再起動することで再び有効にすることができます。
+> **メモ:** Gecko 2.0 のメモ(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)エラーコンソールは Firefox 4 からデフォルトで無効化されます。`devtools.errorconsole.enabled 設定を` `true` に変更し、ブラウザを再起動することで再び有効にすることができます。
 
 ## Mozilla およびアドオン開発者向けの変更
 
@@ -273,7 +274,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 
 #### リモート XUL サポートの削除
 
-リモート XUL [がサポートされなくなりました](https://bugzilla.mozilla.org/show_bug.cgi?id=546857)。 これは HTTP を経由して供給される XUL ドキュメントにのみ影響します。 また、` dom.``allow_XUL_XBL_for_file ` の設定を作成して、その値を ` true に設定しない限り、``file:// ` URL 形式を用いた XUL 文書の読み込みも行えなくなります。しかしながら、ホワイトリスト機能を用いることで、特定ドメインのリモート XUL を読み込むことを許可できます。[Remote XUL Manager 拡張](https://addons.mozilla.org/en-US/firefox/addon/235281/) を用いると、このホワイトリストを管理できます。
+リモート XUL [がサポートされなくなりました](https://bugzilla.mozilla.org/show_bug.cgi?id=546857)。 これは HTTP を経由して供給される XUL ドキュメントにのみ影響します。 また、`dom.allow_XUL_XBL_for_file` の設定を作成して、その値を `true` に設定しない限り、`file://` URL 形式を用いた XUL 文書の読み込みも行えなくなります。しかしながら、ホワイトリスト機能を用いることで、特定ドメインのリモート XUL を読み込むことを許可できます。[Remote XUL Manager 拡張](https://addons.mozilla.org/en-US/firefox/addon/235281/) を用いると、このホワイトリストを管理できます。
 
 #### 小さな XUL の変更
 

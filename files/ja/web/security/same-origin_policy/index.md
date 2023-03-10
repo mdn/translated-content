@@ -1,17 +1,8 @@
 ---
 title: 同一オリジンポリシー
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - Host
-  - JavaScript
-  - Same-origin policy
-  - Security
-  - URL
-  - origin
-  - secure
-translation_of: Web/Security/Same-origin_policy
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
 **同一オリジンポリシー**は重要なセキュリティの仕組みであり、ある{{Glossary("origin", "オリジン")}}によって読み込まれた文書やスクリプトが、他のオリジンにあるリソースにアクセスできる方法を制限するものです。
@@ -36,9 +27,9 @@ translation_of: Web/Security/Same-origin_policy
 
 `about:blank` や `javascript:` の URL のページから実行されたスクリプトは、その URL にオリジンのサーバーについての情報が明示的に含まれていないため、その URL を開いた文書のオリジンを継承します。
 
-> **Note:** 例えば、 `about:blank` は (例えば {{domxref("Window.open()")}} メカニズムを使用して) 新しい空のポップアップウィンドウを生成し、その中に親スクリプトがコンテンツを書き込むために使用されます。ポップアップウィンドウにもコードが含まれた場合、そのコードはそれを生成したスクリプトと同じオリジンを継承します。
+> **メモ:** 例えば、 `about:blank` は (例えば {{domxref("Window.open()")}} メカニズムを使用して) 新しい空のポップアップウィンドウを生成し、その中に親スクリプトがコンテンツを書き込むために使用されます。ポップアップウィンドウにもコードが含まれた場合、そのコードはそれを生成したスクリプトと同じオリジンを継承します。
 
-> **Warning:** `data:` の URL は新しく、空のセキュリティコンテキストを生成します。
+> **警告:** `data:` の URL は新しく、空のセキュリティコンテキストを生成します。
 
 ### IE における例外事項
 
@@ -53,7 +44,7 @@ Internet Explorer では、同一オリジンポリシーについて二つの�
 
 ## オリジンの変更
 
-> **Warning:** ここで説明している ({{domxref("document.domain")}} セッターを使用する) 方法は非推奨です。同一オリジンポリシーによるセキュリティ保護を弱め、ブラウザーのオリジンモデルを複雑にして、相互運用性の問題やセキュリティバグを引き起こすためです。
+> **警告:** ここで説明している ({{domxref("document.domain")}} セッターを使用する) 方法は非推奨です。同一オリジンポリシーによるセキュリティ保護を弱め、ブラウザーのオリジンモデルを複雑にして、相互運用性の問題やセキュリティバグを引き起こすためです。
 
 ページのオリジンは、いくつかの制限の下で変更されることがあります。スクリプトを用いると、 {{domxref("document.domain")}} の値を現在のドメインまたは上位ドメインに変更できます。スクリプトによって現在のドメインの上位ドメインへオリジンが変更された場合、より短くなったドメイン名は次回のオリジン検査時に用いられます。
 
@@ -69,7 +60,7 @@ document.domain = "company.com";
 
 この仕組みにはいくつかの制限があります。例えば、 [`document-domain`](/ja/docs/Web/HTTP/Headers/Feature-Policy/document-domain) の [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy) が有効になっている場合や、文書がサンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 内にある場合は、 "`SecurityError`" の [`DOMException`](/ja/docs/Web/API/DOMException) が発生します。また、この方法でオリジンを変更しても、多くの Web API ([`localStorage`](/ja/docs/Web/API/Window/localStorage), [`indexedDB`](/ja/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/ja/docs/Web/API/BroadcastChannel), [`SharedWorker`](/ja/docs/Web/API/SharedWorker) など) で使用されているオリジンチェックには影響しません。失敗事例のより詳細なリストは、 [Document.domain > Failures](/ja/docs/Web/API/Document/domain#failures) にあります。
 
-> **Note:** **注:** サブドメインから親ドメインへアクセスさせるために `document.domain` を使用する際は、親ドメインとサブドメインの双方で同じ値を `document.domain` に設定することが必要です。この作業は、親ドメインを元の値に戻す際にも必要です。これを怠ると権限エラーが発生します。
+> **メモ:** サブドメインから親ドメインへアクセスさせるために `document.domain` を使用する際は、親ドメインとサブドメインの双方で同じ値を `document.domain` に設定することが必要です。この作業は、親ドメインを元の値に戻す際にも必要です。これを怠ると権限エラーが発生します。
 
 ## 異なるオリジンへのネットワークアクセス
 

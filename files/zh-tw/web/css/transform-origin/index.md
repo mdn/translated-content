@@ -2,13 +2,14 @@
 title: transform-origin
 slug: Web/CSS/transform-origin
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 [CSS](/zh-TW/docs/Web/CSS) 內的**`transform-origin`**屬性可以設定元素變化的原點。
 
 {{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
-變化原點指的是應用變化的點。舉例來說， [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate)函數的原點為旋轉中心。 (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)
+變化原點指的是應用變化的點。舉例來說， [`rotate()`](/zh-TW/docs/Web/CSS/transform-function/rotate)函數的原點為旋轉中心。 (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)
 
 ## 語法
 
@@ -283,7 +284,7 @@ transform-origin: 100% -30%;
 
 ## Browser compatibility
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## See also
 

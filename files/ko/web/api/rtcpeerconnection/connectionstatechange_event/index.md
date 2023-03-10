@@ -1,16 +1,18 @@
 ---
 title: RTCPeerConnection.onconnectionstatechange
 slug: Web/API/RTCPeerConnection/connectionstatechange_event
-translation_of: Web/API/RTCPeerConnection/onconnectionstatechange
 original_slug: Web/API/RTCPeerConnection/onconnectionstatechange
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCPeerConnection.onconnectionstatechange`** 속성에 {{domxref("RTCPeerConnection")}} 인스턴스에서 발생하는 {{event("connectionstatechange")}} 이벤트를 처리하기 위해 호출되는 {{event("Event_handlers", "event handler")}}를 정의하게됩니다. 이 이벤트는 연결의 상태 집합체가 변할 때마다 발생합니다. 이 상태 집합체는 연결에 의해 사용되는 각각의 네트워크 전송 상태들의 묶음입니다.
 
 ## Syntax
 
-    RTCPeerConnection.onconnectionstatechange = eventHandler;
+```js
+RTCPeerConnection.onconnectionstatechange = eventHandler;
+```
 
 ### 값
 

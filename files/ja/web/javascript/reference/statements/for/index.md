@@ -1,15 +1,8 @@
 ---
 title: for
 slug: Web/JavaScript/Reference/Statements/for
-tags:
-  - JavaScript
-  - Language feature
-  - Loop
-  - Reference
-  - Statement
-  - for
-translation_of: Web/JavaScript/Reference/Statements/for
 ---
+
 {{jsSidebar("Statements")}}
 
 **for 文**は、括弧で囲みセミコロンで区切った 3 つの引数と、続いてループ内で実行される文 (ふつうは[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)) から成るループを構成します。
@@ -23,7 +16,20 @@ for ([initialization]; [condition]; [final-expression])
    statement
 ```
 
-<dl><dt><code><var>initialization</var></code></dt><dd>ループが始まる前に一度だけ評価される (代入式を含む) 式または変数宣言。ふつうはカウンター変数を初期化するために使われます。この式では任意で、 <code>var</code> キーワードを用いて新しい変数を宣言することもできます。 <code>var</code> で宣言された変数はループ内のローカル変数にはなりません。すなわち、 <code>for</code> ループが属するスコープと同じスコープになります。 <code>let</code> で宣言された変数は文内のローカル変数になります。</dd><dd>この式の結果は捨て去られます。</dd><dt><code><var>condition</var></code></dt><dd>ループのそれぞれの反復処理が行われる前に評価される式です。この式が true と評価された場合は、 <code><var>statement</var></code> が実行されます。この条件テストは省略可能です。省略された場合は、条件は常に true に評価されます。もしこの式が false と評価された場合は、実行は <code>for</code> 構造に続く最初の式に飛びます。</dd><dt><code><var>final-expression</var></code></dt><dd>ループのそれぞれの反復処理の最後に評価される式です。これは、次の <code><var>condition</var></code> の評価前に行われます。一般的には、カウンター変数を更新または増加するために使われます。</dd><dt><code><var>statement</var></code></dt><dd>条件が true と評価された場合に限り実行される文です。ループ内で複数の文を実行するには、{{jsxref("Statements/block", "ブロック", "", 0)}}文 (<code>{ ... }</code>) を使用して文をグループ化してください。ループ内で文を実行しないようにするには、{{jsxref("Statements/empty", "空文", "", 0)}} (<code>;</code>) を使用してください。</dd></dl>
+- `initialization`
+
+  - : ループが始まる前に一度だけ評価される (代入式を含む) 式または変数宣言。ふつうはカウンター変数を初期化するために使われます。この式では任意で、 `var` キーワードを用いて新しい変数を宣言することもできます。 `var` で宣言された変数はループ内のローカル変数にはなりません。すなわち、 `for` ループが属するスコープと同じスコープになります。 `let` で宣言された変数は文内のローカル変数になります。
+
+   この式の結果は捨て去られます。
+- `condition`
+
+  - : ループのそれぞれの反復処理が行われる前に評価される式です。この式が true と評価された場合は、 `statement` が実行されます。この条件テストは省略可能です。省略された場合は、条件は常に true に評価されます。もしこの式が false と評価された場合は、実行は `for` 構造に続く最初の式に飛びます。
+- `final-expression`
+
+  - : ループのそれぞれの反復処理の最後に評価される式です。これは、次の `condition` の評価前に行われます。一般的には、カウンター変数を更新または増加するために使われます。
+- `statement`
+
+  - : 条件が true と評価された場合に限り実行される文です。ループ内で複数の文を実行するには、{{jsxref("Statements/block", "ブロック", "", 0)}}文 (`{ ... }`) を使用して文をグループ化してください。ループ内で文を実行しないようにするには、{{jsxref("Statements/empty", "空文", "", 0)}} (`;`) を使用してください。
 
 ## 例
 
@@ -107,13 +113,11 @@ showOffsetPos('content');
 // top: 153px;"
 ```
 
-> **Note:** **注:** これは、**セミコロンが必須**となる JavaScript の数少ないケースの 1 つです。セミコロンがないと、繰り返し宣言の次の行が繰り返す文と見なされます。
+> **メモ:** これは、**セミコロンが必須**となる JavaScript の数少ないケースの 1 つです。セミコロンがないと、繰り返し宣言の次の行が繰り返す文と見なされます。
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-for-statement', 'for statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

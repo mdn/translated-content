@@ -7,6 +7,7 @@ tags:
   - MDN Meta
 translation_of: MDN
 ---
+
 {{MDNSidebar}}
 
 Le **Mozilla Developer Network** (MDN) est un wiki sur lequel sont documentés le Web ouvert, les technologies Mozilla, Firefox OS et d'autres sujets intéressant les développeurs. Nous accueilllons tout le monde pour modifier et ajouter du contenu. Nul besoin d'être un développeur ou de connaître très bien ces technologies. De nombreuses actions sont possibles, des plus simples (comme des relectures et corrections) aux plus complexes (documentation des API).

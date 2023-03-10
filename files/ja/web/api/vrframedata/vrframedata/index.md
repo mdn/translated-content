@@ -2,11 +2,12 @@
 title: VRFrameData()
 slug: Web/API/VRFrameData/VRFrameData
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`VRFrameData()`** コンストラクターは、 {{domxref("VRFrameData")}} オブジェクトのインスタンスを生成します。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 

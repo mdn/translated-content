@@ -1,8 +1,8 @@
 ---
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
+
 {{JSRef}}
 
 **`Math.SQRT1_2`** 프로퍼티는 약 0.707의 값을 나타내는 루트 1/2을 나타냅니다:
@@ -29,11 +29,9 @@ function getRoot1_2() {
 getRoot1_2(); // 0.7071067811865476
 ```
 
-## 사양
+## 명세서
 
-| 사양                                                                             |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}} |
+{{Specifications}}
 
 ## 브라우저 호환성
 

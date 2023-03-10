@@ -1,16 +1,8 @@
 ---
 title: <time-percentage>
 slug: Web/CSS/time-percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - time-percentage
-  - 単位
-  - 値
-translation_of: Web/CSS/time-percentage
 ---
+
 {{CSSRef}}
 
 **`<time-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("time")}} または {{Cssxref("percentage")}} が取りうる値を表します。

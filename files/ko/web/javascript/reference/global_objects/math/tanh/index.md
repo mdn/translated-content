@@ -1,14 +1,8 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript 2015
-  - 레퍼런스
-  - 메서드
-  - 수학
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
+
 {{JSRef}}
 
 **`Math.tanh()`** 함수는 쌍곡탄젠트 값을 반환합니다. 수식으로는 아래와 같습니다.
@@ -57,7 +51,7 @@ Math.tanh = Math.tanh || function(x){
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

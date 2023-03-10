@@ -2,11 +2,12 @@
 title: WebGL モデル ビュー 射影
 slug: Web/API/WebGL_API/WebGL_model_view_projection
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 この記事では、[WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、射影行列について説明します。
 
-> **Note:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
+> **メモ:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
 
 ## モデル、ビュー、射影行列
 
@@ -20,7 +21,7 @@ WebGL の空間内の点とポリゴンの個々の変換は、並進、拡縮�
 
 WebGL プログラムでは、通常、データは自分の座標系で GPU にアップロードされ、次に頂点シェーダーがそれらの点を**クリップ空間**と呼ばれる特別な座標系に変換します。クリップ空間の外側にあるデータは切り取られ、描画されません。ただし、三角形がこのスペースの境界を跨ぐ場合は、新しい三角形に分割され、クリップスペースにある新しい三角形の部分のみが残ります。
 
-![A 3d graph showing clip space in WebGL.](https://mdn.mozillademos.org/files/11371/clip-space-graph.svg)
+![A 3d graph showing clip space in WebGL.](clip_space_graph.svg)
 
 上の図は、全ての点が収まる必要のあるクリップ空間を視覚化したものです。これは、各辺が 2 の立方体であり、片方の角が (-1,-1,-1) にあり、対角が (1,1,1) にあります。立方体の中心は点 (0,0,0) です。 クリップ空間に使用されるこの 8 立方メートルの座標系は、正規化デバイス座標（NDC）と呼ばれます。WebGL コードを調べて作業している間、その用語を時々耳にするかもしれません。
 
@@ -30,7 +31,7 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 
 この例では、画面上に 2D ボックスを描画するカスタム `WebGLBox` オブジェクトを作成します。
 
-> **Note:** The code for each WebGLBox example is available in this [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
+> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
 
 #### WebGLBox コンストラクタ
 
@@ -184,7 +185,7 @@ box.draw({
 
 [JSFiddle で表示](https://jsfiddle.net/mff99yu5)
 
-![The results of drawing to clip space using WebGL.](https://mdn.mozillademos.org/files/11373/part1.png)
+![The results of drawing to clip space using WebGL.](part1.png)
 
 #### 演習
 
@@ -202,7 +203,7 @@ gl_Position = vec4(position, 1.0);
 
 明らかな疑問は、「なぜ余分な次元があるのか？」です。この追加により、3D データを操作するための多くの優れた手法が可能になることが分かります。この追加された次元により、遠近法の概念が座標系に導入されます。それを配置すると、3D 座標を 2D 空間にマッピングできます。これにより、2 本の平行線が遠くに離れるときに交差するようになります。値 `w` は、座標の他のコンポーネントの除数として使用されるため、 `x`、`y`、`z`の真の値は、`x/w`、`y/w`、`z/w`として計算されます（そして、`w`も `w/w`で 1 になる）。
 
-A three dimensional point is defined in a typical Cartesian coordinate system. The added fourth dimension changes this point into a {{interwiki("wikipedia", "homogeneous coordinates", "homogeneous coordinate")}}. It still represents a point in 3D space and it can easily be demonstrated how to construct this type of coordinate through a pair of simple functions.
+A three dimensional point is defined in a typical Cartesian coordinate system. The added fourth dimension changes this point into a [homogeneous coordinate](https://en.wikipedia.org/wiki/homogeneous_coordinates). It still represents a point in 3D space and it can easily be demonstrated how to construct this type of coordinate through a pair of simple functions.
 
 ```js
 function cartesianToHomogeneous(point)
@@ -315,7 +316,7 @@ box.draw({
 
 [View on JSFiddle](https://jsfiddle.net/mff99yu)
 
-![The results of using homogeneous coordinates to move the boxes around in WebGL.](https://mdn.mozillademos.org/files/11375/part2.png)
+![The results of using homogeneous coordinates to move the boxes around in WebGL.](part2.png)
 
 ### Exercises
 
@@ -374,13 +375,13 @@ In the shader, each position vertex is first transformed into a homogeneous coor
 gl_Position = model * vec4(position, 1.0);
 ```
 
-> **Note:** In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple \* operator.
+> **メモ:** In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple \* operator.
 
 ### The results
 
 [View on JSFiddle](https://jsfiddle.net/5jofzgsh)
 
-![Using a model matrix](https://mdn.mozillademos.org/files/11377/part3.png)
+![Using a model matrix](part3.png)
 
 At this point the w value of the transformed point is still 1.0. The cube still doesn't have any perspective. The next section will take this setup and modify the w values to provide some perspective.
 
@@ -416,7 +417,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 [View on JSFiddle](https://jsfiddle.net/vk9r8h2c)
 
-![Filling the W component and creating some projection.](https://mdn.mozillademos.org/files/11379/part4.png)
+![Filling the W component and creating some projection.](part4.png)
 
 See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See [Perspective projection matrix](#perspective_projection_matrix) below for an introduction to how to use more complex matrices to help control and prevent clipping.
 
@@ -519,17 +520,17 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 [View on JSFiddle](https://jsfiddle.net/zwyLLcbw)
 
-![A simple projection matrix](https://mdn.mozillademos.org/files/11381/part5.png)
+![A simple projection matrix](part5.png)
 
 ## The viewing frustum
 
-Before we move on to covering how to compute a perspective projection matrix, we need to introduce the concept of the **{{interwiki("wikipedia", "viewing frustum")}}** (also known as the **view frustum**). This is the region of space whose contents are visible to the user at the current time. It's the 3D region of space defined by the field of view and the distances specified as the nearest and farthest content that should be rendered.
+Before we move on to covering how to compute a perspective projection matrix, we need to introduce the concept of the **[viewing frustum](https://en.wikipedia.org/wiki/viewing_frustum)** (also known as the **view frustum**). This is the region of space whose contents are visible to the user at the current time. It's the 3D region of space defined by the field of view and the distances specified as the nearest and farthest content that should be rendered.
 
 While rendering, we need to determine which polygons need to be rendered in order to represent the scene. This is what the viewing frustum defines. But what's a frustum in the first place?
 
-A {{interwiki("wikipedia", "frustum")}} is the 3D solid that results from taking any solid and slicing off two sections of it using two parallel planes. Consider our camera, which is viewing an area that starts immediately in front of its lens and extends off into the distance. The viewable area is a four-sided pyramid with its peak at the lens, its four sides corresponding to the extents of its peripheral vision range, and its base at the farthest distance it can see, like this:
+A [frustum](https://en.wikipedia.org/wiki/frustum) is the 3D solid that results from taking any solid and slicing off two sections of it using two parallel planes. Consider our camera, which is viewing an area that starts immediately in front of its lens and extends off into the distance. The viewable area is a four-sided pyramid with its peak at the lens, its four sides corresponding to the extents of its peripheral vision range, and its base at the farthest distance it can see, like this:
 
-![A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance.](https://mdn.mozillademos.org/files/17295/FullCameraFOV.svg)
+![A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance.](fullcamerafov.svg)
 
 If we simply used this to determine the polygons to be rendered each frame, our renderer would need to render every polygon within this pyramid, all the way off into infinity, including also polygons that are very close to the lens—likely too close to be useful (and certainly including things that are so close that a real human wouldn't be able to focus on them in the same setting).
 
@@ -537,11 +538,11 @@ So the first step in reducing the number of polygons we need to compute and rend
 
 In WebXR, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:
 
-![A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count.](https://mdn.mozillademos.org/files/17296/CameraViewFustum.svg)
+![A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count.](camera_view_frustum.svg)
 
 The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are _entirely_ outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustrum so that they no longer exit it.
 
-Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like {{interwiki("wikipedia", "back-face culling")}} (removing polygons whose back side is facing the camera) and occlusion culling using {{interwiki("wikipedia", "hidden-surface determination")}} (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).
+Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like [back-face_culling](https://en.wikipedia.org/wiki/back-face_culling)}} (removing polygons whose back side is facing the camera) and occlusion culling using [hidden-surface determination](https://en.wikipedia.org/wiki/hidden-surface_determination)}} (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).
 
 ## Perspective projection matrix
 
@@ -614,12 +615,12 @@ Additionally (not shown), the position and scale matrices of the model have been
 
 [View on JSFiddle](https://jsfiddle.net/Lzxw7e1q)
 
-![A true perspective matrix](https://mdn.mozillademos.org/files/11383/part6.png)
+![A true perspective matrix](part6.png)
 
 ### Exercises
 
 - Experiment with the parameters of the perspective projection matrix and the model matrix.
-- Swap out the perspective projection matrix to use {{interwiki("wikipedia", "orthographic projection")}}. In the MDN WebGL shared code you'll find the `MDN.orthographicMatrix()`. This can replace the `MDN.perspectiveMatrix()` function in `CubeDemo.prototype.computePerspectiveMatrix()`.
+- Swap out the perspective projection matrix to use [orthographic projection](https://en.wikipedia.org/wiki/orthographic_projection). In the MDN WebGL shared code you'll find the `MDN.orthographicMatrix()`. This can replace the `MDN.perspectiveMatrix()` function in `CubeDemo.prototype.computePerspectiveMatrix()`.
 
 ## View matrix
 
@@ -677,7 +678,7 @@ After this step, the GPU pipeline will clip the out of range vertices, and send 
 
 [View on JSFiddle](https://jsfiddle.net/86fd797g)
 
-![The view matrix](https://mdn.mozillademos.org/files/11385/part7.png)
+![The view matrix](part7.png)
 
 ### Relating the coordinate systems
 
@@ -702,4 +703,4 @@ view space → projection matrix → clip space
 ## See also
 
 - [WebGL](/ja/docs/Web/API/WebGL_API)
-- {{interwiki("wikipedia", "3D projection")}}
+- [3D projection](https://en.wikipedia.org/wiki/3D_projection)

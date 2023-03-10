@@ -1,16 +1,8 @@
 ---
 title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
-tags:
-  - ECMAScript 2016
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - メソッド
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 ---
+
 {{JSRef}}
 
 **`includes()`** メソッドは、型付き配列が特定の要素を含んでいるかどうかを判断し、その結果に応じて `true` か `false` を返します。このメソッドは {{jsxref("Array.prototype.includes()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは [型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
@@ -52,9 +44,7 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes', 'TypedArray.prototype.includes')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

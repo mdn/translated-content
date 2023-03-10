@@ -1,7 +1,6 @@
 ---
 title: Window.window
 slug: Web/API/Window/window
-translation_of: Web/API/Window/window
 ---
 {{APIRef}}
 
@@ -9,21 +8,23 @@ translation_of: Web/API/Window/window
 
 window 객체의 window 프로퍼티는 자기 자신의 window 객체를 가리킨다. 즉, 아래의 표현들은 같은 window 객체를 반환하게 된다:
 
-    window.window
-    window.window.window
-    window.window.window.window
-      ...
+```js
+window.window
+window.window.window
+window.window.window.window
+...
+```
 
 웹페이지에서 window 객체는 전역 객체이기도 하다. 다시 말해서:
 
-1.  스크립트의 전역 변수는 사실 window 객체의 프로퍼티이다.
+1. 스크립트의 전역 변수는 사실 window 객체의 프로퍼티이다.
 
     ```js
     var global = {data: 0};
     alert(global === window.global); // true를 반환한다.
     ```
 
-2.  window 객체의 내장된 프로퍼티들은 window. 접두사 없이도 참조가 가능하다.
+2. window 객체의 내장된 프로퍼티들은 window. 접두사 없이도 참조가 가능하다.
 
     ```js
     setTimeout("alert('Hi!')", 50); // window.setTimeout. 을 사용한 것과 동일하다.

@@ -10,6 +10,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/warn
 ---
+
 {{ APIRef("Console API") }}
 
 Affiche un message d'avertissement dans la console web.

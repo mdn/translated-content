@@ -2,6 +2,7 @@
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}}.

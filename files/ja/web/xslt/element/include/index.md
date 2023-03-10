@@ -1,13 +1,8 @@
 ---
 title: <xsl:include>
 slug: Web/XSLT/Element/include
-tags:
-  - XSLT
-  - include
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/include
 ---
+
 {{ XsltRef() }}
 
 `<xsl:include>` 要素はあるスタイルシートの内容を別のスタイルシートにマージします。`<xsl:import>` の場合とは異なり、インクルードされたスタイルシートの内容はインクルードするスタイルシートの内容とまったく同じです。

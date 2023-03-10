@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 original_slug: Web/CSS/Requêtes_média/Utilisation_requêtes_media_accessibilité
 ---
+
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/Requêtes_média/")}}
 
 **Les requêtes média (_media queries_)** peuvent être utilisées afin d'améliorer l'accessibilité d'un site web.

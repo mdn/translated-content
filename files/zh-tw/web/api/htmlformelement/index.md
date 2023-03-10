@@ -2,6 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLFormElement`** 介面提供了建立及修改 {{HTMLElement("form")}} 元素的方法。
@@ -46,11 +47,11 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 - {{domxref("HTMLFormElement.reset()")}}
   - : Resets the form to its initial state.
 - {{domxref("HTMLFormElement.checkValidity()")}}
-  - : Returns `true` if the element's child controls are subject to constraint validation and satisfy those contraints; returns `false` if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
+  - : Returns `true` if the element's child controls are subject to constraint validation and satisfy those contraints; returns `false` if some controls do not satisfy their constraints. Fires an event named [`invalid`](/zh-TW/docs/Web/API/HTMLInputElement/invalid_event) at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
 - {{domxref("HTMLFormElement.reportValidity()")}}
-  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable {{Event("invalid")}} events are fired for each invalid child and validation problems are reported to the user.
+  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](/zh-TW/docs/Web/API/HTMLInputElement/invalid_event) events are fired for each invalid child and validation problems are reported to the user.
 - {{domxref("HTMLFormElement.requestAutocomplete()")}}
-  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be {{event("autocomplete")}} when the fields have been filled or {{event("autocompleteerror")}} when there was a problem.
+  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
 
 ## 範例
 
@@ -100,7 +101,7 @@ Extract information from a form element and set some of its attributes:
 </script>
 ```
 
-Submit a form in a [popup window](/en-US/docs/Web/API/Window/open):
+Submit a form in a [popup window](/zh-TW/docs/Web/API/Window/open):
 
 ```html
 <!doctype html>
@@ -149,7 +150,7 @@ function popupSend (oFormElement) {
 
 ### 使用 `XMLHttpRequest` 提交表單及上傳檔案
 
-If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read [this paragraph](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
+If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read [this paragraph](/zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
 
 ## 規範
 
@@ -157,7 +158,7 @@ If you want to know how to serialize and submit a form using the {{domxref("XMLH
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLFormElement")}}
+{{Compat}}
 
 ## 參見
 

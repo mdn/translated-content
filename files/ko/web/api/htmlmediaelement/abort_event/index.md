@@ -1,16 +1,9 @@
 ---
 title: abort
 slug: Web/API/HTMLMediaElement/abort_event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - 레퍼런스
-  - 이벤트
-translation_of: Web/API/HTMLMediaElement/abort_event
-translation_of_original: Web/Events/abort
 original_slug: Web/Events/abort
 ---
+
 **`abort`** 이벤트는 리소스의 로딩이 중단되었을 때, 발생합니다.
 
 ## 개요
@@ -32,9 +25,9 @@ original_slug: Web/Events/abort
 
 | 속성                                  | 타입                                                                                                                                                         | 설명                                                                                                                                                                                                           |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ko/docs/Web/API/EventTarget "EventTarget is an interface implemented by objects that can receive events and may have listeners for them.")  | 이벤트 타겟 (DOM tree의 최상위 타겟).                                                                                                                                                                          |
-| `type` {{readonlyInline}}       | [`DOMString`](/ko/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") | 이벤트의 타입                                                                                                                                                                                                  |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ko/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.")                                                         | 이벤트가 버블링 되는지 안되는지                                                                                                                                                                                |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ko/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.")                                                         | 이벤트가 취소 가능한지 아닌지                                                                                                                                                                                  |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ko/docs/Web/API/WindowProxy "The documentation about this has not yet been written; please consider contributing!")                         | [`document.defaultView`](/ko/docs/Web/API/Document/defaultView "In browsers, document.defaultView returns the window object associated with a document, or null if none is available.") (document의 `window` ) |
+| `target` {{readonlyInline}}     | [`EventTarget`](/ko/docs/Web/API/EventTarget)  | 이벤트 타겟 (DOM tree의 최상위 타겟).                                                                                                                                                                          |
+| `type` {{readonlyInline}}       | [`DOMString`](/ko/docs/Web/API/DOMString) | 이벤트의 타입                                                                                                                                                                                                  |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/ko/docs/Web/API/Boolean)                                                         | 이벤트가 버블링 되는지 안되는지                                                                                                                                                                                |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/ko/docs/Web/API/Boolean)                                                         | 이벤트가 취소 가능한지 아닌지                                                                                                                                                                                  |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/ko/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/ko/docs/Web/API/Document/defaultView) (document의 `window` ) |
 | `detail` {{readonlyInline}}     | `long` (`float`)                                                                                                                                             | 0.                                                                                                                                                                                                             |

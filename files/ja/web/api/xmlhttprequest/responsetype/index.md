@@ -2,6 +2,7 @@
 title: XMLHttpRequest.responseType
 slug: Web/API/XMLHttpRequest/responseType
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} (XHR) の **`responseType`** プロパティは列挙型の文字列値で、レスポンスに含まれているデータの型を示します。
@@ -35,7 +36,7 @@ XMLHttpRequest.responseType = type;
 - `"ms-stream"` {{non-standard_inline}}
   - : `response` はストリーミングダウンロードの一部です。このレスポンス型はダウンロードリクエストでのみ利用可能で、 Internet Explorer のみが対応しています。
 
-> **Note:** `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、 {{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
+> **メモ:** `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、 {{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
 </div>
 
 ### 例外

@@ -11,6 +11,7 @@ tags:
   - trace
 translation_of: Web/API/Console/trace
 ---
+
 {{ APIRef("Console API") }}
 
 Affiche la _stack trace_ dans la [Web Console](/fr/docs/Outils/Console_Web).

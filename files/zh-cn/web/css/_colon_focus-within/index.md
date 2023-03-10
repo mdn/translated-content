@@ -2,6 +2,7 @@
 title: ':focus-within'
 slug: Web/CSS/:focus-within
 ---
+
 {{CSSRef}}
 
 **`:focus-within`** 是一个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) ，表示一个元素获得焦点，或，该元素的后代元素获得焦点。换句话说，元素自身或者它的某个后代匹配 {{CSSxRef(":focus")}} 伪类。（[shadow DOM 树](/zh-CN/docs/Web/Web_Components/Shadow_DOM)中的后代也包括在内）
@@ -66,7 +67,7 @@ input {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.focus-within")}}
+{{Compat}}
 
 ## 参见
 

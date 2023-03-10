@@ -1,25 +1,9 @@
 ---
 title: '<th>: 表見出し要素'
 slug: Web/HTML/Element/th
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Heading Cell
-  - Reference
-  - Table Cell
-  - Table Head
-  - Table Header
-  - Table Heading
-  - Table Heading Cell
-  - Tables
-  - Web
-  - cell
-browser-compat: html.elements.th
-translation_of: Web/HTML/Element/th
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、{{htmlattrxref("scope", "th")}} 属性と {{htmlattrxref("headers", "th")}} 属性で定義します。
 
@@ -54,7 +38,7 @@ translation_of: Web/HTML/Element/th
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        {{ARIARole("columnheader")}} または {{ARIARole("rowheader")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role">columnheader</a></code> または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role">rowheader</a></code>
       </td>
     </tr>
     <tr>
@@ -105,7 +89,7 @@ translation_of: Web/HTML/Element/th
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
-    > **Note:** この属性は最新の標準仕様で廃止されたため、使用しないでください。
+    > **メモ:** この属性は最新の標準仕様で廃止されたため、使用しないでください。
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
     > - `char` の値と同様の効果を得るには、 {{cssxref("text-align")}} プロパティに {{htmlattrxref("char", "th")}} で使用する値と同じものを指定してください。
@@ -114,7 +98,7 @@ translation_of: Web/HTML/Element/th
 
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
 
-    > **Note:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに {{htmlattrxref("scope", "th")}} 属性を使用してください。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに {{htmlattrxref("scope", "th")}} 属性を使用してください。
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -137,25 +121,25 @@ translation_of: Web/HTML/Element/th
     - `fuchsia` = "#FF00FF"
     - `aqua` = "#00FFFF"
 
-    > **Note:** この属性は標準外であり Internet Explorer の一部バージョンしか実装していませんので、使用しないでください。 {{HTMLElement("th")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイル付けをしてください。同様の効果を与えるには、 [CSS](/ja/docs/Web/CSS) の {{cssxref("background-color")}} プロパティを使用してください。
+    > **メモ:** この属性は標準外であり Internet Explorer の一部バージョンしか実装していませんので、使用しないでください。 {{HTMLElement("th")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイル付けをしてください。同様の効果を与えるには、 [CSS](/ja/docs/Web/CSS) の {{cssxref("background-color")}} プロパティを使用してください。
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 
   - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 {{htmlattrxref("align", "th")}} 属性を `char` に設定していない場合は、この属性を無視します。
 
-    > **Note:** この属性は最新の標準で廃止されているため、使用しないでください。 CSS3 で同じ効果を得るには、 {{cssxref("text-align")}} プロパティの最初の値としてその文字を設定することができます。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。 CSS3 で同じ効果を得るには、 {{cssxref("text-align")}} プロパティの最初の値としてその文字を設定することができます。
 
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
 
   - : この属性は、 **char** 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。この値は、このシフトの長さを指定します。
 
-    > **Note:** この属性は最新の標準で廃止されているため、使用しないでください。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。
 
 - {{htmlattrdef("height")}} {{deprecated_inline}}
 
   - : この属性はセルの高さの推奨値を定義するために使用されます。
 
-    > **Note:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("height")}} プロパティを使用してください。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("height")}} プロパティを使用してください。
 
 - {{htmlattrdef("valign")}} {{deprecated_inline}}
 
@@ -166,13 +150,13 @@ translation_of: Web/HTML/Element/th
     - `middle`: テキストをセル内の中央に置きます。
     - `top`: テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **Note:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
 
 - {{htmlattrdef("width")}} {{deprecated_inline}}
 
   - : この属性は、セルの推奨する幅を定義します。 {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} および {{domxref("HTMLTableElement.cellPadding", "cellpadding")}} プロパティで追加のスペースを追加し、また {{HTMLElement("col")}} の幅も影響を与えます。通常、列の幅が特定のセルを正常に表示できないほど狭く、またそのようなセルが存在する場合は、表示する際に幅を広げるでしょう。
 
-    > **Note:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
 
 ## 例
 

@@ -1,13 +1,8 @@
 ---
 title: 塗りつぶしとストローク
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-tags:
-  - Beginner
-  - NeedLiveSamples
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
 図形に色を付ける方法としては (オブジェクトに属性を指定することを含む)、インライン [CSS](/ja/docs/Glossary/CSS)、埋め込み CSS セクション、外部 CSS ファイルなどいくつかの方法があります。ほとんどに [SVG](/ja/docs/Glossary/SVG) ではインライン CSS を使用していますが、どの方法にも利点と欠点があります。
@@ -25,7 +20,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 さらに、 SVG では `fill` と `stroke` の透明度を別々に指定することができます。これらは `fill-opacity` 属性と `stroke-opacity` 属性で制御されます。
 
-> **Note:** Firefox 3+ 以降では、 `rgba` の値も許可されており、同じ効果が得られます。しかし、他のビューアーとの互換性を考慮すると、 `fill`/`stroke` の透明度を個別に指定したほうがよい場合があります。 `rgba` 値と `fill`/`stroke` opacity 値の両方を指定した場合、両方が適用されます。
+> **メモ:** Firefox 3+ 以降では、 `rgba` の値も許可されており、同じ効果が得られます。しかし、他のビューアーとの互換性を考慮すると、 `fill`/`stroke` の透明度を個別に指定したほうがよい場合があります。 `rgba` 値と `fill`/`stroke` opacity 値の両方を指定した場合、両方が適用されます。
 
 ### ストローク
 
@@ -89,7 +84,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 `stroke-dasharray` 属性は引数として、連続したカンマ区切りの数値をとります。
 
-> **Note:** {{SVGElement("path")}} とは異なり、これらの数値はカンマ区切りでなければ**_なりません_** (ホワイトスペースは無視されます)。
+> **メモ:** {{SVGElement("path")}} とは異なり、これらの数値はカンマ区切りでなければ**_なりません_** (ホワイトスペースは無視されます)。
 
 最初の数字は塗りつぶされた部分の長さを、 2 番目の数字は塗りつぶされていない部分の長さを指定します。上の例では、 2 番目のパスで 5 ピクセル単位を埋め、 5 単位の次のダッシュまで 5 単位の空白を作ります。もっと複雑なダッシュパターンにしたい場合は、より多くの数字を指定することができます。最初の例では 3 つの数字を指定していますが、この場合、レンダラーは数字を 2 回ループさせて偶数のパターンを作ります。つまり、最初のパスでは、 5 個の塗りつぶし、 10 個の空、 5 個の塗りつぶしがレンダリングされ、さらにループして、 5 個の空、 10 個の塗りつぶし、 5 個の空が作成されます。このパターンが繰り返されます。
 
@@ -99,7 +94,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 オブジェクトに属性を設定するだけでなく、 CSS を使って塗りつぶしやストロークのスタイルを設定することもできます。すべての属性を CSS で設定できるわけではありません。ふつうは描画や塗りつぶしを行う属性が利用できます。 `fill`, `stroke`, `stroke-dasharray` などは、グラデーションや後述するパターン版に追加することで、すべてこの方法で設定できます。 `width`, `height`, {{SVGElement("path")}} コマンドなどの属性は、 CSS では設定できません。何が使えて、何が使えないのかは、テストしてみるのが一番簡単です。
 
-> **Note:** [SVG 仕様書](https://www.w3.org/TR/SVG/propidx.html) では*プロパティ*とその他の属性を厳密に区別しています。前者は CSS で変更できますが、後者はできません。
+> **メモ:** [SVG 仕様書](https://www.w3.org/TR/SVG/propidx.html) では*プロパティ*とその他の属性を厳密に区別しています。前者は CSS で変更できますが、後者はできません。
 
 CSS は要素に `style` 属性を用いることで、インラインで挿入することができます。
 

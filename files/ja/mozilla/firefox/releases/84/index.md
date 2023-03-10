@@ -1,18 +1,21 @@
 ---
 title: Firefox 84 for developers
 slug: Mozilla/Firefox/Releases/84
+l10n:
+  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 84 の変更点をまとめています。Firefox 84 は、2020 年 12 月 15 日にリリースされました。
 
-> **Note:** Mozilla Hacks の [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) もご覧ください。
+> **メモ:** Mozilla Hacks の [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- Firefox の [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) で、ウェブページの [タブオーダー](/ja/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order) の表示をサポートしました。ページがキー操作でどのようなナビゲーションになるかを、リンクをタブ移動するよりも高レベルな概要で示します ({{bug(1654956)}})。
+- Firefox の [アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) で、ウェブページの [タブオーダー](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order) の表示をサポートしました。ページがキー操作でどのようなナビゲーションになるかを、リンクをタブ移動するよりも高レベルな概要で示します ({{bug(1654956)}})。
 
 ### HTML
 
@@ -20,7 +23,7 @@ _変更なし。_
 
 ### CSS
 
-- {{cssxref(":not")}} 疑似クラスで、複雑なセレクターをサポートしました ({{bug(933562)}})。
+- {{cssxref(":not")}} 擬似クラスで、複雑なセレクターをサポートしました ({{bug(933562)}})。
 
 #### 廃止
 
@@ -36,7 +39,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- Firefox で _http\://localhost/_ や _http\://dev.localhost/_ のような `localhost` URL が、ローカルホストのループバックインターフェイス (例えば _http\://127.0.0.1_) を参照するものとして保証されるようになりました。この結果、`localhost` から読み込まれるリソースが安全に提供された ([安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) を参照) とみなされ、[混在コンテンツ](/ja/docs/Web/Security/Mixed_content) として扱われなくなります ({{bug(1220810)}}, {{bug(1488740)}})。
+- Firefox で `http://localhost/` や `http://dev.localhost/` のような `localhost` URL が、ローカルホストのループバックインターフェイス (例えば `http://127.0.0.1`) を参照するものとして保証されるようになりました。この結果、`localhost` から読み込まれるリソースが安全に提供された ([安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) を参照) とみなされ、[混在コンテンツ](/ja/docs/Web/Security/Mixed_content) として扱われなくなります ({{bug(1220810)}}, {{bug(1488740)}})。
 
 ### API
 
@@ -49,7 +52,7 @@ _変更なし。_
 
 #### 廃止
 
-- [アプリケーションキャッシュ](/ja/docs/Web/HTML/Using_the_application_cache) を削除しました。開発者は、代わりに [Service Worker API](/ja/docs/Web/API/Service_Worker_API) を使用してください ({{bug(1619673)}})。
+- アプリケーションキャッシュを削除しました。開発者は、代わりに[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) を使用してください ({{bug(1619673)}})。
 
 ### WebAssembly
 

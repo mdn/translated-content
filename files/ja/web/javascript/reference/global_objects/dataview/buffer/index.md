@@ -1,14 +1,8 @@
 ---
 title: DataView.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
-tags:
-  - DataView
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 ---
+
 {{JSRef}}
 
 **`buffer`** アクセサープロパティは、この `DataView` の構築時に参照された {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} を表します。
@@ -31,9 +25,7 @@ dataview.buffer; // ArrayBuffer { byteLength: 8 }
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.buffer', 'DataView.prototype.buffer')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

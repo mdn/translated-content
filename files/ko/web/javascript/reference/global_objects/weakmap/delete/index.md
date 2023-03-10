@@ -1,15 +1,8 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** 메서드는 {{jsxref("WeakMap")}} 객체에서 특정 요소를 제거합니다.

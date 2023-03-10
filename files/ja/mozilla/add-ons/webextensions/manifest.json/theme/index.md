@@ -2,9 +2,10 @@
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
+
 {{AddonSidebar}}
 
-> **Note:** Note that you can't yet submit static WebExtension-based themes to addons.mozilla.org. The work to support this is tracked in <https://github.com/mozilla/addons/issues/501>. If you want to share a theme with other users, you'll need to make it either a [lightweight theme](/ja/docs/Mozilla/Add-ons/Themes/Lightweight_themes) or a [dynamic theme](/ja/Add-ons/WebExtensions/API/theme).
+> **メモ:** Note that you can't yet submit static WebExtension-based themes to addons.mozilla.org. The work to support this is tracked in <https://github.com/mozilla/addons/issues/501>. If you want to share a theme with other users, you'll need to make it either a [lightweight theme](/ja/docs/Mozilla/Add-ons/Themes/Lightweight_themes) or a [dynamic theme](/ja/Add-ons/WebExtensions/API/theme).
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -37,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 
 theme キーを使って Firefox に適用する静的なテーマを定義します。
 
-> **Note:** If your manifest.json file includes the theme key, the extension is assumed to be a theme and any other WebExtension keys are ignored. If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
+> **メモ:** If your manifest.json file includes the theme key, the extension is assumed to be a theme and any other WebExtension keys are ignored. If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
 
 ## 画像フォーマット
 
@@ -168,106 +169,144 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
   </thead>
   <tbody>
     <tr>
-      <td><code>accentcolor</code></td>
       <td>
+        <p><code>accentcolor</code> {{Deprecated_Inline}}</p>
+      </td>
+      <td>
+        <div class="notecard warning">
+          <p>
+            <strong>Warning:</strong> <code>accentcolor</code> has been removed
+            in Firefox 70. You will begin to get warnings in Firefox 65 and
+            later if you load a theme that uses this property. Use the
+            <code>frame</code> property instead.
+          </p>
+        </div>
         <p>
           The color of the header area background, displayed in the part of the
           header not covered or visible through the images specified in
           <code>"headerURL"</code> and <code>"additional_backgrounds"</code>.
         </p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
      "accentcolor": "red",
-     "textcolor": "white"
+     "tab_background_text": "white"
   }
 }</pre
           >
+        </details>
+        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>bookmark_text</code></td>
+      <td>
+        <p>
+          The color of text and icons in the bookmark and find bars. Also, if
+          <code>tab_text</code> isn't defined it sets the color of the active
+          tab text and if <code>icons</code> isn't defined the color of the
+          toolbar icons. Provided as Chrome compatible alias for
+          <code>toolbar_text</code>.
+        </p>
+        <div class="notecard note">
           <p>
-            <img
-              alt=""
-              src="theme-accentcolor.png"
-              style="height: 302px; width: 738px"
-            />
+            <strong>Note:</strong> Ensure any color used contrasts well with
+            those used in <code>frame</code> and <code>frame_inactive</code> or
+            <code>toolbar</code> if you're using that property.
+          </p>
+          <p>
+            Where <code>icons</code> isn't defined, also ensure good contrast
+            with<code> button_background_active</code> and
+            <code>button_background_hover</code>.
           </p>
         </div>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "tab_text": "white",
+    "toolbar": "black",
+    "bookmark_text": "red"
+  }
+}</pre
+          >
+        </details>
+        <p>
+          <img
+            alt="Browser Firefox is black. Browser's tab is black with white text. URL bar and the find in page bar are white with black text but all the browser and the find in page bar icons are red."
+            src="theme-bookmark_text.png"
+          />
+        </p>
       </td>
     </tr>
     <tr>
       <td><code>button_background_active</code></td>
       <td>
         <p>The color of the background of the pressed toolbar buttons.</p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "button_background_active": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-button_background_active.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The customize toolbar icon in the url bar in white with a red background is pressed and a popup is open displaying a short list of thing to add to the toolbar such as the browser's library and the sidebars." src="theme-button_background_active.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>button_background_hover</code></td>
       <td>
         <p>The color of the background of the toolbar buttons on hover.</p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "button_background_hover": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-button_background_hover.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The go back one page icon is white with a red circle background." src="theme-button_background_hover.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>icons</code></td>
       <td>
-        <p>The color of toolbar icons.</p>
-        <div>
-          <span>See example</span>
+        <p>The color of toolbar icons, excluding those in the find toolbar.</p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            those used in <code>frame</code>, <code>frame_inactive</code>,
+            <code>button_background_active</code>, and
+            <code>button_background_hover</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "icons": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-icons.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The URL bar and open a new tab icons are red. The red icons contrast well with the black background color of the header area." src="theme-icons.png" /></p>
       </td>
     </tr>
     <tr>
@@ -277,80 +316,163 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           The color of toolbar icons in attention state such as the starred
           bookmark icon or finished download icon.
         </p>
-        <div>
-          <span>See example</span>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            those used in <code>frame</code>, <code>frame_inactive</code>,
+            <code>button_background_active</code>, and
+            <code>button_background_hover</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "icons_attention": "red"
   }
 }</pre
           >
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The bookmark this page icon is red and pressed, an open popup name edit this bookmark is displayed. While in attention state, the toolbar icons contrast well with the black background of the header area." src="theme-icons_attention.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>frame</code></td>
+      <td>
+        <p>
+          The color of the header area background, displayed in the part of the
+          header not covered or visible through the images specified in
+          <code>"theme_frame"</code> and <code>"additional_backgrounds"</code>.
+        </p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "frame": "red",
+     "tab_background_text": "white"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>frame_inactive</code></td>
+      <td>
+        <p>
+          The color of the header area background when the browser window is
+          inactive, displayed in the part of the header not covered or visible
+          through the images specified in <code>"theme_frame"</code> and
+          <code>"additional_backgrounds"</code>.
+        </p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "frame": "red",
+     "frame_inactive": "gray",
+     "tab_text": "white"
+  }
+}</pre
+          >
+        </details>
+        <p>
+          <img
+            alt="Browser firefox is grey. Browser's tabs and URL bar are lighter grey. The tab text is white and the URL bar icon are darker grey."
+            src="theme-frame_inactive.png"
+          />
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>ntp_background</code></td>
+      <td>
+        <p>The new tab page background color.</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "ntp_background": "red",
+     "ntp_text": "white"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles." src="ntp_colors.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>ntp_text</code></td>
+      <td>
+        <p>The new tab page text color.</p>
+        <div class="notecard note">
           <p>
-            <img
-              alt=""
-              src="theme-icons_attention.png"
-              style="height: 324px; width: 738px"
-            />
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            that used in <code>ntp_background</code>.
           </p>
         </div>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "ntp_background": "red",
+     "ntp_text": "white"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles. The color of the text in the new tab page is white." src="ntp_colors.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>popup</code></td>
       <td>
         <p>
-          The background color of popups (such as the url bar dropdown and the
+          The background color of popups (such as the URL bar dropdown and the
           arrow panels).
         </p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "popup": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-popup.png"
-              style="height: 324px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red background. The background color of the popup is red." src="theme-popup.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>popup_border</code></td>
       <td>
         <p>The border color of popups.</p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "popup": "black",
      "popup_text": "white",
      "popup_border": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-popup_border.png"
-              style="height: 324px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red outline and black background. The popup's border is red." src="theme-popup_border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -358,217 +480,377 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
       <td>
         <p>
           The background color of items highlighted using the keyboard inside
-          popups (such as the selected url bar dropdown item).
+          popups (such as the selected URL bar dropdown item).
         </p>
-        <div>
-          <span>See example</span>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> It's recommended to define
+            <code>popup_highlight_text</code> to override the browser default
+            text color on various platforms.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
-     "popup_highlight": "red"
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup_highlight": "red",
+     "popup_highlight_text": "white"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-popup_highlight.png"
-              style="height: 490px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="screenshot of firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's background in red. The background color of the highlighted item inside the popup is red." src="theme-popup_highlight.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>popup_highlight_text</code></td>
       <td>
-        <p>
-          The text color of items highlighted using the keyboard inside popups.
-        </p>
-        <div>
-          <span>See example</span>
+        <p>The text color of items highlighted inside popups.</p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            that used in <code>popup_highlight</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "popup_highlight": "black",
      "popup_highlight_text": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-popup_highlight_text.png"
-              style="height: 490px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>popup_text</code></td>
       <td>
         <p>The text color of popups.</p>
-        <div>
-          <span>See example</span>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            that used in <code>popup</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "popup": "black",
      "popup_text": "red"
   }
 }</pre
           >
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with items texts in red. The text color contrasts well with the black background color of the popup." src="popup_text.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>sidebar</code></td>
+      <td>
+        <p>The background color of the sidebar.</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "sidebar": "red",
+     "sidebar_highlight": "white",
+     "sidebar_highlight_text": "green",
+     "sidebar_text": "white"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red." src="sidebar_colors.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>sidebar_border</code></td>
+      <td>
+        <p>The border and splitter color of the browser sidebar</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "sidebar_border": "red"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red." src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>sidebar_highlight</code></td>
+      <td>
+        <p>The background color of highlighted rows in built-in sidebars</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "sidebar_highlight": "red",
+     "sidebar_highlight_text": "white"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>sidebar_highlight_text</code></td>
+      <td>
+        <p>The text color of highlighted rows in sidebars.</p>
+        <div class="notecard note">
           <p>
-            <img
-              alt=""
-              src="popup_text.png"
-              style="height: 490px; width: 738px"
-            />
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            that used in <code>sidebar_highlight</code>.
           </p>
         </div>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+    "sidebar_highlight": "pink",
+    "sidebar_highlight_text": "red",
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>sidebar_text</code></td>
+      <td>
+        <p>The text color of sidebars.</p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            that used in <code>sidebar</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "sidebar": "red",
+     "sidebar_highlight": "white",
+     "sidebar_highlight_text": "green",
+     "sidebar_text": "white"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>tab_background_separator</code> {{Deprecated_Inline}}
+      </td>
+      <td>
+        <div class="notecard warning">
+          <p>
+            <strong>Warning:</strong> <code>tab_background_separator</code> is
+            not supported starting with Firefox 89.
+          </p>
+        </div>
+        <p>The color of the vertical separator of the background tabs.</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_background_separator": "red"
+  }
+}</pre
+          >
+        </details>
+        <p>
+          <img
+            alt="A closeup of browser tabs to highlight the separator."
+            src="theme-tab-background-separator.png"
+          />
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>tab_background_text</code></td>
+      <td>
+        <p>
+          The color of the text displayed in the inactive page tabs. If
+          <code>tab_text</code> or <code>bookmark_text</code> isn't specified,
+          applies to the active tab text.
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            those used in <code>tab_selected</code> or <code>frame</code> and
+            <code>frame_inactive</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+    "frame": "black",
+    "toolbar": "white",
+    "tab_background_text": "red"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-textcolor.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>tab_line</code></td>
       <td>
         <p>The color of the selected tab line.</p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "tab_line": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-tab_line.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are darker grey with lighter grey icons and white text. The selected tab has a red outline." src="theme-tab_line.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>tab_loading</code></td>
       <td>
         <p>The color of the tab loading indicator and the tab loading burst.</p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "tab_loading": "red"
   }
 }</pre
           >
-          <img
-            alt=""
-            src="theme-tab_loading.gif"
-            style="height: 186px; width: 618px"
-          />
-        </div>
+        </details>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab a animated loading indicator is red." src="theme-tab_loading.gif" /></p>
       </td>
     </tr>
     <tr>
       <td><code>tab_selected</code></td>
       <td>
-        <p>The background color of the selected tab.</p>
-        <div>
-          <span>See example</span>
+        <p>
+          The background color of the selected tab. When not in use selected tab
+          color is set by <code>frame</code> and the
+          <code>frame_inactive</code>.
+        </p>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "images": {
-  "headerURL": "weta.png"
+  "theme_frame": "weta.png"
 },
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "tab_selected": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-tab_selected.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. The selected tab has red background and white text." src="theme-tab_selected.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>tab_text</code></td>
       <td>
         <p>
-          From Firefox 59, it represents the text color for the selected tab.
+          From Firefox 59, it represents the text color for the selected tab. If
+          <code>tab_line</code> isn't specified, it also defines the color of
+          the selected tab line.
         </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            those used in <code>tab_selected</code> or <code>frame</code> and
+            <code>frame_inactive</code>.
+          </p>
+        </div>
         <p>
-          From Firefox 55 to 58, it is the same as <code>"textcolor"</code>,
-          provided for <a href="#Chrome_compatibility">Chrome compatibility</a>.
+          From Firefox 55 to 58, it is incorrectly implemented as alias for
+          <code>"textcolor"</code>
         </p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "images": {
-  "headerURL": "weta.png"
+  "theme_frame": "weta.png"
 },
   "colors": {
-     "accentcolor": "black",
-     "textcolor": "white",
+     "frame": "black",
+     "tab_background_text": "white",
      "tab_selected": "white",
      "tab_text": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-tab_text.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox has a picture of an insect theme. URL bar is lighter grey with white icons. The selected tab text is red with white background." src="theme-tab_text.png" /></p>
       </td>
     </tr>
     <tr>
-      <td><code>textcolor</code></td>
+      <td><code>textcolor</code> {{Deprecated_Inline}}</td>
       <td>
+        <div class="notecard warning">
+          <p>
+            <strong>Warning:</strong> <code>textcolor</code> has been removed in
+            Firefox 70. You will begin to get warnings in Firefox 65 and later
+            if you load a theme that uses this property. Use
+            <code>tab_background_text</code> instead.
+          </p>
+        </div>
         <p>The color of the text displayed in the header area.</p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
+    "frame": "black",
     "toolbar": "white",
     "textcolor": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-textcolor.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are white with red text and red icons." src="theme-textcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -578,25 +860,20 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           The background color for the navigation bar, the bookmarks bar, and
           the selected tab.
         </p>
-        <div>
-          <span>See example</span>
+        <p>This also sets the background color of the "Find" bar.</p>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
+    "frame": "black",
     "toolbar": "red",
-    "textcolor": "white"
+    "tab_background_text": "white"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are red with white text and icons, except for the find in page bar where the text and icon are black." src="toolbar.png" /></p>
       </td>
     </tr>
     <tr>
@@ -606,25 +883,19 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           The color of the line separating the bottom of the toolbar from the
           region below.
         </p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
-    "textcolor": "white",
+    "frame": "black",
+    "tab_background_text": "white",
     "toolbar_bottom_separator": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_bottom_separator.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are lighter grey with white text and icons. A horizontal red line separates the bottom of the toolbar and the beginning of the display of the web page." src="theme-toolbar_bottom_separator.png" /></p>
       </td>
     </tr>
     <tr>
@@ -633,81 +904,71 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
         <p>
           The background color for fields in the toolbar, such as the URL bar.
         </p>
-        <div>
-          <span>See example</span>
+        <p>
+          This also sets the background color of the
+          <strong>Find in page</strong> field.
+        </p>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
-    "textcolor": "white",
+    "frame": "black",
+    "tab_background_text": "white",
     "toolbar_field": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_field.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are lighter grey with white text and icons. The background color of the URL bar is red. The find in page bar is white with black text. The find in page field is red with black text." src="toolbar-field.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>toolbar_field_border</code></td>
       <td>
         <p>The border color for fields in the toolbar.</p>
-        <div>
-          <span>See example</span>
+        <p>
+          This also sets the border color of the
+          <strong>Find in page</strong> field.
+        </p>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
+    "frame": "black",
     "toolbar": "black",
-    "textcolor": "white",
+    "tab_background_text": "white",
     "toolbar_field": "black",
     "toolbar_field_text": "white",
     "toolbar_field_border": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_field_border.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The URL bar and find in page fields are outlined in red." src="toolbar-field-border.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>toolbar_field_border_focus</code></td>
       <td>
         <p>The focused border color for fields in the toolbar.</p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
+    "frame": "black",
     "toolbar": "black",
-    "textcolor": "white",
+    "tab_background_text": "white",
     "toolbar_field": "black",
     "toolbar_field_text": "white",
     "toolbar_field_border_focus": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_field_border_focus.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with white text and icons. The url bar field is focused and outlined in red." src="theme-toolbar_field_border_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -717,55 +978,157 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           The focused background color for fields in the toolbar, such as the
           URL bar.
         </p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
+    "frame": "black",
     "toolbar": "black",
-    "textcolor": "white",
+    "tab_background_text": "white",
     "toolbar_field": "black",
     "toolbar_field_text": "white",
     "toolbar_field_focus": "red"
   }
 }</pre
           >
+        </details>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The background color of the focused URL bar is red and the text is white." src="theme-toolbar_field_focus.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>toolbar_field_highlight</code></td>
+      <td>
+        The background color used to indicate the current selection of text in
+        the URL bar (and the search bar, if it's configured to be separate).
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+    "toolbar_field": "rgba(255, 255, 255, 0.91)",
+    "toolbar_field_text": "rgb(0, 100, 0)",
+    "toolbar_field_highlight": "rgb(180, 240, 180, 0.9)",
+    "toolbar_field_highlight_text": "rgb(0, 80, 0)"
+  }
+}</pre
+          >
+        </details>
+        <p>
+          <img
+            alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
+            src="toolbar_field_highlight.png"
+          />
+        </p>
+        <p>
+          Here, the <code>toolbar_field_highlight</code> field specifies that
+          the highlight color is a light green, while the text is set to a
+          dark-to-medium green using <code>toolbar_field_highlight_text</code>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>toolbar_field_highlight_text</code></td>
+      <td>
+        <p>
+          The color used to draw text that's currently selected in the URL bar
+          (and the search bar, if it's configured to be separate box).
+        </p>
+        <div class="notecard note">
           <p>
-            <img
-              alt=""
-              src="theme-toolbar_field_focus.png"
-              style="height: 302px; width: 738px"
-            />
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            those used in <code>toolbar_field_highlight</code>.
           </p>
         </div>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+    "toolbar_field": "rgba(255, 255, 255, 0.91)",
+    "toolbar_field_text": "rgb(0, 100, 0)",
+    "toolbar_field_highlight": "rgb(180, 240, 180, 0.9)",
+    "toolbar_field_highlight_text": "rgb(0, 80, 0)"
+  }
+}</pre
+          >
+        </details>
+        <p>
+          <img
+            alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
+            src="toolbar_field_highlight.png"
+          />
+        </p>
+        <p>
+          Here, the <code>toolbar_field_highlight_text</code> field is used to
+          set the text color to a dark medium-dark green, while the highlight
+          color is a light green.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>toolbar_field_separator</code> {{Deprecated_Inline}}</td>
+      <td>
+        <div class="notecard warning">
+          <p>
+            <strong>Warning:</strong> <code>toolbar_field_separator</code> is
+            not supported starting with Firefox 89.
+          </p>
+        </div>
+        <p>
+          The color of separators inside the URL bar. In Firefox 58 this was
+          implemented as <code>toolbar_vertical_separator</code>.
+        </p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field_separator": "red"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. Inside the white URL bar field, after the reader mode icon a red vertical line separating the rest of URL bar icons. The color of the vertical separator line inside the URL bar is red." src="theme-toolbar_field_separator.png" /></p>
+        <p>
+          In this screenshot, <code>"toolbar_vertical_separator"</code> is the
+          red vertical line in the URL bar dividing the Reader Mode icon from
+          the other icons.
+        </p>
       </td>
     </tr>
     <tr>
       <td><code>toolbar_field_text</code></td>
       <td>
-        <p>The color of text in fields in the toolbar, such as the URL bar.</p>
-        <div>
-          <span>See example</span>
+        <p>
+          The color of text in fields in the toolbar, such as the URL bar. This
+          also sets the color of text in the
+          <strong>Find in page</strong> field.
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            those used in <code>toolbar_field</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
+    "frame": "black",
     "toolbar": "black",
-    "textcolor": "white",
+    "tab_background_text": "white",
     "toolbar_field": "black",
     "toolbar_field_text": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_field_text.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. The text inside the URL bar is red. The icons and find in page field have red text with black background." src="toolbar-field-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -775,88 +1138,57 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           The color of text in focused fields in the toolbar, such as the URL
           bar.
         </p>
-        <div>
-          <span>See example</span>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Ensure the color used contrasts well with
+            those used in <code>toolbar_field_focus</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
+    "frame": "black",
     "toolbar": "black",
-    "textcolor": "white",
+    "tab_background_text": "white",
     "toolbar_field": "black",
     "toolbar_field_text": "white",
     "toolbar_field_text_focus": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_field_text_focus.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_separator</code></td>
-      <td>
-        <p>
-          The color of separators inside the URL bar. In Firefox 58 this was
-          implemented as <code>toolbar_vertical_separator</code>.
-        </p>
-        <div>
-          <span>See example</span>
-          <pre class="brush: json">
-"theme": {
-  "colors": {
-    "accentcolor": "black",
-    "toolbar": "black",
-    "textcolor": "white",
-    "toolbar_field_separator": "red"
-  }
-}</pre
-          >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_field_separator.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-          <p>
-            In this screenshot, <code>"toolbar_vertical_separator"</code> is the
-            white vertical line in the URL bar dividing the Reader Mode icon
-            from the other icons.
-          </p>
-        </div>
+        </details>
+        <p><img alt="A screenshot of a browser window with two open tabs. Browser is black. Browser's tab and URL bar are black with text and icons in white. The URL bar has focus; the bar's text and icons are red with black background." src="theme-toolbar_field_text_focus.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>toolbar_text</code></td>
       <td>
-        <p>The color of toolbar text.</p>
-        <div>
-          <span>See example</span>
+        <p>
+          The color of toolbar text. This also sets the color of text in the
+          "Find" bar.
+        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> For compatibility with Chrome, use the alias
+            <code>bookmark_text</code>.
+          </p>
+        </div>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
-    "textcolor": "white",
+    "frame": "black",
+    "tab_background_text": "white",
     "toolbar": "black",
     "toolbar_text": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_text.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab, find in page bar, and URL bar are black with red text and icons. The text inside the active tab, the navigator bar and the find bar is red." src="toolbar-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -866,56 +1198,43 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
           The color of the line separating the top of the toolbar from the
           region above.
         </p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
-    "textcolor": "white",
+    "frame": "black",
+    "tab_background_text": "white",
     "toolbar": "black",
     "toolbar_top_separator": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_top_separator.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. A red line separates the top of the URL bar from the browser." src="theme-toolbar_top_separator.png" /></p>
       </td>
     </tr>
     <tr>
       <td><code>toolbar_vertical_separator</code></td>
       <td>
         <p>
-          The color of the separator next to the application menu icon. In
-          Firefox 58, it corresponds to the color of separators inside the URL
-          bar.
+          The color of the separator in the bookmarks toolbar. In Firefox 58, it
+          corresponds to the color of separators inside the URL bar.
         </p>
-        <div>
-          <span>See example</span>
+        <details open>
+          <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "accentcolor": "black",
-    "textcolor": "white",
+    "frame": "black",
+    "tab_background_text": "white",
     "toolbar": "black",
     "toolbar_vertical_separator": "red"
   }
 }</pre
           >
-          <p>
-            <img
-              alt=""
-              src="theme-toolbar_vertical_separator.png"
-              style="height: 302px; width: 738px"
-            />
-          </p>
-        </div>
+        </details>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with text and icons in white. The color of the vertical line separating the bookmarks toolbar from the content to the right is red." src="theme-toolbar_vertical_separator.png" /></p>
       </td>
     </tr>
   </tbody>

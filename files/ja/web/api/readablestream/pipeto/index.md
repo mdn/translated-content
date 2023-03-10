@@ -1,57 +1,72 @@
 ---
 title: ReadableStream.pipeTo()
 slug: Web/API/ReadableStream/pipeTo
+l10n:
+  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
 
-{{domxref("ReadableStream")}} インターフェイスの **`pipeTo()`** メソッドは、現在の `ReadableStream` を与えられた {{domxref("WritableStream")}} にパイプし、パイプのプロセスが正常に完了した場合は満たされ、エラーが発生した場合は拒否する promise を返します。
+{{APIRef("Streams")}}
 
-ストリームをパイプすると、通常、パイプしている間はストリームがロックされ、他のリーダーがロックできなくなります。
+**`pipeTo()`** は {{domxref("ReadableStream")}} インターフェイスのメソッドで、現在の `ReadableStream` を与えられた {{domxref("WritableStream")}} にパイプ接続します。返される {{jsxref("Promise")}} は、パイプのプロセスが正常に完了した場合は履行され、エラーが発生した場合は拒否されます。
+
+ストリームをパイプ接続すると、通常、接続している間はストリームがロックされ、他のリーダーがロックできなくなります。
 
 ## 構文
 
-```
-var promise = readableStream.pipeTo(destination[, options]);
+```js-nolint
+pipeTo(destination)
+pipeTo(destination, options)
 ```
 
-### パラメーター
+### 引数
 
-- destination
+- `destination`
+
   - : {{domxref("ReadableStream")}} の最終的な宛先として機能する {{domxref("WritableStream")}}。
-- options {{optional_inline}}
 
-  - : ストリームのキャンセル、クローズ、または中止をいつ防止するかを定義できるプロパティを含むオプションのオブジェクト（すべて任意）。 オプションは次のとおりです。
+- `options` {{optional_inline}}
 
-    1.  `preventClose`: これが `true` に設定されている場合、ソースの `ReadableStream` を閉じても、宛先の `WritableStream` は閉じられません。 このメソッドは、宛先を閉じるときにエラーが発生しない限り、このプロセスが完了すると満たされる promise を返します。
-    2.  `preventAbort`: これが `true` に設定されている場合、ソースの `ReadableStream` のエラーは宛先の `WritableStream` を中止しません。 このメソッドは、ソースのエラー、または宛先の中止中に発生したエラーで拒否される promise を返します。
-    3.  `preventCancel`: これが `true` に設定されている場合、宛先の `WritableStream` のエラーはソースの `ReadableStream` をキャンセルしなくなります。 この場合、メソッドは、ソースのエラー、またはソースのキャンセル中に発生したエラーで拒否される promise を返します。 さらに、宛先の書き込み可能なストリームが閉じた状態または閉じようとしている状態で開始した場合、ソースの読み取り可能なストリームはキャンセルされなくなります。 この場合、メソッドは、閉じたストリームへのパイプが失敗したことを示すエラー、またはソースのキャンセル中に発生したエラーで拒否される promise を返します。
+  - : `writable` ストリームにパイプ接続するときに使用するオプションです。
+    利用できるオプションは以下の通り。
 
-### 戻り値
+    - `preventClose`
+      - : これを `true` に設定すると、入力元の `ReadableStream` が閉じられても、出力先の `WritableStream` が閉じられることはなくなります。
+        このメソッドは、この処理が完全に終了すると履行されるプロミスを返します。ただし、出力先を閉じる際にエラーが発生した場合は、そのエラーで拒否されます。
+    - `preventAbort`
+      - : この値を `true` に設定すると、入力元の `ReadableStream` でエラーが発生しても、出力先の `WritableStream` を中断させることがなくなります。
+        このメソッドは、出力元のエラー、または出力先を中止する際に発生したエラーで拒否されるプロミスを返します。
+    - `preventCancel`
+      - : この値を `true` に設定すると、出力先の `WritableStream` でエラーが発生しても、入力元の `ReadableStream` を取り消すことができなくなります。
+        この場合、メソッドは、入力元のエラー、または入力元を取り消す際に発生するエラーで拒否されるプロミスを返します。
+        また、出力先の書き込み可能なストリームが閉じられたり開始されたりした場合、入力元の読み取り可能なストリームは取り消されなくなります。
+        この場合、メソッドは、閉じられたストリームへのパイプ処理に失敗したことを示すエラー、または入力元を取り消す際に発生するエラーとともに、拒否されるプロミスを返します。
+    - `signal`
+      - : [`AbortSignal`](/ja/docs/Web/API/AbortSignal) オブジェクトを設定すると、進行中のパイプ操作が対応する [`AbortController`](/ja/docs/Web/API/AbortController) から中止できます。
 
-パイプのプロセスが完了したときに解決する {{jsxref("Promise")}}。
+### 返値
+
+パイプのプロセスが完了したときに解決する {{jsxref("Promise")}} です。
 
 ### 例外
 
-- TypeError
-  - : `writableStream` および/または `readableStream` オブジェクトは、書き込み可能なストリーム/読み取り可能なストリームではないか、ストリームの一方または両方がロックされています。
+- {{jsxref("TypeError")}}
+  - : `writableStream` や `readableStream` オブジェクトは、書き込み可能なストリーム/読み取り可能なストリームではないか、ストリームの一方または両方がロックされています。
 
 ## 例
 
 ```js
-// 元の画像をフェッチ
+// 元の画像を読み取る
 fetch('png-logo.png')
 // その body を ReadableStream として取得
-.then(response => response.body)
-.then(body => body.pipeThrough(new PNGTransformStream()))
-.then(rs => rs.pipeTo(new FinalDestinationStream()))
+.then((response) => response.body)
+.then((body) => body.pipeThrough(new PNGTransformStream()))
+.then((rs) => rs.pipeTo(new FinalDestinationStream()))
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                             | 状態                         | コメント |
-| ---------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-pipe-to","pipeTo()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStream.pipeTo")}}
+{{Compat}}

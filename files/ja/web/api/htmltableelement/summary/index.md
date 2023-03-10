@@ -2,6 +2,7 @@
 title: HTMLTableElement.summary
 slug: Web/API/HTMLTableElement/summary
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.summary`** プロパティは表の説明を表します。

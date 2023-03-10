@@ -1,24 +1,8 @@
 ---
 title: '複数の部分に分かれたラベル: 内部にフィールドがあるラベルに ARIA を使用'
 slug: Web/Accessibility/ARIA/forms/Multipart_labels
-tags:
-  - ARIA
-  - アクセシビリティ
-  - Ben Millard
-  - Firefox
-  - ガイド
-  - HELP
-  - HTML
-  - HTML 4
-  - JAWS
-  - NeedsContent
-  - aria-labelledby
-  - label
-  - solution
-  - trouble shoot
-  - troubleshoot
-translation_of: Web/Accessibility/ARIA/forms/Multipart_labels
 ---
+
 ## 問題点
 
 ユーザーに質問をするフォームがあり、回答が質問文の中にある場合があります。有名なブラウザーの設定項目の例を挙げると、「履歴を x 日後に削除する」という設定です。「履歴を」はテキストボックスの左側にあり、また x は 21 のような数値であり、「日後に削除する」という文言はテキストボックスの後ろにあって、理解しやすい文を構成しています。
@@ -53,7 +37,7 @@ body {
 
 JAWS 8.0 はラベルを発見する独自のロジックを持っており、常に HTML 文書で見つけたテキストボックスの accessibleName より優先します。 JAWS 8 で、上記の例からラベルを受け入れるようにする方法は見つかっていません。しかし NVDA や Window-Eyes の動作は良好であり、また Linux での Orca も問題がありません。
 
-> **Note:** TBD: さらに互換性情報を追加する
+> **メモ:** TBD: さらに互換性情報を追加する
 
 ## ARIA を使用せずに実現できるか
 

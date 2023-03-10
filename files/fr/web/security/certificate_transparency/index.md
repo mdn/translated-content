@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Public_Key_Pinning
 original_slug: Web/HTTP/Public_Key_Pinning
 ---
+
 L'extention **Public Key Pinning pour HTTP** (HPKP) est une fonctionnalité de sécurité qui dit au client web d'associer une clé publique cryptographique avec un certain serveur web pour éviter les attaques [MITM](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu) avec des certificats contrefaits.
 
 > **Note :** La Public Key Pinning décrite ici est différente du limité [preload list based key pinning](http://monica-at-mozilla.blogspot.de/2014/08/firefox-32-supports-public-key-pinning.html) introduit dans Firefox 32.
@@ -106,13 +107,11 @@ server.modules += ( "mod_setenv" )
 
 ## Spécifications
 
-| Spécification                                            | Description                                           |
-| -------------------------------------------------------- | ----------------------------------------------------- |
-| {{RFC("7469", "Public-Key-Pins", "2.1")}} | Extension de l'épinglage des clés publiques pour HTTP |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Public-Key-Pins")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: 배열(Arrays)
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/Arrays
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 이 모듈의 이 마지막 문서에서, 우리는 배열을 살펴볼 것입니다. 배열이란 하나의 변수명 아래에 데이터 아이템의 리스트를 저장하는 간편한 방법입니다. 여기서 우리는 왜 배열이 유용한지 보고, 어떻게 배열을 만들고, 검색하고(retrieve), 추가하고, 그리고 배열에 저장된 원소들(items)을 삭제하는지, 그리고 그 외의 많은 것을 탐구합니다.
@@ -37,12 +30,13 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
 지난 문서에서처럼, 브라우저 개발자 콘솔에 몇몇 예제를 입력함으로써 배열의 진짜 기초에 대해 배워 봅시다. (아래의 콘솔 창을 사용하거나, 당신이 선호하는 [개발자 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 사용하면 됩니다.)
 
-<div class="hidden"><h6 id="Hidden_code">Hidden code</h6><pre class="brush: html">&#x3C;!DOCTYPE html>
-&#x3C;html>
-  &#x3C;head>
-    &#x3C;meta charset="utf-8">
-    &#x3C;title>JavaScript console&#x3C;/title>
-    &#x3C;style>
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript console</title>
+    <style>
       * {
         box-sizing: border-box;
       }
@@ -90,14 +84,14 @@ translation_of: Learn/JavaScript/First_steps/Arrays
         clear: both;
       }
 
-    &#x3C;/style>
+    </style>
 
-&#x3C;/head>
-&#x3C;body>
+</head>
+<body>
 
-&#x3C;/body>
+</body>
 
-&#x3C;script>
+<script>
 var geval = eval;
 function createInput() {
 var inputDiv = document.createElement('div');
@@ -141,10 +135,11 @@ inputForm.focus();
 
     createInput();
 
-&#x3C;/script>
-&#x3C;/html></pre></div>
+</script>
+</html>
+```
 
-{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('배열이란', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
 ### 배열 만들기
 
@@ -168,7 +163,7 @@ inputForm.focus();
 
 ### 배열 항목의 접근과 수정
 
-그런 다음 [문자열의 문자에 접근했던 것](https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
+그런 다음 [문자열의 문자에 접근했던 것](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
 
 1. 콘솔에 다음을 입력하세요:
 
@@ -334,23 +329,24 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 5. 만들어지고 0의 값이 주어진 `total`이라는 변수가 코드의 위쪽에 있습니다. 이 반복문 안에서 (`// number 4` 아래) 우리는 당신이 현재 상품의 가격을 반복문의 각 반복마다 총액(total)에 합하는 코드 한 줄을 추가해서, 코드의 끝에서 올바른 총액이 청구서에 인쇄되도록 하기를 원합니다. 당신은 이것을 하기 위해 [대입 연산자(assignment operator)](/ko/docs/Learn/JavaScript/First_steps/Math#Assignment_operators)가 필요할지도 모릅니다.
 6. `itemText` 변수가 "current item name — $current item price"와 같이 만들어지도록, 예를 들자면 각각의 경우에 "Shoes — $23.99" 처럼 만들어지도록 우리는 당신이 `// number 5` 바로 아래의 줄을 변경해서, 각각의 물품에 대한 올바른 정보가 청구서에 출력되도록 하기를 원합니다. 이것은, 당신에게 친숙할지도 모르는, 단지 단순한 문자열 연결(concatenation)입니다.
 
-<div class="hidden"><h6 id="Playable_code">Playable code</h6><pre class="brush: html">&#x3C;h2>Live output&#x3C;/h2>
+```html hidden
+<h2>Live output</h2>
 
-&#x3C;div class="output" style="min-height: 150px;">
+<div class="output" style="min-height: 150px;">
 
-&#x3C;ul>
+<ul>
 
-&#x3C;/ul>
+</ul>
 
-&#x3C;p>&#x3C;/p>
+<p></p>
 
-&#x3C;/div>
+</div>
 
-&#x3C;h2>Editable code&#x3C;/h2>
+<h2>Editable code</h2>
 
-&#x3C;p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).&#x3C;/p>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&#x3C;textarea id="code" class="playable-code" style="height: 410px;width: 95%">
+<textarea id="code" class="playable-code" style="height: 410px;width: 95%">
 var list = document.querySelector('.output ul');
 var totalBox = document.querySelector('.output p');
 var total = 0;
@@ -363,7 +359,7 @@ totalBox.textContent = '';
 'Trousers:31.99'
 'Shoes:23.99';
 
-for (var i = 0; i &#x3C;= 0; i++) { // number 2
+for (var i = 0; i <= 0; i++) { // number 2
 // number 3
 
 // number 4
@@ -377,14 +373,16 @@ list.appendChild(listItem);
 }
 
 totalBox.textContent = 'Total: $' + total.toFixed(2);
-&#x3C;/textarea>
+</textarea>
 
-&#x3C;div class="playable-buttons">
-&#x3C;input id="reset" type="button" value="Reset">
-&#x3C;input id="solution" type="button" value="Show solution">
-&#x3C;/div>
+<div class="playable-buttons">
+<input id="reset" type="button" value="Reset">
+<input id="solution" type="button" value="Show solution">
+</div>
+```
 
-</pre><pre class="brush: js">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -413,7 +411,7 @@ solution.value = 'Show solution';
 updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalBox = document.querySelector(\'.output p\');\nvar total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nvar products = [\'Underpants:6.99\',\n \'Socks:5.99\',\n \'T-shirt:14.99\',\n \'Trousers:31.99\',\n \'Shoes:23.99\'];\n\nfor(var i = 0; i &#x3C; products.length; i++) {\n var subArray = products[i].split(\':\');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + \' — $\' + price;\n\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalBox = document.querySelector(\'.output p\');\nvar total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nvar products = [\'Underpants:6.99\',\n \'Socks:5.99\',\n \'T-shirt:14.99\',\n \'Trousers:31.99\',\n \'Shoes:23.99\'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(\':\');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + \' — $\' + price;\n\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -459,7 +457,11 @@ solutionEntry = textarea.value;
 }
 
 updateCode();
-};</pre><pre class="brush: css">html {
+};
+```
+
+```css hidden
+html {
 font-family: sans-serif;
 }
 
@@ -477,9 +479,10 @@ width: 98%;
 body {
 margin: 10px;
 background-color: #f5f9fa;
-}</pre></div>
+}
+```
 
-{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('활동적_학습_상품들_출력하기', '100%', 730, "", "", "hide-codepen-jsfiddle") }}
 
 ## 실습: 상위 5개의 검색어
 
@@ -494,22 +497,23 @@ background-color: #f5f9fa;
 1. `// number 1` 주석 밑에 배열의 시작에 검색 입력(input)에 입력된 현재 값을 추가하는 코드를 추가하세요. 이것은 `searchInput.value`를 사용하여 탐색될 수 있습니다.
 2. `// number 2` 주석 밑에 현재 배열의 끝에 있는 값을 제거하는 코드를 추가하세요.
 
-<div class="hidden"><h6 id="Playable_code_2">Playable code 2</h6><pre class="brush: html">&#x3C;h2>Live output&#x3C;/h2>
-&#x3C;div class="output" style="min-height: 150px;">
+```html
+<h2>Live output</h2>
+<div class="output" style="min-height: 150px;">
 
-&#x3C;input type="text">&#x3C;button>Search&#x3C;/button>
+<input type="text"><button>Search</button>
 
-&#x3C;ul>
+<ul>
 
-&#x3C;/ul>
+</ul>
 
-&#x3C;/div>
+</div>
 
-&#x3C;h2>Editable code&#x3C;/h2>
+<h2>Editable code</h2>
 
-&#x3C;p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).&#x3C;/p>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&#x3C;textarea id="code" class="playable-code" style="height: 370px; width: 95%">
+<textarea id="code" class="playable-code" style="height: 370px; width: 95%">
 var list = document.querySelector('.output ul');
 var searchInput = document.querySelector('.output input');
 var searchBtn = document.querySelector('.output button');
@@ -528,7 +532,7 @@ if (searchInput.value !== '') {
     list.innerHTML = '';
 
     // loop through the array, and display all the search terms in the list
-    for (var i = 0; i &#x3C; myHistory.length; i++) {
+    for (var i = 0; i < myHistory.length; i++) {
       itemText = myHistory[i];
       var listItem = document.createElement('li');
       listItem.textContent = itemText;
@@ -547,12 +551,16 @@ if (searchInput.value !== '') {
 
 }
 }
-&#x3C;/textarea>
+</textarea>
 
-&#x3C;div class="playable-buttons">
-&#x3C;input id="reset" type="button" value="Reset">
-&#x3C;input id="solution" type="button" value="Show solution">
-&#x3C;/div></pre><pre class="brush: css">html {
+<div class="playable-buttons">
+<input id="reset" type="button" value="Reset">
+<input id="solution" type="button" value="Show solution">
+</div>
+```
+
+```css hidden
+html {
 font-family: sans-serif;
 }
 
@@ -570,7 +578,11 @@ width: 98%;
 body {
 margin: 10px;
 background: #f5f9fa;
-}</pre><pre class="brush: js">var textarea = document.getElementById('code');
+}
+```
+
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -599,7 +611,7 @@ solution.value = 'Show solution';
 updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar searchInput = document.querySelector(\'.output input\');\nvar searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = \'\';\n\n for(var i = 0; i &#x3C; myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = \'\';\n searchInput.focus();\n }\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar searchInput = document.querySelector(\'.output input\');\nvar searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = \'\';\n\n for(var i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = \'\';\n searchInput.focus();\n }\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -645,9 +657,10 @@ solutionEntry = textarea.value;
 }
 
 updateCode();
-};</pre></div>
+};
+```
 
-{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('실습_상위_5개의_검색어', '100%', 700, "", "", "hide-codepen-jsfiddle") }}
 
 ## 당신의 기량을 시험해 보세요!
 
@@ -665,15 +678,3 @@ updateCode();
 - {{jsxref("Array")}} — `Array` 객체 참조 페이지 — 이 페이지에서 다뤄진 기능들과 더 많은 것들에 대한 자세한 참조 가이드
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
-
-## 이번 모듈에서 배울 것들
-
-- [JavaScript란 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript를 시작해보자](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못 되었지? Troubleshooting JavaScript(잘못된 걸 고쳐보자)](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [원하는 정보를 저장하기 — 변](/ko/docs/Learn/JavaScript/First_steps/Variables)수
-- [JavaScript의 수학 기초 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [문자 다루기 — JavaScript에서의 문자](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자 메소드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 짧은 글 랜덤 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

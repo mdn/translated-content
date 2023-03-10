@@ -1,9 +1,9 @@
 ---
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 original_slug: Web/JavaScript/Guide/정규식/Assertions
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Assertions에는 행이나 단어의 시작 · 끝을 나타내는 경계와 (앞, 뒤 읽고 조건식을 포함한) 어떤 식 으로든 매치가 가능한 것을 나타내는 다른 패턴이 포함됩니다.
@@ -203,7 +203,7 @@ console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 
 ### Matching the beginning of an input using a ^ control character
 
-입력 시작시 일치를 위해 `^`를 사용하십시오. 이 예에서는 `/^A/` regex로 'A'로 시작하는 결과를 얻습니다. 여기서 `^`는 한 가지 역할 만합니다. 적절한 결과를 보기위해 [화살표](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 함수가있는 [필터](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 메소드를 사용합니다.
+입력 시작시 일치를 위해 `^`를 사용하십시오. 이 예에서는 `/^A/` regex로 'A'로 시작하는 결과를 얻습니다. 여기서 `^`는 한 가지 역할 만합니다. 적절한 결과를 보기위해 [화살표](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 함수가있는 [필터](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 메소드를 사용합니다.
 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -215,7 +215,7 @@ let fruitsStartsWithA = fruits.filter(fruit => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-두 번째 예제에서 `^`는 두 가지 모두에 사용됩니다 : 입력의 일치 시작점, [그룹](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)에서 사용될 때 부정 또는 보완 문자 세트.
+두 번째 예제에서 `^`는 두 가지 모두에 사용됩니다 : 입력의 일치 시작점, [그룹](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)에서 사용될 때 부정 또는 보완 문자 세트.
 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -265,7 +265,7 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 
 ### Different meaning of '?!' combination usage in Assertions and Ranges
 
-Different meaning of `?!` combination usage in [Assertions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` and [Ranges](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
+Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
 ```js
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
@@ -287,7 +287,7 @@ let ripe_oranges = oranges.filter( fruit => fruit.match(/(?<=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

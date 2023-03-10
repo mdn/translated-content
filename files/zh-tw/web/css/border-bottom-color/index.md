@@ -2,6 +2,7 @@
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 ---
+
 {{CSSRef}}
 
 **`border-bottom-color`** 是一種CSS屬性，用來設定元件下側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性{{cssxref("border-color")}}或{{cssxref("border-bottom")}}設定該屬性值。

@@ -1,14 +1,15 @@
 ---
 title: console.dir
-slug: Web/API/Console/dir
+slug: Web/API/console/dir
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 在控制台中显示指定 JavaScript 对象的属性，并通过类似文件树样式的交互列表显示。
 
 {{AvailableInWorkers}}
 
-![console-dir.png](/@api/deki/files/6081/=console-dir.png)
+![console-dir.png](console-dir.png)
 
 ## 语法
 
@@ -23,7 +24,7 @@ console.dir(object);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.dir")}}
+{{Compat}}
 
 ## 相关链接
 

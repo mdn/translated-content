@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/endsWith
 ---
+
 {{JSRef}}
 
 La méthode **`endsWith()`** renvoie un booléen indiquant si la chaine de caractères se termine par la chaine de caractères fournie en argument.
@@ -68,14 +69,11 @@ if (!String.prototype.endsWith) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.endsWith")}}
+{{Compat}}
 
 ## Voir aussi
 

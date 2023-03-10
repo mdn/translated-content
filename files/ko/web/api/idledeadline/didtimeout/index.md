@@ -1,8 +1,8 @@
 ---
 title: IdleDeadline.didTimeout
 slug: Web/API/IdleDeadline/didTimeout
-translation_of: Web/API/IdleDeadline/didTimeout
 ---
+
 {{APIRef("Background Tasks")}}
 
 **{{domxref("IdleDeadline")}}** 인터페이스의 읽기 전용 속성(property)인 **`didTimeout`** 는 {{domxref("Window.requestIdleCallback()")}}이 호출될 때 지정된 timeout 간격이 만료되어, 유휴 콜백(idle callback)이 호출되는지 여부를 나타내는 Boolean 값 입니다.
@@ -13,7 +13,9 @@ translation_of: Web/API/IdleDeadline/didTimeout
 
 ## Syntax
 
-    var timedOut = IdleDeadline.didTimeout;
+```js
+var timedOut = IdleDeadline.didTimeout;
+```
 
 ### Value
 
@@ -23,11 +25,11 @@ Boolean 으로, 콜백의 timeout 기간이 경과하여 콜백이 실행 중이
 
 [Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API)의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example) 를 참조하세요
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

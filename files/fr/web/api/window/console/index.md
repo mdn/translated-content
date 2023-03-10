@@ -10,6 +10,7 @@ tags:
   - lecture seule
 translation_of: Web/API/Window/console
 ---
+
 {{ APIRef }}
 
 La propriété **`Window.console`** en lecture seule retourne une référence à l'objet {{domxref("Console")}}, qui founit des méthodes pour afficher des information sur la console du navigateur. Ces méthodes ont pour seul but le débogage et ne devraient pas servir à présenter des informations au utilisateurs.

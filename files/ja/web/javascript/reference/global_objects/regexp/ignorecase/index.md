@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
+
 {{JSRef}}
 
 **`ignoreCase`** プロパティは、"`i`" フラグが正規表現で使われているかどうかを示します。`ignoreCase` は、正規表現インスタンスごとの読み取り専用プロパティです。
@@ -34,9 +27,7 @@ console.log(regex.ignoreCase); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,18 +1,13 @@
 ---
 title: SVG教本
 slug: Web/SVG/Tutorial
-tags:
-  - MDC Project
-  - NeedsContent
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial
 ---
+
 **変倍ベクタ図形** (Scalable Vector Graphics; [SVG](/ja/docs/SVG)) は図形をタグ付けする W3C の XML 派生言語です。SVG は，Firefox、Opera、WebKit ブラウザ、Internet Explorer 及び他のブラウザにおいて部分的に実装されています。
 
-本教本は SVG の内部構造の説明を目的としており，また技術的詳細が目白押しです。美しい画像を描きたいだけなら，より有用な資料は[Inkscape の文書郡](https://inkscape.org/learn/)にて見付かるでしょう。他に，W3C の[SVG 入門](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)も，良い SVG 概説を提供しています。
+本教本は SVG の内部構造の説明を目的としており，また技術的詳細が目白押しです。美しい画像を描きたいだけなら，より有用な資料は[Inkscape の文書群](https://inkscape.org/learn/)にて見付かるでしょう。他に，W3C の[SVG 入門](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)も，良い SVG 概説を提供しています。
 
-> **Note:** このチュートリアルは執筆の非常に早い段階にあります。もしあなたが可能なら、力を貸し、1 つまたは 2 つのパラグラフを書いて手助けしてください。ページ全体を書いていただければ、なお良いです。
+> **メモ:** このチュートリアルは執筆の非常に早い段階にあります。もしあなたが可能なら、力を貸し、1 つまたは 2 つのパラグラフを書いて手助けしてください。ページ全体を書いていただければ、なお良いです。
 
 ##### ゼロから始める SVG の紹介
 

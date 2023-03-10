@@ -3,6 +3,7 @@ title: 初识 MDN
 slug: MDN/Community/Contributing/Getting_started
 original_slug: MDN/Contribute/Getting_started
 ---
+
 {{MDNSidebar}}
 
 我们是一个开放包容的开发者社区，目标是为更好的互联网提供资源，无关品牌、浏览器或平台。任何人都可以贡献自己的力量，你的每一份贡献都会让我们更强大。与我们一起，持续推动互联网技术向更伟大的方向革新——就在这里，与你一起。
@@ -44,6 +45,6 @@ original_slug: MDN/Contribute/Getting_started
 
 ### 贡献
 
-当贡献时，视为你同意 [Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/)（或在所编辑页面中已经指定的其它许可）许可。另外，代码示例的许可为 [Creative Commons CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/)（专用于公有领域）。
+当贡献时，视为你同意 [Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/)（或在所编辑页面中已经指定的其他许可）许可。另外，代码示例的许可为 [Creative Commons CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/)（专用于公有领域）。
 
 > 如果你对这里提到的内容有任何疑问，请在这里[开启一个讨论](https://github.com/mdn/mdn-community/discussions/categories/content)并且让我们知悉。

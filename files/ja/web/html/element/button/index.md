@@ -1,20 +1,9 @@
 ---
 title: '<button>: ボタン要素'
 slug: Web/HTML/Element/button
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML:フローコンテンツ
-  - HTML:対話型コンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/button
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<button>` 要素**はクリックできるボタンを表し、[フォーム](/ja/docs/Learn/Forms)や、文書で単純なボタン機能が必要なあらゆる場所で使用することができます。既定では、 HTML のボタンは {{Glossary("user agent", "ユーザーエージェント")}} が実行されているホストのプラットフォームのスタイルと似ていますが、 [CSS](/ja/docs/Web/CSS) を使用してボタンの外見を変更することができます。
 
@@ -85,12 +74,12 @@ translation_of: Web/HTML/Element/button
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("checkbox")}}, {{ARIARole("link")}},
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("radio")}}, {{ARIARole("switch")}},
-        {{ARIARole("tab")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>
       </td>
     </tr>
     <tr>
@@ -263,11 +252,7 @@ Firefox はフォーカスされたボタンに小さな点線の境界線を表
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'form-elements.html#the-button-element', '&lt;button&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-button-element', '&lt;button&gt;')}}         | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.5', '&lt;button&gt;')}}                     | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

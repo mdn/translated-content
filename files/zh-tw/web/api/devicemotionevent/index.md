@@ -2,6 +2,7 @@
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 ---
+
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
 ## 概要
@@ -35,12 +36,12 @@ window.addEventListener('devicemotion', function(event) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.DeviceMotionEvent")}}
+{{Compat}}
 
 ## 參見
 
-- {{ event("deviceorientation") }}
+- [`deviceorientation`](/zh-TW/docs/Web/API/Window/deviceorientation_event)
 - {{ domxref("DeviceMotionEvent") }}
-- {{ event("devicemotion") }}
+- [`devicemotion`](/zh-TW/docs/Web/API/Window/devicemotion_event)
 - [Detecting device orientation](/zh-TW/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- [Orientation and motion data explained](/zh-TW/DOM/Orientation_and_motion_data_explained)

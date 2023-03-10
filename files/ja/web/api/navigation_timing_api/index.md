@@ -2,6 +2,7 @@
 title: Navigation Timing API
 slug: Web/API/Navigation_timing_API
 ---
+
 {{DefaultAPISidebar("Navigation Timing")}}
 
 **Navigation Timing API** は、ウェブサイトのパフォーマンス計測に使用できるデータを提供します。同じ目的に使用される他の JavaScript ベースの機構と異なり、この API はエンドツーエンドのさらに役立つ正確な遅延データを提供できます。
@@ -76,4 +77,4 @@ var connectTime = perfData.responseEnd - perfData.requestStart;
 
 ## ブラウザーの実装状況
 
-{{Compat("api.PerformanceTiming")}}
+{{Compat}}

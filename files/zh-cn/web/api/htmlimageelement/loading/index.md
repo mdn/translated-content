@@ -2,9 +2,10 @@
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
 ---
+
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} 的**`loading`**属性为一个字符串，它的值会提示 {{Glossary("用户代理")}} 告诉浏览器不在{{Glossary("可视视口")}}内的图片该如何加载。这样一来，通过推迟图片加载仅让其在需要的时候加载而非页面初始载入时立刻加载，优化了页面的载入。
+{{domxref("HTMLImageElement")}} 的 **`loading`** 属性为一个字符串，它的值会提示 {{Glossary("用户代理")}} 告诉浏览器不在{{Glossary("可视视口")}}内的图片该如何加载。这样一来，通过推迟图片加载仅让其在需要的时候加载而非页面初始载入时立刻加载，优化了页面的载入。
 
 ## 语法
 
@@ -68,11 +69,10 @@ function addImageToList(url) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.loading")}}
+{{Compat}}
 
 ## 参见
 
-- The {{HTMLElement("img")}} element
-- [Web performance](/en-US/docs/Learn/Performance) in the MDN Learning Area
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) in the MDN web performance guide
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages", "Use lazy loading for images")}}
+- {{HTMLElement("img")}} 元素
+- MDN 学习专区中的 [Web 性能](/zh-CN/docs/Learn/Performance)
+- MDN web 性能指南中的[懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)

@@ -13,6 +13,7 @@ tags:
   - getNotifications
 translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
+
 {{APIRef("Service Workers API")}}
 
 La méthode **`getNotifications()`** de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie une liste des notifications dans l'ordre dans lequel elles ont été créées à partir de l'origine actuelle via l'enregistrement actuel du service worker. Les origines peuvent avoir de nombreuses inscriptions de service worker actives mais de portée différente. Les notifications créées par un service worker sur la même origine ne seront pas disponibles pour les autres services workers actifs sur la même origine.

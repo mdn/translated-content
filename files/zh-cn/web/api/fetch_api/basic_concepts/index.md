@@ -2,6 +2,7 @@
 title: Fetch 基本概念
 slug: Web/API/Fetch_API/Basic_concepts
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 是一个现代的概念，等同于 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)。它提供了许多与 XMLHttpRequest 相同的功能，但被设计成更具可扩展性和高效性。本文介绍了 Fetch API 的一些基本概念。

@@ -1,13 +1,8 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 ---
+
 {{JSRef}}
 
 **`Math.atan()`** 関数は、引数として与えた数値のアークタンジェントをラジアン単位で返します。
@@ -57,9 +52,7 @@ Math.atan(y / x);
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.atan', 'Math.atan')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

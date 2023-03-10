@@ -1,101 +1,88 @@
 ---
 title: カスタムフォームコントロールの作成方法
 slug: Learn/Forms/How_to_build_custom_form_controls
+l10n:
+  sourceCommit: 741bc42293cb9a434367f5e998f5076a8ae8137e
 original_slug: Learn/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}
 
-HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Advanced_styling_for_HTML_forms)場合や、独自の動作を提供したい場合は、あなた独自のコントロールを作成するしかありません。
+HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Learn/Forms/Advanced_form_styling)場合や、独自の動作を提供したい場合は、あなた独自のコントロールを作成するしかありません。
 
 本記事では、そのようなコントロールの作り方を見ていきます。その目的のため、次の例に取り組みます: {{HTMLElement("select")}} 要素の再構築です。このほかに独自コントロール作成をどういう方法でするか、いつするか、またそれが意味をなすのかや、コントロール作成が必須なときに何に気をつけるべきかを扱います。
 
-> **Note:** ここではコントロールの構築に注目しており、汎用かつ再利用可能なコードの作成法は見ていきません。それには JavaScript の重要なコードや未知のコンテキストでの DOM 操作が組み合わされており、本記事の対象から外れます。
+> **メモ:** ここではコントロールの構築に注目しており、汎用かつ再利用可能なコードの作成法は見ていきません。それには JavaScript の重要なコードや未知のコンテキストでの DOM 操作が組み合わされており、本記事の対象から外れます。
 
 ## デザイン、構造、セマンティクス
 
 カスタムコントロールを作成する前に、何をしたいかをはっきりと理解することから始めるべきです。これはあなたの貴重な時間を節約するでしょう。特に、コントロールの全状態を明確に定義することが重要です。これを行うには、状態や動作がよく知られている既存のコントロールからスタートするとよいでしょう。この結果、簡単に可能な限りの模倣を行えます。
 
-本記事の例では、{{HTMLElement("select")}} 要素を再構築します。以下が、私たちが実現したい成果です:
+本記事の例では、 {{HTMLElement("select")}} 要素を再構築します。以下が、私たちが実現したい成果です:
 
-![The three states of a select box](/files/4481/custom-select.png)
+![The three states of a select box](custom-select.png)
 
 このスクリーンショットでは、コントロールの主要な状態 3 つを示しています: 通常状態 (左)、アクティブ状態 (中央)、そして開いた状態 (右) です。
 
-動作の点では、ネイティブな HTML 用要素を再作成します。このため、ネイティブ HTML 要素と同様な動作や意味を持たせるべきです。独自のコントロールもネイティブコントロールと同様に、キーボードだけでなくマウスでも使用できるように、またスクリーンリーダーに理解できるようにしたいと考えます。コントロールがどのように各状態に達するかを定義することから始めましょう:
+動作の点では、ネイティブな HTML 用要素を再作成します。このため、ネイティブ HTML 要素と同様な動作や意味を持たせるべきです。独自のコントロールもネイティブコントロールと同様に、キーボードだけでなくマウスでも使用できるように、また画面リーダーに理解できるようにしたいと考えます。コントロールがどのように各状態に達するかを定義することから始めましょう:
 
-- コントロールは以下のときに通常状態になります:
+**コントロールは以下のときに通常状態になります。**
 
-  - :&#x20;
+- ページを読み込む
+- コントロールはアクティブであったが、ユーザーがコントロール以外のどこかをクリックした
+- コントロールはアクティブであったが、キーボードを使用して別のコントロールにフォーカスを移した (例: <kbd>Tab</kbd> キー)
 
-    - ページを読み込む
-    - コントロールはアクティブであったが、ユーザーがコントロール以外のどこかをクリックした
-    - コントロールはアクティブであったが、キーボードを使用して別のコントロールにフォーカスを移した (例&#x20;
+**コントロールは以下のときにアクティブ状態になります。**
 
-      <kbd>Tab</kbd>
+- ユーザーがコントロール上でクリックする
+- ユーザーが Tab キーを押下して、コントロールがフォーカスを得る
+- コントロールが開いた状態で、ユーザーがコントロールをクリックする
 
-      &#x20;キー)
+**コントロールは以下のときに開いた状態になります。**
 
-- コントロールは以下のときにアクティブ状態になります:
+- コントロールが開いた状態ではないときに、ユーザーがコントロールをクリックした
 
-  - :&#x20;
+状態をどのように変えるかを理解したら、コントロールの値をどのように変えるかの定義が重要になります。
 
-    - ユーザーがコントロール上でクリックする
-    - ユーザーが Tab キーを押下して、コントロールがフォーカスを得る
-    - コントロールが開いた状態で、ユーザーがコントロールをクリックする
+**以下のときに値が変わります。**
 
-- コントロールは以下のときに開いた状態になります:
+- コントロールが開いた状態であるときに、ユーザーが選択肢をクリックする
+- コントロールがアクティブ状態であるときに、ユーザーが上下矢印キーを押下する
 
-  - :&#x20;
+**以下のときには値は変わりません。**
 
-    - コントロールが開いた状態ではないときに、ユーザーがコントロールをクリックした
+- 最初のオプションが選択済みのときに、ユーザーが上矢印をクリックする
+- 最後のオプションが選択済みのときに、ユーザーが下矢印をクリックする
 
-状態をどのように変えるかを理解したら、コントロールの値をどのように変えるかの定義が重要になります:
-
-- 以下のときに値が変わります:
-
-  - :&#x20;
-
-    - コントロールが開いた状態であるときに、ユーザーが選択肢をクリックする
-    - コントロールがアクティブ状態であるときに、ユーザーが上下矢印キーを押下する
-
-<!---->
-
-- 以下のときには値は変わりません:
-
-  - :&#x20;
-
-    - 最初のオプションが選択済みのときに、ユーザーが上矢印をクリックする
-    - 最後のオプションが選択済みのときに、ユーザーが下矢印をクリックする
-
-最後に、コントロールの選択肢がどのように動作するかを定義しましょう:
+最後に、コントロールの選択肢がどのように動作するかを定義しましょう。
 
 - コントロールが開いているとき、選択されている選択肢は強調されます
 - マウスポインタが選択肢の上にあるときはその選択肢が強調され、また前に強調されていた選択肢は通常状態に戻ります
 
 この例の用途としては、ここまでです。しかし注意深い読者の方は、いくつかの動作が欠けていることに気づくでしょう。例えば、コントロールが開いた状態であるときにユーザーが Tab キーを押すと何が起きると考えますか? その答えは... 何も起きません。正しい動作は明らかでしょうが、実際は私たちの仕様で定義されていないため、とても見逃されやすいのです。これは、コントロールの動作を設計する人と実装する人が異なるチーム環境で特に当てはまります。
 
-別のおもしろい例です: コントロールが開いた状態であるときに上下矢印キーを押すと何が起きるのでしょうか? こちらはやや難しくなります。アクティブ状態と開いた状態をまったく別のものと考えるなら、その答えはやはり "何も起きません" です。これは、開いた状態でのキーボードの作用を定義していないためです。一方、アクティブ状態と開いた状態が少し重なると考えるなら、値は替わるかもしれませんがそれに対応して選択肢が強調されることはないでしょう。繰り返しになりますが、これはコントロールが開いた状態の選択肢に対するキーボードの作用を定義していないためです (コントロールが開いた状態で何が起きるかだけを定義しており、その後がないためです)。
+別のおもしろい例です。コントロールが開いた状態であるときに上下矢印キーを押すと何が起きるのでしょうか? こちらはやや難しくなります。アクティブ状態と開いた状態をまったく別のものと考えるなら、その答えはやはり "何も起きません" です。これは、開いた状態でのキーボードの作用を定義していないためです。一方、アクティブ状態と開いた状態が少し重なると考えるなら、値は替わるかもしれませんがそれに対応して選択肢が強調されることはないでしょう。繰り返しになりますが、これはコントロールが開いた状態の選択肢に対するキーボードの作用を定義していないためです (コントロールが開いた状態で何が起きるかだけを定義しており、その後がないためです)。
 
-もう少し突っ込んで考えてみます: エスケープキーはどうでしょう? <kbd>Esc</kbd> キーを押すと開いた select が閉じます。ネイティブの{{htmlelement('select')}}と同じ機能を提供する場合、キーボードやマウスやスクリーンリーダーへのタッチ、その他あらゆる入力デバイスまで、全てのユーザーにとっての select の動作と全く同じようにふるまうべきです。
+もう少し突っ込んで考えてみます: エスケープキーはどうでしょう? <kbd>Esc</kbd> キーを押すと開いた select が閉じます。ネイティブの {{htmlelement('select')}} と同じ機能を提供する場合、キーボードやマウスや画面リーダーへのタッチ、その他あらゆる入力機器まで、全てのユーザーにとっての select の動作と全く同じようにふるまうべきです。
 
-この例では欠けている仕様が明らかですので対処するでしょうが、めずらしい新たなコントロールでは真の問題になり得ます。標準要素では、{{htmlelement('select')}} もその 1 つですが、仕様の作成者は膨大な時間をかけて全てのユースケースの全ての入力デバイスの全ての操作を指定します。新コントロールの作成は簡単ではなく、特にそれが作成されたことのないものの場合は、どのような動作が正しいかについて、わずかなアイデアですら誰も持っていないため簡単ではないです。少なくとも select はこれまでやってきたため、どうふるまうかはわかっています!
+この例では欠けている仕様が明らかですので対処するでしょうが、めずらしい新たなコントロールでは真の問題になり得ます。標準要素では、 {{htmlelement('select')}} もその 1 つですが、仕様の作成者は膨大な時間をかけて全てのユースケースの全ての入力機器の全ての操作を指定します。新コントロールの作成は簡単ではなく、特にそれが作成されたことのないものの場合は、どのような動作が正しいかについて、わずかなアイデアですら誰も持っていないため簡単ではないです。少なくとも select はこれまでやってきたため、どうふるまうかはわかっています。
 
 一般的に、新しい操作を設計するのは、標準を作成するに十分なリーチを持った、とても大きな産業プレイヤーだけの選択肢です。例えば、Apple は 2001 年に iPod にスクロールホイールを導入しました。完全に新しい操作方法のデバイスを導入するのに成功するマーケットシェアがありましたが、たいていのデバイス会社はそうはいきません。
 
-新しいユーザーインタラクションを発明しないのがベストです。インタラクションを追加する場合、設計段階で時間を使うのが重要です。動作の定義が貧弱であったり定義もれがあったりした場合、いったんユーザーが使い始めると動作を再定義するのが非常に困難になると思われますので、設計段階に時間をかけることは賢明です。もし疑っているのでしたら、他の人に意見を聞きましょう。また予算を持っているのでしたら、[ユーザーテストの実施](http://en.wikipedia.org/wiki/Usability_testing)をためらってはいけません。このプロセスは、UX デザインと呼ばれます。この点について詳しく学びたいのでしたら、以下の役に立つリソースをご覧になるとよいでしょう:
+新しいユーザーインタラクションを発明しないのがベストです。インタラクションを追加する場合、設計段階で時間を使うのが重要です。動作の定義が貧弱であったり定義もれがあったりした場合、いったんユーザーが使い始めると動作を再定義するのが非常に困難になると思われますので、設計段階に時間をかけることは賢明です。もし疑っているのでしたら、他の人に意見を聞きましょう。また予算を持っているのでしたら、[ユーザーテストの実施](https://en.wikipedia.org/wiki/Usability_testing)をためらってはいけません。このプロセスは、UX デザインと呼ばれます。この点について詳しく学びたいのでしたら、以下の役に立つリソースをご覧になるとよいでしょう。
 
-- [UXMatters.com](http://www.uxmatters.com/)
+- [UXMatters.com](https://www.uxmatters.com/)
 - [UXDesign.com](http://uxdesign.com/)
-- [The UX Design section of SmashingMagazine](http://uxdesign.smashingmagazine.com/)
+- [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
-> **Note:** さらにほとんどのシステムでは、使用できる選択肢すべてを見るために {{HTMLElement("select")}} 要素を開く手段があります (これは {{HTMLElement("select")}} 要素をマウスでクリックするのと同じです)。これは Windows では <kbd>Alt</kbd> + <kbd>Down</kbd> キー で実現できますが、この例では実装しません。しかし、仕組みはすでに `click` イベント向けに実装されていますので、行うのは簡単です。
+> **メモ:** さらにほとんどのシステムでは、使用できる選択肢すべてを見るために {{HTMLElement("select")}} 要素を開く手段があります (これは {{HTMLElement("select")}} 要素をマウスでクリックするのと同じです)。これは Windows では <kbd>Alt</kbd> + <kbd>Down</kbd> キー で実現できますが、この例では実装しません。しかし、仕組みはすでに `click` イベント向けに実装されていますので、行うのは簡単です。
 
 ## HTML の構造とセマンティクスの定義
 
-コントロールの基本的な機能が決まりましたので、構築を始めるときが来ました。最初のステップはコントロールの HTML 構造の定義と、基本的なセマンティクスの付与です。こちらが、{{HTMLElement("select")}} 要素の再構築に必要な HTML です:
+コントロールの基本的な機能が決まりましたので、構築を始めるときが来ました。最初のステップはコントロールの HTML 構造の定義と、基本的なセマンティクスの付与です。こちらが、 {{HTMLElement("select")}} 要素の再構築に必要な HTML です。
 
 ```html
-<!-- これはコントロールの中心的なコンテナです。
+<!-- これはコントロールの中心的なコンテナーです。
      tabindex 属性は、ユーザーがコントロールにフォーカスを当てられるようにするものです。
      これを JavaScript で設定する方がよいことは、後で見ていきます。-->
 <div class="select" tabindex="0">
@@ -120,7 +107,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 
 クラス名の使い方に注目してください。これらは基盤となる実際の HTML とは関係なく、フォームに関するそれぞれの部分を示します。これは CSS や JavaScript を強固な HTML の構造と結びつけないようにするために重要であり、そのためにコントロールを扱うコードを壊すことなく、後から実装を変更することができます。例えば {{HTMLElement("optgroup")}} 要素と同等の機能を実装したい場合などです。
 
-クラス名は、しかしながら、意味のある値ではありません。現在の状態では、スクリーンリーダーのユーザーのみがリストを"見る"ことができます。ARIA セマンティクスを少し追加します。
+クラス名は、しかしながら、意味のある値ではありません。現在の状態では、画面リーダーのユーザーのみがリストを"見る"ことができます。ARIA セマンティクスを少し追加します。
 
 ## CSS でルックアンドフィールを作成する
 
@@ -142,7 +129,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-アクティブ状態であるコントロールのルックアンドフィールを定義するため、追加で `active` クラスが必要です。このコントロールはフォーカスを得ることができますので、同様に動作させるためにカスタムスタイルを {{cssxref(":focus")}} 疑似クラスにも適用します。
+アクティブ状態であるコントロールのルックアンドフィールを定義するため、追加で `active` クラスが必要です。このコントロールはフォーカスを得ることができますので、同様に動作させるためにカスタムスタイルを {{cssxref(":focus")}} 擬似クラスにも適用します。
 
 ```css
 .select.active,
@@ -158,7 +145,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 次に、選択肢のリストを扱いましょう:
 
 ```css
-/* .select セレクタは、私たちが定義するクラスがコントロールの内部にあることを
+/* .select セレクターは、私たちが定義するクラスがコントロールの内部にあることを
    確実にするためのシンタックスシュガーです。*/
 .select .optList {
   /* 選択肢のリストが値の下部かつ HTML フローの外側に表示される
@@ -180,7 +167,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-> **Note:** 選択肢のリストに高さと幅を与えないように `transform: scale(1, 0)` も使えます。
+> **メモ:** 選択肢のリストに高さと幅を与えないように `transform: scale(1, 0)` も使えます。
 
 ### 美化
 
@@ -188,10 +175,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 
 ```css
 .select {
-  /* アクセシビリティのため、すべてのサイズは em 単位の値で表します
-     (ユーザーがテキストのみのモードでブラウザーのズーム機能を使用したときに、
-     コントロールをリサイズ可能にします)。算出結果は、ほとんどのブラウザーで
-     デフォルト値である 1em == 16px を想定します。
+  /* 算出結果は、ほとんどのブラウザーで既定値である 1em が 16px を想定します。
      px から em への変換がわからない場合は http://riddle.pl/emcalc/ を試してください */
   font-size   : 0.625em; /* この値 (10px) は、本コンテキストにおける新たなフォントサイズの em 単位値です。*/
   font-family : Verdana, Arial, sans-serif;
@@ -199,12 +183,12 @@ HTML フォームで使用可能なコントロールだけでは十分でない
   box-sizing : border-box;
 
   /* 後で追加する下向き矢印のためのスペースが必要です */
-  padding : .1em 2.5em .2em .5em; /* 1px 25px 2px 5px */
+  padding : .1em 2.5em .2em .5em;
   width   : 10em; /* 100px */
 
-  border        : .2em solid #000; /* 2px */
-  border-radius : .4em; /* 4px */
-  box-shadow    : 0 .1em .2em rgba(0,0,0,.45); /* 0 1px 2px */
+  border        : .2em solid #000;
+  border-radius : .4em;
+  box-shadow    : 0 .1em .2em rgba(0,0,0,.45);
 
   /* 最初の宣言は、線形グラデーションをサポートしないブラウザー向けのものです。*/
   background : #F0F0F0;
@@ -224,11 +208,11 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-下向き矢印をデザインするための追加要素は不要です。代わりに {{cssxref(":after")}} 疑似要素を使用します。ただし、`select` クラスでシンプルな背景画像を使用することによる実装も可能です。
+下向き矢印をデザインするための追加要素は不要です。代わりに {{cssxref("::after")}} 擬似要素を使用します。ただし、`select` クラスでシンプルな背景画像を使用することによる実装も可能です。
 
 ```css
 .select:after {
-  content : "▼"; /* Unicode 文字 U+25BC を使用します。http://www.utf8-chartable.de をご覧ください */
+  content : "▼"; /* Unicode 文字 U+25BC を使用します。 charset メタタグの設定を確認してください。 */
   position: absolute;
   z-index : 1; /* これは、矢印が選択肢のリストに重ならないようにするために重要です */
   top     : 0;
@@ -249,7 +233,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-次に、選択肢のリストにスタイルを設定しましょう:
+次に、選択肢のリストにスタイルを設定しましょう。
 
 ```css
 .select .optList {
@@ -274,11 +258,11 @@ HTML フォームで使用可能なコントロールだけでは十分でない
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: .2em solid #000; /* 2px */
-  border-top-width : .1em; /* 1px */
-  border-radius: 0 0 .4em .4em; /* 0 0 4px 4px */
+  border: .2em solid #000;
+  border-top-width : .1em;
+  border-radius: 0 0 .4em .4em;
 
-  box-shadow: 0 .2em .4em rgba(0,0,0,.4); /* 0 2px 4px */
+  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
   background: #f0f0f0;
 }
 ```
@@ -296,33 +280,32 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-これで、3 つの状態の結果は以下のようになります:
+これで、3 つの状態の結果は以下のようになります。
 
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">通常状態</th>
-      <th scope="col" style="text-align: center">アクティブ状態</th>
-      <th scope="col" style="text-align: center">開いた状態</th>
+      <th scope="col">通常状態</th>
+      <th scope="col">アクティブ状態</th>
+      <th scope="col">開いた状態</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
-      <td colspan="3" style="text-align: center">
+      <td colspan="3">
         <a
-          href="/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          title="HTML/Forms/How_to_build_custom_form_widgets/Example_1"
+          href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
           >ソースコードを確認する</a
         >
       </td>
@@ -334,7 +317,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 
 デザインや構造の準備ができましたので、コントロールが実際に動作するようにするための JavaScript コードを記述できます。
 
-> **Warning:** **警告:** 以下は教育目的のコードであり、そのままで使用するべきではありません。ご覧のとおり、さまざまな箇所に将来性のないものや古いブラウザーで動作しないものがあります。また、本番のコードでは最適化すべき冗長な箇所もあります。
+> **警告:** 以下は教育目的のコードであり、そのままで使用するべきではありません。ご覧のとおり、さまざまな箇所に将来性のないものや古いブラウザーで動作しないものがあります。また、本番のコードでは最適化すべき冗長な箇所もあります。
 
 ### なぜ動作しないのか?
 
@@ -344,7 +327,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 - スクリプトが読み込まれません。これはよくあるケースのひとつであり、特にネットワークの信頼性が低いモバイル環境で発生します。
 - スクリプトに不具合があります。この可能性は常に考慮すべきです。
 - スクリプトがサードパーティのスクリプトと競合しています。これは、トラッキングのスクリプトやユーザーが使用するブックマークレットとの間で発生する可能性があります。
-- スクリプトがブラウザーの拡張機能 (Firefox の [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) 拡張機能や Chrome の [NotScripts](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) 拡張機能など) と競合したり、拡張機能の影響を受けたりしています。
+- スクリプトがブラウザーの拡張機能 (Firefox の [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) 拡張機能や Chrome の [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) 拡張機能など) と競合したり、拡張機能の影響を受けたりしています。
 - ユーザーが古いブラウザーを使用しており、必要な機能のいずれかがサポートされていません。これは、最先端の API を使用するときに頻繁に発生します。
 - ユーザーは JavaScript が完全にダウンロード、解析、実行される前にコンテンツを操作します。
 
@@ -382,12 +365,12 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 </body>
 ```
 
-第二に、不要な要素 (すなわち、スクリプトを実行する場合における "本物の" {{HTMLElement("select")}} 要素や、実行しない場合におけるカスタムコントロール) を隠せるようにするための新たなクラスが 2 つ必要です。デフォルトでは、HTML コードでカスタムコントロールを隠すことに注意してください。
+第二に、スクリプトが実行されていない場合はカスタムコントロールを、実行されている場合は「本物の」 {{HTMLElement("select")}} 要素を視覚的に隠すことができます。既定値では、 HTML コードはカスタムコントロールを隠します。
 
 ```css
 .widget select,
 .no-widget .select {
-  /* この CSS セレクタの基本的な意味は:
+  /* この CSS セレクターの基本的な意味は:
      - body のクラスを "widget" に設定して、本物の {{HTMLElement("select")}} 要素を隠す
      - または body のクラスを変更せずに "no-widget" のままにしておくことで、
        クラスが "select" である要素が隠される */
@@ -398,12 +381,12 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-この CSS は要素の 1 つを見えなくしますが、スクリーンリーダーからは利用できます。
+この CSS は要素の 1 つを見えなくしますが、画面リーダーからは利用できます。
 
 ここで、スクリプトを実行するか否かを判断するための JavaScript スイッチが必要になります。このスイッチはとても簡単です: ページを読み込むときにスクリプトを実行したら、`no-widget` クラスを削除して `widget` クラスを追加します。これにより {{HTMLElement("select")}} 要素やカスタムコントロールの可視性を切り替えます。
 
 ```js
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   document.body.classList.remove("no-widget");
   document.body.classList.add("widget");
 });
@@ -412,24 +395,23 @@ window.addEventListener("load", function () {
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">JS なし</th>
-      <th scope="col" style="text-align: center">JS あり</th>
+      <th scope="col">JS なし</th>
+      <th scope="col">JS あり</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_2")}}
+        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_2")}}
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
-      <td colspan="2" style="text-align: center">
+      <td colspan="2">
         <a
-          href="/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          title="HTML/Forms/How_to_build_custom_form_widgets/Example_2"
+          href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
           >ソースコードを確認する</a
         >
       </td>
@@ -437,26 +419,16 @@ window.addEventListener("load", function () {
   </tbody>
 </table>
 
-> **Note:** コードを本当に汎用かつ再利用可能にしたい場合はクラスを切り替えるのではなく、単に {{HTMLElement("select")}} 要素を隠すためのコントロールのクラスを追加して、ページ内にあるすべての {{HTMLElement("select")}} 要素の後ろにカスタムコントロールを表す DOM ツリーを動的に追加する方がはるかによいでしょう。
+> **メモ:** コードを本当に汎用かつ再利用可能にしたい場合はクラスを切り替えるのではなく、単に {{HTMLElement("select")}} 要素を隠すためのコントロールのクラスを追加して、ページ内にあるすべての {{HTMLElement("select")}} 要素の後ろにカスタムコントロールを表す DOM ツリーを動的に追加する方がはるかによいでしょう。
 
 ### 作業をより簡単に
 
 作成しようとしているコードでは、必要な作業すべてのために標準の JavaScript と DOM API を使用するでしょう。ここで使用するつもりである機能は以下のとおりです:
 
 1. {{domxref("element.classList","classList")}}
-2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/ja/docs/JavaScript/Reference/Global_Objects/Array/forEach)
-4. {{domxref("element.querySelector","querySelector")}} および {{domxref("element.querySelectorAll","querySelectorAll")}}
-
-これら特定機能を利用できるかに加えて、作業を始める前に残されている問題があります。{{domxref("element.querySelectorAll","querySelectorAll()")}} 関数が返すオブジェクトは [`Array`](/ja/docs/JavaScript/Reference/Global_Objects/Array) ではなく {{domxref("NodeList")}} です。これは、`Array` オブジェクトは [`forEach`](/ja/docs/JavaScript/Reference/Global_Objects/Array/forEach) 関数をサポートしているが {{domxref("NodeList")}} はサポートしていないために重要な問題です。{{domxref("NodeList")}} は `Array` ととても似ており、また `forEach` はとても便利であることから、作業を楽にするため以下のように {{domxref("NodeList")}} で `forEach` をサポートさせることができます:
-
-```js
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-```
-
-古いブラウザーをサポートする必要がある場合、そのブラウザーがこうした機能をサポートしているか確かめてください。そうでない場合、リスト内を繰り返すか、ライブラリーや pollyfill を使う必要があります。
+2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
+3. {{domxref("NodeList.forEach()")}}
+4. {{domxref("element.querySelector","querySelector()")}} および {{domxref("element.querySelectorAll","querySelectorAll()")}}
 
 ### イベントコールバックを作成する
 
@@ -472,7 +444,7 @@ function deactivateSelect(select) {
   if (!select.classList.contains('active')) return;
 
   // カスタムコントロールの選択肢のリストを取得することが必要です。
-  var optList = select.querySelector('.optList');
+  const optList = select.querySelector('.optList');
 
   // 選択肢のリストを閉じます。
   optList.classList.add('hidden');
@@ -482,7 +454,8 @@ function deactivateSelect(select) {
 }
 
 // この関数は、ユーザーがコントロールをアクティブ/非アクティブにしたがっているときに使用します。
-// 引数は 2 つあります:
+// (順番に、他の選択操作を無効にする）
+// 引数は 2 つあります。
 // select : アクティブにする `select` クラスの DOM ノード
 // selectList : `select` クラスであるすべての DOM ノードのリスト
 function activeSelect(select, selectList) {
@@ -504,25 +477,23 @@ function activeSelect(select, selectList) {
 // 引数は 1 つあります:
 // select : 表示を切り替えるリストの DOM ノード
 function toggleOptList(select) {
-
   // リストはコントロールから確保します。
-  var optList = select.querySelector('.optList');
+  const optList = select.querySelector('.optList');
 
   // リストのクラスを表示/非表示に切り替えます。
   optList.classList.toggle('hidden');
 }
 
 // この関数は、選択肢を強調したいときに使用します。
-// 引数は 2 つあります:
+// 引数は 2 つあります。
 // select : 強調する選択肢を包含する `select` クラスの DOM ノード
 // option : 強調する `option` クラスの DOM ノード
 function highlightOption(select, option) {
-
   // カスタムコントロールで使用可能なすべての選択肢のリストを取得します。
-  var optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll('.option');
 
   // すべての選択肢から強調効果を取り除きます。
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove('highlight');
   });
 
@@ -533,31 +504,31 @@ function highlightOption(select, option) {
 
 以上が、カスタムコントロールのさまざまな状態を制御するために必要なもののすべてです。
 
-次に、これらの関数と適切なイベントを関連づけます:
+次に、これらの関数と適切なイベントを関連づけます。
 
 ```js
 // ドキュメントが読み込まれたときのイベントの関連づけを制御します。
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener('load', () => {
+  const selectList = document.querySelectorAll('.select');
 
   // 各々のコントロールは初期化が必要です。
-  selectList.forEach(function (select) {
+  selectList.forEach((select) => {
 
     // すべての `option` も同様です。
-    var optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll('.option');
 
     // ユーザーが選択肢にマウスポインタを乗せるたびに、その選択肢を強調します。
-    optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
-        // 注記: 変数 `select` および `option` は、関数呼び出しのスコープ内でのみ
+    optionList.forEach((option) => {
+      option.addEventListener('mouseover', () => {
+        // メモ: 変数 `select` および `option` は、関数呼び出しのスコープ内でのみ
         // 使用可能なクロージャです。
         highlightOption(select, option);
       });
     });
 
     // ユーザーが独自の select 要素でクリックするたびに
-    select.addEventListener('click', function (event) {
-      // 注記: 変数 `select` は、関数呼び出しのスコープ内でのみ
+    select.addEventListener('click', (event) => {
+      // メモ: 変数 `select` は、関数呼び出しのスコープ内でのみ
       // 使用可能なクロージャです。
 
       // 選択肢のリストの可視性を切り替えます。
@@ -567,8 +538,8 @@ window.addEventListener('load', function () {
     // コントロールが再びフォーカスを得た場合
     // ユーザーがコントロールをクリックしたり、コントロールへアクセスするために
     // Tab キーを使用するたびに、コントロールはフォーカスを得ます。
-    select.addEventListener('focus', function (event) {
-      // 注記: 変数 `select` および `selectList` は、関数呼び出しのスコープ内でのみ
+    select.addEventListener('focus', (event) => {
+      // メモ: 変数 `select` および `selectList` は、関数呼び出しのスコープ内でのみ
       // 使用可能なクロージャです。
 
       // コントロールをアクティブにします。
@@ -576,8 +547,8 @@ window.addEventListener('load', function () {
     });
 
     // コントロールがフォーカスを失った場合
-    select.addEventListener('blur', function (event) {
-      // 注記: 変数 `select` は、関数呼び出しのスコープ内でのみ
+    select.addEventListener('blur', (event) => {
+      // メモ: 変数 `select` は、関数呼び出しのスコープ内でのみ
       // 使用可能なクロージャです。
 
       // コントロールを非アクティブにします。
@@ -585,13 +556,14 @@ window.addEventListener('load', function () {
     });
 
     // ユーザーが`esc`を押した場合にフォーカスを外す
-    select.addEventListener('keyup', function (event) {
+    select.addEventListener('keyup', (event) => {
 
-      // deactive on keyup of `esc`
-      if (event.keyCode === 27) {
-         deactivateSelect(select);
+      // deactivate on keyup of `esc`
+      if (event.key === "Escape") {
+        deactivateSelect(select);
       }
     });
+});
 });
 ```
 
@@ -599,8 +571,8 @@ window.addEventListener('load', function () {
 
 | Live example                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_3")}}     |
-| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3) |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}     |
+| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3) |
 
 ### コントロールの値を制御する
 
@@ -618,13 +590,13 @@ window.addEventListener('load', function () {
 function updateValue(select, index) {
   // 指定されたカスタムコントロール向けのネイティブコントロールを取得することが必要です。
   // この例では、ネイティブコントロールはカスタムコントロールの兄弟です。
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   // カスタムコントロールの値のプレースホルダーの取得も必要です。
-  var value = select.querySelector('.value');
+  const value = select.querySelector('.value');
 
   // そして、選択肢の全リストが必要です。
-  var optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll('.option');
 
   // 選択した値のインデックスを、selectedIndex に設定します。
   nativeWidget.selectedIndex = index;
@@ -642,7 +614,7 @@ function updateValue(select, index) {
 function getIndex(select) {
   // 指定されたカスタムコントロール向けのネイティブコントロールにアクセスすることが必要です。
   // この例では、ネイティブコントロールはカスタムコントロールの兄弟です。
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
 };
@@ -652,13 +624,13 @@ function getIndex(select) {
 
 ```js
 // ドキュメントが読み込まれたときのイベントの関連づけを制御します。
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener('load', () => {
+  const selectList = document.querySelectorAll('.select');
 
   // 各々のコントロールは初期化が必要です。
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option'),
-        selectedIndex = getIndex(select);
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll('.option');
+    const selectedIndex = getIndex(select);
 
     // カスタムコントロールがフォーカスを得られるようにします。
     select.tabIndex = 0;
@@ -670,22 +642,25 @@ window.addEventListener('load', function () {
     updateValue(select, selectedIndex);
 
     // ユーザーが選択肢をクリックするのに応じて値を更新します。
-    optionList.forEach(function (option, index) {
-      option.addEventListener('click', function (event) {
+    optionList.forEach((option, index) => {
+      option.addEventListener('click', (event) => {
         updateValue(select, index);
       });
     });
 
     // フォーカスがあるコントロールでユーザーがキーボードを使用するのに応じて、値を更新します。
-    select.addEventListener('keyup', function (event) {
-      var length = optionList.length,
-          index  = getIndex(select);
+    select.addEventListener('keyup', (event) => {
+      let index = getIndex(select);
 
       // ユーザーが下矢印キーを押すと、次の選択肢にジャンプします。
-      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
+        index++;
+      }
 
       // ユーザーが上矢印キーを押すと、前の選択肢にジャンプします。
-      if (event.keyCode === 38 && index > 0) { index--; }
+      if (event.key === "ArrowUp" && index > 0) {
+        index--;
+      }
 
       updateValue(select, index);
     });
@@ -693,14 +668,14 @@ window.addEventListener('load', function () {
 });
 ```
 
-上記のコードで、[`tabIndex`](/ja/docs/Web/API/HTMLElement/tabIndex) プロパティを使用していることは注目に値します。このプロパティは、ネイティブコントロールにフォーカスが当たらないようにすることと、ユーザーがキーボードやマウスを使用するとカスタムコントロールがフォーカスを得るようにするために必要です。
+上記のコードで、 [`tabIndex`](/ja/docs/Web/API/HTMLElement/tabIndex) プロパティを使用していることは注目に値します。このプロパティは、ネイティブコントロールにフォーカスが当たらないようにすることと、ユーザーがキーボードやマウスを使用するとカスタムコントロールがフォーカスを得るようにするために必要です。
 
-これで完了です! 結果は以下のとおりです:
+これで完了です! 結果は以下のとおりです。
 
 | Live example                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_4")}}     |
-| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4) |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
+| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4) |
 
 ちょっと待ってください、本当に終わったのでしょうか?
 
@@ -708,15 +683,15 @@ window.addEventListener('load', function () {
 
 フル機能のセレクトボックスとはかけ離れていますが動作するものはできましたし、よく動作しています。しかし、私たちが行ってきたことは DOM の操作にすぎません。これには実際のセマンティクスがなく、またセレクトボックスのように見えていてもブラウザーの視点からはそうではないため、支援技術はそれがセレクトボックスであるとは理解できません。つまり、このきれいなセレクトボックスはアクセシブルではありません!
 
-幸いなことに解決策があり、それは [ARIA](/ja/docs/Accessibility/ARIA) と呼ばれます。ARIA は "Accessible Rich Internet Application" を表し、その [W3C 仕様](http://www.w3.org/TR/wai-aria/) は私たちがここで行っていることに特化して設計されています: ウェブアプリケーションやカスタムコントロールをアクセシブルにします。これは基本的には、私たちが作り出した要素がネイティブコントロールとして通るかのように、役割や状態や特性をより説明できるようにするために HTML を拡張する属性のセットです。これらの属性の使用はとても簡単ですので、行ってみましょう。
+幸いなことに解決策があり、それは [ARIA](/ja/docs/Web/Accessibility/ARIA) と呼ばれます。ARIA は "Accessible Rich Internet Application" を表し、その [W3C 仕様](http://www.w3.org/TR/wai-aria/) は私たちがここで行っていることに特化して設計されています: ウェブアプリケーションやカスタムコントロールをアクセシブルにします。これは基本的には、私たちが作り出した要素がネイティブコントロールとして通るかのように、役割や状態や特性をより説明できるようにするために HTML を拡張する属性のセットです。これらの属性の使用はとても簡単ですので、行ってみましょう。
 
 ### `role` 属性
 
-[ARIA](/ja/docs/Accessibility/ARIA) で使用される主要な属性が、[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques) 属性です。[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
+[ARIA](/ja/docs/Web/Accessibility/ARIA) で使用される主要な属性が、[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性です。[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
 
 また、ARIA は標準の HTML マークアップにデフォルトで適用されるロールを定義することも特筆に値します。例えば、{{HTMLElement("table")}} 要素はロール `grid` に、{{HTMLElement("ul")}} 要素はロール `list` にマッチします。{{HTMLElement("ul")}} 要素を使用しているため、私たちのコントロールのロール `listbox` が、{{HTMLElement("ul")}} 要素のロール `list` を置き換えるようにしなければなりません。そのために、ロール `presentation` を使用します。このロールは要素に特別な意味はないことを示せるようにするためのものであり、単に情報を与えるために使用されます。これを {{HTMLElement("ul")}} 要素に適用します。
 
-ロール [`listbox`](/ja/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) をサポートするため、HTML を以下のように更新することが必要です:
+ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) に対応するため、HTML を以下のように更新する必要があります。
 
 ```html
 <!-- 最初の要素に role="listbox" 属性を追加します -->
@@ -734,22 +709,22 @@ window.addEventListener('load', function () {
 </div>
 ```
 
-> **Note:** `role` 属性と `class` 属性の両方を含める方法は、[CSS 属性セレクタ](/ja/docs/CSS/Attribute_selectors)に対応しない古いブラウザーをサポートしたい場合にのみ必要です。
+> **メモ:** `role` 属性と `class` 属性の両方を含める方法は、[CSS 属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)に対応しない古いブラウザーをサポートしたい場合にのみ必要です。
 
 ### `aria-selected` 属性
 
-[`role`](/ja/docs/Accessibility/ARIA/ARIA_Techniques) を使用するだけでは不十分です。[ARIA](/ja/docs/Accessibility/ARIA) は、状態や特性を表す多くの属性も提供します。これらをより多くまた適切に使用すると、コントロールが支援技術にもっと良く理解されるようになります。ここでは、使用する属性を 1 つに絞ります: `aria-selected` です。
+[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) を使用するだけでは不十分です。[ARIA](/ja/docs/Web/Accessibility/ARIA) は、状態や特性を表す多くの属性も提供します。これらをより多くまた適切に使用すると、コントロールが支援技術にもっと良く理解されるようになります。ここでは、使用する属性を 1 つに絞ります。 `aria-selected` です。
 
-`aria-selected` 属性は、どの選択肢が現在選択されているかを示すために使用します。これにより、支援技術はユーザーに現在何が選択されているかを伝えることができます。ここではユーザーが選択肢を選択するたびに、選択された選択肢を示すためにこの属性を JavaScript で動的に使用します。このために、`updateValue()` 関数の変更が必要です:
+`aria-selected` 属性は、どの選択肢が現在選択されているかを示すために使用します。これにより、支援技術はユーザーに現在何が選択されているかを伝えることができます。ここではユーザーが選択肢を選択するたびに、選択された選択肢を示すためにこの属性を JavaScript で動的に使用します。このために、`updateValue()` 関数の変更が必要です。
 
 ```js
 function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector('.value');
-  var optionList = select.querySelectorAll('.option');
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector('.value');
+  const optionList = select.querySelectorAll('[role="option"]');
 
   // すべての選択肢が選択されていないようにします。
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.setAttribute('aria-selected', 'false');
   });
 
@@ -762,14 +737,14 @@ function updateValue(select, index) {
 };
 ```
 
-スクリーンリーダーにオフスクリーン select に焦点をあてて他のスタイルを無視するようにした法が簡単に見えますが、これはアクセシブルな解決策ではありません。スクリーンリーダーは盲目の人だけのものではありません。低視力や、完全な視力の人もこれを使います。このため、スクリーンリーダーをオフスクリーン要素だけに焦点をあてるようにはできません。
+画面リーダーにオフスクリーン select に焦点をあてて他のスタイルを無視するようにした法が簡単に見えますが、これはアクセシブルな解決策ではありません。画面リーダーは盲目の人だけのものではありません。低視力や、完全な視力の人もこれを使います。このため、画面リーダーをオフスクリーン要素だけに焦点をあてるようにはできません。
 
-以下がこれらの変更を施した最終結果です ([NVDA](http://www.nvda-project.org/) や [VoiceOver](http://www.apple.com/accessibility/voiceover/) などの支援技術でコントロールを使用してみても、よい感触を得られるでしょう):
+以下がこれらの変更を施した最終結果です （[NVDA](https://www.nvaccess.org/) や [VoiceOver](https://www.apple.com/accessibility/vision/) などの支援技術でコントロールを使用してみても、よい感触を得られるでしょう）。
 
 | Live example                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_controls/Example_5")}}     |
-| [ソースコードを確認する](/ja/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}     |
+| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) |
 
 もっと先に進むには、この例でのコードは汎用性や再利用性に改善が必要です。これは課題として挑戦できます。この 2 つのヒントを挙げると:すべての関数で最初の引数は同じで、つまりこれらの関数は同じコンテキストが必要です。そのコンテキストを共有するオブジェクトを作るのが賢明です。
 
@@ -779,24 +754,22 @@ function updateValue(select, index) {
 
 このため、代わりにラジオボタンを使って再発明できます。このオプションを見てみましょう。
 
-We can start with
-
-完全に意味のある、アクセシブルで、順序のない、関連する{{htmlelement('label')}}つきの{{htmlelement('input/radio','radio')}} ボタンのリストから始めます、グループ全体を適切な意味のある{{htmlelement('fieldset')}} と{{htmlelement('legend')}} のペアにラベルづけします。.
+完全に意味のある、アクセシブルで、順序のない、関連する{{htmlelement('label')}}つきの{{htmlelement('input/radio','radio')}} ボタンのリストから始めます、グループ全体を適切な意味のある{{htmlelement('fieldset')}} と{{htmlelement('legend')}} のペアにラベルづけします。
 
 ```html
- <fieldset>
+<fieldset>
   <legend>Pick a fruit</legend>
-    <ul class="styledSelect">
-      <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
-      <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
-      <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
-      <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
-      <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
-    </ul>
-  </fieldset>
+  <ul class="styledSelect">
+    <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
+    <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
+    <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
+    <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
+    <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
+  </ul>
+</fieldset>
 ```
 
-(legend/fieldset ではなく)ラジオボタンリストに少しスタイルづけをして、前の例と同じ見た目にし、完了したことがわかるようにします:
+(legend/fieldset ではなく)ラジオボタンリストに少しスタイルづけをして、前の例と同じ見た目にし、完了したことがわかるようにします。
 
 ```css
 .styledSelect {
@@ -854,43 +827,40 @@ JavaScript なしで少しの CSS にて、ラジオボタンのリストをス�
 
 これはある程度、JavaScript なしで動作します。JavaScript が失敗しても動作する、われわれのカスタムコントロールど同じものを作ってきました。よい解決策でしょう？これはキーボードでは動作しますが、マウスクリックではそうなりません。ネイティブな意味づけのない要素を作るフレームワークに依存する代わりに、ウェブ標準をカスタムコントロールの基礎として使った方が意味があります。しかし、われわれのコントロールは `<select>` が自ずと持つ機能と同じものを備えていません。
 
-いい面として、このコントロールはスクリーンリーダーにとって完全にアクセシブルでキーボードで完全に操作できます。しかし、このコントロールは {{htmlelement('select')}} 要素の置き換えではありません。異なる機能や足りない機能があります。例えば、4 つの矢印は選択肢を操作できますが、最後のボタンで下を押すと最初のボタンに移動します。`<select>` のように上端、下端で止まりません。
+いい面として、このコントロールは画面リーダーにとって完全にアクセシブルでキーボードで完全に操作できます。しかし、このコントロールは {{htmlelement('select')}} 要素の置き換えではありません。異なる機能や足りない機能があります。例えば、4 つの矢印は選択肢を操作できますが、最後のボタンで下を押すと最初のボタンに移動します。`<select>` のように上端、下端で止まりません。
 
 この足りない機能の追加は、読者の課題としておきます。
 
 ## まとめ
 
-独自のフォームコントロールの作成方法を見てきましたが、ご覧いただいたようにこれは容易なことではありません。独自のカスタムコントロールを作る前に、HTML に要求を十分に満たす代替要素がないかを検討してください。本当にカスタムコントロールを作成する必要がある場合、サードパーティのライブラリに頼るほうが簡単かつよいことも少なくありません。独自作成する場合、既存の要素を編集するか、準備されたコントロールを実装するフレームワークを使うようにして、実用的でアクセシブルなフォームコントロールの作成は見た目より複雑であることを忘れないでください。
+独自のフォームコントロールの作成方法を見てきましたが、ご覧いただいたようにこれは容易なことではありません。独自のカスタムコントロールを作る前に、HTML に要求を十分に満たす代替要素がないかを検討してください。本当にカスタムコントロールを作成する必要がある場合、サードパーティのライブラリーに頼るほうが簡単かつよいことも少なくありません。独自作成する場合、既存の要素を編集するか、準備されたコントロールを実装するフレームワークを使うようにして、実用的でアクセシブルなフォームコントロールの作成は見た目より複雑であることを忘れないでください。
 
-自分でコーディングする前に検討するとよいライブラリをいくつか紹介します:
+自分でコーディングする前に検討するとよいライブラリーをいくつか紹介します。
 
-- [jQuery UI](http://jqueryui.com/)
-- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns)
+- [jQuery UI](https://jqueryui.com/)
+- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
-- [Nice Forms](http://www.emblematiq.com/lab/niceforms/)
 
-ラジオボタン、独自 JavaScript 、またはサードパーティライブラリで代替コントロールを作る場合、アクセシブルかつ機能への耐性を高めましょう。すなわち Web 標準の実装状況がまちまちである、多様なブラウザーで良好に動作できるようにすることが必要です。楽しんでください!
+ラジオボタン、独自 JavaScript 、またはサードパーティライブラリーで代替コントロールを作る場合、アクセシブルかつ機能への耐性を高めましょう。すなわち Web 標準の実装状況がまちまちである、多様なブラウザーで良好に動作できるようにすることが必要です。楽しんでください!
 
 ## このモジュール
 
 ### 学習コース
 
-- [初めての HTML フォーム](/ja/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [HTML フォームの構築方法](/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [ネイティブフォームコントロール](/ja/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [フォームデータの送信](/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [フォームデータの検証](/ja/docs/Learn/HTML/Forms/Data_form_validation)
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [HTML フォームへのスタイル設定](/ja/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [HTML フォームへの高度なスタイル設定](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [フォームコントロール向けプロパティ実装状況一覧](/ja/docs/Property_compatibility_table_for_form_widgets)
+- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
+- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
+- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
+- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
+- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
+- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
+- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック
 
-- [Sending forms through JavaScript](/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [How to build custom form widgets](/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [HTML forms in legacy browsers](/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Advanced styling for HTML forms](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/ja/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
+- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

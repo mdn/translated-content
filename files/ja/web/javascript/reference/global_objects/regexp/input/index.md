@@ -1,15 +1,8 @@
 ---
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/input
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 標準外の **`input`** プロパティは正規表現の一致している文字列を含む静的プロパティです。 `RegExp.$_` はこのプロパティのエイリアスです。
@@ -36,13 +29,11 @@ RegExp.$_;            // "hi world!"
 
 ## 仕様書
 
-| 仕様書                                               |
-| ---------------------------------------------------- |
-| {{SpecName('Legacy RegExp features')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.lastMatch")}}
+{{Compat}}
 
 ## 関連情報
 

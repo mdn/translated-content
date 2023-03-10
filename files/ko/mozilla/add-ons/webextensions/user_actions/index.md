@@ -1,8 +1,8 @@
 ---
 title: 사용자 행동
 slug: Mozilla/Add-ons/WebExtensions/User_actions
-translation_of: Mozilla/Add-ons/WebExtensions/User_actions
 ---
+
 {{AddonSidebar}}
 
 Some WebExtension APIs perform functions that are generally performed as a result of a user action. For example:

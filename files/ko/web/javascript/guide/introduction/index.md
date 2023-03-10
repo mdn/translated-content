@@ -1,14 +1,9 @@
 ---
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - JavaScript
-  - 가이드
-  - 안내서
-  - 자바스크립트
-translation_of: Web/JavaScript/Guide/Introduction
 original_slug: Web/JavaScript/Guide/소개
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 이 장은 JavaScript를 소개하고 그 일부 기초 개념을 다룹니다.
@@ -90,7 +85,7 @@ JavaScript를 실험하기 유용한 두 도구가 Firefox에 내장되어 있�
 
 웹 콘솔을 열기 위해서는, Firefox의 "도구" 메뉴 하위에 있는 "개발자" 메뉴의 "웹 콘솔"을 선택(윈도우와 리눅스에서는 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>, 맥에서는 <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd>)합니다. 브라우저 창의 아래에 웹 콘솔이 나타납니다. 콘솔의 바닥을 따라 나온 것이 여러분이 JavaScript를 입력할 수 있는 명령어 입력줄이고, 실행 결과는 바로 위 공간에 표시됩니다:
 
-![](https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png)
+![](2019-04-04_00-15-29.png)
 
 이 콘솔은 eval과 완전히 동일하게 동작합니다:마지막 입력된 표현식이 반환되죠. 간단하게 생각해서, 콘솔에 뭔가 입력할 때마다 eval로 감싼 console.log로 둘러싸인 형태라고 보시면 됩니다.
 
@@ -100,11 +95,11 @@ function greetMe(yourName) { alert('Hello ' + yourName); } console.log(eval('3 +
 
 ### Scratchpad
 
-Web Console은 한 줄 JavaScript를 실행하기에 훌륭합니다. 하지만 비록 여러 줄을 실행할 수 있지만, 아주 불편하고 Web Console을 사용해 여러분의 샘플 코드를 저장할 수도 없습니다. 그러므로 좀 더 복잡한 예제를 위해서는 [Scratchpad](ko/docs/도구들/Scratchpad)가 더 나은 도구입니다.
+Web Console은 한 줄 JavaScript를 실행하기에 훌륭합니다. 하지만 비록 여러 줄을 실행할 수 있지만, 아주 불편하고 Web Console을 사용해 여러분의 샘플 코드를 저장할 수도 없습니다. 그러므로 좀 더 복잡한 예제를 위해서는 [Scratchpad](/ko/docs/도구들/Scratchpad)가 더 나은 도구입니다.
 
 Scratchpad를 열기 위해, Firefox의 메뉴 "Tools" 의 하위에 있는 "Web Developer" 메뉴의 "Scratchpad" 를 선택합니다(단축키: <kbd>Shift</kbd>+<kbd>F4</kbd>). 이것은 분리된 창에서 열리고 브라우저에서 JavaScript를 작성하고 실행하기 위해 사용할 수 있는 에디터입니다. 여러분은 또한 디스크로부터 스크립트를 부르거나 저장할 수도 있습니다.
 
-![](https://mdn.mozillademos.org/files/13468/scratchpad.png)
+![](scratchpad.png)
 
 ### Hello world
 

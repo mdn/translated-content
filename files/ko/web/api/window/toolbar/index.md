@@ -1,11 +1,8 @@
 ---
 title: Window.toolbar
 slug: Web/API/Window/toolbar
-tags:
-  - 참고
-  - 창
-translation_of: Web/API/Window/toolbar
 ---
+
 {{APIRef}}
 
 ## 요약
@@ -14,11 +11,13 @@ translation_of: Web/API/Window/toolbar
 
 ## 문법
 
-    objRef = window.toolbar
+```js
+objRef = window.toolbar
+```
 
 ## 예제
 
-{{deprecated_inline()}} 주어진 HTML 예제는 다양한 "바" 객체의 visible 프로퍼티의 사용방법과, 권한상승 역시 현재창에서 어떠한 bar의 visible 프로퍼티로 쓰여지는것을 필요로한다는 것을 보여주고 있습니다. 하지만 [deprecation of enablePrivilege](/ko/docs/Bypassing_Security_Restrictions_and_Signing_Code "Bypassing_Security_Restrictions_and_Signing_Code") 때문에 이 기능은 웹 페이지에서 사용할 수 없습니다. EnablePrivilege는 Firefox 15 에서 작동하지 않고, Firefox 17 에서 삭제 될 것입니다.
+{{deprecated_inline()}} 주어진 HTML 예제는 다양한 "바" 객체의 visible 프로퍼티의 사용방법과, 권한상승 역시 현재창에서 어떠한 bar의 visible 프로퍼티로 쓰여지는것을 필요로한다는 것을 보여주고 있습니다. 하지만 [deprecation of enablePrivilege](/ko/docs/Bypassing_Security_Restrictions_and_Signing_Code) 때문에 이 기능은 웹 페이지에서 사용할 수 없습니다. EnablePrivilege는 Firefox 15 에서 작동하지 않고, Firefox 17 에서 삭제 될 것입니다.
 
 ```html
 <!DOCTYPE html>

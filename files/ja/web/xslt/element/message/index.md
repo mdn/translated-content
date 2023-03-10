@@ -1,13 +1,8 @@
 ---
 title: <xsl:message>
 slug: Web/XSLT/Element/message
-tags:
-  - XSLT
-  - message
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/message
 ---
+
 {{ XsltRef() }}
 
 `<xsl:message>` 要素は (NS の JavaScript コンソールに) メッセージを出力し、オプションでスタイルシートの実行を終了します。これはデバッグに便利です。

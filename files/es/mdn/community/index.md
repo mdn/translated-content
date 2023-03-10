@@ -1,12 +1,10 @@
 ---
 title: Enviar feedback sobre MDN
 slug: MDN/Community
-translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
 ---
-{{MDNSidebar}}
 
-{{IncludeSubnav("/es/docs/MDN")}}
+{{MDNSidebar}}
 
 ¡Bienvenido a la Red de Desarrolladores de Mozilla! si tienes algunas sugerencias, o estás teniendo problemas usando MDN, estás en el lugar correcto. El mismo hecho de que muestres interés en ofrecer feedback, te hace más parte de la comunidad de Mozilla, y te agradecemos de antemano tu interés.
 
@@ -36,7 +34,7 @@ Las discusiones más a largo plazo ocurren en [el foro de discusión de MDN](htt
 
 ### Problemas de documentación
 
-Si ves un problema en la documentación que por cualquier razón, no puedas arreglar tú mismo, siempre puedes [informar del problema](https://github.com/mdn/sprints/issues/new?template=issue-template.md&projects=mdn/sprints/2&labels=user-report "Report a documentation content problem."). Puedes utilizar este formulario para cualquier problema relacionado con documentación, tanto si se trata de una correción simple o de una solicitud para una nuevo fragmento de contenido. Como se ha mencionado con anterioridad, te invitamos a que contribuyas con cambios de tu propia cosecha, pero esta opción está igualmente disponible.
+Si ves un problema en la documentación que por cualquier razón, no puedas arreglar tú mismo, siempre puedes [informar del problema](https://github.com/mdn/sprints/issues/new?template=issue-template.md&projects=mdn/sprints/2&labels=user-report). Puedes utilizar este formulario para cualquier problema relacionado con documentación, tanto si se trata de una correción simple o de una solicitud para una nuevo fragmento de contenido. Como se ha mencionado con anterioridad, te invitamos a que contribuyas con cambios de tu propia cosecha, pero esta opción está igualmente disponible.
 
 ### Problemas en la web
 

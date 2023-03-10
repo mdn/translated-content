@@ -2,6 +2,7 @@
 title: 函数
 slug: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function)对象。
 
 有关更多示例和说明，请参阅[有关函数的 JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/Functions)。
@@ -150,7 +151,7 @@ function* [name]([param] [, param] [..., param]) { statements }
 ```
 
 - `param`
-  - : 参数名称。零参数需要用 () 表示. 只有一个参数时不需要括号. (例如 `foo => 1`)
+  - : 参数名称。零参数需要用 () 表示。只有一个参数时不需要括号。(例如 `foo => 1`)
 - `statements or expression`
   - : 多个声明 statements 需要用大括号括起来，而单个表达式时则不需要。表达式 expression 也是该函数的隐式返回值。
 
@@ -194,20 +195,20 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 
 ### 默认参数
 
-如果没有值或传入了未定义的值，默认函数参数允许形式参数使用默认值初始化。 参见：[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)。
+如果没有值或传入了未定义的值，默认函数参数允许形式参数使用默认值初始化。参见：[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)。
 
 ### 剩余参数
 
-剩余参数语法允许将数量不限的参数描述成一个数组。 参见：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
+剩余参数语法允许将数量不限的参数描述成一个数组。参见：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
 
 ## `arguments`对象
 
 你可以参阅在函数里使用`arguments`对象的函数参数。参见：[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。
 
-- [`arguments`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
-- [`arguments.callee`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
-- [`arguments.caller`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
-- [`arguments.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): 传给函数的参数的数目。
+- [`arguments`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
+- [`arguments.callee`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
+- [`arguments.caller`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
+- [`arguments.length`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): 传给函数的参数的数目。
 
 ## 方法函数定义
 
@@ -307,7 +308,7 @@ function foo() {
 
 函数表达式定义的函数继承了当前的作用域。换言之，函数构成了闭包。另一方面，Function 构造函数定义的函数不继承任何全局作用域以外的作用域 (那些所有函数都继承的)。
 
-通过函数表达式定义的函数和通过函数声明定义的函数只会被解析一次，而 Function 构造函数定义的函数却不同。也就是说，每次构造函数被调用，传递给 Function 构造函数的函数体字符串都要被解析一次 。虽然函数表达式每次都创建了一个闭包，但函数体不会被重复解析，因此函数表达式仍然要快于"`new Function(...)`"。 所以 Function 构造函数应尽可能地避免使用。
+通过函数表达式定义的函数和通过函数声明定义的函数只会被解析一次，而 Function 构造函数定义的函数却不同。也就是说，每次构造函数被调用，传递给 Function 构造函数的函数体字符串都要被解析一次。虽然函数表达式每次都创建了一个闭包，但函数体不会被重复解析，因此函数表达式仍然要快于"`new Function(...)`"。所以 Function 构造函数应尽可能地避免使用。
 
 有一点应该要注意的，在通过解析 Function 构造函数字符串产生的函数里，内嵌的函数表达式和函数声明不会被重复解析。例如：
 
@@ -403,7 +404,7 @@ if (shouldDefineZero) {
 
 ECMAScript 6 中，如果`shouldDefineZero`是 false，则永远不会定义 zero，因为这个块从不执行。然而，这是标准的新的一部分。这是历史遗留问题，无论这个块是否执行，一些浏览器会定义 zero。
 
-`在`[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)`下，所有支持`ECMAScript 6 的`浏览器以相同的方式处理：只有在 shouldDefineZero 为 true 的情况下定义 zero，并且作用域只是这个块内。`
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 下，所有支持 `ECMAScript 6` 的浏览器以相同的方式处理：只有在 shouldDefineZero 为 `true` 的情况下定义 `zero`，并且作用域只是这个块内。
 
 有条件地定义一个函数的一个更安全的方法是把函数表达式赋给一个变量：
 
@@ -445,7 +446,7 @@ result = padZeros(5,4);  // returns "0005"
 
 ### 检测函数是否存在
 
-你可以通过 **typeof** 操作符检测一个函数是否存在。在下面的例子中，用一个测试来演示检测 window 对象是否拥有一个 noFunc 函数的属性。如果存在，那就使用它；否则就采取其它的一些操作。
+你可以通过 **typeof** 操作符检测一个函数是否存在。在下面的例子中，用一个测试来演示检测 window 对象是否拥有一个 noFunc 函数的属性。如果存在，那就使用它；否则就采取其他的一些操作。
 
 ```js
 if ('function' === typeof window.noFunc) {

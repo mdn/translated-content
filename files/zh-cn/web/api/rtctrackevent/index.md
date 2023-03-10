@@ -2,9 +2,10 @@
 title: RTCTrackEvent
 slug: Web/API/RTCTrackEvent
 ---
+
 {{APIRef("WebRTC")}}
 
-The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) interface **`RTCTrackEvent`** represents the {{event("track")}} event, which is sent when a new {{domxref("MediaStreamTrack")}} is added to an {{domxref("RTCRtpReceiver")}} which is part of the {{domxref("RTCPeerConnection")}}. The target is the `RTCPeerConnection` object to which the track is being added.
+The [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) interface **`RTCTrackEvent`** represents the {{domxref("RTCPeerConnection.track_event", "track")}} event, which is sent when a new {{domxref("MediaStreamTrack")}} is added to an {{domxref("RTCRtpReceiver")}} which is part of the {{domxref("RTCPeerConnection")}}. The target is the `RTCPeerConnection` object to which the track is being added.
 
 This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an `RTCTrackEvent` yourself.
 
@@ -57,4 +58,4 @@ peerConnection.addEventListener("track", e => {
 
 ## Browser compatibility
 
-{{Compat("api.RTCTrackEvent")}}
+{{Compat}}

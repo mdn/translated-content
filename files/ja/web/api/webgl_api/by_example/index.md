@@ -2,6 +2,7 @@
 title: 実例による WebGL
 slug: Web/API/WebGL_API/By_example
 ---
+
 {{learnsidebar}}
 
 {{Next("Learn/WebGL/By_example/Detect_WebGL")}}

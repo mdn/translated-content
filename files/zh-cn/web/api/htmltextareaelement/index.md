@@ -2,6 +2,7 @@
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTextAreaElement`** 接口提供了特殊的属性和方法，用于控制 {{HTMLElement("textarea")}} 元素的布局和展示。
@@ -16,7 +17,7 @@ slug: Web/API/HTMLTextAreaElement
 | `value`                                                                          | `string:` Returns / Sets the raw value contained in the control.                                                                                                                                                                                                                                                                  |
 | `textLength` {{readonlyInline}}                                            | `long:` Returns the codepoint length of the control's `value`. Same as `calling value.length`                                                                                                                                                                                                                                     |
 | `defaultValue`                                                                   | `string:` Returns / Sets the control's default value, which behaves like the {{domxref("Node.textContent")}} property.                                                                                                                                                                                                   |
-| `placeholder`                                                                    | `string:` 返回/设置元素{{htmlattrxref("placeholder", "textarea")}} 属性, 用于提示用户在组件中应该输入什么。                                                                                                                                                                                                          |
+| `placeholder`                                                                    | `string:` 返回/设置元素{{htmlattrxref("placeholder", "textarea")}} 属性，用于提示用户在组件中应该输入什么。                                                                                                                                                                                                          |
 | `rows`                                                                           | `unsigned long:` Returns / Sets the element's {{htmlattrxref("rows", "textarea")}} attribute, indicating the number of visible text lines for the control.                                                                                                                                                            |
 | `cols`                                                                           | `unsigned long:` Returns / Sets the element's {{htmlattrxref("cols", "textarea")}} attribute, indicating the visible width of the text area.                                                                                                                                                                          |
 | `autofocus`                                                                      | `boolean:` Returns / Sets the element's {{htmlattrxref("autofocus", "textarea")}} attribute, indicating that the control should have input focus when the page loads                                                                                                                                               |
@@ -58,7 +59,7 @@ The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement
 
 ## 事件
 
-Listen to these events using [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
+Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
 - [`input` event](/zh-CN/docs/Web/API/HTMLElement/input_event)
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
@@ -168,7 +169,7 @@ function checkRows(oField, oKeyEvent) {
 }
 ```
 
-In the HTML we just need to hook our function to the \`onkeypress\` event and specify that our textarea does not accept pasting:
+In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
 
 ```html
 <form>
@@ -187,4 +188,4 @@ In the HTML we just need to hook our function to the \`onkeypress\` event and sp
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTextAreaElement")}}
+{{Compat}}

@@ -3,7 +3,7 @@ title: <marquee>
 slug: Web/HTML/Element/marquee
 translation_of: Web/HTML/Element/marquee
 ---
-{{HTMLRef}}{{obsolete_header}}
+{{HTMLSidebar}}
 
 ## Определение
 
@@ -28,7 +28,7 @@ HTML-элемент `<marquee>` используется для создания
 - {{htmlattrdef("scrolldelay")}}
   - : Задаёт интервал между каждым шагом в миллисекундах. По умолчанию 85. Обратите внимание, что значения меньше 60 будут проигнорированы и будет использовано 60, если не присутствует атрибут `truespeed`.
 - {{htmlattrdef("truespeed")}}
-  - : По умолчанию значения меньше 60 в` scrolldelay игнорируются`. Однако, если присутствует `truespeed`, то они не игнорируются
+  - : По умолчанию значения меньше 60 в `scrolldelay` игнорируются. Однако, если присутствует `truespeed`, то они не игнорируются
 - {{htmlattrdef("vspace")}}
   - : Задаёт вертикальный отступ (margin) в пикселях или процентах.
 - {{htmlattrdef("width")}}

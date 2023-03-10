@@ -1,8 +1,8 @@
 ---
 title: Graceful asynchronous programming with Promises
 slug: Learn/JavaScript/Asynchronous/Promises
-translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 
 **Promises** 는 이전 작업이 완료될 때 까지 다음 작업을 연기 시키거나, 작업실패를 대응할 수 있는 비교적 새로운 JavaScript 기능입니다. Promise는 비동기 작업 순서가 정확하게 작동되게 도움을 줍니다. 이번 문서에선 Promise가 어떻게 동작하는지, 웹 API와 어떻게 사용할 수 있는지 그리고 직접 코드를 만들어 볼것 입니다.
@@ -566,12 +566,3 @@ Most modern Web APIs are promise-based, so you'll need to understand promises to
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- [General asynchronous programming concepts](/ko/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/ko/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/ko/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/ko/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

@@ -2,13 +2,14 @@
 title: GLSL 着色器
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
+
 {{GamesSidebar}}
 
 使用 GLSL 的着色器 (shader), GLSL 是一门特殊的有着类似于 C 语言的语法，在图形管道 (graphic pipeline) 中直接可执行的 OpenGL 着色语言。着色器有两种类型 -- 顶点着色器 (Vertex Shader) 和片段着色器 (Fragment Shader). 前者是将形状转换到真实的 3D 绘制坐标中，后者是计算最终渲染的颜色和其他属性用的。
 
 GLSL 不同于 JavaScript, 它是强类型语言，并且内置很多数学公式用于计算向量和矩阵。快速编写着色器非常复杂，但创建一个简单的着色器并不难。在这篇文章我们将介绍使用着色器的基础知识，并且构建一个使用 Three.js 的例子来加速代码编写。
 
-你可能记得[基本原理](/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory)那篇文章，一个顶点 (vertex) 是在空间中有自己 3D 坐标的点，并且通常包含些被定义的其他信息。空间本身会被坐标系统定义。在那个 3D 空间中一切都是关于形状的呈现。
+你可能记得[基本原理](/zh-CN/docs/Games/Techniques/3D_on_the_web/Basic_theory)那篇文章，一个顶点 (vertex) 是在空间中有自己 3D 坐标的点，并且通常包含些被定义的其他信息。空间本身会被坐标系统定义。在那个 3D 空间中一切都是关于形状的呈现。
 
 ## 着色器类型
 
@@ -24,7 +25,7 @@ void main() {
 }
 ```
 
-这个 `void main()` 函数是定义全局`gl_Position` 变量的标准方式。所有在这个函数里面的代码都会被着色器执行。 如果将 3D 空间中的位置投射到 2D 屏幕上这些信息都会保存在计算结果的变量中。
+这个 `void main()` 函数是定义全局`gl_Position` 变量的标准方式。所有在这个函数里面的代码都会被着色器执行。如果将 3D 空间中的位置投射到 2D 屏幕上这些信息都会保存在计算结果的变量中。
 
 ### 片段着色器
 
@@ -38,17 +39,17 @@ void main() {
 
 计算结果包含 RGBA 颜色信息。
 
-## 例子
+## 示例
 
-让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过[Three.js 教程](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)并掌握了场景，物体和材质的基本概念。
+让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过[Three.js 教程](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)并掌握了场景，物体和材质的基本概念。
 
-> **备注：** 记住你没必要使用 Three.js 或者其他库来编写着色器 -- 纯[WebGL](/en-US/docs/Web/API/WebGL_API) 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来 -- 如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。
+> **备注：** 记住你没必要使用 Three.js 或者其他库来编写着色器 -- 纯[WebGL](/zh-CN/docs/Web/API/WebGL_API) 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来 -- 如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。
 
 ### 环境设置
 
 要开始编写 WebGL 着色器你不需要做太多，只需：
 
-- 确保你在使用对 [WebGL](/en-US/docs/Web/API/WebGL_API) 有良好支持的现代浏览器，比如最新版的 Firefox 或 Chrome.
+- 确保你在使用对 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 有良好支持的现代浏览器，比如最新版的 Firefox 或 Chrome.
 - 创建一个目录保存你的实验。
 - 拷贝一份的 [压缩版的 Three.js 库](http://threejs.org/build/three.min.js) 到你的目录。
 
@@ -82,7 +83,7 @@ void main() {
 </html>
 ```
 
-他包含了一些基本信息比如 文档的 {{htmlelement("title")}}, 并且设置了{{htmlelement("canvas")}}元素 css 样式的宽高，Three.js 会插入到页面中占满整个可视区域。 {{htmlelement("script")}}元素在包含 Three.js 库的{{htmlelement("head")}}中。我们的代码将卸载{{htmlelement("body")}}标签中的 script 标签中：
+其包含了一些基本信息比如文档的 {{htmlelement("title")}}，并且设置了 {{htmlelement("canvas")}} 元素 css 样式的宽高，Three.js 会插入到页面中占满整个可视区域。{{htmlelement("script")}} 元素在包含 Three.js 库的 {{htmlelement("head")}} 中。我们的代码将写在 {{htmlelement("body")}} 标签中的 script 标签中：
 
 1. 首先将包含顶点着色器。
 2. 然后包含片段着色器。
@@ -92,7 +93,7 @@ void main() {
 
 ### 立方体源代码
 
-我们可以复用[Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) 中立方体的源代码，大多数元素例如渲染器，摄像机和灯光都没有发生改变，但是基本的材质会用到自己写的着色器。
+我们可以复用[Building up a basic demo with Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) 中立方体的源代码，大多数元素例如渲染器，摄像机和灯光都没有发生改变，但是基本的材质会用到自己写的着色器。
 
 去[cube.html file on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html)中，复制第二个{{htmlelement("script")}}元素中所有的 JavaScript 代码，粘贴到当前例子中的第三个`<script>` 标签中。保存并运行 `index.html` — 然后你会看到一个蓝色立方体
 
@@ -108,7 +109,7 @@ void main() {
 
 每次的`gl_Position` 的结果是计算 model-view 矩阵和投射矩阵和投射矩阵相乘并得到最后的顶点位置。
 
-> **备注：** 你可以在 [顶点处理](/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing)中学到更多关于模型，视图和投射变换，并且你可以在文末看到更多学习链接。
+> **备注：** 你可以在 [顶点处理](/zh-CN/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing)中学到更多关于模型，视图和投射变换，并且你可以在文末看到更多学习链接。
 
 `projectionMatrix` 和 `modelViewMatrix` 两个函数都是 Three.js 提供的，并且传入了一个新的 3D 位置向量，转成着色器之后直接导致立方体向 `x` 轴移动 10 个单位，向`z` 轴移动了 5 个单位。我们可以忽略第四个参数并且保持为默认的`1.0` ; 这是用来控制 3D 空间中订单位置裁剪的，这个例子中不需要。
 

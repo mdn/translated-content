@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/Accept-Language
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête **`Accept-Language`** de la requête HTTP indique quelles sont les langues que le client est capable de comprendre, et quelle variante locale est préférée. En utilisant la [négociation de contenu](/fr-FR/docs/Web/HTTP/Content_negotiation), le serveur choisit alors l'une des propositions, l'utilise et informe le client de son choix par l'entête de réponse {{HTTPHeader("Content-Language")}}. Les navigateurs définissent les valeurs adéquates pour cet entête en fonction de la langue de leur interface utilisateur, et même si un utilisateur peut la changer, cela se produit rarement (et cela est vu d'un mauvais œil, dans la mesure où cela permet l'identification par empreinte numérique).
@@ -70,13 +71,11 @@ Accept-Language: en-US,en;q=0.5
 
 ## Spécifications
 
-| Spécification                                            | Titre                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Accept-Language", "5.3.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Accept-Language")}}
+{{Compat}}
 
 ## Voir aussi
 

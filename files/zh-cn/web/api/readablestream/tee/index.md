@@ -2,6 +2,7 @@
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} 接口的 **`tee()`** 方法对当前的可读流进行[拷贝（tees）](https://streams.spec.whatwg.org/#tee-a-readable-stream)，返回包含两个 {{domxref("ReadableStream")}} 实例分支的数组。
@@ -56,14 +57,14 @@ function fetchStream(stream, list) {
       console.log("Stream complete");
       return;
     }
-  
+
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement('li');
     listItem.textContent = 'Read ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
     list.appendChild(listItem);
-    
+
     // Read some more, and call this function again
     return reader.read().then(processText);
   });

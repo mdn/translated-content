@@ -2,11 +2,12 @@
 title: JavaScript
 slug: Glossary/JavaScript
 ---
+
 ## 概要
 
 JavaScript (または JS) は、主にウェブページの動的なクライアントサイドスクリプトとして使用されるプログラミング言語です。しかし、{{Glossary("Server","サーバー")}}サイドでも [Node.js](https://nodejs.org/) のようなランタイムを用いて、たびたび使用されています。
 
-JavaScript と {{interwiki("wikipedia", "Java", "ブログラミング言語 Java")}} を混同**しないでください>**。_"Java"_ と _"JavaScript"_ のどちらも米国その他の国での Oracle の(登録)商標ですが、この 2 つのプログラミング言語は構文、セマンティクス、ユースケースがかなり異なります。
+JavaScript と [ブログラミング言語 Java](https://ja.wikipedia.org/wiki/Java) を混同**しないでください>**。_"Java"_ と _"JavaScript"_ のどちらも米国その他の国での Oracle の(登録)商標ですが、この 2 つのプログラミング言語は構文、セマンティクス、ユースケースがかなり異なります。
 
 JavaScript は主にブラウザーで使用され、これにより {{Glossary("DOM")}} を介したウェブページ内容の操作、{{Glossary("AJAX")}} や {{Glossary("IndexedDB")}} によるデータ操作、{{Glossary("canvas")}} によるグラフィック描画、そして様々な {{Glossary("API")}} を介してブラウザーが稼働しているデバイスとの情報のやり取り、その他多数のことを開発者ができるようにします。JavaScript は世界で最も広く利用されている言語の一つであり、ここ最近のブラウザーで利用可能な {{Glossary("API")}} の成長とパフォーマンスの革新がその原動力となっています。
 
@@ -22,11 +23,11 @@ JavaScript は主にブラウザーで使用され、これにより {{Glossary(
 
 ### 基礎知識
 
-- Wikipedia 上の記事「{{interwiki("wikipedia", "JavaScript")}}」
+- Wikipedia 上の記事「[JavaScript](https://ja.wikipedia.org/wiki/JavaScript)」
 
 ### JavaScript の学習
 
-- MDN 上の記事「{{Link("/ja/docs/Web/JavaScript/Guide")}}」
+- MDN 上の記事「[JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)」
 - [NodeSchool による JavaScript ワークショップ](http://nodeschool.io/#workshoppers)
 - [codecademy.com による JavaScript 演習コース](https://www.codecademy.com/tracks/javascript)
 - [John Resig によるチュートリアル _「Learning Advanced JavaScript」_](http://ejohn.org/apps/learn/)
@@ -34,5 +35,5 @@ JavaScript は主にブラウザーで使用され、これにより {{Glossary(
 ### 技術リファレンス
 
 - [最新の ECMAScript 仕様書](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- MDN 上の記事「{{Link("/ja/docs/Web/JavaScript/reference")}}」
+- MDN 上の記事「[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)」
 - [JavaScript テキスト「Eloquent JavaScript」](http://eloquentjavascript.net/)

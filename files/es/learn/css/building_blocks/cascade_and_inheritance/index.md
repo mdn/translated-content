@@ -1,9 +1,9 @@
 ---
 title: Cascada y herencia
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
-translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 original_slug: Learn/CSS/Building_blocks/Cascada_y_herencia
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 El objetivo de este artículo es desarrollar la comprensión de algunos de los conceptos fundamentales de CSS (cascada, especificidad y herencia) que controlan cómo se aplica el CSS al HTML y cómo se resuelven los conflictos.
@@ -113,15 +113,15 @@ CSS proporciona cuatro valores de propiedad universales especiales para el contr
 
 > **Nota:** También hay un valor más reciente, {{cssxref ("revert")}}, que todavía admiten pocos navegadores.
 
-> **Nota:** Véase la sección [El origen de las declaraciones CSS](/es/docs/Web/CSS/Cascade#Origin_of_CSS_declarations "Este artículo explica qué es la cascada, el orden de la secuencia en cascada de las declaraciones CSS, y cómo esto afecta al desarrollador web.") en el artículo [Introducción al concepto de cascada en CSS ](/es/docs/Web/CSS/Cascade " Este artículo explica qué es la cascada, el orden de la secuencia en cascada de las declaraciones CSS, y cómo esto afecta al desarrollador web.")para obtener más información sobre cada uno de estos valores y el modo en que funcionan.
+> **Nota:** Véase la sección [El origen de las declaraciones CSS](/es/docs/Web/CSS/Cascade#Origin_of_CSS_declarations) en el artículo [Introducción al concepto de cascada en CSS](/es/docs/Web/CSS/Cascade)para obtener más información sobre cada uno de estos valores y el modo en que funcionan.
 
 A continuación veremos una lista de enlaces y exploraremos cómo funcionan los valores universales. El ejemplo en vivo de abajo te permite jugar con el CSS y ver lo que sucede cuando se hacen cambios. Jugar con el código es la mejor forma de enfrentarse al HTML y el CSS.
 
 Por ejemplo:
 
-1.  Se ha aplicado la clase `my-class-1` al segundo elemento de lista. Esto establece por herencia el color del elemento `<a>` que está anidado en él. ¿Cómo cambia el color del enlace si quitamos esta regla?
-2.  ¿Entiendes por qué el tercer y el cuarto enlace se ven de este color? En caso contrario, comprueba la descripción de los valores anteriores.
-3.  ¿Cuál de los enlaces va a cambiar de color si se define un nuevo color para el elemento `<a>`, por ejemplo, `a { color: red; }`?
+1. Se ha aplicado la clase `my-class-1` al segundo elemento de lista. Esto establece por herencia el color del elemento `<a>` que está anidado en él. ¿Cómo cambia el color del enlace si quitamos esta regla?
+2. ¿Entiendes por qué el tercer y el cuarto enlace se ven de este color? En caso contrario, comprueba la descripción de los valores anteriores.
+3. ¿Cuál de los enlaces va a cambiar de color si se define un nuevo color para el elemento `<a>`, por ejemplo, `a { color: red; }`?
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}}
 
@@ -141,9 +141,9 @@ Ahora entendemos por qué un párrafo que está anidado en la estructura del HTM
 
 Hay que considerar tres factores, que se enumeran a continuación en orden de importancia creciente. Los posteriores invalidan los anteriores:
 
-1.  **Orden en el código**
-2.  **Especificidad**
-3.  **Importancia**
+1. **Orden en el código**
+2. **Especificidad**
+3. **Importancia**
 
 Vamos a explicarlos para ver cómo los navegadores determinan exactamente que CSS deben aplicar.
 
@@ -167,10 +167,10 @@ Ahora vamos a echar un vistazo a cómo el navegador calcula la especificidad. Ya
 
 La cantidad de especificidad de un selector se mide usando cuatro valores diferentes (o componentes), que pueden describirse como millares, centenas, decenas y unidades (cuatro dígitos individuales dispuestos en cuatro columnas):
 
-1.  **Millares**: Se suma un punto en esta columna si la declaración está en un atributo de {{htmlattrxref ("style")}} o, como suelen denominarse, estilos en línea. Tales declaraciones no tienen selectores, por lo que su especificidad siempre es 1000.
-2.  **Centenas**: Se suma un punto en esta columna por cada selector con ID particular que esté contenido en el selector general.
-3.  **Decenas**: Se suma un punto en esta columna por cada selector de clase, de atributo o pseudoclase que estén contenidos en el selector general.
-4.  **Unidades**: Se suma un punto en esta columna por cada selector o pseudoelemento que esté contenido en el selector general.
+1. **Millares**: Se suma un punto en esta columna si la declaración está en un atributo de {{htmlattrxref ("style")}} o, como suelen denominarse, estilos en línea. Tales declaraciones no tienen selectores, por lo que su especificidad siempre es 1000.
+2. **Centenas**: Se suma un punto en esta columna por cada selector con ID particular que esté contenido en el selector general.
+3. **Decenas**: Se suma un punto en esta columna por cada selector de clase, de atributo o pseudoclase que estén contenidos en el selector general.
+4. **Unidades**: Se suma un punto en esta columna por cada selector o pseudoelemento que esté contenido en el selector general.
 
 > **Nota:** El selector universal (`*`), los operadores de combinación (`+`, `>`, `~`, ' ') y la pseudo-clase de negación (`:not`) no tienen ningún efecto sobre la especificidad.
 
@@ -208,10 +208,10 @@ Echa un vistazo a este ejemplo en el que se muestran dos párrafos, uno de los c
 
 Vamos a observarlo con detenimiento para ver qué sucede. Elimina algunas de las propiedades para ver lo que sucede si te cuesta entender lo que ocurre:
 
-1.  Verás que se han aplicado los valores de {{cssxref("color")}} y {{cssxref("padding")}} de la tercera regla pero no el de {{cssxref("background-color")}}. ¿Por qué? Deberían haberse aplicado para los tres porque las reglas que se encuentran más adelante en el orden en el código fuente prevalecen sobre las reglas anteriores.
-2.  Sin embargo, ganan las reglas que están antes porque los selectores de clase tienen mayor especificidad que selectores de elemento.
-3.  En ambos bloques de código hay una clase {{htmlattrxref("class")}} con el valor `better`, pero en el segundo bloque de código hay un {{htmlattrxref("id")}} con el valor `winning`. Puesto que los identificadores tienen una especificidad _incluso mayor_ que las clases (solo puede haber un elemento con un determinado ID en cada página, mientras que puede haber muchos elementos de la misma clase: los selectores ID son _muy específicos_ con lo que delimitan), el primer bloque de código tendría un fondo de color gris y ningún borde, según lo que especifica la clase, mientras que al segundo bloque de código se aplicarían tanto el color de fondo rojo como el borde negro de 1 píxel.
-4.  El segundo elemento, en cambio, se muestra con el fondo de color rojo pero sin borde. ¿Por qué? Porque la declaración `!important` que hay en la segunda regla, después de `border: none` significa que esta declaración tendrá más valor que la regla anterior, aunque el ID de esta tenga mayor especificidad.
+1. Verás que se han aplicado los valores de {{cssxref("color")}} y {{cssxref("padding")}} de la tercera regla pero no el de {{cssxref("background-color")}}. ¿Por qué? Deberían haberse aplicado para los tres porque las reglas que se encuentran más adelante en el orden en el código fuente prevalecen sobre las reglas anteriores.
+2. Sin embargo, ganan las reglas que están antes porque los selectores de clase tienen mayor especificidad que selectores de elemento.
+3. En ambos bloques de código hay una clase {{htmlattrxref("class")}} con el valor `better`, pero en el segundo bloque de código hay un {{htmlattrxref("id")}} con el valor `winning`. Puesto que los identificadores tienen una especificidad _incluso mayor_ que las clases (solo puede haber un elemento con un determinado ID en cada página, mientras que puede haber muchos elementos de la misma clase: los selectores ID son _muy específicos_ con lo que delimitan), el primer bloque de código tendría un fondo de color gris y ningún borde, según lo que especifica la clase, mientras que al segundo bloque de código se aplicarían tanto el color de fondo rojo como el borde negro de 1 píxel.
+4. El segundo elemento, en cambio, se muestra con el fondo de color rojo pero sin borde. ¿Por qué? Porque la declaración `!important` que hay en la segunda regla, después de `border: none` significa que esta declaración tendrá más valor que la regla anterior, aunque el ID de esta tenga mayor especificidad.
 
 > **Nota:** La única manera de anular la declaración `!important` sería incluir otra declaración `!important` en una declaración con la _misma especificidad_ que aparezca más adelante en el orden del código fuente, o con una especificidad superior.
 
@@ -227,11 +227,11 @@ Por último, resulta útil señalar que la importancia de una declaración CSS d
 
 Las declaraciones contradictorias se aplicarán en el orden siguiente (recuerda que las últimas prevalecen sobre las anteriores):
 
-1.  Declaraciones en las hojas de estilo de agente de usuario (por ejemplo, estilos predeterminados del navegador, que se utilizan cuando no hay otro estilo).
-2.  Declaraciones normales en las hojas de estilo del usuario (estilos personalizados creados por un usuario).
-3.  Declaraciones normales en las hojas de estilo de autor (los estilos que creamos nosotros, los desarrolladores web).
-4.  Declaraciones `!important` en las hojas de estilo de autor
-5.  Declaraciones `!important` en las hojas de estilo del usuario
+1. Declaraciones en las hojas de estilo de agente de usuario (por ejemplo, estilos predeterminados del navegador, que se utilizan cuando no hay otro estilo).
+2. Declaraciones normales en las hojas de estilo del usuario (estilos personalizados creados por un usuario).
+3. Declaraciones normales en las hojas de estilo de autor (los estilos que creamos nosotros, los desarrolladores web).
+4. Declaraciones `!important` en las hojas de estilo de autor
+5. Declaraciones `!important` en las hojas de estilo del usuario
 
 Para los desarrolladores tiene sentido que sus hojas de estilo anulen a las de usuario para mantener el diseño según lo previsto, pero, como hemos visto, a veces los usuarios tienen buenas razones para anular las directrices de los desarrolladores web. Esto puede lograrse con el uso de `!important` en sus reglas.
 
@@ -251,21 +251,21 @@ Regresa a esta página si empiezas a toparte con problemas extraños o con que l
 
 ## En este módulo
 
-1.  [La cascada y la herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
+1. [La cascada y la herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Las pseudo-clases y los pseudo-elementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Operadores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [El modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [El modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

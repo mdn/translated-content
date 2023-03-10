@@ -1,20 +1,9 @@
 ---
 title: '<dialog>: ダイアログ要素'
 slug: Web/HTML/Element/dialog
-tags:
-  - Dialog
-  - Experimental
-  - HTML
-  - HTML 対話操作
-  - HTML:フローコンテンツ
-  - HTML:区分化ルート
-  - Reference
-  - ウェブ
-  - ダイアログ
-  - 要素
-translation_of: Web/HTML/Element/dialog
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<dialog>` 要素**は、ダイアログボックスや、消すことができるアラート、インスペクター、サブウィンドウ等のような対話的コンポーネントを表します。
 
@@ -62,7 +51,7 @@ translation_of: Web/HTML/Element/dialog
     </tr>
     <tr>
       <th scope="row">許可された ARIA ロール</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>
@@ -75,7 +64,7 @@ translation_of: Web/HTML/Element/dialog
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **Warning:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。
+> **警告:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。
 
 - {{htmlattrdef("open")}}
   - : ダイアログがアクティブで操作で使用できることを示します。 `open` 属性が設定されていないときは、ダイアログはユーザーに表示する*べきではありません*。
@@ -160,10 +149,7 @@ favDialog.addEventListener('close', function onClose() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}                 | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.2')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,8 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
+
 {{JSRef}}
 
 **`reduce()`** 方法对数组中的每个元素按序执行一个由您提供的 **reducer** 函数，每一次运行 **reducer** 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
@@ -17,29 +18,35 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ## 语法
 
 ```js
-// Arrow function
-reduce((previousValue, currentValue) => { /* ... */ } )
-reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
-reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
-reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
+// 箭头函数
+reduce((previousValue, currentValue) => { /* … */ } )
+reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
+reduce((previousValue, currentValue, currentIndex, array) => { /* … */ } )
 
-// Callback function
+reduce((previousValue, currentValue) => { /* … */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex) => { /* … */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex, array) => { /* … */ }, initialValue)
+
+// 回调函数
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
-// Inline callback function
-reduce(function(previousValue, currentValue) { /* ... */ })
-reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
-reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
-reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
+// 内联回调函数
+reduce(function(previousValue, currentValue) { /* … */ })
+reduce(function(previousValue, currentValue, currentIndex) { /* … */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ })
+
+reduce(function(previousValue, currentValue) { /* … */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex) { /* … */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### 参数
 
 - `callbackFn`
-  - : 一个 “reducer” 函数，包含四个参数：
-    - `previousValue`：上一次调用 `callbackFn` 时的返回值。在第一次调用时，若指定了初始值  `initialValue`，其值则为 `initialValue`，否则为数组索引为 0 的元素 `array[0]`。
-    - `currentValue`：数组中正在处理的元素。在第一次调用时，若指定了初始值  `initialValue`，其值则为数组索引为 0 的元素 `array[0]`，否则为 `array[1]`。
+  - : 一个“reducer”函数，包含四个参数：
+    - `previousValue`：上一次调用 `callbackFn` 时的返回值。在第一次调用时，若指定了初始值 `initialValue`，其值则为 `initialValue`，否则为数组索引为 0 的元素 `array[0]`。
+    - `currentValue`：数组中正在处理的元素。在第一次调用时，若指定了初始值 `initialValue`，其值则为数组索引为 0 的元素 `array[0]`，否则为 `array[1]`。
     - `currentIndex`：数组中正在处理的元素的索引。若指定了初始值 `initialValue`，则起始索引号为 0，否则从索引 1 起始。
     - `array`：用于遍历的数组。
 - `initialValue` {{optional_inline}}
@@ -47,7 +54,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ },
 
 ### 返回值
 
-使用 “reducer” 回调函数遍历整个数组后的结果。
+使用“reducer”回调函数遍历整个数组后的结果。
 
 ### 异常
 

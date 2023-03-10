@@ -2,9 +2,10 @@
 title: 数组
 slug: Learn/JavaScript/First_steps/Arrays
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
-在本模块的最后一篇文章中，我们将看看数组 —— 一种将一组数据存储在单个变量名下的优雅方式。 现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。
+在本模块的最后一篇文章中，我们将看看数组 —— 一种将一组数据存储在单个变量名下的优雅方式。现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -210,7 +211,7 @@ for (let i = 0; i < sequence.length; i++) {
 
 1. 在数组中的元素编号 0 开始循环。
 2. 在元素编号等于数组长度的时候停止循环。这适用于任何长度的数组，但在这种情况下，它将在编号 7 的时候终止循环（这很好，因为我们希望最后一位元素的编号是 6）。
-3. 对于每个元素，使用 [console.log()](/en-US/docs/Web/API/Console/log) 将其打印到浏览器控制台。
+3. 对于每个元素，使用 [console.log()](/zh-CN/docs/Web/API/Console/log) 将其打印到浏览器控制台。
 
 ## 一些有用的数组方法
 
@@ -506,19 +507,7 @@ window.addEventListener('load', updateCode);
 
 ## 相关链接
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) — 数组及其表兄弟类型阵列的高级指导。
+- [Indexed collections](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections) — 数组及其表兄弟类型阵列的高级指导。
 - {{jsxref("Array")}} — Array 对象引用页面 - 有关此页面中讨论功能的详细参考指南等。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
-
-## 在本单元中
-
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

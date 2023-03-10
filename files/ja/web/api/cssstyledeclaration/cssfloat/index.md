@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.cssFloat
 slug: Web/API/CSSStyleDeclaration/cssFloat
 ---
+
 {{APIRef("CSSOM")}}
 
 **`cssFloat`** は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} を `float` を引数として呼び出したときの結果を返します。

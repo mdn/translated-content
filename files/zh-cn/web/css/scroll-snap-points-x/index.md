@@ -2,11 +2,12 @@
 title: scroll-snap-points-x
 slug: Web/CSS/scroll-snap-points-x
 ---
+
 {{CSSRef}}{{SeeCompatTable}}{{deprecated_header}}
 
 ## 摘要
 
-**`scroll-snap-points-x`** [CSS](/en-US/docs/Web/CSS)属性定义滚动容器中内容的 snap 点的水平位置。
+**`scroll-snap-points-x`** [CSS](/zh-CN/docs/Web/CSS)属性定义滚动容器中内容的 snap 点的水平位置。
 
 {{cssinfo}}
 
@@ -32,13 +33,13 @@ scroll-snap-points-x: unset;
 - `repeat(<长度>)`
   - : 定义 snap 点的一个间隔，从容器相关的边缘开始。仅允许正数长度。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="container">
@@ -48,7 +49,7 @@ scroll-snap-points-x: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #container {
@@ -78,7 +79,7 @@ scroll-snap-points-x: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", 220, 220)}}
+{{EmbedLiveSample("示例", 220, 220)}}
 
 ## 规范
 
@@ -86,4 +87,4 @@ scroll-snap-points-x: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-snap-points-x")}}
+{{Compat}}

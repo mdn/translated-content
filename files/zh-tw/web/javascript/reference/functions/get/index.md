@@ -2,6 +2,7 @@
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 **`get`** 語法會將物件屬性，綁定到屬性被檢索時，所呼叫的函式。
@@ -136,13 +137,13 @@ console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello')
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## 參見
 
 - [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - JavaScript 教學的[定義 Getter 與 Setter](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

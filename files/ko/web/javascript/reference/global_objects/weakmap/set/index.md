@@ -1,15 +1,8 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
-browser-compat: javascript.builtins.WeakMap.set
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
+
 {{JSRef}}
 
 **`set()`** 메서드는 지정된 키와 값을 가진 새 요소를 `WeakMap` 객체에 추가합니다.

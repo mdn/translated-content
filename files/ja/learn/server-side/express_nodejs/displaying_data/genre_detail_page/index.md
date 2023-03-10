@@ -2,6 +2,7 @@
 title: ジャンル詳細ページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
+
 The genre _detail_ page needs to display the information for the particular genre instance using its automatically generated `_id` field value as the identifier. The page should display the genre name, and a list of all books in the genre with links to each book's details page.
 
 ## Controller
@@ -13,7 +14,7 @@ var Book = require('../models/book');
 var async = require('async');
 ```
 
-Find the exported ` genre_detail``() ` controller method and replace it with the following code.
+Find the exported `genre_detail()` controller method and replace it with the following code.
 
 ```js
 // Display detail page for a specific Genre.
@@ -48,7 +49,7 @@ The method uses `async.parallel()` to query the genre name and its associated bo
 
 The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (**/genre/:id**). The ID is accessed within the controller via the request parameters: `req.params.id`. It is used in `Genre.findById()` to get the current genre. It is also used to get all `Book` objects that have the genre ID in their `genre` field: `Book.find({ 'genre': req.params.id })`.
 
-> **Note:** If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
+> **メモ:** If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 >
 > ```js
 > if (results.genre==null) { // No results.
@@ -95,7 +96,7 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 
 ![Genre Detail Page - Express Local Library site](LocalLibary_Express_Genre_Detail.png)
 
-> **Note:** You might get an error similar to this:
+> **メモ:** You might get an error similar to this:
 >
 > ```bash
 > Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"

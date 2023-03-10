@@ -3,22 +3,25 @@ title: will-change
 slug: Web/CSS/will-change
 translation_of: Web/CSS/will-change
 ---
+
 {{ CSSRef() }}{{SeeCompatTable}}
 
 [CSS](/ru/docs/Web/CSS) свойство `will-change` предоставляет автору возможность уведомить браузер об ожидаемом изменении элемента, таким образом браузер может настроить соответствующую оптимизацию до того как элемент действительно изменится. Такой тип оптимизации может повысить отзывчивость страницы, совершая, возможно дорогие операции до того как они действительно понадобятся.
 
-    /* Keyword values */
-    will-change: auto;
-    will-change: scroll-position;
-    will-change: contents;
-    will-change: transform;        /* Example of <custom-ident> */
-    will-change: opacity;          /* Example of <custom-ident> */
-    will-change: left, top;        /* Example of two <animateable-feature> */
+```css
+/* Keyword values */
+will-change: auto;
+will-change: scroll-position;
+will-change: contents;
+will-change: transform;        /* Example of <custom-ident> */
+will-change: opacity;          /* Example of <custom-ident> */
+will-change: left, top;        /* Example of two <animateable-feature> */
 
-    /* Global values */
-    will-change: inherit;
-    will-change: initial;
-    will-change: unset;
+/* Global values */
+will-change: inherit;
+will-change: initial;
+will-change: unset;
+```
 
 Правильно использование этого свойства может быть немного сложнее:
 

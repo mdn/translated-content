@@ -1,15 +1,6 @@
 ---
 title: 웹 컴포넌트
 slug: Web/Web_Components
-tags:
-  - Landing
-  - NeedsTranslation
-  - Template
-  - Web Components
-  - custom elements
-  - slot
-  - 웹 컴포넌트
-translation_of: Web/Web_Components
 ---
 {{DefaultAPISidebar("Web Components")}}
 
@@ -29,11 +20,11 @@ translation_of: Web/Web_Components
 
 웹 컴포넌트를 구현하기 위한 기본 접근법은 일반적으로 다음과 같습니다.
 
-1.  ECMAScript 2015 클래스 문법(자세한 내용은 [Classes](/ko/docs/Web/JavaScript/Reference/Classes)에서 확인)을 사용해 웹 컴포넌트 기능을 명시하는 클래스를 생성합니다.
-2.  {{domxref("CustomElementRegistry.define()")}} 메소드를 사용해 새로운 커스텀 엘리먼트를 등록하고, 정의할 엘리먼트 이름, 기능을 명시하고 있는 클래스, (선택적으로) 상속받은 엘리먼트를 전달합니다.
-3.  필요한 경우, {{domxref("Element.attachShadow()")}} 메소드를 사용해 shadow DOM 을 커스텀 엘리먼트에 추가합니다. 일반적인 DOM 메소드를 사용해 자식 엘리먼트, 이벤트 리스너 등을 shadow DOM 에 추가합니다.
-4.  필요한 경우, {{htmlelement("template")}} 과 {{htmlelement("slot")}} 을 사용해 HTML 템플릿을 정의합니다. 다시 일반적인 DOM 메소드를 사용해 템플릿을 클론하고 shadow DOM 에 추가합니다.
-5.  일반적인 HTML 엘리먼트처럼, 페이지의 원하는 어느곳이든 커스텀 엘리먼트를 사용할 수 있습니다.
+1. ECMAScript 2015 클래스 문법(자세한 내용은 [Classes](/ko/docs/Web/JavaScript/Reference/Classes)에서 확인)을 사용해 웹 컴포넌트 기능을 명시하는 클래스를 생성합니다.
+2. {{domxref("CustomElementRegistry.define()")}} 메소드를 사용해 새로운 커스텀 엘리먼트를 등록하고, 정의할 엘리먼트 이름, 기능을 명시하고 있는 클래스, (선택적으로) 상속받은 엘리먼트를 전달합니다.
+3. 필요한 경우, {{domxref("Element.attachShadow()")}} 메소드를 사용해 shadow DOM 을 커스텀 엘리먼트에 추가합니다. 일반적인 DOM 메소드를 사용해 자식 엘리먼트, 이벤트 리스너 등을 shadow DOM 에 추가합니다.
+4. 필요한 경우, {{htmlelement("template")}} 과 {{htmlelement("slot")}} 을 사용해 HTML 템플릿을 정의합니다. 다시 일반적인 DOM 메소드를 사용해 템플릿을 클론하고 shadow DOM 에 추가합니다.
+5. 일반적인 HTML 엘리먼트처럼, 페이지의 원하는 어느곳이든 커스텀 엘리먼트를 사용할 수 있습니다.
 
 ## 튜토리얼
 
@@ -54,16 +45,18 @@ translation_of: Web/Web_Components
   - : `CustomElementRegistry` 객체에 대한 참조를 반환합니다.
 - [라이프 사이클 콜백](/ko/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
   - : 커스텀 엘리먼트의 클래스 정의 내에 정의되어 동작에 영향을 주는 특별한 콜백 함수입니다.
-  
+
     - `connectedCallback`: 커스텀 엘리먼트가 처음으로 다큐먼트의 DOM 에 연결되었을 때 호출됩니다.
     - `disconnectedCallback`: 커스텀 엘리먼트가 다큐먼트의 DOM 으로부터 연결 해제되었을 때 호출됩니다.
     - `adoptedCallback`: 커스텀 엘리먼트가 새로운 다큐먼트로 이동되었을 때 호출됩니다.
     - `attributeChangedCallback`: 커스텀 엘리먼트의 어트리뷰트가 추가, 제거 또는 변경되었을 때 호출됩니다.
 
-- ## 커스텀 내장 엘리먼트 생성을 위한 확장 기능
+- 커스텀 내장 엘리먼트 생성을 위한 확장 기능
 
-      -   {{htmlattrxref("is")}} 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
-      -   {{domxref("Document.createElement()")}} 메소드의 "is" 옵션: 주어진 등록된 커스텀 내장 엘리먼트처럼 동작하는 표준 HTML 엘리먼트의 인스턴스를 생성하는 것을 허용합니다.
+  - : The following extensions are defined:
+
+    - {{htmlattrxref("is")}} 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
+    - {{domxref("Document.createElement()")}} 메소드의 "is" 옵션: 주어진 등록된 커스텀 내장 엘리먼트처럼 동작하는 표준 HTML 엘리먼트의 인스턴스를 생성하는 것을 허용합니다.
 
 - CSS 수도(pseudo) 클래스
 
@@ -111,7 +104,7 @@ translation_of: Web/Web_Components
   - : shadow DOM shadow 트리내의 slot을 엘리먼트로 할당합니다.
 - {{domxref("Slotable")}}
   - : {{domxref("Element")}} 와 {{domxref("Text")}} 노드로 구현된 믹스인입니다. {{htmlelement("slot")}} 엘리먼트의 컨텐츠로 만들기 위한 기능들을 정의합니다. 믹스인은 노드가 삽입된 슬롯의 참조를 반환하는 하나의 어트리뷰트 {{domxref("Slotable.assignedSlot")}} 을 정의합니다.
-  
+
 - {{domxref("Element")}} 확장 기능
 
   - : 슬롯과 관련된 `Element` 인터페이스 확장 기능

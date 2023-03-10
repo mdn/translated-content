@@ -2,11 +2,12 @@
 title: Range.extractContents()
 slug: Web/API/Range/extractContents
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.extractContents()`** 方法移动了{{ domxref("Range") }} 中的内容从文档树到{{ domxref("DocumentFragment") }}（文档片段对象）。
 
-使用 DOM 事件添加的事件侦听器在提取期间不会保留。 HTML 属性事件将按{{domxref("Node.cloneNode()")}}方法的原样保留或复制。 HTML id 属性也会被克隆，如果提取了部分选定的节点并将其附加到文档中，则可能导致无效的文档。
+使用 DOM 事件添加的事件侦听器在提取期间不会保留。HTML 属性事件将按{{domxref("Node.cloneNode()")}}方法的原样保留或复制。HTML id 属性也会被克隆，如果提取了部分选定的节点并将其附加到文档中，则可能导致无效的文档。
 
 克隆了部分选定的节点，以包括使文档片段有效所需的父标记。
 
@@ -31,8 +32,8 @@ document.body.appendChild(documentFragment);
 
 ## Browser compatibility
 
-{{Compat("api.Range.extractContents")}}
+{{Compat}}
 
 ## See also
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

@@ -2,12 +2,13 @@
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
 ---
+
 {{APIRef()}}
 
 `sessionStorage` 属性允许你访问一个，对应当前源的 session {{domxref("Storage")}} 对象。它与 {{domxref("Window.localStorage", "localStorage")}} 相似，不同之处在于 `localStorage` 里面存储的数据没有过期时间设置，而存储在 `sessionStorage` 里面的数据在页面会话结束时会被清除。
 
 - 页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话。
-- **在新标签或窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文，**这点和 session cookies 的运行方式不同。
+- **在新标签或窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文，这点和 session cookie 的运行方式不同。**
 - 打开多个相同的 URL 的 Tabs 页面，会创建各自的 `sessionStorage`。
 - 关闭对应浏览器标签或窗口，会清除对应的 `sessionStorage`。
 
@@ -72,7 +73,7 @@ field.addEventListener("change", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同。测试页面 [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/)。
 
 > **备注：** 从 iOS 5.1 之后，移动端的 Safari 将 localStorage 数据存储在 cache 文件中，在操作系统的要求下，会偶尔进行清除，特别是空间不足时。

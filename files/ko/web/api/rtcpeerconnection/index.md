@@ -1,11 +1,10 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
 ---
 {{APIRef('WebRTC')}}
 
-**`RTCPeerConnection` **인터페이스는 로컬 컴퓨터와 원격 피어 간의 WebRTC 연결을 담당하며 원격 피어에 연결하기 위한 메서드들을 제공하고, 연결을 유지하고 연결 상태를 모니터링하며 더 이상 연결이 필요하지 않을 경우 연결을 종료합니다.
+**`RTCPeerConnection`** 인터페이스는 로컬 컴퓨터와 원격 피어 간의 WebRTC 연결을 담당하며 원격 피어에 연결하기 위한 메서드들을 제공하고, 연결을 유지하고 연결 상태를 모니터링하며 더 이상 연결이 필요하지 않을 경우 연결을 종료합니다.
 
 {{InheritanceDiagram}}
 
@@ -42,9 +41,9 @@ translation_of: Web/API/RTCPeerConnection
   - : 연결의 ICE 신호 상태가 변경되면 `signalingstatechange`이벤트를 `RTCPeerConnection`에 전달합니다. 이는 또한, {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}} 이벤트 핸들러 속성을 통해 사용이 가능합니다.
 - {{domxref("RTCPeerConnection.statsended_event", "statsended")}}
   - : 모니터링이 되던 statistics 객체가 삭제되면, `statsended`이벤트를 전달합니다. {{domxref("RTCStatsEvent")}}는 삭제된 객체의 마지막 리포트를 포함합니다. 마지막 리포트를 전달받고나서 여러개의 객체가 삭제되었다면, 여러 객체에 대한 마지막 리포트를 포함합니다. 예를 들어 연결이 종료되거나 삭제되면, statistics 객체는 삭제됩니다.
-  
+
     The `statsended` event is sent when a statistics object being monitored is deleted. The {{domxref("RTCStatsEvent")}} includes the final report on the deleted object (or objects, if multiple objects have been deleted since the last report was delivered). A statistics object is deleted, for example, when the connection is closed and deleted.
-    
+
     Available as the {{domxref("RTCPeerConnection.onstatsended", "onstatsended")}} event handler property.
 - {{domxref("RTCPeerConnection.track_event", "track")}}
   - : 연결을 구성하고 있는 {{domxref("RTCRtpReceiver")}} 인스턴스들 중 하나에 신규 트랙이 추가된 후에, `track`이벤트를 보냅니다. 이는 또한, {{domxref("RTCPeerConnection.ontrack", "ontrack")}} 이벤트 핸들러 속성을 통해 사용이 가능합니다.
@@ -114,7 +113,7 @@ The `RTCIceTransportPolicy` enum defines string constants which can be used to l
 | 상수명                                  | 설명                                                                                                                            |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `"all"`                                 | All ICE candidates will be considered.                                                                                          |
-| `"public" `{{deprecated_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
+| `"public"` {{deprecated_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
 | `"relay"`                               | Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered. |
 
 ### RTCPeerConnectionState enum
@@ -226,11 +225,9 @@ The `RTCSignalingState` enum specifies the possible values of {{domxref("RTCPeer
   </tbody>
 </table>
 
-## 사양
+## 명세서
 
-| 사양명                                                                                           | 상태                             | 설명       |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('WebRTC 1.0', '#interface-definition', 'RTCPeerConnection')}} | {{Spec2('WebRTC 1.0')}} | 초기 정의. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

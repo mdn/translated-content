@@ -2,9 +2,10 @@
 title: Window.ongamepaddisconnected
 slug: Web/API/Window/gamepaddisconnected_event
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
-The **`ongamepaddisconnected`** property of the {{domxref("Window")}} interface represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
+The **`ongamepaddisconnected`** property of the {{domxref("Window")}} interface represents an event handler that will run when a gamepad is disconnected (when the [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) event fires).
 
 The event object is of type {{domxref("GamepadEvent")}}.
 
@@ -28,7 +29,7 @@ window.ongamepaddisconnected = function() {
 
 ## Browser compatibility
 
-{{Compat("api.Window.ongamepaddisconnected")}}
+{{Compat}}
 
 ## See also
 

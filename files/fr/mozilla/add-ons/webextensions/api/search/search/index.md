@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
+
 {{AddonSidebar()}}
 
 Effectuer une recherche en utilisant le moteur de recherche spécifié, ou le moteur de recherche par défaut si aucun moteur de recherche n'est spécifié.
@@ -20,7 +21,7 @@ Les résultats seront affichés dans un nouvel onglet, ou si l'argument tabId es
 
 Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "search".
 
-Pour obtenir les moteurs de recherche installés, utilisez  {{WebExtAPIRef("search.get()")}}.
+Pour obtenir les moteurs de recherche installés, utilisez {{WebExtAPIRef("search.get()")}}.
 
 ## Syntaxe
 
@@ -41,15 +42,15 @@ browser.search.search(
     - `engine`{{optional_inline}}
       - : `string`. Le nom du moteur de recherche. Si le nom du moteur de recherche que vous spécifiez n'existe pas, la fonction lance une erreur. Si cette propriété est omise, le moteur de recherche par défaut sera utilisé.
     - `tabId`{{optional_inline}}
-      - : `integer`.  Un identificateur facultatif pour l'onglet dans lequel vous voulez exécuter la recherche. Si cette propriété est omise, les résultats de la recherche seront affichés dans un nouvel onglet.
+      - : `integer`. Un identificateur facultatif pour l'onglet dans lequel vous voulez exécuter la recherche. Si cette propriété est omise, les résultats de la recherche seront affichés dans un nouvel onglet.
 
 ### Valeur retournée
 
 Aucune
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.search.search", 10)}}
+{{Compat}}
 
 ## Exemples
 

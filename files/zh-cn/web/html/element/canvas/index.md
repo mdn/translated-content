@@ -2,9 +2,10 @@
 title: <canvas>
 slug: Web/HTML/Element/canvas
 ---
+
 `<canvas>` 元素可被用来通过 JavaScript（[Canvas](/zh-CN/docs/Web/API/Canvas_API) API 或 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API）绘制图形及图形动画。
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## 属性
 

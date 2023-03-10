@@ -1,14 +1,9 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: Web/API/Window/hashchange_event
-tags:
-  - HTML-DOM
-  - Property
-  - Reference
-  - WindowEventHandlers
-translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
+
 {{APIRef("HTML DOM")}}{{domxref("WindowEventHandlers")}} 믹스인의 **WindowEventHandlers.onhashchange** 속성은
 
 **hashchange** 이벤트를 처리하기 위한 {{event("Event_handlers", "event handler")}} 입니다.
@@ -19,17 +14,23 @@ hashchange 이벤트는 윈도우의 해시가 변경되면 시작됩니다. ( {
 
 **event handler:**
 
-    window.onhashchange = funcRef;
+```js
+window.onhashchange = funcRef;
+```
 
 **HTML event handler:**
 
-    <body onhashchange="funcRef();">
+```html
+<body onhashchange="funcRef();">
+```
 
 **event listener:**
 
 {{domxref("EventTarget.addEventListener()", "addEventListener()")}}를 사용하여 이벤트 리스너 추가하기
 
-    window.addEventListener("hashchange", funcRef, false);
+```js
+window.addEventListener("hashchange", funcRef, false);
+```
 
 ### 매개변수
 
@@ -42,31 +43,37 @@ hashchange 이벤트는 윈도우의 해시가 변경되면 시작됩니다. ( {
 
 This example uses an event handler (`window.onhashchange`) to check the new hash value whenever it changes. If it equals `#cool-feature`, the script logs a message to the console.
 
-    function locationHashChanged() {
-      if (location.hash === '#cool-feature') {
-        console.log("You're visiting a cool feature!");
-      }
-    }
+```js
+function locationHashChanged() {
+  if (location.hash === '#cool-feature') {
+    console.log("You're visiting a cool feature!");
+  }
+}
 
-    window.onhashchange = locationHashChanged;
+window.onhashchange = locationHashChanged;
+```
 
 ### Using an event listener
 
 이 예제는 이벤트 리스너를 사용하여 해시가 변경 될 때마다 콘솔에 알림표시합니다.
 
-    function hashHandler() {
-      console.log('The hash has changed!');
-    }
+```js
+function hashHandler() {
+  console.log('The hash has changed!');
+}
 
-    window.addEventListener('hashchange', hashHandler, false);
+window.addEventListener('hashchange', hashHandler, false);
+```
 
 ### Overriding the hash
 
 이 함수는 새로운 해시를 동적으로 설정하여 임의로 두 값 중 하나로 설정합니다.
 
-    function changeHash() {
-      location.hash = (Math.random() > 0.5) ? 'location1' : 'location2';
-    }
+```js
+function changeHash() {
+  location.hash = (Math.random() > 0.5) ? 'location1' : 'location2';
+}
+```
 
 ## hashchange 이벤트
 
@@ -82,12 +89,12 @@ This example uses an event handler (`window.onhashchange`) to check the new hash
 ```js
 //let this snippet run before your hashchange event binding code
 if(!window.HashChangeEvent)(function(){
-	var lastURL=document.URL;
-	window.addEventListener("hashchange",function(event){
-		Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
-		Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
-		lastURL=document.URL;
-	});
+  var lastURL=document.URL;
+  window.addEventListener("hashchange",function(event){
+    Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
+    Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
+    lastURL=document.URL;
+  });
 }());
 ```
 
@@ -101,8 +108,8 @@ if(!window.HashChangeEvent)(function(){
 
 ## See also
 
-- [`hashchange`](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event) event
-- [Manipulating the browser history](/ko/docs/DOM/Manipulating_the_browser_history "DOM/Manipulating the browser history")
-- [`history.pushState()` and `history.replaceState()`](/ko/docs/DOM/window.history "DOM/window.history") methods
+- [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event) event
+- [Manipulating the browser history](/ko/docs/DOM/Manipulating_the_browser_history)
+- [`history.pushState()` and `history.replaceState()`](/ko/docs/DOM/window.history) methods
 - {{domxref("WindowEventHandlers.onpopstate")}}
 - {{domxref("HTMLHyperlinkElementUtils.hash")}}

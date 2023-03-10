@@ -1,19 +1,9 @@
 ---
 title: Comprensión de los fundamentos de CSS
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-tags:
-  - CSS
-  - Estilo
-  - Evaluación
-  - Modelo de Caja
-  - Principiante
-  - Selectores
-  - Sintaxis
-  - comentários
-  - reglas
-translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
 
 Has avanzado mucho en este módulo, debes sentirte orgulloso de haber llegado hasta el final. El último paso antes de terminar es intentar el examen del módulo — que incluye completar varios ejercicios para crear el último diseño — una tarjeta de presentación/de jugador/perfil de redes sociales.
@@ -92,7 +82,7 @@ Otras cosas en las que pensar:
 
 La siguiente captura de pantalla muestra un ejemplo de cómo debe ser el diseño terminado:
 
-![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](https://mdn.mozillademos.org/files/12616/business-card.png)
+![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
 
 ## Evaluación
 

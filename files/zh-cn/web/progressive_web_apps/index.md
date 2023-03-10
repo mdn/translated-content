@@ -2,6 +2,7 @@
 title: 渐进式 Web 应用（PWA）
 slug: Web/Progressive_web_apps
 ---
+
 PWA（Progressive Web Apps，渐进式 Web 应用）运用现代的 Web API 以及传统的渐进式增强策略来创建跨平台 Web 应用程序。这些应用无处不在、功能丰富，使其具有与原生应用相同的用户体验优势。这组文档和指南告诉您有关 PWA 的所有信息。
 
 ## PWA 的优势
@@ -40,7 +41,7 @@ PWA 是可被发现、易安装、可链接、独立于网络、渐进式、可�
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — 一个用于生成预缓存特定资源的 Service Worker 代码的模块。
 - [workbox](https://github.com/GoogleChrome/workbox) — sw-precache 的精神后继者，支持更高级的缓存策略和简易的预缓存功能。
 - [upup](https://www.talater.com/upup/) — 保证站点对用户永远在线的一段小脚本。
-- [The service worker cookbook](https://serviceworke.rs/) — 一系列关于 Service Worker 和推送的优秀章法，着眼于离线应用，而超乎离线应用。
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — 一系列关于 Service Worker 和推送的优秀章法，着眼于离线应用，而超乎离线应用。
 
 ## 相关链接
 

@@ -1,14 +1,8 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
+
 {{JSRef}}
 
 **`SyntaxError`** オブジェクトは、構文的に不正なコードを解釈しようとした場合のエラーを表します。これは、 JavaScript エンジンが、コードを解析中に言語の構文に従わないトークンまたはトークンの順序に遭遇した場合に発生します。
@@ -69,9 +63,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

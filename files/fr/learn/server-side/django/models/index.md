@@ -3,6 +3,7 @@ title: 'Django didactique Section 3: Utilisation des modèles de données'
 slug: Learn/Server-side/Django/Models
 translation_of: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 Ce troisième article est consacré aux modèles de données pour les sites web générés avec Django. Après une définition et une présentation de la notion de modèle de données, il explique comment les déclarer, choisir le type de champs et quelques méthodes d'accès au modèle de données via Django.
@@ -101,7 +102,7 @@ Chaque objet peut contenir autant d'attributs que de besoin et de quelque type q
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 
-Dans l'exemple ci-dessus, le champs est une chaîne de caractères — de type `models.CharField` —  dont le nom est `my_field_name`. Les champs ont des types pré-définis représentés par une classe d'objet Django qui va permettre de caractériser une champ du modèle de données. Cela permet aussi de valider les données qui seront fournies via les formulaires du site web décrits avec le langage HTML. Les classes caractérisant les type de champs peuvent accepter des paramètres pour préciser les contraintes appliquées à ce champ. Dans cet exemple, deux arguments sont indiqués :
+Dans l'exemple ci-dessus, le champs est une chaîne de caractères — de type `models.CharField` — dont le nom est `my_field_name`. Les champs ont des types pré-définis représentés par une classe d'objet Django qui va permettre de caractériser une champ du modèle de données. Cela permet aussi de valider les données qui seront fournies via les formulaires du site web décrits avec le langage HTML. Les classes caractérisant les type de champs peuvent accepter des paramètres pour préciser les contraintes appliquées à ce champ. Dans cet exemple, deux arguments sont indiqués :
 
 - `max_length=20` — Défini que ce champs fait au plus 20 caractères.
 - `help_text='Enter field documentation'` — attribue un label par défaut qui sera affiché dans la page web par le navigateur.
@@ -142,7 +143,7 @@ L'ensemble [des types de champs](https://docs.djangoproject.com/fr/2.2/ref/model
 
 #### Métadonnées
 
-Vous avez la capacité de déclarer des métadonnées à l'aide de la classe  `class Meta`, comme précisé ci-dessous :
+Vous avez la capacité de déclarer des métadonnées à l'aide de la classe `class Meta`, comme précisé ci-dessous :
 
 ```python
 class Meta:
@@ -190,7 +191,7 @@ def get_absolute_url(self):
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **Note :** En supposant que vous allez utiliser des URLs du type `/myapplication/mymodelname/2` pour afficher individuellement les données des enregistrements de la table associée à votre modèle de données (où "2" est l'`id`entifiant d'un enregistrement donné), vous devrez créer un routage d'URL pour vous permettre de transmettre l'id à une vue détaillée de l'enregistrement (model detail view dans le cadriciel Django). Cette vue détaillée réalisera l'affichage de l'enregistrement. La fonction `reverse()` a pour objectif d'écrire l'URL dans un format cohérent avec le traitement des URL par les navigateurs.
+> **Note :** En supposant que vous allez utiliser des URLs du type `/myapplication/mymodelname/2` pour afficher individuellement les données des enregistrements de la table associée à votre modèle de données (où "2" est l'`id` d'un enregistrement donné), vous devrez créer un routage d'URL pour vous permettre de transmettre l'id à une vue détaillée de l'enregistrement (model detail view dans le cadriciel Django). Cette vue détaillée réalisera l'affichage de l'enregistrement. La fonction `reverse()` a pour objectif d'écrire l'URL dans un format cohérent avec le traitement des URL par les navigateurs.
 >
 > Bien entendu, cela requiert d'écrire le routage de l'URL, la vue et le gabarit...
 
@@ -245,7 +246,7 @@ wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = wild_books.count()
 ```
 
-Les arguments passés en option sont le champs et la nature du contrôle à effectuer. On utilise le format : `field_name__match_type` : dans l'exemple ci-dessus, le double sous-ligné marque la séparation entre le champ `title` et le type de contrôle `contains` ; concrètement, le filtre est appliqué sur le champ `title` contenant le mot `wild` en respectant la casse. Il existe d'autres options de contrôle : `icontains` (sans respect de la casse), `iexact` (le champs correspond exactement à la valeur donnée sans respect de la casse), `exact` (idem en respectant la casse) et `in`, `gt` (plus grand que), `startswith`(commence par), etc. La liste complète est [consultable sur la documentation de Django](https://docs.djangoproject.com/fr/2.2/ref/models/querysets/#field-lookups).
+Les arguments passés en option sont le champs et la nature du contrôle à effectuer. On utilise le format : `field_name__match_type` : dans l'exemple ci-dessus, le double sous-ligné marque la séparation entre le champ `title` et le type de contrôle `contains` ; concrètement, le filtre est appliqué sur le champ `title` contenant le mot `wild` en respectant la casse. Il existe d'autres options de contrôle : `icontains` (sans respect de la casse), `iexact` (le champs correspond exactement à la valeur donnée sans respect de la casse), `exact` (idem en respectant la casse) et `in`, `gt` (plus grand que), `startswith` (commence par), etc. La liste complète est [consultable sur la documentation de Django](https://docs.djangoproject.com/fr/2.2/ref/models/querysets/#field-lookups).
 
 Le marqueur "double souligné" permet de construire une chaîne de navigation à travers les objets lorsque le champ considéré est une clé étrangère (`ForeignKey`). C'est systématiquement le cas lorsque l'on doit filtrer sur une propriété d'un attribut dans une relation un-à-un. Dans ce cas (exemple ci-dessous), vous identifiez l'attribut de la clé étrangère par le biais d'un "double souligné" qui indique le champs à filter. L'exemple ci-dessous indique que vous filtrez les livres selon le nom (`name`) du genre (`genre`) du livre.
 
@@ -254,7 +255,7 @@ Le marqueur "double souligné" permet de construire une chaîne de navigation à
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 ```
 
-> **Note :** Vous pouvez construire une chemin pour naviguer dans autant de niveaux de relation (`ForeignKey`/`ManyToManyField`) que vous en avez besoin en concaténant des noms de champs à l'aide  (\_\_) . Si par exemple vous souhaitez trouver un livre (`Book`) qui possède différents type (`type`) de couvertures (`cover`) identifiées par des noms (`name`) alors le chemin sera du type : `type__cover__name__exact='hard'.`
+> **Note :** Vous pouvez construire une chemin pour naviguer dans autant de niveaux de relation (`ForeignKey`/`ManyToManyField`) que vous en avez besoin en concaténant des noms de champs à l'aide (\_\_) . Si par exemple vous souhaitez trouver un livre (`Book`) qui possède différents type (`type`) de couvertures (`cover`) identifiées par des noms (`name`) alors le chemin sera du type : `type__cover__name__exact='hard'.`
 
 La mise en oeuvre des requêtes est très riches en fonction des modèles et des relations, de sous-ensemble de données, etc. Pour une informations détaillées, vous devez consulter [les requêtes](https://docs.djangoproject.com/fr/2.2/topics/db/queries/) sur le site de référence de Django.
 
@@ -323,7 +324,7 @@ Le genre littéraire est une relation n à n (`ManyToManyField`) car un livre pe
 
 La modélisation des relations entre les objets, c'est le cas pour les deux champs décrits à l'instant, nécessite de manipuler les classes d'objet par leur nom de classe. Vous devez déclarer l'objet par son de classe dans la déclaration de la relation entre les objets, si celui-ci a déjà été déclaré vous pouvez l'utiliser comme un nom d'objet - à l'identique d'une variable Python - ou comme une chaîne de caractère si l'objet n'a pas déjà fait l'objet d'un déclaration. les autres paramètres dans la déclaration des relations permettent de spécifier les comportement des attributs : l'option `null` positionné à `True` permet d'avoir un contenu vide en base de données, la second option `on_delete=models.SET_NULL` qualifie le fonctionnement de cet attribut si l'objet est supprimé en base de données, en l'occurence il peut être positionné à vide en base de données.
 
-Deux méthodes sont déclarées pour cet objet. La méthode `__str__()` obligatoirement requise par Django pour manipuler les instances d'objet et les enregistrements associés en base. La seconde méthode, `get_absolute_url()`, retourne une URL formatée qui peut être utilisée par le cadriciel pour délivrer le détail de chaque instance d'objet de la classe. Le routage d'URL sera associé au nom  `book-detail`, et nous aurons à définir une vue et un gabarit.
+Deux méthodes sont déclarées pour cet objet. La méthode `__str__()` obligatoirement requise par Django pour manipuler les instances d'objet et les enregistrements associés en base. La seconde méthode, `get_absolute_url()`, retourne une URL formatée qui peut être utilisée par le cadriciel pour délivrer le détail de chaque instance d'objet de la classe. Le routage d'URL sera associé au nom `book-detail`, et nous aurons à définir une vue et un gabarit.
 
 ### L'objet BookInstance
 
@@ -440,7 +441,7 @@ Cet article est consacré à la création des objets et leur lien en base de don
 
 A ce stade, il est prématuré de créer le site web, nous allons simplement utiliser le site d'administration qui permet d'ajouter et de manipuler des données. Nous afficherons ces informations ensuite en créant des vues et de gabarits.
 
-## A voir aussi
+## Voir aussi
 
 - [Ecriture de votre première application Django, Deuxième partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/) (Documentation Django)
 - [Création de requêtes](https://docs.djangoproject.com/fr/2.2/topics/db/queries/) (Documentation Django)

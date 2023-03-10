@@ -2,6 +2,7 @@
 title: 表单控件兼容性列表
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
 ---
+
 {{learnsidebar}}
 
 下面的兼容性表格尝试总结 HTML 表单的 CSS 支持状况。由于 CSS 和 HTML 表单的复杂性，不能把这些表格当作完善的参考。但是，它们可以让你很好地洞察什么能做什么不能做，这将会对你学习使用有很好地帮助。
@@ -628,7 +629,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 
 ### 数字
 
-参见  `{{htmlelement("input/number", "number")}}` input 类型。没有一种标准的方式改变数字字段的样式，值得注意的是 Safari 上的数字字段不在这个范围内。
+参见 `{{htmlelement("input/number", "number")}}` input 类型。没有一种标准的方式改变数字字段的样式，值得注意的是 Safari 上的数字字段不在这个范围内。
 
 <table>
   <thead>
@@ -1083,7 +1084,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 
 ### 选择框（单行）
 
-参见 `{{htmlelement("select")}}`、`{{htmlelement("optgroup")}}` 和  `{{htmlelement("option")}}` 元素。
+参见 `{{htmlelement("select")}}`、`{{htmlelement("optgroup")}}` 和 `{{htmlelement("option")}}` 元素。
 
 <table>
   <thead>
@@ -1278,7 +1279,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             只有 Firefox 提供了对这个属性的完全支持。Opera
-            完全不支持这个属性，而其它浏览器只提供了对
+            完全不支持这个属性，而其他浏览器只提供了对
             <code>{{htmlelement("select")}}</code> 元素的支持。
           </li>
         </ol>
@@ -3266,7 +3267,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 - [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
 - [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单空间](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [其他表单空间](/zh-CN/docs/Learn/Forms/Other_form_controls)
 - [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
 - [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
 - [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)

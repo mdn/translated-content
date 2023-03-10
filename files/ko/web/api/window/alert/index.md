@@ -1,13 +1,6 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/alert
 ---
 {{APIRef}}
 
@@ -15,7 +8,9 @@ translation_of: Web/API/Window/alert
 
 ## 구문
 
-    window.alert([message]);
+```js
+window.alert([message]);
+```
 
 ### 매개변수
 

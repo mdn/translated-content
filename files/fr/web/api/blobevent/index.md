@@ -14,6 +14,7 @@ tags:
   - events
 translation_of: Web/API/BlobEvent
 ---
+
 {{APIRef ("Media Capture and Streams")}}
 
 L'interface `BlobEvent` représente les événements associés à un {{domxref ("Blob")}}. Ces blobs sont généralement, mais pas nécessairement, associés au contenu multimédia.

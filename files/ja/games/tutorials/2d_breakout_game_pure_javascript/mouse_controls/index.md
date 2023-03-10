@@ -3,6 +3,7 @@ title: マウス操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
@@ -42,7 +43,7 @@ function mouseMoveHandler(e) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 
-> **Note:** パドル動作の境界を調節して、Canvasの両端でもパドルの半分ではなく全体が見えるようにしてください。
+> **メモ:** パドル動作の境界を調節して、Canvasの両端でもパドルの半分ではなく全体が見えるようにしてください。
 
 ## 次のステップ
 

@@ -2,9 +2,10 @@
 title: KeyboardEvent.isComposing
 slug: Web/API/KeyboardEvent/isComposing
 ---
+
 {{APIRef("DOM Events")}}
 
-**`KeyboardEvent.isComposing`** 只读属性，返回一个 {{jsxref("Boolean")}} 值，表示该事件是否在 {{event("compositionstart")}} 之后和 {{event("compositionend")}} 之前被触发。
+**`KeyboardEvent.isComposing`** 只读属性，返回一个 {{jsxref("Boolean")}} 值，表示该事件是否在 [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) 之后和 [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event) 之前被触发。
 
 ## 语法
 
@@ -29,5 +30,5 @@ console.log(kbdEvent.isComposing); // return false
 
 ## 参考
 
-- {{ event("compositionstart") }} 与 {{ event("compositionend")}}
+- [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) 与 [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event)
 - {{domxref("KeyboardEvent")}}

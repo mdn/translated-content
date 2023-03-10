@@ -3,9 +3,10 @@ title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 original_slug: Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值
 ---
+
 {{JSRef}}
 
-**`Math.acosh()` **函数返回一个数的反双曲余弦值，即：
+**`Math.acosh()`** 函数返回一个数的反双曲余弦值，即：
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ 唯一的} \; y \geq 0 \; \text{使得} \; \cosh(y) = x</annotation></semantics></math>
 
@@ -13,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值
 
 ## 语法
 
-```plain
+```js-nolint
 Math.acosh(x)
 ```
 
@@ -28,7 +29,7 @@ Math.acosh(x)
 
 ## 描述
 
-因为 `acosh()` 是 `Math` 的静态方法，所以总应该直接调用 `Math.acosh()` ，而不是创建 `Math` 对象再调用该方法（`Math` 不是一个构造函数）。
+因为 `acosh()` 是 `Math` 的静态方法，所以你应该通过 `Math.acosh()` 调用，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
 
 ## 示例
 

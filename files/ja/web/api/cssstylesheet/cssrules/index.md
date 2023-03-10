@@ -2,6 +2,7 @@
 title: CSSStyleSheet.cssRules
 slug: Web/API/CSSStyleSheet/cssRules
 ---
+
 {{APIRef("CSSOM")}}
 
 {{domxref("CSSStyleSheet")}} の

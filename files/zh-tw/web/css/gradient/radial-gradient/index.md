@@ -3,6 +3,7 @@ title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
 original_slug: Web/CSS/radial-gradient
 ---
+
 {{CSSRef}}
 
 CSS radial-gradient() 函數創建了一個圖片，其由一個從原點輻射開的在兩個或者多個顏色之前的漸變組成。這個方法得到的是一個 CSS[`<gradient>`](/zh-TW/docs/Web/CSS/gradient)數據類型的物件，其是 [`<image>`](/zh-TW/docs/Web/CSS/image) 的一種。
@@ -131,7 +132,7 @@ where <extent-keyword> = closest-corner | closest-side | farthest-corner | farth
 
 ### Quantum CSS notes
 
-Gecko used to have a long-standing bug whereby radial gradients like `radial-gradient(circle gold,red)` would work, even though they shouldn't because of the missing comma between `circle` and `gold`. Also, {{cssxref("calc")}} expressions were rejected — causing the value to be invalid — when used as the radius component of a `radial-gradient()` function ({{bug(1376019)}}). Firefox's new parallel CSS engine (also known as [Quantum CSS](https://wiki.mozilla.org/Quantum) or [Stylo](https://wiki.mozilla.org/Quantum/Stylo), released in Firefox 57) fixed these bugs.
+Gecko used to have a long-standing bug whereby radial gradients like `radial-gradient(circle gold,red)` would work, even though they shouldn't because of the missing comma between `circle` and `gold`. Also, {{cssxref("calc")}} expressions were rejected — causing the value to be invalid — when used as the radius component of a `radial-gradient()` function ([Firefox bug 1376019](https://bugzil.la/1376019)). Firefox's new parallel CSS engine (also known as [Quantum CSS](https://wiki.mozilla.org/Quantum) or [Stylo](https://wiki.mozilla.org/Quantum/Stylo), released in Firefox 57) fixed these bugs.
 
 ## See also
 

@@ -12,16 +12,17 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/datalist
 ---
-**HTML-элемент` <datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}.
+
+**HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
 | [Категория контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                           | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                              |
+| Допустимое содержимое                                            | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                              |
 | Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                            |
-| Разрешённые родители                                             | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
-| Разрешённые ARIA-роли                                            | Нет                                                                                                                                                                 |
+| Допустимые родители                                              | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
+| Допустимые ARIA-роли                                             | Нет                                                                                                                                                                 |
 | DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                        |
 
 ## Атрибуты
@@ -64,4 +65,4 @@ translation_of: Web/HTML/Element/datalist
 - Элемент {{HTMLElement("input")}} , в особенности его атрибут {{htmlattrxref("list", "input")}};
 - Элемент {{HTMLElement("option")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

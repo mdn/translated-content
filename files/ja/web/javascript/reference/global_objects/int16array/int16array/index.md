@@ -1,13 +1,8 @@
 ---
 title: Int16Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
 ---
+
 {{JSRef}}
 
 **`Int16Array()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 2 の補数形式の 16 ビット符号付き整数値の配列を生成します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
@@ -66,9 +61,7 @@ var int16 = new Int16Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

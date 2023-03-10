@@ -1,13 +1,10 @@
 ---
 title: WebExtensions
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - 확장기능
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 {{AddonSidebar}}
 
-Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정할 수 있습니다. Firefox 를 위한 확장기능은 확장 기능 개발을 위한 크로스 브라우저 시스템인 WebExtension API를 이용하여 만들어졌습니다. 이 시스템은 Google Chrome, Opera 및 [W3C Draft Community Group](https://browserext.github.io/browserext/)에서 지원하는 [extension API](https://developer.chrome.com/extensions) 와 대부분 호환됩니다. 그러므로 Google Chrome과 Opera를 대상으로 만들어진 확장기능은 [조금만 수정](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome)하면 대부분 Firefox나 [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/)에서도 동작합니다. 또한 extension API는 [멀티프로세스 Firefox](https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.
+Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정할 수 있습니다. Firefox 를 위한 확장기능은 확장 기능 개발을 위한 크로스 브라우저 시스템인 WebExtension API를 이용하여 만들어졌습니다. 이 시스템은 Google Chrome, Opera 및 [W3C Draft Community Group](https://browserext.github.io/browserext/)에서 지원하는 [extension API](https://developer.chrome.com/extensions) 와 대부분 호환됩니다. 그러므로 Google Chrome과 Opera를 대상으로 만들어진 확장기능은 [조금만 수정](/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome)하면 대부분 Firefox나 [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/)에서도 동작합니다. 또한 extension API는 [멀티프로세스 Firefox](/en-US/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.
 
 질문 혹은 아이디어가 있거나, 기존 Extension을 WebExtensions API로 마이그레이션 할 때 도움이 필요하다면 [dev-addons 메일링 리스트](https://mail.mozilla.org/listinfo/dev-addons)나 [IRC](https://wiki.mozilla.org/IRC)의 [#webextensions](irc://irc.mozilla.org/webextensions)를 통해 알려주세요.
 
@@ -33,7 +30,7 @@ Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정�
 - [다른 프로그램과 상호작용하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
 - [개발자 도구 API 사용하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs)
 - [상호작용 명세 만들기](/en-US/Add-ons/WebExtensions/Native_manifests)
-- [사용자와 상호작용하기](/ko-KR/Add-ons/WebExtensions/User_actions)
+- [사용자와 상호작용하기](/ko/Add-ons/WebExtensions/User_actions)
 - [확장기능의 생애주기](/ko/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices)
 
 ## 사용자 인터페이스

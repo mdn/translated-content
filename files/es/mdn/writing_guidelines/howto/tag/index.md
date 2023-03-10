@@ -1,16 +1,9 @@
 ---
 title: Cómo etiquetar correctamente las páginas
 slug: MDN/Writing_guidelines/Howto/Tag
-tags:
-  - Colaborar
-  - Etiquetas
-  - Guia(2)
-  - Guía
-  - MDN
-  - Principiante
-translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
+
 {{MDNSidebar}}
 
 **"Article tags"** Las etiquetas del artículo son una forma importante para poner a los visitantes en contacto con contenido útil. Cada página normalmente debería contener varias etiquetas para ayudar a mantener organizado el contenido. En esta página se explica la mejor manera de marcar las páginas para que así nuestros lectores puedan encontrar la información y podamos mantenernos organizados.
@@ -83,7 +76,7 @@ Si bien hay cierta flexibilidad para identificar los nuevos temas, tratamos de l
 - `"Herramientas`
 - `"Web`
 
-En general, la etiqueta de identificación del tema será el nombre de la interfaz con que este relacionada la página (como nodo "[Node"](/es/docs/Web/API/Node "/en-US/docs/Web/API/Node"), que tiene muchas páginas para sus diversas propiedades y métodos), o el nombre general de un tipo de tecnología. Puede etiquetar una página sobre WebGL con `Graphics` y `WebGL` ó una página sobre {{HTMLElement("canvas")}} con `HTML`, `Element`, `Canvas` y `Graphics`.
+En general, la etiqueta de identificación del tema será el nombre de la interfaz con que este relacionada la página (como nodo "[Node"](/es/docs/Web/API/Node), que tiene muchas páginas para sus diversas propiedades y métodos), o el nombre general de un tipo de tecnología. Puede etiquetar una página sobre WebGL con `Graphics` y `WebGL` ó una página sobre {{HTMLElement("canvas")}} con `HTML`, `Element`, `Canvas` y `Graphics`.
 
 ### Estado tecnológico
 
@@ -104,7 +97,7 @@ Aquí tienen los posibles valores de esta etiqueta:
 - `Solo Certificado`
   - : La API sólo funciona con código certificado.
 
-¡Estas etiquetas no excluyen el uso de la [tabla de compatibilidad](/es/docs/Project:Compatibility_tables "/en-US/docs/Project:Compatibility_tables") en su artículo!
+¡Estas etiquetas no excluyen el uso de la [tabla de compatibilidad](/es/docs/Project:Compatibility_tables) en su artículo!
 
 ### Nivel de habilidad
 
@@ -179,9 +172,9 @@ Para cada página debes asignar distintos tipos de etiquetas, por ejemplo:
 
 **Un tutorial sobre WebGL para principiantes:** `WebGL, Gráficos, Guía, Principiante`
 
-**Página de referencia para `{{HTMLElement ("Canvas")}}:`** `Canvas, HTML, elemento, gráficos`
+**Página de referencia para {{HTMLElement ("Canvas")}}:** `Canvas, HTML, elemento, gráficos`
 
-**Una página de inicio de herramientas para desarrolladores de Firefox OS**`: Herramientas, Firefox OS, Inicio`
+**Una página de inicio de herramientas para desarrolladores de Firefox OS**: `Herramientas, Firefox OS, Inicio`
 
 ## Filtros de etiquetas y búsqueda
 
@@ -236,4 +229,4 @@ Hay varios tipos de problemas de etiquetado que puedes ayudar a solucionar:
 - Etiqueta Spam
   - : Es el mayor problema de etiquetado de la Web, la publicidad no deseada. ¡Tenemos que eliminar estas etiquetas de inmediato!, son desagradables y difíciles de manejar si permanecen mucho tiempo en la web. Además, son terribles para {{Glossary("SEO")}}.
 
-Si ve uno (o más) de estos problemas, por favor acceda a MDN "[log into MDN](/es/docs/Project:MDN/Contributing/Getting_started#Logging_into_MDN)" y haz clic en Editar en la parte superior derecha de la ventana de MDN. Una vez que cargue el editor, desplácese hasta la parte inferior de la página, donde puedes encontrar el cuadro de etiquetas. Para más detalles sobre la interfaz de etiquetado, consulte el cuadro de etiquetas "[The tags box"](/es/docs/Project:MDN/Contributing/Editor_guide#The_tags_box "/en-US/docs/Project:MDN/Contributing/Editor_guide#The_tags_box") en la guía del editor de MDN.
+Si ve uno (o más) de estos problemas, por favor acceda a MDN "[log into MDN](/es/docs/Project:MDN/Contributing/Getting_started#Logging_into_MDN)" y haz clic en Editar en la parte superior derecha de la ventana de MDN. Una vez que cargue el editor, desplácese hasta la parte inferior de la página, donde puedes encontrar el cuadro de etiquetas. Para más detalles sobre la interfaz de etiquetado, consulte el cuadro de etiquetas "[The tags box"](/es/docs/Project:MDN/Contributing/Editor_guide#The_tags_box) en la guía del editor de MDN.

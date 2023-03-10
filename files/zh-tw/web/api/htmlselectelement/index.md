@@ -2,6 +2,7 @@
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement`** 介面代表了 {{HTMLElement("select")}} HTML 元素。此介面也自 {{domxref("HTMLElement")}} 介面繼承了所有 HTML 元素的屬性及方法。
@@ -56,7 +57,7 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 - {{domxref("HTMLSelectElement.blur()")}}{{Deprecated_Inline}}
   - : Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
-  - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the element (and returns `false`).
+  - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable [`invalid`](/zh-TW/docs/Web/API/HTMLInputElement/invalid_event) event at the element (and returns `false`).
 - {{domxref("HTMLSelectElement.focus()")}}{{Deprecated_Inline}}
   - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
@@ -90,7 +91,7 @@ console.log(select.selectedIndex); // 1
 console.log(select.options[select.selectedIndex].value) // Second
 ```
 
-A better way to track changes to the user's selection is to watch for the {{event("change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/en-US/docs/Web/Events/change#Example_Change_event_on_a_select) in the documentation for the `change` event for details.
+A better way to track changes to the user's selection is to watch for the [`change`](/zh-TW/docs/Web/API/HTMLElement/change_event) event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/zh-TW/docs/Web/Events/change#Example_Change_event_on_a_select) in the documentation for the `change` event for details.
 
 ## 規範
 
@@ -98,7 +99,7 @@ A better way to track changes to the user's selection is to watch for the {{even
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## 參見
 

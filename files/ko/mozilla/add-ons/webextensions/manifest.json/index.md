@@ -1,8 +1,8 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 manifest.json 파일은 json 포맷 파일로서, 모든 웹 익스텐션이 포함하고 있어야 하는 파일입니다.

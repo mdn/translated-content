@@ -1,22 +1,12 @@
 ---
 title: XML 파싱 및 직렬화
 slug: Web/Guide/Parsing_and_serializing_XML
-tags:
-  - AJAX
-  - Add-ons
-  - DOM
-  - Extensions
-  - JSON
-  - JXON
-  - XML
-  - XMLHttpRequest
-  - 가이드
-translation_of: Web/Guide/Parsing_and_serializing_XML
 original_slug: Web/Guide/XML_파싱_및_직렬화
 ---
+
 웹 상에서 XML을 파싱하고 직렬화할 때 사용할 수 있는 객체는 다음과 같습니다.
 
-- **DOM 트리를 문자열로 직렬화**하는\*\* \*\*[XMLSerializer](/en/XMLSerializer)
+- **DOM 트리를 문자열로 직렬화**하는 [XMLSerializer](/en/XMLSerializer)
 - **XML 문서 상의 각기 다른 부분들을 (비 XML 문법을 사용하여) 문자열로 직렬화**하는 [XPath](/en/XPath)
 - XML을 파싱하여 **문자열을 DOM 트리로 변환**하는 [DOMParser](/en/DOM/DOMParser)
 - **URL을 사용하여 주소화 가능한(URL-addressable) 리소스를 DOM 트리로** 파싱하는 [XMLHttpRequest](/en/nsIXMLHttpRequest)

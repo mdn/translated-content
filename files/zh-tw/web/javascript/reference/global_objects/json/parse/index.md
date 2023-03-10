@@ -2,6 +2,7 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
+
 {{JSRef}}
 
 **`JSON.parse()`** 方法把會把一個 JSON 字串轉換成 JavaScript 的數值或是物件。另外也可選擇使用 reviver 函數讓這些數值或是物件在被回傳之前做轉換。
@@ -87,7 +88,7 @@ JSON.parse('{"foo" : 1, }');
 
 ## Gecko 相關
 
-從 Gecko 29 版本開始{{geckoRelease("29")}}，錯誤格式的 JSON 字串會產生更詳細的錯誤訊息，包含造成解析錯誤的行數及列數。這在針對大量 JSON 資料進行除錯時會很有幫助。
+從 Gecko 29 版本開始，錯誤格式的 JSON 字串會產生更詳細的錯誤訊息，包含造成解析錯誤的行數及列數。這在針對大量 JSON 資料進行除錯時會很有幫助。
 
 ```js
 JSON.parse('[1, 2, 3, 4,]');

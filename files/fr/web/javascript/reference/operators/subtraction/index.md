@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.subtraction
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de soustraction (`-`) effectue la soustraction entre les deux opérandes et fournit la différence obtenue.

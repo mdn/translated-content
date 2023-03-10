@@ -1,40 +1,49 @@
 ---
-title: NetworkInformation.onchange
+title: 'NetworkInformation: change イベント'
 slug: Web/API/NetworkInformation/change_event
 original_slug: Web/API/NetworkInformation/onchange
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
-**`NetworkInformation.onchange`** イベントハンドラは、接続情報が変化したときに発火し、{{domxref("NetworkInformation")}} オブジェクトが {{event("change")}} を受け取るコードを含みます。
+**`change`** イベントは、接続情報が変更されたときに発行され、 {{domxref("NetworkInformation")}} オブジェクトで受信されます。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('change', (event) => { });
+
+onchange = (event) => { };
 ```
-netInfo.onchange = function() { ... }
-```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 ```js
 // 接続型の取得
-var type = navigator.connection.type;
+const type = navigator.connection.type;
 
 function changeHandler(e) {
    // ここで接続型の変更を操作する
 }
 
-// change イベントの登録:
+// change イベントの登録
 navigator.connection.onchange = changeHandler;
 
-// Another way: navigator.connection.addEventListener('change', changeHandler);
+// 他の方法: navigator.connection.addEventListener('change', changeHandler);
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                             | ステータス                                   | コメント   |
-| ------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('Network Information')}} | {{Spec2('Network Information')}} | 最初の定義 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.NetworkInformation.onchange")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: 'TypeError: More arguments needed'
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -42,4 +43,4 @@ var obj = Object.setPrototypeOf({}, null);
 
 ## 相关
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/zh-CN/docs/Web/JavaScript/Guide/Functions)

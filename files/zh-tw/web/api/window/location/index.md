@@ -2,13 +2,12 @@
 title: window.location
 slug: Web/API/Window/location
 ---
-{{ ApiRef() }}
 
-### Summary
+{{APIRef}}
 
 Returns a [`Location` object](#Location_object), which contains information about the URL of the document and provides methods for changing that URL. You can also assign to this property to load another URL.
 
-### 語法
+## 語法
 
 ```plain
 var locationObj = window.location;
@@ -20,11 +19,11 @@ where
 - _locationObj_ is an object of type `Location`, providing information about the current URL and methods to change it. Its properties and methods are described below.
 - _newLocation_ is a `Location` object or a string, specifying the URL to navigate to.
 
-### `Location` object
+## `Location` object
 
 This section describes the properties and methods of the location object.
 
-#### Use as a string
+### Use as a string
 
 `Location` objects have a `toString` method returning the current URL. You can also assign a string to `window.location`. This means that you can work with `window.location` as if it were a string in most cases. Sometimes, for example when you need to call a [String](/En/Core_JavaScript_1.5_Reference/Global_Objects/String) method on it, you have to explicitly call `toString`:
 
@@ -32,48 +31,48 @@ This section describes the properties and methods of the location object.
 alert(window.location.toString().charAt(17));
 ```
 
-#### Properties
+### Properties
 
 All of the following properties are strings. You can read them to get information about the current URL or set them to navigate to another URL.
 
 The "Example" column contains the values of the properties of the following URL:
 
-- http\://\[www\.example.com]:80/search?q=devmo#test
+- `http://[www.example.com]:80/search?q=devmo#test`
 
 | Property   | Description                                                                                                                                                                                                                     | Example                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | `hash`     | the part of the URL that follows the # symbol, including the # symbol. You can listen for the [hashchange event](/zh-TW/docs/Mozilla_event_reference/hashchange) to get notified of changes to the hash in supporting browsers. | #test                                           |
 | `host`     | the host name and port number.                                                                                                                                                                                                  | [www.example.com]:80                            |
 | `hostname` | the host name (without the port number or square brackets).                                                                                                                                                                     | www.example.com                                 |
-| `href`     | the entire URL.                                                                                                                                                                                                                 | http://[www.example.com]:80/search?q=devmo#test |
+| `href`     | the entire URL.                                                                                                                                                                                                                 | <http://[www.example.com>]:80/search?q=devmo#test |
 | `pathname` | the path (relative to the host).                                                                                                                                                                                                | /search                                         |
 | `port`     | the port number of the URL.                                                                                                                                                                                                     | 80                                              |
 | `protocol` | the protocol of the URL.                                                                                                                                                                                                        | http:                                           |
 | `search`   | the part of the URL that follows the ? symbol, including the ? symbol.                                                                                                                                                          | ?q=devmo                                        |
 
-If the hash part of the URL contains encoded characters (see [Core_JavaScript_1.5_Reference:Global_Functions:encodeURIComponent](/en/JavaScript/Reference/Global_Objects/encodeURIComponent)), `hash` returns the decoded URL part. This is a [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=483304) in Firefox. `href`, `search` and `pathname` return the correct, encoded URL parts. For example:
+If the hash part of the URL contains encoded characters (see [Core_JavaScript_1.5_Reference:Global_Functions:encodeURIComponent](/zh-TW/JavaScript/Reference/Global_Objects/encodeURIComponent)), `hash` returns the decoded URL part. This is a [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=483304) in Firefox. `href`, `search` and `pathname` return the correct, encoded URL parts. For example:
 
-- http\://www\.example.com/search?q=Fire%20fox#Fire%20fox
+- `http://www.example.com/search?q=Fire%20fox#Fire%20fox`
 
 results in:
 
 - hash=#Fire fox
 - search=?q=Fire%20fox
 
-#### Methods
+### Methods
 
 | Method             | Description                                                                                                                                                                                                                                                              |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `assign(url)`      | Load the document at the provided URL.                                                                                                                                                                                                                                   |
 | `reload(forceget)` | Reload the document from the current URL. `forceget` is a boolean, which, when it is `true`, causes the page to always be reloaded from the server. If it is `false` or not specified, the browser may reload the page from its cache.                                   |
 | `replace(url)`     | Replace the current document with the one at the provided URL. The difference from the `assign()` method is that after using `replace()` the current page will not be saved in session history, meaning the user won't be able to use the Back button to navigate to it. |
-| `toString()`       | Returns the string representation of the `Location` object's URL. See the [JavaScript reference](/en/JavaScript/Reference/Global_Objects/Object/toString) for details.                                                                                                   |
+| `toString()`       | Returns the string representation of the `Location` object's URL. See the [JavaScript reference](/zh-TW/JavaScript/Reference/Global_Objects/Object/toString) for details.                                                                                                   |
 
-### Examples
+## Examples
 
 Whenever a property of the location object is modified, a document will be loaded using the URL as if `window.location.assign()` had been called with the modified URL.
 
-##### Replace the current document with the one at the given URL:
+#### Replace the current document with the one at the given URL:
 
 ```js
 function goMoz() {
@@ -94,7 +93,7 @@ function reloadPageWithHash() {
 }
 ```
 
-##### Display the properties of the current URL in an alert dialog:
+#### Display the properties of the current URL in an alert dialog:
 
 ```js
 function showLoc() {
@@ -108,7 +107,7 @@ function showLoc() {
 // in html: <button onclick="showLoc();">Show location properties</button>
 ```
 
-##### Send a string of data to the server by modifying the `search` property:
+#### Send a string of data to the server by modifying the `search` property:
 
 ```js
 function sendData (sData) {
@@ -120,7 +119,7 @@ function sendData (sData) {
 
 The current URL with "?Some%20data" appended is sent to the server (if no action is taken by the server, the current document is reloaded with the modified search string).
 
-##### Get the value of a single `window.location.search` key:
+#### Get the value of a single `window.location.search` key:
 
 ```js
 function loadPageVar (sVar) {
@@ -130,7 +129,7 @@ function loadPageVar (sVar) {
 alert(loadPageVar("name"));
 ```
 
-##### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`:
+#### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`:
 
 ```js
 var oGetVars = {};
@@ -160,7 +159,7 @@ var oGetVars = new (function (sSearch) {
 // alert(oGetVars.yourVar);
 ```
 
-##### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`, also attempting to recognize their [`typeof`](/en/JavaScript/Reference/Operators/typeof):
+#### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`, also attempting to recognize their [`typeof`](/zh-TW/JavaScript/Reference/Operators/typeof):
 
 ```js
 var oGetVars = {};
@@ -206,7 +205,7 @@ var oGetVars = new (function (sSearch) {
 // alert(oGetVars.yourVar);
 ```
 
-##### Using bookmars without changing the `window.location.hash` property:
+#### Using bookmars without changing the `window.location.hash` property:
 
 ```html
 <!doctype html>
@@ -265,7 +264,7 @@ span.intLink {
 </html>
 ```
 
-> **備註：** The function `showNode` is also an example of the use of the [`for`](/en/JavaScript/Reference/Statements/for) cycle without a `statement` section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
+> **備註：** The function `showNode` is also an example of the use of the [`for`](/zh-TW/JavaScript/Reference/Statements/for) cycle without a `statement` section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
 
 …the same thing but with a dynamic page scroll:
 
@@ -311,10 +310,10 @@ var showBookmark = (function () {
 })();
 ```
 
-### See also
+## See also
 
-[Manipulating the browser history](/en/DOM/Manipulating_the_browser_history)
+[Manipulating the browser history](/zh-TW/DOM/Manipulating_the_browser_history)
 
-### Browser compatibility
+## Browser compatibility
 
-{{Compat("api.Window.location")}}
+{{Compat}}

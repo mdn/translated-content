@@ -1,7 +1,6 @@
 ---
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
 {{AddonSidebar()}}
 
@@ -9,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 
 이 API로 값을 저장하거나 고치면, {{WebExtAPIRef("storage.onChanged")}} 이벤트가 발생한다.
 
-비동기 함수로 [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 돌려준다.
+비동기 함수로 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 돌려준다.
 
 ## 문법
 
@@ -28,11 +27,11 @@ let settingItem = browser.storage.&#x3C;storageType>.set(
 
 ### 반환값
 
-반환된 [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)는 동작이 성공하면 아무런 인수없이 완료를 수행하고, 실패하면 에러 문장과 함께 거부를 수행한다.
+반환된 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)는 동작이 성공하면 아무런 인수없이 완료를 수행하고, 실패하면 에러 문장과 함께 거부를 수행한다.
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.storage.StorageArea.set")}}
+{{Compat}}
 
 ## 예제
 

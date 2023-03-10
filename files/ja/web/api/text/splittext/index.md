@@ -2,6 +2,7 @@
 title: Text.splitText()
 slug: Web/API/Text/splitText
 ---
+
 {{APIRef("DOM")}}
 
 **`splitText()`** は {{domxref("Text")}} インターフェイスのメソッドで、この {{domxref("Text")}} ノードを指定したオフセットで 2 つに分割し、両方のノードを兄弟としてツリーの中に保持します。

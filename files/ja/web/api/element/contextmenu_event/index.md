@@ -2,6 +2,7 @@
 title: 'Element: contextmenu イベント'
 slug: Web/API/Element/contextmenu_event
 ---
+
 {{APIRef}}
 
 **`contextmenu`** イベントは、ユーザーがコンテキストメニューを開こうとしたときに発行されます。このイベントは、通常、マウスの右ボタンをクリックするか、コンテキストメニューキーを押すことで発行されます。

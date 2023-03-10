@@ -1,13 +1,8 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
-translation_of: Web/HTTP/Status/302
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`302 Found`** リダイレクトステータスレスポンスコードは、リクエストされたリソースが一時的に {{HTTPHeader("Location")}} で示された URL へ移動したことを示します。ブラウザーはこのページにリダイレクトしますが、検索エンジンはリソースへのリンクを更新しません (「SEO 用語」では、「リンクジュース」が新しい URL に送られなかったと言われます)。

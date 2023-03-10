@@ -1,117 +1,125 @@
 ---
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
+l10n:
+  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
+
 {{APIRef("Web Workers API")}}
 
-[Web Workers API](/ja/docs/Web/API/Web_Workers_API) の **`WorkerGlobalScope`** インターフェースは、いずれかの worker のスコープを表すインターフェースです。worker はブラウジングコンテクストを持ちません； このスコープには、通常 {{domxref("Window")}} オブジェクトによって伝えられた情報が含まれます — この場合、イベントハンドラやコンソール、関連する {{domxref("WorkerNavigator")}} オブジェクトのことです。ぞれぞれの `WorkerGlobalScope` は独自のイベントループを持ちます。
+**`WorkerGlobalScope`** は[ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API) のインターフェイスで、あらゆるワーカーのスコープを表します。ワーカーには閲覧コンテキストがありません。このスコープには、通常 {{domxref("Window")}} オブジェクトによって伝えられる情報が含まれます。この場合では、イベントハンドラーやコンソール、関連する {{domxref("WorkerNavigator")}} オブジェクトのことです。ぞれぞれの `WorkerGlobalScope` は独自のイベントループを持ちます。
 
-このインターフェースは通常、 それぞれの work タイプによって特化されます： dedicated workers のための {{domxref("DedicatedWorkerGlobalScope")}} と shared workers のための {{domxref("SharedWorkerGlobalScope")}}、[ServiceWorker](/ja/docs/Web/API/ServiceWorker_API) のための {{domxref("ServiceWorkerGlobalScope")}} です。`self` プロパティはそれぞれのコンテキストに特化したスコープを返します。
+このインターフェイスは通常、 それぞれのワーカーの種類に合わせて特化されます。 {{domxref("DedicatedWorkerGlobalScope")}} は専用ワーカーため、 {{domxref("SharedWorkerGlobalScope")}} は共有ワーカーのため、 {{domxref("ServiceWorkerGlobalScope")}} は[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)のためのものです。 `self` プロパティはそれぞれのコンテキストに特化したスコープを返します。
 
-## プロパティ
+{{InheritanceDiagram}}
 
-_このインターフェースは、 {{domxref("EventTarget")}} インターフェースから継承したプロパティと、 {{domxref("WindowTimers")}}、 {{domxref("WindowBase64")}}、 {{domxref("WindowEventHandlers")}} からのプロパティを実装しています。_
+## インスタンスプロパティ
+
+_このインターフェイスには、 {{domxref("EventTarget")}} インターフェイスから継承したプロパティがあります。_
 
 ### 標準プロパティ
 
-- {{domxref("WorkerGlobalScope.caches")}} {{readOnlyinline}}
-  - : 現在のコンテキストに関連した {{domxref("CacheStorage")}} オブジェクトを返す。このオブジェクトは、オフラインで使用するために資産を保存することやリクエストに対してカスタムレスポンスを生成するなどの [service worker](/ja/docs/Web/API/ServiceWorker_API) の機能を使用できる。
-- {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
-  - : worker に関連した {{domxref("WorkerNavigator")}} を返す。これは特定の navigator オブジェクト、主にブラウジングスコープの {{domxref("Navigator")}} ではなく、worker に適合する。
-- {{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}
-  - : `WorkerGlobalScope` 自身の参照を返す。ほとんどの場合、 {{domxref("DedicatedWorkerGlobalScope")}} や {{domxref("SharedWorkerGlobalScope")}} 、{{domxref("ServiceWorkerGlobalScope")}} のような特定のスコープである。
-- {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
-  - : worker に関連した {{domxref("WorkerLocation")}} を返す。これは特定の location オブジェクト、主にブラウジングスコープの {{domxref("Location")}} ではなく、worker に適合する。
+- {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
+  - : ワーカーに関連した {{domxref("WorkerNavigator")}} を返します。これは特化された navigator オブジェクトであり、ほぼ閲覧スコープの {{domxref("Navigator")}} のサブセットですが、ワーカーに適合したものです。
+- {{domxref("WorkerGlobalScope.self")}} {{ReadOnlyInline}}
+  - : `WorkerGlobalScope` 自身の参照を返します。ほとんどの場合、 {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, {{domxref("ServiceWorkerGlobalScope")}} のような特化されたスコープです。
+- {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
+  - : ワーカーに関連した {{domxref("WorkerLocation")}} を返します。これは特化された location オブジェクトであり、ほぼ閲覧スコープのの {{domxref("Location")}} のサブセットですが、ワーカーに適合したものです。
+- {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
+  - : このワーカーに関連付けられた {{domxref("FontFaceSet")}} を返します。
 
 ### 非標準プロパティ
 
-- {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}}
-  - : work に関連した {{domxref("Performance")}} を返す。これは、プロパティとメソッドのサブセットのみが worker で利用できることを除いて、通常の performance オブジェクトである。
-- {{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}} {{Non-standard_inline}}
-  - : worker に関連した {{domxref("Console")}} オブジェクトを返す。
+- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+  - : ワーカーに関連した {{domxref("Performance")}} を返す。これは、通常の performance オブジェクトですが、ワーカーで利用可能なプロパティやメソッドのみを持つサブセットであることが異なります。
+- {{domxref("WorkerGlobalScope.console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+  - : ワーカーに関連付けられた {{domxref("console")}} オブジェクトを返します。
 
-### イベントハンドラ
+### 他の場所で実装されているインスタンスプロパティ
 
-_このインターフェースは、{{domxref("EventTarget")}} インターフェースから継承したイベントハンドラと {{domxref("WindowTimers")}} と {{domxref("WindowBase64")}} のイベントハンドラを実装しています。_
+- {{domxref("caches")}} {{ReadOnlyInline}}
+  - : 現在のコンテキストに関連付けられた {{domxref("CacheStorage")}} オブジェクトを返します。このオブジェクトは、オフラインで使用するための資産の保存や、リクエストに対するカスタムレスポンスの生成といった機能を実現します。
+- {{domxref("indexedDB")}} {{ReadOnlyInline}}
+  - : アプリケーションが索引付きデータベースの機能に非同期でアクセスするための機構を提供し、 {{domxref("IDBFactory")}} オブジェクトを返します。
+- {{domxref("isSecureContext")}} {{ReadOnlyInline}}
+  - : 現在のコンテキストが安全か (`true`) そうでないか (`false`) を示す論理値を返します。
+- {{domxref("origin")}} {{ReadOnlyInline}}
+  - : グローバルオブジェクトのオリジンを文字列としてシリアライズしたものを返します。
+- [`scheduler`](/ja/docs/Web/API/Window/scheduler) {{ReadOnlyInline}}
+  - : 現在のコンテキストに関連付けられた {{domxref("Scheduler")}} オブジェクトを返します。
+    これは[優先度付きタスクスケジューリング API](/ja/docs/Web/API/Prioritized_Task_Scheduling_API) を使用する入口です。
 
-- {{domxref("WorkerGlobalScope.onerror")}}
-  - : {{event("error")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。
-- {{domxref("WorkerGlobalScope.onoffline")}}
-  - : {{event("offline")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。
-- {{domxref("WorkerGlobalScope.ononline")}}
-  - : {{event("online")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。
-- {{domxref("WorkerGlobalScope.onlanguagechange")}}
-  - : ユーザーの選択言語を変更したときに、 global/worker スコープオブジェクトで発火する {{event("Event_handlers", "event handler")}}。
+### イベント
 
-<!---->
+- `error`
+  - : エラーが発生したときに発行されます。
+- `offline`
+  - : ブラウザーがネットワークへのアクセスを失ったときに発行され、 `navigator.onLine` の値が `false` に切り替わります。
+- `online`
+  - : ブラウザーがネットワークへアクセスできるようになったときに発行され、 `navigator.onLine` の値が `true` に切り替わります。
+- [`languagechange`](/ja/docs/Web/API/WorkerGlobalScope/languagechange_event)
+  - : ユーザーの優先言語が変更された際に、グローバル/ワーカースコープで発行されます。
+- `rejectionhandled` {{non-standard_inline}}
+  - : [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) の拒否イベントが処理された際に発行されます。
+- `unhandledrejection` {{non-standard_inline}}
+  - : [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) の拒否イベントが処理されなかったときに発行されます。
 
-- {{domxref("WorkerGlobalScope.onclose")}} {{non-standard_inline}}
-  - : {{event("close")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。
-- {{domxref("WorkerGlobalScope.onrejectionhandled")}} {{non-standard_inline}}
-  - : [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") の rejection イベントを制御するためのイベントハンドラ。
-- {{domxref("WorkerGlobalScope.onunhandledrejection")}} {{non-standard_inline}}
-  - : 制御されていない [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") の rejection イベントのためのイベントハンドラ。
+## インスタンスメソッド
 
-## メソッド
-
-_このインターフェースは、{{domxref("EventTarget")}} インターフェースから併称したメソッドと{{domxref("WindowTimers")}}、 {{domxref("WindowBase64")}}、 {{domxref("WindowEventHandlers")}}、 {{domxref("GlobalFetch")}} のメソッドを実装しています。_
+_このインターフェイスは、{{domxref("EventTarget")}} インターフェイスから継承したメソッドがあります。_
 
 ### 標準メソッド
 
-- {{domxref("WorkerGlobalScope.close()")}}
-  - : 効果的に特定のスコープを閉じ、 `WorkerGlobalScope` のイベントループにキューされているタスクを破棄する。
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : worker のスコープに 1 つ以上のスクリプトをインポートする。カンマ区切りで任意の数を指定できる。例：` importScripts('foo.js', 'bar.js');`
+  - : ワーカーののスコープに 1 つ以上のスクリプトをインポートします。カンマ区切りで任意の数を指定できます。例：`importScripts('foo.js', 'bar.js');`
 
 ### 非標準メソッド
 
-- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
-  - : 標準出力にメッセージを記述できる — たとえば、ターミナルに。これは Firefox の {{domxref("window.dump")}} と同様に worker のためのものである。
+- {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : 標準出力、たとえば端末にメッセージを書き込むことができます。これは Firefox の {{domxref("window.dump")}} ですが、ワーカーのためのものです。
 
-### ほかで実装されているメソッド
+### 他で実装されているインスタンスメソッド
 
-- {{domxref("WindowBase64.atob()")}}
+- {{domxref("atob", "atob()")}}
   - : base-64 エンコーディングを使用してエンコードされた文字データをデコードする。
-- {{domxref("WindowBase64.btoa()")}}
-  - : バイナリデータ文字列から base-64 エンコードされた ASCII 文字列を生成する。
-- {{domxref("WindowTimers.clearInterval()")}}
-  - : {{domxref("WindowTimers.setInterval()")}} を使用して設定された繰り返し処理をキャンセルする。
-- {{domxref("WindowTimers.clearTimeout()")}}
-  - : {{domxref("WindowTimers.setTimeout()")}} を使用して設定された繰り返し処理をキャンセルする。
-- {{domxref("ImageBitmapFactories.createImageBitmap()")}}
-  - : 異なるさまざまな画像ソースを受け入れ、{{domxref("ImageBitmap")}} を解決する {{domxref("Promise")}} を返す。
-- {{domxref("GlobalFetch.fetch()")}}
-  - : リソースの取得プロセスを開始する。
-- {{domxref("WindowTimers.setInterval()")}}
-  - : X ミリ秒ごとの処理実行をスケジューリングする。
-- {{domxref("WindowTimers.setTimeout()")}}
-  - : 遅延処理を設定する。
+- {{domxref("btoa", "btoa()")}}
+  - : バイナリーデータ文字列から base-64 エンコードされた ASCII 文字列を生成する。
+- {{domxref("clearInterval()")}}
+  - : {{domxref("setInterval()")}} を使用して設定された繰り返し処理をキャンセルする。
+- {{domxref("clearTimeout()")}}
+  - : {{domxref("setTimeout()")}} を使用して設定された繰り返し処理をキャンセルする。
+- {{domxref("createImageBitmap()")}}
+  - : さまざまな画像ソースを受け入れ、プロミス ({{jsxref("Promise")}}) を返します。これは {{domxref("ImageBitmap")}} に解決されます。オプションとして、ソースを _(sx, sy)_ を原点とする幅 sw, 高さ sh のピクセル矩形に切り詰めます。
+- {{domxref("fetch()")}}
+  - : リソースのネットワークからの取得プロセスを開始します。
+- {{domxref("setInterval()")}}
+  - : 指定したミリ秒周期で実行されるように関数をスケジュールします。
+- {{domxref("setTimeout()")}}
+  - : 指定された時間内に実行されるように関数をスケジューリングします。
+- {{domxref("reportError()")}}
+  - : 処理されない例外をエミュレートして、スクリプトのエラーを報告します。
 
 ## 例
 
-コード内で `WorkerGlobalScope` に直接アクセスすることはありません； しかし、{{domxref("DedicatedWorkerGlobalScope")}} や {{domxref("SharedWorkerGlobalScope")}} のような特定のグローバルスコープからプロパティやメソッドが継承されています。たとえば、worker にほかのスクリプトをインポートして、次の 2 行を使用して worker スコープの `navigator` オブジェクトのコンテンツを表示できます：
+コード内で `WorkerGlobalScope` に直接アクセスすることはありません。しかし、プロパティやメソッドが {{domxref("DedicatedWorkerGlobalScope")}} や {{domxref("SharedWorkerGlobalScope")}} のような特化されたグローバルスコープに継承されています。たとえば、ワーカーがほかのスクリプトをインポートした場合、ワーカースコープの `navigator` オブジェクトの内容を以下の 2 行で表示することができます。
 
 ```js
 importScripts('foo.js');
 console.log(navigator);
 ```
 
-> **Note:** **ノート：** worker スクリプトのグローバルスコープは、実行している worker グローバルスコープ（{{domxref("DedicatedWorkerGlobalScope")}} やそのほか）と `WorkerGlobalScope` からメソッドやプロパティなどを継承している すべての worker グローバルスコープで有効であるため、上記のように親オブジェクトを指定しなくとも実行できます。
+> **メモ:** ワーカースクリプトのグローバルスコープは、実行しているワーカーのグローバルスコープ（{{domxref("DedicatedWorkerGlobalScope")}} やその他）と、 `WorkerGlobalScope` からメソッドやプロパティなどを継承しているすべてのワーカーのグローバルスコープで有効であるため、上記のように親オブジェクトを指定しなくとも実行できます。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                         | 状態                                 | コメント                                            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#workerglobalscope', 'WorkerGlobalScope')}} | {{Spec2('HTML WHATWG')}}     | {{SpecName("Web Workers")}} から変更なし。 |
-| {{SpecName('Service Workers')}}                                                     | {{Spec2('Service Workers')}} | `caches` を定義。                                   |
-| {{SpecName('Web Workers', '#workerglobalscope', 'WorkerGlobalScope')}} | {{Spec2('Web Workers')}}     | 初期定義。                                          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.WorkerGlobalScope")}}
+{{Compat}}
 
 ## 関連項目
 
-- そのほかのグローバルオブジェクトインターフェース： {{domxref("Window")}}、 {{domxref("DedicatedWorkerGlobalScope")}}、 {{domxref("SharedWorkerGlobalScope")}}、 {{domxref("ServiceWorkerGlobalScope")}}
-- そのほかの Worker 関連インターフェース： {{domxref("Worker")}}、{{domxref("WorkerLocation")}}、 {{domxref("WorkerGlobalScope")}}、 {{domxref("ServiceWorkerGlobalScope")}}
-- [Web Worker を使用する](/ja/docs/Web/Guide/Performance/Using_web_workers)
+- その他のグローバルオブジェクトインターフェイス: {{domxref("Window")}}、 {{domxref("DedicatedWorkerGlobalScope")}}、 {{domxref("SharedWorkerGlobalScope")}}、 {{domxref("ServiceWorkerGlobalScope")}}
+- その他のワーカー関連インターフェイス: {{domxref("Worker")}}、{{domxref("WorkerLocation")}}、 {{domxref("WorkerGlobalScope")}}、 {{domxref("ServiceWorkerGlobalScope")}}
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

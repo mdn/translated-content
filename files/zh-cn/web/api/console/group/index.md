@@ -1,7 +1,8 @@
 ---
 title: console.group
-slug: Web/API/Console/group
+slug: Web/API/console/group
 ---
+
 {{ ApiRef() }}
 
 ## 概述
@@ -28,7 +29,7 @@ console.group();
 
 ## 浏览器兼容性
 
-{{Compat("api.console.group")}}
+{{Compat}}
 
 ## 相关链接
 

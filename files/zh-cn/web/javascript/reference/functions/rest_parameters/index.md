@@ -1,7 +1,8 @@
 ---
 title: 剩余参数
-slug: Web/JavaScript/Reference/Functions/Rest_parameters
+slug: Web/JavaScript/Reference/Functions/rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **剩余参数**语法允许我们将一个不定数量的参数表示为一个数组。
@@ -28,7 +29,7 @@ function(a, b, ...theArgs) {
 
 - 剩余参数只包含那些没有对应形参的实参，而 `arguments` 对象包含了传给函数的所有实参。
 - `arguments`对象不是一个真正的数组，而剩余参数是真正的 [`Array`](/zh-CN/JavaScript/Reference/Global_Objects/Array)实例，也就是说你能够在它上面直接使用所有的数组方法，比如 [`sort`](/zh-CN/JavaScript/Reference/Global_Objects/Array/sort)，[`map`](/zh-CN/JavaScript/Reference/Global_Objects/Array/map)，[`forEach`](/zh-CN/JavaScript/Reference/Global_Objects/Array/forEach)或[`pop`](/zh-CN/JavaScript/Reference/Global_Objects/Array/pop)。
-- `arguments`对象还有一些附加的属性 （如`callee`属性）。
+- `arguments`对象还有一些附加的属性（如`callee`属性）。
 
 ### 从 arguments 到数组
 
@@ -138,10 +139,10 @@ console.log(sortArguments(5, 3, 7, 1)); // shows 1, 3, 5, 7
 
 ## 相关链接
 
-- [Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
-- [Arguments object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Spread operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
+- [Arguments object](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Array](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
 - [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Destructuring assignment](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

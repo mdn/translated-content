@@ -1,13 +1,8 @@
 ---
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
+
 {{JSRef}}
 
 **`Math.PI`** 속성은 원의 둘레와 지름의 비율, 약 3.14159의 값을 가집니다.

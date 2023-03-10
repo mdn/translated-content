@@ -2,6 +2,7 @@
 title: SVGRect
 slug: Web/API/SVGRect
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGRect`** は矩形を表します。矩形は、最小の x の値と最小の y の値を特定する x と y の座標の対と、幅と、高さから構成されており、これらは、非負であるものと考えられます。
@@ -27,10 +28,7 @@ _このインタフェースは、親から、すなわち_ _{{domxref("SVGGeome
 
 ## 仕様
 
-| 仕様                                                                                                     | ステータス                                   | 備考                                      |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------- |
-| {{SpecName("Geometry Interfaces", "#DOMRect", "DOMRect")}}                             | {{Spec2("Geometry Interfaces")}} | SVGRect を DOMRect の古い別名として変更。 |
-| {{SpecName("SVG1.1", "shapes.html#InterfaceSVGRectElement", "SVGRectElement")}} | {{Spec2("SVG1.1")}}                     | 初回定義                                  |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

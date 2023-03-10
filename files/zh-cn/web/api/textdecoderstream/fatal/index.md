@@ -2,6 +2,7 @@
 title: TextDecoderStream.fatal
 slug: Web/API/TextDecoderStream/fatal
 ---
+
 {{APIRef("Encoding API")}}
 
 {{domxref("TextDecoderStream")}} 接口的只读属性 **`fatal`** 是一个 {{jsxref("boolean")}}，表示 `TextDecoderStream` 对象的错误模式是否设置为 `fatal`。

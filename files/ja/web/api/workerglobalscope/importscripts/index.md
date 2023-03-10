@@ -1,34 +1,38 @@
 ---
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
+l10n:
+  sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
 ---
+
 {{APIRef("Web Workers API")}}
 
-**`importScripts()`** は {{domxref("WorkerGlobalScope")}} インターフェースのメソッドで、1 つ以上のスクリプトをワーカーのスコープ内に同期的に読み込みます。
+**`importScripts()`** は {{domxref("WorkerGlobalScope")}} インターフェイスのメソッドで、 1 つ以上のスクリプトをワーカーのスコープ内に同期的に読み込みます。
 
 ## 構文
 
 ```js
-self.importScripts('foo.js');
-self.importScripts('foo.js', 'bar.js', ...);
+importScripts(path0)
+importScripts(path0, path1)
+importScripts(path0, path1, /* … ,*/ pathN)
 ```
 
 ### 引数
 
-インポートされるスクリプト表す {{domxref("DOMString")}} オブジェクトのカンマ区切りのリストです。これらは _HTML 文書のベース URL_ からの相対パスです。
+文字列のカンマ区切りのリストで、インポートされるスクリプトを表します。これらは _HTML 文書のベース URL_ からの相対パスです。
 
 ### 返値
 
-_なし。_
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
 - `NetworkError`
-  - : インポートされたスクリプトが妥当な JavaScript の MIME 型 (すなわち `text/javascript`) で提供されていなかった場合。
+  - : インポートされたスクリプトが `text/javascript` の MIME タイプでないか、許可された[古い JavaScript の MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#legacy_javascript_mime_types)のいずれでもない状態で提供された場合。
 
 ## 例
 
-`foo.js` という別なスクリプトで書かれた機能を worker.js の内部で使用したい場合、以下のような行でインポートして使用することができます。
+`foo.js` という別のスクリプトに書かれた機能を worker.js の中で使いたい場合は、次の行でインポートすることができます。
 
 ```js
 importScripts('foo.js');
@@ -38,13 +42,11 @@ importScripts('foo.js');
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#dom-workerglobalscope-importscripts', 'importScripts()')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WorkerGlobalScope.importScripts")}}
+{{Compat}}
 
 ## 関連情報
 

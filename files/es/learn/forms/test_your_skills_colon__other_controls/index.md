@@ -1,9 +1,9 @@
 ---
 title: 'Prueba tus habilidades: Otros controles'
 slug: Learn/Forms/Test_your_skills:_Other_controls
-translation_of: Learn/Forms/Test_your_skills:_Other_controls
 original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta pueba de habilidad es evaluar si has comprendido nuestro artículo [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls).
@@ -16,10 +16,10 @@ El objetivo de esta pueba de habilidad es evaluar si has comprendido nuestro art
 
 En nuestra primera evaluación de "Otros controles", te pediremos crear una entrada de texto de líneas múltiples.
 
-1.  Crea una entrada básica de texto de múltiples líneas.
-2.  Asócialo semánticamente con la etiqueta de "Comentario" asociado.
-3.  Define la entrada con 35 columnas y 10 filas de espacio en cual agregar comentarios.
-4.  Define para los comentatios una longitud máxima de 100 caracteres.
+1. Crea una entrada básica de texto de múltiples líneas.
+2. Asócialo semánticamente con la etiqueta de "Comentario" asociado.
+3. Define la entrada con 35 columnas y 10 filas de espacio en cual agregar comentarios.
+4. Define para los comentatios una longitud máxima de 100 caracteres.
 
 Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
 
@@ -31,9 +31,9 @@ Intenta actualizar el código en vivo más abajo para mostrar el ejemplo termina
 
 Ahora es tiempo de implementar un menú desplegable, para permitir al usuario escoger su comida favorita de las opciones entregadas.
 
-1.  Crea tu estructura de caja básica.
-2.  Asóciala semánticamente con la etiqueta de "comentarios" entregada.
-3.  Dentro de la lista, divide las opciones en 2 subgrupos - "principales" y "meriendas".
+1. Crea tu estructura de caja básica.
+2. Asóciala semánticamente con la etiqueta de "comentarios" entregada.
+3. Dentro de la lista, divide las opciones en 2 subgrupos - "principales" y "meriendas".
 
 Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
 
@@ -45,9 +45,9 @@ Intenta actualizar el código en vivo más abajo para mostrar el ejemplo termina
 
 En la tarea final de esta evaluación, comenzaremos con la misma lista de opciones de comida. Sin embargo, esta vez queremos hacer las cosas de otra forma:
 
-1.  Crea una entrada de texto básica, que esté asociada semánticamente con la etiqueta entregada.
-2.  Coloca las opciones de comida en una lista que pueda ser asociada con una entrada de formulario.
-3.  Asocia la lista con tu entrada de texto, de forma que cuando escribas caracteres, cualquier opción de la lista que coincida con la secuencia de caracteres ingresada, aparezca en un listado desplegable como sugerencia de autocompletado.
+1. Crea una entrada de texto básica, que esté asociada semánticamente con la etiqueta entregada.
+2. Coloca las opciones de comida en una lista que pueda ser asociada con una entrada de formulario.
+3. Asocia la lista con tu entrada de texto, de forma que cuando escribas caracteres, cualquier opción de la lista que coincida con la secuencia de caracteres ingresada, aparezca en un listado desplegable como sugerencia de autocompletado.
 
 Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
 
@@ -61,8 +61,8 @@ Puedes practicar estos ejemplos en los editores interactivos que se encuentran m
 
 Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
 
-1.  Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
-2.  Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
+2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
 
     - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de Otros controles 1".
     - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.

@@ -9,6 +9,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLTableRowElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 L'interface **`HTMLTableRowElement`** fournit des propriétés et des méthodes spéciales (au-delà de l'interface {{domxref("HTMLElement")}} dont elle dispose également par héritage) pour manipuler la mise en page et la présentation des lignes dans un tableau HTML.

@@ -2,6 +2,7 @@
 title: shape-outside
 slug: Web/CSS/shape-outside
 ---
+
 {{CSSRef}}
 
 **`shape-outside`** 的 [CSS](/zh-CN/docs/Web/CSS) 属性定义了一个可以是非矩形的形状，相邻的内联内容应围绕该形状进行包装。默认情况下，内联内容包围其边距框; `shape-outside`提供了一种自定义此包装的方法，可以将文本包装在复杂对象周围而不是简单的框中。{{EmbedInteractiveExample("pages/css/shape-outside.html")}}
@@ -54,12 +55,12 @@ shape-outside: unset;
       - : 定义一个由内容区域的外边缘封闭形成的形状（译者：表述的不太好，就是被 padding 包裹的区域，在 chrome 控制台中的盒子模型图中的蓝色区域。）。每一个角的弧度取 `0` 或 `border-radius - border-width - padding` 中的较大值。
 
 - {{cssxref("&lt;basic-shape&gt;")}}
-  - : 基于 [`inset()`](</en-US/docs/Web/CSS/basic-shape#inset()>)， [`circle()`](</en-US/docs/Web/CSS/basic-shape#circle()>)， [`ellipse()`](</en-US/docs/Web/CSS/basic-shape#ellipse()>)，或者 [`polygon()`](</en-US/docs/Web/CSS/basic-shape#polygon()>)其中一个创造出来的形状计算出浮动区域。如果同时存在 `<shape-box>` ，那么会为 `<basic-shape>` 方法定义一个参考盒，这个参考盒默认为 `margin-box` 。
+  - : 基于 {{cssxref("basic-shape/inset","inset()")}}、{{cssxref("basic-shape/circle","circle()")}}、{{cssxref("basic-shape/ellipse","ellipse()")}} 或 {{cssxref("basic-shape/polygon","polygon()")}} 其中一个创造出来的形状计算出浮动区域。如果同时存在 `<shape-box>`，那么会为 `<basic-shape>` 方法定义一个参考盒，这个参考盒默认为 `margin-box`。
 - {{cssxref("&lt;image&gt;")}}
 
   - : 提取并且计算指定 {{cssxref("&lt;image&gt;")}} 的 alpha 通道得出浮动区域（译者：即根据图片的非透明区域进行包裹）。就跟通过 {{cssxref("shape-image-threshold")}}来定义一样。
 
-    > **备注：** {{glossary("User agent", "用户代理")}} 必须使用由 HTML5 规范定义的 CORS-enabled fetch 方法来处理 `shape-outside` 的值中的所有 URL。当捕获的时候，用户代理必须使用“匿名”模式来设置层叠样式表的 URL 的 referrer source 和设置所在文档的 URL 的 origin 。如果这导致出现没有有效的备份图像这样的网络错误， 产生的影响就跟指定了值 `none` 一样。
+    > **备注：** {{glossary("User agent", "用户代理")}} 必须使用由 HTML5 规范定义的 CORS-enabled fetch 方法来处理 `shape-outside` 的值中的所有 URL。当捕获的时候，用户代理必须使用“匿名”模式来设置层叠样式表的 URL 的 referrer source 和设置所在文档的 URL 的 origin。如果这导致出现没有有效的备份图像这样的网络错误，产生的影响就跟指定了值 `none` 一样。
 
 ### 正式语法
 

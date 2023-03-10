@@ -1,18 +1,9 @@
 ---
 title: '<table>: 表要素'
 slug: Web/HTML/Element/table
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - NeedsLiveSample
-  - Reference
-  - Sorting
-  - Tables
-  - Web
-translation_of: Web/HTML/Element/table
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<table>` 要素**は表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。
 
@@ -323,7 +314,7 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
 
 次の例では、 `document` にあるすべての `<table>` 要素のすべての `<th>` 要素にイベントハンドラーを追加しています。 `<tbody>` のすべての行を、行に含まれる `td` セルに基づいてソートします。
 
-> **Note:** この方法では、 `<td>` 要素が子孫要素のない生のテキストで作成されていることを想定しています。
+> **メモ:** この方法では、 `<td>` 要素が子孫要素のない生のテキストで作成されていることを想定しています。
 
 ##### HTML
 
@@ -677,10 +668,7 @@ tr:last-child td {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','tables.html#the-table-element','table 要素')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-table-element','table 要素')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

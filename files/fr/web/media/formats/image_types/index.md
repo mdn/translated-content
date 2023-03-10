@@ -27,6 +27,7 @@ tags:
 translation_of: Web/Media/Formats/Image_types
 original_slug: Web/Media/Formats/Types_des_images
 ---
+
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
 
 Dans ce guide, nous aborderons les types de fichiers d'images généralement pris en charge par les navigateurs web, et nous vous donnerons des indications qui vous aideront à sélectionner les formats les plus appropriés pour l'imagerie de votre site.

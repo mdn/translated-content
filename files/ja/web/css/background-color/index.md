@@ -1,22 +1,8 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - グラフィック
-  - HTML 色
-  - HTML スタイル
-  - レイアウト
-  - リファレンス
-  - スタイル
-  - Styling HTML
-  - background-color
-  - recipe:css-property
-browser-compat: css.properties.background-color
-translation_of: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`background-color`** プロパティは、要素の背景色を設定します。

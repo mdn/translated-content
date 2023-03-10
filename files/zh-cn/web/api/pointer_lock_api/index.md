@@ -2,6 +2,7 @@
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
+
 {{ SeeCompatTable() }}
 
 **指针锁定**(以前叫做鼠标锁定) 提供了一种输入方法，这种方法是基于鼠标随着时间推移的运动的（也就是，deltas），而不仅是鼠标光标的绝对位置。通过它可以访问原始的鼠标运动，把鼠标事件的目标锁定到一个单独的元素，这就消除了鼠标在一个单独的方向上到底可以移动多远这方面的限制，并从视图中删去光标。
@@ -14,7 +15,7 @@ slug: Web/API/Pointer_Lock_API
 
 ## 基本概念
 
-指针锁定和[鼠标捕获](/en/DOM/element.setCapture)有关。鼠标捕获在一个鼠标被拖曳时可以向一个目标元素持续传递有关事件，但是当鼠标按钮被放开时就会停止。指针锁定和鼠标捕获在以下方面有所不同：
+指针锁定和[鼠标捕获](/zh-CN/DOM/element.setCapture)有关。鼠标捕获在一个鼠标被拖曳时可以向一个目标元素持续传递有关事件，但是当鼠标按钮被放开时就会停止。指针锁定和鼠标捕获在以下方面有所不同：
 
 - 它是持久性的。指针锁定不释放鼠标，直到作出一个显式的 API 调用或是用户使用一个专门的释放手势。
 - 它不局限于浏览器或者屏幕边界。
@@ -92,7 +93,7 @@ function lockPointer() {
   // -- 这在以后可能会发生改变。
   elem.requestFullscreen = elem.requestFullscreen    ||
                            elem.mozRequestFullscreen ||
-                           elem.mozRequestFullScreen || // 较旧的 API 把 ‘S’ 大写
+                           elem.mozRequestFullScreen || // 较旧的 API 把‘S’大写
                            elem.webkitRequestFullscreen;
   elem.requestFullscreen();
 }
@@ -162,7 +163,7 @@ document.exitPointerLock();
 
 ## pointerlockchange 事件
 
-当指针锁定状态改变时 - 例如，当调用 `requestPointerLock`, `exitPointerLock`，用户按下 ESC 键，等等。— `pointerlockchange` 事件被分发到 `document`。 这是一个简单事件所以不包含任何的额外数据。
+当指针锁定状态改变时 - 例如，当调用 `requestPointerLock`, `exitPointerLock`，用户按下 ESC 键，等等。— `pointerlockchange` 事件被分发到 `document`。这是一个简单事件所以不包含任何的额外数据。
 
 > **备注：** 该事件目前在 Firefox 中使用前缀的格式是 `mozpointerlockchange` ，在 Chrome 中是 `webkitpointerlockchange`。
 
@@ -185,7 +186,7 @@ partial interface MouseEvent {
 
 > **备注：** movement 属性目前在 Firefox 中被加上前缀为 `.mozMovementX` 和 `.mozMovementY` , 在 Chrome 中为`.webkitMovementX` 和 `.webkitMovementY`。
 
-鼠标事件的两个新参数—`movementX` 和 `movementY`—提供了鼠标位置的变化情况。这两个参数的值，等于两个[`MouseEvent`](/en/DOM/MouseEvent) 属性（ `screenX` 和 `screenY）`之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ `eNow` 和 `ePrevious`）中。换言之，指针锁定参数 `movementX = eNow.screenX - ePrevious.screenX`。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）
+鼠标事件的两个新参数—`movementX` 和 `movementY`—提供了鼠标位置的变化情况。这两个参数的值，等于两个[`MouseEvent`](/zh-CN/DOM/MouseEvent) 属性（ `screenX` 和 `screenY）`之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ `eNow` 和 `ePrevious`）中。换言之，指针锁定参数 `movementX = eNow.screenX - ePrevious.screenX`。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）
 
 ### 锁定状态
 
@@ -205,10 +206,10 @@ partial interface MouseEvent {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## 参见
 
 [W3C Pointer Lock API Specification](http://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html)
 
-[MouseEvent](/en/DOM/MouseEvent)
+[MouseEvent](/zh-CN/DOM/MouseEvent)

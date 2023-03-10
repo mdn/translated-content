@@ -2,6 +2,7 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
+
 {{JSRef}}
 
 **_TypedArray_** 物件表示了一個底層 [`ArrayBuffer`](/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer) 的類陣列（array-like）視圖，它能以限定的型別解讀、修改 `ArrayBuffer`。但並沒有名為 `TypedArray` 的內建物件，`TypedArray` 也不存在可直接呼叫的建構式。真正能夠使用的是幾個原型繼承自 `TypedArray` 的內建物件，它們可以建立限定成員型別的物件實體來操作 `ArrayBuffer`。這些 `TypedArray` 型別的物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 `ArrayBuffer` 物件當中。以下將說明每種限定成員型別之 `TypedArray` 的共同屬性與方法。
@@ -113,11 +114,86 @@ All *TypedArray*s inherit from {{jsxref("TypedArray.prototype")}}.
 
 ### 屬性
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','Properties')}}
+These properties are all [getters](/zh-TW/docs/Web/JavaScript/Reference/Functions/get) defined on the `TypedArray` prototype object and are thus read-only and shared by all `TypedArray` subclass instances.
+
+- `TypedArray.prototype[@@toStringTag]`
+  - : The initial value of a typed array's [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the same string as its [name](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name). This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
+- {{jsxref("TypedArray.prototype.buffer")}}
+  - : Returns the {{jsxref("ArrayBuffer")}} referenced by the typed array.
+- {{jsxref("TypedArray.prototype.byteLength")}}
+  - : Returns the length (in bytes) of the typed array.
+- {{jsxref("TypedArray.prototype.byteOffset")}}
+  - : Returns the offset (in bytes) of the typed array from the start of its {{jsxref("ArrayBuffer")}}.
+- {{jsxref("TypedArray.prototype.length")}}
+  - : Returns the number of elements held in the typed array.
+
+All `TypedArray` subclasses also have the following instance properties:
+
+- {{jsxref("TypedArray.prototype.BYTES_PER_ELEMENT")}}
+  - : Returns a number value of the element size for the different `TypedArray` objects.
 
 ### 方法
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','Methods')}}
+These methods are defined on the `TypedArray` prototype object and are thus shared by all `TypedArray` subclass instances.
+
+- {{jsxref("TypedArray.prototype.at()")}}
+  - : Takes an integer value and returns the item at that index. This method allows for negative integers, which count back from the last item.
+- {{jsxref("TypedArray.prototype.copyWithin()")}}
+  - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
+- {{jsxref("TypedArray.prototype.entries()")}}
+  - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array. See also {{jsxref("Array.prototype.entries()")}}.
+- {{jsxref("TypedArray.prototype.every()")}}
+  - : Tests whether all elements in the array pass the test provided by a function. See also {{jsxref("Array.prototype.every()")}}.
+- {{jsxref("TypedArray.prototype.fill()")}}
+  - : Fills all the elements of an array from a start index to an end index with a static value. See also {{jsxref("Array.prototype.fill()")}}.
+- {{jsxref("TypedArray.prototype.filter()")}}
+  - : Creates a new array with all of the elements of this array for which the provided filtering function returns `true`. See also {{jsxref("Array.prototype.filter()")}}.
+- {{jsxref("TypedArray.prototype.find()")}}
+  - : Returns the first `element` in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found. See also {{jsxref("Array.prototype.find()")}}.
+- {{jsxref("TypedArray.prototype.findIndex()")}}
+  - : Returns the first index value of in the array that has an element that satisfies a provided testing function, or `-1` if no appropriate element was found. See also {{jsxref("Array.prototype.findIndex()")}}.
+- {{jsxref("TypedArray.prototype.findLast()")}}
+  - : Returns the value of the last element in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found. See also {{jsxref("Array.prototype.findLast()")}}.
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}
+  - : Returns the index of the last element in the array that satisfies a provided testing function, or `-1` if no appropriate element was found. See also {{jsxref("Array.prototype.findLastIndex()")}}.
+- {{jsxref("TypedArray.prototype.forEach()")}}
+  - : Calls a function for each element in the array. See also {{jsxref("Array.prototype.forEach()")}}.
+- {{jsxref("TypedArray.prototype.includes()")}}
+  - : Determines whether a typed array includes a certain element, returning `true` or `false` as appropriate. See also {{jsxref("Array.prototype.includes()")}}.
+- {{jsxref("TypedArray.prototype.indexOf()")}}
+  - : Returns the first (least) index of an element within the array equal to the specified value, or `-1` if none is found. See also {{jsxref("Array.prototype.indexOf()")}}.
+- {{jsxref("TypedArray.prototype.join()")}}
+  - : Joins all elements of an array into a string. See also {{jsxref("Array.prototype.join()")}}.
+- {{jsxref("TypedArray.prototype.keys()")}}
+  - : Returns a new array iterator that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+  - : Returns the last (greatest) index of an element within the array equal to the specified value, or `-1` if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
+- {{jsxref("TypedArray.prototype.map()")}}
+  - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
+- {{jsxref("TypedArray.prototype.reduce()")}}
+  - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
+- {{jsxref("TypedArray.prototype.reduceRight()")}}
+  - : Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduceRight()")}}.
+- {{jsxref("TypedArray.prototype.reverse()")}}
+  - : Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.
+- {{jsxref("TypedArray.prototype.set()")}}
+  - : Stores multiple values in the typed array, reading input values from a specified array.
+- {{jsxref("TypedArray.prototype.slice()")}}
+  - : Extracts a section of an array and returns a new array. See also {{jsxref("Array.prototype.slice()")}}.
+- {{jsxref("TypedArray.prototype.some()")}}
+  - : Returns `true` if at least one element in this array satisfies the provided testing function. See also {{jsxref("Array.prototype.some()")}}.
+- {{jsxref("TypedArray.prototype.sort()")}}
+  - : Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.
+- {{jsxref("TypedArray.prototype.subarray()")}}
+  - : Returns a new `TypedArray` from the given start and end element index.
+- {{jsxref("TypedArray.prototype.values()")}}
+  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
+- {{jsxref("TypedArray.prototype.toLocaleString()")}}
+  - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
+- {{jsxref("TypedArray.prototype.toString()")}}
+  - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ### Methods Polyfill
 
@@ -125,7 +201,7 @@ Many of the methods used in Typed Arrays can be polyfilled using the methods pre
 
 ```js example-bad
 var typedArrayTypes = [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array,
-          Uint16Array, ​​​Int32Array, Uint32Array, ​​​Float32Array, Float64Array];
+          Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array];
 
 for (var k in typedArrayTypes)
     for (var v in Array.prototype)
@@ -140,7 +216,7 @@ for (var k in typedArrayTypes)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.TypedArray")}}
+{{Compat}}
 
 ## 相容性備註
 
@@ -158,6 +234,6 @@ var dv = new Int8Array([1, 2, 3]);
 
 ## 參見
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

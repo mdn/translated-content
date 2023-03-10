@@ -13,6 +13,7 @@ tags:
   - onVisitRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'une page est complètement supprimée de l'historique du navigateur.
@@ -51,11 +52,11 @@ Les événements ont trois fonctions:
       - : `object`. Détails de l'enlèvement. C'est un objet contenant deux propriétés: un booléen `allHistory` et un tableau `urls`.
 
         - Si cet événement se déclenche parce qu'il est clair, `allHistory` sera `true` et `urls` sera un tableau vide.
-        - Dans le cas contraire,  `allHistory` sera `false` et `urls` contiendront un qui est l'URL de la page supprimée.
+        - Dans le cas contraire, `allHistory` sera `false` et `urls` contiendront un qui est l'URL de la page supprimée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.onVisitRemoved")}}
+{{Compat}}
 
 ## Exemples
 
@@ -79,7 +80,8 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +108,4 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,10 +1,10 @@
 ---
 title: Poner un contador y terminar ganando
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}
 
@@ -94,6 +94,6 @@ Puedes comparar tu código con este:
 
 ## Pasos siguientes
 
-El juego, ahora mismo, ya tiene buena pinta. En la siguiente lección conseguirás que sea más atractivo porque añadirás el [Control del ratón](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton).
+El juego, ahora mismo, ya tiene buena pinta. En la siguiente lección conseguirás que sea más atractivo porque añadirás el [Control del ratón](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}

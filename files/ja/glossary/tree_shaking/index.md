@@ -2,6 +2,7 @@
 title: Tree shaking
 slug: Glossary/Tree_shaking
 ---
+
 **Tree shaking** とは実行されないコードを削除することで、JavaScript の文脈で利用される用語です。
 
 Tree shaking は ES2015 の [import](/ja/docs/Web/JavaScript/Reference/Statements/import) 文と [export](/ja/docs/Web/JavaScript/Reference/Statements/export) 文を利用して、エクスポートされたコードが他の JavaScript ファイルで利用されているかどうかを判定します。

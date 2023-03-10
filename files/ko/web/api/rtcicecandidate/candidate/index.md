@@ -1,11 +1,11 @@
 ---
 title: RTCIceCandidate.candidate
 slug: Web/API/RTCIceCandidate/candidate
-translation_of: Web/API/RTCIceCandidate/candidate
 ---
+
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCIceCandidate")}} 인터페이스에 대한 읽기 속성인 **`candidate`**는 candidate에 대해 자세히 설명해주는 {{domxref("DOMString")}}를 반환합니다.
+{{domxref("RTCIceCandidate")}} 인터페이스에 대한 읽기 속성인 **`candidate`** 는 candidate에 대해 자세히 설명해주는 {{domxref("DOMString")}}를 반환합니다.
 
 `RTCIceCandidate`의 거의 모든 다른 속성들은 사실 이 문자열에서 가져와진 것입니다.
 
@@ -13,7 +13,9 @@ translation_of: Web/API/RTCIceCandidate/candidate
 
 ## Syntax
 
-    var candidate = RTCIceCandidate.candidate;
+```js
+var candidate = RTCIceCandidate.candidate;
+```
 
 ### 값
 
@@ -21,9 +23,11 @@ translation_of: Web/API/RTCIceCandidate/candidate
 
 candidate 문자열에 대한 구문은 {{RFC(5245, "", 15.1)}}에 설명되어있습니다.
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+``` plain
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
-위와 같은 a-line (속성 line)에서 해당하는 `candidate `문자열의 값은 `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`가 됩니다.
+위와 같은 a-line (속성 line)에서 해당하는 `candidate` 문자열의 값은 `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`가 됩니다.
 
 {{Glossary("user agent")}}는 항상 가장 높거나 같은 {{domxref("RTCIceCandidate.priority", "priority")}}를 가진 candidate를 선호합니다. 위의 예시에서, 우선 순위는 `2043278322` 입니다. 속성은 단일 스페이스로 특정한 순서가 있습니다. 위의 candidate에 대한 전체 속성 리스트는 다음과 같습니다:
 

@@ -2,6 +2,7 @@
 title: document.write
 slug: Web/API/Document/write
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.write()`** 方法将一个文本字符串写入一个由 {{domxref("document.open()")}} 打开的文档流（document stream）。
@@ -57,7 +58,7 @@ document.write(markup);
 </script>
 ```
 
-> **备注：** `document.write` 和 {{domxref("document.writeln")}} [在 XHTML 文档中不可用](/zh-CN/docs/Archive/Web/Writing_JavaScript_for_HTML)（控制台上会显示 "Operation is not supported"\[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] 的报错信息）。 当打开本地的 .xhtml 格式的文件或任何其他 {{Glossary("MIME type", "MIME 类型")}}为 `application/xhtml+xml` 的文档时，均会报错。更多信息可查看 [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite)。
+> **备注：** `document.write` 和 {{domxref("document.writeln")}} [在 XHTML 文档中不可用](/zh-CN/docs/Archive/Web/Writing_JavaScript_for_HTML)（控制台上会显示 "Operation is not supported"\[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] 的报错信息）。当打开本地的 .xhtml 格式的文件或任何其他 {{Glossary("MIME type", "MIME 类型")}}为 `application/xhtml+xml` 的文档时，均会报错。更多信息可查看 [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite)。
 
 > **备注：** 在有[deferred](/zh-CN/docs/Web/HTML/Element/script#attr-defer) 或 [asynchronous](/zh-CN/docs/Web/HTML/Element/script#attr-async) 属性的 script 中，`document.write` 会被忽略，控制台会显示 "A call to `document.write()` from an asynchronously-loaded external script was ignored" 的报错信息。
 

@@ -2,6 +2,7 @@
 title: Blob.type
 slug: Web/API/Blob/type
 ---
+
 {{APIRef("File API")}}
 
 [`Blob`](/zh-CN/docs/Web/API/Blob) 对象的 **`type`** 属性给出文件的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)。如果类型无法确定，则返回空字符串。
@@ -42,7 +43,7 @@ for (var i = 0; i < files.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Blob.type")}}
+{{Compat}}
 
 ## 参见
 

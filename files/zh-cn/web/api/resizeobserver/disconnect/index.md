@@ -2,15 +2,15 @@
 title: ResizeObserver.disconnect()
 slug: Web/API/ResizeObserver/disconnect
 ---
-{{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
-The **`disconnect()`** method of the {{domxref("ResizeObserver")}} interface unobserves all observed {{domxref('Element')}} or {{domxref('SVGElement')}} targets.
-{{domxref("ResizeObserver")}} 接口的 **`disconnect()`** 方法会停止和取消目标对象上所有对{{domxref('Element')}} 或 {{domxref('SVGElement')}} 的监听。
+{{APIRef("Resize Observer API")}}
+
+{{domxref("ResizeObserver")}} 接口的 **`disconnect()`** 方法取消所有的对 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 目标的监听。
 
 ## 语法
 
-```plain
-resizeObserver.disconnect();
+```js-nolint
+disconnect()
 ```
 
 ### 参数
@@ -19,11 +19,19 @@ resizeObserver.disconnect();
 
 ### 返回值
 
-{{jsxref('undefined')}}
+无（{{jsxref("undefined")}}）。
 
 ### 异常
 
 无。
+
+## 示例
+
+```js
+btn.addEventListener('click', () => {
+  resizeObserver.disconnect();
+})
+```
 
 ## 规范
 
@@ -31,4 +39,4 @@ resizeObserver.disconnect();
 
 ## 浏览器兼容性
 
-{{Compat("api.ResizeObserver.disconnect")}}
+{{Compat}}

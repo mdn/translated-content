@@ -1,14 +1,6 @@
 ---
 title: Node.normalize()
 slug: Web/API/Node/normalize
-tags:
-  - API
-  - DOM
-  - NeedsSpecTable
-  - 노드
-  - 레퍼런스
-  - 메소드
-translation_of: Web/API/Node/normalize
 ---
 {{APIRef("DOM")}}
 
@@ -16,7 +8,9 @@ translation_of: Web/API/Node/normalize
 
 ## 문법
 
-    element.normalize();
+```js
+element.normalize();
+```
 
 ## 예제
 
@@ -46,4 +40,4 @@ wrapper.normalize();
 
 ## 함께 보기
 
-- [`Text.splitText`](/ko/docs/Web/API/Text/splitText "DOM/Text.splitText")
+- [`Text.splitText`](/ko/docs/Web/API/Text/splitText)

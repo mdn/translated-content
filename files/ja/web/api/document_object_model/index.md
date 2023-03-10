@@ -2,6 +2,7 @@
 title: ドキュメントオブジェクトモデル (DOM)
 slug: Web/API/Document_Object_Model
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 **ドキュメントオブジェクトモデル** (**Document Object Model**, **DOM**) は、— ウェブページを表す HTML のように — 文書の構造をメモリー内に表現することで、ウェブページとスクリプトやプログラミング言語を接続するものです。ふつうは JavaScript を使用しますが、 HTML、 SVG、 XML などの文書をオブジェクトとしてモデリングすることはコア JavaScript 言語の一部ではありません。

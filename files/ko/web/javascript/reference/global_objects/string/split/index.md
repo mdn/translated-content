@@ -1,14 +1,8 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
+
 {{JSRef}}
 
 **`split()`** 메서드는 {{jsxref("String")}} 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다.
@@ -173,6 +167,7 @@ console.log(splits);  //["c", "c,", "c", "c", "c"]
 
 > **경고:**
 > 이 방법은 문자열 뒤집기에 효과적인 방법이 아닙니다.
+>
 > ```js
 > var str = 'asdfghjkl';
 > var strReverse = str.split('').reverse().join('');

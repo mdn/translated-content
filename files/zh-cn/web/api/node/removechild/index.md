@@ -2,6 +2,7 @@
 title: Node.removeChild
 slug: Web/API/Node/removeChild
 ---
+
 {{APIRef("DOM")}}
 
 **Node.removeChild()** 方法从 DOM 中删除一个子节点。返回删除的节点。

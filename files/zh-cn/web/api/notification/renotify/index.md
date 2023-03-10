@@ -1,7 +1,8 @@
 ---
 title: Notification.renotify
-slug: Web/API/notification/renotify
+slug: Web/API/Notification/renotify
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `renotify` 是 {{domxref("Notification")}} 接口的只读属性，如果有新的通知替换了一个旧的通知，这个属性指明用户是否应该重新收到通知。它也可以通过{{domxref("Notification.Notification","Notification()")}} 构造函数的 `renotify` option 来指定。
@@ -50,4 +51,4 @@ Notifications which set the renotify flag must specify a non-empty tag.
 
 ## 参见
 
-- [使用通知 API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用通知 API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -1,13 +1,8 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
+
 {{JSRef}}
 
 **`handler.apply()`** メソッドは関数呼び出しに対するトラップです。
@@ -76,9 +71,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

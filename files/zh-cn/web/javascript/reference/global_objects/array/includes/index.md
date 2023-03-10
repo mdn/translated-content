@@ -2,6 +2,7 @@
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
+
 {{JSRef}}
 
 **`includes()`** 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 `true`，否则返回 `false`。
@@ -10,25 +11,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 ## 语法
 
-```plain
-arr.includes(valueToFind[, fromIndex])
+```js
+includes(searchElement)
+includes(searchElement, fromIndex)
 ```
 
 ### 参数
 
-- `valueToFind`
+- `searchElement`
 
   - : 需要查找的元素值。
 
     > **备注：** 使用 `includes()` 比较字符串和字符时是区分大小写的。
 
 - `fromIndex` {{optional_inline}}
-  - : 从`fromIndex` 索引处开始查找 `valueToFind`。如果为负值，则按升序从 `array.length + fromIndex` 的索引开始搜（即使从末尾开始往前跳 `fromIndex` 的绝对值个索引，然后往后搜寻）。默认为 0。
+  - : 从`fromIndex` 索引处开始查找 `searchElement`。如果为负值，则按升序从 `array.length + fromIndex` 的索引开始搜（即使从末尾开始往前跳 `fromIndex` 的绝对值个索引，然后往后搜寻）。默认为 0。
 
 ### 返回值
 
 返回一个布尔值 {{jsxref("Boolean")}} 。
-如果在数组中（或 `fromIndex` 指定的范围中）找到了 `valueToFind`，则返回 `true`，否则返回 `false`。
+如果在数组中（或 `fromIndex` 指定的范围中）找到了 `searchElement`，则返回 `true`，否则返回 `false`。
 
 0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），但 `false` 不被认为与 0 相等。
 
@@ -83,64 +85,6 @@ arr.includes('a', -2); // false
 })('a','b','c');
 ```
 
-## Polyfill
-
-```js
-// https://tc39.github.io/ecma262/#sec-array.prototype.includes
-if (!Array.prototype.includes) {
-  Object.defineProperty(Array.prototype, 'includes', {
-    value: function(valueToFind, fromIndex) {
-
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
-      }
-
-      // 1. Let O be ? ToObject(this value).
-      var o = Object(this);
-
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length >>> 0;
-
-      // 3. If len is 0, return false.
-      if (len === 0) {
-        return false;
-      }
-
-      // 4. Let n be ? ToInteger(fromIndex).
-      //    (If fromIndex is undefined, this step produces the value 0.)
-      var n = fromIndex | 0;
-
-      // 5. If n ≥ 0, then
-      //  a. Let k be n.
-      // 6. Else n < 0,
-      //  a. Let k be len + n.
-      //  b. If k < 0, let k be 0.
-      var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
-
-      function sameValueZero(x, y) {
-        return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
-      }
-
-      // 7. Repeat, while k < len
-      while (k < len) {
-        // a. Let elementK be the result of ? Get(O, ! ToString(k)).
-        // b. If SameValueZero(valueToFind, elementK) is true, return true.
-        if (sameValueZero(o[k], valueToFind)) {
-          return true;
-        }
-        // c. Increase k by 1.
-        k++;
-      }
-
-      // 8. Return false
-      return false;
-    }
-  });
-}
-```
-
-如果你需要支持那些不支持[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的废弃 JavaScript 引擎，你最好不要 polyfill `Array.prototype` 方法，因为你不能使它们不可枚举。
-
 ## 规范
 
 {{Specifications}}
@@ -151,6 +95,7 @@ if (!Array.prototype.includes) {
 
 ## 参见
 
+- [Polyfill of `Array.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("TypedArray.prototype.includes()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("Array.prototype.indexOf()")}}

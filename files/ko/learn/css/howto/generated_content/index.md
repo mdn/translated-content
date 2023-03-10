@@ -1,7 +1,6 @@
 ---
 title: 내용물
 slug: Learn/CSS/Howto/Generated_content
-translation_of: Learn/CSS/Howto/Generated_content
 ---
 > **경고:** **중요**: 번역은 제가 필요한 부분 및 확인 가능한 부분만 진행 하였으며 변역된 날자는(2013/03/18)이며 문서 변경이 잦아 오늘 이후는 원문과 번역이 다를 수 있습니다. 참고하세요. 미 번역/변경된 부분은 추가로 다른 분이 해 주실 것으로 믿습니다.
 
@@ -61,7 +60,7 @@ element의 배경으로 이미지를 추가 하고자 한다면, {{ cssxref("bac
 
 이 규칙은 특정 element의 배경을 이미지 URL로 지정 하는 것이다.
 
-이 설렉터느 element의 id를 나타낸다. `'no-repeat'` 값은 이미지가 한번만 나타나는 것을 말한다.
+이 설렉터는 element의 id를 나타낸다. `'no-repeat'` 값은 이미지가 한번만 나타나는 것을 말한다.
 
 ```css
 #sidebar-box {background: url("../images/sidebar-ground.png") no-repeat;}
@@ -75,7 +74,7 @@ element의 배경으로 이미지를 추가 하고자 한다면, {{ cssxref("bac
 
 이 이미지는 아래쪽에 파란색 줄이 있는 흰사각형이다.:
 
-| ![Image:Blue-rule.png](/@api/deki/files/47/=Blue-rule.png) |
+| ![Image:Blue-rule.png](blue-rule.png) |
 | ---------------------------------------------------------- |
 
 1. 이 이미지를 다운 받아 예제파일들이 있는 폴더에 저장하라. (이미지에서 왼쪽 클릭을 하여 나타나는 메뉴에서 "다른 이름으로 사진저장"을 선택하여 예제가 있는 폴더를 선택하여 저장)
@@ -87,7 +86,7 @@ element의 배경으로 이미지를 추가 하고자 한다면, {{ cssxref("bac
 
     일단 위의 값은 이미지를 반복적으로 보여주는데, 기본 설정이므로 따로 표시 해 줄 필요는 없다. 이미지는 수직/수평적으로 반복되어 아래와 같이 편지지 같은 화면을 제공한다.
 
-    ![Image:Blue-rule-ground.png](/@api/deki/files/46/=Blue-rule-ground.png)
+    ![Image:Blue-rule-ground.png](blue-rule-ground.png)
 
     **C**ascading **S**tyle **S**heets
 
@@ -97,14 +96,14 @@ element의 배경으로 이미지를 추가 하고자 한다면, {{ cssxref("bac
 
 아래 아미지를 다운 받아보라.
 
-| ![Image:Yellow-pin.png](/@api/deki/files/490/=Yellow-pin.png) |
+| ![Image:Yellow-pin.png](yellow-pin.png) |
 | ------------------------------------------------------------- |
 
 Stylesheet에 하나의 규칙을 추가 하여 아래와 같이 각라인 맨 앞에 나타나도록 하라.
 
-![Image:Blue-rule-ground.png](/@api/deki/files/46/=Blue-rule-ground.png)
+![Image:Blue-rule-ground.png](blue-rule-ground.png)
 
-![image:Yellow-pin.png](/@api/deki/files/490/=Yellow-pin.png) **C**ascading **S**tyle **S**heets![image:Yellow-pin.png](/@api/deki/files/490/=Yellow-pin.png) **C**ascading **S**tyle **S**heetsPossible solution
+![image:Yellow-pin.png](yellow-pin.png) **C**ascading **S**tyle **S**heets![image:Yellow-pin.png](yellow-pin.png) **C**ascading **S**tyle **S**heetsPossible solution
 
 Add this rule to your stylesheet:
 
@@ -114,7 +113,7 @@ p:before{
 }
 ```
 
-[Hide solution](#challenge)[정답 확인.](#tutochallenge "Display a possible solution for the challenge")
+[Hide solution](#challenge)[정답 확인.](#tutochallenge)
 
 ## 다음에는?
 

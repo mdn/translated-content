@@ -1,16 +1,8 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 非推奨の **`compile()`** メソッドは、スクリプトの実行中に正規表現を(再)コンパイルするために使われます。基本的に `RegExp` コンストラクターと同じです。
@@ -55,9 +47,7 @@ regexObj.compile('new foo', 'g');
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

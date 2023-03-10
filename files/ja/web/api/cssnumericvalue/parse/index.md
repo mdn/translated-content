@@ -2,6 +2,7 @@
 title: CSSNumericValue.parse()
 slug: Web/API/CSSNumericValue/parse
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`parse()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、値の文字列をメンバーが値と単位となっているオブジェクトに変換します。

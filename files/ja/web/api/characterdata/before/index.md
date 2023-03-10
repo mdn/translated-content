@@ -2,6 +2,7 @@
 title: CharacterData.before()
 slug: Web/API/CharacterData/before
 ---
+
 {{APIRef("DOM")}}
 
 **`before()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `CharacterData` の親ノードの子リストの中、この `CharacterData` ノードの直前に挿入します。

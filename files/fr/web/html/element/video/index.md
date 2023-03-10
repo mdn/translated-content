@@ -11,7 +11,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/video
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<video>`** intègre un contenu vidéo dans un document.
 
@@ -53,7 +54,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
     > **Note :** Cet attribut est un attribut booléen et indiquer `autoplay="false"` ne suffira pas à retirer la lecture automatique. Pour ce faire, il faut complètement retirer l'attribut.
 
-    > **Note :** Pour certains navigateurs (ex. Chrome 70), l'attribut `autoplay` ne fonctionne pas si aucun attribut `mute`n'est présent.
+    > **Note :** Pour certains navigateurs (ex. Chrome 70), l'attribut `autoplay` ne fonctionne pas si aucun attribut `mute` n'est présent.
 
 - {{htmlattrdef("buffered")}}
   - : Un attribut qui peut être lu afin de déterminer l'intervalle temporel mis en mémoire tampon. Cet attribut contient un objet {{domxref("TimeRanges")}}.
@@ -147,7 +148,7 @@ On peut changer la valeur de `display` en `block` afin de simplifier le position
 
 ### Détecter l'ajout et la suppression de pistes
 
-Il est possible de détecter l'ajout et la suppression de pistes d'un élément `<video>` grâce aux évènements {{event("addtrack")}} et {{event("removetrack")}}. Toutefois, ces évènements ne sont pas déclenchés à même l'élément `<video>` mais sur l'objet représentant la liste des pistes associées à l'élément `<video>` grâce à l'objet {{domxref("HTMLMediaElement")}} qui possède un type différent selon le type de piste manipulé :
+Il est possible de détecter l'ajout et la suppression de pistes d'un élément `<video>` grâce aux évènements [`addtrack`](/fr/docs/Web/API/VideoTrackList/addtrack_event) et [`removetrack`](/fr/docs/Web/API/VideoTrackList/removetrack_event). Toutefois, ces évènements ne sont pas déclenchés à même l'élément `<video>` mais sur l'objet représentant la liste des pistes associées à l'élément `<video>` grâce à l'objet {{domxref("HTMLMediaElement")}} qui possède un type différent selon le type de piste manipulé :
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : Un objet {{domxref("AudioTrackList")}} qui contient l'ensemble des pistes audio associées au média. Il est possible d'ajouter un écouteur sur l'évènement `addtrack` sur cet objet afin d'être alerté lorsque de nouvelles pistes audio sont ajoutées à l'élément.
@@ -170,7 +171,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 };
 ```
 
-On peut aussi utiliser la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour gérer les évènements {{event("addtrack")}} et {{event("removetrack")}}.
+On peut aussi utiliser la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour gérer les évènements [`addtrack`](/fr/docs/Web/API/VideoTrackList/addtrack_event) et [`removetrack`](/fr/docs/Web/API/VideoTrackList/removetrack_event).
 
 ## Exemples
 
@@ -332,7 +333,7 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -343,13 +344,11 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
 
 ## Spécifications
 
-| Spécification                                                                                                        | Retours                                                                              |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-video-element', '&lt;video&gt;')}} | [Issues GitHub pour WHATWG HTML (en anglais)](https://github.com/whatwg/html/issues) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.video")}}
+{{Compat}}
 
 ## Voir aussi
 

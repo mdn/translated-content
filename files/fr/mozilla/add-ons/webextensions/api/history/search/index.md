@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/search
 ---
+
 {{AddonSidebar()}}
 
 Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.
@@ -54,7 +55,7 @@ var searching = browser.history.search(
         Spécifiez une chaîne vide (`""`) pour récupérer tous les objets {{WebExtAPIRef("history.HistoryItem")}} qui répondent à tous les autres critères.
 
     - `startTime` {{optional_inline}}
-      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par :  un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est antérieure à cette heure. Si elle est omise, la recherche est limitée aux dernières 24 heures.
+      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par : un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est antérieure à cette heure. Si elle est omise, la recherche est limitée aux dernières 24 heures.
     - `endTime` {{optional_inline}}
       - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par : un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est postérieur à cette fois. Si elle est omise, toutes les entrées sont prises en compte à partir de l'heure de début.
     - `maxResults` {{optional_inline}}
@@ -120,9 +121,9 @@ searching.then(onGot);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.search")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -130,7 +131,8 @@ searching.then(onGot);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -157,4 +159,4 @@ searching.then(onGot);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

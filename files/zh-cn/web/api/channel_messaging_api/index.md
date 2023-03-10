@@ -2,6 +2,7 @@
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 **Channel Messaging API** 允许两个不同的脚本运行在同一个文档的不同浏览器上下文（比如两个 iframe，或者文档主体和一个 iframe，使用 {{domxref("SharedWorker")}} 的两个文档，或者两个 worker）来直接通讯，在每端使用一个端口（port）通过双向频道（channel）向彼此传递消息。
@@ -18,7 +19,7 @@ slug: Web/API/Channel_Messaging_API
 
 当你想要停止通过信道发送消息时，你可以调用来关闭 {{domxref("MessagePort.close")}} 端口。
 
-更多使用这个 API 的资料参见：[Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging) 。
+更多使用这个 API 的资料参见：[Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging) 。
 
 ## Channel 通信接口
 
@@ -44,6 +45,6 @@ slug: Web/API/Channel_Messaging_API
 
 ## 参见
 
-- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
-- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
-- [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API)
+- [Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API)
+- [Broadcast Channel API](/zh-CN/docs/Web/API/Broadcast_Channel_API)

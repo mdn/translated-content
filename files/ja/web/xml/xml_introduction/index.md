@@ -1,19 +1,15 @@
 ---
 title: XML のイントロダクション
-slug: Web/XML/XML_Introduction
-tags:
-  - XML
-  - イントロダクション
-  - 初心者
-translation_of: Web/XML/XML_introduction
+slug: Web/XML/XML_introduction
 ---
+
 概要: この記事は、'eXtensible Markup Language' (XML、拡張可能マークアップ言語) を紹介し、その使い道について XML は HTML に似たマークアップ言語です。 これは Extensible Markup Language の略で、汎用マークアップ言語として [W3C が推奨する](https://www.w3.org/TR/xml/)仕様です。つまり、他のマークアップ言語とは異なり、XML は事前定義されていないため、独自のタグを定義する必要があります。この言語の主な目的は、インターネットなどのさまざまなシステム間でデータを共有することです。
 
 XML に基づいた言語はたくさんあります。[XHTML](/ja/docs/XHTML)、[MathML](/ja/docs/Web/MathML)、[SVG](/ja/docs/Web/SVG)、[XUL](/ja/docs/Mozilla/Tech/XUL)、[XBL](/ja/docs/XBL)、[RSS](/ja/docs/Archive/RSS)、[RDF](/ja/docs/RDF) などがあります。 あなた自身のものを作ることもできます。
 
 ## XML 文書構造
 
-> **Warning:** このサブ記事は執筆中です...
+> **警告:** このサブ記事は執筆中です...
 
 XML および XML ベースの言語の全体の構造は {{Glossary("tag")}} に基づいています。
 
@@ -72,7 +68,7 @@ XML 文書を正しくするには、次の条件を満たす必要がありま�
 
 未定義のタグを含む文書は無効です。たとえば、`<warning>` タグを定義しなかった場合、上記の文書は無効になります。
 
-> **Note:** ほとんどのブラウザは、形式が不適切な XML 文書を識別できるデバッガを提供しています。
+> **メモ:** ほとんどのブラウザは、形式が不適切な XML 文書を識別できるデバッガを提供しています。
 
 ## エンティティ
 

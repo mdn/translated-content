@@ -2,6 +2,7 @@
 title: 原生应用清单
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
+
 {{AddonSidebar}}
 
 原生应用清单是一个符合特定规则的 JSON 文件，它应该使用与 extension 不同的安装方式存放在用户的计算机上。举个例子，原生应用清单是由设备管理员或者通过原生应用安装器提供的。
@@ -283,7 +284,7 @@ PKCS #11 清单中包含单个 JSON 对象，对象具有如下属性：
     <tr>
       <td><code>type</code></td>
       <td>String</td>
-      <td>该值只能是<code>pkcs11</code>。 This must be "pkcs11".</td>
+      <td>该值只能是<code>pkcs11</code>。This must be "pkcs11".</td>
     </tr>
     <tr>
       <td><code>allowed_extensions</code></td>
@@ -350,7 +351,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 注册表应该有单个默认值，值里存放“到清单文件的路径”。比如为原生应用通信清单建立的注册表差不多是这样：
 
-![为原生应用通信清单建立的注册表](https://mdn.mozillademos.org/files/15643/native-message-regkey-exaple.png)
+![为原生应用通信清单建立的注册表](native-message-regkey-exaple.png)
 
 > **备注：** 对于原生应用清单，即使原生应用是 32 位的，也不能在 [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) 下创建注册表。浏览器将总会在 native 视图下寻找注册表的，而不是 32 位放在环境。确保注册表的创建在原生视图中，你可以键入 KEY_WOW64_64KEY 或 KEY_WOW64_32KEY 到 RegCreateKeyEx。请参考：[Accessing an Alternate Registry View](<https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx>)
 

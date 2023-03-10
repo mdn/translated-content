@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
-translation_of: Web/API/HTMLMediaElement/autoplay
 ---
 {{APIRef("HTML DOM")}}
 
@@ -15,9 +14,11 @@ translation_of: Web/API/HTMLMediaElement/autoplay
 
 ## 문법
 
-    HTMLMediaElement.autoplay = true | false;
+```js
+HTMLMediaElement.autoplay = true | false;
 
-    var autoplay = HTMLMediaElement.autoplay;
+var autoplay = HTMLMediaElement.autoplay;
+```
 
 ### 값
 
@@ -35,11 +36,13 @@ translation_of: Web/API/HTMLMediaElement/autoplay
 </video>
 ```
 
-    *** Disable autoplay (recommended) ***
-          false is the default value
-            document.querySelector('#video').autoplay = false;
+```js
+// Disable autoplay (recommended)
+// false is the default value
+document.querySelector('#video').autoplay = false;
+```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

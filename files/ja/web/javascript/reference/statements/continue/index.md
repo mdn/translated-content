@@ -1,12 +1,8 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/continue
 ---
+
 {{jsSidebar("Statements")}}
 
 **`continue` 文**は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了して、次の反復処理でループの実行を続けます。
@@ -116,9 +112,7 @@ j = 4
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,9 +2,10 @@
 title: Touch
 slug: Web/API/Touch
 ---
+
 {{ ApiRef("Touch Events") }}
 
-**`Touch` **对象表示在触控设备上的触摸点。通常是指手指或者触控笔在触屏设备或者触摸板上的操作。
+**`Touch`** 对象表示在触控设备上的触摸点。通常是指手指或者触控笔在触屏设备或者触摸板上的操作。
 
 对象属性 {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, 和 {{ domxref("Touch.rotationAngle") }} 表示用户触摸操作所作用的区域，即*触摸区域*。这些属性对于处理类似于手指触摸之类的不精确操作很有帮助。这些属性可以表示出一个尽可能匹配触控区域的椭圆形（例如用户的指尖触控）。 {{experimental_inline}}
 
@@ -22,7 +23,7 @@ _这个接口没有父类，不继承任何属性。_
 ### 基本属性
 
 - {{ domxref("Touch.identifier") }}{{readonlyInline}}
-  - : 此 `Touch` 对象的唯一标识符。 一次触摸动作 (例如手指触摸) 在平面上移动的整个过程中，该标识符不变。可以根据它来判断跟踪的是否是同一次触摸过程。
+  - : 此 `Touch` 对象的唯一标识符。一次触摸动作 (例如手指触摸) 在平面上移动的整个过程中，该标识符不变。可以根据它来判断跟踪的是否是同一次触摸过程。
 - **{{ domxref("Touch.screenX") }}**{{readonlyInline}}
   - : 触点相对于屏幕左边缘的 X 坐标。
 - **{{ domxref("Touch.screenY") }}**{{readonlyInline}}
@@ -57,7 +58,7 @@ _这个接口没有方法，也没有父类，不继承任何方法。_
 
 ## 示例
 
-请看 [example on the main Touch events article](/en/DOM/Touch_events#Example)。
+请看 [example on the main Touch events article](/zh-CN/DOM/Touch_events#Example)。
 
 ## 规范
 
@@ -65,11 +66,11 @@ _这个接口没有方法，也没有父类，不继承任何方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.Touch")}}
+{{Compat}}
 
 ## 相关链接
 
-- [Touch events](/en/DOM/Touch_events)
+- [Touch events](/zh-CN/DOM/Touch_events)
 - {{domxref("Touch_events","Touch Events Overview")}}
 - {{ domxref("Document.createTouch()") }}
 - {{ domxref("Touch") }}

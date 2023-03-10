@@ -1,20 +1,8 @@
 ---
 title: border-block-end-color
 slug: Web/CSS/border-block-end-color
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-block
-  - border-block-color
-  - border-block-end
-  - border-block-end-color
-  - recipe:css-property
-browser-compat: css.properties.border-block-end-color
-translation_of: Web/CSS/border-block-end-color
 ---
+
 {{CSSRef}}
 
 **`border-block-end-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの終端側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。

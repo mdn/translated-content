@@ -1,12 +1,9 @@
 ---
 title: Formularios en HTML5
 slug: Learn/Forms
-tags:
-  - Forms
-  - HTML
-  - HTML5
 original_slug: HTML/HTML5/Forms_in_HTML5
 ---
+
 Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.
 
 Este documento describe los elementos nuevos o que han cambiado que están disponibles en Gecko/Firefox.
@@ -73,7 +70,7 @@ El atributo **autofocus** te permite especificar que una parte del formulario de
 
 ### La propiedad label.control del DOM
 
-La interface [HTMLLabelElement](/en/DOM/HTMLLabelElement "en/DOM/HTMLLabelElement") DOM brinda una propiedad extra, sumadas a las propiedades que corresponden a los atributos del elemento `{{ HTMLElement("label") }}` de HTML. La propiedad **control** devuelve el controlador etiquetado, es decir el controlador para quien está hecha la etiqueta, que está determinado por el atributo {{ htmlattrxref("for", "label") }} (si está definido) o por el primer elemento controlador descendiente.
+La interface [HTMLLabelElement](/en/DOM/HTMLLabelElement) DOM brinda una propiedad extra, sumadas a las propiedades que corresponden a los atributos del elemento `{{ HTMLElement("label") }}` de HTML. La propiedad **control** devuelve el controlador etiquetado, es decir el controlador para quien está hecha la etiqueta, que está determinado por el atributo {{ htmlattrxref("for", "label") }} (si está definido) o por el primer elemento controlador descendiente.
 
 ### Validación restringida
 
@@ -96,11 +93,11 @@ Además, puedes prevenir la validación restringida especificando el atributo {{
 
 Las siguientes propiedades y métodos del DOM relacionadas con la validación restringida están disponibles para scripts del lado del cliente:
 
-- En objetos [HTMLFormElement](/en/DOM/HTMLFormElement "en/DOM/HTMLFormElement"), el método `checkValidity()`, que devuelve verdadero si todos los elementos asociados del formulario que necesitan validación satisfacen las restricciones y falso si no lo hacen.
-- En [elementos asociados al formulario](/en/HTML/Content_categories#form-associated "en/HTML/Content Categories#form-associated"):
+- En objetos [HTMLFormElement](/en/DOM/HTMLFormElement), el método `checkValidity()`, que devuelve verdadero si todos los elementos asociados del formulario que necesitan validación satisfacen las restricciones y falso si no lo hacen.
+- En [elementos asociados al formulario](/en/HTML/Content_categories#form-associated):
 
   - la propiedad `willValidate`, que es falso si el elemento no satisface las restricciones.
-  - la propiedad `validity`, que es un objeto [ValidityState](/en/DOM/ValidityState_Interface "en/DOM/ValidityState Interface") que representa los estados de validación en que está el elemento (p.e., condiciones de restricción que han fallado o exitosas).
+  - la propiedad `validity`, que es un objeto [ValidityState](/en/DOM/ValidityState_Interface) que representa los estados de validación en que está el elemento (p.e., condiciones de restricción que han fallado o exitosas).
   - la propiedad `validationMessage`, que es un mensaje que contiene todas las fallas en las restricciones que pertenecen a ese elemento.
   - el método `checkValidity()`, que devuelve falso si el elemento falla en satisfacer alguna de las restricciones o verdadero si pasa lo contrario.
   - el método `setCustomValidity()`, que establece un mensaje de validación personalizado, permitiendo imponer y validad restricciones más allá de las que están predefinidas.

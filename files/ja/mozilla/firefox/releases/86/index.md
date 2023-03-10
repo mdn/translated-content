@@ -2,11 +2,12 @@
 title: Firefox 86 for developers
 slug: Mozilla/Firefox/Releases/86
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 86 の変更点をまとめています。Firefox 86 は、米国時間 2021 年 2 月 23 日にリリースされました。
 
-> **Note:** Mozilla Hacks の [A Fabulous February Firefox — 86!](https://hacks.mozilla.org/2021/02/a-fabulous-february-firefox-86/) もご覧ください。
+> **メモ:** Mozilla Hacks の [A Fabulous February Firefox — 86!](https://hacks.mozilla.org/2021/02/a-fabulous-february-firefox-86/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 

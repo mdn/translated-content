@@ -6,6 +6,7 @@ tags:
 translation_of: Web/Guide/AJAX/Getting_Started
 original_slug: Web/Guide/AJAX/Premiers_pas
 ---
+
 Cet article vous guide à travers les bases d’AJAX et vous donne deux exemples clefs-en-main pour débuter.
 
 ### Présentation d’AJAX
@@ -19,7 +20,7 @@ Les deux principales fonctionnalités d’AJAX permettent de&nbsp;:
 
 ### Étape 1 — Lancement d’une requête HTTP
 
-Pour faire une requête [HTTP](/HTTP) vers le serveur à l’aide de JavaScript, il faut disposer d’une instance d’objet fournissant cette fonctionnalité. C’est ici que `XMLHttpRequest` intervient. Son prédécesseur est originaire de Internet Explorer sous la forme d’un objet ActiveX appelé `XMLHTTP`. Par la suite, Mozilla, Safari et d’autres navigateurs ont suivi en implémentant un objet `XMLHttpRequest` qui fournit les mêmes méthodes et propriétés que l’objet ActiveX original de Microsoft. Entre temps, Microsoft a également implémenté XMLHttpRequest.
+Pour faire une requête [HTTP](/fr/docs/Web/HTTP) vers le serveur à l’aide de JavaScript, il faut disposer d’une instance d’objet fournissant cette fonctionnalité. C’est ici que `XMLHttpRequest` intervient. Son prédécesseur est originaire de Internet Explorer sous la forme d’un objet ActiveX appelé `XMLHTTP`. Par la suite, Mozilla, Safari et d’autres navigateurs ont suivi en implémentant un objet `XMLHttpRequest` qui fournit les mêmes méthodes et propriétés que l’objet ActiveX original de Microsoft. Entre temps, Microsoft a également implémenté XMLHttpRequest.
 
 ```js
 // ancien code de compatibilité, aujourd’hui inutile
@@ -226,7 +227,7 @@ Pour finir, envoyons quelques données au serveur et réceptionnons la réponse.
 D’abord, nous allons ajouter un boîte de texte dans notre HTML afin que l’utilisateur ou l’utilisatrice puisse saisir son nom&nbsp;:
 
 ```html
-<label>Vore nom :
+<label>Votre nom :
   <input type="text" id="ajaxTextbox" />
 </label>
 <span id="ajaxButton">

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/values
 ---
+
 {{JSRef}}
 
 La méthode **`Object.values()`** renvoie un tableau contenant les valeurs des propriétés propres énumérables d'un objet dont l'ordre est le même que celui obtenu avec une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt également les propriétés héritées).
@@ -69,14 +70,11 @@ Afin d'ajouter le support pour `Object.values` dans des environnements plus anci
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-object.values', 'Object.values')}}         | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.values")}}
+{{Compat}}
 
 ## Voir aussi
 

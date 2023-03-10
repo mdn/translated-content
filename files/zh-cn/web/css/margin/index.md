@@ -2,6 +2,7 @@
 title: margin
 slug: Web/CSS/margin
 ---
+
 {{CSSRef}}
 
 **`margin`** 属性为给定元素设置所有四个（上下左右）方向的外边距属性。也就是 {{cssxref("margin-top")}}，{{cssxref("margin-right")}}，{{cssxref("margin-bottom")}}，和 {{cssxref("margin-left")}} 四个外边距属性设置的[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。
@@ -130,7 +131,7 @@ margin: auto;               /* 上边和下边：无外边距 */
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## 参阅
 

@@ -3,6 +3,7 @@ title: オブジェクトとプロパティ
 slug: orphaned/Web/JavaScript/Guide/Objects_and_Properties
 original_slug: Web/JavaScript/Guide/Objects_and_Properties
 ---
+
 ### オブジェクトとプロパティ
 
 JavaScript のオブジェクトには、それに結びつけられたプロパティがあります。簡単な記法でオブジェクトのプロパティにアクセスできます。

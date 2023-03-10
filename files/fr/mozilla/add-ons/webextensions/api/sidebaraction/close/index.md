@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
 ---
+
 {{AddonSidebar()}}
 
 Ferme la barre latérale dans la fenêtre active, s'il s'agit de la barre latérale de l'extension.
@@ -34,9 +35,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sidebarAction.close", 10)}}
+{{Compat}}
 
 ## Exemples
 

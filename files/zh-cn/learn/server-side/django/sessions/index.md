@@ -2,9 +2,10 @@
 title: 'Django 教程 7: 会话框架'
 slug: Learn/Server-side/Django/Sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
-本教程扩展了我们的[LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，为主页添加了一个基于会话的访问计数器。这是一个相对简单的例子，但它确实显示了，如何使用会话框架为匿名用户提供持久的行为。
+本教程扩展了我们的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，为主页添加了一个基于会话的访问计数器。这是一个相对简单的例子，但它确实显示了，如何使用会话框架为匿名用户提供持久的行为。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -26,7 +27,7 @@ slug: Learn/Server-side/Django/Sessions
 
 ## 概览
 
-我们在之前的教程中创建的[LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，允许用户浏览目录中的书本和作者。虽然内容是从数据库动态生成的，但每个用户在使用站点时，基本上都可以访问相同的页面，和相同类型的信息。
+我们在之前的教程中创建的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，允许用户浏览目录中的书本和作者。虽然内容是从数据库动态生成的，但每个用户在使用站点时，基本上都可以访问相同的页面，和相同类型的信息。
 
 在一个“真实”的图书馆中，您可能希望根据用户之前对站点的使用，首选项等，为个人用户提供自定义体验。例如，您可以在用户下次访问时，隐藏上次已经确认的警告消息。网站，或存储和尊重他们的偏好（例如，他们希望在每个页面上显示的搜索结果的数量）。
 
@@ -163,21 +164,3 @@ def index(request):
 - [如何使用会话](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django 文档)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
-
-## 本教程
-
-- [Django 介绍](/zh-CN/docs/Learn/Server-side/Django/Introduction)
-- [架设 Django 开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)
-- [Django 教程：The Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教程 2: Creating a skeleton website](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教程 3: Using models](/zh-CN/docs/Learn/Server-side/Django/Models)
-- [Django 教程 4: Django admin site](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教程 5: Creating our home page](/zh-CN/docs/Learn/Server-side/Django/Home_page)
-- [Django 教程 6: Generic list and detail views](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教程 7: Sessions framework](/zh-CN/docs/Learn/Server-side/Django/Sessions)
-- [Django 教程 8: User authentication and permissions](/zh-CN/docs/Learn/Server-side/Django/Authentication)
-- [Django 教程 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms)
-- [Django 教程 10: Testing a Django web application](/zh-CN/docs/Learn/Server-side/Django/Testing)
-- [Django 教程 11: Deploying Django to production](/zh-CN/docs/Learn/Server-side/Django/Deployment)
-- [Django 网络应用安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 微博](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

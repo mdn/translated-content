@@ -2,9 +2,12 @@
 title: '@page'
 slug: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
-@page 规则用于在打印文档时修改某些 CSS 属性。你不能用 @page 规则来修改所有的 CSS 属性，而是只能修改 margin,orphans,widow 和 page breaks of the document。对其他属性的修改是无效的。
+@page 规则用于在打印文档时修改某些 CSS 属性。
+
+## 语法
 
 ```css
 @page {
@@ -16,28 +19,34 @@ slug: Web/CSS/@page
 }
 ```
 
+### 描述符
+
+- [`page-orientation`](/zh-CN/docs/Web/CSS/@page/page-orientation)
+  - : 指定文档在页面上的方向，允许它进行正常的布局和格式化或者也可以将其向左或向右旋转。
+- [`size`](/zh-CN/docs/Web/CSS/@page/size)
+  - : 指定页面框包含块的目标大小和方向。通常情况下，一个页面框渲染到一页纸上时，它也会指定目标页的大小。
+
+## 描述
+
+你不能用 @page 规则来修改所有的 CSS 属性。你只能修改文档的 margin、orphans、widows 和分页符。试图对其他属性的修改都是无效的。
+
 `@page` 规则可以通过 CSS 对象模型接口的 {{domxref("CSSPageRule")}} 访问。
 
 > **备注：** W3C 正在讨论如何处理和视图窗口有关的 {{cssxref("&lt;length&gt;")}} 的单位：`vh`、`vm`、`vmin` 和 `vmax`。目前，请不要在 `@page` 规则中使用他们。
 
-## 语法
+### 形式语法
 
-### 描述符
-
-- [`size`](/zh-CN/docs/Web/CSS/@page/size)
-  - : 指定页面盒模型所在的容器的大小和方向。一般情况下，因为一个页面盒模型被渲染到一面纸张上，所以这个属性也指示了目标纸张的大小。
-- [`marks`](/zh-CN/docs/Web/CSS/@page/marks)
-  - : 向文档添加剪切标记和/或注册标记。
-- [`bleed`](/zh-CN/docs/Web/CSS/@page/bleed)
-  - : 为页面框盒指定一个限制区域，超过这个区域的页面内容将被裁剪。
-
-### 形式化语法
-
-{{csssyntax}}
+```
+@page <page-selector-list> {
+  <page-body>
+}
+```
 
 ## 示例
 
-请参考 `@page` 的各种[伪类](/zh-CN/docs/CSS/Pseudo-classes)的例子。
+### @page 伪类示例
+
+请参考 `@page` 的各种[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)的例子。
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}
@@ -52,8 +61,8 @@ slug: Web/CSS/@page
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.page")}}
+{{Compat}}
 
 ## 参见
 
-- See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
+- 参阅 Bugzilla 中的 [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) 工单，以追踪该主题（例如：基于页面的计数器，等等）的进展

@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 6: フォームの操作'
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、Pug を使用して Express で HTML フォームを操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。
@@ -18,7 +19,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 このチュートリアルでは、上記の操作を Express で実行する方法を紹介します。途中で、サンプルとして地域図書館のウェブサイトを拡張して、ユーザーがライブラリからアイテムを作成、編集、削除できるようにします。
 
-> **Note:**サンプルとして準備されている地域図書館のウェブサイトは認証済みユーザのみに閲覧を制限する方法については書いてないので、現時点ではどのユーザでもデータベースに変更を加えることができます。
+> **メモ:**サンプルとして準備されている地域図書館のウェブサイトは認証済みユーザのみに閲覧を制限する方法については書いてないので、現時点ではどのユーザでもデータベースに変更を加えることができます。
 
 ### HTML フォーム
 
@@ -87,7 +88,7 @@ npm install express-validator
 
 #### express-validator の使用
 
-> **Note:** Github の[express-validator](https://github.com/ctavan/express-validator#express-validator)ガイドに API の概要が書かれています。(カスタムバリデータの作成を含む) すべての機能を知るには、これを読むことをお勧めします。以下では、サンプルの「地域図書館」にとって有用なサブセットだけを取り上げます。
+> **メモ:** Github の[express-validator](https://github.com/ctavan/express-validator#express-validator)ガイドに API の概要が書かれています。(カスタムバリデータの作成を含む) すべての機能を知るには、これを読むことをお勧めします。以下では、サンプルの「地域図書館」にとって有用なサブセットだけを取り上げます。
 
 コントローラでバリデータを使うには、以下のように **'express-validator/check'** と **'express-validator/filter'**モジュールから使いたい関数を要求(require)しなければなりません。
 
@@ -114,7 +115,7 @@ const { sanitizeBody } = require('express-validator/filter');
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```
 
-  > **Note:** また、上記のように `trim()` のようなインラインサニタイザーを追加することもできます。しかし、ここで適用されるサニタイザは検証ステップにのみ適用されます。最終的な出力をサニタイザ処理したい場合は、以下のように別のサニタイザメソッドを使用する必要があります。
+  > **メモ:** また、上記のように `trim()` のようなインラインサニタイザーを追加することもできます。しかし、ここで適用されるサニタイザは検証ステップにのみ適用されます。最終的な出力をサニタイザ処理したい場合は、以下のように別のサニタイザメソッドを使用する必要があります。
 
 - [`sanitizeBody(fields)`](https://github.com/ctavan/express-validator#sanitizebodyfields): サニタイズするフィールドを指定します。サニタイズ操作は、このメソッドにデイジーチェーン接続されます。例えば、以下の `escape()` サニタイズ操作は、JavaScript のクロスサイトスクリプティング攻撃で使用される可能性のある HTML 文字（例えば「'」、「"」、「&」など）を name 変数から削除します。
 
@@ -158,7 +159,7 @@ For this project we will simplify the implementation by stating that a form can 
 - Create an object using objects that already exist (so users will have to create any required `Author` and `Genre` instances before attempting to create any `Book` objects).
 - Delete an object if it is not referenced by other objects (so for example, you won't be able to delete a `Book` until all associated `BookInstance` objects have been deleted).
 
-> **Note:** A more "robust" implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
+> **メモ:** A more "robust" implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
 
 ### Routes
 

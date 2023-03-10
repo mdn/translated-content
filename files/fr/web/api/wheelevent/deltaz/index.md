@@ -12,6 +12,7 @@ tags:
   - WheelEvent
 translation_of: Web/API/WheelEvent/deltaZ
 ---
+
 {{APIRef("DOM Events")}}
 
 La propriété en lecture seule **`WheelEvent.deltaZ`** est un `double` représentant la quantité de défilement le long de l'axe z, dans l'unité {{domxref("WheelEvent.deltaMode")}}.
@@ -40,5 +41,5 @@ console.log(syntheticEvent.deltaZ);
 
 ## Voir aussi
 
-- {{ event("wheel") }}
-- {{domxref("WheelEvent")}}
+- L'évènement [`wheel`](/fr/docs/Web/API/Element/wheel_event)
+- [`WheelEvent`](/fr/docs/Web/API/WheelEvent)

@@ -2,9 +2,10 @@
 title: <ins>
 slug: Web/HTML/Element/ins
 ---
+
 ## 简介
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 **HTML `<ins>` 元素**定义已经被插入文档中的文本。
 
 {{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}

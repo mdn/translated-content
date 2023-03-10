@@ -12,15 +12,16 @@ tags:
   - newTabPageOverride
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour obtenir une chaîne représentant l'URL de la page "nouvel onglet": c'est-à-dire, la page chargée lorsque l'utilisateur ouvre une nouvelle onglet vide.
 
 Notez qu'il s'agit d'un paramètre en lecture seule.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.newTabPageOverride", 10)}}
+{{Compat}}
 
 ## Exemples
 

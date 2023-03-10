@@ -2,6 +2,7 @@
 title: 関数の戻り値
 slug: Learn/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 このコースでの関数の学習を終えるために、最後に議論しておくべき関数についての大事なコンセプトがあります。それは戻り値です。関数によっては意味のある値を返さないものもありますが、値を返すものも当然あります。それらの値が何であるか、あなたのコードの中でどのように利用するのか、またどのように関数に意味のある値を返させるのかについて理解することは重要です。これらについてすべてを以下で紹介します。
@@ -143,7 +144,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 4. コードを保存して、それをブラウザーで表示してみましょう。
 
-> **Note:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[実際に動かして確認もできます](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)）。またはお問い合わせください。
+> **メモ:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[実際に動かして確認もできます](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)）。またはお問い合わせください。
 
 ## あなたの番です!
 

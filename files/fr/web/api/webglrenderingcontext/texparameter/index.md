@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/texParameter
 ---
+
 {{APIRef("WebGL")}}
 
 Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent les paramètres de texture.
@@ -139,7 +140,7 @@ Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de tex
     <tr>
       <td><code>gl.TEXTURE_WRAP_R</code></td>
       <td>
-        Fonction d'emballage pour la coordonnée de texture  <code>r</code>
+        Fonction d'emballage pour la coordonnée de texture <code>r</code>
       </td>
       <td>
         <code>gl.REPEAT</code> (valeur par défaut),

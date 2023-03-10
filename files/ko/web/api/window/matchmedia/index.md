@@ -1,14 +1,6 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
-tags:
-  - API
-  - CSSOM View
-  - JavaScript
-  - Media Queries
-  - Method
-  - Reference
-translation_of: Web/API/Window/matchMedia
 ---
 {{APIRef}}
 
@@ -16,7 +8,9 @@ translation_of: Web/API/Window/matchMedia
 
 ## 구문
 
-    window.matchMedia(mediaQueryString)
+```js
+window.matchMedia(mediaQueryString)
+```
 
 ### 매개변수
 
@@ -52,6 +46,6 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 ## 같이 보기
 
 - [미디어 쿼리 사용하기](/ko/docs/Web/Guide/CSS/Media_queries)
-- [Using media queries from code](/ko/docs/DOM/Using_media_queries_from_code "CSS/Using media queries from code")
+- [Using media queries from code](/ko/docs/DOM/Using_media_queries_from_code)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

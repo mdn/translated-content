@@ -2,6 +2,7 @@
 title: 指數運算子 (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 指數運算子 (`**`) 會回傳以第一個數字作為底數；第二個數字做為指數的運算結果。

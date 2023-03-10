@@ -3,7 +3,9 @@ title: CSS 轉場
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 
-原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/en/CSS/CSS_transitions)
+{{CSSRef}}
+
+原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/zh-TW/CSS/CSS_transitions)
 
 {{ SeeCompatTable() }}
 
@@ -34,9 +36,7 @@ CSS transitions 和 CSS animations 中可以用來修改的屬性在 [CSS animat
 
 ## 使用漸變函式 (transition timing function)
 
-漸變函式可用來定義轉場發生的時間曲線。其規範方式是以四個參數的貝茲曲線代表：
-
-![](/@api/deki/files/5226/=transition-timing-function.png)
+漸變函式可用來定義轉場發生的時間曲線。其規範方式是以四個參數的貝茲曲線代表。
 
 [CSS transition function manipulator](http://cssglue.com/cubic) 是一個可以讓你非常容易以視覺化方式了解轉場流程的工具。
 
@@ -274,8 +274,6 @@ p{
 ## 使用 transition events 來替 object 製作動畫
 
 這裡讓我們看個例子，一個內含文字的方塊左右來回移動，並且會在兩種顏色之間做轉變：
-
-<video controls src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
 
 在我們仔細研究程式碼之前可以先看[範例](/samples/cssref/transitions/sample1)。同樣地，可以到[這](/samples/cssref/transitions/sample1/transitions.css)看其 CSS 的寫法。
 

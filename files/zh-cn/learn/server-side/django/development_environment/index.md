@@ -3,6 +3,7 @@ title: 设置 Django 开发环境
 slug: Learn/Server-side/Django/development_environment
 original_slug: Learn/Server-side/Django/开发环境
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 现在，你知道什么是 Django。
@@ -33,7 +34,7 @@ Django 使你可以轻松配置自己的电脑，以便开始开发网络应用�
 
 Django 本身提供的主要工具是一组用于创建和使用 Django 项目的 Python 脚本，以及可在你电脑的 web 浏览器中测试本地 Django web 应用（在你的计算机，而不是在外部的 web 服务器）。
 
-还有其他外部工具，它们构成了开发环境的一部分，我们将不再赘述。这些包括 [文本编辑器](/en-US/docs/Learn/Common_questions/Available_text_editors) 或编辑代码的 IDE，以及像 [Git](https://git-scm.com/) 这样的源代码控制管理工具，用于安全地管理不同版本的代码。我们假设你已经安装了一个文本编辑器。
+还有其他外部工具，它们构成了开发环境的一部分，我们将不再赘述。这些包括 [文本编辑器](/zh-CN/docs/Learn/Common_questions/Available_text_editors) 或编辑代码的 IDE，以及像 [Git](https://git-scm.com/) 这样的源代码控制管理工具，用于安全地管理不同版本的代码。我们假设你已经安装了一个文本编辑器。
 
 ### 什么是 Django 设置选项？
 
@@ -88,7 +89,7 @@ Django 支持四个主要数据库（PostgreSQL，MySQL，Oracle 和 SQLite）�
 
 > **备注：** 安装到全局环境的 Python 应用程序可能会相互冲突（例如如果它们依赖于同一包的不同版本）。
 
-如果你把 Django 安装到默认/全局环境中，那么在该计算机上将只能定位到 Django 的一个版本。如果你想创建新的网站(使用最新版本的 Django)，同时仍然维护依赖旧版本的网站，这可能是个问题。
+如果你把 Django 安装到默认/全局环境中，那么在该计算机上将只能定位到 Django 的一个版本。如果你想创建新的网站 (使用最新版本的 Django)，同时仍然维护依赖旧版本的网站，这可能是个问题。
 
 因此，经验丰富的 Python/Django 开发人员通常在独立 Python 虚拟环境中运行 Python 应用程序。这样就可以在一台计算机上实现多个不同的 Django 环境。Django 开发团队同样建议你使用 Python 虚拟环境。
 
@@ -177,7 +178,7 @@ pip3 list
 
 ## 在 Python 虚拟环境中使用 Django
 
-我们使用[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)（Linux 及 macOS）和 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)（WIndows）来创建 Python 虚拟环境，而它们又使用了[virtualenv](/en-US/docs/Python/Virtualenv)。封装工具创建了一个一致的接口来管理各个平台上的接口。
+我们使用[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)（Linux 及 macOS）和 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)（WIndows）来创建 Python 虚拟环境，而它们又使用了[virtualenv](/zh-CN/docs/Python/Virtualenv)。封装工具创建了一个一致的接口来管理各个平台上的接口。
 
 ### 安装虚拟环境软件
 
@@ -185,7 +186,7 @@ pip3 list
 
 安装了 Python 和 pip 之后，你就可以安装 virtualenvwrapper（包括了 virtualenv）。可以在[这里](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)找到正式的安装指南，或按照以下指导操作。
 
-使用 pip3 安装该工具：​​​​​​
+使用 pip3 安装该工具：
 
 ```bash
 sudo pip3 install virtualenvwrapper
@@ -201,7 +202,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。 如果您在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
+> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果您在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
 >
 > 你可以使用`which virtualenvwrapper.sh` 和 `which python3`命令为你的系统找到正确的安装位置。
 
@@ -243,7 +244,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。 如果您在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
+> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果您在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
 >
 > 例如，在 macOS 上的一个安装测试中，启动文件中必须有以下几行代码：
 >
@@ -353,7 +354,7 @@ mkdir django_test
 cd django_test
 ```
 
-然后，您可以像所展示的一样使用 django-admin 工具创建一个名为“ _mytestsite_ ”的新框架站点。创建网站后，您可以 CD 到此文件夹，并将在其中找到管理项目的主要脚本，名为**manage.py**。
+然后，您可以像所展示的一样使用 django-admin 工具创建一个名为“_mytestsite_”的新框架站点。创建网站后，您可以 CD 到此文件夹，并将在其中找到管理项目的主要脚本，名为**manage.py**。
 
 ```bash
 django-admin startproject mytestsite

@@ -1,16 +1,13 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - DOM
-  - Interface
-translation_of: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
-**`NodeList` **객체는 일반적으로 {{domxref("element.childNodes")}}와 같은 속성(property)과 {{domxref("document.querySelectorAll")}} 와 같은 메서드에 의해 반환되는 [노드](/ko/docs/Glossary/Node/DOM)의 콜렉션입니다.
+**`NodeList`** 객체는 일반적으로 {{domxref("element.childNodes")}}와 같은 속성(property)과 {{domxref("document.querySelectorAll")}} 와 같은 메서드에 의해 반환되는 [노드](/ko/docs/Glossary/Node/DOM)의 콜렉션입니다.
 
-> **참고:** `NodeList` 가 `Array` 는 아니지만, `forEach()` 를 사용하여 반복할 수 있습니다. 또한 {{jsxref("Array.from()")}} 을 사용하여 `Array` 로 변환 할 수도 있습니다.그러나 일부 오래된 브라우저는 아직`NodeList.forEach()` 또는 `Array.from()` 를 구현하지 않았습니다. 이것은 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 를 사용하여 회피할 수 있습니다. — 이 [문서](/ko/docs/Web/API/NodeList$edit#Example)의 예제를 참조하세요.
+> **참고:** `NodeList` 가 `Array` 는 아니지만, `forEach()` 를 사용하여 반복할 수 있습니다. 또한 {{jsxref("Array.from()")}} 을 사용하여 `Array` 로 변환 할 수도 있습니다.그러나 일부 오래된 브라우저는 아직`NodeList.forEach()` 또는 `Array.from()` 를 구현하지 않았습니다. 이것은 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 를 사용하여 회피할 수 있습니다. — 이 [문서](#example)의 예제를 참조하세요.
 
 경우에 따라, `NodeList`는 라이브 콜렉션으로, DOM의 변경 사항을 실시간으로 콜렉션에 반영합니다. 예를 들어, {{domxref("Node.childNodes")}} 는 실시간입니다:
 
@@ -45,9 +42,9 @@ for (var i = 0; i < myNodeList.length; ++i) {
 }
 ```
 
-**리스트의 항목(items)을 열거하기 위해 [for...in](/ko/docs/JavaScript/Reference/Statements/for...in "JavaScript/ Reference/Statements/for...in") 또는 [for each...in](/ko/docs/JavaScript/Reference/Statements/for_each...in "JavaScript/ Reference/Statements/for each...in")를 사용하지 않길 바랍니다.** `NodeList`의 길이와 항목 속성까지 열거합니다. 또한 스크립트가 요소({{domxref("element")}}) 객체만 처리한다고 가정하면 오류가 발생할 수 있습니다. 게다가, `for..in`은 고정된 순서로 각 속성들을 접근한다는 보장이 없습니다.
+**리스트의 항목(items)을 열거하기 위해 [for...in](/ko/docs/JavaScript/Reference/Statements/for...in) 또는 [for each...in](/ko/docs/JavaScript/Reference/Statements/for_each...in)를 사용하지 않길 바랍니다.** `NodeList`의 길이와 항목 속성까지 열거합니다. 또한 스크립트가 요소({{domxref("element")}}) 객체만 처리한다고 가정하면 오류가 발생할 수 있습니다. 게다가, `for..in`은 고정된 순서로 각 속성들을 접근한다는 보장이 없습니다.
 
-[`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of "/en-US/docs/JavaScript/Reference/Statements/for...of") 루프는 `NodeList` 객체를 올바르게 반복합니다.
+[`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of) 루프는 `NodeList` 객체를 올바르게 반복합니다.
 
 ```js
 var list = document.querySelectorAll( 'input[type=checkbox]' );
@@ -101,7 +98,7 @@ elements.addEventListener("click", function() {
 // 클릭된 요소로부터 출력될 요소는 둘 모두 HTML 요소가 된다.
 ```
 
-forEach에 대한 자세한 내용은 [Array.prototype.forEach()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach "Web/JavaScript/Reference/Global_Objects/Array/forEach")를 참조하길 바란다.
+forEach에 대한 자세한 내용은 [Array.prototype.forEach()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 를 참조하길 바란다.
 
 ## 명세서
 

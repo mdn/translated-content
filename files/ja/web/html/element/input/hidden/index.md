@@ -1,30 +1,20 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - hidden
-translation_of: Web/HTML/Element/input/hidden
+l10n:
+  sourceCommit: 7594b50698a76ce79209b159835e615052915723
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`hidden`** 型は、フォームの送信時にユーザーが見たり変更したりすることができないデータをウェブ開発者が含めることができます。例えば、現在注文中又は編集中の ID や、一意のセキュリティトークンなどに利用できます。隠し入力欄はページの表示で完全に非表示になり、ページの中で表示させる方法はありません。
 
 <table class="properties">
   <tbody>
     <tr>
+      <td><strong><a href="#value">値</a></strong></td>
       <td>
-        <strong><a href="#value">値</a></strong>
-      </td>
-      <td>
-        サーバーに送り返したい隠しデータの値を表す
-        {{domxref("DOMString")}}。
+        サーバーに送り返したい隠しデータの値を表す文字列です。
       </td>
     </tr>
     <tr>
@@ -40,29 +30,29 @@ translation_of: Web/HTML/Element/input/hidden
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>なし。</td>
     </tr>
   </tbody>
 </table>
 
-> **Note:** {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
+> **メモ:** {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
 
 ## 値
 
 {{HTMLElement("input")}} 要素の {{htmlattrxref("value", "input")}} 属性は、フォームをサーバーに送信する時に含めたい隠しデータを含みます。これは特に、ユーザーインターフェイスを通じで編集したり確認したりすることはできませんが、ブラウザーの開発者ツールから値を編集することはできます。
 
-> **Warning:** ページのコンテンツ内では値がユーザーに表示されませんが、ブラウザーの開発者ツールや「ソースを表示」機能を使用して、見たり編集したりすることができます。 `hidden` の入力欄をセキュリティの形として当てにしないでください。
+> **警告:** ページのコンテンツ内では値がユーザーに表示されませんが、ブラウザーの開発者ツールや「ソースを表示」機能を使用して、見たり編集したりすることができます。 `hidden` の入力欄をセキュリティの形として当てにしないでください。
 
 ## 追加の属性
 
 すべての {{HTMLElement("input")}} 要素で共通する属性に加え、 `hidden` 型の入力欄は次の属性にも対応しています。
 
-| 属性            | 説明                                                                                                                                                                              |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`name`](#name) | 他の入力型と同様、フォームを送信した場合に報告される入力欄の名前です。特殊な値 `_charset_` は、その入力欄の値がフォームの送信に使用される文字エンコーディングとして報告されます。 |
-
-### {{htmlattrdef("name")}}
+### name
 
 これは実際には共通の属性の一つですが、隠し入力欄では特別な用途を持っています。通常、 {{htmlattrxref("name", "input")}} 属性は隠し属性でも他の入力欄と同様に機能します。しかし、フォームが送信された時、 `name` が `_charset_` に設定された隠し入力欄は、自動的にフォームを送信するのに使用される文字エンコーディングの値として報告されます。
 
@@ -74,21 +64,21 @@ translation_of: Web/HTML/Element/input/hidden
 
 隠し入力欄のもっとも一般的な用途は、編集フォームを送信したときに、データベースのどのレコードを更新する必要があるかを追跡することです。一般的なワークフローは次のようなものです。
 
-1.  ユーザーはブログの記事や製品の項目など、管理権を持っているコンテンツの編集することにします。編集ボタンを押して始めます。
-2.  編集するコンテンツがデータベースから取得され、 HTML フォーム内に読み込まれてユーザーが編集できるようになります。
-3.  編集後、ユーザーはフォームを送信し、更新されたデータがサーバーに送り返されてデータベースを更新します。
+1. ユーザーはブログの記事や製品の項目など、管理権を持っているコンテンツの編集することにします。編集ボタンを押して始めます。
+2. 編集するコンテンツがデータベースから取得され、 HTML フォーム内に読み込まれてユーザーが編集できるようになります。
+3. 編集後、ユーザーはフォームを送信し、更新されたデータがサーバーに送り返されてデータベースを更新します。
 
 この考え方はステップ 2 で、更新するレコードの ID を隠し入力欄で保持しておきます。ステップ 3 でフォームが送信されたとき、 ID は自動的にレコードの中身と共にサーバーに送り返されます。サイトのサーバー側コンポーネントは、 ID によって送信されたデータでどのレコードを更新する必要があるかを正しく特定することができます。
 
-以下の[例](#examples)の節で、これがどのように見えるかを示す例全体を見ることができます。
+以下の[例](#例)の節で、これがどのように見えるかを示す例全体を見ることができます。
 
 ### ウェブサイトのセキュリティの改善
 
 隠し入力欄は、ウェブサイトのセキュリティを高めるためにセキュリティトークンや秘密を格納しておくことができます。基本的な考え方としては、例えばオンラインバンキングで他の口座に送金するためのフォームなど、機密を要するフォームにユーザーが記入するときに、秘密を提供することで自分が誰であるか、正しいフォームを利用して送金リクエストを行っているかを証明することができます。
 
-これで悪意のあるユーザーが偽のフォームを作成して、銀行に成りすまし、騙されやすいユーザーを騙して別なところに送金させるようなことを防ぐことができます。この種の攻撃は[クロスサイトリクエストフォージェリ (CSRF)](</ja/docs/Learn/Server-side/First_steps/Website_security#Cross-Site_Request_Forgery_(CSRF)>) と呼ばれており、非常に多くの信頼されているサーバー側フレームワークがこのような攻撃を防ぐために隠した秘密を使用しています。
+これで悪意のあるユーザーが偽のフォームを作成して、銀行に成りすまし、騙されやすいユーザーを騙して別なところに送金させるようなことを防ぐことができます。この種の攻撃は[クロスサイトリクエストフォージェリ (CSRF)](</ja/docs/Learn/Server-side/First_steps/Website_security#クロスサイトリクエストフォージェリ_csrf>) と呼ばれており、非常に多くの信頼されているサーバー側フレームワークがこのような攻撃を防ぐために隠した秘密を使用しています。
 
-> **Note:** 前述のように、隠し入力欄に秘密を配置することは、本質的に安全ではありません。キーの組み合わせやエンコーディングによって実現されます。隠し入力欄の値は秘密とデータを関連付け、フォームがサーバーに送信されるときに自動的に含められます。本当にウェブサイトを安全にするには、よく設計された秘密を使用する必要があります。
+> **メモ:** 前述のように、隠し入力欄に秘密を配置することは、本質的に安全ではありません。鍵の組み合わせやエンコーディングによって実現すべきものです。隠し入力欄の値は秘密とデータを関連付け、フォームがサーバーに送信されるときに自動的に含められます。本当にウェブサイトを安全にするには、よく設計された秘密を使用する必要があります。
 
 ## 検証
 
@@ -104,7 +94,7 @@ translation_of: Web/HTML/Element/input/hidden
 <form>
   <div>
     <label for="title">Post title:</label>
-    <input type="text" id="title" name="title" value="My excellent blog post">
+    <input type="text" id="title" name="title" value="My excellent blog post" />
   </div>
   <div>
     <label for="content">Post content:</label>
@@ -115,7 +105,7 @@ This is the content of my excellent blog post. I hope you enjoy it!
   <div>
     <button type="submit">Update post</button>
   </div>
-  <input type="hidden" id="postId" name="postId" value="34657">
+  <input type="hidden" id="postId" name="postId" value="34657" />
 </form>
 ```
 
@@ -142,7 +132,8 @@ label {
   padding-right: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   flex: 7;
   font-family: sans-serif;
   font-size: 1.1rem;
@@ -160,7 +151,7 @@ textarea {
 
 {{ EmbedLiveSample('Examples', '100%', 200) }}
 
-> **Note:** この例は GitHub にもあります ([ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html)および[ライブでの動作の確認](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)も参照してください)。
+> **メモ:** この例は GitHub にもあります ([ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html)および[ライブでの動作の確認](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)も参照してください)。
 
 送信されるとき、サーバーへ送信されるフォームデータは以下のようになります。
 
@@ -170,10 +161,7 @@ textarea {
 
 ## 仕様書
 
-| 仕様書                                                                                                                               | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#hidden-state-(type=hidden)', '&lt;input type="hidden"&gt;')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
-| {{SpecName('HTML5.2', 'sec-forms.html#hidden-state-typehidden', '&lt;input type="hidden"&gt;')}}     | {{Spec2('HTML5.2')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -181,5 +169,5 @@ textarea {
 
 ## 関連情報
 
-- [HTML フォームガイド](/ja/docs/Learn/HTML/Forms)
+- [HTML フォームガイド](/ja/docs/Learn/Forms)
 - {{HTMLElement("input")}} および {{domxref("HTMLInputElement")}} インターフェイス

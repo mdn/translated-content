@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Texts
 original_slug: Web/SVG/Tutoriel/Texts
 ---
+
 {{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}
 
 Lorsqu'on parle de texte en SVG, on doit différencier deux choses pratiquement complètement séparées: 1. l'inclusion et l'affichage de texte dans une image, 2. les polices SVG. Un article séparé sera dédié aux polices SVG, celui-ci se concentrera uniquement sur le fait d'insérer du texte.

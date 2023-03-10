@@ -2,6 +2,7 @@
 title: ':empty'
 slug: Web/CSS/:empty
 ---
+
 {{ CSSRef()}}
 
 `:empty` [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/CSS/Pseudo-classes) 代表没有子元素的元素。子元素只可以是元素节点或文本（包括空格）。注释或处理指令都不会产生影响。
@@ -13,11 +14,11 @@ div:empty {
 }
 ```
 
-## 语法
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -50,9 +51,9 @@ body {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample('Examples', 300, 80)}}
+{{EmbedLiveSample('示例', 300, 80)}}
 
 ## 规范
 
@@ -60,9 +61,9 @@ body {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.empty")}}
+{{Compat}}
 
-## 参考
+## 参见
 
 - {{CSSxRef(":blank")}}
 

@@ -3,6 +3,7 @@ title: text-align
 slug: Web/CSS/text-align
 translation_of: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 ## Резюме
@@ -15,19 +16,21 @@ translation_of: Web/CSS/text-align
 
 [Формальный синтаксис](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("text-align")}}
 
-    text-align: left
-    text-align: right
-    text-align: center
-    text-align: justify
-    text-align: start
-    text-align: end
-    text-align: match-parent
-    text-align: start end
-    text-align: "."
-    text-align: start "."
-    text-align: "." end
+```css
+text-align: left
+text-align: right
+text-align: center
+text-align: justify
+text-align: start
+text-align: end
+text-align: match-parent
+text-align: start end
+text-align: "."
+text-align: start "."
+text-align: "." end
 
-    text-align: inherit
+text-align: inherit
+```
 
 ### Значения
 

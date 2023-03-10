@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName
 ---
+
 {{AddonSidebar()}}
 
 Le nom du thème de **devtools** actuellement sélectionné.
@@ -22,9 +23,9 @@ Il s'agit d'une chaîne dont les valeurs possibles sont :
 - "foncé"
 - "firebug"
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.themeName")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

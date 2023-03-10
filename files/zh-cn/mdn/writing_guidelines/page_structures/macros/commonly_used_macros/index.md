@@ -1,13 +1,13 @@
 ---
 title: 常用的宏
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
+
 {{MDNSidebar}}
 
-本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读[使用宏](/zh-CN/docs/MDN/Structures/Macros)这篇文章。
+本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读[使用宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)这篇文章。
 
-还有一些不常用或只在特定内容中适用，以及一些弃用的宏的信息，参见[其它宏](/zh-CN/docs/MDN/Structures/Macros/Other)。
+还有一些不常用或只在特定内容中适用，以及一些弃用的宏的信息，参见[其他宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other)。
 
 ## 链接
 
@@ -20,13 +20,13 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
 [`Glossary`](https://github.com/mdn/yari/blob/main/kumascript/macros/Glossary.ejs) 这个宏可用于创建指向 MDN 中[术语库](/zh-CN/docs/Glossary)内一个具体词条的链接。调用这个宏时，有一个必需的参数和一个可选参数。
 
 1. 术语的名字（比如“HTML”）：`\{{Glossary("HTML")}}` 会指向 {{Glossary("HTML")}}。
-2. 可选参数：使用参数中的文本内容，替代术语的名字显示在页面中：`\{{Glossary("CSS", "层叠样式表")}}` 会生成 {{Glossary("CSS", "层叠样式表")}}。
+2. 可选参数：使用参数中的文本内容，替代术语的名字显示在页面中：`\{{Glossary("CSS", "层叠样式表")}}` 会生成{{Glossary("CSS", "层叠样式表")}}。
 
 ### 链接到 MDN 的参考文档页面
 
-下面列出的宏可链接到 MDN 站内不同技术领域的参考文档，如 Javascript,、CSS、HTML、elements、SVG 等。
+下面列出的宏可链接到 MDN 站内不同技术领域的参考文档，如 Javascript、CSS、HTML 元素、SVG 等。
 
-这些宏都很容易上手，大多数情况下只需一个参数——所涉及的 Web 组件的名字（如标签、对象、方法、属性等的名字）。在[链接到术语库](#链接到术语库)中提到的，可修改实际显示的文本的可选参数，也存在于下面大多数宏中。如果你想了解其他参数，表格中最左列的链接中可以查看相关宏的文档。
+这些宏都很容易上手，大多数情况下只需一个参数——链接的组件的名称。大多数宏也接受第二个可选的、用于修改实际显示的文本的参数（相关的文档可在下方表格中最左列的链接中找到）。
 
 <table class="standard-table">
   <thead>
@@ -90,7 +90,7 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
       <td>
         <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 消息头</a>（/Web/HTTP/Headers）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 标头</a>（/Web/HTTP/Headers）</td>
       <td><code>\{{HTTPHeader("ACCEPT")}}</code> 会指向 {{HTTPHeader("ACCEPT")}}。</td>
     </tr>
     <tr>
@@ -107,29 +107,8 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
       <td><a href="/zh-CN/docs/Web/HTTP/Status">HTTP 响应代码</a>（/Web/HTTP/Status）</td>
       <td><code>\{{HTTPStatus("404")}}</code> 会指向 {{HTTPStatus("404")}}。</td>
     </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>
-      </td>
-      <td><a href="/zh-CN/docs/Web/Events">事件参考</a>（/Web/Events）</td>
-      <td>
-        <div class="notecard note">
-          <p>
-            <strong>备注：</strong> 因为事件关联在具体的元素下，这个宏不是特别有用。例如想指向 wheel 事件的页面，需要使用
-            <code>\{{DOMxRef("Document.wheel_event")}}</code>：{{DOMxRef("Document.wheel_event")}}
-          </p>
-        </div>
-      </td>
-    </tr>
   </tbody>
 </table>
-
-### 链接到某个 Bug
-
-- Bugs
-
-  - 通过编号，[`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) 宏可以指向 bugzilla.mozilla.org 站内相应的 bug，`\{{Bug(123456)}}` 会指向 {{Bug(123456)}}。
-  - 类似的，[`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) 宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，`\{{WebkitBug(31277)}}` 会指向 {{WebkitBug(31277)}}。
 
 ### 多页面间的导航栏
 
@@ -139,8 +118,8 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
 
 ### 运行实例
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) 可以在当前页面中嵌入一个代码示例的实际展示效果（使用方法参见[运行实例](/zh-CN/docs/MDN/Structures/Live_samples)）。
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) 创建指向包含页面上代码示例输出的页面的链接，如[运行实例](/zh-CN/docs/MDN/Structures/Live_samples)中所述。
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) 可以在当前页面中嵌入一个代码示例的实际展示效果（使用方法参见[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)）。
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) 创建指向包含页面上代码示例输出的页面的链接，如[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)中所述。
 - [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) 提供了一种新的运行实例编写和使用方式，你可以在 [Github 运行实例](/zh-CN/docs/MDN/Structures/Code_examples#github_live_samples)中了解更多信息。
 
 ## 添加侧边栏
@@ -148,7 +127,7 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
 一些有海量子条目的主题，比如技术参考、指南、教程等，通常需要一个单独的主页面提供导航。对于这些主题中的页面，顶部的面包屑导航就显得比较简陋，下面这些模板，可以在页面的左侧，生成对应主题的侧边导航栏。
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) 生成 CSS 参考页面的侧边栏。
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) 生成 HTML 参考页面的侧边栏。
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) 生成 HTML 参考页面的侧边栏。
 - [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) 生成 Web API 参考页面的侧边栏。
 
 ## 通用的文章格式化工具

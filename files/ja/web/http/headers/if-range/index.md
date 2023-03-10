@@ -1,15 +1,8 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - リファレンス
-  - レンジリクエスト
-  - 条件リクエスト
-translation_of: Web/HTTP/Headers/If-Range
 ---
+
 {{HTTPSidebar}}
 
 **`If-Range`** HTTP リクエストヘッダはレンジリクエストを条件付きにします：条件が満たされれば、レンジリクエストが発行され、サーバは適切なボディを持つ {{HTTPStatus("206")}} `Partial Content` 回答を返します。条件が満たされていない場合、 {{HTTPStatus("200")}} の状態でリソース全体が返送されます。
@@ -86,5 +79,5 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("206")}}` Partial Content`
+- {{HTTPStatus("206")}} `Partial Content`
 - [HTTP Conditional Requests](/ja/docs/Web/HTTP/Conditional_requests)

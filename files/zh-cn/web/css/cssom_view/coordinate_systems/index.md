@@ -3,6 +3,7 @@ title: 坐标系
 slug: Web/CSS/CSSOM_View/Coordinate_systems
 original_slug: Web/CSS/CSSOM_View/坐标系
 ---
+
 {{cssref}}
 
 当我们需要在图形上指定一点的坐标[algebra](https://zh.wikipedia.org/wiki/algebra))，这个坐标需要先对于某一个固定点。这个固定点我们称为原点[origin](<https://zh.wikipedia.org/wiki/Origin_(mathematics)>). 这个指定点的坐标即为包含在各个维度上相对于远点的距离值。
@@ -95,7 +96,7 @@ inner.addEventListener("mouseleave", update, false);
 
 The event handler is in the `update()` method. It simply calls `setCoords()` once for each coordinate system, passing in the event that occurred.
 
-Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types {{event("mouseenter")}}, {{event("mousemove")}}, and {{event("mouseleave")}}.
+Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event), [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event), and [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event).
 
 ### HTML
 

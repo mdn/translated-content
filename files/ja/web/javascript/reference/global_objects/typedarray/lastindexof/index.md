@@ -1,16 +1,8 @@
 ---
 title: TypedArray.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - メソッド
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 ---
+
 {{JSRef}}
 
 **`lastIndexOf()`** メソッドは、指定された要素が型付き配列内で見つかった最後の位置の添字を返し、存在しなければ -1 を返します。型付き配列は `fromIndex` で始まる位置から逆方向に検索されます。 このメソッドは {{jsxref("Array.prototype.lastIndexOf()")}}と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
@@ -54,9 +46,7 @@ uint8.lastIndexOf(2, -1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

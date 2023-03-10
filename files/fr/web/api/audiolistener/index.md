@@ -4,6 +4,7 @@ slug: Web/API/AudioListener
 translation_of: Web/API/AudioListener
 browser-compat: api.AudioListener
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface `AudioListener` représente la position et l'orientation de l'unique personne écoutant la scène audio&nbsp;; elle est utilisée dans le cadre d'une [spatialisation audio](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics). Tous les objets [`PannerNode`](/fr/docs/Web/API/PannerNode) sont spatialisés par rapport à l'objet `AudioListener` stocké dans la propriété [`BaseAudioContext.listener`](/fr/docs/Web/API/BaseAudioContext/listener).

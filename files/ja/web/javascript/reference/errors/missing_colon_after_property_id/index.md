@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: missing : after property id'
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing : after property id" は、オブジェクトが[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)の構文を使用して生成されたときに発生します。コロン (`:`) はオブジェクトのプロパティのキーと値を区切ります。おそらく、このコロンがないか場所が間違っているかです。

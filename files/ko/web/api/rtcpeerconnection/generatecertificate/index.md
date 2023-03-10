@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.generateCertificate()
 slug: Web/API/RTCPeerConnection/generateCertificate
-translation_of: Web/API/RTCPeerConnection/generateCertificate
 ---
 {{APIRef("WebRTC")}}
 
@@ -9,7 +8,9 @@ translation_of: Web/API/RTCPeerConnection/generateCertificate
 
 ## Syntax
 
-    var cert = RTCPeerConnection.generateCertificate(keygenAlgorithm)
+```js
+var cert = RTCPeerConnection.generateCertificate(keygenAlgorithm)
+```
 
 ### 매개변수
 

@@ -1,9 +1,9 @@
 ---
 title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
-translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
-The structured clone 알고리즘은 복잡한 자바스크립트 객체의 직렬화을 위해서 [HTML5 specification](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)에 의해서 정의된 새로운 알고리즘 입니다. 이것은 순환그래프를 포함하는 객체의 직렬화를 지원하기 때문에 [JSON](/en/JSON "en/JSON")보다 더 유용합니다. — 객체는 같은 그래프에서 다른객체를 참조하는 객체를 참조할 수 있습니다. 이러한 케이스들에서는 structured clone알고리즘이 아마도 JSON보다 더 효율적일 것입니다.
+
+The structured clone 알고리즘은 복잡한 자바스크립트 객체의 직렬화을 위해서 [HTML5 specification](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)에 의해서 정의된 새로운 알고리즘 입니다. 이것은 순환그래프를 포함하는 객체의 직렬화를 지원하기 때문에 [JSON](/en/JSON)보다 더 유용합니다. — 객체는 같은 그래프에서 다른객체를 참조하는 객체를 참조할 수 있습니다. 이러한 케이스들에서는 structured clone알고리즘이 아마도 JSON보다 더 효율적일 것입니다.
 
 알고리즘은 본질적으로 원본 객체의 모든 필드를 거치고 각 필드의 값들을 새로운 객체로 복제합니다. 만약 필드가 객체를 가졌다면 모든 필드와 그 서브필드가 새로운 객체로 복제될 때 까지 재귀적으로 동작합니다.
 
@@ -11,14 +11,14 @@ The structured clone 알고리즘은 복잡한 자바스크립트 객체의 직�
 
 JSON을 뛰어넘는 structured clone알고리즘의 여러가지 핵심 이득이 있습니다.
 
-- Structured clones은 [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp "en/JavaScript/Reference/Global Objects/regexp") 객체들도 복사할 수 있습니다..
+- Structured clones은 [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp) 객체들도 복사할 수 있습니다..
 - Structured clones은 {{ domxref("Blob") }}, {{ domxref("File") }}와 {{ domxref("FileList") }} 객체들도 복사할 수 있습니다..
 - Structured clones은 {{ domxref("ImageData") }} 객체들도 복사할 수 있습니다. 클론된{{ domxref("CanvasPixelArray") }}크기(dimensions)는 원본과 match될 것이고 같은 픽셀 데이터의 복제를 가집니다.
 - Structured clones은 참조들의 순환 그래프들을 포함한 객체들을 올바르게 복제할 수 있습니다.
 
 ## structured clones과 함께 동작하지 않는 것들
 
-- `Error와` [`Function`](/en/JavaScript/Reference/Global_Objects/Function "en/JavaScript/Reference/Global Objects/Function") 객체들은 structured clone 알고리즘에 의해서 복제될 수 없습니다; 이것을 시도하면 `DATA_CLONE_ERR` exception을 던질 것 입니다.
+- `Error와` [`Function`](/en/JavaScript/Reference/Global_Objects/Function) 객체들은 structured clone 알고리즘에 의해서 복제될 수 없습니다; 이것을 시도하면 `DATA_CLONE_ERR` exception을 던질 것 입니다.
 - DOM node들을 클론하려고 시도하는것도 동일하게 `DATA_CLONE_ERR` exception을 던질 것 입니다.
 - 객체들의 몇몇 파라미터들은 보존되지 않습니다:
 
@@ -82,7 +82,7 @@ function clone(objectToBeCloned) {
 }
 ```
 
-> **참고:** 이 알고리즘은 실제로 [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp "RegExp"), [`Array`](/en/JavaScript/Reference/Global_Objects/Array "Array"), 와 [`Date`](/en/JavaScript/Reference/Global_Objects/Date "Date")스페셜 객체들을 구현했습니다. 필요에 따라서 다른 특수한 케이스들을 구현할 수 있습니다.
+> **참고:** 이 알고리즘은 실제로 [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/en/JavaScript/Reference/Global_Objects/Array), 와 [`Date`](/en/JavaScript/Reference/Global_Objects/Date)스페셜 객체들을 구현했습니다. 필요에 따라서 다른 특수한 케이스들을 구현할 수 있습니다.
 
 ## See also
 

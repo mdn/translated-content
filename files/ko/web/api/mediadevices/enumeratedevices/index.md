@@ -1,7 +1,6 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
-translation_of: Web/API/MediaDevices/enumerateDevices
 ---
 {{APIRef("WebRTC")}}
 
@@ -9,7 +8,9 @@ translation_of: Web/API/MediaDevices/enumerateDevices
 
 ## Syntax (구문)
 
-    var enumeratorPromise = navigator.mediaDevices.enumerateDevices();
+```js
+var enumeratorPromise = navigator.mediaDevices.enumerateDevices();
+```
 
 ### Return value ( 반환값 )
 
@@ -43,17 +44,21 @@ navigator.mediaDevices.enumerateDevices()
 
 위 코드를 실행하면 아래와 같은 결과를 볼 수 있을 것입니다.:
 
-    videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
-    audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
-    audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```
+videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
+audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```
 
 또는 하나 이상의 {{domxref("MediaStream")}}이 사용 가능하거나 접근(사용권한)이 가능할 경우:
 
-    videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
-    audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
-    audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```
+videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
+audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -64,6 +69,6 @@ navigator.mediaDevices.enumerateDevices()
 ## See also
 
 - {{domxref("navigator.mediaDevices.getUserMedia()")}}
-- [WebRTC](/ko/docs/WebRTC "WebRTC") - the introductory page to the API
-- [MediaStream API](/ko/docs/WebRTC/MediaStream_API "WebRTC/MediaStream_API") - the API for the media stream objects
-- [Taking webcam photos](/ko/docs/WebRTC/taking_webcam_photos "WebRTC/taking_webcam_photos") - a tutorial on using `getUserMedia()` for taking photos rather than video.
+- [WebRTC](/ko/docs/WebRTC) - the introductory page to the API
+- [MediaStream API](/ko/docs/WebRTC/MediaStream_API) - the API for the media stream objects
+- [Taking webcam photos](/ko/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.

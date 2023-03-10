@@ -1,14 +1,14 @@
 ---
 title: 'TypeError: Reduce of empty array with no initial value'
 slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
-translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
 ```
-    TypeError: 초기값이 없는 빈 배열에 대한 recude는 에러
+    TypeError: 초기값이 없는 빈 배열에 대해 reduce를 실행
 ```
 
 ## Error type
@@ -17,26 +17,26 @@ translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_in
 
 ## What went wrong?
 
-자바스크립크에서 몇 몇의 reduce 함수들:
+자바스크립트에는 reduce 함수가 여럿 있습니다.
 
 - {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}} and
 - {{jsxref("TypedArray.prototype.reduce()")}}, {{jsxref("TypedArray.prototype.reduceRight()")}}).
 
-이러한 함수들은 선택적으로 초기값(`initialValue`)을 사용합니다.(콜백(`callback)`의 첫번째 호출에 대한 첫번째 인수로 사용됩니다.) 그러나, 만약에 초기값을 설정하지 않는다면, {{jsxref("Array")}} or {{jsxref("TypedArray")}}에 대한 첫번째 엘리먼트를 초기값으로 사용 합니다. 이런 경우에 초기값이 없기 때문에 빈 배열이 제공될 경우 오류가 발생 합니다.
+위의 함수들을 사용할 때 `initialValue`를 지정할 수 있습니다(`callback`을 처음 호출할 때 첫 번째 인자로 사용됨). 초기값을 제공하지 않으면 {{jsxref("Array")}} 또는 {{jsxref("TypedArray")}}의 첫 번째 원소를 초기값으로 사용합니다. 빈 배열을 제공해서 초기값을 반환할 수 없는 경우에 이 에러가 발생합니다.
 
 ## Examples
 
 ### Invalid cases
 
-This problem appears frequently when combined with a filter ({{jsxref("Array.prototype.filter()")}}, {{jsxref("TypedArray.prototype.filter()")}}) which will remove all elements of the list. Thus leaving none to be used as the initial value.
+reduce 함수를 filter ({{jsxref("Array.prototype.filter()")}}, {{jsxref("TypedArray.prototype.filter()")}})와 조합해서 사용할 때 이 에러가 자주 발생합니다. filter가 리스트의 모든 원소를 삭제하면 초기값으로 사용할 값이 없어집니다.
 
 ```js example-bad
 var ints = [0, -1, -2, -3, -4, -5];
-ints.filter(x => x > 0)         // removes all elements
-    .reduce((x, y) => x + y)    // no more elements to use for the initial value.
+ints.filter(x => x > 0)         // 모든 원소를 삭제
+    .reduce((x, y) => x + y)    // 초기값으로 사용할 원소가 없음
 ```
 
-Similarly, the same issue can happen if there is a typo in a selector, or an unexpected number of elements in a list:
+비슷한 경우로, selector 안에 오타가 있거나 list의 원소 수가 비정상일 때에도 같은 에러가 발생할 수 있습니다.
 
 ```js example-bad
 var names = document.getElementsByClassName("names");
@@ -45,17 +45,17 @@ var name_list = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + n
 
 ### Valid cases
 
-These problems can be solved in two different ways.
+이 문제를 해결할 수 있는 방법은 두 가지입니다.
 
-One way is to actually provide an `initialValue` as the neutral element of the operator, such as 0 for the addition, 1 for a multiplication, or an empty string for a concatenation.
+첫 번째는 `initialValue`로 operator의 중립 원소를 제공하는 방법입니다. 예를 들어 덧셈에는 0을, 곱셈에는 1을, 문자열 결합에는 빈 문자열을 지정할 수 있습니다.
 
 ```js example-good
 var ints = [0, -1, -2, -3, -4, -5];
-ints.filter(x => x > 0)         // removes all elements
-    .reduce((x, y) => x + y, 0) // the initial value is the neutral element of the addition
+ints.filter(x => x > 0)         // 모든 원소 삭제함
+    .reduce((x, y) => x + y, 0) // 덧셈에 대한 중립 원소를 초기값으로 지정
 ```
 
-Another way would be two to handle the empty case, either before calling `reduce`, or in the callback after adding an unexpected dummy initial value.
+두 번째는 `reduce`를 호출하기 전이나 callback 내부에서 잘못된 초기값을 더하기 전에 빈 인자 문제를 처리하는 방법입니다.
 
 ```js example-good
 var names = document.getElementsByClassName("names");

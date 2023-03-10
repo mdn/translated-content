@@ -2,6 +2,7 @@
 title: WebRTC API
 slug: Web/API/WebRTC_API
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communication、ウェブリアルタイムコミュニケーション) は、ウェブアプリケーションやウェブサイトにて、仲介を必要とせずにブラウザー間で直接、任意のデータの交換や、キャプチャした音声／映像ストリームの送受信を可能にする技術です。 WebRTC に関する一連の標準規格は、ユーザーがプラグインやサードパーティ製ソフトウェアをインストールすることなく、ピアーツーピアーにて、データ共有や遠隔会議を実現することを可能にします。
@@ -81,7 +82,7 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
   - : {{domxref("RTCPeerConnection.connectionState", "connectionState")}} でアクセスできる接続の状態が変更された。
 - {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
-  - : リモートピアーーが新しいデータチャネルを開いた後、新しい {{domxref("RTCDataChannel")}} が利用可能です。このイベント型は {{domxref("RTCDataChannel")}} です。
+  - : リモートピアーが新しいデータチャネルを開いた後、新しい {{domxref("RTCDataChannel")}} が利用可能です。このイベント型は {{domxref("RTCDataChannel")}} です。
 - {{domxref("RTCDataChannel.error_event", "error")}}
   - : {{domxref("RTCErrorEvent")}} で、データチャネルでエラーが発生したことを示します。
 - {{domxref("RTCDtlsTransport.error_event", "error")}}
@@ -89,7 +90,7 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 - {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
   - : {{domxref("RTCIceTransport")}} の収集状態が変更されました。
 - {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
-  - : {{domxref("RTCPeerConnectionIceEvent")}} は、ローカルデバイスがローカルピアーーに追加する必要がある新しい ICE 候補を特定したときに、 {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}を呼び出して送信されるものです。
+  - : {{domxref("RTCPeerConnectionIceEvent")}} は、ローカルデバイスがローカルピアーに追加する必要がある新しい ICE 候補を特定したときに、 {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}を呼び出して送信されるものです。
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : ICE 候補の収集中にエラーが発生したことを示す{{domxref("RTCPeerConnectionIceErrorEvent")}}。
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}

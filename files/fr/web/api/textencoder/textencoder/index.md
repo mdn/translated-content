@@ -3,6 +3,7 @@ title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
 translation_of: Web/API/TextEncoder/TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
 Le constructeur **`TextEncoder()`** retourne un nouvel objet {{DOMxRef("TextEncoder")}} utf-8.

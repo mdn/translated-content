@@ -1,14 +1,8 @@
 ---
 title: 'HTML 属性: size'
 slug: Web/HTML/Attributes/size
-tags:
-  - Attribute
-  - HTML
-  - Input
-  - Reference
-  - Select
-translation_of: Web/HTML/Attributes/size
 ---
+
 {{HTMLSidebar}}
 
 **`size`** 属性は、 {{htmlelement('input')}} 要素の幅と {{htmlelement('select')}} 要素の高さを定義します。 `input` については、 `type` 属性が {{HTMLElement("input/text", "text")}} または {{HTMLElement("input/password", "password")}} の場合は文字数です。これは 0 以上の整数でなければなりません。 `size` が指定されていないか、無効な値が指定された場合、入力欄にサイズが宣言されず、そのフォームコントロールはユーザーエージェントに基づいた既定の幅になります。 CSS が幅に影響を与えるプロパティで要素を対象としている場合は、 CSS が優先されます。
@@ -44,10 +38,7 @@ translation_of: Web/HTML/Attributes/size
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-size', 'size attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}     | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

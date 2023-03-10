@@ -2,6 +2,7 @@
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
+
 {{JSRef}}
 
 **`Object.create()`** 方法用于创建一个新对象，使用现有的对象来作为新创建对象的原型（prototype）。
@@ -52,7 +53,7 @@ alert(normalObj); // shows [object Object]
 alert(nullProtoObj); // throws error: Cannot convert object to primitive value
 ```
 
-其它方法也同样会失败。
+其他方法也同样会失败。
 
 ```js
 normalObj.valueOf() // shows {}

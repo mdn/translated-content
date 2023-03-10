@@ -1,19 +1,9 @@
 ---
 title: '<tbody>: テーブル本体要素'
 slug: Web/HTML/Element/tbody
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Body
-  - Table Contents
-  - Tables
-  - Web
-  - tbody
-translation_of: Web/HTML/Element/tbody
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の表本体要素** (**`<tbody>`**) は、表の一連の行 ({{HTMLElement("tr")}} 要素) を内包し、その部分が表 ({{HTMLELement("table")}}) の本体部分を構成することを表します。
 
@@ -92,7 +82,7 @@ translation_of: Web/HTML/Element/tbody
 
     この属性は非推奨であるため、代わりに CSS の {{cssxref("text-align")}} プロパティを使用してください。
 
-    > **Note:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#Browser_compatibility) で `<string>` の値を確認してください。
+    > **メモ:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#Browser_compatibility) で `<string>` の値を確認してください。
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
@@ -308,10 +298,7 @@ tbody > tr > th {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','tables.html#the-tbody-element','tbody 要素')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-tbody-element','tbody 要素')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

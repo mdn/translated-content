@@ -27,7 +27,7 @@ background: border-box red;
 background: no-repeat center/80% url("../img/image.png");
 ```
 
-> **Примечание:** **Предупреждение:** {{cssxref("background-color")}} можно определить только на последнем фоне, поскольку для всего элемента существует только один цвет фона.
+> **Примечание:** {{cssxref("background-color")}} можно определить только на последнем фоне, поскольку для всего элемента существует только один цвет фона.
 
 ### Значения
 
@@ -73,7 +73,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #00D repeat-y fixed;
+  background: url("starsolid.gif") #00D repeat-y fixed;
 }
 ```
 

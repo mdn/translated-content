@@ -2,6 +2,7 @@
 title: WindowTimers.clearInterval()
 slug: Web/API/clearInterval
 ---
+
 {{ApiRef("HTML DOM")}}
 
 `WindowOrWorkerGlobalScope` mixin 的 **`clearInterval()`** 方法可取消先前通过 {{domxref("setInterval()")}} 设置的重复定时任务。
@@ -25,7 +26,7 @@ scope.clearInterval(intervalID)
 
 ## 示例
 
-查看 [`setInterval()` 的示例](/en-US/docs/DOM/window.setInterval#Example)。
+查看 [`setInterval()` 的示例](/zh-CN/docs/DOM/window.setInterval#Example)。
 
 ## 规范
 
@@ -37,9 +38,9 @@ scope.clearInterval(intervalID)
 
 ## 参见
 
-- [JavaScript 定时器](/en-US/docs/JavaScript/Timers)
+- [JavaScript 定时器](/zh-CN/docs/JavaScript/Timers)
 - {{domxref("setTimeout")}}
 - {{domxref("setInterval")}}
 - {{domxref("clearTimeout")}}
 - {{domxref("Window.requestAnimationFrame")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)
+- [_Daemons_ management](/zh-CN/docs/JavaScript/Timers/Daemons)

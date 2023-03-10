@@ -2,6 +2,7 @@
 title: 地理位置 API
 slug: Web/API/Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 **地理位置 API**（Geolocation API）允许用户向 web 应用程序提供他们的位置。出于隐私考虑，报告地理位置前会先请求用户许可。
@@ -34,11 +35,11 @@ Web 扩展若期望使用 `Geolocation` 对象，则必须将 `"geolocation"` �
 - {{domxref("GeolocationPosition")}}
   - : 表示用户的位置。`GeolocationPosition` 实例会在成功调用 {{domxref("Geolocation")}} 中的方法时返回。包含了一个时间戳和一个 {{domxref("GeolocationCoordinates")}} 对象实例。
 - {{domxref("GeolocationCoordinates")}}
-  - : 表示用户位置的坐标。`GeolocationCoordinates` 实例包含经纬度和其它相关的重要信息。
+  - : 表示用户位置的坐标。`GeolocationCoordinates` 实例包含经纬度和其他相关的重要信息。
 - {{domxref("GeolocationPositionError")}}
   - : `GeolocationPositionError` 实例会在未能成功调用 {{domxref("Geolocation")}} 中的方法时返回。包含了错误代码和错误消息。
 - {{domxref("Navigator.geolocation")}}
-  - : API 的入口点。返回一个 {{domxref("Geolocation")}} 对象实例，从中可以访问所有其它的功能。
+  - : API 的入口点。返回一个 {{domxref("Geolocation")}} 对象实例，从中可以访问所有其他的功能。
 
 ## 示例
 

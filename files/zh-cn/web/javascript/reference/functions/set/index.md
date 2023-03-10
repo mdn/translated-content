@@ -2,17 +2,18 @@
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
-当尝试设置属性时，**`set`**语法将对象属性绑定到要调用的函数。
+当尝试设置属性时，**`set`** 语法将对象属性绑定到要调用的函数。它还可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中应用。
 
 {{EmbedInteractiveExample("pages/js/functions-setter.html")}}
 
 ## 语法
 
-```plain
-{set prop(val) { . . . }}
-{set [expression](val) { . . . }}
+```js-nolint
+{ set prop(val) { /* … */ } }
+{ set [expression](val) { /* … */ } }
 ```
 
 ### 参数
@@ -31,8 +32,8 @@ slug: Web/JavaScript/Reference/Functions/set
 使用 set 语法时请注意：
 
 - 它的标识符可以是数字或字符串；
-- 它必须有一个明确的参数 （详见 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
-- 在对象字面量中，不能为一个已有真实值的变量使用 set ，也不能为一个属性设置多个 set。
+- 它必须有一个明确的参数（详见 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
+- 在对象字面量中，不能为一个已有真实值的变量使用 set，也不能为一个属性设置多个 set。
   ( `{ set x(v) { }, set x(v) { } }` 和 `{ x: ..., set x(v) { } }` 是不允许的 )
 
 ## 示例
@@ -60,7 +61,7 @@ console.log(language.log); // ['EN', 'FA']
 
 ### 用 `delete` 操作符移除一个 setter
 
-我们可以使用[`delete`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)操作符移除 setter。
+我们可以使用[`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)操作符移除 setter。
 
 ```js
 delete language.current;
@@ -102,11 +103,12 @@ console.log(obj.baz); // "baz"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide
+- [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- JavaScript 指南中[定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#定义_getters_与_setters) 一文
+- [不兼容的 ES5 变化：字面量的 getter 和 setter 函数现在必须正好有零或一个参数](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)

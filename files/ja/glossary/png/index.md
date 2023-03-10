@@ -2,6 +2,7 @@
 title: PNG
 slug: Glossary/PNG
 ---
+
 **PNG** (_Portable Network Graphics_) は、可逆データ圧縮をサポートする画像ファイル形式です。
 
 ## 関連項目

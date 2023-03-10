@@ -1,15 +1,8 @@
 ---
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - TypedArray
-  - TypedArrays
-  - from
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 ---
+
 {{JSRef}}
 
 **`TypedArray.from()`** メソッドは、配列風オブジェクトや反復可能オブジェクトから新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)を生成します。このメソッドは {{jsxref("Array.from()")}} とほぼ同じです。
@@ -153,9 +146,7 @@ if (!Int8Array.__proto__.from) {
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

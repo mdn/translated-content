@@ -2,7 +2,8 @@
 title: 私たちが書くものは何か
 slug: MDN/Writing_guidelines/What_we_write
 ---
-{{MDNSidebar}}  
+
+{{MDNSidebar}}
 
 MDN Web Docs には、ウェブ開発者が**ブラウザーを意識することなく**コードを書けるように、**ブラウザー中立的な**文書を掲載しています。この記事では、特定のトピックやコンテンツの種類が MDN Web Docs に入れられるべきかどうかについての情報を探ります。
 
@@ -55,7 +56,7 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 
 また、[SVG](/ja/docs/Web/SVG), [XML](/ja/docs/Web/XML), [WebAssembly](/ja/docs/WebAssembly), [アクセシビリティ](/ja/docs/Learn/Accessibility)など、より幅広いトピックについても文書化しています。さらに、これらの技術に関する豊富な[学習ガイド](/ja/docs/Learn)や[用語集](/ja/docs/Glossary)を提供しています。
 
-> **Note:** バックエンドテクノロジーには、別の文書化の場所があり、 MDN Web Docs はこれにとって代わるつもりはありませんが、[いくつかの例外はあります](/ja/docs/Learn/Server-side)。
+> **メモ:** バックエンドテクノロジーには、別の文書化の場所があり、 MDN Web Docs はこれにとって代わるつもりはありませんが、[いくつかの例外はあります](/ja/docs/Learn/Server-side)。
 
 MDN Web Docs のすべてのコンテンツは、それが掲載されている技術分野に関連したものでなければなりません。投稿者は、書き方やコードサンプルなどについて、この [MDN 執筆ガイドライン](/ja/docs/MDN/Writing_guidelines) に従うことが期待されています。
 

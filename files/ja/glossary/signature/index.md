@@ -2,6 +2,7 @@
 title: Signature (シグネチャ)
 slug: Glossary/Signature
 ---
+
 **シグネチャ**は状況によって色々な意味を持ちます。
 こちらを参照してください。
 
@@ -9,4 +10,4 @@ slug: Glossary/Signature
 
 ## 詳細情報
 
-- Wikipedia の {{Interwiki("wikipedia", "シグネチャ")}}
+- Wikipedia の [シグネチャ](https://ja.wikipedia.org/wiki/シグネチャ)

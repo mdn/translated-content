@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
-translation_of: Web/API/RTCPeerConnection/addIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}}을 사용하는 웹이나 앱이 신규 ICE candidate를 signaling 채널을 통해 원격 유저로부터 수신하게되면, **`RTCPeerConnection.addIceCandidate()`**를 호출해서 브라우저의 {{Glossary("ICE")}} 에이전트에게 새로 수신한 candidate를 전달합니다. 이 메소드는 `RTCPeerConnection`의 원격 설명 (remote description)에 연결의 원격쪽 상태를 설명해주는 신규 원격 candidate를 추가합니다.
@@ -15,14 +15,16 @@ translation_of: Web/API/RTCPeerConnection/addIceCandidate
 
 ## Syntax
 
-    aPromise = pc.addIceCandidate(candidate);
+```js
+aPromise = pc.addIceCandidate(candidate);
 
-    addIceCandidate(candidate, successCallback, failureCallback); {{deprecated_inline}}
+addIceCandidate(candidate, successCallback, failureCallback);
+```
 
 ### 매개변수
 
 - `candidate` {{optional_inline}}
-  - : {{domxref("RTCIceCandidateInit")}} 딕셔너리 혹은 {{domxref("RTCIceCandidate")}} 객체에 해당하는 객체입니다. 이 객체의 내용은 signaling 채널을 통해 수신 받은 메세지로 구성되어야합니다. 메세지는 이미 로컬 ICE 에이전트에 전달 될 준비가 된 새로 수신받은 ICE candidate를 설명합니다.`candidate `객체가 지정되어있지 않거나, `null`이라면, "candidate 종료" 신호가 `end-of-candidates` a-line을 사용해서 원격 유저에게 전달됩니다. a-line의 형식은 아래와 같습니다: a=end-of-candidates
+  - : {{domxref("RTCIceCandidateInit")}} 딕셔너리 혹은 {{domxref("RTCIceCandidate")}} 객체에 해당하는 객체입니다. 이 객체의 내용은 signaling 채널을 통해 수신 받은 메세지로 구성되어야합니다. 메세지는 이미 로컬 ICE 에이전트에 전달 될 준비가 된 새로 수신받은 ICE candidate를 설명합니다.`candidate` 객체가 지정되어있지 않거나, `null` 이라면, "candidate 종료" 신호가 `end-of-candidates` a-line을 사용해서 원격 유저에게 전달됩니다. a-line의 형식은 아래와 같습니다: a=end-of-candidates
 
 ### 더 이상 사용되지 않는 변수 (Deprecated)
 
@@ -53,8 +55,6 @@ ICE candidate 추가 시도 중 에러가 발생하면, 이 메소드에서 반�
     - 지정된 {{domxref("RTCIceCandidate.usernameFragment", "ufrag")}}가 어떠한 원격 설명 (description) 안의 `ufrag` 필드와 일치하지 않음
     - {{domxref("RTCIceCandidate", "candidate")}} 문자열에 존재하는 하나 혹은 여러개의 값들이 올바르지 않거나, 파싱 될 수 없음
     - 어떠한 이유에서던 candidate를 추가하려는 시도가 실패
-
-      <span class="hidden"></span>
 
 ## 예시
 

@@ -2,6 +2,7 @@
 title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 **`AudioContext()`** 构造方法创建了一个新的 {{domxref("AudioContext")}} 对象 它代表了一个由音频模块链接而成的音频处理图，每一个模块由 {{domxref("AudioNode")}} 表示。
@@ -26,4 +27,4 @@ var audioContext = new AudioContext(options)
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.AudioContext")}}
+{{Compat}}

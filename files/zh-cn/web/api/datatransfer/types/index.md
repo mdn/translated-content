@@ -2,11 +2,12 @@
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer.types`** 是只读属性。它返回一个我们在{{event("dragstart")}}事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。 格式顺序与拖动操作中包含的数据顺序相同。
+**`DataTransfer.types`** 是只读属性。它返回一个我们在[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。格式顺序与拖动操作中包含的数据顺序相同。
 
-这些格式是指定数据类型或格式的 Unicode 字符串，通常由 MIME 类型给出。 一些非 MIME 类型的值是由于历史遗留原因（例如“text”）而特殊设置的。
+这些格式是指定数据类型或格式的 Unicode 字符串，通常由 MIME 类型给出。一些非 MIME 类型的值是由于历史遗留原因（例如“text”）而特殊设置的。
 
 ## 语法
 
@@ -16,7 +17,7 @@ dataTransfer.types;
 
 ### 返回值
 
-拖动操作中使用的数据格式数组。每种格式都是{{domxref("DOMString","字符串")}}类型。如果拖动操作不包含数据，则此数组列表将为空。如果拖动操作中包含任何文件，则其中一个类型将是`Files。`
+拖动操作中使用的数据格式数组。每种格式都是{{domxref("DOMString","字符串")}}类型。如果拖动操作不包含数据，则此数组列表将为空。如果拖动操作中包含任何文件，则其中一个类型将是 `Files`。
 
 ## 示例
 
@@ -93,8 +94,7 @@ dataTransfer.types;
 
 ## 参见
 
-- [HTML 拖放 API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖拽操作](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐的拖拽类型](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多个项目](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

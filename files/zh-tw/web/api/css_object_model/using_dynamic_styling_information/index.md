@@ -2,6 +2,7 @@
 title: 使用動態樣式資訊
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
+
 The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the _DOM Level 2 Style_ recommendation, these interfaces forms now a specification, _CSS Object Model (CSSOM)_ which aims at superseding it.
 
 In many cases, and where possible, it really is best practice to dynamically manipulate classes via the {{ domxref("element.className", "className") }} property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet. One's JavaScript code also becomes cleaner since instead of being dedicated to styling details, it can focus on the overall semantics of each section it is creating or manipulating, leaving the precise style details to the stylesheet. However, there are cases where actually obtaining or manipulating the rules can be useful (whether for whole stylesheets or individual elements), and that is described in further detail below. Note also that, as with individual element's DOM styles, when speaking of manipulating the stylesheets, this is not actually manipulating the physical document(s), but merely the internal representation of the document.
@@ -32,7 +33,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 </html>
 ```
 
-{{ EmbedLiveSample('Modify_a_stylesheet_rule') }}
+{{ EmbedLiveSample('透過 CSSOM 修改樣式表規則') }}
 
 The list of properties available in the DOM from the style property is given on the [DOM CSS Properties List](/zh-TW/docs/DOM/CSS) page.
 
@@ -84,13 +85,13 @@ function resetStyle(elemId) {
 </html>
 ```
 
-{{ EmbedLiveSample('Modify_an_element_style') }}
+{{ EmbedLiveSample('修改元素的樣式') }}
 
-The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the `document.defaultView` object returns all styles that have actually been computed for an element. See [Example 6: getComputedStyle](/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) in the examples chapter for more information on how to use this method.
+The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the `document.defaultView` object returns all styles that have actually been computed for an element. See [Example 6: getComputedStyle](/zh-TW/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) in the examples chapter for more information on how to use this method.
 
 ## DOM Style Object
 
-The `style` object represents an individual style statement. Unlike the individual rules available from the [`document.styleSheets`](/en/DOM/document.styleSheets) collection, the style object is accessed from the `document` or from the elements to which that style is applied. It represents the _in-line_ styles on a particular element.
+The `style` object represents an individual style statement. Unlike the individual rules available from the [`document.styleSheets`](/zh-TW/DOM/document.styleSheets) collection, the style object is accessed from the `document` or from the elements to which that style is applied. It represents the _in-line_ styles on a particular element.
 
 More important than the two properties noted here is the use of the `style` object to set individual style properties on an element:
 
@@ -118,13 +119,13 @@ More important than the two properties noted here is the use of the `style` obje
 </html>
 ```
 
-{{ EmbedLiveSample('DOM_Style_Object_code_sample') }}
+{{ EmbedLiveSample('DOM Style Object') }}
 
 The **media** and **type** of the style may or may not be given.
 
 ### 使用 setAttribute 方法
 
-Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/en/DOM/element.setAttribute) method to specify the CSS property and its value.
+Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/zh-TW/DOM/element.setAttribute) method to specify the CSS property and its value.
 
 ```js
 var el = document.getElementById('some-element');

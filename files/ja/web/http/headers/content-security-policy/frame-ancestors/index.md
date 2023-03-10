@@ -1,23 +1,18 @@
 ---
-title: 'CSP: frame-ancestors'
+title: "CSP: frame-ancestors"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
-tags:
-  - Ancestors
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Frame
-  - HTTP
-  - Security
-  - frame-ancestors
-browser-compat: http.headers.Content-Security-Policy.frame-ancestors
-translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
+l10n:
+  sourceCommit: 4e1857843b85afa11ce4889fc8029f73e54546ad
 ---
+
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ancestors`** ディレクティブは {{HTMLElement("frame")}}、 {{HTMLElement("iframe")}}、 {{HTMLElement("object")}} 、 {{HTMLElement("embed")}}、 {{HTMLElement("applet")}} などを使ってページを埋め込むことのできる親を指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ancestors`** ディレクティブは {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 、{{HTMLElement("embed")}}、{{HTMLElement("applet")}} などを使ってページを埋め込むことのできる親を指定します。
 
-このディレクティブを `'none'` にすることは、 {{HTTPHeader("X-Frame-Options")}}`: deny` (これは古いブラウザーも同様に対応しています) を設定するのに似ています。
+このディレクティブを `'none'` にすることは、 {{HTTPHeader("X-Frame-Options")}}`: deny`（これは古いブラウザーも同様に対応しています）を設定するのに似ています。
+
+> **メモ:** **`frame-ancestors`** は、ページを埋め込むことができる親ソースを指定することができます。
+> これは、ページ内の iframe をどこから読み込むかを指定する **`frame-src`** とは異なります。
 
 <table class="properties">
   <tbody>
@@ -45,16 +40,16 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ance
 
 `frame-ancestors` ポリシーをこのように一つ以上セットできます。
 
-```
+```http
 Content-Security-Policy: frame-ancestors <source>;
-Content-Security-Policy: frame-ancestors <source> <source>;
+Content-Security-Policy: frame-ancestors <space separated list of sources>;
 ```
 
 ### ソース
 
 \<source> は以下のうちのいずれかです。
 
-> **Note:** `frame-ancestors` ディレクティブの構文は他のソースリスト ({{CSP("default-src")}} など) のものと同様ですが、 `'unsafe-eval'` や `'unsafe-inline'` などは許可されていません。また、これは `default-src` の設定にフォールバックすることもありません。下記に示されたソースのみが許可されます。
+> **メモ:** `frame-ancestors` ディレクティブの構文は他のソースリスト ({{CSP("default-src")}} など) のものと同様ですが、 `'unsafe-eval'` や `'unsafe-inline'` などは許可されていません。また、これは `default-src` の設定にフォールバックすることもありません。下記に示されたソースのみが許可されます。
 
 - \<host-source>
 
@@ -65,7 +60,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
     - `mail.example.com:443`: mail.example.com の 443 番ポートへのアクセスの試行に一致します。
     - `https://store.example.com`: `https:` を使用した store.example.com へのアクセスの試行に一致します。
 
-    > **Warning:** `host-source` にURLスキームが指定されておらず、 iframe が `https` URLから読み込まれている場合、 iframe を読み込んでいるページの URL も `https` でなければなりません。 CSP 仕様書の [オリジンでの URL 表現とリダイレクトカウントが一致するか？](https://w3c.github.io/webappsec-csp/#match-url-to-source-expression) によるものです。
+    > **警告:** `host-source` にURLスキームが指定されておらず、 iframe が `https` URLから読み込まれている場合、 iframe を読み込んでいるページの URL も `https` でなければなりません。 CSP 仕様書の [オリジンでの URL 表現とリダイレクトカウントが一致するか？](https://w3c.github.io/webappsec-csp/#match-url-to-source-expression) によるものです。
 
 - \<scheme-source>
 
@@ -73,7 +68,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 
     - `data:` コンテンツのソースとして [`data:` URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) が使えるようにします。
       _これは安全ではありません。攻撃者は任意の data: URI を挿入することもできます。使用は控え、スクリプトには絶対に使用しないでください。_
-    - `mediastream:` コンテンツのソースとして [`mediastream:` URI](/ja/docs/Web/API/Media_Streams_API) が使えるようにします。
+    - `mediastream:` コンテンツのソースとして [`mediastream:` URI](/ja/docs/Web/API/Media_Capture_and_Streams_API) が使えるようにします。
     - `blob:` コンテンツのソースとして [`blob:` URI](/ja/docs/Web/API/Blob) が使えるようにします。
     - `filesystem:` コンテンツのソースとして [`filesystem:` URI](/ja/docs/Web/API/FileSystem) が使えるようにします。
 
@@ -84,10 +79,12 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 
 ## 例
 
-```
+```http
 Content-Security-Policy: frame-ancestors 'none';
 
 Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
+
+Content-Security-Policy: frame-ancestors 'self' https://example.org https://example.com https://store.example.com;
 ```
 
 ## 仕様書
@@ -102,3 +99,4 @@ Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("X-Frame-Options")}}
+- {{CSP("frame-src")}} CSP

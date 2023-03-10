@@ -8,6 +8,7 @@ tags:
 translation_of: Web/SVG/Tutorial/SVG_fonts
 original_slug: Web/SVG/Tutoriel/polices_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/filtres","Web/SVG/Tutoriel/SVG_Image_Tag") }}
 
 Lorsque SVG a été spécifié, le support des polices d'écriture pour le web n'était pas répandu dans les navigateurs. Comme l'accès au fichier de la police adéquate est cependant crucial pour afficher correctement le texte, une technologie de description des polices a été ajoutée à SVG pour offrir cette capacité. Elle n'a pas été conçue pour la compatibilité avec d'autres formats tels que le PostScript ou OTF, mais plutôt comme un moyen simple d'intégration des informations des glyphes en SVG lors de l'affichage.
@@ -39,7 +40,7 @@ Quelques ingrédients sont nécessaires pour intégrer une police en SVG. Prenon
 
 Nous commençons avec l'élement {{ SVGElement("font") }}. Il contient un attribut id, ce qui permet de le référencer via une URI (voir plus bas). L'attribut `horiz-adv-x` définit sa largeur moyenne, comparée aux définitions des autres glyphes individules. La valeur 1000 définit une valeur raisonnable. Plusieurs autres attributs associés précisent l'affichage de la boite qui encapsule le glyphe.
 
-L'élément  {{ SVGElement("font-face") }} est l'équivalent SVG de la déclaration CSS  [`@font-face`](/fr/CSS/@font-face). Il définit les propriétés de base de la police finale, telles que 'weight', 'style', etc. Dans l'exemple ci-dessus, la première et la plus importante est  `font-family` : Elle pourra alors être référencée via la propriété `font-family` présente dans les CSS et les SVG. Les attributs `font-weight` et `font-style` ont la même fonction que leurs équivalents CSS. Les attributs suivants sont des instructions de rendu, pour le moteur d'affichage des polices ; par exemple : quelle est la taille des jambages supérieurs des glyphes ([ascenders](http://en.wikipedia.org/wiki/Ascender_%28typography%29)).
+L'élément {{ SVGElement("font-face") }} est l'équivalent SVG de la déclaration CSS [`@font-face`](/fr/CSS/@font-face). Il définit les propriétés de base de la police finale, telles que 'weight', 'style', etc. Dans l'exemple ci-dessus, la première et la plus importante est `font-family` : Elle pourra alors être référencée via la propriété `font-family` présente dans les CSS et les SVG. Les attributs `font-weight` et `font-style` ont la même fonction que leurs équivalents CSS. Les attributs suivants sont des instructions de rendu, pour le moteur d'affichage des polices ; par exemple : quelle est la taille des jambages supérieurs des glyphes ([ascenders](http://en.wikipedia.org/wiki/Ascender_%28typography%29)).
 
 Its child, the {{ SVGElement("font-face-src") }} element, corresponds to CSS' `src` descriptor in `@font-face` declarations. You can point to external sources for font declarations by means of its children {{ SVGElement("font-face-name") }} and {{ SVGElement("font-face-uri") }}. The above example states that if the renderer has a local font available named "Super Sans Bold", it should use this instead.
 

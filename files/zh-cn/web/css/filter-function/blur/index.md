@@ -3,9 +3,10 @@ title: blur()
 slug: Web/CSS/filter-function/blur
 original_slug: Web/CSS/filter-function/blur()
 ---
+
 {{cssref}}
 
-**`blur()`** [CSS](/en-US/docs/Web/CSS) 方法将[高斯模糊](https://en.wikipedia.org/wiki/Gaussian_blur)应用于输出图片。结果为 {{cssxref("&lt;filter-function&gt;")}}.
+**`blur()`** [CSS](/zh-CN/docs/Web/CSS) 方法将[高斯模糊](https://en.wikipedia.org/wiki/Gaussian_blur)应用于输出图片。结果为 {{cssxref("&lt;filter-function&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-blur.html")}}
 
@@ -35,7 +36,7 @@ blur(1.17rem)  /* Blur with 1.17rem radius */
 - {{cssxref("filter-function/contrast", "contrast()")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}​​​​​​​
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
 - {{cssxref("filter-function/invert", "invert()")}}
 - {{cssxref("filter-function/opacity", "opacity()")}}
 - {{cssxref("filter-function/saturate", "saturate()")}}

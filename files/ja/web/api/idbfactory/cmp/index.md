@@ -2,11 +2,12 @@
 title: IDBFactory.cmp
 slug: Web/API/IDBFactory/cmp
 ---
+
 {{ APIRef("IDBFactory") }}
 
-{{domxref("IDBFactory")}}インターフェイスの`cmp()`メソッドは、2 つのキーが等価か決定するために比較し、そして、IndexedDB で保存や統合のような操作を命令します。
+{{domxref("IDBFactory")}} インターフェイスの **`cmp()`** メソッドは、2 つのキーが等価か決定するために比較し、そして、IndexedDB で保存や統合のような操作を命令します。
 
-> **Note:** Do not use this method for comparing arbitrary JavaScript values, because many JavaScript values are either not valid IndexedDB keys (booleans and objects, for example) or are treated as equivalent IndexedDB keys (for example, since IndexedDB ignores arrays with non-numeric properties and treats them as empty arrays, so any non-numeric arrays are treated as equivalent). This throws an exception if either of the values is not a valid key.
+> **メモ:** このメソッドを任意の JavaScript における値の比較に使用してはいけません。なぜなら、JavaScript の値の多くは IndexedDB の有効なキーではない (例えば、boolean や object) か、IndexedDB で等価なキーとして扱われる (例えば、IndexedDB は数値以外のプロパティを持つ配列を無視して空の配列として扱うため、数値でない配列は全て等価として扱われます) ためです。このメソッドは、値のうちいずれかが有効なキーでないとき、例外を投げます。
 
 ## 構文
 
@@ -14,9 +15,9 @@ slug: Web/API/IDBFactory/cmp
 var result = window.indexedDB.cmp(a, b);
 ```
 
-### 戻り値
+### 返値
 
-比較結果を示す整数値。 次のテーブルに可能性のある値とその意味を載せます。:
+比較結果を示す整数値。次のテーブルに可能性のある値とその意味を載せます。
 
 | 戻り値 | 説明                                  |
 | ------ | ------------------------------------- |
@@ -26,7 +27,7 @@ var result = window.indexedDB.cmp(a, b);
 
 ### 例外
 
-このメソッドでは、次の型のような{{domxref("DOMError")}} を持つ {{domxref("DOMException")}}が発生するかもしれません。
+このメソッドでは、次の型のような {{domxref("DOMError")}} を持つ {{domxref("DOMException")}} が発生するかもしれません。
 
 | 属性                                 | 説明                           |
 | ------------------------------------ | ------------------------------ |
@@ -38,32 +39,30 @@ var result = window.indexedDB.cmp(a, b);
 var a = 1;
 var b = 2;
 var result = window.indexedDB.cmp(a, b);
-console.log( "Comparison results: " + result );
+console.log( "比較結果 : " + result );
 ```
 
-## パラメーター
+## 引数
 
-- first
+- `first`
   - : 比較する 1 つ目のキー。
-- second
+- `second`
   - : 比較する 2 つ目のキー。
 
-## 仕様
+## 仕様書
 
-| Specification                                                                                                    | Status                       | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-cmp-short-any-first-any-second', 'cmp')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.IDBFactory.cmp")}}
 
 ## 関連情報
 
-- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始 : {{domxref("IDBDatabase")}}
+- トランザクションの使用 : {{domxref("IDBTransaction")}}
+- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
+- データの取得と変更 : {{domxref("IDBObjectStore")}}
+- カーソルの使用 : {{domxref("IDBCursor")}}
+- リファレンス例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

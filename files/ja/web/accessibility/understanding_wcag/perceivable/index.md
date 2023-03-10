@@ -1,20 +1,11 @@
 ---
 title: 知覚可能
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
-tags:
-  - Accessibility
-  - Principle 1
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - contrast
-  - different presentation
-  - text alternatives
-  - time-based media
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 ---
+
 この記事では、ウェブコンテンツ・アクセシビリティガイドライン（WCAG）2.0 および 2.1 の**知覚可能**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法についての実用的なアドバイスを提供します。 知覚可能とは、ユーザーが自分の感覚の 1 つ以上を使用して何らかの方法でそれを知覚できなければならないということです。
 
-> **Note:** 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://www.w3.org/TR/WCAG21/#perceivable)（英語）を参照してください。
+> **メモ:** 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://www.w3.org/TR/WCAG21/#perceivable)（英語）を参照してください。
 
 ## ガイドライン 1.1 — 非テキストコンテンツのための代替テキストの提供
 
@@ -119,7 +110,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
   </tbody>
 </table>
 
-> **Note:** [ガイドライン 1.1: 代替テキスト](https://www.w3.org/TR/WCAG21/#text-alternatives)（英語）に関する WCAG の説明も参照してください。
+> **メモ:** [ガイドライン 1.1: 代替テキスト](https://www.w3.org/TR/WCAG21/#text-alternatives)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.2 — タイムベースト・メディアのための代替テキストの提供
 
@@ -137,7 +128,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 | 1.2.8 記録済みメディアの代替を提供する (AAA)                                   | 動画を特徴とする全てのコンテンツには、わかりやすいテキストトランスクリプトを提供する必要があります。 例えば、あなたが見ている映画のスクリプトなどです。 これは、コンテンツを聴くことができない聴覚障碍者のためのものです。    | トランスクリプト情報については、[オーディオトランスクリプト](/ja/docs/Learn/Accessibility/Multimedia#Audio_transcripts)を参照してください。                                                                                                                                                                                                                                                                                |
 | 1.2.9 生音声用のトランスクリプトを提供する (AAA)                               | 放送されている生音声のコンテンツのために、例えば、あなたが聞いている演劇やミュージカルのスクリプトのような説明文を提供するべきです。 これは、コンテンツを聴くことができない聴覚障碍者のためのものです。                       | トランスクリプト情報については、[オーディオトランスクリプト](/ja/docs/Learn/Accessibility/Multimedia#Audio_transcripts)を参照してください。                                                                                                                                                                                                                                                                                |
 
-> **Note:** [ガイドライン 1.2: タイムベースト・メディア: タイムベースト・メディアに代わるものを提供する](https://www.w3.org/TR/WCAG21/#time-based-media)（英語）に関する WCAG の説明も参照してください。
+> **メモ:** [ガイドライン 1.2: タイムベースト・メディア: タイムベースト・メディアに代わるものを提供する](https://www.w3.org/TR/WCAG21/#time-based-media)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.3 — さまざまな方法で提示できるコンテンツの作成
 
@@ -301,7 +292,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
   </tbody>
 </table>
 
-> **Note:** [ガイドライン 1.3: 適応可能: 情報や構造を失うことなくさまざまな方法で提示できるコンテンツを作成する](https://www.w3.org/TR/WCAG21/#adaptable)（英語）に関する WCAG の説明も参照してください。
+> **メモ:** [ガイドライン 1.3: 適応可能: 情報や構造を失うことなくさまざまな方法で提示できるコンテンツを作成する](https://www.w3.org/TR/WCAG21/#adaptable)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.4: 前景と背景の分離を含め、ユーザーがコンテンツを見たり聞いたりしやすくする
 
@@ -546,7 +537,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
   </thead>
 </table>
 
-> **Note:** [ガイドライン 1.4: 識別可能: 背景から前景を分離するなど、ユーザーがコンテンツを見やすく、聞き取りやすくする](https://www.w3.org/TR/WCAG21/#distinguishable)（英語）に関する WCAG の説明も参照してください。
+> **メモ:** [ガイドライン 1.4: 識別可能: 背景から前景を分離するなど、ユーザーがコンテンツを見やすく、聞き取りやすくする](https://www.w3.org/TR/WCAG21/#distinguishable)（英語）に関する WCAG の説明も参照してください。
 
 ## 関連情報
 

@@ -2,6 +2,7 @@
 title: DOMPoint.fromPoint()
 slug: Web/API/DOMPoint/fromPoint
 ---
+
 {{APIRef("DOM")}}
 
 **{{domxref("DOMPoint")}}** の静的メソッド `fromPoint()` は，元の点を与えて新しい変更可能な `DOMPoint` オブジェクトを作成し、返します。

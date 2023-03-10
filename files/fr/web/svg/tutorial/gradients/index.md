@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Gradients
 original_slug: Web/SVG/Tutoriel/Gradients
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}
 
 Probablement plus excitant qu'un simple remplissage et contour, est le fait de pouvoir créer et appliquer des dégradés comme remplissage ou contour.
@@ -173,7 +174,7 @@ Cet attribut contrôle ce qu'il arrive quand le dégradé arrive à sa fin, mais
         <stop offset="0%" stop-color="red"/>
         <stop offset="100%" stop-color="blue"/>
       </radialGradient>
-      
+
       <!-- repeat -->
       <radialGradient id="Gradient
             cx="0.5" cy=
@@ -181,7 +182,7 @@ Cet attribut contrôle ce qu'il arrive quand le dégradé arrive à sa fin, mais
         <stop offset="0%
       <stop offset="10
       </radialGradient
-      
+
       <!-- reflect -->
       <radialGradient id="GradientR
            cx="0.5" cy="0.5" r="0.4" fx="0.

@@ -1,32 +1,27 @@
 ---
-title: WindowOrWorkerGlobalScope.isSecureContext
+title: isSecureContext
 slug: Web/API/isSecureContext
 original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
+l10n:
+  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
 ---
-{{APIRef()}}{{SeeCompatTable}}
 
-{{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの読み取り専用 **`isSecureContext`** プロパティは、現在のコンテキストが安全（`true`）かそうではない（`false`）を示すブール値を返します。
+{{APIRef}}
 
-## 構文
+グローバルの **`isSecureContext`** プロパティは読み取り専用で、現在の[コンテキストが安全](/ja/docs/Web/Security/Secure_Contexts)である (`true`) かそうではない (`false`) を示す論理値を返します。
 
-```
-var isItSecure = self.isSecureContext; // or just isSecureContext
-```
+## 値
 
-### 値
+`true` または `false` の論理値です。
 
-{{domxref("Boolean")}}.
+## 仕様書
 
-## 仕様
+{{Specifications}}
 
-| 仕様                                                                                                                                                                     | ステータス                           | コメント   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('Secure Contexts', '#dom-windoworworkerglobalscope-issecurecontext', 'WindowOrWorkerGlobalScope.isSecureContext')}} | {{Spec2('Secure Contexts')}} | 初期定義。 |
+## ブラウザーの互換性
 
-## ブラウザ互換性
+{{Compat}}
 
-{{Compat("api.WindowOrWorkerGlobalScope.isSecureContext")}}
+## 関連情報
 
-## 参照
-
-- [Secure contexts](/ja/docs/Web/Security/Secure_Contexts)
+- [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)

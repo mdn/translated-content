@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`setFullYear()`** メソッドは、地方時に基づき、指定された日付の「年」を設定します。新しいタイムスタンプを返します。
@@ -17,8 +13,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 
 ## 構文
 
-```
-dateObj.setFullYear(yearValue[, monthValue[, dateValue]])
+```js-nolint
+setFullYear(yearValue)
+setFullYear(yearValue, monthValue)
+setFullYear(yearValue, monthValue, dateValue)
 ```
 
 ### 引数
@@ -36,7 +34,7 @@ dateObj.setFullYear(yearValue[, monthValue[, dateValue]])
 
 ## 解説
 
-`monthValue` 引数と `dateValue` 引数を指定しない場合、{{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} メソッドと {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} メソッドから返される値が使われます。
+`monthValue` 引数と `dateValue` 引数を指定しない場合、 {{jsxref("Date.prototype.getMonth()", "getMonth()")}} メソッドと {{jsxref("Date.prototype.getDate()", "getDate()")}} メソッドから返される値が使われます。
 
 指定した値が期待される日付の範囲外の場合、それに応じて `setFullYear()` が他の引数と {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`monthValue` に 15 を指定した場合、年に 1 が加算 (`yearValue + 1`) され、月が 3 になります。
 
@@ -45,19 +43,17 @@ dateObj.setFullYear(yearValue[, monthValue[, dateValue]])
 ### setFullYear() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setFullYear(1997);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setFullYear")}}
+{{Compat}}
 
 ## 関連情報
 

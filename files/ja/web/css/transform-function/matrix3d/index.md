@@ -1,16 +1,9 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/matrix3d()
 original_slug: Web/CSS/transform-function/matrix3d()
-browser-compat: css.types.transform-function.matrix3d
 ---
+
 {{CSSRef}}
 
 **`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 4x4 の三次元同次変換行列を定義します。

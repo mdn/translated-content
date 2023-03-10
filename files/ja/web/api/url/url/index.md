@@ -2,6 +2,7 @@
 title: URL()
 slug: Web/API/URL/URL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL()`** コンストラクターは、パラメーターによって定義された URL を表す、新しく生成された {{domxref("URL")}} オブジェクトを返します。
@@ -20,10 +21,10 @@ url = new URL(url, [base])
 
 - `url`
   - : 絶対 URL または相対 URL を表す {{domxref("USVString")}}。`url` が相対 URL の場合、`base` は必須であり、ベース URL として使用されます。`url` が絶対 URL の場合、指定された `base` は無視されます。
-- `base`\_ \_{{optional_inline}}
+- `base` {{optional_inline}}
   - : `url` が相対 URL の場合に使用するベース URL を表す {{domxref("USVString")}}。 指定しない場合のデフォルトは `''` です。
 
-> **Note:** **注**: 既存の {{domxref("URL")}} オブジェクトを `base` に使用することも可能で、オブジェクトの {{domxref("URL.href","href")}} プロパティにそれ自体を文字列化します。
+> **メモ:** 既存の {{domxref("URL")}} オブジェクトを `base` に使用することも可能で、オブジェクトの {{domxref("URL.href","href")}} プロパティにそれ自体を文字列化します。
 
 ### 例外
 
@@ -57,9 +58,7 @@ var d = new URL('/en-US/docs', b);                     // => 'https://developer.
 
 ## 仕様
 
-| 仕様                                                             | 状態                 | コメント |
-| ---------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#constructors', 'URL.URL()')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

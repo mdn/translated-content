@@ -1,48 +1,54 @@
 ---
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
+l10n:
+  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-**`RTCDataChannelEvent`** インタフェースは{{domxref("RTCPeerConnection")}}へ{{domxref("RTCDataChannel")}}をアタッチしている時に発生するイベントを表現します。イベントタイプは、{{event("datachannel")}}です。
+{{APIRef("WebRTC")}}
 
-## プロパティ
+**`RTCDataChannelEvent`** インターフェイスは、特定の {{domxref("RTCPeerConnection")}} に関連するイベントを表します。
 
-_{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、このイベントは {{domxref("Event")}}のプロパティも実装します。_
+{{InheritanceDiagram}}
 
-- {{domxref("RTCDataChannelEvent.channel")}} {{readOnlyInline}}
-  - : このイベントに関連付けられたデータチャンネルを含む{{domxref("RTCDataChannel")}}を含みます。
+## コンストラクター
 
-## コンストラクタ
+- {{DOMxRef("RTCDataChannelEvent.RTCDataChannelEvent", "RTCDataChannelEvent()")}}
+  - : 新しい `RTCDataChannelEvent` を作成します。
 
-- {{domxref("RTCDataChannelEvent.RTCDataChannelEvent()", "RTCDataChannelEvent()")}}
-  - : `新しいRTCDataChannelEvent`を返します。このコンストラクタは 2 つの引数を持ち、最初の引数は、イベントタイプを表す {{domxref("DOMString")}} で、2 つ目の引数は{{domxref("RTCDataChannel")}}を含むディクショナリです。
+## インスタンスプロパティ
 
-## メソッド
+_{{domxref("Event")}} のプロパティを継承しています。。_
 
-_{{domxref("RTCDataChannelEvent")}} は {{domxref("Event")}}であり、このイベントは {{domxref("Event")}}のプロパティも実装します。具体的な {{domxref("RTCDataChannelEvent")}} メソッドはありません。_
+- {{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}
+  - : このイベントに関連付けられた {{domxref("RTCDataChannel")}} を返します。
 
 ## 例
 
+この例では、 `datachannel` イベントハンドラーを設定して、データチャンネルの参照を保存し、監視する必要があるイベントのハンドラーを設定しています。 {{domxref("RTCDataChannelEvent.channel", "channel")}} プロパティは、他にもピアへの接続を表す {{domxref("RTCDataChannel")}} を提供しています。
+
 ```js
-pc.ondatachannel = function( ev ) {
-                      alert("The data channel " +
-                            ev.channel.label +
-                            " has been added to this connection.");
-                   }
+pc.ondatachannel = (event) => {
+  inboundDataChannel = event.channel;
+  inboundDataChannel.onmessage = handleIncomingMessage;
+  inboundDataChannel.onopen = handleChannelOpen;
+  inboundDataChannel.onclose = handleChannelClose;
+}
 ```
 
-## 仕様
+データチャンネルを使用する、より完全な別の例は、[単純な RTCDataChannel の例](/ja/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)を参照してください。
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannelEvent', 'RTCDataChannelEvent') }} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+## 仕様書
 
-## ブラウザ互換性
+{{Specifications}}
 
-{{Compat("api.RTCDataChannelEvent")}}
+## ブラウザーの互換性
 
-## See also
+{{Compat}}
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
-- このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.
+## 関連情報
+
+- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- [単純な RTCDataChannel の例](/ja/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- {{domxref("RTCPeerConnection")}} （{{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} イベントのターゲットインターフェイス）

@@ -2,6 +2,7 @@
 title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.accessKeyLabel`** 只读属性返回一个 {{jsxref("String")}} 表示这个元素分配的访问密钥 (如果有的话); 否则返回一个空字符串。
@@ -37,19 +38,19 @@ node.onclick = function () {
 <button accesskey="h" title="Caption" id="btn1">Hover me</button>
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('示例') }}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.HTMLElement.accessKeyLabel")}}
+{{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("element.accessKey")}}
-- The [accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.
+- The [accesskey](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) global attribute.

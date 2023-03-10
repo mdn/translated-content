@@ -1,21 +1,18 @@
 ---
 title: Error.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - JavaScript
-  - No estandar
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 El método **`toSource()`** devuelve código que podría evaluar el mismo error.
 
 ## Sintaxis
 
-    e.toSource()
+```js
+e.toSource()
+```
 
 ### Valor de retorno
 
@@ -34,14 +31,6 @@ Llamar al método `toSource` de una instancia {{JSxRef("Error")}} (incluido {{JS
 donde estos atributos corresponden a las propiedades respectivas de la instancia de `error`.
 
 > **Nota:** Ten en cuenta que las propiedades utilizadas por el método `toSource` en la creación de esta cadena son mutables y es posible que no reflejen con precisión la función utilizada para crear una instancia de `error` o el nombre de archivo o número de línea donde ocurrió un error real.
-
-## Especificaciones
-
-No forma parte de ningún estándar.
-
-## Compatibilidad del navegador
-
-{{Compat("javascript.builtins.Error.toSource")}}
 
 ## Ve también
 

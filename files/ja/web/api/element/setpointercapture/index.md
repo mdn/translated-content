@@ -1,21 +1,25 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
+l10n:
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
+
 {{APIRef("DOM")}}
 
-**`setPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、特定の要素をこれ以降のポインターイベントの*キャプチャターゲット*として指定するために使用します。 ({{domxref("Element.releasePointerCapture()")}} を介して) キャプチャが解放されるまで、それ以降のポインターのイベントはキャプチャ要素をターゲットにします。
+**`setPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、特定の要素をこれ以降のポインターイベントの*キャプチャターゲット*として指定するために使用します。（{{domxref("Element.releasePointerCapture()")}} を介して、または {{domxref("Element/pointerup_event", "pointerup")}} イベントが発生して）キャプチャが解放されるまで、それ以降のポインターのイベントはキャプチャ要素をターゲットにします。
 
-> **Note:** ポインターキャプチャを設定している場合、 {{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} のイベントはキャプチャターゲットの境界を横断したときにのみ生成されます。これは他のすべての要素でこれらのイベントを抑制する効果があります。
+> **メモ:** ポインターキャプチャ設定後、それ以降のポインターイベントはキャプチャ対象の要素内で発生したとみなされます。よって、 `pointerover`、`pointerenter`、`pointerleave`、`pointerout` は**発生しません**。
+> タッチ画面の機器などで[直接操作](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)をしているブラウザーでは、 `pointerdown` イベント発生時に要素に対してポインターキャプチャが[自動的に適用](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)されます。ポインターキャプチャの解放は {{domxref('element.releasePointerCapture')}} メソッドを手動で呼び出したとき、または `pointerup` もしくは `pointercancel` イベント発生時に自動的に行われます。
 
 ### ポインターキャプチャの概要
 
-*ポインターキャプチャ*では、ポインターの位置にある通常 (または*ヒットテスト*) のターゲットではなく、特定の*ポインターイベント* ({{domxref("PointerEvent")}}) のイベントを特定の要素にターゲットしなおすことができます。 これは、ポインターデバイスの接触が要素から外れた場合でも、 (スクロールやパンなどで) 要素がポインターイベントを受信し続けるようにするために使用できます。
+*ポインターキャプチャ*では、ポインターの位置にある通常 (または*ヒットテスト*) のターゲットではなく、特定の*ポインターイベント* ({{domxref("PointerEvent")}}) のイベントを特定の要素にターゲットしなおすことができます。 これは、ポインターデバイスの接触が要素から外れた場合でも、（スクロールやパンなどで）要素がポインターイベントを受信し続けるようにするために使用できます。
 
 ## 構文
 
-```
-targetElement.setPointerCapture(pointerId);
+```js-nolint
+setPointerCapture(pointerId)
 ```
 
 ### 引数
@@ -25,13 +29,12 @@ targetElement.setPointerCapture(pointerId);
 
 ### 返値
 
-このメソッドは `undefined` を返します。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-| 例外               | 説明                                                     |
-| ------------------ | -------------------------------------------------------- |
-| `InvalidPointerId` | pointerId が、どのアクティブポインターとも一致しません。 |
+- `NotFoundError` {{domxref("DOMException")}}
+  - : `pointerId` がアクティブなポインターのいずれにも一致しなかった場合に発生します。
 
 ## 例
 
@@ -81,14 +84,11 @@ slider.onpointerup = stopSliding;
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       | 状態                                     | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#idl-def-element-setpointercapture-pointerid', 'setPointerCapture')}}         | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#widl-Element-setPointerCapture-void-long-pointerId', 'setPointerCapture')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -97,4 +97,4 @@ slider.onpointerup = stopSliding;
 ## 関連情報
 
 - {{domxref("Element.releasePointerCapture")}}
-- {{domxref("Pointer_events","ポインターイベント")}}
+- {{domxref("Pointer_events","ポインターイベント", "", 1)}}

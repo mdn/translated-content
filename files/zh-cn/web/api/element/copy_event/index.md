@@ -2,12 +2,13 @@
 title: copy
 slug: Web/API/Element/copy_event
 ---
+
 当用户通过浏览器 UI（例如，使用 <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd> 键盘快捷方式或从菜单中选择“复制”）启动复制操作并响应允许的{{domxref("Document.execCommand","document.execCommand('copy')")}}调用时触发`copy`事件。
 
 ## 基本信息
 
 - Specification
-  - [: Clipboard](https://www.w3.org/TR/clipboard-apis/#the-copy-action)
+  - : [Clipboard](https://www.w3.org/TR/clipboard-apis/#the-copy-action)
 - Interface
   - : {{domxref("ClipboardEvent")}}
 - Bubbles
@@ -53,12 +54,12 @@ document.addEventListener('copy', function(e){
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.copy_event")}}
+{{Compat}}
 
 ## 参见
 
 - {{domxref("HTMLElement.oncopy")}}
 - Related events
 
-  - {{event("cut")}}
-  - {{event("paste")}}
+  - [`cut`](/zh-CN/docs/Web/API/Element/cut_event)
+  - [`paste`](/zh-CN/docs/Web/API/Element/paste_event)

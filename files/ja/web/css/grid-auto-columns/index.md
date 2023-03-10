@@ -1,14 +1,8 @@
 ---
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.properties.grid-auto-columns
-translation_of: Web/CSS/grid-auto-columns
 ---
+
 {{CSSRef}}
 
 **`grid-auto-columns`** は CSS のプロパティで、暗黙的に生成されたグリッドの列{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
@@ -87,7 +81,7 @@ grid-auto-columns: unset;
 
   - : 最大値であれば最小コンテンツと同一のキーワードです。最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小サイズ（{{cssxref("min-width")}}/{{cssxref("min-height")}}で指定されたサイズ）を表します。
 
-    > **Note:** トラックの寸法が `auto` の場合は、{{cssxref("align-content")}}と{{cssxref("justify-content")}}のプロパティによって引き伸ばすことができます。
+    > **メモ:** トラックの寸法が `auto` の場合は、{{cssxref("align-content")}}と{{cssxref("justify-content")}}のプロパティによって引き伸ばすことができます。
 
 ## 公式定義
 

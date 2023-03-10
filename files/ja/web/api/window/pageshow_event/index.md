@@ -2,6 +2,7 @@
 title: 'Window: pageshow イベント'
 slug: Web/API/Window/pageshow_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`pageshow`** イベントは、操作によってブラウザーがウィンドウの文書を表示したときに {{domxref("Window")}} へ送られます。これには以下のようなものがあります。
@@ -11,7 +12,7 @@ slug: Web/API/Window/pageshow_event
 - モバイル OS で凍結されたページを復元したとき
 - ブラウザーの進む、戻るボタンを利用してこのページに戻ったとき
 
-> **Note:** 最初にページを読み込んでいる間、 `pageshow` イベントは {{domxref("Window/load_event", "load")}} イベントの*後で*発生します。
+> **メモ:** 最初にページを読み込んでいる間、 `pageshow` イベントは {{domxref("Window/load_event", "load")}} イベントの*後で*発生します。
 
 <table class="properties">
   <tbody>
@@ -78,10 +79,7 @@ events.forEach(eventName =>
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsing-the-web.html#event-pageshow', 'pageshow')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
-| {{SpecName('HTML5 W3C', 'browsers.html#event-pageshow', 'pageshow')}}             | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

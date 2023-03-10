@@ -2,6 +2,7 @@
 title: font-size
 slug: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 **`font-size`** [CSS](/zh-CN/docs/CSS) 属性指定字体的大小。因为该属性的值会被用于计算 em 和 ex 长度单位，定义该值可能改变其他元素的大小。
@@ -41,16 +42,16 @@ font-size: inherit;
 
 ### 值
 
-- `xx-small, x-small, small, medium, large, x-large, xx-large`
-  - : 该套绝对大小关键字定义相对于用户的默认字体大小 (medium)。与展示 HTML 的`<font size="1">` 到`<font size="7">（`用户默认字体大小`<font size="3">）类似。`
-- `larger, smaller`
+- `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`
+  - : 该套绝对大小关键字定义相对于用户的默认字体大小 (medium)。与展示 HTML 的 `<font size="1">` 到 `<font size="7">`（用户默认字体大小 `<font size="3">`）类似。
+- `larger`, `smaller`
   - : 比父元素的字体大或小，使用与上面的关键字的相近缩放比率。
 - `<length>`
-  - : 正数{{cssxref("&lt;length&gt;")}}.。当单位为` em或``ex时，大小为相对于父元素的文字的大小。例如，0.5em就是当前元素的父元素的字体大小的一半 `。
+  - : 正数{{cssxref("&lt;length&gt;")}}.。当单位为 `em` 或 `ex` 时，大小为相对于父元素的文字的大小。例如，`0.5em` 就是当前元素的父元素的字体大小的一半。
 - `<percentage>`
   - : 父元素字体大小的正数{{cssxref("&lt;percentage&gt;")}}
 
-最好使用用户默认字体大小的相对大小，避免使用除了` em或``ex的绝对大小单位。但是如果一定要使用绝对大小的话，px是众多单位中最好的选择，因为它的含义不会随着操作系统所认为的屏幕分辨率的大小 `（通常是不对的）`改变而改变。`
+最好使用用户默认字体大小的相对大小，避免使用除了 `em` 或 `ex` 的绝对大小单位。但是如果一定要使用绝对大小的话，px 是众多单位中最好的选择，因为它的含义不会随着操作系统所认为的屏幕分辨率的大小（通常是不对的）改变而改变。
 
 ### 正式语法
 
@@ -74,7 +75,7 @@ font-size: inherit;
 
 ### Em
 
-另一种方法是用`em`值设定字体大小。`em` 值的大小是动态的。当定义或继承 font-size 属性时，1em 等于该元素的字体大小。如果你在网页中任何地方都没有设置文字大小的话，那它将等于浏览器默认文字大小，通常是 16px。所以通常 1em = 16px。2em = 32px。 如果你设置了 body 元素的字体大小为 20px，那 1em = 20px、2em = 40px。那个 2 就是当前 em 大小的倍数。
+另一种方法是用`em`值设定字体大小。`em` 值的大小是动态的。当定义或继承 font-size 属性时，1em 等于该元素的字体大小。如果你在网页中任何地方都没有设置文字大小的话，那它将等于浏览器默认文字大小，通常是 16px。所以通常 1em = 16px。2em = 32px。如果你设置了 body 元素的字体大小为 20px，那 1em = 20px、2em = 40px。那个 2 就是当前 em 大小的倍数。
 
 可用这个公式计算像素大小的等价 em 大小：
 
@@ -136,13 +137,11 @@ span { font-size: 16px; }
 <h1 class="percent">200% H1</h1>
 ```
 
-#### Live Sample
-
-{{EmbedLiveSample('Example_2','600','200')}}
+{{EmbedLiveSample('示例 2','600','200')}}
 
 ## 备注
 
-{{Cssxref("font-size")}}属性的` em 和``ex `单位值相对于父元素的字体大小（不像其他属性，它们指的是相对当前元素的字体大小）。这意味对于{{Cssxref("font-size")}}属性来说，`em 单位`和百分比单位的作用是一样的。
+{{Cssxref("font-size")}}属性的 `em` 和 `ex` 单位值相对于父元素的字体大小（不像其他属性，它们指的是相对当前元素的字体大小）。这意味对于{{Cssxref("font-size")}}属性来说，`em` 单位和百分比单位的作用是一样的。
 
 ## 规范
 
@@ -150,4 +149,4 @@ span { font-size: 16px; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

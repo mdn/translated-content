@@ -10,6 +10,7 @@ tags:
   - URI
 translation_of: Web/API/Element/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espace de noms de l'élément ou `null` si l'élément n'est pas dans un espace de nom.

@@ -1,13 +1,8 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、オブジェクトを表す文字列を返します。
@@ -33,7 +28,7 @@ const o = new Object();
 o.toString(); // [object Object] を返す
 ```
 
-> **Note:** **注:** JavaScript 1.8.5 から、 `toString()` を {{jsxref("null")}} に対して呼び出した場合には `[object Null]` を、 {{jsxref("undefined")}} に対して呼び出した場合には `[object Undefined]` を返すようになり、これは ECMAScript 5th Edition とその後のエラッタによって定義されました。
+> **メモ:** JavaScript 1.8.5 から、 `toString()` を {{jsxref("null")}} に対して呼び出した場合には `[object Null]` を、 {{jsxref("undefined")}} に対して呼び出した場合には `[object Undefined]` を返すようになり、これは ECMAScript 5th Edition とその後のエラッタによって定義されました。
 >
 > [toString() を使用したオブジェクトクラスの検出](#Using_toString_to_detect_object_class)を参照してください。
 
@@ -61,7 +56,7 @@ console.log(bigNum.toString(2));
 
 - 2 は[二進数](https://ja.wikipedia.org/wiki/%E4%BA%8C%E9%80%B2%E6%B3%95)になります。
 - 8 は[八進数](https://ja.wikipedia.org/wiki/%E5%85%AB%E9%80%B2%E6%B3%95)になります。
-- 10 は [十真数](https://ja.wikipedia.org/wiki/%E5%8D%81%E9%80%B2%E6%B3%95)になります。
+- 10 は [十進数](https://ja.wikipedia.org/wiki/%E5%8D%81%E9%80%B2%E6%B3%95)になります。
 - 16 は [十六進数](https://ja.wikipedia.org/wiki/%E5%8D%81%E5%85%AD%E9%80%B2%E6%B3%95)になります。
 
 ## 例
@@ -145,9 +140,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.prototype.tostring', 'Object.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

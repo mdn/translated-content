@@ -2,9 +2,10 @@
 title: pattern
 slug: Web/SVG/Element/pattern
 ---
+
 {{SVGRef}}
 
-使用预定义的图形对一个对象进行填充或描边，就要用到`pattern`元素。`pattern`元素让预定义图形能够以固定间隔在 x 轴和 y 轴上重复（或平铺）从而覆盖要涂色的区域。先使用`pattern 元素定义图案，然后在给定的图形元素上用属性 fill 或属性 stroke 引用用来填充或描边的图案。`
+使用预定义的图形对一个对象进行填充或描边，就要用到`pattern`元素。`pattern`元素让预定义图形能够以固定间隔在 x 轴和 y 轴上重复（或平铺）从而覆盖要涂色的区域。先使用`pattern` 元素定义图案，然后在给定的图形元素上用属性 `fill` 或属性 `stroke` 引用用来填充或描边的图案。
 
 ## 用法
 
@@ -12,16 +13,16 @@ slug: Web/SVG/Element/pattern
 
 ## 示例
 
-» [pattern.svg](https://developer.mozilla.org/files/3268/pattern.svg)
+» [pattern.svg](/files/3268/pattern.svg)
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -41,4 +42,4 @@ slug: Web/SVG/Element/pattern
 
 ## DOM 接口
 
-该元素实现了[`SVGPatternElement`](/en/DOM/SVGPatternElement)接口。
+该元素实现了[`SVGPatternElement`](/zh-CN/DOM/SVGPatternElement)接口。

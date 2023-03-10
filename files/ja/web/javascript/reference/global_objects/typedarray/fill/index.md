@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 ---
+
 {{JSRef}}
 
 **`fill()`** メソッドは、型付き配列の開始位置から終了位置までのすべての要素を固定値で埋めます。このメソッドのアルゴリズムは {{jsxref("Array.prototype.fill()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。
@@ -68,9 +61,7 @@ if (!Uint8Array.prototype.fill) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

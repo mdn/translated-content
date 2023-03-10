@@ -1,17 +1,8 @@
 ---
 title: CSS
 slug: Learn/CSS
-tags:
-  - CSS
-  - Codificación
-  - Depuración
-  - Necesidades
-  - Principiante
-  - Tema
-  - concreción
-  - longitud
-translation_of: Learn/CSS
 ---
+
 {{LearnSidebar}}
 
 Las Hojas de estilo en cascada (del ingles _Cascading Stylesheets_ {{glossary("CSS")}}) es la siguiente tecnología que aprenderemos después de {{glossary("HTML")}}. Mientras que HTML se utiliza para definir la estructura y la semántica del contenido, CSS se usa para darle estilo y posicionarlo visualmente. CSS se puede usar, por ejemplo, para cambiar la fuente, el color, el tamaño y el espaciado del contenido, para formar multiples columnas, añadir animaciones y otros elementos decorativos.
@@ -47,9 +38,9 @@ Este tema contiene los siguientes módulos en el orden recomendado de aprendizaj
 
 ## Resolución de problemas con CSS
 
-[Uso de CSS para resolver problemas comunes](https://developer.mozilla.org/es/docs/Learn/CSS/S%C3%A1bercomo) proporciona vínculos a secciones que explican cómo usar CSS para resolver problemas comunes cuando se está creando una página web.
+[Uso de CSS para resolver problemas comunes](/es/docs/Learn/CSS/S%C3%A1bercomo) proporciona vínculos a secciones que explican cómo usar CSS para resolver problemas comunes cuando se está creando una página web.
 
 ## Ver También
 
-- [CSS en MDN](/es/docs/Web/CSS) 
+- [CSS en MDN](/es/docs/Web/CSS)
   - : Principal entrada para la documentación de CSS en MDN, donde encontrarás documentación detallada de todas las funcionalidades del lenguaje CSS. ¿Quieres saber todos los valores posibles de una propiedad? Este es tu sitio.

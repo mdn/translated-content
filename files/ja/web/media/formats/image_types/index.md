@@ -1,31 +1,8 @@
 ---
 title: 画像ファイルの種類と形式ガイド
 slug: Web/Media/Formats/Image_types
-tags:
-  - APNG
-  - BMP
-  - Bitmap
-  - Diagrams
-  - File
-  - File Types
-  - Filetype
-  - Graphics
-  - Guide
-  - ICO
-  - Icons
-  - Image
-  - Images
-  - JPEG
-  - JPG
-  - Media
-  - PNG
-  - Photos
-  - SVG
-  - WebP
-  - gif
-  - icon
-translation_of: Web/Media/Formats/Image_types
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 
 このガイドでは、ウェブブラウザーが一般的に対応している画像ファイルの種類を取り上げ、サイトの画像に使用するための最も適切な形式を選択するのに役立つ観点を提供します。
@@ -128,7 +105,7 @@ translation_of: Web/Media/Formats/Image_types
   </tbody>
 </table>
 
-> **Note:** PNG、JPEG、GIF のような古い形式は、WebP や AVIF のような新しい形式と比較して性能が劣りますが、より広範囲の「歴史的な」ブラウザーが対応しています。新しい画像形式は、対応していないブラウザーが無視できるようになってきている（つまり、市場シェアがゼロに近づいてきている）ため、人気が高まってきています。
+> **メモ:** PNG、JPEG、GIF のような古い形式は、WebP や AVIF のような新しい形式と比較して性能が劣りますが、より広範囲の「歴史的な」ブラウザーが対応しています。新しい画像形式は、対応していないブラウザーが無視できるようになってきている（つまり、市場シェアがゼロに近づいてきている）ため、人気が高まってきています。
 
 以下のリストにはウェブ上で見られる画像形式を挙げていますが、ウェブコンテンツでは避けた方が良いものがあります （一般的には、ブラウザーの対応が広くないか、より良い代替手段があるためです）。
 
@@ -169,7 +146,7 @@ translation_of: Web/Media/Formats/Image_types
 
 **注:** 各画像形式の略語は、形式、その機能、ブラウザーの互換性に関する詳細な情報 (どのバージョンで対応が導入されたか、後に導入された可能性のある特定の特殊機能を含む) についてのより詳しい説明へとリンクしています。
 
-> **Note:** Safari 11.1では、アニメーション GIF の代替として、動画形式を使用する機能が追加されました。
+> **メモ:** Safari 11.1では、アニメーション GIF の代替として、動画形式を使用する機能が追加されました。
 > 他のブラウザは対応していません。
 > 詳しくは、 [Chromium のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=791658)、[Firefox のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=895131)を参照してください。
 
@@ -183,9 +160,9 @@ translation_of: Web/Media/Formats/Image_types
 
 ### APNG (Animated Portable Network Graphics)
 
-APNG は Mozilla によって最初に導入されたファイル形式で、 [PNG](#png_portable_network_graphics) 規格を拡張してアニメーション画像の対応を追加したものです。概念的には何十年も使われているアニメーション GIF 形式に似ていますが、アニメーション GIF が 8 ビットの{{interwiki("wikipedia", "色深度")}}しか対応していないのに対し、 APNG の方が様々な{{interwiki("wikipedia", "インデックスカラー")}}に対応しているという点で優れています。
+APNG は Mozilla によって最初に導入されたファイル形式で、 [PNG](#png_portable_network_graphics) 規格を拡張してアニメーション画像の対応を追加したものです。概念的には何十年も使われているアニメーション GIF 形式に似ていますが、アニメーション GIF が 8 ビットの[色深度](https://ja.wikipedia.org/wiki/色深度)しか対応していないのに対し、 APNG の方が様々な[インデックスカラー](https://ja.wikipedia.org/wiki/インデックスカラー)に対応しているという点で優れています。
 
-APNG は、進捗インジケーターやアクティビティ{{interwiki("wikipedia", "throbber", "スロバー")}}など、他のアクティビティやサウンドトラックに同期する必要のない基本的なアニメーションに最適です。例えば、 APNG は Apple の iMessage アプリ (および iOS のメッセージアプリ) の[アニメーションステッカーを作成する際に対応している形式の 1 つ](https://developer.apple.com/imessage/)です。また、ウェブブラウザーのユーザーインターフェイスのアニメーション部分にもよく使用されています。
+APNG は、進捗インジケーターやアクティビティ[スロバー](https://en.wikipedia.org/wiki/throbber)など、他のアクティビティやサウンドトラックに同期する必要のない基本的なアニメーションに最適です。例えば、 APNG は Apple の iMessage アプリ (および iOS のメッセージアプリ) の[アニメーションステッカーを作成する際に対応している形式の 1 つ](https://developer.apple.com/imessage/)です。また、ウェブブラウザーのユーザーインターフェイスのアニメーション部分にもよく使用されています。
 
 <table class="standard-table">
   <tbody>
@@ -279,7 +256,7 @@ APNG は、進捗インジケーターやアクティビティ{{interwiki("wikip
 
 AVIF (AV1 Image File Format) は、 *AV1ビットストリームを HEIF (High Efficiency Image File Format) コンテナー*にエンコードした、強力でオープンソース、ロイヤリティフリーのファイル形式です。
 
-> **Note:** AVIF は、ウェブコンテンツで画像を共有するための「次の大きな流れ」となる可能性を秘めています。
+> **メモ:** AVIF は、ウェブコンテンツで画像を共有するための「次の大きな流れ」となる可能性を秘めています。
 > AVIF は、複雑なライセンスや特許使用料に煩わされることなく、最先端の機能と性能を提供し、他の類似製品を抑えています。
 
 AV1 は、もともとインターネットでの映像伝送用に設計された符号化方式です。
@@ -380,7 +357,7 @@ AVIF は、デスクトップでは Chrome、Opera、Firefox で対応してい�
 
 **BMP** (**Bitmap 画像**) ファイル形式は、 Windows コンピューターで最も普及しており、ウェブアプリやコンテンツではふつう、特殊な場合にのみ使用されます。
 
-> **Warning:** ウェブサイトのコンテンツに BMP ファイルを使用することは、一般的に避けてください。
+> **警告:** ウェブサイトのコンテンツに BMP ファイルを使用することは、一般的に避けてください。
 > 一般的な BMP ファイルは、データを非圧縮のラスター画像として表現するため、 png や jpg の画像形式と比較してファイルサイズが大きくなります。
 > より効率的な BMP 形式もありますが、あまり普及しておらず、ウェブブラウザーが対応していることもほとんどありません。
 
@@ -488,12 +465,12 @@ BMP は理論的には様々な内部データ表現に対応しています。
 
 ### GIF (Graphics Interchange Format)
 
-1987 年、オンラインサービスプロバイダーである CompuServe は、サービスの全会員が使用できる圧縮グラフィック形式を提供するため、 **{{interwiki("wikipedia", "GIF")}}** (**Graphics Interchange Format**) 画像ファイル形式を導入しました。
-GIF は {{interwiki("wikipedia", "Lempel-Ziv-Welch")}} (LZW) アルゴリズムを使用して、 8 ビットのインデックスカラーグラフィックを可逆圧縮します。
+1987 年、オンラインサービスプロバイダーである CompuServe は、サービスの全会員が使用できる圧縮グラフィック形式を提供するため、 **[GIF](https://ja.wikipedia.org/wiki/GIF)** (**Graphics Interchange Format**) 画像ファイル形式を導入しました。
+GIF は [Lempel-Ziv-Welch](https://ja.wikipedia.org/wiki/Lempel–Ziv–Welch) (LZW) アルゴリズムを使用して、 8 ビットのインデックスカラーグラフィックを可逆圧縮します。
 GIF は [XBM](#xbm_x_window_system_bitmap_file) とともに、 {{Glossary("HTML")}} で対応された最初の 2 つのグラフィック形式のうちのひとつでした。
 
 GIF の各画素は 8 ビットの値で表され、 24 ビット（赤、緑、青それぞれ 8 ビット）のカラーパレットへのインデックスとなります。カラーテーブルの長さは常に 2 のべき乗です（つまり、パレットは 2、4、8、16、32、64、256 の項目があります）。
-255 または 256 色以上を示すには、ふつう{{interwiki("wikipedia", "ディザリング")}}が使用されます。
+255 または 256 色以上を示すには、ふつう[ディザリング](https://ja.wikipedia.org/wiki/ディザリング)が使用されます。
 カラーパレットを持つ複数の画像ブロックをタイル状に並べてトゥルーカラー画像を作成することは[技術的には可能](https://gif.ski/)ですが、実際にはほとんど行われません。
 
 画素は不透明です。ただし、特定のカラーインデックスが透明と指定されている場合は、その値で着色された画素は完全に透明になります。
@@ -503,7 +480,7 @@ GIF は簡単なアニメーションに対応しています。最初の完全�
 GIF は、そのシンプルさと互換性から、何十年にもわたって非常に人気がありました。
 アニメーションに対応したことで、ソーシャルメディア時代に人気が再燃し、短い「動画」やミームなどの簡単なアニメーションにアニメーション GIF が広く使われるようになりました。
 
-GIF のもう一つの人気のある機能は{{interwiki("wikipedia", "インターレース", "インターレース")}}の対応で、画素列を順番通りに保存しないため、部分的に受信したファイルを低画質で表示することができるものです。
+GIF のもう一つの人気のある機能は[インターレース](https://ja.wikipedia.org/wiki/インターレース)の対応で、画素列を順番通りに保存しないため、部分的に受信したファイルを低画質で表示することができるものです。
 これは、ネットワーク接続が遅い場合に特に有効です。
 
 GIF は単純な画像やアニメーションに適していますが、フルカラー画像を GIF に変換すると満足のいくディザリングが得られないことがあります。
@@ -602,8 +579,8 @@ ICO ファイルには、複数のアイコンを含むことができ、それ�
 各アイコンのデータは、ファイルヘッダーを含まない [BMP](#bmp_ビットマップファイル) 画像か、ファイルヘッダーを含む完全な [PNG](#png_portable_network_graphics) 画像のどちらかを使用することができます。
 ICO ファイル内で PNG を使用する方法は Windows Vista までは対応しておらず、対応が十分でない可能性があるため、 ICO ファイルを使用する場合は、 BMP 形式を使用することをお勧めします。
 
-> **Warning:** ICO ファイルは、ウェブコンテンツに使用すべきではありません。
-> また、ファビコンでの利用は {{SectionOnPage("/ja/docs/Web/HTML/Element/link", "異なる利用場面のアイコンの提供")}} で述べたように、 PNG ファイルと {{HTMLElement("link")}} 要素を使用することで抑制されています。
+> **警告:** ICO ファイルは、ウェブコンテンツに使用すべきではありません。
+> また、ファビコンでの利用は [異なる利用場面のアイコンの提供](/ja/docs/Web/HTML/Element/link#%E7%95%B0%E3%81%AA%E3%82%8B%E5%88%A9%E7%94%A8%E5%A0%B4%E9%9D%A2%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%AE%E6%8F%90%E4%BE%9B) で述べたように、 PNG ファイルと {{HTMLElement("link")}} 要素を使用することで抑制されています。
 
 <table class="standard-table">
   <tbody>
@@ -824,7 +801,7 @@ JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) 仕様書が、私たちが 
     <tr>
       <th scope="row">圧縮</th>
       <td>
-        非可逆圧縮です。{{interwiki("wikipedia", "離散コサイン変換")}}に基づいています。
+        非可逆圧縮です。[離散コサイン変換](https://ja.wikipedia.org/wiki/離散コサイン変換)に基づいています。
       </td>
     </tr>
     <tr>
@@ -996,7 +973,7 @@ Internet Explorer はバージョン 4〜5 で PNG 対応を導入しました�
 
 ### SVG (Scalable Vector Graphics)
 
-SVG は [XML](/ja/docs/Glossary/XML) ベースの{{interwiki("wikipedia", "ベクターグラフィック")}}形式で、画像の内容を、図形や線の作成、色やフィルターの適用などの描画コマンド群として指定するものです。
+SVG は [XML](/ja/docs/Glossary/XML) ベースの[ベクターグラフィック](https://ja.wikipedia.org/wiki/ベクターグラフィック)形式で、画像の内容を、図形や線の作成、色やフィルターの適用などの描画コマンド群として指定するものです。
 SVG ファイルは、図やアイコンなど、任意の大きさで正確に描画できる画像に適しています。
 そのため、最近のウェブデザインでは、ユーザーインターフェイスの素材としてよく使われています。
 
@@ -1109,7 +1086,7 @@ SVG は、一連の描画コマンドで表現できる画像に最適です。�
 
 ### TIFF (Tagged Image File Format)
 
-{{interwiki("wikipedia", "Tagged Image File Format", "TIFF")}} はスキャンした写真を格納するために作成されたラスターファイル形式ですが、あらゆる種類の画像に使用することができます。
+[TIFF](https://ja.wikipedia.org/wiki/Tagged_Image_File_Format) はスキャンした写真を格納するために作成されたラスターファイル形式ですが、あらゆる種類の画像に使用することができます。
 これらはある意味で「重い」形式であり、 TIFF のファイルは他の画像形式よりも大きくなる傾向があります。
 これは、多くの場合メタデータが含まれていることと、ほとんどの TIFF 画像が非圧縮か、圧縮後のファイルがかなり大きくなってしまう圧縮アルゴリズムを使用しているためです。
 
@@ -1339,7 +1316,7 @@ WebP は現在、主要なウェブブラウザーの最新バージョンが幅
   </tbody>
 </table>
 
-> **Note:** Safari 14、すなわちバージョン 14.0 は WebP の[対応がアナウンスされている](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)にもかかわらず、 .webp 画像は macOS デスクトップではネイティブで表示されません。一方、 Safari の iOS 14 版では .webp 画像が正しく表示されます。
+> **メモ:** Safari 14、すなわちバージョン 14.0 は WebP の[対応がアナウンスされている](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)にもかかわらず、 .webp 画像は macOS デスクトップではネイティブで表示されません。一方、 Safari の iOS 14 版では .webp 画像が正しく表示されます。
 
 ### XBM (X Window System Bitmap file)
 

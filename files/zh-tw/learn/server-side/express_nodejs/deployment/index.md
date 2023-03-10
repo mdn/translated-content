@@ -2,6 +2,7 @@
 title: 'Express 教學 7: 佈署到生產環境'
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 現在你已經創建（並測試）了一個不錯的 本地圖書館 網站了，你打算把它發佈到一個公共網絡服務器，這樣圖書館管理員和網路上的其他成員就可以訪問它了。這篇文章總結了你可以怎樣找到一台主機部署你的網站，以及你需要為網站準備好佈署到生產環境該做什麼。
@@ -12,7 +13,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
       <th scope="row">預備知識:</th>
       <td>
         完成前面所有的指南主題，包括
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>
@@ -36,7 +37,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 
 本教程提供了，有關選擇託管站點的選項的一些指導，簡要概述了為使您的 Express 應用程序準備好生產，所需執行的操作，以及一個工作示例，演示如何將 LocalLibrary 網站安裝到 [Heroku](https://www.heroku.com/) 雲託管上的服務。
 
-請記住，您不必使用 Heroku - 還有其他託管服務可用。我們還提供了一個單獨的教程，以展示如何在 [PWS/Cloud Foundry](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 上安裝 LocalLibrary。
+請記住，您不必使用 Heroku - 還有其他託管服務可用。我們還提供了一個單獨的教程，以展示如何在 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 上安裝 LocalLibrary。
 
 ## 什麼是生產環境？
 
@@ -78,7 +79,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 - 額外的好處。一些提供商將提供免費域名和 SSL 證書支持，否則您將不得不為此另外支付費用。
 - 您所依賴的“免費”等級，是否會隨著時間的推移而過期，以及遷移到更昂貴等級的成本，是否意味著您最好在一開始就使用其他服務！
 
-當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) “永遠” 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入時，提供免費信用額度。
+當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) “永遠” 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入時，提供免費信用額度。
 
 許多提供商還擁有“基本”層，可提供更多有用的計算能力，和更少的限制。舉例來說， [Digital Ocean](https://www.digitalocean.com/) 是一個流行的託管服務提供商，它提供了一個相對便宜的基本計算層（在本教程寫作時，是每月 5 美元的較低範圍）。
 
@@ -219,7 +220,7 @@ Heroku 是運行時間最長，且最受歡迎的基於雲的 PaaS 服務之一�
 
 - 大多數情況下，它只是可以工作，如果你最終喜歡它，並希望升級，那麼擴展你的應用程序非常容易。
 
-雖然 Heroku 非常適合舉辦此演示，但它可能並不適合您的真實網站。 Heroku 可以輕鬆設置和擴展，但代價是靈活性較低，而且一旦退 ​​​​ 出免費套餐，可能會花費更多。
+雖然 Heroku 非常適合舉辦此演示，但它可能並不適合您的真實網站。 Heroku 可以輕鬆設置和擴展，但代價是靈活性較低，而且一旦退 出免費套餐，可能會花費更多。
 
 ### Heroku 如何工作?
 
@@ -254,7 +255,7 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 
 4. 按 **Create repository**.
 5. 單擊新倉庫頁面上的綠色“克隆或下載”按鈕 "**Clone or download**" 。
-6. 從顯示的對話框的文本字段，複製 URL 值（它應該類似於：**https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**）。
+6. 從顯示的對話框的文本字段，複製 URL 值（它應該類似於：`https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`）。
 
 現在創建了儲存庫（“repo”），我們將要在本地計算機上克隆它：
 
@@ -279,11 +280,11 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 1. 將 Express 應用程序，複製到此文件夾中（不包括 **/node_modules**，其中包含您應根據需要，從 NPM 獲取的依賴項文件）。
 2. 打開命令提示符/終端，並使用 `add` 命令，將所有文件添加到 git。
 
-3. ```bash
+    ```bash
     git add -A
     ```
 
-4. 使用 status 命令，檢查要添加的所有文件是否正確（您希望包含源文件，而不是二進製文件，臨時文件等）。它應該看起來有點像下面的列表。
+3. 使用 status 命令，檢查要添加的所有文件是否正確（您希望包含源文件，而不是二進製文件，臨時文件等）。它應該看起來有點像下面的列表。
 
     ```plain
     > git status
@@ -295,15 +296,15 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
             new file:   ...
     ```
 
-5. 如果您滿意，請將文件提交到本地儲存庫：
+4. 如果您滿意，請將文件提交到本地儲存庫：
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6. 然後使用以下內容，將本地儲存庫同步到 Github 網站：
+5. 然後使用以下內容，將本地儲存庫同步到 Github 網站：
 
-    ```plain
+    ```bash
     git push origin master
     ```
 
@@ -363,7 +364,7 @@ var mongoDB = process.env.MONGODB_URI || 'mongodb://your_user_id:your_password@d
 
 在我們繼續之前，讓我們再次測試該網站，並確保它不受我們的任何更改的影響。
 
-首先，我們需要獲取我們的依賴項（你會記得，我們 ​​ 沒有將 **node_modules**文件夾，複製到我們的 git 樹中）。您可以通過在項目根目錄的終端中，運行以下命令來執行此操作：
+首先，我們需要獲取我們的依賴項（你會記得，我們 沒有將 **node_modules**文件夾，複製到我們的 git 樹中）。您可以通過在項目根目錄的終端中，運行以下命令來執行此操作：
 
 ```bash
 npm install
@@ -495,15 +496,3 @@ heroku ps   #Display dyno status
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials
 
 {{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教學鏈接
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

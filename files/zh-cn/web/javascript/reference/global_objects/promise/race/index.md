@@ -2,9 +2,10 @@
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
+
 {{JSRef}}
 
-**`Promise.race(iterable)` **方法返回一个 promise，一旦迭代器中的某个 promise 解决或拒绝，返回的 promise 就会解决或拒绝。
+**`Promise.race(iterable)`** 方法返回一个 promise，一旦迭代器中的某个 promise 解决或拒绝，返回的 promise 就会解决或拒绝。
 
 {{EmbedInteractiveExample("pages/js/promise-race.html")}}
 
@@ -17,7 +18,7 @@ Promise.race(iterable);
 ### **参数**
 
 - iterable
-  - : 可迭代对象，类似{{jsxref("Array")}}。详见 [iterable](/en-US/docs/Web/JavaScript/Guide/iterable)。
+  - : 可迭代对象，类似{{jsxref("Array")}}。详见 [iterable](/zh-CN/docs/Web/JavaScript/Guide/iterable)。
 
 ### 返回值
 
@@ -25,7 +26,7 @@ Promise.race(iterable);
 
 ## 描述
 
-`race` 函数返回一个 `Promise`，它将与第一个传递的 promise 相同的完成方式被完成。它可以是完成（ resolves），也可以是失败（rejects），这要取决于第一个完成的方式是两个中的哪个。
+`race` 函数返回一个 `Promise`，它将与第一个传递的 promise 相同的完成方式被完成。它可以是完成（resolves），也可以是失败（rejects），这要取决于第一个完成的方式是两个中的哪个。
 
 如果传的迭代是空的，则返回的 promise 将永远等待。
 

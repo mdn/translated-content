@@ -2,6 +2,7 @@
 title: IndexedDB
 slug: Web/API/IndexedDB_API
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象（blobs））。该 API 使用索引实现对数据的高性能搜索。虽然 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 在存储较少量的数据很有用，但对于存储更大量的结构化数据来说力不从心。而 IndexedDB 提供了这种场景的解决方案。本页面 MDN IndexedDB 的主要引导页 - 这里，我们提供了完整的 API 参考和使用指南，浏览器支持细节，以及关键概念的一些解释的链接。
@@ -12,7 +13,7 @@ IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据
 
 ## 关键概念和用法
 
-IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。 然而，不像 RDBMS 使用固定列表，IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许您存储和检索用**键**索引的对象；可以存储[结构化克隆算法](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)支持的任何对象。您只需要指定数据库模式，打开与数据库的连接，然后检索和更新一系列**事务**。
+IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。然而，不像 RDBMS 使用固定列表，IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许您存储和检索用**键**索引的对象；可以存储[结构化克隆算法](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)支持的任何对象。您只需要指定数据库模式，打开与数据库的连接，然后检索和更新一系列**事务**。
 
 - 阅读更多关于 [IndexedDB 背后的概念](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB)。
 - 从[使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB) 指南的第一准则中学习异步使用 IndexedDB。
@@ -81,7 +82,7 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。 �
 ## 示例
 
 - [eLibri:](https://marco-c.github.io/eLibri/) 由 IndexedDB Mozilla DevDerby 的获奖者 Marco Castelluccio 编写的一个功能强大的图书馆和电子书阅读器应用。
-- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): 参考文档中示例的应用程序。
+- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): 参考文档中示例的应用程序。
 - [Storing images and files in IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## 规范

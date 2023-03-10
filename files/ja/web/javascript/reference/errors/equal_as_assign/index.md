@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の警告 "test for equality (==) mistyped as assignment (=)?" は、代入 (`=`) が通常は等価性 (`==`) の検査をすべき場面にあった場合に発生します。

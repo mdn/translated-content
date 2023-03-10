@@ -1,11 +1,11 @@
 ---
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
-translation_of: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement`**는 오디오와 비디오에 통용되는 미디어 관련 확장성을 제공하기 위해 {{domxref("HTMLElement")}}에 메소드와 프로퍼티를 추가한 인터페이스입니다. {{domxref("HTMLVideoElement")}} 와 {{domxref("HTMLAudioElement")}} 는 이 인터페이스를 상속합니다.
+**`HTMLMediaElement`** 는 오디오와 비디오에 통용되는 미디어 관련 확장성을 제공하기 위해 {{domxref("HTMLElement")}}에 메소드와 프로퍼티를 추가한 인터페이스입니다. {{domxref("HTMLVideoElement")}} 와 {{domxref("HTMLAudioElement")}} 는 이 인터페이스를 상속합니다.
 
 {{InheritanceDiagram(600, 120)}}
 
@@ -24,7 +24,7 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.controls")}}
   - : 미디어 엘레먼트에 컨트롤를 표시할지 결정하는 {{htmlattrxref("controls", "video")}} HTML 속성 값을 {{jsxref('Boolean')}}으로 반환합니다.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
-  - : 브라우저가 미디어 엘레먼트에 자체 컨트롤을 표시할 때 어떤 컨트롤을 보여주거나 숨길 지 결정하는 {{domxref("DOMTokenList")}}를 반환합니다. . ` DOMTokenList는 ``nodownload`, `nofullscreen`, `noremoteplayback` 값을 가질 수 있습니다.
+  - : 브라우저가 미디어 엘레먼트에 자체 컨트롤을 표시할 때 어떤 컨트롤을 보여주거나 숨길 지 결정하는 {{domxref("DOMTokenList")}}를 반환합니다. `DOMTokenList` 는 `nodownload`, `nofullscreen`, `noremoteplayback` 값을 가질 수 있습니다.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
   - : {{domxref("DOMString")}}미디어 엘레먼트의 [CORS 설정](/ko/docs/Web/HTML/CORS_settings_attributes)값을 반환합니다.
 - {{domxref("HTMLMediaElement.currentSrc")}} {{readonlyinline}}
@@ -155,7 +155,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 
 ## 이벤트
 
-_부모 엘리먼트 {{domxref("HTMLElement")}}에서 상속받은 이벤트와_ {{domxref('GlobalEventHandlers')}}에 정의된 이벤트를 믹스인합니다. [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)를 통해 이벤트를 수신하거나 `oneventname` 프로퍼티에 리스터를 할당하여 수신합니다.
+_부모 엘리먼트 {{domxref("HTMLElement")}}에서 상속받은 이벤트와_ {{domxref('GlobalEventHandlers')}}에 정의된 이벤트를 믹스인합니다. [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)를 통해 이벤트를 수신하거나 `oneventname` 프로퍼티에 리스터를 할당하여 수신합니다.
 
 - {{domxref("HTMLMediaElement.abort_event", 'abort')}}
   - : 에러 외의 원인으로 전체 리소스가 로드 되지 못했을 때 발생합니다.

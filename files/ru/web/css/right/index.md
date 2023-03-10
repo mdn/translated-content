@@ -9,7 +9,7 @@ translation_of: Web/CSS/right
 ---
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS "CSS") свойство **`right`** частично определяет горизонтальное положение позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. **`right`** не применится, если задано `position: static`).
+[CSS](/ru/docs/Web/CSS) свойство **`right`** частично определяет горизонтальное положение позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. **`right`** не применится, если задано `position: static`).
 
 {{EmbedInteractiveExample("pages/css/right.html")}}
 
@@ -44,12 +44,14 @@ right: unset;
 ### Значения
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Отрицательная, нулевая или положительная величина, которая представляет:\* for _absolutely positioned elements_, the distance to the right edge of the containing block.
+  - : Отрицательная, нулевая или положительная величина, которая представляет:
+    - for _absolutely positioned elements_, the distance to the right edge of the containing block.
     - for _relatively positioned elements_, the distance that the element is moved to the left of its normal position.
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
 - `auto`
-  - : Specifies that:\* for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("left")}} property, while `width: auto` is treated as a width based on the content; or if `left` is also `auto`, the element is positioned where it should horizontally be positioned if it were a static element.
+  - : Specifies that:
+    - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("left")}} property, while `width: auto` is treated as a width based on the content; or if `left` is also `auto`, the element is positioned where it should horizontally be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("left")}} property; or if `left` is also `auto`, the element is not moved horizontally at all.
 - `inherit`
   - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.

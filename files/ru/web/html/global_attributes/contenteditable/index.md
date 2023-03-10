@@ -7,6 +7,7 @@ tags:
   - Определение
 translation_of: Web/HTML/Global_attributes/contenteditable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 (Mozilla / 5.0 (Windows NT 6.3, WOW64; rv: 29.0) Gecko / 20100101 Firefox / 29.0)
@@ -17,7 +18,7 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 
 Если атрибут не указан, то его значение _наследуется_ от своего родительского элемента.
 
-Этот атрибут _принимает одно из определённых значений_ и не является _булевским_. Это значит, что точное использование одного из значений `true, false` или пустая строка обязательно и такое сокращение, как `<label contenteditable>Пример метки</label> `неразрешено. Верное использование — `<label contenteditable="true">Пример метки</label>`.
+Этот атрибут _принимает одно из определённых значений_ и не является _булевским_. Это значит, что точное использование одного из значений `true, false` или пустая строка обязательно и такое сокращение, как `<label contenteditable>Пример метки</label>` неразрешено. Верное использование — `<label contenteditable="true">Пример метки</label>`.
 
 Вы можете установить цвет, используемый для вставки текста {{Glossary("caret")}}
 со свойством CSS {{cssxref("caret-color")}}.

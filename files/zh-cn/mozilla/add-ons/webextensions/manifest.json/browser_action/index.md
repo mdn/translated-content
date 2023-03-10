@@ -2,6 +2,7 @@
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -59,7 +60,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
         <div class="geckoVersionNote">Firefox 48 中新出现</div>
         <p>可选，默认为 <code>false</code>。</p>
         <p>
-          使用此项来包含一个样式表以使其与浏览器 UI 和其它使用了
+          使用此项来包含一个样式表以使其与浏览器 UI 和其他使用了
           <code>browser_style</code> 属性的扩展外观上保持一致。虽然此键值默认为
           <code>false</code>，还是建议您将其包含并设其为 <code>true</code>。
         </p>
@@ -154,7 +155,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
         </p>
         <p>
           与普通网页不同，弹窗中运行的 JavaScript 能访问所有的
-          <a href="/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a
+          <a href="/zh-CN/Add-ons/WebExtensions/API">WebExtension APIs</a
           >（当然，仅对于拥有适当<a
             href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
             >权限</a
@@ -252,4 +253,4 @@ Firefox 中：
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}

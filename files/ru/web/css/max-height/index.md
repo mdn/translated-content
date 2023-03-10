@@ -5,7 +5,7 @@ translation_of: Web/CSS/max-height
 ---
 {{CSSRef}}
 
-Свойство [CSS](ru/docs/Web/CSS) **`max-height`** устанавливает максимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для `max-height`.
+Свойство [CSS](/ru/docs/Web/CSS) **`max-height`** устанавливает максимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для `max-height`.
 
 {{EmbedInteractiveExample("pages/css/max-height.html")}}
 
@@ -84,5 +84,5 @@ form { max-height: none; }
 
 ## Смотрите также
 
-- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model")
+- [Блочная модель](/ru/docs/CSS/box_model)
 - {{ Cssxref("max-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("min-height") }}

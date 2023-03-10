@@ -3,6 +3,7 @@ title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 original_slug: Web/CSS/gradient/linear-gradient()
 ---
+
 {{CSSRef}}
 
 CSS **`linear-gradient()`** 函数用于创建一个表示两种或多种颜色线性渐变的图片。其结果属于{{cssxref("&lt;gradient&gt;")}}数据类型，是一种特别的{{cssxref("&lt;image&gt;")}}数据类型。
@@ -104,7 +105,7 @@ where <side-or-corner> = [ left | right ] || [ top | bottom ]
 
 ### 语法历史
 
-`linear-gradient的语法`由 2008 年实施的[first Apple proposal](http://www.webkit.org/blog/175/introducing-css-gradients/)发展而来。
+`linear-gradient` 的语法由 2008 年实施的 [first Apple proposal](http://www.webkit.org/blog/175/introducing-css-gradients/) 发展而来。
 
 ```
 -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*)
@@ -118,7 +119,7 @@ where <side-or-corner> = [ left | right ] || [ top | bottom ]
 -moz-linear-gradient([ [ [top | bottom] || [left | right] ],]? <color-stop>[, <color-stop>]+);
 ```
 
-新的语法不需要` to()、``from()和``color-stop()函数，所以这些函数被丢弃。而``top `/`bottom`与`left`/`right的顺序也被标记为不重要，所以`Mozilla 移除了必需首先定义`top`/`bottom`的限制。
+新的语法不需要 `to()`、`from()` 和 `color-stop()` 函数，所以这些函数被丢弃。而 `top` / `bottom` 与 `left` / `right` 的顺序也被标记为不重要，所以 `Mozilla` 移除了必需首先定义 `top` / `bottom` 的限制。
 
 新的语法仍然有一个缺点：它只允许水平和垂直渐变。在多次变更解决了方向限制的问题之后，它被增加到[CSS Images Values and Content Replacement Level 3 draft in 2011-02-17](http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient)。
 
@@ -139,11 +140,11 @@ linear-gradient([ [ [ {{cssxref("&lt;angle&gt;")}} | to [top | bottom] || [left 
 
 以上应当是最终语法。
 
-在带前缀的变体和不带前缀的提案之间仍然存在一项语义的分歧。最终 Apple 的提案显示，带前缀的语法都使用极坐标定义{{ cssxref("&lt;angle&gt;") }}参数，导致了`0deg指向东方。为了与CSS的其他部分保持一致，标准将0deg指向北方。为了防止使用前缀版本属性的站点不至于崩溃，它们保持原始的角度定义（0deg指向东方）。在使用不带前缀版本的时候将会切换到正确的规格。在这种不兼容的情况下，`Gecko 给所有语法都加上前缀，不带前缀且没有 to 关键词的语法会被丢弃。
+在带前缀的变体和不带前缀的提案之间仍然存在一项语义的分歧。最终 Apple 的提案显示，带前缀的语法都使用极坐标定义 {{ cssxref("&lt;angle&gt;") }} 参数，导致了`0deg` 指向东方。为了与 CSS 的其他部分保持一致，标准将 0deg 指向北方。为了防止使用前缀版本属性的站点不至于崩溃，它们保持原始的角度定义（0deg 指向东方）。在使用不带前缀版本的时候将会切换到正确的规格。在这种不兼容的情况下，Gecko 给所有语法都加上前缀，不带前缀且没有 to 关键词的语法会被丢弃。
 
-## 范例
+## 示例
 
-### 例 45 度渐变
+### 45 度渐变
 
 可以为渐变轴某个位置指定某个颜色，这些位置可被称为“颜色中间点（color-stops）”。颜色会从一个颜色中间点平滑过渡到下一个。在渐变范围内，每个颜色都表现为一条垂直于渐变轴的直线。在下图中，渐变轴从左上角出发并且呈 45 度。渐变轴上定义了红色和蓝色两个颜色中间点。
 
@@ -159,7 +160,7 @@ div {
 
 {{EmbedLiveSample("45 度渐变",120,120)}}
 
-### 从 60％的梯度线开始的渐变
+### 从 60% 的梯度线开始的渐变
 
 有时候我们不希望一开始就出现渐变，可以从中间某个地方开始最好。为了实现这个效果，可以在你希望渐变梯度开始的地方，加上一个同样色值的颜色中间点。
 
@@ -173,9 +174,9 @@ div {
 }
 ```
 
-#### Result:
+#### 结果
 
-{{EmbedLiveSample("从 60％的梯度线开始的渐变")}}
+{{EmbedLiveSample("从 60% 的梯度线开始的渐变")}}
 
 ### 具有多个颜色停止的渐变
 
@@ -193,7 +194,7 @@ div {
 }
 ```
 
-#### Result:
+#### 结果
 
 {{EmbedLiveSample("具有多个颜色停止的渐变")}}
 
@@ -225,7 +226,7 @@ div {
 }
 ```
 
-#### Result:
+#### 结果
 
 {{EmbedLiveSample("使用透明度")}}
 
@@ -247,7 +248,7 @@ div {
 
 \-moz-前缀的规则用于兼容 Fx 3.6 to Fx 15 的火狐浏览器。 -webkit-前缀的规则用于兼容在 Android 4.3 以前版本、iOS 6.1 以前版本、Safari 6。当使用带前缀的规则时，不要加“to”关键字。
 
-> **备注：** Notes：如果将\<body>标签的 background-image 属性设置为线性渐变`linear-gradient`，除非您还设置文档根标签（例如\<html>标签）的[min-height](/zh-CN/docs/Web/CSS/min-height)属性，否则渐变不会填充浏览器屏幕到 100％。
+> **备注：** 如果将\<body>标签的 background-image 属性设置为线性渐变`linear-gradient`，除非您还设置文档根标签（例如\<html>标签）的[min-height](/zh-CN/docs/Web/CSS/min-height)属性，否则渐变不会填充浏览器屏幕到 100％。
 
 ## 规范
 
@@ -257,7 +258,7 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
 - [Using CSS gradients](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients), {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}};
 - Some properties where it can be used: {{cssxref("background-image")}}, {{cssxref("background")}};

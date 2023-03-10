@@ -2,15 +2,16 @@
 title: Event
 slug: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event`** 接口表示在 DOM 中出现的事件。
 
-一些事件是由用户触发的，例如鼠标或键盘事件；而其他事件常由 API 生成，例如指示动画已经完成运行的事件，视频已被暂停等等。事件也可以通过脚本代码触发，例如对元素调用 [`HTMLElement.click()`](/en-US/docs/Web/API/HTMLElement/click) 方法，或者定义一些自定义事件，再使用 [`EventTarget.dispatchEvent()`](/en-US/docs/Web/API/EventTarget/dispatchEvent) 方法将自定义事件派发往指定的目标（target）。
+一些事件是由用户触发的，例如鼠标或键盘事件；而其他事件常由 API 生成，例如指示动画已经完成运行的事件，视频已被暂停等等。事件也可以通过脚本代码触发，例如对元素调用 [`HTMLElement.click()`](/zh-CN/docs/Web/API/HTMLElement/click) 方法，或者定义一些自定义事件，再使用 [`EventTarget.dispatchEvent()`](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法将自定义事件派发往指定的目标（target）。
 
 有许多不同类型的事件，其中一些使用基于 `Event` 主接口的二次接口。`Event` 本身包含适用于所有事件的属性和方法。
 
-很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过[`EventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)方法可以将事件处理函数绑定到不同的[HTML elements](/zh-CN/docs/Web/HTML/Element)上 (比如`<button>`, `<div>`, `<span>`等等) 。这种绑定事件处理函数的方式基本替换了老版本中使用 HTML [event handler attributes](/zh-CN/docs/HTML/Global_attributes)来绑定事件处理函数的方式。除此之外，通过正确使用[`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener)方法，这些事件处理函数也能被移除。
+很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过[`EventTarget.addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)方法可以将事件处理函数绑定到不同的[HTML elements](/zh-CN/docs/Web/HTML/Element)上 (比如`<button>`, `<div>`, `<span>`等等) 。这种绑定事件处理函数的方式基本替换了老版本中使用 HTML [event handler attributes](/zh-CN/docs/HTML/Global_attributes)来绑定事件处理函数的方式。除此之外，通过正确使用[`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener)方法，这些事件处理函数也能被移除。
 
 > **备注：** 一个元素可以绑定多个事件处理函数，甚至是同一种类型的事件。尤其是这种分离的，并且相互独立的代码模块对同一个元素绑定事件处理函数，每一个模块代码都有着独立的目的。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放元素）
 
@@ -154,7 +155,7 @@ slug: Web/API/Event
 
 ## 浏览器兼容性
 
-{{Compat("api.Event")}}
+{{Compat}}
 
 ## 参考
 

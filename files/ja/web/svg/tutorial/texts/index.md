@@ -1,11 +1,8 @@
 ---
 title: Texts
 slug: Web/SVG/Tutorial/Texts
-tags:
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Texts
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
 
 SVG でのテキストについて説明するにあたり、これをほとんど別物である 2 つのトピックに区別しなければなりません。ひとつは画像内へのテキストの収容と表示、もう一つは SVG フォントです。後者はこのチュートリアルの後のセクションで説明することにして、ここでは一つ目の部分 "SVG 画像へのテキスト入力" に集中します。

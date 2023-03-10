@@ -2,16 +2,17 @@
 title: Digest
 slug: Web/HTTP/Headers/Digest
 ---
+
 {{HTTPSidebar}}
 
 **`Digest`** 响应 HTTP 头提供了请求资源一个 {{Glossary("摘要")}} 。
 
-在 [RFC 7231](https://tools.ietf.org/html/rfc7231) 术语中，它是一个资源的选定表示。这个选定代表依赖于 [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) 和 [`Content-Encoding`](/en-US/docs/Web/HTTP/Headers/Content-Encoding) 头部值：所以一个单一的资源可能有多个不同的摘要值。
+在 [RFC 7231](https://tools.ietf.org/html/rfc7231) 术语中，它是一个资源的选定表示。这个选定代表依赖于 [`Content-Type`](/zh-CN/docs/Web/HTTP/Headers/Content-Type) 和 [`Content-Encoding`](/zh-CN/docs/Web/HTTP/Headers/Content-Encoding) 头部值：所以一个单一的资源可能有多个不同的摘要值。
 
 摘要是整个表示的计算。这个表示可以是：
 
 - 完全包含在响应消息体中
-- 完全不包含在消息体中中 (例如，在一个 [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD) 请求的响应中)
+- 完全不包含在消息体中中 (例如，在一个 [`HEAD`](/zh-CN/docs/Web/HTTP/Methods/HEAD) 请求的响应中)
 - 部分包含在消息体中 (例如，在一个 [range request](/zh-CN/docs/Web/HTTP/Range_requests) 的响应中)。
 
 | Header type                                      | {{Glossary("Response header")}} |

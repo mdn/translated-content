@@ -1,13 +1,6 @@
 ---
 title: SEO
 slug: Glossary/SEO
-tags:
-  - Glossary
-  - Intro
-  - SEO
-  - Search
-  - WebMechanic
-translation_of: Glossary/SEO
 ---
 **SEO**(검색 엔진 최적화)는 웹사이트가 검색 결과에 더 잘 보이도록 최적화하는 과정입니다. 검색 랭크 개선이라고도 합니다.
 

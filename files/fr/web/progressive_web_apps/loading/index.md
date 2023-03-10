@@ -6,13 +6,14 @@ tags:
 translation_of: Web/Progressive_web_apps/Loading
 original_slug: Web/Progressive_web_apps/Chargement
 ---
+
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 Dans les articles précédents, nous avons abordé les APIs qui nous aident à faire de notre exemple [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) une Progressive Web App: [Service Workers](en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [Manifestes Web](/fr/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications et Push](/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). Dans cet article, nous irons encore plus loin et améliorerons la performance de l'application en téléchargeant progessivement ses ressources.
 
 ## Première visualisation signifiante
 
-Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible  — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
+Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
 
 Ceci peut être réalisé grâce au chargement progressif — également appelé [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading). Tout ceci consiste en retardant autant que possible le plus de ressources que possible (HTML, CSS, JavaScript), et ne charger immédiatement que celles qui sont réellement nécessaire pour la toute première expérience.
 
@@ -154,7 +155,7 @@ Rappelez-vous de ce que nous avons dit concernant l'approche d'amélioration pro
 
 ## Dernières réflexions
 
-C'est fini pour ces séries de tutoriels — nous avons examiné le [code source code de l'exemple d'application js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une [Introduction](/fr/docs/Web/Progressive_web_apps/Introduction), [la structure des PWA](/fr/docs/Web/Progressive_web_apps/App_structure), [la disponibilité en mode déconnectégrâce aux Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [les PWAs installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs) et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du [Service Worker Cookbook](https://serviceworke.rs/). Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'[API ntersection Observer](/fr/docs/Web/API/Intersection_Observer_API).
+C'est fini pour ces séries de tutoriels — nous avons examiné le [code source code de l'exemple d'application js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une [Introduction](/fr/docs/Web/Progressive_web_apps/Introduction), [la structure des PWA](/fr/docs/Web/Progressive_web_apps/App_structure), [la disponibilité en mode déconnectégrâce aux Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [les PWAs installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs) et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/). Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'[API ntersection Observer](/fr/docs/Web/API/Intersection_Observer_API).
 
 N'hésitez pas à faire des essais avec le code, à améliorer votre application existante avec des des fonctionnalités PWA ou à bâtir quelque chose d'entièrement nouveau de vous même. Les PWAs amènent un énorme avantage sur les applications web classiques.
 

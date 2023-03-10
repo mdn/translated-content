@@ -1,12 +1,10 @@
 ---
 title: Rebota en las paredes
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls
 ---
-{{GamesSidebar}}
 
-{{IncludeSubnav("/es/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
 
@@ -82,7 +80,7 @@ En este punto, debe insertar el bloque de código anterior en la función draw()
 
 Prueba tu código en este punto, y te quedarás impresionado - ¡ahora tenemos una pelota que rebotó en los cuatro bordes del canvas! Pero tenemos otro problema sin embargo - cuando la bola golpea cada pared se hunde en ella levemente antes de cambiar la dirección:
 
-![](https://mdn.mozillademos.org/files/10432/ball-in-wall.png)
+![](ball-in-wall.png)
 
 Esto es porque estamos calculando el punto de colisión de la pared y el centro de la bola, mientras que deberíamos hacerlo por su circunferencia. La bola debe rebotar justo después de que toca la pared, no cuando ya está a medio camino en la pared, así que vamos a ajustar nuestras declaraciones un poco para incluir eso. Actualice el último código que agregó, a esto:
 
@@ -107,6 +105,6 @@ Chequea el código acabado para esta parte con el tuyo, y juega:
 
 ## Siguientes pasos
 
-Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado).
+Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}

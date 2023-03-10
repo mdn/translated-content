@@ -2,6 +2,7 @@
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
+
 {{JSRef}}
 
 **`trim()`** 方法會移除字串起始及結尾處的空白字元。

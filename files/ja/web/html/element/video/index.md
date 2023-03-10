@@ -1,27 +1,9 @@
 ---
 title: '<video>: 動画埋め込み要素'
 slug: Web/HTML/Element/video
-tags:
-  - Element
-  - HTML
-  - HTML Video
-  - HTML Video Player
-  - HTML embedded content
-  - HTML5
-  - Media
-  - Movie Playback
-  - Movies
-  - Multimedia
-  - Playing Movies
-  - Playing Video
-  - Reference
-  - Showing Video
-  - Video
-  - Web
-browser-compat: html.elements.video
-translation_of: Web/HTML/Element/video
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
 
@@ -39,7 +21,7 @@ translation_of: Web/HTML/Element/video
 
   - : 論理属性です。この属性が指定された場合、データの読み込みが完了し、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
-    > **Note:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
+    > **メモ:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
 
     動画の自動再生を無効にするために `autoplay="false"` を指定しても機能しません。 `<video>` タグにこの属性があれば、動画が自動的に再生されます。自動再生を無効にするには、属性を完全に取り除くことが必要です。
 
@@ -97,7 +79,7 @@ translation_of: Web/HTML/Element/video
 
     既定値はブラウザーごとに異なります。仕様書では `metadata` を設定するよう助言しています。
 
-    > **Note:**
+    > **メモ:**
     >
     > - `autoplay` 属性は `preload` より優先します。`autoplay` を指定すると、言うまでもなくブラウザーは動画を再生するためにダウンロードを始めなければなりません。
     > - 仕様書は、ブラウザーがこの属性の値に従うことを強制していません。これは単なるヒントです。
@@ -486,7 +468,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

@@ -1,15 +1,8 @@
 ---
 title: overscroll-behavior-y
 slug: Web/CSS/overscroll-behavior-y
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - overscroll-behavior-y
-  - recipe:css-property
-translation_of: Web/CSS/overscroll-behavior-y
 ---
+
 {{CSSRef}}
 
 **`overscroll-behavior-y`** は CSS のプロパティで、スクロール領域の垂直方向の境界に達したときのブラウザーの挙動を設定します。
@@ -65,9 +58,7 @@ overscroll-behavior-y: unset;
 
 ## 仕様書
 
-| 仕様書                                                                                                                               | 状態                                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ---- |
-| {{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior-y', 'overscroll-behavior-y')}} | {{Spec2('CSS Overscroll Behavior')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 La méthode **`Geolocation.getCurrentPosition()`** fournit la position actuelle de l'appareil.

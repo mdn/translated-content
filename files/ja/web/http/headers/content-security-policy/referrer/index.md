@@ -1,27 +1,19 @@
 ---
-title: 'CSP: referrer'
+title: "CSP: referrer"
 slug: Web/HTTP/Headers/Content-Security-Policy/referrer
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Deprecated
-  - Reference
-  - Security
-  - referrer
-browser-compat: http.headers.Content-Security-Policy.referrer
-translation_of: Web/HTTP/Headers/Content-Security-Policy/referrer
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
-{{HTTPSidebar}} {{deprecated_header}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`referrer`** ディレクティブは、ページから離れたリンクの {{HTTPHeader("Referer")}} ヘッダー (元の仕様書の綴りミスのため `r` は単一) の情報を指定するために使用されます。この API は非推奨であり、ブラウザーから削除されました。
+{{HTTPSidebar}} {{deprecated_header}}{{Non-standard_header}}
 
-> **Note:** 代わりに {{HTTPHeader("Referrer-Policy")}} ヘッダーを使用してください。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`referrer`** ディレクティブは、ページから離れたリンクの {{HTTPHeader("Referer")}} ヘッダー（元の仕様書の綴りミスのため `r` は単一）の情報を指定するために使用されます。この API は非推奨であり、ブラウザーから削除されました。
+
+> **メモ:** 代わりに {{HTTPHeader("Referrer-Policy")}} ヘッダーを使用してください。
 
 ## 構文
 
-```
+```http
 Content-Security-Policy: referrer <referrer-policy>;
 ```
 
@@ -41,7 +33,7 @@ Content-Security-Policy: referrer <referrer-policy>;
 
 ## 例
 
-```
+```http
 Content-Security-Policy: referrer "none";
 ```
 

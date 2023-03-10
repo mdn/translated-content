@@ -1,17 +1,13 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accessibility
-  - HTML
-translation_of: Web/Accessibility/ARIA
 ---
+
 Accessible Rich Internet Applications **(ARIA)** はウェブコンテンツやウェブアプリケーション (特に JavaScript で開発するもの) を、ハンディキャップを持つ人々にとってよりアクセシブルにする方法を定義します。
 
 ARIA は、アプリケーションで一般的に使用されている対話操作やウィジェットを、他のメカニズムがない場合に支援技術に渡すことができるように HTML を補完します。例えば ARIA は、 HTML4 のアクセシブルナビゲーションランドマーク、 JavaScript のウィジェット、フォームのヒントやエラーメッセージ、ライブコンテンツの更新などを可能にします。
 
-> **Warning:** これらのウィジェットの多くは、後に HTML5 に組み込まれました。意味的に正しい HTML 要素が存在するのであれば、 **ARIA を使用するよりも、その要素を使用したほうがいいでしょう**。例えば、ネイティブな要素には[キーボードのアクセシビリティ](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)や役割、状態が組み込まれています。しかし、 ARIA を使用する場合は、スクリプトで (同等の) ブラウザーの動作を模倣する責任があります。
+> **警告:** これらのウィジェットの多くは、後に HTML5 に組み込まれました。意味的に正しい HTML 要素が存在するのであれば、 **ARIA を使用するよりも、その要素を使用したほうがいいでしょう**。例えば、ネイティブな要素には[キーボードのアクセシビリティ](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)や役割、状態が組み込まれています。しかし、 ARIA を使用する場合は、スクリプトで (同等の) ブラウザーの動作を模倣する責任があります。
 
 プログレスバーウィジェットのためのマークアップです。
 
@@ -42,7 +38,7 @@ function updateProgress(percentComplete) {
 }
 ```
 
-> **Note:** ARIA は HTML4 以降に導入されたため、 HTML4 や XHTML の派生形では検証できません。ただし、技術的に問題があっても、それを上回るアクセシビリティの向上が得られます。
+> **メモ:** ARIA は HTML4 以降に導入されたため、 HTML4 や XHTML の派生形では検証できません。ただし、技術的に問題があっても、それを上回るアクセシビリティの向上が得られます。
 >
 > HTML5 では、すべての ARIA 属性が有効です。新しいランドマーク要素 (`<main>`, `<header>`, `<nav>` など) は ARIA ロールに組み込まれたため、重複指定する必要はありません。
 

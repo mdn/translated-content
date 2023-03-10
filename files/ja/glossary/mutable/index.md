@@ -2,6 +2,7 @@
 title: Mutable (ミュータブル)
 slug: Glossary/Mutable
 ---
+
 ミュータブルは、変更可能な変数の型です。{{glossary("JavaScript")}} では、{{Glossary("primitive", "プリミティブな値")}}ではない、{{Glossary("Object","オブジェクト")}}と{{Glossary("Array","配列")}}だけがミュータブルです。
 
 （変数名が新しい値を指し示すようにすることはできますが、以前の値はまだメモリーに保持されていますので、ガベージコレクションが必要です。）
@@ -34,4 +35,4 @@ immutableString = immutableString + "World";
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "イミュータブル")}}
+- Wikipedia 上の [イミュータブル](https://ja.wikipedia.org/wiki/イミュータブル)

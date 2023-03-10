@@ -2,6 +2,7 @@
 title: 笑话生成器
 slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 本节是一个小测验，要求你运用所学知识制作一个笑话生成器。祝玩的愉快！
@@ -180,7 +181,7 @@ function result() {
 - 除了在 HTML 文件中引入这个 JavaScript 文件之外，完全不需要编辑 HTML。
 - 如果你不确定当前 JavaScript 是否正确添加到了你的 HTML 中，可以尝试暂时删除 JavaScript 文件的所有内容，然后加上一些简单但效果显著的 JavaScript 代码，保存文件并刷新浏览器。下面的示例会让 {{htmlelement("html")}} 背景变为红色，如果 JavaScript 成功加载，那么整个浏览器窗口将变红：
 
-- ```js
+  ```js
   document.querySelector('html').style.backgroundColor = 'red';
   ```
 
@@ -192,15 +193,3 @@ function result() {
 如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 [本节测验的讨论页](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686) 或者 [Mozilla 聊天室](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 频道取得帮助。要自己先尝试，作弊是不会有收获的！
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## 本章目录
-
-- [JavaScript 是什么？](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [课程评估：笑话机](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

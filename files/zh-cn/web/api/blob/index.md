@@ -2,6 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 `Blob` 对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取，也可以转换成 {{DOMxRef("ReadableStream")}} 来用于数据操作。
@@ -10,7 +11,7 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 ## 使用 blob
 
-要从其它非 blob 对象和数据构造一个 `Blob`，请使用 {{DOMxRef("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{DOMxRef("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 `Blob` 对象，请参阅 {{DOMxRef("File")}} 文档。
+要从其他非 blob 对象和数据构造一个 `Blob`，请使用 {{DOMxRef("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{DOMxRef("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 `Blob` 对象，请参阅 {{DOMxRef("File")}} 文档。
 
 接受 `Blob` 对象的 API 也被列在 {{DOMxRef("File")}} 文档中。
 
@@ -41,7 +42,7 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 ### 创建一个 blob
 
-{{DOMxRef("Blob.Blob", "Blob()")}} 构造函数可以通过其它对象创建 blob。例如，用一个 JSON 字符串构造一个 blob：
+{{DOMxRef("Blob.Blob", "Blob()")}} 构造函数可以通过其他对象创建 blob。例如，用一个 JSON 字符串构造一个 blob：
 
 ```js
 const obj = {hello: 'world'};
@@ -50,7 +51,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 
 ### 创建一个指向类型化数组的 URL
 
-以下代码创建了一个  JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，并创建一个新的，包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
+以下代码创建了一个 JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，并创建一个新的，包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
 
 #### HTML
 
@@ -131,7 +132,7 @@ const text = await (new Response(blob)).text();
 const text = await blob.text();
 ```
 
-通过使用 `FileReader` 的其它方法可以把 Blob 读取为字符串或者数据 URL。
+通过使用 `FileReader` 的其他方法可以把 Blob 读取为字符串或者数据 URL。
 
 ## 规范
 

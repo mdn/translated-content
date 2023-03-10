@@ -2,6 +2,7 @@
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
+
 {{JSRef}}
 
 **`shift()`** 方法从数组中删除**第一个**元素，并返回该元素的值。此方法更改数组的长度。
@@ -10,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 ## 语法
 
-```plain
-arr.shift()
+```js
+shift()
 ```
 
 ### 返回值
@@ -35,16 +36,16 @@ arr.shift()
 ```js
 let myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
 
-console.log('调用 shift 之前: ' + myFish);
-// "调用 shift 之前: angel,clown,mandarin,surgeon"
+console.log('调用 shift 之前：' + myFish);
+// "调用 shift 之前：angel,clown,mandarin,surgeon"
 
 var shifted = myFish.shift();
 
-console.log('调用 shift 之后: ' + myFish);
-// "调用 shift 之后: clown,mandarin,surgeon"
+console.log('调用 shift 之后：' + myFish);
+// "调用 shift 之后：clown,mandarin,surgeon"
 
-console.log('被删除的元素: ' + shifted);
-// "被删除的元素: angel"
+console.log('被删除的元素：' + shifted);
+// "被删除的元素：angel"
 ```
 
 ```plain
@@ -83,8 +84,9 @@ while( (i = names.shift()) !== undefined ) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.concat()")}}

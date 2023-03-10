@@ -1,15 +1,8 @@
 ---
 title: CSS básico
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - CSS
-  - Codificacion/Scripting
-  - Estilos/Styling
-  - Principiante
-  - Web
-  - aprende
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
+
 {{LearnSideBar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics","Learn/Getting_started_with_the_web")}}
 
 CSS (_Hojas de Estilo en Cascada_) es el código que usas para dar estilo a tu página web. _CSS Básico_ te lleva a través de lo que tú necesitas para empezar. Contestará a preguntas del tipo: ¿Cómo hago mi texto rojo o negro? ¿Cómo hago que mi contenido se muestre en tal y tal lugar de la pantalla? ¿Cómo decoro mi página web con imágenes de fondo y colores?
@@ -28,21 +21,21 @@ Vas a probarlo: pega estas tres líneas de CSS en un nuevo archivo en tu editor 
 
 Pero aún debes aplicar el CSS a tu documento HTML, de otra manera el estilo CSS no cambiará cómo tu navegador muestra el documento HTML. (Si no has seguido nuestro proyecto, lee [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos) y [HTML básico](/es/docs/Learn/Getting_started_with_the_web/HTML_basics) para averiguar qué necesitas hacer primero.)
 
-1.  Abre tu archivo `index.html` y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas `<head>` y `</head>`:
+1. Abre tu archivo `index.html` y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas `<head>` y `</head>`:
 
     ```html
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     ```
 
-2.  Guarda el archivo `index.html` y cárgalo en tu navegador. Debes ver algo como esto:
+2. Guarda el archivo `index.html` y cárgalo en tu navegador. Debes ver algo como esto:
 
-![Un logo de Mozilla y algunos párrafos. El texto del párrafo ha sido estilizado en rojo por nuestro css.](https://mdn.mozillademos.org/files/9435/website-screenshot-styled.png)Si tu texto del párrafo ahora es rojo, ¡felicitaciones, ya has escrito tu primer CSS de forma exitosa!
+![Un logo de Mozilla y algunos párrafos. El texto del párrafo ha sido estilizado en rojo por nuestro css.](website-screenshot-styled.png)Si tu texto del párrafo ahora es rojo, ¡felicitaciones, ya has escrito tu primer CSS de forma exitosa!
 
 ### Anatomía de una regla CSS
 
 Observa el código CSS de arriba, un poco más a detalle:
 
-![Partes de una declaracion de css](https://mdn.mozillademos.org/files/11925/csspartes.png)
+![Partes de una declaracion de css](css-declaration-small.png)
 
 La estructura completa es llamada **regla predeterminada** (pero a menudo «regla» para abreviar). Nota también los nombres de las partes individuales:
 
@@ -99,14 +92,14 @@ Existen muchos más selectores para explorar, y podrás encontrar una lista más
 
 Ahora que has explorado lo básico de CSS, empieza por añadir información y algunas reglas más a tu archivo `style.css` para que tu ejemplo se vea bonito. Primero, haz que tus fuentes y texto luzcan un poco mejor.
 
-1.  Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
+1. Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
 
     ```html
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" type="text/css">
     ```
 
-2.  Luego, borra la regla existente en tu archivo `style.css`. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.
-3.  Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
+2. Luego, borra la regla existente en tu archivo `style.css`. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.
+3. Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
 
     ```css
     html {
@@ -117,7 +110,7 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
 
     > **Nota:** se ha añadido un comentario para explicar qué significa «px». Todo lo que está en un documento de CSS entre `/*` y `*/` es un **comentario en CSS**, el cual el navegador descarta cuando carga el código. Este es un espacio donde puedes escribir notas útiles sobre lo que estás haciendo.
 
-4.  Ahora escoge el tamaño de fuente para los elementos que contienen texto dentro del cuerpo del HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, y {{htmlelement("p")}}). También centra el texto del título, escoge un ancho de línea y espaciado entre letras en el contenido del texto para hacerlo un poco más legible:
+4. Ahora escoge el tamaño de fuente para los elementos que contienen texto dentro del cuerpo del HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, y {{htmlelement("p")}}). También centra el texto del título, escoge un ancho de línea y espaciado entre letras en el contenido del texto para hacerlo un poco más legible:
 
     ```css
     h1 {
@@ -134,13 +127,13 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
 
 Puedes ajustar estos valores en px para lograr que tu diseño luzca como desees, pero por lo general tu diseño debe verse así:
 
-![Un logo de Mozilla y algunos párrafos. se ha establecido una fuente sans-serif, se han ajustado los tamaños de las fuentes, la altura de las líneas y el espaciado de las letras, y se ha centrado el encabezamiento de la página principal.](https://mdn.mozillademos.org/files/9447/website-screenshot-font-small.png)
+![Un logo de Mozilla y algunos párrafos. se ha establecido una fuente sans-serif, se han ajustado los tamaños de las fuentes, la altura de las líneas y el espaciado de las letras, y se ha centrado el encabezamiento de la página principal.](website-screenshot-font-small.png)
 
 ## Cajas, cajas, todo se trata de cajas
 
 Una cosa que notarás sobre la escritura de CSS es que trata mucho sobre cajas —ajustando su tamaño, color, posición, etc—. Puedes pensar en la mayoría de los elementos HTML de tu página como cajas apiladas una sobre la otra.
 
-![Una gran pila de cajas o cajones puestos uno encima del otro.](https://mdn.mozillademos.org/files/9441/boxes.jpg)
+![Una gran pila de cajas o cajones puestos uno encima del otro.](boxes.jpg)
 
 No es de extrañar que el diseño de CSS esté basado principalmente en el _modelo de caja_. Cada una de las cajas que ocupa espacio en tu página tiene propiedades como estas:
 
@@ -148,7 +141,7 @@ No es de extrañar que el diseño de CSS esté basado principalmente en el _mode
 - `border` (marco), la línea que se encuentra fuera del relleno.
 - `margin` (margen), el espacio fuera del elemento que lo separa de los demás.
 
-![tres cajas puestas una dentro de otra. De fuera a dentro están etiquetadas con el margen, el borde y el relleno](https://mdn.mozillademos.org/files/9443/box-model.png)
+![tres cajas puestas una dentro de otra. De fuera a dentro están etiquetadas con el margen, el borde y el relleno](box-model.png)
 
 En esta sección también se utiliza:
 
@@ -235,7 +228,7 @@ El elemento {{htmlelement("body")}} es un elemento en nivel de bloque (**block-l
 
 Si has seguido las instrucciones de esta publicación, deberías terminar con una página que luce algo así (también puedes [ver nuestra versión aquí](http://mdn.github.io/beginner-html-site-styled/)):
 
-![El logo de Mozilla centrado con título y párrafos. Ahora se ve muy bien de estilo, con un fondo azul para toda la página y un fondo naranja para la franja de contenido principal centrada.](https://mdn.mozillademos.org/files/9455/website-screenshot-final.png)
+![El logo de Mozilla centrado con título y párrafos. Ahora se ve muy bien de estilo, con un fondo azul para toda la página y un fondo naranja para la franja de contenido principal centrada.](website-screenshot-final.png)
 
 Si te atoraste, puedes comparar tu trabajo con el [código del ejemplo finalizado en GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 

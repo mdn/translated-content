@@ -1,14 +1,9 @@
 ---
 title: Cómo escribir una nueva entrada en el Glosario
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-tags:
-  - Glosario
-  - Guía
-  - Howto
-  - MDN Meta
-translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
+
 {{MDNSidebar}}
 
 El [glosario](/es/docs/Glossary) MDN es el sitio donde definimos toda la terminología, jerga, y abreviaciones usadas en la documentación y en la codificación. Contribuir al glosario es una manera simple de hacer la Web más fácil para que todo el mundo la entienda. No necesitas un nivel alto de conocimientos técnicos para escribir entradas en el glosario, porque éstas deberían ser simples y sencillas.
@@ -59,5 +54,3 @@ We recommend that you categorize the links in at least these three categories:
 ## Suggested terms
 
 Do you want to contribute but you don't know which terms need to be defined? Here's a list of suggestions. Click one and get started!
-
-{{GlossaryList({"terms":["ARIA","Array","ATAG","Asynchronous","BiDi","Blink","Block","CalDAV","Call stack","CardDAV","Constant","Constructor","Content type","Closure","CORS","CSRF","Control flow","Character","Crawler","DNS","Doctype","Domain","DTD","Dynamic typing","ECMA","Element","Entity","Exception","Adobe Flash","FTP","Host","HTTP","Hyperlink","Hypertext","I18N","Identifier","IDL","MS Internet Explorer","IETF","IIFE","Immutable","Internationalization","IndexedDB","Instance","Internet","IP address","IPv4","Keyword","Locale","Localization","ltr","MathML","Method","Microsoft Internet Explorer","MIME type","Mobile First","Mozilla Firefox","Netscape Navigator","NAT","Native","Null","OOP","Opera Browser","Operand","Operator","Parameter","Parser","PDF","Presto","property","Protocol","Prototype","Pseudo-class","Pseudo-element","RDF","Recursion","Reflow","Regular expression","Rendering engine","Responsive design","REST","rtl","Scope","CSS Selector","Server","SSL","Stacking context","State machine","Statement","STUN","Synchronous","Tag","TLS","Trident","TURN","Type","Value","Variable","Wrapper"], "filter":"notdefined", "css":"multiColumnList"})}}

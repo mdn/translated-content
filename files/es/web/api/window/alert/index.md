@@ -1,9 +1,8 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-translation_of: Web/API/Window/alert
-browser-compat: api.Window.alert
 ---
+
 {{ APIRef }}
 
 El método `Window.alert()` muestra un diálogo de alerta con un mensaje opcional,
@@ -67,4 +66,3 @@ se puede usar el elemento {{HTMLElement("dialog")}} para mostrar alertas.
 - Elemento {{HTMLElement("dialog")}}
 - {{domxref("window.confirm","confirm")}}
 - {{domxref("window.prompt","prompt")}}
-

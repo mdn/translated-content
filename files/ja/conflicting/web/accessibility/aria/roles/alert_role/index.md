@@ -3,6 +3,7 @@ title: alert ロールの使用
 slug: conflicting/Web/Accessibility/ARIA/Roles/alert_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
+
 ### 説明
 
 [alert](https://www.w3.org/TR/wai-aria-1.1/#alert) ロールの使用方法についての技術デモとブラウザおよび支援技術に及ぼす影響の説明。
@@ -27,7 +28,7 @@ alert ロールは重要かつ一般に時間的制約のあるメッセージ�
 - スクリーンリーダーは現在のアウトプット（音声または点字関係なく）を妨害し、直ちにアラートメッセージをアナウンスもしくは表示すことがあります。
 - 画面拡大鏡はアラートが起こったこと、およびアラートテキストが何であるかを視覚的に示すことがあります。
 
-> **Note:** **注釈:** 支援技術がこの技術をどのように処理すべきかについては意見が異なる場合があります。上記の情報は意見の一つで、したがって標準ではありません。
+> **メモ:** 支援技術がこの技術をどのように処理すべきかについては意見が異なる場合があります。上記の情報は意見の一つで、したがって標準ではありません。
 
 ### 例
 
@@ -95,7 +96,7 @@ document.getElementById("expirationWarning").className = "";
 
 - 要素でのアラートロールの使用は要素が `aria-live="assertive"` を持っていることを意味します。
 - アラートロールは静的な文章のためにのみ使用されるべきです。アラートロールが使用された要素はフォーカスを受け取ることができず、スクリーンリーダーはキーボードフォーカスが現在位置している場所にかかわらずに自動的にアラートをアナウンスするかもしれません。
-- もしアラートが双方向のコントロール (ユーザが問題を修正できるフォームコントロールや、アラートを破棄する "OK" ボタンなど) を提供する場合、[アラートダイアログ](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "Using the alert role")ロールを代わりに使用するべきです。
+- もしアラートが双方向のコントロール (ユーザが問題を修正できるフォームコントロールや、アラートを破棄する "OK" ボタンなど) を提供する場合、[アラートダイアログ](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)ロールを代わりに使用するべきです。
 
 ### 使用される ARIA 属性
 
@@ -103,8 +104,8 @@ document.getElementById("expirationWarning").className = "";
 
 ### 関連 ARIA 技術
 
-- [Using the alertdialog role](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "en/ARIA/ARIA_Techniques/Using_the_alertdialog_role")
-- [Using the aria-invalid property](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property "Using the aria-invalid property")
+- [Using the alertdialog role](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [Using the aria-invalid property](/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
 
 ### 互換性
 

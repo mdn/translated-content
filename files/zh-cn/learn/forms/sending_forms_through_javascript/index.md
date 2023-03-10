@@ -3,13 +3,14 @@ title: 使用 JavaScript 发送表单
 slug: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms")}}
 
-正如在[前面的文章](/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data)中讲到的，HTML 表单可以声明式地发送一个 HTTP 请求。但也可以通过 JavaScript 来为表单准备用于发送的 HTTP 请求。本文探讨如何做到这一点。
+正如在[前面的文章](/zh-CN/docs/HTML/Forms/Sending_and_retrieving_form_data)中讲到的，HTML 表单可以声明式地发送一个 HTTP 请求。但也可以通过 JavaScript 来为表单准备用于发送的 HTTP 请求。本文探讨如何做到这一点。
 
 ## 表单不总是表单
 
-在[开放式 Web 应用程序](/en-US/docs/Open_Web_apps_and_Web_standards)中，使用 [HTML form](/en-US/docs/HTML/Forms) 而不是文字表单让人们来填写变得越来越普遍了 — 越来越多的开发人员正致力于控制传输数据。
+在[开放式 Web 应用程序](/zh-CN/docs/Open_Web_apps_and_Web_standards)中，使用 [HTML form](/zh-CN/docs/HTML/Forms) 而不是文字表单让人们来填写变得越来越普遍了 — 越来越多的开发人员正致力于控制传输数据。
 
 ### 获得整体界面的控制
 
@@ -23,7 +24,7 @@ original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 
 AJAX 技术主要依靠 {{domxref("XMLHttpRequest")}} (XHR) DOM 对象。它可以构造 HTTP 请求、发送它们，并获取请求结果。
 
-> **备注：** 老旧的 AJAX 技术可能不依赖 {{domxref("XMLHttpRequest")}}。例如 [JSONP](http://en.wikipedia.org/wiki/JSONP) 加 [`eval()`](/en-US/docs/Core_JavaScript_1.5_Reference:Global_Functions:eval) 函数。这也行得通，但是有严重的安全问题，不推荐使用它。使用它的唯一原因是为了不支持 {{domxref("XMLHttpRequest")}} 或 [JSON](/en-US/docs/JSON)的过时浏览器；但是那些浏览器实在是太古老了！**避免使用这种技术。**
+> **备注：** 老旧的 AJAX 技术可能不依赖 {{domxref("XMLHttpRequest")}}。例如 [JSONP](http://en.wikipedia.org/wiki/JSONP) 加 [`eval()`](/zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Functions:eval) 函数。这也行得通，但是有严重的安全问题，不推荐使用它。使用它的唯一原因是为了不支持 {{domxref("XMLHttpRequest")}} 或 [JSON](/zh-CN/docs/JSON)的过时浏览器；但是那些浏览器实在是太古老了！**避免使用这种技术。**
 
 创建之初，{{domxref("XMLHttpRequest")}} 被设计用来将 [XML](/zh-CN/docs/XML) 作为传输数据的格式获取和发送。不过，如今 JSON 已经取代了 XML，而且要常用的多，无论这是不是一件好事。
 
@@ -102,7 +103,7 @@ function sendData(data) {
 
 {{domxref("XMLHttpRequest/FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。请注意，{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是“只写”的，这意味着您可以更改它们，但不能检索其内容。
 
-使用这个对象在[Using FormData Objects](/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)中有详细的介绍，不过这里有两个例子：
+使用这个对象在[Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)中有详细的介绍，不过这里有两个例子：
 
 #### 使用一个独立的 FormData 对象
 
@@ -201,13 +202,13 @@ window.addEventListener("load", function () {
 
 {{EmbedLiveSample("使用绑定到表单元素上的_FormData", "100%", 50)}}
 
-你甚至可以通过使用表单的{{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理他们。想了解更多，请参阅这里的例子：{{SectionOnPage("/en-US/docs/Web/API/HTMLFormElement.elements", "Accessing the element list's contents")}}
+你甚至可以通过使用表单的{{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理他们。想了解更多，请参见示例[访问表单控件](/zh-CN/docs/Web/API/HTMLFormElement/elements#访问表单控件)。
 
 ### 在隐藏的 iframe 中构建 DOM
 
 最古老的异步发送表单数据方法是用 DOM API 构建表单，然后将其数据发送到隐藏的 {{HTMLElement("iframe")}}。要获得提交的结果，请获取{{HTMLElement("iframe")}}的内容。
 
-> **警告：** 不要使用这项技术。有第三方服务的安全风险，因为它会使你暴露在 [脚本注入攻击](http://en.wikipedia.org/wiki/Cross-site_scripting) 中。如果你使用 HTTPS，它会影响 [同源策略](/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript), 这可以使 {{HTMLElement("iframe")}} 内容无法访问。然而，该方法可能是你需要支持很古老的浏览器的唯一选择。
+> **警告：** 不要使用这项技术。有第三方服务的安全风险，因为它会使你暴露在 [脚本注入攻击](http://en.wikipedia.org/wiki/Cross-site_scripting) 中。如果你使用 HTTPS，它会影响 [同源策略](/zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript), 这可以使 {{HTMLElement("iframe")}} 内容无法访问。然而，该方法可能是你需要支持很古老的浏览器的唯一选择。
 
 下面是个简单的例子：
 
@@ -423,17 +424,3 @@ window.addEventListener('load', function () {
 - 这个 [polyfill](https://github.com/jimmywarting/FormData) 提供了 FormData 所有的大部分新方法（entries, keys, values, 以及对 `for...of` 的支持）
 
 {{PreviousMenuNext("Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms")}}
-
-## In this module
-
-- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

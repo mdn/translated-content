@@ -5,6 +5,7 @@ translation_of: Web/API/GlobalEventHandlers/onblur
 original_slug: Web/API/GlobalEventHandlers/onblur
 browser-compat: api.GlobalEventHandlers.onblur
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propriété **`onblur`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [le gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`blur`](/fr/docs/Web/API/Element/blur_event). Elle est disponible sur les interfaces [`Element`](/fr/docs/Web/API/Element), [`Document`](/fr/docs/Web/API/Document), et [`Window`](/fr/docs/Web/API/Window).

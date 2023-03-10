@@ -1,11 +1,8 @@
 ---
 title: How to implement a promise-based API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
-translation_of: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
-tags:
-  - JavaScript
-  - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 마지막 글에서는 프로미스를 반환하는 API를 사용하는 방법에 대해 알아봤습니다. 이 글에서는 프로미스를 반환하는 API를 구현하는 방법에 대해 살펴보겠습니다. 이것은 프로미스 기반 API를 사용하는 것보다 훨씬 덜 일반적인 작업이지만 그래도 알 가치가 있습니다.
@@ -216,11 +213,3 @@ button.addEventListener('click', async () => {
 - [Using promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## 이번 과정
-
-- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- **Implementing a promise-based API**
-- [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: listitem ロール'
-slug: Web/Accessibility/ARIA/Roles/Listitem_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
+slug: Web/Accessibility/ARIA/Roles/listitem_role
 ---
+
 ARIA のリスト項目 (`listitem`) ロールは、項目のリスト内の項目を識別するために使用できます。 これは、通常、リストコンテナーを識別するために使用するリスト (`list`) ロールと組み合わせて使用します。
 
 ```html
@@ -23,7 +19,7 @@ ARIA のリスト項目 (`listitem`) ロールは、項目のリスト内の項�
 
 リストとリスト項目をマークアップするためにどの要素を使用するべきかについて、鉄則はありませんが、リスト項目がリストのコンテキストで意味をなすようにするべきです (例えば、買い物リスト、料理の手順、運転の指示) 。
 
-> **Warning:** 可能な限り、適切な意味論の HTML 要素を使用して、リストとそのリスト項目 ({{htmlelement("ul")}} や {{htmlelement("ol")}} と {{htmlelement("li")}}) をマークアップするべきです。 詳しい例は、[ベストプラクティス](#best_practices)を参照してください。
+> **警告:** 可能な限り、適切な意味論の HTML 要素を使用して、リストとそのリスト項目 ({{htmlelement("ul")}} や {{htmlelement("ol")}} と {{htmlelement("li")}}) をマークアップするべきです。 詳しい例は、[ベストプラクティス](#best_practices)を参照してください。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
@@ -68,15 +64,13 @@ ARIA のリスト項目 (`listitem`) ロールは、項目のリスト内の項�
 </ol>
 ```
 
-> **Note:** ARIA のリストロールとリスト項目ロールでは、順序付きリストと順序無しリストを区別しません。
+> **メモ:** ARIA のリストロールとリスト項目ロールでは、順序付きリストと順序無しリストを区別しません。
 
-> **Note:** タブ付きインターフェイスとして機能する項目のリストをマークアップする場合は、代わりにタブ (`tab`)、タブパネル (`tabpanel`)、タブリスト (`tablist`) のロールを使用するべきです。
+> **メモ:** タブ付きインターフェイスとして機能する項目のリストをマークアップする場合は、代わりにタブ (`tab`)、タブパネル (`tabpanel`)、タブリスト (`tablist`) のロールを使用するべきです。
 
 ## 仕様
 
-| 仕様                                                     | 状態                     |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#listitem","listitem")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

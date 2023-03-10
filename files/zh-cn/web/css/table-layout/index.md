@@ -2,6 +2,7 @@
 title: table-layout
 slug: Web/CSS/table-layout
 ---
+
 {{CSSRef}}
 
 **table-layout** CSS 属性定义了用于布局表格*单元格*，*行*和*列*的算法。

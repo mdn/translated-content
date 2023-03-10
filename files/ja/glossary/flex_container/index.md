@@ -2,6 +2,7 @@
 title: Flex コンテナ
 slug: Glossary/Flex_Container
 ---
+
 {{glossary("Flexbox")}} レイアウトは親要素の `display` プロパティの値に `flex` または `inline-flex` を指定することで定義されます。この親要素が**「flex コンテナ」**となり、その子要素が 「flex アイテム」({{glossary("flex item")}}) となります。
 
 値に `flex` を指定すると、この要素はブロックレベルの flex コンテナとなり、`inline-flex` を指定すると、インラインレベルの flex コンテナとなります。これらの指定は、その要素に対する**「flex 整形文脈 (flex formatting context)」**を作成します。Flex 整形文脈は、フロートがコンテナに侵入せず、コンテナのマージンがアイテムのマージンによって相殺されないという点で、ブロック整形文脈と同様のものです。

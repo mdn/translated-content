@@ -2,6 +2,7 @@
 title: WritableStreamDefaultController
 slug: Web/API/WritableStreamDefaultController
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`WritableStreamDefaultController`** インターフェイスは、{{domxref("WritableStream")}} の状態を制御できるコントローラーを表します。 `WritableStream` を構築する場合、基になるシンクには、対応する `WritableStreamDefaultController` インスタンスが与えられて操作します。
@@ -43,9 +44,7 @@ const writableStream = new WritableStream({
 
 ## 仕様
 
-| 仕様                                                                                                                 | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#ws-default-controller-class','WritableStreamDefaultController')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,13 +1,8 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
+
 {{JSRef}}
 
 **`Symbol.toPrimitive`** はシンボルで、あるオブジェクトを対応するプリミティブ値に変換するために呼び出される関数値のプロパティを指定します。
@@ -52,9 +47,7 @@ console.log(obj2 + ''); // "true"    -- hint は "default"
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

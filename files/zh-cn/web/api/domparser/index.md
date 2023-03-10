@@ -2,6 +2,7 @@
 title: DOMParser
 slug: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMParser`** 可以将存储在字符串中的 {{Glossary("XML")}} 或 {{Glossary("HTML")}} 源代码解析为一个 DOM {{domxref("Document")}}。
@@ -15,7 +16,7 @@ slug: Web/API/DOMParser
 ## 语法
 
 ```js
-let domparser = new DOMParser()​​;
+let domparser = new DOMParser();
 ```
 
 ## 方法
@@ -70,11 +71,11 @@ let parser = new DOMParser(),
 </parsererror>
 ```
 
-解析错误会显示在[错误控制台](../../../zh-cn/Error_Console)，包括文档的地址和错误的源代码。
+解析错误会显示在[错误控制台](/zh-CN/docs/Error_Console)，包括文档的地址和错误的源代码。
 
 ## 解析 SVG 或者 HTML 文档
 
-`DOMParser` 也可以用来解析 SVG 文档 {{geckoRelease("10.0")}} 或者 HTML 文档 {{geckoRelease("12.0")}}。根据给定的 MIME 类型不同，`parseFromString` 方法可能返回三种不同类型的文档。如果 MIME 类型是 `text/xml`，则返回一个 `XMLDocument`，如果 MIME 类型是 `text/svg+xml`，则返回一个 `SVGDocument`，如果 MIME 类型是 `text/html`，则返回一个 `HTMLDocument`。
+`DOMParser` 也可以用来解析 SVG 文档或者 HTML 文档。根据给定的 MIME 类型不同，`parseFromString` 方法可能返回三种不同类型的文档。如果 MIME 类型是 `text/xml`，则返回一个 `XMLDocument`，如果 MIME 类型是 `text/svg+xml`，则返回一个 `SVGDocument`，如果 MIME 类型是 `text/html`，则返回一个 `HTMLDocument`。
 
 ```js
 let parser = new DOMParser();
@@ -145,7 +146,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMParser", 3)}}
+{{Compat}}
 
 ## 参见
 

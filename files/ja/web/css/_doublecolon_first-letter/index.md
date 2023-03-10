@@ -1,15 +1,8 @@
 ---
 title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
-tags:
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.first-letter
-translation_of: Web/CSS/::first-letter
 ---
+
 {{CSSRef}}
 
 **`::first-letter`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックレベル要素](/ja/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ (画像やインラインテーブルなど) がないときに限ります。
@@ -27,7 +20,7 @@ p::first-letter {
 - 言語によっては常に一緒に大文字化される連字があります。例えばオランダ語の `IJ` などです。この場合、連字の両方の文字が `::first-letter` 擬似要素で選択されます。
 - {{ cssxref("::before") }} 擬似要素と {{ cssxref("content") }} プロパティの組み合わせにより、要素の先頭にテキストが挿入されることがあります。この場合、 `::first-letter` は生成されたこのコンテンツの最初の文字に一致します。
 
-> **Note:** CSS3 では[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::first-letter` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:first-letter` も使用できます。
+> **メモ:** CSS3 では[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::first-letter` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:first-letter` も使用できます。
 >
 > オランダ語の `IJ` のような連字に対するブラウザーの対応は貧弱です。下記の互換性一覧表で、現在の対応状況を確認してください。
 

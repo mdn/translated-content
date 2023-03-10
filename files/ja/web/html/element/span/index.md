@@ -1,16 +1,9 @@
 ---
 title: <span>
 slug: Web/HTML/Element/span
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/span
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<span>` 要素**は、記述コンテンツの汎用的な行内コンテナーであり、何かを表すものではありません。スタイル付けのため ({{htmlattrxref("class")}} または {{htmlattrxref("id")}} 属性を使用して)、または {{htmlattrxref("lang")}} のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)であるのに対し、 `<span>` は[インライン要素](/ja/docs/Web/HTML/Inline_elements)です。
 
@@ -118,11 +111,7 @@ li span {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}} | {{Spec2('HTML WHATWG')}} |                                                                                             |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-span-element', '&lt;span&gt;')}}     | {{Spec2('HTML5 W3C')}}     | {{glossary("DOM")}} インターフェイスを {{domxref("HTMLSpanElement")}} に変更 |
-| {{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}                         | {{Spec2('HTML4.01')}}     |                                                                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

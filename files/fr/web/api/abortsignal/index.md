@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 L'interface **`AbortSignal`** représente un objet signal qui vous permet de communiquer avec une requête DOM (telle que Fetch) et de l'annuler si nécessaire par un objet {{domxref("AbortController")}}.
@@ -23,7 +24,7 @@ _L'interface AbortSignal hérite des propriétés de son interface parent {{domx
 ### Gestionnaire d'évènement
 
 - {{domxref("AbortSignal.onabort")}}
-  - : appelé quand un évènement {{event("abort_(dom_abort_api)", "abort")}} est lancé, c'est-à-dire quand les requêtes DOM avec lesquelles le signal communique sont annulées.
+  - : appelé quand un évènement `abort` est lancé, c'est-à-dire quand les requêtes DOM avec lesquelles le signal communique sont annulées.
 
 ## Méthodes
 
@@ -35,7 +36,7 @@ Dans l'extrait suivant, nous visons à télécharger une vidéo en utilisant l'[
 
 Tout d'abord, nous créons un contrôleur en utilisant le constructeur {{domxref("AbortController.AbortController","AbortController()")}}, puis nous saisissons une référence associée à son objet {{domxref("AbortSignal")}} au moyen de la propriété {{domxref("AbortController.signal")}}.
 
-Lorsque la  [requête fetch](/fr/docs/Web/API/GlobalFetch/fetch) (_extraction_) est lancée, nous transmettons le paramètre `AbortSignal` en tant qu'option dans l'objet d'options de la requête (voir `{signal}` ci-dessous). Cela associe le signal et le contrôleur à la requête d'extraction et nous permet de l'annuler en appelant {{domxref("AbortController.abort()")}}, comme indiqué ci-dessous dans le second écouteur d'événements.
+Lorsque la [requête fetch](/fr/docs/Web/API/GlobalFetch/fetch) (_extraction_) est lancée, nous transmettons le paramètre `AbortSignal` en tant qu'option dans l'objet d'options de la requête (voir `{signal}` ci-dessous). Cela associe le signal et le contrôleur à la requête d'extraction et nous permet de l'annuler en appelant {{domxref("AbortController.abort()")}}, comme indiqué ci-dessous dans le second écouteur d'événements.
 
 ```js
 var controller = new AbortController();

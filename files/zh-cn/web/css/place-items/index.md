@@ -2,6 +2,7 @@
 title: place-items
 slug: Web/CSS/place-items
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 中的 **`place-items`** 是一个[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) ，它允许你在相关的布局（如 [Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 或 [Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)）中可以同时沿着块级和内联方向对齐元素 (例如：{{CSSxRef("align-items")}} 和 {{CSSxRef("justify-items")}} 属性) 。如果未提供第二个值，则第一个值作为第二个值的默认值。
@@ -68,7 +69,7 @@ place-items: unset;
     这只对 flex 布局元素生效，对于不是 flex 容器的子元素，它被视为 `start` 。
 - `flex-end`
   - : 对齐方式取决于 flex 容器的的结束方向。（水平和垂直两个方向）
-    这只对 flex 布局元素生效，对于不是 flex 容器的子元素，它被视为 end 。
+    这只对 flex 布局元素生效，对于不是 flex 容器的子元素，它被视为 end。
 - `self-start`
   - : 沿着轴线的头部对齐。
 - `self-end`
@@ -230,7 +231,7 @@ display.addEventListener('change', function (evt) {
 
 #### 结果
 
-{{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
+{{EmbedLiveSample("在弹性容器中排列元素", 260, 290)}}
 
 ## 规范
 
@@ -238,9 +239,9 @@ display.addEventListener('change', function (evt) {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.place-items")}}
+{{Compat}}
 
-## See also
+## 参见
 
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_

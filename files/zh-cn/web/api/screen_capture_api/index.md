@@ -2,6 +2,7 @@
 title: 屏幕捕捉 API
 slug: Web/API/Screen_Capture_API
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 屏幕捕获 API 对现有的媒体捕获和流 API 进行了补充，让用户选择一个屏幕或屏幕的一部分（如一个窗口）作为媒体流进行捕获。然后，该流可以被记录或通过网络与他人共享。
@@ -71,7 +72,7 @@ The following dictionaries are defined by the Screen Capture API.
 
 ## Feature Policy validation
 
-{{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Feature-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
+{{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">
@@ -79,7 +80,7 @@ The following dictionaries are defined by the Screen Capture API.
 
 The default allow list is `self`, which lets the any content within the document use Screen Capture.
 
-See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) for a more in-depth explanation of how Feature Policy is used.
+See [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) for a more in-depth explanation of how Feature Policy is used.
 
 ## 规范
 
@@ -87,9 +88,9 @@ See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Pol
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## 参见
 
-- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Using the Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaDevices.getDisplayMedia()")}}

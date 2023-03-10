@@ -1,20 +1,11 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-tags:
-  - Geometry
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Trigonometry
-  - cos
-  - cosine
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
+
 {{JSRef}}
 
-**`Math.cos()`** は静的関数で、指定された角度の余弦 ({{interwiki("wikipedia", "コサイン")}}) を返します。ここで角度は{{interwiki("wikipedia", "ラジアン")}}で指定します。この値は <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>adjacent</mtext> </mrow></mrow></msub><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>hypotenuse</mtext> </mrow></mrow></msub></mfrac></mstyle></math> です。
+**`Math.cos()`** は静的関数で、指定された角度の余弦 ([コサイン](https://ja.wikipedia.org/wiki/コサイン)) を返します。ここで角度は[ラジアン](https://ja.wikipedia.org/wiki/ラジアン)で指定します。この値は <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>adjacent</mtext> </mrow></mrow></msub><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>hypotenuse</mtext> </mrow></mrow></msub></mfrac></mstyle></math> です。
 
 {{EmbedInteractiveExample("pages/js/math-cos.html")}}
 
@@ -53,9 +44,7 @@ Math.cos(2 * Math.PI); // 1
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.cos', 'Math.cos')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

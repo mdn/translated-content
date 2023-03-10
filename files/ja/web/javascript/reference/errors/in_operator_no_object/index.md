@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: cannot use ''in'' operator to search for ''x'' in ''y'''
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "right-hand side of 'in' should be an object" は、 [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)が文字列、数値、その他のプリミティブ型の中を検索するために使用された場合に発生します。これは、あるプロパティがオブジェクト内にあることをチェックする用途でしか使用することができません。

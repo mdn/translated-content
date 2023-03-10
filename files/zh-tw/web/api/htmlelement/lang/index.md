@@ -2,6 +2,7 @@
 title: HTMLElement.lang
 slug: Web/API/HTMLElement/lang
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.lang`** 屬性（{{Glossary("property")}}）可以讀取或設定一個表示元素之語系的標籤屬性（{{Glossary("attribute")}}）值。

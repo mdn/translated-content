@@ -2,6 +2,7 @@
 title: 'Express 教學 4: 路由與控制器'
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 在本教程中，我們將為最終在 本地圖書館 網站中需要的所有資源端點，搭配 "空殼" 處理函式來配置路由 (URL handling code) 。完成後，我們的路由處理源碼將會有模組化結構，在接下來的文章中，我們可以用真實的處理函式加以擴充。我們也會對如何使用 Express 創建模組化路由，有更好的理解。
@@ -12,10 +13,10 @@ slug: Learn/Server-side/Express_Nodejs/routes
       <th scope="row">先備知識:</th>
       <td>
         閱讀
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express/Node 介紹</a
         >。 完成先前教學主題 (包含
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose"
+        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose"
           >Express 教學 3: 使用資料庫 (Mongoose)</a
         >).
       </td>
@@ -51,7 +52,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 
 有幾種方法可以創建路線。本教程將使用[`express.Router`](http://expressjs.com/en/guide/routing.html#express-router)中間件，因為它允許我們將站點的特定部分的路由處理程序組合在一起，並使用通用的路由前綴訪問它們。我們會將所有與圖書館有關的路由，保存在“目錄”模塊中，如果我們添加路由來處理用戶帳戶或其他功能，我們可以將它們分開保存。
 
-> **備註：** 我們在[Express 簡介>創建路由處理程序](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers)中，簡要討論了 Express 應用程序路由。除了為模塊化提供更好的支持之外（如下面第一小節所述），使用 Router 非常類似於直接在 Express 應用程序對像上定義路由。
+> **備註：** 我們在[Express 簡介>創建路由處理程序](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers)中，簡要討論了 Express 應用程序路由。除了為模塊化提供更好的支持之外（如下面第一小節所述），使用 Router 非常類似於直接在 Express 應用程序對像上定義路由。
 
 本節的其餘部分，概述瞭如何使用路由器`Router`來定義路由。
 
@@ -104,7 +105,7 @@ router.get('/about', function (req, res) {
 
 回調函數接受三個參數（通常如下所示命名：`req`, `res`, `next`），它將包含 HTTP 請求對象，HTTP 響應，以及中間件鏈中的下一個函數。
 
-> **備註：** 路由器功能是[Express 中間件](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，這意味著它們必須完成（響應）請求或調用鏈中的下一個功能`next`。在上面的例子中，我們使用`send()`完成了請求，所以下一個參數`next`沒有被使用（我們選擇不指定它）。
+> **備註：** 路由器功能是[Express 中間件](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，這意味著它們必須完成（響應）請求或調用鏈中的下一個功能`next`。在上面的例子中，我們使用`send()`完成了請求，所以下一個參數`next`沒有被使用（我們選擇不指定它）。
 >
 > 上面的路由器函數只需要一次回調，但您可以根據需要指定任意數量的回調參數，或一組回調函數。每個函數都是中間件鏈的一部分，並且將按照添加到鏈中的順序調用（除非前面的函數完成請求）。
 
@@ -112,7 +113,7 @@ router.get('/about', function (req, res) {
 
 ### HTTP 動詞
 
-上面的示例路由使用`Router.get()`方法，響應具有特定路徑的 HTTP GET 請求。路由器`Router`還為所有其他 HTTP 動詞提供路由方法，這些方法多數以完全相同的方式使用：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`​​​​​​, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`,和`connect()`。
+上面的示例路由使用`Router.get()`方法，響應具有特定路徑的 HTTP GET 請求。路由器`Router`還為所有其他 HTTP 動詞提供路由方法，這些方法多數以完全相同的方式使用：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`,和`connect()`。
 
 例如，下面的代碼就像上一個`/about`路由一樣，但只響應 HTTP POST 請求。
 
@@ -145,7 +146,7 @@ app.get(/.*fish$/, function (req, res) {
 
 ### 路由參數
 
-路徑參數是命名的 URL 段，用於捕獲在 URL 中的位置指定的值。命名段以冒號為前綴，然後是名稱（例如。捕獲的值，使用參數名稱作為鍵，存在對像中（例如）。` /:your_parameter_name/``req.params``req.params.your_parameter_name `
+路徑參數是命名的 URL 段，用於捕獲在 URL 中的位置指定的值。命名段以冒號為前綴，然後是名稱（例如。捕獲的值，使用參數名稱作為鍵，存在對像中（例如）。`/:your_parameter_name/` `req.params` `req.params.your_parameter_name`
 
 例如，考慮一個編碼的 URL，其中包含有關用戶和書本的信息：`http://localhost:3000/users/34/books/8989`。我們可以使用`userId`和`bookId`路徑參數，提取如下所示的信息：
 
@@ -592,7 +593,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
   DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- 如果您先前設置了[nodemon](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website) ，則可以使用：
+- 如果您先前設置了[nodemon](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website) ，則可以使用：
 
   ```plain
   // Windows
@@ -625,15 +626,3 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 - [Routing guide](http://expressjs.com/en/guide/routing.html) (Express docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程連結
-
-- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

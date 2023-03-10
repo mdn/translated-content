@@ -2,6 +2,7 @@
 title: Response.status
 slug: Web/API/Response/status
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口的**`status`** 只读属性包含响应的状态代码（例如，成功为 200）。
@@ -42,10 +43,10 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("api.Response.status")}}
+{{Compat}}
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

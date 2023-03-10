@@ -166,7 +166,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ### Поддержка в Grid разметке
 
-{{Compat("css.properties.justify-content.grid_context")}}
+{{Compat}}
 
 ## Смотрите также
 

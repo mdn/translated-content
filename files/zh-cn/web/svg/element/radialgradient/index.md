@@ -2,6 +2,7 @@
 title: radialGradient
 slug: Web/SVG/Element/radialGradient
 ---
+
 {{SVGRef}}
 
 `radialGradient` 用来定义径向渐变，以对图形元素进行填充或描边。
@@ -14,9 +15,9 @@ slug: Web/SVG/Element/radialGradient
 
 ### 全局属性
 
-- [核心属性](/en-US/docs/Web/SVG/Attribute#Core) »
-- [外观属性](/en-US/docs/Web/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en-US/docs/Web/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Attribute#XLink) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

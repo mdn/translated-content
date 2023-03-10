@@ -1,12 +1,6 @@
 ---
 title: Bloques de construcción CSS
 slug: Learn/CSS/Building_blocks
-tags:
-  - Aprender
-  - CSS
-  - Principiante
-  - bloques de construcción
-translation_of: Learn/CSS/Building_blocks
 ---
 {{LearnSidebar}}
 
@@ -18,11 +12,11 @@ El objetivo aqui es proveerte de herramientas para que puedas escribir código C
 
 Antes de comenzar este módulo deberías poseer:
 
-1.  Un entendimiento básico de la utilización de una computadora y de la
+1. Un entendimiento básico de la utilización de una computadora y de la
     navegación web a nivel de usuario.
-2.  Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3.  Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
-4.  Un entendimiento elemental de CSS, como es discutido en el módulo [CSS first steps](/es/docs/Learn/CSS/First_steps).
+2. Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+3. Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
+4. Un entendimiento elemental de CSS, como es discutido en el módulo [CSS first steps](/es/docs/Learn/CSS/First_steps).
 
 > **Nota:** Si estás trabajando en una computadora, tablet, u otro dispositivo en el que no eres capaz de crear tus propios archivos puedes intentar la mayor parte de los ejemplos en código en un programa para trabajar código en linea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
@@ -34,7 +28,7 @@ En este módulo encontrarás artículos que cubren los fundamentos más esencial
   - : El objetivo de ésta lección es desarrollar tu entendimiento sobre algunos de los conceptos fundamentales de CSS - cascada, especificidad y herencia - los cuales controlan como CSS es aplicado a HTML y como sus conflitos son resueltos.
 - [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
-  - : Hay una gran variedad de selectores disponibles en CSS, permitiendo una fina precision para seleccionar elementos de estilo. En este artículo y sub-artículos, repasaremos los diferentes tipos en detalle y veremos como funcionan. Los sub-artículos son los que siguinetes :
+  - : Hay una gran variedad de selectores disponibles en CSS, permitiendo una fina precision para seleccionar elementos de estilo. En este artículo y sub-artículos, repasaremos los diferentes tipos en detalle y veremos como funcionan. Los sub-artículos son los siguientes:
 
     - [Selectores de tipo, clase e ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Selectores de Atributos](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)

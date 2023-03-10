@@ -7,6 +7,7 @@ tags:
   - HTML5
 translation_of: Web/API/Document/head
 ---
+
 Retourne l'élément {{HTMLElement("head")}} du document courant. S'il y a plus d'un élément \<head>, le premier est retourné.
 
 ## Syntaxe

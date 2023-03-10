@@ -2,11 +2,12 @@
 title: 推荐拖动类型
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML 拖放支持拖动各种类型的数据，包括纯文本，URL，HTML 代码，文件等。该文档描述了拖放常见数据类型的最佳做法。
 
-> **警告：** 本文档中包含一个**moz**前缀的所有方法和属性 (如**mozSetDataAt()**) 是 Gecko 的具体接口。 这些接口仅适用于基于 Gecko 的浏览器。
+> **警告：** 本文档中包含一个**moz**前缀的所有方法和属性 (如**mozSetDataAt()**) 是 Gecko 的具体接口。这些接口仅适用于基于 Gecko 的浏览器。
 
 ## 拖动文字
 
@@ -16,11 +17,11 @@ HTML 拖放支持拖动各种类型的数据，包括纯文本，URL，HTML 代�
 event.dataTransfer.setData("text/plain", "This is text to drag")
 ```
 
-拖动文本框中的文字和页面选中部分的文字是自动完成的， 所以你不需要手动处理这些拖动。
+拖动文本框中的文字和页面选中部分的文字是自动完成的，所以你不需要手动处理这些拖动。
 
-如果应用和拖动目标不支持其它类型，推荐你使用 `text/plain` 类型的数据进行填充，否则将没有默认的替代文字。建议总是在最后添加原始文字类型的数据做为备选项（译者 plter 注：如果拖动开始时没有设置数据，则在有些浏览器中后续拖动相关事件可能不会触发）。
+如果应用和拖动目标不支持其他类型，推荐你使用 `text/plain` 类型的数据进行填充，否则将没有默认的替代文字。建议总是在最后添加原始文字类型的数据做为备选项（译者 plter 注：如果拖动开始时没有设置数据，则在有些浏览器中后续拖动相关事件可能不会触发）。
 
-注：在旧代码中，可能会使用 `text/unicode` 或者 `Text` 类型， 这两个与 `text/plain` 是一样的，并且应该被替换用于存储和提取数据。
+注：在旧代码中，可能会使用 `text/unicode` 或者 `Text` 类型，这两个与 `text/plain` 是一样的，并且应该被替换用于存储和提取数据。
 
 ## 拖动链接
 
@@ -79,15 +80,13 @@ dt.setData("text/plain", "Hello there, stranger");
 
 ## 拖动文件
 
-A local file is dragged using the `application/x-moz-file` type with a data value that is an [nsIFile](/en/XPCOM_Interface_Reference/nsIFile) object. Non-privileged web pages are not able to retrieve or modify data of this type. Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.
+A local file is dragged using the `application/x-moz-file` type with a data value that is an [nsIFile](/zh-CN/XPCOM_Interface_Reference/nsIFile) object. Non-privileged web pages are not able to retrieve or modify data of this type. Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.
 
 ```
 event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
 ```
 
 If possible, you may also include the file URL of the file using both the `text/uri-list` and/or `text/plain` types. These types should be added last so that the more specific `application/x-moz-file` type has higher priority.
-
-Multiple files will be received during a drop as multiple items in the data transfer. See [Dragging and Dropping Multiple Items](/En/DragDrop/Dragging_and_Dropping_Multiple_Items) for more details about this.
 
 The following example shows how to create an area for receiving dropped files:
 
@@ -129,11 +128,11 @@ You could always use some feature detection to determine which method is support
 
 ## 拖动图像
 
-Direct image dragging is not commonly done. In fact, Mozilla does not support direct image dragging on Mac or Linux platforms. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URL links. The data should be the URL of the image or a data URL if the image is not stored on a web site or disk. For more information about data URLs, see [the data URL scheme](/en/data_URIs).
+Direct image dragging is not commonly done. In fact, Mozilla does not support direct image dragging on Mac or Linux platforms. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URL links. The data should be the URL of the image or a data URL if the image is not stored on a web site or disk. For more information about data URLs, see [the data URL scheme](/zh-CN/data_URIs).
 
 As with other links, the data for the `text/plain` type should also contain the URL. However, a data URL is not usually as useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 
-In chrome or other privileged code, you may also use the `image/jpeg`, `image/png` or `image/gif` types, depending on the type of image. The data should be an object which implements the [nsIInputStream](/en/XPCOM_Interface_Reference/nsIInputStream) interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.
+In chrome or other privileged code, you may also use the `image/jpeg`, `image/png` or `image/gif` types, depending on the type of image. The data should be an object which implements the [nsIInputStream](/zh-CN/XPCOM_Interface_Reference/nsIInputStream) interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.
 
 You should also include the `application/x-moz-file` type if the image is located on disk. In fact, this a common way in which image files are dragged.
 
@@ -216,9 +215,8 @@ dataProvider.prototype = {
 }
 ```
 
-## 也可以看看
+## 参见
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](Web/Guide/HTML/Drag_operations)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [HTML Drag and Drop API (Overview)](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/zh-CN/docs/Web/Guide/HTML/Drag_operations)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

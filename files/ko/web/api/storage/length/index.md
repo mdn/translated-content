@@ -1,14 +1,6 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage/length
 ---
 {{APIRef("Web Storage API")}}
 
@@ -16,7 +8,9 @@ translation_of: Web/API/Storage/length
 
 ## 구문
 
-    length = storage.length;
+```js
+length = storage.length;
+```
 
 ### 반환 값
 

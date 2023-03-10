@@ -2,6 +2,7 @@
 title: 'RTCPeerConnection: icecandidate 事件'
 slug: Web/API/RTCPeerConnection/icecandidate_event
 ---
+
 {{APIRef("WebRTC")}}
 
 当 {{domxref("RTCPeerConnection")}} 通过 {{domxref("RTCPeerConnection.setLocalDescription()")}} 方法更改本地描述之后，该 {{domxref("RTCPeerConnection")}} 会抛出 **`icecandidate`** 事件。该事件的监听器需要将更改后的描述信息传送给远端 {{domxref("RTCPeerConnection")}}，以更新远端的备选源。
@@ -12,7 +13,7 @@ slug: Web/API/RTCPeerConnection/icecandidate_event
 
 ### 分享新的候选
 
-触发 `icecandidate` 事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其它端的 {{domxref("RTCPeerConnection")}}。其它 {{domxref("RTCPeerConnection")}} 通过 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将新 {{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；
+触发 `icecandidate` 事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其他端的 {{domxref("RTCPeerConnection")}}。其他 {{domxref("RTCPeerConnection")}} 通过 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将新 {{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；
 
 ```js
 rtcPeerConnection.onicecandidate = (event) => {
@@ -120,4 +121,4 @@ _方法继承自 {{domxref("RTCPeerConnectionIceEvent")}}._
 
 ## 参阅
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)

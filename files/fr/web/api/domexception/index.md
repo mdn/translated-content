@@ -8,6 +8,7 @@ tags:
   - exceptions
 translation_of: Web/API/DOMException
 ---
+
 {{ APIRef("DOM") }}
 
 L'interface **`DOMException`** représente un évènement anormal (appelé **exception**) qui appraît suite à l'appel d'une méthode ou à l'accès à une propriété d'une API web. C'est essentiellement lié à la façon dont les conditions d'erreur sont décrites dans les API web.
@@ -95,7 +96,7 @@ Les noms d'erreurs courants sont répertoriés ici. Certaines API définissent l
 - `OperationError` {{experimental_inline}}
   - : L'opération a échoué pour une raison spécifique à l'opération (Pas de valeur de code ni de nom de constante hérités).
 - `NotAllowedError` {{experimental_inline}}
-  - : La demande n'est pas autorisée par l'agent utilisateur ou la plateforme dans le contexte actuel, peut-être parce que l'utilisateur a refusé la permission  (Pas de valeur de code ni de nom de constante hérités).
+  - : La demande n'est pas autorisée par l'agent utilisateur ou la plateforme dans le contexte actuel, peut-être parce que l'utilisateur a refusé la permission (Pas de valeur de code ni de nom de constante hérités).
 
 ## Spécifications
 

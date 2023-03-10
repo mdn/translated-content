@@ -2,13 +2,14 @@
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** 是一个布尔值的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。 相关的属性 {{htmlattrxref("itemtype")}} 通常表示表中一个有效的 URL（比如 [schema.org](http://schema.org/)） 来表述项目和上下文。下面每个例子中的概念表都来自 [schema.org](https://schema.org/).
+**`itemscope`** 是一个布尔值的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。相关的属性 {{htmlattrxref("itemtype")}} 通常表示表中一个有效的 URL（比如 [schema.org](http://schema.org/)）来表述项目和上下文。下面每个例子中的概念表都来自 [schema.org](https://schema.org/).
 
 每个 HTML 元素都可以有指定的 `itemscope` 属性。一个具有 `itemscope` 属性的元素可以没有关联的 `itemtype` ，但必须有相关的 `itemref`。
 
-> **备注：** Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎： Google， Microsoft， Yandex 和 Yahoo！所支持。
+> **备注：** Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：Google，Microsoft，Yandex 和 Yahoo！所支持。
 
 > **备注：** 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
 
@@ -16,7 +17,7 @@ slug: Web/HTML/Global_attributes/itemscope
 
 #### HTML
 
-下面一个例子指定的 `itemscope` 属性，设置了 `itemtype` 为 "http\://schema.org/Movie"， 并且有 3 个关联的 `itemprop` 属性（name、director、genre）。
+下面一个例子指定的 `itemscope` 属性，设置了 `itemtype` 为 "http\://schema.org/Movie"，并且有 3 个关联的 `itemprop` 属性（name、director、genre）。
 
 ```html
 <div itemscope itemtype ="http://schema.org/Movie">
@@ -72,7 +73,7 @@ slug: Web/HTML/Global_attributes/itemscope
 
 ### 示例
 
-下面示例中有 4 个 `itemscope` 属性。每一个 `itemscope` 设置了相应的 `itemptype` 属性。例子中`itemtype`，`Recipe`，`AggregateRating`，以及 `NutritionInformation` 通过指定了 `itemptype`，也就是“http\://schema.org/Recipe”，也都是 [schema.org](www.schema.org) 提供的一个食谱的结构化数据的一部分。
+下面示例中有 4 个 `itemscope` 属性。每一个 `itemscope` 设置了相应的 `itemptype` 属性。例子中`itemtype`，`Recipe`，`AggregateRating`，以及 `NutritionInformation` 通过指定了 `itemptype`，也就是 `http://schema.org/Recipe`，也都是 [schema.org](www.schema.org) 提供的一个食谱的结构化数据的一部分。
 
 ```html
 <div itemscope itemtype="http://schema.org/Recipe">
@@ -246,7 +247,7 @@ Directions: <br>
 
 ## 参阅
 
-- [其它不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 其他 microdata 相关的全局熟悉
 
   - {{htmlattrxref("itemid")}}

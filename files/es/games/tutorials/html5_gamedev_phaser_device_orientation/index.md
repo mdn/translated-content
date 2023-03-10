@@ -1,18 +1,10 @@
 ---
-title: >-
-  Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de
-  Orientación a Dispositivos
+title: Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de Orientación
+  a Dispositivos
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-tags:
-  - API Vibración
-  - API orientacion de dispositivos
-  - Canvas
-  - Desarrollo de videojuegos
-  - HTML5
-  - Phaser
-translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation
 ---
+
 {{GamesSidebar}}
 
 ## Introducción
@@ -23,7 +15,7 @@ En este tutorial iremos a través del proceso de construcción de un juego en HT
 
 Al finalizar este tutorial tendrás un juego _demo_ completamente funcional: [Cyber Orb](http://orb.enclavegames.com/). Se verá más o menos así:
 
-![](https://mdn.mozillademos.org/files/10297/cyber-orb.png)
+![](cyber-orb.png)
 
 ## Phaser framework
 
@@ -33,7 +25,7 @@ Al finalizar este tutorial tendrás un juego _demo_ completamente funcional: [Cy
 
 Puedes ver [el código fuente de Cyber Orb](https://github.com/EnclaveGames/Cyber-Orb) en GitHub. La estructura de carpetas no es nada complicada: el punto de partida es el archivo `index.html` donde inicializaremos el _framework_ y configuraremos el canvas donde correrá el juego.
 
-![](https://mdn.mozillademos.org/files/10357/cyber-orb-github.png)
+![](cyber-orb-github.png)
 
 Puedes hacer clic en el archivo index desde tu navegador favorito para iniciar el juego y probarlo. También hay tres carpetas en el directorio:
 
@@ -85,7 +77,7 @@ Hasta ahora tenemos una simple página web `HTML` con el contenido básico en la
 
 ```js
 var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
-````
+```
 
 La linea de arriba inicializará la intancia de Phaser — los argumentos son el ancho del `<canvas>`, su altura, el método de renderizado (estamos utilizando `CANVAS` pero también existen disponibles las opciones `WEBGL` y `AUTO`) y el ID opcional del contenedor DOM en el que queremos poner el `<canvas>`. Si no hay nada especificado en el último argumento o el elemento no es encontrado, el `<canvas>` será añadido a la etiqueta `<body>`. Sin el _framework_ para añadir el elemento canvas hubieses tenido que escribir algo como esto dentro de la etiqueta `<body>`:
 
@@ -131,7 +123,7 @@ Ball.Boot.prototype = {
         this.game.state.start('Preloader');
     }
 };
-````
+```
 
 El objeto principal `Ball` es definido y estamos añadiendo dos variables llamadas `_WIDTH` y `_HEIGHT` esos seran el ancho y la altura del canvas de nuestro juego, respectivamente — nos ayudarán a posicionar los elementos en la pantalla. Estamos cargando dos imagenes primero que serán usadas después en el estado `Preload` para mostrar el progreso de la carga de los demás elementos. La función `create` contiene algunas de las configuraciones básicas: estamos configurando la escala y la alineación del canvas, y avanzando al estado `Preload` cuando todo este listo.
 
@@ -187,7 +179,7 @@ Ball.Howto.prototype = {
         this.game.state.start('Game');
     }
 };
-````
+```
 
 El estado `Howto` muesta las intrucciones de juego en la pantalla antes de comenzar el juego. Luego de clickear la pantalla el juego es lanzado.
 
@@ -267,7 +259,7 @@ De esa manera podemos verificar qué tecla es presionada en determinado _frame_ 
 
 #### Implementando la API de Orientación del Dispositivo
 
-Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()`\* \*responsable por esto:
+Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()` responsable por esto:
 
 ```js
 window.addEventListener("deviceorientation", this.handleOrientation, true);
@@ -286,7 +278,7 @@ handleOrientation: function(e) {
 
 Mientras más inclines el dispositivo, más fuerza se aplica a la pelota y la velocidad en la que se mueve es mayor.
 
-![](https://mdn.mozillademos.org/files/10369/cyber-orb-flame-orientation.png)
+![](cyber-orb-flame-orientation.png)
 
 > **Nota:** Para encontrar más sobre implementar la orientación de los dispositivos y cómo se vé en código crudo, lee [Keep it level: responding to device orientation changes](/es/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
 
@@ -303,7 +295,7 @@ this.hole.body.setSize(2, 2);
 
 La diferencia está en que el cuerpo del agujero se configura como inamovible por lo que no se moverá cuando acertamos con la pelota y tendrá calculada la detección de colisión (esto se tratará más adelante en este artículo).
 
-#### **Construyendo el laberinto de bloques**
+#### Construyendo el laberinto de bloques
 
 Para hacer más difícil el juego, y más interesante, añadiremos algunos obstaculos entre la pelota y la sálida. Podríamos usar un editor de niveles pero por motivo de este tutorial, vamos a crear algo nosotros mismos.
 
@@ -356,7 +348,7 @@ showLevel: function(level) {
 
 Gracias a eso el juego da al jugador un reto: ahora tiene que rodar la pelota a través del área de juego y guiarla por el laberinto construido por bloques. Es solo un ejemplo de cargar los niveles, y solo hay 5 puramente para mostrar la idea, pero podés trabajar en expandirlo por tu cuenta.
 
-#### **Detección de colisión**
+#### Detección de colisión
 
 Hasta este punto tenemos la pelota, que puede ser controlada por el jugador, el agujero que se tiene que alcanzar y los obstáculos que bloquean el camino. Sin embargo, hay un problema: nuestro juego todavía no tiene ninguna detección de colisiones, así que no sucede nada cuando la pelota golpea los bloques, sólo los atraviesa. Vamos a arreglarlo! La buena noticia es que el _framework_ se ocupará de calcular la detección de colisones, nosotros sólo debemos especificar los objetos con los que colisionará en la función `update()`:
 
@@ -395,7 +387,7 @@ Eso es todo: cargar y reproducir sonidos es sencillo con Phaser.
 
 #### Implementando la API de Vibración
 
-Cuando la detección de colisión funcione como es esperado, añadamos algunos efectos especiales con la ayuda de la API de Vibración.![](https://mdn.mozillademos.org/files/10371/cyber-orb-flame-vibration.png)
+Cuando la detección de colisión funcione como es esperado, añadamos algunos efectos especiales con la ayuda de la API de Vibración.![](cyber-orb-flame-vibration.png)
 
 La mejor forma de usarla en nuestro caso es haciendo que el teléfono vibre cada vez que la pelota golpee las paredes: dentro de la función `wallCollision`:
 

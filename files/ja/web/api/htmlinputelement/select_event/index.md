@@ -3,6 +3,7 @@ title: 'Element: select イベント'
 slug: Web/API/HTMLInputElement/select_event
 original_slug: Web/API/Element/select_event
 ---
+
 {{APIRef}}
 
 **`select`** イベントは、いくらかのテキストが選択されたときに発生します。
@@ -68,10 +69,8 @@ input.onselect = logSelection;
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                         |
-| ---------------------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-select', 'select')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.select_event")}}
+{{Compat}}

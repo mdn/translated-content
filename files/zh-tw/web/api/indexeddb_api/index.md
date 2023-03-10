@@ -2,6 +2,7 @@
 title: IndexedDB
 slug: Web/API/IndexedDB_API
 ---
+
 {{SeeCompatTable}}
 
 IndexedDB 為用戶端的儲存用 API，可用於大量的結構化資料，並透過索引功能而高效率搜尋資料。[DOM Storage](/zh-TW/docs/DOM/Storage) 適合儲存較少量的資料；IndexedDB 則適合大量結構化資料的儲存方案。

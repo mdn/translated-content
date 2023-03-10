@@ -1,17 +1,8 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 ---
+
 {{JSRef}}
 
 **`entries()`** メソッドは、配列内の各インデックスのキーと値のペアを含む新しい配列イテレーターオブジェクトを返します。
@@ -56,9 +47,7 @@ console.log(eArr.next().value); // [4, 50]
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.entries', '%TypedArray%.prototype.entries()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

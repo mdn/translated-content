@@ -2,6 +2,7 @@
 title: NotificationEvent
 slug: Web/API/NotificationEvent
 ---
+
 {{APIRef("Web Notifications")}}
 
 传递给 {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} 处理程序的参数的`NotificationEvent`接口，该接口表示通知单击事件，该事件在 {{domxref("ServiceWorkerGlobalScope")}} ，{{domxref("ServiceWorker")}} 。
@@ -60,4 +61,4 @@ self.addEventListener('notificationclick', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.NotificationEvent")}}
+{{Compat}}

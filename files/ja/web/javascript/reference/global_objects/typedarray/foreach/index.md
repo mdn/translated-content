@@ -1,16 +1,8 @@
 ---
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** メソッドは、配列の要素ごとに一度与えられた関数を実行します。このメソッドは {{jsxref("Array.prototype.forEach()")}} と同じアルゴリズムを持っています。ここで _TypedArray_ は[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
@@ -78,9 +70,7 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

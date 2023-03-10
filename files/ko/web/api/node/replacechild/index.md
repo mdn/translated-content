@@ -1,11 +1,6 @@
 ---
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
-tags:
-  - 노드 교체
-  - 돔 조작
-  - 자바스크립트
-translation_of: Web/API/Node/replaceChild
 ---
 {{APIRef("DOM")}}
 
@@ -13,11 +8,13 @@ translation_of: Web/API/Node/replaceChild
 
 ## Syntax
 
-    replacedNode = parentNode.replaceChild(newChild, oldChild);
+```js
+replacedNode = parentNode.replaceChild(newChild, oldChild);
+```
 
-- `newChild는 oldChild를 교체할 새로운 노드입니다. 만약 이미 `DOM` 안에 존재한다면 가장 먼저 제거됩니다.`
-- `oldChild는 이미 존재하는, 교체될 자식 노드입니다.`
-- `replacedNode는 교체된 노드입니다. oldChild와 동일한 노드입니다.`
+- `newChild` 는 `oldChild` 를 교체할 새로운 노드입니다. 만약 이미 `DOM` 안에 존재한다면 가장 먼저 제거됩니다.
+- `oldChild` 는 이미 존재하는, 교체될 자식 노드입니다.
+- `replacedNode` 는 교체된 노드입니다. `oldChild` 와 동일한 노드입니다.
 
 ## Example
 

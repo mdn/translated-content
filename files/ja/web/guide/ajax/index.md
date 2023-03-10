@@ -1,15 +1,8 @@
 ---
 title: AJAX
 slug: Web/Guide/AJAX
-tags:
-  - AJAX
-  - DOM
-  - JSON
-  - JavaScript
-  - References
-  - XMLHttpRequest
-translation_of: Web/Guide/AJAX
 ---
+
 ## [はじめに](/ja/docs/Web/Guide/AJAX/Getting_Started)
 
 **A**synchronous **J**avaScript **a**nd **X**ML (AJAX) はそれ自体がある種の技術というわけではありませんが、 Jesse James Garrett によって 2005 年に作られた言葉で、既存の技術同士を組み合わせた新しいアプローチを意味します。組み合わされる技術は、[HTML](/ja/docs/Web/HTML), [XHTML](/ja/docs/Glossary/XHTML), [CSS](/ja/docs/Web/CSS), [JavaScript](/ja/docs/Web/JavaScript), [DOM](/ja/docs/Web/API/Document_Object_Model), [XML](/ja/docs/Web/XML), [XSLT](/ja/docs/Web/XSLT), そして最も重要なものは {{domxref("XMLHttpRequest")}} オブジェクトです。

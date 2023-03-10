@@ -2,6 +2,7 @@
 title: '-moz-appearance (-webkit-appearance)'
 slug: Web/CSS/appearance
 ---
+
 {{CSSRef}} {{SeeCompatTable}}
 
 在基于 Gecko 的浏览器（如 Firefox）中，**`-moz-appearance`** CSS 属性被用于按照 浏览器所在的操作系统所用主题，以平台本地的样式显示元素。
@@ -61,7 +62,7 @@ The `-moz-appearance` 属性 may be specified as a single value chosen from the 
       <td>All</td>
       <td>
         不应用任何特殊样式。这是未定义元素的默认值。旧版翻译中的信息：但是，有这两个
-        BUG： {{bug(649849)}} 和 {{bug(605985)}}。
+        BUG：<a href="https://bugzil.la/649849">Firefox bug 649849</a> 和 <a href="https://bugzil.la/605985">Firefox bug 605985</a>。
       </td>
     </tr>
     <tr>

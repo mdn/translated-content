@@ -2,6 +2,7 @@
 title: Clients
 slug: Web/API/Clients
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`Clients`** インターフェイスは、{{domxref("Client")}} オブジェクトへのアクセスを提供します。 これは、[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内で {{domxref("ServiceWorkerGlobalScope", "self")}}`.clients` を介してアクセスします。
@@ -56,9 +57,7 @@ addEventListener('notificationclick', event => {
 
 ## 仕様
 
-| 仕様                                                                     | 状態                                 | コメント |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

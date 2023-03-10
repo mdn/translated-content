@@ -2,6 +2,7 @@
 title: Column combinator
 slug: Web/CSS/Column_combinator
 ---
+
 {{CSSRef("Selectors")}}{{SeeCompatTable}}
 
 通过**列合并符** (`||`) 链接两个元素时，它只会匹配被第二个 CSS 选择器匹配的元素，且此元素属于被第一个 CSS 选择器匹配的列元素。
@@ -61,7 +62,7 @@ col.selected || td {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", "100%")}}
+{{EmbedLiveSample("示例", "100%")}}
 
 ## 规范
 
@@ -69,9 +70,9 @@ col.selected || td {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.column")}}
+{{Compat}}
 
-## 相关
+## 参见
 
 - {{HTMLElement("col")}}
 - {{HTMLElement("colgroup")}}

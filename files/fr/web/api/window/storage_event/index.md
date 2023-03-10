@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/storage_event
 ---
+
 {{APIRef}}
 
 L'événement **`storage`** de l'interface {{domxref("Window")}} se déclenche lorsqu'une de stockage (`localStorage`) a été modifiée dans le contexte d'un autre document.

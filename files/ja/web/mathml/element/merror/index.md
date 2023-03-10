@@ -1,13 +1,8 @@
 ---
 title: <merror>
 slug: Web/MathML/Element/merror
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
-translation_of: Web/MathML/Element/merror
 ---
+
 {{MathMLRef}}
 
 MathML `<merror>` 要素は、エラーメッセージとしてコンテンツを表示するために使用されます。Firefox でこのエラーメッセージは、典型的な XML エラーメッセージのようにレンダリングされます。MathML マークアップが間違っているか整形式でない XML のときに、このエラーがスロー**されない**ことに注意してください。`<merror>` とは何の関係もない、（MathML の XHTML 表記の場合に）依然として XML 解析エラーが発生します。
@@ -43,10 +38,7 @@ MathML `<merror>` 要素は、エラーメッセージとしてコンテンツ�
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.merror', 'merror') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter3.html#presm.merror', 'merror') }} | {{ Spec2('MathML2') }} | 初期の仕様 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

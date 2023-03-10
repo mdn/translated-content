@@ -3,9 +3,10 @@ title: Doc sprints
 slug: orphaned/MDN/Community/Doc_sprints
 original_slug: MDN/Community/Doc_sprints
 ---
+
 {{MDNSidebar}}
 
-> **Note:**The MDN community often held doc sprints during 2010-2013. Starting in 2014, these events were broadened in scope to "[Hack on MDN](https://blog.mozilla.org/community/2015/04/17/a-highly-productive-hack-on-mdn-weekend-in-berlin/)" events that include code hacking as well as documentation projects. Most of the advice below applies equally well to "Hack" sprints and documentation sprints.
+> **メモ:**The MDN community often held doc sprints during 2010-2013. Starting in 2014, these events were broadened in scope to "[Hack on MDN](https://blog.mozilla.org/community/2015/04/17/a-highly-productive-hack-on-mdn-weekend-in-berlin/)" events that include code hacking as well as documentation projects. Most of the advice below applies equally well to "Hack" sprints and documentation sprints.
 
 これは、Doc sprint（集中的な文書関連イベントを実施する短い期間）を組織化するためのガイドです。Doc sprint を組織化した経験者からのアドバイス、コツを含み、あなたが同じことがをする助けとなるものです。このガイドはまた、[FLOSS Manuals Book Sprints](http://en.flossmanuals.net/book-sprints/book-sprints/_draft/_v/1.0/introduction/) という書籍からのアイディアを引用しています。
 
@@ -50,7 +51,7 @@ Another way to categorize sprints is by topical focus. For example, a sprint mig
 
 スプリントを公開し、参加者を広く募ることもできます。その際には、必ず参加できることがわかっている参加者が何人かいるようにしましょう。彼らが全員参加できるように日時を設定しましょう。非公開のスプリントの場合は、参加者を招待するだけでよいでしょう。ただし招待状は個別に送信し、なぜ参加者として選ばれたのかを詳細に説明するものである必要があります。
 
-公開のスプリントの場合は、トピックに興味のある既存グループを見つけておくと良いでしょう。例えば、特定の地域を対象とした集合型スプリントの場合、その地域で活動している Web 開発者のミートアップを見つけておくと良いでしょう。告知は送るグループにとって適切な手段でおこないましょう。告知文には、スプリントの詳細と参加登録方法が記載された Web ページへのリンクもつけておくと良いでしょう。[Eventbrite ](https://www.eventbrite.com/)と [Lanyrd](http://lanyrd.com) は参加登録も行えるサイトの例です。Mozilla の開発者向けイベントに、実際に参加するのは登録者の半数程度となっています。
+公開のスプリントの場合は、トピックに興味のある既存グループを見つけておくと良いでしょう。例えば、特定の地域を対象とした集合型スプリントの場合、その地域で活動している Web 開発者のミートアップを見つけておくと良いでしょう。告知は送るグループにとって適切な手段でおこないましょう。告知文には、スプリントの詳細と参加登録方法が記載された Web ページへのリンクもつけておくと良いでしょう。[Eventbrite](https://www.eventbrite.com/) と [Lanyrd](http://lanyrd.com) は参加登録も行えるサイトの例です。Mozilla の開発者向けイベントに、実際に参加するのは登録者の半数程度となっています。
 
 ターゲットとする人々に適切にリーチできるなら、SNS も利用しましょう。Web 開発者をターゲットとするなら、まず Twitter、次いで Google Plus が、Facebook や LinkedIn と比べて効果がありました。しかし地域によって SNS の利用は異なります（例えばブラジルでは Orkut の利用者が多い）。ターゲット層に多くのフォロワーを持つ人に、イベント告知のポストをシェアしてもらえるようにしておきましょう。
 

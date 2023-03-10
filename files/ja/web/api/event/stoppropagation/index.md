@@ -2,6 +2,7 @@
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
 ---
+
 {{APIRef("DOM")}}
 
 **`stopPropagation()`** は {{domxref("Event")}} インターフェイスのメソッドで、キャプチャおよびバブリング段階において現在のイベントのさらなる伝播を阻止します。しかし、これは既定の動作の発生を妨げるものではありません。例えば、リンクのクリックはまだ処理されます。これらの動作を止めたい場合は、{{domxref("Event.preventDefault", "preventDefault()")}} メソッドを参照してください。また、他のイベントハンドラーへの即時伝搬も防げません。それらを止めたい場合は、{{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}を参照してください。

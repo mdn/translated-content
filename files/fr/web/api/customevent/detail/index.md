@@ -8,6 +8,7 @@ tags:
   - Évènement personnalisé
 translation_of: Web/API/CustomEvent/detail
 ---
+
 {{APIRef("DOM")}}
 
 Le **`detail`** de la propriété en lecture seule de l'interface {{domxref("CustomEvent")}} renvoie toutes les données transmises lors de l'initialisation de l'évènement.

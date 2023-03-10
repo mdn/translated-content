@@ -2,9 +2,10 @@
 title: justify-self
 slug: Web/CSS/justify-self
 ---
+
 {{CSSRef}}
 
-[CSS](/en-US/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对其方式。
+[CSS](/zh-CN/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对其方式。
 
 {{EmbedInteractiveExample("pages/css/justify-self.html")}}
 
@@ -12,9 +13,9 @@ slug: Web/CSS/justify-self
 
 - 在块级布局中，它对齐一个项目在其包含块的内联轴上。
 - 对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，left，bottom 与 right 的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）
-- 在表格布局中，这个属性被忽略（[更多](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables) 关于块、绝对定位以及表格布局中的对齐方式）
-- 在弹性布局中，这个属性被忽略（[更对](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox) 关于弹性布局中的对齐方式）
-- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout) 关于栅格布局中的对齐方式）
+- 在表格布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables) 关于块、绝对定位以及表格布局中的对齐方式）
+- 在弹性布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)关于弹性布局中的对齐方式）
+- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout) 关于栅格布局中的对齐方式）
 
 ## 语法
 
@@ -59,7 +60,7 @@ justify-self: unset;
   - `center`， `start`， `end`， `flex-start`， `flex-end`， `self-start`， `self-end`， `left`，或者 `right`。
   - 加上可选的 `safe` 或者`unsafe`。
 
-### Values
+### 值
 
 - `auto`
   - : 该值使用其父级元素盒子的 `justify-items` 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，`auto` 代表了 `normal`。
@@ -102,15 +103,15 @@ justify-self: unset;
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 
-## 形式化定义
+## 形式定义
 
 {{cssinfo}}
 
-## 形式化语法
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### 简单演示
 
@@ -178,7 +179,7 @@ article {
 
 #### 结果
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('简单演示', '100%', 200)}}
 
 ## 规范
 
@@ -188,8 +189,8 @@ article {
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
 - The {{CSSxRef("justify-items")}} property

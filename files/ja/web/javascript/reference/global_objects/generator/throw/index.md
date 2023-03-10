@@ -1,15 +1,8 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
+
 {{JSRef}}
 
 **`throw()`** メソッドは、ジェネレーターの例外を、エラーを発生させることで再開し、 `done` と `value` の 2 つのプロパティを持ったオブジェクトを返します。
@@ -31,7 +24,7 @@ gen.throw(exception)
 
 - `done` (boolean)
 
-  - :&#x20;
+  - : &#x20;
 
     - イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの*返値*を指定します。
     - イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
@@ -66,9 +59,7 @@ g.throw(new Error('Something went wrong'));
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

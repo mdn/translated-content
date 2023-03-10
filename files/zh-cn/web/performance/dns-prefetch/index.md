@@ -2,6 +2,7 @@
 title: dns-prefetch
 slug: Web/Performance/dns-prefetch
 ---
+
 **`DNS-prefetch`** (**DNS 预获取**) 是尝试在请求资源之前解析域名。这可能是后面要加载的文件，也可能是用户尝试打开的链接目标。
 
 ## 为什么要使用 dns-prefetch?
@@ -18,7 +19,7 @@ slug: Web/Performance/dns-prefetch
 
 ## 例子
 
-```plain
+```html
 <html>
   <head>
     <link rel="dns-prefetch" href="https://fonts.gstatic.com/">

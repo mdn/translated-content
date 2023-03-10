@@ -9,6 +9,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@media/shape
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 La caractéristique média **`shape`** peut être utilisée afin de tester la forme d'un appareil pour distinguer les affichages rectangulaires des affichages ronds.
@@ -72,10 +73,8 @@ Ce fragment de code HTML permettra d'appliquer une feuille de style particulièr
 
 ## Spécifications
 
-| Spécification                                                              | État      | Commentaires         |
-| -------------------------------------------------------------------------- | --------- | -------------------- |
-| _[CSS Round Display Level 1](https://drafts.csswg.org/css-round-display/)_ | Brouillon | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.shape")}}
+{{Compat}}

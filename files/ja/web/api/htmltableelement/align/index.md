@@ -2,6 +2,7 @@
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 **`HTMLTableElement.align`** プロパティは、表の配置を表します。

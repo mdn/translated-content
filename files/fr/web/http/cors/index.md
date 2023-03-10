@@ -10,6 +10,7 @@ tags:
   - cross-site
 translation_of: Web/HTTP/CORS
 ---
+
 {{HTTPSidebar}}
 
 Le «&nbsp; _Cross-origin resource sharing_ » (CORS) ou « partage des ressources entre origines multiples » (en français, moins usité) est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP **multi-origine (_cross-origin_)** lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
@@ -57,7 +58,7 @@ Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'artic
 
 ### Requêtes simples
 
-Certaines requêtes ne nécessitent pas de [requête CORS préliminaire](#preflight). Dans le reste de cet article, ce sont ce que nous appellerons des requêtes « simples » (bien que la spécification {{SpecName('Fetch')}} (qui définit le CORS) n'utilise pas ce terme). Une requête simple est une requête qui respecte les conditions suivantes :
+Certaines requêtes ne nécessitent pas de [requête CORS préliminaire](#preflight). Dans le reste de cet article, ce sont ce que nous appellerons des requêtes « simples » (bien que la spécification <i lang="en">Fetch</i> (qui définit le CORS) n'utilise pas ce terme). Une requête simple est une requête qui respecte les conditions suivantes :
 
 - Les seules méthodes autorisées sont :
 
@@ -137,7 +138,7 @@ Les lignes 13 à 22 détaillent la réponse HTTP du serveur situé sous le domai
 
 `Access-Control-Allow-Origin: http://toto.example`
 
-On notera que, dans ce cas, aucun autre domaine que `http://toto.example` (tel qu'identifié par l'en-tête `Origin`) ne pourra accéder à la ressource. L'en-tête `Access-Control-Allow-Origin` devrait contenir la valeur qui a été envoyée dans l'en-tête  `Origin` de la requête.
+On notera que, dans ce cas, aucun autre domaine que `http://toto.example` (tel qu'identifié par l'en-tête `Origin`) ne pourra accéder à la ressource. L'en-tête `Access-Control-Allow-Origin` devrait contenir la valeur qui a été envoyée dans l'en-tête `Origin` de la requête.
 
 ### Requêtes nécessitant une requête préliminaire
 
@@ -312,7 +313,7 @@ En attendant que les navigateurs comblent ce manque, il est possible de contourn
 
 S'il n'est pas possible d'appliquer ces changements, on peut également :
 
-1. Effectuer [une requête simple](#simples) (avec [`Response.url`](/fr/docs/Web/API/Response/url) si on utilise l'API Fetch ou  [`XHR.responseURL`](/fr/docs/Web/API/XMLHttpRequest/responseURL) si on utilise XHR) afin de déterminer l'URL à laquelle aboutirait la requête avec requête préliminaire.
+1. Effectuer [une requête simple](#simples) (avec [`Response.url`](/fr/docs/Web/API/Response/url) si on utilise l'API Fetch ou [`XHR.responseURL`](/fr/docs/Web/API/XMLHttpRequest/responseURL) si on utilise XHR) afin de déterminer l'URL à laquelle aboutirait la requête avec requête préliminaire.
 2. Effectuer la requête initialement souhaitée avec l'URL _réelle_ obtenue à la première étape.
 
 Toutefois, si la requête déclenche une requête préliminaire suite à l'absence de l'en-tête {{HTTPHeader("Authorization")}}, on ne pourra pas utiliser cette méthode de contournement et il sera nécessaire d'avoir accès au serveur pour contourner le problème.
@@ -445,7 +446,7 @@ Access-Control-Allow-Credentials: true
 
 ### `Access-Control-Allow-Methods`
 
-L'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes qui sont autorisées pour accéder à la ressoure. Cet en-tête est utilisé dans la réponse à la requête préliminaire (voir ci-avant [les conditions dans lesquelles une requête préliminaire est nécessaire](#preflight)).
+L'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes qui sont autorisées pour accéder à la ressource. Cet en-tête est utilisé dans la réponse à la requête préliminaire (voir ci-avant [les conditions dans lesquelles une requête préliminaire est nécessaire](#preflight)).
 
 ```
 Access-Control-Allow-Methods: <methode>[, <methode>]*
@@ -501,18 +502,11 @@ Voir [ci-avant pour des exemples d'utilisation de cet en-tête](#preflight).
 
 ## Spécifications
 
-| Spécification                                                    | État                     | Commentaires                                                                                    |
-| ---------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | Nouvelle définition, remplace la spécification [W3C pour le CORS](https://www.w3.org/TR/cors/). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
-
-### Notes de compatibilité
-
-- Internet Explorer 8 et 9 exposent les fonctionnalités relatives au CORS via l'objet `XDomainRequest`. L'implémentation complète est disponible à partir d'IE 10.
-- Bien que Firefox 3.5 ait introduit la prise en charge des requêtes `XMLHttpRequest` entre différents sites et des polices web, certaines requêtes étaient limitées jusqu'à des versions ultérieures. Plus précisément, Firefox 7 permet les requêtes multi-origines pour les textures WebGL et Firefox 9 permet la récupération d'images dessinées sur un canevas via `drawImage`.
+{{Compat}}
 
 ## Voir aussi
 

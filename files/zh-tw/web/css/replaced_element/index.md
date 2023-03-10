@@ -2,6 +2,9 @@
 title: 置換元素 (Replaced element)
 slug: Web/CSS/Replaced_element
 ---
+
+{{CSSRef}}
+
 {{CSSRef()}}
 
 ## 摘要

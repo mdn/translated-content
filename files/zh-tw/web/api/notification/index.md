@@ -1,7 +1,8 @@
 ---
 title: Notification
-slug: Web/API/notification
+slug: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/zh-TW/docs/Web/API/Notifications_API) 的 `Notification` interface 是用來設置及顯示「桌面通知」給使用。
@@ -65,18 +66,18 @@ The following properties are listed in the most up-to-date spec, but are not sup
 #### 事件處理器
 
 - {{domxref("Notification.onclick")}}
-  - : 一個 {{event("click")}} 事件的 handler。每次使用者點擊 Notification 都會被觸發。
+  - : 一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件的 handler。每次使用者點擊 Notification 都會被觸發。
 - {{domxref("Notification.onerror")}}
-  - : 一個 {{event("error")}} 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
+  - : 一個 [`error`](/zh-TW/docs/Web/API/Element/error_event) 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
 
 #### 停止支援的事件處理器
 
 底下這些列在 [瀏覽器支援度](#瀏覽器支援度) 中的 event handlers 雖然還有支援，但已經從近期的 spec 中移除了。因為瀏覽器會在未來的版本逐漸停止支援，最好還是不要使用它們。
 
 - {{domxref("Notification.onclose")}}
-  - : A handler for the {{event("close")}} event. It is triggered when the user closes the notification.
+  - : A handler for the [`close`](/zh-TW/docs/Web/API/Notification/close) event. It is triggered when the user closes the notification.
 - {{domxref("Notification.onshow")}}
-  - : A handler for the {{event("show")}} event. It is triggered when the notification is displayed.
+  - : A handler for the [`show`](/zh-TW/docs/Web/API/Element/show_event) event. It is triggered when the notification is displayed.
 
 ## 方法
 
@@ -89,7 +90,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 
 ### 實例方法
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+These properties are available only on an instance of the `Notification` object or through its [`prototype`](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
 
 - {{domxref("Notification.close()")}}
   - : 透過這個方法關閉 Notification 。
@@ -158,8 +159,8 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 瀏覽器支援度
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## 延伸閱讀
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-TW/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -1,16 +1,6 @@
 ---
 title: '예제와 튜토리얼: 간단한 신시사이저 키보드'
 slug: Web/API/Web_Audio_API/Simple_synth
-tags:
-  - Audio
-  - Example
-  - Guide
-  - Media
-  - Oscillator
-  - Piano
-  - Synthesizer
-  - Tutorial
-  - Web Audio API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -186,9 +176,9 @@ let oscList = [];
 let mainGainNode = null;
 ```
 
-1.  `audioContext`는 전역 {{domxref("AudioContext")}} 객체를 (또는 필요하다면 `webkitAudioContext`를) 참조하기 위해 설정되었습니다.
-2.  `oscList`는 현재 재생되고 있는 모든 oscillator를 포함할 준비가 되기 위해 설정되었습니다. 이것은 빈 상태로 시작하는데, 왜냐하면 아직 어떤 것도 재생되고 있지 않기 때문입니다.
-3.  `mainGainNode`은 null로 설정되었습니다; 설정 과정 중에, 이것은 재생되는 모든 oscillator가 연결되고 슬라이더를 사용해 전체 볼륨이 제어되도록 하는 {{domxref("GainNode")}}를 포함하도록 설정될 것입니다.
+1. `audioContext`는 전역 {{domxref("AudioContext")}} 객체를 (또는 필요하다면 `webkitAudioContext`를) 참조하기 위해 설정되었습니다.
+2. `oscList`는 현재 재생되고 있는 모든 oscillator를 포함할 준비가 되기 위해 설정되었습니다. 이것은 빈 상태로 시작하는데, 왜냐하면 아직 어떤 것도 재생되고 있지 않기 때문입니다.
+3. `mainGainNode`은 null로 설정되었습니다; 설정 과정 중에, 이것은 재생되는 모든 oscillator가 연결되고 슬라이더를 사용해 전체 볼륨이 제어되도록 하는 {{domxref("GainNode")}}를 포함하도록 설정될 것입니다.
 
 ```js
 let keyboard = document.querySelector(".keyboard");
@@ -438,15 +428,15 @@ function setup() {
 setup();
 ```
 
-1.  음의 이름과 옥타브를 주파수에 대응(map)시키는 표는 `createNoteTable()`를 호출함으로써 생성됩니다.
-2.  메인 gain 제어에서 {{event("change")}} 이벤트를 다루기 위해 {{domxref("EventTarget.addEventListener", "addEventListener()")}}를 호출함으로써 이벤트 핸들러가 생성되었습니다. 이것은 메인 gain 노드의 음량을 제어의 새 값으로 업데이트 합니다.
-3.  다음으로, 음 주파수 표에 있는 각 옥타브에 대해 순회합니다. 각 옥타브에 대해, 우리는 그 옥타브에 있는 음들의 목록을 얻기 위해 {{jsxref("Object.entries()")}}를 사용합니다.
-4.  그 옥타브의 음들을 포함하는 {{HTMLElement("div")}}를 생성하고 (이렇게 함으로써 우리는 옥타브들 사이에 약간의 공간을 가질 수 있습니다), 이것의 클래스명을 "octave"로 설정합니다.
-5.  옥타브에 있는 각 건반에 대해, 우리는 음의 이름이 한 문자보다 많은지 검사합니다. 우리는 이것을 생략하는데, 왜냐하면 우리는 이 예제에서 샤프(#) 음들을 무시하기 때문입니다. 만약 음의 이름이 단지 한 문자라면, 우리는 `createKey()`를 호출하는데, 이는 음의 문자열, 옥타브, 그리고 주파수를 명시합니다. 이 반환된 요소는 단계 4에서 생성된 옥타브 요소에 추가됩니다.
-6.  각 옥타브 요소가 생성되었을 때, 키보드에 추가됩니다.
-7.  키보드가 생성되고 나면, 옥타브 5의 "B" 음이 보이도록 스크롤합니다; 이것은 주변 건반들을 따라 중앙 '다' 음이 보이도록 하는 효과를 가지고 있습니다.
-8.  그리고 나서 새로운 사용자 정의 파형이 {{domxref("AudioContext.createPeriodicWave()")}}를 사용하여 생성됩니다. 이 파형은 언제든지 사용자가 파형 선택기에서 "Custom"을 선택했을 때 사용될 것입니다.
-9.  마지막으로, oscillator 목록이 어떤 oscillator가 어떤 건반과 연관되어 있는지를 식별하는 정보를 받기 위한 준비가 되었다는 것을 보장하도록 초기화됩니다.
+1. 음의 이름과 옥타브를 주파수에 대응(map)시키는 표는 `createNoteTable()`를 호출함으로써 생성됩니다.
+2. 메인 gain 제어에서 {{event("change")}} 이벤트를 다루기 위해 {{domxref("EventTarget.addEventListener", "addEventListener()")}}를 호출함으로써 이벤트 핸들러가 생성되었습니다. 이것은 메인 gain 노드의 음량을 제어의 새 값으로 업데이트 합니다.
+3. 다음으로, 음 주파수 표에 있는 각 옥타브에 대해 순회합니다. 각 옥타브에 대해, 우리는 그 옥타브에 있는 음들의 목록을 얻기 위해 {{jsxref("Object.entries()")}}를 사용합니다.
+4. 그 옥타브의 음들을 포함하는 {{HTMLElement("div")}}를 생성하고 (이렇게 함으로써 우리는 옥타브들 사이에 약간의 공간을 가질 수 있습니다), 이것의 클래스명을 "octave"로 설정합니다.
+5. 옥타브에 있는 각 건반에 대해, 우리는 음의 이름이 한 문자보다 많은지 검사합니다. 우리는 이것을 생략하는데, 왜냐하면 우리는 이 예제에서 샤프(#) 음들을 무시하기 때문입니다. 만약 음의 이름이 단지 한 문자라면, 우리는 `createKey()`를 호출하는데, 이는 음의 문자열, 옥타브, 그리고 주파수를 명시합니다. 이 반환된 요소는 단계 4에서 생성된 옥타브 요소에 추가됩니다.
+6. 각 옥타브 요소가 생성되었을 때, 키보드에 추가됩니다.
+7. 키보드가 생성되고 나면, 옥타브 5의 "B" 음이 보이도록 스크롤합니다; 이것은 주변 건반들을 따라 중앙 '다' 음이 보이도록 하는 효과를 가지고 있습니다.
+8. 그리고 나서 새로운 사용자 정의 파형이 {{domxref("AudioContext.createPeriodicWave()")}}를 사용하여 생성됩니다. 이 파형은 언제든지 사용자가 파형 선택기에서 "Custom"을 선택했을 때 사용될 것입니다.
+9. 마지막으로, oscillator 목록이 어떤 oscillator가 어떤 건반과 연관되어 있는지를 식별하는 정보를 받기 위한 준비가 되었다는 것을 보장하도록 초기화됩니다.
 
 #### 건반 생성하기
 

@@ -1,8 +1,8 @@
 ---
 title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 ---
+
 {{AddonSidebar}}
 
 이 API는 콘텐츠 스크립트를 등록한다. 등록된 콘텐츠 스크립트는 브라우저가 URL 패턴이 일치하는 페이지에 넣는다.
@@ -27,6 +27,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.contentScripts", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

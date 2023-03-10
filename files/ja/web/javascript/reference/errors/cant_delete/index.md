@@ -1,14 +1,8 @@
 ---
 title: 'TypeError: property "x" is non-configurable and can''t be deleted'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cant_delete
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "property is non-configurable and can't be deleted" は、プロパティを削除しようとしたが、そのプロパティが[構成不可](/ja/docs/Web/JavaScript/Data_structures#properties)である場合に発生します。

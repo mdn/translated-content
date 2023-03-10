@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.strokeStyle`** de l'API Canvas 2D spécifie la couleur ou le style à utiliser pour dessiner les lignes autour des formes. La valeur par défaut est `#000` (black).

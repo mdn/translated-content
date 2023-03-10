@@ -2,7 +2,8 @@
 title: <span>
 slug: Web/HTML/Element/span
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<span>`** 元素是短语内容的通用行内容器，并没有任何特殊语义。可以使用它来编组元素以达到某种样式意图（通过使用类或者 Id 属性），或者这些元素有着共同的属性，比如**lang**。应该在没有其他合适的语义元素时才使用它。`<span>` 与 {{HTMLElement("div")}} 元素很相似，但 {{HTMLElement("div")}} 是一个 [块元素](/zh-CN/docs/HTML/Block-level_elements) 而 `<span>` 则是 [行内元素](/zh-CN/docs/HTML/Inline_elements).
 
@@ -54,7 +55,7 @@ li span {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.span")}}
+{{Compat}}
 
 ## 参见
 

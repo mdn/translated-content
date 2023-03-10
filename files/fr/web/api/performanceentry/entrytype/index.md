@@ -11,6 +11,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry/entryType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La propriété **`entryType`** renvoie un [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type de mesure de performance tel que, par exemple, « `mark` ». Cette propriété est en lecture seule.

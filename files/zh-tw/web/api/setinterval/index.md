@@ -3,6 +3,7 @@ title: setInterval()
 slug: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`setInterval()`** 函式, {{domxref("Window")}} 與 {{domxref("Worker")}} 介面皆提供此一函式, 此函式作用為重複地執行一個函式呼叫或一個程式碼片斷, 每一次執行間隔固定的延遲時間. 此函式呼叫時將傳回一個間隔代碼(Interval ID)用以識別該間隔程序, 因此後續您可以呼叫 {{domxref("clearInterval()")}} 函式移除該間隔程序. 此函式為由 `WindowOrWorkerGlobalScope` 混合定義。
@@ -316,7 +317,7 @@ var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);
 
 ### Inactive tabs
 
-Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.
+Starting in Gecko 5.0, intervals are clamped to fire no more often than once per second in inactive tabs.
 
 ## The "[`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)" problem
 
@@ -389,13 +390,13 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 Another, more complex, solution for **the [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#MiniDaemon_-_A_framework_for_managing_timers).
 
-> **備註：** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
+> **備註：** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 
 ## MiniDaemon - A framework for managing timers
 
 In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#The_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
 
-> **備註：** For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/en-US/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
+> **備註：** For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/zh-TW/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
 
 ### minidaemon.js
 
@@ -474,7 +475,9 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 ### Syntax
 
-` var myDaemon = new MiniDaemon(thisObject, callback[``, rate``[, length]]); `
+```
+var myDaemon = new MiniDaemon(thisObject, callback[, rate[, length]]);
+```
 
 ### Description
 
@@ -571,7 +574,7 @@ If you wish to have your function called _once_ after the specified delay, use {
 
 It's possible for intervals to be nested; that is, the callback for `setInterval()` can in turn call `setInterval()` to start another interval running, even though the first one is still going. To mitigate the potential impact this can have on performance, once intervals are nested beyond five levels deep, the browser will automatically enforce a 4 ms minimum value for the interval. Attempts to specify a value less than 4 ms in deeply-nested calls to `setInterval()` will be pinned to 4 ms.
 
-Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see {{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for delays longer than specified")}} for examples.
+Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/zh-TW/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 
@@ -601,9 +604,9 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ## See also
 
-- [JavaScript timers](/en-US/Add-ons/Code_snippets/Timers)
+- [JavaScript timers](/zh-TW/Add-ons/Code_snippets/Timers)
 - {{domxref("setTimeout")}}
 - {{domxref("clearTimeout")}}
 - {{domxref("clearInterval")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/en-US/Add-ons/Code_snippets/Timers/Daemons)
+- [_Daemons_ management](/zh-TW/Add-ons/Code_snippets/Timers/Daemons)

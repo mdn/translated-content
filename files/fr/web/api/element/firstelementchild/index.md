@@ -4,6 +4,7 @@ slug: Web/API/Element/firstElementChild
 translation_of: Web/API/Element/firstElementChild
 browser-compat: api.Element.firstElementChild
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.firstElementChild`** renvoie le premier nœud enfant de type [`Element`](/fr/docs/Web/API/Element) d'un élément, ou `null` s'il n'en a pas.

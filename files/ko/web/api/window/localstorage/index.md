@@ -1,21 +1,11 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-  - Window
-  - WindowLocalStorage
-  - 로컬스토리지
-translation_of: Web/API/Window/localStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
-**`localStorage`\*\*** \*\*읽기 전용 속성을 사용하면 {{domxref("Document")}} {{glossary("origin", "출처")}}의 {{domxref("Storage")}} 객체에 접근할 수 있습니다. 저장한 데이터는 브라우저 세션 간에 공유됩니다. `localStorage`는 {{domxref("Window.sessionStorage", "sessionStorage")}}와 비슷하지만, `localStorage`의 데이터는 만료되지 않고 `sessionStorage`의 데이터는 페이지 세션이 끝날 때, 즉 페이지를 닫을 때 사라지는 점이 다릅니다. ("사생활 보호 모드" 중 생성한 `localStorage` 데이터는 마지막 "사생활 보호" 탭이 닫힐 때 지워집니다.)
+**`localStorage`** 읽기 전용 속성을 사용하면 {{domxref("Document")}} {{glossary("origin", "출처")}}의 {{domxref("Storage")}} 객체에 접근할 수 있습니다. 저장한 데이터는 브라우저 세션 간에 공유됩니다. `localStorage`는 {{domxref("Window.sessionStorage", "sessionStorage")}}와 비슷하지만, `localStorage`의 데이터는 만료되지 않고 `sessionStorage`의 데이터는 페이지 세션이 끝날 때, 즉 페이지를 닫을 때 사라지는 점이 다릅니다. ("사생활 보호 모드" 중 생성한 `localStorage` 데이터는 마지막 "사생활 보호" 탭이 닫힐 때 지워집니다.)
 
 `localStorage`에 저장한 자료는 **페이지 프로토콜별로 구분**합니다. 특히 HTTP(<http://example.com>)로 방문한 페이지에서 저장한 데이터는 같은 페이지의 HTTPS(<https://example.com>)와는 다른 `localStorage`에 저장됩니다.
 
@@ -23,7 +13,9 @@ translation_of: Web/API/Window/localStorage
 
 ## 구문
 
-    myStorage = window.localStorage;
+```js
+myStorage = window.localStorage;
+```
 
 ### 값
 

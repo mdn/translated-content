@@ -2,6 +2,7 @@
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AudioScheduledSourceNode` 接口作为 web 音频 API 的一部分，是几种具有在特定时刻开始与停止能力的音频源节点接口的父接口。更具体地来说，这个接口定义了{{domxref("AudioScheduledSourceNode.start", "start()")}} 和{{domxref("AudioScheduledSourceNode.stop", "stop()")}} 方法，以及{{domxref("AudioScheduledSourceNode.onended", "onended")}}事件
@@ -17,7 +18,7 @@ _Inherits properties from its parent interface, {{domxref("AudioNode")}}, and ad
 ### Event handlers
 
 - {{domxref("AudioScheduledSourceNode.onended", "onended")}}
-  - : A function to be called when the {{event("ended")}} event is fired, indicating that the node has finished playing.
+  - : A function to be called when the [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) event is fired, indicating that the node has finished playing.
 
 ## Methods
 
@@ -34,7 +35,7 @@ _Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds 
 
 ## Browser compatibility
 
-{{Compat("api.AudioScheduledSourceNode")}}
+{{Compat}}
 
 ## See also
 

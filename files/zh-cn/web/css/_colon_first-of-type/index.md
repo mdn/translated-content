@@ -2,6 +2,7 @@
 title: ':first-of-type'
 slug: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:first-of-type`**表示一组兄弟元素中其类型的第一个元素。
@@ -13,7 +14,7 @@ p:first-of-type {
 }
 ```
 
-> **备注：** 按原来定义，所选元素必须有一个父元素。 从 Selectors Level 4 开始，就不需要这样了。
+> **备注：** 按原来定义，所选元素必须有一个父元素。从 Selectors Level 4 开始，就不需要这样了。
 
 ## 语法
 
@@ -79,7 +80,7 @@ article :first-of-type {
 
 ## 浏览器兼容
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## 参见
 

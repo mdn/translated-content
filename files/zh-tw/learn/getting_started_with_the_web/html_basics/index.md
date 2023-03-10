@@ -2,6 +2,7 @@
 title: HTML 基礎
 slug: Learn/Getting_started_with_the_web/HTML_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML（**H**ypertext **M**arkup **L**anguage），中文全名為「超文字標示語言」，是一種用來組織架構並呈現網頁內容的程式語言。網頁內容的組成，可能包含了段落、清單、圖片或表格...等。透過這篇文章，希望能幫助大家對 HTML 及其功能有基本的認識。
@@ -216,14 +217,3 @@ My cat is very grumpy
 這篇文章觸及的是非常基本的 HTML 介紹，若你有興趣想進一步了解，歡迎參考 [HTML Learning page](/zh-TW/Learn/HTML)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -2,6 +2,7 @@
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
+
 {{JSRef}}
 
 靜態方法 **`Object.defineProperty()`** 會直接對一個物件定義、或是修改現有的屬性。執行後會回傳定義完的物件。
@@ -62,7 +63,7 @@ data 和 accessor descriptors 皆為物件，兩者共享下面提及的 key：
   - : 作為 setter 形式，為屬性存在的函式，如果沒有 setter 的話則回傳 {{jsxref("undefined")}}。 The function will receive as only argument the new value being assigned to the property.
     **預設 {{jsxref("undefined")}}**
 
-請注意，這些選項並不一定要是 descriptor 屬性，由原型鍊（prototype chain）繼承的屬性，也會被考慮到。要確保需要凍結（freeze）的 {{jsxref("Object.prototype")}} upfront 預設能被保存，請明確指定所有選項，或把 {{jsxref("Object.prototype.__proto__", "__proto__")}} 屬性指向 {{jsxref("null")}}。
+請注意，這些選項並不一定要是 descriptor 屬性，由原型鍊（prototype chain）繼承的屬性，也會被考慮到。要確保需要凍結（freeze）的 {{jsxref("Object.prototype")}} upfront 預設能被保存，請明確指定所有選項，或把 [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 屬性指向 {{jsxref("null")}}。
 
 ```js
 // using __proto__
@@ -107,7 +108,7 @@ Object.defineProperty(obj, 'key', withValue('static'));
 
 ## 範例
 
-If you want to see how to use the `Object.defineProperty` method with a _binary-flags-like_ syntax, see [additional examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
+If you want to see how to use the `Object.defineProperty` method with a _binary-flags-like_ syntax, see [additional examples](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
 
 ### 建立屬性
 
@@ -308,7 +309,7 @@ console.log(instance.myname); // this is my name string
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
+{{Compat}}
 
 ## Compatibility notes
 

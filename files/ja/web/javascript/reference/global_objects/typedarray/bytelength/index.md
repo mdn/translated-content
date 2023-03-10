@@ -1,14 +1,8 @@
 ---
 title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** アクセサープロパティは、型付き配列の長さを (バイト単位で) 表します。
@@ -38,9 +32,7 @@ uint8.byteLength; // 6 (due to the offset of the constructed Uint8Array)
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

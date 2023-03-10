@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
+
 {{MDNSidebar}}
 
 Cet article est destiné à présenter aux personnes souhaitant contribuer à MDN le processus de modification de pages existantes et de création de nouvelles pages.

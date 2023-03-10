@@ -1,20 +1,15 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean`** 객체는 불리언 값을 감싸고 있는 객체입니다.
 
 ## 설명
 
-첫 번재 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 빈 문자열 (`""`)이라면 객체의 초기값은 `false`가 됩니다. 문자열 `"false"`를 포함한 그 외 모든 다른 값은 초기값을 `true`로 설정합니다.
+첫 번째 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 빈 문자열 (`""`)이라면 객체의 초기값은 `false`가 됩니다. 문자열 `"false"`를 포함한 그 외 모든 다른 값은 초기값을 `true`로 설정합니다.
 
 `Boolean` 객체의 `true`와 `false` 값을 원시 `Boolean` 값 `true`, `false`와 혼동해선 안됩니다.
 

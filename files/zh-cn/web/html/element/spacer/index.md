@@ -2,15 +2,16 @@
 title: <spacer>
 slug: Web/HTML/Element/spacer
 ---
+
 {{non-standard_header}}{{deprecated_header}}
 
-**`<spacer>`** 是过时的 HTML 元素，它可以向页面插入间隔。它由 Netscape 设计，用于实现单像素布局图像的相同效果，Web 设计师用它来向页面添加空白，而不需要实际使用图片。 但是，`<spacer>` 不再受任何主流浏览器支持，并且相同效果可以简单由 CSS 实现。
+**`<spacer>`** 是过时的 HTML 元素，它可以向页面插入间隔。它由 Netscape 设计，用于实现单像素布局图像的相同效果，Web 设计师用它来向页面添加空白，而不需要实际使用图片。但是，`<spacer>` 不再受任何主流浏览器支持，并且相同效果可以简单由 CSS 实现。
 
 Firefox 是 Netscape 浏览器的后继，在版本 4 中移除了 `<spacer>` 的支持。
 
 ## 属性
 
-就像其他 HTML 元素一样，这个元素支持 [全局属性](/en-US/docs/HTML/Global_attributes)。
+就像其他 HTML 元素一样，这个元素支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - {{ htmlattrdef("type") }}
   - : 这个属性指定间隔的类型，可用的值为 `horizontal`, `vertical` 和 `block`。
@@ -36,4 +37,4 @@ Firefox 是 Netscape 浏览器的后继，在版本 4 中移除了 `<spacer>` �
 
 并不是任何规范的一部分。
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

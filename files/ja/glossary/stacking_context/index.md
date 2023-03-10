@@ -2,6 +2,7 @@
 title: Stacking context (重ね合わせコンテキスト)
 slug: Glossary/Stacking_context
 ---
+
 **重ね合わせコンテキスト** (Stacking context) は、ウェブページ上の要素が他の要素の上にどのように配置されるかを表すもので、ちょうど机の上のインデックスカードを横に並べたり重ねたりするようなものです。
 
 ## 理解を深める

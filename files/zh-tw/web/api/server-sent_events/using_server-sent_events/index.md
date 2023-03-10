@@ -2,6 +2,7 @@
 title: 使用 server-sent 事件
 slug: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 開發一個使用 server-sent 事件的網頁應用程式很簡單。在伺服器端只需要一些的程式碼與網頁串流事件，而客戶端這邊的處理進入事件的部分幾乎跟 [websockets](/zh-TW/docs/Web/API/WebSockets_API) 一樣。這是一種單向的連線，所以你無法從客戶端向伺服器傳送事件。
@@ -20,7 +21,7 @@ const evtSource = new EventSource("ssedemo.php");
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-當你完成初始化事件來源後，你就可以透過新增 {{event("message")}} 事件的處理器來開始監聽來自伺服器的訊息：
+當你完成初始化事件來源後，你就可以透過新增 {{domxref("EventSource.message_event", "message")}} 事件的處理器來開始監聽來自伺服器的訊息：
 
 ```js
 evtSource.onmessage = function(event) {
@@ -189,4 +190,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ### `EventSource`
 
-{{Compat("api.EventSource")}}
+{{Compat}}

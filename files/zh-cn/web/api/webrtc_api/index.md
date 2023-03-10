@@ -2,9 +2,10 @@
 title: WebRTC API
 slug: Web/API/WebRTC_API
 ---
-{{WebRTCSidebar}}
 
-**WebRTC** (Web Real-Time Communications) 是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间点对点（Peer-to-Peer）的连接，实现视频流和（或）音频流或者其他任意数据的传输。WebRTC 包含的这些标准使用户在无需安装任何插件或者第三方的软件的情况下，创建点对点（Peer-to-Peer）的数据分享和电话会议成为可能。
+{{DefaultAPISidebar("WebRTC")}}
+
+**WebRTC**（Web Real-Time Communications）是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间点对点（Peer-to-Peer）的连接，实现视频流和（或）音频流或者其他任意数据的传输。WebRTC 包含的这些标准使用户在无需安装任何插件或者第三方的软件的情况下，创建点对点（Peer-to-Peer）的数据分享和电话会议成为可能。
 
 WebRTC 包含了若干相互关联的 API 和协议以达到这个目标。你在这里看到的文档将会帮助你理解 WebRTC 的基本概念，还会教你如何去建立和使用可以传输媒体数据和其他任意数据的连接。当然你还会学到更多其他的东西。
 
@@ -40,8 +41,6 @@ WebRTC 包含了若干相互关联的 API 和协议以达到这个目标。你�
 
 ## 教程
 
-- [使用 WebRTC adapter.js 提高应用的兼容性](/zh-CN/docs/Web/API/WebRTC_API/adapter.js)
-  - : WebRTC 组织在 GitHub 上提供了[WebRTC 适配器](https://github.com/webrtc/adapter/)，来解决因不同浏览器对 WebRTC 实现不同导致的问题。adapter.js 是一个 JavaScript 库，可以让你写的 WebRTC 应用“一处编写，处处运行”。
 - [使用 WebRTC 拍摄静止的照片](/zh-CN/docs/Web/API/WebRTC_API/Taking_still_photos)
   - : 这篇文章介绍了如何在 WebRTC 的支持下可以访问到电脑或者手机的摄像头并且使用它来拍摄照片。
 - [一个简易 RTCDataChannel 的例子](/zh-CN/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

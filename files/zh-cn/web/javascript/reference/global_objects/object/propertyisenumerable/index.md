@@ -2,6 +2,7 @@
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 **`propertyIsEnumerable()`** 方法返回一个布尔值，表示指定的属性是否可枚举。

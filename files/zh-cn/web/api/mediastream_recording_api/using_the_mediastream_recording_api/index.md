@@ -2,11 +2,12 @@
 title: 使用 MediaStream 的录制 API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 [媒体流 (音/视频) 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)让记录音频流或视频流信息更加容易。当使用[navigator.mediaDevices.getUserMedia()"](/zh-CN/docs/Web/API/Navigator/mediaDevices/getUserMedia)时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在 web apps 中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个 API 的 MediaRecorder 的界面。
 
-## 示例应用: Web 录音机
+## 示例应用：Web 录音机
 
 ![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](web-dictaphone.png)
 
@@ -254,7 +255,7 @@ mediaRecorder.onstop = function(e) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

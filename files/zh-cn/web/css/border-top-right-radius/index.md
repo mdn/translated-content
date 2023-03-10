@@ -2,17 +2,18 @@
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
 ---
+
 {{ CSSRef("CSS Borders") }}
 
 ## 概要
 
-`border-top-right-radius属性设置元素的右上角`弧形，这个圆弧可能是一个椭圆，或者其中一个值是 0 的话，就是没有圆弧，换句话就是说拐角是方形的。
+`border-top-right-radius` 属性设置元素的右上角弧形，这个圆弧可能是一个椭圆，或者其中一个值是 0 的话，就是没有圆弧，换句话就是说拐角是方形的。
 
-![border-top-right-radius.png](https://developer.mozilla.org/@api/deki/files/6133/=border-top-right-radius.png)
+![border-top-right-radius.png](border-top-right-radius.png)
 
 一个背景通常以一张图片或者颜色开始，在边框处被剪切，更甚至就是一个圆形；剪切的额外定位通过一个 CSS 属性"background-clip"来定义。
 
-> **备注：** 在 border-top-radius-radiu 属性值之后，如果作用在一个元素上没有设置“border-radius”简写属性，那么这个属性值就会通过[简写属性](https://developer.mozilla.org/en/CSS/Shorthand_properties)重新设置成它的初始值。
+> **备注：** 在 border-top-radius-radiu 属性值之后，如果作用在一个元素上没有设置“border-radius”简写属性，那么这个属性值就会通过[简写属性](/zh-CN/CSS/Shorthand_properties)重新设置成它的初始值。
 
 {{cssinfo}}
 
@@ -416,4 +417,4 @@ border-top-right-radius: inherit
 
 ## 参见
 
-边框半径相关的 CSS 属性：CSS 速记 {{ cssxref("border-radius") }}, 其它角的属性：{{ cssxref("border-top-left-radius") }}, {{ cssxref("border-bottom-right-radius") }}和 {{ cssxref("border-bottom-left-radius") }}。
+边框半径相关的 CSS 属性：CSS 速记 {{ cssxref("border-radius") }}, 其他角的属性：{{ cssxref("border-top-left-radius") }}, {{ cssxref("border-bottom-right-radius") }}和 {{ cssxref("border-bottom-left-radius") }}。

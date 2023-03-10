@@ -1,8 +1,8 @@
 ---
 title: ARIA Screen Reader Implementors Guide
 slug: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-translation_of: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 ---
+
 ## Live Regions
 
 This is just a guide. Live region markup is a complex area which is somewhat open to interpretation. The following is intended to provide implementation guidance that respects screen readers developers' need to try different things. The intention is to strike a balance between providing useful guidance on how to use the markup's intended meaning while supporting live regions as an area for screen readers to innovate and compete.

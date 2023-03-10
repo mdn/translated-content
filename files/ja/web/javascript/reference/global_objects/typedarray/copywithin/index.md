@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - メソッド
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 ---
+
 {{JSRef}}
 
 **`copyWithin()`** メソッドは、配列内の一連の配列の要素を `target` から始まる位置にコピーします。コピーは第二、第三の引数、 `start` と `end` のインデックス位置から実施されます。 `end` 引数はオプションで、既定では配列の長さです。このメソッドは {{jsxref("Array.prototype.copyWithin")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは [型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
@@ -54,9 +47,7 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.copywithin', 'TypedArray.prototype.copyWithin')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

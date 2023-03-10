@@ -1,7 +1,8 @@
 ---
 title: Notification.data
-slug: Web/API/notification/data
+slug: Web/API/Notification/data
 ---
+
 {{APIRef("Web Notifications")}}
 
 `data` 只读属性是 {{domxref("Notification")}} 的接口，当它作为构造函数的 option 可选项之一时，返回结构化的 Notification 的 data 数据。
@@ -12,7 +13,7 @@ slug: Web/API/notification/data
 
 附加语法糖：关于克隆对象的速度研究。
 
-https\://dassur.ma/things/deep-copy/
+<https://dassur.ma/things/deep-copy/>
 
 博客作者认为目前（参考）最快的 object 克隆、复制方式。
 
@@ -53,7 +54,7 @@ n.data // should return 'I like peas.'
 
 ## Browser compatibility
 
-{{Compat("api.Notification.data")}}
+{{Compat}}
 
 ## See also
 

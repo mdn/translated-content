@@ -2,16 +2,8 @@
 title: React 시작하기
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - jsx
-  - props
 ---
+
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
@@ -72,8 +64,7 @@ const header = (
 );
 ```
 
-<div class="notecard note">
-    <p><strong>참고</strong>: 위의 스니펫에 있는 괄호는 JSX에 유일하지도 않고, 여러분의 애플리케이션에 어떠한 영향을 주지도 않습니다. 이들은 여러 줄의 코드가 동일한 표현식의 부분이라는 것을 당신(과 컴퓨터)에게 알려줍니다. header 표현식은 다음과 같이도 쓸 수도 있습니다.</p>
+> **참고:** 위의 스니펫에 있는 괄호는 JSX에 유일하지도 않고, 여러분의 애플리케이션에 어떠한 영향을 주지도 않습니다. 이들은 여러 줄의 코드가 동일한 표현식의 부분이라는 것을 당신(과 컴퓨터)에게 알려줍니다. header 표현식은 다음과 같이도 쓸 수도 있습니다.
 
 ```js
 const header = <header>
@@ -136,8 +127,7 @@ npx create-react-app moz-todo-react
 - 기본적인 앱 아키텍처를 정의하는 파일과 디렉토리의 구조를 만듭니다.
 - 컴퓨터에 깃이 설치되어있다면, 디렉토리를 깃 레포지토리로 초기화합니다.
 
-<div class="notecard note">
-    <p><strong>참고</strong>: yarn package manager를 설치했다면, create-react-app은 그것을 npm 대신 기본으로 사용할 것입니다. 두 패키지 매니저가 모두 설치되어있고 NPM을 명시적으로 사용하길 원한다면, create-react-app을 실행할 때 플래그 <code>--use-npm</code>을 사용하면 됩니다.</p>
+> **참고:** yarn package manager를 설치했다면, create-react-app은 그것을 npm 대신 기본으로 사용할 것입니다. 두 패키지 매니저가 모두 설치되어있고 NPM을 명시적으로 사용하길 원한다면, create-react-app을 실행할 때 플래그 `--use-npm`을 사용하면 됩니다.
 
 ```bash
 npx create-react-app moz-todo-react --use-npm
@@ -186,7 +176,7 @@ moz-todo-react
 
 ## 첫번째 React 컴포넌트 `</App>` 탐색하기
 
-React에서, **컴포넌트(component)**는 앱의 일부를 렌더링하는 재사용가능한 모듈입니다. 이 부분들은 클 수도 작을 수도 있지만, 대개 정확하게 정의됩니다; 이들은 단일하고 명확한 목적만을 위해 일합니다.
+React에서, **컴포넌트**(**component**)는 앱의 일부를 렌더링하는 재사용가능한 모듈입니다. 이 부분들은 클 수도 작을 수도 있지만, 대개 정확하게 정의됩니다; 이들은 단일하고 명확한 목적만을 위해 일합니다.
 
 `src/App.js`를 열어봅시다. 이 파일은 첫번째 컴포넌트 `App`과 몇 줄의 코드를 포함하고 있습니다.
 
@@ -292,7 +282,7 @@ function App() {
 
 ### Export 문
 
-`App.js` 파일의 최하단에 있는  `export default App`라는 명령문은 `App` 컴포넌트들을 다른 모듈에서 사용할 수 있게 합니다.
+`App.js` 파일의 최하단에 있는 `export default App`라는 명령문은 `App` 컴포넌트들을 다른 모듈에서 사용할 수 있게 합니다.
 
 ## Interrogating the index
 
@@ -327,9 +317,7 @@ serviceWorker.unregister();
 
 이 모든 것이 React에게 우리가 루트로서, 혹은 첫 번째 컴포넌트로서 `App` 컴포넌트를 렌더링하길 원한다고 알려줍니다.
 
-<div class="notecard note">
-    <p><strong>참고</strong>: JSX에서, React 컴포넌트와 HTML 요소는 반드시 닫는 태그가 있어야 합니다. <code>&lt;App&gt;</code> 혹은 <code>&lt;img&gt;</code>라고만 쓰는 것은 오류를 발생시킬 것입니다.</p>
-</div>
+> **참고:** JSX에서, React 컴포넌트와 HTML 요소는 반드시 닫는 태그가 있어야 합니다. `<App>` 혹은 `<img>`라고만 쓰는 것은 오류를 발생시킬 것입니다.
 
 [Service workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)는 앱 성능에 도움이 되고 오프라인에서 일할 수 있는 웹 애플리케이션의 기능을 제공하는 특별한 코드들이지만, 이 기사에서 다루는 범위는 아닙니다. 다섯 번째 줄과 코드 가장 아래에 있는 것은 지울 수 있습니다.
 
@@ -466,66 +454,3 @@ React에서는:
 - props는 컴포넌트 호출에 속성처럼 쓰이고, 컴포넌트로 전달됩니다.
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
-
-## In this module
-
-<ul>
- <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>

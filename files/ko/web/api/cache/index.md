@@ -1,18 +1,8 @@
 ---
 title: Cache
 slug: Web/API/Cache
-tags:
-  - API
-  - Cache
-  - Draft
-  - Experimental
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Storage
-translation_of: Web/API/Cache
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 **`Cache`** 인터페이스는 {{domxref ( "ServiceWorker")}} 의 생명주기의 일부로 캐시 된 [`Request`](http://fetch.spec.whatwg.org/#request)와 [`Response`](http://fetch.spec.whatwg.org/#response)를 나타냅니다.

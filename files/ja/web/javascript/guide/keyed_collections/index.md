@@ -1,15 +1,8 @@
 ---
 title: キー付きコレクション
 slug: Web/JavaScript/Guide/Keyed_collections
-tags:
-  - Collections
-  - Guide
-  - JavaScript
-  - Map
-  - l10n:priority
-  - set
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
 本章では、キーによって順序付けされたデータのコレクションを紹介します。Map および Set オブジェクトは挿入順に反復処理を行える要素を保持します。
@@ -114,7 +107,7 @@ for (let item of mySet) console.log(item);
 
 {{jsxref("Array.from")}} または [スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator) を使用して `Set` から {{jsxref("Array")}} を生成できます。また、`Set` コンストラクタを使って `Array` から `Set` へと逆変換することができます。
 
-> **Note:** **注:** `Set` オブジェクトは*一意の値*を格納することにくれぐれも注意してください、重複した要素は `Array` から変換するときに削除されます。
+> **メモ:** `Set` オブジェクトは*一意の値*を格納することにくれぐれも注意してください、重複した要素は `Array` から変換するときに削除されます。
 
 ```js
 Array.from(mySet);
@@ -139,7 +132,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 {{jsxref("Set")}} オブジェクトとの主な違いは下記の通りです :
 
 - `Set` とは対照的に、`WeakSet` は**オブジェクトのみのコレクション**で、任意の型の任意の値でのコレクションではありません。
-- `WeakSet` は*弱い*\*\* \*\*: コレクションでのオブジェクトでの参照は弱く保持されています。`WeakSet` 内に格納されているオブジェクトに対する参照がなくなった場合、ガベージコレクションされます。これはまた、現在コレクション内に格納されているオブジェクトのリストがないということを表しています。`WeakSet` は列挙可能ではありません。
+- `WeakSet` は*弱い: コレクションでのオブジェクトでの参照は弱く保持されています。`WeakSet` 内に格納されているオブジェクトに対する参照がなくなった場合、ガベージコレクションされます。これはまた、現在コレクション内に格納されているオブジェクトのリストがないということを表しています。`WeakSet` は列挙可能ではありません。
 
 `WeakSet` オブジェクトの使用例は限定的です。メモリーリークが発生しないため、例えば、DOM 要素をキーとして使用し、監視するためにそれらにマーキングすることが安全に行なえます。
 

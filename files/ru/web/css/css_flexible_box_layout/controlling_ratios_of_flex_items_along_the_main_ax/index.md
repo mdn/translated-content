@@ -7,6 +7,7 @@ translation_of: >-
 original_slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси
 ---
+
 {{CSSRef}}В данном руководстве, мы исследуем три свойства применяемые к flex элементам, которые позволяют нам контролировать размер и гибкость flex элементов по основной(main) оси. Полное понимание, как эти свойства работают, при увеличение и уменьшение элементов, есть ключ к мастерству flexbox.
 
 ## A first look
@@ -45,7 +46,7 @@ The second paragraph has a value of `max-content` and so it does the opposite. I
 
 If your browser does not yet support these keywords both paragraphs will be rendered as normal paragraphs in block flow; the below screenshots show the expected rendering.
 
-![The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow.](https://mdn.mozillademos.org/files/15658/ratios-size.png)
+![The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow.](ratios-size.png)
 
 Remember this behaviour and what effects `min-content` and `max-content` have as we explore `flex-grow` and `flex-shrink` later in this article.
 
@@ -53,11 +54,11 @@ Remember this behaviour and what effects `min-content` and `max-content` have as
 
 To talk about these properties we need to understand the concept of **positive and negative free space**. When a flex container has positive free space, it has more space than is required to display the flex items inside the container. For example, if I have a 500 pixel-wide container, {{CSSxRef("flex-direction")}} is `row`, and I have three flex items each 100 pixels wide, then I have 200 pixels of positive free space, which could be distributed between the items if I wanted them to fill the container.
 
-![Image showing space left over after items have been displayed.](https://mdn.mozillademos.org/files/15654/Basics7.png)
+![Image showing space left over after items have been displayed.](basics7.png)
 
 We have negative free space when the natural size of the items adds up to larger than the available space in the flex container. If I have a 500 pixel-wide container like the one above, but the three flex items are each 200 pixels wide, the total space I need will be 600 pixels, so I have 100 pixels of negative free space. This could be removed from the items in order to make them fit the container.
 
-![The items overflow the container](https://mdn.mozillademos.org/files/15655/ratios1.png)
+![The items overflow the container](ratios1.png)
 
 It is this distribution of positive free space and removal of negative free space that we need to understand in order to understand the flex properties.
 
@@ -91,11 +92,11 @@ Things can get confusing in terms of how `flex-grow` and `flex-basis` interact. 
 
 In this case the `flex-basis` value is `auto` and the items don’t have a width set, and so are auto-sized. This means that flexbox is looking at the `max-content` size of the items. After laying the items out we have some positive free space in the flex container, shown in this image as the hatched area:
 
-![Images shows the positive free space as a hatched area](https://mdn.mozillademos.org/files/15656/ratios2.png)
+![Images shows the positive free space as a hatched area](ratios2.png)
 
 We are working with a `flex-basis` equal to the content size so the available space to distribute is subtracted from the total available space (the width of the flex container), and the leftover space is then shared out equally among each item. Our bigger item ends up bigger because it started from a bigger size, even though it has the same amount of spare space assigned to it as the others:
 
-![The positive space is distributed between items](https://mdn.mozillademos.org/files/15657/ratios3.png)
+![The positive space is distributed between items](ratios3.png)
 
 If what you actually want is three equally-sized items, even if they start out at different sizes, you should use this:
 
@@ -165,17 +166,17 @@ The key to really understanding how flex item sizing works is in understanding t
 
 ### What sets the base size of the item?
 
-1.  Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
-2.  Is `flex-basis` set to `auto` or `content` (in a supporting browser)? If so, the size is based on the item size.
-3.  Is `flex-basis` a length unit, but not zero? If so this is the size of the item.
-4.  Is `flex-basis` set to `0`? if so then the item size is not taken into consideration for the space-sharing calculation.
+1. Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
+2. Is `flex-basis` set to `auto` or `content` (in a supporting browser)? If so, the size is based on the item size.
+3. Is `flex-basis` a length unit, but not zero? If so this is the size of the item.
+4. Is `flex-basis` set to `0`? if so then the item size is not taken into consideration for the space-sharing calculation.
 
 ### Do we have available space?
 
 Items can’t grow with no positive free space, and they won’t shrink unless there is negative free space.
 
-1.  If we took all of the items and added up their widths (or heights if working in a column), is that total **less** than the total width (or height) of the container? If so, then you have positive free space and `flex-grow` comes into play.
-2.  If we took all of the items and added up their widths (or heights if working in a column), is that total **more** than the total width (or height) of the container? If so, you have negative free space and `flex-shrink` comes into play.
+1. If we took all of the items and added up their widths (or heights if working in a column), is that total **less** than the total width (or height) of the container? If so, then you have positive free space and `flex-grow` comes into play.
+2. If we took all of the items and added up their widths (or heights if working in a column), is that total **more** than the total width (or height) of the container? If so, you have negative free space and `flex-shrink` comes into play.
 
 ### Other ways to distribute space
 

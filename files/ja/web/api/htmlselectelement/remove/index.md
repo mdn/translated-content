@@ -2,6 +2,7 @@
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.remove()`** メソッドは、この select 要素の選択肢の集合から指定された位置の要素を削除します。

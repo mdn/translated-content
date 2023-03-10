@@ -1,14 +1,8 @@
 ---
 title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
+
 {{JSRef}}
 
 **`Math.log10()`** 関数は、数値の 10 を底とした対数を返します。
@@ -64,9 +58,7 @@ Math.log10 = Math.log10 || function(x) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

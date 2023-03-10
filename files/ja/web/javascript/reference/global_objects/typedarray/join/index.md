@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 ---
+
 {{JSRef}}
 
 **`join()`** メソッドは、配列のすべての要素を 1 本の文字列に結合します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.join()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。
@@ -59,9 +52,7 @@ if (!Uint8Array.prototype.join) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

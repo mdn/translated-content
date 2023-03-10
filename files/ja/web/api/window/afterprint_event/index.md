@@ -2,6 +2,7 @@
 title: 'Window: afterprint イベント'
 slug: Web/API/Window/afterprint_event
 ---
+
 {{APIRef}}
 
 **`afterprint`** イベントは、関連する文書の印刷が開始されたか、印刷プレビューが閉じた後に発生します。
@@ -49,10 +50,7 @@ window.onafterprint = (event) => {
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-|                                                                  |                                  |
-| {{SpecName('HTML WHATWG', '#event-afterprint')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

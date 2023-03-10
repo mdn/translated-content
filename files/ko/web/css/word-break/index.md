@@ -1,12 +1,6 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/word-break
 ---
 {{CSSRef}}
 

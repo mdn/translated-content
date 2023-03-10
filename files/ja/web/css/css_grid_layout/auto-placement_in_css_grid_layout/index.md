@@ -1,12 +1,8 @@
 ---
 title: CSS グリッドレイアウトでの自動配置
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
+
 {{CSSRef}}
 
 CSS グリッドレイアウト仕様書には、作成したグリッド上にアイテムを正確に配置する機能に加えて、グリッドを作成したときに子アイテムの一部またはすべてを配置しなかった場合の動作を制御するルールが含まれています。一連のアイテムでグリッドを作成することで、最も簡単な方法で自動配置を確認することができます。アイテムに配置情報を与えない場合、アイテムはグリッド上の各セルに 1 つずつ配置されます。

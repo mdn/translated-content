@@ -1,13 +1,8 @@
 ---
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
+
 {{JSRef}}
 
 **`Math.exp()`** 関数は `ex` (`x` は引数、 `e` は{{jsxref("Math.E", "オイラー数 (ネイピア定数とも)", "", 1)}}、自然対数の底) を返します。
@@ -45,9 +40,7 @@ Math.exp(1);  // 2.718281828459045
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Window.getSelection
 slug: Web/API/Window/getSelection
 ---
+
 {{ ApiRef() }}
 
 返回一个 {{domxref("Selection")}} 对象，表示用户选择的文本范围或光标的当前位置。
@@ -12,7 +13,7 @@ slug: Web/API/Window/getSelection
 const selection = window.getSelection() ;
 ```
 
-- `selection` 是一个 {{domxref("Selection")}} 对象。 如果想要将 `selection` 转换为字符串，可通过连接一个空字符串（""）或使用 {{jsxref("String.toString()")}} 方法。
+- `selection` 是一个 {{domxref("Selection")}} 对象。如果想要将 `selection` 转换为字符串，可通过连接一个空字符串（""）或使用 {{jsxref("String.toString()")}} 方法。
 
 ## 示例
 
@@ -48,7 +49,7 @@ var selectedText = selObj.toString();
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.getSelection")}}
+{{Compat}}
 
 ## 相关链接
 

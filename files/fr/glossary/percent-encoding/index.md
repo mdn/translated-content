@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/percent-encoding
 original_slug: Glossaire/percent-encoding
 ---
+
 **Encodage-pourcent (_Percent-encoding_)** est un mécanisme d'encodage des caractères de 8 bits qui ont une signification spécifique dans le contexte des {{Glossary("URL")}}. Il est parfois appelé encodage d'URL. Il consiste en une substitution de : un caractère '%' suivi d'un code hexadecimal correspondant à la valeur ASCII du caractère à remplacer.
 
 Les caractères spéciaux nécessitant cet encodage sont : `':'`, `'/'`, `'?'`, `'#'`, `'['`, `']'`, `'@'`, `'!'`, `'$'`, `'&'`, `"'"`, `'('`, `')'`, `'*'`, `'+'`, `','`, `';'`, `'='`, et `'%'` lui-même. Les autres caractères n'ont pas besoin d'être encodés, bien qu'ils puissent l'être.

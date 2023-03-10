@@ -2,6 +2,7 @@
 title: HTMLContentElement
 slug: Web/API/HTMLContentElement
 ---
+
 {{ APIRef("Web Components") }}
 
 {{Deprecated_header}}

@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: feed ロール'
-slug: Web/Accessibility/ARIA/Roles/Feed_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Feed_Role
+slug: Web/Accessibility/ARIA/Roles/feed_role
 ---
+
 フィード (`feed`) は動的にスクロール可能な記事 (`article`) のリスト (`list`) で、ユーザーがスクロールすると記事がリストのどちらかの端から追加または削除されます。 フィード (`feed`) により、スクリーンリーダーは閲覧モードの読み取りカーソルを使用して、リッチコンテンツのストリームを読み込みながらスクロールすることを可能にし、ユーザーが読むにつれてコンテンツをさらにロードすることで無限にスクロールし続けることができます。
 
 ```html
@@ -87,9 +83,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Feed_Role
 
 ## 仕様
 
-| 仕様                                             | 状態                     |
-| ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#feed","feed")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

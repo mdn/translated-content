@@ -1,7 +1,8 @@
 ---
-title: Command line crash course
+title: 命令行速成课
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 在您的开发过程中，您无疑需要在终端上运行一些命令 (或者在“命令行”上，它们实际上是相同的)。本文介绍了终端、需要输入的基本命令、如何将命令链接在一起，以及如何添加自己的命令行接口 (CLI) 工具。
@@ -11,9 +12,9 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
     <tr>
       <th scope="row">先决条件：</th>
       <td>
-        熟悉核心的 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言。
+        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言。
       </td>
     </tr>
     <tr>
@@ -203,10 +204,10 @@ ls -l
 
 在您创建的某个地方的测试目录中使用它们，这样您就不会意外地删除任何重要的内容，使用下面的示例命令作为指导
 
-- `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如` mkdir my-awesome-website将创建一个新目录叫``my-awesome-website `.
+- `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如 `mkdir my-awesome-website` 将创建一个新目录叫 `my-awesome-website`。
 - `rmdir` —删除指定目录，但仅当它为空时。例如`rmdir my-awesome-website`
 
-  将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ​​，因为它将永远消失。
+  将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ，因为它将永远消失。
 
 - `touch` —在当前目录中创建一个新的空文件。例如`touch mdn-example.md` 创建一个新的空文件叫做 `mdn-example.md`.
 - `mv` —
@@ -259,7 +260,7 @@ wc -l myfile.txt
 ls | wc -l
 ```
 
-`因为ls` 在自己的行上打印每个文件或目录，这有效地为我们提供了目录和文件计数。
+因为 `ls` 在自己的行上打印每个文件或目录，这有效地为我们提供了目录和文件计数。
 
 这是怎么回事？(unix) 命令行工具的一般原理是，它们将文本打印到终端 (也称为“打印到标准输出”或`STDOUT`). 很多命令也可以从流输入 (称为“标准输入”o) 中读取内容 `STDIN`).
 
@@ -267,11 +268,11 @@ ls | wc -l
 
 ## 一个稍微复杂一点的例子
 
-让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
+让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
-但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
+但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
-因此，如果您使用 curl 请求 https\://developer.mozilla.org/docs/Web/API/fetch，则不会得到输出。现在就试试：
+因此，如果您使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
 ```bash
 curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
@@ -503,11 +504,3 @@ printMe(myObj);
 这使我们结束了对终端/命令行的简短浏览。接下来，我们将更详细地介绍软件包管理器，以及如何使用它们。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
-## In this module
-
-- [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-- [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

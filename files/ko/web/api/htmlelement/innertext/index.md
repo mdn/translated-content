@@ -1,13 +1,6 @@
 ---
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - Property
-  - Reference
-translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
 {{APIRef("HTML DOM")}}
@@ -18,8 +11,10 @@ original_slug: Web/API/Node/innerText
 
 ## 구문
 
-    const renderedText = htmlElement.innerText
-    htmlElement.innerText = string
+```js
+const renderedText = htmlElement.innerText
+htmlElement.innerText = string
+```
 
 ### 값
 

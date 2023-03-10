@@ -1,14 +1,8 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
-tags:
-  - API
-  - Method
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/createObjectURL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL.createObjectURL()`** 정적 메서드는 주어진 객체를 가리키는 URL을 {{domxref("DOMString")}}으로 반환합니다. 해당 URL은 자신을 생성한 창의 {{domxref("document")}}가 사라지면 함께 무효화됩니다.
@@ -21,7 +15,9 @@ translation_of: Web/API/URL/createObjectURL
 
 ## 구문
 
-    const objectURL = URL.createObjectURL(object)
+```js
+const objectURL = URL.createObjectURL(object)
+```
 
 ### 매개변수
 
@@ -60,7 +56,7 @@ translation_of: Web/API/URL/createObjectURL
 
 ## 같이 보기
 
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

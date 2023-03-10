@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Macros
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 MDN が動作している [Yari](/ja/docs/MDN/Yari) プラットフォームは、幅広い作業の自動化を可能にする強力なマクロシステムである [KumaScript](/ja/docs/MDN/Tools/KumaScript) を提供しています。この記事は MDN のマクロを記事中で呼び出す方法について情報を提供します。

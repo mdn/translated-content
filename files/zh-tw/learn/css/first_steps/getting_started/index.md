@@ -2,6 +2,7 @@
 title: 開始使用 CSS
 slug: Learn/CSS/First_steps/Getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 在這個主題中，我們將 CSS 套用到一個簡單的 HTML 文件上，在過程中學習這個語言一些實際的東西。
@@ -278,11 +279,3 @@ body h1 + p .special {
 在下一個課程中，我們將看看 CSS 的結構是如何。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## 在這個單元中
-
-1. [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [開始使用 CSS](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 的結構](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 的運作方式](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [使用您的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -1,11 +1,12 @@
 ---
-title: 多媒体的无障碍 (Accessible multimedia)
+title: 多媒体无障碍
 slug: Learn/Accessibility/Multimedia
 original_slug: learn/Accessibility/多媒体
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-可能导致无障碍问题（accessibility problems ）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
+可能导致无障碍问题（accessibility problems）的另一类内容是多媒体 ——视频，音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -13,7 +14,7 @@ original_slug: learn/Accessibility/多媒体
       <th scope="row">先决条件：</th>
       <td>
         基本的计算机素养，对 HTML，CSS 和 JavaScript 的基本理解，<a
-          href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
+          href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
           >对无障碍</a
         >
         的理解。
@@ -28,15 +29,15 @@ original_slug: learn/Accessibility/多媒体
 
 ## 多媒体和无障碍
 
-到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
+到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
 
-另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的无障碍。图像，视频，[`<canvas>`](/en-US/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
+另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的无障碍。图像，视频，[`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
 
 但不要绝望 - 在这里我们将帮助您浏览可用于使多媒体更容易访问的技术。
 
 ## 简单图像
 
-我们已经介绍了 HTML 图像的简单文本替代[HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) –– 您可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。
+我们已经介绍了 HTML 图像的简单文本替代[HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML) –– 您可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。
 
 示例：
 
@@ -78,7 +79,7 @@ HTML5 视频和音频实例甚至附带一组内置控件，允许您直接在�
 但是，这些控件存在问题：
 
 - 在除 Opera 以外任何浏览器中，它们不可通过键盘访问。
-- Different browsers give the native controls differing styling and functionality, and they aren't stylable, meaning that they can't be easily made to follow a site style guide.不同的浏览器为本地控件提供了不同的样式和功能（非样式化的），这意味着它们不容易按照网站样式指南进行。
+- 不同的浏览器为原生控件提供了不同的样式和功能，且不可赋予它们样式，这意味着它们难以遵从网站样式指南。
 
 为了解决这个问题，我们可以创建自己的自定义控件。让我们来看看如何。
 
@@ -121,17 +122,17 @@ HTML5 视频和音频共享 API — HTML Media Element — 允许您将自定义
 我们首先需要存储对每个控件的引用––将以下内容添加到 JavaScript 文件的顶部：
 
 ```js
-var playPauseBtn = document.querySelector('.playpause');
-var stopBtn = document.querySelector('.stop');
-var rwdBtn = document.querySelector('.rwd');
-var fwdBtn = document.querySelector('.fwd');
-var timeLabel = document.querySelector('.time');
+const playPauseBtn = document.querySelector(".playpause");
+const stopBtn = document.querySelector(".stop");
+const rwdBtn = document.querySelector(".rwd");
+const fwdBtn = document.querySelector(".fwd");
+const timeLabel = document.querySelector(".time");
 ```
 
 接下来，我们需要获取对视频/音频播放器本身的引用––在前面的代码行下方添加此行代码：
 
 ```js
-var player = document.querySelector('video');
+const player = document.querySelector("video");
 ```
 
 这包含对{{domxref("HTMLMediaElement")}}对象的引用，该对象具有几个有用的属性和方法，可用于将功能连接到我们的按钮。
@@ -139,7 +140,7 @@ var player = document.querySelector('video');
 在开始创建按钮功能之前，让我们删除本地控件，以免它们妨碍我们的自定义控件。在 JavaScript 的底部再次添加以下内容：
 
 ```js
-player.removeAttribute('controls');
+player.removeAttribute("controls");
 ```
 
 这样做，而不是仅仅不包括控件属性摆在首位有一个优势，如果我们的 JavaScript 失败，用户仍然有一些控件可用。
@@ -149,13 +150,13 @@ player.removeAttribute('controls');
 首先，让我们设置播放/暂停按钮。我们可以使用一个简单的条件函数在播放和暂停之间切换，如下所示。将其添加到代码底部：
 
 ```js
-playPauseBtn.onclick = function() {
-  if(player.paused) {
+playPauseBtn.onclick = () => {
+  if (player.paused) {
     player.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.textContent = "Pause";
   } else {
     player.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -163,28 +164,28 @@ playPauseBtn.onclick = function() {
 接下来，将此代码添加到底部，该代码控制停止按钮：
 
 ```js
-stopBtn.onclick = function() {
+stopBtn.onclick = () => {
   player.pause();
   player.currentTime = 0;
-  playPauseBtn.textContent = 'Play';
+  playPauseBtn.textContent = "Play";
 };
 ```
 
-在 {{domxref("HTMLMediaElement")}}s 上没有可用的 `stop()` 函数，因此我们改为`pause()`它，同时将当前时间设置为 0。
+在 {{domxref("HTMLMediaElement")}} 上没有可用的 `stop()` 函数，因此我们改为`pause()`它，同时将当前时间设置为 0。
 
 接下来，我们的快退和快进按钮–– 将以下块添加到代码的底部：
 
 ```js
-rwdBtn.onclick = function() {
+rwdBtn.onclick = () => {
   player.currentTime -= 3;
 };
 
-fwdBtn.onclick = function() {
+fwdBtn.onclick = () => {
   player.currentTime += 3;
-  if(player.currentTime >= player.duration || player.paused) {
+  if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -196,25 +197,13 @@ fwdBtn.onclick = function() {
 最后，将以下内容添加到代码末尾，以控制显示的时间：
 
 ```js
-player.ontimeupdate = function() {
-  var minutes = Math.floor(player.currentTime / 60);
-  var seconds = Math.floor(player.currentTime - minutes * 60);
-  var minuteValue;
-  var secondValue;
+player.ontimeupdate = () => {
+  const minutes = Math.floor(player.currentTime / 60);
+  const seconds = Math.floor(player.currentTime - minutes * 60);
+  const minuteValue = minutes < 10 ? `0${minutes}` : minutes;
+  const secondValue = seconds < 10 ? `0${seconds}` : seconds;
 
-  if (minutes<10) {
-    minuteValue = "0" + minutes;
-  } else {
-    minuteValue = minutes;
-  }
-
-  if (seconds<10) {
-    secondValue = "0" + seconds;
-  } else {
-    secondValue = seconds;
-  }
-
-  mediaTime = minuteValue + ":" + secondValue;
+  const mediaTime = `${minuteValue}:${secondValue}`;
   timeLabel.textContent = mediaTime;
 };
 ```
@@ -225,9 +214,9 @@ player.ontimeupdate = function() {
 
 这为您提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能(包括旧版浏览器的 Flash 回退) 的详细信息，请参阅：
 
-- [Audio and video delivery](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
-- [Video player styling basics](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
-- [Creating a cross-browser video player](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)
+- [Audio and video delivery](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
+- [Video player styling basics](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
+- [Creating a cross-browser video player](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)
 
 我们还创建了一个高级示例，以演示如何创建面向对象的系统，该系统可查找页面上的每个视频和音频播放器 (无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅[custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/)([see the source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS))。
 
@@ -305,7 +294,7 @@ This is the second.
 要将此信息与 HTML 媒体播放一起显示，您需要：
 
 - 将其保存为 .vtt 文件，放在一个合理的地方。
-- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。`<track>`应放在`<audio>`或`<video>`内，但在`<source>`元素之后。使用 {{htmlattrxref("kind","track")}}属性指定提示是字幕、标题还是说明。此外，使用 {{htmlattrxref("srclang","track")}} 告诉浏览器您用什么语言编写字幕。
+- 使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。`<track>` 应放在 `<audio>` 或 `<video>` 内，但在 `<source>` 元素之后。使用 {{htmlattrxref("kind","track")}} 属性指定提示是字幕、标题还是说明。此外，使用 {{htmlattrxref("srclang","track")}} 告诉浏览器编写字幕所用的语言。
 
 下面是一个示例：
 
@@ -321,7 +310,7 @@ This is the second.
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-有关详细信息，请阅读[Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。您可以找到与本文一起使用本文的[the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅[source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，您需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
+有关详细信息，请阅读[Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。您可以找到与本文一起使用本文的[the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅[source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，您需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
 
 > **备注：** 文本轨道和转录也可以帮助您使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。
 
@@ -329,14 +318,14 @@ This is the second.
 
 以上各节未涵盖您可能要放在网页上的所有类型的多媒体内容。您可能还需要处理使用其他可用技术创建的游戏、动画、幻灯片、嵌入式视频和内容，例如：
 
-- [HTML5 canvas](/en-US/docs/Web/API/Canvas_API)
+- [HTML5 canvas](/zh-CN/docs/Web/API/Canvas_API)
 - Flash
 - Silverlight
 
 对于此类内容，您需要根据案例处理辅助功能问题。在某些情况下，它不是那么糟糕，例如：
 
 - 如果您使用 Flash 或 Silverlight 等插件技术嵌入音频内容，您可能只需以与上面在[脚本示例](#脚本示例)部分中所示的相同方式提供音频脚本。
-- 如果您使用 Flash 或 Silverlight 等插件技术嵌入视频内容，则可以利用这些技术可用的字幕/字幕技术。例如，参考 [Flash captions](http://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), or [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
+- 如果您使用 Flash 或 Silverlight 等插件技术嵌入视频内容，则可以利用这些技术可用的字幕/字幕技术。例如，参考 [Flash captions](http://www.adobe.com/accessibility/products/flash/captions.html)、[Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning) 或 [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
 
 然而，其他多媒体不是那么容易使访问。例如，如果您正在处理沉浸式 3D 游戏或虚拟现实应用，那么为此类体验提供文本替代方案确实非常困难，您可能会认为盲人用户实际上并不在此类应用的目标受众范围内。
 
@@ -347,13 +336,3 @@ This is the second.
 本章概述了多媒体内容的无障碍问题，以及一些实用的解决方案。
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

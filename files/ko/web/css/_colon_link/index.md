@@ -1,14 +1,8 @@
 ---
 title: ':link'
 slug: Web/CSS/:link
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:link
 ---
+
 {{ CSSRef }}
 
 **`:link`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 아직 방문하지 않은 요소를 나타냅니다. `href` 속성을 가진 {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}} 중 방문하지 않은 모든 요소를 선택합니다.

@@ -1,21 +1,13 @@
 ---
 title: '<content>: シャドウ DOM のコンテンツのプレイスホルダー要素'
 slug: Web/HTML/Element/content
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - NeedsContent
-  - Reference
-  - Web
-  - Web Components
-translation_of: Web/HTML/Element/content
 ---
+
 {{Deprecated_header}}
 
 **HTML の `<content>` 要素**は、一連の[ウェブコンポーネント](/ja/docs/Web/Web_Components)技術の廃止された部分であり、 [Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM) の中で {{glossary("insertion point")}} として使われていましたが、通常の HTML で利用することは意図されていませんでした。現在では DOM の中で Shadow DOM を挿入することができる場所を作成する {{HTMLElement("slot")}} 要素に置き換えられました。
 
-> **Note:** **メモ:** この要素は初期のドラフト仕様に存在し、いくつかのブラウザーで実装されていましたが、後のバージョンの仕様書から削除され、使用するべきではありません。ここで文書化しているのは、その間に書かれたコードを、新しいバージョンの仕様書で動作するように適合させるのを支援するためです。
+> **メモ:** この要素は初期のドラフト仕様に存在し、いくつかのブラウザーで実装されていましたが、後のバージョンの仕様書から削除され、使用するべきではありません。ここで文書化しているのは、その間に書かれたコードを、新しいバージョンの仕様書で動作するように適合させるのを支援するためです。
 
 <table class="properties">
   <tbody>
@@ -60,7 +52,7 @@ translation_of: Web/HTML/Element/content
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/HTML/Global_attributes "HTML/Global attributes")を持ちます。
+この要素は[グローバル属性](/ja/docs/HTML/Global_attributes)を持ちます。
 
 - `select`
   - : コンマ区切りで複数のセレクターを指定できます。これらは CSS セレクターと同じ文法です。 `<content>` 要素が指定された場所に挿入する内容を指定します。
@@ -69,7 +61,7 @@ translation_of: Web/HTML/Element/content
 
 以下に `<content>` 要素の使用例を示します。これは必要なものがすべて含まれている HTML ファイルです。
 
-> **Note:** **メモ:** 以下のコードを動作させるには、ブラウザーが Web Components をサポートしている必要があります。 [Firefox で Web Components を有効にするには](/ja/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)の記事も参照してください。
+> **メモ:** 以下のコードを動作させるには、ブラウザーが Web Components をサポートしている必要があります。 [Firefox で Web Components を有効にするには](/ja/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)の記事も参照してください。
 
 ```html
 <html>
@@ -98,7 +90,7 @@ translation_of: Web/HTML/Element/content
 
 ブラウザーで表示した場合、以下のように表示されます。
 
-![content example](https://mdn.mozillademos.org/files/10077/content-example.png)
+![content example](content-example.png)
 
 ## 仕様書
 
@@ -113,4 +105,4 @@ translation_of: Web/HTML/Element/content
 - [Web Components](/ja/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

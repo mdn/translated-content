@@ -1,14 +1,8 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
+
 {{JSRef}}
 
 **`toFixed()`** 메서드는 숫자를 고정 소수점 표기법(fixed-point notation)으로 표시합니다.

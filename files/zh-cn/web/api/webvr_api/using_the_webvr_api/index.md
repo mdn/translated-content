@@ -2,6 +2,7 @@
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 The [WebVR API](/zh-CN/docs/Web/API/WebVR_API) is a fantastic addition to the web developer's toolkit, allowing access to virtual reality hardware such as the [Oculus Rift](https://developer.oculus.com/), and converting outputted movement and orientation data into view rendering updates on a web app. But how do you get started in developing VR apps for the Web? This article will guide you through the basics.
 [WebVR API](/zh-CN/docs/Web/API/WebVR_API) 对于 web 开发者来说，是一个令人心动的功能包，允许你连接到类似于[Oculus Rift](https://developer.oculus.com/) 这样的虚拟现实硬件，并且能够在你的 web app 中，将从硬件获取到的位置移动数据和姿态角数据，实时更新你的渲染显示输出。具体要如何在 Web 上开始开发你的 VR app 呢？这篇文章将会提供基础的引导信息。
 
@@ -11,26 +12,26 @@ The [WebVR API](/zh-CN/docs/Web/API/WebVR_API) is a fantastic addition to the we
 ## 起步
 
 To get started, you need to have your VR hardware set up as recommended in the owner's manual, and your computer set up as indicated in [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup). A dedicated GPU is recommended for smoother performance.
-你需要先准备好一个已经配置好 VR 硬件，并且还需要完成 [WebVR 环境的安装](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup)。 当然，若想要保证很平滑的体验，你需要配置一个足够好的 GPU 显卡。
+你需要先准备好一个已经配置好 VR 硬件，并且还需要完成 [WebVR 环境的安装](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup)。当然，若想要保证很平滑的体验，你需要配置一个足够好的 GPU 显卡。
 
 You also need to have [Firefox Nightly](https://nightly.mozilla.org/) (or [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)) installed, along with the [WebVR Enabler Add-on](http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi)
 安装好 [Firefox Nightly](https://nightly.mozilla.org/) (或 [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/))，以及 [WebVR Enabler Add-on](http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi)
 
 Once your environment is set up, try visiting one of our [MozVR projects](http://mozvr.com/projects/) and clicking on the "Enter VR" button to test it out.
-设置好环境后，请尝试访问我们直接可在线运行的工程项目 [MozVR projects](http://mozvr.com/projects/) ，点击“Enter VR” 按钮，就可以开始测试你的环境了。
+设置好环境后，请尝试访问我们直接可在线运行的工程项目 [MozVR projects](http://mozvr.com/projects/) ，点击“Enter VR”按钮，就可以开始测试你的环境了。
 
 > **备注：** For more in depth information, be sure to check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup).
 > 注意：更深层次的信息，请 check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup) 以获取更详细的内容。
 
-> **备注：** There are also cheaper options available such as using a mobile device for the head mounted display (in this case you won't have a position sensor available, so you might have to fake the orientation data using the [deviceorientation API](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) instead perhaps.)
-> 注意：你也可以使用更便宜的方式，比如使用一个手机设备来实现头部显示功能（只是这种情况下，你将没有空间位置追踪传感器相关的功能，将只能使用姿态角数据相关的 API [deviceorientation API](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 。）
+> **备注：** There are also cheaper options available such as using a mobile device for the head mounted display (in this case you won't have a position sensor available, so you might have to fake the orientation data using the [deviceorientation API](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) instead perhaps.)
+> 注意：你也可以使用更便宜的方式，比如使用一个手机设备来实现头部显示功能（只是这种情况下，你将没有空间位置追踪传感器相关的功能，将只能使用姿态角数据相关的 API [deviceorientation API](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 。）
 
 ## Introducing a simple demo<br>简单示例介绍
 
 There are a number of WebVR demos available at the [MozVR team repo](https://github.com/MozVR/), and the [MDN webvr-tests repo](https://github.com/mdn/webvr-tests), but the main one we will be focusing on in this article is our [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) demo ([view it live](http://mdn.github.io/webvr-tests/positionsensorvrdevice/)):
 在[MozVR team repo](https://github.com/MozVR/)和[MDN webvr-tests repo](https://github.com/mdn/webvr-tests)提供了一定数量的 WebVR 示例，在这篇文章里，我们将着重关注我们的 [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) 提供的示例 (点此访问 live [view it live](http://mdn.github.io/webvr-tests/positionsensorvrdevice/))
 
-![](https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png)
+![](vrpositionsensor-demo.png)
 
 This is a simple 2.5D demo showing a Firefox logo seen on a left and right eye view, rendered on [HTML5 Canvas](/zh-CN/docs/Web/HTML/Element/canvas). When you view the demo with a VR HMD and click the canvas, the demo will go fullscreen, and you'll be able to approach the Firefox logo. It will move realistically as you move your head towards and away from it, up and down and side to side, and rotate your head in any direction.
 这是一个简单的 2.5D 的示例，在左右眼两个区域，以[HTML5 Canvas](/zh-CN/docs/Web/HTML/Element/canvas)的方式，同时渲染了 Firefox 的 LOGO。当你使用 VR 头显来观看这个示例时，点击画面，这个 DEMO 就会切换到全屏形式，可以尝试靠近 Firefox 图标。将会非常真实地同步你的头部运动后应该看到的内容，包括可以上下移动、左右移动、转动你的头部看想看的方向。
@@ -99,8 +100,8 @@ var body = document.querySelector('body');
 body.appendChild(myCanvas);
 ```
 
-Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a {{event("load")}} event to check that the image is loaded before running `draw()`, the [main loop](/zh-CN/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) for our app:
-然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 {{event("load")}} 事件回调，以检查图片是否已经被正常装载成功。
+Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a [`load`](/zh-CN/docs/Web/API/Window/load_event) event to check that the image is loaded before running `draw()`, the [main loop](/zh-CN/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) for our app:
+然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件回调，以检查图片是否已经被正常装载成功。
 
 ```js
 var image = new Image();

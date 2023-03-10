@@ -3,6 +3,7 @@ title: 執筆ガイドライン
 slug: MDN/Writing_guidelines
 original_slug: MDN/About
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs はオープンソースのプロジェクトです。以下のセクションは、MDN Web Docs で私たちが*何を*文書化し、*どのように*それを行うかについてのガイドラインを記述したものです。どのように協力するかについては、[協力ガイドライン](/ja/docs/MDN/Community)を参照してください。

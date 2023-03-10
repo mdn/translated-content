@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Attributes/accept
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`accept`** prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une [spécification de type de fichier unique](#unique_file_type_specifiers), décrivant les types de fichiers à autoriser. La propriété `accept` est un attribut pour les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) de type [`file`](/fr/docs/Web/HTML/Element/Input/file). Elle était prise en charge par l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form), mais a été supprimée au profit de [`file`](/fr/docs/Web/HTML/Element/Input/file) dans HTML5.
@@ -142,14 +143,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## Voir aussi
 

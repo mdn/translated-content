@@ -1,11 +1,10 @@
 ---
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
-translation_of: Web/API/Worker/postMessage
 ---
 {{APIRef("Web Workers API")}}
 
-{{domxref("Worker")}} interface의 메서드, **`postMessage()`**는 `Worker` 자신의 내부 영역으로 메시지를 전달합니다. 이 메서드는 `Worker` 자신에게 보낼 하나의 매개변수를 받습니다. 매개변수로 들어갈 데이터는 순환 참조를 포함하는 [structured clone](/ko/docs/Web/Guide/DOM/The_structured_clone_algorithm "http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable") algorithm에 의해 다루어지는 JavaScript 객체를 포함에 어떤 값이든 들어갈 수 있습니다.
+{{domxref("Worker")}} interface의 메서드, **`postMessage()`** 는 `Worker` 자신의 내부 영역으로 메시지를 전달합니다. 이 메서드는 `Worker` 자신에게 보낼 하나의 매개변수를 받습니다. 매개변수로 들어갈 데이터는 순환 참조를 포함하는 [structured clone](/ko/docs/Web/Guide/DOM/The_structured_clone_algorithm) algorithm에 의해 다루어지는 JavaScript 객체를 포함에 어떤 값이든 들어갈 수 있습니다.
 
 `Worker`는 정보를 다시 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 메서드를 사용해 받은 정보를 산란시키는 스레드로 전달해줄 수 있다.
 
@@ -108,23 +107,25 @@ function sendWorkerArrBuff(aBuf) {
 
 #### Output logged
 
-    arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
-    arrBuf.byteLength post transfer: 0                             bootstrap.js:42
+```
+arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
+arrBuf.byteLength post transfer: 0                             bootstrap.js:42
 
-    from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
+from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
 
-    incoming message from worker, msg: message { ... }             bootstrap.js:20
-    got back buf in main thread, aBuf.byteLength: 8                bootstrap.js:12
+incoming message from worker, msg: message { ... }             bootstrap.js:20
+got back buf in main thread, aBuf.byteLength: 8                bootstrap.js:12
 
-    from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
+from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
+```
 
 `byteLength` goes to 0 as it is transferred. To see a full working example of this Firefox demo add-on see here: [GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

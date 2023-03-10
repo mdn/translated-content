@@ -2,6 +2,7 @@
 title: Performance.getEntries()
 slug: Web/API/Performance/getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`getEntries()`** 对于给定的 filter，此方法返回 {{domxref("PerformanceEntry")}} 对象数组。数组成员（入口）可以在显式的时间点用 performance _marks 或 measures_ 来创建 (例如调用{{domxref("Performance.mark","mark()")}} 方法) .
@@ -109,4 +110,4 @@ Specifications
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.getEntries")}}
+{{Compat}}

@@ -1,13 +1,9 @@
 ---
 title: Geolocation API 사용하기
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
-tags:
-  - Geolocation API
-  - Guide
-  - Intermediate
-translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
 original_slug: WebAPI/Using_geolocation
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 **Geolocation API**는 사용자의 현재 위치를 가져오는 API로, 지도에 사용자 위치를 표시하는 등 다양한 용도로 사용할 수 있습니다. 이 안내서는 Geolocation API의 기초적 사용법을 설명합니다.
 

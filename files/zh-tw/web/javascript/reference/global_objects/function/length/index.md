@@ -2,6 +2,7 @@
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
+
 {{JSRef}}
 
 **`length`** property 表示該 function 預期被傳入的參數數量

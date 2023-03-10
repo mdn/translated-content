@@ -1,26 +1,15 @@
 ---
 title: '<embed>: 埋め込み外部コンテンツ要素'
 slug: Web/HTML/Element/embed
-tags:
-  - Element
-  - Embedding Content
-  - External content
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Plugins
-  - Reference
-  - Web
-  - embed
-translation_of: Web/HTML/Element/embed
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<embed>` 要素**は、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所 (ブラウザーのプラグインなど) によって提供されます。
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **Note:** 本文書は、 HTML5 の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。
+> **メモ:** 本文書は、 HTML5 の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。
 
 最近のほとんどのブラウザーは、ブラウザーのプラグインの対応を非推奨にして削除しているため、サイトを平均的なユーザーのブラウザーで操作できるようにしたいのであれば、 `<embed>` に頼ることは賢明ではないということを意識しておいてください。
 
@@ -68,9 +57,9 @@ translation_of: Web/HTML/Element/embed
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("img")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/img_role">img</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
       </td>
     </tr>
     <tr>
@@ -109,14 +98,11 @@ translation_of: Web/HTML/Element/embed
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-embed-element', '&lt;embed&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-embed-element', '&lt;embed&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-> **Note:** Firefox のバージョン 45 以前では HTML リソースの内容を表示せず、プラグインが必要である旨の汎用的なメッセージを表示します ({{Bug("730768")}} をご覧ください)。
+> **メモ:** Firefox のバージョン 45 以前では HTML リソースの内容を表示せず、プラグインが必要である旨の汎用的なメッセージを表示します ({{Bug("730768")}} をご覧ください)。
 
 {{Compat("html.elements.embed")}}
 

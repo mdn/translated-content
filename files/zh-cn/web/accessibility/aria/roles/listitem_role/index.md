@@ -1,7 +1,8 @@
 ---
 title: 'ARIA: listitem role'
-slug: Web/Accessibility/ARIA/Roles/Listitem_role
+slug: Web/Accessibility/ARIA/Roles/listitem_role
 ---
+
 ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 `list` 角色结合使用，用于标识列表容器。
 
 ```html
@@ -22,9 +23,9 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 `li
 
 ### 关联的 WAI-ARIA 角色、状态和属性
 
-- [list](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [list](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
   - : 项目列表。角色为 `list` 的元素必须有一个或多个角色为 `listitem` 的元素作为子元素，一个或多个角色为 `group` 的元素具有一个或多个具有 `listitem` 角色的元素作为子元素。
-- [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [group](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : 相关对象的集合，在嵌套在列表中时仅限于列表项，其重要性不足以在页面目录中拥有自己的位置。
 
 ### 键盘交互
@@ -82,7 +83,13 @@ TBD
 - {{HTMLElement("ul")}}
 - {{HTMLElement("ol")}}
 - {{HTMLElement("li")}}
-- [ARIA: list role](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA: group role](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [ARIA: list role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [ARIA: group role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+
+   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

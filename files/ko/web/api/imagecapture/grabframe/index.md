@@ -1,22 +1,17 @@
 ---
 title: ImageCapture.grabFrame()
 slug: Web/API/ImageCapture/grabFrame
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - MediaStream Image Capture API
-  - Method
-  - Reference
-translation_of: Web/API/ImageCapture/grabFrame
 ---
+
 {{APIRef("MediaStream Image")}}
 
 {{domxref("ImageCapture")}} 인터페이스의 **`grabFrame()`** 메서드는 {{domxref("MediaStreamTrack")}}의 라이브 비디오에서 스냅샷을 찍고, 그 결과를 담은 {{domxref("ImageBitmap")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다.
 
 ## 구문
 
-    const bitmapPromise = imageCapture.grabFrame()
+```js
+const bitmapPromise = imageCapture.grabFrame()
+```
 
 ### 반환 값
 

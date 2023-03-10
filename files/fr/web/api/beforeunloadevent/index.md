@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/API/BeforeUnloadEvent
 ---
+
 {{APIRef}}
 
 L'évènement **`beforeunload`** est déclenché quand la fenêtre, le document et ses ressources sont sur le point d'être déchargées.
@@ -70,9 +71,9 @@ window.addEventListener("beforeunload", function (e) {
 
 ## Voir aussi
 
-- {{Event("DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("beforeunload")}}
-- {{Event("unload")}}
+- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
+- [`load`](/fr/docs/Web/API/Window/load_event)
+- [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/fr/docs/Web/API/Window/unload_event)
 - [Unloading Documents — Prompt to unload a document](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

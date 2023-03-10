@@ -2,6 +2,7 @@
 title: HTMLImageElement.referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLImageElement.referrerPolicy`** プロパティは、

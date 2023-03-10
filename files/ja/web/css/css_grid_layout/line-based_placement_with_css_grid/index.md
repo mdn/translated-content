@@ -1,15 +1,11 @@
 ---
 title: CSS グリッドにおける線に基づく配置
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
+
 {{CSSRef}}
 
-[グリッドレイアウトの基本的な考え方](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)の記事では、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
+[グリッドレイアウトの基本的な考え方](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)の記事では、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
 
 グリッドレイアウトを使用する際には、常に番号付きの線があるので、番号付きの線からグリッドの探求を始めるのが最も論理的な方法です。グリッドには列と行にそれぞれ番号が振られており、1 から順番に並んでいます。ただし、グリッドは文書の記述方法に応じて番号が振られます。英語のような左書きの言語では、行 1 はグリッドの左側にあります。アラビア語のように右書きの言語では、行 1 はグリッドの右端になります。書字方向とグリッドの相互作用については、後のガイドで詳しく説明します。
 
@@ -452,7 +448,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} プロパティを使って、列と行のトラックの間に溝を追加する機能があります。これらは、段組みレイアウトにおける {{cssxref("column-gap")}} プロパティと同様の働きをするギャップを指定します。
 
-> **Note:** グリッドがブラウザーに初めて搭載されたとき、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティには、それぞれ `grid-` という接頭辞が付けられ、`grid-column-gap`、`grid-row-gap`、`grid-gap` となっていました。
+> **メモ:** グリッドがブラウザーに初めて搭載されたとき、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティには、それぞれ `grid-` という接頭辞が付けられ、`grid-column-gap`、`grid-row-gap`、`grid-gap` となっていました。
 >
 > ブラウザーのレンダリングエンジンはこの接頭辞を削除するように更新されていますが、接頭辞付きのバージョンは別名として維持されるため、安全に使用することができます。
 

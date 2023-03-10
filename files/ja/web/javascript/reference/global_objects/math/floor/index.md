@@ -1,13 +1,8 @@
 ---
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
+
 {{JSRef}}
 
 **`Math.floor()`** 関数は与えられた数値以下の最大の整数を返します。
@@ -33,7 +28,7 @@ Math.floor(x)
 
 `floor()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.floor()` として使用するようにしてください (`Math` のコンストラクターはありません)。
 
-> **Note:** **注:** `Math.floor(null)` は {{jsxref("NaN")}} ではなく 0 を返します。
+> **メモ:** `Math.floor(null)` は {{jsxref("NaN")}} ではなく 0 を返します。
 
 ## 例
 
@@ -107,9 +102,7 @@ ceil10(-59, 1);       // -50
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.floor', 'Math.floor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

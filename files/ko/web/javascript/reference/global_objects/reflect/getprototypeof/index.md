@@ -1,17 +1,11 @@
 ---
 title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 ---
+
 {{JSRef}}
 
-**`Reflect`\*\***`.getPrototypeOf()`\*\* 정적 메서드는 주어진 객체의 프로토타입을 반환합니다. {{jsxref("Object.getPrototypeOf()")}}와 거의 동일합니다.
+**`Reflect.getPrototypeOf()`** 정적 메서드는 주어진 객체의 프로토타입을 반환합니다. {{jsxref("Object.getPrototypeOf()")}}와 거의 동일합니다.
 
 {{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
 

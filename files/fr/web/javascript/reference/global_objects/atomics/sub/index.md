@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/sub
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.sub()`** permet de soustraire une valeur donnée à une position donnée du tableau partagé. Elle renvoie l'ancienne valeur qui était contenue dans le tableau avant l'opération. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
@@ -54,13 +55,11 @@ Atomics.load(ta, 0);    // 36
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                     |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.sub', 'Atomics.sub')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.sub")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,9 @@
 ---
 title: '502'
 slug: conflicting/Web/HTTP/Status/502
-tags:
-  - '502'
-  - Errores HTTP
-  - Glosario
-  - Infraestructura
-  - navegación
-translation_of: Glossary/502
 original_slug: Glossary/502
 ---
+
 Un código código de error {{Glossary("HTTP")}} que significa "Bad Gateway" (Pasarela incorrecta).
 
 Un {{Glossary("Server", "server")}} puede actuar como gateway (pasarela) o proxy entre un cliente (como tu navegador) y otros servidores. Cuando realizas una petición para acceder a una {{Glossary("URL")}}, el gateway (la pasarela) retransmite tu petición al otro servidor."502" significa que ese otro servidor, al que accedemos mediante el gateway o proxy, ha devuelto una respuesta inválida.

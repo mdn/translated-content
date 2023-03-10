@@ -1,22 +1,8 @@
 ---
 title: max-block-size
 slug: Web/CSS/max-block-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Layout
-  - Maximum Height
-  - Maximum Width
-  - Reference
-  - height
-  - max-block-size
-  - recipe:css-property
-  - size
-  - width
-browser-compat: css.properties.max-block-size
-translation_of: Web/CSS/max-block-size
 ---
+
 {{CSSRef}}
 
 **`max-block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("writing-mode")}} で指定された書字方向とは逆の向きの要素の最大寸法を指定します。すなわち、書字方向が水平 (横書き) であれば、 `max-block-size` は {{cssxref("max-height")}} と等価になります。書字方向が垂直 (縦書き) であれば、 `max-block-size` は {{cssxref("max-width")}} と同じになります。
@@ -79,9 +65,9 @@ max-block-size: unset;
 | `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}  | {{cssxref("max-height")}}  |
 | `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}  |
 
-> **Note:** `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
+> **メモ:** `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
 
-> **Note:** 書字方向の `lr`, `lr-tb`, `rl`, `rb`, `rb-tl` は {{Glossary("HTML")}} のコンテキストでは許可されなくなりました。 {{Glossary("SVG")}} 1.x コンテキストでのみ利用できる可能性があります。
+> **メモ:** 書字方向の `lr`, `lr-tb`, `rl`, `rb`, `rb-tl` は {{Glossary("HTML")}} のコンテキストでは許可されなくなりました。 {{Glossary("SVG")}} 1.x コンテキストでのみ利用できる可能性があります。
 
 ## 公式定義
 
@@ -95,7 +81,7 @@ max-block-size: unset;
 
 ### 横書きおよび縦書きでの max-block-size の設定
 
-この例では、同じテキスト ({{interwiki("wikipedia", "en:Herman Melville", "Herman Melville")}} の小説 _{{interwiki("wikipedia", "en:Moby-Dick", "Moby-Dick")}}_ の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
+この例では、同じテキスト ([Herman Melville](https://en.wikipedia.org/wiki/Herman_Melville) の小説 _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_ の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
 
 二つのボックスついてそれ以外の部分はすべて、 {{cssxref("max-block-size")}} に使われている値を含めて同じです。
 

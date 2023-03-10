@@ -3,6 +3,7 @@ title: Navigator.platform
 slug: Web/API/Navigator/platform
 original_slug: Web/API/NavigatorID/platform
 ---
+
 {{ APIRef("HTML DOM") }} {{Deprecated_Header}}
 
 ブラウザーのプラットフォームを表す文字列を返します。仕様書ではブラウザーが常に空文字列を返すことを許可していますので、信頼できる答えを得るためにこのプロパティを頼らないようにしてください。

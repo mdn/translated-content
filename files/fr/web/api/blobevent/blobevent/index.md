@@ -9,6 +9,7 @@ tags:
   - Evènement
 translation_of: Web/API/BlobEvent/BlobEvent
 ---
+
 {{APIRef("Media Capture and Streams")}}{{seeCompatTable}}
 
 Le constructeur **`BlobEvent()`** renvoie un nouvel objet {{domxref("BlobEvent")}} créé avec un {{domxref("Blob")}} associé.

@@ -2,6 +2,7 @@
 title: mousemove
 slug: Web/API/Element/mousemove_event
 ---
+
 {{APIRef}}
 
 当指针设备 ( 通常指鼠标 ) 在元素上移动时，mousemove 事件被触发。
@@ -128,12 +129,12 @@ function drawLine(context, x1, y1, x2, y2) {
 ## See also
 
 - [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- {{Event("mousedown")}}
-- {{Event("mouseup")}}
-- {{Event("click")}}
-- {{Event("dblclick")}}
-- {{Event("mouseover")}}
-- {{Event("mouseout")}}
-- {{Event("mouseenter")}}
-- {{Event("mouseleave")}}
-- {{Event("contextmenu")}}
+- [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)
+- [`click`](/zh-CN/docs/Web/API/Element/click_event)
+- [`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)
+- [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)
+- [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)
+- [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/zh-CN/docs/Web/API/Element/contextmenu_event)

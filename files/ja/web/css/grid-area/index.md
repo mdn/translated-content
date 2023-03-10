@@ -1,14 +1,8 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-area
 ---
+
 {{CSSRef}}
 
 **`grid-area`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、 {{glossary("grid", "grid")}} 内でのグリッドアイテムの寸法と位置を指定するために、線、区間、なし (自動) をグリッド配置に適用することで、{{glossary("grid areas", "グリッド領域")}}の縁を指定します。
@@ -71,7 +65,7 @@ grid-area: unset;
 
   - : `<custom-ident>-start`/`<custom-ident>-end` という名前の付いた線がある場合、これはそのような線の最初がグリッドのアイテムの配置に関わります。
 
-    > **Note:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-area: foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します (その前に `foo-start`/`foo-end` という名前の線が明示的に存在しない限り)。
+    > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-area: foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します (その前に `foo-start`/`foo-end` という名前の線が明示的に存在しない限り)。
 
     そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 

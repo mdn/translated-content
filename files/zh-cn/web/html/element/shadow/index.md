@@ -1,7 +1,8 @@
 ---
 title: <shadow>
-slug: Web/HTML/Element/Shadow
+slug: Web/HTML/Element/shadow
 ---
+
 {{deprecated_header}}
 
 **HTML `<shadow>` 元素** — [Web 组件](/zh-CN/docs/Web/Web_Components)技术套件的废弃部分 — 目的是用作 Shadow DOM {{glossary("insertion point")}}。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。在正常的 HTML 没有任何用处。
@@ -97,4 +98,4 @@ slug: Web/HTML/Element/Shadow
 - [Web 组件](/zh-CN/docs/Web/Web_Components)
 - {{HTMLElement("content")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

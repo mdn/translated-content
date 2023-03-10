@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for
 original_slug: Web/JavaScript/Reference/Instructions/for
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`for`** crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement [une instruction de bloc](/fr/docs/Web/JavaScript/Reference/Instructions/bloc)) à exécuter dans la boucle.
@@ -99,17 +100,11 @@ function showOffsetPos (sId) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires        |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-for-statement', 'for statement')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-for-statement', 'instruction for')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES3', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES3')}}         |                     |
-| {{SpecName('ES1', '#sec-12.6.2', 'instruction for')}}             | {{Spec2('ES1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.for")}}
+{{Compat}}
 
 ## Voir aussi
 

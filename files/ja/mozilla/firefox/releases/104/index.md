@@ -1,12 +1,8 @@
 ---
 title: Firefox 104 for developers
 slug: Mozilla/Firefox/Releases/104
-tags:
-  - '104'
-  - Firefox
-  - Mozilla
-  - Release
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 104 の変更点をまとめています。Firefox 104 は、2022 年 8 月 23 日にリリースされました。
@@ -26,7 +22,7 @@ tags:
   (詳しくは {{bug(1775026)}} をご覧ください)
 
 - [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) および [`structuredClone()`](/ja/docs/Web/API/structuredClone) で [ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) を使用したとき、シリアライズした結果に (`stack` を持つエラーの型で) [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
-  [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) など、ほかの API を使用してエラーを送信する場合は、まだ `stack` をシリアライズしません 
+  [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) など、ほかの API を使用してエラーを送信する場合は、まだ `stack` をシリアライズしません
   (詳しくは {{bug(1774866)}} をご覧ください)。
 
 ### HTTP
@@ -44,6 +40,10 @@ tags:
 - [`HTMLElement.focus()`](/ja/docs/Web/API/HTMLElement/focus) で引数 [`option.focusVisible`](/ja/docs/Web/API/HTMLElement/focus#focusvisible) をサポートしました。これは要素にフォーカスした後に、視覚的な表示をブラウザーに強制するために使用できます。
   ブラウザーの実装でアクセシビリティが向上すると判断した場合に、フォーカスした要素へ自動的に視覚的な表示を行う可能性があることに注意してください。
   (詳しくは {{bug(1765083)}} をご覧ください)
+
+#### Canvas
+
+- `fontKerning` プロパティを [`CanvasRenderingContext2D`](/ja/docs/Web/API/CanvasRenderingContext2D/fontKerning) および [`OffscreenCanvasRenderingContext2D`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D) でサポートしました。canvas やオフスクリーン canvas で、文字を描画するときにカーニングをどのように使用するかを開発者が指定できます ({{bug(1778908)}})。
 
 #### Media、WebRTC、Web Audio
 
@@ -69,7 +69,7 @@ tags:
 #### WebDriver BiDi
 
 - `log.entryAdded` イベントで `source` をサポートしました ({{bug(1770792)}})。
--  新たに開いたブラウジングコンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ({{bug(1775141)}})。
+- 新たに開いたブラウジングコンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ({{bug(1775141)}})。
 
 #### Marionette
 
@@ -78,7 +78,7 @@ tags:
 
 ## アドオン開発者向けの変更点一覧
 
-#### 廃止
+### 廃止
 
 ### その他
 

@@ -3,9 +3,10 @@ title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
 original_slug: Web/CSS/gradient/repeating-radial-gradient()
 ---
+
 {{CSSRef}}
 
-CSS 函数**`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的{{cssxref("&lt;image&gt;")}} 。它类似于{{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上重复颜色，以覆盖其整个容器。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的{{cssxref("&lt;image&gt;")}}类型。
+CSS 函数 **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的{{cssxref("&lt;image&gt;")}} 。它类似于{{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上重复颜色，以覆盖其整个容器。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的{{cssxref("&lt;image&gt;")}}类型。
 
 ```css
 /* 一个从容器中心点开始的重复渐变，
@@ -43,7 +44,7 @@ repeating-radial-gradient(circle at center, red 0, blue, green 30px);
     > **备注：** 早期的草案中还包含其他关键字 (`cover` and `contain`) ，分别相当于标准关键字 `farthest-corner` 和 `closest-side`,。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。
 
 - `<color-stop>`
-  - : 表示某个确定位置的固定色值，包含一个[`<color>`](/zh-CN/docs/Web/CSS/color_value)值加上可选的位置值（相对虚拟渐变射线的[`<percentage>`](/zh-CN/docs/Web/CSS/percentage)或者[`<length>`](/zh-CN/docs/Web/CSS/length)长度值）。百分比值`0%`，或者长度值`0`，表示渐变中心点；百分比值`100%`表示渐变射线与边缘形状相交的点。 其间的百分比值线性对应渐变射线上的点。
+  - : 表示某个确定位置的固定色值，包含一个[`<color>`](/zh-CN/docs/Web/CSS/color_value)值加上可选的位置值（相对虚拟渐变射线的[`<percentage>`](/zh-CN/docs/Web/CSS/percentage)或者[`<length>`](/zh-CN/docs/Web/CSS/length)长度值）。百分比值`0%`，或者长度值`0`，表示渐变中心点；百分比值`100%`表示渐变射线与边缘形状相交的点。其间的百分比值线性对应渐变射线上的点。
 
 ### 形式语法
 
@@ -87,7 +88,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Black_and_white_gradient', '300px', '120px', '')}}
+{{EmbedLiveSample('黑白相间的渐变', '300px', '120px', '')}}
 
 ```css
 background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
@@ -117,7 +118,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Farthest-corner', '300px', '120px', '')}}
+{{EmbedLiveSample('Farthest-corner 渐变', '300px', '120px', '')}}
 
 ```css
 background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
@@ -131,7 +132,7 @@ background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, bl
 
 {{Compat}}
 
-## 参阅：
+## 参见
 
 - [使用渐变](/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients)
 - 其他渐变方法：{{cssxref("radial-gradient")}}, {{cssxref("linear-gradient")}}, {{cssxref("repeating-linear-gradient")}}

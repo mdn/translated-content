@@ -1,12 +1,6 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-  - l10n:priority
-translation_of: Glossary/JavaScript
 ---
 {{jsSidebar}}
 
@@ -14,7 +8,7 @@ translation_of: Glossary/JavaScript
 
 JavaScript (o "JS") es un lenguaje de programación que se usa con mayor frecuencia para scripts dinámicos de lado del cliente en páginas web, pero también se usa a menudo en el lado del {{Glossary("Server", "servidor")}} — usando un entorno de ejecución como [Node.js](https://nodejs.org/).
 
-JavaScript **no se debe** confundir con el {{interwiki("wikipedia", "Java_(programming_language)", "lenguaje de programación Java")}}. Aunque _"Java"_ y _"JavaScript"_ son marcas comerciales (o marcas comerciales registradas) de Oracle en EE. UU. y otros países, los dos lenguajes de programación son significativamente diferentes en su sintaxis, semántica y casos de uso.
+JavaScript **no se debe** confundir con el [lenguaje de programación Java](https://es.wikipedia.org/wiki/Java_(programming_language)). Aunque _"Java"_ y _"JavaScript"_ son marcas comerciales (o marcas comerciales registradas) de Oracle en EE. UU. y otros países, los dos lenguajes de programación son significativamente diferentes en su sintaxis, semántica y casos de uso.
 
 JavaScript se utiliza principalmente en el navegador, lo que permite a los desarrolladores manipular el contenido de la página web a través del {{Glossary("DOM")}}, manipular datos con {{Glossary("AJAX")}} y {{Glossary("IndexedDB")}}, dibujar gráficos con {{Glossary("canvas")}}, interactuar con el dispositivo que ejecuta el navegador a través de varias {{Glossary("API", "APIs")}} y más. JavaScript es uno de los lenguajes más utilizados en el mundo, debido al reciente crecimiento y mejora en el rendimiento de las {{Glossary("API", "APIs")}} disponibles en los navegadores.
 
@@ -30,11 +24,11 @@ Recientemente, la popularidad de JavaScript se ha expandido aún más gracias a 
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "JavaScript", "JavaScript")}} en Wikipedia
+- [JavaScript](https://es.wikipedia.org/wiki/JavaScript) en Wikipedia
 
 ### Aprende JavaScript
 
-- {{Link("/es/docs/Web/JavaScript/Guide")}} en MDN
+- [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) en MDN
 - [El taller de "javascripting" en NodeSchool](http://nodeschool.io/#workshoppers)
 - [El curso de JavaScript en codecademy.com](https://www.codecademy.com/tracks/javascript)
 - [_Aprendizaje avanzado de JavaScript_](http://ejohn.org/apps/learn/) de John Resig
@@ -42,5 +36,5 @@ Recientemente, la popularidad de JavaScript se ha expandido aún más gracias a 
 ### Referencia técnica
 
 - [El último estándar ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- {{Link("/es/docs/Web/JavaScript/referencia")}} en MDN
+- [Referencia de JavaScript](/es/docs/Web/JavaScript/referencia) en MDN
 - [El libro _JavaScript elocuente_](http://eloquentjavascript.net/)

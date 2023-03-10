@@ -1,19 +1,9 @@
 ---
 title: '<section>: 汎用セクション要素'
 slug: Web/HTML/Element/section
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML:フローコンテンツ
-  - HTML:区分コンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Section
-  - Web
-translation_of: Web/HTML/Element/section
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<section>` 要素**は、文書の自立した一般的なセクション (区間) を表します。そのセクションを表現するより意味的に具体的な要素がない場合に使用します。少数の例外を除いて、セクションには見出しを置いてください。
 
@@ -80,16 +70,16 @@ translation_of: Web/HTML/Element/section
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
-        {{ARIARole("application")}}, {{ARIARole("banner")}},
-        {{ARIARole("complementary")}},
-        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
-        {{ARIARole("document")}}, {{ARIARole("feed")}},
-        {{ARIARole("log")}}, {{ARIARole("main")}},
-        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
-        {{ARIARole("none")}}, {{ARIARole("note")}},
-        {{ARIARole("presentation")}}, {{ARIARole("search")}},
-        {{ARIARole("status")}}, {{ARIARole("tabpanel")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/log_role">log</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/note_role">note</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a></code>
       </td>
     </tr>
     <tr>
@@ -189,11 +179,7 @@ translation_of: Web/HTML/Element/section
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}         | {{Spec2('HTML5.1')}}     |      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

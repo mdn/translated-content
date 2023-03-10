@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/forEach
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** exécute une fonction donnée sur chaque élément clé-valeur de l'objet `Map` dans l'ordre d'insertion.
@@ -69,14 +70,11 @@ new Map([["toto", 3], ["truc", {}], ["bidule", undefined]]).forEach(logMapElemen
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

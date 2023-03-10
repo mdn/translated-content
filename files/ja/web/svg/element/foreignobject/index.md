@@ -1,12 +1,8 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Element/foreignObject
-tags:
-  - Element
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/foreignObject
 ---
+
 {{SVGRef}}
 
 **`<foreignObject>`** [SVG](/ja/docs/Web/SVG) 要素は、異なるユーザーエージェントによって描画されるグラフィックコンテンツを持つ外部 XML 名前空間を含めることを可能にします。含まれた外部グラフィックコンテンツは、SVG 変換や合成の対象となります。
@@ -81,10 +77,7 @@ Usually, a `foreignObject` will be used in conjunction with the {{SVGElement("sw
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                     | コメント   |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

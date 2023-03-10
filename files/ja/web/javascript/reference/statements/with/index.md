@@ -1,14 +1,9 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Deprecated
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
-> **Warning:** 混乱させるバグや互換性問題の原因になり得るため、`with` 文の使用は推奨されません。詳しくは "説明" の章の "あいまい性の欠点" をご覧ください。
+
+> **警告:** 混乱させるバグや互換性問題の原因になり得るため、`with` 文の使用は推奨されません。詳しくは "説明" の章の "あいまい性の欠点" をご覧ください。
 
 {{jsSidebar("Statements")}}
 
@@ -30,7 +25,7 @@ with (expression)
 
 JavaScript は、スクリプトの実行コンテキストまたは非修飾名を含む関数の実行コンテキストに関連付けられたスコープチェーンを探索することにより、非修飾名を探します。 'with' 文は、その文本体の評価の間、このスコープチェーンの先頭に、与えられたオブジェクトを追加します。もし本体で使われた非修飾名がそのスコープチェーンの中のプロパティに一致するなら、その名前はそのプロパティとそのプロパティを含むオブジェクトとに結び付けられます。そうでなければ、 {{jsxref("ReferenceError")}} が発生します。
 
-> **Note:** `with` の利用は非推奨であり、ECMAScript 5 の[厳格モード](/ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)では禁止されています。推奨される代替案は、参照したいプロパティを持つオブジェクトを一時変数に代入することです。
+> **メモ:** `with` の利用は非推奨であり、ECMAScript 5 の[厳格モード](/ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)では禁止されています。推奨される代替案は、参照したいプロパティを持つオブジェクトを一時変数に代入することです。
 
 ### 性能上の利点と欠点
 
@@ -83,9 +78,7 @@ with (Math) {
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

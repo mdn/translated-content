@@ -2,6 +2,7 @@
 title: 介绍 CSS 布局
 slug: Learn/CSS/CSS_layout/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 本文将回顾我们以前模块中已经介绍过的一些 CSS 布局特性——例如不同的{{cssxref("display")}}值——并介绍我们将在本模块中使用的一些概念。
@@ -12,10 +13,10 @@ slug: Learn/CSS/CSS_layout/Introduction
       <th scope="row">前提条件：</th>
       <td>
         对 HTML 有一些基本的了解 (学习“<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 介绍</a
         >”), 并且理解 CSS 的工作原理 (学习“<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 介绍</a
         >”).
       </td>
@@ -43,9 +44,9 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 每种技术都有它们的用途，各有优缺点，相互辅助。通过理解各个布局方法的设计理念，你能够找到构建你想要的网页需要的布局方案。
 
-## 正常布局流 (Normal flow)
+## 正常布局流
 
-正常布局流 (normal flow) 是指在不对页面进行任何布局控制时，浏览器默认的 HTML 布局方式。让我们快速地看一个 HTML 的例子：
+正常布局流（normal flow）是指在不对页面进行任何布局控制时，浏览器默认的 HTML 布局方式。让我们快速地看一个 HTML 的例子：
 
 ```html
 <p>I love my cat.</p>
@@ -61,7 +62,7 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 默认情况下，浏览器的显示如下：
 
-{{ EmbedLiveSample('Normal_flow', '100%', 200) }}
+{{ EmbedLiveSample('正常布局流', '100%', 200) }}
 
 注意，HTML 元素完全按照源码中出现的先后次序显示——第一个段落、无序列表、第二个段落。
 
@@ -73,11 +74,11 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 下列布局技术会覆盖默认的布局行为：
 
-- **{{cssxref("display")}}** 属性 — 标准的 value，比如`block`, `inline` 或者 `inline-block` 元素在正常布局流中的表现形式 (见 [Types of CSS boxes](/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)). 接着是全新的布局方式，通过设置`display`的值，比如 [CSS Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) 和 [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
+- **{{cssxref("display")}}** 属性 — 标准的 value，比如`block`, `inline` 或者 `inline-block` 元素在正常布局流中的表现形式 (见 [Types of CSS boxes](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)). 接着是全新的布局方式，通过设置`display`的值，比如 [CSS Grid](/zh-CN/docs/Learn/CSS/CSS_layout/Grids) 和 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox).
 - **浮动**——应用 **{{cssxref("float")}}** 值，诸如 `left` 能够让块级元素互相并排成一行，而不是一个堆叠在另一个上面。
-- **{{cssxref("position")}}** 属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 `static` ，使用其它值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。
+- **{{cssxref("position")}}** 属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 `static` ，使用其他值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。
 - **表格布局**— 表格的布局方式可以用在非表格内容上，可以使用`display: table`和相关属性在非表元素上使用。
-- **多列布局**— 这个 [Multi-column layout](/en-US/docs/Web/CSS/CSS_Columns) 属性 可以让块按列布局，比如报纸的内容就是一列一列排布的。
+- **多列布局**— 这个 [Multi-column layout](/zh-CN/docs/Web/CSS/CSS_Columns) 属性 可以让块按列布局，比如报纸的内容就是一列一列排布的。
 
 ## display 属性
 
@@ -85,7 +86,7 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 您可以更改此默认显示行为。例如，{{htmlelement("li")}}元素默认为`display:block`，这意味着在我们的英文文档中，列表项显示为一个在另一个之下。如果我们将显示值更改为`inline`，它们现在将显示在彼此旁边，就像单词在句子中所做的那样。事实上，您可以更改任何元素的`display`值，这意味着您可以根据它们的语义选择 html 元素，而不必关心它们的外观。他们的样子是你可以改变的。
 
-除了可以通过将一些内容从`block`转换为`inline`（反之亦然）来更改默认表示形式之外，还有一些更大的布局方法以`display`值开始。但是，在使用这些属性时，通常需要调用其他属性。在讨论布局时，对我们来说最重要的两个值是`display`:`flex`和`display`:`grid`。
+除了可以通过将一些内容从`block`转换为`inline`（反之亦然）来更改默认表示形式之外，还有一些更大的布局方法以`display`值开始。但是，在使用这些属性时，通常需要调用其他属性。在讨论布局时，对我们来说最重要的两个值是 `display: flex` 和 `display: grid`。
 
 ## 弹性盒子
 
@@ -160,7 +161,7 @@ Flexbox 是 CSS 弹性盒子布局模块（[Flexible Box Layout](/zh-CN/docs/Web
 
 {{ EmbedLiveSample('设置 flex 属性', '300', '200') }}
 
-> **备注：** 为了找到更多关于 Flexbox 的信息，看看我们的 [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) 的文章。
+> **备注：** 为了找到更多关于 Flexbox 的信息，看看我们的 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 的文章。
 
 ## Grid 布局
 
@@ -252,7 +253,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 {{ EmbedLiveSample('在网格内放置元素', '300', '330') }}
 
-> **备注：** 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章[Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids)。
+> **备注：** 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章[Grid Layout](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
 
 这篇指南的其余部分介绍了其他的布局方式，它们与你的页面的主要布局结构关系不大，但是却能够帮助你实现特殊的操作。同时，只要你理解了每一个布局任务的初衷，你就能够马上意识到哪一种布局更适合你的组件。
 
@@ -308,7 +309,7 @@ p {
 
 {{ EmbedLiveSample('浮动', '100%', 600) }}
 
-> **备注：** CSS 浮动的知识会在我们关于 [浮动](/en-US/docs/Learn/CSS/CSS_layout/Floats)的教程当中被详细地解释。除此之外，如果您想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于[传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95)的文章。
+> **备注：** CSS 浮动的知识会在我们关于 [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)的教程当中被详细地解释。除此之外，如果您想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于[传统布局方式](/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95)的文章。
 
 ## 定位技术
 
@@ -359,7 +360,7 @@ p {
 
 ### 相对定位
 
-相对定位 (relative positioning) 让你能够把一个正常布局流 (normal flow) 中的元素从它的默认位置按坐标进行相对移动。比如将一个图标往下调一点，以便放置文字。我们可以通过下面的规则添加相对定位来实现效果:
+相对定位 (relative positioning) 让你能够把一个正常布局流 (normal flow) 中的元素从它的默认位置按坐标进行相对移动。比如将一个图标往下调一点，以便放置文字。我们可以通过下面的规则添加相对定位来实现效果：
 
 ```css
 .positioned {
@@ -459,7 +460,7 @@ p {
 
 {{ EmbedLiveSample('绝对定位', '100%', 300) }}
 
-这和之前截然不同！定位元素现在已经与页面布局的其余部分完全分离，并位于页面的顶部。其他两段现在靠在一起，好像之前那个中间段落不存在一样。{{cssxref("top")}}和{{cssxref("left")}}属性对绝对位置元素的影响不同于相对位置元素。在这一案例当中，他们没有指定元素相对于原始位置的移动程度。相反，在这一案例当中，它们指定元素应该从页面边界的顶部和左边的距离 (确切地说，是 `<html>`元素的距离)。我们也可以修改作为容器的那个元素（在这里是`<html>`元素），要了解这方面的知识，参见关于[定位 (positioning)](/en-US/docs/Learn/CSS/CSS_layout/Positioning)的课程
+这和之前截然不同！定位元素现在已经与页面布局的其余部分完全分离，并位于页面的顶部。其他两段现在靠在一起，好像之前那个中间段落不存在一样。{{cssxref("top")}}和{{cssxref("left")}}属性对绝对位置元素的影响不同于相对位置元素。在这一案例当中，他们没有指定元素相对于原始位置的移动程度。相反，在这一案例当中，它们指定元素应该从页面边界的顶部和左边的距离 (确切地说，是 `<html>`元素的距离)。我们也可以修改作为容器的那个元素（在这里是`<html>`元素），要了解这方面的知识，参见关于[定位 (positioning)](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)的课程
 
 我们现在暂时不讨论固定定位（fixed positioning）——它基本上以相同的方式工作，除了它仍然固定在浏览器窗口的边缘，而不是它定位的父节点的边缘。
 
@@ -557,7 +558,7 @@ body {
 
 {{ EmbedLiveSample('粘性定位', '100%', 200) }}
 
-> **备注：** 想要发现更多关于定位的信息，请参阅我们的[Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)和[Practical positioning examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)文章。
+> **备注：** 想要发现更多关于定位的信息，请参阅我们的[Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)和[Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)文章。
 
 ## 表格布局
 

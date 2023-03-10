@@ -2,7 +2,8 @@
 title: WebGL でのテクスチャの使用
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 現在、サンプルプログラムは回転する 3D キューブを描画します。今回はキューブの表面を単色で塗りつぶすのではなく、テクスチャをマッピングしてみましょう。
 
@@ -10,7 +11,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 始めに、テクスチャを読み込むコードを追加します。今回は 1 個のテクスチャを用いて、そのテクスチャをキューブの 6 面に貼り付けますが、テクスチャがいくつある場合でも同じ方法を適用できます。
 
-> **Note:** **注記:** テクスチャの読み込みは[クロスドメインの規則](/ja/docs/Web/HTTP/Access_control_CORS)に従うことへの注意が重要です。従ってコンテンツが CORS で認可されているサイトからのみ、テクスチャを読み込むことができます。クロスドメインのテクスチャについては、後ほど説明します。
+> **メモ:** テクスチャの読み込みは[クロスドメインの規則](/ja/docs/Web/HTTP/Access_control_CORS)に従うことへの注意が重要です。従ってコンテンツが CORS で認可されているサイトからのみ、テクスチャを読み込むことができます。クロスドメインのテクスチャについては、後ほど説明します。
 
 テクスチャを読み込むコードは以下のようになります:
 
@@ -36,7 +37,7 @@ function handleTextureLoaded(image, texture) {
 
 実際にテクスチャを作成するために、新しいテクスチャが操作したいカレントのテクスチャであることを、`gl.TEXTURE_2D` にバインドすることで指定します。その後読み込んだ画像は、テクスチャとして書き込むために `texImage2D()` へ渡されます。
 
-> **Note:** **注記:** テクスチャの幅と高さのピクセル数は**ほとんどの場合**において、それぞれ 2 のべき乗 (1、2、4、8、16……) にしなければなりません。例外については、"[2 のべき乗ではないテクスチャ](/ja/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures "Web/WebGL/Using_textures_in_WebGL#Using_non_Power-Of-Two_textures")" のセクションをご覧ください。
+> **メモ:** テクスチャの幅と高さのピクセル数は**ほとんどの場合**において、それぞれ 2 のべき乗 (1、2、4、8、16……) にしなければなりません。例外については、"[2 のべき乗ではないテクスチャ](/ja/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures)" のセクションをご覧ください。
 
 その次の 2 行はテクスチャのフィルタリングを設定しています。これは画像が拡大縮小される際に適用するフィルタの設定です。今回は、画像を拡大する場合はリニアフィルタ、縮小する場合はミップマップを使用します。ミップマップは `generateMipMap()` を呼び出すことで生成され、最後は null を `gl.TEXTURE_2D` にバインドしてテクスチャの操作を終了することで完了します。
 
@@ -114,7 +115,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 
 テクスチャマッピングの配列を設定したら、配列をバッファに渡すことで GL がそのデータを使用する準備が完了します。
 
-> **Note:** 注記: WebKit ベースのブラウザでは、`WebGLFloatArray` の代わりに `Float32Array` を使用しなければならないでしょう。
+> **メモ:** WebKit ベースのブラウザでは、`WebGLFloatArray` の代わりに `Float32Array` を使用しなければならないでしょう。
 
 ## シェーダーを更新する
 
@@ -192,16 +193,16 @@ GL は 32 個のテクスチャレジスタを提供し、その 1 つ目が `gl
 
 ## クロスドメインのテクスチャ
 
-WebGL のテクスチャの読み込みは、クロスドメインアクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、CORS で許可を得なければなりません。CORS について詳しくは、[HTTP access control](/ja/docs/HTTP_access_control "HTTP access control") をご覧ください。
+WebGL のテクスチャの読み込みは、クロスドメインアクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、CORS で許可を得なければなりません。CORS について詳しくは、[HTTP access control](/ja/docs/HTTP_access_control) をご覧ください。
 
 CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を [こちらの hacks.mozilla.org の記事](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) に掲載していますので、[サンプル](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html) と合わせてご覧ください。
 
-> **Note:** **注記:** WebGL テクスチャ向けの CORS サポートと、画像要素の `crossOrigin` 属性は {{Gecko("8.0")}} で実装されました。
+> **メモ:** WebGL テクスチャ向けの CORS サポートと、画像要素の `crossOrigin` 属性は Gecko 8.0 で実装されました。
 
 汚染された (書き込みのみ) 2D canvas を WebGL のテクスチャとして使用することはできません。2D {{HTMLElement("canvas")}} が汚染されたとは例えば、クロスドメインの画像が canvas 上に描画された状態を指します。
 
-> **Note:** **注記:** Canvas 2D `drawImage` 向けの CORS サポートを {{Gecko("9.0")}} で実装しました。これは、CORS で許可されたクロスドメインの画像が 2D canvas を汚染しないので、2D canvas を WebGL のテクスチャ素材として引き続き使用できることを意味します。
+> **メモ:** Canvas 2D `drawImage` 向けの CORS サポートを Gecko 9.0 で実装しました。これは、CORS で許可されたクロスドメインの画像が 2D canvas を汚染しないので、2D canvas を WebGL のテクスチャ素材として引き続き使用できることを意味します。
 
-> **Note:** **注記:** クロスドメインの動画に対する CORS サポートと、{{HTMLElement("video")}} 要素の`crossorigin` 属性は {{Gecko("12.0")}} で実装されました。
+> **メモ:** クロスドメインの動画に対する CORS サポートと、{{HTMLElement("video")}} 要素の`crossorigin` 属性は Gecko 12.0 で実装されました。
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

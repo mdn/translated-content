@@ -8,6 +8,7 @@ tags:
   - features
 translation_of: Mozilla/Firefox/Experimental_features
 ---
+
 {{FirefoxSidebar}}
 
 Cette page détaille les fonctionnalités expérimentales ou partiellement implémentées présentes dans Firefox. Cela inclut les fonctionnalités concernées par les standards web très récents ou en cours de construction. Les informations de cette page permettent de savoir quelles versions contiennent ces fonctionnalités, si elles sont activées par défaut et la _préférence_ qui peut être utilisée pour les activer ou les désactiver. Cela vous permet de tester les fonctionnalités avant leur sortie « générale ».
@@ -1003,7 +1004,7 @@ La propriété [`autoplayPolicy`](/fr/docs/Web/API/Document/autoplayPolicy), rat
 
 #### Méthodes convertPointFromNode(), convertRectFromNode(), et convertQuadFromNode() pour GeometryUtils
 
-Les méthodes `convertPointFromNode()`, `convertRectFromNode()`, et ``convertQuadFromNode() effectuent la correspondance entre un point, un rectangle ou un quadrilatère donné et le [`Node`](/fr/docs/Web/API/Node) depuis lequel ils sont appelés vers un autre nœud. Voir [le bug 918189](https://bugzilla.mozilla.org/show_bug.cgi?id=918189) pour plus de détails.
+Les méthodes `convertPointFromNode()`, `convertRectFromNode()`, et `convertQuadFromNode()` effectuent la correspondance entre un point, un rectangle ou un quadrilatère donné et le [`Node`](/fr/docs/Web/API/Node) depuis lequel ils sont appelés vers un autre nœud. Voir [le bug 918189](https://bugzilla.mozilla.org/show_bug.cgi?id=918189) pour plus de détails.
 
 <table class="standard-table">
   <thead>

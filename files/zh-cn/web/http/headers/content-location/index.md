@@ -2,6 +2,7 @@
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Location`** 首部指定的是要返回的数据的地址选项。最主要的用途是用来指定要访问的资源经过[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)后的结果的 URL。

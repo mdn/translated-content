@@ -2,6 +2,7 @@
 title: Document.cookie
 slug: Web/API/Document/cookie
 ---
+
 {{APIRef("DOM")}}
 
 获取并设置与当前文档相关联的 [cookie](/zh-CN/docs/Web/HTTP/Cookies)。可以把它当成一个 `getter and setter`。
@@ -22,7 +23,7 @@ allCookies = document.cookie;
 document.cookie = newCookie;
 ```
 
-`newCookie 是一个键值对形式的字符串。需要注意的是，用这个方法一次只能对一个 cookie 进行设置或更新。`
+`newCookie` 是一个键值对形式的字符串。需要注意的是，用这个方法一次只能对一个 cookie 进行设置或更新。
 
 - 以下可选的 cookie 属性值可以跟在键值对后，用来具体化对 cookie 的设定/更新，使用分号以作分隔：
 
@@ -37,7 +38,7 @@ document.cookie = newCookie;
 
 - cookie 的值字符串可以用[encodeURIComponent()](/zh-CN/docs/JavaScript/Reference/Global_Objects/encodeURIComponent)来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).
 
-> **备注：** 在{{Gecko("6.0")}}前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
+> **备注：** 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
 
 ## 示例
 
@@ -47,7 +48,7 @@ document.cookie = newCookie;
 document.cookie = "name=oeschger";
 document.cookie = "favorite_food=tripe";
 alert(document.cookie);
-// 显示: name=oeschger;favorite_food=tripe
+// 显示：name=oeschger;favorite_food=tripe
 ```
 
 ### 示例 2: 得到名为 test2 的 cookie
@@ -59,7 +60,7 @@ document.cookie = "test2=World";
 var myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 
 alert(myCookie);
-// 显示: World
+// 显示：World
 ```
 
 ### 示例 3: 只执行某事一次
@@ -76,7 +77,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 
 ## 一个小框架：一个完整支持 unicode 的 cookie 读取/写入器
 
-作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和[`Storage 对象`](/en-US/docs/Web/Guide/API/DOM/Storage#Storage)部分`一致的`对象（docCookies），简化`document.cookie` 的获取方法。它提供完全的 Unicode 支持。
+作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和[`Storage 对象`](/zh-CN/docs/Web/Guide/API/DOM/Storage#Storage)部分`一致的`对象（docCookies），简化`document.cookie` 的获取方法。它提供完全的 Unicode 支持。
 
 ```js
 /*\
@@ -160,11 +161,11 @@ docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 - `value` (必要)
   - : cookie 的值 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String))。
 - `end` _(可选)_
-  - [: `最大年龄`](#new-cookie_max-age)的秒数 (一年为 31536e3， 永不过期的 cookie 为[`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity)) ，或者过期时间的[`GMTString`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/toGMTString)格式或[`Date 对象`](/en-US/docs/JavaScript/Reference/Global_Objects/Date); 如果没有定义则会在会话结束时过期 ([`number`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Number) – 有限的或 [`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity) – [`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String), [`Date` object](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : [`最大年龄`](#new-cookie_max-age)的秒数 (一年为 31536e3，永不过期的 cookie 为[`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity)) ，或者过期时间的 `GMTString` 格式或[`Date 对象`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date); 如果没有定义则会在会话结束时过期 ([`number`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Number) – 有限的或 [`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity) – [`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String), [`Date` object](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 - `path` _(可选)_
-  - : 例如 '/', '/mydir'。 如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
+  - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
 - `domain` _(可选)_
-  - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string或`[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : 例如 'example.com'，'.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 - `secure` _(可选)_
   - : cookie 只会被 https 传输 ([`boolean`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean)或[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 
@@ -202,9 +203,9 @@ docCookies.removeItem(name[, path],domain)
 - `name`
   - : 要移除的 cookie 名 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String)).
 - `path` *(*可选*)*
-  - : 例如 '/', '/mydir'。 如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
+  - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
 - `domain` (可选)
-  - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string或`[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 
 ### 检测 cookie
 

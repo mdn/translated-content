@@ -2,6 +2,7 @@
 title: MediaSource.MediaSource()
 slug: Web/API/MediaSource/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`MediaSource()`** コンストラクタは、ソースバッファが関連付けられていない新しい `MediaSource` オブジェクトを構築して返します。

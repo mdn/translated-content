@@ -1,13 +1,8 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
+
 {{JSRef}}
 
 **`Symbol.matchAll`** は、文字列に対する正規表現の一致を生成するイテレーターを返します。この関数は {{jsxref("String.prototype.matchAll()")}} メソッドによって呼び出されます。
@@ -51,9 +46,7 @@ console.log(Array.from(str.matchAll(numbers)));
 
 ## 仕様
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.matchall', 'Symbol.matchAll')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

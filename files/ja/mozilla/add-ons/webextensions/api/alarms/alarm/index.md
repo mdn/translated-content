@@ -2,6 +2,7 @@
 title: alarms.Alarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
 ---
+
 {{AddonSidebar()}}
 
 単一のアラームに関する情報を含みます。このオブジェクトは {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.getAll()')}} の戻り値として返されます。また、{{WebExtAPIRef('alarms.onAlarm')}} リスナに渡されることもあります。
@@ -23,4 +24,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。
+> **メモ:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。

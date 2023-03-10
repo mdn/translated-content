@@ -1,13 +1,8 @@
 ---
 title: モバイルアクセシビリティのチェックリスト
 slug: Web/Accessibility/Mobile_accessibility_checklist
-tags:
-  - Accessibility
-  - Guidelines
-  - Mobile
-  - checklist
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
+
 このドキュメントは、モバイルアプリ開発者向けのアクセシビリティ要件の簡潔なチェックリストを提供します。 それはより多くのパターンが生じるにつれて絶えず進化することを意図しています。
 
 ## 色
@@ -66,4 +61,4 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 - タッチイベントハンドラは、`touchend` イベントでのみトリガ**されなければならない**。
 - タッチターゲットは、ユーザーが対話するのに十分な大きさ**でなければならない**（有用なタッチターゲットサイズのガイドラインについては、[BBC モバイルアクセシビリティ・ガイドライン](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)（英語）を参照してください）。
 
-> **Note:** **メモ**: [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](http://yzen.github.io/) によって書かれました。
+> **メモ:** [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](http://yzen.github.io/) によって書かれました。

@@ -1,15 +1,9 @@
 ---
 title: '<em>: 強調要素'
 slug: Web/HTML/Element/em
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/em
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<em>` 要素**は、強調されたテキストを示します。`<em>` 要素は入れ子にすることができ、入れ子の段階に応じてより強い程度の強調を表すことができます。
 
@@ -85,7 +79,7 @@ translation_of: Web/HTML/Element/em
 
 通常、この要素は斜体で表示されます。しかしながら、単に斜体のスタイルを適用するために用いるべきではなく、そのような目的のためには CSS によるスタイル付けを使用してください。著作物（書籍、演劇、歌など）の題名を示すためには、 {{HTMLElement("cite")}} 要素を使用してください。これも通常、斜体のスタイルとなりますが、異なる意味を持っています。周辺のテキストよりも高い重要性を持つテキストを示すためには、{{HTMLElement("strong")}} 要素を使用してください。
 
-> **Note:** **訳注:** 日本語フォントでは斜体を持たないフォントが多く、斜体で表示されないことがあります。
+> **メモ:** **訳注:** 日本語フォントでは斜体を持たないフォントが多く、斜体で表示されないことがあります。
 
 ### \<i> と \<em>
 
@@ -117,11 +111,7 @@ translation_of: Web/HTML/Element/em
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-em-element', '&lt;em&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-em-element', '&lt;em&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;em&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

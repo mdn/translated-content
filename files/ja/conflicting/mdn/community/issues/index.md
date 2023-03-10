@@ -3,6 +3,7 @@ title: GitHub 早見表
 slug: conflicting/MDN/Community/Issues
 original_slug: MDN/Contribute/GitHub_cheatsheet
 ---
+
 {{MDNSidebar}}
 
 この記事では、 MDN に協力するために [Git](https://git-scm.com/) と [GitHub](https://github.com/) を使用する際に必要となる基本的なコマンドのクイックリファレンスを提供します。これらのツールに慣れておらず、助けが必要な場合は、[全くの初心者のための GitHub](/ja/docs/MDN/Contribute/GitHub_beginners) チュートリアルで基本的なことを教えています。
@@ -89,7 +90,7 @@ git revert HEAD
 git push
 ```
 
-> **Note:** #### Note プルリクエストに入れたくないファイルを削除するには、 GitHub の UI を使う方法もあります。 github.com のプルリクエストのページに行き、 "Files changed" タブを開いてプルリクエストから削除したいファイルを探します。ページ内のファイルボックスの右上に「3 つの点」 (`...`) のメニューが表示されます。このボタンを押して "Delete file" を選択してください。確認ページでは、新しいコミットのタイトルを入力し、"Commit directly... " チェックボックスが選択されていることを確認して、"Commit changes" ボタンを押してください。
+> **メモ:** プルリクエストに入れたくないファイルを削除するには、 GitHub の UI を使う方法もあります。 github.com のプルリクエストのページに行き、 "Files changed" タブを開いてプルリクエストから削除したいファイルを探します。ページ内のファイルボックスの右上に「3 つの点」 (`...`) のメニューが表示されます。このボタンを押して "Delete file" を選択してください。確認ページでは、新しいコミットのタイトルを入力し、"Commit directly... " チェックボックスが選択されていることを確認して、"Commit changes" ボタンを押してください。
 
 ## もっと見たいですか？
 

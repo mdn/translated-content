@@ -1,14 +1,8 @@
 ---
 title: Proxy() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-tags:
-  - Constructor
-  - JavaScript
-  - Proxy
-  - Reference
-  - コンストラクター
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
+
 {{JSRef}}
 
 **`Proxy()`** コンストラクターは {{jsxref("Proxy")}} オブジェクトを生成するために使用します。
@@ -95,9 +89,7 @@ console.log(proxy.proxied);    // "replaced value"
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-constructor', 'Proxy constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

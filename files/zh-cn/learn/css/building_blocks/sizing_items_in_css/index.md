@@ -2,9 +2,10 @@
 title: 在 CSS 中调整大小
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
 
-在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。 在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。
+在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -12,15 +13,15 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
       <th scope="row">前提：</th>
       <td>
         基本的电脑知识，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了必要的软件</a
         >，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基础知识 , HTML 基础（学习<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >），理解 CSS 如何工作（学习<a href="/en-US/docs/Learn/CSS/First_steps"
+        >），理解 CSS 如何工作（学习<a href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
         >）。
       </td>
@@ -48,7 +49,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 ## 设置具体的尺寸
 
-我们当然可以给设计中的元素指定具体大小。当给元素指定尺寸（然后其内容需要适合该尺寸）时，我们将其称为**外部尺寸**。以上面例子中的 `<div>` 举例 — 我们可以给它一个具体的 {{cssxref("width")}} 和 {{cssxref("height")}} 值，然后不论我们放什么内容进去它都是该尺寸。 正如我们在[上一课](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)有关溢出的内容中所发现的，如果内容的数量超出了元素可容纳的空间，则设置的高度会导致内容溢出。
+我们当然可以给设计中的元素指定具体大小。当给元素指定尺寸（然后其内容需要适合该尺寸）时，我们将其称为**外部尺寸**。以上面例子中的 `<div>` 举例 — 我们可以给它一个具体的 {{cssxref("width")}} 和 {{cssxref("height")}} 值，然后不论我们放什么内容进去它都是该尺寸。正如我们在[上一课](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)有关溢出的内容中所发现的，如果内容的数量超出了元素可容纳的空间，则设置的高度会导致内容溢出。
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 
@@ -94,7 +95,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 这个技术是用来让图片**可响应**的，所以在更小的设备上浏览的时候，它们会合适地缩放。你无论怎样都不应该用这个技术先载入大原始尺寸的图片，再对它们在浏览器中进行缩放。图像应该合适地调整尺寸，以使它们不会比预计中展示时所需要的最大尺寸大。下载过大的图像会造成你的网站变慢，如果用户使用按量收费的网络连接，会让用户花更多钱。
 
-> **备注：**了解更多关于[响应式图片技术](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)的事情。
+> **备注：**了解更多关于[响应式图片技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)的事情。
 
 ## 视口单位
 
@@ -110,27 +111,6 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 ## 小结
 
-本节课，你已经得到了一个对于你可能在约束网站上的内容大小的时候，会遇到的一些关键问题的详细介绍。当你继续学习[CSS 布局](/en-US/docs/Learn/CSS/CSS_layout)的时候，约束大小会成为掌握不同布局途径的非常重要的基础，所以在继续之前有必要在这里理解这些概念。
+本节课，你已经得到了一个对于你可能在约束网站上的内容大小的时候，会遇到的一些关键问题的详细介绍。当你继续学习[CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)的时候，约束大小会成为掌握不同布局途径的非常重要的基础，所以在继续之前有必要在这里理解这些概念。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

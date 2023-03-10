@@ -3,6 +3,7 @@ title: 传统的布局方法
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 original_slug: Learn/CSS/CSS_layout/传统的布局方法
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
@@ -15,13 +16,13 @@ original_slug: Learn/CSS/CSS_layout/传统的布局方法
       <th scope="row">学习前提：</th>
       <td>
         HTML 基础 (学习
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >),并且了解 CSS 是怎么工作的 (学习
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >
-        and <a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)
+        and <a href="/zh-CN/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)
       </td>
     </tr>
     <tr>
@@ -60,7 +61,7 @@ original_slug: Learn/CSS/CSS_layout/传统的布局方法
 </div>
 ```
 
-每一列都需要一个上一级元素来包含内容，这样我们可以一次性操作所有内容。在这个例子中我们选择了{{htmlelement("div")}}， 但是你可以选择其他更合适的，例如{{htmlelement("article")}}, {{htmlelement("section")}}, 和 {{htmlelement("aside")}}，或者是任何别的元素。
+每一列都需要一个上一级元素来包含内容，这样我们可以一次性操作所有内容。在这个例子中我们选择了{{htmlelement("div")}}，但是你可以选择其他更合适的，例如{{htmlelement("article")}}, {{htmlelement("section")}}, 和 {{htmlelement("aside")}}，或者是任何别的元素。
 
 现在我们来看 CSS。首先，应用以下的代码来对 HTML 进行基本设置：
 
@@ -72,7 +73,7 @@ body {
 }
 ```
 
-body 将会占据 90% 的视口宽度，直到达到 900 像素，在这种情况下，它将固定并保持在视口正中。 默认情况下，它的子项（the {{htmlelement("h1")}} 和两个 {{htmlelement("div")}}）将会达到正文宽度的 100%。如果我们希望两个{{htmlelement("div")}}，一个浮在窗口的一边，另一个浮动在另一边的话， 我们需要将它们的宽度设置为其父元素的 100% 或者更小，以便他们可以并排放置。将下面的代码加在 CSS 的底部：
+body 将会占据 90% 的视口宽度，直到达到 900 像素，在这种情况下，它将固定并保持在视口正中。默认情况下，它的子项（the {{htmlelement("h1")}} 和两个 {{htmlelement("div")}}）将会达到正文宽度的 100%。如果我们希望两个{{htmlelement("div")}}，一个浮在窗口的一边，另一个浮动在另一边的话，我们需要将它们的宽度设置为其父元素的 100% 或者更小，以便他们可以并排放置。将下面的代码加在 CSS 的底部：
 
 ```css
 div:nth-of-type(1) {
@@ -108,7 +109,7 @@ div:nth-of-type(2) {
 
 ## 创建简单的传统网格框架
 
-大多数传统的框架使用{{cssxref("float")}}属性来使列相邻排列，让它们看起来像是一个网格。以用 float 创建网格的流程工作，可以向你展示它们工作的原理，并介绍一些更高级的概念，并在[浮动和清除](/en-US/docs/Learn/CSS/CSS_layout/Floats)这节课中学到的内容之上搭建更多的东西。
+大多数传统的框架使用{{cssxref("float")}}属性来使列相邻排列，让它们看起来像是一个网格。以用 float 创建网格的流程工作，可以向你展示它们工作的原理，并介绍一些更高级的概念，并在[浮动和清除](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)这节课中学到的内容之上搭建更多的东西。
 
 最简单的一类网格创建是固定宽度的——我们只需要计算设计中总的宽度、列的数目、每一列和间隔的宽度。但是，如果我们决定设计的网格是可以根据浏览器宽度缩放的，我们则需要计算每一列和间距的所占的宽度的百分比。
 
@@ -180,7 +181,7 @@ body {
 
 我们需要从 960px 的总宽减去这个间隔，然后剩下 720 像素给我们的列。如果用 720 除以 12，我们知道每列有 60 个像素宽。
 
-接下来我们给`.col`类写一个规则， 让它向左浮动，给它设置 20 像素的{{cssxref("margin-left")}}来实现一个间隔，再设置 60 像素的{{cssxref("width")}}。把下面的规则加到你的 CSS 底部：
+接下来我们给`.col`类写一个规则，让它向左浮动，给它设置 20 像素的{{cssxref("margin-left")}}来实现一个间隔，再设置 60 像素的{{cssxref("width")}}。把下面的规则加到你的 CSS 底部：
 
 ```css
 .col {
@@ -233,7 +234,7 @@ body {
 
 ### 创建液态网格
 
-这个网格表现的不错，但是它长度固定。 我们实际却想要一个弹性（流体）的网格，它可以随着浏览器的{{Glossary("viewport")}}大小的变化自动伸缩。为了达成这个目标，我们需要把相应的像素的长度变为百分比长度。
+这个网格表现的不错，但是它长度固定。我们实际却想要一个弹性（流体）的网格，它可以随着浏览器的{{Glossary("viewport")}}大小的变化自动伸缩。为了达成这个目标，我们需要把相应的像素的长度变为百分比长度。
 
 把固定宽度转为伸缩的基于百分比宽度的算式在下面：
 
@@ -315,7 +316,7 @@ body {
 
 ### 使用 calc() 函数的更简单计算
 
-你可以用 {{cssxref("calc()")}} 函数来在 CSS 里面做数学方面的计算——这允许你在 CSS 里插入简单的算式，来计算那些值。这个会很有用，特别当你有个复杂计算的时候，甚至你还可以在算式里用不同的单位，比如“我想要这个元素一直比它父元素少 50 像素”。看下[这个来自 MediaRecorder API 教程的示例](</en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>)。
+你可以用 {{cssxref("calc()")}} 函数来在 CSS 里面做数学方面的计算——这允许你在 CSS 里插入简单的算式，来计算那些值。这个会很有用，特别当你有个复杂计算的时候，甚至你还可以在算式里用不同的单位，比如“我想要这个元素一直比它父元素少 50 像素”。看下[这个来自 MediaRecorder API 教程的示例](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#保持主界面对显示区域的约束，用_calc_来忽略设备的尺寸)。
 
 言归正传，来讲我们的网格！我们网格里跨越超过一列的列，它的总长是 6.45% 乘跨越的列数加 2.08333333%，乘间隔数（间隔数总等于行数减一）。`calc()` 函数允许我们就在宽度值里面这么计算，所以对跨越 4 列的列我们可以这么算：
 
@@ -413,7 +414,7 @@ body {
 
 ## 弹性盒网格？
 
-如果你读了之前关于[flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)的文章，你大概会想，弹性布局是个写网格布局的好办法。现在有很多基于弹性布局的网格布局，并且弹性布局可以解决很多上面讲的问题。
+如果你读了之前关于[flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)的文章，你大概会想，弹性布局是个写网格布局的好办法。现在有很多基于弹性布局的网格布局，并且弹性布局可以解决很多上面讲的问题。
 
 但是，弹性布局不是为网格布局而设的，把它当网格布局来用也有新的挑战。举个简单的例子，我们可以使用我们在上面使用过的同样的示例标记，用下面的 CSS 样式化`wrapper`、`row`和`col`类：
 
@@ -479,7 +480,7 @@ body {
 
 Skeleton 不仅包含了网格系统，它还包含了用于排版和其他能作为起始点的页面元素上的 CSS。我们现在把这些部分留作默认值，我们在这里真正感兴趣的是网格。
 
-> **备注：**[Normalize](/en-US/docs/)是由 Nicolas Gallagher 编写的一个很有用的小 CSS 库，它自动做了一些有用的基础布局修正，让元素默认的样式化在不同浏览器中更加协调。
+> **备注：**[Normalize](/zh-CN/docs/)是由 Nicolas Gallagher 编写的一个很有用的小 CSS 库，它自动做了一些有用的基础布局修正，让元素默认的样式化在不同浏览器中更加协调。
 
 我们将会使用和在前面的示例中相似的 HTML。将下面的内容加到你的 HTML body 中：
 
@@ -570,16 +571,3 @@ Skeleton（或者其他任何网格框架）正在做的所有事情是，设定
 你现在理解了多种网格系统是如何建立的。这将会在处理老网站的时候，以及理解 CSS 网格布局的原生网格和那些老系统的不同的时候帮到你。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
-## 模块目录
-
-- [CSS 布局介绍](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [传统布局模式](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧浏览器](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基础布局掌握测验](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

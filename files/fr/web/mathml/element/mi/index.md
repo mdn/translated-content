@@ -7,6 +7,7 @@ tags:
   - MathML:Référence
 translation_of: Web/MathML/Element/mi
 ---
+
 L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **identifiant** (comme les noms de fonctions, de variables ou les constantes symboliques). Il est également possible de l'utiliser avec du texte en général pour annoter.
 
 ## Attributs
@@ -81,15 +82,8 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaires           |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mi', 'mi') }} | {{ Spec2('MathML3') }} | Spécification actuelle |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mi', 'mi') }} | {{ Spec2('MathML2') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.mi")}}
-
-### Note relative à Gecko
-
-À partir de Gecko 20.0 {{geckoRelease("20.0")}} une valeur sans unité est autorisée pour `mathsize`.
+{{Compat}}

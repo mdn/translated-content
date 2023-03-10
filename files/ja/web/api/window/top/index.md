@@ -2,6 +2,7 @@
 title: window.top
 slug: Web/API/Window/top
 ---
+
 {{APIRef}}
 
 ウィンドウ階層における最上位のウィンドウへの参照を返します。
@@ -20,10 +21,7 @@ var topWindow = window.top;
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                             | コメント   |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-top', 'window.top')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-top', 'window.top')}}     | {{Spec2('HTML5 W3C')}}     | 初期の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

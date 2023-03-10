@@ -1,16 +1,8 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-browser-compat: javascript.builtins.RegExp.exec
 ---
+
 {{JSRef}}
 
 **`exec()`** メソッドは、指定された文字列内で一致するものの検索を実行します。結果の配列、または {{jsxref("null")}} を返します。
@@ -104,7 +96,7 @@ abb を見つけました。次の検索は 3 からです。
 ab を見つけました。次の検索は 9 からです。
 ```
 
-> **Warning:** **警告:** **正規表現リテラル (または {{jsxref("RegExp")}} コンストラクター) を `while` の条件の中に配置しないでください。**
+> **警告:** **正規表現リテラル (または {{jsxref("RegExp")}} コンストラクター) を `while` の条件の中に配置しないでください。**
 >
 > {{jsxref("RegExp.lastIndex", "lastIndex")}} プロパティが繰り返し毎にリセットされるので、無限ループになります。
 >

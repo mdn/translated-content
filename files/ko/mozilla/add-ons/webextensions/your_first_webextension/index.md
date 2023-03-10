@@ -1,10 +1,6 @@
 ---
 title: Your first extension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - WebExtensions
-  - 가이드
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 {{AddonSidebar}}
 
@@ -51,8 +47,8 @@ cd borderify
 }
 ```
 
-- [`manifest_version`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/name), [`version`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/version), 이 세가지 키는 반드시 필요합니다. 확장의 기본 메타 데이터를 담고 있습니다.
-- [`description`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/description)은 없어도 괜찮지만 포함하는 게 좋습니다. 확장 관리자 화면에서 볼 수 있습니다.
+- [`manifest_version`](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/Add-ons/WebExtensions/manifest.json/name), [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version), 이 세가지 키는 반드시 필요합니다. 확장의 기본 메타 데이터를 담고 있습니다.
+- [`description`](/en-US/Add-ons/WebExtensions/manifest.json/description)은 없어도 괜찮지만 포함하는 게 좋습니다. 확장 관리자 화면에서 볼 수 있습니다.
 - [`icons`](/en-US/Add-ons/WebExtensions/manifest.json/icons)은 없어도 괜찮지만 역시 포함하는 편이 좋습니다. 이는 확장의 아이콘을 결정하며 확장 관리자 화면에서 볼 수 있습니다.
 
 가장 재밌는 키는 [`content_scripts`](/en-US/Add-ons/WebExtensions/manifest.json/content_scripts) 입니다. 이 키는 URL이 패턴과 일치하는 페이지에 스크립트를 주입하도록 Firefox에 요청하는 역할을 합니다. 이 예제의 경우, "mozilla.org"와 그 하위 도메인에서 제공되는 모든 HTTP와 HTTPS 페이지에 "borderify.js" 스크립트를 주입하도록 Firefox에 요청합니다.
@@ -136,7 +132,7 @@ Firefox로 "about:debugging" 페이지에 들어갑니다. "임시 확장기능 
 
 {{EmbedYouTube("NuajE60jfGY")}}
 
-- [확장기능을 불러오는 것에 대해 더 알아보기](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [확장기능을 불러오는 것에 대해 더 알아보기](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 
 ## 패키징과 배포
 

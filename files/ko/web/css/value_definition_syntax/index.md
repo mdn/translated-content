@@ -1,15 +1,8 @@
 ---
 title: 값 정의 구문
 slug: Web/CSS/Value_definition_syntax
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Syntax
-  - 구문
-  - 문법
-translation_of: Web/CSS/Value_definition_syntax
 ---
+
 {{CSSRef}}
 
 **CSS 값 정의 구문**은 [형식 문법](https://ko.wikipedia.org/wiki/%ED%98%95%EC%8B%9D_%EB%AC%B8%EB%B2%95)으로서 CSS 속성이나 함수가 받을 수 있는 유효한 값의 집합을 정의합니다. 유효한 값 집합은 정의 구문으로 인한 제한 외에도 반드시 양의 수가 와야 하는 등, 맥락에 따라 추가로 제한될 수 있습니다.

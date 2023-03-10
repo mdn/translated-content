@@ -1,13 +1,6 @@
 ---
 title: 부가 기능들
 slug: Mozilla/Add-ons
-tags:
-  - 모질라
-  - 부가기능
-  - 애드온
-  - 확장
-  - 확장기능
-translation_of: Mozilla/Add-ons
 ---
 {{AddonSidebar}}
 
@@ -19,7 +12,7 @@ translation_of: Mozilla/Add-ons
 
 ## 애드온 개발하기
 
-Firefox 애드온을 개발하는데 있어서는 현재 몇가지 툴셋들이 있습니다, 그러나 [웹확장기능(WebExtensions)](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) 이 2017년 말에 표준으로 선정될 것입니다. 나머지 툴들은 같은기간안에 [지원이 중단(deprecated)](https://developer.mozilla.org/en-US/Add-ons/Overlay_Extensions) 될 것으로 예상 됩니다.
+Firefox 애드온을 개발하는데 있어서는 현재 몇가지 툴셋들이 있습니다, 그러나 [웹확장기능(WebExtensions)](/en-US/Add-ons/WebExtensions) 이 2017년 말에 표준으로 선정될 것입니다. 나머지 툴들은 같은기간안에 [지원이 중단(deprecated)](/en-US/Add-ons/Overlay_Extensions) 될 것으로 예상 됩니다.
 
 이곳에서 당신은 애드온을 개발하는데 이용 가능한 옵션에 대한 정보를 찾을 수 있을 것입니다, 이로써 당신은 지금 당장과 미래에 무엇이 당신에게 가장 좋을지 결정 할 수 있을 것입니다.
 
@@ -27,11 +20,11 @@ Firefox 애드온을 개발하는데 있어서는 현재 몇가지 툴셋들이 
 
 만일 당신이 새로운 애드온을 설계한다면, 우리는 아래의 두가지 방법들 중 하나를 고를 것을 추천드립니다. 웹확장기능들의 번역이 완전해질 때까지 각각의 방법들에 대한 찬반 여론들이 있을 것입니다. 아래의 선택사항들을 읽고 당신에게 알맞는 도구를 결정하세요.
 
-- [웹확장기능(WebExtensions)](https://developer.mozilla.org/en-US/Add-ons/WebExtensions)
+- [웹확장기능(WebExtensions)](/en-US/Add-ons/WebExtensions)
   - 웹확장기능(WebExtensions)은 Firefox 애드온의 미래 입니다. 이것은 크로스브라우져(cross-browser)간에 사용될 수 있도록 디자인 되었습니다.
-  FireFox에서 이용할 수 있도록 만들어진 웹확장기능(WebExtensions)은 대부분 약간의 수정을 거치면 Chrome, Edge, 그리고 Opera에서 동작합니다. 이것은 또한 멀티프로세스 Firefox에서도 완전하게 작동합니다. [현재 API가 지원하는 Firefox 와 다른 브라우져를 확인하세요.](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 우리는 개발자가 원하는 API들을 지속적으로 디자인하고 구현할 것입니다.대부분의 웹확장기능(WebExtensions) API는 안드로이드용 Firefox에서도 사용 가능합니다. [더알아보기](https://developer.mozilla.org/en-US/Add-ons/WebExtensions)
-- [애드온 SDK](https://developer.mozilla.org/en-US/Add-ons/SDK)
-  - 애드온 SDK는 Firefox 애드온 개발을 위한 API를 제공하며, 이것은 개발, 테스트, 패키징을 위한 도구입니다. 당신은 [안드로이드용 Firefox를 위한 애드온 SDK 확장기능](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Mobile_development)도 사용할 수 있습니다. 우리는 당신이 [high-level API](https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs)들만을 사용할 것을 권장합니다. 이것은 당신이 웹확장기능(WebExtensions)으로 마이그레이션 하는 여행 길을 더 쉽게 해 줄 것입니다. [더알아보기](https://developer.mozilla.org/en-US/Add-ons/SDK)
+  FireFox에서 이용할 수 있도록 만들어진 웹확장기능(WebExtensions)은 대부분 약간의 수정을 거치면 Chrome, Edge, 그리고 Opera에서 동작합니다. 이것은 또한 멀티프로세스 Firefox에서도 완전하게 작동합니다. [현재 API가 지원하는 Firefox 와 다른 브라우져를 확인하세요.](/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 우리는 개발자가 원하는 API들을 지속적으로 디자인하고 구현할 것입니다.대부분의 웹확장기능(WebExtensions) API는 안드로이드용 Firefox에서도 사용 가능합니다. [더알아보기](/en-US/Add-ons/WebExtensions)
+- [애드온 SDK](/en-US/Add-ons/SDK)
+  - 애드온 SDK는 Firefox 애드온 개발을 위한 API를 제공하며, 이것은 개발, 테스트, 패키징을 위한 도구입니다. 당신은 [안드로이드용 Firefox를 위한 애드온 SDK 확장기능](/en-US/Add-ons/SDK/Tutorials/Mobile_development)도 사용할 수 있습니다. 우리는 당신이 [high-level API](/en-US/Add-ons/SDK/High-Level_APIs)들만을 사용할 것을 권장합니다. 이것은 당신이 웹확장기능(WebExtensions)으로 마이그레이션 하는 여행 길을 더 쉽게 해 줄 것입니다. [더알아보기](/en-US/Add-ons/SDK)
 
 ### 기존 애드온(Add-on)을 이전하기
 
@@ -47,14 +40,14 @@ Firefox 내년에 몇가지 변화를 겪게 됩니다. 유저들에게는 높�
 
 AMO에 여러분의 부가기능을 반드시 업로드해야 하는 것은 아니지만, Firefox 40 버전부터 여러분의 코드를 반드시 모질라 재단이나 사용자에 의해 인증받지 않으면 부가기능을 설치할 수 없게 됩니다.
 
-여러분의 부가기능을 업로드하는 과정에 대해 자세히 알아보고 싶으시다면, [부가기능을 인증받고 배포하기](https://developer.mozilla.org/en-US/Add-ons/Distribution) 문서를 참고하세요.
+여러분의 부가기능을 업로드하는 과정에 대해 자세히 알아보고 싶으시다면, [부가기능을 인증받고 배포하기](/en-US/Add-ons/Distribution) 문서를 참고하세요.
 
 ## 애드온의 다양한 형태
 
 Generally, when people speak of add-ons they're referring to extensions, but there are a few other add-on types that allow users to customize Firefox. Those add-ons include:
 
-- [Lightweight themes](https://developer.mozilla.org/Add-ons/Themes/Background) are a simple way to provide limited customization for Firefox.
-- [Mobile add-ons](https://developer.mozilla.org/en-US/Add-ons/Firefox_for_Android) are add-ons for Firefox for Android. Note, though, that we intend to deprecate some of the technology underlying these APIs. In the future, WebExtensions will be fully supported on Firefox for Android.
+- [Lightweight themes](/Add-ons/Themes/Background) are a simple way to provide limited customization for Firefox.
+- [Mobile add-ons](/en-US/Add-ons/Firefox_for_Android) are add-ons for Firefox for Android. Note, though, that we intend to deprecate some of the technology underlying these APIs. In the future, WebExtensions will be fully supported on Firefox for Android.
 - [Search engine plugins](/ko/docs/Creating_OpenSearch_plugins_for_Firefox) add new search engines to the browser's search bar.
 - [User dictionaries](/ko/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) are add-ons that let you spell-check in different languages.
 - [Language packs](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) are add-ons that let you have more languages available for the user interface of Firefox.

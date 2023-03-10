@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Flow_Layout
 ---
+
 {{CSSRef}}
 
 Le _flux normal_ ou « disposition en flux » (_Flow Layout_) correspond à la façon dont les éléments de bloc et les éléments en ligne sont disposés avant tout changement apporté à leur disposition. Lorsqu'un élément est retiré du _flux_, il est traité indépendamment.

@@ -1,14 +1,8 @@
 ---
 title: グリッドラッパー
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - 料理帳
-  - レシピ
-translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
+
 {{CSSRef}}
 
 このパターンは、中央のラッパー内でグリッドのコンテンツを整列させるのに便利ですが、必要に応じて項目を脱出させて親要素やページの端に整列させることもできます。
@@ -21,7 +15,7 @@ translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html)
 

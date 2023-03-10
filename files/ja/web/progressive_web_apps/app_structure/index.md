@@ -1,17 +1,8 @@
 ---
 title: プログレッシブウェブアプリの構造
 slug: Web/Progressive_web_apps/App_structure
-tags:
-  - App shell
-  - PWAs
-  - Progressive web apps
-  - Service Workers
-  - Streams
-  - Structure
-  - js13kGames
-  - progressive
-translation_of: Web/Progressive_web_apps/App_structure
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 PWA の背後にある理論が分かったところで、推奨されるアプリの構造を見てみましょう。まず、 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) アプリの分析、それがなぜそのように構築されているのか、それがもたらす利点について説明します。
@@ -298,4 +289,4 @@ var games = [
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/")}}

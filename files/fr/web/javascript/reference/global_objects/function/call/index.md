@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/call
 ---
+
 {{JSRef}}
 
 La méthode **`call()`** réalise un appel à une fonction avec une valeur `this` donnée et des arguments fournis individuellement.
@@ -134,16 +135,11 @@ afficher.call(); // prenom est Archibald
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.4', 'Function.prototype.call')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-function.prototype.call', 'Function.prototype.call')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-function.prototype.call', 'Function.prototype.call')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.call")}}
+{{Compat}}
 
 ## Voir aussi
 

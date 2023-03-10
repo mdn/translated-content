@@ -2,22 +2,23 @@
 title: AudioBuffer
 slug: Web/API/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 AudioBuffer 接口表示存在内存里的一段短小的音频资源，利用{{ domxref("AudioContext.decodeAudioData()") }}方法从一个音频文件构建，或者利用 {{ domxref("AudioContext.createBuffer()") }}从原始数据构建。把音频放入 AudioBuffer 后，可以传入到一个 {{ domxref("AudioBufferSourceNode") }}进行播放。
 
-这些类型对象被设计来控制小音频片段，往往短于 45 秒。对于更长的声音，通过 {{domxref("MediaElementAudioSourceNode")}}来实现更为合适。缓存区（buffer）包含以下数据：不间断的 IEEE754 32 位线性 PCM，从-1 到 1 的范围额定，就是说，32 位的浮点缓存区的每个样本在-1.0 到 1.0 之间。如果{{domxref("AudioBuffer")}}有不同的频道，他们通常被保存在独立的缓存区。
+这些类型对象被设计来控制小音频片段，往往短于 45 秒。对于更长的声音，通过 {{domxref("MediaElementAudioSourceNode")}}来实现更为合适。缓存区（buffer）包含以下数据：不间断的 IEEE754 32 位线性 PCM，从 -1 到 1 的范围额定，就是说，32 位的浮点缓存区的每个样本在 -1.0 到 1.0 之间。如果{{domxref("AudioBuffer")}}有不同的频道，他们通常被保存在独立的缓存区。
 
 ## 属性
 
 - {{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}
   - : 存储在缓存区的 PCM 数据的采样率：浮点数，单位为 sample/s。
 - {{domxref("AudioBuffer.length")}} {{readonlyInline}}
-  - : 返回存储在缓存区的 PCM 数据的采样帧数：整形。
+  - : 返回存储在缓存区的 PCM 数据的采样帧数：整型。
 - {{domxref("AudioBuffer.duration")}} {{readonlyInline}}
   - : 返回存储在缓存区的 PCM 数据的时长：双精度型（单位为秒）。
 - {{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}
-  - : 返回存储在缓存区的 PCM 数据的通道数：整形。
+  - : 返回存储在缓存区的 PCM 数据的通道数：整型。
 
 ## 方法
 
@@ -77,7 +78,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer")}}
+{{Compat}}
 
 ## 可查看
 

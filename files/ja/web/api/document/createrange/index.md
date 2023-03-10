@@ -2,6 +2,7 @@
 title: Document.createRange()
 slug: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.createRange()`** メソッドは、新しい {{domxref("Range")}} オブジェクトを返します。
@@ -29,9 +30,7 @@ range.setEnd(endNode, endOffset);
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-createrange', 'document.createRange')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

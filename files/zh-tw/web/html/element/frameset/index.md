@@ -2,6 +2,7 @@
 title: <frameset>
 slug: Web/HTML/Element/frameset
 ---
+
 {{Deprecated_header}}
 
 ## 概要
@@ -14,9 +15,9 @@ slug: Web/HTML/Element/frameset
 
 如同其他 HTML 元素，這個元素支持[全域屬性](/zh-TW/HTML/Global_attributes)。
 
-- {{htmlattrdef("cols")}}
+- `cols`
   - : 這個屬性指定了橫向框架的數量和尺寸。
-- {{htmlattrdef("rows")}}
+- `rows`
   - : 這個屬性指定了直向框架的數量和尺寸。
 
 ## 範例
@@ -33,4 +34,4 @@ slug: Web/HTML/Element/frameset
 - {{HTMLElement("frame")}}
 - {{HTMLElement("iframe")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

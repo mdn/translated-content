@@ -1,11 +1,8 @@
 ---
 title: 실제값
 slug: Web/CSS/actual_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/actual_value
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) 속성의 **실제값**은 모든 근사치(approximation)가 적용된 뒤의 [사용값](/ko/docs/Web/CSS/used_value)입니다. 예를 들어, 사용자 에이전트는 오직 정수 픽셀값으로 테두리(border)를 렌더링할 수도 있고 테두리의 계산된 폭(width)에 근접하도록 강제할 지도 모릅니다.

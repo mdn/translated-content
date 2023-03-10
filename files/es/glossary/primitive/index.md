@@ -1,14 +1,10 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Primitive
 original_slug: Glossary/Primitivo
 ---
-En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la {{web.link("/es/docs/Learn/JavaScript/Objects/Inheritance", "Cadena de prototipos")}}.
+
+En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la [Cadena de prototipos](/es/docs/Learn/JavaScript/Objects/Inheritance).
 
 La mayoría de las veces, un valor primitivo se representa directamente en el nivel más bajo de la implementación del lenguaje.
 
@@ -23,18 +19,18 @@ Este ejemplo te ayudará a comprender que los valores primitivos son **inmutable
 ```js
 // El uso de un método de cadena no modifica la cadena
 var bar = "baz";
-console.log(bar);               // baz
+console.log(bar); // baz
 bar.toUpperCase();
-console.log(bar);               // baz
+console.log(bar); // baz
 
 // El uso de un método de arreglo muta el arreglo
 var foo = [];
-console.log(foo);               // []
+console.log(foo); // []
 foo.push("plugh");
-console.log(foo);               // ["plugh"]
+console.log(foo); // ["plugh"]
 
 // La asignación le da al primitivo un nuevo valor (no lo muta)
-bar = bar.toUpperCase();       // BAZ
+bar = bar.toUpperCase(); // BAZ
 ```
 
 Un primitivo se puede reemplazar, pero no se puede modificar directamente.
@@ -51,21 +47,21 @@ let foo = 5;
 
 // Define una función que debería cambiar el valor primitivo
 function addTwo(num) {
-   num += 2;
+  num += 2;
 }
 // Otra función que intenta hacer lo mismo
 function addTwo_v2(foo) {
-   foo += 2;
+  foo += 2;
 }
 
 // Llama a tu primera función mientras pasas el primitivo como argumento
 addTwo(foo);
 // Obtiene el valor primitivo actual
-console.log(foo);   // 5
+console.log(foo); // 5
 
 // Intenta de nuevo con tu segunda función...
 addTwo_v2(foo);
-console.log(foo);   // 5
+console.log(foo); // 5
 ```
 
 ¿Esperaba que fuera `7` en lugar de `5`?, si es así, lee cómo se ejecuta este código:
@@ -76,7 +72,7 @@ console.log(foo);   // 5
 - Luego, se ejecutan las instrucciones de las funciones:
 
   - En la primera función, se creó una variable `num` local. ¡Estas aumentando su valor en 2, no el valor original de `foo`!
-  - En la segunda función, se creó una variable `foo` local. ¡Esto incrementa su valor en 2, no el valor original (externo) de `foo`!, además, en esta situación, no se puede acceder directamente a la variable `foo` externa. Esto se debe al alcance léxico de JavaScript y al ensombrecimiento de variables resultante. El `foo` local oculta al `foo` externo. Para obtener más información, consulta {{JSxRef("../Closures", "Cierres")}}. (Ten en cuenta que `window.foo` aún se podría usar para acceder a la variable `foo` externa).
+  - En la segunda función, se creó una variable `foo` local. ¡Esto incrementa su valor en 2, no el valor original (externo) de `foo`!, además, en esta situación, no se puede acceder directamente a la variable `foo` externa. Esto se debe al alcance léxico de JavaScript y al ensombrecimiento de variables resultante. El `foo` local oculta al `foo` externo. Para obtener más información, consulta {{JSxRef("Closures", "Cierres")}}. (Ten en cuenta que `window.foo` aún se podría usar para acceder a la variable `foo` externa).
 
 - En conclusión, cualquier cambio dentro de tus funciones **no** afectará a la `foo` original en absoluto, ya que estas modificando **copias** de la misma.
 
@@ -95,14 +91,15 @@ A excepción de `null` y `undefined`, todos los valores primitivos tienen objeto
 El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del contenedor devuelve el valor primitivo.
 
 ## Aprende más
+
 ### Conocimientos generales
-- {{JSxRef("../Data_structures", "Introducción a los tipos de datos de JavaScript")}}
-- {{Interwiki("wikipedia", "Tipo de dato primitivo")}} en Wikipedia
+
+- {{JSxRef("Data_structures", "Introducción a los tipos de datos de JavaScript")}}
+- [Tipo de dato primitivo](https://es.wikipedia.org/wiki/Tipo_de_dato_primitivo) en Wikipedia
 
 <section id="Quick_links">
  <ol>
-  <li>{{Link("/es/docs/Glossary")}}
- 
+  <li><a href="/es/docs/Glossary">Glosario</a>
    <ol>
     <li>{{Glossary("JavaScript")}}</li>
     <li>{{Glossary("string")}}</li>
@@ -114,6 +111,6 @@ El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del conten
     <li>{{Glossary("symbol")}}</li>
    </ol>
   </li>
-  <li>{{JSxRef("../Data_structures", "Tipos de datos JavaScript")}}</li>
+  <li>{{JSxRef("Data_structures", "Tipos de datos JavaScript")}}</li>
  </ol>
 </section>

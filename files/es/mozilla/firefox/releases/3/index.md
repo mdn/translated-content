@@ -1,9 +1,6 @@
 ---
 title: Firefox 3 para desarrolladores
 slug: Mozilla/Firefox/Releases/3
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3
 original_slug: Firefox_3_para_desarrolladores
 ---
 
@@ -15,194 +12,92 @@ Si eres un desarrollador que intenta ponerse al día con todas las nuevas caract
 
 #### Para desarrolladores de sitios y aplicaciones web
 
-- [Actualizar aplicaciones web para Firefox 3](/es/Actualizar_aplicaciones_web_para_Firefox_3 "es/Actualizar_aplicaciones_web_para_Firefox_3")
+- [Actualizar aplicaciones web para Firefox 3](/es/Actualizar_aplicaciones_web_para_Firefox_3)
   - : Información sobre los cambios que se podrían necesitar para realizar un sitio o aplicación web y sacarle mayor ventaja a las nuevas características de Firefox 3.
-
-<!---->
-
-- [Eventos online y offline](/es/Eventos_online_y_offline "es/Eventos_online_y_offline")
+- [Eventos online y offline](/es/Eventos_online_y_offline)
   - : Firefox 3 implementa los eventos conectado y desconectado definidos por WHATWG, que permiten a aplicaciones y extensiones descubrir si una conexión activa de internet es disponible, además de detectar cuando hay conexión o desconexión.
-
-<!---->
-
-- [Manipuladores de protocolo web](/es/DOM/window.navigator.registerProtocolHandler "es/DOM/window.navigator.registerProtocolHandler")
+- [Manipuladores de protocolo web](/es/DOM/window.navigator.registerProtocolHandler)
   - : Ahora se puede registrar una aplicación web como manipulador de protocolo con el método `navigator.registerProtocolHandler()`.
-
-<!---->
-
-- [Dibujar texto usando canvas](/es/Dibujar_texto_usando_canvas "es/Dibujar_texto_usando_canvas")
+- [Dibujar texto usando canvas](/es/Dibujar_texto_usando_canvas)
   - : Ahora se puede dibujar texto en canvas con una API no estándar implementada por Firefox 3.
-
-<!---->
-
-- [Gestión de transformaciones en canvas](/es/Tutorial_de_Canvas/Transformaciones#Transformaciones "es/Tutorial_de_Canvas/Transformaciones#Transformaciones")
+- [Gestión de transformaciones en canvas](/es/Tutorial_de_Canvas/Transformaciones#Transformaciones)
   - : Firefox 3 administra los métodos `transform()` y `setTransform()` en canvases (lienzos).
-
-<!---->
-
-- [El uso de microformatos](/es/El_uso_de_microformatos "es/El_uso_de_microformatos")
+- [El uso de microformatos](/es/El_uso_de_microformatos)
   - : Firefox 3 tiene APIs que permiten trabajar con microformatos.
 
-;[Hojas de estilo alternativas](/es/Hojas_de_estilo_alternativas) :Firefox 3 implementa modelos alternativos de hojas de estilo API de objeto CSS.
-
-- [Eventos arrastrar y soltar](/es/Eventos_arrastrar_y_soltar "es/Eventos_arrastrar_y_soltar")
+- [Hojas de estilo alternativas](/es/Hojas_de_estilo_alternativas)
+  - : Firefox 3 implementa modelos alternativos de hojas de estilo API de objeto CSS.
+- [Eventos arrastrar y soltar](/es/Eventos_arrastrar_y_soltar)
   - : Firefox 3 implementa nuevos eventos que se envían al nodo de origen cuando la operación de arrastre comienza y termina.
-
-<!---->
-
-- [Gestión del foco en HTML](/es/Gestión_del_foco_en_HTML "es/Gestión_del_foco_en_HTML")
+- [Gestión del foco en HTML](/es/Gestión_del_foco_en_HTML)
   - : Se han implementado los atributos `activeElement` y `hasFocus` de la nueva especificación HTML 5.
-
-<!---->
-
-- [Recursos en modo desconectado en Firefox](/es/Recursos_en_modo_desconectado_en_Firefox "es/Recursos_en_modo_desconectado_en_Firefox")
+- [Recursos en modo desconectado en Firefox](/es/Recursos_en_modo_desconectado_en_Firefox)
   - : Firefox 3 permite ahora que las aplicaciones web soliciten que recursos puedan ser puestos en cache para ser ejecutados en modo desconectado.
-
-<!---->
-
-- [Mejoras CSS en Firefox 3](/es/Mejoras_CSS_en_Firefox_3 "es/Mejoras_CSS_en_Firefox_3")
+- [Mejoras CSS en Firefox 3](/es/Mejoras_CSS_en_Firefox_3)
   - : Firefox 3 ofrece un número de mejoras en su implementación de CSS.
-
-<!---->
-
-- [Mejoras DOM en Firefox 3](/es/Mejoras_DOM_en_Firefox_3 "es/Mejoras_DOM_en_Firefox_3")
+- [Mejoras DOM en Firefox 3](/es/Mejoras_DOM_en_Firefox_3)
   - : Firefox 3 ofrece mejoras en la implementación de DOM, incluyendo la gestión de varias extensiones de Internet Explorer al DOM.
-
-<!---->
-
-- [Implementación de JavaScript 1.8](/es/Novedades_en_JavaScript_1.8 "es/Novedades_en_JavaScript_1.8")
+- [Implementación de JavaScript 1.8](/es/Novedades_en_JavaScript_1.8)
   - : Firefox 3 ofrece JavaScript 1.8.
-
-<!---->
-
-- [Implementación de EXSLT](/es/EXSLT "es/EXSLT")
-  - : Firefox 3 permite la utilización de una parte importante de las extensiones [EXSLT](/es/EXSLT "es/EXSLT") y [XSLT](/es/XSLT "es/XSLT").
-
-<!---->
-
-- [Mejoras SVG en Firefox 3](/es/Mejoras_SVG_en_Firefox_3 "es/Mejoras_SVG_en_Firefox_3")
+- [Implementación de EXSLT](/es/EXSLT)
+  - : Firefox 3 permite la utilización de una parte importante de las extensiones [EXSLT](/es/EXSLT) y [XSLT](/es/XSLT).
+- [Mejoras SVG en Firefox 3](/es/Mejoras_SVG_en_Firefox_3)
   - : La implementación a SVG en Firefox 3 ha sido mejorada de manera significante, con muchos nuevos filtros, elementos, atributos y otras mejoras.
-
-<!---->
-
-- [Gráficos PNG animados](/es/Gráficos_PNG_animados "es/Gráficos_PNG_animados")
+- [Gráficos PNG animados](/es/Gráficos_PNG_animados)
   - : Firefox 3 administra las imágenes animadas en formato PNG (APNG).
 
 #### Para desarrolladores de XUL y de extensiones
 
 ##### Cambios y mejoras notables
 
-- [Actualizar extensiones para Firefox 3](/es/Actualizar_extensiones_para_Firefox_3 "es/Actualizar_extensiones_para_Firefox_3")
+- [Actualizar extensiones para Firefox 3](/es/Actualizar_extensiones_para_Firefox_3)
   - : Una guía con las cosas que hay que hacer para poner al día una extensión para que trabaje con Firefox 3.
-
-<!---->
-
-- [Mejoras XUL en Firefox 3](/es/Mejoras_XUL_en_Firefox_3 "es/Mejoras_XUL_en_Firefox_3")
+- [Mejoras XUL en Firefox 3](/es/Mejoras_XUL_en_Firefox_3)
   - : Firefox 3 ofrece varios nuevos elementos XUL, incluyendo escaleras deslizables, selectores de hora y fecha, y botones de incremento.
-
-<!---->
-
-- [Plantillas en Firefox 3](/es/Plantillas_en_Firefox_3 "es/Plantillas_en_Firefox_3")
+- [Plantillas en Firefox 3](/es/Plantillas_en_Firefox_3)
   - : Las plantillas han sido notablemente mejoradas en Firefox 3. Las mejoras más importantes es la posibilidad de usar procesadores de solicitud personalizada para permitir el uso de otras fuentes de datos que RDF.
-
-<!---->
-
-- [Asegurando las actualizaciones](/es/Versionado,_actualización_y_compatibilidad_de_extensiones#Asegurando_las_actualizaciones "es/Versionado,_actualización_y_compatibilidad_de_extensiones#Asegurando_las_actualizaciones")
+- [Asegurando las actualizaciones](/es/Versionado,_actualización_y_compatibilidad_de_extensiones#Asegurando_las_actualizaciones)
   - : Para proporcionar actualizaciones más seguras de los complementos a los usuarios, ahora los complementos requieren proporcionar un método seguro para obtener las actualizaciones antes de ser instaladas. Los complementos alojados en [AMO](https://addons.mozilla.org) lo proporcionan automáticamente.
-
-<!---->
-
-- [Migrar y usar el catálogo](/es/Migrar_y_usar_el_catálogo "es/Migrar_y_usar_el_catálogo")
+- [Migrar y usar el catálogo](/es/Migrar_y_usar_el_catálogo)
   - : Un artículo sobre como migrar una extensión existente para utilizar el API de catálogo.
-
-<!---->
-
-- [Mejoras en el gestor de descargas en Firefox 3](/es/Mejoras_en_el_administrador_de_descargas_en_Firefox_3 "es/Mejoras_en_el_administrador_de_descargas_en_Firefox_3")
+- [Mejoras en el gestor de descargas en Firefox 3](/es/Mejoras_en_el_administrador_de_descargas_en_Firefox_3)
   - : El administrador de descargas de Firefox 3 contiene nuevas y mejoradas APIs, incluyendo la implementación de múltiples escuchas de progreso.
-
-<!---->
-
-- [Uso de nsILoginManager](/es/Uso_de_nsILoginManager "es/Uso_de_nsILoginManager")
+- [Uso de nsILoginManager](/es/Uso_de_nsILoginManager)
   - : El administrador de contraseñas ha sido reemplazado por el nuevo Login Manager.
-
-<!---->
-
-- [Integración de los vínculos XBL](/es/XBL/Referencia_de_XBL_1.0/Elementos#binding "es/XBL/Referencia_de_XBL_1.0/Elementos#binding")
+- [Integración de los vínculos XBL](/es/XBL/Referencia_de_XBL_1.0/Elementos#binding)
   - : Ya es posible utilizar el protocolo URL `data:` para integrar directamente los vínculos XBL en lugar de tener que colocarlos en un archivo XML por separado.
-
-<!---->
-
-- [Traducir las descripciones de las extensiones](/es/Traducir_las_descripciones_de_las_extensiones "es/Traducir_las_descripciones_de_las_extensiones")
+- [Traducir las descripciones de las extensiones](/es/Traducir_las_descripciones_de_las_extensiones)
   - : Firefox 3 ofrece un nuevo método localizando add-on metadata. Esto permite que los detalles localizados estén disponibles tan pronto como los add-on han sido descargados, al igual que cuando el add-on sea desinstalado.
-
-<!---->
-
-- [Localización y plurales](/es/Localización_y_Plurales "es/Localización_y_Plurales")
+- [Localización y plurales](/es/Localización_y_Plurales)
   - : Firefox 3 dispone del nuevo módulo PluralForm, el cual sirve para ayudar a poner correctamente en plural las palabras según el idioma local.
-
-<!---->
-
-- [Cambios en los temas de Firefox 3](/es/Cambios_en_los_temas_de_Firefox_3 "es/Cambios_en_los_temas_de_Firefox_3")
+- [Cambios en los temas de Firefox 3](/es/Cambios_en_los_temas_de_Firefox_3)
   - : Notas e información para quienes quisiera crear temas para Firefox 3.
 
 ##### Nuevos componentes y funcionalidades
 
-- [Biblioteca FUEL](/es/FUEL "es/FUEL")
+- [Biblioteca FUEL](/es/FUEL)
   - : FUEL sirve para facilitar la productividad de los desarrolladores de extensiones, reduciendo algunas formalidades de XPCOM y colocando algunas ideas "modernas" en JavaScript.
-
-<!---->
-
-- [Catálogo](/es/Catálogo "es/Catálogo")
-  - : Las APIS del historial y de los marcadores han sido remplazadas completamente por la nueva API del [Catálogo](/es/Catálogo "es/Catálogo").
-
-<!---->
-
-- [Servicio idle](/es/nsIIdleService "es/nsIIdleService")
+- [Catálogo](/es/Catálogo)
+  - : Las APIS del historial y de los marcadores han sido remplazadas completamente por la nueva API del [Catálogo](/es/Catálogo).
+- [Servicio idle](/es/nsIIdleService)
   - : Firefox 3 ofrece la nueva interfaz `nsIIdleService`, la cual permite a las extensiones determinar cuánto tiempo ha pasado desde que el usuario pulso una tecla o movió el ratón por última vez.
-
-<!---->
-
-- [El convertidor ZIP](/es/El_convertidor_ZIP "es/El_convertidor_ZIP")
+- [El convertidor ZIP](/es/El_convertidor_ZIP)
   - : La nueva interfaz `nsIZipWriter` permite a las extensiones crear archivos ZIP.
-
-<!---->
-
-- [Zoom a página completa](/es/Zoom_a_página_completa "es/Zoom_a_página_completa")
+- [Zoom a página completa](/es/Zoom_a_página_completa)
   - : Firefox 3 mejora la experiencia de usuario ofreciendo zoom a página completa además de zoom de solo texto.
-
-<!---->
-
-- [El colector de ciclo XPCOM](/es/El_colector_de_ciclo_XPCOM "es/El_colector_de_ciclo_XPCOM")
+- [El colector de ciclo XPCOM](/es/El_colector_de_ciclo_XPCOM)
   - : El código XPCOM puede beneficiarse del colector de ciclo, el cual ayuda a asegurar que la memoria no utilizada es liberada y evitar fugas de memoria.
-
-<!---->
-
-- [El administrador de hilos](/es/El_administrador_de_hilos "es/El_administrador_de_hilos")
+- [El administrador de hilos](/es/El_administrador_de_hilos)
   - : Firefox 3 proporciona la nueva interfaz `nsIThreadManager`, así como otras nuevas interfaces para hilos y eventos de hilos, los cuales proporcionan una manera apropiada de crear y administrar hilos en tu código.
-
-<!---->
-
-- [Módulos JavaScript](/es/Módulos_JavaScript "es/Módulos_JavaScript")
+- [Módulos JavaScript](/es/Módulos_JavaScript)
   - : Firefox 3 ofrece un nuevo mecanismo de código compartido que te permite crear módulos facilmente en JavaScript que pueden ser cargados por extensiones y aplicaciones para su uso, muy parecido a las librerías compartidas.
-
-<!---->
-
-- [La interfaz nsIJSON](/es/NsIJSON "es/NsIJSON")
+- [La interfaz nsIJSON](/es/NsIJSON)
   - : Firefox 3 ofrece la nueva interface `nsIJSON`, which offers high-performance encoding and decoding of JSON strings.
-
-<!---->
-
-- [La interfaz nsIParentalControlsService](/es/NsIParentalControlsService "es/NsIParentalControlsService")
+- [La interfaz nsIParentalControlsService](/es/NsIParentalControlsService)
   - : Ahora Firefox 3 implementa las características del control parental de Microsoft Windows Vista, y permite al cñodigo interactuar con él.
-
-<!---->
-
-- [Usar las preferencias de contenido](/es/Usar_las_preferencias_de_contenido "es/Usar_las_preferencias_de_contenido")
+- [Usar las preferencias de contenido](/es/Usar_las_preferencias_de_contenido)
   - : Firefox 3 incluye un nuevo servicio para obtener y fijar configuraciones especificas para cada sitio web que pueden usar tanto las extensiones como el código principal para llevar un registro de las preferencias de usuarios en sitios individuales.
-
-<!---->
-
-- [Vigilancia de plugins](/es/Vigilancia_de_plugins "es/Vigilancia_de_plugins")
+- [Vigilancia de plugins](/es/Vigilancia_de_plugins)
   - : Está disponible un nuevo componente del sistema de plugins para controlar el tiempo que les toma a los plugins (como por ejemplo: Macromedia Flash) ejecutar sus llamadas.
 
 ### Bugs ya solucionados
@@ -257,7 +152,7 @@ Si eres un desarrollador que intenta ponerse al día con todas las nuevas caract
 
 ### Lecturas relacionadas
 
-- [Actualizar extensiones para Firefox 3](/es/Actualizar_extensiones_para_Firefox_3 "es/Actualizar_extensiones_para_Firefox_3")
-- [Actualizar aplicaciones web para Firefox 3](/es/Actualizar_aplicaciones_web_para_Firefox_3 "es/Actualizar_aplicaciones_web_para_Firefox_3")
-- [Firefox 2 para desarrolladores](/es/Firefox_2_para_desarrolladores "es/Firefox_2_para_desarrolladores")
-- [Firefox 1.5 para Desarrolladores](/es/Firefox_1.5_para_Desarrolladores "es/Firefox_1.5_para_Desarrolladores")
+- [Actualizar extensiones para Firefox 3](/es/Actualizar_extensiones_para_Firefox_3)
+- [Actualizar aplicaciones web para Firefox 3](/es/Actualizar_aplicaciones_web_para_Firefox_3)
+- [Firefox 2 para desarrolladores](/es/Firefox_2_para_desarrolladores)
+- [Firefox 1.5 para Desarrolladores](/es/Firefox_1.5_para_Desarrolladores)

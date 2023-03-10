@@ -2,9 +2,10 @@
 title: text-orientation
 slug: Web/CSS/text-orientation
 ---
+
 {{CSSRef}}
 
-**`text-orientation`** [CSS](/en-US/docs/Web/CSS) 属性设定行中字符的方向。但它仅影响纵向模式（当 {{cssxref("writing-mode")}} 的值不是`horizontal-tb`）下的文本。此属性在控制使用竖排文字的语言的显示上很有作用，也可以用来构建垂直的表格头。
+**`text-orientation`** [CSS](/zh-CN/docs/Web/CSS) 属性设定行中字符的方向。但它仅影响纵向模式（当 {{cssxref("writing-mode")}} 的值不是`horizontal-tb`）下的文本。此属性在控制使用竖排文字的语言的显示上很有作用，也可以用来构建垂直的表格头。
 
 {{EmbedInteractiveExample("pages/css/text-orientation.html")}}
 
@@ -74,7 +75,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-orientation")}}
+{{Compat}}
 
 ## 参见
 

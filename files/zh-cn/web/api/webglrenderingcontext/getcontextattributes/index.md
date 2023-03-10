@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.getContextAttributes()
 slug: Web/API/WebGLRenderingContext/getContextAttributes
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.getContextAttributes()`** 方法返回一个包含实际上下文参数的 `WebGLContextAttributes` 对象。如果上下文丢失，可能返回 {{jsxref("null")}}。
@@ -62,7 +63,7 @@ canvas.getContext('webgl',
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.getContextAttributes")}}
+{{Compat}}
 
 ## 另请参阅
 

@@ -1,15 +1,8 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
-browser-compat: javascript.builtins.Object.constructor
 ---
+
 {{JSRef}}
 
 인스턴스의 프로토타입을 만든 {{jsxref("Object")}} 함수의 참조를 반환합니다. 이 속성값은 함수 자체의 참조임을 주의하세요, 함수 이름을 포함하는 문자열이 아니라. 그 값은 `1`, `true` 및 `"test"`와 같은 원시(primitive) 값에 대해서만 읽기 전용입니다.

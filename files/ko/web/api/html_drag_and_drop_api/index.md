@@ -1,15 +1,6 @@
 ---
 title: HTML 드래그 앤 드롭 API
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - HTML5
-  - XUL
-  - 가이드
-  - 개요
-  - 고급
-  - 드래그 앤 드롭
-  - 이벤트
-translation_of: Web/API/HTML_Drag_and_Drop_API
 original_slug: Web/API/HTML_드래그_앤_드롭_API
 ---
 {{DefaultAPISidebar("HTML 드래그 앤 드롭 API")}}
@@ -22,7 +13,7 @@ HTML 드래그 앤 드롭 인터페이스는 파이어폭스와 다른 브라우
 
 ## 드래그 이벤트
 
-HTML 드래그 앤 드롭은 {{domxref("Event","DOM event model")}} 과 _{{domxref("DragEvent","drag events")}}_ 를\_ \_{{domxref("MouseEvent","mouse events")}} 로부터 상속받습니다. 보통 드래그는 사용자가 draggable 요소를 마우스로 선택하고, 마우스 포인터를 droppable 요소로 가져가 마우스 버튼을 때는 것으로 이루어집니다. 드래그하는 도중에 많은 이벤트가 발생하고, 몇몇 이벤트는 여러번 발생하기도 합니다. ( {{event("drag")}}와 {{event("dragover")}}).
+HTML 드래그 앤 드롭은 {{domxref("Event","DOM event model")}} 과 _{{domxref("DragEvent","drag events")}}_ 를 {{domxref("MouseEvent","mouse events")}} 로부터 상속받습니다. 보통 드래그는 사용자가 draggable 요소를 마우스로 선택하고, 마우스 포인터를 droppable 요소로 가져가 마우스 버튼을 때는 것으로 이루어집니다. 드래그하는 도중에 많은 이벤트가 발생하고, 몇몇 이벤트는 여러번 발생하기도 합니다. ( {{event("drag")}}와 {{event("dragover")}}).
 
 모든 [드래그 이벤트](/ko/docs/Web/API/DragEvent#Event_types)는 [글로벌 이벤트 핸들러](/ko/docs/Web/API/DragEvent#GlobalEventHandlers)와 연결되어 있습니다. 각 드래그 이벤트와 드래그 전역 속성은 참조 문서를 가지고 있습니다. 아래 표는 각 이벤트에 대한 간략한 설명과 참조 문서로의 링크를 담고 있습니다.
 
@@ -57,7 +48,7 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 ### Gecko 한정 인터페이스
 
-모질라와 파이어폭스는 표준 드래그 앤 드롭 모델에서 제공하지 않는 몇가지 기능들을 추가로 제공합니다. 여러 개의 아이템을 동시에 드래그하거나 파일과 같이 문자열이 아닌 데이터를 드래그 하기 위한 여러 편리한 기능을 제공합니다. 더 많은 정보를 찾아보기 위해, [Dragging and Dropping Multiple Items](/ko/docs/DragDrop/Dragging_and_Dropping_Multiple_Items "Dragging and Dropping Multiple Items")을 보십시오. 덧붙여, 모든 Gecko 한정 프로퍼티나 Gecko 한정 메소드를 찾아보기 위해 {{domxref("DataTransfer")}} 참조 페이지도 보시기 바랍니다.
+모질라와 파이어폭스는 표준 드래그 앤 드롭 모델에서 제공하지 않는 몇가지 기능들을 추가로 제공합니다. 여러 개의 아이템을 동시에 드래그하거나 파일과 같이 문자열이 아닌 데이터를 드래그 하기 위한 여러 편리한 기능을 제공합니다. 더 많은 정보를 찾아보기 위해, [Dragging and Dropping Multiple Items](/ko/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)을 보십시오. 덧붙여, 모든 Gecko 한정 프로퍼티나 Gecko 한정 메소드를 찾아보기 위해 {{domxref("DataTransfer")}} 참조 페이지도 보시기 바랍니다.
 
 ## 기본
 
@@ -75,23 +66,25 @@ function dragstart_handler(ev) {
 }
 ```
 
-    <script>
-      function dragstart_handler(ev) {
-        // 데이터 전달 객체에 대상 요소의 id를 추가합니다.
-        ev.dataTransfer.setData("text/plain", ev.target.id);
-      }
+```html
+<script>
+  function dragstart_handler(ev) {
+    // 데이터 전달 객체에 대상 요소의 id를 추가합니다.
+    ev.dataTransfer.setData("text/plain", ev.target.id);
+  }
 
-      window.addEventListener('DOMContentLoaded', () => {
-        // id를 통해 element를 가져옵니다.
-        const element = document.getElementById("p1");
-        // 'dragstart' 이벤트 리스터를 추가합니다.
-        element.addEventListener("dragstart", dragstart_handler);
-      });
-    </script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // id를 통해 element를 가져옵니다.
+    const element = document.getElementById("p1");
+    // 'dragstart' 이벤트 리스터를 추가합니다.
+    element.addEventListener("dragstart", dragstart_handler);
+  });
+</script>
 
-    <p id="p1" draggable="true">This element is draggable.</p>
+<p id="p1" draggable="true">This element is draggable.</p>
+```
 
-추가 정보를 위해 [draggable attribute reference](/Web/HTML/Global_attributes/draggable "draggable global attribute")와 [Drag operations guide](/Web/Guide/HTML/Drag_operations#draggableattribute)를 참고하세요.
+추가 정보를 위해 [draggable attribute reference](/ko/docs/Web/HTML/Global_attributes/draggable)와 [Drag operations guide](/ko/docs/Web/Guide/HTML/Drag_operations#draggableattribute)를 참고하세요.
 
 ### 드래그 데이터 정의하기
 
@@ -108,7 +101,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-드래그 앤 드롭에 사용할 수 있는 공통 데이터 타입 (텍스트, HTML, 링크, 파일 등) 의 목록을 보려면, [Recommended Drag Types](/ko/docs/DragDrop/Recommended_Drag_Types "Recommended Drag Types")를 참고하십시오. 드래그 데이터에 대한 추가적인 정보를 위해서는 [Drag Data](/ko/docs/Web/Guide/HTML/Drag_operations#dragdata "Drag Data")를 참고하십시오.
+드래그 앤 드롭에 사용할 수 있는 공통 데이터 타입 (텍스트, HTML, 링크, 파일 등) 의 목록을 보려면, [Recommended Drag Types](/ko/docs/DragDrop/Recommended_Drag_Types)를 참고하십시오. 드래그 데이터에 대한 추가적인 정보를 위해서는 [Drag Data](/ko/docs/Web/Guide/HTML/Drag_operations#dragdata)를 참고하십시오.
 
 ### 드래그 이미지 정의하기
 
@@ -124,7 +117,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-드래그 이미지에 대해 더 알아보려면, [Setting the Drag Feedback Image](/ko/docs/DragDrop/Drag_Operations#dragfeedback "Setting the Drag Feedback Image")를 참고하세요.
+드래그 이미지에 대해 더 알아보려면, [Setting the Drag Feedback Image](/ko/docs/DragDrop/Drag_Operations#dragfeedback)를 참고하세요.
 
 ### 드래그 효과 정의하기
 
@@ -149,27 +142,29 @@ function dragstart_handler(ev) {
 }
 ```
 
-더 자세한 설명은 [Drag Effects](/ko/docs/Web/Guide/HTML/Drag_operations#drageffects "Drag Effects")를 참고하세요.
+더 자세한 설명은 [Drag Effects](/ko/docs/Web/Guide/HTML/Drag_operations#drageffects)를 참고하세요.
 
 ### 드롭 지역 정의하기
 
 기본적으로는 브라우저는 HTML 요소에 뭔가를 드롭했을 때 아무 일도 일어나지 않도록 합니다. 특정 요소가 드롭 지역 혹은 droppable로 만들기 위해서는 해당 요소가 {{domxref("GlobalEventHandlers.ondragover","ondragover")}}와 {{domxref("GlobalEventHandlers.ondrop","ondrop")}} 이벤트 핸들러 속성을 가져야합니다. 아래 예제는 두 요소를 어떻게 사용하고, 각 요소에 포함된 기본적인 이벤트 핸들러를 보여줍니다.
 
-    <script>
-    function dragover_handler(ev) {
-     ev.preventDefault();
-     // dropEffect를 move로 설정.
-     ev.dataTransfer.dropEffect = "move";
-    }
-    function drop_handler(ev) {
-     ev.preventDefault();
-     // 대상의 id를 가져와 대상 DOM에 움직인 요소를 추가합니다.
-     const data = ev.dataTransfer.getData("text/plain");
-     ev.target.appendChild(document.getElementById(data));
-    }
-    </script>
+```html
+<script>
+function dragover_handler(ev) {
+  ev.preventDefault();
+  // dropEffect를 move로 설정.
+  ev.dataTransfer.dropEffect = "move";
+}
+function drop_handler(ev) {
+  ev.preventDefault();
+  // 대상의 id를 가져와 대상 DOM에 움직인 요소를 추가합니다.
+  const data = ev.dataTransfer.getData("text/plain");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
 
-    <p id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</p>
+<p id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</p>
+```
 
 각 핸들러는 {{domxref("Event.preventDefault","preventDefault()")}} 를 호출해 추가적인 이벤트 (터치 이벤트나 포인터 이벤트) 가 일어나지 않도록 합니다.
 
@@ -181,27 +176,29 @@ function dragstart_handler(ev) {
 
 아래 예제는 드롭 핸들러가 드래그 데이터로부터 드래그하는 요소의 id를 가져와 드래그하는 요소를 드롭하는 요소로 옮기기위해 사용합니다.
 
-    <script>
-    function dragstart_handler(ev) {
-     // 데이터 전달 객체에 대상 요소의 id를 추가합니다.
-     ev.dataTransfer.setData("application/my-app", ev.target.id);
-     ev.dataTransfer.dropEffect = "move";
-    }
-    function dragover_handler(ev) {
-     ev.preventDefault();
-     ev.dataTransfer.dropEffect = "move"
-    }
-    function drop_handler(ev) {
-     ev.preventDefault();
-     // 대상의 id를 가져와 이동한 대상 DOM 요소를 추가합니다.
-     // Get the id of the target and add the moved element to the target's DOM
-     const data = ev.dataTransfer.getData("application/my-app");
-     ev.target.appendChild(document.getElementById(data));
-    }
-    </script>
+```html
+<script>
+function dragstart_handler(ev) {
+  // 데이터 전달 객체에 대상 요소의 id를 추가합니다.
+  ev.dataTransfer.setData("application/my-app", ev.target.id);
+  ev.dataTransfer.dropEffect = "move";
+}
+function dragover_handler(ev) {
+  ev.preventDefault();
+  ev.dataTransfer.dropEffect = "move"
+}
+function drop_handler(ev) {
+  ev.preventDefault();
+  // 대상의 id를 가져와 이동한 대상 DOM 요소를 추가합니다.
+  // Get the id of the target and add the moved element to the target's DOM
+  const data = ev.dataTransfer.getData("application/my-app");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
 
-    <p id="p1" draggable="true" ondragstart="dragstart_handler(event)">This element is draggable.</p>
-    <div id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</div>
+<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">This element is draggable.</p>
+<div id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</div>
+```
 
 더 많은 정보를 위해 [Performing a Drop](/ko/docs/Web/Guide/HTML/Drag_operations#drop)을 보십시오.
 
@@ -209,11 +206,11 @@ function dragstart_handler(ev) {
 
 드래그가 끝나면 드래그한 요소에 {{event("dragend")}} 이벤트가 발생합니다. 이 이벤트는 드래그가 완료되거나 중간에 취소되어도 발생합니다. {{event("dragend")}} 이벤트 핸들러는 {{domxref("DataTransfer.dropEffect","dropEffect")}} 프로퍼티를 확인해 드래그가 성공했는지를 확인할 수 있습니다.
 
-드래그 끝을 다루기 위한 더 많은 정보는 [Finishing a Drag](/ko/docs/DragDrop/Drag_Operations#dragend "Finishing a Drag")를 참고하세요.
+드래그 끝을 다루기 위한 더 많은 정보는 [Finishing a Drag](/ko/docs/DragDrop/Drag_Operations#dragend)를 참고하세요.
 
 ## 상호 운용성
 
-[DataTransferItem interface's Browser Compatibility table](/docs/Web/API/DataTransferItem#Browser_compatibility)에 나온 대로, 드래그 앤 드롭은 상대적으로 여러 데스크톱 브라우저에서 폭넓게 사용할 수 있습니다 ({{domxref("DataTransferItem")}}는 {{domxref("DataTransferItemList")}} 덜 지원하지만). 또한 모바일 브라우저에서는 매우 한정적으로 사용할 수 있습니다.
+[DataTransferItem interface's Browser Compatibility table](/ko/docs/Web/API/DataTransferItem#Browser_compatibility)에 나온 대로, 드래그 앤 드롭은 상대적으로 여러 데스크톱 브라우저에서 폭넓게 사용할 수 있습니다 ({{domxref("DataTransferItem")}}는 {{domxref("DataTransferItemList")}} 덜 지원하지만). 또한 모바일 브라우저에서는 매우 한정적으로 사용할 수 있습니다.
 
 ## 예제와 데모
 
@@ -228,8 +225,8 @@ function dragstart_handler(ev) {
 
 ## 더보기
 
-- [Drag Operations](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations "Drag Operations")
-- [Dragging and Dropping Multiple Items](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items "Dragging and Dropping Multiple Items")
-- [Recommended Drag Types](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types "Recommended Drag Types")
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd "Drag and Drop Standard")
-- [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop "Drag and Drop interoperability data from CanIUse")
+- [Drag Operations](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Dragging and Dropping Multiple Items](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [Recommended Drag Types](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop)

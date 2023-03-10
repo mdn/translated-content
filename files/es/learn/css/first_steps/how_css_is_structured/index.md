@@ -1,9 +1,9 @@
 ---
 title: Cómo se estructura el CSS
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 original_slug: Learn/CSS/First_steps/Como_se_estructura_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Ahora que ya sabes qué es el CSS y conoces sus conceptos básicos, es hora de profundizar un poco más en la estructura del lenguaje en sí. Ya hemos visto muchos de los conceptos que aparecen en este artículo; puedes volver para recapitular si más adelante encuentras conceptos confusos.
@@ -255,15 +255,15 @@ En su nivel más básico, el CSS consta de dos componentes básicos:
 
 La siguiente imagen resalta una sola propiedad y valor. El nombre de la propiedad es `color` y el valor `blue`.
 
-![Una declaración resaltada en el CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
+![Una declaración resaltada en el CSS](declaration.png)
 
 Una propiedad emparejada con un valor se denomina _declaración CSS_. Las declaraciones CSS se colocan dentro de los _bloques de declaración CSS_. La siguiente imagen muestra nuestro CSS con el bloque de declaración resaltado.
 
-![Un bloque de declaración resaltado](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+![Un bloque de declaración resaltado](declaration-block.png)
 
 Finalmente, los bloques de declaración CSS se combinan con _selectores_ para producir _conjuntos de reglas CSS_ (o _reglas CSS_). Nuestra imagen contiene dos reglas, una para el selector `h1` y otra para el selector `p`. La regla para `h1` está resaltada.
 
-![La regla para h1 resaltada](https://mdn.mozillademos.org/files/16500/rules.png)
+![La regla para h1 resaltada](rules.png)
 
 Establecer las propiedades de CSS según valores específicos es la función principal del lenguaje CSS. El motor CSS calcula qué declaraciones se aplican a cada elemento de una página para darle la compaginación y los estilos adecuados.
 
@@ -306,7 +306,7 @@ Esto se traduce así:
 
 {{EmbedLiveSample('calc_example', '100%', 200)}}
 
-##
+## Ejemplo
 
 Una función consta del nombre de la función y, a continuación, unos paréntesis entre los que se colocan los valores permitidos para esa función. En el caso del ejemplo `calc()` anterior, pedimos que el ancho de esta caja sea del 90% del ancho del bloque que la contiene, menos 30 píxeles. Esto no es algo que podamos calcular con anticipación y simplemente introducir el valor en el CSS, ya que no sabemos cuál será el 90%. Como con todos los valores, la página correspondiente del proyecto MDN tendrá ejemplos de uso para que puedas ver cómo funciona.
 
@@ -551,8 +551,8 @@ Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los co
 
 ## En este modulo
 
-1.  [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Empezar con el CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+1. [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Empezar con el CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
+3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Styling_a_biography_page)

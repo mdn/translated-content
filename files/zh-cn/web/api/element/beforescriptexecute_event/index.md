@@ -2,6 +2,7 @@
 title: Element：beforescriptexecute 事件
 slug: Web/API/Element/beforescriptexecute_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 > **警告：** 此事件是早期版本的规范中的一个提案。不要依赖它。
@@ -37,7 +38,7 @@ slug: Web/API/Element/beforescriptexecute_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.beforescriptexecute_event")}}
+{{Compat}}
 
 ## 参见
 

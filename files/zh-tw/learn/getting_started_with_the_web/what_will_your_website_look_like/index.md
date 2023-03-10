@@ -2,6 +2,7 @@
 title: 你的網站看起來會是什麼樣子？
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 *你的網站看起來會是什麼樣子？*會說明你該為網站做的規劃與設計，決定自己的「網站該提供哪些資訊？」、「該使用哪些字型與色彩？」，以及「網站又該達到哪些目的？」
@@ -38,7 +39,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ### 主題色彩
 
-可透過[選色工具](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)找到你喜歡的顏色。當你點擊其中一種顏色，就會看到如下圖「`#660066`」的 6 位數字，此即代表該顏色的十六進位 (Hexadecimal) 色碼。請另外找個地方記錄此色碼。
+可透過[選色工具](/zh-TW/docs/Web/CSS/CSS_Colors/Color_picker_tool)找到你喜歡的顏色。當你點擊其中一種顏色，就會看到如下圖「`#660066`」的 6 位數字，此即代表該顏色的十六進位 (Hexadecimal) 色碼。請另外找個地方記錄此色碼。
 
 ![](color-picker.png)
 
@@ -66,14 +67,3 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 4. 進入下一頁，捲動到區塊 3 與區塊 4，將 Google 顯示的程式碼複製到你的文字編輯器中，儲存以待稍後利用。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [安裝基本軟體](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的網站看起來會是什麼樣子？](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [與各式各樣檔案打交道](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基本概念](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基本概念](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基本概念](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [網站的運作方式](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

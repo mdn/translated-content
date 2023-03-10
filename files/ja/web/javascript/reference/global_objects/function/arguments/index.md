@@ -1,14 +1,8 @@
 ---
 title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
-tags:
-  - Deprecated
-  - Function
-  - JavaScript
-  - Property
-  - arguments
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 <code><strong><em>function</em>.arguments</strong></code> プロパティは、関数に渡される引数に対応する、配列風のオブジェクトです。より単純な {{jsxref("Functions/arguments", "arguments")}} 変数を使用してください。このプロパティは厳格モードでは使用できません。

@@ -1,14 +1,8 @@
 ---
 title: '@supports'
 slug: Web/CSS/@supports
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/@supports
 ---
+
 {{CSSRef}}
 
 **`@supports`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/At-rule)은 주어진 하나 이상의 CSS 기능을 브라우저가 지원하는지에 따라 다른 스타일 선언을 할 수 있는 방법을 제공합니다. 이를 기능 쿼리(feature query)라고 부릅니다. `@supports`는 스타일의 최상위 단계, 또는 다른 [조건부 그룹 규칙](/ko/docs/Web/CSS/At-rule#조건부_그룹_규칙)에 중첩해 위치할 수 있습니다.

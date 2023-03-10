@@ -1,22 +1,18 @@
 ---
 title: TreeWalker.currentNode
 slug: Web/API/TreeWalker/currentNode
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - TreeWalker
-translation_of: Web/API/TreeWalker/currentNode
 ---
+
 {{ APIRef("DOM") }}
 
 **`TreeWalker.currentNode`** 속성은 {{domxref("TreeWalker")}}가 현재 가리키고 있는 {{domxref("Node")}}를 나타낸다.
 
 ## 구문
 
-    node = treeWalker.currentNode;
-    treeWalker.currentNode = node;
+```js
+node = treeWalker.currentNode;
+treeWalker.currentNode = node;
+```
 
 ## 예제
 

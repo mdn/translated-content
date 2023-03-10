@@ -1,13 +1,8 @@
 ---
 title: <xsl:with-param>
 slug: Web/XSLT/Element/with-param
-tags:
-  - XSLT
-  - with-param
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/with-param
 ---
+
 {{ XsltRef() }}
 
 `<xsl:with-param>` 要素はテンプレートに渡すパラメータの値を設定します。

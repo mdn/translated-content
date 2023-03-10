@@ -1,13 +1,8 @@
 ---
 title: Error.prototype.columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
-tags:
-  - Error
-  - JavaScript
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`columnNumber`** プロパティは、このエラーを起こしたファイルの行内の列番号が入ります。

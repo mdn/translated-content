@@ -5,7 +5,8 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/map
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<map>` **используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок).
 
@@ -13,11 +14,11 @@ translation_of: Web/HTML/Element/map
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), явный контент.                                                                  |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                    | Любой [прозрачный](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0) элемент. |
+| Допустимое содержимое                                  | Любой [прозрачный](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0) элемент. |
 | Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                   |
-| Разрешённые родители                                   | Любые элементы, которые принимают [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                   |
-| Разрешённые ARIA роли                                  | Нет                                                                                                                                                                                                                        |
-| DOM интерфейс                                          | {{domxref("HTMLMapElement")}}                                                                                                                                                                                   |
+| Допустимые родители                                    | Любые элементы, которые принимают [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                   |
+| Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                                                        |
+| DOM-интерфейс                                          | {{domxref("HTMLMapElement")}}                                                                                                                                                                                   |
 
 ## Атрибуты
 
@@ -38,17 +39,17 @@ translation_of: Web/HTML/Element/map
 
 ## Живой пример
 
-{{ EmbedLiveSample('Пример', '350', '150', '', 'Web/HTML/Element/map') }}
+{{ EmbedLiveSample('Пример', '350', '150') }}
 
 ### Ожидаемые выходные данные
 
 Живой пример выше должен выглядеть как нижеследующее изображение (при использовании клавиши на клавиатуре):
 
 _Для ссылки `left.html`:_
-![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
+![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
 _Для ссылки `right.html`:_
-![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## Спецификации
 

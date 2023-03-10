@@ -2,6 +2,7 @@
 title: HashChangeEvent
 slug: Web/API/HashChangeEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HashChangeEvent`** 接口表示一个变化事件，当 URL 中的片段标识符发生改变时，会触发此事件。
@@ -27,7 +28,7 @@ _这个接口没有自己的方法，但从 {{domxref("Event")}} 中继承方法
 
 ### 井号内容变化的语法选择
 
-你可以选择使用下述的任一方法监听 {{event("hashchange")}} 事件。
+你可以选择使用下述的任一方法监听 [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event) 事件。
 
 ```js
 window.onhashchange = funcRef;
@@ -99,9 +100,9 @@ window.addEventListener('hashchange', locationHashChanged);
 
 ## 浏览器兼容性
 
-{{Compat("api.HashChangeEvent")}}
+{{Compat}}
 
 ## 相关事件
 
-- {{event("hashchange")}}
-- {{event("popstate")}}
+- [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event)
+- [`popstate`](/zh-CN/docs/Web/API/Window/popstate_event)

@@ -2,6 +2,7 @@
 title: CSS 的图形（Shape）概览
 slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
+
 {{CSSRef}}
 
 [CSS Shapes Level 1 Specification](https://www.w3.org/TR/css-shapes/) 在 CSS 中描述了几何图形的 shape（以下叫做形状）。在“Level 1 of the specification”中定义的形状被设计用来绘制浮动的元素。这篇文章提供关于“你能如何绘制这些形状”的概览。
@@ -37,11 +38,11 @@ Specification 定义了三种新的权限：
 - `ellipse()`
 - `polygon()`
 
-使用 `inset()` 修饰文本围绕效果时，你还可以增加偏移量 ，否则就会出现文本过于接近目标对象的情况。
+使用 `inset()` 修饰文本围绕效果时，你还可以增加偏移量，否则就会出现文本过于接近目标对象的情况。
 
 我们已经看到了 `circle()` 如何创建圆形形状。 `ellipse()` 则用来创建椭圆形形状。如果还有特殊要求，使用 `polygon()` 可以创建任意难度的形状。
 
-在我们的 [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) 中，我们探索每一种形状，并且学会如何创建它们。
+在我们的 [Guide to Basic Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Basic_Shapes) 中，我们探索每一种形状，并且学会如何创建它们。
 
 ### 含有 Box 参数的形状
 
@@ -58,13 +59,13 @@ Specification 定义了三种新的权限：
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-详见 [Shapes From Box Values](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)。
+详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)。
 
 ### 由 Image 创建的形状
 
 有意思的是，可以使用带有 Alpha 通道的图像来创建（形状的）路径——文本将会围绕不透明的图像部分。这个特性允许文本覆盖图像，有时候可以将文本围绕于一幅不可见的图像，达到一种多边形文本显示的效果。
 
-需要注意的是，这种方式必须是 [CORS compatible](/en-US/docs/Web/HTTP/CORS) 的，否则 `shape-outside` 相当于 `none` ，你将不会得到任何形状。
+需要注意的是，这种方式必须是 [CORS compatible](/zh-CN/docs/Web/HTTP/CORS) 的，否则 `shape-outside` 相当于 `none` ，你将不会得到任何形状。
 
 在下面的例子中，我们有一幅全透明的图像，使用如下 URL，并且指定 `shape-outside`. 属性，创建出一个模糊的形状：一幅气球图像。
 
@@ -72,13 +73,13 @@ Specification 定义了三种新的权限：
 
 #### `shape-image-threshold`
 
-`shape-image-threshold` 属性用于设定图像透明度的阈值并用来创建形状。 如果`shape-image-threshold` 是 `0.0` (缺省值) ，那么图像必须是全透明的。如果是 `1.0` 那么图像必须是模糊的。 中间的值就代表了区分图像哪部分透明的阈值，以创建形状。
+`shape-image-threshold` 属性用于设定图像透明度的阈值并用来创建形状。如果`shape-image-threshold` 是 `0.0` (缺省值) ，那么图像必须是全透明的。如果是 `1.0` 那么图像必须是模糊的。中间的值就代表了区分图像哪部分透明的阈值，以创建形状。
 
 如果我们使用图像来创建形状，那么你可以看到阈值在起作用。在这么多例子中，如果你改变了阈值大小，形状会随之变化。
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
 
-下面我们进入更深层次的[Shapes from Images](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)学习。
+下面我们进入更深层次的[Shapes from Images](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)学习。
 
 ## `shape-margin` 属性
 
@@ -90,7 +91,7 @@ Specification 定义了三种新的权限：
 
 ## 将创建的元素作为浮动元素
 
-在上面的例子中，我们使用图像或者可见元素创建形状，意思是你可以在网页上看到这些图形。或者，你也可以只创建图形（而使图形不可见），这就需要一个浮动元素，在浮动元素的基础上就可以使图形不可见。 它可以是插入到文档中的冗余元素，可以是空的{{htmlelement("div")}} 或者 {{htmlelement("span")}} ，但是我们建议用创建好的内容。这就意味着我们可以保留 CSS 中的样式。
+在上面的例子中，我们使用图像或者可见元素创建形状，意思是你可以在网页上看到这些图形。或者，你也可以只创建图形（而使图形不可见），这就需要一个浮动元素，在浮动元素的基础上就可以使图形不可见。它可以是插入到文档中的冗余元素，可以是空的{{htmlelement("div")}} 或者 {{htmlelement("span")}} ，但是我们建议用创建好的内容。这就意味着我们可以保留 CSS 中的样式。
 
 在下面的例子中，我们在创建好的内容中插入一个宽高为 150px 的内容。然后，我们可以使用基本基本形状，Box 参数甚至是 Alpha 通道去创建图形，使得文本可以环绕这个图形。
 
@@ -106,7 +107,7 @@ Specification 定义了三种新的权限：
 
 ## 形状的开发工具
 
-和 CSS 形状的开发工具类似，Firefox 在 Firefox DevTools 中自带 [Shape Path Editor](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) 开发工具。这个工具让你可以查看网页中的任意形状，甚至可以实时显示改变形状之后的效果。如果你的多边形不正确，你可以用 Shapes Editor 调节，然后复制粘贴到 CSS 中。
+和 CSS 形状的开发工具类似，Firefox 在 Firefox DevTools 中自带 [Shape Path Editor](/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) 开发工具。这个工具让你可以查看网页中的任意形状，甚至可以实时显示改变形状之后的效果。如果你的多边形不正确，你可以用 Shapes Editor 调节，然后复制粘贴到 CSS 中。
 
 在 Firefox 60 当中，对于含有 `clip-path`的属性的元素默认启用 Shape Path Editor。你也可以编辑 含有 `shape-outside` 的属性的元素，但前提是开启`layout.css.shape-outside.enabled` 首选项。
 

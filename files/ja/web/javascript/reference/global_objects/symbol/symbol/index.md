@@ -1,13 +1,8 @@
 ---
 title: Symbol() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 ---
+
 {{JSRef}}
 
 `Symbol()` コンストラクターは **symbol** 型の値を返しますが、 "`new Symbol()`" という構文に対応しておらず、サブクラス化を意図していないため、コンストラクターとしては不完全です。 `class` 定義の [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) 句の値として使用することもできますが、 [`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) の呼び出しを行うと例外が発生します。
@@ -64,9 +59,7 @@ typeof symObj // => "object"
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol-constructor', 'Symbol constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

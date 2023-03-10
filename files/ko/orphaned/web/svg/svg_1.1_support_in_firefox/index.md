@@ -1,11 +1,9 @@
 ---
 title: SVG in Firefox
 slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
-tags:
-  - SVG
-translation_of: Web/SVG/SVG_1.1_Support_in_Firefox
 original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
 ---
+
 Firefox 2는 더욱 폭넓은 [Scalable Vector Graphics (SVG)](http://www.w3.org/Graphics/SVG/) 기능 구현을 위해서 계속해서 향상시켜 나가고 있습니다. 많은 스펙과 버그 수정들이 포함되었지만 Firefox 1.5이후 새로이 추가된 유일한 특징이 바로 \<textPath>입니다. -- 아래 참조.
 
 Firefox SVG는 [SVG 1.1](http://www.w3.org/TR/SVG11/)의 부분집합이지만 그렇다고 공식 프로필(Tiny, Basic, Full)들중 어느 것도 아닙니다. 각 내용들과 그것들이 Firefox 2에서 구현되었는지 아닌지에 대한 전체 내용은 문서의 마지막에서 찾을 수 있습니다. 문서의 나머지 부분은 우리의 구현상 제약사항들에 대한 정보를 제공할 것입니다.
@@ -84,42 +82,29 @@ Firefox 2 fixes some bugs in its SVG implementation. This section provides a qui
 
 - A problem filling and stroking text in which the drawing position isn't reset correctly between the two operations has been fixed (bug [333615](https://bugzilla.mozilla.org/show_bug.cgi?id=333615)).
 
-
 - Radial gradients now properly clamp the `fx` and `fy` attributes to ensure that they're within the circumference of a circle (bug [330682](https://bugzilla.mozilla.org/show_bug.cgi?id=330682)).
-
 
 - Text spans' and text elements' lengths can now be computed using their `getComputedTextLength()` methods, which improves compatibility with certain web sites (bugs [311031](https://bugzilla.mozilla.org/show_bug.cgi?id=311031) and [264380](https://bugzilla.mozilla.org/show_bug.cgi?id=264380)).
 
-
 - `<tspan>` elements now properly support the `dx` and `dy` attributes, and work if the `x` and `y` attributes aren't specified (bug [311063](https://bugzilla.mozilla.org/show_bug.cgi?id=311063)).
-
 
 - Improved invalidation logic on redraws, which prevents dropped pixels in certain cases (bug [312269](https://bugzilla.mozilla.org/show_bug.cgi?id=312269)).
 
-
 - Fixed a bug that prevented events from being handled properly for objects exposed by the clip path of another object (bug [315861](https://bugzilla.mozilla.org/show_bug.cgi?id=315861)).
-
 
 - Fixed a bug that would crash if a `<path>` element had a `d` attribute with an empty string (bug [318379](https://bugzilla.mozilla.org/show_bug.cgi?id=318379)).
 
-
 - The `overflow` attribute now works for the `marker` element, using the syntax `overflow="visible"`, which did not previously work correctly (bug [320623](https://bugzilla.mozilla.org/show_bug.cgi?id=320623)).
-
 
 - You can now access the `<style>` attribute of `marker` elements without throwing an exception (bug [323589](https://bugzilla.mozilla.org/show_bug.cgi?id=323589)).
 
-
 - You can now use percent values for the radius of a radial gradient (bug [323669](https://bugzilla.mozilla.org/show_bug.cgi?id=323669)).
-
 
 - The `documentElement.createSVGAngle()` method is now implemented (bug [327437](https://bugzilla.mozilla.org/show_bug.cgi?id=327437)).
 
-
 - Making a `<stop>` element a child of another `<stop>` element no longer asserts (bug [328137](https://bugzilla.mozilla.org/show_bug.cgi?id=328137)).
 
-
 - Changes to the height and width of markers, as well as to the orientation of the marker, now work (bug [325728](https://bugzilla.mozilla.org/show_bug.cgi?id=325728)).
-
 
 - Font sizes when printing on Windows are no longer much larger than specified for SVG (bug [314707](https://bugzilla.mozilla.org/show_bug.cgi?id=314707)).
 
@@ -128,8 +113,8 @@ Firefox 2 fixes some bugs in its SVG implementation. This section provides a qui
 <table style="margin: 5px">
   <tbody>
     <tr>
-      <th><b>Element</b></th>
-      <th><b>Notes</b></th>
+      <th>Element</th>
+      <th>Notes</th>
     </tr>
     <tr>
       <th colspan="2">

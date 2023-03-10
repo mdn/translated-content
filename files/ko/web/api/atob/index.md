@@ -1,17 +1,8 @@
 ---
 title: atob()
 slug: Web/API/atob
-page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - Web
-browser-compat: api.atob
-translation_of: Web/API/atob
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`atob()`** 함수는 {{glossary("Base64")}} 인코딩된 문자열 데이터를 디코딩합니다. ASCII 값 0부터 31까지의 제어 문자처럼 통신에 사용하면 문제가 발생할 수 있는 데이터를 {{domxref("btoa", "btoa()")}}로 인코딩해 전송하고, 받는 쪽에서는 `atob()`로 디코딩하면 문제 없이 원래 데이터를 가져올 수 있습니다.

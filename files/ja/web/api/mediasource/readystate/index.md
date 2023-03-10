@@ -2,6 +2,7 @@
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`readyState`** 読み取り専用プロパティは、現在の `MediaSource` の状態を表す列挙を返します。 3 つの可能な値は次のとおりです。
@@ -51,9 +52,7 @@ function sourceOpen (_) {
 
 ## 仕様
 
-| 仕様                                                                                                                 | 状態                                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-mediasource-readystate', 'readyState')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

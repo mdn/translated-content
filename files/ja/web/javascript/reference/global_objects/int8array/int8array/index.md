@@ -1,13 +1,8 @@
 ---
 title: Int8Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 ---
+
 {{JSRef}}
 
 **`Int8Array()`** は型付き配列のコンストラクターで、 2 の補数形式の 8 ビット符号付き整数値の型付き配列を生成します。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
@@ -66,9 +61,7 @@ var int8 = new Int8Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

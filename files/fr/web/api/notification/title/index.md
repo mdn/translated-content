@@ -12,6 +12,7 @@ tags:
   - Titre
 translation_of: Web/API/Notification/title
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`title`** de l'interface {{domxref ("Notification")}} indique le titre de la notification, comme définis à l'aide de l'option `silent` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()") }} constructeur.

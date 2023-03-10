@@ -2,6 +2,7 @@
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox
 ---
+
 {{AddonSidebar}}
 
 拡張機能に、ユーザーがアドレスバーに入力した時のカスタマイズされた振る舞いを有効にします。
@@ -46,4 +47,4 @@ omnibox API は、ユーザーが拡張機能で定義されたキーワード�
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

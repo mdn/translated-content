@@ -2,11 +2,12 @@
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`toString()`** メソッドは、URL での使用に適したクエリー文字列を返します。
 
-> **Note:** **注**: このメソッドは、疑問符のないクエリー文字列を返します。 これは、それを含む [`window.location.search`](/ja/docs/Web/API/HTMLHyperlinkElementUtils/search) とは異なります。
+> **メモ:** このメソッドは、疑問符のないクエリー文字列を返します。 これは、それを含む [`window.location.search`](/ja/docs/Web/API/HTMLHyperlinkElementUtils/search) とは異なります。
 
 {{availableinworkers}}
 
@@ -45,9 +46,7 @@ let params = new URLSearchParams('foo=1&bar=2');
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#interface-urlsearchparams', "toString() (see \"stringifier\")")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

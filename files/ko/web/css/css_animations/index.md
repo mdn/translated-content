@@ -1,13 +1,8 @@
 ---
 title: CSS Animations
 slug: Web/CSS/CSS_Animations
-tags:
-  - CSS
-  - CSS Animations
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Animations
 ---
+
 {{CSSRef}}
 
 **CSS Animations** is a module of CSS that lets you animate the values of CSS properties over time, using keyframes. The behavior of these keyframe animations can be controlled by specifying their timing function, duration, their number of repetitions, and other attributes.
@@ -39,7 +34,7 @@ translation_of: Web/CSS/CSS_Animations
 - [CSS animations tips and tricks](/ko/docs/Web/CSS/CSS_Animations/Tips)
   - : Tips and tricks to help you get the most out of CSS animations. Currently offers a technique for replaying an animation which has already run through to completion, which the API doesn't support inherently.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -3,6 +3,7 @@ title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
 translation_of: Web/API/URL/revokeObjectURL
 ---
+
 {{ApiRef("URL")}}
 
 La méthode statique **`URL.revokeObjectURL()`** libère une URL d’objet existante précédemment créée par un appel à {{domxref("URL.createObjectURL()") }}. Appelez cette méthode quand vous n’utilisez plus une URL d’objet pour indiquer au navigateur qu’il ne doit plus garder de référence sur l’objet.

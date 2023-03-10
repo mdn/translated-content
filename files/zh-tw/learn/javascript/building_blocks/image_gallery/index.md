@@ -2,6 +2,7 @@
 title: 影像圖庫
 slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 現在我們已經看過了基本的 JavaScript 組建，我們將讓你做一個測試，從建立一個在很多網站上常見的事物 — JavaScript 基礎的影像圖庫，來測試你對迴圈、函數、條件式及事件的知識。
@@ -23,7 +24,7 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 
 要進行這個評量，你要先下載 [grab the ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) 檔案，解壓縮在你電腦中的某個檔案夾作為範例。
 
-> **備註：** 你也可以在某些網站進行評鑑，如 [JSBin](http://jsbin.com/) 或[Thimble](https://thimble.mozilla.org/)。你可以把這些 HTML、CSS 和 JavaScript 貼到這些線上編輯器中。如果你用了一個沒法把 JavaScript/CSS 分別放在不同面板的線上編輯器，你可以放心的把這些`<script>`/`<style>`元件改成 inline 貼進 HTML 網頁裡。
+> **備註：** 你也可以在某些網站進行評鑑，如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)。你可以把這些 HTML、CSS 和 JavaScript 貼到這些線上編輯器中。如果你用了一個沒法把 JavaScript/CSS 分別放在不同面板的線上編輯器，你可以放心的把這些`<script>`/`<style>`元件改成 inline 貼進 HTML 網頁裡。
 
 ## 專案簡報
 
@@ -86,7 +87,7 @@ In each loop iteration, you need to add an `onclick` handler to the current `new
 That just leaves our darken/lighten `<button>` — we've already provided a line that stores a reference to the `<button>` in a variable called `btn`. You need to add an `onclick` handler that:
 
 1. Checks the current class name set on the `<button>` — you can again achieve this by using `getAttribute()`.
-2. If the class name is `"dark"`, changes the `<button>` class to `"light"` (using [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), its text content to "Lighten", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0.5)"`.
+2. If the class name is `"dark"`, changes the `<button>` class to `"light"` (using [`setAttribute()`](/zh-TW/docs/Web/API/Element/setAttribute)), its text content to "Lighten", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0.5)"`.
 3. If the class name not `"dark"`, changes the `<button>` class to `"dark"`, its text content back to "Darken", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0)"`.
 
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.

@@ -2,6 +2,7 @@
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
 ---
+
 {{APIRef("DOM")}}
 
 **`getElementsByTagName`** は {{domxref("Document")}} インターフェイスのメソッドで、指定されたタグ名を持つ要素の {{domxref("HTMLCollection")}} を返します。ルートノードを含めた文書全体が検索されます。返された `HTMLCollection` は生きたものであり、つまり `document.getElementsByTagName()` を再度呼び出さなくても DOM ツリーと同期を取り続けるよう、自動的に自分自身を更新します。.
@@ -15,7 +16,7 @@ var elements = document.getElementsByTagName(name);
 - _elements_ は生きた {{domxref("HTMLCollection")}} であり、見つかった要素がツリーに出現する順に並んでいます (ただし、下記のメモを見てください)。
 - _name_ は文字列で、要素の名前を表します。特殊な文字列 "\*" は全ての要素を表します。
 
-> **Note:** [最新の W3C 仕様書](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) では `elements` は `HTMLCollection` です。しかし、 WebKit ブラウザーではこのメソッドは {{domxref("NodeList")}} を返します。詳しくは {{bug(14869)}} を見てください。
+> **メモ:** [最新の W3C 仕様書](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) では `elements` は `HTMLCollection` です。しかし、 WebKit ブラウザーではこのメソッドは {{domxref("NodeList")}} を返します。詳しくは {{bug(14869)}} を見てください。
 
 ## 例
 
@@ -90,9 +91,7 @@ HTML 文書上で呼び出された場合、 `getElementsByTagName()` は処理�
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG','#dom-document-getelementsbytagname','document.getElementsByTagName')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

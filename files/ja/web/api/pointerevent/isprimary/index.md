@@ -1,48 +1,42 @@
 ---
 title: PointerEvent.isPrimary
 slug: Web/API/PointerEvent/isPrimary
+l10n:
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
+
 {{ APIRef("Pointer Events") }}
 
-{{domxref("PointerEvent")}} インターフェイスの **`isPrimary`** 読み取り専用プロパティは、イベントを作成したポインタデバイスが*プライマリ*ポインタであるかどうかを示します。 イベントの発生原因となったポインタがプライマリデバイスの場合は `true` を返し、それ以外の場合は `false` を返します。
+**`isPrimary`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、イベントを生成したポインター機器が*主*ポインターであるかどうかを示します。 イベントの発生原因となったポインターが主機器である場合は `true` を返し、それ以外の場合は `false` を返します。
 
-マルチポインタのシナリオ（複数のタッチ点をサポートするタッチ画面など）では、このプロパティを使用して、各ポインタタイプのアクティブポインタのセットから*マスタポインタ*を識別します。 プライマリポインタのみが*互換性マウスイベント*を生成します。 単一のポインタによる相互作用のみを希望する作成者は、非プライマリポインタを無視することによってそれを達成することができます。
+マルチポインターのシナリオ（複数のタッチ点に対応するタッチ画面など）では、このプロパティを使用して、各種類のアクティブなポインターの集合から*マスターポインター*を識別します。 主ポインターのみが*互換マウスイベント*を生成します。 単一のポインターによる操作のみを希望する場合は、主ポインターではないものを無視することによって実現することができます。
 
-マウスデバイスを表すポインタの場合、ポインタはプライマリと見なされます。 ペン入力を表す他のアクティブポインタが存在しないときに、その {{event("pointerdown")}} イベントが送出された場合、ペン入力を表すポインタはプライマリペン入力と見なされます。 タッチ入力を表す他のアクティブポインタが存在しないときに、その {{event("pointerdown")}} イベントが送出された場合、タッチ入力を表すポインタはプライマリタッチ入力と見なされます。
+ポインターがマウスを表している場合、そのポインターが主と見なされます。 ペン入力を表すポインターは、その {{domxref("Element/pointerdown_event", "pointerdown")}} イベントが、ペン入力を表す他のアクティブなポインターがないときに送出された場合、主ペン入力と見なされます。タッチ入力を表すポインターは、その {{domxref("Element/pointerdown_event", "pointerdown")}} イベントが、タッチ入力を表す他のアクティブなポインターが存在しないときに送出された場合、主タッチ入力と見なされます。
 
-2 つ以上のポインタデバイスタイプが同時に使用されている場合、複数のポインタ（各 {{domxref("PointerEvent.pointerType", "pointerType")}} に 1 つ）がプライマリと見なされます。 例えば、タッチ接触とマウスカーソルが同時に動かされると、両方ともプライマリと見なされるポインタが生成されます。 複数のプライマリポインタがある場合、これらのポインタはすべて*互換性マウスイベント*を生成します（ポインタ、マウス、およびタッチの相互作用の詳細については、{{domxref("Pointer events")}} を参照）。
+2 種類以上のポインター機器が同時に使用されている場合、複数のポインター（{{domxref("PointerEvent.pointerType", "pointerType")}} ごとに 1 つ）が主と見なされます。 例えば、タッチ接触とマウスカーソルが同時に動かされると、両方とも主と見なされるポインターが生成されます。 複数の主ポインターがある場合、これらのポインターはすべて*互換マウスイベント*を生成します（ポインター、マウス、およびタッチの相互作用の詳細については、{{domxref("Pointer_events", "ポインターイベント", "", 1)}} を参照）。
 
-## 構文
+## 値
 
-```
-var isPrimary = pointerEvent.isPrimary;
-```
-
-### 戻り値
-
-- `isPrimary`
-  - : このイベントのポインタがプライマリポインタの場合は `true` を返し、そうでない場合は `false` を返します。
+論理値で、このイベントのポインターが主ポインターである場合は `true` を返し、そうでない場合は `false` を返します。
 
 ## 例
 
-この例は、`isPrimary` の値を使用して適切な処理関数を呼び出す方法を示しています。
+この例は、`isPrimary` の値を使用して、適切な処理関数を呼び出す方法を示しています。
 
 ```js
-target.addEventListener('pointerdown', function(event) {
-   if (event.isPrimary)
-     process_primary_pointer(event);
-   else
-     process_secondary_pointer(event);
- }, false);
+target.addEventListener('pointerdown', (event) => {
+  if (event.isPrimary) {
+    process_primary_pointer(event);
+  } else {
+    process_secondary_pointer(event);
+  }
+}, false);
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                 | 状態                                     | コメント |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#widl-PointerEvent-isPrimary', 'isPrimary')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#widl-PointerEvent-isPrimary', 'isPrimary')}} | {{Spec2('Pointer Events')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PointerEvent.isPrimary")}}
+{{Compat}}

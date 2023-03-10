@@ -6,6 +6,7 @@ tags:
   - HTML-DOM
 translation_of: Web/API/History
 ---
+
 {{APIRef}}
 
 L'interface **`History`** permet de manipuler l'historique de navigation du navigateur, soit la liste des pages visitées au sein de l'onglet ou fenêtre ou cadre dans lequelle la page actuelle est ouverte.
@@ -23,7 +24,7 @@ L'interface **`History`** permet de manipuler l'historique de navigation du navi
 - {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{deprecated_inline}}
   - : Retourne un {{domxref("DOMString")}} de l‘URL précédente dans l'historique de navigation.
 - {{domxref("History.state")}} {{readOnlyInline}}
-  - : Retourne une value `any` représentant l'état le plus haut de l‘historique de navigation. C‘est une manière de vérifier cet état sans avoir à attendre un évenement {{event("popstate")}}.
+  - : Retourne une value `any` représentant l'état le plus haut de l‘historique de navigation. C‘est une manière de vérifier cet état sans avoir à attendre un évenement [`popstate`](/fr/docs/Web/API/Window/popstate_event).
 
 ## Méthodes
 
@@ -47,13 +48,9 @@ _L‘interface `History`_ _n‘hérite d‘aucune méthode._
 
   - : Insère les paramètres fournis dans la pile de l‘historique de navigation avec un titre donné et, si fourni, l‘URL. Les données sont traitées comme opaque par le DOM; il est nécessaire de spécifier chaque objet JavaScript devant être sérialisé. Notez que Firefox ignore actuellement le paramètre titre; pour plus d'informations, voir [Manipuler l'historique du navigateur](/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur).
 
-    > **Note :** De Gecko 2.0 {{ geckoRelease("2.0") }} jusqu‘à Gecko 5.0 {{ geckoRelease("5.0") }}, l‘objet donné est sérialisé via JSON. A partir de Gecko 6.0 {{ geckoRelease("6.0") }}, cet objet est sérialisé via [the structured clone algorithm](/en/DOM/The_structured_clone_algorithm). Cela permet une plus large variété d‘objets pouvant être passé.
-
 - {{domxref("History.replaceState()")}}
 
   - : Modifie la page la plus récente dans la pile de l‘historique de navigation pour avoir les données, titre, et si spécifiée, URL. Les données sont traitées comme opaque par le DOM; il est nécessaire de spécifier chaque objet JavaScript devant être sérialisé. Notez que Firefox ignore actuellement le paramètre titre; pour plus d'informations, voir [Manipuler l'historique du navigateur](/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur).
-
-    > **Note :** De Gecko 2.0 {{ geckoRelease("2.0") }} jusqu‘à Gecko 5.0 {{ geckoRelease("5.0") }}, l‘objet donné est sérialisé via JSON. A partir de Gecko 6.0 {{ geckoRelease("6.0") }}, cet objet est sérialisé via [the structured clone algorithm](/en/DOM/The_structured_clone_algorithm). Cela permet une plus large variété d‘objets pouvant être passé.
 
 ## Spécifications
 

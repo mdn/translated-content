@@ -2,6 +2,7 @@
 title: counter-reset
 slug: Web/CSS/counter-reset
 ---
+
 {{CSSRef}}
 
 `counter-reset` 属性用于将 [CSS 计数器](/zh-CN/docs/CSS_Counters) 重置为制定值
@@ -70,7 +71,7 @@ h1 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}
 
 ## 参考
 

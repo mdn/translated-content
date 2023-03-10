@@ -1,13 +1,6 @@
 ---
 title: URL.pathname
 slug: Web/API/URL/pathname
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/pathname
 ---
 {{ApiRef("URL API")}}
 
@@ -17,8 +10,10 @@ translation_of: Web/API/URL/pathname
 
 ## 구문
 
-    const path = url.pathname
-    url.pathname = newPath
+```js
+const path = url.pathname
+url.pathname = newPath
+```
 
 ### 값
 

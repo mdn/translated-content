@@ -2,7 +2,8 @@
 title: Examples
 slug: Web/API/Document_Object_Model/Examples
 ---
-本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通 API ，技巧以及 JavaScript 模式来操作文档对象。
+
+本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通 API，技巧以及 JavaScript 模式来操作文档对象。
 
 ## 示例 1: 高度和宽度
 
@@ -366,12 +367,12 @@ for (var i=0; i<2; i++) {
 ### 注意
 
 - 表的{{domxref("element.innerHTML","innerHTML")}}属性不应该被用来修改表，虽然你可以用它来写一个完整的表格或单元格的内容。
-- 如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其它浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。
-- [表接口](/en-US/docs/Web/API/HTMLTableElement#Methods)还有一些可用于创建和修改的表的便利方法。
+- 如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其他浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。
+- [表接口](/zh-CN/docs/Web/API/HTMLTableElement#Methods)还有一些可用于创建和修改的表的便利方法。
 
 ## Subnav
 
-- [DOM Reference](/en-US/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/en-US/docs/Web/API/Document_Object_Model/Events)
-- [Examples](/en-US/docs/Web/API/Document_Object_Model/Examples)
+- [DOM Reference](/zh-CN/docs/Web/API/Document_Object_Model)
+- [Introduction to the DOM](/zh-CN/docs/Web/API/Document_Object_Model/Introduction)
+- [Events and the DOM](/zh-CN/docs/Web/API/Document_Object_Model/Events)
+- [Examples](/zh-CN/docs/Web/API/Document_Object_Model/Examples)

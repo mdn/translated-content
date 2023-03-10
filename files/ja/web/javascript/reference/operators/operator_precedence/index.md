@@ -1,12 +1,8 @@
 ---
 title: 演算子の優先順位
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - ガイド
-  - JavaScript
-  - 優先順位
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **演算子の優先順位**は、演算子が互いにどのように解釈されるかを決定します。優先度の高い演算子は、優先度の低い演算子のオペランドになります。
@@ -237,7 +233,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining">オプション連鎖</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining">オプショナルチェーン</a>
       </td>
       <td>左から右</td>
       <td><code>?.</code></td>
@@ -272,7 +268,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT">ビットごとの NOT (~)</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT">ビット単位 NOT (~)</a>
       </td>
       <td><code>~ …</code></td>
     </tr>

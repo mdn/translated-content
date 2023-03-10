@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/counters()
 original_slug: Web/CSS/counters()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`counters()`** permet d'obtenir des compteurs imbriqués en renvoyant la concaténation des chaînes de caractères des valeurs des compteurs passés en arguments. La fonction `counters()` peut s'utiliser sous deux formes :
@@ -154,14 +155,11 @@ li::before {
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("CSS3 Lists", "#counter-functions", "CSS Counters")}}         | {{Spec2("CSS3 Lists")}} | Aucune modification. |
-| {{SpecName("CSS2.1", "generate.html#counter-styles", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.counters")}}
+{{Compat}}
 
 ## Voir aussi
 

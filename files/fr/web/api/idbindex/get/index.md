@@ -3,6 +3,7 @@ title: IDBIndex.get()
 slug: Web/API/IDBIndex/get
 translation_of: Web/API/IDBIndex/get
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`get()`** de l'interface {{domxref("IDBIndex")}} fait une requête ({{domxref("IDBRequest")}}) pour renvoyer le premier enregistrement correspondant à la clé ou l'intervalle de clé {{domxref("IDBKeyRange","")}} du magasin d'objet suivant l'index.
@@ -83,7 +84,7 @@ function displayDataByIndex() {
 };
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -101,4 +102,4 @@ function displayDataByIndex() {
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

@@ -2,6 +2,7 @@
 title: Firefox 20 for developers
 slug: Mozilla/Firefox/Releases/20
 ---
+
 Gecko 20 を搭載した Firefox 20 は米国時間 2013 年 4 月 2 日にリリースされました。このページでは、開発者に影響する Firefox 20 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

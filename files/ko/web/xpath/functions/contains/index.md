@@ -1,10 +1,8 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/contains
 ---
+
 {{ XsltRef() }}
 
 `contains` 함수는 첫 번째 인수 문자열이 두 번째 인수 문자열을 포함하는지 결정하고 부울값 true 또는 false를 반환합니다.

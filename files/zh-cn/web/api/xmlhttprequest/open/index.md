@@ -2,9 +2,10 @@
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
-**XMLHttpRequest.open()** 方法初始化一个请求。该方法要从 JavaScript 代码使用；从原生代码初始化一个请求，使用 [`openRequest()`](</en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#openRequest()>) 替代。
+**XMLHttpRequest.open()** 方法初始化一个新创建的请求，或重新初始化一个请求。
 
 > **备注：** 为已激活的请求调用此方法（`open()`或`openRequest()` 已被调用）相当于调用`abort()`。
 
@@ -40,7 +41,7 @@ xhrReq.open(method, url, async, user, password);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.open")}}
+{{Compat}}
 
 ## 参见
 

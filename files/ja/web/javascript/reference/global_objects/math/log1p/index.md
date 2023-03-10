@@ -1,14 +1,8 @@
 ---
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 ---
+
 {{JSRef}}
 
 **`Math.log1p()`** 関数は、 1 + 数値の ({{jsxref("Math.E", "e")}} を底とする) 自然対数を返します。
@@ -73,9 +67,7 @@ Math.log1p(-2); // NaN
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,14 +1,8 @@
 ---
 title: URL.search
 slug: Web/API/URL/search
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/search
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`search`** 속성은 맨 앞의 `'?'`와 함께 URL의 쿼리 문자열, 즉 검색 매개변수를 나타내는 {{domxref("USVString")}}입니다.
@@ -19,8 +13,10 @@ translation_of: Web/API/URL/search
 
 ## 구문
 
-    const searchParams = object.search
-    url.search = newSearchParams
+```js
+const searchParams = object.search
+url.search = newSearchParams
+```
 
 ### 값
 
@@ -33,11 +29,11 @@ const url = new URL('https://developer.mozilla.org/ko/docs/Web/API/URL/search?q=
 console.log(url.search); // Logs "?q=123"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -2,6 +2,7 @@
 title: Text
 slug: Web/API/Text
 ---
+
 {{ ApiRef() }}
 
 The **`Text`** interface represents the textual content of {{domxref("Element")}} or {{domxref("Attr")}}. If an element has no markup within its content, it has a single child implementing `Text` that contains the element's text. However, if the element contains markup, it is parsed into information items and `Text` nodes that form its children.
@@ -31,8 +32,8 @@ New documents have a single `Text` node for each block of text. Over time, more 
 
 ## 浏览器兼容性
 
-{{Compat("api.Text")}}
+{{Compat}}
 
 ## 相关链接
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference).
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference).

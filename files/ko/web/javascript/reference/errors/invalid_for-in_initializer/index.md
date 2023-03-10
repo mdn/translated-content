@@ -1,14 +1,8 @@
 ---
 title: 'SyntaxError: for-in loop head declarations may not have initializers'
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
-tags:
-  - for...in 구문
-  - 구문 에러
-  - 배열 반복
-  - 자바스크립트
-  - 초기화
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지
@@ -59,7 +53,7 @@ for (var i in obj) {
 
 ### 배열 반복
 
-for...in 반복문은 [배열을 반복하는데에는 사용하지 않습니다](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in). 배열({{jsxref("Array")}})을 반복하기 위해 `for-in` 반복문 대신에 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) 반복문을 사용하려고 한 적이 있습니까? `for` 반복문은 선언부에서 초기화도 할 수 있습니다:
+for...in 반복문은 [배열을 반복하는데에는 사용하지 않습니다](/ko/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in). 배열({{jsxref("Array")}})을 반복하기 위해 `for-in` 반복문 대신에 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) 반복문을 사용하려고 한 적이 있습니까? `for` 반복문은 선언부에서 초기화도 할 수 있습니다:
 
 ```js example-good
 var arr = [ "a", "b", "c" ]

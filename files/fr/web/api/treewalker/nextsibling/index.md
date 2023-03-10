@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/nextSibling
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.nextSibling()`** déplace le {{domxref("Node")}} courant vers son frère suivant, le cas échéant, et renvoie le frère trouvé. Si aucun noeud frère n'est trouvé, elle renvoie `null` et le noeud courant reste inchangé.

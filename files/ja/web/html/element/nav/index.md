@@ -1,26 +1,9 @@
 ---
 title: '<nav>: ナビゲーションセクション要素'
 slug: Web/HTML/Element/nav
-tags:
-  - Element
-  - HTML
-  - HTML セクション
-  - HTML:フローコンテンツ
-  - HTML:区分コンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Sections
-  - Web
-  - nav
-  - ウェブ
-  - セクション
-  - ナビゲーション
-  - リファレンス
-  - リンク
-  - 要素
-translation_of: Web/HTML/Element/nav
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<nav>` 要素**は、現在の文書内の他の部分や他の文書へのナビゲーションリンクを提供するためのセクションを表します。ナビゲーションセクションの一般的な例としてメニュー、目次、索引などがあります。
 
@@ -97,10 +80,7 @@ translation_of: Web/HTML/Element/nav
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考                                    |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-nav-element', '&lt;nav&gt;')}} | {{Spec2('HTML WHATWG')}} | 最新の W3C スナップショットから変更なし |
-| {{SpecName('HTML5 W3C', 'sections.html#the-nav-element', '&lt;nav&gt;')}}     | {{Spec2('HTML5 W3C')}}     | 初回定義                                |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -109,5 +89,5 @@ translation_of: Web/HTML/Element/nav
 ## 関連情報
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [HTML5 文書のセクションとアウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document")
+- [HTML5 文書のセクションとアウトライン](/ja/docs/Sections_and_Outlines_of_an_HTML5_document)
 - [ARIA: Navigation ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)

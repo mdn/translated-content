@@ -1,20 +1,9 @@
 ---
 title: '<details>: 詳細折りたたみ要素'
 slug: Web/HTML/Element/details
-tags:
-  - Disclosure Box
-  - Disclosure Widget
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - details
-browser-compat: html.elements.details
-translation_of: Web/HTML/Element/details
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<details>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウィジェットが「開いた」状態になった時のみ情報が表示される折りたたみウィジェットを作成します。</span>概要やラベルは {{HTMLElement("summary")}} 要素を使用して提供する必要があります。
 
@@ -60,7 +49,7 @@ CSS を使用して折り畳みウィジェットのスタイルを設定する�
     </tr>
     <tr>
       <th scope="row">暗黙的な ARIA ロール</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

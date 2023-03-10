@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: can''t assign to property "x" on "y": not an object'
 slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の strict モードの例外 "can't assign to property" は、[プリミティブ](/ja/docs/Glossary/Primitive)値、例えば[シンボル](/ja/docs/Glossary/Symbol)、[文字列](/ja/docs/Glossary/String)、[数値](/ja/docs/Glossary/Number)、[論理値](/ja/docs/Glossary/Boolean)などにプロパティを作成しようとしたときに発生します。[プリミティブ](/ja/docs/Glossary/Primitive)値はいかなる[プロパティ](/ja/docs/Glossary/property/JavaScript)を持つこともできません。

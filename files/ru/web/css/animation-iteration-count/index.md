@@ -13,7 +13,7 @@ translation_of: Web/CSS/animation-iteration-count
 
 ## Обзор
 
-[CSS](/ru/CSS "CSS")` свойство animation-iteration-count` определяет сколько раз будет проигрываться анимационный цикл, перед тем как остановиться.
+[CSS](/ru/CSS) свойство `animation-iteration-count` определяет сколько раз будет проигрываться анимационный цикл, перед тем как остановиться.
 
 Наиболее удобно использовать это свойство в сокращённом варианте {{ cssxref("animation") }}, в котором указываются все анимационные свойства.
 
@@ -54,5 +54,5 @@ animation-iteration-count: 2, 0, infinite;
 
 ## Также смотрите
 
-- [Использование CSS-анимацией](/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy "Обучение CSS-анимациям")
+- [Использование CSS-анимацией](/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

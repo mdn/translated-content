@@ -2,6 +2,7 @@
 title: TouchEvent.touches
 slug: Web/API/TouchEvent/touches
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## 概要
@@ -25,7 +26,7 @@ var touches = touchEvent.touches;
 
 此示例说明 {{domxref("TouchEvent")}} 对象的 {{domxref("TouchEvent.touches")}} 属性。该{{domxref("TouchEvent.touches")}} 属性是一个 {{domxref("TouchList")}} 对象，并包含 {{domxref("Touch")}} 当前接触表面的每个接触点的对象列表。
 
-在下面的代码片段中，{{event("touchstart")}} 事件处理程序会检查 {{domxref("TouchEvent.touches")}} 列表的长度，以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。
+在下面的代码片段中，[`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件处理程序会检查 {{domxref("TouchEvent.touches")}} 列表的长度，以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。
 
 ```js
 someElement.addEventListener('touchstart', function(e) {
@@ -46,4 +47,4 @@ someElement.addEventListener('touchstart', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.TouchEvent.touches")}}
+{{Compat}}

@@ -1,22 +1,9 @@
 ---
 title: '<sub>: 下付き文字要素'
 slug: Web/HTML/Element/sub
-tags:
-  - Baseline
-  - Element
-  - Footnotes
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Subscript
-  - Web
-  - sub
-translation_of: Web/HTML/Element/sub
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 HTML の **下付き文字要素** (**`<sub>`**) は、表記上の理由で下付き文字として表示するべき行内文字列を指定します。下付き文字は普通、小さめのテキストを使用してベースラインよりも低く表示されます。
 
@@ -84,7 +71,7 @@ HTML の **下付き文字要素** (**`<sub>`**) は、表記上の理由で下�
 
 `<sub>` 要素は、単純に表現や表示の結果を得るためではなく、表記規則上の理由、つまり、表記上の習慣や規則でテキストの位置を変更する必要がある場合にのみ使用してください。
 
-例えば、変更したベースラインを{{interwiki("wikipedia", "ワードマーク")}}の中で使用している企業名にスタイル付けするために `<sub>` を使用することは適切ではありません。このような場合には CSS を使用してください (例えば {{cssxref("vertical-align")}} プロパティを、 `vertical-align: sub` または、もっと詳細にベースラインの位置を制御するために、 `vertical-align: -25%` など)。
+例えば、変更したベースラインを[ワードマーク](https://ja.wikipedia.org/wiki/ワードマーク)の中で使用している企業名にスタイル付けするために `<sub>` を使用することは適切ではありません。このような場合には CSS を使用してください (例えば {{cssxref("vertical-align")}} プロパティを、 `vertical-align: sub` または、もっと詳細にベースラインの位置を制御するために、 `vertical-align: -25%` など)。
 
 `<sub>` の適切な利用場面には次のようなものがあります (これに限定されるものでありません)。
 
@@ -139,10 +126,7 @@ C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>、
 
 ## 仕様書
 
-| 仕様書                                                                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

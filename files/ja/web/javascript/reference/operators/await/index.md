@@ -1,15 +1,8 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - 関数
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Primary Expression
-browser-compat: javascript.operators.await
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
+
 {{jsSidebar("Operators")}}
 
 `await` 演算子はプロミス ({{jsxref("Promise")}}) を待つために使用します。通常の JavaScript コードで、 {{jsxref("Statements/async_function", "async function")}} の内部でのみ使用することができます。によって {{jsxref("Promise")}} が返されるのを待機するために使用します。

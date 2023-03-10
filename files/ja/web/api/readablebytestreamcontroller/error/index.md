@@ -2,6 +2,7 @@
 title: ReadableByteStreamController.error()
 slug: Web/API/ReadableByteStreamController/error
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`error()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。
@@ -32,9 +33,7 @@ readableByteStreamController.error(e);
 
 ## 仕様
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rbs-controller-error","error()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

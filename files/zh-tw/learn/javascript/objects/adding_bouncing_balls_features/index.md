@@ -2,6 +2,7 @@
 title: 為彈跳彩球添增其他功能
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 在本文中，你將繼續使用前一篇文章的彈跳彩球展示程式，另外加入幾項有趣的新功能。
@@ -23,7 +24,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 在開始之前，請先複製先前文章所提供的 [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html)、[style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css)、[main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) 等檔案，儲存於本端磁碟的新資料夾中。
 
-> **備註：** 你也可透過如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/) 等網站進行此一實作。你可將 HTML、CSS、JavaScript 貼入相關線上編輯器之一。如果你所用的線上編輯器並未提供獨立的 JavaScript/CSS 面板，則可將之放入 HTML 頁面內的行內 `<script>`/`<style>` 元素中。
+> **備註：** 你也可透過如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 等網站進行此一實作。你可將 HTML、CSS、JavaScript 貼入相關線上編輯器之一。如果你所用的線上編輯器並未提供獨立的 JavaScript/CSS 面板，則可將之放入 HTML 頁面內的行內 `<script>`/`<style>` 元素中。
 
 ## 專案簡介
 
@@ -57,7 +58,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 再來見見這個壞蛋 — `EvilCircle()`！這個遊戲要加入 1 個會吃球的邪惡圈，而且要透過繼承自 `Shape()` 的建構子來定義這個邪惡圈。你可能也想添增另個讓第二個玩家控制的圈圈，或許多加幾個由電腦控制的邪惡圈。當然，光一個邪惡圈並無法統治世界，但可為此遊戲增添不少樂趣。
 
-`EvilCircle()` 建構子應繼承 `Shape()` 的 ` x、``y、``exists。 `
+`EvilCircle()` 建構子應繼承 `Shape()` 的 `x`、`y`、`exists`。
 
 亦可定義自有的屬性如下：
 
@@ -76,8 +77,8 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 此函式的功能與 `Ball()` 的 `draw()` 函式相同，就是在 canvas 上繪製物件實體；且運作的方式也類似，所以你可以複製 `Ball.prototype.draw` 定義來開始。接著要完成下列改變：
 
-- 我們要空心的邪惡圈，但不只是單純實心黑線畫成的圓而已 (要有邊框)。只要將 [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) 與 [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) 更新成 [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 與 [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke) 即可辦到。
-- 還可以讓邊框更粗一點，有助你更容易看到邪惡圈。只要在 [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼叫之後的某個地方設定 [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) 的值 (「3」就可以) 即可。
+- 我們要空心的邪惡圈，但不只是單純實心黑線畫成的圓而已 (要有邊框)。只要將 [`fillStyle`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/fillStyle) 與 [`fill()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/fill) 更新成 [`strokeStyle`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 與 [`stroke()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/stroke) 即可辦到。
+- 還可以讓邊框更粗一點，有助你更容易看到邪惡圈。只要在 [`beginPath()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼叫之後的某個地方設定 [`lineWidth`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/lineWidth) 的值 (「3」就可以) 即可。
 
 #### `checkBounds()`
 
@@ -105,7 +106,7 @@ window.onkeydown = function(e) {
   }
 ```
 
-So when a key is pressed, the event object's [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property is consulted to see which key is pressed. If it is one of the four represented by the specified keycodes, then the evil circle will move left/right/up/down.
+So when a key is pressed, the event object's [keyCode](/zh-TW/docs/Web/API/KeyboardEvent/keyCode) property is consulted to see which key is pressed. If it is one of the four represented by the specified keycodes, then the evil circle will move left/right/up/down.
 
 - For a bonus point, let us know which keys the specified keycodes map to.
 - For another bonus point, can you tell us why we've had to set `var _this = this;` in the position it is in? It is something to do with function scope.

@@ -2,6 +2,7 @@
 title: Fork (フォーク)
 slug: Glossary/Fork
 ---
+
 Fork (フォーク) とは、ある時点での既存のソフトウェアプロジェクトのコピーであり、自分自身の変更をプロジェクトに追加するためのものです。基本的に、元のソフトウェアのライセンスが許せば、コードをコピーして変更を加えて独自のバージョンを開発することができます。それ自体が「フォーク」となります。
 
 フォークは、フリーでオープンソースのソフトウェア開発でよく見られます。 これは、 Git (及び GitHub プラットフォーム) を使用した貢献モデルにより、有名な用語になりました。
@@ -16,7 +17,7 @@ Fork (フォーク) とは、ある時点での既存のソフトウェアプロ
 
 1. General Knowledge
 
-    1. Wikipedia の {{interwiki("wikipedia", "フォーク_(ソフトウェア開発)","フォーク")}}
+    1. Wikipedia の [フォーク](https://ja.wikipedia.org/wiki/フォーク_(ソフトウェア開発))
     2. [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (Git コンテキストのフォーク)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)

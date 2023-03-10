@@ -2,9 +2,10 @@
 title: Rendering a list of Vue components
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-现在我们已经有了一个可以工作的组件。我们接下来添加更多的 `ToDoItem` 组件到 我们的 App。 本文我们会添加一系列待办事项到 App.vue 组件并使用`v-for`指令遍历这些它们，将它们的每一项展示在`ToDoItem`组件中。
+现在我们已经有了一个可以工作的组件。我们接下来添加更多的 `ToDoItem` 组件到 我们的 App。本文我们会添加一系列待办事项到 App.vue 组件并使用`v-for`指令遍历这些它们，将它们的每一项展示在`ToDoItem`组件中。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -12,12 +13,12 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_li
       <th scope="row">Prerequisites:</th>
       <td>
         <p>
-          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+          <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
+          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -46,7 +47,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_li
 
 ### 添加一些需要被渲染的数据
 
-首先我们需要准备一个待办事项数组。添加 `data` 属性到 `App.vue` 组件对象中， 它包含一个 `ToDoItems` 字段，其值是待办事项数组。在最终完成添加新的待办事项功能之前，我们可以先 mock 一些待办项目，每个待办项目可以用一个对象表示，这个对象含有 `name` 和 `done` 属性。
+首先我们需要准备一个待办事项数组。添加 `data` 属性到 `App.vue` 组件对象中，它包含一个 `ToDoItems` 字段，其值是待办事项数组。在最终完成添加新的待办事项功能之前，我们可以先 mock 一些待办项目，每个待办项目可以用一个对象表示，这个对象含有 `name` 和 `done` 属性。
 
 像下面这样添加一些待办项目让我们可以利用`v-for` 来对它们进行渲染。
 
@@ -87,7 +88,7 @@ export default {
      import uniqueId from 'lodash.uniqueid';
     ```
 
-2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')。`
+2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')`。
 
     `App.vue` `<script>` 元素内容如下：
 
@@ -139,7 +140,7 @@ export default {
 
 ## 让我们来一点小重构
 
-我们可以做一点代码重构。 因为我们已经要为每一个待办事项创建一个唯一 id，所以不妨把 id 作为 ToDoItem 的一个 prop，而不是在每个 checkbox 里生成它。
+我们可以做一点代码重构。因为我们已经要为每一个待办事项创建一个唯一 id，所以不妨把 id 作为 ToDoItem 的一个 prop，而不是在每个 checkbox 里生成它。
 
 添加一个新的 prop `id` 到 `ToDoItem` 组件。
 
@@ -188,49 +189,3 @@ export default {
 接下来我们需要让用户可以输入它们自己的待办事项，想做到这一点，我们需要一个文本输入`<input>`，当用户输入数据时触发一个事件，在事件响应函数中需要将数据添加到待办事项列表并且重新渲染列表，我们还需要一个模型操控数据。我们将在下一篇文章中获取这些知识。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

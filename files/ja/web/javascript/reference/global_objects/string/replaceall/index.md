@@ -1,15 +1,8 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - regex
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
+
 {{JSRef}}
 
 **`replaceAll()`** メソッドは、`pattern` にマッチしたすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` は文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各マッチに対して呼び出される関数を指定することができます。
@@ -24,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Note:** \`_regexp_\`を使用する場合は、グローバル("g")フラグを設定する必要があります。それ以外の場合は、`TypeError` が投げられます："replaceAll must be called with a global RegExp".
+> **メモ:** \`_regexp_\`を使用する場合は、グローバル("g")フラグを設定する必要があります。それ以外の場合は、`TypeError` が投げられます："replaceAll must be called with a global RegExp".
 
 ### 引数
 
@@ -51,7 +44,7 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 
 | パターン                                | 挿入                                                                                                                                                                                                           |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`​ ​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​ | `"$"` を挿入します。                                                                                                                                                                                           |
+| `$$`   | `"$"` を挿入します。                                                                                                                                                                                           |
 | `$&`                                    | マッチした部分文字列を挿入します。                                                                                                                                                                             |
 | `` $` ``                                | マッチした部分文字列の直前の文字列の部分を挿入します。                                                                                                                                                         |
 | `$'`                                    | マッチした部分文字列の直後の文字列の部分を挿入します。                                                                                                                                                         |
@@ -67,7 +60,7 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 
 | 名前                                          | 与えられる値                                                                                                                                                                                                                                                                        |
 | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match` ​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​ ​ ​ | マッチした部分文字列（上記の `$&` に対応）です。                                                                                                                                                                                                                                    |
+| `match`     | マッチした部分文字列（上記の `$&` に対応）です。                                                                                                                                                                                                                                    |
 | `p1, p2, ...`                                 | `replace()` の第一引数が {{jsxref("RegExp")}} オブジェクトだった場合、_n_ 番目の括弧でキャプチャされたグループの文字列（上記の `$1`, `$2`, などに対応）です。例えば `/(\a+)(\b+)/` が与えられた場合、`p1` は `\a+` に対するマッチ、`p2` は `\b+` に対するマッチとなります。 |
 | `offset`                                      | マッチした部分文字列の、分析中の文字列全体の中でのオフセットです（例えば、文字列全体が `'abcd'` で、マッチした部分文字列が `'bc'` ならば、この引数は `1` となります）。                                                                                                             |
 | `string`                                      | 分析中の文字列全体です。                                                                                                                                                                                                                                                            |
@@ -101,9 +94,7 @@ TypeError: replaceAll must be called with a global RegExp
 
 ## 仕様
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

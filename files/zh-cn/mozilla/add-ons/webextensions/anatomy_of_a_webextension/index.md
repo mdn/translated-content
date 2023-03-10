@@ -2,6 +2,7 @@
 title: 扩展剖析
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 扩展是指一个包含若干文件的安装包，可直接分发至用户。本文中，我们快速地介绍一遍安装包内可能出现的文件。
@@ -10,10 +11,10 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 这是唯一一个在每个扩展里面必须存在的文件。它包含了关于这个扩展插件基本的元数据（metadata），比如它的名字、版本和所需权限。并且，它也对扩展中其他文件进行了链接。
 
-这个 manifest 文件还可以指向其它一些类型的文件：
+这个 manifest 文件还可以指向其他一些类型的文件：
 
 - [后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本): 执行一个长时间运行的逻辑。
-- 图标: 用于扩展插件和任何它可能定义的按钮儿。
+- 图标：用于扩展插件和任何它可能定义的按钮儿。
 - [侧边栏，弹出窗口，选项页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面): 为各式各样用户界面组件提供内容的 HTML 文件。
 - [内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本): 扩展中包含的 JavaScript，你可以注入它们到网页中。
 - [网络可访问资源](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源): 使打包好的内容可用于网页与内容脚本中。

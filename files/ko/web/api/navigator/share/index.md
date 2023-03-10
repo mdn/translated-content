@@ -1,15 +1,17 @@
 ---
 title: Navigator.share
 slug: Web/API/Navigator/share
-translation_of: Web/API/Navigator/share
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`Navigator.share()`** 메소드는 Web Share API 의 부분으로서 디바이스의 네이티브 공유하기 메커니즘을 작동시킨다. Web Share API 가 지원되지 않는다면, 이 메소드는 `undefined` 일 것이다.
 
 ## Syntax
 
-    var sharePromise = window.navigator.share(data);
+```js
+var sharePromise = window.navigator.share(data);
+```
 
 ### Parameters
 
@@ -35,10 +37,10 @@ navigator.share({
 }); // share the URL of MDN
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

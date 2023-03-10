@@ -2,6 +2,7 @@
 title: IdleDeadline
 slug: Web/API/IdleDeadline
 ---
+
 {{APIRef("Background Tasks")}}
 
 `IdleDeadline` interface 在 {{domxref("Window.requestIdleCallback()")}}被调用的时候做为一个`IdleDeadline` interface 类型的参数传递给 requestIdleCallback 方法的回调函数。它提供了一个方法，可以让你判断用户代理 (浏览器) 还剩余多少闲置时间可以用来执行耗时任务{{domxref("..timeRemaining", "timeRemaining()")}},{{domxref("IdleDeadline.didTimeout", "didTimeout")}}, didTimeout 属性用来判断当前的回调函数是否被执行因为回调函数存在过期时间 (requestIdleCallback 的第二个参数用来指定执行超时时间，即回调函数在规定的时间内是否被执行，如果没有执行 didTimeout 属性将为 ture，如果任务是急需完成的此时应该忽略剩余时间逻辑上强制执行回调函数)。
@@ -28,7 +29,7 @@ slug: Web/API/IdleDeadline
 
 ## Browser compatibility
 
-{{Compat("api.IdleDeadline")}}
+{{Compat}}
 
 ## See also
 

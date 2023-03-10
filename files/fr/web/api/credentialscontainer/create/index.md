@@ -10,6 +10,7 @@ tags:
   - WebAuthn
 translation_of: Web/API/CredentialsContainer/create
 ---
+
 {{APIRef("Credential Management")}}{{SeeCompatTable}}
 
 La méthode **`create()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en

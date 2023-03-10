@@ -1,26 +1,34 @@
 ---
 title: HTMLFormElement.method
 slug: Web/API/HTMLFormElement/method
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
-{{APIRef}}概要
 
-`method` は、 フォーム送信時に使用する HTTP メソッドを取得 / 設定する。
+{{APIRef("HTML DOM")}}
 
-## 構文
+**`HTMLFormElement.method`** プロパティは、 {{HtmlElement("form")}} を送信するために使用される {{Glossary("HTTP")}} メソッドを表します。
 
-```
-string = form.method; //取得
-form.method = string; //設定
-```
+明示的に指定されない場合、既定のメソッドは 'get' です。
+
+## 値
+
+文字列です。
 
 ## 例
 
 ```js
-var myform = document.forms["myform"];
+document.forms['myform'].method = 'post';
 
-myform.method = "post";
+const formElement = document.createElement("form"); // フォームを生成
+document.body.appendChild(formElement);
+console.log(formElement.method); // 'get'
 ```
 
 ## 仕様書
 
-- [DOM Level 2 HTML: method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-82545539)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

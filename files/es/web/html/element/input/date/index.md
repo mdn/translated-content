@@ -1,11 +1,9 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-translation_of: Web/HTML/Element/input/date
-browser-compat: html.elements.input.input-date
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} de **`type="date"`** crean un campo de entrada que le permite al usuario introducir una fecha, que puede ser tanto como una caja de texto para validar el campo como una interfaz especial que le permite escoger una fecha.
 
@@ -60,7 +58,7 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
 
 ## Valor
 
-Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en {{SectionOnPage("/es/docs/Web/HTML/Date_and_time_formats", "Formato válido de una fecha en formato de texto")}}.
+Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en [Formato válido de una fecha en formato de texto](/es/docs/Web/HTML/Date_and_time_formats#formato_válido_de_una_fecha_en_formato_de_texto).
 
 Puedes establecer un valor por defecto para la entrada introduciendo una fecha en el atributo {{htmlattrxref("value", "input")}} de la siguiente forma:
 
@@ -121,7 +119,7 @@ En esta sección, veremos los usos más básicos y más complejos de `<input typ
 
 ### Usos básicos del tipo fecha
 
-El uso más simple de `<input type="date">` consta de una etiqueta `<input>`combinada con su {{htmlelement("label")}}, como se puede ver a continuación:
+El uso más simple de `<input type="date">` consta de una etiqueta `<input>` combinada con su {{htmlelement("label")}}, como se puede ver a continuación:
 
 ```html
 <form action="https://example.com">
@@ -159,7 +157,7 @@ Como resultado, obtenemos que solo los días del mes de abril de 2017 pueden ser
 
 ### Controlando el tamaño del input
 
-`<input type="date">`no soporta los atributos de tamaño como lo es {{htmlattrxref("size", "input")}}. Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
+`<input type="date">` no soporta los atributos de tamaño como lo es {{htmlattrxref("size", "input")}}. Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
 
 ## Validación
 

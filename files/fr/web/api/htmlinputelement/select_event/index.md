@@ -4,6 +4,7 @@ slug: Web/API/HTMLInputElement/select_event
 translation_of: Web/API/Element/select_event
 original_slug: Web/API/Element/select_event
 ---
+
 L'évènement `select` est déclenché quand du texte est sélectionné. L'évènement peut ne pas être disponible pour tous les éléments dans tous les langages. Par exemple, en [HTML5](http://www.w3.org/TR/DOM-Level-3-Events/#references-HTML5), les évènements select ne peuvent être envoyés que sur des éléments `input` de formulaire et `textarea`.
 
 ## Info générale

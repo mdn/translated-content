@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 original_slug: Web/JavaScript/Reference/Objets_globaux/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 La propriété globale **`globalThis`** renvoie l'objet global de plus haut niveau.
@@ -66,10 +67,8 @@ if (typeof globalThis.setTimeout !== 'function') {
 
 ## Spécifications
 
-| Spécification                                                                                                             | État                                | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------ |
-| [Proposition pour `globalThis`](https://tc39.github.io/proposal-global/#sec-other-properties-of-the-global-object-global) | Proposition de niveau 3 (_stage 3_) |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.globalThis")}}
+{{Compat}}

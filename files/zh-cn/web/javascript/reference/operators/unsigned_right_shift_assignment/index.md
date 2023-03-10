@@ -1,23 +1,23 @@
 ---
-title: Unsigned right shift assignment (>>>=)
+title: 无符号右移赋值（>>>=）
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The unsigned right shift assignment operator (_`>>>=`_) moves the specified amount of bits to the right and assigns the result to the variable.
+**无符号右移赋值**（**`>>>=`**）运算符向右移动移动指定（二进制）位数，并将结果赋值给变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
 
 ## 语法
 
-```plain
-Operator: x >>>= y
-Meaning:  x    = x >>> y
+```js-nolint
+x >>>= y // x = x >>> y
 ```
 
-## 例子
+## 示例
 
-### Using unsigned right shift assignment
+### 使用无符号右移位赋值
 
 ```js
 let a = 5; //   (00000000000000000000000000000101)
@@ -37,5 +37,5 @@ b >>>= 2;   // 1073741822 (00111111111111111111111111111110)
 
 ## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [无符号右移位运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

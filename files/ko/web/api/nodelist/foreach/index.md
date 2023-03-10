@@ -1,15 +1,17 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-translation_of: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("NodeList")}} 인터페이스의 **`forEach()`** 메서드는 리스트 내의 각각의 값 쌍에 대해 매개 변수에 지정된 콜백을 삽입 순서로 호출합니다.
 
 ## 문법Syntax
 
-    NodeList.forEach(callback[, thisArg]);
+```js
+NodeList.forEach(callback[, thisArg]);
+```
 
 ### Parameters
 
@@ -20,7 +22,7 @@ translation_of: Web/API/NodeList/forEach
       - : NodeList에서 처리중인 현재 요소의 인덱스입니다.
     - _`listObj`_
       - : `forEach()` 가 적용되고 있는 NodeList 객체입니다.
-- ` thisArg`` {{Optional_inline}}  `
+- `thisArg` {{Optional_inline}}
   - : `callback` 을 실행할 때 {{jsxref("this")}} 에 대입할 값입니다.
 
 ### Return value
@@ -55,9 +57,11 @@ list.forEach(
 
 결과는 다음과 같습니다.
 
-    [object HTMLParagraphElement], 0, myThisArg
-    [object Text], 1, myThisArg
-    [object HTMLSpanElement], 2, myThisArg
+```
+[object HTMLParagraphElement], 0, myThisArg
+[object Text], 1, myThisArg
+[object HTMLSpanElement], 2, myThisArg
+```
 
 ## Polyfill
 
@@ -84,11 +88,11 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 The above behavior is how many browsers actually implement NodeList.prototype.forEach (Chrome, for example).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,15 +1,6 @@
 ---
 title: History.back()
 slug: Web/API/History/back
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
-  - Web
-translation_of: Web/API/History/back
 ---
 {{APIRef("DOM")}}
 
@@ -19,7 +10,9 @@ translation_of: Web/API/History/back
 
 ## 구문
 
-    history.back()
+```js
+history.back()
+```
 
 ## 예제
 

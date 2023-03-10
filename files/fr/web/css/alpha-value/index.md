@@ -7,6 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/alpha-value
 ---
+
 {{CSSRef}}
 
 Le [type de donnée](/fr/docs/Web/CSS/Types_CSS) CSS **`<alpha-value>`** représente une valeur qui peut être un nombre ({{cssxref("&lt;number&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) et qui indique le [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) ou _l'opacité_ d'une couleur.
@@ -39,7 +40,4 @@ shape-image-threshold: 0.7;
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires                                                                                   |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#type-def-alpha-value', '&lt;alpha-value&gt;')}} | {{Spec2('CSS4 Colors')}} | Aucune modification significative.                                                             |
-| {{SpecName('CSS3 Colors', '#alphavaluedt', '&lt;alpha-value&gt;')}}             | {{Spec2('CSS3 Colors')}} | Introduit le type `<alpha-value>` ainsi que les notations fonctionnelles `rgba()` et `hsla()`. |
+{{Specifications}}

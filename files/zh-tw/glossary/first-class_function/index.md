@@ -2,6 +2,7 @@
 title: 一級函式（First-class Function）
 slug: Glossary/First-class_Function
 ---
+
 當函式在那個語言中可以被視為跟其他的變數一樣時，我們稱那樣的程式語言擁有**一級函式**。例如，函式可以作為參數傳遞到另一個函式，可以被另一個函式作為回傳值且可以被當作值一樣指派到另一個變數。
 
 ## 範例 | 指定函式到一個變數
@@ -37,7 +38,7 @@ greeting(sayHello, "JavaScript!");
 
 我們將 `sayHello()` 函式當成是變數傳遞到 `greeting()` 函式，這說明了我們將函式視為是一個值來使用它。
 
-> **備註：** 將函式作為參數傳遞到另一個函式時，被當作參數傳遞的那個函式我們稱之為回調函式 **[Callback function](/en-US/docs/Glossary/Callback_function)。** *`sayHello` 就是一個回調函式。*
+> **備註：** 將函式作為參數傳遞到另一個函式時，被當作參數傳遞的那個函式我們稱之為回調函式 **[Callback function](/zh-TW/docs/Glossary/Callback_function)。** *`sayHello` 就是一個回調函式。*
 
 ## 範例 | 回傳一個函式
 
@@ -69,7 +70,7 @@ const myFunc = sayHello();
 myFunc();
 ```
 
-這樣做的話，它會回傳  `Hello!` 這個訊息。
+這樣做的話，它會回傳 `Hello!` 這個訊息。
 
 > **備註：** 如果你直接調用 `sayHello` 的話，你必須再使用另一個變數來儲存之後再調用它，調用 `sayHello` 只會回傳函式回來而**非調用它所回傳的函式**。
 

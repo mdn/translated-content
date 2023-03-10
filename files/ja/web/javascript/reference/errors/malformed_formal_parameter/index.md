@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: Malformed formal parameter'
 slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "malformed formal parameter" は、 [`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) 呼び出しの引数リストが何らか無効である場合に発生します。

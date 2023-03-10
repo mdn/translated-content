@@ -2,6 +2,7 @@
 title: Request.clone()
 slug: Web/API/Request/clone
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} 接口中的**`clone()`** 方法可以创建一个当前`Request` 对象的副本。
@@ -37,10 +38,10 @@ var newRequest = myRequest.clone(); // a copy of the request is now stored in ne
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.clone")}}
+{{Compat}}
 
 ## 了解更多
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

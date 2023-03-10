@@ -10,6 +10,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/height
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`height`** de l'interface of the **`DOMRectReadOnly`** représente la hauteur du `DOMRect`.

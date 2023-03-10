@@ -1,15 +1,8 @@
 ---
 title: オーディオとビデオのストリーミングガイド
 slug: Web/Media/Streaming
-tags:
-  - Audio
-  - Guide
-  - Media
-  - Networking
-  - Video
-  - streaming
-translation_of: Web/Media/Streaming
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 
 このガイドでは、Web 上のオーディオあるいはビデオメディアをストリーミングするために使用されるテクニックと、可能な限り最高の品質とパフォーマンスを引き出すためにストリーミングを実行する際に使用するコード、メディア、サーバー、およびオプションをどのように最適化するかを検討します。

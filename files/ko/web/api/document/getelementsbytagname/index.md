@@ -1,13 +1,8 @@
 ---
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
-tags:
-  - API
-  - DOM
-  - 레퍼런스
-  - 메소드
-translation_of: Web/API/Document/getElementsByTagName
 ---
+
 {{ ApiRef("DOM") }}
 {{domxref("Document")}} 인터페이스의 **`getElementsByTagName`** 메소드는 엘리먼트의 {{domxref("HTMLCollection")}} 과 주어진 태그명을 반환합니다. 루트 노드를 포함해 전체 다큐먼트를 대상으로 검색됩니다. 반환된 `HTMLCollection` 은 살아있는데, 이는 `document.getElementsByTagName()` 을 다시 호출하지 않아도 자동으로 업데이트하여 DOM 트리와 동기화된 상태를 유지함을 의미합니다.
 

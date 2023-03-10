@@ -3,7 +3,8 @@ title: <video>
 slug: Web/HTML/Element/video
 translation_of: Web/HTML/Element/video
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Для встраивания видео контента в документ используйте **элемент HTML \<video>**. Видео элемент может содержать один или несколько источников видео. Чтобы указать источник видео, необходимо использовать атрибут **src** или элемент {{HTMLElement("source")}}; браузер сам определит наиболее подходящий источник.
 
@@ -26,15 +27,17 @@ translation_of: Web/HTML/Element/video
 
 - {{htmlattrdef("autoplay")}}
   - : Логический атрибут; если указан, то видео начнёт воспроизводится автоматически, как только это будет возможно сделать без остановки, чтобы закончить загрузку данных.
-- {{htmlattrdef("autobuffer")}} {{Non-standard_inline}} {{obsolete_inline}}
-  - : Логический атрибут; если указано, видео автоматически начнёт буферизацию, даже если оно не настроено на автоматический запуск. Используйте этот атрибут только тогда, когда очень вероятно, что пользователь будет смотреть видео. Видео буферизуется до тех пор, пока не заполнится кеш мультимедиа.> **Примечание:** несмотря на то, что в ранних версиях HTML5 атрибут `autobuffer` присутствовал, в последующих выпусках он был удалён. Также он был удалён из Gecko 2.0 и других браузеров, а в некоторых никогда не реализовывался. Спецификация определяет новый перечислимый атрибут `preload`, вместо `autobuffer` с другим синтаксисом. {{bug(548523)}}
+- {{htmlattrdef("autobuffer")}} {{Non-standard_inline}}
+  - : Логический атрибут; если указано, видео автоматически начнёт буферизацию, даже если оно не настроено на автоматический запуск. Используйте этот атрибут только тогда, когда очень вероятно, что пользователь будет смотреть видео. Видео буферизуется до тех пор, пока не заполнится кеш мультимедиа.
+    > **Примечание:** несмотря на то, что в ранних версиях HTML5 атрибут `autobuffer` присутствовал, в последующих выпусках он был удалён. Также он был удалён из Gecko 2.0 и других браузеров, а в некоторых никогда не реализовывался. Спецификация определяет новый перечислимый атрибут `preload`, вместо `autobuffer` с другим синтаксисом. {{bug(548523)}}
 - {{htmlattrdef("buffered")}}
   - : Атрибут для определения временных диапазонов буферизованных носителей. Этот атрибут содержит объект {{domxref("TimeRanges")}}.
 - {{htmlattrdef("controls")}}
   - : Если этот атрибут присутствует, тогда браузер отобразит элементы управления, чтобы позволить пользователю управлять воспроизведением видео, регулировать громкость, осуществлять перемотку, а также ставить на паузу и возобновление воспроизведение.
 - {{htmlattrdef("crossorigin")}}
-  - : This enumerated attribute indicates whether to use CORS to fetch the related image. [CORS-enabled resources](/ru/docs/CORS_Enabled_Image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:_ anonymous
-    _ : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_, and its usage restricted.
+  - : This enumerated attribute indicates whether to use CORS to fetch the related image. [CORS-enabled resources](/ru/docs/CORS_Enabled_Image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+    - anonymous
+      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_, and its usage restricted.
     - use-credentials
       - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/ru/docs/HTML/CORS_settings_attributes) for additional information.
 - {{htmlattrdef("height")}}
@@ -46,11 +49,17 @@ translation_of: Web/HTML/Element/video
 - {{htmlattrdef("played")}}
   - : Атрибут {{domxref("TimeRanges")}}, указывающий все диапазоны воспроизводимого видео.
 - {{htmlattrdef("preload")}}
-  - : Этот перечислимый атрибут предназначен для того, чтобы дать подсказку браузеру о том, что, по мнению автора, приведёт к лучшему пользовательскому опыту. Он может иметь одно из следующих значений:\* `none`: указывает, что видео не должно быть предварительно загружено.
+  - : Этот перечислимый атрибут предназначен для того, чтобы дать подсказку браузеру о том, что, по мнению автора, приведёт к лучшему пользовательскому опыту. Он может иметь одно из следующих значений:
+    - `none`: указывает, что видео не должно быть предварительно загружено.
     - `metadata`: указывает, что предварительно загружаются метаданные видео (например, длина).
     - `auto`: указывает, что весь видеофайл может быть загружен, даже если пользователь не должен его использовать.
-    - _пустая строка_: синоним значения `auto`.Если не задано, значение атрибута определяется браузером по умолчанию (то есть, каждый браузер имеет по умолчанию значение данного атрибута). Спецификация рекомендует использовать `metadata`.> **Примечание:** **Usage notes:\*** The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
+    - _пустая строка_: синоним значения `auto`.Если не задано, значение атрибута определяется браузером по умолчанию (то есть, каждый браузер имеет по умолчанию значение данного атрибута). Спецификация рекомендует использовать `metadata`.
+      > **Примечание:**
+      > **Usage notes:**
+      >
+      > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
       > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
+
 - {{htmlattrdef("poster")}}
   - : URL-адрес, указывающий на постера, которое будет использовано, пока загружается видео или пока пользователь не нажмёт на кнопку воспроизведения. Если этот атрибут не указан, ничего не отображается до тех пор, пока не будет доступен первый кадр; то первый кадр отображается как рамка постера.
 - {{htmlattrdef("src")}}
@@ -102,13 +111,17 @@ If the MIME type for the video is not set correctly on the server, the video may
 
 If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the "AddType" configuration directive in httpd.conf.
 
-    AddType video/ogg .ogm
-    AddType video/ogg .ogv
-    AddType video/ogg .ogg
+```
+AddType video/ogg .ogm
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+```
 
 If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in httpd.conf.
 
-    AddType video/webm .webm
+```
+AddType video/webm .webm
+```
 
 Your web host may provide an easy interface to MIME type configuration changes for new technologies until a global update naturally occurs.
 

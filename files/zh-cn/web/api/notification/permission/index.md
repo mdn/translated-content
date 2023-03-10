@@ -1,7 +1,8 @@
 ---
 title: Notification.permission
-slug: Web/API/notification/permission
+slug: Web/API/Notification/permission
 ---
+
 {{APIRef("Web Notifications")}}
 
 `Notification` 的只读属性 permission 用来表明用户是否允许当前域显示 Web Notification。
@@ -64,5 +65,5 @@ function notifyMe() {
 
 ## See also
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{domxref("Permissions_API","Permissions API")}}

@@ -1,10 +1,8 @@
 ---
 title: 高度な例
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 ---
+
 ## 高度な例
 
 高度な例では、コンテンツに基づいていくつかの div をソートします。この例では、昇順ソートと降順ソートの間で交互にコンテンツをソートすることができます。JavaScript は最初に.xsl ファイルのみをロードし、ファイルのロードが完了すると`xslloaded`変数を true に設定します。{{domxref("XSLTProcessor.getParameter()")}}メソッドを使用すると、コードは昇順または降順に並べ替えることができます。パラメータが空の場合（ソートが初めて発生したとき、XSLT ファイルに値がないため）はデフォルトで昇順になります。ソート値は{{domxref("XSLTProcessor.setParameter()")}}を使用して設定されます。

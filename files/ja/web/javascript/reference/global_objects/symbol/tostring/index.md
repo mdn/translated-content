@@ -1,14 +1,8 @@
 ---
 title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定された {{jsxref("Symbol")}} オブジェクトを表す文字列を返します。
@@ -53,9 +47,7 @@ Symbol.for('foo').toString() // "Symbol(foo)"
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

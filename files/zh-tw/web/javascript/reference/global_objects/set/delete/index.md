@@ -2,6 +2,7 @@
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** 方法會一個 `Set` 物件中移除指定元素。
@@ -60,7 +61,7 @@ setObj.forEach(function(point){
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.delete")}}
+{{Compat}}
 
 ## 另見
 

@@ -2,11 +2,12 @@
 title: PerformanceTiming.redirectStart
 slug: Web/API/PerformanceTiming/redirectStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## 概要
 
-**`PerformanceTiming.redirectStart`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为第一个 HTTP 的重定向开始的时刻的 Unix 毫秒时间戳。如果重定向没有发生，或者其中一个重定向非同源，则该值返回 `0。`
+**`PerformanceTiming.redirectStart`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为第一个 HTTP 的重定向开始的时刻的 Unix 毫秒时间戳。如果重定向没有发生，或者其中一个重定向非同源，则该值返回 `0`。
 
 ## 语法
 

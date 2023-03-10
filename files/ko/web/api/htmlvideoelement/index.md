@@ -1,7 +1,6 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
-translation_of: Web/API/HTMLVideoElement
 ---
 {{APIRef("HTML DOM")}}
 
@@ -65,7 +64,7 @@ _{{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}의 메소드도 �
 
 ## Events
 
-_{{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}의 이벤트를 상속합니다._ [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) 메소드 또는 `oneventname` 프로퍼티에 리스너를 전달하여 이벤트를 수신합니다.
+_{{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}의 이벤트를 상속합니다._ [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 메소드 또는 `oneventname` 프로퍼티에 리스너를 전달하여 이벤트를 수신합니다.
 
 ## 명세
 

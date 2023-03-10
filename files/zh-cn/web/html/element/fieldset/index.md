@@ -2,7 +2,8 @@
 title: <fieldset>
 slug: Web/HTML/Element/fieldset
 ---
-{{HTMLRef}}**HTML `<fieldset>` **元素用于对表单中的控制元素进行分组（也包括 label 元素）。{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}如上述例子所示，`<fieldset>` 元素将一个 HTML 表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 `fieldset` 的标题。这个元素有几个属性，最值得注意的是 `form`，其可以包含同一页面的 {{htmlelement("form")}} 元素的 `id`，以使 `<fieldset>` 成为这个 `<form>` 的一部分，即使 `<fieldset>` 不在其内。还有 `disabled` 属性，可将 `<fieldset>` 及其所有内容设置为不可用。
+
+{{HTMLSidebar}}**HTML `<fieldset>` **元素用于对表单中的控制元素进行分组（也包括 label 元素）。{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}如上述例子所示，`<fieldset>` 元素将一个 HTML 表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 `fieldset` 的标题。这个元素有几个属性，最值得注意的是 `form`，其可以包含同一页面的 {{htmlelement("form")}} 元素的 `id`，以使 `<fieldset>` 成为这个 `<form>` 的一部分，即使 `<fieldset>` 不在其内。还有 `disabled` 属性，可将 `<fieldset>` 及其所有内容设置为不可用。
 
 ## 属性
 
@@ -47,7 +48,7 @@ slug: Web/HTML/Element/fieldset
 </form>
 ```
 
-{{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}
+{{ EmbedLiveSample('简单的 fieldset', '100%', '80') }}
 
 ### 禁用 fieldset
 
@@ -69,7 +70,7 @@ slug: Web/HTML/Element/fieldset
 </form>
 ```
 
-{{ EmbedLiveSample('Disabled_fieldset', '100%', '110') }}
+{{ EmbedLiveSample('禁用 fieldset', '100%', '110') }}
 
 ## 技术概览
 
@@ -93,11 +94,11 @@ slug: Web/HTML/Element/fieldset
   </tr>
   <tr>
    <th scope="row">默认 ARIA role</th>
-   <td>{{ARIARole("group")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA roles</th>
-   <td>{{ARIARole("radiogroup")}}, {{ARIARole("presentation")}}, {{ARIARole("none")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>

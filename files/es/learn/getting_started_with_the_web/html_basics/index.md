@@ -1,13 +1,8 @@
 ---
 title: Conceptos básicos de HTML
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Aprendizaje
-  - HTML
-  - Principiante
-  - Web
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
 ---
+
 {{LearnSideBar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web")}}
@@ -32,26 +27,26 @@ Si quieres especificar que se trata de un párrafo, podrías encerrar el texto c
 
 Explora este párrafo en mayor profundidad.
 
-![elementos de gato gruñon](https://mdn.mozillademos.org/files/11913/htmlexp.png)
+![elementos de gato gruñon](grumpy-cat-small.png)
 
 Las partes principales del elemento son:
 
-1.  **La etiqueta de apertura**: consiste en el nombre del elemento (en este caso, p), encerrado por **paréntesis angulares** (< >) de apertura y cierre. Establece dónde comienza o empieza a tener efecto el elemento —en este caso, dónde es el comienzo del párrafo—.
-2.  **La etiqueta de cierre**: es igual que la etiqueta de apertura, excepto que incluye una barra de cierre (/) antes del nombre de la etiqueta. Establece dónde termina el elemento —en este caso dónde termina el párrafo—.
-3.  **El contenido**: este es el contenido del elemento, que en este caso es sólo texto.
-4.  **El elemento**: la etiqueta de apertura, más la etiqueta de cierre, más el contenido equivale al elemento.
+1. **La etiqueta de apertura**: consiste en el nombre del elemento (en este caso, p), encerrado por **paréntesis angulares** (< >) de apertura y cierre. Establece dónde comienza o empieza a tener efecto el elemento —en este caso, dónde es el comienzo del párrafo—.
+2. **La etiqueta de cierre**: es igual que la etiqueta de apertura, excepto que incluye una barra de cierre (/) antes del nombre de la etiqueta. Establece dónde termina el elemento —en este caso dónde termina el párrafo—.
+3. **El contenido**: este es el contenido del elemento, que en este caso es sólo texto.
+4. **El elemento**: la etiqueta de apertura, más la etiqueta de cierre, más el contenido equivale al elemento.
 
 Los elementos pueden también tener atributos, que se ven así:
 
-![atributo html](https://mdn.mozillademos.org/files/11915/htmlatributos.png)
+![atributo html](grumpy-cat-attribute-small.png)
 
 Los atributos contienen información adicional acerca del elemento, la cual no quieres que aparezca en el contenido real del elemento. Aquí `class` es el _nombre_ del atributo y `editor-note` el _valor_ del atributo. En este caso, el atributo `class` permite darle al elemento un nombre identificativo, que se puede utilizar luego para apuntarle al elemento información de estilo y demás cosas.
 
 Un atributo debe tener siempre:
 
-1.  Un espacio entre este y el nombre del elemento (o del atributo previo, si el elemento ya posee uno o más atributos).
-2.  El nombre del atributo, seguido por un signo de igual (**=**).
-3.  Comillas de apertura y de cierre, encerrando el valor del atributo.
+1. Un espacio entre este y el nombre del elemento (o del atributo previo, si el elemento ya posee uno o más atributos).
+2. El nombre del atributo, seguido por un signo de igual (**=**).
+3. Comillas de apertura y de cierre, encerrando el valor del atributo.
 
 Los atributos siempre se incluyen en la etiqueta de apertura de un elemento, nunca en la de cierre.
 
@@ -121,10 +116,10 @@ Como ya se dijo antes, incrusta una imagen en la página, en la posición en que
 
 También se incluye un atributo `alt` (alternative) el cual contiene un texto que debería describir la imagen, y que podría ser accedido por usuarios que no pueden ver la imagen, quizás porque:
 
-1.  Son ciegos o tienen deficiencias visuales. Los usuarios con impedimentos visuales usualmente utilizan herramientas llamadas _Lectores de pantalla (Screen Readers),_ los cuales les leen el texto contenido en el atributo alt.
-2.  Se produjo algún error en el código que impide que la imagen sea cargada. Como ejemplo, modifica deliberadamente la ubicación dentro del atributo `src` para que este sea incorrecto. Si guardas y recargas la página, deberías ver algo así en lugar de la imagen:
+1. Son ciegos o tienen deficiencias visuales. Los usuarios con impedimentos visuales usualmente utilizan herramientas llamadas _Lectores de pantalla (Screen Readers),_ los cuales les leen el texto contenido en el atributo alt.
+2. Se produjo algún error en el código que impide que la imagen sea cargada. Como ejemplo, modifica deliberadamente la ubicación dentro del atributo `src` para que este sea incorrecto. Si guardas y recargas la página, deberías ver algo así en lugar de la imagen:
 
-![atributo html](https://mdn.mozillademos.org/files/11917/image.png)
+![atributo html](alt-text-example.png)
 
 La frase clave acerca del texto alt de arriba es «texto que debería describir la imagen». El texto alt debe proporcionarle al lector la suficiente información como para que este tenga una buena idea de qué muestra la imagen. Por lo que tu texto actual «Mi imagen de prueba» no es para nada bueno. Un texto mucho mejor para el logo de Firefox sería: _«El logo de Firefox: un zorro en llamas rodeando la Tierra»_.
 
@@ -165,8 +160,8 @@ Agrega uno o algunos párrafos a tu texto de ejemplo (deberías tenerlo de cuand
 
 Mucho del contenido web está dado por listas, así que HTML tiene elementos especiales para ellas. El marcado de listas se realiza siempre en al menos dos elementos. Los dos tipos de listas más comunes son las listas ordenadas y las desordenadas:
 
-1.  **Las listas desordenadas** son aquellas en las que el orden de los items no es relevante, como en una lista de compras. Estas son encerradas en un elemento {{htmlelement("ul")}} (_unordered list_).
-2.  **Las listas ordenadas** son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento {{htmlelement("ol")}} (_ordered list_).
+1. **Las listas desordenadas** son aquellas en las que el orden de los items no es relevante, como en una lista de compras. Estas son encerradas en un elemento {{htmlelement("ul")}} (_unordered list_).
+2. **Las listas ordenadas** son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento {{htmlelement("ol")}} (_ordered list_).
 
 Cada elemento de la lista se coloca dentro de un elemento {{htmlelement("li")}} _(list item_).
 
@@ -196,20 +191,20 @@ Intenta agregar una lista ordenada o desordenada en tu página de ejemplo.
 
 Los vínculos o enlaces son muy importantes —son los que hacen de la web, la web—. Para implementar un vínculo, necesitas usar un vínculo simple — {{htmlelement("a")}} — la _a_ es la abreviatura de la palabra inglesa «anchor» («_ancla_»). Para convertir algún texto dentro de un párrafo en un vínculo, sigue estos pasos:
 
-1.  Elige algún texto. Nosotros elegimos «Manifesto Mozilla».
-2.  Encierra el texto en un elemento \<a>, así:
+1. Elige algún texto. Nosotros elegimos «Manifesto Mozilla».
+2. Encierra el texto en un elemento \<a>, así:
 
     ```html
     <a>Manifesto Mozilla</a>
     ```
 
-3.  Proporciónale al elemento \<a> un atributo href, así:
+3. Proporciónale al elemento \<a> un atributo href, así:
 
     ```html
     <a href="">Manifesto Mozilla</a>
     ```
 
-4.  Completa el valor de este atributo con la dirección web con la que quieras conectar al vínculo:
+4. Completa el valor de este atributo con la dirección web con la que quieras conectar al vínculo:
 
     ```html
     <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla</a>
@@ -225,7 +220,7 @@ Ahora agrega un vínculo a tu página, si es que aún no lo hiciste.
 
 Si lograste seguir todas las instrucciones de este artículo, deberías terminar con una página que se vea así (también puedes [verla aquí](http://mdn.github.io/beginner-html-site/)):
 
-![Una captura de pantalla de la página web que muestra el logo de Firefox, un encabezado que dice «mozilla es genial» y dos párrafos de texto de relleno.](https://mdn.mozillademos.org/files/9351/finished-test-page-small.png)
+![Una captura de pantalla de la página web que muestra el logo de Firefox, un encabezado que dice «mozilla es genial» y dos párrafos de texto de relleno.](finished-test-page-small.png)
 
 Si te estancas en algún paso, puedes comparar tu trabajo con el [código de ejemplo terminado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) en Github.
 

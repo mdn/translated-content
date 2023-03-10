@@ -2,6 +2,7 @@
 title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
 {{domxref("StorageManager")}} インターフェイスの **`persist()`** メソッドは、永続的ストレージ（persistent storage）を使用するパーミッションを要求します。 そして、パーミッションが付与されてボックスモードが永続的な場合は `true` に、そうでない場合は `false` に解決される {{jsxref("Promise")}} を返します。
@@ -34,9 +35,7 @@ if (navigator.storage && navigator.storage.persist)
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                         | コメント |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Storage','#dom-storagemanager-persist','persist')}} | {{Spec2('Storage')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,7 +2,8 @@
 title: <legend>
 slug: Web/HTML/Element/legend
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML \<legend>** 元素用于表示其父元素 {{HTMLElement("fieldset")}} 的内容标题。
 
@@ -11,7 +12,7 @@ slug: Web/HTML/Element/legend
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
    <td>无。</td>
   </tr>
   <tr>

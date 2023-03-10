@@ -2,7 +2,8 @@
 title: keypress
 slug: Web/API/Element/keypress_event
 ---
-The `keypress` event is fired when a key is pressed down and that key normally produces a character value (use [`input`](/en-US/Mozilla_event_reference/input) instead).
+
+The `keypress` event is fired when a key is pressed down and that key normally produces a character value (use [`input`](/zh-CN/Mozilla_event_reference/input) instead).
 
 ## General info
 
@@ -23,10 +24,10 @@ The `keypress` event is fired when a key is pressed down and that key normally p
 
 ## Related Events
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event)
+- [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
+- [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
+- [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
 
 <table class="standard-table">
   <thead>
@@ -61,7 +62,7 @@ The `keypress` event is fired when a key is pressed down and that key normally p
       <td><code>view</code> {{readonlyInline}}</td>
       <td>WindowProxy</td>
       <td>
-        <a href="/en-US/docs/Web/API/Document/defaultView"
+        <a href="/zh-CN/docs/Web/API/Document/defaultView"
           ><code>document.defaultView</code></a
         >
         (<code>window</code> of the document)
@@ -88,7 +89,7 @@ The `keypress` event is fired when a key is pressed down and that key normally p
         character, this value is a non-empty Unicode string containing that
         character. If the key doesn't have a printable representation, this is
         an empty string. See
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/zh-CN/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         for the detail.
@@ -108,7 +109,7 @@ The `keypress` event is fired when a key is pressed down and that key normally p
         <code>char</code> attribute. Otherwise, it's one of the key value
         strings specified in <a href="#key_values">Key Values</a>. If the key
         can't be identified, this is the string "Unidentified". See
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/zh-CN/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         for the detail. Read Only.
@@ -120,7 +121,7 @@ The `keypress` event is fired when a key is pressed down and that key normally p
       <td>
         The Unicode reference number of the key; this attribute is used only by
         the
-        <a href="/en-US/docs/Mozilla_event_reference/keypress"
+        <a href="/zh-CN/docs/Mozilla_event_reference/keypress"
           ><code>keypress</code></a
         >
         event. For keys whose <code>char</code> attribute contains multiple

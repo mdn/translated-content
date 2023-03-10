@@ -2,6 +2,7 @@
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLImageElement`** 介面提供了特殊的屬性及方法以用來操作 {{HTMLElement("img")}} 元素的畫面佈局與外觀呈現。
@@ -21,7 +22,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
   - : Returns a {{domxref("Boolean")}} that is `true` if the browser has finished fetching the image, whether successful or not. It also shows true, if the image has no {{domxref("HTMLImageElement.src", "src")}} value.
 - {{domxref("HTMLImageElement.crossOrigin")}}
-  - : Is a {{domxref("DOMString")}} representing the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/HTML/CORS_settings_attributes) for further details.
+  - : Is a {{domxref("DOMString")}} representing the CORS setting for this image element. See [CORS settings attributes](/zh-TW/docs/HTML/CORS_settings_attributes) for further details.
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns a {{domxref("DOMString")}} representing the URL to the currently displayed image (which may change, for example in response to media queries).
 - {{domxref("HTMLImageElement.height")}}
@@ -68,7 +69,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Errors
 
-If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the {{event("error")}} event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the [`error`](/zh-TW/docs/Web/API/Element/error_event) event, that event handler will get called. This can happen in a number of situations, including:
 
 - The {{htmlattrxref("src", "img")}} attribute is empty or `null`.
 - The specified `src` URL is the same as the URL of the page the user is currently on.
@@ -99,7 +100,7 @@ alert(document.images[0].src);
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLImageElement")}}
+{{Compat}}
 
 ## See also
 

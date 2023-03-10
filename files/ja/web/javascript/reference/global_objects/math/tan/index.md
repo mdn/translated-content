@@ -1,13 +1,8 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
+
 {{JSRef}}
 
 **`Math.tan()`** 関数は、数値のタンジェントを返します。
@@ -54,9 +49,7 @@ function getTanDeg(deg) {
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -11,6 +11,7 @@ tags:
   - mousemove
 translation_of: Web/API/Element/mousemove_event
 ---
+
 {{APIRef}}
 
 L'évènement `mousemove` est déclenché à partir d'un élément lorsqu'un dispositif de pointage (ex. une souris) est déplacé lorsque le curseur est à l'intérieur de l'élément.

@@ -1,13 +1,8 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - CSS Date Type
-  - CSS Shapes
-  - Reference
-translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 **`<basic-shape>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, {{cssxref("offset-path")}} 속성이 사용할 형태를 정의합니다.
@@ -161,11 +156,11 @@ div {
 
 {{EmbedLiveSample('Animated_polygon','340', '340')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

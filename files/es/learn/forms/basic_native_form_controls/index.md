@@ -1,9 +1,9 @@
 ---
 title: Controles de formulario originales
 slug: Learn/Forms/Basic_native_form_controls
-translation_of: Learn/Forms/Basic_native_form_controls
 original_slug: Learn/HTML/Forms/The_native_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
 En el [artículo anterior](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form), marcamos un ejemplo de formulario web funcional, presentamos algunos controles de formulario y elementos estructurales comunes, y nos centramos en las mejores prácticas de accesibilidad. A continuación, veremos con detalle las funciones de los diferentes controles de formulario, o _widgets_, y estudiaremos todas las diferentes opciones de que se dispone para la recopilación de diferentes tipos de datos. En este artículo en particular, veremos el conjunto original de controles de formulario, disponible en todos los navegadores desde los primeros días de la web.
@@ -39,14 +39,14 @@ Ya conoces algunos elementos de formulario, incluidos {{HTMLelement ('form')}}, 
 
 Los campos de texto {{htmlelement ("input")}} son los controles de formulario más básicos. Son un modo muy cómodo de permitir al usuario introducir cualquier tipo de datos, y ya hemos visto algunos ejemplos sencillos.
 
-> **Nota:** Los campos de texto de los formularios HTML son controles de entrada de texto sencillos sin formato. Esto significa que no puedes usarlos para aplicar una [edición enriquecida ](/es/docs/Rich-Text_Editing_in_Mozilla "/en-US/docs/Rich-Text_Editing_in_Mozilla")(negrita, cursiva, etc.). Todos los controles de formulario que encuentres con texto enriquecido son controles de formulario personalizados creados con HTML, CSS y JavaScript.
+> **Nota:** Los campos de texto de los formularios HTML son controles de entrada de texto sencillos sin formato. Esto significa que no puedes usarlos para aplicar una [edición enriquecida](/es/docs/Rich-Text_Editing_in_Mozilla) (negrita, cursiva, etc.). Todos los controles de formulario que encuentres con texto enriquecido son controles de formulario personalizados creados con HTML, CSS y JavaScript.
 
 Todos los controles de texto básicos comparten algunos comportamientos comunes:
 
 - Se pueden marcar como {{htmlattrxref ("readonly","input")}} (el usuario no puede modificar el valor de entrada, pero este se envía con el resto de los datos del formulario) o {{htmlattrxref ("disabled","input")}} (el valor de entrada no se puede modificar y nunca se envía con el resto de los datos del formulario).
 - Pueden tener un {{htmlattrxref ("placeholder","input")}}; se trata de un texto que aparece dentro de la caja de entrada de texto y que se usa para describir brevemente el propósito de la caja de texto.
-- Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength "/en-US/docs/HTML/Element/input#attr-maxlength") (el número máximo de caracteres que se pueden poner en la caja de texto).
-- Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck "/en-US/docs/HTML/Element/input#attr-spellcheck") (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
+- Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength) (el número máximo de caracteres que se pueden poner en la caja de texto).
+- Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
 
 > **Nota:** El elemento {{htmlelement ("input")}} es único entre los elementos HTML porque puede tomar muchas formas diferentes según el valor de su atributo. Se utiliza para crear la mayoría de los tipos de controles de formulario, que incluyen campos de texto de una sola línea, controles para la fecha y la hora, controles sin introducción de texto, como casillas de verificación, botones de opción y selectores de color, y botones.
 
@@ -66,7 +66,7 @@ Los campos de texto de una sola línea solo tienen una restricción verdadera: s
 
 _La captura de pantalla siguiente muestra los tipos de entrada de texto predeterminado, activo (con el foco) y deshabilitado en Firefox 71 y Safari en macOS y en Chrome 79 y Edge 18 en Windows 10._
 
-![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para  una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](https://mdn.mozillademos.org/files/17021/disabled.png)
+![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](disabled.png)
 
 > **Nota:** HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo {{htmlattrxref ("type", "input")}} que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 
@@ -118,7 +118,7 @@ Al incluir el atributo [`checked`](/es/docs/Web/HTML/Attributes/checked), la cas
 
 Las capturas de pantalla siguientes muestran casillas de verificación predeterminadas, activas (con el foco) y deshabilitadas en Firefox 71 y Safari 13 en macOS y Chrome 79 y Edge 18 en Windows 10:
 
-![Casillas de verificación predeterminadas, activas y deshabilitadas en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17024/checkboxes.png)
+![Casillas de verificación predeterminadas, activas y deshabilitadas en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](checkboxes.png)
 
 > **Nota:** Las casillas de verificación y los botones de opción con atributo [`checked`](/es/docs/Web/HTML/Attributes/checked) al cargarse coinciden con la pseudoclase {{cssxref ('<code>:default</code>')}}, incluso aunque ya no estén seleccionadas. Las que están seleccionadas coinciden con la pseudoclase `{{cssxref(':checked')}}`.
 
@@ -156,7 +156,7 @@ Es posible asociar diversos botones de opción. Si comparten el mismo valor de a
 
 Las capturas de pantalla siguientes muestran botones de opción sin seleccionar y seleccionados, algunos con el foco y otros desactivados sin seleccionar y seleccionados, en Firefox 71 y Safari 13 en MacOS y Chrome 79 y Edge 18 en Windows 10.
 
-![Botones de opción en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17022/radios.png)
+![Botones de opción en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](radios.png)
 
 ## Botones
 
@@ -211,7 +211,7 @@ Los botones siempre se comportan igual, independientemente de su usas un element
 
 Los ejemplos siguientes muestran los tipos de entrada de botones predeterminados, activos y deshabilitados: en Firefox 71 y Safari 13 en macOS, y Chrome 79 y Edge 18 en Windows 10.
 
-![Tipos de entrada de botones predeterminados, activos y deshabilitados en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17023/buttons.png)
+![Tipos de entrada de botones predeterminados, activos y deshabilitados en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](buttons.png)
 
 ### Botón de imagen
 
@@ -230,7 +230,9 @@ Si el botón de imagen se usa para enviar un formulario, este control no envía 
 
 Por ejemplo, cuando haces clic en las coordenadas (123, 456) de la imagen y se hace el envío por el método `get`, verás los valores añadidos a la URL de la manera siguiente:
 
-    http://foo.com?pos.x=123&pos.y=456
+```
+http://foo.com?pos.x=123&pos.y=456
+```
 
 Esta es una forma muy cómoda de construir un «mapa dinámico». La forma en que se envían y recuperan estos valores se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data).
 
@@ -250,9 +252,11 @@ En este ejemplo, se crea un control de selección de archivos que solicita archi
 
 En algunos dispositivos móviles, el control de selección de archivos puede acceder a fotos, vídeos y audio capturados directamente por la cámara y el micrófono del dispositivo y añadir información de captura al atributo `accept` de la manera siguiente:
 
-    <input type="file" accept="image/*;capture=camera">
-    <input type="file" accept="video/*;capture=camcorder">
-    <input type="file" accept="audio/*;capture=microphone">
+```html
+<input type="file" accept="image/*;capture=camera">
+<input type="file" accept="video/*;capture=camcorder">
+<input type="file" accept="audio/*;capture=microphone">
+```
 
 ## Atributos comunes
 

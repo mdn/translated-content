@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 ---
+
 {{JSRef}}
 
 **`[@@split]()`** メソッドは、文字列を部分文字列に区切ることによって、 {{jsxref("String")}} オブジェクトを文字列の配列に分割します。
@@ -78,9 +71,7 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

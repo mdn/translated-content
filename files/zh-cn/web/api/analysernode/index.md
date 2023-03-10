@@ -2,13 +2,14 @@
 title: AnalyserNode
 slug: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AnalyserNode`** 接口表示了一个可以提供实时频域和时域分析信息的节点。它是一个不对音频流作任何改动的 {{domxref("AudioNode")}}，同时允许你获取和处理它生成的数据，从而创建音频可视化。
 
 `AnalyzerNode` 只有一个输入和输出，即使未连接到输出它也能正常工作。
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](https://mdn.mozillademos.org/files/5119/WebAudioFFT.png)
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](webaudiofft.png)
 
 <table class="properties">
   <tbody>
@@ -147,7 +148,7 @@ draw();
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode")}}
+{{Compat}}
 
 ## 相关内容
 

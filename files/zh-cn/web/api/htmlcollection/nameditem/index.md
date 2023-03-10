@@ -2,11 +2,12 @@
 title: HTMLCollection.namedItem()
 slug: Web/API/HTMLCollection/namedItem
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("HTMLCollection")}} 接口的 **`namedItem()`** 方法返回第一个与集合中的 `id` 或者 `name` 属性匹配成功的 {{domxref("Element")}}，如果没有匹配成功，则返回 `null`。
 
-在 JavaScript中，对一个 {{jsxref("String")}} 使用数组括号语法，例如 `collection["value"]` 等价于 `collection.namedItem("value")`。
+在 JavaScript 中，对一个 {{jsxref("String")}} 使用数组括号语法，例如 `collection["value"]` 等价于 `collection.namedItem("value")`。
 
 ## 语法
 

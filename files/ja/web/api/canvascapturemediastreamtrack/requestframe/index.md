@@ -2,6 +2,7 @@
 title: CanvasCaptureMediaStreamTrack.requestFrame()
 slug: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("CanvasCaptureMediaStreamTrack")}} のメソッド **`requestFrame()`** はフレームをキャンバスから取り込んでストリームに送信することを依頼します。描画やフレームの取り込みのタイミングを慎重に制御する必要のあるアプリケーションは、フレームを取り込む時を直接指定するのに `requestFrame()` を使用することができます。
@@ -37,9 +38,7 @@ stream.getVideoTracks()[0].requestFrame();
 
 ## 仕様
 
-| 仕様書                                                                                                                                                                               | ステータス                                           | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------- |
-| {{SpecName('Media Capture DOM Elements', '#dom-canvascapturemediastreamtrack-requestframe', 'CanvasCaptureMediaStream.requestFrame()')}} | {{Spec2('Media Capture DOM Elements')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

@@ -2,6 +2,7 @@
 title: 處理文字 - JavaScript中的字串
 slug: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 接下來我們將把注意力轉向字串——這就是程式設計中調用的文字片段。在本文中，我們將介紹在學習 JavaScript 時您應該了解所有有關字串的常見事項，例如建立字串，跳脫字串中的引號以及將字串連接在一起。
@@ -29,7 +30,7 @@ slug: Learn/JavaScript/First_steps/Strings
 
 ## 字串 — 基礎
 
-剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)）。
+剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)）。
 
 ```html hidden
 <!DOCTYPE html>
@@ -214,13 +215,13 @@ let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;
 ```
 
-這是可行的！你可以用一樣的方法跳脫其他字元，例如 `\"`。除此之外，還有一些特殊方法。更詳細的部分，請參閱[跳脫符號](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) 。
+這是可行的！你可以用一樣的方法跳脫其他字元，例如 `\"`。除此之外，還有一些特殊方法。更詳細的部分，請參閱[跳脫符號](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) 。
 
 ## 連接字串（Concatenating strings）
 
 1. 連接（Concatenate）是一個新潮的程式用語。在 JavaScript 中，使用加號（+）將字串連接；這也是我們做數字相加的方式。但在這個狀況下，它有不同的作用。讓我們在 console 中示範：
 
-2. ```js
+    ```js
     let one = 'Hello, ';
     let two = 'how are you?';
     let joined = one + two;
@@ -229,14 +230,14 @@ bigmouth;
 
     這邊的結果是 `joined` 這個變數中，有了 「Hello, how are you?」這個值。
 
-3. 在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 `+` ，那你要連接幾個都可以。試試看這個：
+2. 在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 `+` ，那你要連接幾個都可以。試試看這個：
 
     ```js
     let multiple = one + one + one + one + two;
     multiple;
     ```
 
-4. 你也可以結合變數和字串。試試看這個：
+3. 你也可以結合變數和字串。試試看這個：
 
     ```js
     let response = one + 'I am fine — ' + two;
@@ -293,7 +294,7 @@ button.onclick = function() {
       typeof myNum;
       ```
 
-    - 另一方面，也有 [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法能夠讓數字轉換為相等的字串。試試看：
+    - 另一方面，也有 [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法能夠讓數字轉換為相等的字串。試試看：
 
       ```js
       let myNum = 123;
@@ -367,27 +368,15 @@ I gave it a score of ${ score/highestScore * 100 }%.`;
 我們建議你盡可能習慣使用模版字符串。現今流行的瀏覽器都能完好的支援它，只有一個地方你能發現它並不支援外: Internet Explorer。
 我們有許多的例子仍然使用目前標準的字串語法，但我們未來將會加入更多模版字符串的應用。
 
-來我們的[Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) 相關頁面看看更多的範例與進階的特色細節。
+來我們的[Template literals](/zh-TW/docs/Web/JavaScript/Reference/Template_literals) 相關頁面看看更多的範例與進階的特色細節。
 
 ## 測試您的技能！
 
 你已到達文章的結尾了，但你能記得最重要的資訊嗎?
-在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。
+在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/zh-TW/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。
 
 ## 結語
 
 以上是 JavaScript 中基礎的字串觀念。下個文章中，我們會依循這些概念並試試一些適用於字串的內建方法，進而運用這些方法讓字串能照我們想要的方式呈現。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## 在這個學習模組中
-
-- [什麼是 JavaScript?](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [和 JavaScript 的第一次接觸](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [什麼出錯了？JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
-- [處理文字 - JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
-- [附錄：笑話產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)

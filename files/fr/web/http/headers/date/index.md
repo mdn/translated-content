@@ -3,6 +3,7 @@ title: Date
 slug: Web/HTTP/Headers/Date
 translation_of: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du message.
@@ -53,13 +54,11 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Spécifications
 
-| Spécifications                               | Titre                                                          |
-| -------------------------------------------- | -------------------------------------------------------------- |
-| {{RFC("7231", "Date", "7.1.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1) : Sémantique et contenu |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Date")}}
+{{Compat}}
 
 ## Voir aussi
 

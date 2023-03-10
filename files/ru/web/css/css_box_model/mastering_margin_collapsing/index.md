@@ -7,11 +7,12 @@ tags:
   - Справка
 translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 Отступы [margin-top](/ru/docs/Web/CSS/margin-top) и [margin-bottom](/ru/docs/Web/CSS/margin-bottom) иногда объединяются в один, с размером равным наибольшему из них (или размеру одного, если они равны).
 Это поведение известно как **схлопывание внешних отступов (margin collapsing).**
-Обратите внимание, что отступы [плавающих ](/ru/docs/Web/CSS/float)и [абсолютно позиционированных](/ru/docs/Web/CSS/position#absolute) элементов никогда не схлопываются.
+Обратите внимание, что отступы [плавающих](/ru/docs/Web/CSS/float) и [абсолютно позиционированных](/ru/docs/Web/CSS/position#absolute) элементов никогда не схлопываются.
 
 Схлопывание внешних отступов происходит в трёх случаях:
 

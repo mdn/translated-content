@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/name
 ---
+
 {{JSRef}}
 
 La propriété **`function.name`** est une propriété en lecture seule qui renvoie le nom de la fonction courante ou `"anonymous"` si celle-ci a été créée de façon anonyme.
@@ -187,11 +188,8 @@ Dans la version non-compressée, la condition du test est remplie et on affiche 
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-name', 'name')}}                             | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-function-instances-name', 'name')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.name")}}
+{{Compat}}

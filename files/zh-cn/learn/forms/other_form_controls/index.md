@@ -2,6 +2,7 @@
 title: 其他表单控件
 slug: Learn/Forms/Other_form_controls
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 现在我们来具体看看非 `<input>` 表单控件的功能，从下拉列表菜单（drop-down list）、多行文本域（multi-line text field）到其他有用的表单功能，如我们在前一篇文章看到的 {{htmlelement('output')}} 元素和进度条（progress bar）元素。
@@ -295,7 +296,7 @@ slug: Learn/Forms/Other_form_controls
 
 ## 测试你的技能！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其它内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：其他控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Other_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：其他控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Other_controls)。
 
 ## 总结
 
@@ -304,19 +305,6 @@ slug: Learn/Forms/Other_form_controls
 现在你已经掌握了不同的可用表单控件背后的 HTML 代码，接下来我们将看看[如何进行样式化表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)。
 
 {{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
-
-## 本章目录
-
-- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 进阶内容
 

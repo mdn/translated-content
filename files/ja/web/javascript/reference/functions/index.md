@@ -1,16 +1,8 @@
 ---
 title: 関数
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - 関数
-  - ガイド
-  - JavaScript
-  - Parameter
-  - 引数
-browser-compat: javascript.functions
-translation_of: Web/JavaScript/Reference/Functions
 ---
+
 {{jsSidebar("Functions")}}
 
 一般的に言うと、関数とは外部 (再帰の場合は内部) から *呼び出す* ことのできる「サブプログラム」です。プログラムそのもののように、関数は関数本体 (*function body*) と呼ばれる連続した文で構成されます。値を関数に*渡す*ことができ、関数は値を*返す*ことができます。
@@ -179,7 +171,7 @@ param =&gt; expression
 
 ### `Function` コンストラクター
 
-> **Note:** `Function` コンストラクターによる関数の生成は推奨されません。これは、文字列として関数本体が必要であり、JS エンジンによる最適化を妨げたり、他の問題を引き起こしたりする場合があるためです。
+> **メモ:** `Function` コンストラクターによる関数の生成は推奨されません。これは、文字列として関数本体が必要であり、JS エンジンによる最適化を妨げたり、他の問題を引き起こしたりする場合があるためです。
 
 他のすべてのオブジェクトと同じように、`new` 演算子を使って {{jsxref("Function")}} オブジェクトを作成することができます。
 
@@ -196,9 +188,9 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 ### `GeneratorFunction` コンストラクター
 
-> **Note:** `GeneratorFunction` はグローバルオブジェクトではありませんが、ジェネレーター関数のインスタンスから得ることができます (詳細は {{jsxref("GeneratorFunction")}} を参照してください)。
+> **メモ:** `GeneratorFunction` はグローバルオブジェクトではありませんが、ジェネレーター関数のインスタンスから得ることができます (詳細は {{jsxref("GeneratorFunction")}} を参照してください)。
 
-> **Note:** `GeneratorFunction` コンストラクターによる関数の生成は推奨されません。これは、文字列として関数本体が必要で、JS エンジンによる最適化を妨げたり、他の問題を引き起こしたりする場合があるためです。
+> **メモ:** `GeneratorFunction` コンストラクターによる関数の生成は推奨されません。これは、文字列として関数本体が必要で、JS エンジンによる最適化を妨げたり、他の問題を引き起こしたりする場合があるためです。
 
 他のすべてのオブジェクトと同じように、 `new` 演算子を使って {{jsxref("GeneratorFunction")}} オブジェクトを作成することができます。
 

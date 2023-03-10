@@ -2,11 +2,12 @@
 title: WebVR — ウェブによる仮想現実
 slug: Games/Techniques/3D_on_the_web/WebVR
 ---
+
 {{GamesSidebar}}
 
 仮想現実の概念自体は新しいものではありませんが、今ではそれをあるべき姿で機能させるためのテクノロジーと、それをウェブアプリケーションで活用するための JavaScript API があります。 この記事では、ゲームでの使用の観点から WebVR を紹介しています。
 
-> **Note:** WebVR API は [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
+> **メモ:** WebVR API は [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
 
 ## VR 機器
 
@@ -14,19 +15,19 @@ Oculus Rift の人気とその他の多くの機器が間もなく市場に登�
 
 ![](hmds.jpg)
 
-> **Note:** 詳細については [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts) をご覧ください。
+> **メモ:** 詳細については [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts) をご覧ください。
 
 ## WebVR API
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) は、コンピューターに接続された VR 機器の情報とヘッドセットの位置/向き/速度/加速度の情報をキャプチャし、それをゲームやその他のアプリケーションで使用できる有用なデータに変換するための中心的な API です。
 
-> **Note:** もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の [ゲームパッド API](/ja/docs/Web/API/Gamepad_API) や、モバイルでのディスプレイの方向を扱うための [Device Orientation API](/ja/docs/Web/Events/Detecting_device_orientation) などです。
+> **メモ:** もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の [ゲームパッド API](/ja/docs/Web/API/Gamepad_API) や、モバイルでのディスプレイの方向を扱うための [Device Orientation API](/ja/docs/Web/Events/Detecting_device_orientation) などです。
 
 ### ブラウザーの対応と仕様書の状態
 
 現在、 WebVR API のブラウザー対応はまだ実験的です — [nightly builds of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/) と [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&amp;usp=sharing#list) で動作しますが（Mozilla と Google が一丸となって実装に取り組みます）、遅かれ早かれ通常のビルドで見ることができるようになるでしょう。
 
-[WebVR 仕様](|http://mozvr.github.io/webvr-spec/webvr.html)は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、Mozilla の [Vladimir Vukicevic](https://twitter.com/vvuk) と Google の [Brandon Jones](https://twitter.com/tojiro) が主導しています。 詳細については、 <https://mixedreality.mozilla.org/> および [WebVR.info](https://webvr.info/) のウェブサイトにアクセスしてください。
+[WebVR 仕様](http://mozvr.github.io/webvr-spec/webvr.html)は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、Mozilla の [Vladimir Vukicevic](https://twitter.com/vvuk) と Google の [Brandon Jones](https://twitter.com/tojiro) が主導しています。 詳細については、 <https://mixedreality.mozilla.org/> および [WebVR.info](https://webvr.info/) のウェブサイトにアクセスしてください。
 
 ### WebVR API の使用
 

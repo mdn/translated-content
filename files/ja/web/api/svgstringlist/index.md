@@ -2,6 +2,7 @@
 title: SVGStringList
 slug: Web/API/SVGStringList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVGStringList インターフェイス

@@ -15,6 +15,7 @@ tags:
   - upgrade-insecure-requests
 translation_of: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`upgrade-insecure-requests`** informe l'agent utilisateur de traiter toutes les URL non sécurisées d'un site (servies avec HTTP) comme si elles avaient été remplacées par des URL sécurisées (servies avec HTTPS). Cette directive est prévue pour les sites web ayant un grand nombre d'URL non sécurisées héritées du passé et qui ont besoin d'être récrites.
@@ -77,13 +78,11 @@ De cette manière, vous convertirez toujours les requêtes non sécurisées sur 
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{specName("Upgrade Insecure Requests", "#delivery", "upgrade-insecure-requests")}} | {{Spec2('Upgrade Insecure Requests')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.upgrade-insecure-requests")}}
+{{Compat}}
 
 ## Voir aussi
 

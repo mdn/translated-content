@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 4: ルートとコントローラ'
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、地域図書館 Web サイトで最終的に必要となるすべてのリソースエンドポイントに対して、"ダミー" ハンドラ関数を使用してルート (URL 処理コード) を設定します。完成すると、ルート処理コードのためのモジュール構造が得られます。これは、次の記事の実際のハンドラ関数で拡張できます。Express を使ってモジュラールートを作成する方法についても、非常によく理解しています。
@@ -34,7 +35,7 @@ A route is a section of Express code that associates an HTTP verb (`GET`, `POST`
 
 There are several ways to create routes. For this tutorial we're going to use the [`express.Router`](http://expressjs.com/en/guide/routing.html#express-router) middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.
 
-> **Note:** We discussed Express application routes briefly in our [Express Introduction > Creating route handlers](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers). Other than providing better support for modularization (as discussed in the first subsection below), using _Router_ is very similar to defining routes directly on the _Express application object_.
+> **メモ:** We discussed Express application routes briefly in our [Express Introduction > Creating route handlers](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers). Other than providing better support for modularization (as discussed in the first subsection below), using _Router_ is very similar to defining routes directly on the _Express application object_.
 
 The rest of this section provides an overview of how the `Router` can be used to define the routes.
 
@@ -63,7 +64,7 @@ router.get('/about', function (req, res) {
 module.exports = router;
 ```
 
-> **Note:** Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.
+> **メモ:** Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.
 
 To use the router module in our main app file we first `require()` the route module (**wiki.js**). We then call `use()` on the _Express_ application to add the Router to the middleware handling path, specifying an URL path of 'wiki'.
 
@@ -87,7 +88,7 @@ router.get('/about', function (req, res) {
 
 The callback takes three arguments (usually named as shown: `req`, `res`, `next`), that will contain the HTTP Request object, HTTP response, and the _next_ function in the middleware chain.
 
-> **Note:** Router functions are [Express middleware](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware), which means that they must either complete (respond to) the request or call the `next` function in the chain. In the case above we complete the request using `send()`, so the `next` argument is not used (and we choose not to specify it).
+> **メモ:** Router functions are [Express middleware](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware), which means that they must either complete (respond to) the request or call the `next` function in the chain. In the case above we complete the request using `send()`, so the `next` argument is not used (and we choose not to specify it).
 >
 > The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
 
@@ -97,7 +98,7 @@ The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html
 
 The example routes above use the `Router.get()` method to respond to HTTP GET requests with a certain path.
 
-The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 For example, the code below behaves just like the previous `/about` route, but only responds to HTTP POST requests.
 
@@ -126,7 +127,7 @@ app.get(/.*fish$/, function (req, res) {
 })
 ```
 
-> **Note:** Most of our routes for the LocalLibrary will simply use strings and not string patterns and regular expressions. We'll also use route parameters as discussed in the next section.
+> **メモ:** Most of our routes for the LocalLibrary will simply use strings and not string patterns and regular expressions. We'll also use route parameters as discussed in the next section.
 
 ### Route parameters
 
@@ -144,7 +145,7 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 
 The names of route parameters must be made up of “word characters” (A-Z, a-z, 0-9, and \_).
 
-> **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
+> **メモ:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
 
 That's all you need to get started with routes - if needed you can find more information in the Express docs: [Basic routing](http://expressjs.com/en/starter/basic-routing.html) and [Routing guide](http://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
 
@@ -163,7 +164,7 @@ The first home page and list pages don't encode any additional information. Whil
 
 By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as `<id>` above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g. one route to handle the display of every single book item).
 
-> **Note:** Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g. `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
+> **メモ:** Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g. `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 
 Next we create our route handler callback functions and route code for all the above URLs.
 
@@ -396,7 +397,7 @@ The skeleton already has a **./routes** folder containing routes for the _index_
     catalog.js
 ```
 
-Open **/routes/\*\***catalog.js\*\* and copy in the code below:
+Open `/routes/catalog.js` and copy in the code below:
 
 ```js
 var express = require('express');
@@ -537,7 +538,7 @@ router.get('/', function(req, res) {
 });
 ```
 
-> **Note:** This is our first use of the [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
+> **メモ:** This is our first use of the [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
 
 ### Update app.js
 
@@ -559,7 +560,7 @@ app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 ```
 
-> **Note:** We have added our catalog module at a path `'/catalog'`. This is prepended to all of the paths defined in the catalog module. So for example, to access a list of books, the URL will be: `/catalog/books/`.
+> **メモ:** We have added our catalog module at a path `'/catalog'`. This is prepended to all of the paths defined in the catalog module. So for example, to access a list of books, the URL will be: `/catalog/books/`.
 
 That's it. We should now have routes and skeleton functions enabled for all the URLs that we will eventually support on the LocalLibrary website.
 

@@ -2,6 +2,7 @@
 title: 创建您自己的函数
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 我们在之前的文章里大多学的是理论，这篇文章将提供一个练习的机会——您将练习构建一些您自己风格的函数。在练习过程中，我们也会解释一些针对函数的更深层的实用细节。
@@ -44,7 +45,7 @@ alert('This is a message');
 
 首先，让我们来组织一个基本的函数。
 
-> **备注：** 对于函数命名约定，应遵循与[变量命名约定](/en-US/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
+> **备注：** 对于函数命名约定，应遵循与[变量命名约定](/zh-CN/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
 
 1. 我们希望您首先访问[function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。您将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
 2. 接下来，将下面的代码添加至 `<script>` 元素中：
@@ -87,11 +88,11 @@ alert('This is a message');
 const html = document.querySelector('html');
 ```
 
-下段代码使用了另一个名字叫做 {{domxref("Document.createElement()")}} 的 DOM 方法，用来创建 {{htmlelement("div")}} 元素并且把该新建元素的引用（实际上是新建对象的地址）放在一个叫做 `panel`的常量中。 这个元素将成为我们的消息框的外部容器。
+下段代码使用了另一个名字叫做 {{domxref("Document.createElement()")}} 的 DOM 方法，用来创建 {{htmlelement("div")}} 元素并且把该新建元素的引用（实际上是新建对象的地址）放在一个叫做 `panel`的常量中。这个元素将成为我们的消息框的外部容器。
 
-然后我们又使用了一个叫做 {{domxref("Element.setAttribute()")}} 的 DOM 方法给 panel 元素添加了一个值为`msgBox` 的`class` 类属性。 这样做方便我们来给这个元素添加样式 — 查看 CSS 代码你就知道我们使用`.msgBox` 类选择器来给消息框和消息内容设置样式。
+然后我们又使用了一个叫做 {{domxref("Element.setAttribute()")}} 的 DOM 方法给 panel 元素添加了一个值为`msgBox` 的`class` 类属性。这样做方便我们来给这个元素添加样式 — 查看 CSS 代码你就知道我们使用`.msgBox` 类选择器来给消息框和消息内容设置样式。
 
-最后，我们还使用了一个叫做 {{domxref("Node.appendChild()")}} 的 DOM 方法，给 `html` 常量（我们之前定义好的）追加了我们设置好样式的 panel 元素 。该方法追加了元素的同时也把 panel`<div>`元素指定为`<html>`的子元素 。这样做是因为我们创建了一个元素之后这个元素并不会莫名其妙的出现在我们的页面上（浏览器只知道我们创建了一个元素，但是不知道把这个元素怎么呈现出来） — 因此，我们给这个元素了一个定位，就是显示在 html 里面！
+最后，我们还使用了一个叫做 {{domxref("Node.appendChild()")}} 的 DOM 方法，给 `html` 常量（我们之前定义好的）追加了我们设置好样式的 panel 元素。该方法追加了元素的同时也把 panel`<div>`元素指定为`<html>`的子元素。这样做是因为我们创建了一个元素之后这个元素并不会莫名其妙的出现在我们的页面上（浏览器只知道我们创建了一个元素，但是不知道把这个元素怎么呈现出来） — 因此，我们给这个元素了一个定位，就是显示在 html 里面！
 
 ```js
 const panel = document.createElement('div');
@@ -113,7 +114,7 @@ panel.appendChild(closeBtn);
 
 最后我们使用一个叫做 {{domxref("GlobalEventHandlers.onclick")}} 的事件句柄给按钮添加了一个点击事件，点击事件后定义了一个匿名函数，功能是将消息提示框从父容器中删除 — 达到了关闭的效果。
 
-简单来说，这个 `onclick` 句柄是一个按钮的属性 (事实上，页面上的任何元素) 当按钮被点击的时候能够执行一些代码。 你可以在之后的介绍事件的章节了解详情。我们给 `onclick` 句柄绑定了一个匿名函数，函数中代码在元素被点击的时候运行。函数里面的这行代码使用了 {{domxref("Node.removeChild()")}} DOM 方法指定了我们想要移除的 HTML 的子元素 — 在这里指 panel`<div>`.
+简单来说，这个 `onclick` 句柄是一个按钮的属性 (事实上，页面上的任何元素) 当按钮被点击的时候能够执行一些代码。你可以在之后的介绍事件的章节了解详情。我们给 `onclick` 句柄绑定了一个匿名函数，函数中代码在元素被点击的时候运行。函数里面的这行代码使用了 {{domxref("Node.removeChild()")}} DOM 方法指定了我们想要移除的 HTML 的子元素 — 在这里指 panel`<div>`.
 
 PS：我来解释下是什么意思，panel 是消息框，panel.parentNode 就是指 panel 的上一级，就是整个 DOM，然后再来用这个父亲来干掉这个儿子，儿子不能自己干掉自己，所以要这么做。
 
@@ -132,7 +133,7 @@ closeBtn.onclick = function() {
 </div>
 ```
 
-啊，看完了这么多代码，是不是很累？ — 不用担心，你现在没有必要完全知道这些代码的细节！这里我们只关心函数的结构和使用方式， 下面的例子将展示一些有意思的东西。
+啊，看完了这么多代码，是不是很累？ — 不用担心，你现在没有必要完全知道这些代码的细节！这里我们只关心函数的结构和使用方式，下面的例子将展示一些有意思的东西。
 
 ## 调用函数
 
@@ -151,7 +152,7 @@ closeBtn.onclick = function() {
     但是，这玩意有什么用呢？在真实的应用当中这样的消息提示框一般用来提示一些什么新的东西，或者是出现了一个什么错误，或者当用户删除配置文件的时候 ("你确定要这样做？"), 或者用户添加一个新的联系人之后提示操作成功..等等。在这个例子里面，当用户点击这个按钮的时候这个提示框会出现。
 
 3. 删掉你之前加的那一行代码。
-4. 下一步我们用选择器找到这个按钮并赋值给一个常量。 在你的函数定义之前把这行代码加上去：
+4. 下一步我们用选择器找到这个按钮并赋值给一个常量。在你的函数定义之前把这行代码加上去：
 
     ```js
     const btn = document.querySelector('button');
@@ -163,17 +164,17 @@ closeBtn.onclick = function() {
     btn.onclick = displayMessage;
     ```
 
-    `跟关闭按钮类似closeBtn.onclick...` , 当按钮被点击的时候我们运行了点代码。 但不同的是，之前等号的右边是一个匿名函数，看起来是这样的：`btn.onclick = function(){...}`, 我们现在是直接使用函数名称来调用。
+    跟关闭按钮类似 `closeBtn.onclick...` , 当按钮被点击的时候我们运行了点代码。但不同的是，之前等号的右边是一个匿名函数，看起来是这样的：`btn.onclick = function(){...}`, 我们现在是直接使用函数名称来调用。
 
 6. 保存好以后刷新页面 — 现在你应该能看到当你点击按钮的时候提示框弹出来。
 
-你会想“怎么函数名后面没有括号呢？”. 这是因为我们不想直接调用这个函数 — 而是只有当按钮被点击的时候才调用这个函数。 试试把代码改成这样：
+你会想“怎么函数名后面没有括号呢？”. 这是因为我们不想直接调用这个函数 — 而是只有当按钮被点击的时候才调用这个函数。试试把代码改成这样：
 
 ```js
 btn.onclick = displayMessage();
 ```
 
-保存刷新，你会发现按钮都还没点击提示框就出来了！ 在函数名后面的这个括号叫做“函数调用运算符”（function invocation operator）。你只有在想直接调用函数的地方才这么写。 同样要重视的是，匿名函数里面的代码也不是直接运行的，只要代码在函数作用域内。
+保存刷新，你会发现按钮都还没点击提示框就出来了！在函数名后面的这个括号叫做“函数调用运算符”（function invocation operator）。你只有在想直接调用函数的地方才这么写。同样要重视的是，匿名函数里面的代码也不是直接运行的，只要代码在函数作用域内。
 
 如果你做了这个函数括号的实验，在继续之前把代码恢复到之前的状态。
 
@@ -288,20 +289,10 @@ btn.onclick = displayMessage();
 
 ## 测试你的技能！
 
-你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[测试你的技能：函数](/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
+你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[测试你的技能：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
 
 ## 结论
 
-恭喜你，终于到了这里（等你好久了）! 这篇文章介绍了如何写一个自定义函数，要把这个新技能在真实项目中使用上你可能还要花点功夫。 下一篇文章中我们将会介绍函数的另一个相关概念 — 返回值。
+恭喜你，终于到了这里（等你好久了）! 这篇文章介绍了如何写一个自定义函数，要把这个新技能在真实项目中使用上你可能还要花点功夫。下一篇文章中我们将会介绍函数的另一个相关概念 — 返回值。
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
-
-## 在这个模块中
-
-- [在代码中做决定 - 条件语句 在 Wiki 中编辑](/zh-CN/docs/learn/JavaScript/Building_blocks/conditionals)
-- [循环吧代码](/zh-CN/docs/learn/JavaScript/Building_blocks/Looping_code)
-- [函数 - 可复用代码块](/zh-CN/docs/learn/JavaScript/Building_blocks/Functions)
-- [创建您自己的函数](/zh-CN/docs/learn/JavaScript/Building_blocks/Build_your_own_function)
-- [函数返回值](/zh-CN/docs/learn/JavaScript/Building_blocks/Return_values)
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [照片库](/zh-CN/docs/learn/JavaScript/Building_blocks/%E7%9B%B8%E7%89%87%E8%B5%B0%E5%BB%8A)

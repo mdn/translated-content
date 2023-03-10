@@ -2,6 +2,7 @@
 title: DOMRect
 slug: Web/API/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 一个 **`DOMRect`** 代表一个矩形。
@@ -49,7 +50,7 @@ slug: Web/API/DOMRect
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMRect")}}
+{{Compat}}
 
 ## 更多
 

@@ -1,14 +1,11 @@
 ---
 title: Getting started with WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-tags:
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
-[WebGL](http://www.khronos.org/webgl/)은 플러그인을 사용하지 않고 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 기반 API를 이용하여 브라우저의 HTML [`canvas`](/en/HTML/Canvas "en/HTML/Canvas")에 렌더링하여 3D 웹 콘텐츠 제작을 가능하게 합니다. WebGL 프로그램은 컴퓨터의 그래픽 처리 장치(GPU)에서 실행되는 자바스크립트나 특수 효과(셰이더 코드)코드로 구성됩니다. WebGL 요소들은 다른 HTML 요소들과 혼합될 수 있고 페이지나 페이지 배경의 다른 부분과 합성될 수 있습니다.
+{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+
+[WebGL](http://www.khronos.org/webgl/)은 플러그인을 사용하지 않고 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 기반 API를 이용하여 브라우저의 HTML [`canvas`](/en/HTML/Canvas)에 렌더링하여 3D 웹 콘텐츠 제작을 가능하게 합니다. WebGL 프로그램은 컴퓨터의 그래픽 처리 장치(GPU)에서 실행되는 자바스크립트나 특수 효과(셰이더 코드)코드로 구성됩니다. WebGL 요소들은 다른 HTML 요소들과 혼합될 수 있고 페이지나 페이지 배경의 다른 부분과 합성될 수 있습니다.
 
 이 문서는 기본 WebGL 기본 사항을 소개합니다. 이 문서에서는 3D 그래픽에 관련된 수학적 이해를 이미 이해하고 있다고 간주하고 OpenGL 자체에 대하여 설명하지 않을 것입니다.
 
@@ -85,7 +82,7 @@ function initWebGL(canvas) {
 
 이 시점에서 이 코드는 WebGL 컨텍스트가 성공적으로 초기화하는 데 충분한 코드입니다. 이 코드를 통해 검정 박스 형태의 빈 공간이 형성되며, 여기에 콘텐츠를 생성할 기본 준비가 되었습니다.
 
-[여기를 클릭하여 예제를 확인하세요](/samples/webgl/sample1/index.html "https://developer.mozilla.org/samples/webgl/sample1/index.html"). 브라우저가 WebGL을 호환한다면 실행될 것 입니다.
+[여기를 클릭하여 예제를 확인하세요](/samples/webgl/sample1/index.html). 브라우저가 WebGL을 호환한다면 실행될 것 입니다.
 
 ### WebGL 컨텍스트 크기 조정
 

@@ -1,13 +1,9 @@
 ---
 title: WebGL에서 텍스쳐 사용하기
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-tags:
-  - Texture
-  - WebGL
-  - 텍스쳐
-translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 앞 단원의 예제에서 회전하는 3차원 정육면체를 만들어봤습니다. 이번에는 정육면체의 각 면에 단색으로 색을 칠하는 대신에 텍스쳐를 입혀 보겠습니다.
 
@@ -15,7 +11,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 가장 먼저 해야할 일은 텍스쳐를 읽어오는 것입니다. 이번 예제에서는 동일한 하나의 텍스쳐를 회전하는 정육면체의 6개의 면에 입혀볼 것입니다. 여러개의 텍스쳐를 각 면에 입힌다고 해도 하나를 입히는 것과 동일한 방법을 적용하면 됩니다.
 
-> **참고:** 텍스쳐를 외부에서 읽어올 때는 [크로스 도메인 규칙(cross-domain rules)](/En/HTTP_access_control)에 유의해야 합니다. CORS(Cross Origin Resource Sharing)승인을 받을 수 있는 도메인에 있는 텍스쳐만 읽어올 수 있습니다. 자세한 내용은 [크로스 도메인 텍스쳐(Cross-domain textures)](/ko/docs/Web/WebGL/Cross-Domain_Textures)를 참고하세요.
+> **참고:** 텍스쳐를 외부에서 읽어올 때는 [크로스 도메인 규칙(cross-domain rules)](/ko/docs/HTTP_access_control)에 유의해야 합니다. CORS(Cross Origin Resource Sharing)승인을 받을 수 있는 도메인에 있는 텍스쳐만 읽어올 수 있습니다. 자세한 내용은 [크로스 도메인 텍스쳐(Cross-domain textures)](/ko/docs/Web/WebGL/Cross-Domain_Textures)를 참고하세요.
 
 텍스쳐를 읽어오는 코드는 다음과 같습니다:
 
@@ -41,7 +37,7 @@ function handleTextureLoaded(image, texture) {
 
 텍스쳐를 실질적으로 생성하려면, 앞에서 새로 생성한 텍스쳐 객체를 `gl.TEXTURE_2D`에 바인딩해야 합니다. 그리고 나서 이미지 데이터가 로딩된 이미지 객체를 `texImage2D()`에 전달하여 호출하면, 이미지 데이터가 텍스쳐에 쓰여(write) 집니다.
 
-> **참고:** 텍스쳐의 너비와 높이는 **거의 대부분**의 상황에서 2의 거듭제곱 픽셀(1, 2, 4, 8, 16, 32, ...)이어야 합니다. 예외인 경우에 대해서는 아래의 _"_[크기가 2의 거듭제곱 픽셀이 아닌 텍스쳐](/ko/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures "/en-US/docs/Web/WebGL/Using_textures_in_WebGL#Using_non_Power-Of-Two_textures")_"를 참고하세요._
+> **참고:** 텍스쳐의 너비와 높이는 **거의 대부분**의 상황에서 2의 거듭제곱 픽셀(1, 2, 4, 8, 16, 32, ...)이어야 합니다. 예외인 경우에 대해서는 아래의 _"_[크기가 2의 거듭제곱 픽셀이 아닌 텍스쳐](/ko/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures)_"를 참고하세요._
 
 그 다음 두 라인은 텍스쳐를 위한 필터링을 준비합니다. 이 필터링은 이미지 크기가 변경될 때 이미지가 필터되는 방식을 제어합니다. 여기에서는 이미지를 확대할 때 선형 필터링을 사용하고, 이미지를 축소할 때 mipmap을 사용합니다. generateMipMap()을 호출해서 mipmap이 만들어지면 gl.TEXTURE_2D에 null을 바인딩시켜서, 텍스쳐를 다룰 준비가 끝났다는 것을 WebGL에게 알려줍니다.
 
@@ -57,9 +53,11 @@ function handleTextureLoaded(image, texture) {
 
 `bindTexture()`를 이용해서 텍스쳐를 생성할 때, `texParameteri()` 메서드로 mipmapping과 UV 반복을 비활성화 시킬 수 있습니다. 이 비활성화를 통해 mipmapping, UV 감싸기, UV 타일링을 포기하고, 디바이스가 텍스쳐를 어떻게 처리할지 결정할 수 있는 제어권도 포기하는 대신 NPOT 텍스쳐를 사용할 수 있게 됩니다.
 
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); //gl.LINEAR 대신에 gl.NEAREST도 허용되지만, 둘 다 mipmap 될 수 없다.
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); //s좌표계 감싸기(반복) 방지
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); //t좌표계 감싸기(반복) 방지
+```js
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); //gl.LINEAR 대신에 gl.NEAREST도 허용되지만, 둘 다 mipmap 될 수 없다.
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); //s좌표계 감싸기(반복) 방지
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); //t좌표계 감싸기(반복) 방지
+```
 
 `texParameteri()` 메서드에 위와 같은 파라미터를 전달함으로써, WebGL을 지원하는 디바이스는 어떤 해상도의 텍스쳐든 처리할 수 있는 최대한의 해상도까지 자동으로 처리할 수 있게 됩니다. 위와 같은 설정을 해주지 않으면 WebGL은 NPOT 텍스쳐를 처리하지 못하고 `rgba(0, 0, 0, 1)`인 검은색을 반환합니다.
 
@@ -168,7 +166,7 @@ gl.enableVertexAttribArray(textureCoordAttribute);
 </script>
 ```
 
-이렇게 하면 프래그먼트의 색상을 정하기 위해 직접 프래그먼트에 색상값을 할당하지 않고, 샘플러(sampler)가 판단하기에 프래그먼트의 위치에 가장 잘 맞아 떨어진다고 여겨지는 **텍셀(texel, 텍스쳐 내부에 있는 픽셀)**값에 따라서 프래그먼트의 색상값을 계산해냅니다.
+이렇게 하면 프래그먼트의 색상을 정하기 위해 직접 프래그먼트에 색상값을 할당하지 않고, 샘플러(sampler)가 판단하기에 프래그먼트의 위치에 가장 잘 맞아 떨어진다고 여겨지는 **텍셀**(**texel, 텍스쳐 내부에 있는 픽셀**)값에 따라서 프래그먼트의 색상값을 계산해냅니다.
 
 ## 텍스쳐를 입힌 정육면체 그리기
 

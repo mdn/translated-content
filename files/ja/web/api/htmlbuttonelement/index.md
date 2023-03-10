@@ -2,6 +2,7 @@
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLButtonElement`** インターフェイスは、（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて) {{HTMLElement("button")}} 要素を操作するためのプロパティやメソッドを提供します。

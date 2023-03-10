@@ -2,14 +2,15 @@
 title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
 ---
+
 {{APIRef("HTML DOM")}}
 
-`HTMLCollection.item()` 由位置获取元素.
+`HTMLCollection.item()` 由位置获取元素。
 
 ### 参数
 
 - index
-  - : 想要被返回的 Node 的位置. 元素在 HTML Collection 中的顺序和他们在源文档的顺序保持一致。
+  - : 想要被返回的 Node 的位置。元素在 HTML Collection 中的顺序和他们在源文档的顺序保持一致。
 
 ### 返回值
 
@@ -17,7 +18,7 @@ slug: Web/API/HTMLCollection/item
 
 ## Description
 
-HTMLCollection 中 item( )方法返回一个编号的元素 ，在 JavaScript 中把 HTMLCollection 当成是一个是数组并用数组符号去索引十分简单。
+HTMLCollection 中 `item()` 方法返回一个编号的元素，在 JavaScript 中把 HTMLCollection 当成是一个是数组并用数组符号去索引十分简单。
 
 ## Example
 

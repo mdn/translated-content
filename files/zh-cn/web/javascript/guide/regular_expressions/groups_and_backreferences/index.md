@@ -3,6 +3,7 @@ title: Groups and ranges
 slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 组和范围表示表达式字符的 组和范围
@@ -51,8 +52,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
         <p>
           例如，<code>[\w-]</code> 是字符集 \w 和
           “-”（连字符）的并集，与这种写法一样：
-          <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配 “b”, 在
-          "chop"中匹配 “c”, 在 "non-profit" 中匹配 "n"。
+          <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配“b”, 在
+          "chop"中匹配“c”, 在 "non-profit" 中匹配 "n"。
         </p>
       </td>
     </tr>
@@ -82,7 +83,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td><code>(<em>x</em>)</code></td>
       <td>
         <p>
-          <strong>捕获组: </strong>匹配 x
+          <strong>捕获组：</strong>匹配 x
           并记住匹配项。例如，/(foo)/匹配并记住“foo bar”中的“foo”
         </p>
         <p>
@@ -97,14 +98,14 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
         <p>
           <code
             ><a
-              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
+              href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match"
               >String.match()</a
             ></code
           >
           不会返回组，如果设置了 <code>/.../g</code> 标志。但是，您仍然可以使用
           <code
             ><a
-              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
+              href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
               >String.matchAll()</a
             ></code
           >
@@ -126,9 +127,9 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code
             >/apple(,)\sorange\1/</code
           >
-          匹配 “apple，orange，cherry，peach” 中的 "apple，orange，"， 其中
-          <code>\1</code> 引用了 之前使用 <code>（）</code> 捕获的
-          <code>，</code>
+          匹配“apple, orange, cherry, peach”中的 "apple, orange,"，其中
+          <code>\1</code> 引用了 之前使用 <code>()</code> 捕获的
+          <code>,</code>
         </p>
       </td>
     </tr>
@@ -136,15 +137,15 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td><code>(?&#x3C;Name>x)</code></td>
       <td>
         <p>
-          <strong>具名捕获组: </strong>匹配"x"并将其存储在返回的匹配项的 groups
+          <strong>具名捕获组：</strong>匹配"x"并将其存储在返回的匹配项的 groups
           属性中，该属性位于<code>&#x3C;Name></code>指定的名称下。尖括号 (<code
             >&#x3C;</code
           >
           和 <code>></code>) 用于组名。
         </p>
         <p>
-          例如，使用正则 <code>/-(?&#x3C;customName>\w)/</code> 匹配 “web-doc”
-          中的 “d”
+          例如，使用正则 <code>/-(?&#x3C;customName>\w)/</code> 匹配“web-doc”
+          中的“d”
         </p>
         <p>
           <code
@@ -157,7 +158,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
     <tr>
       <td><code>(?:<em>x</em>)</code></td>
       <td>
-        <strong>非捕获组: </strong>匹配
+        <strong>非捕获组：</strong>匹配
         “x”，但不记得匹配。不能从结果数组的元素中收回匹配的子字符串 (<code
           >[1], ..., [n]</code
         >) or from the predefined <code>RegExp</code> object's properties (<code
@@ -168,19 +169,9 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   </tbody>
 </table>
 
-## 一些例子
+## 示例
 
-### 计算元音数
-
-```js
-var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiouy]/g;
-
-console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 25
-```
-
-### 使用 组
+### 使用组
 
 ```js
 let personList = `First_Name: John, Last_Name: Doe
@@ -212,7 +203,7 @@ do {
 
 > **备注：** 并不是所有的浏览器都支持这个功能; 参考兼容表： [compatibility table](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility).
 
-## 另请参阅
+## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
 

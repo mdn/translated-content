@@ -1,13 +1,8 @@
 ---
 title: ArrayBuffer() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer()`** コンストラクターは {{jsxref("ArrayBuffer")}} オブジェクトを生成するために使用されます。
@@ -60,9 +55,7 @@ var view   = new Int32Array(buffer);
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

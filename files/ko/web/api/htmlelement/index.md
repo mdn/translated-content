@@ -1,16 +1,11 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement`** 인터페이스는 모든 종류의 [HTML](/ko/docs/Web/HTML "/en-US/docs/Web/HTML") 요소를 나타냅니다. 일부 요소는 이 인터페이스를 직접 구현하지만 나머지 요소는 `HTMLElement`를 상속한 자식 인터페이스를 구현합니다.
+**`HTMLElement`** 인터페이스는 모든 종류의 [HTML](/ko/docs/Web/HTML) 요소를 나타냅니다. 일부 요소는 이 인터페이스를 직접 구현하지만 나머지 요소는 `HTMLElement`를 상속한 자식 인터페이스를 구현합니다.
 
 {{InheritanceDiagram}}
 
@@ -73,7 +68,7 @@ _부모인 {{domxref("Element")}}의 속성을 상속합니다. {{domxref("Globa
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : {{domxref("HTMLPropertiesCollection")}}… 을 반환합니다.
 - {{domxref("HTMLElement.spellcheck")}}
-  - : [철자 검사](/ko/docs/Web/HTML/Global_attributes/spellcheck "en/Controlling_spell_checking_in_HTML_forms")를 제어하는 {{jsxref("Boolean")}} 입니다. 모든 HTML 요소에 존재하지만, 모두에 대해 적용되지는 않습니다.
+  - : [철자 검사](/ko/docs/Web/HTML/Global_attributes/spellcheck)를 제어하는 {{jsxref("Boolean")}} 입니다. 모든 HTML 요소에 존재하지만, 모두에 대해 적용되지는 않습니다.
 - {{domxref("HTMLElement.style")}}
   - : 요소의 스타일 속성의 정의를 나타내는 {{domxref("CSSStyleDeclaration")}} 객체입니다.
 - {{domxref("HTMLElement.tabIndex")}}
@@ -123,80 +118,80 @@ _부모인 {{domxref("Element")}}의 메서드를 상속합니다._
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`invalid`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/invalid_event)
+- [`invalid`](/en-US/docs/Web/API/HTMLElement/invalid_event)
   - : Fired when an element does not satisfy its constraints during constraint validation.
-    Also available via the [`oninvalid`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninvalid) property.
+    Also available via the [`oninvalid`](/en-US/docs/Web/API/GlobalEventHandlers/oninvalid) property.
 
 ### Animation events
 
-- [`animationcancel`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationcancel_event)
+- [`animationcancel`](/en-US/docs/Web/API/HTMLElement/animationcancel_event)
   - : Fired when an animation unexpectedly aborts.
-    Also available via the [`onanimationcancel`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel) property.
-- [`animationend`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationend_event)
+    Also available via the [`onanimationcancel`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel) property.
+- [`animationend`](/en-US/docs/Web/API/HTMLElement/animationend_event)
   - : Fired when an animation has completed normally.
-    Also available via the [`onanimationend`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationend) property.
-- [`animationiteration`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationiteration_event)
+    Also available via the [`onanimationend`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationend) property.
+- [`animationiteration`](/en-US/docs/Web/API/HTMLElement/animationiteration_event)
   - : Fired when an animation iteration has completed.
-    Also available via the [`onanimationiteration`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration) property.
-- [`animationstart`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationstart_event)
+    Also available via the [`onanimationiteration`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration) property.
+- [`animationstart`](/en-US/docs/Web/API/HTMLElement/animationstart_event)
   - : Fired when an animation starts.
-    Also available via the [`onanimationstart`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart) property.
+    Also available via the [`onanimationstart`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart) property.
 
 ### Input events
 
-- [`beforeinput`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforeinput_event)
+- [`beforeinput`](/en-US/docs/Web/API/HTMLElement/beforeinput_event)
   - : Fired when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified.
-- [`input`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
   - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
-    Also available via the [`oninput`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput) property.
+    Also available via the [`oninput`](/en-US/docs/Web/API/GlobalEventHandlers/oninput) property.
 
 ### Pointer events
 
-- [`gotpointercapture`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - : Fired when an element captures a pointer using [`setPointerCapture()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/setPointerCapture).
-    Also available via the [`ongotpointercapture`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture) property.
-- [`lostpointercapture`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
+  - : Fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
+    Also available via the [`ongotpointercapture`](/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture) property.
+- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
   - : Fired when a [captured pointer](/ko/docs/Web/API/Pointer_events#Pointer_capture) is released.
-    Also available via the [`onlostpointercapture`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture) property.
-- [`pointercancel`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointercancel_event)
+    Also available via the [`onlostpointercapture`](/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture) property.
+- [`pointercancel`](/en-US/docs/Web/API/HTMLElement/pointercancel_event)
   - : Fired when a pointer event is canceled.
-    Also available via the [`onpointercancel`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel) property.
-- [`pointerdown`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointerdown_event)
+    Also available via the [`onpointercancel`](/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel) property.
+- [`pointerdown`](/en-US/docs/Web/API/HTMLElement/pointerdown_event)
   - : Fired when a pointer becomes active.
-    Also available via the [`onpointerdown`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown) property.
-- [`pointerenter`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointerenter_event)
+    Also available via the [`onpointerdown`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown) property.
+- [`pointerenter`](/en-US/docs/Web/API/HTMLElement/pointerenter_event)
   - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-    Also available via the [`onpointerenter`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter) property.
-- [`pointerleave`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointerleave_event)
+    Also available via the [`onpointerenter`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter) property.
+- [`pointerleave`](/en-US/docs/Web/API/HTMLElement/pointerleave_event)
   - : Fired when a pointer is moved out of the hit test boundaries of an element.
-    Also available via the [`onpointerleave`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave) property.
-- [`pointermove`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointermove_event)
+    Also available via the [`onpointerleave`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave) property.
+- [`pointermove`](/en-US/docs/Web/API/HTMLElement/pointermove_event)
   - : Fired when a pointer changes coordinates.
-    Also available via the [`onpointermove`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointermove) property.
-- [`pointerout`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointerout_event)
+    Also available via the [`onpointermove`](/en-US/docs/Web/API/GlobalEventHandlers/onpointermove) property.
+- [`pointerout`](/en-US/docs/Web/API/HTMLElement/pointerout_event)
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-    Also available via the [`onpointerout`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout) property.
-- [`pointerover`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointerover_event)
+    Also available via the [`onpointerout`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerout) property.
+- [`pointerover`](/en-US/docs/Web/API/HTMLElement/pointerover_event)
   - : Fired when a pointer is moved into an element's hit test boundaries.
-    Also available via the [`onpointerover`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerover) property.
-- [`pointerup`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointerup_event)
+    Also available via the [`onpointerover`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerover) property.
+- [`pointerup`](/en-US/docs/Web/API/HTMLElement/pointerup_event)
   - : Fired when a pointer is no longer active.
-    Also available via the [`onpointerup`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerup) property.
+    Also available via the [`onpointerup`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerup) property.
 
 ### Transition events
 
-- [`transitioncancel`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/transitioncancel_event)
+- [`transitioncancel`](/en-US/docs/Web/API/HTMLElement/transitioncancel_event)
   - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) is canceled.
-    Also available via the [`ontransitioncancel`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel) property.
-- [`transitionend`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/transitionend_event)
+    Also available via the [`ontransitioncancel`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel) property.
+- [`transitionend`](/en-US/docs/Web/API/HTMLElement/transitionend_event)
   - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) has completed.
-    Also available via the [`ontransitionend`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend) property.
-- [`transitionrun`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/transitionrun_event)
+    Also available via the [`ontransitionend`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend) property.
+- [`transitionrun`](/en-US/docs/Web/API/HTMLElement/transitionrun_event)
   - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) is first created.
-    Also available via the [`ontransitionrun`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun) property.
-- [`transitionstart`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/transitionstart_event)
+    Also available via the [`ontransitionrun`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun) property.
+- [`transitionstart`](/en-US/docs/Web/API/HTMLElement/transitionstart_event)
   - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) has actually started.
-    Also available via the [`ontransitionstart`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) property.
+    Also available via the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) property.
 
 ## 명세
 

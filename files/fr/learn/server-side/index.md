@@ -13,6 +13,7 @@ tags:
   - TopicStub
 translation_of: Learn/Server-side
 ---
+
 {{LearnSidebar}}
 
 Le sujet abordant les sites **web dynamiques / la programmation coté serveur** est une série de modules vous montrant comment créer un site web dynamique (sites web intereagissant avec vous de manière à vous donner des informations personnelles en réponse aux requêtes HTTP). Les modules fournissent une introduction universelle à la programmation coté serveur à travers des guides spécifiques pour les debutants vous montrant comment vous servir des infrastructure d'application (aussi appelé frameworks) Django (fait en Python) et Express(fait en Node.js/JavaScript) afin de créer des applications basiques.

@@ -1,15 +1,8 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Prototype
-  - RelativeTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
 ---
+
 {{JSRef}}
 
 **`Intl.RelativeTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮したカスタム書式設定に使用できる相対時間書式を部品単位で表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
@@ -59,13 +52,11 @@ rtf.formatToParts(100, "day");
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                               | 状態      | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---- |
-| {{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.prototype.formatToParts', 'RelativeTimeFormat.formatToParts()')}} | 第 4 段階 |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}
+{{Compat}}
 
 ## 関連情報
 

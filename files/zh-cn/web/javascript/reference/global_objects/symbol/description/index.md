@@ -2,6 +2,7 @@
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
 ---
+
 {{JSRef}}
 
 **`description`** 是一个只读属性，它会返回 {{jsxref("Symbol")}} 对象的可选描述的字符串。
@@ -28,7 +29,7 @@ Symbol('desc').description;  // "desc"
 Symbol('').description;      // ""
 Symbol().description;        // undefined
 
-// well-known symbols
+// 内置通用（well-known）symbol
 Symbol.iterator.toString();  // "Symbol(Symbol.iterator)"
 Symbol.iterator.description; // "Symbol.iterator"
 

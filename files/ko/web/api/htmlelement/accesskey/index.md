@@ -1,18 +1,6 @@
 ---
 title: Element.accessKey
 slug: Web/API/HTMLElement/accessKey
-tags:
-  - API
-  - Access Keys
-  - DOM
-  - Hotkeys
-  - NeedsContent
-  - 레퍼런스
-  - 속성
-  - 엘리먼트
-  - 키보드 단축키
-translation_of: Web/API/HTMLElement/accessKey
-translation_of_original: Web/API/Element/accessKey
 original_slug: Web/API/Element/accessKey
 ---
 {{APIRef("DOM")}}

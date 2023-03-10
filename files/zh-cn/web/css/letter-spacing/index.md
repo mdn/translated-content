@@ -2,9 +2,10 @@
 title: letter-spacing
 slug: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
-`CSS` 的 `letter-spacing` 属性用于设置文本字符的间距表现。
+`CSS` 的 `letter-spacing` 属性用于设置文本字符的间距表现。在渲染文本时添加到字符之间的自然间距中。`letter-spacing` 的正值会导致字符分布得更远，而 `letter-spacing` 的负值会使字符更接近。
 
 {{EmbedInteractiveExample("pages/css/letter-spacing.html")}}
 
@@ -28,7 +29,7 @@ letter-spacing: unset;
 ### 值
 
 - `normal`
-  - : 此间距是按照当前字体的正常间距确定的。和 `0` 不同的是，{{glossary("user agent", "用户代理")}}根据此属性来确定文字的默认对齐方式。
+  - : 此间距是按照当前字体的正常间距确定的。和 `0` 不同的是，`normal` 会让{{glossary("user agent", "用户代理")}}调整文字之间空间来对齐文字。
 - {{cssxref("&lt;length&gt;")}}
   - : 指定文字间的间距以替代默认间距。可以是负值，但有可能会出现 implementation 限制。用户代理不会在此基础上进一步增加或缩减间距来对齐文字。
 
@@ -60,7 +61,7 @@ letter-spacing: unset;
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', 440, 185) }}
+{{ EmbedLiveSample('示例', 440, 185) }}
 
 ## 可解决的问题
 
@@ -74,7 +75,7 @@ A large positive or negative `letter-spacing` value will make the word(s) the st
 
 Legible letter-spacing must be determined on a case-by-case basis, as different font families have different character widths. There is no one value that can ensure all font families automatically maintain their legibility.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 规范
@@ -85,7 +86,7 @@ Legible letter-spacing must be determined on a case-by-case basis, as different 
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.letter-spacing")}}
+{{Compat}}
 
 ## 参见
 

@@ -4,6 +4,7 @@ slug: Web/API/Window/beforeunload_event
 translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
+
 L'événement **`beforeunload`** est déclenché quand la fênetre, ou le document, et leurs resources sont sur le point d'être déchargés.
 
 Lorsqu'une chaîne de caractères est assignée à la propriété `returnValue` de {{domxref("Event")}}, une boîte de dialogue apparaît demandant confirmation avant de quitter la page (voir exemple plus bas). Certains navigateurs affichent la valeur retournée, alors que d'autres affichent leur propre message. Si aucune valeur n'est fournie, l'événement est traité silencieusement.
@@ -81,9 +82,9 @@ Noter aussi que de nombreux navigateurs ignorent le résultat de l'événement (
 
 ## Voir aussi
 
-- {{Event("DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("unload")}}
+- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
+- [`load`](/fr//docs/Web/API/Window/load_event)
+- [`unload`](/fr/docs/Web/API/Window/unload_event)
 - [Unloading Documents — Prompt to unload a document](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
 - [Enlever les messages personnalisés dans les boîtes de dialogues onbeforeload après Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeload_dialogs)

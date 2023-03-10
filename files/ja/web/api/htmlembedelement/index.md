@@ -2,11 +2,12 @@
 title: HTMLEmbedElement
 slug: Web/API/HTMLEmbedElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLEmbedElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて） {{HTMLElement("embed")}} 要素を操作するための特別なプロパティを提供します。
 
-> **Note:** このトピックでは、標準規格で定義されている `HTMLEmbedElement` インターフェイスについて説明します。それ以前の、標準化されていない版ののインターフェースは扱いません。
+> **メモ:** このトピックでは、標準規格で定義されている `HTMLEmbedElement` インターフェイスについて説明します。それ以前の、標準化されていない版ののインターフェースは扱いません。
 
 {{InheritanceDiagram}}
 

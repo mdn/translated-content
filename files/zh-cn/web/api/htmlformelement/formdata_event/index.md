@@ -2,9 +2,10 @@
 title: GlobalEventHandlers.onformdata
 slug: Web/API/HTMLFormElement/formdata_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
-{{domxref("GlobalEventHandlers")}} 混入对象 (mixin) 的属性**`onformdata`** 是用于处理 {{event("formdata")}} 事件的，它在整个列表展示所构建的表单数据之后被触发。触发会发生在表单发送时，但也可能由对某个{{domxref("FormData.FormData", "FormData()")}} 结构体的调用所触发。`onformdata` 在 {{domxref("HTMLFormElement")}}上有效。
+{{domxref("GlobalEventHandlers")}} 混入对象的属性 **`onformdata`** 是用于处理 `formdata` 事件的，它在整个列表展示所构建的表单数据之后被触发。触发会发生在表单发送时，但也可能由对某个{{domxref("FormData.FormData", "FormData()")}} 结构体的调用所触发。`onformdata` 在 {{domxref("HTMLFormElement")}}上有效。
 
 ## 语法
 
@@ -61,6 +62,6 @@ formElem.onformdata = (e) => {
 
 ## 另见
 
-- [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
+- [`formdata` event](/zh-CN/docs/Web/API/HTMLFormElement/formdata_event)
 - {{domxref("FormDataEvent")}}
-- [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData Objects](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)

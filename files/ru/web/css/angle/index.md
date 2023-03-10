@@ -7,6 +7,7 @@ tags:
   - Тип данных CSS
 translation_of: Web/CSS/angle
 ---
+
 {{ CSSRef() }}
 
 [Тип данных](/ru/docs/Web/CSS/CSS_Types) [CSS](/ru/docs/Web/CSS) **`<angle>`** представляет собой значение угла, выраженное в градусах, градах, радианах или оборотах. Он используется, например, в {{cssxref ("&lt;gradient&gt;")}} и в некоторых функциях {{cssxref ("transform")}}.
@@ -32,11 +33,11 @@ translation_of: Web/CSS/angle
 
 ## Примеры
 
-| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | Прямой угол: ` 90deg = 100grad = 0.25turn``≈`` 1.5708rad  `                               |
+| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | Прямой угол: `90deg = 100grad = 0.25turn ≈ 1.5708rad`                               |
 | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | Развёрнутый угол: ` 180deg = 200grad = 0.5turn`` ``≈`` 3.1416rad  `                       |
-| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | Прямой угол (против часовой стрелки): `-90deg = -100grad = -0.25turn` ` ≈`` -1.5708rad  ` |
-| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | Нулевой угол: ` 0deg = 0grad = 0turn`` ``=`` 0rad  `                                      |
+| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | Развёрнутый угол: `180deg = 200grad = 0.5turn ≈ 3.1416rad`                       |
+| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | Прямой угол (против часовой стрелки): `-90deg = -100grad = -0.25turn ≈ -1.5708rad` |
+| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | Нулевой угол: `0deg = 0grad = 0turn = 0rad`                                      |
 
 ## Спецификации
 

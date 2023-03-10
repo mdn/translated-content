@@ -2,6 +2,7 @@
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
+
 {{JSRef}}
 
 **`Math.hypot()`** 函数返回所有参数的平方和的平方根，即：
@@ -31,7 +32,7 @@ Math.hypot([value1[,value2, ...]])
 
 本函数比 `Math.sqrt()` 更简单也更快，你只需要调用 `Math.hypot(v1, v2)` 或 `Math.hypot(v1, v2, v3, v4, ...)`。
 
-它还避免了幅值过大的问题。 JS 中最大的双精度浮点数是 `Number.MAX_VALUE = 1.797...e+308`。如果你的数字比约 1e154 大，计算其平方值会返回 Infinity，使你的结果出现问题。比如，`Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity`。如果你改用 `hypot()` 函数，你可以得到正确的答案：`Math.hypot(1e200, 1e200) = 1.4142...e+200`。在数字非常小的时候同样如此，比如 `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`，但 ` Math.hypot(1e-200, 1e-200) =``1.4142...e-200 ` 则是正确的结果。
+它还避免了幅值过大的问题。JS 中最大的双精度浮点数是 `Number.MAX_VALUE = 1.797...e+308`。如果你的数字比约 1e154 大，计算其平方值会返回 Infinity，使你的结果出现问题。比如，`Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity`。如果你改用 `hypot()` 函数，你可以得到正确的答案：`Math.hypot(1e200, 1e200) = 1.4142...e+200`。在数字非常小的时候同样如此，比如 `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`，但 `Math.hypot(1e-200, 1e-200) = 1.4142...e-200` 则是正确的结果。
 
 由于 `hypot` 是 `Math` 的静态方法，所以应该以 `Math.hypot()`的方式使用，而不是作为你创建的 `Math` 对象的属性（`Math` 不是一个构造函数）。
 

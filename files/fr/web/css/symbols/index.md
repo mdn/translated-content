@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/symbols()
 original_slug: Web/CSS/symbols()
 ---
+
 {{CSSRef}}
 
 La fonction **`symbols()`** permet de définir des styles pour les compteurs en ligne, directement comme valeur de la propriété CSS. À la différence des styles définis avec {{cssxref("@counter-style")}}, ces styles sont anonymes. La fonction `symbols()` ne possède pas toute la flexibilité offerte par la règle @ {{cssxref("@counter-style")}} mais peut s'avérer utile dans des cas où le style nécessaire n'est utilisé qu'une seule fois et où il n'est pas nécessaire d'utiliser toutes les options fournies par {{cssxref("@counter-style")}}.
@@ -54,9 +55,7 @@ ol {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                       | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#symbols-function', 'symbols()')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

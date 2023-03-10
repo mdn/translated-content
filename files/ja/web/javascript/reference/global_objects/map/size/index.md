@@ -1,13 +1,10 @@
 ---
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/size
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
+
 {{JSRef}}
 
 **`size`** アクセサープロパティは、 {{jsxref("Map")}} オブジェクトにある要素の数を返します。
@@ -23,23 +20,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/size
 ### size の使用
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set('a', 'alpha');
 myMap.set('b', 'beta');
 myMap.set('g', 'gamma');
 
-myMap.size // 3
+console.log(myMap.size); // 3
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-map.prototype.size', 'Map.prototype.size')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Map.size")}}
+{{Compat}}
 
 ## 関連情報
 

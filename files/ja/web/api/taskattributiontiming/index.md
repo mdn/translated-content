@@ -2,6 +2,7 @@
 title: TaskAttributionTiming
 slug: Web/API/TaskAttributionTiming
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 [Long Tasks API](/ja/docs/Web/API/Long_Tasks_API) の **`TaskAttributionTiming`** インターフェイスは、長いタスクに関連する作業とそれに関連するフレームコンテキストに関する情報を返します。 コンテナとも呼ばれるフレームコンテキストは、全体として長いタスクに関係している iframe、embed、object です。
@@ -21,9 +22,7 @@ slug: Web/API/TaskAttributionTiming
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#sec-TaskAttributionTiming','TaskAttributionTiming')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

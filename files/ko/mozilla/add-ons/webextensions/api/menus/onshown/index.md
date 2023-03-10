@@ -1,9 +1,9 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has shown a menu.
@@ -96,7 +96,7 @@ Events have three functions:
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.menus.onShown", 10)}}
+{{Compat}}
 
 ## 예제
 

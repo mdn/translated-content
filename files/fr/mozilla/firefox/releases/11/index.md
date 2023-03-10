@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/11
 original_slug: Mozilla/Firefox/Versions/11
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit des informations sur les nouvelles fonctionnalités et les principaux bugs corrigés, ainsi que des liens vers une documentation plus détaillée pour les développeurs web et d'extensions.

@@ -1,16 +1,8 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
-tags:
-  - Encoding
-  - JavaScript
-  - Method
-  - Text
-  - URI
-  - URL
-  - encodeURI
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 **`encodeURI()`** 関数は、{{glossary("URI")}} (Uniform Resource Identifier; 統一資源識別子) をエンコードし、各文字のインスタンスをそれぞれ {{glossary("UTF-8")}} 符号の文字を表す 1 個から 4 個のエスケープシーケンスに置き換えます (サロゲート文字のペアのみ 4 個のエスケープシーケンスになります)。
@@ -99,9 +91,7 @@ function fixedEncodeURI(str) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-encodeuri-uri', 'encodeURI')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

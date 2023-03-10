@@ -2,6 +2,7 @@
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`scrollbar-color`**该[CSS](/zh-CN/docs/Web/CSS)属性设置滚动条轨道和拇指的颜色
@@ -12,7 +13,7 @@ slug: Web/CSS/scrollbar-color
 
 {{CSSInfo}}
 
-## 句法
+## 语法
 
 ```css
 /* Keyword values */
@@ -49,7 +50,7 @@ scrollbar-color: unset;
 
 {{CSSSyntax}}
 
-## 例子
+## 示例
 
 ### CSS
 
@@ -70,7 +71,7 @@ scrollbar-color: unset;
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 无障碍问题
 

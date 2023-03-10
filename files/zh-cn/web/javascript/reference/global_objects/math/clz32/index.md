@@ -2,6 +2,7 @@
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -23,7 +24,7 @@ Math.clz32 (x)
 
 "clz32" 是 CountLeadingZeroes32 的缩写。
 
-如果 `x` 不是数字类型，则它首先会被转换成数字类型，然后再转成 32 位无符号整形数字.
+如果 `x` 不是数字类型，则它首先会被转换成数字类型，然后再转成 32 位无符号整形数字。
 
 如果转换后的 32 位无符号整形数字是 `0`, 则返回 `32`, 因为此时所有位上都是 `0`.
 

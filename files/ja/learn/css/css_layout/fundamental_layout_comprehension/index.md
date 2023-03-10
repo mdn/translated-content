@@ -2,6 +2,7 @@
 title: 基礎的なレイアウトの理解
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
 このモジュールを乗り越えてきたならば、今日 CSS レイアウトを行うために知っておくべきことや、より古い CSS を使って作業するために必要なことの基本についてはすでに説明しているはずです。 このタスクでは、さまざまなテクニックを使用して簡単なウェブページレイアウトを作成することによって、あなたの知識の一部をテストします。

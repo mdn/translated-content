@@ -2,6 +2,7 @@
 title: 使用 JSON
 slug: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScript 对象的标准格式，通常用于在网站上表示和传输数据（例如从服务器向客户端发送一些数据，因此可以将其显示在网页上）。您会经常遇到它，所以在本文中，我们向您提供使用 JavaScript 处理 JSON 的所有工作，包括访问 JSON 对象中的数据项并编写自己的 JSON。
@@ -12,11 +13,11 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
       <th scope="row">前提：</th>
       <td>
         计算机基础知识，HTML 和 CSS 基础 (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> and
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >) 和 JS 面向对象基础 (see
-        <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >)。
       </td>
@@ -32,13 +33,13 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
 
 {{glossary("JSON")}} 是一种按照 JavaScript 对象语法的数据格式，这是 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford) 推广的。虽然它是基于 JavaScript 语法，但它独立于 JavaScript，这也是为什么许多程序环境能够读取（解读）和生成 JSON。
 
-JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中的数据，后者用于通过网络传输 JSON 数据。 这不是一个大事件——JavaScript 提供一个全局的 可访问的 [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象来对这两种数据进行转换。
+JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中的数据，后者用于通过网络传输 JSON 数据。这不是一个大事件——JavaScript 提供一个全局的 可访问的 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象来对这两种数据进行转换。
 
-一个 JSON 对象可以被储存在它自己的文件中，这基本上就是一个文本文件，扩展名为 `.json`， 还有 {{glossary("MIME type")}} 用于 `application/json`.
+一个 JSON 对象可以被储存在它自己的文件中，这基本上就是一个文本文件，扩展名为 `.json`，还有 {{glossary("MIME type")}} 用于 `application/json`.
 
 ### JSON 结构
 
-我们已经可以推测出 JSON 对象就是基于 JavaScript 对象，而且这几乎是正确的。您可以把 JavaScript 对象原原本本的写入 JSON 数据——字符串，数字，数组，布尔还有其它的字面值对象。这允许您构造出一个对象树，如下：
+我们已经可以推测出 JSON 对象就是基于 JavaScript 对象，而且这几乎是正确的。您可以把 JavaScript 对象原原本本的写入 JSON 数据——字符串，数字，数组，布尔还有其他的字面值对象。这允许您构造出一个对象树，如下：
 
 ```json
 {
@@ -84,7 +85,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 }
 ```
 
-如果我们要加载对象进入 JavaScript 程序，以保存为一个名为 `superHeroes` 对象为例，我们使用 . 或 \[] 访问对象内的数据（关于。和 \[] 概念，见 [对象基础](/en-US/docs/Learn/JavaScript/Objects/Basics) ）。如：
+如果我们要加载对象进入 JavaScript 程序，以保存为一个名为 `superHeroes` 对象为例，我们使用 . 或 \[] 访问对象内的数据（关于。和 \[] 概念，见 [对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics) ）。如：
 
 ```js
 superHeroes.hometown
@@ -134,7 +135,7 @@ superHeroes["members"][1]["powers"][2]
 ]
 ```
 
-上面是完全合法的 JSON。您只需要通过数组索引就可以访问数组元素，如`[0]["powers"][0]。`
+上面是完全合法的 JSON。您只需要通过数组索引就可以访问数组元素，如 `[0]["powers"][0]`。
 
 ### 其他注意事项
 
@@ -189,18 +190,18 @@ var section = document.querySelector('section');
     var request = new XMLHttpRequest();
     ```
 
-3. 现在我们需要使用 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 函数打开一个新的请求，添加如下代码：
+3. 现在我们需要使用 [`open()`](/zh-CN/docs/Web/API/XMLHttpRequest/open) 函数打开一个新的请求，添加如下代码：
 
     ```js
     request.open('GET', requestURL);
     ```
 
-    这个函数至少含有两个参数，其它的是可选参数。对于示例我们只需要两个强制参数
+    这个函数至少含有两个参数，其他的是可选参数。对于示例我们只需要两个强制参数
 
-    - HTTP 方法，网络连接时使用。这个示例中 [`GET`](/en-US/docs/Web/HTTP/Methods/GET) 就可以了，因为我们只要获得简单的数据。
+    - HTTP 方法，网络连接时使用。这个示例中 [`GET`](/zh-CN/docs/Web/HTTP/Methods/GET) 就可以了，因为我们只要获得简单的数据。
     - URL，用于指向请求的地址。我们使用之前保存的变量。
 
-4. 接下来，添加，两行代码，我们设定 [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) 为 JSON，所以服务器将知道我们想要返回一个 JSON 对象，然后发送请求 :
+4. 接下来，添加，两行代码，我们设定 [`responseType`](/zh-CN/docs/Web/API/XMLHttpRequest/responseType) 为 JSON，所以服务器将知道我们想要返回一个 JSON 对象，然后发送请求 :
 
     ```js
     request.responseType = 'json';
@@ -217,9 +218,9 @@ var section = document.querySelector('section');
     }
     ```
 
-这儿我们保存了相应我们请求的数据 (访问 [`response`](/en-US/docs/Web/API/XMLHttpRequest/response) 属性) 于变量 `superHeroes` ;这个变量现在含有 JSON！我们现在把`superHeroes`传给两个函数，第一个函数将会用正确的数据填充`<header>`，同时第二个函数将创建一个信息卡片，然后把它插入`<section>`中。
+这儿我们保存了相应我们请求的数据 (访问 [`response`](/zh-CN/docs/Web/API/XMLHttpRequest/response) 属性) 于变量 `superHeroes` ;这个变量现在含有 JSON！我们现在把`superHeroes`传给两个函数，第一个函数将会用正确的数据填充`<header>`，同时第二个函数将创建一个信息卡片，然后把它插入`<section>`中。
 
-我们把代码包在事件处理函数中，当请求对象`load`事件触发时执行代码 (`见onload`)，这是因为请求对象`load`事件只有在请求成功时触发；这种方式可以保证事件触发时 `request.response` 是绝对可以访问的。
+我们把代码包在事件处理函数中，当请求对象 `load` 事件触发时执行代码 (见 {{domxref("XMLHttpRequest.load_event", "onload")}})，这是因为请求对象 `load` 事件只有在请求成功时触发；这种方式可以保证事件触发时 `request.response` 是绝对可以访问的。
 
 ### 定位 header
 
@@ -237,7 +238,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-我们称参数为 `jsonObj`，那也是为什么我们要在其中调用 JSON 对象。这儿我们首先使用 `createElement()` 创建了一个 `<h1>` 节点，将它的 [`textContent`](/en-US/docs/Web/API/Node/textContent) 设为 JSON 对象的 `squadName` 属性，然后通过 `appendChild()` 把它加入 `<header>`中。然后我们对段落做了相同的一件事情：创建，设置内容，追加到 `<header>`。唯一的不同在于它的内容设为一个与 JSON 内属性 `homeTown` 和`formed`相关联的字符串。
+我们称参数为 `jsonObj`，那也是为什么我们要在其中调用 JSON 对象。这儿我们首先使用 `createElement()` 创建了一个 `<h1>` 节点，将它的 [`textContent`](/zh-CN/docs/Web/API/Node/textContent) 设为 JSON 对象的 `squadName` 属性，然后通过 `appendChild()` 把它加入 `<header>`中。然后我们对段落做了相同的一件事情：创建，设置内容，追加到 `<header>`。唯一的不同在于它的内容设为一个与 JSON 内属性 `homeTown` 和`formed`相关联的字符串。
 
 ### 创建英雄信息卡片
 
@@ -282,16 +283,16 @@ function showHeroes(jsonObj) {
 
 接下来，我们使用一个循环来，遍历每个元素。对于每一个元素，我们：
 
-1. 创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`s, 和一个 `<ul>。`
+1. 创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`s, 和一个 `<ul>`。
 2. 设置 `<h2>` 为当前英雄的 `name`。
 3. 使用他们的`secretIdentity`, `age`, "Superpowers:" 介绍信息列表 填充三个段落来。
 4. 保存 `powers` 属性于另一个变量 `superPowers`，包含英雄的`superpowers`列表。
 5. 使用另一个循环来遍历当前的英雄的 `superpowers` ，对于每一个元素我们创建`<li>`元素，把`superpower`放进去，然后使用`appendChild()`把 `listItem` 放入`<ul>` 元素中。
-6. 最后一件事情是追加` <h2>,<p>,还有``<ul>进入 ` `<article>` (`myArticle`)。然后将`<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
+6. 最后一件事情是追加 `<h2>`, `<p>`, 还有 `<ul>` 进入 `<article>` (`myArticle`)。然后将 `<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
 
 > **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 代码 (也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) )。
 
-> **备注：** 如果您对访问 JSON 对象的 点/括号标记 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在您的编辑器中打开参考我们的 JS 代码将会有帮助。您还应该参考我们的 [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号符号的更多信息。
+> **备注：** 如果您对访问 JSON 对象的 点/括号标记 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在您的编辑器中打开参考我们的 JS 代码将会有帮助。您还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号符号的更多信息。
 
 ## 对象和文本间的转换
 
@@ -303,8 +304,8 @@ request.responseType = 'json';
 
 但是有时候我们没有那么幸运，我们接收到一些 字符串作为 JSON 数据，然后我们想要将它转换为对象。当我们想要发送 JSON 数据作为信息，我们将需要转换它为字符串，我们经常需要正确的转换数据，幸运的是，这两个问题在 web 环境中是那么普遍以至于浏览器拥有一个内建的 JSON，包含以下两个方法。
 
-- [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): 以文本字符串形式接受 JSON 对象作为参数，并返回相应的对象。
-- [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): 接收一个对象作为参数，返回一个对应的 JSON 字符串。
+- [`parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): 以文本字符串形式接受 JSON 对象作为参数，并返回相应的对象。
+- [`stringify()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): 接收一个对象作为参数，返回一个对应的 JSON 字符串。
 
 您可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作 (见 [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) ，除了返回的是 text，这做了一件与我们之前一模一样的事情，然后使用 `parse()` 来将他转换成为 JavaScript 对象。关键片段如下：
 
@@ -338,9 +339,9 @@ myString
 
 ## 参见
 
-- [JSON object reference page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
-- [XMLHTTPRequest object reference page](/en-US/docs/Web/API/XMLHttpRequest)
-- [Using XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [JSON object reference page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+- [XMLHTTPRequest object reference page](/zh-CN/docs/Web/API/XMLHttpRequest)
+- [Using XMLHTTPRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

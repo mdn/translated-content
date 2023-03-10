@@ -2,6 +2,7 @@
 title: Firefox 23 for developers
 slug: Mozilla/Firefox/Releases/23
 ---
+
 Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリリースされました。このページでは、開発者に影響する Firefox 23 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

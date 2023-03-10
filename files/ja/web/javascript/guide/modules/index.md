@@ -1,14 +1,8 @@
 ---
 title: JavaScript モジュール
 slug: Web/JavaScript/Guide/Modules
-tags:
-  - Guide
-  - JavaScript
-  - Modules
-  - export
-  - impot
-translation_of: Web/JavaScript/Guide/Modules
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 本章では、JavaScript のモジュールを使い始めるために必要なことすべてを紹介します。
@@ -39,7 +33,7 @@ JavaScript のプログラムはとても小さいものから始まりました
 
 このような機能はあまり役に立ちませんが、モジュールの説明が明確になるように意図的に単純にしています。
 
-> **Note:** **注意**: 使用例をダウンロードしてローカル実行する場合、ローカルのウェブサーバー上で実行する必要があります。
+> **メモ:** 使用例をダウンロードしてローカル実行する場合、ローカルのウェブサーバー上で実行する必要があります。
 
 ## 構造の基本的な例
 
@@ -53,7 +47,7 @@ modules/
     square.js
 ```
 
-> **Note:** **注意**: このガイドの使用例のファイル構造は、全て基本的に同一ですので、上記のファイル構造をよく見ることになるでしょう。
+> **メモ:** このガイドの使用例のファイル構造は、全て基本的に同一ですので、上記のファイル構造をよく見ることになるでしょう。
 
 ディレクトリー modules には、次の 2 つのモジュールがあります。
 
@@ -145,7 +139,7 @@ import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 
 このような書き方の動作している例は [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js) にあります。
 
-> **Note:** **注意**: モジュールシステムの中には、ファイルの拡張子やドットを省略できるものがあります (例えば `'/modules/square'`)。このような書き方は、ネイティブの JavaScript モジュールでは動作しません。
+> **メモ:** モジュールシステムの中には、ファイルの拡張子やドットを省略できるものがあります (例えば `'/modules/square'`)。このような書き方は、ネイティブの JavaScript モジュールでは動作しません。
 
 スクリプトへ機能をインポートすると、同じファイル内で定義されているのと同じように使うことができます。次のコードは、`main.js` でインポートに続く部分です。
 
@@ -158,7 +152,7 @@ reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
 
-> **Note:** **注:** インポートされた機能はファイル内で利用できますが、エクスポートされた機能の読み取り専用ビューです。インポートされた変数を変更することはできませんが、`const` と同様にプロパティを変更することはできます。さらに、これらの機能はライブバインディングとしてインポートされます。つまり、`const` と違ってバインディングを変更できなくても値を変更できるということです。
+> **メモ:** インポートされた機能はファイル内で利用できますが、エクスポートされた機能の読み取り専用ビューです。インポートされた変数を変更することはできませんが、`const` と同様にプロパティを変更することはできます。さらに、これらの機能はライブバインディングとしてインポートされます。つまり、`const` と違ってバインディングを変更できなくても値を変更できるということです。
 
 ## HTML にモジュールを適用する
 
@@ -224,7 +218,7 @@ import randomSquare from './modules/square.js';
 import {default as randomSquare} from './modules/square.js';
 ```
 
-> **Note:** **注意**: エクスポートされる項目の名前を変更するために使われる as の文法については、以下の [Renaming imports and exports](#renaming_imports_and_exports) セクションで説明します。
+> **メモ:** エクスポートされる項目の名前を変更するために使われる as の文法については、以下の [Renaming imports and exports](#renaming_imports_and_exports) セクションで説明します。
 
 ## 名前の衝突を避ける
 
@@ -432,7 +426,7 @@ export { Circle } from './shapes/circle.js';
 
 これらは、個々のサブモジュールのエクスポートを取得して、それらを　`shapes.js` モジュールから利用できるようにする効果があります。
 
-> **Note:** **注意**: `shapes.mjs` の中で参照されているエクスポートは、基本的にそのファイルを経由して転送されるだけで、ファイルの中には存在しません。そのため、同じファイルの中でそれらを使ったコードを書くことはできません。
+> **メモ:** `shapes.mjs` の中で参照されているエクスポートは、基本的にそのファイルを経由して転送されるだけで、ファイルの中には存在しません。そのため、同じファイルの中でそれらを使ったコードを書くことはできません。
 
 最後に `main.js` ファイルでは、全てのモジュールのクラスにアクセスするために、次のインポートを書き換えています。
 
@@ -484,7 +478,7 @@ squareBtn.addEventListener('click', () => {
 });
 ```
 
-Promise が fullfilled 状態になったときにモジュールオブジェクトを返し、クラスはそのオブジェクトの部分機能であるため、`Module.Square( ... )` のように `Module.` を追加したコンストラクターにアクセスする必要があります。
+Promise が fulfilled 状態になったときにモジュールオブジェクトを返し、クラスはそのオブジェクトの部分機能であるため、`Module.Square( ... )` のように `Module.` を追加したコンストラクターにアクセスする必要があります。
 
 ## トラブルシューティング
 

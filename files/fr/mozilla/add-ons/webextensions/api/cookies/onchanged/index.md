@@ -13,13 +13,14 @@ tags:
   - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
+
 {{AddonSidebar()}}
 
 L'événement `onChanged` de l'API {{WebExtAPIRef("cookies")}} est déclenché lorsqu'un cookie est défini ou supprimé.
 
 Notez que la mise à jour des propriétés d'un cookie est implémentée en deux étapes :
 
-1. Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un  {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.
+1. Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.
 2. Ensuite, un nouveau cookie est écrit avec les valeurs mises à jour, généralement une seconde notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} `explicite`.
 
 ## Syntaxe
@@ -30,7 +31,7 @@ browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)
 ```
 
-Cet API est également disponible en tant que  `browser.cookies.onChanged.*`.
+Cet API est également disponible en tant que `browser.cookies.onChanged.*`.
 
 Les événements ont trois fonctions :
 
@@ -60,13 +61,13 @@ Les événements ont trois fonctions :
         - `cause`
           - : Une valeur {{WebExtAPIRef('cookies.OnChangedCause')}} représentant la raison sous-jacente de la modification du cookie.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.onChanged")}}
+{{Compat}}
 
 ## Exemples
 
-Cet exemple écoute les événements `onChanged` et enregistre les détails de l'argument  `changeInfo` :
+Cet exemple écoute les événements `onChanged` et enregistre les détails de l'argument `changeInfo` :
 
 ```js
 browser.cookies.onChanged.addListener(function(changeInfo) {
@@ -85,7 +86,8 @@ browser.cookies.onChanged.addListener(function(changeInfo) {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +114,4 @@ browser.cookies.onChanged.addListener(function(changeInfo) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

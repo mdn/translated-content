@@ -1,11 +1,6 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
-tags:
-  - 자바스크립트
-  - 초보자
-  - 학습
-translation_of: Learn/JavaScript/Howto
 ---
 {{LearnSidebar}}
 

@@ -2,6 +2,7 @@
 title: CSS 网格布局和渐进增强
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 ---
+
 {{CSSRef}}
 
 2017 年春天，我们第一次看到像 Grid 这样的核心规范几乎同时发布于像 FireFox，Chrome，Opera，Safari 和 Edge 等各大浏览器中，可虽然常用浏览器的支持意味着我们中的大部分人将很快看到大多数用户拥有 Grid Layout 支持，但也有一些旧的或不支持的浏览器需要应对。在本指南中，我们将介绍各种支持策略。
@@ -37,7 +38,7 @@ Grid 网格前缀被默认禁用是因为存在一些属性不能添加前缀。
 
 ## 我的布局使用 CSS 网格布局安全吗？
 
-无论使用任何前端技术， 是否使用 CSS 网格布局都取决于网站访问者通常使用的浏览器。如果他们更多地使用最新版本地 Firefox，Chrome，Opera 和 Safari，那么在这些浏览器更新之后开始使用 CSS 网格就很有意义了。但是如果你的站点服务于一个更旧浏览器绑定的超市，那目前就没有必要。然而，我的建议是不要根据过去浏览器中新规范的推出方式来进行假设。CSS 网格布局是不同的，这取决它已经处于开发阶段的时间，和不同浏览器厂商为了确保所发布的内容对所有人都能以相同方式工作所做的工作。
+无论使用任何前端技术，是否使用 CSS 网格布局都取决于网站访问者通常使用的浏览器。如果他们更多地使用最新版本地 Firefox，Chrome，Opera 和 Safari，那么在这些浏览器更新之后开始使用 CSS 网格就很有意义了。但是如果你的站点服务于一个更旧浏览器绑定的超市，那目前就没有必要。然而，我的建议是不要根据过去浏览器中新规范的推出方式来进行假设。CSS 网格布局是不同的，这取决它已经处于开发阶段的时间，和不同浏览器厂商为了确保所发布的内容对所有人都能以相同方式工作所做的工作。
 
 ## Starting to use Grid in production
 
@@ -88,7 +89,7 @@ img {
 </div>
 ```
 
-{{ EmbedLiveSample('enhancement_1', '500', '180') }}
+{{ EmbedLiveSample('Floats', '500', '180') }}
 
 The image below shows the media object in a non-supporting browser on the left, and a supporting one on the right:
 
@@ -158,7 +159,7 @@ In this next example, I have a set of floated cards. I have given the cards a {{
 </div>
 ```
 
-{{ EmbedLiveSample('enhancement_2', '550', '400') }}
+{{ EmbedLiveSample('Using feature queries', '550', '400') }}
 
 The example demonstrates the typical problem that we have with floated layouts: if additional content is added to any one card, the layout breaks.
 
@@ -171,6 +172,8 @@ I then enhance the layout using grid. I can turn my {{HTMLElement("ul")}} into a
 ![After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width.](10-float-width-problem.png)
 
 If I reset the width to `auto`, then this will stop the float behavior happening for older browsers. I need to be able to define the width for older browsers, and remove the width for grid supporting browsers. Thanks to [CSS Feature Queries](/zh-CN/docs/Web/CSS/@supports) I can do this, right in my CSS.
+
+### A solution using feature queries
 
 _Feature queries_ will look very familiar if you have ever used a [media query](/zh-CN/docs/Web/CSS/Media_Queries) to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.
 
@@ -258,7 +261,7 @@ I use an `@supports` rule to check for support of `display: grid`. I then do my 
 </div>
 ```
 
-{{ EmbedLiveSample('enhancement_3', '550', '480') }}
+{{ EmbedLiveSample('A solution using feature queries', '550', '480') }}
 
 ## Overwriting other values of `display`
 
@@ -345,7 +348,7 @@ Once again I can use feature queries to overwrite a layout that uses `display: i
 </div>
 ```
 
-{{ EmbedLiveSample('enhancement_4', '500', '480') }}
+{{ EmbedLiveSample('Overwriting other values of display', '500', '480') }}
 
 Once again it is the width on the item we need to address, and then any other properties we want to enhance. In this example I have again used `grid-gap`, rather than margins and negative margins to create my gutters.
 

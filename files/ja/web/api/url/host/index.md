@@ -2,6 +2,7 @@
 title: URL.host
 slug: Web/API/URL/host
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`host`** プロパティは、ホストを含む {{domxref("USVString")}} です。 ホストは、*ホスト名*の後に、URL の*ポート*が空でない場合、`':'`、および URL の*ポート*が続きます。
@@ -35,9 +36,7 @@ var result = url.host // "developer.mozilla.org:4097"
 
 ## 仕様
 
-| 仕様                                                             | 状態                 | コメント |
-| ---------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-host', 'URL.host')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

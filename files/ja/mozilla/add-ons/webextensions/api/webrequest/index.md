@@ -2,6 +2,7 @@
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}
 
 websocket が ws\:// and wss\:// としてリクエストするものも含めた、HTTP リクエスト作成のいろいろなステージでイベントリスナーを追加します。イベントリスナーはリクエストの詳細情報を受け取ったり、リクエストを編集、修正したりします。
@@ -53,7 +54,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 これを行うには、イベント `addListener()` の `extraInfoSpec` の引数に"blocking"の値のオプションを渡す必要があります。これによりリスナーが同期します。このリスナーでは {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} オブジェクトを返すことができ、このオブジェクトは加えた修正を指し示します: 例えば、送信したい修正後のリクエストヘッダーなど。
 
-> **Warning:** Non-HTTP(S) protocols do not currently support `"blocking"` functionality, so modifying these requests is not available at this time. See {{bug(1475832)}} for more details.
+> **警告:** Non-HTTP(S) protocols do not currently support `"blocking"` functionality, so modifying these requests is not available at this time. See {{bug(1475832)}} for more details.
 
 ## セキュリティ情報へのアクセス
 
@@ -129,9 +130,10 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -158,4 +160,4 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

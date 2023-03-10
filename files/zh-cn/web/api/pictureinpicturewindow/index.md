@@ -2,6 +2,7 @@
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 **`PictureInPictureWindow`**接口是一个对象，它可以通过编程的方式获得浮动视频窗口的宽度和高度，并调整浮动视频窗口的大小。
@@ -56,7 +57,7 @@ button.onclick = function() {
 
 ## Browser compatibility
 
-{{Compat("api.PictureInPictureWindow")}}
+{{Compat}}
 
 ## See also
 

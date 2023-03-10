@@ -1,8 +1,8 @@
 ---
-title: 'HTML: 为无障碍提供一个良好的基础'
+title: 'HTML：无障碍的良好基础'
 slug: Learn/Accessibility/HTML
-original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 在网页开发的过程中，用正确的 HTML 标签来表达正确的意图，可以提升网页的无障碍。这篇文章将会详细介绍如何最大化地提升网页的无障碍。
@@ -12,9 +12,9 @@ original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
     <tr>
       <th scope="row">前提：</th>
       <td>
-        有一定的 HTML 基础 (可参阅
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
-        >)，理解<a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
+        有一定的 HTML 基础（可参阅
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
+        >），理解<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
           >什么是无障碍</a
         >。
       </td>
@@ -52,7 +52,7 @@ original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
 
 让我们来继续学习 HTML 语义化实现细则。
 
-> **备注：** 在本地计算机上设置屏幕阅读器是一个不错的主意，因此您可以对下面显示的示例进行一些测试。更多内容请查阅 [Screenreaders guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)。
+> **备注：** 在本地计算机上设置屏幕阅读器是一个不错的主意，因此您可以对下面显示的示例进行一些测试。更多内容请查阅 [Screenreaders guide](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)。
 
 ## 良好的语义
 
@@ -130,7 +130,7 @@ This is the second subsection of my content. I think is more interesting than th
 你使用的语言也会影响无障碍。一般来说，你应该使用不太复杂的清晰语言，不要使用不必要的行话或俚语。这不仅有利于有认知或其他残疾的人；它有利于那些没有用母语写作的读者，年轻人...事实上是每个人！除此之外，你应该尽量避免使用没有被屏幕阅读器清楚读出的语言和字符。例如：
 
 - 如果可以避免的话，不要用破折号。写 5 到 7，来替代 5-7。
-- 展开缩写 — 写 January，来替代 Jan 。
+- 展开缩写 — 写 January，来替代 Jan。
 - 展开首字母缩略词，至少一次或两次。例如写明“超文本标记语言”（Hypertext Markup Language），而不是直接用缩写 HTML。
 
 ### 页面布局
@@ -248,7 +248,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 如果您使用屏幕阅读器阅读更现代的结构示例，则会看到布局标记不再会妨碍内容的读取。它在代码大小方面也更加精简和小巧，这意味着代码更容易维护，并且用户下载的带宽更少（特别适合慢速连接的用户）。
 
-创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅 [此内容部分](/en-US/docs/Web/HTML/Element#Content_sectioning)） - 您只能使用嵌套的 `{{htmlelement("div")}}` 元素创建布局，但最好使用适当的分段元素包裹您的主导航（`{{htmlelement("nav")}}`），`footer` (`{{htmlelement("footer")}}`），重复内容单元 (`{{htmlelement("article")}}`) 等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/)，了解屏幕阅读器的支持是什么样的原理）。
+创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅 [此内容部分](/zh-CN/docs/Web/HTML/Element#Content_sectioning)） - 您只能使用嵌套的 `{{htmlelement("div")}}` 元素创建布局，但最好使用适当的分段元素包裹您的主导航（`{{htmlelement("nav")}}`），`footer` (`{{htmlelement("footer")}}`），重复内容单元 (`{{htmlelement("article")}}`) 等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/)，了解屏幕阅读器的支持是什么样的原理）。
 
 > **备注：** 除了您的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 您可以随时将它放在您想要使用 CSS 的位置，但是您应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
 
@@ -314,7 +314,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 <div data-message="This is from the third button">And me!</div>
 ```
 
-但是不建议使用这样的代码 - 你会立即失去本机键盘的无障碍。但如果你使用了`{{htmlelement("button")}}` 元素，你将可以通过键盘控制。 此外你也将不会获得任何的按钮默认拥有的 CSS 样式。
+但是不建议使用这样的代码 - 你会立即失去本机键盘的无障碍。但如果你使用了`{{htmlelement("button")}}` 元素，你将可以通过键盘控制。此外你也将不会获得任何的按钮默认拥有的 CSS 样式。
 
 #### 重新建立键盘的无障碍
 
@@ -326,7 +326,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 <div data-message="This is from the third button" tabindex="0">And me!</div>
 ```
 
-基本上，`{{htmlattrxref("tabindex")}}` 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。 这里 `tabindex` 有另外两个选项：
+基本上，`{{htmlattrxref("tabindex")}}` 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。这里 `tabindex` 有另外两个选项：
 
 - `tabindex="0"` — 如上所述，该值允许 通常不可放置的元素（tabbable elements）变为可放置的。这是 tabindex 最有用的的地方。
 - `tabindex="-1"` — 这允许 通常不可放置的元素（tabbable elements）以编程的方式接收焦点，例如，通过 JavaScript，或作为链接的目标。
@@ -369,19 +369,19 @@ document.onkeydown = function(e) {
 <p>Whales are really awesome creatures. To find more out about whales, <a href="whales.html">click here</a>.</p>
 ```
 
-> **备注：** 您可以在我们的[创建超链接](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。您还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
+> **备注：** 您可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。您还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
 
 表单标签也很重要，可以让您了解您需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
 
-```html
+```html example-bad
 Fill in your name: <input type="text" id="name" name="name">
-```html
+```
 
 但是，这对于残疾用户来说并不是那么有用。在上面的示例中，没有任何内容将标签与表单输入明确关联。因此如果看不到它，请让用户明确该如何填写。如果您使用某些屏幕阅读器访问该屏幕，则只能按照“编辑文本”（“edit text”）的方式给出说明。
 
 以下是一个更好的例子：
 
-```html
+```html example-good
 <div>
   <label for="name">Fill in your name:</label>
   <input type="text" id="name" name="name">
@@ -432,7 +432,7 @@ Fill in your name: <input type="text" id="name" name="name">
 - 表头使用 `{{htmlelement("th")}}` 元素定义 - 您还可以使用 `scope` 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。
 - `{{htmlelement("caption")}}` 元素和 `<table>` `summary` 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 `<caption>` 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。
 
-> **备注：** 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/en-US/docs/Learn/HTML/Tables/Advanced) 文章。
+> **备注：** 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced) 文章。
 
 ## 文本替代品
 
@@ -466,9 +466,9 @@ Fill in your name: <input type="text" id="name" name="name">
 
 需要考虑的一件事是，你的图片是否在你的内容中有意义，或者它们纯粹是为了视觉装饰，所以没有意义。如果它们是装饰性的，最好将它们包含在页面中作为 CSS 背景图像。
 
-> **备注：** 请阅读 [HTML 中的图片](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) 和 [响应式图片](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
+> **备注：** 请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) 和 [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
 
-如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。 此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
+如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
 
 ![](title-attribute.png)
 
@@ -482,7 +482,7 @@ Fill in your name: <input type="text" id="name" name="name">
 
 在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果您想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“`alt`”不可能实现的。
 
-> **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
+> **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
 
 ### 其他文字替代机制
 
@@ -514,7 +514,7 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 </h3>
 ```
 
-可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像” 等类似的语句）。
+可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像”等类似的语句）。
 
 使用空白“alt”而不包含它的原因是因为如果没有提供“alt”，许多屏幕阅读器会公布整个图像 URL。在上面的示例中，图像充当与其关联的标题的视觉装饰。在这种情况下，以及在图像只是装饰并且没有内容值的情况下，您应该在图像上放置一个空白的“alt”。另一种选择是使用 aria role 属性 `role =“presentation”` - 这也会阻止屏幕阅读器读出替代文本。
 
@@ -525,13 +525,3 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 您现在应该精通编写大多数场合可访问的 HTML。我们的 WAI-ARIA 基础知识文章也将填补这些知识中的一些空白，但本文已经关注了此基础知识。接下来，我们将探索 CSS 和 JavaScript，以及无障碍如何受其好坏影响。
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## 在此模块
-
-- [什么是无障碍 (What is accessibility?)](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [无障碍的良好的基础 (HTML: A good basis for accessibility)](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍的最好练习 (CSS and JavaScript accessibility best practices)](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI_ARIA 基础 (WAI-ARIA basics)](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体的无障碍 (Accessible multimedia)](/en-US/docs/Learn/Accessibility/Multimedia)
-- [移动端的无障碍 (Mobile accessibility)](/en-US/docs/Learn/Accessibility/Mobile)
-- [无障碍问题的解决处理 (Accessibility troubleshooting)](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)

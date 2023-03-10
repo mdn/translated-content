@@ -9,6 +9,7 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/clearResourceTimings
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La méthode **`clearResourceTimings()`** supprime toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « `resource` » du tampon d'entrée de performance et fixe la taille du tampon de données de performance à zéro. Pour définir la taille du tampon de données de performance du navigateur, utilisez la méthode {{domxref("Performance.setResourceTimingBufferSize()")}}.

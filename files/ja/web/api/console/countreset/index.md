@@ -3,8 +3,8 @@ title: console.countReset()
 slug: Web/API/console/countReset
 l10n:
   sourceCommit: 710132ffea066697d23e1978478d36090fb448d7
-
 ---
+
 {{APIRef("Console API")}}
 
 **`console.countReset()`** は {{domxref("console.count()")}} で使われたカウンターをリセットします。

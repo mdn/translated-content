@@ -1,16 +1,8 @@
 ---
 title: TypedArray.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - メソッド
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 ---
+
 {{JSRef}}
 
 **`indexOf()`** メソッドは、指定された要素が型付き配列内で見つかった最初の添字を返し、存在しなければ -1 を返します。このメソッドは {{jsxref("Array.prototype.indexOf()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
@@ -53,9 +45,7 @@ uint8.indexOf(2, -3); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

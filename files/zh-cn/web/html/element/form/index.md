@@ -2,7 +2,8 @@
 title: form
 slug: Web/HTML/Element/form
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<form>` 元素**表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。
 
@@ -34,7 +35,7 @@ slug: Web/HTML/Element/form
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Search_role">search</a></code>, {{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
+   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Search_role">search</a></code>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -62,7 +63,7 @@ slug: Web/HTML/Element/form
     - `words`：自动对每个单词首字母大写。
     - `characters`：自动大写所有的字母。
 - {{htmlattrdef("autocomplete")}}
-  - : 用于指示 input 元素是否能够拥有一个默认值，此默认值是由浏览器自动补全的。此设定可以被属于此表单的子元素的 `autocomplete` 属性覆盖。 可能的值有：
+  - : 用于指示 input 元素是否能够拥有一个默认值，此默认值是由浏览器自动补全的。此设定可以被属于此表单的子元素的 `autocomplete` 属性覆盖。可能的值有：
 
     - `off`：浏览器可能不会自动补全条目（在疑似登录表单中，浏览器倾向于忽略该值，而提供密码自动填充功能，参见 [自动填充属性和登录](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#禁用自动填充)）
     - `on`：浏览器可自动补全条目
@@ -90,7 +91,7 @@ slug: Web/HTML/Element/form
     - `get`：指的是 HTTP [GET 方法](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)；表单数据会附加在 `action` 属性的 URL 中，并以 '?' 作为分隔符，[没有副作用](/zh-CN/docs/Glossary/Idempotent) 时使用这个方法。
     - `dialog`：如果表单在 {{HTMLElement("dialog")}} 元素中，提交时关闭对话框。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 {{htmlattrxref("formmethod", "button")}} 属性覆盖。
 - {{htmlattrdef("novalidate")}}
-  - : 此布尔值属性表示提交表单时不需要验证表单。 如果没有声明该属性（因此表单需要通过验证）。该属性可以被表单中的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 {{htmlattrxref("formnovalidate", "button")}} 属性覆盖。
+  - : 此布尔值属性表示提交表单时不需要验证表单。如果没有声明该属性（因此表单需要通过验证）。该属性可以被表单中的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 {{htmlattrxref("formnovalidate", "button")}} 属性覆盖。
 - {{htmlattrdef("target")}}
   - : 表示在提交表单之后，在哪里显示响应信息。在 HTML 4 中，这是一个 frame 的名字/关键字对。在 HTML5 里，这是一个*浏览上下文* 的名字/关键字（如标签页、窗口或 iframe）。下述关键字有特别含义：
 
@@ -129,7 +130,7 @@ slug: Web/HTML/Element/form
 </form>
 ```
 
-{{ EmbedLiveSample('Examples', '100%', 110) }}
+{{ EmbedLiveSample('示例', '100%', 110) }}
 
 ## 规范
 

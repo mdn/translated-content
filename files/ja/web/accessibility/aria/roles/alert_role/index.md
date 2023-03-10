@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: alert ロール'
-slug: Web/Accessibility/ARIA/Roles/Alert_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Alert_Role
+slug: Web/Accessibility/ARIA/Roles/alert_role
 ---
+
 アラート ([`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert)) ロールは、要素が動的に更新されたことをユーザーに通知するために使用できます。 ロールが追加されると、スクリーンリーダーは更新されたコンテンツの読み上げを即座に開始します。 ユーザーがアラートを閉じることを期待する場合は、代わりにアラートダイアログ ([`alertdialog`](/ja/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role)) ロールを使用するべきです。
 
 ## 説明
@@ -48,10 +44,7 @@ function triggerAlert() {
 
 ## 仕様
 
-| 仕様                                                                         | 状態                                             |
-| ---------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#alert","Alert")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#alert","Alert")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 関連情報
 

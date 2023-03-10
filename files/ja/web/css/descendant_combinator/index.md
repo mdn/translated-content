@@ -1,13 +1,8 @@
 ---
 title: 子孫結合子
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.descendant
-translation_of: Web/CSS/Descendant_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 **子孫結合子** (descendant combinator) — 通常は単一の空白文字 (" ") で表される — は 2 つの CSS セレクターを結合し、 1 つ目のセレクターに一致する要素が祖先 (親、親の親、親の親の親、など) となっている 2 つ目のセレクターに一致します。子孫結合子を利用したセレクターは _子孫セレクター_ と呼ばれます。

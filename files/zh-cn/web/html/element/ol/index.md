@@ -2,7 +2,8 @@
 title: <ol>
 slug: Web/HTML/Element/ol
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<ol>` 元素**表示有序列表，通常渲染为一个带编号的列表。
 
@@ -32,7 +33,7 @@ slug: Web/HTML/Element/ol
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td>{{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -76,7 +77,7 @@ slug: Web/HTML/Element/ol
 
 至于如何确定该选择哪一个列表元素，可以尝试更改列表项的顺序，如果其含义会发生改变，那么就应当使用 {{HTMLElement("ol")}} 元素，否则使用 {{HTMLElement("ul")}} 更合适。
 
-> **备注：** “更改顺序” 时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。
+> **备注：** “更改顺序”时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。
 > 如果只有一个元素，以至于根本不存在什么顺序可言，可能最好先考虑是否应当使用列表元素，以及是否要在列表最后增加一些占位的空项。
 
 ## 示例
@@ -94,7 +95,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("简单示例", 400, 100)}}
 
 ### 使用小写罗马数字编号
 
@@ -108,12 +109,12 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Using_Roman_Numeral_type", 400, 100)}}
+{{EmbedLiveSample("使用小写罗马数字编号", 400, 100)}}
 
 ### 使用 `start` 属性
 
 ```html
-<p>Finishing places of contestants not in the winners’ circle:</p>
+<p>Finishing places of contestants not in the winners' circle:</p>
 
 <ol start="4">
   <li>Speedwalk Stu</li>
@@ -124,7 +125,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Using_the_start_attribute", 400, 100)}}
+{{EmbedLiveSample("使用 start 属性", 400, 100)}}
 
 ### 嵌套列表
 
@@ -144,7 +145,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Nesting_lists", 400, 150)}}
+{{EmbedLiveSample("嵌套列表", 400, 150)}}
 
 ### 嵌套有序列表和无序列表
 
@@ -164,7 +165,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Unordered_list_inside_ordered_list", 400, 150)}}
+{{EmbedLiveSample("嵌套有序列表和无序列表", 400, 150)}}
 
 ## 规范
 
@@ -172,11 +173,11 @@ slug: Web/HTML/Element/ol
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.ol")}}
+{{Compat}}
 
 ## 相关
 
-- 其他列表相关的 HTML 元素: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};
+- 其他列表相关的 HTML 元素：{{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};
 - 对 `<ol>` 元素常用的 CSS 属性：
 
   - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，

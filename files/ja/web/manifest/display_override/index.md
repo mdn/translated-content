@@ -1,14 +1,8 @@
 ---
 title: display_override
 slug: Web/Manifest/display_override
-tags:
-  - マニフェスト
-  - ウェブ
-  - display
-  - display_override
-browser-compat: html.manifest.display_override
-translation_of: Web/Manifest/display_override
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

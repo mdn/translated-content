@@ -2,9 +2,8 @@
 title: border-image-source
 slug: Web/CSS/border-image-source
 ---
-{{CSSRef}}
 
-## Summary
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-image-source`** 用于声明元素的[边框图片（border-image）](/zh-CN/docs/Web/CSS/border-image)的资源
 
@@ -53,4 +52,4 @@ border-image-source: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-image-source")}}
+{{Compat}}

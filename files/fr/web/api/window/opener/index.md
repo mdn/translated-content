@@ -4,6 +4,7 @@ slug: Web/API/Window/opener
 translation_of: Web/API/Window/opener
 browser-compat: api.Window.opener
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`opener`**, rattachée à l'interface [`Window`](/fr/docs/Web/API/Window), renvoie une référence à la fenêtre ayant ouvert la fenêtre courante, que ce soit avec [`open()`](/fr/docs/Web/API/Window/open), ou via une navigation avec un lien doté d'un attribut [`target`](/fr/docs/Web/HTML/Element/a#attr-target).

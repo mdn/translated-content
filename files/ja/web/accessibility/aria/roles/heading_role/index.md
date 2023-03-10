@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: heading ロール'
 slug: Web/Accessibility/ARIA/Roles/heading_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/heading_role
 ---
+
 見出し (`heading`) ロールは、この要素をページやセクションの見出しとして定義します。 ページに構造を与えるために、セクション間の関係を示すレベルも提供するべきです。
 
 ```html
@@ -35,7 +31,7 @@ translation_of: Web/Accessibility/ARIA/Roles/heading_role
 - 属性値の変更
   - : コンテンツを動的に挿入しない限り、通常は必要ありません。 万一そのようなことがあるならば、新しく追加された見出しには、文書構造の残りの部分と整合性のある値を持つ `aria-level` 属性が必要です。
 
-> **Note:** 見出し (`heading`) ロールと `aria-level` を持つ `<div>` または `<span>` を使用する代わりに、ネイティブの `<h1>` から `<h6>` 要素を使用して、このテキストが見出しであり、構造のどの部分を表しているかを示すことを検討してください。
+> **メモ:** 見出し (`heading`) ロールと `aria-level` を持つ `<div>` または `<span>` を使用する代わりに、ネイティブの `<h1>` から `<h6>` 要素を使用して、このテキストが見出しであり、構造のどの部分を表しているかを示すことを検討してください。
 
 ## 例
 
@@ -83,9 +79,7 @@ translation_of: Web/Accessibility/ARIA/Roles/heading_role
 
 ## 仕様
 
-| 仕様                                                     | 状態                     |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#heading","heading")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## 優先順位
 

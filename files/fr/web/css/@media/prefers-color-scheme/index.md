@@ -8,10 +8,11 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
+
 {{CSSRef}}
 
 > **Note :** Si vous avez modifié `privacy.resistFingerprinting` à **vrai**, le paramètre {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} sera redéfini à `light`.
-> Sinon, vous pouvez créer le paramètre numérique `ui.systemUsesDarkTheme` pour redéfinier le comportement par défaut et retourner `light` (valeur : 0), `dark` (valeur : 1), or `no-preference` (valeur : 2). (Firefox retournera`light` si une autre valeur est utilisée.)
+> Sinon, vous pouvez créer le paramètre numérique `ui.systemUsesDarkTheme` pour redéfinier le comportement par défaut et retourner `light` (valeur : 0), `dark` (valeur : 1), or `no-preference` (valeur : 2). (Firefox retournera `light` si une autre valeur est utilisée.)
 
 La caractéristique média **`prefers-color-scheme`** permet de détecter les préférences exprimées par l'utilisateur quant au thème à utiliser (sombre ou clair).
 
@@ -67,13 +68,11 @@ La caractéristique média **`prefers-color-scheme`** permet de détecter les pr
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-color-scheme', 'prefers-color-scheme')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.prefers-color-scheme")}}
+{{Compat}}
 
 ## Voir aussi
 

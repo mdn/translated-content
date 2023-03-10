@@ -2,13 +2,14 @@
 title: Performance
 slug: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 **`Performance`** インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これは High Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、および Resource Timing API によって拡張されています。
 
 このタイプのオブジェクトは読み取り専用属性 {{domxref("window.performance")}} を呼び出すことで取得できます。
 
-> **Note:** このインターフェイスとそのメンバーは、以下に示されている場合を除き、[Web Workers](/ja/docs/Web/API/Web_Workers_API) で利用可能です。 パフォーマンスマーカーと測定値はコンテキストごとにあることにも注意してください。メインスレッド (または他のワーカー) にマークを作成した場合、それを Worker スレッドには表示できません (その逆も同様)。
+> **メモ:** このインターフェイスとそのメンバーは、以下に示されている場合を除き、[Web Workers](/ja/docs/Web/API/Web_Workers_API) で利用可能です。 パフォーマンスマーカーと測定値はコンテキストごとにあることにも注意してください。メインスレッド (または他のワーカー) にマークを作成した場合、それを Worker スレッドには表示できません (その逆も同様)。
 
 ## プロパティ
 
@@ -59,16 +60,7 @@ _`Performance` インターフェイスはメソッドを継承しません。_
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                     | ステータス                                               | コメント                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Highres Time Level 2', '#the-performance-interface', 'toJSON()')}}                                                 | {{Spec2('Highres Time Level 2')}}             | `toJson()` メソッドを定義します。                                                                                                  |
-| {{SpecName('Highres Time', '#the-performance-interface', 'Performance')}}                                                         | {{Spec2('Highres Time')}}                         | `now()` メソッドを定義します。.                                                                                                    |
-| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance')}}                                         | {{Spec2('Navigation Timing')}}                 | `timing` と `navigation` プロパティを定義します。                                                                                  |
-| {{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface', 'Performance extensions')}} | {{Spec2('Performance Timeline Level 2')}} | `getEntries()` インターフェイスを変更します。                                                                                      |
-| {{SpecName('Performance Timeline', '#sec-window.performance-attribute', 'Performance extensions')}}                     | {{Spec2('Performance Timeline')}}             | `getEntries()`、`getEntriesByType()` および `getEntriesByName()` メソッドを定義します。                                            |
-| {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                             | {{Spec2('Resource Timing')}}                     | `clearResourceTimings()` と `setResourceTimingBufferSize()` メソッド、そして `onresourcetimingbufferfull` プロパティを定義します。 |
-| {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                     | {{Spec2('User Timing Level 2')}}             | `mark()`、`clearMark()`、`measure()` および `clearMeasure()` インターフェイスを明確にします。                                      |
-| {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing')}}                         | `mark()`, `clearMark()`, `measure()` および `clearMeasure()` インターフェイスを定義します。                                        |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

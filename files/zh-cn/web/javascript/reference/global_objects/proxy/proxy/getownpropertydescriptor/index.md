@@ -3,6 +3,7 @@ title: handler.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 **`handler.getOwnPropertyDescriptor()`** 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的钩子。

@@ -1,18 +1,8 @@
 ---
 title: リンク先読みの FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
-tags:
-  - Gecko
-  - HTML
-  - HTTP
-  - Link
-  - Necko
-  - Performance
-  - Web Development
-  - 先読み
-  - 移行
-translation_of: Web/HTTP/Link_prefetching_FAQ
 ---
+
 ### リンクの先読みとは?
 
 リンクの先読みとはブラウザーの機能の一つで、ブラウザーのアイドル時間を使って、ユーザーが近い将来に訪問するであろう文書をダウンロードして、予め読み込んでおくことを指します。まず、Web ページの方から先読みのヒントをブラウザーに渡します。そのページの読み込みが完了すると、ブラウザーは黙って指定された文書を先読みし、キャッシュに蓄積しておきます。ユーザーが先読みされている文書を訪問すると、ブラウザーのキャッシュからすぐに提供できます。
@@ -60,7 +50,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 はい。ここで述べているリンクの先読み機能は、既存のウェブ標準に違反していません。実際、HTML 4.01 仕様書では新たなリンク形式の定義が明確に許されています([Section 6.12: Link types を参照](http://www.w3.org/TR/html4/types.html#type-links))。しかし、Mozilla で採用した手法自体はまだ標準化されていません。 Internet Draft を現在準備中です。
 
-この手法の標準化は HTML5 の範囲の一部です。現在のワーキングドラフトの [section §5.11.3.13. Link type "prefetch"](http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) を参照してください。
+この手法の標準化は HTML5 の範囲の一部です。現在のワーキングドラフトの [section §5.11.3.13. Link type "prefetch"](https://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) を参照してください。
 
 ### ブラウザーのアイドル時間はどのように判定されますか?
 
@@ -76,7 +66,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 ### 先読みできるものに何か制限はありますか?
 
-はい。<http://> (と {{ Gecko("1.9.1") }} からは <https://> )URL だけが先読み可能です。（FTP などの）その他のプロトコルはクライアントサイドのキャッシュへの対応が十分でありません。
+はい。<http://> (と Gecko 1.9.1 からは <https://> )URL だけが先読み可能です。（FTP などの）その他のプロトコルはクライアントサイドのキャッシュへの対応が十分でありません。
 
 ### Mozilla は別のホストからも文書を先読みしますか?
 

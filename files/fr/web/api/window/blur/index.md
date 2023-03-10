@@ -8,6 +8,7 @@ tags:
   - Méthode
 translation_of: Web/API/Window/blur
 ---
+
 {{APIRef}}
 
 Éloigne la mise au point de la fenêtre.

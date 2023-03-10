@@ -2,6 +2,7 @@
 title: DOMImplementation
 slug: Web/API/DOMImplementation
 ---
+
 {{ ApiRef("DOM") }}
 
 **`DOMImplementation`** 接口代表了一个对象，这个对象提供了不依赖于任何 document 的方法。这个对象可以通过{{domxref("Document.implementation")}}属性获得
@@ -29,7 +30,7 @@ _没有继承的方法_
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMImplementation")}}
+{{Compat}}
 
 ## See also
 

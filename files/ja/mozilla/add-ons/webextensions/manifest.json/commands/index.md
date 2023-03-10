@@ -2,6 +2,7 @@
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

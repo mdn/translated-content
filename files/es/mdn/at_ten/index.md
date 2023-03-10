@@ -1,11 +1,9 @@
 ---
 title: MDN en 10
 slug: MDN/At_ten
-tags:
-  - MDN
-translation_of: MDN_at_ten
 original_slug: MDN_en_diez
 ---
+
 ## La historia de MDN (Mozilla Developers Network)
 
 Celebra 10 años documentando tu Web.
@@ -24,6 +22,6 @@ Por diez años, la comunidad MDN ha estado documentando la Web abierta. Desde la
 
 ## Subnav
 
-1.  [MDN en 10](/es/docs/MDN_at_ten/)
-2.  [La historia de MDN](/es/docs/MDN_at_ten/History_of_MDN)
-3.  [Contribuyendo a MDN](/es/docs/MDN_at_ten/Contributing_to_MDN)
+1. [MDN en 10](/es/docs/MDN_at_ten/)
+2. [La historia de MDN](/es/docs/MDN_at_ten/History_of_MDN)
+3. [Contribuyendo a MDN](/es/docs/MDN_at_ten/Contributing_to_MDN)

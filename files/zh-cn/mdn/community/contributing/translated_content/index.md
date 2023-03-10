@@ -3,6 +3,7 @@ title: MDN 的本地化
 slug: MDN/Community/Contributing/Translated_content
 original_slug: MDN/Contribute/Localize
 ---
+
 {{MDNSidebar}}
 
 2020 年 12 月 14 日开始，MDN 将运行在基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。新的平台也使 MDN 在许多方面发生了改变，这些变化基本上都对我们的工作有不同程度的改进，不过，在内容本地化的工作方面，变化可能看起来会更激进一些。许多的英语区域外的内容本地化工作被中止了，其中的内容长久未更新或活跃人数太少都是可能的原因。在将来，我们希望有更好的机制，来管理这些内容的本地化工作。
@@ -18,9 +19,9 @@ original_slug: MDN/Contribute/Localize
 - 讨论组：[Telegram (MDN localization in Brazilian Portuguese)](https://t.me/mdn_l10n_pt_br)
 - 目前的志愿者：[Luisa Migueres](https://github.com/lumigueres)、[Julio Sampaio](https://github.com/juliosampaio)、[Josiel Rocha](https://github.com/josielrocha)、[Clóvis Lima Júnior](https://github.com/clovislima)
 
-### 汉语（zh-CN，zh-TW）
+### 汉语（zh-CN、zh-TW）
 
-- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)
+- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)、[Telegram (Mozilla China channel)](https://t.me/mozilla_china)
 - 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)
 
 ### 法语（fr）

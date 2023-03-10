@@ -1,17 +1,8 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - dynamic import
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
+
 {{jsSidebar("Statements")}}
 
 **`import`** 文は、他のモジュールによって[エクスポート](/ja/docs/Web/JavaScript/Reference/Statements/export)された読み込み専用のライブバインディングをインポートするために使用します。インポートされたモジュールは、宣言するかどうかにかかわらず、{{JSxRef("Strict_mode","Strict モード")}}になります。`import` 文は、スクリプトに `type="module"` がない限り、埋め込みスクリプトで使用できません。インポートされたバインディングは、バインディングをエクスポートしたモジュールによって更新されるため、ライブバインディングと呼ばれます。
@@ -237,10 +228,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## 仕様
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName("ESDraft", "#sec-imports", "Imports")}}             |
-| {{SpecName("ESDraft", "#sec-import-calls", "Import Calls")}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

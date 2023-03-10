@@ -2,6 +2,7 @@
 title: Using Navigation Timing
 slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
 ---
+
 {{DefaultAPISidebar("Navigation Timing")}}
 
 Navigation Timing 接口使你可以轻松获取详细且高度准确的计时信息，以帮助从你的网站代码或资源隔离出性能问题。与其他工具或库不同，Navigation Timing 接口使你可以收集这些只有浏览器才能提供的信息，其准确性要比其他技术大大提高。它还具有能够提供用户所感知的计时信息而不是与用户体验无关的数据的优势。
@@ -20,7 +21,7 @@ window.addEventListener("load", function() {
 }, false);
 ```
 
-在发生 {{event("load")}} 事件时执行的该代码从当前时间中减去浏览器导航开始时记录的时间 ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}})，并通过将该信息插入到元素中，输出到屏幕。
+在发生 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件时执行的该代码从当前时间中减去浏览器导航开始时记录的时间 ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}})，并通过将该信息插入到元素中，输出到屏幕。
 
 ```html hidden
 <div class="output">
@@ -52,7 +53,7 @@ window.addEventListener("load", function() {
 
 此信息由 {{domxref("Performance.navigation")}} 属性提供，该属性返回包含所需信息的 {{domxref("PerformanceNavigation")}} 对象。
 
-让我们将此信息添加到上面的示例中。 新代码如下所示：
+让我们将此信息添加到上面的示例中。新代码如下所示：
 
 ```js
 window.addEventListener("load", function() {

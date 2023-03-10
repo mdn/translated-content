@@ -1,14 +1,6 @@
 ---
-title: JavaScript 재입문하기 (JS ​튜토리얼)
+title: JavaScript 재입문하기 (JS 튜토리얼)
 slug: Web/JavaScript/Language_Overview
-tags:
-  - CodingScripting
-  - Guide
-  - Intermediate
-  - Intro
-  - JavaScript
-  - Learn
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 {{jsSidebar}}
@@ -37,7 +29,7 @@ JavaScript는 유형 및 연산자, 표준 내장 객체 및 메서드가 있는
 - [객체 (Object)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - [기호 (Symbol)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (ES2015에 새롭게 추가)
 
-그리고 약간 특별한 타입인 [undefined](/ko/docs/Web/JavaScript/Data_structures#undefined_type)와 [null](/ko/docs/Web/JavaScript/Data_structures#null_type)이 있습니다. 또한 객체의 특별한 종류인 [배열(Array) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array). 그리고 자유롭게 사용할 수 있는 [날짜(Date) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date) 와 [정규식(RegExp) 객체](ko/Web/JavaScript/Reference/Global_Objects/RegExp)가 있습니다. 그리고 기술적으로 정확히 말해 함수(Function)는 단지 객체의 특별한 타입으로 취급됩니다. 따라서 타입 구조도를 정리해보면 다음과 같습니다.
+그리고 약간 특별한 타입인 [undefined](/ko/docs/Web/JavaScript/Data_structures#undefined_type)와 [null](/ko/docs/Web/JavaScript/Data_structures#null_type)이 있습니다. 또한 객체의 특별한 종류인 [배열(Array) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array). 그리고 자유롭게 사용할 수 있는 [날짜(Date) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date) 와 [정규식(RegExp) 객체](/ko/Web/JavaScript/Reference/Global_Objects/RegExp)가 있습니다. 그리고 기술적으로 정확히 말해 함수(Function)는 단지 객체의 특별한 타입으로 취급됩니다. 따라서 타입 구조도를 정리해보면 다음과 같습니다.
 
 - [수 (Number)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [BigInt](/ko/docs/Web/JavaScript/Data_structures#bigint_type)
@@ -400,7 +392,7 @@ switch(a) {
 }
 ```
 
-default 절은 선택사항입니다. switch와 case 부분에서 둘 다 표현식을 사용할 수도 있습니다. switch 부분과 case 부분의 표현식은  `===` 연산자로 비교합니다.
+default 절은 선택사항입니다. switch와 case 부분에서 둘 다 표현식을 사용할 수도 있습니다. switch 부분과 case 부분의 표현식은 `===` 연산자로 비교합니다.
 
 ```js
 switch(1 + 3){
@@ -896,7 +888,7 @@ s.reversed(); // nomiS
 "This can now be reversed".reversed(); // desrever eb won nac sihT
 ```
 
-기존에 언급한 바와 같이, 프로토타입은 체인의 한 부분을 이룹니다. 해당 체인의 최상위에는  `Object.prototype`이 있으며 `toString()` 메서드를 가지고 있습니다. 이 메서드는 객체를 문자열로 나타내려할 때 호출되며, 우리의 `Person` 객체의 디버깅에 유용합니다.
+기존에 언급한 바와 같이, 프로토타입은 체인의 한 부분을 이룹니다. 해당 체인의 최상위에는 `Object.prototype`이 있으며 `toString()` 메서드를 가지고 있습니다. 이 메서드는 객체를 문자열로 나타내려할 때 호출되며, 우리의 `Person` 객체의 디버깅에 유용합니다.
 
 ```js
 var s = new Person("Simon", "Willison");

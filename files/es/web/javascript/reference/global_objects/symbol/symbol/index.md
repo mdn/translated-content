@@ -1,12 +1,11 @@
 ---
 title: Symbol() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-browser-compat: javascript.builtins.Symbol.Symbol
 l10n:
   sourceCommit: dc3dc7a9522107392cfea07243ff3c2cb34cb9a4
 ---
+
 {{JSRef}}
 
 El constructor `Symbol()` devuelve un valor de tipo **symbol**, pero está incompleto como constructor porque no soporta la sintaxis "`new Symbol()`" y no está pensado para ser heredado. Puede utilizarse como valor de una cláusula [`extends`](/es/docs/Web/JavaScript/Reference/Classes/extends) de una definición de `class`, pero una llamada a [`super`](/es/docs/Web/JavaScript/Reference/Operators/super) provocará una excepción.
@@ -74,4 +73,3 @@ typeof symObj // => "object"
 
 - [Polyfill de `Symbol` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - [Glosario: Tipo de datos de los símbolos](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
-

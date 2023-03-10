@@ -2,6 +2,7 @@
 title: Window.statusbar
 slug: Web/API/Window/statusbar
 ---
+
 {{APIRef}}
 
 **`Window.statusbar`** プロパティはステータスバーオブジェクトを返します。これにより、ウィンドウ内で表示/非表示を切り替えることができます。
@@ -44,12 +45,7 @@ objRef = window.statusbar
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar',
-        'Window.statusbar')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar',
-        'Window.statusbar')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

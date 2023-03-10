@@ -2,6 +2,7 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
+
 {{ JSRef }}
 
 **`Set`** 对象允许你存储任何类型的唯一值，无论是{{ Glossary('Primitive', '原始值') }}或者是对象引用。
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ### 值的相等
 
-因为 Set 中的值总是唯一的，所以需要判断两个值是否相等。在 ECMAScript 规范的早期版本中，这不是基于和===操作符中使用的算法相同的算法。具体来说，对于 Set，+0（+0 严格相等于 -0）和 -0 是不同的值。然而，在 ECMAScript 2015 规范中这点已被更改。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的 “_Key equality for -0 and 0_”。
+因为 Set 中的值总是唯一的，所以需要判断两个值是否相等。在 ECMAScript 规范的早期版本中，这不是基于和===操作符中使用的算法相同的算法。具体来说，对于 Set，+0（+0 严格相等于 -0）和 -0 是不同的值。然而，在 ECMAScript 2015 规范中这点已被更改。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的“_Key equality for -0 and 0_”。
 
 另外，`NaN` 和 `undefined` 都可以被存储在 Set 中，`NaN` 之间被视为相同的值（NaN 被认为是相同的，尽管 NaN !== NaN）。
 
@@ -40,7 +41,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 - {{jsxref("Set.delete", "Set.prototype.delete(<em>value</em>)")}}
   - : 移除值为 `value` 的元素，并返回一个布尔值来表示是否移除成功。`Set.prototype.has(value)` 会在此之后返回 `false`。
 - {{jsxref("Set.prototype.entries()")}}
-  - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的按插入顺序排列的所有元素的值的 `[value, value]` 数组。为了使这个方法和 `Map` 对象保持相似， 每个值的键和值相等。
+  - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的按插入顺序排列的所有元素的值的 `[value, value]` 数组。为了使这个方法和 `Map` 对象保持相似，每个值的键和值相等。
 - {{jsxref("Set.forEach", "Set.prototype.forEach(<em>callbackFn</em>[, <em>thisArg</em>])")}}
   - : 按照插入顺序，为 Set 对象中的每一个值调用一次 callBackFn。如果提供了`thisArg`参数，回调中的 `this` 会是这个参数。
 - {{jsxref("Set.has", "Set.prototype.has(<em>value</em>)")}}

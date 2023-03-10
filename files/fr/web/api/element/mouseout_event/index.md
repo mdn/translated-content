@@ -10,6 +10,7 @@ tags:
   - mouseout
 translation_of: Web/API/Element/mouseout_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseout`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (ex. une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils. `mouseout` est également apporté à un élément si le curseur se déplace dans un élément fils car l'élément fils peut masquer la zone visible de l'élément.

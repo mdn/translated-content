@@ -2,6 +2,7 @@
 title: 使用 CSS 自定义属性（变量）
 slug: Web/CSS/Using_CSS_custom_properties
 ---
+
 **自定义属性**（有时候也被称作**CSS 变量**或者**级联变量**）是由 CSS 作者定义的，它包含的值可以在整个文档中重复使用。由自定义属性标记设定值（比如： **`--main-color: black;`**），由 [var()](/zh-CN/docs/Web/CSS/var) 函数来获取值（比如： `color: var(--main-color);`）复杂的网站都会有大量的 CSS 代码，通常也会有许多重复的值。举个例子，同样一个颜色值可能在成千上百个地方被使用到，如果这个值发生了变化，需要全局搜索并且一个一个替换（很麻烦哎～）。自定义属性在某个地方存储一个值，然后在其他许多地方引用它。另一个好处是语义化的标识。比如，`--main-text-color` 会比 `#00ff00` 更易理解，尤其是这个颜色值在其他上下文中也被使用到。自定义属性受级联的约束，并从其父级继承其值。
 
 ## 基本用法
@@ -87,7 +88,7 @@ element {
 
 其呈现是：
 
-{{EmbedLiveSample("First_steps_with_custom_properties",600,180)}}
+{{EmbedLiveSample("使用自定义属性的第一步",600,180)}}
 
 注意到在 CSS 代码中的重复：背景色 `brown` 被多处设置。对于一些 CSS 声明，是可以在级联关系更高的位置设置，通过 CSS 继承自然地解决这个重复的问题。但在一般项目中，是不可能通过这样的方式去解决。通过在 {{cssxref(":root")}} 伪类上设置自定义属性，然后在整个文档需要的地方使用，可以减少这样的重复性：
 
@@ -137,7 +138,7 @@ element {
 
 自定义属性会继承。这意味着如果在一个给定的元素上，没有为这个自定义属性设置值，在其父元素上的值会被使用。看这一段 HTML：
 
-```
+```html
 <div class="one">
   <div class="two">
     <div class="three"></div>
@@ -148,7 +149,7 @@ element {
 
 配套的 CSS：
 
-```
+```css
 .two {
   --test: 10px;
 }
@@ -224,9 +225,9 @@ p { color: var(--text-color); }
 1. 检查属性 color 是否为继承属性。是，但是 `<p>` 没有任何父元素定义了 color 属性。转到下一步。
 2. 将该值设置为它的**默认初始值**，比如 black。
 
-### Result
+### 结果
 
-{{EmbedLiveSample('What_happens_with_invalid_variables')}}
+{{EmbedLiveSample('无效变量会导致什么？')}}
 
 段落颜色并不是蓝色，因为无效代换导致了它被替换成了默认初始值的黑色。如果你直接写 `color: 16px` 的话，则会导致语法错误，而前面的定义则会生效（段落显示为蓝色）。
 
@@ -236,7 +237,7 @@ p { color: var(--text-color); }
 
 在 JavaScript 中获取或者修改 CSS 变量和操作普通 CSS 属性是一样的：
 
-```
+```js
 // 获取一个 Dom 节点上的 CSS 变量
 element.style.getPropertyValue("--my-var");
 
@@ -247,11 +248,11 @@ getComputedStyle(element).getPropertyValue("--my-var");
 element.style.setProperty("--my-var", jsVar + 4);
 ```
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
-> **备注：** 自定义属性的前缀 `var-` 是早期标准规定的，后期改为了 `--`。Firefox 31 和以后的版本遵循新的标准。 ({{bug(985838)}})
+> **备注：** 自定义属性的前缀 `var-` 是早期标准规定的，后期改为了 `--`。Firefox 31 和以后的版本遵循新的标准。（[Firefox bug 985838](https://bugzil.la/985838)）
 
 ## 参见
 

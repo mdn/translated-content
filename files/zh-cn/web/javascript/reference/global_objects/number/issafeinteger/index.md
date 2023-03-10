@@ -2,6 +2,7 @@
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 **`Number.isSafeInteger()`** 方法用来判断传入的参数值是否是一个“安全整数”（safe integer）。

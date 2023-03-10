@@ -2,6 +2,7 @@
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{ APIRef("Geolocation API") }}
 
 **`Geolocation.getCurrentPosition()`** 方法用來獲取設備當前的位置。
@@ -52,9 +53,9 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## 瀏覽器的相容性
 
-{{Compat("api.Geolocation.getCurrentPosition")}}
+{{Compat}}
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - {{domxref("Navigator.geolocation")}}

@@ -2,6 +2,7 @@
 title: mask-image
 slug: Web/CSS/mask-image
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要
@@ -54,8 +55,8 @@ mask-image: unset;
   width: 100px;
   height: 100px;
   background-color: #8cffa0;
-  mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
-  -webkit-mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
+  mask-image: url(star.svg);
+  -webkit-mask-image: url(star.svg);
 }
 ```
 
@@ -73,4 +74,4 @@ mask-image: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.mask-image")}}
+{{Compat}}

@@ -12,6 +12,7 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedTab
 ---
+
 {{AddonSidebar()}}Supprime un onglet fermé de la liste des onglets récemment fermés du navigateur.Notez que les sites visités par cet onglet ne sont pas supprimés de l'historique du navigateur. Utilisez les API {{WebExtAPIRef("browsingData")}} oo {{WebExtAPIRef("history")}} pour supprimer l'historique.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
@@ -38,9 +39,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela 
 
 Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.forgetClosedTab")}}
+{{Compat}}
 
 ## Exemples
 

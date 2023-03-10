@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/name
 original_slug: Web/XPath/Fonctions/name
 ---
+
 {{ XsltRef() }}
 
 La fonction `name` retourne une chaîne représentant le QName du premier nœud d'un ensemble de nœuds donné.

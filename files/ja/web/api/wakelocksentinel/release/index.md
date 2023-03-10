@@ -2,6 +2,7 @@
 title: WakeLockSentinel.release()
 slug: Web/API/WakeLockSentinel/release
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`release()`** は {{domxref("WakeLockSentinel")}} インターフェイスのメソッドで、 {{domxref("WakeLockSentinel")}} を返し、この見張り (sentinel) の解放に成功したら解決する {{jsxref("Promise")}} を返します。

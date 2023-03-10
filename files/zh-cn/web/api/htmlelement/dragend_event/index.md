@@ -3,6 +3,7 @@ title: Document：dragend 事件
 slug: Web/API/HTMLElement/dragend_event
 original_slug: Web/API/Document/dragend_event
 ---
+
 {{APIRef}}
 
 `dragend` 事件在拖放操作结束时触发（通过释放鼠标按钮或单击 escape 键）。
@@ -106,7 +107,7 @@ document.addEventListener("dragend", (event) => {
 
 ## 参见
 
-- 其它拖放事件：
+- 其他拖放事件：
 
   - {{domxref("Document/drag_event", "drag")}}
   - {{domxref("Document/dragstart_event", "dragstart")}}
@@ -115,7 +116,7 @@ document.addEventListener("dragend", (event) => {
   - {{domxref("Document/dragleave_event", "dragleave")}}
   - {{domxref("Document/drop_event", "drop")}}
 
-- 其它目标上的 `dragend` 事件：
+- 其他目标上的 `dragend` 事件：
 
   - {{domxref("Window")}}：{{domxref("Window/dragend_event", "dragend")}} 事件
   - {{domxref("HTMLElement")}}：{{domxref("HTMLElement/dragend_event", "dragend")}} 事件

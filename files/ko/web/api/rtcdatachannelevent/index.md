@@ -1,7 +1,6 @@
 ---
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
-translation_of: Web/API/RTCDataChannelEvent
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
@@ -12,18 +11,18 @@ WebRTC가 적절한 시기에 생성하고 전달해주기 때문에, `RTCDataCh
 ## 생성자
 
 - {{domxref("RTCDataChannelEvent.RTCDataChannelEvent()", "RTCDataChannelEvent()")}}
-  - : 새로운 [`RTCDataChannelEvent`](/ko/docs/Web/API/RTCDataChannelEvent "The RTCDataChannelEvent() constructor returns a new RTCDataChannelEvent object, which represents a datachannel event. These events sent to an RTCPeerConnection when its remote peer is asking to open an RTCDataChannel between the two peers.")을 생성하는 **`RTCDataChannelEvent()`** 생성자입니다.
+  - : 새로운 [`RTCDataChannelEvent`](/ko/docs/Web/API/RTCDataChannelEvent)을 생성하는 **`RTCDataChannelEvent()`** 생성자입니다.
 
 ## 속성
 
-_[`Event`](/ko/docs/Web/API/Event "The Event interface represents an event which takes place in the DOM.")의 속성을 상속합니다._
+_[`Event`](/ko/docs/Web/API/Event)의 속성을 상속합니다._
 
 - {{domxref("RTCDataChannelEvent.channel")}} {{readOnlyInline}}
-  - : 읽기 속성인 **`RTCDataChannelEvent`\*\***`.channel`\*\*는 이벤트와 관련된 RTCDataChannel를 반환합니다.
+  - : 읽기 속성인 **`RTCDataChannelEvent.channel`** 는 이벤트와 관련된 RTCDataChannel를 반환합니다.
 
 ## 메소드
 
-이 인터페이스에는 메소드가 존재하지 않습니다. 대신, *[`Event`](/ko/docs/Web/API/Event "The Event interface represents an event which takes place in the DOM.")*의 메소드를 상속합니다.
+이 인터페이스에는 메소드가 존재하지 않습니다. 대신, *[`Event`](/ko/docs/Web/API/Event)*의 메소드를 상속합니다.
 
 ## 예시
 
@@ -50,7 +49,7 @@ pc.ondatachannel = function(event) {
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC "/en-US/docs/CSS/Using_CSS_animations")
+- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.ondatachannel")}}
 - [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/scaleX()
 original_slug: Web/CSS/transform-function/scaleX()
 browser-compat: css.types.transform-function.scaleX
 ---
+
 {{CSSRef}}
 
 La fonction **`scaleX()`** permet de modifier l'abscisse de chaque sommet de l'élément par un facteur multiplicateur. L'homothétie obtenue n'est pas isotropique et les angles de l'élément ne sont pas conservés.

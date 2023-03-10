@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Dead_object
 original_slug: Web/JavaScript/Reference/Erreurs/Dead_object
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Message

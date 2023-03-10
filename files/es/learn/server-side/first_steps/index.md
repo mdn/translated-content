@@ -1,17 +1,9 @@
 ---
 title: Primeros Pasos en la Programación de Lado-Servidor
 slug: Learn/Server-side/First_steps
-tags:
-  - Aprendizaje
-  - Aterrizaje
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Programación lado servidor
-  - introducción
-translation_of: Learn/Server-side/First_steps
 original_slug: Learn/Server-side/Primeros_pasos
 ---
+
 {{LearnSidebar}}
 
 En este, nuestro módulo sobre programación de Lado-Servidor, contestaremos a unas pocas preguntas fundamentales - "¿Qué es?", "¿En qué se diferencia de la programación de Lado-Cliente?" y "¿Porqué es tan útil?". Proporcionaremos un vistazo de algunos de los "web-frameworks" de lado-servidor más populares, junto con indicaciones de cómo seleccionar el framework más adecuado para crear tu primer sitio. Finalmente proporcionaremos un artículo introductorio de alto nivel sobre seguridad en el servidor web.

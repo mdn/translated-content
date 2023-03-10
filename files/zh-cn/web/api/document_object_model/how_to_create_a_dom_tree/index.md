@@ -1,7 +1,8 @@
 ---
 title: 如何创建一个 DOM 树
-slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
 ---
+
 这个页面讲的是如何利用 JavaScript 中的 [DOM Core](http://www.w3.org/TR/DOM-Level-3-Core/core.html) API 来创建和修改 DOM 对象。它适用于特权（扩展）和非特权（网页）代码中的所有基于 Gecko 的应用程序（如 Firefox）。
 
 ### Dynamically creating a DOM tree
@@ -79,9 +80,9 @@ peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
 ```
 
-See also the [DOM chapter of the XUL Tutorial](/en/XUL_Tutorial/Document_Object_Model).
+See also the [DOM chapter of the XUL Tutorial](/zh-CN/XUL_Tutorial/Document_Object_Model).
 
-You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en/JXON#JXON_reverse_algorithms) in association with the following JSON representation:
+You can automate the creation of a DOM tree using a [JXON reverse algorithm](/zh-CN/JXON#JXON_reverse_algorithms) in association with the following JSON representation:
 
 ```js
 {
@@ -127,15 +128,15 @@ You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en
 
 ### So what?
 
-DOM trees can be [queried using XPath expressions](/en/Using_XPath), converted to strings or written to a local or remote files using [XMLSerializer](/en/Parsing_and_serializing_XML) (without having to first convert to a string), [POSTed to a web server](/en/DOM/XMLHttpRequest) (via `XMLHttpRequest`), transformed using [XSLT](/en/XSLT), [XLink](/en/XLink), converted to a JavaScript object through a [JXON algorithm](/en/JXON), etc.
+DOM trees can be [queried using XPath expressions](/zh-CN/Using_XPath), converted to strings or written to a local or remote files using [XMLSerializer](/zh-CN/Parsing_and_serializing_XML) (without having to first convert to a string), [POSTed to a web server](/zh-CN/DOM/XMLHttpRequest) (via `XMLHttpRequest`), transformed using [XSLT](/zh-CN/XSLT), [XLink](/zh-CN/XLink), converted to a JavaScript object through a [JXON algorithm](/zh-CN/JXON), etc.
 
 You can use DOM trees to model data which isn't well-suited for RDF (or perhaps you just don't like RDF). Another application is that, since XUL is XML, the UI of your application can be dynamically manipulated, downloaded, uploaded, saved, loaded, converted, or transformed quite easily.
 
 ## See also
 
-- [XML](/en/XML)
-- [JXON](/en/JXON)
-- [XPath](/en/XPath)
-- [E4X (ECMAScript for XML)](/en/E4X)
-- [Parsing and serializing XML](/en/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/en/DOM/XMLHttpRequest)
+- [XML](/zh-CN/XML)
+- [JXON](/zh-CN/JXON)
+- [XPath](/zh-CN/XPath)
+- [E4X (ECMAScript for XML)](/zh-CN/E4X)
+- [Parsing and serializing XML](/zh-CN/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/zh-CN/DOM/XMLHttpRequest)

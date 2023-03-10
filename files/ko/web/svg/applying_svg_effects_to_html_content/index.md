@@ -1,16 +1,9 @@
 ---
 title: HTML 컨텐츠에 SVG 효과 적용하기
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-tags:
-  - CSS
-  - HTML
-  - SVG
-  - SVG 효과
-  - 가이드
-  - 필터
-translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
-모던 브라우저들은 HTML 콘텐트에 그래픽 효과를 적용하기 위해 [CSS](/ko/docs/web/CSS "Cascading Style Sheets") 스타일 내에 [SVG](/ko/docs/Web/SVG)를 사용하는 것을 지원합니다.
+
+모던 브라우저들은 HTML 콘텐트에 그래픽 효과를 적용하기 위해 [CSS](/ko/docs/web/CSS) 스타일 내에 [SVG](/ko/docs/Web/SVG)를 사용하는 것을 지원합니다.
 
 스타일에서의 SVG는, 동일 문서 또는 외부 스타일 시트 어느 쪽에서도 지정할 수 있습니다. 다음 3가지 속성이 사용 가능합니다: [`mask`](/ko/docs/Web/CSS/mask), [`clip-path`](/ko/docs/Web/CSS/clip-path), and [`filter`](/ko/docs/Web/CSS/filter).
 
@@ -243,6 +236,5 @@ The SVG is then imported from a file named `resources.svg`, using the clip path 
 
 ## See also
 
-- [SVG](/ko/docs/SVG "SVG")
+- [SVG](/ko/docs/SVG)
 - [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
-- ~~[SVG External Document References](/web-tech/2008/10/10/svg-external-document-references)~~ (blog post) ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/ "Web Tech Blog » Blog Archive » SVG External Document References"))

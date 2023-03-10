@@ -2,6 +2,7 @@
 title: border-right-style
 slug: Web/CSS/border-right-style
 ---
+
 {{CSSRef}}
 
 **`border-right-style`** 是 border 中的一个 [CSS](/zh-CN/docs/CSS) 子属性，描述的是右边框的样式 {{cssxref("border")}}.
@@ -89,7 +90,7 @@ tr, td {
 
 #### 结果
 
-{{ EmbedLiveSample('Examples') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
@@ -99,7 +100,7 @@ tr, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-right-style")}}
+{{Compat}}
 
 ## 参考
 

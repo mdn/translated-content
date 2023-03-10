@@ -1,7 +1,6 @@
 ---
 title: Web Storage API 사용하기
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 
@@ -18,12 +17,12 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
 </pre>
 
-> **참고:** **노트**: 일반 객체를 key-value 저장소로 사용할 때 [pitfalls](http://www.2ality.com/2012/01/objects-as-maps.html)과 관련된 사항을 막기 위해 Web Storage API(`setItem`, `getItem`, `removeItem`, `key`, `length`)를 사용하는 걸 권장합니다.
+> **참고:** 일반 객체를 key-value 저장소로 사용할 때 [pitfalls](http://www.2ality.com/2012/01/objects-as-maps.html)과 관련된 사항을 막기 위해 Web Storage API(`setItem`, `getItem`, `removeItem`, `key`, `length`)를 사용하는 걸 권장합니다.
 
 Web Storage는 두 메커니즘을 가지고 있습니다.
 
-- **`sessionStorage`**는 페이지의 세션이 유지되는 동안 사용할 수 있는 각 origin별로 별도의 스토리지를 관리합니다. (페이지 리로딩 및 복원을 포함한, 브라우저가 열려있는 한 최대한 긴 시간 동안)
-- **`localStorage`**도 같은 일을 하지만, 브라우저가 닫히거나 다시 열리더라도 유지합니다.
+- `sessionStorage` 는 페이지의 세션이 유지되는 동안 사용할 수 있는 각 origin별로 별도의 스토리지를 관리합니다. (페이지 리로딩 및 복원을 포함한, 브라우저가 열려있는 한 최대한 긴 시간 동안)
+- `localStorage` 도 같은 일을 하지만, 브라우저가 닫히거나 다시 열리더라도 유지합니다.
 
 이 메커니즘들은 {{domxref("Window.sessionStorage")}}와 {{domxref("Window.localStorage")}} 속성(좀 더 정확히 말하자면, 지원하는 브라우저에서 `Window` 객체는 `localStorage` 및 `sessionStorage` 속성 사용이 중단되는 `WindowLocalStorage`과 `WindowSessionStorage`로 구현됩니다)으로 사용 가능합니다. 이 중 하나를 호출하면 데이터를 설정, 검색 및 제거할 수 있는 {{domxref("Storage")}} 객체의 인스턴스가 생성됩니다. 각 Storage 객체는 각 origin 별 `sessionStorage` 나 `localStorage`로 사용됩니다. 동작도 제각기 동작합니다.
 
@@ -39,39 +38,43 @@ localStorage를 지원하는 브라우저는 windows 객체에 localStorage라�
 
 다음은 localStorage가 지원되고 사용 가능한지 여부를 감지하는 함수입니다.
 
-    function storageAvailable(type) {
-        var storage;
-        try {
-            storage = window[type];
-            var x = '__storage_test__';
-            storage.setItem(x, x);
-            storage.removeItem(x);
-            return true;
-        }
-        catch(e) {
-            return e instanceof DOMException && (
-                // Firefox를 제외한 모든 브라우저
-                e.code === 22 ||
-                // Firefox
-                e.code === 1014 ||
-                // 코드가 존재하지 않을 수도 있기 떄문에 이름 필드도 확인합니다.
-                // Firefox를 제외한 모든 브라우저
-                e.name === 'QuotaExceededError' ||
-                // Firefox
-                e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-                // 이미 저장된 것이있는 경우에만 QuotaExceededError를 확인하십시오.
-                (storage && storage.length !== 0);
-        }
+```js
+function storageAvailable(type) {
+    var storage;
+    try {
+        storage = window[type];
+        var x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
     }
+    catch(e) {
+        return e instanceof DOMException && (
+            // Firefox를 제외한 모든 브라우저
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // 코드가 존재하지 않을 수도 있기 떄문에 이름 필드도 확인합니다.
+            // Firefox를 제외한 모든 브라우저
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // 이미 저장된 것이있는 경우에만 QuotaExceededError를 확인하십시오.
+            (storage && storage.length !== 0);
+    }
+}
+```
 
 위 함수를 다음과 같이 사용할 수 있습니다.
 
-    if (storageAvailable('localStorage')) {
-    	// 야호! 우리는 localStorage를 사용할 수 있습니다.
-    }
-    else {
-    	// 슬픈 소식, localStorage를 사용할 수 없습니다.
-    }
+```js
+if (storageAvailable('localStorage')) {
+  // 야호! 우리는 localStorage를 사용할 수 있습니다.
+}
+else {
+  // 슬픈 소식, localStorage를 사용할 수 없습니다.
+}
+```
 
 `storageAvailable('sessionStorage')`를 호출하여 sessionStorage 사용 가능 여부도 확인할 수 있습니다.
 
@@ -81,11 +84,11 @@ localStorage를 지원하는 브라우저는 windows 객체에 localStorage라�
 
 To illustrate some typical web storage usage, we have created a simple example, imaginatively called **Web Storage Demo**. The [landing page](https://mdn.github.io/dom-examples/web-storage/) provides controls that can be used to customize the color, font, and decorative image:
 
-![](https://mdn.mozillademos.org/files/9685/landing.png)다른 색상을 선택하면, 페이지에 바로 적용됩니다. 또한 선택한 값을 `localStorage`에 저장했다면, 페이지를 나갔다가 나중에 다시 들어왔을 떄 이전에 저장한 값을 기억하고 있습니다.
+![](landing.png)다른 색상을 선택하면, 페이지에 바로 적용됩니다. 또한 선택한 값을 `localStorage`에 저장했다면, 페이지를 나갔다가 나중에 다시 들어왔을 떄 이전에 저장한 값을 기억하고 있습니다.
 
 We have also provided an [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — if you load this page in another tab, then make changes to your choices in the landing page, you'll see the updated storage information outputted as a {{domxref("StorageEvent")}} is fired.
 
-![](https://mdn.mozillademos.org/files/9687/event-output.png)
+![](event-output.png)
 
 > **참고:** As well as viewing the example pages live using the above links, you can also [check out the source code](https://github.com/mdn/dom-examples/tree/master/web-storage).
 
@@ -176,11 +179,11 @@ Here we add an event listener to the `window` object that fires when the {{domxr
 - {{domxref("Storage.removeItem()")}}는 — 삭제하고 싶은 데이터의 키 — 한 개의 인자를 받습니다. 그리고 해당 도메인의 저장소 객체에서 데이터를 제거합니다.
 - {{domxref("Storage.clear()")}}는 아무 인자도 받지 않습니다. 그리고 해당 도메인의 저장소 객체 전체를 비워버립니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

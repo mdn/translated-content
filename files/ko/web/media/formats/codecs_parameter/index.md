@@ -1,7 +1,6 @@
 ---
 title: 일반 미디어 타입에서 "codecs" 파라미터 사용하기
 slug: Web/Media/Formats/codecs_parameter
-translation_of: Web/Media/Formats/codecs_parameter
 original_slug: Web/Media/Formats/코덱파라미터
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -144,7 +143,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
         한자리 숫자 모노크롬 플래그; 0인 경우 비디오는 U, V, Y 성분을 모두
         가지고 있습니다. 아닌 경우 전체 비디오 데이터는 Y(휘도) 성분 뿐으로
         모노크롬 이미지를 가집니다. 자세한 내용은
-        {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "YUV")}}를
+        [YUV](/en-US/docs/Web/Media/Formats/Video_concepts)를
         참조하여 YUV 컬러 시스템이 어떻게 동작하는지 알아보세요. 기본 값은 0
         (모노크롬 아님)입니다.
       </td>
@@ -287,17 +286,12 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
   - : `oo` 는 미디어 콘텐츠를 더 정확하게 기술하는 Object Type Indication 값이며 `A` 는 한자리 숫자*오디오* OTI입니다. OTI로 가능한 값은 MP4 Registration Authority 웹사이트의 [Object Types page](http://mp4ra.org/#/object_types) 페이지에서 확인할 수 있습니다. 예를들어 MP4 파일의 Opus 오디오는 `mp4a.ad`로 기술합니다. 자세한 내용은 [MPEG-4 audio](#mpeg-4_audio)를 참조하세요.
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : 마찬가지로 `oo` 는 미디어 콘텐츠를 명시하는 OTI 값이며, `V` 는 한자리 숫자 _비디오_ OTI 값입니다.
-- ## `avc1.oo[.PPCCLL]` (AVC video)
+- `avc1.oo[.PPCCLL]` (AVC video)
+  - : `oo` 는 콘텐츠를 명시하는 OTI 값이며, while `PPCCLL` 는 6자리 16진수로써 프로파일 넘버 (`PP`), 제약 플래그 (`CC`), 레벨 (`LL`)을 의미합니다. `PP`로 가능한 값은 [AVC profiles](#avc_profiles)를 참조하세요.
 
-      : `oo` 는 콘텐츠를 명시하는 OTI 값이며, while `PPCCLL` 는 6자리 16진수로써 프로파일 넘버 (`PP`), 제약 플래그 (`CC`), 레벨 (`LL`)을 의미합니다. `PP`로 가능한 값은 [AVC profiles](#avc_profiles)를 참조하세요.
+    제약 플래그는 1 비트 불리언 값이며, MSB는 flag 0(또는 일부에선 `constraint_set0_flag`)로 취급합니다. 그리고 이어지는 비트는 하나씩 번호가 높게 매겨집니다. 현재로썬 0부터 2번째 비트까지만 사용하며;나머지 5개의 비트는 _반드시_ 0이어야합니다. 각 플래그의 의미는 사용하는 프로파일에 따라 달라집니다.
 
-
-
-      제약 플래그는 1 비트 불리언 값이며, MSB는 flag 0(또는 일부에선 `constraint_set0_flag`)로 취급합니다. 그리고 이어지는 비트는 하나씩 번호가 높게 매겨집니다. 현재로썬 0부터 2번째 비트까지만 사용하며;나머지 5개의 비트는 _반드시_ 0이어야합니다. 각 플래그의 의미는 사용하는 프로파일에 따라 달라집니다.
-
-
-
-      레벨 값은 고정 소수점이므로 숫자 `14` (10진법 20) 은 레벨 2.0을 의미하며 `3D` (10진법 61) 은 레벨 6.1을 의미합니다. 일반적으로 레벨 숫자가 높을 수록 스트림 대역폭이 높아 더 큰 크기의 비디오를 지원할 수 있습니다.
+    레벨 값은 고정 소수점이므로 숫자 `14` (10진법 20) 은 레벨 2.0을 의미하며 `3D` (10진법 61) 은 레벨 6.1을 의미합니다. 일반적으로 레벨 숫자가 높을 수록 스트림 대역폭이 높아 더 큰 크기의 비디오를 지원할 수 있습니다.
 
 #### AVC 프로파일
 
@@ -537,7 +531,7 @@ cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]
         <p>
           크로마 서브샘플링 포맷을 2자리 숫자로 표기합니다. 가능한 값은 아래
           표에 있습니다; 자세한 내용은
-          {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
+          [Chroma subsampling](/ko/docs/Web/Media/Formats/Video_concepts)
           를 참조하세요.
         </p>
         <table class="standard-table">

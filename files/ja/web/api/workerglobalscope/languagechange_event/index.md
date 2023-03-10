@@ -1,65 +1,58 @@
 ---
 title: 'WorkerGlobalScope: languagechange イベント'
 slug: Web/API/WorkerGlobalScope/languagechange_event
+l10n:
+  sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
 ---
+
 {{APIRef}}
 
-**`languagechange`** イベントはグローバルスコープオブジェクトで、ユーザーの推奨言語が変更されたときに発生します。
+**`languagechange`** イベントは、ユーザーの推奨言語が変更されたときにグローバルスコープオブジェクトで発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラー</th>
-      <td>
-        {{domxref("WorkerGlobalScope/onlanguagechange", "onlanguagechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('languagechange', (event) => { });
+
+onlanguagechange = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 `languagechange` は {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
 
 ```js
-worker.addEventListener('languagechange', function() {
+worker.addEventListener('languagechange', () => {
   console.log('languagechange event detected!');
 });
 ```
 
-または、 {{domxref("WorkerGlobalScope/onlanguagechange", "onlanguagechange")}} イベントハンドラープロパティを使用することもできます。
+または、 `onlanguagechange`  イベントハンドラープロパティを使用します。
 
 ```js
-worker.onlanguagechange = function(event) {
+worker.onlanguagechange = (event) => {
   console.log('languagechange event detected!');
 };
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                               | 状態                                 |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{ SpecName('HTML WHATWG', 'workers.html#the-workerglobalscope-common-interface:event-languagechange', 'languagechange') }} | {{ Spec2('HTML WHATWG') }} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WorkerGlobalScope.languagechange_event")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("NavigatorLanguage.language", "navigator.language")}}
-- {{domxref("NavigatorLanguage.languages", "navigator.languages")}}
+- {{domxref("WorkerNavigator.language", "navigator.language")}}
+- {{domxref("WorkerNavigator.languages", "navigator.languages")}}
 - {{domxref("Navigator")}}
-- {{domxref("WorkerGlobalScope.onlanguagechange")}}

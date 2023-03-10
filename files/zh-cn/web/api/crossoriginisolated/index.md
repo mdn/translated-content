@@ -2,6 +2,7 @@
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 **`crossOriginIsolated`** 是 `WindowOrWorkerGlobalScope` 的一个只读属性，返回一个布尔值，该值指示是否可以通过 {{domxref("Window.postMessage()")}} 调用发送 {{jsxref("SharedArrayBuffer")}}。
@@ -38,5 +39,5 @@ if(crossOriginIsolated) {
 
 ## 参见
 
-- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
-- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
+- [Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)

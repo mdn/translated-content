@@ -2,6 +2,7 @@
 title: MediaSession
 slug: Web/API/MediaSession
 ---
+
 {{SeeCompatTable}}{{APIRef("Media Session API")}}
 
 [Media Session API](/ja/docs/Web/API/Media_Session_API) の **`MediaSession`** インターフェースは、ウェブページで標準のメディア再生操作に対する専用の動作を提供します。
@@ -61,9 +62,7 @@ function pause() {
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Media Session','#the-mediasession-interface','MediaSession')}} | {{Spec2('Media Session')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

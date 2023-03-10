@@ -1,20 +1,17 @@
 ---
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`ready`** 読み取り専用プロパティは、ストリームの内部キューの目的のサイズが非正から正に移行したときに解決する {{jsxref("Promise")}} を返し、バックプレッシャーが適用されなくなったことを通知します。
+{{APIRef("Streams")}}
 
-## 構文
+**`ready`** は {{domxref("WritableStreamDefaultWriter")}} インターフェイスの読み取り専用プロパティで、ストリームの内部キューの目的のサイズが非正から正に移行したときに解決する {{jsxref("Promise")}} を返し、背圧が適用されなくなったことを通知します。
 
-```
-var promise = writableStreamDefaultWriter.ready;
-```
+## 値
 
-### 値
-
-{{jsxref("Promise")}}。
+{{jsxref("Promise")}} です。
 
 ## 例
 
@@ -23,44 +20,38 @@ var promise = writableStreamDefaultWriter.ready;
 ```js
 function sendMessage(message, writableStream) {
   // defaultWriter は WritableStreamDefaultWriter 型です
-  var defaultWriter = writableStream.getWriter();
-  var encoder = new TextEncoder();
-  var encoded = encoder.encode(message, {stream: true});
-  encoded.forEach(function(chunk) {
+  const defaultWriter = writableStream.getWriter();
+  const encoder = new TextEncoder();
+  const encoded = encoder.encode(message, {stream: true});
+  encoded.forEach((chunk) => {
     // ストリームとそのライターがデータを
     // 受信できることを確認します。
     defaultWriter.ready
-    .then(function() {
-      defaultWriter.write(chunk)
-      .then(function() {
-        console.log("Chunk written to sink.);
+      .then(() => defaultWriter.write(chunk))
+      .then(() => {
+        console.log("Chunk written to sink.");
       })
-      .catch(function(err) {
-        console.log("Chunk error: " + err);
+      .catch((err) => {
+        console.error(`Chunk error: ${err}`);
       });
-    });
     // ライターを閉じる前にすべてのチャンクが
     // 確実に書き込まれるように、ready を再度呼び出します。
     defaultWriter.ready
-    .then(function() {
-      defaultWriter.close()
-      .then(function() {
+      .then(() => defaultWriter.close())
+      .then(() => {
         console.log("All chunks written");
       })
-      .catch(function(err) {
-        console.log("Stream error: " + err);
+      .catch((err) => {
+        console.error(`Stream error: ${err}`);
       });
-    });
   });
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                     | 状態                         | コメント |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Streams','#default-writer-ready','ready')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WritableStreamDefaultWriter.ready")}}
+{{Compat}}

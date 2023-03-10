@@ -2,7 +2,8 @@
 title: WebGL チュートリアル
 slug: Web/API/WebGL_API/Tutorial
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL](http://www.khronos.org/webgl/) は互換性があるブラウザで、プラグインを使用することなく HTML {{HTMLElement("canvas")}} 内で 3D グラフィックスをレンダリングするための、[OpenGL ES](http://www.khronos.org/opengles/) 2.0 に基づく API を Web コンテンツで使用できるようにします。WebGL のプログラムは JavaScript で記述する制御コードと、コンピュータの Graphics Processing Unit (GPU) で実行する特殊効果コード (シェーダーコード) で構成されます。WebGL 要素は他の HTML 要素と混ぜられ、他のページ部品やページの背景と合成されます。
 
@@ -10,7 +11,7 @@ slug: Web/API/WebGL_API/Tutorial
 
 ## 始める前に
 
-`<canvas>` 要素を使用することはそれほど難しくありませんが、[HTML](/ja/docs/Web/HTML "HTML") や [JavaScript](/ja/docs/Web/JavaScript "JavaScript") の基礎を理解していなければなりません。`<canvas>` 要素や WebGL は古いブラウザでサポートされていませんが、最近のバージョンではすべての主要なブラウザがサポートしています。canvas にグラフィックスを描画するためには、JavaScript コンテキストオブジェクトを使用します。このオブジェクトは、グラフィックスをオンザフライで生成します。
+`<canvas>` 要素を使用することはそれほど難しくありませんが、[HTML](/ja/docs/Web/HTML) や [JavaScript](/ja/docs/Web/JavaScript) の基礎を理解していなければなりません。`<canvas>` 要素や WebGL は古いブラウザでサポートされていませんが、最近のバージョンではすべての主要なブラウザがサポートしています。canvas にグラフィックスを描画するためには、JavaScript コンテキストオブジェクトを使用します。このオブジェクトは、グラフィックスをオンザフライで生成します。
 
 ## チュートリアル
 

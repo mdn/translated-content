@@ -2,6 +2,7 @@
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
+
 {{AddonSidebar}}
 
 コードが動作するタイミングを予約します。この API は [`setTimeout()`](/ja/docs/Web/API/WindowTimers/setTimeout) や [`setInterval()`](/ja/docs/Web/API/WindowTimers/setInterval) と似ていますが、 alarms API はバックグラウンドで動作する点が異なります。
@@ -35,4 +36,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms
 
 {{Compat("webextensions.api.alarms")}} {{WebExtExamples("h2")}}
 
-> **Note:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **メモ:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。

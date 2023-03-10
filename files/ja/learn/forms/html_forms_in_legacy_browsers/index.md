@@ -1,28 +1,19 @@
 ---
 title: 古いブラウザーでの HTML フォーム
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
+l10n:
+  sourceCommit: 4eeea08a8c50ab8f67ea815c31b53a09e5c44b04
 ---
+
 {{LearnSidebar}}
 
 ウェブ開発者は誰でも、ウェブが自分たちにとって非常に厳しい場所であることを、すぐに (時には痛みを伴って) 学びます。最悪の災いは古いブラウザーです。「古いブラウザー」というと、 Safari や古いバージョンの Internet Explorer を思い浮かべますが、それだけではありません。モバイルの世界では、古い Android スマホや iPhone のように、ブラウザーも OS もアップデートできない場合、アップデートされない純正ブラウザーも古いブラウザーです。
 
-この荒れた環境に対応するのも仕事のうちです。幸いなことに、知っておくと古いブラウザーによる問題のほとんどを解決することができる秘訣があります。また、 HTML5 の {{htmlelement('input')}} 型は、対応していなくても失敗はしません。 `type=text` で代替されます。
+この荒れた環境に対応するのも仕事のうちです。幸いなことに、知っておくと古いブラウザーによる問題のほとんどを解決することができる秘訣があります。また、 HTML の {{htmlelement('input')}} 型は、対応していなくても失敗はしません。 `type=text` で代替されます。
 
 ## 問題について知る
 
-一般的なパターンを理解するには、ブラウザーのドキュメントを読むことが役立ちます。 [MDN](/) でこの記事を読んでいるのであれば、始めるのにふさわしい場所にいます。使用したい要素 (または DOM インタフェース) の対応状況を確認するだけです。 MDN には、ウェブページで使用できるほとんどの要素、プロパティ、API の互換性一覧表が用意されています。他にも驚くほど役に立つリソースがあります。
-
-### ブラウザーベンダーのドキュメント
-
-- Mozilla: ここが適切な場所ですので、 MDN を参照してください。/li>
-- Microsoft: [Internet Explorer Standards Support Documentation](https://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx)
-- WebKit: このエンジンにはいくつかの異なるエディションが存在するため、やや複雑です。
-
-  - [The WebKit blog](https://www.webkit.org/blog/) や [Planet WebKit](https://planet.webkit.org/) は、 WebKit のコア開発者による最良の記事を集約しています。
-  - [Chrome platform status site](https://www.chromestatus.com/features) も重要です。
-  - [Apple のウェブサイト](https://developer.apple.com/technologies/safari/)も同様です。
-
-## 物事をシンプルにする
+一般的なパターンを理解するには、ブラウザーのドキュメントを読むことが役立ちます。 [MDN](/) でこの記事を読んでいるのであれば、始めるのにふさわしい場所にいます。使用したい要素（または DOM インタフェース）の対応状況を確認するだけです。 MDN には、ウェブページで使用できるほとんどの要素、プロパティ、API の互換性一覧表が用意されています。他にも驚くほど役に立つリソースがあります。
 
 [HTML フォーム](/ja/docs/Learn/Forms)では複雑なやり取りが行われるため、シンプルに保つという経験則があり、「[KISS の原則](https://ja.wikipedia.org/wiki/KISS%E3%81%AE%E5%8E%9F%E5%89%87)」とも呼ばれています。フォームを「よりかっこよく」あるいは「高機能に」したい場合はたくさんありますが、効率的なフォームの作成はデザインや技術の問題ではありません。むしろ、シンプルさ、直感性、そしてユーザーとの対話のしやすさが重要なのです。 [forms usability on UX For The Masses](https://www.uxforthemasses.com/forms-usability/) のチュートリアルがこれをよく説明しています。
 
@@ -43,9 +34,30 @@ HTML5 で追加された入力型は、劣化の仕方が高度に予測可能�
 </label>
 ```
 
-| 対応済み                                                                           | 未対応                                                                               |
-| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| ![Screen shot of the color input on Chrome for Mac OSX](color-fallback-chrome.png) | ![Screen shot of the color input on Firefox for Mac OSX](color-fallback-firefox.png) |
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th>対応済み</th>
+      <th>未対応</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img
+          alt="Screen shot of the color input on Chrome for Mac OSX"
+          src="color-fallback-chrome.png"
+        />
+      </td>
+      <td>
+        <img
+          alt="Screen shot of the color input on Firefox for Mac OSX"
+          src="color-fallback-firefox.png"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### フォームのボタン
 
@@ -109,7 +121,7 @@ HTML フォームの大きな問題の一つは、 CSS によるフォームウ�
 
 一般に、フォームコントロールの既定の外観は変更しない方が良いと考えられています。というのも、 1 つの CSS プロパティの値を変更すると、一部の入力型は変更されますが、他の入力型は変更されないからです。例えば、 `input { font-size: 2rem; }` と宣言した場合、 `number`、`date`、`text` には影響がありますが、 `color` や `range` には影響しません。プロパティを変更すると、予期せぬ形でウィジェットの外観に影響を与えることがあります。例えば、 `[value] { background-color: #ccc; }` は、 `value` 属性を持つすべての {{HTMLElement("input")}} を対象としていますが、 {{HTMLElement("meter")}} の背景色や境界線の角の丸めを変更すると、ブラウザーによって異なる予期せぬ結果になる可能性があります。 {{cssxref('appearance', 'appearance: none;')}} と宣言してブラウザーのスタイルを削除することもできますが、一般的には目的を達成できません。すべてのスタイルが失われ、訪問者が慣れ親しんだ既定のルック＆フィールが削除されるからです。
 
-まとめるとすると、フォームコントロールのウィジェットに CSS でスタイル付けすることで、予測できない副作用が発生することがあります。だからやめましょう。 [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)の記事の複雑さからもわかるように、非常に難しいのです。テキスト要素に多少の調整 (サイズやフォントの色など) を行うことはまだ可能でも、必ず副作用が発生します。最良の方法は、 HTML フォームウィジェットにスタイルをまったく適用しないことです。しかし、周囲のアイテムになら、どれでも適用することはできます。また、どうしてもフォームウィジェットの既定のスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、 [JavaScript でのウィジェットの再構築](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)など、難しいテクニックを検討することもできます。しかし、その場合は、[そのような愚かな要求をするクライアントに請求すること](https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)をためらってはいけません。
+まとめるとすると、フォームコントロールのウィジェットに CSS でスタイル付けすることで、予測できない副作用が発生することがあります。だからやめましょう。 [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)の記事の複雑さからもわかるように、非常に難しいのです。テキスト要素に多少の調整 (サイズやフォントの色など) を行うことはまだ可能でも、必ず副作用が発生します。最良の方法は、 HTML フォームウィジェットにスタイルをまったく適用しないことです。しかし、周囲のアイテムになら、どれでも適用することはできます。また、どうしてもフォームウィジェットの既定のスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、 [JavaScript でのウィジェットの再構築](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)など、難しいテクニックを検討することもできます。しかし、その場合は、[そのような愚かな要求をするクライアントに請求すること](https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)をためらってはいけません。
 
 ## 機能検出とポリフィル
 
@@ -148,7 +160,7 @@ CSS や JavaScript は素晴らしい技術ですが、古いブラウザーで�
 
 ```js
 Modernizr.load({
-  // ブラウザーが HTML5 のフォーム検証 API に対応しているかを確認します
+  // ブラウザーがフォーム検証 API に対応しているかを確認します
   test : Modernizr.formvalidation,
 
   // ブラウザーが対応していない場合は、以下のポリフィルを読み込みます
@@ -166,7 +178,7 @@ Modernizr.load({
 
 Modernizr チームは[すばらしいポリフィルのリスト](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)を管理しています。必要なポリフィルを選びましょう。
 
-> **Note:** Modernizr は、控えめな JavaScript や グレイスフルでグラデーションのテクニックに取り組むことを支援するためのすばらしい機能を搭載しています。[Modernizr のドキュメント](https://modernizr.com/docs/)をご覧ください。
+> **メモ:** Modernizr は、控えめな JavaScript や グレイスフルでグラデーションのテクニックに取り組むことを支援するためのすばらしい機能を搭載しています。[Modernizr のドキュメント](https://modernizr.com/docs/)をご覧ください。
 
 ### パフォーマンスに注意を払う
 
@@ -182,14 +194,14 @@ Modernizr のようなスクリプトはパフォーマンスを非常に意識�
 
 ### 学習経路
 
-- [初めての HTML フォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [HTML フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
+- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
+- [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
 - [ネイティブのフォームウィジェット](/ja/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
 - [高度なフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
 - [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [HTML フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [ウェブフォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
+- [クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)
 - [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 高度なトピック
@@ -197,5 +209,5 @@ Modernizr のようなスクリプトはパフォーマンスを非常に意識�
 - [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [古いブラウザーでの HTML フォーム](/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [HTML フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
+- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

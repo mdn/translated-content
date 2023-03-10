@@ -1,7 +1,6 @@
 ---
 title: Using readable streams
 slug: Web/API/Streams_API/Using_readable_streams
-translation_of: Web/API/Streams_API/Using_readable_streams
 ---
 {{apiref("Streams")}}
 
@@ -131,10 +130,10 @@ return pump();
 
 다음은 스트림 리더기를 사용할때의 기본적인 패턴 입니다.
 
-1.  스트림을 읽음으로서 실행되는 함수를 작성합니다.
-2.  만약 읽을수 있는 스트림이 더이상 없다면, 함수를 리턴 시킵니다.
-3.  만약 읽을수 있는 스트림이 아직 남아 있다면, 우선 읽어 드린 chunk를 처리하고, 다음 chunk를 읽어 드리기 위해 함수를 다시 실행합니다.
-4.  더이상 읽을수 있는 스트림이 없을때까지 함수를 재귀적으로 실행하고, 최종적으로 읽을수 있는 스트림이 없을경우 2번 Step을 따릅니다.
+1. 스트림을 읽음으로서 실행되는 함수를 작성합니다.
+2. 만약 읽을수 있는 스트림이 더이상 없다면, 함수를 리턴 시킵니다.
+3. 만약 읽을수 있는 스트림이 아직 남아 있다면, 우선 읽어 드린 chunk를 처리하고, 다음 chunk를 읽어 드리기 위해 함수를 다시 실행합니다.
+4. 더이상 읽을수 있는 스트림이 없을때까지 함수를 재귀적으로 실행하고, 최종적으로 읽을수 있는 스트림이 없을경우 2번 Step을 따릅니다.
 
 ## Creating your own custom readable stream
 
@@ -169,10 +168,10 @@ const stream = new ReadableStream({
 
 첫번째 인자인 객체는 5개의 맴버를 가질수 있으며, 제일 첫번째 맴버만 필수 입니다.
 
-1.  `start(controller)` — `ReadableStream` 이 생성되자 마자 딱 한번만 호출 되는 메서드 입니다. 이 메서드에는 스트림을 기능을 설정할 수 있는 코드가 포함되어야 합니다. 예를 들면 데이터 생성을 시작한다거나 아니면 소스에 접근하여 데이터를 가져오는 코드등이 들어가게 될것입니다.
-2.  `pull(controller)` — 이 메서드는 스트림 내부의 queue가 가득 찰때까지 반복적으로 호출 됩니다. 더 많은 청크가 큐에 들어갈 때 스트림을 제어하는 ​​데 사용할 수 있습니다.
-3.  `cancel()` — 이 메서드는 스트림이 캔슬될때 호출 됩니다 (예를 들어 {domxref("ReadableStream.cancel()")}} 이 호출 되었을때). 메서드의 내용은 스트림 소스에 대한 액세스를 해제하는 데 필요한 모든 것을 수행해야합니다.
-4.  `type` and `autoAllocateChunkSize` — 스트림이 바이트 스트림임을 나타 내기 위해 사용됩니다. 바이트 스트림은 목적과 사용 사례가 일반 (기본) 스트림과 약간 다르므로 향후 자습서에서 별도로 다룰 것입니다. 또한 아직 어느 곳에서도 구현되지 않았습니다.
+1. `start(controller)` — `ReadableStream` 이 생성되자 마자 딱 한번만 호출 되는 메서드 입니다. 이 메서드에는 스트림을 기능을 설정할 수 있는 코드가 포함되어야 합니다. 예를 들면 데이터 생성을 시작한다거나 아니면 소스에 접근하여 데이터를 가져오는 코드등이 들어가게 될것입니다.
+2. `pull(controller)` — 이 메서드는 스트림 내부의 queue가 가득 찰때까지 반복적으로 호출 됩니다. 더 많은 청크가 큐에 들어갈 때 스트림을 제어하는 데 사용할 수 있습니다.
+3. `cancel()` — 이 메서드는 스트림이 캔슬될때 호출 됩니다 (예를 들어 {domxref("ReadableStream.cancel()")}} 이 호출 되었을때). 메서드의 내용은 스트림 소스에 대한 액세스를 해제하는 데 필요한 모든 것을 수행해야합니다.
+4. `type` and `autoAllocateChunkSize` — 스트림이 바이트 스트림임을 나타 내기 위해 사용됩니다. 바이트 스트림은 목적과 사용 사례가 일반 (기본) 스트림과 약간 다르므로 향후 자습서에서 별도로 다룰 것입니다. 또한 아직 어느 곳에서도 구현되지 않았습니다.
 
 simple example code 를 다시한번 살펴보면, `ReadableStream()` 생성자가 `start()` 메서드 단 하나만 가지고 있다는 것을 알아챌수 있을 것 입니다. 이 `start()` 메서드 fetch된 스트림으로 부터 데이터를 읽어 들이고 있습니다.
 
@@ -313,7 +312,7 @@ One very experimental feature of streams is the ability to pipe streams into one
 
 This functionality is at a very experimental stage and is subject to change, so we have no explored it too deeply as of yet.
 
-We have created an example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream <span class="pl-c">that retrieves PNG chunks out of a binary data stream.</span>
+We have created an example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
 
 ```js
 // Fetch the original image

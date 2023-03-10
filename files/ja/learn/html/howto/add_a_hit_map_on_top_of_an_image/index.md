@@ -2,13 +2,14 @@
 title: 画像にヒットマップを追加する
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 ---
+
 ここでは、イメージマップを設定する方法と、最初に検討すべきいくつかの欠点を説明します。
 
-| 前提条件: | [基本的な HTML 文書の作成方法](/ja/docs/Learn/Getting_started_with_the_web)と、[アクセス可能な画像をウェブページに追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage)について、理解している必要があります。 |
+| 前提条件: | [基本的な HTML 文書の作成方法](/ja/docs/Learn/Getting_started_with_the_web)と、[アクセス可能な画像をウェブページに追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブページに画像を置くにはどうするのか)について、理解している必要があります。 |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 目的:     | 1 つの画像の異なる領域を異なるページにリンクする方法を学びます。                                                                                                                                                                                                       |
 
-> **Warning:** この記事では、クライアント側のイメージマップについてのみ説明します。 ユーザーにマウスが必要なサーバー側のイメージマップは使用しないでください。
+> **警告:** この記事では、クライアント側のイメージマップについてのみ説明します。 ユーザーにマウスが必要なサーバー側のイメージマップは使用しないでください。
 
 ## イメージマップとその欠点
 
@@ -28,7 +29,7 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 - 画像には、ホットスポットの始まりと終わりを明示する必要があります。
 - ホットスポットは、どのビューポートサイズでも快適にタップするのに十分な大きさでなければなりません。 どれくらいの大きさか？ [72 × 72 CSS ピクセルは良好な最小値](http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/)（英語）で、タッチターゲット間の間隔に余裕もあります。 [50languages.com](http://www.goethe-verlag.com/book2/) の世界地図（執筆時点）は、問題を完全に示しています。 アルバニアやエストニアよりもロシアや北米をタップする方がはるかに簡単です。
 
-{{htmlelement("img")}} 要素と {{htmlattrxref("alt",'img')}} テキストを使用して、[常に同じ方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage)で画像を挿入します。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な {{htmlattrxref("alt",'area')}} テキストを指定すると `alt=""` と書くことができます。
+{{htmlelement("img")}} 要素と {{htmlattrxref("alt",'img')}} テキストを使用して、[常に同じ方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブページに画像を置くにはどうするのか)で画像を挿入します。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な {{htmlattrxref("alt",'area')}} テキストを指定すると `alt=""` と書くことができます。
 
 特殊な {{htmlattrxref("usemap","img")}} 属性が必要です。 イメージマップには、スペースを含まない一意の名前を考えてください。 次に、`usemap` 属性の値としてその名前（# が先行する）を割り当てます。
 

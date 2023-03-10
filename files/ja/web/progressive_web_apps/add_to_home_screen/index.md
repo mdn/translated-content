@@ -1,26 +1,21 @@
 ---
 title: ホーム画面に追加
 slug: Web/Progressive_web_apps/Add_to_home_screen
-tags:
-  - Manifest
-  - PWA
-  - Progressive web apps
-  - Service Worker
-  - a2hs
-  - add to home screen
-  - icon
-translation_of: Web/Progressive_web_apps/Add_to_home_screen
+l10n:
+  sourceCommit: 8e1f45b8c0a3671f6e3de43c0764ad610aa345dd
 ---
+
 ホーム画面に追加 (または A2HS と略記) は最近のブラウザーで利用できる機能で、ユーザーがウェブアプリを「インストール」、すなわちお気に入りのウェブアプリケーション (またはウェブサイト) を表すショートカットを自分のホーム画面に追加することができるので、今後はこのショートカットを一回タップすればアクセスできるようになります。このガイドでは、 A2HS の使用方法と、ユーザーがこの機能を利用できるようにするために開発者として行う必要のあることについて説明します。
 
 ## なぜ A2HS か
 
-A2HS は[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)の思想の一環となるよう考えられています。 — ウェブアプリにネイティブアプリと同等の使い勝手を与えることで、今日のエコシステム戦争に参戦できるものです。この部分はホーム画面のアイコンをタップするという簡単な操作でアプリを起動できるものであり、きちんとした独自のウィンドウに表示されます。 A2HS ではこれを実現します。
+A2HS は[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)の思想の一環となるよう考えられています。 — ウェブアプリにネイティブアプリと同等の使い勝手を与えることで、今日のエコシステム競争に参戦できるものです。この部分はホーム画面のアイコンをタップするという簡単な操作でアプリを起動できるものであり、きちんとした独自のウィンドウに表示されます。 A2HS ではこれを実現します。
 
 ## A2HS に対応しているブラウザー
 
 A2HS は、 iOS webview を除いたすべてのモバイルブラウザーが対応しています。また、一部の Chromium ベースのデスクトップブラウザーも対応しています。
-Firefox はモバイルでの対応を[v58 から](/ja/docs/Mozilla/Firefox/Releases/58#Other)行っており、[デスクトップでの対応](https://bugzilla.mozilla.org/show_bug.cgi?id=1407202)は作業中です。
+
+Firefox はモバイルでの対応を[v58 から](/ja/docs/Mozilla/Firefox/Releases/58#その他)行っています。
 
 正確な詳細は [caniuse.com](https://caniuse.com/#feat=web-app-manifest) を参照してください。
 
@@ -28,23 +23,31 @@ Firefox はモバイルでの対応を[v58 から](/ja/docs/Mozilla/Firefox/Rele
 
 A2HS を説明するために最小構成のサンプルページを作成しました(デモページは[ここから](https://mdn.github.io/pwa-examples/a2hs/), ソースコードは [こちらから](https://github.com/mdn/pwa-examples/tree/master/a2hs))。このページ自体に大した機能はありませんが、ページを端末のホーム画面に追加してサービスワーカーのお陰でページをオフラインで使用可能にするために必要なコードが書かれています。このページは何枚かのキツネの写真を表示します。
 
-もし Android 版 Firefox を使用可能であれば、それを使用して `https://mdn.github.io/pwa-examples/a2hs/` にあるデモに移動してみてください。キツネの写真を見ることができますが、もっと重要なのは、その中にプラス (+) アイコンを持つ "ホーム " のアイコンが表示されることです。 — これは、必要な機能が所定の場所にある任意のサイトのために表示される "ホーム画面に追加 "アイコンです。
+もし Android 版 Firefox または Android 版 Chrome を使用可能であれば、それを使用して[デモ](https://mdn.github.io/pwa-examples/a2hs/)に移動してみてください（URL バーは Chrome では上端、 Firefox では下端に表示されます。）。
 
-![](add-to-home-screen-icon.png)
+![URL バーメニューL](url_bar_menu.png)
 
-このボタンをタップすると、このページをホーム画面に追加するかどうかの確認バナーが表示されます。ここで大きな + _ADD TO HOME SCREEN_ を選択するとウェブアプリがホーム画面に追加されます。
+URL バーの横にあるメニューを開きます。
+使用しているのが Chrome であるか、 Android であるかによって、「インストール」または「アプリのインストール」というメニューが表示されます。
+これが、必要な機能を備えているサイトに表示される「ホーム画面に追加」オプションです。
 
-![](fx-a2hs-banner.png)
+![アプリをインストールするオプション付きメニュー](menu_install_app.png)
 
-もし Chrome をお使いの場合は操作方法がやや異なります。 Chrome では、ページを読み込むと自動的にホーム画面に追加するかどうかのポップアップが現れます。
+> **メモ:** 古いバージョンのブラウザーでは、「ホーム」アイコンの中にプラス (+) アイコンが表示される場合があります。
+> これは同じことを行います。
+>
+> ![ホーム画面に追加するアイコン（古いブラウザーで使用するもの）](add-to-home-screen-icon.png)
 
-![](chrome-a2hs-banner.png)
+オプションを選択すると、アプリケーションをホーム画面に追加する処理が開始されます。
 
-> **Note:** Chrome でもバナーを表示したい場合は [Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/) の記事が役立ちます。
+このプロセスは、ブラウザー、モバイル端末のオペレーティングシステム、さらには機器によって若干異なる場合があります。
+例えば、 Google Pixel 3 で Android 上の Firefox を使用すると、 Pixel ランチャーが表示されます。
 
-このポップアップで「追加しない」を選んでしまったけれど、やっぱりインストールを行ないたい場合は Chrome のメニューを開いて「ホーム画面に追加」を押せば追加することができます。
+![Pixelランチャーでのアプリのインストール](pixel_launcher_add_app.png)
 
-ホーム画面に追加したウェブアプリは、どのブラウザーをお使いの場合でもフルネームではなく短縮名のほうで表示されます。これはほかのネイティブアプリの挙動と同じです。
+> **メモ:** Chrome のインストールバナーについては、[自分自身でウェブインストール体験を指定された方法](https://web.dev/customize-install/)の記事から、いろいろと調べることができます。
+
+どのブラウザーで使用しているかにかかわらず、ホーム画面に追加することを選ぶと、ネイティブアプリと同じように、短いタイトルとともにアプリが表示されるのがわかります。
 
 ![](a2hs-on-home-screen.png)
 
@@ -63,7 +66,7 @@ A2HS を説明するために最小構成のサンプルページを作成しま
 
 マニフェストファイルは JSON 形式で書かれ、ウェブアプリ内のどこかに設置される必要があります (置き場所はルートディレクトリにするのがよいです)。またファイルの拡張子は `.webmanifest` にします。ここでは `manifest.webmanifest` といファイル名にしました。このファイルにはウェブアプリについての情報やどのような挙動をするのかについての設定が記されています。
 
-> **Note:** 拡張子`.webmanifest` は W3C の[WebAppManifest についてのドキュメント](/ja/docs/)の中の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節の中で定義されています。ただ、多くの場合ブラウザーは拡張子 `.json` マニフェストファイルをサポートしています。
+> **メモ:** 拡張子`.webmanifest` は W3C の[WebAppManifest についてのドキュメント](/ja/docs/)の中の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節の中で定義されています。ただ、多くの場合ブラウザーは拡張子 `.json` マニフェストファイルをサポートしています。
 
 A2HS に必要なフィールドは次の通りです。
 
@@ -75,7 +78,7 @@ A2HS に必要なフィールドは次の通りです。
 
 サンプルアプリのマニフェストは次のようになります。
 
-```js
+```json
 {
   "background_color": "purple",
   "description": "Shows random fox pictures. Hey, at least it isn't cats.",
@@ -95,33 +98,33 @@ A2HS に必要なフィールドは次の通りです。
 
 ### 適切なアイコン
 
-As shown in the above manifest listing, we are including a 192 x 192 px icon for use in our app. You can include more sizes if you want; Android will choose the most appropriate size for each different use case. You could also decide to include different types of icons so devices can use the best one they are able to (e.g., Chrome already supports the WebP format).
+上記のマニフェスト一覧に記載されているように、アプリを使用するために192 x 192 pxのアイコンを記載しています。必要に応じて、さらに多くのサイズを記載することができます。Android は、さまざまな用途に応じて最も適切なサイズを選択します。また、端末が最適なものを使用できるように、異なる種類のアイコンを記載することもできます（例: Chrome はすでに WebP 形式に対応しています）。
 
-Note that the `type` member in each icon's object specifies the icon's mimetype, so the browser can quickly read what type the icon is, and then ignore it and move to a different icon if it doesn't support it.
+各アイコンのオブジェクトの `type` メンバがアイコンの MIME タイプを指定することに注意してください。これにより、ブラウザーはそのアイコンの種類をすばやく読み取り、対応していない場合はそれを無視して別のアイコンに移動することができます。
 
-In terms of how to design the icon, you should follow the same best practices you'd follow for any Android icon (see the [Android icon design guidelines](https://developer.android.com/guide/practices/ui_guidelines/icon_design.html)).
+アイコンのデザイン方法については、他の Android のアイコンと同じ最善の手法に従うべきです（ [Google Play icon design specifications](https://developer.android.com/distribute/google-play/resources/icon-design-specifications) を参照）。
 
 ### HTML からマニフェストへリンクする
 
-To finish setting up your manifest, you need to reference it from the HTML of your application's home page:
+マニフェストの設定を完了するには、アプリケーションのホームページの HTML からマニフェストを参照する必要があります。
 
 ```html
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest" />
 ```
 
-Browsers that support A2HS will know where to look for your manifest once this is in place.
+A2HS に対応しているブラウザーは、これによってマニフェストがどこにあるかを把握することができます。
 
 ## A2HS でできないこと
 
-Bear in mind that when you add an app to your Home screen, it just makes the app easily accessible — it doesn't download the app's assets and data to your device and make the app available offline, or anything like that. To make your app work offline, you have to use the [Service Worker API](/ja/docs/Web/API/Service_Worker_API) to handle storing the assets offline, and if required, [Web storage](/ja/docs/Web/API/Web_Storage_API) or [IndexedDB](/ja/docs/Web/API/IndexedDB_API) to store its data.
+ホーム画面にアプリを追加しても、それはアプリを簡単にアクセスできるようにするだけで、アプリの資産やデータを機器にダウンロードしたり、アプリをオフラインで利用できるようにしたりするようなことはしないことを覚えておいてください。アプリをオフラインで動作させるには、オフラインで資産を格納するために[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) を使用し、必要に応じて [ウェブストレージ](/ja/docs/Web/API/Web_Storage_API) や [IndexedDB](/ja/docs/Web/API/IndexedDB_API) を使用してそのデータを格納するようにしなければなりません。
 
-In our example app, we've just used a service worker to store all necessary files. The service worker is registered against the site with the final code block in the [`index.js`](https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js) file. We then cache all the site's assets using the [Cache API](/ja/docs/Web/API/Cache), and serve them from the cache instead of the network using the code in the [sw.js](https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js) file.
+この例のアプリでは、必要なファイルをすべて格納するためにサービスワーカーを使用しただけです。サービスワーカーは、 [`index.js`](https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js) ファイル内の最後のコードブロックで、サイトに対して登録されます。次に、[キャッシュ API](/ja/docs/Web/API/Cache) を使用してサイトのすべての資産をキャッシュし、 [sw.js](https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js) ファイルのコードを使用してネットワークの代わりにキャッシュからそれらを提供します。
 
 ## デスクトップでの A2HS
 
-While originally intended to improve user experience on mobile OSes, there is movement to make PWAs installable on desktop platforms too.
+本来はモバイル OS での使い勝手を向上させるためのものですが、PWA をデスクトッププラットフォームにもインストールする動きが出てきてい ます。
 
-> **Note:** At the time of writing, the functionality described below was only supported in newer versions of Chrome — by default on Windows, and behind the `#enable-desktop-pwas` flag on macOS.
+> **メモ:** この説明の時点では、以下の機能は新しいバージョンのChromeでのみ対応しています。Windowsでは既定で、 macOS では `#enable-desktop-pwas` フラグの後ろで対応しています。
 
 ### インストールボタンの追加
 
@@ -143,7 +146,7 @@ PWA インストール機能をデスクトップでも実現するには、ま�
 
 ### インストールを扱うための JavaScript
 
-At the bottom of our [`index.js` file](https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js), we added some JavaScript to handle the installation. First of all, we declare a `deferredPrompt` variable (which we'll explain later on), get a reference to our install button, and set it to `display: none` initially:
+[`index.js` ファイル](https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js)の一番下に、インストールを処理するための JavaScript を追加しています。まず最初に、変数 `deferredPrompt` を宣言し（これについては後ほど説明します）、インストールボタンを参照し、最初は `display: none` に設定しています。
 
 ```js
 let deferredPrompt;
@@ -151,28 +154,28 @@ const addBtn = document.querySelector('.add-button');
 addBtn.style.display = 'none';
 ```
 
-We hide the button initially because the PWA will not be available for install until it follows the A2HS criteria. When this happens, supporting browsers will fire a `beforeinstallprompt` event. We can then use a handler like the one below to handle the installation:
+PWA は A2HS の基準に従うことで、初めてインストールを利用できるようになるため、最初はボタンを非表示にしています。このとき、対応しているブラウザーは `beforeinstallprompt` イベントを発行します。そして、以下のようなハンドラーを使用して、インストールを処理することができます。
 
 ```js
 window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  // Chrome 67以前のバージョンでプロンプトが自動的に表示されないようにする
   e.preventDefault();
-  // Stash the event so it can be triggered later.
+  // 後で発生させることができるように、イベントを隠しておく。
   deferredPrompt = e;
-  // Update UI to notify the user they can add to home screen
+  // ホーム画面に内側へ追加できることをユーザーに通知する UI の更新
   addBtn.style.display = 'block';
 
   addBtn.addEventListener('click', (e) => {
-    // hide our user interface that shows our A2HS button
+    // A2HS ボタンを表示するユーザーインターフェイスを非表示にします。
     addBtn.style.display = 'none';
-    // Show the prompt
+    // プロンプトを表示
     deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
+    // ユーザーがプロンプトに応答するのを待つ
     deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
+          console.log('ユーザーが A2HS プロンプトを受け入れました。');
         } else {
-          console.log('User dismissed the A2HS prompt');
+          console.log('ユーザーは A2HS のプロンプトを拒否しました。');
         }
         deferredPrompt = null;
       });
@@ -180,37 +183,36 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 ```
 
-So here we:
+すなわち、次のようにします。
 
-- Call {{domxref("Event.preventDefault()")}} to stop Chrome 67 and earlier from calling the install prompt automatically (this behavior changed in Chrome 68).
-- Store the event object in the `deferredPrompt` variable so it can be used later on to perform the actual installation.
-- Set the button to `display: block` so it appears in the UI for the user to click.
-- Set a `click` handler for the button.
+- {{domxref("Event.preventDefault()")}} を呼び出すと、 Chrome 67 以前では自動的にインストールプロンプトを呼び出さなくなります（この動作は Chrome 68 で変更されました）。
+- イベントオブジェクトを `deferredPrompt` 変数に格納し、後で実際のインストールを行う際に使用できるようにします。
+- ボタンを `display: block` に設定し、ユーザーがクリックできるように UI に表示されるようにします。
+- ボタンに `click` ハンドラーを設定します。
 
-The click handler contains the following steps:
+クリックハンドラーは以下のステップで構成されています。
 
-- Hide the button again with `display: none` — it is no longer needed once the app is installed.
-- Use the `prompt()` method available on the `beforeinstallprompt` event object (stored in `deferredPrompt`) to trigger showing the install prompt.
-- Respond to the user's interaction with the prompt using the `userChoice` property, again available on the `beforeinstallprompt` event object.
-- Set `deferredPrompt` to null since it is no longer needed.
+- ボタンを `display: none` でもう一度隠します。アプリがインストールされたらもう必要ありません。
+- インストールプロンプトを表示するトリガーとして、（`deferredPrompt` に格納された） `beforeinstallprompt` イベントオブジェクトで利用できる `prompt()` メソッドを使用します。
+- 再び `beforeinstallprompt` イベントオブジェクトで使用できる `userChoice` プロパティを使用して、ユーザーとプロンプトの対話に応答します。
+- もう必要ないので、 `deferredPrompt` を null に設定します。
 
-So when the button is clicked, the install prompt appears.
+そこで、ボタンをクリックすると、インストールを促すプロンプトが現れます。
 
 ![](chrome-desktop-a2hs-banner.png)
 
-If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
+ユーザーが \[インストール] を選択すると、アプリはインストールされ（スタンドアロンのデスクトップアプリとして利用できます）、インストールボタンは表示されなくなります（アプリがすでにインストールされている場合は、 `onbeforeinstallprompt` イベントが発行されなくなります）。アプリを開くと、アプリは自分自身でウィンドウに表示されます。
 
 ![](a2hs-installed-desktop.png)
 
-If the user selects _Cancel_, the state of the app goes back to how it was before the button was clicked.
+ユーザーが \[キャンセル] を選択すると、アプリの状態はボタンがクリックされる前の状態に戻ります。
 
-> **Note:** The code for this section was mostly taken from [App install banners/Add to Home Screen](https://developers.google.com/web/fundamentals/app-install-banners/) by Pete LePage.
+> **メモ:** この章のコードは多くを [How to provide your own in-app install experience](https://web.dev/customize-install/) (Pete LePage) から引用しました。
 
 ## 関連情報
 
 - [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)
-- [Service Worker API](/ja/docs/Web/API/Service_Worker_API)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [ウェブマニフェストリファレンス](/ja/docs/Web/Manifest)
-- [App install banners](https://developers.google.com/web/fundamentals/app-install-banners/)
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/")}}

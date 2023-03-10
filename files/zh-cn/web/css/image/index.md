@@ -2,6 +2,7 @@
 title: <image>
 slug: Web/CSS/image
 ---
+
 {{ CSSRef() }}
 
 ## 综述：
@@ -20,10 +21,10 @@ CSS 确定一个图像对象实际尺寸的依据有三条：(1) 图像的原始
 | 图像对象类型                                                                                                                                | 默认的图像对象尺寸                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | {{ cssxref("background-image") }}                                                                                                | DOM 元素的背景定位的范围尺寸（大小）                   |
-| {{ cssxref("list-style-image") }}                                                                                                | 字符的`1em尺寸（大小）`                                |
+| {{ cssxref("list-style-image") }}                                                                                                | 字符的 `1em` 尺寸（大小）                                |
 | {{ cssxref("border-image") }}                                                                                                    | DOM 元素的边框图像范围尺寸（大小）                     |
 | {{ cssxref("cursor") }}                                                                                                            | 浏览器定义的光标尺寸匹配在使用操作系统上常规的光标尺寸 |
-| 用 CSS {{ cssxref("content") }}属性，和 CSS 伪元素 {{ cssxref("::after") }} 和 {{ cssxref("::before") }}替换元素内容 | 一个` 300px`` × 150px ` 矩形                           |
+| 用 CSS {{ cssxref("content") }}属性，和 CSS 伪元素 {{ cssxref("::after") }} 和 {{ cssxref("::before") }}替换元素内容 | 一个 `300px × 150px` 矩形                           |
 
 图像对象的实际尺寸计算算法如下：
 
@@ -68,7 +69,7 @@ element(#fakeid)                       如果 fakeid 是一个不存在与页面
 
 ## 浏览器兼容性
 
-{{Compat("css.types.image")}}
+{{Compat}}
 
 ## 参阅：
 

@@ -2,6 +2,7 @@
 title: VideoPlaybackQuality.totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
 ---
+
 ```
 videoPlaybackQuality 的totalVideoFrames 属性为一个只读属性，用于表述已经被加载的媒体资源中已经被渲染播放或者被废弃的视频帧总数
 ```
@@ -39,7 +40,7 @@ if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVid
 
 ## Browser compatibility
 
-{{Compat("api.VideoPlaybackQuality.totalVideoFrames")}}
+{{Compat}}
 
 ## See also
 

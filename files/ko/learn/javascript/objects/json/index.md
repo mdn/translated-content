@@ -1,14 +1,8 @@
 ---
 title: JSON으로 작업하기
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - JSON
-  - JSON 객체
-  - JSON 문자열로 변환
-  - 입문자
-  - 초보자
-translation_of: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된 데이터를 표현하기 위한 문자 기반의 표준 포맷입니다. 웹 어플리케이션에서 데이터를 전송할 때 일반적으로 사용합니다(서버에서 클라이언트로 데이터를 전송하여 표현하려거나 반대의 경우). 여기저기서 자주 보았을테니 여기선 JSON을 파싱, 데이터에 접근하고 JSON을 생성하는 등 Javascript로 JSON을 다루는 법에 대해 알아봅시다.
@@ -187,7 +181,7 @@ JSON 데이터를 다음 깃허브 링크에서 가져올수 있습니다. <http
 
 페이지에 JSON 데이터를 로딩하고 DOM 조작을 통해 아래와 같이 만들어 봅시다. :
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### JSON 가져오기
 
@@ -365,13 +359,3 @@ myString
 - [Official JSON web site with link to ECMA standard](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
-
-## 다음 단계
-
-- [Object basics](/ko/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/ko/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/ko/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/ko/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/ko/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

@@ -6,6 +6,7 @@ tags:
   - Sécurité
 translation_of: Web/Security/Subresource_Integrity
 ---
+
 **_Subresource Integrity_** (SRI, ou « Intégrité des sous-ressources ») est une fonction de sécurité qui permet aux navigateurs de vérifier que les fichiers qu'ils vont chercher (par exemple, à partir d'un [CDN](/fr/docs/Glossaire/CDN)) sont livrés sans manipulation inattendue. Cela fonctionne en permettant de fournir un hachage cryptographique (« _hash_ ») auquel le fichier récupéré doit correspondre.
 
 ## Comment fonctionne le contrôle d'intégrité des sous-ressources ?
@@ -65,14 +66,11 @@ Les navigateurs gèrent SRI en effectuant les étapes suivantes :
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires |
-| ------------------------------------------------ | -------------------------------------------- | ------------ |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.require-sri-for")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: HTML 中的图片
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 在一开始时，Web 仅有文本，那真的是很无趣。幸运的是，没过多久网页上就能嵌入图片和其他有趣的内容了。虽然还有许多其他类型的多媒体，但是从地位比较低的{{htmlelement("img")}}元素开始是符合逻辑的，它常常被用来在网页中嵌入一张简单的图片。在这篇文章中，我们将看到怎样深入的使用它，包括基本的用{{htmlelement("figure")}}来添加说明文字，以及怎样把它和 CSS 背景图片链接起来。
@@ -37,7 +38,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 我们可以用{{htmlelement("img")}} 元素来把图片放到网页上。它是一个空元素（它不需要包含文本内容或闭合标签），最少只需要一个 `src` （一般读作其全称 *source）*来使其生效。`src` 属性包含了指向我们想要引入的图片的路径，可以是相对路径或绝对 URL，就像 {{htmlelement("a")}} 元素的 `href` 属性一样。
 
-> **备注：** 在继续之前，你应该阅读[快速入门 URL 和路径](</zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门>)来复习一下相对和绝对 URL。
+> **备注：** 在继续之前，你应该阅读[快速入门 URL 和路径](</zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门>) 来复习一下相对和绝对 URL。
 
 举个例子来看，如果你有一幅文件名为 `dinosaur.jpg` 的图片，且它与你的 HTML 页面存放在相同路径下，那么你可以这样嵌入它：
 
@@ -157,14 +158,16 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 好，轮到你了！在这个动手练习中，我们希望你可以做一个简单的嵌入图片练习。你有一个基本的 {{htmlelement("img")}} 标签; 我们希望你可以把下面这个 URL 所指向的图片嵌入到 HTML 中：
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 之前我们说过永远不要从其他服务器热链接图片，但这次只是出于学习目的，所以我们会允许你这么做一次。
 
 我们还希望你可以：
 
-- 添加 `alt`文字，添加完成后，可以故意把 URL 写错，来检查 {{htmlelement("alt")}} 的效果。
-- 设置图片正确的 `width` 和 `height` 属性（提示：宽 200px，高 171px），然后再将宽和高的值进行改变，看看会有什么影响。
+- 添加一些备选文字，添加完成后，可以故意把 URL 写错，来检查该属性的效果。
+- 设置图片正确的 `width` 和 `height` 属性（提示：宽为 200px，高为 171px），然后再将宽和高的值进行改变，看看会有什么影响。
 - 在图片上设置 `title` 属性。
 
 如果你遇到了错误，你可以按 reset 按钮来重置。如果你遇到了困难无法完成，按下 Show solution 按钮来看一下答案。
@@ -455,12 +458,3 @@ p {
 目前到此为止，我们详细介绍了图片和说明文字，在下篇文章中，我们将进一步看看如何使用 HTML 在网页上嵌入音频和视频。
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 本章目录
-
-- [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [从 \<object> 到 \<iframe>：其它嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [为网页添加矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla 宣传页面](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

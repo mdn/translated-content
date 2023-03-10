@@ -2,6 +2,7 @@
 title: Accept-Patch
 slug: Web/HTTP/Headers/Accept-Patch
 ---
+
 {{HTTPSidebar}}
 
 服务器使用 HTTP 响应头 **`Accept-Patch`** 通知浏览器请求的媒体类型 (media-type) 可以被服务器理解。

@@ -1,13 +1,8 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/padding-right
 ---
+
 {{CSSRef}}
 
 **`padding-right`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 오른쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.

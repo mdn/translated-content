@@ -1,13 +1,8 @@
 ---
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
-tags:
-  - API
-  - Method
-  - URL
-  - URL API
-translation_of: Web/API/URL/revokeObjectURL
 ---
+
 {{ApiRef("URL API")}}
 
 **`URL.revokeObjectURL()`** 정적 메서드는 이전에 {{domxref("URL.createObjectURL()") }}을 통해 생성한 객체 URL을 해제합니다. 객체 URL을 더는 쓸 일이 없을 때 사용해서, 브라우저가 이제 해당 객체를 메모리에 들고 있지 않아도 된다고 알려주세요.
@@ -18,7 +13,9 @@ translation_of: Web/API/URL/revokeObjectURL
 
 ## 구문
 
-    URL.revokeObjectURL(objectURL)
+```js
+URL.revokeObjectURL(objectURL)
+```
 
 ### 매개변수
 
@@ -39,5 +36,5 @@ translation_of: Web/API/URL/revokeObjectURL
 
 ## 같이 보기
 
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
 - {{domxref("URL.createObjectURL()")}}

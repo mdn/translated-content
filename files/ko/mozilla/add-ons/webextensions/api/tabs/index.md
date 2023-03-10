@@ -1,19 +1,8 @@
 ---
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
+
 {{AddonSidebar}}
 
 Interact with the browser's tab system.
@@ -44,6 +33,8 @@ You can use most of this API without any special permission. However:
   - : Specifies the reason a tab was muted or unmuted.
 - {{WebExtAPIRef("tabs.MutedInfo")}}
   - : This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
+- {{WebExtAPIRef("tabs.PageSettings")}}
+  - : Used to control how a tab is rendered as a PDF by the [`tabs.saveAsPDF()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) method.
 - {{WebExtAPIRef("tabs.Tab")}}
   - : This type contains information about a tab.
 - {{WebExtAPIRef("tabs.TabStatus")}}
@@ -51,7 +42,7 @@ You can use most of this API without any special permission. However:
 - {{WebExtAPIRef("tabs.WindowType")}}
   - : The type of window that hosts this tab.
 - {{WebExtAPIRef("tabs.ZoomSettingsMode")}}
-  - : Defines whether zoom changes are handled by the browser, by the add-on, or are disabled.
+  - : Defines whether zoom changes are handled by the browser, by the extension, or are disabled.
 - {{WebExtAPIRef("tabs.ZoomSettingsScope")}}
   - : Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.
 - {{WebExtAPIRef("tabs.ZoomSettings")}}
@@ -64,44 +55,62 @@ You can use most of this API without any special permission. However:
 
 ## Functions
 
+- {{WebExtAPIRef("tabs.captureTab()")}}
+  - : Creates a data URL encoding an image of the visible area of the given tab.
+- {{WebExtAPIRef("tabs.captureVisibleTab()")}}
+  - : Creates a data URL encoding an image of the visible area of the currently active tab in the specified window.
 - {{WebExtAPIRef("tabs.connect()")}}
-  - : Sets up a messaging connection between the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) running in the specified tab.
+  - : Sets up a messaging connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) running in the specified tab.
 - {{WebExtAPIRef("tabs.create()")}}
   - : Creates a new tab.
-- {{WebExtAPIRef("tabs.captureVisibleTab()")}}
-  - : Creates a data URI encoding an image of the visible area of the currently active tab in the specified window.
 - {{WebExtAPIRef("tabs.detectLanguage()")}}
   - : Detects the primary language of the content in a tab.
+- {{WebExtAPIRef("tabs.discard()")}}
+  - : Discards one or more tabs.
 - {{WebExtAPIRef("tabs.duplicate()")}}
   - : Duplicates a tab.
-- {{WebExtAPIRef("tabs.executeScript()")}}
+- {{WebExtAPIRef("tabs.executeScript()")}} (Manifest V2 only)
   - : Injects JavaScript code into a page.
 - {{WebExtAPIRef("tabs.get()")}}
   - : Retrieves details about the specified tab.
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : Gets details about all tabs in the specified window.
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab) object.
+  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object.
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
-  - : Gets the tab that is selected in the specified window.
+  - : Gets the tab that is selected in the specified window. **Deprecated: use [`tabs.query({active: true})`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) instead.**
 - {{WebExtAPIRef("tabs.getZoom()")}}
   - : Gets the current zoom factor of the specified tab.
 - {{WebExtAPIRef("tabs.getZoomSettings()")}}
   - : Gets the current zoom settings for the specified tab.
+- {{WebExtAPIRef("tabs.goForward()")}}
+  - : Go forward to the next page, if one is available.
+- {{WebExtAPIRef("tabs.goBack()")}}
+  - : Go back to the previous page, if one is available.
+- {{WebExtAPIRef("tabs.hide()")}} {{experimental_inline}}
+  - : Hides one or more tabs.
 - {{WebExtAPIRef("tabs.highlight()")}}
   - : Highlights one or more tabs.
-- {{WebExtAPIRef("tabs.insertCSS()")}}
+- {{WebExtAPIRef("tabs.insertCSS()")}} (Manifest V2 only)
   - : Injects CSS into a page.
-- {{WebExtAPIRef("tabs.removeCSS()")}}
-  - : Removes from a page CSS which was previously injected by calling {{WebExtAPIRef("tabs.insertCSS()")}}.
 - {{WebExtAPIRef("tabs.move()")}}
   - : Moves one or more tabs to a new position in the same window or to a different window.
+- {{WebExtApiRef("tabs.moveInSuccession()")}}
+  - : Modifies the succession relationship for a group of tabs.
+- {{WebExtAPIRef("tabs.print()")}}
+  - : Prints the contents of the active tab.
+- {{WebExtAPIRef("tabs.printPreview()")}}
+  - : Opens print preview for the active tab.
 - {{WebExtAPIRef("tabs.query()")}}
   - : Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 - {{WebExtAPIRef("tabs.reload()")}}
   - : Reload a tab, optionally bypassing the local web cache.
 - {{WebExtAPIRef("tabs.remove()")}}
   - : Closes one or more tabs.
+- {{WebExtAPIRef("tabs.removeCSS()")}} (Manifest V2 only)
+  - : Removes from a page CSS which was previously injected by calling {{WebExtAPIRef("tabs.insertCSS()")}}.
+- {{WebExtAPIRef("tabs.saveAsPDF()")}}
+  - : Saves the current page as a PDF.
 - {{WebExtAPIRef("tabs.sendMessage()")}}
   - : Sends a single message to the content script(s) in the specified tab.
 - {{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}
@@ -110,8 +119,14 @@ You can use most of this API without any special permission. However:
   - : Zooms the specified tab.
 - {{WebExtAPIRef("tabs.setZoomSettings()")}}
   - : Sets the zoom settings for the specified tab.
+- {{WebExtAPIRef("tabs.show()")}} {{experimental_inline}}
+  - : Shows one or more tabs that have been {{WebExtAPIRef("tabs.hide()", "hidden")}}.
+- {{WebExtAPIRef("tabs.toggleReaderMode()")}}
+  - : Toggles Reader mode for the specified tab.
 - {{WebExtAPIRef("tabs.update()")}}
   - : Navigate the tab to a new URL, or modify other properties of the tab.
+- {{WebExtAPIRef("tabs.warmup()")}}
+  - : Prepare the tab to make a potential following switch faster.
 
 ## Events
 
@@ -142,21 +157,18 @@ You can use most of this API without any special permission. However:
 - {{WebExtAPIRef("tabs.onZoomChange")}}
   - : Fired when a tab is zoomed.
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("webextensions.api.tabs")}}
-
-> 참고: The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro. If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
-
-### Edge incompatibilities
-
-Promises are not supported in Edge. Use callbacks instead.
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **참고:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -183,4 +195,4 @@ Promises are not supported in Edge. Use callbacks instead.
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

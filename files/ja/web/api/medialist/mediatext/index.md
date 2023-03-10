@@ -2,6 +2,7 @@
 title: MediaList.mediaText
 slug: Web/API/MediaList/mediaText
 ---
+
 {{APIRef("CSSOM")}}
 
 **`mediaText`** は {{domxref("MediaList")}} インターフェイスの{{Glossary("stringifier", "文字列化")}}プロパティで、この `MediaList` をテキストとして表す文字列を返します。新しい `MediaList` を設定することもできます。

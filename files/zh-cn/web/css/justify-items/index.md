@@ -2,9 +2,10 @@
 title: justify-items
 slug: Web/CSS/justify-items
 ---
+
 {{CSSRef}}
 
-[CSS](/en-US/docs/CSS) 的 **`justify-items`** 属性为所有盒中的项目定义了默认的 {{CSSxRef("justify-self")}} ， 可以使这些项目以默认方式沿适当轴线对齐到每个盒子。
+[CSS](/zh-CN/docs/CSS) 的 **`justify-items`** 属性为所有盒中的项目定义了默认的 {{CSSxRef("justify-self")}} ，可以使这些项目以默认方式沿适当轴线对齐到每个盒子。
 
 {{EmbedInteractiveExample("pages/css/justify-items.html")}}
 
@@ -12,9 +13,9 @@ slug: Web/CSS/justify-items
 
 - 在块级布局中，会将其包含的项目在其行内轴上对齐；
 - 绝对定位的元素中，会将其包含的项目在其行内轴上对齐，同时考虑 top、left、bottom、right 的值；
-- 表格单元中，该属性被忽略（块级元素、绝对定位元素和表格布局中对齐的[更多信息](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)）；
-- 弹性盒子布局中，该属性被忽略（弹性盒子中对齐的[更多信息](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)）；
-- 栅格布局中，会将其栅格区域内的项目在其行内轴上对齐（栅格布局中对齐的[更多信息](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)）；
+- 表格单元中，该属性被忽略（块级元素、绝对定位元素和表格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)）；
+- 弹性盒子布局中，该属性被忽略（弹性盒子中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)）；
+- 栅格布局中，会将其栅格区域内的项目在其行内轴上对齐（栅格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)）；
 
 ## 语法规则
 
@@ -123,8 +124,8 @@ justify-items: unset;
 
 ## 另见
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
 - The {{CSSxRef("place-items")}} shorthand property
 - The {{CSSxRef("justify-self")}} property
 - The {{CSSxRef("align-items")}} property

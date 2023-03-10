@@ -2,6 +2,7 @@
 title: Document.designMode
 slug: Web/API/Document/designMode
 ---
+
 {{ ApiRef()}}
 
 **`document.designMode`** 控制整个文档是否可编辑。有效值为 `"on"` 和 `"off"` 。根据规范，该属性默认为 `"off"` 。Firefox 遵循此标准。早期版本的 Chrome 和 IE 默认为 `"inherit"` 。从 Chrome 43 开始，默认值为 `"off"` ，并且不再支持 `"inherit"`。在 IE6 到 IE10 中，该值为大写。
@@ -27,7 +28,7 @@ iframeNode.contentDocument.designMode = "on";
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.designMode")}}
+{{Compat}}
 
 ## 参见
 

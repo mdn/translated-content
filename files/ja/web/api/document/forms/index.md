@@ -2,9 +2,10 @@
 title: Document.forms
 slug: Web/API/Document/forms
 ---
+
 {{domxref("Document")}} インターフェイスの **`forms`** プロパティは読み取り専用で、文書内に含まれるすべての {{HTMLElement("form")}} を列挙した {{domxref("HTMLCollection")}} を返します。
 
-> **Note:** 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。
+> **メモ:** 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。
 
 ## 構文
 
@@ -83,10 +84,7 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}} | {{ Spec2('HTML WHATWG') }} |          |
-| {{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}     | {{ Spec2('DOM2 Events') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

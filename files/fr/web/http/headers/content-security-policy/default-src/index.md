@@ -14,6 +14,7 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** sert de valeur par défaut pour les autres directives CSP {{Glossary("fetch directive", "fetch directives")}}.
@@ -128,14 +129,11 @@ Content-Security-Policy: connect-src 'self';
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire                                                                    |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------ |
-| {{specName("CSP 3.0", "#directive-default-src", "default-src")}} | {{Spec2('CSP 3.0')}} | Ajout de `frame-src`, `manifest-src` et `worker-src` comme valeurs par défaut. |
-| {{specName("CSP 1.1", "#directive-default-src", "default-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale.                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.default-src")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -146,6 +144,6 @@ Content-Security-Policy: connect-src 'self';
   - {{Glossary("Document directive")}}
   - {{Glossary("Navigation directive")}}
   - {{Glossary("Reporting directive")}}
-  - [`upgrade-insecure-requests`](/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`block-all-mixed-content`](/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`require-sri-for`](/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for) {{experimental_inline}}
+  - [`upgrade-insecure-requests`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
+  - [`block-all-mixed-content`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
+  - [`require-sri-for`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for) {{experimental_inline}}

@@ -1,14 +1,9 @@
 ---
 title: 'ARIA: checkbox ロール'
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsContent
-  - Role
-translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role
 ---
+
 チェックボックス ([checkbox](https://www.w3.org/TR/wai-aria-1.1/#checkbox)) ロールは、チェック可能なインタラクティブなコントロールに使用します。 `role="checkbox"` を含む要素には、チェックボックスの状態を支援技術に公開するための `aria-checked` 属性も含める必要があります。
 
 ```html
@@ -126,7 +121,7 @@ function changeCheckbox(event) {
 
 - スクリーンリーダーは、要素をチェックボックスとしてアナウンスし、任意でアクティブ化する方法を説明する必要があります。
 
-> **Note:** **注:** 支援技術がこの手法をどのように扱うべきかについては、意見が異なる場合があります。 上記の情報はそれらの意見の 1 つであり、したがって規範的ではありません。
+> **メモ:** 支援技術がこの手法をどのように扱うべきかについては、意見が異なる場合があります。 上記の情報はそれらの意見の 1 つであり、したがって規範的ではありません。
 
 ## ベストプラクティス
 

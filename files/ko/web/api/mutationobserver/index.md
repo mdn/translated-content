@@ -1,7 +1,6 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-translation_of: Web/API/MutationObserver
 ---
 {{APIRef("DOM")}}
 
@@ -13,11 +12,13 @@ translation_of: Web/API/MutationObserver
 
 새 DOM 변경 감시자의 인스턴스화에 대한 생성자.
 
-    new MutationObserver(
-      function callback
-    );
+```
+new MutationObserver(
+  function callback
+);
+```
 
-<h6 id="Parameters">Parameters</h6>
+## Parameters
 
 - `callback`
   - : 콜백 함수는 각 DOM 변경시 마다 호출될 것입니다. 감시자는 두 인자와 함께 이 함수를 호출할 것입니다. 첫째 인자는 오브젝트들의 배열이며, 오브젝트의 각 형식은 {{domxref("MutationRecord")}} 입니다. 둘째 인자는 이 `MutationObserver` 인스턴스 입니다.
@@ -35,12 +36,14 @@ translation_of: Web/API/MutationObserver
 
 특정 노드에서 DOM 변경의 알림을 받을 수 있도록 `MutationObserver` 인스턴스를 등록.
 
-    void observe(
-      {{domxref("Node")}} target,
-      MutationObserverInit options
-    );
+```
+void observe(
+  {{domxref("Node")}} target,
+  MutationObserverInit options
+);
+```
 
-<h6 id="파라미터">파라미터</h6>
+## 파라미터
 
 - `target`
   - : DOM 변경을 감시할 {{domxref("Node")}}.
@@ -53,15 +56,19 @@ translation_of: Web/API/MutationObserver
 
 DOM 변경 알림을 받는 `MutationObserver` 인스턴스 중지. [`observe()`](<#observe()>) 재사용시까지 감시 콜백은 발동되지 않을 것입니다.
 
-    void disconnect();
+```
+void disconnect();
+```
 
 ### `takeRecords()`
 
 `MutationObserver` 인스턴스의 레코드 큐를 비우고 안에 든것을 반환합니다.
 
-    Array takeRecords();
+```
+Array takeRecords();
+```
 
-<h6 id="반환값">반환값</h6>
+## 반환값
 
 {{domxref("MutationRecord")}}들의 배열을 반환.
 

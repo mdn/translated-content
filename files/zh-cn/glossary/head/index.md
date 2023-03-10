@@ -2,6 +2,7 @@
 title: Head
 slug: Glossary/Head
 ---
+
 **Head**是{{glossary("HTML")}}文档的一部分，包含了关于文档的{{glossary("metadata")}}，比如作者、描述以及应用于 HTML 的{{glossary("CSS")}} 或者 {{glossary("JavaScript")}} 文件的链接。
 
 ## 了解更多

@@ -2,7 +2,8 @@
 title: canvas 的优化
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 {{HTMLElement("canvas")}}元素是众多广泛使用的网络 2D 图像渲染标准之一。它被广泛用于游戏及复杂的图像可视化中。然而，随着网站和应用将 canvas 画布推至极限，性能开始成为问题。此文目标是给使用 canvas 画布元素的优化带来建议，去保证你的网站或者应用表现卓越。
 
@@ -70,7 +71,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 ### 用 CSS transforms 特性缩放画布
 
-[CSS transforms](/en-US/docs/Web/Guide/CSS/Using_CSS_transforms) 使用 GPU，因此速度更快。最好的情况是不直接缩放画布，或者具有较小的画布并按比例放大，而不是较大的画布并按比例缩小。
+[CSS transforms](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms) 使用 GPU，因此速度更快。最好的情况是不直接缩放画布，或者具有较小的画布并按比例放大，而不是较大的画布并按比例缩小。
 
 ```js
 var scaleX = window.innerWidth / canvas.width;
@@ -85,7 +86,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 ### 关闭透明度
 
-如果你的游戏使用画布而且不需要透明，当使用 [`HTMLCanvasElement.getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) 创建一个绘图上下文时把 `alpha` 选项设置为 `false` 。这个选项可以帮助浏览器进行内部优化。
+如果你的游戏使用画布而且不需要透明，当使用 [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 创建一个绘图上下文时把 `alpha` 选项设置为 `false` 。这个选项可以帮助浏览器进行内部优化。
 
 ```js
 var ctx = canvas.getContext('2d', { alpha: false });
@@ -97,7 +98,7 @@ var ctx = canvas.getContext('2d', { alpha: false });
 - 避免不必要的画布状态改变
 - 渲染画布中的不同点，而非整个新状态
 - 尽可能避免 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}特性
-- 尽可能避免[text rendering](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+- 尽可能避免[text rendering](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
 - 尝试不同的方法来清除画布 ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. 调整 canvas 大小)
 - 有动画，请使用{{domxref("window.requestAnimationFrame()")}} 而非{{domxref("window.setInterval()")}}
 - 请谨慎使用大型物理库

@@ -2,6 +2,7 @@
 title: ':optional'
 slug: Web/CSS/:optional
 ---
+
 {{ CSSRef() }}
 
 ## 摘要
@@ -33,7 +34,7 @@ input:optional {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.optional")}}
+{{Compat}}
 
 ## 参见
 

@@ -4,6 +4,7 @@ slug: Web/API/Element/compositionend_event
 translation_of: Web/API/Element/compositionend_event
 original_slug: Web/Events/compositionend
 ---
+
 L'événement **`compositionend`** est déclenché lorsque la composition d'un texte via {{glossary("input method editor", "méthode de saisie")}} est terminée ou annulée (démarre avec des caractères spéciaux qui requièrent une séquence de touches et d'autres entrées telles que la reconnaissance vocale ou la suggestion de mot sur mobile).
 
 Par exemple, cette événement pourrait être déclanché quand un utilisateur saisie un caractère chinois en utilisant la méthode de saisie [Pinyin](https://en.wikipedia.org/wiki/Pinyin).
@@ -114,5 +115,5 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 ## Evénements liés
 
-- {{Event("compositionstart")}}
-- {{Event("compositionupdate")}}
+- [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event)
+- [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event)

@@ -2,6 +2,7 @@
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`mode`** は {{domxref("ShadowRoot")}} の読み取り専用プロパティで、モードを `open` と `closed` のどちらかで示します。これはシャドウルートの内部機能を JavaScript からアクセスできるかどうかを定義します。

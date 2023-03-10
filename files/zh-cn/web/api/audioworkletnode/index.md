@@ -2,6 +2,7 @@
 title: AudioWorkletNode
 slug: Web/API/AudioWorkletNode
 ---
+
 {{APIRef("Web Audio API")}} {{SeeCompatTable}}
 
 虽然这个接口可以在 [secure contexts](/zh-CN/docs/Web/Security/Secure_Contexts) 之外调用，但是 {{domxref("BaseAudioContext.audioWorklet")}} 属性不行，从而 {{domxref("AudioWorkletProcessor")}} 不能在外部定义。
@@ -20,7 +21,7 @@ _也继承父类的属性，{{domxref("AudioNode")}}_.
 - {{domxref("AudioWorkletNode.port")}} {{readonlyinline}}
   - : 返回一个 {{domxref("MessagePort")}} 用于节点与其关联的 {{domxref("AudioWorkletProcessor")}} 间的双向通讯。另一端在处理器属性{{domxref("AudioWorkletProcessor.port", "port")}} 下可用。
 - {{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}
-  - : 返回一个 {{domxref("AudioParamMap")}} — {{domxref("AudioParam")}} 对象的集合。它们在创建 `AudioWorkletProcessor`的过程中被实例化. 如果 `AudioWorkletProcessor` 有一个静态的 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter，从其返回的 {{domxref("AudioParamDescriptor")}} 数组用于在 `AudioWorkletNode` 创建 `AudioParam` 对象。通过这种机制，使得 `AudioParam` 对象可以从 `AudioWorkletNode` 中访问。你可以在与其关联的 `AudioWorkletProcessor` 中使用它的值。
+  - : 返回一个 {{domxref("AudioParamMap")}} — {{domxref("AudioParam")}} 对象的集合。它们在创建 `AudioWorkletProcessor`的过程中被实例化。如果 `AudioWorkletProcessor` 有一个静态的 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter，从其返回的 {{domxref("AudioParamDescriptor")}} 数组用于在 `AudioWorkletNode` 创建 `AudioParam` 对象。通过这种机制，使得 `AudioParam` 对象可以从 `AudioWorkletNode` 中访问。你可以在与其关联的 `AudioWorkletProcessor` 中使用它的值。
 
 ### Event handlers
 
@@ -71,7 +72,7 @@ whiteNoiseNode.connect(audioContext.destination)
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioWorkletNode")}}
+{{Compat}}
 
 ## See also
 

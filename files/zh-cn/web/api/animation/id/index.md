@@ -2,6 +2,7 @@
 title: Animation.id
 slug: Web/API/Animation/id
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的 **`Animation.id`** 属性可返回或设置用于识别某个动画的唯一标识。
@@ -32,11 +33,11 @@ rabbitDownAnimation.effect.id = "rabbitGo";
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.Animation.id")}}
+{{Compat}}
 
-## 相关文档
+## 参见
 
 - [KeyframeEffect Interface](/zh-CN/docs/Web/API/KeyframeEffect)
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)

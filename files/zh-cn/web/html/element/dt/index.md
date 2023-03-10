@@ -2,9 +2,10 @@
 title: <dt>
 slug: Web/HTML/Element/dt
 ---
+
 ## 简介
 
-**HTML `<dt>` 元素** （或 _HTML 术语定义元素_）用于在一个定义列表中声明一个术语。该元素仅能作为 {{HTMLElement("dl")}} 的子元素出现。通常在该元素后面会跟着 {{HTMLElement("dd")}} 元素， 然而，多个连续出现的 `<dt>` 元素都将由出现在它们后面的第一个 {{HTMLElement("dd")}} 元素定义。
+**HTML `<dt>` 元素** （或 _HTML 术语定义元素_）用于在一个定义列表中声明一个术语。该元素仅能作为 {{HTMLElement("dl")}} 的子元素出现。通常在该元素后面会跟着 {{HTMLElement("dd")}} 元素，然而，多个连续出现的 `<dt>` 元素都将由出现在它们后面的第一个 {{HTMLElement("dd")}} 元素定义。
 
 - _[内容分类](/zh-CN/docs/HTML/Content_categories)_ None.
 - _允许的内容_[流内容](/zh-CN/docs/HTML/Content_categories#Flowing_content)，但是不能包含 {{HTMLElement("header")}} 元素、{{HTMLElement("footer")}} 元素或者其他章节、标题内容。
@@ -26,10 +27,10 @@ slug: Web/HTML/Element/dt
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dt")}}
+{{Compat}}
 
 ## 相关内容
 
 - {{HTMLElement("dd")}}, {{HTMLElement("dl")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -2,6 +2,7 @@
 title: window.self
 slug: Web/API/Window/self
 ---
+
 {{ APIRef() }}
 
 **`Window.self`** 読み取り専用プロパティは、{{domxref("WindowProxy")}} のように、ウィンドウ自身を返します。`window` オブジェクトでドット表記法 (つまり、`window.self`) を使用して使うことも、単独 (`self`) で使うこともできます。単独表記法を使用する利点は、{{domxref("Worker", "Web Workers")}} のような非 window コンテクストにも同様の表記法が存在することです。`self` を使用することで、window コンテキスト (`self` は `window.self` として解決されます) だけでなく、worker コンテキスト (`self` は {{domxref("WorkerGlobalScope.self")}} として解決されます) でも機能するようにグローバルスコープを参照できます。
@@ -34,11 +35,7 @@ var w4 = window.self;
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                             | コメント                                                               |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-self', 'Window.self')}}                 | {{Spec2('HTML WHATWG')}} | 最新のスナップショット {{SpecName("HTML5.1")}} からの変更なし |
-| {{SpecName('HTML5.1', 'browsers.html#dom-self', 'Window.self')}}     | {{Spec2('HTML5.1')}}     | {{SpecName("HTML5 W3C")}} からの変更なし                        |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-self', 'Window.self')}} | {{Spec2('HTML5 W3C')}}     | `Window.self` の定義を含む最初のスナップショット                       |
+{{Specifications}}
 
 ## ブラウザー互換性
 

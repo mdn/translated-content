@@ -1,44 +1,53 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-tags:
-  - Date
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - メソッド
-  - 国際化
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
-**`toLocaleTimeString()`** メソッドは、この Date オブジェクトの「時刻」部を表す言語に依存した文字列を返します。新しい `locales` 引数と `options` 引数により、アプリケーションは、使用される書式変換の言語の指定や、関数の振る舞いのカスタマイズができます。古い実装のアプリケーションは、`locales` 引数と `options` 引数を無視します。使用されるロケールや返される文字列の書式は、完全に実装依存です。
+**`toLocaleTimeString()`** メソッドは、日付の時間部分を言語に依存して表現した文字列を返します。[`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、このメソッドは単に `Intl.DateTimeFormat` を呼び出すだけです。
 
 {{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
 
 ## 構文
 
-```
-dateObj.toLocaleTimeString([locales[, options]])
+```js-nolint
+toLocaleTimeString()
+toLocaleTimeString(locales)
+toLocaleTimeString(locales, options)
 ```
 
 ### 引数
 
-`locales` および `options` 引数は、関数の動作をカスタマイズし、使用される書式の慣習を言語で指定することができるににします。 `locales` および `options` 引数を無視する実装では、使用されるロケールおよび返される文字列の書式は完全に実装依存になります。
+引数 `locales` と `options` は、関数の動作をカスタマイズして、アプリケーションが書式化の慣習を使用する言語を指定することができるようにします。
 
-これらの引数やその使い方についての詳細は、 {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} コンストラクターを参照してください。
+[`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、これらの引数は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) コンストラクターの引数と正確に一致していることに注意してください。 `Intl.DateTimeFormat` に対応していない実装では、両方の引数を無視するように求められます。使用するロケールと返す文字列の形式は、完全に実装に依存します。
 
-時刻のそれぞれの部分のプロパティにおける既定値は {{jsxref("undefined")}} ですが、 `hour`、 `minute`、`second` プロパティがすべて {{jsxref("undefined")}} のときは、`hour`、`minute`、`second` は `"numeric"` とみなされます。
+- `locales` {{optional_inline}}
+
+  - : BCP 47 の言語タグを持つ文字列、あるいはそのような文字列の配列です。 `Intl.DateTimeFormat()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) 引数に相当します。
+
+    `Intl.DateTimeFormat` に対応していない実装では、この引数は無視され、通常はホストのロケールを使用します。
+
+- `options` {{optional_inline}}
+
+  - : 出力書式を調整するオブジェクト。 `Intl.DateTimeFormat()` コンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) 引数に相当します。 `dayPeriod`, `hour`, `minute`, `second`, `fractionalSecondDigits` がすべて未定義の場合、 `hour`, `minute`, `second` は `"numeric"` に設定されます。
+
+    `Intl.DateTimeFormat` に対応していない実装では、この引数は無視されます。
+
+これらの引数の詳細や使用方法については [`Intl.DateTimeFormat()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)を参照してください。
 
 ### 返値
 
 与えられた {{jsxref("Global_Objects/Date", "Date")}} インスタンスの「時刻」部を表す、言語特有の慣習による文字列。
 
+`Intl.DateTimeFormat` がある実装では、これは `new Intl.DateTimeFormat(locales, options).format(date)` と等価です。
+
 ## 性能
 
-大量の日付を書式化する場合は、 {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトを生成してその {{jsxref("DateTimeFormat.prototype.format", "format")}} プロパティで提供される関数を使用したほうが得策です。
+大量の日付を書式化する場合は、 [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) オブジェクトを生成してその [`format()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) プロパティで提供される関数を使用したほうが得策です。
 
 ## 例
 
@@ -47,7 +56,7 @@ dateObj.toLocaleTimeString([locales[, options]])
 ロケールを指定しない基本的な使い方では、既定のロケールと既定のオプションによる書式の文字列が返されます。
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleTimeString() に引数を与えなければ実装に依存し、
 // 既定のロケールとタイムゾーンを返す
@@ -55,27 +64,12 @@ console.log(date.toLocaleTimeString());
 // → "7:00:00 PM" アメリカ/ロサンゼルスのタイムゾーンの en-US ロケールで実行した場合
 ```
 
-### locales と options の各引数に対応しているか確認する
-
-`locales` および `options` 引数は、まだすべてのブラウザーが対応しているわけではありません。これらが実装されているかどうかをチェックするには、不適切な言語タグを与えると {{jsxref("RangeError")}} 例外で拒否されるという要件を使用することができます。
-
-```js
-function toLocaleTimeStringSupportsLocales() {
-  try {
-    new Date().toLocaleTimeString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
-  }
-  return false;
-}
-```
-
 ### locales の使用
 
 この例では、国ごとに異なる時刻書式を示します。アプリケーションのユーザーインターフェイスで使用されている言語の書式を得るには、 `locales` 引数でその言語 (あるいはフォールバック先の言語) を指定してください。
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // 以下の書式はその地域のタイムゾーンとロケールを想定
 // 米国のアメリカ大陸/ロサンゼルス
@@ -107,10 +101,10 @@ console.log(date.toLocaleTimeString(['ban', 'id']));
 `toLocaleTimeString()` メソッドから得られる結果は、 `options` 引数でカスタマイズできます。
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // アプリケーションで UTC を用い、それを表示したい場合
-var options = { timeZone: 'UTC', timeZoneName: 'short' };
+const options = { timeZone: 'UTC', timeZoneName: 'short' };
 console.log(date.toLocaleTimeString('en-US', options));
 // → "3:00:00 AM GMT"
 
@@ -125,18 +119,15 @@ console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}}         |
-| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.toLocaleTimeString")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

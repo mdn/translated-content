@@ -1,12 +1,8 @@
 ---
 title: page_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
-tags:
-  - 애드온
-  - 웹확장
-  - 확장
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

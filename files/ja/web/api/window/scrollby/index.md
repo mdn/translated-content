@@ -2,6 +2,7 @@
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 **`Window.scrollBy()`** メソッドは、ウィンドウ内の文書を指定された量だけスクロールさせます。

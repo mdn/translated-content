@@ -2,11 +2,12 @@
 title: 使用 moment 做日期格式化
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
+
 我们模型的日期预设呈现很难看：_Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_。在本节中，我们将展示如何更新上一节中的 書本實例 BookInstance 列表页面，以更友好的格式显示`due_date`字段：December 6th, 2016。
 
 我们将使用的方法，是在我们的`BookInstance`模型中，创建一个返回格式化日期的虚拟屬性。我们将使用[moment](https://www.npmjs.com/package/moment) 来做实际的格式化，这是一个轻量级 JavaScript 日期库，用于解析，验证，操作和格式化日期。
 
-> **备注：** 我们可以直接在 Pug 模板中，使用 _moment_ 格式化字符串，或者可以在许多其它地方格式化字符串。使用虚拟属性，可以使我们获得格式化的日期，這与我们当前获取 `due_date` 的方式完全相同。
+> **备注：** 我们可以直接在 Pug 模板中，使用 _moment_ 格式化字符串，或者可以在许多其他地方格式化字符串。使用虚拟属性，可以使我们获得格式化的日期，這与我们当前获取 `due_date` 的方式完全相同。
 
 ## 安装 moment
 

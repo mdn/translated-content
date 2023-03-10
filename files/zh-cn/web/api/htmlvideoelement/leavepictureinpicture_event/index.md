@@ -2,6 +2,7 @@
 title: 'HTMLVideoElement: leavepictureinpicture event'
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
 ---
+
 {{APIRef("HTMLVideoElement")}}
 
 **`leavepictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功离开画中画模式时触发。
@@ -30,7 +31,7 @@ onleavepictureinpicture = event => { };
 
 ## 示例
 
-这些示例为 `leavepictureinpicture` 事件增加事件侦听器， 然后在该事件处理程序对事件触发做出反应时发布消息。
+这些示例为 `leavepictureinpicture` 事件增加事件侦听器，然后在该事件处理程序对事件触发做出反应时发布消息。
 
 使用 `addEventListener()`:
 

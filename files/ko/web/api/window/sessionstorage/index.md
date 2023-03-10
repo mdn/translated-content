@@ -1,16 +1,8 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - API
-  - Property
-  - Reference
-  - Storage
-  - Window
-  - WindowSessionStorage
-  - 세션스토리지
-translation_of: Web/API/Window/sessionStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 **`sessionStorage`** 읽기 전용 속성은 현재 {{glossary("origin", "출처")}} 세션의 {{domxref("Storage")}} 객체에 접근합니다. `sessionStorage`는 {{domxref("Window.localStorage", "localStorage")}}와 비슷하지만, `localStorage`의 데이터는 만료되지 않고, `sessionStorage`의 데이터는 **페이지 세션**이 끝날 때 제거되는 차이가 있습니다.
@@ -26,7 +18,9 @@ translation_of: Web/API/Window/sessionStorage
 
 ## 구문
 
-    myStorage = window.sessionStorage;
+```js
+myStorage = window.sessionStorage;
+```
 
 ### 값
 

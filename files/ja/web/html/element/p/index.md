@@ -1,17 +1,9 @@
 ---
 title: '<p>: 段落要素'
 slug: Web/HTML/Element/p
-tags:
-  - HTML
-  - HTML コンテンツグループ化
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - ウェブ
-  - 要素
-translation_of: Web/HTML/Element/p
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<p>` 要素**は、テキストの段落を表します。視覚メディアにおいて、段落はふつう隣接するブロックと上下の空白や最初の行の字下げによって隔てられたテキストのブロックとして表現されますが、 HTML の段落は画像やフォーム欄などの関連するコンテンツを構造的にまとめることができます。
 
@@ -81,9 +73,9 @@ translation_of: Web/HTML/Element/p
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global_attributes")があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **Note:** **メモ:** `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
+> **メモ:** `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
 
 ## 例
 
@@ -181,11 +173,7 @@ p {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                                                                                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}         | {{Spec2('HTML WHATWG')}} | 最新の {{glossary("W3C")}} スナップショットである {{SpecName("HTML5 W3C")}} から変更なし |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}     | `align` 属性を廃止                                                                                   |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}                 | {{Spec2('HTML4.01')}}     | 初回定義                                                                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

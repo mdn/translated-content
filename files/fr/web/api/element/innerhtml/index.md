@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/Element/innerHTML
 original_slug: Web/API/Element/innertHTML
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.
@@ -28,7 +29,7 @@ element.innerHTML = htmlString;
 
 ### Valeur
 
-Une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
+Une {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
 
 ### Exceptions
 
@@ -73,7 +74,7 @@ document.documentElement.innerHTML = "<pre>" +
 
 #### Détails opérationnels
 
-Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ?  Cela entraîne l'agent utilisateur à suivre ces étapes :
+Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ? Cela entraîne l'agent utilisateur à suivre ces étapes :
 
 1. La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
 2. Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.
@@ -127,7 +128,7 @@ log("Logging mouse events inside this container...");
 
 La fonction `log()` crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe `"log"`.
 
-Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que {{event ("mousedown")}}, {{event ("click")}} et {{event ("mouseenter") }}) :
+Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`click`](/fr/docs/Web/API/Element/click_event) et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)) :
 
 ```js
 function logEvent(event) {

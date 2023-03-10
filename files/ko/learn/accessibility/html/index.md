@@ -1,18 +1,9 @@
 ---
 title: 'HTML: 접근성을 위한 기초'
 slug: Learn/Accessibility/HTML
-tags:
-  - HTML
-  - HTML 접근성
-  - 스크린리더
-  - 시멘틱
-  - 시멘틱 웹
-  - 시멘틱웹
-  - 웹 접근성
-  - 접근성 향상
-translation_of: Learn/Accessibility/HTML
 original_slug: Learn/접근성/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 HTML 요소가 늘 올바른 목적을 가지고 쓰이는지 확인하는 것만으로도, 수많은 웹 콘텐츠는 접근성이 향상됩니다. 이 문서에는 접근성을 최대한으로 보장하기 위해 HTML을 어떻게 사용해야 하는지 자세히 설명합니다.
@@ -273,7 +264,7 @@ By UI controls, we mean the main parts of web documents that users interact with
 
 One key aspect to the accessibility of UI controls is that by default, browsers allow them to be manipulated by the keyboard. You can try this out using our [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements; the focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
 
-![](https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png)
+![](button-focused-unfocused.png)
 
 You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input (other form elements have different controls, for example the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys).
 
@@ -356,7 +347,7 @@ document.onkeydown = function(e) {
 };
 ```
 
-Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`keyCode`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.click()`. [`activeElement`](https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
+Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`keyCode`](/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.click()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
 
 This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. **Better to just use the right element for the right job in the first place.**
 
@@ -366,7 +357,7 @@ UI control text labels are very useful to all users, but getting them right is p
 
 You should make sure that your button and link text labels are understandable and distinctive. Don't just use "Click here" for your labels, as screenreader users sometimes get up a list of buttons and form controls. The following screenshot shows our controls being listed by VoiceOver on Mac.
 
-![](https://mdn.mozillademos.org/files/14335/voiceover-formcontrols.png)
+![](voiceover-formcontrols.png)
 
 Make sure your labels make sense out of context, read on their own, as well as in the context of the paragraph they are in. For example, the following shows an example of good link text:
 
@@ -401,7 +392,7 @@ The following is a much better example:
 
 With the code like this, the label will be clearly associated with the input; the description will be more like "Fill in your name: edit text".
 
-![](https://mdn.mozillademos.org/files/14337/voiceover-good-form-label.png)
+![](voiceover-good-form-label.png)
 
 As an added bonus, in most browsers associating a label with a form input means that you can click the label to select/activate the form element. This gives the input a bigger hit area, making it easier to select.
 
@@ -481,7 +472,7 @@ One thing to consider is whether your images have meaning inside your content, o
 
 If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screenreaders will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
 
-![](https://mdn.mozillademos.org/files/14333/title-attribute.png)
+![](title-attribute.png)
 
 Let's have another quick look at the fourth method:
 
@@ -536,13 +527,3 @@ The reason to use an empty `alt` instead of not including it is because many scr
 You should now be well-versed in writing accessible HTML for most occasions. Our WAI-ARIA basics article will also fill in some gaps in this knowledge, but this article has taken care of the basics. Next up we'll explore CSS and JavaScript, and how accessibility is affected by their good or bad use.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/ko/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/ko/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/ko/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/ko/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/ko/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/ko/docs/Learn/Accessibility/Accessibility_troubleshooting)

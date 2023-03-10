@@ -3,6 +3,7 @@ title: gap (grid-gap)
 slug: Web/CSS/gap
 translation_of: Web/CSS/gap
 ---
+
 Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт отступы ({{glossary("gutters")}}) между столбцами и строками, а не вдоль края контейнера сетки. Является сокращением для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}. {{CSSRef}}
 
 The **`gap`** [CSS](/ru/docs/Web/CSS) property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a [shorthand](/ru/docs/Web/CSS/Shorthand_properties) for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.
@@ -179,17 +180,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ## Browser compatibility
 
-### Support in Flex layout
-
 {{Compat}}
-
-### Support in Grid layout
-
-{{Compat("css.properties.gap.grid_context")}}
-
-### Support in Multi-column layout
-
-{{Compat("css.properties.gap.multicol_context")}}
 
 ## See also
 

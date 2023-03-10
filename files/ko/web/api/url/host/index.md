@@ -1,14 +1,8 @@
 ---
 title: URL.host
 slug: Web/API/URL/host
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/host
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`host`** 속성은 URL의 호스트, 즉 {{domxref("URL.hostname", "hostname")}}와 함께, {{glossary("port", "포트")}}가 존재하는 경우 `':'`과 그 뒤의 {{domxref("URL.port", "port")}}를 포함하는 {{domxref("USVString")}} 문자열입니다.
@@ -17,8 +11,10 @@ translation_of: Web/API/URL/host
 
 ## 구문
 
-    const host = url.host
-    url.host = newHost
+```js
+const host = url.host
+url.host = newHost
+```
 
 ### 값
 

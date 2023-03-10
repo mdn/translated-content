@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: figure ロール'
-slug: Web/Accessibility/ARIA/Roles/Figure_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Figure_Role
+slug: Web/Accessibility/ARIA/Roles/figure_role
 ---
+
 ARIA の図表 (`figure`) ロールは、適切な意味論がまだ存在しないページコンテンツ内の図表を識別するために使用できます。 図表は一般的に、正規のテキストの流れとは異なる方法で情報を伝える、1 つ以上の画像、コードスニペット、またはその他のコンテンツと見なされます。
 
 ```html
@@ -66,7 +62,7 @@ ARIA の図表 (`figure`) ロールは、適切な意味論がまだ存在しな
 
 一般的には、本文から図表を参照するべきですが、図表は参照元の要素と同じ場所に表示する必要はありません。
 
-> **Note:** 可能な限り、適切な意味論の HTML 要素を使用して図表とそのキャプション ({{htmlelement("figure")}} と {{htmlelement("figcaption")}}) をマークアップするべきです。 詳しくは、[ベストプラクティス](#best_practices)を参照してください。
+> **メモ:** 可能な限り、適切な意味論の HTML 要素を使用して図表とそのキャプション ({{htmlelement("figure")}} と {{htmlelement("figcaption")}}) をマークアップするべきです。 詳しくは、[ベストプラクティス](#best_practices)を参照してください。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
@@ -121,9 +117,7 @@ ARIA の図表 (`figure`) ロールは、適切な意味論がまだ存在しな
 
 ## 仕様
 
-| 仕様                                                 | 状態                     |
-| ---------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#figure","figure")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

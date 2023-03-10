@@ -2,9 +2,10 @@
 title: 多列布局
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 
-多列布局声明提供了一种多列组织内容的方式，正如你在一些报纸中看到的那样。 这篇文章介绍怎么使用这一特性。
+多列布局声明提供了一种多列组织内容的方式，正如你在一些报纸中看到的那样。这篇文章介绍怎么使用这一特性。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -12,10 +13,10 @@ slug: Learn/CSS/CSS_layout/Multiple-column_Layout
       <th scope="row">前提：</th>
       <td>
         HTML 基础 (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), 和了解 CSS 如何工作的 (study
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >.)
       </td>
@@ -35,7 +36,7 @@ slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 
 ### 三列布局
 
-我们从一些很简单的 HTML 开始； 用带有类 `container` 的简单包装，里面是标题和一些段落。
+我们从一些很简单的 HTML 开始；用带有类 `container` 的简单包装，里面是标题和一些段落。
 
 带有 `.container` 的 {{htmlelement("div")}} 将成为我们 multicol 的容器。通过这两个属性开启 multicol {{cssxref("column-count")}} 或者 {{cssxref("column-width")}}。 `column-count` 将创建指定数量的列，所以如果你把下面的 CSS 加到样式表里让后重载入页面，你将得到 3 列：
 
@@ -85,7 +86,7 @@ body {
 }
 ```
 
-浏览器将按照你指定的宽度尽可能多的创建列；任何剩余的空间之后会被现有的列平分。 这意味着你可能无法期望得到你指定宽度，除非容器的宽度刚好可以被你指定的宽度除尽。
+浏览器将按照你指定的宽度尽可能多的创建列；任何剩余的空间之后会被现有的列平分。这意味着你可能无法期望得到你指定宽度，除非容器的宽度刚好可以被你指定的宽度除尽。
 
 ```css hidden
 body {
@@ -168,7 +169,7 @@ body {
 
 ## 列与内容折断
 
-多列布局的内容被拆成碎块。和多页媒体上的内容表现大致一样 — 比如打印网页的时候。 当你把内容放入多列布局容器内，内容被拆成碎块放进列中，内容折断（译者注：比如断词断句）使得这一效果可以实现。
+多列布局的内容被拆成碎块。和多页媒体上的内容表现大致一样 — 比如打印网页的时候。当你把内容放入多列布局容器内，内容被拆成碎块放进列中，内容折断（译者注：比如断词断句）使得这一效果可以实现。
 
 有时，这种折断内容会降低阅读体验。在下面的举例中，我用 multicol 对一系列盒子布局，每一小块里有小标题和和一些文字。标题和文字可能被折断点拆开，从而降低阅读体验。
 
@@ -259,7 +260,7 @@ body {
 
 ### 设置 break-inside
 
-我们可以使用 [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) 中声明的属性控制这一特性。 这份规范提供了一些属性来控制 multicol 和多页媒体中的内容拆分、折断。比如，在规则 `.card` 上添加属性{{cssxref("break-inside")}}，并设值 `avoid` 。`.card` 是标题和文本的容器，我们不想拆开这个盒子。
+我们可以使用 [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_Fragmentation) 中声明的属性控制这一特性。这份规范提供了一些属性来控制 multicol 和多页媒体中的内容拆分、折断。比如，在规则 `.card` 上添加属性{{cssxref("break-inside")}}，并设值 `avoid` 。`.card` 是标题和文本的容器，我们不想拆开这个盒子。
 
 现阶段，增加旧属性 `page-break-inside: avoid` 能够获得更好的浏览器支持。
 
@@ -360,20 +361,7 @@ body {
 
 ## 参考
 
-- [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation)
-- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_Fragmentation)
+- [Using multi-column layouts](/zh-CN/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [CSS 介绍](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流（Normal Flow）](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒子（Flexbox）](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格（Grid）](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动（Floats）](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [定位（Positioning）](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局（Multiple-column Layout）](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [传统的布局实现（Legacy Layout Methods）](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧有浏览器（Supporting older browsers）](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

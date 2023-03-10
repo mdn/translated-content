@@ -1,36 +1,29 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
-tags:
-  - HTML
-  - HTML フォーム
-  - Reference
-  - checkbox
-  - チェックボックス
-  - フォーム
-  - 入力型
-  - 要素
-translation_of: Web/HTML/Element/input/checkbox
+l10n:
+  sourceCommit: 7594b50698a76ce79209b159835e615052915723
 ---
-{{HTMLRef}}
 
-{{htmlelement("input")}} 要素の **`checkbox`** 型は、既定でボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して (または選択せずに) 送信することができます。
+{{HTMLSidebar}}
+
+{{htmlelement("input")}} 要素の **`checkbox`** 型は、既定でボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して（または選択せずに）送信することができます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
 
-> **Note:** [ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)はチェックボックスと似ていますが、重要な違いがあります。ラジオボタンはグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
+> **メモ:** [ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)はチェックボックスと似ていますが、重要な違いがあります。ラジオボタンはグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
 
 <table class="properties">
   <tbody>
     <tr>
+      <td><strong><a href="#value">値</a></strong></td>
       <td>
-        <strong><a href="#value">値</a></strong>
+        チェックボックスの値を表す文字列。
       </td>
-      <td>チェックボックスの値を表す {{domxref("DOMString")}}</td>
     </tr>
     <tr>
       <td><strong>イベント</strong></td>
-      <td>{{event("change")}} および {{event("input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>対応している共通属性</strong></td>
@@ -39,9 +32,12 @@ translation_of: Web/HTML/Element/input/checkbox
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <code><a href="#checked">checked</a></code> および
-        <code><a href="#value">value</a></code>
+        <code><a href="#attr-checked">checked</a></code>、<code><a href="#attr-indeterminate">indeterminate</a></code>、<code><a href="#attr-value">value</a></code>
       </td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>メソッド</strong></td>
@@ -54,12 +50,16 @@ translation_of: Web/HTML/Element/input/checkbox
 
 ## 値
 
-チェックボックスの値を表す {{domxref("DOMString")}} です。これはクライアント側には表示されませんが、サーバー上ではチェックボックスの `name` と共に送信されるデータに与えられる `value` になります。次の例を見てください。
+チェックボックスの値を表す文字列です。これはクライアント側には表示されませんが、サーバー上ではチェックボックスの `name` と共に送信されるデータに与えられる `value` になります。次の例を見てください。
 
 ```html
 <form>
   <div>
-    <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+    <input
+      type="checkbox"
+      id="subscribeNews"
+      name="subscribe"
+      value="newsletter" />
     <label for="subscribeNews">Subscribe to newsletter?</label>
   </div>
   <div>
@@ -68,34 +68,25 @@ translation_of: Web/HTML/Element/input/checkbox
 </form>
 ```
 
-{{EmbedLiveSample('Value', 600, 60)}}
-
 この例では、 `name` を `subscribe` に、 `value` を `newsletter` に設定しました。フォームが送信されると、データの名前と値の組み合わせは `subscribe=newsletter` となります。
 
 `value` 属性が省略された場合は、チェックボックスの既定値は `on` ですので、その場合の送信されるデータは `subscribe=on` となります。
 
-> **Note:** フォームが送信されたときにチェックボックスがチェックされていなかった場合、チェックされていない状態を表す値 (`value=unchecked` など) が送信されることはなく、値はサーバーに全く送信されません。チェックボックスがチェックされていないときに既定値を送信したい場合は、フォーム内に {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を、同じ `name` と `value` で、おそらく JavaScript で含めることで実現できます。
+> **メモ:** フォームが送信されたときにチェックボックスがチェックされていなかった場合、チェックされていない状態を表す値 (`value=unchecked` など) が送信されることはなく、値はサーバーに全く送信されません。チェックボックスがチェックされていないときに既定値を送信したい場合は、フォーム内に {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を、同じ `name` と `value` で、おそらく JavaScript で含めることで実現できます。
 
 ## 追加の属性
 
 すべての {{HTMLElement("input")}} 型で共通する属性に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
 
-| 属性                  | 説明                                                                                                     |
-| --------------------- | -------------------------------------------------------------------------------------------------------- |
-| [`checked`](#checked) | 論理属性。存在する場合、チェックボックスは既定でオンの状態                                               |
-| [`value`](#value)     | 文字列で、チェックボックスがオンの状態の場合、フォームを送信するときのチェックボックスの値として使われる |
+- {{htmlattrdef("checked")}}
 
-### {{htmlattrdef("checked")}}
+  - : 論理属性で、チェックボックスが既定で (ページが読み込まれたときに) チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。 ({{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。)
+    > **メモ:** 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値が入力欄の値として報告されます。
+    > 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには {{htmlattrxref("autocomplete","input")}} 属性を使用してください。
 
-論理属性で、チェックボックスが既定で (ページが読み込まれたときに) チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。 ({{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。)
+- {{htmlattrdef("value")}}
 
-> **Note:** **メモ:** 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値が入力欄の値として報告されます。
-
-他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには {{htmlattrxref("autocomplete","input")}} 属性を使用してください。
-
-### {{htmlattrdef("value")}}
-
-`value` 属性はすべての {{HTMLElement("input")}} 要素で共通のものです。しかし、 `checkbox` 型の入力欄では特殊な用途を提供します。フォームが送信されると、現在チェックされているチェックボックスのみがサーバーに送信され、報告される値が `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` の文字列になります。これは前述の[値](#value)の節で紹介されています。
+  - : `value` 属性はすべての {{HTMLElement("input")}} 要素で共通のものです。しかし、 `checkbox` 型の入力欄では特殊な用途を提供します。フォームが送信されると、現在チェックされているチェックボックスのみがサーバーに送信され、報告される値が `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` の文字列になります。これは前述の[値](#値)の節で紹介されています。
 
 ## チェックボックスの使用
 
@@ -105,17 +96,17 @@ translation_of: Web/HTML/Element/input/checkbox
 
 上記の例では、チェックボックスが 1 つしか含まれていませんでした。実際の状況では、複数のチェックボックスが発生する可能性があります。それらが互いに完全に無関係であれば、上記のようにすべて別々に処理できます。しかし、もしそれらがすべて関連していれば、事はそう単純ではありません。
 
-例えば、次のデモにはユーザーが関心のあることを選択できるように、複数のチェックボックスが含まれています (完全な版は [Examples](#examples) の章で確認してください)。
+例えば、次のデモにはユーザーが関心のあることを選択できるように、複数のチェックボックスが含まれています（完全な版は[例](#例)の節で確認してください）。
 
 ```html
 <fieldset>
   <legend>関心があるものを選んでください</legend>
   <div>
-    <input type="checkbox" id="coding" name="interest" value="coding">
+    <input type="checkbox" id="coding" name="interest" value="coding" />
     <label for="coding">コーディング</label>
   </div>
   <div>
-    <input type="checkbox" id="music" name="interest" value="music">
+    <input type="checkbox" id="music" name="interest" value="music" />
     <label for="music">音楽</label>
   </div>
 </fieldset>
@@ -123,7 +114,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 {{EmbedLiveSample('Handling_multiple_checkboxes', 600, 100)}}
 
-この例では、両方のチェックボックスに同じ `name` を設定しました。両方のチェックボックスがチェックされてフォームが送信されると、名前/値の組み合わせの文字列は `interest=coding&interest=music` のように送信されます。データがサーバー側に届いたときには、連想配列以外の方法で解析して、 `interest` の値を持つ値を、最後の値だけでなくすべて拾う必要があります。 PHP を使用したやり方としては、例えば、[単一のサーバー側の変数で複数のチェックボックスを扱う](http://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable)を参照してください。
+この例では、両方のチェックボックスに同じ `name` を設定しました。両方のチェックボックスがチェックされてフォームが送信されると、名前/値の組み合わせの文字列は `interest=coding&interest=music` のように送信されます。データがサーバー側に届いたときには、連想配列以外の方法で解析して、 `interest` の値を持つ値を、最後の値だけでなくすべて拾う必要があります。 Python を使用したやり方としては、例えば、[単一のサーバー側の変数で複数のチェックボックスを扱う](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable)を参照してください。
 
 ### 既定のチェックボックス
 
@@ -133,11 +124,11 @@ translation_of: Web/HTML/Element/input/checkbox
 <fieldset>
   <legend>関心があるものを選んでください</legend>
   <div>
-    <input type="checkbox" id="coding" name="interest" value="coding" checked>
+    <input type="checkbox" id="coding" name="interest" value="coding" checked />
     <label for="coding">コーディング</label>
   </div>
   <div>
-    <input type="checkbox" id="music" name="interest" value="music">
+    <input type="checkbox" id="music" name="interest" value="music" />
     <label for="music">音楽</label>
   </div>
 </fieldset>
@@ -172,45 +163,45 @@ inputInstance.indeterminate = true;
 ですからこの場合は、材料を集め始めているものの、製作が完成していない状態に `indeterminate` が使われます。
 
 ```js
-  var overall = document.querySelector('input[id="EnchTbl"]');
-  var ingredients = document.querySelectorAll('ul input');
+const overall = document.querySelector('#enchantment');
+const ingredients = document.querySelectorAll('ul input');
 
-  overall.addEventListener('click', function(e) {
-    e.preventDefault();
-  });
+overall.addEventListener('click', (e) => {
+  e.preventDefault();
+});
 
-  for(var i = 0; i < ingredients.length; i++) {
-    ingredients[i].addEventListener('click', updateDisplay);
-  }
+for (const ingredient of ingredients) {
+  ingredient.addEventListener('click', updateDisplay);
+}
 
-  function updateDisplay() {
-    var checkedCount = 0;
-    for(var i = 0; i < ingredients.length; i++) {
-      if(ingredients[i].checked) {
-        checkedCount++;
-      }
-    }
-
-    if(checkedCount === 0) {
-      overall.checked = false;
-      overall.indeterminate = false;
-    } else if(checkedCount === ingredients.length) {
-      overall.checked = true;
-      overall.indeterminate = false;
-    } else {
-      overall.checked = false;
-      overall.indeterminate = true;
+function updateDisplay() {
+  let checkedCount = 0;
+  for (const ingredient of ingredients) {
+    if (ingredient.checked) {
+      checkedCount++;
     }
   }
+
+  if (checkedCount === 0) {
+    overall.checked = false;
+    overall.indeterminate = false;
+  } else if (checkedCount === ingredients.length) {
+    overall.checked = true;
+    overall.indeterminate = false;
+  } else {
+    overall.checked = false;
+    overall.indeterminate = true;
+  }
+}
 ```
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **Note:** 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
+> **メモ:** 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
 
 ## 検証
 
-チェックボックスは[検証](/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation) (すべての {{HTMLElement("input")}} に対して行われる) に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに {{htmlattrxref("required", "input")}} 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
+チェックボックスは[検証](/ja/docs/Web/Guide/HTML/Constraint_validation) (すべての {{HTMLElement("input")}} に対して行われる) に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに {{htmlattrxref("required", "input")}} 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
 
 ## 例
 
@@ -221,31 +212,31 @@ inputInstance.indeterminate = true;
 ```html
 <form>
   <fieldset>
-  <legend>Choose your interests</legend>
+    <legend>Choose your interests</legend>
     <div>
-      <input type="checkbox" id="coding" name="interest" value="coding">
+      <input type="checkbox" id="coding" name="interest" value="coding" />
       <label for="coding">Coding</label>
     </div>
     <div>
-      <input type="checkbox" id="music" name="interest" value="music">
+      <input type="checkbox" id="music" name="interest" value="music" />
       <label for="music">Music</label>
     </div>
     <div>
-      <input type="checkbox" id="art" name="interest" value="art">
+      <input type="checkbox" id="art" name="interest" value="art" />
       <label for="art">Art</label>
     </div>
     <div>
-      <input type="checkbox" id="sports" name="interest" value="sports">
+      <input type="checkbox" id="sports" name="interest" value="sports" />
       <label for="sports">Sports</label>
     </div>
     <div>
-      <input type="checkbox" id="cooking" name="interest" value="cooking">
+      <input type="checkbox" id="cooking" name="interest" value="cooking" />
       <label for="cooking">Cooking</label>
     </div>
     <div>
-      <input type="checkbox" id="other" name="interest" value="other">
+      <input type="checkbox" id="other" name="interest" value="other" />
       <label for="other">Other</label>
-      <input type="text" id="otherValue" name="other">
+      <input type="text" id="otherValue" name="other" />
     </div>
     <div>
       <button type="submit">Submit form</button>
@@ -285,12 +276,12 @@ legend {
 ### JavaScript
 
 ```js
-var otherCheckbox = document.querySelector('input[value="other"]');
-var otherText = document.querySelector('input[id="otherValue"]');
+const otherCheckbox = document.querySelector('#other');
+const otherText = document.querySelector('#otherValue');
 otherText.style.visibility = 'hidden';
 
 otherCheckbox.addEventListener('change', () => {
-  if(otherCheckbox.checked) {
+  if (otherCheckbox.checked) {
     otherText.style.visibility = 'visible';
     otherText.value = '';
   } else {
@@ -300,14 +291,12 @@ otherCheckbox.addEventListener('change', () => {
 ```
 
 ### 結果
+
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -317,4 +306,4 @@ otherCheckbox.addEventListener('change', () => {
 
 - {{HTMLElement("input")}} およびそれに実装されている {{domxref("HTMLInputElement")}} インターフェイス。
 - CSS の {{cssxref(":checked")}} および {{cssxref(":indeterminate")}} セレクターで、現在の状態に基づいてチェックボックスを整形できます
-- [CSS プロパティの互換性](/ja/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

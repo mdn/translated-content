@@ -2,6 +2,7 @@
 title: Document.documentURIObject
 slug: orphaned/Web/API/Document/documentURIObject
 ---
+
 {{ApiRef("DOM")}}{{Non-standard_header}}
 
 **`Document.documentURIObject`** プロパティは読み取り専用で、 [document](/ja/docs/Web/API/document) の URI を表す `nsIURI` オブジェクトを返します。

@@ -2,6 +2,7 @@
 title: window.print
 slug: Web/API/Window/print
 ---
+
 {{ ApiRef() }}
 
 ## 概述

@@ -5,15 +5,18 @@ tags:
   - Псевдоклассы
 translation_of: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 ## Описание
 
-[CSS](/ru/docs/CSS "CSS") [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:first-of-type` находит первого потомка своего типа среди детей родителя.
+[CSS](/ru/docs/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:first-of-type` находит первого потомка своего типа среди детей родителя.
 
 ## Синтаксис
 
-    element:first-of-type { /* стили */ }
+```css
+element:first-of-type { /* стили */ }
+```
 
 ## Пример
 

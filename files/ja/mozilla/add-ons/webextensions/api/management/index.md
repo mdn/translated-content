@@ -2,6 +2,7 @@
 title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
 ---
+
 {{AddonSidebar}}
 
 インストール済みのアドオンの管理情報を取得します。
@@ -59,7 +60,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management
 
 {{WebExtExamples("h2")}}
 
-> **Note:** この API は Chromium の [`chrome.management`](https://developer.chrome.com/extensions/management) API に基づいています。この文書は Chromium code の [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) から派生しています。Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** この API は Chromium の [`chrome.management`](https://developer.chrome.com/extensions/management) API に基づいています。この文書は Chromium code の [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) から派生しています。Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2012 The Chromium Authors. All rights reserved.
 //

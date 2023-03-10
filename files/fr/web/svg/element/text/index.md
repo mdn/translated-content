@@ -8,6 +8,7 @@ tags:
   - SVG contenu de texte
 translation_of: Web/SVG/Element/text
 ---
+
 {{SVGRef}}
 
 L'élément SVG `text` définit un élément graphique contenant du texte. Notez qu'il est possible d'y appliquer un dégradé, un motif, un tracé spécifique (clipping path), un masque ou un filtre.
@@ -100,7 +101,7 @@ Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement)
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## Articles liés
 

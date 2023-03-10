@@ -2,9 +2,8 @@
 title: <summary>
 slug: Web/HTML/Element/summary
 ---
-{{HTMLRef}}
 
-## Summary
+{{HTMLSidebar}}
 
 The HTML _summary_ element (`<summary>`) is used as a summary, caption, or legend for the content of a {{HTMLElement("details")}} element.
 
@@ -46,7 +45,7 @@ Please see the {{HTMLElement("details")}} page for examples on \<summary>.
 
 ## Browser compatibility
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## See also
 

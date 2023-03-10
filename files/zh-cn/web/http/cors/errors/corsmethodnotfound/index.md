@@ -1,13 +1,14 @@
 ---
-title: 'Reason: Did not find method in CORS header ‘Access-Control-Allow-Methods’'
+title: "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'"
 slug: Web/HTTP/CORS/Errors/CORSMethodNotFound
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
 
 ```plain
-原因：在 CORS 头 ‘Access-Control-Allow-Methods’ 中没有找到方法
+原因：在 CORS 头‘Access-Control-Allow-Methods’中没有找到方法
 ```
 
 ## 哪里错了？
@@ -28,7 +29,7 @@ Access-Control-Allow-Methods: GET,HEAD,POST
 
 ## 相关内容
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/en-US/docs/Web/HTTP/CORS)
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [CORS introduction](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)

@@ -2,6 +2,11 @@
 title: Web 开发者指南
 slug: Web/Guide
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
+</section>
+
 MDN 文档中有大量的指南，这些文章意在增加用例，或教你如何使用 API 接口或特性。此页面将提供到一些最流行的阅读材料的链接。
 
 ## HTML
@@ -25,7 +30,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 - [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript)
   - : 无论是完全的初学者，还是希望提升你的技能，这里都是好的开始。
 - [AJAX](/zh-CN/docs/Web/Guide/AJAX)
-  - : AJAX 是一组技术的统称术语，它们允许 Web 应用程序对用户界面进行快速，增量式的更新，而无需重新加载整个页面。 这使得 Web 应用程序运行更快，更能响应用户的操作。
+  - : AJAX 是一组技术的统称术语，它们允许 Web 应用程序对用户界面进行快速，增量式的更新，而无需重新加载整个页面。这使得 Web 应用程序运行更快，更能响应用户的操作。
 
 ## 媒体
 
@@ -34,7 +39,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 - [音视频传输](/zh-CN/docs/Web/Guide/Audio_and_video_delivery)
   - : 我们可以通过多种方式在 Web 上传递音频和视频，从“静态”媒体文件到自适应实时流。本文旨在作为探索基于网络的媒体的各种传输机制以及与流行浏览器的兼容性的起点。
 - [音视频操作](/zh-CN/docs/Web/Guide/Audio_and_video_manipulation)
-  - : Web 的魅力在于你可以结合各种技术来创造新的形式。 在浏览器中拥有原生音频和视频意味着我们可以使用这些诸如 {{htmlelement("canvas")}}、[WebGL](/zh-CN/docs/Web/API/WebGL_API) 或 [Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 的数据流技术来直接修改音视频，例如向音频添加混响或压缩效果，或向视频添加灰度或褐色滤镜。 本篇文章提供了一个参考，解释了你需要做些什么。
+  - : Web 的魅力在于你可以结合各种技术来创造新的形式。在浏览器中拥有原生音频和视频意味着我们可以使用这些诸如 {{htmlelement("canvas")}}、[WebGL](/zh-CN/docs/Web/API/WebGL_API) 或 [Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 的数据流技术来直接修改音视频，例如向音频添加混响或压缩效果，或向视频添加灰度或褐色滤镜。本篇文章提供了一个参考，解释了你需要做些什么。
 
 ## API 接口
 

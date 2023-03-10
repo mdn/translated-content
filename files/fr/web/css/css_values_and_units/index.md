@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Values_and_Units
 original_slug: Web/CSS/Valeurs_et_unités_CSS
 ---
+
 {{CSSRef}}
 
 Chaque déclaration CSS inclut une paire constituée d'une propriété et d'une valeur. La plupart de celles-ci sont définies dans le module de spécification _[CSS Values and Units](https://www.w3.org/TR/css-values-4/)_ (Valeurs et unités CSS). Dans cet article, nous verrons ces différents types et valeurs ainsi que des notions de base quant à leur utilisation. Pour obtenir des informattions plus détaillées, vous pouvez consulter la page de chacun de ces types.
@@ -256,90 +257,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS4 Values")}}</td>
-      <td>{{Spec2("CSS4 Values")}}</td>
-      <td>
-        Ajout des unités <code>vi</code>, <code>vb</code>, <code>ic</code>,
-        <code>cap</code>, <code>lh</code> et <code>rlh</code>.<br />Ajout des
-        notations fonctionnelles  <code>min()</code>, <code>max()</code> et
-        <code>clamp()</code>.<br />Ajout de  <code>toggle()</code>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Values")}}</td>
-      <td>{{Spec2("CSS3 Values")}}</td>
-      <td>
-        Ajout de
-        <code>calc()</code
-        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
-          >Q</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
-      <td>{{Spec2("CSS4 Colors")}}</td>
-      <td>
-        Ajout des syntaxes sans virgule pour les fonctions
-        <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et
-        <code>hsla()</code>. Ajout des valeurs alpha pour  <code>rgb()</code> et
-        <code>hsl()</code>, transformant ainsi <code>rgba()</code> et
-        <code>hsla()</code> en alias respectifs (dépréciés).<br />Ajout du
-        mot-clé de couleur <code>rebeccapurple</code>.<br />Ajout des couleurs
-        sur 4 et 8 chiffres hexadécimaux où le dernier chiffre représente la
-        valeur alpha.<br />Ajout des fonctions <code>hwb()</code>, <code
-          >device-cmyk()</code
-        >
-        et <code>color()</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Colors")}}</td>
-      <td>{{Spec2("CSS3 Colors")}}</td>
-      <td>
-        Dépréciation des couleurs système. Ajout des couleurs SVG. Ajout des
-        fonctions <code>rgba()</code>, <code>hsl()</code> et
-        <code>hsla()</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS4 Images")}}</td>
-      <td>{{Spec2("CSS4 Images")}}</td>
-      <td>
-        <p>
-          Ajout des notations fonctionnelles <code>element()</code>,
-          <code>image()</code>, <code>image-set()</code>,
-          <code>conic-gradient()</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Images")}}</td>
-      <td>{{Spec2("CSS3 Images")}}</td>
-      <td>Définition initiale du type <code>image</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS1")}}</td>
-      <td>{{Spec2("CSS1")}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Voir aussi
 

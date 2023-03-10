@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns/Spanning_Columns
 original_slug: Web/CSS/CSS_Columns/Répartir_entre_les_colonnes
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons comment répartir les éléments sur plusieurs colonnes et comment contrôler le remplissage des colonnes.

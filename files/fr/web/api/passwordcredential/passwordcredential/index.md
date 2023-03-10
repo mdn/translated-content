@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/PasswordCredential/PasswordCredential
 ---
+
 {{APIRef("")}}{{Non-standard_header}}
 
 Le constructeur **`PasswordCredential`** permet de créer un nouvel objet {{domxref("PasswordCredential")}}.

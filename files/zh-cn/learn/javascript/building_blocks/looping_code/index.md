@@ -1,7 +1,8 @@
 ---
-title: 循环吧代码
+title: 循环吧，代码
 slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 编程语言可以很迅速方便地帮我们完成一些重复性的任务，从多个基本计算到几乎完成了很多类似工作的其他情况。现在我们来看看处理这种需求的 JavaScript 中可用的循环结构。
@@ -12,7 +13,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
       <th scope="row">前提条件：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >（JS 的入门）.
       </td>
@@ -26,7 +27,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 
 ## 来一起循环
 
-循环，循环，循环。就与这些：[popular breakfast cereals](https://en.wikipedia.org/wiki/Froot_Loops), [roller coasters](https://en.wikipedia.org/wiki/Vertical_loop) and [musical production](<https://en.wikipedia.org/wiki/Loop_(music)>)一样，类似存在于编程中。编程中的循环也是一直重复着去做一件事 - 此处循环便是编程中的术语。
+循环，循环，循环。就与这些：[popular breakfast cereals](https://en.wikipedia.org/wiki/Froot_Loops), [roller coasters](https://en.wikipedia.org/wiki/Vertical_loop) and [musical production](<https://en.wikipedia.org/wiki/Loop_(music)>) 一样，类似存在于编程中。编程中的循环也是一直重复着去做一件事 - 此处循环便是编程中的术语。
 
 让我们来想一下下图，这位农夫考虑为他的家庭做一周的食物计划，他或许就需要执行一段循环：
 
@@ -235,16 +236,16 @@ para.textContent = info;
 这显示了一个循环用于迭代数组中的项目，并与每个项目进行一些操作 - JavaScript 中非常常见的模式。这里：
 
 1. 迭代器`i`从 0 开始（`var i = 0`）。
-2. 循环将会一直运行直到它不再小于猫数组的长度。这很重要 - 退出条件显示循环仍然运行的条件。所以在这种情况下，`<cats.length`仍然是真的，循环仍然运行。
+2. 循环将会一直运行直到它不再小于猫数组的长度。这很重要 - 退出条件显示循环仍然运行的条件。所以在这种情况下，`< cats.length` 仍然是真的，循环仍然运行。
 3. 在循环中，我们将当前的循环项（`cats[i]`是`cats[当前下标的任何东西]`）以及逗号和空格连接到`info`变量的末尾。所以：
 
-    1. 在第一次运行中，`i = 0`，所以`cats[0] +'，'将`被连接到`info("Bill")`上。
-    2. 在第二次运行中，`i = 1`，所以`cats[1] +'，'`将被连接到`info("Jeff")`上。
-    3. 等等。每次循环运行后，1 将被添加到 i（i ++），然后进程将再次启动。
+    1. 在第一次运行中，`i = 0`，所以 `cats[0] +', '` 将被连接到 `info("Bill")` 上。
+    2. 在第二次运行中，`i = 1`，所以 `cats[1] +', '` 将被连接到 `info("Jeff")` 上。
+    3. 等等。每次循环运行后，1 将被添加到 i（`i++`），然后进程将再次启动。
 
 4. 当等于`cats.length`时，循环将停止，浏览器将移动到循环下面的下一个代码位。
 
-> **备注：** 我们将退出条件设为`< cats.length`，而不是`<= cats.length`是因为计算机从 0 开始，而不是 1 - 开始时`i`是 0，并且逐步增加到 i`= 4`（最后一个数组的索引）。 `cats.length`返回 5，因为数组中有 5 个项目，但是我们不希望达到`i = 5`，因为这将返回未定义的最后一个项目（没有索引为 5 的数组项目）。所以我们想要比`cats.length`（`i <`）少 1，而不是`cats.length`（`i <=`）。
+> **备注：** 我们将退出条件设为 `< cats.length`，而不是 `<= cats.length` 是因为计算机从 0 开始，而不是 1 - 开始时 `i` 是 0，并且逐步增加到 `i = 4`（最后一个数组的索引）。 `cats.length` 返回 5，因为数组中有 5 个项目，但是我们不希望达到 `i = 5`，因为这将返回未定义的最后一个项目（没有索引为 5 的数组项目）。所以我们想要比 `cats.length` 少 1（`i <`），而不是 `cats.length`（`i <=`）。
 
 > **备注：** 退出条件的一个常见错误是使它们使用“等于”(`===`) 而不是说“小于或等于”(`<=`)。如果我们想要运行我的循环到`i = 5`，退出条件将需要是`i <= cats.length`。如果我们设置为`i === cats.length`，循环将不会运行，因为在第一次循环迭代时 i 不等于 5，所以循环会立即停止。
 
@@ -479,7 +480,7 @@ while (i < cats.length) {
 
 > **备注：** This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
 
-[do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)循环非常类似但在 while 后提供了终止条件：
+[do...while](/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while)循环非常类似但在 while 后提供了终止条件：
 
 ```plain
 initializer
@@ -699,30 +700,20 @@ do {
 
 我们建议使用`for`，因为它可能是最简单地帮你记住一切 - 初始化程序，退出条件和最终表达式都必须整齐地放入括号，所以很容易看到他们在哪里并检查你没有丢失他们。
 
-> **备注：** 还有其他循环类型/特性，这些特性在 高级/专门 的情况下是有用的，超出了本文的范围。如果您想进一步了解循环学习，请阅读我们的高级[循环和迭代指南](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)。
+> **备注：** 还有其他循环类型/特性，这些特性在 高级/专门 的情况下是有用的，超出了本文的范围。如果您想进一步了解循环学习，请阅读我们的高级[循环和迭代指南](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)。
 
 ## 结论
 
 本文向您展示了背后的基本概念，以及 JavaScript 中循环代码时可用的不同选项。你现在应该明白为什么循环是一个处理重复代码的好机制，并且在你自己的例子中使用它们！
 
-如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/en-US/Learn#Contact_us)寻求帮助。
+如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
 
 ## 相关链接
 
-- [Loops and iteration in detail](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [for statement reference](/en-US/docs/Web/JavaScript/Reference/Statements/for)
-- [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) references
-- [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) references
+- [Loops and iteration in detail](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [for statement reference](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)
+- [while](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while) references
+- [break](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) and [continue](/zh-CN/docs/Web/JavaScript/Reference/Statements/continue) references
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
-
-## 在本单元中
-
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery)

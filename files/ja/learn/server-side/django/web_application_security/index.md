@@ -2,6 +2,7 @@
 title: Django Web アプリケーションのセキュリティ
 slug: Learn/Server-side/Django/web_application_security
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}ユーザーのデータを守ることは Web デザインにおいて重要です。 以前、より一般的なセキュリティの脅威の一部を [Web セキュリティ](/ja/docs/Web/Security) の記事で説明しました— 本記事では Django にビルトインされている保護機能がそのような脅威にどう対応しているか、より実践的な動きを見ながら説明していきます。
 
 | 前提条件: | Read the サーバーサイドプログラミングの "[Web サイトセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)" の記事を読んでいること。Django チュートリアルを少なくとも [Django Tutorial Part 9: Working with forms](/ja/docs/Learn/Server-side/Django/Forms) まで完了していること。 |
@@ -12,7 +13,7 @@ slug: Learn/Server-side/Django/web_application_security
 
 The [Website security](/ja/docs/Web/Security) topic provides an overview of what website security means for server-side design, and some of the more common threats that you may need to protect against. One of the key messages in that article is that almost all attacks are successful when the web application trusts data from the browser.
 
-> **Warning:** **Important:** The single most important lesson you can learn about website security is to **never trust data from the browser**. This includes `GET` request data in URL parameters, `POST` data, HTTP headers and cookies, user-uploaded files, etc. Always check and sanitize all incoming data. Always assume the worst.
+> **警告:** **Important:** The single most important lesson you can learn about website security is to **never trust data from the browser**. This includes `GET` request data in URL parameters, `POST` data, HTTP headers and cookies, user-uploaded files, etc. Always check and sanitize all incoming data. Always assume the worst.
 
 The good news for Django users is that many of the more common threats are handled by the framework! The [Security in Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django docs) article explains Django's security features and how to secure a Django-powered website.
 
@@ -33,7 +34,7 @@ Django's template system protects you against the majority of XSS attacks by [es
     `<script>alert('Test alert');</script>`.
     ![Author Form XSS test](author_create_form_alert_xss.png)
 
-    > **Note:** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
+    > **メモ:** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
 
 5. Press **Submit** to save the record.
 6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](author_detail_alert_xss.png)
@@ -52,7 +53,7 @@ It is also possible for XSS attacks to originate from other untrusted source of 
 
 CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user’s knowledge or consent. For example consider the case where we have a hacker who wants to create additional authors for our LocalLibrary.
 
-> **Note:** Obviously our hacker isn't in this for the money! A more ambitious hacker could use the same approach on other sites to perform much more harmful tasks (e.g. transfer money to their own accounts, etc.)
+> **メモ:** Obviously our hacker isn't in this for the money! A more ambitious hacker could use the same approach on other sites to perform much more harmful tasks (e.g. transfer money to their own accounts, etc.)
 
 In order to do this, they might create an HTML file like the one below, which contains an author-creation form (like the one we used in the previous section) that is submitted as soon as the file is loaded. They would then send the file to all the Librarians and suggest that they open the file (it contains some harmless information, honest!). If the file is opened by any logged in librarian, then the form would be submitted with their credentials and a new author would be created.
 

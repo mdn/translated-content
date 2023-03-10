@@ -1,19 +1,9 @@
 ---
 title: '<picture>: 画像要素'
 slug: Web/HTML/Element/picture
-tags:
-  - Element
-  - Graphics
-  - HTML
-  - HTML embedded content
-  - Images
-  - Reference
-  - Web
-  - WebP
-  - picture
-translation_of: Web/HTML/Element/picture
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<picture>` 要素**は、0 個以上の {{HTMLElement("source")}} 要素と一つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。
 
@@ -25,8 +15,8 @@ translation_of: Web/HTML/Element/picture
 
 `<img>` 要素は 2 つの役割を担います。
 
-1.  画像の寸法やその他の属性を記述します。
-2.  `<source>` 要素で利用可能な画像を提供できなかった場合の代替策を提供します。
+1. 画像の寸法やその他の属性を記述します。
+2. `<source>` 要素で利用可能な画像を提供できなかった場合の代替策を提供します。
 
 `<picture>` をよく使う場面は以下の通りです。
 
@@ -90,7 +80,7 @@ DPI の高い (高解像度の) ディスプレイのために高解像度版の
 
 {{cssxref("object-position")}} プロパティを使用して、要素の枠内で画像の位置を調整したり、 {{cssxref("object-fit")}} プロパティを使用して、枠内に合わせるための画像の寸法を変更する方法を制御したりすることができます。
 
-> **Note:** これらのプロパティは子の `<img>` 要素に用い、 `<picture>` 要素には**用いない**でください。
+> **メモ:** これらのプロパティは子の `<img>` 要素に用い、 `<picture>` 要素には**用いない**でください。
 
 ## 例
 
@@ -140,9 +130,7 @@ DPI の高い (高解像度の) ディスプレイのために高解像度版の
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,17 +1,8 @@
 ---
 title: CSS グリッドレイアウトのボックス配置
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-tags:
-  - グリッドでの配置
-  - ボックス
-  - CSS
-  - CSS グリッド
-  - グリッド配置
-  - ガイド
-  - alignment
-  - ボックス配置
-translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
+
 {{CSSRef}}
 
 CSS グリッドレイアウトは [Box Alignment Level 3](https://drafts.csswg.org/css-align/) 仕様を実装しています。これは標準の[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)がフレックスコンテナーの中でアイテム配置を行うのと同じです。この仕様書には、様々なレイアウト方式すべてにおける配置の動作を詳述されています。どのレイアウト方式も、可能な限り仕様に準拠し、その違い (特徴と制約) に基づいて個々の動作を実装します。現在、仕様書にはすべてのレイアウト方式の詳細がありますが、ブラウザーの実装は完全ではありません。しかしながら、CSS グリッドレイアウト方式は広く実装されています。

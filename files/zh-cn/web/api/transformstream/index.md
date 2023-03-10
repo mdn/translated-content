@@ -2,11 +2,16 @@
 title: TransformStream
 slug: Web/API/TransformStream
 ---
+
 {{APIRef("Streams")}}
 
-[Streams API](/zh-CN/docs/Web/API/Streams_API) 接口的 `TransformStream` 表示一组可转换的数据。
+[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStream`** 接口表示[链式管道传输（pipe chain）](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)*转换流*（transform stream）概念的具体实现.
 
-`TransformStream` 是一个{{glossary("Transferable objects","可转移对象")}}。
+它可以传递给 {{domxref("ReadableStream.pipeThrough()")}} 方法，以便将流数据从一种格式转换成另一种。例如，它可以用于解码（或者编码）视频帧，解压缩数据或者将流从 XML 转换到 JSON。
+
+转换算法可以作为构造函数对象的可选参数提供。如果没有提供，数据在通过管道传输流时，不会被修改。
+
+`TransformStream` 是一个[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
 
 ## 构造函数
 
@@ -92,7 +97,7 @@ class JSTextEncoderStream extends TransformStream {
 }
 ```
 
-类似地，`TextDecoderStream` 可以这样写:
+类似地，`TextDecoderStream` 可以这样写：
 
 ```js
 const tds = {
@@ -118,7 +123,7 @@ class JSTextDecoderStream extends TransformStream {
 }
 ```
 
-### ReadableStream 链
+### 连接多个 ReadableStream 链
 
 这是一个连接多个流很有用的方法。示例包括构建一个渐进式加载和渐进式流的 PWA。
 

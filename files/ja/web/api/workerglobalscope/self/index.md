@@ -1,32 +1,29 @@
 ---
 title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
+l10n:
+  sourceCommit: 74f46a45c075037d7591a6cdbda96734b5b6f7fd
 ---
+
 {{APIRef("Web Workers API")}}
 
-{{domxref("WorkerGlobalScope")}} インターフェースの **`self`** 読み取り専用プロパティは、`WorkerGlobalScope` 自体への参照を返します。ほとんどの場合、これは {{domxref("DedicatedWorkerGlobalScope")}} や {{domxref("SharedWorkerGlobalScope")}}、{{domxref("ServiceWorkerGlobalScope")}} などの特定のスコープです。
+**`self`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、 `WorkerGlobalScope` 自体への参照を返します。ほとんどの場合、これは {{domxref("DedicatedWorkerGlobalScope")}} や {{domxref("SharedWorkerGlobalScope")}}、{{domxref("ServiceWorkerGlobalScope")}} などの特有のスコープです。
 
-## 構文
+## 値
 
-```js
-var selfRef = self;
-```
-
-### 値
-
-グローバルスコープオブジェクト (上に示したように、扱っている worker の種類によって異なる)。
+グローバルスコープオブジェクト（前述のとおり、扱っているワーカーの種類によって異なる）。
 
 ## 例
 
-以下を呼び出した場合、
+次のものをワーカー内で呼び出した場合、
 
 ```js
 console.log(self);
 ```
 
-worker 内で、コンソールに書き込まれたワーカーオブジェクトと同じタイプのワーカーグローバルスコープが取得されます — ある時は次のようになります:
+コンソールに書き込まれたワーカーオブジェクトと同じ型のワーカーグローバルスコープが取得されます。ある時は次のようになります。
 
-```js
+```
 DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
     Infinity: Infinity
@@ -51,21 +48,16 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
 // etc. etc.
 ```
 
-これは、そのワーカースコープで利用可能なオブジェクトの完全なリストを提供するため、ワーカーが何かを利用できるかを確認したい場合には、非常に便利なテストです。リストを[Web Workers が使用できる関数とクラス](/ja/docs/Web/API/Worker/Functions_and_classes_available_to_workers)でもメンテナンスしています。
+これは、そのワーカースコープで利用可能なオブジェクトの完全なリストを提供するため、ワーカーが何かを利用できるかを確認したい場合には、非常に便利なテストです。[ウェブワーカーが使用できる関数とクラス](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)の一覧もメンテナンスしています。
 
-> **Note:** **ノート**: Firefox には `console.log` を shared/service worker 内で使用したときのバグがあり ({{Bug("1058644")}} を見てください)、おかしな結果を返します。これはすぐに修正されるはずです。
+## 仕様書
 
-## 仕様
+{{Specifications}}
 
-| 仕様                                                                                     | ステータス                       | コメント                                            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-workerglobalscope-self', 'self')}} | {{Spec2('HTML WHATWG')}} | {{SpecName("Web Workers")}} から変更なし。 |
-| {{SpecName('Web Workers', '#dom-workerglobalscope-self', 'self')}} | {{Spec2('Web Workers')}} | 初期定義。                                          |
+## ブラウザーの互換性
 
-## ブラウザー実装状況
+{{Compat}}
 
-{{Compat("api.WorkerGlobalScope.self")}}
-
-## 関連項目
+## 関連情報
 
 {{domxref("WorkerGlobalScope")}}

@@ -1,19 +1,9 @@
 ---
 title: '<div>: コンテンツ区分要素'
 slug: Web/HTML/Element/div
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
-translation_of: Web/HTML/Element/div
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の コンテンツ区分要素** (**`<div>`**) は、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる (例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などの何らかのレイアウトモデルが適用されるなど) までは、コンテンツやレイアウトには影響を与えません。
 
@@ -85,7 +75,7 @@ translation_of: Web/HTML/Element/div
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-> **Note:** **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や [CSS フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
+> **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や [CSS フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
 
 ## 使用上の注意
 
@@ -141,11 +131,7 @@ translation_of: Web/HTML/Element/div
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------ |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-div-element', '&lt;div&gt;')}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットから変更なし。 |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-div-element', '&lt;div&gt;')}}     | {{Spec2('HTML5 W3C')}}     | `align` を廃止                       |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.4', '&lt;div&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

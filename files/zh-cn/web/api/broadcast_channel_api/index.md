@@ -2,6 +2,7 @@
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
 ---
+
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
 **Broadcast Channel API** 可以实现同 {{glossary("origin", "源")}} 下浏览器不同窗口，Tab 页，frame 或者 iframe 下的 {{glossary("browsing context", "浏览器上下文")}} (通常是同一个网站下不同的页面) 之间的简单通讯。
@@ -38,7 +39,7 @@ bc.postMessage('This is a test message.');
 
 ### 接收消息
 
-当消息被发送之后，所有连接到该频道的 {{domxref("BroadcastChannel")}} 对象上都会触发 {{event("message")}} 事件。该事件没有默认的行为，但是可以使用 {{domxref("BroadcastChannel.onmessage", "onmessage")}} 事件处理程序来定义一个函数来处理消息。
+当消息被发送之后，所有连接到该频道的 {{domxref("BroadcastChannel")}} 对象上都会触发 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件。该事件没有默认的行为，但是可以使用 {{domxref("BroadcastChannel.onmessage", "onmessage")}} 事件处理程序来定义一个函数来处理消息。
 
 ```js
 // 简单示例，用于将事件打印到控制台
@@ -64,7 +65,7 @@ Broadcast Channel API 是一个非常简单的 API，内部包含了跨上下文
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## 另见
 

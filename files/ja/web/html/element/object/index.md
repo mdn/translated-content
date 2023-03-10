@@ -1,19 +1,11 @@
 ---
 title: '<object>: 外部オブジェクト要素'
 slug: Web/HTML/Element/object
-tags:
-  - 要素
-  - HTML
-  - HTML 埋め込みコンテンツ
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.object
-translation_of: Web/HTML/Element/object
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-**`<object>`** は [HTML](/en-US/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
+**`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
 
@@ -50,7 +42,7 @@ translation_of: Web/HTML/Element/object
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("image")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/image_role">image</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

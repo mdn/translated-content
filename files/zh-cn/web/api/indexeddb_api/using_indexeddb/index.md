@@ -2,15 +2,16 @@
 title: 使用 IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB 是一种可以让你在用户的浏览器内持久化存储数据的方法。IndexedDB 为生成 Web Application 提供了丰富的查询能力，使我们的应用在在线和离线时都可以正常工作。
 
 ## 关于本文档
 
-本篇教程将教会你如何使用 IndexedDB 的异步 API。如果你对 IndexedDB 还不熟悉，你应该首先阅读[有关 IndexedDB 的基本概念](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
+本篇教程将教会你如何使用 IndexedDB 的异步 API。如果你对 IndexedDB 还不熟悉，你应该首先阅读[有关 IndexedDB 的基本概念](/zh-CN/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
 
-有关 IndexedDB API 的参考手册，请参见 [IndexedDB](https://developer.mozilla.org/en/IndexedDB) 这篇文章及其子页面，包括 IndexedDB 使用的对象类型，以及异步 API（同步 API 已从规范中删除）。
+有关 IndexedDB API 的参考手册，请参见 [IndexedDB](/zh-CN/IndexedDB) 这篇文章及其子页面，包括 IndexedDB 使用的对象类型，以及异步 API（同步 API 已从规范中删除）。
 
 ## 基本模式
 
@@ -30,7 +31,7 @@ IndexedDB 鼓励使用的基本模式如下所示：
 
 ### 使用实验版本的 IndexedDB
 
-如果你希望在仍旧使用前缀的浏览器中测试你的代码，可以使用下列代码:
+如果你希望在仍旧使用前缀的浏览器中测试你的代码，可以使用下列代码：
 
 ```js
 // In the following line, you should include the prefixes of implementations you want to test.
@@ -59,9 +60,9 @@ if (!window.indexedDB) {
 var request = window.indexedDB.open("MyTestDatabase");
 ```
 
-看到了吗？ 打开数据库就像任何其他操作一样 — 你必须进行 "request"。
+看到了吗？打开数据库就像任何其他操作一样 — 你必须进行 "request"。
 
-open 请求不会立即打开数据库或者开始一个事务。 对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase) 对象的实例。
+open 请求不会立即打开数据库或者开始一个事务。对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/zh-CN/docs/IndexedDB/IDBDatabase) 对象的实例。
 
 该 open 方法接受第二个参数，就是数据库的版本号。数据库的版本决定了数据库架构，即数据库的对象仓库（object store）和他的结构。如果数据库不存在，`open` 操作会创建该数据库，然后 `onupgradeneeded` 事件被触发，你需要在该事件的处理函数中创建数据库模式。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理函数中更新数据库模式。我们在后面的[更新数据库的版本号](#Updating_the_version_of_the_database)和 {{ domxref("IDBFactory.open") }} 中会提到更多有关这方面的内容。
 
@@ -84,13 +85,13 @@ request.onsuccess = function(event) {
 };
 ```
 
-`onsuccess()` 和 `onerror()` 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成 `"success"` 的 DOM 事件）会被触发，`request` 会作为它的 `target`。 一旦它被触发的话，相关 `request` 的 `onsuccess()` 处理函数就会被触发，使用 success 事件作为它的参数。 否则，如果不是所有事情都成功的话，一个 error 事件（即 `type` 属性被设置成 `"error"` 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 `onerror()` 方法。
+`onsuccess()` 和 `onerror()` 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成 `"success"` 的 DOM 事件）会被触发，`request` 会作为它的 `target`。一旦它被触发的话，相关 `request` 的 `onsuccess()` 处理函数就会被触发，使用 success 事件作为它的参数。否则，如果不是所有事情都成功的话，一个 error 事件（即 `type` 属性被设置成 `"error"` 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 `onerror()` 方法。
 
-IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 [存储限制](/en/IndexedDB#Storage_limits)）。
+IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 [存储限制](/zh-CN/IndexedDB#Storage_limits)）。
 
-显然，浏览器不希望允许某些广告网络或恶意网站来污染你的计算机，所以浏览器会在任意给定的 web app 首次尝试打开一个 IndexedDB 存储时对用户进行提醒。用户可以选择允许访问或者拒绝访问。还有，IndexedDB 在浏览器的隐私模式（Firefox 的 Private Browsing 模式和 Chrome 的 Incognito 模式）下是被完全禁止的。 隐私浏览的全部要点在于不留下任何足迹，所以在这种模式下打开数据库的尝试就失败了。
+显然，浏览器不希望允许某些广告网络或恶意网站来污染你的计算机，所以浏览器会在任意给定的 web app 首次尝试打开一个 IndexedDB 存储时对用户进行提醒。用户可以选择允许访问或者拒绝访问。还有，IndexedDB 在浏览器的隐私模式（Firefox 的 Private Browsing 模式和 Chrome 的 Incognito 模式）下是被完全禁止的。隐私浏览的全部要点在于不留下任何足迹，所以在这种模式下打开数据库的尝试就失败了。
 
-现在，假设用户已经允许了你的要创建一个数据库的请求，同时你也已经收到了一个来触发 success 回调的 success 事件；然后呢？这里的 request 是通过调用 `indexedDB.open()` 产生的， 所以 `request.result` 是一个 `IDBDatabase` 的实例，而且你肯定希望把它保存下来以供后面使用。你的代码看起来可能像这样：
+现在，假设用户已经允许了你的要创建一个数据库的请求，同时你也已经收到了一个来触发 success 回调的 success 事件；然后呢？这里的 request 是通过调用 `indexedDB.open()` 产生的，所以 `request.result` 是一个 `IDBDatabase` 的实例，而且你肯定希望把它保存下来以供后面使用。你的代码看起来可能像这样：
 
 ```js
 var db;
@@ -144,7 +145,7 @@ WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及
 
 ### 构建数据库
 
-现在来构建数据库。IndexedDB 使用对象存仓库而不是表，并且一个单独的数据库可以包含任意数量的对象存储空间。每当一个值被存储进一个对象存储空间时，它会被和一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储空间是使用 [key path](/en/IndexedDB#gloss_key_path) 还是 [key generator](/en/IndexedDB#gloss_key_generator)。
+现在来构建数据库。IndexedDB 使用对象存仓库而不是表，并且一个单独的数据库可以包含任意数量的对象存储空间。每当一个值被存储进一个对象存储空间时，它会被和一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储空间是使用 [key path](/zh-CN/IndexedDB#gloss_key_path) 还是 [key generator](/zh-CN/IndexedDB#gloss_key_generator)。
 
 下面的表格显示了几种不同的提供键的方法。
 
@@ -207,11 +208,11 @@ request.onupgradeneeded = function(event) {
 
 正如前面提到的，`onupgradeneeded` 是我们唯一可以修改数据库结构的地方。在这里面，我们可以创建和删除对象存储空间以及构建和删除索引。
 
-对象仓库仅调用 `createObjectStore()` 就可以创建。这个方法使用仓库的名称，和一个参数对象。即便这个参数对象是可选的，它还是非常重要的，因为它可以让你定义重要的可选属性，并完善你希望创建的对象存储空间的类型。在我们的示例中，我们创建了一个名为“customers” 的对象仓库并且定义了一个使得每个仓库中每个对象都独一无二的 `keyPath` 。在这个示例中的属性是 “ssn”，因为社会安全号码被确保是唯一的。被存储在该仓库中的所有对象都必须存在“ssn”。
+对象仓库仅调用 `createObjectStore()` 就可以创建。这个方法使用仓库的名称，和一个参数对象。即便这个参数对象是可选的，它还是非常重要的，因为它可以让你定义重要的可选属性，并完善你希望创建的对象存储空间的类型。在我们的示例中，我们创建了一个名为“customers”的对象仓库并且定义了一个使得每个仓库中每个对象都独一无二的 `keyPath` 。在这个示例中的属性是“ssn”，因为社会安全号码被确保是唯一的。被存储在该仓库中的所有对象都必须存在“ssn”。
 
-我们也请求了一个名为 “name” 的着眼于存储的对象的 `name` 属性的索引。如同 `createObjectStore()`，`createIndex()` 提供了一个可选地 `options` 对象，该对象细化了我们希望创建的索引类型。新增一个不带 `name` 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。
+我们也请求了一个名为“name”的着眼于存储的对象的 `name` 属性的索引。如同 `createObjectStore()`，`createIndex()` 提供了一个可选地 `options` 对象，该对象细化了我们希望创建的索引类型。新增一个不带 `name` 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。
 
-我们现在可以使用存储的用户对象的 `ssn` 直接从对象存储空间中把它们提取出来，或者通过使用索引来使用他们的 name 进行提取。要了解这些是如何实现的，请参见 [使用索引](/en/IndexedDB/Using_IndexedDB#Using_an_index) 章节。
+我们现在可以使用存储的用户对象的 `ssn` 直接从对象存储空间中把它们提取出来，或者通过使用索引来使用他们的 name 进行提取。要了解这些是如何实现的，请参见 [使用索引](/zh-CN/IndexedDB/Using_IndexedDB#Using_an_index) 章节。
 
 ### 使用键生成器
 
@@ -248,7 +249,7 @@ request.onupgradeneeded = function (event) {
 
 你需要开启一个事务才能对你的创建的数据库进行操作。事务来自于数据库对象，而且你必须指定你想让这个事务跨越哪些对象仓库。一旦你处于一个事务中，你就可以目标对象仓库发出请求。你要决定是对数据库进行更改还是只需从中读取数据。事务提供了三种模式：`readonly`、`readwrite` 和 `versionchange`。
 
-想要修改数据库模式或结构——包括新建或删除对象仓库或索引，只能在 `versionchange` 事务中才能实现。该事务由一个指定了 version 的 {{domxref("IDBFactory.open")}} 方法启动。（在仍未实现最新标准的 WebKit 浏览器 ，{{domxref("IDBFactory.open")}} 方法只接受一个参数，即数据库的 `name`，这样你必须调用 {{domxref("IDBVersionChangeRequest.setVersion")}} 来建立 `versionchange` 事务。
+想要修改数据库模式或结构——包括新建或删除对象仓库或索引，只能在 `versionchange` 事务中才能实现。该事务由一个指定了 version 的 {{domxref("IDBFactory.open")}} 方法启动。（在仍未实现最新标准的 WebKit 浏览器，{{domxref("IDBFactory.open")}} 方法只接受一个参数，即数据库的 `name`，这样你必须调用 {{domxref("IDBVersionChangeRequest.setVersion")}} 来建立 `versionchange` 事务。
 
 使用 `readonly` 或 `readwrite` 模式都可以从已存在的对象仓库里读取记录。但只有在 `readwrite` 事务中才能修改对象仓库。你需要使用 {{domxref("IDBDatabase.transaction")}} 启动一个事务。该方法接受两个参数：`storeNames` (作用域，一个你想访问的对象仓库的数组），事务模式 `mode`（readonly 或 readwrite）。该方法返回一个包含 {{domxref("IDBIndex.objectStore")}} 方法的事务对象，使用 {{domxref("IDBIndex.objectStore")}} 你可以访问你的对象仓库。未指定 `mode` 时，默认为 `readonly` 模式。
 
@@ -395,7 +396,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-`openCursor()` 函数需要几个参数。首先，你可以使用一个 key range 对象来限制被检索的项目的范围。第二，你可以指定你希望进行迭代的方向。在上面的示例中，我们在以升序迭代所有的对象。游标成功的回调有点特别。游标对象本身是请求的 `result` （上面我们使用的是简写形式，所以是 `event.target.result`）。然后实际的 key 和 value 可以根据游标对象的 `key` 和 `value` 属性被找到。如果你想要保持继续前行，那么你必须调用游标上的 `continue()` 。当你已经到达数据的末尾时（或者没有匹配 `openCursor()` 请求的条目）你仍然会得到一个成功回调，但是 `result` 属性是 `undefined。`
+`openCursor()` 函数需要几个参数。首先，你可以使用一个 key range 对象来限制被检索的项目的范围。第二，你可以指定你希望进行迭代的方向。在上面的示例中，我们在以升序迭代所有的对象。游标成功的回调有点特别。游标对象本身是请求的 `result` （上面我们使用的是简写形式，所以是 `event.target.result`）。然后实际的 key 和 value 可以根据游标对象的 `key` 和 `value` 属性被找到。如果你想要保持继续前行，那么你必须调用游标上的 `continue()` 。当你已经到达数据的末尾时（或者没有匹配 `openCursor()` 请求的条目）你仍然会得到一个成功回调，但是 `result` 属性是 `undefined`。
 
 使用游标的一种常见模式是提取出在一个对象存储空间中的所有对象然后把它们添加到一个数组中，像这样：
 
@@ -409,7 +410,7 @@ objectStore.openCursor().onsuccess = function(event) {
     cursor.continue();
   }
   else {
-    alert("以获取所有客户信息: " + customers);
+    alert("以获取所有客户信息：" + customers);
   }
 };
 ```
@@ -440,7 +441,7 @@ index.get("Donna").onsuccess = function(event) {
 };
 ```
 
-“name” 游标不是唯一的，因此 `name` 被设成 `"Donna"` 的记录可能不止一条。在这种情况下，你总是得到键值最小的那个。
+“name”游标不是唯一的，因此 `name` 被设成 `"Donna"` 的记录可能不止一条。在这种情况下，你总是得到键值最小的那个。
 
 如果你需要访问带有给定 `name` 的所有的记录你可以使用一个游标。你可以在索引上打开两个不同类型的游标。一个常规游标映射索引属性到对象存储空间中的对象。一个键索引映射索引属性到用来存储对象存储空间中的对象的键。不同之处被展示如下：
 
@@ -519,7 +520,7 @@ objectStore.openCursor(null, "prev").onsuccess = function(event) {
 };
 ```
 
-因为 “name” 索引不是唯一的，那就有可能存在具有相同 `name` 的多条记录。要注意的是这种情况不可能发生在对象存储空间上，因为键必须永远是唯一的。如果你想要在游标在索引迭代过程中过滤出重复的，你可以传递 `nextunique` （或 `prevunique` 如果你正在向后寻找）作为方向参数。 当 `nextunique` 或是 `prevunique` 被使用时，被返回的那个总是键最小的记录。
+因为“name”索引不是唯一的，那就有可能存在具有相同 `name` 的多条记录。要注意的是这种情况不可能发生在对象存储空间上，因为键必须永远是唯一的。如果你想要在游标在索引迭代过程中过滤出重复的，你可以传递 `nextunique` （或 `prevunique` 如果你正在向后寻找）作为方向参数。当 `nextunique` 或是 `prevunique` 被使用时，被返回的那个总是键最小的记录。
 
 ```js
 index.openKeyCursor(null, IDBCursor.nextunique).onsuccess = function(event) {
@@ -583,11 +584,11 @@ IndexedDB 使用同源原则，这意味着它把存储空间绑定到了创建�
 
 1. 受影响的数据库（在浏览器关闭的场景下，所有打开的数据库）的所有事务会以 AbortError 错误中断。该影响和在每个事务中调用 {{domxref("IDBTransaction.abort()")}} 相同。
 2. 所有的事务完成后，数据库连接就会关闭。
-3. 最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{event("close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。
+3. 最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{domxref("IDBDatabase/close_event", "close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。
 
-上述的行为只在 Firefox 50、Google Chrome 31（近似的） 发行版本中支持。
+上述的行为只在 Firefox 50、Google Chrome 31（近似的）发行版本中支持。
 
-在这些版本之前的浏览器，事务会静默中断，并且 {{event("close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。
+在这些版本之前的浏览器，事务会静默中断，并且 {{domxref("IDBDatabase/close_event", "close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。
 
 由于用户可以在任何时候关闭浏览器，因此你不能依赖于任何特定事务的完成。并且在老版本的浏览器，你甚至都无法感知它们是否顺利完成。针对这种行为这里有一些启示：
 
@@ -597,7 +598,7 @@ Since the user can exit the browser at any time, this means that you cannot rely
 
 其次，你不应该把数据库事务绑定到卸载事件上。如果卸载事件被浏览器关闭所触发，卸载事件处理函数中的任何事务都不会完成。跨浏览器会话维护信息的直观的实现方法时在浏览器（或特定页）打开时从数据库读取它，在用户和浏览器交互式更新它，然后在浏览器（或页面）关闭时保存至数据库。然而，这并不会生效。这样一来，数据库事务会在卸载事件句柄中被创建，但由于它们时异步的，所以它们在它们执行之前就会被中断。
 
-实际上，这里没有办法可以确保 IndexedDB 事务可以执行完毕，即使是浏览器正常关闭的情况。参见 {{ bug(870645)}}。作为一个正常关闭通知的变通方案，你可以跟踪你的事务并添加一个 `beforeunload` 事件来提醒用户，如果此时有事务在数据库卸载时还没有完成。
+实际上，这里没有办法可以确保 IndexedDB 事务可以执行完毕，即使是浏览器正常关闭的情况。参见 [Firefox bug 870645](https://bugzil.la/870645)。作为一个正常关闭通知的变通方案，你可以跟踪你的事务并添加一个 `beforeunload` 事件来提醒用户，如果此时有事务在数据库卸载时还没有完成。
 
 至少通过添加中断提醒和 {{domxref("IDBDatabse.onclose")}}，你可以得知它何时关闭了。
 
@@ -1309,7 +1310,7 @@ input {
 
 ### 参考
 
-- [IndexedDB 接口参考](https://developer.mozilla.org/en/IndexedDB)
+- [IndexedDB 接口参考](/zh-CN/IndexedDB)
 - [Indexed Database 接口说明](http://www.w3.org/TR/IndexedDB/)
 - [在 Chrome 中使用 IndexedDB](/zh-CN/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [在 Firefox 中使用 JavaScript 生成器](/zh-CN/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)

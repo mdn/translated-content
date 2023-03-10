@@ -2,6 +2,7 @@
 title: 使用 CSS transitions
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
+
 {{CSSRef}} {{SeeCompattable}}
 
 **CSS transitions** 提供了一种在更改 CSS 属性时控制动画速度的方法。其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义。
@@ -69,7 +70,7 @@ CSS 过渡由简写属性 {{cssxref("transition")}} 定义是最好的方式，�
 **(注意下面示例中过渡无限循环是为了说明例子，过渡只是从开始到结束变化，如果需要循环，查看 [`animation`](/zh-CN/docs/CSS/animation) 。)**
 
 - {{ cssxref("transition-property") }}
-  - : 指定哪个或哪些 CSS 属性用于过渡。只有指定的属性才会在过渡中发生动画，其它属性仍如通常那样瞬间变化。
+  - : 指定哪个或哪些 CSS 属性用于过渡。只有指定的属性才会在过渡中发生动画，其他属性仍如通常那样瞬间变化。
 - {{ cssxref("transition-duration") }}
   - : 指定过渡的时长。或者为所有属性指定一个值，或者指定多个值，为每个属性指定不同的时长。
 - {{ cssxref("transition-timing-function") }}
@@ -122,7 +123,7 @@ div {
 }
 ```
 
-类似地，如果某个属性的值列表长于 {{ cssxref("transition-property") }} 的，将被截短。 例如：
+类似地，如果某个属性的值列表长于 {{ cssxref("transition-property") }} 的，将被截短。例如：
 
 ```css
 div {
@@ -257,10 +258,6 @@ p {
 ## 规范
 
 {{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 另见
 

@@ -1,16 +1,8 @@
 ---
 title: '-moz-outline-radius'
 slug: Web/CSS/-moz-outline-radius
-tags:
-  - CSS
-  - CSS プロパティ
-  - Mozilla 拡張
-  - 標準外
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.-moz-outline-radius
-translation_of: Web/CSS/-moz-outline-radius
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 Firefox などの Mozilla アプリケーションにおいて、**`-moz-outline-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線 ({{cssxref("outline")}}) の角を丸くするために使用することができます。
@@ -47,7 +39,7 @@ Firefox などの Mozilla アプリケーションにおいて、**`-moz-outline
 
 ### 値
 
-> **Note:** 楕円形の輪郭線や `<percentage>` の値は、 {{cssxref("border-radius")}} で説明されている構文に従います。
+> **メモ:** 楕円形の輪郭線や `<percentage>` の値は、 {{cssxref("border-radius")}} で説明されている構文に従います。
 
 1 ～ 4 つの `<outline-radius>` 値で、次のうちの一つを表します。
 

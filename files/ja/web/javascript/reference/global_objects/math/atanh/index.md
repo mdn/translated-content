@@ -1,13 +1,8 @@
 ---
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atanh
 ---
+
 {{JSRef}}
 
 **`Math.atanh()`** 関数は、数値の双曲線逆正接 (ハイパーボリックアークタンジェント) を返します。
@@ -62,9 +57,7 @@ Math.atanh = Math.atanh || function(x) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.atanh', 'Math.atanh')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

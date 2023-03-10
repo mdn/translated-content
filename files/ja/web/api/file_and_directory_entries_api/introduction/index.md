@@ -2,6 +2,7 @@
 title: ファイルとディレクトリエントリ API の紹介
 slug: Web/API/File_and_Directory_Entries_API/Introduction
 ---
+
 {{DefaultAPISidebar("File System API")}}{{Non-standard_header}}
 
 [ファイルとディレクトリエントリ API](/ja/docs/Web/API/File_and_Directory_Entries_API) は、ウェブアプリケーションがナビゲートできるローカルファイルシステムをシミュレートします。サンドボックス化された仮想ファイルシステムでファイルやディレクトリの読み取り、書き込み、作成ができるアプリを開発できます。
@@ -168,11 +169,7 @@ This section defines and explains terms used in the File and Directory Entries A
 
 ## Specifications
 
-| Specification                            | Status                               | Comment               |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('File System API')}} | {{Spec2('File System API')}} | Draft of proposed API |
-
-This API has no official W3C or WHATWG specification.
+{{Specifications}}
 
 ## Browser compatibility
 

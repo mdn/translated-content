@@ -2,6 +2,7 @@
 title: DOMPointReadOnly()
 slug: Web/API/DOMPointReadOnly/DOMPointReadOnly
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPointReadOnly()`** コンストラクターは、スクリプトコードによってその値を変更できない、二次元または三次元の点を表す新しい {{domxref("DOMPointReadOnly")}} オブジェクト（オプションで遠近法を使用可能）を返します。
@@ -27,7 +28,7 @@ new DOMPointReadOnly(x, y, z, w)
 - `w` {{optional_inline}}
   - : 視点位置 w を浮動小数点数で指定します。既定値は 1 です。
 
-> **Note:** これらの値はそれぞれ*無制限*の数と呼ばれるものです。有限の浮動小数点数に加えて、±{{jsxref("Infinity")}} や {{jsxref("NaN")}} のような特別な値も使用することができます。
+> **メモ:** これらの値はそれぞれ*無制限*の数と呼ばれるものです。有限の浮動小数点数に加えて、±{{jsxref("Infinity")}} や {{jsxref("NaN")}} のような特別な値も使用することができます。
 
 ### 返値
 

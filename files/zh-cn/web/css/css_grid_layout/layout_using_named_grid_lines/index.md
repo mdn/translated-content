@@ -2,6 +2,7 @@
 title: 使用命名线布局
 slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 ---
+
 {{CSSRef}}
 
 在前几篇文章中，我们已经学习了根据网格轨道创建出的网格线来定位，以及根据命名的模块区域来定位，在本文中我们将探讨如何通过为网格线命名来把这两种方法结合起来。命名网格线不可思议地有用，但是它那把名字和轨道尺寸混在一起的语法看上去令人困惑，不过通过学习本文的示例，它们会变得清晰而简单。
@@ -71,7 +72,7 @@ slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 </div>
 ```
 
-{{ EmbedLiveSample('example_named_lines', '500', '330') }}
+{{ EmbedLiveSample('在定义网格时命名网格线', '500', '330') }}
 
 基于网格线布局的其他知识仍然照常可用，而且可以把命名线和线序号混合使用。为线命名的方法对于创建响应式页面特别有用，当需要在媒体查询中重新定义网格时，你就不需要通过修改线序号来改变布局，只要直接使用定义过的线名字就可以了，因为（即使在不同的布局中）线的名字总是相同的。
 
@@ -122,7 +123,7 @@ slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 </div>
 ```
 
-{{ EmbedLiveSample('implicit_areas_from_lines', '500', '330') }}
+{{ EmbedLiveSample('由命名线定义的隐式网格区域', '500', '330') }}
 
 不需要通过 `grid-template-areas` 来指定区域的位置，因为它已经被命名线约束好了。
 
@@ -215,13 +216,15 @@ slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 </div>
 ```
 
-{{ EmbedLiveSample('implicit_lines_from_area', '500', '330') }}
+{{ EmbedLiveSample('由网格区域隐式定义的命名线', '500', '330') }}
 
 为了获得由命名的区域隐式创建命名线的能力，和由命名线隐式创建区域的能力，在创建网格布局时花一点时间来设计命名策略是非常值得的。慎重地选择名字对你和你的团队的意义在于，你创建网格的工作会变得容易，对其他使用和维护网格的人也大有益处。
 
 ## 用 repeat() 定义相同名字的多条线
 
 如果要给网格中所有的线都定义唯一的名字，就要用普通写法，即在定义轨道时把名字写在方括号里，而不能使用 repeat 语法。使用 repeat 语法的结果是得到有相同名字的多条线，不过这也是有用的。
+
+### 使用 repeat() 定义 12 列的网格
 
 下面的例子创建了一个有 12 个等宽列的网格，在定义列轨道尺寸为 1fr 之前，也定义了网格线名字 `[col-start]`，也就是说最终会创建一个 12 列的网格，每个 `1fr` 宽的列左侧的线都被命名为 `col-start`。
 
@@ -273,11 +276,13 @@ slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 </div>
 ```
 
-{{ EmbedLiveSample('multiple_lines_same_name', '500', '330') }}
+{{ EmbedLiveSample('使用 repeat() 定义 12 列的网格', '500', '330') }}
 
 如果在 Firefox Grid Highlighter 中查看布局，就能观察到纵向的列线，以及项目是如何依赖这些线来定位的。
 
 ![The 12 column grid with items placed. The Grid Highlighter shows the position of the lines.](5_named_lines1.png)
+
+### 使用轨道列表定义命名网格线
 
 repeat 语法不仅可用于重复的单一轨道尺寸，也可以用于轨道列表。下面的代码创建了一个 8 个轨道的网格，在一个名为 `col1-start` 的 `1fr` 窄轨道之后，跟着是一个名为 `col2-start` 的 `3fr` 宽轨道。
 
@@ -344,7 +349,7 @@ repeat 语法不仅可用于重复的单一轨道尺寸，也可以用于轨道�
 </div>
 ```
 
-{{ EmbedLiveSample('span_line_number', '500', '330') }}
+{{ EmbedLiveSample('使用轨道列表定义命名网格线', '500', '330') }}
 
 通过前面的三篇文章，我们发现使用网格布局时有非常多不同的方法来定位项目，这乍看起来有些过于复杂了，不过其实你不必把它们都用上。在实践中，我发现使用命名的模块区域是最直截了当的布局方法，它的可视化表示法能让你看到布局的效果，并且也容易在网格上移动项目。
 

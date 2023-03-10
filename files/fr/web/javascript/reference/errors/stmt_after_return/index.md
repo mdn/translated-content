@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 original_slug: Web/JavaScript/Reference/Erreurs/Stmt_after_return
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

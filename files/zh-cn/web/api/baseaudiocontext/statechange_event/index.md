@@ -2,9 +2,10 @@
 title: AudioContext.onstatechange
 slug: Web/API/BaseAudioContext/statechange_event
 ---
+
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }}的`onstatechange属性定义了一个事件处理器函数，触发`{{Event("statechange")}}会被调用，也就是说 audio context 的状态发生变化时会执行。
+{{ domxref("AudioContext") }} 的 `onstatechange` 属性定义了一个事件处理器函数，触发 [`statechange`](/zh-CN/docs/Web/API/RTCIceTransport/statechange_event) 会被调用，也就是说 audio context 的状态发生变化时会执行。
 
 ## 语法
 
@@ -15,7 +16,7 @@ audioCtx.onstatechange = function() { ... };
 
 ## 例子
 
-下面这段代码是[AudioContext states DEMO](https://github.com/mdn/audiocontext-states/settings) ([直接运行](http://mdn.github.io/audiocontext-states/)) 中的，其中`onstatechange处理器会在每次`当前{{domxref("state")}}发生变化时`把它`输出到控制台。
+下面这段代码是[AudioContext states DEMO](https://github.com/mdn/audiocontext-states/settings) ([直接运行](http://mdn.github.io/audiocontext-states/)) 中的，其中 `onstatechange` 处理器会在每次当前 {{domxref("state")}} 发生变化时把它输出到控制台。
 
 ```js
 audioCtx.onstatechange = function() {
@@ -29,8 +30,8 @@ audioCtx.onstatechange = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.statechange_event")}}
+{{Compat}}
 
 ## 另见
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

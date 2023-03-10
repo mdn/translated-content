@@ -2,6 +2,7 @@
 title: 'Window: paste イベント'
 slug: Web/API/Window/paste_event
 ---
+
 {{APIRef}}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから「貼り付け」操作を実行したときに発生します。
@@ -39,13 +40,11 @@ document.addEventListener('paste', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-paste')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.paste_event")}}
+{{Compat}}
 
 ## 関連情報
 

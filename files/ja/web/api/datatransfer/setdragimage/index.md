@@ -2,6 +2,7 @@
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 ドラッグが発生すると、ドラッグ対象（{{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが発生した要素）から半透明の画像が生成され、ドラッグ中にマウスポインターに沿って移動します。この画像は自動的に作成されるので、自分で作成する必要はありません。ただし、カスタム画像が必要な場合は、**`DataTransfer.setDragImage()`** メソッドを使用して、使用するカスタム画像を設定することができます。画像は通常、 {{HTMLElement("image")}} 要素になりますが、 {{HTMLElement("canvas")}} やその他の可視要素であっても構いません。

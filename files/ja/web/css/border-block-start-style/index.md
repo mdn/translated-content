@@ -1,20 +1,8 @@
 ---
 title: border-block-start-style
 slug: Web/CSS/border-block-start-style
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-block
-  - border-block-start
-  - border-block-start-style
-  - border-block-style
-  - recipe:css-property
-browser-compat: css.properties.border-block-start-style
-translation_of: Web/CSS/border-block-start-style
 ---
+
 {{CSSRef}}
 
 **`border-block-start-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの先頭側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。

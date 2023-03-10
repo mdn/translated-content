@@ -2,6 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 `Blob`（Binary Large Object）物件代表了一個相當於檔案（原始資料）的不可變物件。Blob 中的資料並不一定是 JavaScript 原生的格式。{{domxref("File")}} 介面基於 `Blob，`繼承 blob 並擴充其功能以支援操作使用者系統上的檔案。
@@ -83,7 +84,7 @@ reader.readAsArrayBuffer(blob);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Blob")}}
+{{Compat}}
 
 ## 參見
 

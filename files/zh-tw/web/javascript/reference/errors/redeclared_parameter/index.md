@@ -2,6 +2,7 @@
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 訊息
@@ -45,7 +46,7 @@ function f(arg) {
 
 ## 相容性註解
 
-- 在 Firefox 49 {{geckoRelease(49)}} 之前，這個錯誤被歸為 {{jsxref("TypeError")}}。 ({{bug(1275240)}})
+- 在 Firefox 49 之前，這個錯誤被歸為 {{jsxref("TypeError")}}。（[Firefox bug 1275240](https://bugzil.la/1275240)）
 
 ## 參見
 

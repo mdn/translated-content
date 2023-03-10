@@ -2,6 +2,7 @@
 title: CSSNumericValue.add()
 slug: Web/API/CSSNumericValue/add
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`add()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、指定された値を `CSSNumericValue` に加算します。

@@ -3,9 +3,10 @@ title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
 original_slug: Web/CSS/gradient/repeating-linear-gradient()
 ---
+
 {{CSSRef}}
 
-CSS 函数 **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的{{cssxref("&lt;image&gt;")}}， 这是一个类似 {{cssxref("linear-gradient")}} 的函数，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是一个{{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一个特殊的{{cssxref("&lt;image&gt;")}}类型。
+CSS 函数 **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的{{cssxref("&lt;image&gt;")}}，这是一个类似 {{cssxref("linear-gradient")}} 的函数，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是一个{{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一个特殊的{{cssxref("&lt;image&gt;")}}类型。
 
 ```css
 /* 一个倾斜 45 度的重复线性渐变，
@@ -26,7 +27,7 @@ repeating-linear-gradient(0deg, blue, green 40%, red);
 
 与其他渐变一样，线形重复渐变没有提供 [固定的尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。
 
-> **备注：**  因为 `<gradient>` 属于`<image>` 数据类型，所以只能在可以使用 `<image>`的地方使用它们。因此`repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}}以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
+> **备注：** 因为 `<gradient>` 属于`<image>` 数据类型，所以只能在可以使用 `<image>`的地方使用它们。因此`repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}}以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
 
 ## 语法
 
@@ -121,7 +122,7 @@ div {
 </ol>
 ```
 
-{{EmbedLiveSample('Example_hidden', '300px', '300px', '')}}
+{{EmbedLiveSample('示例', '300px', '300px', '')}}
 
 ## 规范
 
@@ -131,7 +132,7 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
-- [使用 CSS 渐变](/en/CSS/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/CSS/Using_CSS_gradients)
 - 其他渐变方法：{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-radial-gradient")}}

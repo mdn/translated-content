@@ -2,6 +2,7 @@
 title: Flex アイテム
 slug: Glossary/Flex_Item
 ---
+
 {{glossary("Flex Container")}} (`display: flex` または `display: inline-flex` が設定された要素) の直下の子要素が**「flex アイテム」**となります。
 
 Flex コンテナ内で直下に続くテキストも flex アイテムになります。

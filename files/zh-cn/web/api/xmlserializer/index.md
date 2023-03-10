@@ -2,6 +2,7 @@
 title: XMLSerializer
 slug: Web/API/XMLSerializer
 ---
+
 {{APIRef("XMLSerializer")}}`XMLSerializer`接口提供{{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法来构建一个代表 {{Glossary("DOM")}} 树的 XML 字符串。
 
 ## 方法
@@ -57,10 +58,10 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLSerializer")}}
+{{Compat}}
 
 ## 参见
 
-- [Parsing and serializing XML](https://developer.mozilla.org/en-US/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/zh-CN/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("DOMParser")}}

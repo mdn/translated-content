@@ -1,14 +1,8 @@
 ---
 title: <xsl:for-each>
 slug: Web/XSLT/Element/for-each
-tags:
-  - XSLT
-  - for
-  - for-each
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/for-each
 ---
+
 {{ XsltRef() }}
 
 `<xsl:for-each>` 要素は一連のノードを選択し、それぞれのノードを同じ方法で処理します。これはノードのセットを反復処理したり、現在のノードを変更したりするためによく使用されます。1 つ以上の `<xsl:sort>` 要素がこの要素の子として表示される場合、処理の前にソートが行われます。それ以外の場合、ノードはドキュメント順に処理されます。

@@ -2,6 +2,7 @@
 title: 'HTMLDetailsElement: toggle event'
 slug: Web/API/HTMLDetailsElement/toggle_event
 ---
+
 {{APIRef}}
 
 当{{HtmlElement("details")}}元素`打开`/`关闭`状态被切换时，切换事件会触发。
@@ -15,7 +16,7 @@ slug: Web/API/HTMLDetailsElement/toggle_event
 
 ## 示例
 
-此示例记录打开的章节。 当章节关闭时，它们将从日志中删除。
+此示例记录打开的章节。当章节关闭时，它们将从日志中删除。
 
 ### HTML
 

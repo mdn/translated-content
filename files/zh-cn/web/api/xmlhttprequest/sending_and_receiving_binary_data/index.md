@@ -2,11 +2,12 @@
 title: 发送和接收二进制数据
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
+
 ## 使用 JavaScript 类型数组接受二进制数据
 
 可以通过设置一个 XMLHttpRequest 对象的 `responseType`属性来改变一个从服务器上返回的响应的数据类型。可用的属性值为空字符串 (默认)，"arraybuffer"、"blob"、"document"、"json" 和 "text"。`response` 属性的值会根据 `responseType` 属性包含实体主体（entity body），它可能会是一个 `ArrayBuffer`、`Blob`、`Document`、`JSON`, string，或者为`NULL(如果请求未完成或失败)`
 
-下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。 你需要一个 png 解码库（[png decoding library](https://github.com/devongovett/png.js/)）。
+下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。你需要一个 png 解码库（[png decoding library](https://github.com/devongovett/png.js/)）。
 
 ```js
 var oReq = new XMLHttpRequest();
@@ -81,7 +82,7 @@ oReq.onload = function (oEvent) {
   // 上传完成后。
 };
 
-var bb = new BlobBuilder(); // 需要合适的前缀: window.MozBlobBuilder 或者 window.WebKitBlobBuilder
+var bb = new BlobBuilder(); // 需要合适的前缀：window.MozBlobBuilder 或者 window.WebKitBlobBuilder
 bb.append('abc123');
 
 oReq.send(bb.getBlob('text/plain'));
@@ -106,7 +107,7 @@ xhr.send(myArray);
 
 上例新建了一个 512 字节的 8 比特整数的数组并发送它，当然，你也可以发送任意的二进制数据。
 
-> **备注：** 从 Gecko 9.0 {{ geckoRelease("9.0") }} 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象的功能。
+> **备注：** 从 Gecko 9.0 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象的功能。
 
 ## 提交表单和上传文件
 

@@ -1,15 +1,9 @@
 ---
 title: '<article>: 記事コンテンツ要素'
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/article
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<article>` 要素**は文書、ページ、アプリケーション、サイトなどの中で自己完結しており、 (集合したものの中で) 個別に配信や再利用を行うことを意図した構成物を表します。例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。
 
@@ -69,10 +63,10 @@ translation_of: Web/HTML/Element/article
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("feed")}}, {{ARIARole("main")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>
       </td>
     </tr>
     <tr>
@@ -84,7 +78,7 @@ translation_of: Web/HTML/Element/article
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
@@ -137,11 +131,7 @@ translation_of: Web/HTML/Element/article
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-article-element', '&lt;article&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5.1', 'sections.html#the-article-element', '&lt;article&gt;')}}         | {{Spec2('HTML5.1')}}     |      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-article-element', '&lt;article&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

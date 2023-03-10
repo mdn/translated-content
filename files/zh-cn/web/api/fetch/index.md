@@ -2,15 +2,16 @@
 title: fetch()
 slug: Web/API/fetch
 ---
+
 {{APIRef("Fetch")}}
 
 全局的 **`fetch()`** 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 {{domxref("Response")}} 对象。
 
 {{domxref("Window")}} 和 {{domxref("WorkerGlobalScope")}} 都实现了 WorkerOrGlobalScope。 ——这意味着基本在任何场景下只要你想获取资源，都可以使用 位于 WorkerOrGlobalScope 中的 `fetch()` 方法。
 
-当遇到网络错误时，{{domxref("fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其它问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。
+当遇到网络错误时，{{domxref("fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其他问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。
 
-`fetch()` 方法由 [Content Security Policy](/en-US/docs/Security/CSP/CSP_policy_directives) 的 `connect-src`指令控制，而不是它请求的资源。
+`fetch()` 方法由 [Content Security Policy](/zh-CN/docs/Security/CSP/CSP_policy_directives) 的 `connect-src`指令控制，而不是它请求的资源。
 
 > **备注：** {{domxref("fetch()")}} 方法的参数与 {{domxref("Request.Request","Request()")}} 构造器是一样的。
 
@@ -42,7 +43,7 @@ Promise<Response> fetch(input[, init]);
     - `redirect`: 可用的 redirect 模式：`follow` (自动重定向), `error` (如果产生重定向将自动终止并且抛出一个错误），或者 `manual` (手动处理重定向)。在 Chrome 中默认使用 `follow`（Chrome 47 之前的默认值是 `manual`）。
     - `referrer`: 一个 {{domxref("USVString")}} 可以是 `no-referrer`、`client` 或一个 URL。默认是 `client`。
     - `referrerPolicy`: 指定了 HTTP 头部 referer 字段的值。可能为以下值之一：`no-referrer`、 `no-referrer-when-downgrade`、`origin`、`origin-when-cross-origin`、 `unsafe-url`。
-    - `integrity`: 包括请求的 [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) 值（例如： `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`）。
+    - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Subresource_Integrity) 值（例如： `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`）。
 
 ### 返回值
 
@@ -53,7 +54,7 @@ Promise<Response> fetch(input[, init]);
 | 类型         | **描述**                                                                                                                                                                       |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `AbortError` | 请求被{{domxref("AbortController.abort()")}}终止。                                                                                                               |
-| `TypeError`  | 从[Firefox 43](/en-US/docs/Mozilla/Firefox/Releases/43)开始，如果`fetch()`接收到含有用户名和密码的 URL（例如`http://user:password@example.com`），它将会抛出一个`TypeError` 。 |
+| `TypeError`  | 从[Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)开始，如果`fetch()`接收到含有用户名和密码的 URL（例如`http://user:password@example.com`），它将会抛出一个`TypeError` 。 |
 
 ## 示例
 
@@ -122,6 +123,6 @@ var myRequest = new Request('flowers.jpg', myInit);
 ## 相关链接
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

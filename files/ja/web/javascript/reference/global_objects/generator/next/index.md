@@ -1,34 +1,35 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
+
 {{JSRef}}
 
 **`next()`** メソッドは、2 つのプロパティ `done` と `value` を持つオブジェクトを返します。 `next` メソッドに引数を提供して、ジェネレーターへ値を送ることもできます。
 
 ## 構文
 
-```
-gen.next(value)
+```js-nolint
+generatorObject.next(value)
 ```
 
 ### 引数
 
-<dl><dt><code><var>value</var></code></dt><dd>ジェネレーターへ送る値です。</dd><dd>この値は <code>yield</code> 式の結果として代入されます。例えば <code><var>variable</var> = yield <var>expression</var></code> の場合、 <code>.next()</code> 関数に渡された値は <code><var>variable</var></code> に代入されます。</dd></dl>
+- `value`
+  - : ジェネレーターへ送る値です。
+
+    この値は `yield` 式の結果として代入されます。例えば `variable = yield expression` の場合、 `.next()` 関数に渡された値は `variable` に代入されます。
 
 ### 返値
 
-以下の２つのプロパティを持った {{jsxref("Object")}} です。
+以下の 2 つのプロパティを持った {{jsxref("Object")}} です。
 
-<dl><dt><code>done</code> (boolean)</dt><dd>イテレーターが反復処理の末尾を過ぎている場合、値は <code>true</code> になります。この場合、 <code>value</code> はオプションでそのイテレーターの<em>返値</em>を指定します。</dd><dd>イテレーターが反復処理の次の値を生成することができた場合、値は <code>false</code> になります。これは <code>done</code> プロパティを指定しない場合も同等です。</dd><dt><code>value</code></dt><dd>イテレーターが返す何らかの JavaScript の値です。 <code>done</code> が <code>true</code> の場合は省略可能です。</dd></dl>
+- `done` (boolean)
+  - : イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの _返値_ を指定します。
+
+    イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
+- `value`
+  - : イテレーターが yield または return した、何らかの JavaScript の値です。
 
 ## 例
 
@@ -52,38 +53,27 @@ g.next();      // "Object { value: undefined, done: true }"
 
 ### リストでの next() の使用
 
-```
-function* getPage(pageSize = 1, list) {
-    let output = [];
-    let index = 0;
+この例では、 `getPage` はリストを受け取り `pageSize` 件ごとにページ分割します。それぞれの `next` 呼び出しは個々のページを返します。
 
-    while (index < list.length) {
-        output = [];
-        for (let i = index; i < index + pageSize; i++) {
-            if (list[i]) {
-                output.push(list[i]);
-            }
-        }
-
-        yield output;
-        index += pageSize;
-    }
+```js
+function* getPage(list, pageSize = 1) {
+  for (let index = 0; index < list.length; index += pageSize) {
+    yield list.slice(index, index + pageSize);
+  }
 }
-
-list = [1, 2, 3, 4, 5, 6, 7, 8]
-var page = getPage(3, list);              // Generator { }
-
-page.next();                              // Object {value: (3) [1, 2, 3], done: false}
-page.next();                              // Object {value: (3) [4, 5, 6], done: false}
-page.next();                              // Object {value: (2) [7, 8], done: false}
-page.next();                              // Object {value: undefined, done: true}
+const list = [1, 2, 3, 4, 5, 6, 7, 8]
+const page = getPage(list, 3);            // Generator { }
+page.next();                              // { value: [1, 2, 3], done: false }
+page.next();                              // { value: [4, 5, 6], done: false }
+page.next();                              // { value: [7, 8], done: false }
+page.next();                              // { value: undefined, done: true }
 ```
 
 ### ジェネレーターへ値を送る
 
 この例では `next` を値付きで呼び出しています。
 
-なお、最初の呼び出しではジェネレーターが何も生成していないため、何もログを記録しないことに注意してください。
+> **メモ:** 最初の呼び出しではジェネレーターが何も生成していないため、何もログを記録しません。
 
 ```js
 function* gen() {
@@ -103,9 +93,7 @@ g.next(2);
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator.prototype.next', 'Generator.prototype.next')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

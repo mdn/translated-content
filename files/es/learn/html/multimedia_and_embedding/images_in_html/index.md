@@ -1,19 +1,8 @@
 ---
 title: Imágenes en HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-tags:
-  - Aprendiz
-  - Article
-  - HTML
-  - Imagenes
-  - captions
-  - figcaption
-  - img
-  - pie de imagen
-  - subtítulos
-  - texto alt
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
@@ -83,15 +72,15 @@ Pero esto no tiene sentido, solo hace que el navegador trabaje más buscando la 
 
 > **Advertencia:** La mayoría de imágenes tienen derechos de autor. **No** muestres una imagen en tu página web a menos que:
 >
-> 1\) seas dueño de la imagen,  
-> 2\) tengas permiso escrito explícito del dueño de la imagen o  
-> 3\) tengas suficientes pruebas de que la imagen es de dominio público.  
+> 1. seas dueño de la imagen,
+> 2. tengas permiso escrito explícito del dueño de la imagen o
+> 3. tengas suficientes pruebas de que la imagen es de dominio público
 >
 > El incumplimiento de las normas de los derechos de autor es un acto ilegal y poco ético. Por lo tanto, no apuntes **nunca** tu atributo `src` a una imagen que esté alojada en un sitio web si no tienes el permiso para hacerlo. Esto se llama _hotlinking_. Asimismo es ilegal robar el ancho de banda de alguien. Además, ralentiza tu página y te deja sin control sobre la imagen si la eliminan o reemplazan por otra que incluso podría resultar embarazosa.
 
 Nuestro código anterior debería darnos el resultado siguiente:
 
-![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](https://mdn.mozillademos.org/files/12700/basic-image.png)
+![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
 > **Nota:** Los elementos como {{htmlelement("img")}} y {{htmlelement("video")}} a veces se denominan **elementos reemplazados**. Esto se debe a que el tamaño y el contenido del elemento se especifican en un recurso externo (como un archivo de imagen o video), no en el contenido del elemento en sí.
 
@@ -109,7 +98,7 @@ El próximo atributo que veremos es `alt`. Su valor debe ser una descripción te
 
 La forma más fácil de probar el texto `alt` es escribir mal el nombre de archivo. Si, por ejemplo, escribimos el nombre archivo de nuestra imagen como `dinosooooor.jpg`, el navegador no podrá mostrar la imagen, en su lugar mostrará el texto alternativo:
 
-![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](https://mdn.mozillademos.org/files/12702/alt-text.png)
+![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
 ¿Por qué vas a ver o necesitar el texto alternativo? Puede ser por varias razones:
 
@@ -122,7 +111,7 @@ La forma más fácil de probar el texto `alt` es escribir mal el nombre de archi
 ¿Qué hay que escribir exactamente en el atributo `alt`? Esto depende en primer lugar de _por qué_ la imagen está en ese lugar. En otras palabras, qué se pierde si la imagen no aparece:
 
 - **Decoración.** Para las imágenes decorativas deberían utilizarse [imágenes de fondo CSS](#imágenes_de_fondo_css). Pero si es inevitable usar HTML, la mejor forma de hacerlo es con `alt=""`. Si la imagen no es parte del contenido, el lector de pantalla no debería malgastar el tiempo en leerla.
-- **Contenido.** Si tu imagen proporciona información significativa, proporciona la misma información en un\_ \_texto alternativo (`alt`) breve. O mejor aún, en el texto principal que todos pueden ver. No escribas texto alternativo redundante. ¿Acaso no resultaría molesto para un usuario con visión ordinaria si todos los párrafos se escribieran dos veces en el contenido principal? Si la imagen se describe en el cuerpo principal del texto de modo adecuado, puedes simplemente usar `alt=""`.
+- **Contenido.** Si tu imagen proporciona información significativa, proporciona la misma información en un texto alternativo (`alt`) breve. O mejor aún, en el texto principal que todos pueden ver. No escribas texto alternativo redundante. ¿Acaso no resultaría molesto para un usuario con visión ordinaria si todos los párrafos se escribieran dos veces en el contenido principal? Si la imagen se describe en el cuerpo principal del texto de modo adecuado, puedes simplemente usar `alt=""`.
 - **Enlace.** Al poner una imagen dentro de una etiqueta `<a>` para convertirla en un enlace, aun debes proporcionar [texto de enlace accesible](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks#Claridad_en_las_palabras). En tal caso podrías escribirlo dentro del mismo elemento `<a>`, o dentro del atributo `alt` de la imagen. Lo que mejor funcione en tu caso.
 - **Texto.** No deberías poner tu texto en imágenes. Si tu título de encabezado principal necesita, por ejemplo, un sombreado paralelo, [usa CSS](/es/docs/Web/CSS/text-shadow) para ello en vez de poner el texto en una imagen. Pero, _si realmente no puedes evitarlo_, deberías proporcionar el texto en el atributo `alt`.
 
@@ -144,7 +133,7 @@ Puedes usar los atributos ancho (`width`) y alto (`height`) para especificar la 
 
 Esto no proporciona una gran diferencia en la pantalla en circunstancias normales. Pero si la imagen no se muestra, por ejemplo, porque el usuario acaba de acceder a la página y esta aún no se ha cargado, observarás que el navegador reserva un espacio para la imagen:
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png)
+![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
 
 Hacerlo así es bueno porque la página se carga con mayor rapidez y fluidez.
 
@@ -167,9 +156,9 @@ Al igual que con los enlaces, también puedes añadir atributos `title` a las im
 
 Esto nos da una etiqueta de ayuda (`tooltip`) como las de los enlaces:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](https://mdn.mozillademos.org/files/12708/image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
 
-Sin embargo, no se recomienda incluir esta propiedad en las imágenes. `title` presenta algunos problemas de accesibilidad, principalmente porque los lectores de pantalla (_screen readers_) tienen un comportamiento imprevisible y la mayoría de navegadores no la mostrarán a menos que pases el ratón por encima de la imagen (y por tanto es inútil para quien usa teclado). Si estás interesado en esta cuestión, puedes leer el artículo [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) de Scott O’Hara.
+Sin embargo, no se recomienda incluir esta propiedad en las imágenes. `title` presenta algunos problemas de accesibilidad, principalmente porque los lectores de pantalla (_screen readers_) tienen un comportamiento imprevisible y la mayoría de navegadores no la mostrarán a menos que pases el ratón por encima de la imagen (y por tanto es inútil para quien usa teclado). Si estás interesado en esta cuestión, puedes leer el artículo [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) de Scott O'Hara.
 
 Lo mejor es incluir dicha información en el texto principal del artículo, en lugar de adjuntarla en la imagen.
 
@@ -177,7 +166,9 @@ Lo mejor es incluir dicha información en el texto principal del artículo, en l
 
 ¡Ahora te toca jugar a ti! Esta sección de aprendizaje activo te mantendrá activo con un ejercicio sencillo de incrustado. Te proporcionamos una etiqueta básica {{htmlelement ("img")}} y nos gustaría que incrustes la imagen ubicada en la URL siguiente:
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Ya hemos dicho que nunca se apuntará a imágenes de otros servidores (hotlink), pero esto es solo con fines de aprendizaje, por lo que te lo vamos a dejar hacer por esta vez.
 
@@ -332,14 +323,16 @@ Esto está bien. Incluye el contenido que se necesita y es muy personalizable co
 
 Una solución mejor es utilizar los elementos HTML5 {{htmlelement("figure")}} y {{htmlelement("figcaption")}}. Estos se crearon exactamente para este propósito: proporcionar un contenedor semántico para las figuras y vincular claramente la figura con el pie. Nuestro ejemplo anterior, podría reescribirse así:
 
-    <figure>
-      <img src="images/dinosaur.jpg"
-           alt="La cabeza y el torso de un esqueleto de dinosaurio;
-               tiene una cabeza grande con dientes largos y afilados" width="400"
-           height="341">
+```html
+<figure>
+  <img src="images/dinosaur.jpg"
+        alt="La cabeza y el torso de un esqueleto de dinosaurio;
+            tiene una cabeza grande con dientes largos y afilados" width="400"
+        height="341">
 
-      <figcaption>Exposición de un T-Rex en el museo de la Universidad de Manchester.</figcaption>
-    </figure>
+  <figcaption>Exposición de un T-Rex en el museo de la Universidad de Manchester.</figcaption>
+</figure>
+```
 
 El elemento {{htmlelement("figcaption")}} dice al navegador, o a alguna tecnología de apoyo, que el texto que contiene describe la imagen que está contenida en el elemento {{htmlelement("figure")}}.
 

@@ -9,9 +9,10 @@ tags:
   - Справка
 translation_of: Web/CSS/border
 ---
+
 {{CSSRef("CSS Borders")}}
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
+Свойство [CSS](/ru/docs/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
@@ -23,11 +24,11 @@ border: 2px dotted;
 border: medium dashed green;
 ```
 
-> **Примечание:** **Замечание:** Рекомендуется использовать `border`, когда вы хотите установить все свойства границ одновременно. Тогда как универсальные свойства {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}} принимают до четырёх значений, позволяя установить различные значения для каждого ребра, `border` принимает единственное значение для каждого свойства. И этот стиль применяется для всех четырёх границ.
+> **Примечание:** Рекомендуется использовать `border`, когда вы хотите установить все свойства границ одновременно. Тогда как универсальные свойства {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}} принимают до четырёх значений, позволяя установить различные значения для каждого ребра, `border` принимает единственное значение для каждого свойства. И этот стиль применяется для всех четырёх границ.
 
 ## Синтаксис
 
-Свойство `border` указывается используя одно или более значений [`<br-width>`](#<br-width>), [`<br-style>`](#<br-style>), и [`<color>`](#<color>) указанных ниже.
+Свойство `border` указывается используя одно или более значений [`<br-width>`](#br-width), [`<br-style>`](#br-style), и [`<color>`](#color) указанных ниже.
 
 ### Значения
 
@@ -40,7 +41,7 @@ border: medium dashed green;
 
 ### Обычный синтаксис
 
-    {{csssyntax}}
+{{csssyntax}}
 
 ## Примеры
 

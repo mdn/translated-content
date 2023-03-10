@@ -12,6 +12,7 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
+
 {{AddonSidebar}}
 
 Une [action de page](/fr/Add-ons/WebExtensions/Page_actions) est une icône cliquable dans la barre d'adresse du navigateur.
@@ -22,7 +23,7 @@ Vous pouvez écouter les clics sur l'icône, ou spécifié une [fenêtre context
 
 Si vous spécifiez une fenêtre contextuelle, vous pouvez définir son contenu et son comportement en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. Le JavaScript s'exécutant dans la fenêtre contextuelle accède à toutes les mêmes API WebExtension que vos scripts d'arrière-plan.
 
-Vous pouvez définir la plupart des propriétés d'une action de page de manière déclarative à l'aide de la  [clef page_action](/fr/Add-ons/WebExtensions/manifest.json/page_action) dans votre [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), mais également les redéfinir par programmation en utilisant cette API.
+Vous pouvez définir la plupart des propriétés d'une action de page de manière déclarative à l'aide de la [clef page_action](/fr/Add-ons/WebExtensions/manifest.json/page_action) dans votre [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), mais également les redéfinir par programmation en utilisant cette API.
 
 Les actions de page sont pour des actions qui ne sont pertinentes que pour des pages particulières (comme "favoris dans l'onglet courrant"). S'ils sont pertinents pour le navigateur dans son ensemble (par exemple, "Afficher tous les favoris"), utilisez plutôt une action du navigateur.
 
@@ -57,9 +58,9 @@ Les actions de page sont pour des actions qui ne sont pertinentes que pour des p
 - {{WebExtAPIRef("pageAction.onClicked")}}
   - : Activé lorsqu'une icône d'action de page est cliquée. Cet événement ne se déclenchera pas si l'action de la page comporte une fenêtre contextuelle.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -69,7 +70,8 @@ Les actions de page sont pour des actions qui ne sont pertinentes que pour des p
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +98,4 @@ Les actions de page sont pour des actions qui ne sont pertinentes que pour des p
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -2,6 +2,7 @@
 title: Patterns
 slug: Web/SVG/Tutorial/Patterns
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
 ## 图案
@@ -33,9 +34,9 @@ slug: Web/SVG/Tutorial/Patterns
 </svg>
 ```
 
-{{ EmbedLiveSample('Patterns','220','220','/files/725/SVG_Pattern_Example.png') }}
+{{ EmbedLiveSample('图案','220','220') }}
 
-在 pattern 元素内部你可以包含任何之前包含过的其它基本形状，并且每个形状都可以使用之前学习过的任何样式样式化，包括渐变和半透明。这里我们在 pattern 中绘制两个矩形（两个矩形互相重叠，一个矩形是另一个矩形大小的二倍，且用于填充整个 pattern）和一个圆。
+在 pattern 元素内部你可以包含任何之前包含过的其他基本形状，并且每个形状都可以使用之前学习过的任何样式样式化，包括渐变和半透明。这里我们在 pattern 中绘制两个矩形（两个矩形互相重叠，一个矩形是另一个矩形大小的二倍，且用于填充整个 pattern）和一个圆。
 
 关于 pattern 容易混淆的事是，pattern 定义了一个单元系统以及他们的大小。上例中，我们在 pattern 元素上定义了`width`和`height`属性，用于描述在重复下一个图案之前应该跨过多远。如果你想要在绘制时偏移矩形的开始点，也可以使用 x 和 y 属性，原因如下。
 
@@ -69,6 +70,6 @@ slug: Web/SVG/Tutorial/Patterns
 
 当然，这意味着如果你后续改变了对象大小，pattern 也不会缩放。上述三个举例在下图中放在一个矩形中展示，高度被轻微拉伸到 300px，但是我注意到这不是完整的图片，并且有些其他选项可能你的应用不支持。
 
-![Image:SVG_Pattern_Comparison_of_Units.png](/@api/deki/files/349/=SVG_Pattern_Comparison_of_Units.png)
+![Image:SVG_Pattern_Comparison_of_Units.png](svg_pattern_comparison_of_units.png)
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}

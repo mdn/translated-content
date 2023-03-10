@@ -1,13 +1,8 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
+
 {{JSRef}}
 
 **`Symbol.match`** は、文字列に対して正規表現のマッチングを指定します。この関数は {{jsxref("String.prototype.match()")}} メソッドによって呼び出されます。
@@ -44,9 +39,7 @@ re[Symbol.match] = false;
 
 ## 仕様
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

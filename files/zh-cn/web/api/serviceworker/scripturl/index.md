@@ -2,9 +2,10 @@
 title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-作为`ServiceWorkerRegistration的一部分定义，会返回该 ServiceWorker 的序列化脚本 url`. 必须与 document 注册`ServiceWorker 的地址同源`.
+作为 `ServiceWorkerRegistration` 的一部分定义，会返回该 ServiceWorker 的序列化脚本 `url`。必须与 document 注册 `ServiceWorker` 的地址同源。
 
 ## 语法
 
@@ -22,4 +23,4 @@ someURL = ServiceWorker.scriptURL
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorker.scriptURL")}}
+{{Compat}}

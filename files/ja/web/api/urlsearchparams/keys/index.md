@@ -2,6 +2,7 @@
 title: URLSearchParams.keys()
 slug: Web/API/URLSearchParams/keys
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを反復処理できる {{jsxref("Iteration_protocols",'iterator')}} を返します。 キーは {{domxref("USVString")}} オブジェクトです。
@@ -43,9 +44,7 @@ key2
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#interface-urlsearchparams', "keys() (see \"iterable\")")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

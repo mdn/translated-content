@@ -1,22 +1,13 @@
 ---
-title: 레거시 조판 메서드
+title: 레거시 레이아웃 메서드
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-tags:
-  - 격자 시스템
-  - 레거시
-  - 부동체
-  - 씨에스에스
-  - 안내서
-  - 조판
-  - 초보자
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-격자 시스템은 씨에스에스 조판에서 사용되는 매우 일반적인 기능이며, 씨에스에스 격자 조판 이전에는 부동체 또는 기타 조판 기능을 이용하여 격자 조판이 구현되는 경향이 있었습니다. 당신의 조판을 정해진 수의 열(예를 들어 4, 6 또는 12열)이라 상상한 뒤 당신의 콘텐츠 열을 그 가상의 열 안에 끼워맞춥니다. 이 문서에서 우리는 이 오래된 메서드가 어떻게 작동하는지 탐구할 것입니다. 이는 여러분이 오래된 프로젝트에 몸을 담게 될 경우에 그들 메서드의 사용 방법에 대한 이해를 돕기 위함입니다.
+격자 시스템은 CSS 레이아웃에서 사용되는 매우 일반적인 기능이며, CSS 격자 레이아웃 이전에는 부동체 또는 기타 레이아웃 기능을 이용하여 격자 레이아웃이 구현되는 경향이 있었습니다. 당신의 레이아웃을 정해진 수의 열(예를 들어 4, 6 또는 12열)이라 상상한 뒤 당신의 콘텐츠 열을 그 가상의 열 안에 끼워맞춥니다. 이 문서에서 우리는 이 오래된 메서드가 어떻게 작동하는지 탐구할 것입니다. 이는 여러분이 오래된 프로젝트에 몸을 담게 될 경우에 그들 메서드의 사용 방법에 대한 이해를 돕기 위함입니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -24,41 +15,41 @@ translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
       <th scope="row">선결 사항:</th>
       <td>
         HTML 기본 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
-          >에이치티엠엘 입문</a
+          >HTML 입문</a
         >
-        학습), 씨에스에스의 작동 방식
-        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS">씨에스에스 입문 </a>및
+        학습), CSS의 작동 방식
+        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS">CSS 입문 </a>및
         (<a href="/ko/docs/Learn/CSS/Styling_boxes">박스 양식 지정</a> 학습)
       </td>
     </tr>
     <tr>
       <th scope="row">목표:</th>
       <td>
-        씨에스에스 격자 조판 이전에 사용된 격자 조판 시스템의 기본 개념을
+        CSS 격자 레이아웃 이전에 사용된 격자 레이아웃 시스템의 기본 개념을
         브라우저에서 사용할 수 있습니다.
       </td>
     </tr>
   </tbody>
 </table>
 
-## 씨에스에스 격자 조판 이전의 조판 및 격자 시스템
+## CSS 격자 레이아웃 이전의 레이아웃 및 격자 시스템
 
-씨에스에스가 아주 최근까지 내장된 격자 시스템을 갖고 있지 않았고, 그 대신 격자와 같은 디자인 생성을 위해 최적화에 못 미치는 다양한 방법을 사용했다니 디자인 배경의 경력자 관점에서 보면 놀랍게 보일 듯합니다. 우리는 이제 이것을 "래거시"라고 부릅니다.
+CSS가 아주 최근까지 내장된 격자 시스템을 갖고 있지 않았고, 그 대신 격자와 같은 디자인 생성을 위해 최적화에 못 미치는 다양한 방법을 사용했다니 디자인 배경의 경력자 관점에서 보면 놀랍게 보일 듯합니다. 우리는 이제 이것을 "래거시"라고 부릅니다.
 
-새로운 프로젝트의 경우 모든 조판의 기초를 형성하기 위해 대체로 씨에스에스 격자 조판이 하나 이상의 다른 현대 조판 메서드와 연동되어 사용됩니다. 그러나 여러분은 이러한 레거시 메서드를 사용하는 "격자 시스템"을 수시로 접하게 될겁니다. 그들 레거시 메서드의 작동 방식, 그리고 씨에스에스 격자 조판과 다른 이유에 대해 이해할 가치가 있습니다.
+새로운 프로젝트의 경우 모든 레이아웃의 기초를 형성하기 위해 대체로 CSS 격자 레이아웃이 하나 이상의 다른 현대 레이아웃 메서드와 연동되어 사용됩니다. 그러나 여러분은 이러한 레거시 메서드를 사용하는 "격자 시스템"을 수시로 접하게 될겁니다. 그들 레거시 메서드의 작동 방식, 그리고 CSS 격자 레이아웃과 다른 이유에 대해 이해할 가치가 있습니다.
 
-이번 단원은 부동체와 가변상자 작동 방식을 기반으로 한 격자 시스템과 격자 프레임워크가 어떻게 작동하는지 설명합니다. 당신이 격자 조판을 공부한 상태라면 이 모든 것이 얼마나 복잡해 보이는지 놀랄 겁니다! 이러한 지식은 새로운 메서드를 지원하지 않는 브라우저를 위한 대체 코드를 작성해야 할 경우에 도움이 될 뿐만 아니라 이러한 유형의 시스템을 사용하는 기존 프로젝트에서 작업할 수 있게 해줄 것입니다.
+이번 단원은 부동체와 가변상자 작동 방식을 기반으로 한 격자 시스템과 격자 프레임워크가 어떻게 작동하는지 설명합니다. 당신이 격자 레이아웃을 공부한 상태라면 이 모든 것이 얼마나 복잡해 보이는지 놀랄 겁니다! 이러한 지식은 새로운 메서드를 지원하지 않는 브라우저를 위한 대체 코드를 작성해야 할 경우에 도움이 될 뿐만 아니라 이러한 유형의 시스템을 사용하는 기존 프로젝트에서 작업할 수 있게 해줄 것입니다.
 
-우리가 이들 격자 시스템을 탐구할 때, 그것들 중 어느 것도 씨에스에스 격자 조판(CSS Grid Layout)이 격자를 만드는 방식으로 격자를 만들지는 않는다는 사실을 염두에 두어야 합니다. 그들은 항목의 크기를 부여하고, 항목 무리 주변을 밀어내어 격자 *모양*처럼 정렬해 보여주는 식으로 작동합니다.
+우리가 이들 격자 시스템을 탐구할 때, 그것들 중 어느 것도 CSS 격자 레이아웃(CSS Grid Layout)이 격자를 만드는 방식으로 격자를 만들지는 않는다는 사실을 염두에 두어야 합니다. 그들은 항목의 크기를 부여하고, 항목 무리 주변을 밀어내어 격자 *모양*처럼 정렬해 보여주는 식으로 작동합니다.
 
-## 2열 조판
+## 2열 레이아웃
 
-가능한 가장 간단한 예시인 두 개의 열 조판으로 시작하겠습니다. 아래 내용을 따라하려면 당신의 컴퓨터에 `index.html` 파일을 새로 작성하여, 거기에 [간단한 HTML 템플릿](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)으로 채우고, 파일 내부의 적절한 위치에 아래 코드를 삽입하면 됩니다. 해당 섹션의 맨 아래에는 최종 코드가 어떻게 생겼는지에 대한 실제 예제가 있습니다.
+가능한 가장 간단한 예시인 두 개의 열 레이아웃으로 시작하겠습니다. 아래 내용을 따라하려면 당신의 컴퓨터에 `index.html` 파일을 새로 작성하여, 거기에 [간단한 HTML 템플릿](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)으로 채우고, 파일 내부의 적절한 위치에 아래 코드를 삽입하면 됩니다. 해당 섹션의 맨 아래에는 최종 코드가 어떻게 생겼는지에 대한 실제 예제가 있습니다.
 
-우선, 우리는 칼럼에 넣을 몇 가지 콘텐츠가 필요합니다. 현재 에이치티엠엘의 바디 내부에 있는 것을 아래 내용으로 대체하십시요:
+우선, 우리는 칼럼에 넣을 몇 가지 콘텐츠가 필요합니다. 현재 HTML의 바디 내부에 있는 것을 아래 내용으로 대체하십시요:
 
 ```html
-<h1>2열 조판 예제</h1>
+<h1>2열 레이아웃 예제</h1>
 <div>
   <h2>첫 번째 열</h2>
   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
@@ -72,7 +63,7 @@ translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 
 각 열에는 자체 콘텐츠를 포함하게 되고, 모든 콘텐츠를 한꺼번에 조작할 수 있게 해주는 외부 요소가 필요합니다. 이번 예제에서 우리는 {{htmlelement("div")}}를 선택했지만, 당신은 {{htmlelement("article")}}와 복수의 {{htmlelement("section")}}, {{htmlelement("aside")}}, 그 밖에 무엇이 됐건 한층 의미적으로 적절한 것을 선택할 수 있습니다.
 
-이제 씨에스에스 내용입니다. 우선 다음을 HTML에 적용해 몇 가지 기본적인 설정을 제공합니다.
+이제 CSS 내용입니다. 우선 다음을 HTML에 적용해 몇 가지 기본적인 설정을 제공합니다.
 
 ```css
 body {
@@ -82,7 +73,7 @@ body {
 }
 ```
 
-에이치티엠엘 바디 요소는 900px의 너비가 될 때까지 뷰포트 너비의 90%를 차지할 것이며, 이 경우 그 너비에 고정될 것이며, 뷰포트 안에 중심부에 자신을 위치시킬 겁니다. 기본값으로 바디 요소의 자녀들({{htmlelement("h1")}}와 두 개의 {{htmlelement("div")}}는 바디 너비 100%까지 확장될 것입니다. 두 개의 {{htmlelement("div")}}가 나란히 부동하길 원한다면, 자녀 요소의 너비를 부모 요소의 너비의 총합계가 100% 또는 그 이하로 설정해 상대 요소와 나란히 들어맞을 수 있도록 해야 합니다. 다음을 당신의 씨에스에스의 맨 아래에 추가하세요:
+HTML 바디 요소는 900px의 너비가 될 때까지 뷰포트 너비의 90%를 차지할 것이며, 이 경우 그 너비에 고정될 것이며, 뷰포트 안에 중심부에 자신을 위치시킬 겁니다. 기본값으로 바디 요소의 자녀들({{htmlelement("h1")}}와 두 개의 {{htmlelement("div")}}는 바디 너비 100%까지 확장될 것입니다. 두 개의 {{htmlelement("div")}}가 나란히 부동하길 원한다면, 자녀 요소의 너비를 부모 요소의 너비의 총합계가 100% 또는 그 이하로 설정해 상대 요소와 나란히 들어맞을 수 있도록 해야 합니다. 다음을 당신의 CSS의 맨 아래에 추가하세요:
 
 ```css
 div:nth-of-type(1) {
@@ -189,7 +180,7 @@ div:nth-of-type(2) {
 
 우리의 목표는 이것을 12열 격자상에 2행 격자를 시연하는 것입니다. 상단 행은 개별 열의 크기를 나타내고 두 번째 행은 격자 크기가 서로 다른 영역입니다.
 
-![](https://mdn.mozillademos.org/files/13901/simple-grid-finished.png)
+![](simple-grid-finished.png)
 
 {{htmlelement("style")}} 요소에는 외곽(래퍼) 컨테이너에 980픽셀의 너비를 부여하는 아래와 같은 코드를 추가하고 오른쪽에 패딩으로는 20픽셀 우측을 추가합니다. 이로써 열 및 배수로의 총 너비를 위해 960픽셀이 주어집니다. 이 경우, 사이트의 모든 요소에 {{cssxref("box-sizing")}}을 `border-box`로 설정했기 때문에 패딩은 총 콘텐츠 너비에서 제외할 수 있습니다(자세한 설명은 [상자 모델의 전면 변경](/ko/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely)을 참조하세요).
 
@@ -222,7 +213,7 @@ body {
 
 우리는 총 너비 960 픽셀에서 배수로 부분을 빼야 함으로 우리의 열 무리를 위해 720픽셀이 주어집니다. 당장에 그것을 12로 나눈다면, 각 열은 60 픽셀이어야 한다는 것을 알 수 있습니다.
 
-다음 단계는 클래스 `.col`에 대한 규칙을 생성하는 일입니다. 동 클래스에 속한 요소를 왼쪽으로 부동시키고, 배수구를 형성하기 위해 20픽셀의 {{cssxref("margin-left")}}와 60픽셀의 {{cssxref("width")}} 값을 동 요소에 부여합니다. 다음 규칙을 당신의 씨에스에스의 맨 아래에 추가하십시요:
+다음 단계는 클래스 `.col`에 대한 규칙을 생성하는 일입니다. 동 클래스에 속한 요소를 왼쪽으로 부동시키고, 배수구를 형성하기 위해 20픽셀의 {{cssxref("margin-left")}}와 60픽셀의 {{cssxref("width")}} 값을 동 요소에 부여합니다. 다음 규칙을 당신의 CSS의 맨 아래에 추가하십시요:
 
 ```css
 .col {
@@ -237,9 +228,9 @@ body {
 
 > **참고:** **주석**: 각 열에 밝은 빨간색 색상을 부여하여 각 공간이 얼마나 많은지 정확하게 볼 수 있습니다.
 
-두 개 이상의 열을 하나로 합치길 원하는 조판 컨테이너에 대해선 해당 컨테이너에 {{cssxref("width")}} 값을 필요한(합치기 할) 열 갯수에 맞춰(아울러 열 사이 배수구 숫자까지 포함해) 조정하기 위해 특별한 클래스를 부여할 필요가 있습니다. 우리는 컨테이너 무리가 2열에서 12열까지 (원하는 열 갯수만큼) 하나로 합치기할 수 있도록 추가 클래스를 만들 필요가 있습니다. 각 열의 너비는 (하나로 합쳐질) 해당 열 갯수의 열 너비와 배수구 너비를 합산한 결과입니다. 여기서 배수구 숫자는 항상 열 갯수에서 하나가 빠집니다.
+두 개 이상의 열을 하나로 합치길 원하는 레이아웃 컨테이너에 대해선 해당 컨테이너에 {{cssxref("width")}} 값을 필요한(합치기 할) 열 갯수에 맞춰(아울러 열 사이 배수구 숫자까지 포함해) 조정하기 위해 특별한 클래스를 부여할 필요가 있습니다. 우리는 컨테이너 무리가 2열에서 12열까지 (원하는 열 갯수만큼) 하나로 합치기할 수 있도록 추가 클래스를 만들 필요가 있습니다. 각 열의 너비는 (하나로 합쳐질) 해당 열 갯수의 열 너비와 배수구 너비를 합산한 결과입니다. 여기서 배수구 숫자는 항상 열 갯수에서 하나가 빠집니다.
 
-당신의 씨에스에스 맨 아래에 다음을 추가하십시요.
+당신의 CSS 맨 아래에 다음을 추가하십시요.
 
 ```css
 /* Two column widths (120px) plus one gutter width (20px) */
@@ -262,7 +253,7 @@ body {
 
 > **참고:** **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)과 비교해보라. ([라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
 
-당신의 요소 무리에 적용한 클래스를 수정하거나 일부 컨테이너를 추가 및 제거해보며 당신이 어떻게 조판에 변경을 가할 수 있는지 확인하십시오 예를 들어 두 번째 행을 이렇게 만들 수 있습니다:
+당신의 요소 무리에 적용한 클래스를 수정하거나 일부 컨테이너를 추가 및 제거해보며 당신이 어떻게 레이아웃에 변경을 가할 수 있는지 확인하십시오 예를 들어 두 번째 행을 이렇게 만들 수 있습니다:
 
 ```css
 <div class="row">
@@ -289,7 +280,7 @@ target / context = result
 60 / 960 = 0.0625
 ```
 
-그리고 나서 우리는 소수점을 2자리 옮기면 백분율 6.25%가 주어집니다. 그래서 우리의 씨에스에스에서 60픽셀의 열 너비를 6.25%로 대체할 수 있습니다.
+그리고 나서 우리는 소수점을 2자리 옮기면 백분율 6.25%가 주어집니다. 그래서 우리의 CSS에서 60픽셀의 열 너비를 6.25%로 대체할 수 있습니다.
 
 우리는 여러분의 배수로 너비에도 똑같이 적용해야 합니다.
 
@@ -303,7 +294,7 @@ target / context = result
 
 이번 절을 시작하려면 이전 예제 페이지의 새 사본을 만들거나 [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)를 착수파일로 사용하십시요.
 
-다음과 같이 (`.wrapper` 선택기에 해당하는) 두 번째 씨에스에스 규칙을 업데이트 하십시요:
+다음과 같이 (`.wrapper` 선택기에 해당하는) 두 번째 CSS 규칙을 업데이트 하십시요:
 
 ```css
 body {
@@ -317,9 +308,9 @@ body {
 }
 ```
 
-우리는 백분율 너비를 부여했을뿐만 아니라 조판이 과도하게 확대되는 것을 막기 위해 {{cssxref("max-width")}} 속성을 추가했습니다.
+우리는 백분율 너비를 부여했을뿐만 아니라 레이아웃이 과도하게 확대되는 것을 막기 위해 {{cssxref("max-width")}} 속성을 추가했습니다.
 
-다음은 아래와 같이 (`.col` 선택기에 해당하는) 네 번째 씨에스에스 규칙을 업데이트 하십시요:
+다음은 아래와 같이 (`.col` 선택기에 해당하는) 네 번째 CSS 규칙을 업데이트 하십시요:
 
 ```css
 .col {
@@ -332,7 +323,7 @@ body {
 
 이제 약간 노동력이 투여되어야 할 부분이 있습니다. 픽셀 너비보다는 백분율을 사용하기 위해 모든 `.col.span` 규칙을 업데이트해야 합니다. 계산기를 사용하려면 시간이 좀 걸립니다. 여러분들의 노력을 아끼기 위해, 아래와 같이 여러분을 대신에 우리가 마무리지었습니다.
 
-다음을 통해 씨에스에스 규칙의 하위 블록을 업데이트합니다.
+다음을 통해 CSS 규칙의 하위 블록을 업데이트합니다.
 
 ```css
 /* Two column widths (12.5%) plus one gutter width (2.08333333%) */
@@ -357,7 +348,7 @@ body {
 
 ### calc() 함수를 사용한 편리한 계산법
 
-씨에스에스 내부에서 직접 calc() 함수를 사용하여 수학 계산을 할 수 있습니다. 이것은 여러분의 씨에스에스 값에 단순한 수학 방정식을 삽입하고 값이 무엇인지 계산할 수 있게 해줍니다. 복잡한 수학이 있을 때 특히 유용하며, 예를 들어 "나는 이 요소의 높이가 항상 부모의 높이의 100% 마이너스 50px가 되기를 원한다"와 같은 서로 다른 단위를 사용하는 셈법까지 계산할 수 있습니다. [MediaRecorder API 자습서에 있는 예제를 보십시요](</ko/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
+CSS 내부에서 직접 calc() 함수를 사용하여 수학 계산을 할 수 있습니다. 이것은 여러분의 CSS 값에 단순한 수학 방정식을 삽입하고 값이 무엇인지 계산할 수 있게 해줍니다. 복잡한 수학이 있을 때 특히 유용하며, 예를 들어 "나는 이 요소의 높이가 항상 부모의 높이의 100% 마이너스 50px가 되기를 원한다"와 같은 서로 다른 단위를 사용하는 셈법까지 계산할 수 있습니다. [MediaRecorder API 자습서에 있는 예제를 보십시요](</ko/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
 
 어쨌든, 다시 여러분의 격자로 복귀합시다! 여러분의 격자에서 한 열 이상을 하나로 합치기하고자 하는 어떤 열은 총 너비가 6.25%이고, 거기에 하나로 합치기할 열 갯수를 곱하고, 거기에 2.08333333%를 배수로 갯수로 곱하기합니다(실제 배수로의 갯수는 항상 열 갯수에서 하나 빼기가 됩니다.) 여러분은 `calc()` 함수을 통해서 여러분이 이러한 셈법을 너비 값 내부에서 바로 계산을 할 수 있으므로, 4열 합치기할 항목에 대해서는 다음과 같이 할 수 있습니다.
 
@@ -367,7 +358,7 @@ body {
 }
 ```
 
-여러분의 씨에스에스 규칙의 하단 블록을 다음 값으로 대체한 다음 브라우저에서 다시 불러들여 동일한 결과를 얻을 수 있는지 확인하십시오:
+여러분의 CSS 규칙의 하단 블록을 다음 값으로 대체한 다음 브라우저에서 다시 불러들여 동일한 결과를 얻을 수 있는지 확인하십시오:
 
 ```css
 .col.span2 { width: calc((6.25%*2) + 2.08333333%); }
@@ -389,7 +380,7 @@ body {
 
 ### 말 되는 VS “말 안되는” 격자 시스템
 
-조판을 정의하기 위해 여러분의 마크업에 클래스를 추가하면 콘텐츠와 마크업이 시각적 프리젠테이션과 결부됩니다. 당신은 때때로 콘텐츠를 설명하는 클래스에 말되는 이름을 사용하기보다는 콘텐츠가 어떻게 보일지 설명하는 "말 안되는" 이름을 사용하는 씨에스에스 클래스 용례를 접하게 됩니다. 여기서 `span2`, `span3`, 기타 등등과 같은 클래스의 경우가 그렇습니다.
+레이아웃을 정의하기 위해 여러분의 마크업에 클래스를 추가하면 콘텐츠와 마크업이 시각적 프리젠테이션과 결부됩니다. 당신은 때때로 콘텐츠를 설명하는 클래스에 말되는 이름을 사용하기보다는 콘텐츠가 어떻게 보일지 설명하는 "말 안되는" 이름을 사용하는 CSS 클래스 용례를 접하게 됩니다. 여기서 `span2`, `span3`, 기타 등등과 같은 클래스의 경우가 그렇습니다.
 
 이런 식의 접근 방법만 있는게 아닙니다. 대신 여러분이 격자를 결정한 다음 말 되게 명명된 기존 클래스 규칙에 크기 정보를 추가할 수 있습니다. 예를 들어, 여러분이 8열을 하나로 합치기 원하는 {{htmlelement("div")}} 요소에 `content`라는 클래스를 부여할 경우 `span8` 클래스가 출처인 너비 계산값을 복사해 쓸 수 있는데, 그와 같은 규칙은 이렇게 제공됩니다:
 
@@ -409,7 +400,7 @@ body {
 
 이전 코드에서 출발하거나, [fluid-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html)을 착수 파일로 사용합니다.
 
-컨테이너 요소를 한 열 너비만큼 밀어낼 클래스를 여러분의 씨에스에스 안에 생성합니다. 다음을 당신의 씨에스에스의 맨 아래에 추가하세요:
+컨테이너 요소를 한 열 너비만큼 밀어낼 클래스를 여러분의 CSS 안에 생성합니다. 다음을 당신의 CSS의 맨 아래에 추가하세요:
 
 ```css
 .offset-by-one {
@@ -425,7 +416,7 @@ Or if you prefer to calculate the percentages yourself, use this one:
 }
 ```
 
-이제 여러분이 왼편에 하나의 열 너비의 빈 공간을 남기길 원하는 컨테이너는 어느 것이든 이 클래스를 추가할 수 있습니다. 예를 들면 여러분의 에이치티엠엘에 이런 내용이 있다면:
+이제 여러분이 왼편에 하나의 열 너비의 빈 공간을 남기길 원하는 컨테이너는 어느 것이든 이 클래스를 추가할 수 있습니다. 예를 들면 여러분의 HTML에 이런 내용이 있다면:
 
 ```html
 <div class="col span6">14</div>
@@ -441,7 +432,7 @@ Or if you prefer to calculate the percentages yourself, use this one:
 
 달라진 모습을 보려면 브라우저에 불러들이거나 새로고침을 하세요. 아니면 [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) 예제가 [실제 실행](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)되는 장면을 보세요. 완성된 예는 다음과 같이 보여야 합니다.
 
-![](https://mdn.mozillademos.org/files/13903/offset-grid-finished.png)
+![](offset-grid-finished.png)
 
 > **참고:** 추가 연습의 하나로 여러분은 `offset-by-two`(2칸 간격띄우기) 클래스를 구현할 수 있습니가?
 
@@ -451,13 +442,13 @@ Or if you prefer to calculate the percentages yourself, use this one:
 
 또한 요소 무리의 콘텐츠가 그들 요소들이 점유하는 행보다 넓어지면, 대열이탈되어 엉망으로 보일 것이라는 점을 염두에 두십시오.
 
-이 시스템의 가장 큰 한계는 본질적으로 1차원이라는 점에 있습니다. 우리가 지금 여러 열에 걸쳐 요소를 하나로 합치도록 처리하자는 것이지 행 처리가 아닙니다. 이러한 오래된 조판 메서드는 요소의 높이를 명시적으로 설정하지 않고서는 요소의 높이를 제어하기가 매우 어렵습니다. 이는 매우 유연하지 않은 접근 방식이기도 합니다. 이는 여러분의 콘텐츠가 특정 높이라고 예상될 경우에만 먹힙니다.
+이 시스템의 가장 큰 한계는 본질적으로 1차원이라는 점에 있습니다. 우리가 지금 여러 열에 걸쳐 요소를 하나로 합치도록 처리하자는 것이지 행 처리가 아닙니다. 이러한 오래된 레이아웃 메서드는 요소의 높이를 명시적으로 설정하지 않고서는 요소의 높이를 제어하기가 매우 어렵습니다. 이는 매우 유연하지 않은 접근 방식이기도 합니다. 이는 여러분의 콘텐츠가 특정 높이라고 예상될 경우에만 먹힙니다.
 
 ## 가변상자 격자?
 
 [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)에 대한 이전 기사를 읽으면 가변상자가 격자 시스템을 생성하는 데 이상적인 해결책이라고 생각할 수 있습니다. 이용할 수 있는 가변상자 기반 격자 시스템이 많이 있으며, 가변상자는 상기한 내용에서 격자를 만들 때 이미 발견한 많은 문제를 해결할 수 있습니다.
 
-그러나 가변상자는 격자 시스템처럼 디자인되지 않았으며 그런 식의 시스템으로 사용할 때 일련의 새로운 도전 과제를 던져줍니다. 간단한 예로 위에서 사용한 것과 동일한 예제 마크업을 채택해 아래의 씨에스에스를 사용하여 `wrapper`와 `row` 및 `col` 클래스를 사용하여 스타일링할 수 있습니다.
+그러나 가변상자는 격자 시스템처럼 디자인되지 않았으며 그런 식의 시스템으로 사용할 때 일련의 새로운 도전 과제를 던져줍니다. 간단한 예로 위에서 사용한 것과 동일한 예제 마크업을 채택해 아래의 CSS를 사용하여 `wrapper`와 `row` 및 `col` 클래스를 사용하여 스타일링할 수 있습니다.
 
 ```css
 body {
@@ -492,38 +483,38 @@ body {
 
 맨 위 라인에는 격자 위에 12개의 깔끔한 상자가 있고, 뷰포트 너비를 변경할 때 상자는 똑같이 확장하고 수축합니다. 그러나 다음 행에서는 4개의 항목만 있으며, 이들은 60px 기준에서 확장하고 축소됩니다. 그 중 단 4개만 상위 행에 있는 항목보다 훨씬 더 많이 확장할 수 있습니다. 그 결과 두 번째 행에서 모두 같은 너비를 차지합니다.
 
-![](https://mdn.mozillademos.org/files/13905/flexbox-grid-incomplete.png)
+![](flexbox-grid-incomplete.png)
 
 이를 수정하려면 해당 요소에 대해 `flex-basis`가 사용하는 값을 대체할 너비를 제공하기 위해 `span` 클래스를 포함해야 합니다.
 
 또한 상위 항목 무리가 사용하는 격자를 존중하지 않습니다. 왜냐하면 그들은 그것에 대해 아무것도 모르기 때문입니다.
 
-가변상자는 디자인 자체로 **one-dimensional**입니다. 그것은 1차원 즉 행이나 열을 다룹니다. 열과 행에 대해 엄격한 격자를 만들 수는 없습니다. 즉, 여러분의 격자에 가변상자를 사용하려면 부동 조판에서와 같이 백분율을 계산해야 합니다.
+가변상자는 디자인 자체로 **one-dimensional**입니다. 그것은 1차원 즉 행이나 열을 다룹니다. 열과 행에 대해 엄격한 격자를 만들 수는 없습니다. 즉, 여러분의 격자에 가변상자를 사용하려면 부동 레이아웃에서와 같이 백분율을 계산해야 합니다.
 
 당신이 참여하는 프로젝트에서 부동체보다 가변상자가 제공하는 공간 배분 능력이나 추가적인 정렬 기능을 이유로 여전히 가변상자 '격자'를 선택해 사용할 수도 있습니다. 하지만 당신이 사용하는 것이 원래 설계된 목적 이외의 다른 목적의 도구를 사용하고 있다는 것을 알아야 합니다. 그래서 당신은 이런 느낌이 들지도 모르겠다. 내가 원하는 최종 결과를 얻으려는 나에게 이놈이 추가적인 장애물을 통과하도록 만들고 있구나.
 
 ## 제3자 격자 시스템
 
-이제 우리는 격자 셈법의 배경이 되는 수학을 이해하게 되면서, 널리 이용되고 있는 제3자 격자 시스템 중 일부를 살펴 볼만한 좋은 여건을 갖췄습니다. 웹에서 "씨에스에스 격자 프레임워크"를 검색하면 선택할 수 있는 옵션 목록이 엄청납니다. [Bootstrap](http://getbootstrap.com/)와 [Foundation](http://foundation.zurb.com/)같은 인기 프레임워크에는 격자 시스템이 포함되어 있습니다. 또한 씨에스에스 혹은 전처리기를 사용하여 개발된 독립형 격자 시스템도 있습니다.
+이제 우리는 격자 셈법의 배경이 되는 수학을 이해하게 되면서, 널리 이용되고 있는 제3자 격자 시스템 중 일부를 살펴 볼만한 좋은 여건을 갖췄습니다. 웹에서 "CSS 격자 프레임워크"를 검색하면 선택할 수 있는 옵션 목록이 엄청납니다. [Bootstrap](http://getbootstrap.com/)와 [Foundation](http://foundation.zurb.com/)같은 인기 프레임워크에는 격자 시스템이 포함되어 있습니다. 또한 CSS 혹은 전처리기를 사용하여 개발된 독립형 격자 시스템도 있습니다.
 
-이 독립형 시스템 중 하나를 살펴봅니다. 이 시스템은 격자 프레임워크를 사용하는 일반적인 기술을 보여줍니다. 우리가 사용할 격자는 단순한 씨에스에스 프레임워크인 Skeleton의 일부입니다.
+이 독립형 시스템 중 하나를 살펴봅니다. 이 시스템은 격자 프레임워크를 사용하는 일반적인 기술을 보여줍니다. 우리가 사용할 격자는 단순한 CSS 프레임워크인 Skeleton의 일부입니다.
 
 시작하려면 [Skeleton website](http://getskeleton.com/)를 방문하고 ZIP 파일을 다운로드하기 위해 "다운로드"를 선택합니다. 압축파일을 풀고 skeleton.css와 normalize.css를 새 폴더에 복사하십시요.
 
-[html-skeleton.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton.html)파일의 복사본을 만들어, skeleton과 normalize 씨에스에스 파일이 위치한 폴더와 같은 폴더에 저장합니다.
+[html-skeleton.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton.html)파일의 복사본을 만들어, skeleton과 normalize CSS 파일이 위치한 폴더와 같은 폴더에 저장합니다.
 
-다음과 같은 내용을 복사본 파일의 헤드 섹션에 skeleton과 normalize 씨에스에스 파일에 포함시킵니다:
+다음과 같은 내용을 복사본 파일의 헤드 섹션에 skeleton과 normalize CSS 파일에 포함시킵니다:
 
 ```html
 <link href="normalize.css" rel="stylesheet">
 <link href="skeleton.css" rel="stylesheet">
 ```
 
-Skeleton에는 격자 시스템 이외에도 많은 내용이 포함되어 있습니다. 타이포그래피를 위한 씨에스에스 및 착수점으로 사용할 수 있는 다른 페이지 요소도 포함되어 있습니다. 하지만 지금은 이들을 기본값으로 남겨둘 겁이다. 우리가 정말로 관심을 갖고 있는 것은 격자입니다.
+Skeleton에는 격자 시스템 이외에도 많은 내용이 포함되어 있습니다. 타이포그래피를 위한 CSS 및 착수점으로 사용할 수 있는 다른 페이지 요소도 포함되어 있습니다. 하지만 지금은 이들을 기본값으로 남겨둘 겁이다. 우리가 정말로 관심을 갖고 있는 것은 격자입니다.
 
-> **참고:** [Normalize](/ko/docs/)는 니콜라스 겔러거가 작성한 정말로 유용한 소형 씨에스에스 라이브러리로, 자동으로 몇 가지 유용한 기본 조판의 수정을 수행하고, 기본 요소 스타일링을 브라우저를 막론하고 보다 일관되게 만들어 줍니다.
+> **참고:** [Normalize](/ko/docs/)는 니콜라스 겔러거가 작성한 정말로 유용한 소형 CSS 라이브러리로, 자동으로 몇 가지 유용한 기본 레이아웃의 수정을 수행하고, 기본 요소 스타일링을 브라우저를 막론하고 보다 일관되게 만들어 줍니다.
 
-우리는 이전 예와 비슷한 에이치티엠엘을 사용할 것입니다. 다음을 여려분의 에이치티엠엘 바디에 추가하십시요:
+우리는 이전 예와 비슷한 HTML을 사용할 것입니다. 다음을 여려분의 HTML 바디에 추가하십시요:
 
 ```html
 <div class="container">
@@ -550,9 +541,9 @@ Skeleton에는 격자 시스템 이외에도 많은 내용이 포함되어 있�
 </div>
 ```
 
-Skeleton을 사용하기 위해서는 `container` 클래스를 랩퍼(바깥쪽) {{htmlelement("div")}}에 부여할 필요가 있습니다. 이 내용은 이미 우리 에이치티엠엘에 포함되어 있습니다. 이것은 최대 너비가 960픽셀인 콘텐츠를 중심부에 위치시킵니다. 이제 상자의 너비가 어떻게 960픽셀을 절대 초과할 수 없는지 볼 수 있습니다.
+Skeleton을 사용하기 위해서는 `container` 클래스를 랩퍼(바깥쪽) {{htmlelement("div")}}에 부여할 필요가 있습니다. 이 내용은 이미 우리 HTML에 포함되어 있습니다. 이것은 최대 너비가 960픽셀인 콘텐츠를 중심부에 위치시킵니다. 이제 상자의 너비가 어떻게 960픽셀을 절대 초과할 수 없는지 볼 수 있습니다.
 
-이 클래스를 적용할 때 사용되는 씨에스에스를 보려면 skeleton.css 파일을 직접 볼 수 있습니다. `<div>`는 `auto` 좌우 여백 을 사용하여 중심부 위치에 놓이고, 20픽셀의 패딩을 좌우로 적용한다. 또한 Skeleton은 {{cssxref("box-sizing")}} 속성을 우리가 이전에 했던 것처럼 `border-box`로 설정하므로 이 요소의 패딩과 경계가 전체 너비에 포함됩니다.
+이 클래스를 적용할 때 사용되는 CSS를 보려면 skeleton.css 파일을 직접 볼 수 있습니다. `<div>`는 `auto` 좌우 여백 을 사용하여 중심부 위치에 놓이고, 20픽셀의 패딩을 좌우로 적용한다. 또한 Skeleton은 {{cssxref("box-sizing")}} 속성을 우리가 이전에 했던 것처럼 `border-box`로 설정하므로 이 요소의 패딩과 경계가 전체 너비에 포함됩니다.
 
 ```css
 .container {
@@ -569,7 +560,7 @@ Skeleton을 사용하기 위해서는 `container` 클래스를 랩퍼(바깥쪽)
 
 이제 컨테이너 상자를 정리해 봅시다. Skeleton은 12개의 열 격자 기반입니다. 맨 위 라인의 상자 전체는 그 상자 무리를 하나의 열로 합치기 위해 모두 `one column`이란 클래스가 필요합니다.
 
-아래에 나온 에이치티엠엘 조각 내용을 지금 추가하십시오.
+아래에 나온 HTML 조각 내용을 지금 추가하십시오.
 
 ```html
 <div class="container">
@@ -593,9 +584,9 @@ Skeleton을 사용하기 위해서는 `container` 클래스를 랩퍼(바깥쪽)
 </div>
 ```
 
-에이치티엠엘 파일을 저장하고 브라우저에 불러들여 효과를 확인하십시오.
+HTML 파일을 저장하고 브라우저에 불러들여 효과를 확인하십시오.
 
-> **참고:** :위의 예제를 제대로 적용하기가 어렵다면, 그것을 우리의 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) 파일과 비교해 보십시요. (그것을 [라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
+> **참고:** 위의 예제를 제대로 적용하기가 어렵다면, 그것을 우리의 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) 파일과 비교해 보십시요. (그것을 [라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
 
 당신이 (앞서 다운로드한) skeleton.css 내용을 보면 어떻게 작동하는지 알 수 있습니다. 예를 들어, Skeleton 파일에는 다음과 같이 "three columns" 클래스가 적용되는 요소를 스타일링하기 위한 정의가 부여되어 있습니다.
 
@@ -605,25 +596,10 @@ Skeleton을 사용하기 위해서는 `container` 클래스를 랩퍼(바깥쪽)
 
 모든 Skeleton(또는 다른 격자 프레임워크)은 여러분의 마크업에 추가하여 사용할 수 있는 미리 정의된 클래스를 설정하는 것입니다. 해당 백분율을 계산하는 작업은 마치 당신이 직접 한 것과 똑같습니다.
 
-보시다시피, 우리는 Skeleton을 사용할 때 씨에스에스를 거의 쓰지 않아도 됩니다. 그것은(Skeleton) 당신의 마크업에 클래스를 추가할 때 우리를 대신해 모든 부동 요소를 처리합니다. 격자 시스템에 대한 프레임워크를 사용하여 만들어진 무언가에 조판에 대한 책임을 넘겨주는 이러한 능력을 갖춘 Skeleton은 설득력있는 선택입니다. 그러나 요즘 씨에스에스 격자 조판도 있고해서 많은 개발자가 씨에스에스가 제공하는 내장형 고유 격자를 사용하기 위해 이러한 프레임 워크에서 멀어지고 있습니다.
+보시다시피, 우리는 Skeleton을 사용할 때 CSS를 거의 쓰지 않아도 됩니다. 그것은(Skeleton) 당신의 마크업에 클래스를 추가할 때 우리를 대신해 모든 부동 요소를 처리합니다. 격자 시스템에 대한 프레임워크를 사용하여 만들어진 무언가에 레이아웃에 대한 책임을 넘겨주는 이러한 능력을 갖춘 Skeleton은 설득력있는 선택입니다. 그러나 요즘 CSS 격자 레이아웃도 있고해서 많은 개발자가 CSS가 제공하는 내장형 고유 격자를 사용하기 위해 이러한 프레임 워크에서 멀어지고 있습니다.
 
 ## 요약정리
 
-이제 다양한 격자 시스템이 어떻게 만들어지는지 이해하게 되었는데, 이는 구형 사이트에서 작업할 때와 씨에스에스 격자 조판이 제공하는 기본 격자와 이들 구형 시스템 간의 차이를 이해하는 데 유용합니다.
+이제 다양한 격자 시스템이 어떻게 만들어지는지 이해하게 되었는데, 이는 구형 사이트에서 작업할 때와 CSS 격자 레이아웃이 제공하는 기본 격자와 이들 구형 시스템 간의 차이를 이해하는 데 유용합니다.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [씨에스에스 조판 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [격자](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 조판](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 조판 메서드](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [조판 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

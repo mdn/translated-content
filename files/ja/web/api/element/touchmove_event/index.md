@@ -2,6 +2,7 @@
 title: 'Element: touchmove イベント'
 slug: Web/API/Element/touchmove_event
 ---
+
 {{APIRef}}
 
 `touchmove` イベントは、タッチ面上で 1 つ以上のタッチ点が移動したときに発生します。
@@ -35,9 +36,7 @@ slug: Web/API/Element/touchmove_event
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Touch Events', '#event-touchmove')}} | {{Spec2('Touch Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

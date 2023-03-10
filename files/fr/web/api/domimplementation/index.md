@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/DOMImplementation
 ---
+
 {{ ApiRef("DOM") }}
 
 L'interface **`DOMImplementation`** représente un objet fournissant des méthodes qui ne dépendent pas d'un document particulier. Un tel objet est renvoyé par la propriété {{domxref("Document.implementation")}}.

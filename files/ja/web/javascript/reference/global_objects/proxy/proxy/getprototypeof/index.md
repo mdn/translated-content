@@ -1,13 +1,8 @@
 ---
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`handler.getPrototypeOf()`** メソッドは `[[GetPrototypeOf]]` 内部メソッドに対するトラップです。
@@ -43,7 +38,7 @@ const p = new Proxy(obj, {
 
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}
-- {{jsxref("Object/proto", "__proto__")}}
+- [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
 
@@ -113,9 +108,7 @@ Object.getPrototypeOf(p); // TypeError: expected same prototype value
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

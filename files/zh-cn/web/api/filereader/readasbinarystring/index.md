@@ -2,9 +2,10 @@
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 ---
+
 {{APIRef("File API")}} {{non-standard_header}}
 
-`readAsBinaryString` 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象，当读取完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成`DONE`（已完成），并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含所读取文件原始二进制格式。
+`readAsBinaryString` 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象，当读取完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成`DONE`（已完成），并触发 [`loadend`](/zh-CN/docs/Web/API/XMLHttpRequest/loadend_event) 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含所读取文件原始二进制格式。
 
 注意：从 2012 年 7 月 12 日起，该方法已从 W3C 工作草案废除。
 
@@ -53,7 +54,7 @@ canvas.toBlob(function (blob) {
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.readAsBinaryString")}}
+{{Compat}}
 
 ## 相关链接
 

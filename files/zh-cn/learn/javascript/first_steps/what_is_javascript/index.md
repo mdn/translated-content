@@ -2,6 +2,7 @@
 title: 什么是 JavaScript？
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 欢迎来到 MDN 的 JavaScript 初学者课程！本节将在一定高度俯瞰 JavaScript，回答一些诸如“它是什么？”和“它能做什么？”的问题。并使你熟悉 JavaScript 的用途。
@@ -21,7 +22,7 @@ slug: Learn/JavaScript/First_steps/What_is_JavaScript
 
 ## 广义的定义
 
-JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D/3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层，其中 [HTML](/en-US/docs/Learn/HTML) 和 [CSS](/en-US/docs/Learn/CSS) 我们已经在学习中心的其他部分进行了详细的讲解。
+JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D/3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层，其中 [HTML](/zh-CN/docs/Learn/HTML) 和 [CSS](/zh-CN/docs/Learn/CSS) 我们已经在学习中心的其他部分进行了详细的讲解。
 
 ![](cake.png)
 
@@ -137,7 +138,7 @@ JavaScript 能做的远不止这些。让我们来仔细探索。
 
 - 在变量中储存有用的值。比如上文的示例中，我们请求客户输入一个新名字，然后将其储存到 `name` 变量中。
 - 操作一段文本（在编程中称为“字符串”（string））。上文的示例中，我们取字符串 "玩家 1："，然后把它和 `name` 变量连结起来，创造出完整的文本标签，比如："玩家 1：小明"。
-- 运行代码以响应网页中发生的特定事件。上文的示例中，我们用一个 {{Event("click")}} 事件来检测按钮什么时候被点击，然后运行代码更新文本标签。
+- 运行代码以响应网页中发生的特定事件。上文的示例中，我们用一个 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件来检测按钮什么时候被点击，然后运行代码更新文本标签。
 - 以及更多！
 
 JavaScript 语言核心之上所构建的功能更令人兴奋。**应用程序接口（Application Programming Interfaces**（**API**））将为你的代码提供额外的超能力。
@@ -153,9 +154,9 @@ API 通常分为两类。
 - {{domxref("Document_Object_Model","文档对象模型 API（DOM（Document Object Model）API）")}} 能通过创建、移除和修改 HTML，为页面动态应用新样式等手段来操作 HTML 和 CSS。比如当某个页面出现了一个弹窗，或者显示了一些新内容（像上文小 demo 中看到那样），这就是 DOM 在运行。
 - {{domxref("Geolocation","地理位置 API（Geolocation API）")}} 获取地理信息。这就是为什么 [谷歌地图](https://www.google.cn/maps) 可以找到你的位置，而且标示在地图上。
 - {{domxref("Canvas_API","画布（Canvas）")}} 和 {{domxref("WebGL_API","WebGL")}} API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://www.chromeexperiments.com/webgl) 以及 [webglsamples](http://webglsamples.org/)。
-- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 等 [影音类 API](/en-US/Apps/Fundamentals/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版 [截图 demo](http://chrisdavidmills.github.io/snapshot/) 以理解这个概念）。
+- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 等 [影音类 API](/zh-CN/Apps/Fundamentals/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版 [截图 demo](http://chrisdavidmills.github.io/snapshot/) 以理解这个概念）。
 
-> **备注：** 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox, Chrome, Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑 [跨平台测试](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+> **备注：** 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox, Chrome, Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑 [跨平台测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 
 **第三方 API** 并没有默认嵌入浏览器中，一般要从网上取得它们的代码和信息。比如：
 
@@ -390,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 上述的脚本阻塞问题实际有两种解决方案 —— `async` 和 `defer`。我们来依次讲解。
 
-浏览器遇到 `async` 脚本时不会阻塞页面渲染，而是直接下载然后运行。这样脚本的运行次序就无法控制，只是脚本不会阻止剩余页面的显示。当页面的脚本之间彼此独立，且不依赖于本页面的其它任何脚本时，`async` 是最理想的选择。
+浏览器遇到 `async` 脚本时不会阻塞页面渲染，而是直接下载然后运行。这样脚本的运行次序就无法控制，只是脚本不会阻止剩余页面的显示。当页面的脚本之间彼此独立，且不依赖于本页面的其他任何脚本时，`async` 是最理想的选择。
 
 比如，如果你的页面要加载以下三个脚本：
 
@@ -419,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function() {
 脚本调用策略小结：
 
 - 如果脚本无需等待页面解析，且无依赖独立运行，那么应使用 `async`。
-- 如果脚本需要等待页面解析，且依赖于其它脚本，调用这些脚本时应使用 `defer`，将关联的脚本按所需顺序置于 HTML 中。
+- 如果脚本需要等待页面解析，且依赖于其他脚本，调用这些脚本时应使用 `defer`，将关联的脚本按所需顺序置于 HTML 中。
 
 ## 注释
 
@@ -467,18 +468,6 @@ for (let i = 0; i < buttons.length; i++) {
 
 恭喜你，迈出了探索 JavaScript 世界的第一步。我们从理论开始，介绍为什么要使用 JavaScript，以及用它能做什么事情。过程中穿插了一些代码示例并讲解了 JavaScript 如何与网站中其他代码适配，等等。
 
-现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将 [全力投入实战](/zh-CN/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
+现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[全力投入实战](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## 本章目录
-
-- [JavaScript 是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [课程评估：笑话机](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

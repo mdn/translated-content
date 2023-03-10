@@ -2,6 +2,7 @@
 title: CharacterData.deleteData()
 slug: Web/API/CharacterData/deleteData
 ---
+
 {{APIRef("DOM")}}
 
 **`deleteData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、この `CharacterData` ノードからすべてまたは一部のデータを削除します。

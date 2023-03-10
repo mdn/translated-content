@@ -2,13 +2,14 @@
 title: SQL
 slug: Glossary/SQL
 ---
-**SQL** (Structured Query Language) は、テーブルベースの ​​ データベース内のデータを更新、取得、および計算するために設計された、記述的なコンピューター言語です。
+
+**SQL** (Structured Query Language) は、テーブルベースのデータベース内のデータを更新、取得、および計算するために設計された、記述的なコンピューター言語です。
 
 ## 関連項目
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "SQL")}}
+- Wikipedia 上の [SQL](https://ja.wikipedia.org/wiki/SQL)
 
 ### SQL を学ぶ
 

@@ -2,6 +2,7 @@
 title: font-style
 slug: Web/CSS/@font-face/font-style
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -70,4 +71,4 @@ On the other hand, if a true italicized version of the font family exists, we ca
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.font-face.font-style")}}
+{{Compat}}

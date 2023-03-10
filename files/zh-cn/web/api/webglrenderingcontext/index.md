@@ -2,45 +2,46 @@
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
-**WebGLRenderingContext** 接口提供基于 OpenGL ES 2.0 的绘图上下文，用于在 HTML {{HTMLElement("canvas")}} 元素内绘图。
+**`WebGLRenderingContext`** 接口提供基于 OpenGL ES 2.0 的绘图上下文，用于在 HTML {{HTMLElement("canvas")}} 元素内绘图。
 
-要获得这个接口的对象，可以通过在 `<canvas>`  元素上调用{{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入 “webgl” 参数：
+要获得这个接口的对象以用于 2D 和 3D 的图形渲染，可以通过在 `<canvas>` 元素上调用 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入“webgl”参数：
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('myCanvas');
+const gl = canvas.getContext('webgl');
 ```
 
-当你获取到 canvas 元素的 WebGL 绘图上下文，你便可以在里面绘图。
+当你获取到 canvas 元素的 WebGL 绘图上下文，你便可以在里面绘图。点击 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)获取更多资料，例如，关于如何开始 WebGL 编程的知识。
 
-点击 [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) 获取更多资料，例子，和关于如何开始 WebGL 编程的知识。
-
-> 补充：以下内容很多函数都没有提供参数，所以最好还是参见具体 API。
+如果你需要一个 WebGL 2.0 的上下文，请参见 {{domxref("WebGL2RenderingContext")}}；其提供了对 OpenGL ES 3.0 图形实现的支持。
 
 ## 常量
 
-请参考 [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) 。
+请参考 [WebGL 常量](/zh-CN/docs/Web/API/WebGL_API/Constants)页面。
 
 ## WebGL 上下文
 
-以下的属性和方法提供只读的关于上下文的信息：
+以下的属性和方法提供只读的 WebGL 上下文的信息和特性：
 
 - {{domxref("WebGLRenderingContext.canvas")}}
   - : 只读属性，对 {{domxref("HTMLCanvasElement")}} 的向后引用。如果上下文没有相联系的 {{HTMLElement("canvas")}} 元素，值将会为 {{jsxref("null")}}。
-- {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
+- {{domxref("WebGLRenderingContext.commit()")}} {{Experimental_Inline}}
   - : 如果上下文没有指定的 canvas，把帧交给原始的{{domxref("HTMLCanvasElement")}}元素。
 - {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
   - : 只读属性，当前绘图缓冲区的宽度，等于和该上下文相联系的 canvas 元素的宽度。
 - {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
   - : 只读属性，当前绘图缓冲区的高度，等于和该上下文相联系的 canvas 元素的高度。
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : 返回 `WebGLContextAttributes 对象，该对象包含真实的上下文参数。如果上下文丢失，将会返回` {{jsxref("null")}}。
+  - : 返回 `WebGLContextAttributes` 对象，该对象包含真实的上下文参数。如果上下文丢失，将会返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
-  - : 如果上下文丢失，返回 true；否则，返回 false。
+  - : 如果上下文丢失，返回 `true`；否则，返回 `false`。
+- {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
+  - : 确保上下文与用户的 XR 硬件的兼容性，必要时使用新配置重新创建上下文。这可用于启动使用标准 2D 演示的应用程序，然后过度到使用 VR 或 AR 模式。
 
-## 视野和裁剪
+## 视图和裁剪
 
 - {{domxref("WebGLRenderingContext.scissor()")}}
   - : 设置裁剪框。
@@ -142,13 +143,13 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
   - : 把 `WebGLRenderingBuffer` 对象附加到 `WebGLFrameBuffer` 对象。
 - {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
-  - : 把纹理图像附加到 `WebGLFrameBuffer` object.
+  - : 把纹理图像附加到 `WebGLFrameBuffer` 对象。
 - {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
   - : 返回帧缓冲区的信息。
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-  - : 返回 Boolean 值，表示给入的 `WebGLFrameBuffer` 对象是否有效。
+  - : 返回布尔值，表示给入的 `WebGLFrameBuffer` 对象是否有效。
 - {{domxref("WebGLRenderingContext.readPixels()")}}
-  - : 读取 `WebGLFrameBuffer 的像素。`
+  - : 读取 `WebGLFrameBuffer` 的像素。
 
 ## 渲染缓冲区
 
@@ -161,7 +162,7 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
   - : 返回渲染缓冲区的信息。
 - {{domxref("WebGLRenderingContext.isBuffer()")}}
-  - : 返回 Boolean 值，表示给入的 `WebGLRenderingBuffer` 是否有效。
+  - : 返回布尔值，表示给入的 `WebGLRenderingBuffer` 是否有效。
 - {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
   - : 创建渲染缓冲区数据存储。
 
@@ -190,7 +191,7 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.texImage2D()")}}
   - : 指定 2D 纹理图片。
 - {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-  - : 更新当前 `WebGLTexture 的子矩形。`
+  - : 更新当前 `WebGLTexture` 的子矩形。
 - {{domxref("WebGLRenderingContext.texParameterf()")}}
   - : 设置纹理参数。
 - {{domxref("WebGLRenderingContext.texParameteri()")}}
@@ -199,21 +200,21 @@ var gl = canvas.getContext('webgl');
 ## 程序对象和着色器对象
 
 - {{domxref("WebGLRenderingContext.attachShader()")}}
-  - : 把 `WebGLShader` 添加到 `WebGLProgram。`
+  - : 把 `WebGLShader` 添加到 `WebGLProgram`。
 - {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
   - : 绑定一个普通顶点索引到一个命名的 attribute 变量
 - {{domxref("WebGLRenderingContext.compileShader()")}}
-  - : 编译 `WebGLShader。`
+  - : 编译 `WebGLShader`。
 - {{domxref("WebGLRenderingContext.createProgram()")}}
-  - : 创建 `WebGLProgram。`
+  - : 创建 `WebGLProgram`。
 - {{domxref("WebGLRenderingContext.createShader()")}}
-  - : 创建 `WebGLShader。`
+  - : 创建 `WebGLShader`。
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
-  - : 删除 `WebGLProgram。`
+  - : 删除 `WebGLProgram`。
 - {{domxref("WebGLRenderingContext.deleteShader()")}}
-  - : 删除 `WebGLShader。`
+  - : 删除 `WebGLShader`。
 - {{domxref("WebGLRenderingContext.detachShader()")}}
-  - : 分离 `WebGLShader。`
+  - : 分离 `WebGLShader`。
 - {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
   - : 返回附加在 `WebGLProgram 上的` `WebGLShader` 对象的列表。
 - {{domxref("WebGLRenderingContext.getProgramParameter()")}}
@@ -235,11 +236,11 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.linkProgram()")}}
   - : 链接给入的 `WebGLProgram` 对象。
 - {{domxref("WebGLRenderingContext.shaderSource()")}}
-  - : 设置一个 `WebGLShader 的源码。`
+  - : 设置一个 `WebGLShader` 的源码。
 - {{domxref("WebGLRenderingContext.useProgram()")}}
   - : 使用指定的 `WebGLProgram` 作为当前渲染状态的一部分。
 - {{domxref("WebGLRenderingContext.validateProgram()")}}
-  - : 使 `WebGLProgram 生效。`
+  - : 使 `WebGLProgram` 生效。
 
 ## Uniform 和 Attribute
 
@@ -283,32 +284,21 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.flush()")}}
   - : 清空缓冲的命令，这会导致所有命令尽快执行完。
 
+## 色彩空间
+
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}} {{Experimental_Inline}}
+  - : 指定 WebGL 绘制缓冲区的色彩空间。
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
+  - : 指定导入纹理时要转换到的色彩空间。
+
 ## 使用扩展插件
 
-这些方法管理 WebGL 扩展：
+这些方法用于管理 WebGL 扩展：
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-  - : 返回一个包含 {{domxref("DOMString")}} 的 {{jsxref("Array")}} ，每个元素都为支持的 WebGL 扩展。
+  - : 返回一个包含字符串的 {{jsxref("Array")}}，每个元素都为支持的 WebGL 扩展。
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : 返回一个扩展对象。
-
-## 示例
-
-### 检测 WebGL 上下文特性支持
-
-{{page("/zh-CN/Learn/WebGL/By_example/Detect_WebGL", "summary")}}
-
-{{page("/zh-CN/Learn/WebGL/By_example/Detect_WebGL", "detect-webgl-source")}}
-
-{{EmbedLiveSample("detect-webgl-source", 660,150 ,"" , "Learn/WebGL/By_example/Detect_WebGL")}}
-
-### Canvas 尺寸对使用 WebGL 渲染的影响
-
-{{page("/zh-CN/Learn/WebGL/By_example/Canvas_size_and_WebGL", "canvas-size-and-webgl-intro")}}
-
-{{page("/zh-CN/Learn/WebGL/By_example/Canvas_size_and_WebGL", "canvas-size-and-webgl-source")}}
-
-{{EmbedLiveSample("canvas-size-and-webgl-source", 660,180 ,"" , "Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
 
 ## 规范
 
@@ -316,8 +306,8 @@ var gl = canvas.getContext('webgl');
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext")}}
+{{Compat}}
 
-## 相关内容
+## 参见
 
 - {{domxref("HTMLCanvasElement")}}

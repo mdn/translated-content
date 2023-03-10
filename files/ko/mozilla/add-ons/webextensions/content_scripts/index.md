@@ -1,8 +1,8 @@
 ---
 title: Content scripts
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
-translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
 A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the web site itself, such as those loaded using the {{HTMLElement("script")}} element).
@@ -11,7 +11,7 @@ A content script is a part of your extension that runs in the context of a parti
 
 Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs.
 
-Content scripts can only access [a small subset of the WebExtension APIs](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs), but they can [communicate with background scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
+Content scripts can only access [a small subset of the WebExtension APIs](/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs), but they can [communicate with background scripts](/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
 
 > **참고:** Note that content scripts are blocked on the following domains: accounts-static.cdn.mozilla.net, accounts.firefox.com, addons.cdn.mozilla.net, addons.mozilla.org, api.accounts.firefox.com, content.cdn.mozilla.net, content.cdn.mozilla.net, discovery.addons.mozilla.org, input.mozilla.org, install.mozilla.org, oauth.accounts.firefox.com, profile.accounts.firefox.com, support.mozilla.org, sync.services.mozilla.com, and testpilot.firefox.com. If you try to inject a content script into a page in these domains, it will fail and the page will log a [CSP](/ko/docs/Web/HTTP/CSP) error.As these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation and find it doesn't work. You may want to add an appropriate warning or an [onboarding page](/ko/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) that moves users away from addons.mozilla.org.
 
@@ -21,8 +21,8 @@ Content scripts can only access [a small subset of the WebExtension APIs](https:
 
 You can load a content script into a web page in one of three ways:
 
-1. **at install time, into pages that match URL patterns:** using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your manifest.json, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns).
-2. **at runtime, into pages that match URL patterns:** using the {{WebExtAPIRef("contentScripts")}} API, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns). This is just like method (1), except you can add and remove content scripts at runtime.
+1. **at install time, into pages that match URL patterns:** using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your manifest.json, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/Add-ons/WebExtensions/Match_patterns).
+2. **at runtime, into pages that match URL patterns:** using the {{WebExtAPIRef("contentScripts")}} API, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/Add-ons/WebExtensions/Match_patterns). This is just like method (1), except you can add and remove content scripts at runtime.
 3. **at runtime, into specific tabs:** using the [`tabs.executeScript()`](/en-US/Add-ons/WebExtensions/API/Tabs/executeScript) API, you can load a content script into a specific tab whenever you want: for example, in response to the user clicking on a [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_action).
 
 There is only one global scope per frame per extension, so variables from one content script can directly be accessed by another content script, regardless of how the content script was loaded.
@@ -147,7 +147,7 @@ Everything from [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storag
 
 Content scripts can make requests using the normal [`window.XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) and [`window.fetch()`](/en-US/docs/Web/API/Fetch_API) APIs.
 
-Content scripts get the same cross-domain privileges as the rest of the extension: so if the extension has requested cross-domain access for a domain using the [`permissions`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions) key in manifest.json, then its content scripts get access that domain as well.
+Content scripts get the same cross-domain privileges as the rest of the extension: so if the extension has requested cross-domain access for a domain using the [`permissions`](/en-US/Add-ons/WebExtensions/manifest.json/permissions) key in manifest.json, then its content scripts get access that domain as well.
 
 This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side-effect of not setting the [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin) and [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) headers like a request from the page itself would, this is often preferable to prevent the request from revealing its cross-orign nature. From version 58 onwards extensions that need to perform requests that behave as if they were sent by the content itself can use `content.XMLHttpRequest` and `content.fetch()` instead. For cross-browser extensions their presence must be feature-detected.
 

@@ -2,6 +2,7 @@
 title: <resolution>
 slug: Web/CSS/resolution
 ---
+
 {{CSSRef}}
 
 分辨率：用于描述[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)中的分辨率的\<resolution> CSS[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示输出设备的像素密度。
@@ -17,9 +18,9 @@ slug: Web/CSS/resolution
 - `dpi`
   - : 表示[每英寸的点数](https://en.wikipedia.org/wiki/Dots_per_inch)。屏幕通常每英寸包含 72 或 96 个点，但打印文档的 dpi 通常要大得多。1 英寸是 2.54 厘米，1dpi≈0.39dpcm。
 - `dpcm`
-  - [: 每厘米上的点数](https://en.wikipedia.org/wiki/Dots_per_inch)。1 英寸是 2.54 厘米，`1dpcm ≈ 2.54dpi`.
+  - : [每厘米上的点数](https://en.wikipedia.org/wiki/Dots_per_inch)。1 英寸是 2.54 厘米，`1dpcm ≈ 2.54dpi`.
 - `dppx`
-  - : 表示每个[`px`](/en-US/docs/Web/CSS/length#px)的点数。 由于 CSS px 的固定比率为 1:96，因此 1dppx 相当于 96dpi。 which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.
+  - : 表示每个[`px`](/zh-CN/docs/Web/CSS/length#px)的点数。由于 CSS px 的固定比率为 1:96，因此 1dppx 相当于 96dpi。which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.
 - `x`
   - : `dppx` 的别名
 
@@ -55,7 +56,7 @@ ten dpi    The number must use digits only.
 
 ## Browser compatibility
 
-{{Compat("css.types.resolution")}}
+{{Compat}}
 
 ## See also
 

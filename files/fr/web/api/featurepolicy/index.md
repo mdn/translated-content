@@ -15,6 +15,7 @@ tags:
   - delegation
 translation_of: Web/API/FeaturePolicy
 ---
+
 {{APIRef("Feature Policy")}}
 
 L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Feature_Policy) représente l'ensemble des règles appliquées au contexte d'exécution courant.

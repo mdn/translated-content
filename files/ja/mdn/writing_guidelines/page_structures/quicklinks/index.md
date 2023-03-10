@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Quicklinks
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
+
 {{MDNSidebar}}
 
 MDN はページへのクイックリンクの追加に対応しています。これらのボックスは、 MDN 上の他のページやサイト外のページへの階層的なリストを含むことができます。この記事では、クイックリンクボックスの生成方法を解説します。
@@ -54,7 +55,7 @@ MDN はページへのクイックリンクの追加に対応しています。�
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs)
   - : CSS リファレンスページの標準クイックリンクを構築します。
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs)
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs)
   - : HTML リファレンスページの標準クイックリンクを構築します。
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
   - : 現在のページ（または指定したページ）の子を宛先として使用して、クイックリンクのセットを作成します。

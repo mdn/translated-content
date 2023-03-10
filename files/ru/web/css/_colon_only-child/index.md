@@ -5,17 +5,20 @@ tags:
   - Псевдоклассы
 translation_of: Web/CSS/:only-child
 ---
+
 {{CSSRef}}
 
 ## Описание
 
-[CSS](/ru/docs/CSS "CSS") [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:only-child` находит любой элемент, являющийся единственным потомком родителя. Это тоже, что и `:first-child:last-child` или `:nth-child(1):nth-last-child(1)`, но с меньшей специфичностью.
+[CSS](/ru/docs/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:only-child` находит любой элемент, являющийся единственным потомком родителя. Это тоже, что и `:first-child:last-child` или `:nth-child(1):nth-last-child(1)`, но с меньшей специфичностью.
 
 ## Синтаксис
 
-    parent child:only-child {
-      property: value;
-    }
+```
+parent child:only-child {
+  property: value;
+}
+```
 
 ## Примеры
 

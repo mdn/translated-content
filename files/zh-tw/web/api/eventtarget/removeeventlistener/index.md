@@ -2,6 +2,7 @@
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 **`EventTarget.removeEventListener()`** 方法可以移除先前由 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 所註冊的事件監聽器。
@@ -84,7 +85,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 ## 瀏覽器相容性
 
-{{Compat("api.EventTarget.removeEventListener")}}
+{{Compat}}
 
 ## Polyfill to support older browsers
 

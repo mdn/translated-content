@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
 translation_of: Web/API/CanvasRenderingContext2D/setTransform
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.setTransform()`** de l'API Canvas 2D réinitialise (remplace) la transformation en cours à la matrice identité et appelle ensuite la transformation décrite par les arguments de cette méthode.

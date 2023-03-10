@@ -1,8 +1,8 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
-translation_of: Web/API/Screen/orientation
 ---
+
 {{APIRef("CSSOM View")}} {{SeeCompatTable}}
 
 ## Summary
@@ -13,7 +13,9 @@ translation_of: Web/API/Screen/orientation
 
 ## Syntax
 
-    var orientation = window.screen.orientation;
+```js
+var orientation = window.screen.orientation;
+```
 
 ## Return value
 
@@ -33,11 +35,11 @@ if (orientation === "landscape-primary") {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

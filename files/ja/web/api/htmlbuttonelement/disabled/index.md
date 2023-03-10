@@ -2,6 +2,7 @@
 title: HTMLButtonElement.disabled
 slug: Web/API/HTMLButtonElement/disabled
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLButtonElement.disabled`** プロパティはこのコントロールが無効であるかどうか、すなわちクリックを受け付けない状態であるかどうかを示します。

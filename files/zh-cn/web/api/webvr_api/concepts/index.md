@@ -2,6 +2,7 @@
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
 ---
+
 This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.
 
 这篇文章探讨了一些关于虚拟现实（VR）的概念及其背后的理论基础。如果你是一个进入这个领域的新手，在你深入学习相关代码知识前，非常有必要对于以下的话题做一定的了解。**【K】**
@@ -20,7 +21,7 @@ In 1939 the [View-Master device](https://en.wikipedia.org/wiki/View-Master) was 
 
 There were various experiments conducted over the next few decades, but it wasn't resricted to science labs and battlefields anymore. Eventually pop culture took over with movie directors showing their visions of virtual reality. Movies like Tron (1982) and The Matrix (1999) were created, where people could transfer themselves into a whole new cyber world or were trapped in one without even knowing, accepting it as the real world.
 
-**在接下来的数十年中，出现了许多具有指导性作用的实验，但是它不再像从前那样只对科学实验室和战场开放。最终大众文化通过电影导演展现他们的视角，从而接过了虚拟现实的大旗。像【创：战纪 TRON: Legacy（1982）】 和【黑客帝国 The Matrix (1999)】那样的电影被拍摄出来，在那里人们能够轻易的将自己置身于一个完全由信息构成的世界，又或者，接受让自己进入一个从未认识过的新世界，并且将它当做一个真实的存在。【K】**
+**在接下来的数十年中，出现了许多具有指导性作用的实验，但是它不再像从前那样只对科学实验室和战场开放。最终大众文化通过电影导演展现他们的视角，从而接过了虚拟现实的大旗。像【创：战纪 TRON: Legacy（1982）】和【黑客帝国 The Matrix (1999)】那样的电影被拍摄出来，在那里人们能够轻易的将自己置身于一个完全由信息构成的世界，又或者，接受让自己进入一个从未认识过的新世界，并且将它当做一个真实的存在。【K】**
 
 ![](http://end3r.com/tmp/vr/matrix.jpg)
 
@@ -32,7 +33,7 @@ The first VR gaming attempts were big and expensive — in 1991 Virtuality Group
 
 So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an afforable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas the latest [Oculus Rift](https://www.oculus.com/rift/) developer kit is available for $350, and cheaper solutions are available, such as mobile device-based solutions like [Google Cardboard](https://www.google.com/get/cardboard/).
 
-**那么有什么值得我们期待的呢？VR 硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行 VR 设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的 VR 原型设备，需要花费数万美元，然而最近出现的[Oculus Rift](https://www.oculus.com/rift/) developer kit 却仅售 350$， 并且还有更加便宜的解决方案，比如基于手机的 VR 设备像是[Google Cardboard](https://www.google.com/get/cardboard/).【K】**
+**那么有什么值得我们期待的呢？VR 硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行 VR 设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的 VR 原型设备，需要花费数万美元，然而最近出现的[Oculus Rift](https://www.oculus.com/rift/) developer kit 却仅售 350$，并且还有更加便宜的解决方案，比如基于手机的 VR 设备像是[Google Cardboard](https://www.google.com/get/cardboard/).【K】**
 
 By 2015, such VRDevices gained commercial support for VR technology. Sony are developing a VR hardware kit for the PS4 (codename [Project Morpheus](http://www.cnet.com/products/sony-project-morpheus/)), Facebook bought Oculus Rift for $2 billion, Valve has created [SteamVR](http://store.steampowered.com/universe/vr) software that works with HTC's [Vive VR headset](http://www.htcvr.com/), and Google has launched a 2.0 version of its Cardboard that supports up to 6 inch phones (it is also fully compatible with iOS devices because it has a piece of conductive foam that works as a tap over the screen.)
 
@@ -79,7 +80,7 @@ Other hardware that complements the VR experience includes:
 - **（手机）游戏手柄：我们可以配置一套 XBOX 控制器或者类似的设备作为浏览器的键盘 -- 这种方法提供了另一种同 VR 网页互动的形式。有一些游戏手柄更可以和手机协同使用 -- 就像**[MergeVR headset](http://www.mergevr.com/)--**但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和 WEBVR 结合。**
 - An eye tracking sensor (experimental): The FOVE project is the first headset that reads subtle eye movements.
 - **眼部追踪传感器（实验产品）：FOVE 项目是第一个研究用于追踪和读取人眼运动设备的项目。**
-- A facial expression tracker (experimental): Researchers at the University of Southern California and Facebook’s Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.
+- A facial expression tracker (experimental): Researchers at the University of Southern California and Facebook's Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.
 - **面部表情追踪设备（实验产品）：位于南加州大学和 Facebook’s Oculus 部门的研究人员，已经开始测试更多新的追踪人类面部表情并且能把他们转换成虚拟现实角色的方法。**
 - A more complex positional sensor system: The SteamVR controller, combined with the [Lighthouse](http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/) tracking system aims to achieve an experience in which you can move through a space of 10x10 square feet in a VR world.
 - **更加复杂的位置传感系统：SteamVR 控制器，结合了[Lighthouse](http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/)追踪系统，旨在实现帮助我们能在一个 10x10 square feet 的 VR 空间范围内自由活动的目的。**
@@ -254,7 +255,7 @@ The Oculus Rift headset has a letency of 20 ms or less, but woth mobile device-b
 
 ### Framerate ( Frames per second / FPS ) 帧率**【K】**
 
-Based on the Wikipedia definition, framerate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered juddery, and annoying to the user.、
+Based on the Wikipedia definition, framerate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered juddery, and annoying to the user.
 
 **根据维基百科的定义，帧率指的是一个设备产生单一连贯的图像的速率，叫做框架。60FPS 的帧率足够提供给使用者一个平稳的体验，但是更加要取决于 APP 运行的设备的表现，或者是你想要体验的 VR 内容，也有可能大大的降低。假如帧率小于了 30FPS，通常会发生严重的颤抖，并且使使用者产生厌恶感。**
 

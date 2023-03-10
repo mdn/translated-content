@@ -1,13 +1,8 @@
 ---
 title: <xsl:comment>
 slug: Web/XSLT/Element/comment
-tags:
-  - Comment
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/comment
 ---
+
 {{ XsltRef() }}
 
 `<xsl:comment>` 要素は出力文書にコメントを書き込みます。テキストのみを含める必要があります。

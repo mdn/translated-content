@@ -1,14 +1,8 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Landing
-  - Reference
-translation_of: Web/API/Fetch_API
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 **Fetch API**는 네트워크 통신을 포함한 리소스 취득을 위한 인터페이스가 정의되어 있습니다. {{domxref("XMLHttpRequest")}}와 같은 비슷한 API가 존재합니다만, 새로운 Fetch API는 좀더 강력하고 유연한 조작이 가능합니다.

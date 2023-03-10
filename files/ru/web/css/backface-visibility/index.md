@@ -3,6 +3,7 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 translation_of: Web/CSS/backface-visibility
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Свойство **`backface-visibility`** определяет, видно ли заднюю грань элемента, когда он повёрнут к пользователю.

@@ -3,6 +3,7 @@ title: IDBIndex.keyPath
 slug: Web/API/IDBIndex/keyPath
 translation_of: Web/API/IDBIndex/keyPath
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La propriété **`keyPath`** de l'interface {{domxref("IDBIndex")}} renvoie le [chemin de clé](/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath) de l'index. Si l'index n'est pas [automatiquement mise à jour](/fr/IndexedDB/Index#gloss_auto-populated) la propriété vaux `null`.
@@ -64,7 +65,7 @@ function displayDataByIndex() {
 };
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -82,4 +83,4 @@ function displayDataByIndex() {
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

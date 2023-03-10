@@ -4,6 +4,7 @@ slug: >-
   conflicting/Web/API/HTMLElement/dragover_event_6ef4663f0003f0c263a08969c008baf7
 original_slug: Web/API/Document/dragover_event
 ---
+
 {{APIRef}}
 
 `dragover` イベントは、要素または選択されたテキストが、妥当なドロップターゲットの上にあるときに (数百ミリ秒間隔で) 発生します。

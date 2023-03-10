@@ -1,13 +1,8 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertySymbols()`** メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
@@ -56,9 +51,7 @@ console.log(objectSymbols[0]);     // Symbol(a)
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

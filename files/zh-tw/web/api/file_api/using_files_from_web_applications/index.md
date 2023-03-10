@@ -3,9 +3,10 @@ title: 在網頁應用程式中使用本地檔案
 slug: Web/API/File_API/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
-現在可以透過新增至 HTML5 DOM 的 File API 讓 web 內容要求使用者選取本地端的檔案後讀取被選取檔案中的內容。檔案的選取動作可以使用 HTML 的 [`input`](/en/DOM/HTMLInputElement) 元素，或是用拖曳檔案（drag and drop）的方式來完成。
 
-如果你想要使用 DOM 檔案 API 的文件擴展或是其他 Chrome 程式碼，你可以參考[使用 DOM 檔案 API 在 FireFox 外觀代碼中](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)。
+現在可以透過新增至 HTML5 DOM 的 File API 讓 web 內容要求使用者選取本地端的檔案後讀取被選取檔案中的內容。檔案的選取動作可以使用 HTML 的 [`input`](/zh-TW/DOM/HTMLInputElement) 元素，或是用拖曳檔案（drag and drop）的方式來完成。
+
+如果你想要使用 DOM 檔案 API 的文件擴展或是其他 Chrome 程式碼，你可以參考[使用 DOM 檔案 API 在 FireFox 外觀代碼中](/zh-TW/Extensions/Using_the_DOM_File_API_in_chrome_code)。
 
 ## 使用 HTML 選擇本地檔案
 
@@ -100,7 +101,7 @@ for (var i = 0; i < files.length; i++) {
 
 ## 使用 click() 方法隱藏檔案輸入元素
 
-從 Gecko 2.0 {{ geckoRelease("2.0") }}開始，為了顯示個人化開啟檔案的 UI 和使用者選擇的檔案可以隱藏 {{ HTMLElement("input") }} 元素和顯示個人化的設計。可以藉由設置 CSS 「display:none」 和對 {{ HTMLElement("input") }} 元素呼叫 `click()` 方法。
+從 Gecko 2.0 開始，為了顯示個人化開啟檔案的 UI 和使用者選擇的檔案可以隱藏 {{ HTMLElement("input") }} 元素和顯示個人化的設計。可以藉由設置 CSS 「display:none」 和對 {{ HTMLElement("input") }} 元素呼叫 `click()` 方法。
 
 HTML 如下：
 
@@ -198,21 +199,21 @@ function handleFiles(files) {
 
 這邊迴圈處理了使用者選取的每個檔案並檢查每個檔案的類型是不是圖檔(藉由使用正規表達式檢查是否符合字串 "image.\*")。每一個是圖片的檔案，我們創建一個 `img` 元素。CSS 被使用來美化外框、陰影、還有設定圖片的尺寸，所以那些並不需要在這邊寫入。
 
-為了使圖片可以在 DOM 裡面更容易被找到，所以每個圖片都有設定 CSS class “obj”。 我們也在每個圖檔標記 `file` 屬性以辨認 [`File`](/en/DOM/File)；這使我們更容易取得真正要上傳的圖檔。最後我們使用{{ domxref("Node.appendChild()") }} 在文件中增加縮圖的元素。
+為了使圖片可以在 DOM 裡面更容易被找到，所以每個圖片都有設定 CSS class “obj”。 我們也在每個圖檔標記 `file` 屬性以辨認 [`File`](/zh-TW/DOM/File)；這使我們更容易取得真正要上傳的圖檔。最後我們使用{{ domxref("Node.appendChild()") }} 在文件中增加縮圖的元素。
 
-[`FileReader`](/en/DOM/FileReader) 處理要非同步讀取的圖檔並跟 `img` 元素連接。在創建 `FileReader` 物件後，我們設置了 `onload`並 呼叫 `readAsDataURL()` 在背景呼叫讀取的程序。當所有圖檔都被讀取時，他們被轉換為傳到 `onload callback` 的 `data` URL。 這個範例簡易的設置`img` 元素的 `src` 屬性來讀取圖檔並在螢幕上顯示。
+[`FileReader`](/zh-TW/DOM/FileReader) 處理要非同步讀取的圖檔並跟 `img` 元素連接。在創建 `FileReader` 物件後，我們設置了 `onload`並 呼叫 `readAsDataURL()` 在背景呼叫讀取的程序。當所有圖檔都被讀取時，他們被轉換為傳到 `onload callback` 的 `data` URL。 這個範例簡易的設置`img` 元素的 `src` 屬性來讀取圖檔並在螢幕上顯示。
 
 ## 使用 object URLs
 
-Gecko 2.0 {{ geckoRelease("2.0") }} 支援 DOM 的{{ domxref("window.URL.createObjectURL()") }} 和 {{ domxref("window.URL.revokeObjectURL()") }} 方法。可以藉由這些方法創建表示任何為 DOM [`File`](/en/DOM/File) 物件的 data URL 字串，包含了使用者電腦上的檔案。
+Gecko 2.0 支援 DOM 的{{ domxref("window.URL.createObjectURL()") }} 和 {{ domxref("window.URL.revokeObjectURL()") }} 方法。可以藉由這些方法創建表示任何為 DOM [`File`](/zh-TW/DOM/File) 物件的 data URL 字串，包含了使用者電腦上的檔案。
 
-可以使 [`File`](/en/DOM/File) 物件作為 HTML 元素 URL 的參考，創建 object URL 的方法：
+可以使 [`File`](/zh-TW/DOM/File) 物件作為 HTML 元素 URL 的參考，創建 object URL 的方法：
 
 ```js
 var objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-object URL 為表示 [`File`](/en/DOM/File) 物件的字串。即使已經對相同檔案創建了 object URL，每次呼叫 {{ domxref("window.URL.createObjectURL()") }}，就會創建一個 object URL。當文檔卸載時他們將會被自動釋放，如果要動態地使用，需要呼叫 {{ domxref("window.URL.revokeObjectURL()") }} 釋放：
+object URL 為表示 [`File`](/zh-TW/DOM/File) 物件的字串。即使已經對相同檔案創建了 object URL，每次呼叫 {{ domxref("window.URL.createObjectURL()") }}，就會創建一個 object URL。當文檔卸載時他們將會被自動釋放，如果要動態地使用，需要呼叫 {{ domxref("window.URL.revokeObjectURL()") }} 釋放：
 
 ```js
 window.URL.revokeObjectURL(objectURL);
@@ -220,7 +221,7 @@ window.URL.revokeObjectURL(objectURL);
 
 ## 範例：使用 object URLs 顯示圖片
 
-{{ geckoRelease("2.0") }}這個範例使用 object URLs 顯示圖像縮圖。此外也顯示了其他包含檔案名稱和檔案大小的訊息。[線上範例](/samples/domref/file-click-demo.html) (註:瀏覽器版本要求 11/22 之後的火狐版本)。
+這個範例使用 object URLs 顯示圖像縮圖。此外也顯示了其他包含檔案名稱和檔案大小的訊息。[線上範例](/samples/domref/file-click-demo.html) (註:瀏覽器版本要求 11/22 之後的火狐版本)。
 
 > **備註：** 這個 API 在較早的 Firefox 4 betas 存在但是 11/22 號後的版本有改變, 所以確定瀏覽器在最新的版本!
 
@@ -356,7 +357,7 @@ function FileUpload(img, file) {
 5. The `FileReader` object is used to convert the file to a binary string.
 6. Finally, when the content is loaded the `XMLHttpRequest` function `sendAsBinary()` is called to upload the file's content.
 
-> **備註：** 範例中非標準的 `sendAsBinary` 方法已經在 Gecko 31 {{ geckoRelease(31) }} 廢棄且很快將會被移除。可以改使用標準的 `send(Blob data)。`
+> **備註：** 範例中非標準的 `sendAsBinary` 方法已經在 Gecko 31 廢棄且很快將會被移除。可以改使用標準的 `send(Blob data)。`
 
 ### 非同步處理上傳檔案的程序
 
@@ -404,6 +405,6 @@ _使用二進制數據時，這些程式碼還需要修改。_
 - `{{domxref("File")}}`
 - {{domxref("FileList")}}
 - {{domxref("FileReader") }}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
+- [Using XMLHttpRequest](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using the DOM File API in chrome code](/zh-TW/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - `{{domxref("XMLHttpRequest")}}`

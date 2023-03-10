@@ -2,9 +2,10 @@
 title: ServiceWorker
 slug: Web/API/ServiceWorker
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-[ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) のインターフェイスである `ServiceWorker` は service worker に関するレファレンスを提供しています。様々なブラウザー環境（例えばページ、worker など）が同一の service worker に関連付けることができて、一意な `ServiceWorker` オブジェクト ​ からアクセスできます。
+[ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) のインターフェイスである `ServiceWorker` は service worker に関するレファレンスを提供しています。様々なブラウザー環境（例えばページ、worker など）が同一の service worker に関連付けることができて、一意な `ServiceWorker` オブジェクトからアクセスできます。
 
 `ServiceWorker` オブジェクトはプロバティ{{domxref("ServiceWorkerRegistration.active")}}と{{domxref("ServiceWorkerContainer.controller")}}プロパティ — これは起動された service worker でページを管理しています (その service worker が正常に登録されて管理されるページがリロードされています) — の中で利用可能です。
 
@@ -65,9 +66,7 @@ if ('serviceWorker' in navigator) {
 
 ## 仕様
 
-| 仕様書                                                                                           | 策定状況                             | コメント |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#service-worker-obj', 'ServiceWorker')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -75,7 +74,7 @@ if ('serviceWorker' in navigator) {
 
 ## 関連
 
-- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Service Workers を使用する](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

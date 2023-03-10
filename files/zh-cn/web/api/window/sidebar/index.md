@@ -2,6 +2,7 @@
 title: Window.sidebar
 slug: Web/API/Window/sidebar
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 Returns a sidebar object, which contains several methods for registering add-ons with browser.

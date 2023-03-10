@@ -2,6 +2,7 @@
 title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
 ---
+
 {{ApiRef("DOM")}} {{SeeCompatTable}}
 
 **`Range.intersectsNode()`** メソッドは、指定された {{domxref("Node")}} が {{domxref("Range")}} と交差しているかどうかを示す論理値を返します。

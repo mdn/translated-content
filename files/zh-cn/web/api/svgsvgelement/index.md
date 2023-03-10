@@ -2,9 +2,10 @@
 title: SVGSVGElement
 slug: Web/API/SVGSVGElement
 ---
+
 {{APIRef("SVG")}}
 
-该**`SVGSVGElement`**接口提供对{{SVGElement("svg")}}元素的属性的访问，以及操作它们的方法。此接口还包含各种常用的实用方法，例如矩阵操作和控制可视渲染设备上重绘时间的功能。
+该 **`SVGSVGElement`** 接口提供对{{SVGElement("svg")}}元素的属性的访问，以及操作它们的方法。此接口还包含各种常用的实用方法，例如矩阵操作和控制可视渲染设备上重绘时间的功能。
 
 {{InheritanceDiagram(600,140)}}
 
@@ -124,7 +125,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
   - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point (0,0) in the user coordinate system.
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
-  - : Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
+  - : Creates an {{domxref("DOMMatrix", "SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
 - {{domxref("SVGSVGElement.createSVGRect()")}}
   - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to 0 user units.
 - {{domxref("SVGSVGElement.createSVGTransform()")}}
@@ -140,7 +141,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 
 ## Browser compatibility
 
-{{COMPAT("api.SVGSVGElement")}}
+{{Compat}}
 
 ## 也可以看看
 

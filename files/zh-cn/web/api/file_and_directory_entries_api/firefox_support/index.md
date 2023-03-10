@@ -2,6 +2,7 @@
 title: File and Directory Entries API support in Firefox
 slug: Web/API/File_and_Directory_Entries_API/Firefox_support
 ---
+
 {{DefaultAPISidebar("File System API")}} {{Non-standard_header}}
 
 创建原始文件系统 API 是为了让浏览器实现对访问用户存储设备上沙箱虚拟文件系统的支持。标准化规范的工作早在 2012 年就被放弃了，但到那时，谷歌 Chrome 包含了自己的 API 实现。随着时间的推移，许多流行的站点和 Web 应用程序开始使用它，通常不提供任何退回到标准 API 的方法，甚至在使用之前也没有检查 API 是否可用。相反，Mozilla 选择实现其他 api，这些 api 可以用来解决许多相同的问题，比如[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API);查看博客文章，[为什么 Firefox 中没有文件系统 API](https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/)?更多的见解。
@@ -43,8 +44,8 @@ var FileSystemEntry = window.FileSystemEntry || window.Entry;
   - {{HTMLElement("input")}}元素，使用{{domxref("HTMLInputElement.webkitEntries")}}属性访问{{domxref("FileSystemEntry")}}对象数组，这些对象描述可以读取的文件系统条目。
   - 通过调用{{domxref("DataTransferItem.getAsEntry()")}}方法来使用拖放操作，该方法允许为拖放区域中的文件获取{{domxref("FileSystemFileEntry")}}或{{domxref("FileSystemDirectoryEntry")}}。
 
-- 你不能用 [`LocalFileSystem.requestFileSystem()`](/en-US/docs/Web/API/LocalFileSystem#requestFileSystem) 方法来访问指定的本地文件系统。
-- 没有实现 [`LocalFileSystem.resolveLocalFileSystemURL()`](/en-US/docs/Web/API/LocalFileSystem#resolveLocalFileSystemURL) 方法。
+- 你不能用 [`LocalFileSystem.requestFileSystem()`](/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem) 方法来访问指定的本地文件系统。
+- 没有实现 [`LocalFileSystem.resolveLocalFileSystemURL()`](/zh-CN/docs/Web/API/LocalFileSystem#resolveLocalFileSystemURL) 方法。
 - 只实现接口的异步版本。任何名称以 "`Sync"` 结尾的接口都不可用。
 - Firefox 只支持从文件系统中的文件读取。你不能用他们写入。特别是，用来创建{{domxref("FileSystemFileEntry.createWriter()")}}来处理文件写入的{{domxref("FileWriter")}}方法没有实现，只会返回一个错误。
 - Firefox 不支持 `"filesystem:"` URL 方案。

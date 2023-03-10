@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.getTransceivers()
 slug: Web/API/RTCPeerConnection/getTransceivers
-translation_of: Web/API/RTCPeerConnection/getTransceivers
 ---
 {{APIRef("WebRTC")}}
 
@@ -9,7 +8,9 @@ translation_of: Web/API/RTCPeerConnection/getTransceivers
 
 ## Syntax
 
-    transceiverList = RTCPeerConnection.getTransceivers();
+```js
+transceiverList = RTCPeerConnection.getTransceivers();
+```
 
 ### 매개변수
 
@@ -29,11 +30,9 @@ pc.getTransceivers.forEach(transceiver => {
 });
 ```
 
-## 설명서
+## 명세서
 
-| 설명서                                                                                                                                           | 상태                             | 코멘트 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------ |
-| {{SpecName("WebRTC 1.0", "#dom-rtcpeerconnection-gettransceivers", "RTCPeerConnection.getTransceivers()")}} | {{Spec2("WebRTC 1.0")}} |        |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -1,8 +1,8 @@
 ---
 title: cx
 slug: Web/SVG/Attribute/cx
-translation_of: Web/SVG/Attribute/cx
 ---
+
 {{SVGRef}}
 
 **`cx`** 属性は中心の x-座標を定義します。
@@ -37,7 +37,7 @@ html,body,svg { height:100% }
 | 既定値             | `0`                                          |
 | アニメーション可否 | はい                                         |
 
-> **Note:** **注:**SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
+> **メモ:** SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
 
 ## ellipse
 
@@ -60,7 +60,7 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-> **Note:** **注:**SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が楕円への CSS プロパティとしても利用可能であることを意味します。
+> **メモ:** SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が楕円への CSS プロパティとしても利用可能であることを意味します。
 
 ## radialGradient
 
@@ -121,13 +121,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                 | コメント                           |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------- |
-| {{SpecName("SVG2", "geometry.html#CX", "cx")}}                                             | {{Spec2("SVG2")}} | Definition as a geometry property  |
-| {{SpecName("SVG2", "pservers.html#RadialGradientElementCXAttribute", "cx")}}     | {{Spec2("SVG2")}} | SVG2 ペイントサーバに対する定義    |
-| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementCXAttribute", "cx")}} | {{Spec2("SVG1.1")}} | `<radialGradient>`に対する初期定義 |
-| {{SpecName("SVG1.1", "shapes.html#EllipseElementCXAttribute", "cx")}}             | {{Spec2("SVG1.1")}} | `<ellipse>`に対する初期定義        |
-| {{SpecName("SVG1.1", "shapes.html#CircleElementCXAttribute", "cx")}}             | {{Spec2("SVG1.1")}} | `<circle>`に対する初期定義         |
+{{Specifications}}
 
 ## 関連情報
 

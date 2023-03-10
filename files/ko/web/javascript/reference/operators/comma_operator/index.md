@@ -1,12 +1,8 @@
 ---
 title: 쉼표 연산자
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
+
 {{jsSidebar("Operators")}}
 
 **쉼표 연산자**는 각각의 피연산자를 왼쪽에서 오른쪽 순서로 평가하고, 마지막 연산자의 값을 반환합니다.

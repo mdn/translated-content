@@ -1,13 +1,8 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
 ---
+
 {{JSRef}}
 
 **`Symbol.for(key)`** メソッドは、引数で与えられたキーでランタイム全体のシンボルレジストリ内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリ内に生成されます。
@@ -68,9 +63,7 @@ Symbol.for('mdn.bar');
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.for', 'Symbol.for')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

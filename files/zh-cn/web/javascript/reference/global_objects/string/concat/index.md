@@ -2,6 +2,7 @@
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
+
 {{JSRef}}
 
 **`concat()`** 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。

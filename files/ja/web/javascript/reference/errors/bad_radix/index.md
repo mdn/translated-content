@@ -1,13 +1,8 @@
 ---
 title: 'RangeError: radix must be an integer'
 slug: Web/JavaScript/Reference/Errors/Bad_radix
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
-translation_of: Web/JavaScript/Reference/Errors/Bad_radix
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "radix must be an integer at least 2 and no greater than 36" は、 {{jsxref("Number.prototype.toString()")}} メソッドまたは {{jsxref("BigInt.prototype.toString()")}} メソッドのオプションの `radix` 引数が指定されたものの、 2 から 36 までの範囲になかったときに発生します。

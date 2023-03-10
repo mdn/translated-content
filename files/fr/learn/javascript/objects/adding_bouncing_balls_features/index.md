@@ -14,6 +14,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: >-
   Learn/JavaScript/Objects/Ajouter_des_fonctionnalités_à_notre_démo_de_balles_rebondissantes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'article précédent comme base, pour y ajouter de nouvelles fonctionnalitées intéressantes.

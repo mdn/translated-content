@@ -2,6 +2,7 @@
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 当状态为`activated` 时， {{domxref("ServiceWorkerContainer")}} 接口的只读属性 **`controller`** 返回一个 {{domxref("ServiceWorker")}} 对象（与 {{domxref("ServiceWorkerRegistration.active")}} 返回的对象是同一个）。当页面强制刷新 (_Shift_ + refresh) 或不存在 active worder 时，该属性返回 `null` 。
@@ -39,4 +40,4 @@ if ('serviceWorker' in navigator) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorkerContainer.controller")}}
+{{Compat}}

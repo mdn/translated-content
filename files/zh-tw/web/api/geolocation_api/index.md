@@ -3,6 +3,7 @@ title: 地理位置定位 (Geolocation)
 slug: Web/API/Geolocation_API
 original_slug: Web/API/Geolocation/Using_geolocation
 ---
+
 Web Apps 若需要使用者的位置，可透過 **Geolocation API** 取得相關資訊。而基於隱私權的考量，這些 Web Apps 均必須取得使用者的許可之後，才能發佈位置資訊。
 
 ## 地理位置定位 (Geolocation) 物件
@@ -228,4 +229,4 @@ Firefox 3.6 (Gecko 1.9.2) 新支援了 [GPSD](http://catb.org/gpsd/) (GPS daemon
 
 - [`navigator.geolocation`](/zh-TW/docs/Web/API/window.navigator.geolocation)
 - [w3.org 的 Geolocation API](http://www.w3.org/TR/geolocation-API/)
-- [Geolocation API 相關 Demos](/en-US/demos/tag/tech:geolocation)
+- [Geolocation API 相關 Demos](/zh-TW/demos/tag/tech:geolocation)

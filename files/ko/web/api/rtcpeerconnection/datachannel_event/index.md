@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.ondatachannel
 slug: Web/API/RTCPeerConnection/datachannel_event
-translation_of: Web/API/RTCPeerConnection/ondatachannel
 original_slug: Web/API/RTCPeerConnection/ondatachannel
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
@@ -12,7 +11,9 @@ original_slug: Web/API/RTCPeerConnection/ondatachannel
 
 ## Syntax
 
-    RTCPeerConnection.ondatachannel = function;
+```js
+RTCPeerConnection.ondatachannel = function;
+```
 
 ### 값
 

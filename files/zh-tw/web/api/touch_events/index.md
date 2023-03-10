@@ -2,6 +2,7 @@
 title: 觸控事件
 slug: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 為了支援基於觸碰的使用者介面，觸控事件提供了解釋手指或觸控筆於觸控螢幕或觸控板上活動的資訊。
@@ -69,7 +70,7 @@ We'll keep track of the touches in-progress.
 var ongoingTouches = [];
 ```
 
-When a {{event("touchstart")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
+When a [`touchstart`](/zh-TW/docs/Web/API/Element/touchstart_event) event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
 
 ```js
 function handleStart(evt) {
@@ -98,7 +99,7 @@ After that, we iterate over all the {{domxref("Touch")}} objects in the list, pu
 
 #### Drawing as the touches move
 
-Each time one or more fingers moves, a {{event("touchmove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
+Each time one or more fingers moves, a [`touchmove`](/zh-TW/docs/Web/API/Element/touchmove_event) event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
 
 ```js
 function handleMove(evt) {
@@ -139,7 +140,7 @@ After drawing the line, we call [`Array.splice()`](/zh-TW/docs/Web/JavaScript/Re
 
 #### Handling the end of a touch
 
-When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle both of these the same way: by calling the `handleEnd()` function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.
+When the user lifts a finger off the surface, a [`touchend`](/zh-TW/docs/Web/API/Element/touchend_event) event is sent. We handle both of these the same way: by calling the `handleEnd()` function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.
 
 ```js
 function handleEnd(evt) {
@@ -172,7 +173,7 @@ This is very similar to the previous function; the only real differences are tha
 
 #### Handling canceled touches
 
-If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{event("touchcancel")}} event is sent, and we call the `handleCancel()` function below.
+If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the [`touchcancel`](/zh-TW/docs/Web/API/Element/touchcancel_event) event is sent, and we call the `handleCancel()` function below.
 
 ```js
 function handleCancel(evt) {
@@ -259,7 +260,7 @@ This section provides additional tips on how to handle touch events in your web 
 
 ### Handling clicks
 
-Since calling `preventDefault()` on a {{event("touchstart")}} or the first {{event("touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call `preventDefault()` on {{event("touchmove")}} rather than {{event("touchstart")}}. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to refiring touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)
+Since calling `preventDefault()` on a [`touchstart`](/zh-TW/docs/Web/API/Element/touchstart_event) or the first [`touchmove`](/zh-TW/docs/Web/API/Element/touchmove_event) event of a series prevents the corresponding mouse events from firing, it's common to call `preventDefault()` on [`touchmove`](/zh-TW/docs/Web/API/Element/touchmove_event) rather than [`touchstart`](/zh-TW/docs/Web/API/Element/touchstart_event). That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to refiring touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)
 
 ```js
 function onTouch(evt) {
@@ -303,4 +304,4 @@ One technique for preventing things like `pinchZoom` on a page is to call `preve
 
 ## 瀏覽器相容性
 
-{{Compat("api.Touch")}}
+{{Compat}}

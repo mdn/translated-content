@@ -2,9 +2,8 @@
 title: margin-left
 slug: Web/CSS/margin-left
 ---
-{{CSSRef()}}
 
-## Summary
+{{CSSRef()}}
 
 ![Area on which CSS margin-left apply](/files/4039/margin-left.svg)**`margin-left`** 属性 设置与元素相关联的盒子模型的左外边距。这个值可以为负值。
 
@@ -44,7 +43,7 @@ margin-left: unset;
     | Value of {{cssxref("display")}}                                                             | Value of {{cssxref("float")}} | Value of {{cssxref("position")}} | Computed value of `auto`                                                                                                                                                       | Comment                                                                                              |
     | ------------------------------------------------------------------------------------------------- | ------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
     | `inline`, `inline-block`, `inline-table`                                                          | _any_                                 | `static` or `relative`                    | `0`                                                                                                                                                                            | Inline layout mode                                                                                   |
-    | `block`, `inline`, `inline-block`, `block`, `table`, `inline-table`, `list-item`, `table-caption` | _any_                                 | `static` or `relative`                    | `0`, 除非`margin-left`和 `margin-right同时都设置为auto`. 这样的话，元素就被设置为基于父元素居中。                                                                              | Block layout mode                                                                                    |
+    | `block`, `inline`, `inline-block`, `block`, `table`, `inline-table`, `list-item`, `table-caption` | _any_                                 | `static` or `relative`                    | `0`, 除非`margin-left`和 `margin-right` 同时都设置为 `auto`。这样的话，元素就被设置为基于父元素居中。                                                                              | Block layout mode                                                                                    |
     | `block`, `inline`, `inline-block`, `block`, `table`, `inline-table`, `list-item`, `table-caption` | `left` or `right`                     | `static` or `relative`                    | `0`                                                                                                                                                                            | Block layout mode (floating element)                                                                 |
     | _any_ `table-*`_, except_ `table-caption`                                                         | _any_                                 | _any_                                     | `0`                                                                                                                                                                            | Internal `table-*` elements don't have margins, use {{ cssxref("border-spacing") }} instead |
     | _any, except `flex`,_ `inline-flex`_, or_ `table-*`                                               | _any_                                 | _`fixed`_ or `absolute`                   | `0`, except if both `margin-left` and `margin-right` are set to `auto`. In this case, it is set to the value centering the border area inside the available `width`, if fixed. | Absolutely positioned layout mode                                                                    |

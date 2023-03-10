@@ -2,6 +2,7 @@
 title: URL.toString()
 slug: Web/API/URL/toString
 ---
+
 {{ApiRef("URL API")}}
 
 `URL.toString()` 文字列化メソッドは、URL 全体を含む {{domxref("USVString")}} を返します。 これは事実上、{{domxref("URL.href")}} の読み取り専用バージョンです。
@@ -31,9 +32,7 @@ url.toString() // URL を文字列として返します
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                 | コメント |
-| ---------------------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#URL-stringification-behavior', 'stringifier')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

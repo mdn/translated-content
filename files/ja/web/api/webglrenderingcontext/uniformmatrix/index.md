@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.uniformMatrix[234]fv()`** メソッドは、行列の値をユニフォームの値に指定します。
@@ -37,10 +38,7 @@ gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);
 
 ## 仕様策定状況
 
-| 仕様                                                                             | 策定状況                             | コメント                        |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "uniformMatrix")}}             | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glUniform.xml", "glUniform")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

@@ -1,13 +1,8 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
+
 {{JSRef}}
 
 **`Math.abs()`** 関数は、数値の絶対値を返します。
@@ -56,9 +51,7 @@ Math.abs();         // NaN
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.abs', 'Math.abs')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,18 +2,19 @@
 title: PushSubscription
 slug: Web/API/PushSubscription
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-[Push API](/ja/docs/Web/API/Push_API) の `PushSubscription` インターフェースは、サブスクリプションの URL エンドポイントを提供するとともに、プッシュサービスの登録を解除できます。
+[Push API](/ja/docs/Web/API/Push_API) の `PushSubscription` インターフェイスは、サブスクリプションの URL エンドポイントを提供するとともに、プッシュサービスの登録を解除できます。
 
-このインターフェースのインスタンスはシリアライズできます。
+このインターフェイスのインスタンスはシリアライズできます。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("PushSubscription.endpoint")}} {{readonlyinline}}
   - : プッシュサービスに関連したエンドポイントを含む {{domxref("USVString")}}。
 - {{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}
-  - : プッシュサブスクリプションに関連付いたサブスクリプション期限切れ時間を表す {{domxref("DOMHighResTimeStamp")}} 。存在しない場合は null。
+  - : プッシュサブスクリプションに関連付いたサブスクリプション期限切れ時間を表す {{domxref("DOMHighResTimeStamp")}}。存在しない場合は `null`。
 - {{domxref("PushSubscription.options")}} {{readonlyinline}}
   - : サブスクリプションを作成するために用いられるオプションを含むオブジェクト。
 
@@ -22,10 +23,10 @@ slug: Web/API/PushSubscription
 - {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}
   - : プッシュサービスに関連したサブスクリプション ID を含む {{domxref("DOMString")}}。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("PushSubscription.getKey()")}}
-  - : サーバーに送信されてプッシュメッセージの暗号化に使用される、クライアントのパブリックキーを含む {{domxref("ArrayBuffer")}} を返します。
+  - : サーバーに送信されてプッシュメッセージの暗号化に使用される、クライアントのパブリックキーを含む {{jsxref("ArrayBuffer")}} を返します。
 - {{domxref("PushSubscription.toJSON()")}}
   - : 標準シリアライザー — サブスクリプションプロパティの JSON 記法を返します。
 - {{domxref("PushSubscription.unsubscribe()")}}
@@ -45,13 +46,11 @@ navigator.serviceWorker.ready.then(function(reg) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                 | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName("Push API", "#pushsubscription-interface", "PushSubscription")}} | {{Spec2("Push API")}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushSubscription")}}
 

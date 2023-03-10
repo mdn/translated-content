@@ -2,6 +2,7 @@
 title: FormDataEvent()
 slug: Web/API/FormDataEvent/FormDataEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`FormDataEvent()`** コンストラクターは、新しい {{domxref("FormDataEvent")}} オブジェクトインスタンスを生成します。

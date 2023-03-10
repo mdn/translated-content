@@ -2,9 +2,10 @@
 title: 要素のはみ出し（オーバーフロー）
 slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
-このレッスンでは、CSS のもう 1 つの重要な概念である **オーバーフロー（\*\***overflow）\*\*を見ていきます。オーバーフローは、ボックス内にコンテンツが収まりきらないときに発生します。このガイドでは、その詳細とそれらについてどのように対処するかを学びます。
+このレッスンでは、CSS のもう 1 つの重要な概念である **オーバーフロー（overflow）を見ていきます。オーバーフローは、ボックス内にコンテンツが収まりきらないときに発生します。このガイドでは、その詳細とそれらについてどのように対処するかを学びます。
 
 | 前提条件: | 基本的なコンピューターリテラシー、[基本的なソフトウェアがインストールされている](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)こと、[ファイルの扱い](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)）および CSS に関するアイデア（[CSS の第一歩](/ja/docs/Learn/CSS/First_steps)）に関する基本的な知識を得ている。 |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,7 +59,7 @@ CSS は可能な限りコンテンツを隠しません。これをやってし�
 
 `scroll` にしておけばコンテンツが少ないとしても、それとは関係なくスクロールバーは常に表示されます。
 
-> **Note:** `overflow` プロパティでは x と y の 2 つの値を渡すことができることに注意してください。2 つのキーワードが指定されている場合、ひとつめは `overflow-x`、2 つめは `overflow-y` として適用されます。それ以外の場合は `overflow-x` と `overflow-y` の両方に同じ値が設定されます。例えば、`overflow: scroll hidden` とした場合は、`overflow-x` は `scroll`、`overflow-y` は `hidden` となります。
+> **メモ:** `overflow` プロパティでは x と y の 2 つの値を渡すことができることに注意してください。2 つのキーワードが指定されている場合、ひとつめは `overflow-x`、2 つめは `overflow-y` として適用されます。それ以外の場合は `overflow-x` と `overflow-y` の両方に同じ値が設定されます。例えば、`overflow: scroll hidden` とした場合は、`overflow-x` は `scroll`、`overflow-y` は `hidden` となります。
 
 コンテンツがボックスに収まらない場合にのみ、スクロールバーを表示する場合は `overflow: auto` を使用します。この場合、スクロールバーを表示するかどうかはブラウザーによります。通常、デスクトップブラウザーはコンテンツがオーバーフローする場合にのみそうします。
 

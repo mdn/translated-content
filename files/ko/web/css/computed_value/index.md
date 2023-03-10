@@ -1,10 +1,6 @@
 ---
 title: 계산값
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/computed_value
 ---
 {{cssref}}
 

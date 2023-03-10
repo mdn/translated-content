@@ -2,11 +2,12 @@
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
 ---
+
 {{HTTPSidebar}}
 
 **`If-None-Match`** 是一个条件式请求首部。对于 GET{{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 请求方法来说，当且仅当服务器上没有任何资源的 {{HTTPHeader("ETag")}} 属性值与这个首部中列出的相匹配的时候，服务器端才会返回所请求的资源，响应码为 {{HTTPStatus("200")}} 。对于其他方法来说，当且仅当最终确认没有已存在的资源的 {{HTTPHeader("ETag")}} 属性值与这个首部中所列出的相匹配的时候，才会对请求进行相应的处理。
 
-对于 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 方法来说，当验证失败的时候，服务器端必须返回响应码 304（Not Modified，未改变）。对于能够引发服务器状态改变的方法，则返回 412（Precondition Failed，前置条件失败）。需要注意的是，服务器端在生成状态码为 304 的响应的时候，必须同时生成以下会存在于对应的 200 响应中的首部：Cache-Control、Content-Location、Date、ETag、Expires 和 Vary 。
+对于 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 方法来说，当验证失败的时候，服务器端必须返回响应码 304（Not Modified，未改变）。对于能够引发服务器状态改变的方法，则返回 412（Precondition Failed，前置条件失败）。需要注意的是，服务器端在生成状态码为 304 的响应的时候，必须同时生成以下会存在于对应的 200 响应中的首部：Cache-Control、Content-Location、Date、ETag、Expires 和 Vary。
 
 {{HTTPHeader("ETag")}} 属性之间的比较采用的是**弱比较算法**，即两个文件除了每个字节都相同外，内容一致也可以认为是相同的。例如，如果两个页面仅仅在页脚的生成时间有所不同，就可以认为二者是相同的。
 

@@ -1,22 +1,22 @@
 ---
 title: Servidor Node sin framework
 slug: Learn/Server-side/Node_server_without_framework
-translation_of: Learn/Server-side/Node_server_without_framework
 ---
+
 {{LearnSidebar}}
 
 Este artículo proporciona un servidor de ficheros estático simple construido con Node.js puro, para aquellos de vosotros que no quieran usar un framework.
 
-[NodeJS](https://nodejs.org/en/) has many frameworks to help you get your server up and running, the most popular being:
+[NodeJS](https://nodejs.org/es/) tiene muchos `frameworks` para ayudarte a poner en marcha tu servidor, siendo los más populares:
 
-- [Express](http://expressjs.com/): The most used framework.
-- [Total](https://www.totaljs.com/): The all-in-one Node.js framework that has everything and does not depend on any other framework or module.
+- [Express](http://expressjs.com/): El framework más utilizado.
+- [Total](https://www.totaljs.com/): El framework Node.js todo en uno que lo tiene todo y no depende de ningún otro framework o módulo.
 
-There is however not a solution that will suit every situation. A developer may need to build his/her own server, without any other dependency.
+Sin embargo, no existe una solución que se adapte a todas las situaciones. Un desarrollador puede necesitar construir su propio servidor, sin ninguna otra dependencia.
 
-## Example
+## Ejemplo
 
-Below is a simple static file server built with NodeJS:
+A continuación se muestra un servidor de archivos estático simple creado con NodeJS:
 
 ```js
 var http = require('http');
@@ -75,6 +75,6 @@ http.createServer(function (request, response) {
 console.log('Server running at http://127.0.0.1:8125/');
 ```
 
-## To do
+## Que Hacer
 
-It would be nice to extend this article to explain how the above code works, and perhaps also show an extended version that serves static files and also handles some kind of dynamic requests too.
+Sería bueno extender este artículo para explicar cómo funciona el código anterior, y quizás también mostrar una versión extendida que sirve archivos estáticos y también maneja algún tipo de solicitudes dinámicas.

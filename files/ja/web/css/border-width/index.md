@@ -1,15 +1,8 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-width
-translation_of: Web/CSS/border-width
 ---
+
 {{CSSRef}}
 
 **`border-width`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
@@ -70,7 +63,7 @@ border-width: unset;
     - `medium`
     - `thick`
 
- > **Note:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか 1つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+ > **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか 1つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 

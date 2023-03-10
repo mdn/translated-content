@@ -9,6 +9,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/getElementsByName
 ---
+
 {{ ApiRef("DOM") }}
 
 Renvoie une liste des éléments portant un {{domxref("element.name","name")}} donné dans le document (X)HTML.

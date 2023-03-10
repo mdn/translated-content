@@ -1,7 +1,8 @@
 ---
 title: clear()
-slug: Web/API/Console/clear
+slug: Web/API/console/clear
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 清空控制台。
@@ -22,7 +23,7 @@ console.clear();
 
 ## 浏览器兼容性
 
-{{Compat("api.console.clear")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -2,6 +2,7 @@
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 **`nodeValue`** は {{domxref("Node")}} インターフェイスのプロパティで、現在のノードの値を返したり設定したりします。
@@ -27,7 +28,7 @@ slug: Web/API/Node/nodeValue
 | {{domxref("ProcessingInstruction")}} | 対象を除く内容物全体                |
 | {{domxref("Text")}}                  | テキストノードの中身                |
 
-> **Note:** `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
+> **メモ:** `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
 
 ## 例
 

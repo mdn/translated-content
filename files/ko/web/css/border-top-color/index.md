@@ -1,13 +1,8 @@
 ---
 title: border-top-color
 slug: Web/CSS/border-top-color
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-top-color
 ---
+
 {{CSSRef}}
 
 **`border-top-color`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽 테두리 색상을 지정합니다. {{cssxref("border-color")}} 또는 {{cssxref("border-top")}} 단축 속성으로도 지정할 수 있습니다.

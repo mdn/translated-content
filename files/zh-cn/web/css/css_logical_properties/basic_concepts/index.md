@@ -3,6 +3,7 @@ title: 逻辑属性的和值的基本概念
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
 original_slug: Web/CSS/CSS_Logical_Properties/Basic_conceptsjie
 ---
+
 {{CSSRef}}
 
 逻辑属性与值详述中为 CSS 中许多属性和值引入相对浮动功能。本文介绍了详述，同时对浮动相关的属性和值做出了解释。

@@ -1,24 +1,27 @@
 ---
 title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
+l10n:
+  sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
-Gecko 31 を搭載した Firefox 31 は、米国時間 2014 年 7 月 22 日にリリースされました。このページでは、開発者に影響する Firefox 31 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+{{FirefoxSidebar}}
+
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
 ハイライト:
 
-- [Web ページから色を選択するスポイトツール](/ja/docs/Tools/Eyedropper)
-- [コンソールのエラーメッセージでフルスタックトレースを表示](/ja/docs/Tools/Web_Console#Error_messages)
-- [ボックスモデルビューで編集が可能](/ja/docs/Tools/Page_Inspector#Box_model_view)
-- [コンソールのメッセージにスタイルを設定する %c 書式](/ja/docs/Tools/Web_Console#Styling_messages)
-- [ネットワークモニタの "cURL としてコピー" コマンド](/ja/docs/Tools/Network_Monitor#Copy_as_cURL)
-- [ソースエディタで Sublime Text のキーバインドをサポート](/ja/docs/tools/Keyboard_shortcuts#Source_editor)
-- [ネットワークモニタのログを残し続けるオプション](/ja/docs/Tools/Network_Monitor#Network_request_list)
-- [Web コンソールで、JavaScript の警告をデフォルトで表示するように変更](/ja/docs/Tools/Web_Console#JavaScript_errors_and_warnings)
-- [Alt+クリックでノードの子孫をすべて展開](/ja/docs/Tools/Page_Inspector#HTML_pane_2)
+- [ウェブページから色を選択するスポイトツール](https://firefox-source-docs.mozilla.org/devtools-user/eyedropper/index.html)
+- [コンソールのエラーメッセージでフルスタックトレースを表示](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
+- [ボックスモデルビューで編集が可能](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)
+- [コンソールのメッセージにスタイルを設定する %c 書式](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
+- [ネットワークモニタの "cURL としてコピー" コマンド](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#copy-as-curl)
+- [ソースエディタで Sublime Text のキーバインドをサポート](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor)
+- [ネットワークモニタのログを残し続けるオプション](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network-request-list)
+- [ウェブコンソールで、JavaScript の警告をデフォルトで表示するように変更](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#javascript-errors-and-warnings)
+- [Alt+クリックでノードの子孫をすべて展開](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#page-inspector-ui-tour-html-pane)
 
 [Firefox 30 から Firefox 31 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-04-28&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-17&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox&list_id=10022921)
 
@@ -36,7 +39,7 @@ Gecko 31 を搭載した Firefox 31 は、米国時間 2014 年 7 月 22 日に�
 
 ### JavaScript
 
-新たな ECMAScript 6 の機能を実装しました:
+新たな ECMAScript 2015 の機能を実装しました。
 
 - 新たな `Array` のメソッド: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})
 - 新たな `Math` の関数: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})
@@ -46,19 +49,24 @@ Gecko 31 を搭載した Firefox 31 は、米国時間 2014 年 7 月 22 日に�
 
 ### インターフェイス/API/DOM
 
-- `KeyboardEvent` のコンストラクタを実装しました ({{Bug(930893)}})。
+- `KeyboardEvent` のコンストラクターを実装しました ({{Bug(930893)}})。
 - Resource Timing API を実装しました ({{Bug("822480")}})。
 - `KeyboardEvent.isComposing` 属性を実装しました ({{Bug(993234)}})。
 - `InputEvent` インターフェイスを実装しました ({{Bug(993253)}})。
 - `InputEvent.isComposing` 属性を実装しました ({{Bug(993253)}})。
 - {{domxref("CSS.escape", "CSS.escape()")}} を実装しました ({{Bug(955860)}})。
-- 他のブラウザと同様に {{event("mousemove")}} がキャンセル可能になりました ({{Bug(704423)}})。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
+- 他のブラウザと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ({{Bug(704423)}})。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
+- {{domxref("Path2D")}} インターフェイスが実装されました。
+- {{domxref("CanvasRenderingContext2D.isPointInPath()")}}、{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}、{{domxref("CanvasRenderingContext2D.clip()")}}、{{domxref("CanvasRenderingContext2D.fill()")}}、{{domxref("CanvasRenderingContext2D.stroke()")}} メソッドがオプションで {{domxref("Path2D")}} オブジェクトを受け付けるように更新されました。
+- {{domxref("HTMLMediaElement.fastSeek()")}} を実装しました。
+- `Connection` インターフェイスは {{domxref("NetworkInformation")}} に名称が変更され、新しい仕様に一致するように変更されました ({{bug(960426)}})。
+- {{domxref("Navigator.sendBeacon()")}} が実装されました。これは、解析や他のデータの非同期送信を、送信するページが読み込まれているかどうかに依存しない方法で行うもので、 {{domxref("Window/unload_event", "unload")}} または {{domxref("Window.beforeunload_event", "beforeunload")}} ハンドラーで使用することができます。
 
 ### MathML
 
-- ISO/IEC CD 14496-22 3rd edtion のセクション 6.3.6 にある [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition) を部分的に実装しました ({{Bug(407059)}})。詳しくは [Fonts for Mozilla's MathML engine](/ja/docs/Mozilla/MathML_Project/Fonts) をご覧ください。また [MathML torture test](/ja/docs/Mozilla/MathML_Project/MathML_Torture_Test) をお試しください。
-- `::-moz-math-stretchy` 疑似要素を削除しました ({{Bug(1000879)}})。
-- 可能であれば、mathvaliant が bold、italic、bold-italic である場合に Unicode の数学用英数字記号を使用するようになりました ({{Bug(930504)}})。
+- ISO/IEC CD 14496-22 3rd edtion のセクション 6.3.6 にある [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition) を部分的に実装しました ({{Bug(407059)}})。詳しくは [MathML torture test](/ja/docs/Mozilla/MathML_Project/MathML_Torture_Test) をお試しください。
+- `::-moz-math-stretchy` 擬似要素を削除しました ({{Bug(1000879)}})。
+- 可能であれば、math valiant が bold、italic、bold-italic である場合に Unicode の数学用英数字記号を使用するようになりました ({{Bug(930504)}})。
 
 ### SVG
 
@@ -74,26 +82,28 @@ _変更なし。_
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
-- [昔から](http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&whitespace_mode=show&root=/cvsroot&subdir=mozilla/browser/base/content&command=DIFF_FRAMESET&file=browser.xul&rev2=1.10&rev1=1.9) "`center`" に設定されていた、`urlbar-wrapper` (以前は `urlbar-container`) の "`align`" 属性を削除しました。これはサードパーティーのテーマに影響を与えることがわかっています。それぞれのテーマにおける正しい修正法は何かを注意深く探るべきですが、同等の効果を維持するのであればテーマに以下の CSS 規則を追加してください:
-  `#urlbar-wrapper { -moz-box-align: center; }`
-- [`nsIDOMWindowUtils.sendQueryContentEvent()`](</ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()>) および [`nsIDOMWindowUtils.sendSelectionSetEvent()`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29) が、省略可能な引数 `aAdditionalFlags` を持ちます。`aReverse` を `true` にして `nsIDOMWindowUtils.sendSelectionSetEvent()` を呼び出している場合、この変更により動作に問題が発生します。`aAdditionalFlags` について詳しくは、[各フラグの説明](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants) (`QUERY_CONTENT_FLAG_*` および `SELECTION_SET_FLAG_*`) をご覧ください。
+- 昔から "`center`" に設定されていた `urlbar-wrapper` （以前は `urlbar-container` ）上の "`align`" 属性が削除されました。これはサードパーティのテーマに影響を与えることが知られています。自分のテーマにとって正しい修正が何であるかはよく見ていく必要がありますが、同等の効果を維持するためには、以下の CSS ルールを追加するとよいでしょう。
+
+  ```css
+  #urlbar-wrapper {
+    -moz-box-align: center;
+  }
+  ```
+
+- `nsIDOMWindowUtils.sendQueryContentEvent()` および `nsIDOMWindowUtils.sendSelectionSetEvent()` が、省略可能な引数 `aAdditionalFlags` を持ちます。`aReverse` を `true` にして `nsIDOMWindowUtils.sendSelectionSetEvent()` を呼び出している場合、この変更により動作に問題が発生します。`aAdditionalFlags` について詳しくは、[各フラグの説明](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#定数) (`QUERY_CONTENT_FLAG_*` および `SELECTION_SET_FLAG_*`) をご覧ください。
 
 ### Add-on SDK
 
 ハイライト:
 
-- [アドオンデバッガ](/ja/docs/Mozilla/Add-ons/Add-on_Debugger)
-- [高水準な BrowserWindow オブジェクトと DOM の windows との間の変換](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#Converting_to_DOM_windows)および[高水準な Tab オブジェクトと XUL の tabs との間の変換](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#Converting_to_XUL_tabs)を行う機能を追加しました。
+- [アドオンデバッガー](/ja/docs/Mozilla/Add-ons/Add-on_Debugger)
+- [高水準な BrowserWindow オブジェクトと DOM の windows との間の変換](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows)および[高水準な Tab オブジェクトと XUL の tabs との間の変換](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs)を行う機能を追加しました。
 - Mac OS X の panel で使用するデフォルトテーマを更新しました。
-- panel に [contentStyle および contentStyleFile](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#Styling_panel_content) オプションを追加しました。
+- panel に [contentStyle および contentStyleFile](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content) オプションを追加しました。
 
 [Firefox 30 から Firefox 31 の間に行われた GitHub コミット](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31)。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。
 
 [Firefox 30 から Firefox 31 の間に解決したバグ](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-04-29&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-18&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962)。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。
-
-## 関連情報
-
-- [Firefox 31 リリースノート](http://www.mozilla.jp/firefox/31.0/releasenotes/)
 
 ### 過去のバージョン
 

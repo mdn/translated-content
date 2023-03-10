@@ -2,6 +2,7 @@
 title: SVGAnimationElement
 slug: Web/API/SVGAnimationElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAnimationElement`** interface is the base interface for all of the animation element interfaces: {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} and {{domxref("SVGAnimateTransformElement")}}.
@@ -36,17 +37,17 @@ _This interface also inherits methods from its parent, {{domxref("SVGElement")}}
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `on...` handler property of this interface.
+Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `on...` handler property of this interface.
 
-- [`beginEvent`](/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event)
+- [`beginEvent`](/zh-CN/docs/Web/API/SVGAnimationElement/beginEvent_event)
   - : Fired when the element local timeline begins to play.
-    Also available via the [`onbegin`](/en-US/docs/Web/API/SVGAnimationElement/onbegin) property.
-- [`endEvent`](/en-US/docs/Web/API/SVGAnimationElement/endEvent_event)
+    Also available via the [`onbegin`](/zh-CN/docs/Web/API/SVGAnimationElement/onbegin) property.
+- [`endEvent`](/zh-CN/docs/Web/API/SVGAnimationElement/endEvent_event)
   - : Fired when at the active end of the animation is reached.
-    Also available via the [`onend`](/en-US/docs/Web/API/SVGAnimationElement/onend) property.
-- [`repeatEvent`](/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event)
+    Also available via the [`onend`](/zh-CN/docs/Web/API/SVGAnimationElement/onend) property.
+- [`repeatEvent`](/zh-CN/docs/Web/API/SVGAnimationElement/repeatEvent_event)
   - : Fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.
-    Also available via the [`onrepeat`](/en-US/docs/Web/API/SVGAnimationElement/onrepeat) property.
+    Also available via the [`onrepeat`](/zh-CN/docs/Web/API/SVGAnimationElement/onrepeat) property.
 
 ## Specifications
 
@@ -54,4 +55,4 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Browser compatibility
 
-{{Compat("api.SVGAnimationElement")}}
+{{Compat}}

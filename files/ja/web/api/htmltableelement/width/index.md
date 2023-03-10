@@ -2,6 +2,7 @@
 title: HTMLTableElement.width
 slug: Web/API/HTMLTableElement/width
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.width`** プロパティは、表の推奨される幅を表します。

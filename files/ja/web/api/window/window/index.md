@@ -2,6 +2,7 @@
 title: window.window
 slug: Web/API/Window/window
 ---
+
 {{ApiRef}}
 
 ## 概要
@@ -17,7 +18,7 @@ window.window.window.window
 
 Web ページに於いては、`window` オブジェクトは*グローバルオブジェクト* でもあります。これは次の事を意味します。
 
-1.  スクリプト中の変数 "global" は、実際には `window` オブジェクトのプロパティです。
+1. スクリプト中の変数 "global" は、実際には `window` オブジェクトのプロパティです。
 
     ```js
     var global = {data: 0};
@@ -25,7 +26,7 @@ Web ページに於いては、`window` オブジェクトは*グローバルオ
     alert(global === window.global); // "true" を表示します。
     ```
 
-2.  ブラウジングコンテキストに於いて `window` は最上位オブジェクトである為、 `window` オブジェクトのメンバへのアクセス時には "`window.`" 接頭辞を省略する事が可能となっています。
+2. ブラウジングコンテキストに於いて `window` は最上位オブジェクトである為、 `window` オブジェクトのメンバへのアクセス時には "`window.`" 接頭辞を省略する事が可能となっています。
 
     ```js
     // 次の 2 行は同じ動作となります。
@@ -45,8 +46,4 @@ Yet another reason to use this property is for libraries which wish to offer OOP
 
 ## 仕様
 
-| Specification                                                                                | Status                           | Comment                                                              |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-window', 'Window.window')}}             | {{Spec2('HTML WHATWG')}} | 最新のスナップショット {{SpecName("HTML5.1")}} から変更なし |
-| {{SpecName('HTML5.1', 'browsers.html#dom-window', 'Window.window')}} | {{Spec2('HTML5.1')}}     | {{SpecName("HTML5 W3C")}} から変更なし                        |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window', 'Window.window')}} | {{Spec2('HTML5 W3C')}}     | `Window.window` の定義を含む最初のスナップショット                   |
+{{Specifications}}

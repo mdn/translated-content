@@ -2,9 +2,10 @@
 title: VRDisplay
 slug: Web/API/VRDisplay
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-[WebVR API](/en-US/docs/Web/API/WebVR_API) 中的 **`VRDisplay`** 代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。
+[WebVR API](/zh-CN/docs/Web/API/WebVR_API) 中的 **`VRDisplay`** 代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。
 
 可以通过调用 {{domxref("Navigator.getVRDisplays()")}} 方法得到所有连接的 VR 设备数组。
 
@@ -17,9 +18,9 @@ slug: Web/API/VRDisplay
 - {{domxref("VRDisplay.depthNear")}}
   - : 获取或设置[眼睛可视锥](https://en.wikipedia.org/wiki/Viewing_frustum)的最近深度。
 - {{domxref("VRDisplay.displayId")}} {{readonlyInline}}
-  - : 返回此 VRDisplay 的标识符，它也用作与 [Gamepad API](/en-US/docs/Web/API/Gamepad_API) 的关联（详见 {{domxref("Gamepad.displayId")}}）。
+  - : 返回此 VRDisplay 的标识符，它也用作与 [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) 的关联（详见 {{domxref("Gamepad.displayId")}}）。
 - {{domxref("VRDisplay.displayName")}} {{readonlyInline}}
-  - : 返回一个不反人类的名称来标识此 `VRDisplay。`
+  - : 返回一个不反人类的名称来标识此 `VRDisplay`。
 - {{domxref("VRDisplay.isConnected")}} {{readonlyInline}}
   - : 返回一个 {{domxref("Boolean")}} 值，指示 `VRDisplay` 是否连接到计算机。
 - {{domxref("VRDisplay.isPresenting")}} {{readonlyInline}}
@@ -68,5 +69,5 @@ TBD.
 
 ## 参见
 
-- [WebVR API 主页](/en-US/docs/Web/API/WebVR_API)。
+- [WebVR API 主页](/zh-CN/docs/Web/API/WebVR_API)。
 - [MozVr.com](http://mozvr.com/) — 来源于 Mozilla VR 团队的演示、下载以及其他资源。

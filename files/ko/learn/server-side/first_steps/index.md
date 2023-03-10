@@ -1,7 +1,6 @@
 ---
 title: Server-side website programming first steps
 slug: Learn/Server-side/First_steps
-translation_of: Learn/Server-side/First_steps
 ---
 {{LearnSidebar}}
 

@@ -2,6 +2,7 @@
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
+
 {{JSRef}}
 
 **`localeCompare()`** 回傳一個數字，用來表示其與被比較的字串的先後順序。

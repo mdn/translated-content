@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 original_slug: Web/CSS/CSS_Flow_Layout/Введение_в_контексты_форматирования
 ---
+
 {{CSSRef}}
 
 В этой статье представлена концепция контекстов форматирования (formatting context). Существует несколько типов контекстов форматирования, например, блочный контекст форматирования (block formatting context, BFC), строчный контекст форматирования (inline formatting context), флексовый контекст форматирования (flex formatting context). В статье даны основы того, как они себя ведут, и как вы можете использовать это поведение.

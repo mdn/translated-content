@@ -1,9 +1,9 @@
 ---
 title: 웹소켓 서버 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 original_slug: WebSockets/Writing_WebSocket_servers
 ---
+
 {{APIRef("Websockets API")}}
 
 ## 개요
@@ -30,12 +30,14 @@ original_slug: WebSockets/Writing_WebSocket_servers
 
 당신이 웹 소켓 서버를 개발 중이라도, 클라이언트는 여전히 웹 소켓 핸드쉐이킹 과정을 시작합니다. 따라서, 당신은 클라이언트의 요청을 이해하기 위한 방법을 이해해야합니다. 클라이언트는 아래와 같아 보이는 매우 표준적인 HTTP 요청을 보낼것입니다.(HTTP 버전은 반드시 1.1. 혹은 그 이상이어하며, 반드시 GET방식이어야합니다.)
 
-    GET /chat HTTP/1.1
-    Host: example.com:8000
-    Upgrade: websocket
-    Connection: Upgrade
-    Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
-    Sec-WebSocket-Version: 13
+```
+GET /chat HTTP/1.1
+Host: example.com:8000
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+Sec-WebSocket-Version: 13
+```
 
 이외에도 클라이언트는 여러 메세지나 서브프로토콜을 추가해 보낼 수도 있습니다. `User-Agent`, `Referer`, `Cookie`와 같은 공통 헤더나, 인증 헤더도 말이죠. 자세한 [사항](#Miscellaneous)은 다음을 참조하세요. 원하는 대로 요청에 무엇이든지 첨부하여 보낼 수 있으며 웹소켓과 관련이 없을 경우 무시합니다. 통상적으로, 리버스 프록시가 이미 그런 기능을 담당하고 있을 겁니다.
 
@@ -51,10 +53,12 @@ original_slug: WebSockets/Writing_WebSocket_servers
 
 위와 같은 요청을 받으면 서버 역시도 HTTP 구조의 응답을 보내주어야 합니다. 자세한 내용은 아래와 같습니다.(각각의 헤더 끝에는 \r\n을 그리고 가장 마지막에는 한번 더 \r\n을 넣는걸 잊지 마세요.)
 
-    HTTP/1.1 101 Switching Protocols
-    Upgrade: websocket
-    Connection: Upgrade
-    Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+```
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+```
 
 Additionally, the server can decide on extension/subprotocol requests here; see [Miscellaneous](#Miscellaneous) for details. The `Sec-WebSocket-Accept` part is interesting. The server must derive it from the `Sec-WebSocket-Key` that the client sent. To get it, concatenate the client's `Sec-WebSocket-Key` and "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" together (it's a "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), take the [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) of the result, and return the [base64](https://en.wikipedia.org/wiki/Base64) encoding of the hash.
 
@@ -80,7 +84,7 @@ Either the client or the server can choose to send a message at any time — tha
  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
 +-+-+-+-+-------+-+-------------+-------------------------------+
 |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
+|I|S|S|S| (4)   |A|     (7)     |             (16/64)           |
 |N|V|V|V|       |S|             |   (if payload len==126/127)   |
 | |1|2|3|       |K|             |                               |
 +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
@@ -115,9 +119,9 @@ FIN 비트는 이 메세지가 마지막임을 나타냅니다. 만약 FIN 비�
 
 수신한 프레임으로부터 payload 데이터를 읽기 위해서는 payload length 필드를 읽어야 합니다. 불행히도 이는 약간 복잡한 작업을 거치는데 아래 순서대로 처리해 주세요.
 
-1.  9번째부터 15번재까지의 비트를 읽습니다. 이를 unsigned integer로 취급한 다음 값이 125거나 이보다 작을 경우 이 자체가 payload length 입니다. 이 경우에는 2, 3 과정은 필요 없습니다. 하지만 126이면 2번으로, 127일 경우 3번으로 가주세요
-2.  다음 16비트를 읽습니다. 이를 unsigned integer로 처리하고 payload length 값으로 사용합니다.
-3.  다음 64비트를 읽습니다. 이를 unsigned integer로 처리하고 payload length 값으로 사용합니다. ([최상위 비트](https://ko.wikipedia.org/wiki/%EC%B5%9C%EC%83%81%EC%9C%84_%EB%B9%84%ED%8A%B8)는 항상 0이어야 합니다.)
+1. 9번째부터 15번째까지의 비트를 읽습니다. 이를 unsigned integer로 취급한 다음 값이 125거나 이보다 작을 경우 이 자체가 payload length 입니다. 이 경우에는 2, 3 과정은 필요 없습니다. 하지만 126이면 2번으로, 127일 경우 3번으로 가주세요
+2. 다음 16비트를 읽습니다. 이를 unsigned integer로 처리하고 payload length 값으로 사용합니다.
+3. 다음 64비트를 읽습니다. 이를 unsigned integer로 처리하고 payload length 값으로 사용합니다. ([최상위 비트](https://ko.wikipedia.org/wiki/%EC%B5%9C%EC%83%81%EC%9C%84_%EB%B9%84%ED%8A%B8)는 항상 0이어야 합니다.)
 
 ### 마스킹된 Payload 데이터 디코딩하기
 
@@ -126,10 +130,12 @@ MASK 비트가 설정되어 있디만 32비트 사이즈의 Masking-Key 필드 �
 
 If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can go ahead and read that number of bytes from the socket. Let's call the data **ENCODED**, and the key **MASK**. To get **DECODED**, loop through the octets (bytes a.k.a. characters for text data) of **ENCODED** and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):
 
-    var DECODED = "";
-    for (var i = 0; i < ENCODED.length; i++) {
-        DECODED[i] = ENCODED[i] ^ MASK[i % 4];
-    }
+```js
+var DECODED = "";
+for (var i = 0; i < ENCODED.length; i++) {
+    DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+}
+```
 
 이제 **DECODED** 데이터를 가지고 프로토콜에 맞게 활용하면 됩니다.
 
@@ -186,21 +192,27 @@ Think of a subprotocol as a custom [XML schema](https://en.wikipedia.org/wiki/XM
 
 클라이언트는 핸드쉐이크 요청 시에 특정한 서브프로콜의 목록을 같이 보낼 수 있습니다. **Sec-WebSocket-Protocol** 헤더에 사용하기를 원하는 서브프로토콜의 목록을 같이 보냅니다.
 
-    GET /chat HTTP/1.1
-    ...
-    Sec-WebSocket-Protocol: soap, wamp
+```
+GET /chat HTTP/1.1
+...
+Sec-WebSocket-Protocol: soap, wamp
+```
 
 또는 아래와 같이 보낼 수도 있습니다.:
 
-    ...
-    Sec-WebSocket-Protocol: soap
-    Sec-WebSocket-Protocol: wamp
+```
+...
+Sec-WebSocket-Protocol: soap
+Sec-WebSocket-Protocol: wamp
+```
 
 클라이언트로부터 서브프로토콜 요청을 받으면, 서버는 그 중에서 자신이 지원할 수 있는 서브프로토콜을 **하나** 골라야 합니다. 만약 클라이언트가 보낸 목록 중, 여러개를 지원할 수 있다면 지원하는 목록 중 가장 첫번째 서브프로토콜을 보내주세요.
 
 Imagine our server can use both `soap` and `wamp`. Then, in the response handshake, it'll send:
 
-    Sec-WebSocket-Protocol: soap
+```
+Sec-WebSocket-Protocol: soap
+```
 
 > **경고:** `서버는 반드시 하나의 Sec-Websocket-Protocol 헤더만을 송신해야 합니다.` > `만약 서버가 어떠한 서브프로토콜도 지원하고 싶지 않다면 Sec-Websocket-Protocol 헤더를 빼고 보내주세요. 빈 값을 넣어서 보내도 안됩니다.`
 > 서버가 아무 서브프로토콜을 지원하지 않겠다고 한다면 클라이언트는 연결을 닫아버릴수도 있습니다.

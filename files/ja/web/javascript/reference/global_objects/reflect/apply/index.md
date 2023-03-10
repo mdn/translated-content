@@ -1,14 +1,8 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.apply()`** メソッドは、指定された引数とともに対象となる関数を呼び出します。
@@ -68,9 +62,7 @@ Reflect.apply(''.charAt, 'ponies', [3])
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

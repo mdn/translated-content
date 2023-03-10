@@ -2,6 +2,7 @@
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 ---
+
 {{jsSidebar("Objects")}}
 
 **`eval()`** 函数会将传入的字符串当做 JavaScript 代码进行执行。
@@ -45,7 +46,7 @@ var expression = new String("2 + 2");
 eval(expression.toString());
 ```
 
-如果你间接的使用 `eval()`，比如通过一个引用来调用它，而不是直接的调用 `eval`。 从 [ECMAScript 5](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 起，它工作在全局作用域下，而不是局部作用域中。这就意味着，例如，下面的代码的作用声明创建一个全局函数，并且 `eval` 中的这些代码在执行期间不能在被调用的作用域中访问局部变量。
+如果你间接的使用 `eval()`，比如通过一个引用来调用它，而不是直接的调用 `eval`。从 [ECMAScript 5](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 起，它工作在全局作用域下，而不是局部作用域中。这就意味着，例如，下面的代码的作用声明创建一个全局函数，并且 `eval` 中的这些代码在执行期间不能在被调用的作用域中访问局部变量。
 
 ```js
 function test() {
@@ -54,16 +55,16 @@ function test() {
   var geval = eval; // 等价于在全局作用域调用
   console.log(geval('x + y')); // 间接调用，使用全局作用域，throws ReferenceError 因为`x`未定义
   (0, eval)('x + y'); // 另一个间接调用的例子
-​}
+}
 ```
 
 ## 永远不要使用 `eval`！
 
-`eval()` 是一个危险的函数， 它使用与调用者相同的权限执行代码。如果你用 `eval()` 运行的字符串代码被恶意方（不怀好意的人）修改，您最终可能会在您的网页/扩展程序的权限下，在用户计算机上运行恶意代码。更重要的是，第三方代码可以看到某一个 `eval()` 被调用时的作用域，这也有可能导致一些不同方式的攻击。相似的 {{jsxref("Global_Objects/Function", "Function")}} 就不容易被攻击。
+`eval()` 是一个危险的函数，它使用与调用者相同的权限执行代码。如果你用 `eval()` 运行的字符串代码被恶意方（不怀好意的人）修改，您最终可能会在您的网页/扩展程序的权限下，在用户计算机上运行恶意代码。更重要的是，第三方代码可以看到某一个 `eval()` 被调用时的作用域，这也有可能导致一些不同方式的攻击。相似的 {{jsxref("Global_Objects/Function", "Function")}} 就不容易被攻击。
 
 `eval()` 通常比其他替代方法更慢，因为它必须调用 JS 解释器，而许多其他结构则可被现代 JS 引擎进行优化。
 
-此外，现代 JavaScript 解释器将 JavaScript 转换为机器代码。这意味着任何变量命名的概念都会被删除。因此，任意一个 eval 的使用都会强制浏览器进行冗长的变量名称查找，以确定变量在机器代码中的位置并设置其值。另外，新内容将会通过 `eval()` 引进给变量，比如更改该变量的类型，因此会强制浏览器重新执行所有已经生成的机器代码以进行补偿。但是（谢天谢地）存在一个非常好的 eval 替代方法：只需使用 [window.Function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)。这有个例子方便你了解如何将`eval()`的使用转变为`Function()`。
+此外，现代 JavaScript 解释器将 JavaScript 转换为机器代码。这意味着任何变量命名的概念都会被删除。因此，任意一个 eval 的使用都会强制浏览器进行冗长的变量名称查找，以确定变量在机器代码中的位置并设置其值。另外，新内容将会通过 `eval()` 引进给变量，比如更改该变量的类型，因此会强制浏览器重新执行所有已经生成的机器代码以进行补偿。但是（谢天谢地）存在一个非常好的 eval 替代方法：只需使用 [window.Function](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。这有个例子方便你了解如何将`eval()`的使用转变为`Function()`。
 
 使用 eval 的糟糕代码：
 
@@ -87,7 +88,7 @@ console.log(looseJsonParse(
 ))
 ```
 
-比较上面的两个代码片段，两个代码片段似乎是以相同的方式工作，但再想一想：eval 的这个代码的速度要慢得多。注意`c: new Date()`在执行体中。在没有 eval 的函数中，对象在全局范围内被用来进行计算，因此浏览器可以放心的假设 `Date` 是来自 `window.Date` 的而不是一个名为 `Date` 的局部变量。 然而，在使用 `eval()` 的代码中，浏览器不能假设这一点，因为如果您的代码是下面这个：
+比较上面的两个代码片段，两个代码片段似乎是以相同的方式工作，但再想一想：eval 的这个代码的速度要慢得多。注意`c: new Date()`在执行体中。在没有 eval 的函数中，对象在全局范围内被用来进行计算，因此浏览器可以放心的假设 `Date` 是来自 `window.Date` 的而不是一个名为 `Date` 的局部变量。然而，在使用 `eval()` 的代码中，浏览器不能假设这一点，因为如果您的代码是下面这个：
 
 ```js example-bad
 function Date(n){
@@ -103,7 +104,7 @@ console.log(looseJsonParse(
 
 因此，在 `eval()` 版本的代码中，浏览器被迫进行高代价的查找调用以检查是否存在名为 `Date()` 的任何局部变量。与 `Function()` 相比，这是非常低效的。
 
-在类似的情况下，如果您确实希望能够从 `Function()` 内部的代码调用 `Date` 函数，该怎么办？ 你应该躲避并退回到 `eval()` 吗？绝对不是，永远不要这么做。而是尝试下面的方法。
+在类似的情况下，如果您确实希望能够从 `Function()` 内部的代码调用 `Date` 函数，该怎么办？你应该躲避并退回到 `eval()` 吗？绝对不是，永远不要这么做。而是尝试下面的方法。
 
 ```js example-good
 function Date(n){
@@ -121,13 +122,13 @@ console.log(runCodeWithDateFunction(
 
 由于三重嵌套函数，上面的代码似乎效率低下，但让我们分析一下上述有效方法的好处：
 
-1\. 它使得传递给`runCodeWithDateFunction`的字符串中的代码更少；
+1. 它使得传递给`runCodeWithDateFunction`的字符串中的代码更少；
 
-2\. 函数调用开销很小，使得代码尺寸小得多，值得获益；
+2. 函数调用开销很小，使得代码尺寸小得多，值得获益；
 
-3\. `Function()`更容易让你的代码利用特性修饰 `"use strict"`；
+3. `Function()`更容易让你的代码利用特性修饰 `"use strict"`；
 
-4\. 代码不使用 `eval()`，使其比其他方式快几个数量级。
+4. 代码不使用 `eval()`，使其比其他方式快几个数量级。
 
 最后，我们来看看简化版。使用如上所示的`Function()`，您可以更有效地缩小传递给`runCodeWithDateFunction`的代码字符串，因为函数参数名称也可以缩小，如下面的缩小代码所示。
 
@@ -242,7 +243,7 @@ eval(z);           // returns 42
 
 ### 使用 `eval` 执行一串 JavaScript 语句
 
-下面的例子使用 `eval()` 来执行 `str` 字符串。这个字符串包含了如果 `x` 等于 5，就打开一个 Alert 对话框并对 `z` 赋值 42，否则就对 `z` 赋值 0 的 JavaScript 语句。 当第二个声明被执行，`eval()` 将会令字符串被执行，并最终返回赋值给 `z` 的 42。
+下面的例子使用 `eval()` 来执行 `str` 字符串。这个字符串包含了如果 `x` 等于 5，就打开一个 Alert 对话框并对 `z` 赋值 42，否则就对 `z` 赋值 0 的 JavaScript 语句。当第二个声明被执行，`eval()` 将会令字符串被执行，并最终返回赋值给 `z` 的 42。
 
 ```js
 var x = 5;
@@ -296,7 +297,7 @@ var fct2 = eval(fctStr2)  // 返回一个函数
 
 ## Firefox 相关
 
-- 从历史上看，`eval()` 有一个可选的第二个参数，指定上下文执行对象。这个参数是非标准的，并且明确地从 Firefox 4 中删除。请参阅 {{bug(531675)}} 。
+- 从历史上看，`eval()` 有一个可选的第二个参数，指定上下文执行对象。这个参数是非标准的，并且明确地从 Firefox 4 中删除。请参阅 [Firefox bug 531675](https://bugzil.la/531675)。
 
 ## 参见
 

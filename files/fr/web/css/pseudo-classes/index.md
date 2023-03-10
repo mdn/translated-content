@@ -9,6 +9,7 @@ tags:
   - Sélecteur
 translation_of: Web/CSS/Pseudo-classes
 ---
+
 {{CSSRef}}
 
 Une **pseudo-classe** est un mot-clé qui peut être ajouté à un sélecteur afin d'indiquer l'état spécifique dans lequel l'élément doit être pour être ciblé par la déclaration. La pseudo-classe {{cssxref(":hover")}}, par exemple, permettra d'appliquer une mise en forme spécifique lorsque l'utilisateur survole l'élément ciblé par le sélecteur (changer la couleur d'un bouton par exemple).
@@ -138,106 +139,7 @@ p:nth-child(2n+1) {
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Fullscreen')}}</td>
-      <td>{{Spec2('Fullscreen')}}</td>
-      <td>Définition de <code>:fullscreen</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#pseudo-classes')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        Définit lorsque des sélecteurs particuliers correspondent à des éléments
-        HTML.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS4 Selectors')}}</td>
-      <td>{{Spec2('CSS4 Selectors')}}</td>
-      <td>
-        <p>
-          Définition de <code>:any-link</code>, <code>:local-link</code>,
-          <code>:scope</code>, <code>:active-drop-target</code>,
-          <code>:valid-drop-target</code>, <code>:invalid-drop-target</code>,
-          <code>:current</code>, <code>:past</code>, <code>:future</code>,
-          <code>:placeholder-shown</code>, <code>:user-error</code>,
-          <code>:blank</code>, <code>:nth-match()</code>,
-          <code>:nth-last-match()</code>, <code>:nth-column()</code>,
-          <code>:nth-last-column()</code> et <code>:matches()</code>.
-        </p>
-        <p>
-          Changement afin que <code>:empty</code> se comporte comme
-          {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}.
-        </p>
-        <p>
-          Aucune modification significative pour les pseudo-classes définies
-          avec {{SpecName('CSS3 Selectors')}} et
-          {{SpecName('HTML5 W3C')}}.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C')}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Copie les éléments pertinents de la spécification HTML WHATWG</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3 Basic UI')}}</td>
-      <td>{{Spec2('CSS3 Basic UI')}}</td>
-      <td>
-        Définition de <code>:default</code>, <code>:valid</code>,
-        <code>:invalid</code>, <code>:in-range</code>,
-        <code>:out-of-range</code>, <code>:required</code>,
-        <code>:optional</code>, <code>:read-only</code> et
-        <code>:read-write</code>, mais sans la sémantique associée.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3 Selectors')}}</td>
-      <td>{{Spec2('CSS3 Selectors')}}</td>
-      <td>
-        Définition de <code>:target</code>, <code>:root</code>,
-        <code>:nth-child()</code>, <code>:nth-last-of-child()</code>,
-        <code>:nth-of-type()</code>, <code>:nth-last-of-type()</code>,
-        <code>:last-child</code>, <code>:first-of-type</code>,
-        <code>:last-of-type</code>, <code>:only-child</code>,
-        <code>:only-of-type</code>, <code>:empty</code> et
-        <code>:not()</code>.<br />Définition de la syntaxe pour
-        <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code> et
-        <code>:indeterminate</code>, mais sans la sémantique associée.<br />Pas
-        de modification significative pour les pseudo-classes définies avec
-        {{SpecName('CSS2.1')}}.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS2.1')}}</td>
-      <td>{{Spec2('CSS2.1')}}</td>
-      <td>
-        Définition de <code>:lang()</code>, <code>:first-child</code>,
-        <code>:hover</code> et <code>:focus</code>.<br />Aucune modification
-        significative pour les pseudo-classes définies avec
-        {{SpecName('CSS1')}}.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS1')}}</td>
-      <td>{{Spec2('CSS1')}}</td>
-      <td>
-        Définition de <code>:link</code>, <code>:visited</code> et
-        <code>:active</code>, mais sans la sémantique associée.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Voir aussi
 

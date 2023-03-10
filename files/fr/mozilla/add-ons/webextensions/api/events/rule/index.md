@@ -13,6 +13,7 @@ tags:
   - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events/Rule
 ---
+
 {{AddonSidebar()}}
 
 Description d'une règle déclarative pour la gestion des événements.
@@ -32,9 +33,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `priority`{{optional_inline}}
   - : `integer`. Priorité optionnelle de cette règle. Par défaut à 100.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events.Rule")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -44,7 +45,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,4 +73,4 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

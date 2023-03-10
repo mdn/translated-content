@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sinh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.sinh()`** renvoie le sinus hyperbolique d'un nombre, dont la formule, utilisant la constante {{jsxref("Math.E","e")}}, est :
@@ -66,14 +67,11 @@ Math.sinh = Math.sinh || function(x){
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires        |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.sinh")}}
+{{Compat}}
 
 ## Voir aussi
 

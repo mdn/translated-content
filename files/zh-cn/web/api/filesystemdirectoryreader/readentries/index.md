@@ -2,46 +2,48 @@
 title: FileSystemDirectoryReader.readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
 ---
-{{APIRef("File System API")}}
 
-{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef("File and Directory Entries API")}}
 
-The {{domxref("FileSystemDirectoryReader")}} interface's **`readEntries()`** method retrieves the directory entries within the directory being read and delivers them in an array to a provided callback function. The objects in the array are all based upon {{domxref("FileSystemEntry")}}. Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories.
+{{domxref("FileSystemDirectoryReader")}} 接口的 **`readEntries()`** 方法用于检索正在读取的目录中的目录条目，并将它们以数组的形式传递给提供的回调函数。
 
-## Syntax
+数组中的对象都是 {{domxref("FileSystemEntry")}} 实例。它们要么是代表标准文件的 {{domxref("FileSystemFileEntry")}} 对象，要么是代表目录的 {{domxref("FileSystemDirectoryEntry")}} 对象。
 
-```plain
-readEntries(successCallback[, errorCallback]);
+## 语法
+
+```js
+readEntries(successCallback)
+readEntries(successCallback, errorCallback)
 ```
 
-### Parameters
+### 参数
 
 - `successCallback`
-  - : A function which is called when the directory's contents have been retrieved. The function receives a single input parameter: an array of file system entry objects, each based on {{domxref("FileSystemEntry")}}. Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories. If there are no files left, or you've already called `readEntries()` on this {{domxref("FileSystemDirectoryReader")}}, the array is empty.
+  - : 在目录中的内容被成功检索时调用的回调函数。该函数接收一个输入参数——文件系统条目对象的数组，其中的每一个对象都基于 {{domxref("FileSystemEntry")}}。通常，它们要么是代表标准文件的 {{domxref("FileSystemFileEntry")}} 对象，要么是代表目录的 {{domxref("FileSystemDirectoryEntry")}} 对象。如果目录中没有剩余的文件，或是你已经调用过 {{domxref("FileSystemDirectoryReader")}} 的 `readEntries()` 方法，则数组为空。
 - `errorCallback` {{optional_inline}}
-  - : A callback function which is called if an error occurs while reading from the directory. It receives one input parameter: a {{domxref("FileError")}} object describing the error which occurred.
+  - : 一个在目录读取发生错误时调用的回调函数。它接收一个输入参数——一个 {{domxref("DOMException")}} 对象，用于描述发生的错误。
 
-### Return value
+### 返回值
 
-{{jsxref("undefined")}}.
+无（{{jsxref("undefined")}}）。
 
-## Example
+## 示例
 
-{{page("/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry", "Example")}}
+参见 [`DataTransferItem.webkitGetAsEntry()`](/zh-CN/docs/Web/API/DataTransferItem/webkitGetAsEntry#示例) 以获取使用此方法的示例代码。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-This API has no official W3C or WHATWG specification.
+## 浏览器兼容性
 
-## Browser compatibility
+{{Compat}}
 
-{{Compat("api.FileSystemDirectoryReader.readEntries")}}
+在 Chrome 77 上，`readEntries()` 只会返回前 100 个 `FileSystemEntry` 实例。为了获取所有的实例，请多次调用 `readEntries()`。
 
-## See also
+## 参见
 
-- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
+- [文件与目录条目 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystem")}}

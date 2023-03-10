@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -75,6 +76,6 @@ Vous pouvez utiliser SVG et le navigateur mettra à l'échelle appropriée votre
 
 > **Note :** si vous utilisez un programme comme Inkscape pour créer un SVG, vous voudrez peut-être l'enregistrer en tant que "SVG simple". Firefox peut être gêné par des espaces de noms spéciaux, et ne pas afficher votre icône.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.icons")}}
+{{Compat}}

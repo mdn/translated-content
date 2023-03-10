@@ -1,14 +1,8 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
+
 {{JSRef}}
 
 **`TypedArray.of()`** メソッドは、様々な数の引数をもつ新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)を生成します。このメソッドは {{jsxref("Array.of()")}} とほぼ同じです。
@@ -64,9 +58,7 @@ Int16Array.of(undefined);    // Int16Array [ 0 ]
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.of', '%TypedArray%.of')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

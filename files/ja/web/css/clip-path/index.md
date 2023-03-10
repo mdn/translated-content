@@ -1,17 +1,8 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.clip-path
-translation_of: Web/CSS/clip-path
 ---
+
 {{CSSRef}}
 
 **`clip-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分を表示するかを設定するクリッピング領域を作ります。具体的には、領域の内部の部分は表示され、外側の部分は非表示になります。
@@ -96,7 +87,7 @@ clip-path: unset;
 - `none`
   - : クリッピングパスは作成されません。
 
-> **Note:** 計算値が **`none`** 以外の場合は、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を生成します。これは、 {{cssxref("opacity")}} が `1` 以外の値の場合と同様です。
+> **メモ:** 計算値が **`none`** 以外の場合は、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を生成します。これは、 {{cssxref("opacity")}} が `1` 以外の値の場合と同様です。
 
 ## 公式定義
 

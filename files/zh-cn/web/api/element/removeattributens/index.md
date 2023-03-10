@@ -2,6 +2,7 @@
 title: Element.removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttributeNS` 移除元素的指定属性

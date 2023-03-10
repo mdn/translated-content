@@ -1,14 +1,8 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Namespace
-  - Reference
-  - 名前空間
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
+
 {{JSRef}}
 
 **`Math`** は、数学的な定数と関数を提供するプロパティとメソッドを持つ、組み込みのオブジェクトです。関数オブジェクトではありません。
@@ -19,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 
 他のグローバルオブジェクトと異なり、`Math` はコンストラクタではありません。`Math` オブジェクトのすべてのプロパティとメソッドは、静的です。円周率を表す定数 π は、`Math.PI` として参照でき、正弦関数は、 `Math.sin(x)` として呼び出すことができます (ここでの `x` は、メソッドの引数です)。定数は、 JavaScript における実数での完全な精度で定義されています。
 
-> **Note:** **メモ:** 多くの `Math` 関数の精度は*実装に依存します*。
+> **メモ:** 多くの `Math` 関数の精度は*実装に依存します*。
 >
 > これは、ブラウザーごとに結果が異なる場合があることを意味し、同じ JavaScript エンジン上であっても、 OS やアーキテクチャが異なれば結果が異なる場合があります。
 
@@ -137,7 +131,7 @@ function radToDeg(rad) {
 
 正三角形の高さを計算したい場合、側辺の長さが 100 であるとわかっている場合は、*隣の角に正接を乗じた長さは、反対側と等しくなる*という数式を使用することができます。
 
-![](https://mdn.mozillademos.org/files/14829/trigonometry.png)
+![](trigonometry.png)
 
 JavaScript では、次のようにして実現することができます。
 
@@ -162,9 +156,7 @@ random(1, 10);
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math-object', 'Math')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

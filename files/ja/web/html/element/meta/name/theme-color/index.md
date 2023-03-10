@@ -1,16 +1,9 @@
 ---
 title: theme-color
 slug: Web/HTML/Element/meta/name/theme-color
-tags:
-  - Attribute
-  - HTML
-  - HTML document metadata
-  - Reference
-  - metadata
-translation_of: Web/HTML/Element/meta/name/theme-color
-browser-compat: html.elements.meta.name.theme-color
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`theme-color`** の値は {{htmlelement("meta")}} 要素の {{htmlattrxref("name", "meta")}} 属性において、ユーザーエージェントがページやその周辺のユーザーインターフェイスの表示をカスタマイズするために使用すべき推奨色を示します。指定された場合、 {{htmlattrxref("content", "meta")}} 属性には有効な CSS の {{cssxref("&lt;color&gt;")}} が含まれていなければなりません。
 

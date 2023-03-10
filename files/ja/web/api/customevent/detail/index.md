@@ -2,6 +2,7 @@
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
 ---
+
 {{APIRef("DOM")}}
 
 **`detail`** は {{domxref("CustomEvent")}} インターフェイスの読み取り専用プロパティで、イベントを初期化する際に渡された何らかのデータを返します。

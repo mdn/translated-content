@@ -1,7 +1,6 @@
 ---
 title: Cooperative Scheduling of Background Tasks API
 slug: Web/API/Background_Tasks_API
-translation_of: Web/API/Background_Tasks_API
 ---
 {{DefaultAPISidebar("Background Tasks")}}
 
@@ -382,7 +381,7 @@ function updateDisplay() {
 
 #### Adding text to the log
 
-`log()` 함수는 지정된 텍스트를 로그에 추가합니다. DOM을 바로 수정하는것이 안전한지 아닌지 `log()` 함수가 호출될때 우리는 알지 못합니다. 때문에 업데이트가 안전할 때 까지 로그 텍스트를 캐싱합니다. 위의 ` updateDisplay``() ` 코드에서, 애니메이션 프레임이 업데이트 될 때 실제로 로그 요소에 기록된 텍스트를 추가하는 코드를 찾을 수 있습니다.
+`log()` 함수는 지정된 텍스트를 로그에 추가합니다. DOM을 바로 수정하는것이 안전한지 아닌지 `log()` 함수가 호출될때 우리는 알지 못합니다. 때문에 업데이트가 안전할 때 까지 로그 텍스트를 캐싱합니다. 위의 `updateDisplay()` 코드에서, 애니메이션 프레임이 업데이트 될 때 실제로 로그 요소에 기록된 텍스트를 추가하는 코드를 찾을 수 있습니다.
 
 ```js
 function log(text) {
@@ -462,7 +461,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 - `count` 는 태스크에서 로그로 출력할 문자열 수입니다.
 - `text` 는 `count`로 지정된 횟수만큼 로그에 출력하는 텍스트입니다.
 
-그러면 각 태스크는 `enqueueTask()`를 호출하여 대기열에 추가되고 ` logTaskHandler``() `가 핸들러 함수로 전달됩니다. 함수가 호출될 때 함수에 전달할 객체로 `taskData` 객체를 사용합니다.
+그러면 각 태스크는 `enqueueTask()`를 호출하여 대기열에 추가되고 `logTaskHandler()` 가 핸들러 함수로 전달됩니다. 함수가 호출될 때 함수에 전달할 객체로 `taskData` 객체를 사용합니다.
 
 ### Result
 
@@ -470,11 +469,11 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 {{ EmbedLiveSample('Example', 600, 700) }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

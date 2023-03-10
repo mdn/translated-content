@@ -1,16 +1,8 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - i18n
-  - l10n
-  - recipe:css-property
-translation_of: Web/CSS/line-break
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`line-break`** 속성은 한중일(CJK) 3개국어의 텍스트 줄을 어디서 바꿀지 지정합니다.

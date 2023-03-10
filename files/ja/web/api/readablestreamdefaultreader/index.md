@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`ReadableStreamDefaultReader`** インターフェイスは、ネットワークから提供されたストリームデータ（フェッチ要求など）を読み取るために使用できるデフォルトのリーダーを表します。
@@ -63,9 +64,7 @@ fetch("https://www.example.org/").then((response) => {
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#default-reader-class','ReadableStreamDefaultReader')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Flex 项排序
 slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 ---
+
 {{CSSRef}}
 
 Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。在本文中，我们将介绍使用 Flexbox 时如何更改内容的视觉顺序。我们还将从无障碍的角度考虑重新排序项目的影响。
@@ -27,7 +28,7 @@ Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。
 
 ![The items are displayed in a column in reverse order starting at the bottom line.](align11.png)
 
-请记住，起始行与写入模式有关。 上面两个示例说明了 `row` 和 `row-reverse` 在从左到右的语言是怎么工作的如英语。如果您使用的是右到左的语言，如阿拉伯语，则 `row` 的起始行将在右边， `row-reverse` 起始行会在左边。
+请记住，起始行与写入模式有关。上面两个示例说明了 `row` 和 `row-reverse` 在从左到右的语言是怎么工作的如英语。如果您使用的是右到左的语言，如阿拉伯语，则 `row` 的起始行将在右边， `row-reverse` 起始行会在左边。
 
 ![Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left.](order-rtl.png)
 
@@ -41,7 +42,7 @@ Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。
 
 > “作者不得使用 flex-flow / flex-direction 的顺序或反向值来代替正确的源顺序，因为这会破坏文档的无障碍。_”_
 
-> **备注：** 近几年来，Firefox 出现了一个错误，即它会尝试遵循视 ​​ 觉顺序而不是源顺序，从而使其行为与其他浏览器不同。现在，此问题已得到解决。您应始终将源顺序作为文档的逻辑顺序，因为所有最新的用户代理都将遵循该规范并遵循该规范。
+> **备注：** 近几年来，Firefox 出现了一个错误，即它会尝试遵循视觉顺序而不是源顺序，从而使其行为与其他浏览器不同。现在，此问题已得到解决。您应始终将源顺序作为文档的逻辑顺序，因为所有最新的用户代理都将遵循该规范并遵循该规范。
 
 在下面的实时示例中，我添加了一种焦点样式，以便当您从一个链接到另一个标签时，可以看到突出显示的样式。如果使用`flex-direction`更改顺序，则可以看到制表符顺序如何继续遵循源中列出的项目的顺序。
 

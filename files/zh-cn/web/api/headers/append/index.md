@@ -2,9 +2,10 @@
 title: Headers.append()
 slug: Web/API/Headers/append
 ---
+
 {{APIRef("Fetch")}}
 
-在一个`Headers`对象内部，{{domxref("Headers")}}接口的**`append()`**方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。
+在一个`Headers`对象内部，{{domxref("Headers")}}接口的 **`append()`** 方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。
 
 {{domxref("Headers.set")}} 和 `append()` 两者之间的不同之处在于当指定 header 是已经存在的并且允许接收多个值时，{{domxref("Headers.set")}}会重写此值为新值，而`append()`会追加到值序列的尾部。
 
@@ -58,7 +59,7 @@ myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]
 
 ## 浏览器兼容性
 
-{{Compat("api.Headers.append")}}
+{{Compat}}
 
 ## 参见
 

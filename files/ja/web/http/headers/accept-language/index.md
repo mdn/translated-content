@@ -1,15 +1,8 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-tags:
-  - Accept-Language
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - コンテンツネゴシエーション
-  - リファレンス
-translation_of: Web/HTTP/Headers/Accept-Language
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Accept-Language`** リクエストヘッダーは、クライアントがどの言語を理解できるか、どの種類のロケールが推奨されるかを示します。 (言語というのは、英語のような自然言語を意味し、プログラミング言語ではありません。) [コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案されたものから一つを選択して使用し、 {{HTTPHeader("Content-Language")}} レスポンスヘッダーを使用してクライアントに選択結果を知らせます。ブラウザーはユーザーインターフェイスの言語に従って、このヘッダーに適切な値を設定し、ユーザーはこれを変更することができますが、稀です (そしてフィンガープリントにつながるとして難色を示されます)。

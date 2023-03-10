@@ -1,15 +1,9 @@
 ---
 title: Aprender y obtener ayuda
 slug: Learn/Learning_and_getting_help
-tags:
-  - Aprender
-  - Desarrollo web
-  - Principiante
-  - conseguir ayuda
-  - obtener ayuda
-translation_of: Learn/Learning_and_getting_help
 original_slug: Learn/Aprender_y_obtener_ayuda
 ---
+
 {{learnsidebar}}
 
 Es genial que dediques algo de tiempo a aprender un nuevo conjunto de habilidades, pero puedes emplear algunas buenas prácticas que harán que tu aprendizaje sea más efectivo. También hay momentos en los que te atascarás y te sentirás frustrado, incluso los desarrolladores web profesionales se sienten así regularmente, y vale la pena conocer las formas más efectivas de tratar de obtener ayuda para que puedas progresar en tu trabajo. Este artículo proporciona algunos consejos y sugerencias en ambas áreas que te ayudarán a obtener más provecho del aprendizaje del desarrollo web, así como una lectura adicional para que puedas obtener más información sobre cada subtema si lo deseas.
@@ -35,9 +29,9 @@ Es por eso que generalmente es bueno leer primero un material introductorio para
 
 También es la razón por la que, a veces, puedes quedar realmente atrapado en un problema, pero luego averiguar la respuesta cuando vas a tomar un café (o a caminar). Podrías:
 
-1.  Saber cómo solucionar el problema A con la herramienta A.
-2.  Saber cómo solucionar el problema B con la herramienta B.
-3.  No saber cómo solucionar el problema C.
+1. Saber cómo solucionar el problema A con la herramienta A.
+2. Saber cómo solucionar el problema B con la herramienta B.
+3. No saber cómo solucionar el problema C.
 
 Supongamos que te enfocas en el problema C por un tiempo y te frustras porque no puedes encontrar la solución para resolverlo. Pero luego, después de caminar para tomar un poco de aire fresco, es posible que descubras que, mientras tu mente divaga, de repente estableces una conexión entre la herramienta A y la herramienta B, ¡y te das cuenta de que las puedes usar juntas para solucionar el problema C! No siempre es así de simple, pero también es sorprendente cuántas veces sucede. Esto también resalta la importancia de tomar descansos regulares cuando estás estudiando frente a la computadora.
 
@@ -184,16 +178,20 @@ Un menú de navegación generalmente se crea a partir de una lista de enlaces, a
 
 Para hacer que todos los elementos se asienten horizontalmente en una línea, la forma moderna más fácil es usar flexbox:
 
-    ul {
-      display: flex;
-    }
+```css
+ul {
+  display: flex;
+}
+```
 
 Para eliminar el espacio innecesario y las viñetas, podemos hacer esto:
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
+```css
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+```
 
 etc.
 
@@ -201,7 +199,7 @@ Si realmente eres un principiante en el desarrollo web, tendrás que estudiar y 
 
 Cuando encuentres soluciones a tales problemas, vale la pena escribir notas sobre lo que hiciste y mantener algunos ejemplos de código mínimos en un directorio en algún lugar para que puedas mirar hacia atrás en el trabajo anterior.
 
-Además, la web tiene {{web.link("/es/docs/Learn/Common_questions/What_are_browser_developer_tools", "herramientas de desarrollo")}} que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
+Además, la web tiene [herramientas de desarrollo](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
 
 > **Nota:** Observa cómo hablamos antes sobre el problema que estamos tratando de resolver primero, y la tecnología utilizada para resolverlo, en segundo lugar. Esta, casi siempre es la mejor manera de hacerlo — no comiences con una tecnología nueva y genial que desees usar, e intenta adaptarla a tu caso de uso.
 

@@ -1,13 +1,8 @@
 ---
 title: TypedArray.name
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 ---
+
 {{JSRef}}
 
 **`TypedArray.name`** プロパティは、型付き配列のコンストラクターの名称を文字列値で表します。
@@ -36,9 +31,7 @@ Float64Array.name;      // "Float64Array"
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

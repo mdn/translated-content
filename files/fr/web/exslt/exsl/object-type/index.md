@@ -2,6 +2,7 @@
 title: exsl:object-type()
 slug: Web/EXSLT/exsl/object-type
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `exsl:object-type()` renvoie une chaîne de caractères indiquant le type de l'objet indiqué en paramètre.

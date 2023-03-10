@@ -1,26 +1,8 @@
 ---
 title: Página de bienvenida de Mozilla
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-tags:
-  - Codificación de Secuencia de comandos
-  - CodingScripting
-  - Evaluación
-  - HTML
-  - Imagenes
-  - Inserción
-  - JPEG
-  - Medidas
-  - Multimedia
-  - PNG
-  - Principiante
-  - Video
-  - iframe
-  - img
-  - receptivo
-  - src
-  - srcset
-translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 En esta evaluación, pondremos a prueba tu conocimiento de algunas de las técnicas mostradas en los artículos de este módulo, ¡para que tú agregues algunas imágenes y videos a una página de bienvenida de Mozzilla!.
@@ -102,16 +84,16 @@ Dentro del elemento {{htmlelement("div")}} con clase `red-panda`, queremos inser
 
 Las siguientes capturas de pantalla muestran como debería verse la página de bienvenida después de haber sido marcada correctamente, en una pantalla ancha y estrecha.
 
-![A wide shot of our example splash page](https://mdn.mozillademos.org/files/12946/wide-shot.png)
+![A wide shot of our example splash page](wide-shot.png)
 
-![A narrow shot of our example splash page](https://mdn.mozillademos.org/files/12944/narrow-shot.png)
+![A narrow shot of our example splash page](narrow-shot.png)
 
 ## Evaluación o ayuda adicional
 
 Si quieres evaluar tu trabajo, estás atorado o quieres pedir ayuda:
 
-1.  Pon tu trabajo en un editor en línea para compartir, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Glitch es probablemente el mejor para este ejemplo, porque permite cargar propiedades como imágenes, mientras que algunas de las otras herramientas no lo hacen.
-2.  Escribe una publicación solicitando evaluación y/o ayuda en el foro [MDN Discourse forum](https://discourse.mozilla.org/c/mdn). Agrega la etiqueta "aprendizaje" a tu publicación para que podamos encontrarla más fácilmente. Tu publicación debe incluir:
+1. Pon tu trabajo en un editor en línea para compartir, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Glitch es probablemente el mejor para este ejemplo, porque permite cargar propiedades como imágenes, mientras que algunas de las otras herramientas no lo hacen.
+2. Escribe una publicación solicitando evaluación y/o ayuda en el foro [MDN Discourse forum](https://discourse.mozilla.org/c/mdn). Agrega la etiqueta "aprendizaje" a tu publicación para que podamos encontrarla más fácilmente. Tu publicación debe incluir:
 
     - Un título descriptivo como "Evaluación para página de bienvenida de Mozilla".
     - Detalles de lo que quiera que hagamos, por ejemplo, lo que ya has intentado, si estás atascado y necesitas ayuda.

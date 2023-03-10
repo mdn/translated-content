@@ -2,6 +2,7 @@
 title: 将 WebAssembly 文本格式转换为 wasm
 slug: WebAssembly/Text_format_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly 有一个基于 S-表达式的文本表示形式，设计为在文本编辑器，浏览器开发人员工具等中暴露的一个中间形式。本文解释了它是如何工作的一些内容以及如何使用可用的工具把文本格式文件转换为.wasm 汇编格式文件。

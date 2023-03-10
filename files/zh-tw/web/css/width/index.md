@@ -2,6 +2,7 @@
 title: width
 slug: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area).
@@ -177,7 +178,7 @@ p.goldie {
 <p class="goldie">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('Default_width', '500px', '64px')}}
+{{EmbedLiveSample('預設寬度', '500px', '64px')}}
 
 ### 像素和相對大小
 
@@ -202,7 +203,7 @@ p.goldie {
 <div class="em_length">Width measured in em</div>
 ```
 
-{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
+{{EmbedLiveSample('像素和相對大小', '500px', '64px')}}
 
 ### 百分比
 
@@ -218,7 +219,7 @@ p.goldie {
 <div class="percent">Width in percentage</div>
 ```
 
-{{EmbedLiveSample('Percentage', '500px', '64px')}}
+{{EmbedLiveSample('百分比', '500px', '64px')}}
 
 ### 內容最大值
 
@@ -235,7 +236,7 @@ p.maxgreen {
 <p class="maxgreen">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('max-content_2', '500px', '64px')}}
+{{EmbedLiveSample('內容最大值', '500px', '64px')}}
 
 ### 內容最小值
 
@@ -251,7 +252,7 @@ p.minblue {
 <p class="minblue">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('min-content_2', '500px', '155px')}}
+{{EmbedLiveSample('內容最小值', '500px', '155px')}}
 
 ## 規範
 
@@ -259,7 +260,7 @@ p.minblue {
 
 ## 瀏覽器相容性
 
-{{Compat("css.properties.width")}}
+{{Compat}}
 
 ## 參考
 

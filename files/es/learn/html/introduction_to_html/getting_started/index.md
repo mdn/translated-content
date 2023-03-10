@@ -1,16 +1,9 @@
 ---
 title: Empezar con HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Atributos
-  - Elemento
-  - Guía
-  - HTML
-  - Principiante
-  - comentários
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 En este artículo vamos a exponer lo más básico del HTML. Para comenzar definiremos elementos, atributos y el resto de términos importantes que quizá ya te suenen y qué función cumplen dentro del lenguaje. También explica dónde encajan estos en HTML. Aprenderás cómo se estructuran los elementos HTML, cómo se estructura una página HTML típica y otras características básicas importantes del lenguaje. Por el camino, también iremos practicando con algo de HTML.
@@ -21,9 +14,9 @@ En este artículo vamos a exponer lo más básico del HTML. Para comenzar defini
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática,
-        {{web.link("/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software", "tener instalado el software básico")}}
+        [tener instalado el software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
         y conocimientos básicos de cómo
-        {{web.link("/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files", "trabajar con archivos")}}.
+        [trabajar con archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
       </td>
     </tr>
     <tr>
@@ -56,7 +49,7 @@ Si queremos que la línea sea independiente de otras, podemos especificar que es
 
 Exploremos un poco el elemento párrafo:
 
-![Anatomía de los elementos HTML](https://mdn.mozillademos.org/files/11913/htmlexp.png)
+![Anatomía de los elementos HTML](grumpy-cat-small.png)
 
 Las principales partes de nuestro elemento son:
 
@@ -74,121 +67,126 @@ Si te equivocas, siempre puedes volver al código anterior mediante el botón _R
 
 ```html hidden
 <h2>Salida en vivo</h2>
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editable</h2>
-<p class="a11y-label">Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de tabulación).</p>
+<p class="a11y-label">
+  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
+  tabulación).
+</p>
 
 <textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
 Este es mi texto.
 </textarea>
 
 <div class="controls">
-<input id="reset" type="button" value="Restablecer" />
-<input id="solution" type="button" value="Mostrar solución" />
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Mostrar solución';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Mostrar solución";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Mostrar solución') {
-textarea.value = solutionEntry;
-solution.value = 'Ocultar solución';
-} else {
-textarea.value = userEntry;
-solution.value = 'Mostrar solución';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solución") {
+    textarea.value = solutionEntry;
+    solution.value = "Ocultar solución";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Mostrar solución";
+  }
+  updateCode();
 });
 
-var htmlSolution = '<em>Este es mi texto.</em>';
+var htmlSolution = "<em>Este es mi texto.</em>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // captura la tecla de tabulación en el área de texto y en su lugar
 // hace que se escriba una tabulación en la posición del cursor
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-var scrollPos = textarea.scrollTop;
-var caretPos = textarea.selectionStart;
+  var scrollPos = textarea.scrollTop;
+  var caretPos = textarea.selectionStart;
 
-var front = (textarea.value).substring(0, caretPos);
-var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
 
-textarea.onkeyup = function(){
-// Solo queremos guardar el estado cuando se muestra el código de usuario,
-// no es la solución, por lo que la solución no se guarda sobre el código del usuario
-if(solution.value === 'Mostrar solución') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
+  if (solution.value === "Mostrar solución") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 
@@ -224,25 +222,29 @@ Considera el siguiente ejemplo:
 ```html
 <em>primero</em><em>segundo</em><em>tercero</em>
 
-<p>cuarto</p><p>quinto</p><p>sexto</p>
+<p>cuarto</p>
+<p>quinto</p>
+<p>sexto</p>
 ```
 
-{{htmlelement("em")}} es un elemento en línea. Así, como puedes observar, los tres primeros elementos se sitúan en la misma línea, uno tras otro sin espacio entre ellos. Por otro lado, {{htmlelement("p")}} es un elemento a nivel de bloque. Cada elemento _p_ aparece en una nueva línea, con un espacio arriba y abajo. (El espaciado se debe al {{web.link("/es/docs/Learn/CSS/Introduction_to_CSS", "estilo CSS")}} predeterminado que el navegador aplica a los párrafos).
+{{htmlelement("em")}} es un elemento en línea. Así, como puedes observar, los tres primeros elementos se sitúan en la misma línea, uno tras otro sin espacio entre ellos. Por otro lado, {{htmlelement("p")}} es un elemento a nivel de bloque. Cada elemento _p_ aparece en una nueva línea, con un espacio arriba y abajo. (El espaciado se debe al [estilo CSS](/es/docs/Learn/CSS/Introduction_to_CSS) predeterminado que el navegador aplica a los párrafos).
 
 {{ EmbedLiveSample('Elementos_de_bloque_y_elementos_en_línea', 700, 200, "", "") }}
 
 > **Nota:** HTML5 redefinió las categorías de elementos: consulta [Categorías de contenido de elementos](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories). Si bien estas definiciones son más precisas y menos ambiguas que sus predecesoras, las nuevas definiciones son mucho más complicadas de entender que _block_ e _inline_ . Este artículo seguirá con estos dos términos.
 
-> **Nota:** Los términos «en bloque» (block) y «en línea» (inline), tal como se usan en este tema, no se deberían confundir con {{web.link("/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes", "los tipos de casillas de CSS")}} que se conocen con el mismo nombre. Aunque de manera predeterminada están relacionados, el hecho de cambiar el tipo de aspecto visual del CSS no cambia la categoría del elemento ni afecta a aquellos elementos que pueda contener. Una de las razones por las que HTML5 abandonó el uso de estos términos fue para evitar este tipo de confusión.
+> **Nota:** Los términos «en bloque» (block) y «en línea» (inline), tal como se usan en este tema, no se deberían confundir con [los tipos de casillas de CSS](/es/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) que se conocen con el mismo nombre. Aunque de manera predeterminada están relacionados, el hecho de cambiar el tipo de aspecto visual del CSS no cambia la categoría del elemento ni afecta a aquellos elementos que pueda contener. Una de las razones por las que HTML5 abandonó el uso de estos términos fue para evitar este tipo de confusión.
 
-> **Nota:** Puedes encontrar referencias útiles que incluyen listas de elementos de bloque y elementos en línea. Consulta {{web.link("/es/docs/Web/HTML/Block-level_elements", "Elementos en bloque")}} y {{web.link("/es/docs/Web/HTML/Elementos_en_línea", "Elementos en línea")}}.
+> **Nota:** Puedes encontrar referencias útiles que incluyen listas de elementos de bloque y elementos en línea. Consulta [Elementos en bloque](/es/docs/Web/HTML/Block-level_elements) y [Elementos en línea](/es/docs/Web/HTML/Elementos_en_línea).
 
 ### Elementos vacíos
 
 No todos los elementos siguen el patrón de etiqueta de apertura, contenido y etiqueta de cierre. Algunos elementos consisten solo en una etiqueta única, que se utiliza generalmente para insertar/incrustar algo en el documento en el lugar donde se le quiere incluir. Por ejemplo, el elemento {{htmlelement("img")}} inserta una imagen en la página:
 
 ```html
-<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
+<img
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
+/>
 ```
 
 Este texto mostrará lo siguiente en tu página:
@@ -255,7 +257,7 @@ Este texto mostrará lo siguiente en tu página:
 
 Los elementos también pueden tener atributos. Los atributos tienen este aspecto:
 
-![atributo html](https://mdn.mozillademos.org/files/11915/htmlatributos.png)
+![atributo html](grumpy-cat-attribute-small.png)
 
 Los atributos contienen información extra sobre el elemento que no se mostrará en el contenido. En este caso, el atributo `class` asigna al elemento un identificador que se puede utilizar para dotarlo de información de estilo.
 
@@ -269,15 +271,18 @@ Un atributo debería tener:
 
 Otro ejemplo de un elemento es {{htmlelement("a")}}. Esto significa _ancla_. Una ancla puede convertir el texto que encierra en un hipervínculo. Las anclas pueden tener varios atributos, pero varios son como sigue:
 
-- **`href`**: El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se haga clic sobre el elemento. Por ejemplo, `href="https://www.mozilla.org/"`.
-- **`title`**: El atributo `title` añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, `title="La página de inicio de Mozilla"`. Esta información aparecerá cuando se le pase el ratón por encima.
-- **`target`**: El atributo `target` especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, `target="_blank"` abrirá el enlace en una nueva pestaña. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.
+- `href`
+  - : El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se haga clic sobre el elemento. Por ejemplo, `href="https://www.mozilla.org/"`.
+- `title`
+  - : El atributo `title` añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, `title="La página de inicio de Mozilla"`. Esta información aparecerá cuando se le pase el ratón por encima.
+- `target`
+  - : El atributo `target` especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, `target="_blank"` abrirá el enlace en una nueva pestaña. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.
 
 Edita la línea de abajo en el área de _Entrada_ para convertirlo en un enlace a tu sitio web favorito.
 
-1.  Añade el elemento `<a>`.
-2.  Añade el atributo `href` y el atributo `title`.
-3.  Especifica el atributo `target` para abrir el enlace en una nueva pestaña.
+1. Añade el elemento `<a>`.
+2. Añade el atributo `href` y el atributo `title`.
+3. Especifica el atributo `target` para abrir el enlace en una nueva pestaña.
 
 Los cambios se actualizarán inmediatamente en la zona de _Salida_. Deberías ver un enlace que mostrará el contenido del atributo `title` cuando pases el ratón encima, y que te llevará a la dirección web indicada por el atributo `href` cuando hagas clic. Recuerda que debes incluir un espacio entre el nombre del elemento y cada atributo.
 
@@ -286,121 +291,127 @@ Si te equivocas, siempre puedes restablecer el código anterior pulsando el bot�
 ```html hidden
 <h2>Salida en vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editable</h2>
-<p class="a11y-label">Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de tabulación).</p>
+<p class="a11y-label">
+  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
+  tabulación).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
 &#x26;lt;p&#x26;gt;Un enlace a mi sitio web favorito.&#x26;lt;/p&#x26;gt;
 </textarea>
 
 <div class="playable-buttons">
-<input id="reset" type="button" value="Restablecer">
-<input id="solution" type="button" value="Mostrar solución">
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
 ```css hidden
 html {
-font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Mostrar solución';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Mostrar solución";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Mostrar solución') {
-textarea.value = solutionEntry;
-solution.value = 'Ocultar solución';
-} else {
-textarea.value = userEntry;
-solution.value = 'Mostrar solución';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solución") {
+    textarea.value = solutionEntry;
+    solution.value = "Ocultar solución";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Mostrar solución";
+  }
+  updateCode();
 });
 
-var htmlSolution = '<p>Un enlace a mi <a href="https://www.mozilla.org/" title="La página de inicio de Mozilla" target="\_blank">sitio web favorito</a>.</p>';
+var htmlSolution =
+  '<p>Un enlace a mi <a href="https://www.mozilla.org/" title="La página de inicio de Mozilla" target="_blank">sitio web favorito</a>.</p>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // captura la tecla de tabulación en el área de texto y en su lugar
 // hace que se escriba una tabulación en la posición del cursor
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-var scrollPos = textarea.scrollTop;
-var caretPos = textarea.selectionStart;
+  var scrollPos = textarea.scrollTop;
+  var caretPos = textarea.selectionStart;
 
-var front = (textarea.value).substring(0, caretPos);
-var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
 
-textarea.onkeyup = function(){
-// Solo queremos guardar el estado cuando se muestra el código de usuario,
-// no es la solución, por lo que la solución no se guarda sobre el código del usuario
-if(solution.value === 'Mostrar solución') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
+  if (solution.value === "Mostrar solución") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 
@@ -418,10 +429,10 @@ De manera abreviada, también es posible escribirlo como se describe a continuac
 
 ```html
 <!-- el uso del atributo deshabilitado evita que el usuario final introduzca texto en el cuadro de entrada -->
-<input type="text" disabled>
+<input type="text" disabled />
 
 <!-- se permite la entrada de texto, ya que no contiene el atributo deshabilitado -->
-<input type="text">
+<input type="text" />
 ```
 
 Como referencia, el ejemplo anterior también incluye un elemento de entrada de formulario no deshabilitado. El HTML del ejemplo anterior produce este resultado:
@@ -455,7 +466,7 @@ En este artículo todos los atributos se han incluido en comillas dobles. Sin em
 ```html
 <a href="http://www.ejemplo.com">Un enlace a mi ejemplo.</a>
 
-<a href='http://www.ejemplo.com'>Un enlace a mi ejemplo.</a>
+<a href="http://www.ejemplo.com">Un enlace a mi ejemplo.</a>
 ```
 
 Asegúrate de no mezclar ambos tipos de comillas. El siguiente ejemplo muestra un tipo de mezcla de comillas que saldrá mal:
@@ -467,7 +478,9 @@ Asegúrate de no mezclar ambos tipos de comillas. El siguiente ejemplo muestra u
 Si utilizas un tipo de comillas en tu documento HTML, puedes incluir el otro tipo de comillas para tus valores de atributo sin que esto te cause problemas:
 
 ```html
-<a href="http://www.ejemplo.com" title="¿A que es 'divertido'">Un enlace a mi ejemplo.</a>
+<a href="http://www.ejemplo.com" title="¿A que es 'divertido'"
+  >Un enlace a mi ejemplo.</a
+>
 ```
 
 Sin embargo, si deseas anidar unas comillas dentro de otras del mismo tipo (ya sea simples o dobles), tendrás que utilizar entidades HTML para las comillas. Por ejemplo, el siguiente código no va a funcionar:
@@ -479,7 +492,9 @@ Sin embargo, si deseas anidar unas comillas dentro de otras del mismo tipo (ya s
 Así que tendrás que hacer esto:
 
 ```html
-<a href='http://www.ejemplo.com' title='¿A que es &apos;divertido&apos;?'>Un enlace a mi ejemplo.</a>
+<a href="http://www.ejemplo.com" title="¿A que es 'divertido'?"
+  >Un enlace a mi ejemplo.</a
+>
 ```
 
 ## Anatomía de un documento HTML
@@ -490,7 +505,7 @@ Los elementos HTML no son muy útiles por sí mismos. Ahora veremos cómo combin
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Mi página de prueba</title>
   </head>
   <body>
@@ -501,170 +516,177 @@ Los elementos HTML no son muy útiles por sí mismos. Ahora veremos cómo combin
 
 Aquí tenemos:
 
-1.  `<!DOCTYPE html>`: El elemento _doctype_. En sus inicios, cuando el HTML llevaba poco tiempo (alrededor de 1991-1992), los _doctypes_ servían como enlaces al conjunto de reglas que la página HTML debía seguir para que fuera considerado buen HTML. Un elemento _doctype_ de aquella época podía parecerse a esto:
+1. `<!DOCTYPE html>`: El elemento _doctype_. En sus inicios, cuando el HTML llevaba poco tiempo (alrededor de 1991-1992), los _doctypes_ servían como enlaces al conjunto de reglas que la página HTML debía seguir para que fuera considerado buen HTML. Un elemento _doctype_ de aquella época podía parecerse a esto:
 
-    ```html
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    ```
+   ```html
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   ```
 
-    En la actualidad se ignora y se considera un legado histórico que hay que incluir para que todo funcione correctamente. `<!DOCTYPE html>` es la secuencia de caracteres más corta que se acepta como elemento _doctype_ válido. Eso es lo único que realmente necesitas saber.
+   En la actualidad se ignora y se considera un legado histórico que hay que incluir para que todo funcione correctamente. `<!DOCTYPE html>` es la secuencia de caracteres más corta que se acepta como elemento _doctype_ válido. Eso es lo único que realmente necesitas saber.
 
-2.  `<html></html>`: El elemento `<html>`. Este elemento envuelve todo el contenido de la página. A veces se lo conoce como el elemento raíz.
-3.  `<head></head>`: El elemento `<{{htmlelement("head")}}>` (cabecera). Este elemento actúa como contenedor para todos los parámetros que quieras incluir en el documento HTML que _no serán_ visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más. Aprenderás más acerca de esto en el siguiente artículo de la serie.
-4.  `<meta charset="utf-8">`: Este elemento establece que tu documento HTML usará la codificación UTF-8, que incluye la gran mayoría de caracteres de todos los idiomas humanos escritos. En resumen: puede gestionar cualquier contenido textual que pongas en tu documento. No hay razón para no configurar este valor y te puede ayudar a evitar problemas más adelante.
-5.  `<title></title>`: El elemento {{htmlelement("title")}}. Este establece el título de la página, que es el título que aparece en la pestaña del navegador en la que se carga la página. El título de la página también se utiliza para describir la página cuando se marca como favorita.
-6.  `<body></body>`: El elemento `<body>`. Contiene todo el contenido que quieres mostrar a los usuarios cuando visitan tu página, ya sea texto, imágenes, vídeos, juegos, pistas de audio reproducibles o cualquier otra cosa.
+2. `<html></html>`: El elemento `<html>`. Este elemento envuelve todo el contenido de la página. A veces se lo conoce como el elemento raíz.
+3. `<head></head>`: El elemento `<{{htmlelement("head")}}>` (cabecera). Este elemento actúa como contenedor para todos los parámetros que quieras incluir en el documento HTML que _no serán_ visibles a los visitantes de la página. Incluye cosas como palabras clave y la descripción de la página que quieras mostrar en los resultados de búsqueda, así como la hoja de estilo para formatear nuestro contenido, declaraciones de codificación de caracteres y más. Aprenderás más acerca de esto en el siguiente artículo de la serie.
+4. `<meta charset="utf-8">`: Este elemento establece que tu documento HTML usará la codificación UTF-8, que incluye la gran mayoría de caracteres de todos los idiomas humanos escritos. En resumen: puede gestionar cualquier contenido textual que pongas en tu documento. No hay razón para no configurar este valor y te puede ayudar a evitar problemas más adelante.
+5. `<title></title>`: El elemento {{htmlelement("title")}}. Este establece el título de la página, que es el título que aparece en la pestaña del navegador en la que se carga la página. El título de la página también se utiliza para describir la página cuando se marca como favorita.
+6. `<body></body>`: El elemento `<body>`. Contiene todo el contenido que quieres mostrar a los usuarios cuando visitan tu página, ya sea texto, imágenes, vídeos, juegos, pistas de audio reproducibles o cualquier otra cosa.
 
 ### Aprendizaje activo: Añadir algunas características a un documento HTML
 
 Si quieres escribir algo de HTML en tu ordenador local para experimentar, puedes:
 
-1.  Copiar el ejemplo de la página HTML del punto anterior.
-2.  Crear un archivo nuevo en un editor de texto.
-3.  Pegar el código en el nuevo archivo de texto.
-4.  Guardar el archivo como `index.html`.
+1. Copiar el ejemplo de la página HTML del punto anterior.
+2. Crear un archivo nuevo en un editor de texto.
+3. Pegar el código en el nuevo archivo de texto.
+4. Guardar el archivo como `index.html`.
 
 > **Nota:** También puedes encontrar esta plantilla básica de HTML en el [repositorio GitHub del Área MDN Learning](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
 
 Ahora puedes abrir este archivo en un navegador web para ver cómo se ve el código renderizado. Edita el código y actualiza el navegador para ver cuál es el resultado. En principio se verá algo así:
 
-![Una sencilla página HTML que dice esta es mi página](https://mdn.mozillademos.org/files/12279/template-screenshot.png)En este ejercicio, puedes editar el código en tu ordenador como se indica arriba, o puedes editarlo en la ventana editable que tienes a continuación (la ventana editable representa solo el contenido del elemento {{htmlelement("body")}}, en este caso). Intenta reproducir los siguientes pasos:
+![Una sencilla página HTML que dice esta es mi página](template-screenshot.png)
+
+En este ejercicio, puedes editar el código en tu ordenador como se indica arriba, o puedes editarlo en la ventana editable que tienes a continuación (la ventana editable representa solo el contenido del elemento {{htmlelement("body")}}, en este caso). Intenta reproducir los siguientes pasos:
 
 - Justo debajo de la etiqueta de apertura {{htmlelement("body")}}, añade un título principal para el documento. Este deberá estar dentro de una etiqueta de apertura `<h1>` y una etiqueta de cierre `</h1>`.
 - Edita el contenido del párrafo e incluye algún texto sobre algo que te interese.
 - Pon las palabras importantes dentro de etiquetas `<strong>` de apertura y `</strong>` de cierre para que destaquen en negrita.
-- Añade un enlace a tu párrafo, como se ha explicado {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element", "anteriormente en este mismo artículo")}}.
-- Agrega una imagen a tu documento. Colócala debajo del párrafo, como {{web.link("/es/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements", "se explicó anteriormente en el artículo")}}. Ganarás puntos extra si consigues enlazar a una imagen diferente (de tu propio ordenador o de cualquier otro lugar de la web).
+- Añade un enlace a tu párrafo, como se ha explicado [anteriormente en este mismo artículo](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element).
+- Agrega una imagen a tu documento. Colócala debajo del párrafo, como [se explicó anteriormente en el artículo](/es/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements). Ganarás puntos extra si consigues enlazar a una imagen diferente (de tu propio ordenador o de cualquier otro lugar de la web).
 
 Si te equivocas, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente atascado, pulsa el botón _Mostrar la solución_ para ver la solución.
 
 ```html hidden
 <h2>Salida en vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editable</h2>
-<p class="a11y-label">Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de tabulación).</p>
+<p class="a11y-label">
+  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
+  tabulación).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
 &#x26;lt;p&#x26;gt;Esta es mi página&#x26;lt;/p&#x26;gt;
 </textarea>
 
 <div class="playable-buttons">
-<input id="reset" type="button" value="Restablecer">
-<input id="solution" type="button" value="Mostrar solución">
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
 ```css hidden
 html {
-font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h1 {
-color: blue;
+  color: blue;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 img {
-max-width: 100%;
+  max-width: 100%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Mostrar solución';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Mostrar solución";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Mostrar solución') {
-textarea.value = solutionEntry;
-solution.value = 'Ocultar solución';
-} else {
-textarea.value = userEntry;
-solution.value = 'Mostrar solución';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solución") {
+    textarea.value = solutionEntry;
+    solution.value = "Ocultar solución";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Mostrar solución";
+  }
+  updateCode();
 });
 
-var htmlSolution = '<h1>Un poco de música</h1><p>Realmente disfruto <strong>tocar la batería</strong>. Uno de mis bateristas favoritos es Neal Peart, que toca en la banda <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="artículo de Wikipedia de">Rush</a>.\ Mi álbum favorito de Rush actualmente es <a href="http://www.deezer.com/album/942295">Fotografías de la película</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
+var htmlSolution =
+  '<h1>Un poco de música</h1><p>Realmente disfruto <strong>tocar la batería</strong>. Uno de mis bateristas favoritos es Neal Peart, que toca en la banda <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="artículo de Wikipedia de">Rush</a>. Mi álbum favorito de Rush actualmente es <a href="http://www.deezer.com/album/942295">Fotografías de la película</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // captura la tecla de tabulación en el área de texto y en su lugar
 // hace que se escriba una tabulación en la posición del cursor
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-var scrollPos = textarea.scrollTop;
-var caretPos = textarea.selectionStart;
+  var scrollPos = textarea.scrollTop;
+  var caretPos = textarea.selectionStart;
 
-var front = (textarea.value).substring(0, caretPos);
-var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
 
-textarea.onkeyup = function(){
-// Solo queremos guardar el estado cuando se muestra el código de usuario,
-// no es la solución, por lo que la solución no se guarda sobre el código del usuario
-if(solution.value === 'Mostrar solución') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
+  if (solution.value === "Mostrar solución") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 
@@ -699,7 +721,7 @@ Haces esto con referencias de caracteres. Estos son códigos especiales que repr
 | '                | \&apos;                                 |
 | &                | \&amp;                                  |
 
-El equivalente de referencia de caracter podría recordarse fácilmente porque el texto que utiliza se puede ver como menor que para '\&lt;' , cita para ' \&quot; ' y de manera similar para otros. Para obtener más información sobre la referencia de entidad, consulta {{interwiki("wikipedia", "Anexo:Referencias a entidades de caracteres XML y HTML")}} en (Wikipedia).
+El equivalente de referencia de caracter podría recordarse fácilmente porque el texto que utiliza se puede ver como menor que para '\&lt;' , cita para ' \&quot; ' y de manera similar para otros. Para obtener más información sobre la referencia de entidad, consulta [Anexo:Referencias a entidades de caracteres XML y HTML](https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML) en (Wikipedia).
 
 Considera los dos siguientes párrafos:
 
@@ -713,7 +735,7 @@ En la salida en vivo de abajo, puedes ver que el primer párrafo salió mal. El 
 
 {{ EmbedLiveSample('Referencias_a_entidades_Inclusión_de_caracteres_especiales_en_HTML', 700, 200) }}
 
-> **Nota:** En la Wikipedia se puede localizar un listado de todas las referencias de entidades de caracteres HTML disponibles: {{interwiki("wikipedia", "Anexo:Referencias a entidades de caracteres XML y HTML")}}. Observa que no necesitas usar ninguna referencia de entidad más para ningún otro de estos símbolos porque los navegadores modernos gestionan estos símbolos correctamente siempre y cuando en tu HTML hayas {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "establecido la codificación de el juego de caracteres universal UTF-8", "#Specifying_your_document's_character_encoding")}}.
+> **Nota:** En la Wikipedia se puede localizar un listado de todas las referencias de entidades de caracteres HTML disponibles: [Anexo:Referencias a entidades de caracteres XML y HTML](https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML). Observa que no necesitas usar ninguna referencia de entidad más para ningún otro de estos símbolos porque los navegadores modernos gestionan estos símbolos correctamente siempre y cuando en tu HTML hayas [establecido la codificación de el juego de caracteres universal UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding).
 
 ## Comentarios HTML
 
@@ -736,11 +758,11 @@ Como puedes ver a continuación, el primer párrafo aparece, pero el segundo no.
 Has llegado al final del artículo. Espero que hayas disfrutado del recorrido los conceptos básicos del HTML.
 En este punto ya deberías entender el lenguaje, cómo funciona en un nivel básico y deberías poder escribir algunos elementos y atributos. También deberías poder escribir algunos elementos y atributos. Los artículos posteriores de este módulo profundizan en algunos de los temas aquí presentados, además de presentar otros conceptos del lenguaje.
 
-> **Nota:** En este punto, a medida que empieces a aprender más sobre HTML, es posible que también desees comenzar a explorar los conceptos básicos de las Hojas de estilo en cascada (_Cascading style sheets_) o {{web.link("/es/docs/Learn/CSS", "CSS")}}. CSS, es el lenguaje utilizado para estilizar páginas web. (por ejemplo, cambiar fuentes o colores, o alterar el diseño de la página) HTML y CSS funcionan bien juntos, como pronto descubrirás.
+> **Nota:** En este punto, a medida que empieces a aprender más sobre HTML, es posible que también desees comenzar a explorar los conceptos básicos de las Hojas de estilo en cascada (_Cascading style sheets_) o [CSS](/es/docs/Learn/CSS). CSS, es el lenguaje utilizado para estilizar páginas web. (por ejemplo, cambiar fuentes o colores, o alterar el diseño de la página) HTML y CSS funcionan bien juntos, como pronto descubrirás.
 
 ## Ve también
 
-- {{web.link("/es/docs/Web/HTML/Applying_color", "Aplicación de color a elementos HTML mediante CSS")}}
+- [Aplicación de color a elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
@@ -751,7 +773,7 @@ En este punto ya deberías entender el lenguaje, cómo funciona en un nivel bás
 - [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Estructura web y documentación")}}
+- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 - [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Marcando para una carta")}}
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Estructuración del contenido de una página")}}
+- [Marcando para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

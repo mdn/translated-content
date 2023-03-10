@@ -2,11 +2,18 @@
 title: CSS の第一歩
 slug: Learn/CSS/First_steps
 ---
+
 {{LearnSidebar}}
 
 CSS (Cascading Style Sheets) はウェブページをスタイリングしたりレイアウトしたりするのに使われます — 例えば、文字、色、大きさを変えたり、コンテンツに余白を設けたり、複数列に分けたり、あるいはアニメーションを加えたりなど様々な装飾機能があります。このモジュールでは CSS を習得するために、どう働くかの基本とともに、構文のありかたと HTML にスタイリングを加えることを簡単な始め方を提供します。
 
-> **Callout:** ### フロントエンドのウェブ開発者になりたいですか？ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。[始める](/ja/docs/Learn/Front-end_web_developer)
+> **注目:**
+>
+> #### フロントエンドのウェブ開発者になりたいですか？
+>
+> ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
+>
+> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
 ## 前提条件
 
@@ -16,7 +23,7 @@ CSS (Cascading Style Sheets) はウェブページをスタイリングしたり
 2. [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)で説明されている基本的な作業環境と、[ファイルの扱い方](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解していること。
 3. [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明されている HTML についての基礎知識に慣れ親しんでいること。
 
-> **Note:** 自分自身でファイルを作れない環境 (タブレットやその他の端末) で作業する場合、(ほとんどの) コードサンプルは [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったオンラインコーディングプログラムで試すことが可能です。
+> **メモ:** 自分自身でファイルを作れない環境 (タブレットやその他の端末) で作業する場合、(ほとんどの) コードサンプルは [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったオンラインコーディングプログラムで試すことが可能です。
 
 ## ガイド
 

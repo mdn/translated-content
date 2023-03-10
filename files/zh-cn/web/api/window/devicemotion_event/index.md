@@ -2,11 +2,12 @@
 title: Window.ondevicemotion
 slug: Web/API/Window/devicemotion_event
 ---
+
 {{ ApiRef() }}
 
 ## 摘要
 
-一个发送到窗口的{{ event("devicemotion")}}事件处理程序。
+一个发送到窗口的[`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)事件处理程序。
 
 ## 语法
 
@@ -28,6 +29,6 @@ Where `funcRef` is a reference to a function. This function receives a {{ domxre
 
 ## 参考
 
-- {{ event("devicemotion") }}
+- [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
 - {{ domxref("DeviceMotionEvent") }}
-- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Detecting device orientation](/zh-CN/Detecting_device_orientation)

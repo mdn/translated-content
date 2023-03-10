@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/cx
 ---
+
 {{SVGRef}}
 
 L'attribut **`cx`** définit la coordonnée de l'axe x pour le point central d'un élément.
@@ -162,10 +163,4 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                   | Commentaire                                 |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------- |
-| {{SpecName("SVG2", "geometry.html#CX", "cx")}}                                             | {{Spec2("SVG2")}} | Définition comme propriété de géométrie     |
-| {{SpecName("SVG2", "pservers.html#RadialGradientElementCXAttribute", "cx")}}     | {{Spec2("SVG2")}} | Définition pour SVG2                        |
-| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementCXAttribute", "cx")}} | {{Spec2("SVG1.1")}} | Définition initiale pour `<radialGradient>` |
-| {{SpecName("SVG1.1", "shapes.html#EllipseElementCXAttribute", "cx")}}             | {{Spec2("SVG1.1")}} | Définition initiale pour `<ellipse>`        |
-| {{SpecName("SVG1.1", "shapes.html#CircleElementCXAttribute", "cx")}}             | {{Spec2("SVG1.1")}} | Définition initiale pour `<circle>`         |
+{{Specifications}}

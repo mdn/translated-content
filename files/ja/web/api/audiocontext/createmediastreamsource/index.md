@@ -2,6 +2,7 @@
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 インターフェースの`createMediaStreamSource()`メソッドは、指定のメディアストリームから(言い換えると{{ domxref("navigator.getUserMedia") }}インスタンスから){{ domxref("MediaStreamAudioSourceNode") }}オブジェクトを生成します。ここからの音声は再生や編集ができます。
@@ -30,7 +31,7 @@ var source = audioCtx.createMediaStreamSource(stream);
 
 {{ htmlelement("video") }}要素の下のスライダーはローパスフィルタの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります!
 
-> **Note:** **注:** [この例の実行](http://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
+> **メモ:** [この例の実行](http://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
 
 ```js
 // プレフィックスが必要な場合を考慮して、getUserMediaはブラウザのバージョンごとに分ける
@@ -111,13 +112,11 @@ if (navigator.getUserMedia) {
 pre.innerHTML = myScript.innerHTML;
 ```
 
-> **Note:** **注:** `createMediaStreamSource()`の呼び出しによるメディアストリームの音声は、再び`AudioContext`の処理グラフに再び入ります。よって、ストリームの再生/停止は、まだメディア API とプレイヤーの操作で行えます。
+> **メモ:** `createMediaStreamSource()`の呼び出しによるメディアストリームの音声は、再び`AudioContext`の処理グラフに再び入ります。よって、ストリームの再生/停止は、まだメディア API とプレイヤーの操作で行えます。
 
 ## 仕様
 
-| Specification                                                                                                                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaStreamSource-MediaStreamAudioSourceNode-MediaStream-mediaStream', 'createMediaStreamSource()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

@@ -2,6 +2,7 @@
 title: CSSVariableReferenceValue()
 slug: Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`CSSVariableReferenceValue`** は {{domxref('CSS Typed Object Model API','','',' ')}} のインターフェイスで、組み込み CSS 値のカスタム名を作成することができます。このオブジェクトは機能的に「CSS 変数」と呼ばれることがあり、 {{cssxref('var()')}} 関数と同じ用途を提供します。カスタム名は 2 本のダッシュで始める必要があります。
@@ -24,10 +25,8 @@ slug: Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                     | 備考     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#cssvariablereferencevalue','CSSVariableReferenceValue')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 
-{{Compat("api.CSSVariableReferenceValue")}}
+{{Compat}}

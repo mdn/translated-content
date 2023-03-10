@@ -3,6 +3,7 @@ title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
 translation_of: Web/API/Element/getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.getBoundingClientRect()`** retourne un objet {{domxref("DOMRect")}} fournissant des informations sur la taille d'un élément et sa position relative par rapport à la [zone d'affichage](/fr/docs/Glossary/Viewport).

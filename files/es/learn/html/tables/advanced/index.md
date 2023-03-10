@@ -1,9 +1,9 @@
 ---
 title: Funciones avanzadas de las tablas HTML y accesibilidad
 slug: Learn/HTML/Tables/Advanced
-translation_of: Learn/HTML/Tables/Advanced
 original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesibilidad
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 En el segundo artículo de este módulo, analizamos algunas características más avanzadas de las tablas HTML, como los subtítulos/resúmenes, la agrupación de filas en las secciones del encabezado, el cuerpo y el pie de página; y también analizamos la accesibilidad de las tablas para usuarios con discapacidad visual.
@@ -51,9 +51,9 @@ Los subtítulos se colocan directamente debajo de la etiqueta `<table>`.
 
 Vamos a probarlo con un ejemplo del artículo anterior.
 
-1.  Abre el ejemplo del horario de clases de la profesora de idiomas del final de [conocimientos básicos de las tablas HTML](/es/docs/Learn/HTML/Tablas/Conceptos_b%C3%A1sicos_de_las_tablas_HTML#Aprendizaje_activo_colgroup_y_col), o haz una copia local de nuestro archivo [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
-2.  Añade un título adecuado a la tabla.
-3.  Guarda tu código, ábrelo en un navegador y observa qué aspecto presenta.
+1. Abre el ejemplo del horario de clases de la profesora de idiomas del final de [conocimientos básicos de las tablas HTML](/es/docs/Learn/HTML/Tablas/Conceptos_b%C3%A1sicos_de_las_tablas_HTML#Aprendizaje_activo_colgroup_y_col), o haz una copia local de nuestro archivo [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
+2. Añade un título adecuado a la tabla.
+3. Guarda tu código, ábrelo en un navegador y observa qué aspecto presenta.
 
 > **Nota:** Puedes encontrar nuestra versión en GitHub: consulta [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([mirar en vivo](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
@@ -75,12 +75,12 @@ Para utilizarlos:
 
 Pongamos en acción estos elementos nuevos.
 
-1.  En primer lugar, haz una copia local de [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en una carpeta nueva de tu ordenador.
-2.  Intenta abrirlo en un navegador: observarás que se ve bien, pero podría mejorarse. La fila «SUM», que contiene una suma de las cantidades gastadas, parece estar en el lugar equivocado, y faltan algunos detalles del código.
-3.  Coloca la fila de encabezados dentro de un elemento `<thead>`, la fila «SUM» dentro de un elemento `<tfoot>`, y el resto del contenido dentro de un elemento `<tbody>`.
-4.  Guarda y actualiza, y observa que añadir el elemento `<tfoot>` ha provocado que la fila «SUM» pase al final de la tabla.
-5.  Luego, añade un atributo {{htmlattrxref ("colspan", "td")}} para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».
-6.  Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
+1. En primer lugar, haz una copia local de [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en una carpeta nueva de tu ordenador.
+2. Intenta abrirlo en un navegador: observarás que se ve bien, pero podría mejorarse. La fila «SUM», que contiene una suma de las cantidades gastadas, parece estar en el lugar equivocado, y faltan algunos detalles del código.
+3. Coloca la fila de encabezados dentro de un elemento `<thead>`, la fila «SUM» dentro de un elemento `<tfoot>`, y el resto del contenido dentro de un elemento `<tbody>`.
+4. Guarda y actualiza, y observa que añadir el elemento `<tfoot>` ha provocado que la fila «SUM» pase al final de la tabla.
+5. Luego, añade un atributo {{htmlattrxref ("colspan", "td")}} para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».
+6. Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
 
     ```css
     tbody {
@@ -93,7 +93,7 @@ Pongamos en acción estos elementos nuevos.
     }
     ```
 
-7.  Guarda, actualiza, y échale un vistazo al resultado. Si los elementos `<tbody>` y `<tfoot>` no estuvieran en su lugar, tendrías que escribir selectores/reglas mucho más complicados para obtener la misma aplicación de estilo.
+7. Guarda, actualiza, y échale un vistazo al resultado. Si los elementos `<tbody>` y `<tfoot>` no estuvieran en su lugar, tendrías que escribir selectores/reglas mucho más complicados para obtener la misma aplicación de estilo.
 
 > **Nota:** No esperamos que comprendas completamente el CSS en este momento. Aprenderás más sobre el tema cuando llegues a nuestros módulos CSS ([Introducción al CSS](/es/docs/Learn/CSS/First_steps) es un buen lugar para comenzar; también tenemos un artículo específico sobre [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
@@ -359,7 +359,7 @@ Repasemos brevemente cómo usamos las tablas de datos. Una tabla puede ser una h
 
 Pero, ¿y si no puedes hacer esas asociaciones visuales? ¿Cómo podrías leer una tabla como la anterior? Las personas con discapacidad visual a menudo usan un lector de pantalla que les lee la información de las páginas web. Esto no resulta un problema cuando lees un texto sin formato, pero interpretar una tabla puede ser un gran desafío para una persona ciega. Sin embargo, con el marcado adecuado podemos reemplazar las asociaciones visuales por otras asociaciones de tipo programático.
 
-> **Nota:** Hay en torno a 253 millones de personas con discapacidad visual según los[ datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment "datos de la OMS sobre la discapacidad visual").
+> **Nota:** Hay en torno a 253 millones de personas con discapacidad visual según los [datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment).
 
 Esta sección del artículo proporciona técnicas adicionales para conferir a las tablas la mayor accesibilidad posible.
 
@@ -407,8 +407,8 @@ El atributo `scope` tiene dos valores posibles más: `colgroup` y `rowgroup`. Se
 
 Una alternativa al uso del atributo `scope` es usar los atributos {{htmlattrxref ("id")}} y {{htmlattrxref ("headers", "td")}} para crear asociaciones entre encabezados y celdas. La forma en que se usan es la siguiente:
 
-1.  Añades un `id` único a cada elemento `<th>`.
-2.  Añades un atributo `headers` a cada elemento `<td>`. Cada atributo `headers` debe contener una lista de los `id` de todos los elementos `<th>` que actúan como encabezado de esa celda, separados por espacios.
+1. Añades un `id` único a cada elemento `<th>`.
+2. Añades un atributo `headers` a cada elemento `<td>`. Cada atributo `headers` debe contener una lista de los `id` de todos los elementos `<th>` que actúan como encabezado de esa celda, separados por espacios.
 
 Esto le da a tu tabla HTML una definición explícita de la posición de cada celda en la tabla definida por los encabezados de cada columna y fila de la que forma parte, como en una hoja de cálculo. Para que funcione bien, la tabla necesita tanto encabezados de columna como encabezados de fila.
 
@@ -442,9 +442,9 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 
 ### Aprendizaje activo: jugar con scope y headers
 
-1.  Para este ejercicio final, te proponemos que primero hagas copias locales de [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en un directorio nuevo.
-2.  Ahora intenta añadir los atributos `scope` adecuados para hacer que esta tabla sea más accesible.
-3.  Por último, haz otra copia de los archivos originales, y esta vez añade accesibilidad a la tabla utilizando los atributos `id` y `headers`.
+1. Para este ejercicio final, te proponemos que primero hagas copias locales de [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en un directorio nuevo.
+2. Ahora intenta añadir los atributos `scope` adecuados para hacer que esta tabla sea más accesible.
+3. Por último, haz otra copia de los archivos originales, y esta vez añade accesibilidad a la tabla utilizando los atributos `id` y `headers`.
 
 > **Nota:** Puedes verificar tu trabajo con nuestros ejemplos terminados: consulta [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) y [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 

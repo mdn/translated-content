@@ -1,14 +1,8 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
+
 {{JSRef}}
 
 **`Object.isExtensible()`** メソッドは、オブジェクトが拡張可能であるか (新しいプロパティを追加することができるかどうか) を判定します。
@@ -32,7 +26,7 @@ Object.isExtensible(obj)
 
 ## 解説
 
-オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、 ({{jsxref("Object.proto", "__proto__")}} のプロパティに対応しているエンジンでは) `__proto__` プロパティを変更することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}} の何れかを用いる事で拡張不能に設定する事が可能です。
+オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、[`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) のプロパティに対応しているエンジンでは) `__proto__` プロパティを変更することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}} の何れかを用いる事で拡張不能に設定する事が可能です。
 
 ## 例
 
@@ -70,9 +64,7 @@ Object.isExtensible(1);
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,12 +1,8 @@
 ---
 title: '@-규칙'
 slug: Web/CSS/At-rule
-tags:
-  - At-rule
-  - CSS
-  - CSS Reference
-translation_of: Web/CSS/At-rule
 ---
+
 {{cssref}}
 
 **@-규칙**은 식별자(identifier)가 뒤따르는 at 기호('`@`' (`U+0040 COMMERCIAL AT`))로 시작하는 [CSS 문](/ko/docs/Web/CSS/Syntax#CSS_statements)이며 다음 세미콜론('`;`' (`U+003B SEMICOLON`)) 또는 다음 [CSS 블록](/ko/docs/Web/CSS/Syntax#CSS_declarations_blocks) 중 먼저 오는 쪽까지 모든 것을 포함합니다.
@@ -41,7 +37,7 @@ translation_of: Web/CSS/At-rule
 
 속성값과 마찬가지로, 각각의 @-규칙은 다른 구문이 있습니다. 그럼에도 불구하고, 그 중 몇몇은 조건부 그룹 규칙(**conditional group rules**)으로 불리는 특별한 범주로 분류될 수 있습니다. 이들 문은 공통 구문을 공유하고 그 각각은 _중첩 문_(_규칙 집합(ruleset)_ 또는 _중첩 @-규칙_ 중 하나)을 포함할 수 있습니다. 게다가, 그들은 모두 일반 semantic 의미를 전달합니다. 그들은 모두 어떤 유형의 조건을 링크합니다, 언제라도 **참** 또는 **거짓** 중 하나로 평가하는. 조건을 **참**으로 평가하면, 그룹 내 모든 문이 적용됩니다.
 
-조건부 그룹 규칙은 [CSS 조건부 규칙 모듈 레벨 3](http://dev.w3.org/csswg/css3-conditional/ "CSS Conditional Rules Module Level 3")에서 정의되고 다음과 같습니다:
+조건부 그룹 규칙은 [CSS 조건부 규칙 모듈 레벨 3](http://dev.w3.org/csswg/css3-conditional/)에서 정의되고 다음과 같습니다:
 
 - {{cssxref("@media")}},
 - {{cssxref("@supports")}},

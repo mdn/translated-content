@@ -1,17 +1,10 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - Element
-  - Interface
-  - Reference
-translation_of: Web/API/Element
 ---
 {{APIRef("DOM")}}
 
-**`Element`**는 {{domxref("Document")}} 안의 모든 객체가 상속하는 제일 범용적인 기반 클래스로 공통 메서드와 속성만 가지고 있으며, 특정 요소를 더 상세하게 표현하는 클래스가 `Element`를 상속합니다. 예를 들어 {{domxref("HTMLElement")}} 인터페이스는 HTML 요소의 기반 인터페이스이고 {{domxref("SVGElement")}} 인터페이스는 모든 SVG 요소의 기초입니다.
+**`Element`** 는 {{domxref("Document")}} 안의 모든 객체가 상속하는 제일 범용적인 기반 클래스로 공통 메서드와 속성만 가지고 있으며, 특정 요소를 더 상세하게 표현하는 클래스가 `Element`를 상속합니다. 예를 들어 {{domxref("HTMLElement")}} 인터페이스는 HTML 요소의 기반 인터페이스이고 {{domxref("SVGElement")}} 인터페이스는 모든 SVG 요소의 기초입니다.
 
 XUL의 `XULElement`처럼 웹 플랫폼 밖에서도 `Element`를 구현합니다.
 
@@ -46,7 +39,7 @@ _부모 인터페이스인 {{domxref("Node")}}와 그 부모인 {{domxref("Event
 - {{ domxref("Element.localName") }} {{readOnlyInline}}
   - : A {{domxref("DOMString")}} representing the local part of the qualified name of the element.
 - {{domxref("Element.namespaceURI")}} {{readonlyInline}}
-  - : The namespace URI of the element, or `null` if it is no namespace.> **참고:** Firefox 3.5 이하에서는 HTML 요소가 네임스페이스에 속해있지 않습니다. 이후 버전에서는 HTML과 XML 트리 모두에서 [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") 네임스페이스를 사용합니다.
+  - : The namespace URI of the element, or `null` if it is no namespace.> **참고:** Firefox 3.5 이하에서는 HTML 요소가 네임스페이스에 속해있지 않습니다. 이후 버전에서는 HTML과 XML 트리 모두에서 [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) 네임스페이스를 사용합니다.
 - {{ domxref("NonDocumentTypeChildNode.nextElementSibling") }} {{readOnlyInline}}
   - : Is an {{ domxref("Element") }}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{ domxref("Element.outerHTML") }}

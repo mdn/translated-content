@@ -3,6 +3,7 @@ title: Inheriting Properties
 slug: orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
 original_slug: Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
 ---
+
 ### プロパティの継承
 
 次の文を用いて（[図 8.3](/ja/Core_JavaScript_1.5_Guide/The_Employee_Example/Creating_the_Hierarchy) で示したように）`mark` オブジェクトを `WorkerBee` として作成するとします。

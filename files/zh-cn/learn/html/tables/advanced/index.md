@@ -2,6 +2,7 @@
 title: HTML 表格高级特性和无障碍
 slug: Learn/HTML/Tables/Advanced
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 这个模块的第二篇文章中，我们来看一下 HTML 表格更高级的功能，比如像 表格的标题/摘要，以及将你表格中的各行分组成头部、正文、页脚部分，提高视力受损用户的无障碍。
@@ -12,7 +13,7 @@ slug: Learn/HTML/Tables/Advanced
       <th scope="row">学习本章节的前提条件：</th>
       <td>
         HTML 的基础知识 (see
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >).
       </td>
@@ -46,7 +47,7 @@ slug: Learn/HTML/Tables/Advanced
 
 我们来试试看吧，回顾一下我们在之前的文章中第一次遇到的例子。.
 
-1. 打开你的语言老师的学校时间表，就是 [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) 文件复制下面。
+1. 打开你的语言老师的学校时间表，就是 [HTML Table Basics](/zh-CN/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) 文件复制下面。
 2. 为表格添加一个合适的标题。
 3. 保存你的代码，然后用浏览器打开，看看你的表格是什么样的。
 
@@ -64,7 +65,7 @@ slug: Learn/HTML/Tables/Advanced
 - `<tfoot>` 需要嵌套在 table 元素中，放置在底部 (页脚) 的位置，一般是最后一行，往往是对前面所有行的总结，比如，你可以按照预想的方式将`<tfoot>`放在表格的底部，或者就放在 `<thead>` 的下面。(浏览器仍将它呈现在表格的底部)
 - `<tbody>` 需要嵌套在 table 元素中，放置在 `<thead>`的下面或者是 `<tfoot>` 的下面，这取决于你如何设计你的结构。(`<tfoot>`放在`<thead>`下面也可以生效.)
 
-> **备注：** `<tbody>` 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 `<tbody>` 的例子，然后在你的 [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) 中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。
+> **备注：** `<tbody>` 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 `<tbody>` 的例子，然后在你的 [browser developer tools](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。
 
 ### 动手练习：添加表格结构
 
@@ -90,7 +91,7 @@ slug: Learn/HTML/Tables/Advanced
 
 7. 先保存，再刷新，然后观察一下结果。如果没有 `<tbody>` 和 `<tfoot>` 元素，你也许会写更加复杂的选择器来应用同样的样式。
 
-> **备注：** 我们并不期望目前你可以理解所有 CSS 的内容。当你经过我们的 CSS 模块的时候，你应该会了解更多 ([Introduction to CSS](/zh_CN/docs/Learn/CSS/Introduction_to_CSS) 是一个好的起点；我们也有专门的文章 [styling tables](/zh_CN/docs/Learn/CSS/Styling_boxes/Styling_tables)).
+> **备注：** 我们并不期望你现在就能完全理解 CSS。在你阅读我们的 CSS 模块时，你会学到更多这方面的知识（[CSS 介绍](/zh-CN/docs/Learn/CSS/First_steps)是一个好的起点；文章[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)也专门讲述了如何对表格添加样式）。
 
 你完成的表格应该如下所示：
 
@@ -323,11 +324,11 @@ slug: Learn/HTML/Tables/Advanced
 
 屏幕阅读设备会识别所有的标题，然后在它们和它们所关联的单元格之间产生编程关联。列和行标题的组合将标识和解释每个单元格中的数据，以便屏幕阅读器用户可以类似于视力正常的用户的操作来理解表格。
 
-我们之前的文章就提到过这一点，可见 [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements).
+我们之前的文章就提到过这一点，可见[使用 \<th> 元素添加标题](/zh-CN/docs/Learn/HTML/Tables/Basics#使用_th_元素添加标题)。
 
 ### scope 属性
 
-本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在`<th>` 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：
+本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在 `<th>` 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：
 
 ```html
 <thead>
@@ -355,7 +356,7 @@ slug: Learn/HTML/Tables/Advanced
 
 屏幕阅读设备会识别这种结构化的标记，并一次读出整列或整行，比如：
 
-`scope` 还有两个可选的值： `colgroup` 和 `rowgroup`。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的 "Items Sold August 2016" 表格。你会看到 "Clothes" 单元格在"Trousers", "Skirts", 和 "Dresses" 单元格的上面。这几个单元格都应该被标记为 (`<th>`)，但是 "Clothes" 是一个位于顶部且定义了其他三个子标题的标题。 因此 "Clothes" 应该有一个 `scope="colgroup"`属性，而另外三个子标题应该有 `scope="col"`属性。
+`scope` 还有两个可选的值： `colgroup` 和 `rowgroup`。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的 "Items Sold August 2016" 表格。你会看到 "Clothes" 单元格在"Trousers", "Skirts", 和 "Dresses" 单元格的上面。这几个单元格都应该被标记为 (`<th>`)，但是 "Clothes" 是一个位于顶部且定义了其他三个子标题的标题。因此 "Clothes" 应该有一个 `scope="colgroup"`属性，而另外三个子标题应该有 `scope="col"`属性。
 
 ### id 和标题属性
 
@@ -404,6 +405,6 @@ slug: Learn/HTML/Tables/Advanced
 
 ## 总结
 
-关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 [Styling Tables](/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables).
+关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 [Styling Tables](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

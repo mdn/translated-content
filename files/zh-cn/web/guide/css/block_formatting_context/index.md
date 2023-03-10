@@ -2,6 +2,7 @@
 title: 块格式化上下文
 slug: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef }}
 
 **块格式化上下文**（Block Formatting Context，BFC）是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
@@ -43,7 +44,7 @@ slug: Web/Guide/CSS/Block_formatting_context
 
 **使用 `overflow: auto`**
 
-在创建包含浮动元素的 BFC 时，通常的做法是设置父元素 `overflow: auto` 或者其它除默认的 `overflow: visible` 以外的值。`<div>` 元素变成布局中的迷你布局，任何子元素都会被包含进去。
+在创建包含浮动元素的 BFC 时，通常的做法是设置父元素 `overflow: auto` 或者其他除默认的 `overflow: visible` 以外的值。`<div>` 元素变成布局中的迷你布局，任何子元素都会被包含进去。
 
 使用 `overflow` 创建新的 BFC，是因为 `overflow` 属性会告诉浏览器应该怎样处理溢出的内容。如果使用它仅仅为了创建 BFC，你可能会遇到不希望出现的滚动条或阴影，需要注意。另外，对于后续的开发者，可能不清楚当时为什么使用 `overflow`，所以最好添加一些注释来解释为什么这样做。
 
@@ -156,7 +157,7 @@ section {
 
 ### 外边距重叠
 
-创建新的 BFC 避免两个相邻的 div 之间 [外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 。
+创建新的 BFC 避免两个相邻元素之间的[外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 。
 
 #### HTML
 

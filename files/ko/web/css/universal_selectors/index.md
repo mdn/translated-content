@@ -1,12 +1,8 @@
 ---
 title: 전체 선택자
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Universal_selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 [CSS](/ko/docs/Web/CSS) **전체 선택자**(`*`)는 모든 형태의 모든 요소를 선택합니다.

@@ -3,6 +3,7 @@ title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys
 ---
+
 {{JSRef}}
 
 **`handler.ownKeys()`** 方法用于拦截 {{jsxref("Reflect.ownKeys()")}}.
@@ -48,8 +49,8 @@ var p = new Proxy(target, {
 
 - `ownKeys` 的结果必须是一个数组。
 - 数组的元素类型要么是一个 {{jsxref("String")}} ，要么是一个 {{jsxref("Symbol")}}.
-- 结果列表必须包含目标对象的所有不可配置（non-configurable ）、自有（own）属性的 key.
-- 如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的 key，不能有其它值。
+- 结果列表必须包含目标对象的所有不可配置（non-configurable）、自有（own）属性的 key.
+- 如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的 key，不能有其他值。
 
 ## 示例
 

@@ -2,6 +2,7 @@
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`shape-image-threshold`** 通过设定一个 alpha 通道的界限值来提取{{cssxref("shape-outside")}} 值为图像的形状。

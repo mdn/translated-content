@@ -2,6 +2,7 @@
 title: Touch.force
 slug: Web/API/Touch/force
 ---
+
 {{ ApiRef() }}
 
 ### 概述

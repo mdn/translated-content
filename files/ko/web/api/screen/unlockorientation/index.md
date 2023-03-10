@@ -1,8 +1,8 @@
 ---
 title: window.screen.unlockOrientation
 slug: Web/API/Screen/unlockOrientation
-translation_of: Web/API/Screen/unlockOrientation
 ---
+
 {{APIRef("CSSOM View")}}{{Deprecated_header}}
 
 **`Screen.unlockOrientation()`** 함수는 이전의 page나 앱을 통해 지정한 화면 고정 값들을 모두 제거 한다.
@@ -11,7 +11,9 @@ translation_of: Web/API/Screen/unlockOrientation
 
 ## Syntax
 
-    var unlocked = window.screen.unlockOrientation();
+```js
+var unlocked = window.screen.unlockOrientation();
+```
 
 ### Return value
 
@@ -19,17 +21,19 @@ translation_of: Web/API/Screen/unlockOrientation
 
 ## Example
 
-    if (window.screen.unlockOrientation()) {
-      // orientation was unlocked
-    } else {
-      // orientation unlock failed
-    }
+```js
+if (window.screen.unlockOrientation()) {
+  // orientation was unlocked
+} else {
+  // orientation unlock failed
+}
+```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,29 +1,23 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
-tags:
-  - API
-  - DOM
-  - History
-  - History API
-  - Method
-  - Reference
-  - Web
-translation_of: Web/API/History/pushState
 ---
+
 {{APIRef("DOM")}}
 
 [HTML](/ko/docs/Web/HTML) 문서에서, **`history.pushState()`** 메서드는 브라우저의 세션 기록 스택에 상태를 추가합니다.
 
 ## 구문
 
-    history.pushState(state, title[, url]);
+```js
+history.pushState(state, title[, url]);
+```
 
 ### 매개변수
 
 - `state`
   - : 새로운 세션 기록 항목에 연결할 상태 객체. 사용자가 새로운 상태로 이동할 때마다 {{event("popstate")}} 이벤트가 발생하는데, 이 때 이벤트 객체의 `state` 속성에 해당 상태의 복제본이 담겨 있습니다.
-  
+
     상태 객체는 직렬화 가능한 객체라면 모두 가능합니다.
 - `title`
   - : [지금은 대부분의 브라우저가 `title` 매개변수를 무시하지만](https://github.com/whatwg/html/issues/2174), 미래에 쓰일 수도 있습니다. 빈 문자열을 지정하면 나중의 변경사항에도 안전할 것입니다. 아니면, 상태에 대한 짧은 제목을 제공할 수도 있습니다.

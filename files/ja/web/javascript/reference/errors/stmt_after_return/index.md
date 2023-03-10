@@ -1,13 +1,8 @@
 ---
 title: 'Warning: unreachable code after return statement'
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
-tags:
-  - JavaScript
-  - Warning
-  - エラー
-  - 警告
-translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の警告 "unreachable code after return statement" は、 {{jsxref("Statements/return", "return")}} 文の後で式を使用したり、セミコロンのない return 文を使用して、その直後に式を置いたりした場合に発生します。

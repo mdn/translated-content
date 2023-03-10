@@ -1,7 +1,8 @@
 ---
 title: Console.info()
-slug: Web/API/Console/info
+slug: Web/API/console/info
 ---
+
 {{APIRef("Console API")}}
 
 向 web 控制台输出一个通知信息。仅在 Firefox，web 控制台的日志中的项目旁边会显示一个小的‘I‘图标
@@ -32,7 +33,7 @@ console.info(msg [, subst1, ..., substN]);
 
 ## 浏览器兼容
 
-{{Compat("api.console.info")}}
+{{Compat}}
 
 ## 参见
 

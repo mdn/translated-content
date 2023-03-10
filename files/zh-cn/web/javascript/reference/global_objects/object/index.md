@@ -2,6 +2,7 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 ---
+
 {{JSRef}}
 
 **`Object`** 是 JavaScript 的一种 [数据类型](/zh-CN/docs/Web/JavaScript/Data_structures) 。它用于存储各种键值集合和更复杂的实体。Objects 可以通过 `{{jsxref("Object.prototype.Object", "Object()")}}` 构造函数或者使用 [对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) 的方式创建
@@ -25,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 ### 从一个对象上删除一个属性
 
-Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map.prototype.delete()")}}` 可以删除自身属性 ）为了删除对象上的属性，必须使用 [delete 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
+Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map.prototype.delete()")}}` 可以删除自身属性）为了删除对象上的属性，必须使用 [delete 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 
 ## 构造函数
 
@@ -77,19 +78,19 @@ Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map
 
 - {{jsxref("Object.prototype.constructor")}}
   - : 一个引用值，指向 Object 构造函数
-- {{jsxref("Object.prototype.proto", "Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
   - : 指向一个对象，当一个 object 实例化时，使用该对象作为实例化对象的原型
 
 ## 实例方法
 
-- {{jsxref("Object.prototype.__defineGetter__", "Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : 将一个属性与一个函数相关联，当该属性被访问时，执行该函数，并且返回函数的返回值。
-- {{jsxref("Object.prototype.__defineSetter__", "Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : 将一个属性与一个函数相关联，当该属性被设置时，执行该函数，执行该函数去修改某个属性。
-- {{jsxref("Object.prototype.__lookupGetter__", "Object.prototype.__lookupGetter__()")}}
-  - : 返回一个函数，该函数通过给定属性的 `{{jsxref("Object.prototype.__defineGetter__", "Object.prototype.__defineGetter__()")}}` 得出。
-- {{jsxref("Object.prototype.__lookupSetter__", "Object.prototype.__lookupSetter__()")}}
-  - : 返回一个函数，该函数通过给定属性的 `{{jsxref("Object.prototype.__defineSetter__", "Object.prototype.__defineSetter__()")}}` 得出。
+- [`Object.prototype.__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : 返回一个函数，该函数通过给定属性的 [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 得出。
+- [`Object.prototype.__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : 返回一个函数，该函数通过给定属性的 [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 得出。
 - {{jsxref("Object.prototype.hasOwnProperty", "Object.prototype.hasOwnProperty()")}}
   - : 返回一个布尔值，用于表示一个对象自身是否包含指定的属性，该方法并不会查找原型链上继承来的属性。
 - {{jsxref("Object.prototype.isPrototypeOf", "Object.prototype.isPrototypeOf()")}}
@@ -97,7 +98,7 @@ Object 自身没有提供方法删除其自身属性（Map 中的 `{{jsxref("Map
 - {{jsxref("Object.prototype.propertyIsEnumerable", "Object.prototype.propertyIsEnumerable()")}}
   - : 返回一个布尔值，用于表示内部属性 [ECMAScript \[\[Enumerable\]\] attribute](/zh-CN/docs/Web/JavaScript/Data_structures#属性) 是否被设置。
 - {{jsxref("Object.prototype.toLocaleString", "Object.prototype.toLocaleString()")}}
-  - : 调用 `toString()。`
+  - : 调用 `toString()`。
 - {{jsxref("Object.prototype.toString", "Object.prototype.toString()")}}
   - : 返回一个代表该对象的字符串。
 - {{jsxref("Object.prototype.valueOf", "Object.prototype.valueOf()")}}
@@ -163,7 +164,7 @@ Object.prototype.valueOf = function() {
 }
 ```
 
-Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a “base class” object of certain functions that act as objects. For example:
+Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a "base class" object of certain functions that act as objects. For example:
 
 ```js
   var Person = function(name) {

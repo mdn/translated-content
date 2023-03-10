@@ -1,42 +1,40 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
+l10:
+  sourceCommit: 9e52d335675a9f7daa34b5e24c9b1292dbf23b2e
 ---
+
 {{jsSidebar("Statements")}}
 
-**`return` 文**は、関数の実行を終了して、関数の呼び出し元に返す値を指定します。
+**`return`** 文は関数の実行を終了して、関数の呼び出し元に返す値を指定します。
 
 {{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
 ## 構文
 
-```
-return [expression];
+```js-nolint
+return [expression]
 ```
 
 - `expression`
-  - : 返す式。もし省略されたなら、`undefined` が代わりに返ります。
+  - : 値が返される式。省略した場合は、代わりに `undefined` が返されます。
 
 ## 解説
 
-関数内で `return` 文を呼び出すと、関数の実行が停止します。値が指定されていれば、その値を関数の呼び出し元に返します。例えば、以下の関数は引数 `x` が数値の場合、 `x` の平方を返します。
+`return` 文が関数本体の中で使用された際、その関数の実行が停止します。値を指定した場合、与えられた値が関数の呼び出し元に返されます。例として以下の関数は引数 `x` が数値のとき、`x` の二乗を返します。
 
 ```js
 function square(x) {
-   return x * x;
+  return x * x;
 }
-var demo = square(3);
-// demo will equal 9
+const demo = square(3);
+// demo は 9 に等しい
 ```
 
-値が省略された場合は `undefined` が代わりに返されます。
+値が省略された場合は、代わりに `undefined` が返されます。
 
-以下の return 文はすべて、関数の実行を中断します。
+以下の return 文はすべて関数の実行を中断するものです。
 
 ```js
 return;
@@ -48,25 +46,25 @@ return x + y / 3;
 
 ### 自動セミコロン挿入
 
-`return` 文は[自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) の影響を受けます。`return` キーワードと式の間に改行文字を置くことはできません。
+`return` 文は[自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入) の影響を受けます。`return` キーワードと式の間の改行コードは許容されません。
 
-```js
+```js example-bad
 return
 a + b;
 ```
 
-は ASI によって以下のように変換されます。
+上記のコードは ASI によって以下のように変換されます。
 
 ```js
 return;
 a + b;
 ```
 
-コンソールに "unreachable code after return statement" という警告が現れます。
+コンソールは "unreachable code after return statement" と警告します。
 
-> **Note:** Firefox 40 以降では、 `return` 文の後に到達できないコードがある場合に、コンソールに警告が表示されます。
+> **メモ:** Firefox 40 以降から `return` 文の後に到達不可能なコードが見つかった場合、コンソールに警告が表示されます。
 
-括弧を使用すると、この問題を防ぐ (ASI を抑止する) ことができます。
+括弧を使用することで、この問題を回避する (ASI を防ぐ) ことができます。
 
 ```js
 return (
@@ -78,23 +76,23 @@ return (
 
 ### 関数を中断する
 
-`return` を呼び出した時点で、関数の実行が即座に終了します。
+関数は `return` が呼び出された時点で即座に終了します。
 
 ```js
 function counter() {
-  for (var count = 1; ; count++) {  // 無限ループ
-    console.log(count + 'A'); // 5 まで
-      if (count === 5) {
-        return;
-      }
-      console.log(count + 'B');  // 4 まで
+  for (let count = 1; ; count++) {  // 無限ループ
+    console.log(`${count}A`); // 5 まで
+    if (count === 5) {
+      return;
     }
-  console.log(count + 'C');  // 現れない
+    console.log(`${count}B`);  // 4 まで
+  }
+  console.log(`${count}C`);  // 決して現れない
 }
 
 counter();
 
-// 出力:
+// ログ:
 // 1A
 // 1B
 // 2A
@@ -108,28 +106,26 @@ counter();
 
 ### 関数を返す
 
-[クロージャ](/ja/docs/Web/JavaScript/Closures)の記事もご覧ください。
+[クロージャ](/ja/docs/Web/JavaScript/Closures)についての記事も参照のこと。
 
 ```js
 function magic() {
   return function calc(x) { return x * 42; };
 }
 
-var answer = magic();
+const answer = magic();
 answer(1337); // 56154
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## 関連情報
 
-- [関数](/ja/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
 - [クロージャ](/ja/docs/Web/JavaScript/Closures)

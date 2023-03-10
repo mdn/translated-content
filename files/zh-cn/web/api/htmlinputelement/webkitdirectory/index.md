@@ -2,6 +2,7 @@
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 ---
+
 {{APIRef("HTML DOM")}}{{non-standard_header}}
 
 **`HTMLInputElement.webkitdirectory`**是属于{{HTMLElement("input")}}元素的一个 HTML 属性{{htmlattrxref("webkitdirectory", "input")}}，它指示`<input>`元素应该允许用户选择文件目录，而不是文件。当一个文件目录被选中，该目录及其整个内容层次结构将包含在所选项目集里面。可以使用{{domxref("HTMLInputElement.webkitEntries",
@@ -54,16 +55,16 @@ slug: Web/API/HTMLInputElement/webkitdirectory
 
 ## 示例
 
-在这个例子中，提供了一个目录选择器，它使用户可以选择一个或多个目录。当{{event("change")}}事件被触发的时候，将生成并显示所选目录层次结构中包含的所有文件的列表。
+在这个例子中，提供了一个目录选择器，它使用户可以选择一个或多个目录。当[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event)事件被触发的时候，将生成并显示所选目录层次结构中包含的所有文件的列表。
 
-### HTML 内容
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
-### JavaScript 内容
+### JavaScript
 
 ```js
 document.getElementById("filepicker").addEventListener("change", function(event) {
@@ -80,7 +81,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ### 结果
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
@@ -90,7 +91,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLInputElement.webkitdirectory")}}
+{{Compat}}
 
 ## 参见
 

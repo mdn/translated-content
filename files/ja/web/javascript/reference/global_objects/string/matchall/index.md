@@ -1,15 +1,8 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
+
 {{JSRef}}
 
 **`matchAll()`** は[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を含む *[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)* に一致するすべての*文字列*をイテレーターで返すメソッドです。
@@ -121,9 +114,7 @@ array[1];
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

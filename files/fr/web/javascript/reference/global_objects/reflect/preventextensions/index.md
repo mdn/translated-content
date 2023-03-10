@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/preventExtensions
 ---
+
 {{JSRef}}
 
 La méthode statique **`Reflect.preventExtensions()`** permet d'empêcher d'ajouter de nouvelles propriétés à un objet. Cette méthode est semblable à la méthode {{jsxref("Object.preventExtensions()")}} (modulo [quelques différences](#diffs)).
@@ -69,14 +70,11 @@ Object.preventExtensions(1);
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.preventExtensions")}}
+{{Compat}}
 
 ## Voir aussi
 

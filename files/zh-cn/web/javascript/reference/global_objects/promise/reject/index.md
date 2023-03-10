@@ -2,6 +2,7 @@
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
+
 {{JSRef}}
 
 **`Promise.reject()`** 方法返回一个带有拒绝原因的 `Promise` 对象。

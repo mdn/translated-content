@@ -1,16 +1,8 @@
 ---
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
-tags:
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 ---
+
 {{JSRef}}
 
 `@@iterator` プロパティは、初期値が {{jsxref("TypedArray.prototype.values()", "values")}} プロパティの同じ関数オブジェクトです。
@@ -52,9 +44,7 @@ console.log(eArr.next().value); // 50
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

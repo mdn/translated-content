@@ -2,6 +2,7 @@
 title: 入門
 slug: Web/SVG/Tutorial/Getting_Started
 ---
+
 {{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
 
 ### 一個簡單的例子
@@ -22,9 +23,9 @@ slug: Web/SVG/Tutorial/Getting_Started
 </svg>
 ```
 
-複製這段程式碼，在一個文件裡貼上，給該文件起名為 demo1.svg，然後用 Firefox 打開它，會渲染成下面截圖的樣子。(Firefox 用户: 點[這裡](/@api/deki/files/4571/=svgdemo1.xml))
+複製這段程式碼，在一個文件裡貼上，給該文件起名為 demo1.svg，然後用 Firefox 打開它，會渲染成下面截圖的樣子。(Firefox 用户: 點[這裡](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
-![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
+![svgdemo1.png](svgdemo1.png)
 
 渲染過程包括以下内容：
 
@@ -32,7 +33,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 
     - 不使用類似(X)HTML 的文檔聲明，因為基於 SVG 的 DTD 會造成很多問題，弊大於利。
     - 為了明確 SVG 版本，`version` 和 baseProfile 兩個屬性必須要寫
-    - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/en/SVG/Namespaces_Crash_Course)
+    - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/zh-TW/SVG/Namespaces_Crash_Course)
 
 2. 畫一個覆蓋整個圖形的矩形 ，將背景設為红色
 3. 在红色矩形中間畫一個綠色的圓形，半徑是80像素（圓心坐標：x軸向左偏移150像素，y軸向上偏移100像素）【坐標系統會在後面章節介紹】

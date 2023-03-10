@@ -1,14 +1,8 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-tags:
-  - Classes
-  - JavaScript
-  - Left-hand-side expressions
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 **super** 키워드는 부모 오브젝트의 함수를 호출할 때 사용됩니다.

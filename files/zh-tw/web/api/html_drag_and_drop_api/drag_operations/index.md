@@ -2,6 +2,7 @@
 title: 拖曳操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 本文會一一說明拖曳各步驟的作業。
@@ -17,7 +18,7 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 除了文字選擇、圖片或超連結之外，沒有元素預設是可拖曳的。所以要讓一個元素可以拖曳，有幾件事必須要做：
 
 - 在想要拖曳的元素上設定 `{{htmlattrxref("draggable")}}` 屬性為 `true`。
-- 註冊 `{{event("dragstart")}}` 事件之事件處理器。
+- 註冊 `[`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event)` 事件之事件處理器。
 - {{domxref("DataTransfer.setData","Set the drag data")}} within the listener defined above.
 
 以下是一段簡單的範例。
@@ -93,7 +94,7 @@ event.dataTransfer.clearData("text/uri-list");
 
 ## 設定拖曳圖片
 
-當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫[`setDragImage()來指定我們自己的拖曳使用圖片。`](/en-US/docs/DragDrop/DataTransfer#setDragImage.28.29)
+當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫[`setDragImage()來指定我們自己的拖曳使用圖片。`](/zh-TW/docs/DragDrop/DataTransfer#setDragImage.28.29)
 
 ```js
 event.dataTransfer.setDragImage(image, xOffset, yOffset);
@@ -123,31 +124,6 @@ function dragWithCustomImage(event) {
 ```
 
 上面我們的 canvas 是 50 x 50px 大小，然後我們位移一半 25 讓圖片落在滑鼠指標中央。
-
-在 Gecko 上開發，比如說外掛或 Mozllia 應用程式，Gecko9.0{{geckoRelease("9.0")}}支援使用{{XULElem("panel")}}元素作為拖曳圖片，簡單將 XUL panel 元素傳入 setDragImage 方法即可。
-
-試想下面這個 {{XULElem("panel")}}元素:
-
-```xml
-<panel id="panel" style="opacity: 0.6">
-  <description id="pb">Drag Me</description>
-</panel>
-
-<vbox align="start" style="border: 1px solid black;" ondragstart="startDrag(event)">
-  <description>Drag Me</description>
-</vbox>
-```
-
-當使用者拖曳{{XULElem("vbox")}} 元素時，startDrag 函數會被呼叫。
-
-```js
-function startDrag(event) {
-  event.dataTransfer.setData("text/plain", "<strong>Body</strong>");
-  event.dataTransfer.setDragImage(document.getElementById("panel"), 20, 20);
-}
-```
-
-我們用 HTML 格式的"\<strong>Body\</strong>"作為資料，然後用 pnael 元素作為圖片。
 
 ## 拖曳效果
 
@@ -326,7 +302,7 @@ function doDrop(event)
 
 ## 完成拖曳
 
-拖曳作業完成後，不論成功或取消於否，被拖曳元素的[`dragend`](/en-US/docs/Web/Reference/Events/dragend)事件都會觸發，如果想要判別作業是否完成，可以檢查 dropEffect 屬性，若是 dropEffect 為 none，代表拖曳作業被取消，否則 dropEffect 的值代表所完成的作業類型。
+拖曳作業完成後，不論成功或取消於否，被拖曳元素的[`dragend`](/zh-TW/docs/Web/Reference/Events/dragend)事件都會觸發，如果想要判別作業是否完成，可以檢查 dropEffect 屬性，若是 dropEffect 為 none，代表拖曳作業被取消，否則 dropEffect 的值代表所完成的作業類型。
 
 有一個 Gecko 專屬的[mozUserCancelled](/zh-TW/docs/DragDrop/DataTransfer#mozUserCancelled.28.29)屬性，當使用者按 ESC 鍵取消拖曳後，這個屬性會為 true，但若是因其他理由被取消或成功，則為 false
 
@@ -338,7 +314,7 @@ function doDrop(event)
 
 ## 參見
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types)
+- [HTML Drag and Drop API (Overview)](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Recommended Drag Types](/zh-TW/docs/Web/Guide/HTML/Recommended_Drag_Types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.getImageData()`** 返回一个{{domxref("ImageData")}}对象，用来描述 canvas 区域隐含的像素数据，这个区域通过矩形表示，起始点为*(sx, sy)、*宽为*sw、*高为*sh。*
@@ -36,7 +37,7 @@ ImageData ctx.getImageData(sx, sy, sw, sh);
 
 ### 使用 `getImageData` 方法
 
-这是一段使用 `getImageData` 方法的简单的代码片段。 获取更多信息，请看 [canvas 像素控制](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)和 {{domxref("ImageData")}} 对象。
+这是一段使用 `getImageData` 方法的简单的代码片段。获取更多信息，请看 [canvas 像素控制](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)和 {{domxref("ImageData")}} 对象。
 
 #### HTML
 
@@ -62,14 +63,14 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.getImageData")}}
+{{Compat}}
 
 ### 兼容性注解
 
-- 从 {{Gecko("5.0")}}开始， `getImageData()` 可以正确地接受超出 canvas 边界的矩形；canvas 范围外的像素返回值是透明的，并且如果矩形小于一个像素，会返回至少一像素值的图像数据。
+- 从 Gecko 5.0 开始，`getImageData()` 可以正确地接受超出 canvas 边界的矩形；canvas 范围外的像素返回值是透明的，并且如果矩形小于一个像素，会返回至少一像素值的图像数据。
 
 ## 参见
 
 - 接口定义， {{domxref("CanvasRenderingContext2D")}}.
 - {{domxref("ImageData")}}
-- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

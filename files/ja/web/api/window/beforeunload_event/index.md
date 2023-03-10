@@ -2,6 +2,7 @@
 title: 'Window: beforeunload イベント'
 slug: Web/API/Window/beforeunload_event
 ---
+
 {{APIRef}}
 
 **`beforeunload`** イベントは、ウィンドウ、文書、およびそのリソースがアンロードされる直前に発生します。文書はまだ表示されており、この時点ではイベントはキャンセル可能です。
@@ -61,10 +62,7 @@ window.addEventListener('beforeunload', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}} | {{Spec2("HTML WHATWG")}} |          |
-| {{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}} | {{Spec2("HTML5 W3C")}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

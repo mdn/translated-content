@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/filter-function
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<filter-function>`** représente un effet graphique qui peut modifier l'apparence d'une image. Il est notamment utilisé avec les propriétés [`filter`](/fr/docs/Web/CSS/filter) et [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter).

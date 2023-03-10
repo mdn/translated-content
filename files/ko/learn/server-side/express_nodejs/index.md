@@ -1,15 +1,6 @@
 ---
 title: Express 웹 프레임워크 (Node.js/JavaScript의 활용)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Express
-  - node.js
-  - 서버
-  - 시작
-  - 웹프레임워크
-  - 자바스크립트
-  - 초보개발자
-translation_of: Learn/Server-side/Express_Nodejs
 ---
 {{LearnSidebar}}
 

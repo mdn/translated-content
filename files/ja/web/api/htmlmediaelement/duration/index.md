@@ -1,7 +1,10 @@
 ---
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLMediaElement")}} の読み取り専用プロパティ **`duration`** は、この要素のメディアの長さを秒単位で表します。
@@ -13,7 +16,7 @@ slug: Web/API/HTMLMediaElement/duration
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.duration); // NaN
 ```
 

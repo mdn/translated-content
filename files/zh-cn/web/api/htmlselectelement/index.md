@@ -2,6 +2,7 @@
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement`** 接口表示一个 {{HTMLElement("select")}} HTML 元素。这个元素也通过 {{domxref("HTMLElement")}} 接口从其他 HTML 元素共享所有属性和方法。
@@ -99,7 +100,7 @@ console.log(select.selectedIndex); // 1
 console.log(select.options[select.selectedIndex].value) // Second
 ```
 
-A better way to track changes to the user's selection is to watch for the {{domxref("HTMLElement/change_event", "change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/en-US/docs/Web/API/HTMLElement/change_event#select_element) in the documentation for the `change` event for details.
+A better way to track changes to the user's selection is to watch for the {{domxref("HTMLElement/change_event", "change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/zh-CN/docs/Web/API/HTMLElement/change_event#select_element) in the documentation for the `change` event for details.
 
 ## 规范
 
@@ -107,7 +108,7 @@ A better way to track changes to the user's selection is to watch for the {{domx
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## 参见
 

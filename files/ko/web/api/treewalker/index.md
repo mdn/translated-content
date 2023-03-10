@@ -1,11 +1,6 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/TreeWalker
 ---
 {{ APIRef("DOM") }}
 

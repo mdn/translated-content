@@ -2,9 +2,10 @@
 title: DOM 中的空白符
 slug: Web/API/Document_Object_Model/Whitespace
 ---
+
 #### 问题说明
 
-[DOM](zh_tw/DOM) 中的空白符会让处理节点结构时增加不少麻烦。在 Mozilla 的软件中，原始文件里所有空白符都会在 DOM 中出现（不包括标签内含的空白符）。这样的处理方式有其必要之处，一方面编辑器中可迳行排列文字、二方面 [CSS](zh_tw/CSS) 里的 `white-space: pre` 也才能发挥作用。 如此一来就表示：
+[DOM](zh_tw/DOM) 中的空白符会让处理节点结构时增加不少麻烦。在 Mozilla 的软件中，原始文件里所有空白符都会在 DOM 中出现（不包括标签内含的空白符）。这样的处理方式有其必要之处，一方面编辑器中可迳行排列文字、二方面 [CSS](zh_tw/CSS) 里的 `white-space: pre` 也才能发挥作用。如此一来就表示：
 
 - 有些空白符会自成一个文本节点。
 - 有些空白符会与其他文本节点合成为一个文本节点。
@@ -26,7 +27,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 </html>
 ```
 
-![](https://mdn.mozillademos.org/files/854/whitespace_tree.png)
+![](whitespace_tree.png)
 
 这么一来，要使用 DOM 游走于节点结构间又不想要无用的空白符时，会有点困难。
 
@@ -166,7 +167,7 @@ function data_of( txt )
 
 ## 示例
 
-下面的代码演示了上面这些工具函数的使用方法。具体操作是，遍历一个子节点全部为元素节点的元素，找到所包含的第一个节点为一个文本内容为 “`This is the third paragraph`” 的文本节点的那个子元素，并修改该子元素的 class 属性及其第一个文本节点的文字内容。
+下面的代码演示了上面这些工具函数的使用方法。具体操作是，遍历一个子节点全部为元素节点的元素，找到所包含的第一个节点为一个文本内容为“`This is the third paragraph`”的文本节点的那个子元素，并修改该子元素的 class 属性及其第一个文本节点的文字内容。
 
 ```
 var cur = first_child(document.getElementById("test"));

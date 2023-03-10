@@ -4,6 +4,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 original_slug: Web/API/notification/Using_Web_Notifications
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 L'[API Notifications](/fr/docs/Web/API/Notifications_API) permet à une application ou à une page web d'envoyer des notifications affichées en dehors de la page par le système sous-jacent. Cela permet aux applications web d'envoyer des informations aux utilisatrices et utilisateurs même lorsque l'application est en veille ou en arrière-plan. Dans cet article, nous verrons les bases de cette API afin de vous permettre de l'utiliser dans vos propres applications.
@@ -18,7 +19,7 @@ Le système de notification du système d'exploitation variera selon la platefor
 
 Un des cas d'usage parmi les plus évidents pour les notifications est un client mail web ou une application de messagerie instantanée qui notifie dès qu'un nouveau message a été reçu, y compris lorsqu'on utilise l'appareil pour autre chose avec une autre application. De nombreux exemples existent pour ce cas, [Slack](https://slack.com/) en est un parmi d'autres.
 
-Nous avons écrit un exemple concret : une application pour gérer des listes de trucs à faire (« <i lang="en">to-do</i> ») pour vous donner une meilleure idée de la façon dont les notifications web peuvent être utilisées. Les données sont stockées localement avec [IndexedDB](/fr/docs/Web/API/IndexedDB_API) et les utilisateurs sont notifiés lorsque les tâches arrivent à échéance grâce aux notifications système. [Téléchargez le code de cette application](https://github.com/mdn/to-do-notifications/tree/gh-pages), ou [testez l'application en <i lang="en">live</i>](https://mdn.github.io/to-do-notifications/).
+Nous avons écrit un exemple concret : une application pour gérer des listes de trucs à faire (« <i lang="en">to-do</i> ») pour vous donner une meilleure idée de la façon dont les notifications web peuvent être utilisées. Les données sont stockées localement avec [IndexedDB](/fr/docs/Web/API/IndexedDB_API) et les utilisateurs sont notifiés lorsque les tâches arrivent à échéance grâce aux notifications système. [Téléchargez le code de cette application](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), ou [testez l'application en <i lang="en">live</i>](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## Demander la permission
 
@@ -250,7 +251,7 @@ Voir le résultat de cet exemple :
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Voir aussi
 

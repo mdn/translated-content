@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.z-index
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`z-index`** определяет положение [позиционированного](/ru/docs/Web/CSS/position) элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index.

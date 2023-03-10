@@ -1,14 +1,8 @@
 ---
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - imul
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
+
 {{JSRef}}
 
 **`Math.imul()`** 関数は、2 つの引数で C 言語風の 32 ビット乗算を行った結果を返します。
@@ -88,9 +82,7 @@ if (!Math.imul) Math.imul = function(opA, opB) {
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.imul', 'Math.imul')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ---
+
 {{JSRef}}
 
 **`getFullYear()`** 메서드는 주어진 날짜의 현지 시간 기준 연도를 반환합니다.

@@ -2,15 +2,16 @@
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 **`insertBefore()`** は {{domxref("Node")}} インターフェイスのメソッドで、*参照先ノード*の前にこの*親ノード*の子としてノードを挿入します。
 
-指定されたノードが既に文書中に存在した場合、  `insertBefore()` はこれを現在の位置から新しい位置に移動します。（つまり、既存の親ノードから自動的に削除され、指定された新しい親に追加されます。）
+指定されたノードが既に文書中に存在した場合、 `insertBefore()` はこれを現在の位置から新しい位置に移動します。（つまり、既存の親ノードから自動的に削除され、指定された新しい親に追加されます。）
 
 これは、 1 つのノードが文書中に同時に 2 か所に存在できないことを意味します。
 
-> **Note:** {{domxref("Node.cloneNode()")}} を使用すると、ノードを新しい親の下に追加する前に複製を作成することができます。なお、 `cloneNode()` で作成された複製は自動的には同期されません。
+> **メモ:** {{domxref("Node.cloneNode()")}} を使用すると、ノードを新しい親の下に追加する前に複製を作成することができます。なお、 `cloneNode()` で作成された複製は自動的には同期されません。
 
 指定された子が {{domxref("DocumentFragment")}} である場合、 `DocumentFragment` の内容全体が指定された親ノードの子リストに移動されます。
 
@@ -26,7 +27,7 @@ insertBefore(newNode, referenceNode);
   - : 挿入するノードです。
 - `referenceNode`
   - : `newNode` が挿入される位置の前にあるノードです。このノードが `null` である場合は、 `newNode` はこのノードの子ノードの末尾に挿入されます。
-    > **Note:** `referenceNode` は省略可能な引数では**ありません**。
+    > **メモ:** `referenceNode` は省略可能な引数では**ありません**。
     > 明示的に {{domxref("Node")}} または `null` を渡す必要があります。
     > 渡さなかった場合や無効な値を渡した場合の[動作](https://code.google.com/p/chromium/issues/detail?id=419780)は、ブラウザーのバージョンによって[異なる](https://bugzilla.mozilla.org/show_bug.cgi?id=119489)可能性があります。
 
@@ -92,7 +93,7 @@ parentDiv.insertBefore(sp1, sp2)
 </script>
 ```
 
-> **Note:** `insertAfter()` メソッドはありません。
+> **メモ:** `insertAfter()` メソッドはありません。
 > これは `insertBefore` メソッドと {{domxref("Node.nextSibling")}} の組み合わせでエミュレートできます。
 >
 > 前の例では、 `sp1` は以下のようにして `sp2` の後に挿入することができます。

@@ -1,13 +1,8 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
+
 {{JSRef}}
 
 **`handler.set()`** はプロパティの値を設定することに対するトラップです。
@@ -37,7 +32,7 @@ const p = new Proxy(target, {
 
   - : 割り当てがもともと行われていたオブジェクトです。これは通常、プロキシそのものです。しかし、 `set()` ハンドラーは内部的にプロトタイプチェーンや様々な他の方法経由で呼び出されます。
 
-    > **Note:** **例:** スクリプト上に `obj.name = "jen"` があり、`obj` はプロキシではなく、独自の `.name` プロパティを持っていません。しかし、プロトタイプチェーンでプロキシを持っています。その場合、そのプロキシの `set()` ハンドラが呼ばれて、 `obj` は receiver として渡されます。
+    > **メモ:** **例:** スクリプト上に `obj.name = "jen"` があり、`obj` はプロキシではなく、独自の `.name` プロパティを持っていません。しかし、プロトタイプチェーンでプロキシを持っています。その場合、そのプロキシの `set()` ハンドラが呼ばれて、 `obj` は receiver として渡されます。
 
 ### 返値
 
@@ -90,9 +85,7 @@ console.log(p.a);       // 10
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

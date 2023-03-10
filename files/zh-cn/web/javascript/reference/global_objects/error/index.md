@@ -2,6 +2,7 @@
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 当运行时错误产生时，`Error` 对象会被抛出。`Error` 对象也可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 
 ### 错误类型
 
-除了通用的 `Error` 构造函数外，JavaScript 还有其它类型的错误构造函数。对于客户端异常，详见[异常处理语句](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#异常处理语句)。
+除了通用的 `Error` 构造函数外，JavaScript 还有其他类型的错误构造函数。对于客户端异常，详见[异常处理语句](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#异常处理语句)。
 
 - {{jsxref("EvalError")}}
   - : 创建一个 error 实例，表示错误的原因：与 {{jsxref("Global_Objects/eval", "eval()")}} 有关。
@@ -141,7 +142,7 @@ try {
 }
 ```
 
-> **备注：** 如果你在创建一个函数库，你应该使用错误原因来区分不同的错误——而不是要求你的函数库的使用者来解析错误消息。相关的示例，请参见[提供错误原因](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause)。
+> **备注：** 如果你在创建一个函数库，你应该使用错误原因来区分不同的错误——而不是要求你的函数库的使用者来解析错误消息。相关的示例，请参见[提供错误原因](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause)。
 
 [自定义错误类型](#自定义错误类型)也可以使用 [`cause`](#error.prototype.cause) 属性，前提是通过 `super()` 调用子类的构造函数时传递 `options` 参数。
 
@@ -162,7 +163,7 @@ class MyError extends Error {
 
 #### ES6 自定义错误类
 
-> **警告：** Babel 7 之前的版本可以处理 `CustomError` 类方法，但类方法需要使用 [Object.defineProperty()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 定义。否则，旧版本的 Babel 和其它转译器在没有[额外配置](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)的情况下将无法正确处理下面的代码。
+> **警告：** Babel 7 之前的版本可以处理 `CustomError` 类方法，但类方法需要使用 [Object.defineProperty()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 定义。否则，旧版本的 Babel 和其他转译器在没有[额外配置](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)的情况下将无法正确处理下面的代码。
 
 > **备注：** 在使用 ES2015 的类时，一些浏览器会在堆栈跟踪中包含 `CustomError` 构造函数。
 

@@ -1,27 +1,27 @@
 ---
 title: IndexedDB 사용하기
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB는 사용자의 브라우저에 데이터를 영구적으로 저장할 수 있는 방법 중 하나입니다. IndexedDB를 사용하여 네트워크 상태에 상관없이 풍부한 쿼리 기능을 이용할 수 있는 웹 어플리케이션을 만들 수 있기 때문에, 여러분의 웹 어플리케이션은 온라인과 오프라인 환경에서 모두 동작할 수 있습니다.
 
 ## 이 문서에 대하여
 
-여러분은 이 튜토리얼에서 IndexedDB의 비동기 방식(asynchronous) API에 대해 훑어볼 수 있습니다. 만약 IndexedDB가 생소하다면, [Basic Concepts About IndexedDB](/ko/IndexedDB/Basic_Concepts_Behind_IndexedDB "en/IndexedDB/Basic Concepts Behind IndexedDB") 를 먼저 읽어보는 것이 좋습니다.
+여러분은 이 튜토리얼에서 IndexedDB의 비동기 방식(asynchronous) API에 대해 훑어볼 수 있습니다. 만약 IndexedDB가 생소하다면, [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology) 를 먼저 읽어보는 것이 좋습니다.
 
-IndexedDB API에 대한 참조(reference) 문서를 원한다면, [IndexedDB](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB") 항목과 하위 페이지를 보십시오. 이 문서에서는 IndexedDB에서 사용되는 객체의 종류와, 동기식(synchrounous), 비동기식(asynchronous) API에 대해서 기술하고 있습니다.
+IndexedDB API에 대한 참조(reference) 문서를 원한다면, [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) 항목과 하위 페이지를 보십시오. 이 문서에서는 IndexedDB에서 사용되는 객체의 종류와, 동기식(synchrounous), 비동기식(asynchronous) API에 대해서 기술하고 있습니다.
 
 ## 기본 패턴
 
 IndexedDB가 권장하는 기본 패턴은 다음과 같습니다:
 
-1.  데이터베이스를 엽니다.
-2.  객체 저장소(Object store)를 생성합니다.
-3.  트랜젝션(Transaction)을 시작하고, 데이터를 추가하거나 읽어들이는 등의 데이터베이스 작업을 요청합니다.
-4.  DOM 이벤트 리스너를 사용하여 요청이 완료될때까지 기다립니다.
-5.  (요청 객체에서 찾을 수 있는) 결과를 가지고 무언가를 합니다.
+1. 데이터베이스를 엽니다.
+2. 객체 저장소(Object store)를 생성합니다.
+3. 트랜젝션(Transaction)을 시작하고, 데이터를 추가하거나 읽어들이는 등의 데이터베이스 작업을 요청합니다.
+4. DOM 이벤트 리스너를 사용하여 요청이 완료될때까지 기다립니다.
+5. (요청 객체에서 찾을 수 있는) 결과를 가지고 무언가를 합니다.
 
 그러면 이제, 이런 큰 개념을 익히면 더 구체적인 것을 할 수 있습니다.
 
@@ -60,7 +60,7 @@ var request = window.indexedDB.open("MyTestDatabase");
 
 보셨나요? 데이터베이스 접속은 다른 operation 들과 비슷합니다 — 당신은 "요청(request)" 하면 됩니다.
 
-open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시작하지 않습니다. `open()` 함수를 호출하면 이벤트로 처리한 결과(성공 상태)나 오류 값이 있는 [`IDBOpenDBRequest`](/ko/docs/IndexedDB/IDBOpenDBRequest "/en-US/docs/IndexedDB/IDBOpenDBRequest") 객체를 반환합니다. IndexedDB의 다른 비동기 함수 대부분은 결과 또는 오류가 있는 [`IDBRequest`](/ko/docs/IndexedDB/IDBRequest) 객체를 반환합니다. `open()` 함수의 결과는 [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase "/en-US/docs/IndexedDB/IDBDatabase") 의 인스턴스입니다.
+open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시작하지 않습니다. `open()` 함수를 호출하면 이벤트로 처리한 결과(성공 상태)나 오류 값이 있는 [`IDBOpenDBRequest`](/ko/docs/IndexedDB/IDBOpenDBRequest) 객체를 반환합니다. IndexedDB의 다른 비동기 함수 대부분은 결과 또는 오류가 있는 [`IDBRequest`](/ko/docs/IndexedDB/IDBRequest) 객체를 반환합니다. `open()` 함수의 결과는 [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase) 의 인스턴스입니다.
 
 open 메소드의 두번째 매개 변수는 데이터베이스의 버전입니다. 데이터베이스의 버전은 데이터베이스 스키마를 결정합니다. 데이터베이스 스키마는 데이터베이스 안의 객체 저장소와 그것들의 구조를 결정합니다. 데이터베이스가 아직 존재하지 않으면, open operation에 의해 생성되고, 그 다음 `onupgradeneeded` 이벤트가 트리거되고 이 이벤트 안에서 데이터베이스 스키마를 작성합니다. 데이터베이스가 존재하지만 업그레이드 된 버전 번호를 지정하는 경우 `onupgradeneeded` 이벤트가 트리거되고 해당 핸들러에 업데이트된 스키마를 제공할 수 있습니다. 자세한 내용은 나중에 아래의 [데이터베이스의 버전 업데이트](#데이터베이스의_버전_생성_또는_업데이트)와 {{ domxref("IDBFactory.open") }} 페이지를 참조하십시오.
 
@@ -82,7 +82,7 @@ request.onsuccess = function(event) {
 
 `onsuccess()` 또는 `onerror()` 두 함수 중 어떤 함수가 호출될까요? 모든 것이 성공하면, success 이벤트 (즉, `type` 속성이`"success"` 로 설정된 DOM 이벤트)가 `request`를 `target`으로 발생합니다. 일단 실행되면, `request` 의 `onsuccess()` 함수는 success 이벤트를 인수로 트리거됩니다. 반면, 문제가 있는 경우, 오류 이벤트 (즉 `type` 속성이`"error"` 로 설정된 DOM 이벤트)는 `request`에서 발생합니다. 이 오류 이벤트를 인수로 `onerror()` 함수가 트리거됩니다.
 
-The IndexedDB API는 오류 처리의 필요성을 최소화하도록 설계되었기 때문에 많은 오류 이벤트를 볼 수는 없을 것입니다. (적어도 API에 익숙하지 않은 경우). 그러나 데이터베이스를 여는 경우 오류 이벤트를 발생하는 몇 가지 일반적인 조건이 있습니다. 가장 많은 문제는 사용자가 웹 응용 프로그램에 데이터베이스를 만들 수 있는 권한을 주지 않기로 결정한 것입니다. IndexedDB의 주요 설계 목표 중 하나는 많은 양의 데이터를 오프라인에서 사용할 수 있도록 하는 것입니다. (각 브라우저에서 저장할 수 있는 저장 용량에 대한 자세한 내용은 [Storage limits](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits "https://developer.mozilla.org/en/IndexedDB#Storage_limits") 를 참조하십시오.)
+The IndexedDB API는 오류 처리의 필요성을 최소화하도록 설계되었기 때문에 많은 오류 이벤트를 볼 수는 없을 것입니다. (적어도 API에 익숙하지 않은 경우). 그러나 데이터베이스를 여는 경우 오류 이벤트를 발생하는 몇 가지 일반적인 조건이 있습니다. 가장 많은 문제는 사용자가 웹 응용 프로그램에 데이터베이스를 만들 수 있는 권한을 주지 않기로 결정한 것입니다. IndexedDB의 주요 설계 목표 중 하나는 많은 양의 데이터를 오프라인에서 사용할 수 있도록 하는 것입니다. (각 브라우저에서 저장할 수 있는 저장 용량에 대한 자세한 내용은 [Storage limits](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits) 를 참조하십시오.)
 
 일부 광고 네트워크나 악의적인 웹 사이트가 컴퓨터를 오염시키는 것을 브라우저는 원하지 않기 때문에 브라우저는 특정 웹 응용 프로그램이 처음으로 저장용 IndexedDB를 열려고 할 때 사용자에게 메시지를 보냅니다. 사용자가 액세스를 허용하거나 거부할 수 있습니다. 또한, 개인정보 보호 모드의 브라우저에서 IndexedDB 공간은 시크릿 세션이 닫힐 때까지 메모리 내에서만 지속됩니다. (Firefox의 개인정보 보호 브라우징 모드와 Chrome 의 시크릿 모드가 있지만, Firefox 의 경우 2015년 11월 현재 아직 미구현({{Bug("781982")}} 참조)이므로, 개인정보 보호 브라우징 모드의 Firefox에서는 IndexedDB를 사용할 수 없습니다).
 
@@ -134,11 +134,9 @@ request.onupgradeneeded = function(event) {
 
 `onupgradeneeded` 이벤트가 성공적으로 끝나면, 데이터베이스 열기 요청의 `onsuccess` 핸들러가 트리거 됩니다.
 
-Chrome 23+ 및 Opera 17+ 의 Blink/Webkit은 현재 버전의 스펙을 지원합니다. IE10+ 마찬가지입니다. 다른 구현체 또는 구형 구현체는 아직 스펙의 현재 버전을 구현하지 않으므로 `indexedDB.open(name, version).onupgradeneeded` 서명을 지원하지 않습니다. 이전 Webkit/Blink에서 데이터베이스 버전을 업그레이드하는 방법에 대한 자세한 내용은 [IDBDatabase reference article](</ko/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated> "https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated") 를 참조하십시오.
-
 ### 데이터베이스 구성
 
-이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/ko/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath "https://developer.mozilla.org/en/IndexedDB#gloss_key_path") 또는 [키 생성기](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator "en/IndexedDB#gloss key generator") 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
+이제 데이터베이스를 구축합니다. IndexedDB는 테이블이 아닌 객체 저장소를 사용하며 하나의 데이터베이스는 여러 개의 객체 저장소를 포함할 수 있습니다. 값을 객체 저장소에 저장할 때마다 값은 키와 연관됩니다. 객체 저장소가 [키 경로](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) 또는 [키 생성기](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator) 옵션의 사용 여부에 따라 키를 제공할 수 있는 여러 가지 방법이 있습니다.
 
 다음 표는 키가 제공되는 다양한 방법을 보여줍니다:
 
@@ -209,7 +207,7 @@ request.onupgradeneeded = function(event) {
 우리는 또한 저장된 객체의 `name` 프로퍼티를 찾기 위한 인덱스 "name"을 요청합니다.
 또한 `createObjectStore()`, `createIndex()` 도 생성하려는 인덱스의 종류를 결정하는 선택적인 객체인 `options` 을 인자로 받습니다. `name` 프로퍼티가 없는 객체를 추가할 수는 있지만, 이 경우 그 객체는 "name" 인덱스에 나타나지 않습니다.
 
-이제 우리는 저장된 customer 객체를 가져오기 위해 `ssn` 을 이용하여 객체 저장소로부터 바로 가져오거나, 인덱스에서 그들의 이름을 이용해 가져올 수 있습니다. 이 과정이 어떻게 이루어지는지 배우기 위해, [using an index](https://developer.mozilla.org/en/IndexedDB/Using_IndexedDB#Using_an_index "Using IndexedDB#Using an index") 섹션을 확인할 수 있습니다.
+이제 우리는 저장된 customer 객체를 가져오기 위해 `ssn` 을 이용하여 객체 저장소로부터 바로 가져오거나, 인덱스에서 그들의 이름을 이용해 가져올 수 있습니다. 이 과정이 어떻게 이루어지는지 배우기 위해, [using an index](/en/IndexedDB/Using_IndexedDB#Using_an_index) 섹션을 확인할 수 있습니다.
 
 ### 키 생성기 사용하기
 
@@ -246,7 +244,7 @@ request.onupgradeneeded = function (event) {
 
 새 데이터베이스에서 작업을 하기전에, 트랜잭션을 시작할 필요가 있습니다. 트랜잭션은 데이터베이스 객체 단위로 작동하므로 트랜잭션을 사용할 객체 저장소를 지정해줘야합니다. 트랜잭션에 들어오고 나면, 자료가 있는 객체 저장소에 접근할 수 있고 요청을 만들 수 있습니다. 다음으로, 데이터베이스에 변경점을 만들지, 혹은 읽기만 할지 결정해야합니다. 트랜잭션은 다음의 3가지 모드가 있습니다: `readonly`, `readwrite`, 그리고 `versionchange`.
 
-객체 저장소나 인덱스를 만들거나 삭제하는 작업을 포함하여 데이터베이스의 "schema"나 구조를 변경하기 위해서 트랜잭션은 반드시 `versionchange` 여야 합니다. 이 트랜잭션은 {{domxref("IDBFactory.open")}} 메소드를 `version` 과 함께 호출할 경우 시작됩니다. (최신 사양이 구현되지 않은 WebKit 브라우저에서는 {{domxref("IDBFactory.open")}} 메소드는 데이터베이스의 이름(`name`) 하나만 인자로 받습니다. 따라서 `versionchange` 트랜잭션을 수립하기 위해서 {{domxref("IDBVersionChangeRequest.setVersion")}} 를 호출해야 합니다.)
+객체 저장소나 인덱스를 만들거나 삭제하는 작업을 포함하여 데이터베이스의 "schema"나 구조를 변경하기 위해서 트랜잭션은 반드시 `versionchange` 여야 합니다. 이 트랜잭션은 {{domxref("IDBFactory.open")}} 메소드를 `version` 과 함께 호출할 경우 시작됩니다.
 
 이미 존재하는 객체 저장소의 레코드를 읽기 위해서 트랜잭션은 `readonly` 혹은 `readwrite` 모드이면 됩니다. 이미 존재하는 객체 저장소에 변경점을 기록하기 위해서는 트랜잭션이 반드시 `readwrite` 모드여야합니다. 특정 트랜잭션은 {{domxref("IDBDatabase.transaction")}} 으로 열 수 있습니다. 이 메소드는 접근하고 싶은 객체 저장소들의 배열로 정의된 범위인 `storeNames`와 트랜잭션의 모드`mode` (`readonly` 혹은 `readwrite`), 2개의 인자를 받습니다. 이 메소드는 객체 저장소에 접근할 수 있는 {{domxref("IDBIndex.objectStore")}} 메소드를 포함한 트랜잭션 객체를 반환합니다. 모드가 지정되지 않는다면 기본적으로 트랜잭션은 `readonly` 모드로 열립니다.
 
@@ -339,7 +337,7 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 
 범위 제한과 모드 설정에 따라 데이터 접근 속도를 빠르게 할 수 있다는 점을 주목하십시오. 여기 몇개의 팁이 있습니다:
 
-- 범위([scope](/ko/docs/IndexedDB/Using_IndexedDB$edit#scope))를 정의할 때, 당신이 필요로 하는 오브젝트 스토어만 지정하십시오. 이렇게 하면, 범위가 중복되지 않는 한 여러 개의 트랜잭션을 동시에 실행할 수 있습니다.
+- 범위([scope](#scope))를 정의할 때, 당신이 필요로 하는 오브젝트 스토어만 지정하십시오. 이렇게 하면, 범위가 중복되지 않는 한 여러 개의 트랜잭션을 동시에 실행할 수 있습니다.
 - `readwrite` 모드는 반드시 필요할 때만 사용하십시오. `readonly` 모드는 범위가 중복되더라도 동시에 실행 가능하지만, `readwrite` 모드는 한 오브젝트 스토어에 대해 동시에 하나밖에 실행할 수 없습니다. 더욱 자세한 정보는, 기본 개념서의 트랜잭션의 정의 항목([transactions in the Basic Concepts article](/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction))을 참조하십시오.
 
 ### 데이터베이스의 내용을 업데이트하기
@@ -393,7 +391,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-The` openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
+The `openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
 
 One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
 
@@ -412,7 +410,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-> **참고:** **Note**: Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). These aren't part of the IndexedDB standard, so they may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); }; `There is a performance cost associated with looking at the `value` property of a cursor, because the object is created lazily. When you use `getAll()` for example, Gecko must create all the objects at once. If you're just interested in looking at each of the keys, for instance, it is much more efficient to use a cursor than to use `getAll()`. If you're trying to get an array of all the objects in an object store, though, use `getAll()`.
+> **참고:** **Note**: Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). These aren't part of the IndexedDB standard, so they may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` There is a performance cost associated with looking at the `value` property of a cursor, because the object is created lazily. When you use `getAll()` for example, Gecko must create all the objects at once. If you're just interested in looking at each of the keys, for instance, it is much more efficient to use a cursor than to use `getAll()`. If you're trying to get an array of all the objects in an object store, though, use `getAll()`.
 
 ### Using an index
 
@@ -575,9 +573,9 @@ Third party window content (e.g. {{htmlelement("iframe")}} content) can access t
 
 When the browser shuts down (because the user chose the Quit or Exit option), the disk containing the database is removed unexpectedly, or permissions are lost to the database store, the following things happen:
 
-1.  Each transaction on every affected database (or all open databases, in the case of browser shutdown) is aborted with an `AbortError`. The effect is the same as if {{domxref("IDBTransaction.abort()")}} is called on each transaction.
-2.  Once all of the transactions have completed, the database connection is closed.
-3.  Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
+1. Each transaction on every affected database (or all open databases, in the case of browser shutdown) is aborted with an `AbortError`. The effect is the same as if {{domxref("IDBTransaction.abort()")}} is called on each transaction.
+2. Once all of the transactions have completed, the database connection is closed.
+3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
 
 The behavior described above is new, and is only available as of the following browser releases: Firefox 50, Google Chrome 31 (approximately).
 
@@ -1299,11 +1297,9 @@ Further reading for you to find out more information if desired.
 
 ### Reference
 
-- [IndexedDB API Reference](https://developer.mozilla.org/en/IndexedDB)
+- [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
-- [Using IndexedDB in chrome](/ko/docs/IndexedDB/Using_IndexedDB_in_chrome "/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome")
-- [Using JavaScript generators in Firefox](/ko/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
-- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1 "https://mxr.mozilla.org/mozilla-central/find?text=&string=dom/indexedDB/.*\\.idl®exp=1") in the Firefox source code
+- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) in the Firefox source code
 
 ### Tutorials and guides
 

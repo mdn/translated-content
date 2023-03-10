@@ -1,43 +1,48 @@
 ---
 title: JavaScript の基本
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
+l10n:
+  sourceCommit: ca3bd6f9ad181ea03b5b66bd7ca294559e169d83
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
-JavaScript はウェブサイトにインタラクティブ機能 (ゲーム、ボタンが押されたときやデータがフォームに入力されたときの反応、動的なスタイルの変更、アニメーションなど) を追加するプログラミング言語です。この記事は、このエキサイティングな言語を始めるのに役立ち、可能性についてのアイディアを提供します。
+JavaScript は、ウェブサイトに対話性を追加するプログラミング言語です。ゲーム、ボタンを押したときの反応、フォームへのデータ入力、動的なスタイル付け、アニメーションなどがこれにあたります。
+この記事は、 JavaScript を使い始め、何ができるのかについての理解を深めるのに役立ちます。
 
 ## JavaScript とは何か
 
-{{Glossary("JavaScript")}} (略して "JS") は成熟した{{Glossary("Dynamic_programming_language", "動的プログラミング言語")}}であり、{{Glossary("HTML")}} 文書に適用すると、ウェブサイトに動的な対話操作を提供できます。Mozilla プロジェクト、Mozilla Foundation、Mozilla Corporation の共同設立者である Brendan Eich によって考案されました。
+{{Glossary("JavaScript")}} は強力なプログラミング言語であり、ウェブサイトに対話操作を追加することができます。
+Brendan Eich によって考案されました。
 
 JavaScript は汎用性が高く、初心者にもやさしいものです。経験を積めば、ゲーム、 2D や 3D のアニメーション、包括的なデータベース駆動型のアプリなどが作れるようになります。
 
 JavaScript は比較的コンパクトですが、一方でとても柔軟性があります。開発者は JavaScript 言語のコアをベースに多種多様なツールを作成し、最小限の労力で膨大な様々な機能を利用できるようにしました。例えば以下のようなものがあります。
 
-- ブラウザーのアプリケーションプログラミングインターフェイス ({{Glossary("API")}})。ウェブブラウザーに組み込まれた API により、動的な HTML の作成、 CSS スタイルの設定、ユーザーのウェブカメラからの動画ストリームの収集や操作、3D グラフィックやオーディオサンプルの生成などの機能を提供する、ウェブブラウザーに組み込まれた API。
-- 開発者が Twitter や Facebook のような他のコンテンツプロバイダーのサイトから機能を組み込むことを可能にする、サードパーティの API。
+- ブラウザーのアプリケーションプログラミングインターフェイス ({{Glossary("API")}})。ウェブブラウザーに組み込まれた API により、動的な HTML の作成、 CSS スタイルの設定、ユーザーのウェブカメラからの動画ストリームの収集や操作、三次元グラフィックや音声サンプルの生成などの機能を提供します。
+- 開発者が他のコンテンツプロバイダーのサイト（Twitter や Facebook など）から機能を組み込むことを可能にする、サードパーティの API。
 - すばやくサイトやアプリケーションを構築することができ、 HTML に組み込み可能なサードパーティのフレームワークやライブラリー。
 
-コアの JavaScript 言語が上記のツールとどのように違うのか、その詳細を紹介することは、 JavaScript の軽い入門者向けの書籍であるこの記事の範囲外です。詳細は MDN の [JavaScript 学習エリア](/ja/docs/Learn/JavaScript)や、 MDN の他の部分で詳しく学ぶことができます。
+コアの JavaScript 言語が上記のツールとどのように違うのか、その詳細を紹介することは、 JavaScript の軽い入門者向けの書籍であるこの記事の範囲外です。詳細は MDN の [JavaScript 学習領域](/ja/docs/Learn/JavaScript)や、 MDN の他の部分で詳しく学ぶことができます。
 
 以下では、コア言語のいくつかの側面について紹介します。またブラウザーの API 機能についてもいくつか説明します。楽しみましょう！
 
 ## _Hello world!_ の例
 
-JavaScript は、最も人気のある現代のウェブ技術のひとつです。あなたの JavaScript のスキルが上がれば、あなたのウェブサイトのパワーと創造性は新たな次元に入るでしょう。
+JavaScript は、最も人気のある現代のウェブ技術のひとつです。 JavaScript のスキルが上がれば、ウェブサイトのパワーと創造性は新たな次元に入るでしょう。
 
-しかし、JavaScript を使いこなせるようになるのは HTML や CSS よりも少し難しいです。小さなものから始め、小さく確実な手順で作業を続ける必要があるかもしれません。始めるにあたって、_"hello world!"_ を表示する例 ([基本的なプログラミング例の標準](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)) を作りながら、基本的な JavaScript をページに追加する方法を紹介しましょう。
+しかし、 JavaScript を使いこなせるようになるのは HTML や CSS よりも少し難しいです。小さなものから始め、小さく確実な手順で作業を続ける必要があるかもしれません。始めるにあたって、_"hello world!"_ を表示する例（[基本的なプログラミング例の標準](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)）を作りながら、基本的な JavaScript をページに追加する方法を紹介しましょう。
 
-> **Warning:** **重要**: これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip)作業を進めてください。
+> **警告:** これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)作業を進めてください。
 
-1. 最初にテストサイトに行き、 `scripts` という名前の新しいフォルダーを作成してください。それから、 scripts フォルダーの中に `main.js` という新しいファイルを作成して保存してください。
-2. `index.html` ファイルの `</body>` 閉じタグの直前に新しい行で、以下の新しい要素を追加してください。
+1. 最初にテストサイトに行き、 `scripts` という名前の新しいフォルダーを作成してください。それから、この scripts フォルダーの中に `main.js` という新しいファイルを作成して保存してください。
+2. `index.html` ファイルの `</body>` 終了タグの直前に新しい行で、以下の新しい要素を追加してください。
 
     ```html
     <script src="scripts/main.js"></script>
     ```
 
-3. これは CSS の {{htmlelement("link")}} 要素の時の作業と基本的に同じです。これは JavaScript をページに適用するので、(CSS の時と同じく、ページ上の何に対しても) HTML に影響を与えることができます。
+3. これは CSS の {{htmlelement("link")}} 要素の時の作業と基本的に同じです。これは JavaScript をページに適用するので、（CSS の時と同じく、ページ上の何に対しても） HTML に影響を与えることができます。
 4. `main.js` ファイルに次のコードを追加してください。
 
     ```js
@@ -45,41 +50,41 @@ JavaScript は、最も人気のある現代のウェブ技術のひとつです
     myHeading.textContent = 'Hello world!';
     ```
 
-5. 最後に、 HTML と JavaScript を書いたファイルを保存したことを確認し、ブラウザーで `index.html` を読み込んでください。![](hello-world.png)
+5. 最後に、 HTML と JavaScript を書いたファイルを保存したことを確認し、ブラウザーで `index.html` を読み込んでください。
 
-> **Note:** 上記の説明で {{htmlelement("script")}} 要素を HTML ファイルの末尾付近に置いたのは、**ブラウザーがファイルに現れる順番でコードを読み込むからです**。
+!["hello world" の見出しが firefox のロゴの上にある](hello-world.png)
+
+> **メモ:** 上記の説明で {{htmlelement("script")}} 要素を HTML ファイルの末尾付近に置いたのは、**ブラウザーがファイルに現れる順番でコードを読み込むからです**。
 >
-> JavaScript が先に読み込まれ、まだ読み込まれていない HTML に影響を与えることになると、問題が生じる可能性があります。 JavaScript を HTML ページの下部に配置することは、この依存関係に対応する一つの方法です。その他の方法については、[スクリプトの読み込み戦略](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies)をご覧ください。
+> JavaScript が先に読み込まれ、まだ読み込まれていない HTML に影響を与えることになると、問題が生じる可能性があります。 JavaScript を HTML ページの下部に配置することは、この依存関係に対応する一つの方法です。その他の方法については、[スクリプトの読み込み方針](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#スクリプトの読み込み方針)をご覧ください。
 
 ### 何が起きたのか
 
-JavaScript を使用して、見出しの文字列が _Hello world!_ に変更されました。最初に `{{domxref("Document.querySelector", "querySelector()")}}` と呼ばれる関数を使用して見出しの参照を取得し、 `myHeading` と呼ばれる変数に格納しています。これは CSS のセレクターを使用するのととてもよく似ています。要素に対して何かをしたくなったら、まずその要素を選択する必要があります。
+JavaScript を使用して、見出しの文字列が _Hello world!_ に変更されました。最初に {{domxref("Document.querySelector", "querySelector()")}} と呼ばれる関数を使用して見出しの参照を取得し、 `myHeading` と呼ばれる変数に格納しています。これは CSS のセレクターを使用するのととてもよく似ています。要素に対して何かをしたくなったら、まずその要素を選択する必要があります。
 
-その後、`myHeading` 変数の `{{domxref("Node.textContent", "textContent")}}` プロパティ (見出しの内容を表す) の値を _Hello world!_ に設定します。
+その後、 `myHeading` 変数の {{domxref("Node.textContent", "textContent")}} プロパティ（見出しの内容を表す）の値を _Hello world!_ に設定します。
 
-> **Note:** 上の例で使用した機能はどちらも[ドキュメントオブジェクトモデル (DOM) API](/ja/docs/Web/API/Document_Object_Model) の一部であり、これを使って文書を操作することができます。
+> **メモ:** 上の例で使用した機能はどちらも[ドキュメントオブジェクトモデル (DOM) API](/ja/docs/Web/API/Document_Object_Model) の一部であり、これを使って文書を操作することができます。
 
 ## 言語の短期集中コース
 
 どのように動作するかをよりよく理解できるように、 JavaScript 言語の基本機能のいくつかを説明しましょう。これらの機能はすべてのプログラミング言語に共通しているので、これらの基本をマスターすれば、ほとんど何でもプログラムできるようになります！
 
-> **Warning:** **重要**: この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を参照してください。
+> **警告:** この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を参照してください。
 
 ### 変数
 
-{{Glossary("Variable", "変数")}} は、値を格納できる入れ物です。まず、 [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) (説明はややこしいですが、推奨しません) または [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) というキーワードと、その後に任意の名前を指定することで、変数を宣言します。
+{{Glossary("Variable", "変数")}}は、値を格納できる入れ物です。まず、 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) というキーワードと、その後に任意の名前を指定することで、変数を宣言します。
 
 ```js
 let myVariable;
 ```
 
-> **Note:** 行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) を参照してください。
+> **メモ:** 行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/) を参照してください。
 
-> **Note:** 変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variables)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
+> **メモ:** 変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
 
-> **Note:** JavaScript は大文字と小文字を区別します。`myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
-
-> **Note:** `var` と `let` のより詳しい違いは、[var と let の違い](/ja/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let)を見てください。
+> **メモ:** JavaScript は大文字と小文字を区別します。 `myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
 
 変数を宣言したら、以下のように値を割り当てることができます。
 
@@ -101,20 +106,62 @@ myVariable;
 
 変数に値を代入した後で、変更することもできます。
 
-```
+```js
 let myVariable = 'Bob';
 myVariable = 'Steve';
 ```
 
 なお、変数は様々な[データ型](/ja/docs/Web/JavaScript/Data_structures)の値を保持することもできます。
 
-| データ型                         | 説明                                                                                                                                         | 例                                                                                                                               |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{Glossary("String")}}     | 文字列と呼ばれる一連のテキスト。値が文字列であることを示すには、引用符で囲む必要があります。                                                 | `let myVariable = 'Bob';`                                                                                                        |
-| {{Glossary("Number")}}     | 数。数字には引用符がありません。                                                                                                             | `let myVariable = 10;`                                                                                                           |
-| {{Glossary("Boolean")}} | 論理値。 `true` と `false` は JS では特別なキーワードであり、引用符は必要ありません。                                                        | `let myVariable = true;`                                                                                                         |
-| {{Glossary("Array")}}     | 単一の参照で複数の値を格納できる構造です。                                                                                                   | `let myVariable = [1,'Bob','Steve',10];` 配列の各メンバーはこのように参照してください。 `myVariable[0]`, `myVariable[1]`, など。 |
-| {{Glossary("Object")}}     | 基本的には何でも格納できます。 JavaScript のすべてがオブジェクトであり、変数に格納することができます。学ぶ際にはこれを覚えておいてください。 | `let myVariable = document.querySelector('h1');` 上記の例も同様です。                                                            |
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">変数</th>
+      <th scope="col">説明</th>
+      <th scope="col">例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{Glossary("String")}}</th>
+      <td>
+        一連のテキストで、文字列と呼ばれます。値が文字列であることを示すには、単一引用符で囲む必要があります。
+      </td>
+      <td><code>let myVariable = 'Bob';</code></td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Number")}}</th>
+      <td>数値です。数字には引用符がありません。</td>
+      <td><code>let myVariable = 10;</code></td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Boolean")}}</th>
+      <td>
+        論理値です。これは真か偽かの値です。 <code>true</code> と <code>false</code> は特別なキーワードで、引用符は必要ありません。
+      </td>
+      <td><code>let myVariable = true;</code></td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Array")}}</th>
+      <td>
+        単一の参照で複数の値を格納できる構造です。
+      </td>
+      <td>
+        <code>let myVariable = [1,'Bob','Steve',10];</code><br />配列の各メンバーは次のように参照します。<br /><code>myVariable[0]</code>,
+        <code>myVariable[1]</code>, など。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Object")}}</th>
+      <td>
+         基本的には何でも格納できます。 JavaScript のすべてがオブジェクトであり、変数に格納することができます。学ぶ際にはこれを覚えておいてください。
+      </td>
+      <td>
+        <code>let myVariable = document.querySelector('h1');</code><br />上記のすべての例も同様です。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ではなぜ変数が必要なのでしょうか。何か面白いプログラミングをするには変数が必要です。値が変更できなければ、挨拶のメッセージをパーソナライズしたり、画像ギャラリーに表示されている画像を変更するなどの動的な操作ができないのです。
 
@@ -128,7 +175,7 @@ myVariable = 'Steve';
 */
 ```
 
-コメントに改行が含まれていない場合、次のように 2 つのスラッシュの後ろに記載する方が簡単です :
+コメントに改行が含まれていない場合、次のように 2 つのスラッシュの後ろに記載する方が簡単です。
 
 ```js
 // これはコメントです
@@ -138,36 +185,97 @@ myVariable = 'Steve';
 
 {{Glossary("operator", "演算子")}}は、2 つの値 (または変数) に基づいて結果を生成する数学的な記号です。次の表では、JavaScript コンソールで試してみるいくつかの例とともに、最も単純な演算子をいくつか見ることができます。
 
-| 演算子           | 説明                                                                                                                                                                             | シンボル      | 例                                                                                                                                                                                                                                                                                                                                                          |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 加算/連結        | 2 つの数字を加えるか、2 つの文字列を結合します。                                                                                                                                 | `+`           | `6 + 9; 'Hello ' + 'world!';`                                                                                                                                                                                                                                                                                                                               |
-| 減算、乗算、除算 | 基本的な数学の計算を実施します。                                                                                                                                                 | `-`, `*`, `/` | `9 - 3; 8 * 2; // JavaScript で乗算はアスタリスク 9 / 3;`                                                                                                                                                                                                                                                                                                   |
-| 代入             | すでに出てきました。変数に値を割り当てます。                                                                                                                                     | `=`           | `let myVariable = 'Bob';`                                                                                                                                                                                                                                                                                                                                   |
-| 等価             | 2 つの値と型が互いに等しいかどうかを調べ、`true`/`false` (論理値)の結果を返します。                                                                                              | `===`         | `let myVariable = 3; myVariable === 4;`                                                                                                                                                                                                                                                                                                                     |
-| 否定、非等価     | その後にあるものと論理的に反対の値を返します。たとえば `true` を `false` に換えます。等価演算子と一緒に使用されると、否定演算子は 2 つの値が等しく*ない*かどうかをテストします。 | `!`, `!==`    | "Not" の場合、基本式は `true` ですが、それを否定しているので比較結果は `false` になります。`let myVariable = 3; !(myVariable === 3);`「等しくない」は、基本的に同じ結果を異なる構文で与えます。ここでは「`myVariable` が 3 とは等しくない」ことをテストします。 `myVariable` は 3 と等しいので、`false` を返します。`let myVariable = 3; myVariable !== 3;` |
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">演算子</th>
+      <th scope="col">説明</th>
+      <th scope="col">記号</th>
+      <th scope="col">例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">加算</th>
+      <td>2 つの数値を足し合わせたり、 2 つの文字列を結合したりします。</td>
+      <td><code>+</code></td>
+      <td>
+        <code>6 + 9;<br />'Hello ' + 'world!';</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">減算、乗算、除算</th>
+      <td>基本的な数学の計算を実施します。</td>
+      <td><code>-</code>, <code>*</code>, <code>/</code></td>
+      <td>
+        <code
+>9 - 3;<br />8 * 2; // JS での乗算はアスタリスク<br />9 / 3;</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">代入</th>
+      <td>すでに出てきました。変数に値を割り当てます。</td>
+      <td><code>=</code></td>
+      <td><code>let myVariable = 'Bob';</code></td>
+    </tr>
+    <tr>
+      <th scope="row">厳密等価</th>
+      <td>
+        2 つの値と型が互いに等しいかどうかを調べます。
+        <code>true</code>/<code>false</code> （論理値）の結果を返します。
+      </td>
+      <td><code>===</code></td>
+      <td>
+        <code>let myVariable = 3;<br />myVariable === 4;</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">否定、非等価</th>
+      <td>
+        その後にあるものと論理的に反対の値を返します。たとえば <code>true</code> を <code>false</code> に換えます。等価演算子と一緒に使用されると、否定演算子は 2 つの値が等しくないかどうかを調べます。
+      </td>
+      <td><code>!</code>, <code>!==</code></td>
+      <td>
+        <p>
+          「否定」の場合は次の通りです。基本の式が <code>true</code> であれば、反転するので比較結果は <code>false</code> となります。
+        </p>
+        <p>
+          <code>let myVariable = 3;<br />!(myVariable === 3);</code>
+        </p>
+        <p>
+          「非等価」は異なる構文ですが、基本的に同じ結果になります。ここでは「<code>myVariable</code> が 3 と等しくない」ことを調べます。次の例では <code>false</code> を返します。 <code>myVariable</code> は 3 と等しいからです。
+        </p>
+        <p>
+          <code>let myVariable = 3;<br />myVariable !== 3;</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 他にも演算子はもっとたくさんありますが、今のところはこれで十分です。全体の一覧については、[式と演算子](/ja/docs/Web/JavaScript/Reference/Operators)を参照してください。
 
-> **Note:** データ型を混在させると、計算を実行するときに奇妙な結果になる可能性があるため、変数を正しく参照し、期待通りの結果を得るように注意してください。例えばコンソールに `'35' + '25'` と入力してみてください。期待通りの結果にならないのはなぜでしょうか。引用符は数字を文字列に変換するので、数字を加算するのではなく、文字列を連結する結果になったのです。 `35 + 25` を入力すれば、正しい結果が得られます。
+> **メモ:** データ型を混在させると、計算を実行するときに奇妙な結果になる可能性があるため、変数を正しく参照し、期待通りの結果を得るように注意してください。例えばコンソールに `'35' + '25'` と入力してみてください。期待通りの結果にならないのはなぜでしょうか。引用符は数字を文字列に変換するので、数字を加算するのではなく、文字列を連結する結果になったのです。 `35 + 25` を入力すれば、正しい結果が得られます。
 
 ### 条件文
 
-条件文は、ある式が true を返すかどうかをテストし、その結果次第でそれぞれのコードを実行するコード構造です。条件文のよくある形は `if ... else` 文です。例えば以下の通りです。
+条件文は、ある式が true を返すかどうかをテストし、その結果次第でそれぞれのコードを実行するコード構造です。条件文のよくある形は `if...else` 文です。例えば以下の通りです。
 
 ```js
 let iceCream = 'チョコレート';
-if(iceCream === 'チョコレート') {
+if (iceCream === 'チョコレート') {
   alert('やった、チョコレートアイス大好き！');
 } else {
   alert('あれれ、でもチョコレートは私のお気に入り......');
 }
 ```
 
-`if( ... )` の中の式が条件です — ここでは等価演算子を使用して、変数 `iceCream` と`チョコレート`という文字列を比較し、2 つが等しいかどうかを調べています。この比較が `true` を返した場合、コードの最初のブロックが実行されます。比較が真でない場合、最初のブロックはスキップされ、 `else` 文の後にある 2 番目のコードブロックが代わりに実行されます。
+`if ()` の中の式が条件です。ここでは等価演算子を使用して、変数 `iceCream` と`チョコレート`という文字列を比較し、2 つが等しいかどうかを調べています。この比較が `true` を返した場合、コードの最初のブロックが実行されます。比較が真でない場合、最初のブロックはスキップされ、 `else` 文の後にある 2 番目のコードブロックが代わりに実行されます。
 
 ### 関数
 
-{{Glossary("Function", "関数")}} は、再利用したい機能をパッケージ化する方法です。プロシージャが必要なときは、毎回コード全体を書くのではなく関数名を使って関数を呼び出すことができます。すでにいくつかの関数の仕様を見てきました。例えば以下のようなものです。
+{{Glossary("Function", "関数")}}は、再利用したい機能をパッケージ化する方法です。プロシージャが必要なときは、毎回コード全体を書くのではなく関数名を使って関数を呼び出すことができます。すでにいくつかの関数の仕様を見てきました。例えば次のようなものです。
 
 ```js
 let myVariable = document.querySelector('h1');
@@ -200,34 +308,46 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **Note:** [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)をお読みください)。
+> **メモ:** [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)をお読みください)。
 
 ### イベント
 
 ウェブサイトを実際にインタラクティブにするには、イベントが必要です。イベントは、ブラウザーの中で起きていることを検出し、その応答としてコードを実行するコード構造です。最も分かりやすい例は [click イベント](/ja/docs/Web/API/Element/click_event)で、マウスで何かをクリックするとブラウザーによって発行されるものです。これを実行するには、コンソールに以下のように入力してから、現在のウェブページ上をクリックしてください。
 
 ```js
-document.querySelector('html').onclick = function() {
-    alert('痛っ! つつくのはやめて!');
-}
+document.querySelector('html').addEventListener('click', function () {
+  alert('痛っ! つつかないで!');
+});
 ```
 
-要素にイベントを割り当てる方法はたくさんあります。ここでは {{htmlelement("html")}} 要素を選択し、[`onclick`](/ja/docs/Web/API/GlobalEventHandlers/onclick) ハンドラープロパティに、クリックイベントで実行したいコードを含む無名 (つまり名前がない) 関数を代入します。
+要素にイベントハンドラーを取り付ける方法はいろいろあります。ここでは {{htmlelement("html")}} 要素を選択しています。そして、 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) 関数を呼び出し、待ち受けるイベントの名前 (`'click'`) とイベントが発生したときに実行する関数を渡します。
 
 なお、
 
 ```js
-document.querySelector('html').onclick = function() {};
+document.querySelector('html').addEventListener('click', function () {
+  alert('痛っ! つつかないで!');
+});
 ```
 
 は以下のものと同等です。
 
 ```js
 let myHTML = document.querySelector('html');
-myHTML.onclick = function() {};
+myHTML.addEventListener('click', function () {
+  alert('痛っ! つつかないで!');
+});
 ```
 
 短くしただけです。
+
+先ほど `addEventListener()` に渡した関数は、名前を持たないので**無名関数**と呼ばれます。無名関数の書き方として、**アロー関数**と呼ばれるものがあります。アロー関数は `() =>` を `function ()` の代わりに使用します。
+
+```js
+document.querySelector('html').addEventListener('click', () => {
+  alert('痛っ! つつかないで!');
+});
+```
 
 ## ウェブサイトの例を膨らませる
 
@@ -245,27 +365,27 @@ myHTML.onclick = function() {};
 4. `main.js` ファイルに次の JavaScript を入力してください。
 
     ```js
-    let myImage = document.querySelector('img');
+    const myImage = document.querySelector('img');
 
-    myImage.onclick = function() {
-        let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute('src','images/firefox2.png');
-        } else {
-          myImage.setAttribute('src','images/firefox-icon.png');
-        }
+    myImage.onclick = () => {
+      const mySrc = myImage.getAttribute('src');
+      if (mySrc === 'images/firefox-icon.png') {
+        myImage.setAttribute('src','images/firefox2.png');
+      } else {
+        myImage.setAttribute('src','images/firefox-icon.png');
+      }
     }
     ```
 
 5. `index.html` をブラウザーに読み込みます。画像をクリックすると、もう一方の画像に変わります。
 
-{{htmlelement("img")}} 要素への参照を変数 `myImage` に格納します。次にこの変数の `onclick` イベントハンドラープロパティに、名前のない関数(無名関数)を代入します。そうすれば、この要素がクリックされるたびに以下の動きをします。
+{{htmlelement("img")}} 要素への参照を変数 `myImage` に格納します。次にこの変数の `onclick` イベントハンドラープロパティに、名前のない関数（無名関数）を代入します。そうすれば、この要素がクリックされるたびに以下の動きをします。
 
 1. 画像の `src` 属性の値を取得します。
 2. 条件文を使って、`src` の値が元の画像のパスと等しいかどうかをチェックします。
 
     1. そうであれば、`src` の値を 2 番目の画像へのパスに変更し、もう一方の画像が強制的に {{htmlelement("img")}} 要素の中に読み込まれるようにします。
-    2. そうでない (すでに変更されている) 場合、`src` の値を元の画像のパスに戻して、元の状態に戻ります。
+    2. そうでない（すでに変更されている）場合、`src` の値を元の画像のパスに戻して、元の状態に戻ります。
 
 ### パーソナライズされた挨拶メッセージの追加
 
@@ -288,62 +408,62 @@ myHTML.onclick = function() {};
 
     ```js
     function setUserName() {
-      let myName = prompt('あなたの名前を入力してください。');
+      const myName = prompt('あなたの名前を入力してください。');
       localStorage.setItem('name', myName);
-      myHeading.textContent = 'Mozilla はすばらしいよ、' + myName;
+      myHeading.textContent = `Mozilla はかっこいいよ、${myName}`;
     }
     ```
 
     この関数では [`prompt()`](/ja/docs/Web/API/Window/prompt) 関数を使用して、`alert()` のようにダイアログボックスを表示しています。しかし、`prompt()` は `alert()` とは異なり、ユーザーにデータを入力するよう求め、ユーザーが **OK** を押した後に変数にそのデータを格納します。この場合、ユーザーに名前を入力するよう求めます。次に、`localStorage` と呼ばれる API を呼び出すことで、ブラウザーにデータを格納して後で受け取ることができます。 localStorage の `setItem()` 関数を使って、`'name'` と呼ばれるデータを作成し、 `myName` に入っているユーザーから入力されたデータを格納します。最後に、見出しの `textContent` に文字列と新しく格納されたユーザーの名前を設定します。
 
-4. 次に、この `if ... else` ブロックを追加します。これは初期化コードと呼ぶことができ、最初の読み込みでアプリを構成します。
+4. 以下のような条件ブロックを追加します。最初に読み込んだときにアプリを構造化するので、これを初期化コードと呼ぶこともできます。
 
     ```js
-    if(!localStorage.getItem('name')) {
+    if (!localStorage.getItem('name')) {
       setUserName();
     } else {
-      let storedName = localStorage.getItem('name');
-      myHeading.textContent = 'Mozilla はすばらしいよ、' + storedName;
+      const storedName = localStorage.getItem('name');
+      myHeading.textContent = `Mozilla はかっこいいよ、${storedName}`;
     }
     ```
 
-    このブロックでは、最初に `name` のデータが存在しているかどうかをチェックするために否定演算子 (! で表される論理否定) を使用しています。存在しない場合は、作成するために `setUserName()` 関数が実行されます。存在する場合は (つまり、以前の訪問時にユーザーが設定した場合)、 `getItem()` を使用して格納された名前を受け取り、 `setUserName()` の中で行ったのと同様に、見出しの `textContent` に文字列とユーザーの名前を設定します。
+    このブロックでは、最初に `name` のデータが存在しているかどうかをチェックするために否定演算子（`!` で表される論理否定）を使用しています。存在しない場合は、作成するために `setUserName()` 関数が実行されます。存在する場合は（つまり、以前の訪問時にユーザーが設定した場合）、 `getItem()` を使用して格納された名前を受け取り、 `setUserName()` の中で行ったのと同様に、見出しの `textContent` に文字列とユーザーの名前を設定します。
 
 5. 最後に、以下の `onclick` イベントハンドラーをボタンに設定します。クリックすると、`setUserName()` 関数が実行されます。これでユーザーがボタンを押すことで、好きな時に新しい名前を設定できるようになります。
 
     ```js
-    myButton.onclick = function() {
+    myButton.onclick = () => {
       setUserName();
     }
     ```
 
-### A user name of null?
+### ユーザー名か null か
 
-この例を実行してユーザー名を入力するダイアログボックスが出たとき、*キャンセル*ボタンを押してみてください。結果として "Mozilla is cool, null" というタイトルが表示されるでしょう。これはプロンプトをキャンセルしたときに、値が [`null`](/ja/docs/Web/JavaScript/Reference/Global_Objects/null)、つまり値がないことを示す JavaScript の特殊な値に設定されるためです。
+この例を実行してユーザー名を入力するダイアログボックスが出たとき、*キャンセル*ボタンを押してみてください。結果として "Mozilla is cool, null" というタイトルが表示されるでしょう。これはプロンプトをキャンセルしたときに、値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)、つまり値がないことを示す JavaScript の特殊な値に設定されるためです。
 
-また何も入れずに _OK_ を押してみてください — 結果として "Mozilla is cool," というタイトルが表示され、これは理由が明白です。
+また何も入れずに **OK** を押してみてください。結果として "Mozilla is cool," というタイトルが表示され、これは理由が明白です。
 
-この問題を避けるには、ユーザーーが `null` や空白の名前を入力していないかチェックするよう、`setUserName()` 関数を書き換えます。
+この問題を避けるには、ユーザーが `null` や空白の名前を入力していないかチェックするよう、`setUserName()` 関数を書き換えます。
 
 ```js
 function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
+  const myName = prompt('あなたの名前を入力してください。');
+  if (!myName) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.textContent = `Mozilla はかっこいいよ、${myName}`;
   }
 }
 ```
 
-人間の言語では — `myName` に値がない場合や、`null`の場合、 最初から `setUserName()` を実行します。値がない場合 (上記の式が真でない場合)には、`localStorage` に値をセットして、見出しのテキストにもセットします。
+人間の言葉で言うと、 `myName` に値がない場合や、`null`の場合、 最初から `setUserName()` を実行します。値がない場合（上記の式が真でない場合）には、`localStorage` に値を設定して、見出しのテキストにも設定します。
 
 ## まとめ
 
-最後までこの記事の手順に従った場合は、最終的に次のようなページが表示されているでしょう ([こちらで作成した版を表示する](https://mdn.github.io/beginner-html-site-scripted/)こともできます)。
+最後までこの記事の手順に従った場合は、最終的に次のようなページが表示されているでしょう（[こちらで作成した版を表示する](https://mdn.github.io/beginner-html-site-scripted/)こともできます）。
 
-![](website-screen-scripted.png)
+![ヘッダー、中央の大きなロゴ、内容、ボタンなどの要素を作成した後の HTML ページの最終的な外観](website-screen-scripted.png)
 
 行き詰まったら、自分の作業を [Github 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js)と比べてみてください。
 

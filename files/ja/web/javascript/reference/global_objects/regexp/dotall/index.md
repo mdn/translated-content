@@ -1,16 +1,8 @@
 ---
 title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
-tags:
-  - Draft
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 ---
+
 {{JSRef}}
 
 **`dotAll`** プロパティは、正規表現で "`s`" フラグが使用されているかどうかを示します。 `dotAll` は、個々の正規表現インスタンスの読み取り専用プロパティです。
@@ -57,9 +49,7 @@ console.log(str2.replace(regex2,'')); // Output: bar
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.dotAll', 'RegExp.prototype.dotAll')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

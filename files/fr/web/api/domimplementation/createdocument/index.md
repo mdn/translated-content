@@ -9,6 +9,7 @@ tags:
   - implementation
 translation_of: Web/API/DOMImplementation/createDocument
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`DOMImplementation.createDocument()`** crée et retourne un {{domxref("XMLDocument")}}.

@@ -2,6 +2,7 @@
 title: manifest_version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -33,4 +34,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.manifest.manifest_version")}}
+{{Compat}}

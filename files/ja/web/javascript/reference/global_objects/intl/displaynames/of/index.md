@@ -1,18 +1,8 @@
 ---
 title: Intl.DisplayNames.prototype.of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
-tags:
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DisplayNames.of
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 ---
+
 {{JSRef}}
 
 **`Intl.DisplayNames.prototype.of()`** メソッドは、コードを受け取り、Intl.DisplayNames をインスタンス化するときに指定されたロケールとオプションに基づいて文字列を返します。

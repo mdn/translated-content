@@ -2,6 +2,7 @@
 title: SpeechGrammar.src
 slug: Web/API/SpeechGrammar/src
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 **`src`** 属性是 {{domxref("SpeechGrammar")}} 接口设置并返回的一个字符串，包含了 `SpeechGrammar` 对象的文法。
@@ -36,8 +37,8 @@ console.log(speechRecognitionList[0].weight); // 应该返回 1 - 与上面第�
 
 ## 浏览器兼容性
 
-{{Compat("api.SpeechGrammar.src")}}
+{{Compat}}
 
 ## 相关链接
 
-- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)

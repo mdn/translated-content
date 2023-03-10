@@ -1,23 +1,9 @@
 ---
 title: '<address>: 連絡先要素'
 slug: Web/HTML/Element/address
-tags:
-  - Address
-  - Author
-  - Contact
-  - Contact Information
-  - Element
-  - Email
-  - Email Address
-  - HTML
-  - HTML sections
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/address
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<address>` 要素**は、これを含んでいる HTML が個人、団体、組織の連絡先を提供していることを示します。
 
@@ -102,7 +88,7 @@ translation_of: Web/HTML/Element/address
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes "HTML/Global attributes")のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
@@ -136,11 +122,7 @@ translation_of: Web/HTML/Element/address
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-address-element', '&lt;address&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-address-element', '&lt;address&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.6', '&lt;address&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -149,4 +131,4 @@ translation_of: Web/HTML/Element/address
 ## 関連情報
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}}
-- [HTML5 文書のセクションとアウトライン](/ja/docs/Sections_and_outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document")
+- [HTML5 文書のセクションとアウトライン](/ja/docs/Sections_and_outlines_of_an_HTML5_document)

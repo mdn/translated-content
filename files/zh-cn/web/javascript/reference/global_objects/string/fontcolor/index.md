@@ -2,11 +2,12 @@
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`fontcolor()`**方法创建一个{{HTMLElement("font")}}的 HTML 元素让字符串被显示成指定的字体颜色。
 
-> **备注：** \<font> 元素已经在在[HTML5 中](/en-US/docs/Web/Guide/HTML/HTML5)被移除并且不应该在使用。替代的是，Web 开发者应该使用[CSS](/en-US/docs/Web/CSS)属性。
+> **备注：** \<font> 元素已经在在[HTML5 中](/zh-CN/docs/Web/Guide/HTML/HTML5)被移除并且不应该在使用。替代的是，Web 开发者应该使用[CSS](/zh-CN/docs/Web/CSS)属性。
 
 ## 语法
 
@@ -17,7 +18,7 @@ str.fontcolor(color)
 ### 参数
 
 - `color`
-  - : 代表颜色的一个字符串，可以是三个一组的十六进制的 RGB 值，也可以是一个颜色名称的字符串字面量，颜色名称的字符串字面量被列在了这里 [CSS 颜色参考](/en-US/docs/Web/CSS/color_value)。
+  - : 代表颜色的一个字符串，可以是三个一组的十六进制的 RGB 值，也可以是一个颜色名称的字符串字面量，颜色名称的字符串字面量被列在了这里 [CSS 颜色参考](/zh-CN/docs/Web/CSS/color_value)。
 
 ### 返回值
 

@@ -1,8 +1,8 @@
 ---
 title: Notification
-slug: Web/API/notification
-translation_of: Web/API/Notification
+slug: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/ko/docs/Web/API/Notifications_API)의 `Notification` 인터페이스는 사용자에게 데스크톱 알림을 설정하고 보여주는데 사용됩니다.
@@ -55,12 +55,13 @@ translation_of: Web/API/Notification
   - : 생성자의 첫번째 파라메터에 명시된 알림의 제목입니다.
 - {{domxref("Notification.vibrate")}} {{readonlyinline}}
   - : 진동기가 있는 기기가 나타내야할 진동 패턴을 나타냅니다.
-- #### Unsupported properties아래의 속성은 최신 명세에는 등록되어 있지만 아직 구현한 브라우저가 없는 속성입니다. 현재의 상태에서 변경된 사항은 없는지 계속 확인해보아야 하는 내용이고 오래된 내용이 있으면 알려주시기 바랍니다.
 
-  {{domxref("Notification.noscreen")}} {{readonlyinline}}
+#### Unsupported properties
 
+아래의 속성은 최신 명세에는 등록되어 있지만 아직 구현한 브라우저가 없는 속성입니다. 현재의 상태에서 변경된 사항은 없는지 계속 확인해보아야 하는 내용이고 오래된 내용이 있으면 알려주시기 바랍니다.
+
+- {{domxref("Notification.noscreen")}} {{readonlyinline}}
   - : 알림이 기기의 화면을 활성화해야 하는지를 나타냅니다.
-
 - {{domxref("Notification.renotify")}} {{readonlyinline}}
   - : 새 알림이 오래된 알림을 교체할 때 사용자에게 알려야 하는지를 나타냅니다.
 - {{domxref("Notification.sound")}} {{readonlyinline}}
@@ -71,7 +72,7 @@ translation_of: Web/API/Notification
 #### Event handlers
 
 - {{domxref("Notification.onclick")}}
-  - : {{event("click")}} 이벤트에 대한 핸들러입니다. 사용자가 알림을 클릭할 때 마다 호출됩니다.
+  - : [`click`](/ko/docs/Web/API/Element/click_event) 이벤트에 대한 핸들러입니다. 사용자가 알림을 클릭할 때 마다 호출됩니다.
 - {{domxref("Notification.onerror")}}
   - : {{event("error")}} 이벤트에 대한 핸들러입니다. 알림에 오류가 발생할 때 마다 호출됩니다.
 
@@ -160,11 +161,11 @@ function spawnNotification(theBody,theIcon,theTitle) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

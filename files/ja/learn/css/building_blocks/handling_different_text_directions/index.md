@@ -2,6 +2,7 @@
 title: テキスト方向の操作
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 CSS の学習でこれまでに遭遇したプロパティと値の多くは、画面の物理的な大きさに関係しています。たとえば、ボックスの上下左右に border を作成します。これらの物理的大きさは、水平に表示されるコンテンツに非常にきちんとマッピングされ、デフォルトでは、ウェブは右から左への言語（アラビア語など）よりも左から右への言語（英語やフランス語など）をサポートする傾向があります。
@@ -32,7 +33,7 @@ CSS の書き込みモードは、テキストが水平方向または垂直方�
 
 [ブロックとインラインのレイアウト](/ja/docs/Learn/CSS/Building_blocks/The_box_model)、およびいくつかの要素がブロック要素として表示され、他の要素がインライン要素として表示されるという事実についてはすでに説明しました。上で説明したように、ブロックとインラインは、物理的な画面ではなく、ドキュメントの書き込みモードに関連付けられています。英語などのテキストを水平方向に表示する書き込みモードを使用している場合、ブロックはページの上から下にのみ表示されます。
 
-例を見れば、これはより明確になります。この次の例では、見出しと段落を含む 2 つのボックスがあります。 1 つ目は、`writing-mode: horizo​​ntal-tb`を使用します。これは、水平にページの上部から下部に向かって書き込まれる書き込みモードです。 2 番目は`writing-mode: vertical-rl`を使用します;これは、垂直に右から左に書き込まれる書き込みモードです。
+例を見れば、これはより明確になります。この次の例では、見出しと段落を含む 2 つのボックスがあります。 1 つ目は、`writing-mode: horizontal-tb`を使用します。これは、水平にページの上部から下部に向かって書き込まれる書き込みモードです。 2 番目は`writing-mode: vertical-rl`を使用します;これは、垂直に右から左に書き込まれる書き込みモードです。
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}
 
@@ -78,9 +79,9 @@ CSS レイアウト、特に新しいレイアウトメソッドを検討し始�
 
 以下の物理的特性と論理的特性の比較を見ることができます。
 
-\*\*`.box`の`writing-mode`プロパティを`vertical-rl`に切り替えてボックスの書き込みモードを変更すると、物理プロパティが物理方向にどのように関連付けられているかがわかりますが、論理プロパティは書き込みモードで切り替わります。
+`.box`の`writing-mode`プロパティを`vertical-rl`に切り替えてボックスの書き込みモードを変更すると、物理プロパティが物理方向にどのように関連付けられているかがわかりますが、論理プロパティは書き込みモードで切り替わります。
 
-また、 {{htmlelement("h2")}} には黒い `border-bottom`があることがわかります。両方のライティングモードで、下の境界線が常にテキストの下に来るようにする方法を見つけられますか？\*\*
+また、 {{htmlelement("h2")}} には黒い `border-bottom`があることがわかります。両方のライティングモードで、下の境界線が常にテキストの下に来るようにする方法を見つけられますか？
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 

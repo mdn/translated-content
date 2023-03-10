@@ -2,6 +2,7 @@
 title: location.search
 slug: Web/API/Location/search
 ---
+
 {{ApiRef("Location")}}
 
 **`search`** は {{domxref("Location")}} インターフェイスのプロパティで、*クエリー文字列*とも呼ばれる検索文字列です。つまり、 `'?'` の後の URL 引数を含む {{domxref("USVString")}} を指定します。

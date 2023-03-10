@@ -2,9 +2,10 @@
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
-**`get`**语法将对象属性绑定到查询该属性时将被调用的函数。
+**`get`** 语法将对象属性绑定到查询该属性时将被调用的函数。
 
 {{EmbedInteractiveExample("pages/js/functions-getter.html")}}
 
@@ -88,7 +89,7 @@ console.log(obj.foo); // "bar"
 
 ### 智能 / 自我复写/ 懒加载 getters
 
-Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。 getter 延迟计算值的成本，直到需要此值，如果不需要，您就不用支付成本。
+Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。getter 延迟计算值的成本，直到需要此值，如果不需要，您就不用支付成本。
 
 一种额外的优化技术是用**智能 (或称[记忆化](https://en.wikipedia.org/wiki/Memoization))getters** 延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用 getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：
 
@@ -107,7 +108,7 @@ get notifier() {
 },
 ```
 
-对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>)函数的`XPCOMUtils.jsm`代码模块。
+对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>) 函数的`XPCOMUtils.jsm`代码模块。
 
 ### `get` vs. `defineProperty`
 
@@ -147,9 +148,9 @@ console.log(
 
 ## 相关链接
 
-- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- 在 Javascript 指南中 [定义 Getters 和 Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- 在 Javascript 指南中 [定义 Getters 和 Setters](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

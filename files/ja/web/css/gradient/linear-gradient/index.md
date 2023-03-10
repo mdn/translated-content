@@ -1,20 +1,9 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-tags:
-  - CSS
-  - CSS 画像
-  - CSS 関数
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-translation_of: Web/CSS/gradient/linear-gradient()
 original_slug: Web/CSS/gradient/linear-gradient()
-browser-compat: css.types.image.gradient.linear-gradient
 ---
+
 {{CSSRef}}
 
 **`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
@@ -64,7 +53,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<color-hint>`
   - : 隣り合う色経由点の間でどのようにグラデーションが進むかを定義する補間のヒントです。長さによって、どの位置で二つの色経由点のグラデーション色が色の移行の中間点に達するかを定義します。省略された場合、色の移行の中間点は二つの色経由点の中点になります。
 
-> **Note:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
+> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
 >
 > なお、上記の最初の例は、 Mozilla Firefox (特にバージョン 80.0b3) では、正確には図のようには表示されません。描かれているように表示するには、 html の height プロパティを 100% または 100vh に設定する必要があります。
 

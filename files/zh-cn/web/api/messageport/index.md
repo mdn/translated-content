@@ -2,9 +2,10 @@
 title: MessagePort
 slug: Web/API/MessagePort
 ---
+
 {{APIRef("HTML DOM")}}
 
-[Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) 的 **`MessagePort`** 接口代表 {{domxref("MessageChannel")}} 的两个端口之一， 它可以让你从一个端口发送消息，并在消息到达的另一个端口监听它们。
+[Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 的 **`MessagePort`** 接口代表 {{domxref("MessageChannel")}} 的两个端口之一，它可以让你从一个端口发送消息，并在消息到达的另一个端口监听它们。
 
 {{AvailableInWorkers}}
 
@@ -76,8 +77,8 @@ function onMessage(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessagePort")}}
+{{Compat}}
 
 ## 参见
 
-- 使用 [channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- 使用 [channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

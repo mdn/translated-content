@@ -6,6 +6,7 @@ tags:
   - DOM
 translation_of: Web/API/Web_Workers_API
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 Les **Web Workers** sont un mécanisme grâce auquel les instructions d'un script peuvent être exécutés dans un thread en arrière-plan séparé du thread d'exécution principal d'une application web. Cela a pour avantage qu'un traitement laborieux peut être réalisé dans un thread séparé, permettant au thread principal (généralement l'interface utilisateur) de fonctionner sans blocage ni ralentissement.
@@ -16,9 +17,9 @@ Un worker est un objet créé en utilisant un constructeur (e.g. {{domxref("Work
 
 Vous pouvez exécuter quelque code que ce soit à l'intérieur du thread du worker, avec quelques exceptions cependant. Par exemple, vous ne pouvez pas directement manipuler le DOM à partir d'un worker, ou utiliser des méthodes et des propriétés par défaut de l'objet {{domxref("window")}}. Mais vous pouvez utiliser un grand nombre des éléments disponibles sous `window`, comprenant les [WebSockets](/fr/docs/WebSockets), et les mécanismes de stockage de données tels qu'[IndexedDB](/fr/docs/IndexedDB) et l'[API Data Store](/fr/docs/Web/API/Data_Store_API) spécifique à Firefox OS. Consultez [Les fonctions et classes accessibles aux workers](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers) pour plus de détails.
 
-Les données sont envoyées entre les workers et le thread principal au moyen d'un sytème de messages — des deux côtés les messages sont envoyés en utilisant la méthode `postMessage()`, et la réponse leur parvient au moyen du gestionnaire d'événement `onmessage` (le message est contenu dans l'attribut `data` de l'événement {{event("Message")}}.) Les données sont copiées plutôt que partagées.
+Les données sont envoyées entre les workers et le thread principal au moyen d'un sytème de messages — des deux côtés les messages sont envoyés en utilisant la méthode `postMessage()`, et la réponse leur parvient au moyen du gestionnaire d'événement `onmessage` (le message est contenu dans l'attribut `data` de l'événement [`message`](/fr/docs/Web/API/Worker/message_event).) Les données sont copiées plutôt que partagées.
 
-Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les E/S réseau, à l'exception que les attributs `responseXML` et `channel` de `XMLHttpRequest` retournent toujours `null`.
+Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente. De plus, les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les E/S réseau, à l'exception que les attributs `responseXML` et `channel` de `XMLHttpRequest` retournent toujours `null`.
 
 En plus des workers dédiés, il y a d'autres types de worker :
 

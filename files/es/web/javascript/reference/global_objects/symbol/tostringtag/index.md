@@ -1,12 +1,11 @@
 ---
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-browser-compat: javascript.builtins.Symbol.toStringTag
 l10n:
   sourceCommit: d5d9a70d1f8bc041c4ff226c3ff7e02382c5efef
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.toStringTag`** es una propiedad con valor de cadena que se utiliza en la creación de la descripción de cadena por defecto de un objeto. Se accede a ella internamente mediante el método {{jsxref("Object.prototype.toString()")}}.
@@ -82,4 +81,3 @@ test[Symbol.toStringTag];  // Devuelve HTMLButtonElement
 
 - [Polyfill de `Symbol.toStringTag` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Object.prototype.toString()")}}
-

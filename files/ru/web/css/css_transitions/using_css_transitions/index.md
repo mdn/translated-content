@@ -11,11 +11,11 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 CSS переходы позволяют вам решить какие свойства нужно анимировать (перечислением их явно), когда анимация начнётся (установкой задержки), как долго переход будет выполняться (установкой продолжительности), а также как она будет запущена (определением функции по времени, например линейно или быстро в начале, медленно в конце).
 
-> **Примечание:** **Замечание:** CSS переходы могут использоваться без префиксов, однако спецификация только недавно достигла стабильности, префиксы по-прежнему необходимы для браузеров на WebKit. Они также необходимы для поддержки старых версий браузеров (таких как: Firefox 15, Opera 12 и более ранних). Таблица совместимости приведена внизу страницы с ещё большим количеством информации.
+> **Примечание:** CSS переходы могут использоваться без префиксов, однако спецификация только недавно достигла стабильности, префиксы по-прежнему необходимы для браузеров на WebKit. Они также необходимы для поддержки старых версий браузеров (таких как: Firefox 15, Opera 12 и более ранних). Таблица совместимости приведена внизу страницы с ещё большим количеством информации.
 
 ## Какие CSS-свойства анимируются?
 
-Разработчик может определить какое свойство и как анимировать. Это позволяет создавать сложные переходы. Так как некоторые свойства не имеет смысла анимировать, перечень[ доступных для анимирования свойств ](/ru/docs/CSS/CSS_animated_properties)ограничен определённым набором.
+Разработчик может определить какое свойство и как анимировать. Это позволяет создавать сложные переходы. Так как некоторые свойства не имеет смысла анимировать, перечень [доступных для анимирования свойств](/ru/docs/CSS/CSS_animated_properties) ограничен определённым набором.
 
 > **Примечание:** Замечание: Перечень анимируемых свойств может меняться по мере изменения спецификации.
 
@@ -61,7 +61,7 @@ CSS переходы позволяют вам решить какие свой�
 
 ## CSS-свойства, определяющие переходы
 
-CSS переходы контролируются свойством[ ](/ru/docs/CSS/transition){{cssxref("transition")}}. Это лучший способ их настроить, позволяет избежать длинных свойств и их несоответствий, которые могут сделать отладку CSS долгой.
+CSS переходы контролируются свойством {{cssxref("transition")}}. Это лучший способ их настроить, позволяет избежать длинных свойств и их несоответствий, которые могут сделать отладку CSS долгой.
 
 Можно контролировать определённые параметры перехода следующими подсвойствами:
 
@@ -71,12 +71,16 @@ CSS переходы контролируются свойством[ ](/ru/docs
   - : Указывает имя или имена свойств, чьи переходы должны анимироваться. Только свойства, указанные здесь, анимируются в переходах; изменение других свойств будет происходить обычным образом.
 - {{cssxref("transition-duration")}}
 
-  - : Определяет время происхождения перехода. Можно указать время анимирования всех свойств перехода сразу или для каждого свойства в отдельности.`transition-duration: 0.5s````html hidden
+  - : Определяет время происхождения перехода. Можно указать время анимирования всех свойств перехода сразу или для каждого свойства в отдельности. `transition-duration: 0.5s`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+
+    ```
+
+    ```css hidden
     .parent { width: 250px; height:125px;}
     .box {
         width: 100px;
@@ -111,7 +115,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-duration: 0.5s;
         transition-timing-function: ease-in-out;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -126,12 +132,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("duration_0_5s", 275, 150)}}`transition-duration: 1s````html hidden
+    ```
+
+    {{EmbedLiveSample("duration_0_5s", 275, 150)}}
+
+    `transition-duration: 1s`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+    ```
+
+    ```css hidden
     .parent { width: 250px; height:125px;}
     .box {
         width: 100px;
@@ -166,7 +179,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-duration: 1s;
         transition-timing-function: ease-in-out;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -181,12 +196,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("duration_1s",275,150)}}`transition-duration: 2s````html hidden
+    ```
+
+    {{EmbedLiveSample("duration_1s",275,150)}}
+
+    `transition-duration: 2s`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+    ```
+
+    ```css hidden
     .parent { width: 250px; height:125px;}
     .box {
         width: 100px;
@@ -221,7 +243,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-duration: 2s;
         transition-timing-function: ease-in-out;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -236,12 +260,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("duration_2s",275,150)}}`transition-duration: 4s````html hidden
+    ```
+
+    {{EmbedLiveSample("duration_2s",275,150)}}
+
+    `transition-duration: 4s`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+    ```
+
+    ```css hidden
     .parent { width: 250px; height:125px;}
     .box {
         width: 100px;
@@ -276,7 +307,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-duration: 4s;
         transition-timing-function: ease-in-out;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -292,18 +325,25 @@ CSS переходы контролируются свойством[ ](/ru/docs
 
     var intervalID = window.setInterval(updateTransition, 7000);
 
-    ```{{EmbedLiveSample("duration_4s",275,150)}}
+    ```
+
+    {{EmbedLiveSample("duration_4s",275,150)}}
 
     ```
 
 - {{cssxref("transition-timing-function")}}
 
-  - : ![](/files/3434/TF_with_output_gt_than_1.png)Определяет функцию, указывающую, как вычисляются промежуточные значения свойств. Вы также можете выбрать ослабления от функции замедления Шпаргалка.Большинство [функций времени](/ru/docs/CSS/timing-function) может быть определено графиком соответствующей функции, образующей четырьмя точками кривую Безье. Также можете выбрать функцию отсюда [Easing Functions Cheat Sheet](http://easings.net/).`transition-timing-function: ease````html hidden
+  - : ![](/files/3434/TF_with_output_gt_than_1.png)Определяет функцию, указывающую, как вычисляются промежуточные значения свойств. Вы также можете выбрать ослабления от функции замедления Шпаргалка.Большинство [функций времени](/ru/docs/CSS/timing-function) может быть определено графиком соответствующей функции, образующей четырьмя точками кривую Безье. Также можете выбрать функцию отсюда [Easing Functions Cheat Sheet](http://easings.net/).
+
+   `transition-timing-function: ease`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+    ```
+
+    ```css hidden
     .parent { width: 250px; height:125px;}
     .box {
         width: 100px;
@@ -336,7 +376,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-duration: 2s;
         transition-timing-function: ease;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -351,12 +393,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("ttf_ease",275,150)}}`transition-timing-function: linear````html hidden
+    ```
+
+    {{EmbedLiveSample("ttf_ease",275,150)}}
+
+    `transition-timing-function: linear`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+    ```
+
+    ```css hidden
     .parent { width: 250px; height:125px;}
     .box {
         width: 100px;
@@ -389,7 +438,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-duration: 2s;
         transition-timing-function: linear;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -404,12 +455,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("ttf_linear",275,150)}}`transition-timing-function: step-end````html hidden
+    ```
+
+    {{EmbedLiveSample("ttf_linear",275,150)}}
+
+    `transition-timing-function: step-end`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+    ```
+
+    ```css hidden
     .parent { width: 250px; height:125px;}
     .box {
         width: 100px;
@@ -442,7 +500,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-duration: 2s;
         transition-timing-function: step-end;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -457,12 +517,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("ttf_stepend",275,150)}}`transition-timing-function: steps(4, end)````html hidden
+    ```
+
+    {{EmbedLiveSample("ttf_stepend",275,150)}}
+
+    `transition-timing-function: steps(4, end)`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+    ```
+
+    ```css hidden
     .parent { width: 250px; height:125px;}
     .box {
         width: 100px;
@@ -495,7 +562,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-duration: 2s;
         transition-timing-function: steps(4, end);
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -511,18 +580,25 @@ CSS переходы контролируются свойством[ ](/ru/docs
 
     var intervalID = window.setInterval(updateTransition, 7000);
 
-    ```{{EmbedLiveSample("ttf_step4end",275,150)}}
+    ```
+
+    {{EmbedLiveSample("ttf_step4end",275,150)}}
 
     ```
 
 - {{cssxref("transition-delay")}}
 
-  - : Определяет как много должно пройти времени, перед тем как начнётся переход.`transition-delay: 0.5s````html hidden
+  - : Определяет как много должно пройти времени, перед тем как начнётся переход.
+
+    `transition-delay: 0.5s`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
-      
-    ``````css hidden
+    ```
+
+    ```css hidden
     .parent {
         width: 250px;
         height: 125px;
@@ -564,8 +640,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
     transition-delay: 0.5s;
     transition-timing-function: linear;
     }
+    ```
 
-    ```````js hidden
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -580,12 +657,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("delay_0_5s",275,150)}}`transition-delay: 1s````html hidden
+    ```
+
+    {{EmbedLiveSample("delay_0_5s",275,150)}}
+
+    `transition-delay: 1s`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
+    ```
 
-    ``````css hidden
+    ```css hidden
     .parent {
         width: 250px;
         height: 125px;
@@ -627,7 +711,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-delay: 1s;
         transition-timing-function: linear;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -642,12 +728,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("delay_1s",275,150)}}`transition-delay: 2s````html hidden
+    ```
+
+    {{EmbedLiveSample("delay_1s",275,150)}}
+
+    `transition-delay: 2s`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
+    ```
 
-    ``````css hidden
+    ```css hidden
     .parent {
         width: 250px;
         height: 125px;
@@ -689,7 +782,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-delay: 2s;
         transition-timing-function: linear;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -704,12 +799,19 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("delay_2s",275,150)}}`transition-delay: 4s````html hidden
+    ```
+
+    {{EmbedLiveSample("delay_2s",275,150)}}
+
+    `transition-delay: 4s`
+
+    ```html hidden
      <div class="parent">
       <div class="box">Lorem</div>
     </div>
+    ```
 
-    ``````css hidden
+    ```css hidden
     .parent {
         width: 250px;
         height: 125px;
@@ -751,7 +853,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
         transition-delay: 4s;
         transition-timing-function: ease-in-out;
     }
-    ``````js hidden
+    ```
+
+    ```js hidden
     function updateTransition() {
       var el = document.querySelector("div.box");
 
@@ -766,8 +870,9 @@ CSS переходы контролируются свойством[ ](/ru/docs
     }
 
     var intervalID = window.setInterval(updateTransition, 7000);
-    ```{{EmbedLiveSample("delay_4s",275,150)}}
-    ```````
+    ```
+
+    {{EmbedLiveSample("delay_4s",275,150)}}
 
 Короткая запись синтаксиса:
 
@@ -792,7 +897,7 @@ div {
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-> **Примечание:** **Замечание:** Событие `transitionend` не произойдёт, когда переход был прерван до его завершения, например, если установили {{cssxref("display")}}`: none `или значение анимируемого свойства изменилось`.`
+> **Примечание:** Событие `transitionend` не произойдёт, когда переход был прерван до его завершения, например, если установили {{cssxref("display")}}`: none` или значение анимируемого свойства изменилось`.`
 
 ## Когда у списков значений свойств разные длины
 
@@ -956,6 +1061,6 @@ p {
 
 ## Смотрите также
 
-- [Нижнее меню](http://techstream.org/Web-Design/Dock-Menu-with-CSS3 "CSS3 Dock Menu using CSS transitions") с использованием CSS переходов
+- [Нижнее меню](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) с использованием CSS переходов
 - Интерфейс {{domxref("TransitionEvent")}} и событие {{event("transitionend")}}.
 - [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

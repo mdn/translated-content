@@ -2,6 +2,7 @@
 title: Document.all
 slug: Web/API/Document/all
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
 
 {{DOMxRef("Document")}} インターフェイスの **`all`** プロパティは読み取り専用で、 document ノードをルートとした {{DOMxRef("HTMLAllCollection")}} を返します。言い換えれば、文書のすべての要素を、 (配列のように) 順序および (通常のオブジェクトのように) ID でアクセスすることができる形で返します。
@@ -22,9 +23,7 @@ var htmlAllCollection = document.all;
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                             | 備考                                     |
-| ------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-document-all', 'all')}} | {{Spec2('HTML WHATWG')}} | 初回定義 廃止された古い API の節で定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

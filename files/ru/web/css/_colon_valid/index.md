@@ -9,7 +9,7 @@ translation_of: Web/CSS/:valid
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы "Pseudo-classes") `:valid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых [валиден](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation "en/HTML/HTML5/Constraint_validation"), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что помогает понять пользователю, что он ввёл данные правильно.
+CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:valid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых [валиден](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что помогает понять пользователю, что он ввёл данные правильно.
 
 ## Пример
 

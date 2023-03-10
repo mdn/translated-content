@@ -1,13 +1,8 @@
 ---
 title: 'RangeError: radix must be an integer'
 slug: Web/JavaScript/Reference/Errors/Bad_radix
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
-translation_of: Web/JavaScript/Reference/Errors/Bad_radix
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript 예외 "radix must be an integer at least 2 and no greater than 36"는

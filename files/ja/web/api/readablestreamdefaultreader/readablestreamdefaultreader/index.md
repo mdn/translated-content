@@ -2,11 +2,12 @@
 title: ReadableStreamDefaultReader.ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStreamDefaultReader()`** コンストラクターは、`ReadableStreamDefaultReader` オブジェクトのインスタンスを作成して返します。
 
-> **Note:** **注**: 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}}) メソッドを使用します。
+> **メモ:** 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}}) メソッドを使用します。
 
 ## 構文
 
@@ -65,9 +66,7 @@ function fetchStream() {
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-reader-constructor","ReadableStreamDefaultReader()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

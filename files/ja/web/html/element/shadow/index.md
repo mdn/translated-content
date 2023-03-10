@@ -1,14 +1,8 @@
 ---
 title: '<shadow>: 廃止されたシャドウルート要素'
-slug: Web/HTML/Element/Shadow
-tags:
-  - Deprecated
-  - HTML
-  - Web Components
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/shadow
+slug: Web/HTML/Element/shadow
 ---
+
 {{deprecated_header}}
 
 **HTML `<shadow>`** 要素 ([Web Components](/ja/docs/Web/Web_Components) 技術スイートの廃止された部分) は shadow DOM の {{glossary("insertion point")}} として使用するものでした。 shadow ホスト配下に複数の shadow ルートを生成する場合に使用しました。これは通常の HTML としては役立ちません。
@@ -66,7 +60,7 @@ translation_of: Web/HTML/Element/shadow
 
 これは `<shadow>` 要素を使用したシンプルな例です。必要な要素がすべて 1 つの HTML ファイルに含まれています。
 
-> **Note:** **メモ:** これは実験的な機能です。このコードを実行するには、これを表示するブラウザーが Web Components をサポートしている必要があります。[Enabling Web Components in Firefox](/ja/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox) を参照してください。
+> **メモ:** これは実験的な機能です。このコードを実行するには、これを表示するブラウザーが Web Components をサポートしている必要があります。[Enabling Web Components in Firefox](/ja/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox) を参照してください。
 
 ```html
 <html>
@@ -104,7 +98,7 @@ translation_of: Web/HTML/Element/shadow
 
 ブラウザーで表示した場合、次のように見えるはずです。
 
-![shadow example](https://mdn.mozillademos.org/files/10083/shadow-example.png)
+![shadow example](shadow-example.png)
 
 ## 仕様書
 
@@ -119,4 +113,4 @@ translation_of: Web/HTML/Element/shadow
 - [Web Components](/ja/docs/Web/Web_Components)
 - {{HTMLElement("content")}}、{{HTMLElement("slot")}}、{{HTMLElement("template")}}、{{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

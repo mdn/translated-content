@@ -3,6 +3,7 @@ title: 小贴士：如何制作快速加载的 HTML 页面
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 ---
+
 以下技巧都是基于通用的知识和经验。
 
 一个好的页面不仅要给访客提供一个更有交互性的站点，同时也需要降低你的服务器压力和网络请求。后者对于那些高访问量的站点，或在有爆炸性新闻出现等特殊情况下会出现流量突增的站点来说尤为关键。
@@ -17,11 +18,11 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 通过压缩——排除不必要空格，注释，和将脚本、CSS 放入外部文件等减小页面的大小，可以在页面结构改变很小的情况下提高下载性能。
 
-诸如 [HTML Tidy](http://tidy.sourceforge.net/) 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其它工具则可以通过重新格式化源代码来压缩 JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。
+诸如 [HTML Tidy](http://tidy.sourceforge.net/) 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其他工具则可以通过重新格式化源代码来压缩 JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。
 
 ### 最小化文件数量
 
-减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的[HTTP](/en-US/docs/HTTP)请求数量，从而减少这些请求的收发时间。
+减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的[HTTP](/zh-CN/docs/HTTP)请求数量，从而减少这些请求的收发时间。
 
 根据其缓存设置，浏览器可能会为每个所引用的文件发送一个带 [If-Modified-Since](/zh-CN/docs/Web/HTTP/Headers/If-Modified-Since) 的请求给网络服务器，以查询这些文件自上次加载后是否有被修改。查询引用文件上次修改时间会花费太多时间，导致网页首屏延迟，这是因为在渲染页面之前浏览器必须确认每个文件的修改时间。
 
@@ -72,7 +73,7 @@ Further reading:
 
 使用现代 CSS 减少标记（markup）的用量，可以减少对（spacer）图片的需求。在布局方面，图片通常可以用风格化的文本（text）来替代，这样会“节省”许多资源。
 
-使用合法标记还有其它优点。首先，浏览器在解释 HTML 时无需做错误校正（除了一些哲理性的问题，例如，是允许用户输入格式不一致，而后再用程序“校准”或统一化呢？还是加强约束规则，限制用户输入的格式？）。
+使用合法标记还有其他优点。首先，浏览器在解释 HTML 时无需做错误校正（除了一些哲理性的问题，例如，是允许用户输入格式不一致，而后再用程序“校准”或统一化呢？还是加强约束规则，限制用户输入的格式？）。
 
 再者，合法标记可以让那些给你的网站做预处理的工具功能最大化。例如，[HTML Tidy](http://tidy.sourceforge.net/) 可以移除空白（whitespace）和可选的末尾标记（ending tags）；然而，在有严重的错误标记的网页中这些工具便无法工作。
 
@@ -122,7 +123,7 @@ Large images cause your page to take more time to load. Consider compressing you
 table-layout: fixed;
 ```
 
-用 [`<col>`](/en-US/docs/Web/HTML/Element/col) 和 [`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup) 元素来指定列宽。
+用 [`<col>`](/zh-CN/docs/Web/HTML/Element/col) 和 [`<colgroup>`](/zh-CN/docs/Web/HTML/Element/colgroup) 元素来指定列宽。
 
 ### 合理的选择 user-agent
 
@@ -134,7 +135,7 @@ table-layout: fixed;
 
 ### 尽可能使用 async 和 defer
 
-确保 JavaScript 脚本兼容 [async](/en-US/docs/HTML/Element/script#Attributes) 和 [defer](/en-US/docs/HTML/Element/script#Attributes)，任何时候都要尽可能使用 [async](/en-US/docs/HTML/Element/script#Attributes) ，特别是当你有较多的 script 标签时。
+确保 JavaScript 脚本兼容 [async](/zh-CN/docs/HTML/Element/script#Attributes) 和 [defer](/zh-CN/docs/HTML/Element/script#Attributes)，任何时候都要尽可能使用 [async](/zh-CN/docs/HTML/Element/script#Attributes) ，特别是当你有较多的 script 标签时。
 
 这样在加载 JavaScript 的过程中页面就不会重新绘制，否则，浏览器在不具有这些特性的 script 标签后就不会重绘任何东西。
 
@@ -154,7 +155,7 @@ table-layout: fixed;
     - `{{htmlelement('script')}}`
       DHTML 脚本通常在页面完全加载或者所有必要的对象（objects）已初始化完毕之后才能运行。没有必要在页面内容之前加载这些脚本，这只会拖慢页面加载和初始化的体验。在调试维护中把不相关的 script 拆分在不同文件中，且尽量减少文件的数量可以提高性能。如有图像用到了反转效果，你应该在页面内容下载完后预加载这些图像。
 
-## 相关链接
+## 参见
 
 - 书籍：["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
 - 非常棒、讲的很全 [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html) (Yahoo!)

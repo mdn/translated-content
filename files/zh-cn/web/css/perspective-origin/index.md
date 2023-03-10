@@ -2,9 +2,10 @@
 title: perspective-origin
 slug: Web/CSS/perspective-origin
 ---
+
 {{CSSRef}}
 
-[CSS](/en-US/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
+[CSS](/zh-CN/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
 
 {{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
@@ -47,11 +48,11 @@ perspective-origin: unset;
     - `center`, 关键字，50% 的简记。
     - `bottom`, 关键字，100% 的简记。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 举例
+## 示例
 
 ### 修改 perspective origin
 
@@ -59,7 +60,7 @@ perspective-origin: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}
+{{EmbedLiveSample('修改 perspective origin', '100%', 700)}}
 
 #### HTML
 
@@ -353,8 +354,8 @@ th, p, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.perspective-origin")}}
+{{Compat}}
 
-## 相关连接
+## 参见
 
-- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

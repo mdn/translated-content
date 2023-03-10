@@ -2,12 +2,13 @@
 title: 'Reason: CORS request did not succeed'
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
 
 ```plain
-原因: CORS 请求未成功
+原因：CORS 请求未成功
 ```
 
 ## 哪里错了？
@@ -17,5 +18,5 @@ slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ## 参见
 
 - [HTTP 访问控制（CORS）错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
-- 词汇: {{Glossary("CORS")}}
+- 词汇：{{Glossary("CORS")}}
 - [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Access_control_CORS)

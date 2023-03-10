@@ -1,13 +1,8 @@
 ---
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 ---
+
 {{JSRef}}
 
 **`handler.ownKeys()`** メソッドは {{jsxref("Reflect.ownKeys()")}} に対するトラップです。
@@ -98,9 +93,7 @@ console.log(Object.getOwnPropertyNames(p));
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,21 +1,15 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef}}
 
 **`String`** オブジェクトは文字の並びを表したり操作したりするために使用されます。
 
 ## 解説
 
-文字列は、テキスト形式で表現可能なデータを保持するのに便利です。最もよく使われる操作として、文字列の長さをチェックする {{jsxref("String.length", "length")}} プロパティ、 [文字列に対する + および += 演算子](/ja/docs/Web/JavaScript/Reference/Operators/String_Operators)を用いた文字列の連結、文字列の中の部分文字列の存在や位置をチェックする {{jsxref("String.prototype.indexOf()", "indexOf()")}} メソッド、部分文字列を取り出す {{jsxref("String.prototype.substring()", "substring()")}} メソッドが挙げられます。
+文字列は、テキスト形式で表現可能なデータを保持するのに便利です。最もよく使われる操作として、文字列の長さをチェックする {{jsxref("String.length", "length")}} プロパティ、 [文字列に対する + および += 演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#文字列演算子)を用いた文字列の連結、文字列の中の部分文字列の存在や位置をチェックする {{jsxref("String.prototype.indexOf()", "indexOf()")}} メソッド、部分文字列を取り出す {{jsxref("String.prototype.substring()", "substring()")}} メソッドが挙げられます。
 
 ### 文字列の生成
 
@@ -31,7 +25,7 @@ const string3 = `別な文字列プリミティブ`;
 const string4 = new String("文字列オブジェクト");
 ```
 
-文字列プリミティブと文字列オブジェクトは、ほとんどの場合は交換して使用することができます。下記の「[文字列プリミティブと String オブジェクト](#String_primitives_and_String_objects)」を参照してください。
+文字列プリミティブと文字列オブジェクトは、ほとんどの場合は交換して使用することができます。下記の「[文字列プリミティブと String オブジェクト](#文字列プリミティブと_string_オブジェクト)」を参照してください。
 
 文字列リテラルは単一引用符または二重引用符を使用して指定することができ、どちらでも同様に扱われますが、逆引用符文字 <kbd>`</kbd> を使用することもできます。最後の形は[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)を指定し、この形式では式を補完することができます。
 
@@ -257,7 +251,7 @@ otherwise my code is unreadable."
 
 ## HTML ラッパーメソッド
 
-> **Note:** **非推奨です。これらのメソッドは避けてください。**
+> **メモ:** **非推奨です。これらのメソッドは避けてください。**
 >
 > 以下のメソッドは、それぞれ、特定の HTML タグでラップされた文字列のコピーを返します。
 
@@ -303,9 +297,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string-objects', 'String')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

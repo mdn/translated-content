@@ -2,6 +2,7 @@
 title: HTMLFieldSetElement
 slug: Web/API/HTMLFieldSetElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLFieldSetElement`** インターフェイスは、 ({{domxref("HTMLElement")}} から継承したものより詳細に) {{ HTMLElement("fieldset") }} 要素のレイアウトと表示を操作するための特別なプロパティやメソッドを提供します。
@@ -43,13 +44,7 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmlfieldsetelement", "HTMLFieldSetElement")}}             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                      |
-| {{SpecName('HTML5.1', "forms.html#the-fieldset-element", "HTMLFieldSetElement")}}     | {{Spec2('HTML5.1')}}     |                                                                                                                                                                                      |
-| {{SpecName('HTML5 W3C', "forms.html#the-fieldset-element", "HTMLFieldSetElement")}} | {{Spec2('HTML5 W3C')}}     | `disabled`, `elements`, `name`, `type`, `valdiationMessage`, `validity`, and `willValidate` プロパティが追加された。 `checkValidity()`, `setCustomValidity()` メソッドが追加された。 |
-| {{SpecName('DOM2 HTML', 'html.html#ID-7365882', 'HTMLFieldSetElement')}}                 | {{Spec2('DOM2 HTML')}}     | 変更なし                                                                                                                                                                             |
-| {{SpecName('DOM1', 'level-one-html.html#ID-7365882', 'HTMLFieldSetElement')}}         | {{Spec2('DOM1')}}         | 初回定義                                                                                                                                                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

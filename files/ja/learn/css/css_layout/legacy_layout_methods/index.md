@@ -2,6 +2,7 @@
 title: 過去のレイアウト方法
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
@@ -16,7 +17,7 @@ slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 
 CSS がごく最近まで内蔵されたグリッドシステムを持っていなかったことを、デザインをやってきた誰かは驚くかもしれません。 そして代わりにグリッドのようなデザインを作成するためにさまざまな次善の方法を用いていたようです。 今これらを「過去の」方法と呼んでいます。
 
-新しいプロジェクトでは、ほとんどの場合、CSS グリッドレイアウトを他の 1 つ以上の最新のレイアウト方法と組み合わせて使用 ​​ して、任意のレイアウトの基礎とします。 しかし、時々、これらの過去の方法を使用している「グリッドシステム」に遭遇するでしょう。 それらがどのように機能するのか、そしてなぜそれらが CSS グリッドレイアウトと異なるのかを理解するのは価値があります。
+新しいプロジェクトでは、ほとんどの場合、CSS グリッドレイアウトを他の 1 つ以上の最新のレイアウト方法と組み合わせて使用して、任意のレイアウトの基礎とします。 しかし、時々、これらの過去の方法を使用している「グリッドシステム」に遭遇するでしょう。 それらがどのように機能するのか、そしてなぜそれらが CSS グリッドレイアウトと異なるのかを理解するのは価値があります。
 
 このレッスンでは、フロートとフレックスボックスに基づいたグリッドシステムとグリッドフレームワークの仕組みについて説明します。 グリッドレイアウトを勉強してきたので、おそらくこれがどれほど複雑であるかに驚くことでしょう！ この種のシステムを使用する既存のプロジェクトで作業できるようにすることに加えて、新しい方法をサポートしないブラウザー用の代替コードを作成する必要がある場合に、この知識は役に立ちます。
 
@@ -117,7 +118,7 @@ div:nth-of-type(2) {
 
 ここでは、すべての幅にパーセントを使用していることに気付くでしょう。 これは、さまざまな画面サイズに合わせて調整し、小さい画面サイズで列幅に同じ比率を維持する、**リキッドレイアウト**（liquid layout）を作成するため、非常に良い戦略です。 ブラウザーウィンドウの幅を調整して確認してください。 これはレスポンシブウェブデザインのための貴重なツールです。
 
-> **Note:** この例は [0_two-column-layout.html](http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) で実行できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)も見る）。
+> **メモ:** この例は [0_two-column-layout.html](http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) で実行できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)も見る）。
 
 ## 単純な過去のグリッドフレームワークを作成する
 
@@ -206,7 +207,7 @@ body {
 
 これで、一番上の単一列の行がグリッドとしてきちんとレイアウトされます。
 
-> **Note:** また、各列に薄い赤色を指定したので、各列がどれだけのスペースを占めているかを正確に確認できます。
+> **メモ:** また、各列に薄い赤色を指定したので、各列がどれだけのスペースを占めているかを正確に確認できます。
 
 複数列にまたがるコンテナのレイアウトには、必要な列数（足す、その間のガター）に合わせて {{cssxref("width")}} の値を調整するための特別なクラスを指定する必要があります。 コンテナが 2〜12 列にまたがるようにするために、追加のクラスを作成する必要があります。 それぞれの幅は、その列数の列幅にガター幅を加えた結果です。 ガター幅は常に列数より 1 つ少なくなります。
 
@@ -231,7 +232,7 @@ CSS の最後に次を追加してください。
 
 これらのクラスを作成したら、グリッド上にさまざまな幅の列を配置できます。 効果を確認するには、ページを保存してブラウザーでロードします。
 
-> **Note:** 上記の例がうまくいかない場合は、GitHub の[完成版](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)と比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
+> **メモ:** 上記の例がうまくいかない場合は、GitHub の[完成版](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)と比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
 
 要素のクラスを変更したり、コンテナを追加したり削除したりして、レイアウトの変更方法を確認してください。 例えば、2 行目を次のようにすることができます。
 
@@ -324,7 +325,7 @@ body {
 
 コードを保存してブラウザーにロードし、ビューポートの幅を変更してみます — 列の幅は適切に調整されるはずです。
 
-> **Note:** 上記の例がうまくいかない場合は、[GitHub の完成版](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html)と比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
+> **メモ:** 上記の例がうまくいかない場合は、[GitHub の完成版](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html)と比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
 
 ### calc() 関数を使ったより簡単な計算
 
@@ -354,9 +355,9 @@ CSS のすぐ内側で {{cssxref("calc","calc()")}} 関数を使って数学を�
 .col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
 ```
 
-> **Note:** [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
+> **メモ:** [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
 
-> **Note:** これがうまくいかない場合は、ブラウザーが `calc()` 関数をサポートしていないことが考えられます。 ブラウザー間ではかなりよくサポートされています — IE9 までさかのぼります。
+> **メモ:** これがうまくいかない場合は、ブラウザーが `calc()` 関数をサポートしていないことが考えられます。 ブラウザー間ではかなりよくサポートされています — IE9 までさかのぼります。
 
 ### 意味論的グリッドシステム対「意味論的でない」グリッドシステム
 
@@ -370,7 +371,7 @@ CSS のすぐ内側で {{cssxref("calc","calc()")}} 関数を使って数学を�
 }
 ```
 
-> **Note:** [Sass](http://sass-lang.com/) などのプリプロセッサを使用する場合は、単純な mixin を作成してその値を挿入することができます。
+> **メモ:** [Sass](http://sass-lang.com/) などのプリプロセッサを使用する場合は、単純な mixin を作成してその値を挿入することができます。
 
 ### グリッドでオフセットしたコンテナを使えるようにする
 
@@ -408,13 +409,13 @@ CSS でコンテナ要素を 1 列幅だけオフセットするクラスを作�
 <div class="col span5 offset-by-one">14</div>
 ```
 
-> **Note:** オフセット用のスペースを確保するために、またがる列の数を減らす必要があることに注意してください！
+> **メモ:** オフセット用のスペースを確保するために、またがる列の数を減らす必要があることに注意してください！
 
 違いを確認するには、ロードとリフレッシュを試してみるか、[fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) の例を確認してください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)）。 完成した例は次のようになります。
 
 ![](offset-grid-finished.png)
 
-> **Note:** 特別な演習として、`offset-by-two` クラスを実装できますか？
+> **メモ:** 特別な演習として、`offset-by-two` クラスを実装できますか？
 
 ### フロートのグリッドの制限
 
@@ -492,7 +493,7 @@ body {
 
 Skeleton にはグリッドシステム以上のものが含まれています — タイポグラフィや、出発点として使用できるその他のページ要素の CSS も含んでいます。 ただし、これらはデフォルトのままにします — ここで本当に関心があるのはグリッドです。
 
-> **Note:** [Normalize](http://necolas.github.io/normalize.css/) は Nicolas Gallagher によって書かれた本当に便利で小さな CSS ライブラリです。 これは基本的ないくつかの基本的なレイアウトの修正を自動的に行い、ブラウザー間でデフォルトの要素のスタイル設定をより一貫させます。
+> **メモ:** [Normalize](http://necolas.github.io/normalize.css/) は Nicolas Gallagher によって書かれた本当に便利で小さな CSS ライブラリです。 これは基本的ないくつかの基本的なレイアウトの修正を自動的に行い、ブラウザー間でデフォルトの要素のスタイル設定をより一貫させます。
 
 前の例と同様の HTML を使用します。 HTML の `body` に次を追加してください。
 
@@ -566,7 +567,7 @@ Skeleton を使い始めるためには、ラッパーの {{htmlelement("div")}}
 
 HTML ファイルを保存してブラウザーにロードして、効果を確認してください。
 
-> **Note:** この例がうまく動作しない場合は、[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) ファイルと比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
+> **メモ:** この例がうまく動作しない場合は、[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) ファイルと比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
 
 `skeleton.css` ファイルを見ると、これがどのように機能するかがわかります。 例えば、Skeleton には、「`three columns`」クラスを追加して要素をスタイルするための次の定義があります。
 

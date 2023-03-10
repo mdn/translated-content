@@ -2,7 +2,8 @@
 title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 ## 概要
 
@@ -14,7 +15,7 @@ The first letter of an element is not necessarily trivial to identify:
 - Similarly some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these rare cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element. (This is poorly supported by browsers, check the [browser compatibility table](/En/CSS/::first-letter#Browser_compatibility)).
 - Finally, a combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
 
-A first line has meaning only in a [block-container box](/en/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes), therefore the `::first-letter` pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of `block`, `inline-block`, `table-cell`, `list-item` or `table-caption`. In all other cases, `::first-letter` has no effect.
+A first line has meaning only in a [block-container box](/zh-TW/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes), therefore the `::first-letter` pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of `block`, `inline-block`, `table-cell`, `list-item` or `table-caption`. In all other cases, `::first-letter` has no effect.
 
 Only a small subset of all CSS properties can be used inside a declaration block of a CSS ruleset containing a selector using the `::first-letter` pseudo-element:
 
@@ -77,7 +78,7 @@ p::first-letter { /* Use :first-letter if support for IE 8 or earlier is needed 
 
 ## 瀏覽器相容性
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: 对齐弹性容器中的弹性项目
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
+
 {{CSSRef}}
 
 flexbox 之所以能迅速吸引开发者的注意，其中一个原因就是它首次为网页样式居中提供了合适的方案。得益于它提供的合适的垂直居中能力，我们可以很轻松地把一个盒子居中。在这份指南里，我们将详细地介绍 flexbox 的垂直和水平居中的工作原理。
@@ -35,7 +36,7 @@ flexbox 之所以能迅速吸引开发者的注意，其中一个原因就是它
 
 ![三个项目，其中一个附加文本使其比其他文件更高。](align2.png)
 
-![三项拉伸到200像素高](align3.png)
+![三项拉伸到 200 像素高](align3.png)
 
 flex items 的高度全都变成一样的原因是 `align-items` 属性的初始值设成 `stretch` 控制交叉轴对齐。
 
@@ -63,11 +64,11 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 到目前为止我们已经看到了我们的 `flex-direction` 是 `row` 和使用的语言的书写方式为从上至下的表现行为。这意味着主轴是水平方向，交叉轴对齐则是有上至下垂直方向。
 
-![三个项目，第一个对齐到flex-start，第二个到中心，第三个到flex-end。 在垂直轴上对齐。](align4.png)
+![三个项目，第一个对齐到 flex-start，第二个到中心，第三个到 flex-end。在垂直轴上对齐。](align4.png)
 
 如果我们改变我们的 `flex-direction` 为 `column` ，`align-items` 和 `align-self` 对齐的 flex 项目则是水平方向从左往右。
 
-![三个项目，第一个对齐到flex-start，第二个到中心，第三个到flex-end。 在水平轴上对齐。](align5.png)
+![三个项目，第一个对齐到 flex-start，第二个到中心，第三个到 flex-end。在水平轴上对齐。](align5.png)
 
 你能在下面这个例子体验一下，它除了 `flex-direction` 为 `column` 这个属性，其他的属性值和前一个例子是一样的。
 
@@ -169,7 +170,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 我们想要处理个别弹性项目在主轴上的对齐，但是没有 `justify-items` 属性或者 `justify-self` 属性可用，因为弹性项目会被当成一个组来对齐。然而，我们可以使用自动的外边距来处理一些个别弹性项目或者一组弹性项目想和其他弹性项目分离开的对齐情况。
 
-一个常见的案例是导航栏，一些重要项目右对齐，而一组其它主要项目左对齐。你可能会想，这个时候就需要一个 `justify-self` 属性。但是下面的情况，如图所示，有 3 个项目在左边，2 个在右边。假设可以在项目 d 上设置 `justify-self` 的话，那么跟在后面的项目 e 的对齐方式也会发生改变。可能这正是我们想要的效果，但某些时候并不是。
+一个常见的案例是导航栏，一些重要项目右对齐，而一组其他主要项目左对齐。你可能会想，这个时候就需要一个 `justify-self` 属性。但是下面的情况，如图所示，有 3 个项目在左边，2 个在右边。假设可以在项目 d 上设置 `justify-self` 的话，那么跟在后面的项目 e 的对齐方式也会发生改变。可能这正是我们想要的效果，但某些时候并不是。
 
 ![Five items, in two groups. Three on the left and two on the right.](align7.png)
 
@@ -183,7 +184,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 在本文的开头，我解释了 Level1 flexbox 规范中当前包含的对齐相关属性也被包含在了 Box Alignment Level3 规范中，这意味着将来会很好地扩展这些属性和值。我们已经看到了这种情况的发生，比如：为 `align-content` 和`justify-content` 属性引入`space-evenly`值。
 
-Box Alignment 模块还包含其他创建子项之间间隙的方法，比如在 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 中包含的 `column-gap` 和`row-gap` 特性。 这些属性包含在 Box Alignment 规范中意味着在将来我们也应该能够在 flex 布局中使用`column-gap`和`row-gap`，在 Firefox 63 中，您将在 flex 布局中找到第一个浏览器对 gap 属性的实现。
+Box Alignment 模块还包含其他创建子项之间间隙的方法，比如在 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 中包含的 `column-gap` 和`row-gap` 特性。这些属性包含在 Box Alignment 规范中意味着在将来我们也应该能够在 flex 布局中使用`column-gap`和`row-gap`，在 Firefox 63 中，您将在 flex 布局中找到第一个浏览器对 gap 属性的实现。
 
 在深入研究 flexbox 对齐时，我的建议是同时查看 Grid Layout 中的对齐方式。两种规范都使用 Box Alignment 规范中详细说明的对齐属性。您可以在 MDN 文章《[Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)》中查看使用网格时这些属性的行为，并且我还在《 [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)》中比较了这些规范中对齐的工作方式。
 

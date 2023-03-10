@@ -1,21 +1,13 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - General Header
-  - HTTP
-  - Reference
-  - header
-  - リファレンス
-  - 一般ヘッダー
-  - 汎用ヘッダー
-translation_of: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 **`Date`** は HTTP の一般ヘッダーで、メッセージが発信された日時が含まれています。
 
-> **Warning:** `Date` は fetch 仕様書において[禁止ヘッダー名](https://fetch.spec.whatwg.org/#forbidden-header-name)に挙げられています。 - そのため、このコードは `Date` ヘッダーを送信しません。
+> **警告:** `Date` は fetch 仕様書において[禁止ヘッダー名](https://fetch.spec.whatwg.org/#forbidden-header-name)に挙げられています。 - そのため、このコードは `Date` ヘッダーを送信しません。
 >
 > ```js
 > fetch('https://httpbin.org/get', {

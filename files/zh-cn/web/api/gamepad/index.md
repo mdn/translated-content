@@ -2,11 +2,12 @@
 title: Gamepad
 slug: Web/API/Gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) 的 `Gamepad` 接口，定义了一个独立的游戏手柄或其他控制器，允许访问控制器的信息，譬如按钮按下的状态、坐标输入的位置。游戏手柄或其他控制器，允许访问如按钮按下，和 ID 等信息。
 
-Gamepad 对象有两种方式返回值：通过 {{event("gamepadconnected")}} 和 {{event("gamepaddisconnected")}} 事件的 `gamepad` 属性，或者在任意位置抓取 {{domxref("Navigator.getGamepads()")}} 方法返回的数组。
+Gamepad 对象有两种方式返回值：通过 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 和 [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件的 `gamepad` 属性，或者在任意位置抓取 {{domxref("Navigator.getGamepads()")}} 方法返回的数组。
 
 ## 属性
 
@@ -37,7 +38,7 @@ Gamepad 对象有两种方式返回值：通过 {{event("gamepadconnected")}} �
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {
-  console.log("控制器已连接与 %d 位: %s. %d 个按钮，%d 个坐标方向。",
+  console.log("控制器已连接与 %d 位：%s. %d 个按钮，%d 个坐标方向。",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
 });

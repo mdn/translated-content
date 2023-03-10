@@ -1,7 +1,6 @@
 ---
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
-translation_of: Web/API/Element/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 
@@ -58,7 +57,7 @@ element.getElementsByClassName('red test');
 
 ### 결과값 검토하기
 
-collection의 개별 요소를 가져오기 위해 `HTMLCollection` 의{{domxref("HTMLCollection.item", "item()")}} 메소드를 이용하거나 표준 배열 문법을 사용할 수 있습니다. 아래는 잘못된 코드의 예시입니다. `"matches"` 는 `"colorbox"` 클래스가 삭제됨에 따라 바로 변경될것이기 때문에 \***\*아래의 코드는 작동하지 않습니다.\*\***
+collection의 개별 요소를 가져오기 위해 `HTMLCollection` 의{{domxref("HTMLCollection.item", "item()")}} 메소드를 이용하거나 표준 배열 문법을 사용할 수 있습니다. 아래는 잘못된 코드의 예시입니다. `"matches"` 는 `"colorbox"` 클래스가 삭제됨에 따라 바로 변경될것이기 때문에 **아래의 코드는 작동하지 않습니다.**
 
 ```js
 var matches = element.getElementsByClassName('colorbox');
@@ -93,10 +92,10 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

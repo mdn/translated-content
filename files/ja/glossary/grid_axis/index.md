@@ -4,6 +4,7 @@ slug: Glossary/Grid_Axis
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---
+
 CSS グリッドレイアウトはコンテンツを**行**と**列**でレイアウトできるようにする 2 次元レイアウトです。従って全てのグリッドには、**ブロックもしくは列の軸**と、**インラインもしくは行の列**という、 2 つの軸があります。
 
 各アイテムはこれら 2 つの軸に沿って、[ボックス配置仕様書](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)で定義されているプロパティを使って配置されます。

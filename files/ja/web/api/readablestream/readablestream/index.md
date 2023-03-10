@@ -1,57 +1,69 @@
 ---
-title: ReadableStream.ReadableStream()
+title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
+l10n:
+  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStream()`** コンストラクターは、指定されたハンドラーから読み取り可能なストリームのオブジェクトを作成して返します。
 
+すべての引数は技術的にオプションですが、 `underlyingSource` を省略すると、ソースを持たないストリームになり、そこから読み込むことができなくなることに注意してください（リーダーは決して解決されないプロミスを返します）。
+
 ## 構文
 
-```
-var readableStream = new ReadableStream(underlyingSource[, queuingStrategy]);
+```js-nolint
+new ReadableStream()
+new ReadableStream(underlyingSource)
+new ReadableStream(underlyingSource, queuingStrategy)
 ```
 
-### パラメーター
+### 引数
 
-- underlyingSource
+- `underlyingSource` {{optional_inline}}
 
   - : 構築されたストリームのインスタンスの動作を定義するメソッドとプロパティを含むオブジェクト。 `underlyingSource` には次のものを含めることができます。
 
-    - start(controller)
-      - : これは、オブジェクトが構築されるとすぐに呼び出されるメソッドです。 このメソッドの内容は開発者が定義し、ストリームのソースへのアクセスを取得し、ストリーム機能を設定するために必要な他のすべての操作を行う必要があります。 このプロセスを非同期で実行する場合、成功または失敗を通知する promise を返すことができます。 このメソッドに渡される `controller` パラメーターは、`type` プロパティの値に応じて、{{domxref("ReadableStreamDefaultController")}} または {{domxref("ReadableByteStreamController")}} です。 開発者はこれを使用して、セットアップ中にストリームを制御できます。
-    - pull(controller) {{optional_inline}}
-      - : このメソッドは、開発者が定義し、ストリームの内部チャンクのキューがいっぱいになっていない場合、最高水準点に達するまで繰り返し呼び出されます。 `pull()` が promise を返す場合、その promise が満たされるまで再び呼び出されません。 promise が拒否された場合、ストリームはエラーになります。 このメソッドに渡される `controller` パラメーターは、`type` プロパティの値に応じて、{{domxref("ReadableStreamDefaultController")}} または {{domxref("ReadableByteStreamController")}} です。 開発者は、これを使用して、より多くのチャンクがフェッチされるときにストリームを制御できます。
-    - cancel(reason) {{optional_inline}}
-      - : このメソッドは、開発者が定義し、ストリームがキャンセルされることをアプリが通知した場合に呼び出されます（例えば、{{domxref("ReadableStream.cancel()")}} が呼び出された場合）。 内容は、ストリームのソースへのアクセスを解放するために必要なことを行う必要があります。 このプロセスが非同期の場合、成功または失敗を通知する promise を返すことができます。 `reason` パラメータには、ストリームがキャンセルされた理由を説明する {{domxref("DOMString")}} が含まれています。
-    - type {{optional_inline}}
-      - : このプロパティは、どのタイプの読み取り可能なストリームが処理されるかを制御します。 `"bytes"` に設定された値が含まれている場合、渡されるコントローラーオブジェクトは、BYOB（独自のバッファーを持ち込む）/バイトストリームを処理できる {{domxref("ReadableByteStreamController")}} になります。 含まれていない場合、渡されるコントローラーは {{domxref("ReadableStreamDefaultController")}} になります。
-    - autoAllocateChunkSize {{optional_inline}}
-      - : バイトストリームの場合、開発者は `autoAllocateChunkSize` に正の整数値を設定して、ストリームの自動割り当て機能をオンにできます。 これをオンにすると、ストリームの実装は、指定された整数のサイズで {{jsxref("ArrayBuffer")}} を自動的に割り当て、コンシューマーがデフォルトのリーダーも使用できるようになります。
+    - `start`(controller) {{optional_inline}}
+      - : これは、オブジェクトが構築されるとすぐに呼び出されるメソッドです。 このメソッドの内容は開発者が定義し、ストリームのソースへのアクセスを取得し、ストリーム機能を設定するために必要な他のすべての操作を行う必要があります。 このプロセスを非同期で実行する場合、成功または失敗を通知するプロミスを返すことができます。このメソッドに渡される `controller` 引数は、 {{domxref("ReadableStreamDefaultController")}} または {{domxref("ReadableByteStreamController")}} を `type` プロパティの値に応じて指定します。開発者はこれを使用して、セットアップ中にストリームを制御できます。
+    - `pull`(controller) {{optional_inline}}
+      - : このメソッドは、開発者が定義し、ストリームの内部にあるチャンクのキューがいっぱいになっていない場合、最高水準点に達するまで繰り返し呼び出されます。 `pull()` がプロミスを返す場合、そのプロミスが満たされるまで再び呼び出されません。プロミスが拒否された場合、ストリームはエラーになります。このメソッドに渡される `controller` 引数は、 {{domxref("ReadableStreamDefaultController")}} または {{domxref("ReadableByteStreamController")}} を `type` プロパティの値に応じて指定します。開発者はこれを使用して、より多くのチャンクが読み取られるようストリームを制御できます。
+    - `cancel`(reason) {{optional_inline}}
+      - : このメソッドは、開発者が定義し、ストリームがキャンセルされることをアプリが通知した場合に呼び出されます（例えば、{{domxref("ReadableStream.cancel()")}} が呼び出された場合）。 内容は、ストリームのソースへのアクセスを解放するために必要なことを行う必要があります。 このプロセスが非同期の場合、成功または失敗を通知するプロミスを返すことができます。 `reason` 引数には、ストリームがキャンセルされた理由を説明する文字列が含まれています。
+    - `type` {{optional_inline}}
+      - : このプロパティは、どの種類の読み取り可能なストリームが処理されるかを制御します。 `"bytes"` に設定された値が含まれている場合、渡されるコントローラーオブジェクトは、 BYOB （独自のバッファーを持ち込む）/バイトストリームを処理できる {{domxref("ReadableByteStreamController")}} になります。 含まれていない場合、渡されるコントローラーは {{domxref("ReadableStreamDefaultController")}} になります。
+    - `autoAllocateChunkSize` {{optional_inline}}
 
-- queuingStrategy {{optional_inline}}
+      - : バイトストリームの場合、開発者は `autoAllocateChunkSize` に正の整数値を設定して、ストリームの自動割り当て機能をオンにできます。
+        これを設定すると、ストリームの実装は、必要なときに自動的に {{domxref("ReadableByteStreamController.byobRequest")}} に指定したサイズのビューバッファーを確保するようになります。
 
-  - : オプションでストリームのキューイング戦略を定義するオブジェクト。 これには次の 2 つのパラメーターが必要です。
+        既定の {{domxref("ReadableStreamDefaultReader")}} でゼロコピー転送を使用するためには、この設定をしなければなりません。
+        設定されていない場合、既定のリーダーはデータをストリームしますが、 {{domxref("ReadableByteStreamController.byobRequest")}} は常に `null` となり、コンシューマーへの転送はストリーム内のキューを経由しなければなりません。
 
-    - highWaterMark
+- `queuingStrategy` {{optional_inline}}
+
+  - : オプションでストリームのキューイング戦略を定義するオブジェクト。 これには次の 2 つの引数が必要です。
+
+    - `highWaterMark`
       - : 負でない整数 — これは、バックプレッシャーが適用される前に内部キューに含めることができるチャンクの総数を定義します。
-    - size(chunk)
-      - : パラメーター `chunk` を含むメソッド — これは、各チャンクに使用するサイズをバイト単位で示します。
+    - `size(chunk)`
+      - : 引数 `chunk` を含むメソッド — これは、各チャンクに使用するサイズをバイト単位で示します。
 
-    > **Note:** **注**: 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用されるデフォルトは、最高水準点が 1 の `CountQueuingStrategy` と同じです。
+    > **メモ:** 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用される既定値は、最高水準点が 1 の `CountQueuingStrategy` と同じです。
 
-### 戻り値
+### 返値
 
 {{domxref("ReadableStream")}} オブジェクトのインスタンス。
 
 ### 例外
 
-- RangeError
-  - : 指定された `type` 値は、 `"bytes"` でも `undefined` でもありません。
+- {{jsxref("RangeError")}}
+  - : 指定された `type` 値が、 `"bytes"` でも `undefined` でもない場合に発生します。
 
 ## 例
 
-次の単純な例では、コンストラクターを使用してカスタムの `ReadableStream` を作成します（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 `start()` 関数は、1 秒ごとにランダムなテキスト文字列を生成し、それをストリームのキューに入れます。 {{domxref("ReadableStream.cancel()")}} が何らかの理由で呼び出された場合、生成を停止するために `cancel()` 関数も提供します。
+次の単純な例では、コンストラクターを使用して独自の `ReadableStream` を作成します（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 `start()` 関数は、1 秒ごとにランダムなテキスト文字列を生成し、それをストリームのキューに入れます。 {{domxref("ReadableStream.cancel()")}} が何らかの理由で呼び出された場合、生成を停止するために `cancel()` 関数も提供します。
 
 ボタンを押すと、生成を停止し、{{domxref("ReadableStreamDefaultController.close()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。
 
@@ -70,7 +82,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
@@ -87,12 +99,10 @@ const stream = new ReadableStream({
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                             | 状態                         | コメント |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-constructor","ReadableStream()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStream.ReadableStream")}}
+{{Compat}}

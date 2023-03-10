@@ -2,6 +2,7 @@
 title: 盒模型
 slug: Learn/CSS/Building_blocks/The_box_model
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 在 CSS 中，所有的元素都被一个个的“盒子（box）”包围着，理解这些“盒子”的基本原理，是我们使用 CSS 实现准确布局、处理元素排列的关键。
@@ -37,7 +38,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
   </tbody>
 </table>
 
-## 块级盒子（Block box） 和 内联盒子（Inline box）
+## 块级盒子（Block box）和 内联盒子（Inline box）
 
 在 CSS 中我们广泛地使用两种“盒子” —— **块级盒子** (**block box**) 和 **内联盒子** (**inline box**)。这两种盒子会在**页面流**（page flow）和元素之间的关系方面表现出不同的行为：
 
@@ -61,9 +62,9 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 我们通过对盒子{{cssxref("display")}} 属性的设置，比如 `inline` 或者 `block` ，来控制盒子的外部显示类型。
 
-## 补充: 内部和外部显示类型
+## 补充：内部和外部显示类型
 
-在这里最好也解释下**内部** 和 **外部** 显示类型。如上所述， css 的 box 模型有一个外部显示类型，来决定盒子是块级还是内联。
+在这里最好也解释下**内部** 和 **外部** 显示类型。如上所述，css 的 box 模型有一个外部显示类型，来决定盒子是块级还是内联。
 
 同样盒模型还有内部显示类型，它决定了盒子内部元素是如何布局的。默认情况下是按照 **[正常文档流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow) **布局，也意味着它们和其他块元素以及内联元素一样 (如上所述).
 
@@ -73,13 +74,13 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 当你进一步了解 css 布局的更多细节的时候，你会了解到 `flex`，和其他内部显示类型会用到的值，例如 [`grid`](/zh-CN/docs/Learn/CSS/CSS_layout/Grids) 。
 
-块级和内联布局是 web 上默认的行为 —— 正如上面所述， 它有时候被称为 _正常文档流_， 因为如果没有其他说明，我们的盒子布局默认是块级或者内联。
+块级和内联布局是 web 上默认的行为 —— 正如上面所述，它有时候被称为 _正常文档流_，因为如果没有其他说明，我们的盒子布局默认是块级或者内联。
 
 ## 不同显示类型的例子
 
 让我们继续看看别的例子。下面三个 html 元素，都有一个外部显示类型 `block`。第一个是一个段落，在 CSS 中加了边框。浏览器把它渲染成一个块级盒子，所以段落从新的一行开始，而且宽度占满一行。
 
-第二个是一个列表，布局属性是 `display: flex`。 将在容器中建立一个 flex 布局，但是每个列表是一个块级元素 —— 像段落一样 —— 会充满整个容器的宽度并且换行。
+第二个是一个列表，布局属性是 `display: flex`。将在容器中建立一个 flex 布局，但是每个列表是一个块级元素 —— 像段落一样 —— 会充满整个容器的宽度并且换行。
 
 下面有个块级段落，里面有两个 `<span>` 元素。正常情况下是 `inline`，但是其中一个加了 block 类，设置属性 `display: block`。
 
@@ -89,7 +90,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 还有一个 `<ul>` 设置为 `display: inline-flex`，使得在一些 flex 元素外创建一个内联框。
 
-最后设置两个段落为 `display: inline`。 inline flex 容器和段落在一行上而不是像块级元素一样换行。
+最后设置两个段落为 `display: inline`。inline flex 容器和段落在一行上而不是像块级元素一样换行。
 
 **你可以修改 `display: inline` 为 `display: block` 或者 `display: inline-flex` 改为 `display: flex` 来观察显示模式切换。**
 
@@ -108,7 +109,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 CSS 中组成一个块级盒子需要：
 
 - **Content box**: 这个区域是用来显示内容，大小可以通过设置 {{cssxref("width")}} 和 {{cssxref("height")}}.
-- **Padding box**: 包围在内容区域外部的空白区域； 大小通过 {{cssxref("padding")}} 相关属性设置。
+- **Padding box**: 包围在内容区域外部的空白区域；大小通过 {{cssxref("padding")}} 相关属性设置。
 - **Border box**: 边框盒包裹内容和内边距。大小通过 {{cssxref("border")}} 相关属性设置。
 - **Margin box**: 这是最外面的区域，是盒子和其他元素之间的空白区域。大小通过 {{cssxref("margin")}} 相关属性设置。
 
@@ -118,7 +119,7 @@ CSS 中组成一个块级盒子需要：
 
 ### 标准盒模型
 
-在标准模型中，如果你给盒设置 `width` 和 `height`，实际设置的是 _content box_。 padding 和 border 再加上设置的宽高一起决定整个盒子的大小。 见下图。
+在标准模型中，如果你给盒设置 `width` 和 `height`，实际设置的是 _content box_。padding 和 border 再加上设置的宽高一起决定整个盒子的大小。见下图。
 
 假设定义了 `width`, `height`, `margin`, `border`, and `padding`:
 
@@ -132,7 +133,7 @@ CSS 中组成一个块级盒子需要：
 }
 ```
 
-如果使用标准模型宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，padding 加 border 再加 content box。
+如果使用标准模型，实际占用空间的宽高分别为：宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)。
 
 ![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
@@ -144,7 +145,7 @@ CSS 中组成一个块级盒子需要：
 
 ![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
 
-默认浏览器会使用标准模型。如果需要使用替代模型，您可以通过为其设置 `box-sizing: border-box` 来实现。 这样就可以告诉浏览器使用 `border-box` 来定义区域，从而设定您想要的大小。
+默认浏览器会使用标准模型。如果需要使用替代模型，您可以通过为其设置 `box-sizing: border-box` 来实现。这样就可以告诉浏览器使用 `border-box` 来定义区域，从而设定您想要的大小。
 
 ```css
 .box {
@@ -309,24 +310,3 @@ display 有一个特殊的值，它在内联和块之间提供了一个中间状
 在下一节课中，我们将看看如何使用[背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)来使你的普通盒子看起来更有趣。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

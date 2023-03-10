@@ -3,6 +3,7 @@ title: 进行测试的策略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 这篇文章主要是讨论如何进行跨浏览器测试，回答一些比较常见的疑惑，譬如：“什么是跨浏览器测试？”，“会遇到哪些常见的问题？”以及“如何测试、区分以及修复问题？”
@@ -12,10 +13,10 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
     <tr>
       <th scope="row">准备：</th>
       <td>
-        熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        熟练掌握 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的核心概念</a
         >。
       </td>
@@ -53,7 +54,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 > **备注：** 您一次只能在计算机上安装一个版本的 IE 或 Edge，因此您可能必须使用虚拟机或其他方法来执行所需的测试。稍后请参阅[虚拟机](#虚拟机)部分。
 
-很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平 ​​ 板电脑上测试它们，以确保响应式设计正常运行。
+很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平 板电脑上测试它们，以确保响应式设计正常运行。
 
 您也许知道很多人仍然在使用 IE 9，它版本老旧而且功能较少，所以我们把它列为 B 级别。
 
@@ -189,7 +190,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序，允许您比查找要测试的特定硬件/软件组合更方便地执行某些测试。
 
-仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。 Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
+仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/zh-CN/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
 
 不过，您经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示：
 
@@ -288,14 +289,3 @@ You may notice from the text in the example that it won't work in IE8 — this i
 接下来，我们将把注意力转向测试可能发现的实际代码问题，从 HTML 和 CSS 开始。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-**本章内容**
-
-- [跨浏览器测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [进行测试的策略](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [处理常见的辅助功能问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [执行特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [自动化测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [搭建你自己的自动化测试环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

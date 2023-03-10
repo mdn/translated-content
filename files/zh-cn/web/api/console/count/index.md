@@ -1,7 +1,8 @@
 ---
 title: Console.count()
-slug: Web/API/Console/count
+slug: Web/API/console/count
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 输出 count() 被调用的次数。此函数接受一个可选参数 `label`。
@@ -87,4 +88,4 @@ console.count([label]);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.count")}}
+{{Compat}}

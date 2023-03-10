@@ -2,6 +2,7 @@
 title: 正常布局流
 slug: Learn/CSS/CSS_layout/Normal_Flow
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
@@ -14,10 +15,10 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
       <th scope="row">前提：</th>
       <td>
         HTML 基础 (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), 和了解 CSS 如何工作的 (study
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >.)
       </td>
@@ -39,7 +40,7 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
 
 默认的，一个[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)的内容宽度是其父元素的 100%，其高度与其内容高度一致。[内联元素](/zh-CN/docs/Web/HTML/Inline_elements)的 height width 与内容一致。你无法设置内联元素的 height width --- 它们就那样置于块级元素的内容里。如果你想控制内联元素的尺寸，你需要为元素设置`display: block;` （或者，`display: inline-block;` inline-block 混合了 inline 和 block 的特性。)
 
-这样解释了独立元素的布局，但是元素之间又是如何相互影响的呢？ 正常布局流（在布局介绍里提到过）是一套在浏览器视口内放置、组织元素的系统。默认的，块级元素按照基于其父元素的[书写顺序](/zh-CN/docs/Web/CSS/writing-mode)(_默认值：_ horizontal-tb) 的*块流动方向 (block flow direction)*放置 --- 每个块级元素会在上一个元素下面另起一行，它们会被设置好的 margin 分隔。在英语，或者其他水平书写、自上而下模式里，块级元素是垂直组织的。
+这样解释了独立元素的布局，但是元素之间又是如何相互影响的呢？正常布局流（在布局介绍里提到过）是一套在浏览器视口内放置、组织元素的系统。默认的，块级元素按照基于其父元素的[书写顺序](/zh-CN/docs/Web/CSS/writing-mode)(_默认值：_ horizontal-tb) 的*块流动方向 (block flow direction)*放置 --- 每个块级元素会在上一个元素下面另起一行，它们会被设置好的 margin 分隔。在英语，或者其他水平书写、自上而下模式里，块级元素是垂直组织的。
 
 内联元素的表现有所不同 --- 它们不会另起一行；只要在其父级块级元素的宽度内有足够的空间，它们与其他内联元素、相邻的文本内容（或者被包裹的）被安排在同一行。如果空间不够，溢出的文本或元素将移到新的一行。
 
@@ -56,7 +57,7 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow/long.jpg" alt="snippet of cloth" /></p>
 ```
 
 ```css
@@ -85,18 +86,3 @@ span {
 现在你对正常布局流有所了解，知晓浏览器默认怎么组织元素，继续下一节，学习如何改变默认布局以产出符合你的设计的布局。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## 在这个模块中
-
-- [CSS 介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流（Normal Flow）](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒子（Flexbox）](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格（Grid）](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动（Floats）](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [位置（Positioning）](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局（Multiple-column Layout）](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [媒体查询入门指南](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [传统的布局实现（Legacy Layout Methods）](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧有浏览器（Supporting older browsers）](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [评估你对布局的理解](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

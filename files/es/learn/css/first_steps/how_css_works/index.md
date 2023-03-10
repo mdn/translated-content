@@ -1,9 +1,9 @@
 ---
 title: Cómo funciona CSS
 slug: Learn/CSS/First_steps/How_CSS_works
-translation_of: Learn/CSS/First_steps/How_CSS_works
 original_slug: Learn/CSS/First_steps/Como_funciona_CSS
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -43,16 +43,16 @@ Hemos aprendido los conceptos básicos de CSS, para qué sirve y cómo escribir 
 
 Cuando un navegador muestra un documento, ha de combinar el contenido con la información de estilo del documento. Procesa el documento en una serie de etapas, que enumeraremos a continuación. Ten en cuenta que este es un modelo muy simplificado de lo que sucede cuando un navegador carga una página web y que cada navegador gestiona el proceso de manera diferente. Pero esto es más o menos lo que sucede.
 
-1.  El navegador carga el HTML (por ejemplo, lo recibe de la red).
-2.  Convierte el {{Glossary("HTML")}} en un {{Glossary("DOM")}} (_Modelo de objetos del documento_). El DOM representa el documento en la memoria del ordenador. Lo explicaremos más detalladamente en la sección siguiente.
-3.  Entonces, el navegador va a buscar la mayor parte de los recursos vinculados al documento HTML, como las imágenes y los videos incrustados... ¡y también el CSS vinculado! JavaScript aparece un poco más adelante en el proceso, pero no vamos a hablar de ello aún para evitar complicar las cosas.
-4.  El navegador analiza el CSS y ordena en diferentes «cubos» las diferentes reglas según el tipo de selector. Por ejemplo, elemento, clase, ID, y así sucesivamente. Para cada tipo de selector que encuentre, calcula qué reglas deben aplicarse y a qué nodos en el DOM se les aplica el estilo según corresponda (este paso intermedio se llama árbol de renderización).
-5.  El árbol de renderización presenta la estructura en que los nodos deben aparecer después de aplicarle las reglas.
-6.  En la pantalla se muestra el aspecto visual de la página (esta etapa se llama pintura).
+1. El navegador carga el HTML (por ejemplo, lo recibe de la red).
+2. Convierte el {{Glossary("HTML")}} en un {{Glossary("DOM")}} (_Modelo de objetos del documento_). El DOM representa el documento en la memoria del ordenador. Lo explicaremos más detalladamente en la sección siguiente.
+3. Entonces, el navegador va a buscar la mayor parte de los recursos vinculados al documento HTML, como las imágenes y los videos incrustados... ¡y también el CSS vinculado! JavaScript aparece un poco más adelante en el proceso, pero no vamos a hablar de ello aún para evitar complicar las cosas.
+4. El navegador analiza el CSS y ordena en diferentes «cubos» las diferentes reglas según el tipo de selector. Por ejemplo, elemento, clase, ID, y así sucesivamente. Para cada tipo de selector que encuentre, calcula qué reglas deben aplicarse y a qué nodos en el DOM se les aplica el estilo según corresponda (este paso intermedio se llama árbol de renderización).
+5. El árbol de renderización presenta la estructura en que los nodos deben aparecer después de aplicarle las reglas.
+6. En la pantalla se muestra el aspecto visual de la página (esta etapa se llama pintura).
 
 El siguiente diagrama ofrece una visión sencilla de este proceso.
 
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+![](rendering.svg)
 
 ## Acerca del DOM
 
@@ -77,14 +77,16 @@ Tomemos el siguiente código HTML:
 
 En el DOM, el nodo que se corresponde con nuestro elemento `<p>` es un padre. Sus hijos son un nodo de texto y los tres nodos correspondientes a nuestros elementos `<span>`. Los nodos `SPAN` son también los padres, y los nodos de texto sus hijos:
 
-    P
-    ├─ "Usaremos:"
-    ├─ SPAN
-    |  └─ "Hojas"
-    ├─ SPAN
-    |  └─ "de estilo"
-    └─ SPAN
-       └─ "en cascada"
+```
+P
+├─ "Usaremos:"
+├─ SPAN
+|  └─ "Hojas"
+├─ SPAN
+|  └─ "de estilo"
+└─ SPAN
+    └─ "en cascada"
+```
 
 Así es como un navegador interpreta el código HTML anterior, interpreta el árbol DOM y luego lo muestra en el navegador, así:
 
@@ -171,8 +173,8 @@ Casi has terminado este módulo; solo nos queda una cosa más por hacer. En el p
 
 ## En este módulo
 
-1.  [¿Qué es CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Empezar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [¿Qué es CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Empezar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
+3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

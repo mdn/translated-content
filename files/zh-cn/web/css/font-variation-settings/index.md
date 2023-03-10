@@ -2,6 +2,7 @@
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
 ---
+
 {{CSSRef}}
 
 **`font-variation-settings`** CSS 属性提供了对 [variable font](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) 特征的低级控制，通过指定要更改的特征的四个字母轴名称及其值。

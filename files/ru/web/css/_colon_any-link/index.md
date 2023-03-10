@@ -14,6 +14,7 @@ tags:
   - селектор
 translation_of: Web/CSS/:any-link
 ---
+
 {{CSSRef}} {{SeeCompatTable}}
 
 Селектор [псевдокласса](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:any-link`** представляет собой элемент, который действует как исходный якорь гиперссылки, независимо от того, была ли она посещена. Другими словами, он соответствует всем элементам {{HTMLElement("a")}}, {{HTMLElement("area")}}, или {{HTMLElement("link")}}, которые имеют атрибут `href`. Таким образом, он соответствует всем элементам, которые используют {{cssxref(":link")}} или {{cssxref(":visited")}}.

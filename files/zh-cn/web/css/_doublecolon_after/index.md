@@ -2,6 +2,7 @@
 title: '::after (:after)'
 slug: Web/CSS/::after
 ---
+
 {{ CSSRef() }}
 
 CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合{{ cssxref("content") }}属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
@@ -13,8 +14,6 @@ a::after {
 }
 ```
 
-{{ fx_minversion_note("3.5", "Firefox 3.5 之前版本仅实现了 CSS 2.0 版本的语法<code> :after</code>. 且不允许在<code> position, float, list-style-* </code>等属性中使用。Firefox 3.5 开始没有了这项限制。") }}
-
 ## 语法
 
 ```
@@ -23,9 +22,9 @@ element:after  { style properties }  /* CSS2 语法 */
 element::after { style properties }  /* CSS3 语法 */
 ```
 
-`::after 表示法是在`CSS 3 中引入的，::符号是用来区分[伪类](/zh-CN/CSS/Pseudo-classes)和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法`:after。`
+`::after` 表示法是在`CSS 3 中引入的，`::` 符号是用来区分[伪类](/zh-CN/CSS/Pseudo-classes)和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法 `:after`。
 
-> **备注：** IE8 仅支持`:after`。
+> **备注：** IE8 仅支持 `:after`。
 
 ## 示例
 
@@ -52,9 +51,9 @@ element::after { style properties }  /* CSS3 语法 */
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Simple_usage', 500, 170) }}
+{{ EmbedLiveSample('简单用法', 500, 170) }}
 
 ### 装饰用法
 
@@ -77,13 +76,13 @@ element::after { style properties }  /* CSS3 语法 */
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Decorative_example', 450, 20) }}
+{{ EmbedLiveSample('装饰用法', 450, 20) }}
 
 ### 提示用法
 
-接下来的示例展示了用`::after`[伪元素](/en/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/en/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](https://developer.mozilla.org/files/4591/css-only_tooltips.html)看这个例子。
+接下来的示例展示了用`::after`[伪元素](/zh-CN/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/zh-CN/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](/files/4591/css-only_tooltips.html)看这个例子。
 
 ```html
 <p>这是上面代码的实现<br />
@@ -117,9 +116,9 @@ span[data-descr]:hover::after {
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Tooltips', 450, 160) }}
+{{ EmbedLiveSample('提示用法', 450, 160) }}
 
 ## 规范
 
@@ -127,9 +126,9 @@ span[data-descr]:hover::after {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.after")}}
+{{Compat}}
 
-## 相关链接
+## 参见
 
 {{ Cssxref("::before") }}, {{ cssxref("content") }}
 

@@ -2,6 +2,7 @@
 title: 'HTMLCanvasElement: webglcontextlost event'
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 ---
+
 {{APIRef}}
 
 如果浏览器检测到与 {{domxref("WebGLRenderingContext")}}对象关联的图形缓冲区已丢失，则会触发[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`webglcontextlost`** 事件。
@@ -51,7 +52,7 @@ gl.getExtension('WEBGL_lose_context').loseContext();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.webglcontextlost_event")}}
+{{Compat}}
 
 ## 请参阅
 

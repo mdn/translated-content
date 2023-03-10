@@ -2,6 +2,7 @@
 title: flex
 slug: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 `flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
@@ -51,8 +52,8 @@ flex: unset;
 
 **单值语法**: 值必须为以下其中之一：
 
-- 一个无单位**数 ({{cssxref("&lt;number&gt;")}})**: 它会被当作`flex:<number> 1 0;` [`<flex-shrink>`](/zh-CN/docs/Web/CSS/flex-shrink)的值被假定为 1，然后[`<flex-basis>`](/zh-CN/docs/Web/CSS/flex-basis) 的值被假定为`0`。
-- 一个有效的**宽度 ({{cssxref("width")}})**值：它会被当作 `<flex-basis>的值。`
+- 一个无单位**数 ({{cssxref("&lt;number&gt;")}})**: 它会被当作 `flex:<number> 1 0;` [`<flex-shrink>`](/zh-CN/docs/Web/CSS/flex-shrink)的值被假定为 1，然后[`<flex-basis>`](/zh-CN/docs/Web/CSS/flex-basis) 的值被假定为`0`。
+- 一个有效的 **宽度 ({{cssxref("width")}})** 值：它会被当作 `<flex-basis>` 的值。
 - 关键字[`none`](/zh-CN/docs/Web/CSS/flex#none)，[`auto`](/zh-CN/docs/Web/CSS/flex#auto)或`initial`.
 
 **双值语法**: 第一个值必须为一个无单位数，并且它会被当作 [`<flex-grow>`](/zh-CN/docs/Web/CSS/flex-grow) 的值。第二个值必须为以下之一：
@@ -69,7 +70,7 @@ flex: unset;
 ### 取值
 
 - `initial`
-  - : 元素会根据自身宽高设置尺寸。它会缩短自身以适应 flex 容器，但不会伸长并吸收 flex 容器中的额外自由空间来适应 flex 容器 。相当于将属性设置为"`flex: 0 1 auto`"。
+  - : 元素会根据自身宽高设置尺寸。它会缩短自身以适应 flex 容器，但不会伸长并吸收 flex 容器中的额外自由空间来适应 flex 容器。相当于将属性设置为"`flex: 0 1 auto`"。
 - `auto`
   - : 元素会根据自身的宽度与高度来确定尺寸，但是会伸长并吸收 flex 容器中额外的自由空间，也会缩短自身来适应 flex 容器。这相当于将属性设置为 "`flex: 1 1 auto`".
 - `none`
@@ -166,15 +167,15 @@ flex: unset;
 }
 ```
 
-{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("描述", 1200, 370, "", "", "example-outcome-frame")}}
 
 默认情况下，元素不会缩短至小于内容框尺寸，若想改变这一状况，请设置元素的{{cssxref("min-width")}} 与 {{cssxref("min-height")}}属性。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -244,9 +245,9 @@ flex.addEventListener("click", function() {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## 参见
 
-- CSS Flexbox 指南: _[Flexbox 基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox 指南: _[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox 指南：_[Flexbox 基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox 指南：_[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

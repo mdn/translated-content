@@ -2,6 +2,7 @@
 title: Node.compareDocumentPosition
 slug: Web/API/Node/compareDocumentPosition
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Node.compareDocumentPosition()`** 可以比较当前节点与任意文档中的另一个节点的位置关系。

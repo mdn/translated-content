@@ -2,6 +2,7 @@
 title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 64 は、米国時間 2018 年 12 月 11 日 にリリースされました。このページでは、開発者に影響する Firefox 64 の変更点をまとめています。
@@ -97,13 +98,13 @@ _変更なし。_
 #### 廃止
 
 - ウェブ互換性の問題を緩和するために Firefox 63 で追加した {{domxref("Window.event")}} プロパティで別の問題が発覚したため、設定 (`dom.window.event.enabled`) で制御するようにして、Release 版はデフォルトで無効化しました ({{bug(1493869)}})。注記: これは実際には Firefox 63 のリリースサイクルの後期に実施しましたが、念のためここで言及します。
-- {{domxref("LocalMediaStream")}} インターフェイスと、その `stop()` メソッドを削除しました ({{bug(1258143)}})。このメソッドは `LocalMediaStream` の非推奨化によって使用できなくなりました。全体のストリームを停止する方法については {{SectionOnPage("/ja/docs/Web/API/MediaStreamTrack/stop", "Stopping a video stream")}} をご覧ください。
+- {{domxref("LocalMediaStream")}} インターフェイスと、その `stop()` メソッドを削除しました ({{bug(1258143)}})。このメソッドは `LocalMediaStream` の非推奨化によって使用できなくなりました。全体のストリームを停止する方法については [映像ストリームの停止](/ja/docs/Web/API/MediaStreamTrack/stop#%E6%98%A0%E5%83%8F%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E3%81%AE%E5%81%9C%E6%AD%A2) セクションをご覧ください。
 - `AudioStreamTrack` および `VideoStreamTrack` インターフェイスを削除しました。これらはしばらく前から非推奨でした ({{bug(1377146)}})。この機能は {{domxref("MediaStreamTrack")}} に統合されました。トラックは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティの値で、`audio` や `video` といった値で識別します。
 
 ### セキュリティ
 
 - シマンテックの CA を失効させる計画を実装しました ({{bug(1409257)}} を参照。詳しくは [Mozilla’s Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) の議論もご覧ください)。
-- {{httpheader("Referrer-Policy")}} を、スタイルシートで読み込むリソースの制御で使用可能になりました ({{bug(1330487)}})。詳しくは {{SectionOnPage("/ja/docs/Web/HTTP/Headers/Referrer-Policy", "Integration with CSS")}} をご覧ください。
+- {{httpheader("Referrer-Policy")}} を、スタイルシートで読み込むリソースの制御で使用可能になりました ({{bug(1330487)}})。詳しくは [CSS との統合](/ja/docs/Web/HTTP/Headers/Referrer-Policy#css_%E3%81%A8%E3%81%AE%E7%B5%B1%E5%90%88) をご覧ください。
 
 ### プラグイン
 

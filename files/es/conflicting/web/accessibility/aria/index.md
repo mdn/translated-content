@@ -1,22 +1,16 @@
 ---
 title: Alertas
 slug: conflicting/Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accesibilidad
-  - Forms
-  - Web
-  - formulários
-translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
+
 ## El problema
 
 Tienes un formulario — un formulario de contacto — por ejemplo, en el que deseas poner algún control de error accesible. Ejemplos de problemas comunes incluyen direcciones de correo electrónico que no son válidas o un campo de nombre que no contiene al menos un nombre o apellido.
 
 ## El formulario
 
-Primero, lee acerca de la [`técnica requerida por aria`](/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields "/es/Web/Accessibility/ARIA/forms/Basic_form_hints") si no lo has hecho, ya que esta técnica amplía a esa.
+Primero, lee acerca de la [`técnica requerida por aria`](/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields) si no lo has hecho, ya que esta técnica amplía a esa.
 
 Aquí hay un sencillo formulario:
 
@@ -47,9 +41,9 @@ Aquí hay un sencillo formulario:
 
 La validación de formularios consta de varios pasos:
 
-1.  Verificando si la dirección de correo electrónico o el nombre ingresado son válidos. Cada campo tiene un conjunto de criterios que se deben cumplir para aprobar la validación. Para simplificar este ejemplo, verificaremos si la dirección de correo electrónico contiene el símbolo "@" y si la entrada del nombre contiene al menos 1 carácter.
-2.  Si no se cumplen los criterios anteriores, el atributo `aria-invalid` del campo recibirá un valor de "`true`".
-3.  Si no se cumplieron los criterios, se notificará al usuario mediante una alerta. En lugar de usar la función "`alert`" de JavaScript, usaremos un _widget WAI-ARIA_ simple para la notificación. Esto notifica al usuario del error, pero le permite continuar modificando el formulario sin perder el foco (causado por el controlador "`onblur`" en la función "`alert`" predeterminada de JavaScript).
+1. Verificando si la dirección de correo electrónico o el nombre ingresado son válidos. Cada campo tiene un conjunto de criterios que se deben cumplir para aprobar la validación. Para simplificar este ejemplo, verificaremos si la dirección de correo electrónico contiene el símbolo "@" y si la entrada del nombre contiene al menos 1 carácter.
+2. Si no se cumplen los criterios anteriores, el atributo `aria-invalid` del campo recibirá un valor de "`true`".
+3. Si no se cumplieron los criterios, se notificará al usuario mediante una alerta. En lugar de usar la función "`alert`" de JavaScript, usaremos un _widget WAI-ARIA_ simple para la notificación. Esto notifica al usuario del error, pero le permite continuar modificando el formulario sin perder el foco (causado por el controlador "`onblur`" en la función "`alert`" predeterminada de JavaScript).
 
 A continuación se muestra un código JavaScript de ejemplo que se podría insertar encima de la etiqueta de cierre "`head`":
 
@@ -97,8 +91,8 @@ Para ver si es válido, la función comprueba si el valor `indexOf` del `input` 
 
 Si no es válido, la función hace dos cosas:
 
-1.  Establece el atributo `aria-invalid` del elemento en "`true`", lo que indicará a los lectores de pantalla que hay contenido no válido aquí.
-2.  Llamará a la función `addAlert` para agregar la alerta con el mensaje de error proporcionado.
+1. Establece el atributo `aria-invalid` del elemento en "`true`", lo que indicará a los lectores de pantalla que hay contenido no válido aquí.
+2. Llamará a la función `addAlert` para agregar la alerta con el mensaje de error proporcionado.
 
 Si se encuentra el término de búsqueda, el atributo `aria-invalid` se restablece a “`false`”. Además, se eliminan las alertas sobrantes.
 
@@ -106,7 +100,7 @@ Si se encuentra el término de búsqueda, el atributo `aria-invalid` se restable
 
 Esta función primero elimina las alertas antiguas. La función es simple: busca un elemento con id "`alert`" y, si lo encuentra, lo elimina del [modelo de objetos del documento](/es/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model).
 
-A continuación, la función crea un elemento `div` para contener el texto de alerta. Obtiene un ID de "`alert`". Y obtiene un conjunto de roles de "alert". En realidad, está inspirado en ARIA, aunque no dice "aria" en el nombre del atributo. Esto se debe a que ese rol se basa en el [Módulo de atributos de rol XHTML](http://www.w3.org/TR/xhtml-role/ "Módulo de atributo de rol XHTML") que simplemente se transfirió a HTML para simplificar.
+A continuación, la función crea un elemento `div` para contener el texto de alerta. Obtiene un ID de "`alert`". Y obtiene un conjunto de roles de "alert". En realidad, está inspirado en ARIA, aunque no dice "aria" en el nombre del atributo. Esto se debe a que ese rol se basa en el [Módulo de atributos de rol XHTML](http://www.w3.org/TR/xhtml-role/) que simplemente se transfirió a HTML para simplificar.
 
 El texto se agrega al elemento `div` y el elemento `div` se agrega al documento.
 
@@ -128,8 +122,8 @@ Todo lo que queda ahora es agregar el controlador de eventos. Necesitamos cambia
 
 Si usas Firefox 3 y un lector de pantalla compatible actualmente, intenta lo siguiente:
 
-1.  Ingresa solo tu primer nombre como nombre. Al pulsar la tecla de tabulación, escucharás una alerta que te indicará que ingresaste un nombre no válido. Luego puedes volver atrás con `Mayús-Tab` y corregir el error.
-2.  Ingresa una dirección de correo electrónico sin el símbolo “@”. Cuando salgas de este campo, deberías escuchar una advertencia que dice que no ingresaste una dirección de correo electrónico válida.
+1. Ingresa solo tu primer nombre como nombre. Al pulsar la tecla de tabulación, escucharás una alerta que te indicará que ingresaste un nombre no válido. Luego puedes volver atrás con `Mayús-Tab` y corregir el error.
+2. Ingresa una dirección de correo electrónico sin el símbolo “@”. Cuando salgas de este campo, deberías escuchar una advertencia que dice que no ingresaste una dirección de correo electrónico válida.
 
 En ambos casos, al volver a enfocar el campo en cuestión, tu lector de pantalla debería decirte que este campo no es válido. JAWS 9 admite esto, pero JAWS 8 no, por lo que es posible que esto no funcione en todas las versiones de los lectores de pantalla compatibles.
 

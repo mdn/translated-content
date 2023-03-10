@@ -1,17 +1,9 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
-tags:
-  - CSS
-  - CSS 関数
-  - CSS グリッド
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/fit-content()
 original_slug: Web/CSS/fit-content()
 ---
+
 {{CSSRef}}
 
 **`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(max-content, max(min-content, 引数))` の式に従って有効な範囲の寸法に収めます。
@@ -92,10 +84,7 @@ fit-content(40%)
 
 ## 仕様書
 
-| 仕様書                                                                                                            | 状態                           | 備考                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトボックスの寸法としての関数を定義。 |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | トラックの寸法として使用される際の関数を定義。                                                                                                                                                                                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

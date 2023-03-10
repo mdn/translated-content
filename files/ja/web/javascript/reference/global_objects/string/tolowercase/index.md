@@ -1,15 +1,8 @@
 ---
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
+
 {{JSRef}}
 
 **`toLowerCase()`** メソッドは、呼び出す文字列の値を小文字に変換して返します。
@@ -40,9 +33,7 @@ console.log('ALPHABET'.toLowerCase()); // 'alphabet'
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

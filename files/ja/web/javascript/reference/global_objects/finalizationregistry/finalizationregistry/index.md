@@ -1,16 +1,8 @@
 ---
 title: FinalizationRegistry() コンストラクター
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
-tags:
-  - Constructor
-  - FinalizationRegistry
-  - JavaScript
-  - Reference
-  - コンストラクター
-translation_of: >-
-  Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 ---
+
 {{JSRef}}
 
 **`FinalizationRegistry`** コンストラクターは、指定されたコールバックを使用する {{jsxref("FinalizationRegistry")}} オブジェクトを生成します。
@@ -40,9 +32,7 @@ const registry = new FinalizationRegistry(heldValue => {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-finalization-registry-constructor', 'FinalizationRegistry constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

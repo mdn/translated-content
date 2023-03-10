@@ -1,15 +1,8 @@
 ---
 title: 非同期関数
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - 関数
-  - JavaScript
-  - 言語機能
-  - 文
-browser-compat: javascript.statements.async_function
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 非同期関数は `async` キーワードで宣言され、その中で `await` キーワードを使うことができます。 `async` および `await` キーワードを使用することで、プロミスベースの非同期の動作を、プロミスチェーンを明示的に構成する必要なく、よりすっきりとした方法で書くことができます。
@@ -43,11 +36,11 @@ async function name([param[, param[, ...param]]]) {
 
 非同期関数には、 {{jsxref("Operators/await", "await")}} 式を置くことができます。 await 式は返されたプロミスが履行されるか拒否されるまで実行を中断することで、プロミスを返す関数をあたかも同期しているかのように動作させます。プロミスの解決済みの値は、await 式の返値として扱われます。`async` と `await` を使用すると、非同期コードに通常の `try` / `catch` ブロックを使用することができます。
 
-> **Note:** キーワード `await` は、通常の JavaScript コード内の非同期関数内でのみ有効です。非同期関数の外で使用した場合は {{jsxref("SyntaxError")}} が発生します。
+> **メモ:** キーワード `await` は、通常の JavaScript コード内の非同期関数内でのみ有効です。非同期関数の外で使用した場合は {{jsxref("SyntaxError")}} が発生します。
 >
 > `await` は [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)では単独で使用することができます。
 
-> **Note:** `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)とプロミスの組み合わせに似ています。
+> **メモ:** `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)とプロミスの組み合わせに似ています。
 
 非同期関数は常にプロミスを返します。非同期関数の返値が明示的にプロミスでない場合は、暗黙的にプロミスでラップされます。
 
@@ -67,7 +60,7 @@ function foo() {
 }
 ```
 
-> **Note:**
+> **メモ:**
 >
 > 非同期関数の返値が `Promise.resolve` にラップされているかのように動作するとしても、両者は同等ではありません。
 >
@@ -225,7 +218,7 @@ setTimeout(parallel, 10000) // 本当に並列処理となるため 1 秒後に 
 複数の処理を安全に並列に実行したい場合は、 [`Promise.all`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) または
 [`Promise.allSettled`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled) の呼び出しで待つ必要があります。
 
-> **Warning:** 関数 `concurrentStart` と `concurrentPromise` は機能的に同等ではありません。
+> **警告:** 関数 `concurrentStart` と `concurrentPromise` は機能的に同等ではありません。
 >
 > `concurrentStart` では、プロミス `fast` がプロミス `slow` の履行よりも前に拒否された場合、呼び出し元が catch 節を構成しているかどうかにかかわらず、プロミスの拒否が処理されないというエラーが発生します。
 >

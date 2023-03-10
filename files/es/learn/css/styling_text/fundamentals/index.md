@@ -1,8 +1,8 @@
 ---
 title: Fundamentos de texto y fuentes tipográficas
 slug: Learn/CSS/Styling_text/Fundamentals
-translation_of: Learn/CSS/Styling_text/Fundamentals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 En este artículo vas a iniciar tu viaje hacia el dominio la aplicación de estilos a textos con {{glossary("CSS")}}. Aquí trataremos en detalle todos los fundamentos básicos del diseño del texto y las fuentes tipográficas, incluyendo la configuración de su grosor, la familia y el estilo de letra, las propiedades abreviadas para los tipos de letra, la alineación del texto, el espaciado entre líneas y letras, y otros efectos.
@@ -130,6 +130,7 @@ CSS define cinco nombres genéricos para los tipos de letra `serif`, `sans-serif
 
 Los cinco nombres se definen de la manera siguiente:
 
+<!-- markdownlint-disable MD033 -->
 <table class="standard-table">
  <thead>
   <tr>
@@ -350,10 +351,10 @@ text-shadow: 1px 1px 1px red;
 
 Las cuatro propiedades son las siguientes:
 
-1.  El desplazamiento horizontal de la sombra desde el texto original; admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone CSS, pero lo más habitual es usar `px`. Es un valor obligatorio.
-2.  El desplazamiento vertical de la sombra desde el texto original; se comporta básicamente igual que el desplazamiento horizontal, excepto porque mueve la sombra arriba/abajo, y no hacia derecha/izquierda. Es un valor obligatorio.
-3.  El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone el CSS.
-4.  El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS). Si no se incluye este valor, el valor predeterminado es `negro`.
+1. El desplazamiento horizontal de la sombra desde el texto original; admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone CSS, pero lo más habitual es usar `px`. Es un valor obligatorio.
+2. El desplazamiento vertical de la sombra desde el texto original; se comporta básicamente igual que el desplazamiento horizontal, excepto porque mueve la sombra arriba/abajo, y no hacia derecha/izquierda. Es un valor obligatorio.
+3. El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone el CSS.
+4. El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS). Si no se incluye este valor, el valor predeterminado es `negro`.
 
 > **Nota:** Los valores con desplazamiento positivo mueven la sombra hacia la derecha o hacia abajo, mientras que los valores con desplazamiento negativo, por ejemplo `-1px -1px`, mueven la sombrea hacia la izquierda o hacia arriba.
 
@@ -697,4 +698,4 @@ Esperamos que hayas disfrutado jugando con el texto en este artículo. El próxi
 - [Aplicación de estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Aplicación de estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
 - [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Escribir una página de inicio para la comunidad escolar](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

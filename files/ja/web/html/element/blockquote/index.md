@@ -1,21 +1,9 @@
 ---
 title: '<blockquote>: ブロック引用要素'
 slug: Web/HTML/Element/blockquote
-tags:
-  - Blockquote
-  - HTML
-  - HTML コンテンツグループ化
-  - HTML:フローコンテンツ
-  - HTML:区分化ルート
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Web
-  - ウェブ
-  - 引用
-  - 要素
-translation_of: Web/HTML/Element/blockquote
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<blockquote>` 要素** _(HTML ブロック引用要素_) は、内包する要素の文字列が引用文であることを示します。通常、字下げを伴ってレンダリングされます (整形方法については[注意](#Usage_notes)の項を参照してください)。 **cite** 属性により引用元の文書の URL を、 {{HTMLElement("cite")}} 要素により引用元の文書のタイトルなどを明示可能です。
 
@@ -111,11 +99,7 @@ translation_of: Web/HTML/Element/blockquote
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-blockquote-element', '&lt;blockquote&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-blockquote-element', '&lt;blockquote&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;blockquote&gt;')}}                             | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

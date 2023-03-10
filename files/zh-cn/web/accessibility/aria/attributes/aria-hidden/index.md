@@ -3,6 +3,7 @@ title: 使用 aria-hidden 属性
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 ---
+
 本文用来说明如何使用 aria-hidden 属性。aria-hidden 属性可以用来控制一系列可访问 API 中的非交互内容的显示或隐藏。
 
 ## 描述
@@ -13,7 +14,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 - 重复的内容，如重复的文本
 - 屏幕外或被折叠的内容，如菜单
 
-根据[无障碍的第四条规则](https://www.w3.org/TR/using-aria/#fourth)，`aria-hidden="true"` 不应该被用在可聚焦的元素上。 而且，由于这个属性是可以被子元素继承的，它也不应该被用在可聚焦元素的父元素上。
+根据[无障碍的第四条规则](https://www.w3.org/TR/using-aria/#fourth)，`aria-hidden="true"` 不应该被用在可聚焦的元素上。而且，由于这个属性是可以被子元素继承的，它也不应该被用在可聚焦元素的父元素上。
 
 如果父元素带有 `aria-hidden="true"` ，那么即使使用 `aria-hidden="false"` 也无法将该元素显示出来。
 
@@ -66,5 +67,5 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 
 ## 另见
 
-- [使用展示角色](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
-- [role="none"](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role)
+- [使用展示角色](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
+- [role="none"](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role)

@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/copy-of
 original_slug: Web/XSLT/copy-of
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:copy-of>` fait une copie complète dans le document de sortie (incluant les nœuds enfants) de tout ce que l'élément sélectionné spécifie.

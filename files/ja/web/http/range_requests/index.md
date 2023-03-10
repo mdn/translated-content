@@ -1,12 +1,8 @@
 ---
 title: HTTP 範囲リクエスト
 slug: Web/HTTP/Range_requests
-tags:
-  - HTTP
-  - HTTP 範囲リクエスト
-  - ガイド
-translation_of: Web/HTTP/Range_requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP 範囲リクエストでは、サーバーからクライアントに HTTP メッセージの一部のみを送信できます。部分リクエストは、たとえば、大きなメディアや、一時停止や再開機能を持つファイルのダウンロードに役立ちます。

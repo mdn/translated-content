@@ -1,10 +1,8 @@
 ---
 title: NetworkInformation
 slug: Web/API/NetworkInformation
-tags:
-  - API
-translation_of: Web/API/NetworkInformation
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation`** interface provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interfaces cannot be instantiated. It is instead accessed through the `connection` property of the {{domxref("Navigator")}} interface.
@@ -47,11 +45,11 @@ _This interface also inherits properties of its parent, {{domxref("EventTarget")
 
 _This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

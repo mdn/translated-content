@@ -2,6 +2,7 @@
 title: CSSOM View
 slug: Web/CSS/CSSOM_View
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 CSSOM 视图是一个模块，允许操作文档的可视化视图，尤其是其滚动行为。
@@ -22,4 +23,4 @@ _None._
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

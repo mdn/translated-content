@@ -12,6 +12,7 @@ tags:
   - fermeture
 translation_of: Web/API/Notification/close
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La méthode `close()` de l'interface {{domxref("Notification")}} est utilisée pour fermer / supprimer une notification précédemment affichée.

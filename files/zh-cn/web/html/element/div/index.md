@@ -2,13 +2,14 @@
 title: <div>：内容划分元素
 slug: Web/HTML/Element/div
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **[HTML](/zh-CN/docs/Web/HTML) `<div>` 元素** (或 _HTML 文档分区元素_) 是一个通用型的流内容容器，在不使用{{glossary("CSS")}}的情况下，其对内容或布局没有任何影响。
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-作为一个 “纯粹的” 容器，`<div>` 元素在语义上不表示任何特定类型的内容。然而，其可以将内容分组，从而可以使用{{htmlattrxref("class")}}或是{{htmlattrxref("id")}}属性方便的定义内容的格式，也可以在一段文档中划分标记出使用另一种语言书写的内容（使用{{htmlattrxref("lang")}} 属性）等等。
+作为一个“纯粹的”容器，`<div>` 元素在语义上不表示任何特定类型的内容。然而，其可以将内容分组，从而可以使用{{htmlattrxref("class")}}或是{{htmlattrxref("id")}}属性方便的定义内容的格式，也可以在一段文档中划分标记出使用另一种语言书写的内容（使用{{htmlattrxref("lang")}} 属性）等等。
 
 <table class="properties">
  <tbody>
@@ -49,11 +50,11 @@ slug: Web/HTML/Element/div
 
 ## 使用备注
 
-- `<div>` 元素应当仅在没有任何其它语义元素（比如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）可用时使用。
+- `<div>` 元素应当仅在没有任何其他语义元素（比如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）可用时使用。
 
 ## 示例
 
-### 一个简单的例子
+### 一个简单的示例
 
 ```html
 <div>
@@ -64,15 +65,11 @@ slug: Web/HTML/Element/div
 
 结果看起来像这样：
 
-这里可以是任何内容，比如 \<p>, \<table>，一切由你作主！
-
-实例：
-
-{{EmbedLiveSample("A_simple_example", 650, 60)}}
+{{EmbedLiveSample("一个简单的示例", 650, 60)}}
 
 ### 样式实例
 
-本例使用 CSS 将样式应用于\<div>，从而创建一个阴影框。注意使用\<div>上的 {{htmlattrxref("class")}}属性将名为 “shadowbox” 的样式应用于元素。
+本例使用 CSS 将样式应用于\<div>，从而创建一个阴影框。注意使用\<div>上的 {{htmlattrxref("class")}}属性将名为“shadowbox”的样式应用于元素。
 
 #### HTML
 
@@ -97,7 +94,7 @@ slug: Web/HTML/Element/div
 
 #### 结果
 
-{{EmbedLiveSample("A_styled_example", 650, 120)}}
+{{EmbedLiveSample("样式实例", 650, 120)}}
 
 ## 规范
 
@@ -105,7 +102,7 @@ slug: Web/HTML/Element/div
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.div")}}
+{{Compat}}
 
 ## 参见
 

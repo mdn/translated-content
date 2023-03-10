@@ -1,7 +1,6 @@
 ---
 title: History.replaceState()
 slug: Web/API/History/replaceState
-translation_of: Web/API/History/replaceState
 ---
 {{APIRef("History API")}}
 
@@ -9,7 +8,9 @@ translation_of: Web/API/History/replaceState
 
 ## 구문
 
-    history.replaceState(stateObj, title[, url])
+```js
+history.replaceState(stateObj, title[, url])
+```
 
 ### Parameters
 
@@ -22,22 +23,22 @@ translation_of: Web/API/History/replaceState
 
 ## 예제
 
-https\://www\.mozilla.org/ 에서 아래 JavaScript를 실행한다고 가정합시다:
+`http://www.mozilla.org/` 에서 아래 JavaScript를 실행한다고 가정합시다:
 
 ```js
 const stateObj = { foo: 'bar' };
 history.pushState(stateObj, '', 'bar.html');
 ```
 
-위 두 줄에 대한 설명은 [Working with the History API](/ko/docs/Web/API/History_API/Working_with_the_History_API) 문서의 [Example of `pushState()` method](/ko/docs/Web/API/History_API/Working_with_the_History_API#Example_of_pushState_method)에서 확인할 수 있습니다. 그 다음, https\://www\.mozilla.org/bar.html에서 아래와 같은 JavaScript를 실행한다고 가정해보세요:
+위 두 줄에 대한 설명은 [Working with the History API](/ko/docs/Web/API/History_API/Working_with_the_History_API) 문서의 [Example of `pushState()` method](/ko/docs/Web/API/History_API/Working_with_the_History_API#Example_of_pushState_method)에서 확인할 수 있습니다. 그 다음, `http://www.mozilla.org/bar.html` 에서 아래와 같은 JavaScript를 실행한다고 가정해보세요:
 
 ```js
 history.replaceState(stateObj, '', 'bar2.html');
 ```
 
-이렇게하면 URL 표시줄에 https\://www\.mozilla.org/bar2.html이라고 표시되지만, 브라우저가 ` bar2.html을 로드하거나 ``bar2.html`파일이 있는지 확인하지는 않습니다.
+이렇게하면 URL 표시줄에 `http://www.mozilla.org/bar2.html` 이라고 표시되지만, 브라우저가 `bar2.html` 을 로드하거나 `bar2.html`파일이 있는지 확인하지는 않습니다.
 
-이제 사용자가 https\://www\.microsoft.com으로 이동한 다음, 뒤로가기 버튼을 누른다고 가정해봅시다. 이 때, URL 표시줄에는https\://www\.mozilla.org/bar2.html이 표시됩니다. 사용자가 다시 뒤로가기 버튼을 누르면, URL 표시줄에는 https\://www\.mozilla.org/foo.html이 표시되고, bar.html은 완전히 무시되어 표시되지 않습니다.
+이제 사용자가 `http://www.microsoft.com` 으로 이동한 다음, 뒤로가기 버튼을 누른다고 가정해봅시다. 이 때, URL 표시줄에는 `http://www.mozilla.org/bar2.html` 이 표시됩니다. 사용자가 다시 뒤로가기 버튼을 누르면, URL 표시줄에는 `http://www.mozilla.org/foo.html` 이 표시되고, bar.html은 완전히 무시되어 표시되지 않습니다.
 
 ## 명세
 

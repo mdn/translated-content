@@ -1,15 +1,8 @@
 ---
 title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
-tags:
-  - Class
-  - JavaScript
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - WeakRef
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 ---
+
 {{JSRef}}
 
 **`WeakRef`** オブジェクトにより、ガベージコレクションが行われることを妨げない他のオブジェクトへの弱い参照を保持します。
@@ -18,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 
 `WeakRef` オブジェクトはオブジェクトへの弱い参照を含み、これは*ターゲット*または*リファレント*と呼ばれます。オブジェクトへの弱い参照は、ガベージコレクターによるオブジェクトの回収を妨げない参照です。対照的に、通常の (または*強い*) 参照はオブジェクトをメモリに保持します。オブジェクトが強い参照を持たなくなった場合、 JavaScript エンジンのガベージコレクターはオブジェクトを破棄してメモリを再取得することがあります。そうなると、弱い参照からオブジェクトを取得することはできなくなります。
 
-> **Note:** **注:** 下記の[できる限り避ける](#Avoid_where_possible)の節をご覧ください。正しい `WeakRef` の使用は注意深く考える必要があり、可能であれば避けるのが最良です。
+> **メモ:** 下記の[できる限り避ける](#Avoid_where_possible)の節をご覧ください。正しい `WeakRef` の使用は注意深く考える必要があり、可能であれば避けるのが最良です。
 
 ## コンストラクター
 
@@ -110,13 +103,11 @@ setTimeout(() => {
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-weak-ref-objects', 'WeakRef')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap")}}
+{{Compat}}
 
 ## 関連情報
 

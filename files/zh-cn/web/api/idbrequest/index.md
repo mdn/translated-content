@@ -2,13 +2,14 @@
 title: IDBRequest
 slug: Web/API/IDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 IndexedDB api 中的 IDBRequest 接口提供了根据绑定事件处理函数访问结果集的方法。其中结果集来自对数据库和数据库对象发起的异步查询。对数据库的读写操作都是通过 request 的方式来实现。
 
 该 request 对象初始时不包括任何关于操作结果的信息，当 request 上的事件触发时，可以通过 IDBRequest 实例上的事件处理函数访问相关信息。
 
-继承自：[EventTarget](/en/DOM/EventTarget)
+继承自：[EventTarget](/zh-CN/DOM/EventTarget)
 
 ## About this document
 
@@ -70,7 +71,7 @@ request.onupgradeneeded= function(event) {
         <code><a name="attr_errorCode">error</a></code>
       </td>
       <td>
-        <code>readonly <a href="/en-US/docs/DOM/DOMError">DOMError</a></code>
+        <code>readonly <a href="/zh-CN/docs/DOM/DOMError">DOMError</a></code>
       </td>
       <td>
         <p>The following error codes are returned under certain conditions:</p>
@@ -177,7 +178,7 @@ request.onupgradeneeded= function(event) {
 
 ### `readyState` constants
 
-> **警告：** These constants are no longer available. You should use directly the string constants instead. ({{ bug(887524) }})
+> **警告：** These constants are no longer available. You should use directly the string constants instead. ([Firefox bug 887524](https://bugzil.la/887524))
 
 | Constant      | Value     | Description                                                         |
 | ------------- | --------- | ------------------------------------------------------------------- |
@@ -193,7 +194,7 @@ request.onupgradeneeded= function(event) {
 
 ## Derived interface
 
-- [`IDBOpenDBRequest`](/en/IndexedDB/IDBOpenDBRequest)
+- [`IDBOpenDBRequest`](/zh-CN/IndexedDB/IDBOpenDBRequest)
 
 ## 规范
 

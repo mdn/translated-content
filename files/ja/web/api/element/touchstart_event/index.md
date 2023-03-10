@@ -2,6 +2,7 @@
 title: 'Element: touchstart イベント'
 slug: Web/API/Element/touchstart_event
 ---
+
 {{APIRef}}
 
 `touchstart` イベントは、タッチ平面上に 1 つ以上のタッチ点が配置されたときに発生します。
@@ -35,9 +36,7 @@ slug: Web/API/Element/touchstart_event
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Touch Events', '#event-touchstart')}} | {{Spec2('Touch Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述
@@ -30,7 +31,7 @@ numObj.toExponential(fractionDigits)
 ### 异常
 
 - {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : 如果 _fractionDigits_ 太小或太大将会抛出该错误。介于 0 和 20（包括 20）之间的值不会引起 `RangeError` 。 执行环境也可以支持更大或更小范围。
+  - : 如果 _fractionDigits_ 太小或太大将会抛出该错误。介于 0 和 20（包括 20）之间的值不会引起 `RangeError` 。执行环境也可以支持更大或更小范围。
 - {{jsxref("Global_Objects/TypeError", "TypeError")}}
   - : 如果该方法在一个非数值类型对象上调用。
 

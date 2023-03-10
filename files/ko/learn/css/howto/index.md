@@ -1,8 +1,8 @@
 ---
 title: 일반적인 CSS 문제 해결하기
 slug: Learn/CSS/Howto
-translation_of: Learn/CSS/Howto
 ---
+
 {{LearnSidebar}}
 
 다음 링크들은 일반적인 CSS 문제들에 대한 해결방법을 제공합니다.

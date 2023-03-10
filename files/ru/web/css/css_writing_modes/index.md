@@ -6,6 +6,7 @@ tags:
   - Режимы письма
 translation_of: Web/CSS/CSS_Writing_Modes
 ---
+
 {{CSSRef}}
 
 **Режимы письма CSS** (CSS Writing Modes) - это CSS модуль, который определяет различные международные режимы письма, такие как:

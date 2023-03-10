@@ -1,23 +1,14 @@
 ---
 title: url()
 slug: Web/CSS/url
-tags:
-  - CSS
-  - CSS 関数
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - url()
-translation_of: Web/CSS/url()
 original_slug: Web/CSS/url()
-browser-compat: css.types.url
 ---
+
 {{CSSRef}}
 
 **`url()`** は [CSS](/ja/docs/Web/CSS) 関数で、ファイルを含めるために使用します。引数は絶対 URL、相対 URL、 データ URI の何れかです **`url()`** 関数は {{cssxref('attr()')}} 関数のように、他の CSS 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートの何れかになります。`url()` 関数表記は `<url>` データ型の値になります。
 
-> **Note:** {{Glossary("URI")}} と {{Glossary("URL")}} との間には違いがあります。 URI は単純にリソースを識別します。 URL は URI の一種で、リソースの*場所*を記述します。 URI はリソースの URL または名前 ({{Glossary("URN")}}) であることがあります。
+> **メモ:** {{Glossary("URI")}} と {{Glossary("URL")}} との間には違いがあります。 URI は単純にリソースを識別します。 URL は URI の一種で、リソースの*場所*を記述します。 URI はリソースの URL または名前 ({{Glossary("URN")}}) であることがあります。
 >
 > CSS Level 1 では、 `url()` 関数記法は真に URL のみを記述していました。 CSS Level 2 では、 `url()` の定義はあらゆる URI、 URL または URN のどちらかを記述するように拡張されました。ややこしいことに、これは `url()` を CSS の `<uri>` データ型の生成のために使用することができることを意味していました。この変更は紛らわしいばかりでなく、議論になりやすく、 URN が実際の CSS で使用されることはほぼあり得ないため不必要でした。混乱を軽減するために、 CSS Level 3 ではより狭い初めの定義まで戻りました。現在では、 `url()` は真に `<url>` のみを記述します。
 

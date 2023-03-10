@@ -2,7 +2,8 @@
 title: WebGL の定数
 slug: Web/API/WebGL_API/Constants
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) は、関数に渡されるか、または関数から返される様々な定数を提供しています。すべての定数は {{domxref("GLenum")}} 型です。
 
@@ -964,10 +965,7 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameteri()")}}, {{domx
 
 ## Specifications
 
-| Specification                                                                | Status                   | Comment                       |
-| ---------------------------------------------------------------------------- | ------------------------ | ----------------------------- |
-| {{SpecName('WebGL', "#5.14", "WebGLRenderingContext")}}     | {{Spec2('WebGL')}} | Initial definition            |
-| {{SpecName('WebGL2', "#3.7", "WebGL2RenderingContext")}} | {{Spec2('WebGL2')}} | Defines additional constants. |
+{{Specifications}}
 
 ## See also
 

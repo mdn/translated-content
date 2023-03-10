@@ -4,6 +4,7 @@ slug: Web/CSS/transform-function/skewY
 translation_of: Web/CSS/transform-function/skewY()
 browser-compat: css.types.transform-function.skewY
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`skewY()`** permet d'opérer une distorsion verticale en étirant chaque point de l'élément d'un certain angle dans la direction verticale. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).

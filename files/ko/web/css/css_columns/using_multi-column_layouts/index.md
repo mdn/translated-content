@@ -1,12 +1,6 @@
 ---
 title: CSS 다단 레이아웃 사용
 slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Multi-columns
-translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
 original_slug: CSS3_Columns
 ---
 {{CSSRef("CSS Multi-columns")}}
@@ -192,7 +186,7 @@ column-gap: 2em;
 
 단 속성은 단을 지원하지 않는 브라우저에 의해 그냥 무시됩니다. 따라서 비지원 브라우저에서는 1단으로 표시하고 지원하는 브라우저에서는 다단을 사용하는 레이아웃을 만드는 게 그런 대로 쉽습니다.
 
-모든 브라우저가 이러한 접두어 없는 속성을 지원하는 것은 아님을 주의하세요. 오늘날 대부분의 브라우저에서 이 기능을 사용하기 위해서, 각 속성은 세 번({{ property_prefix("-moz") }} 접두어로 한 번, {{ property_prefix("-webkit") }} 접두어로 한 번 그리고 접두어 없이 한 번) 작성되어야 합니다.
+모든 브라우저가 이러한 접두어 없는 속성을 지원하는 것은 아님을 주의하세요. 오늘날 대부분의 브라우저에서 이 기능을 사용하기 위해서, 각 속성은 세 번(`-moz` 접두어로 한 번, `-webkit` 접두어로 한 번 그리고 접두어 없이 한 번) 작성되어야 합니다.
 
 ## 결론
 

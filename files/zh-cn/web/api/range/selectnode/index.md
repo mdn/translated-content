@@ -2,6 +2,7 @@
 title: Range.selectNode()
 slug: Web/API/Range/selectNode
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.selectNode()`** 方法将 {{domxref("Range")}} 设置为包含整个 {{domxref("Node")}} 及其内容。{{domxref("Range")}} 的起始和结束节点的父节点与 _referenceNode_ 的父节点相同。
@@ -32,7 +33,7 @@ range.selectNode(referenceNode);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.selectNode")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: Performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
 ---
+
 {{APIRef("User Timing API")}}
 
 **`clearMeasures()`** 方法可以从浏览器的性能入口缓存区中移除声明的度量衡。如果这个方法被调用时没有传入参数，则所有 {{domxref("PerformanceEntry.entryType","entry type")}} 标记值为"`measure`" 的{{domxref("PerformanceEntry","性能实体")}}将被从性能入口缓存区中移除。
@@ -53,4 +54,4 @@ function clear_all_measures() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.clearMeasures")}}
+{{Compat}}

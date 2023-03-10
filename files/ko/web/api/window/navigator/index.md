@@ -1,14 +1,6 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - Window
-translation_of: Web/API/Window/navigator
 ---
 {{APIRef}}
 
@@ -16,7 +8,9 @@ translation_of: Web/API/Window/navigator
 
 ## 구문
 
-    const navigatorObject = window.navigator
+```js
+const navigatorObject = window.navigator
+```
 
 ## 명세
 

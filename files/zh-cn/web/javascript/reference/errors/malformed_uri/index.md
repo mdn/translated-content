@@ -2,6 +2,7 @@
 title: 'URIError: malformed URI sequence'
 slug: Web/JavaScript/Reference/Errors/Malformed_URI
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

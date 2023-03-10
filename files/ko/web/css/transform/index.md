@@ -1,13 +1,8 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - transform
-translation_of: Web/CSS/transform
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`transform`** 속성으로 요소에 회전, 크기 조절, 기울이기, 이동 효과를 부여할 수 있습니다. `transform`은 CSS [시각적 서식 모델](/ko/docs/Web/Guide/CSS/Visual_formatting_model)의 좌표 공간을 변경합니다.

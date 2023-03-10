@@ -2,13 +2,14 @@
 title: 函数
 slug: Web/JavaScript/Guide/Functions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
-函数是 JavaScript 中的基本组件之一。 一个函数是 JavaScript 过程 — 一组执行任务或计算值的语句。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
+函数是 JavaScript 中的基本组件之一。一个函数是 JavaScript 过程 — 一组执行任务或计算值的语句。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
 
 一个 JavaScript 函数用`function`关键字定义，后面跟着函数名和圆括号。
 
-查看 [JavaScript 函数详细参考文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) 了解更多。
+查看 [JavaScript 函数详细参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions) 了解更多。
 
 ## 定义函数
 
@@ -28,7 +29,7 @@ function square(number) {
 }
 ```
 
-函数`square`使用了一个参数，叫作`number`。这个函数只有一个语句，它说明该函数将函数的参数（即`number`）自乘后返回。函数的[`return`](/en-US/docs/JavaScript/Reference/Statements/return)语句确定了函数的返回值：
+函数`square`使用了一个参数，叫作`number`。这个函数只有一个语句，它说明该函数将函数的参数（即`number`）自乘后返回。函数的[`return`](/zh-CN/docs/JavaScript/Reference/Statements/return)语句确定了函数的返回值：
 
 ```js
 return number * number;
@@ -113,7 +114,7 @@ if (num == 0){
 }
 ```
 
-除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数 ，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。
+除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。
 
 当一个函数是一个对象的属性时，称之为**方法**。了解更多关于对象和方法的知识 [使用对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)。
 
@@ -147,7 +148,7 @@ const square = function (n) {
 }
 ```
 
-函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见 [用对象编程](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)）就是一个将对象作为参数的例子。
+函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见 [用对象编程](/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)）就是一个将对象作为参数的例子。
 
 函数可以被递归，就是说函数可以调用其本身。例如，下面这个函数就是用递归计算阶乘：
 
@@ -172,7 +173,7 @@ d = factorial(4); // 24 赋值给 d
 e = factorial(5); // 120 赋值给 e
 ```
 
-还有其它的方式来调用函数。常见的一些情形是某些地方需要动态调用函数，或者函数的实参数量是变化的，或者调用函数的上下文需要指定为在运行时确定的特定对象。显然，函数本身就是对象，因此这些对象也有方法（参考{{jsxref("Function")}} ）。作为此中情形之一，{{jsxref("Function.apply", "apply()")}}方法可以实现这些目的。
+还有其他的方式来调用函数。常见的一些情形是某些地方需要动态调用函数，或者函数的实参数量是变化的，或者调用函数的上下文需要指定为在运行时确定的特定对象。显然，函数本身就是对象，因此这些对象也有方法（参考{{jsxref("Function")}} ）。作为此中情形之一，{{jsxref("Function.apply", "apply()")}}方法可以实现这些目的。
 
 ## 函数作用域
 
@@ -213,7 +214,7 @@ getScore(); // 返回 "Chamahk scored 5"
 一个函数可以指向并调用自身。有三种方法可以达到这个目的：
 
 1. 函数名
-2. [`arguments.callee`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+2. [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee)
 3. 作用域下的一个指向该函数的变量名
 
 例如，思考一下如下的函数定义：
@@ -445,7 +446,7 @@ pet.getSex();                   // male
 pet.getName();                  // Oliver
 ```
 
-在上面的代码中，外部函数的`name`变量对内嵌函数来说是可取得的，而除了通过内嵌函数本身，没有其它任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。它们会为内嵌函数保留“稳定”——而又安全——的数据参与运行。而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。
+在上面的代码中，外部函数的`name`变量对内嵌函数来说是可取得的，而除了通过内嵌函数本身，没有其他任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。它们会为内嵌函数保留“稳定”——而又安全——的数据参与运行。而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。
 
 ```js
 var getCode = (function(){
@@ -544,7 +545,7 @@ function multiply(a, b = 1) {
 multiply(5); // 5
 ```
 
-了解更多[默认参数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)的信息。
+了解更多[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)的信息。
 
 ### 剩余参数
 
@@ -646,9 +647,9 @@ JavaScript 语言有好些个顶级的内建函数：
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
   - : **`uneval()`**方法创建的一个{{jsxref("Object")}}的源代码的字符串表示。
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-  - : **`isFinite()`**函数判断传入的值是否是有限的数值。 如果需要的话，其参数首先被转换为一个数值。
+  - : **`isFinite()`**函数判断传入的值是否是有限的数值。如果需要的话，其参数首先被转换为一个数值。
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : **`isNaN()`**函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN`函数内部的[`强制转换规则`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description)十分有趣； 另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)来判断数值类型。
+  - : **`isNaN()`**函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN`函数内部的[`强制转换规则`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description)十分有趣；另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)来判断数值类型。
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : **`parseFloat()`** 函数解析字符串参数，并返回一个浮点数。
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}

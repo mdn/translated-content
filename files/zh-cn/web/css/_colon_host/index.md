@@ -2,6 +2,7 @@
 title: ':host'
 slug: Web/CSS/:host
 ---
+
 {{ CSSRef }}
 
 **`:host`** CSS 伪类选择包含其内部使用的 CSS 的 shadow DOM 的根元素 - 换句话说，这允许你从其 shadow DOM 中选择一个自定义元素。
@@ -56,7 +57,7 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
 
 ## 浏览器兼容
 
-{{Compat("css.selectors.host")}}
+{{Compat}}
 
 ## 参见
 

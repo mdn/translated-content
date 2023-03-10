@@ -1,8 +1,8 @@
 ---
 title: TypeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
-browser-compat: javascript.builtins.TypeError.TypeError
 ---
+
 {{JSRef}}
 
 El constructor **`TypeError()`** crea un nuevo error cuando una operación no puede ser realizada, típicamente (pero no exclusivamente) cuando un valor no es del tipo esperado.
@@ -23,7 +23,7 @@ new TypeError(message, fileName, lineNumber)
 - `options` {{optional_inline}}
   - : Un objeto con las siguientes propiedades:
     - `cause` {{optional_inline}}
-      - : Una propiedad que indica la causa específica del error. 
+      - : Una propiedad que indica la causa específica del error.
       Cuando se atrapa y relanza un error con un mensaje de error más especifico o útil, esta propiedad debe ser usada para pasar el error original.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : El nombre del archivo contenedor del código que causa el error.

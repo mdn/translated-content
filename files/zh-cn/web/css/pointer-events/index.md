@@ -2,9 +2,10 @@
 title: pointer-events
 slug: Web/CSS/pointer-events
 ---
+
 {{CSSRef}}
 
-**`pointer-events` **CSS 属性指定在什么情况下 (如果有) 某个特定的图形元素可以成为鼠标事件的 [target](/zh-CN/docs/Web/API/event.target)。
+**`pointer-events`** CSS 属性指定在什么情况下 (如果有) 某个特定的图形元素可以成为鼠标事件的 [target](/zh-CN/docs/Web/API/event.target)。
 
 ```css
 /* Keyword values */
@@ -40,7 +41,7 @@ pointer-events: unset;
 - `auto`
   - : 与`pointer-events`属性未指定时的表现效果相同，对于 SVG 内容，该值与`visiblePainted`效果相同
 - `none`
-  - : 元素永远不会成为鼠标事件的[target](https://developer.mozilla.org/en-US/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
+  - : 元素永远不会成为鼠标事件的[target](/zh-CN/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
 - `visiblePainted`
 
   - : 只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：
@@ -83,7 +84,7 @@ img {
 
 ### 示例 2
 
-点击链接 http\://example.com 时，不会跳转
+点击链接 `http://example.com` 时，不会跳转
 
 ```html
 <ul>
@@ -98,7 +99,7 @@ a[href="http://example.com"] {
 }
 ```
 
-{{EmbedLiveSample('Example_2', "500", "100")}}
+{{EmbedLiveSample('示例 2', "500", "100")}}
 
 ## 提示
 
@@ -114,11 +115,11 @@ a[href="http://example.com"] {
 
 Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its [level 4](http://wiki.csswg.org/spec/css4-ui#pointer-events).
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("css.properties.pointer-events")}}
+{{Compat}}
 
-## 相关链接
+## 参见
 
 - The SVG attribute {{SVGAttr("pointer-events")}}
 - [WebKit Specs PointerEventsProperty](http://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content

@@ -1,8 +1,8 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-translation_of: Web/API/Document/designMode
 ---
+
 {{ ApiRef() }}
 
 `document.designMode`는 전체 document의 편집 가능 여부를 제어합니다. 유효한 값은 `"on"` 과 `"off"` 입니다. 명세에 따르면, 이 속성은 기본적으로 `"off"`로 설정되어 있습니다. Firefox는 이 표준 명세를 따릅니다. Chrome과 IE의 초기 버전들에서는 `"inherit"` 로 설정되어 있습니다. IE6-10 브라우저에서는, 값이 대문자로 표기됩니다.
@@ -23,11 +23,11 @@ document.designMode = "off";
 iframeNode.contentDocument.designMode = "on";
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -2,6 +2,7 @@
 title: Texts
 slug: Web/SVG/Tutorial/Texts
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
 
 在 SVG 中有两种截然不同的文本模式。一种是写在图像中的文本，另一种是 SVG 字体。关于后者我们将在教程的后面进行讲解，现在我们主要集中前者：写在图像中的文本。
@@ -22,7 +23,7 @@ slug: Web/SVG/Tutorial/Texts
 
 文本的一个至关重要的部分是它显示的字体。SVG 提供了一些属性，类似于它们的 CSS 同行，用来激活文本选区。下列每个属性可以被设置为一个 SVG 属性或者成为一个 CSS 声明：`font-family`、`font-style`、`font-weight`、`font-variant`、`font-stretch`、`font-size`、`font-size-adjust`、`kerning`、`letter-spacing`、`word-spacing`和`text-decoration`。
 
-## 其它文本相关的元素
+## 其他文本相关的元素
 
 ### tspan
 

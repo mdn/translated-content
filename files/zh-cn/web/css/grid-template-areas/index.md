@@ -2,6 +2,7 @@
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 ---
+
 **`grid-template-areas`** CSS 属性是网格区域 {{glossary("grid areas")}} 在 CSS 中的特定命名。
 
 {{EmbedInteractiveExample("pages/css/grid-template-areas.html")}}

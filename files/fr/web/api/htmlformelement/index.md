@@ -10,9 +10,10 @@ tags:
   - Interface
 translation_of: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLFormElement`** représente un élément  {{HTMLElement("form")}} dans le DOM ; il peut être utilisé pour accéder et, dans quelques cas, modifier l'aspect du formulaire, ainsi que pour accéder à ses éléments composants.
+L'interface **`HTMLFormElement`** représente un élément {{HTMLElement("form")}} dans le DOM ; il peut être utilisé pour accéder et, dans quelques cas, modifier l'aspect du formulaire, ainsi que pour accéder à ses éléments composants.
 
 {{InheritanceDiagram(600,120)}}
 
@@ -52,17 +53,15 @@ _Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElemen
 - {{domxref("HTMLFormElement.reset()")}}
   - : redéfinit le formulaire à son état initial.
 - {{domxref("HTMLFormElement.checkValidity()")}}
-  - : renvoie `true` si les contrôles du formulaire sont soumis à des contraintes de validation et les respectent. Elle renvoie `false` si certains contrôles ne respectent pas leurs contraintes. Elle déclenche un évènement {{event("invalid")}} pour chaque contrôle qui ne respecte pas ses contraintes. De tels contrôles sont considérés invalides si l'évènement n'est pas annulé. C'est au développeur de choisir comment réagir face à la valeur `false` produite par cette méthode.
+  - : renvoie `true` si les contrôles du formulaire sont soumis à des contraintes de validation et les respectent. Elle renvoie `false` si certains contrôles ne respectent pas leurs contraintes. Elle déclenche un évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) pour chaque contrôle qui ne respecte pas ses contraintes. De tels contrôles sont considérés invalides si l'évènement n'est pas annulé. C'est au développeur de choisir comment réagir face à la valeur `false` produite par cette méthode.
 - {{domxref("HTMLFormElement.reportValidity()")}}
-  - : renvoie `true` si les contrôles du formulaire respectent leurs contraintes de validation. Lorsque `false` est renvoyé, des évènements annulables {{Event("invalid")}} sont déclenchés pour chaque contrôle invalide et les problèmes de validation sont rapportés à l'utilisateur.
-- {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
-  - : déclenche une interface native du navigateur afin d'aider les utilisateurs à remplir les champs pour lesquels [la valeur nommée du champ à remplissage automatique](https://html.spec.whatwg.org/#autofill-field-name) ne vaut pas `off` ou `on`. Le formulaire reçoit un évènement lorsque l'utilisateur a fini d'intéragir avec l'interface, l'événement sera {{event("autocomplete")}} si les champs ont bien été remplis ou {{event("autocompleteerror")}} s'il y a eu un problème. **Cette méthode a été retirée de Chrome et Firefox — cf. {{bug(1270740)}} pour plus d'informations et les raisons associées.**
+  - : renvoie `true` si les contrôles du formulaire respectent leurs contraintes de validation. Lorsque `false` est renvoyé, des évènements annulables [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) sont déclenchés pour chaque contrôle invalide et les problèmes de validation sont rapportés à l'utilisateur.
 
 ## Notes d'utilisation
 
 ### Obtention d'un objet élément de formulaire
 
-Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) avec {{domxref("ParentNode.querySelector", "querySelector()")}}  ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
+Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) avec {{domxref("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
 
 {{domxref("Document.forms")}} renvoie un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :
 
@@ -79,7 +78,7 @@ Vous pouvez accéder à la liste des éléments contenant des données dans le f
 
 ### Éléments considérés comme des contrôles de formulaire
 
-Les éléments qui sont inclus par `HTMLFormElement.elements` et  `HTMLFormElement.length` sont :
+Les éléments qui sont inclus par `HTMLFormElement.elements` et `HTMLFormElement.length` sont :
 
 - {{HTMLElement("button")}} (_bouton_)
 - {{HTMLElement("fieldset")}} (*champ*s)

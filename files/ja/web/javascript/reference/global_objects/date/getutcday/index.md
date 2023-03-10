@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`getUTCDay()`** メソッドは、協定世界時に基づき、指定された日時の「曜日」を返します。0 は日曜日を表します。
@@ -17,34 +13,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 
 ## 構文
 
-```
-dateObj.getUTCDay()
+```js-nolint
+getUTCDay()
 ```
 
 ### 返値
 
-協定世界時に基づき、与えられた日付の「曜日」に相当する整数値。0 は日曜日、1 は月曜日、2 は火曜日を表します。
+数値です。
+`Date` オブジェクトが有効な日時を表している場合、世界時で指定された日時の曜日を表した整数値（日曜日は 0、月曜日は 1、火曜日は 2、...）です。
+それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
 
 ## 例
 
 ### getUTCDay() の使用
 
-次の例は、現在日時の「曜日」部を変数 `weekday` に代入します。
+次の例は、現在日時の曜日の部分を変数 `weekday` に代入します。
 
 ```js
-var today = new Date();
-var weekday = today.getUTCDay();
+const today = new Date();
+const weekday = today.getUTCDay();
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcday', 'Date.prototype.getUTCDay')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.getUTCDay")}}
+{{Compat}}
 
 ## 関連情報
 

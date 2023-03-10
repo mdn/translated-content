@@ -1,7 +1,6 @@
 ---
 title: 'HTMLElement: input event'
 slug: Web/API/HTMLElement/input_event
-translation_of: Web/API/HTMLElement/input_event
 ---
 {{APIRef}}
 
@@ -47,11 +46,11 @@ function updateValue(e) {
 
 {{EmbedLiveSample("Examples")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

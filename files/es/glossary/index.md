@@ -1,28 +1,18 @@
 ---
-title: Glosario
+title: 'Glosario de MDN Web Docs: Definiciones de términos relacionados con la Web'
 slug: Glossary
-tags:
-  - Definiciones
-  - Diccionario
-  - Glosario
-  - Glossary
-  - Index
-  - Landing
-  - Terminologia
-  - TopicStub
-  - Índice
-translation_of: Glossary
+l10n:
+  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09bed947b2c608428b62a60f07d09dc543f732dc09b
 ---
-Las tecnologías web contienen largas listas de jerga y abreviaturas que se utilizan en la documentación y codificación. Este glosario ofrece definiciones de palabras y abreviaturas que necesitas saber para entender y construir con éxito tu web.
 
-{{GlossaryList({"split":"h3", "css":"multiColumnList"})}}
+Las tecnologías web contienen largas listas de jerga y abreviaturas que se utilizan en la documentación y la codificación. Este glosario proporciona definiciones de palabras y abreviaturas que necesita saber para comprender y crear correctamente para la web.
 
-## Contribuir al glosario
+Los términos del glosario se pueden seleccionar en la barra lateral.
 
-Este glosario es un trabajo en curso que nunca termina. Puedes ayudar a mejorarlo [escribiendo nuevas entradas](/es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) o haciendo mejor las ya existentes. La forma más fácil de empezar es presionando el siguiente botón o elegir uno de los términos sugeridos debajo.
+> **Nota:** Este glosario es un trabajo en progreso interminable. Puede ayudar a mejorarlo [escribiendo nuevas entradas](/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_Glossary) o mejorando las existentes.
 
-**[Añadir una nueva entrada en el glosario](/es/docs/new?parent=4391)**
-
-{{GlossaryList({"terms":["DMZ","HMAC","condition","modem","OVP","TTL","Unicode"], "filter":"notdefined", "css":"multiColumnList"})}}
-
-Si deseas saber más acerca de cómo contribuir al glosario, echa un vistazo a [la página de estado de la documentación del glosario](/es/docs/MDN/Doc_status/Glossary).
+<section id="Quick_links">
+ <ol>
+  <li><strong><a href="/es/docs/Glossary">Glosario de MDN Web Docs</a></strong>{{ListSubpagesForSidebar("/es/docs/Glossary", 1)}}</li>
+ </ol>
+</section>

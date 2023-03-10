@@ -2,6 +2,7 @@
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
 ---
+
 ## 總覽
 
 In a Web form, the **HTML `<optgroup>` element** creates a grouping of options within a {{HTMLElement("select")}} element.
@@ -19,9 +20,9 @@ In a Web form, the **HTML `<optgroup>` element** creates a grouping of options w
 
 This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
-- {{htmlattrdef("label")}}
+- `label`
   - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
 
 ## 範例
@@ -45,7 +46,7 @@ This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("範例")}}
 
 ## 規範
 
@@ -53,10 +54,10 @@ This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}
 
 ## 參見
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

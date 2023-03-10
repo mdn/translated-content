@@ -1,7 +1,8 @@
 ---
 title: Object.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/GetPrototypeOf
+slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** 方法返回指定对象的原型（内部`[[Prototype]]`属性的值）。
@@ -80,7 +81,7 @@ Object.getPrototypeOf('foo');
 
 - {{jsxref("Object.prototype.isPrototypeOf")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}
 - {{jsxref("AsyncFunction")}}

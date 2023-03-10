@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
-translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지
@@ -72,7 +72,7 @@ var mycar = new Car('Eagle', 'Talon TSi', 1993);
 
 즉시 실행되는 프라미스를 반환하는 경우에는 *새로운 Promise(...)*를 생성할 필요가 없습니다.
 
-아래는 올바른 방법이 아닙니다([프라미스 생성자](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor)가 제대로 호출되고 있지 않습니다). `TypeError: this is not a constructor` 예외를 던지게 됩니다:
+아래는 올바른 방법이 아닙니다([프라미스 생성자](/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor)가 제대로 호출되고 있지 않습니다). `TypeError: this is not a constructor` 예외를 던지게 됩니다:
 
 ```js example-bad
 return new Promise.resolve(true);

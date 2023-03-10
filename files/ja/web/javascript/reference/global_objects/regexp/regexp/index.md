@@ -1,13 +1,8 @@
 ---
 title: RegExp() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** コンストラクターは、パターンに従ったテキストを検索する正規表現オブジェクトを生成します。
@@ -28,7 +23,31 @@ RegExp(pattern[, flags])
 
 ### 引数
 
-<dl><dt><code><var>pattern</var></code></dt><dd>正規表現のテキストです。</dd><dd>ES5 以降では、別な <code>RegExp</code> オブジェクトまたはリテラルにすることができます (後者は 2 つの RegExp コンストラクター記法のみ)。パターンには<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">特殊文字</a>を含めることができるため、文字列リテラルよりも広い範囲の値に一致させることができます。</dd><dt><code><var>flags</var></code></dt><dd><p>指定された場合、 <code><var>flags</var></code> は追加するフラグを含む文字列です。</p><p>または、パターン用のオブジェクトが提供された場合は <code><var>flags</var></code> の文字列は他のオブジェクトのフラグを置き換えます (そして <code>lastIndex</code> は 0 にリセットされます) (ES2015以降)。</p><p><code><var>flags</var></code> が指定されず正規表現オブジェクトが提供されない場合、オブジェクトのフラグ (と <code>lastIndex</code> の値) がコピーされます。</p><p><code><var>flags</var></code> は以下の値を任意の組み合わせを含んだ文字列を指定することができます。</p><dl><dt><code>g</code> (グローバルマッチ)</dt><dd>最初のマッチの後に止まることなくすべての一致するものを探す。</dd><dt><code>i</code> (大文字・小文字の無視)</dt><dd><code>u</code> フラグが有効な場合は、 Unicode による大文字・小文字の扱いを行います。</dd><dt><code>m</code> (複数行)</dt><dd>先頭および終端を示す文字 (<code>^</code> と <code>$</code>) が、複数の行にまたがって機能します (すなわち、入力文字列全体の先頭および終端だけでなく、<em>各々の</em>行 (<code>\n</code> や <code>\r</code> で区切られる) の先頭および末尾に一致します)。</dd><dt><code>s</code> ("dotAll")</dt><dd><code>.</code> を改行文字に一致させることができます。</dd><dt><code>u</code> (unicode)</dt><dd>パターンを Unicode コードポイントの並びとして扱います (<a href="/ja/docs/Web/API/DOMString/Binary">バイナリ文字列</a>も参照)。</dd><dt><code>y</code> (先頭固定 (sticky))</dt><dd>対象文字列中の正規表現の <code>lastIndex</code> プロパティによって示された位置からのみ比較するようになります (それより後の位置からの比較は試みません)。</dd></dl></dd></dl>
+- `pattern`
+  - : 正規表現のテキストです。
+
+    ES5 以降では、別な `RegExp` オブジェクトまたはリテラルにすることができます (後者は 2 つの RegExp コンストラクター記法のみ)。パターンには [特殊文字](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters) を含めることができるため、文字列リテラルよりも広い範囲の値に一致させることができます。
+- `flags`
+  - : 指定された場合、 `flags` は追加するフラグを含む文字列です。
+
+    または、パターン用のオブジェクトが提供された場合は `flags` の文字列は他のオブジェクトのフラグを置き換えます (そして `lastIndex` は 0 にリセットされます) (ES2015以降)。
+
+    `flags` が指定されず正規表現オブジェクトが提供されない場合、オブジェクトのフラグ (と `lastIndex` の値) がコピーされます。
+
+    `flags` は以下の値を任意の組み合わせを含んだ文字列を指定することができます。
+
+    - `g` (グローバルマッチ)
+      - : 最初のマッチの後に止まることなくすべての一致するものを探す。
+    - `i` (大文字・小文字の無視)
+      - : `u` フラグが有効な場合は、 Unicode による大文字・小文字の扱いを行います。
+    - `m` (複数行)
+      - : 先頭および終端を示す文字 (`^` と `$`) が、複数の行にまたがって機能します (すなわち、入力文字列全体の先頭および終端だけでなく、_各々の_ 行 (`\n` や `\r` で区切られる) の先頭および末尾に一致します)。
+    - `s` ("dotAll")
+      - : `.` を改行文字に一致させることができます。
+    - `u` (unicode)
+      - : パターンを Unicode コードポイントの並びとして扱います ([バイナリ文字列](/ja/docs/Web/API/DOMString/Binary) も参照)。
+    - `y` (先頭固定 (sticky))
+      - : 対象文字列中の正規表現の `lastIndex` プロパティによって示された位置からのみ比較するようになります (それより後の位置からの比較は試みません)。
 
 ## 例
 
@@ -53,13 +72,11 @@ new RegExp('ab+c', 'i') // コンストラクター
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp-constructor', 'RegExp constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ## 関連情報
 

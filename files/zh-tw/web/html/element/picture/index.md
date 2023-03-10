@@ -2,7 +2,8 @@
 title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<picture>` 元素** 包含了零或零以上個 {{HTMLElement("source")}} 元素以及一個 {{HTMLElement("img")}} 元素，以為不同顯示器/裝置提供同張圖片的不同版本。
 
@@ -63,7 +64,7 @@ slug: Web/HTML/Element/picture
 
 ### srcset 屬性
 
-The [{{htmlattrdef("srcset")}}](/zh-TW/docs/Web/HTML/Element/source#attr-srcset) 屬性用來提供根據大小區分的可能圖片清單。
+[`srcset`](/zh-TW/docs/Web/HTML/Element/source#srcset) 屬性用來提供根據大小區分的可能圖片清單。
 
 它是由逗號分隔的圖片描述句清單組成的。每一個圖片描述句是由該圖片的 URL 以及以下描述組成（擇一）：
 
@@ -96,7 +97,7 @@ The [{{htmlattrdef("srcset")}}](/zh-TW/docs/Web/HTML/Element/source#attr-srcset)
 
 ## 瀏覽器支援度
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## 相關資源
 

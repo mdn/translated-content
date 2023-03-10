@@ -2,6 +2,7 @@
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 **`ownerDocument`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、このノードの最上位の文書オブジェクトを返します。

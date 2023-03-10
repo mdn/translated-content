@@ -2,6 +2,7 @@
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.setData()`** 方法用来设置拖放操作的{{domxref("DataTransfer","drag data")}}到指定的数据和类型。
@@ -110,8 +111,7 @@ void dataTransfer.setData(format, data);
 
 ## 参见
 
-- [HTML 拖放 API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖拽操作](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐的拖拽类型](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多个项目](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

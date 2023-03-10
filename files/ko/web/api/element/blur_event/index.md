@@ -1,9 +1,9 @@
 ---
 title: blur
 slug: Web/API/Element/blur_event
-translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
+
 `blur` 이벤트는 엘리먼트의 포커스가 해제되었을때 발생합니다. 이 이벤트와 [`focusout`](/en-US/docs/Mozilla_event_reference/focusout) 이벤트의 가장 다른점은 [`focusout`](/en-US/docs/Mozilla_event_reference/focusout) 은 이벤트 버블링이 발생합니다.
 
 ## General info
@@ -21,7 +21,7 @@ original_slug: Web/Events/blur
 - Default Action
   - : None.
 
-<div class="notecard note"><p>이 이벤트가 처리될때 {{domxref("Document.activeElement")}}의 값이 브라우저마다 다릅니다 ({{bug(452307)}}): IE10은 이 값을 포커스가 옮겨가는 엘리먼트에 추가하지만, 파이어폭스와 크롬은 도큐먼트의 <code>body</code>에 추가합니다.</p></div>
+> **Note:** 이 이벤트가 처리될때 {{domxref("Document.activeElement")}}의 값이 브라우저마다 다릅니다 ({{bug(452307)}}): IE10은 이 값을 포커스가 옮겨가는 엘리먼트에 추가하지만, 파이어폭스와 크롬은 도큐먼트의 `body` 에 추가합니다.
 
 ## Properties
 
@@ -58,15 +58,21 @@ form.addEventListener("blur", function( event ) {
 }, true);
 ```
 
-{{EmbedLiveSample('Event_delegation')}}
+#### 결과
 
-## Browser compatibility
+{{EmbedLiveSample("Event_delegation", '100%', '50px')}}
+
+## 명세서
+
+{{Specifications}}
+
+## 브라우저 호환성
 
 {{Compat}}
 
-## Related Events
+## 같이 보기
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- The {{domxref("HTMLElement.blur()")}} method
+- Related events: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
+- This event on `Window` targets: {{domxref("Window/blur_event", "blur")}} event
+- [Focusing: focus/blur](https://javascript.info/focus-blur)

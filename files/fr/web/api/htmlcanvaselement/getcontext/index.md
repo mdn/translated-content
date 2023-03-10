@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 La méthode **`HTMLCanvasElement.getContext()`** retourne un contexte de dessin sur le canevas, ou {{jsxref("null")}} si l'identificateur de contexte n'est pas supporté.

@@ -1,14 +1,8 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-tags:
-  - Class
-  - InternalError
-  - JavaScript
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
-browser-compat: javascript.builtins.InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`InternalError`** 객체는 JavaScript 엔진 내부에서 발생한 오류를 나타냅니다.

@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: missing ) after condition'
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing ) after condition" は、 [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の条件の書き方にエラーがあった場合に発生します。 `if` キーワードの後には括弧が必要です。

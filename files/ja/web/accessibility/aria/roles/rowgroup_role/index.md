@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: rowgroup ロール'
-slug: Web/Accessibility/ARIA/Roles/Rowgroup_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
+slug: Web/Accessibility/ARIA/Roles/rowgroup_role
 ---
+
 行グループロール (`role="rowgroup"`) を持つ要素は、表形式の構造内の行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)) のグループです。 行グループ (`rowgroup`) には、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role))、ツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role)) 内のセル ([`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role))、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role))、列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role))、行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role)) の行が 1 つ以上含まれます。
 
 ```html
@@ -37,7 +33,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
 
 ARIA の表ヘッダー、表フッター、表本体を作成するには、行グループロール (`role="rowgroup"`) を要素に追加します。 その行グループは、1 つ以上の行のグループを含むグリッド、表、またはツリーグリッド内にネストするべきです。 各行には子のセルが含まれています。 これらのセルには、列や行のヘッダー、プレーンなセルやグリッドセルとさまざまな種類のセルがあります。
 
-> **Note:** 可能な限り、ネイティブな HTML の表要素（`<table>`）を表ヘッダー（`<thead>`）、表フッター（`<tfoot>`）、表本体（`<tbody>`）の要素と共に使用することを強く推奨します。
+> **メモ:** 可能な限り、ネイティブな HTML の表要素（`<table>`）を表ヘッダー（`<thead>`）、表フッター（`<tfoot>`）、表本体（`<tbody>`）の要素と共に使用することを強く推奨します。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
@@ -63,7 +59,7 @@ ARIA の表ヘッダー、表フッター、表本体を作成するには、行
 
 無し。
 
-> **Note:** ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを**追加する**ことでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 可能な限り、ARIA の表ロールの代わりに HTML の `<table>` 要素を使用してください。
+> **メモ:** ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを**追加する**ことでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 可能な限り、ARIA の表ロールの代わりに HTML の `<table>` 要素を使用してください。
 
 ## 例
 
@@ -133,9 +129,7 @@ ARIA の表ヘッダー、表フッター、表本体を作成するには、行
 
 ## 仕様
 
-| 仕様                                                                     | 状態                     |
-| ------------------------------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#rowgroup","ARIA rowgroup role")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## 関連情報
 

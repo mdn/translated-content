@@ -6,6 +6,7 @@ tags:
   - псевдокласс
 translation_of: Web/CSS/:-moz-focusring
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Описание
@@ -18,7 +19,9 @@ translation_of: Web/CSS/:-moz-focusring
 
 ## Синтаксис
 
-    :-moz-focusring
+```
+:-moz-focusring
+```
 
 ## Пример
 

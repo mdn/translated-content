@@ -1,19 +1,10 @@
 ---
-title: 'CSP: img-src'
+title: "CSP: img-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Image
-  - Reference
-  - Security
-  - img-src
-  - source
-browser-compat: http.headers.Content-Security-Policy.img-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} における **`img-src`** ディレクティブは、画像やファビコンの有効なソースを指定します。
@@ -54,7 +45,7 @@ Content-Security-Policy: img-src <source> <source>;
 
 ## 例
 
-## 違反例
+### 違反する場合
 
 この CSP ヘッダーがある場合、
 
@@ -65,7 +56,7 @@ Content-Security-Policy: img-src https://example.com/
 以下の {{HTMLElement("img")}} の各要素はブロックされ、読み込まれません。
 
 ```html
-<img src="https://not-example.com/foo.jpg" alt="example picture">
+<img src="https://not-example.com/foo.jpg" alt="example picture" />
 ```
 
 ## 仕様書

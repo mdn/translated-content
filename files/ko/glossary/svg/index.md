@@ -1,12 +1,8 @@
 ---
 title: 가변 벡터 도형 (SVG)
 slug: Glossary/SVG
-tags:
-  - SVG
-  - 가변 벡터 도형
-  - 그래픽
-translation_of: Glossary/SVG
 ---
+
 _Scalable Vector Graphics_ (**SVG**)는 {{Glossary("XML")}} 신텍스에 기반을 둔 2D 벡터 이미지 형식(포맷)이다.
 
 {{Glossary("W3C")}}는 1990년 후반부터 SVG를 사용하기 시작했지만, SVG를 지원하는 {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9가 출시된 후에야 널리 사용되기 시작했다. 현재 주요 웹브라우저({{Glossary("browser","browsers")}})들은 SVG를 지원한다.

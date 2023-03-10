@@ -3,6 +3,7 @@ title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
+
 {{JSSidebar("Statements")}}
 
 `import.meta`是一个给 JavaScript 模块暴露特定上下文的元数据属性的对象。它包含了这个模块的信息，比如说这个模块的 URL。
@@ -70,11 +71,11 @@ new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
-## See also
+## 参见
 
-- [import](/en-US/docs/Web/JavaScript/Reference/Statements/import)
-- [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export)
+- [import](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
+- [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export)

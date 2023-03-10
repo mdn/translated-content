@@ -3,13 +3,14 @@ title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
 original_slug: Web/CSS/transform-function/matrix3d()
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 函数 **`matrix3d()`** 以 4x4 齐次矩阵的形式定义一个 3D 转换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 ## 语法
 
-`matrix3d()` 函数由 16 个参数指定. 这些参数以列为主的顺序进行描述。
+`matrix3d()` 函数由 16 个参数指定。这些参数以列为主的顺序进行描述。
 
 ```
 matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)

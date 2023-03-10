@@ -3,13 +3,14 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 translation_of: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`flex-basis`** задаёт базовый размер флекс элемента по **основной оси**. Это свойство определяет размер контент-бокса, если не задано иначе через {{Cssxref("box-sizing")}}.
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-> **Примечание:** **Внимание:** в случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
+> **Примечание:** в случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
 
 {{cssinfo}}
 
@@ -36,16 +37,21 @@ flex-basis: initial;
 flex-basis: unset;
 ```
 
-Свойство `flex-basis` задаётся через ключевое слово [`content`](#content) или через [`<'width'>`](#<'width'>).
+Свойство `flex-basis` задаётся через ключевое слово [`content`](#content) или через [`<'width'>`](#width).
 
 ### Значения
 
 - `<'ширина'>`
   - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} родительского flex контейнера главное size свойство, или ключевое слово `auto`. Негативные значения не допустимы.
 - `content`
-  - : Автоматический задаёт размер на основе содержимого элемента flex.> **Примечание:** Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.> **Примечание:** **История:\*** Первоначально, `flex-basis:auto` означает "смотреть на значения `width` или `height`".
-    > - Затем `flex-basis:auto` был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения `width` или `height`". Это было реализован в [баге 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922 'RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value').
-    > - Затем в [баге 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316 'RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec') это было возвращено обратно, поэтому `auto` снова означает "смотреть на значения `width` или `height`"; а новое ключевое слово `content` было введено для автоматического размера. ({{bug("1105111")}} охватывает добавление этого ключевого слова).
+  - : Автоматический задаёт размер на основе содержимого элемента flex.
+    > **Примечание:** Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.
+
+    > **Примечание:**
+    >
+    > - Первоначально, `flex-basis:auto` означает "смотреть на значения `width` или `height`".
+    > - Затем `flex-basis:auto` был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения `width` или `height`". Это было реализован в [баге 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
+    > - Затем в [баге 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) это было возвращено обратно, поэтому `auto` снова означает "смотреть на значения `width` или `height`"; а новое ключевое слово `content` было введено для автоматического размера. ({{bug("1105111")}} охватывает добавление этого ключевого слова).
 
 ### Formal syntax
 
@@ -154,7 +160,7 @@ flex-basis: unset;
 
 ### Results
 
-{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{ EmbedLiveSample('Example', '100%', '360') }}
 
 ## Specifications
 

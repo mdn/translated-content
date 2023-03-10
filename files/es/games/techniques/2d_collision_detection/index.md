@@ -1,14 +1,14 @@
 ---
 title: Detección de colisiones 2D
 slug: Games/Techniques/2D_collision_detection
-translation_of: Games/Techniques/2D_collision_detection
 original_slug: Games/Techniques/2D_collision_detection
 ---
+
 {{GamesSidebar}}
 
 Los algoritmos para detectar colisiones en juegos 2D dependen del tipo de formas que pueden colisionar (p. ej., Rectángulo con rectángulo, Rectángulo con círculo, Círculo con círculo). En general, tendrá una forma genérica simple que cubre la entidad conocida como _"hitbox"_, por lo que, aunque la colisión no sea perfecta en píxeles, se verá lo suficientemente bien y tendrá un rendimiento eficiente en varias entidades. Este artículo proporciona una revisión de las técnicas más comunes utilizadas para proporcionar detección de colisiones en juegos 2D.
 
-## _Hitbox_ alineado con el eje
+## Hitbox alineado con el eje
 
 Una de las formas más simples de detección de colisiones es entre dos rectángulos que están alineados con el eje, lo que significa que no hay rotación. El algoritmo funciona asegurándose de que no haya espacio entre ninguno de los 4 lados de los rectángulos. Cualquier brecha significa que no existe una colisión.
 
@@ -143,4 +143,3 @@ La fase amplia debería proporcionarle una lista de entidades que \*podrían\* e
 ### Fase estrecha
 
 Cuando tenga una pequeña lista de entidades para verificar, querrá usar un algoritmo de fase estrecha (como los enumerados anteriormente) para proporcionar una respuesta determinada sobre si hay una colisión o no.
-

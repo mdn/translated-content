@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.setTransform()`** 是 Canvas 2D API 使用单位矩阵重新设置（覆盖）当前的变换并调用变换的方法，此变换由方法的变量进行描述。
@@ -35,7 +36,7 @@ void ctx.setTransform(a, b, c, d, e, f);
 
 ## 示例
 
-### 使用 `setTransform` 方法
+### 倾斜形状
 
 这是一段使用 `setTransform` 方法的简单的代码片段。
 
@@ -48,61 +49,24 @@ void ctx.setTransform(a, b, c, d, e, f);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.setTransform(1,1,0,1,0,0);
-ctx.fillRect(0,0,100,100);
+ctx.setTransform(1, 0.2, 0.8, 1, 0, 0);
+ctx.fillRect(0, 0, 100, 100);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.setTransform(1,1,0,1,0,0);
-ctx.fillRect(0,0,100,100);</textarea>
-```
+{{ EmbedLiveSample('倾斜形状', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.setTransform")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,7 +2,10 @@
 title: RTCPeerConnection.ontrack
 slug: Web/API/RTCPeerConnection/track_event
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}**`RTCPeerConnection.ontrack`** 属性是一个 {{event("Event_handlers", "event handler")}} 此属性指定了在{{domxref("RTCPeerConnection")}}接口上触发 {{event("track")}} 事件时调用的方法。该方法接收一个{{domxref("RTCTrackEvent")}}类型的 event 对象，该 event 对象将在{{domxref("MediaStreamTrack")}}被创建时或者是关联到已被添加到接收集合的{{domxref("RTCRtpReceiver")}}对象中时被发送。
+
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+**`RTCPeerConnection.ontrack`** 属性是一个事件处理器，此属性指定了在 {{domxref("RTCPeerConnection")}}接口上触发 `track` 事件时调用的方法。该方法接收一个 {{domxref("RTCTrackEvent")}} 类型的 event 对象，该 event 对象将在 {{domxref("MediaStreamTrack")}} 被创建时或者是关联到已被添加到接收集合的 {{domxref("RTCRtpReceiver")}} 对象中时被发送。
 
 ## 语法
 
@@ -33,8 +36,4 @@ pc.ontrack = function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.RTCPeerConnection.ontrack")}}
-
-## 参见
-
-- {{event("track")}} 事件和它的类型 {{domxref("RTCTrackEvent")}}.
+{{Compat}}

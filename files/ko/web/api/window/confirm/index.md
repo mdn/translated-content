@@ -1,13 +1,6 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/confirm
 ---
 {{ApiRef("Window")}}
 
@@ -15,7 +8,9 @@ translation_of: Web/API/Window/confirm
 
 ## 구문
 
-    result = window.confirm(message);
+```js
+result = window.confirm(message);
+```
 
 ### Parameters
 
@@ -36,7 +31,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 위 코드는 다음 결과를 보입니다.
 
-![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
+![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
 ## 참고
 

@@ -1,20 +1,11 @@
 ---
 title: Clipboard
 slug: Web/API/Clipboard
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - Interface
-  - Reference
-  - 인터페이스
-  - 클립보드
-  - 클립보드 API
-translation_of: Web/API/Clipboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Clipboard API")}}
 
-> **참고:** clipboard는 데이터 저장 또는 전송을 위한 짧은 기간동안 사용하는 데이터 버퍼 입니다. documents 와 applications 양쪽에서 사용 가능합니다. It is usually implemented as an anonymous, temporary [data buffer](https://en.wikipedia.org/wiki/Data_buffer "Data buffer"), sometimes called the paste buffer, that can be accessed from most or all programs within the environment via defined [programming interfaces](https://en.wikipedia.org/wiki/Application_programming_interface "Application programming interface").A typical application accesses clipboard functionality by mapping [user input](https://en.wikipedia.org/wiki/User_input "User input") such as [keybindings](https://en.wikipedia.org/wiki/Keybinding "Keybinding"), [menu selections](<https://en.wikipedia.org/wiki/Menu_(computing)> "Menu (computing)"), etc. to these interfaces.
+> **참고:** clipboard는 데이터 저장 또는 전송을 위한 짧은 기간동안 사용하는 데이터 버퍼 입니다. documents 와 applications 양쪽에서 사용 가능합니다. It is usually implemented as an anonymous, temporary [data buffer](https://en.wikipedia.org/wiki/Data_buffer), sometimes called the paste buffer, that can be accessed from most or all programs within the environment via defined [programming interfaces](https://en.wikipedia.org/wiki/Application_programming_interface).A typical application accesses clipboard functionality by mapping [user input](https://en.wikipedia.org/wiki/User_input) such as [keybindings](https://en.wikipedia.org/wiki/Keybinding), [menu selections](<https://en.wikipedia.org/wiki/Menu_(computing)> "Menu (computing)"), etc. to these interfaces.
 
 [Clipboard API](/ko/docs/Web/API/Clipboard_API) 의 **`Clipboard`** 인터페이스는 시스템 클립보드로부터 텍스트 및 데이터를 읽거나 시스템 클립보드에 쓰기 위한 인터페이스를 지원합니다.
 
@@ -51,11 +42,11 @@ For WebExtensions, you can request the clipboardRead and clipboardWrite permissi
 
 In addition, {{domxref("Clipboard.read", "read()")}} and {{domxref("Clipboard.write", "write()")}} are disabled by default and require changing a preference to enable them. Check the compatibility tables for each method before using it.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

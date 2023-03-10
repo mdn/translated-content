@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - メソッド
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
+
 {{JSRef}}
 
 **`set()`** メソッドは、複数の値を指定した配列から入力値を読み込み、型付き配列に格納します。
@@ -51,9 +44,7 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.set-array-offset', 'TypedArray.prototype.set')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

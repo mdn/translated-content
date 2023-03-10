@@ -1,13 +1,8 @@
 ---
 title: <xsl:if>
 slug: Web/XSLT/Element/if
-tags:
-  - XSLT
-  - if
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/if
 ---
+
 {{ XsltRef() }}
 
 `<xsl:if>` 要素にはテスト属性とテンプレートが含まれています。テストが真と評価された場合、テンプレートは処理されます。これは、他の言語の if 文に似ています。ただし、if-then-else ステートメントの機能を実現するには、`<xsl:when>` と `<xsl:otherwise>` の子要素を 1 つずつ持つ `<xsl:choose>` 要素を使用します。

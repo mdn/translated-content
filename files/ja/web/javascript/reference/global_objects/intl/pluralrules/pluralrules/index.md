@@ -1,17 +1,8 @@
 ---
 title: Intl.PluralRules() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
-tags:
-  - コンストラクター
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - PluralRules
-  - リファレンス
-browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 ---
+
 {{JSRef}}
 
 **`Intl.PluralRules()`** コンストラクターは {{jsxref("Intl/PluralRules", "Intl.PluralRules")}} オブジェクトを作成します。

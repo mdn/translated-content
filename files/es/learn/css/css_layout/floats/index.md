@@ -1,8 +1,8 @@
 ---
 title: Floats
 slug: Learn/CSS/CSS_layout/Floats
-translation_of: Learn/CSS/CSS_layout/Floats
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
 Originalmente pensada para flotar imágenes dentro de bloques de texto, la propiedad {{cssxref("float")}} se convirtió en una de las herramientas más usadas para crear diseños multicolumna en las páginas web. Con la llegada de Flexbox y Grid ha vuelto ahora a su propósito original, como se explica en este artículo.
@@ -93,7 +93,7 @@ Si guardas y recargas la página, verás algo parecido a lo que esperarías: la 
 
 Ahora, si guardas y recargas, podrás ver algo parecido a lo siguiente:
 
-##
+## Ejemplo
 
 ```html hidden
 <h1>Ejemplo simple de caja flotante</h1>
@@ -146,7 +146,7 @@ Añade una clase `special` al primer párrafo de texto, el que sucede inmediatam
 
 Para que el efecto sea más fácil de ver, cambia el `margin-right` de tu elemento flotante a `margin`, para obtener espacio alrededor del elemento flotante. Verás que el fondo del párrafo pasa justo por debajo de la caja flotante, como en el ejemplo inferior.
 
-##
+## Ejemplo
 
 ```html hidden
 <h1>Ejemplo simple de caja flotante</h1>
@@ -276,7 +276,7 @@ Además, elimina la clase `.cleared` anterior:
 
 Verás que, como en el ejemplo en el que hemos puesto un color de fondo al párrafo, el color de fondo pasa por detrás del elemento flotante.
 
-##
+## Ejemplo
 
 ```html hidden
 <h1>Ejemplo simple de caja flotante</h1>

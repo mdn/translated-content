@@ -1,14 +1,8 @@
 ---
 title: popstate
 slug: Web/API/Window/popstate_event
-tags:
-  - API
-  - Event
-  - History
-  - History API
-  - Reference
-translation_of: Web/API/Window/popstate_event
 ---
+
 {{APIRef}}
 
 {{domxref("Window")}} 인터페이스의 **`popstate`** 이벤트는 사용자의 세션 기록 탐색으로 인해 현재 활성화된 기록 항목이 바뀔 때 발생합니다. 만약 활성화된 엔트리가 history.pushState() 메서드나 history.replaceState() 메서드에 의해 생성되면, popstate 이벤트의 state 속성은 히스토리 엔트리 state 객체의 복사본을 갖게 됩니다.
@@ -25,11 +19,11 @@ history.pushState() 또는 history.replaceState()는 popstate 이벤트를 발�
 
 ## 브라우저 호환성
 
-{{Compat("api.Window.popstate_event")}}
+{{Compat}}
 
 ## Example
 
-예시를 보자, 다음의 코드를 실행하는 `http://example.com/example.html `의 한 페이지는 주석에 쓰여있는 경고들을 발생시킨다.
+예시를 보자, 다음의 코드를 실행하는 `http://example.com/example.html` 의 한 페이지는 주석에 쓰여있는 경고들을 발생시킨다.
 
 ```js
 window.onpopstate = function(event) {

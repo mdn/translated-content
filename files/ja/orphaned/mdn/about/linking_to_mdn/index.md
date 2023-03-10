@@ -3,6 +3,7 @@ title: MDN にリンクするには
 slug: orphaned/MDN/About/Linking_to_MDN
 original_slug: MDN/About/Linking_to_MDN
 ---
+
 {{MDNSidebar}}
 
 MDN にリンクするガイドラインやそもそもリンクして良いのか聞かれることがありますが、もちろん **OK です。MDN にリンクして頂いて構いません。**その際のガイドラインやベストプラクティスが必要であれば続けて読んでください。
@@ -50,7 +51,7 @@ MDN にリンクするガイドラインやそもそもリンクして良いの�
 
 テキスト中のリンクはステキで便利なものですが、留意すべき事がいくつかあります:
 
-- **リンクしすぎないこと。**[す](/ja/docs/Web/JavaScript/Reference/Statements/do...while "do...while") [べ](/ja/docs/Web/CSS/:not ":not()") [て](/ja/docs/Web/CSS/:link ":link") の単語、あるいはほぼすべての文字にリンクをつけるのは目障りです。文章の中で大事な部分だけをしっかり選んでそこだけリンクするか、読者が既に知っていそうな事についてまでリンクしないようにすること。
+- **リンクしすぎないこと。**[す](/ja/docs/Web/JavaScript/Reference/Statements/do...while) [べ](/ja/docs/Web/CSS/:not) [て](/ja/docs/Web/CSS/:link) の単語、あるいはほぼすべての文字にリンクをつけるのは目障りです。文章の中で大事な部分だけをしっかり選んでそこだけリンクするか、読者が既に知っていそうな事についてまでリンクしないようにすること。
 - **同じ用語について何度も繰り返しリンクしない。** 例えば CSS アニメーションについて各場合、「アニメーション」という単語がでてくるたびに [`animation` CSS プロパティ](/ja/docs/Web/CSS/animation) にリンクする必要はありません。読者はそれについて知らなければ、最初にでてきたときに関連情報へのリンクをクリックします。それ以降の部分では、以前から知っていたか前出時にリンク先を見て知ったかに関わらず、すでに知っている前提で書き進めることができます。読者がリンク先を参照するためにページをスクロールせずに済むように、同じ用語について何度か (多くとも数段落毎に一度) リンクするのは構いません。
 - **フォーラムやブログコメントでリンクするときにはご注意を。**具体的な質問や問題に対して適切な情報源に関連リンクを示すのはステキだし歓迎されます。Web 上のあちこちに MDN へのリンクを無闇に書きまくるのは不適切です。サイトの管理者や読者は速やかにあなたをスパマーとして認識し、MDN の評価が傷つけられます。私たちは価値あるリソースを作ることに努めておりそのような行為によって私たちの努力の成果が損なわれることは望んでいません。適切な数だけ関連するリンクを紹介してください。
 
@@ -68,6 +69,4 @@ MDN にリンクするガイドラインやそもそもリンクして良いの�
 
 ## Cross-Origin Resource Sharing
 
-私達は MDN の公開する全てのデータで [CORS](https://developer.mozilla.org/docs/HTTP/Access_control_CORS "/docs/HTTP/Access_control_CORS") を有効にしているつもりです。これにはほぼ全てのものが当てはまるはずです。もしあなたがなにか[cross-origin requests](https://developer.mozilla.org/docs/HTTP/Access_control_CORS "/docs/HTTP/Access_control_CORS")が使えない状態を発見したら、それは[修正すべきバグ](https://bugzilla.mozilla.org/form.mdn)です。
-
-<header></header>
+私達は MDN の公開する全てのデータで [CORS](/ja/docs/HTTP/Access_control_CORS) を有効にしているつもりです。これにはほぼ全てのものが当てはまるはずです。もしあなたがなにか [cross-origin requests](/ja/docs/HTTP/Access_control_CORS) が使えない状態を発見したら、それは[修正すべきバグ](https://bugzilla.mozilla.org/form.mdn)です。

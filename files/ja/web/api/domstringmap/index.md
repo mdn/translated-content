@@ -2,15 +2,14 @@
 title: DOMStringMap
 slug: Web/API/DOMStringMap
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`DOMStringMap`** インターフェイスは、要素に追加されたカスタム属性のデータを表すために {{ domxref("HTMLElement.dataset") }} 属性で使用されます。
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', "dom.html#domstringmap", "DOMStringMap")}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

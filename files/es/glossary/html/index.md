@@ -1,11 +1,8 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - Glosario
-  - HTML
-translation_of: Glossary/HTML
 ---
+
 HTML (Lenguaje de marcado de hipertexto o HyperText Markup Language por sus siglas en inglés) es un lenguaje descriptivo que especifica la estructura de las páginas web.
 
 ## Breve historia
@@ -20,7 +17,7 @@ Un documento HTML es un documento de texto plano estructurado con {{glossary("el
 
 Usted puede extender las etiquetas (tags) de HTML con {{Glossary("attribute","attributes")}}(atributos en español) (art. en inglés), las cuales proporcionan información adicional que afecta el modo como el navegador interpreta los elementos:
 
-![](https://mdn.mozillademos.org/files/14550/Anatomia-de-un-elemento-HTML.png)
+![](anatomia-de-un-elemento-html.png)
 
 Un archivo HTML es normalmente guardado con una extensión `.htm` o `.html`, es entregado por un {{Glossary("Server","web server")}} (servidor de internet) (art. en inglés), y puede ser interpretado por cualquier {{Glossary("browser","web browser")}} (navegador de internet) (art. en inglés).
 
@@ -32,10 +29,10 @@ Un archivo HTML es normalmente guardado con una extensión `.htm` o `.html`, es 
 
 ### Aprendiendo HTML
 
-- [Nuestro tutorial de HTML](http://developer.mozilla.org/es/Learn/HTML)
-- [Curso web en codecademy.com ](http://www.codecademy.com/en/tracks/web)(sitio en inglés)
+- [Nuestro tutorial de HTML](/es/Learn/HTML)
+- [Curso web en codecademy.com](http://www.codecademy.com/en/tracks/web) (sitio en inglés)
 
 ### Referencia técnica
 
 - [La documentación de HTML en MDN](/es/docs/Web/HTML)
-- [La especificación de HTML ](http://www.w3.org/TR/html5/)(art. en inglés)
+- [La especificación de HTML](http://www.w3.org/TR/html5/) (art. en inglés)

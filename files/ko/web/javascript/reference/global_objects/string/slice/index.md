@@ -1,13 +1,8 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - 메소드
-  - 문자열
-  - 자바스크립트
-  - 프로토타입
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** 메소드는 문자열의 일부를 추출하면서 새로운 문자열을 반환합니다.
@@ -83,11 +78,11 @@ console.log(str.slice(11, -7)) // => "is u";
 console.log(str.slice(-5, -1)) // => "n us";
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

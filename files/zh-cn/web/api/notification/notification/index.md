@@ -1,7 +1,8 @@
 ---
 title: Notification.Notification()
-slug: Web/API/notification/Notification
+slug: Web/API/Notification/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 **Notification()** 构造函数创建一个新的{{domxref("Notification")}}对象实例。
@@ -30,15 +31,15 @@ let myNotification = new Notification(title, options);
     - `icon`: 一个 {{domxref("USVString")}} 包含要在通知中显示的图标的 URL。
     - `image`: 一个 {{domxref("USVSTring")}}包含要在通知中显示的图像的 URL。
     - `data`: 您想要与通知相关联的任意数据。这可以是任何数据类型。
-    - `vibrate`: 一个振动模式 [vibration pattern](/en-US/docs/Web/Guide/API/Vibration#Vibration_patterns) 设备的振动硬件在通知触发时发出。
+    - `vibrate`: 一个振动模式 [vibration pattern](/zh-CN/docs/Web/Guide/API/Vibration#Vibration_patterns) 设备的振动硬件在通知触发时发出。
     - `renotify`: 一个 {{domxref("Boolean")}} 指定在新通知替换旧通知后是否应通知用户。默认值为 false，这意味着它们不会被通知。
     - `requireInteraction`: 表示通知应保持有效，直到用户点击或关闭它，而不是自动关闭。默认值为 false。
 
-    以下选项列在最新规范中，但在任何浏览器中都不支持. It is advisable to keep checking back regularly to see if the status of these has updated, and let us know if you find any out of date information.
+    以下选项列在最新规范中，但在任何浏览器中都不支持。It is advisable to keep checking back regularly to see if the status of these has updated, and let us know if you find any out of date information.
 
     - `silent`: 一个 {{domxref("Boolean")}} 指明通知是否应该是无声的，即，不需要发出声音或振动，无论设备设置如何。默认值为 false，这意味着它不会保持静默。
     - `sound`:一个 {{domxref("USVString")}} 包含通知触发时要播放的音频文件的 URL。
-    - `noscreen`: 一个 {{domxref("Boolean")}} 指定通知触发是否应启用设备的屏幕。 默认值为 false，这意味着它将启用屏幕。
+    - `noscreen`: 一个 {{domxref("Boolean")}} 指定通知触发是否应启用设备的屏幕。默认值为 false，这意味着它将启用屏幕。
     - `sticky`: 一个 {{domxref("Boolean")}} 指明通知是否应该是“粘”, 即不易被用户清理。默认值为 false，这意味着它不会粘。
 
 ## 示例
@@ -62,8 +63,8 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.Notification")}}
+{{Compat}}
 
 ## 参见
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

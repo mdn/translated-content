@@ -1,22 +1,17 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-tags:
-  - API
-  - Geolocation
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
-translation_of: Web/API/Geolocation/watchPosition
 ---
+
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
 {{domxref("Geolocation")}} 인터페이스의 **`watchPosition()`** 메서드는 장치의 위치가 바뀔 때마다 자동으로 호출할 처리기 함수를 등록할 때 사용합니다. 선택적으로 오류 발생 시 사용할 콜백 함수도 지정할 수 있습니다.
 
 ## 구문
 
-    navigator.geolocation.watchPosition(success[, error[, options]])
+```js
+navigator.geolocation.watchPosition(success[, error[, options]])
+```
 
 ### 매개변수
 

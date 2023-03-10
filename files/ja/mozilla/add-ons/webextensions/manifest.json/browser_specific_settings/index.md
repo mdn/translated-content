@@ -2,6 +2,7 @@
 title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -25,14 +26,15 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
     <tr>
       <th scope="row">例</th>
       <td>
-        <pre
-          class="brush: json no-line-numbers language-json"
-        ><code class="language-json"><span class="key token">"browser_specific_settings":</span> <span class="punctuation token">{</span>
-  <span class="key token">"gecko":</span> <span class="punctuation token">{</span>
-    <span class="key token">"id":</span> <span class="string token">"addon@example.com"</span><span class="punctuation token">,</span>
-    <span class="key token">"strict_min_version":</span> <span class="string token">"42.0"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+        <pre class="brush: json;">
+"browser_specific_settings": {
+  "gecko": {
+    "id": "addon@example.com",
+    "strict_min_version": "42.0"
+  }
+}
+</pre
+        >
       </td>
     </tr>
   </tbody>

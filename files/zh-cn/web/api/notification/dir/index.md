@@ -1,10 +1,11 @@
 ---
 title: Notification.dir
-slug: Web/API/notification/dir
+slug: Web/API/Notification/dir
 ---
+
 {{APIRef("Web Notifications")}}
 
-{{domxref("Notification")}} 的\`dir\`是一个只读属性，它表示 Notification 中显示的文本方向 会{{domxref("Notification.Notification","Notification()")}} 构造函数里制定的\`dir\` 属性的值来设定。
+{{domxref("Notification")}} 的 `dir` 是一个只读属性，它表示 Notification 中显示的文本方向 会{{domxref("Notification.Notification","Notification()")}} 构造函数里制定的 `dir` 属性的值来设定。
 
 {{AvailableInWorkers}}
 
@@ -16,7 +17,7 @@ var direction = Notification.dir;
 
 ### 值
 
-一个表示文本方向的{{domxref("DOMString")}}变量。 可能的取值为：
+一个表示文本方向的{{domxref("DOMString")}}变量。可能的取值为：
 
 - `auto`: 继承浏览器的语言设置里制定的方向 (默认)
 - `ltr`: 从左到右

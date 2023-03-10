@@ -1,13 +1,8 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
+
 {{JSRef}}
 
 **`Object.defineProperties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
@@ -22,7 +17,39 @@ Object.defineProperties(obj, props)
 
 ### 引数
 
-<dl><dt><code><var>obj</var></code></dt><dd>プロパティを定義または変更するオブジェクト。</dd><dt><code><var>props</var></code></dt><dd>キーが定義または変更されるプロパティの名前を表し、値がそれらのプロパティを記述するオブジェクトであるオブジェクトです。 <code>props</code> の各値は、データ記述子かアクセサー記述子のいずれかでなければなりませんが、両方を指定することはできません (詳細は {{jsxref("Object.defineProperty()")}} を参照してください)。</dd><dd>データ記述子およびアクセサー記述子は、オプションで以下のキーを含むことができます。</dd><dd><dl><dt><code>configurable</code></dt><dd>プロパティの記述子が変更でき、プロパティが対応するオブジェクトから削除できるときのみ <code>true</code>。<br><strong>既定値は <code>false</code>。</strong></dd><dt><code>enumerable</code></dt><dd>対応するオブジェクトのプロパティを列挙したとき表示される場合のみ <code>true</code>。<br><strong>既定値は <code>false</code>。</strong></dd></dl><p>データ記述子には以下のオプションのキーもあります。</p><dl><dt><code>value</code></dt><dd>プロパティに関連づける値。 JavaScript で有効な任意の値です (数値、オブジェクト、関数など)。<br><strong>既定値は {{jsxref("undefined")}}。</strong></dd><dt><code>writable</code></dt><dd>プロパティに関連づけられた値が{{jsxref("Operators/Assignment_Operators", "代入演算子", "", 1)}}で変更できる場合のみ <code>true</code>。<br><strong>既定値は <code>false</code>。</strong></dd></dl><p>アクセサー記述子には、以下のオプションのキーもあります。</p><dl><dt><code>get</code></dt><dd>プロパティのゲッターとして用いられる関数。ゲッターがなければ {{jsxref("undefined")}} になります。関数の返値がプロパティの値として使用されます。<br><strong>既定値は {{jsxref("undefined")}}。</strong></dd><dt><code>set</code></dt><dd>プロパティのセッターとして用いられる関数。セッターがなければ {{jsxref("undefined")}} になります。関数はただひとつの引数として、プロパティに代入された新たな値を受取ります。<br><strong>既定値は {{jsxref("undefined")}}。</strong></dd></dl><p>記述子が <code>value</code>, <code>writable</code>, <code>get</code> <code>set</code> キーのいずれでもない場合は、データ記述子として扱われます。記述子に <code>value</code> または <code>writable</code> と <code>get</code> または <code>set</code> キーの両方があった場合は、例外が発生します。</p></dd></dl>
+- `obj`
+  - : プロパティを定義または変更するオブジェクト。
+- `props`
+  - : キーが定義または変更されるプロパティの名前を表し、値がそれらのプロパティを記述するオブジェクトであるオブジェクトです。 `props` の各値は、データ記述子かアクセサー記述子のいずれかでなければなりませんが、両方を指定することはできません (詳細は {{jsxref("Object.defineProperty()")}} を参照してください)。
+
+    データ記述子およびアクセサー記述子は、オプションで以下のキーを含むことができます。
+
+    - `configurable`
+      - : プロパティの記述子が変更でき、プロパティが対応するオブジェクトから削除できるときのみ `true`。
+        **既定値は `false`。**
+    - `enumerable`
+      - : 対応するオブジェクトのプロパティを列挙したとき表示される場合のみ `true`。
+        **既定値は `false`。**
+
+    データ記述子には以下のオプションのキーもあります。
+
+    - `value`
+      - : プロパティに関連づける値。 JavaScript で有効な任意の値です (数値、オブジェクト、関数など)。
+        **既定値は {{jsxref("undefined")}}。**
+    - `writable`
+      - : プロパティに関連づけられた値が{{jsxref("Operators/Assignment_Operators", "代入演算子", "", 1)}}で変更できる場合のみ `true`。
+        **既定値は `false`。**
+
+        アクセサー記述子には、以下のオプションのキーもあります。
+
+    - `get`
+      - : プロパティのゲッターとして用いられる関数。ゲッターがなければ {{jsxref("undefined")}} になります。関数の返値がプロパティの値として使用されます。
+        **既定値は {{jsxref("undefined")}}。**
+    - `set`
+      - : プロパティのセッターとして用いられる関数。セッターがなければ {{jsxref("undefined")}} になります。関数はただひとつの引数として、プロパティに代入された新たな値を受取ります。
+        **既定値は {{jsxref("undefined")}}。**
+
+    記述子が `value`, `writable`, `get` `set` キーのいずれでもない場合は、データ記述子として扱われます。記述子に `value` または `writable` と `get` または `set` キーの両方があった場合は、例外が発生します。
 
 ### 返値
 
@@ -116,9 +143,7 @@ function defineProperties(obj, properties) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

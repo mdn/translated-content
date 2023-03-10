@@ -2,6 +2,7 @@
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 **`preferredStyleSheetSet`** プロパティは、ページ作者によって設定された推奨スタイルシートセットを返します。

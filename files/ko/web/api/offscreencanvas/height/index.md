@@ -1,23 +1,18 @@
 ---
 title: OffscreenCanvas.height
 slug: Web/API/OffscreenCanvas/height
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - OffscreenCanvas
-  - Property
-  - Reference
-translation_of: Web/API/OffscreenCanvas/height
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`height`** 프로퍼티는 {{domxref("OffscreenCanvas")}} 객체에 할당된 높이를 반환합니다.
 
 ## 구문
 
-    var pxl = offscreen.height;
-    offscreen.height = pxl;
+```js
+var pxl = offscreen.height;
+offscreen.height = pxl;
+```
 
 ## 예시
 
@@ -29,11 +24,9 @@ offscreen.height; // 256
 offscreen.height = 512;
 ```
 
-## 상세
+## 명세서
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "#dom-offscreencanvas-height", "OffscreenCanvas.height")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -1,7 +1,6 @@
 ---
 title: Computer Programming
 slug: Glossary/Computer_Programming
-translation_of: Glossary/Computer_Programming
 ---
 컴퓨터 프로그래밍은 명령어 모음집을 작성하고 구성하는 과정이다. 이것들은 컴퓨터/소프트웨어 프로그램에게 컴퓨터가 이해하는 언어로 무엇을 해야 하는지 알려준다. 이러한 지침은 C++, Java, JavaScript, HTML, Python, Ruby, Rust와 같은 다양한 언어의 형태로 나온다.
 

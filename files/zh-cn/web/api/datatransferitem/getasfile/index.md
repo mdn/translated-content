@@ -2,9 +2,10 @@
 title: DataTransferItem.getAsFile()
 slug: Web/API/DataTransferItem/getAsFile
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
-如果**`DataTransferItem`**是一个文件，那 **`DataTransferItem.getAsFile()`** 方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 `null`.
+如果 **`DataTransferItem`** 是一个文件，那 **`DataTransferItem.getAsFile()`** 方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 `null`.
 
 ## 语法
 
@@ -23,7 +24,7 @@ _无。_
 
 ## 例子
 
-下面这个例子中使用 `getAsFile()` 。放在 {{event("drop")}} 事件处理里面。
+下面这个例子中使用 `getAsFile()` 。放在 [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 事件处理里面。
 
 ```js
 function drop_handler(ev) {
@@ -61,7 +62,7 @@ function drop_handler(ev) {
 
 ## 浏览器兼容
 
-{{Compat("api.DataTransferItem.getAsFile")}}
+{{Compat}}
 
 ## 查看更多
 

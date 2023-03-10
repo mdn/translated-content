@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/304
 translation_of: Web/HTTP/Status/304
 browser-compat: http.status.304
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse de redirection **`304 Not Modified`** indique qu'il n'y a pas besoin de retransmettre les ressources demandées. C'est une redirection implicite vers une ressource mise en cache. Cela survient lorsque la méthode de requête est [sûre (<i lang="en">safe</i>)](/fr/docs/Glossary/safe) (par exemple une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)), ou lorsque la requête est conditionnelle et utilise l'en-tête [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match) ou [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since).

@@ -2,7 +2,8 @@
 title: <iframe>
 slug: Web/HTML/Element/iframe
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML 内联框架元素 (`<iframe>`)** 表示嵌套的{{Glossary("browsing context")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
 
@@ -10,7 +11,7 @@ slug: Web/HTML/Element/iframe
 
 每个嵌入的浏览上下文（embedded browsing context）都有自己的[会话历史记录 (session history)](/zh-CN/docs/Web/API/History)和[DOM 树](/zh-CN/docs/Web/API/Document)。包含嵌入内容的浏览上下文称为\_*父级*浏览上下文\_。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
 
-> **警告：** 页面上的每个`<iframe>`都需要增加内存和其它计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的`<iframe>`，但是你最好还是先看看这么做会不会导致某些性能问题。
+> **警告：** 页面上的每个`<iframe>`都需要增加内存和其他计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的`<iframe>`，但是你最好还是先看看这么做会不会导致某些性能问题。
 
 ## 属性
 
@@ -27,7 +28,7 @@ slug: Web/HTML/Element/iframe
 
     > **备注：** 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`.
 - {{htmlattrdef("csp")}} {{experimental_inline}}
-  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。 查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
+  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
 - {{htmlattrdef("height")}}
   - : 以 CSS 像素格式，或像素格式，或百分比格式指定 frame 的高度。默认值为`150`。
 - {{htmlattrdef("importance")}} {{experimental_inline}}
@@ -106,7 +107,7 @@ slug: Web/HTML/Element/iframe
 - **{{htmlattrdef("mozbrowser")}} {{non-standard_inline}}**
   - : 这个属性可以让 `<iframe>` 变得像顶级浏览器窗口，详情请参看 [Browser API](/zh-CN/docs/Web/API/Using_the_Browser_API)。这个属性**只能**在 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 中使用。
 
-> **备注：** 查看 {{bug(1318532)}} 了解如何在 Firefox 的 WebExtensions 中使用此属性。
+> **备注：** 查看 [Firefox bug 1318532](https://bugzil.la/1318532) 了解如何在 Firefox 的 WebExtensions 中使用此属性。
 
 ## 脚本
 
@@ -120,54 +121,28 @@ slug: Web/HTML/Element/iframe
 
 ## 定位和缩放
 
-作为一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)， 可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 来定位、对齐、缩放 `<iframe>` 元素内的文档。
+作为一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 来定位、对齐、缩放 `<iframe>` 元素内的文档。
 
 ## 示例
 
-### 一个简单的 `<iframe>`
+### 一个简单的 \<iframe>
 
-下面的例子中，我们创建了一个框架。当用户点击框架中的按钮时，浏览器会弹出一个提示框。
+此示例将位于 <https://example.org> 的页面嵌入到 iframe 中。
 
 #### HTML
 
 ```html
-<iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe example 1" width="400" height="300">
-  <p>Your browser does not support iframes.</p>
+<iframe
+  src="https://example.org"
+  title="iframe Example 1"
+  width="400"
+  height="300">
 </iframe>
 ```
 
-#### Result
+#### 结果
 
 {{ EmbedLiveSample('一个简单的 iframe') }}
-
-### 在新标签页中打开 `<iframe>` 里面的链接
-
-下面的例子演示了在框架中展示谷歌地图。
-
-#### HTML
-
-```html
-<base target="_blank">
-<iframe id="Example2"
-    title="Example2"
-    width="400"
-    height="300"
-    frameborder="0"
-    scrolling="no"
-    marginheight="0"
-    marginwidth="0"
-    src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593&amp;output=embed">
-</iframe>
-
-<br>
-<small>
-  <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593" style="color:#0000FF;text-align:left"> See bigger map </a>
-</small>
-```
-
-#### Result
-
-{{ EmbedLiveSample('在新标签页中打开 iframe 里面的链接') }}
 
 ## 无障碍环境
 

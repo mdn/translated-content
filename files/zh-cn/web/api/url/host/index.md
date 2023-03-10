@@ -2,6 +2,7 @@
 title: URL.host
 slug: Web/API/URL/host
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} 接口的 **`host`** 属性是一个 {{domxref("USVString")}} 值，包含了主机信息，也就是 _主机名（hostname）_，还有，如果 URL 接口不为空，也会包含冒号 `':'` 和 URL 的 _端口（port）_。
@@ -39,7 +40,7 @@ var result = url.host // "developer.mozilla.org:4097"
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.host")}}
+{{Compat}}
 
 ## 参考
 

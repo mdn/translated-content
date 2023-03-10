@@ -1,10 +1,11 @@
 ---
-title: window.setTimeout
+title: setTimeout()
 slug: Web/API/setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
-`WindowOrWorkerGlobalScope` 混合的 **`setTimeout()`**方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。
+全局的 **`setTimeout()`** 方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。
 
 ## 语法
 
@@ -181,7 +182,7 @@ setTimeout(function(arg1){}.bind(undefined, 10), 1000);
 
 由`setTimeout()`调用的代码运行在与所在函数完全分离的执行环境上。这会导致，这些代码中包含的 `this` 关键字在非严格模式会指向 `window` (或全局) 对象，严格模式下为 undefined，这和所期望的`this`的值是不一样的。
 
-> **备注：** 即使是在严格模式下，`setTimeout()`的回调函数里面的`this`仍然默认指向`window`对象， 并不是`undefined`。
+> **备注：** 即使是在严格模式下，`setTimeout()`的回调函数里面的`this`仍然默认指向`window`对象，并不是`undefined`。
 
 查看下面的例子：
 
@@ -264,7 +265,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 针对这个问题并没有原生的解决方案。
 
-> **备注：** JavaScript 1.8.5 引入了 [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind) 方法，该方法允许显式地指定函数调用时 this 所指向的值 。该方法可以帮助你解决 this 指向不确定的问题。
+> **备注：** JavaScript 1.8.5 引入了 [`Function.prototype.bind()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/bind) 方法，该方法允许显式地指定函数调用时 this 所指向的值。该方法可以帮助你解决 this 指向不确定的问题。
 
 使用`bind()`的例子：
 
@@ -288,7 +289,7 @@ setTimeout(myBoundMethod, 1500, "1"); // prints "one" after 1.5 seconds
 
 ### 传递字符串字面量
 
-向`setTimeout()`传递一个字符串而不是函数会遭受到与使用[`eval`](/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21)一样的风险。
+向`setTimeout()`传递一个字符串而不是函数会遭受到与使用[`eval`](/zh-CN/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21)一样的风险。
 
 ```js
 // 推荐
@@ -319,7 +320,7 @@ setTimeout(cb, 0);
 setInterval(f, 0);
 ```
 
-在 Chrome 和 Firefox 中， 定时器的第 5 次调用被阻塞了；在 Safari 是在第 6 次；Edge 是在第 3 次。Gecko 从这个版本 [version 56](/zh-CN/docs/Mozilla/Firefox/Releases/56)开始对 `setInterval()` 开始采用这样的机制（`setTimeout()`已经实现，具体请参考以下内容)。
+在 Chrome 和 Firefox 中，定时器的第 5 次调用被阻塞了；在 Safari 是在第 6 次；Edge 是在第 3 次。Gecko 从这个版本 [version 56](/zh-CN/docs/Mozilla/Firefox/Releases/56)开始对 `setInterval()` 开始采用这样的机制（`setTimeout()`已经实现，具体请参考以下内容)。
 
 一直以来，不同浏览器中出现这种最小延迟的情况有所不同（例如 Firefox）- 从其他地方调用了 setInterval()，或者在嵌套函数调用 setTimeout() 时（嵌套级别达到特定深度时），都会出现超时延迟。
 
@@ -327,17 +328,17 @@ setInterval(f, 0);
 
 > **备注：** 最小延时， `DOM_MIN_TIMEOUT_VALUE`, 是 4ms (但在 Firefox 中通常是是存储在 `dom.min_timeout_value` 这个变量中), `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` 的第 5 层。
 
-> **备注：** 4 ms 是在 [HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) 中精确的，并且在 2010 年及以后的跨浏览器中保持了一致，这个数值比 {{geckoRelease("5.0")}}规定的嵌套函数的最小延时 10ms 更为精确。
+> **备注：** 4 ms 是在 [HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) 中精确的，并且在 2010 年及以后的跨浏览器中保持了一致，这个数值比 Gecko 5.0 规定的嵌套函数的最小延时 10ms 更为精确。
 
 #### 未被激活的 tabs 的定时最小延迟>=1000ms
 
 为了优化后台 tab 的加载损耗（以及降低耗电量），在未被激活的 tab 中定时器的最小延时限制为 1S(1000ms)。
 
-Firefox 从 version 5 (see {{bug(633421)}}开始采取这种机制，1000ms 的间隔值可以通过 `dom.min_background_timeout_value` 改变。Chrome 从 version 11 ([crbug.com/66078](http://crbug.com/66078)) 开始采用。
+Firefox 从 version 5 (see [Firefox bug 633421](https://bugzil.la/633421)开始采取这种机制，1000ms 的间隔值可以通过 `dom.min_background_timeout_value` 改变。Chrome 从 version 11 ([crbug.com/66078](http://crbug.com/66078)) 开始采用。
 
-Android 版的 Firefox 对未被激活的后台 tabs 的使用了 15min 的最小延迟间隔时间 ，并且这些 tabs 也能完全不被加载。
+Android 版的 Firefox 对未被激活的后台 tabs 的使用了 15min 的最小延迟间隔时间，并且这些 tabs 也能完全不被加载。
 
-> **备注：** 当 Web Audio API {{domxref("AudioContext")}} 正在被用来播放音频的时候，Firefox 50 不会再限制后台 tabs 的加载。 后续的 Firefox 51 版本修正了这个问题，即使在没有音频播放的情况下，也不再限制后台 tabs 的加载。这个解决了一些软件应用在后台 tabs 中播放基于文本的音频 ( note-based) 时，无法去同步音频和画面的问题。
+> **备注：** 当 Web Audio API {{domxref("AudioContext")}} 正在被用来播放音频的时候，Firefox 50 不会再限制后台 tabs 的加载。后续的 Firefox 51 版本修正了这个问题，即使在没有音频播放的情况下，也不再限制后台 tabs 的加载。这个解决了一些软件应用在后台 tabs 中播放基于文本的音频 ( note-based) 时，无法去同步音频和画面的问题。
 
 #### 追踪型脚本的最小延时限制
 
@@ -351,7 +352,7 @@ Android 版的 Firefox 对未被激活的后台 tabs 的使用了 15min 的最�
 
 #### 超时延迟
 
-除了"最小延时"之外，定时器仍然有可能因为当前页面（或者操作系统/浏览器本身）被其他任务占用导致延时。 需要被强调是， 直到调用 `setTimeout()`的主线程执行完其他任务之后，回调函数和代码段才能被执行。例如：
+除了"最小延时"之外，定时器仍然有可能因为当前页面（或者操作系统/浏览器本身）被其他任务占用导致延时。需要被强调是，直到调用 `setTimeout()`的主线程执行完其他任务之后，回调函数和代码段才能被执行。例如：
 
 ```
 function foo() {
@@ -376,9 +377,9 @@ foo has been called
 
 在本文写作的时候，只有 Chrome 展示了如上的特性 — Firefox 没有未加载/恢复循环的行为，所以 timers 仍然可以工作。但是，仍然建议不要在 WebExtension 中使用 timers:
 
-1.兼容 Chorme。
+1. 兼容 Chorme。
 
-2.未来行为的改变会引起问题。
+2. 未来行为的改变会引起问题。
 
 ### 最大延时值
 

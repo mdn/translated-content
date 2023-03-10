@@ -4,6 +4,7 @@ title: >-
   instead
 slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -52,5 +53,5 @@ X-SourceMap: /path/to/file.js.map
 
 ## 参见
 
-- [How to use a source map – Firefox Tools documentation](/en-US/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [How to use a source map – Firefox Tools documentation](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)
 - [Introduction to source maps – HTML5 rocks](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)

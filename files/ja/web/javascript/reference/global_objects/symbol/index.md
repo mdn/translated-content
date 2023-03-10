@@ -1,16 +1,9 @@
 ---
 title: Symbol (シンボル)
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-tags:
-  - データ型
-  - ECMAScript 2015
-  - 用語集
-  - JavaScript
-  - Sharing
-  - Symbol
-translation_of: Glossary/Symbol
 original_slug: Glossary/Symbol
 ---
+
 {{Glossary("JavaScript")}} では、シンボルは{{Glossary("Primitive", "プリミティブ値")}}です。
 
 **Symbol** データ型を持つ値は「シンボル値」として見ることができます。 JavaScript の実行時環境では、シンボル値は {{jsxref("Symbol")}} 関数を呼び出すことで生成され、動的に無名の一意の値を生み出します。シンボルはオブジェクトプロパティとして使用されることがあります。
@@ -30,7 +23,7 @@ console.log(Sym1 === Sym2) // "false" を返す
 // 異なる値を持ちます。
 ```
 
-> **Note:** Ruby (または他の言語) の _"symbols"_ と呼ばれる機能をよくご存知であれば、間違えないでください。 JavaScript のシンボルは異なります。
+> **メモ:** Ruby (または他の言語) の _"symbols"_ と呼ばれる機能をよくご存知であれば、間違えないでください。 JavaScript のシンボルは異なります。
 
 _Symbol_ 型は ECMAScript 2015 の新機能であり、 ECMAScript 5 にはシンボルに相当するものはありません。
 
@@ -38,7 +31,7 @@ _Symbol_ 型は ECMAScript 2015 の新機能であり、 ECMAScript 5 にはシ�
 
 ### シンボルは文字列に「自動変換」されない
 
-JavaScript の大部分の値は文字列への暗黙的な返還に対応しています。例えば `alert` はほぼすべての値で表示することができ、動作します。シンボルは特殊です。自動変換は行われません。
+JavaScript の大部分の値は文字列への暗黙的な変換に対応しています。例えば `alert` はほぼすべての値で表示することができ、動作します。シンボルは特殊です。自動変換は行われません。
 
 例を示します。
 

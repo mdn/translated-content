@@ -1,8 +1,8 @@
 ---
 title: RTCIceCandidate
 slug: Web/API/RTCIceCandidate
-translation_of: Web/API/RTCIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCIceCandidate`** 인터페이스는 [WebRTC API](/ko/docs/Web/API/WebRTC_API)의 한 종류로서, {{domxref("RTCPeerConnection")}}을 구축 할 때 사용되기도하는 Internet Connectivity Establishment ({{Glossary("ICE")}})의 후보군 (candidate)를 말합니다.
@@ -21,7 +21,7 @@ ICE 과정이 어떻게 동작하는지 자세히 알고 싶다면, [Lifetime of
 - {{domxref("RTCIceCandidate.candidate", "candidate")}} {{readonlyInline}}
   - : 연결성 확인을 위해 사용 될 수 있는 candidate에 대한 전달 주소를 나타내는 {{domxref("DOMString")}}입니다. 이 주소의 형식은 {{RFC(5245)}}에 정의된바와 같이 `candidate-attribute` 입니다. `RTCIceCandidate`가 "마지막 candidate"를 알려주면, 이 문자열은 빈 문자열 (`""`)이 됩니다.
 - {{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}
-  - : ICE candidate가 RTP (`rtp`) 인지 RTCP (`rtcp`)인지 알려주는 {{domxref("DOMString")}}입니다. 이 값들은 `candidate `라인 문자열에 있는 `"component-id"` 필드에서 가져와집니다. 허용되는 값은 {{domxref("RTCIceComponent")}} enum 타입에 정리되어있습니다.
+  - : ICE candidate가 RTP (`rtp`) 인지 RTCP (`rtcp`)인지 알려주는 {{domxref("DOMString")}}입니다. 이 값들은 `candidate` 라인 문자열에 있는 `"component-id"` 필드에서 가져와집니다. 허용되는 값은 {{domxref("RTCIceComponent")}} enum 타입에 정리되어있습니다.
 - {{domxref("RTCIceCandidate.foundation", "foundation")}} {{readonlyInline}}
   - : 같은 유형의 candidate와 동일한 식별자를 가진 {{domxref("DOMString")}}를 반환합니다. {{domxref("DOMString")}}는 동일한 베이스 (ICE 에이전트가 candidate를 보낸 주소)를 공유하고, 동일한 {{Glossary("STUN")}}서버에서 가져와집니다. 이 속성을 사용해서 {{domxref("RTCIceTransport")}}객체에 나타나는 candidate의 우선 순위를 매기고 연관을 시키면서 ICE 성능을 최적화 할 수 있습니다.
 - {{domxref("RTCIceCandidate.ip", "ip")}} {{readonlyInline}}
@@ -33,15 +33,15 @@ ICE 과정이 어떻게 동작하는지 자세히 알고 싶다면, [Lifetime of
 - {{domxref("RTCIceCandidate.protocol", "protocol")}} {{readonlyInline}}
   - : candidate의 프로토콜이 `"tcp"`인지 `"udp"`인지 알려주는 문자열입니다. 이 문자열은 `RTCIceProtocol` enum 타입 중 하나 입니다.
 - {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} {{readonlyInline}}
-  - : candidate가 다른 candidate, 즉 호스트 candidate에서 가져와졌다면, `relatedAddress`는 호스트 candidate의 IP 주소를 포함하는 {{domxref("DOMString")}}입니다. 호스트 candidate에서 이 값은 `null `입니다.
+  - : candidate가 다른 candidate, 즉 호스트 candidate에서 가져와졌다면, `relatedAddress`는 호스트 candidate의 IP 주소를 포함하는 {{domxref("DOMString")}}입니다. 호스트 candidate에서 이 값은 `null` 입니다.
 - {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}} {{readonlyInline}}
-  - : candidate가 relay 혹은 reflexive candidate로 부터 가져와진 경우, `relatedPort`는 해당하는 호스트 candidate의 포트 넘버를 가르킵니다. 마찬가지로, 호스트 candidate에서 이 값은 `null `입니다.
+  - : candidate가 relay 혹은 reflexive candidate로 부터 가져와진 경우, `relatedPort`는 해당하는 호스트 candidate의 포트 넘버를 가르킵니다. 마찬가지로, 호스트 candidate에서 이 값은 `null` 입니다.
 - {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{readonlyInline}}
-  - : candidate의 미디어 스트림 식별 태그를 정의하는 {{domxref("DOMString")}}입니다. 여기서 식별 태그는 candidate와 연관이 있는 컴포넌트안의 미디어 스트림을 유일하게 식별합니다. candidate와 관련이 있는 미디어 스트림이 존재하지 않으면, 이 값은 `null `입니다.
+  - : candidate의 미디어 스트림 식별 태그를 정의하는 {{domxref("DOMString")}}입니다. 여기서 식별 태그는 candidate와 연관이 있는 컴포넌트안의 미디어 스트림을 유일하게 식별합니다. candidate와 관련이 있는 미디어 스트림이 존재하지 않으면, 이 값은 `null` 입니다.
 - {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{readonlyInline}}
   - : 이 값이 `null`이 아니라면, `sdpMLineIndex`는 candidate와 연관 된 {{Glossary("SDP")}}의 미디어 설명에 대한, 0을 기준으로 하는 색인 번호를 알려줍니다 ([RFC 4566](https://tools.ietf.org/html/rfc4566)에 정의되어 있습니다.).
 - {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{readonlyInline}}
-  - : `protocol`이 `"tcp"`라면,`tcpType`은 TCP candidate의 타입을 알려줍니다. 이외에는 `tcpType`은 `null `입니다.
+  - : `protocol`이 `"tcp"`라면,`tcpType`은 TCP candidate의 타입을 알려줍니다. 이외에는 `tcpType`은 `null` 입니다.
 - {{domxref("RTCIceCandidate.type", "type")}} {{readonlyInline}}
   - : {{domxref("RTCIceCandidateType")}} enum 타입에 존재하는 문자열에 속하는 candidate의 타입을 알려주는 {{domxref("DOMString")}}입니다.
 - {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}

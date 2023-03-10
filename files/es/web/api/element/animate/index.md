@@ -1,12 +1,11 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
-translation_of: Web/API/Element/animate
-browser-compat: api.Element.animate
 ---
-{{APIRef('Web Animations')}}
 
-El método **`animate()`** de la interfaz {{domxref("Element")}} es un método abreviado el cual crea un nuevo {{domxref("Animation")}}, aplicado al elemento, luego reproduce la animación. Devuelve la instancia creada de un objeto {{domxref("Animation")}}.
+{{APIRef}}
+
+El método `animate()` de la interfaz {{domxref("Element")}} es un método abreviado el cual crea un nuevo {{domxref("Animation")}}, aplicado al elemento, luego reproduce la animación. Devuelve la instancia creada de un objeto {{domxref("Animation")}}.
 
 > **Nota:** Los elementos pueden tener multiples animaciones aplicadas a ellos. Puedes obtener una
 > lista de las animaciones que afectan a un elemento llamando a {{domxref("Element.getAnimations()")}}.
@@ -24,7 +23,7 @@ animate(keyframes, options)
     cuyas propiedades son arreglos de valores a iterar. Ver [Keyframe Formats](/es/docs/Web/API/Web_Animations_API/Keyframe_Formats)
     para más detalles.
 - `options`
-  
+
   - : Puede ser un **entero representando la duración de la animación** (en milisegundos), **o** un
     objeto que contiene una o más propiedades acerca del tiempo descritas en los
     [los parametros de opciones del `KeyframeEffect()`](/es/docs/Web/API/KeyframeEffect) y/o las

@@ -2,6 +2,7 @@
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
+
 {{JSRef}}
 
 **`indexOf()`** 方法會回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳 -1。
@@ -206,11 +207,11 @@ if (!Array.prototype.indexOf) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.indexOf")}}
+{{Compat}}
 
 ## 相容性備註
 
-- Starting with Firefox 47 {{geckoRelease(47)}}, this method will no longer return `-0`. For example, `[0].indexOf(0, -0)` will now always return `+0` ({{bug(1242043)}}).
+- Starting with Firefox 47, this method will no longer return `-0`. For example, `[0].indexOf(0, -0)` will now always return `+0` ([Firefox bug 1242043](https://bugzil.la/1242043)).
 
 ## 參見
 

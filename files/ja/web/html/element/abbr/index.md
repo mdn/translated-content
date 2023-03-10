@@ -1,23 +1,9 @@
 ---
 title: '<abbr>: 略語要素'
 slug: Web/HTML/Element/abbr
-tags:
-  - Acronym
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-  - abbr
-  - abbreviation
-  - semantics
-translation_of: Web/HTML/Element/abbr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の略語要素** (**`<abbr>`**) は略語や頭字語を表します。任意で {{htmlattrxref("title")}} 属性で、略語の完全形または説明を提供することができます。 `title` 属性はこの完全な説明のみを含み、それ以外を含んではいけません。
 
@@ -96,7 +82,7 @@ translation_of: Web/HTML/Element/abbr
 
 ### 文法的な考慮事項
 
-{{interwiki("wikipedia", "数 (文法)", "文法的に数を表現する")}}言語（つまり、項目の数が文の文法に影響する言語）では、 `<abbr>` 要素内の `title` 属性で同じ文法的な数値を使用してください。これは、アラビア語のように 2 よりも大きい数の文法を持つ言語で特に重要ですが、英語にも当てはまります。
+[文法的に数を表現する](https://ja.wikipedia.org/wiki/数_(文法))言語（つまり、項目の数が文の文法に影響する言語）では、 `<abbr>` 要素内の `title` 属性で同じ文法的な数値を使用してください。これは、アラビア語のように 2 よりも大きい数の文法を持つ言語で特に重要ですが、英語にも当てはまります。
 
 ## 既定のスタイル
 
@@ -194,11 +180,7 @@ accessed.</p>
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-abbr-element', '&lt;abbr&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-abbr-element', '&lt;abbr&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-ABBR', '&lt;abbr&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

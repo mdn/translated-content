@@ -2,13 +2,14 @@
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-当本机当前页面的 {{domxref("RTCPeerConnection")}} 接收到一个从远端页面通过信号通道发来的新的 ICE 候选地址信息，本机可以通过调用**`RTCPeerConnection.addIceCandidate()`** 来添加一个 {{Glossary("ICE")}} 代理。 This adds this new remote candidate to the `RTCPeerConnection`'s remote description, which describes the state of the remote end of the connection.
+当本机当前页面的 {{domxref("RTCPeerConnection")}} 接收到一个从远端页面通过信号通道发来的新的 ICE 候选地址信息，本机可以通过调用**`RTCPeerConnection.addIceCandidate()`** 来添加一个 {{Glossary("ICE")}} 代理。This adds this new remote candidate to the `RTCPeerConnection`'s remote description, which describes the state of the remote end of the connection.
 
 If the value of the specified object'`s` {{domxref("RTCIceCandidate.candidate", "candidate")}} is an empty string (`""`), it signals that all remote candidates have been delivered.
 
-During negotiation, your app will likely receive many candidates which you'll deliver to the ICE agent in this way, allowing it to build up a list of potential connection methods. This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity) and [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
+During negotiation, your app will likely receive many candidates which you'll deliver to the ICE agent in this way, allowing it to build up a list of potential connection methods. This is covered in more detail in the articles [WebRTC connectivity](/zh-CN/docs/Web/API/WebRTC_API/Connectivity) and [Signaling and video calling](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
 
 ## Syntax
 
@@ -73,12 +74,12 @@ pc.addIceCandidate(candidate).then(_=>{
 
 ## Browser compatibility
 
-{{Compat("api.RTCPeerConnection.addIceCandidate")}}
+{{Compat}}
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/en-US/docs/Web/API/WebRTC_API/Architecture)
-- [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
-- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
+- [Signaling and video calling](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture overview](/zh-CN/docs/Web/API/WebRTC_API/Architecture)
+- [WebRTC connectivity](/zh-CN/docs/Web/API/WebRTC_API/Connectivity)
+- [Lifetime of a WebRTC session](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)

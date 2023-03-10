@@ -1,13 +1,8 @@
 ---
 title: JavaScript/XSLT バインディング
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
-tags:
-  - DOM
-  - JavaScript
-  - XML
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 ---
+
 ## JavaScript/XSLT バインディング
 
 JavaScript は {{domxref('XSLTProcessor')}} オブジェクトを通して XSLT 変換を実行できます。インスタンス化されると、{{domxref('XSLTProcessor')}} には変換で使用される XSLT スタイルシートを引数として取る{{domxref('XSLTProcessor.importStylesheet()')}} メソッドがあります。スタイルシートは XML 文書として渡す必要があります。つまり{{domxref('XSLTProcessor.importStylesheet()')}} を呼び出す前に .xsl ファイルをページでロードする必要があります。これは {{domxref('XMLHttpRequest')}} または {{domxref('XMLDocument.load()')}} で行うことができます。

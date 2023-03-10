@@ -3,6 +3,7 @@ title: ゲームオーバー
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
@@ -77,7 +78,7 @@ if (y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/L61c9y50/","","395")}}
 
-> **Note:** ボールがパドルに当たったときに速く動くようにしましょう。
+> **メモ:** ボールがパドルに当たったときに速く動くようにしましょう。
 
 ## 次のステップ
 

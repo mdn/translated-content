@@ -8,6 +8,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 original_slug: Mozilla/Add-ons/WebExtensions/que_faire_ensuite
 ---
+
 {{AddonSidebar}}
 
 Vous serez maintenant prêt à commencer à transformer votre idée pour une extension de navigateur dans la réalité. Avant de commencer ce périple, ça vaut la peine d'être au courant de quelques choses qui vous aides à en faire une.
@@ -18,7 +19,7 @@ Vous pouvez trouver plus d'informations sur de nombreux sujets abordés sur cett
 
 Vous n'avez pas besoin d'outils spéciaux de développement ou de création d'environnement pour créer des extensions de navigateur : il est tout à fait possible de créer de superbes extensions de navigateur avec un simple éditeur de texte. Cependant, vous avez peut-être développé pour le Web et avez un ensemble d'outils et un environnement que vous souhaitez réutiliser. Si vous le faites, vous devez être conscient de certaines choses.
 
-Si vous utilisez des outils de minimisation ou d'obscurcissement pour fournir votre code final, vous devez fournir votre code source au [processus de révision AMO](#The_review_process). De plus, les outils que vous utilisez — minification, obscurcissement et construction — doivent être open source (ou offrir une utilisation gratuite illimitée) et être disponible pour fonctionner sur l'ordinateur de l'utilisateur  (Windows, Mac, ou Linux). Malheureusement, nos réviseurs ne peuvent pas travailler avec des outils commerciaux ou basés sur le Web.
+Si vous utilisez des outils de minimisation ou d'obscurcissement pour fournir votre code final, vous devez fournir votre code source au [processus de révision AMO](#The_review_process). De plus, les outils que vous utilisez — minification, obscurcissement et construction — doivent être open source (ou offrir une utilisation gratuite illimitée) et être disponible pour fonctionner sur l'ordinateur de l'utilisateur (Windows, Mac, ou Linux). Malheureusement, nos réviseurs ne peuvent pas travailler avec des outils commerciaux ou basés sur le Web.
 
 [En savoir plus sur les outils de développement sur l'atelier d'extensions](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
 

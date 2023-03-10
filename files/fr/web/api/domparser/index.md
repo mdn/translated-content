@@ -9,6 +9,7 @@ tags:
   - XML
 translation_of: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`DOMParser`** permet d'analyser le code source {{Glossary("XML")}} ou {{Glossary("HTML")}} d'une chaîne de caractères dans le DOM {{domxref("Document")}}.
@@ -70,7 +71,7 @@ console.log(doc3.body.firstChild.textContent);
 
 ## Voir aussi
 
-- [Analyse syntaxique et sérialisation du XML](/efr/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Analyse syntaxique et sérialisation du XML](/fr/docs/Web/Guide/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - contrepartie pour les documents {{jsxref("JSON")}}.

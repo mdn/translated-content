@@ -1,11 +1,8 @@
 ---
 title: ウェブの音声や動画のライブストリーミング
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-tags:
-  - ガイド
-  - 適応型ストリーミング
-translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
+
 ライブストリーミング技術は、よくスポーツやコンサートなどのイベントの中継や、もっと一般的にはテレビやラジオの番組の配信などによく採用されています。よくストリーミングと略されるライブストリーミングは、コンピューターや機器へメディアを「ライブ」で転送するプロセスです。これは実に複雑で数多くの変量がある初期段階の主題ですので、この記事では主題を紹介し、どのように始めることができるかを説明します。
 
 メディアをブラウザーにストリーミングする際に考慮しなければならないことは、有限のファイルを再生するのではなく、その場で作成されているファイルを中継しており、あらかじめ開始または終了が決められていないという点です。
@@ -44,7 +41,7 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 ### RTSP
 
-> **Note:** Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers, but be aware that [Firefox OS 1.3 supports RTSP](http://www.mozilla.org/en-US/firefox/os/notes/1.3/).
+> **メモ:** Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers, but be aware that [Firefox OS 1.3 supports RTSP](http://www.mozilla.org/en-US/firefox/os/notes/1.3/).
 >
 > **Note**: some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT).
 
@@ -52,7 +49,7 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 RTSP 2.0 is currently in development and is not backward compatible with RTSP 1.0.
 
-> **Warning:** **Important**: Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
+> **警告:** Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
 
 ## ストリーミングプロトコルの利用
 
@@ -72,19 +69,19 @@ For example:
 
 For example, [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
-> **Note:** Time Shifting is the process of consuming a live stream sometime after it happened.
+> **メモ:** Time Shifting is the process of consuming a live stream sometime after it happened.
 
 ## 動画ストリーミングファイル形式
 
 A couple of HTTP-based live streaming video formats are beginning to see support across browsers.
 
-> **Note:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/ja/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources).
+> **メモ:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/ja/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources).
 
 ### MPEG-DASH
 
 DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently seen support added to Chrome, and Internet Explorer 11 running on Windows 8.1. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
 
-> **Note:** you can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
+> **メモ:** you can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
 ### HLS
 
@@ -130,7 +127,7 @@ Opus is a royalty-free and open format that manages to optimize quality at vario
 
 Currently, Opus is supported by Firefox desktop and mobile as well as the latest versions of desktop Chrome and Opera.
 
-> **Note:** [Opus is a mandatory format](http://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
+> **メモ:** [Opus is a mandatory format](http://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
 
 ### MP3, AAC, Ogg Vorbis
 

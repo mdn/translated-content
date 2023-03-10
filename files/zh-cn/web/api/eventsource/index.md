@@ -2,6 +2,7 @@
 title: EventSource
 slug: Web/API/EventSource
 ---
+
 {{APIRef("Websockets API")}}
 
 **`EventSource`** 是服务器推送的一个网络事件接口。一个 EventSource 实例会对 HTTP 服务开启一个持久化的连接，以`text/event-stream` 格式发送事件，会一直保持开启直到被要求关闭。
@@ -20,11 +21,11 @@ slug: Web/API/EventSource
 _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("EventSource.onerror")}}
-  - : 是一个 {{event("Event_handlers", "event handler")}}，当发生错误时被调用，并且在此对象上派发 {{event("error")}} 事件。
+  - : 是一个事件处理器，当发生错误时被调用，并且在此对象上派发 [`error`](/zh-CN/docs/Web/API/Element/error_event) 事件。
 - {{domxref("EventSource.onmessage")}}
-  - : 是一个 {{event("Event_handlers", "event handler")}}，当收到一个 {{event("message")}} 事件，即消息来自源头时被调用。
+  - : 是一个事件处理器，当收到一个 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件，即消息来自源头时被调用。
 - {{domxref("EventSource.onopen")}}
-  - : 是一个 {{event("Event_handlers", "event handler")}}，当收到一个 {{event(" open ")}} 事件，即连接刚打开时被调用。
+  - : 是一个事件处理器，当收到一个 {{domxref("EventSource/open_event", "open")}} 事件，即连接刚打开时被调用。
 - {{domxref("EventSource.readyState")}} {{readonlyinline}}
   - : 一个 `unsigned short` 值，代表连接状态。可能值是 `CONNECTING` (`0`), `OPEN` (`1`), 或者 `CLOSED` (`2`)。
 - {{domxref("EventSource.url")}} {{readonlyinline}}
@@ -33,11 +34,11 @@ _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 ### 事件接收器
 
 - {{domxref("EventSource.onerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an `EventSource` object.
+  - : Is an event handler called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an `EventSource` object.
 - {{domxref("EventSource.onmessage")}}
-  - : Is an {{event("Event_handlers", "event handler")}} called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.
+  - : Is an event handler called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.
 - {{domxref("EventSource.onopen")}}
-  - : Is an {{event("Event_handlers", "event handler")}} called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.
+  - : Is an event handler called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.
 
 ## 方法
 
@@ -119,7 +120,7 @@ To listen to named events, you'll require a listener for each type of event sent
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource")}}
+{{Compat}}
 
 ## 参见
 

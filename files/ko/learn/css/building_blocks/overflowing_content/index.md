@@ -1,8 +1,8 @@
 ---
 title: 콘텐츠 overflow
 slug: Learn/CSS/Building_blocks/Overflowing_content
-translation_of: Learn/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 이번 수업에서는 CSS 의 또 다른 중요한 개념인 — **overflow** 를 살펴봅니다. Overflow 는 박스 안에 편안하게 담기에는 너무 많은 내용이 있을 때 발생합니다. 이 안내서에서는 내용과 관리 방법에 대해 설명합니다.
@@ -110,24 +110,3 @@ CSS 에는 **Block Formatting Context** (BFC) 의 개념이 있습니다. 이것
 이 짧은 수업은 overflow 개념을 소개했습니다; 이제 CSS 가 넘쳐나는 내용을 보이지 않게 만들려고 하지만 데이터가 손실될 수 있음을 이해합니다. overflow 가능성을 관리할 수 있으며 실수로 overflow 문제가 발생하지 않도록 작업을 테스트해야 합니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
-
-## 이번 강의에서는
-
-1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
 Dans cet article, nous allons préciser le concept d'images adaptatives — images qui s'adaptent aux appareils selon les différentes tailles d'écran, résolutions et autres caractéristiques de ce type — et examiner les outils fournis par HTML pour faciliter leur mise en œuvre. Les images adaptatives ne sont qu'une partie (elles préparent le terrain) de la conception de sites web adaptatifs, sujet sur lequel vous en apprendrez beaucoup plus dans un prochain module au sujet des CSS.

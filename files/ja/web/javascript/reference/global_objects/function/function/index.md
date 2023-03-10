@@ -1,13 +1,8 @@
 ---
 title: Function() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-tags:
-  - Constructor
-  - Function
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/Function
 ---
+
 {{JSRef}}
 
 **`Function` コンストラクター**は、新しい `Function` **オブジェクト**を生成します。コンストラクターを直接呼び出すと動的に関数を生成することができますが、セキュリティや、 {{jsxref("eval")}} と似た性能の (ただし、はるかに重要性の低い) 問題を抱えます。ただし eval とは異なり、 `Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
@@ -56,13 +51,11 @@ adder(2, 6);
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-constructor', 'Function constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## 関連情報
 

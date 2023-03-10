@@ -2,6 +2,7 @@
 title: <track>
 slug: Web/HTML/Element/track
 ---
+
 **HTML `<track>` 元素** 被当作媒体元素—{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}的子元素来使用。它允许指定时序文本字幕（或者基于时间的数据），例如自动处理字幕。字幕格式有 [WebVTT 格式](/zh-CN/docs/Web/API/Web_Video_Text_Tracks_Format)（`.vtt`格式文件）— Web 视频文本字幕格式，以及指[时序文本标记语言（TTML）](https://w3c.github.io/ttml2/index.html)格式。
 
 `track` 给媒体元素添加的数据的类型在 `kind` 属性中设置，属性值可以是 `subtitles`, `captions`, `descriptions`, `chapters` 或 `metadata`。该元素指向当用户请求额外的数据时浏览器公开的包含定时文本的源文件。
@@ -50,7 +51,7 @@ slug: Web/HTML/Element/track
 - {{htmlattrdef("kind")}}
 
   - : 定义了 text track 应该如何使用。如果省略了该属性，默认的 kind 值就是 `subtitles`。下面是允许的关键字：
-  
+
     - `subtitles`
 
       - 字幕给观影者看不懂的内容提供了翻译。比如英文电影里非英文的对话框或者文字。
@@ -73,14 +74,14 @@ slug: Web/HTML/Element/track
 
     - `metadata`
 
-      - 脚本使用的 track。 对用户不可见。
+      - 脚本使用的 track。对用户不可见。
 
 - {{htmlattrdef("label")}}
   - : 当列出可用的 text tracks 时，给浏览器使用的 text track 的标题，这种标题是用户可读的。
 - {{htmlattrdef("src")}}
   - : track 的地址。必须是合法的 URL。该属性必须定义。
 - {{htmlattrdef("srclang")}}
-  - : track 文本数据的语言。它必须是合法的 [BCP 47](http://people.w3.org/rishida/utils/subtags/) 语言标签。如果 `kind` 属性被设为 `subtitles,` 那么`srclang` 必须定义。
+  - : track 文本数据的语言。它必须是合法的 [BCP 47](http://people.w3.org/rishida/utils/subtags/) 语言标签。如果 `kind` 属性被设为 `subtitles`, 那么 `srclang` 必须定义。
 
 ## 用法说明
 
@@ -127,4 +128,4 @@ slug: Web/HTML/Element/track
 
 - [WebVTT text track format](/zh-CN/docs/HTML/WebVTT)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

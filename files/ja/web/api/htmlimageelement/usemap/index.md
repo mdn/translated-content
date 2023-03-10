@@ -2,6 +2,7 @@
 title: HTMLImageElement.useMap
 slug: Web/API/HTMLImageElement/useMap
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`useMap`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、 {{Glossary("HTML")}} の {{htmlattrxref("usemap", "img")}} 属性を反映し、この画像に適用されるクライアントサイドイメージマップの名前を提供する文字列です。

@@ -2,6 +2,7 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 {{Glossary("viewport")}} 相交情况变化的方法。
@@ -57,7 +58,7 @@ let observer = new IntersectionObserver(callback, options);
 - `root`
   - : 指定根 (**root**) 元素，用于检查目标的可见性。必须是目标元素的父级元素。如果未指定或者为`null`，则默认为浏览器视窗。
 - `rootMargin`
-  - : 根 (**root**) 元素的外边距。类似于 CSS 中的 {{cssxref("margin")}} 属性，比如 "`10px 20px 30px 40px"` (top, right, bottom, left)。如果有指定 root 参数，则 rootMargin 也可以使用百分比来取值。该属性值是用作 root 元素和 target 发生交集时候的计算交集的区域范围，使用该属性可以控制 root 元素每一边的收缩或者扩张。默认值为 0。
+  - : 根 (**root**) 元素的外边距。类似于 CSS 中的 {{cssxref("margin")}} 属性，比如 "`10px 20px 30px 40px"` (top、right、bottom、left)。如果有指定 root 参数，则 rootMargin 也可以使用百分比来取值。该属性值是用作 root 元素和 target 发生交集时候的计算交集的区域范围，使用该属性可以控制 root 元素每一边的收缩或者扩张。默认值为四个边距全是 0。
 - `threshold`
   - : 可以是单一的 number 也可以是 number 数组，target 元素和 root 元素相交程度达到该值的时候 IntersectionObserver 注册的回调函数将会被执行。如果你只是想要探测当 target 元素的在 root 元素中的可见性超过 50% 的时候，你可以指定该属性值为 0.5。如果你想要 target 元素在 root 元素的可见程度每多 25% 就执行一次回调，那么你可以指定一个数组 `[0, 0.25, 0.5, 0.75, 1]`。默认值是 0 (意味着只要有一个 target 像素出现在 root 元素中，回调函数将会被执行)。该值为 1.0 含义是当 target 完全出现在 root 元素中时候 回调才会被执行。
 
@@ -91,7 +92,7 @@ let callback =(entries, observer) => {
 
 请留意，你注册的回调函数将会在主线程中被执行。所以该函数执行速度要尽可能的快。如果有一些耗时的操作需要执行，建议使用 {{domxref("Window.requestIdleCallback()")}} 方法。
 
-### How intersection is calculated -- 交集的计算
+### 交集的计算
 
 所有区域均被 Intersection Observer API 当做一个矩形看待。如果元素是不规则的图形也将会被看成一个包含元素所有区域的最小矩形，相似的，如果元素发生的交集部分不是一个矩形，那么也会被看作是一个包含他所有交集区域的最小矩形。
 
@@ -99,7 +100,7 @@ let callback =(entries, observer) => {
 
 #### The intersection root and root margin
 
-在我们开始跟踪 target 元素和容器元素之前，我们要先知道什么是容器 (root) 元素。容器元素又称为 **intersection root**，或 **root element**。 这个既可以是 target 元素祖先元素也可以是指定 null 则使用浏览器视口做为容器 (root)。
+在我们开始跟踪 target 元素和容器元素之前，我们要先知道什么是容器 (root) 元素。容器元素又称为 **intersection root**，或 **root element**。这个既可以是 target 元素祖先元素也可以是指定 null 则使用浏览器视口做为容器 (root)。
 
 **_root intersection rectangle_** 是用来对目标元素进行相交检测的矩形，它的大小有以下几种情况：
 
@@ -117,7 +118,7 @@ IntersectionObserver API 并不会每次在元素的交集发生变化的时候�
 
 Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
 
-为了让我们感受下 thresholds 是如何工作的，尝试滚动以下的例子，每一个 colored box 的四个边角都会展示自身在 root 元素中的可见程度百分比，所以在你滚动 root 的时候你将会看到四个边角的数值一直在发生变化。 每一个 box 都有不同的 thresholds：
+为了让我们感受下 thresholds 是如何工作的，尝试滚动以下的例子，每一个 colored box 的四个边角都会展示自身在 root 元素中的可见程度百分比，所以在你滚动 root 的时候你将会看到四个边角的数值一直在发生变化。每一个 box 都有不同的 thresholds：
 
 - 第一个盒子的 thresholds 包含每个可视百分比，也就是说，{{domxref("IntersectionObserver.thresholds")}} 数组是 `[0.00, 0.01, 0.02, ..., 0.99, 1.00]`。
 - 第二个盒子只有唯一的值 `[0.5]`。
@@ -279,7 +280,7 @@ intersectionCallback = (entries) => {
 startup();
 ```
 
-{{EmbedLiveSample("Threshold_example", 500, 500)}}
+{{EmbedLiveSample("Thresholds", 500, 500)}}
 
 #### Clipping and the intersection rectangle
 
@@ -404,7 +405,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the [`load`](/zh-CN/docs/Web/API/Window/load_event) event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -507,10 +508,10 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## 浏览器兼容性
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
-## 更多参考
+## 参见
 
-- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver/blob/master/polyfill/intersection-observer.js)
+- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver)
 - [Timing element visibility with the Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
 - {{domxref("IntersectionObserver")}} and {{domxref("IntersectionObserverEntry")}}

@@ -2,6 +2,7 @@
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLIFrameElement`** 接口提供了除 {{domxref("HTMLElement")}} 之外的一些特殊属性和方法（当然也包括了继承自 {{domxref("HTMLElement")}} 的部分）。这些方法用于操作内联 frame 元素的布局和展示。
@@ -13,7 +14,7 @@ _继承了来自父类的属性，{{domxref("HTMLElement")}}。_
 - {{domxref("HTMLIFrameElement.align")}} {{Deprecated_Inline}}
   - : 一个 {{domxref("DOMString")}} 指定了相对于当前上下文的对齐方式。
 - {{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}
-  - : 一个 {{domxref("Boolean")}} 标识了该内联 frame 是否愿意被全屏防止。详情请参考 [Using full-screen mode](/en-US/docs/DOM/Using_full-screen_mode) 。
+  - : 一个 {{domxref("Boolean")}} 标识了该内联 frame 是否愿意被全屏防止。详情请参考 [Using full-screen mode](/zh-CN/docs/DOM/Using_full-screen_mode) 。
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}
   - : 返回一个 {{domxref("Document")}}，该内联 frame 嵌套的浏览上下文中活跃的 document 对象。
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}
@@ -87,7 +88,7 @@ _继承了来自父类的属性，{{domxref("HTMLElement")}}。_
 - {{domxref("HTMLIFrameElement.setInputMethodActive()")}}
   - : 设置当前浏览器{{HTMLElement("iframe")}}是活动的输入法编辑器窗口而其他不是。当一个顶层应用希望激活一个窗口作为输入法编辑器（如键盘）时有用。
 - {{domxref("HTMLIFrameElement.setNfcFocus()")}}
-  - : Firefox 操作系统 [NFC API](/en-US/docs/Web/API/NFC_API) 的一部分，扩展了[Browser API](/en-US/docs/Web/API/Browser_API)，这个集合设置浏览器{{htmlelement("iframe")}}是否可以接收一个[NFC](/en-US/docs/Web/API/NFC_API)事件。
+  - : Firefox 操作系统 [NFC API](/zh-CN/docs/Web/API/NFC_API) 的一部分，扩展了[Browser API](/zh-CN/docs/Web/API/Browser_API)，这个集合设置浏览器{{htmlelement("iframe")}}是否可以接收一个[NFC](/zh-CN/docs/Web/API/NFC_API)事件。
 
 #### 音频相关方法
 
@@ -126,7 +127,7 @@ In order to manage the browser {{HTMLElement("iframe")}}'s content, many new eve
 - {{domxref("HTMLIFrameElement.sendTouchEvent()")}}
   - : Sends a {{domxref("TouchEvent")}} to the {{HTMLElement("iframe")}}'s content. Note that this method is available for touch enabled devices only.
 - {{domxref("HTMLIFrameElement.addNextPaintListener()")}}
-  - : Defines a handler to listen for the next {{event("MozAfterPaint")}} event in the browser {{HTMLElement("iframe")}}.
+  - : Defines a handler to listen for the next `MozAfterPaint` event in the browser {{HTMLElement("iframe")}}.
 - {{domxref("HTMLIFrameElement.removeNextPaintListener()")}}
   - : Removes a handler previously set with {{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}}.
 
@@ -153,7 +154,7 @@ Last, there are some utility methods, useful for apps that host a browser {{HTML
 
 ## Browser compatibility
 
-{{Compat("api.HTMLIFrameElement")}}
+{{Compat}}
 
 ## See also
 

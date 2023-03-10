@@ -1,13 +1,8 @@
 ---
 title: <xsl:attribute>
 slug: Web/XSLT/Element/attribute
-tags:
-  - XSLT
-  - リファレンス
-  - 属性
-  - 要素
-translation_of: Web/XSLT/Element/attribute
 ---
+
 {{ XsltRef() }}
 
 `<xsl:attribute>` 要素は、スタイルシートからアクセス可能な任意の値を使用して出力文書に属性を作成します。要素は属性値を設定する出力文書要素内の他の出力文書要素の前に定義する必要があります。しかし、( `<xsl:choose>` や `<xsl:apply-templates>` などのように) 出力の一部ではない要素の後または内部にある可能性があります。

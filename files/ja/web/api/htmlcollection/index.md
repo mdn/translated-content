@@ -2,11 +2,12 @@
 title: HTMLCollection
 slug: Web/API/HTMLCollection
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLCollection`** インターフェイスは、 (文書内の順序における) 要素の一般的なコレクション ({{jsxref("Functions/arguments", "arguments")}} のような配列風のオブジェクト) を表し、リストから選択するためのメソッドとプロパティを提供します。
 
-> **Note:** **注:** このインターフェイスは歴史的な理由で `HTMLCollection` と呼ばれています (現代の DOM より前は、このインターフェイスを実装するコレクションが、アイテムとして HTML 要素しか持てませんでした)。
+> **メモ:** このインターフェイスは歴史的な理由で `HTMLCollection` と呼ばれています (現代の DOM より前は、このインターフェイスを実装するコレクションが、アイテムとして HTML 要素しか持てませんでした)。
 
 HTML DOM 内の `HTMLCollection` は生きて (live) います。それらは元になった document が変更された時点で自動的に更新されます。
 
@@ -50,9 +51,7 @@ elem1 = document.forms["named.item.with.periods"];
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#htmlcollection', 'HTMLCollection')}} | {{ Spec2('DOM WHATWG') }} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

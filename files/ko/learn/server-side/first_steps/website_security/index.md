@@ -1,15 +1,8 @@
 ---
 title: Website security
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - 가이드
-  - 보안
-  - 서버측 프로그래밍
-  - 웹 보안
-  - 초보자
-  - 학습
-translation_of: Learn/Server-side/First_steps/Website_security
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 웹사이트 보안은 설계와 사용의 모든 측면에서 주의를 기울여야 한다. 이 글은 입문자용이므로 당신을 웹사이트 보안 전문가로 만들어주지는 않지만, 보안 위협 요소가 어디에서 발생하는지와, 가장 일반적인 공격으로부터 웹 응용 프로그램을 어떻게 강화할 수 있는지 이해하는데 도움을 줄 것이다.

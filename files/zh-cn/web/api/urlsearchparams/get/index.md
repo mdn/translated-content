@@ -2,6 +2,7 @@
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} 接口的**get()**方法返回第一个与搜索参数对应的值**。**
@@ -43,4 +44,4 @@ let address = params.get("address"); // null
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.get")}}
+{{Compat}}

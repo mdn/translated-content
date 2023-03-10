@@ -1,10 +1,11 @@
 ---
 title: Window.getDefaultComputedStyle()
-slug: Web/API/Window/getDefaultComputedStyle
+slug: Web/API/window/getDefaultComputedStyle
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_header}}
 
-`getDefaultComputedStyle()` 给出元素的所有 CSS 属性的默认计算值 ([computed values](/en-US/docs/Web/CSS/computed_value) )，忽略作者样式。也就是说，只考虑用户代理和用户风格。
+`getDefaultComputedStyle()` 给出元素的所有 CSS 属性的默认计算值 ([computed values](/zh-CN/docs/Web/CSS/computed_value) )，忽略作者样式。也就是说，只考虑用户代理和用户风格。
 
 ## 语法及参数说明
 
@@ -17,7 +18,7 @@ let style = window.getDefaultComputedStyle(element[, pseudoElt]);
 - pseudoElt {{optional_inline}}
   - : 指定匹配的伪类。通常情况下可以为空。
 
-返回的样式是一个 [`CSSStyleDeclaration`](/en-US/docs/Web/API/CSSStyleDeclaration) 对象。
+返回的样式是一个 [`CSSStyleDeclaration`](/zh-CN/docs/Web/API/CSSStyleDeclaration) 对象。
 
 ## 例子
 
@@ -48,7 +49,7 @@ var style = window.getDefaultComputedStyle(elem1);
 
 ## Description
 
-The returned object is of the same type as the object returned by [`getComputedStyle`](/en-US/docs/Web/API/Window/getComputedStyle), but only takes into account user-agent and user rules.
+The returned object is of the same type as the object returned by [`getComputedStyle`](/zh-CN/docs/Web/API/Window/getComputedStyle), but only takes into account user-agent and user rules.
 
 ## 使用伪元素
 
@@ -81,4 +82,4 @@ Proposed to the CSS working group.
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.getDefaultComputedStyle")}}
+{{Compat}}

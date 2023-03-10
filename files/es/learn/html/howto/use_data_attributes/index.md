@@ -1,12 +1,12 @@
 ---
 title: Uso de atributos de datos
 slug: Learn/HTML/Howto/Use_data_attributes
-translation_of: Learn/HTML/Howto/Use_data_attributes
 original_slug: Learn/HTML/como/Usando_atributos_de_datos
 ---
+
 {{LearnSidebar}}
 
-[HTML5](/es/docs/Web/Guide/HTML/HTML5) está diseñado de forma tal que sea fácil extender los datos asociados a un elemento en particular sin necesidad de que tengan un significado definido. Los atributos [`data-* `](/es/docs/Web/HTML/Global_attributes#attr-dataset)permiten almacenar información adicional sobre un elemento HTML cualquiera sin tener que recurrir a artilugios tales como la utilización de atributos no estándar, propiedades adicionales en el DOM o {{domxref("Node.setUserData()")}}.
+[HTML5](/es/docs/Web/Guide/HTML/HTML5) está diseñado de forma tal que sea fácil extender los datos asociados a un elemento en particular sin necesidad de que tengan un significado definido. Los atributos [`data-*`](/es/docs/Web/HTML/Global_attributes#attr-dataset) permiten almacenar información adicional sobre un elemento HTML cualquiera sin tener que recurrir a artilugios tales como la utilización de atributos no estándar, propiedades adicionales en el DOM o {{domxref("Node.setUserData()")}}.
 
 ## Sintaxis HTML
 

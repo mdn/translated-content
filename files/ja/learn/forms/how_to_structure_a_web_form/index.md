@@ -1,37 +1,56 @@
 ---
 title: フォームの構築方法
 slug: Learn/Forms/How_to_structure_a_web_form
+l10n:
+  sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 original_slug: Learn/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
-基本から外れて、ここでは色々なフォームのパーツを構造化し、意味をつけるのに使われる要素を詳しく見ていきます。
+基本を押さえた上で、フォームの各パーツに構造と意味を提供している要素について、より詳しく見ていきましょう。
 
-| 前提条件: | 基本的なコンピューターリテラシーと、[HTML の基本的な理解](/ja/docs/Learn/HTML/Introduction_to_HTML)。 |
-| --------- | ----------------------------------------------------------------------------------------------------- |
-| 目的:     | HTML フォームを構造化して意味を与えて使いやすくアクセシブルにする方法を理解すること。                 |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+         基本的なコンピューターリテラシーと、
+        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML の基本的な理解</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        HTML フォームを構造化して意味を与えて使いやすくアクセシブルにする方法を理解すること。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-フォームは柔軟性があるため、[HTML](/ja/docs/Learn/HTML) で最も複雑な構造の 1 つとなっています。専用のフォーム要素と属性を使用して、あらゆる種類の基本フォームを作成できます。HTML フォームを構築するときに正しい構造を使用すると、フォームが使用可能で[アクセスしやすい](/ja/docs/Learn/Accessibility)ことを確実にするのに役立ちます。
+フォームは柔軟性があるため、[HTML](/ja/docs/Learn/HTML) で最も複雑な構造の 1 つとなっています。専用のフォーム要素と属性を使用して、あらゆる種類の基本フォームを作成できます。 HTML フォームを構築するときに正しい構造を使用すると、フォームの使用性や[アクセシビリティ](/ja/docs/Learn/Accessibility)を保証するのに役立ちます。
 
 ## \<form> 要素
 
-{{HTMLElement("form")}} 要素はフォームを正式に定義するとともに、自身の属性でフォームの動作を定義します。HTML フォームを作成しようとするたびに、この要素から始めて、すべてのコンテンツをその中に入れなければなりません。多くの支援技術やブラウザープラグインは {{HTMLElement("form")}} 要素を検出でき、またフォームを使いやすくするための特別なフックを実装できます。
+{{HTMLElement("form")}} 要素はフォームを正式に定義するとともに、属性でフォームの動作を定義します。HTML フォームを作成しようとするたびに、この要素から始めて、すべてのコンテンツをその中に入れなければなりません。多くの支援技術やブラウザープラグインは {{HTMLElement("form")}} 要素を検出して、フォームを使いやすくするための特別なフックを実装しています。
 
 前の記事ですでにこれを見ています。
 
-> **Warning:** **警告:** フォームの中にフォームを入れ子にすることは厳格に禁じられています。これは予期せぬ動作を発生するおそれがあるので、悪い方針です。
+> **警告:** フォームの中にフォームを入れ子にすることは厳格に禁じられています。これは予期せぬ動作を発生するおそれがあるので、悪い考えです。
 
-{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは [`form`](/ja/docs/Web/HTML/Attributes/form) 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、実際には {{ HTMLElement("form") }} に包含されていない要素であっても明示的にフォームへ紐付けることを可能にします。
+{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは [`form`](/ja/docs/Web/HTML/Element/input#form) 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、フォーム内に包含されていないコントロールを明示的にフォームへ紐付けられるように導入されました。
 
-次に、フォームに含まれる構造的な要素を見ていきましょう。
+それでは、フォームに入れ子になっている構造要素に移動してみましょう。
 
 ## \<fieldset> および \<legend> 要素
 
-{{HTMLElement("fieldset")}} 要素は、スタイルや意味付けのために、同じ目的を持つウィジェットのグループの作成に便利です。{{HTMLElement("fieldset")}} 要素は、`<fieldset>` タグのすぐ下に {{HTMLElement("legend")}} 要素を入れてラベルを付与できます。{{HTMLElement("legend")}} 要素は、{{HTMLElement("fieldset")}} 要素の目的を正式に説明します。
+{{HTMLElement("fieldset")}} 要素は、スタイルや意味付けのために、同じ目的を持つウィジェットのグループの作成に便利です。 {{HTMLElement("fieldset")}} 要素にラベルを付与するには、 {{HTMLElement("legend")}} 要素を {{HTMLElement("fieldset")}} の開始タグの直下に入れることで実現できます。{{HTMLElement("legend")}} 要素は、{{HTMLElement("fieldset")}} 要素の目的を正式に説明します。
 
-多くの支援技術は {{HTMLElement("legend")}} 要素を、対応する {{HTMLElement("fieldset")}} 要素内にある各ウィジェットのラベルの一部であるかのように扱うでしょう。例えば [Jaws](http://www.freedomscientific.com/products/fs/jaws-product-page.asp) や [NVDA](http://www.nvda-project.org/) といったスクリーンリーダーは、各ウィジェットのラベルを読み上げる前に legend の内容を読み上げます。
+多くの支援技術は {{HTMLElement("legend")}} 要素を、対応する {{HTMLElement("fieldset")}} 要素内にある各ウィジェットのラベルの一部であるかのように扱うでしょう。例えば [Jaws](https://www.freedomscientific.com/products/software/jaws/) や [NVDA](https://www.nvaccess.org/) といった画面リーダーは、各ウィジェットのラベルを読み上げる前に legend の内容を読み上げます。
 
-以下に小さなサンプルを挙げます:
+以下に小さなサンプルを挙げます。
 
 ```html
 <form>
@@ -53,23 +72,23 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 </form>
 ```
 
-> **Note:** この例は [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html))。
+> **メモ:** この例は [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html))。
 
-この例では、スクリーンリーダーは最初のウィジェットを "Fruit juice size small"、2 番目を "Fruit juice size medium"、3 番目を "Fruit juice size large" と読み上げるでしょう。
+この例では、画面リーダーは最初のウィジェットを "Fruit juice size small"、2 番目を "Fruit juice size medium"、3 番目を "Fruit juice size large" と読み上げるでしょう。
 
-このサンプルでのユースケースは、もっとも重要なことのひとつです。ラジオボタンのセットを置くたびに、それらを {{HTMLElement("fieldset")}} 要素内へ入れ子にするようにしましょう。ユースケースは他にもあり、通常は {{HTMLElement("fieldset")}} 要素でフォームを明確に区分するために使用できます。理想的には長いフォームは複数ページに分けるべきですが、フォームが長くなっても１つのページに収めないといけない場合、別々の関連セクションを別々の fieldset に入れることは使いやすさを改善します。
+この例での用途は、最も重要なものの 1 つです。一連のラジオボタンを有するたびに、それらを {{HTMLElement("fieldset")}} 要素の内部に入れ子にする必要があります。他にも用途があり、一般的に {{HTMLElement("fieldset")}} 要素はフォームを分割するために使用することもできます。長いフォームは複数のページにまたがるのが理想的ですが、フォームが長くなって単一のページに収めなければならない場合、異なるフィールドセット内に異なる関連するセクションを置くことでユーザビリティを向上させることができます。
 
-支援技術への影響力により、{{HTMLElement("fieldset")}} 要素はアクセシブルなフォームを作成するために重要な要素のひとつです。しかし、それを誤用しないようにするのはあなたの責務です。できれば、フォームを作成するたびにスクリーンリーダーがどのように解釈するか聞いてみましょう。変に聞こえるのであれば、フォームの構造を改善するためのよいヒントになります。
+支援技術に対する影響力が大きいため、 {{HTMLElement("fieldset")}} 要素はアクセシブルなフォームを構築するための重要な要素の 1 つです。しかし、それを乱用しないことはあなたの責任です。可能であれば、フォームを作成するたびに、[画面リーダーがどのように解釈するかを聞いてみる](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#画面リーダー)ようにしてください。変だと感じたら、フォームの構造を改善するようにしましょう。
 
 ## \<label> 要素
 
-これまでの記事で見てきたように、{{HTMLElement("label")}} 要素は、HTML フォームウィジェットのラベルを定義する正式な方法です。これは、アクセシブルなフォームを作成したい場合にもっとも重要な要素です — 適切に実装された時は、スクリーンリーダーはフォーム要素のラベルと関連する指示を一緒に読み上げます。前の記事で見てきたこの例を見てみます:
+これまでの記事で見てきたように、{{HTMLElement("label")}} 要素は、HTML フォームウィジェットのラベルを定義する正式な方法です。これは、アクセシブルなフォームを作成したい場合にもっとも重要な要素です — 適切に実装された時は、画面リーダーはフォーム要素のラベルと関連する指示を一緒に読み上げます。前の記事で見てきたこの例を見てみます:
 
 ```html
 <label for="name">Name:</label> <input type="text" id="name" name="user_name">
 ```
 
-`<label>` と`<input>` とがそれぞれ `for` と `id` 属性により正し関連付けられると (label の `for` 属性は対応するウィジェットの `id` 属性を参照します)、スクリーンリーダーは "Name, edit text"のように読み上げます。
+`<label>` と`<input>` とがそれぞれ `for` と `id` 属性により正し関連付けられると (label の `for` 属性は対応するウィジェットの `id` 属性を参照します)、画面リーダーは "Name, edit text"のように読み上げます。
 
 フォームコントロールとラベルを関連付けるもう 1 つの方法は、フォームコントロールを `<label>` の中でネストすることで、暗黙的に関連付けることです。
 
@@ -81,7 +100,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 この場合でも `for` 属性を設定することがベストプラクティスと考えられています。これは、ラベルとウィジェットの暗黙的な関係を理解できない支援技術があるためです。
 
-ラベルがなかったり、フォームコントロールが明示的/暗黙にラベルに関連付けられていない場合、スクリーンリーダーは全く役立たない "Edit text blank" のような読み上げを行います。
+ラベルがなかったり、フォームコントロールが明示的/暗黙にラベルに関連付けられていない場合、画面リーダーは全く役立たない "Edit text blank" のような読み上げを行います。
 
 ### ラベルもクリック可能です！
 
@@ -102,53 +121,53 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 </form>
 ```
 
-> **Note:** この例は [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html))。
+> **メモ:** この例は [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html))。
 
 ### 複数のラベル
 
 厳密に言うと、1 つのウィジェット内に複数のラベルを入れることができますが、複数のラベルを持つウィジェットの扱いに問題がある支援技術があるかもしれません。複数のラベルがある場合、アクセシブルなフォームを作成するには 1 つの {{htmlelement("label")}} 要素内にウィジェットを入れ子にするとよいでしょう。
 
-以下のサンプルについて考えてみましょう:
+以下の例について考えてみましょう。
 
 ```html
-<p>Required fields are followed by <abbr title="required">*</abbr>.</p>
+<p>Required fields are followed by <span aria-label="required">*</span>.</p>
 
-<!-- 2 つの例をご覧ください: -->
-<div>
+<!-- このようにします -->
+<!--div>
   <label for="username">Name:</label>
   <input id="username" type="text" name="username">
-  <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
-</div>
+  <label for="username"><span aria-label="required">*</abbr></label>
+</div-->
 
-<!-- 前出の例よりは良いです: -->
-<div>
+<!-- より良い例です -->
+<!--div>
   <label for="username">
-    <span>Name: </span>
+    <span>Name:</span>
     <input id="username" type="text" name="username">
-    <abbr title="required" aria-label="required">*</abbr>
+    <span aria-label="required">*</span>
   </label>
-</div>
+</div-->
 
-<!-- これが最も良いでしょう: -->
+<!-- これが最も良いでしょう -->
 <div>
-  <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
+  <label for="username">Name: <span aria-label="required">*</span></label>
   <input id="username" type="text" name="username">
 </div>
 ```
 
 {{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-このサンプルでは、最初の段落で入力必須の要素の規則を定義しています。ユーザーが入力必須の要素を見つける前にスクリーンリーダーのような支援技術が注意事項を表示したり読み上げたりするためには、規則をはじめに置かなければなりません。これがユーザーにアスタリスクの意味を知らせても、それに依存することはできません。スクリーンリーダーはアスタリスクが出てくると "スター" と読み上げます。視力のあるユーザーがマウスを持ってくると、`title` 属性によって"必須"と表示されます。タイトルはスクリーンリーダーの設定により読み上げられるので、常にスクリーンリーダーに読み上げられる [`aria-label`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) 属性を入れておくのがより信頼性が高いでしょう。
+このサンプルでは、最初の段落で入力必須の要素の規則を定義しています。ユーザーが入力必須の要素を見つける前に画面リーダーのような支援技術が注意事項を表示したり読み上げたりするためには、規則をはじめに置かなければなりません。これがユーザーにアスタリスクの意味を知らせても、それに依存することはできません。画面リーダーはアスタリスクが出てくると "スター" と読み上げます。視力のあるユーザーがマウスを持ってくると、`title` 属性によって"必須"と表示されます。タイトルは画面リーダーの設定により読み上げられるので、常に画面リーダーに読み上げられる [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を入れておくのがより信頼性が高いでしょう。
 
-上記の違いをふまえると、以降を効率よく見ていけるでしょう:
+上記の違いをふまえると、以降を効率よく見ていけるでしょう。
 
-- 最初の例では、label 要素すべての入力が読み上げられません — "edit text blank" だけです。その上に実際のラベルは別々に読まれます。複数の `<label>` 要素はスクリーンリーダーを混乱させます。
+- 最初の例では、 label 要素すべての入力が読み上げられません — "edit text blank" だけです。その上に実際のラベルは別々に読まれます。複数の `<label>` 要素は画面リーダーを混乱させます。
 - 2 つ目の例では、少し明確になります "name star name edit text required" というようにラベルが入力と一緒に読み上げられます。しかしラベルはまだ別々に読み上げられます。少し混乱しやすいですが、これは `<input>` と関連したラベルがあるためまだ良いでしょう。
-- 3 つ目の例が最も良いです — 実際のラベルがすべて一緒に読み上げられ、"name required edit text" のようにラベルと入力が一緒に読み上げられます。
+- 3 つ目の例が最も良いです — 実際のラベルがすべて一緒に読み上げられ、 "name required edit text" のようにラベルと入力が一緒に読み上げられます。
 
-> **Note:** スクリーンリーダーによっては、少し異なる結果になる場合もあります。これは VoiceOver (と同様に動作する NVDA)でテストしています。あなたの体験を聞きたいです。
+> **メモ:** 画面リーダーによっては、少し異なる結果になる場合もあります。これは VoiceOver (と同様に動作する NVDA)でテストしています。あなたの体験を聞きたいです。
 
-> **Note:** この例は GitHub の [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。2 や 3 のコメントを外したバージョンの例を実行しないでください — 複数の label と複数の同じ input ID があると、スクリーンリーダーは確実に混乱します!
+> **メモ:** この例は GitHub の [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。2 や 3 のコメントを外したバージョンの例を実行しないでください — 複数の label と複数の同じ input ID があると、画面リーダーは確実に混乱します!
 
 ## フォームで使用される一般的な HTML 構造
 
@@ -162,7 +181,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 ### アクティブラーニング: フォーム構造を構築する
 
-これらのアイデアを実践し、もう少し複雑なフォーム構造、つまり支払いフォームを作成しましょう。このフォームはあなたがまだ理解していないかもしれないウィジェットタイプをいくつも含みますが、今はそのことを心配しないでください。次の記事 ([ネイティブフォームウィジェット](/ja/docs/Learn/HTML/Forms/The_native_form_widgets)) でそれらがどのように機能するのかがわかります。今のところ、以下の説明に沿って説明を注意深く読み、フォームを構成するためにどのラッパー要素を使用しているか、そしてその理由を理解することから始めてください。
+これらのアイデアを実践し、もう少し複雑なフォーム構造、つまり支払いフォームを作成しましょう。このフォームはあなたがまだ理解していないかもしれないウィジェットタイプをいくつも含みますが、今はそのことを心配しないでください。次の記事 ([基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)) でそれらがどのように機能するのかがわかります。今のところ、以下の説明に沿って説明を注意深く読み、フォームを構成するためにどのラッパー要素を使用しているか、そしてその理由を理解することから始めてください。
 
 1. あらかじめ、[空のテンプレートファイル](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)と[お支払いフォームの CSS](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) のローカルコピーをコンピューターの新しいディレクトリーに作成します。
 2. まず最初に、HTML {{htmlelement("head")}} 内に次の行を追加して CSS を HTML に適用します。
@@ -238,7 +257,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
     </section>
     ```
 
-6. それでは、フォームの 2 番目の `<section>` — 支払い情報に目を向けます。ここには 3 つの異なるウィジェットとそのラベルがあり、それぞれ `<p>` の中に含まれています。1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。新しい入力タイプは [HTML5 入力タイプ](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介されます。
+6. それでは、フォームの 2 番目の `<section>` — 支払い情報に目を向けます。ここには 3 つの異なるウィジェットとそのラベルがあり、それぞれ `<p>` の中に含まれています。1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。新しい入力型は [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介します。
 
     前のセクションの下に次のように入力してください。
 
@@ -281,7 +300,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 完成したフォームは以下のように動作しています (GitHub でも確認できます。payment-form.html [ソース](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html)を参照して[ライブ実行](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)してください)。
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/HTML/Forms/How_to_structure_an_HTML_form/Example")}}
+{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/Forms/How_to_structure_a_web_form/Example")}}
 
 ## あなたのスキルをテストしてみましょう!
 
@@ -293,25 +312,25 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 ## 関連情報
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
-{{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 ## このモジュール
 
-- [初めてのフォーム](/ja/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [フォームの構築方法](/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [ネイティブフォームウィジェット](/ja/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [The HTML5 input types](/ja/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/ja/docs/Learn/Forms/Other_form_controls)
-- [フォームへのスタイル設定](/ja/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [UI pseudo-classes](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [フォームデータの検証](/ja/docs/Learn/HTML/Forms/Data_form_validation)
-- [フォームデータの送信](/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
+- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
+- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
+- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
+- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
+- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
+- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
+- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
+- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック
 
 - [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)
+- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

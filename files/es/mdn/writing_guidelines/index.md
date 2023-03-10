@@ -1,18 +1,10 @@
 ---
 title: Acerca de MDN
 slug: MDN/Writing_guidelines
-tags:
-  - Colaboración
-  - Comunidad
-  - Derechos de Autor
-  - Documentación
-  - Guía
-  - Licencias
-  - MDN Meta
-translation_of: MDN/About
 original_slug: MDN/About
 ---
-{{MDNSidebar}}{{IncludeSubNav("/es/docs/MDN")}}
+
+{{MDNSidebar}}
 
 MDN Web Docs es una plataforma de aprendizaje para las tecnologías Web y el software con el que funciona la Web, incluyendo:
 
@@ -36,7 +28,7 @@ También puede ayudar [promocionando MDN](/es/docs/MDN/Promociona) en su propio 
 
 ## La Comunidad MDN
 
-¡Somos una comunidad global! Contamos con colaboradores increíbles de todo el mundo, en múltiples idiomas. Si desea aprender más sobre nosotros, o si necesita cualquier tipo de ayuda con MDN. ¡Tómese la libertad de consultar nuestra[ ](http://lists.mozilla.org/listinfo/dev-mdc)[foro de discusión](https://discourse.mozilla-community.org/c/mdn) o el [Canal IRC](irc://irc.mozilla.org#mdn)!
+¡Somos una comunidad global! Contamos con colaboradores increíbles de todo el mundo, en múltiples idiomas. Si desea aprender más sobre nosotros, o si necesita cualquier tipo de ayuda con MDN. ¡Tómese la libertad de consultar nuestra [foro de discusión](https://discourse.mozilla-community.org/c/mdn) o el [Canal IRC](irc://irc.mozilla.org#mdn)!
 
 ## Uneté a la comunidad MDN
 
@@ -72,7 +64,7 @@ Los códigos de ejemplo agregados durante o después del 20 de Agosto de 2010 qu
 
 Si deseas contribuir al wiki, debes hacer que tu documentación esté disponible bajo la licencia de Attribution-ShareAlike (u ocasionalmente una licencia alternativa ya especificada por la página que estás editando), y los ejemplos de código disponibles bajo licencia [Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/) (Dedicada al dominio público). Añadir contenido a este wiki significa que aceptas que tus contribuciones estén disponibles bajo esas licencias.
 
-Algunos contenidos antiguos se pusieron a disposición bajo una licencia distinta de las licencias mencionadas anteriormente. Estos se indican en la parte inferior de cada página a través de un [Bloque de Licencia Alternativo](https://developer.mozilla.org/Archive/Meta_docs/Examples/Alternate_License_Block).
+Algunos contenidos antiguos se pusieron a disposición bajo una licencia distinta de las licencias mencionadas anteriormente. Estos se indican en la parte inferior de cada página a través de un [Bloque de Licencia Alternativo](/Archive/Meta_docs/Examples/Alternate_License_Block).
 
 > **Advertencia:** No se pueden crear nuevas páginas utilizando licencias alternativas.
 
@@ -86,7 +78,7 @@ Los derechos sobre las marcas comerciales, logotipos, marcas al servicio de la F
 
 ### Descarga de contenido
 
-Puede descargar un [espejo tarball completo de MDN](https://developer.mozilla.org/media/developer.mozilla.org.tar.gz). (2.5 GB a partir de 2016-11-30).
+Puede descargar un [espejo tarball completo de MDN](/media/developer.mozilla.org.tar.gz). (2.5 GB a partir de 2016-11-30).
 
 #### Páginas únicas
 
@@ -108,7 +100,7 @@ Consulte [Cómo informar de un problema en MDN](/es/docs/MDN/Contribute/Howto/Re
 
 ## Historia de MDN
 
-El proyecto para el Centro de Desarrollo Mozilla (a.k.a. MDC, a.k.a. _Devmo_) comenzó a principios de 2005, cuando la [Fundación Mozilla ](http://www.mozillafoundation.org)[](/en-US/foundation/)obtuvo una licencia de AOL para utilizar el contenido original Netscape [DevEdge](/Project:en/DevEdge). El contenido DevEdge fue revisado en busca de material todavía útil, que luego fue migrado por voluntarios en este Wiki para que fuera más fácil de actualizar y mantener.
+El proyecto para el Centro de Desarrollo Mozilla (a.k.a. MDC, a.k.a. _Devmo_) comenzó a principios de 2005, cuando la [Fundación Mozilla](http://www.mozillafoundation.org) obtuvo una licencia de AOL para utilizar el contenido original Netscape [DevEdge](/Project:en/DevEdge). El contenido DevEdge fue revisado en busca de material todavía útil, que luego fue migrado por voluntarios en este Wiki para que fuera más fácil de actualizar y mantener.
 
 Desde entonces, el proyecto ha seguido creciendo y ahora forma un nexo central para toda la documentación de desarrollo relacionada con el proyecto Mozilla y las tecnologías de Web Abierta. En 2010, el nombre fue cambiado a Mozilla Developer Network. En 2011 se agregó [Demostraciones de Tecnologías de Web Abierta](/es/docs/Web/Demos_of_open_web_technologies) para que los desarrolladores Web puedan compartir y mostrar su código y páginas de [aprendizaje](/es/docs/Learn) para proporcionar enlaces a los tutoriales. (El nombre de MDC viene de "MDN Doc Center" de la sección de documentación). Se espera que con el tiempo la Red de Desarrolladores de Mozilla se convierta en un recurso que los diseñadores Web, desarrolladores de aplicaciones, de extensiones y escritores visiten de forma regular.
 

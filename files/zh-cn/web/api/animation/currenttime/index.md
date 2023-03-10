@@ -2,6 +2,7 @@
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
 ---
+
 {{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
 Animation.currentTime 属性返回或设置动画的当前时间值（以毫秒为单位），无论动画正在运行还是已暂停。
@@ -21,7 +22,7 @@ element.currentTime = someValue;
 
 ## 例子
 
-在[Drink Me/Eat Me game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)中，爱丽丝的高度是可变动的，所以它可以从小到大或从大到小。 在游戏开始时，通过将她的动画的 currentTime 设置为她的 keyframeEffect 的持续时间的一半让她的高度设置在两个极端之间：
+在[Drink Me/Eat Me game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)中，爱丽丝的高度是可变动的，所以它可以从小到大或从大到小。在游戏开始时，通过将她的动画的 currentTime 设置为她的 keyframeEffect 的持续时间的一半让她的高度设置在两个极端之间：
 
 ```js
 aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
@@ -39,12 +40,12 @@ animation.currentTime =
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.Animation.currentTime")}}
+{{Compat}}
 
-## 相关内容
+## 参见
 
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
 - {{domxref("Animation.startTime")}} for the time an animation is scheduled to start.
-- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)

@@ -1,13 +1,8 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
+
 {{JSRef}}
 
 **`handler.defineProperty()`** は {{jsxref("Object.defineProperty()")}} に対するトラップです。
@@ -102,9 +97,7 @@ Object.defineProperty(p, 'name', {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

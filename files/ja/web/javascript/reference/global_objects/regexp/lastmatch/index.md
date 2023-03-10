@@ -1,16 +1,8 @@
 ---
 title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 標準外の **lastMatch** プロパティは、最後に一致した文字列を含む正規表現の静的で読み取り専用のプロパティです。 `RegExp.$&` はこのプロパティに対するエイリアスです。
@@ -36,9 +28,7 @@ RegExp['$&'];     // "hi"
 
 ## 仕様書
 
-| 仕様書                                               |
-| ---------------------------------------------------- |
-| {{SpecName('Legacy RegExp features')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

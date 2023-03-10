@@ -2,6 +2,7 @@
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`Navigator.geolocation`** 只读属性返回一个 {{domxref("Geolocation")}} 对象，通过这个对象可以访问到设备的位置信息。使网站或应用可以根据用户的位置提供个性化结果。
@@ -20,7 +21,7 @@ geo = navigator.geolocation
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.geolocation")}}
+{{Compat}}
 
 ## 另请参阅
 

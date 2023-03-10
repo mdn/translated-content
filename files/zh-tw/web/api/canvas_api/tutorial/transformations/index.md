@@ -2,7 +2,8 @@
 title: 變形效果
 slug: Web/API/Canvas_API/Tutorial/Transformations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 ## 畫布狀態儲存與復原
 
@@ -70,7 +71,7 @@ draw();
 
 第五步：再畫一個矩形 我們再取出更早之前儲存的黑色(第一狀態)
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
+{{EmbedLiveSample("畫布狀態儲存與復原範例", "180", "180", "canvas_savestate.png")}}
 
 ## 移動畫布
 
@@ -129,7 +130,7 @@ function drawSpirograph(ctx,R,r,O){
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "330", "330", "https://mdn.mozillademos.org/files/256/Canvas_translate.png")}}
+{{EmbedLiveSample("移動畫布範例", "330", "330", "canvas_translate.png")}}
 
 ## 旋轉
 
@@ -175,7 +176,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "180", "180", "https://mdn.mozillademos.org/files/248/Canvas_rotate.png")}}
+{{EmbedLiveSample("旋轉範例", "180", "180", "canvas_rotate.png")}}
 
 ## 縮放
 
@@ -277,18 +278,18 @@ draw();
 
 第二排藍色圖案我們只改變 Y 軸的縮放倍率，X 軸維持不變，因而產生一個比一個更扁的橢圓圖形。同理，第三排綠色圖案改變 X 軸的縮放倍率，Y 軸維持不變。
 
-{{EmbedLiveSample("A_scale_example", "330", "330", "https://mdn.mozillademos.org/files/250/Canvas_scale.png")}}
+{{EmbedLiveSample("縮放範例", "330", "330", "canvas_scale.png")}}
 
 ## 變形
 
 最後一個方法是設定變形矩陣，藉由改變變形矩陣，我們因此可以營造各種變形效果；其實先前所提到的 rotate, translate, scale 都是在設定變形矩陣，而這邊的這個方法就是直接去改變變形矩陣。
 
 - `transform(m11, m12, m21, m22, dx, dy)`
-  - : 呼叫 Transform 會拿目前的變形矩陣乘以下列矩陣:`plain m11 m21 dx m12 m22 dy 0 0 1` 運算後的新矩陣將取代目前的變形矩陣。其中 m11 代表水平縮放圖像，m12 代表水平偏移圖像，m21 代表垂直偏移圖像，m22 代表垂直縮放圖像，dx 代表水平移動圖像，dy 代表垂直移動圖像。如果輸入[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) 值，不會引起例外錯誤，矩陣值會依照輸入設成無限。
+  - : 呼叫 Transform 會拿目前的變形矩陣乘以下列矩陣:`plain m11 m21 dx m12 m22 dy 0 0 1` 運算後的新矩陣將取代目前的變形矩陣。其中 m11 代表水平縮放圖像，m12 代表水平偏移圖像，m21 代表垂直偏移圖像，m22 代表垂直縮放圖像，dx 代表水平移動圖像，dy 代表垂直移動圖像。如果輸入[`Infinity`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Infinity) 值，不會引起例外錯誤，矩陣值會依照輸入設成無限。
 - `setTransform(m11, m12, m21, m22, dx, dy)`
   - : 復原目前矩陣為恆等矩陣(Identiy matrix，也就是預設矩陣)，然後再以輸入參數呼叫 transform()。
 
-### `transform` / `setTransform`範例
+### `transform` / `setTransform` 範例
 
 ```js
 function draw() {
@@ -319,6 +320,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("transform_.2F_setTransform_examples", "230", "280", "canvas_transform.png")}}
+{{EmbedLiveSample("transform_setTransform_範例", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors", "Web/Guide/HTML/Canvas_tutorial/Compositing")}}

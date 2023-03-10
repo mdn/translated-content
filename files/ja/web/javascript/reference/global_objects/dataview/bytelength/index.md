@@ -1,14 +1,8 @@
 ---
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-tags:
-  - DataView
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** アクセサープロパティは、このビューの {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の先頭から長さを (バイト単位で) 表します。
@@ -37,9 +31,7 @@ dataview3.byteLength; // 6 (due to the offset of the constructed DataView)
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

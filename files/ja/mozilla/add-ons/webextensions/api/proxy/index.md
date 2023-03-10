@@ -2,6 +2,7 @@
 title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
+
 {{AddonSidebar}}
 
 拡張された [Proxy Auto-Configuration (PAC) file](/ja/Add-ons/WebExtensions/API/proxy#PAC_file_specification) (これはウェブのリクエストをプロキシ化するポリシーを実装します) を実装するのにプロキシ API を使います。この実装は標準の PAC 設計といくつかそれていて、なぜなら PAC ファイルのデファクト仕様は 1995 年頃の初期実装から変えられてないためです。仕様を維持している標準化団体はありません。
@@ -140,4 +141,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples("h2")}}
 
-> **Note:** Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

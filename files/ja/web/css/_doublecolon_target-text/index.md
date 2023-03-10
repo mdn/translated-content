@@ -1,16 +1,8 @@
 ---
 title: '::target-text'
 slug: Web/CSS/::target-text
-tags:
-  - '::target-text'
-  - CSS
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.target-text
-translation_of: Web/CSS/::target-text
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`::target-text`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ブラウザーが scroll-to-text フラグメントに対応している場合にスクロール先のテキストを表します。これによって、節のテキストを強調表示させることができます。

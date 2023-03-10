@@ -1,58 +1,55 @@
 ---
 title: Request.headers
 slug: Web/API/Request/headers
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
-{{APIRef("Fetch")}}{{SeeCompatTable}}
 
-{{domxref("Request")}} のインターフェースの **`headers`** 読み取り専用プロパティは、リクエストに関連する {{domxref("Headers")}} オブジェクトを含みます。
+{{APIRef("Fetch")}}
 
-## 構文
+**`headers`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストに関連する {{domxref("Headers")}} オブジェクトを保持します。
 
-```
-var myHeaders = request.headers;
-```
-
-### 値
+## 値
 
 {{domxref("Headers")}} オブジェクト。
 
 ## 例
 
-次のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、リクエストの headers を変数に保存しています：
+次のスニペットは、{{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストの headers を変数に保存しています。
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myHeaders = myRequest.headers; // Headers {}
+const myRequest = new Request('flowers.jpg');
+const myHeaders = myRequest.headers; // Headers {}
 ```
 
-{{domxref("Headers")}} オブジェクトにヘッダを追加するためには、{{domxref("Headers.append")}} を使用します。初期化オプションとしてのヘッダを渡し、 2 番目の初期化パラメータと一緒に新しい request を生成ます：
+{{domxref("Headers")}} オブジェクトにヘッダーを追加するためには、{{domxref("Headers.append")}} を使用します。次に、新しい `Request` を作成する際に初期化のための第二引数を渡し、初期化オプションとしてヘッダーを渡します。
 
 ```js
-var myHeaders = new Headers();
+const myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
 
-var myInit = { method: 'GET',
-                   headers: myHeaders,
-                   mode: 'cors',
-                   cache: 'default' };
+const myInit = {
+  method: 'GET',
+  headers: myHeaders,
+  mode: 'cors',
+  cache: 'default'
+};
 
-var myRequest = new Request('flowers.jpg',myInit);
+const myRequest = new Request('flowers.jpg', myInit);
 
-myContentType = myRequest.headers.get('Content-Type'); // 'image/jpeg' を返す。
+const myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                     | 状態                     | コメント           |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-request-headers','headers')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Request.headers")}}
+{{Compat}}
 
 ## 関連項目
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

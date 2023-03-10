@@ -2,6 +2,7 @@
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
+
 {{JSRef}}
 
 **`replaceAll()`** 方法返回一个新字符串，新字符串所有满足 `pattern` 的部分都已被`replacement` 替换。`pattern`可以是一个字符串或一个 {{jsxref("RegExp")}}， `replacement`可以是一个字符串或一个在每次匹配被调用的函数。
@@ -16,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **备注：** 当使用一个 \`regex\`时，您必须设置全局（“ g”）标志，
+> **备注：** 当使用一个 `regex` 时，您必须设置全局（“g”）标志，
 > 否则，它将引发 `TypeError`：“必须使用全局 RegExp 调用 replaceAll”。
 
 ### 参数

@@ -1,14 +1,8 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.defineProperty()`** メソッドは、{{jsxref("Object.defineProperty()")}} と似ていますが、 {{jsxref("Boolean")}} を返します。
@@ -42,7 +36,7 @@ Reflect.defineProperty(target, propertyKey, attributes)
 
 `Reflect.defineProperty` メソッドは、オブジェクトのプロパティの正確な追加や修正を行います。詳細は、類似メソッドの {{jsxref("Object.defineProperty")}} を参照してください。
 
-> **Note:** `Object.defineProperty` はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxref("TypeError")}} を発生させます。しかし、`Reflect.defineProperty` は単純に、プロパティの定義が成功したかどうかを示す {{jsxref("Boolean")}} を返します。
+> **メモ:** `Object.defineProperty` はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxref("TypeError")}} を発生させます。しかし、`Reflect.defineProperty` は単純に、プロパティの定義が成功したかどうかを示す {{jsxref("Boolean")}} を返します。
 
 ## 例
 
@@ -70,9 +64,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

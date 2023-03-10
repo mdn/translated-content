@@ -1,14 +1,8 @@
 ---
 title: DataView.prototype.setInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
 ---
+
 {{JSRef}}
 
 **`setInt32()`** メソッドは、符号付き 32 ビット整数 (long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
@@ -52,9 +46,7 @@ dataview.getInt32(1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setint32', 'DataView.prototype.setInt32')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

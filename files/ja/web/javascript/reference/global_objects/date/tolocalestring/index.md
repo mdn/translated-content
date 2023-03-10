@@ -1,46 +1,49 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-tags:
-  - Date
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
-**`toLocaleString()`** メソッドは、言語に合わせた日時の文字列を返します。
-
-新しい `locales` と `options` の引数により、アプリケーションは使用される書式変換の言語の指定や、関数の振る舞いのカスタマイズをすることができます。
-
-古い実装のアプリケーションは、 `locales` と `options` の引数を無視します。使用されるロケールや返される文字列の書式は、完全に実装依存です。
+**`toLocaleString()`** メソッドは、この日付の言語依存の表現による文字列を返します。[`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、このメソッドは単に `Intl.DateTimeFormat` を呼び出すだけです。
 
 {{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
 
 ## 構文
 
-```
-dateObj.toLocaleString([locales[, options]])
+```js-nolint
+toLocaleString()
+toLocaleString(locales)
+toLocaleString(locales, options)
 ```
 
 ### 引数
 
-どのブラウザーが `locales` と `options` に対応しているのかは、[ブラウザーの互換性](#Browser_Compatibility)をご覧ください。 `locales` と `options` を無視する実装では、使用されるロケールや返される文字列の書式は、完全に実装依存です。
+引数 `locales` と `options` は、関数の動作をカスタマイズして、アプリケーションが書式化の慣習を使用する言語を指定することができるようにします。
 
-これらの引数の詳細やその使用方法は、 {{jsxref("DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} コンストラクターを確認してください。
+[`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、これらの引数は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) コンストラクターの引数と正確に一致していることに注意してください。 `Intl.DateTimeFormat` に対応していない実装では、両方の引数を無視するように求められます。使用するロケールと返す文字列の形式は、完全に実装に依存します。
 
-日時のそれぞれの部分のプロパティにおける既定値は {{jsxref("undefined")}} です。ただし、 `weekday`, `year`, `month`, `day` の各プロパティがすべて {{jsxref("undefined")}} のときは、 `year`, `month`, `day` は `"numeric"` とみなされます。
+- `locales` {{optional_inline}}
+
+  - : BCP 47 の言語タグを持つ文字列、あるいはそのような文字列の配列です。 `Intl.DateTimeFormat()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) 引数に相当します。
+
+    `Intl.DateTimeFormat` に対応していない実装では、この引数は無視され、通常はホストのロケールを使用します。
+
+- `options` {{optional_inline}}
+
+  - : 出力書式を調整するオブジェクト。 `Intl.DateTimeFormat()` コンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) 引数に相当します。 `timeStyle` オプションは未定義でなければならず、そうでない場合は {{jsxref("TypeError")}} が発生します。 `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, `fractionalSecondDigits` がすべて未定義の場合、 `year`, `month`, `day`, `hour`, `minute`, `second` は `"numeric"` に設定されます。
+
+    `Intl.DateTimeFormat` に対応していない実装では、この引数は無視されます。
+
+これらの引数の詳細や使用方法については [`Intl.DateTimeFormat()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)を参照してください。
 
 ### 返値
 
-与えられた文字列を言語特有の慣習によって表した文字列です。
+指定された日付を、言語固有の仕様に従って表現した文字列。
 
-## 性能
-
-大量の日付を書式化する場合は、 {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトを生成してその {{jsxref("DateTimeFormat.prototype.format", "format")}} プロパティで提供される関数を使用したほうが得策です。
+`Intl.DateTimeFormat` がある実装では、これは `new Intl.DateTimeFormat(locales, options).format(date)` と等価です。
 
 ## 例
 
@@ -49,7 +52,7 @@ dateObj.toLocaleString([locales[, options]])
 ロケールを指定しない基本的な使い方では、既定のロケールと既定のオプションによる書式の文字列が返されます。
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleString() メソッドに引数を与えなければ実装に依存し、
 // 既定のロケールとタイムゾーンを返す
@@ -66,7 +69,7 @@ function toLocaleStringSupportsLocales() {
   try {
     new Date().toLocaleString('i');
   } catch (e) {
-    return e instanceof RangeError;
+    return e.name === 'RangeError';
   }
   return false;
 }
@@ -77,7 +80,7 @@ function toLocaleStringSupportsLocales() {
 この例では、国ごとに異なる日時の書式を示します。ご使用のアプリケーションのユーザーインターフェイスで使用される言語の書式を得るには、 `locales` でその言語 (あるいは代替言語) を指定してください。
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // 以下の書式はその地域のタイムゾーンとロケールを想定
 // 米国のアメリカ大陸/ロサンゼルス
@@ -114,10 +117,15 @@ console.log(date.toLocaleString(['ban', 'id']));
 `toLocaleString()` メソッドから得られる結果は、`options` でカスタマイズできます。
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // 曜日を加えて月とともに長い書式で表す
-let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
 
 console.log(date.toLocaleString('de-DE', options));
 // → "Donnerstag, 20. Dezember 2012"
@@ -148,22 +156,19 @@ console.log(date.toLocaleString('en-US', { hour12: false }));
 // false in IE and Edge
 ```
 
-> **Note:** **注**: 詳細および例についてはこの [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)をご覧ください。
+> **メモ:** 詳細および例についてはこの [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)をご覧ください。
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}         |
-| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.toLocaleString")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}

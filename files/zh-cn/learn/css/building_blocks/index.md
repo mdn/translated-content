@@ -2,6 +2,7 @@
 title: CSS 构建
 slug: Learn/CSS/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 这个模块承接[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)——即你对 (CSS) 语言和其语法已经足够熟悉、并且有了一些基本的使用经验，该是稍微深入点学习的时候了。这个模块着眼于级联和继承，所有可供使用的选择器类型，单位，尺寸，背景、边框样式，调试，等等等等。
@@ -71,7 +72,7 @@ slug: Learn/CSS/Building_blocks
 
 在这里，你将练习使用背景和边距来创建一个吸引眼球的盒子。
 
-## 另见
+## 参见
 
 - [高级区块效果](/zh-CN/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
   - : 这篇文章展示了盒子的小技巧，提供了一些高级特性的介绍，这些特性不适合其他类别的样式，比如盒子阴影、混合模式和滤镜。

@@ -1,7 +1,8 @@
 ---
 title: 'ARIA: list role'
-slug: Web/Accessibility/ARIA/Roles/List_role
+slug: Web/Accessibility/ARIA/Roles/list_role
 ---
+
 ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色结合使用，该角色用于标识包含在列表中的列表项。
 
 ```html
@@ -65,7 +66,7 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 > **备注：** ARIA `list` / `listitem` 角色不区分有序列表和无序列表。
 
-顺便说一句，请注意，如果您使用 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}} 的语义 HTML 元素并应用 [`presentation`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) 角色，则每个子 `li` 元素都会继承 `presentation` 角色，因为 ARIA 需要 `listitem` 元素具有父 `list` 元素。因此，`li` 元素不会暴露给辅助技术，但是包含在这些 `li` 元素中的元素，包括嵌套列表，对辅助技术是可见的。
+顺便说一句，请注意，如果您使用 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}} 的语义 HTML 元素并应用 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) 角色，则每个子 `li` 元素都会继承 `presentation` 角色，因为 ARIA 需要 `listitem` 元素具有父 `list` 元素。因此，`li` 元素不会暴露给辅助技术，但是包含在这些 `li` 元素中的元素，包括嵌套列表，对辅助技术是可见的。
 
 > **备注：** 如果要标记将用作选项卡式界面的项目列表，则应改为使用 `tab`、`tabpanel` 和 `tablist` 角色。
 
@@ -87,4 +88,10 @@ TBD
 - [ARIA: listitem role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
 - [ARIA: group role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+
+   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

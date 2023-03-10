@@ -2,6 +2,7 @@
 title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 {{domxref("MediaSource")}} インターフェイスの **`activeSourceBuffers`** 読み取り専用プロパティは、{{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} に含まれる {{domxref("SourceBuffer")}} オブジェクトのサブセットを含む {{domxref("SourceBufferList")}} オブジェクトを返します。 これは、選択した動画トラック、有効な音声トラック、および表示/非表示のテキストトラックを提供するオブジェクトのリストです。
@@ -43,9 +44,7 @@ function sourceOpen (_) {
 
 ## 仕様
 
-| 仕様                                                                                                                                         | 状態                                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-mediasource-activesourcebuffers', 'activeSourceBuffers')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

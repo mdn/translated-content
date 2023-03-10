@@ -1,15 +1,6 @@
 ---
 title: AbortController.signal
 slug: Web/API/AbortController/signal
-tags:
-  - API
-  - AbortController
-  - Fetch
-  - 레퍼런스
-  - 신호
-  - 실험적
-  - 프로퍼티
-translation_of: Web/API/AbortController/signal
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 

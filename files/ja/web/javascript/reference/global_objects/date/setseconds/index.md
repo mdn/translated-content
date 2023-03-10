@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`setSeconds()`** メソッドは、地方時に基づき、指定された日時の「秒」を設定します。
@@ -17,14 +13,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 
 ## 構文
 
-```
-dateObj.setSeconds(secondsValue[, msValue])
-```
-
-### JavaScript 1.3 より前のバージョン
-
-```
-dateObj.setSeconds(secondsValue)
+```js-nolint
+setSeconds(secondsValue)
+setSeconds(secondsValue, msValue)
 ```
 
 ### 引数
@@ -49,19 +40,17 @@ dateObj.setSeconds(secondsValue)
 ### setSeconds() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setSeconds(30);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setSeconds")}}
+{{Compat}}
 
 ## 関連情報
 

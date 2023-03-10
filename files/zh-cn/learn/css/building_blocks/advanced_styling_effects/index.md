@@ -2,6 +2,7 @@
 title: 高级区块效果
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 这篇文章展示了盒子的小技巧，提供了一些高级特性的介绍，这些特性不适合其他类别的样式，比如盒子阴影、混合模式和滤镜。
@@ -241,7 +242,7 @@ div {
   padding: 10px;
   margin: 10px;
   display: inline-block;
-  background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px;
+  background: url(colorful-heart.png) no-repeat center 20px;
   background-color: green;
 }
 
@@ -256,7 +257,7 @@ div {
 
 ### mix-blend-mode
 
-现在让我们看一看 {{cssxref("mix-blend-mode")}}。 这里我们将给出两个相同的`<div>`，但是每个都位于一个有着紫色背景的简单的`<div>`上，来向你展示元素们将会怎样混合在一起：
+现在让我们看一看 {{cssxref("mix-blend-mode")}}。这里我们将给出两个相同的`<div>`，但是每个都位于一个有着紫色背景的简单的`<div>`上，来向你展示元素们将会怎样混合在一起：
 
 ```html
 <article>
@@ -300,7 +301,7 @@ article div:first-child {
   position: absolute;
   top: 10px;
   left: 0;
-  background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px;
+  background: url(colorful-heart.png) no-repeat center 20px;
   background-color: green;
 }
 
@@ -362,7 +363,7 @@ article div:last-child {
   margin: 10px;
   display: inline-block;
   background-color: red;
-  background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px,
+  background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
 } </textarea>
 

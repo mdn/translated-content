@@ -2,13 +2,14 @@
 title: Window
 slug: Web/API/Window
 ---
+
 {{APIRef("DOM")}}
 
 `window` 对象表示一个包含 DOM 文档的窗口，其 `document` 属性指向窗口中载入的 [DOM 文档](/zh-CN/docs/Web/API/Document) 。使用 {{ Domxref("document.defaultView") }} 属性可以获取指定文档所在窗口。
 
 `window`作为全局变量，代表了脚本正在运行的窗口，暴露给 Javascript 代码。
 
-本节为 DOM `Window` 对象中可用的所有方法、属性和事件提供简要参考。`window` 对象实现了 `Window` 接口，此接口继承自 [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView) 接口。一些额外的全局函数、命名空间、对象、接口和构造函数与 window 没有典型的关联，但却是有效的，它们在 [JavaScript 参考](/en-US/docs/JavaScript/Reference) 和 [DOM 参考](/en-US/docs/DOM/DOM_Reference) 中列出。
+本节为 DOM `Window` 对象中可用的所有方法、属性和事件提供简要参考。`window` 对象实现了 `Window` 接口，此接口继承自 [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView) 接口。一些额外的全局函数、命名空间、对象、接口和构造函数与 window 没有典型的关联，但却是有效的，它们在 [JavaScript 参考](/zh-CN/docs/JavaScript/Reference) 和 [DOM 参考](/zh-CN/docs/DOM/DOM_Reference) 中列出。
 
 在有标签页功能的浏览器中，每个标签都拥有自己的 `window` 对象；也就是说，同一个窗口的标签页之间不会共享一个 `window` 对象。有一些方法，如 {{ Domxref("window.resizeTo") }} 和 {{ Domxref("window.resizeBy") }} 之类的方法会作用于整个窗口而不是 `window` 对象所属的那个标签。一般而言，如果一样东西无法恰当地作用于标签，那么它就会作用于窗口。
 
@@ -16,10 +17,10 @@ slug: Web/API/Window
 
 ## Constructors
 
-See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
+See also the [DOM Interfaces](/zh-CN/docs/DOM/DOM_Reference).
 
 - {{domxref("DOMParser")}}
-  - : `DOMParser` can parse XML or HTML source stored in a string into a DOM [Document](/en-US/docs/DOM/document). `DOMParser` is specified in [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
+  - : `DOMParser` can parse XML or HTML source stored in a string into a DOM [Document](/zh-CN/docs/DOM/document). `DOMParser` is specified in [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
 - {{domxref("Window.GeckoActiveXObject")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Image")}}
@@ -31,7 +32,7 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
 - {{domxref("Window.StaticRange")}} {{experimental_inline}} {{readonlyinline}}
   - : Returns a {{domxref('StaticRange.StaticRange','StaticRange()')}} constructor which creates a {{domxref('StaticRange')}} object.
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/en-US/docs/DOM/Using_web_workers)
+  - : Used for creating a [Web worker](/zh-CN/docs/DOM/Using_web_workers)
 - {{domxref("Window.XMLSerializer")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.XPCNativeWrapper")}}
@@ -52,7 +53,7 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
 - {{domxref("Window.content")}} 和 `Window._content` {{Non-standard_inline}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回当前 window 的 content 元素的引用。通过带下划线的过时变种方法不再可以获得 Web content。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
+  - : returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : 返回浏览器 crypto 对象。
 - {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
@@ -105,7 +106,7 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : 返回菜单条对象，它的可视性可以在窗口中切换
 - {{domxref("Window.messageManager")}}
-  - : 返回窗口的 [message manager](/en-US/docs/The_message_manager) 对象。
+  - : 返回窗口的 [message manager](/zh-CN/docs/The_message_manager) 对象。
 - {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}} {{Deprecated_inline}}
   - : 返回当前动画循环开始经过的毫秒数
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{non-standard_inline}}
@@ -133,7 +134,7 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : 返回当前窗口或子窗口的父窗口的引用。
 - {{domxref("Window.performance")}} {{readOnlyInline}}
-  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Navigation_timing) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
+  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/zh-CN/docs/Navigation_timing) data. See also [Using Navigation Timing](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : 返回 personalbar 对象，它的可视性可以在窗口中切换。
 - {{domxref("Window.pkcs11")}} {{Deprecated_Inline}}
@@ -163,7 +164,7 @@ See also the [DOM Interfaces](/en-US/docs/DOM/DOM_Reference).
 - {{domxref("Window.sidebar")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : Returns a reference to the window object of the sidebar.
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.
+  - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) speech synthesis functionality.
 - {{domxref("Window.status")}}
   - : Gets/sets the text in the statusbar at the bottom of the browser.
 - {{domxref("Window.statusbar")}} {{readOnlyInline}}
@@ -250,8 +251,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Moves the window to the specified coordinates.
 - {{domxref("Window.open()")}}
   - : 打开一个新窗口。
-- {{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{Deprecated_Inline}}
-  - : 打开一个新的对话框窗口。
 - {{domxref("Window.postMessage()")}}
   - : 为一个窗口向另一个窗口发送数据字符串提供了一种安全方法，该窗口不必与第一个窗口处于相同的域中。
 - {{domxref("Window.print()")}}
@@ -327,10 +326,10 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface._
 
-> **备注：** Starting in {{Gecko("9.0")}}, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/en-US/docs/DOM/DOM_event_handlers) for details.
+> **备注：** Starting in Gecko 9.0, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/zh-CN/docs/DOM/DOM_event_handlers) for details.
 
 - {{domxref("Window.onappinstalled")}}
-  - : Called when the page is installed as a webapp. See {{event('appinstalled')}} event.
+  - : Called when the page is installed as a webapp. See `appinstalled` event.
 - {{domxref("Window.onbeforeinstallprompt")}}
   - : An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.
 - {{domxref("Window.ondevicelight")}}
@@ -344,9 +343,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("Window.ondeviceproximity")}}
   - : An event handler property for device proximity event
 - {{domxref("Window.ongamepadconnected")}}
-  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
+  - : Represents an event handler that will run when a gamepad is connected (when the [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) event fires).
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
+  - : Represents an event handler that will run when a gamepad is disconnected (when the [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) event fires).
 - {{domxref("Window.onpaint")}}
   - : An event handler property for paint events on the window.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}
@@ -354,28 +353,28 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("Window.onuserproximity")}}
   - : An event handler property for user proximity events.
 - {{domxref("Window.onvrdisplayconnect")}}
-  - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the {{event("vrdisplayconnected")}} event fires).
+  - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the `vrdisplayconnected` event fires).
 - {{domxref("Window.onvrdisplaydisconnect")}}
-  - : Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the {{event("vrdisplaydisconnected")}} event fires).
+  - : Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the `vrdisplaydisconnected` event fires).
 - {{domxref("Window.onvrdisplayactivate")}}
-  - : Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
+  - : Represents an event handler that will run when a display is able to be presented to (when the `vrdisplayactivate` event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
 - {{domxref("Window.onvrdisplaydeactivate")}}
-  - : Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
+  - : Represents an event handler that will run when a display can no longer be presented to (when the `vrdisplaydeactivate` event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
 - {{domxref("Window.onvrdisplayblur")}}
-  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
+  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the `vrdisplayblur` event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
 - {{domxref("Window.onvrdisplayfocus")}}
-  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the {{event("vrdisplayfocus")}} event fires).
+  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the `vrdisplayfocus` event fires).
 - {{domxref("Window.onvrdisplaypresentchange")}}
-  - : represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the {{event("vrdisplaypresentchange")}} event fires).
+  - : represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the `vrdisplaypresentchange` event fires).
 
 ### Event handlers implemented from elsewhere
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
 - {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Called when the print dialog box is closed. See {{event("afterprint")}} event.
+  - : Called when the print dialog box is closed. See [`afterprint`](/zh-CN/docs/Web/API/Window/afterprint_event) event.
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Called when the print dialog box is opened. See {{event("beforeprint")}} event.
+  - : Called when the print dialog box is opened. See [`beforeprint`](/zh-CN/docs/Web/API/Window/beforeprint_event) event.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
@@ -391,25 +390,25 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Called when the RIGHT mouse button is pressed
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.
+  - : Called when a resource fails to load OR when an error occurs at runtime. See [`error`](/zh-CN/docs/Web/API/Element/error_event) event.
 - {{domxref("GlobalEventHandlers.onfocus")}}
-  - : Called after the window receives or regains focus. See {{event("focus")}} events.
+  - : Called after the window receives or regains focus. See [`focus`](/zh-CN/docs/Web/API/Element/focus_event) events.
 - {{domxref("WindowEventHandlers.onhashchange")}}
-  - : An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.
+  - : An event handler property for [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event) events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.oninput")}}
   - : Called when the value of an \<input> element changes
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : Called when you begin pressing ANY key. See {{event("keydown")}} event.
+  - : Called when you begin pressing ANY key. See [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) event.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.
+  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) event.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
+  - : Called when you finish releasing ANY key. See [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) event.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{event("languagechange")}} events on the window.
+  - : An event handler property for [`languagechange`](/zh-CN/docs/Web/API/Window/languagechange_event) events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("WindowEventHandlers.onmessage")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.
+  - : Is an event handler representing the code to be called when the [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) event is raised.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Called when ANY mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
@@ -421,13 +420,13 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Called when ANY mouse button is released
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Called when network connection is lost. See {{event("offline")}} event.
+  - : Called when network connection is lost. See [`offline`](/zh-CN/docs/Web/API/Window/offline_event) event.
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Called when network connection is established. See {{event("online")}} event.
+  - : Called when network connection is established. See [`online`](/zh-CN/docs/Web/API/Window/online_event) event.
 - {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
+  - : Called when the user navigates away from the page, before the onunload event. See [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event) event.
 - {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.
+  - : Called after all resources and the DOM are fully loaded. See [`pageshow`](/zh-CN/docs/Web/API/Window/pageshow_event) event.
 - {{domxref("WindowEventHandlers.onpopstate")}}
   - : Called when a back button is pressed.
 - {{domxref("GlobalEventHandlers.onreset")}}
@@ -441,9 +440,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onselect")}}
   - : Called after text in an input field is selected
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.
+  - : Is an event handler representing the code to be called when the `selectionchange` event is raised.
 - {{domxref("WindowEventHandlers.onstorage")}}
-  - : Called when there is a change in session storage or local storage. See {{event("storage")}} event
+  - : Called when there is a change in session storage or local storage. See [`storage`](/zh-CN/docs/Web/API/Window/storage_event) event
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Called when a form is submitted
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
@@ -453,202 +452,202 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`error`](/en-US/docs/Web/API/Window/error_event)
+- [`error`](/zh-CN/docs/Web/API/Window/error_event)
   - : Fired when when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
     Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} 属性。
-- [`languagechange`](/en-US/docs/Web/API/Window/languagechange_event)
+- [`languagechange`](/zh-CN/docs/Web/API/Window/languagechange_event)
   - : Fired at the global scope object when the user's preferred language changes.
-    Also available via the [`onlanguagechange`](/en-US/docs/Web/API/Window/languagechange_event) 属性。
-- [`orientationchange`](/en-US/docs/Web/API/Window/orientationchange_event)
+    Also available via the [`onlanguagechange`](/zh-CN/docs/Web/API/Window/languagechange_event) 属性。
+- [`orientationchange`](/zh-CN/docs/Web/API/Window/orientationchange_event)
   - : Fired when the orientation of the device has changed.
-    Also available via the [`onorientationchange`](/en-US/docs/Web/API/Window/onorientationchange) 属性。
-- [`devicemotion`](/en-US/docs/Web/API/Window/devicemotion_event)
+    Also available via the [`onorientationchange`](/zh-CN/docs/Web/API/Window/onorientationchange) 属性。
+- [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
-- [`deviceorientation`](/en-US/docs/Web/API/Window/deviceorientation_event)
+- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
 - `{{domxref("Document/defaultView/resize_event", "resize")}}`
   - : Fired when the window has been resized.
-    Also available via the [`onresize`](/en-US/docs/Web/API/GlobalEventHandlers/onresize) 属性。
+    Also available via the [`onresize`](/zh-CN/docs/Web/API/GlobalEventHandlers/onresize) 属性。
 - `{{domxref("Document/defaultView/storage_event", "storage")}}`
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
-    Also available via the [`onstorage`](/en-US/docs/Web/API/Window/storage_event) 属性。
+    Also available via the [`onstorage`](/zh-CN/docs/Web/API/Window/storage_event) 属性。
 
 ### Animation events
 
-- [`animationcancel`](/en-US/docs/Web/API/Window/animationcancel_event)
+- [`animationcancel`](/zh-CN/docs/Web/API/Window/animationcancel_event)
   - : Fired when an animation unexpectedly aborts.
-    Also available via the [`onanimationcancel`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel) 属性。
-- [`animationend`](/en-US/docs/Web/API/Window/animationend_event)
+    Also available via the [`onanimationcancel`](/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationcancel) 属性。
+- [`animationend`](/zh-CN/docs/Web/API/Window/animationend_event)
   - : Fired when an animation has completed normally.
-    Also available via the [`onanimationend`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationend) 属性。
-- [`animationiteration`](/en-US/docs/Web/API/Window/animationiteration_event)
+    Also available via the [`onanimationend`](/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend) 属性。
+- [`animationiteration`](/zh-CN/docs/Web/API/Window/animationiteration_event)
   - : Fired when an animation iteration has completed.
-    Also available via the [`onanimationiteration`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration) 属性。
-- [`animationstart`](/en-US/docs/Web/API/Window/animationstart_event)
+    Also available via the [`onanimationiteration`](/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationiteration) 属性。
+- [`animationstart`](/zh-CN/docs/Web/API/Window/animationstart_event)
   - : Fired when an animation starts.
-    Also available via the [`onanimationstart`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart) 属性。
+    Also available via the [`onanimationstart`](/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationstart) 属性。
 
 ### Clipboard events
 
-- [`clipboardchange`](/en-US/docs/Web/API/Window/clipboardchange_event)
+- [`clipboardchange`](/zh-CN/docs/Web/API/Window/clipboardchange_event)
   - : Fired when the system clipboard content changes.
-- [`copy`](/en-US/docs/Web/API/Window/copy_event)
+- [`copy`](/zh-CN/docs/Web/API/Window/copy_event)
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the [`oncopy`](/en-US/docs/Web/API/HTMLElement/oncopy) 属性。
-- [`cut`](/en-US/docs/Web/API/Window/cut_event)
+    Also available via the [`oncopy`](/zh-CN/docs/Web/API/HTMLElement/oncopy) 属性。
+- [`cut`](/zh-CN/docs/Web/API/Window/cut_event)
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the [`oncut`](/en-US/docs/Web/API/HTMLElement/oncut) 属性。
-- [`paste`](/en-US/docs/Web/API/Window/paste_event)
+    Also available via the [`oncut`](/zh-CN/docs/Web/API/HTMLElement/oncut) 属性。
+- [`paste`](/zh-CN/docs/Web/API/Window/paste_event)
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the [`onpaste`](/en-US/docs/Web/API/HTMLElement/onpaste) 属性。
+    Also available via the [`onpaste`](/zh-CN/docs/Web/API/HTMLElement/onpaste) 属性。
 
 ### Connection events
 
-- [`offline`](/en-US/docs/Web/API/Window/offline_event)
+- [`offline`](/zh-CN/docs/Web/API/Window/offline_event)
   - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
     Also available via the {{domxref("WindowEventHandlers.onoffline", "onoffline")}} 属性。
-- [`online`](/en-US/docs/Web/API/Window/online_event)
+- [`online`](/zh-CN/docs/Web/API/Window/online_event)
   - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
     Also available via the {{domxref("WindowEventHandlers.ononline", "ononline")}} 属性。
 
 ### Focus events
 
-- [`blur`](/en-US/docs/Web/API/Window/blur_event)
+- [`blur`](/zh-CN/docs/Web/API/Window/blur_event)
   - : Fired when an element has lost focus.
-    Also available via the [`onblur`](/en-US/docs/Web/API/GlobalEventHandlers/onblur) 属性。
-- [`focus`](/en-US/docs/Web/API/Window/focus_event)
+    Also available via the [`onblur`](/zh-CN/docs/Web/API/GlobalEventHandlers/onblur) 属性。
+- [`focus`](/zh-CN/docs/Web/API/Window/focus_event)
   - : Fired when an element has gained focus.
-    Also available via the [`onfocus`](/en-US/docs/Web/API/GlobalEventHandlers/onfocus) property
+    Also available via the [`onfocus`](/zh-CN/docs/Web/API/GlobalEventHandlers/onfocus) property
 
 ### Gamepad events
 
-- [`gamepadconnected`](/en-US/docs/Web/API/Window/gamepadconnected_event)
+- [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event)
   - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
-    Also available via the [`ongamepadconnected`](/en-US/docs/Web/API/Window/ongamepadconnected) 属性。
-- [`gamepaddisconnected`](/en-US/docs/Web/API/Window/gamepaddisconnected_event)
+    Also available via the [`ongamepadconnected`](/zh-CN/docs/Web/API/Window/ongamepadconnected) 属性。
+- [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event)
   - : Fired when the browser detects that a gamepad has been disconnected.
-    Also available via the [`ongamepaddisconnected`](/en-US/docs/Web/API/Window/ongamepaddisconnected) property
+    Also available via the [`ongamepaddisconnected`](/zh-CN/docs/Web/API/Window/ongamepaddisconnected) property
 
 ### History events
 
-- [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event)
+- [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event)
   - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
-    Also available via the [`onhashchange`](/en-US/docs/Web/API/Window/hashchange_event) 属性。
-- [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event)
+    Also available via the [`onhashchange`](/zh-CN/docs/Web/API/Window/hashchange_event) 属性。
+- [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event)
   - : Sent when the browser hides the current document while in the process of switching to displaying in its palce a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
-    Also available through the [`onpagehide`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpagehide) event handler 属性。
-- [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event)
+    Also available through the [`onpagehide`](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/onpagehide) event handler 属性。
+- [`pageshow`](/zh-CN/docs/Web/API/Window/pageshow_event)
   - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
-    Also available using the [`onpageshow`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpageshow) event handler 属性。
+    Also available using the [`onpageshow`](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/onpageshow) event handler 属性。
 - `{{domxref("Document/defaultView/popstate_event", "popstate")}}`
   - : Fired when the active history entry changes.
-    Also available using the [`onpopstate`](/en-US/docs/Web/API/Window/popstate_event) event handler 属性。
+    Also available using the [`onpopstate`](/zh-CN/docs/Web/API/Window/popstate_event) event handler 属性。
 
 ### Load & unload events
 
-- [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event)
+- [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)
   - : Fired when the window, the document and its resources are about to be unloaded.
-    Also available via the [`onbeforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) 属性。
-- [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+    Also available via the [`onbeforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event) 属性。
+- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event)
   - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
-- [`load`](/en-US/docs/Web/API/Window/load_event)
+- [`load`](/zh-CN/docs/Web/API/Window/load_event)
   - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
-    Also available via the [`onload`](/en-US/docs/Web/API/GlobalEventHandlers/onload) 属性。
-- [`unload`](/en-US/docs/Web/API/Window/unload_event)
+    Also available via the [`onload`](/zh-CN/docs/Web/API/GlobalEventHandlers/onload) 属性。
+- [`unload`](/zh-CN/docs/Web/API/Window/unload_event)
   - : Fired when the document or a child resource is being unloaded.
-    Also available via the [`onunload`](/en-US/docs/Web/API/Window/unload_event) 属性。
+    Also available via the [`onunload`](/zh-CN/docs/Web/API/Window/unload_event) 属性。
 
 ### Manifest events
 
-- [`appinstalled`](/en-US/docs/Web/API/Window/appinstalled_event)
+- [`appinstalled`](/zh-CN/docs/Web/API/Window/appinstalled_event)
   - : Fired when the browser has successfully installed a page as an application.
-    Also available via the [onappinstalled](/en-US/docs/Web/API/Window/onappinstalled) 属性。
-- [`beforeinstallprompt`](/en-US/docs/Web/API/Window/beforeinstallprompt_event)
+    Also available via the [onappinstalled](/zh-CN/docs/Web/API/Window/onappinstalled) 属性。
+- [`beforeinstallprompt`](/zh-CN/docs/Web/API/Window/beforeinstallprompt_event)
   - : Fired when a user is about to be prompted to install a web application.
-    Also available via the [`onbeforeinstallprompt`](/en-US/docs/Web/API/Window/onbeforeinstallprompt) 属性。
+    Also available via the [`onbeforeinstallprompt`](/zh-CN/docs/Web/API/Window/onbeforeinstallprompt) 属性。
 
 ### Messaging events
 
-- [`message`](/en-US/docs/Web/API/Window/message_event)
-  - : Fired when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
-    Also available via the [`onmessage`](/en-US/docs/Web/API/Window/message_event) 属性。
-- [`messageerror`](/en-US/docs/Web/API/Window/messageerror_event)
+- [`message`](/zh-CN/docs/Web/API/Window/message_event)
+  - : Fired when the window receives a message, for example from a call to [`Window.postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) from another browsing context.
+    Also available via the [`onmessage`](/zh-CN/docs/Web/API/Window/message_event) 属性。
+- [`messageerror`](/zh-CN/docs/Web/API/Window/messageerror_event)
   - : Fired when a `Window` object receives a message that can't be deserialized.
-    Also available via the [`onmessageerror`](/en-US/docs/Web/API/Window/messageerror_event) 属性。
+    Also available via the [`onmessageerror`](/zh-CN/docs/Web/API/Window/messageerror_event) 属性。
 
 ### Print events
 
-- [`afterprint`](/en-US/docs/Web/API/Window/afterprint_event)
+- [`afterprint`](/zh-CN/docs/Web/API/Window/afterprint_event)
   - : Fired after the associated document has started printing or the print preview has been closed.
-    Also available via the [`onafterprint`](/en-US/docs/Web/API/Window/afterprint_event) 属性。
-- [`beforeprint`](/en-US/docs/Web/API/Window/beforeprint_event)
+    Also available via the [`onafterprint`](/zh-CN/docs/Web/API/Window/afterprint_event) 属性。
+- [`beforeprint`](/zh-CN/docs/Web/API/Window/beforeprint_event)
   - : Fired when the associated document is about to be printed or previewed for printing.
-    Also available via the [`onbeforeprint`](/en-US/docs/Web/API/Window/beforeprint_event) 属性。
+    Also available via the [`onbeforeprint`](/zh-CN/docs/Web/API/Window/beforeprint_event) 属性。
 
 ### Promise rejection events
 
-- [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)
+- [`rejectionhandled`](/zh-CN/docs/Web/API/Window/rejectionhandled_event)
   - : Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.
-    Also available through the [`onrejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event) event handler 属性。
-- [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event)
+    Also available through the [`onrejectionhandled`](/zh-CN/docs/Web/API/Window/rejectionhandled_event) event handler 属性。
+- [`unhandledrejection`](/zh-CN/docs/Web/API/Window/unhandledrejection_event)
   - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
-    Also available using the [`onunhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) event handler 属性。
+    Also available using the [`onunhandledrejection`](/zh-CN/docs/Web/API/Window/unhandledrejection_event) event handler 属性。
 
 ### Transition events
 
-- [`transitioncancel`](/en-US/docs/Web/API/Window/transitioncancel_event)
-  - : Fired when a [CSS transition](/en-US/docs/CSS/Using_CSS_transitions) is canceled.
-    Also available via the [`ontransitioncancel`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel) 属性。
-- [`transitionend`](/en-US/docs/Web/API/Window/transitionend_event)
-  - : Fired when a [CSS transition](/en-US/docs/CSS/Using_CSS_transitions) has completed.
-    Also available via the [`ontransitionend`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend) 属性。
-- [`transitionrun`](/en-US/docs/Web/API/Window/transitionrun_event)
-  - : Fired when a [CSS transition](/en-US/docs/CSS/Using_CSS_transitions) is first created.
-    Also available via the [`ontransitionrun`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun) 属性。
-- [`transitionstart`](/en-US/docs/Web/API/Window/transitionstart_event)
-  - : Fired when a [CSS transition](/en-US/docs/CSS/Using_CSS_transitions) has actually started.
-    Also available via the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) 属性。
+- [`transitioncancel`](/zh-CN/docs/Web/API/Window/transitioncancel_event)
+  - : Fired when a [CSS transition](/zh-CN/docs/CSS/Using_CSS_transitions) is canceled.
+    Also available via the [`ontransitioncancel`](/zh-CN/docs/Web/API/GlobalEventHandlers/ontransitioncancel) 属性。
+- [`transitionend`](/zh-CN/docs/Web/API/Window/transitionend_event)
+  - : Fired when a [CSS transition](/zh-CN/docs/CSS/Using_CSS_transitions) has completed.
+    Also available via the [`ontransitionend`](/zh-CN/docs/Web/API/GlobalEventHandlers/ontransitionend) 属性。
+- [`transitionrun`](/zh-CN/docs/Web/API/Window/transitionrun_event)
+  - : Fired when a [CSS transition](/zh-CN/docs/CSS/Using_CSS_transitions) is first created.
+    Also available via the [`ontransitionrun`](/zh-CN/docs/Web/API/GlobalEventHandlers/ontransitionrun) 属性。
+- [`transitionstart`](/zh-CN/docs/Web/API/Window/transitionstart_event)
+  - : Fired when a [CSS transition](/zh-CN/docs/CSS/Using_CSS_transitions) has actually started.
+    Also available via the [`ontransitionstart`](/zh-CN/docs/Web/API/GlobalEventHandlers/ontransitionstart) 属性。
 
 ### WebVR events
 
-- [`vrdisplayactivate`](/en-US/docs/Web/API/Window/vrdisplayactivate_event)
+- [`vrdisplayactivate`](/zh-CN/docs/Web/API/Window/vrdisplayactivate_event)
   - : Fired when a VR display becomes available to be presented to, for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
-    Also available via the [`onvrdisplayactivate`](/en-US/docs/Web/API/Window/onvrdisplayactivate) 属性。
-- [`vrdisplayblur`](/en-US/docs/Web/API/Window/vrdisplayblur_event)
+    Also available via the [`onvrdisplayactivate`](/zh-CN/docs/Web/API/Window/onvrdisplayactivate) 属性。
+- [`vrdisplayblur`](/zh-CN/docs/Web/API/Window/vrdisplayblur_event)
   - : Fired when presentation to a VR display has been paused for some reason by the browser, OS, or VR hardware.
-    Also available via the [`onvrdisplayblur`](/en-US/docs/Web/API/Window/onvrdisplayblur) 属性。
-- [`vrdisplayconnect`](/en-US/docs/Web/API/Window/vrdisplayconnect_event)
+    Also available via the [`onvrdisplayblur`](/zh-CN/docs/Web/API/Window/onvrdisplayblur) 属性。
+- [`vrdisplayconnect`](/zh-CN/docs/Web/API/Window/vrdisplayconnect_event)
   - : Fired when a compatible VR display is connected to the computer.
-    Also available via the [`onvrdisplayconnect`](/en-US/docs/Web/API/Window/onvrdisplayconnect) 属性。
-- [`vrdisplaydeactivate`](/en-US/docs/Web/API/Window/vrdisplaydeactivate_event)
+    Also available via the [`onvrdisplayconnect`](/zh-CN/docs/Web/API/Window/onvrdisplayconnect) 属性。
+- [`vrdisplaydeactivate`](/zh-CN/docs/Web/API/Window/vrdisplaydeactivate_event)
   - : Fired when a VR display can no longer be presented to, for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
-    Also available via the [`onvrdisplaydeactivate`](/en-US/docs/Web/API/Window/onvrdisplaydeactivate) 属性。
-- [`vrdisplaydisconnect`](/en-US/docs/Web/API/Window/vrdisplaydisconnect_event)
+    Also available via the [`onvrdisplaydeactivate`](/zh-CN/docs/Web/API/Window/onvrdisplaydeactivate) 属性。
+- [`vrdisplaydisconnect`](/zh-CN/docs/Web/API/Window/vrdisplaydisconnect_event)
   - : Fired when a compatible VR display is disconnected from the computer.
-    Also available via the [`onvrdisplaydisconnect`](/en-US/docs/Web/API/Window/onvrdisplaydisconnect) 属性。
-- [`vrdisplayfocus`](/en-US/docs/Web/API/Window/vrdisplayfocus_event)
+    Also available via the [`onvrdisplaydisconnect`](/zh-CN/docs/Web/API/Window/onvrdisplaydisconnect) 属性。
+- [`vrdisplayfocus`](/zh-CN/docs/Web/API/Window/vrdisplayfocus_event)
   - : Fired when presentation to a VR display has resumed after being blurred.
-    Also available via the [`onvrdisplayfocus`](/en-US/docs/Web/API/Window/onvrdisplayfocus) 属性。
-- [`vrdisplaypresentchange`](/en-US/docs/Web/API/Window/vrdisplaypresentchange_event)
+    Also available via the [`onvrdisplayfocus`](/zh-CN/docs/Web/API/Window/onvrdisplayfocus) 属性。
+- [`vrdisplaypresentchange`](/zh-CN/docs/Web/API/Window/vrdisplaypresentchange_event)
   - : fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-    Also available via the [`onvrdisplaypresentchange`](/en-US/docs/Web/API/Window/onvrdisplaypresentchange) 属性。
-- [`vrdisplaypointerrestricted`](/en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event)
-  - : Fired when the VR display's pointer input is restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).
-    Also available via the [`onvrdisplaypointerrestricted`](/en-US/docs/Web/API/Window/onvrdisplaypointerrestricted) 属性。
-- [`vrdisplaypointerunrestricted`](/en-US/docs/Web/API/Window/vrdisplaypointerunrestricted_event)
-  - : Fired when the VR display's pointer input is no longer restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).
-    Also available via the [`onvrdisplaypointerunrestricted`](/en-US/docs/Web/API/Window/onvrdisplaypointerunrestricted) 属性。
+    Also available via the [`onvrdisplaypresentchange`](/zh-CN/docs/Web/API/Window/onvrdisplaypresentchange) 属性。
+- [`vrdisplaypointerrestricted`](/zh-CN/docs/Web/API/Window/vrdisplaypointerrestricted_event)
+  - : Fired when the VR display's pointer input is restricted to consumption via a [pointerlocked element](/zh-CN/docs/Web/API/Pointer_Lock_API).
+    Also available via the [`onvrdisplaypointerrestricted`](/zh-CN/docs/Web/API/Window/onvrdisplaypointerrestricted) 属性。
+- [`vrdisplaypointerunrestricted`](/zh-CN/docs/Web/API/Window/vrdisplaypointerunrestricted_event)
+  - : Fired when the VR display's pointer input is no longer restricted to consumption via a [pointerlocked element](/zh-CN/docs/Web/API/Pointer_Lock_API).
+    Also available via the [`onvrdisplaypointerunrestricted`](/zh-CN/docs/Web/API/Window/onvrdisplaypointerunrestricted) 属性。
 
 ## 接口
 
-See [DOM Reference](/en-US/docs/DOM/DOM_Reference)
+See [DOM Reference](/zh-CN/docs/DOM/DOM_Reference)
 
 ## 浏览器兼容性
 
-{{Compat("api.Window")}}
+{{Compat}}
 
 ## 参见
 
-- [Working with windows in chrome code](/en-US/docs/Working_with_windows_in_chrome_code)
+- [Working with windows in chrome code](/zh-CN/docs/Working_with_windows_in_chrome_code)

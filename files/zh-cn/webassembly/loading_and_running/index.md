@@ -2,6 +2,7 @@
 title: 加载和运行 WebAssembly 代码
 slug: WebAssembly/Loading_and_running
 ---
+
 {{WebAssemblySidebar}}
 
 为了在 JavaScript 中使用 WebAssembly，在编译/实例化之前，你首先需要把模块放入内存。比如，通过[XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)或[Fetch](/zh-CN/docs/Web/API/Fetch_API)，模块将会被初始化为带类型数组；不过，将来会开发更多的方式。本文提供了一篇关于获取 WebAssembly 字节码的不同机制以及如何编译/实例化并运行它的参考。

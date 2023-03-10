@@ -3,6 +3,7 @@ title: Signature (functions) (シグネチャ (関数))
 slug: Glossary/Signature/Function
 original_slug: Glossary/Signature/関数
 ---
+
 **関数シグネチャ** (もしくは型シグネチャ、メソッドシグネチャ) は{{Glossary("Function", "関数")}}や{{Glossary("Method", "メソッド")}}の入力と出力を定義します。
 
 シグネチャは以下のものを含みます:
@@ -45,4 +46,4 @@ public static void main(String[] args)
 
 ### `一般知識`
 
-- Wikipedia の {{Interwiki("wikipedia", "Type signature#Java", "Java internal type signatures")}}
+- Wikipedia の [Java internal type signatures](https://en.wikipedia.org/wiki/Type_signature#Java)

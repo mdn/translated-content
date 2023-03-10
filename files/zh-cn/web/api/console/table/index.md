@@ -1,7 +1,8 @@
 ---
 title: Console.table()
-slug: Web/API/Console/table
+slug: Web/API/console/table
 ---
+
 {{APIRef("Console API")}}
 
 将数据以表格的形式显示。

@@ -2,6 +2,7 @@
 title: GeolocationCoordinates.altitude
 slug: Web/API/GeolocationCoordinates/altitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.altitude`** は読み取り専用のプロパティであり、 `double` 値で、その位置の [WGS84](https://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf) 楕円体（公称海面水準を定義するもの）からの高度をメートル単位で表します。この値は、実装がこのデータを提供できない場合は `null` となります。

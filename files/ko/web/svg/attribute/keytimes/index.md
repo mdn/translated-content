@@ -1,9 +1,8 @@
 ---
 title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
-translation_of: Web/SVG/Attribute/keyTimes
 ---
-« [SVG Attribute reference home](/ko/docs/Web/SVG/Attribute "en-US/docs/Web/SVG/Attribute")
+« [SVG Attribute reference home](/ko/docs/Web/SVG/Attribute)
 
 `keyTimes` 속성은 애니메이션의 pacing을 제어하는 데 사용되는 세미콜론으로 구분 된 시간 값 목록입니다. 목록의 각 시간은 {{ SVGAttr("values") }} 속성 목록의 값에 해당하며 애니메이션에서 값이 사용되는 시기를 정의합니다. `keyTimes` 목록의 각 시간 값은 0과 1 사이의 부동 소수점 값으로 지정되며 애니메이션 요소의 지속 시간에 대한 비례 오프셋을 나타냅니다.
 
@@ -24,7 +23,7 @@ If the duration is indefinite, any `keyTimes` specification will be ignored.
 
 | Categories         | Animation value attribute                                                        |
 | ------------------ | -------------------------------------------------------------------------------- |
-| Value              | <list>                                                                           |
+| Value              | \<list>                                                                           |
 | Animatable         | No                                                                               |
 | Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#KeyTimesAttribute) |
 

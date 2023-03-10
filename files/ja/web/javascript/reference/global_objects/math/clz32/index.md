@@ -1,14 +1,8 @@
 ---
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
+
 {{JSRef}}
 
 **`Math.clz32()`** 関数は、引数として与えられた数値の 32 ビットバイナリ表現での先頭の 0 の個数を返します。
@@ -161,9 +155,7 @@ if (!Math.clz32) Math.clz32 = (function(log, LN2){
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

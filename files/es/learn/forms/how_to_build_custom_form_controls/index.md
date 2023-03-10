@@ -1,12 +1,12 @@
 ---
 title: Cómo crear widgets de formularios personalizados
 slug: Learn/Forms/How_to_build_custom_form_controls
-translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
-Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/HTML/Forms/The_native_form_widgets "/en-US/docs/HTML/Forms/The_native_form_widgets") simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Advanced_styling_for_HTML_forms "/en-US/docs/Advanced_styling_for_HTML_forms") en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.
+Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/HTML/Forms/The_native_form_widgets) simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Advanced_styling_for_HTML_forms) en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.
 
 En este aartículo, veremos cómo construir dicho widget. Para ello, trabajaremos con un ejemplo: Reconstruir el elemento {{HTMLElement("select")}}.
 
@@ -26,33 +26,33 @@ En términos de comportamiento, queremos que nuestro widget sea utilizable tanto
 
 El widget está en su estado normal cuando:
 
-  - La página carga
-  - El widget estaba activo y el usuario hace clic en cualquier lugar fuera del widget
-  - El widget estaba activo y el usuario mueve el foco a otro widget usando el teclado
+- La página carga
+- El widget estaba activo y el usuario hace clic en cualquier lugar fuera del widget
+- El widget estaba activo y el usuario mueve el foco a otro widget usando el teclado
 
 > **Nota:** Mover el foco al rededor de la página generalmente se hace presionando la tecla de tabulación, pero este no es el estándar en todas partes. Por ejemplo, el ciclo a través de enlaces en una página se realiza en Safari de forma predeterminada usando la combinación [combinación Opction+Tab](http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
 
 El widget está en su estado activo cuando:
 
-  - El usuario hace clic en él
-  - El usuario presiona la tecla tab y obtiene foco
-  - El widget estaba en su estado abierto y el usuario hace clic en el widget.
+- El usuario hace clic en él
+- El usuario presiona la tecla tab y obtiene foco
+- El widget estaba en su estado abierto y el usuario hace clic en el widget.
 
 El widget está en su estado abierto cuando:
 
-  - El widget está en cualquier otro estado diferente a abierto y el usuario hace clic en él.
+- El widget está en cualquier otro estado diferente a abierto y el usuario hace clic en él.
 
 Una vez que sabemos cómo cambiar los estados, es importante definir cómo cambiar el valor del widget:
 
 El valor cambia cuando:
 
-  - El usuario hace clic en una opción cuando el widget está en estado abierto
-  - El usuario pulsa las teclas de flecha hacia arriba o hacia abajocuando el widget está en estado activo
+- El usuario hace clic en una opción cuando el widget está en estado abierto
+- El usuario pulsa las teclas de flecha hacia arriba o hacia abajocuando el widget está en estado activo
 
 Finalmente, definamos cómo se comportarán las opciones del widget:
 
-  - Cuando se abre el widget, se resalta la opción seleccionada
-  - Cuando el ratón está sobre una opción, la opción se resalta y la opción resaltada anteriormente vuelve a su estado normal
+- Cuando se abre el widget, se resalta la opción seleccionada
+- Cuando el ratón está sobre una opción, la opción se resalta y la opción resaltada anteriormente vuelve a su estado normal
 
 Para los fines de nuestro ejemplo, nos detendremos con eso; sin embargo, si eres un lector cuidadoso, notarás que faltan algunos comportamientos. Por ejemplo, ¿qué crees que sucederá si el usuario pulsa la tecla de tabulación mientras el widget está en estado abierto? La respuesta es ... nada. OK, el comportamiento correcto parece obvio, pero el hecho es que, como no está definido en nuestras especificaciones, es muy fácil pasar por alto este comportamiento. Esto es especialmente cierto en un entorno de equipo cuando las personas que diseñan el comportamiento del widget son diferentes de las que lo implementan.
 
@@ -287,13 +287,13 @@ So here's the result with our three states:
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
@@ -394,10 +394,10 @@ window.addEventListener("load", function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_2")}}
+        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_2")}}
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
@@ -418,16 +418,16 @@ window.addEventListener("load", function () {
 
 In the code we are about to build, we will use the standard DOM API to do all the work we need. However, although DOM API support has gotten much better in browsers, there are always issues with legacy browsers (especially with good old Internet Explorer).
 
-If you want to avoid trouble with legacy browsers, there are two ways to do so: using a dedicated framework such as [jQuery](http://jquery.com/ "http://jquery.com/"), [$dom](https://github.com/julienw/dollardom "https://github.com/julienw/dollardom"), [prototype](http://prototypejs.org/ "http://prototypejs.org/"), [Dojo](http://dojotoolkit.org/ "http://dojotoolkit.org/"), [YUI](http://yuilibrary.com/), or the like, or by polyfilling the missing feature you want to use (which can easily be done through conditional loading, with the [yepnope](http://yepnopejs.com/) library for example).
+If you want to avoid trouble with legacy browsers, there are two ways to do so: using a dedicated framework such as [jQuery](http://jquery.com/), [$dom](https://github.com/julienw/dollardom), [prototype](http://prototypejs.org/), [Dojo](http://dojotoolkit.org/), [YUI](http://yuilibrary.com/), or the like, or by polyfilling the missing feature you want to use (which can easily be done through conditional loading, with the [yepnope](http://yepnopejs.com/) library for example).
 
 The features we plan to use are the following (ordered from the riskiest to the safest):
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener")}}
-3.  [`forEach`](/es/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (This is not DOM but modern JavaScript)
-4.  {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener")}}
+3. [`forEach`](/es/docs/JavaScript/Reference/Global_Objects/Array/forEach) (This is not DOM but modern JavaScript)
+4. {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/es/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). This is important because `Array` objects support the [`forEach`](/es/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
+Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/es/docs/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/es/docs/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -570,8 +570,8 @@ At that point, our widget will change state according to our design, but its val
 
 | Live example                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_3")}}                       |
-| [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3 "/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3") |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
+| [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3) |
 
 ### Handling the widget's value
 
@@ -664,14 +664,14 @@ window.addEventListener('load', function () {
 });
 ```
 
-In the code above, it's worth noting the use of the [`tabIndex`](/es/docs/Web/API/HTMLElement/tabIndex "/en-US/docs/Web/API/HTMLElement/tabIndex") property. Using this property is necessary to ensure that the native widget will never gain focus, and to make sure that our custom widget gains focus when the user uses his keyboard or his mouse.
+In the code above, it's worth noting the use of the [`tabIndex`](/es/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native widget will never gain focus, and to make sure that our custom widget gains focus when the user uses his keyboard or his mouse.
 
 With that, we're done! Here's the result:
 
 | Live example                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_4")}}                       |
-| [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4 "/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4") |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
+| [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4) |
 
 But wait a second, are we really done?
 
@@ -679,15 +679,15 @@ But wait a second, are we really done?
 
 We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
 
-Fortunately, there is a solution and it's called [ARIA](/es/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA"). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](http://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom widgets accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes is dead simple, so let's do it.
+Fortunately, there is a solution and it's called [ARIA](/es/docs/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](http://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom widgets accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes is dead simple, so let's do it.
 
 ### The `role` attribute
 
-The key attribute used by [ARIA](/es/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") is the [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques") attribute. The [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques") attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/es/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role") role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
+The key attribute used by [ARIA](/es/docs/Accessibility/ARIA) is the [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/es/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
 
 It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our widget will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
 
-To support the [`listbox`](/es/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role") role, we just have to update our HTML like this:
+To support the [`listbox`](/es/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) role, we just have to update our HTML like this:
 
 ```html
 <!-- We add the role="listbox" attribute to our top element -->
@@ -705,11 +705,11 @@ To support the [`listbox`](/es/docs/Accessibility/ARIA/ARIA_Techniques/Using_the
 </div>
 ```
 
-> **Nota:** Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/CSS/Attribute_selectors "/en-US/docs/CSS/Attribute_selectors").
+> **Nota:** Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/CSS/Attribute_selectors).
 
 ### The `aria-selected` attribute
 
-Using the [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques") attribute is not enough. [ARIA](/es/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") also provides many states and property attributes. The more and better you use them, the better your widget will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
+Using the [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute is not enough. [ARIA](/es/docs/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your widget will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
 
 The `aria-selected` attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our `updateValue()` function:
 
@@ -737,8 +737,8 @@ Here is the final result of all these changes (you'll get a better feel for this
 
 | Live example                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_5")}}                             |
-| [Check out the final source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5 "/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2") |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
+| [Check out the final source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
 
 ## Conclusion
 
@@ -749,7 +749,7 @@ Here are a few libraries you should consider before coding your own:
 - [jQuery UI](http://jqueryui.com/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 - [Nice Forms](http://www.emblematiq.com/lab/niceforms/)
-- [And many more…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a "https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a")
+- [And many more…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a)
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise. Also, you need to make it feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
 

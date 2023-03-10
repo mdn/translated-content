@@ -1,18 +1,8 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - 푸시
-  - 푸시 알림
-translation_of: Web/API/PushManager
 ---
+
 {{ApiRef("Push API")}}
 
 [Push API](/ko/docs/Web/API/Push_API)의 **`PushManager`** 인터페이스는 서드파티 서버에서 알림을 수신하거나, URL에 푸시 알림을 요청하는 방법을 제공합니다.

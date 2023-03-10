@@ -3,6 +3,7 @@ title: WorkerGlobalScope.navigator
 slug: Web/API/WorkerGlobalScope/navigator
 translation_of: Web/API/WorkerGlobalScope/navigator
 ---
+
 {{APIRef("Web Workers API")}}
 
 La propriété en lecture seule **`navigator`** de l'interface {{domxref("WorkerGlobalScope")}} retourne le {{domxref("WorkerNavigator")}} associé au worker. C'est un objet navigator spécifique, essentiellement un sous-ensemble de {{domxref("Navigator")}} pour les contextes de navigation, mais adapté aux workers.
@@ -15,7 +16,7 @@ var navigatorObj = self.navigator;
 
 ### Valeur de retour
 
-Un objet  {{domxref("WorkerNavigator")}}.
+Un objet {{domxref("WorkerNavigator")}}.
 
 ## Exemple
 

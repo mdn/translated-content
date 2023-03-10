@@ -2,6 +2,7 @@
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`DataTransfer.getData()`** メソッドは、指定した型のドラッグデータを（文字列として）受け取ります。ドラッグ操作がデータを含んでいない場合、このメソッドは空文字列を返します。

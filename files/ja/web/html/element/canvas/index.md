@@ -1,17 +1,9 @@
 ---
 title: '<canvas>: グラフィックキャンバス要素'
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<canvas>` 要素** と [Canvas スクリプティング API](/ja/docs/Web/API/Canvas_API) や [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して、グラフィックやアニメーションを描画することができます。
 
@@ -115,7 +107,7 @@ translation_of: Web/HTML/Element/canvas
 | Safari     | 32,767 pixels | 32,767 pixels | 268,435,456 pixels (つまり 16,384 x 16,384) |
 | IE         | 8,192 pixels  | 8,192 pixels  | ?                                           |
 
-> **Note:** 寸法や面積の最大値を超えると、キャンバスが使用できなくなります。 — 描画コマンドが動作しなくなります。
+> **メモ:** 寸法や面積の最大値を超えると、キャンバスが使用できなくなります。 — 描画コマンドが動作しなくなります。
 
 ## 例
 
@@ -158,10 +150,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}}             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'semantics-scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

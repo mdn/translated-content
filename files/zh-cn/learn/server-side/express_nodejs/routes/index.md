@@ -2,6 +2,7 @@
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 本节将为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 站点中所需的资源端点（Endpoint）配置路由。先用空的处理函数搭建起路由处理的模块结构（下节会将它们扩充为真实的处理函数）。并详细介绍了 Express 路由模块的创建方法。
@@ -12,10 +13,10 @@ slug: Learn/Server-side/Express_Nodejs/routes
       <th scope="row">预备知识：</th>
       <td>
         回顾
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express/Node 入门</a
         >。完成本教程之前小节（<a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose"
+          href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose"
           >Express 教程 3：使用数据库 (Mongoose)</a
         >
         等）。了解服务器端编程，了解正则表达式。
@@ -40,7 +41,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 - 控制器：从模型中获取请求的数据，创建一个 HTML 页面显示出数据，并将页面返回给用户，以便在浏览器中查看。
 - 视图（模板）：供控制器用来渲染数据。
 
-![Express HTTP 请求/响应 路径](https://mdn.mozillademos.org/files/16453/Express_MVC.png)
+![Express HTTP 请求/响应 路径](mvc_express.png)
 
 因此我们需要页面来显示藏书、藏书种类、作者、藏书副本的列表和详细信息，还需要页面来创建、更新和删除记录。这些内容对于本节来说不算少，因此本节将主要集中在路由和控制器设置。本节编写的这些函数都只有框架，后续章节再扩展控制器方法，以使用模型数据。
 
@@ -105,17 +106,17 @@ router.get('/about', (req, res) => {
 
 该回调有三个参数（通常命名为：`req`、`res`、`next`），分别是：HTTP 请求对象、HTTP 响应、中间件链中的下一个函数。
 
-> **备注：** 路由函数就是 [Express 中间件](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
+> **备注：** 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
 >
 > 上述路由函数只需要一个回调，可以根据需要指定任意数量的回调参数，或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
 
-此处的回调对响应对象调用 [`send()`](https://expressjs.com/en/4x/api.html#res.send)，当收到带有路径（'`/about'`）的 GET 请求时将返回字符串“关于此维基”。还有许多其它可以结束请求/响应周期 [响应方法](https://expressjs.com/en/guide/routing.html#response-methods)，例如，可调用 [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) 来发送 JSON 响应，或调用 [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) 来发送文件。构建 LocalLibrary 最常使用的响应方法是 [`render()`](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和数据创建并返回 HTML 文件。后续章节进一步讨论。
+此处的回调对响应对象调用 [`send()`](https://expressjs.com/en/4x/api.html#res.send)，当收到带有路径（'`/about'`）的 GET 请求时将返回字符串“关于此维基”。还有许多其他可以结束请求/响应周期 [响应方法](https://expressjs.com/en/guide/routing.html#response-methods)，例如，可调用 [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) 来发送 JSON 响应，或调用 [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) 来发送文件。构建 LocalLibrary 最常使用的响应方法是 [`render()`](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和数据创建并返回 HTML 文件。后续章节进一步讨论。
 
 ### HTTP 动词
 
 上面的示例使用 `Router.get()` 方法来响应特定路径的 HTTP GET 请求。
 
-`Router` 还为所有其他 HTTP 动词提供路由方法，大都用法相同：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, ​​​​​​ `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, 和 `connect()`。
+`Router` 还为所有其他 HTTP 动词提供路由方法，大都用法相同：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, 和 `connect()`。
 
 比如下方代码与上方 `/about` 路由行为一致，但只响应 HTTP POST 请求。
 
@@ -171,7 +172,7 @@ app.get('/users/:userId/books/:bookId', (req, res) => {
 以下是站点页面的完整 URL 列表。`<object>` 是模型名称（`book`、`bookinstance`、`genre`、`author`），`<objects>` 是一组模型，`<id>` 是每个 Mongoose 模型实例默认的标识字段（`_id`）。
 
 - `catalog/`：主页。
-- `catalog/<objects>/`：模型（藏书、藏书副本、藏书种类、作者）的完整列表（例如 /`catalog/books/`、/`catalog/genres/` 等）
+- `catalog/<objects>/`：模型（藏书、藏书副本、藏书种类、作者）的完整列表（例如 `/catalog/books/`、`/catalog/genres/` 等）
 - `catalog/<object>/<id>`_：具有_ `_id` 字段值的特定模型的详细信息页面（例如 `/catalog/book/584493c1f4887f06c0e67d37`）。
 - `catalog/<object>/create`：添加新模型的表单（例如 `/catalog/book/create`）。
 - `catalog/<object>/<id>/update`：更新具有 `_id` 字段值的特定模型的表单（例如 `/catalog/book/584493c1f4887f06c0e67d37/update`）。
@@ -366,13 +367,13 @@ app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
 - 默认方法
 
   ```bash
-  $ DEBUG=express-locallibrary-tutorial:* npm start
+  DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- 如果设置过 [nodemon](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，则可以使用：
+- 如果设置过 [nodemon](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，则可以使用：
 
   ```bash
-  $ DEBUG=express-locallibrary-tutorial:* npm run devstart
+  DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
 > **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见 [教程 2 相关译注](zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
@@ -400,15 +401,3 @@ app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
 - [路由简介](http://expressjs.com/en/guide/routing.html) (Express 官方文档)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
-
-## 本章目录
-
-- [Express/Node 入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [设置 Node（Express）开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2：创建站点框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5：显示图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6：使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7：部署至生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

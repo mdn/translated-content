@@ -1,16 +1,8 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Object.assign
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
+
 {{JSRef}}
 
 **`Object.assign()`** メソッドは、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwnProperty", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
@@ -46,7 +38,7 @@ Object.assign(target, ...sources)
 
 エラーが発生した場合、例えばプロパティが書き込み不可の場合は、 {{jsxref("TypeError")}} が発生しますが、エラーが発生する前にプロパティが追加される場合、 `target` オブジェクトが変更されることがあります。
 
-> **Note:** `Object.assign()` はコピー元の値が {{jsxref("null")}} や {{jsxref("undefined")}} でも例外を発生させません。
+> **メモ:** `Object.assign()` はコピー元の値が {{jsxref("null")}} や {{jsxref("undefined")}} でも例外を発生させません。
 
 ## ポリフィル
 

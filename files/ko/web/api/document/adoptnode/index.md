@@ -1,14 +1,8 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-tags:
-  - API
-  - DOM
-  - DOM 레퍼런스
-  - 레퍼런스
-  - 메소드
-translation_of: Web/API/Document/adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
 외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 [`ownerDocument`](/en-US/docs/DOM/Node.ownerDocument) 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다.
@@ -22,7 +16,7 @@ node = document.adoptNode(externalNode);
 ```
 
 - `node`
-  - : 는 현재 문서에 삽입될 노드를 의미. 아직 해당 문서에 삽입되기 전이기 때문에 새로운 노드의 [`parentNode`](/ko/docs/DOM/Node.parentNode)는 `null이다.`<span class="hidden"></span><span class="hidden"></span><span class="hidden"></span>
+  - : 는 현재 문서에 삽입될 노드를 의미. 아직 해당 문서에 삽입되기 전이기 때문에 새로운 노드의 [`parentNode`](/ko/docs/DOM/Node.parentNode)는 `null` 이다.
 - `externalNode`
   - : 는 노드를 가져오기 위한 외부 문서에 있는 노드를 의미.
 

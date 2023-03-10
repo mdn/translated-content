@@ -2,6 +2,7 @@
 title: 图像文件类型与格式指南
 slug: Web/Media/Formats/Image_types
 ---
+
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助您为您的网站选择最合适的图像格式。
@@ -23,7 +24,7 @@ slug: Web/Media/Formats/Image_types
 | [TIFF](#tiff_tagged_image_file_format)               | Tagged Image File Format 标签图像文件格式                  | `image/tiff`    | `.tif`, `.tiff`                            | Safari                                                  |
 | [WebP](#webp_image)                                  | Web Picture format 万维网图像格式                          | `image/webp`    | `.webp`                                    | Chrome, Edge, Firefox, Opera, Safari                    |
 
-每一种格式缩写都有一个详细说明，其功能以及详细的浏览器兼容信息， 包括哪个版本引入支持以及以后可能会引入的特殊功能。
+每一种格式缩写都有一个详细说明，其功能以及详细的浏览器兼容信息，包括哪个版本引入支持以及以后可能会引入的特殊功能。
 
 ## 图像文件格式详介
 
@@ -381,7 +382,7 @@ The ICO (Microsoft Windows icon) file format was designed by Microsoft for deskt
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each. Following the directory comes the data for the icons. Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file header, or a complete [PNG](#png_portable_network_graphics) image (including the file header). If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
 
-> **警告：** ICO files _should not_ be used in web content. Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in {{SectionOnPage("/en-US/docs/Web/HTML/Element/link", "Providing icons for different usage contexts")}}.
+> **警告：** ICO files _should not_ be used in web content. Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标).
 
 <table class="standard-table">
   <tbody>

@@ -2,6 +2,7 @@
 title: Web Animations API を利用する
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 Web Animations API は JavaScript を使い、アニメーションを構築したりプレイバックを制御することが出来ます。この記事では「ふしぎの国のアリス」を利用した楽しいデモとチュートリアルで正しい利用方法を説明します。
@@ -24,7 +25,7 @@ Web Animations API を学習するためのより身近な手法は、多くの 
 
 アリスがうさぎの穴から落ちてワンダーランドに導かれる様子を示した CSS で書かれている転がり落ちるアニメーションです。(完全な [Codepen のコード](http://codepen.io/rachelnabors/pen/QyOqqW) を参照してください)
 
-[![Alice Tumbling down the rabbit's hole.](https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
+[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
 
 背景が移動しながら、アリスが回転し、回転からのオフセットで色が変化することに注目してください。このチュートリアルでは、アリスのみに焦点を当てます。アリスのアニメーションを制御する簡単な CSS は次のとおりです。
 
@@ -90,7 +91,7 @@ CSS で同等の値の表現方法との違いに気がつくでしょう。
 - 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("WindowTimers.setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように Web Animations API はミリ秒しか値を取りません。
 - もう 1 つは `iteration-count` ではなく `iterations` ということです。
 
-> **Note:** CSS アニメーションで使用される用語と Web Animations で利用される用語とではいくつか小さな違いがあります。例えば、Web Animations は `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。デフォルトの [animation-timing-function](/ja/docs/Web/CSS/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
+> **メモ:** CSS アニメーションで使用される用語と Web Animations で利用される用語とではいくつか小さな違いがあります。例えば、Web Animations は `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。デフォルトの [animation-timing-function](/ja/docs/Web/CSS/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
 
 #### パーツをまとめる
 
@@ -134,7 +135,7 @@ document.getElementById("alice").animate(
 ## Play() / pause() / reverse() / playbackRate を使って再生制御する
 
 Web Animation API を使用して CSS アニメーションを作成することが可能ですが、API が本当に役立つ時はアニメーションの再生を制御するときです。Web Animation API は、再生を制御するための便利ないくつかのメソッドを提供しています。アリスが拡大/縮小するゲームでのアニメーションの一時停止と再生を見てみましょう( [Codepen の完全なコード](http://codepen.io/rachelnabors/pen/PNYGZQ)をご覧ください。)
-[![Playing the growing and shrinking game with Alice.](https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
 このゲームでは、アリスは小さなボトルから大きなボトルに移動するアニメーションを使用しており、ボトルとカップケーキを使い制御します。どちらにも独自のアニメーションがあります。
 
@@ -209,7 +210,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 
 [鏡の国のアリス](https://ja.wikipedia.org/wiki/%E9%8F%A1%E3%81%AE%E5%9B%BD%E3%81%AE%E3%82%A2%E3%83%AA%E3%82%B9)では、アリスは走り続けなければならない世界に移動します。レッドクイーンのレースの例では、アリスとレッドクイーンが所定の位置にとどまっています。([Codepen の](http://codepen.io/rachelnabors/pen/PNGGaV) 完全なコードを参照してください。)
 
-[![Alice and the Red Queen race to get to the next square in this game.](https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
+[![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
 
 小さな子どもたちは、オートマトンのチェスのコマとは異なり、疲れやすいのでアリスは常に速度を落としています。彼女のアニメーションの `playbackRate` に衰えを設定することでコードでこれを表現しました。
 
@@ -341,7 +342,7 @@ var endGame = function() {
 }
 ```
 
-> **Note:** **注意:**`getAnimations()` と `effect` はこの記事執筆時点では完全にサポートされていませんが polyfill は今現在サポートしています。
+> **メモ:** `getAnimations()` と `effect` はこの記事執筆時点では完全にサポートされていませんが polyfill は今現在サポートしています。
 
 ## コールバックと Promise
 

@@ -2,6 +2,7 @@
 title: 全局属性
 slug: Web/HTML/Global_attributes
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **全局属性**是所有 HTML 元素共有的属性; 它们可以用于所有元素，即使属性可能对某些元素不起作用。
@@ -26,9 +27,9 @@ slug: Web/HTML/Global_attributes
     - `words`，每个单词的第一个字母默认为大写字母;所有其他字母都默认为小写字母。
     - `characters`，所有的字母都应该默认为大写。
 - [{{htmlattrdef("class")}}](/zh-CN/docs/Web/HTML/Global_attributes/class)
-  - : 一个以空格分隔的元素的类名（classes ）列表，它允许 CSS 和 Javascript 通过类选择器 ([class selectors](/zh-CN/docs/Web/CSS/Class_selectors)) 或 DOM 方法 ( [`document.getElementsByClassName`](/zh-CN/docs/Web/API/Document/getElementsByClassName)) 来选择和访问特定的元素。
+  - : 一个以空格分隔的元素的类名（classes）列表，它允许 CSS 和 Javascript 通过类选择器 ([class selectors](/zh-CN/docs/Web/CSS/Class_selectors)) 或 DOM 方法 ( [`document.getElementsByClassName`](/zh-CN/docs/Web/API/Document/getElementsByClassName)) 来选择和访问特定的元素。
 - [{{htmlattrdef("contenteditable")}}](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)
-  - : 一个枚举属性（enumerated attribute），表示元素是否可被用户编辑。 如果可以，浏览器会调整元素的部件（widget）以允许编辑。
+  - : 一个枚举属性（enumerated attribute），表示元素是否可被用户编辑。如果可以，浏览器会调整元素的部件（widget）以允许编辑。
 
     - `true` 或者空字符串，表明元素是可被编辑的；
     - `false`，表明元素不能被编辑。
@@ -48,7 +49,7 @@ slug: Web/HTML/Global_attributes
     - `true`, 这表明元素可能被拖动
     - `false`, 这表明元素可能不会被拖动
 - [{{htmlattrdef("dropzone")}}](/zh-CN/docs/Web/HTML/Global_attributes/dropzone) {{experimental_inline}}
-  - : 枚举属性，指示可以使用 [Drag and Drop API](/zh-CN/docs/DragDrop/Drag_and_Drop) 在元素上删除哪些类型的内容。 它可以具有以下值：
+  - : 枚举属性，指示可以使用 [Drag and Drop API](/zh-CN/docs/DragDrop/Drag_and_Drop) 在元素上删除哪些类型的内容。它可以具有以下值：
 
     - copy，表示 drop 将创建被拖动元素的副本
     - move，表示拖动的元素将移动到此新位置。
@@ -58,7 +59,7 @@ slug: Web/HTML/Global_attributes
 - [{{htmlattrdef("hidden")}}](/zh-CN/docs/Web/HTML/Global_attributes/hidden)
   - : 布尔属性表示该元素尚未或不再*相关*。例如，它可用于隐藏在登录过程完成之前无法使用的页面元素。浏览器不会呈现此类元素。不得使用此属性隐藏可合法显示的内容
 - [{{htmlattrdef("id")}}](/zh-CN/docs/Web/HTML/Global_attributes/id)
-  - : 定义唯一标识符（ID），该标识符在整个文档中必须是唯一的。 其目的是在链接（使用片段标识符），脚本或样式（使用 CSS）时标识元素。
+  - : 定义唯一标识符（ID），该标识符在整个文档中必须是唯一的。其目的是在链接（使用片段标识符），脚本或样式（使用 CSS）时标识元素。
 - [{{HTMLAttrDef("inputmode")}}](/zh-CN/docs/Web/HTML/Global_attributes/inputmode)
   - : 向浏览器提供有关在编辑此元素或其内容时要使用的虚拟键盘配置类型的提示。主要用于 {{HTMLElement("input")}}元素，但在{{HTMLAttrxRef("contenteditable")}}模式下可用于任何元素。
 - [{{htmlattrdef("is")}}](/zh-CN/docs/Web/HTML/Global_attributes/is)
@@ -69,7 +70,7 @@ slug: Web/HTML/Global_attributes
 - [{{htmlattrdef("itemid")}}](/zh-CN/docs/Web/HTML/Global_attributes/itemid)
   - : 项的唯一全局标识符。
 - [{{htmlattrdef("itemprop")}}](/zh-CN/docs/Web/HTML/Global_attributes/itemprop)
-  - : 用于向项添加属性。 每个 HTML 元素都可以指定一个 itemprop 属性，其中一个 itemprop 由一个名称和值对组成。
+  - : 用于向项添加属性。每个 HTML 元素都可以指定一个 itemprop 属性，其中一个 itemprop 由一个名称和值对组成。
 - [{{htmlattrdef("itemref")}}](/zh-CN/docs/Web/HTML/Global_attributes/itemref)
   - : 只有不是具有`itemscope`属性的元素的后代，它的属性才可以与使用`itemref`项目相关联。它提供了元素 ID 列表（而不是`itemids`）以及文档中其他位置的其他属性。
 - [{{htmlattrdef("itemscope")}}](/zh-CN/docs/Web/HTML/Global_attributes/itemscope)
@@ -88,7 +89,7 @@ slug: Web/HTML/Global_attributes
     - `true`，表示如果可能，应检查元素是否存在拼写错误;
     - `false`, 表示不应检查元素的拼写错误。
 - [{{htmlattrdef("style")}}](/zh-CN/docs/Web/HTML/Global_attributes/style)
-  - : 含要应用于元素的[CSS](/zh-CN/docs/Web/CSS)样式声明。 请注意，建议在单独的文件中定义样式。 该属性和{{HTMLElement("style")}}元素主要用于快速样式化，例如用于测试目的。
+  - : 含要应用于元素的[CSS](/zh-CN/docs/Web/CSS)样式声明。请注意，建议在单独的文件中定义样式。该属性和{{HTMLElement("style")}}元素主要用于快速样式化，例如用于测试目的。
 - [{{htmlattrdef("tabindex")}}](/zh-CN/docs/Web/HTML/Global_attributes/tabindex)
   - : 整数属性，指示元素是否可以获取输入焦点（可聚焦），是否应该参与顺序键盘导航，如果是，则表示哪个位置。它可能需要几个值：
 
@@ -96,7 +97,7 @@ slug: Web/HTML/Global_attributes
     - `0` 表示元素应通过顺序键盘导航可聚焦和可到达，但其相对顺序由平台约定定义;
     - 正值意味着元素应该可以通过顺序键盘导航进行聚焦和访问;元素聚焦的顺序是[**tabindex**](#attr-tabindex)的增加值。如果多个元素共享相同的`tabindex`，则它们的相对顺序遵循它们在文档中的相对位置。
 - [{{htmlattrdef("title")}}](/zh-CN/docs/Web/HTML/Global_attributes/title)
-  - : 包含表示与其所属元素相关信息的文本。 这些信息通常可以作为提示呈现给用户，但不是必须的。
+  - : 包含表示与其所属元素相关信息的文本。这些信息通常可以作为提示呈现给用户，但不是必须的。
 - [{{htmlattrdef("translate")}}](/zh-CN/docs/Web/HTML/Global_attributes/translate) {{experimental_inline}}
   - : 枚举属性，用于指定在页面本地化时是否转换元素的属性值及其{{domxref("Text")}} 节点子节点的值，或者是否保持它们不变。它可以具有以下值：
 

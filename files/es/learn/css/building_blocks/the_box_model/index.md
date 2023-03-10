@@ -1,9 +1,9 @@
 ---
 title: El modelo de caja
 slug: Learn/CSS/Building_blocks/The_box_model
-translation_of: Learn/CSS/Building_blocks/The_box_model
 original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 Todo en CSS tiene una caja alrededor, y comprender estas cajas es clave para poder crear diseños con CSS o para alinear elementos con otros elementos. En este artículo, echaremos un vistazo más de cerca al _modelo de cajas_ en CSS con el que vas a poder crear diseños de compaginación más complejos con una comprensión de cómo funciona y la terminología relacionada.
@@ -115,7 +115,7 @@ Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
 
 El diagrama siguiente muestra estas capas:
 
-![Diagrama del modelo de cajas](https://mdn.mozillademos.org/files/16558/box-model.png)
+![Diagrama del modelo de cajas](box-model.png)
 
 ### El modelo de cajas CSS estándar
 
@@ -135,7 +135,7 @@ Si suponemos que la caja tiene el CSS siguiente, que establece los valores para 
 
 El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
 
-![Mostrar el tamaño de la caja cuando se usa el modelo de cajas estándar.](https://mdn.mozillademos.org/files/16559/standard-box-model.png)
+![Mostrar el tamaño de la caja cuando se usa el modelo de cajas estándar.](standard-box-model.png)
 
 > **Nota:** El margen no se cuenta para el tamaño real de la caja; por supuesto, afecta al espacio total que la caja ocupa en la página, pero solo al espacio de fuera de la caja. El área de la caja se termina en el borde, no se extiende hasta el margen.
 
@@ -143,7 +143,7 @@ El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en r
 
 Podrías pensar que es más bien incómodo tener que sumar el borde y el área de relleno para obtener el tamaño real de la caja, ¡y tienes razón! Por este motivo, CSS introdujo un modelo de caja alternativo algún tiempo después del modelo de cajas estándar. Con este modelo, cualquier ancho es el ancho de la caja visible en la página, por lo tanto, el ancho del área de contenido es ese ancho menos el ancho para el relleno y el borde. El mismo CSS que hemos usado antes daría entonces el resultado siguiente (ancho = 350 px, altura = 150 px).
 
-![Mostrar el tamaño de la caja cuando se usa el modelo de cajas alternativo.](https://mdn.mozillademos.org/files/16557/alternate-box-model.png)
+![Mostrar el tamaño de la caja cuando se usa el modelo de cajas alternativo.](alternate-box-model.png)
 
 Por defecto, los navegadores usan el modelo de cajas estándar. Si deseas activar el modelo de cajas alternativo para un elemento, hazlo configurando `box-sizing: border-box`. Con ello, le dices al navegador que tome como el borde de la caja el área definida por cualquier tamaño que establezcas.
 
@@ -180,7 +180,7 @@ En el ejemplo siguiente puedes ver dos cajas. Ambas tienen una clase `.box`, lo 
 
 Las [herramientas del desarrollador de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.
 
-![Inspeccionar el modelo de cajas de un elemento utilizando Firefox DevTools](https://mdn.mozillademos.org/files/16560/box-model-devtools.png)
+![Inspeccionar el modelo de cajas de un elemento utilizando Firefox DevTools](box-model-devtools.png)
 
 ## Márgenes, relleno y bordes
 
@@ -266,7 +266,7 @@ Podemos controlar el área de relleno para todos los lados de un mismo elemento 
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
 
-**Si cambias los valores para el elleno en la clase `.box` del ejemplo siguiente, puedes ver que cambia dónde comienza el texto en relación con la caja.**
+**Si cambias los valores para el relleno en la clase `.box` del ejemplo siguiente, puedes ver que cambia dónde comienza el texto en relación con la caja.**
 
 **También puedes cambiar el relleno en la clase `.container`, que abrirá el espacio entre el contenedor y la caja. El área de relleno se puede cambiar para cualquier elemento y abrirá espacio entre su borde y lo que esté dentro del elemento.**
 
@@ -317,21 +317,21 @@ En el artículo siguiente veremos cómo se pueden usar los [fondos y bordes](/es
 
 ## En este módulo
 
-1.  [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Las pseudoclases y los pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Selectores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [El modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [El modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

@@ -2,6 +2,7 @@
 title: Express 教程 3：使用数据库  (Mongoose)
 slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 本文简要介绍了数据库以及 Node/Express 应用的数据库集成。然后演示了 [Mongoose](http://mongoosejs.com/) 为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 提供数据库访问的方式。还讲解了对象模式（Schema）和模型（Model）的声明方式、主要域的类型、基础验证机制。同时还简短演示了访问模型数据的一些方法。
@@ -44,7 +45,7 @@ Express 应用可以使用 Node 支持的所有数据库（Express 本身不支�
 - 使用数据库的原生查询语言（例如 SQL）
 - 使用对象数据模型（Object Data Model，简称 ODM）或对象关系模型（Object Relational Model，简称 ORM）。ODM / ORM 能将网站中的数据表示为 JavaScript 对象，然后将它们映射到底层数据库。一些 ORM 只适用某些特定数据库，还有一些是普遍适用的。
 
-使用 SQL 或其它受到支持的查询语言才能达到最佳性能。ODM 通常慢一些，因为在对象和数据库格式之间存在一层用于映射的翻译代码，使它不一定会选用最高性能的数据库查询（尤其是普遍使用级别的 ODM，它必须在各类数据库功能方面做出更大的折衷）。
+使用 SQL 或其他受到支持的查询语言才能达到最佳性能。ODM 通常慢一些，因为在对象和数据库格式之间存在一层用于映射的翻译代码，使它不一定会选用最高性能的数据库查询（尤其是普遍使用级别的 ODM，它必须在各类数据库功能方面做出更大的折衷）。
 
 使用 ORM 的好处是：程序员可以继续用 JavaScript 对象的思维而不用转向数据库语义的思维。在（同一个或不同网站）使用不同数据库时尤为明显。使用 ORM 还可以更方便地对数据进行验证和检查。
 
@@ -92,7 +93,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 > **备注：** 正如下文 [Mongoose 入门](#) 中所讲，通常应该把定义文档/模型关系的字段置于同一模型中（仍可通过在搜索相关 `_id` 来回寻模型间的关系）。以下的 Book 模式中定义了 Book/Genre 和 Book/Author 关系，BookInstance 模式中定义了 Book/BookInstance 关系。这样做是简便起见，但稍存歧义，让这些字段存在于其他模式中也是可以的。
 
-![Mongoose Library Model  with correct cardinality](library_website_-_mongoose_express.png)
+![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
 > **备注：** 下面是一段入门知识，讲解如何定义和使用模型。请在阅读时想想将如何构建上图中的模型。
 
@@ -107,7 +108,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 Mongoose 像任何其他依赖项一样，使用 NPM 将其安装在您的项目（**package.json**）中。请在项目文件夹中运行下面的命令以完成安装：
 
 ```bash
-$ npm install mongoose
+npm install mongoose
 ```
 
 安装 Mongoose 会添加所有依赖项，包括 MongoDB 数据库驱动程序，但不会安装 MongoDB 本身。要安装 MongoDB 服务器，可以 [点击下载](https://www.mongodb.com/download-center) 各操作系统的安装程序在本地安装。也可以使用云端 MongoDB 实例。
@@ -136,7 +137,7 @@ db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));
 
 可以用 `mongoose.connection` 取得默认的 `Connection` 对象。一旦连接，`Connection` 实例将触发打开事件。
 
-> **备注：** 可以使用 `mongoose.createConnection()` 创建其它连接。该函数与 `connect()` 的参数（数据库 URI，包括主机地址、数据库名、端口、选项等）一致，并返回一个 `Connection` 对象。
+> **备注：** 可以使用 `mongoose.createConnection()` 创建其他连接。该函数与 `connect()` 的参数（数据库 URI，包括主机地址、数据库名、端口、选项等）一致，并返回一个 `Connection` 对象。
 
 ### 定义和添加模型
 
@@ -163,7 +164,7 @@ var SomeModelSchema = new Schema({
 });
 ```
 
-上面示例只有两个字段（一个字符串和一个日期），接下来将展示其它字段类型、验证和其它方法。
+上面示例只有两个字段（一个字符串和一个日期），接下来将展示其他字段类型、验证和其他方法。
 
 #### 创建模型
 
@@ -215,7 +216,7 @@ const schema = new Schema(
 代码还展示了声明字段的两种方法：
 
 - 字段名和类型名作为键 - 值对（就像 `name`、`binary` 和 `living`）。
-- 字段名后跟一个对象，在对象中定义 `type` 和字段的其它选项，可以是：
+- 字段名后跟一个对象，在对象中定义 `type` 和字段的其他选项，可以是：
 
   - 默认值。
   - 内置验证器（例如最大/最小值）和自定义验证函数。
@@ -464,7 +465,7 @@ Story
 >   .exec(function (err, stories) {
 >     if (err) {
 >       return handleError(err);
->     } // 返回所有 author 字段的值为 司马迁id 的简介
+>     } // 返回所有 author 字段的值为 司马迁 id 的简介
 >   });
 > ```
 
@@ -492,7 +493,7 @@ const SomeModelSchema = new Schema({
 module.exports = mongoose.model('SomeModel', SomeModelSchema );
 ```
 
-然后就可以在其它文件中，`require` 并使用该模型。下面是通过 `SomeModel` 模块来获取所有实例的方法。
+然后就可以在其他文件中，`require` 并使用该模型。下面是通过 `SomeModel` 模块来获取所有实例的方法。
 
 ```js
 // 通过 require 模块来创建 SomeModel 模型
@@ -516,9 +517,9 @@ SomeModel.find(callback_function);
 
 登录后将进入 [mLab 主屏幕](https://mlab.com/home)：
 
-1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](mlabcreatenewdeployment.png)
 2. 将打开 Cloud Provider（云服务提供商）选择屏幕。
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
     - 在 Plan Type（方案类型）部分中，选择 SANDBOX（Free）免费沙箱方案。
     - 从 _Cloud Provider_（云服务提供商）部分选择任意提供商。不同地区适用不同提供商（显示在选定的计划类型下面）。
@@ -526,29 +527,29 @@ SomeModel.find(callback_function);
 
 3. 此时将打开 _Select Region_（选择区域）屏幕。
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
     - 选择离你最近的地区，然后 **Continue**。
 
 4. 将打开 Final Details（最后的细节）屏幕。
-    ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
+    ![New deployment database name](mlab_new_deployment_final_details.png)
 
     - 输入新数据库的名称 `local_library`，然后 **Continue**。
 
 5. 将打开 _Order Confirmation_（订单确认）屏幕。
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
     - 点击 **Submit Order（提交订单）**以创建数据库。
 
 6. 将返回到主屏幕。点击刚创建的新数据库可以打开详细信息屏幕。当前数据库还没有任何数据。
 
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
 
     表单显示了访问数据库的 URL（上图的红框）。此时可以创建一个用户，并在 URL 中指定用户名，就可以访问这个 URL 了。
 
 7. 点击 **Users** 选项卡，点击 **Add database user** 按钮。
 8. 输入用户名和密码（两次），然后按 **Create**。不要选择 Make _read-only_。
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mlab_database_users.png)
 
 现在数据库已经创建好了，并且有一个可访问的 URL（带有用户名和密码）：`mongodb://<dbuser>:<dbpassword>@ds019038.mlab.com:19038/local_library`
 
@@ -557,7 +558,7 @@ SomeModel.find(callback_function);
 打开终端，并转到 [LocalLibrary 站点骨架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website) 的目录。通过以下命令安装 Mongoose（及其依赖项），并将其添加至 **package.json** 文件，若你在阅读 **Mongoose 入门** 时已经完成这一操作，请忽略本段。
 
 ```bash
-$ npm install mongoose
+npm install mongoose
 ```
 
 ## 连接到 MongoDB
@@ -710,7 +711,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 以上代码有点儿新东西，即字段选项（黑体字）：
 
 - `enum`：可以设置字符串允许的值。本例中可指定书籍的状态。（使用枚举可以避免状态中出现错误拼写或不允许的值）
-- `default`：用默认值可以设定新 ​ 建藏书实例的默认状态（为'馆藏维护'），还可以将默认还书期限（`due_back`）日期设置为今天（`now`）。（设置日期时请注意 `Date` 函数的用法！）
+- `default`：用默认值可以设定新 建藏书实例的默认状态（为'馆藏维护'），还可以将默认还书期限（`due_back`）日期设置为今天（`now`）。（设置日期时请注意 `Date` 函数的用法！）
 
 其他内容和之前的模式大同小异。
 
@@ -721,7 +722,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 与之前模型的定义方式相似：
 
 - 该模型应该有一个 `String` 模式类型，命名为 `name` ，用来描述图书种类。
-- `name` 字段应该是必需的，并且有 3 到 ​ ​100 个字符。
+- `name` 字段应该是必需的，并且有 3 到 100 个字符。
 - 声明一个 [虚拟属性](#虚拟属性)，命名为 `url`，返回图书类型 URL。
 - 导出模型。
 
@@ -735,18 +736,18 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
     > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
     >
-    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”， 请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
+    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
 
 2. 在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
 
     ```bash
-    $ npm install async
+    npm install async
     ```
 
 3. 在命令提示符下用 node 运行此脚本，并以 MongoDB 数据库的 URL 作为参数（同 `app.js` 中替换 `insert_your_database_url_here` 占位符的 URL）：
 
     ```bash
-    $ node populatedb <mongodb url>​​​​
+    node populatedb <mongodb url>
     ```
 
 4. 该脚本应一路运行至完成，并在终端中记录所创建的项目。
@@ -771,15 +772,3 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 - [填充](http://mongoosejs.com/docs/populate.html) (Mongoose 文档)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## 本章目录
-
-- [Express/Node 入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [设置 Node（Express）开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2：创建站点框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5：显示图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6：使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7：部署至生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

@@ -2,7 +2,8 @@
 title: <details>：详细信息展现元素
 slug: Web/HTML/Element/details
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<details>`元素**可创建一个挂件，仅在被切换成展开状态时，它才会显示内含的信息。{{HTMLElement("summary")}} 元素可为该部件提供概要或者标签。
 
@@ -14,11 +15,11 @@ A disclosure widget is typically presented onscreen using a small triangle which
 
 同一个 `<details>` 组件只能处于两种状态之一。The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`). This might look like the following:
 
-![Screenshot of closed <details> widget. A black left-pointing triangle sits to the right of the text “System Requirements”.](https://mdn.mozillademos.org/files/15717/details-closed.png)
+![Screenshot of closed <details> widget. A black left-pointing triangle sits to the right of the text “System Requirements”.](details-closed.png)
 
 Here we see a standard disclosure widget with the label "System Requirements", in its default closed state. When the user clicks on the widget, or focuses it then presses the space bar, it "twists" open, revealing its contents:
 
-![Screenshot of open <details> widget. The triangle now points downward, and a detailed description of what “System Requirements” means is shown.](https://mdn.mozillademos.org/files/15718/details-open.png)
+![Screenshot of open <details> widget. The triangle now points downward, and a detailed description of what “System Requirements” means is shown.](details-open.png)
 
 From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute.
 
@@ -66,7 +67,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 
 ## 事件
 
-In addition to the usual events supported by HTML elements, the `<details>` element supports the {{event("toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
+In addition to the usual events supported by HTML elements, the `<details>` element supports the {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
 
 You can listen for the `toggle` event to detect when the widget changes state:
 
@@ -80,7 +81,7 @@ details.addEventListener("toggle", event => {
 });
 ```
 
-## 例子
+## 示例
 
 ### A simple disclosure example
 
@@ -244,7 +245,7 @@ details > p {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## 参见
 

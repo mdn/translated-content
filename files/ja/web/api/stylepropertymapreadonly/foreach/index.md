@@ -2,6 +2,7 @@
 title: StylePropertyMapReadOnly.forEach()
 slug: Web/API/StylePropertyMapReadOnly/forEach
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`StylePropertyMapReadOnly.forEach()`** メソッドは、指定された関数を {{domxref('StylePropertyMapReadOnly')}} のそれぞれの要素に対して 1 回ずつ呼び出します。

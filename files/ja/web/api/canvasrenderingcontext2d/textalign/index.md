@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.textAlign`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキスト配置を指定します。

@@ -5,6 +5,7 @@ page-type: web-api-instance-method
 translation_of: Web/API/StorageManager/estimate
 browser-compat: api.StorageManager.estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 La méthode **`estimate()`**, rattachée à l'interface [`StorageManager`](/fr/docs/Web/API/StorageManager), demande au gestionnaire de stockage l'espace occupé (`usage`) et l'espace disponible (`quota`) pour [l'origine](/fr/docs/Glossary/Same-origin_policy) courante.

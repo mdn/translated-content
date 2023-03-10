@@ -2,7 +2,8 @@
 title: WebGL 相关常量
 slug: Web/API/WebGL_API/Constants
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 提供了一些常量，这些常量常作为参数传入函数调用，或常作为函数的返回值。所有这些常量都是 {{domxref("GLenum")}} 类型。
 
@@ -22,7 +23,7 @@ var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
-[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其它资源。
+[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其他资源。
 
 ## 常量表
 
@@ -51,10 +52,10 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 | 常量名称         | 值     | 说明                                                                                                                            |
 | ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | `POINTS`         | 0x0000 | 传递给 `drawElements` 或`drawArrays` 画点。                                                                                     |
-| `LINES`          | 0x0001 | 传递给 `drawElements` 或`drawArrays` 画线段。 每个顶点链接到它的下一个顶点。每两点画一条线段。                                  |
-| `LINE_LOOP`      | 0x0002 | 传递给 `drawElements` 或`drawArrays` 画回路。 每两个点被当作是一条独立的线段。线段首尾相连。                                    |
+| `LINES`          | 0x0001 | 传递给 `drawElements` 或`drawArrays` 画线段。每个顶点链接到它的下一个顶点。每两点画一条线段。                                  |
+| `LINE_LOOP`      | 0x0002 | 传递给 `drawElements` 或`drawArrays` 画回路。每两个点被当作是一条独立的线段。线段首尾相连。                                    |
 | `LINE_STRIP`     | 0x0003 | 传递给 `drawElements` 或`drawArrays` 画一个从第一个顶点到最后一个顶点绘制一组相连的线段。                                       |
-| `TRIANGLES`      | 0x0004 | 传递给`drawElements` 或`drawArrays`画三角形。 每三个点创建一个独立的三角形。                                                    |
+| `TRIANGLES`      | 0x0004 | 传递给`drawElements` 或`drawArrays`画三角形。每三个点创建一个独立的三角形。                                                    |
 | `TRIANGLE_STRIP` | 0x0005 | 传递给 `drawElements` 或 `drawArrays` 画一组相连的三角形带。                                                                    |
 | `TRIANGLE_FAN`   | 0x0006 | 传递给 `drawElements` 或`drawArrays` 画一组连接的三角形。以第一个点做原点，每个顶点都连着它的前一个点和第一个顶点（类似风扇）。 |
 
@@ -109,7 +110,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 | `LINE_WIDTH`                       | 0x0B21 | 传递给 `getParameter` 获取当前的 `lineWidth` (由 `lineWidth` 方法设置)。                                                                                    |
 | `ALIASED_POINT_SIZE_RANGE`         | 0x846D | 传递给 `getParameter` 获取使用 `gl.POINTS` 绘制的点的大小。                                                                                                 |
 | `ALIASED_LINE_WIDTH_RANGE`         | 0x846E | 传递给 `getParameter` 得到一条线的可用宽度范围。返回一个长度为 2 的数组。其中低值为 0，高值为 1。                                                           |
-| `CULL_FACE_MODE`                   | 0x0B45 | 传递给 `getParameter` 获取当前的`cullFace` 值。 应该返回 `FRONT`, `BACK`, 或 `FRONT_AND_BACK`。                                                             |
+| `CULL_FACE_MODE`                   | 0x0B45 | 传递给 `getParameter` 获取当前的`cullFace` 值。应该返回 `FRONT`, `BACK`, 或 `FRONT_AND_BACK`。                                                             |
 | `FRONT_FACE`                       | 0x0B46 | 传递给 `getParameter` 以确定当前的 `frontFace` 值。应该 `CW` 或 `CCW`。                                                                                     |
 | `DEPTH_RANGE`                      | 0x0B70 | 传递给 `getParameter` 返回长度为 2 的浮点数数组，以表示当前深度范围。                                                                                       |
 | `DEPTH_WRITEMASK`                  | 0x0B72 | 传递给 `getParameter` 确定是否启用深度缓冲区写入操作。                                                                                                      |
@@ -207,7 +208,7 @@ Constants passed to {{domxref("WebGLRenderingContext.enable()")}} or {{domxref("
 | 常量名称                   | 值     | 说明                                                                                                                                                                                                                   |
 | -------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `BLEND`                    | 0x0BE2 | Passed to `enable`/`disable` to turn on/off blending. Can also be used with `getParameter` to find the current blending method.                                                                                        |
-| `DEPTH_TEST`               | 0x0B71 | 通过 `enable`/`disable` 来打开/关闭深度测试。 也可以使用 `getParameter` 来查询深度测试。LEQUAL                                                                                                                         |
+| `DEPTH_TEST`               | 0x0B71 | 通过 `enable`/`disable` 来打开/关闭深度测试。也可以使用 `getParameter` 来查询深度测试。LEQUAL                                                                                                                         |
 | `DITHER`                   | 0x0BD0 | Passed to `enable`/`disable` to turn on/off dithering. Can also be used with `getParameter` to find the current dithering method.                                                                                      |
 | `POLYGON_OFFSET_FILL`      | 0x8037 | Passed to `enable`/`disable` to turn on/off the polygon offset. Useful for rendering hidden-line images, decals, and or solids with highlighted edges. Can also be used with `getParameter` to query the scissor test. |
 | `SAMPLE_ALPHA_TO_COVERAGE` | 0x809E | Passed to `enable`/`disable` to turn on/off the alpha to coverage. Used in multi-sampling alpha channels.                                                                                                              |

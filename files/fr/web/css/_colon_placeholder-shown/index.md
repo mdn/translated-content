@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:placeholder-shown
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/Guide/HTML/Forms_in_HTML#The_placeholder_attribute).
@@ -182,13 +183,11 @@ input.studentid:placeholder-shown {
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#placeholder", ":placeholder-shown")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.placeholder-shown")}}
+{{Compat}}
 
 ## Voir aussi
 

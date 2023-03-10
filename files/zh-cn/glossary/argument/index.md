@@ -2,6 +2,7 @@
 title: Argument
 slug: Glossary/Argument
 ---
+
 **argument** 是一个作为函数输入的[值](/zh-CN/docs/Glossary/value)（[原始数据](/zh-CN/docs/Glossary/primitive)或[对象](/zh-CN/docs/Glossary/object)）。
 
 ## 学到更多

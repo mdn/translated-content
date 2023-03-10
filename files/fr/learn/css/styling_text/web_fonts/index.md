@@ -3,6 +3,7 @@ title: Fontes Web
 slug: Learn/CSS/Styling_text/Web_fonts
 translation_of: Learn/CSS/Styling_text/Web_fonts
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 Dans le premier article du module, nous avons exploré les fonctions CSS de base disponibles pour composer du texte. Dans cet article, nous allons plus loin et explorons les polices web en détail : comment télécharger des polices personnalisées en même temps que la page Web, pour donner un style plus varié et personnalisé au texte.
@@ -118,7 +119,7 @@ Pour mettre en œuvre ces polices dans la démo, suivez ces étapes&nbsp;:
 
 1. Renommez le répertoire d'extraction avec quelque chose de simple, comme `fonts`.
 2. Ouvrez le fichier `stylesheet.css` et copiez y les deux blocs `@font-face` contenus dans le fichier `web-font-start.css` — il faut les mettre tout en haut, avant tout élement du CSS, car les polices doivent être importées avant de pouvoir les utiliser sur votre site.
-3. Chaque fonction `url()` pointe sur un fichier de police à importer dans la CSS — assurez‑vous que les chemins vers les fichiers soient corrects, donc ajoutez  `fonts/` au début de chaque chemin (si nécessaire).
+3. Chaque fonction `url()` pointe sur un fichier de police à importer dans la CSS — assurez‑vous que les chemins vers les fichiers soient corrects, donc ajoutez `fonts/` au début de chaque chemin (si nécessaire).
 4. Maintenant, vous pouvez vous servir de ces polices dans vos piles de fontes, tout à fait comme les polices système ou une police «&nbsp;web safe ». Par exemple&nbsp;:
 
     ```css

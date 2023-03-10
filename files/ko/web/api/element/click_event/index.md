@@ -1,14 +1,8 @@
 ---
 title: click
 slug: Web/API/Element/click_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-translation_of: Web/API/Element/click_event
 ---
+
 {{APIRef}}
 
 **`click`** 이벤트는 포인팅 디바이스 버튼(일반적으로 마우스 기본 버튼)이 하나의 요소(엘리먼트)에서 눌려지고 놓을 때 시작합니다.
@@ -82,14 +76,11 @@ button.addEventListener('click', event => {
 
 ## 같이 보기
 
-- {{domxref("GlobalEventHandlers.onclick")}}
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("mousemove")}}
-- {{event("click")}}
-- {{event("dblclick")}}
-- {{event("mouseover")}}
-- {{event("mouseout")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("contextmenu")}}
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

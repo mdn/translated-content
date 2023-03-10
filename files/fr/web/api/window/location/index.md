@@ -4,6 +4,7 @@ slug: Web/API/Window/location
 translation_of: Web/API/Window/location
 browser-compat: api.Window.location
 ---
+
 {{APIRef}}
 
 La propriété en lecture seule **`Window.location`** renvoie un objet [`Location`](/fr/docs/Web/API/Location) qui contient des informations à propos de l'emplacement courant du document.

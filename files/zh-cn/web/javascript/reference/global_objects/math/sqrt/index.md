@@ -2,6 +2,7 @@
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
+
 {{JSRef}}
 
 **`Math.sqrt()`** 函数返回一个数的平方根，即：

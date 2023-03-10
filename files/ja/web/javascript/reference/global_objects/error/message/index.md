@@ -1,13 +1,8 @@
 ---
 title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
-tags:
-  - Error
-  - JavaScript
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 ---
+
 {{JSRef}}
 
 **`message`** プロパティは、人間が読めるエラーの説明です。
@@ -30,13 +25,11 @@ throw e;
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Error.name")}}
+{{Compat}}
 
 ## 関連情報
 

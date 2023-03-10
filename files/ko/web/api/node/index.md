@@ -1,18 +1,14 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - DOM
-  - Node
-translation_of: Web/API/Node
 ---
 {{APIRef("DOM")}}
 
-**`Node`**는 여러 가지 DOM 타입들이 상속하는 인터페이스이며 그 다양한 타입들을 비슷하게 처리할 수 있게 한다. 예를들어, 똑같은 메소드를 상속하거나 똑같은 방식으로 테스트를 할수있다
+**`Node`** 는 여러 가지 DOM 타입들이 상속하는 인터페이스이며 그 다양한 타입들을 비슷하게 처리할 수 있게 한다. 예를들어, 똑같은 메소드를 상속하거나 똑같은 방식으로 테스트를 할수있다
 
 다음의 인터페이스들은 모두 `Node`로부터 메소드와 프라퍼티를 상속한다: {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} ({{domxref("Text")}}, {{domxref("Comment")}}, {{domxref("CDATASection")}}이 상속), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}
 
-이 인터페이스들은 메소드나 프라퍼티가 적합하지 않은 경우에 null을 반환할 수 있다. 그들은 예외를 발생할 수 있다 - 예를 들어 자식이 있을 수 없는 노드 타입에 자식을 추가할 때 말이다.
+이 인터페이스들은 메소드나 프라퍼티가 적합하지 않은 경우에 `null`을 반환할 수 있다. 그들은 예외를 발생할 수 있다 - 예를 들어 자식이 있을 수 없는 노드 타입에 자식을 추가할 때 말이다.
 
 ## 프라퍼티 <속성>
 
@@ -32,7 +28,7 @@ _부모인 {{domxref("EventTarget")}}으로부터 프라퍼티를 상속한다_.
   - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.
     Though recent specifications require `localName` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
-  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") namespace in both HTML and XML trees.
+  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
     Though recent specifications require `namespaceURI` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Returns a {{domxref("Node")}} representing the next node in the tree, or `null` if there isn't such node.
@@ -144,18 +140,20 @@ function DOMComb (oParent, oCallback) {
 
 #### Syntax
 
-    DOMComb(parentNode, callbackFunction);
+```js
+DOMComb(parentNode, callbackFunction);
+```
 
 #### Description
 
-Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/ko/docs/JavaScript/Reference/Operators/this "en-US/docs/JavaScript/Reference/Operators/this") objects.
+Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/ko/docs/JavaScript/Reference/Operators/this) objects.
 
 #### Parameters
 
 - `parentNode`
   - : The parent node (`Node Object`).
 - `callbackFunction`
-  - : The callback function ([`Function`](/ko/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
+  - : The callback function ([`Function`](/ko/docs/JavaScript/Reference/Global_Objects/Function)).
 
 #### Sample usage
 

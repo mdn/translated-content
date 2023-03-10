@@ -2,9 +2,10 @@
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的 **`IDBObjectStore`** 接口表示数据库中的 一个 [对象库 (object store)](https://developer.mozilla.org/en/IndexedDB#gloss_object_store) 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的 **`IDBObjectStore`** 接口表示数据库中的 一个 [对象库 (object store)](/zh-CN/IndexedDB#gloss_object_store) 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。
 
 {{AvailableInWorkers}}
 
@@ -28,8 +29,8 @@ slug: Web/API/IDBObjectStore
 
 | Attribute       | Type                                        | Description                                                                                                                  |
 | --------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `indexNames`    | `readonly DOMStringList`                    | 表中对象的[索引](https://developer.mozilla.org/en/IndexedDB#gloss_index)名列表。                                             |
-| `keyPath`       | `readonly` [`DOMString`](/En/DOM/DOMString) | 表中的[键路径](https://developer.mozilla.org/en/IndexedDB#gloss_key_path)，如果该属性为 null，每次操作表时必须提供一个键名。 |
+| `indexNames`    | `readonly DOMStringList`                    | 表中对象的[索引](/zh-CN/IndexedDB#gloss_index)名列表。                                             |
+| `keyPath`       | `readonly` [`DOMString`](/En/DOM/DOMString) | 表中的[键路径](/zh-CN/IndexedDB#gloss_key_path)，如果该属性为 null，每次操作表时必须提供一个键名。 |
 | `name`          | `readonly` [`DOMString`](/En/DOM/DOMString) | 表名                                                                                                                         |
 | `transaction`   | `readonly IDBTransaction`                   | 事务的名称，该表属于此事务。                                                                                                 |
 | `autoIncrement` | `readonly boolean`                          | 表中自增字段的值                                                                                                             |
@@ -48,7 +49,7 @@ add 方法只能插入数据。如果以 key 参数作为某记录的关键字�
 IDBRequest add (in any value, in optional any key) raises (DOMException);
 ```
 
-##### 参数
+#### 参数
 
 - value
   - : 被存储的值。
@@ -57,7 +58,7 @@ IDBRequest add (in any value, in optional any key) raises (DOMException);
 
 ##### 返回
 
-- [IDBRequest](/en/IndexedDB/IDBRequest)
+- [IDBRequest](/zh-CN/IndexedDB/IDBRequest)
   - : 一个请求对象，可以在其中绑定事件。
 
 ##### 异常
@@ -76,7 +77,7 @@ IDBRequest add (in any value, in optional any key) raises (DOMException);
       <td>ReadOnlyError</td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>
@@ -122,15 +123,15 @@ IDBRequest add (in any value, in optional any key) raises (DOMException);
 
 ### clear()
 
-创建并立即返回一个 [IDBRequest](/en/IndexedDB/IDBRequest) 对象，并且在一个单独的线程中清除这个对象存储。清除对象存储包括从对象存储中删除所有的记录，并删除对象存储引用的索引中的所有记录。
+创建并立即返回一个 [IDBRequest](/zh-CN/IndexedDB/IDBRequest) 对象，并且在一个单独的线程中清除这个对象存储。清除对象存储包括从对象存储中删除所有的记录，并删除对象存储引用的索引中的所有记录。
 
 ```
 IDBRequest clear () raises (DOMException);
 ```
 
-##### Returns
+#### Returns
 
-- [IDBRequest](/en/IndexedDB/IDBRequest)
+- [IDBRequest](/zh-CN/IndexedDB/IDBRequest)
   - : 返回一个 request 对象，在其上触发与操作相关的事件。
 
 ##### Exceptions
@@ -144,20 +145,20 @@ IDBRequest clear () raises (DOMException);
 
 ### count()
 
-立即返回一个 [IDBRequest](/en/IndexedDB/IDBRequest) 对象，并在新线程中计算符合条件的对象的数量，该方法的参数可以是键，或键范围（key range）。在 [IDBRequest](/en/IndexedDB/IDBRequest) 对象中，source 属性就是 IDBObjectStore 对象，result 属性持有计算后的数量值。如果参数非法将会抛出异常。
+立即返回一个 [IDBRequest](/zh-CN/IndexedDB/IDBRequest) 对象，并在新线程中计算符合条件的对象的数量，该方法的参数可以是键，或键范围（key range）。在 [IDBRequest](/zh-CN/IndexedDB/IDBRequest) 对象中，source 属性就是 IDBObjectStore 对象，result 属性持有计算后的数量值。如果参数非法将会抛出异常。
 
 ```
 IDBRequest count (in optional any key) raises(DOMException);
 ```
 
-##### 参数
+#### 参数
 
 - key
   - : 计算被该键或键范围（key range）所标识的记录数。
 
 ##### Returns
 
-- [IDBRequest](/en/IndexedDB/IDBRequest)
+- [IDBRequest](/zh-CN/IndexedDB/IDBRequest)
   - : 一个请求对象，可绑定事件。
 
 ##### 异常
@@ -178,7 +179,7 @@ IDBRequest count (in optional any key) raises(DOMException);
 IDBIndex createIndex  (in DOMString name, in DOMString keyPath, in optional boolean unique) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - name
   - : The name of the index to create.
@@ -195,7 +196,7 @@ IDBIndex createIndex  (in DOMString name, in DOMString keyPath, in optional bool
 
 ##### Returns
 
-- [IDBIndex](/en/IndexedDB/IDBIndex)
+- [IDBIndex](/zh-CN/IndexedDB/IDBIndex)
   - : The newly created index.
 
 ##### Exceptions
@@ -204,25 +205,25 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 | Exception           | Description                                                                                                                                                                          |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `InvalidStateError` | The IDBObjectStore has been deleted or removed or the method was not called from a [`versionchange`](/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. |
+| `InvalidStateError` | The IDBObjectStore has been deleted or removed or the method was not called from a [`versionchange`](/zh-CN/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. |
 | `ConstraintError`   | An index with the same name (case-sensitive) already exists in the database.                                                                                                         |
 
 ### delete()
 
-Immediately returns an [`IDBRequest`](/en/IndexedDB/IDBRequest) object, and removes the records specified by the given key or key range from this object store, and any indexes that reference it, in a separate thread.
+Immediately returns an [`IDBRequest`](/zh-CN/IndexedDB/IDBRequest) object, and removes the records specified by the given key or key range from this object store, and any indexes that reference it, in a separate thread.
 
 ```
 IDBRequest delete (in any key) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - key
   - : The key or key range that identifies the records.
 
 ##### Returns
 
-- [IDBRequest](/en/IndexedDB/IDBRequest)
+- [IDBRequest](/zh-CN/IndexedDB/IDBRequest)
   - : A request object on which subsequent events related to this operation are fired. As [per spec](http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation) the result of the Object Store Deletion Operation algorithm is `undefined`, so it's not possible to know if some records were actually deleted by looking at the request result.
 
 ##### Exceptions
@@ -245,13 +246,13 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 ### deleteIndex()
 
-Destroys the index with the specified name in the connected database. Note that this method must be called only from a [`VersionChange`](/en/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. Note that this method synchronously modifies the [indexNames](#attr_indexNames) property.
+Destroys the index with the specified name in the connected database. Note that this method must be called only from a [`VersionChange`](/zh-CN/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. Note that this method synchronously modifies the [indexNames](#attr_indexNames) property.
 
 ```
 void deleteIndex (in any DOMString indexName) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - indexName
   - : The name of the existing index to remove.
@@ -264,12 +265,12 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 | Exception           | Description                                                                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError` | The method was not called from a [`versionchange`](/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. |
+| `InvalidStateError` | The method was not called from a [`versionchange`](/zh-CN/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) transaction mode callback. |
 | `NotFoundError`     | There is no index with the given name (case-sensitive) in the database.                                                            |
 
 ### get()
 
-Immediately returns an [IDBRequest](/en/IndexedDB/IDBRequest) object, and retrieves the requested record from the object store in a separate thread. If the operation is successful, then a success event is fired on the returned object, with its [`result`](/en/IndexedDB/IDBSuccessEvent#attr_result) set to the retrieved value, and [`transaction`](/en/IndexedDB/IDBTransactionEvent#attr_transaction) set to the transaction in which this object store is opened.
+Immediately returns an [IDBRequest](/zh-CN/IndexedDB/IDBRequest) object, and retrieves the requested record from the object store in a separate thread. If the operation is successful, then a success event is fired on the returned object, with its [`result`](/zh-CN/IndexedDB/IDBSuccessEvent#attr_result) set to the retrieved value, and [`transaction`](/zh-CN/IndexedDB/IDBTransactionEvent#attr_transaction) set to the transaction in which this object store is opened.
 
 ```
 IDBRequest get (in any key) raises (DOMException);
@@ -277,14 +278,14 @@ IDBRequest get (in any key) raises (DOMException);
 
 > **备注：**This function produces the same result if no record with the given key exists in the database as when a record exists, but with an `undefined` value. To tell these situations apart, call the openCursor() method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.
 
-##### Parameters
+#### Parameters
 
 - key
   - : The key or key range identifying the record to retrieve. In the case of a key range, the record returned is the first record associated with the first key in the range.
 
 ##### Returns
 
-- [`IDBRequest`](/en/IndexedDB/IDBRequest)
+- [`IDBRequest`](/zh-CN/IndexedDB/IDBRequest)
   - : A request object on which subsequent events related to this operation are fired.
 
 ##### Exceptions
@@ -305,14 +306,14 @@ Opens the named index in this object store.
 IDBIndex index (in DOMString name) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - name
   - : The name of the index to open.
 
 ##### Returns
 
-- [`IDBIndex`](/en/IndexedDB/IDBIndex)
+- [`IDBIndex`](/zh-CN/IndexedDB/IDBIndex)
   - : An object for accessing the index.
 
 ##### Exceptions
@@ -326,13 +327,13 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 ### openCursor()
 
-Immediately returns an [IDBRequest](/en/IndexedDB/IDBRequest) object, and creates a [cursor](/zh-CN/docs/IndexedDB/IDBCursor) over the records in this object store, in a separate thread. If there is even a single record that matches the [key range](/en/IndexedDB#gloss_key_range), then a success event is fired on the returned object, with its [`result`](/en/IndexedDB/IDBSuccessEvent#attr_result) set to the [IDBCursor](/en/IndexedDB/IDBCursor) object for the new cursor. If no records match the key range, then a success event is fired on the returned object, with its [`result`](/en/IndexedDB/IDBSuccessEvent#attr_result) set to null.
+Immediately returns an [IDBRequest](/zh-CN/IndexedDB/IDBRequest) object, and creates a [cursor](/zh-CN/docs/IndexedDB/IDBCursor) over the records in this object store, in a separate thread. If there is even a single record that matches the [key range](/zh-CN/IndexedDB#gloss_key_range), then a success event is fired on the returned object, with its [`result`](/zh-CN/IndexedDB/IDBSuccessEvent#attr_result) set to the [IDBCursor](/zh-CN/IndexedDB/IDBCursor) object for the new cursor. If no records match the key range, then a success event is fired on the returned object, with its [`result`](/zh-CN/IndexedDB/IDBSuccessEvent#attr_result) set to null.
 
 ```
 IDBRequest openCursor (in optional IDBKeyRange range, in optional unsigned short direction) raises(DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - range
   - : The key range to use as the cursor's range. If this parameter is unspecified or null, then the range includes all the records in the object store.
@@ -341,7 +342,7 @@ IDBRequest openCursor (in optional IDBKeyRange range, in optional unsigned short
 
 ##### Returns
 
-- [`IDBRequest`](/en/IndexedDB/IDBRequest)
+- [`IDBRequest`](/zh-CN/IndexedDB/IDBRequest)
   - : A request object on which subsequent events related to this operation are fired.
 
 ##### Exceptions
@@ -357,7 +358,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 ### put()
 
-Returns an [IDBRequest](/en/IndexedDB/IDBRequest) object, and, in a separate thread, creates a [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object with the [`result`](/en-US/docs/IndexedDB/IDBRequest) set to the key for the stored record, and [`transaction`](/en-US/docs/IndexedDB/IDBRequest) set to the transaction in which this object store is opened.
+Returns an [IDBRequest](/zh-CN/IndexedDB/IDBRequest) object, and, in a separate thread, creates a [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object with the [`result`](/zh-CN/docs/IndexedDB/IDBRequest) set to the key for the stored record, and [`transaction`](/zh-CN/docs/IndexedDB/IDBRequest) set to the transaction in which this object store is opened.
 
 The put method is an _update or insert_ method. See also the [add()](#add) method.
 
@@ -365,7 +366,7 @@ The put method is an _update or insert_ method. See also the [add()](#add) metho
 IDBRequest put (in any value, in optional any key) raises (DOMException);
 ```
 
-##### Parameters
+#### Parameters
 
 - value
   - : The value to be stored.
@@ -393,7 +394,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
       <td>ReadOnlyError</td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>
@@ -439,7 +440,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 
 ## Example
 
-This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded`function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
+This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded`function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 // Let us open our database
@@ -525,4 +526,4 @@ The compatibility table on this page is generated from structured data. If you'd
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

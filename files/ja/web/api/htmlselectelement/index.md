@@ -2,6 +2,7 @@
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement`** インターフェイスは HTML の {{HTMLElement("select")}} 要素を表します。これらの要素は {{domxref("HTMLElement")}} インターフェイスを通じて他の HTML 要素のすべてのプロパティとメソッドも共有します。

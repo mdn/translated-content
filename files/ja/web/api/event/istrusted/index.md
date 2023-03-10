@@ -2,6 +2,7 @@
 title: Event.isTrusted
 slug: Web/API/Event/isTrusted
 ---
+
 {{APIRef("DOM")}}
 
 **`isTrusted`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、このイベントがユーザー操作によって生成された場合は `true`、このイベントがスクリプトで作成または変更されたり、 {{domxref("EventTarget.dispatchEvent()")}} で配信されたりした場合は `false` となる論理値を返します。

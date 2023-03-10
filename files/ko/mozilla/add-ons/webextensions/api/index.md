@@ -1,17 +1,13 @@
 ---
 title: JavaScript APIs
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - NeedsTranslation
-  - TopicStub
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
+
 {{AddonSidebar}}
 
-The WebExtension JavaScript APIs can be used inside the add-on's [background scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the add-on, including [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/ko/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/ko/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/ko/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an add-on's [content scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
+The WebExtension JavaScript APIs can be used inside the add-on's [background scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the add-on, including [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/ko/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/ko/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/ko/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an add-on's [content scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
 
-To use the more powerful APIs you need to [request permission](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions) in your add-on's manifest.json.
+To use the more powerful APIs you need to [request permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions) in your add-on's manifest.json.
 
 You can access the APIs using the `browser` namespace:
 

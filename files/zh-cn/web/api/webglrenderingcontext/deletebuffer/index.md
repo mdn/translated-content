@@ -2,7 +2,10 @@
 title: WebGLRenderingContext.deleteBuffer()
 slug: Web/API/WebGLRenderingContext/deleteBuffer
 ---
-{{APIRef("WebGL")}}[WebGL API](/en-US/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.deleteBuffer()`**用于删除给定的{{domxref("WebGLBuffer")}}对象；若给定的{{domxref("WebGLBuffer")}}对象已经被删除了，调用该方法将不会产生任何效果。
+
+{{APIRef("WebGL")}}
+
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的 **`WebGLRenderingContext.deleteBuffer()`** 用于删除给定的 {{domxref("WebGLBuffer")}} 对象；若给定的 {{domxref("WebGLBuffer")}} 对象已经被删除了，调用该方法将不会产生任何效果。
 
 ## 语法
 
@@ -39,7 +42,7 @@ gl.deleteBuffer(buffer);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.deleteBuffer")}}
+{{Compat}}
 
 ## 相关链接
 

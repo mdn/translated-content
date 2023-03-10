@@ -2,6 +2,7 @@
 title: HTML 表の高度な機能とアクセシビリティ
 slug: Learn/HTML/Tables/Advanced
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 このモジュールの 2 番目の記事では、HTML テーブルのより高度な機能 (キャプション/要約、行をテーブルのヘッダー、本文、フッターのセクションにグループ化するなど) や、視覚障碍のあるユーザのためのテーブルのアクセシビリティについて調べます。
@@ -26,7 +27,7 @@ slug: Learn/HTML/Tables/Advanced
 
 キャプションは `<table>` タグのすぐ下に配置します。
 
-> **Note:** {{htmlattrxref("summary","table")}} 属性は、`<table>` 要素で説明を提供するためにも使用できます。 これはスクリーンリーダーによっても読み上げられます。 ただし、`summary` は HTML5 仕様では{{glossary("deprecated","推奨されておらず")}}、(ページには表示されないので)晴眼のユーザには読むことができないため、代わりに `<caption>` 要素を使用することをお勧めします。
+> **メモ:** {{htmlattrxref("summary","table")}} 属性は、`<table>` 要素で説明を提供するためにも使用できます。 これはスクリーンリーダーによっても読み上げられます。 ただし、`summary` は HTML5 仕様では{{glossary("deprecated","推奨されておらず")}}、(ページには表示されないので)晴眼のユーザには読むことができないため、代わりに `<caption>` 要素を使用することをお勧めします。
 
 ### アクティブラーニング: キャプションの追加
 
@@ -36,7 +37,7 @@ slug: Learn/HTML/Tables/Advanced
 2. 表に適切なキャプションを追加します。
 3. コードを保存してブラウザーで開くと、コードがどのように見えるかがわかります。
 
-> **Note:** GitHub で私たちのバージョンを見つけることができます — [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) を見てください([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html))。
+> **メモ:** GitHub で私たちのバージョンを見つけることができます — [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) を見てください([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html))。
 
 ## \<thead>、\<tfoot>、\<tbody> を用いて構造を追加する
 
@@ -50,7 +51,7 @@ slug: Learn/HTML/Tables/Advanced
 - `<tfoot>` 要素は、表のフッター部分をラップする必要があります — これは、例えば、前の行の項目が合計された最終行になります。 表のフッターは、期待通りに表の一番下に配置することも、表のヘッダーのすぐ下に配置することもできます(ブラウザーはそれを表の一番下に表示します)。
 - `<tbody>` 要素は、表のヘッダーまたはフッターではない表のコンテンツの他の部分をラップする必要があります。 どのように構成することにしたかに応じて、表のヘッダーの下に出現するか、時にはフッターの下に出現することがあります (上記の注を参照)。
 
-> **Note:** `<tbody>` は常に全ての表に含まれていて、コードで指定しない場合は暗黙的に含まれます。 これを確認するには、`<tbody>` を含まない以前の例の 1 つを開き、[ブラウザー開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)の HTML コードを調べます — ブラウザーによってこのタグが追加されたことがわかります。 なぜそれを含まないのかと疑問に思うかもしれません — すべき、表の構造とスタイリングがより細かく制御できるためです。
+> **メモ:** `<tbody>` は常に全ての表に含まれていて、コードで指定しない場合は暗黙的に含まれます。 これを確認するには、`<tbody>` を含まない以前の例の 1 つを開き、[ブラウザー開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)の HTML コードを調べます — ブラウザーによってこのタグが追加されたことがわかります。 なぜそれを含まないのかと疑問に思うかもしれません — すべき、表の構造とスタイリングがより細かく制御できるためです。
 
 ### アクティブラーニング: 表構造の追加
 
@@ -76,7 +77,7 @@ slug: Learn/HTML/Tables/Advanced
 
 7. 保存して更新し、結果を確認します。 `<tbody>` 要素と `<tfoot>` 要素が適切に配置されていない場合は、同じスタイルを適用するためにはるかに複雑なセレクタ/規則を記述する必要があります。
 
-> **Note:** 現時点で私たちはあなたが CSS を完全に理解しているとは思っていません。 あなたが私たちの CSS モジュールを一通り学ぶとき、これについてより多くを学ぶでしょう([CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)は始めるのに良い場所です。 [スタイリングされた表](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)に関する具体的な記事もあります)。
+> **メモ:** 現時点で私たちはあなたが CSS を完全に理解しているとは思っていません。 あなたが私たちの CSS モジュールを一通り学ぶとき、これについてより多くを学ぶでしょう([CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)は始めるのに良い場所です。 [スタイリングされた表](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)に関する具体的な記事もあります)。
 
 完成した表は次のようになります。
 
@@ -190,7 +191,7 @@ slug: Learn/HTML/Tables/Advanced
 
 {{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** Github では、それを [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) として見つけることもできます([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html))。
+> **メモ:** Github では、それを [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) として見つけることもできます([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html))。
 
 ## ネストした表
 
@@ -329,7 +330,7 @@ slug: Learn/HTML/Tables/Advanced
 
 しかし、あなたがそれらの視覚的な関連付けをすることができないならば、どうですか？ では、どのようにして上記のような表を読むことができますか？ 視覚障碍者は、Web ページの情報を読み上げるスクリーンリーダーをよく使用します。 平文を読んでいるときはこれは問題ありませんが、表を解釈することは視覚障碍者にとっては非常に困難な場合があります。 それでも、適切なマークアップを使用して、視覚的な関連付けをプログラムによる関連付けに置き換えることができます。
 
-> **Note:** [WHO のデータ](http://www.who.int/mediacentre/factsheets/fs282/en/)によると、2017 年の視覚障碍者は約 253 百万人です。
+> **メモ:** [WHO のデータ](http://www.who.int/mediacentre/factsheets/fs282/en/)によると、2017 年の視覚障碍者は約 253 百万人です。
 
 記事のこのセクションでは、可能な限りアクセス可能な表にするためのその他の手法について説明します。
 
@@ -406,7 +407,7 @@ slug: Learn/HTML/Tables/Advanced
 </tbody>
 ```
 
-> **Note:** この方法では、ヘッダーとデータセルの間に非常に正確な関連付けが作成されますが、マークアップがはるかに多くなり、エラーの余地がありません。 `scope` アプローチは通常ほとんどの表に十分です。
+> **メモ:** この方法では、ヘッダーとデータセルの間に非常に正確な関連付けが作成されますが、マークアップがはるかに多くなり、エラーの余地がありません。 `scope` アプローチは通常ほとんどの表に十分です。
 
 ### アクティブラーニング: scope と headers で遊ぶ
 
@@ -414,7 +415,7 @@ slug: Learn/HTML/Tables/Advanced
 2. この表をより適切にするために適切な `scope` 属性を追加してみてください。
 3. 最後に、最初のファイルの別のコピーを作成して、今度は、`id` 属性と `headers` 属性を使用して表にアクセスしやすくします。
 
-> **Note:** 完成した例と照らし合わせて作業内容を確認できます — [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html)([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))および [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html)([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html))。
+> **メモ:** 完成した例と照らし合わせて作業内容を確認できます — [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html)([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))および [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html)([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html))。
 
 ## まとめ
 

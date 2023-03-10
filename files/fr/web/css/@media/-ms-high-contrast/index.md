@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/@media/-ms-high-contrast
 original_slug: Web/CSS/-ms-high-contrast
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#cibler_des_caract%c3%a9ristiques_m%c3%a9dia) **`-ms-high-contrast`**, relative à la règle @ [`@media`](/fr/docs/Web/CSS/@media), est une [extension Microsoft](/fr/docs/Web/CSS/Microsoft_extensions) qui décrit si l'application est affichée dans un mode de contraste élevé et, si c'est le cas, quelle est la variation de couleur affichée.

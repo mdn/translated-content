@@ -2,11 +2,12 @@
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
-这个 {{domxref("MediaDevices")}} 接口的 **`getDisplayMedia() 方法提示用户去选择和授权捕获展示的内容或部分内容（如一个窗口）在一个`** {{domxref("MediaStream")}} 里. 然后，这个媒体流可以通过使用 [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) 被记录或者作为[WebRTC](/en-US/docs/Web/API/WebRTC_API) 会话的一部分被传输。
+这个 {{domxref("MediaDevices")}} 接口的 **`getDisplayMedia()`** 方法提示用户去选择和授权捕获展示的内容或部分内容（如一个窗口）在一个{{domxref("MediaStream")}} 里。然后，这个媒体流可以通过使用 [MediaStream Recording API](/zh-CN/docs/Web/API/MediaStream_Recording_API) 被记录或者作为[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 会话的一部分被传输。
 
-去 [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) 查找更多详情和例子。
+去 [Using the Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) 查找更多详情和例子。
 
 ## 语法
 
@@ -17,7 +18,7 @@ var promise = navigator.mediaDevices.getDisplayMedia(constraints);
 ### 参数
 
 - `constraints` {{optional_inline}}
-  - : 一个可选的{{domxref("MediaStreamConstraints")}}对象，它指定了返回的{{domxref("MediaStream")}}的要求。 因为`getDisplayMedia()`需要视频轨道，所以即使`constraints` 对象没有明确请求视频轨道，返回的流也会有一个。
+  - : 一个可选的{{domxref("MediaStreamConstraints")}}对象，它指定了返回的{{domxref("MediaStream")}}的要求。因为`getDisplayMedia()`需要视频轨道，所以即使`constraints` 对象没有明确请求视频轨道，返回的流也会有一个。
 
 ### 返回值
 
@@ -42,11 +43,11 @@ var promise = navigator.mediaDevices.getDisplayMedia(constraints);
 - `OverconstrainedError` ［转换错误］
   - : 创建流后，由于无法生成兼容的流导致应用指定的 `constraints` 失效。
 - `TypeError` ［类型错误］
-  - : 指定的 `constraints` 包括调用 `getDisplayMedia()` 时不允许的`constraints`。 这些不受支持的`constraints`是 `advanced` 的，任何约束又有一个名为 `min` 或 `exact` 的成员。
+  - : 指定的 `constraints` 包括调用 `getDisplayMedia()` 时不允许的`constraints`。这些不受支持的`constraints`是 `advanced` 的，任何约束又有一个名为 `min` 或 `exact` 的成员。
 
 ## 示例
 
-在下面的示例中，我们创建了一个 `startCapture()` 方法，该方法在给定由 `displayMediaOptions` 参数指定的一组选项的情况下启动屏幕捕获。 选项以 {{domxref("MediaStreamConstraints")}}对象的形式指定，该对象指定首选流配置和从中捕获视频的显示表面
+在下面的示例中，我们创建了一个 `startCapture()` 方法，该方法在给定由 `displayMediaOptions` 参数指定的一组选项的情况下启动屏幕捕获。选项以 {{domxref("MediaStreamConstraints")}}对象的形式指定，该对象指定首选流配置和从中捕获视频的显示表面
 
 ```js
 async function startCapture(displayMediaOptions) {
@@ -61,7 +62,7 @@ async function startCapture(displayMediaOptions) {
 }
 ```
 
-这里使用 {{jsxref("await")}} 来进行异步等待 `getDisplayMedia()`来进行 {{domxref("MediaStream")}}解析，其中包含指定选项所请求的显示内容。 之后，流被返回给调用者以供其使用，可能是使用 {{domxref("RTCPeerConnection.addTrack()")}}添加到 WebRTC 调用来从流中添加视频轨道。
+这里使用 {{jsxref("await")}} 来进行异步等待 `getDisplayMedia()`来进行 {{domxref("MediaStream")}}解析，其中包含指定选项所请求的显示内容。之后，流被返回给调用者以供其使用，可能是使用 {{domxref("RTCPeerConnection.addTrack()")}}添加到 WebRTC 调用来从流中添加视频轨道。
 
 ## 规范
 
@@ -69,12 +70,12 @@ async function startCapture(displayMediaOptions) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## 参考
 
-- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API)
+- [Using the Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API)
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a camera and/or microphone

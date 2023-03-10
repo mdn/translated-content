@@ -2,6 +2,7 @@
 title: Firefox 12 for developers
 slug: Mozilla/Firefox/Releases/12
 ---
+
 Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました。この記事は開発者に影響がある Firefox 12 での変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧
@@ -9,7 +10,7 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 ### HTML
 
 - `title` の値に含めた改行文字が反映され、複数行のツールチップを表示できるようになりました。
-- JavaScript が無効である場合、[仕様](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html) に従ったフォールバックコンテンツではなく {{ HTMLElement("canvas") }} 要素が表示されていましたが、フォールバックコンテンツが表示されるようになりました。
+- JavaScript が無効である場合、[仕様](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html) に従ったフォールバックコンテンツではなく {{ HTMLElement("canvas") }} 要素が表示されていましたが、フォールバックコンテンツが表示されるようになりました。
 
 ### CSS
 
@@ -76,7 +77,7 @@ Mozilla は人気のアドオン [Firebug](http://getfirebug.com/) に依存す�
 
 ### XUL
 
-- {{ XULAttr("chromemargin") }} 属性の値の定義が若干変更されました。これにより、デフォルトのウィンドウ枠幅が異なる各プラットフォームで、クロスプラットフォームな XUL コードの見た目を簡単に揃えられるようになりました。
+- `chromemargin` 属性の値の定義が若干変更されました。これにより、デフォルトのウィンドウ枠幅が異なる各プラットフォームで、クロスプラットフォームな XUL コードの見た目を簡単に揃えられるようになりました。
 
 ### XPCOM
 

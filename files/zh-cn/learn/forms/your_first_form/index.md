@@ -3,9 +3,10 @@ title: 创建我的第一个表单
 slug: Learn/Forms/Your_first_form
 original_slug: Learn/HTML/Forms/Your_first_HTML_form
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
-本系列的一篇文章为你提供了第一次创建 web 表单的经验，包括设计一个简单表单、使用正确的 HTML 表单控件和其它 HTML 元素实现它、通过 CSS 添加一些非常简单的样式，以及如何将数据发送到服务器。稍后我们将在这一章节中更详细地扩展这些主题。
+本系列的一篇文章为你提供了第一次创建 web 表单的经验，包括设计一个简单表单、使用正确的 HTML 表单控件和其他 HTML 元素实现它、通过 CSS 添加一些非常简单的样式，以及如何将数据发送到服务器。稍后我们将在这一章节中更详细地扩展这些主题。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -34,7 +35,7 @@ original_slug: Learn/HTML/Forms/Your_first_HTML_form
 
 web 表单是用户和 web 站点或应用程序之间交互的主要内容之一。它们允许用户输入数据，大多数情况下会将数据发送到 web 服务器进行处理和存储（见后面的章节[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)），或者在客户端使用某种方式立刻更新界面（例如，添加列表中的另一个项目，或者显示或隐藏 UI 功能）。
 
-web 表单是由一个或多个**表单控件**（有时称为**小部件**），以及一些有助于构建整个表单的附加元素组成——通常被称为 **HTML 表单**。这些控件可以是文本字段（单行或多行）、选择框、按钮、复选框或单选按钮，大部分是使用 {{htmlelement("input")}} 元素创建的，尽管还有一些其它元素需要学习。
+web 表单是由一个或多个**表单控件**（有时称为**小部件**），以及一些有助于构建整个表单的附加元素组成——通常被称为 **HTML 表单**。这些控件可以是文本字段（单行或多行）、选择框、按钮、复选框或单选按钮，大部分是使用 {{htmlelement("input")}} 元素创建的，尽管还有一些其他元素需要学习。
 
 还可对表单控件进行编程，以强制指定输入的格式和值（**表单验证**），并与文本标签配对，向有视力障碍的用户描述其用途。
 
@@ -71,7 +72,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 
 这个元素正式定义了一个表单。就像 {{HTMLelement("section")}} 元素或 {{HTMLelement("footer")}} 元素，它是一个容器元素，但它也支持一些特定的属性来配置表单的行为方式。它的所有属性都是可选的，但实践中最好至少要设置 [`action`](/zh-CN/docs/Web/HTML/Element/form#attr-action) 属性和 [`method`](/zh-CN/docs/Web/HTML/Element/form#attr-method) 属性。
 
-- `action` 属性定义了在提交表单时，应该把所收集的数据送给谁 （URL）去处理。
+- `action` 属性定义了在提交表单时，应该把所收集的数据送给谁（URL）去处理。
 - `method` 属性定义了发送数据的 HTTP 方法（通常是 `get` 或 `post`）。
 
 > **备注：** 如果你想深入了解这些属性是如何工作的，那么将在[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中详细说明。
@@ -268,7 +269,7 @@ button {
 
 在我们的示例中，表单会发送三个已命名的数据块“`user_name`”、“`user_email`”和“`user_message`”。这些数据将用使用 [HTTP `POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 方法，把信息发送到 URL 为“`/my-handling-form-page`”的目录下。
 
-在服务器端，位于 URL “`/my-handling-form-page`”上的脚本将接收的数据作为 HTTP 请求中包含的 3 个键/值项的列表。这个脚本处理这些数据的方式取决于你。每个服务器端语言（PHP、Python、Ruby、Java、c 等等）都有自己的表单数据处理机制。深入到这个主题已经超出了本指南的范围，但是如果你想了解更多，我们已经在[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中提供了一些示例。
+在服务器端，位于 URL“`/my-handling-form-page`”上的脚本将接收的数据作为 HTTP 请求中包含的 3 个键/值项的列表。这个脚本处理这些数据的方式取决于你。每个服务器端语言（PHP、Python、Ruby、Java、c 等等）都有自己的表单数据处理机制。深入到这个主题已经超出了本指南的范围，但是如果你想了解更多，我们已经在[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中提供了一些示例。
 
 ## 总结
 
@@ -369,19 +370,6 @@ button {
 然而，这仅仅是开始，现在是时候深入研究了。表单比我们在这里看到的要强大得多，本指南的其他文章将帮助你掌握其余部分。
 
 {{NextMenu("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms")}}
-
-## 本章目录
-
-- [创建我的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [高级 form 样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 高级主题
 

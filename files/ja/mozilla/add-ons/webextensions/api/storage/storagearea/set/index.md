@@ -2,6 +2,7 @@
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
+
 {{AddonSidebar()}}
 
 1 つ以上のアイテムをストレージ領域に保存または上書きします。
@@ -82,4 +83,4 @@ browser.storage.local.get("monster")
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> **メモ:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。

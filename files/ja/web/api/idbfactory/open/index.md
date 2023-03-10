@@ -2,13 +2,14 @@
 title: IDBFactory.open
 slug: Web/API/IDBFactory/open
 ---
+
 {{APIRef("IDBFactory")}}
 
 {{domxref("IDBFactory")}} インターフェイスの **`open()`** メソッドは、[データベースへの接続](/ja/docs/IndexedDB#gloss_database_connection)を開くことを要求します。
 
-このメソッドは即座に {{domxref("IDBOpenDBRequest")}} オブジェクトを返し、そして非同期でデータベースを開きます。操作が成功した場合、このメソッドから返される request オブジェクトに result の属性として接続のための新しい {{domxref("IDBDatabase")}} オブジェクトが設定されて、 success イベントが発生します。
+このメソッドは即座に {{domxref("IDBOpenDBRequest")}} オブジェクトを返し、そして非同期でデータベースを開きます。操作が成功した場合、このメソッドから返される `request` オブジェクトに `result` の属性として接続のための新しい {{domxref("IDBDatabase")}} オブジェクトが設定されて、`success` イベントが発生します。
 
-データベースとの接続の間にエラーが発生した場合、このメソッドで返される request オブジェクトで、 [error イベント](/ja/docs/IndexedDB/IDBErrorEvent)が発生します。
+データベースとの接続の間にエラーが発生した場合、このメソッドで返される `request` オブジェクトで、 [error イベント](/ja/docs/IndexedDB/IDBErrorEvent)が発生します。
 
 `upgradeneeded`, `blocked`, `versionchange` イベントが発生することもあります。
 
@@ -18,27 +19,27 @@ slug: Web/API/IDBFactory/open
 
 現在の標準では:
 
-```
+```js-nolint
 var IDBOpenDBRequest = indexedDB.open(name);
 var IDBOpenDBRequest = indexedDB.open(name, version);
 ```
 
 ### 引数
 
-- name
+- `name`
   - : データベースの名前。
-- version {{optional_inline}}
+- `version` {{optional_inline}}
   - : 省略可。データベースを開くバージョン。バージョンが提供されずにデータベースが存在した場合、データベースへの接続はバージョンを変更せずに開かれます。バージョンが提供されず、データベースも存在しなかった場合、バージョン番号 `1` が生成されます。
 
 #### 実験的な Gecko の options オブジェクト
 
-- options (version および storage) {{optional_inline}} {{deprecated_inline}}
+- `options` (`version` および `storage`) {{optional_inline}} {{deprecated_inline}}
 
   - : Gecko では、[バージョン 26](/ja/Firefox/Releases/26) から、標準外の `options` オブジェクトを {{ domxref("IDBFactory.open") }} の引数として指定することができ、データベースの `version` 番号と、加えてストレージに `persistent` (永続的) または `temporary` (一時的) のどちらを使用したいかを指定する storage 値を指定することができます。
 
-    > **Warning:** **警告:** `storage` 属性は非推奨であり、まもなく Gecko から削除される予定です。永続的なストレージを得るには、代わりに {{domxref("StorageManager.persist()")}} を使用してください。
+    > **警告:** `storage` 属性は非推奨であり、まもなく Gecko から削除される予定です。永続的なストレージを得るには、代わりに {{domxref("StorageManager.persist()")}} を使用してください。
 
-> **Note:** **メモ**: 利用可能な様々なストレージ種別における詳細情報や、 Firefox がクライアント側データストレージを扱う方法については、 [ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)で見つけることができます。
+> **メモ:** 利用可能な様々なストレージ種別における詳細情報や、 Firefox がクライアント側データストレージを扱う方法については、 [ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)で見つけることができます。
 
 ### 返値
 
@@ -60,57 +61,52 @@ var IDBOpenDBRequest = indexedDB.open(name, version);
 var request = window.indexedDB.open("toDoList", 4);
 ```
 
-次のコードスニペットは、データベースを開く要求をして、成功の場合と失敗の場合のイベントハンドラを登録しています。完璧に動作する例は、 [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](http://mdn.github.io/to-do-notifications/).) を見てください。
+次のコードスニペットは、データベースを開く要求をして、成功の場合と失敗の場合のイベントハンドラを登録しています。完璧に動作する例は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)) を見てください。
 
 ```js
 var note = document.querySelector("ul");
 
-// In the following line, you should include the prefixes
-// of implementations you want to test.
+// 次の行では､テストしたい実装の接頭辞を含めるべきです｡
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-// DON'T use "var indexedDB = ..." if you're not in a function.
-// Moreover, you may need references to some window.IDB* objects:
+// 関数外では "var indexedDB = ..." を使ってはいけません｡
+// さらに､window.IDB* オブジェクトのうちいくつかへの参照も必要かもしれません｡
 window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
 window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// (Mozilla has never prefixed these objects, so we don't
-//  need window.mozIDB*)
+// (Mozilla はこれらのオブジェクトに接頭辞をつけたことはないので､
+//  window.mozIDB* は不要です)
 
-// Let us open version 4 of our database
+// 我々のデータベースのバージョン 4 を開きましょう｡
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-// these two event handlers act on the database being opened
-// successfully, or not
+// これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､
+// 失敗した時に動作します｡
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += '<li>データベースの読み込みに失敗しました。</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>データベースを初期化しました。</li>';
 
-  // store the result of opening the database in the db
-  // variable. This is used a lot later on, for opening
-  // transactions and suchlike.
+  // データベースを開いた結果を変数 db に保存します｡
+  // これはトランザクションを開くときなど､後でたくさん使います｡
   db = DBOpenRequest.result;
 };
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}} | {{Spec2('IndexedDB')}}     |      |
-| {{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}                                                                                 | {{Spec2("IndexedDB 2")}} |      |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat("api.IDBFactory.open")}}
 
 ## 関連情報
 
-- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始 : {{domxref("IDBDatabase")}}
+- トランザクションの使用 : {{domxref("IDBTransaction")}}
+- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
+- データの取得と変更 : {{domxref("IDBObjectStore")}}
+- カーソルの使用 : {{domxref("IDBCursor")}}
+- リファレンス例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

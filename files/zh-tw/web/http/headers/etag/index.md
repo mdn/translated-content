@@ -2,6 +2,7 @@
 title: ETag
 slug: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 **`ETag`** 是 HTTP 回應標頭，用來標誌資源的版本。它可以使快取機制更有效率並節省頻寬，
@@ -80,7 +81,7 @@ If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## See also
 

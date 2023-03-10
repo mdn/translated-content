@@ -1,8 +1,11 @@
 ---
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 **`MouseEvent.buttons`** は読み取り専用のプロパティで、マウスイベントが発行されたときにマウス（またはその他の入力機器）のどのボタンが押されていたかを示します。
 
@@ -10,7 +13,7 @@ slug: Web/API/MouseEvent/buttons
 複数のボタンが押された場合は、ボタンの値を足し合わせて新しい数値が生成されます。
 例えば、副ボタン（`2`）と補助ボタン（`4`）を同時に押した場合、その値は`6`（すなわち、`2 + 4`）となります。
 
-> **Note:** このプロパティを {{domxref("MouseEvent.button")}} プロパティと混同しないでください。
+> **メモ:** このプロパティを {{domxref("MouseEvent.button")}} プロパティと混同しないでください。
 > {{domxref("MouseEvent.buttons")}} プロパティはあらゆる種類のマウスイベントの際に押されていたボタンの状態を示すのに対して、
 > {{domxref("MouseEvent.button")}} プロパティは 1 つまたは複数のボタンを押したか離したことによって引き起こされたマウスイベントのみ、正しい値を保証します。
 
@@ -55,7 +58,7 @@ document.querySelector('#log').appendChild(log)
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

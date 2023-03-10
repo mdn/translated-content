@@ -2,6 +2,7 @@
 title: AudioContext.createWaveShaper()
 slug: Web/API/BaseAudioContext/createWaveShaper
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }} 接口的 createWaveShaper() 方法创建了 表示非线性失真的{{ domxref("WaveShaperNode") }}。该节点通常被用来给音频添加失真效果

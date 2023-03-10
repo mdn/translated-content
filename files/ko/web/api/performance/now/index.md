@@ -1,11 +1,8 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - Performance
-  - performance.now
-translation_of: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 The **`performance.now()`** method returns a {{domxref("DOMHighResTimeStamp")}}, measured in milliseconds.
@@ -23,7 +20,9 @@ Bear in mind the following points:
 
 ## Syntax
 
-    t = performance.now();
+```js
+t = performance.now();
+```
 
 ## Example
 
@@ -36,7 +35,7 @@ console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 
 Unlike other timing data available to JavaScript (for example [`Date.now`](/ko/docs/JavaScript/Reference/Global_Objects/Date/now)), the timestamps returned by `performance.now()` are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.
 
-Also unlike `Date.now()`, the values returned by `performance.now() `always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, `performance.timing.navigationStart + performance.now() `will be approximately equal to` Date.now()`.
+Also unlike `Date.now()`, the values returned by `performance.now()` always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, `performance.timing.navigationStart + performance.now()` will be approximately equal to `Date.now()`.
 
 ## Reduced time precision
 
@@ -62,14 +61,14 @@ performance.now();
 
 In Firefox, you can also enable `privacy.resistFingerprinting` — this changes the precision to 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- [When milliseconds are not enough: performance.now() ](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)from HTML5 Rocks.
+- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) from HTML5 Rocks.

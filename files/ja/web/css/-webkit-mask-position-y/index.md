@@ -1,16 +1,8 @@
 ---
 title: '-webkit-mask-position-y'
 slug: Web/CSS/-webkit-mask-position-y
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-position-y
-translation_of: Web/CSS/-webkit-mask-position-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 `-webkit-mask-position-y` は CSS のプロパティで、マスク画像の初期の垂直方向の位置を設定します。

@@ -1,16 +1,9 @@
 ---
 title: 'HTML el atributo: accept'
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Archivo
-  - Entrada
-  - Input
-  - Referencia
-  - atributo
-translation_of: Web/HTML/Attributes/accept
 original_slug: Web/HTML/Atributos/accept
 ---
+
 El atributo **`accept`** toma como valor una lista separada por comas de uno o más tipos de archivos, o [especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos), que describen qué tipos de archivo permitir. La propiedad «_accept_» es un atributo del tipo {{HTMLElement("input/file", "file")}} {{HTMLElement("input")}}. Se admitía en el elemento {{HTMLElement("form")}}, pero se eliminó a favor de {{HTMLElement("input/file", "file")}} en HTML5.
 
 Debido a que un determinado tipo de archivo se puede identificar de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesiten archivos de un tipo específico, o usar el comodín para indicar que un tipo de cualquier formato es aceptable.
@@ -40,22 +33,22 @@ Cuando se configura en un tipo de entrada de archivo, el selector de archivos na
 
 ```html
 <p>
-	<label for="soundFile">Selecciona un archivo de audio:</label>
-	<input type="file" id="soundFile" accept="audio/*">
-	</p>
-	<p>
-	<label for="videoFile">Selecciona un archivo de video:</label>
-	<input type="file" id="videoFile" accept="video/*">
-	</p>
-	<p>
-	<label for="imageFile">Selecciona algunas imágenes:</label>
-	<input type="file" id="imageFile" accept="image/*" multiple>
-	</p>
+  <label for="soundFile">Selecciona un archivo de audio:</label>
+  <input type="file" id="soundFile" accept="audio/*">
+</p>
+<p>
+  <label for="videoFile">Selecciona un archivo de video:</label>
+  <input type="file" id="videoFile" accept="video/*">
+</p>
+<p>
+  <label for="imageFile">Selecciona algunas imágenes:</label>
+  <input type="file" id="imageFile" accept="image/*" multiple>
+</p>
 ```
 
 {{EmbedLiveSample('ejemplo_sencillo', '100%', 200)}}
 
-Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo [`multiple`](multiple) para obtener más información.
+Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) para obtener más información.
 
 ## Especificadores de tipo de archivo únicos
 
@@ -73,7 +66,7 @@ El atributo `accept` toma como valor una cadena que contiene uno o más de estos
 <input type="file" accept="image/*,.pdf">
 ```
 
-## Usar *input*s de archivo
+## Usar inputs de archivo
 
 ### Un ejemplo básico
 
@@ -103,7 +96,7 @@ Esto produce la siguiente salida:
 
 Independientemente del dispositivo o sistema operativo del usuario, el `<input>` de archivo proporciona un botón que abre un cuadro de diálogo selector de archivos que permite al usuario elegir un archivo.
 
-La inclusión del atributo [`multiple`](multiple), como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por `<input>`, omite el atributo `multiple`.
+La inclusión del atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por `<input>`, omite el atributo `multiple`.
 
 ### Limitar los tipos de archivo aceptados
 
@@ -141,16 +134,13 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'atributo accept')}} | {{ Spec2('HTML WHATWG') }} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'Atributo accept')}} | {{Spec2('HTML5.1')}}         |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## Ve también
 
-- {{web.link("/es/docs/Using_files_from_web_applications", "Uso de archivos de aplicaciones web")}}
-- {{web.link("/es/docs/Web/API/File", "API de File")}}
+- [Uso de archivos de aplicaciones web](/es/docs/Using_files_from_web_applications)
+- [API de File](/es/docs/Web/API/File)

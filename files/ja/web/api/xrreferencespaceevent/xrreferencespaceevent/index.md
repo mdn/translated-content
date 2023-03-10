@@ -2,6 +2,7 @@
 title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 ---
+
 {{APIRef("WebXR Device API")}}
 
 **`XRReferenceSpaceEvent()`** コンストラクターは、新しい {{domxref("XRReferenceSpaceEvent")}} オブジェクトを生成するために使用します。 これは、WebXR 参照空間オブジェクト {{domxref("XRReferenceSpace")}} の状態に関するイベントを表します。

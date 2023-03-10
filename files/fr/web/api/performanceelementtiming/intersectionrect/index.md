@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/intersectionRect
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`intersectionRect`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie le rectangle de l'élément dans la zone d'affichage (_viewport_).

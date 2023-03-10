@@ -2,9 +2,10 @@
 title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
 ---
+
 Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 10 の変更点をまとめています。
 
-> **Note:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
+> **メモ:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
 
 ## Web 開発者向けの変更点一覧
 
@@ -15,7 +16,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 
 ### JavaScript
 
-- `WeakMap.set()` メソッドの戻り値はそれ自身から _`undefined`_ に替わりました。
+- `WeakMap.set()` メソッドの戻り値はそれ自身から `undefined` に替わりました。
 - Firefox 7 以降で正規表現のハンドリングに関する不具合がありましたが、修正されました。詳しくは {{ bug("683838") }} をご覧ください。
 - [ECMAScript 5 strict mode](/ja/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (すなわち、`"use strict;"` 以降) では、[E4X](/ja/docs/E4X) の構文を使用できなくなりました。
 
@@ -33,7 +34,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 - DOM4 仕様書で非推奨とされたため、{{ domxref("document.xmlEncoding") }} 属性が削除されました。
 - DOM4 仕様書で非推奨とされたため、{{ domxref("text.isElementContentWhiteSpace") }} 属性が削除されました。
 - DOM4 仕様書で非推奨とされたため、{{ domxref("text.replaceWholeText") }} メソッドが削除されました。
-- DOM4 仕様書で非推奨とされたため、{{ domxref("node.isSameNode") }} メソッドが削除されました。`node1.isSameNode(node2)` に代わり、`===` 演算子を使用できます。例: ` node1 ===`` node2 `
+- DOM4 仕様書で非推奨とされたため、{{ domxref("node.isSameNode") }} メソッドが削除されました。`node1.isSameNode(node2)` に代わり、`===` 演算子を使用できます。例: `node1 === node2`
 
 #### Page Visibility API
 
@@ -77,7 +78,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 #### その他の変更点
 
-- SVG を含む文字列が与えられたとき、適切な MIME タイプ ` image``/svg+xml ` が渡された場合は [`DOMParser` が `SVGDocument` を生成する](/ja/docs/DOM/DOMParser#Parsing_a_SVG_document)ようになりました。
+- SVG を含む文字列が与えられたとき、適切な MIME タイプ `image/svg+xml` が渡された場合は [`DOMParser` が `SVGDocument` を生成する](/ja/docs/DOM/DOMParser#Parsing_a_SVG_document)ようになりました。
 - 従来 {{ domxref("element.setAttribute()") }} が整数値の構文解析を行うときは、数値ではない文字列が含まれる場合 (例えば "42foo") にエラーを報告していました。これが仕様書へ合致させるために、数値 42 へ正しく切り詰めるようになりました。
 - ESC キーで {{ domxref("window.oninput") }} ハンドラが誤って呼び出されるという、間違った結果にならないようになりました。
 - 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インタフェースは削除されました。
@@ -110,7 +111,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 アドオンを Firefox 10 へ対応させる際に発生すると思われる問題の概要に関しては、[Updating add-ons for Firefox 10](/ja/docs/Firefox/Updating_add-ons_for_Firefox_10) をご覧ください。
 
-> **Note:** 古い [`PRBool`](/ja/docs/PRBool) データ形式は退役されました。これを参照する文書では、どこでも代わりに標準 C++ `bool` 形式を使用します。現時点では文書が更新されていませんが、将来更新されますので留意してください。
+> **メモ:** 古い [`PRBool`](/ja/docs/PRBool) データ形式は退役されました。これを参照する文書では、どこでも代わりに標準 C++ `bool` 形式を使用します。現時点では文書が更新されていませんが、将来更新されますので留意してください。
 
 ### Manifests
 

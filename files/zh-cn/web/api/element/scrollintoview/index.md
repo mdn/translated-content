@@ -2,6 +2,7 @@
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 ---
+
 {{APIRef("DOM")}}{{domxref("Element")}} 接口的 scrollIntoView() 方法会滚动元素的父容器，使被调用 scrollIntoView() 的元素对用户可见。
 
 ## 语法
@@ -45,7 +46,7 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 ## 注意
 
-取决于其它元素的布局情况，此元素可能不会完全滚动到顶端或底端。
+取决于其他元素的布局情况，此元素可能不会完全滚动到顶端或底端。
 
 ## 规范
 
@@ -53,7 +54,7 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.scrollIntoView")}}
+{{Compat}}
 
 ## 相关内容
 

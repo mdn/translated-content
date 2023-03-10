@@ -1,11 +1,11 @@
 ---
 title: 使用数据属性
 slug: Learn/HTML/Howto/Use_data_attributes
-original_slug: Web/Guide/HTML/Using_data_attributes
 ---
+
 {{LearnSidebar}}
 
-[HTML5](/en-US/docs/Web/Guide/HTML/HTML5)是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。[data-\* 属性](/en-US/docs/Web/HTML/Global_attributes#data-*)允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 [classList](/en-US/docs/Web/API/Element.classList)，标准外属性，DOM 额外属性或是 [setUserData](/en-US/docs/Web/API/Node.setUserData) 之类的技巧。
+[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5)是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。[data-\* 属性](/zh-CN/docs/Web/HTML/Global_attributes#data-*)允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 [classList](/zh-CN/docs/Web/API/Element.classList)，标准外属性，DOM 额外属性或是 [setUserData](/zh-CN/docs/Web/API/Node.setUserData) 之类的技巧。
 
 ## HTML 语法
 
@@ -23,7 +23,7 @@ original_slug: Web/Guide/HTML/Using_data_attributes
 
 ## JavaScript 访问
 
-在外部使用[JavaScript](/en-US/docs/Web/JavaScript)去访问这些属性的值同样非常简单。你可以使用{{domxref("Element.getAttribute", "getAttribute()")}}配合它们完整的 HTML 名称去读取它们，但标准定义了一个更简单的方法：{{domxref("DOMStringMap")}}你可以使用{{domxref("HTMLElement.dataset", "dataset")}}读取到数据。
+在外部使用[JavaScript](/zh-CN/docs/Web/JavaScript)去访问这些属性的值同样非常简单。你可以使用{{domxref("Element.getAttribute", "getAttribute()")}}配合它们完整的 HTML 名称去读取它们，但标准定义了一个更简单的方法：{{domxref("DOMStringMap")}}你可以使用{{domxref("HTMLElement.dataset", "dataset")}}读取到数据。
 
 为了使用`dataset`对象去获取到数据属性，需要获取属性名中`data-`之后的部分 (要注意的是破折号连接的名称需要改写为骆驼拼写法 (如"index-number"转换为"indexNumber"))。
 
@@ -39,7 +39,7 @@ article.dataset.parent // "cars"
 
 ## CSS 访问
 
-注意，data 设定为 HTML 属性，他们同样能被[CSS](/en-US/docs/Web/CSS)访问。比如你可以通过[generated content](/en-US/docs/Web/CSS/content)使用函数{{cssxref("attr")}}来显示 data-parent 的内容：
+注意，data 设定为 HTML 属性，他们同样能被[CSS](/zh-CN/docs/Web/CSS)访问。比如你可以通过[generated content](/zh-CN/docs/Web/CSS/content)使用函数{{cssxref("attr")}}来显示 data-parent 的内容：
 
 ```css
 article::before {
@@ -47,7 +47,7 @@ article::before {
 }
 ```
 
-你也同样可以在 CSS 中使用[属性选择器](/en-US/docs/Web/CSS/Attribute_selectors)根据 data 来改变样式：
+你也同样可以在 CSS 中使用[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)根据 data 来改变样式：
 
 ```css
 article[data-columns='3'] {
@@ -74,7 +74,7 @@ IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标
 
 在 FireFox 49.0.2(其他版本也有可能) 中，javascript 将无法读出包含 1022 个及以上字符的 data 属性 (EcmaScript 4).
 
-## 参阅
+## 参见
 
 - 该文章源自 [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
 - 在 SVG 2 中也同样支持自定义 data 属性; 请参看{{domxref("SVGElement.dataset")}} 和{{SVGAttr("data-*")}}.

@@ -1,16 +1,8 @@
 ---
 title: CSS フローレイアウト
 slug: Web/CSS/CSS_Flow_Layout
-tags:
-  - CSS
-  - Reference
-  - ガイド
-  - フロー
-  - フローレイアウト
-  - レイアウト
-  - 中級者
-translation_of: Web/CSS/CSS_Flow_Layout
 ---
+
 {{CSSRef}}
 
 _通常フロー_ (Normal Flow) 、またはフローレイアウトは、レイアウトに変更が加えられる前にブロック要素やインライン要素がページに表示される方法です。このフローは本質的に、共に動作するすべてのものの組み合わせで、レイアウトの中で互いについてを知っています。いったん何かが*フローの外*に出ると、独立して動作します。
@@ -39,5 +31,5 @@ _通常フロー_ (Normal Flow) 、またはフローレイアウトは、レイ
 
 - {{Glossary("Block/CSS", "ブロック (CSS)")}}
 
-1.  [**CSS**](/ja/docs/Web/CSS)
-2.  [**CSS リファレンス**](/ja/docs/Web/CSS/Reference)
+1. [CSS](/ja/docs/Web/CSS)
+2. [CSS リファレンス](/ja/docs/Web/CSS/Reference)

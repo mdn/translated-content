@@ -9,11 +9,12 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/CSS/Comprendre_z-index/Ajout_de_z-index
 ---
+
 {{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_et_float","Web/CSS/Comprendre_z-index/Empilement_de_couches", "Web/CSS/Comprendre_z-index")}}
 
 ## Ajouter `z-index`
 
-Dans le premier exemple, [« empilement sans `z-index` »](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index),  illustre comment l'empilement fonctionne par défaut. Pour définir un ordre d'empilement différent, il faut utiliser la propriété CSS {{cssxref("z-index")}}.
+Dans le premier exemple, [« empilement sans `z-index` »](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index), illustre comment l'empilement fonctionne par défaut. Pour définir un ordre d'empilement différent, il faut utiliser la propriété CSS {{cssxref("z-index")}}.
 
 Cette propriété, dont l'attribut est une valeur entière (positive ou négative), représente la position de l'élément le long de l'axe Z. Pour se représenter cette notion, on peut imaginer que la page possède plusieurs couches, les unes au dessus des autres. Chaque couche est numérotée. Un couche avec une grande valeur de `z-index` est affichée par dessus toutes celles dont la valeur est inférieure à la sienne.
 
@@ -40,7 +41,7 @@ Dans l'exemple qui suit, l'empilement des couches a été réordonné en utilisa
 
 {{EmbedLiveSample("Code_source_de_l’exemple", '468', '365')}}
 
-## **Code source de l’exemple**
+## Code source de l’exemple
 
 ### HTML
 

@@ -2,11 +2,12 @@
 title: Three.js を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
+
 {{GamesSidebar}}
 
 ゲームの一般的な 3D シーンは、たとえ最もシンプルなものであっても、座標系に配置された図形、それらを実際に見るためのカメラ、見栄えを良くするためのライトや素材、生き生きと見せるためのアニメーションなど、標準的なアイテムが含まれています。 **Three.js** は、他の 3D ライブラリーと同様に、一般的な 3D 機能をより迅速に実装するためのヘルパー関数が組み込まれています。この記事では、開発環境の設定、必要な HTML の構成、 Three の基本オブジェクト、基本的なデモの作成方法など、 Three を使用するための本当の基本を紹介します。
 
-> **Note:** 私たちは Three を有名な [WebGL](/ja/docs/Web/API/WebGL_API)ライブラリーの 1 つであり、簡単に使い始められるという理由で選びました。Three が他の WebGL ライブラリーと比べて優秀だというつもりはありません。 [CopperLicht](https://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), [PlayCanvas](https://playcanvas.com/) など、気軽に試してみてください。
+> **メモ:** 私たちは Three を有名な [WebGL](/ja/docs/Web/API/WebGL_API)ライブラリーの 1 つであり、簡単に使い始められるという理由で選びました。Three が他の WebGL ライブラリーと比べて優秀だというつもりはありません。 [CopperLicht](https://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), [PlayCanvas](https://playcanvas.com/) など、気軽に試してみてください。
 
 ## 環境構築
 
@@ -92,7 +93,7 @@ scene.add(camera);
 
 これらの値を試してみて、シーンで見えるものがどのように変わるかを見てみるとよいでしょう。
 
-> **Note:** これらの座標（カメラの z 位置など）の引数に決まった単位は存在しないため、シーンに適している単位 (ミリメートル、メートル、フィートやマイルでも) で構いません。あなたの決めるところです。
+> **メモ:** これらの座標（カメラの z 位置など）の引数に決まった単位は存在しないため、シーンに適している単位 (ミリメートル、メートル、フィートやマイルでも) で構いません。あなたの決めるところです。
 
 ## シーンのレンダリング
 

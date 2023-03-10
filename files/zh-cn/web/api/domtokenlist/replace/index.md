@@ -2,6 +2,7 @@
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("DOMTokenList")}}接口的 **`replace()`** 方法可以将列表中一个已存在的 token 替换为一个新 token。如果第一个参数 token 在列表中不存在， `replace()` 立刻返回`false` ，而不会将新 token 字符串添加到列表中。
@@ -61,4 +62,4 @@ if (result) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMTokenList.replace")}}
+{{Compat}}

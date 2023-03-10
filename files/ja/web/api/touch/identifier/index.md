@@ -2,6 +2,7 @@
 title: Touch.identifier
 slug: Web/API/Touch/identifier
 ---
+
 {{ APIRef("Touch Events") }}{{SeeCompatTable}}
 
 **`Touch.identifier`** はタッチ面に接触した点を識別する固有の値を返します。この値は、タッチ面上でのこの指 (またはスタイラス) の動きに関わるすべてのイベントに対して、タッチ面から離れるまで一貫したものです。
@@ -30,10 +31,7 @@ someElement.addEventListener('touchmove', function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 | 備考     |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Touch Events 2','#dom-touch-identifier')}} | {{Spec2('Touch Events 2')}} | 変更なし |
-| {{SpecName('Touch Events', '#widl-Touch-identifier')}} | {{Spec2('Touch Events')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

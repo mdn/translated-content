@@ -1,31 +1,31 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: conflicting/Web/API/Window/hashchange_event
-tags:
-  - HTML-DOM
-  - JavaScript
-  - Propiedades
-  - Referencia
-  - WindowEventHandlers
-  - eventos
-translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
+browser-compat: api.Window.hashchange_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 El evento **hashchange** se dispara cuando la almohadilla ha cambiado (ver {{domxref("Window.location", "location.hash")}}).
 
 ## Sintaxis
 
-    window.onhashchange = funcRef;
+```js
+window.onhashchange = funcRef;
+```
 
 **ó**
 
-    <body onhashchange="funcRef();">
+```html
+<body onhashchange="funcRef();">
+```
 
 **ó**
 
-    window.addEventListener("hashchange", funcRef, false);
+```js
+window.addEventListener("hashchange", funcRef, false);
+```
 
 ### Parámetros
 
@@ -54,17 +54,13 @@ El evento `hashchange` enviado, tiene los siguientes campos:
 
 | Campo                                                 | Tipo        | Descripción                                           |
 | ----------------------------------------------------- | ----------- | ----------------------------------------------------- |
-| `newURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | La URL nueva hacia la cual la ventana está navegando. |
-| `oldURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | La URL anterior desde la cual la ventana navegó.      |
+| `newURL` | `DOMString` | La URL nueva hacia la cual la ventana está navegando. |
+| `oldURL` | `DOMString` | La URL anterior desde la cual la ventana navegó.      |
 
 ## Especificaciones
 
-| Especificacion                                                                                       | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |            |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WindowEventHandlers.onhashchange")}}
+{{Compat}}

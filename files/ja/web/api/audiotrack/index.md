@@ -2,6 +2,7 @@
 title: AudioTrack
 slug: Web/API/AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`AudioTrack`** インターフェイスは、 HTML のメディア要素（{{HTMLElement("audio")}} または {{HTMLElement("video")}}）のいずれかにある単一の音声トラックを表します。

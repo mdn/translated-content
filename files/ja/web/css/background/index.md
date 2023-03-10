@@ -1,15 +1,8 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.background
-translation_of: Web/CSS/background
 ---
+
 {{CSSRef("CSS Background")}}
 
 **`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。

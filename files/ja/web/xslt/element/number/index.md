@@ -1,13 +1,8 @@
 ---
 title: <xsl:number>
 slug: Web/XSLT/Element/number
-tags:
-  - Number
-  - XSLT
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/number
 ---
+
 {{ XsltRef() }}
 
 `<xsl:number>` 要素は物事を順番に数えます。 また、番号をすばやくフォーマットするためにも使用できます。

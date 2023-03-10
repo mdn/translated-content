@@ -1,27 +1,28 @@
 ---
 title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
-## 概要
 
-フォームのアクションの対象を取得 / 設定します。
+{{APIRef("HTML DOM")}}
 
-## 構文
+**`target`** は {{domxref("HTMLFormElement")}} インターフェイスのプロパティで、このフォームのアクションのターゲット（すなわち、出力結果が描画されるフレーム）を表します。
 
-```
-string = form.target // 取得
+## 値
 
-form.target = string // 設定
-```
+文字列です。
 
 ## 例
 
 ```js
 myForm.target = document.frames[1].name;
-// フレームセット中の 2 番目のフレームを myForm の操作対象に設定
 ```
 
 ## 仕様書
 
-- [HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
-- [DOM Level 2 HTML: target](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6512890)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

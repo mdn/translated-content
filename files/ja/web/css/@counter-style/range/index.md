@@ -1,16 +1,8 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.range
-translation_of: Web/CSS/@counter-style/range
 ---
+
 {{CSSRef}}
 
 カスタムカウンターのスタイルを定義する際、 **`range`** 記述子により、スタイルが適用されるカウンター値の範囲を指定することができます。カウンターの値が指定された範囲の外にある場合、代替スタイルがそのマーカーの表現を構築するために使用されます。

@@ -11,6 +11,7 @@ tags:
   - nextHopProtocol
 translation_of: Web/API/PerformanceResourceTiming/nextHopProtocol
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`nextHopProtocol`** est une [chaîne de caractères](/fr/docs/Web/API/DOMString) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).

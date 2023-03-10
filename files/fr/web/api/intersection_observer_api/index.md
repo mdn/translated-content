@@ -3,6 +3,7 @@ title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 translation_of: Web/API/Intersection_Observer_API
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Intersection Observer API")}}
 
 L'API _Intersection Observer_ permet d'observer de manière asynchrone l'évolution de l'intersection d'un élément cible avec un élément ancêtre ou avec la zone d'affichage d'un document de niveau supérieur.
@@ -46,7 +47,7 @@ Un palier de 1.0 signifie que lorsque 100% de la cible est visible dans l'élém
 
 #### Options de l'observateur d'intersection
 
-L'objet `options` qui est passé dans le constructeur  {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} permet de contrôler les circonstances selon lesquelles la fonction _callback_ de l'observateur est invoquée. Il possède les champs suivants :
+L'objet `options` qui est passé dans le constructeur {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} permet de contrôler les circonstances selon lesquelles la fonction _callback_ de l'observateur est invoquée. Il possède les champs suivants :
 
 - `root`
   - : L'élément qui est utilisé comme zone d'affichage au moment d'évaluer la visibilité de la cible. Il doit être un ancêtre de la cible. S'il n'est pas spécifié ou s'il prend la valeur `null`, sa valeur par défaut est la zone d'affichage (le _viewport_) du navigateur.
@@ -102,7 +103,7 @@ Le rectangle utilisé pour délimiter la racine de l'intersection peut être aju
 
 Plutôt que de rapporter le moindre changement de variation de la visibilité d'un élément, l'API Intersection Observer utilise des **paliers**. Lors de la création d'un observateur, vous pouvez fournir une ou plusieurs valeurs numériques qui représentent des pourcentages de visibilité de l'élément cible. Dans ce cas, l'API ne rapportent que les changements de visibilité qui franchissent ces paliers.
 
-Par exemple, si vous voulez être informé à chaque fois que la visibilité d'une cible passe au dessus ou en dessous de chaque multiple de 25%, il faudra fournir le tableau \[0, 0.25, 0.5, 0.75, 1] comme liste de paliers lors de la création de l'observateur. Vous pouvez préciser dans quelle direction a changé la visibilité (c'est-à-dire, si l'élément est devenu plus ou moins visible) en lisant la valeur de la propriété {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} du  {{domxref("IntersectionObserverEntry")}} passé dans la fonction `callback` lors du changement de visibilité. Si `isIntersecting` est `true`, l'élément cible est devenu au moins aussi visible quand le palier a été franchi. Si elle vaut `false`, la cible n'est plus aussi visible que le palier spécifié.
+Par exemple, si vous voulez être informé à chaque fois que la visibilité d'une cible passe au dessus ou en dessous de chaque multiple de 25%, il faudra fournir le tableau \[0, 0.25, 0.5, 0.75, 1] comme liste de paliers lors de la création de l'observateur. Vous pouvez préciser dans quelle direction a changé la visibilité (c'est-à-dire, si l'élément est devenu plus ou moins visible) en lisant la valeur de la propriété {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} du {{domxref("IntersectionObserverEntry")}} passé dans la fonction `callback` lors du changement de visibilité. Si `isIntersecting` est `true`, l'élément cible est devenu au moins aussi visible quand le palier a été franchi. Si elle vaut `false`, la cible n'est plus aussi visible que le palier spécifié.
 
 Pour mieux comprendre comment fonctionnent les paliers, faites défiler la boîte ci-dessous. A l'intérieur, chacune des boîtes colorées affiche son pourcentage de visibilité sur chacun de ses quatre coins, de telle sorte que l'on peut voir ces ratios changer tandis que le conteneur défile. Chaque boîte a un ensemble différent de paliers :
 
@@ -364,7 +365,7 @@ Les constantes et variables que nous préparons sont :
 - `decreasingColor`
   - : De même, il s'agit d'une chaîne de caractères qui définit une couleur que nous appliquerons lorsque le ratio de visibilité diminue.
 
-On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement {{event("load")}} ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
+On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement [`load`](/fr//docs/Web/API/Window/load_event) ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
 
 #### Création de l'observateur d'intersection
 
@@ -391,11 +392,11 @@ La liste de paliers de ratio de visibilité, `threshold`, est construite par la 
 
 Une fois que `options` est prêt, nous pouvons créer le nouvel observateur, en appelant le constructeur {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} , en précisant une fonction _callback_ à appeler quand l'intersection franchit l'un de nos paliers, `handleIntersect()`, et notre ensemble d'options. On appelle alors {{domxref("IntersectionObserver.observe", "observe()")}} sur l'observateur retourné, afin de le passer à l'élément qui sera notre cible
 
-On pourrait également choisir de surveiller l'évolution de la visibilité de l'intersection de plusieurs éléments par rapport au _viewport_ en appelant `observer.observe()`pour chacun de ces éléments.
+On pourrait également choisir de surveiller l'évolution de la visibilité de l'intersection de plusieurs éléments par rapport au _viewport_ en appelant `observer.observe()` pour chacun de ces éléments.
 
 #### Construction du tableau de paliers de ratios
 
-La fonction`buildThresholdList()`, qui construit la liste de paliers, ressemble à ceci :
+La fonction `buildThresholdList()`, qui construit la liste de paliers, ressemble à ceci :
 
 ```js
 function buildThresholdList() {
@@ -411,7 +412,7 @@ function buildThresholdList() {
 }
 ```
 
-Cela construit la tableau de paliers (chacun de ces paliers étant un ratio compris entre 0.0 et 1.0, ajouté en poussant la valeur`i/numSteps`dans le tableau `thresholds` pour chaque entier `i` entre 1 et `numSteps`). On pousse également 0 pour inclure cette valeur. Le résultat, dans le cas où`numSteps`a sa valeur par défaut, est la liste de paliers suivante :
+Cela construit la tableau de paliers (chacun de ces paliers étant un ratio compris entre 0.0 et 1.0, ajouté en poussant la valeur `i/numSteps` dans le tableau `thresholds` pour chaque entier `i` entre 1 et `numSteps`). On pousse également 0 pour inclure cette valeur. Le résultat, dans le cas où `numSteps` a sa valeur par défaut, est la liste de paliers suivante :
 
 <table class="standard-table">
   <tbody>

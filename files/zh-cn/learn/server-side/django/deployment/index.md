@@ -2,9 +2,10 @@
 title: 'Django 教程 11: 部署 Django 到生产环境'
 slug: Learn/Server-side/Django/Deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-现在，您已经创建（并测试）了一个令人敬畏的[LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，如果您希望将其安装在公共 Web 服务器上，以便图书馆工作人员和成员可以通过 Internet 访问它。本文概述了如何找到主机来部署您的网站，以及您需要做什么才能让您的网站准备好生产。
+现在，您已经创建（并测试）了一个令人敬畏的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，如果您希望将其安装在公共 Web 服务器上，以便图书馆工作人员和成员可以通过 Internet 访问它。本文概述了如何找到主机来部署您的网站，以及您需要做什么才能让您的网站准备好生产。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -159,7 +160,7 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 
 - 大多数情况下它只是能工作，如果你最终喜欢它，扩展你的应用程序非常容易。
 
-虽然 Heroku 非常适合用于此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退 ​​ 出免费套餐，可能会花费更多。
+虽然 Heroku 非常适合用于此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退 出免费套餐，可能会花费更多。
 
 ### Heroku 是如何工作的？
 
@@ -203,7 +204,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 4. 点击 **Create repository**.
 5. 点击新仓库页面上的绿色“克隆或下载”（**Clone or download**）按钮。
-6. 从显示的对话框中的文本字段中复制 URL 值（它应该类似于： **https\://github.com/_\<your_git_user_id>_/django_local_library.git**）。
+6. 从显示的对话框中的文本字段中复制 URL 值（它应该类似于： `https://github.com/<your_git_user_id>/django_local_library.git`）。
 
 现在创建了储存库（“repo”），我们将要在本地计算机上克隆它：
 
@@ -317,7 +318,7 @@ pip3 install gunicorn
 在本地安装 dj-database-url，使其成为我们在远程服务器上设置 Heroku 的 [requirements](#requirements) 的一部分：
 
 ```bash
-$ pip3 install dj-database-url
+pip3 install dj-database-url
 ```
 
 ##### settings.py
@@ -397,7 +398,7 @@ Whitenoise
 使用以下命令在本地安装 whitenoise：
 
 ```bash
-$ pip3 install whitenoise
+pip3 install whitenoise
 ```
 
 ##### settings.py
@@ -650,21 +651,3 @@ heroku ps   #Display dyno status
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
-
-## 本教程文章
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

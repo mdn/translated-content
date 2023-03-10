@@ -1,12 +1,11 @@
 ---
 title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-browser-compat: javascript.builtins.Symbol.keyFor
 l10n:
   sourceCommit: ef59c2d0399ba62ec2632810564ab12a198af868
 ---
+
 {{JSRef}}
 
 El método **`Symbol.keyFor(sym)`** recupera la clave de símbolo compartida del símbolo pasado como argumento desde el registro global de símbolos.

@@ -1,42 +1,41 @@
 ---
-title: Remainder assignment (%=)
+title: 取余赋值（%=）
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The remainder assignment operator (`%=`) divides a variable by the value of the right operand and assigns the remainder to the variable.
+**取余赋值**（**`%=`**）运算符将变量除以右操作数的值，并将余数赋值给该变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
 
 ## 语法
 
-```plain
-Operator: x %= y
-Meaning:  x  = x % y
+```js-nolint
+x %= y // x = x % y
 ```
 
-## Examples
+## 示例
 
-### Using remainder assignment
+### 使用取余赋值
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar %= 2     // 1
-bar %= 'foo' // NaN
-bar %= 0     // NaN
+bar %= 2; // 1
+bar %= 'foo'; // NaN
+bar %= 0; // NaN
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)

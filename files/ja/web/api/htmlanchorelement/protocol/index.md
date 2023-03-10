@@ -3,6 +3,7 @@ title: HTMLAnchorElement.protocol
 slug: Web/API/HTMLAnchorElement/protocol
 original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.protocol`** プロパティは、 URL のプロトコルスキームを表す文字列で、最後の `':'` を含みます。

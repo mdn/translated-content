@@ -2,9 +2,10 @@
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
 ---
+
 {{HTTPSidebar}}
 
-The **`Last-Modified`** 是一个响应首部，其中包含源头服务器认定的资源做出修改的日期及时间。 它通常被用作一个验证器来判断接收到的或者存储的资源是否彼此一致。由于精确度比 {{HTTPHeader("ETag")}} 要低，所以这是一个备用机制。包含有 {{HTTPHeader("If-Modified-Since")}} 或 {{HTTPHeader("If-Unmodified-Since")}} 首部的条件请求会使用这个字段。
+**`Last-Modified`** 是一个响应首部，其中包含源头服务器认定的资源做出修改的日期及时间。它通常被用作一个验证器来判断接收到的或者存储的资源是否彼此一致。由于精确度比 {{HTTPHeader("ETag")}} 要低，所以这是一个备用机制。包含有 {{HTTPHeader("If-Modified-Since")}} 或 {{HTTPHeader("If-Unmodified-Since")}} 首部的条件请求会使用这个字段。
 
 | Header type                                                                                      | {{Glossary("Response header")}} |
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------- |

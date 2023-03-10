@@ -1,16 +1,9 @@
 ---
 title: <col>
 slug: Web/HTML/Element/col
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-translation_of: Web/HTML/Element/col
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<col>` 要素**は、表内の列を定義して、すべての一般セルに共通の意味を定義するために使用します。この要素は通常、 {{HTMLElement("colgroup")}} 要素内にみられます。
 
@@ -87,11 +80,12 @@ translation_of: Web/HTML/Element/col
 
     この属性が設定されていない場合、その値は `<col>` 要素が属する {{HTMLElement("colgroup")}} 要素の {{htmlattrxref("align", "colgroup")}} 属性から継承します。それも存在しない場合は、`left` 値であるものとします。
 
-    > **Note:** **補足:**- 値 `left`、`center`、`right`、`justify` と同じ効果を得る方法:
+    > **補足:**
     >
-    >     -   {{cssxref("text-align")}} プロパティを `<col>` 要素を与えたセレクターに設定しようとしてはいけません。 {{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
-    >     -   表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 `a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
-    >     -   表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
+    > - 値 `left`、`center`、`right`、`justify` と同じ効果を得る方法:
+    > - {{cssxref("text-align")}} プロパティを `<col>` 要素を与えたセレクターに設定しようとしてはいけません。 {{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
+    > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 `a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
+    > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
@@ -112,7 +106,7 @@ translation_of: Web/HTML/Element/col
     - `middle` : テキストをセルの中央部に置きます。
     - and `top` : テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **Note:** **補足:**- {{cssxref("vertical-align")}} プロパティを、 `<col>` 要素を与えたセレクターに設定しようとしてはいけません。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
+    > **メモ:** **補足:**- {{cssxref("vertical-align")}} プロパティを、 `<col>` 要素を与えたセレクターに設定しようとしてはいけません。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
     >
     > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、 CSS の `td:nth-child(an+b)` セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用することができます。
     > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
@@ -126,11 +120,7 @@ translation_of: Web/HTML/Element/col
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'tables.html#the-col-element', '&lt;col&gt;')}}         | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'tabular-data.html#the-col-element', '&lt;col&gt;')}} | {{Spec2('HTML5 W3C')}}     |          |
-| {{SpecName('HTML4.01', 'struct/tables.html#h-11.2.4.2', '&lt;col&gt;')}}         | {{Spec2('HTML4.01')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

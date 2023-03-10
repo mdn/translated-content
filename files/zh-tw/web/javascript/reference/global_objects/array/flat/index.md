@@ -2,6 +2,7 @@
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 **`flat()`** 函數以遞迴方式將特定深度的子陣列重新串接成為一新的陣列
@@ -113,7 +114,7 @@ function flatten(array) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.flat")}}
+{{Compat}}
 
 ## See also
 

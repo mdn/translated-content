@@ -2,6 +2,7 @@
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
 ---
+
 [クリップボード API](/ja/docs/Web/API/Clipboard_API) は **{{domxref("Navigator")}}** インターフェイスに読み取り専用の **`clipboard`** プロパティを追加し、これはクリップボードの内容を読み書きするために使用する {{domxref("Clipboard")}} オブジェクトを返します。
 
 クリップボード API は切り取り、コピー、貼り付け機能をウェブアプリケーションに実装するために使用することができます。

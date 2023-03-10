@@ -1,9 +1,9 @@
 ---
 title: Cómo estructurar un formulario HTML
 slug: Learn/Forms/How_to_structure_a_web_form
-translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 Una vez examinados los conceptos básicos, vamos a ver más en detalle los elementos que se utilizan para proporcionar estructura y significado a las diferentes partes de un formulario.
@@ -27,7 +27,7 @@ Una vez examinados los conceptos básicos, vamos a ver más en detalle los eleme
   </tbody>
 </table>
 
-La flexibilidad que presentan los formularios los convierte en una de las estructuras más complejas en [HTML](/es/docs/Learn/HTML "/en-US/docs/HTML"), puesto que puedes crear cualquier tipo de formulario básico a partir de los elementos y atributos destinados a esta función. El uso de una estructura correcta al crear un formulario HTML te ayudará a garantizar que el formulario presente las características de usabilidad y [accesibilidad ](/es/docs/Learn/Accessibility)adecuadas.
+La flexibilidad que presentan los formularios los convierte en una de las estructuras más complejas en [HTML](/es/docs/Learn/HTML), puesto que puedes crear cualquier tipo de formulario básico a partir de los elementos y atributos destinados a esta función. El uso de una estructura correcta al crear un formulario HTML te ayudará a garantizar que el formulario presente las características de usabilidad y [accesibilidad](/es/docs/Learn/Accessibility) adecuadas.
 
 ## El elemento \<form>
 
@@ -180,14 +180,14 @@ Depende de ti, sobre todo, encontrar un estilo de codificación cómodo que dé 
 
 Pongamos en práctica estas ideas y creemos un formulario un poco más complicado: un formulario de pago. Este formulario contendrá una serie de tipos de control que quizás aún no comprendas. No te preocupes por esto por ahora; en el artículo siguiente descubrirás cómo funcionan ([Los controles básicos de formulario originales](/es/docs/Learn/HTML/Forms/The_native_form_widgets)). Por ahora, lee con detenimiento las descripciones y sigue las instrucciones, y empieza a formarte una idea de qué elementos de delimitación se utilizan para estructurar el formulario y por qué.
 
-1.  Para comenzar, haz una copia local de nuestro [archivo de plantilla en blanco](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) y el [CSS de nuestro formulario de pago](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) en un nuevo directorio de tu ordenador.
-2.  Añade dentro del elemento HTML {{htmlelement ("head")}} la línea siguiente para aplicar el CSS al HTML:
+1. Para comenzar, haz una copia local de nuestro [archivo de plantilla en blanco](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) y el [CSS de nuestro formulario de pago](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) en un nuevo directorio de tu ordenador.
+2. Añade dentro del elemento HTML {{htmlelement ("head")}} la línea siguiente para aplicar el CSS al HTML:
 
     ```html
     <link href="payment-form.css" rel="stylesheet">
     ```
 
-3.  A continuación, añade el elemento externo {{htmlelement ("form")}} para crear tu formulario:
+3. A continuación, añade el elemento externo {{htmlelement ("form")}} para crear tu formulario:
 
     ```html
     <form>
@@ -195,14 +195,14 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
     </form>
     ```
 
-4.  Añade un encabezado y un párrafo dentro de las etiquetas `<form>`> para informar a los usuarios cómo se marcan los campos obligatorios:
+4. Añade un encabezado y un párrafo dentro de las etiquetas `<form>` para informar a los usuarios cómo se marcan los campos obligatorios:
 
     ```html
     <h1>Forma de pago</h1>
     <p>Los campos obligatorios van seguidos de <strong> <abbr title = "required"> * </abbr> </strong>.</p>
     ```
 
-5.  A continuación añadimos al formulario una sección de código más grande, justo debajo de nuestra entrada anterior. Aquí verás que delimitamos con un elemento {{htmlelement ("section")}} independiente los campos con la información de contacto. Además, hay un conjunto de dos botones de opción, cada uno de los cuales colocamos dentro de su elemento de lista ({{htmlelement ("li")}}) propio. También hay dos entradas de texto estándar {{htmlelement ("input")}} y sus elementos {{htmlelement ("label")}} asociados, cada uno anidado dentro de un elemento {{htmlelement ("p")}} y una entrada de texto para introducir una contraseña. Añade este código a tu formulario:
+5. A continuación añadimos al formulario una sección de código más grande, justo debajo de nuestra entrada anterior. Aquí verás que delimitamos con un elemento {{htmlelement ("section")}} independiente los campos con la información de contacto. Además, hay un conjunto de dos botones de opción, cada uno de los cuales colocamos dentro de su elemento de lista ({{htmlelement ("li")}}) propio. También hay dos entradas de texto estándar {{htmlelement ("input")}} y sus elementos {{htmlelement ("label")}} asociados, cada uno anidado dentro de un elemento {{htmlelement ("p")}} y una entrada de texto para introducir una contraseña. Añade este código a tu formulario:
 
     ```html
     <section>
@@ -254,7 +254,7 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
     </section>
     ```
 
-6.  La segunda `<section>` de nuestro formulario es la información de pago. Hay tres controles diferentes, junto con sus etiquetas, cada uno contenido dentro de un elemento `<p>`. El primero es un menú desplegable ({{htmlelement ("select")}}) para seleccionar el tipo de tarjeta de crédito. El segundo es un elemento `<input>` de tipo `tel`, para introducir un número de tarjeta de crédito. Si bien podríamos haber usado el tipo `number`, no queremos una interfaz de usuario con control de número. El último es un elemento `<input>` de tipo `date`, para introducir la fecha de caducidad de la tarjeta; aparecerá como un control de selección de fecha en navegadores compatibles, y como una entrada de texto normal en navegadores no compatibles. Estos tipos de entrada más nuevos volverán a aparecer en el artículo [Tipos de entrada HTML5](/es/docs/Learn/Forms/HTML5_input_types).<br><br>
+6. La segunda `<section>` de nuestro formulario es la información de pago. Hay tres controles diferentes, junto con sus etiquetas, cada uno contenido dentro de un elemento `<p>`. El primero es un menú desplegable ({{htmlelement ("select")}}) para seleccionar el tipo de tarjeta de crédito. El segundo es un elemento `<input>` de tipo `tel`, para introducir un número de tarjeta de crédito. Si bien podríamos haber usado el tipo `number`, no queremos una interfaz de usuario con control de número. El último es un elemento `<input>` de tipo `date`, para introducir la fecha de caducidad de la tarjeta; aparecerá como un control de selección de fecha en navegadores compatibles, y como una entrada de texto normal en navegadores no compatibles. Estos tipos de entrada más nuevos volverán a aparecer en el artículo [Tipos de entrada HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 
     Introduce los datos siguientes a continuación de la sección anterior:
 
@@ -289,7 +289,7 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
     </section>
     ```
 
-7.  La última sección que añadimos es mucho más simple y contiene solo un {{htmlelement ("button")}} de tipo `submit`, para enviar los datos del formulario. Añádelo al final de tu formulario:
+7. La última sección que añadimos es mucho más simple y contiene solo un {{htmlelement ("button")}} de tipo `submit`, para enviar los datos del formulario. Añádelo al final de tu formulario:
 
     ```html
     <p> <button type="submit">Validar el pago</button> </p>
@@ -297,7 +297,7 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
 
 Debajo puedes ver en acción el formulario terminado (también lo encontrarás en GitHub; consulta el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) de nuestro payment-form.html y [ejecútalo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "/en-US/Learn/Forms/How_to_structure_a_web_form/Example")}}
+{{EmbedLiveSample('',"100%",620)}}
 
 ## ¡Prueba tus habilidades!
 

@@ -2,9 +2,10 @@
 title: IDBObjectStore.autoIncrement
 slug: Web/API/IDBObjectStore/autoIncrement
 ---
+
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBObjectStore")}}的只读属性**`autoIncrement`**接口返回当前 objectStore 的自增标记值（true 或 false）。
+{{domxref("IDBObjectStore")}}的只读属性 **`autoIncrement`** 接口返回当前 objectStore 的自增标记值（true 或 false）。
 
 什么是自增呢？熟悉 SQL 的朋友应该知道，SQL 数据里面的字段可以设置自增，当一条记录被插入时，不必传入该字段，新记录的该字段值会在前面一条记录该字段值的基础上加 1.而 indexedDB 里面的 autoIncrement 的同样的意义。（译者注）
 
@@ -29,7 +30,7 @@ var myAutoIncrement = objectStore.autoIncrement;
 
 ## 例子
 
-在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用`add()`向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.autoIncrement 的值。想查看完整的例子，请查看我们的[To-do Notifications](https://github.com/mdn/to-do-notifications/)应用（[查看在线例子](http://mdn.github.io/to-do-notifications/)）。
+在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用`add()`向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.autoIncrement 的值。想查看完整的例子，请查看我们的[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)应用（[查看在线例子](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
 ```js
 // Let us open our database
@@ -89,7 +90,7 @@ function addData() {
 - [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - 开始学习事务 transactions: {{domxref("IDBDatabase")}}
 - 使用事务 transactions: {{domxref("IDBTransaction")}}
-- key 值域 range 的使用: {{domxref("IDBKeyRange")}}
-- 检索、修改: {{domxref("IDBObjectStore")}}
-- 使用游标: {{domxref("IDBCursor")}}
-- 相关例子：[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- key 值域 range 的使用：{{domxref("IDBKeyRange")}}
+- 检索、修改：{{domxref("IDBObjectStore")}}
+- 使用游标：{{domxref("IDBCursor")}}
+- 相关例子：[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

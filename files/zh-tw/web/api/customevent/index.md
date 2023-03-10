@@ -2,6 +2,7 @@
 title: CustomEvent
 slug: Web/API/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`CustomEvent`** interface 是應用程式為了任意目的所初始化的事件。
@@ -12,7 +13,7 @@ slug: Web/API/CustomEvent
 
 ## 建構式
 
-- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}  
+- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
   - : 建立一個 `CustomEvent`。
 
 ## 屬性

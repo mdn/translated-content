@@ -2,6 +2,7 @@
 title: JavaScriptへの最初のダイブ
 slug: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 JavaScript の理論、そしてそれを使ってできることについて学んだところで、完全に実用的なチュートリアルを通じて、JavaScript の基本的な機能についての短期集中コースをお見せします。ここでは、簡単な「数字を当てる」ゲームをステップバイステップで構築します。
@@ -12,7 +13,7 @@ JavaScript の理論、そしてそれを使ってできることについて学
 
 ここでは、JavaScript (とその他のプログラミング言語) がどのように動くのかという高度なコンセプトを紹介したいので、一度ですべての詳細を理解する必要はありません。詳細については続く記事にてご紹介しますので！
 
-> **Note:** JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、コンセプトは大体同じです。
+> **メモ:** JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、コンセプトは大体同じです。
 
 ## プログラマーのように考える
 
@@ -230,7 +231,7 @@ let resetButton;
 
 - 最後の 2 つの変数はプレイヤーが予想した回数を記録するため 1 を (プレイヤーが何回予想したかの回数を追跡します) 、そしてまだ存在していない(あとで追加する)リセットボタンへの参照を保持します。
 
-> **Note:** 変数や定数についてはこのコースの間に、[次の記事](/ja/docs/user:chrisdavidmills/variables)を始めとして何度も出てきます。
+> **メモ:** 変数や定数についてはこのコースの間に、[次の記事](/ja/docs/user:chrisdavidmills/variables)を始めとして何度も出てきます。
 
 ### 関数
 
@@ -254,7 +255,7 @@ checkGuess();
 
 <kbd>Return</kbd>/<kbd>Enter</kbd> を押した後で、"ここはプレースホルダです"という警告が表示されましたね。呼び出すと、いつでも警告が表示される関数を定義することができました。
 
-> **Note:** 関数についても[このコースの後の方で](/ja/docs/Learn/JavaScript/Building_blocks/Functions)詳しく学びます。
+> **メモ:** 関数についても[このコースの後の方で](/ja/docs/Learn/JavaScript/Building_blocks/Functions)詳しく学びます。
 
 ### 演算子
 
@@ -307,44 +308,46 @@ true/false テスト（例えば条件内 - [below](#conditionals)参照）を�
       <td><code>===</code></td>
       <td>厳密に等しい (全く同じかどうか)</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// false</span>
-<span class="string token">'Chris'</span> <span class="operator token">===</span> <span class="string token">'Bob'</span> <span class="comment token">// false</span>
-<span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">3</span> <span class="comment token">// true</span>
-<span class="number token">2</span> <span class="operator token">===</span> <span class="string token">'2'</span> <span class="comment token">// false; number versus string</span></code></pre>
+        <pre class="brush: js">
+5 === 2 + 4 // false
+'Chris' === 'Bob' // false
+5 === 2 + 3 // true
+2 === '2' // false; number versus string
+</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>!==</code></td>
       <td>等しくない (違うかどうか)</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// true</span>
-<span class="string token">'Chris'</span> <span class="operator token">!==</span> <span class="string token">'Bob'</span> <span class="comment token">// true</span>
-<span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">3</span> <span class="comment token">// false</span>
-<span class="number token">2</span> <span class="operator token">!==</span> <span class="string token">'2'</span> <span class="comment token">// true; number versus string</span></code></pre>
+        <pre class="brush: js">
+5 !== 2 + 4 // true
+'Chris' !== 'Bob' // true
+5 !== 2 + 3 // false
+2 !== '2' // true; number versus string
+</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>&#x3C;</code></td>
       <td>小なり</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">6</span> <span class="operator token">&#x3C;</span> <span class="number token">10</span> <span class="comment token">// true</span>
-<span class="number token">20</span> <span class="operator token">&#x3C;</span> <span class="number token">10</span> <span class="comment token">// false</span></code></pre>
+        <pre class="brush: js">
+6 &#x3C; 10 // true
+20 &#x3C; 10 // false</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>></code></td>
       <td>大なり</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">6</span> <span class="operator token">></span> <span class="number token">10</span> <span class="comment token">// false</span>
-<span class="number token">20</span> <span class="operator token">></span> <span class="number token">10</span>  <span class="comment token">// true</span></code></pre>
+        <pre class="brush: js">
+6 > 10 // false
+20 > 10 // true</pre
+        >
       </td>
     </tr>
   </thead>

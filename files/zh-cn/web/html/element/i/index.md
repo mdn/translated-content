@@ -1,7 +1,10 @@
 ---
-title: <i>
+title: <i>：术语文本元素
 slug: Web/HTML/Element/i
 ---
+
+{{HTMLSidebar}}
+
 ## 概述
 
 **HTML 元素 `<i>`** 用于表现因某些原因需要区分普通文本的一系列文本。例如技术术语、外文短语或是小说中人物的思想活动等，它的内容通常以斜体显示。
@@ -47,4 +50,4 @@ The Latin phrase _Veni, vidi, vici_ is often mentioned in music, art, and litera
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.i")}}
+{{Compat}}

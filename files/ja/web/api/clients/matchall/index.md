@@ -2,6 +2,7 @@
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Clients")}} インターフェイスの **`matchAll()`** メソッドは、サービスワーカークライアント（{{domxref("Client")}}）オブジェクトのリストの {{jsxref("Promise")}} を返します。 関連するサービスワーカーのオリジンと同じオリジンを持つすべてのサービスワーカークライアントを返すには、`options` パラメーターを含めます。 オプションが含まれていない場合、メソッドは、サービスワーカーによって制御されるサービスワーカークライアントのみを返します。
@@ -42,9 +43,7 @@ clients.matchAll(options).then(function(clientList) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#clients-matchall', 'Clients: matchall')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

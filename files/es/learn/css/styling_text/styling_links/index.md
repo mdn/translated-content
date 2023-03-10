@@ -1,8 +1,8 @@
 ---
 title: Dar estilo a los enlaces
 slug: Learn/CSS/Styling_text/Styling_links
-translation_of: Learn/CSS/Styling_text/Styling_links
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 A la hora de dar estilo a los [enlaces](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks), es importante comprender cómo utilizar las pseudoclases para diseñar los estados de un enlace de manera efectiva y cómo diseñar enlaces para su uso en diversas funciones de interfaz comunes, como menús y pestañas de navegación. Veremos todos estos temas en este artículo.
@@ -323,7 +323,7 @@ a:active {
 }
 
 a[href*="http"] {
-  background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+  background: url('external-link-52.png') no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -432,4 +432,4 @@ Esperamos que este artículo te haya proporcionado todo lo que necesitas saber a
 - [Aplicar estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Aplicar estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
 - [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composición tipográfica de una página de inicio de una escuela comunitaria](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Composición tipográfica de una página de inicio de una escuela comunitaria](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

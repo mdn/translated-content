@@ -1,13 +1,8 @@
 ---
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-tags:
-  - JavaScript
-  - Number
-  - プロパティ
-browser-compat: javascript.builtins.Number.NaN
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
+
 {{JSRef}}
 
 **`Number.NaN`** は非数 (Not-A-Number) を表す値です。 {{jsxref("NaN")}} と同じです。

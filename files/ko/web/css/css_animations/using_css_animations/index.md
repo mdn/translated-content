@@ -1,15 +1,8 @@
 ---
 title: CSS 애니메이션 사용하기
 slug: Web/CSS/CSS_Animations/Using_CSS_animations
-tags:
-  - Advanced
-  - CSS
-  - CSS Animations
-  - Example
-  - Experimental
-  - Guide
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 **CSS3 애니메이션**은 엘리먼트에 적용되는 CSS 스타일을 다른 CSS 스타일로 부드럽게 전환시켜 줍니다. 애니메이션은 애니메이션을 나타내는 CSS 스타일과 애니메이션의 중간 상태를 나타내는 키프레임들로 이루어집니다.

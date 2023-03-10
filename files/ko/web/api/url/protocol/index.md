@@ -1,14 +1,8 @@
 ---
 title: URL.protocol
 slug: Web/API/URL/protocol
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/protocol
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`protocol`** 속성은 URL의 프로토콜 스킴과 마지막 `':'`을 포함한 {{domxref("USVString")}}입니다.
@@ -17,8 +11,10 @@ translation_of: Web/API/URL/protocol
 
 ## 구문
 
-    const protocol = url.protocol
-    url.protocol = newProtocol
+```js
+const protocol = url.protocol
+url.protocol = newProtocol
+```
 
 ### 값
 

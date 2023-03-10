@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/preserveAspectRatio
 ---
+
 {{SVGRef}}
 
 L'attribut **`preserveAspectRatio`** indique comment un élément est mis à l'échelle lorsque le ratio largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est différent du ratio de la zone d'affichage (défini par les attributs `width` et `height`).
@@ -363,10 +364,6 @@ Pour [`<view>`](/fr/docs/Web/SVG/Element/view), `preserveAspectRatio` indique si
   </tbody>
 </table>
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}} | {{Spec2('Filters 1.0')}} |                     |
-| {{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}                 | {{Spec2("SVG2")}}         |                     |
-| {{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}             | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}

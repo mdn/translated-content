@@ -3,6 +3,7 @@ title: Bouton de la barre d'outils
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
+
 {{AddonSidebar}}
 
 Généralement appelé comme une [action de navigateur](/fr/Add-ons/WebExtensions/API/browserAction), cette option d'interface utilisateur est un bouton ajouté à la barre d'outils du navigateur. Les utilisateurs cliquent sur le bouton pour interagir avec votre extension.
@@ -12,7 +13,7 @@ Le bouton de la barre d'outils (action du navigateur) est très similaire au bou
 
 ## Spécification de l'action du navigateur
 
-Vous définissez les propriétés de l'action du navigateur à l'aide de la clé  [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) dans manifest.json:
+Vous définissez les propriétés de l'action du navigateur à l'aide de la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) dans manifest.json:
 
 ```json
 "browser_action": {
@@ -26,7 +27,7 @@ Vous définissez les propriétés de l'action du navigateur à l'aide de la clé
 
 La seule clé obligatoire est `default_icon`.
 
-Il existe deux façons de spécifier une action du navigateur: avec ou sans [popup](/fr/Add-ons/WebExtensions/Popups). Si vous ne spécifiez pas de popup, lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que celle-ci attend pour utiliser  [`browserAction.onClicked`](/fr//Add-ons/WebExtensions/API/BrowserAction/onClicked) :
+Il existe deux façons de spécifier une action du navigateur: avec ou sans [popup](/fr/Add-ons/WebExtensions/Popups). Si vous ne spécifiez pas de popup, lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que celle-ci attend pour utiliser [`browserAction.onClicked`](/fr//Add-ons/WebExtensions/API/BrowserAction/onClicked) :
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);

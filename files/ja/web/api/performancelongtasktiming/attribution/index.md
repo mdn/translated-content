@@ -2,6 +2,7 @@
 title: PerformanceLongTaskTiming.attribution
 slug: Web/API/PerformanceLongTaskTiming/attribution
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 {{domxref("PerformanceLongTaskTiming")}} インターフェイスの **`attribution`** 読み取り専用プロパティは、{{domxref('TaskAttributionTiming')}} インスタンスのシーケンスを返します。
@@ -18,9 +19,7 @@ var taskAttributeTiming = PerformanceLongTaskTiming.attribution;
 
 ## 仕様書
 
-| 仕様書                                                                                                 | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-performanceentry-attribution','attribution')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

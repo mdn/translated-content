@@ -1,20 +1,8 @@
 ---
 title: Publicar tu sitio web
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - Aprender
-  - Aprendiz
-  - Dropbox
-  - FTP
-  - GitHub
-  - Publicacion
-  - Sitio Web
-  - Web
-  - Web Hosting
-  - publicar
-  - web server
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
+
 {{LearnSidebar()}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works","Learn/Getting_started_with_the_web")}}
@@ -34,9 +22,9 @@ Si deseas un control total sobre tu sitio web publicado, probablemente necesitar
 
 Muchos sitios web profesionales toman esta opción.
 
-Además, necesitarás un programa de [protocolo de transferencia de archivo](/es/docs/Glossary/FTP) (_File Transfer Protocol_, FTP) para transferir los archivos que conforman tu sitio web al servidor (mira más detalles de[ cuánto puede costar: software](/es/docs/Learn/Common_questions/Cuanto_cuesta#Software)). Los programas FTP varían ampliamente, pero en general tienes que conectarte a tu servidor web contratado mediante detalles proporcionados por tu empresa de alojamiento (por ejemplo: nombre de usuario, contraseña, nombre del _host_). Una vez conectado con el servidor web el programa te mostrará tus archivos locales y los archivos del servidor web en dos ventanas y te proporcionará una forma de transferir los archivos de un lado a otro.
+Además, necesitarás un programa de [protocolo de transferencia de archivo](/es/docs/Glossary/FTP) (_File Transfer Protocol_, FTP) para transferir los archivos que conforman tu sitio web al servidor (mira más detalles de [cuánto puede costar: software](/es/docs/Learn/Common_questions/Cuanto_cuesta#Software)). Los programas FTP varían ampliamente, pero en general tienes que conectarte a tu servidor web contratado mediante detalles proporcionados por tu empresa de alojamiento (por ejemplo: nombre de usuario, contraseña, nombre del _host_). Una vez conectado con el servidor web el programa te mostrará tus archivos locales y los archivos del servidor web en dos ventanas y te proporcionará una forma de transferir los archivos de un lado a otro.
 
-![](https://mdn.mozillademos.org/files/9469/ftp.jpg)
+![](ftp.jpg)
 
 #### Consejos para elegir alojamienoto y dominio
 
@@ -67,7 +55,7 @@ Prueba con algunos de estos ejemplos y observa cuál es el que mejor se adapta a
 - [JS Bin](http://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
-![](https://mdn.mozillademos.org/files/9471/jsbin-screen.png)
+![](jsbin-screen.png)
 
 ## Publicar a través de GitHub
 
@@ -77,20 +65,20 @@ Explicados estos tres métodos veamos ahora cómo publicar fácilmente, de forma
 
 Esta no es la única manera, pero sí la que te permite poner manos a la obra inmediatamente.
 
-1.  Si aún no lo has hecho[ da de alta una cuenta en GitHub](https://github.com/join). Es simple y sencillo, solo debes verificar tu dirección de correo electrónico.
-2.  Una vez registrado, ingresa a tu cuenta en GitHub.com con tu usuario y contraseña suministrados al crear tu cuenta.
-3.  A continuación, necesitas crear un nuevo repositorio para tus archivos. Haz clic en el signo más (+) en la parte superior derecha de la página inicial de GitHub y selecciona _New Repository_ (Nuevo repositorio).
-4.  En esta página, en la casilla _Repository name_ (Nombre del repositorio), ingresa <kbd><em>usuario</em>.github.io</kbd>, donde _usuario_ es tu nombre de usuario. Así por ejemplo, nuestro amigo Bob Smith ingresaría _<kbd>bobsmith.github.io</kbd>_. ![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
+1. Si aún no lo has hecho [da de alta una cuenta en GitHub](https://github.com/join). Es simple y sencillo, solo debes verificar tu dirección de correo electrónico.
+2. Una vez registrado, ingresa a tu cuenta en GitHub.com con tu usuario y contraseña suministrados al crear tu cuenta.
+3. A continuación, necesitas crear un nuevo repositorio para tus archivos. Haz clic en el signo más (+) en la parte superior derecha de la página inicial de GitHub y selecciona _New Repository_ (Nuevo repositorio).
+4. En esta página, en la casilla _Repository name_ (Nombre del repositorio), ingresa <kbd><em>usuario</em>.github.io</kbd>, donde _usuario_ es tu nombre de usuario. Así por ejemplo, nuestro amigo Bob Smith ingresaría _<kbd>bobsmith.github.io</kbd>_. ![](github-create-repo.png)
 
-5.  Opcionalmente escribe una corta descripción de tu sitio web en el campo _Description_ para que recuerdes cuál es la temática que tratarás en él y selecciona la casilla de verificación _Public_ (Público) si quieres que cualquier persona pueda ver los resultados de las ediciones que haces al sitio web que estás creando.
-6.  Marca la casilla de verificación _Initialize this repository with a README_ (Inicializar este repositorio con un README (LÉAME)). Esto te permitirá clonar inmediatamente el repositorio a tu equipo. ¡Si vas a transferir tus archivos desde tu equipo al servidor de GitHub a través de un cliente de FTP (como se explica en la sección _[Subir tus archivos a GitHub a través de la línea de comandos](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website#Subir_tus_archivos_a_Github_a_través_de_la_línea_de_comandos)_, a continuación), __no debes realizar este paso__!
+5. Opcionalmente escribe una corta descripción de tu sitio web en el campo _Description_ para que recuerdes cuál es la temática que tratarás en él y selecciona la casilla de verificación _Public_ (Público) si quieres que cualquier persona pueda ver los resultados de las ediciones que haces al sitio web que estás creando.
+6. Marca la casilla de verificación _Initialize this repository with a README_ (Inicializar este repositorio con un README (LÉAME)). Esto te permitirá clonar inmediatamente el repositorio a tu equipo. ¡Si vas a transferir tus archivos desde tu equipo al servidor de GitHub a través de un cliente de FTP (como se explica en la sección _[Subir tus archivos a GitHub a través de la línea de comandos](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website#Subir_tus_archivos_a_Github_a_través_de_la_línea_de_comandos)_, a continuación), **no debes realizar este paso**!
 
-7.  Da clic en _Create repository_ (Crear repositorio).
-8.  Arrastra y suelta el contenido de la carpeta de tu sitio web en tu repositorio. Cuando termines de pasar el contenido haz clic en _Commit changes_ (Confirmar cambios).
+7. Da clic en _Create repository_ (Crear repositorio).
+8. Arrastra y suelta el contenido de la carpeta de tu sitio web en tu repositorio. Cuando termines de pasar el contenido haz clic en _Commit changes_ (Confirmar cambios).
 
     > **Nota:** cerciórate que tu carpeta tiene un archivo de nombre <kbd>index.html</kbd>
 
-9.  En tu navegador desplázate a <kbd>username.github.io</kbd> para ver tu sitio web en línea. Por ejemplo, para el nombre de usuario Bob Smith, escribe <kbd>bobsmith.github.io</kbd>.
+9. En tu navegador desplázate a <kbd>username.github.io</kbd> para ver tu sitio web en línea. Por ejemplo, para el nombre de usuario Bob Smith, escribe <kbd>bobsmith.github.io</kbd>.
 
     > **Nota:** puede que tu página web tarde unos minutos en entrar en funcionamiento. Si tu sitio web no se muestra inmediatamente, espera unos minutos e inténtalo de nuevo.
 
@@ -102,11 +90,11 @@ Antes que nada, [descarga e instala Git](http://git-scm.com/downloads) en tu equ
 
 Sigue los pasos **1 a 5** y el **7** (recuerda omitir el 6) detallados en la anterior sección _[De manera visual y sin necesidad de más herramientas](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website#De_manera_visual_y_sin_necesidad_de_m%C3%A1s_herramientas)_. Una vez hayas dado clic en _Create repository_ (Crear repositorio) verás la siguiente ventana (¡no la cierres, más adelante necesitarás copiar información de allí!):
 
-![](https://mdn.mozillademos.org/files/9481/github-populate-repo.png)
+![](github-populate-repo.png)
 
 En este punto ya estarás listo para poder utilizar la línea de comandos para subir los archivos de tu repositorio a GitHub. Una _línea de órdenes o de comandos_ es una ventana donde escribes comandos que realizarán tareas como crear archivos y ejecutar programas, en lugar de utiizar la interfaz gráfica de usuario. Se debe parecer a algo como esto:
 
-![](https://mdn.mozillademos.org/files/9483/command-line.png)
+![](command-line.png)
 
 > **Nota:** si no te sientes cómodo utilizando la línea de comandos, podrías considerar usar [Git graphical user interface](http://git-scm.com/downloads/guis) para realizar la misma tarea.
 
@@ -122,7 +110,7 @@ Aunque este procedimiento pueda parecer un poco aterrador al principio no te pre
 
     ```bash
     cd Desktop/sitio-prueba
-    ````
+    ```
 
     En Windows sería:
 
@@ -175,13 +163,13 @@ Puedes reemplazar el texto _otro commit_ con un mensaje más descriptivo respect
 
 En este punto, deberías tener tu página web de ejemplo disponible en una dirección web única. ¡Bien hecho!
 
-![](https://mdn.mozillademos.org/files/9485/hosted-final-site.png)
+![](hosted-final-site.png)
 
 ### Ver también
 
 - [¿Qué es un servidor web?](/es/docs/Learn/Common_questions/Que_es_un_servidor_WEB)
 - [¿Qué es un nombre de dominio?](/es/docs/Learn/Common_questions/What_is_a_domain_name)
 - [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn/Common_questions/Cuanto_cuesta)
-- [Cheap or free static web hosting ](http://alignedleft.com/resources/cheap-web-hosting)(Alojamiento web estático barato o gratuito) _de Scott Murray_ tiene algunas ideas útiles sobre servicios disponibles aunque el sitio ya está algo desactualizado (en inglés).
+- [Cheap or free static web hosting](http://alignedleft.com/resources/cheap-web-hosting) (Alojamiento web estático barato o gratuito) _de Scott Murray_ tiene algunas ideas útiles sobre servicios disponibles aunque el sitio ya está algo desactualizado (en inglés).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works","Learn/Getting_started_with_the_web")}}

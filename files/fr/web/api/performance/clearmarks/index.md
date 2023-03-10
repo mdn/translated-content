@@ -9,6 +9,7 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/clearMarks
 ---
+
 {{APIRef("User Timing API")}}
 
 La méthode **`clearMarks()`** supprime les _marqueurs nommés_ du tampon d'entrée des performances du navigateur. Si la méthode est appelée sans arguments, toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType", "entryType")}} de « `mark` » seront supprimées du tampon d'entrée de performance.

@@ -4,6 +4,7 @@ slug: Web/API/IDBIndex/locale
 translation_of: Web/API/IDBIndex/locale
 browser-compat: api.IDBIndex.locale
 ---
+
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`locale`**, rattachée à l'interface [`IDBIndex`](/fr/docs/Web/API/IDBIndex), fournit la locale de l'index (par exemple `en-US`, ou `pl`) si une valeur `locale` a été fournie lors sa création (voir [le paramètre d'options pour `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#parametresindexoptionnel)). On notera que cette propriété renvoie toujours la locale courante utilisée par l'index. Autrement dit, elle ne renvoie jamais `"auto"`.
@@ -65,4 +66,4 @@ Cette propriété ne fait partie d'aucune spécification.
 - Définir un intervalle de clés&nbsp;: [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)
 - Récupérer et modifier les données&nbsp;: [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore)
 - Utiliser les curseurs&nbsp;: [`IDBCursor`](/fr/docs/Web/API/IDBCursor)
-- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir l'exemple qui fonctionne](https://mdn.github.io/to-do-notifications/))
+- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/))

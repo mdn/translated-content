@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 7: プロダクションへのデプロイ'
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 これで素晴らしい[地域図書館](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) Web サイトを作成 (およびテスト) したので、公共の Web サーバーにインストールして、図書館のスタッフとメンバーがインターネット経由でアクセスできるようにします。この記事では Web サイトをデプロイするためのホストを見つける方法、およびサイトを運用に向けて準備するために必要な作業の概要について説明します。
@@ -38,19 +39,19 @@ The server computer could be located on your premises and connected to the Inter
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.
 
-> **Note:** Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
+> **メモ:** Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
 
 Other hosting providers support Express as part of a _Platform as a Service_ (_PaaS_) offering. When using this sort of hosting you don't need to worry about most of your production environment (servers, load balancers, etc.) as the host platform takes care of those for you. That makes deployment quite easy because you just need to concentrate on your web application and not any other server infrastructure.
 
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, so that is what we'll do in this tutorial.
 
-> **Note:** **Tip:** If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the [Digital Ocean Node community docs](https://www.digitalocean.com/community/tutorials?q=node).
+> **メモ:** **Tip:** If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the [Digital Ocean Node community docs](https://www.digitalocean.com/community/tutorials?q=node).
 
 ## Choosing a hosting provider
 
 There are numerous hosting providers that are known to either actively support or work well with _Node_ (and _Express_). These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
-> **Note:** **Tip:** There are a lot of hosting solutions, and their services and pricing can change over time. While we introduce a few options below, it is worth performing your own Internet search before selecting a hosting provider.
+> **メモ:** **Tip:** There are a lot of hosting solutions, and their services and pricing can change over time. While we introduce a few options below, it is worth performing your own Internet search before selecting a hosting provider.
 
 Some of the things to consider when choosing a host:
 
@@ -68,7 +69,7 @@ The good news when you're starting out is that there are quite a few sites that 
 
 Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Digital Ocean](https://www.digitalocean.com/) is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).
 
-> **Note:** Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
+> **メモ:** Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
 
 ## Getting your website ready to publish
 
@@ -76,7 +77,7 @@ The main things to think about when publishing your website are web security and
 
 In the following subsections, we outline the most important changes that you should make to your app.
 
-> **Note:** **Tip:** There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
+> **メモ:** **Tip:** There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
 
 ### Set NODE_ENV to 'production'
 
@@ -84,7 +85,7 @@ We can remove stack traces in error pages by setting the `NODE_ENV` environment 
 
 This change can be made either by using export or an environment file or using the OS initialization system.
 
-> **Note:** This is actually a change you make in your environment setup rather than your app, but important enough to note here! We'll show how this is set for our hosting example below.
+> **メモ:** This is actually a change you make in your environment setup rather than your app, but important enough to note here! We'll show how this is set for our hosting example below.
 
 ### Log appropriately
 
@@ -121,7 +122,7 @@ set DEBUG=author,book
 export DEBUG="author,book"
 ```
 
-> **Note:** **Challenge:** Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug](https://www.npmjs.com/package/debug) module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
+> **メモ:** **Challenge:** Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug](https://www.npmjs.com/package/debug) module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
 
 If you need to log website activity you can use a logging library like _Winston_ or _Bunyan_. For more information on this topic see: [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html).
 
@@ -157,7 +158,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 ...
 ```
 
-> **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like _Nginx_.
+> **メモ:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like _Nginx_.
 
 ### Use Helmet to protect against well known vulnerabilities
 
@@ -182,7 +183,7 @@ app.use(helmet());
 ...
 ```
 
-> **Note:** The command above adds the _subset_ of available headers that makes sense for most sites. You can add/disable specific headers as needed by following the instructions on [npm](https://www.npmjs.com/package/helmet).
+> **メモ:** The command above adds the _subset_ of available headers that makes sense for most sites. You can add/disable specific headers as needed by following the instructions on [npm](https://www.npmjs.com/package/helmet).
 
 ## Example: Installing LocalLibrary on Heroku
 
@@ -225,7 +226,7 @@ That's all the overview you need in order to get started (see [Getting Started o
 
 Heroku is closely integrated with the **git** source code version control system, using it to upload/synchronize any changes you make to the live system. It does this by adding a new Heroku "remote" repository named _heroku_ pointing to a repository for your source on the Heroku cloud. During development, you use git to store changes on your "master" repository. When you want to deploy your site, you sync your changes to the Heroku repository.
 
-> **Note:** If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.
+> **メモ:** If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.
 
 There are a lot of ways of to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
 
@@ -240,7 +241,7 @@ There are a lot of ways of to work with git, but one of the easiest is to first 
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
-6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**).
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: `https://github.com/<your_git_user_id>_/express-locallibrary-tutorial.git`).
 
 Now the repository ("repo") is created we are going to want to clone it on our local computer:
 
@@ -264,11 +265,11 @@ The final step is to copy in your application and then add the files to your rep
 1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from NPM as needed).
 2. Open a command prompt/terminal and use the `add` command to add all files to git.
 
-3. ```bash
+   ```bash
     git add -A
     ```
 
-4. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+3. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
     ```
     > git status
@@ -280,21 +281,21 @@ The final step is to copy in your application and then add the files to your rep
             new file:   ...
     ```
 
-5. When you're satisfied commit the files to your local repository:
+4. When you're satisfied commit the files to your local repository:
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6. Then synchronize your local repository to the Github website, using the following:
+5. Then synchronize your local repository to the Github website, using the following:
 
-    ```
+    ```bash
     git push origin master
     ```
 
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
-> **Note:** **Tip:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
+> **メモ:** **Tip:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
 >
 > The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particularly old version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. [Learning Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) is well worth the effort, but is beyond the scope of this topic.
 >
@@ -396,7 +397,7 @@ To create the app we run the "create" command in the root directory of our repos
 heroku create
 ```
 
-> **Note:** You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.
+> **メモ:** You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.
 
 We can then push our app to the Heroku repository as shown below. This will upload the app, get all its dependencies, package it in a dyno, and start the site.
 
@@ -410,7 +411,7 @@ If we're lucky, the app is now "running" on the site. To open your browser and r
 heroku open
 ```
 
-> **Note:** The site will be running using our development database. Create some books and other objects, and check out whether the site is behaving as you expect. In the next section, we'll set it to use our new database.
+> **メモ:** The site will be running using our development database. Create some books and other objects, and check out whether the site is behaving as you expect. In the next section, we'll set it to use our new database.
 
 ### Setting configuration variables
 

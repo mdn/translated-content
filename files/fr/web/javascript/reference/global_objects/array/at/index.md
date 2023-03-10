@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/at
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/at
 browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 La méthode **`at()`** prend un entier en argument et renvoie l'élément du tableau situé à cet indice. Des valeurs entières positives ou négatives peuvent être utilisées en argument. Dans ce dernier cas, la recherche est effectuée depuis la fin du tableau.
@@ -35,7 +36,7 @@ L'exemple qui suit fournit une fonction qui renvoie le dernier élément trouvé
 
 ```js
 // Le tableau avec des éléments
-const corbeille = ['pomme', 'banane', 'poiree'];
+const corbeille = ['pomme', 'banane', 'poire'];
 
 // Une fonction qui renvoie le dernier 
 // élément d'un tableau
@@ -47,7 +48,7 @@ function dernierElem(arr) {
 // tableau 'corbeille'
 const item1 = dernierElem(corbeille);
 console.log(item1);
-// Affiche 'pear' dans la console
+// Affiche 'poire' dans la console
 
 // On ajoute un élément au tableau
 // 'corbeille'

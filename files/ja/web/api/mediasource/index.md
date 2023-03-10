@@ -2,6 +2,7 @@
 title: MediaSource
 slug: Web/API/MediaSource
 ---
+
 {{SeeCompatTable}}
 
 **`MediaSource`**`インターフェイスは、`{{domxref("HTMLMediaElement")}}のデータを扱っています。MediaSource をオブジェクトは、ユーザが再生する{{domxref("HTMLMediaElement")}}につけることができます。
@@ -46,9 +47,7 @@ _親インターフェイス{{domxref("EventTarget")}}から、プロパティ�
 
 ## 仕様書
 
-| Specification                                                                                | Status                                           | Comment             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}} | {{Spec2('Media Source Extensions')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザの互換性
 

@@ -1,17 +1,11 @@
 ---
 title: box-ordinal-group
 slug: Web/CSS/box-ordinal-group
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/box-ordinal-group
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
-> **Warning:** これはオリジナルの CSS フレックスボックスレイアウトモジュールの草稿のプロパティで、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)を参照してください。
+> **警告:** これはオリジナルの CSS フレックスボックスレイアウトモジュールの草稿のプロパティで、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)を参照してください。
 
 **`box-ordinal-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスボックスの子要素を順序付きグループに割り当てます。
 

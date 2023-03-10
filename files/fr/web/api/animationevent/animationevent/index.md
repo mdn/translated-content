@@ -7,6 +7,7 @@ browser-compat: api.AnimationEvent.AnimationEvent
 l10n:
   sourceCommit: c000698d544f932314050edec3f47b8b8dc906bf
 ---
+
 {{APIRef("Web Animations API")}}
 
 Le constructeur **`AnimationEvent()`** renvoie un nouvel objet [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent), qui représente un évènement relatif à une animation.

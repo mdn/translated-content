@@ -1,15 +1,9 @@
 ---
 title: '<br>: 改行要素'
 slug: Web/HTML/Element/br
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/br
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<br>` 要素** は、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。
 
@@ -17,7 +11,7 @@ translation_of: Web/HTML/Element/br
 
 上記の例に見られるように、 `<br>` 要素はテキストを改行したい場所にそれぞれ含められます。 `<br>` の後のテキストは、テキストブロックの次の行の先頭から再開されます。
 
-> **Note:** 段落の間を開けるために `<br>` を使わないでください。それぞれを {{htmlelement("p")}} 要素で囲み、 [CSS](/ja/docs/Web/CSS) の {{cssxref('margin')}} プロパティで間隔を制御してください。
+> **メモ:** 段落の間を開けるために `<br>` を使わないでください。それぞれを {{htmlelement("p")}} 要素で囲み、 [CSS](/ja/docs/Web/CSS) の {{cssxref('margin')}} プロパティで間隔を制御してください。
 
 ## 属性
 
@@ -108,7 +102,7 @@ USA<br>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("none")}}, {{ARIARole("presentation")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
       </td>
     </tr>
     <tr>
@@ -120,11 +114,7 @@ USA<br>
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-br-element', '&lt;br&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}                 | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

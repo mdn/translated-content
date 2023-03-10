@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`getUTCMinutes()`** メソッドは、協定世界時に基づき、指定された日時の「分」を返します。
@@ -17,13 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 
 ## 構文
 
-```
-dateObj.getUTCMinutes()
+```js-nolint
+getUTCMinutes()
 ```
 
 ### 返値
 
-協定世界時に基づき、与えられた日時の「分」を表す 0 から 59 までの間の整数値。
+数値です。
+もし `Date` オブジェクトが有効な日時を表している場合は、0 から 59 までの整数で、指定された日時の世界時での分の値を表します。
+それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
 
 ## 例
 
@@ -32,19 +30,17 @@ dateObj.getUTCMinutes()
 次の例は、現在時刻の「分」部を変数 `minutes` に代入します。
 
 ```js
-var today = new Date();
-var minutes = today.getUTCMinutes();
+const today = new Date();
+const minutes = today.getUTCMinutes();
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.getUTCMinutes")}}
+{{Compat}}
 
 ## 関連情報
 

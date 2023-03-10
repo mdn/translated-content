@@ -12,6 +12,7 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient/focus
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 La méthode **`focus()`** de l'interface {{domxref("WindowClient")}} focus le client en cours et retourne une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} existant.

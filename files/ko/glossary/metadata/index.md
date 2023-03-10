@@ -1,13 +1,8 @@
 ---
 title: 메타데이터
 slug: Glossary/Metadata
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - metadata
-translation_of: Glossary/Metadata
 ---
+
 **메타데이터**의 가장 단순한 정의는 데이터를 설명하는 데이터입니다. 예를 들어 {{glossary("HTML")}}은 데이터입니다. 그리고 HTML의 {{htmlelement("head")}} 안에는 문서 작성자나 문서 요약과 같이 문서를 설명하는 데이터, 즉 메타데이터를 넣을 수 있습니다.
 
 ## 더 알아보기

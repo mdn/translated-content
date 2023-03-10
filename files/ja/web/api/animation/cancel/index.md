@@ -2,11 +2,12 @@
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
 ---
+
 {{ APIRef("Web Animations") }}
 
 ウェブアニメーション API の **`cancel()`** は {{domxref("Animation")}} インターフェイスのメソッドで、このアニメーションによって引き起こされたすべての {{domxref("KeyframeEffect")}}を初期化し、再生を中止します。
 
-> **Note:** アニメ―ションをキャンセルした時、{{domxref("Animation.startTime", "startTime")}} と {{domxref("Animation.currentTime", "currentTime")}} は、 `null` に設定されます。
+> **メモ:** アニメ―ションをキャンセルした時、{{domxref("Animation.startTime", "startTime")}} と {{domxref("Animation.currentTime", "currentTime")}} は、 `null` に設定されます。
 
 ## 構文
 
@@ -24,7 +25,7 @@ Animation.cancel();
 
 ### 例外
 
-このメソッドは、直接は例外を発生しません。しかし、キャンセル時にアニメーションの {{domxref("Animation.playState", "playState")}} が `"idle"` 以外の場合、 {{domxref("Animation.finished", "current finished promise", "", 1)}} は  {{domxref("DOMException")}} の `AbortError` で拒否されます。
+このメソッドは、直接は例外を発生しません。しかし、キャンセル時にアニメーションの {{domxref("Animation.playState", "playState")}} が `"idle"` 以外の場合、 {{domxref("Animation.finished", "current finished promise", "", 1)}} は {{domxref("DOMException")}} の `AbortError` で拒否されます。
 
 ## 仕様書
 

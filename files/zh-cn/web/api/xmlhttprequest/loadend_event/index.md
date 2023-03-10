@@ -2,7 +2,8 @@
 title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
 ---
-loadend 事件总是在一个资源的加载进度停止之后被触发 (例如，在已经触发 “error”，“abort” 或 “load” 事件之后)。这适用于 {{domxref("XMLHttpRequest")}} 调用，以及 {{htmlelement("img")}} 或 {{htmlelement("video")}} 之类元素的内容。
+
+loadend 事件总是在一个资源的加载进度停止之后被触发 (例如，在已经触发“error”，“abort”或“load”事件之后)。这适用于 {{domxref("XMLHttpRequest")}} 调用，以及 {{htmlelement("img")}} 或 {{htmlelement("video")}} 之类元素的内容。
 
 ## General info
 
@@ -37,13 +38,13 @@ loadend 事件总是在一个资源的加载进度停止之后被触发 (例如�
 
 ## Related Events
 
-- {{event("loadstart")}}
-- {{event("progress")}}
-- {{event("error")}}
-- {{event("abort")}}
-- {{event("load")}}
-- {{event("loadend")}}
+- [`loadstart`](/zh-CN/docs/Web/API/XMLHttpRequest/loadstart_event)
+- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)
+- [`error`](/zh-CN/docs/Web/API/Element/error_event)
+- [`abort`](/zh-CN/docs/Web/API/HTMLMediaElement/abort_event)
+- [`load`](/zh-CN/docs/Web/API/Window/load_event)
+- [`loadend`](/zh-CN/docs/Web/API/XMLHttpRequest/loadend_event)
 
 ## See also
 
-- [Monitoring progress](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- [Monitoring progress](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

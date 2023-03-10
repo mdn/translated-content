@@ -1,15 +1,8 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-browser-compat: html.global_attributes.itemtype
-translation_of: Web/HTML/Global_attributes/itemtype
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -18,9 +11,9 @@ translation_of: Web/HTML/Global_attributes/itemtype
 
 [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope) は `itemtype` が有効になるデータ構造の語彙の対象範囲を設定するために使用します。
 
-Google などの主要な検索エンジンは、構造化データのために [schema.org](https://schema.org/) の語彙に対応しています。この語彙は標準の型名とプロパティ名の組み合わせを定義しています。例えば、 `MusicEvent` はコンサートを示し、 [`startDate`](https://schema.org/startDate) プロパティや [`location`](https://schema.org/location) プロパティでコンサートの主要な詳細を示します。この場合、 [`MusicEvent`](https://schema.org/MusicEvent) は `itemtype` で URL として使用し、 `startDate` や `location` は [`MusicEvent`](https://schema.org/MusicEvent) が定義する `itemprop` となります。
+Google などの主要な検索エンジンは、構造化データのために [schema.org](https://schema.org/) の語彙に対応しています。この語彙は標準の型名とプロパティ名の組み合わせを定義しています。例えば、 `MusicEvent` はコンサートを示し、 [`startDate`](https://schema.org/startDate) および [`location`](https://schema.org/location) プロパティでコンサートの主要な詳細を示します。この場合、 [`MusicEvent`](https://schema.org/MusicEvent) の URL を `itemtype` に使用し、 `startDate` や `location` は [`MusicEvent`](https://schema.org/MusicEvent) が定義する `itemprop` となります。
 
-> **Note:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
+> **メモ:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
 
 - **itemtype** 属性には値が必要で、値は大文字小文字を区別する一意のトークンを順不同で並べたもので、それぞれが妥当な絶対 URL であり、すべてが同じ語彙を使用して定義する必要があります。属性の値は 1 つ以上のトークンを含む必要があります。
 - アイテム型はすべて、（[schema.org](https://schema.org/) などの）適用可能な仕様書で定義された型であり、すべて同じ語彙を使用して定義する必要があります。
@@ -136,42 +129,58 @@ Google などの主要な検索エンジンは、構造化データのために 
   </tbody>
 </table>
 
-> **Note:**  HTML からマイクロデータを抽出するのに手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/structured-data/testing-tool/)があります。こちらの HTML で試してみてください。
+> **メモ:** HTML からマイクロデータを抽出するのに手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/search/docs/advanced/structured-data)があります。こちらの HTML で試してみてください。
 
 #### HTML
 
 ```html
 <div itemscope itemtype="http://schema.org/Product">
-  <span itemprop="brand">ACME<br></span>
-  <span itemprop="name">Executive Anvil<br></span>
-  <img itemprop="image" src="https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png" width="50" height="50" alt="Executive Anvil logo" /><br>
+  <span itemprop="brand">ACME<br /></span>
+  <span itemprop="name">Executive Anvil<br /></span>
+  <img
+    itemprop="image"
+    src="https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png"
+    width="50"
+    height="50"
+    alt="Executive Anvil logo" /><br />
 
-<span itemprop="description">Sleeker than ACME's Classic Anvil, the
-    Executive Anvil is perfect for the business traveler
-    looking for something to drop from a height.
-  <br>
-</span>
+  <span itemprop="description">
+    Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the
+    business traveler looking for something to drop from a height.
+    <br />
+  </span>
 
-  Product #: <span itemprop="mpn">925872<br></span>
-  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    Rating: <span itemprop="ratingValue">4.4</span> stars, based on <span itemprop="reviewCount">89
-      </span> reviews
-  </span><p>
-
-<span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    Regular price: $179.99<br>
-    <meta itemprop="priceCurrency" content="USD" />
-    <span itemprop="price">Sale price: $119.99<br></span>
-    (Sale ends <time itemprop="priceValidUntil" datetime="2020-11-05">
-      5 November!</time>)<br>
-    Available from: <span itemprop="seller" itemscope itemtype="http://schema.org/Organization">
-                      <span itemprop="name">Executive Objects<br></span>
-                    </span>
-    Condition: <link itemprop="itemCondition" href="http://schema.org/UsedCondition"/>Previously owned,
-      in excellent condition<br>
-    <link itemprop="availability" href="http://schema.org/InStock"/>In stock! Order now!
-</span>
-
+  Product #: <span itemprop="mpn">925872<br /></span>
+  <span
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="http://schema.org/AggregateRating">
+    Rating: <span itemprop="ratingValue">4.4</span> stars, based on
+    <span itemprop="reviewCount">89 </span> reviews
+  </span>
+  <p>
+    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      Regular price: $179.99<br />
+      <meta itemprop="priceCurrency" content="USD" />
+      <span itemprop="price">Sale price: $119.99<br /></span>
+      (Sale ends
+      <time itemprop="priceValidUntil" datetime="2020-11-05"> 5 November!</time>)<br />
+      Available from:
+      <span
+        itemprop="seller"
+        itemscope
+        itemtype="http://schema.org/Organization">
+        <span itemprop="name">Executive Objects<br /></span>
+      </span>
+      Condition:
+      <link
+        itemprop="itemCondition"
+        href="http://schema.org/UsedCondition" />Previously owned, in excellent
+      condition<br />
+      <link itemprop="availability" href="http://schema.org/InStock" />In stock!
+      Order now!
+    </span>
+  </p>
 </div>
 ```
 
@@ -192,7 +201,7 @@ Google などの主要な検索エンジンは、構造化データのために 
 - [他のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - マイクロデータに関連する他のグローバル属性:
 
-  - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
-  - [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop)
-  - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref)
-  - [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemid`](/ja/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop)
+  - [`itemref`](/ja/docs/Web/HTML/Global_attributes/itemref)
+  - [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope)

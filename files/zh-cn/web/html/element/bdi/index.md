@@ -2,10 +2,10 @@
 title: <bdi>
 slug: Web/HTML/Element/bdi
 ---
-## Summary
 
-{{HTMLRef}}
-**HTML** 双向隔离元素 (** `<bdi>` **) 告诉浏览器的双向算法将其包含的文本与周围的文本隔离，当网站动态插入一些文本且不知道所插入文本的方向性时，此功能特别有用。
+{{HTMLSidebar}}
+
+**HTML** 双向隔离元素（**`<bdi>`**）告诉浏览器的双向算法将其包含的文本与周围的文本隔离，当网站动态插入一些文本且不知道所插入文本的方向性时，此功能特别有用。
 
 {{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
 
@@ -62,5 +62,5 @@ This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
 ## 参见
 
-- 相关元素: {{HTMLElement("bdo")}}
-- 相关属性: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
+- 相关元素：{{HTMLElement("bdo")}}
+- 相关属性：{{cssxref("direction")}}, {{cssxref("unicode-bidi")}}

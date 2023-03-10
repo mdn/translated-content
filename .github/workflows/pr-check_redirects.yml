@@ -5,8 +5,7 @@ on:
     branches:
       - main
     paths:
-      - files/**/_redirects.txt
-      - files/**/index.html
+      - files/**
       - .github/workflows/pr-check_redirects.yml
 
 jobs:
@@ -24,8 +23,8 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
-          cache: 'yarn'
+          node-version: 18
+          cache: "yarn"
           cache-dependency-path: mdn/content/yarn.lock
 
       - name: Install all yarn packages

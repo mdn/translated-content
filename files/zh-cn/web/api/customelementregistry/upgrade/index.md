@@ -2,6 +2,7 @@
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 CustomElementRegistry 接口的 upgrade() 方法将更新节点子树中所有包含阴影的自定义元素，甚至在它们连接到主文档之前也是如此。
@@ -41,6 +42,6 @@ console.assert(el instanceof SpiderMan);    // upgraded!
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.CustomElementRegistry.upgrade")}}
+{{Compat}}

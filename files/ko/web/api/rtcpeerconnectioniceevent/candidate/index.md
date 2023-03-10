@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnectionIceEvent.candidate
 slug: Web/API/RTCPeerConnectionIceEvent/candidate
-translation_of: Web/API/RTCPeerConnectionIceEvent/candidate
 ---
 {{APIRef("WebRTC")}}
 
@@ -9,7 +8,9 @@ translation_of: Web/API/RTCPeerConnectionIceEvent/candidate
 
 ## Syntax
 
-     var candidate = event.candidate;
+```js
+ var candidate = event.candidate;
+```
 
 ### 값
 

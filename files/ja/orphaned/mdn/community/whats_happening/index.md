@@ -3,9 +3,10 @@ title: 何が起きているかを追跡する
 slug: orphaned/MDN/Community/Whats_happening
 original_slug: MDN/Community/Whats_happening
 ---
+
 {{MDNSidebar}}
 
-MDN は [MDN コミュニティ ](https://wiki.mozilla.org/MDN)によって運営されています。私たちが何をしているのかについて、私たちが情報を共有する方法をいくつか紹介します。
+MDN は [MDN コミュニティ](https://wiki.mozilla.org/MDN)によって運営されています。私たちが何をしているのかについて、私たちが情報を共有する方法をいくつか紹介します。
 
 ## ブログ
 
@@ -28,6 +29,6 @@ MDN は [MDN コミュニティ ](https://wiki.mozilla.org/MDN)によって運�
 
 MDN 関連のさまざまなプロジェクトとブロセスに関する進捗を追ったり共有したりする、多くの通常ミーティングがあります。[MDN ミーティング wiki ページ](https://wiki.mozilla.org/MDN/Meetings)に記載されています。
 
-何が起こっているかを感じるのに、最も良いのは 2 週間に 1 回水曜日の 10:00 に (10 月-3 月は UTC-0800、3 月-10 月は UTC-0700) [#mdn](irc://irc.mozilla.org/mdn "irc://irc.mozilla.org/devmo") [IRC](http://wiki.mozilla.org/IRC) チャンネルで行われる MDN コミュニティミーティングに参加することです。[MDN コミュニティミーティング](https://wiki.mozilla.org/MDN/Meetings/Community) wiki ページを見て、過去のアジェンダと記録を確認してください。
+何が起こっているかを感じるのに、最も良いのは 2 週間に 1 回水曜日の 10:00 に (10 月-3 月は UTC-0800、3 月-10 月は UTC-0700) [#mdn](irc://irc.mozilla.org/mdn) [IRC](http://wiki.mozilla.org/IRC) チャンネルで行われる MDN コミュニティミーティングに参加することです。[MDN コミュニティミーティング](https://wiki.mozilla.org/MDN/Meetings/Community) wiki ページを見て、過去のアジェンダと記録を確認してください。
 
 [Public MDN Events](https://www.google.com/calendar/embed?src=mozilla.com_2d35383434313235392d323530%40resource.calendar.google.com) のカレンダーには MDN コミュニティミーティング、doc sprints、その他 MDN 関連イベントが含まれています。Vidyo テレビ会議システムの「mdn」チャンネルでミーティングを見たら、[ウェブで会話に参加できます](https://v.mozilla.com/flex.html?roomdirect.html&key=gMM1xZxpQgqiQFNkUR3eBuHgxg)。

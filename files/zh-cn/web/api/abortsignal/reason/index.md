@@ -2,6 +2,7 @@
 title: AbortSignal.reason
 slug: Web/API/AbortSignal/reason
 ---
+
 {{APIRef("DOM")}}
 
 只读属性 **`reason`** 返回一个使用 JavaScript 值表示的中止原因。

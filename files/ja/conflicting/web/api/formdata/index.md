@@ -3,6 +3,7 @@ title: FormDataEntryValue
 slug: conflicting/Web/API/FormData
 original_slug: Web/API/FormDataEntryValue
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 `string` で、一連の `{{domxref("FormData")}}` のキーと値の組のうちの一つの値を表します。

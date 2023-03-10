@@ -1,18 +1,8 @@
 ---
 title: プログレッシブウェブアプリ (PWA)
 slug: Web/Progressive_web_apps
-tags:
-  - App
-  - Application
-  - Apps
-  - PWA
-  - Progressive web apps
-  - Web app
-  - Web applications
-  - アプリ
-  - プログレッシブウェブアプリ
-translation_of: Web/Progressive_web_apps
 ---
+
 ![PWA community logo](pwa.png)**プログレッシブウェブアプリ (Progressive web apps, PWA)** は、新しいウェブ API と伝統的なプログレッシブな拡張戦略を使用して、クロスプラットフォームのウェブアプリケーションにネイティブアプリと同様の使い勝手をもたらすウェブアプリのことです。プログレッシブウェブアプリは正式な標準ではありませんが、有用なデザインパターンです。 PWA は、特定のウェブ技術や技法の使用を含む、一連のアプリケーション属性を包含しているという点で AJAX や他の同様のパターンに似ていると考えることができます。この一連の文書では、これについて知るために必要なすべてをお伝えします。
 
 ウェブアプリを PWA と呼ぶには、技術的に言えば、 [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) (**{{Glossary("HTTPS")}}**)、1 つ以上の[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)、[マニフェストファイル](/ja/docs/Web/Manifest)を持つべきです。
@@ -36,7 +26,7 @@ PWA の実装方法については、 [PWA 開発者ガイド](/ja/docs/Web/Prog
 
 {{LandingPageListSubpages}}
 
-> **Warning:** **ここから下は全て旧バージョンのままで、他のコンテンツの全面見直しに合わせて刷新していきます。**
+> **警告:** **ここから下は全て旧バージョンのままで、他のコンテンツの全面見直しに合わせて刷新していきます。**
 
 ## 基本的な PWA のガイド
 
@@ -70,7 +60,7 @@ PWA の実装方法については、 [PWA 開発者ガイド](/ja/docs/Web/Prog
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — 特定のリソースを事前にキャッシュする Service Worker のコードを生成する node のモジュール。
 - [workbox](https://github.com/GoogleChrome/workbox) — 気持ち的には、より進んだキャッシングの手法と簡単なプリキャッシュを有する sw-precache の後継者。
 - [upup](https://www.talater.com/upup/) — あなたのサイトが常にあなたのユーザーのために存在するようにする小さなスクリプト。
-- [The service worker cookbook](https://serviceworke.rs/) — 一連の素晴らしい Service Worker/プッシュレシピ、オフラインアプリケーションの実装方法を紹介しているが、より多くの機能を持っている。
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — 一連の素晴らしい Service Worker/プッシュレシピ、オフラインアプリケーションの実装方法を紹介しているが、より多くの機能を持っている。
 - [PWA VS Code extension](https://marketplace.visualstudio.com/items?itemName=mayeedwin.vscode-pwa) - VS Code 環境でプログレッシブウェブアプリを構築するために必要な、すべての重要なコードスニペットのコレクションです。
 
 <!---->

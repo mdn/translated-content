@@ -1,8 +1,8 @@
 ---
 title: RTCDataChannelEvent()
 slug: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
-translation_of: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCDataChannelEvent()`** 생성자는 새로운 {{domxref("RTCDataChannelEvent")}}를 생성합니다.
@@ -11,7 +11,9 @@ translation_of: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
 
 ## Syntax
 
-     var event = new RTCDataChannelEvent(type, RtcDataChannelEventInit);
+```js
+var event = new RTCDataChannelEvent(type, RtcDataChannelEventInit);
+```
 
 ### 패러미터
 

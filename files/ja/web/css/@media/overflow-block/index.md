@@ -1,15 +1,8 @@
 ---
 title: overflow-block
 slug: Web/CSS/@media/overflow-block
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.overflow-block
-translation_of: Web/CSS/@media/overflow-block
 ---
+
 {{CSSRef}}
 
 **`overflow-block`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)をブロック軸方向にあふれたコンテンツを機器がどのように扱うかを調べるために使用します。

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Paths", "Web/SVG/Tutoriel/Gradients") }}
 
 Il y a différentes manières de colorer des formes: utiliser différents attributs SVG sur l'objet, utiliser du {{glossary("CSS")}} en ligne, une section CSS ou un fichier CSS externe. La plupart des {{glossary("SVG")}} que vous trouverez sur le Web utilisent du CSS en ligne, mais il y a des avantages et inconvénients pour chaque manière.

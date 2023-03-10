@@ -2,6 +2,7 @@
 title: 控制畫面方向
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
+
 {{SeeCompatTable}}{{APIRef}}
 
 ## 摘要
@@ -106,7 +107,7 @@ li {
 
 | Portrait                                                                                             | Landscape                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }} | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }} |
+| {{ EmbedLiveSample('根據方向而調整配置', 180, 350) }} | {{ EmbedLiveSample('根據方向而調整配置', 350, 180) }} |
 
 > **備註：** 方向 Media Query 其實是以瀏覽器視窗 (或 iframe) 的方向為準，而非裝置本身的方向。
 
@@ -120,7 +121,7 @@ li {
 
 ### 監聽方向變化
 
-只要裝置改變了畫面方向與本身方向，就會觸發 {{event("orientationchange")}} 事件，再由 {{domxref("Screen.orientation")}} 屬性讀取之。
+只要裝置改變了畫面方向與本身方向，就會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件，再由 {{domxref("Screen.orientation")}} 屬性讀取之。
 
 ```js
 screen.addEventListener("orientationchange", function () {
@@ -138,11 +139,11 @@ screen.addEventListener("orientationchange", function () {
 screen.lockOrientation('landscape');
 ```
 
-> **備註：** 畫面鎖定功能將依 Web Apps 而有所不同。如果 App A 鎖定為 `landscape`；App B 鎖定為 `portrait，則此兩款 Apps 均將維持自己的方向。所以不論如何切換` A 與 B，均不會觸發 {{event("orientationchange")}} 事件。但若必須改變方向以滿足畫面鎖定的需求，則鎖定方向時就會觸發 {{event("orientationchange")}} 事件。
+> **備註：** 畫面鎖定功能將依 Web Apps 而有所不同。如果 App A 鎖定為 `landscape`；App B 鎖定為 `portrait，則此兩款 Apps 均將維持自己的方向。所以不論如何切換` A 與 B，均不會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。但若必須改變方向以滿足畫面鎖定的需求，則鎖定方向時就會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。
 
 ## Firefox OS and Android: Orientation lock using the manifest
 
-For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the [orientation](/en-US/Apps/Build/Manifest#orientation) field in app's your manifest file, for example:
+For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the [orientation](/zh-TW/Apps/Build/Manifest#orientation) field in app's your manifest file, for example:
 
 ```json
 "orientation": "portrait"

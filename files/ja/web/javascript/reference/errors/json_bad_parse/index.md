@@ -1,14 +1,8 @@
 ---
 title: 'SyntaxError: JSON.parse: bad parsing'
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
-tags:
-  - Error
-  - Errors
-  - JSON
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/JSON_bad_parse
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外で、 {{jsxref("JSON.parse()")}} が文字列を JSON として解釈するのに失敗した場合に発生します。

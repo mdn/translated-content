@@ -2,9 +2,10 @@
 title: Compositing example
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
-{{CanvasSidebar}}
 
-This sample program demonstrates a number of [compositing operations](/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). The output looks like this:
+{{DefaultAPISidebar("Canvas API")}}
+
+This sample program demonstrates a number of [compositing operations](/zh-TW/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). The output looks like this:
 
 {{EmbedLiveSample("Compositing_example", "100%", 7250)}}
 

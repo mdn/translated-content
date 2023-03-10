@@ -1,11 +1,6 @@
 ---
 title: 속성 접근자
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
 {{jsSidebar("Operators")}}
 

@@ -2,6 +2,7 @@
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
+
 {{JSRef}}
 
 **catch()** 方法只處理 Promise 的被拒絕狀態，並回傳一個新的 `Promise` 物件。此方法的行為等同於呼叫 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}。
@@ -158,7 +159,7 @@ p2.then(function (value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise.catch")}}
+{{Compat}}
 
 ## 參見
 

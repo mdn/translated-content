@@ -1,13 +1,6 @@
 ---
 title: IIR 필터 사용하기
 slug: Web/API/Web_Audio_API/Using_IIR_filters
-tags:
-  - API
-  - Audio
-  - Guide
-  - IIRFilter
-  - Using
-  - Web Audio API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -102,7 +95,9 @@ playButton.addEventListener('click', function() {
 
 IIR 필터를 켜고 끄는 토글 버튼은 비슷한 방식으로 설정됩니다. 우선, HTML은:
 
-    <button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+```html
+<button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+```
 
 필터 버튼의 `click` 핸들러는 그리고 나서 `IIRFilter`를 그래프에 연결하는데, 이는 소스와 목적지 사이입니다:
 

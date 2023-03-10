@@ -2,13 +2,14 @@
 title: 使用 Gamepad API 实现控制
 slug: Games/Techniques/Controls_Gamepad_API
 ---
+
 {{GamesSidebar}}
 
 这篇文章着眼于使用 Gamepad API 为网页游戏实现一个有效的跨浏览器控制系统，可以让你使用端游控制器来控制你的网页游戏。Hungry Fridge，就是 [Enclave Games](http://enclavegames.com/) 以此制作的游戏。
 
 ## 网页游戏的控制
 
-在历史上，在连接主机 (console) 的电视上玩游戏和在电脑 (PC) 上玩游戏是两种完全不一样的体验，最大的区别就是它们的控制方式。后来，额外的驱动程序和插件让我们能够使用主机控制器来游玩电脑端的游戏--不论是本地游戏，还是运行在浏览器中的游戏。 到现在的 HTML5 时代，我们终于有了 [Gamepad API](/en-US/docs/Web/API/Gamepad_API) ，让我们能够在不安装任何插件的情况下，可以使用控制器来游玩基于浏览器的游戏。Gamepad API 通过提供一个接口公开按钮的按下和坐标的变化来实现这一点，在 JavaScript 中我们可以用这些变化来处理输入。这对于网页游戏来说是非常棒的特性。
+在历史上，在连接主机 (console) 的电视上玩游戏和在电脑 (PC) 上玩游戏是两种完全不一样的体验，最大的区别就是它们的控制方式。后来，额外的驱动程序和插件让我们能够使用主机控制器来游玩电脑端的游戏--不论是本地游戏，还是运行在浏览器中的游戏。到现在的 HTML5 时代，我们终于有了 [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) ，让我们能够在不安装任何插件的情况下，可以使用控制器来游玩基于浏览器的游戏。Gamepad API 通过提供一个接口公开按钮的按下和坐标的变化来实现这一点，在 JavaScript 中我们可以用这些变化来处理输入。这对于网页游戏来说是非常棒的特性。
 
 ## API 状态与浏览器支持
 
@@ -234,7 +235,7 @@ enum GamepadMappingType {
 
 ### 事件
 
-除了当前可用的 `gamepadconnected` 和 `gamepaddisconnected` 事件，其实还有其它事件也曾在规范中，但它们因为不是非常的有用所以被移出了规范。相关讨论仍在进行中，关于它们是否应该恢复规范，以及以什么形式恢复。
+除了当前可用的 `gamepadconnected` 和 `gamepaddisconnected` 事件，其实还有其他事件也曾在规范中，但它们因为不是非常的有用所以被移出了规范。相关讨论仍在进行中，关于它们是否应该恢复规范，以及以什么形式恢复。
 
 ## 总结
 

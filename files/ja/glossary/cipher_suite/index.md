@@ -2,6 +2,7 @@
 title: Cipher suite (暗号スイート)
 slug: Glossary/Cipher_suite
 ---
+
 暗号スイートは鍵交換アルゴリズム・鍵認証方式・{{glossary("cipher","サイファー")}}・メッセージ認証符号の組み合わせです。
 
 {{Glossary("TLS")}}のような{{glossary("cryptosystem","暗号システム")}}は、サーバとクライアントは安全な通信を始める前に使用する暗号スイートを決定し、同意します。典型的な暗号スイートには ECDHE_RSA_WITH_AES_128_GCM_SHA256 または ECDHE-RSA-AES128-GCM-SHA256 があり、それぞれの単語の意味は

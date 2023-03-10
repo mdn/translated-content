@@ -1,9 +1,9 @@
 ---
 title: 'Prueba tus habilidades: Enlaces'
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links
-translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links
 original_slug: Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Enlaces
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta pueba de habilidad es evaluar si has comprendido nuestro artículo [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).
@@ -67,8 +67,8 @@ Puedes practicar estos ejemplos en los editores interactivos que se encuentran m
 
 Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
 
-1.  Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
-2.  Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
+2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
 
     - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de texto básico HTML 1".
     - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.

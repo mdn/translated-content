@@ -2,9 +2,10 @@
 title: TypedArray.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 ---
+
 {{JSRef}}
 
-**`filter()`**创建新的类型化数组，含有所有通过了测试的元素，测试由提供的函数实现。这个方法的算法和 {{jsxref("Array.prototype.filter()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`filter()`**创建新的类型化数组，含有所有通过了测试的元素，测试由提供的函数实现。这个方法的算法和 {{jsxref("Array.prototype.filter()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
 ## 语法
 
@@ -15,7 +16,7 @@ typedarray.filter(callback[, thisArg])
 ### 参数
 
 - `callback`
-  - : 测试类型化数组每个元素的函数，以参数 `(element, index, typedarray)`调用。 如果返回 `true`则保留该元素，如果返回`false`则相反。
+  - : 测试类型化数组每个元素的函数，以参数 `(element, index, typedarray)`调用。如果返回 `true`则保留该元素，如果返回`false`则相反。
 - `thisArg {{optional_inline}}`
   - : 可选，执行`callback`时作为`this`的值。
 
@@ -33,11 +34,11 @@ typedarray.filter(callback[, thisArg])
 2. 元素下标
 3. 被遍历的类型化数组对象
 
-如果将`thisArg`参数提供给`filter`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)来决定。
+如果将`thisArg`参数提供给`filter`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)来决定。
 
 `filter()`不改变在其上调用的类型化数组。
 
-由 `filter`处理的元素范围在`callback`调用之前就确定了。 在 `filter`调用之后添加到数组的元素不会由 `callback`访问。 如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`filter` 访问它们时候的值。已删除的元素不会被访问。
+由 `filter`处理的元素范围在`callback`调用之前就确定了。在 `filter`调用之后添加到数组的元素不会由 `callback`访问。如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`filter` 访问它们时候的值。已删除的元素不会被访问。
 
 ## 示例
 
@@ -55,7 +56,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 
 ### 使用箭头函数过滤类型化数组的元素
 
-[箭头函数](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 为相同测试提供了更短的语法。
+[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 为相同测试提供了更短的语法。
 
 ```js
 new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);

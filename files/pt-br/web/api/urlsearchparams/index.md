@@ -1,17 +1,8 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Landing
-  - Reference
-  - URL API
-  - URLSearchParams
-  - Polyfill
-browser-compat: api.URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 A interface **`URLSearchParams`** define métodos utilitários para trabalhar com os parâmetros de uma URL.

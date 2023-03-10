@@ -2,13 +2,14 @@
 title: window.location
 slug: Web/API/Window/location
 ---
+
 {{ APIRef() }}
 
 **window\.location** 只读属性，返回一个 {{domxref("Location")}} 对象，其中包含有关文档当前位置的信息。
 
 > **备注：** window\.location : 所有字母必须小写！
 
-尽管 window\.location 是一个*只读* Location 对象，你仍然可以赋给它一个 {{domxref("DOMString")}}。这意味着您可以在大多数情况下处理 **location**，就像它是一个字符串一样：window\.location = 'http\://www\.example.com'，是 window\.location.href = 'http\://www\.example.com'的同义词 。
+尽管 window\.location 是一个*只读* Location 对象，你仍然可以赋给它一个 {{domxref("DOMString")}}。这意味着您可以在大多数情况下处理 **location**，就像它是一个字符串一样：window\.location = 'http\://www\.example.com'，是 window\.location.href = 'http\://www\.example.com'的同义词。
 
 ## 语法
 
@@ -222,7 +223,7 @@ span.intLink {
 </html>
 ```
 
-> **备注：** The function `showNode` is also an example of the use of the [`for`](https://developer.mozilla.org/en/JavaScript/Reference/Statements/for) cycle without a `statement`section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
+> **备注：** The function `showNode` is also an example of the use of the [`for`](/zh-CN/JavaScript/Reference/Statements/for) cycle without a `statement`section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
 
 下面代码做同样的事，但是页面滚动带有动画效果：
 
@@ -274,11 +275,11 @@ var showBookmark = (function () {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.location")}}
+{{Compat}}
 
 ## 相关链接
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the browsing context, {{domxref("Document.location")}}
-- [Manipulating the browser history](https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history)
+- [Manipulating the browser history](/zh-CN/DOM/Manipulating_the_browser_history)
 - [hashchange](/zh-CN/docs/DOM/Mozilla_event_reference/hashchange)

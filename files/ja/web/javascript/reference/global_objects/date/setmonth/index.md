@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`setMonth()`** メソッドは、現在設定されている年に基づき、指定された日付の「月」を設定します。
@@ -17,14 +13,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 
 ## 構文
 
-```
-dateObj.setMonth(monthValue[, dayValue])
-```
-
-### JavaScript 1.3 より前のバージョン
-
-```
-dateObj.setMonth(monthValue)
+```js-nolint
+setMonth(monthValue)
+setMonth(monthValue, dayValue)
 ```
 
 ### 引数
@@ -51,24 +42,22 @@ dateObj.setMonth(monthValue)
 ### setMonth() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setMonth(6);
 
 //Watch out for end of month transitions
-var endOfMonth = new Date(2016, 7, 31);
+const endOfMonth = new Date(2016, 7, 31);
 endOfMonth.setMonth(1);
 console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setMonth")}}
+{{Compat}}
 
 ## 関連情報
 

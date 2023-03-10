@@ -2,6 +2,7 @@
 title: 'Document: DOMContentLoaded イベント'
 slug: Web/API/Document/DOMContentLoaded_event
 ---
+
 {{APIRef}}
 
 **`DOMContentLoaded`** イベントは、 HTML の初期文書が完全に読み込まれ解釈された時点で発生し、スタイルシート、画像、サブフレームの読み込みが完了するのを待ちません。
@@ -150,10 +151,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#stop-parsing', 'DOMContentLoaded')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'syntax.html#the-end', 'DOMContentLoaded')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

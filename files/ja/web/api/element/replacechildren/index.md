@@ -2,6 +2,7 @@
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.replaceChildren()`** メソッドは、 {{domxref("Node")}} の既存の子ノードを、指定された新しい一連の子で置き換えます。 {{domxref("DOMString")}} または {{domxref("Node")}} オブジェクトを指定することができます。

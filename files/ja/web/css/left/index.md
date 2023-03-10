@@ -1,15 +1,8 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.left
-translation_of: Web/CSS/left
 ---
+
 {{CSSRef}}
 
 **`left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。

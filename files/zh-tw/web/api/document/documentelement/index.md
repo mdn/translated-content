@@ -2,6 +2,7 @@
 title: Document.documentElement
 slug: Web/API/Document/documentElement
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.documentElement`** 會回傳目前文件（{{domxref("document")}}）中的根元素（{{domxref("Element")}}），如：HTML 文件中的 `<html>` 元素。

@@ -1,16 +1,8 @@
 ---
 title: BigUint64Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array/BigUint64Array
-tags:
-  - BigInt
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - コンストラクター
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/BigUint64Array/BigUint64Array
 ---
+
 {{JSRef}}
 
 **`BigUint64Array()`** は型付き配列のコンストラクターで、新しい {{jsxref("BigUint64Array")}} オブジェクト、すなわち 64 ビット符号なし整数の配列をプラットフォームのバイトオーダーで生成します。バイトオーダーを制御する必要がある場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0n` で初期化されます。生成後は、オブジェクトのメソッドや、標準の配列の添字構文 (すなわち角括弧表記) を用いて配列の要素を参照することができます。
@@ -69,9 +61,7 @@ var biguint64 = new BigUint64Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName("ESDraft", "#sec-typedarray-constructors", "BigUint64Array")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

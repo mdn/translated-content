@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/410
 translation_of: Web/HTTP/Status/410
 browser-compat: http.status.410
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`410 Gone`** est une erreur côté client qui indique que l'accès à la ressource visée n'est plus disponible sur le serveur d'origine et que cet état est susceptible d'être définitif.

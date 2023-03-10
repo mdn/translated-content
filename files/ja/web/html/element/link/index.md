@@ -1,20 +1,9 @@
 ---
 title: '<link>: 外部リソースへのリンク要素'
 slug: Web/HTML/Element/link
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - Link
-  - Reference
-  - Web
-  - Web Performance
-  - metadata
-browser-compat: html.elements.link
-translation_of: Web/HTML/Element/link
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<link>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書と外部のリソースとの関係を指定します。
 この要素は{{Glossary("CSS", "スタイルシート")}}へのリンクに最もよく使用されますが、サイトのアイコン（"favicon" スタイルのアイコンと、モバイル端末のホーム画面やアプリのアイコンの両方）の確立や、その他のことにも使用されます。
@@ -202,7 +191,7 @@ translation_of: Web/HTML/Element/link
 
   - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)でなければなりません。この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
 
-    > **Note:**
+    > **メモ:**
     >
     > - HTML 4 では、単純なホワイトスペースで区切られたメディアリテラルのリストのみ記述できます。これは[メディア種別とグループ](/ja/docs/Web/CSS/@media) で、`print`, `screen`, `aural`, `braille` などの使用可能な値が定義されています。
     >   HTML5 ではこれがあらゆる[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)に拡張され、 HTML 4 で使用できる値の上位互換となっています。
@@ -229,7 +218,7 @@ translation_of: Web/HTML/Element/link
     - `any`: `image/svg+xml` のようなベクター画像であるため、どのようなサイズにも調整可能であることを示します。
     - ホワイトスペースで区切られたサイズのリスト。サイズはそれぞれ `<幅のピクセル数>x<高さのピクセル数>` または `<幅のピクセル数>X<高さのピクセル数>` という形式です。それぞれのサイズがリソースに含まれていることが必要です。
 
-    > **Note:** ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 {{HTMLAttrxRef("sizes")}} 属性はエントリーが 1 個だけになります。
+    > **メモ:** ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 {{HTMLAttrxRef("sizes")}} 属性はエントリーが 1 個だけになります。
     > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
 
 - {{HTMLAttrDef("title")}}
@@ -257,14 +246,14 @@ translation_of: Web/HTML/Element/link
   - : この属性は、リンク先のリソースの文字エンコーディングを定義します。この値は {{rfc(2045)}} で定義されている文字セットの、スペースまたはカンマで区切られたリストです。
     既定値は `iso-8859-1` です。
 
-    > **Note:** この廃止された属性と同じ効果を生み出すためには、リンク先のリソースで HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
+    > **メモ:** この廃止された属性と同じ効果を生み出すためには、リンク先のリソースで HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
 - {{HTMLAttrDef("rev")}} {{deprecated_inline}}
 
   - : この属性の値は、{{HTMLAttrxRef("href", "link")}} 属性で定義したリンク先文書に対する、現在の文書の関係を示します。従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
     この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Link_types)は、{{HTMLAttrxRef("rel", "link")}} 向けの値と似ています。
 
-    > **Note:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Link_types)を与えた {{HTMLAttrxRef("rel", "link")}} 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
+    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Link_types)を与えた {{HTMLAttrxRef("rel", "link")}} 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
 
 ## 例
 
@@ -337,7 +326,7 @@ myStylesheet.onerror = function() {
 <link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">
 ```
 
-> **Note:** `load` イベントはスタイルシートとスタイルシートがインポートするすべてのコンテンツの読み込みと解析が行われた後、スタイルシートがコンテンツに適用される直前に発生します。
+> **メモ:** `load` イベントはスタイルシートとスタイルシートがインポートするすべてのコンテンツの読み込みと解析が行われた後、スタイルシートがコンテンツに適用される直前に発生します。
 
 ### 先読みの例
 
@@ -373,7 +362,7 @@ myStylesheet.onerror = function() {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><code>href</code> 属性つきの {{ARIARole("link")}}</td>
+      <td><code>href</code> 属性つきの <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

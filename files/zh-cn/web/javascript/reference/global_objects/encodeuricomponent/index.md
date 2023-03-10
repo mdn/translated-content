@@ -2,9 +2,10 @@
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
-**`encodeURIComponent()`** 函数通过将一个，两个，三个或四个表示字符的 UTF-8 编码的转义序列替换某些字符的每个实例来编码 {{glossary("URI")}}（对于由两个“代理”字符组成的字符而言，将仅是四个转义序列）。
+**`encodeURIComponent()`** 函数通过将特定字符的每个实例替换成代表字符的 {{glossary("UTF-8")}} 编码的一个、两个、三个或四个转义序列来编码 {{glossary("URI")}}（只有由两个“代理”字符组成的字符会被编码为四个转义序列）。与 {{jsxref("encodeURI()")}} 相比，此函数会编码更多的字符，包括 URI 语法的一部分。
 
 {{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html","shorter")}}
 
@@ -48,7 +49,7 @@ console.log(encodeURI(set4)); // ABC%20abc%20123 (空格被编码为 %20)
 console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
 console.log(encodeURIComponent(set2)); // -_.!~*'()
 console.log(encodeURIComponent(set3)); // %23
-console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
+console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (空格被编码为 %20)
 ```
 
 注意，如果试图编码一个非高 - 低位完整的代理字符，将会抛出一个 {{jsxref("URIError")}} 错误，例如：

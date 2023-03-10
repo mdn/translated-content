@@ -2,9 +2,10 @@
 title: Range.setEnd()
 slug: Web/API/Range/setEnd
 ---
+
 **`Range.setEnd()`**方法用于设置 [`Range`](/zh-CN/docs/Web/API/Range)的结束位置。
 
-如果结束节点类型是 `Text`、`Comment` 或 `CDATASection`之一，那么 `endOffset` 指的是从结束节点算起字符的偏移量。 对于其他 `Node` 类型节点，`endOffset` 是指从结束结点开始算起子节点的偏移量。
+如果结束节点类型是 `Text`、`Comment` 或 `CDATASection`之一，那么 `endOffset` 指的是从结束节点算起字符的偏移量。对于其他 `Node` 类型节点，`endOffset` 是指从结束结点开始算起子节点的偏移量。
 
 如果设置的结束点在起始点之上（在文档中的位置），将会导致选区折叠，起始点和结束点都会被设置为指定的结束位置。
 
@@ -36,8 +37,8 @@ range.setEnd(endNode, endOffset);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.setEnd")}}
+{{Compat}}
 
 ## 参见
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

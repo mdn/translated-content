@@ -2,6 +2,7 @@
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 [XPath](/ja/docs/XPath) 式やその他与えられたパラメータに基づいて [`XPathResult`](/ja/docs/XPathResult) を返します。
@@ -81,9 +82,7 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 
 ## 仕様
 
-| Specification                                                                                                    | Status                           | Comment               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName("DOM3 XPath", "xpath.html#XPathEvaluator-evaluate", "Document.evaluate")}} | {{Spec2("DOM3 XPath")}} | Initial specification |
+{{Specifications}}
 
 ## ブラウザ互換性
 

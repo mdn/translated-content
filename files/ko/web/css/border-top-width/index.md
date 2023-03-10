@@ -1,14 +1,8 @@
 ---
 title: border-top-width
 slug: Web/CSS/border-top-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/border-top-width
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-top-width`** 속성은 요소의 위쪽 테두리 너비를 지정합니다.

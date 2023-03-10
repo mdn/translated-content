@@ -13,11 +13,12 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 ---
+
 C'est déclenché lorsqu'un onglet est mis à jour.
 
-Lorsque l'utilisateur navigue vers une nouvelle URL dans un onglet, cela génère généralement plusieurs événements `onUpdated` au fur et à mesure que diverses propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} sont mises à jour. Ceci inclut l' `url`, mais aussi potentiellement le `title` et les propriétés `favIconUrl`. La propriété du  `status` passe par le `"loading"` et `"complete"`.
+Lorsque l'utilisateur navigue vers une nouvelle URL dans un onglet, cela génère généralement plusieurs événements `onUpdated` au fur et à mesure que diverses propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} sont mises à jour. Ceci inclut l' `url`, mais aussi potentiellement le `title` et les propriétés `favIconUrl`. La propriété du `status` passe par le `"loading"` et `"complete"`.
 
-Cet événement sera également déclenché pour les modifications des propriétés d'un onglet qui n'impliquent pas de navigation, comme le pinning et le débrochage (qui met à jour la propriété `pinned`) et le muting ou le unmuting (qui met à jour les propriétés  `audible` et `mutedInfo`).
+Cet événement sera également déclenché pour les modifications des propriétés d'un onglet qui n'impliquent pas de navigation, comme le pinning et le débrochage (qui met à jour la propriété `pinned`) et le muting ou le unmuting (qui met à jour les propriétés `audible` et `mutedInfo`).
 
 Vous pouvez filtrer cet événement, en le rendant uniquement valable pour les onglets dont les urls correspondent à des [patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) spécifiques, ou pour les modifications de propriétés spécifiques, ou pour les modifications d'un onglet ou d'une fenêtre spécifique, ou toute combinaison de ces restrictions.
 
@@ -49,7 +50,7 @@ Les événements ont trois fonctions :
     - `tabId`
       - : `integer`. ID de l'onglet qui a été mis à jour.
     - `changeInfo`
-      - : [`object`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated$edit#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo) ci-dessous.
+      - : [`object`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo) ci-dessous.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Le nouvel état de l'onglet.
 
@@ -61,7 +62,7 @@ Les événements ont trois fonctions :
       - : `Array`. Un tableau [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Ne déclenchez l'événement que pour les onglets dont la propriété de l'`url` courante correspond à l'un des motifs.
     - `properties`
 
-      - : `Array`. un tableau de chaîne de caractères,  qui sont les noms des propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}}. Ne déclenchez cet événement seulement pour les changement apportées à l'une des propriétés nommées dans ce tableau. Les propriétés suivantes peuvent être listées ici :
+      - : `Array`. un tableau de chaîne de caractères, qui sont les noms des propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}}. Ne déclenchez cet événement seulement pour les changement apportées à l'une des propriétés nommées dans ce tableau. Les propriétés suivantes peuvent être listées ici :
 
         - "attention"
         - "audible"
@@ -136,7 +137,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet":
+Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -174,7 +175,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 Combiner les deux filtres précédents : changements de journal seulement :
 
 - A la propriété `épinglée` des onglets
-- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet":
+- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -199,7 +200,7 @@ browser.tabs.onUpdated.addListener(
 Changements dans le journal seulement :
 
 - A la propriété `épinglée` des onglets
-- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet"
+- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`
 - et qui font partie de la fenêtre actuelle du navigateur au moment où l'événement de mise à jour est déclenché :
 
 ```js
@@ -225,15 +226,16 @@ browser.tabs.onUpdated.addListener(
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onUpdated", 10)}}
+{{Compat}}
 
 > **Note :**
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -260,6 +262,6 @@ browser.tabs.onUpdated.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
 
 {{AddonSidebar}}

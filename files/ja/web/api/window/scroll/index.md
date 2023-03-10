@@ -2,6 +2,7 @@
 title: window.scroll
 slug: Web/API/Window/scroll
 ---
+
 {{ApiRef}}
 
 ## 概要
@@ -55,6 +56,4 @@ window.scroll({
 
 ## 仕様
 
-| Specification                                                                                | Status                           | Comment             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+{{Specifications}}

@@ -11,6 +11,7 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/get
 ---
+
 {{AddonSidebar()}}
 
 Obtient un tableau de tous les moteurs de recherche installés.
@@ -31,7 +32,7 @@ Aucun.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un [tableau](Web/JavaScript/Reference/Global_Objects/array) d'objets de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/array) d'objets de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :
 
 - `name`
   - : `string`. Le nom du moteur de recherche.
@@ -42,9 +43,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 - `favIconUrl`{{optional_inline}}
   - : `string`. L'icône du moteur de recherche, comme une donnée : URL.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.search.search", 10)}}
+{{Compat}}
 
 ## Exemples
 

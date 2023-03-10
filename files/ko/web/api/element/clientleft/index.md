@@ -1,7 +1,6 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-translation_of: Web/API/Element/clientLeft
 ---
 {{ APIRef("DOM") }}
 
@@ -31,11 +30,11 @@ padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

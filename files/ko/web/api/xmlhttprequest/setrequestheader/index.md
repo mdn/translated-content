@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
 {{APIRef('XMLHttpRequest')}}
 
@@ -15,7 +14,9 @@ translation_of: Web/API/XMLHttpRequest/setRequestHeader
 
 ## 구문
 
-    myReq.setRequestHeader(header, value);
+```js
+myReq.setRequestHeader(header, value);
+```
 
 ### 매개변수
 

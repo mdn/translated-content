@@ -1,11 +1,8 @@
 ---
 title: <msqrt>
 slug: Web/MathML/Element/msqrt
-tags:
-  - MathML
-  - 平方根
-translation_of: Web/MathML/Element/msqrt
 ---
+
 {{MathMLRef()}}
 
 MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗根）を表示するために用いられます。 引数は一つだけで、構文は `<msqrt> base </msqrt>` となります。
@@ -43,10 +40,7 @@ MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗�
 
 ## 仕様
 
-| Specification                                                                        | Status                       | Comment               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.msqrt', 'msqrt') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.msqrt', 'msqrt') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## See also
 

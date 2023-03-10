@@ -2,9 +2,10 @@
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
+
 {{JSRef}}
 
-**`Object.values()`**方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用{{jsxref("Statements/for...in", "for...in")}}循环的顺序相同 ( 区别在于 for-in 循环枚举原型链中的属性 )。
+**`Object.values()`** 方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用 {{jsxref("Statements/for...in", "for...in")}} 循环的顺序相同（区别在于 for-in 循环枚举原型链中的属性）。
 
 ## 语法
 
@@ -23,7 +24,7 @@ Object.values(obj)
 
 ## 描述
 
-`Object.values()`返回一个数组，其元素是在对象上找到的可枚举属性值。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。
+`Object.values()` 返回一个数组，其元素是在对象上找到的可枚举属性值。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。
 
 ## 示例
 
@@ -49,26 +50,6 @@ console.log(Object.values(my_obj)); // ['bar']
 console.log(Object.values('foo')); // ['f', 'o', 'o']
 ```
 
-## Polyfill
-
-`如果要 Object.values`兼容不支持它的旧环境，可在 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 或 [es-shims/Object.values](https://github.com/es-shims/Object.values) 中找到 Polyfill 。
-
-根据**Object.keys()**的 Polyfill 仿写一个：
-
-```js
-if (!Object.values) Object.values = function(obj) {
-    if (obj !== Object(obj))
-        throw new TypeError('Object.values called on a non-object');
-    var val=[],key;
-    for (key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj,key)) {
-            val.push(obj[key]);
-        }
-    }
-    return val;
-}
-```
-
 ## 规范
 
 {{Specifications}}
@@ -77,9 +58,10 @@ if (!Object.values) Object.values = function(obj) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Enumerability and ownership of properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [`core-js` 中 `Object.values` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
+- [Enumerability and ownership of properties](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

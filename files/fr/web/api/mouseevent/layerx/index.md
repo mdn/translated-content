@@ -11,13 +11,14 @@ tags:
 translation_of: Web/API/UIEvent/layerX
 original_slug: Web/API/UIEvent/layerX
 ---
+
 {{APIRef("DOM Events")}} {{Non-standard_header}}
 
 La propriété en lecture seule **`UIEvent.layerX`** retourne la coordonnée horizontale de l'évènement relativement à la couche en cours.
 
 Cette propriété prend en compte le défilement de la page, et retourne une valeur relative à l'ensemble du document, à moins que l'évènement ne se soit produit à l'intérieur d'un élément positionné, auquel cas la valeur retournée est relative au coin supérieur gauche de l'élément positionné.
 
-## **Syntaxe**
+## Syntaxe
 
 ```js
 var posx = event.layerX
@@ -25,7 +26,7 @@ var posx = event.layerX
 
 - *`posx`* est une valeur entière en pixels pour la coordonnée x du pointeur de la souris, lorsque l'évènement souris est déclenché.
 
-## **Exemples**
+## Exemples
 
 ```html
 <html>
@@ -111,4 +112,4 @@ _Cette propriété ne fait partie d'aucune spécification._
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.UIEvent.layerX")}}
+{{Compat}}

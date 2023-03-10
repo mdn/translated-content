@@ -2,6 +2,7 @@
 title: font
 slug: Web/SVG/Element/font
 ---
+
 {{SVGRef}}
 
 `font`元素定义了一个用于文字布局的字体。
@@ -16,8 +17,8 @@ slug: Web/SVG/Element/font
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -33,11 +34,11 @@ slug: Web/SVG/Element/font
 
 ## DOM 接口
 
-该元素实现 [`SVGFontElement`](/en/DOM/SVGFontElement) 接口。
+该元素实现 [`SVGFontElement`](/zh-CN/DOM/SVGFontElement) 接口。
 
 ## 参见
 
 - {{ SVGElement("font-face") }}
 - {{ SVGElement("glyph") }}
 - {{ SVGElement("text") }}
-- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_Fonts)
+- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_Fonts)

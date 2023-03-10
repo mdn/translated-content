@@ -7,6 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/display-outside
 ---
+
 {{CSSRef}}
 
 Les mots-clés de type `<display-outside>` définissent le mode de disposition extérieure de l'élément. Autrement dit, ces mots-clés précisent le rôle de l'élément dans le flux. Ces valeurs peuvent être utilisées pour la propriété `display`. La syntaxe historique (avant CSS 3) prendra une seule valeur et la nouvelle syntaxe combinera cette valeur avec une valeur {{CSSxRef("&lt;display-inside&gt;")}}.
@@ -29,7 +30,7 @@ Une valeur `<display-outside>` peut être l'un des mots-clés suivants.
 
 > **Note :** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
 >
-> **Note :** Les navigateurs qui prennent en charge la syntaxe avec deux valeurs utiliseront la valeur par défaut `flow` pour le mode intérieur si `display: block` ou `display: inline`.  On a ainsi le résultat attendu (si on souhaite qu'un élément se comporte comme un bloc, on s'attend à ce que les éléments fils de cet élément contribuent à la disposition normale en bloc et en ligne).
+> **Note :** Les navigateurs qui prennent en charge la syntaxe avec deux valeurs utiliseront la valeur par défaut `flow` pour le mode intérieur si `display: block` ou `display: inline`. On a ainsi le résultat attendu (si on souhaite qu'un élément se comporte comme un bloc, on s'attend à ce que les éléments fils de cet élément contribuent à la disposition normale en bloc et en ligne).
 
 ### Syntaxe formelle
 
@@ -61,9 +62,7 @@ span {
 
 ## Compatibilité des navigateurs
 
-### Prise en charge `run-in`
-
-{{Compat("css.properties.display.run-in", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

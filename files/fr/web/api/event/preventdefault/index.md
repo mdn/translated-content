@@ -4,6 +4,7 @@ slug: Web/API/Event/preventDefault
 translation_of: Web/API/Event/preventDefault
 browser-compat: api.Event.preventDefault
 ---
+
 {{apiref("DOM")}}
 
 La méthode **`preventDefault()`**, rattachée à l'interface [`Event`](/fr/docs/Web/API/Event), indique à l'agent utilisateur que si l'évènement n'est pas explicitement géré, l'action par défaut ne devrait pas être exécutée comme elle l'est normalement.

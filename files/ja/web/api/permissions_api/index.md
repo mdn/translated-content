@@ -2,6 +2,7 @@
 title: Permissions API
 slug: Web/API/Permissions_API
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
 **Permissions API** は、現在のコンテキストに起因する API のパーミッションの状態を照会するための一貫したプログラム方法を提供します。 例えば、Permissions API を使用して、特定の API にアクセスするためのパーミッションが付与（granted）または拒否（denied）されているかどうかを確認できます。
@@ -40,9 +41,7 @@ Location Finder という簡単な例を用意しました。 [例をライブ�
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考     |
-| ---------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Permissions API')}} | {{Spec2('Permissions API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

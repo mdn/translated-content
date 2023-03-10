@@ -1,15 +1,6 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
-browser-compat: javascript.builtins.Object.keys
 ---
 {{JSRef}}
 

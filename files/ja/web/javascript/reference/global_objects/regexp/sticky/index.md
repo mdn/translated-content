@@ -1,18 +1,8 @@
 ---
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - プロパティ
-  - 正規表現
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
+
 {{JSRef}}
 
 **`sticky`** プロパティは、検索が粘着的 (sticky) である (文字列内の検索を、この正規表現の {{jsxref("RegExp.lastIndex", "lastIndex")}} プロパティで示されたインデックスからのみ開始する) かどうかを表します。 `sticky` は個々の正規表現オブジェクトが持つ読み取り専用のプロパティです。
@@ -62,9 +52,7 @@ regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

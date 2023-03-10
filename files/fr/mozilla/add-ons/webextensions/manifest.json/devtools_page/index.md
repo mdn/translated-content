@@ -11,6 +11,7 @@ tags:
   - devtools_page
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -44,6 +45,6 @@ Voir [Extension des outils développeurs](/fr/Add-ons/WebExtensions/Extending_th
 "devtools_page": "devtools/my-page.html"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.devtools_page")}}
+{{Compat}}

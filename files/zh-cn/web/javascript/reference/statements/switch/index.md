@@ -2,6 +2,7 @@
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 **`switch` 语句**评估一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)，将表达式的值与`case`子句匹配，并执行与该情况相关联的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。
@@ -37,7 +38,7 @@ switch (expression) {
 
 ## 描述
 
-一个 switch 语句首先会计算其 expression 。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 [严格运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)，`===`）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）
+一个 switch 语句首先会计算其 expression。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 [严格运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)，`===`）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）
 
 如果没有 `case` 子句相匹配，程序则会寻找那个可选的 `default` 子句，如果找到了，将控制权交给它，执行相关语句。若没有 `default` 子句，程序将继续执行直到 `switch` 结束。按照惯例，`default` 子句是最后一个子句，不过也不需要这样做。
 
@@ -100,7 +101,7 @@ switch (foo) {
 
 ### 我能把 default 放到 case 之间吗？
 
-可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default ：
+可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default：
 
 ```js
 var foo = 5;
@@ -116,7 +117,7 @@ switch (foo) {
 }
 ```
 
-即使你把 default 放到其它 case 之上，它仍有效。
+即使你把 default 放到其他 case 之上，它仍有效。
 
 ### 使用多准则 case 的方法
 
@@ -126,7 +127,7 @@ switch (foo) {
 
 #### 多 case - 单一操作
 
-这种方法利用这样一个事实：如果 case 语句之下没有 break ，它将继续执行下一个 case 语句，而不管 case 是否符合条件。 请看“如果忘记 break 会怎么样？”部分。
+这种方法利用这样一个事实：如果 case 语句之下没有 break，它将继续执行下一个 case 语句，而不管 case 是否符合条件。请看“如果忘记 break 会怎么样？”部分。
 
 这是一个单操作顺序的 switch 语句，其中四个不同值的执行结果完全一样。
 
@@ -189,7 +190,7 @@ switch (foo) {
 
 ### `switch` 语句内的块级作用域
 
-随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 [let](/en-US/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/en-US/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
+随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
 
 以这段代码为例：
 

@@ -2,6 +2,7 @@
 title: glyph
 slug: Web/SVG/Element/glyph
 ---
+
 {{SVGRef}}
 
 一个`glyph`元素定义了 SVG 字体中的一个独立的字形。
@@ -46,8 +47,8 @@ slug: Web/SVG/Element/glyph
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -66,10 +67,10 @@ slug: Web/SVG/Element/glyph
 
 ## DOM 接口
 
-该元素实现了`SVGGlyphElement接口。`
+该元素实现了 `SVGGlyphElement` 接口。
 
 ## 相关内容
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("missing-glyph") }}
-- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_fonts)

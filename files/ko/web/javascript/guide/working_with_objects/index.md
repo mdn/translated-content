@@ -1,16 +1,8 @@
 ---
 title: 객체로 작업하기
 slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Beginner
-  - Comparing object
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript는 간단한 객체 기반 패러다임 위에 만들어졌습니다. 객체는 속성의 컬렉션이고, 속성은 이름('키')과 값 사이의 연결 관계입니다. 속성의 값이 함수인 경우에는 메서드라고 부릅니다. 브라우저 안에 미리 정의된 객체 뿐만 아니라 여러분이 직접 객체를 정의할 수도 있습니다. 이번 장에서는 객체, 속성, 함수, 메서드 사용법과 함께 직접 새로운 객체를 생성하는 법을 알아봅니다.

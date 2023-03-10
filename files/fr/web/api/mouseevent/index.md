@@ -3,9 +3,10 @@ title: MouseEvent
 slug: Web/API/MouseEvent
 translation_of: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
-L'interface **`MouseEvent`** représente les événements qui se produisent lors d'une interaction de l'utilisateur avec un appareil de pointage (tel qu'une souris). Les événements communs utilisant cette interface incluent {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}} et {{event("mousedown")}}.
+L'interface **`MouseEvent`** représente les événements qui se produisent lors d'une interaction de l'utilisateur avec un appareil de pointage (tel qu'une souris). Les événements communs utilisant cette interface incluent [`click`](/fr/docs/Web/API/Element/click_event), [`dblclick`](/fr/docs/Web/API/Element/dblclick_event), [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) et [`mousedown`](/fr/docs/Web/API/Element/mousedown_event).
 
 `MouseEvent` dérive de {{domxref("UIEvent")}}, qui lui-même est issu d'{{domxref("Event")}}. Bien que la méthode {{domxref ("MouseEvent.initMouseEvent()")}} soit conservée à des fins de compatibilité descendante, la création d'un objet `MouseEvent` doit être effectuée à l'aide du constructeur {{domxref ("MouseEvent.MouseEvent","MouseEvent()")}}.
 
@@ -53,9 +54,9 @@ _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEv
     est pressée alors que l'événement est lancé.
 
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : La coordonnée en X du pointeur de la souris relative à la position de la souris lors du dernier événement {{event("mousemove")}} lancé.
+  - : La coordonnée en X du pointeur de la souris relative à la position de la souris lors du dernier événement [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) lancé.
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : La coordonnée en Y du pointeur de la souris relative à la position de la souris lors du dernier événement {{event("mousemove")}} lancé.
+  - : La coordonnée en Y du pointeur de la souris relative à la position de la souris lors du dernier événement [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) lancé.
 - {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
   - : La coordonnée en X du pointeur de la souris relative à la postion du bord de remplissage du noeud cible.
 - {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}

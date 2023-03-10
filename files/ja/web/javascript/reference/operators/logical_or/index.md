@@ -1,15 +1,8 @@
 ---
 title: 論理和 (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理演算子
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.logical_or
-translation_of: Web/JavaScript/Reference/Operators/Logical_OR
 ---
+
 {{jsSidebar("Operators")}}
 
 論理和 (`||`) 演算子 (論理的分割) をオペランドの組み合わせに対して使用すると、オペランドのうち 1 つ以上が true である場合に true になります。一般的には論理値（ブール値）で使用されます。その場合は論理値を返します。ただし `||` 演算子は実際には指定されたオペランドのうち一つの値を返すので、この演算子が論理値以外で使用された場合は、論理値以外の値を返すことになります。
@@ -83,7 +76,7 @@ o9 = false || ''         // f || f は "" を返す
 o10 = false || varObject // f || オブジェクトは varObject を返す
 ```
 
-> **Note:** この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 {{jsxref("null")}} や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
+> **メモ:** この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 {{jsxref("null")}} や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
 
 ### 論理型の変換規則
 

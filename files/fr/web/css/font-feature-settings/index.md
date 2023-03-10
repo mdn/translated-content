@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-feature-settings
 ---
+
 {{CSSRef}}
 
 La propriété **`font-feature-settings`** permet de contrôler les fonctionnalités typographiques des polices OpenType.
@@ -43,9 +44,13 @@ font-feature-settings: unset;
   - : Lors du rendu du texte, l'étiquette de fonctionnalité OpenType est passée au moteur afin d'activer ou de désactiver certaines fonctionnalités de la police. L'étiquette est toujours une chaîne (type {{cssxref("&lt;string&gt;")}}) de 4 caractères ASCII. Si la chaîne contient plus ou moins de 4 caractères ou contient des caractères en dehors de l'intervalle U+20 - U+7E, la déclaration sera considérée comme invalide.
     La valeur associée à l'étiquette est un entier positif. Les deux mots-clés `on` et `off` sont des synonymes respectifs des valeurs `1` et `0`. Si aucune valeur n'est donnée pour une étiquette, la valeur par défaut sera `1`. Pour les fonctionnalités OpenType qui ne sont pas booléennees, la valeur implique qu'un glyphe donné soit sélectionné.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -85,15 +90,11 @@ td.tabular { font-feature-settings: "tnum"; }
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-feature-settings', 'font-feature-settings')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-feature-settings")}}
+{{Compat}}
 
 ## Voir aussi
 

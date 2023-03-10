@@ -2,6 +2,7 @@
 title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessageChannel")}} 接口的 `MessageChannel()` 构造函数返回一个新的 {{domxref("MessageChannel")}} 对象，返回的对象中包含两个 {{domxref("MessagePort")}} 对象。
@@ -49,8 +50,8 @@ function handleMessage(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageChannel.MessageChannel")}}
+{{Compat}}
 
 ## 参见
 
-- [使用 channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [使用 channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: article ロール'
-slug: Web/Accessibility/ARIA/Roles/Article_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Article_Role
+slug: Web/Accessibility/ARIA/Roles/article_role
 ---
+
 記事 (`article`) ロールは、ページ、文書、またはウェブサイト上で容易に自立することができるページのセクションを示します。 これは、通常、コメント、フォーラム投稿、新聞記事、または 1 ページにまとめられたその他項目などの関連コンテンツの項目に設定します。
 
 ```html
@@ -21,7 +17,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Article_Role
 
 この例では、同じように構成され、関連している 2 つの記事を 1 ページに並べて表示しています。
 
-> **Note:** 記事 (`article`) ロールを持つ `<div>` ではなく、`<article>` 要素を使用します。 利用可能な場合は、いつでもネイティブの要素を使用します。
+> **メモ:** 記事 (`article`) ロールを持つ `<div>` ではなく、`<article>` 要素を使用します。 利用可能な場合は、いつでもネイティブの要素を使用します。
 
 `role="article"` を使用する代わりに、{{htmlelement("article")}} 要素を使用することができます。
 
@@ -67,7 +63,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Article_Role
 - 属性値の変更
   - : フィードを作成するときは、各記事 (`article`) ロールの `aria-posinset` 属性と `aria-setsize` 属性を適切な値に設定します。 `aria-posinset` は、1 ベースであることに注意してください。
 
-> **Note:** 常にネイティブの要素を使用してください。 記事 (`article`) ロールを持つ `<div>` ではなく、{{htmlelement("article")}} 要素を使用するべきです。
+> **メモ:** 常にネイティブの要素を使用してください。 記事 (`article`) ロールを持つ `<div>` ではなく、{{htmlelement("article")}} 要素を使用するべきです。
 
 ## 例
 
@@ -75,10 +71,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Article_Role
 
 ## 仕様
 
-| 仕様                                                                     | 状態                                             |
-| ------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#article","article")}}                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#feed","feed")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 優先順位
 

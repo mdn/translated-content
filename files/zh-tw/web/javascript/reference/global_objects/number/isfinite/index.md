@@ -2,6 +2,7 @@
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
+
 {{JSRef}}
 
 **`Number.isFinite()`** 方法會判斷傳入的值是否為有限數（finite number）。
@@ -57,7 +58,7 @@ Number.isFinite = Number.isFinite || function(value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Number.isFinite")}}
+{{Compat}}
 
 ## 參見
 

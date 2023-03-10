@@ -11,6 +11,7 @@ tags:
   - Learn
   - test your skills
 ---
+
 {{LearnSidebar}}
 
 L'objectif de ce test de connaissances est d'évaluer si vous maîtrisez les [meilleures pratiques d'accessibilité en CSS et en JavaScript](/fr/docs/Learn/Accessibility/CSS_and_JavaScript).

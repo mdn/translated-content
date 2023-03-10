@@ -2,6 +2,7 @@
 title: VTTRegion
 slug: Web/API/VTTRegion
 ---
+
 {{APIRef("WebVTT")}}
 
 WebVTT（メディアプレゼンテーションに関するテキストトラック）を処理するための API の一部である `VTTRegion` インターフェイスは、{{domxref("VTTCue")}} をレンダリングするための動画の一部を記述します。
@@ -43,9 +44,7 @@ cue.region = region;  // このキューはこの領域内にのみ描かれま�
 
 ## 仕様
 
-| 仕様                         | 状態                     | コメント |
-| ---------------------------- | ------------------------ | -------- |
-| {{SpecName("WebVTT")}} | {{Spec2("WebVTT")}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

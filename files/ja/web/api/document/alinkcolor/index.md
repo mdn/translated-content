@@ -2,6 +2,7 @@
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 文書本文のアクティブなリンクの色を取得または設定します。リンクは `mousedown` と `mouseup` イベントの間にアクティブになります。

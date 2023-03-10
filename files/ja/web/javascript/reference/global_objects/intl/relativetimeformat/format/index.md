@@ -1,15 +1,8 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
-tags:
-  - IntI
-  - Internationalization
-  - JavaScript
-  - Method
-  - Reference
-  - RelativeTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 ---
+
 {{JSRef}}
 
 **`Intl.RelativeTimeFormat.prototype.format()`** メソッドは `value` や `unit` を、この {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って整形します。
@@ -80,9 +73,7 @@ rtf.format(1, "day");
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態      | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ---- |
-| {{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.prototype.format', 'RelativeTimeFormat.format()')}} | 第 4 段階 |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

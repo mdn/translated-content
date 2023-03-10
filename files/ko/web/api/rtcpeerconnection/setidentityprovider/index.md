@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.setIdentityProvider()
 slug: Web/API/RTCPeerConnection/setIdentityProvider
-translation_of: Web/API/RTCPeerConnection/setIdentityProvider
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
@@ -11,7 +10,9 @@ translation_of: Web/API/RTCPeerConnection/setIdentityProvider
 
 ## Syntax
 
-    pc.setIdentityProvider(domainname [, protocol] [, username]);
+```js
+pc.setIdentityProvider(domainname [, protocol] [, username]);
+```
 
 _이 메소드는 반환 값이 존재하지 않습니다._
 

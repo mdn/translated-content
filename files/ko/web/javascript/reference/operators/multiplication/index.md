@@ -1,14 +1,8 @@
 ---
 title: 곱하기 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Multiplication
-browser-compat: javascript.operators.multiplication
 ---
+
 {{jsSidebar("Operators")}}
 
 곱하기 연산자(`*`)는 두 연산자의 곱을 구합니다.

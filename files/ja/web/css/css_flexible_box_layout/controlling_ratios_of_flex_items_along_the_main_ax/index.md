@@ -1,22 +1,8 @@
 ---
 title: 主軸に沿ったフレックスアイテムの比率の制御
-slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
-tags:
-  - Basis
-  - CSS
-  - Flex
-  - ガイド
-  - フレックスボックス
-  - free space
-  - grow
-  - max-content
-  - min-content
-  - shrink
-  - space
-translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+slug: Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
+
 {{CSSRef}}
 
 このガイドでは、フレックスアイテムに適用され、主軸に沿ってアイテムの寸法と自由度を制御することができる三つのプロパティ — {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, {{CSSxRef("flex-basis")}} を見ていきます。これらのプロパティがどのようにアイテムを伸縮させるかについて完全に理解することが、フレックスボックスをマスターするための鍵です。

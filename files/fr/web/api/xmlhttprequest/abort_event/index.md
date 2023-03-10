@@ -4,6 +4,7 @@ slug: Web/API/XMLHttpRequest/abort_event
 translation_of: Web/API/XMLHttpRequest/abort_event
 original_slug: Web/Events/abort_(ProgressEvent)
 ---
+
 L'événement **abort** est déclenché lorsque la progression a été interompue (Non causé par une erreur)
 
 ## Informations générales
@@ -33,15 +34,12 @@ L'événement **abort** est déclenché lorsque la progression a été interompu
 | `loaded` {{readonlyInline}}           | unsigned long (long)                 | The number of bytes transferred since the beginning of the operation. This doesn't include headers and other overhead, but only the content itself. Read only. |
 | `total` {{readonlyInline}}            | unsigned long (long)                 | The total number of bytes of content that will be transferred during the operation. If the total size is unknown, this value is zero. Read only.               |
 
-## Evénements liés
-
-- {{event("loadstart")}}
-- {{event("progress")}}
-- {{event("error")}}
-- {{event("abort")}}
-- {{event("load")}}
-- {{event("loadend")}}
-
 ## Voir aussi
 
+- Les évènements liés
+  - [`loadstart`](/fr/docs/Web/API/XMLHttpRequest/loadstart_event)
+  - [`load`](/fr/docs/Web/API/XMLHttpRequest/load_event)
+  - [`progress`](/fr/docs/Web/API/XMLHttpRequest/progress_event)
+  - [`error`](/fr/docs/Web/API/XMLHttpRequest/error_event)
+  - [`loadend`](/fr/docs/Web/API/XMLHttpRequest/loadend_event)
 - [Surveillance de la progression](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

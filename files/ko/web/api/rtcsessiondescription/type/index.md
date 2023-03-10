@@ -1,7 +1,6 @@
 ---
 title: RTCSessionDescription.type
 slug: Web/API/RTCSessionDescription/type
-translation_of: Web/API/RTCSessionDescription/type
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
@@ -9,8 +8,10 @@ translation_of: Web/API/RTCSessionDescription/type
 
 ## Syntax
 
-    var value = sessionDescription.type;
-    sessionDescription.type = value;
+```js
+var value = sessionDescription.type;
+sessionDescription.type = value;
+```
 
 ### 값
 

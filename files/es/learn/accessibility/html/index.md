@@ -1,8 +1,8 @@
 ---
 title: 'HTML: Una buena base para la accesibilidad'
 slug: Learn/Accessibility/HTML
-translation_of: Learn/Accessibility/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 Se puede hacer accesible una gran cantidad de contenido web solo asegurándose de que se utilizan los elementos HTML con el propósito correcto todo el tiempo. Este artículo muestra en detalle como HTML puede ser usado para asegurar máxima accesibilidad.
@@ -51,13 +51,13 @@ No solo la etiqueta `<button>` de HTML ya tiene estilos adecuados por defecto (q
 
 No cuesta más tiempo escribir HTML semántico que (mal) marcado no semántico si lo haces consistentemente desde el comienzo de tu proyecto. Y aun mejor, el marcado semántico tiene otros beneficios más allá de la accesibilidad:
 
-1.  **Fácil desarrollo** — como mencionamos, obtienes algunas funcionalidades gratis, y podría decirse que es más fácil de entender.
-2.  **Mejor en móviles** — el HTML semántico es probablemente más liviano en tamaño de archivo que el código espagueti no semántico y más fácil de hacer responsivo.
-3.  **Bueno para SEO** — Los motores de búsqueda dan más importancia a palabras claves dentro de cabeceras, links, etc., que palabras claves en elementos no semánticos como los `<div>`, etc., tus documentos serán más fáciles de encontrar por tus clientes.
+1. **Fácil desarrollo** — como mencionamos, obtienes algunas funcionalidades gratis, y podría decirse que es más fácil de entender.
+2. **Mejor en móviles** — el HTML semántico es probablemente más liviano en tamaño de archivo que el código espagueti no semántico y más fácil de hacer responsivo.
+3. **Bueno para SEO** — Los motores de búsqueda dan más importancia a palabras claves dentro de cabeceras, links, etc., que palabras claves en elementos no semánticos como los `<div>`, etc., tus documentos serán más fáciles de encontrar por tus clientes.
 
 Continuemos y veamos el HTML accesible en más detalle.
 
-> **Nota:** Es buena idea tener configurado un lector de pantalla en tu computador, para que puedas hacer algunas pruebas de los siguientes ejemplos. Mira nuestra [Guía de lectores de pantalla ](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)para más detalles.
+> **Nota:** Es buena idea tener configurado un lector de pantalla en tu computador, para que puedas hacer algunas pruebas de los siguientes ejemplos. Mira nuestra [Guía de lectores de pantalla](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) para más detalles.
 
 ## Buena semántica
 
@@ -97,10 +97,10 @@ Una de las mejores ayudas de accesibilidad que un usuario lector de pantalla pue
 
 Hemos preparado una versión más larga para que pruebes con un lector de pantalla (ver [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si tratas de navegar por ella, notaras que es muy fácil:
 
-1.  El lector de pantalla lee cada cabecera a medida que progresas a través del contenido, notificándote qué es una cabecera, qué es un párrafo, etc.
-2.  Se detiene después de cada elemento, dejándote ir a un ritmo que sea cómodo para ti.
-3.  Puedes saltar al siguiente/anterior encabezado en muchos lectores de pantalla.
-4.  También puedes tener una lista de todos los encabezados en muchos lectores de pantalla, permitiéndote usarlos como una tabla de contenidos para encontrar contenido específico.
+1. El lector de pantalla lee cada cabecera a medida que progresas a través del contenido, notificándote qué es una cabecera, qué es un párrafo, etc.
+2. Se detiene después de cada elemento, dejándote ir a un ritmo que sea cómodo para ti.
+3. Puedes saltar al siguiente/anterior encabezado en muchos lectores de pantalla.
+4. También puedes tener una lista de todos los encabezados en muchos lectores de pantalla, permitiéndote usarlos como una tabla de contenidos para encontrar contenido específico.
 
 Las personas a veces escriben encabezados, párrafos, etc. usando HTML presentacional y saltos de línea, algo como lo siguiente:
 
@@ -261,7 +261,7 @@ Por controles de interfaz de usuario nos referimos a las partes principales de l
 
 Un aspecto clave de la accesibilidad de los controles de interfaz de usuario es que, de forma predeterminada, los navegadores permiten que sean manipulados por el teclado. Puedes probar esto usando nuestro ejemplo [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ([código fuente](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)). Ábrelo en una nueva pestaña y prueba a pulsar la tecla de tabulación; después de algunas pulsaciones, deberías ver que el foco de la pestaña comienza a moverse a través de los diferentes elementos enfocables. Los elementos enfocados reciben un estilo predeterminado resaltado en cada navegador (difiere ligeramente entre diferentes navegadores) para que puedas saber qué elemento está enfocado.
 
-![](https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png)
+![](button-focused-unfocused.png)
 
 Después puedes pulsar <kbd>Enter</kbd> / <kbd>Return</kbd> para seguir un enlace enfocado o pulsar un botón (hemos incluido algo de JavaScript para que los botones lancen un mensaje), o comenzar a escribir para introducir texto en un campo de texto. Otros elementos de formulario tienen diferentes controles; por ejemplo, el elemento {{htmlelement ("select")}} puede mostrar sus opciones y alternar entre usar las teclas de flecha arriba y abajo.
 
@@ -354,7 +354,7 @@ Las etiquetas textuales de los controles de la interfaz de usuario son muy útil
 
 Deberías asegurarte de que las etiquetas de texto de tus botones y enlaces sean comprensibles y distintivas. No uses simplemente "Haz clic aquí" para tus etiquetas, ya que los usuarios de lectores de pantalla a veces obtienen una lista de botones y controles de formulario. La siguiente captura de pantalla muestra nuestros controles enumerados por VoiceOver en Mac.
 
-![Form controls. Click me! button. Click me too! button. And me! button. Fill me in: edit text. Fill me in: edit text. Happy collapsed pop up button. Happy menu item. Sad menu item. Angry menu item. Worried menu item.](https://mdn.mozillademos.org/files/14335/voiceover-formcontrols.png)
+![Form controls. Click me! button. Click me too! button. And me! button. Fill me in: edit text. Fill me in: edit text. Happy collapsed pop up button. Happy menu item. Sad menu item. Angry menu item. Worried menu item.](voiceover-formcontrols.png)
 
 Asegúrate de que tus etiquetas tienen sentido sin su contexto, leídas solas, así como en el contexto del párrafo en que están. Por ejemplo, lo siguiente muestra un buen ejemplo de enlace de texto:
 
@@ -389,7 +389,7 @@ El siguiente es un ejemplo mucho mejor:
 
 Con código como este, la etiqueta estará claramente asociada con la entrada; la descripción se parecerá más a "Entra tu nombre: editar texto".
 
-![](https://mdn.mozillademos.org/files/14337/voiceover-good-form-label.png)
+![](voiceover-good-form-label.png)
 
 Como ventaja adicional, en la mayoría de los navegadores asociar una etiqueta con una entrada de formulario significa que puedes hacer clic en la etiqueta para seleccionar / activar el elemento del formulario. Esto le da a la entrada un área de impacto más grande, lo que facilita la selección.
 
@@ -471,7 +471,7 @@ Una cosa a considerar es si tus imágenes tienen significado dentro del contenid
 
 Si deseas proporcionar información contextual adicional, deberías colocarla en el texto que rodea la imagen o dentro de un atributo `title`, como se muestra a continuación. En este caso, la mayoría de los lectores de pantalla leerán el texto alternativo, el atributo del título y el nombre del archivo. Además, los navegadores muestran el texto del título como información cuando se pasa por encima con el ratón.
 
-![](https://mdn.mozillademos.org/files/14333/title-attribute.png)
+![](title-attribute.png)
 
 Echemos otro vistazo al cuarto método:
 
@@ -533,7 +533,7 @@ El color no debe usarse como el único método para distinguir los enlaces del c
 
 ### Eventos onclick
 
-A menudo se abusa de las etiquetas de anclaje con el evento `onclick` para crear pseudo-botones configurando href a `"#"` o` "javascript:void(0)"` para evitar que la página se actualice.
+A menudo se abusa de las etiquetas de anclaje con el evento `onclick` para crear pseudo-botones configurando href a `"#"` o `"javascript:void(0)"` para evitar que la página se actualice.
 
 Estos valores provocan un comportamiento inesperado al copiar o arrastrar enlaces, abrir enlaces en una nueva pestaña o ventana, marcar como favoritos y cuando JavaScript todavía se está descargando aparecen errores o está deshabilitado. Esto también transmite una semántica incorrecta a las tecnologías de asistencia (por ejemplo, lectores de pantalla). En estos casos, se recomienda utilizar un {{HTMLElement("button")}} en su lugar. En general, solo debe usar un ancla para la navegación utilizando una URL adecuada.
 

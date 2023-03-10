@@ -1,14 +1,6 @@
 ---
 title: 전개 구문
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Reference
-  - Spread
-  - 전개 연산자
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 {{jsSidebar("Operators")}}
 
@@ -179,7 +171,7 @@ arr1 = [...arr2, ...arr1]; // arr1 은 이제 [3, 4, 5, 0, 1, 2] 가 됨
 
 ### 객체 리터럴에서의 전개
 
-[ECMAScript의 Rest/Spread 프로퍼티](https://github.com/tc39/proposal-object-rest-spread) 제안 (stage 4) 은 [객체 리터럴](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)에 속성 전개를 추가합니다. 이는 제공된 객체가 소유한 열거형 프로퍼티를 새로운 객체로 복사합니다.
+[ECMAScript의 Rest/Spread 프로퍼티](https://github.com/tc39/proposal-object-rest-spread) 제안 (stage 4) 은 [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)에 속성 전개를 추가합니다. 이는 제공된 객체가 소유한 열거형 프로퍼티를 새로운 객체로 복사합니다.
 
 얕은 복제(prototype 제외) 또는 객체의 병합은 이제 {{jsxref("Object.assign()")}} 보다 더 짧은 문법을 사용해 가능합니다.
 
@@ -194,7 +186,7 @@ var mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-{{jsxref("Object.assign()")}} 은 [setters](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/set) 를 트리거하지만 전개 구문은 그렇지 않음을 유의합니다.
+{{jsxref("Object.assign()")}} 은 [setters](/ko/docs/Web/JavaScript/Reference/Functions/set) 를 트리거하지만 전개 구문은 그렇지 않음을 유의합니다.
 
 {{jsxref("Object.assign()")}} 함수를 대체하거나 흉내낼 수 없음을 유의합니다.
 
@@ -214,7 +206,7 @@ var mergedObj = { ...obj1, ...obj2 };
 
 ### 이터러블 전용
 
-전개 구문 (spread 프로퍼티인 경우 제외) 은 [iterable](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 객체에만 적용됩니다.
+전개 구문 (spread 프로퍼티인 경우 제외) 은 [iterable](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 객체에만 적용됩니다.
 
 ```js
 var obj = {'key1': 'value1'};
@@ -223,11 +215,11 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ### 많은 값과 Spread
 
-함수 호출에서 spread 문법을 사용할 때, 자바스크립트 엔진의 인수 길이 제한을 초과하지 않도록 주의합니다. 자세한 내용은 [`apply()`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 를 보세요.
+함수 호출에서 spread 문법을 사용할 때, 자바스크립트 엔진의 인수 길이 제한을 초과하지 않도록 주의합니다. 자세한 내용은 [`apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 를 보세요.
 
 ## 나머지 구문 (매개변수)
 
-나머지 구문은 전개 구문과 정확히 같아보이지만, 대신 배열이나 객체를 분해할 때 사용됩니다. 어떤 면에서, 나머지 구문은 전개 구문과 반대입니다. 전개는 배열을 그 엘리먼트로 '확장' 하는 반면, 나머지는 여러 엘리먼트를 수집하며 이를 하나의 엘리먼트로 '압축' 합니다. [나머지 매개변수](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 문서를 보세요.
+나머지 구문은 전개 구문과 정확히 같아보이지만, 대신 배열이나 객체를 분해할 때 사용됩니다. 어떤 면에서, 나머지 구문은 전개 구문과 반대입니다. 전개는 배열을 그 엘리먼트로 '확장' 하는 반면, 나머지는 여러 엘리먼트를 수집하며 이를 하나의 엘리먼트로 '압축' 합니다. [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 문서를 보세요.
 
 ## 명세서
 
@@ -239,5 +231,5 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ## 같이 보기
 
-- [나머지 매개변수](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) (또한 ‘`...`’)
-- [fn.apply](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (또한 ‘`...`’)
+- [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) (또한 ‘`...`’)
+- [fn.apply](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (또한 ‘`...`’)

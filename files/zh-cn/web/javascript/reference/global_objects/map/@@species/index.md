@@ -3,6 +3,7 @@ title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
+
 {{JSRef}}
 
 **`Map[@@species]`** 访问器属性会返回一个 `Map` 构造函数。

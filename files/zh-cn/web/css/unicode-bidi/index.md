@@ -2,13 +2,14 @@
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`unicode-bidi`** 属性，和 {{cssxref("direction")}} 属性，决定如何处理文档中的双书写方向文本（bidirectional text）。比如，如果一块内容同时包含有从左到右书写和从右到左书写的文本，那么用户代理（the user-agent）会使用复杂的 Unicode 算法来决定如何显示文本。`unicode-bidi` 属性会覆盖此算法，允许开发人员控制文本嵌入（text embedding）。
 
 `unicode-bidi` 与 {{cssxref("direction")}} 是仅有的两个不受 {{cssxref("all")}} 简写影响的属性。
 
-**注意：**此属性是文档类型定义（Document Type Definition, DTD）的设计者专用的。Web 设计者与其他类似的人员不应覆盖此属性。
+> **警告：** 此属性是文档类型定义（Document Type Definition, DTD）的设计者专用的。Web 设计者与其他类似的人员不应覆盖此属性。
 
 ```css
 /* 关键字值 */
@@ -44,11 +45,11 @@ unicode-bidi: unset;
   - : 这个关键字在计算元素方向的时候，不考虑父元素的双向状态，也不考虑 {{cssxref("direction")}} 属性的值。它是使用 Unicode 双向算法的 P2 和 P3 规则计算的。
     这个值允许按照 Unicode 双向算法显示已经格式化的数据。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### CSS
 
@@ -72,7 +73,7 @@ unicode-bidi: unset;
 
 ### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -80,7 +81,7 @@ unicode-bidi: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.unicode-bidi")}}
+{{Compat}}
 
 ## 参见
 

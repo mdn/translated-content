@@ -1,22 +1,8 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - CSS Text Decoration
-  - HTML Colors
-  - HTML Styles
-  - Reference
-  - Styling HTML
-  - Styling text
-  - color
-  - colors
-  - recipe:css-property
-browser-compat: css.properties.text-decoration-color
-translation_of: Web/CSS/text-decoration-color
 ---
+
 {{ CSSRef }}
 
 **`text-decoration-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{ cssxref("text-decoration-line") }} でテキストに追加された装飾の色を設定します。

@@ -1,14 +1,6 @@
 ---
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-tags:
-  - Deprecated
-  - Functions
-  - JavaScript
-  - Property
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments/callee
-browser-compat: javascript.functions.arguments.callee
 ---
 {{jsSidebar("Functions")}}
 

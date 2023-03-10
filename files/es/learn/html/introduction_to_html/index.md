@@ -1,17 +1,9 @@
 ---
 title: Introducción a HTML
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - CodingScripting
-  - Enlaces
-  - Estructura
-  - HTML
-  - Introducción a HTML
-  - Texto
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML
 ---
+
 {{LearnSidebar}}
 
 En su corazón, {{glossary("HTML")}} es un lenguaje muy sencillo compuesto de {{Glossary("Element", "elementos")}}, que se pueden aplicar a piezas de texto para darles un significado diferente en un documento (¿Esto es un párrafo? ¿Esto es una lista con viñetas? ¿Esto es parte de una tabla?), estructura un documento en secciones lógicas (¿Tiene una cabecera? ¿Tres columnas de contenido? ¿Un menú de navegación?), e incrusta contenido como imágenes y vídeos en una página. Este módulo introducirá los dos primeros de estos, e introduce conceptos fundamentales y la sintaxis que necesitas para entender HTML.
@@ -24,9 +16,9 @@ En su corazón, {{glossary("HTML")}} es un lenguaje muy sencillo compuesto de {{
 
 ## Prerrequisitos
 
-Antes de empezar este módulo, no necesitas conocimientos previos de HTML, pero deberías estar, por lo menos, familiarizado con el uso básico de computadoras, y usar la Web pasivamente (es decir, sólo revisándola y consumiendo el contenido). Debes tener configurado un entorno de trabajo básico (como se detalla en {{web.link("/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software", "Instalación de software básico")}}), y comprender cómo crear y administrar archivos (como se detalla en {{web.link("/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files", "Manejo de archivos")}}). Ambos son parte de nuestro módulo completo {{web.link("/es/docs/Learn/Getting_started_with_the_web", "Introducción a la web")}} para principiantes.
+Antes de empezar este módulo, no necesitas conocimientos previos de HTML, pero deberías estar, por lo menos, familiarizado con el uso básico de computadoras, y usar la Web pasivamente (es decir, sólo revisándola y consumiendo el contenido). Debes tener configurado un entorno de trabajo básico (como se detalla en [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software)), y comprender cómo crear y administrar archivos (como se detalla en [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files)). Ambos son parte de nuestro módulo completo [Introducción a la web](/es/docs/Learn/Getting_started_with_the_web) para principiantes.
 
-> **Nota:** Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](http://jsbin.com/) o [Glitch]().
+> **Nota:** Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -41,8 +33,8 @@ Este módulo contiene los siguientes artículos, que te llevarán a través de t
 - [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
   - : Los hipervínculos realmente son importantes — estos son los que hacen la Web. Este artículo muestra la sintaxis requerida para hacer un enlace, y explica las mejores prácticas sobre enlaces.
 - [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-  - : Hay muchos otros elementos en HTML para formatear texto, que no hemos tratado en los artículos [fundamentos de texto HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Los siguientes elementos son menos conocidos, pero sigue siendo útil conocerlos. Aquí aprenderás sobre el marcado de citas, listas de descripción, código de computadoras y otros textos relacionados,  subíndices y superíndices, información de contacto, y mucho más.
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Estructura web y documentación")}}
+  - : Hay muchos otros elementos en HTML para formatear texto, que no hemos tratado en los artículos [fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Los siguientes elementos son menos conocidos, pero sigue siendo útil conocerlos. Aquí aprenderás sobre el marcado de citas, listas de descripción, código de computadoras y otros textos relacionados, subíndices y superíndices, información de contacto, y mucho más.
+- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
   - : Así como definimos las partes individuales de tu página (como "un párrafo" o "una imagen"), HTML también se usa para definir las áreas de tu sitio web (como "la cabecera", "el menú de navegación", "la columna de contenido principal"). Este artículo trata sobre cómo planear una estructura básica del sitio web, y escribir el HTML para representar esa estructura.
 - [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
   - : Escribir HTML está bien, pero ¿Qué pasa si algo está mal, y no puedes encontrar en dónde está el error en el código? Este artículo introducirá algunas herramientas que te podrán ayudar.
@@ -51,9 +43,9 @@ Este módulo contiene los siguientes artículos, que te llevarán a través de t
 
 Las siguientes evaluaciones probarán tu entendimiento de las bases de HTML cubiertas en las guías anteriores.
 
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Marcando para una carta")}}
+- [Marcando para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
   - : Todos aprendemos a escribir una carta, tarde o temprano; ¡Este también es un ejemplo útil para poner a prueba nuestras habilidades de formato de texto! Así que en esta evaluación se te dará una carta a la cual le tendrás que dar un marcado HTML.
-- {{web.link("/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Estructuración del contenido de una página")}}
+- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
   - : Esta evaluación prueba tu capacidad para usar HTML para estructurar el contenido de una sencilla página, esta tiene una cabecera, pie de página, menú de navegación, contenido principal, y una barra lateral.
 
 ## Ve también
@@ -63,4 +55,4 @@ Las siguientes evaluaciones probarán tu entendimiento de las bases de HTML cubi
 
 > **Nota:** Retroalimentación
 >
-> Ayúdanos a mejorar nuestras guías y tutoriales como esta respondiendo {{web.link("https://www.surveygizmo.com/s3/4871248/MDN-Guides-Survey", "nuestra encuesta aquí")}}.
+> Ayúdanos a mejorar nuestras guías y tutoriales como esta respondiendo [nuestra encuesta aquí](https://www.surveygizmo.com/s3/4871248/MDN-Guides-Survey).

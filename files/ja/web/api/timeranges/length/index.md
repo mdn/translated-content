@@ -2,6 +2,7 @@
 title: TimeRanges.length
 slug: Web/API/TimeRanges/length
 ---
+
 {{APIRef("DOM")}}
 
 **`TimeRanges.length`** 読み取り専用プロパティは、オブジェクト内の範囲の数を返します。
@@ -36,9 +37,7 @@ if (buf.length == 1) {
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "#dom-timeranges-length", "TimeRanges.length()")}} | {{Spec2("HTML WHATWG")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

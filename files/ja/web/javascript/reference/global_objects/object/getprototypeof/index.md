@@ -1,13 +1,8 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部プロパティ `[[Prototype]]` の値) を返します。
@@ -52,9 +47,7 @@ Object.getPrototypeOf('foo');
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getprototypeof', 'Object.getPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -62,12 +55,12 @@ Object.getPrototypeOf('foo');
 
 ### Opera 固有のメモ
 
-古いバージョンの Opera は `Object.getPrototypeOf()` に対応していませんが、 Opera 10.50 以降で標準外の {{jsxref("Object.proto", "__proto__")}} に対応しています。
+古いバージョンの Opera は `Object.getPrototypeOf()` に対応していませんが、 Opera 10.50 以降で標準外の [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) に対応しています。
 
 ## 関連情報
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - John Resig 氏の記事 : [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}

@@ -1,8 +1,8 @@
 ---
 title: 表单数据校验
 slug: Learn/Forms/Form_validation
-original_slug: Learn/HTML/Forms/Data_form_validation
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
 
 表单校验帮助我们确保用户以正确格式填写表单数据，确保提交的数据能使我们的应用程序正常工作。本文将告诉您需要了解的有关表单校验的内容。
@@ -12,11 +12,11 @@ original_slug: Learn/HTML/Forms/Data_form_validation
     <tr>
       <th scope="row">预备知识：</th>
       <td>
-        计算机基础能力，对 <a href="/en-US/docs/Learn/HTML">HTML</a>、<a
-          href="/en-US/docs/Learn/CSS"
+        计算机基础能力，对 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
+          href="/zh-CN/docs/Learn/CSS"
           >CSS</a
         >
-        和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。
+        和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。
       </td>
     </tr>
     <tr>
@@ -64,12 +64,12 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 ## 使用内置表单数据校验
 
-[HTML5](/en-US/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
+[HTML5](/zh-CN/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
 
 当一个元素校验通过时：
 
 - 该元素将可以通过 CSS 伪类 {{cssxref(":valid")}} 进行特殊的样式化；
-- 如果用户尝试提交表单，如果没有其它的控制来阻止该操作（比如 JavaScript 即可阻止提交），那么该表单的数据会被提交。
+- 如果用户尝试提交表单，如果没有其他的控制来阻止该操作（比如 JavaScript 即可阻止提交），那么该表单的数据会被提交。
 
 如果一个元素未校验通过：
 
@@ -80,7 +80,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 在这一节，我们将会看到一些用于{{HTMLElement("input")}}元素校验的 HTML5 的特性。
 
-让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。 这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html)找到源码，在线例子如下：
+让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html)找到源码，在线例子如下：
 
 ```html hidden
 <form>
@@ -136,23 +136,23 @@ input:valid {
 
 ### 使用正则表达式校验
 
-另一个常用的校验功能是 {{htmlattrxref("pattern","input")}} 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其它的用途。
+另一个常用的校验功能是 {{htmlattrxref("pattern","input")}} 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其他的用途。
 
 正则表达式相当复杂，我们不打算在本文中详尽地教你。
 
 下面是一些例子，让你对它们的工作原理有个基本的了解：
 
 - `a` — 匹配一个字符`a`(不能匹配 `b`, `aa`等等.)
-- `abc` — 匹配 `a`, 其次 `b`, 最后 `c`.
+- `abc` — 匹配 `a`、其次 `b`、最后 `c`.
 - `a*` — 匹配 0 个或者多个字符 `a` (`+` 代表至少匹配一个或者多个).
 - `[^a]` — 匹配一个字符，但它**不能**是`a`.
 - `a|b` — 匹配一个字符 `a` 或者 `b`.
-- `[abc]` — 匹配一个字符，它可以是`a`,`b`或`c`.
-- `[^abc]` — 匹配一个字符，但它**不可以**是`a`,`b`或`c`.
+- `[abc]` — 匹配一个字符，它可以是`a`、`b`或`c`.
+- `[^abc]` — 匹配一个字符，但它**不可以**是 `a`、`b` 或 `c`.
 - `[a-z]` — 匹配字符范围 `a-z`且全部小写 (你可以使用 `[A-Za-z]` 涵盖大小写，或 `[A-Z]` 来限制必须大写).
-- `a.c` — 匹配字符 `a`,中间匹配任意一个字符，最后匹配字符 `c`.
-- `a{5}` — 匹配字符 `a`五次。
-- `a{5,7}` — 匹配字符 `a`五到七次，不能多或者少。
+- `a.c`——匹配字符 `a`，中间匹配任意一个字符，最后匹配字符 `c`。
+- `a{5}` — 匹配字符 `a` 五次。
+- `a{5,7}` — 匹配字符 `a` 五到七次，不能多或者少。
 
 你也可以在这些表达式中使用数字和其他字符，例如：
 
@@ -362,7 +362,7 @@ HTML5 提供 [constraint validation API](http://www.w3.org/TR/html5/forms.html#t
 </form>
 ```
 
-在 JavaScript 中，你调用 [`setCustomValidity()`](</en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>) 方法：
+在 JavaScript 中，你调用 [`setCustomValidity()`](/zh-CN/docs/Web/API/HTMLObjectElement/setCustomValidity) 方法：
 
 ```js
 var email = document.getElementById("mail");
@@ -386,29 +386,29 @@ email.addEventListener("input", function (event) {
 
 越来越多的浏览器支持限制校验 API，并且这逐渐变得可靠。这些 API 由成组的方法和属性构成，可在特定的表单元素接口上调用：
 
-- [HTMLButtonElement](/en-US/docs/Web/API/HTMLButtonElement)
-- [HTMLFieldSetElement](/en-US/docs/Web/API/HTMLFieldSetElement)
-- [HTMLInputElement](/en-US/docs/Web/API/HTMLInputElement)
-- [HTMLOutputElement](/en-US/docs/Web/API/HTMLOutputElement)
-- [HTMLSelectElement](/en-US/docs/Web/API/HTMLSelectElement)
-- [HTMLTextAreaElement](/en-US/docs/Web/API/HTMLTextAreaElement)
+- [HTMLButtonElement](/zh-CN/docs/Web/API/HTMLButtonElement)
+- [HTMLFieldSetElement](/zh-CN/docs/Web/API/HTMLFieldSetElement)
+- [HTMLInputElement](/zh-CN/docs/Web/API/HTMLInputElement)
+- [HTMLOutputElement](/zh-CN/docs/Web/API/HTMLOutputElement)
+- [HTMLSelectElement](/zh-CN/docs/Web/API/HTMLSelectElement)
+- [HTMLTextAreaElement](/zh-CN/docs/Web/API/HTMLTextAreaElement)
 
 #### 约束校验的 API 及属性
 
-| 属性                       | 描述                                                                                                                                                                                     |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `validationMessage`        | 一个本地化消息，描述元素不满足校验条件时（如果有的话）的文本信息。如果元素无需校验（`willValidate` 为 `false`），或元素的值满足校验条件时，为空字符串。                                  |
-| `validity`                 | 一个 {{domxref("ValidityState")}} 对象，描述元素的验证状态。详见有关可能的验证状态的文章。                                                                                       |
-| `validity.customError`     | 如果元素设置了自定义错误，返回 `true` ；否则返回`false`。                                                                                                                                |
-| `validity.patternMismatch` | 如果元素的值不匹配所设置的正则表达式，返回 `true`，否则返回 `false`。 当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                       |
-| `validity.rangeOverflow`   | 如果元素的值高于所设置的最大值，返回 `true`，否则返回 `false`。 当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                             |
-| `validity.rangeUnderflow`  | 如果元素的值低于所设置的最小值，返回 `true`，否则返回 `false`。 当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                             |
-| `validity.stepMismatch`    | 如果元素的值不符合 step 属性的规则，返回 `true`，否则返回 `false`。 当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                         |
-| `validity.tooLong`         | 如果元素的值超过所设置的最大长度，返回 `true`，否则返回 `false`。 当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                           |
-| `validity.typeMismatch`    | 如果元素的值出现语法错误，返回 `true`，否则返回 `false`。 当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                                   |
-| `validity.valid`           | 如果元素的值不存在校验问题，返回 `true`，否则返回 `false`。 当此属性为 `true` 时，元素将命中 {{cssxref(":valid")}} CSS 伪类，否则命中 {{cssxref(":invalid")}} CSS 伪类。 |
-| `validity.valueMissing`    | 如果元素设置了 required 属性且值为空，返回 `true`，否则返回 `false`。 当此属性为 true 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                         |
-| `willValidate`             | 如果元素在表单提交时将被校验，返回 `true`，否则返回 `false`。                                                                                                                            |
+| 属性                       | 描述                                                                                                                                                       |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `validationMessage`        | 一个本地化消息，描述元素不满足校验条件时（如果有的话）的文本信息。如果元素无需校验（`willValidate` 为 `false`），或元素的值满足校验条件时，为空字符串。                      |
+| `validity`                 | 一个 {{domxref("ValidityState")}} 对象，描述元素的验证状态。详见有关可能的验证状态的文章。                                                                         |
+| `validity.customError`     | 如果元素设置了自定义错误，返回 `true` ；否则返回`false`。                                                                                                        |
+| `validity.patternMismatch` | 如果元素的值不匹配所设置的正则表达式，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                               |
+| `validity.rangeOverflow`   | 如果元素的值高于所设置的最大值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                    |
+| `validity.rangeUnderflow`  | 如果元素的值低于所设置的最小值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                    |
+| `validity.stepMismatch`    | 如果元素的值不符合 step 属性的规则，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                |
+| `validity.tooLong`         | 如果元素的值超过所设置的最大长度，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                   |
+| `validity.typeMismatch`    | 如果元素的值出现语法错误，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                          |
+| `validity.valid`           | 如果元素的值不存在校验问题，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":valid")}} CSS 伪类，否则命中 {{cssxref(":invalid")}} CSS 伪类。 |
+| `validity.valueMissing`    | 如果元素设置了 required 属性且值为空，返回 `true`，否则返回 `false`。当此属性为 true 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                |
+| `willValidate`             | 如果元素在表单提交时将被校验，返回 `true`，否则返回 `false`。                                                                                                     |
 
 #### 约束校验 API 的方法
 
@@ -425,7 +425,7 @@ email.addEventListener("input", function (event) {
       <td>
         如果元素的值不存在校验问题，返回 <code>true</code>，否则返回
         <code>false</code
-        >。如果元素校验失败，此方法会触发{{event("invalid")}} 事件。
+        >。如果元素校验失败，此方法会触发 <a href="/zh-CN/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code></a> 事件。
       </td>
     </tr>
     <tr>
@@ -433,7 +433,7 @@ email.addEventListener("input", function (event) {
       <td>
         如果元素或它的子元素控件符合校验的限制，返回 <code>true</code> .
         当返回为 <code>false</code> 时，对每个无效元素可撤销
-        {{event("invalid")}} 事件会被唤起并且校验错误会报告给用户。
+        <a href="/zh-CN/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code></a> 事件会被唤起并且校验错误会报告给用户。
       </td>
     </tr>
     <tr>
@@ -470,7 +470,7 @@ email.addEventListener("input", function (event) {
 
 这个简单的表单使用 {{htmlattrxref("novalidate","form")}} 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，您仍然可以自己做，并相应地设置表单的样式。
 
-[`aria-live`](/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
+[`aria-live`](/zh-CN/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
 
 ##### CSS
 
@@ -576,7 +576,7 @@ form.addEventListener("submit", function (event) {
 
 ### 不使用内建 API 时的表单校验
 
-有时，例如使用旧版浏览器或[自定义小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)，您将无法（或不希望）使用约束校验 API。在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。校验表单比起真实数据校验更像是一个用户界面问题。
+有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)，您将无法（或不希望）使用约束校验 API。在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。校验表单比起真实数据校验更像是一个用户界面问题。
 
 要校验表单，您必须问自己几个问题：
 
@@ -612,7 +612,7 @@ form.addEventListener("submit", function (event) {
 </form>
 ```
 
-正如你所看到的，HTML 几乎是一样的；我们只是关闭了 HTML 校验功能。请注意，[ARIA](/en-US/docs/Accessibility/ARIA) 是与 HTML5 无关的独立规范。
+正如你所看到的，HTML 几乎是一样的；我们只是关闭了 HTML 校验功能。请注意，[ARIA](/zh-CN/docs/Accessibility/ARIA) 是与 HTML5 无关的独立规范。
 
 ##### CSS
 

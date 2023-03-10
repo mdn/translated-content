@@ -3,6 +3,7 @@ title: HTMLAreaElement.origin
 slug: Web/API/HTMLAreaElement/origin
 original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAreaElement.origin`** は読み取り専用プロパティで、表現している URL のオリジンを Unicode シリアル化した文字列です。

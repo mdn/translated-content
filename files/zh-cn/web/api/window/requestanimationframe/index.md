@@ -1,7 +1,8 @@
 ---
 title: window.requestAnimationFrame
-slug: Web/API/Window/requestAnimationFrame
+slug: Web/API/window/requestAnimationFrame
 ---
+
 {{APIRef}}
 
 **`window.requestAnimationFrame()`** 告诉浏览器——你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行
@@ -12,7 +13,7 @@ slug: Web/API/Window/requestAnimationFrame
 
 回调函数会被传入{{domxref("DOMHighResTimeStamp")}}参数，{{domxref("DOMHighResTimeStamp")}}指示当前被 `requestAnimationFrame()` 排序的回调函数被触发的时间。在同一个帧中的多个回调函数，它们每一个都会接受到一个相同的时间戳，即使在计算上一个回调函数的工作负载期间已经消耗了一些时间。该时间戳是一个十进制数，单位毫秒，最小精度为 1ms(1000μs)。
 
-> **警告：** 请确保总是使用第一个参数 (或其它获得当前时间的方法) 计算每次调用之间的时间间隔，否则动画在高刷新率的屏幕中会运行得更快。请参考下面例子的做法。
+> **警告：** 请确保总是使用第一个参数 (或其他获得当前时间的方法) 计算每次调用之间的时间间隔，否则动画在高刷新率的屏幕中会运行得更快。请参考下面例子的做法。
 
 ## 语法
 
@@ -27,7 +28,7 @@ window.requestAnimationFrame(callback);
 
 ### 返回值
 
-一个 `long` 整数，请求 ID ，是回调列表中唯一的标识。是个非零值，没别的意义。你可以传这个值给 {{domxref("window.cancelAnimationFrame()")}} 以取消回调函数。
+一个 `long` 整数，请求 ID，是回调列表中唯一的标识。是个非零值，没别的意义。你可以传这个值给 {{domxref("window.cancelAnimationFrame()")}} 以取消回调函数。
 
 ## 范例
 

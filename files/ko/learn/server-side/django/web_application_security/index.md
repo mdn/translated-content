@@ -1,8 +1,8 @@
 ---
 title: Django web application security
 slug: Learn/Server-side/Django/web_application_security
-translation_of: Learn/Server-side/Django/web_application_security
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 
 사용자의 데이터를 보호하는 것은 모든 웹사이트 개발에서 중요한 부분입니다. 우리는 이전의 강의 [Web security](/ko/docs/Web/Security) 에서 자주 나타나는 보안 위협에 대해 알아봤습니다. — 이번 강의에서는 장고의 내장 보안 기능이 이런 위험에 어떻게 대처하는지 실제 예시들을 통해 살펴보겠습니다.
@@ -55,12 +55,12 @@ Django's template system protects you against the majority of XSS attacks by [es
 3. Navigate to the author-creation page (which should be at URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
 4. Enter names and date details for a new user, and then append the following text to the Last Name field:
     `<script>alert('Test alert');</script>`.
-    ![Author Form XSS test](https://mdn.mozillademos.org/files/14305/author_create_form_alert_xss.png)
+    ![Author Form XSS test](author_create_form_alert_xss.png)
 
     > **참고:** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
 
 5. Press **Submit** to save the record.
-6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png)
+6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](author_detail_alert_xss.png)
 
 If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. `>` is now `&gt;`)
 
@@ -119,7 +119,7 @@ Django also provides other forms of protection (most of which would be hard or n
 - SQL injection protection
   - : SQL injection vulnerabilities enable malicious users to execute arbitrary SQL code on a database, allowing data to be accessed, modified, or deleted irrespective of the user's permissions. In almost every case you'll be accessing the database using Django’s querysets/models, so the resulting SQL will be properly escaped by the underlying database driver. If you do need to write raw queries or custom SQL then you'll need to explicitly think about preventing SQL injection.
 - Clickjacking protection
-  - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) controlled by the attacker. Django contains [clickjacking protection](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware "django.middleware.clickjacking.XFrameOptionsMiddleware") which, in a supporting browser, can prevent a site from being rendered inside a frame.
+  - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) controlled by the attacker. Django contains [clickjacking protection](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) which, in a supporting browser, can prevent a site from being rendered inside a frame.
 - Enforcing SSL/HTTPS
   - : SSL/HTTPS can be enabled on the web server in order to encrypt all traffic between the site and browser, including authentication credentials that would otherwise be sent in plain text (enabling HTTPS is highly recommended). If HTTPS is enabled then Django provides a number of other protections you can use:
 - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) can be used to check whether content is secure, even if it is incoming from a non-HTTP proxy.
@@ -147,21 +147,3 @@ The next and final step in this module about Django is to complete the [assessme
 - [Securing your site](/ko/docs/Web/Security/Securing_your_site) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

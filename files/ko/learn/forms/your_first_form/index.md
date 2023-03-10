@@ -1,9 +1,9 @@
 ---
 title: 나의 첫 HTML 폼
 slug: Learn/Forms/Your_first_form
-translation_of: Learn/Forms/Your_first_form
 original_slug: Learn/HTML/Forms/Your_first_HTML_form
 ---
+
 이 문서는 HTML 폼 소개 문서입니다. 간단한 폼들을 살펴보면서 HTML 폼을 만들기에 대한 기본적인 필요 사항들을 볼 수 있을 것이다. 이 문서는 HTML폼에 대해서는 아무것도 몰라도 되지만 다음 문서에 나와 있는 기본적인 HTML이나 CSS를 알아야 한다. ([the basics of HTML](/ko/docs/HTML/Introduction), [CSS](/ko/docs/CSS/Getting_Started))
 
 ## 시작하기전에

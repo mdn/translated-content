@@ -2,6 +2,7 @@
 title: PeformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 {{domxref('PerformanceObserver')}} インターフェイスの **`disconnect()`** メソッドは、パフォーマンスオブザーバーが{{domxref("PerformanceEntry","パフォーマンスエントリ", '', 'true')}}イベントを受け取らないようにするために使用されます。
@@ -35,9 +36,7 @@ observer2.observe({entryTypes: ["measure"]});
 
 ## 仕様書
 
-| 仕様書                                                                                                                               | ステータス                                               | コメント                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | --------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-disconnect', 'disconnect()')}} | {{Spec2('Performance Timeline Level 2')}} | `disconnect()` メソッドの初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

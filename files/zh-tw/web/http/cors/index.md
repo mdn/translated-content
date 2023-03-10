@@ -2,6 +2,7 @@
 title: 跨來源資源共用（CORS）
 slug: Web/HTTP/CORS
 ---
+
 {{HTTPSidebar}}
 
 跨來源資源共用（Cross-Origin Resource Sharing ({{Glossary("CORS")}})）是一種使用額外 {{Glossary("HTTP")}} 標頭令目前瀏覽網站的{{Glossary("user agent","使用者代理")}}取得存取其他來源（網域）伺服器特定資源權限的機制。當使用者代理請求一個不是目前文件來源——例如來自於不同網域（domain）、通訊協定（protocol）或通訊埠（port）的資源時，會建立一個**跨來源 HTTP 請求（cross-origin HTTP request）**。
@@ -402,7 +403,7 @@ Access-Control-Allow-Origin: <origin> | *
 
 `origin` 參數指定了一個可以存取資源的 URI。瀏覽器必定會執行此檢查。對一個**不帶有**身分驗證的請求，伺服器可以指定一個「\*」作為萬用字元（wildcard），從而允許任何來源存取資源。
 
-舉例來說，要允許 http\://mozilla.org 存取資源，你可以指定：
+舉例來說，要允許 `http://mozilla.org` 存取資源，你可以指定：
 
 ```plain
 Access-Control-Allow-Origin: http://mozilla.org
@@ -502,7 +503,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### 相容性備註
 

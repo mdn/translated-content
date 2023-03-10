@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.removeTrack()
 slug: Web/API/RTCPeerConnection/removeTrack
-translation_of: Web/API/RTCPeerConnection/removeTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCPeerConnection.removeTrack()`** 메소드는 {{domxref("RTCPeerConnection.getSenders()")}}에 의해 보고된 발신자 목록에서 해당 {{domxref("RTCRtpSender")}}를 실제로 제거하지 않은채, 지정한 트랙에서 미디어 전송을 중단하도록 연결의 로컬엔드에 알려줍니다. 해당 트랙이 이미 중단되었거나, 연결의 발신자 목록에 존재하지 않으면, 이 메소드는 아무 영향이 없습니다.
@@ -11,7 +11,9 @@ translation_of: Web/API/RTCPeerConnection/removeTrack
 
 ## Syntax
 
-    pc.removeTrack(sender);
+```js
+pc.removeTrack(sender);
+```
 
 ### 매개변수
 

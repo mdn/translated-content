@@ -1,27 +1,38 @@
 ---
-title: Worker.onerror
+title: 'Worker: error イベント'
 slug: Web/API/Worker/error_event
 original_slug: Web/API/Worker/onerror
+l10n:
+  sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
+
 {{APIRef("Web Workers API")}}
 
-**`onerror`** は {{domxref("Worker")}} インターフェイスのプロパティで、 [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)を表し、 {{event("error")}} イベントが発行されたときに呼び出される関数を表します。
+**`error`** は {{domxref("Worker")}} インターフェイスのイベントで、ワーカーでエラーが発生したときに発行されます。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
 ```js
-myWorker.onerror = function(event) { ... };
+addEventListener('error', (event) => { });
+
+onerror = (event) => { };
 ```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 以下の例では {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して生成し、結果のオブジェクトに `onerror` ハンドラーを設定しています。
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 
-  myWorker.onerror = function(event) {
-    console.log('There is an error with your worker!');
+myWorker.onerror = (event) => {
+  console.log('There is an error with your worker!');
 }
 ```
 

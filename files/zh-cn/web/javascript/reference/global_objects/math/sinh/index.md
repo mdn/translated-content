@@ -2,6 +2,7 @@
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

@@ -2,6 +2,7 @@
 title: アドレスバーボタン
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
+
 {{AddonSidebar}}
 
 このユーザーインターフェイスオプションは、ブラウザーのアドレスバーに追加されるボタンで、よく[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)と呼ばれます。ユーザーはボタンをクリックして拡張機能を操作します。
