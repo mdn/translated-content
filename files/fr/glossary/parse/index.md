@@ -1,8 +1,6 @@
 ---
 title: Analyse Syntaxique
 slug: Glossary/Parse
-translation_of: Glossary/Parse
-original_slug: Glossaire/Parse
 ---
 
 "Parser" signifie analyser et convertir un programme en un format interne que l'environnement d'exécution peut exécuter, par exemple le moteur {{glossary("JavaScript")}} dans les navigateurs.
