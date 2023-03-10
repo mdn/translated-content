@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 
 {{JSRef}}
 
-**`buffer`** 访问器属性表示由 *TypedArray* 在构造期间引用的{{jsxref("ArrayBuffer")}}。
+**`buffer`** 访问器属性表示由 *TypedArray* 在构造期间引用的 {{jsxref("ArrayBuffer")}}。
 
 ## 语法
 
