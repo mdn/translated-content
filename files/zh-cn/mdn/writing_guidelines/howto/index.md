@@ -1,6 +1,7 @@
 ---
 title: 如何标记页面
-slug: MDN/Writing_guidelines/Howto/Tag
+slug: MDN/Writing_guidelines/Howto
+original_slug: MDN/Writing_guidelines/Howto/Tag
 ---
 
 {{MDNSidebar}}
