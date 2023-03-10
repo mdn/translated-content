@@ -35,11 +35,10 @@ setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
   - : 선택적 구문을 사용하면 함수 대신 문자열을 포함할 수 있습니다. 모든 `delay`(밀리초)마다 컴파일되고 실행됩니다.
     이 구문은 {{jsxref("Global_Objects/eval", "eval()")}}을 사용하는 것과 같은 이유로 보안상 위험하므로 "권장하지 않습니다".
 - `delay` {{optional_inline}}
-  - : 밀리초(1/1000초) 단위의 타이머는 지정된 함수 또는 코드 실행 사이에
-    지연되어야 합니다. 지정하지 않으면 기본 값은 0입니다. `delay` 값의
-    허용 범위에 대한 자세한 내용은 아래의 [지연 제한](#지연_제한)을 참조하세요.
+  - : 타이머가 지정된 함수 또는 코드 실행 사이에 지연해야 하는 밀리초(1/1000초) 단위의 시간입니다.
+    지정하지 않으면 기본 값은 0입니다. `delay` 값의 허용 범위에 대한 자세한 내용은 아래의 [지연 제한](#지연_제한)을 참조하세요.
 - `arg0, …, argN` {{optional_inline}}
-  - : 타이머가 만료되면 _func_ 에서 지정한 함수로 전달되는 추가 인수 입니다.
+  - : 타이머가 만료되면 _func_ 에서 지정한 함수로 전달되는 추가 인수입니다.
 
 ### 반환 값
 
@@ -130,18 +129,18 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
-같이 보기: [`clearInterval()`](/en-US/docs/Web/API/clearInterval)
+같이 보기: [`clearInterval()`](/ko/docs/Web/API/clearInterval)
 
 ## "this" 문제
 
 메서드를 `setInterval()` 또는 다른 함수에 전달하면 잘못된
 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this) 값으로 호출됩니다.
-이 문제는 [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method)에서 자세히 설명합니다.
+이 문제는 [JavaScript reference](/ko/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method)에서 자세히 설명합니다.
 
 ### 설명
 
 `setInterval()`에 의해 실행되는 코드는 호출된 함수와 별도의 실행 컨텍스트에서
-실행됩니다. 결과적으로 호출된 함수의 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+실행됩니다. 결과적으로 호출된 함수의 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this)
 키워드는 `window` (또는 `global`) 객체로 설정되며 `setTimeout`을 호출한 함수의 `this` 값과
 동일하지 않습니다. `setTimeout()` 대신 `setInterval()` 을 사용하여
 다음 예제를 참조하세요(사실 문제는 두 타이머 모두 동일합니다)
@@ -171,9 +170,9 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 위와 동일한 에러�
 
 ### 가능한 해결 방법
 
-모든 최신 JavaScript 런타임(브라우저 및 기타)은 lexical `this`를 사용하여 [화살표 함수](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 지원합니다. `myArray` 메서드 내부에 있는 경우 `setInterval(() => this.myMethod())`를 작성할 수 있습니다.
+모든 최신 JavaScript 런타임(브라우저 및 기타)은 lexical `this`를 사용하여 [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 지원합니다. `myArray` 메서드 내부에 있는 경우 `setInterval(() => this.myMethod())`를 작성할 수 있습니다.
 
-IE를 지원해야 하는 경우 지정된 함수의 모든 호출에 `this`의 값을 고정할 수 있는 [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드를 사용하세요. 이렇게 하면 함수가 호출된 컨텍스트에 따라 `this`가 무엇인지 명확하지 않은 문제를 쉽게 우회할 수 있습니다.
+IE를 지원해야 하는 경우 지정된 함수의 모든 호출에 `this`의 값을 고정할 수 있는 [`Function.prototype.bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드를 사용하세요. 이렇게 하면 함수가 호출된 컨텍스트에 따라 `this`가 무엇인지 명확하지 않은 문제를 쉽게 우회할 수 있습니다.
 
 ## 사용 일람
 
@@ -194,9 +193,9 @@ interval을 취소할 수 있습니다.
 호출에서 4 ms 미만의 값을 지정하면 4 ms로 고정됩니다.
 
 브라우저는 일부 상황에서 간격에 대해 훨씬 더 엄격한 최소 값을 적용할 수
-있지만 일반적이지 않아야 합니다. 또한 콜백 호출 사이의 실제 경과 시간은
+있지만 이러한 경우는 일반적이지 않아야 합니다. 또한 콜백 호출 사이의 실제 경과 시간은
 주어진 `delay` 보다 길 수 있습니다.
-더 많은 예제는 [지정된 값보다 더 오래 지연되는 이유](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified)를 참고하세요.
+더 많은 예제는 [지정된 값보다 더 오래 지연되는 이유](/ko/docs/Web/API/setTimeout#딜레이가_지정한_값보다_더_긴_이유)를 참고하세요.
 
 ### 실행 시간이 간격 빈도보다 짧은지 확인
 
