@@ -11,7 +11,7 @@ Le [navigateur analyse (<i lang="en">parse</i> en anglais) du code HTML](/fr/doc
 
 Lorsque l'analyseur HTML trouve des ressources non bloquantes, telles qu'une image, le navigateur demande ces ressources et continue l'analyse. L'analyse peut continuer lorsqu'un fichier CSS est rencontré, mais les balises `<script>`, en particulier celles sans attribut [`async`](/fr/docs/Web/JavaScript/Reference/Statements/async_function) ou `defer` bloque le rendu et interrompt l'analyse du code HTML.
 
-Lorsque le navigateur rencontre des styles CSS, il analyse le texte dans le modèle d'objet CSS (ou {{glossary('CSSOM')}}), une structure de données qu'il utilise ensuite pour styliser les mises en page et la peinture. Le navigateur crée ensuite une arborescence de rendu à partir de ces deux structures pour pouvoir peindre le contenu à l'écran. JavaScript est également téléchargé, analysé, puis exécuté.
+Lorsque le navigateur rencontre des styles CSS, il analyse le texte dans le modèle d'objet CSS (ou le [CSSOM](/fr/docs/Glossary/CSSOM)), une structure de données qu'il utilise ensuite pour styliser les mises en page et la peinture. Le navigateur crée ensuite une arborescence de rendu à partir de ces deux structures pour pouvoir peindre le contenu à l'écran. Le JavaScript est également téléchargé, analysé, puis exécuté.
 
 L'analyse de JavaScript est faite pendant le {{glossary("compile time", "moment de compilation")}} ou quand l'{{glossary("parser", "analyseur syntaxique")}} est appelé, comme pendant l'appel à une méthode.
 
