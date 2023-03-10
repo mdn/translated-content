@@ -1249,7 +1249,7 @@
 /es/docs/MDN/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Guidelines/Writing_style_guide	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Kuma	/es/docs/MDN/Community/Contributing/Our_repositories
-/es/docs/MDN/Kuma/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
+/es/docs/MDN/Kuma/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
@@ -1260,8 +1260,8 @@
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Tools	/es/docs/orphaned/MDN/Tools
-/es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
-/es/docs/MDN/Tools/KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
+/es/docs/MDN/Tools/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
+/es/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Writing_guidelines/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto
 /es/docs/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
@@ -2879,6 +2879,7 @@
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
+/es/docs/orphaned/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/orphaned/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/orphaned/Web/API/NavigatorConcurrentHardware	/es/docs/web/api/navigator
 /es/docs/orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/es/docs/Web/API/Navigator/hardwareConcurrency
