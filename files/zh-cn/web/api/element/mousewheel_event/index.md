@@ -114,4 +114,4 @@ IE 和 Opera（Presto）仅支持 `wheelDelta` 属性，不支持水平滚动。
 
 ## 参见
 
-- 请改用标准的 `wheel` 事件来监听滚轮事件。
+- 请改用标准的 {{domxref("Element/wheel_event", "wheel")}} 事件来监听滚轮事件。
