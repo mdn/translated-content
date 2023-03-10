@@ -13,7 +13,7 @@ Lorsque l'analyseur HTML trouve des ressources non bloquantes, telles qu'une ima
 
 Lorsque le navigateur rencontre des styles CSS, il analyse le texte dans le modèle d'objet CSS (ou le [CSSOM](/fr/docs/Glossary/CSSOM)), une structure de données qu'il utilise ensuite pour styliser les mises en page et la peinture. Le navigateur crée ensuite une arborescence de rendu à partir de ces deux structures pour pouvoir peindre le contenu à l'écran. Le JavaScript est également téléchargé, analysé, puis exécuté.
 
-L'analyse de JavaScript est faite pendant le {{glossary("compile time", "moment de compilation")}} ou quand l'{{glossary("parser", "analyseur syntaxique")}} est appelé, comme pendant l'appel à une méthode.
+L'analyse de JavaScript est faite pendant le [moment de compilation](/fr/docs/Glossary/Compile_time) ou quand l'[analyseur syntaxique](/fr/docs/Glossary/Parser) est appelé, comme pendant l'appel à une méthode.
 
 ## Voir aussi
 
