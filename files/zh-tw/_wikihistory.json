@@ -1427,6 +1427,10 @@
       "abs0986211642"
     ]
   },
+  "MDN/Writing_guidelines/Howto": {
+    "modified": "2019-03-23T22:54:12.092Z",
+    "contributors": ["wbamberg", "yami"]
+  },
   "MDN/Writing_guidelines/Howto/Creating_moving_deleting": {
     "modified": "2019-04-23T05:30:19.186Z",
     "contributors": [
@@ -1438,10 +1442,6 @@
       "SecondSpirit",
       "coby777"
     ]
-  },
-  "MDN/Writing_guidelines/Howto/Tag": {
-    "modified": "2019-03-23T22:54:12.092Z",
-    "contributors": ["wbamberg", "yami"]
   },
   "MDN/Writing_guidelines/Writing_style_guide": {
     "modified": "2020-09-30T15:33:00.614Z",
