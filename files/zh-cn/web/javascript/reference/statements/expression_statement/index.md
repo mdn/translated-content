@@ -24,7 +24,7 @@ expression;
 
 - 函数调用（`console.log("Hello");`、`[1, 2, 3].forEach((i) => console.log(i));`）
 - [带标签的模版字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals#带标签的模板字符串)
-- [赋值表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符), including compound assignments
+- [赋值表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符)，包括复合赋值
 - [自增和自减](/zh-CN/docs/Web/JavaScript/Reference/Operators#自增和自减)
 - [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 - [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)
