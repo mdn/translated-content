@@ -43,7 +43,10 @@ slug: Web/CSS/-webkit-box-reflect
 
 ## 形式语法
 
-{{CSSSyntax}}
+```plain
+-webkit-box-reflect =
+  [ above | below | right | left ]? <length>? <image>?
+```
 
 ## 规范
 
