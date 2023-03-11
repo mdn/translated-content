@@ -9,7 +9,7 @@ slug: Web/HTML/Element
 
 它们已被按照功能进行分组，以便更轻松地找到你想要的内容。同时，侧边栏中也按照字母排序列出了所有元素。
 
-> **备注：** 若想获知更多关于 HTML 元素、属性的基本信息，请查阅 [HTML 介绍](/zh-CN/docs/learn/HTML/Introduction_to_HTML)中的相关内容。
+> **备注：** 若想获知更多关于 HTML 元素、属性的基本信息，请查阅 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)中的相关内容。
 
 ## 主根元素
 
