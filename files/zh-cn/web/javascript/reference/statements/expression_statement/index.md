@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/Expression_statement
 
 {{jsSidebar("Statements")}}
 
-**表达式语句**是指在需要语句的地方使用的表达式。该表达式被执行并且它的结果被丢弃——因此，它仅对有着副作用的表达式有意义，例如执行函数或者更新变量。
+**表达式语句**是指在需要语句的地方使用的表达式。该表达式被执行后，它的结果将被丢弃——因此，它仅对有着副作用的表达式有意义，例如执行函数或者更新变量。
 
 ## 语法
 
@@ -18,7 +18,7 @@ expression;
 
 ## 描述
 
-除了[专用的语句语法](/zh-CN/docs/Web/JavaScript/Reference/Statements)外，你也可以将几乎任何[表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators)用作单独的语句。表达式语句语法在结尾需要一个分号，但是如果缺少分号导致语法无效，[自动分号补全](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)的过程可能会为你插入一个分号。
+除了[专用的语句语法](/zh-CN/docs/Web/JavaScript/Reference/Statements)外，你也可以将几乎任何[表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators)用作单独的语句。表达式语句语法需要在表达式的结尾添加一个分号，但是如果缺少分号导致语法无效，[自动分号补全](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)的过程可能会为你插入一个分号。
 
 因为表达式执行之后就会被丢弃，表达式的结果不再可用。因此，表达式必须有一些副作用才能有用。表达式语句通常是：
 
