@@ -11,7 +11,7 @@ slug: Web/API/queueMicrotask
 
 微任务的重要性在于它能够以特定顺序异步执行任务。查看[在 JavaScript 中通过 queueMicrotask() 使用微任务](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)的详情。
 
-微任务对于需要执行最终清理或在其他渲染前执行任务的库和框架特别有用。
+微任务对于需要执行 final cleanup 或其他 just-before-rendering 任务的库和框架特别有用。
 
 ## 语法
 
