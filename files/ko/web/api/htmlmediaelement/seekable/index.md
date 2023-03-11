@@ -13,7 +13,7 @@ l10n:
 
 `seekable` 속성에 접근할 때 사용자 에이전트가 찾을 수 있는 미디어 리소스의 범위를 나타내는 새로운 정적 [정규화된 TimeRanges 객체](/ko/docs/Web/API/TimeRanges#normalized_timeranges_objects)입니다.
 
-## Examples
+## 예제
 
 ```js
 const video = document.querySelector("video");
