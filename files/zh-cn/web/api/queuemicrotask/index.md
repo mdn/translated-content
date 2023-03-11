@@ -3,7 +3,9 @@ title: queueMicrotask()
 slug: Web/API/queueMicrotask
 ---
 
-{{APIRef("HTML DOM")}}{{domxref("Window")}} 或 {{domxref("Worker")}} 接口的 **`queueMicrotask()`** 方法，在控制返回浏览器的事件循环之前，将微任务加入队列以在安全时间执行。
+{{APIRef("HTML DOM")}}
+
+{{domxref("Window")}} 或 {{domxref("Worker")}} 接口的 **`queueMicrotask()`** 方法，在控制返回浏览器的事件循环之前，将微任务加入队列以在安全时间执行。
 
 微任务是一个简短的函数，它将在当前任务完成其工作后运行，并且在执行上下文的控制权返回到浏览器的事件循环之前没有其他代码等待运行时运行。
 
