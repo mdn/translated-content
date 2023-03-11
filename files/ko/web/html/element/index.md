@@ -227,8 +227,7 @@ HTML은 상호작용 가능한 사용자 인터페이스 객체를 만들 때 �
 | {{HTMLElement("big")}}       | 포함된 텍스트를 주변 텍스트보다 한 수준 더 큰 글꼴 크기로 렌더링합니다(예: 'medium'은 'large'가 됨). 크기는 브라우저의 최대 허용 글꼴 크기로 제한됩니다. |
 | {{HTMLElement("blink")}}     | 포함된 텍스트가 천천히 깜박입니다. |
 | {{HTMLElement("center")}}    | 포함하는 요소 내에서 수평 중앙에 블록 수준 또는 인라인 콘텐츠를 표시합니다. |
-| {{HTMLElement("content")}}   | 
-[Web Components](/ko/docs/Web/Web_Components) 기술 제품군의 구식 부분은 삽입 지점으로 [Shadow DOM](/ko/docs/Web/Web_Components/Shadow_DOM) 내부에서 사용되었으며 일반 HTML에서는 사용되지 않았습니다. 이제 {{HTMLElement("slot")}} 요소로 대체되어 Shadow DOM을 삽입할 수 있는 DOM의 지점을 생성합니다. |
+| {{HTMLElement("content")}}   | [Web Components](/ko/docs/Web/Web_Components) 기술 제품군의 구식 부분은 삽입 지점으로 [Shadow DOM](/ko/docs/Web/Web_Components/Shadow_DOM) 내부에서 사용되었으며 일반 HTML에서는 사용되지 않았습니다. 이제 {{HTMLElement("slot")}} 요소로 대체되어 Shadow DOM을 삽입할 수 있는 DOM의 지점을 생성합니다. |
 | {{HTMLElement("dir")}}       | 잠재적으로 사용자 에이전트에 의해 적용된 스타일 및 아이콘이 있는 파일 및/또는 폴더의 디렉토리에 대한 컨테이너입니다. 이 오래된 요소를 사용하지 마십시오. 대신 파일 목록을 포함하여 목록에 {{HTMLElement("ul")}} 요소를 사용해야 합니다. |
 | {{HTMLElement("font")}}      | 콘텐츠의 글꼴 크기, 색상 및 면을 정의합니다. |
 | {{HTMLElement("frame")}}     | 다른 HTML 문서를 표시할 수 있는 특정 영역을 정의합니다. 프레임은 {{HTMLElement("frameset")}} 내에서 사용해야 합니다. |
