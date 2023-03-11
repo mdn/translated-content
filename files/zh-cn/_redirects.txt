@@ -1148,7 +1148,7 @@
 /zh-CN/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /zh-CN/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /zh-CN/docs/MDN/Contribute/Howto/Create_and_edit_pages	/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
-/zh-CN/docs/MDN/Contribute/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto/Tag
+/zh-CN/docs/MDN/Contribute/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
@@ -1156,7 +1156,7 @@
 /zh-CN/docs/MDN/Contribute/Howto/创建及编辑页面	/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /zh-CN/docs/MDN/Contribute/Howto/如何添加或更新浏览器兼容性数据	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /zh-CN/docs/MDN/Contribute/Howto/学习_交互_在线_起步_开始	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/zh-CN/docs/MDN/Contribute/Howto/标签	/zh-CN/docs/MDN/Writing_guidelines/Howto/Tag
+/zh-CN/docs/MDN/Contribute/Howto/标签	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Contribute/Localize	/zh-CN/docs/MDN/Community/Contributing/Translated_content
 /zh-CN/docs/MDN/Contribute/Markdown_in_MDN	/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /zh-CN/docs/MDN/Contribute/Structures	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
@@ -1187,6 +1187,7 @@
 /zh-CN/docs/MDN/Structures/Macros/Commonly-used_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Structures/Macros/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Structures/Macros/Other	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
+/zh-CN/docs/MDN/Writing_guidelines/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-CN/docs/MDN_at_ten	/zh-CN/docs/MDN/At_ten
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus

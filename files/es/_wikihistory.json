@@ -2672,11 +2672,7 @@
     "modified": "2020-09-30T15:28:56.412Z",
     "contributors": ["chrisdavidmills", "Nachec"]
   },
-  "MDN/Writing_guidelines/Howto/Markdown_in_MDN": {
-    "modified": "2020-09-30T15:28:56.171Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "Jeremie", "LeoHirsch"]
-  },
-  "MDN/Writing_guidelines/Howto/Tag": {
+  "MDN/Writing_guidelines/Howto": {
     "modified": "2019-03-23T23:15:01.953Z",
     "contributors": [
       "wbamberg",
@@ -2690,6 +2686,10 @@
       "anmartinez",
       "LeoHirsch"
     ]
+  },
+  "MDN/Writing_guidelines/Howto/Markdown_in_MDN": {
+    "modified": "2020-09-30T15:28:56.171Z",
+    "contributors": ["chrisdavidmills", "wbamberg", "Jeremie", "LeoHirsch"]
   },
   "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
     "modified": "2019-03-23T23:09:23.417Z",

@@ -168,7 +168,6 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 - バグ
 
   - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) を使うと、 bugzilla.mozilla.org に登録されているバグへのリンクを簡単に作ることができます。構文は `\{{Bug(123456)}}` です。 {{Bug(123456)}} のようなリンクになります。
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) は WebKit バグのデータベースへのリンクを挿入します。例えば `\{{WebkitBug(31277)}}` は {{WebkitBug(31277)}} を挿入します。
 
 ### 複数のページからなるガイドのためのナビゲーション補助
 

@@ -4839,6 +4839,18 @@
       "lunix01"
     ]
   },
+  "MDN/Writing_guidelines/Howto": {
+    "modified": "2020-04-29T12:58:13.297Z",
+    "contributors": [
+      "targeton",
+      "wbamberg",
+      "yuyx91",
+      "zsusyt",
+      "zhangqiong",
+      "ziyunfei",
+      "ganshenhai"
+    ]
+  },
   "MDN/Writing_guidelines/Howto/Creating_moving_deleting": {
     "modified": "2020-08-13T06:15:42.058Z",
     "contributors": [
@@ -4885,18 +4897,6 @@
   "MDN/Writing_guidelines/Howto/Markdown_in_MDN": {
     "modified": "2020-09-30T15:32:47.524Z",
     "contributors": ["chrisdavidmills", "shc0743"]
-  },
-  "MDN/Writing_guidelines/Howto/Tag": {
-    "modified": "2020-04-29T12:58:13.297Z",
-    "contributors": [
-      "targeton",
-      "wbamberg",
-      "yuyx91",
-      "zsusyt",
-      "zhangqiong",
-      "ziyunfei",
-      "ganshenhai"
-    ]
   },
   "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
     "modified": "2019-03-18T21:16:25.185Z",

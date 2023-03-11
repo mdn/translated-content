@@ -239,15 +239,3 @@ Ahí lo tienes, los conceptos básicos para descubrir errores en programas senci
 - Si encuentras algún error en tu código que no estás seguro de cómo solucionarlo después de leer este artículo, ¡puedes obtener ayuda! Solicita ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn), o en la [sala de MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) en [Matrix](https://wiki.mozilla.org/Matrix). Dinos cuál es tu error e intentaremos ayudarte. Una copia de tu código también sería útil.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
-
-## En este modulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Primer contacto con JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Solución de problemas de JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Almacenamiento de la información que necesita — Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluación: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

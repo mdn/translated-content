@@ -1,8 +1,9 @@
 ---
 title: 페이지에 올바르게 태그하는 방법
-slug: MDN/Writing_guidelines/Howto/Tag
-original_slug: MDN/Contribute/Howto/Tag
+slug: MDN/Writing_guidelines/Howto
+original_slug: MDN/Writing_guidelines/Howto/Tag
 ---
+
 {{MDNSidebar}}
 
 **문서 태그**는 방문자에게 유용한 컨텐츠를 제공하는 중요한 방법입니다. 각 페이지는 콘텐츠 정리에 도움을 줄 수 있도록 몇 개의 태그를 가져야 합니다. 본 페이지는 독자들이 정보를 찾을 때나, 사이트를 체계적으로 유지할 때 필요한 페이지 태그를 하는 가장 좋은 방법을 설명합니다.

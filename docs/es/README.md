@@ -66,6 +66,7 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 | HTML Content o HTML             | HTML                           |
 | JavaScript Content o JavaScript | JavaScript                     |
 | Warning                         | Advertencia                    |
+| Framework                       | Framework                      |
 
 ## Formateo
 

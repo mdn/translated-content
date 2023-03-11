@@ -164,16 +164,6 @@ Este artículo debería haber dado una descripción detallada sobre la accesibil
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
-## En este módulo
-
-- [¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML)
-- [Buenas prácticas de accesibilidad en CSS y JavaScript](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Fundamentos WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Multimedia accesible](/es/docs/Learn/Accessibility/Multimedia)
-- [Accesibilidad móvil](/es/docs/Learn/Accessibility/Mobile)
-- [Resolución de problemas de accesibilidad](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)
-
 ## Véase también
 
 - [WCAG](/es/docs/Web/Accessibility/Understanding_WCAG)
