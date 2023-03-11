@@ -5,7 +5,7 @@ slug: Web/CSS/-webkit-box-reflect
 
 {{CSSRef}}{{Non-standard_Header}}
 
-**`-webkit-box-reflect`** [CSS](/zh-CN/docs/Web/CSS) 属性可让你将元素内容在特定方向上进行反射。
+**`-webkit-box-reflect`** [CSS](/zh-CN/docs/Web/CSS) 属性可让你将元素内容在特定方向上进行轴对称反射。
 
 ```css
 /* 方向值 */
