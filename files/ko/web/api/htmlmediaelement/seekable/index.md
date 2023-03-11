@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("HTMLMediaElement")}} 객체의 **`seekable`** 읽기 전용 속성은 사용자 에이전트가 `seekable` 속성에 접근할 때 찾을 수 있는 미디어 리소스의 범위를 나타내는 새로운 정적 [정규화된 `TimeRanges` 객체](/ko/docs/Web/API/TimeRanges#normalized_timeranges_objects)를 반환합니다.
 
-## Value
+## 값
 
 `seekable` 속성에 접근할 때 사용자 에이전트가 찾을 수 있는 미디어 리소스의 범위를 나타내는 새로운 정적 [정규화된 TimeRanges 객체](/ko/docs/Web/API/TimeRanges#normalized_timeranges_objects)입니다.
 
