@@ -28,7 +28,7 @@ queueMicrotask(() => {/* ... */});
 
 ### 返回值
 
-{{jsxref("undefined")}}。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
