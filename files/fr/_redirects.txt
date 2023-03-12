@@ -562,7 +562,6 @@
 /fr/docs/CSS/hyphens	/fr/docs/Web/CSS/hyphens
 /fr/docs/CSS/image	/fr/docs/Web/CSS/image
 /fr/docs/CSS/image-orientation	/fr/docs/Web/CSS/image-orientation
-/fr/docs/CSS/ime-mode	/fr/docs/orphaned/Web/CSS/ime-mode
 /fr/docs/CSS/inherit	/fr/docs/Web/CSS/inherit
 /fr/docs/CSS/inheritance	/fr/docs/Web/CSS/inheritance
 /fr/docs/CSS/initial	/fr/docs/Web/CSS/initial
@@ -789,7 +788,6 @@
 /fr/docs/CSS:font-variant	/fr/docs/Web/CSS/font-variant
 /fr/docs/CSS:font-weight	/fr/docs/Web/CSS/font-weight
 /fr/docs/CSS:height	/fr/docs/Web/CSS/height
-/fr/docs/CSS:ime-mode	/fr/docs/orphaned/Web/CSS/ime-mode
 /fr/docs/CSS:inherit	/fr/docs/Web/CSS/inherit
 /fr/docs/CSS:initial	/fr/docs/Web/CSS/initial
 /fr/docs/CSS:length	/fr/docs/Web/CSS/length
@@ -3954,7 +3952,7 @@
 /fr/docs/Web/API/Référence_du_DOM_Gecko/document	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Référence_du_DOM_Gecko/element	/fr/docs/Web/API/Element
 /fr/docs/Web/API/Référence_du_DOM_Gecko/window	/fr/docs/Web/API/Window
-/fr/docs/Web/API/SVGMatrix	/fr/docs/conflicting/Web/API/DOMMatrix
+/fr/docs/Web/API/SVGMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/Web/API/SVGStylable	/fr/docs/Web/API/SVGElement
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
@@ -4081,7 +4079,6 @@
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
 /fr/docs/Web/API/XMLHttpRequestEventTarget/onload	/fr/docs/Web/API/XMLHttpRequest/load_event
-/fr/docs/Web/API/XSLTProcessor/Browser_Differences	/fr/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /fr/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/console/log
 /fr/docs/Web/API/console.time	/fr/docs/Web/API/console/time
@@ -4180,7 +4177,6 @@
 /fr/docs/Web/CSS/-moz-user-modify	/fr/docs/Web/CSS/user-modify
 /fr/docs/Web/CSS/-moz-zoom-in	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/-moz-zoom-out	/fr/docs/Web/CSS/cursor
-/fr/docs/Web/CSS/-ms-high-contrast	/fr/docs/orphaned/Web/CSS/@media/-ms-high-contrast
 /fr/docs/Web/CSS/-ms-scroll-snap-type	/fr/docs/Web/CSS/scroll-snap-type
 /fr/docs/Web/CSS/-ms-user-select	/fr/docs/Web/CSS/user-select
 /fr/docs/Web/CSS/-webkit-mask-image	/fr/docs/Web/CSS/mask-image
@@ -4205,7 +4201,6 @@
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
 /fr/docs/Web/CSS/@font-face/font-variant	/fr/docs/Web/CSS/@font-face
-/fr/docs/Web/CSS/@media/-ms-high-contrast	/fr/docs/orphaned/Web/CSS/@media/-ms-high-contrast
 /fr/docs/Web/CSS/@scroll-timeline	/fr/docs/Web/CSS/scroll-timeline
 /fr/docs/Web/CSS/@styleset	/fr/docs/Web/CSS/@font-feature-values
 /fr/docs/Web/CSS/@viewport	/fr/docs/Web/CSS
@@ -4373,7 +4368,6 @@
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordonner_éléments_flexibles	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Rétrocompatibilite_de_flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Utilisation_des_flexbox_en_CSS	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-/fr/docs/Web/CSS/Extensions_CSS_Microsoft	/fr/docs/orphaned/Web/CSS/Microsoft_Extensions
 /fr/docs/Web/CSS/Extensions_Mozilla	/fr/docs/Web/CSS/Mozilla_Extensions
 /fr/docs/Web/CSS/Extensions_WebKit	/fr/docs/Web/CSS/WebKit_Extensions
 /fr/docs/Web/CSS/FAQ	/fr/docs/Learn/CSS/Howto/CSS_FAQ
@@ -4397,7 +4391,6 @@
 /fr/docs/Web/CSS/List_of_Proprietary_CSS_Features	/fr/docs/Web/CSS/Reference
 /fr/docs/Web/CSS/Liste_de_Fonctionnalités_CSS_Propriétaires	/fr/docs/Web/CSS/Reference
 /fr/docs/Web/CSS/Liste_propriétés_CSS_animées	/fr/docs/Web/CSS/CSS_animated_properties
-/fr/docs/Web/CSS/Microsoft_Extensions	/fr/docs/orphaned/Web/CSS/Microsoft_Extensions
 /fr/docs/Web/CSS/Mode_de_mise_en_page	/fr/docs/Web/CSS/Layout_mode
 /fr/docs/Web/CSS/Modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 /fr/docs/Web/CSS/Modèle_de_boîte_CSS	/fr/docs/Web/CSS/CSS_Box_Model
@@ -4497,7 +4490,6 @@
 /fr/docs/Web/CSS/image-set	/fr/docs/Web/CSS/image/image-set
 /fr/docs/Web/CSS/image-set()	/fr/docs/Web/CSS/image/image-set
 /fr/docs/Web/CSS/imagefunction	/fr/docs/Web/CSS/image/image
-/fr/docs/Web/CSS/ime-mode	/fr/docs/orphaned/Web/CSS/ime-mode
 /fr/docs/Web/CSS/linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/longueur	/fr/docs/Web/CSS/length
@@ -4740,8 +4732,6 @@
 /fr/docs/Web/HTML/Attributs_universels/tabindex	/fr/docs/Web/HTML/Global_attributes/tabindex
 /fr/docs/Web/HTML/Attributs_universels/title	/fr/docs/Web/HTML/Global_attributes/title
 /fr/docs/Web/HTML/Attributs_universels/translate	/fr/docs/Web/HTML/Global_attributes/translate
-/fr/docs/Web/HTML/Attributs_universels/x-ms-acceleratorkey	/fr/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
-/fr/docs/Web/HTML/Attributs_universels/x-ms-format-detection	/fr/docs/orphaned/Web/HTML/Global_attributes/x-ms-format-detection
 /fr/docs/Web/HTML/Canvas	/fr/docs/Web/API/Canvas_API
 /fr/docs/Web/HTML/Catégorie_de_contenu	/fr/docs/Web/HTML/Content_categories
 /fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
@@ -4771,8 +4761,6 @@
 /fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML	/fr/docs/Learn/Forms/Your_first_form
 /fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/Your_first_form
 /fr/docs/Web/HTML/Gestion_du_focus_en_HTML	/fr/docs/Web/API/Document/hasFocus
-/fr/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey	/fr/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
-/fr/docs/Web/HTML/Global_attributes/x-ms-format-detection	/fr/docs/orphaned/Web/HTML/Global_attributes/x-ms-format-detection
 /fr/docs/Web/HTML/HTML5	/fr/docs/Glossary/HTML5
 /fr/docs/Web/HTML/HTML5/Liste_des_éléments_HTML5	/fr/docs/Web/HTML/Element
 /fr/docs/Web/HTML/Image_avec_ressources_origines_multiples_CORS_activees	/fr/docs/Web/HTML/CORS_enabled_image
@@ -4912,7 +4900,7 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_delete	/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_redefine_property	/fr/docs/Web/JavaScript/Reference/Errors/Cant_redefine_property
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cyclic_object_value	/fr/docs/Web/JavaScript/Reference/Errors/Cyclic_object_value
-/fr/docs/Web/JavaScript/Reference/Erreurs/Dead_object	/fr/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object
+/fr/docs/Web/JavaScript/Reference/Erreurs/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /fr/docs/Web/JavaScript/Reference/Erreurs/Delete_in_strict_mode	/fr/docs/Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 /fr/docs/Web/JavaScript/Reference/Erreurs/Deprecated_String_generics	/fr/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics
 /fr/docs/Web/JavaScript/Reference/Erreurs/Deprecated_caller_or_arguments_usage	/fr/docs/Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
@@ -4973,7 +4961,7 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/invalid_right_hand_side_instanceof_operand	/fr/docs/Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 /fr/docs/Web/JavaScript/Reference/Erreurs/is_not_iterable	/fr/docs/Web/JavaScript/Reference/Errors/is_not_iterable
 /fr/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type
-/fr/docs/Web/JavaScript/Reference/Errors/Dead_object	/fr/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object
+/fr/docs/Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /fr/docs/Web/JavaScript/Reference/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -5015,7 +5003,7 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
@@ -5556,7 +5544,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/ReferenceError	/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/ReferenceError/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Reflect	/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Reflect/Comparaison_entre_Reflect_et_les_méthodes_Object	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/Reflect/Comparaison_entre_Reflect_et_les_méthodes_Object	/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Reflect/apply	/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Reflect/construct	/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect/construct
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Reflect/defineProperty	/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
@@ -5887,12 +5875,12 @@
 /fr/docs/Web/Reference	/fr/docs/Web
 /fr/docs/Web/Reference/API	/fr/docs/Web/API
 /fr/docs/Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML	/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
-/fr/docs/Web/SVG/Compatibility_sources	/fr/docs/conflicting/Web/SVG
+/fr/docs/Web/SVG/Compatibility_sources	/fr/docs/Web/SVG
 /fr/docs/Web/SVG/Element/animateColor	/fr/docs/Web/SVG/Element/animate
 /fr/docs/Web/SVG/Element/cercle	/fr/docs/Web/SVG/Element/circle
 /fr/docs/Web/SVG/Index	/fr/docs/Web/SVG
 /fr/docs/Web/SVG/SVG_en_tant_qu_image	/fr/docs/Web/SVG/SVG_as_an_Image
-/fr/docs/Web/SVG/Sources_compatibilite	/fr/docs/conflicting/Web/SVG
+/fr/docs/Web/SVG/Sources_compatibilite	/fr/docs/Web/SVG
 /fr/docs/Web/SVG/Tutoriel	/fr/docs/Web/SVG/Tutorial
 /fr/docs/Web/SVG/Tutoriel/Contenu_embarque_SVG	/fr/docs/Web/SVG/Tutorial/Other_content_in_SVG
 /fr/docs/Web/SVG/Tutoriel/Découpages_et_masquage	/fr/docs/Web/SVG/Tutorial/Clipping_and_masking
@@ -6253,10 +6241,8 @@
 /fr/docs/XSLT:Éléments	/fr/docs/Web/XSLT/Element
 /fr/docs/XSLTProcessor	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/XSLT_dans_Gecko	/fr/docs/Web/API/XSLTProcessor
-/fr/docs/XSLT_dans_Gecko/Différences_entre_les_navigateurs	/fr/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /fr/docs/XSLT_dans_Gecko/Exemple_basique	/fr/docs/Web/API/XSLTProcessor/Basic_Example
 /fr/docs/XSLT_dans_Gecko/Génération_de_HTML	/fr/docs/Web/API/XSLTProcessor/Generating_HTML
-/fr/docs/XSLT_dans_Gecko:Différences_entre_les_navigateurs	/fr/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /fr/docs/XSLT_dans_Gecko:Exemple_basique	/fr/docs/Web/API/XSLTProcessor/Basic_Example
 /fr/docs/XSLT_dans_Gecko:Génération_de_HTML	/fr/docs/Web/API/XSLTProcessor/Generating_HTML
 /fr/docs/Zoom_pleine_page	/fr/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
@@ -6335,6 +6321,7 @@
 /fr/docs/conflicting/Web/API	/fr/docs/Web/API
 /fr/docs/conflicting/Web/API/Blob	/fr/docs/Web/API/Blob
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
+/fr/docs/conflicting/Web/API/DOMMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/conflicting/Web/API/Document	/fr/docs/Web/API/Document
 /fr/docs/conflicting/Web/API/Document/createEvent	/fr/docs/Web/API/Document/createEvent
 /fr/docs/conflicting/Web/API/Document/createNodeIterator	/fr/docs/Web/API/Document/createNodeIterator
@@ -6524,6 +6511,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Promise	/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RangeError	/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/ReferenceError	/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Reflect	/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Set	/fr/docs/Web/JavaScript/Reference/Global_Objects/Set
@@ -6552,6 +6540,7 @@
 /fr/docs/conflicting/Web/Progressive_web_apps_954d3e6cc1e06f006b865b74099f55cf	/fr/docs/Web/Progressive_web_apps
 /fr/docs/conflicting/Web/Progressive_web_apps_ab4d34f3f29326f76d3aab740be03d31	/fr/docs/Web/Progressive_web_apps
 /fr/docs/conflicting/Web/Progressive_web_apps_cb2823fe6cfc1ddee5db1f6a5d240c67	/fr/docs/Web/Progressive_web_apps
+/fr/docs/conflicting/Web/SVG	/fr/docs/Web/SVG
 /fr/docs/conflicting/Web/SVG/Element/animate	/fr/docs/Web/SVG/Element/animate
 /fr/docs/conflicting/Web/Web_Components	/fr/docs/Web/Web_Components
 /fr/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript	/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
@@ -6624,6 +6613,7 @@
 /fr/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/fr/docs/Learn/HTML
 /fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/orphaned/Web/HTML/Preloading_content	/fr/docs/Web/HTML/Attributes/rel/preload
+/fr/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /fr/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/orphaned/Web/Reference	/fr/docs/Web
 /fr/docs/orphaned/Web/Reference/API	/fr/docs/Web/API
