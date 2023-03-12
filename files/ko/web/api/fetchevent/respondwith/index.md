@@ -18,7 +18,7 @@ From Firefox 59 onwards, when a service worker provides a {{domxref("Response")}
 
 In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used as the final URL in all cases. The provided {{domxref("Response.url")}} was effectively ignored.
 
-This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided {{domxref("Response.url")}} will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
+This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided {{domxref("Response.url")}} will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ([Firefox bug 1222008](https://bugzil.la/1222008)).
 
 For most types of network request this change has no impact because you can't observe the final URL. There are a few, though, where it does matter:
 
