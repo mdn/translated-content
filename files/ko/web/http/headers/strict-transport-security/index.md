@@ -87,7 +87,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 도메인에 대해 1년의 `max-age`이 허용되긴 하지만, <https://hstspreload.org>에 설명된 대로 권장 값은 2년입니다.
 
-다음 예는 `max-age`를 2년으로 설정하고 Chromium, Edge, 그리고 Firefox와 같은 모든 주요 웹 브라우저의 HSTS 프리로딩 목록에 포함하는 데 반드시 필요한 사전 로드 접미사가 붙습니다.
+다음 예는 `max-age`를 2년으로 설정하고 Chromium, Edge, 그리고 Firefox와 같은 모든 주요 웹 브라우저의 HSTS 사전 로드 목록에 포함하는 데 반드시 필요한 사전 로드 접미사가 붙습니다.
 
 ```http
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
