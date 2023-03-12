@@ -27,7 +27,7 @@ onmousewheel = (event) => {};
 
 ## 事件属性
 
-该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 {{DOMxRef("Event")}} 的属性。
+_该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 {{DOMxRef("Event")}} 的属性。_
 
 - {{DOMxRef("WheelEvent.deltaX")}} {{ReadOnlyInline}}
 
