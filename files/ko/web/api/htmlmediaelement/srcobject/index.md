@@ -14,7 +14,7 @@ l10n:
 srcObject 객체는 {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
 {{domxref("Blob")}} 또는 {{domxref("File")}}(`Blob`을 상속)일 수 있습니다.
 
-> **Note:** 2020년 3월 현재 Safari만이 `srcObject`를 완벽하게 지원합니다. 즉, `MediaSource`, `MediaStream`, `Blob`, 그리고 `File` 객체를 값으로 사용합니다. 다른 브라우저는 `MediaStream` 객체를 지원합니다. 다른 브라우저들이 지원할 때까지 {{domxref("URL.createObjectURL()")}}을 사용하여 URL을 생성하고 이를 {{domxref("HTMLMediaElement.src")}}에 할당하는 것을 고려하세요(예제는 아래에 있습니다). 또한 버전 108 부터 Chromium은 해당 객체의 {{domxref("MediaSourceHandle")}} 인스턴스(워커에서 전송됨)를 `srcObject`에 할당하여 전용 워커 `MediaSource` 객체 연결을 지원합니다.
+> **참고:** 2020년 3월 현재 Safari만이 `srcObject`를 완벽하게 지원합니다. 즉, `MediaSource`, `MediaStream`, `Blob`, 그리고 `File` 객체를 값으로 사용합니다. 다른 브라우저는 `MediaStream` 객체를 지원합니다. 다른 브라우저들이 지원할 때까지 {{domxref("URL.createObjectURL()")}}을 사용하여 URL을 생성하고 이를 {{domxref("HTMLMediaElement.src")}}에 할당하는 것을 고려하세요(예제는 아래에 있습니다). 또한 버전 108부터 Chromium은 해당 객체의 {{domxref("MediaSourceHandle")}} 인스턴스(워커에서 전송됨)를 `srcObject`에 할당하여 전용 워커 `MediaSource` 객체 연결을 지원합니다.
 
 ## 값
 
