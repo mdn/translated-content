@@ -74,7 +74,7 @@ Google은 [HSTS 프리로딩 서비스](https://hstspreload.org/)를 관리하�
 서비스가 Google에서 호스팅되는 동안 모든 브라우저는 이 사전 로드 목록을 사용합니다.
 그러나 HSTS 사양의 일부가 아니므로 공식적인 것으로 취급해서는 안 됩니다.
 
-- Chrome의 HSTS 프리로딩 목록 관련 정보: <https://www.chromium.org/hsts>
+- Chrome의 HSTS 사전 로드 목록 관련 정보: <https://www.chromium.org/hsts>
 - Firefox HSTS 사전 로드 목록 참조: [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## 예제
