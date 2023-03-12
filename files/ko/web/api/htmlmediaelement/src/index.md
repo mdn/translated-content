@@ -10,7 +10,7 @@ l10n:
 **`HTMLMediaElement.src`** 속성은 요소(element)에서 사용할 미디어 리소스의
 URL을 나타내는 HTML 미디어 요소의 `src` 속성 값을 반영합니다.
 
-> **Note:** 현재 해당 요소에서 사용 중인 미디어 리소스의 URL을 확인하는
+> **참고:** 현재 해당 요소에서 사용 중인 미디어 리소스의 URL을 확인하는
 > 가장 좋은 방법은 {{domxref("HTMLMediaElement.currentSrc", "currentSrc")}}
 > 속성의 값을 살펴보는 것입니다. 이 속성은 {{domxref("HTMLSourceElement")}}
 > ({{HTMLElement("source")}} 요소를 의미합니다)에 제공된 목록에서
