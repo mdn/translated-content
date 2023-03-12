@@ -43,7 +43,7 @@ A primeira coisa que você vai olhar é, os três métodos de aplicação do CSS
 
 ### Folha de Estilos Externa
 
-Em [Começando com o CSS](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico) nós linkamos uma folha de estilos externas em nossa página. Isso é o metodo mias comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
+Em [Começando com o CSS](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico) nós linkamos uma folha de estilos externas em nossa página. Isso é o método mais comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
 
 `Uma folha de estilos externa é quando você tem seu CSS escrito em um arquivo separado com uma extensão .css`, e você o refere dentro de um elemento `<link>` do HTML:
 
