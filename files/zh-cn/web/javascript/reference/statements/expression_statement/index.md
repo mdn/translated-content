@@ -59,7 +59,7 @@ let[0] = 4; // SyntaxError: Invalid destructuring assignment target
 };
 ```
 
-更危险地是，有时候代码碰巧是有效的衣服啊，但是这并不是你的意思。
+更危险的是，有时候代码碰巧是有效的语法，但是这并不是你想要的。
 
 ```js-nolint example-bad
 // 出于某种原因，你有一个叫做 `let` 的变量
