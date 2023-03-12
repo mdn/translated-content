@@ -15,7 +15,6 @@ l10n:
 ## 값
 
 선택한 미디어 소스의 절대 URL을 포함하는 문자열 객체입니다.
-`networkState`가 `EMPTY`인 경우 빈 문자열일 수 있습니다.
 `networkState`가 `EMPTY`라면 빈 문자열, 아니라면 미디어 요소(element) 내에 포함된 {{domxref("HTMLSourceElement")}}로
 나열한 리소스 중 하나가 됩니다. 만약 {{HTMLElement("source")}} 요소가
 제공되지 않은 경우 값 또는 src가 됩니다.
