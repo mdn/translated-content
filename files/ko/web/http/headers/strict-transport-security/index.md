@@ -48,7 +48,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 HTTP Strict Transport Security 헤더는 브라우저가 HTTP를 사용하여 사이트를 불러와서는 안 되며 대신 HTTP를 사용하여 사이트에 접근하려는 모든 시도를 HTTPS 요청으로 자동 변환해야 함을 알립니다.
 
-> **참고:** `Strict-Transport-Security` 헤더가 사이트가 HTTP를 통해서만 엑세스할 수 있다면 브라우저에 의해 **무시됩니다**.
+> **참고:** `Strict-Transport-Security` 헤더가 사이트가 HTTP를 통해서만 접근할 수 있다면 브라우저에 의해 **무시됩니다**.
 > 인증서 오류 없이 HTTPS를 통해 사이트에 액세스할 수 있다면 브라우저는 사이트가 HTTPS를 사용할 수 있음을 인식하고 `Strict-Transport-Security` 헤더를 준수합니다.
 > 브라우저는 공격자가 사이트에 대한 HTTP 연결을 가로채서 헤더를 삽입하거나 제거할 수 있으므로 이 작업을 수행합니다.
 
