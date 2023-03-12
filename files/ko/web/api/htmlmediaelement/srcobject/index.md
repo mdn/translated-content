@@ -120,7 +120,7 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **Note:** {{domxref("MediaSourceHandle")}}는 공유 워커 또는 서비스 워커를 통해 성공적으로 전송할 수 없습니다.
+> **참고:** {{domxref("MediaSourceHandle")}}는 공유 워커 또는 서비스 워커를 통해 성공적으로 전송할 수 없습니다.
 
 ## 명세
 
