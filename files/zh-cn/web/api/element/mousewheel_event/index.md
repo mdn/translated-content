@@ -52,7 +52,7 @@ _该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEven
 
 - {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
 
-  - : 返回一个表示像素距离的整数（32位）。
+  - : 返回一个表示像素距离的整数（32 位）。
 
 - {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{deprecated_inline}}
 
