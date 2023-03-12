@@ -34,7 +34,7 @@ expression;
 
 ### 被禁用的表达式
 
-为了将表达式用作语句，它禁止与其它的语句语法有歧义。因此，表达式禁止以以下任何标记开头：
+为了将表达式用作语句，它禁止与其他的语句语法有歧义。因此，表达式禁止以以下任何标记开头：
 
 - `function`：这将是 [`function` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)或者 [`function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)，而不是 [`function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)或者 [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - `async function`：这将是 [`async function` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)或者 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)，而不是 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)或者 [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)
