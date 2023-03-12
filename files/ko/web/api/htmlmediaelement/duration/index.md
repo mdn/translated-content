@@ -35,5 +35,5 @@ console.log(obj.duration); // NaN
 ## 같이 보기
 
 - [웹 미디어 기술](/ko/docs/Web/Media)
-- 미디어의 현재 재생 위치는 {{domxref("HTMLMediaElement.currentTime")}}를 참고하세요
-- {{HTMLElement("audio")}}와 {{HTMLElement("video")}} 요소들을 참고하세요
+- 미디어의 현재 재생 위치는 {{domxref("HTMLMediaElement.currentTime")}}를 참고하세요.
+- {{HTMLElement("audio")}}와 {{HTMLElement("video")}} 요소들을 참고하세요.
