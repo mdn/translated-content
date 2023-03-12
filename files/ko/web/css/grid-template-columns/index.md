@@ -1,14 +1,6 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
-page-type: css-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.grid-template-columns
 ---
 
 {{CSSRef}}
@@ -17,7 +9,7 @@ browser-compat: css.properties.grid-template-columns
 
 {{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
 
-## Syntax
+## 구문
 
 ```css
 /* Keyword value */
@@ -60,29 +52,29 @@ grid-template-columns: unset;
   - 명시적 그리드가 없음을 의미합니다. 모든 열은 암시적으로 생성되고 각 열의 크기는 {{cssxref("grid-auto-columns")}} 속성에 의해 결정됩니다.
 
 - `[linename]`
-  - 해당 위치의 각 열에 대한 이름을 명시하는 [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) 입니다. ident는 예약어인 `span` 이나 `auto`를 제외한 어떤 문자열이든 올 수 있습니다. 라인들은 대괄호 안에 공백으로 구분된 여러개의 이름을 가질 수 있습니다. 예시) `[line-name-a line-name-b]`
+  - 해당 위치의 각 열에 대한 이름을 명시하는 [`<custom-ident>`](/ko/docs/Web/CSS/custom-ident) 입니다. ident는 예약어인 `span` 이나 `auto`를 제외한 어떤 문자열이든 올 수 있습니다. 행에는 `[line-name-a line-name-b]`와 같이 대괄호 안에 공백으로 구분된 여러 이름을 가질 수 있습니다.
 
 - {{cssxref("&lt;length&gt;")}}
   - 음수가 아닌 길이, 열의 너비를 나타냅니다.
 
 - {{cssxref("&lt;percentage&gt;")}}
-  - 음수가 아닌 그리드 컨테이너의 내부 크기에 상대적인 {{cssxref("percentage", "&lt;percentage&gt;")}} 값입니다. 막약 그리드 컨테이너의 크기가 트랙의 크기에 따라 달라지는 경우, `percentage`값은 `auto`. 로 취급됩니다.
+  - 음수가 아닌 그리드 컨테이너의 내부 크기에 상대적인 {{cssxref("percentage", "&lt;percentage&gt;")}} 값입니다. 만약 그리드 컨테이너의 크기가 트랙의 크기에 따라 달라지는 경우, 백분율을 `auto`로 처리해야 합니다.
 
-    트랙의 본질적인 크기 기여는 그리드 컨테이너의 크기에 맞게 조젇될 수 있고, 백분율에 맞는 최소 크기 만큼 트랙의 최종크기를 증가시킬 수 있습니다.
+    트랙의 본질적인 크기 기여는 그리드 컨테이너의 크기로 조정될 수 있으며, 트랙의 최종 크기를 백분율에 맞는 최소 크기 만큼 증가시킬 수 있습니다.
 
 - {{cssxref("&lt;flex&gt;")}}
-  - 트랙의 Flex 요소를 지정하는 `fr`단위를 가지는 음이 아닌 차원입니다. 각각의 `<flex>`에 크기가 정해진 트랙은 flex 요소에 비례하여 남은 공간을 차지합니다.
+  - 트랙의 Flex 요소를 지정하는 `fr` 단위를 가지는 음이 아닌 치수입니다. 각각의 `<flex>`에 크기가 정해진 트랙은 flex 요소에 비례하여 나머지 공간을 차지합니다.
 
     `minmax()` 외부에서 사용하면, 이는 자동 최소값 즉 `minmax(auto, <flex>)`를 의미합니다.
 
 - {{cssxref("max-content")}}
-  - 그리드 트랙을 차지하는 그리드 아이템의 가장 큰 [maximal content contribution](https://www.w3.org/TR/css-sizing-3/#max-content)를 의미합니다. 예를들어, 만약 그리드 트랙의 첫번째 엘리먼트가 _"Repetitio est mater studiorum"_ 라는 문장을 포함하고, 두번째 엘리먼트가 _"Dum spiro, spero"_을 포함한다면, 최대 컨텐츠 기여(maximal content contribution)는 모든 그리드 요에서 가장 긴 _"Repetitio est mater studiorum"_ 문장의 크기가 됩니다.
+  - 그리드 트랙을 차지하는 그리드 항목의 가장 큰 [최대 콘텐츠 기여도](https://www.w3.org/TR/css-sizing-3/#max-content)를 의미합니다. 예를 들어, 만약 그리드 트랙의 첫번째 요소가 "Repetitio est mater studiorum"라는 문장을 포함하고, 두번째 요소가 "Dum spiro, spero"라는 문장을 포함한다면, 최대 콘텐츠 기여는 모든 그리드 요소 중에서 가장 긴 "Repetitio est mater studiorum"의 크기로 지정됩니다.
 
 - {{cssxref("min-content")}}
-  - 그리드 트랙을 차지하는 그리드 아이템의 가장 큰 [minimal content contribution](https://www.w3.org/TR/css-sizing-3/#min-content) 를 나타냅니다. 예를들어 그리드 트랙의 첫번째 엘리먼트가 _"Repetitio est mater studiorum"_라는문장을 포함하고, 두번째 앨리먼트가 _"Dum spiro, spero"_라는 문장을 포함한다면, 최소 컨텐츠 기여(minimal content contribution) 는 그리드 요소들 중에서 가장 긴 단어인 _"studiorum"_ 의 크기로 지정됩니다.
+  - 그리드 트랙을 차지하는 그리드 항목의 가장 큰 [최소 콘텐츠 기여도](https://www.w3.org/TR/css-sizing-3/#min-content) 를 나타냅니다. 예를 들어 그리드 트랙의 첫번째 요소가 "Repetitio est mater studiorum"라는 문장을 포함하고, 두번째 요소가 "Dum spiro, spero"라는 문장을 포함한다면, 최소 콘텐츠 기여는 모든 그리드 요소 중에서 가장 긴 단어인 "studiorum"의 크기로 지정됩니다.
 
 - {{cssxref("minmax", "minmax(min, max)")}}
-  - _min_ 이상 _max_ 이하의 사이즈 범위를 정의하는 함수 표기입니다. _max_가 _min_보다 작다면, _max_는 무시되고 이 함수는 _min_으로 처리됩니다. 최대값으로서 `<flex>` 값은 트랙의 flex 요소를 설정합니다. `<flex>` 값은 최소값으로는 유효하지 않습니다.
+  - min 이상 max 이하의 사이즈 범위를 정의하는 함수 표기입니다. max가 min보다 작다면, max는 무시되고 이 함수는 min으로 처리됩니다. 최대값으로서 `<flex>` 값은 트랙의 flex 요소를 설정합니다. `<flex>` 값은 최소값으로는 유효하지 않습니다.
 
 - `auto`
   - 최대값으로 트랙 내 모든 아이템 중 가장 큰 {{cssxref("max-content")}} 를 나타냅니다.
@@ -91,10 +83,10 @@ grid-template-columns: unset;
 
     만약 {{cssxref("minmax", "minmax()")}} notation 외부에서 사용된다면, `auto`는 위에 명시된것과 같이 최소, 최대값 사이의 범위를 나타냅니다. 이것은 대부분 `minmax(min-content,max-content)`와 유사하게 동작합니다.
 
-    > **Note:** `auto` 트랙 크기는 (그리고 오직 `auto` 트랙 크기만) {{cssxref("align-content")}} 과 {{cssxref("justify-content")}} 요소에 의해 확장될 수 있습니다. 그러므로 기본적으로 `auto`에 크기가 지정된 트랙은 그리드 컨테이너의 나머지 공간을 차지합니다.
+    > **참고:** `auto` 트랙 크기는 (그리고 오직 `auto` 트랙 크기만) {{cssxref("align-content")}} 과 {{cssxref("justify-content")}} 요소에 의해 확장될 수 있습니다. 그러므로 기본적으로 `auto`에 크기가 지정된 트랙은 그리드 컨테이너의 나머지 공간을 차지합니다.
 
 - `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
-  - `max(minimum, min(limit, max-content))` 공식을 의미합니다. _minimum_이 `auto` 최소값(항상은 아니지만 주로 {{cssxref("min-content")}}의 최소값과 동일한), _limit_은 fit-content()의 인자로 전달되는 트랙 크기를 결정하는 함수입니다. 이 값은 주로 `minmax(auto, max-content)` 와 `minmax(auto, limit)`에서 작은 값으로 계산됩니다.
+  - `max(minimum, min(limit, max-content))` 공식을 의미합니다. minimum이 `auto` 최소값(항상은 아니지만 주로 {{cssxref("min-content")}}의 최소값과 동일한), limit은 fit-content()의 인자로 전달되는 트랙 크기를 결정하는 함수입니다. 이 값은 주로 `minmax(auto, max-content)` 와 `minmax(auto, limit)`에서 작은 값으로 계산됩니다.
 
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - 트랙 목록에서 반복되는 조각을 의미합니다. 반복 패턴을 나타내는 많은 수의 열을 보다 간결한 형태로 작성할 수 있습니다.
@@ -105,9 +97,9 @@ grid-template-columns: unset;
 - [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
   - `subgrid` 값은 그리드가 해당 축에서 부모 그리드의 spanned 부분을 채택함을 나타냅니다. 그리드 행/열의 크기는 명시적으로 지정되지 않고 상위 그리드의 정의에서 가져옵니다.
 
-> **주의** `masonry` 값은 그리드 specification(사양)의 레벨 3에서 나온 것으로 현재 파이어 폭스의 flag에는 실험적인 기능만 구현되어 있습니다.
+> **경고** `masonry` 값은 그리드 명세서의 3 단계에 있으며 현재 파이어 폭스의 flag에는 실험적인 기능만 구현되어 있습니다.
 >
-> `subgrid` 값은 그리드 specification(사양)의 레벨2에서 나온 것으로 현재 Firefox 71 이상에서만 구현되어 있습니다.
+> `subgrid` 값은 그리드 명세서의 2 단계에 있으며 현재 Firefox 71 이상에서만 구현되어 있습니다.
 
 ## Formal definition
 
@@ -117,9 +109,9 @@ grid-template-columns: unset;
 
 {{csssyntax}}
 
-## Examples
+## 예시
 
-### Specifying grid column sizes
+### 그리드 열 크기 지정하기
 
 #### HTML
 
@@ -163,6 +155,6 @@ grid-template-columns: unset;
 ## See also
 
 - 연관 CSS 속성: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- 그리드 레이아웃 안내서: _[Basic concepts of grid layout - Grid Tracks](/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
-- 영상 설명서: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- 그리드 레이아웃 안내서: [Basic concepts of grid layout - Grid Tracks](/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)
+- 영상 설명서: [Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)
+- [Subgrid](/ko/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
