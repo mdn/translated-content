@@ -1,6 +1,8 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
+l10n:
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -9,20 +11,24 @@ slug: Web/API/XMLHttpRequest/status
 
 リクエストが完了する前は、 `status` の値は 0 になります。 `XMLHttpRequest` がエラーになった場合も、ブラウザーはステータスとして 0 を返します。
 
+## 値
+
+文字列です。
+
 ## 例
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('UNSENT: ', xhr.status);
 
 xhr.open('GET', '/server');
 console.log('OPENED: ', xhr.status);
 
-xhr.onprogress = function () {
+xhr.onprogress = () => {
   console.log('LOADING: ', xhr.status);
 };
 
-xhr.onload = function () {
+xhr.onload = () => {
   console.log('DONE: ', xhr.status);
 };
 
@@ -48,5 +54,5 @@ xhr.send();
 
 ## 関連情報
 
-- [HTTP レスポンスコード](/ja/docs/Web/HTTP/Response_codes)の一覧
+- [HTTP ステータス](/ja/docs/Web/HTTP/Status)の一覧
 - [HTTP](/ja/docs/Web/HTTP)
