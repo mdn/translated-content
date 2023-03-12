@@ -14,7 +14,7 @@ expression;
 ```
 
 - `expression`
-  - : 要计算的任意[表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators)。[有些表达式](#被禁用的表达式)可能与其它语句产生歧义，因此被禁止。
+  - : 要计算的任意[表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators)。[有些表达式](#被禁用的表达式)可能与其他语句产生歧义，因此被禁用。
 
 ## 描述
 
@@ -30,7 +30,7 @@ expression;
 - [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)
 - [`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield) 和 [`yield*`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*)
 
-如果表达式调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 或者触发[类型强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#type_coercion)，它们也可能有副作用。
+如果表达式调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 或者触发[强制类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)，它们也可能有副作用。
 
 ### 被禁用的表达式
 
