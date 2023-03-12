@@ -1,6 +1,6 @@
 ---
 title: Contexte d'application
-slug: Glossary/application_context
+slug: Glossary/Application_context
 tags:
   - Glossaire
   - scripts

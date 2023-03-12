@@ -1,6 +1,6 @@
 ---
 title: <textarea>
-slug: Web/HTML/Element/Textarea
+slug: Web/HTML/Element/textarea
 tags:
   - Element
   - Formulaires

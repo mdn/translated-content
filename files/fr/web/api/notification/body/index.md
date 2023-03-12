@@ -1,6 +1,6 @@
 ---
 title: Notification.body
-slug: Web/API/notification/body
+slug: Web/API/Notification/body
 tags:
   - API
   - API Notifications
