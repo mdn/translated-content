@@ -14,7 +14,7 @@ URL을 나타내는 HTML 미디어 요소의 `src` 속성 값을 반영합니다
 > 가장 좋은 방법은 {{domxref("HTMLMediaElement.currentSrc", "currentSrc")}}
 > 속성의 값을 살펴보는 것입니다. 이 속성은 {{domxref("HTMLSourceElement")}}
 > ({{HTMLElement("source")}} 요소를 의미합니다)에 제공된 목록에서
-> 최상의 또는 선호하는 미디어 리소스의 선택도 고려합니다
+> 최상의 또는 선호하는 미디어 리소스의 선택도 고려합니다.
 
 ## 값
 
