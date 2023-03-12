@@ -1,5 +1,5 @@
 ---
-title: 'XMLHttpRequest: abort イベント'
+title: "XMLHttpRequest: abort イベント"
 slug: Web/API/XMLHttpRequest/abort_event
 l10n:
   sourceCommit: 073f70e052ff92ab715df3c20678c11c9b51747f
