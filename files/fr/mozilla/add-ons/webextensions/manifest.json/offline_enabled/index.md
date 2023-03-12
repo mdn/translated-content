@@ -39,6 +39,6 @@ A partir de Chrome 35, les applications (ChromeOS uniquement à partir de 2018) 
 
 La valeur `"offline_enabled"` est également utilisée pour déterminer si un contrôle de connectivité réseau sera effectué lors du lancement d'une application en [mode Chrome OS kiosk](https://developer.chrome.com/apps/manifest/kiosk_enabled). Une vérification de la connectivité réseau sera effectuée lorsque les applications ne sont pas activées hors ligne, et le lancement de l'application sera mis en attente jusqu'à ce que l'appareil obtienne la connectivité à Internet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.offline_enabled")}}
+{{Compat}}

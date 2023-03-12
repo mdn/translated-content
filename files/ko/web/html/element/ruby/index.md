@@ -91,7 +91,7 @@ slug: Web/HTML/Element/ruby
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -163,7 +163,7 @@ _変更なし。_
 ### その他
 
 - Keywords API は非推奨になりました。まもなく削除します ({{bug(1140395)}})。
-- 自動テストシステムで、個体テスト関数のスキップをサポートしました。{{SectionOnPage("/ja/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests", "Conditional test functions")}} をご覧ください。
+- 自動テストシステムで、個体テスト関数のスキップをサポートしました。[Conditionally running a test](https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html#conditionally-running-a-test) の XPCShell testing をご覧ください。
 
 ## 過去のバージョン
 

@@ -45,6 +45,6 @@ Por favor dirígete a las [pseudo-classes](/es/docs/CSS/Pseudo-classes) de `@pag
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.page")}}
+{{Compat}}

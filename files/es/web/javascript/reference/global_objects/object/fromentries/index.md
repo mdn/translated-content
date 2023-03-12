@@ -73,9 +73,9 @@ console.log(object2);
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.fromEntries")}}
+{{Compat}}
 
 ## Véase tambien
 

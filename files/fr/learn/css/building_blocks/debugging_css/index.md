@@ -162,7 +162,7 @@ Browsers simply ignore CSS they don't understand. If the property or value you a
 
 You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. The below table shows the compat data for the {{cssxref("shape-outside")}} property.
 
-{{compat("css.shape-outside")}}
+{{Compat}}
 
 ### Is something else overriding your CSS?
 

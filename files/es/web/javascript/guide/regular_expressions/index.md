@@ -332,12 +332,4 @@ function testInfo(phoneInput) {
 - [Visualizador de expresiones regulares](https://extendsclass.com/regex-tester.html)
   - : Un probador de expresiones regulares visual en línea.
 
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad del navegador
-
-{{Compat("javascript.builtins.RegExp")}}
-
 {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}

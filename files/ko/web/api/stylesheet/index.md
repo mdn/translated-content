@@ -24,11 +24,11 @@ An object implementing the `StyleSheet` interface represents a single style shee
 - {{domxref("StyleSheet.type")}}{{readonlyInline}}
   - : Returns a {{domxref("DOMString")}} representing the style sheet language for this style sheet.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

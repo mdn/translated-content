@@ -1,6 +1,7 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
+slug: Web/HTML/Element/input/button
+page-type: html-element
 tags:
   - HTML формы
   - Формы
@@ -79,15 +80,15 @@ function updateButton() {
 
 ### Добавление сочетаний клавиш на кнопки
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+Сочетания клавиш, также известные как клавиши доступа и их эквиваленты на клавиатуре, позволяют пользователю активировать кнопку с помощью клавиши или комбинации клавиш на клавиатуре. Чтобы добавить сочетание клавиш к кнопке — точно так же, как вы сделали бы с любым {{HTMLElement("input")}}, для которого это имеет смысл, — вы используете глобальный атрибут {{htmlattrxref("accesskey")}}.
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/ru/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
+В этом примере, <kbd>s</kbd> это специфичная клавиша доступа (ты должен нажать <kbd>s</kbd> плюс конкретные клавиши-модификаторы для вашей комбинации браузера и операционной системы; вы можете увидеть полный список на странице [accesskey](/ru/docs/Web/HTML/Global_attributes/accesskey)).
 
 ```html
 <form>
-  <input type="button" value="Start machine" accesskey="s">
+  <input type="button" value="Включить ПК" accesskey="s">
 </form>
-<p>The machine is stopped.</p>
+<p>ПК выключен.</p>
 ```
 
 ```js hidden
@@ -97,29 +98,29 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
+  if (button.value === 'Включить ПК') {
+    button.value = 'Выключить пк';
+    paragraph.textContent = 'ПК включён!';
   } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
+    button.value = 'Включить ПК';
+    paragraph.textContent = 'ПК выключен.';
   }
 }
 ```
 
 {{EmbedLiveSample("Добавление_сочетаний_клавиш_на_кнопки", 650, 100)}}
 
-> **Примечание:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
+> **Примечание:** Проблема с приведенным выше примером, конечно, заключается в том, что пользователь не будет знать, что такое ключ доступа! На реальном сайте вам пришлось бы предоставлять эту информацию таким образом, чтобы это не противоречило дизайну сайта (например, путем предоставления легкодоступной ссылки, которая указывает на информацию о том, что такое ключи доступа к сайту).
 
-### Disabling and enabling a button
+### Выключенные / Включённые кнопки
 
-To disable a button, simply specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
+Чтобы выключить кнопку необходимо просто добавить на неё глобальный атрибут {{htmlattrxref("disabled")}}, вот так:
 
 ```html
-<input type="button" value="Disable me" disabled>
+<input type="button" value="Я выключена" disabled>
 ```
 
-You can enable and disable buttons at run time by simply setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("WindowTimers.setTimeout","setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
+Вы можете включать и отключать кнопки во время выполнения, просто установив `disabled` вместо `true` или `false`. В этом примере наша кнопка изначально включена, но если вы нажмете ее, она будет отключена с помощью `button.disabled = true`. А {{domxref("WindowTimers.setTimeout","setTimeout()")}} затем функция используется для возврата кнопки обратно в ее включённое состояние через две секунды.
 
 ```html hidden
 <input type="button" value="Enabled">
@@ -132,19 +133,19 @@ button.addEventListener('click', disableButton);
 
 function disableButton() {
   button.disabled = true;
-  button.value = 'Disabled';
+  button.value = 'Выключена';
   window.setTimeout(function() {
     button.disabled = false;
-    button.value = 'Enabled';
+    button.value = 'Включена';
   }, 2000);
 }
 ```
 
 {{EmbedLiveSample("Hidden_code_1", 650, 60)}}
 
-If the `disabled` attribute isn't specified, the button inherits its `disabled` state from its parent element. This makes it possible to enable and disable groups of elements all at once by enclosing them in a container such as a {{HTMLElement("fieldset")}} element, and then setting `disabled` on the container.
+Если атрибут `disabled` не указан, то кнопка наследует своё `disabled` состояние из своего родительского элемента. Это позволяет включать и отключать группы элементов одновременно, заключая их в контейнер, такой как {{HTMLElement("fieldset")}} элемет, и затем установить `disabled` на контейнер.
 
-The example below shows this in action. This is very similar to the previous example, except that the `disabled` attribute is set on the `<fieldset>` when the first button is pressed — this causes all three buttons to be disabled until the two second timeout has passed.
+Приведенный ниже пример показывает это в действии. Это очень похоже на предыдущий пример, за исключением того, что атрибут `disabled` устанавливается в `<fieldset>` при нажатии первой кнопки — это приводит к отключению всех трех кнопок до истечения двухсекундного тайм-аута.
 
 ```html hidden
 <fieldset>
@@ -171,15 +172,15 @@ function disableButton() {
 
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
-> **Примечание:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+> **Примечание:** Firefox, в отличие от других браузеров, по умолчанию [сохраняет динамическое отключенние состояния](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) из одного {{HTMLElement("button")}} при загрузке разных страниц. Используйте атрибут {{htmlattrxref("autocomplete","button")}} для управления этой функцией.
 
-## Validation
+## Валидация
 
-Buttons don't participate in constraint validation; they have no real value to be constrained.
+Кнопки не участвуют в проверке валидации; они не имеют реальной ценности для валидации.
 
-## Examples
+## Примеры
 
-The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some simple CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
+Приведенный ниже пример показывает очень простое приложение для рисования, созданное с использованием элемента {{HTMLElement("canvas")}} и простого CSS и JavaScript (CSS мы скроем для краткости). Два верхних элемента управления позволяют выбрать цвет и размер пера для рисования. Кнопка при нажатии вызывает функцию, которая очищает холст.
 
 ```html
 <div class="toolbar">
@@ -189,7 +190,7 @@ The below example shows a very simple drawing app created using a {{htmlelement(
 </div>
 
 <canvas class="myCanvas">
-  <p>Add suitable fallback here.</p>
+  <p>Добавьте подходящий фолбэк здесь.</p>
 </canvas>
 ```
 
@@ -224,18 +225,18 @@ span {
 ```
 
 ```js
-var canvas = document.querySelector('.myCanvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight-85;
-var ctx = canvas.getContext('2d');
+let canvas = document.querySelector('.myCanvas');
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight-85;
+let ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'rgb(0,0,0)';
 ctx.fillRect(0,0,width,height);
 
-var colorPicker = document.querySelector('input[type="color"]');
-var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
-var clearBtn = document.querySelector('input[type="button"]');
+let colorPicker = document.querySelector('input[type="color"]');
+let sizePicker = document.querySelector('input[type="range"]');
+let output = document.querySelector('.output');
+let clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
@@ -249,9 +250,9 @@ sizePicker.oninput = function() {
 }
 
 // store mouse pointer coordinates, and whether the button is pressed
-var curX;
-var curY;
-var pressed = false;
+let curX;
+let curY;
+let pressed = false;
 
 // update mouse pointer coordinates
 document.onmousemove = function(e) {
@@ -288,7 +289,7 @@ draw();
 
 {{EmbedLiveSample("Examples", '100%', 600)}}
 
-## Specifications
+## Спецификации
 
 | Specification                                                                                                                        | Status                           | Comments |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
@@ -299,8 +300,8 @@ draw();
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- The more modern {{HTMLElement("button")}} element.
-- [Compatibility of CSS properties](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- {{HTMLElement("input")}} и {{domxref("HTMLInputElement")}} интерфейс, который его реализует.
+- Более современный элемент {{HTMLElement("button")}}.
+- [Совместимость свойств CSS](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

@@ -323,7 +323,7 @@ Content-Type: text/plain
 
 CORS 실행 전 요청에는 자격 증명이 포함되지 않아야 합니다. 실행 전 요청에 대한 *응답*은 `Access-Control-Allow-Credentials: true`를 지정하여 자격 증명으로 실제 요청을 수행할 수 있음을 나타내야 합니다.
 
-> **참고:** #### 참고일부 엔터프라이즈 인증 서비스는 `cors-protocol-and-credentials` 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다: `network.cors_preflight.allow_client_cert`을 `true`로 설정 ({{bug(1511151)}}). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
+> **참고:** #### 참고일부 엔터프라이즈 인증 서비스는 `cors-protocol-and-credentials` 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다: `network.cors_preflight.allow_client_cert`을 `true`로 설정 ([Firefox bug 1511151](https://bugzil.la/1511151)). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
 
 #### 자격증명 요청 및 와일드카드(Credentialed requests and wildcards)
 
@@ -457,7 +457,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## 같이 보기
 

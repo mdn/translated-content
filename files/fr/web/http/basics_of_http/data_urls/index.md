@@ -93,13 +93,11 @@ beaucoup de texte...<p><a name="bottom">bottom</a>?arg=val
 
 ## Spécifications
 
-| Spécification        | Titre                  |
-| -------------------- | ---------------------- |
-| {{RFC("2397")}} | Le schéma d'URL "data" |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat("http.data-url")}}
+{{Compat}}
 
 ## Voir_aussi
 

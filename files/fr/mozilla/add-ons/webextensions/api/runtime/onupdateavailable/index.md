@@ -52,9 +52,9 @@ Les événements ont trois fonctions :
     - `details`
       - : `object`. Contient une seule propriété, une chaîne nommée `version`, qui représente le numéro de version de la mise à jour.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onUpdateAvailable")}}
+{{Compat}}
 
 ## Exemples
 

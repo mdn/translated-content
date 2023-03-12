@@ -13,7 +13,7 @@ A interface **`RTCPeerConnection`** cria uma conexão WebRTC entre um computador
 
 O método a seugir está obsoleto há muito tempo e nunca foi implementado nos principais navegadores.
 
-- {{domxref("RTCPeerConnection.createDTMFSender()")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.createDTMFSender()")}}
   - : Cria um novo {{domxref("RTCDTMFSender")}},associado ao específico {{domxref("MediaStreamTrack")}}, que irá permitir enviar {{Glossary("DTMF")}} sinal de telefone pela conexão
 
 ## Eventos
@@ -50,21 +50,21 @@ Monitore esses eventos utilizando {{domxref("EventTarget.addEventListener", "add
 
 ### Obsolete events
 
-- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.addstream_event", "addstream")}}
   - : Sent when a new {{domxref("MediaStream")}} has been added to the connection. Instead of watching for this obsolete event, you should watch each for {{domxref("RTCPeerConnection.track_event", "track")}} events; one is sent for each {{domxref("MediaStreamTrack")}} added to the connection.
     Available as the {{domxref("RTCPeerConnection.onaddstream", "onaddstream")}} event handler property.
-- {{domxref("RTCPeerConnection.identityresult_event", "identityresult")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.identityresult_event", "identityresult")}}
   - : In old versions of the WebRTC specification, this event was used to indicate that an identity assertion is available. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.
     Also available using the {{domxref("RTCPeerConnection.onidentityresult", "onidentityresult")}} event handler property.
-- {{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}}
   - : In old versions of the WebRTC specification, this event was used to indicate that an error occurred while attempting to generate an identity assertion. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to be rejected with an error.
     Also available as the {{domxref("RTCPeerConnection.onidpassertionerror", "onidpinsertionerror")}} event handler property.
-- {{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}}
   - : In old versions of the WebRTC specification, this event was used to indicate that an error occurred while attempting to validate an identity assertion. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to be rejected with an error.
     Also available using the {{domxref("RTCPeerConnection.onpeeridentity", "onpeerdentity")}} event handler property.
-- {{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}}
   - : In old versions of the WebRTC specification, this event was used to deliver a received identity. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.
-- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.removestream_event", "removestream")}}
   - : Sent to the `RTCPeerConnection` when a {{domxref("MediaStream")}} is removed from the connection. Instead of watching for this obsolete event, you should watch each stream for {{domxref("MediaStream.removetrack_event", "removetrack")}} events on each stream within the `RTCPeerConnection`.
     Also available as the {{domxref("RTCPeerConnection.onremovestream", "onaddstream")}} event handler property.
 
@@ -113,7 +113,7 @@ The `RTCIceTransportPolicy` enum defines string constants which can be used to l
 | Constant                            | Description                                                                                                                     |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `"all"`                             | All ICE candidates will be considered.                                                                                          |
-| `"public"` {{obsolete_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
+| `"public"` | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
 | `"relay"`                           | Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered. |
 
 ### RTCPeerConnectionState enum
@@ -204,7 +204,7 @@ The `RTCSignalingState` enum specifies the possible values of {{domxref("RTCPeer
       </td>
     </tr>
     <tr>
-      <td><code>"closed"</code> {{obsolete_inline}}</td>
+      <td><code>"closed"</code></td>
       <td>
         <p>A conexão é fechada.</p>
         <div class="note">

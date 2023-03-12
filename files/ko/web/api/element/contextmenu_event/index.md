@@ -29,10 +29,10 @@ window.addEventListener('contextmenu', function (e) { // Not compatible with IE 
 }, false);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}

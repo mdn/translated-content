@@ -21,6 +21,6 @@ El atributo {{HTMLAttrDef("autocapitalize")}} nunca hace que se habilite la auto
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.autocapitalize")}}
+{{Compat}}

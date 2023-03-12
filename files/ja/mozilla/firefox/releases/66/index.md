@@ -92,7 +92,7 @@ _変更なし。_
 - {{domxref("MediaDevices")}} の {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッド (`navigator.mediaDevices.getDisplayMedia()` として使用可能) を追加して、仕様書に一致させました。このメソッドは、スクリーンまたはスクリーンの一部を {{domxref("MediaStream")}} として取得して、操作または共有できます ({{bug(1321221)}})。
 - スクリーンやウィンドウの内容を取得するための、Firefox 独自の {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} に基づくメソッドを最終的に非推奨にする取り組みの一部として、非標準の `mediaSource` 定数を値 `screen` および `window` と同等に扱うようになりました。どちらも、ユーザーが選択するスクリーンやウィンドウのリストを提供します ({{bug(1474376)}})。
 - ローカル出力の {{domxref("RTCRTPStreamStats")}} オブジェクトに {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} を追加しました。これは、ビデオトラックで送受信するすべてのフレームの量子化パラメーターの合計を表します。この値が高ければ、ストリームはより圧縮されていると考えられます ({{bug(1347070)}})。
-- 将来の Firefox で Feature Policy をサポートするための取り組みで、コンテンツに適切なオリジンが存在しない状況では {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用できなくなりました。例えばサンドボックス化された {{HTMLElement("iframe")}}、ユーザーがアドレスバーに入力した `data` URL から呼び出した場合です。詳しくは {{SectionOnPage("/ja/docs/Web/API/MediaDevices/getUserMedia", "Security")}} をご覧ください ({{bug(1371741)}})。
+- 将来の Firefox で Feature Policy をサポートするための取り組みで、コンテンツに適切なオリジンが存在しない状況では {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用できなくなりました。例えばサンドボックス化された {{HTMLElement("iframe")}}、ユーザーがアドレスバーに入力した `data` URL から呼び出した場合です。詳しくは MediaDevices.getUserMedia() ページの [セキュリティ](/ja/docs/Web/API/MediaDevices/getUserMedia#%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3) セクションをご覧ください ({{bug(1371741)}})。
 
 #### 廃止
 

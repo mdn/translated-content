@@ -1,5 +1,5 @@
 ---
-title: '<fieldset>: The Field Set element'
+title: "<fieldset>: The Field Set element"
 slug: Web/HTML/Element/fieldset
 translation_of: Web/HTML/Element/fieldset
 ---
@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/fieldset
 <form action="#">
   <fieldset>
     <legend>Simple fieldset</legend>
-    <input type="radio" id="radio">
+    <input type="radio" id="radio" />
     <label for="radio">Spirit of radio</label>
   </fieldset>
 </form>
@@ -60,11 +60,11 @@ translation_of: Web/HTML/Element/fieldset
     <legend>Disabled fieldset</legend>
     <div>
       <label for="name">Name: </label>
-      <input type="text" id="name" value="Chris">
+      <input type="text" id="name" value="Chris" />
     </div>
     <div>
       <label for="pwd">Archetype: </label>
-      <input type="password" id="pwd" value="Wookie">
+      <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
 </form>
@@ -76,11 +76,11 @@ translation_of: Web/HTML/Element/fieldset
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), [корневой раздел](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document), [listed](/ru/docs/HTML/Content_categories#form_listed), [контент форм](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9A%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82_%D1%84%D0%BE%D1%80%D0%BC), явный контент. |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                    | Необязательный элемент {{HTMLElement("legend")}}, следующий в основном потоке.                                                                                                                                                                                                                                                                                                                                                       |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Разрешённые родители                                   | Любой элемент основного потока                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Разрешённые ARIA roles                                 | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                                                                                                                                                                                                                                                                                                                                                          |
-| Взаимодействие с DOM                                   | {{domxref("HTMLFieldSetElement")}}                                                                                                                                                                                                                                                                                                                                                                                                |
+| Допустимое содержимое                                  | Необязательный элемент {{HTMLElement("legend")}}, следующий в основном потоке.                                                                                                                                                                                                                                                                                                                                                              |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Допустимые родители                                    | Любой элемент основного потока                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Допустимые ARIA-роли                                   | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                                                                                                                                                          |
+| DOM-интерфейс                                          | {{domxref("HTMLFieldSetElement")}}                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Спецификации
 

@@ -104,7 +104,7 @@ Une précedente version des spécifications a défini ces interfaces, désormais
 ## Exemples
 
 - [eLibri:](http://marco-c.github.io/eLibri/) Une application puissante de bibliothèque et de lecteur de livres électroniques, écrit par Marco Castelluccio, gagnant du _DevDerby IndexedDB_ de Mozilla.
-- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([voir la démonstration en ligne](http://mdn.github.io/to-do-notifications/)): L'application de référence pour les exemples de la documentation.
+- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([voir la démonstration en ligne](https://mdn.github.io/dom-examples/to-do-notifications/)): L'application de référence pour les exemples de la documentation.
 - [Stocker des images et des fichiers dans IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## Spécifications

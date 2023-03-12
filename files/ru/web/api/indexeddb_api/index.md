@@ -81,29 +81,29 @@ IndexedDB транзакционная система базы данных, к�
 
 Ранняя версия спецификации также определяла эти теперь удалённые интерфейсы. Они все ещё задокументированы на тот случай, если вам понадобится обновить ранее написанный код:
 
-- {{domxref("IDBVersionChangeRequest")}} {{obsolete_inline}}
+- {{domxref("IDBVersionChangeRequest")}}
   - : Представляет запрос на изменение версии базы данных. С тех пор способ изменения версии базы данных изменился (путём вызова {{domxref("IDBFactory.open")}} без вызова {{domxref("IDBDatabase.setVersion")}}), а интерфейс {{domxref("IDBOpenDBRequest")}} теперь имеет функциональность удалённого {{domxref("IDBVersionChangeRequest")}}.
-- {{domxref("IDBDatabaseException")}} {{obsolete_inline}}
+- {{domxref("IDBDatabaseException")}}
   - : Представляет исключения, которые могут возникнуть при выполнении операций с базой данных.
-- {{domxref("IDBTransactionSync")}} {{obsolete_inline}}
+- {{domxref("IDBTransactionSync")}}
   - : Синхронная версия {{domxref("IDBTransaction")}}.
-- {{domxref("IDBObjectStoreSync")}} {{obsolete_inline}}
+- {{domxref("IDBObjectStoreSync")}}
   - : Синхронная версия {{domxref("IDBObjectStore")}}.
-- {{domxref("IDBIndexSync")}} {{obsolete_inline}}
+- {{domxref("IDBIndexSync")}}
   - : Синхронная версия {{domxref("IDBIndex")}}.
-- {{domxref("IDBFactorySync")}} {{obsolete_inline}}
+- {{domxref("IDBFactorySync")}}
   - : Синхронная версия {{domxref("IDBFactory")}}.
-- {{domxref("IDBEnvironmentSync")}} {{obsolete_inline}}
+- {{domxref("IDBEnvironmentSync")}}
   - : Синхронная версия {{domxref("IDBEnvironment")}}.
-- {{domxref("IDBDatabaseSync")}} {{obsolete_inline}}
+- {{domxref("IDBDatabaseSync")}}
   - : Синхронная версия {{domxref("IDBDatabase")}}.
-- {{domxref("IDBCursorSync")}} {{obsolete_inline}}
+- {{domxref("IDBCursorSync")}}
   - : Синхронная версия {{domxref("IDBCursor")}}.
 
 ## Примеры
 
 - [eLibri:](http://marco-c.github.io/eLibri/) Мощная библиотека и приложение для чтения электронных книг, написанное Марко Кастеллуччо, победителем IndexedDB Mozilla DevDerby.
-- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/)): Эталонное приложение для примеров в справочной документации.
+- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): Эталонное приложение для примеров в справочной документации.
 - [Storing images and files in IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## Спецификации

@@ -13,7 +13,6 @@ original_slug: Глоссарий/Сертифицировано
 ### Основная информация
 
 - [Туториал по информационной безопасности](/ru/docs/Web/Security/Information_Security_Basics)
-- {{Interwiki("wikipedia", "Professional_certification_(computer_technology)#Information_systems_security", "Certification")}} на Википедии
 
 ### Firefox OS
 

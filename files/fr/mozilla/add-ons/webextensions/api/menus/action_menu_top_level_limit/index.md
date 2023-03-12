@@ -22,9 +22,9 @@ Sa valeur est de `6` pour Firefox et Chrome.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette propriété disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.ACTION_MENU_TOP_LEVEL_LIMIT", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

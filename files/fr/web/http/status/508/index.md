@@ -18,6 +18,8 @@ Il indique que le serveur termine une opération, car il rencontre une boucle in
 
 ## Spécifications
 
-| Spécification                                                | Titre                                    |
-| ------------------------------------------------------------ | ---------------------------------------- |
-| [RFC 5842, section 7.2: 508 Loop Detected](https://datatracker.ietf.org/doc/html/rfc5842#section-7.2) | Web Distributed Authoring and Versioning |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

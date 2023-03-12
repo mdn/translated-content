@@ -53,6 +53,7 @@ L'**API WebSocket** est une technologie évoluée qui permet d'ouvrir un canal d
 - [ws](https://github.com/websockets/ws): La plus populaire des WebSockets pour client & serveur en [Node.js](http://nodejs.org).
 - [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): Asynchronous RPC which, on a single connection, may have functions exported on the server and, and the same time, on the client (client may call server, server may also call client).
 - [cowboy](https://github.com/ninenines/cowboy): Cowboy est un petit serveur HTTP rapide et moderne pour Erlang/OTP basé sur WebSocket.
+- [ZeroMQ](https://zeromq.org): ZeroMQ est une bibliothèque de fonctions pour transporter des messages avec divers protocoles IPC, TCP, UDP, TIPC, diffusion de groupe et WebSocket.
 
 ## Ressources liées
 

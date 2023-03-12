@@ -217,13 +217,3 @@ myExample.#somePrivateMethod(); // SyntaxError
 ## 总结
 
 本文中，我们介绍了 JavaScript 中可用的面向对象编程的主要工具。我们没有涵盖所有的内容，但这些应该足以让你入门。我们的[关于类的文章](/zh-CN/docs/Web/JavaScript/Reference/Classes)可让你进一步学习相关的知识。
-
-## 本章目录
-
-- [面向对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)
-- [对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [面向对象编程概述](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- **JavaScript 中的类**
-- [使用 JSON](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
-- [对象构造实践](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [为“弹球”示例添加新的功能](/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

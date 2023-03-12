@@ -44,9 +44,9 @@ El DOCTYPE usado en el siguiente ejemplo indica que es un documento HTML5.
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.html")}}
+{{Compat}}
 
 ## Ver también
 

@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly`** JavaScript 对象是所有 [WebAssembly](/zh-CN/docs/WebAssembly) 相关功能的命名空间。
 

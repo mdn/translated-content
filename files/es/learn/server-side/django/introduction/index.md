@@ -240,21 +240,3 @@ Las secciones prededentes muestran las principales características que usarás 
 Has visto ya algo de código real de Django más arriba, pero a diferencia del código de lado cliente, necesitas configurar un entorno de desarrollo para hacerlo funcionar. Ese será nuestro siguiente paso.
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducci%C3%B3n)
-- [Puesta en marcha de un entorno de desarrollo de Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: Sitio web "Biblioteca Local"](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creación del esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Uso de modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de Administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creación de tu página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación y permisos de Usuario](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajo con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Desplegando Django a producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad de las aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

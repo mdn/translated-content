@@ -50,7 +50,7 @@ slug: Web/HTML/Element/div
 
 ## 使用备注
 
-- `<div>` 元素应当仅在没有任何其它语义元素（比如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）可用时使用。
+- `<div>` 元素应当仅在没有任何其他语义元素（比如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）可用时使用。
 
 ## 示例
 

@@ -47,7 +47,7 @@ const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
   - : Un objet qui contient les paramètres de votre requête. Les options possibles sont :
 
     - `method`
-      - : La méthode de la requête, par exemple `GET` ou `POST`.
+      - : La méthode de la requête, par exemple `GET` ou `POST`. Comme spécifié, dans la [spécification WHATWG](https://fetch.spec.whatwg.org/#methods), toute méthode définie dans la [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) sera automatiquement mise en majuscule. Si vous souhaitez utiliser une méthode exotique (comme `PATCH`), vous devrez la mettre en majuscule vous-même. Notez qu'e l'en-tête [`Origin`](/fr/docs/Web/HTTP/Headers/origin) n'était pas défini dans les requêtes `fetch()` avec les méthodes [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) ou [`GET`](/fr/docs/Web/HTTP/Methods/GET) à cause d'un bug pour Firefox avant Firefox 65 (voir [bug 1508661](https://bugzil.la/1508661)).
     - `headers`
       - : Les entêtes à ajouter à votre requête, contenues dans un objet {{domxref("Headers")}} ou dans un objet avec des {{domxref("ByteString")}} pour valeurs.
     - `body`

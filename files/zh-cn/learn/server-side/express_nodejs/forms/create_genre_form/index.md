@@ -205,7 +205,7 @@ block content
 
 ![](locallibary_express_genre_create_error.png)
 
-> **备注：** 我们的验证使用`trim()`，来确保不接受空格作为种类名称。我们还可以在表单中 ​​ 的字段定义中，添加值`required='true'`，来验证客户端字段不为空：
+> **备注：** 我们的验证使用`trim()`，来确保不接受空格作为种类名称。我们还可以在表单中 的字段定义中，添加值`required='true'`，来验证客户端字段不为空：
 >
 > ```js
 > input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )

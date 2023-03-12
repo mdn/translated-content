@@ -1,6 +1,6 @@
 ---
 title: Console.count()
-slug: Web/API/Console/count
+slug: Web/API/console/count
 ---
 
 {{APIRef("Console API")}}
@@ -86,6 +86,6 @@ console.count([label]);
 
 {{Specifications}}
 
-## Compatibilidad en los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.count")}}
+{{Compat}}

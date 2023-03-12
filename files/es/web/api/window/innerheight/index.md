@@ -42,7 +42,7 @@ var alturaViewport = self.innerHeight;
 
 ### Ejemplo (Grafica)
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## Especificaciones
 

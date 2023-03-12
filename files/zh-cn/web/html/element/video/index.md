@@ -15,7 +15,7 @@ slug: Web/HTML/Element/video
 
 ## 属性
 
-类似于所有其它 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+类似于所有其他 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - {{htmlattrdef("autoplay")}}
   - : 布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。

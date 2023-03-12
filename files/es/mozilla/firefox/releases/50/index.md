@@ -11,26 +11,26 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### HTML
 
-- El estilo por defecto {{HTMLElement("bdo")}} ahora asigna {{cssxref("unicode-bidi")}} con el valor `isolate-override` ({{bug(1249497)}}).
-- Asignar el atributo {{htmlattrxref("src", "track")}} del elemento {{HTMLElement("track")}} ahora funciona correctamente ({{bug(1281418)}}).
-- El atributo `referrerpolicy` en los elementos {{HTMLElement("area")}}, {{HTMLElement("a")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} y {{HTMLElement("link")}} ahora está disponible por defecto ({{bug(1223838)}}, {{bug(1264165)}}).
+- El estilo por defecto {{HTMLElement("bdo")}} ahora asigna {{cssxref("unicode-bidi")}} con el valor `isolate-override` ([Error 1249497 en Firefox](https://bugzil.la/1249497)).
+- Asignar el atributo {{htmlattrxref("src", "track")}} del elemento {{HTMLElement("track")}} ahora funciona correctamente ([Error 1281418 en Firefox](https://bugzil.la/1281418)).
+- El atributo `referrerpolicy` en los elementos {{HTMLElement("area")}}, {{HTMLElement("a")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} y {{HTMLElement("link")}} ahora está disponible por defecto ([Error 1223838 en Firefox](https://bugzil.la/1223838), [Error 1264165 en Firefox](https://bugzil.la/1264165)).
 
 ### CSS
 
-- Esquinas con estilos punteados y rayados (`dashed, dotted`) Border-radiused ahora son mostradas con el estilo especificado en lugar de estilo sólido ({{bug(382721)}}).
-- El selector pseudo-clase no estándar {{cssxref(":-moz-full-screen-ancestor")}} fue removido ({{bug(1199529)}}).
-- {{cssxref("box-sizing")}}`: padding-box` fue removido, dado que ya no forma parte de la especificación y Firefox era el unico entre los principales navegadores que lo implementaba ({{bug(1166728)}}).
-- Se removió el prefijo de los tres valores `isolate`, `isolate-override`, y `plaintext` de la propiedad {{cssxref("unicode-bidi")}} ({{bug(1141895)}}).
-- En modo de compatibilidad, la etiqueta de un elemento de lista ahora hereda el tamaño de la lista, como en el modo estandar ({{bug(648331)}}).
-- Las pseudo-clases {{cssxref(":in-range")}} y {{cssxref(":out-of-range")}} cambiaron su comportamiento para no coincidir elementos input deshabilitados o de solo lectura ({{bug(1264157)}}).
-- Se removió el prefijo de la pseudo-clase {{cssxref(":any-link")}}({{bug(843579)}}).
-- El valor `space` para {{cssxref("border-image-repeat")}} fue implementado ({{bug(720531)}}).
+- Esquinas con estilos punteados y rayados (`dashed, dotted`) Border-radiused ahora son mostradas con el estilo especificado en lugar de estilo sólido ([Error 382721 en Firefox](https://bugzil.la/382721)).
+- El selector pseudo-clase no estándar {{cssxref(":-moz-full-screen-ancestor")}} fue removido ([Error 1199529 en Firefox](https://bugzil.la/1199529)).
+- {{cssxref("box-sizing")}}`: padding-box` fue removido, dado que ya no forma parte de la especificación y Firefox era el unico entre los principales navegadores que lo implementaba ([Error 1166728 en Firefox](https://bugzil.la/1166728)).
+- Se removió el prefijo de los tres valores `isolate`, `isolate-override`, y `plaintext` de la propiedad {{cssxref("unicode-bidi")}} ([Error 1141895 en Firefox](https://bugzil.la/1141895)).
+- En modo de compatibilidad, la etiqueta de un elemento de lista ahora hereda el tamaño de la lista, como en el modo estandar ([Error 648331 en Firefox](https://bugzil.la/648331)).
+- Las pseudo-clases {{cssxref(":in-range")}} y {{cssxref(":out-of-range")}} cambiaron su comportamiento para no coincidir elementos input deshabilitados o de solo lectura ([Error 1264157 en Firefox](https://bugzil.la/1264157)).
+- Se removió el prefijo de la pseudo-clase {{cssxref(":any-link")}}([Error 843579 en Firefox](https://bugzil.la/843579)).
+- El valor `space` para {{cssxref("border-image-repeat")}} fue implementado ([Error 720531 en Firefox](https://bugzil.la/720531)).
 
 ### JavaScript
 
-- La propiedad del ES2015 {{jsxref("Symbol.hasInstance")}} ha sido implementada ({{bug(1054906)}}).
-- El método de ES2017 {{jsxref("Object.getOwnPropertyDescriptors()")}} ha sido implementado ({{bug(1245024)}}).
-- El comportamiento de \W in {{jsxref("RegExp")}} con los flags unicode e ignoreCase cambió para estar de acuerdo con el borrador mas reciente de la especificación. Ahora no coincide con K, S, k, s, and KELVIN SIGN (U+212A), y LATIN SMALL LETTER LONG S (U+017F) ({{bug(1281739)}}).
+- La propiedad del ES2015 {{jsxref("Symbol.hasInstance")}} ha sido implementada ([Error 1054906 en Firefox](https://bugzil.la/1054906)).
+- El método de ES2017 {{jsxref("Object.getOwnPropertyDescriptors()")}} ha sido implementado ([Error 1245024 en Firefox](https://bugzil.la/1245024)).
+- El comportamiento de \W in {{jsxref("RegExp")}} con los flags unicode e ignoreCase cambió para estar de acuerdo con el borrador mas reciente de la especificación. Ahora no coincide con K, S, k, s, and KELVIN SIGN (U+212A), y LATIN SMALL LETTER LONG S (U+017F) ([Error 1281739 en Firefox](https://bugzil.la/1281739)).
 
 ### Herramientas de desarrollador
 
@@ -43,59 +43,59 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### HTTP
 
-- El protocolo experimental (y obsoleto) [SPDY](https://es.wikipedia.org/wiki/SPDY) 3.1 ahora está deshabilitado por defecto {{bug(1287132)}}.
-- Se añadió soporte para {{HTTPHeader("X-Content-Type-Options")}} ({{bug(471020)}}).
-- Los prefijos de cookies **`__Host-`** and **`__Secure-`** han sido implementados. Ver {{HTTPHeader("Set-Cookie")}} y {{bug(1283368)}}.
-- El encabezado {{HTTPHeader("Referrer-Policy")}} ha sido implementado {{bug(1264164)}}.
+- El protocolo experimental (y obsoleto) [SPDY](https://es.wikipedia.org/wiki/SPDY) 3.1 ahora está deshabilitado por defecto [Error 1287132 en Firefox](https://bugzil.la/1287132).
+- Se añadió soporte para {{HTTPHeader("X-Content-Type-Options")}} ([Error 471020 en Firefox](https://bugzil.la/471020)).
+- Los prefijos de cookies **`__Host-`** and **`__Secure-`** han sido implementados. Ver {{HTTPHeader("Set-Cookie")}} y [Error 1283368 en Firefox](https://bugzil.la/1283368).
+- El encabezado {{HTTPHeader("Referrer-Policy")}} ha sido implementado [Error 1264164 en Firefox](https://bugzil.la/1264164).
 
 ### Seguridad
 
-- El atributo {{htmlattrxref("ping", "a")}} del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](/es/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/es/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
-- Agregado soporte para la directiva [`sandbox`](/es/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/es/docs/Web/Security/CSP) ({{bug(671389)}}).
-- Ahora es posible indicar una política [content security policy for workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy) ({{bug (959388)}}).
-- El método {{domxref("Navigator.sendBeacon()")}} ya no lanza una excepción si los datos de la baliza (Beacon Data) no pudieron ser enviados devido a una política de restricción consentimiento method [Content Security Policy](/es/docs/Web/Security/CSP); en su lugar, retorna `false` como es esperado ({{bug(1234813)}}).
+- El atributo {{htmlattrxref("ping", "a")}} del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](/es/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/es/docs/Web/Security/CSP/CSP_policy_directives) ([Error 1100181 en Firefox](https://bugzil.la/1100181)).
+- Agregado soporte para la directiva [`sandbox`](/es/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/es/docs/Web/Security/CSP) ([Error 671389 en Firefox](https://bugzil.la/671389)).
+- Ahora es posible indicar una política [content security policy for workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy) ([Error 959388 en Firefox](https://bugzil.la/959388)).
+- El método {{domxref("Navigator.sendBeacon()")}} ya no lanza una excepción si los datos de la baliza (Beacon Data) no pudieron ser enviados devido a una política de restricción consentimiento method [Content Security Policy](/es/docs/Web/Security/CSP); en su lugar, retorna `false` como es esperado ([Error 1234813 en Firefox](https://bugzil.la/1234813)).
 
 ### Redes
 
-- Cuando un error es encontrado durante una {{domxref("XMLHttpRequest")}} asíncrona, el método {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora retorna un string vacio ({{bug(1286744)}}).
-- En lugar de retornar un `NetworkError`, ahora el asynchronous {{domxref("XMLHttpRequest")}} asíncrono que falla por CORS u otras restricciones de red, ahora lanza un [`error`](/es/docs/Web/Reference/Events/error) que puede ser capturado como cualquier otro error ({{bug(709991)}}).
-- {{domxref("XMLHttpRequest.getResponseHeader()")}} y {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora también retornan encabezados vacíos por defecto. Esto puede ser controlado mediante la preferencia `network.http.keep_empty_response_headers_as_empty_string` ({{bug(918721)}}).
-- La opción `only-if-cached` fue agregada a [`Request.cache`](/es/docs/Web/API/Request/cache) ({{bug(1272436)}}).
+- Cuando un error es encontrado durante una {{domxref("XMLHttpRequest")}} asíncrona, el método {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora retorna un string vacio ([Error 1286744 en Firefox](https://bugzil.la/1286744)).
+- En lugar de retornar un `NetworkError`, ahora el asynchronous {{domxref("XMLHttpRequest")}} asíncrono que falla por CORS u otras restricciones de red, ahora lanza un [`error`](/es/docs/Web/Reference/Events/error) que puede ser capturado como cualquier otro error ([Error 709991 en Firefox](https://bugzil.la/709991)).
+- {{domxref("XMLHttpRequest.getResponseHeader()")}} y {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} ahora también retornan encabezados vacíos por defecto. Esto puede ser controlado mediante la preferencia `network.http.keep_empty_response_headers_as_empty_string` ([Error 918721 en Firefox](https://bugzil.la/918721)).
+- La opción `only-if-cached` fue agregada a [`Request.cache`](/es/docs/Web/API/Request/cache) ([Error 1272436 en Firefox](https://bugzil.la/1272436)).
 
 ### DOM
 
-- Ahora la opción `once` para {{domxref("EventTarget.addEventListener()")}} es soportada ({{bug(1287706)}}).
-- La interfaz {{domxref("NodeList")}} are now iterable and the methods {{domxref("NodeList.forEach()", "forEach()")}}, {{domxref("NodeList.values()", "values()")}}, {{domxref("NodeList.entries()")}} and {{domxref("NodeList.keys()")}} are now available ({{bug(1290636)}}).
-- The interface {{domxref("DOMTokenList")}} are now iterable and the methods {{domxref("DOMTokenList.forEach()", "forEach()")}}, {{domxref("DOMTokenList.values()", "values()")}}, {{domxref("DOMTokenList.entries()")}} and {{domxref("DOMTokenList.keys()")}} are now available ({{bug(1290636)}}).
-- The methods {{domxref("Document.createElement()")}} and {{domxref("Document.createElementNS()")}} now have an optional `options` parameter for creating [custom elements](/es/docs/Web/Web_Components/Custom_Elements) ({{bug(1276579)}}).
+- Ahora la opción `once` para {{domxref("EventTarget.addEventListener()")}} es soportada ([Error 1287706 en Firefox](https://bugzil.la/1287706)).
+- La interfaz {{domxref("NodeList")}} are now iterable and the methods {{domxref("NodeList.forEach()", "forEach()")}}, {{domxref("NodeList.values()", "values()")}}, {{domxref("NodeList.entries()")}} and {{domxref("NodeList.keys()")}} are now available ([Error 1290636 en Firefox](https://bugzil.la/1290636)).
+- The interface {{domxref("DOMTokenList")}} are now iterable and the methods {{domxref("DOMTokenList.forEach()", "forEach()")}}, {{domxref("DOMTokenList.values()", "values()")}}, {{domxref("DOMTokenList.entries()")}} and {{domxref("DOMTokenList.keys()")}} are now available ([Error 1290636 en Firefox](https://bugzil.la/1290636)).
+- The methods {{domxref("Document.createElement()")}} and {{domxref("Document.createElementNS()")}} now have an optional `options` parameter for creating [custom elements](/es/docs/Web/Web_Components/Custom_Elements) ([Error 1276579 en Firefox](https://bugzil.la/1276579)).
 
 ### SVG
 
-- The `allowReorder` attribute has been dropped and the behavior it was setting is now the default for SVG {{SVGElement("switch")}} elements ({{bug(1279690)}}).
-- The `defer` keyword for the {{SVGAttr("preserveAspectRatio")}} attribute on SVG {{SVGElement("image")}} elements has been removed to follow the latest SVG2 specification ({{bug(1280425)}}).
+- The `allowReorder` attribute has been dropped and the behavior it was setting is now the default for SVG {{SVGElement("switch")}} elements ([Error 1279690 en Firefox](https://bugzil.la/1279690)).
+- The `defer` keyword for the {{SVGAttr("preserveAspectRatio")}} attribute on SVG {{SVGElement("image")}} elements has been removed to follow the latest SVG2 specification ([Error 1280425 en Firefox](https://bugzil.la/1280425)).
 
 ### Drag and Drop API
 
-- The {{domxref("DataTransfer.items")}} property has been implemented, allowing access to multiple items being dragged and dropped using the HTML Drag and Drop API. To allow this, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces are now supported as well ({{bug(906420)}}). This is enabled by default.
-- The old, obsolete Firefox specific drag and drop API events `dragdrop` and `draggesture` are no longer supported. Be sure to update any code still using them to use the [HTML drag and drop API](/es/docs/Web/API/HTML_Drag_and_Drop_API) ({{bug(1162050)}}.
+- The {{domxref("DataTransfer.items")}} property has been implemented, allowing access to multiple items being dragged and dropped using the HTML Drag and Drop API. To allow this, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces are now supported as well ([Error 906420 en Firefox](https://bugzil.la/906420)). This is enabled by default.
+- The old, obsolete Firefox specific drag and drop API events `dragdrop` and `draggesture` are no longer supported. Be sure to update any code still using them to use the [HTML drag and drop API](/es/docs/Web/API/HTML_Drag_and_Drop_API) ([Error 1162050 en Firefox](https://bugzil.la/1162050).
 
 ### Pointer Lock API
 
-- The [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API) is now unprefixed ({{bug(991899)}}).
-- Before Firefox 50, [`requestPointerLock()`](/es/docs/Web/API/Element/requestPointerLock) asked for permission using a doorhanger, and pointer lock would not be enabled until the user granted permission. From Firefox 50, pointer lock is like the [fullscreen API](/es/docs/Web/API/Fullscreen_API): it's granted immediately, but a notification is displayed explaining to the user how to exit ({{bug(1273351)}}).
+- The [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API) is now unprefixed ([Error 991899 en Firefox](https://bugzil.la/991899)).
+- Before Firefox 50, [`requestPointerLock()`](/es/docs/Web/API/Element/requestPointerLock) asked for permission using a doorhanger, and pointer lock would not be enabled until the user granted permission. From Firefox 50, pointer lock is like the [fullscreen API](/es/docs/Web/API/Fullscreen_API): it's granted immediately, but a notification is displayed explaining to the user how to exit ([Error 1273351 en Firefox](https://bugzil.la/1273351)).
 
 ### IndexedDB
 
-- Ahora se envía un evento [`close`](/es/docs/Web/Reference/Events/close) al objeto {{domxref("IDBDatabase")}} cuando la base de datos respectiva es cerrada de forma inesperada ({{bug(1151017)}}).
+- Ahora se envía un evento [`close`](/es/docs/Web/Reference/Events/close) al objeto {{domxref("IDBDatabase")}} cuando la base de datos respectiva es cerrada de forma inesperada ([Error 1151017 en Firefox](https://bugzil.la/1151017)).
 
 ### Service Workers
 
-- The {{domxref("WindowClient.navigate()")}} method has been implemented. This method lets you open a specified URL into a client window which is being controlled by the service worker ({{bug(1218148)}}).
+- The {{domxref("WindowClient.navigate()")}} method has been implemented. This method lets you open a specified URL into a client window which is being controlled by the service worker ([Error 1218148 en Firefox](https://bugzil.la/1218148)).
 
 ### WebGL
 
-- The {{domxref("EXT_shader_texture_lod")}} WebGL extension has been implemented ({{bug(1111689)}}).
-- The texImage methods have been updated for [WebGL 2](/es/docs/Web/API/WebGL2RenderingContext) to implement PBOs (`PIXEL_UNPACK_BUFFER`) ({{bug(1280499)}}).
+- The {{domxref("EXT_shader_texture_lod")}} WebGL extension has been implemented ([Error 1111689 en Firefox](https://bugzil.la/1111689)).
+- The texImage methods have been updated for [WebGL 2](/es/docs/Web/API/WebGL2RenderingContext) to implement PBOs (`PIXEL_UNPACK_BUFFER`) ([Error 1280499 en Firefox](https://bugzil.la/1280499)).
 
 ### WebRTC
 
@@ -109,21 +109,21 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 - The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.
 - The interface {{domxref("IIRFilterNode")}}, which implements a general [infinite impulse response](https://es.wikipedia.org/wiki/infinite_impulse_response) (IIR) filter, has been implemented.
-- Throttling in background tabs of timers created by {{domxref("WindowTimers.setInterval", "Window.setInterval()")}} and {{domxref("WindowTimers.setTimeout", "Window.setTimeout()")}} no longer occurs if a [Web Audio API](/es/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).
+- Throttling in background tabs of timers created by {{domxref("WindowTimers.setInterval", "Window.setInterval()")}} and {{domxref("WindowTimers.setTimeout", "Window.setTimeout()")}} no longer occurs if a [Web Audio API](/es/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ([Error 1181073 en Firefox](https://bugzil.la/1181073)).
 
 ### Audio/Video
 
-- The `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly previously included the value `"middle"` instead of `"center"`. This has been corrected ({{bug(1276130)}}).
+- The `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly previously included the value `"middle"` instead of `"center"`. This has been corrected ([Error 1276130 en Firefox](https://bugzil.la/1276130)).
 - The non-standard and experimental method {{domxref("HTMLMediaElement.seekToNextFrame()")}} now seeks to the next frame in the media asynchronously, rather than synchronously, and returns a {{jsxref("Promise")}} which resolves once the seek is complete.
-- The implementation of {{domxref("HTMLTrackElement")}} has been corrected to allow {{HTMLElement("track")}} elements to load resources even if not in a document ({{bug(871747)}}).
+- The implementation of {{domxref("HTMLTrackElement")}} has been corrected to allow {{HTMLElement("track")}} elements to load resources even if not in a document ([Error 871747 en Firefox](https://bugzil.la/871747)).
 
 ### API de batería
 
-- The {{domxref("navigator.battery")}} property, which has been deprecated since Firefox 43, is now obsolete and has been removed. Use the {{domxref("navigator.getBattery()")}} method instead to get a battery {{jsxref("Promise")}}, which will resolve when the {{domxref("BatteryManager")}} is available for use; the {{domxref("BatteryManager")}} is passed into the fulfillment handler for the promise ({{bug(12593355)}}).
+- The {{domxref("navigator.battery")}} property, which has been deprecated since Firefox 43, is now obsolete and has been removed. Use the {{domxref("navigator.getBattery()")}} method instead to get a battery {{jsxref("Promise")}}, which will resolve when the {{domxref("BatteryManager")}} is available for use; the {{domxref("BatteryManager")}} is passed into the fulfillment handler for the promise ([Error 12593355 en Firefox](https://bugzil.la/12593355)).
 
 ### Archivos y directorios
 
-- A subset of the [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API) has been implemented, to improve compatibility with sites that were previously only compatible with Google Chrome ({{bug(1265767)}}).
+- A subset of the [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API) has been implemented, to improve compatibility with sites that were previously only compatible with Google Chrome ([Error 1265767 en Firefox](https://bugzil.la/1265767)).
 
   - The asynchronous API interfaces have been implemented, with the caveat that only reading of files is supported; for example, the {{domxref("FileSystemFileEntry.createWriter()")}} method is a no-op.
   - These interfaces have been implemented:
@@ -134,14 +134,14 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
     - {{domxref("FileSystemDirectoryEntry")}} (except for {{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}})
     - {{domxref("FileSystemDirectoryReader")}}
 
-  - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the {{HTMLattrxref("webkitdirectory", "input")}} attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ({{bug(1258489)}}).
+  - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the {{HTMLattrxref("webkitdirectory", "input")}} attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Error 1258489 en Firefox](https://bugzil.la/1258489)).
   - {{domxref("HTMLInputElement.webkitEntries")}} has been implemented; this returns an array of {{domxref("FileSystemEntry")}}-based objects representing the selected items.
   - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitGetEntries()")}}.
   - See [File and Directory Entries API support in Firefox](/es/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) for details about what we do and do not support in this API.
-  - These APIs are now enabled by default; some were previously available but only behind a preference ({{bug(1288683)}}).
+  - These APIs are now enabled by default; some were previously available but only behind a preference ([Error 1288683 en Firefox](https://bugzil.la/1288683)).
 
-- We've implemented {{domxref("DataTransferItem.webkitGetAsEntry()")}} as part of the [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API); this lets you obtain a {{domxref("FileSystemEntry")}} representing a dropped file ({{bug(1289255)}}). This is enabled by default.
-- The `HTMLInputElement.directory` property, part of the [Directory Upload API](https://wicg.github.io/directory-upload/proposal.html) proposal, has been renamed to `allowdirs` ({{bug(1288681)}}). This property is hidden behind a preference.
+- We've implemented {{domxref("DataTransferItem.webkitGetAsEntry()")}} as part of the [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API); this lets you obtain a {{domxref("FileSystemEntry")}} representing a dropped file ([Error 1289255 en Firefox](https://bugzil.la/1289255)). This is enabled by default.
+- The `HTMLInputElement.directory` property, part of the [Directory Upload API](https://wicg.github.io/directory-upload/proposal.html) proposal, has been renamed to `allowdirs` ([Error 1288681 en Firefox](https://bugzil.la/1288681)). This property is hidden behind a preference.
 
 ## Versiones anteriores
 

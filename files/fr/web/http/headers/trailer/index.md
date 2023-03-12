@@ -66,12 +66,9 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Spécifications
 
-| Specification                                                    | Title                                                              |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Trailer", "4.4")}}                     | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
-| {{RFC("7230", "Chunked trailer part", "4.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
-## Compatibilités
+## Compatibilité des navigateurs
 
 {{Compat}}
 

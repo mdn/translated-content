@@ -26,9 +26,9 @@ Types communs utilisés par les API qui distribuent les événements.
 - {{WebExtAPIRef("events.UrlFilter")}}
   - : Filtre les URL pour différents critères. Si un critère donné correspond, alors tout le filtre correspond.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -50,9 +50,9 @@ Les événements ont trois fonctions
     - `request`
       - : `object`. Un objet représentant la requête. Cet objet est un seul objet d'[entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries). Il définit également une méthode `getContent()` asynchrone, qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se résout avec le corps de la réponse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.network.onRequestFinished")}}
+{{Compat}}
 
 ## Examples
 

@@ -116,4 +116,4 @@ Exemple avec toutes les clés possibles. Notez que vous n'incluez normalement ni
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.browser_specific_settings")}}
+{{Compat}}

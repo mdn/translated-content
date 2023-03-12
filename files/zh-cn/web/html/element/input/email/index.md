@@ -1,6 +1,6 @@
 ---
 title: <input type="email">
-slug: Web/HTML/Element/Input/email
+slug: Web/HTML/Element/input/email
 ---
 
 {{HTMLSidebar}}

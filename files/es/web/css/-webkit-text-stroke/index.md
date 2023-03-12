@@ -58,9 +58,9 @@ La propiedad [CSS](/es/docs/Web/CSS) **`-webkit-text-stroke`** especifica la [an
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-text-stroke")}}
+{{Compat}}
 
 ## Ver además
 

@@ -58,9 +58,9 @@ if (!String.prototype.trim) {
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.trim")}}
+{{Compat}}
 
 ## Ver también
 

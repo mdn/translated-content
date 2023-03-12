@@ -9,7 +9,7 @@ slug: Web/API/Navigation_timing_API
 
 ## Concepts and usage
 
-你可以使用 Navigation Timing API 在客户端收集性能数据，并用 {{domxref("XMLHttpRequest")}} 或其它技术传送到服务端。同时，该 API 使你可以衡量之前难以获取的数据，如卸载前一个页面的时间，在域名解析上的时间，在执行 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理器上花费的总时间等。
+你可以使用 Navigation Timing API 在客户端收集性能数据，并用 {{domxref("XMLHttpRequest")}} 或其他技术传送到服务端。同时，该 API 使你可以衡量之前难以获取的数据，如卸载前一个页面的时间，在域名解析上的时间，在执行 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理器上花费的总时间等。
 
 ## Interfaces
 

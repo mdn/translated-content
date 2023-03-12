@@ -26,9 +26,9 @@ var decodedData = window.atob(encodedData); // decode the string
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.atob")}}
+{{Compat}}
 
 ## See also
 

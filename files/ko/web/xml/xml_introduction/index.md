@@ -1,6 +1,6 @@
 ---
 title: XML Introduction
-slug: Web/XML/XML_Introduction
+slug: Web/XML/XML_introduction
 ---
 
 ### XML이란?

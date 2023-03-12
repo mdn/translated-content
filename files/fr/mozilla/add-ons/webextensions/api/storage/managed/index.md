@@ -99,9 +99,9 @@ Le fichier json ressemblerait à ceci :
 
 Pour plus d'informations, voir l'article de Chrome pour les zones de stockage [Manifeste pour les zones de stockage](https://developer.chrome.com/extensions/manifest/storage).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.managed")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

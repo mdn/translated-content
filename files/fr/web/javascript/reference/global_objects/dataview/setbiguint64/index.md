@@ -56,13 +56,11 @@ dataview.getInt32(0); // 3n
 
 ## Spécifications
 
-| Spécification                                                                                                                       | État |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| [Proposition pour `DataView.prototype.setBigUint64()`](https://tc39.github.io/proposal-bigint/#sec-dataview.prototype.setBigUint64) |      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.setBigUint64")}}
+{{Compat}}
 
 ## Voir aussi
 

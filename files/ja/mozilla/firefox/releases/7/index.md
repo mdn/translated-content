@@ -9,7 +9,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 ### HTML
 
-- {{ domxref("HTMLHeadElement") }} の `profile` プロパティが削除されました。このプロパティは {{ gecko("2.0") }} から非推奨となっていました。
+- {{ domxref("HTMLHeadElement") }} の `profile` プロパティが削除されました。このプロパティは Gecko 2.0 から非推奨となっていました。
 - {{ domxref("HTMLImageElement") }} の `x` プロパティと `y` プロパティが削除されました。
 - {{ domxref("HTMLSelectElement") }} の `add()` メソッドの `before` 引数が optional となりました。
 - {{ HTMLElement("body") }} の {{ htmlattrxref("background", "body") }} 属性が URI として解決されなくなりました。この変更は HTML 仕様への準拠によるものです。

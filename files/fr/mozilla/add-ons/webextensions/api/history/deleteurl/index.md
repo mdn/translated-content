@@ -41,9 +41,9 @@ var deletingUrl = browser.history.deleteUrl(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètres lorsque les visites auront été supprimées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.deleteUrl")}}
+{{Compat}}
 
 ## Exemples
 

@@ -33,7 +33,7 @@ Aucune
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.memory")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -37,8 +37,6 @@ original_slug: Web/API/Document/dragstart_event
 
 See the [drag event](/ru/docs/Web/API/Document/drag_event) for example code or this [JSFiddle demo](http://jsfiddle.net/zfnj5rv4/).
 
-{{EmbedLiveSample('Примеры', '300', '200', '', 'Web/API/Document/drag_event')}}
-
 ## Спецификации
 
 {{Specifications}}

@@ -170,7 +170,7 @@ arguably done more to advance science than any device ever built.</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dfn")}}
+{{Compat}}
 
 ## 같이 보기
 

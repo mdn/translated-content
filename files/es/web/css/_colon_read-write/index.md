@@ -59,7 +59,7 @@ p[contenteditable="true"] { color: blue; }
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.read-write")}}
+{{Compat}}
 
 ## Ver también
 

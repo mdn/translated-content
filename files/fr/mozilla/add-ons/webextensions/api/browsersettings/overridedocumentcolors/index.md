@@ -25,7 +25,7 @@ Sa valeur sous-jacente est une chaîne qui peut prendre l'une des valeurs suivan
 - "never": n'applique jamais les choix de l'utilisateur
 - "always": Toujours appliquer les choix de l'utilisateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 

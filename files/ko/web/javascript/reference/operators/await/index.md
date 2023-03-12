@@ -92,11 +92,11 @@ try블럭 없이 rejected `Promise`다루기
     // response will be undefined if the promise is rejected
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

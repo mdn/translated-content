@@ -153,7 +153,7 @@ console.log(leadingThirtySevenList()); // [37]
 console.log(leadingThirtySevenList(1, 2, 3)); // [37, 1, 2, 3]
 console.log(addThirtySeven(5)); // 42
 console.log(addThirtySeven(5, 10)); // 42
-// (the second argument is ignored)
+// (最後の引数 10 は無視されます)
 ```
 
 ### setTimeout() での利用

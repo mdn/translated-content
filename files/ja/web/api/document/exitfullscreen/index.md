@@ -39,7 +39,7 @@ document.onclick = (event) => {
 }
 ```
 
-> **メモ:** もっと完全な例については、{{SectionOnPage("/ja/docs/Web/API/Element/requestFullscreen", "例")}}をご覧ください。
+> **メモ:** もっと完全な例については、[`Element.requestFullscreen()` の例](/ja/docs/Web/API/Element/requestFullscreen#%E4%BE%8B)をご覧ください。
 
 ## 仕様書
 

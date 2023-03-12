@@ -34,9 +34,9 @@ _(Aucun)_
 
 Cet élément implémente l'interface [`SVGDescElement`](/fr/docs/Web/API/SVGDescElement).
 
-## Compatibilitée des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("svg.elements.desc")}}
+{{Compat}}
 
 ## Voir aussi
 

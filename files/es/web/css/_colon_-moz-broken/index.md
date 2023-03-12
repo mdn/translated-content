@@ -13,5 +13,5 @@ Este selector está pensado sobre todo para desarrolladores de temas.
 
 ## Ver además
 
-- {{bug("11011")}}
+- [Error 11011 en Firefox](https://bugzil.la/11011)
 - {{cssxref("-moz-alt-content")}}

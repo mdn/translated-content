@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/values
 
 {{JSRef}}
 
-**`values()`** 方法返回一个新的[_迭代器_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象。它包含按顺序插入 `Map` 对象中每个元素的 `value` 值。
+**`values()`** 方法返回一个新的[_迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象。它包含按顺序插入 `Map` 对象中每个元素的 `value` 值。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
 

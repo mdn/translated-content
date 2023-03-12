@@ -28,9 +28,9 @@ Les valeurs de ce type sont des chaines. Les valeurs possibles sont : `"document
 
 La valeur par défaut est `"document_idle"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extensionTypes.RunAt")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

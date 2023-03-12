@@ -51,7 +51,7 @@ slug: Web/HTML/Element/dialog
     </tr>
     <tr>
       <th scope="row">許可された ARIA ロール</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

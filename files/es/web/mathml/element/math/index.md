@@ -119,9 +119,9 @@ Además de los siguientes atributos, el elemento `<math>` acepta cualquier atrib
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("mathml.elements.math")}}
+{{Compat}}
 
 ## Notas específicas a Firefox
 

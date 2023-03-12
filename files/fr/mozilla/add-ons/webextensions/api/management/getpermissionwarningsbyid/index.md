@@ -37,9 +37,9 @@ var gettingWarnings = browser.management.getPermissionWarningsById(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un ensemble de chaînes, chacune contenant un texte d'un avertissement de permissions.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.getPermissionWarningsById")}}
+{{Compat}}
 
 ## Exemples
 

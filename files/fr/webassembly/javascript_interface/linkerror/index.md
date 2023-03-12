@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.LinkError()`** permet de créer un nouvel objet WebAssembly `LinkError` qui indique qu'une erreur s'est produite lors de l'instanciation du module (en plus [des trappes](http://webassembly.org/docs/semantics/#traps) provenant de la fonction initiale).
 

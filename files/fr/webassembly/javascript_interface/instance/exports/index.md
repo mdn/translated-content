@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exp
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La propriété **`exports`** du prototype de {{jsxref("WebAssembly.Instance")}} est une propriété en lecture seul qui renvoie un objet dont les propriétés sont les différentes fonctions exportées depuis l'instance du module WebAssembly. Cela permet d'y accéder et de les manipuler en JavaScript.
 

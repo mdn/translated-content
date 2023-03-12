@@ -261,26 +261,13 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ## 测试你的技能！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其它内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：HTML5 控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_HTML5_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：HTML5 控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_HTML5_controls)。
 
 ## 总结
 
 至此，我们结束了对 HTML5 表单输入类型的考察。还有一些其他的控件类型，由于其行为非常特殊，所以不能轻易地归为一类，但仍有必要了解一下。我们将在下一篇文章中介绍这些类型。
 
 {{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
-
-## 本章目录
-
-- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 进阶内容
 

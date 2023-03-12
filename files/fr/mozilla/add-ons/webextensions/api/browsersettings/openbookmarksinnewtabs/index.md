@@ -19,10 +19,6 @@ Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la vale
 
 Si la valeur est `true`, alors lorsque l'utilisateur sélectionne un signet, il sera ouvert dans un nouvel onglet. Si la valeur est `false` (valeur par défaut), les marque-pages sont ouverts dans l'onglet en cours.
 
-## Compatibilité de navigateur
-
-{{Compat("webextensions.api.browserSettings.openBookmarksInNewTabs")}}
-
 ## Exemples
 
 Définissez le paramètre sur `true`:
@@ -35,5 +31,9 @@ function logResult(result) {
 browser.browserSettings.openBookmarksInNewTabs.set({value: true}).
   then(logResult);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}

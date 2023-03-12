@@ -8,7 +8,8 @@ tags:
   - Справка
 translation_of: Web/API/Canvas_API
 ---
-{{CanvasSidebar}}
+
+{{DefaultAPISidebar("Canvas API")}}
 
 Элемент {{HTMLElement("canvas")}}, добавленный в [HTML5](/ru/docs/HTML/HTML5), предназначен для создания графики с помощью [JavaScript](/ru/docs/JavaScript). Например, его используют для рисования графиков, создания фотокомпозиций, анимаций и даже обработки и рендеринга видео в реальном времени.
 

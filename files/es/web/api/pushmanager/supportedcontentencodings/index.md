@@ -21,6 +21,6 @@ Un _array_ de _Strings_
 
 {{Specifications}}
 
-## Browser Compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.PushManager.supportedContentEncodings")}}
+{{Compat}}

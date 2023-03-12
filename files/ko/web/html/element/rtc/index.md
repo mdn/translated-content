@@ -84,7 +84,7 @@ slug: Web/HTML/Element/rtc
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.rtc")}}
+{{Compat}}
 
 ## 같이 보기
 

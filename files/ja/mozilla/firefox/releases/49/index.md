@@ -90,8 +90,8 @@ l10n:
 - 動画コンテンツの frame-by-frame シークを可能にする、*実験的*かつ*非標準*の {{domxref("HTMLMediaElement.seekToNextFrame()")}} メソッドを追加しました ({{bug(1235301)}}。これがどれだけ役に立つかを私たちが理解するのを助けるために試用することをお勧めしますが、_製品版のコードでは使用しないでください!_
 - {{domxref("HTMLLabelElement.form")}} プロパティが、コントロールが存在する (およびそのコントロールがフォームに関連付けられている) 場合に、ラベルのコントロールが関連付けられているフォームを返すようになりました。以前は、このプロパティを使用して label を直接フォームに関連付けていました ({{bug(1268852)}})。
 - {{domxref("EventTarget.addEventListener()")}} の第 3 引数でサポートする値に、{{jsxref("Boolean")}} および `EventListenerOptions` を追加しました ({{bug(1266164)}} および {{bug(1266066)}})。
-- {{domxref("KeyboardEvent.key")}} で、音量に関する値を改名しました。`"VolumeDown"` は `"AudioVolumeDown"` に、`"VolumeUp"` は `"AudioVolumeUp"` に、`"VolumeMute"` は `"AudioVolumeMute"` に変わりました。この変更により、Firefox が UI Events 仕様の最新ドラフトに準拠しました ({{bug(1272578)}})。使用可能なすべてのキーコードについては、{{SectionOnPage("/ja/docs/Web/API/KeyboardEvent/code", "Code values")}} をご覧ください。
-- 以前は `"MozHomeScreen"`、`"MozCameraFocusAdjust"`、`"MozPhoneCall"` として参照されていたキーに、UI Events 仕様で公式な名称がつきました。`"GoHome"`、`"CameraFocus"`、`"Call"` になります。Firefox 49 で、新しい名称を使用するように更新しました ({{bug(1272599)}})。使用可能なすべてのキーコードについては、{{SectionOnPage("/ja/docs/Web/API/KeyboardEvent/code", "Code values")}} をご覧ください。
+- {{domxref("KeyboardEvent.key")}} で、音量に関する値を改名しました。`"VolumeDown"` は `"AudioVolumeDown"` に、`"VolumeUp"` は `"AudioVolumeUp"` に、`"VolumeMute"` は `"AudioVolumeMute"` に変わりました。この変更により、Firefox が UI Events 仕様の最新ドラフトに準拠しました ({{bug(1272578)}})。使用可能なすべてのキーコードについては、[Code values for keyboard events](/ja/docs/Web/API/UI_Events/Keyboard_event_code_values) をご覧ください。
+- 以前は `"MozHomeScreen"`、`"MozCameraFocusAdjust"`、`"MozPhoneCall"` として参照されていたキーに、UI Events 仕様で公式な名称がつきました。`"GoHome"`、`"CameraFocus"`、`"Call"` になります。Firefox 49 で、新しい名称を使用するように更新しました ({{bug(1272599)}})。使用可能なすべてのキーコードについては、[Code values for keyboard events](/ja/docs/Web/API/UI_Events/Keyboard_event_code_values) をご覧ください。
 - キーの値 `"Separator"` および `"MediaSkip"` は、非推奨になったうえに使用されていませんので、削除しました ({{bug(1232919)}})。
 - キーの値 `"Hyper"` および `"Super"` とそれらに対応するキーコードを、過去のモディファイアキーを表すように追加しました ({{bug(1232919)}})。
 - マルチメディア数値キーパッド用に、2 つのキーの値を追加しました: `"Key11"`、`"Key12"` ({{bug(1232919)}})。

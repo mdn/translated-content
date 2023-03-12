@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Finale
 translation_of: Web/API/Canvas_API/Tutorial/Finale
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 Поздравляем! Вы завершили [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial)! Эти знания помогут вам создавать великолепную 2d графику в сети.
 

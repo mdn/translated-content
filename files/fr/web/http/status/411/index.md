@@ -18,9 +18,11 @@ Le code de réponse d'erreur HTTP **`411 Length Required`** indique que le serve
 
 ## Spécifications
 
-| Spécification                                                    | Titre                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.5.10: 411 Length Required](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.10) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

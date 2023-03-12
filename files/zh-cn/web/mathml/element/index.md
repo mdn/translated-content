@@ -7,7 +7,7 @@ slug: Web/MathML/Element
 
 这是一份按字母排序的 MathML **呈现型**元素列表。
 
-**呈现型标记**（**presentation markup**）相关条目被用来描述数学记号的布局结构，而**内容型标记**（**content markup**）则用于提供潜在的数学含义，MathML 解析器不支持渲染内容型标记（见 {{bug(276028)}}）。若想了解更多关于内容型标记的信息，可以考虑阅读 [MathML 3 规范](http://www.w3.org/TR/MathML3/)的[第四章](http://www.w3.org/TR/MathML3/chapter4.html)。
+**呈现型标记**（**presentation markup**）相关条目被用来描述数学记号的布局结构，而**内容型标记**（**content markup**）则用于提供潜在的数学含义，MathML 解析器不支持渲染内容型标记（见 [Firefox bug 276028](https://bugzil.la/276028)）。若想了解更多关于内容型标记的信息，可以考虑阅读 [MathML 3 规范](http://www.w3.org/TR/MathML3/)的[第四章](http://www.w3.org/TR/MathML3/chapter4.html)。
 
 MathML 元素实现了 {{domxref("MathMLElement")}} 类。
 

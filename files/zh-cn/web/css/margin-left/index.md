@@ -5,8 +5,6 @@ slug: Web/CSS/margin-left
 
 {{CSSRef()}}
 
-## Summary
-
 ![Area on which CSS margin-left apply](/files/4039/margin-left.svg)**`margin-left`** 属性 设置与元素相关联的盒子模型的左外边距。这个值可以为负值。
 
 竖直排列相邻的两个盒子模型的外边距会重叠 _[margin collapsing](/zh-CN/docs/CSS/margin_collapsing)。_

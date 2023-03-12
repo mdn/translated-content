@@ -3,8 +3,6 @@ title: <applet>
 slug: Web/HTML/Element/applet
 ---
 
-{{obsolete_header}}
-
 ## Resumo
 
 The HTML Applet Element (`<applet>`) identifies the inclusion of a Java applet.

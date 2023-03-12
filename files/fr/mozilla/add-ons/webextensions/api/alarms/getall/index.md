@@ -51,7 +51,7 @@ getAlarms.then(gotAll);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.getAll")}}
+{{Compat}}
 
 > **Note :**
 >

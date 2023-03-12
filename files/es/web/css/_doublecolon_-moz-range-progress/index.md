@@ -44,9 +44,9 @@ Una barra de progreso que utilice este estilo se vería de la siguiente manera:
 
 No es parte de ninguna especificación. Es un pseudo-elemento propietario de Gecko.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-range-progress")}}
+{{Compat}}
 
 ## Ver además
 

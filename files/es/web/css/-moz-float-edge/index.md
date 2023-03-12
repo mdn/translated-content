@@ -78,4 +78,4 @@ No es parte de ningún estándar.
 
 ## Véase también
 
-- {{bug(432891)}}
+- [Error 432891 en Firefox](https://bugzil.la/432891)

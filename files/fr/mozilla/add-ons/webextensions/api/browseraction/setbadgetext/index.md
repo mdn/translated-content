@@ -56,10 +56,6 @@ Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
 - si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue.
 - si `windowId` et `tabId` sont tous les deux omis, le badge global est défini.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setBadgeText",2)}}
-
 ## Exemples
 
 Ajouter un badge indiquant combien de fois l'utilisateur a cliqué sur le bouton :
@@ -73,6 +69,10 @@ function increment() {
 
 browser.browserAction.onClicked.addListener(increment);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -12,9 +12,9 @@ El [atributo global](/es/docs/Web/HTML/Global_attributes) **slot** asigna un esp
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.slot")}}
+{{Compat}}
 
 ## Vea también
 

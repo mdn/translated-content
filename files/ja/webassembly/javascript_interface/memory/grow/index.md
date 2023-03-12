@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Memory/grow
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`grow()`** は [`Memory`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) オブジェクトのプロトタイプメソッドで、指定した WebAssembly ページの数だけメモリーインスタンスの大きさを拡張します。
 

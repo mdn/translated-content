@@ -35,7 +35,7 @@ slug: Learn/Common_questions
 - [什么文本编辑器比较好用？](/zh-CN/docs/Learn/Common_questions/Available_text_editors)
   - : 在本文中，我们重点介绍在选择和安装用于 Web 开发的文本编辑器时需要考虑的一些事项。
 - [什么是浏览器开发者工具？](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)
-  - : 每个浏览器都有一组用于调试 HTML、CSS 和其它 Web 代码的开发者工具。本文解释如何使用浏览器的开发者工具的基本功能。
+  - : 每个浏览器都有一组用于调试 HTML、CSS 和其他 Web 代码的开发者工具。本文解释如何使用浏览器的开发者工具的基本功能。
 - [你怎么来确保你的网站顺利的运行？](/zh-CN/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly)
   - : 所以你已经在网上发布了你的网站 - 非常好！但你确定它工作正常吗？本文提供一些基本的故障排除步骤。
 - [怎么搭建一个基础的开发环境？](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)

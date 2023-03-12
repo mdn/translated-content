@@ -30,7 +30,7 @@ slug: Web/Progressive_web_apps/Installable_PWAs
 <link rel="manifest" href="js13kpwa.webmanifest">
 ```
 
-> **참고:** **노트**: 과거에 manifest로 사용되던 몇 가지 흔한 확장자들이 있습니다: `manifest.webapp` 은 Firefox OS 웹 manifest로 유명하며, 많은 사람들이 JSON 구조로 내용이 구성된 `manifest.json`을 사용합니다. 하지만, `.webmanifest` 확장자는 [W3C manifest 명세](https://w3c.github.io/manifest/)에 명시적으로 언급되고 있으므로 이를 그대로 사용하도록 하겠습니다.
+> **참고:** 과거에 manifest로 사용되던 몇 가지 흔한 확장자들이 있습니다: `manifest.webapp` 은 Firefox OS 웹 manifest로 유명하며, 많은 사람들이 JSON 구조로 내용이 구성된 `manifest.json`을 사용합니다. 하지만, `.webmanifest` 확장자는 [W3C manifest 명세](https://w3c.github.io/manifest/)에 명시적으로 언급되고 있으므로 이를 그대로 사용하도록 하겠습니다.
 
 파일의 내용은 다음과 같습니다.
 

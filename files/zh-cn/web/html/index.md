@@ -5,7 +5,7 @@ slug: Web/HTML
 
 {{HTMLSidebar}}
 
-**HTML**（超文本标记语言——HyperText Markup Language）是构成 Web 世界的一砖一瓦。它定义了网页内容的含义和结构。除 HTML 以外的其它技术则通常用来描述一个网页的表现与展示效果（如 [CSS](/zh-CN/docs/Web/CSS)），或功能与行为（如 [JavaScript](/zh-CN/docs/Web/JavaScript)）。
+**HTML**（超文本标记语言——HyperText Markup Language）是构成 Web 世界的一砖一瓦。它定义了网页内容的含义和结构。除 HTML 以外的其他技术则通常用来描述一个网页的表现与展示效果（如 [CSS](/zh-CN/docs/Web/CSS)），或功能与行为（如 [JavaScript](/zh-CN/docs/Web/JavaScript)）。
 
 “超文本”（hypertext）是指连接单个网站内或多个网站间的网页的链接。链接是网络的一个基本方面。只要将内容上传到互联网，并将其与他人创建的页面相链接，你就成为了万维网的积极参与者。
 

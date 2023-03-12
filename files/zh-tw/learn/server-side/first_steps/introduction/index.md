@@ -185,10 +185,3 @@ original_slug: Learn/Server-side/First_steps/介紹
 在未來的文章，我們將協助你選擇最佳的網頁框架，做為你的第一個網站；接著，我們將帶你更詳細了解主要的用戶端-伺服端的互動。
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## 本系列課程
-
-- [伺服器端介紹](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
-- [用戶端概述](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [伺服器端網路框架](/zh-TW/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [網站安全](/zh-TW/docs/Learn/Server-side/First_steps/Website_security)

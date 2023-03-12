@@ -44,4 +44,4 @@ Cette fonctionnalité n'est actuellement décrite dans aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot.delegatesFocus")}}
+{{Compat}}

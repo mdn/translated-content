@@ -51,9 +51,9 @@ var port = browser.runtime.connect(
 
 {{WebExtAPIRef('runtime.Port')}}. Port à travers lequel les messages peuvent être envoyés et reçus. L'événement `onDisconnect` du port est déclenché si l'extension n'existe pas.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.connect")}}
+{{Compat}}
 
 ## Exemples
 

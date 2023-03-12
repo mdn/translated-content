@@ -1,5 +1,5 @@
 ---
-title: '<ul> - элемент «Неупорядоченный список»'
+title: "<ul> - элемент «Неупорядоченный список»"
 slug: Web/HTML/Element/ul
 translation_of: Web/HTML/Element/ul
 ---
@@ -10,13 +10,13 @@ translation_of: Web/HTML/Element/ul
 
 {{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
 
-| [Категории контента](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), и если дочерний элемент `<ol>` включает в себя хотя бы один элемент {{HTMLElement("li")}}, [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Palpable_content).                                                                                     |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                 | Ноль или больше {{ HTMLElement("li") }} элементов, содержат вложенные элементы {{ HTMLElement("ol") }} или {{ HTMLElement("ul") }}.                                                                                                                                                                                 |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                       |
-| Разрешённые родители                                   | Любой элемент, который принимает [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content).                                                                                                                                                                                                                                    |
-| Разрешённые ARIA-роли                                  | {{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}, {{ARIARole("presentation")}} |
-| DOM-интерфейс                                          | {{domxref("HTMLUListElement")}}                                                                                                                                                                                                                                                                                                       |
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), и если дочерний элемент `<ol>` включает в себя хотя бы один элемент {{HTMLElement("li")}}, [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Palpable_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                  | Ноль или больше {{ HTMLElement("li") }} элементов, содержат вложенные элементы {{ HTMLElement("ol") }} или {{ HTMLElement("ul") }}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Допустимые родители                                    | Любой элемент, который принимает [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Допустимые ARIA-роли                                   | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
+| DOM-интерфейс                                          | {{domxref("HTMLUListElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Свойства
 
@@ -30,7 +30,7 @@ translation_of: Web/HTML/Element/ul
     - `circle`
     - `disc`
     - `square` Четвёртый маркер задан в интерфейсе WebTV, но не все браузеры смогут его отобразить: `triangle`.Если данный атрибут отсутствует и если атрибут [CSS](/ru/docs/CSS) {{ cssxref("list-style-type") }} не присвоен к данному элементу, пользовательский агент (user agent) выберет маркер в зависимости от вложенного уровня в списке.
-    > **Предупреждение:** Не используйте этот атрибут, ибо он устаревший; используйте свойство [CSS](/ru/docs/Web/CSS) {{ cssxref("list-style-type") }}.
+      > **Предупреждение:** Не используйте этот атрибут, ибо он устаревший; используйте свойство [CSS](/ru/docs/Web/CSS) {{ cssxref("list-style-type") }}.
 
 ## Примечания об использовании
 
@@ -60,21 +60,21 @@ translation_of: Web/HTML/Element/ul
 <ul>
   <li>first item</li>
   <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <!-- Закрывающий тег </li> пишем не здесь! -->
     <ul>
       <li>second item first subitem</li>
       <li>second item second subitem
-      <!-- Same for the second nested unordered list! -->
+     <!-- То же самое для второго вложенного неупорядоченного списка! -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li> <!-- Closing </li> tag for the li that
-                  contains the third unordered list -->
+      </li> <!-- Закрывающий тег </li>, который
+закрывает третий неупорядоченный список -->
       <li>second item third subitem</li>
     </ul>
-  <!-- Here is the closing </li> tag -->
+  <!-- Вот закрывающий тег </li> -->
   </li>
   <li>third item</li>
 </ul>
@@ -90,13 +90,13 @@ translation_of: Web/HTML/Element/ul
 <ul>
   <li>first item</li>
   <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <!-- Закрывающий тег </li> пишем не здесь! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  <!-- Here is the closing </li> tag -->
+   <!-- Вот закрывающий тег </li> -->
   </li>
   <li>third item</li>
 </ul>

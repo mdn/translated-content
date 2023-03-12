@@ -120,15 +120,3 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
     - 실제 작업 또는 평가 페이지 링크, 그래야 우리가 당신이 도움받길 원하는 것을 찾을 수 있어요.
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## 이 모듈에서
-
-- [What is JavaScript?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

@@ -1,7 +1,6 @@
 ---
 title: 使用数据属性
 slug: Learn/HTML/Howto/Use_data_attributes
-original_slug: Web/Guide/HTML/Using_data_attributes
 ---
 
 {{LearnSidebar}}
@@ -75,7 +74,7 @@ IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标
 
 在 FireFox 49.0.2(其他版本也有可能) 中，javascript 将无法读出包含 1022 个及以上字符的 data 属性 (EcmaScript 4).
 
-## 参阅
+## 参见
 
 - 该文章源自 [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
 - 在 SVG 2 中也同样支持自定义 data 属性; 请参看{{domxref("SVGElement.dataset")}} 和{{SVGAttr("data-*")}}.

@@ -26,19 +26,13 @@ El objeto {{jsxref("Array")}} sustituye al método `toString` de {{jsxref("Objec
 
 JavaScript llama al método `toString` automáticamente cuando un array va a ser representado como un valor de texto o cuando se referencia a un array en una concatenación de caracteres.
 
-### Semántica de ECMAScript 5
-
-Desde JavaScript 1.8.5 (Firefox 4), y consistente con la 5ª edición de semántica de ECMAScript, el método `toString()` es genérico y puede ser usado con cualquier objeto. {{jsxref("Object.prototype.toString()")}} será llamado y devolverá el valor resultante.
-
 ## Especificaciones
 
 {{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.toString")}}
-
-\>
+{{Compat}}
 
 ## Vea también
 

@@ -14,7 +14,7 @@ a::before {
 }
 ```
 
-**注意：** 由`::before` 和`::after` 生成的伪元素 [包含在元素格式框内](https://www.w3.org/TR/CSS2/generate.html#before-after-content)，因此不能应用在*[替换元素上](/zh-CN/docs/Web/CSS/Replaced_element)，* 比如{{htmlelement("img")}}或{{htmlelement("br")}} 元素。
+> **备注：** 由 `::before` 和`::after` 生成的伪元素[包含在元素格式框内](https://www.w3.org/TR/CSS2/generate.html#before-after-content)，因此不能应用在[*替换元素上*](/zh-CN/docs/Web/CSS/Replaced_element)，比如 {{htmlelement("img")}} 或 {{htmlelement("br")}} 元素。
 
 ## 语法
 

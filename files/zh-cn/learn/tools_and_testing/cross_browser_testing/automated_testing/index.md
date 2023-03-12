@@ -55,7 +55,7 @@ As we said above, you can drastically speed up common tasks such as linting and 
 很多工具都是基于 {{Glossary("Node.js")}},所以你需要从 [nodejs.org](https://nodejs.org/)安装它：
 
 1. 从上面的网站下载适合你系统的安装软件。 （如果你已经安装了 Node 和 npm，跳到步骤 4）
-2. 像其它软件那样正常安装。注意 Node 来源于 [Node Package Manager](https://www.npmjs.com/) (npm)，它使你能更快地安装包、同它人分享你的包，并在你的工程上运行有用的脚本。
+2. 像其他软件那样正常安装。注意 Node 来源于 [Node Package Manager](https://www.npmjs.com/) (npm)，它使你能更快地安装包、同它人分享你的包，并在你的工程上运行有用的脚本。
 3. 安装结束后，运行下列命令查看 Node 和 npm 的版本，检测 node 是否正确安装好 :
 
     ```bash

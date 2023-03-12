@@ -1,6 +1,6 @@
 ---
 title: <input type="file">
-slug: Web/HTML/Element/Input/file
+slug: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -158,7 +158,7 @@ div {
 - `webkitRelativePath` {{non-standard_inline}}
   - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 {{htmlattrxref("webkitdirectory", "input/file")}} 属性的 `file` 选择器）。_这是非标准的，应该谨慎使用。_
 
-> **备注：** 你可以在所有现代浏览器中读写 `HTMLInputElement.files` 的值；该特性已经添加到了 Firefox 57 中（见 {{bug(1384030)}}）。
+> **备注：** 你可以在所有现代浏览器中读写 `HTMLInputElement.files` 的值；该特性已经添加到了 Firefox 57 中（见 [Firefox bug 1384030](https://bugzil.la/1384030)）。
 
 ### 限制可接受的文件类型
 
@@ -339,7 +339,7 @@ input.addEventListener('change', updateImageDisplay);
   - 将其名称和文件大小输出到预览区 `<div>` 的一个列表项中（从 `file.name` 和 `file.size` 获取这些信息）。定制的 `returnFileSize()` 函数返回一个用 bytes/KB/MB 表示的可读性良好的文件大小（默认情况下，浏览器以绝对字节数报告大小）。
   - 通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 {{htmlattrxref("src", "img")}} 设置为缩略图。
 
-- 如果文件类型无效，则在列表项中显示一条消息，告诉用户需要选择一个其它的文件类型。
+- 如果文件类型无效，则在列表项中显示一条消息，告诉用户需要选择一个其他的文件类型。
 
 ```js
 function updateImageDisplay() {
@@ -427,5 +427,5 @@ function returnFileSize(number) {
 
 ## 参见
 
-- [在 web 应用中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)——包含许多其它关于 `<input type="file">` 和 [File API](/zh-CN/docs/Web/API/File) 的有用示例。
+- [在 web 应用中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)——包含许多其他关于 `<input type="file">` 和 [File API](/zh-CN/docs/Web/API/File) 的有用示例。
 - [CSS 属性兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

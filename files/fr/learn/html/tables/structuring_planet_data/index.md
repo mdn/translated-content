@@ -1,5 +1,5 @@
 ---
-title: "Revue : structurer les données des planètes"
+title: "Structurer les données des planètes"
 slug: Learn/HTML/Tables/Structuring_planet_data
 translation_of: Learn/HTML/Tables/Structuring_planet_data
 original_slug: Apprendre/HTML/Tableaux/Structuring_planet_data
@@ -46,7 +46,7 @@ Vous pouvez aussi [regarder l'exemple ici](https://mdn.github.io/learning-area/h
 
 ## Étapes à suivre
 
-Les étapes suivantes décrivent ce que vous devez faire pour complèter l'exemple de tableau. Toutes les données dont vous avez besoin sont contenues dans le fichier `planets-data.txt`. Si vous avez du mal à visualiser les données, regardez l'exemple donné dans le lien ci-dessus, ou essayez de dessiner un diagramme.
+Les étapes suivantes décrivent ce que vous devez faire pour compléter l'exemple de tableau. Toutes les données dont vous avez besoin sont contenues dans le fichier `planets-data.txt`. Si vous avez du mal à visualiser les données, regardez l'exemple donné dans le lien ci-dessus, ou essayez de dessiner un diagramme.
 
 1. Ouvrez votre copie de `blank-template.html`, et commencez le tableau en lui donnant un conteneur extérieur, un en-tête et un corps de tableau. Vous n'avez pas besoin d'un pied de tableau dans cet exemple.
 2. Ajoutez la légende fournie à votre tableau.
@@ -59,7 +59,7 @@ Les étapes suivantes décrivent ce que vous devez faire pour complèter l'exemp
 ## Conseils et astuces
 
 - La première cellule de la ligne d'en-tête doit être vierge et couvrir deux colonnes.
-- Les en-têtes regrouppant des lignes (_exemple : les planètes joviennes_) qui sont à gauche des en-têtes de lignes des noms des planètes (exemple : _Saturne_) sont un peu difficiles à trier — vous devez vous assurer que chacun d'eux couvre le bon nombre de lignes et colonnes.
+- Les en-têtes regroupant des lignes (_exemple : les planètes joviennes_) qui sont à gauche des en-têtes de lignes des noms des planètes (exemple : _Saturne_) sont un peu difficiles à trier — vous devez vous assurer que chacun d'eux couvre le bon nombre de lignes et colonnes.
 - une des méthodes d'association des en-têtes avec leurs lignes et colonnes est un peu plus facile que l'autre.
 
 ## Correction

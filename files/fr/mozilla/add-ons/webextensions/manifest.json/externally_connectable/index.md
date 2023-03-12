@@ -60,6 +60,6 @@ Les correspondances permettent la communication entre cette extension et les pag
 
 > **Note :** Si `browser_action` n'est pas spécifié, la communication entre les extensions est toujours autorisée, comme si `browser_action` était `{"ids": ["*"] }`, par conséquent, si vous spécifiez `browser_action.matches` n'oubliez pas d'ajouter des identifiants si vous souhaitez toujours communiquer. avec d'autres extensions.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.externally_connectable")}}
+{{Compat}}

@@ -3,7 +3,7 @@ title: WebGL
 slug: Web/API/WebGL_API
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL (Web Graphics Library) é uma API do JavaScript para renderizar gráficos 3D e 2D dentro de um navegador web compatível sem o uso de plug-ins. O WebGL faz isso introduzindo uma API que está de acordo com o OpenGL ES 2.0 e que pode ser usada em elementos do HTML5 {{HTMLElement("canvas")}}.
 

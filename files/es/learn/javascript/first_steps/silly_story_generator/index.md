@@ -95,15 +95,3 @@ Completando la función `result()`:
 Si está siguiendo esta evaluación como parte de un curso organizado, debería poder entregar su trabajo a su profesor/mentor para que lo califique. Si está aprendiendo por ti mismo, puede obtener la guía de calificación con bastante facilidad preguntando en el hilo de [discussion thread for this exercise](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686), o en el canal de IRC [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Pruebe el ejercicio primero: ¡no se gana nada haciendo trampa!
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## En este módulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript)
-- [Un primer acercamiento a JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Corrigiendo JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Almacenando la información que necesitas - Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Matem%C3%A1ticas)
-- [Manejando el texto - cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos útiles con cadenas](/es/docs/Glossary/Arreglos)
-- [Arreglos (matrices)](/es/docs/Glossary/Arreglos)
-- [Evaluación: Generador de hisorias alocadas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

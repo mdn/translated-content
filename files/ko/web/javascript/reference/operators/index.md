@@ -29,7 +29,7 @@ slug: Web/JavaScript/Reference/Operators
 - {{JSxRef("Operators/async_function", "async function")}}
   - : `async function`은 비동기 함수 표현식을 정의합니다.
 - {{JSxRef("Operators/await", "await")}}
-  - : 비동기 함수를 일시 중지했다가 다시 시작하고 promise의 resolution/rejection을 ​​기다립니다.
+  - : 비동기 함수를 일시 중지했다가 다시 시작하고 promise의 resolution/rejection을 기다립니다.
 - {{JSxRef("Global_Objects/Array", "[]")}}
   - : 배열 초기자 및 리터럴 구문.
 - {{JSxRef("Operators/Object_initializer", "{}")}}
@@ -234,7 +234,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ## 브라우저 호환성
 
-{{Compat("javascript.operators")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -313,4 +313,4 @@ Les scripts de contenu ont la même vue du DOM et sont injectés dans l’ordre 
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.content_scripts")}}
+{{Compat}}

@@ -45,14 +45,11 @@ Server: Apache
 
 ## Especificaciones
 
-| Specification                                                                                                                     | Title                                                              |
-| --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [HyperText Transport Protocol Keep-Alive Header](https://tools.ietf.org/id/draft-thomson-hybi-http-timeout-01.html#rfc.section.2) | The Keep-Alive Header (Experimental specification)                 |
-| {{RFC("7230", "Keep-Alive", "appendix-A.1.2")}}                                                                  | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Keep-Alive")}}
+{{Compat}}
 
 ## Mirar tambien
 

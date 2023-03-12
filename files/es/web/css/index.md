@@ -74,7 +74,7 @@ El [libro de cocina de diseño CSS](/es/docs/Web/CSS/Layout_cookbook)[](/es/docs
 
 ## Meta errores
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Error 1323667 en Firefox](https://bugzil.la/1323667)
 
 ## Ver también
 

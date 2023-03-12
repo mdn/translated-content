@@ -28,11 +28,11 @@ dump(document.location);
 // "http://www.example.com/juicybits.html" to the console
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

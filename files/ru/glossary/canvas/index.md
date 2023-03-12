@@ -14,10 +14,6 @@ original_slug: Глоссарий/Canvas
 
 ## Смотрите также
 
-### Общие сведения
-
-- {{Interwiki("wikipedia", "Canvas (HTML)", "Canvas")}} на Википедии
-
 ### Обучающие ресурсы
 
 - [Руководство по Canvas в MDN](/ru/docs/Web/Guide/HTML/Canvas_tutorial)

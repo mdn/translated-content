@@ -62,9 +62,9 @@ console.log(str.endsWith('to be', 19))  // true
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.endsWith")}}
+{{Compat}}
 
 ## Ver también
 

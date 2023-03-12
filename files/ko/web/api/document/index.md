@@ -116,28 +116,22 @@ HTML 문서를 위한 `Document` 인터페이스는 HTML5 이전엔 {{domxref("H
 - {{domxref("DocumentOrShadowRoot.styleSheets")}} {{readonlyInline}}
   - : 문서가 포함하거나 명시적으로 연결한 스타일 시트를 나타내는, {{domxref("CSSStyleSheet")}}의 {{domxref("StyleSheetList")}} 객체를 반환합니다.
 
-### 이벤트 처리기
+## 이벤트
 
-- {{domxref("Document.onafterscriptexecute")}} {{non-standard_inline}}
-  - : {{event("afterscriptexecute")}} 이벤트를 위한 이벤트 핸들링 코드를 나타냅니다.
-- {{domxref("Document.onbeforescriptexecute")}} {{non-standard_inline}}
-  - : {{event("beforescriptexecute")}} 이벤트를 위한 이벤트 핸들링 코드를 나타냅니다.
-- {{domxref("Document.oncopy")}} {{non-standard_inline}}
-  - : {{event("copy")}} 이벤트를 위한 이벤트 핸들링 코드를 나타냅니다.
-- {{domxref("Document.oncut")}} {{non-standard_inline}}
-  - : {{event("cut")}} 이벤트를 위한 이벤트 핸들링 코드를 나타냅니다.
-- {{domxref("Document.onfullscreenchange")}}
-  - : {{event("fullscreenchange")}} 이벤트가 발생할 때 호출되는 코드를 나타내는 {{event("Event_handlers", "event handler")}} 입니다.
-- {{domxref("Document.onfullscreenerror")}}
-  - : {{event("fullscreenerror")}} 이벤트가 발생할 때 호출되는 코드를 나타내는 {{event("Event_handlers", "event handler")}} 입니다.
-- {{domxref("Document.onpaste")}} {{non-standard_inline}}
-  - : {{event("paste")}} 이벤트를 위한 이벤트 핸들링 코드를 나타냅니다.
-- {{domxref("Document.onreadystatechange")}}
-  - : {{event("readystatechange")}} 이벤트를 위한 이벤트 핸들링 코드를 나타냅니다.
-- {{domxref("Document.onselectionchange")}} {{experimental_inline}}
-  - : {{event("selectionchange")}} 이벤트가 발생할 때 호출되는 코드를 나타내는 {{event("Event_handlers", "event handler")}} 입니다.
-- {{domxref("Document.onvisibilitychange")}}
-  - : {{event("visibilitychange")}} 이벤트가 발생할 때 호출되는 코드를 나타내는 {{event("Event_handlers", "event handler")}} 입니다.
+`addEventListener()`를 사용하거나 이 인터페이스의 `oneventname` 속성에 이벤트 수신기를 할당하여 이러한 이벤트를 수신합니다.
+
+- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
+  - : 정적 {{HTMLElement("script")}} 요소가 스크립트 실행을 완료하면 발생합니다.
+- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
+  - : 정적 {{HTMLElement("script")}}가 실행을 시작하려고 할 때 발생합니다.
+- {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
+  - : 콘텐츠 보안 정책을 위반하면 발생합니다.
+- {{DOMxRef("Document/scroll_event", "scroll")}}
+  - : 문서 보기 또는 요소가 스크롤 되었을 때 발생합니다.
+- {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
+  - : 탭의 내용이 표시되거나 숨겨지면 발생합니다.
+- {{DOMxRef("Document/wheel_event","wheel")}}
+  - : 사용자가 포인팅 장치(일반적으로 마우스)에서 휠 버튼을 회전할 때 발생합니다.
 
 ### 사용하지 않는 속성
 

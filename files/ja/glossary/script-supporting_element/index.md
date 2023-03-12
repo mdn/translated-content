@@ -9,4 +9,4 @@ slug: Glossary/Script-supporting_element
 
 ## 技術リファレンス
 
-詳しくは{{SectionOnPage("/ja/docs/Web/HTML/Content_categories", "Script-supporting elements")}}を参照してください。
+詳しくは[透過的コンテンツモデル](/ja/docs/Web/HTML/Content_categories#%E9%80%8F%E9%81%8E%E7%9A%84%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%A2%E3%83%87%E3%83%AB)を参照してください。

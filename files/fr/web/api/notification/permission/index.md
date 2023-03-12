@@ -1,6 +1,6 @@
 ---
 title: Notification.permission
-slug: Web/API/notification/permission
+slug: Web/API/Notification/permission
 tags:
   - API
   - API Notifications

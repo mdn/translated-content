@@ -30,9 +30,9 @@ Les valeurs de ce type sont des chaînes. Ils peuvent prendre l'une des valeurs 
 - "newBackgroundTab"
   - : Ouvrez la sélection dans un nouvel onglet d'arrière-plan, en conservant l'onglet en cours au premier plan.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.OnInputEnteredDisposition")}}
+{{Compat}}
 
 > **Note :**
 >

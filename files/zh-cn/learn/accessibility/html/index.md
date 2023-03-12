@@ -1,7 +1,6 @@
 ---
-title: 'HTML: 为无障碍提供一个良好的基础'
+title: 'HTML：无障碍的良好基础'
 slug: Learn/Accessibility/HTML
-original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -13,9 +12,9 @@ original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
     <tr>
       <th scope="row">前提：</th>
       <td>
-        有一定的 HTML 基础 (可参阅
+        有一定的 HTML 基础（可参阅
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
-        >)，理解<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
+        >），理解<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
           >什么是无障碍</a
         >。
       </td>
@@ -374,15 +373,15 @@ document.onkeydown = function(e) {
 
 表单标签也很重要，可以让您了解您需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
 
-```html
+```html example-bad
 Fill in your name: <input type="text" id="name" name="name">
-```html
+```
 
 但是，这对于残疾用户来说并不是那么有用。在上面的示例中，没有任何内容将标签与表单输入明确关联。因此如果看不到它，请让用户明确该如何填写。如果您使用某些屏幕阅读器访问该屏幕，则只能按照“编辑文本”（“edit text”）的方式给出说明。
 
 以下是一个更好的例子：
 
-```html
+```html example-good
 <div>
   <label for="name">Fill in your name:</label>
   <input type="text" id="name" name="name">
@@ -526,13 +525,3 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 您现在应该精通编写大多数场合可访问的 HTML。我们的 WAI-ARIA 基础知识文章也将填补这些知识中的一些空白，但本文已经关注了此基础知识。接下来，我们将探索 CSS 和 JavaScript，以及无障碍如何受其好坏影响。
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## 在此模块
-
-- [什么是无障碍 (What is accessibility?)](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [无障碍的良好的基础 (HTML: A good basis for accessibility)](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍的最好练习 (CSS and JavaScript accessibility best practices)](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI_ARIA 基础 (WAI-ARIA basics)](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体的无障碍 (Accessible multimedia)](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端的无障碍 (Mobile accessibility)](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍问题的解决处理 (Accessibility troubleshooting)](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

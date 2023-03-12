@@ -15,7 +15,7 @@ translation_of: Web/SVG/Attribute/stroke-dashoffset
 {{SVGRef}}
 Атрибут **`stroke-dashoffset`** определяет сдвиг массива **dash array** относительно начального положения.
 
-> **Примечание:** **Сноска:** Атрибут `stroke-dashoffset` может использоваться как свойство CSS.
+> **Примечание:** Атрибут `stroke-dashoffset` может использоваться как свойство CSS.
 
 Как атрибут представления, он может применяться к любому элементу, но влияет только на следующие одиннадцать элементов: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 

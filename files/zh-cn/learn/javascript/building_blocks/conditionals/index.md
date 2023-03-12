@@ -257,7 +257,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-在这个例子里 `if(...)` 里的条件总为真，因为 7 (或者其它非零的数) 的值总是为真。这个条件实际意思是 "如果 x 等于 5, 或者 7 为真 — 它总是成立的". 这不是我们想要的逻辑，为了 让它正常工作你必须指定每个或**表达式**两边都是完整的检查：
+在这个例子里 `if(...)` 里的条件总为真，因为 7 (或者其他非零的数) 的值总是为真。这个条件实际意思是 "如果 x 等于 5, 或者 7 为真 — 它总是成立的". 这不是我们想要的逻辑，为了 让它正常工作你必须指定每个或**表达式**两边都是完整的检查：
 
 ```js
 if (x === 5 || x === 7 || x === 10 ||x === 20) {
@@ -620,13 +620,3 @@ window.addEventListener('load', updateCode);
 - [条件（三元）运算符引用](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## 本章目录
-
-- **在代码中做决定——条件语句**
-- [代码循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [函数——可复用代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [创建你自己的函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [函数返回值](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)
