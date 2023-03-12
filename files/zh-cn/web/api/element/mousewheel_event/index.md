@@ -68,7 +68,7 @@ _该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEven
 
 > **备注：** 在 macOS 上，滚动距离（以及 `detail` 的值）是根据加速滚动距离计算的。
 
-## wheelDelta, wheelDeltaX 和 wheelDeltaY 的值
+## wheelDelta、wheelDeltaX 和 wheelDeltaY 的值
 
 `wheelDelta` 属性值是一个抽象值，表示滚轮转动的距离。如果滚轮向用户旋转，则该值为正，否则为负。这意味着 delta 值的符号与 DOM Level 3 事件的 `wheel` 属性不同。然而，这些值的数量意义在不同的浏览器中也不相同。详见以下说明。
 
