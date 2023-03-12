@@ -31,7 +31,7 @@ _该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEven
 
 - {{DOMxRef("WheelEvent.deltaX")}} {{ReadOnlyInline}}
 
-  - : 返回一个表示水平滚动量的`双精度`浮点数。
+  - : 返回一个表示水平滚动量的双精度浮点数（`double`）。
 
 - {{DOMxRef("WheelEvent.deltaY")}} {{ReadOnlyInline}}
 
