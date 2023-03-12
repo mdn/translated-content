@@ -511,7 +511,7 @@ Firefox もサービスワーカーに関する便利なツールを実装し始
 ## 関連情報
 
 - [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/) (英語)
-- [The Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) (英語)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) (英語)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
 - [Service Workers 101 cheatsheet](sw101.png) をダウンロード (英語)
 - [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
