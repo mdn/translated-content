@@ -46,7 +46,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 웹사이트가 HTTP를 통한 연결을 수락하고 HTTPS로 리디렉션하는 경우, 방문자는 리디렉션되기 전에 먼저 사이트의 비암호화 버전과 통신할 것입니다. 예를 들어 방문자가 `http://www.foo.com/`을 입력하거나 심지어 그냥 foo.com을 입력하는 경우입니다.
 이는 중간자 공격의 기회를 만듭니다. 리디렉션을 악용하여 방문자를 원래 사이트의 보안 버전이 아닌 악의적인 사이트로 안내할 수 있습니다.
 
-HTTP Strict Transport Security 헤더는 브라우저가 HTTP를 사용하여 사이트를 로드해서는 안 되며 대신 HTTP를 사용하여 사이트에 액세스하려는 모든 시도를 HTTPS 요청으로 자동 변환해야 함을 알립니다.
+HTTP Strict Transport Security 헤더는 브라우저가 HTTP를 사용하여 사이트를 불러와서는 안 되며 대신 HTTP를 사용하여 사이트에 접근하려는 모든 시도를 HTTPS 요청으로 자동 변환해야 함을 알립니다.
 
 > **참고:** `Strict-Transport-Security` 헤더가 사이트가 HTTP를 통해서만 엑세스할 수 있다면 브라우저에 의해 **무시됩니다**.
 > 인증서 오류 없이 HTTPS를 통해 사이트에 액세스할 수 있다면 브라우저는 사이트가 HTTPS를 사용할 수 있음을 인식하고 `Strict-Transport-Security` 헤더를 준수합니다.
