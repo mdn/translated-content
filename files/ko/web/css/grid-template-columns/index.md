@@ -1,6 +1,8 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}
@@ -46,7 +48,7 @@ grid-template-columns: revert-layer;
 grid-template-columns: unset;
 ```
 
-### Values
+### 값
 
 - `none`
   - 명시적 그리드가 없음을 의미합니다. 모든 열은 암시적으로 생성되고 각 열의 크기는 {{cssxref("grid-auto-columns")}} 속성에 의해 결정됩니다.
@@ -91,21 +93,21 @@ grid-template-columns: unset;
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - 트랙 목록에서 반복되는 조각을 의미합니다. 반복 패턴을 나타내는 많은 수의 열을 보다 간결한 형태로 작성할 수 있습니다.
 
-- [`masonry`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
+- [`masonry`](/ko/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
   - masonry 값은 이 축이 masonry 알고리즘에 따라 배치되어야 함을 나타냅니다.
 
-- [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [`subgrid`](/ko/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
   - `subgrid` 값은 그리드가 해당 축에서 부모 그리드의 spanned 부분을 채택함을 나타냅니다. 그리드 행/열의 크기는 명시적으로 지정되지 않고 상위 그리드의 정의에서 가져옵니다.
 
 > **경고** `masonry` 값은 그리드 명세서의 3 단계에 있으며 현재 파이어 폭스의 flag에는 실험적인 기능만 구현되어 있습니다.
 >
 > `subgrid` 값은 그리드 명세서의 2 단계에 있으며 현재 Firefox 71 이상에서만 구현되어 있습니다.
 
-## Formal definition
+## 형식 정의
 
 {{cssinfo}}
 
-## Formal syntax
+## 형식 구문
 
 {{csssyntax}}
 
@@ -140,19 +142,19 @@ grid-template-columns: unset;
 }
 ```
 
-#### Result
+#### 결과
 
 {{EmbedLiveSample("Specifying_grid_column_sizes", "100%", "20px")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - 연관 CSS 속성: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
 - 그리드 레이아웃 안내서: [Basic concepts of grid layout - Grid Tracks](/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)
