@@ -71,7 +71,7 @@ Strict-Transport-Security 헤더가 브라우저에 전달될 때마다 사이�
 ## Strict Transport Security 프리로딩
 
 Google은 [HSTS 프리로딩 서비스](https://hstspreload.org/)를 관리하고 있습니다. 지침을 따르고 도메인을 성공적으로 제출하면 브라우저가 보안 연결을 통해서만 도메인에 연결되도록 할 수 있습니다.
-서비스가 Google에서 호스팅되는 동안 모든 브라우저는 이 프리로딩 목록을 사용합니다.
+서비스가 Google에서 호스팅되는 동안 모든 브라우저는 이 사전 로드 목록을 사용합니다.
 그러나 HSTS 사양의 일부가 아니므로 공식적인 것으로 취급해서는 안 됩니다.
 
 - Chrome의 HSTS 프리로딩 목록 관련 정보: <https://www.chromium.org/hsts>
