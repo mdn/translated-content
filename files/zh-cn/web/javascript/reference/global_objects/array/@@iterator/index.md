@@ -67,7 +67,7 @@ console.log(arrIter.next().value); // e
 
 ```js
 function logIterable(it) {
-  if (!(Symbol.iterator in it)) {
+  if (typeof it[Symbol.iterator] !== "function") {
     console.log(it, " is not an iterable object.");
     return;
   }
