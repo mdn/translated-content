@@ -765,15 +765,3 @@ En este punto ya deberías entender el lenguaje, cómo funciona en un nivel bás
 - [Aplicación de color a elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en la cabecera? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcando para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

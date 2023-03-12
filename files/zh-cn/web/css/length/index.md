@@ -19,7 +19,7 @@ slug: Web/CSS/length
 
 #### 相对长度单位
 
-相对长度代表着以其它距离为单位的一种尺寸。这个单位可以是指定字符的大小，[行高](/zh-CN/docs/Web/CSS/line-height)，或者是 {{glossary("viewport")}} 的大小。
+相对长度代表着以其他距离为单位的一种尺寸。这个单位可以是指定字符的大小，[行高](/zh-CN/docs/Web/CSS/line-height)，或者是 {{glossary("viewport")}} 的大小。
 
 ##### 字体相对长度
 

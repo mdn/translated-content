@@ -9,7 +9,7 @@ slug: Web/API/Element/clientTop
 
 El ancho del borde superior de un elemento en pixel. No incluye ni el *margin-top* , ni el *padding-top* . `clientTop` es de sólo lectura.
 
-Las aplicaciones "[Gecko](/es/Gecko)-based applications" implementan el uso de `clientTop` a partir de Gecko 1.9 ([Firefox 3](/es/Firefox_3),ver {{ Bug(111207) }}). Esta propiedad no está disponible en Firefox 2 o anteriores.
+Las aplicaciones "[Gecko](/es/Gecko)-based applications" implementan el uso de `clientTop` a partir de Gecko 1.9 ([Firefox 3](/es/Firefox_3),ver [Error 111207 en Firefox](https://bugzil.la/111207)). Esta propiedad no está disponible en Firefox 2 o anteriores.
 
 ## Sintaxis
 

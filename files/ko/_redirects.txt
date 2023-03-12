@@ -351,7 +351,7 @@
 /ko/docs/MDN/Contribute/Howto	/ko/docs/conflicting/MDN/Contribute
 /ko/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ko/docs/MDN/Contribute/Howto/Report_a_problem	/ko/docs/MDN/Community/Issues
-/ko/docs/MDN/Contribute/Howto/Tag	/ko/docs/MDN/Writing_guidelines/Howto/Tag
+/ko/docs/MDN/Contribute/Howto/Tag	/ko/docs/MDN/Writing_guidelines/Howto
 /ko/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars	/ko/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 /ko/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/ko/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 /ko/docs/MDN/Getting_started	/ko/docs/MDN/Community/Contributing/Getting_started
@@ -363,6 +363,7 @@
 /ko/docs/MDN/Guidelines/Does_this_belong_on_MDN	/ko/docs/MDN/Writing_guidelines/What_we_write
 /ko/docs/MDN/Kuma	/ko/docs/orphaned/MDN/Yari
 /ko/docs/MDN/Structures/API_references/API_reference_sidebars	/ko/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
+/ko/docs/MDN/Writing_guidelines/Howto/Tag	/ko/docs/MDN/Writing_guidelines/Howto
 /ko/docs/MDN/Yari	/ko/docs/orphaned/MDN/Yari
 /ko/docs/MDN/피드백	/ko/docs/MDN/Community
 /ko/docs/MDN_at_ten	/ko/docs/MDN/At_ten

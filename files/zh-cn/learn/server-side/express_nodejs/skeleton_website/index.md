@@ -29,7 +29,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 ## 概览
 
-本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其它代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
+本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其他代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
 
 以下内容介绍了应用生成器的用法，以及视图 / CSS 的一些不同选项。还介绍了骨架站点的组织结构。最后，我们将介绍站点的运行方法，从而对其进行验证。
 
@@ -295,7 +295,7 @@ var app = require('../app');
 
 > **备注：** `require()` 是一个全局的 node 函数，可将模块导入当前文件。这里使用相对路径指定 **app.js** 模块，并省略了 .**js** 扩展名（可选）。
 
-文件的其余部分先为 `app` 设置端口（环境变量中的预定义值或默认值 3000），再创建一个 HTTP 服务器，然后开始监听请求，报告服务器错误和连接信息。其它内容可暂时忽略（这里所有内容都是机器生成的模板），但感兴趣的话可以随时回来看看。
+文件的其余部分先为 `app` 设置端口（环境变量中的预定义值或默认值 3000），再创建一个 HTTP 服务器，然后开始监听请求，报告服务器错误和连接信息。其他内容可暂时忽略（这里所有内容都是机器生成的模板），但感兴趣的话可以随时回来看看。
 
 ### app.js
 

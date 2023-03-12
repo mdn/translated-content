@@ -24,7 +24,7 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 
 我们并不要求你立刻完整理解所有代码：你不需要借此学会 JavaScript，甚至不需要理解我们要求你编写的全部代码。当前只是概括地介绍一些抽象的概念，让你了解 JavaScript 的特性是如何协同工作的，以及获得编写 JavaScript 的一些感受。所有具体特性将在后续文章中详细介绍，如果你没有很快地全部理解它们，请不要担心！
 
-> **备注：** 可以看到，JavaScript 中许多代码特性和其它编程语言是一致的（函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。
+> **备注：** 可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。
 
 ## 像程序员一样思考
 
@@ -165,7 +165,7 @@ checkGuess();
 
 ### 运算符（Operator）
 
-JavaScript 运算符允许我们执行比较、做数学运算、连接字符串，以及其它类似的事情。
+JavaScript 运算符允许我们执行比较、做数学运算、连接字符串，以及其他类似的事情。
 
 请保存代码以免丢失，然后刷新浏览器页面，打开 [开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)。然后我们就可以尝试下文中的示例了：把下表中“示例”一列中的每一项都原封不动输入进来，每次输入完毕后都按下 <kbd>Return</kbd>/<kbd>Enter</kbd> ，可以看到返回的结果。
 

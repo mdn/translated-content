@@ -39,7 +39,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 有多种 SFTP 客户端。我们的示例使用的是 [FileZilla](https://filezilla-project.org/)，因为它免费，且可在 Windows、macOS 以及 Linux 上使用。要安装 FileZilla，请转到 [FileZilla 下载页面](https://filezilla-project.org/download.php?type=client)，点击下载按钮，然后以常规的方式通过安装文件安装它。
 
-> **备注：** 当然还有很多其它的选择。有关详细的信息，请参阅[发布工具](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost#发布工具)。
+> **备注：** 当然还有很多其他的选择。有关详细的信息，请参阅[发布工具](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost#发布工具)。
 
 打开 FileZilla 应用程序，你应该看到这样的界面：
 
@@ -77,7 +77,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 2. 在*站点管理其*窗口，点击*新建站点*按钮，然后填写站点名称为 **demozilla**。
 3. 将托管服务提供商提供的 SFTP 服务器地址填入**主机**字段。
 4. 在*登录类型*下拉框中选择*常规*，然后在相关的字段中填写提供的用户名和密码。
-5. 填写正确的端口号和其它信息。
+5. 填写正确的端口号和其他信息。
 
 窗口看起来应该像这样：
 
@@ -101,7 +101,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 ### 上传到服务器
 
-你应该记得，我们的主机提供商告诉我们，我们的文件必须存储在 `Public/htdocs`目录中。你需要在右侧窗格中导航到指定的目录。这个目录实际上是你网站的根目录——`index.html` 文件和其它的资源文件将存放在该目录中。
+你应该记得，我们的主机提供商告诉我们，我们的文件必须存储在 `Public/htdocs`目录中。你需要在右侧窗格中导航到指定的目录。这个目录实际上是你网站的根目录——`index.html` 文件和其他的资源文件将存放在该目录中。
 
 找到正确的远程目录来放置文件后，要将文件上传到服务器，请将它们从左侧窗格拖放到右侧窗格中：
 
@@ -155,9 +155,9 @@ GitHub 允许你通过 [GitHub pages](https://pages.github.com/)（gh-pages）�
 
 但是，值得注意的是，你也可以在使用自定义域名的情况下，在 GitHub 上托管网站。请参阅[配置 GitHub Pages 站点的自定义域](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site)以获取详细的指南。
 
-## 其它上传文件的方法
+## 其他上传文件的方法
 
-FTP 协议是发布网站的一种众所周知的方法，但不是唯一的方法。以下是其它一些可能性：
+FTP 协议是发布网站的一种众所周知的方法，但不是唯一的方法。以下是其他一些可能性：
 
 - **Web 界面**。作为远程文件上传服务前端的 HTML 界面。由你的托管服务提供。
 - **{{Glossary('WebDAV')}}**。是一个 {{Glossary('HTTP')}} 协议的扩展，允许更多的高级文件管理功能。

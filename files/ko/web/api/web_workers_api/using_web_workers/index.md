@@ -150,7 +150,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 > **참고:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).
 
-> **참고:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).
+> **참고:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ([Firefox bug 1177621](https://bugzil.la/1177621)).
 
 ### Spawning a shared worker
 

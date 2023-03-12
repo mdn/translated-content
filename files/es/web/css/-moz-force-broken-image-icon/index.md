@@ -48,4 +48,4 @@ img {
 
 ## Ver también
 
-- {{ Bug(58646) }}
+- [Error 58646 en Firefox](https://bugzil.la/58646)

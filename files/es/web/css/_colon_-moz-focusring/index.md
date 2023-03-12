@@ -35,4 +35,4 @@ Esta propiedad todavía no está definida en ninguna especificación, aunque fue
 
 ## Ver además
 
-- {{bug("418521")}}
+- [Error 418521 en Firefox](https://bugzil.la/418521)

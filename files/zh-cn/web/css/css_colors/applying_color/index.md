@@ -65,9 +65,9 @@ You can use the {{cssxref("border")}} shorthand property, which lets you configu
 - {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
   - : These let you color the edges of the border closest to to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
 
-### 其它方式
+### 其他方式
 
-CSS 并不是唯一支持颜色的 web 技术。同时还有其它支持颜色的图形技术。
+CSS 并不是唯一支持颜色的 web 技术。同时还有其他支持颜色的图形技术。
 
 - HTML [Canvas API](/zh-CN/docs/Web/API/Canvas_API)
   - : Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) to learn more.

@@ -46,7 +46,7 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 ## 注意
 
-取决于其它元素的布局情况，此元素可能不会完全滚动到顶端或底端。
+取决于其他元素的布局情况，此元素可能不会完全滚动到顶端或底端。
 
 ## 规范
 

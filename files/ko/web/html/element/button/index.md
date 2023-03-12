@@ -99,7 +99,7 @@ slug: Web/HTML/Element/button
   - : 페이지 로드 후, 이 버튼에 포커스가 위치해야 하는지 나타냅니다. 문서 내에서 **하나의 요소**만 `autofocus` 특성을 가질 수 있습니다.
 
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` disables this feature; see {{bug(654072)}}.
+  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` disables this feature; see [Firefox bug 654072](https://bugzil.la/654072).
 
 - {{htmlattrdef("disabled")}}
   - : 버튼과 사용자의 상호작용, 즉 누르거나 클릭하는 것을 막습니다.

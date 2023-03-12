@@ -51,7 +51,7 @@ Las transiciones y las animaciones CSS pueden usarse para animar las siguientes 
 | Propiedad                                                                   | Tipo de valor                                                                                            |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | {{ cssxref("background-color") }}                                | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("background-image") }}                                | solo degradado; no está implementado en Firefox (see {{ bug(536540) }})                           |
+| {{ cssxref("background-image") }}                                | solo degradado; no está implementado en Firefox (see [Error 536540 en Firefox](https://bugzil.la/536540))                           |
 | {{ cssxref("background-position") }}                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
 | {{ cssxref("background-size") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
 | {{ cssxref("border-color") }} (including sub-properties)         | {{cssxref("&lt;color&gt;")}}                                                                     |

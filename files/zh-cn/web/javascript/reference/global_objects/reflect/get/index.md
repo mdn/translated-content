@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 
 {{JSRef}}
 
-**`Reflect.get()`**方法与从 对象 (`target[propertyKey]`) 中读取属性类似，但它是通过一个函数执行来操作的。
+**`Reflect.get()`** 方法与从 对象 (`target[propertyKey]`) 中读取属性类似，但它是通过一个函数执行来操作的。
 
 ## 语法
 

@@ -49,7 +49,7 @@ Web Crypto API 提供了支持 `encrypt()` 和 `decrypt()` 操作的四种算法
 
 其中的 RSA-OAEP 算法是一种{{Glossary("public-key cryptography", "公钥加密系统")}}。
 
-其它三种算法则都是{{Glossary("Symmetric-key cryptography", "对称加密算法")}}，并且它们都是基于同一种基础加密，即 AES（Advanced Encryption Standard）。它们不同之处在于{{Glossary("Block cipher mode of operation", "模式")}}。Web Crypto API 支持以下三种 AES 模式：
+其他三种算法则都是{{Glossary("Symmetric-key cryptography", "对称加密算法")}}，并且它们都是基于同一种基础加密，即 AES（Advanced Encryption Standard）。它们不同之处在于{{Glossary("Block cipher mode of operation", "模式")}}。Web Crypto API 支持以下三种 AES 模式：
 
 - CTR（Counter Mode，计数器模式）
 - CBC (Cipher Block Chaining，密码块链接)

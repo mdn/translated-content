@@ -75,7 +75,7 @@ Je suis en train de créer un lien à [la page d'accueil de Mozilla](https://www
 
 ### Ajouter des informations d'assistance avec l'attribut title
 
-L'autre attribut qu'il est possible d'ajouter à un lien est `title` ; il est destiné à contenir des informations utiles supplémentaires à propos du lien, comme le type d'informations contenes dans la page ou ce qu'il faut savoir. Par exemple :
+L'autre attribut qu'il est possible d'ajouter à un lien est `title` ; il est destiné à contenir des informations utiles supplémentaires à propos du lien, comme le type d'informations contenues dans la page ou ce qu'il faut savoir. Par exemple :
 
 ```html
 <p>Je suis en train de créer un lien à
@@ -285,7 +285,7 @@ L'exemple terminé devrait finir par ressembler à quelque chose comme ce qui su
 
 ## Liens de courriel
 
-Il est possible de créer des liens ou des boutons qui, losrqu'ils sont cliqués, ouvrent un nouveau message de courriel sortant plutôt que de faire un lien vers une ressource ou une page. C'est fait en utilisant l'élément {{HTMLElement("a")}} et le schéma d'URL `mailto:`.
+Il est possible de créer des liens ou des boutons qui, lorsqu'ils sont cliqués, ouvrent un nouveau message de courriel sortant plutôt que de faire un lien vers une ressource ou une page. C'est fait en utilisant l'élément {{HTMLElement("a")}} et le schéma d'URL `mailto:`.
 
 Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto:` indique simplement l'adresse du destinataire voulu. Par exemple :
 
@@ -295,7 +295,7 @@ Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto
 
 Ceci donne un résultat qui ressemble à ceci : [Envoyer un courriel à nullepart](mailto:nowhere@mozilla.org).
 
-En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre {{htmlattrxref("href", "a")}} est simplement "mailto:"), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée. C'est souvent utile comme pour les liens "Partager" que lesquels les utilisateurs peuvent cliquer pour envoyer un email à l'adresse de leur choix.
+En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre {{htmlattrxref("href", "a")}} est simplement "mailto:"), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée. C'est souvent utile comme pour les liens "Partager" que lesquels les utilisateurs peuvent cliquer pour envoyer un e-mail à l'adresse de leur choix.
 
 ### Spécification des détails
 
@@ -305,7 +305,7 @@ Voici un exemple incluant cc (carbon copy), bcc (blind cc), subject (sujet) et b
 
 ```html
 <a href="mailto:nullepart@mozilla.org?cc=nom2@rapidtables.com&bcc=nom3@rapidtables.com&subject=L%27objet%20du%20courriel&body=Le%20corps%20du%20courriel">
-  Envoyer un mail avec copie, copie cachée, sujet et corps de message
+  Envoyer un e-mail avec copie, copie cachée, sujet et corps de message
 </a>
 ```
 

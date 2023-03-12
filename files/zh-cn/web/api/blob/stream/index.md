@@ -28,7 +28,7 @@ var stream = blob.stream();
 - 调用方法{{domxref("ReadableStream.getReader", "getReader()")}}，在返回的 stream 上获取一个对象，通过{{domxref("ReadableStreamDefaultReader")}}接口提供的{{domxref("ReadableStreamDefaultReader.read", "read()")}}方法读取 blob 对象的方法。
 - 调用返回 stream 对象的{{domxref("ReadableStream.pipeTo", "pipeTo()")}}方法将 blob 对象的数据传输到可写流。
 - 调用返回 stream 对象的{{domxref("ReadableStream.tee", "tee()")}}方法以准备可读流。该方法会返回一个数组，该数组包含两个新的 `ReadableStream` 对象，每个对象都会返回 `Blob`的内容。
-- 调用返回 stream 对象的{{domxref("ReadableStream.pipeThrough", "pipeThrough()")}}方法，通过一个{{domxref("TransformStream")}}对象或其它任意可读可写对传输流对象。
+- 调用返回 stream 对象的{{domxref("ReadableStream.pipeThrough", "pipeThrough()")}}方法，通过一个{{domxref("TransformStream")}}对象或其他任意可读可写对传输流对象。
 
 ## 标准
 

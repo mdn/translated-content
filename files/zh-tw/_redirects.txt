@@ -445,7 +445,7 @@
 /zh-TW/docs/MDN/Contribute/Howto/Do_a_technical_review	/zh-TW/docs/MDN/Contribute
 /zh-TW/docs/MDN/Contribute/Howto/Do_an_editorial_review	/zh-TW/docs/MDN/Contribute
 /zh-TW/docs/MDN/Contribute/Howto/Set_the_summary_for_a_page	/zh-TW/docs/MDN/Contribute
-/zh-TW/docs/MDN/Contribute/Howto/Tag	/zh-TW/docs/MDN/Writing_guidelines/Howto/Tag
+/zh-TW/docs/MDN/Contribute/Howto/Tag	/zh-TW/docs/MDN/Writing_guidelines/Howto
 /zh-TW/docs/MDN/Contribute/Howto/編輯審查	/zh-TW/docs/MDN/Contribute
 /zh-TW/docs/MDN/Contribute/Tools	https://github.com/mdn/yari/tree/main/docs
 /zh-TW/docs/MDN/Contribute/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
@@ -458,6 +458,7 @@
 /zh-TW/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /zh-TW/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /zh-TW/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
+/zh-TW/docs/MDN/Writing_guidelines/Howto/Tag	/zh-TW/docs/MDN/Writing_guidelines/Howto
 /zh-TW/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-TW/docs/MDN_at_ten	/zh-TW/docs/MDN/At_ten
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/

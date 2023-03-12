@@ -1718,6 +1718,10 @@
     "modified": "2020-09-30T15:30:34.436Z",
     "contributors": ["chrisdavidmills", "wbamberg", "Netaras"]
   },
+  "MDN/Writing_guidelines/Howto": {
+    "modified": "2019-03-18T20:41:26.193Z",
+    "contributors": ["alattalatta", "wbamberg", "minwook-shin", "plzfday"]
+  },
   "MDN/Writing_guidelines/Howto/Creating_moving_deleting": {
     "modified": "2019-03-23T23:13:39.002Z",
     "contributors": [
@@ -1729,10 +1733,6 @@
       "AlwaysOnce",
       "KwanHong_Lee66"
     ]
-  },
-  "MDN/Writing_guidelines/Howto/Tag": {
-    "modified": "2019-03-18T20:41:26.193Z",
-    "contributors": ["alattalatta", "wbamberg", "minwook-shin", "plzfday"]
   },
   "MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars": {
     "modified": "2020-09-30T12:56:35.846Z",
