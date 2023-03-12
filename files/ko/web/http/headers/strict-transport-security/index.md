@@ -61,7 +61,7 @@ Strict Transport Security는 이 문제를 해결합니다. HTTPS를 사용하�
 
 ### 브라우저가 처리하는 방법
 
-HTTPS를 사용하여 사이트에 처음으로 액세스하고 `Strict-Transport-Security` 헤더를 반환하면 브라우저가 이 정보를 기록하고, 이후에 HTTP를 사용하여 사이트를 로드하려고 시도할 때 자동으로 HTTPS를 대신 사용합니다.
+HTTPS를 사용하여 사이트에 처음으로 접근하고 `Strict-Transport-Security` 헤더를 반환하면 브라우저가 이 정보를 기록하고, 이후에 HTTP를 사용하여 사이트를 로드하려고 시도할 때 자동으로 HTTPS를 대신 사용합니다.
 
 `Strict-Transport-Security` 헤더에 지정된 만료 시간이 경과하면 HTTP를 통해 사이트를 로드하려는 다음 시도는 자동으로 HTTPS를 사용하지 않고 정상적으로 진행됩니다.
 
