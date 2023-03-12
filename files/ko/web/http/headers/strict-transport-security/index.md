@@ -79,7 +79,7 @@ Google은 [HSTS 프리로딩 서비스](https://hstspreload.org/)를 관리하�
 
 ## 예제
 
-현재와 미래의 모든 하위 도메인은 1년의 `max-age` 동안 HTTPS가 됩니다. 이는 HTTP를 통해서만 제공될 수 있는 페이지 또는 하위 도메인에 대한 액세스를 차단합니다.
+현재와 미래의 모든 하위 도메인은 1년의 `max-age` 동안 HTTPS가 됩니다. 이는 HTTP를 통해서만 제공될 수 있는 페이지 또는 하위 도메인에 대한 접근을 차단합니다.
 
 ```http
 Strict-Transport-Security: max-age=31536000; includeSubDomains
