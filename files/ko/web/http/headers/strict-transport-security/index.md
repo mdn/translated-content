@@ -35,7 +35,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 ## 지시어
 
 - `max-age=<expire-time>`
-  - : HTTPS를 통해서만 사이트에 액세스할 수 있음을 브라우저가 기억해야 하는 시간(초)입니다.
+  - : HTTPS를 통해서만 사이트에 접근할 수 있음을 브라우저가 기억해야 하는 시간(초)입니다.
 - `includeSubDomains` {{optional_inline}}
   - : 이 선택적 매개변수가 지정된 경우, 이 규칙은 사이트의 모든 하위 도메인에도 적용됩니다.
 - `preload` {{optional_inline}} {{non-standard_inline}}
