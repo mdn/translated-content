@@ -1,13 +1,13 @@
 ---
 title: x-ms-format-detection
-slug: Web/HTML/Global_attributes/x-ms-format-detection
+slug: orphaned/Web/HTML/Global_attributes/x-ms-format-detection
 tags:
   - Attribut
   - HTML
   - Non-standard
   - Reference
 translation_of: Web/HTML/Global_attributes/x-ms-format-detection
-original_slug: Web/HTML/Attributs_universels/x-ms-format-detection
+original_slug: Web/HTML/Global_attributes/x-ms-format-detection
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}

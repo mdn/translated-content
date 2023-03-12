@@ -1,12 +1,12 @@
 ---
 title: 'TypeError: can''t access dead object'
-slug: Web/JavaScript/Reference/Errors/Dead_object
+slug: orphaned/Web/JavaScript/Reference/Errors/Dead_object
 tags:
   - Erreurs
   - JavaScript
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Dead_object
-original_slug: Web/JavaScript/Reference/Erreurs/Dead_object
+original_slug: Web/JavaScript/Reference/Errors/Dead_object
 ---
 
 {{JSSidebar("Errors")}}

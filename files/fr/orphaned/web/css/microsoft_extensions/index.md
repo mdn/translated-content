@@ -1,12 +1,12 @@
 ---
 title: Extensions CSS de Microsoft
-slug: Web/CSS/Microsoft_Extensions
+slug: orphaned/Web/CSS/Microsoft_Extensions
 tags:
   - CSS
   - Non-standard
   - Reference
 translation_of: Web/CSS/Microsoft_Extensions
-original_slug: Web/CSS/Extensions_CSS_Microsoft
+original_slug: Web/CSS/Microsoft_Extensions
 ---
 
 {{CSSRef}}

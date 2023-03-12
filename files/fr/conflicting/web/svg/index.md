@@ -1,11 +1,11 @@
 ---
 title: Sources des compatibilités
-slug: Web/SVG/Compatibility_sources
+slug: conflicting/Web/SVG
 tags:
   - Compatibilité
   - SVG
 translation_of: Web/SVG/Compatibility_sources
-original_slug: Web/SVG/Sources_compatibilite
+original_slug: Web/SVG/Compatibility_sources
 ---
 
 Les sources suivantes sont utilisées pour les tableaux de compatibilités des éléments SVG et de leurs attributs :

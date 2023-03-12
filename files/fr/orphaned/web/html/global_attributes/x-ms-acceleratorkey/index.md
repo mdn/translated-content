@@ -1,13 +1,13 @@
 ---
 title: x-ms-acceleratorkey
-slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
+slug: orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
 tags:
   - Attribut
   - HTML
   - Non-standard
   - Reference
 translation_of: Web/HTML/Global_attributes/x-ms-acceleratorkey
-original_slug: Web/HTML/Attributs_universels/x-ms-acceleratorkey
+original_slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}

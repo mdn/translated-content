@@ -1,10 +1,11 @@
 ---
 title: SVGMatrix
-slug: Web/API/SVGMatrix
+slug: conflicting/Web/API/DOMMatrix
 tags:
   - Matrice
   - Reference
 translation_of: Web/API/SVGMatrix
+original_slug: Web/API/SVGMatrix
 ---
 
 ## Interface SVG matrix

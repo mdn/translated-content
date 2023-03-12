@@ -1,8 +1,8 @@
 ---
 title: Différences entre les navigateurs
-slug: Web/API/XSLTProcessor/Browser_Differences
+slug: orphaned/Web/API/XSLTProcessor/Browser_Differences
 translation_of: Web/API/XSLTProcessor/Browser_Differences
-original_slug: XSLT_dans_Gecko/Différences_entre_les_navigateurs
+original_slug: Web/API/XSLTProcessor/Browser_Differences
 ---
 
 1. [Introduction](/fr/docs/XSLT_dans_Gecko)

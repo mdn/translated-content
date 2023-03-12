@@ -1,6 +1,6 @@
 ---
 title: Tableau (Array)
-slug: Glossary/array
+slug: Glossary/Array
 tags:
   - Encodage
   - Glossaire

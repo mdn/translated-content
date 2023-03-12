@@ -1,7 +1,6 @@
 ---
 title: Comparaison entre Reflect et les méthodes d'Object
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
 tags:
   - Aperçu
   - Intermédiaire
@@ -11,7 +10,7 @@ tags:
 translation_of: >-
   Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
 original_slug: >-
-  Web/JavaScript/Reference/Objets_globaux/Reflect/Comparaison_entre_Reflect_et_les_méthodes_Object
+  Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
 ---
 
 {{jssidebar}}

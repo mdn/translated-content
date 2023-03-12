@@ -1,6 +1,6 @@
 ---
 title: '<button> : l''élément représentant un bouton'
-slug: Web/HTML/Element/Button
+slug: Web/HTML/Element/button
 tags:
   - Element
   - Forms

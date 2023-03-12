@@ -1,6 +1,6 @@
 ---
 title: '-ms-high-contrast'
-slug: Web/CSS/@media/-ms-high-contrast
+slug: orphaned/Web/CSS/@media/-ms-high-contrast
 tags:
   - '@media'
   - CSS
@@ -8,7 +8,7 @@ tags:
   - Non-standard
   - Reference
 translation_of: Web/CSS/@media/-ms-high-contrast
-original_slug: Web/CSS/-ms-high-contrast
+original_slug: Web/CSS/@media/-ms-high-contrast
 ---
 
 {{CSSRef}}{{Non-standard_header}}

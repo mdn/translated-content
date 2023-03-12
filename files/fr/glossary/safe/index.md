@@ -1,6 +1,6 @@
 ---
 title: Sécurisée
-slug: Glossary/safe
+slug: Glossary/Safe
 tags:
   - Glossaire
   - Mécanismes web

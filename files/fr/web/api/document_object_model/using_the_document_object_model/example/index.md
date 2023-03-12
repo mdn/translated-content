@@ -1,13 +1,13 @@
 ---
 title: Exemple
-slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
+slug: Web/API/Document_object_model/Using_the_Document_Object_Model/Example
 tags:
   - API
   - DOM
   - Débutant
   - Exemples
 translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
-original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple
+original_slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
 ---
 
 ```html

@@ -1,12 +1,13 @@
 ---
 title: ime-mode
-slug: Web/CSS/ime-mode
+slug: orphaned/Web/CSS/ime-mode
 tags:
   - CSS
   - Obsolete
   - Propriété
   - Reference
 translation_of: Web/CSS/ime-mode
+original_slug: Web/CSS/ime-mode
 ---
 
 {{CSSRef}}{{deprecated_header}}
