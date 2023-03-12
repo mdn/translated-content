@@ -11,7 +11,7 @@ slug: Web/API/Element/mousewheel_event
 
 ## 语法
 
-在诸如 `addEventListener()` 的方法中使用事件名称，或设置事件处理程序属性。
+在诸如 `addEventListener()` 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("mousewheel", (event) => {});
