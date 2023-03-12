@@ -66,7 +66,7 @@ HTTPS를 사용하여 사이트에 처음으로 접근하고 `Strict-Transport-S
 `Strict-Transport-Security` 헤더에 지정된 만료 시간이 경과하면 HTTP를 통해 사이트를 불러오려는 다음 시도는 자동으로 HTTPS를 사용하지 않고 정상적으로 진행됩니다.
 
 Strict-Transport-Security 헤더가 브라우저에 전달될 때마다 사이트의 만료 시간을 업데이트하기 때문에 사이트는 정보를 새로 고칠 수 있고, 만료되는 것을 방지할 수 있습니다.
-엄격 전송 보안을 비활성화해야 하는 경우 `max-age`를 0(https 연결 종료)으로 설정하면 `Strict-Transport-Security` 헤더가 즉시 만료되어 http를 통한 액세스가 허용됩니다.
+엄격 전송 보안을 비활성화해야 하는 경우 `max-age`를 0(https 연결 종료)으로 설정하면 `Strict-Transport-Security` 헤더가 즉시 만료되어 http를 통한 접근이 허용됩니다.
 
 ## Strict Transport Security 프리로딩
 
