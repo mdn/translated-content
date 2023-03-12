@@ -21,7 +21,7 @@ CSS セレクターは、CSS ルール (CSS Rule) の最初の部分です。CSS
 
 他の記事を読むと、対象の選択方法がセレクターによって異なることに気づくかもしれません。例えば、`h1` は HTML 要素で選択する一方 `.special` はクラスで選択します。
 
-セレクターは CSS セレクター仕様で定義されます。ほとんどのセレクターは [Level 3 Selectors specification](https://www.w3.org/TR/selectors-3/) や  [Level 4 Selectors specification](https://www.w3.org/TR/selectors-4/) で定義されています。CSS の他の部分と同様に、セレクターが機能するにはブラウザーのサポートが必要ですが、どちらも成熟した仕様なのでブラウザーのサポートも充実しています。
+セレクターは CSS セレクター仕様で定義されます。ほとんどのセレクターは [Level 3 Selectors specification](https://www.w3.org/TR/selectors-3/) や [Level 4 Selectors specification](https://www.w3.org/TR/selectors-4/) で定義されています。CSS の他の部分と同様に、セレクターが機能するにはブラウザーのサポートが必要ですが、どちらも成熟した仕様なのでブラウザーのサポートも充実しています。
 
 ## セレクター一覧
 
