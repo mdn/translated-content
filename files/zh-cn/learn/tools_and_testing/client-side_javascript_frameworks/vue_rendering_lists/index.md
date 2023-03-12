@@ -67,7 +67,7 @@ export default {
 };
 ```
 
-现在我们有了一个列表，可以用 `v-for` 去展示它们了。指令的作用方式和元素的属性类似，就 `v-for` 而言，它类似 JavaScript 中的 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环——`v-for="item in items"` — `items` 是你要迭代的列表， `item` 是数组中当前元素的引用。
+现在我们有了一个列表，可以用 `v-for` 去展示它们了。指令的作用方式和元素的属性类似，就 `v-for` 而言，它类似 JavaScript 中的 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环——`v-for="item in items"`——`items` 是你要迭代的列表，`item` 是数组中当前元素的引用。
 
 `v-for` 获取每个迭代的元素，并渲染它和它的子元素。在我们的例子中，我们用 `<li>` 的形式展示每一个待办事项，接下来我们会通过每个待办事项传递数据到其对应的 `ToDoItem` 组件。
 
