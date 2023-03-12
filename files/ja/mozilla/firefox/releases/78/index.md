@@ -52,7 +52,7 @@ Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex e
   - [Unicode property escapes](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) ({{bug(1361876)}})
   - [名前付きキャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) ({{bug(1362154)}})
 
-- 2020 年中頃の [WebIDL 仕様書の変更](https://github.com/heycam/webidl/pull/357) により、[`Symbol.toStringTag` プロパティをすべての DOM プロトタイプオブジェクトに追加しました](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#toStringTag_available_on_all_DOM_prototype_objects) ({{bug(1277799)}})。
+- 2020 年中頃の [WebIDL 仕様書の変更](https://github.com/whatwg/webidl/pull/357) により、[`Symbol.toStringTag` プロパティをすべての DOM プロトタイプオブジェクトに追加しました](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#toStringTag_available_on_all_DOM_prototype_objects) ({{bug(1277799)}})。
 - {{jsxref("WeakMap")}} オブジェクトのガベージコレクションを改良しました。`WeakMaps` を徐々にマークするようになりました ({{bug(1167452)}})。
 
 ### API
