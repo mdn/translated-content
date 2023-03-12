@@ -267,7 +267,73 @@ Si eso no es posible, otra forma es:
 Sin embargo, si se trata de una solicitud que desencadena una verificación previa, debido a la presencia de la cabecera de autorización en la solicitud, no podrá evitar la limitación siguiendo los pasos descritos anteriormente. Y no podrá evitarla en absoluto a menos que tenga control sobre el servidor al que se realiza la solicitud.
 
 ### Solicitudes con credenciales
+
+> **Nota:** Cuando se realicen peticiones con credenciales a un dominio diferente, se seguirán aplicando las políticas de cookies de terceros. La política siempre se aplica independientemente de cualquier configuración en el servidor y el cliente, como se describe en este capítulo.
+
+La capacidad más interesante expuesta por {{domxref("XMLHttpRequest")}} o [Fetch](/es/docs/Web/API/Fetch_API) y CORS es la capacidad de hacer peticiones "con credenciales" que son conscientes de las [cookies HTTP](/es/docs/Web/HTTP/Cookies) y de la información de autentificación HTTP. Por defecto, en las invocaciones `XMLHttpRequest` o [Fetch](/es/docs/Web/API/Fetch_API) de origen cruzado, los navegadores **no** enviarán credenciales. Debe establecerse un indicador específico en el objeto `XMLHttpRequest` o en el constructor {{domxref("Request")}} cuando se invoca.
+
+En este ejemplo, el contenido cargado originalmente desde `https://foo.example` hace una simple petición GET a un recurso en `https://bar.other` que establece Cookies. El contenido en foo.example podría contener JavaScript como este:
+
+```js
+const invocation = new XMLHttpRequest();
+const url = "https://bar.other/resources/credentialed-content/";
+
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
+    invocation.withCredentials = true;
+    invocation.onreadystatechange = handler;
+    invocation.send();
+  }
+}
+```
+
+La línea 7 muestra la bandera en {{domxref("XMLHttpRequest")}} que debe establecerse para realizar la invocación con Cookies, concretamente el valor booleano en `withCredentials`. Por defecto, la invocación se realiza sin Cookies. Dado que se trata de uns simple petición GET, no se comprueba previamente, pero el navegador rechazará cualquier respuesta que no tenga la cabecera {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`, y **no** pondrá la respuesta a disposición del contenido web invocador.
+
+![Diagram of a simple GET request with Access-Control-Allow-Credentials](cred-req-updated.png)
+
+He aquí un ejemplo de intercambio entre cliente y servidor:
+
+```http
+GET /resources/credentialed-content/ HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+Referer: https://foo.example/examples/credential.html
+Origin: https://foo.example
+Cookie: pageAccess=2
+
+HTTP/1.1 200 OK
+Date: Mon, 01 Dec 2008 01:34:52 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Set-Cookie: pageAccess=3; expires=Wed, 31-Dec-2008 01:34:53 GMT
+Vary: Accept-Encoding, Origin
+Content-Encoding: gzip
+Content-Length: 106
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+Content-Type: text/plain
+
+[text/plain payload]
+```
+
+Aunque la línea 10 contiene la Cookie destinada al contenido en `https://bar.other`, si bar.other no respondiera con un {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (línea 16), la respuesta sería ignorada y no se pondría a disposición del contenido web.
+
 #### Solicitudes de verificación previa y credenciales
+
+La solicitudes CORS de verificación previa nunca deben incluir credenciales. La respuesta a una solicitud de verificación previa debe especificar `Access-Control-Allow-Credentials: true` para indicar que la solicitud real se puede realizar con credenciales.
+
+> **Nota:** Algunos servicios de autenticación de empresas exigen que se envíen certificados de cliente TLS en las solicitudes de verificación previa, lo que contraviene la especificación Fetch.
+
+Firefox 87 permite activar este comportamiento no conforme estableciendo la preferencia: network.cors_preflight.allow_client_cert` to `true` ([Firefox bug 1511151](https://bugzil.la/1511151)). Actualmente, los navegadores basados en Chromium siempre envían certificados TLS de cliente en las solicitudes CORS verificadas previamente ([Chrome bug 775438](https://crbug.com/775438)).
+        
 #### Solicitudes con credenciales y comodines
 #### Cookies de terceros
 ## Las cabeceras de respuesta HTTP
