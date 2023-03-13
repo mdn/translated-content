@@ -164,7 +164,7 @@ mySet2.forEach((value) => {
 // 4
 ```
 
-### Реализация базовых операций набора
+### Реализация базовых операций Set
 
 ```js
 function isSuperset(set, subset) {
