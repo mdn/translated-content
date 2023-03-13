@@ -284,7 +284,7 @@ console.assert(set.size === array.length);
 
 ## Смотрите также
 
-- [Заполнение `Set` в `core-js`](https://github.com/zloirock/core-js#set)
+- [Полифил `Set` в `core-js`](https://github.com/zloirock/core-js#set)
 - [map](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
