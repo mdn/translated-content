@@ -1,38 +1,43 @@
 ---
-title: Fundamental Layout Comprehension
+title: 作业：基本布局理解
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
 
 {{LearnSidebar}}
+{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-如果您已经完成了这个模块的学习，那么您将已经学习了今天进行 CSS 布局以及使用旧的 CSS 所需的基本知识。
+如果你已经完成了本模块的学习，那么你就已经掌握了今天进行 CSS 布局所需要的基本知识，并且也可以使用旧的 CSS。这个任务将通过使用各种技术开发一个简单的网页布局来测试你的一些知识。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">任务需知：</th>
-      <td><p>在尝试此评估之前，您应该已经阅读了本模块中的所有文章。</p></td>
+      <td><p>在尝试此评估之前，你应该已经阅读了本模块中的所有文章。</p></td>
     </tr>
     <tr>
       <th scope="row">任务目标：</th>
-      <td><p>测试您对本单元所涵盖的基本布局技能的理解与掌握应用。</p></td>
+      <td><p>测试对 CSS 弹性盒、栅格、浮动和定位布局方法的基本理解。</p></td>
     </tr>
   </tbody>
 </table>
 
-## 项目简介
+## 从这里开始
 
-我们已经为你提供了一些原始的 html、基本的 css 文件和图像——现在你需要设计一个跟下面图片相似的布局页面。![](layout-task-complete.png)
+你可以在[这里](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension)下载基本的 HTML、CSS 和六张图片素材。
 
-### 基本步骤
+将 HTML 文档和样式表文件保存到你自己计算机的目录中，并将图像添加到名为 `images` 的文件夹中，在浏览器中打开 `index.html` 文件应该会提供一个具有基本样式但没有布局的页面，该页面应该类似下面所示的图像。
 
-你可以在这下载基本的 html css 和图片素材 [here](https://github.com/mdn/learning-area/tree/master/css/css-layout/fundamental-layout-comprehension).
-
-将 HTML 文档和 css 保存到你自己计算机的目录中，并将图像添加到名为 images 的文件夹中，在浏览器中打开 index.html 文件应该会给您提供一个具有基本样式但没有布局的页面，该页面应该类似下面所示的图像。
+![布局任务的起点。这些元素没有被整齐地排列。有一个网站的标题，上面是一个黑色的导航条，有5个链接平齐在左边，后面是博客文章的标题和文章内容。在博客标题和博客内容之间，有一张照片是平齐在左边。](layout-task-start.png)
 
 此页面开始于浏览器在正常流中显示的布局的所有内容。
 
-![](layout-task-start.png)
+另外，你可以使用像 [Glitch](https://glitch.com/) 这样的网站来做评估，把 HTML 和 CSS 代码粘贴进去。注意，如果你使用在线编辑器，你将需要上传图片并替换 `src` 属性中的值，以指向新的图片位置。如果你使用的在线编辑器没有单独的 CSS 面板，可以随意将其放在文档头部的 `<style>` 元素中。
+
+> **备注：** 如果你卡住了，向我们请求协助——你可以在页面底部的[评估或更多帮助](#评估或更多帮助)获取指引。
+
+## 项目简介
+
+我们已经为你提供了一些原始的 HTML、基本的 CSS 文件和图像——现在你需要设计布局页面。
 
 ### 目标
 
@@ -56,3 +61,5 @@ slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ## 评估
 
 如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。如果你是自学，可以很容易地在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) 或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
+
+{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
