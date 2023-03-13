@@ -5,62 +5,58 @@ slug: Learn/JavaScript/Building_blocks/Events
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-Events are things that happen in the system you are programming, which the system tells you about so your code can react to them.
+Los eventos son cosas que pasan en el sistema que estás programando, el cual se encarga de avisarte para que tu código pueda hacer algo al respecto.
 
-For example, if the user clicks a button on a webpage, you might want to react to that action by displaying an information box.
-In this article, we discuss some important concepts surrounding events, and look at how they work in browsers.
-This won't be an exhaustive study; just what you need to know at this stage.
+Por ejemplo, si el usuario hace click en el botón de una página web, puede que quieras reaccionar a esa acción y mostrar una tarjeta con información.
+En este artículo vamos a discutir algunos conceptos importantes sobre los eventos y cómo funcionan en el navegador.
+Este no será un estudio exhaustivo, solo veremos lo que necesitas saber en esta etapa.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">Pre-requisitos:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
-          >JavaScript first steps</a
+	Conocimientos básicos de informática, entendimiento básico de HTML y CSS, <a href="/es/docs/Learn/JavaScript/First_steps"
+          >Primeros pasos con JavaScript</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Objetivo:</th>
       <td>
-        To understand the fundamental theory of events, how they work in
-        browsers, and how events may differ in different programming
-        environments.
-      </td>
+Entender la teoría fundamental sobre los eventos, cómo funcionan en el navegador y cómo los eventos son diferentes según el entorno de programación.</td>
     </tr>
   </tbody>
 </table>
 
-## What is an event?
+## ¿Qué es un evento?
 
-Events are things that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs.
-Events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window.
-There are many different types of events that can occur.
+Los eventos son cosas que suceden en el sistema que estás programando. El sistema se encarga de producir una señal de cierto tipo cuando un evento ocurre, y proporciona un mecanismo para que una acción se lleve a cabo (ejecutar código) de forma automática cuando el evento ocurra.
+Los eventos se lanzan dentro de la ventana del navegador y usualmente están asociados a un elemento en específico dentro de dicha ventana. Esto puede ser un solo elemento, un grupo de elementos, el documento HTML cargado la pestaña actual, o la ventana del navegador en su totalidad.
+Existen distintos tipos de eventos que pueden ocurrir.
 
-For example:
+Por ejemplo:
 
-- The user selects, clicks, or hovers the cursor over a certain element.
-- The user chooses a key on the keyboard.
-- The user resizes or closes the browser window.
-- A web page finishes loading.
-- A form is submitted.
-- A video is played, paused, or ends.
-- An error occurs.
+- El usuario selecciona, hace click o pasa el ratón por encima de cierto elemento.
+- El usuario presiona una tecla del teclado.
+- El usuario redimensiona o cierra la ventana del navegador.
+- Una página web terminó de cargarse.
+- Un formulario fue enviado.
+- Un vídeo se reproduce, se pausa o termina.
+- Ocurrió un error.
 
-You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be fired.
+A partir de esto (y dando un vistazo a la [referencia de eventos](/es/docs/Web/Events) de MDN) puedes observar que existen **muchos** eventos que pueden ser lanzados.
 
-To react to an event, you attach an **event handler** to it. This is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires.
-When such a block of code is defined to run in response to an event, we say we are **registering an event handler**.
-Note: Event handlers are sometimes called **event listeners** — they are pretty much interchangeable for our purposes, although strictly speaking, they work together.
-The listener listens out for the event happening, and the handler is the code that is run in response to it happening.
+Para reaccionar a un evento, puedes asociarle un **manejador de eventos**. Esto es un bloque de código (normalmente una función de JavaScript que tú como programador creas) que se ejecuta cuando el evento ocurre.
+Cuando uno de estos bloques de código se configura para ejecutarse en respuesta de un evento, decimos que estamos **registrando un manejador de evento**.
+Nota: Los manejador de eventos a veces son llamados **detectores de eventos**. Estos términos, para lo que nos concierne justo ahora, son intercambiables, aunque hablando de forma estricta, hacen referencia  a dos mecanismos que trabajan juntos.
+Los detectores de eventos están pendientes a que ocurra un evento, mientras que el manejador es el código que se ejecuta en respuesta del evento.
 
-> **Note:** Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.
+> **Nota:** Los eventos en la web no son parte del núcleo del lenguaje JavaScript, éstos están definidos como parte de las APIs del navegador.
 
-### An example: handling a click event
+### Un ejemplo: manejando un evento de click
 
-In the following example, we have a single {{htmlelement("button")}} in the page:
+En el siguiente ejemplo, tenemos un único {{htmlelement("button")}} en la página:
 
 ```html
 <button>Change color</button>
@@ -72,7 +68,7 @@ button {
 }
 ```
 
-Then we have some JavaScript. We'll look at this in more detail in the next section, but for now we can just say: it adds an event handler to the button's `"click"` event, and the handler reacts to the event by setting the page background to a random color:
+Ahora tenemos algo de JavaScript. Veremos esto más a detalle en la siguiente sección pero, por ahora, nos basta decir que: agrega un manejador de evento al evento `"click"` del botón, y el manejador reacciona al evento estableciendo un color de fondo aleatorio en la página:
 
 ```js
 const btn = document.querySelector("button");
@@ -87,15 +83,15 @@ btn.addEventListener("click", () => {
 });
 ```
 
-The example output is as follows. Try clicking the button:
+La salida del ejemplo es de la siguiente forma. Intenta hacer click en el botón:
 
 {{ EmbedLiveSample('An example: handling a click event', '100%', 200, "", "") }}
 
-## Using addEventListener()
+## Utilizando addEventListener()
 
-As we saw in the last example, objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, and this is the recommended mechanism for adding event handlers.
+Como pudimos ver en el anterior ejemplo, los objetos que pueden lanzar eventos tienen el método {{domxref("EventTarget/addEventListener", "addEventListener()")}}, y este es el mecanismo recomendado para registrar manejadores de eventos.
 
-Let's take a closer look at the code from the last example:
+Ahora veamos más de cerca el código del ejemplo anterior:
 
 ```js
 const btn = document.querySelector("button");
@@ -110,12 +106,13 @@ btn.addEventListener("click", () => {
 });
 ```
 
-The HTML {{HTMLElement("button")}} element will fire an event when the user clicks the button. So it defines an `addEventListener()` function, which we are calling here. We're passing in two parameters:
+El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario hace click sobre él. Entonces define la función `addEventListener()` que estamos llamando aquí. Le estamos pasando dos parámetros:
 
-- the string `"click"`, to indicate that we want to listen to the click event. Buttons can fire lots of other events, such as [`"mouseover"`](/en-US/docs/Web/API/Element/mouseover_event) when the user moves their mouse over the button, or [`"keydown"`](/en-US/docs/Web/API/Element/keydown_event) when the user presses a key and the button is focused.
-- a function to call when the event happens. In our case, the function generates a random RGB color and sets the [`background-color`](/en-US/docs/Web/CSS/background-color) of the page [`<body>`](/en-US/docs/Web/HTML/Element/body) to that color.
+- la cadena `"click"`, para indicar que queremos detectar el evento de click.
+Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/en-US/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
+- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/en-US/docs/Web/HTML/Element/body) a ese color.
 
-It is fine to make the handler function a separate named function, like this:
+Es válido crear una función manejador con su propio nombre, de la siguiente forma:
 
 ```js
 const btn = document.querySelector("button");
