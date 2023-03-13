@@ -52,4 +52,4 @@ _同时也从它的父 {{jsxref("Function")}} 继承方法_。
 - {{jsxref("Function")}}
 - {{jsxref("AsyncGeneratorFunction")}}
 - {{jsxref("GeneratorFunction")}}
-- {{jsxref("Functions", "Functions", "", 1)}}
+- {{jsxref("Functions", "函数", "", 1)}}
