@@ -1,7 +1,8 @@
 ---
 title: HTMLMediaElement.msClearEffects
-slug: Web/API/HTMLMediaElement/msClearEffects
+slug: orphaned/Web/API/HTMLMediaElement/msClearEffects
 translation_of: Web/API/HTMLMediaElement/msClearEffects
+original_slug: Web/API/HTMLMediaElement/msClearEffects
 ---
 
 {{APIRef("HTMLMediaElement")}}

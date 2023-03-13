@@ -3872,6 +3872,7 @@
 /fr/docs/Web/API/HTMLElement/animationstart_event	/fr/docs/Web/API/Element/animationstart_event
 /fr/docs/Web/API/HTMLElement/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
+/fr/docs/Web/API/HTMLMediaElement/msClearEffects	/fr/docs/orphaned/Web/API/HTMLMediaElement/msClearEffects
 /fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
 /fr/docs/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
 /fr/docs/Web/API/HTMLOrForeignElement/focus	/fr/docs/Web/API/HTMLElement/focus
