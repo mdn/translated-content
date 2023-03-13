@@ -1,8 +1,7 @@
 ---
 title: HTMLMediaElement.msGraphicsTrustStatus
-slug: Web/API/HTMLMediaElement/msGraphicsTrustStatus
-l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+slug: orphaned/Web/API/HTMLMediaElement/msGraphicsTrustStatus
+original_slug: Web/API/HTMLMediaElement/msGraphicsTrustStatus
 ---
 
 {{APIRef("HTML DOM")}}

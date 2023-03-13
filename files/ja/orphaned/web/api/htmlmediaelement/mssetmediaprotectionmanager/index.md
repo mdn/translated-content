@@ -1,8 +1,7 @@
 ---
 title: HTMLMediaElement.msSetMediaProtectionManager()
-slug: Web/API/HTMLMediaElement/msSetMediaProtectionManager
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+slug: orphaned/Web/API/HTMLMediaElement/msSetMediaProtectionManager
+original_slug: Web/API/HTMLMediaElement/msSetMediaProtectionManager
 ---
 
 {{APIRef("HTML DOM")}}

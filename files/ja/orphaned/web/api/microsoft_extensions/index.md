@@ -1,8 +1,7 @@
 ---
 title: Microsoft API 拡張
-slug: Web/API/Microsoft_Extensions
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+slug: orphaned/Web/API/Microsoft_Extensions
+original_slug: Web/API/Microsoft_Extensions
 ---
 
 {{DefaultAPISidebar("Microsoft Extensions")}}

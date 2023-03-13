@@ -3877,17 +3877,6 @@
     "modified": "2020-09-30T15:30:25.744Z",
     "contributors": ["chrisdavidmills", "Yumal"]
   },
-  "MDN/Writing_guidelines/Howto/Tag": {
-    "modified": "2020-09-15T03:12:50.917Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki",
-      "taiyaki32lp64"
-    ]
-  },
   "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
     "modified": "2020-05-17T21:57:28.358Z",
     "contributors": ["mfuji09", "wbamberg", "Potappo", "piza_suki"]
@@ -10673,10 +10662,6 @@
   "Web/API/MessagePort/start": {
     "modified": "2020-10-15T21:49:16.946Z",
     "contributors": ["YuichiNukiyama", "Marsf"]
-  },
-  "Web/API/Microsoft_Extensions": {
-    "modified": "2020-08-15T02:36:31.965Z",
-    "contributors": ["eltociear"]
   },
   "Web/API/MouseEvent": {
     "modified": "2020-10-15T21:33:05.163Z",
@@ -29620,10 +29605,6 @@
     "modified": "2019-03-23T23:14:33.653Z",
     "contributors": ["manzyun"]
   },
-  "Web/SVG/Compatibility_sources": {
-    "modified": "2020-04-10T04:21:19.554Z",
-    "contributors": ["mfuji09", "n-oshiro"]
-  },
   "Web/SVG/Content_type": {
     "modified": "2019-03-23T23:19:31.639Z",
     "contributors": ["wbamberg", "SphinxKnight", "manzyun"]
@@ -30715,6 +30696,17 @@
       "hamasaki"
     ]
   },
+  "conflicting/MDN/Writing_guidelines/Howto": {
+    "modified": "2020-09-15T03:12:50.917Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "wbamberg",
+      "Uemmra3",
+      "hamasaki",
+      "taiyaki32lp64"
+    ]
+  },
   "conflicting/MDN/Writing_guidelines/Page_structures": {
     "modified": "2020-09-30T09:07:31.843Z",
     "contributors": ["chrisdavidmills", "silverskyvicto"]
@@ -30978,6 +30970,10 @@
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
   },
+  "conflicting/Web/SVG": {
+    "modified": "2020-04-10T04:21:19.554Z",
+    "contributors": ["mfuji09", "n-oshiro"]
+  },
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",
     "contributors": ["mfuji09", "silverskyvicto", "hashedhyphen", "clariroid"]
@@ -31064,6 +31060,10 @@
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
+  },
+  "orphaned/Web/API/Microsoft_Extensions": {
+    "modified": "2020-08-15T02:36:31.965Z",
+    "contributors": ["eltociear"]
   },
   "orphaned/Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2020-04-13T14:01:47.252Z",

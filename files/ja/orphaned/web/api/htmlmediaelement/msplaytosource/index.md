@@ -1,8 +1,7 @@
 ---
 title: HTMLMediaElement.msPlayToSource
-slug: Web/API/HTMLMediaElement/msPlayToSource
-l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+slug: orphaned/Web/API/HTMLMediaElement/msPlayToSource
+original_slug: Web/API/HTMLMediaElement/msPlayToSource
 ---
 
 {{APIRef("HTML DOM")}}

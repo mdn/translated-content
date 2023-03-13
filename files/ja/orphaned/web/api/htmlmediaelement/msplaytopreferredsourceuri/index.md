@@ -1,8 +1,7 @@
 ---
 title: HTMLMediaElement.msPlayToPreferredSourceUri
-slug: Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
-l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+slug: orphaned/Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
+original_slug: Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
 ---
 
 {{APIRef("HTML DOM")}}

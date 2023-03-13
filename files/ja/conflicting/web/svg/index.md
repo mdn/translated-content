@@ -1,6 +1,7 @@
 ---
 title: 互換性の情報源
-slug: Web/SVG/Compatibility_sources
+slug: conflicting/Web/SVG
+original_slug: Web/SVG/Compatibility_sources
 ---
 
 以下の情報源が SVG 要素と属性の互換性の確認に活用できます。

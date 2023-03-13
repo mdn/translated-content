@@ -1,8 +1,7 @@
 ---
 title: HTMLMediaElement.msInsertAudioEffect()
-slug: Web/API/HTMLMediaElement/msInsertAudioEffect
-l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+slug: orphaned/Web/API/HTMLMediaElement/msInsertAudioEffect
+original_slug: Web/API/HTMLMediaElement/msInsertAudioEffect
 ---
 
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}
