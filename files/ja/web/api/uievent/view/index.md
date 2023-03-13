@@ -2,7 +2,7 @@
 title: UIEvent.view
 slug: Web/API/UIEvent/view
 l10n:
-  sourceCommit: 70ab349bf0271762d5d8d03b3cdf723fd7d13326
+  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
 {{APIRef("UI Events")}}
