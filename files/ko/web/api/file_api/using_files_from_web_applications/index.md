@@ -196,7 +196,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-이 예시에서는, `dropbox`라는 ID를 갖는 엘리먼트를 드랍 영역으로 변경합니다. {{event('dragenter')}}, {{event('dragover')}}, {{event('drop')}} 이벤트를위한 리스너를 추가하는 것으로 이를 수행할 수 있습니다.
+이 예시에서는, `dropbox`라는 ID를 갖는 엘리먼트를 드랍 영역으로 변경합니다. {{domxref("HTMLElement/dragenter_event", "dragenter")}}, {{domxref("HTMLElement/dragover_event", "dragover")}}, {{domxref("HTMLElement/drop_event", "drop")}} 이벤트를 위한 리스너를 추가하는 것으로 이를 수행할 수 있습니다.
 
 우리의 경우에는, `dragenter`와 `dragover` 이벤트로 무언가를 진짜 할 필요는 없으므로, 두 함수는 모두 단순합니다. 두 함수는 단지 이벤트의 전파를 중단하고 기본 동작이 발생하는 것을 방지합니다.
 
