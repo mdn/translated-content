@@ -496,10 +496,7 @@
 /ko/docs/Web/API/GlobalEventHandlers/onchange	/ko/docs/Web/API/HTMLElement/change_event
 /ko/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ko/docs/Web/API/Element/contextmenu_event
 /ko/docs/Web/API/GlobalEventHandlers/ondblclick	/ko/docs/Web/API/Element/dblclick_event
-/ko/docs/Web/API/GlobalEventHandlers/onpointerenter	/ko/docs/Web/API/Element/pointerenter_event
-/ko/docs/Web/API/GlobalEventHandlers/onscroll	/ko/docs/Web/API/Element/scroll_event
 /ko/docs/Web/API/GlobalEventHandlers/onsubmit	/ko/docs/Web/API/HTMLFormElement/submit_event
-/ko/docs/Web/API/GlobalEventHandlers/ontouchstart	/ko/docs/Web/API/Element/touchstart_event
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
@@ -649,7 +646,6 @@
 /ko/docs/Web/Events/resize	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/Events/scroll	/ko/docs/Web/API/Document/scroll_event
 /ko/docs/Web/Events/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
-/ko/docs/Web/Events/touchcancel	/ko/docs/Web/API/Element/touchcancel_event
 /ko/docs/Web/Events/visibilitychange	/ko/docs/Web/API/Document/visibilitychange_event
 /ko/docs/Web/Guide/API/Vibration/Vibration	/ko/docs/Web/API/Vibration_API
 /ko/docs/Web/Guide/CSS	/ko/docs/Learn/CSS
@@ -795,7 +791,6 @@
 /ko/docs/Web/Reference/Events/popstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/Reference/Events/resize	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/Reference/Events/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
-/ko/docs/Web/Reference/Events/touchcancel	/ko/docs/Web/API/Element/touchcancel_event
 /ko/docs/Web/Reference/Events/visibilitychange	/ko/docs/Web/API/Document/visibilitychange_event
 /ko/docs/Web/SVG/Element/사각형	/ko/docs/Web/SVG/Element/rect
 /ko/docs/Web/SVG/SVG_1.1_Support_in_Firefox	/ko/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
