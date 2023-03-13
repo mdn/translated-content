@@ -143,7 +143,7 @@ const myArr = Array.from(mySet1) // [1, "текст", {"a": 1, "b": 2}, {"a": 1,
 mySet1.add(document.body)
 mySet1.has(document.querySelector('body')) // true
 
-// преобразование между набором и массивом
+// преобразование между Set и Array
 const mySet2 = new Set([1, 2, 3, 4]);
 console.log(mySet2.size); // 4
 console.log([...mySet2]); // [1, 2, 3, 4]
