@@ -30,7 +30,7 @@ slug: Web/CSS/-webkit-box-reflect
 
 ### 值
 
-- `above`，`below`，`right`，`left`
+- `above`、`below`、`right`、`left`
   - : 这些关键字指示反射发生的方向。
 - {{CSSxRef("&lt;length&gt;")}}
   - : 指示反射的大小。
