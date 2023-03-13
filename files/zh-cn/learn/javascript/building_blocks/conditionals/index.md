@@ -276,13 +276,13 @@ switch (表达式) {
   case 选择1:
     运行这段代码
     break;
-    
+
   case 选择2:
     否则，运行这段代码
     break;
-    
+
   // 包含尽可能多的情况
-  
+
   default:
     实际上，仅仅运行这段代码
 }
@@ -325,7 +325,7 @@ select.addEventListener('change', setWeather);
 
 function setWeather() {
   const choice = select.value;
-  
+
   switch (choice) {
     case 'sunny':
       para.textContent = '阳光明媚。穿上短裤吧！去海滩，或公园，吃个冰淇淋。';
@@ -351,7 +351,7 @@ function setWeather() {
 
 ## 三元运算符
 
-在我们举一些例子之前，我们要介绍一下最后一句语法。[三元或条件运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)是一个语法的小点，用于测试一个条件，并返回一个值/表达式，如果它是 `true` 则返回其中一个，否则（`false`）返回另外一个——这在某些情况下是很有用的，如果你通过 `true`/`false` 条件来选择，这比 `if...else ` 块占用的代码要少很多。伪代码看起来像这样：
+在我们举一些例子之前，我们要介绍一下最后一句语法。[三元或条件运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)是一个语法的小点，用于测试一个条件，并返回一个值/表达式，如果它是 `true` 则返回其中一个，否则（`false`）返回另外一个——这在某些情况下是很有用的，如果你通过 `true`/`false` 条件来选择，这比 `if...else` 块占用的代码要少很多。伪代码看起来像这样：
 
 ```
 condition ? 运行这段代码 : 否则，运行这段代码
@@ -461,12 +461,12 @@ const h1 = document.querySelector('h1');
 
 select.addEventListener('change', () => {
   const choice = select.value;
-  
+
   // ADD CONDITIONAL HERE
-  
+
   createCalendar(days, choice);
 });
-  
+
 function createCalendar(days, choice) {
   list.innerHTML = '';
   h1.textContent = choice;
@@ -485,7 +485,6 @@ createCalendar(31,'January');
   <input id="solution" type="button" value="查看解答" />
 </div>
 ```
-
 
 ```css hidden
 .output * {
@@ -570,7 +569,7 @@ select.addEventListener('change', () => {
   } else if (choice === 'April' || choice === 'June' || choice === 'September'|| choice === 'November') {
     days = 30;
   }
-  
+
   createCalendar(days, choice);
 });
 
@@ -599,7 +598,7 @@ textarea.onkeydown = function(e){
     e.preventDefault();
     insertAtCaret('\t');
   }
-  
+
   if (e.keyCode === 27) {
     textarea.blur();
   }
@@ -610,7 +609,7 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
-  
+
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -629,7 +628,7 @@ textarea.onkeyup = function(){
   } else {
     solutionEntry = textarea.value;
   }
-  
+
   updateCode();
 };
 ```
@@ -744,7 +743,7 @@ const html = document.querySelector('.output');
 
 select.addEventListener('change', () => {
   const choice = select.value;
-  
+
   switch(choice) {
     case 'black':
       update('black','white');
@@ -781,7 +780,7 @@ textarea.onkeydown = function(e){
     e.preventDefault();
     insertAtCaret('\t');
   }
-  
+
   if (e.keyCode === 27) {
     textarea.blur();
   }
@@ -792,7 +791,7 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
-  
+
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
