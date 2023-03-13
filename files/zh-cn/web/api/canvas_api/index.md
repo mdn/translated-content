@@ -95,6 +95,6 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 
 Mozilla 程序从 Gecko 1.8 ([Firefox 1.5](/zh-CN/docs/Firefox_1.5_for_developers)) 开始支持 `<canvas>`。它首先是由 Apple 引入的，用于 OS X Dashboard 和 Safari。Internet Explorer 从 IE9 开始支持`<canvas>` ，更旧版本的 IE 中，页面可以通过引入 Google 的 [Explorer Canvas](https://github.com/arv/explorercanvas) 项目中的脚本来获得`<canvas>`支持。Google Chrome 和 Opera 9+ 也支持 `<canvas>`。
 
-## 其它相关
+## 其他相关
 
 - [WebGL](/zh-CN/docs/Web/WebGL)

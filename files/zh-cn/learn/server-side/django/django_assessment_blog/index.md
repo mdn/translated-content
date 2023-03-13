@@ -24,7 +24,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 
 ## 項目概要
 
-下面列出了需要显示的页面、URL 和其它要求：
+下面列出了需要显示的页面、URL 和其他要求：
 
 <table class="standard-table">
   <thead>

@@ -17,13 +17,13 @@ slug: Web/HTML/Element/link
 
 在这个简单的例子中，使用了 `href` 属性设置外部资源的路径，并设置 `rel` 属性的值为“`stylesheet`”(样式表)。`rel` 表示“关系 (relationship) ”，它可能是`<link>`元素其中一个关键的特性——属性值表示`<link>`项的链接方式与包含它的文档之间的关系。你将在我们的[链接类型](/zh-CN/docs/Web/HTML/Link_types)中看到很多不同类型的关系。
 
-这里有一些你经常遇到的其它类型。例如，这里是一个网站图标的链接：
+这里有一些你经常遇到的其他类型。例如，这里是一个网站图标的链接：
 
 ```html
 <link rel="icon" href="favicon.ico">
 ```
 
-还有一些其它的与图标相关的`rel`值，主要用于表示不同移动平台上特殊的图标类型，例如：
+还有一些其他的与图标相关的`rel`值，主要用于表示不同移动平台上特殊的图标类型，例如：
 
 ```html
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
@@ -48,7 +48,7 @@ slug: Web/HTML/Element/link
 
 将`rel`设定为`preload`，表示浏览器应该预加载该资源 (更多细节见[使用 rel="preload"预加载内容](/zh-CN/docs/Web/HTML/Preloading_content)) 。`as`属性表示获取特定的内容类。`crossorigin`属性表示该资源是否应该使用一个{{Glossary("CORS")}}请求来获取。
 
-其它用法的注解：
+其他用法的注解：
 
 - `<link>`元素可以出现在{{HTMLElement("head")}}元素或者{{HTMLElement("body")}}元素中，具体取决于它是否有一个**body-ok**的[链接类型](https://html.spec.whatwg.org/multipage/links.html#body-ok)。例如，`stylesheet`链接类型是 body-ok 的，因此`<link rel="stylesheet">`允许出现在 body 中。然而，这不是一种好的可遵循的实践方式；更合理的方式是，将你的`<link>`元素从你的 body 内容中分离出来，将其放在`<head>`中。
 - 当使用`<link>`为网站创建一个 favicon 时，你的网站使用内容安全策略 (Content Security Policy，CSP) 来增强它的安全性，这种策略适用于 favicon。如果你遇到 favicon 未加载的问题，验证{{HTTPHeader("Content-Security-Policy")}}头的[`img-src` directive](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)没有在阻止对它的访问。

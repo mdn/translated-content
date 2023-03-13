@@ -45,5 +45,5 @@ params.append('foo', 4);
 
 ## 参见
 
-- 其它 URL 相关的接口：{{domxref("URL")}}, {{domxref("URLUtils")}}.
+- 其他 URL 相关的接口：{{domxref("URL")}}, {{domxref("URLUtils")}}.
 - [谷歌开发者：简单 URL 与 URLSearchParams 操纵](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)

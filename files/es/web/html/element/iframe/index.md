@@ -184,7 +184,7 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 
   - : &#x20;
 
-    > **Nota:** See {{bug(1318532)}} for exposing this to WebExtensions in Firefox.
+    > **Nota:** See [Error 1318532 en Firefox](https://bugzil.la/1318532) for exposing this to WebExtensions in Firefox.
 
     Makes the `<iframe>` act like a top-level browser window. See [Browser API](/es/docs/Mozilla/Gecko/Chrome/API/Browser_API) for details.
     **Available only to [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).**

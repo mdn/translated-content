@@ -24,7 +24,7 @@ margin-block-start: unset
 
 {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} 属性对应于 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, 和{{cssxref("text-orientation")}}属性定义的值。
 
-它涉及到 {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}},和 {{cssxref("margin-inline-end")}}属性，这些属性是用来定义其它元素的边界。
+它涉及到 {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}},和 {{cssxref("margin-inline-end")}}属性，这些属性是用来定义其他元素的边界。
 
 {{cssinfo}}
 

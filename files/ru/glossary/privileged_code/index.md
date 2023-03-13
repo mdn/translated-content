@@ -1,6 +1,6 @@
 ---
 title: Привилегированный код
-slug: Glossary/privileged_code
+slug: Glossary/Privileged_code
 tags:
   - privileged
 translation_of: Glossary/privileged_code

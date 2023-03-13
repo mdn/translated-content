@@ -1,6 +1,6 @@
 ---
 title: '<shadow> : l''élément obsolète pour la racine virtuelle'
-slug: Web/HTML/Element/Shadow
+slug: Web/HTML/Element/shadow
 tags:
   - Composant web
   - Déprécié

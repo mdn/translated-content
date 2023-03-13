@@ -15,7 +15,7 @@ slug: Web/HTML/Element/noframes
 
 ## 属性
 
-就像其它 HTML 元素那样，这个元素支持 [全局属性](/zh-CN/HTML/Global_attributes)。
+就像其他 HTML 元素那样，这个元素支持 [全局属性](/zh-CN/HTML/Global_attributes)。
 
 ## 示例
 

@@ -1,6 +1,6 @@
 ---
 title: <keygen>
-slug: Web/HTML/Element/Keygen
+slug: Web/HTML/Element/keygen
 tags:
   - Déprécié
   - Element

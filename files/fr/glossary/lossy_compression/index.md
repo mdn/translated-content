@@ -1,6 +1,6 @@
 ---
 title: Compression avec perte
-slug: Glossary/lossy_compression
+slug: Glossary/Lossy_compression
 tags:
   - Débutant
   - Glossaire

@@ -77,7 +77,7 @@ event.initMouseEvent(type, canBubble, cancelable, view,
 - _`button`_
   - : 鼠标按键值 {{domxref("MouseEvent.button", "button")}}。
 - _`relatedTarget`_
-  - : 事件的[相关对象](/zh-CN/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其它的传 null。
+  - : 事件的[相关对象](/zh-CN/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其他的传 null。
 
 ## 示例
 

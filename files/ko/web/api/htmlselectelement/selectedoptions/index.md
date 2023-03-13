@@ -104,4 +104,4 @@ The resulting content looks like this in action:
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Forms/The_native_form_widgets", "Drop-down content")}}
+- [Drop-down content](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)

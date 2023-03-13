@@ -158,7 +158,7 @@ function drop_handler(ev) {
 <p id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</p>
 ```
 
-注意每个处理程序调用 {{domxref("Event.preventDefault","preventDefault()")}} 来阻止对这个事件的其它处理过程（如触点事件或指针事件）。
+注意每个处理程序调用 {{domxref("Event.preventDefault","preventDefault()")}} 来阻止对这个事件的其他处理过程（如触点事件或指针事件）。
 
 欲了解更多信息，参见 [指定释放目标](/zh-CN/docs/Web/Guide/HTML/Drag_operations#droptargets)。
 

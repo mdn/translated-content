@@ -3877,17 +3877,6 @@
     "modified": "2020-09-30T15:30:25.744Z",
     "contributors": ["chrisdavidmills", "Yumal"]
   },
-  "MDN/Writing_guidelines/Howto/Tag": {
-    "modified": "2020-09-15T03:12:50.917Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki",
-      "taiyaki32lp64"
-    ]
-  },
   "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
     "modified": "2020-05-17T21:57:28.358Z",
     "contributors": ["mfuji09", "wbamberg", "Potappo", "piza_suki"]
@@ -10673,10 +10662,6 @@
   "Web/API/MessagePort/start": {
     "modified": "2020-10-15T21:49:16.946Z",
     "contributors": ["YuichiNukiyama", "Marsf"]
-  },
-  "Web/API/Microsoft_Extensions": {
-    "modified": "2020-08-15T02:36:31.965Z",
-    "contributors": ["eltociear"]
   },
   "Web/API/MouseEvent": {
     "modified": "2020-10-15T21:33:05.163Z",
@@ -23531,10 +23516,6 @@
     "modified": "2020-09-29T13:14:34.085Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
   },
-  "Web/JavaScript/Reference/Errors/Dead_object": {
-    "modified": "2020-03-12T19:46:13.252Z",
-    "contributors": ["YuichiNukiyama"]
-  },
   "Web/JavaScript/Reference/Errors/Delete_in_strict_mode": {
     "modified": "2020-03-12T19:46:02.720Z",
     "contributors": ["YuichiNukiyama"]
@@ -26721,10 +26702,6 @@
       "shide55"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods": {
-    "modified": "2020-11-03T16:46:11.930Z",
-    "contributors": ["mpcjazz", "mfuji09"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Reflect/apply": {
     "modified": "2020-10-17T10:26:41.821Z",
     "contributors": ["mfuji09", "segayuu", "SphinxKnight", "YuichiNukiyama"]
@@ -29628,10 +29605,6 @@
     "modified": "2019-03-23T23:14:33.653Z",
     "contributors": ["manzyun"]
   },
-  "Web/SVG/Compatibility_sources": {
-    "modified": "2020-04-10T04:21:19.554Z",
-    "contributors": ["mfuji09", "n-oshiro"]
-  },
   "Web/SVG/Content_type": {
     "modified": "2019-03-23T23:19:31.639Z",
     "contributors": ["wbamberg", "SphinxKnight", "manzyun"]
@@ -30723,6 +30696,17 @@
       "hamasaki"
     ]
   },
+  "conflicting/MDN/Writing_guidelines/Howto": {
+    "modified": "2020-09-15T03:12:50.917Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "wbamberg",
+      "Uemmra3",
+      "hamasaki",
+      "taiyaki32lp64"
+    ]
+  },
   "conflicting/MDN/Writing_guidelines/Page_structures": {
     "modified": "2020-09-30T09:07:31.843Z",
     "contributors": ["chrisdavidmills", "silverskyvicto"]
@@ -30932,10 +30916,6 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
-  "conflicting/Web/HTML/Global_attributes/contenteditable": {
-    "modified": "2019-05-13T11:13:31.486Z",
-    "contributors": ["mfuji09", "yyss", "ethertank"]
-  },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
@@ -30989,6 +30969,10 @@
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
+  },
+  "conflicting/Web/SVG": {
+    "modified": "2020-04-10T04:21:19.554Z",
+    "contributors": ["mfuji09", "n-oshiro"]
   },
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",

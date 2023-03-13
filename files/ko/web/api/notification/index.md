@@ -1,7 +1,8 @@
 ---
 title: Notification
-slug: Web/API/notification
+slug: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/ko/docs/Web/API/Notifications_API)의 `Notification` 인터페이스는 사용자에게 데스크톱 알림을 설정하고 보여주는데 사용됩니다.

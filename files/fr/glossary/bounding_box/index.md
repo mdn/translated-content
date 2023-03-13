@@ -1,6 +1,6 @@
 ---
 title: Rectangle à limitation minimum
-slug: Glossary/bounding_box
+slug: Glossary/Bounding_box
 tags:
   - Bounding Box
   - Conception

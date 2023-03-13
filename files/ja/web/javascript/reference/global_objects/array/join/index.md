@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`join()`** メソッドは、配列（または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトを利用する)）の全要素を順に連結した文字列を新たに作成して返します。区切り文字はカンマ、または指定された文字列です。配列にアイテムが一つしかない場合は、区切り文字を使用せずにアイテムが返されます。
+**`join()`** メソッドは、配列（または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)）の全要素を順に連結した文字列を新たに作成して返します。区切り文字はカンマ、または指定された文字列です。配列にアイテムが一つしかない場合は、区切り文字を使用せずにアイテムが返されます。
 
 {{EmbedInteractiveExample("pages/js/array-join.html")}}
 

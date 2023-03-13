@@ -90,7 +90,7 @@ valor2
 
 ## Notas de compatibilidad
 
-- Firefox 5 maneja el encabezado de respuesta HTTP `Content-Disposition` más efectivamente si ambos parámetros `filename` y `filename*` están presentes; observa todos los nombres presentes, usando el parámetro `filename*` si uno está disponible, incluso si el parámetro `filename` está incluido antes. Previamente, el primer parámetro en encontrarse sería usado, de este modo se previene el uso de un nombre más apropiado. Mira {{bug(588781)}}.
+- Firefox 5 maneja el encabezado de respuesta HTTP `Content-Disposition` más efectivamente si ambos parámetros `filename` y `filename*` están presentes; observa todos los nombres presentes, usando el parámetro `filename*` si uno está disponible, incluso si el parámetro `filename` está incluido antes. Previamente, el primer parámetro en encontrarse sería usado, de este modo se previene el uso de un nombre más apropiado. Mira [Error 588781 en Firefox](https://bugzil.la/588781).
 
 ## Ver también
 

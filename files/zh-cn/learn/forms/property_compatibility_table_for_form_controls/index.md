@@ -1279,7 +1279,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
         <ol>
           <li>
             只有 Firefox 提供了对这个属性的完全支持。Opera
-            完全不支持这个属性，而其它浏览器只提供了对
+            完全不支持这个属性，而其他浏览器只提供了对
             <code>{{htmlelement("select")}}</code> 元素的支持。
           </li>
         </ol>
@@ -3267,7 +3267,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 - [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
 - [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单空间](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [其他表单空间](/zh-CN/docs/Learn/Forms/Other_form_controls)
 - [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
 - [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
 - [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)

@@ -69,7 +69,7 @@ slug: Learn/Forms/Form_validation
 当一个元素校验通过时：
 
 - 该元素将可以通过 CSS 伪类 {{cssxref(":valid")}} 进行特殊的样式化；
-- 如果用户尝试提交表单，如果没有其它的控制来阻止该操作（比如 JavaScript 即可阻止提交），那么该表单的数据会被提交。
+- 如果用户尝试提交表单，如果没有其他的控制来阻止该操作（比如 JavaScript 即可阻止提交），那么该表单的数据会被提交。
 
 如果一个元素未校验通过：
 
@@ -136,7 +136,7 @@ input:valid {
 
 ### 使用正则表达式校验
 
-另一个常用的校验功能是 {{htmlattrxref("pattern","input")}} 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其它的用途。
+另一个常用的校验功能是 {{htmlattrxref("pattern","input")}} 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其他的用途。
 
 正则表达式相当复杂，我们不打算在本文中详尽地教你。
 

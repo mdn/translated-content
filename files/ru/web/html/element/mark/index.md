@@ -5,13 +5,13 @@ translation_of: Web/HTML/Element/mark
 ---
 **HTML** **элемент `<mark>` **представляет текст, выделенный в справочных целях из-за своей _актуальности_ в определённом контексте. Например, он может быть использован на странице с результатом поиска, в которой выделяется каждый экземпляр искомого слова.
 
-| [Категории содержимого](/ru/docs/HTML/Content_categories) | [Содержимое потока](/ru/docs/HTML/Content_categories#Flow_content), [содержимое фраз](/ru/docs/HTML/Content_categories#Phrasing_content), ощутимое содержимое. |
+| [Категории содержимого](/ru/docs/HTML/Content_categories) | [Содержимое потока](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), ощутимое содержимое. |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                    | [Содержимое фраз](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                          |
-| Бездействие тега                                          | {{no_tag_omission}}                                                                                                                                       |
-| Разрешённые родители                                      | Любой элемент, который принимает [содержимое фраз.](/ru/docs/HTML/Content_categories#Phrasing_content)                                                         |
-| Разрешённые роли ARIA                                     | Любые                                                                                                                                                          |
-| Интерфейс DOM                                             | {{domxref("HTMLElement")}}                                                                                                                           |
+| Допустимое содержимое                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                          |
+| Пропуск тегов                                             | {{no_tag_omission}}                                                                                                                                       |
+| Допустимые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                         |
+| Допустимые ARIA-роли                                      | Любые                                                                                                                                                          |
+| DOM-интерфейс                                             | {{domxref("HTMLElement")}}                                                                                                                           |
 
 ## Атрибуты
 

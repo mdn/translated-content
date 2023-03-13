@@ -259,13 +259,3 @@ Este articulo ha cubierto prototipos de objeto JavaScript, incluyendo como las c
 En el proximos articulo vamos a ver como puedes implementar la herencia de funcionalidades entre dos de tus propios objetos personalizados.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/es/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/es/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

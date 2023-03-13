@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
 
 HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP 内容安全性策略）中的 **`script-src-elem`** 指令指定了 JavaScript {{HTMLElement("script")}} 元素的有效来源。
 
-这个指令仅在 `<script>` 元素（脚本请求和块）指定有效的来源。它不适用于触发脚本执行的的其它 JavaScript 源，例如内联脚本事件处理程序（`onclick`）、[在“unsafe-eval”（不安全地执行字符串表达式）检查下的](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)脚本执行方法和 [XSLT 样式表](/zh-CN/docs/Web/XSLT)（可以使用 {{CSP("script-src")}} 为所有 JavaScript 脚本源指定有效来源，也可以使用 {{CSP("script-src-attr")}} 仅为内联样式脚本处理程序指定有效源）。
+这个指令仅在 `<script>` 元素（脚本请求和块）指定有效的来源。它不适用于触发脚本执行的的其他 JavaScript 源，例如内联脚本事件处理程序（`onclick`）、[在“unsafe-eval”（不安全地执行字符串表达式）检查下的](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)脚本执行方法和 [XSLT 样式表](/zh-CN/docs/Web/XSLT)（可以使用 {{CSP("script-src")}} 为所有 JavaScript 脚本源指定有效来源，也可以使用 {{CSP("script-src-attr")}} 仅为内联样式脚本处理程序指定有效源）。
 
 <table class="properties">
   <tbody>
@@ -48,7 +48,7 @@ Content-Security-Policy: script-src-elem <source>;
 
 `<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)中的任意一个。
 
-请注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其它的指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)）。
+请注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其他的指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)）。
 
 ## 示例
 

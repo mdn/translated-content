@@ -5,7 +5,7 @@ slug: Web/API/BroadcastChannel/close
 
 {{APIRef("BroadCastChannel API")}}
 
-通过调用 **`BroadcastChannel.close()`** 方法，可以马上断开其与对应频道的关联，并让其被垃圾回收。这是必要的步骤，因为浏览器没有其它方式知道频道不再被需要。
+通过调用 **`BroadcastChannel.close()`** 方法，可以马上断开其与对应频道的关联，并让其被垃圾回收。这是必要的步骤，因为浏览器没有其他方式知道频道不再被需要。
 
 {{AvailableInWorkers}}
 
@@ -21,7 +21,7 @@ var str = channel.close();
 // 连接到指定频道
 var bc = new BroadcastChannel('test_channel');
 
-// 其它操作 (如：postMessage, …)
+// 其他操作 (如：postMessage, …)
 
 // 当完成后，断开与频道的连接
 bc.close();

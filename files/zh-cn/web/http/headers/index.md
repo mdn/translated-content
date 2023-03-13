@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers
 
 **HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。一个 HTTP 标头由它的名称（不区分大小写）后跟随一个冒号（`:`），冒号后跟随它具体的值。该值之前的{{Glossary("Whitespace", "空格")}}会被忽略。
 
-自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法被 IETF 在 2012 年 6 月发布的 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 明确弃用，原因是其会在非标准字段成为标准时造成不便；其它的标头在 [IANA 注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。此外，IANA 还维护着[被提议的新的 HTTP 标头注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)。
+自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法被 IETF 在 2012 年 6 月发布的 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 明确弃用，原因是其会在非标准字段成为标准时造成不便；其他的标头在 [IANA 注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。此外，IANA 还维护着[被提议的新的 HTTP 标头注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)。
 
 根据不同的消息上下文，标头可以分为：
 

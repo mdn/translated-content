@@ -11,7 +11,7 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 ## 使用 blob
 
-要从其它非 blob 对象和数据构造一个 `Blob`，请使用 {{DOMxRef("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{DOMxRef("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 `Blob` 对象，请参阅 {{DOMxRef("File")}} 文档。
+要从其他非 blob 对象和数据构造一个 `Blob`，请使用 {{DOMxRef("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{DOMxRef("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 `Blob` 对象，请参阅 {{DOMxRef("File")}} 文档。
 
 接受 `Blob` 对象的 API 也被列在 {{DOMxRef("File")}} 文档中。
 
@@ -42,7 +42,7 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 ### 创建一个 blob
 
-{{DOMxRef("Blob.Blob", "Blob()")}} 构造函数可以通过其它对象创建 blob。例如，用一个 JSON 字符串构造一个 blob：
+{{DOMxRef("Blob.Blob", "Blob()")}} 构造函数可以通过其他对象创建 blob。例如，用一个 JSON 字符串构造一个 blob：
 
 ```js
 const obj = {hello: 'world'};
@@ -132,7 +132,7 @@ const text = await (new Response(blob)).text();
 const text = await blob.text();
 ```
 
-通过使用 `FileReader` 的其它方法可以把 Blob 读取为字符串或者数据 URL。
+通过使用 `FileReader` 的其他方法可以把 Blob 读取为字符串或者数据 URL。
 
 ## 规范
 
