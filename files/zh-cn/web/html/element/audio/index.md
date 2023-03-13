@@ -5,7 +5,7 @@ slug: Web/HTML/Element/audio
 
 {{HTMLSidebar}}
 
-**HTML `<audio>` **元素用于在文档中嵌入音频内容。 `<audio>` 元素可以包含一个或多个音频资源，这些音频资源可以使用 `src` 属性或者{{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。
+**HTML`<audio>`** 元素用于在文档中嵌入音频内容。 `<audio>` 元素可以包含一个或多个音频资源，这些音频资源可以使用 `src` 属性或者{{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。
 
 {{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
 
