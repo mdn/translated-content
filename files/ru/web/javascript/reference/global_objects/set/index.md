@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 ### Сравнение значений
 
-Значение параметров основано на [SameValueZero](/ru-RU/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) алгоритме. (Раньше он использовал [SameValue](/ru-RU/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), который рассматривал `0` и `-0` как разные. Проверьте [совместимость с браузером](#browser_compatibility).) Это означает, что {{jsxref("NaN")}} считается таким же, как `NaN` (даже если `NaN !== NaN`), а все остальные значения считаются равными в соответствии с семантикой оператора `===`.
+При добавлении нового элемента в Set происходит проверка, добавлялся ли такой элемент ранее. Эта проверка использует специальный алгоритм сравнения значений [SameValueZero](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality). (Раньше использовался алгоритм [SameValue](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#спецификации_для_равенства_строгого_равенства_и_равенства_одинаковых_величин), в котором значения `0` и `-0` считаются разными. Смотрите браузерную поддержку ниже). Это означает, что {{jsxref("NaN")}} считается равным `NaN` (не смотря на то что `NaN !== NaN`), а все другие значения считаются равными в соответствии с семантикой оператора `===`.
 
 ### Производительность
 
