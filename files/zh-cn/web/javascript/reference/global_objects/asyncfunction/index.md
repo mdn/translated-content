@@ -22,7 +22,7 @@ const AsyncFunction = async function () {}.constructor;
 
 ## 实例属性
 
-_同时也从它的父 {{jsxref("Function")}} 继承实例属性_。
+_同时也从它的父类 {{jsxref("Function")}} 继承实例属性_。
 
 这些属性定义在 `AsyncFunction.prototype` 并且由所有 `AsyncFunction` 实例共享。
 
@@ -35,7 +35,7 @@ _同时也从它的父 {{jsxref("Function")}} 继承实例属性_。
 
 ## 实例方法
 
-_同时也从它的父 {{jsxref("Function")}} 继承方法_。
+_同时也从它的父类 {{jsxref("Function")}} 继承方法_。
 
 ## 规范
 
