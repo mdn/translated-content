@@ -37,7 +37,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
 
 让我们看看到目前为止你将会在 JavaScript 中用到的最常见的条件语句类型——[`if...else` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)。
 
-### 基本的的 if...else 语法
+### 基本的 if...else 语法
 
 基本的 `if...else` 语法看起来这样：
 
