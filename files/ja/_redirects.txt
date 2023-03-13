@@ -2740,7 +2740,7 @@
 /ja/docs/MDN/Contribute/Howto/Document_web_errors	/ja/docs/MDN/Writing_guidelines/Howto/Document_web_errors
 /ja/docs/MDN/Contribute/Howto/Migrate_external_content_to_MDN	/ja/docs/MDN/Community/Issues/Content_suggestions_feature_proposals
 /ja/docs/MDN/Contribute/Howto/Report_a_problem	/ja/docs/MDN/Community/Issues
-/ja/docs/MDN/Contribute/Howto/Tag	/ja/docs/conflicting/MDN/Writing_guidelines/Howto
+/ja/docs/MDN/Contribute/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ja/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ja/docs/MDN/Contribute/Howto/Write_an_API_reference	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
@@ -2811,7 +2811,7 @@
 /ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
-/ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/conflicting/MDN/Writing_guidelines/Howto
+/ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
 /ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/MDN/At_ten/History_of_MDN
@@ -3413,15 +3413,6 @@
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ja/docs/Web/API/HTMLAnchorElement/toString
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/username	/ja/docs/Web/API/HTMLAnchorElement/username
 /ja/docs/Web/API/HTMLInputElement/mozGetFileNameArray	/ja/docs/conflicting/Web/API/HTMLInputElement
-/ja/docs/Web/API/HTMLMediaElement/msClearEffects	/ja/docs/orphaned/Web/API/HTMLMediaElement/msClearEffects
-/ja/docs/Web/API/HTMLMediaElement/msGraphicsTrustStatus	/ja/docs/orphaned/Web/API/HTMLMediaElement/msGraphicsTrustStatus
-/ja/docs/Web/API/HTMLMediaElement/msInsertAudioEffect	/ja/docs/orphaned/Web/API/HTMLMediaElement/msInsertAudioEffect
-/ja/docs/Web/API/HTMLMediaElement/msPlayToDisabled	/ja/docs/orphaned/Web/API/HTMLMediaElement/msPlayToDisabled
-/ja/docs/Web/API/HTMLMediaElement/msPlayToPreferredSourceURI	/ja/docs/orphaned/Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
-/ja/docs/Web/API/HTMLMediaElement/msPlayToPrimary	/ja/docs/orphaned/Web/API/HTMLMediaElement/msPlayToPrimary
-/ja/docs/Web/API/HTMLMediaElement/msPlayToSource	/ja/docs/orphaned/Web/API/HTMLMediaElement/msPlayToSource
-/ja/docs/Web/API/HTMLMediaElement/msRealTime	/ja/docs/orphaned/Web/API/HTMLMediaElement/msRealTime
-/ja/docs/Web/API/HTMLMediaElement/msSetMediaProtectionManager	/ja/docs/orphaned/Web/API/HTMLMediaElement/msSetMediaProtectionManager
 /ja/docs/Web/API/HTMLMediaElement/onerror	/ja/docs/conflicting/Web/API/HTMLMediaElement/error_event
 /ja/docs/Web/API/HTMLOrForeignElement	/ja/docs/Web/API/HTMLElement
 /ja/docs/Web/API/HTMLTableElement.align	/ja/docs/Web/API/HTMLTableElement/align
@@ -3486,7 +3477,6 @@
 /ja/docs/Web/API/Media_Streams_API/Constraints	/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints
 /ja/docs/Web/API/MessagePort/onmessage	/ja/docs/Web/API/MessagePort/message_event
 /ja/docs/Web/API/MessagePort/onmessageerror	/ja/docs/Web/API/MessagePort/messageerror_event
-/ja/docs/Web/API/Microsoft_Extensions	/ja/docs/orphaned/Web/API/Microsoft_Extensions
 /ja/docs/Web/API/MouseEvent/region	/ja/docs/conflicting/Web/API/MouseEvent
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
@@ -4927,7 +4917,7 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
-/ja/docs/Web/SVG/Compatibility_sources	/ja/docs/conflicting/Web/SVG
+/ja/docs/Web/SVG/Compatibility_sources	/ja/docs/Web/SVG
 /ja/docs/Web/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Element/hatchpath	/ja/docs/orphaned/Web/SVG/Element/hatchpath
 /ja/docs/Web/SVG/Index	/ja/docs/Web/SVG

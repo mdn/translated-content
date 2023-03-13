@@ -30696,17 +30696,6 @@
       "hamasaki"
     ]
   },
-  "conflicting/MDN/Writing_guidelines/Howto": {
-    "modified": "2020-09-15T03:12:50.917Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki",
-      "taiyaki32lp64"
-    ]
-  },
   "conflicting/MDN/Writing_guidelines/Page_structures": {
     "modified": "2020-09-30T09:07:31.843Z",
     "contributors": ["chrisdavidmills", "silverskyvicto"]
@@ -30969,10 +30958,6 @@
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
-  },
-  "conflicting/Web/SVG": {
-    "modified": "2020-04-10T04:21:19.554Z",
-    "contributors": ["mfuji09", "n-oshiro"]
   },
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",
