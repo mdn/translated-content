@@ -11,20 +11,19 @@ slug: Web/API/IdleDeadline/timeRemaining
 
 ## 语法
 
-```plain
+```js-nolint
 timeRemaining = IdleDeadline.timeRemaining();
 ```
 
 ### 返回值
 
-一个 {{domxref("DOMHighResTimeStamp")}} 值(是一个浮点数)，表示用户代理估计在当前空闲期间内剩余的毫秒数。理想情况下，该值精确到大约5微秒。
+一个 {{domxref("DOMHighResTimeStamp")}} 值（是一个浮点数），表示用户代理估计在当前空闲期间内剩余的毫秒数。理想情况下，该值精确到大约 5 微秒。
 
 如果 {{domxref("IdleDeadline")}} 对象的 {{domxref("IdleDeadline.didTimeout", "didTimeout")}} 属性为 `true` ，该方法返回 `0`。
 
 ## 示例
 
-See our [complete example](/zh-CN/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/zh-CN/docs/Web/API/Background_Tasks_API).
-在文章[Cooperative Scheduling of Background Tasks API](/zh-CN/docs/Web/API/Background_Tasks_API) 中可以查看 [完整示例](/zh-CN/docs/Web/API/Background_Tasks_API#Example) 。
+在文章[后台任务协作调度 API](/zh-CN/docs/Web/API/Background_Tasks_API) 中可以查看[完整示例](/zh-CN/docs/Web/API/Background_Tasks_API#示例) 。
 
 ## 规范
 
@@ -36,7 +35,7 @@ See our [complete example](/zh-CN/docs/Web/API/Background_Tasks_API#Example) in 
 
 ## 参见
 
-- [Collaborative Scheduling of Background Tasks](/zh-CN/docs/Web/API/Background_Tasks_API)
+- [后台任务协作调度 API](/zh-CN/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
 - {{domxref("Window.requestIdleCallback()")}}
 - {{domxref("Window.cancelIdleCallback()")}}
