@@ -23,7 +23,7 @@ str.toLowerCase()
 
 ## 示例
 
-### 例子：使用 `toLowerCase()`
+### 示例：使用 `toLowerCase()`
 
 ```js
 console.log('中文简体 zh-CN || zh-Hans'.toLowerCase());

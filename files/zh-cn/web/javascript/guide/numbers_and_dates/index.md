@@ -231,7 +231,7 @@ var IPOdate = new Date();
 IPOdate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
-### 例子：
+### 示例：
 
 在下边的例子中，JSClock() 函数返回了用数字时钟格式的时间：
 

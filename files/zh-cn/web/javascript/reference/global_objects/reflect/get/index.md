@@ -34,7 +34,7 @@ Reflect.get(target, propertyKey[, receiver])
 
 `Reflect.get`方法允许你从一个对象中取属性值。就如同[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 语法，但却是通过函数调用来实现。
 
-## 实例
+## 示例
 
 ### `使用 Reflect.get()`
 

@@ -34,9 +34,9 @@ dateObj.setSeconds(secondsValue)
 
 如果一个参数超出了合理范围， `setSeconds` 方法会相应地更新日期对象的时间信息。例如，为 `secondsValue` 指定 100，则日期对象的分钟数会相应地加 1，秒数将会使用 40。
 
-## 例子
+## 示例
 
-### 例子：使用`setSeconds` 方法
+### 示例：使用`setSeconds` 方法
 
 ```js
 var theBigDay = new Date();

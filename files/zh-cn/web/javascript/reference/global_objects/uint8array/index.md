@@ -111,7 +111,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
   - : `返回新的 Array Iterator` 对象，包含数组中每个下标处的值。
 
-## 例子
+## 示例
 
 ```js
 // 来自长度
