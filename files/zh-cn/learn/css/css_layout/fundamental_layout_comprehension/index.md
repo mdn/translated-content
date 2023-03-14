@@ -11,11 +11,11 @@ slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提：</th>
+      <th scope="row">预备条件：</th>
       <td><p>在尝试此评估之前，你应该已经阅读了本模块中的所有文章。</p></td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
+      <th scope="row">学习目标：</th>
       <td><p>测试对 CSS 弹性盒、栅格、浮动和定位布局方法的基本理解。</p></td>
     </tr>
   </tbody>
