@@ -5,12 +5,12 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_li
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-现在我们已经有了一个可以工作的组件。接下来我们将添加更多的 `ToDoItem` 组件到我们的应用中。本文我们会添加一系列待办事项到 App.vue 组件并使用 `v-for` 指令遍历它们，将它们的每一项展示在 `ToDoItem` 组件中。
+现在我们已经有了一个可以工作的组件。接下来我们将添加更多的 `ToDoItem` 组件到我们的应用中。本文我们会添加一系列待办事项到 `App.vue` 组件并使用 `v-for` 指令遍历它们，将它们的每一项展示在 `ToDoItem` 组件中。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">预备条件：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
@@ -30,7 +30,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_li
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         了解如何循环浏览一个数据数组，并在多个组件中渲染。
       </td>
