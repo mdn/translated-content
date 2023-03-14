@@ -199,7 +199,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 ## 示例
 
-### >例子：创建一个日期对象的几种方法
+### 创建一个日期对象的几种方法
 
 下例展示了用来创建一个日期对象的多种方法。
 
@@ -213,7 +213,7 @@ var birthday = new Date(1995, 11, 17);
 var birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
 
-### 示例：将两位数年份映射为 1900 - 1999 年
+### 将两位数年份映射为 1900 - 1999 年
 
 为了创建和获取 0 到 99 之间的年份，应使用 {{jsxref("Date.prototype.setFullYear()")}} 和 {{jsxref("Date.prototype.getFullYear()")}} 方法。
 
@@ -226,7 +226,7 @@ date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 ```
 
-### 示例：计算经过的时间
+### 计算经过的时间
 
 下例展示了如何以毫秒精度计算两个日期对象的时间差：
 
