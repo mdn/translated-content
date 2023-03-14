@@ -188,7 +188,7 @@ div {
 
 {{EmbedLiveSample("x축과_y축_변환", 250, 250)}}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
