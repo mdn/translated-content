@@ -48,7 +48,7 @@ ${functionBody}
 }`
 ```
 
-这可以通过调用函数的[`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)方法来观察。
+这可以通过调用函数的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString) 方法来观察。
 
 然而，与普通的[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)不同，`anonymous` 这个名字不会被添加到 `functionBody` 的作用域中，因为 `functionBody` 只能访问全局作用域。如果 `functionBody` 不在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中（主体本身需要有 `"use strict"` 指令，因为它不从上下文中继承严格性），你可以使用 [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) 来指代函数本身。另外，你可以将递归部分定义为一个内部函数：
 
