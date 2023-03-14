@@ -7,7 +7,7 @@ slug: Web/API/IdleDeadline/timeRemaining
 
 {{domxref("IdleDeadline")}} 接口上的 **`timeRemaining()`** 方法返回当前空闲期间剩余的估计毫秒数。回调函数可以在任何时候调用此方法，以确定在必须返回之前它可以继续工作多长时间。例如，如果回调完成了一个任务，并且有另一个任务要开始，它可以调用 `timeRemaining()` 来查看是否有足够的时间来完成下一个任务。如果没有，回调函数可以立即返回，或者用剩余的时间寻找其他合适的工作。
 
-当 `timeRemaining()` 达到0时，建议回调应该将控制权返回给用户代理的事件循环。
+当 `timeRemaining()` 达到 0 时，建议回调应该将控制权返回给用户代理的事件循环。
 
 ## 语法
 
@@ -34,7 +34,7 @@ See our [complete example](/zh-CN/docs/Web/API/Background_Tasks_API#Example) in 
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Collaborative Scheduling of Background Tasks](/zh-CN/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
