@@ -52,7 +52,7 @@ if (condition) {
 在这里我们有：
 
 1. 关键字 `if`，并且后面跟随括号。
-2. 要测试的条件，放到括号里（通常是“这个值大于另一个值吗”或者“这个值存在吗”）。这个条件会利用[比较运算符](/zh-CN/Learn/JavaScript/First_steps/Math#比较运算符)（我们会在最后的模块中讨论）进行比较，并且返回 `true` 或者 `false`。
+2. 要测试的条件，放到括号里（通常是“这个值大于另一个值吗”或者“这个值存在吗”）。这个条件会利用[比较运算符](/zh-CN/docs/Learn/JavaScript/First_steps/Math#比较运算符)（我们会在最后的模块中讨论）进行比较，并且返回 `true` 或者 `false`。
 3. 一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且只会在条件语句返回 `true` 的时候运行。
 4. 关键字 `else`。
 5. 另一组花括号，在里面我们有一些代码——可以是任何我们喜欢的代码，并且当条件语句返回值不是 `true`（换句话说，这个返回值为 `false`）的话，它才会运行。
@@ -152,7 +152,7 @@ function setWeather() {
 
 ### 关于比较运算符
 
-比较运算符是用来判断条件语句中的条件的。我们先回过头来看看 [JavaScript 中的基本算术——数字与运算符](/zh-CN/Learn/JavaScript/First_steps/Math#比较运算符)文章中的比较运算符。我们有如下选择：
+比较运算符是用来判断条件语句中的条件的。我们先回过头来看看 [JavaScript 中的基本算术——数字与运算符](/zh-CN/docs/Learn/JavaScript/First_steps/Math#比较运算符)文章中的比较运算符。我们有如下选择：
 
 - `===` 和 `!==`——判断一个值是否严格等于，或不等于另一个。
 - `<` 和 `>`——判断一个值是否小于，或大于另一个。
@@ -822,11 +822,11 @@ textarea.onkeyup = function(){
 
 ## 结论
 
-这就是现在真正需要了解的 JavaScript 中的条件结构！如果有什么不明白的，请随时再次阅读文章，或者[联系我们](/zh-CN/docs/Learn#Contact_us)寻求帮助。
+这就是现在真正需要了解的 JavaScript 中的条件结构！如果有什么不明白的，请随时再次阅读文章，或者[联系我们](/zh-CN/docs/Learn#联系我们)寻求帮助。
 
 ## 参见
 
-- [比较运算符](/zh-CN/Learn/JavaScript/First_steps/Math#比较运算符)
+- [比较运算符](/zh-CN/docs/Learn/JavaScript/First_steps/Math#比较运算符)
 - [条件声明详细](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#条件语句)
 - [if...else 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
 - [条件（三元）运算符参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
