@@ -110,7 +110,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
-## 实例
+## 示例
 
 创建一个 `Uint8ClampedArray` 的不同方式：
 

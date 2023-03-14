@@ -47,7 +47,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 
 在 ES2018 之前，JavaScript 没有强有效的方式用匹配出不同`文字`(如马其顿语，希腊语，Georgian 等) 或不同 `属性名` (如 Emoji 等) 的字符。另见 [tc39 Proposal on Unicode Property Escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes).
 
-## 例子
+## 示例
 
 ### （一般类别）General categories
 

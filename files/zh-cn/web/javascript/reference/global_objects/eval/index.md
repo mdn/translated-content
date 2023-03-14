@@ -227,7 +227,7 @@ elt.addEventListener('click', function() { ... } , false);
 
 如果你必须执行这段代码，应考虑以更低的权限运行。此建议主要适用于扩展和 XUL 应用程序，可以使用 [Components.utils.evalInSandbox](/zh-CN/docs/Components.utils.evalInSandbox) 做到降低权限。
 
-## 例子
+## 示例
 
 ### 使用 `eval`
 

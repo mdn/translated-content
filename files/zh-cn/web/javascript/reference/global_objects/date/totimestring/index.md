@@ -21,9 +21,9 @@ dateObj.toTimeString()
 
 The `toTimeString` method is especially useful because compliant engines implementing [ECMA-262](/zh-CN/docs/ECMAScript) may differ in the string obtained from `toString` for `Date` objects, as the format is implementation-dependent; simple string slicing approaches may not produce consistent results across multiple engines.
 
-## 例子
+## 示例
 
-### 例子：`toTimeString` 方法的简单使用
+### 示例：`toTimeString` 方法的简单使用
 
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);

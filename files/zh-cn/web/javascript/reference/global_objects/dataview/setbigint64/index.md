@@ -33,7 +33,7 @@ dataview.setBigInt64(byteOffset, value [, littleEndian])
 - {{jsxref("RangeError")}}
   - : 如果 `byteOffset`设置导致存储该数值时超出了视图的末尾位置，将会抛出错误。
 
-## 例子
+## 示例
 
 ### 使用 `setBigInt64` 方法
 
