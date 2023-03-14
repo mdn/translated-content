@@ -35,7 +35,7 @@ timeRemaining = IdleDeadline.timeRemaining();
 
 ## 参见
 
-- [后台任务协作调度 API](/zh-CN/docs/Web/API/Background_Tasks_API)
+- [后台任务协作调度](/zh-CN/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
 - {{domxref("Window.requestIdleCallback()")}}
 - {{domxref("Window.cancelIdleCallback()")}}
