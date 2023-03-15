@@ -38,7 +38,7 @@ Function(arg0, arg1, /* … ,*/ argN, functionBody)
 
 ## 描述
 
-使用 `Function` 构造函数创建的 `Function` 对象会在函数创建时完成解析。这比用[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)或[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)创建一个函数并在代码中调用它的效率要低，因为这样的函数会和其他的代码一起被解析。
+使用 `Function` 构造函数创建的 `Function` 对象会在函数创建时完成解析。这比用[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)或[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)创建一个函数并在代码中调用它的效率要低，因为使用表达式或声明创建的函数会和其他的代码一起被解析。
 
 传递给函数的所有参数，除了最后一个，都被当作要创建的函数中参数的标识符的名称，按照它们被传递的顺序进行处理。该函数将被动态编译为一个函数表达式，其源代码以下列方式组装：
 
