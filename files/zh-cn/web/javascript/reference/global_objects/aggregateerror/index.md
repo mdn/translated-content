@@ -18,7 +18,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 
 _从父对象 {{jsxref("Error")}} 中继承实例属性。_
 
-以下属性在 `AggregateError.prototype` 上定义，并由所有 `AggregateError` 实例共享。 
+以下属性在 `AggregateError.prototype` 上定义，并由所有 `AggregateError` 实例共享。
 
 - {{jsxref("Object/constructor", "AggregateError.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `AggregateError` 实例来说，初始值为 {{jsxref("AggregateError/AggregateError", "AggregateError")}} 构造函数。
