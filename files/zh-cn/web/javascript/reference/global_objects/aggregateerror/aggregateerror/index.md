@@ -30,8 +30,7 @@ AggregateError(errors, message, options)
 - `options` {{optional_inline}}
   - : 一个具有以下属性的对象：
     - `cause` {{optional_inline}}
-      - : 表示错误的具体原因的属性。
-        当捕捉并重新抛出一个带有更具体或有用的错误信息的错误时，这个属性可以用来传递原始错误。
+      - : 表示错误的具体原因的属性。当捕捉并重新抛出一个带有更具体或有用的错误信息的错误时，这个属性可以用来传递原始错误。
 
 ## 示例
 
