@@ -13,7 +13,11 @@ slug: Web/CSS/:focus-visible
 
 ## 形式语法
 
-{{csssyntax}}
+```css
+:focus-visible {
+  /* ... */
+}
+```
 
 ## 示例
 
