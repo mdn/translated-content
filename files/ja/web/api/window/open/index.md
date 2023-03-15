@@ -2,7 +2,7 @@
 title: Window.open()
 slug: Web/API/Window/open
 l10n:
-  sourceCommit: 27e11bf5ee2425dc6b939d0d1825ac741414a688
+  sourceCommit: 72fb4be8b6c25b935d0d8709dfe2cf2c58004197
 ---
 
 {{APIRef}}
