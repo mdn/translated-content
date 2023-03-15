@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction
 
 **`AsyncGeneratorFunction`** 对象为[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)提供方法。在 JavaScript 中，每个异步生成器函数实际上都是一个 `AsyncGeneratorFunction` 对象。
 
-注意，`AsyncGeneratorFunction` *不是*一个全局对象。它可以通过以下代码获取：
+注意，`AsyncGeneratorFunction` *不是*全局对象。它可以通过以下代码获取：
 
 ```js
 const AsyncGeneratorFunction = async function* () {}.constructor;
