@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGenera
 
 {{JSRef}}
 
-**`AsyncGeneratorFunction()`** 构造函数创建一个新的 {{jsxref("AsyncGeneratorFunction")}} 对象。在 JavaScript 中，每个[异步生成器函数](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)实际上都是一个 `AsyncGeneratorFunction` 对象。
+**`AsyncGeneratorFunction()`** 构造函数创建一个新的 {{jsxref("AsyncGeneratorFunction")}} 对象。在 JavaScript 中，每个[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)实际上都是一个 `AsyncGeneratorFunction` 对象。
 
 注意，`AsyncGeneratorFunction` 不是全局对象。它可以通过执行以下代码获取。
 
@@ -58,8 +58,8 @@ asyncGen.next().then((res) => console.log(res.value)); // 20
 
 ## 参见
 
-- [`async function*` 声明](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
-- [`async function*` 表达式](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
-- [`Function()` 构造函数](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [迭代器和生成器](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)
+- [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)
+- [`Function()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 - {{jsxref("Functions", "函数", "", 1)}}
