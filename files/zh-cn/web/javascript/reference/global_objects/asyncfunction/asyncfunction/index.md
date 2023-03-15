@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
 const AsyncFunction = async function () {}.constructor;
 ```
 
-`AsyncFunction()` 构造函数不能直接使用，并且所有在 {{jsxref("Function/Function", "Function()")}} 描述中提到的用法都可以应用到 `AsyncFunction`。
+`AsyncFunction()` 构造函数不能直接使用，并且所有在 {{jsxref("Function/Function", "Function()")}} 描述中提到的注意事项都可以应用到 `AsyncFunction`。
 
 ## 语法
 
@@ -29,7 +29,7 @@ AsyncFunction(arg0, arg1, functionBody)
 AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
-> **备注：** 可以使用或者不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncFunction()`。它们都可以创建一个新的 `AsyncFunction` 实例。
+> **备注：** 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncFunction()`，都可以创建一个新的 `AsyncFunction` 实例。
 
 ### 参数
 
