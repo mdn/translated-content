@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 
 ## 实例属性
 
-_从父对象 {{jsxref("Error")}} 中继承实例属性。_
+_从父类 {{jsxref("Error")}} 中继承实例属性。_
 
 以下属性在 `AggregateError.prototype` 上定义，并由所有 `AggregateError` 实例共享。
 
