@@ -1,0 +1,21 @@
+---
+title: DOMException.message
+slug: Web/API/DOMException/message
+---
+
+{{ APIRef("DOM") }}
+
+{{domxref("DOMException")}} 接口中的 **`message`** 是一个只读属性，它返回了一个字符串来表示与给定[错误名称](/zh-CN/docs/Web/API/DOMException#错误名称)关联的消息或描述。
+
+
+## 值
+
+一个字符串。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
