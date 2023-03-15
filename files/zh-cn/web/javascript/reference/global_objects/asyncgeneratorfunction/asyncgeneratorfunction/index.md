@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGenera
 const AsyncGeneratorFunction = async function* () {}.constructor;
 ```
 
-`AsyncGeneratorFunction()` 构造函数不能直接使用，并且所有在 {{jsxref("Function/Function", "Function()")}} 描述中提到的用法都可以应用到 `AsyncGeneratorFunction()`。
+`AsyncGeneratorFunction()` 构造函数不应直接使用，并且所有在 {{jsxref("Function/Function", "Function()")}} 的描述中提到的注意事项也适用于 `AsyncGeneratorFunction()`。
 
 ## 语法
 
@@ -29,7 +29,7 @@ AsyncGeneratorFunction(arg0, arg1, functionBody)
 AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
-> **备注：** 可以使用或者不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncGeneratorFunction()`。它们都可以创建一个新的 `AsyncGeneratorFunction` 实例。
+> **备注：** 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncGeneratorFunction()`，都可以创建一个新的 `AsyncGeneratorFunction` 实例。
 
 ### 参数
 
@@ -39,7 +39,7 @@ AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 
 ### 使用构造函数
 
-以下示例使用 `AsyncGeneratorFunction` 构造函数去创建一个异步生成器函数。
+以下示例使用 `AsyncGeneratorFunction` 构造函数创建一个异步生成器函数。
 
 ```js
 const AsyncGeneratorFunction = async function* () {}.constructor;
