@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
 
 **`AsyncFunction()`** 构造函数创建一个新的 {{jsxref("AsyncFunction")}} 对象。在 JavaScript 中，每个[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)实际上都是一个 `AsyncFunction` 对象。
 
-注意，`AsyncFunction` *不是*一个全局对象。它可以通过以下代码获取：
+注意，`AsyncFunction` *不是*全局对象。它可以通过以下代码获取：
 
 ```js
 const AsyncFunction = async function () {}.constructor;
