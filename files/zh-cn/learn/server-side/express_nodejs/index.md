@@ -43,7 +43,7 @@ Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，�
 - 使用 session
 - 用户认证
 - 用户授权与许可
-- 测试 Express 网页应用
-- Express 网页应用的安全
+- 测试 Express web 应用
+- Express web 应用的安全
 
 当然，如果做一个评估任务会更好！
