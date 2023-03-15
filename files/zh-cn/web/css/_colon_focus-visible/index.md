@@ -11,9 +11,13 @@ slug: Web/CSS/:focus-visible
 
 请注意 Firefox 通过较旧的前缀伪类 `:-moz-focusring` 支持类似的功能。更多细节请参考{{cssxref(":-moz-focusring")}}页面。
 
-## 形式语法
+## 语法
 
-{{csssyntax}}
+```css
+:focus-visible {
+  /* ... */
+}
+```
 
 ## 示例
 
