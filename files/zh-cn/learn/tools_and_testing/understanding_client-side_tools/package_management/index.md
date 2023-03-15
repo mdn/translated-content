@@ -339,7 +339,7 @@ yarn upgrade
 
 范围由依赖项版本号中的符号指定，例如 `date-fns@^2.0.1`——在这种情况下，插入符号 `^` 表示所有的次要版本和补丁版本，从 2.0.1 开始一直到 3.0.0 之前。
 
-版本号的确定是通过名为 [semver](https://semver.org/) 的系统实现的。从文档中看起来可能有些复杂，但是只考虑摘要信息并将版本表示为 `MAJOR.MINOR.PATCH`，例如 2.0.1 表示主版本 2 和补丁版本 1，可以简化这个系统。一个测试 semver 值的绝佳方法是使用 [semver计算器](https://semver.npmjs.com/)。
+版本号的确定是通过名为 [semver](https://semver.org/) 的系统实现的。从文档中看起来可能有些复杂，但是只考虑摘要信息并将版本表示为 `MAJOR.MINOR.PATCH`，例如 2.0.1 表示主版本 2 和补丁版本 1，可以简化这个系统。一个测试 semver 值的绝佳方法是使用 [semver 计算器](https://semver.npmjs.com/)。
 
 请记住，`npm update` 不会将依赖项升级到超出 `package.json` 中限定的范围——要执行此操作，你需要专门安装那个版本。
 
@@ -352,7 +352,7 @@ yarn audit
 
 这个命令将检查你项目的所有依赖树，并使用漏洞数据库检查你正在使用的特定版本，如果你的项目中存在潜在的漏洞包，则会通知你。
 
-想要了解有关漏洞的更多信息，可以参考 [Snyk项目](https://snyk.io/)，该项目涵盖了 JavaScript 软件包和其他编程语言。
+想要了解有关漏洞的更多信息，可以参考 [Snyk 项目](https://snyk.io/)，该项目涵盖了 JavaScript 软件包和其他编程语言。
 
 ### 检查一个依赖
 
@@ -418,7 +418,7 @@ Server running at http://localhost:1234
 ✨  Built in 5.48s.
 ```
 
-此外，npm（和 yarn）命令非常智能，它们会在尝试通过传统方法查找命令行工具之前，先搜索项目中本地安装的工具（计算机通常会存储和允许查找软件）。你可以 [了解有关 `run` 命令的技术细节](https://docs.npmjs.com/cli/run-script/)，尽管在大多数情况下，你自己的脚本都可以正常运行。
+此外，npm（和 yarn）命令非常智能，它们会在尝试通过传统方法查找命令行工具之前，先搜索项目中本地安装的工具（计算机通常会存储和允许查找软件）。你可以[了解有关 `run` 命令的技术细节](https://docs.npmjs.com/cli/run-script/)，尽管在大多数情况下，你自己的脚本都可以正常运行。
 
 你可以在 `scripts` 属性中添加各种有助于完成工作的内容。我们肯定会这样做，[其他人也这样做](https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6)。
 
