@@ -1,24 +1,15 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
-tags:
-  - API
-  - Interface
-  - Offline
-  - リファレンス
-  - サービスワーカー
-  - サービスワーカー API
-  - ServiceWorkerRegistration
-  - ワーカー
-translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`ServiceWorkerRegistration`** は [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) のインターフェイスで、サービスワーカー登録を表します。 同じオリジンを共有している 1 つ以上のページを制御するサービスワーカーを登録します。
 
 サービスワーカー登録の存続期間は、対応するサービスワーカークライアントの存続期間内でそれらを表す `ServiceWorkerRegistration` オブジェクトの存続期間を超えています。 ブラウザーは、アクティブな `ServiceWorkerRegistration` オブジェクトの永続的なリストを維持します。
 
-> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 {{InheritanceDiagram}}
 

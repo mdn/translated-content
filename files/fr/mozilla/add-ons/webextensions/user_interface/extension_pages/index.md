@@ -9,6 +9,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/pages_web_incluses
 ---
+
 {{AddonSidebar()}}
 
 Vous pouvez inclure des pages HTML dans votre extension sous la forme de formulaires, d’aide ou tout autre contenu dont votre extension a besoin.
@@ -32,7 +33,7 @@ Vous pouvez inclure des fichiers HTML - et les fichiers CSS ou JavaScript associ
 
 ## Affichage des pages d’extension
 
-Il existe deux options pour afficher des pages d'extension&nbsp;:  {{WebExtAPIRef("windows.create()")}} et {{WebExtAPIRef("tabs.create()")}}.
+Il existe deux options pour afficher des pages d'extension&nbsp;: {{WebExtAPIRef("windows.create()")}} et {{WebExtAPIRef("tabs.create()")}}.
 
 À l’aide de `windows.create()`, vous pouvez ouvrir une page HTML intégrée dans un panneau détaché (une fenêtre sans l’interface utilisateur de la barre d’la barre de signet et similaire) pour créer une expérience utilisateur semblable à une boîte de dialogue&nbsp;:
 

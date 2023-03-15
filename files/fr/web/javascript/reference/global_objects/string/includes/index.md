@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/includes
 ---
+
 {{JSRef}}
 
 La méthode **`includes()`** détermine si une chaîne de caractères est contenue dans une autre et renvoie `true` ou `false` selon le cas de figure.
@@ -83,24 +84,11 @@ if (!String.prototype.includes) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES6', '#sec-string.prototype.includes', 'String.prototype.includes')}}         | {{Spec2('ES6')}}         | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.includes")}}
-
-## String.prototype.contains
-
-Les versions de Firefox allant de Firefox 18 à Firefox 39 utilisent cette méthode avec le nom `contains()`. Cette méthode a été renommée en `includes()` via {{bug(1102219)}} pour la raison suivante :
-
-Il a été [rapporté](https://bugzilla.mozilla.org/show_bug.cgi?id=789036) que certains sites web utilisant MooTools 1.2 plantaient sur Firefox 17. Cette version de MooTools vérifie que `String.prototype.contains()` existe bien, et si ce n'est pas le cas, ajoute sa propre fonction similaire. Avec l'introduction de cette fonction dans Firefox 17, le comportement de ce contrôle a changé de telle manière qu'il cause un plantage du code de MooTools implémenté pour `String.prototype.contains()`. En conséquence, cette implémentation a été [désactivée](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8 "https://bugzilla.mozilla.org/show_bug.cgi?id=793781") de Firefox 17. `String.prototype.contains()` est ainsi disponible sur une version ultérieure : Firefox 18 lorsque [MooTools a déclenché la sortie de la version 1.2.6.](https://mootools.net/blog/2013/02/19/mootools-1-2-6-released)
-
-MooTools 1.3 force sa propre version de `String.prototype.includes()`, les sites Web l'implémentant ne sont donc pas perturbés. Néanmoins, il faut noter que les signatures des méthodes diffèrent entre [MooTools 1.3](https://mootools.net/docs/core/Types/String#String:includes) et ECMAScript 2015 (pour le second paramètre). [MooTools 1.5+ a modifié sa signature afin de prendre en compte le standard de ES2015.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
-
-Dans Firefox 48, la méthode `String.prototype.contains()` a été retirée. `String.prototype.includes()` doit être utilisée à la place.
+{{Compat}}
 
 ## Voir aussi
 

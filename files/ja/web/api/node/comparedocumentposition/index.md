@@ -1,12 +1,8 @@
 ---
 title: Node.compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.compareDocumentPosition
-translation_of: Web/API/Node/compareDocumentPosition
 ---
+
 {{APIRef("DOM")}}
 
 **`compareDocumentPosition()`** は {{domxref("Node")}} インターフェイスのメソッドで、引数のノードの位置を、呼び出されたノードからの相対位置で報告します。
@@ -54,7 +50,7 @@ if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
 }
 ```
 
-> **Note:** `compareDocumentPosition()` の返値はビットマスクですので、意味のある結果を得るには[ビット AND 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)を使用する必要があります。
+> **メモ:** `compareDocumentPosition()` の返値はビットマスクですので、意味のある結果を得るには[ビット AND 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)を使用する必要があります。
 
 ## 仕様書
 

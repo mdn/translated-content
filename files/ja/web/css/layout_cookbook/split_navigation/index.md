@@ -1,15 +1,8 @@
 ---
 title: ナビゲーションの分割
 slug: Web/CSS/Layout_cookbook/Split_Navigation
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - ナビゲーション
-  - 料理帳
-  - フレックスボックス
-translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 ---
+
 {{CSSRef}}
 
 1 つ以上の要素が他のナビゲーション項目から分離されているナビゲーションのパターンです。
@@ -24,7 +17,7 @@ translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html)
 

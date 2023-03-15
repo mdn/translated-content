@@ -1,17 +1,8 @@
 ---
 title: Notification.dir
-slug: Web/API/notification/dir
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - dir
-translation_of: Web/API/Notification/dir
-browser-compat: api.Notification.dir
+slug: Web/API/Notification/dir
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propiedad `dir` de solo lectura de la interfaz {{domxref("Notification")}} indica la direccion del texto en la notificación, como se especifica en la opción `dir` del constructor {{domxref("Notification.Notification","Notification()")}}.
@@ -28,7 +19,7 @@ Un {{domxref("DOMString")}} especifica la dirección del texto, los posibles val
 
 - `auto`: Aplica el comportamiento del idioma del navegador (por defecto).
 - `ltr`: El texto es desplegado de izquierda a derecha.
-- `rtl`: El texto es desplegado de derecha a izquierda.
+- `rtl`: El texto es desplegado de derecha a izquierda.
 
 > **Nota:** La mayoría de los navegadores parecen ignorar las intrucciones explicitas `ltr` y `rtl`, y solo van a las proveídas por el navegador.
 

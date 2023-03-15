@@ -1,19 +1,8 @@
 ---
 title: HTMLLinkElement.fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
-page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTMLLinkElement
-  - リンク
-  - 先読み API
-  - プロパティ
-  - リファレンス
-  - fetchPriority
-browser-compat: api.HTMLLinkElement.fetchPriority
-translation_of: Web/API/HTMLLinkElement/fetchPriority
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 **`fetchPriority`** は {{domxref("HTMLLinkElement")}} インターフェイスのプロパティで、ブラウザーが同じ種類の他のリソースに対して、与えられたリソースの先読みをどのように優先させるべきかを示すヒントを表します。
@@ -22,9 +11,12 @@ translation_of: Web/API/HTMLLinkElement/fetchPriority
 
 優先度のヒントを表す文字列です。使用可能な値は以下のとおりです。
 
-- **`high`**: 他の同じ種類のリソースと比較して、高い優先度で先読みを行います。
-- **`low`**: 同じ種類の他のリソースに対して、低い優先度で画像を取得します。
-- **`auto`**: 既定のモードで、フェッチの優先順位を指定しません。ブラウザーがユーザーにとって最適なものを決定します。
+- `high`
+  - : 他の同じ種類のリソースと比較して、高い優先度で先読みを行います。
+- `low`
+  - : 同じ種類の他のリソースに対して、低い優先度で画像を取得します。
+- `auto`
+  - : 既定のモードで、フェッチの優先順位を指定しません。ブラウザーがユーザーにとって最適なものを決定します。
 
 `fetchPriority` プロパティは、先読みの優先順位を高くしたり低くしたりするための信号を送ることができます。これは {{HTMLElement("link")}} 要素に適用すると、読み込み処理の早い段階で、ユーザーエクスペリエンスにとって重要な先読みを知らせることができ、便利です。
 

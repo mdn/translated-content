@@ -1,0 +1,66 @@
+name: Create Markdownlint auto-fix PR
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  fix:
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lang:
+          - es
+          - fr
+          - ja
+          - ko
+          - pt-br
+          - ru
+          - zh-cn
+          - zh-tw
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Install all yarn packages
+        env:
+          HUSKY: 0
+        run: |
+          yarn --frozen-lockfile
+
+      - name: Lint markdown files
+        run: |
+          yarn markdownlint-cli2-fix "**/${{ matrix.lang }}/**/*.md"
+
+      - name: Create PR with only fixable issues
+        if: success()
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "${{ matrix.lang }}: auto-fix Markdownlint issues"
+          branch: markdownlint-auto-cleanup-${{ matrix.lang }}
+          title: "Markdownlint auto-cleanup for ${{ matrix.lang }}"
+          author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          body: |
+            All issues auto-fixed
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
+
+      - name: Create PR with notice on unfixed issues
+        if: failure()
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "${{ matrix.lang }}: auto-fix Markdownlint issues"
+          branch: markdownlint-auto-cleanup-${{ matrix.lang }}
+          title: "Markdownlint auto-cleanup for ${{ matrix.lang }}"
+          author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          body: |
+            Auto-fix was run, but additional issues found.
+            Please review the run log: https://github.com/mdn/translated-content/actions/runs/${{ github.run_id }}
+          token: ${{ secrets.AUTOMERGE_TOKEN }}

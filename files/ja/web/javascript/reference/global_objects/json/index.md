@@ -1,15 +1,8 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - 名前空間
-  - オブジェクト
-  - リファレンス
-browser-compat: javascript.builtins.JSON
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
+
 {{JSRef}}
 
 **`JSON`** オブジェクトは、 [JavaScript Object
@@ -111,17 +104,17 @@ DIGIT = %x30-39            ; 0-9
 
 ```json
 {
-  "browsers": {
-    "firefox": {
-      "name": "Firefox",
-      "pref_url": "about:config",
-      "releases": {
-        "1": {
-          "release_date": "2004-11-09",
-          "status": "retired",
-          "engine": "Gecko",
-          "engine_version": "1.7"
-        }
+  "browsers": {
+    "firefox": {
+      "name": "Firefox",
+      "pref_url": "about:config",
+      "releases": {
+        "1": {
+          "release_date": "2004-11-09",
+          "status": "retired",
+          "engine": "Gecko",
+          "engine_version": "1.7"
+        }
       }
     }
   }

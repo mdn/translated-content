@@ -8,9 +8,10 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/lowerBound
 ---
+
 {{APIRef("IndexedDB")}}
 
-La méthode **`lowerBound()`**, rattachée à l'interface  {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne inférieure.
+La méthode **`lowerBound()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne inférieure.
 
 Par défaut, la borne est inclue dans l'intervalle (autrement dit, il est fermé à gauche).
 
@@ -66,17 +67,15 @@ function displayData() {
   };
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                    | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-lowerBound-IDBKeyRange-any-lower-boolean-open', 'lowerBound()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBKeyRange.lowerBound")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -86,4 +85,4 @@ function displayData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

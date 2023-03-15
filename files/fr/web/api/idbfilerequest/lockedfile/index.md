@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/FileRequest/lockedFile
 original_slug: Web/API/FileRequest/lockedFile
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
 ## Résumé
@@ -27,9 +28,7 @@ Un objet {{domxref("LockedFile")}}.
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire        |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Brouillon proposé. |
+{{Specifications}}
 
 ## Voir aussi
 

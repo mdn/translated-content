@@ -1,14 +1,8 @@
 ---
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLBaseElement
-translation_of: Web/API/HTMLBaseElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBaseElement`** インターフェイスは、文書の基底 URI を持ちます。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスで定められているすべてのプロパティとメソッドを継承します。

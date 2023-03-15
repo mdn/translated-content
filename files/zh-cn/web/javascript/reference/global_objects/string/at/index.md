@@ -1,17 +1,8 @@
 ---
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
-tags:
-  - String
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Experimental
-browser-compat: javascript.builtins.String.at
 ---
+
 {{JSRef}}
 
  **`at()`** 方法接受一个整数值，并返回一个新的 {{jsxref('String')}}，该字符串由位于指定偏移量处的单个 UTF-16 码元组成。该方法允许正整数和负整数。负整数从字符串中的最后一个字符开始倒数。

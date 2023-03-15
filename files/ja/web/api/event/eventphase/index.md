@@ -1,13 +1,8 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 **eventPhase`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティは、イベントフローのどの段階が現在評価されているかを示します。

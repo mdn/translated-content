@@ -1,15 +1,8 @@
 ---
 title: セッター
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - 関数
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 **`set`** 構文は、あるオブジェクトプロパティを、プロパティに設定しようとしたときに呼び出される関数に結びつけます。
@@ -125,6 +118,6 @@ console.log(obj.baz);
 - [ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) (JavaScript ガイド)

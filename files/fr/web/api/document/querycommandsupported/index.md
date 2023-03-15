@@ -10,6 +10,7 @@ tags:
   - editeur
 translation_of: Web/API/Document/queryCommandSupported
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Document.queryCommandSupported()`** indique si la commande d'éditeur spécifiée est prise en charge par le navigateur.
@@ -45,13 +46,11 @@ if(flg) {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML Editing','#querycommandsupported()','querycommandsupported')}} | {{Spec2('HTML Editing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.queryCommandSupported")}}
+{{Compat}}
 
 ## Voir aussi
 

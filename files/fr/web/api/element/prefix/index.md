@@ -9,6 +9,7 @@ tags:
   - Préfixe
 translation_of: Web/API/Element/prefix
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.prefix`** renvoie le préfixe d'espace de noms de l'élément spécifié ou `null` si aucun préfixe n'est précisé.
@@ -35,13 +36,11 @@ Cela fonctionnera uniquement lorsqu'un analyseur connaissant l'espace de noms es
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                   | Commentaire          |
-| -------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName("DOM4", "#dom-element-prefix", "Element.prefix")}} | {{Spec2("DOM4")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.prefix")}}
+{{Compat}}
 
 ## Voir aussi
 

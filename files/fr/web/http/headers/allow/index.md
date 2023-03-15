@@ -8,6 +8,7 @@ tags:
   - entête
 translation_of: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 L'entête **`Allow`** liste les méthodes supportées par une ressource.
@@ -36,7 +37,7 @@ Allow: <methodes-http>
 ## Directives
 
 - \<methodes-http>
-  - : La liste des [méthodes de requête HTTP](/en-US/docs/Web/HTTP/Methods) autorisées, séparées par des virgules.
+  - : La liste des [méthodes de requête HTTP](/fr/docs/Web/HTTP/Methods) autorisées, séparées par des virgules.
 
 ## Exemples
 
@@ -46,9 +47,11 @@ Allow: GET, POST, HEAD
 
 ## Spécifications
 
-| Spécification                                | Titre                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

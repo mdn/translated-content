@@ -1,13 +1,8 @@
 ---
 title: CSS Scrollbars
 slug: Web/CSS/CSS_Scrollbars
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - css scrollbars
-spec-urls: https://drafts.csswg.org/css-scrollbars/
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS Scrollbars**는 Windows IE 5.5에서 2000년에 도입한 더이상 사용되지 않는(obsolete) 스크롤바 색상 프로퍼티를 표준화합니다.
@@ -61,13 +56,7 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ## 브라우저 호환성
 
-### scrollbar-width
-
-{{Compat("css.properties.scrollbar-width")}}
-
-### scrollbar-color
-
-{{Compat("css.properties.scrollbar-color")}}
+{{Compat}}
 
 ## 같이 보기
 

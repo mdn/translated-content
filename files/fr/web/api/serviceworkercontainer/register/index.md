@@ -12,6 +12,7 @@ tags:
   - register
 translation_of: Web/API/ServiceWorkerContainer/register
 ---
+
 {{APIRef("Service Workers API")}}
 
 La méthode **`register()`** de l'interface {{domxref("ServiceWorkerContainer")}} crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour la `scriptURL` donnée.
@@ -30,7 +31,7 @@ serviceWorkerContainer.register(scriptURL, options)
 ### Paramètres
 
 - `scriptURL`
-  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) valide.
+  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) valide.
 - `options` {{optional_inline}}
 
   - : Un objet contenant les options d'enregistrement. Les options sont:
@@ -110,15 +111,13 @@ Toutefois, les serveurs peuvent supprimer cette restriction en définissant un e
 
 ## Spécifications
 
-| Specification                                                                                                                                    | Status                               | Comment              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-serviceworkercontainer-register', 'ServiceWorkerContainer: register')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerContainer.register")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [W3.org ServiceWorker Register](https://www.w3.org/TR/service-workers/#navigator-service-worker-register)
 - [W3c.github.io ServiceWorker Register](https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register)

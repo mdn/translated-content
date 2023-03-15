@@ -3,6 +3,7 @@ title: Mesure des performances
 slug: Learn/Performance/Measuring_performance
 translation_of: Learn/Performance/Measuring_performance
 ---
+
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
 
 La mesure des performance fournit un indicateur important pour vous aider à assurer le succès de votre application, site ou service web.

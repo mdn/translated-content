@@ -1,20 +1,9 @@
 ---
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
-tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - メソッド
-  - リファレンス
-  - スクロール
-  - ビュー
-  - activate
-browser-compat: api.HTMLElement.focus
-translation_of: Web/API/HTMLElement/focus
 original_slug: Web/API/HTMLElement/focus
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.focus()`** メソッドは、指定された要素にフォーカスを設定できる場合、フォーカスを設定します。 フォーカスされた要素は、既定でキーボードや同様のイベントを受け取る要素です。

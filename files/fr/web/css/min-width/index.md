@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/min-width
 ---
+
 {{CSSRef}}
 
 La propriété **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("width")}} de devenir inférieure à la valeur spécifiée par `min-width` (autrement dit, `min-width` est une borne inférieure pour `width`).
@@ -55,9 +56,13 @@ min-width: unset;
 - `fit-content` {{experimental_inline}}
   - : La largeur calculée par `min(max-content, max(min-content, fill-available))`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -92,18 +97,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                                         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'min-width')}} | {{Spec2('CSS3 Sizing')}}         | Ajout des mots-clés `max-content`, `min-content`, `fit-content` et `fill-available`. |
-| {{SpecName('CSS3 Flexbox', '#min-size-auto', 'min-width')}}         | {{Spec2('CSS3 Flexbox')}}         | Ajout du mot-clé `auto` qui est utilisé comme valeur initiale.                       |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'min-width')}}     | {{Spec2('CSS3 Transitions')}} | `min-width` peut désormais être animée.                                              |
-| {{SpecName('CSS2.1', 'visudet.html#min-max-widths', 'min-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                 |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.min-width")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -111,4 +109,4 @@ p {
 - {{cssxref("max-width")}}
 - {{cssxref("min-height")}}
 - {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte "en/CSS/box_model")
+- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)

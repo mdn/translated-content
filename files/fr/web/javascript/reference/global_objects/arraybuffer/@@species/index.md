@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/@@species
 ---
+
 {{JSRef}}
 
 La propriété d'accesseur **`ArrayBuffer[@@species]`** renvoie le constructeur `ArrayBuffer`.
@@ -44,14 +45,11 @@ class MonArrayBuffer extends ArrayBuffer {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.ArrayBuffer.@@species")}}
+{{Compat}}
 
 ## Voir aussi
 

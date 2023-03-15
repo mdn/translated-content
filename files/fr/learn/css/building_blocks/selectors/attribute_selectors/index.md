@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 original_slug: Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_d_atrribut
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
 Dans l'étude de HTML, nous avons vu les attributs d'un élément. En CSS, on peut utiliser ces attributs pour cibler les éléments. Cette leçon vous montre comment.

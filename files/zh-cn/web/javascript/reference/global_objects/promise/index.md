@@ -1,28 +1,21 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-tags:
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Promise
-  - Promise A+
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 对象用于表示一个异步操作的最终完成（或失败）及其结果值。
 
 {{AvailableInWorkers}}
 
-若想了解 promise 的工作方式以及如何使用它们，我们建议你先阅读[使用 promise](/en-US/docs/Web/JavaScript/Guide/Using_promises)。
+若想了解 promise 的工作方式以及如何使用它们，我们建议你先阅读[使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)。
 
 ## 描述
 
-一个 `Promise` 对象代表一个在这个 promise 被创建出来时不一定已知值的代理。它让你能够把异步操作最终的成功返回值或者失败原因和相应的处理程序关联起来。这样使得异步方法可以像同步方法那样返回值：异步方法并不会立即返回最终的值，而是会返回一个 _promise_，以便在未来某个时候把值交给使用者。
+一个 `Promise` 对象代表一个在这个 promise 被创建出来时不一定已知值的代理。它让你能够把异步操作最终的成功返回值或者失败原因和相应的处理程序关联起来。这样使得异步方法可以像同步方法那样返回值：异步方法并不会立即返回最终的值，而是会返回一个 _promise_，以便在未来某个时候把值交给使用者。
 
-一个 `Promise` 必然处于以下几种状态之一：
+一个 `Promise` 必然处于以下几种状态之一：
 
 - *待定（pending）*：初始状态，既没有被兑现，也没有被拒绝。
 - *已兑现（fulfilled）*：意味着操作成功完成。
@@ -30,13 +23,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 待定状态的 Promise 对象要么会通过一个值*被兑现*，要么会通过一个原因（错误）*被拒绝*。当这些情况之一发生时，我们用 promise 的 `then` 方法排列起来的相关处理程序就会被调用。如果 promise 在一个相应的处理程序被绑定时就已经被兑现或被拒绝了，那么这个处理程序也同样会被调用，因此在完成异步操作和绑定处理方法之间不存在竞态条件。
 
-因为 `{{jsxref("Promise.then", "Promise.prototype.then")}}` 和  `{{jsxref("Promise.catch", "Promise.prototype.catch")}}` 方法返回的是 promise，所以它们可以被链式调用。
+因为 `{{jsxref("Promise.then", "Promise.prototype.then")}}` 和 `{{jsxref("Promise.catch", "Promise.prototype.catch")}}` 方法返回的是 promise，所以它们可以被链式调用。
 
 ![](promises.png)
 
-> **备注：** 有一些语言中有惰性求值和延迟计算的特性，它们也被称为“promise”，例如 Scheme。JavaScript 中的 promise 代表的是已经在发生的进程，而且可以通过回调函数实现链式调用。如果你想对一个表达式进行惰性求值，就考虑一下使用无参数的箭头函数，如 `f = () => expression` 来创建惰性求值的表达式，然后使用 `f()` 进行求值。
+> **备注：** 有一些语言中有惰性求值和延迟计算的特性，它们也被称为“promise”，例如 Scheme。JavaScript 中的 promise 代表的是已经在发生的进程，而且可以通过回调函数实现链式调用。如果你想对一个表达式进行惰性求值，就考虑一下使用无参数的箭头函数，如 `f = () => expression` 来创建惰性求值的表达式，然后使用 `f()` 进行求值。
 
-> **备注：** 如果一个 promise 已经被兑现或被拒绝，那么我们也可以说它处于 *已敲定（settled）* 状态。你还会听到一个经常跟 promise 一起使用的术语：*已决议（resolved）*，它表示 promise 已经处于已敲定状态，或者为了匹配另一个 promise 的状态被“锁定”了。Domenic Denicola 的 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 中有更多关于 promise 术语的细节可以供你参考。
+> **备注：** 如果一个 promise 已经被兑现或被拒绝，那么我们也可以说它处于 *已敲定（settled）* 状态。你还会听到一个经常跟 promise 一起使用的术语：*已决议（resolved）*，它表示 promise 已经处于已敲定状态，或者为了匹配另一个 promise 的状态被“锁定”了。Domenic Denicola 的 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 中有更多关于 promise 术语的细节可以供你参考。
 
 ### Promise 的链式调用
 
@@ -57,9 +50,9 @@ myPromise
   .then(handleResolvedC, handleRejectedC);
 ```
 
-当 `.then()` 中缺少能够返回 promise 对象的函数时，链式调用就直接继续进行下一环操作。因此，链式调用可以在最后一个 `.catch()` 之前把所有的处理已拒绝状态的回调函数都省略掉。
+当 `.then()` 中缺少能够返回 promise 对象的函数时，链式调用就直接继续进行下一环操作。因此，链式调用可以在最后一个 `.catch()` 之前把所有的处理已拒绝状态的回调函数都省略掉。
 
-过早地处理变为已拒绝状态的 promise 会对之后 promise 的链式调用造成影响。不过有时候我们因为需要马上处理一个错误也只能这样做。例如，外面必须抛出某种类型的错误以在链式调用中传递错误状态。另一方面，在没有迫切需要的情况下，可以在最后一个 `.catch()` 语句时再进行错误处理，这种做法更加简单。`.catch()` 其实只是没有给处理已兑现状态的回调函数预留参数位置的 `.then()` 而已。
+过早地处理变为已拒绝状态的 promise 会对之后 promise 的链式调用造成影响。不过有时候我们因为需要马上处理一个错误也只能这样做。例如，外面必须抛出某种类型的错误以在链式调用中传递错误状态。另一方面，在没有迫切需要的情况下，可以在最后一个 `.catch()` 语句时再进行错误处理，这种做法更加简单。`.catch()` 其实只是没有给处理已兑现状态的回调函数预留参数位置的 `.then()` 而已。
 
 ```js
 myPromise
@@ -89,13 +82,13 @@ myPromise
 (promise D, (promise C, (promise B, (promise A) ) ) )
 ```
 
-当存在一个 `nextValue` 是 promise 时，就会出现一种动态的替换效果。`return` 会导致一个 promise 被弹出，但这个 `nextValue` promise 则会被推入被弹出 promise 原来的位置。对于上面所示的嵌套场景，假设与 "promise B" 相关的 `.then()` 返回了一个值为 "promise X" 的 `nextValue` 。那么嵌套的结果看起来就会是这样：
+当存在一个 `nextValue` 是 promise 时，就会出现一种动态的替换效果。`return` 会导致一个 promise 被弹出，但这个 `nextValue` promise 则会被推入被弹出 promise 原来的位置。对于上面所示的嵌套场景，假设与 "promise B" 相关的 `.then()` 返回了一个值为 "promise X" 的 `nextValue` 。那么嵌套的结果看起来就会是这样：
 
 ```plain
 (promise D, (promise C, (promise X) ) )
 ```
 
-一个 promise 可能会参与不止一次的嵌套。对于下面的代码，`promiseA` 向“已敲定”状态的过渡会导致两个实例的 `.then` 都被调用。
+一个 promise 可能会参与不止一次的嵌套。对于下面的代码，`promiseA` 向“已敲定”状态的过渡会导致两个实例的 `.then` 都被调用。
 
 ```js
 const promiseA = new Promise(myExecutorFunc);
@@ -103,7 +96,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-一个已经处于“已敲定”状态的 promise 也可以接收操作。在那种情况下，（如果没有问题的话）这个操作会被作为第一个异步操作被执行。注意，所有的 promise 都一定是异步的。因此，一个已经处于“已敲定”状态的 promise 中的操作只有 promise 链式调用的栈被清空且一个时间片段过去之后才会被执行。这种效果跟 `setTimeout(action, 10)` 特别相似。
+一个已经处于“已敲定”状态的 promise 也可以接收操作。在那种情况下，（如果没有问题的话）这个操作会被作为第一个异步操作被执行。注意，所有的 promise 都一定是异步的。因此，一个已经处于“已敲定”状态的 promise 中的操作只有 promise 链式调用的栈被清空且一个时间片段过去之后才会被执行。这种效果跟 `setTimeout(action, 10)` 特别相似。
 
 ```js
 const promiseA = new Promise( (resolutionFunc,rejectionFunc) => {
@@ -187,7 +180,7 @@ window.addEventListener("message", (event) => {
 ## 构造函数
 
 - {{jsxref("Promise/Promise", "Promise()")}}
-  - : 创建一个新的 `Promise` 对象。该构造函数主要用于包装还没有添加 promise 支持的函数。
+  - : 创建一个新的 `Promise` 对象。该构造函数主要用于包装还没有添加 promise 支持的函数。
 
 ## 静态方法
 
@@ -215,9 +208,9 @@ window.addEventListener("message", (event) => {
   - : 返回一个状态为已拒绝的 `Promise` 对象，并将给定的失败信息传递给对应的处理函数。
 
 - {{jsxref("Promise.resolve", "Promise.resolve(value)")}}
-  - : 返回一个状态由给定 value 决定的 `Promise` 对象。如果该值是 thenable（即，带有 `then` 方法的对象），返回的Promise 对象的最终状态由 then 方法执行结果决定；否则，返回的 Promise 对象状态为已兑现，并且将该 value 传递给对应的 then 方法。
+  - : 返回一个状态由给定 value 决定的 `Promise` 对象。如果该值是 thenable（即，带有 `then` 方法的对象），返回的 Promise 对象的最终状态由 then 方法执行结果决定；否则，返回的 Promise 对象状态为已兑现，并且将该 value 传递给对应的 then 方法。
 
-    通常而言，如果你不知道一个值是否是 promise 对象，使用 {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} 来返回一个 Promise 对象，这样就能将该 value 以 promise 对象形式使用。
+    通常而言，如果你不知道一个值是否是 promise 对象，使用 {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} 来返回一个 Promise 对象，这样就能将该 value 以 promise 对象形式使用。
 
 ## 实例方法
 
@@ -338,7 +331,7 @@ function promiseGetWord(parityInfo) {
 
 ### 高级示例
 
-本例展示了 `Promise` 的一些机制。`testPromise()` 方法在每次点击 {{HTMLElement("button")}} 按钮时被调用，该方法会创建一个 promise 对象，使用 {{domxref("setTimeout()")}} 让 `Promise` 等待 1-3 秒不等的时间来兑现计数结果（从 1 开始的数字）。使用 `Promise` 构造函数来创建 promise。
+本例展示了 `Promise` 的一些机制。`testPromise()` 方法在每次点击 {{HTMLElement("button")}} 按钮时被调用，该方法会创建一个 promise 对象，使用 {{domxref("setTimeout()")}} 让 `Promise` 等待 1-3 秒不等的时间来兑现计数结果（从 1 开始的数字）。使用 `Promise` 构造函数来创建 promise。
 
 promise 的值的兑现过程都被日志记录（logged，使用 {{JSxRef("Promise.prototype.then()","p1.then()")}}）下来。这些日志信息展示了方法中的同步代码和异步代码是如何通过 promise 完成解耦的。
 
@@ -401,7 +394,7 @@ if ("Promise" in window) {
 
 ### 使用 XHR 加载图像
 
-另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载一个图像的例子可在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 仓库中找到。你也可以[看它的实例](https://mdn.github.io/js-examples/promises-test/)。每一步都有注释可以让你详细的了解 Promise 和 XHR 架构。
+另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载一个图像的例子可在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 仓库中找到。你也可以[看它的实例](https://mdn.github.io/js-examples/promises-test/)。每一步都有注释可以让你详细的了解 Promise 和 XHR 架构。
 
 ## 规范
 

@@ -1,12 +1,6 @@
 ---
 title: Geolocation API
 slug: Web/API/Geolocation_API
-tags:
-  - Geolocation API
-  - Guide
-  - Intermediate
-  - Overview
-translation_of: Web/API/Geolocation_API
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
@@ -57,11 +51,11 @@ Geolocation API는 {{domxref("Navigator.geolocation", "navigator.geolocation")}}
 
 ## 명세
 
-{{Specifications("api.Geolocation")}}
+{{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ### 가용성
 

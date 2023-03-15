@@ -3,6 +3,7 @@ title: URL.createObjectURL
 slug: Web/API/URL/createObjectURL
 translation_of: Web/API/URL/createObjectURL
 ---
+
 {{APIRef("URL")}}
 La méthode statique **URL.createObjectURL()** crée une chaîne contenant une URL représentant l’objet passé en paramètre. La durée de vie de l’URL est liée au {{domxref("document")}} de la fenêtre depuis laquelle elle a été créée. La nouvelle URL d’objet représente l’objet {{domxref("File")}} ou {{domxref("Blob")}} spécifié.
 
@@ -47,39 +48,11 @@ Dans d’anciennes versions de la spécification de Media Source, attacher un fl
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("File API", "#dfn-createObjectURL", "createObjectURL()")}}
-      </td>
-      <td>{{Spec2("File API")}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Media Source Extensions", "#dom-url-createobjecturl", "URL")}}
-      </td>
-      <td>{{Spec2("Media Source Extensions")}}</td>
-      <td>
-        <p>
-          Extension MediaSource.<br />Les anciennes versions de cette
-          spécification utilisaient <code>createObjectURL()</code> pour les
-          objets {{domxref("MediaStream")}}&nbsp;; ce n’est plus supporté.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.createObjectURL")}}
+{{Compat}}
 
 ## Voir aussi
 

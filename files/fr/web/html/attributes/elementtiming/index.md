@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Attributes/elementtiming
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`elementtiming`** est utilisé pour indiquer qu'un élément est marqué pour le suivi par l'API [Element Timing](/fr/docs/Web/API/Element_timing_API). Cet attribut peut être appliqué aux éléments [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<image>`](/fr/docs/Web/SVG/Element/image) à l'intérieur d'un [`<svg>`](/fr/docs/Web/SVG/Element/svg), aux vignettes des éléments [`<video>`](/fr/docs/Web/HTML/Element/video), aux éléments qui ont un [`background-image`](/fr/docs/Web/CSS/background-image) et aux éléments contenant des noeuds de texte, comme un [paragraphe (`<p>)`](/fr/docs/Web/HTML/Element/p).
@@ -41,13 +42,11 @@ De bons candidats pour les éléments que vous pourriez vouloir observer sont :
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                                   |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| {{SpecName('Element Timing API', '#sec-modifications-DOM', 'elementtiming')}} | {{Spec2('Element Timing API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.elementtiming")}}
+{{Compat}}
 
 ## Voir aussi
 

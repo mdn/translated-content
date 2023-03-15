@@ -1,14 +1,8 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Event.timeStamp
-translation_of: Web/API/Event/timeStamp
 ---
+
 {{APIRef("DOM")}}
 
 **`timeStamp`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが作成された時刻（ミリ秒単位）を返します。

@@ -1,14 +1,8 @@
 ---
 title: Element.firstElementChild
 slug: Web/API/Element/firstElementChild
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-browser-compat: api.Element.firstElementChild
-translation_of: Web/API/Element/firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.firstElementChild`** は読み取り専用のプロパティで、要素の最初の子を {{domxref("Element")}} で返します。子要素がない場合は `null` を返します。

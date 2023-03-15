@@ -1,0 +1,35 @@
+{
+  "name": "@mdn/translated-content",
+  "version": "1.0.0",
+  "description": "Translated content of https://developer.mozilla.org",
+  "private": true,
+  "homepage": "https://github.com/mdn/translated-content#readme",
+  "bugs": {
+    "url": "https://github.com/mdn/translated-content/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "MDN Web Docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdn/translated-content.git"
+  },
+  "scripts": {
+    "fix:json": "prettier -w \"**/*.json\"",
+    "fix:md": "markdownlint-cli2-fix \"**/*.md\"",
+    "fix:yml": "prettier -w \"**/*.yml\"",
+    "lint:json": "prettier -c \"**/*.json\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "lint:yml": "prettier -c \"**/*.yml\"",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "husky": "8.0.3",
+    "lint-staged": "13.2.0",
+    "markdownlint-cli2": "0.6.0",
+    "markdownlint-rule-search-replace": "1.0.9",
+    "prettier": "2.8.4"
+  }
+}

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/leftContext
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété non-standard **`leftContext`** est une propriété statique accessible uniquement en lecture. Cette propriété liée aux expressions rationnelles contient la sous-chaîne qui précède la correspondance la plus récente. `` RegExp.$` `` est un alias pour cette propriété.
@@ -44,7 +45,7 @@ Cette propriété n'est pas standard et ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.leftContext")}}
+{{Compat}}
 
 ## Voir aussi
 

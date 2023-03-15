@@ -1,19 +1,11 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - constants
-browser-compat: javascript.statements.const
-translation_of: Web/JavaScript/Reference/Statements/const
 ---
+
 {{jsSidebar("Statements")}}
 
-定数は、[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) キーワードを使って定義する変数と同様にブロックスコープを持ちます。定数の値は、再代入による変更ができず、再宣言もできません。
+定数は、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) キーワードを使って定義する変数と同様にブロックスコープを持ちます。定数の値は、再代入による変更ができず、再宣言もできません。
 
 {{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
@@ -26,7 +18,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 - `nameN`
   - : 定数名。正当な{{Glossary("identifier", "識別子")}}ならば、何でもかまいません。
 - `valueN`
-  - : 定数の値。正当な[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)ならば、関数式を含め、何でもかまいません。
+  - : 定数の値。正当な[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#式)ならば、関数式を含め、何でもかまいません。
 
 [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文を使用して、定数を宣言することもできます。
 
@@ -43,7 +35,7 @@ const { bar } = foo; // where foo = { bar:10, baz:12 };
 
 **`const` 宣言**は、値への読み取り専用の参照を作ります。これは、定数に保持されている値は**不変ではなく**、その変数の識別子が再代入できないということです。たとえば、定数の中身がオブジェクトの場合、オブジェクトの内容（プロパティなど）は変更可能です。</p>
 
-「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone)」に関する考慮事項はすべて、{{jsxref("Statements/let", "let")}} と `const` の両方に適用されます。
+「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」に関する考慮事項はすべて、{{jsxref("Statements/let", "let")}} と `const` の両方に適用されます。
 
 定数は、同じスコープ内の関数や変数と同じ名前にすることはできません。
 

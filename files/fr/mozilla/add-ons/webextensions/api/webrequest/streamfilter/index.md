@@ -14,6 +14,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 ---
+
 {{AddonSidebar()}}
 
 Un `StreamFilter` est un objet que vous pouvez utiliser pour surveiller et modifier les réponses HTTP.
@@ -81,9 +82,9 @@ Le filtre fournit également des fonctions à {{WebEXTAPIRef("webRequest.StreamF
 - {{WebExtAPIRef("webRequest.StreamFilter.status")}}
   - : Décrit l'état actuel du flux.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter", 10)}}
+{{Compat}}
 
 ## Exemples
 

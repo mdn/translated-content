@@ -1,13 +1,8 @@
 ---
 title: 回调函数
 slug: Glossary/Callback_function
-tags:
-  - Callback
-  - 回调函数
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Callback_function
 ---
+
 被作为实参传入另一函数，并在该外部函数内被调用，用以来完成某些任务的函数，称为回调函数。
 
 例如：
@@ -31,4 +26,4 @@ processUserInput(greeting);
 
 ## 参见
 
-- 维基百科上的{{interwiki("wikipedia", "回调函数", "回调函数")}}
+- 维基百科上的[回调函数](https://zh.wikipedia.org/wiki/回调函数)

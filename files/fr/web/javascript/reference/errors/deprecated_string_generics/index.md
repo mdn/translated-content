@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_String_generics
 ---
+
 {{jsSidebar("Errors")}}Les méthodes génériques pour les chaînes de caractères ont été retirées à partir de Firefox 68.
 
 ## Message

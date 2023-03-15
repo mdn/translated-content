@@ -1,15 +1,8 @@
 ---
 title: ReadableStreamDefaultController.error()
 slug: Web/API/ReadableStreamDefaultController/error
-tags:
-  - API
-  - Error
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-translation_of: Web/API/ReadableStreamDefaultController/error
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} 接口的 **`error()`** 方法会导致未来任何与关联流的交互出错。

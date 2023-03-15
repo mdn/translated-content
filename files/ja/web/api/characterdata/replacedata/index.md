@@ -1,12 +1,8 @@
 ---
 title: CharacterData.replaceData()
 slug: Web/API/CharacterData/replaceData
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.replaceData
-translation_of: Web/API/CharacterData/replaceData
 ---
+
 {{APIRef("DOM")}}
 
 **`replaceData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、この `CharacterData` ノードにある既存のテキストの特定の数の文字を取り除き、指定されたテキストの文字で置き換えます。

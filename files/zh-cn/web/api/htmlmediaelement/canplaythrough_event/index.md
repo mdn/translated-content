@@ -1,10 +1,8 @@
 ---
 title: 'HTMLMediaElement: canplaythrough'
 slug: Web/API/HTMLMediaElement/canplaythrough_event
-tags:
-  - canplaythrough
-translation_of: Web/API/HTMLMediaElement/canplaythrough_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `canplaythrough` 事件在终端可以播放媒体文件时（估计已经加载了足够的数据来播放媒体直到其结束，而不必停止以进一步缓冲内容）被触发。

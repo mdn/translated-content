@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/box-pack
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 > **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
@@ -135,7 +136,7 @@ Cette propriété n'est pas standard mais une propriété semblable est apparue 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-pack")}}
+{{Compat}}
 
 ## Voir aussi
 

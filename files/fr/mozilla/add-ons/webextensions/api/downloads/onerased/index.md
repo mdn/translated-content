@@ -13,11 +13,12 @@ tags:
   - onErased
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 ---
+
 {{AddonSidebar()}}
 
 L'événement **`onErased()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement est effacé de l'historique du navigateur.
 
-L'écouteur reçoit le paramètre `downloadId` de l'objet {{WebExtAPIRef('downloads.DownloadItem')}}  en question en tant que paramètre.
+L'écouteur reçoit le paramètre `downloadId` de l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question en tant que paramètre.
 
 ## Syntaxe
 
@@ -47,9 +48,9 @@ Les événements ont trois fonctions :
     - `downloadId`
       - : Un `integer` représentant l'`id` du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onErased")}}
+{{Compat}}
 
 ## Exemples
 
@@ -76,7 +77,8 @@ var erasing = browser.downloads.erase({
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,4 +105,4 @@ var erasing = browser.downloads.erase({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

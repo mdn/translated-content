@@ -1,16 +1,8 @@
 ---
 title: Element.attributes
 slug: Web/API/Element/attributes
-tags:
-  - API
-  - Attributes
-  - DOM
-  - Element
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.attributes
-translation_of: Web/API/Element/attributes
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.attributes`** プロパティは、そのノードに登録されたすべての属性ノードの生きたコレクションを返却します。返却される値は {{domxref("NamedNodeMap")}} であり、 `Array` ではありません。つまり、 {{jsxref("Array")}} のメソッドは持っておらず、 {{domxref("Attr")}} ノードのインデックスはブラウザーによって変わる可能性があります。より正確に言うと、 `attributes` はその属性に関するあらゆる情報を表す文字列のキーと値の組です。

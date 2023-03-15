@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 original_slug: Apprendre/Commencer_avec_le_web/Publier_votre_site_web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
 
 Une fois que vous avez fini d'écrire le code et d'organiser les fichiers qui composent votre site, vous devez mettre le site en ligne, ainsi d'autres personnes pourront le trouver. Cet article décrit comment mettre votre extrait de code en ligne avec peu d'efforts.
@@ -47,7 +48,7 @@ En plus, vous aurez besoin d'un programme de {{Glossary("FTP", "Protocole de tra
 Certains outils vous permettent de publier votre site web en ligne :
 
 - [GitHub](https://github.com/) est un site de «&nbsp;codage collaboratif&nbsp;». Il vous permet de téléverser des dépôts de code pour stockage dans le **système de gestion de versions** [Git](http://git-scm.com/)**.** Vous pouvez alors collaborer à des projets de code ; le système est open source par défaut, ce qui signifie que n'importe qui dans le monde peut trouver votre code GitHub, l'utiliser, en tirer des leçons, et l'améliorer. GitHub a une fonctionnalité très utile appelée [Pages GitHub](https://pages.github.com/), qui vous permet de présenter du code de site web en direct sur le web.
-- [Google App Engine](https://cloud.google.com/appengine/ "App Engine - Build Scalable Web & Mobile Backends in Any Language | Google Cloud Platform") est une plateforme puissante qui vous permet de construire et d'exécuter des applications sur l'infrastructure de Google --- que vous ayez besoin de construire une application web multi‑couche à partir de zéro ou d'héberger un site web statique. Voir [Comment héberger votre site Web sur Google App Engine ?](/fr/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) pour plus d'information.
+- [Google App Engine](https://cloud.google.com/appengine/) est une plateforme puissante qui vous permet de construire et d'exécuter des applications sur l'infrastructure de Google --- que vous ayez besoin de construire une application web multi‑couche à partir de zéro ou d'héberger un site web statique. Voir [Comment héberger votre site Web sur Google App Engine ?](/fr/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) pour plus d'information.
 
 Ces options sont généralement gratuites, mais vous risquez d'être dépassé par les limitations du nombre de fonctionnalités.
 

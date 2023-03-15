@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/search
 ---
+
 {{JSRef}}
 
 La méthode **`search()`** éxecute une recherche dans une chaine de caractères grâce à une expression rationnelle appliquée sur la chaîne courante.
@@ -53,24 +54,11 @@ console.log(maChaine.search(regex2)); // Renvoie -1 car il n'y a aucun point dan
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                     | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.search")}}
-
-## Notes spécifiques à Gecko
-
-- `flags` était un second argument non standard présent uniquement sur Gecko : _str_.search(_regexp, flags_)
-- Avant {{Gecko("8.0")}}, `search()` n'était pas implémenté correctement ; quand il était appelé sans paramètre ou avec {{jsxref("undefined")}}, la recherche validait la chaine de caractères "undefined", au lieu de valider une chaine de caractères vide. Cela a été corrigé ; désormais, `"a".search()` et `"a".search(undefined)` renvoient bien 0.
-- À partir de Gecko 39 {{geckoRelease(39)}}, les arguments non-standards (`flags`) pour les drapeaux sont dépréciés et déclenchent des avertissements dans la console ({{bug(1142351)}}). Cette propriété est spécifique à Gecko et sera retirée à l'avenir.
-- À partir de Gecko 47 {{geckoRelease(47)}}, l'argument non-standard `flags` n'est plus supporté dans les versions hors _release_ et sera bientôt retiré définitivement ({{bug(1245801)}}).
-- À partir de Gecko 49 {{geckoRelease(49)}}, l'argument non-standard `flags` n'est plus pris en charge ({{bug(1108382)}}).
+{{Compat}}
 
 ## Voir aussi
 

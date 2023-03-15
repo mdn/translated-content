@@ -9,11 +9,12 @@ tags:
   - Reference
 translation_of: Web/API/Document/exitPointerLock
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 La méthode **`exitPointerLock()`** permet de relâcher un pointeur de façon asynchrone lorsque le pointeur était auparavant mobilisé par la méthode {{domxref("Element.requestPointerLock()")}}.
 
-Pour connaître le succès ou l'échec de cette requête, il faut surveiller les évènements {{event("pointerlockchange")}} et {{event("pointerlockerror")}}.
+Pour connaître le succès ou l'échec de cette requête, il faut surveiller les évènements [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event) et [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event).
 
 ## Syntaxe
 
@@ -23,13 +24,11 @@ document.exitPointerLock();
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------- |
-| {{SpecName('Pointer Lock','l#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | Extension de l'interface `Document` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.exitPointerLock")}}
+{{Compat}}
 
 ## Voir aussi
 

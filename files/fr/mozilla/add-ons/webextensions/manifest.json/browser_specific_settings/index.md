@@ -8,6 +8,7 @@ tags:
   - browser_specific_settings
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -23,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
           Habituellement, non (mais voir aussi
           <a
             href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
-            >Quand avec-vous besoin d'une ID Complémentaire</a
+            >Quand avez-vous besoin d'un identifiant complémentaire</a
           ><a
             href="/fr/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
             >?</a
@@ -115,4 +116,4 @@ Exemple avec toutes les clés possibles. Notez que vous n'incluez normalement ni
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.browser_specific_settings")}}
+{{Compat}}

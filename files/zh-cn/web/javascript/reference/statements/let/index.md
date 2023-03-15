@@ -1,17 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Statement
-  - Variable declaration
-  - Variables
-  - let
-browser-compat: javascript.statements.let
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`** 语句声明一个块级作用域的局部变量，并可以初始化为一个值（可选）。
@@ -27,7 +18,7 @@ let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
 ### 参数
 
 - `nameN`
-  - : 变量名，必须是合法的标识符。
+  - : 要声明的一个或多个变量的名称，必须是合法的标识符。
 - `valueN` {{optional_inline}}
   - : 变量的初始值，可以是任意合法的表达式。
 
@@ -40,13 +31,19 @@ let { bar } = foo; // where foo = { bar:10, baz:12 };
 
 ## 描述
 
-**`let`** 允许你声明一个作用域被限制在{{jsxref("statements/block", "块")}}作用域中的变量、语句或者表达式。与 {{jsxref("statements/var", "var")}} 关键字不同的是，`var` 声明的变量作用域是全局或者整个函数块的。 `var` 和 `let` 的另一个重要区别，`let` 声明的变量不会在作用域中被提升，它是在编译时才初始化（参考下面 [暂时性死区](#暂时性死区)）。
+**`let`** 允许你声明一个作用域被限制在{{jsxref("statements/block", "块")}}作用域中的变量、语句或者表达式。与 {{jsxref("statements/var", "var")}} 关键字不同的是，`var` 声明的变量作用域是全局或者整个函数块的。 `var` 和 `let` 的另一个重要区别，`let` 声明的变量不会在作用域中被提升，它是在编译时才初始化（参考下面的[暂时性死区](#暂时性死区)）。
 
-就像 {{jsxref("statements/const", "const", "描述")}} 一样，`let` 不会在全局声明时（在最顶部的范围）创建 {{domxref('window')}} 对象的属性。
+就像 {{jsxref("statements/const", "const", "描述")}} 一样，`let` 不会在全局声明时（在最顶层的作用域）创建 {{domxref('window')}} 对象的属性。
 
 可以从[这里](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri)了解我们为什么使用 `let`。
 
-> **备注：** 通过在使用 `let` 变量的作用域顶部声明它们，可以避免很多问题，但这样做可能会影响可读性。
+通过在使用 `let` 变量的作用域顶部声明它们，可以避免很多问题，但这样做可能会影响可读性。
+
+与 `var` 不同的是，`let` 只是开始*声明*，而非一个完整的表达式。这意味着你不能将单独的 `let` 声明作为一个代码块的主体（这是有道理的，因为声明的变量无法被访问）。
+
+```js
+if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
+```
 
 ## 示例
 
@@ -74,7 +71,7 @@ function letTest() {
 }
 ```
 
-在全局作用域中，**`let`** 和 **`var`** 不一样，它不会在顶层对象上创建属性。例如：
+在全局作用域中，**`let`** 和 **`var`** 不一样，它不会在全局对象上创建属性。例如：
 
 ```js
 var x = 'global';
@@ -82,47 +79,6 @@ let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
-
-### 模仿私有成员
-
-在处理 {{Glossary("Constructor", "构造函数")}} 的时候，可以通过 `let` 声明而不是[闭包](/zh-CN/docs/Web/JavaScript/Closures)来创建一个或多个私有成员。
-
-```js
-var Thing;
-
-{
-  let privateScope = new WeakMap();
-  let counter = 0;
-
-  Thing = function() {
-    this.someProperty = 'foo';
-
-    privateScope.set(this, {
-      hidden: ++counter,
-    });
-  };
-
-  Thing.prototype.showPublic = function() {
-    return this.someProperty;
-  };
-
-  Thing.prototype.showPrivate = function() {
-    return privateScope.get(this).hidden;
-  };
-}
-
-console.log(typeof privateScope); // "undefined"
-
-var thing = new Thing();
-
-console.log(thing); // Thing {someProperty: "foo"}
-
-thing.showPublic(); // "foo"
-
-thing.showPrivate(); // 1
-```
-
-可以使用 `var` 创建和闭包具有相同隐私模式的局部变量，但是它们需要函数作用域（通常使用模块模式中的 {{Glossary("IIFE")}}），而不仅仅是上面示例中的块作用域。
 
 ### 重复声明
 
@@ -135,7 +91,7 @@ if (x) {
 }
 ```
 
-在 {{jsxref("Statements/switch", "switch")}} 语句中也会触发这个错误，因为它是同一个块作用域。
+在 {{jsxref("Statements/switch", "switch")}} 语句中也会触发这个错误，因为它是同一个块作用域。
 
 ```js example-bad
 let x = 1;
@@ -169,11 +125,11 @@ switch(x) {
 
 ### 暂时性死区
 
-`let` 变量在声明之前，不能够读写。如果声明中未指定初始值，则变量将使用 `undefined` 值初始化，在声明之前访问变量会导致 {{jsxref("ReferenceError")}}。
+从一个代码块的开始直到代码执行到声明变量的行之前，`let` 或 `const` 声明的变量都处于“暂时性死区”（Temporal dead zone，TDZ）中。
 
-> **备注：**  与 {{jsxref("Statements/var", "var", "变量提升")}} 变量不同，如果在声明前使用 `var`，变量将会被初始化为`undefined`。
+当变量处于暂时性死区之中时，其尚未被初始化，尝试访问变量将抛出 {{jsxref("ReferenceError")}}。当代码执行到声明变量所在的行时，变量被初始化为一个值。如果声明中未指定初始值，则变量将被初始化为 `undefined`。
 
-从块作用域的顶部一直到变量声明完成之前，这个变量处在暂时性死区（TDZ，temporal dead zone）。
+与 {{jsxref("Statements/var", "var")}} 声明的变量不同，如果在声明前访问了变量，变量将会返回 `undefined`。以下代码演示了在使用 `let` 和 `var` 声明变量的行之前访问变量的不同结果。
 
 ```js example-bad
 { // TDZ starts at beginning of scope
@@ -184,7 +140,7 @@ switch(x) {
 }
 ```
 
-使用术语 “temporal” 是因为区域取决于执行顺序（时间），而不是编写代码的顺序（位置）。例如，下面的代码会生效，是因为即使使用 `let` 变量的函数出现在变量声明之前，但函数的执行是在 TDZ 的外面。
+使用术语“temporal”是因为区域取决于执行顺序（时间），而不是编写代码的顺序（位置）。例如，下面的代码会生效，是因为即使使用 `let` 变量的函数出现在变量声明之前，但函数的执行是在暂时性死区的外面。
 
 ```js
 {
@@ -200,7 +156,7 @@ switch(x) {
 
 #### 暂时性死区与 `typeof`
 
-如果使用 `typeof` 检测在暂时性死区中的变量，会抛出 `ReferenceError` 异常：
+如果使用 `typeof` 检测在暂时性死区中的变量，会抛出 {{jsxref("ReferenceError")}} 异常：
 
 ```js example-bad
 // results in a 'ReferenceError'
@@ -229,9 +185,9 @@ function test() {
 test();
 ```
 
-由于外部变量 `foo` 有值，因此会执行 `if` 语句块，但是由于词法作用域，该值在块内不可用：`if` 快内的标识符 `foo` 是 `let foo`。表达式 `(foo + 55)` 会抛出异常，是因为 `let foo` 还没完成初始化，它仍然在暂时性死区里。
+由于外部变量 `foo` 有值，因此会执行 `if` 语句块，但是由于词法作用域，该值在块内不可用：`if` 块内的标识符 `foo` 是 `let foo`。表达式 `(foo + 55)` 会抛出 `ReferenceError` 异常，是因为 `let foo` 还没完成初始化，它仍然在暂时性死区里。
 
-在以下情况下，这种现象可能会使您感到困惑。`let n of n.a` 已经在 for 循环块的私有范围内，因此，标识符 `n.a` 被解析为位于指令本身（`let n`）中的“ `n` ”对象的属性“ `a` ”。
+在以下情况下，这种现象可能会使您感到困惑。`let n of n.a` 已经在 for 循环块的私有范围内，因此，标识符 `n.a` 被解析为位于指令本身（`let n`）中的“`n`”对象的属性“`a`”。
 
 在没有执行到它的初始化语句之前，它仍旧存在于暂时性死区中。
 
@@ -250,7 +206,7 @@ go({a: [1, 2, 3]});
 
 ### 其他情况
 
-用在块级作用域中， **`let`** 将变量的作用域限制在块内， 而 `var` 声明的变量的作用域是在函数内。
+用在块级作用域中，**`let`** 将变量的作用域限制在块内，而 `var` 声明的变量的作用域是在函数内。
 
 ```js
 var a = 1;
@@ -268,7 +224,7 @@ console.log(a); // 11
 console.log(b); // 2
 ```
 
-然而，`var` 与 `let` 合并的声明方式会抛出 {{jsxref("SyntaxError")}} 错误，因为 `var` 会将变量提升至块的顶部，这会导致隐式地重复声明变量。
+然而，`var` 与 `let` 合并的声明方式会抛出 {{jsxref("SyntaxError")}} 错误，因为 `var` 会将变量提升至块的顶部，这会导致隐式地重复声明变量。
 
 ```js example-bad
 let x = 1;
@@ -290,6 +246,7 @@ let x = 1;
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
+- [变量提升 > `let` 和 `const` 的变量提升](/zh-CN/docs/Glossary/Hoisting#let_and_const_hoisting)
 - [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
 - [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)

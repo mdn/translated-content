@@ -1,20 +1,6 @@
 ---
 title: color-scheme
 slug: Web/CSS/color-scheme
-tags:
-  - CSS
-  - CSS 颜色
-  - CSS 属性
-  - HTML 样式
-  - HTML 颜色
-  - 布局
-  - 参考
-  - 样式化 HTML
-  - 样式化 text
-  - Web
-  - color-adjust
-  - recipe:css-property
-browser-compat: css.properties.color-scheme
 ---
 
 {{CSSRef}}
@@ -79,7 +65,7 @@ color-scheme: unset;
 
 ## 推荐阅读
 
-- [使用 CSS 将颜色应用于 HTML 元素](/en-US/docs/Web/HTML/Applying_color)
+- [使用 CSS 将颜色应用于 HTML 元素](/zh-CN/docs/Web/HTML/Applying_color)
 - 其他与颜色相关的属性： {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("-webkit-print-color-adjust")}}

@@ -1,15 +1,8 @@
 ---
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Number
-  - ポリフィル
-browser-compat: javascript.builtins.Number.isSafeInteger
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 **`Number.isSafeInteger()`** メソッドは、指定された値が*安全な整数*であるかどうかを判定します。

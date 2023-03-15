@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat
 browser-compat: javascript.builtins.Intl.DateTimeFormat
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.DateTimeFormat`** est un constructeur d'objets permettant de formater des dates et des heures selon une langue.

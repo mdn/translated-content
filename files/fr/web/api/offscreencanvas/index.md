@@ -10,6 +10,7 @@ tags:
 browser-compat: api.OffscreenCanvas
 translation_of: Web/API/OffscreenCanvas
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 L'interface `OffscreenCanvas` fournit un canevas qui peut être restitué hors écran. Il est disponible dans les contextes à la fois window et [worker](/fr-FR/docs/Web/API/Web_Workers_API).
@@ -118,7 +119,7 @@ onmessage = function(evt) {
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.OffscreenCanvas")}}
+{{Compat}}
 
 ## Voir aussi
 

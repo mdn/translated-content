@@ -1,17 +1,8 @@
 ---
 title: Window.toolbar
 slug: Web/API/Window/toolbar
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-  - Window
-browser-compat: api.Window.toolbar
-translation_of: Web/API/Window/toolbar
 ---
+
 {{APIRef}}
 
 **`Window.toolbar`** プロパティは、ツールバーオブジェクトを返します。これを用いて、ツールバーの表示状態を確認することができます。

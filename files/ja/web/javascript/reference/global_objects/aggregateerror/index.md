@@ -1,15 +1,8 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-tags:
-  - AggregateError
-  - クラス
-  - インターフェイス
-  - JavaScript
-  - ポリフィル
-browser-compat: javascript.builtins.AggregateError
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 ---
+
 {{JSRef}}
 
 **`AggregateError`** オブジェクトは、複数のエラーを 1 つのエラーにまとめる必要があるときのエラーを表します。これは一つの操作で複数のエラーを報告する必要があるときに発生します。例えば {{JSxRef("Promise.any()")}} において、渡されたすべてのプロミスが拒否された場合などです。

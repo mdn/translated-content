@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
 translation_of: Learn/CSS/CSS_layout/Normal_Flow
 original_slug: Apprendre/CSS/CSS_layout/Normal_Flow
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Apprendre/CSS/CSS_layout/Introduction", "Apprendre/CSS/CSS_layout/Flexbox", "Apprendre/CSS/CSS_layout")}}

@@ -1,13 +1,8 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
-page-type: web-api-constructor
-tags:
-  - コンストラクター
-  - リファレンス
-browser-compat: api.Event.Event
-translation_of: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event()`** コンストラクターは、新しい {{domxref("Event")}} を生成します。この方法で作成されたイベントは*合成イベント*と呼ばれ、ブラウザーによって発行されたイベントとは対照的となっており、スクリプトから[配信](/ja/docs/Web/Events/Creating_and_triggering_events)することができます。

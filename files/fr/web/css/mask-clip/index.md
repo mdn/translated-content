@@ -4,6 +4,7 @@ slug: Web/CSS/mask-clip
 translation_of: Web/CSS/mask-clip
 browser-compat: css.properties.mask-clip
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-clip`** définit la zone qui est modifiée par un masque. Le contenu «&nbsp;peint&nbsp;» sera restreint à cette zone.

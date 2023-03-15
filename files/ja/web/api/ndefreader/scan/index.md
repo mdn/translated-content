@@ -1,13 +1,8 @@
 ---
 title: NDEFReader.scan()
 slug: Web/API/NDEFReader/scan
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-  - メソッド
-browser-compat: api.NDEFReader.scan
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 `scan()` は {{DOMxRef("NDEFReader")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxref("Promise")}} を返します。このプロミスは NFC タグが読み取れたときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。

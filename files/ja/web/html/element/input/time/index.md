@@ -1,27 +1,15 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Element/input/time
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML 入力型
-  - HTML フォーム
-  - HTML 入力
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-  - Time
-browser-compat: html.elements.input.input-time
-translation_of: Web/HTML/Element/input/time
+l10n:
+  sourceCommit: 36790eb3900518f7212ce0f0e4d69fac2e14d1e6
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{htmlelement("input")}} 要素の **`time`** 型は、ユーザーが簡単に時刻 (時と分、任意で秒) を入力できるように設計された入力欄を生成します。
 
-コントロールのユーザーインターフェイスは、ブラウザーによってまちまちです。最近のブラウザーは対応が進んでおり、 Safari は有名なブラウザーの中で唯一実装していません。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
+コントロールのユーザーインターフェイスは、ブラウザーによってまちまちです。ブラウザーの互換詳細については[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
 
@@ -55,7 +43,7 @@ Edge の `time` コントロールはいくらかもっと精巧で、時と分�
   <tbody>
     <tr>
       <td><strong><a href="#値">値</a></strong></td>
-      <td>時刻を表す {{domxref("DOMString")}}、または空欄。</td>
+      <td>時刻を表す文字列、または空欄。</td>
     </tr>
     <tr>
       <td><strong>イベント</strong></td>
@@ -81,6 +69,10 @@ Edge の `time` コントロールはいくらかもっと精巧で、時と分�
       </td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -101,7 +93,7 @@ Edge の `time` コントロールはいくらかもっと精巧で、時と分�
 
 ```html
 <label for="appt-time">予約時刻を選んでください。</label>
-<input id="appt-time" type="time" name="appt-time" value="13:30">
+<input id="appt-time" type="time" name="appt-time" value="13:30" />
 ```
 
 {{ EmbedLiveSample('Setting_the_value_attribute', 600, 60) }}
@@ -111,7 +103,7 @@ Edge の `time` コントロールはいくらかもっと精巧で、時と分�
 次のように、 {{domxref("HTMLInputElement")}} の `value` プロパティを使って JavaScript の日時の値を取得したり設定したりすることができます。
 
 ```js
-var timeControl = document.querySelector('input[type="time"]');
+const timeControl = document.querySelector('input[type="time"]');
 timeControl.value = '15:30';
 ```
 
@@ -126,10 +118,10 @@ timeControl.value = '15:30';
 ```html
 <form>
   <label for="startTime">開始時刻: </label>
-  <input type="time" id="startTime">
+  <input type="time" id="startTime" />
   <p>
-    <code>time</code> 入力欄の値: <code>
-            "<span id="value">n/a</span>"</code>
+    <code>time</code> 入力欄の値:
+    <code> "<span id="value">n/a</span>"</code>
   </p>
 </form>
 ```
@@ -137,10 +129,10 @@ timeControl.value = '15:30';
 JavaScript コードは、 time 入力欄に {{domxref("HTMLElement/input_event", "input")}} イベントを監視するコードを追加し、 input 要素の中身が変更されるたびに呼び出されるようにします。これが発生すると、 `<span>` 要素の中身が input 要素の新しい値で置き換えられます。
 
 ```js
-var startTime = document.getElementById("startTime");
-var valueSpan = document.getElementById("value");
+const startTime = document.getElementById("startTime");
+const valueSpan = document.getElementById("value");
 
-startTime.addEventListener("input", function() {
+startTime.addEventListener("input", () => {
   valueSpan.innerText = startTime.value;
 }, false);
 ```
@@ -153,7 +145,7 @@ startTime.addEventListener("input", function() {
 
 すべての {{HTMLElement("input")}} 要素で共通する属性に加え、 `time` 型の入力欄は次の属性にも対応しています。
 
-> **Note:** 多くのデータ型とは異なり、時刻値は**周期的範囲**を持ち、値が最大値に達すると、最初の値に折り返します。例えば、 `min` を `14:00` に、 `max` を `2:00` に設定すると、許可される時間の値は午後 2 時から始まり、深夜を経て次の日の午前 2 時で終わります。詳しくは、この記事の[最小値と最大値が真夜中をまたぐようにする](#最小値と最大値が真夜中をまたぐようにする)の節をご覧ください。
+> **メモ:** 多くのデータ型とは異なり、時刻値は**周期的範囲**を持ち、値が最大値に達すると、最初の値に折り返します。例えば、 `min` を `14:00` に、 `max` を `2:00` に設定すると、許可される時間の値は午後 2 時から始まり、深夜を経て次の日の午前 2 時で終わります。詳しくは、この記事の[最小値と最大値が真夜中をまたぐようにする](#最小値と最大値が真夜中をまたぐようにする)の節をご覧ください。
 
 ### list
 
@@ -171,13 +163,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value`  プロパティを設定することで変更することができます。
 
+> **メモ:** 読み取り専用のフィールドは値を持つことができないので、 `required` は `readonly` 属性が指定された入力には何の効果もありません。
+
 ### step
 
 `step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
-> **Note:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `time` 入力欄では、 `step` の値は秒数で指定され、 1000 が乗じられます (ミリ秒単位の数値であるため)。 `step` の既定値は 60 であり、 60 秒 (1 分、60,000 ミリ秒) を表します。
 
@@ -192,7 +186,7 @@ _現時点で、 `time` 入力欄で `step` に `any` の値が何を意味す�
 ```html
 <form>
   <label for="appt-time">予約時刻を選んでください: </label>
-  <input id="appt-time" type="time" name="appt-time">
+  <input id="appt-time" type="time" name="appt-time" />
 </form>
 ```
 
@@ -206,14 +200,14 @@ _現時点で、 `time` 入力欄で `step` に `any` の値が何を意味す�
 
 {{htmlattrxref("step", "input")}} 属性を使用して、時刻を上下させるときに加減する時間の大きさを変更することができます（例えば、小さな矢印ウィジェットをクリックしたときに 10 分単位で時刻が動くように）。
 
-> **Note:** このプロパティはブラウザー間で異なる結果になることがあり、完全に信頼できるものではありません。
+> **メモ:** このプロパティはブラウザー間で異なる結果になることがあり、完全に信頼できるものではありません。
 
 これは整数の値を取り、増加させたい秒数と同じ値になります。既定値は 60 秒、または 1 分です。 60 秒 (1 分) よりも小さな値を指定した場合は、 `time` 入力欄は時と分の隣に秒の入力領域を表示します。
 
 ```html
 <form>
   <label for="appt-time">予約時刻を選んでください: </label>
-  <input id="appt-time" type="time" name="appt-time" step="2">
+  <input id="appt-time" type="time" name="appt-time" step="2" />
 </form>
 ```
 
@@ -225,7 +219,7 @@ Firefox では矢印はなく、 `step` の値は使用されません。しか�
 
 step の値は Edge には効果がないようです。
 
-> **Note:** `step` を使用しても、検証は正しく動作しないようです（次の節にある通り）。
+> **メモ:** `step` を使用しても、検証は正しく動作しないようです（次の節にある通り）。
 
 ## 検証
 
@@ -237,9 +231,10 @@ step の値は Edge には効果がないようです。
 
 ```html
 <form>
-  <label for="appt-time">予約時刻を選んでください (営業時間 12:00～18:00): </label>
-  <input id="appt-time" type="time" name="appt-time"
-         min="12:00" max="18:00">
+  <label for="appt-time">
+    予約時刻を選んでください (営業時間 12:00～18:00):
+  </label>
+  <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
   <span class="validity"></span>
 </form>
 ```
@@ -262,15 +257,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -282,7 +277,7 @@ input:valid+span:after {
 
 #### 最小値と最大値が真夜中をまたぐようにする
 
-{{htmlattrxref("min", "input")}} 属性に {{htmlattrxref("max", "input")}} 属性よりも大きな値を設定することで、有効な時間帯が真夜中をまたぐようにするために、有効な時間帯を真夜中で折り返させることができます。この機能は他の入力型では対応していません。この機能は[仕様書内](https://html.spec.whatwg.org/C/#has-a-reversed-range)に存在するものの、まだ全体では対応されていません。 Chrome ベースのブラウザーでは 82 版から対応しており、 Firefox は 76 版から対応しています。 Safari は 14.1 版の時点でまだ対応していません。そうなることを見越して、準備しておきましょう。
+{{htmlattrxref("min", "input")}} 属性に {{htmlattrxref("max", "input")}} 属性よりも大きな値を設定することで、有効な時間帯が真夜中をまたぐようにするために、有効な時間帯を真夜中で折り返させることができます。この機能は他の入力型では対応していません。この機能は[仕様書内](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)に存在するものの、まだ全体では対応されていません。 Chrome ベースのブラウザーでは 82 版から対応しており、 Firefox は 76 版から対応しています。 Safari は 14.1 版の時点でまだ対応していません。そうなることを見越して、準備しておきましょう。
 
 ```js
 const input = document.createElement('input');
@@ -307,13 +302,20 @@ if (input.validity.valid && input.type === 'time') {
 ```html
 <form>
   <div>
-    <label for="appt-time">予約時刻を選んでください (営業時間 12:00～18:00): </label>
-    <input id="appt-time" type="time" name="appt-time"
-           min="12:00" max="18:00" required>
+    <label for="appt-time">
+      予約時刻を選んでください (営業時間 12:00～18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="フォームを送信">
+    <input type="submit" value="フォームを送信" />
   </div>
 </form>
 ```
@@ -322,13 +324,13 @@ if (input.validity.valid && input.type === 'time') {
 
 {{ EmbedLiveSample('Making_times_required', 600, 120) }}
 
-> **Warning:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、間違った種類のデータなど) が送信された場合に災害が発生するおそれがあります。
+> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、間違った種類のデータなど) が送信された場合に災害が発生するおそれがあります。
 
-## ブラウザーの対応の扱い
+## ブラウザーの互換性の扱い
 
 前述の通り、 Safari やその他の少数派のブラウザーは、まだ time 入力欄にネイティブに対応していません。一般に、それ以外では、よく対応されています。 — 特にモバイルプラットフォームでは、時刻の値を指定するのにとても良いユーザーインターフェイスを持つ傾向があります。例えば、 Android 版 Chrome の `time` ピッカーは次のようになっています。
 
-![](chrome-android-time.png)
+![ヘッダーに 10:21 と表示されているモーダルダイアログを示すスマートフォンの画面。 10 は完全に不透明である。 21 は半透明。メイン領域には、 1 〜 12 の数字がリング状に、 13 〜 24 の数字が内側のリングに配置された円がある。 10 は青い円で強調されている。下部のボタンは、設定、キャンセル、削除である。](chrome-android-time.png)
 
 対応していないブラウザーでは、文字列入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性 (表示されるコントロールが異なること) とデータの扱いの両方で問題を生みます。
 
@@ -337,7 +339,7 @@ if (input.validity.valid && input.type === 'time') {
 - `3.00 pm`
 - `3:00pm`
 - `15:00`
-- `午後3時`
+- `午後 3 時`
 - etc.
 
 これを回避する方法の一つとして、 `time` 入力欄に {{htmlattrxref("pattern", "input")}} 属性を付けるという方法があります。 `time` 入力欄はこれを使用しないので、 `text` 入力欄にフォールバックされたときにに使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
@@ -345,14 +347,21 @@ if (input.validity.valid && input.type === 'time') {
 ```html
 <form>
   <div>
-    <label for="appt-time">予約時刻を選んでください (営業時間 12:00～18:00): </label>
-    <input id="appt-time" type="time" name="appt-time"
-           min="12:00" max="18:00" required
-           pattern="[0-9]{2}:[0-9]{2}">
+    <label for="appt-time">
+      予約時刻を選んでください (営業時間 12:00～18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required
+      pattern="[0-9]{2}:[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="フォームを送信">
+    <input type="submit" value="フォームを送信" />
   </div>
 </form>
 ```
@@ -377,22 +386,22 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
 ブラウザーに依存しない方法によってフォームで時刻を扱う最善の方法は、現時点では、時と分（および必要であれば秒) を別々なコントロール ({{htmlelement("select")}} 要素が一般的です。以下の実装を見てください）にするか、 [jQuery timepicker plugin](https://timepicker.co/) のような JavaScript ライブラリを使用することです。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
 この例では、時刻を選択するユーザーインターフェイスの要素を2組生成します。ネイティブの `<input type="time">` 入力欄と、ネイティブの入力に対応しない古いブラウザー向けの、2つの {{htmlelement("select")}} 要素による時刻選択です。
 
@@ -403,12 +412,21 @@ HTML は次のようになります。
 ```html
 <form>
   <div class="nativeTimePicker">
-    <label for="appt-time">予約時刻を選んでください (営業時間 12:00～18:00): </label>
-      <input id="appt-time" type="time" name="appt-time"
-             min="12:00" max="18:00" required>
-      <span class="validity"></span>
-    </div>
-  <p class="fallbackLabel">予約時刻を選んでください (営業時間 12:00～18:00):</p>
+    <label for="appt-time">
+      予約時刻を選んでください (営業時間 12:00～18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required />
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">
+    予約時刻を選んでください (営業時間 12:00～18:00):
+  </p>
   <div class="fallbackTimePicker">
     <div>
       <span>
@@ -442,15 +460,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -459,19 +477,19 @@ input:valid+span:after {
 
 ```js
 // 変数の宣言
-var nativePicker = document.querySelector('.nativeTimePicker');
-var fallbackPicker = document.querySelector('.fallbackTimePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector('.nativeTimePicker');
+const fallbackPicker = document.querySelector('.fallbackTimePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var hourSelect = document.querySelector('#hour');
-var minuteSelect = document.querySelector('#minute');
+const hourSelect = document.querySelector('#hour');
+const minuteSelect = document.querySelector('#minute');
 
 // 最初はフォールバックを非表示にする
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
 // 新しい日付入力が文字列入力にフォールバックされるかどうか
-var test = document.createElement('input');
+const test = document.createElement('input');
 
 try {
   test.type = 'time';
@@ -480,7 +498,7 @@ try {
 }
 
 // もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
-if(test.type === 'text') {
+if (test.type === 'text') {
   // ネイティブの日付選択を隠してフォールバック版を表示
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
@@ -493,8 +511,8 @@ if(test.type === 'text') {
 
 function populateHours() {
   // 時刻の <select> に営業時間の 6 時間分を生成する
-  for(var i = 12; i <= 18; i++) {
-    var option = document.createElement('option');
+  for (let i = 12; i <= 18; i++) {
+    const option = document.createElement('option');
     option.textContent = i;
     hourSelect.appendChild(option);
   }
@@ -502,9 +520,9 @@ function populateHours() {
 
 function populateMinutes() {
   // 分の <select> に 1 時間内の 60 分を生成する
-  for(var i = 0; i <= 59; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 0; i <= 59; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
@@ -512,7 +530,7 @@ function populateMinutes() {
 // 時が 18 になったら、分を 00 に設定する
 // — 18:00 以降を選択できなくする
  function setMinutesToZero() {
-   if(hourSelect.value === '18') {
+   if (hourSelect.value === '18') {
      minuteSelect.value = '00';
    }
  }

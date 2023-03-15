@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 translation_of: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 ---
+
 {{LearnSidebar}}
 
 Comme dans le [précédent article](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires), les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.
@@ -420,7 +421,7 @@ Voici le résultat en direct :
 
 Selon le navigateur, l'envoi de données de formulaire par JavaScript peut être facile ou difficile. L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} en est généralement la cause et n'hésitez pas à utiliser un « polyfill » ([prothèse d'émulation](https://fr.wikipedia.org/wiki/Polyfill)) pour cela sur les navigateurs anciens :
 
-- [Ces primitives](https://gist.github.com/3120320) sont des « polyfills » de  `FormData` avec des {{domxref("Using_web_workers","worker")}}.
+- [Ces primitives](https://gist.github.com/3120320) sont des « polyfills » de `FormData` avec des {{domxref("Using_web_workers","worker")}}.
 - [HTML5-formdata](https://github.com/francois2metz/html5-formdata) tente d'opérer un « polyfill » de l'objet `FormData`, mais il requiert un [File API](http://www.w3.org/TR/FileAPI/)
 - [Ce « polyfill »](https://github.com/jimmywarting/FormData) fournit la plupart des nouvelles méthodes dont `FormData` dispose (entrées, clés, valeurs et prise en charge de `for...of`)
 

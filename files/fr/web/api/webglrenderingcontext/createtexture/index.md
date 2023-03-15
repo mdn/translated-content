@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/createTexture
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.createTexture()`** de l'API WebGL crée et initialise un objet {{domxref("WebGLTexture")}}.
@@ -42,31 +43,11 @@ var texture = gl.createTexture();
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.8", "createTexture")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glGenTextures.xml", "glGenTextures")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Page man de l’API OpenGL (similaire).</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.createTexture")}}
+{{Compat}}
 
 ## Voir aussi
 

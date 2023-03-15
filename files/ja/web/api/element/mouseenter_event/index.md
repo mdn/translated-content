@@ -1,21 +1,8 @@
 ---
 title: 'Element: mouseenter イベント'
 slug: Web/API/Element/mouseenter_event
-tags:
-  - API
-  - Cursor
-  - DOM
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - マウス
-  - mouseenter
-  - ポインター
-browser-compat: api.Element.mouseenter_event
-translation_of: Web/API/Element/mouseenter_event
 ---
+
 {{APIRef}}
 
 **`mouseenter`** イベントは、ポインティングデバイス (通常はマウス) のホットスポットが最初にイベントが発行された要素の中に移動したときにその要素 ({{domxref("Element")}}) に発行されます。
@@ -57,7 +44,7 @@ translation_of: Web/API/Element/mouseenter_event
 ![](mouseover.png)
 DOM ツリーの最も深い要素に 1 つの `mouseover` イベントが送信され、ハンドラーによってキャンセルされるかルートに達するまで階層を上にバブリングします。</div>
 
-深い階層では、数多くの `mouseenter` イベントが送信され、とても重くなり、著しい性能の問題を引き起こすことがあります。このような場合は `mouseover` イベントを待ち受けした方が優れています。
+深い階層では、数多くの `mouseover` イベントが送信され、とても重くなり、著しい性能の問題を引き起こすことがあります。このような場合は `mouseenter` イベントを待ち受けした方が優れています。
 
 対応する (マウスがコンテンツ領域から出たときに要素に発生する) `mouseleave` と組み合わせると、 `mouseenter` イベントは CSS の {{cssxref(':hover')}} 擬似クラスととても似た方法で動作します。
 

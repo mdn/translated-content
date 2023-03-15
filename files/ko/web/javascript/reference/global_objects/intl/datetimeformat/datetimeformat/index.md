@@ -1,17 +1,8 @@
 ---
 title: Intl.DateTimeFormat() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
-tags:
-  - Constructor
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat`** 생성자는 언어에 맞는 날짜 및 시간 서식을 적용하기 위한 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} 객체를 생성합니다.
@@ -30,7 +21,7 @@ new Intl.DateTimeFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : [BCP 47](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8) 언어 태그를 포함하는 문자열이나 문자열의 배열입니다. 브라우저 기본 로케일을 사용하려면 빈 배열을 지정하세요. `en-US-u-ca-buddhist`처럼 유니코드 확장 형태도 지원합니다. 로케일 매개변수의 일반적인 형식 및 해석은 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} 문서를 참고하세요. 다음의 유니코드 확장 키를 사용할 수 있습니다.
+  - : [BCP 47](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8) 언어 태그를 포함하는 문자열이나 문자열의 배열입니다. 브라우저 기본 로케일을 사용하려면 빈 배열을 지정하세요. `ko-u-ca-buddhist`처럼 유니코드 확장 형태도 지원합니다. 로케일 매개변수의 일반적인 형식 및 해석은 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} 문서를 참고하세요. 다음의 유니코드 확장 키를 사용할 수 있습니다.
 
     - `nu`
       - : 사용할 기수법. "`arab`",

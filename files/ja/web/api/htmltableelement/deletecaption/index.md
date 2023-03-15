@@ -1,16 +1,8 @@
 ---
 title: HTMLTableElement.deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.deleteCaption
-translation_of: Web/API/HTMLTableElement/deleteCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.deleteCaption()`** メソッドは、 {{HtmlElement("caption")}} 要素をこの {{HtmlElement("table")}} から削除します。この表に関連付けられた `<caption>` 要素がない場合は、このメソッドは何もしません。

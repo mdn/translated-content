@@ -1,15 +1,8 @@
 ---
 title: DocumentType
 slug: Web/API/DocumentType
-page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DocumentType
-  - インターフェイス
-browser-compat: api.DocumentType
-translation_of: Web/API/DocumentType
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType`** インターフェイスは、 doctype を包含する {{domxref("Node")}} を表します。

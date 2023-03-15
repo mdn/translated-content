@@ -1,16 +1,8 @@
 ---
 title: 'HTMLElement: change イベント'
 slug: Web/API/HTMLElement/change_event
-tags:
-  - Change
-  - イベント
-  - HTML
-  - HTML DOM
-  - HTMLElement
-  - リファレンス
-  - Web
-translation_of: Web/API/HTMLElement/change_event
 ---
+
 {{APIRef}}
 
 `change` イベントは {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素において、ユーザーによる要素の値の変更が確定したときに発行されます。 {{domxref("HTMLElement/input_event", "input")}} イベントとは異なり、 `change` イベントは要素の値 (`value`) が変更されるたびに発生するとは限りません。
@@ -130,6 +122,6 @@ function updateValue(e) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}
 
 すべてのブラウザーにおいて、特定の操作で `change` イベントが発生するかどうかが同じであるとは限りません。例えば、 Gecko では {{HTMLElement("select")}} 要素をキーボードで操作すると、 `change` イベントは Enter を押すか `<select>` からフォーカスが離れるまで発生しませんでした（{{bug("126379")}} を参照）。ただし、 Firefox 63 (Quantum) からは、すべての主要なブラウザーと同じ動作になりました。

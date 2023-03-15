@@ -6,6 +6,7 @@ tags:
   - Streaming adaptatif
 translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
+
 La technologie de _live streaming_ (diffusion en direct) est souvent utilisée pour relayer des événements en direct, tels que le sport, les concerts, ou de manière plus générale les programmes TV et radio en direct. Souvent raccourci au simple terme de _streaming_, le live streaming est le processus de transmissions d'un média _live_ (c'est à dire dynamique et non statique) aux ordinateurs et aux périphériques. C'est un sujet assez complexe et nouveau avec beaucoup de variables à prendre en considération, dans cet article nous allons vous introduire le sujet et vous donner des clés pour démarrer.
 
 La première chose à avoir en tête quand on diffuse un live stream à un navigateur est le fait que, plutôt que de jouer un fichier fini, on relaie un fichier qui est créé à la volée et qui n'a pas de début ou de fin prédéterminé.
@@ -66,7 +67,7 @@ Par exemple:
 </video>
 ```
 
-## Extensions de Sources Média  (MSE)
+## Extensions de Sources Média (MSE)
 
 [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) est un brouillon de travail de W3C qui prévoit d'étendre {{ domxref("HTMLMediaElement") }} pour permettre à JavaScript de générer des flux média pour la lecture. Permettre à JavaScript de générer des streams facilite toute une variété de cas d'utilisations comme le streaming adaptatif et le décalage temporel des live streams.
 
@@ -174,7 +175,7 @@ Bien que vous ayez la possibilité d'installer des logiciels tels que GStreamer,
 - [HLS Browser Support](http://www.jwplayer.com/html5/hls/)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](http://www.larryjordan.biz/app_bin/wordpress/archives/2369)
-- [DASH Adaptive Streaming for HTML 5 Video](https://developer.mozilla.org/en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH Media Source Demo](http://dash-mse-test.appspot.com/media.html)
 - [DASH Reference Client](http://dashif.org/reference/players/javascript/1.0.0/index.html)

@@ -3,6 +3,7 @@ title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
 translation_of: Web/API/AnalyserNode/smoothingTimeConstant
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété **`smoothingTimeConstant`** de l'interface {{ domxref("AnalyserNode") }} est un nombre flottant à double précision qui représente une moyenne entre le buffer courant et le buffer précédent - elle sert à lisser la transition entre les valeurs.
@@ -27,7 +28,7 @@ Un nombre flottant à double précision.
 
 ## Exemple
 
-L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 `Si vou sêtes curieux du fonctionnement de smoothingTimeConstant()`, essayez de cloner l'exemple ci-dessous et d'affecter : `analyser.smoothingTimeConstant = 0;`. Vous verrez que les changements de valeur sont bien plus discordants.
 
@@ -61,10 +62,10 @@ function dessiner() {
 
   for(var i = 0; i < tailleMemoireTampon; i++) {
     hauteurBarre = tableauDonnees[i];
-    
+
     contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
        contexteCanvas.fillRect(x, HAUTEUR-hauteurBarre/2, largeurBarre, hauteurBarre/2);
-       
+
     x += largeurBarre + 1;
   }
 };
@@ -74,13 +75,11 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-smoothingTimeConstant', 'smoothingTimeConstant')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.smoothingTimeConstant")}}
+{{Compat}}
 
 ## Voir aussi
 

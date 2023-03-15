@@ -1,18 +1,13 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.nextSibling
-translation_of: Web/API/Node/nextSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`nextSibling`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親の {{domxref("Node.childNodes","childNodes")}} の中で、そのすぐ次のノードを返します。または、指定されたノードが親要素の最後の子要素である場合は `null` を返します。
 
-> **Note:** ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書に {{domxref("Text")}} ノードを挿入します。
+> **メモ:** ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書に {{domxref("Text")}} ノードを挿入します。
 > そのため、例えば [`Node.firstChild`](/ja/docs/Web/API/Node/firstChild) や [`Node.previousSibling`](/ja/docs/Web/API/Node/previousSibling) を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
 >
 > [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。

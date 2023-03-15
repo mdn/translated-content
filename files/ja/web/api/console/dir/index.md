@@ -1,18 +1,10 @@
 ---
 title: console.dir()
 slug: Web/API/console/dir
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - リファレンス
-  - ウェブ開発
-  - console
-  - ウェブコンソール
-browser-compat: api.console.dir
-translation_of: Web/API/Console/dir
+l10n:
+  sourceCommit: 4fd581de2e31ac303a4628354c80f476ba9fd0e2
 ---
+
 {{APIRef("Console API")}}
 
 **`console.dir()`** メソッドは、指定された JavaScript オブジェクトのプロパティの対話的なリストを表示します。出力は折り畳み式の階層的なリストで表示され、子オブジェクトの中身を見ることができます。
@@ -26,13 +18,17 @@ translation_of: Web/API/Console/dir
 ## 構文
 
 ```js
-console.dir(object);
+dir(object)
 ```
 
 ### 引数
 
 - `object`
   - : プロパティを出力する JavaScript オブジェクトです。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 仕様書
 
@@ -44,5 +40,5 @@ console.dir(object);
 
 ## 関連情報
 
-- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](https://msdn.microsoft.com/library/gg589530)
-- [Chrome Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
+- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)

@@ -1,13 +1,9 @@
 ---
 title: 문법과 자료형
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Guide
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 이 장은 JavaScript의 기본 문법과 변수 선언, 자료형 및 리터럴을 다룹니다.
@@ -51,9 +47,9 @@ JavaScript의 스크립트 소스는 왼쪽에서 오른쪽으로 탐색하면�
 
 주석은 공백처럼 행동하며 스크립트 실행 시 버려집니다.
 
-> **참고:** 몇몇 자바스크립트 파일의 시작부에 `#!/usr/bin/env node`와 같은 형태의 주석 문법이 쓰이는 것을 볼 수 있습니다.
+> **참고:** 몇몇 자바스크립트 파일의 시작부에 `#!/usr/bin/env node`와 같은 형태의 주석 문법이 쓰이는 것을 볼 수 있습니다.
 >
-> 이것은 **해시뱅 주석** 구문이라고 하는데, 이 특별한 주석은 스크립트를 실행할 때 쓸 특별한 자바스크립트 인터프리터의 경로를 설정할 때 쓰입니다. [해시뱅 주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#해시뱅_주석)을 참고하여 자세한 내용을 확인할 수 있습니다.
+> 이것은 **해시뱅 주석** 구문이라고 하는데, 이 특별한 주석은 스크립트를 실행할 때 쓸 특별한 자바스크립트 인터프리터의 경로를 설정할 때 쓰입니다. [해시뱅 주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#해시뱅_주석)을 참고하여 자세한 내용을 확인할 수 있습니다.
 
 ## 선언
 
@@ -82,7 +78,7 @@ ISO 8859-1 혹은 Unicode 문자(가령 `å` 나 `ü`)도 식별자에 사용할
 
 변수 선언은 아래 3가지 방법으로 가능합니다.
 
-- `var x = 42`와 같이 {{jsxref("Statements/var", "var")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 실행 맥락에 따라  **지역 및 전역 변수**를 선언하는데 모두 사용될 수 있습니다.
+- `var x = 42`와 같이 {{jsxref("Statements/var", "var")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 실행 맥락에 따라 **지역 및 전역 변수**를 선언하는데 모두 사용될 수 있습니다.
 - `let y = 13`와 같이 {{jsxref("Statements/const", "const")}} 혹은 {{jsxref("Statements/let", "let")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 블록 스코프 지역 변수를 선언하는데 사용될 수 있습니다. 아래 [변수 스코프](#변수_스코프)를 참고하세요.
 
 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 구문을 사용하여 [객체 리터럴](#객체_리터럴)에서 값을 풀기 위해 변수를 선언할 수 있습니다. 예를 들면, `let { bar } = foo`. 이 구문은 `bar`라는 이름의 변수를 생성하고 `foo` 객체에 있는 동일한 이름의 키에 해당하는 값을 변수에 할당합니다.
@@ -227,7 +223,7 @@ let x = 3;
 
 ### 함수 호이스팅
 
-함수에서는 [함수 선언](/ko/docs/Web/JavaScript/Reference/Statements/function)으로는 호이스팅되지만 [함수 표현식](/en-US/docs/Web/JavaScript/Reference/Operators/function)으로는 호이스팅 되지 않습니다.
+함수에서는 [함수 선언](/ko/docs/Web/JavaScript/Reference/Statements/function)으로는 호이스팅되지만 [함수 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function)으로는 호이스팅 되지 않습니다.
 
 ```js
 /* 함수 선언 */
@@ -423,7 +419,7 @@ let fish = ['Lion', , 'Angel'];
 
 다음 예제에서, 배열의 `length`는 3입니다. `myList[3]`은 없습니다. 목록의 다른 모든 쉼표는 새로운 요소를 나타냅니다.
 
-> **참고:**  후행 쉼표는 구버전 브라우저에서 오류를 유발할 수 있으므로 제거하는게 최선입니다.
+> **참고:** 후행 쉼표는 구버전 브라우저에서 오류를 유발할 수 있으므로 제거하는게 최선입니다.
 
 ```js
 var myList = ['home', , 'school', ];
@@ -602,14 +598,14 @@ var re = /ab+c/;
 
 꼭 `String` 객체를 사용할 필요가 없는 경우 문자열 리터럴을 사용해야 합니다. `String` 객체에 대해 자세한 사항은 {{jsxref("String")}}을 참고하세요.
 
-문자열 리터럴 값은  {{jsxref("String")}} 객체의 모든 메서드를 호출할 수 있습니다. JavaScript는 자동으로 문자열 리터럴을 임시 문자열 객체로 변환, 메서드를 호출하고 나서 임시 문자열 객체를 폐기합니다. 또한 문자열 리터럴에서도 `String.length` 속성을 사용할 수 있습니다.
+문자열 리터럴 값은 {{jsxref("String")}} 객체의 모든 메서드를 호출할 수 있습니다. JavaScript는 자동으로 문자열 리터럴을 임시 문자열 객체로 변환, 메서드를 호출하고 나서 임시 문자열 객체를 폐기합니다. 또한 문자열 리터럴에서도 `String.length` 속성을 사용할 수 있습니다.
 
 ```js
 // 공백을 포함한 문자열 내 심볼 갯수가 출력됩니다.
 console.log("John's cat".length)// 여기서는, 10.
 ```
 
-[템플릿 리터럴](/en-US/docs/Web/JavaScript/Reference/Template_literals)도 사용할 수 있습니다. 템플릿 리터럴은 큰 따옴표나 작은 따옴표 대신 백틱 (`` ` ``) ([억음 부호](https://ko.wikipedia.org/wiki/%EC%96%B5%EC%9D%8C_%EB%B6%80%ED%98%B8)) 으로 문자를 감쌉니다.
+[템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)도 사용할 수 있습니다. 템플릿 리터럴은 큰 따옴표나 작은 따옴표 대신 백틱 (`` ` ``) ([억음 부호](https://ko.wikipedia.org/wiki/%EC%96%B5%EC%9D%8C_%EB%B6%80%ED%98%B8)) 으로 문자를 감쌉니다.
 
 템플릿 리터럴은 문자열 구성을 위한 달콤한 구문을 제공합니다. (이는 Perl, Python 등에 있는 문자열 삽입(interpolation) 기능과 비슷합니다.)
 

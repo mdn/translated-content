@@ -1,17 +1,8 @@
 ---
 title: MediaStream.active
 slug: Web/API/MediaStream/active
-tags:
-  - API
-  - メディアキャプチャとストリーム
-  - メディアストリーム API
-  - MediaStream
-  - プロパティ
-  - リファレンス
-  - active
-browser-compat: api.MediaStream.active
-translation_of: Web/API/MediaStream/active
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`active`** は {{domxref("MediaStream")}} インターフェイスの読み取り専用プロパティで、ストリームが現在アクティブであれば `true` を返し、それ以外の場合は `false` を返します。トラックの状態が {{domxref("MediaStreamTrack.ended")}} でないトラックが 1 本でもある場合は、ストリームがアクティブであるとみなされます。すべでのトラックが終了すると、このストリームの `active` プロパティは `false` になります。

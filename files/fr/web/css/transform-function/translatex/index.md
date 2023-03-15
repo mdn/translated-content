@@ -4,6 +4,7 @@ slug: Web/CSS/transform-function/translateX
 original_slug: Web/CSS/transform-function/translateX()
 browser-compat: css.types.transform-function.translateX
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`translateX()`** permet d'appliquer une translation en 2D. La valeur obtenue sera du type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).

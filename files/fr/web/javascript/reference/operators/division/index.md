@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.division
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de division (`/`) fournit le quotient de l'opérande gauche (le numérateur) divisé par l'opérande droite (le dénominateur).

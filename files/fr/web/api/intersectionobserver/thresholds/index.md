@@ -12,6 +12,7 @@ tags:
   - Reference
 translation_of: Web/API/IntersectionObserver/thresholds
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 La propriété en lecture seule **`thresholds`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) retourne la liste des seuils d'intersection spécifiés lors de l'instanciation avec [`IntersectionObserver()`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver). Si un seul seuil a été fourni lors de l'instanciation de l'objet, cette propriété sera un tableau contenant cette unique valeur numérique.
@@ -34,10 +35,8 @@ Si aucune option `threshold` n'est fournie lors de l'instanciation avec `Interse
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-thresholds', 'IntersectionObserver.thresholds')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.thresholds")}}
+{{Compat}}

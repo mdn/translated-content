@@ -6,6 +6,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Mise_à_jour_des_extensions_pour_Firefox_3
 ---
+
 1. Notes de versions pour développeurs
 
     1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)

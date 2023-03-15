@@ -9,6 +9,7 @@ tags:
   - Script
 translation_of: Web/API/Document/currentScript
 ---
+
 {{ApiRef("DOM")}}
 
 Retourne l'élément {{HTMLElement("script")}} dont le script est en cours de traitement.
@@ -39,13 +40,11 @@ Il est important de noter que l'élément {{HTMLElement("script")}} ne sera pas 
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "dom.html#dom-document-currentscript", "Document.currentScript")}} | {{Spec2("HTML WHATWG")}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.currentScript")}}
+{{Compat}}
 
 ## Voir aussi
 

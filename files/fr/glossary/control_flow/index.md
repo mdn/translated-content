@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Control_flow
 original_slug: Glossaire/Structure_de_contrôle
 ---
+
 Les _structures de contrôle_ déterminent l'ordre dans lequel l'ordinateur exécute les instructions d'un script.
 
 Le code est exécuté dans l'ordre de la première ligne du fichier jusqu'à la dernière ligne, sauf si l'ordinateur parcourt une des (très fréquentes) structures qui modifie le cours d'exécution du programme, comme des conditions et des boucles.
@@ -32,7 +33,7 @@ Le contrôle de flux montre que lorsque vous lisez un script, vous ne devez pas 
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Structure_de_contrôle","Structure de contrôle")}} sur Wikipédia
+- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le) sur Wikipédia
 
 ### Référence technique
 

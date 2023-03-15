@@ -8,6 +8,7 @@ tags:
   - exceptions
 translation_of: Web/API/DOMException
 ---
+
 {{ APIRef("DOM") }}
 
 L'interface **`DOMException`** représente un évènement anormal (appelé **exception**) qui appraît suite à l'appel d'une méthode ou à l'accès à une propriété d'une API web. C'est essentiellement lié à la façon dont les conditions d'erreur sont décrites dans les API web.
@@ -24,7 +25,7 @@ Chaque exception a un **nom**, qui est une courte chaîne identifiant l'erreur o
 - {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
   - : Renvoie un court message qui contient l'un des [constantes de code d'erreur](#noms_derreur) ou 0 si aucun ne correspond. Ce champ est utilisé pour des raisons historiques. Les nouvelles exceptions DOM ne l'utilisent plus : elles mettent cette information dans l'attribut {{domxref("DOMException.name")}}.
 - {{domxref("DOMException.message")}} {{readOnlyInline}}
-  - : Returne une {{domxref("DOMString")}} (_chaîne de caractères_) représentant un message ou une description associé avec le [nom d'erreur](/en-US/docs/Web/API/DOMException#Error_names) donné.
+  - : Returne une {{domxref("DOMString")}} (_chaîne de caractères_) représentant un message ou une description associé avec le [nom d'erreur](/fr/docs/Web/API/DOMException#Error_names) donné.
 - {{domxref("DOMException.name")}} {{readOnlyInline}}
   - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient l'une des chaînes associées à un [nom d'erreur](#Error_names).
 
@@ -95,21 +96,15 @@ Les noms d'erreurs courants sont répertoriés ici. Certaines API définissent l
 - `OperationError` {{experimental_inline}}
   - : L'opération a échoué pour une raison spécifique à l'opération (Pas de valeur de code ni de nom de constante hérités).
 - `NotAllowedError` {{experimental_inline}}
-  - : La demande n'est pas autorisée par l'agent utilisateur ou la plateforme dans le contexte actuel, peut-être parce que l'utilisateur a refusé la permission  (Pas de valeur de code ni de nom de constante hérités).
+  - : La demande n'est pas autorisée par l'agent utilisateur ou la plateforme dans le contexte actuel, peut-être parce que l'utilisateur a refusé la permission (Pas de valeur de code ni de nom de constante hérités).
 
 ## Spécifications
 
-| Spécification                                                                                    | Status                       | Comment                                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebIDL', '#es-DOMException-call', 'constructor')}}             | {{Spec2('WebIDL')}}     | Ajout du constructeur pour la classe `DOMException`. Ajout des valeurs `NotReadableError`, `UnknownError`, `ConstraintError`, `DataError`, `TransactionInactiveError`, `ReadOnlyError`, `VersionError`, `OperationError` et `NotAllowedError`.                    |
-| {{SpecName('DOM4', '#exception-domexception', 'DOMException')}}             | {{Spec2('DOM4')}}     | Ajout des `SECURITY_ERR`, `NETWORK_ERR`, `ABORT_ERR`, `URL_MISMATCH_ERR`, `QUOTA_EXCEEDED_ERR`, `TIMEOUT_ERR`, `INVALID_NODE_TYPE_ERR`, et `DATA_CLONE_ERR`. La propriété `code` a été dépréciée pour les valeurs d'exception. La valeur `EncodingError` ajoutée. |
-| {{SpecName('DOM3 Core', 'core.html#ID-17189187', 'DOMException')}}         | {{Spec2('DOM3 Core')}} | Ajout de `VALIDATION_ERR` et `TYPE_MISMATCH_ERR`.                                                                                                                                                                                                                 |
-| {{SpecName('DOM2 Core', 'core.html#ID-17189187', 'DOMException')}}         | {{Spec2('DOM2 Core')}} | Ajout de `INVALID_STATE_ERR`, `SYNTAX_ERR`, `INVALID_MODIFICATION_ERR`, `NAMESPACE_ERR`, and `INVALID_ACCESS_ERR`.                                                                                                                                                |
-| {{SpecName('DOM1', 'level-one-core.html#ID-17189187', 'DOMException')}} | {{Spec2('DOM1')}}     | Définition initiale.                                                                                                                                                                                                                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMException")}}
+{{Compat}}
 
 ## Voir aussi
 

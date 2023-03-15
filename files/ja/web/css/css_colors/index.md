@@ -1,19 +1,9 @@
 ---
 title: CSS 色
 slug: Web/CSS/CSS_Colors
-tags:
-  - CSS
-  - CSS 色
-  - ガイド
-  - HTML 色
-  - 概要
-  - リファレンス
-  - スタイル
-  - Styling HTML
-  - 色
-translation_of: Web/CSS/CSS_Color
 original_slug: Web/CSS/CSS_Color
 ---
+
 {{CSSRef}}
 
 **CSS 色** (CSS Color) は CSS のモジュールで、色、色の種類、色の混合、透過性、そしてどのようにこれらの色や効果を HTML コンテンツに適用するかを扱います。{{cssxref("&lt;color&gt;")}} を値として取る CSS プロパティがすべてこのモジュールの一部であるとは限りませんが、このモジュールに依存することがあります。
@@ -42,12 +32,7 @@ original_slug: Web/CSS/CSS_Color
 
 ## 仕様書
 
-| 仕様書                                | 状態                     | 備考     |
-| ------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSS4 Colors')}}           | {{Spec2('CSS4 Colors')}} |          |
-| {{SpecName('CSS3 Colors')}}           | {{Spec2('CSS3 Colors')}} |          |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}      |          |
-| {{SpecName('CSS1')}}                  | {{Spec2('CSS1')}}        | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

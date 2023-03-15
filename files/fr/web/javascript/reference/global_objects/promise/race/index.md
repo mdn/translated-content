@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/race
 ---
+
 {{JSRef}}
 
 La méthode **`Promise.race()`** renvoie une promesse qui est résolue ou rejetée dès qu'une des promesses de l'itérable passé en argument est résolue ou rejetée. La valeur (dans le cas de la résolution) ou la raison (dans le cas d'un échec) utilisée est celle de la promesse de l'itérable qui est resolue/qui échoue.
@@ -159,14 +160,11 @@ Promise.race([p5, p6]).then(function(value) {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                                    |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.race', 'Promise.race')}} | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.race")}}
+{{Compat}}
 
 ## Voir aussi
 

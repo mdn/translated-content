@@ -1,27 +1,13 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Intervals
-  - JavaScript timers
-  - MakeBrowserAgnostic
-  - Method
-  - NeedsMarkupWork
-  - Timers
-  - setInterval
-  - Polyfill
-translation_of: Web/API/setInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
+
 {{ApiRef("HTML DOM")}}
 
 {{domxref("Window")}} 和 {{domxref("Worker")}} 接口提供的 **`setInterval()`** 方法重复调用一个函数或执行一个代码片段，在每次调用之间具有固定的时间间隔。
 
-它返回一个 `interval ID`，该 ID 唯一地标识时间间隔，因此你可以稍后通过调用 {{domxref("clearInterval",
-  "clearInterval()")}} 来移除定时器。
+它返回一个 `interval ID`，该 ID 唯一地标识时间间隔，因此你可以稍后通过调用 {{domxref("clearInterval", "clearInterval()")}} 来移除定时器。
 
 ## 语法
 
@@ -34,13 +20,13 @@ var intervalID = setInterval(code, [delay]);
 ### 参数
 
 - `func`
-  - : 要重复调用的{{jsxref("function", "函数")}}，每经过指定 `delay` 毫秒后执行一次。第一次调用发生在 `delay` 毫秒之后。
+  - : 要重复调用的{{jsxref("function", "函数")}}，每经过指定 `delay` 毫秒后执行一次。第一次调用发生在 `delay` 毫秒之后。
 - `code`
   - : 这个语法是可选的，你可以传递一个字符串来代替一个函数对象，你传递的字符串会被编译然后每经过 `delay` 毫秒执行一次。这个语法因为与 {{jsxref("Global_Objects/eval", "eval()")}} 存在相同的安全风险所以*不推荐*使用。
 - `delay`
   - : 是每次延迟的毫秒数（一秒等于 1000 毫秒），函数的每次调用会在该延迟之后发生。如果未指定，则其默认值为 0。参见下方的[延迟限制](#延迟限制)以了解详细的 `delay` 的取值范围。
 - `arg1, ..., argN` {{optional_inline}}
-  - : 当定时器过期的时候，将被传递给 _func_ 函数的附加参数。
+  - : 当计时结束的时候，将被传递给 _func_ 函数的附加参数。
 
 ### 返回值
 
@@ -133,7 +119,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 ## “this”的问题
 
-当你给 `setInterval()` 传递一个方法或者函数的时候，方法/函数 在被调用时会绑定错误的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。这个问题在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method) 进行了详细解释。
+当你给 `setInterval()` 传递一个方法或者函数的时候，方法/函数 在被调用时会绑定错误的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。这个问题在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method) 进行了详细解释。
 
 ### 解释
 
@@ -162,7 +148,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 ### 一个可能的解决方案
 
-所有现代 JavaScript 运行时（浏览器或其它地方）都支持[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（携带 `this` 对象）——允许我们在 `myArray` 方法内，编写 `setInterval( () => this.myMethod)` 以在回调函数中使用 `this` 指代 `myArray`。
+所有现代 JavaScript 运行时（浏览器或其他地方）都支持[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（携带 `this` 对象）——允许我们在 `myArray` 方法内，编写 `setInterval( () => this.myMethod)` 以在回调函数中使用 `this` 指代 `myArray`。
 
 如果你需要支持 IE 浏览器，请使用 [`Function.prototype.bind()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法，它允许你指定调用给定函数时 `this` 的值。这可以让你避免因为上下文的不同而导致调用的函数的 `this` 不明确而出现的问题。
 
@@ -176,11 +162,11 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 定时器是可以嵌套的；这意味着，`setInterval()` 的回调中可以嵌入对 `setInterval()` 的调用以创建另一个定时器，即使第一个定时器还在运行。为了减轻这对性能产生的潜在影响，一旦定时器嵌套超过 5 层深度，浏览器将自动强制设置定时器的最小时间间隔为 4 毫秒。如果尝试将深层嵌套中调用 `setInterval()` 的延迟设定为小于 4 毫秒的值，其将被固定为 4 毫秒。
 
-在某些情况下，浏览器可能会强制执行更严格的最小时间间隔限制，尽管这些情况是不常见的。另外，请注意每次调用回调函数之间经过的实际时间可能会比给定的 `delay` 长；有关的示例，请参见{{SectionOnPage("/zh-CN/docs/Web/API/setTimeout", "实际延时比设定值更久的原因：最小延迟时间")}}。
+在某些情况下，浏览器可能会强制执行更严格的最小时间间隔限制，尽管这些情况是不常见的。另外，请注意每次调用回调函数之间经过的实际时间可能会比给定的 `delay` 长；有关的示例，请参见[实际延时比设定值更久的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)。
 
 ### 确保执行时间短于定时器时间间隔
 
-如果你的代码逻辑执行时间可能比定时器时间间隔要长，建议你使用递归调用了 {{domxref("setTimeout()")}} 的具名函数。例如，使用 `setInterval()` 以 5 秒的间隔轮询服务器，可能因网络延迟、服务器无响应以及许多其它的问题而导致请求无法在分配的时间内完成。因此，你可能会发现排队的 XHR 请求没有按顺序返回。
+如果你的代码逻辑执行时间可能比定时器时间间隔要长，建议你使用递归调用了 {{domxref("setTimeout()")}} 的具名函数。例如，使用 `setInterval()` 以 5 秒的间隔轮询服务器，可能因网络延迟、服务器无响应以及许多其他的问题而导致请求无法在分配的时间内完成。因此，你可能会发现排队的 XHR 请求没有按顺序返回。
 
 在这些场景下，应首选递归调用 `setTimeout()` 的模式：
 

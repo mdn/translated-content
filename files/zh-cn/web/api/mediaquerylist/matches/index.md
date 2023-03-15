@@ -1,19 +1,8 @@
 ---
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
-page-type: web-api-instance-property
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM
-  - CSSOM View
-  - DOM
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
-  - matches
 ---
+
 {{APIRef("CSSOM")}}
 
 {{DOMxRef("MediaQueryList")}} 接口的 **`matches`** 只读属性是一个布尔值，如果 {{DOMxRef("document")}} 当前匹配媒体查询列表，该属性返回 `true`，否则返回 `false`。

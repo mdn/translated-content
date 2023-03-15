@@ -1,33 +1,17 @@
 ---
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
-tags:
-  - AJAX
-  - API
-  - Monitoring XMLHttpRequest
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - ファイル送信
-  - アップロード
-  - XHR
-  - XHR アップロード
-  - XMLHttpRequest
-  - XMLHttpRequest アップロード
-  - XMLHttpRequestUpload
-  - アップロード
-browser-compat: api.XMLHttpRequest.upload
-translation_of: Web/API/XMLHttpRequest/upload
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の `upload` プロパティは、アップロードの進捗を監視することができる {{domxref("XMLHttpRequestUpload")}} オブジェクトを返します。
 
 これは不透過なオブジェクトですが、 {{domxref("XMLHttpRequestEventTarget")}} でもあるため、進捗を追跡するためにイベントリスナーを装着することができます。
 
-> **Note:** このオブジェクトにイベントリスナーを装着すると、リクエストが「単純なリクエスト」ではなくなり、オリジンをまたぐ場合はプリフライトリクエストが発行されるようになります。 [CORS](/ja/docs/Web/HTTP/CORS) を参照してください。このため、イベントリスナーは {{domxref("XMLHttpRequest.send", "send()")}} を呼び出す前に登録する必要があり、そうしないとアップロードイベントが発行されなくなります。
+> **メモ:** このオブジェクトにイベントリスナーを装着すると、リクエストが「単純なリクエスト」ではなくなり、オリジンをまたぐ場合はプリフライトリクエストが発行されるようになります。 [CORS](/ja/docs/Web/HTTP/CORS) を参照してください。このため、イベントリスナーは {{domxref("XMLHttpRequest.send", "send()")}} を呼び出す前に登録する必要があり、そうしないとアップロードイベントが発行されなくなります。
 
-> **Note:** また、仕様書では、イベントリスナーは {{domxref("XMLHttpRequest.open", "open()")}} の後に装着すべきとされているようです。しかし、ブラウザーはこの点に関してバグが多く、リスナーを {{domxref("XMLHttpRequest.open", "open()")}} の前に登録しないと動作しないことがよくあります。
+> **メモ:** また、仕様書では、イベントリスナーは {{domxref("XMLHttpRequest.open", "open()")}} の後に装着すべきとされているようです。しかし、ブラウザーはこの点に関してバグが多く、リスナーを {{domxref("XMLHttpRequest.open", "open()")}} の前に登録しないと動作しないことがよくあります。
 
 以下のイベントは、アップロードオブジェクト上で発行され、アップロードを監視するために使用することができます。
 

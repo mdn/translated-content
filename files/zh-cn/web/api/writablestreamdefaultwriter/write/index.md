@@ -1,18 +1,9 @@
 ---
 title: WritableStreamDefaultWriter.write()
 slug: Web/API/WritableStreamDefaultWriter/write
-page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - write
-translation_of: Web/API/WritableStreamDefaultWriter/write
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}
+
+{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的 **`write()`** 方法将传递的数据块写入 {{domxref("WritableStream")}} 和它的底层 sink，然后返回一个 {{jsxref("Promise")}}，promise 的状态由写入操作是否成功来决定。
 

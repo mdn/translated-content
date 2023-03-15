@@ -1,16 +1,8 @@
 ---
 title: ':active'
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.active
-translation_of: Web/CSS/:active
 ---
+
 {{CSSRef}}
 
 **`:active`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーによってアクティブ化されている要素 (ボタンなど) を表します。マウスを使用する場合は、「アクティブ化」とはふつう、主ボタンを押し下げたときに始まります。
@@ -26,11 +18,13 @@ a:active {
 
 `:active` 擬似クラスによって定義されたスタイルは、少なくとも同等の仕様を持つリンク関連の擬似クラス （{{cssxref(":link")}}、{{cssxref(":hover")}}、 {{cssxref(":visited")}}）によって上書きされます。適切にリンクにスタイルを適用するには、 _LVHA 順_: `:link` — `:visited` — `:hover` — `:active` で定義されるように、他のすべてのリンク関連ルールの後に `:active` ルールを置いてください。
 
-> **Note:** 複数ボタンのマウスを使うシステムでは、 CSS 3 は `:active` 擬似クラスは主ボタン、つまり右手用のマウスではふつう最も左のボタンにのみ適用しなければならないと定義しています。
+> **メモ:** 複数ボタンのマウスを使うシステムでは、 CSS 3 は `:active` 擬似クラスは主ボタン、つまり右手用のマウスではふつう最も左のボタンにのみ適用しなければならないと定義しています。
 
 ## 構文
 
-{{csssyntax}}
+```
+:active
+```
 
 ## 例
 

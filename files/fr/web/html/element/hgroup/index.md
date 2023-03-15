@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/hgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<hgroup>`** représente un titre de plusieurs niveaux pour une section d'un document. Il regroupe un ensemble d'éléments [`<h1>–<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements).
 
@@ -126,7 +127,7 @@ Ici, le titre secondaire est placé entre parenthèses après le titre principal
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -137,13 +138,11 @@ Ici, le titre secondaire est placé entre parenthèses après le titre principal
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## Voir aussi
 

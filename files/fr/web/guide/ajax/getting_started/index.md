@@ -6,11 +6,12 @@ tags:
 translation_of: Web/Guide/AJAX/Getting_Started
 original_slug: Web/Guide/AJAX/Premiers_pas
 ---
+
 Cet article vous guide à travers les bases d’AJAX et vous donne deux exemples clefs-en-main pour débuter.
 
 ### Présentation d’AJAX
 
-AJAX est un raccourci pour **A**synchronous **J**avaScript **A**nd **X**ML (JavaScript asynchrone et XML) inventé par Jesse James Garrett. Pour simplifier, il s’agit d’employer l’objet [`XMLHttpRequest`](/fr/XMLHttpRequest "fr/XMLHttpRequest") pour communiquer avec des serveurs. Il peut envoyer et recevoir des informations sous différents formats, dont JSON, XML, HTML ou texte. Son principal attrait est sa nature «&nbsp;asynchrone&nbsp;» ce qui signifie qu’il peut communiquer avec le serveur, échanger des données et mettre à jour la page sans avoir à la recharger.
+AJAX est un raccourci pour **A**synchronous **J**avaScript **A**nd **X**ML (JavaScript asynchrone et XML) inventé par Jesse James Garrett. Pour simplifier, il s’agit d’employer l’objet [`XMLHttpRequest`](/fr/XMLHttpRequest) pour communiquer avec des serveurs. Il peut envoyer et recevoir des informations sous différents formats, dont JSON, XML, HTML ou texte. Son principal attrait est sa nature «&nbsp;asynchrone&nbsp;» ce qui signifie qu’il peut communiquer avec le serveur, échanger des données et mettre à jour la page sans avoir à la recharger.
 
 Les deux principales fonctionnalités d’AJAX permettent de&nbsp;:
 
@@ -19,7 +20,7 @@ Les deux principales fonctionnalités d’AJAX permettent de&nbsp;:
 
 ### Étape 1 — Lancement d’une requête HTTP
 
-Pour faire une requête [HTTP](/HTTP) vers le serveur à l’aide de JavaScript, il faut disposer d’une instance d’objet fournissant cette fonctionnalité. C’est ici que `XMLHttpRequest` intervient. Son prédécesseur est originaire de Internet Explorer sous la forme d’un objet ActiveX appelé `XMLHTTP`. Par la suite, Mozilla, Safari et d’autres navigateurs ont suivi en implémentant un objet `XMLHttpRequest` qui fournit les mêmes méthodes et propriétés que l’objet ActiveX original de Microsoft. Entre temps, Microsoft a également implémenté XMLHttpRequest.
+Pour faire une requête [HTTP](/fr/docs/Web/HTTP) vers le serveur à l’aide de JavaScript, il faut disposer d’une instance d’objet fournissant cette fonctionnalité. C’est ici que `XMLHttpRequest` intervient. Son prédécesseur est originaire de Internet Explorer sous la forme d’un objet ActiveX appelé `XMLHTTP`. Par la suite, Mozilla, Safari et d’autres navigateurs ont suivi en implémentant un objet `XMLHttpRequest` qui fournit les mêmes méthodes et propriétés que l’objet ActiveX original de Microsoft. Entre temps, Microsoft a également implémenté XMLHttpRequest.
 
 ```js
 // ancien code de compatibilité, aujourd’hui inutile
@@ -90,7 +91,7 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 }
 ```
 
-La liste complète des valeurs de `readyState` est documentée sur [XMLHttpRequest.readyState](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Properties) et se résume de cette façon&nbsp;:
+La liste complète des valeurs de `readyState` est documentée sur [XMLHttpRequest.readyState](/fr/docs/Web/API/XMLHttpRequest#propriétés) et se résume de cette façon&nbsp;:
 
 - 0 (non initialisée) ou (requête non initialisée)
 - 1 (en cours de chargement) ou (connexion établie avec le serveur)
@@ -163,7 +164,7 @@ Dans cet exemple&nbsp;:
 
 > **Note :** Si vous envoyez une requête à du code qui renvoie du XML plutôt qu’un fichier HTML statique, vous devez spécifier des en-têtes de réponse pour que cela fonctionne avec Internet Explorer. Si vous ne spécifiez pas l’en-tête `Content-Type: application/xml`, IE émettra une erreur JavaScript «&nbsp;Objet attendu&nbsp;» après la ligne à laquelle vous avez tenté d’accéder à l’élément XML.
 
-> **Note :** Si vous ne spécifiez pas l’en-tête `Cache-Control: no-cache`, le navigateur mettra la réponse en cache et n’effectuera plus jamais la requête ultérieurement, ce qui peut rendre le débogage difficile. Vous pouvez également ajouter un paramètre GET toujours différent, comme un timestamp ou un nombre aléatoire (voir [contourner le cache](https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest#Contourner_le_cache)).
+> **Note :** Si vous ne spécifiez pas l’en-tête `Cache-Control: no-cache`, le navigateur mettra la réponse en cache et n’effectuera plus jamais la requête ultérieurement, ce qui peut rendre le débogage difficile. Vous pouvez également ajouter un paramètre GET toujours différent, comme un timestamp ou un nombre aléatoire (voir [contourner le cache](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest#Contourner_le_cache)).
 
 > **Note :** Si la variable `httpRequest` est utilisée globalement, des appels concurrents à `makeRequest()` peuvent s’écraser l’un l’autre, provoquant une situation de compétition _(race condition_). On peut s’en prémunir en déclarant la variable `httpRequest` locale à une [closure](/fr/docs/Web/JavaScript/Closures) contenant les fonctions AJAX.
 
@@ -219,8 +220,6 @@ Ce code prend l’objet `XMLDocument` donné par `responseXML` et utilise les m�
 
 Catégories
 
-Interwiki
-
 ### Étape 5 – Manipuler les données
 
 Pour finir, envoyons quelques données au serveur et réceptionnons la réponse. Notre JavaScript demandera cette fois-ci une page dynamique, `test.php`, qui prendra notre contenu envoyé et revera une chaîne «&nbsp;calculée&nbsp;» – "Bonjour, \[user data] !" – que nous afficherons via `alert()`.
@@ -228,7 +227,7 @@ Pour finir, envoyons quelques données au serveur et réceptionnons la réponse.
 D’abord, nous allons ajouter un boîte de texte dans notre HTML afin que l’utilisateur ou l’utilisatrice puisse saisir son nom&nbsp;:
 
 ```html
-<label>Vore nom :
+<label>Votre nom :
   <input type="text" id="ajaxTextbox" />
 </label>
 <span id="ajaxButton">

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/filter
 ---
+
 {{JSRef}}
 
 La méthode **`filter()`** crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction `callback`.
@@ -191,15 +192,11 @@ if (!Array.prototype.filter){
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.20', 'Array.prototype.filter')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES2015', '#sec-array.prototype.filter', 'Array.prototype.filter')}}     | {{Spec2('ES2015')}}     |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.filter")}}
+{{Compat}}
 
 ## Voir aussi
 

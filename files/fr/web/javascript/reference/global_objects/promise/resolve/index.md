@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/resolve
 ---
+
 {{JSRef}}
 
 La méthode **`Promise.resolve(valeur)`** renvoie un objet {{jsxref("Promise")}} qui est résolu avec la valeur donnée. Si cette valeur est une promesse, la promesse est renvoyée, si la valeur possède une méthode {{jsxref("Promise.then","then")}}, la promesse renvoyée « suivra » cette méthode et prendra son état ; sinon, la promesse renvoyée sera tenue avec la valeur.
@@ -123,14 +124,11 @@ p3.then(function(v) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}}     | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.resolve")}}
+{{Compat}}
 
 ## Voir aussi
 

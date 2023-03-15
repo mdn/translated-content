@@ -1,8 +1,11 @@
 ---
 title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
-browser-compat: javascript.builtins.Symbol.@@toPrimitive
+original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
+l10n:
+  sourceCommit: cf607d68522cd35ee7670782d3ee3a361eaef2e4
 ---
+
 {{JSRef}}
 
 El método **`[@@toPrimitive]()`** convierte un objeto Symbol en un valor primitivo.

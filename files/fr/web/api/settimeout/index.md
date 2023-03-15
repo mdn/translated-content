@@ -6,6 +6,7 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 browser-compat: api.setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode globale **`setTimeout()`** permet de définir un minuteur qui exécute une fonction ou un code donné après la fin du délai indiqué.
@@ -306,7 +307,7 @@ Firefox diffèrera le déclenchement des minuteurs lorsque l'onglet actuel est e
 
 ### Pages d'arrière-plan des WebExtensions et minuteurs
 
-Pour les [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` ne fonctionne pas de façon sûre. Il faut privilégier l'API [`alarms`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms) pour le développement d'extensions.
+Pour les [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` ne fonctionne pas de façon sûre. Il faut privilégier l'API [`alarms`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/alarms) pour le développement d'extensions.
 
 ### Valeur maximale pour le délai
 

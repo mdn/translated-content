@@ -11,6 +11,7 @@ tags:
   - rootMargin
 translation_of: Web/API/IntersectionObserver/rootMargin
 ---
+
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
 La propriété **`rootMargin`** est une propriété en lecture seule de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver). C'est une chaîne de caractères avec une syntaxe similaire à celle de la propriété CSS [`margin`](/fr/docs/Web/CSS/margin). Chaque côté de la zone rectangulaire représentée par `rootMargin` est ajouté au côté correspondant de la boîte englobante de la [racine](/fr/docs/Web/API/IntersectionObserver/root) de l'élément avant que le test d'intersection soit effectué. Cela permet, par exemple, d'ajuster les limites vers l'extérieur afin que l'élément cible soit considéré comme entièrement visible même si un certain nombre de pixels en largeur ou en hauteur sont rognés, ou encore pour traiter la cible comme partiellement masquée si une bordure est trop proche de celle de la boîte englobante de l'élément racine.
@@ -33,10 +34,8 @@ Si `rootMargin` n'est pas spécifiée à l'initialisation de l'objet, sa valeur 
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-rootMargin', 'IntersectionObserver.rootMargin')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.rootMargin")}}
+{{Compat}}

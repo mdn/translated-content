@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
 translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.moveTo()`** de l'API Canvas 2D déplace le point de départ d'un nouveau sous-chemin vers les coordonnées `(x, y)`.
@@ -91,13 +92,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Specification                                                                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.moveTo")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,17 +1,8 @@
 ---
 title: '-moz-outline-radius-topright'
 slug: Web/CSS/-moz-outline-radius-topright
-tags:
-  - CSS
-  - CSS プロパティ
-  - NeedsCompatTable
-  - NeedsContent
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-outline-radius-topright
-translation_of: Web/CSS/-moz-outline-radius-topright
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 Mozilla アプリケーションにおいて、 **`-moz-outline-radius-topright`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線 ({{cssxref("outline")}}) の 上の角を丸くするために使用することができます。
@@ -58,7 +49,7 @@ p {
 
 {{EmbedLiveSample("Examples")}}
 
-> **Note:** 上記の例は Firefox 以外のブラウザーで見ている場合は、求められる効果が表示されません。
+> **メモ:** 上記の例は Firefox 以外のブラウザーで見ている場合は、求められる効果が表示されません。
 
 ## 仕様書
 

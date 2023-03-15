@@ -1,18 +1,8 @@
 ---
 title: ':scope'
 slug: Web/CSS/:scope
-tags:
-  - ':scope'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - スコープ付き要素
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.scope
-translation_of: Web/CSS/:scope
 ---
+
 {{CSSRef}}
 
 **`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、セレクターが選択する対象の参照点である要素を表します。
@@ -28,7 +18,9 @@ translation_of: Web/CSS/:scope
 
 ## 構文
 
-{{csssyntax}}
+```
+:scope
+```
 
 ## 例
 

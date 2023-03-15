@@ -1,12 +1,8 @@
 ---
 title: CharacterData.data
 slug: Web/API/CharacterData/data
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.CharacterData.data
-translation_of: Web/API/CharacterData/data
 ---
+
 {{APIRef("DOM")}}
 
 **`data`** は {{domxref("CharacterData")}} インターフェイスのプロパティで、現在のオブジェクトのデータの値を表します。
@@ -17,7 +13,7 @@ translation_of: Web/API/CharacterData/data
 
 ## 例
 
-> **Note:** {{domxref("CharacterData")}} は抽象インターフェイスです。
+> **メモ:** {{domxref("CharacterData")}} は抽象インターフェイスです。
 > 以下の例はこれを実装した 2 つの具象インターフェイス、 {{domxref("Text")}} と {{domxref("Comment")}} を使用しています。
 
 ### data を使用したコメントの読み取り

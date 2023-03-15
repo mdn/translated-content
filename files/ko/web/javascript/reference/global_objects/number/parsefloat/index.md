@@ -1,18 +1,10 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Polyfill
-browser-compat: javascript.builtins.Number.parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
 {{JSRef}}
 
-**`Number.parseFloat()`** 메서드는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다. 숫자를 파싱할 수 없는 경우 {{jsxref("NaN")}}을 반환합니다.
+**`Number.parseFloat()`** 메서드는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다. 숫자를 파싱할 수 없는 경우 {{jsxref("NaN")}}을 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
 
@@ -27,7 +19,7 @@ Number.parseFloat(string)
 - `string`
   - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 {{glossary("whitespace", "공백")}}은 무시합니다.
 
-### 반환 값
+### 반환 값
 
 주어진 문자열에서 파싱한 부동소수점 실수입니다.
 
@@ -43,7 +35,7 @@ Number.parseFloat(string)
 Number.parseFloat === parseFloat; // true
 ```
 
-`Number.parseFloat()`은 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseFloat", "parseFloat()")}}를 참고하세요.
+`Number.parseFloat()`은 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseFloat", "parseFloat()")}}를 참고하세요.
 
 ## 명세
 

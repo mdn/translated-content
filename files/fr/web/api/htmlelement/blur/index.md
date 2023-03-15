@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/blur
 translation_of: Web/API/HTMLElement/blur
 browser-compat: api.HTMLElement.blur
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLElement.blur()`** retire le focus du clavier de l'élément courant.

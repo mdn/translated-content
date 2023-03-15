@@ -1,19 +1,8 @@
 ---
 title: HTMLTableElement.frame
 slug: Web/API/HTMLTableElement/frame
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-  - 表
-  - 非推奨
-browser-compat: api.HTMLTableElement.frame
-translation_of: Web/API/HTMLTableElement/frame
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 {{domxref("HTMLTableElement")}} インターフェイスの **`frame`** プロパティは、文字列で表の外部の境界のうちどれを描画するかを示します。

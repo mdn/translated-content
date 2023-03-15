@@ -1,14 +1,8 @@
 ---
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
-tags:
-  - AJAX
-  - プロパティ
-  - リファレンス
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest.readyState
-translation_of: Web/API/XMLHttpRequest/readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.readyState** プロパティは XMLHttpRequest (XHR) クライアントの状態を返します。XHR クライアントは次の状態のいずれかをとります。
@@ -32,7 +26,7 @@ translation_of: Web/API/XMLHttpRequest/readyState
 - DONE
   - : 取得操作が完了している。これはデータ転送が成功または失敗で完了したことを意味している。
 
-> **Note:** Internet Explorer 11 よりも前では、状態の名前が異なります。 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING`, `DONE` の代わりに、`READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) and `READYSTATE_COMPLETE` (4) が使われています。
+> **メモ:** Internet Explorer 11 よりも前では、状態の名前が異なります。 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING`, `DONE` の代わりに、`READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) and `READYSTATE_COMPLETE` (4) が使われています。
 
 ## 例
 

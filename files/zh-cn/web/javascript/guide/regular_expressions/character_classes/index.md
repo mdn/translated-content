@@ -1,15 +1,8 @@
 ---
 title: 字符类
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - 指南
-  - JavaScript
-  - 参考
-  - RegExp
-  - 正则表达式
-  - 字符类
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 字符类可以区分各种字符，例如区分字母和数字。
@@ -29,21 +22,45 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
  </tbody>
  <tbody>
   <tr>
+   <td>
+    <code>[xyz]<br />[a-c]</code>
+   </td>
+   <td>
+    <p>一个字符类。匹配包含在方括号中的任何字符。你可以使用连字符指定字符范围，但如果连字符出现在方括号中的第一个或最后一个字符，则将其视为字面连字符，作为普通字符包含在字符类中。</p>
+    <p>例如，<code>[abcd]</code> 与 <code>[a-d]</code> 相同。它们匹配“brisket”中的“b”和“chop”中的“c”。</p>
+    <p>例如，<code>[abcd-]</code> 和 <code>[-abcd]</code> 匹配“brisket”中的“b”、“chop”中的“c”和“non-profit”中的“-”（连字符）。</p>
+    <p>例如，<code>[\w-]</code> 与 <code>[A-Za-z0-9_-]</code> 相同。它们都匹配“brisket”中的“b”、“chop”中的“c”和“non-profit”中的“n”。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <code>[^xyz]<br />[^a-c]</code>
+    </p>
+   </td>
+   <td>
+    <p>一个否定或补充的字符类。也就是说，它匹配未包含在方括号中的任何字符。你可以使用连字符指定字符范围，但如果连字符出现在<code>^</code>后的第一个字符或方括号中的或最后一个字符，则将其视为字面连字符，作为普通字符包含在字符类中。例如，<code>[^abc]</code> 与 <code>[^a-c]</code> 相同。它们首先匹配“bacon”中的“o”和“chop”中的“h”。</p>
+    <div class="notecard note">
+     <p><strong>备注：</strong> ^ 字符也可以表示<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">输入的开始</a>。</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
    <td><code>.</code></td>
    <td>
     <p>有下列含义之一：</p>
     <ul>
-     <li>匹配除行终止符之外的任何单个字符：<code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如，<code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
+     <li>匹配除行终止符之外的任何单个字符：<code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如，<code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
      <li>在字符集内，点失去了它的特殊意义，并与文字点匹配。</li>
     </ul>
     <p>需要注意的是，<code>m</code> multiline 标志不会改变点的行为。因此，要跨多行匹配一个模式，可以使用字符集<code>[^]</code>—它将匹配任何字符，包括新行。</p>
-    <p>ES2018 添加了 <code>s</code>“dotAll”标志，它允许点也匹配行终止符。</p>
+    <p><code>s</code>“dotAll”标志允许点也匹配行终止符。</p>
    </td>
   </tr>
   <tr>
    <td><code>\d</code></td>
    <td>
-    <p>匹配任何数字 (阿拉伯数字)。相当于 <code>[0-9]</code>。例如，<code>/\d/</code> 或 <code>/[0-9]/</code> 匹配“B2is the suite number”中的“2”。</p>
+    <p>匹配任何数字 (阿拉伯数字)。相当于 <code>[0-9]</code>。例如，<code>/\d/</code> 或 <code>/[0-9]/</code> 匹配“B2is the suite number”中的“2”。</p>
    </td>
   </tr>
   <tr>
@@ -55,7 +72,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\w</code></td>
    <td>
-    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>。例如，<code>/\w/</code> 匹配“apple”中的“a”，匹配“$5.28”中的“5”，匹配“3D”中的“3”，以及匹配“Émanuel”中的“m”。</p>
+    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>。例如，<code>/\w/</code> 匹配“apple”中的“a”，匹配“$5.28”中的“5”，匹配“3D”中的“3”，以及匹配“Émanuel”中的“m”。</p>
    </td>
   </tr>
   <tr>
@@ -67,13 +84,17 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\s</code></td>
    <td>
-    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\s\w*/</code> 匹配“foo bar”中的“ bar”。</p>
+    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于
+      <code>[\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>\s\w*/</code> 匹配“foo bar”中的“bar”。
+    </p>
    </td>
   </tr>
   <tr>
    <td><code>\S</code></td>
    <td>
-    <p>匹配除空格以外的单个字符。相当于 <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\S\w*/</code> 匹配“foo bar”中的“foo”。</p>
+    <p>匹配除空格以外的单个字符。相当于
+      <code>[^\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\S\w*/</code> 匹配“foo bar”中的“foo”。
+    </p>
    </td>
   </tr>
   <tr>
@@ -143,6 +164,21 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
     </div>
    </td>
   </tr>
+  <tr>
+   <td>
+    <code><em>x</em>|<em>y</em></code>
+   </td>
+   <td>
+    <p>
+     <strong>析取：</strong>匹配“x”或“y”。每个由管道符 (<code>|</code>) 分隔的部分称为一个<em>可选项</em>。例如，<code>/green|red/</code> 匹配“green apple”中的“green”和“red apple”中的“red”。
+    </p>
+    <div class="notecard note">
+     <p>
+      <strong>备注：</strong> 析取是指定“一组选择”的另一种方式，但它不是字符类。析取不是原子的——你需要使用<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">组</a>使其成为一个更大的模式的一部分。<code>[abc]</code> 在功能上等同于 <code>(?:a|b|c)</code>。
+     </p>
+    </div>
+   </td>
+  </tr>
  </tbody>
 </table>
 
@@ -151,8 +187,8 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ### 寻找一系列数字
 
 ```js
-var randomData = "015 354 8787 687351 3512 8735";
-var regexpFourDigits = /\b\d{4}\b/g;
+const randomData = "015 354 8787 687351 3512 8735";
+const regexpFourDigits = /\b\d{4}\b/g;
 // \b 表示边界（即不要在单词中间开始匹配）
 // \d{4} 表示一个数字，四次
 // \b 表示另一个边界（即不要在单词中间结束匹配）
@@ -164,8 +200,8 @@ console.table(randomData.match(regexpFourDigits));
 ### 寻找以 A 开头的拉丁字母单词
 
 ```js
-var aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
-var regexpWordStartingWithA = /\b[aA]\w+/g;
+const aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
+const regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b 表示边界（即不要在单词中间开始匹配）
 // [aA] 表示字母 a 或 A
 // \w+ 表示任何*拉丁字母*字符，多次
@@ -179,12 +215,22 @@ console.table(aliceExcerpt.match(regexpWordStartingWithA));
 代替拉丁字母，我们可以使用一系列 Unicode 字符来识别一个单词（从而能够处理其他语言的文本，如中文、俄语或阿拉伯语）。Unicode 的“基本多文种平面（Basic Multilingual Plane）”包含世界各地使用的大部分字符，我们可以使用字符类和范围来匹配用这些字符编写的单词。
 
 ```js
-var nonEnglishText = "爱丽丝 梦游 仙境";
-var regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
+const nonEnglishText = "爱丽丝 梦游 仙境";
+const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // 基本多文种平面范围是 U+0000 到 U+FFFF 但空格是 U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
 [ '爱丽丝', '梦游', '仙境' ]
+```
+
+### 计算元音个数
+
+```js
+const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+const regexpVowels = /[AEIOUYaeiouy]/g;
+
+console.log("元音数：", aliceExcerpt.match(regexpVowels).length);
+// 元音数：26
 ```
 
 ## 参见
@@ -194,7 +240,7 @@ console.table(nonEnglishText.match(regexpBMPWord));
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
   - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [组和后向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 
 - [`RegExp()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [CharacterClass in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass)

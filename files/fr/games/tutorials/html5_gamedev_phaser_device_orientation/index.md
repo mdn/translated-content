@@ -4,6 +4,7 @@ slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 ---
+
 {{GamesSidebar}}
 
 Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API [Device Orientation](/fr/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) et [Vibration](/fr/docs/Web/API/Vibration_API) pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](http://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
@@ -116,7 +117,7 @@ Ball.Boot.prototype = {
 };
 ```
 
-Le principal objet "`Ball`"  est défini et nous ajoutons deux variables appelées `_WIDTH` et `_HEIGHT` qui sont la largeur et la hauteur du caneva du jeu — elles nous aideront à positionner les éléments à l'écran. Nous chargeons d'abord deux images qui seront utilisées plus tard dans l'état `Preload` _(préchargement)_ pour montrer la progression du chargement de tous les autres éléments. La fonction `create` contient une configuration de base : nous configurons la mise à l'échelle et l'alignement du canevas et passons à l'état `Preload` lorsque tout est prêt.
+Le principal objet "`Ball`" est défini et nous ajoutons deux variables appelées `_WIDTH` et `_HEIGHT` qui sont la largeur et la hauteur du caneva du jeu — elles nous aideront à positionner les éléments à l'écran. Nous chargeons d'abord deux images qui seront utilisées plus tard dans l'état `Preload` _(préchargement)_ pour montrer la progression du chargement de tous les autres éléments. La fonction `create` contient une configuration de base : nous configurons la mise à l'échelle et l'alignement du canevas et passons à l'état `Preload` lorsque tout est prêt.
 
 ### Preloader.js _(préchargement)_
 
@@ -240,7 +241,7 @@ ball.body.setCircle(10, 11, 11);
 ball.body.linearDamping = 1;
 ```
 
-On ajoute un "sprite" à une place donnée sur l'écran en utilisant l'image `'ball'`. On ajoute aussi le point de repère de tous les calculs physiques ( '`anchor`' ) au milieu de la balle,  permettant au moteur physique d'arcade (qui gère toute la physique du mouvement de la balle) et en définissant la taille du corps pour la détection de collision . La propriété `bounce` est utilisée pour définir le rebondissement de la balle quand elle frappe les obstacles.
+On ajoute un "sprite" à une place donnée sur l'écran en utilisant l'image `'ball'`. On ajoute aussi le point de repère de tous les calculs physiques ( '`anchor`' ) au milieu de la balle, permettant au moteur physique d'arcade (qui gère toute la physique du mouvement de la balle) et en définissant la taille du corps pour la détection de collision . La propriété `bounce` est utilisée pour définir le rebondissement de la balle quand elle frappe les obstacles.
 
 ### Contrôle de la balle
 
@@ -250,7 +251,7 @@ C'est déjà sympa d'avoir une balle prête à être lancée dans la zone de jeu
 this.keys = this.game.input.keyboard.createCursorKeys();
 ```
 
-Comme vous pouvez le voir, Phaser a une fonction spéciale  `createCursorKeys()` qui nous donnera un objet avec des gestionnaires d'événements pour les quatre touches fléchées : haut, bas, gauche et droite.
+Comme vous pouvez le voir, Phaser a une fonction spéciale `createCursorKeys()` qui nous donnera un objet avec des gestionnaires d'événements pour les quatre touches fléchées : haut, bas, gauche et droite.
 
 Ensuite, nous allons ajouter le code suivant dans la fonction `update ()`, il sera lancé à chaque "frame". L'objet `this.keys` sera vérifié aux pressions de touche du joueur, la balle réagira donc en conséquence :
 
@@ -273,13 +274,13 @@ De cette manière on peut vérifier quelle touche est pressée à un moment donn
 
 ## Implémentation de l'API Device Orientation (_gyroscopique_)
 
-La particularité du jeu est qu'il utilise l'API gyroscopique sur les mobiles. Grâce à elle, vous pouvez jouer au jeu en inclinant l'appareil dans la direction où vous voulez que la balle aille. Voilà le code de la fonction  `create()` qui l'implémente :
+La particularité du jeu est qu'il utilise l'API gyroscopique sur les mobiles. Grâce à elle, vous pouvez jouer au jeu en inclinant l'appareil dans la direction où vous voulez que la balle aille. Voilà le code de la fonction `create()` qui l'implémente :
 
 ```js
 window.addEventListener("deviceorientation", this.handleOrientation, true);
 ```
 
-L'ajout d'un évènement "listener" à l'évenement `"deviceorientation"` et la modification de la fonction `handleOrientation`ressembleront à ceci :
+L'ajout d'un évènement "listener" à l'évenement `"deviceorientation"` et la modification de la fonction `handleOrientation` ressembleront à ceci :
 
 ```js
 handleOrientation: function(e) {
@@ -307,7 +308,7 @@ this.hole.anchor.set(0.5);
 this.hole.body.setSize(2, 2);
 ```
 
-La seule différence est que '`hole.body`' est mis à `immovable`_(fixe)_, il ne bougera donc pas quand la balle le touchera et la collision sera alors calculée ( ce point sera approfondit plus loin dans cet article ).
+La seule différence est que '`hole.body`' est mis à `immovable` _(fixe)_, il ne bougera donc pas quand la balle le touchera et la collision sera alors calculée ( ce point sera approfondit plus loin dans cet article ).
 
 ### Création du mur du labyrinthe
 

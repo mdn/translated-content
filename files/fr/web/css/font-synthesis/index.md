@@ -10,6 +10,7 @@ tags:
   - 'recipe: css-property'
 translation_of: Web/CSS/font-synthesis
 ---
+
 {{CSSRef}}
 
 La propriété **`font-synthesis`** indique au navigateur s'il peut synthétiser la graisse ou la mise en italique des polices utilisées si ces variantes sont absentes.
@@ -45,9 +46,13 @@ Cette propriété peut prendre l'une des formes suivantes :
 - `style`
   - : Ce mot-clé indique qu'une fonte italique peut être synthétisée si besoin.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -69,12 +74,8 @@ Cette propriété peut prendre l'une des formes suivantes :
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-synthesis', 'font-synthesis')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-synthesis")}}
+{{Compat}}

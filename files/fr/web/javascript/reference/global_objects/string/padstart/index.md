@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/padStart
 ---
+
 {{JSRef}}
 
 La méthode **`padStart()`** permet de compléter la chaîne courante avec une chaîne de caractères donnée afin d'obtenir une chaîne de longueur fixée. Pour atteindre cette longueur, la chaîne complémentaire peut être répétée. La chaîne courante est complétée depuis le début.
@@ -44,14 +45,11 @@ Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle ind
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.padstart', 'String.prototype.padStart')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-string.prototype.padstart', 'String.prototype.padStart')}}         | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.padStart")}}
+{{Compat}}
 
 ## Voir aussi
 

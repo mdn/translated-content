@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Keyed_collections
 original_slug: Web/JavaScript/Guide/Collections_avec_clés
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Collections_indexées", "Web/JavaScript/Guide/Utiliser_les_objets")}}
 
 Ce chapitre présente les collections de données qui sont ordonnées avec une clé. Les objets `Map` et `Set` contiennent des éléments sur lesquels on peut itérer dans leur ordre d'insertion.

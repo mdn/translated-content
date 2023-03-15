@@ -1,23 +1,14 @@
 ---
 title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createOscillator
-browser-compat: api.BaseAudioContext.createOscillator
-translation_of: Web/API/BaseAudioContext/createOscillator
 original_slug: Web/API/AudioContext/createOscillator
 ---
+
 {{APIRef("Web Audio API")}}
 
 `createOscillator()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、周期的な波形を表現するソースである {{domxref("OscillatorNode")}} を生成します。基本的には一定の音程を発生させます。
 
-> **Note:** {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}} コンストラクターは {{domxref("OscillatorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}} コンストラクターは {{domxref("OscillatorNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
@@ -38,7 +29,7 @@ createOscillator()
 次の例は、 AudioContext を使用してオシレーターノードを作成する基本的な使用方法です。応用例や情報については、 [Violent Theremin のデモ](https://mdn.github.io/violent-theremin/)を（関連するコードの [app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js)も）参照してください。また、より詳しい情報は {{domxref("OscillatorNode")}} ページをご覧ください。
 
 ```js
-// ウェブ音声 API コンテキストを生成する
+// ウェブオーディオ API コンテキストを生成する
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // オシレーターノードを生成する
@@ -60,4 +51,4 @@ oscillator.start();
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

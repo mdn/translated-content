@@ -3,6 +3,7 @@ title: Écriture de serveurs WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
+
 Un serveur WebSocket est une application TCP qui écoute sur n'importe quel port d'un serveur et suit un protocole spécifique, c'est aussi simple que cela. La création de son propre serveur TCP est quelque chose qui a tendance à effrayer alors qu'il n'est pas forcément très complexe de créer un serveur WebScoket sur la plateforme de votre choix.
 
 Un serveur WebSocket peut être écrit dans n'importe quel language de programmation qui supporte les "[Berkeley sockets](https://fr.wikipedia.org/wiki/Berkeley_sockets)", par exemple C(++), python ou même PHP et JavaScript (avec nodejs). Ceci n'est pas un tutoriel destiné à un language particulier mais un guide aidant à l'écriture de votre propre serveur.
@@ -36,13 +37,13 @@ Sec-WebSocket-Version: 13
 
 Le client peut solliciter des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. En outre, des en-têtes communs tel que _User-Agent_, _Referer_, *Cookie* ou des en-têtes d'authentification peuvent être envoyés par la même requête : leur usage est laissé libre car ils ne se rapportent pas directement au WebSocket et au processus de poignée de main. A ce titre il semble préférable de les ignorer : d'ailleurs dans de nombreuses configurations communes, un proxy inverse les aura finalement déjà traitées.
 
-Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse  "[400 Bad Request](/en-US/docs/HTTP/Response_codes#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : *Sec-WebSocket-Key*.
+Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse "[400 Bad Request](/fr/docs/HTTP/Response_codes#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : *Sec-WebSocket-Key*.
 
-> **Note :** Un grand nombre de navigateurs enverront un [`Entête d'origine`](/en-US/docs/HTTP/Access_control_CORS#Origin). Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse [403 Forbidden](/en-US/docs/HTTP/Response_codes#403) si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci.
+> **Note :** Un grand nombre de navigateurs enverront un [`Entête d'origine`](/fr/docs/HTTP/Access_control_CORS#Origin). Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse [403 Forbidden](/fr/docs/HTTP/Response_codes#403) si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci.
 
 > **Note :** L'URI de la requête (`/chat` dans notre cas) n'a pas de signification particulièrement dans les spécifications en usage&nbsp;: elle permet simplement, par convention, de disposer d'une multitude d'applications en parallèle grâce à WebSocket. Par exemple, `exemple.com/chat` peut être associée à une API/une application de dialogue multiutilisateurs lorsque `/game` invoquera son homologue pour un jeu.
 
-> **Note :** [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/en-US/docs/HTTP/Response_codes) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
+> **Note :** [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/fr/docs/HTTP/Response_codes) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
 
 ### La réponse du serveur lors de la poignée de mains
 
@@ -57,7 +58,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (_rassembler_) la valeur de *Sec-WebSocket-Key* et "_258EAFA5-E914-47DA-95CA-C5AB0DC85B11_" (valeur fixée par défaut : c'est une "[magic string](https://en.wikipedia.org/wiki/Magic_string)") puis procéder au hash par la méthode [SHA-1](https://en.wikipedia.org/wiki/SHA-1) du résultat et retourner le format au format [base64](https://en.wikipedia.org/wiki/Base64).
 
-> **Note :** Ce processus qui peut paraître inutilement complexe, permet de certifier que le serveur et le client sont bien sur une base WebSocket et non une requête HTTP  (qui serait alors mal interprétée).
+> **Note :** Ce processus qui peut paraître inutilement complexe, permet de certifier que le serveur et le client sont bien sur une base WebSocket et non une requête HTTP (qui serait alors mal interprétée).
 
 Ainsi si la clé (la valeur de l'entête du client) était "`dGhlIHNhbXBsZSBub25jZQ==`", le retour (_Accept \* dans la version d'origine du tutoriel_) sera : "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Une fois que le serveur a envoyé les entêtes attendues, alors la poignée de mains est considérée comme effectuée et vous pouvez débuter l'échange de données !
 
@@ -114,7 +115,7 @@ Le champ `opcode` définit comment est interpêtée la _charge utile_ (`payload 
 
 Le bit FIN indique si c'est le dernier message de la série \[_NDT : pour la concaténation, pas la fin de la connexion elle-même_]. S'il est à 0, alors le serveur doit attendre encore une ou plusieurs parties. Sinon le message est considéré comme complet.
 
-### Connaître la taille des *données utiles*
+### Connaître la taille des données utiles
 
 Pour (pouvoir) lire les _données utiles_, vous devez savoir quand arrêter la lecture dans le flux des trames entrantes vers le serveur. C'est pourquoi il est important de connaître la taille des _données utiles_. Et malheureusement ce n'est pas toujours simple. Voici quelques étapes essentielles à connaître :
 
@@ -218,6 +219,6 @@ Si vous souhaitez que votre serveur puisse supporter certains sous-protocoles, v
 
 ## Contenus associés
 
-- [Tutorial: Websocket server in C#](/en-US/docs/WebSockets/Writing_WebSocket_server)
-- [Writing WebSocket client applications](/en-US/docs/WebSockets/Writing_WebSocket_client_applications)
-- [Tutorial: Websocket server in VB.NET](/en-US/docs/WebSockets/WebSocket_Server_Vb.NET)
+- [Tutorial: Websocket server in C#](/fr/docs/WebSockets/Writing_WebSocket_server)
+- [Writing WebSocket client applications](/fr/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Tutorial: Websocket server in VB.NET](/fr/docs/WebSockets/WebSocket_Server_Vb.NET)

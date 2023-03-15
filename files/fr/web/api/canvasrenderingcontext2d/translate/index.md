@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.translate()
 slug: Web/API/CanvasRenderingContext2D/translate
 translation_of: Web/API/CanvasRenderingContext2D/translate
 ---
+
 {{APIRef}}
 
 La méthode **CanvasRenderingContext2D.translate()** de l'API Canvas 2D ajoute une transformation de translation en déplaçant le canevas et son origine x horizontalement et y verticalement sur la grille.
@@ -93,13 +94,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-translate", "CanvasRenderingContext2D.translate")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.translate")}}
+{{Compat}}
 
 ## Voir aussi
 

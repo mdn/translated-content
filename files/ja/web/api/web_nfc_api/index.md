@@ -1,16 +1,13 @@
 ---
 title: ウェブ NFC API
 slug: Web/API/Web_NFC_API
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
 ---
+
 {{DefaultAPISidebar("Web NFC API")}}{{SeeCompatTable}}
 
 ウェブ NFC API では、 NFC によるデータ交換を軽量な NFC Data Exchange Format (NDEF) メッセージにて行うことができます。
 
-> **Note:** デバイスやタグは、ウェブ NFC で使用するために NDEF レコード形式に対応するよう に特別にフォーマットし記録する必要があります。低レベルの操作は現在 API で対応していませんが、そのような機能を追加する API についての公開討論が行われています。
+> **メモ:** デバイスやタグは、ウェブ NFC で使用するために NDEF レコード形式に対応するよう に特別にフォーマットし記録する必要があります。低レベルの操作は現在 API で対応していませんが、そのような機能を追加する API についての公開討論が行われています。
 
 ## インターフェイス
 

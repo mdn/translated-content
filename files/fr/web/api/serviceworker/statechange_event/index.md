@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/ServiceWorker/onstatechange
 original_slug: Web/API/ServiceWorker/onstatechange
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 Une propriété {{domxref("EventListener")}} appelée quand un évenement de type `statechange` est déclenché; c'est le cas dès que le {{domxref("ServiceWorker.state")}} change.
@@ -58,12 +59,10 @@ navigator.serviceWorker.register(..).then(function(swr) {
 })
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                                                | État                                 | Commentaire        |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Service Workers', '#service-worker-onstatechange-attribute', 'ServiceWorker.onstatechange')}} | {{Spec2('Service Workers')}} | Définition intiale |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorker.onstatechange")}}
+{{Compat}}

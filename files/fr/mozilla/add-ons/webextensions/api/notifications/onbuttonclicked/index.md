@@ -13,6 +13,7 @@ tags:
   - onButtonClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'utilisateur clique sur l'un des boutons de la notification.
@@ -47,9 +48,9 @@ Les événements ont trois fonctions :
     - `buttonIndex`
       - : `integer`. L'index [zero-based](https://en.wikipedia.org/wiki/Zero-based_numbering) du bouton sur lequel vous avez cliqué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onButtonClicked")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

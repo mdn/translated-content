@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/select
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<select>`** représente un contrôle qui fournit une liste d'options parmi lesquelles l'utilisateur pourra choisir.
 
@@ -44,7 +45,7 @@ Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels
 - {{htmlattrdef("required")}}
   - : Un attribut booléen qui indique qu'une option dont la valeur est une chaîne de caractères non-vide doit être sélectionnée.
 - {{htmlattrdef("size")}}
-  - : Si le contrôle est affichée comme une liste déroulante, cet attribut indique le nombre de lignes qui doivent être visibles à l'écran en même temps. On notera que les navigateurs ne sont pas obligés de présenter un élément ` <select``> ` sous la forme d'une liste déroulante. La valeur par défaut de cet attribut est 0 (cf. notes de compatibilité ci-après).
+  - : Si le contrôle est affichée comme une liste déroulante, cet attribut indique le nombre de lignes qui doivent être visibles à l'écran en même temps. On notera que les navigateurs ne sont pas obligés de présenter un élément `<select>` sous la forme d'une liste déroulante. La valeur par défaut de cet attribut est 0 (cf. notes de compatibilité ci-après).
 
 ## Mise en forme avec CSS
 
@@ -226,7 +227,7 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisé</th>
-      <td>{{ARIARole("menu")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -237,15 +238,11 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#the-select-element', '&lt;select&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#the-select-element', '&lt;select&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}         | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.select")}}
+{{Compat}}
 
 ## Voir aussi
 

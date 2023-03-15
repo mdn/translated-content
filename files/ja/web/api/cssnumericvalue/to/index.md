@@ -1,18 +1,8 @@
 ---
 title: CSSNumericValue.to()
 slug: Web/API/CSSNumericValue/to
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - to()
-browser-compat: api.CSSNumericValue.to
-translation_of: Web/API/CSSNumericValue/to
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`to()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、数値をある単位から他の単位へ変換します。

@@ -4,6 +4,7 @@ slug: Web/API/Location/reload
 translation_of: Web/API/Location/reload
 browser-compat: api.Location.reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La méthode **`Location.reload()`** recharge la ressource depuis l'URL actuelle.

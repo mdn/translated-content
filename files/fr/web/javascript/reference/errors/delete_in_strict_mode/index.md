@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 original_slug: Web/JavaScript/Reference/Erreurs/Delete_in_strict_mode
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -67,4 +68,4 @@ x = null;
 
 - [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete)
 - [La gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Gestion_de_la_mémoire)
-- [TypeError: property "x" is non-configurable and can't be deleted](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_delete)
+- [TypeError: property "x" is non-configurable and can't be deleted](/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete)

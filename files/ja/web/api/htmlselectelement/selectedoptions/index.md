@@ -1,19 +1,8 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - Select
-  - ウェブ
-  - selectedOptions
-browser-compat: api.HTMLSelectElement.selectedOptions
 ---
+
 {{APIRef("HTML DOM")}}
 
 **読み取り専用**の {{domxref("HTMLSelectElement")}} の **`selectedOptions`** プロパティは、この {{HTMLElement("select")}} 要素にある現在選択中の　{{HTMLElement("option")}} のリストが入ります。選択中の選択肢のリストは {{domxref("HTMLCollection")}} オブジェクトで、現在選択中の選択肢ごとに 1 項目ずつ入ります。
@@ -97,7 +86,7 @@ orderButton.addEventListener("click", function() {
 }, false);
 ```
 
-このスクリプトは、「注文する」ボタンの {{domxref("Element/click_event", "click")}} イベントリスナーを設定します。クリックされると、イベントハンドラーは `selectedOptions` を使って選択された選択肢のリストを取得し、リスト内の選択肢を繰り返し処理します。順番に並べられた項目を列挙するために文字列が作成され、適切な英語の文法ルール ({{interwiki("wikipedia", "en:serial comma")}} を含む) を使ってリストを作成するロジックがあります。
+このスクリプトは、「注文する」ボタンの {{domxref("Element/click_event", "click")}} イベントリスナーを設定します。クリックされると、イベントハンドラーは `selectedOptions` を使って選択された選択肢のリストを取得し、リスト内の選択肢を繰り返し処理します。順番に並べられた項目を列挙するために文字列が作成され、適切な英語の文法ルール ([serial comma](https://en.wikipedia.org/wiki/serial_comma) を含む) を使ってリストを作成するロジックがあります。
 
 ### 結果
 
@@ -115,4 +104,4 @@ orderButton.addEventListener("click", function() {
 
 ## 関連情報
 
-- {{SectionOnPage("/ja/docs/Learn/Forms/Other_form_controls", "Drop-down controls")}}
+- [ドロップダウンコントロール](/ja/docs/Learn/Forms/Other_form_controls#%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%83%80%E3%82%A6%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB)

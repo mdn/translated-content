@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/objectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`objectStore()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, renvoie l'accès à un des magasins d'objets liés à la transation sous la forme d'un objet {{domxref("IDBObjectStore")}}.
 
-Si cette méthode est appelée plusieurs fois sur la même transaction et avec le même nom de magasin, elle renverra la même instance de  {{domxref("IDBObjectStore")}}. Si cette méthode est appelée sur une autre transaction, elle renverra une instance différente.
+Si cette méthode est appelée plusieurs fois sur la même transaction et avec le même nom de magasin, elle renverra la même instance de {{domxref("IDBObjectStore")}}. Si cette méthode est appelée sur une autre transaction, elle renverra une instance différente.
 
 {{AvailableInWorkers}}
 
@@ -40,7 +41,7 @@ Un objet {{domxref("IDBObjectStore")}} qui permet d'accéder au magasin d'objets
 
 ## Exemple
 
-Dans le code qui suit, on ouvre une connexion à la base de données. Sur cette connexion, on démarre une transaction (cf.  {{domxref("IDBTransaction")}}) en lecture/écriture afin d'accéder au magasin d'objets `"toDoList"` pour y ajouter un enregistrement (via la méthode {{domxref("IDBObjectStore.add")}}). On notera également l'utilisation des gestionnaires d'événement {{domxref("IDBTransaction.oncomplete")}} et {{domxref("IDBTransaction.onerror")}} de la transaction qui permettent d'afficher la résultat de la transaction sur la page.
+Dans le code qui suit, on ouvre une connexion à la base de données. Sur cette connexion, on démarre une transaction (cf. {{domxref("IDBTransaction")}}) en lecture/écriture afin d'accéder au magasin d'objets `"toDoList"` pour y ajouter un enregistrement (via la méthode {{domxref("IDBObjectStore.add")}}). On notera également l'utilisation des gestionnaires d'événement {{domxref("IDBTransaction.oncomplete")}} et {{domxref("IDBTransaction.onerror")}} de la transaction qui permettent d'afficher la résultat de la transaction sur la page.
 
 La méthode **`objectStore()`** permet d'accéder au magasin d'objets `"toDoList"`.
 
@@ -92,17 +93,15 @@ function addData() {
 };
 ```
 
-> **Note :** Pour un exemple fonctionnel complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([l'exemple _live_ est disponible ici](https://mdn.github.io/to-do-notifications/)).
+> **Note :** Pour un exemple fonctionnel complet, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([l'exemple _live_ est disponible ici](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-objectStore-IDBObjectStore-DOMString-name', 'objectStore()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.objectStore")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -112,4 +111,4 @@ function addData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

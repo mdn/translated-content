@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.timeZones
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/timeZones
 browser-compat: javascript.builtins.Intl.Locale.timeZones
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.timeZones`** est un accesseur qui renvoie un tableau des fuseaux horaires pris en charge pour la locale représentée par l'instance `Intl.Locale` courante.

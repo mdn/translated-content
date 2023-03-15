@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/deleteProperty
 ---
+
 {{JSRef}}
 
 La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des propriétés. Il agit comme l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete).
@@ -61,14 +62,11 @@ Reflect.deleteProperty(Object.freeze({toto: 1}),"toto"); // false
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.deleteProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -11,6 +11,7 @@ tags:
   - W
 translation_of: Web/API/DOMPointReadOnly/w
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`w`** de l'interface **`DOMPointReadOnly`** représente la perspective d'un point.
@@ -27,13 +28,11 @@ Un double.
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                       | Commentaire                                        |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-dompointreadonly-w', 'w')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPointReadOnly.w")}}
+{{Compat}}
 
 ## Voir aussi
 

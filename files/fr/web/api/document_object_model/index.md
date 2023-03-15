@@ -8,6 +8,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/Document_Object_Model
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 Le **_Document Object Model_** ou **DOM** (pour modèle objet de document) est une interface de programmation pour les documents HTML, XML et SVG. Il fournit une représentation structurée du document sous forme d'un arbre et définit la façon dont la structure peut être manipulée par les programmes, en termes de style et de contenu. Le DOM représente le document comme un ensemble de nœuds et d'objets possédant des propriétés et des méthodes. Les nœuds peuvent également avoir des gestionnaires d'événements qui se déclenchent lorsqu'un événement se produit. Cela permet de manipuler des pages web grâce à des scripts et/ou des langages de programmation. Les nœuds peuvent être associés à des gestionnaires d'événements. Une fois qu'un événement est déclenché, les gestionnaires d'événements sont exécutés.
@@ -24,7 +25,7 @@ Pour mieux comprendre le fonctionnement du DOM, [une introduction est disponible
 - {{domxref("Document")}}
 - {{domxref("DocumentFragment")}}
 - {{domxref("DocumentType")}}
-- {{domxref("DOMError")}}  {{deprecated_inline}}
+- {{domxref("DOMError")}} {{deprecated_inline}}
 - {{domxref("DOMException")}}
 - {{domxref("DOMImplementation")}}
 - {{domxref("DOMString")}}
@@ -289,7 +290,7 @@ Un objet `HTMLDocument` donne également accès à différentes fonctionnalités
 
 Voici l'API du DOM pour les types de donnée utilisés pour les propriétés et attributs SVG.
 
-> **Note :** À partir de {{Gecko("5.0")}}, les interfaces suivantes relatives à SVG et qui représentent des listes d'objets sont indexées et permettent d'y accéder. Elles possèdent en plus une propriété de longueur qui indique le nombre d'éléments dans la liste : {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}} et {{domxref("SVGPointList")}}.
+> **Note :** À partir de Gecko 5.0, les interfaces suivantes relatives à SVG et qui représentent des listes d'objets sont indexées et permettent d'y accéder. Elles possèdent en plus une propriété de longueur qui indique le nombre d'éléments dans la liste : {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}} et {{domxref("SVGPointList")}}.
 
 #### Interfaces statiques
 

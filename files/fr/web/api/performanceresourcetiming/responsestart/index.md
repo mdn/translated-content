@@ -11,6 +11,7 @@ tags:
   - responseStart
 translation_of: Web/API/PerformanceResourceTiming/responseStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`responseStart`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur a reçu le premier octet de la réponse du serveur, du cache ou de la ressource locale.
@@ -64,10 +65,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-responsestart', 'responseStart')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.responseStart")}}
+{{Compat}}

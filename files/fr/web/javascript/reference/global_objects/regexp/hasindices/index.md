@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 browser-compat: javascript.builtins.RegExp.hasIndices
 ---
+
 {{JSRef}}
 
 La propriété **`hasIndices`** indique si le marqueur "`d`" a été utilisé ou non avec l'expression rationnelle. `hasIndices` est une propriété en lecture seule, rattachée à une instance d'expression rationnelle.

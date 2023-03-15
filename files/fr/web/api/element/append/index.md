@@ -4,11 +4,12 @@ slug: Web/API/Element/append
 translation_of: Web/API/Element/append
 browser-compat: api.Element.append
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.append()`** ajoute un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères après le dernier enfant d'`Element`. Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).
 
-Voici les différentres entre `Element.append()` et [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)&nbsp;:
+Voici les différences entre `Element.append()` et [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)&nbsp;:
 
 - `Element.append()` permet d'ajouter des chaînes de caractères tandis que `Node.appendChild()` accepte uniquement les objets [`Node`](/fr/docs/Web/API/Node).
 - `Element.append()` n'a pas de valeur de retour alors que `Node.appendChild()` renvoie l'objet [`Node`](/fr/docs/Web/API/Node) ajouté.

@@ -9,6 +9,7 @@ tags:
   - évènements
 translation_of: Web/API/Event/bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 Indique si l'événement donné se propage à travers le DOM ou non.
@@ -39,20 +40,16 @@ function goInput(e) {
 }
 ```
 
-> **Note :** Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à  `true`. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.
+> **Note :** Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à `true`. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-bubbles', 'Event.bubbles')}}         | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM4', '#dom-event-bubbles', 'Event.bubbles')}}                 | {{ Spec2('DOM4') }}             |                      |
-| {{SpecName('DOM2 Events', '#Events-Event-canBubble', 'Event.bubbles')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.bubbles")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [stopPropagation](/en-US/docs/Web/API/Event/stopPropagation) pour empêcher la propagation
+- [stopPropagation](/fr/docs/Web/API/Event/stopPropagation) pour empêcher la propagation

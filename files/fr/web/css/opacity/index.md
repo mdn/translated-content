@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/opacity
 ---
+
 {{CSSRef}}
 
 La propriété **`opacity`** définit la transparence d'un élément. Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.
@@ -48,9 +49,13 @@ opacity: unset;
     | Toute valeur de type {{cssxref("&lt;number&gt;")}} strictement comprise entre `0` et `1` | L'élément est partiellement transparent, on peut voir l'arrière-plan. |
     | `1` (la valeur par défaut)                                                                          | L'élément est complètement opaque.                                    |
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -125,7 +130,7 @@ img.opacity:hover {
 
 Si l'opacité du texte est modifiée, il est nécessaire de vérifier que le contraste entre la couleur du texte et l'arrière-plan est suffisant pour que le texte soit lisible, y compris pour les personnes souffrant de trouble de la vision.
 
-Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte (dont l'opacité a été adaptée) et celle de l'arrière-plan. Les recommandations du [WCAG](https://www.w3.org/WAI/intro/wcag)  conseillent un ratio de 4.5:1 pour les textes normaux et 3:1 pour les textes plus grands (un texte est considéré comme grand s'il est en gras et dont les lettres mesurent 18.66px ou si ses lettres mesurent 24px ou plus).
+Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte (dont l'opacité a été adaptée) et celle de l'arrière-plan. Les recommandations du [WCAG](https://www.w3.org/WAI/intro/wcag) conseillent un ratio de 4.5:1 pour les textes normaux et 3:1 pour les textes plus grands (un texte est considéré comme grand s'il est en gras et dont les lettres mesurent 18.66px ou si ses lettres mesurent 24px ou plus).
 
 - [Vérificateur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
@@ -133,16 +138,11 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaires                          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'opacity')}} | {{Spec2('CSS3 Transitions')}} | `opacity` peut désormais être animée. |
-| {{SpecName('CSS3 Colors', '#opacity', 'opacity')}}                 | {{Spec2('CSS3 Colors')}}         | Définition initiale.                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Voir aussi
 

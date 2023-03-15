@@ -8,6 +8,7 @@ tags:
   - namespaceURI
 translation_of: Web/API/Attr/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace de nom de l'attribut, ou `null` si l'élément n'est pas dans un espace de noms.
@@ -45,13 +46,11 @@ Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. 
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}} | {{Spec2("DOM4")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Attr.namespaceURI")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: '@property'
 slug: Web/CSS/@property
-tags:
-  - アットルール
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Houdini
-browser-compat: css.at-rules.property
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`@property`** は [CSS](/ja/docs/Web/CSS) の{{cssxref("at-rule", "アットルール", "", 1)}}で、 API の [CSS Houdini](/ja/docs/Web/Guide/Houdini) の傘下にあるものです。開発者が明示的に {{cssxref('--*', 'CSS custom properties')}} を定義し、プロパティ型のチェック、既定値の設定、プロパティが値を継承するかどうかの定義ができるようになっています。

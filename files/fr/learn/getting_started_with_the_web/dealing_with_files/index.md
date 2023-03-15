@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 original_slug: Apprendre/Commencer_avec_le_web/Gérer_les_fichiers
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site", "Apprendre/Commencer_avec_le_web/Les_bases_HTML","Apprendre/Commencer_avec_le_web")}}
 
@@ -79,7 +80,7 @@ Quelques règles générales à propos des chemins de fichier :
 
 Pour le moment, c'est tout ce qu'il y a à savoir.
 
-> **Note :** Le système de fichiers Windows utilise des barres obliques inversées (_backslash_ : « \ ») et non des barres obliques (_slash_ : « / »), par exemple `C:\windows`. Cela n'intervient pas en HTML — même si vous développez votre site sur Windows, vous devez toujours utiliser des barres obliques  (« / ») dans votre code..
+> **Note :** Le système de fichiers Windows utilise des barres obliques inversées (_backslash_ : « \ ») et non des barres obliques (_slash_ : « / »), par exemple `C:\windows`. Cela n'intervient pas en HTML — même si vous développez votre site sur Windows, vous devez toujours utiliser des barres obliques (« / ») dans votre code..
 
 ## Autre chose ?
 

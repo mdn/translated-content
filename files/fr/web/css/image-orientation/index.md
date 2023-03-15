@@ -4,6 +4,7 @@ slug: Web/CSS/image-orientation
 translation_of: Web/CSS/image-orientation
 browser-compat: css.properties.image-orientation
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-orientation`** décrit la façon d'obtenir l'orientation correcte d'une image quelle que soit la disposition du document.

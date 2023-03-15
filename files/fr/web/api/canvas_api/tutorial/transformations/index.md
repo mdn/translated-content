@@ -10,7 +10,8 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Transformations
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Transformations
 ---
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_d'images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_d'images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
 
 Précédemment dans ce tutoriel, nous avons étudié la [grille du canevas](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques) et le **système de coordonnées**. Jusqu'à maintenant, nous avons uniquement utilisé la grille par défaut et modifié la taille de la globalité du canevas afin de répondre à nos besoins. Les transformations que nous allons aborder dans la suite vont nous permettre, de manière plus puissante, d'effectuer des déplacements et des rotations sur la grille et même d'effectuer des mises à l'échelle.
 
@@ -27,7 +28,7 @@ Les états du canevas sont stockés dans une pile. Chaque invocation de la méth
 
 - les transformations qui ont été appliquées (exemples : déplacement, rotation, mise à l'échelle).
 - Les valeurs actuelles des attributs suivants : {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
-- Le chemin de découpe ([clipping path](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths)) actuel, qu'on abordera plus loin.
+- Le chemin de découpe ([clipping path](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths)) actuel, qu'on abordera plus loin.
 
 La méthode `save()` peut être invoquée autant de fois que nécessaire. Chaque appel de `restore()` enlève le dernier état sauvegardé de la pile et tous les paramètres sauvegardés sont restaurés.
 

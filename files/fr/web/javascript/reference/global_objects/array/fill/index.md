@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/fill
 ---
+
 {{JSRef}}
 
 La méthode **`fill()`** remplit tous les éléments d'un tableau entre deux index avec une valeur statique. La valeur de l'index de fin n'est pas incluse. Cette méthode renvoie le tableau modifié.
@@ -120,14 +121,11 @@ if (!Array.prototype.fill) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.fill")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -4,6 +4,7 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 ---
+
 {{HTTPSidebar}}
 
 Afficher des pages web ou des services en fonction du navigateur est généralement une mauvaise idée. Le Web se doit d'être accessible à tout le monde, sans prendre en compte le navigateur ou l'appareil utilisé. Il existe différentes façons de développer votre site web afin de l'améliorer progressivement en se basant sur des fonctionnalités standard plutôt qu'en traitant chaque navigateur de manière spécifique.
@@ -85,7 +86,6 @@ Comme le code précédent le montre, il y a **toujours** un moyen de tester la p
 
 Enfin, le code précédent illustre un problème critique avec le développement pour les différents navigateurs qui doit toujours être pris en compte. Il ne faut pas utiliser, de façon non-intentionnelle, les API qu'on teste dans les navigateurs incompatibles. Cela peut sembler simple, mais ce n'est pas toujours le cas. Dans l'exemple qui précède, l'utilisation d'une expression rationnelle littérale (par exemple `/reg/igm`) et qui utilise des références arrières provoquera une erreur d'analyse du code dans les navigateurs qui ne les prennent pas en charge. Aussi, il faut utiliser la forme `new RegExp("(?<=truc_arrière)");` plutôt que `/(?<=look_behind_stuff)/`, même dans la section du code qui traite des navigateurs compatibles.
 
-
 - Amélioration progressive
   - : Cette technique de conception signifie séparer la page web en couches, en utilisant une approche ascendante, en commençant par une couche simple (avec peu ou pas de fonctionnalités) puis en améliorant les capacités par couches successives, chacune comportant plus de fonctionnalités.
 - Dégradation élégante
@@ -121,7 +121,7 @@ if (hasTouchScreen)
 
 En ce qui concerne la taille de l'écran, on utilisera `window.innerWidth` et `window.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ })`. Sur ce sujet, on ne veut pas que des informations soient masquées sur les plus petits écrans. Cela sera source de frustration et forcera à utiliser la version pour ordinateur. On essaiera plutôt d'avoir moins de colonnes d'informations sur une page plus longue pour les écrans plus étroits et une page avec plus de colonnes mais plus courte sur les écrans plus larges. On peut obtenir cet effet en CSS avec [les boîtes flexibles](/fr/docs/Learn/CSS/CSS_layout/Flexbox), voire avec [le flottement](/fr/docs/Learn/CSS/CSS_layout/Floats) comme méthode alternative de recours.
 
-Pour plus de détails, voir [l'article sur le <i lang="en">responsive design</i>](fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
+Pour plus de détails, voir [l'article sur le <i lang="en">responsive design</i>](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
 
 ## Tirer le meilleur parti de l'analyse de la chaîne `userAgent`
 
@@ -186,7 +186,6 @@ Faites aussi attention à ne pas utiliser une expression rationnelle trop simple
 | Internet Explorer 11            | `Trident/7.0; .*rv:xyz` |                                |
 
 \[1] Safari fournit deux numéros de version&nbsp;: un numéro technique avec le fragment `Safari/xyz` token, et un numéro grand public avec le fragment `Version/xyz`.
-
 
 Il n'y a évidemment aucune garantie qu'aucun autre navigateur ne va utiliser ces notations (comme Chrome qui mentionne "Safari" dans son User-Agent). C'est pourquoi la détection du navigateur par ce moyen n'est pas fiable et ne doit être fait qu'en vérifiant aussi le numéro de version (il est peu probable qu'un navigateur mentionne dans son User-Agent le nom d'un autre navigateur dans une version plus ancienne).
 

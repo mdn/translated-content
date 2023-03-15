@@ -4,6 +4,7 @@ slug: Web/CSS/text-combine-upright
 translation_of: Web/CSS/text-combine-upright
 browser-compat: css.properties.text-combine-upright
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-combine-upright`** définit comment intégrer une combinaison de plusieurs caractères dans l'espace normalement alloué à un seul caractère. Si la combinaison obtenue est plus large qu'`1em`, l'agent utilisateur devra compresser le contenu afin qu'il tienne sur `1em`. La combinaison est ensuite manipulée comme un seul glyphe pour la disposition et pour la décoration. Enfin, cette propriété n'a d'effet que sur les modes d'écriture verticaux.

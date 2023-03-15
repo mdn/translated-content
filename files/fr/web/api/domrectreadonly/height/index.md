@@ -10,6 +10,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/height
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`height`** de l'interface of the **`DOMRectReadOnly`** représente la hauteur du `DOMRect`.
@@ -26,13 +27,11 @@ Un double.
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                                       | Commentaire                                        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-height', 'height')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly.height")}}
+{{Compat}}
 
 ## Voir aussi
 

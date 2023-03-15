@@ -1,13 +1,8 @@
 ---
 title: 重ね合わせコンテキストの例 3
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - Understanding_CSS_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 ---
+
 {{CSSRef}}
 
 « [CSS](/ja/docs/Web/CSS) « [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
@@ -50,7 +45,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_e
 
 この問題を回避するには、異なるレベル間のメニューの重なりを取り除くか、独自 (で異なった) `z-index` 値を クラスセレクターではなく ID セレクターを通じて設定するか、 HTML の階層構造をなくすかしてください。
 
-> **Note:** ソースコードを見ると、absolute で位置指定されたコンテナーとなる要素内に、第二階層と第三階層のメニューを作る DIV があることがわかります。この方法は、一度にすべてをグループ化し、位置づけするのに便利です。
+> **メモ:** ソースコードを見ると、absolute で位置指定されたコンテナーとなる要素内に、第二階層と第三階層のメニューを作る DIV があることがわかります。この方法は、一度にすべてをグループ化し、位置づけするのに便利です。
 
 <h2 id="Example_source_code">例のソースコード</h2>
 

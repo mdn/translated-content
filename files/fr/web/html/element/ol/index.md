@@ -9,7 +9,8 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/ol
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<ol>`** représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
 
@@ -132,7 +133,7 @@ L'élément HTML **`<ol>`** représente une liste ordonnée. Les éléments d'un
 
 ## Note d'utilisation
 
-En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/en-US/docs/Web/CSS/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
+En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
 
 Les éléments `<ol>` et [`<ul>`](/fr/docs/Web/HTML/Element/ul) peuvent s'imbriquer aussi profondément que vous le souhaitez, alternant entre `<ol>` et `<ul>` comme vous le souhaitez.
 
@@ -233,15 +234,11 @@ Le HTML ci-dessus affichera :
 
 ## Spécifications
 
-| Spécification                                                                                                    | Status                           | Commentaire                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-ol-element', '&lt;ol&gt;')}}             | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation W3C {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', "grouping-content.html#the-ol-element", "HTMLOListElement")}} | {{Spec2('HTML5 W3C')}}     | Ajout des attributs `reversed` et `start`. L'attribut `type` n'est plus déprécié.       |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;ol&gt;')}}                         | {{Spec2('HTML4.01')}}     | Dépréciation des attributs `compact` et `type`.                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.ol")}}
+{{Compat}}
 
 ## Voir aussi
 

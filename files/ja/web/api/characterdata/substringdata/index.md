@@ -1,12 +1,8 @@
 ---
 title: CharacterData.substringData()
 slug: Web/API/CharacterData/substringData
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.substringData
-translation_of: Web/API/CharacterData/substringData
 ---
+
 {{APIRef("DOM")}}
 
 **`substringData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、既存のデータの一部を、指定した位置から始まり、指定した文字数分のデータを返します。

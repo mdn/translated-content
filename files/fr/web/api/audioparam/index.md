@@ -8,6 +8,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface **`AudioParam`** représente un paramètre audio, en général un paramètre d'un {{domxref ("AudioNode")}} tel qu'un {{ domxref("GainNode.gain") }}. On peut lui donner une valeur spécifique ou définir une variation de valeur qui intervient à un certain moment et selon un certain fonctionnement.
@@ -84,13 +85,11 @@ biquadFilter.gain.value = 25;
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioParam-section', 'AudioParam')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioParam")}}
+{{Compat}}
 
 ## Voir aussi
 

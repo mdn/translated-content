@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/ExtendableEvent
 browser-compat: api.ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 L'interface **`ExtendableEvent`** étend la durée de vie des événements [`install`](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event) et [`activate`](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event) envoyés dans la portée globale dans le cycle de vie du service worker. Elle s'assure que les événements fonctionnels (comme [`FetchEvent`](/fr/docs/Web/API/FetchEvent)) ne soient pas distribués avant de mettre à jour les schémas de la base de données et de vider l'ancien cache.
@@ -83,9 +84,7 @@ self.addEventListener('install', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#extendable-event', 'ExtendableEvent')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

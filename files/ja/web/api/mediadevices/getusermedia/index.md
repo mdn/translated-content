@@ -1,23 +1,8 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-tags:
-  - API
-  - Audio
-  - キャプチャ
-  - メディア
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaDevices
-  - メソッド
-  - 写真
-  - リファレンス
-  - 動画
-  - WebRTC
-  - getusermedia
-browser-compat: api.MediaDevices.getUserMedia
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
+
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaDevices")}}**`.getUserMedia()`** メソッドは、要求された種類のメディアを含むトラックを持つ {{domxref("MediaStream")}} を生成するメディア入力を使用する許可をユーザーに求めます。
@@ -26,7 +11,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 これは {{domxref("MediaStream")}} オブジェクトに解決する {{jsxref("Promise")}} を返します。ユーザーが拒否した場合や、一致するメディアが利用できない場合、プロミスはそれぞれ `NotAllowedError` または `NotFoundError` の {{domxref("DOMException")}} で拒否されます。
 
-> **Note:** ユーザーが選択する必要が全くなく、リクエストを単純に無視できる場合、返却された Promise が解決または拒否の*どちらにもならない*可能性があります。
+> **メモ:** ユーザーが選択する必要が全くなく、リクエストを単純に無視できる場合、返却された Promise が解決または拒否の*どちらにもならない*可能性があります。
 
 一般的に、 {{domxref("MediaDevices")}} のシングルトンオブジェクトは以下のように、 {{domxref("navigator.mediaDevices")}} を使用してアクセスします。
 
@@ -55,7 +40,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 });
 ```
 
-> **Note:** 現在の文書が安全に読み込まれなかった場合は、 `navigator.mediaDevices` は `undefined` になり、 `getUserMedia()` を使用することはできません。[セキュリティ](#セキュリティ)の節に、この件やその他の `getUserMedia()` の使用に関するセキュリティ問題の詳細があります。
+> **メモ:** 現在の文書が安全に読み込まれなかった場合は、 `navigator.mediaDevices` は `undefined` になり、 `getUserMedia()` を使用することはできません。[セキュリティ](#セキュリティ)の節に、この件やその他の `getUserMedia()` の使用に関するセキュリティ問題の詳細があります。
 
 ## 構文
 
@@ -165,7 +150,7 @@ getUserMedia(constraints)
 - `NotAllowedError`  {{domxref("DOMException")}}
   - : 要求されたソース機器の 1 つ以上が現時点で使用できない場合に発生します。これは、閲覧コンテキストが安全でない場合（つまり、ページが HTTPS ではなく HTTP を使って読み込まれた場合）に発生します。また、ユーザーが現在の閲覧インスタンスに機器へのアクセスを許可しないように指定している場合、ユーザーが現在のセッションへのアクセスを拒否している場合、またはユーザーがユーザーメディア機器へのすべてのアクセスをグローバルに拒否している場合にも発生します。[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)によるメディア権限の管理に対応しているブラウザーでは、機能ポリシーが入力ソースへのアクセスを許可するように設定されていない場合、このエラーが返されます。
 
-    > **Note:** 古いバージョンの仕様では、この代わりに `SecurityError` を使っていました。 `SecurityError` は新しい意味を持つようになりました。
+    > **メモ:** 古いバージョンの仕様では、この代わりに `SecurityError` を使っていました。 `SecurityError` は新しい意味を持つようになりました。
 - `NotFoundError`  {{domxref("DOMException")}}
   - : constraint で指定された機能を満たすメディアトラックの種類が見つからない場合に発生します。
 - `NotReadableError`  {{domxref("DOMException")}}
@@ -173,7 +158,7 @@ getUserMedia(constraints)
 - `OverconstrainedError`  {{domxref("DOMException")}}
   - : 指定された制約の結果、要求された条件を満たす機器の候補がない場合に発生します。このエラーは `OverconstrainedError` 型のオブジェクトで、満たすことが不可能だった制約の名前を文字列値として持つ `constraint` プロパティと、問題を説明する人間が読める文字列を含む `message` プロパティを持っています。
 
-    > **Note:** このエラーは、ユーザーが下位機器の使用許可をまだ与えていない場合でも発生するため、フィンガープリントの表面として使用される可能性があります。
+    > **メモ:** このエラーは、ユーザーが下位機器の使用許可をまだ与えていない場合でも発生するため、フィンガープリントの表面として使用される可能性があります。
 - `SecurityError`  {{domxref("DOMException")}}
   - : `getUserMedia()`が呼び出された {{domxref("Document")}} において、ユーザーメディアの対応が無効な場合に発生します。ユーザーメディアの対応が有効になったり無効になったりする仕組みは、個々のユーザーエージェントに任されています。
 - {{jsxref("TypeError")}}
@@ -201,7 +186,7 @@ getUserMedia(constraints)
 
 {{Glossary("user agent", "ユーザーエージェント")}}のセキュリティ管理と制御が原因で、 `getUserMedia()` がセキュリティ関連のエラーを返す可能性はいくつかあります。
 
-> **Note:** `getUserMedia()` のセキュリティモデルはまだいくらか流動的です。元々設計されていたセキュリティの仕組みは機能ポリシーに置き換えられつつあるため、様々なブラウザが異なる仕組みを用いて、異なるレベルのセキュリティサポートを提供しています。コードができるだけ広い範囲で互換性があることを確認するために、さまざまな機器やブラウザーで慎重にテストする必要があります。
+> **メモ:** `getUserMedia()` のセキュリティモデルはまだいくらか流動的です。元々設計されていたセキュリティの仕組みは機能ポリシーに置き換えられつつあるため、様々なブラウザが異なる仕組みを用いて、異なるレベルのセキュリティサポートを提供しています。コードができるだけ広い範囲で互換性があることを確認するために、さまざまな機器やブラウザーで慎重にテストする必要があります。
 
 #### 機能ポリシー
 
@@ -216,7 +201,7 @@ getUserMedia(constraints)
 Feature-Policy: camera 'self'
 ```
 
-これは、現在のオリジンと特定のオリジン https\://developer.mozilla.org のマイクへのアクセスを要求します。
+これは、現在のオリジンと特定のオリジン `https://developer.mozilla.org` のマイクへのアクセスを要求します。
 
 ```
 Feature-Policy: microphone 'self' https://developer.mozilla.org

@@ -1,21 +1,8 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
-tags:
-  - CSS
-  - CSS プロパティ
-  - Legibility
-  - Ligatures
-  - Precision
-  - リファレンス
-  - SVG
-  - テキスト
-  - テキスト特性
-  - テキスト描画
-  - recipe:css-property
-browser-compat: css.properties.text-rendering
-translation_of: Web/CSS/text-rendering
 ---
+
 {{CSSRef}}
 
 **`text-rendering`** は CSS のプロパティで、テキストを描画するときの最適化方法に関する情報をレンダリングエンジンに提供します。
@@ -36,7 +23,7 @@ text-rendering: revert;
 text-rendering: unset;
 ```
 
-> **Note:** `text-rendering` プロパティは SVG のプロパティであり、 CSS 標準では定義されていません。しかし、 Windows, MacOS, Linux の Gecko や WebKit のブラウザーでは、このプロパティを HTML や XML のコンテンツに適用することができます。
+> **メモ:** `text-rendering` プロパティは SVG のプロパティであり、 CSS 標準では定義されていません。しかし、 Windows, MacOS, Linux の Gecko や WebKit のブラウザーでは、このプロパティを HTML や XML のコンテンツに適用することができます。
 
 とても目に見えやすい効果は `optimizeLegibility` で、一部のフォント (例えば、 Microsoft の _Calibri_, _Candara_, _Constantia_, _Corbel_、または _DejaVu_ フォントファミリー) において 20px より小さい文字に合字 (ff, fi, fl, など) を適用します。
 
@@ -58,7 +45,7 @@ text-rendering: unset;
 
     しかし、 `geometricPrecision` は — レンダリングエンジンが完全に対応していれば — なめらかにテキストを拡縮することができます。倍率が大きい場合、文字列の描画があまり美しくならないかもしれませんが、寸法は Windows や Linux が対応しているフォントの大きさに切り上げられたり切り捨てられたりせず、期待通りになります。
 
-    > **Note:** WebKit は指定された値を厳密に適用しますが、 Gecko は値を `optimizeLegibility` と同様に扱います。
+    > **メモ:** WebKit は指定された値を厳密に適用しますが、 Gecko は値を `optimizeLegibility` と同様に扱います。
 
 ## 公式定義
 

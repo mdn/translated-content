@@ -1,21 +1,15 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Attr.prefix
-translation_of: Web/API/Attr/prefix
 ---
+
 {{APIRef("DOM")}}
 
 **`prefix`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間接頭辞を返します。接頭辞が指定されていなければ `null` を返します。
 
 接頭辞は、属性が作成されたときの大文字小文字に関わらず、常に小文字になります。
 
-> **Note:** XML だけが名前空間に対応しています。 HTML は対応していません。つまり、 HTML 要素の属性の接頭辞は常に `null` になります。
+> **メモ:** XML だけが名前空間に対応しています。 HTML は対応していません。つまり、 HTML 要素の属性の接頭辞は常に `null` になります。
 
 また、`xml` （`xml:lang` 属性）、`xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、 `xpath` 名前空間だけに、 SVG と MathML 要素でのみ対応しています。
 

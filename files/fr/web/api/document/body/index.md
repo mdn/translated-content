@@ -6,6 +6,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Document/body
 ---
+
 {{ApiRef}}
 
 Retourne l'élément `<body>` ou `<frameset>` du document courant.

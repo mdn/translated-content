@@ -1,18 +1,8 @@
 ---
 title: 'Document: scroll事件'
 slug: Web/API/Document/scroll_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - 事件
-  - Reference
-  - 參考文件
-  - Scroll
-  - UIEvent
-browser-compat: api.Document.scroll_event
 ---
+
 {{APIRef}}
 
 **`scroll`** 事件會在捲動文件的可視區域時觸發。元件（Element）捲動相關請參見{{domxref("Element/scroll_event", "Element:&nbsp;scroll事件")}}。

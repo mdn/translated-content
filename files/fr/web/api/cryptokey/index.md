@@ -8,6 +8,7 @@ tags:
   - Web Crypto API
 translation_of: Web/API/CryptoKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 L'interface **`CryptoKey`** représente une {{glossary("clef")}} cryptographique dérivé d'un algorithme de clef spécifique.
@@ -33,13 +34,11 @@ _Cette interface n'hérite et n'implémente aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{ SpecName('Web Crypto API', '#dfn-CryptoKey', 'CryptoKey') }} | {{ Spec2('Web Crypto API') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CryptoKey")}}
+{{Compat}}
 
 ## Voir aussi
 

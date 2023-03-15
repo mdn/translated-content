@@ -1,12 +1,8 @@
 ---
 title: 画像からのシェイプの作成
 slug: Web/CSS/CSS_Shapes/Shapes_From_Images
-tags:
-  - CSS
-  - CSS シェイプ
-  - ガイド
-translation_of: Web/CSS/CSS_Shapes/Shapes_From_Images
 ---
+
 {{CSSRef}}
 
 このガイドでは、アルファチャンネルを含む画像ファイル、または CSS グラデーションからシェイプを作成する方法を見ていきます。これはシェイプを作成するためのとても柔軟な方法です。 CSS で複雑なポリゴンを持つパスを描画するのではなく、グラフィックプログラムでシェイプを作成し、しきい値よりも透明度の高いピクセルによって作成されたパスを使用することができます。

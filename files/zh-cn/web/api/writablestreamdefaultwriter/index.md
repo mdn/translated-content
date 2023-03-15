@@ -1,18 +1,9 @@
 ---
 title: WritableStreamDefaultWriter
 slug: Web/API/WritableStreamDefaultWriter
-page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Streams
-  - Streams API
-  - WritableStream
-translation_of: Web/API/WritableStreamDefaultWriter
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`WritableStreamDefaultWriter`** 接口是由 {{domxref("WritableStream.getWriter()")}} 返回的对象，并且一旦创建就会将 writer 锁定到 `WritableStream`，确保没有其他流可以写入底层 sink。
 

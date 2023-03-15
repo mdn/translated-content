@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/402
 translation_of: Web/HTTP/Status/402
 browser-compat: http.status.402
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 Le code de statut de réponse HTTP **`402 Payment Required`** est une erreur non standard réservée pour un usage futur.
@@ -25,9 +26,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Spécifications
 
-| Spécification                                                    | Titre                           |
-| ---------------------------------------------------------------- | ------------------------------- |
-| [RFC 7231, section 6.5.2: 402 Payment Required](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.2) | HTTP/1.1: Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

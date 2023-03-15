@@ -4,6 +4,7 @@ slug: Web/API/IDBOpenDBRequest/blocked_event
 translation_of: Web/API/IDBOpenDBRequest/blocked_event
 original_slug: Web/API/IDBRequest/blocked_event
 ---
+
 Le handler **blocked** est exécuté lorsque l'ouverture d'une connexion à une base de données bloque une transaction _versionchange_ sur celle-ci.
 
 ## Informations générales
@@ -50,16 +51,6 @@ req1.onsuccess = function( event ) {
 
 };
 ```
-
-## Evénements liés
-
-- {{event("success")}}
-- {{event("error")}}
-- {{event("abort")}}
-- {{event("complete")}}
-- {{event("upgradeneeded")}}
-- {{event("blocked")}}
-- {{event("versionchange")}}
 
 ## Voir aussi
 

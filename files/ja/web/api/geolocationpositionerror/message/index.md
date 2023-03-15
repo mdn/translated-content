@@ -1,16 +1,8 @@
 ---
 title: GeolocationPositionError.message
 slug: Web/API/GeolocationPositionError/message
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationPositionError
-  - プロパティ
-  - 安全なコンテキスト
-  - message
-browser-compat: api.GeolocationPositionError.message
-tranlation_of: Web/API/GeolocationPositionError/message
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationPositionError.message`** は読み取り専用のプロパティで、エラーの詳細を説明する、人間が読める {{domxref("DOMString")}} を返します。

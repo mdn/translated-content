@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/contextmenu
 original_slug: Web/HTML/Attributs_universels/contextmenu
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 > **Attention :** Cet attribut est [obsolète](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) et sera retiré de l'ensemble des navigateurs.
@@ -84,14 +85,11 @@ function changeImage(){
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                                                             |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------ |
-| {{SpecName("HTML WHATWG", "obsolete.html#attr-contextmenu", "contextmenu")}}         | {{Spec2('HTML WHATWG')}} | Rendu obsolète                                                           |
-| {{SpecName('HTML5.1', "interactive-elements.html#context-menus", "contextmenu")}} | {{Spec2('HTML5.1')}}     | Dérivation de {{SpecName('HTML WHATWG')}}, définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.contextmenu")}}
+{{Compat}}
 
 ## Voir aussi
 

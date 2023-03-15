@@ -1,10 +1,8 @@
 ---
 title: Firefox 43 for developers
 slug: Mozilla/Firefox/Releases/43
-tags:
-  - Firefox
-translation_of: Mozilla/Firefox/Releases/43
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
@@ -76,7 +74,7 @@ _変更なし。_
 #### その他
 
 - [Battery Status API](/ja/docs/Web/API/Battery_Status_API) で、最近更新された仕様で指定された {{domxref("Navigator.getBattery()")}} 向けの Promise 構文を使用するようになりました ({{bug(1050749)}})。
-- `User-Agent` ヘッダが {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} のリストから外れましたので、XHR の {{domxref("XMLHttpRequest.setRequestHeader()")}} などで、[Fetch](/ja/docs/Web/API/Fetch_API) {{domxref("Headers")}} オブジェクトを設定できるようになりました ({{bug(1188932)}})。
+- `User-Agent` ヘッダが {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} のリストから外れましたので、XHR の {{domxref("XMLHttpRequest.setRequestHeader()")}} などで、[Fetch](/ja/docs/Web/API/Fetch_API) {{domxref("Headers")}} オブジェクトを設定できるようになりました ({{bug(1188932)}})。
 - {{domxref("MediaRecorder.MediaRecorder()")}} コンストラクタが options Dictionary を引数としてサポートしました。記録するオーディオ/ビデオのビットレートを設定できます ({{bug("1161276")}})。
 - [Performance Timeline API](/ja/docs/Web/API/Performance_Timeline_API) の {{domxref("PerformanceObserver")}} インターフェイスを実装しました ({{bug(1165796)}})。
 - Frame Timing API を追加しました。{{domxref("PerformanceRenderTiming")}} および {{domxref("PerformanceCompositeTiming")}} インターフェイスを使用できます ({{bug(1191178)}})。

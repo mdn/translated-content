@@ -14,6 +14,7 @@ tags:
   - django
 translation_of: Learn/Server-side/Django/Home_page
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
 Le travail préparatoire pour nous permettre de créer une page d'accueil pour le site web de [la bibliothèque locale](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) est réalisé. La page d'accueil montera le nombre d'enregistrements pour chacun des objets décrits dans la base et les liens à l'aide d'une barre latérale de navigation. Dans la progression de l'article, nous apprendrons à gérer les vues et à présenter les données à l'aide de gabarits.
@@ -69,7 +70,7 @@ La liste des URLs dont nous aurons besoin se résume à :
 - `catalog/books/` — Pour la liste des livres.
 - `catalog/authors/` — Pour la liste des auteurs.
 - `catalog/book/<id>` — Pour disposer du détail de chacun des livres mis en prêt et identifié par identifiant `<id>` unique (le troisième livre enregistré est consultable dans le détail via l'URL `/catalog/book/3`).
-- `catalog/author/<id>` — De la même manière, le détail de chacun des auteurs enregistrés, identifié de la même manière par sa clé primaire *`<id>`*.
+- `catalog/author/<id>` — De la même manière, le détail de chacun des auteurs enregistrés, identifié de la même manière par sa clé primaire `<id>`.
 
 Bien que les données dépendent du contenu de la base de données, les trois premières URLs retournent les résultats de requêtes sans informations supplémentaires ; c'est le cas de la page d'accueil qui donnera des décomptes de contenus et des pages sur la liste des livres ou des auteurs.
 
@@ -396,7 +397,7 @@ Dans ce chapitre, nous avons créé la page d'accueil pour notre site — une pa
 
 Nous allons nous appuyer sur ces éléments pour concevoir dans le prochain chapitre les 4 pages qui manquent.
 
-## À voir aussi
+## Voir aussi
 
 - [Ecrire sa première application Django, 3ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial03/) (Django docs)
 - [Distribution des URL](https://docs.djangoproject.com/fr/2.2/topics/http/urls/) (Django docs)

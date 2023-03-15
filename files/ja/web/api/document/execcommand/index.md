@@ -1,24 +1,15 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - エディター
-  - 非推奨
-browser-compat: api.Document.execCommand
-translation_of: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 HTML 文書が [`designMode`](/ja/docs/Web/API/Document/designMode) に切り替わっていると、その `document` オブジェクトは **`execCommand`** メソッドを公開して、[フォーム入力欄](/ja/docs/Web/HTML/Element/input)や [`contentEditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) を持った要素など、現在編集可能な領域を操作するためのコマンドが実行できるようにします。
 
 多くのコマンドは、文書の[選択範囲](/ja/docs/Web/API/Selection)に対して影響を及ぼしますが (太字、イタリック、など)、他にも新しい要素の挿入 (リンクの追加) や行全体に影響するもの (字下げ) もあります。 `contentEditable` を使用した場合、 `execCommand()` は現在アクティブな編集可能要素に影響を及ぼします。
 
-> **Note:** このメソッドは廃止されており、使用すべきではありません。特に、クリップボードを操作したい場合は [Clipboard API](/ja/docs/Web/API/Clipboard_API) の使用を検討してください。
+> **メモ:** このメソッドは廃止されており、使用すべきではありません。特に、クリップボードを操作したい場合は [Clipboard API](/ja/docs/Web/API/Clipboard_API) の使用を検討してください。
 
 ## 構文
 
@@ -30,7 +21,7 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 論理値で、コマンドが対応していないか無効であれば `false` になります。
 
-> **Note:** `document.execCommand()` はユーザーの操作の中で行われた場合にのみ `true` を返します。コマンドを呼び出す前に、ブラウザーが対応しているかどうかを調べるために返値を使用しないでください。 Firefox 82 以降は、`document.execCommand()` を重ねて呼び出すと常に `false` を返します。
+> **メモ:** `document.execCommand()` はユーザーの操作の中で行われた場合にのみ `true` を返します。コマンドを呼び出す前に、ブラウザーが対応しているかどうかを調べるために返値を使用しないでください。 Firefox 82 以降は、`document.execCommand()` を重ねて呼び出すと常に `false` を返します。
 
 ### 引数
 
@@ -139,7 +130,7 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
   - : 生成するマークアップに HTML タグと CSS のどちらを使用するかを切り替えます。引数として true または false の真偽値が必要です。
 
-    > **Note:** この引数は論理的に逆で (つまり、 `false` で CSS が使用され、`true` で HTML が使用される)、 Internet Explorer では対応していません。これは `styleWithCSS` に置き換えられ、非推奨になりました。
+    > **メモ:** この引数は論理的に逆で (つまり、 `false` で CSS が使用され、`true` で HTML が使用される)、 Internet Explorer では対応していません。これは `styleWithCSS` に置き換えられ、非推奨になりました。
 
 - `styleWithCSS`
 

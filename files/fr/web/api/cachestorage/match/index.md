@@ -12,6 +12,7 @@ tags:
   - match
 translation_of: Web/API/CacheStorage/match
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La fonction **`match()`** de l'interface {{domxref("CacheStorage")}} qu'une {{domxref("Request", "Requête")}} est la clé d'un objet {{domxref("Cache")}} object suivie par un objet {{domxref("CacheStorage")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie la {{domxref("Response", "Réponse")}} correspondante.
@@ -83,13 +84,11 @@ self.addEventListener('fetch', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cachestorage-match', 'CacheStorage: match')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage.match")}}
+{{Compat}}
 
 ## Voir aussi
 

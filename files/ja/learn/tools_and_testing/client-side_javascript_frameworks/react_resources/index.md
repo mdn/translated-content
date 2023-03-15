@@ -1,15 +1,8 @@
 ---
 title: React のリソース
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - framework
-  - resources
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 最後の記事では、更に学習を進めるために利用できる React のリソースを紹介します。
@@ -44,8 +37,8 @@ tags:
 `create-react-app` を使うと、CSS ファイルが JavaScript モジュールにインポートできるので、対応するコンポーネントがレンダリングされるときにだけ CSS がユーザーに送信されるようになります。このアプリでは、例えば、専用の `Form.css` ファイルを書いて、それぞれのコンポーネントのスタイルを記載し、次のようにそれぞれのモジュールにスタイルをインポートすることができます。
 
 ```js
-import Form from './Form';
-import './Form.css'
+import Form from "./Form";
+import "./Form.css";
 ```
 
 この方法だと、特定のコンポーネントに属する CSS を簡単に特定し、管理することができます。しかし、コードベース全体でスタイルシートを断片化することになり、この断片化は価値のあるものにならないかもしれません。何百ものユニークなビューと多くの可動部分を持つ大規模なアプリケーションの場合、ユーザーに送信される無関係なコードの量を制限することは理にかなっています。アプリケーション全体のスタイルと、その上に構築された特定のコンポーネントのスタイルをもつことになるでしょう。
@@ -54,7 +47,7 @@ import './Form.css'
 
 ## React DevTools
 
-このチュートリアルでは `console.log()` を使ってアプリケーションの state や props を確認しました。また、 React が CLI やブラウザの JavaScript コンソールに表示する便利な警告やエラーメッセージも見てきたと思います。しかし、ここでできることはまだあります。
+このチュートリアルでは `console.log()` を使ってアプリケーションの state や props を確認しました。また、 React が CLI やブラウザーの JavaScript コンソールに表示する便利な警告やエラーメッセージも見てきたと思います。しかし、ここでできることはまだあります。
 
 React DevTools はブラウザーで React アプリケーションの内部を直接検査できるようにするものです。ブラウザーの開発者ツールに新しいパネルが追加され、それを使って様々なコンポーネントの state や props を検査したり、 state や props を編集してアプリケーションにすぐに変更を加えたりすることができます。
 
@@ -87,8 +80,8 @@ React はコンポーネントツリーの下に props を渡さずに、デー�
 
 このチュートリアルでは触れていませんが、 ES6 のクラスを使用して React コンポーネントを構築することは可能です。これらはクラスコンポーネントと呼ばれます。フックが登場するまで、 ES6 のクラスはコンポーネントに state をもたせたり、副作用のある描画の管理を行うための唯一の方法でした。これらは、他の特定のエッジケースな機能を処理する唯一の方法であり、従来の React プロジェクトでは非常に一般的です。公式の React ドキュメントは、それらについて学び始めるのに最適です。
 
-- [Reactドキュメントで学ぶ状態とライフサイクル](https://reactjs.org/docs/state-and-lifecycle.html)
-- [Reactドキュメントで学ぶ React 入門](https://reactjs.org/tutorial/tutorial.html)
+- [React ドキュメントで学ぶ状態とライフサイクル](https://reactjs.org/docs/state-and-lifecycle.html)
+- [React ドキュメントで学ぶ React 入門](https://reactjs.org/tutorial/tutorial.html)
 - [MDN で学ぶ JavaScript のクラス](/ja/docs/Web/JavaScript/Reference/Classes)
 
 ## テスト
@@ -99,7 +92,7 @@ React はコンポーネントツリーの下に props を渡さずに、デー�
 
 ルーティングは従来、ユーザーのコンピューター上のアプリケーションではなく、サーバーによって処理されていました。しかし、現在では、ウェブアプリケーションがブラウザーの位置を読み取り、更新し、特定のユーザーインターフェースをレンダリングすることが可能です。これをクライアントサイドルーティングと呼びます。アプリケーションのために多くの一意なルート (`/home` または `/dashboard` 、 `login/` など) を作成することが可能です。
 
-React コミュニティはクライアントサイドルーティングについて、2つの主要なライブラリを作成しています。 [React Router](https://reacttraining.com/react-router/) と [Reach Router](https://reach.tech/router) です。
+React コミュニティはクライアントサイドルーティングについて、2 つの主要なライブラリを作成しています。 [React Router](https://reacttraining.com/react-router/) と [Reach Router](https://reach.tech/router) です。
 
 - React Router は、複雑なルーティングを必要とするアプリケーションに適しており、 Reach Router よりもエッジケースに対応することができます。しかし、 React Router はサイズが大きいライブラリになります。
 - Reach Router は、より単純なアプリケーションに適しており、ユーザーがページ間を移動するときにフォーカスを自動的に管理します。
@@ -110,19 +103,19 @@ React コミュニティはクライアントサイドルーティングにつ�
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-## In this module
+## このモジュール
 
-- [Introduction to client-side frameworks](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [クライアント側フレームワークの紹介](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [フレームワークの主な機能](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [React ToDo リストをはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [React アプリのコンポーネント化](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [React interactivity: Events and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - [React interactivity: Editing, filtering, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [React のアクセシビリティ](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React リソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
@@ -158,9 +151,9 @@ React コミュニティはクライアントサイドルーティングにつ�
 
 - Angular
 
-  - [Getting started with Angular](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Angular アプリケーションのビルドとその他のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

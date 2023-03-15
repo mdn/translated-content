@@ -4,6 +4,7 @@ slug: Web/API/Element/mouseup_event
 translation_of: Web/API/Element/mouseup_event
 browser-compat: api.Element.mouseup_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseup`** est déclenché à partir d'un [`Element`](/fr/docs/Web/API/Element) lorsqu'un bouton d'un dispositif de pointage (une souris ou un pavé tactile par exemple) est relâché lorsque le pointeur est sur cet élément.

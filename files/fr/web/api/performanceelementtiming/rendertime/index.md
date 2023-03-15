@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/renderTime
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`renderTime`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie le temps écoulé pour le rendu de l'élément associé.
@@ -51,10 +52,8 @@ observer.observe({ entryTypes: ["element"] });
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Element Timing API','#dom-performanceelementtiming-rendertime','PerformanceElementTiming.renderTime')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceElementTiming.renderTime")}}
+{{Compat}}

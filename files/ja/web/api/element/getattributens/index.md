@@ -1,15 +1,8 @@
 ---
 title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - メソッド
-  - リファレンス
-browser-compat: api.Element.getAttributeNS
-translation_of: Web/API/Element/getAttributeNS
 ---
+
 {{APIRef("DOM")}}
 
 **`getAttributeNS()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された名前空間と名前を持つ属性の文字列値を返します。のような名前の属性が存在しない場合は、 `null` または `""` （空文字列のどちらかを返します。詳しくは[メモ](#メモ)を参照してください。
@@ -31,7 +24,7 @@ attrVal = element.getAttributeNS(namespace, name)
 
 指定された属性の文字列値です。その属性が存在しない場合、結果は `null` になります。
 
-> **Note:** 古いバージョンの DOM 仕様書では、このメソッドが存在しない属性に対しては空文字列を返すと説明していました。しかし、 null の方が分かりやすいので、そのような実装はあまり行われませんでした。 DOM4 仕様書ではこのメソッドは存在しない属性に対して null を返すと書くようになりました。
+> **メモ:** 古いバージョンの DOM 仕様書では、このメソッドが存在しない属性に対しては空文字列を返すと説明していました。しかし、 null の方が分かりやすいので、そのような実装はあまり行われませんでした。 DOM4 仕様書ではこのメソッドは存在しない属性に対して null を返すと書くようになりました。
 
 ## 例
 

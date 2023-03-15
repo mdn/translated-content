@@ -3,6 +3,7 @@ title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
 translation_of: Web/API/XMLHttpRequest/readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve un client XMLHttpRequest.Un client XHR existe dans l'un des états suivants :
@@ -51,11 +52,11 @@ La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve u
 - UNSENT
   - : Le client XMLHttpRequest a été créé, mais la méthode open() n'a pas encore été appelée.
 - OPENED
-  - : La méthode open() a été invoquée. Pendant cet état, les en-têtes de requête peuvent être définis à l'aide de la méthode [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader)  et la méthode [send()](/en-US/docs/Web/API/XMLHttpRequest/send)  peut être appelée, ce qui lancera la récupération.
+  - : La méthode open() a été invoquée. Pendant cet état, les en-têtes de requête peuvent être définis à l'aide de la méthode [setRequestHeader()](/fr/docs/Web/API/XMLHttpRequest/setRequestHeader) et la méthode [send()](/fr/docs/Web/API/XMLHttpRequest/send) peut être appelée, ce qui lancera la récupération.
 - HEADERS_RECEIVED
   - : send() a été appelé et les en-têtes de réponse ont été reçus
 - LOADING
-  - : Le corps de la réponse est en cours de réception. Si [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) is "text"  ou une chaîne vide, [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) aura la réponse textuelle partielle au fur et à mesure de son chargement.
+  - : Le corps de la réponse est en cours de réception. Si [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType) is "text" ou une chaîne vide, [`responseText`](/fr/docs/Web/API/XMLHttpRequest/responseText) aura la réponse textuelle partielle au fur et à mesure de son chargement.
 - DONE
   - : L'opération de récupération est terminée. Cela peut signifier que le transfert de données a été effectué avec succès ou a échoué.
 
@@ -81,12 +82,10 @@ xhr.onload = function () {
 xhr.send(null);
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                            | Statut                               | Comment                |
-| -------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#states')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.readyState")}}
+{{Compat}}

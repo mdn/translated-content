@@ -8,6 +8,7 @@ tags:
   - SVG
 translation_of: Web/CSS/mask
 ---
+
 {{CSSRef}}
 
 La propriété **`mask`** permet de masquer un élément partiellement ou complètement en utilisant un masque apposé sur l'image ou en rognant l'image aux positions données. Cette propriété est une propriété raccourcie pour les propriétés {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-size")}} et {{cssxref("mask-composite ")}}.
@@ -88,14 +89,11 @@ mask: unset;
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                                                                                                                                                                   |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("CSS Masks", "#the-mask", 'mask')}}                     | {{Spec2("CSS Masks")}} | Extension aux éléments HTML. La syntaxe est étendue et la propriété devient une propriété raccourcie pour les nouvelles propriétés `mask-*` définies avec cette spécification. |
-| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | Définition initiale.                                                                                                                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mask")}}
+{{Compat}}
 
 ## Voir aussi
 

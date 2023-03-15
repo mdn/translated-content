@@ -1,16 +1,9 @@
 ---
 title: HTMLAnchorElement.port
 slug: Web/API/HTMLAnchorElement/port
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.port
-translation_of: Web/API/HTMLAnchorElement/port
 original_slug: Web/API/HTMLHyperlinkElementUtils/port
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.port`** プロパティは、URL のポート番号が入った文字列です。 URL に明示的にポート番号が含まれていない場合は、`''` に設定されます。

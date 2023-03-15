@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 original_slug: Web/JavaScript/Reference/Objets_globaux/encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`encodeURIComponent()`** permet d'encoder un composant d'un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par une, deux, trois ou quatres séquences d'échappement UTF-8 correspondantes (quatre séquences seront utilisées uniquement lorsque les caractères à encoder sont composés de deux caractères « _surrogate_ »).
@@ -120,16 +121,11 @@ function encodeRFC5987ValueChars2(str) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.encodeURIComponent")}}
+{{Compat}}
 
 ## Voir aussi
 

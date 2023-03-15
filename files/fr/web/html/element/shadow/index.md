@@ -1,6 +1,6 @@
 ---
 title: '<shadow> : l''élément obsolète pour la racine virtuelle'
-slug: Web/HTML/Element/Shadow
+slug: Web/HTML/Element/shadow
 tags:
   - Composant web
   - Déprécié
@@ -10,7 +10,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/shadow
 ---
-{{deprecated_header}}{{HTMLRef}}
+
+{{deprecated_header}}{{HTMLSidebar}}
 
 L'élément HTML **`<shadow>`** était utilisé comme un point d'insertion ({{glossary("insertion point")}}) du _shadow DOM_. Cet élément a été retiré de la spécification et est [désormais obsolète](https://github.com/w3c/webcomponents/commit/041ba5518b9372768234d2766de503b98a03fa45).
 
@@ -114,7 +115,7 @@ Cet élément ne fait plus partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.shadow")}}
+{{Compat}}
 
 ## Voir aussi
 

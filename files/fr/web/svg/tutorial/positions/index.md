@@ -8,11 +8,12 @@ tags:
 translation_of: Web/SVG/Tutorial/Positions
 original_slug: Web/SVG/Tutoriel/Positionnement
 ---
+
 {{ PreviousNext("SVG/Tutoriel/Premiers_pas", "SVG/Tutoriel/Formes_de_base") }}
 
 ### La grille
 
-Pour chaque élément, SVG utilise un ensemble de coordonnées aussi appelé grille assez similaire à ce qui est utilisé dans [canvas](/fr/HTML/Canvas "fr/HTML/Canvas") (et par tout un tas d'autres routines de dessin informatique). Dans le cas présent, le point en haut à gauche est considéré comme le point (0,0) ou point d'origine. Le positionnement est ensuite mesuré en pixel, depuis le coin supérieur gauche. Les valeurs positives de x vont vers la droite, les valeurs positives de y vont vers le bas. Notez que tout ceci est un peu contraire à la géométrie que l'on vous a enseignée. Ici, le positionnement fonctionne de la même manière que pour les éléments HTML.
+Pour chaque élément, SVG utilise un ensemble de coordonnées aussi appelé grille assez similaire à ce qui est utilisé dans [canvas](/fr/HTML/Canvas) (et par tout un tas d'autres routines de dessin informatique). Dans le cas présent, le point en haut à gauche est considéré comme le point (0,0) ou point d'origine. Le positionnement est ensuite mesuré en pixel, depuis le coin supérieur gauche. Les valeurs positives de x vont vers la droite, les valeurs positives de y vont vers le bas. Notez que tout ceci est un peu contraire à la géométrie que l'on vous a enseignée. Ici, le positionnement fonctionne de la même manière que pour les éléments HTML.
 
 ![](canvas_default_grid.png)
 

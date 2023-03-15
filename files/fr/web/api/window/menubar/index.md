@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/menubar
 ---
+
 {{ APIRef() }}
 
 La propriété **`Window.menubar`** renvoie l'objet `menubar`, dont la visibilité peut être vérifiée.
@@ -39,16 +40,13 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar', 'Window.menubar')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-menubar', 'Window.menubar')}}     | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.menubar")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Window.locationbar")}}
 - {{domxref("Window.personalbar")}}

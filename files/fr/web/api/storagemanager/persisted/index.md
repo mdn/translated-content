@@ -3,6 +3,7 @@ title: StorageManager.persisted()
 slug: Web/API/StorageManager/persisted
 translation_of: Web/API/StorageManager/persisted
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
 La propriété **`persisted`** de l’interface {{domxref("StorageManager")}} renvoie une {{jsxref('Promise')}} qui se résoud en `true` si le mode de boîte est est persistant pour le stockage de votre site.
@@ -35,10 +36,8 @@ if (navigator.storage && navigator.storage.persist)
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('Storage','#dom-storagemanager-persisted','persisted')}} | {{Spec2('Storage')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.StorageManager.persisted")}}
+{{Compat}}

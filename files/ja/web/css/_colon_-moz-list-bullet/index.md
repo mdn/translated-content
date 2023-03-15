@@ -1,19 +1,11 @@
 ---
 title: '::-moz-list-bullet'
 slug: Web/CSS/:-moz-list-bullet
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - NeedsCompatTable
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/:-moz-list-bullet
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-**`::-moz-list-bullet`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-element)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、順序なしリスト ({{htmlelement("ul")}}) のリスト項目 ({{htmlelement("li")}}) のマーカー（通常は点）を表します。
+**`::-moz-list-bullet`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、順序なしリスト ({{htmlelement("ul")}}) のリスト項目 ({{htmlelement("li")}}) のマーカー（通常は点）を表します。
 
 ## 構文
 
@@ -23,7 +15,9 @@ li::-moz-list-bullet
 
 ## 例
 
-### HTML
+### リスト項目のマーカーのスタイル設定
+
+#### HTML
 
 ```html
 <ul>
@@ -33,7 +27,7 @@ li::-moz-list-bullet
 </ul>
 ```
 
-### CSS
+#### CSS
 
 ```css
 ::-moz-list-bullet {
@@ -42,9 +36,9 @@ li::-moz-list-bullet
 }
 ```
 
-### 結果
+#### 結果
 
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:-moz-list-bullet') }}
+{{ EmbedLiveSample('Styling list item markers') }}
 
 ## 仕様書
 

@@ -6,6 +6,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/str/split
 ---
+
 {{ XsltRef() }}
 
 `str:split()` divise une chaîne en utilisation un motif pour déterminer où doivent être fait les séparations, en retournant un ensemble de nœuds contenant les chaînes résultantes.

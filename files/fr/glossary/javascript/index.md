@@ -9,9 +9,10 @@ tags:
 translation_of: Glossary/JavaScript
 original_slug: Glossaire/JavaScript
 ---
+
 JavaScript (JS) est un langage de programmation principalement utilisé côté client pour générer des pages web dynamiquement, mais également côté {{Glossary("Server","serveur")}}, depuis l'arrivée de [Node JS](https://nodejs.org/fr/).
 
-Ne pas confondre JavaScript avec {{interwiki("wikipedia","Java_(langage)","le langage de programmation Java")}}. "Java" et "JavaScript" sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.
+Ne pas confondre JavaScript avec [Java](https://fr.wikipedia.org/wiki/Java_(langage)). "Java" et "JavaScript" sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.
 
 D'abord pensé comme un langage côté serveur par Brendan Eich (alors employé de Netscape Corporation), JavaScript arrive sur le navigateur Netscape Navigator 2.0 en Septembre 1995. Le succès est immédiat, et {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduit JavaScript sous le nom de JScript en août 1996.
 
@@ -21,21 +22,12 @@ JavaScript est principalement utilisé dans le navigateur, permettant aux dével
 
 Récemment, JavaScript est revenu du côté serveur grâce au succès de la plateforme [Node.js](http://nodejs.org/), l'environnement d’exécution multi-plateforme le plus populaire en dehors du navigateur. Node.js permet d'utiliser JavaScript comme langage de script pour automatiser des tâches sur un PC et de mettre en place des serveurs {{Glossary("HTTP")}} et {{Glossary("WebSockets")}} pleinement fonctionnels.
 
-## En savoir plus
+## Voir aussi
 
-### Culture générale
-
-- {{interwiki("wikipedia", "JavaScript", "JavaScript")}} sur Wikipedia
-
-### Apprentissage
-
-- Le {{Link("/fr-FR/docs/Web/JavaScript/Guide")}} sur MDN
-- [The "javascripting" workshop](http://nodeschool.io/#workshoppers) sur NodeSchool
-- Les [cours JavaScript](http://www.codecademy.com/tracks/javascript) sur codecademy.com
-- [John Resig's Learning Advanced JavaScript](http://ejohn.org/apps/learn/)
-
-### Références techniques
-
-- [Le dernier standard ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- La {{Link("/fr-FR/docs/Web/JavaScript/reference")}} sur MDN
-- Livre : [_JavaScript Éloquent_](http://fr.eloquentjavascript.net/)
+- [JavaScript](https://fr.wikipedia.org/wiki/JavaScript) sur Wikipédia
+- Le [guide JavaScript](/fr/docs/Web/JavaScript/Guide) sur MDN
+- [L'atelier JavaScript («&nbsp;<i lang="en">javascripting</i>&nbsp;») sur NodeSchool](https://nodeschool.io/fr-fr/)
+- [Le cours JavaScript sur Codecademy (en anglais)](https://www.codecademy.com/catalog/language/javascript)
+- [Le dernier standard ECMAScript (en anglais)](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- La [référence JavaScript](/fr/docs/Web/JavaScript/Reference) sur MDN
+- Le livre [_JavaScript Éloquent_](https://fr.eloquentjavascript.net/)

@@ -3,6 +3,7 @@ title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
 translation_of: Web/API/Worker/postMessage
 ---
+
 {{ apiref("Worker") }}
 
 La méthode **`Worker.postMessage()`** envoie un message à la portée locale du worker. Cette fonction accepte un seul paramètre, qui est la donnée à envoyer au worker. Cette donnée peut-être de n'importe quelle valeur ou un objet JavaScript pris en charge par l'algorithme de clone structuré, qui inclut les références cycliques.
@@ -31,7 +32,7 @@ Vide.
 
 ## Exemple
 
-L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Quand les deux champs de formulaire (`fisrt` et `second`) ont été changés, les évènements {{event("change")}} invoquent `postMessage()` pour envoyer la valeur des deux entrées au _worker_ courant.
+L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Quand les deux champs de formulaire (`fisrt` et `second`) ont été changés, les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event) invoquent `postMessage()` pour envoyer la valeur des deux entrées au _worker_ courant.
 
 ```js
 var myWorker = new Worker('worker.js');
@@ -130,15 +131,11 @@ from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-worker-postmessage", "Worker.postMessage()")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Worker.postMessage")}}
-
-\[1] Internet Explorer ne supporte pas les objets {{domxref("Transferable")}}.
+{{Compat}}
 
 ## Voir aussi
 

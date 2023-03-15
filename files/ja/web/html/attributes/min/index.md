@@ -1,15 +1,6 @@
 ---
 title: 'HTML 属性: min'
 slug: Web/HTML/Attributes/min
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - HTML
-  - min
-  - Reference
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-attributes
-translation_of: Web/HTML/Attributes/min
 ---
 
 {{HTMLSidebar}}
@@ -78,7 +69,7 @@ translation_of: Web/HTML/Attributes/min
   </tbody>
 </table>
 
-> **Note:** ユーザーが入力したデータが設定された最大値を満たしていない場合、制約検証では無効とみなされ、 {{cssxref(':invalid')}} の擬似クラスに一致するようになります。
+> **メモ:** ユーザーが入力したデータが設定された最大値を満たしていない場合、制約検証では無効とみなされ、 {{cssxref(':invalid')}} の擬似クラスに一致するようになります。
 
 詳しくは [クライアント側検証](/ja/docs/Web/Guide/HTML/Constraint_validation)と {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} を参照してください。
 
@@ -143,7 +134,7 @@ input:invalid {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## 関連情報
 

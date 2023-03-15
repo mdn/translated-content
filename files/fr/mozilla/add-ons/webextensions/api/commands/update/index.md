@@ -12,6 +12,7 @@ tags:
   - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/update
 ---
+
 {{AddonSidebar()}}
 
 Changez la description ou le raccourci clavier pour la commande donnée.
@@ -43,9 +44,9 @@ browser.commands.update(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé. La promesse sera rejetée avec une erreur si la commande n'a pas pu être trouvée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.commands.update")}}
+{{Compat}}
 
 ## Exemples
 

@@ -6,6 +6,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 ---
+
 {{AddonSidebar()}}
 
 Votre extension de navigateur peut avoir besoin de fichiers pour offrir des fonctionnalités complètes. Cet article examine les cinq mécanismes permettant de gérer les fichiers :
@@ -45,11 +46,11 @@ Exemple : [Imagify](https://github.com/mdn/webextensions-examples/tree/master/im
 Guide : [Using files from web applications](/fr/docs/Using_files_from_web_applications)
 API références : [HTML input element](/fr/docs/Web/HTML/Element/input/file) | [DOM File API](/fr/docs/Web/API/File)
 
-> **Note :** Si vous souhaitez accéder ou traiter tous les fichiers dans un dossier sélectionné, vous pouvez le faire en utilisant `<input type="file" webkitdirectory="true"/>`pour sélectionner le dossier et récupérer tous les fichiers qu'il contient.
+> **Note :** Si vous souhaitez accéder ou traiter tous les fichiers dans un dossier sélectionné, vous pouvez le faire en utilisant `<input type="file" webkitdirectory="true"/>` pour sélectionner le dossier et récupérer tous les fichiers qu'il contient.
 
 ## Ouverture de fichiers dans une extension avec glisser-déposer
 
-L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements [dragenter](/fr/docs/Web/Events/dragenter) _(entrer)_, [dragover](/fr/docs/Web/Events/dragover) _(glisser)_, et [drop](/fr/docs/Web/Events/drop)  _(déposer)_. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant [DataTransfer.files](/fr/docs/Web/API/DataTransfer/files). Votre code peut alors accéder aux fichiers et les traiter en utilisant le [DOM File API](/fr/docs/Web/API/File).
+L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements [dragenter](/fr/docs/Web/Events/dragenter) _(entrer)_, [dragover](/fr/docs/Web/Events/dragover) _(glisser)_, et [drop](/fr/docs/Web/Events/drop) _(déposer)_. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant [DataTransfer.files](/fr/docs/Web/API/DataTransfer/files). Votre code peut alors accéder aux fichiers et les traiter en utilisant le [DOM File API](/fr/docs/Web/API/File).
 
 Exemple : [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 Guides : [Using files from web applications](/fr/docs/Using_files_from_web_applications) | [File drag and drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
@@ -89,7 +90,7 @@ async function saveCollectedBlobs(collectionName, collectedBlobs) {
 }
 ```
 
-`saveCollectedBlobs` est appelé lorsque l'utilisateur clique sur Enregistrer dans la fenêtre contextuelle et a fourni un nom pour la collection d'images. D'abord, `getFileStorage` crée s'il n'existe pas déjà, ou récupère l' IndexedDB de la base de données "images stockées" dans l'objet `storedImages`. `storedImages.put` ajoute chaque image collectée à la base de données, sous le nom de la collection, en utilisant l'identifiant unique du blob (le nom du fichier). Si l'image en stock est identique à celle existatnt déjà dans la base de données, elle est écrasée. Si vous voulez éviter cela, interrogez la base de données d'abord en utilisant`imagesStore.list()` avec un filtre pour le nom du fichier et, si la liste renvoie un fichier, ajoutez un suffixe approprié au nom de la nouvelle image pour stocker un élément distinct.
+`saveCollectedBlobs` est appelé lorsque l'utilisateur clique sur Enregistrer dans la fenêtre contextuelle et a fourni un nom pour la collection d'images. D'abord, `getFileStorage` crée s'il n'existe pas déjà, ou récupère l' IndexedDB de la base de données "images stockées" dans l'objet `storedImages`. `storedImages.put` ajoute chaque image collectée à la base de données, sous le nom de la collection, en utilisant l'identifiant unique du blob (le nom du fichier). Si l'image en stock est identique à celle existatnt déjà dans la base de données, elle est écrasée. Si vous voulez éviter cela, interrogez la base de données d'abord en utilisant `imagesStore.list()` avec un filtre pour le nom du fichier et, si la liste renvoie un fichier, ajoutez un suffixe approprié au nom de la nouvelle image pour stocker un élément distinct.
 
 ### Récupération des images stockées pour l'affichage
 
@@ -107,7 +108,7 @@ export async function loadStoredImages(filter) {
 }
 ```
 
-`loadStoredImages` est appelé lorsque l'utilisateur clique sur la vue ou la recharge dans la page de navigation de la collection. `getFileStorage` ouvre la base de données "images stockées", puis `imagesStore.list`obtient une liste filtrée des images stockées. Cette liste est ensuite utilisée pour récupérer des images avec `imagesStore.get` et créer une liste retournée à l'interface utilisateur.
+`loadStoredImages` est appelé lorsque l'utilisateur clique sur la vue ou la recharge dans la page de navigation de la collection. `getFileStorage` ouvre la base de données "images stockées", puis `imagesStore.list` obtient une liste filtrée des images stockées. Cette liste est ensuite utilisée pour récupérer des images avec `imagesStore.get` et créer une liste retournée à l'interface utilisateur.
 
 Notez l'utilisation de [URL.createObjectURL(blob)](/fr/docs/Web/API/URL/createObjectURL) pour créer une URL qui fait référence au blob image. Cette URL est ensuite utilisée dans l'interface utilisateur ([navigate-collection.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js)[collection.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js)) pour afficher l'image.
 
@@ -123,14 +124,14 @@ async function removeStoredImages(storedImages) {
 }
 ```
 
-`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage`ouvre la base de données “stored-images”  et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
+`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage` ouvre la base de données “stored-images” et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
 
 Notez l'utilisation de [URL.revokeObjectURL()](/fr/docs/Web/API/URL/revokeObjectURL) pour révoquer explicitement l'URL du blob. Cela permet de libérer la mémoire allouée à l'URL. Si cela n'est pas fait, la mémoire n'est pas libérée jusqu'à ce que la page sur laquelle l'URL a été créée soit fermée. Si l'URL a été créée dans la page d'arrière-plan d'une extension, celle-ci n'est pas déchargée jusqu'à ce que l'extension soit désactivée, désinstallée ou rechargée, ce qui risque d'affecter inutilement les performances du navigateur. Si l'URL est créée dans la page d'une extension (nouvel onglet, fenêtre contextuelle ou barre latérale), la mémoire est libérée lorsque la page est fermée, mais il demeure de bonne pratique de révoquer l'URL lorsqu'elle n'est plus nécessaire.
 
 Une fois que l'URL du blob a été révoquée, toute tentative de la charger entraînera une erreur. Par exemple, si l'URL du blob était utilisée comme attribut `SRC` d'un `IMG` tag, l'image ne sera pas chargée et ne sera pas visible. Il est donc recommandé de supprimer les URL de blobs révoquées des éléments HTML générés après leur révocation.
 
 Exemple : [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
-API Référence :  [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
+API Référence : [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > **Note :** Vous pouvez également utiliser l' [IndexedDB API](/fr/docs/Web/API/API_IndexedDB) pour stocker des données de votre extension. Cela peut être utile lorsque vous devez stocker des données qui ne sont pas bien gérées par les paires de clés / valeurs simples offertes par le DOM [Storage API](/fr/Add-ons/WebExtensions/API/Storage).
 
@@ -145,7 +146,7 @@ Vous avez deux options :
 
 Pour ajouter le fichier ou le blob, vous souhaitez que l'application native utilise [JSON.stringify()](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
-Pour utiliser cette méthode, l'extension doit demander la [permission](fr/Add-ons/WebExtensions/manifest.json/permissions) "nativeMessaging" dans son fichier manifest.json. Réciproquement, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ "allowed_extensions" de l'application "manifest".
+Pour utiliser cette méthode, l'extension doit demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "nativeMessaging" dans son fichier manifest.json. Réciproquement, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ "allowed_extensions" de l'application "manifest".
 
 Exemple : [Native Messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) (illustre simplement une messagerie)
 Guide : [Native messaging](/fr/Add-ons/WebExtensions/Native_messaging)

@@ -11,7 +11,8 @@ tags:
 translation_of: Web/HTML/Element/datalist
 browser-compat: html.elements.datalist
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<datalist>`** contient un ensemble d'éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) qui représentent les valeurs possibles pour d'autres contrôles.
 

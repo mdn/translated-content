@@ -1,14 +1,8 @@
 ---
 title: location.port
 slug: Web/API/Location/port
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.port
-translation_of: Web/API/Location/port
 ---
+
 {{ApiRef("Location")}}
 
 **`port`** は {{domxref("Location")}} インターフェイスのプロパティで、 {{domxref("USVString")}} で URL のポート番号を表します。 URL に明示的にポート番号が指定されていない場合は、 `''` に設定されます。

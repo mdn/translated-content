@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
 ---
+
 {{AddonSidebar()}}
 
 Supprime d'une page CSS précédemment injectée par un appel à {{WebExtAPIRef("tabs.insertCSS()")}}.
@@ -43,7 +44,7 @@ var removing = browser.tabs.removeCSS(
     - `code`{{optional_inline}}
       - : `string`. CSS à supprimer, en tant que chaîne de texte. Cela doit correspondre exactement à une chaîne CSS précédemment insérée dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
     - `cssOrigin`{{optional_inline}}
-      - : `string`. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par  {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.
+      - : `string`. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.
     - `file`{{optional_inline}}
       - : `string`. Chemin d'accès à un fichier contenant le CSS à supprimer. Cela doit correspondre exactement à un fichier CSS préalablement inséré dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
     - `frameId`{{optional_inline}}
@@ -77,9 +78,9 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.removeCSS")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -87,7 +88,8 @@ browser.browserAction.onClicked.addListener(() => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +116,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

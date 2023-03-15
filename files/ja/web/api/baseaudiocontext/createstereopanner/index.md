@@ -1,25 +1,15 @@
 ---
 title: BaseAudioContext.createStereoPanner()
 slug: Web/API/BaseAudioContext/createStereoPanner
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メディア
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createStereoPanner
-browser-compat: api.BaseAudioContext.createStereoPanner
-translation_of: Web/API/BaseAudioContext/createStereoPanner
 original_slug: Web/API/AudioContext/createStereoPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createStereoPanner()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、音源にステレオパンニングを適用する{{ domxref("StereoPannerNode") }}を生成します。
 入力された音声ストリームは、[低コストのパンニングアルゴリズム](https://webaudio.github.io/web-audio-api/#stereopanner-algorithm)で位置が決められます。
 
-> **Note:** {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}} コンストラクターは {{domxref("StereoPannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}} コンストラクターは {{domxref("StereoPannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
@@ -82,4 +72,4 @@ panNode.connect(audioCtx.destination);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

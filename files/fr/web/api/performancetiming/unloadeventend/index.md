@@ -14,6 +14,7 @@ tags:
   - unloadEventEnd
 translation_of: Web/API/PerformanceTiming/unloadEventEnd
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.unloadEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/unloadEventEnd) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
@@ -28,13 +29,11 @@ let time = performanceTiming.unloadEventEnd;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-unloadeventend', 'PerformanceTiming.unloadEventEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.unloadEventEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

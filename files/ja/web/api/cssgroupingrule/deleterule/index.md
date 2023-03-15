@@ -1,15 +1,8 @@
 ---
 title: CSSGroupingRule.deleteRule()
 slug: Web/API/CSSGroupingRule/deleteRule
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - メソッド
-  - リファレンス
-browser-compat: api.CSSGroupingRule.deleteRule
-translation_of: Web/API/CSSGroupingRule/deleteRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`deleteRule()`** は {{domxref("CSSGroupingRule")}} インターフェイスのメソッドで、子 CSS ルールの一覧からある CSS ルールを取り除きます。

@@ -13,6 +13,7 @@ tags:
   - play
 translation_of: Web/API/HTMLMediaElement/play
 ---
+
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
 La méthode **`HTMLMediaElement.play()`** essaie de commencer la lecture du média et renvoie une {{jsxref("Promise")}} qui est résolue quand la lecture a commencé avec succès, et est rejetée si la lecture ne peut commencer pour n'importe quelle raison (comme, par exemple, une erreur de permission).
@@ -58,13 +59,8 @@ myVideo.play().then(() => {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire                                |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-play', 'play()')}}             | {{Spec2('HTML WHATWG')}} | Définition initiale; living specification. |
-| {{SpecName('HTML5 W3C','embedded-content-0.html#playing-the-media-resource','play()')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                       |
-
-> **Note :** Les versions WHATWG et W3C de la spécification diffèrent (depuis le 20 Avril 2016) par le fait que cette méthode renvoie respectivement une {{jsxref("Promise")}} ou rien du tout.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement.play")}}
+{{Compat}}

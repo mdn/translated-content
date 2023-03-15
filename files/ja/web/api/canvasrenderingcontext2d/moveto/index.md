@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.moveTo
-translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.moveTo()`** はキャンバス 2D API のメソッドで、新しいサブパスの始点を `(x, y)` 座標に移動します。

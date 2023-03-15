@@ -11,6 +11,7 @@ tags:
   - observe
 translation_of: Web/API/IntersectionObserver/observe
 ---
+
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
 La méthode **`observe()`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) ajoute un élément à l'ensemble des éléments cibles étant observés par l'`IntersectionObserver`. Un observateur possède un ensemble de seuils d'intersection et une racine, mais peut observer plusieurs éléments cibles en surveillant leurs changements de visibilité indépendamment. Pour cesser d'observer un élément, il faut appeler la méthode [`IntersectionObserver.unobserve()`](/fr/docs/Web/API/IntersectionObserver/unobserve).
@@ -34,13 +35,11 @@ IntersectionObserver.observe(targetElement);
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.observe")}}
+{{Compat}}
 
 ## Voir aussi
 

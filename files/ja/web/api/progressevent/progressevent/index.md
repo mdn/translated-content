@@ -1,14 +1,8 @@
 ---
 title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
-tags:
-  - API
-  - コンストラクター
-  - DOM イベント
-  - ProgressEvent
-browser-compat: api.ProgressEvent.ProgressEvent
-translation_of: Web/API/ProgressEvent/ProgressEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`ProgressEvent()`** コンストラクターは、長いプロセスの現在の完了状況を表す {{domxref("ProgressEvent")}} を新しく生成して返します。

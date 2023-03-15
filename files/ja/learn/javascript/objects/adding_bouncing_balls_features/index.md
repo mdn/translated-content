@@ -1,18 +1,8 @@
 ---
 title: バウンスボールのデモに機能を追加する
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Assessment
-  - 初心者
-  - CodingScripting
-  - JavaScript
-  - 学習
-  - OOJS
-  - オブジェクト指向
-  - オブジェクト
-  - l10n:priority
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 この評価では、前の記事のバウンスボールのデモを出発点として用い、いくつかの面白い機能を新たに追加してもらいます。
@@ -40,7 +30,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 または、評価のために、 [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) を使うことができます。これらのオンラインエディターに HTML、CSS や JavaScript を貼り付けることができます。もしあなたが使用しているオンラインエディターが、別々の JavaScript/CSS のパネルを持っていない場合は、HTML内の `<script>`/`<style>` 要素を使って、インラインで書くことができます。
 
-> **Note:** 行き詰まった場合は、サポートを依頼してください。このページの下部にある[評価とさらなる支援](#評価とさらなる支援)の節を参照してください。
+> **メモ:** 行き詰まった場合は、サポートを依頼してください。このページの下部にある[評価とさらなる支援](#評価とさらなる支援)の節を参照してください。
 
 ## ヒントと tips
 
@@ -51,7 +41,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 ## プロジェクト概要
 
-このバウンスボールのデモは面白いですが、ここではもう少しインタラクティブにするため、バウンスボールを捕まえたら食べてしまう、ユーザー制御された邪悪な円を追加します。また、バウンスボールや邪悪な円が継承できる一般的な  `Shape()` オブジェクトを作ることで、あなたのオブジェクト構築スキルも試してみましょう。最後に、残ったボールが数えられるスコアカウンターも追加してみましょう。
+このバウンスボールのデモは面白いですが、ここではもう少しインタラクティブにするため、バウンスボールを捕まえたら食べてしまう、ユーザー制御された邪悪な円を追加します。また、バウンスボールや邪悪な円が継承できる一般的な `Shape()` オブジェクトを作ることで、あなたのオブジェクト構築スキルも試してみましょう。最後に、残ったボールが数えられるスコアカウンターも追加してみましょう。
 
 次のスクリーンショットでは、完成したプログラムがどのように見えるかのイメージを掴めるでしょう。
 
@@ -145,14 +135,14 @@ window.addEventListener('keydown', (e) => {
 このメソッドは、`Ball()` の `draw()` メソッドと同じく、キャンバス上にオブジェクトインスタンスを描画するという目的を持ちます。とても良く似た動作をするので、`Ball` の `draw()` メソッドの定義をコピーすることから始めます。次に、以下の変更を行います。
 
 - 邪悪な円は塗りつぶしせず、枠線（ストローク）だけを持たせたいと思います。そのために、[`fillStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/fillStyle) と [`fill()`](/ja/docs/Web/API/CanvasRenderingContext2D/fill) を [`strokeStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/strokeStyle) と [`stroke()`](/ja/docs/Web/API/CanvasRenderingContext2D/stroke) に変更します。
-- また、線を少し太くすれば、邪悪な円が少し分かりやすくなります。これは、 [`lineWidth`](/ja/docs/Web/API/CanvasRenderingContext2D/lineWidth) の値（3 で十分でしょう）を [`beginPath()`](/ja/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼び出しの後のどこかで設定することで実現できます 。
+- また、線を少し太くすれば、邪悪な円が少し分かりやすくなります。これは、 [`lineWidth`](/ja/docs/Web/API/CanvasRenderingContext2D/lineWidth) の値（3 で十分でしょう）を [`beginPath()`](/ja/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼び出しの後のどこかで設定することで実現できます 。
 
 #### checkBounds()
 
 このメソッドは、 `Ball` の `update()` メソッドの最初の部分と同じ機能、すなわち、邪悪な円が画面の端から出そうになったら出ないようにする機能を持ちます。先ほどと同様に、`Ball` の `update()` の定義をほぼコピーするだけでできますが、いくつか変更する必要があります。
 
 - 最後の 2 行を削除します。後で見られるように、別の方法で邪悪な円を動かすので、フレーム毎に邪悪な円の位置を自動的に更新する必要はありません。
-- `if()` 文の内部でそのテストが true を返す場合、`velX`/`velY` を更新したくありません。代わりに `x`/`y` の値を変更して、邪悪な円が画面内に少し跳ね返ってくるようにしたいのです。邪悪な円の `size` プロパティを（適切に）加えたり減じたりすることは理にかなっています。
+- `if()` 文の内部でそのテストが true を返す場合、`velX`/`velY` を更新したくありません。代わりに `x`/`y` の値を変更して、邪悪な円が画面内に少し跳ね返ってくるようにしたいのです。邪悪な円の `size` プロパティを（適切に）加えたり減じたりすることは理にかなっています。
 
 #### collisionDetect()
 

@@ -1,18 +1,10 @@
 ---
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL API
-  - URLSearchParams
-browser-compat: api.URLSearchParams.URLSearchParams
-translation_of: Web/API/URLSearchParams/URLSearchParams
 ---
 {{ApiRef("URL API")}}
 
-**`URLSearchParams()`** 생성자는 새로운 {{domxref("URLSearchParams")}} 객체를 생성하고 반환합니다.
+**`URLSearchParams()`** 생성자는 새로운 {{domxref("URLSearchParams")}} 객체를 생성하고 반환합니다.
 
 {{availableinworkers}}
 
@@ -37,7 +29,7 @@ new URLSearchParams(init)
 
 ## 예제
 
-다음 예제는 URL 문자열에서 {{domxref("URLSearchParams")}} 객체를 생성하는 모습입니다.
+다음 예제는 URL 문자열에서 {{domxref("URLSearchParams")}} 객체를 생성하는 모습입니다.
 
 ```js
 // url 생성자에 전달된 주소를 url.search를 통해 params라는 변수로 검색합니다.

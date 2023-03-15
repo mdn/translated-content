@@ -1,16 +1,8 @@
 ---
 title: animation-duration
 slug: Web/CSS/animation-duration
-tags:
-  - アニメーション
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-duration
-translation_of: Web/CSS/animation-duration
 ---
+
 {{CSSRef}}
 
 **`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの所要時間を設定します。
@@ -42,9 +34,9 @@ animation-duration: unset;
 - `{{cssxref("&lt;time&gt;")}}`
   - : 1 回のアニメーションの周期にかかる時間。この値は、秒 (`s`) またはミリ秒 (`ms`) で指定することができます。値は正の数か 0 でなければならず、単位は必須です。 `0s` の値は、既定値ですが、アニメーションを実行しないことを意味します。
 
-> **Note:** 負の数は無効であり、宣言が無視されます。一部、初期の接頭辞付きの実装は `0s` と等価に解釈するかもしれません。
+> **メモ:** 負の数は無効であり、宣言が無視されます。一部、初期の接頭辞付きの実装は `0s` と等価に解釈するかもしれません。
 
-> **Note:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values) を参照してください。
 
 ## 公式定義
 

@@ -1,15 +1,8 @@
 ---
 title: border-style
 slug: Web/CSS/border-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-style
-translation_of: Web/CSS/border-style
 ---
+
 {{CSSRef}}
 
  **`border-style`** は [一括指定](/ja/docs/Web/CSS/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
@@ -84,7 +77,7 @@ border-style: unset;
     - `double`
       - : 2 本の直線を表示し、幅の合計は {{cssxref("border-width")}} で定義したピクセル数になります。
     - `groove`
-      - :  凹んだように見える境界線を表示します。 `ridge` の逆です。
+      - : 凹んだように見える境界線を表示します。 `ridge` の逆です。
     - `ridge`
       - : 出っ張ったように見える境界線を表示します。 `groove` の逆です。
     - `inset`

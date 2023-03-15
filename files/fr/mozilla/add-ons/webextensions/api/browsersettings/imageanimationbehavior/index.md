@@ -11,6 +11,7 @@ tags:
   - imageAnimationBehavior
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier la façon dont le navigateur traite les images animées, telles que les GIF.
@@ -21,9 +22,9 @@ La valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs 
 - "none": n'anime pas les images du tout.
 - "once": joue une fois l'animation.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.imageAnimationBehavior", 10)}}
+{{Compat}}
 
 ## Exemples
 

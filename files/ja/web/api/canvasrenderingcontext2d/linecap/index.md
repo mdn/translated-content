@@ -1,20 +1,13 @@
 ---
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.lineCap
-translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.lineCap`** はキャンバス 2D API のプロパティで、描く線の端点の形状を設定します。
 
-> **Note:** 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} の各メソッドで描画されます。
+> **メモ:** 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} の各メソッドで描画されます。
 
 ## 構文
 
@@ -63,9 +56,9 @@ ctx.stroke();
 
 ### 先端形状の比較
 
-次の例では、`lineCap` プロパティがそれぞれ異なる 3 本の線を描画しています。その違いを観察するために、 2 本の補助線を引いています。 3 本の線はそれぞれこの補助線直上を始点および終点として描かれています。
+次の例では、`lineCap` プロパティがそれぞれ異なる 3 本の線を描画しています。その違いを観察するために、 2 本の補助線を引いています。 3 本の線はそれぞれこの補助線直上を始点および終点として描かれています。
 
-左の線は既定のオプションである `"butt"` の場合の線で、補助線のところで丁度切れています。 2 つ目の`"round"` オプションの場合の線は、補助線の部分の先に半円が追加された格好になっています。右側の`"square"` オプションによる描線は、線の幅と同じ幅で高さが半分の四角形が追加されています。
+左の線は既定のオプションである `"butt"` の場合の線で、補助線のところで丁度切れています。 2 つ目の`"round"` オプションの場合の線は、補助線の部分の先に半円が追加された格好になっています。右側の`"square"` オプションによる描線は、線の幅と同じ幅で高さが半分の四角形が追加されています。
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>

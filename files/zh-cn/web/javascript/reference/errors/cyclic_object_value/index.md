@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: cyclic object value'
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
 
 {{jsSidebar("Errors")}}

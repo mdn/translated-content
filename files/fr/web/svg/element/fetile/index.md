@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feTile
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feTile>`** permet de remplir un rectangle cible avec un motif en mosaïque qui répète une image en entrée. L'effet est similaire à ce que l'on obtient avec {{SVGElement("pattern")}}.
@@ -60,14 +61,11 @@ Cet élément implémente l'interface {{domxref("SVGFETileElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#feTileElement', '&lt;feTile&gt;')}}         | {{Spec2('Filters 1.0')}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'filters.html#feTileElement', '&lt;feTile&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feTile")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,18 +1,9 @@
 ---
 title: WritableStreamDefaultWriter.close()
 slug: Web/API/WritableStreamDefaultWriter/close
-page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - close
-translation_of: Web/API/WritableStreamDefaultWriter/close
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的 **`close()`** 方法用于关闭关联的可写流。
 

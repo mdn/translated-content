@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille
 ---
+
 {{CSSRef}}
 
 Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout). Cette page détaille les aspects spécifiques relatifs à l'alignement et aux grilles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_Box_Alignment).

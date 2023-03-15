@@ -1,17 +1,8 @@
 ---
 title: History.back()
 slug: Web/API/History/back
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - メソッド
-  - リファレンス
-  - ウェブ
-browser-compat: api.History.back
-translation_of: Web/API/History/back
 ---
+
 {{APIRef("History API")}}
 
 **`History.back()`** メソッドは、ブラウザーにセッション履歴内で 1 つ前のページに戻らせます。

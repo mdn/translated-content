@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<number>`** permet de représenter des nombres entiers ou décimaux. C'est donc un type qui englobe le type de données {{cssxref("&lt;integer&gt;")}} (permettant de représenter des entiers).
@@ -45,16 +46,11 @@ Voici des exemples de valeurs invalides :
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                   |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Values", "#numbers", "&lt;number&gt;")}}         | {{Spec2("CSS4 Values")}} | Aucune modification significative.                                                             |
-| {{SpecName('CSS3 Values', '#numbers', '&lt;number&gt;')}}         | {{Spec2('CSS3 Values')}} | Aucune modification significative depuis la spécification CSS de niveau 2 (première révision). |
-| {{SpecName('CSS2.1', 'syndata.html#numbers', '&lt;number&gt;')}} | {{Spec2('CSS2.1')}}         | Définition explicite du type de données.                                                       |
-| {{SpecName('CSS1', '', '&lt;number&gt;')}}                             | {{Spec2('CSS1')}}         | Définition implicite du type de données.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.number")}}
+{{Compat}}
 
 ## Voir aussi
 

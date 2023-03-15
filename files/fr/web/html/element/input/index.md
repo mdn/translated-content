@@ -4,7 +4,8 @@ slug: Web/HTML/Element/input
 translation_of: Web/HTML/Element/input
 browser-compat: html.elements.input
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<input>`** est utilisé pour créer un contrôle interactif dans un formulaire web qui permet à l'utilisatrice ou l'utilisateur de saisir des données. Les saisies possibles et le comportement de l'élément `<input>` dépendent fortement de la valeur indiquée dans son attribut `type` et de ses autres attributs. Il existe différents contrôles pour la saisie, qui dépendent de l'appareil utilisé et de [l'agent utilisateur](/fr/docs/Glossary/User_agent).
 
@@ -58,7 +59,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/input/date"><code>date</code></a></td>
-      <td>Un contrôle qui permet de saisir une date (composé d'un jour,  d'un mois et d'une année mais sans heure), cela ouvre un sélecteur de date ou des roues numériques pour la sélection du jour/mois/année dans les navigateurs qui le prennent en charge.
+      <td>Un contrôle qui permet de saisir une date (composé d'un jour, d'un mois et d'une année mais sans heure), cela ouvre un sélecteur de date ou des roues numériques pour la sélection du jour/mois/année dans les navigateurs qui le prennent en charge.
       </td>
       <td id="exampledate">
         <pre class="brush: html hidden">
@@ -176,7 +177,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/input/search"><code>search</code></a></td>
-      <td>Un champ texte sur une ligne pour des termes de recherche. Les sauts de ligne sont automatiquement retirés. Le contrôle peut disposer d'une icône permettant de réinitialiser le champ. Une icône de recherche est affichée à la place de la touche <kdb>Entrée</kbd>/ pour certains appareils avec des claviers dynamiques.</td>
+      <td>Un champ texte sur une ligne pour des termes de recherche. Les sauts de ligne sont automatiquement retirés. Le contrôle peut disposer d'une icône permettant de réinitialiser le champ. Une icône de recherche est affichée à la place de la touche <kbd>Entrée</kbd>/ pour certains appareils avec des claviers dynamiques.</td>
       <td id="examplesearch">
         <pre class="brush: html hidden">
 &#x3C;input type="search" name="search"/></pre>
@@ -629,7 +630,7 @@ Les champs de formulaire sont des éléments remplacés et disposent de quelques
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:out-of-range"><code>:out-of-range</code></a></td>
-      <td>S'applique aux champs non vides dont la valeur actuelle est située en dehors des limites d'intervalle définies par les attributs  <a href="#min"><code>min</code></a> et <a href="#max"><code>max</code></a> ou qui ne respecte pas la contrainte de granularité dictée par l'attribut <a href="#step"><code>step</code></a>.</td>
+      <td>S'applique aux champs non vides dont la valeur actuelle est située en dehors des limites d'intervalle définies par les attributs <a href="#min"><code>min</code></a> et <a href="#max"><code>max</code></a> ou qui ne respecte pas la contrainte de granularité dictée par l'attribut <a href="#step"><code>step</code></a>.</td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:required"><code>:required</code></a></td>

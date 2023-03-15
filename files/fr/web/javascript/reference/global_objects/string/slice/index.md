@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/slice
 ---
+
 {{JSRef}}
 
 La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.
@@ -90,16 +91,11 @@ console.log(chn.slice(-11, -5)); // "st sur"
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                       | Commentaire                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée dans JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.13', 'String.prototype.slice')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.slice', 'String.prototype.slice')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.slice', 'String.prototype.slice')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.slice")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,21 +1,6 @@
 ---
 title: 문자열 제대로 다루기
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - case
-  - indexOf
-  - l10n:priority
-  - length
-  - lower
-  - replace
-  - split
-  - upper
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
@@ -49,7 +34,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 var string = 'This is my string';
 ```
 
-변수가 문자열 객체 인스턴스되면, 결과적으로 수많은 속성과 메서드가 사용 가능하게 됩니다. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> 객체 페이지로 이동하여 페이지 측면의 목록을 내려다 보면 이것을 볼 수 있습니다!
+변수가 문자열 객체 인스턴스되면, 결과적으로 수많은 속성과 메서드가 사용 가능하게 됩니다. <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> 객체 페이지로 이동하여 페이지 측면의 목록을 내려다 보면 이것을 볼 수 있습니다!
 
 이제 뇌가 녹기 시작하기 전에, 걱정하지 마십시오! 학습 여행 중에 초기에 대부분을 알 필요가 없습니다. 그러나 여기에서 살펴볼 몇 가지 사항을 자주 사용하게 될 것입니다.
 
@@ -57,48 +42,48 @@ var string = 'This is my string';
 
 ### 문자열의 길이 찾기
 
-간단합니다 — 간단하게  {{jsxref("String.prototype.length", "length")}} 프로퍼티를 사용할 수 있습니다. 다음 코드를 입력해 보세요.
+간단합니다 — 간단하게 {{jsxref("String.prototype.length", "length")}} 프로퍼티를 사용할 수 있습니다. 다음 코드를 입력해 보세요.
 
 ```js
 var browserType = 'mozilla';
 browserType.length;
 ```
 
-결과는 7을 리턴해야 합니다. 'mozilla'는 7글자이기 때문입니다. 이것은 여러 가지 이유로 유용합니다. 예를 들어 이름의 길이에 따라 이름의 순서를 정렬해야 하던가, 유저가 작성한 이름이 특정 길이 이상일 때 너무 길다는 것을 알려줘야 하는 경우에 사용할 수 있습니다.
+결과는 7을 리턴해야 합니다. 'mozilla'는 7글자이기 때문입니다. 이것은 여러 가지 이유로 유용합니다. 예를 들어 이름의 길이에 따라 이름의 순서를 정렬해야 하던가, 유저가 작성한 이름이 특정 길이 이상일 때 너무 길다는 것을 알려줘야 하는 경우에 사용할 수 있습니다.
 
 ### 특정 문자열 찾기
 
-관련하여, 대괄호 표기법을 이용해서 문자열 안의 문자를 구할 수 있습니다. 대괄호 표기법은 변수명 끝에 대괄호를 포함합니다. 대괄호 안에는 구하고 싶은 문자의 숫자를 포함시키면 되며, 예를 들어 아래의 경우 첫 번째 문자를 구할 수 있습니다:
+관련하여, 대괄호 표기법을 이용해서 문자열 안의 문자를 구할 수 있습니다. 대괄호 표기법은 변수명 끝에 대괄호를 포함합니다. 대괄호 안에는 구하고 싶은 문자의 숫자를 포함시키면 되며, 예를 들어 아래의 경우 첫 번째 문자를 구할 수 있습니다:
 
 ```js
 browserType[0];
 ```
 
-컴퓨터는 1이 아니라 0부터 숫자를 셉니다! 문자열의 마지막 문자를 구하기 위해서, 우리는 다음 코드를 사용할 수 있으며, 기술적인 `length` 프로퍼티과 같이 사용하면 아래와 같습니다:
+컴퓨터는 1이 아니라 0부터 숫자를 셉니다! 문자열의 마지막 문자를 구하기 위해서, 우리는 다음 코드를 사용할 수 있으며, 기술적인 `length` 프로퍼티과 같이 사용하면 아래와 같습니다:
 
 ```js
 browserType[browserType.length - 1];
 ```
 
-"mozilla"는 7글자이지만, 숫자는 0부터 시작하기 때문에 글자의 위치는 6입니다. 그렇기 때문에 `length-1`을 사용합니다. 예를 들어, 여러 문자열 중 첫 번째 문자를 찾아 알파벳순으로 정렬해야 할 경우에 사용할 수 있습니다.
+"mozilla"는 7글자이지만, 숫자는 0부터 시작하기 때문에 글자의 위치는 6입니다. 그렇기 때문에 `length-1`을 사용합니다. 예를 들어, 여러 문자열 중 첫 번째 문자를 찾아 알파벳순으로 정렬해야 할 경우에 사용할 수 있습니다.
 
 ### 문자열 내부의 하위 문자열 찾기 및 추출
 
-1. 때때로 큰 문자열 안의 작은 문자열(우리는 이것을 하위 문자열이라고 이야기 한다.)을 찾고 싶을 것입니다. 이 작업은 {{jsxref("String.prototype.indexOf()", "indexOf()")}}를 사용하여 완료할 수 있습니다, which takes a single {{glossary("parameter")}} — 찾기 원하는 하위 문자열을 찾을 수 있습니다. 시도해 봅시다:
+1. 때때로 큰 문자열 안의 작은 문자열(우리는 이것을 하위 문자열이라고 이야기 한다.)을 찾고 싶을 것입니다. 이 작업은 {{jsxref("String.prototype.indexOf()", "indexOf()")}}를 사용하여 완료할 수 있습니다, which takes a single {{glossary("parameter")}} — 찾기 원하는 하위 문자열을 찾을 수 있습니다. 시도해 봅시다:
 
     ```js
     browserType.indexOf('zilla');
     ```
 
-    결과는 2입니다. 하위 문자열인 "zilla"는 "mozilla'의 2번 위치(0, 1, 2— 그러므로 3번째 문자열)에서 시작합니다. 이러한 코드는 문자열을 필터링하는 데 사용될 수 있습니다. 예를 들어 웹 주소 목록에서 "mozilla"가 포함된 주소만 인쇄하고 싶은 경우입니다.
+    결과는 2입니다. 하위 문자열인 "zilla"는 "mozilla'의 2번 위치(0, 1, 2— 그러므로 3번째 문자열)에서 시작합니다. 이러한 코드는 문자열을 필터링하는 데 사용될 수 있습니다. 예를 들어 웹 주소 목록에서 "mozilla"가 포함된 주소만 인쇄하고 싶은 경우입니다.
 
-2. 다른 방법으로도 할 수 있으며, 더욱 효율적일 수 있습니다. 다음 예제를 따라해 봅시다:
+2. 다른 방법으로도 할 수 있으며, 더욱 효율적일 수 있습니다. 다음 예제를 따라해 봅시다:
 
     ```js
     browserType.indexOf('vanilla');
     ```
 
-    이렇게 하면 -1( 하위 문자열 (이 경우 'vanilla')이 기본 문자열에서 발견되지 않으면 반환한다.)의 결과를 얻을 수 있습니다.
+    이렇게 하면 -1( 하위 문자열 (이 경우 'vanilla')이 기본 문자열에서 발견되지 않으면 반환한다.)의 결과를 얻을 수 있습니다.
 
     하위 문자열 'mozilla'가 포함되지 않은 문자열의 모든 인스턴스를 찾으려면 이 연산자를 사용하고 아래에 표시된 것처럼 부정 연산자를 사용해서 작업을 수행할 수 있습니다. 다음과 같이 할 수 있습니다:
 
@@ -152,7 +137,7 @@ browserType.replace('moz', 'van');
 
 이 섹션에서는 문자열을 다루는 방법을 설명합니다. 아래의 각 실습에서는 문자열로 이루어진 배열을 루프문을 사용해 bullet list(불릿 리스트)로 표현하였습니다. 지금 배열이나 루프를 이해할 필요가 없습니다. - 이러한 내용은 추후에 설명합니다. 중요한것은 각각의 문자열이 우리가 원하는 형식으로 출력하는 코드를 작성하는 것입니다.
 
-각 예제에는 리셋 버튼이 있고, 리셋 버튼은 실수를 했거나 코드가 작동하지 않아서 재설정하는데 사용할 수 있습니다. 해결 방법을 모를 때, 해답 버튼(solution button)을 누르면  해답을 볼 수 있습니다.
+각 예제에는 리셋 버튼이 있고, 리셋 버튼은 실수를 했거나 코드가 작동하지 않아서 재설정하는데 사용할 수 있습니다. 해결 방법을 모를 때, 해답 버튼(solution button)을 누르면 해답을 볼 수 있습니다.
 
 ### 인사말 필터링 하기
 
@@ -322,11 +307,11 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('인사말_필터링_하기', '100%', 600) }}
 
-### 대/소문자 맞게 수정하기
+### 대/소문자 맞게 수정하기
 
 이 예제에는 영국 도시의 이름들을 모아놨습니다만 대/소문자가 잘못되어 있습니다. 우리는 이 문자들을 첫 번째 문자를 제외하고 모두 소문자로 변경해야 합니다. 이것은 다음과 같은 방식으로 할 수 있습니다:
 
-1. `input` 변수에 담긴 문자열 전체를 소문자로 변환한 후 새로운 변수에 저장하세요.
+1. `input` 변수에 담긴 문자열 전체를 소문자로 변환한 후 새로운 변수에 저장하세요.
 2. 새로운 변수에 저장된 문자열의 첫 문자를 다른 변수에 저장하세요
 3. Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
 4. Change the value of the `result` variable to equal to the final result, not the `input`.
@@ -493,7 +478,7 @@ In this last exercise the array contains a bunch of strings containing informati
 MAN675847583748sjt567654;Manchester Piccadilly
 ```
 
-We want to extract the station code and name, and put them together in a  string with the following structure:
+We want to extract the station code and name, and put them together in a string with the following structure:
 
 ```
 MAN: Manchester Piccadilly
@@ -669,6 +654,6 @@ textarea.onkeyup = function(){
 
 ## 결론
 
-자바스크립트에서 문장과 단어들을 다룰 수 있는 프로그래밍 능력이 매우 중요하다. 웹사이트는 사람들과 소통하는 공간이기 때문이다. 이 문서는 문자열을 다룰 수 있는 기초적인 내용에 대해 다루었다. 이 내용은 앞으로 배우게 될 심화 과정에 도움이 될 것이다. 다음으로 배열에 대해 알아보겠다.
+자바스크립트에서 문장과 단어들을 다룰 수 있는 프로그래밍 능력이 매우 중요하다. 웹사이트는 사람들과 소통하는 공간이기 때문이다. 이 문서는 문자열을 다룰 수 있는 기초적인 내용에 대해 다루었다. 이 내용은 앞으로 배우게 될 심화 과정에 도움이 될 것이다. 다음으로 배열에 대해 알아보겠다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

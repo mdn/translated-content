@@ -1,18 +1,8 @@
 ---
 title: ':focus-within'
-slug: 'Web/CSS/:focus-within'
-tags:
-  - ':focus'
-  - ':focus-within'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.focus-within
-translation_of: 'Web/CSS/:focus-within'
+slug: Web/CSS/:focus-within
 ---
+
 {{CSSRef}}
 
 **`:focus-within`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、その要素または子孫要素にフォーカスがある場合に一致します。言い換えれば、それ自身が {{CSSxRef(":focus")}} 擬似クラスに該当するか、子孫に `:focus` に該当する要素がある要素を表します。 (これは[シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)における子孫も含みます。)
@@ -28,7 +18,9 @@ div:focus-within {
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:focus-within
+```
 
 <h2 id="Examples">例</h2>
 

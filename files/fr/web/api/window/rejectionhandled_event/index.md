@@ -13,6 +13,7 @@ tags:
   - rejectionhandled
 translation_of: Web/API/Window/rejectionhandled_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'événement **`rejectionhandled`** est envoyé à la portée globale du script (généralement {{domxref("window")}} mais aussi {{domxref("Worker")}}) chaque fois qu'un JavaScript {{jsxref("Promise")}} est rejeté mais après que le rejet de la promesse a été traité.
@@ -54,15 +55,13 @@ window.addEventListener("rejectionhandled", event => {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#unhandled-promise-rejections', 'rejectionhandled')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.rejectionhandled_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
 - {{domxref("PromiseRejectionEvent")}}

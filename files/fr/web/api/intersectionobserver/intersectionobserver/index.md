@@ -11,6 +11,7 @@ tags:
   - Visible
 translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 Le constructeur **`IntersectionObserver()`** crée et retourne un nouvel objet [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver). Les marges appliquées à la zone racine (indiquée dans l'objet `options` via la propriété `rootMargin`, voir ci-après) sont vérifiées pour s'assurer de la validité de leur syntaxe. Il en va de même pour les seuils (propriété `thresholds` d'`options`) dont l'intervalle de validité (entre 0.0 et 1.0 inclus) et l'ordre (qui doit être croissant) sont vérifiés. Si la liste des seuils est vide, sa valeur par défaut est \[0.0].
@@ -66,10 +67,8 @@ let observer = new IntersectionObserver(myObserverCallback, {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver constructor')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.IntersectionObserver")}}
+{{Compat}}

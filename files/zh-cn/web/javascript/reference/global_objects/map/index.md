@@ -1,37 +1,29 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Map
-browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
-**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "基本类型")}}）都可以作为一个键或一个值。
+**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "基本类型")}}）都可以作为一个键或一个值。
 
 {{EmbedInteractiveExample("pages/js/map.html", "taller")}}
 
 ## 描述
 
-一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。
+`Map` 对象是键值对的集合。`Map` 中的一个键**只能出现一次**；它在 `Map` 的集合中是独一无二的。`Map` 对象按键值对迭代——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。迭代按*插入顺序*进行，即键值对按 [`set()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/set) 方法首次插入到集合中的顺序（也就是说，当调用 `set()` 时，map 中没有具有相同值的键）进行迭代。
+
+规范要求 map 实现“平均访问时间与集合中的元素数量呈次线性关系”。因此，它可以在内部表示为哈希表（使用 O(1) 查找）、搜索树（使用 O(log(N)) 查找）或任何其他数据结构，只要复杂度小于 O(N)。
 
 ### 键的相等
 
-- 键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法。
-- {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其它的值是根据 `===` 运算符的结果判断是否相等。
-- 在目前的 ECMAScript 规范中，`-0` 和 `+0` 被认为是相等的，尽管这在早期的草案中并不是这样。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的“Value equality for -0 and 0”。
+键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#同值相等)，将 `0` 和 `-0` 视为不同。检查[浏览器兼容性](#browser_compatibility)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。
 
-### Objects 和 maps 的比较
+### `Object` 和 `Map` 的比较
 
-{{jsxref("Object")}} 和 `Map` 类似的是，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。因此（并且也没有其他内建的替代方式了）过去我们一直都把对象当成 `Map` 使用。
+{{jsxref("Object")}} 和 `Map` 类似的是，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。因此（并且也没有其他内建的替代方式了）过去我们一直都把对象当成 `Map` 使用。
 
-不过 `Map` 和 `Object` 有一些重要的区别，在下列情况中使用 `Map` 会是更好的选择：
+不过 `Map` 和 `Object` 有一些重要的区别，在下列情况中使用 `Map` 会是更好的选择：
 
 <table class="standard-table">
   <thead>
@@ -48,7 +40,7 @@ browser-compat: javascript.builtins.Map
       <td>
         <p>一个 <code>Object</code> 有一个原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
         <div class="notecard note">
-          <p><strong>备注：</strong>虽然从 ES5 开始可以用 {{jsxref("Object.create", "Object.create(null)")}} 来创建一个没有原型的对象，但是这种用法不太常见。</p>
+          <p><strong>备注：</strong>虽然可以用 {{jsxref("Object.create", "Object.create(null)")}} 来创建一个没有原型的对象，但是这种用法不太常见。</p>
         </div>
       </td>
     </tr>
@@ -81,7 +73,7 @@ browser-compat: javascript.builtins.Map
     <tr>
       <th scope="row">Size</th>
       <td><code>Map</code> 的键值对个数可以轻易地通过 {{jsxref("Map.prototype.size", "size")}} 属性获取。</td>
-      <td><code>Object</code> 的键值对个数只能手动计算.</td>
+      <td><code>Object</code> 的键值对个数只能手动计算。</td>
     </tr>
     <tr>
     <th scope="row">迭代</th>
@@ -145,14 +137,14 @@ browser-compat: javascript.builtins.Map
 即，以下的代码能够正常运行（但不推荐）：
 
 ```js example-bad
-const wrongMap = new Map()
-wrongMap['bla'] = 'blaa'
-wrongMap['bla2'] = 'blaaa2'
+const wrongMap = new Map();
+wrongMap['bla'] = 'blaa';
+wrongMap['bla2'] = 'blaaa2';
 
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
-但这种设置属性的方式不会改变 Map 的数据结构。它使用的是通用对象的特性。`'bla'` 的值未被存储在 Map 中，无法被查询到。其它的对这一数据的操作也会失败：
+但这种设置属性的方式不会改变 Map 的数据结构。它使用的是通用对象的特性。`'bla'` 的值未被存储在 Map 中，无法被查询到。其他的对这一数据的操作也会失败：
 
 ```js example-bad
 wrongMap.has('bla')    // false
@@ -177,7 +169,7 @@ console.log(contacts.size) // 1
 ## 构造函数
 
 - {{jsxref("Map/Map", "Map()")}}
-  - : 创建 `Map` 对象
+  - : 创建 `Map` 对象。
 
 ## 静态属性
 
@@ -193,32 +185,29 @@ console.log(contacts.size) // 1
 
 - {{jsxref("Map.prototype.clear()")}}
   - : 移除 `Map` 对象中所有的键值对。
-- {{jsxref("Map.delete", "Map.prototype.delete(<var>key</var>)")}}
-  - : 移除 `Map` 对象中指定的键值对，如果键值对存在并成功被移除，返回 `true`，否则返回 `false`。调用 `delete` 后再调用 `Map.prototype.has(key)` 将返回 `false`。
-- {{jsxref("Map.get", "Map.prototype.get(<var>key</var>)")}}
-  - : 返回与 `key` 关联的值，若不存在关联的值，则返回 `undefined`。
-- {{jsxref("Map.has", "Map.prototype.has(<var>key</var>)")}}
-  - : 返回一个布尔值，用来表明 `Map` 对象中是否存在与 `key` 关联的值。
-- {{jsxref("Map.set", "Map.prototype.set(<var>key</var>, <var>value</var>)")}}
-  - : 在 `Map` 对象中设置与指定的键 `key` 关联的值 `value`，并返回 `Map` 对象。
-
-### 迭代方法
-
+- {{jsxref("Map.prototype.delete()")}}
+  - : 移除 `Map` 对象中指定的键值对，如果键值对存在并成功被移除，返回 `true`，否则返回 `false`。调用 `delete` 后再调用 `map.has(key)` 将返回 `false`。
+- {{jsxref("Map.prototype.get()")}}
+  - : 返回与指定的键 `key` 关联的值，若不存在关联的值，则返回 `undefined`。
+- {{jsxref("Map.prototype.has()")}}
+  - : 返回一个布尔值，用来表明 `Map` 对象中是否存在与指定的键 `key` 关联的值。
+- {{jsxref("Map.prototype.set()")}}
+  - : 在 `Map` 对象中设置与指定的键 `key` 关联的值，并返回 `Map` 对象。
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 **`[key, value]` 数组**，并以插入 `Map` 对象的顺序排列。
+  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 `[key, value]` 数组，并以插入 `Map` 对象的顺序排列。
+
 - {{jsxref("Map.prototype.keys()")}}
-  - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的**键**，并以插入 `Map` 对象的顺序排列。
+  - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的键，并以插入 `Map` 对象的顺序排列。
 - {{jsxref("Map.prototype.values()")}}
-  - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的**值**，并以插入 `Map` 对象的顺序排列。
+  - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的值，并以插入 `Map` 对象的顺序排列。
 - {{jsxref("Map.prototype.entries()")}}
-  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 **`[key, value]` 数组**，并以插入 `Map` 对象的顺序排列。
-- {{jsxref("Map.forEach", "Map.prototype.forEach(<var>callbackFn</var>[,
-    <var>thisArg</var>])")}}
+  - : 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 `[key, value]` 数组，并以插入 `Map` 对象的顺序排列。
+- {{jsxref("Map.prototype.forEach()")}}
   - : 以插入的顺序对 `Map` 对象中存在的键值对分别调用一次 `callbackFn`。如果给定了 `thisArg` 参数，这个参数将会是回调函数中 `this` 的值。
 
 ## 示例
 
-### 使用 Map 对象
+### 使用 Map 对象
 
 ```js
 const myMap = new Map();
@@ -232,77 +221,76 @@ myMap.set(keyString, "和键'a string'关联的值");
 myMap.set(keyObj, "和键 keyObj 关联的值");
 myMap.set(keyFunc, "和键 keyFunc 关联的值");
 
-myMap.size; // 3
+console.log(myMap.size); // 3
 
 // 读取值
-myMap.get(keyString);    // "和键'a string'关联的值"
-myMap.get(keyObj);       // "和键 keyObj 关联的值"
-myMap.get(keyFunc);      // "和键 keyFunc 关联的值"
+console.log(myMap.get(keyString)); // "和键'a string'关联的值"
+console.log(myMap.get(keyObj)); // "和键 keyObj 关联的值"
+console.log(myMap.get(keyFunc)); // "和键 keyFunc 关联的值"
 
-myMap.get('a string');   // "和键'a string'关联的值"
-                         // 因为 keyString === 'a string'
-myMap.get({});           // undefined，因为 keyObj !== {}
-myMap.get(function() {}); // undefined，因为 keyFunc !== function () {}
+console.log(myMap.get('a string')); // "和键'a string'关联的值"，因为 keyString === 'a string'
+console.log(myMap.get({})); // undefined，因为 keyObj !== {}
+console.log(myMap.get(function() {})); // undefined，因为 keyFunc !== function () {}
 ```
 
-### 将 NaN 作为 Map 的键
+### 将 NaN 作为 Map 的键
 
 `NaN` 也可以作为 `Map` 对象的键。虽然 `NaN` 与任何值甚至与自己都不相等（`NaN !== NaN` 返回 true），但是因为所有的 `NaN` 的值都是无法区分的，所以下面的例子成立：
 
 ```js
-const myMap = new Map()
-myMap.set(NaN, 'not a number')
+const myMap = new Map();
+myMap.set(NaN, 'not a number');
 
-myMap.get(NaN)
+myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo')
-myMap.get(otherNaN)
+const otherNaN = Number('foo');
+myMap.get(otherNaN);
 // "not a number"
 ```
 
-### 使用 for..of 方法迭代 Map
+### 使用 for...of 方法迭代 Map
 
-`Map` 可以使用 `for..of` 循环来实现迭代：
+`Map` 可以使用 `for...of` 循环来实现迭代：
 
 ```js
-const myMap = new Map()
-myMap.set(0, 'zero')
-myMap.set(1, 'one')
+const myMap = new Map();
+myMap.set(0, 'zero');
+myMap.set(1, 'one');
 
 for (const [key, value] of myMap) {
-  console.log(key + ' = ' + value)
+  console.log(`${key} = ${value}`);
 }
 // 0 = zero
 // 1 = one
 
 for (const key of myMap.keys()) {
-  console.log(key)
+  console.log(key);
 }
 // 0
 // 1
 
 for (const value of myMap.values()) {
-  console.log(value)
+  console.log(value);
 }
 // zero
 // one
 
 for (const [key, value] of myMap.entries()) {
-  console.log(key + ' = ' + value)
+  console.log(`${key} = ${value}`);
 }
 // 0 = zero
 // 1 = one
 ```
 
-### 使用 forEach() 方法迭代 Map
+### 使用 forEach() 方法迭代 Map
 
 `Map` 也可以通过 {{jsxref("Map.prototype.forEach", "forEach()")}} 方法迭代：
 
 ```js
-myMap.forEach(function(value, key) {
-  console.log(key + ' = ' + value)
-})
+myMap.forEach((value, key) => {
+  console.log(`${key} = ${value}`);
+});
 // 0 = zero
 // 1 = one
 ```
@@ -310,12 +298,12 @@ myMap.forEach(function(value, key) {
 ### Map 与数组的关系
 
 ```js
-const kvArray = [["key1", "value1"], ["key2", "value2"]];
+const kvArray = [['key1', 'value1'], ['key2', 'value2']];
 
 // 使用常规的 Map 构造函数可以将一个二维键值对数组转换成一个 Map 对象
 const myMap = new Map(kvArray);
 
-myMap.get("key1"); // 返回值为 "value1"
+console.log(myMap.get('key1')); // "value1"
 
 // 使用 Array.from 函数可以将一个 Map 对象转换成一个二维键值对数组
 console.log(Array.from(myMap)); // 输出和 kvArray 相同的数组
@@ -327,13 +315,13 @@ console.log([...myMap]);
 console.log(Array.from(myMap.keys())); // 输出 ["key1", "key2"]
 ```
 
-### 复制或合并 Maps
+### 复制或合并 Maps
 
 `Map` 能像数组一样被复制：
 
 ```js
 const original = new Map([
-  [1, 'one']
+  [1, 'one'],
 ]);
 
 const clone = new Map(original);
@@ -359,7 +347,7 @@ const second = new Map([
 ]);
 
 // 合并两个 Map 对象时，如果有重复的键值，则后面的会覆盖前面的。
-// 展开运算符本质上是将 Map 对象转换成数组。
+// 展开语法本质上是将 Map 对象转换成数组。
 const merged = new Map([...first, ...second]);
 
 console.log(merged.get(1)); // uno

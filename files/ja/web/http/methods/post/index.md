@@ -1,13 +1,8 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.POST
-translation_of: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `POST` メソッド**は、サーバーにデータを送信します。リクエストの本文の型は {{HTTPHeader("Content-Type")}} ヘッダーで示されます。
@@ -25,7 +20,7 @@ translation_of: Web/HTTP/Methods/POST
 - 既存のリソースの注釈
 - 掲示板、ニュースグループ、メーリングリスト、又は同様の記事グループへの投稿
 - サインアップモーダルからの新規ユーザーの追加
-- フォームの送信結果などの結果などにおける、データを扱うプロセスへのデータブロックの受け渡し
+- フォームの送信結果などにおける、データを扱うプロセスへのデータブロックの受け渡し
 - 追加操作によるデータベースの拡張
 
 <table class="properties">

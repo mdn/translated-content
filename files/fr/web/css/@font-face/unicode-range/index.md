@@ -4,6 +4,7 @@ slug: Web/CSS/@font-face/unicode-range
 translation_of: Web/CSS/@font-face/unicode-range
 browser-compat: css.at-rules.font-face.unicode-range
 ---
+
 {{cssref}}
 
 Le descripteur **`unicode-range`**, associé à la règle @ [`@font-face`](/fr/docs/Web/CSS/@font-face), définit l'intervalle de caractères qui peuvent être représentés par cette police pour la page. Si la page n'utilise aucun caractère de cet intervalle, la police n'est pas téléchargée. Si, au contraire, elle utilise au moins un caractère appartenant à cet intervalle, toute la police est téléchargée.

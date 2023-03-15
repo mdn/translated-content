@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/itemref
 original_slug: Web/HTML/Attributs_universels/itemref
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemref`** permet d'associer des propriétés à un objet via `itemscope` lorsque l'élement courant n'est pas un élément descendant. `itemref` fournit une liste d'identifiants d'éléments (à ne pas confondre avec `itemid`) dont des propriétés sont définies plus loin dans le document.
@@ -59,14 +60,11 @@ Au format [JSON-LD](https://json-ld.org/) :
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-itemref", "itemref")}}                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemref", "itemref")}} | {{Spec2('HTML WHATWG')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.itemref")}}
+{{Compat}}
 
 ## Voir aussi
 

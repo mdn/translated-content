@@ -1,15 +1,8 @@
 ---
 title: location.reload()
 slug: Web/API/Location/reload
-tags:
-  - API
-  - HTML DOM
-  - Location
-  - メソッド
-  - リファレンス
-browser-compat: api.Location.reload
-translation_of: Web/API/Location/reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`location.reload()`** メソッドは、再読み込みボタンのように現在の URL を再読み込みします。

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-orientation
 ---
+
 {{CSSRef}}
 
 La propriété **`text-orientation`** définit l'orientation du texte sur une ligne. Cette propriété n'a d'effet qu'en mode vertical (autrement dit, quand {{cssxref("writing-mode")}} n'est pas `horizontal-tb`). Elle est utile pour contrôler l'affichage de l'écriture pour les langues dont le script est vertical. Elle permet aussi de gérer les en-têtes de tableaux verticaux.
@@ -44,9 +45,13 @@ La propriété `text-orientation` peut valoir l'un des mots-clés suivants.
 - `use-glyph-orientation`
   - : Pour les éléments SVG, ce mot-clé permet d'utiliser la valeur des propriétés SVG dépréciées `glyph-orientation-vertical` et `glyph-orientation-horizontal`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -69,17 +74,13 @@ La propriété `text-orientation` peut valoir l'un des mots-clés suivants.
 
 {{EmbedLiveSample("Exemples","100%",200)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                                   | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Writing Modes', '#text-orientation', 'text-orientation')}} | {{Spec2('CSS3 Writing Modes')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-orientation")}}
+{{Compat}}
 
 ## Voir aussi
 

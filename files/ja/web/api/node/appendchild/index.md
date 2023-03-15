@@ -1,12 +1,8 @@
 ---
 title: Node.appendChild()
 slug: Web/API/Node/appendChild
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.appendChild
-translation_of: Web/API/Node/appendChild
 ---
+
 {{APIRef("DOM")}}
 
 **`appendChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定された親ノードの子ノードリストの末尾にノードを追加します。追加しようとしたノードが既に存在していた場合は、 `appendChild()` はその子ノードを現在の位置から新しい位置へ移動します（他のノードに追加する前に、そのノードを親ノードから取り除く必要はありません）。
@@ -18,7 +14,7 @@ translation_of: Web/API/Node/appendChild
 指定された子ノードが {{domxref("DocumentFragment")}} であった場合、その
 {{domxref("DocumentFragment")}} の内容全体が指定された親ノードの子ノードリストに移動します。
 
-> **Note:** このメソッドとは異なり、 {{domxref("Element.append()")}} メソッドは複数の引数や文字列の追加に対応しています。ノードが要素であった場合は、こちらを使用することができます。
+> **メモ:** このメソッドとは異なり、 {{domxref("Element.append()")}} メソッドは複数の引数や文字列の追加に対応しています。ノードが要素であった場合は、こちらを使用することができます。
 
 `appendChild()` は子要素を返すので、メソッドチェーンは動作しません。
 
@@ -26,7 +22,7 @@ translation_of: Web/API/Node/appendChild
 let aBlock = document.createElement('block').appendChild( document.createElement('b') );
 ```
 
-`aBlock` に `<b></b>` を追加するだけですが、 `block` に対して複数の `appendChild` を連鎖させるなど、それ以外の操作を連鎖せることはできません。
+`aBlock` に `<b></b>` を追加するだけですが、 `block` に対して複数の `appendChild` を連鎖させるなど、それ以外の操作を連鎖させることはできません。
 
 ## 構文
 

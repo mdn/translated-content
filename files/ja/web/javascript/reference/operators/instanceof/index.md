@@ -1,17 +1,8 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - 言語機能
-  - オブジェクト
-  - 演算子
-  - プロトタイプ
-  - 関連演算子
-  - instanceof
-browser-compat: javascript.operators.instanceof
-translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 **`instanceof` 演算子**は、あるコンストラクターの `prototype` プロパティが、あるオブジェクトのプロトタイプチェーンの中のどこかに現れるかどうかを検査します。返値は論理値です。
@@ -161,7 +152,7 @@ let b = mycar instanceof Object  // true を返す
 ```js
 if (!(mycar instanceof Car)) {
   // 次のようなことをします。
-  // mycar = new Car(mycar)
+  // mycar = new Car(mycar)
 }
 ```
 

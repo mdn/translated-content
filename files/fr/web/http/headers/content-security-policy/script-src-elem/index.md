@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
 translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
 browser-compat: http.headers.csp.Content-Security-Policy.script-src-elem
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`script-src-elem`** indique les sources valides pour des éléments [`<script>`](/fr/docs/Web/HTML/Element/script). Elle ne porte pas sur les scripts embarqués via les attributs HTML pour la gestion d'évènements comme `onclick` (voir [`script-src-attr`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) à ce propos).

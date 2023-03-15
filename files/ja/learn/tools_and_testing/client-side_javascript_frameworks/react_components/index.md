@@ -1,17 +1,8 @@
 ---
 title: React アプリのコンポーネント化
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
-tags:
-  - 初心者
-  - フレームワーク
-  - JavaScript
-  - 学習
-  - React
-  - クライアント側
-  - events
-  - interactivity
-  - state
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 この時点では、アプリは一枚岩です。アプリに何かをさせる前に、管理しやすく、記述しやすいコンポーネントに分解する必要があります。 React には、何がコンポーネントで何がコンポーネントでないかという難しいルールはありません。それはあなた次第なのです！この記事では、アプリをコンポーネントに分解するための賢明な方法を紹介します。
@@ -53,13 +44,13 @@ mkdir src/components
 touch src/components/Todo.js
 ```
 
-新しい `Todo.js` ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
+新しい `Todo.js`  ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
 
 ```js
 import React from "react";
 ```
 
-今回は `Todo` というコンポーネントを作る予定なので、以下のように `Todo.js` にもそのためのコードを追加していきます。このコードでは、関数の定義とエクスポートを一行で定義しています。
+今回は `Todo` というコンポーネントを作る予定なので、以下のように `Todo.js` にもそのためのコードを追加していきます。このコードでは、関数の定義とエクスポートを一行で定義しています。
 
 ```js
 export default function Todo() {
@@ -94,9 +85,9 @@ export default function Todo() {
 }
 ```
 
-> **Note:** コンポーネントは常に何かを返さなければなりません。もし今後あなたが何も返さないコンポーネントをレンダリングしようとしたら、React はブラウザーにエラーを表示するでしょう。
+> **メモ:** コンポーネントは常に何かを返さなければなりません。もし今後あなたが何も返さないコンポーネントをレンダリングしようとしたら、React はブラウザーにエラーを表示するでしょう。
 
-これで `Todo` コンポーネントは完成しました。`App.js` で、ファイルの先頭付近に次の行を追加して `Todo` をインポートします。
+これで `Todo` コンポーネントは完成しました。`App.js` で、ファイルの先頭付近に次の行を追加して `Todo`  をインポートします。
 
 <pre class="brush: js">import Todo from "./components/Todo";</pre>
 
@@ -120,11 +111,11 @@ export default function Todo() {
 
 私たちがすべきことは、食べることだけではありません。そう、他にもすべきことがあります。— そう、TODO があります。次に、異なるコンポーネント呼び出しで別々のコンテンツをレンダリングする方法を見てみましょう。
 
-## _一意の_ `<Todo />` を作成
+## _一意の_ `<Todo />`  を作成
 
 コンポーネントが強力なのは、UI の一部を再利用し、その UI のソースを 1 か所で参照できるからです。問題は、通常、各コンポーネントのすべてを再利用するのではなく、ほとんどの部分を再利用しつつ小さな部分を変更したいということです。そこで props の出番です。
 
-### `name` に何が入るでしょう？
+### `name`  に何が入るでしょう？
 
 完了させたいタスクの名前を追跡するために、それぞれの `<Todo />` コンポーネントが一意の名前を表示するようにしなければなりません。
 
@@ -171,9 +162,9 @@ export default function Todo(props) {
 
 ![Todo リストアプリには、異なる Todo ラベルが付けられており、それらはコンポーネントに props として渡されます。](todo-list-unique-todos.png)
 
-### それは `completed` ですか？
+### それは `completed` ですか？
 
-元の静的リストでは、`Eat` だけがチェックされていました。もう一度言いますが、`<Todo />` コンポーネントを構成する UI のほとんどを再利用しつつ、一つだけ変更したいのです。これは別の props が良い仕事をしてくれます！ `App.js` での各 `<Todo />` の呼び出しには、完了したことを示す新しい props を与えます。最初の (`Eat`) は `true` の値を持ち、残りは `false` にします。
+元の静的リストでは、`Eat` だけがチェックされていました。もう一度言いますが、`<Todo />` コンポーネントを構成する UI のほとんどを再利用しつつ、一つだけ変更したいのです。これは別の props が良い仕事をしてくれます！ `App.js`  での各 `<Todo />` の呼び出しには、完了したことを示す新しい props を与えます。最初の (`Eat`) は `true` の値を持ち、残りは `false` にします。
 
 ```js
 <Todo name="Eat" completed={true} />
@@ -191,11 +182,11 @@ export default function Todo(props) {
 
 ![Todo リストアプリで、チェックの状態が異なるようになった。- あるチェックボックスはチェックされ、他のチェックボックスはチェックされない。](todo-list-differing-checked-states.png)
 
-各 `<Todo />` コンポーネントの `completed` prop を変更すると、ブラウザーはそれに応じてレンダリングされた同等のチェックボックスをチェックしたり、チェックを外したりします。
+各 `<Todo />` コンポーネントの `completed` prop を変更すると、ブラウザーはそれに応じてレンダリングされた同等のチェックボックスをチェックしたり、チェックを外したりします。
 
-### `id` をください
+### `id`  をください
 
-現在、`<Todo />` コンポーネントはすべてのタスクに `todo-0` という `id` 属性を与えています。これは悪い HTML です、なぜなら [id 属性](/ja/docs/Web/HTML/Global_attributes/id) は一意でなければならないからです（CSS や JavaScript などで文書フラグメントの一意な識別子として使用されます）。つまり、各 `Todo` に対して一意の値を取る  `id` prop をコンポーネントに与えるべきです。
+現在、`<Todo />` コンポーネントはすべてのタスクに `todo-0` という `id` 属性を与えています。これは悪い HTML です、なぜなら [id 属性](/ja/docs/Web/HTML/Global_attributes/id) は一意でなければならないからです（CSS や JavaScript などで文書フラグメントの一意な識別子として使用されます）。つまり、各 `Todo` に対して一意の値を取る `id` prop をコンポーネントに与えるべきです。
 
 最初と同じパターンに従うために、`<Todo />` コンポーネントの各インスタンスに `todo-i` の形式で ID を与えてみましょう。 `i` は毎回 1 つずつ大きくなっていきます。
 
@@ -226,17 +217,17 @@ JavaScript のコアな能力の一つであるイテレーション（反復処
 
 それぞれのタスクには現在、 3 つの情報が含まれています: 名前、チェック済みかどうか、そして一意な ID です。このデータはうまくオブジェクトに変換されます。複数のタスクがあるので、このデータを表現するにはオブジェクトの配列が有効です。
 
-`src/index.js` で、 import の後 `ReactDOM.render()` より前の行で以下の `const` を作成してください。
+`src/index.js` で、 import の後 `ReactDOM.render()` より前の行で以下の `const` を作成してください。
 
 ```js
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
+  { id: "todo-2", name: "Repeat", completed: false },
 ];
 ```
 
-次に、 `tasks` という名前の props として `<App />` に `DATA` を渡します。`src/index.js` の最終行は以下のようになるはずです。
+次に、 `tasks`  という名前の props として `<App />` に `DATA` を渡します。`src/index.js` の最終行は以下のようになるはずです。
 
 ```js
 ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
@@ -244,7 +235,7 @@ ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 
 この配列は、 App コンポーネントで `props.tasks` として利用できるようになりました。よかったら `console.log()` で確認してください。
 
-> **Note:** すべて大文字の（`ALL_CAPS` のような）定数名に JavaScript で特別な意味があるわけではありません。他の開発者に「このデータはここで定義された後は変更されません」と伝えるための慣習です。
+> **メモ:** すべて大文字の（`ALL_CAPS` のような）定数名に JavaScript で特別な意味があるわけではありません。他の開発者に「このデータはここで定義された後は変更されません」と伝えるための慣習です。
 
 ## 反復処理によるレンダリング
 
@@ -253,10 +244,10 @@ ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 `App()` の `return` 文の上に、`taskList` という新しい `const` を作り、`map()` を使って変換します。まず、 `tasks` の配列を、各タスクの名前というシンプルなものに変えてみましょう。
 
 ```js
-const taskList = props.tasks?.map(task => task.name);
+const taskList = props.tasks?.map((task) => task.name);
 ```
 
- `<ul>` のすべての子を `taskList`に置き換えてみましょう。
+`<ul>` のすべての子を `taskList`に置き換えてみましょう。
 
 ```js
 <ul
@@ -275,13 +266,13 @@ const taskList = props.tasks?.map(task => task.name);
 この問題を解決するには、 `map()` 関数から `<Todo />` コンポーネントを返す必要があります — JSX では、JavaScript とマークアップ構造を混在させることができることを覚えておいてください。今あるものの代わりに、次のものを試してみましょう。
 
 ```js
- const taskList = props.tasks.map(task => <Todo />);
+const taskList = props.tasks.map((task) => <Todo />);
 ```
 
 アプリをもう一度見てみましょう。タスクは以前のように見えますが、タスク自体の名前がありません。私たちがマッピングした各タスクには、`id`、`name`、`checked` のプロパティがあり、`<Todo />` コンポーネントに渡したいことを覚えておいてください。これらの知識をまとめると、次のようなコードになります。
 
 ```js
-const taskList = props.tasks.map(task => (
+const taskList = props.tasks.map((task) => (
   <Todo id={task.id} name={task.name} completed={task.completed} />
 ));
 ```
@@ -290,20 +281,19 @@ const taskList = props.tasks.map(task => (
 
 ## 固有なキー
 
-React は配列からタスクをレンダリングしているので、それらを適切にレンダリングするために、どれがどれなのかを追跡しなければなりません。どれがどれなのかを把握して、適切にレンダリングする必要があります。 React は自分自身で推測で物事を把握しようとしますが、それを助けるために `key` prop を`<Todo />` コンポーネントに渡すことで助けてあげることができます。`key` は React で管理されている特別なpropです。`key` という単語を他の目的で使用することはできません。
+React は配列からタスクをレンダリングしているので、それらを適切にレンダリングするために、どれがどれなのかを追跡しなければなりません。どれがどれなのかを把握して、適切にレンダリングする必要があります。 React は自分自身で推測で物事を把握しようとしますが、それを助けるために `key` prop を`<Todo />` コンポーネントに渡すことで助けてあげることができます。`key` は React で管理されている特別な prop です。`key` という単語を他の目的で使用することはできません。
 
 キーは固有であるべきなので、各タスクオブジェクトの `id` をキーとして再利用します。`taskList` は次のように更新します。
 
 ```js
-const taskList = props.tasks.map(task => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
-);
+const taskList = props.tasks.map((task) => (
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 **反復処理でレンダリングするものには、常に固有なキーを渡す必要があります。** ブラウザー上では何も明らかな変化はありませんが、もし固有なキーを使用していない場合、 React はコンソールに警告し、アプリは奇妙な動作をするかもしれません。
@@ -382,7 +372,7 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **Note:** ここでは、最初に `<Todo />` コンポーネントで行ったのと同じ間違いをしていることに気づくかもしれません。つまり、それぞれのボタンは同じものになるということです。これでいいのです。このコンポーネントの修正は、後ほどで行います。（[フィルターボタンへ戻る](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)）
+> **メモ:** ここでは、最初に `<Todo />` コンポーネントで行ったのと同じ間違いをしていることに気づくかもしれません。つまり、それぞれのボタンは同じものになるということです。これでいいのです。このコンポーネントの修正は、後ほどで行います。（[フィルターボタンへ戻る](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)）
 
 ## すべてのコンポーネントのインポート
 
@@ -399,15 +389,14 @@ import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 
 function App(props) {
-  const taskList = props.tasks.map(task => (
+  const taskList = props.tasks.map((task) => (
     <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  ));
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -488,9 +477,9 @@ export default App;
 
 - Angular
 
-  - [Getting started with Angular](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Angular アプリケーションのビルドとその他のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

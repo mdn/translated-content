@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Int8Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Int8Array`** permet de représenter un tableau d'entiers signés (en complément à deux) représentés sur 8 bits. Les éléments du tableau sont initialisés à 0. Une fois le tableau construit, il est possible de faire référence aux éléments en utilisant les méthodes de l'objet ou en utilisant la notation usuelle de parcours d'un tableau (la syntaxe utilisant les crochets).
@@ -152,32 +153,14 @@ var int8 = new Int8Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                                                                                                       |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur afin d'utiliser l'opération interne `ToIndex` et permettre de l'utiliser sans constructeur. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Int8Array")}}
-
-## Notes de compatibilité
-
-À partir d'ECMAScript 2015 (ES6), `Int8Array` doit être utilisé avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `Int8Array` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
-
-```js example-bad
-var dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Int8Array([1, 2, 3]);
-```
+{{Compat}}
 
 ## Voir aussi
 
-- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés "en/JavaScript typed arrays")
+- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

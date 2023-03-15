@@ -14,6 +14,7 @@ tags:
   - domainLookupStart
 translation_of: Web/API/PerformanceTiming/domainLookupStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
@@ -28,13 +29,11 @@ let time = performanceTiming.domainLookupStart;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-domainlookupstart', 'PerformanceTiming.domainLookupStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.domainLookupStart")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserver/PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 Le constructeur **`PerformanceObserver()`** crée un nouvel objet [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) avec le `callback` d'observation donné. La fonction de rappel de l'observateur est invoquée lorsque des [événements d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) sont répertoriés pour les [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) qui ont été enregistrés, via la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe).
@@ -49,10 +50,8 @@ observer2.observe({entryTypes: ["measure"]});
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                                   | Commentaire                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('Performance Timeline Level 2', '#idl-def-performanceobservercallback', 'PerformanceObserver()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale du constructeur `PerformanceObserver()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserver.PerformanceObserver")}}
+{{Compat}}

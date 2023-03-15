@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
@@ -38,7 +39,7 @@ Les bases vues, nous examinons maintenant plus en détail les éléments utilis�
   </tbody>
 </table>
 
-La souplesse des formulaires HTML fait d'eux une des structures les plus complexes en [HTML](/fr/docs/HTML "/en-US/docs/HTML"). vous pouvez construire n'importe quel type de formulaire basique en utilisant les éléments et attributs qui leur sont dédiés. En utilisant une architecture correcte lors de la construction d'un formulaire, vous serez sûrs que le formulaire est à la fois utilisable et [accessible](/fr/docs/MDN/Doc_status/Accessibility).
+La souplesse des formulaires HTML fait d'eux une des structures les plus complexes en [HTML](/fr/docs/HTML). vous pouvez construire n'importe quel type de formulaire basique en utilisant les éléments et attributs qui leur sont dédiés. En utilisant une architecture correcte lors de la construction d'un formulaire, vous serez sûrs que le formulaire est à la fois utilisable et [accessible](/fr/docs/MDN/Doc_status/Accessibility).
 
 ## L'élément \<form>
 

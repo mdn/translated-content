@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 La méthode **`Geolocation.watchPosition()`** permet de manipuler une fonction appelée automatiquement à chaque fois que la position de l'appareil change. Vous pouvez de même, en option, manipuler une autre fonction appelée automatiquement pour gérer les erreurs.
@@ -63,17 +64,15 @@ options = {
 id = navigator.geolocation.watchPosition(success, error, options);
 ```
 
-> **Note :** Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](</en-US/docs/Web/API/Geolocation/navigator.requestWakeLock()>) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
+> **Note :** Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](/fr/docs/Web/API/Geolocation/navigator.requestWakeLock) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}} | {{Spec2('Geolocation')}} | Specification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation.watchPosition")}}
+{{Compat}}
 
 ## Voir aussi
 

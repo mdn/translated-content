@@ -1,8 +1,8 @@
 ---
 title: Operador delete
 slug: Web/JavaScript/Reference/Operators/delete
-translation_of: Web/JavaScript/Reference/Operators/delete
 ---
+
 {{jsSidebar("Operators")}}
 
 El **operador `delete`** de JavaScript remueve una propiedad de un objeto; si no se
@@ -41,7 +41,7 @@ Arroja un {{jsxref("TypeError")}} en [modo estricto](/es/docs/Web/JavaScript/Ref
 ## Descripción
 
 Al contrario de lo que se podría pensar (tal vez debido a otros lenguajes de programación como
-[delete in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)), el operador `delete` no tiene **nada** que ver con liberar memoria.
+[delete in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)), el operador `delete` no tiene **nada** que ver con liberar memoria.
 La gestión de memoria se hace de manera indirecta eliminando referencias. Véase la página [gestión de memoria](/es/docs/Web/JavaScript/Memory_Management) para más detalles.
 
 El operador **`delete`** remueve una propiedad dada de un objeto.
@@ -50,24 +50,24 @@ se retornará `false`.
 
 Sin embargo, es importante considerar los siguientes escenarios:
 
-  - Si la propiedad que está intentando eliminar no existe, `delete`
-    no tendrá ningún efecto y retornará `true`.
-  - Si una propiedad con el mismo nombre existe en la cadena de prototipos del objeto,
-    entonces, luego de la eliminación, el objeto usará la propiedad de la cadena de prototipos
-    (en otras palabras, `delete` sólo tiene efecto en los propiedades propias).
-  - Cualquier propiedad declarada con {{jsxref("Statements/var","var")}} no puede ser eliminada
-    desde el ámbito global o desde el ámbito de una función.
+- Si la propiedad que está intentando eliminar no existe, `delete`
+  no tendrá ningún efecto y retornará `true`.
+- Si una propiedad con el mismo nombre existe en la cadena de prototipos del objeto,
+  entonces, luego de la eliminación, el objeto usará la propiedad de la cadena de prototipos
+  (en otras palabras, `delete` sólo tiene efecto en los propiedades propias).
+- Cualquier propiedad declarada con {{jsxref("Statements/var","var")}} no puede ser eliminada
+  desde el ámbito global o desde el ámbito de una función.
 
-    - Del mismo modo, `delete` no puede eliminar ninguna función en el ámbito global (ya sea parte de una definición de una función o una expresión de función).
-    - Funciones que son partes de un objeto (y no sean del ámbito global) sí pueden ser eliminadas con `delete`.
+  - Del mismo modo, `delete` no puede eliminar ninguna función en el ámbito global (ya sea parte de una definición de una función o una expresión de función).
+  - Funciones que son partes de un objeto (y no sean del ámbito global) sí pueden ser eliminadas con `delete`.
 
-  - Las propiedades declaradas con {{jsxref("Statements/let","let")}} o
-    {{jsxref("Statements/const","const")}} no pueden ser eliminadas dentro del
-    ámbito en el cual fueron definidas.
-  - Las propiedades no configurables no pueden ser removidas. Esto incluye las
-    propiedades de objetos incorporados a JavaScript como {{jsxref("Math")}},
-    {{jsxref("Array")}}, {{jsxref("Object")}} y propiedades que son creadas como
-    no configurables con métodos como {{jsxref("Object.defineProperty()")}}.
+- Las propiedades declaradas con {{jsxref("Statements/let","let")}} o
+  {{jsxref("Statements/const","const")}} no pueden ser eliminadas dentro del
+  ámbito en el cual fueron definidas.
+- Las propiedades no configurables no pueden ser removidas. Esto incluye las
+  propiedades de objetos incorporados a JavaScript como {{jsxref("Math")}},
+  {{jsxref("Array")}}, {{jsxref("Object")}} y propiedades que son creadas como
+  no configurables con métodos como {{jsxref("Object.defineProperty()")}}.
 
 El siguiente bloque de código muestra un ejemplo simple:
 
@@ -121,7 +121,6 @@ delete nameOther;   // retorna false
 ```
 
 En modo estricto, esto hubiese arrojado una excepción.
-
 
 ### Modo estricto vs. no estricto
 

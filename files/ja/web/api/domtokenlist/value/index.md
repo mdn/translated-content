@@ -1,12 +1,8 @@
 ---
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
-tags:
-- プロパティ
-- リファレンス
-browser-compat: api.DOMTokenList.value
-translation_of: Web/API/DOMTokenList/value
 ---
+
 {{APIRef("DOM")}}
 
 **`value`** は {{domxref("DOMTokenList")}} インターフェイスのプロパティで、リストの値を {{domxref("DOMString")}} として文字列化して返したり、リストを空にしたり渡された値に設定したりするための{{Glossary("stringifier", "文字列化")}}を行うためのものです。

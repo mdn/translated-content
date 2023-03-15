@@ -1,8 +1,8 @@
 ---
 title: 'HTMLMediaElement: ended 事件'
 slug: Web/API/HTMLMediaElement/ended_event
-translation_of: Web/API/HTMLMediaElement/ended_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `ended` 事件会在媒体回放或者媒体流因达到了媒体的未尾或者没有更多可用的数据而停止时被触发。

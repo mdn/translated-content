@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/featurePolicy
 ---
+
 {{APIRef("Feature Policy")}}
 
 La propriété en lecture seule **`featurePolicy`** de l'interface {{domxref("Document")}} retourne l'interface {{domxref("FeaturePolicy")}}, qui fournit une API permettant de consulter facilement les règles de fonctionnalités appliquées sur un document spécifique.
@@ -23,12 +24,10 @@ var policy = iframeElement.featurePolicy
 
 Un objet {{domxref("FeaturePolicy")}} pouvant être utilisé pour consulter les paramètres de Feature Policy appliqués au document.
 
-## Spécification
+## Spécifications
 
-| Spécification                            | Statut                               | Commentaire          |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.featurePolicy")}}
+{{Compat}}

@@ -1,22 +1,13 @@
 ---
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - 標準外
-  - リファレンス
-  - ウェブ開発
-  - profileEnd
-  - ウェブコンソール
-browser-compat: api.console.profileEnd
-translation_of: Web/API/Console/profileEnd
+i10n:
+  sourceCommit: 6c498a447fb5e776a67af7f9801a3aa407fc4d1c
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-> **Warning:** console.profile() の直後に本 API を呼び出すと、本 API が動作しないことがあります。これを回避するには、 setTimeout の中で 5ms 以上遅延させて呼び出してください。 {{bug(1240249)}} を参照してください。
+> **警告:** console.profile() の直後に本 API を呼び出すと、本 API が動作しないことがあります。これを回避するには、 setTimeout の中で 5ms 以上遅延させて呼び出してください。 {{bug(1240249)}} を参照してください。
 
 **`console.profileEnd()`** メソッドは、 {{DOMxRef("console.profile()")}} で開始したプロファイルの記録を終了します。
 
@@ -31,13 +22,17 @@ translation_of: Web/API/Console/profileEnd
 ## 構文
 
 ```js
-console.profileEnd(profileName);
+profileEnd(profileName)
 ```
 
-## 引数
+### 引数
 
 - `profileName`
   - : プロファイルにつける名前。この引数は省略可能です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## ブラウザーの互換性
 

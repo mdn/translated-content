@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:only-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** CSS permet de cibler un élément qui ne possède aucun nœud frère du même type pour un même élément parent (par exemple, sélectionner le seul élément {{HTMLElement("em")}} d'un {{HTMLElement("dd")}}).
@@ -79,14 +80,11 @@ li:only-of-type {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS4 Selectors')}} | L'élément ciblé ne doit pas nécessairement avoir un élément parent. |
-| {{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.only-of-type")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,44 +1,45 @@
 ---
-title: GlobalEventHandlers.onabort
+title: 'HTMLMediaElement: abort イベント'
 slug: Web/API/HTMLMediaElement/abort_event
-tags:
-  - API
-  - イベントハンドラー
-  - GlobalEventHandlers
-  - NeedsContent
-  - NeedsHelp
-  - NeedsUpdate
-  - プロパティ
-  - リファレンス
-  - Window
-translation_of: Web/API/GlobalEventHandlers/onabort
-original_slug: Web/API/GlobalEventHandlers/onabort
-browser-compat: api.GlobalEventHandlers.onabort
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
-{{ApiRef("HTML DOM")}}
 
-**`onabort`** は {{domxref("GlobalEventHandlers")}} ミックスインの[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、 `abort` イベントを処理します。
+{{APIRef}}
 
-現在、{{domxref("HTMLAudioElement")}} と {{domxref("HTMLVideoElement")}} インターフェイス（{{domxref("HTMLMediaElement")}} を継承しているもの）のみが {{domxref("HTMLMediaElement/abort_event", "abort")}} イベントを発行するようになっています。
+**`abort`** イベントは、リソースが完全には読み込まれなかったが、それがエラーの結果ではなかった場合に発生します。
 
-> **Note:** 以前は `abort` イベントが `Window` で発生しましたが、標準から削除されました（[HTML issue #3525](https://github.com/whatwg/html/issues/3525) を参照してください）。
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
 ```js
-element.onabort = functionRef;
+addEventListener('abort', (event) => {});
+
+onabort = (event) => { };
 ```
 
-### 値
+## イベント型
 
-`functionRef` は関数名または[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。
+一般の {{domxref("Event")}} です。
 
 ## 例
 
 ```js
-element.onabort = function() {
-  alert('Load aborted.');
-}
+const video = document.querySelector('video');
+const videoSrc = 'https://example.org/path/to/video.webm';
+
+video.addEventListener('abort', () => {
+  console.log(`Abort loading: ${videoSrc}`);
+});
+
+const source = document.createElement('source');
+source.setAttribute('src', videoSrc);
+source.setAttribute('type', 'video/webm');
+
+video.appendChild(source);
 ```
 
 ## 仕様書
@@ -48,3 +49,10 @@ element.onabort = function() {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

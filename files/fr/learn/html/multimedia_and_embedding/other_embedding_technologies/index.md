@@ -17,9 +17,10 @@ tags:
 translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 original_slug: Apprendre/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
-Maintenant, vous devriez vraiment avoir la main pour intégrer des choses dans les pages Web, y compris images, vidéos et audios. Donc, à ce stade, nous aimerions franchir en quelque sorte une étape similaire, en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenu dans des pages Web : les éléments {{htmlelement("iframe")}}, {{htmlelement("embed")}} et {{htmlelement("object")}}. Les  `<iframe>` servent à intégrer d'autres pages Web, et les deux autres des PDF, SVG et même des Flash — une technique en voie de disparition, mais que vous rencontrerez encore assez régulièrement.
+Maintenant, vous devriez vraiment avoir la main pour intégrer des choses dans les pages Web, y compris images, vidéos et audios. Donc, à ce stade, nous aimerions franchir en quelque sorte une étape similaire, en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenu dans des pages Web : les éléments {{htmlelement("iframe")}}, {{htmlelement("embed")}} et {{htmlelement("object")}}. Les `<iframe>` servent à intégrer d'autres pages Web, et les deux autres des PDF, SVG et même des Flash — une technique en voie de disparition, mais que vous rencontrerez encore assez régulièrement.
 
 <table class="standard-table">
   <tbody>
@@ -44,7 +45,7 @@ Maintenant, vous devriez vraiment avoir la main pour intégrer des choses dans l
       <th scope="row">Objectif&nbsp;:</th>
       <td>
         Apprendre comment incorporer des éléments, tels que d'autres pages ou
-        des clips Flash,  dans des pages Web à l'aide de
+        des clips Flash, dans des pages Web à l'aide de
         {{htmlelement("object")}}, {{htmlelement("embed")}}, et
         {{htmlelement("iframe")}}.
       </td>
@@ -74,7 +75,7 @@ Dans cet article, passons directement à l'apprentissage actif pour vous donner 
 En prime, vous pouvez aussi essayer d'intégrer une carte [Google Map](https://www.google.com/maps/) dans l'exemple.
 
 1. Allez sur Google Maps et trouvez une carte qui vous plaise.
-2. Cliquez sur le  «&nbsp;Menu Hamburger&nbsp;» (trois lignes horizontales) en haut à gauche de l'interface utilisateur.
+2. Cliquez sur le «&nbsp;Menu Hamburger&nbsp;» (trois lignes horizontales) en haut à gauche de l'interface utilisateur.
 3. Selectionnez l'option _Share or embed map_ (Partager ou intégrer une carte).
 4. Selectionnez l'option _Embed map_ (intégrer une carte), qui vous fournira du code `<iframe>` — copiez‑le.
 5. Inserez‑le dans la boîte _Input_ di‑dessous et voyez le résultat dans _Output_.
@@ -231,7 +232,7 @@ Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisati
 - **Contenu de repli**
   - : Comme pour d'autres éléments semblables, tels {{htmlelement("video")}}, vous pouvez préciser un contenu de repli entre les balises ouvrantes et fermantes `<iframe></iframe>` qui seront affichées si l'explorateur ne prend pas en charge `<iframe>`. Dans notre cas nous avons mis un lien vers une page. Il est peu vraisemblable que vous rencontriez de nos jours un explorateur qui ne prenne pas en charge `<iframe>`.
 - {{htmlattrxref('sandbox','iframe')}}
-  - : Cet attribut n'est fonctionnel que dans des explorateurs un peu plus récents, contrairement aux autres attributs de  `<iframe>` (par ex. IE 10 et au‑delà). Il requiert des paramètres de sécurité renforcés&nbsp;; nous vous en disons plus dans le paragraphe suivant.
+  - : Cet attribut n'est fonctionnel que dans des explorateurs un peu plus récents, contrairement aux autres attributs de `<iframe>` (par ex. IE 10 et au‑delà). Il requiert des paramètres de sécurité renforcés&nbsp;; nous vous en disons plus dans le paragraphe suivant.
 
 > **Note :** Afin d'améliorer la vitesse, il est pertinent de définir l'attribut `src` de `iframe` avec JavaScript après que le chargement du contenu principal est effectué. La page est utilisable plus tôt et le temps de chargement officiel de la page est diminué (une métrique {{glossary("SEO")}} importante).
 
@@ -239,11 +240,11 @@ Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisati
 
 Nous avons dit plus haut qu'il y avait des problèmes en matière de sécurité — entrons maintenant un peu plus dans le détail. Nous ne nous attendons pas à cette problèmatique vous soit parfaiment claire dès la première lecture&nbsp;; nous voulons simplement vous y sensibiliser et fournir un point de référence auquel vous pourrez revenir quand vous aurez plus d'expérience et commencerez à prévoir l'utilisation de `<iframe>` dans vos travaux et expérimentations. Car, il n'y a pas de craintes inutiles à avoir et refuser d'utiliser `<iframe>` — il faut juste être prudent. Poursuivons ...
 
-Fabricants de navigateurs et développeurs Web ont appris à la dure que `<iframe>` constitue sur le Web une cible commune (terme officiel : un **vecteur d'attaque**) pour des personnes mal intentionnées.  `<iframe>` est une porte d'entrée pour les attaques de ces personnes quand ils essaient de modifier malicieusement une page Web ou d'amener des utilisateurs à faire quelque chose qu'ils ne voudraient pas faire, comme révéler des informations confidentielles comme noms d'utilisateur et mots de passe. Pour cette raison, les ingénieurs spécialistes et les développeurs de navigateurs ont développé divers mécanismes de sécurité pour rendre `<iframe>` plus sûr. De meilleures pratiques sont aussi à prendre en compte — nous allons développer certaines d'entre elles ci-dessous.
+Fabricants de navigateurs et développeurs Web ont appris à la dure que `<iframe>` constitue sur le Web une cible commune (terme officiel : un **vecteur d'attaque**) pour des personnes mal intentionnées. `<iframe>` est une porte d'entrée pour les attaques de ces personnes quand ils essaient de modifier malicieusement une page Web ou d'amener des utilisateurs à faire quelque chose qu'ils ne voudraient pas faire, comme révéler des informations confidentielles comme noms d'utilisateur et mots de passe. Pour cette raison, les ingénieurs spécialistes et les développeurs de navigateurs ont développé divers mécanismes de sécurité pour rendre `<iframe>` plus sûr. De meilleures pratiques sont aussi à prendre en compte — nous allons développer certaines d'entre elles ci-dessous.
 
-> **Note :** Le {{interwiki('wikipedia','détournement de clic')}} est un type d'attaque courant par l'intermédiaire de `<iframe>`&nbsp;: les hackeurs incorporent un `<iframe>` invisible dans votre document (ou intégrent votre document dans leur propre site malveillant) et s'en servent pour capturer les interactions utilisateur. C'est un moyen courant pour tromper des utilisateurs ou voler leurs données confidentielles.
+> **Note :** Le [détournement de clic](https://fr.wikipedia.org/wiki/D%C3%A9tournement_de_clic) est un type d'attaque courant par l'intermédiaire de `<iframe>`&nbsp;: les hackeurs incorporent un `<iframe>` invisible dans votre document (ou intégrent votre document dans leur propre site malveillant) et s'en servent pour capturer les interactions utilisateur. C'est un moyen courant pour tromper des utilisateurs ou voler leurs données confidentielles.
 
-Un exemple rapide d'abord - essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur - vous pouvez le [trouver en direct sur Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (voyez le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi). Vous ne verrez rien d'affiché sur la page, et si vous regardez la _Console_ dans les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) du navigateur, vous verrez un message vous disant pourquoi. Dans Firefox, ce message indique _Load denied by X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary does not permit framing_ (_Chargement interdit par X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary ne permet pas la mise en cadre_) . C'est parce que les développeurs qui ont construit MDN ont inclus un paramètre sur le serveur des pages du site empêchant l'intégration de ces pages sur un autre site avec `<iframe>` (voir [Configurer les directives CSP](#configurer_les_directives_csp), ci-dessous). Parfaitement sensé — il n'y a aucune raison d'intégrer une page entière de MDN dans d'autres pages, sauf à vouloir les intégrer dans votre site et les prétendre vôtres, ou bien tenter de voler des données par l'intermédiaire d'un détournement de clic, actions qui sont tous les deux des malhonnêtetés. De plus, si tout le monde se mettait à faire cela, toute la bande passante supplémentaire nécessaire commencerait à coûter un paquet d'argent à Mozilla.
+Un exemple rapide d'abord - essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur - vous pouvez le [trouver en direct sur Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (voyez le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi). Vous ne verrez rien d'affiché sur la page, et si vous regardez la _Console_ dans les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) du navigateur, vous verrez un message vous disant pourquoi. Dans Firefox, ce message indique _Load denied by X-Frame-Options: "https://developer.mozilla.org/en-US/docs/Glossary" does not permit framing_ (_Chargement interdit par X-Frame-Options: "https://developer.mozilla.org/en-US/docs/Glossary" ne permet pas la mise en cadre_) . C'est parce que les développeurs qui ont construit MDN ont inclus un paramètre sur le serveur des pages du site empêchant l'intégration de ces pages sur un autre site avec `<iframe>` (voir [Configurer les directives CSP](#configurer_les_directives_csp), ci-dessous). Parfaitement sensé — il n'y a aucune raison d'intégrer une page entière de MDN dans d'autres pages, sauf à vouloir les intégrer dans votre site et les prétendre vôtres, ou bien tenter de voler des données par l'intermédiaire d'un détournement de clic, actions qui sont tous les deux des malhonnêtetés. De plus, si tout le monde se mettait à faire cela, toute la bande passante supplémentaire nécessaire commencerait à coûter un paquet d'argent à Mozilla.
 
 #### N'intégrer que si nécessaire
 
@@ -264,7 +265,7 @@ L'utilisation de HTTPS nécessite un certificat de sécurité, ce qui peut être
 
 > **Note :** [Github pages](/fr/docs/Learn/Common_questions/Using_Github_pages) allows content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
 
-#### Toujours utiliser l'attribut  `sandbox`
+#### Toujours utiliser l'attribut `sandbox`
 
 Pour minimiser la possibilité que des attaquants commettent des actions néfastes sur votre site Web, vous deviez donner au contenu intégré uniquement les permissions nécessaires pour qu'il fasse son travail. Bien sûr, cela est aussi valable pour votre propre contenu. Le conteneur de code, dans lequel il peut être utilisé de manière appropriée — ou pour des tests — sans pouvoir causer aucun dommage (accidentel ou malveillant) au reste de la base du code s'appelle un [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)) (_bac à sable_).
 
@@ -276,7 +277,7 @@ Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une 
 
 #### Configurer les directives CSP
 
-{{Glossary("CSP")}} est un acronyme pour «&nbsp;**[content security policy](/fr/docs/Web/Security/CSP)** » (politique de sécurité du contenu)&nbsp;; les directives CSP fournissent un [ensemble d'en‑têtes HTTP](/fr/docs/Web/Security/CSP/CSP_policy_directives) (métadonnées adressées en même temps que les pages Web quand elles sont diffusées à partir d'un serveur web) conçues pour améliorer la sécurité des documents HTML. Quand elles sont destinées à sécuriser les `<iframe>`, vous pouvez _[configurer votre serveur pour qu'il adresse une en‑tête appropriée `X-Frame-Options`](/fr/docs/Web/HTTP/X-Frame-Options)._ Elle empêchera d'autres sites Web d'intégrer votre contenu dans leurs pages (ce qui pourrait permettre le {{interwiki('wikipedia','détournement de clic')}} ou accueillir d'autres attaques)&nbsp;; c'est exactement ce que les développeurs de MDN ont fait, comme nous l'avons vu plus haut.
+{{Glossary("CSP")}} est un acronyme pour «&nbsp;**[content security policy](/fr/docs/Web/Security/CSP)** » (politique de sécurité du contenu)&nbsp;; les directives CSP fournissent un [ensemble d'en‑têtes HTTP](/fr/docs/Web/Security/CSP/CSP_policy_directives) (métadonnées adressées en même temps que les pages Web quand elles sont diffusées à partir d'un serveur web) conçues pour améliorer la sécurité des documents HTML. Quand elles sont destinées à sécuriser les `<iframe>`, vous pouvez _[configurer votre serveur pour qu'il adresse une en‑tête appropriée `X-Frame-Options`](/fr/docs/Web/HTTP/X-Frame-Options)._ Elle empêchera d'autres sites Web d'intégrer votre contenu dans leurs pages (ce qui pourrait permettre le [détournement de clic](https://fr.wikipedia.org/wiki/D%C3%A9tournement_de_clic) ou accueillir d'autres attaques)&nbsp;; c'est exactement ce que les développeurs de MDN ont fait, comme nous l'avons vu plus haut.
 
 > **Note :** Lisez le post de Frederik Braun sur [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) pour plus d'informations sur le fond de ce sujet. Manifestement, une explication complète est hors des limites de cet article.
 
@@ -312,7 +313,7 @@ Voici un exemple utilisant l'élément {{htmlelement("embed")}} pour intégrer u
 
 Plutôt horrible, n'est-ce pas ? Le HTML généré par l'outil Adobe Flash avait tendance à être encore pire, utilisant un élément \<objet> avec un élément \<embed> intégré pour couvrir toutes les bases (voir un exemple.) Flash a même été utilisé avec succès comme contenu de repli pour la vidéo HTML5, pendant un certain temps, mais cela est de plus en plus souvent considéré comme non nécessaire.
 
-Regardons maintenant un exemple avec `<object>`&nbsp;; il intègre un PDF dans une  (voir  [l'exemple en direct](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) et le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html))&nbsp;:
+Regardons maintenant un exemple avec `<object>`&nbsp;; il intègre un PDF dans une (voir [l'exemple en direct](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) et le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html))&nbsp;:
 
 ```html
 <object data="mypdf.pdf" type="application/pdf"

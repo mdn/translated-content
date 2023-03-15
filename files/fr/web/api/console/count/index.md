@@ -1,6 +1,6 @@
 ---
 title: Console.count()
-slug: Web/API/Console/count
+slug: Web/API/console/count
 tags:
   - API
   - DOM
@@ -11,6 +11,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/count
 ---
+
 {{APIRef("Console API")}}
 
 Affiche dans la console le nombre de fois où la fonction `count()` a été appelée. Cette fonction accepte l'argument optionnel `label`.
@@ -88,10 +89,8 @@ console.count([label]);
 
 ## Spécifications
 
-| Spécification                                                                | Status                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.count")}}
+{{Compat}}

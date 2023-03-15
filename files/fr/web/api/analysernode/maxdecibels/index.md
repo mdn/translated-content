@@ -3,6 +3,7 @@ title: AnalyserNode.maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
 translation_of: Web/API/AnalyserNode/maxDecibels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété **`maxDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un nombre flottant à double précision représentant la puissance maximum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur maximum pour l'intervalle de résultats des méthodes `getFloatFrequencyData()` et `getByteFrequencyData()`.
@@ -25,7 +26,7 @@ Un nombre flottant à double précision.
 
 ## Exemple
 
-L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
@@ -56,10 +57,10 @@ function dessiner() {
 
   for(var i = 0; i < tailleMemoireTampon; i++) {
     hauteurBarre = tableauDonnees[i];
-    
+
     contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
        contexteCanvas.fillRect(x,HEIGHT-hauteurBarre/2,largeurBarre,hauteurBarre/2);
-       
+
     x += largeurBarre + 1;
   }
 };
@@ -69,13 +70,11 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-maxDecibels', 'maxDecibels')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.maxDecibels")}}
+{{Compat}}
 
 ## Voir aussi
 

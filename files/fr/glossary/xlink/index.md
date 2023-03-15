@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/XLink
 original_slug: Glossaire/XLink
 ---
+
 XLink est un standard du W3C qui sert à décrire des liens entre documents XML ou entre XML et d'autres documents. Un certain nombre de ses comportements est laissé à l'implémentation qui détermine comment ils doivent être gérés.
 
 Des XLinks simples sont "pris en charge" dans Firefox (au moins dans SVG et MathML), bien qu'ils ne fonctionnent pas comme des liens dans le cas où un document XML brut avec des XLinks est chargé et qu'une tentative est faite pour cliquer sur des points particuliers de l'arborescence XML.

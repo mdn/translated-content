@@ -1,16 +1,8 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Object.assign
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
+
 {{JSRef}}
 
 **`Object.assign()`** 메서드는 출처 객체들의 모든 {{jsxref("Object/propertyIsEnumerable", "열거 가능", "", 1)}}한 {{jsxref("Object/hasOwnProperty", "자체 속성", "", 1)}}을 복사해 대상 객체에 붙여넣습니다. 그 후 대상 객체를 반환합니다.
@@ -38,13 +30,13 @@ Object.assign(target, ...sources)
 
 목표 객체의 속성 중 출처 객체와 동일한 {{jsxref("Object/keys", "키", "", 1)}}를 갖는 속성의 경우, 그 속성 값은 출처 객체의 속성 값으로 덮어씁니다. 출처 객체들의 속성 중에서도 키가 겹칠 경우 뒤쪽 객체의 속성 값이 앞쪽 객체의 속성 값보다 우선합니다.
 
-`Object.assign()` 메서드는 출처 객체의 '열거 가능한 자체 속성'만 목표 객체로 복사합니다. 출처 객체에서 속성 값을 가져올 땐 `[[Get]]`, 목표 객체에 속성 값을 지정할 땐 `[[Set]]`을 사용하므로 각각 [접근자](/ko/docs/Web/JavaScript/Reference/Functions/get)와 [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set)를 호출합니다. 그러므로 `Object.assign()`은 속성을 단순히 복사하거나 새로 정의하는 것이 아니라, 할당(_assign_)하는 것입니다. 따라서 출처 객체가 접근자를 포함하는 경우, 프로토타입에 새로운 속성을 추가하는 용도로는 적합하지 않을 수도 있습니다.
+`Object.assign()` 메서드는 출처 객체의 '열거 가능한 자체 속성'만 목표 객체로 복사합니다. 출처 객체에서 속성 값을 가져올 땐 `[[Get]]`, 목표 객체에 속성 값을 지정할 땐 `[[Set]]`을 사용하므로 각각 [접근자](/ko/docs/Web/JavaScript/Reference/Functions/get)와 [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set)를 호출합니다. 그러므로 `Object.assign()`은 속성을 단순히 복사하거나 새로 정의하는 것이 아니라, 할당(_assign_)하는 것입니다. 따라서 출처 객체가 접근자를 포함하는 경우, 프로토타입에 새로운 속성을 추가하는 용도로는 적합하지 않을 수도 있습니다.
 
 열거성을 포함한 속성 정의를 프로토타입으로 복사하려면 {{jsxref("Object.getOwnPropertyDescriptor()")}}와 {{jsxref("Object.defineProperty()")}}를 사용하세요.
 
-`Object.assign()`은 {{jsxref("String")}} 키와 {{jsxref("Symbol")}} 키 속성 모두 복사합니다.
+`Object.assign()`은 {{jsxref("String")}} 키와 {{jsxref("Symbol")}} 키 속성 모두 복사합니다.
 
-오류(대상 객체의 속성이 쓰기 불가한 상태 등)를 마주치면 {{jsxref("TypeError")}}가 발생합니다. 그러나 오류가 발생하기 전에 이미 추가/변경한 다른 속성의 값은 대상 객체에 유지됩니다.
+오류(대상 객체의 속성이 쓰기 불가한 상태 등)를 마주치면 {{jsxref("TypeError")}}가 발생합니다. 그러나 오류가 발생하기 전에 이미 추가/변경한 다른 속성의 값은 대상 객체에 유지됩니다.
 
 > **참고:** `Object.assign()`의 출처에 {{jsxref("null")}} 또는 {{jsxref("undefined")}}를 제공해도 예외는 발생하지 않습니다.
 
@@ -120,7 +112,7 @@ console.log(obj); // { a: 1, b: 2, c: 3 }
 
 같은 키를 가진 속성의 경우 매개변수 순서에서 더 뒤에 위치한 객체의 값으로 덮어씁니다.
 
-### 심볼 속성 복사
+### 심볼 속성 복사
 
 ```js
 const o1 = { a: 1 };
@@ -198,18 +190,18 @@ console.log(copy);
 // 속성의 온전한 기술자를 복사해 할당하는 함수
 function completeAssign(target, ...sources) {
   sources.forEach(source => {
-    let descriptors = Object.keys(source).reduce((descriptors, key) => {
-      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
-      return descriptors;
-    }, {});
+    let descriptors = Object.keys(source).reduce((descriptors, key) => {
+      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
+      return descriptors;
+    }, {});
 
-    // 기본적으로 Object.assign은 열거 가능한 심볼도 복사함
-    Object.getOwnPropertySymbols(source).forEach(sym => {
-      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
-      if (descriptor.enumerable) {
-        descriptors[sym] = descriptor;
-      }
-    });
+    // 기본적으로 Object.assign은 열거 가능한 심볼도 복사함
+    Object.getOwnPropertySymbols(source).forEach(sym => {
+      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
+      if (descriptor.enumerable) {
+        descriptors[sym] = descriptor;
+      }
+    });
     Object.defineProperties(target, descriptors);
   });
   return target;

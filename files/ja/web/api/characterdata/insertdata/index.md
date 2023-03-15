@@ -1,12 +1,8 @@
 ---
 title: CharacterData.insertData()
 slug: Web/API/CharacterData/insertData
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.insertData
-translation_of: Web/API/CharacterData/insertData
 ---
+
 {{APIRef("DOM")}}
 
 **`insertData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、指定されたデータをこの `CharacterData` ノードの現在のデータの、既存のデータの先頭からのオフセットの位置に挿入します。

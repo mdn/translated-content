@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Server-side/First_steps
 original_slug: Learn/Server-side/Premiers_pas
 ---
+
 {{LearnSidebar}}
 
 Dans ce module nous répondrons à quelques questions fondamentales sur la programmation côté serveur — "Qu'est-ce que c'est ?", "En quoi diffère-t-elle de la programmation côté client ?" et "Pourquoi est-ce si utile ?". Nous fournirons ensuite un aperçu de certaines infrastructures d'applications web (aussi appelé frameworks) côté serveurs parmi les plus populaires, ainsi que des conseils pour sélectionner la plus approprié pour créer votre premier site. Enfin un article vous présentera les questions de sécurité pour un serveur web.

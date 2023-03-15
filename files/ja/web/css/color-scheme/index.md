@@ -1,22 +1,8 @@
 ---
 title: color-scheme
 slug: Web/CSS/color-scheme
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - color-adjust
-  - recipe:css-property
-browser-compat: css.properties.color-scheme
-translation_of: Web/CSS/color-scheme
 ---
+
 {{CSSRef}}
 
 **`color-scheme`** は CSS のプロパティで、要素がどのような配色で快適に表示されるかを示すことができます。

@@ -3,6 +3,7 @@ title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 translation_of: Web/API/HTMLSelectElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 L'interface **`HTMLSelectElement`** représente un élément HTML {{HTMLElement("select")}}. Cet élément partage aussi toute les propriétés et méthodes des autres elements HTML via l'interface {{ domxref("HTMLElement") }}.
@@ -44,7 +45,7 @@ _Cette interface hérite des propriétés de {{domxref("HTMLElement")}}, de {{do
 - {{domxref("HTMLSelectElement.validity")}} {{ReadOnlyInline}}
   - : Un {{domxref("ValidityState")}} reflétant l'état de validité dans lequel se trouve ce contrôle.
 - {{domxref("HTMLSelectElement.value")}}
-  - : Une chapine de caractères {{domxref("DOMString")}} reflétant la valeur du contrôle de formulaire. Renvoie la propriété `value` du premier élément d'option sélectionné s'il y en a un, sinon la chaîne vide.
+  - : Une chaîne de caractères {{domxref("DOMString")}} reflétant la valeur du contrôle de formulaire. Renvoie la propriété `value` du premier élément d'option sélectionné s'il y en a un, sinon la chaîne vide.
 - {{domxref("HTMLSelectElement.willValidate")}} {{ReadOnlyInline}}
   - : Un {{jsxref("Boolean")}} qui indique si le bouton est un candidat à la validation des contraintes. Il vaut `false` si des conditions l'empêchent de bénéficier de la validation par contrainte.
 
@@ -104,16 +105,11 @@ Une meilleure façon de suivre les modifications apportées à la sélection de 
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                                                                                                                                                                                                                                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#htmlselectelement', 'HTMLSelectElement')}}             | {{Spec2('HTML WHATWG')}} | Ajoute la propriété `autocomplete` et la méthode `reportValidity()`.                                                                                                                                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', 'forms.html#htmlselectelement', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Ajoute les propriétés `autofocus`, `form`, `required`, `labels`, `selectedOptions`, `willValidate`, `validity` et `validationMessage`. La propriété `tabindex` et les méthodes `blur()` et `focus()` ont été déplacées vers {{domxref("HTMLElement")}}. Les méthodes `item()`, `namedItem()`, `checkValidity()` et `setCustomValidity()`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-94282980', 'HTMLSelectElement')}}         | {{Spec2('DOM2 HTML')}}     | `options` retourne désormais un {{domxref("HTMLOptionsCollection")}}. `length` retourne désormais un `unsigned long`.                                                                                                                                                                                                                   |
-| {{SpecName('DOM1', 'level-one-html.html#ID-94282980', 'HTMLSelectElement')}}     | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                                                                                                                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## Voir aussi
 

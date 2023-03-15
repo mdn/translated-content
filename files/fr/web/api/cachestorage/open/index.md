@@ -12,9 +12,10 @@ tags:
   - open
 translation_of: Web/API/CacheStorage/open
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La fonction **`open()`**de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.
+La fonction **`open()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.
 
 Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/caches).
 
@@ -62,13 +63,11 @@ self.addEventListener('install', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-cachestorage-open', 'CacheStorage: open')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage.open")}}
+{{Compat}}
 
 ## Voir aussi
 

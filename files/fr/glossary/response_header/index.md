@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Response_header
 original_slug: Glossaire/En-têtes_de_réponse
 ---
+
 Un **en-tête de réponse** est un {{glossary("header","en-tête HTTP")}} qui peut être utilisé dans une réponse HTTP et qui ne concerne pas le contenu du message. Les en-têtes de réponse comme {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} ou {{HTTPHeader("Server")}} sont utilisés pour donner un contexte plus détaillé de la réponse.
 
 Tous les en-têtes apparaissant dans une réponse ne sont pas des _en-têtes de réponse_. Par exemple, l'en-tête {{HTTPHeader("Content-Length")}} est un {{glossary("Entity header","en-tête d'entité")}} faisant référence à la taille du coprs du message de requête. Cependant, ces requêtes d'entité sont généralement appelées en-têtes de réponses dans un tel contexte.
@@ -35,7 +36,7 @@ X-kuma-revision: 1085259
 x-frame-options: DENY
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Savoir technique
 

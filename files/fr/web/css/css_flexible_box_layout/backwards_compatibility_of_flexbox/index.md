@@ -1,336 +1,116 @@
 ---
-title: Mises en page avancées avec les boîtes flexibles
+title: Rétrocompatibilité des boîtes flexibles (flexbox)
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
-tags:
-  - CSS
-  - Reference
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mixins
+translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 ---
+
 {{CSSRef}}
 
-Voici un ensemble de _mixins_ pour vous permettre de bidouiller avec les boîtes flexibles grâce au support natif des navigateurs actuels.
+Les boîtes flexibles (<i lang="en">flexbox</i>) sont largement prises en charge par les navigateurs modernes. Toutefois, quelques problèmes peuvent survenir. Dans ce guide, nous verrons précisément quelle est la prise en charge des boîtes flexibles dans les navigateurs. Nous verrons les problèmes éventuels ainsi que les ressources et méthodes afin de créer des méthodes de contournement ou des alternatives.
 
-Dans ces _mixins_, on utilisera :
+## L'histoire des boîtes flexibles
 
-- Des _fallbacks_ avec l'ancienne syntaxe 'box' (Firefox et les anciens WebKit) et les syntaxes préfixées (IE10, les navigateurs WebKit sans ajout de `flex`)
-- La syntaxe finale standard (Firefox, Safari, Chrome, IE11, Opera)
+Comme toute spécification CSS, la spécification <i lang="en">Flexbox</i> a vu de nombreuses modifications avant d'atteindre le statut de <i lang="en">Candidate Recommendation</i> dont elle dispose aujourd'hui. Dans cet état actuel, il ne devrait pas y avoir de modification majeure dans la spécification, mais cette stabilité n'a pas toujours existé par le passé.
 
-Ces _mixins_ ont été inspirés par : [https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)
+Les boîtes flexibles ont été implémentées de façon expérimentale dans plusieurs navigateurs. À cette époque, créer une implémentation expérimentale consistait à utiliser un préfixe spécifique. Ces préfixes devaient permettre aux implémentations de la spécification d'être testées et manipulées par les équipes de développement des navigateurs et par les développeuses et développeurs web, sans qu'il y ait de conflit avec les autres implémentations. On ne devait pas utiliser d'implémentation expérimentale pour du code de production. Toutefois, les préfixes ont fini par être utilisés en production et les modifications apportées à la spécification expérimentale nécessitaient une réactivité des développeuses et développeurs web pour maintenir leurs sites.
 
-Et les articles suivants ont été d'une aide précieuse :
+[En 2009](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/), la spécification était plutôt différente. Pour créer un conteneur flexible, il fallait utiliser `display: box` et on disposait ensuite de différentes propriétés `box-*` qui permettaient d'obtenir des résultats semblables à ceux qu'offrent les boîtes flexibles actuelles.
 
-- <https://w3.org/tr/css3-flexbox/>
-- <https://msdn.microsoft.com/en-us/library/ie/hh772069(v=vs.85).aspx>
-- <https://css-tricks.com/using-flexbox/>
-- <https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/>
-- [Un guide complet sur Flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [Un guide visuel pour les flexbox CSS3 : Flexbox Playground](https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/)
+Vint ensuite [une mise à jour de la spécification](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/) pour mettre à jour la syntaxe `display: flexbox`. Là encore, ces valeurs étaient préfixées.
 
-> **Note :** Actuellement, les mixins ne sont pas pris en charge nativement par les navigateurs. Il faut utiliser un pré-processeur CSS afin de tirer parti des techniques suivantes. Cependant, les pré-processeurs ne font que générer du code CSS valide et on pourra donc appliquer les techniques précédentes en utilisant du « pur » CSS si on le souhaite.
+Enfin, la spécification a été mise à jour pour définir `display: flex` comme façon de créer un conteneur flexible. La prise en charge des navigateurs sur la version à jour de la spécification est excellent à partir de ce moment.
 
-### Les conteneurs flexibles
+Quelques anciens articles font référence à d'anciennes versions de la spécification. Ceux-ci sont facilement identifiables en raison des modifications concernant la création d'un conteneur flexible. Si vous lisez des règles telles que `display: box` ou `display: flexbox`, vous pouvez en déduire qu'il s'agit d'informations obsolètes.
 
-En utilisant la valeur `flex` pour la propriété {{cssxref("display")}}, on génère une boîte pour un conteneur flexible de bloc. La valeur `inline-flex` permet quant à elle de générer un conteneur flexible en ligne (_inline_).
+## État de la compatibilité des navigateurs
 
-- Valeurs : `flex` | `inline-flex`
-- [Spécifications](https://drafts.csswg.org/css-flexbox/#flex-containers)
+La prise en charge des navigateurs pour les boîtes flexibles est excellente et la grande partie des navigateurs n'a pas besoin de préfixe. Safari a été le dernier des principaux navigateurs à retirer les préfixes avec la sortie de Safari 9 en 2015. Les deux navigateurs pour lesquels il est nécessaire de faire attention à la compatibilité sont&nbsp;:
+
+- Internet Explorer 10 qui implémentait la version `display: flexbox` avec le préfixe `-ms-`.
+- UC Browser qui prend en charge la version de 2009 avec `display: box` et avec le préfixe `-webkit-`.
+
+On notera qu'Internet Explorer 11 prend bien en charge la spécification actuelle avec `display: flex` mais que de nombreux bugs sont présents dans cette implémentation.
+
+## Problèmes fréquents
+
+La plupart des problèmes relatifs aux boîtes flexibles sont liés aux modifications de la spécification lors de son développement et au fait que de nombreuses personnes ont essayé d'utiliser des implémentations expérimentales en production. Si vous souhaitez garantir une rétrocompatibilité avec certaines anciennes versions de navigateurs et notamment IE10 et IE11, le site [Flexbugs](https://github.com/philipwalton/flexbugs) représente une ressource précieuse. Vous pourrez voir que de nombreux bugs sont présents pour d'anciennes versions des navigateurs et sont désormais corrigés pour les versions actuelles. Chacun de ces bugs possède une méthode de contournement associée, ce qui peut faire gagner un temps précieux.
+
+Si vous souhaitez inclure de très anciens navigateurs prenant en charge les boîtes flexibles, il vous faudra inclure les préfixes éditeurs dans votre feuille CSS, en plus de la version non-préfixée. Cela devient de moins en moins nécessaire vue l'étendue de la compatibilité actuelle.
 
 ```css
-@mixin flexbox {
+.wrapper {
   display: -webkit-box;
-  display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-
-// Exemple d'utilisation
-%flexbox { @include flexbox; }
 ```
 
-```css
-@mixin inline-flex {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
+[<i lang="en">Autoprefixer Online</i>](https://autoprefixer.github.io/) est un outil utile pour déterminer quels préfixes sont recommandés selon les versions des navigateurs qu'on souhaite prendre en charge. Vous pouvez également consulter [<i lang="en">Can I Use</i>](https://caniuse.com/#feat=flexbox) ou les tableaux de compatibilité en bas des pages de référence MDN pour savoir quand les préfixes ont été retirés des navigateurs.
 
-%inline-flex { @include inline-flex; }
-```
+## Techniques de recours
 
-### Direction des boîtes flexibles
+La mise en place des boîtes flexibles dans un document est effectuée grâce à la propriété [`display`](/fr/docs/Web/CSS/display). Lorsqu'on souhaite prendre en charge de très anciens navigateurs qui ne prennent pas du tout en charge les boîtes flexibles, des méthodes alternatives peuvent être construites en surchargeant une méthode de disposition par une autre. La spécification définit ce qui se produit si on utilise une autre méthode de disposition sur un élément qui devient ensuite un élément flexible.
 
-La propriété {{cssxref("flex-direction")}} indique la façon dont les objets flexibles sont organisés dans le conteneur flexible en définissant la direction principale du conteneur. Autrement dit, elle détermine la direction selon laquelle les éléments flexibles sont disposés.
+### Éléments flottants
 
-- Valeurs possibles : `row` (la valeur par défaut)| `row-reverse` | `column` | `column-reverse`
-- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-direction-property)
+> "`float` et `clear` ne créent pas de flottement ou de dégagement pour les éléments flexibles et ne les retirent pas du flux." - [3. Conteneurs flexibles](https://www.w3.org/TR/css-flexbox-1/#flex-containers)
 
-```css
-@mixin flex-direction($value: row) {
-  @if $value == row-reverse {
-    -webkit-box-direction: reverse;
-    -webkit-box-orient: horizontal;
-    -moz-box-direction: reverse;
-    -moz-box-orient: horizontal;
-  } @else if $value == column {
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-box-direction: normal;
-    -moz-box-orient: vertical;
-  } @else if $value == column-reverse {
-    -webkit-box-direction: reverse;
-    -webkit-box-orient: vertical;
-    -moz-box-direction: reverse;
-    -moz-box-orient: vertical;
-  } @else {
-    -webkit-box-direction: normal;
-    -webkit-box-orient: horizontal;
-    -moz-box-direction: normal;
-    -moz-box-orient: horizontal;
-  }
-  -webkit-flex-direction: $value;
-  -ms-flex-direction: $value;
-  flex-direction: $value;
-}
+Dans l'exemple qui suit, on a deux blocs flottants et on applique ensuite `display: flex` sur le conteneur. Les éléments sont alors des éléments flexibles ce qui signifie qu'ils sont étirés sur des hauteurs égales. Tout comportement associé au flottement n'aura pas lieu.
 
-// Version plus courte :
-@mixin flex-dir($args...) { @include flex-direction($args...); }
-```
+Pour tester le comportement alternatif, vous pouvez retirer `display: flex` du conteneur englobant.
 
-### `flex-wrap`
+{{EmbedGHLiveSample("css-examples/flexbox/browsers/float.html", '100%', 550)}}
 
-La propriété {{cssxref("flex-wrap")}} permet de contrôler si le conteneur flexible s'étend sur une ou sur un plusieurs lignes ainsi que la direction de l'axe secondaire (qui définit la direction dans laquelle les lignes sont « empilées »).
+### `display: inline-block`
 
-- Valeurs possibles : `nowrap` (la valeur par défaut)| `wrap` | `wrap-reverse`
-- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-wrap-property)
+Lorsqu'un élément disposé avec `inline-block` devient un élément flexible, cet élément devient analogue à un bloc et le comportement de `display: inline-block` qui permet de conserver les espaces blancs entre les éléments ne s'applique plus.
+
+Vous pouvez retirer la règle avec `display: flex` dans l'exemple qui suit pour voir le comportement alternatif. Vous verrez de l'espace ajouté entre les éléments, car c'est ce que préfère `display: inline-block`.
+
+{{EmbedGHLiveSample("css-examples/flexbox/browsers/inline-block.html", '100%', 550)}}
+
+### `display: table-`
+
+Les propriétés CSS relatives aux dispositions en tableaux s'avèrent potentiellement très utiles comme méthode de recours, car elles permettent d'obtenir des organisations de contenu analogues avec des colonnes sur toute la hauteur, du centrage vertical et car elles fonctionnent jusqu'à Internet Explorer 8.
+
+Si vous utilisez `display: table-cell` sur un élément HTML, cet élément récupèrera la mise en forme d'une cellule de tableau HTML. Pour celles-ci, CSS crée des boîtes anonymes qui représentent ces éléments et il n'est pas nécessaire d'envelopper chaque élément dans un conteneur pour représenter une ligne puis dans un second qui représente le tableau. Il n'est pas possible de mettre en forme ces boîtes anonymes, celles-ci servent uniquement à corriger la structure.
+
+Si vous déclarez ensuite `display: flex` sur l'élément parent, ces boîtes anonymes ne sont pas créées et l'élément redevient un enfant direct qui peut devenir un élément flexible, perdant tout aspect relatif au tableau.
+
+> "Note&nbsp;: certaines valeurs de `display` déclenchent normalement la création de boîtes anonymes autour de la boîte originale. Si une telle boîte est un élément flexible, cet élément devient un bloc puis la création des boîtes anonymes n'a pas lieu. Ainsi, deux éléments flexibles adjacents avec `display: table-cell` deviendront deux éléments flexibles distincts avec `display: block` plutôt que d'être enveloppés au sein d'un même tableau anonyme." - [4. Éléments flexibles](https://www.w3.org/TR/css-flexbox-1/#flex-items)
+
+{{EmbedGHLiveSample("css-examples/flexbox/browsers/table-cell.html", '100%', 550)}}
+
+### La propriété `vertical-align`
+
+L'exemple qui suit illustre l'utilisation de la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) associée au mode `display: inline-block`. Les deux modes `display: table-cell` et `display: inline-block` permettent d'utiliser cette propriété. La propriété `vertical-align` permet d'opérer un alignement vertical avant l'application des boîtes flexibles. Cette propriété est ignorée avec les boîtes flexibles et elle peut donc être utilisée avec `display: table-cell` ou `display: inline-block` comme méthode d'alignement alternative aux propriétés d'alignement des boîtes flexibles.
+
+{{EmbedGHLiveSample("css-examples/flexbox/browsers/vertical-align.html", '100%', 550)}}
+
+## `@supports` et <i lang="en">flexbox</i>
+
+Il est possible d'utiliser [`@supports`](/fr/docs/Web/CSS/@supports) afin de détecter la prise en charge des boîtes flexibles&nbsp;:
 
 ```css
-@mixin flex-wrap($value: nowrap) {
-  // No Webkit/FF Box fallback.
-  -webkit-flex-wrap: $value;
-  @if $value == nowrap {
-    -ms-flex-wrap: none;
-  } @else {
-    -ms-flex-wrap: $value;
-  }
-  flex-wrap: $value;
+@supports (display: flex) {
+  /* code utilisé pour les navigateurs qui
+     prennent en charge cette fonctionnalité */
 }
 ```
 
-### `flex-flow`
-
-La propriété {{cssxref("flex-flow")}} est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour définir `flex-direction` et `flex-wrap` qui permettent respectivement de définir l'axe principal et l'axe secondaire.
-
-- Valeur par défaut : `row` (la valeur par défaut)| `nowrap`
-- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-flow-property)
+On notera qu'Internet Explorer 11 ne prend pas en charge les requêtes de fonctionnalité mais prend bien en charge les boîtes flexibles. Si vous choisissez de considérer l'implémentation d'IE11 comme étant trop erronée et que vous souhaitez que ce navigateur utilise votre code de recours, vous pouvez alors utiliser les requêtes de fonctionnalité pour ne servir le code <i lang="en">flexbox</i> qu'aux navigateurs qui disposent d'une prise en charge suffisante. Pour rappel, si on souhaite inclure les versions des navigateurs qui utilisaient des préfixes spécifiques, on devra inclure la version préfixée dans la requête de fonctionnalité. La requête suivant inclura par exemple UC Browser qui prend en charge les requêtes de fonctionnalités et une ancienne syntaxe, préfixée, pour les boîtes flexibles&nbsp;:
 
 ```css
-@mixin flex-flow($values: (row nowrap)) {
-  // No Webkit/FF Box fallback.
-  -webkit-flex-flow: $values;
-  -ms-flex-flow: $values;
-  flex-flow: $values;
+@supports (display: flex) or (display: -webkit-box) {
+  /* code pour les navigateurs qui
+     prennent en charge cette fonctionnalité */
 }
 ```
 
-### `order`
+Pour plus d'informations sur les requêtes de fonctionnalités, vous pouvez lire [<i lang="en">Using Feature Queries in CSS (en anglais)</i>](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) sur le blog Hacks de Mozilla.
 
-La propriété {{cssxref("order")}}  contrôle l'ordre dans lequel les éléments apparaissent dans le conteneur flexible en les affectant à des groupes ordinaux.
+## Conclusion
 
-- Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (0 est la valeur par défaut)
-- [Spécification](https://drafts.csswg.org/css-flexbox/#order-property)
-
-```css
-@mixin order($int: 0) {
-  -webkit-box-ordinal-group: $int + 1;
-  -moz-box-ordinal-group: $int + 1;
-  -webkit-order: $int;
-  -ms-flex-order: $int;
-  order: $int;
-}
-```
-
-### `flex-grow`
-
-La propriété {{cssxref("flex-grow")}} définit le facteur d'expansion flexible. Les nombres négatifs ne sont pas autorisés.
-
-- Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (1 est la valeur par défaut)
-- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-grow-property)
-
-```css
-@mixin flex-grow($int: 1) {
-  -webkit-box-flex: $int;
-  -moz-box-flex: $int;
-  -webkit-flex-grow: $int;
-  -ms-flex: $int;
-  flex-grow: $int;
-}
-```
-
-### `flex-shrink`
-
-La propriété {{cssxref("flex-shrink")}} permet de définir le facteur de réduction des éléments flexibles. Les nombres négatifs ne sont pas autorisés.
-
-- Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (1 est la valeur par défaut)
-- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-shrink-property)
-
-```css
-@mixin flex-shrink($int: 0) {
-  -webkit-flex-shrink: $int;
-  -moz-flex-shrink: $int;
-  -ms-flex: $int;
-  flex-shrink: $int;
-}
-```
-
-### `flex-basis`
-
-La propriété {{cssxref("flex-basis")}} permet de définir la longueur de base à partir de laquelle s'étendre ou se réduire. Les longueurs négatives ne sont pas autorisées.
-
-- Valeurs : voir la page {{cssxref("flex-basis")}}, la valeur par défaut est `auto`.
-- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-basis-property)
-
-```css
-@mixin flex-basis($value: auto) {
-  -webkit-flex-basis: $value;
-  flex-basis: $value;
-}
-```
-
-### `flex`
-
-La [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) {{cssxref("flex")}} permet de définir les composants d'une longueur flexible : le facteur d'expansion (`flex-grow`), le facteur de réduction (`flex-shrink`) et la longueur de base (`flex-basis`). Lorsqu'un élément est un élément flexible, c'est `flex` qui sera utilisée (plutôt que `width` ou `height`) afin de déterminer la taille de l'élément. Si l'élément n'est pas un objet flexible, `flex` n'aura aucun effet.
-
-- Valeur : voir la page {{cssxref("flex")}} pour les valeurs possibles et la valeur par défaut
-- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-property)
-
-```css
-@mixin flex($fg: 1, $fs: 0, $fb: auto) {
-
-  // Définir une variable pour l'utiliser
-  // avec les propriétés box-flex
-  $fg-boxflex: $fg;
-
-  // Box-Flex ne prend qu'une valeur, on prend donc
-  // la première valeur de la liste et on la renvoie.
-  @if type-of($fg) == 'list' {
-    $fg-boxflex: nth($fg, 1);
-  }
-
-  -webkit-box: $fg-boxflex;
-  -moz-box: $fg-boxflex;
-  -webkit-flex: $fg $fs $fb;
-  -ms-flex: $fg $fs $fb;
-  flex: $fg $fs $fb;
-}
-```
-
-### `justify-content`
-
-La propriété {{cssxref("justify-content")}} permet d'aligner les éléments flexibles le long de l'axe principal pour la ligne en cours dans le conteneur flexible. Cet alignement s'effectue après que les longueurs flexibles et les marges automatiques aient été résolues. Généralement, cela permet de distribuer l'espace restant entre les éléments d'une ligne qui ne sont pas flexibles ou qui ont atteint leur taille maximale. Cela contrôle également le comportement des éléments lorsqu'ils dépassent de la ligne.
-
-> **Note :** Les valeurs de la forme `space-*` ne sont pas prises en charge avec les anciennes syntaxes.
-
-- Valeurs : `flex-start` (la valeur par défaut)| `flex-end` | `center` | `space-between` | `space-around`
-- [Spécification](https://drafts.csswg.org/css-flexbox/#justify-content-property)
-
-```css
-@mixin justify-content($value: flex-start) {
-  @if $value == flex-start {
-    -webkit-box-pack: start;
-    -moz-box-pack: start;
-    -ms-flex-pack: start;
-  } @else if $value == flex-end {
-    -webkit-box-pack: end;
-    -moz-box-pack: end;
-    -ms-flex-pack: end;
-  } @else if $value == space-between {
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
-  } @else if $value == space-around {
-    -ms-flex-pack: distribute;
-  } @else {
-    -webkit-box-pack: $value;
-    -moz-box-pack: $value;
-    -ms-flex-pack: $value;
-  }
-  -webkit-justify-content: $value;
-  justify-content: $value;
-}
-  // Version plus courte :
-  @mixin flex-just($args...) { @include justify-content($args...); }
-```
-
-### `align-items`
-
-Les objets flexibles peuvent être alignés le long de l'axe secondaire (comme pour `justify-content` mais dans l'axe perpendiculaire). {{cssxref("align-items")}} définit l'alignement par défaut de tous les objets du conteneur flexible. `align-self` permet aux objets flexibles de surcharger cette valeur (pour les objets anonymes, `align-self` correspondra toujours à `align-items`).
-
-- Valeurs : `flex-start` | `flex-end` | `center` | `baseline` | `stretch` (la valeur par défaut)
-- [Spécification](https://drafts.csswg.org/css-flexbox/#align-items-property)
-
-```css
-@mixin align-items($value: stretch) {
-  @if $value == flex-start {
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -ms-flex-align: start;
-  } @else if $value == flex-end {
-    -webkit-box-align: end;
-    -moz-box-align: end;
-    -ms-flex-align: end;
-  } @else {
-    -webkit-box-align: $value;
-    -moz-box-align: $value;
-    -ms-flex-align: $value;
-  }
-  -webkit-align-items: $value;
-  align-items: $value;
-}
-```
-
-### `align-self`
-
-- Valeurs : `auto` (la valeur par défaut)| `flex-start` | `flex-end` | `center` | `baseline` | `stretch`
-- [Spécification](https://drafts.csswg.org/css-flexbox/#align-items-property)
-
-```css
-@mixin align-self($value: auto) {
-  // No Webkit Box Fallback.
-  -webkit-align-self: $value;
-  @if $value == flex-start {
-    -ms-flex-item-align: start;
-  } @else if $value == flex-end {
-    -ms-flex-item-align: end;
-  } @else {
-    -ms-flex-item-align: $value;
-  }
-  align-self: $value;
-}
-```
-
-### `align-content`
-
-La propriété {{cssxref("align-content")}} permet d'aligner les lignes créées dans le conteneur flexible lorsqu'il reste de l'espace le long de l'axe secondaire. Cette propriété n'a aucun effet lorsqu'il n'y a qu'une seule ligne.
-
-- Valeurs : `flex-start` | `flex-end` | `center` | `space-between` | `space-around` | `stretch` (la valeur par défaut)
-- [Spécification](https://drafts.csswg.org/css-flexbox/#align-content-property)
-
-```css
-@mixin align-content($value: stretch) {
-  // No Webkit Box Fallback.
-  -webkit-align-content: $value;
-  @if $value == flex-start {
-    -ms-flex-line-pack: start;
-  } @else if $value == flex-end {
-    -ms-flex-line-pack: end;
-  } @else {
-    -ms-flex-line-pack: $value;
-  }
-  align-content: $value;
-}
-```
+Bien que nous ayons vu ici certains problèmes potentiels et méthodes alternatives, les boîtes flexibles peuvent tout à fait être utilisées en production et de façon généralisée. Ce guide vous sera utile si vous rencontrez un problème particulier ou qu'il vous faut prendre en charge de plus vieux navigateurs.

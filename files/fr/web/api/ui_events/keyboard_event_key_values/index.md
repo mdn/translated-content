@@ -4,6 +4,7 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
 translation_of: Web/API/KeyboardEvent/key/Key_Values
 original_slug: Web/API/KeyboardEvent/key/Key_Values
 ---
+
 Les tableaux ci-dessous énumèrent les valeurs clés standard dans différentes catégories de clés, avec une explication de l'utilisation habituelle de la clé. Les codes de clés virtuels correspondants pour les plateformes communes sont inclus lorsqu'ils sont disponibles.
 
 Apprenez à utiliser ces valeurs clés en JavaScript en utilisant [KeyboardEvent.key](/fr/docs/Web/API/KeyboardEvent/key)
@@ -1192,7 +1193,7 @@ Some keys are common across multiple languages, while others exist only on keybo
         identify which specific dead key was pressed (in cases where more than
         one exists), you can do so by examining the
         {{domxref("KeyboardEvent")}}'s associated
-        {{event("compositionupdate")}} event's
+        <a href="/fr/docs/Web/API/Element/compositionupdate_event"><code>compositionupdate</code></a> event's
         {{domxref("CompositionEvent.data", "data")}} property.
       </td>
       <td></td>
@@ -1599,7 +1600,7 @@ These keys are only available on Japanese keyboards.
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's  {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event) event's {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK
 
@@ -2737,7 +2738,7 @@ These media keys are used specifically for controlling audio.
   </thead>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/en-US/docs/Mozilla/B2G_OS).
+\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/fr/docs/Mozilla/B2G_OS).
 
 ## TV control keys
 
@@ -3025,9 +3026,9 @@ Because modern remote controls for media devices often include buttons beyond th
 
 The values below are derived in part form a number of consumer electronics technical specifications:
 
-- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (part of the {{interwiki("wikipedia", "ATSC")}} specification)
+- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://en.wikipedia.org/wiki/ATSC_standards) specification)
 - [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
-- [ANSI/CEA-2014-B](http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
+- [ANSI/CEA-2014-B](<http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx>): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
 
 > **Note :** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
@@ -3698,7 +3699,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"Teletext"</code></td>
       <td>
-        Toggles display of {{interwiki("wikipedia", "teletext")}},
+        Toggles display of <a href="https://en.wikipedia.org/wiki/Teletext">teletext</a>,
         if available.
       </td>
       <td><code>VK_TELETEXT</code></td>

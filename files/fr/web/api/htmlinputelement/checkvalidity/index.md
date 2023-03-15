@@ -5,6 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLObjectElement.checkValidity
 translation_of: Web/API/HTMLInputElement/checkValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLInputElement.checkValidity()`** renvoie une valeur booléenne qui indique la validité de la valeur de l'élément. Si la valeur n'est pas valide, cette méthode déclenche également l'évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) sur l'élément.

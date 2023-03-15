@@ -1,18 +1,8 @@
 ---
 title: CSSNumericValue.add()
 slug: Web/API/CSSNumericValue/add
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - add()
-browser-compat: api.CSSNumericValue.add
-translation_of: Web/API/CSSNumericValue/add
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`add()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、指定された値を `CSSNumericValue` に加算します。

@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Preflight_request
 original_slug: Glossaire/requete_pre-verification
 ---
+
 Une requête de pré-vérification cross-origin [CORS](/fr/docs/Glossaire/CORS) est une requête de vérification faite pour contrôler si le protocole {{Glossary("CORS")}} est autorisé.
 
 C'est une requête utilisant la méthode {{HTTPMethod("OPTIONS")}} qui utilise trois en-têtes HTTP : La méthode {{HTTPHeader("Access-Control-Request-Method")}}, les en-têtes {{HTTPHeader("Access-Control-Request-Headers")}} et {{HTTPHeader("Origin")}}.
@@ -36,7 +37,7 @@ Access-Control-Max-Age: 86400
 
 À remarquer dans cet exemple que le serveur autorise les méthodes : POST ; GET ; OPTIONS et DELETE.
 
-## Voir également
+## Voir aussi
 
 - [CORS](/fr/docs/Glossary/CORS)
 - {{HTTPMethod("OPTIONS")}}

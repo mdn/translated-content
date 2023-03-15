@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toExponential
 ---
+
 {{JSRef}}
 
 La méthode **`toExponential()`** renvoie une chaîne de caractères, représentant l'objet Number en notation exponentielle.
@@ -62,16 +63,11 @@ console.log(77 .toExponential());     // affiche 7.7e+1
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.6', 'Number.prototype.toExponential')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.toExponential")}}
+{{Compat}}
 
 ## Voir aussi
 

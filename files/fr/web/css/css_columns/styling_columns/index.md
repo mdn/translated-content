@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns/Styling_Columns
 original_slug: Web/CSS/CSS_Columns/Mettre_en_forme_les_colonnes
 ---
+
 {{CSSRef}}
 
 Les boîtes de colonne créées au sein des conteneurs multi-colonnes sont des boîtes anonymes et leur mise en forme est donc limitée. Elle n'est toutefois pas inexistante. Dans ce guide nous verrons comment modifier l'espace entre les colonnes et comment mettre en forme une ligne entre les colonnes.
@@ -18,7 +19,7 @@ Malheureusement, ce n'est pas possible actuellement. Il est impossible de cibler
 
 ## L'espaceement : la propriété `column-gap`
 
-L'espacement entre les colonnes est contrôlé par la propriété `column-gap`. Cette propriété était initialement définie dans le module de spécification _Multi-column Layout_ mais est désormais définie dans le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ (dont le but est d'unifier la gestion des espacements entre les boîtes, que ce soit pour les colonnes ou pour d'autres types de disposition telles que [les grilles CSS](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)).
+L'espacement entre les colonnes est contrôlé par la propriété `column-gap`. Cette propriété était initialement définie dans le module de spécification _Multi-column Layout_ mais est désormais définie dans le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ (dont le but est d'unifier la gestion des espacements entre les boîtes, que ce soit pour les colonnes ou pour d'autres types de disposition telles que [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)).
 
 Dans une disposition multi-colonne, la valeur initiale de la propriété `column-gap` est `1em`. Cela signifie que les colonnes ne se touchent pas les unes les autres. Pour les autres méthodes de disposition, la valeur initiale de `column-gap` est 0. Le mot-clé `normal` est une valeur qui permet d'obtenir un écart de 1em.
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/State_machine
 original_slug: Glossaire/Machine_d_état
 ---
+
 Une machine d'état est une abstraction mathématique utilisée pour concevoir des algorithmes. Une machine d'état lit un ensemble d'entrées et passe à un état différent en fonction de ces entrées.
 
 Un état est une description de l'état d'un système en attente d'exécution d'une transition. Une transition est un ensemble d'actions à exécuter lorsqu'une condition est remplie ou qu'un événement est reçu. Dans un diagramme d'état, les cercles représentent chaque état possible et les flèches représentent les transitions entre les états.
@@ -34,11 +35,11 @@ En _Figure 2_, étant donné l'entrée 'X', l'état peut persister ou passer à 
 
 Notez que toute {{Glossary("regular expression","expression régulière")}} peut être représentée par une machine d'état.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Automate_fini","Automate fini")}} sur Wikipedia
-- {{Interwiki("wikipedia", "Automate_fini#Automates_UML","Automates UML")}} sur Wikipedia
-- {{Interwiki("wikipedia", "Machine_de_Moore","Machine de Moore")}} sur Wikipedia
-- {{Interwiki("wikipedia", "Machine_de_Mealy","Machine de Mealy")}} sur Wikipedia
+- [Automate fini](https://fr.wikipedia.org/wiki/Automate_fini) sur Wikipédia
+- [Automates UML](https://fr.wikipedia.org/wiki/Automate_fini#Automates_UML) sur Wikipédia
+- [Machine de Moore](https://fr.wikipedia.org/wiki/Machine_de_Moore) sur Wikipédia
+- [Machine de Mealy](https://fr.wikipedia.org/wiki/Machine_de_Mealy) sur Wikipédia

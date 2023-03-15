@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-x
 ---
+
 {{CSSRef}}
 
 La propriété **`overflow-x`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords droit et gauche de la boîte de contenu.
@@ -43,9 +44,13 @@ La propriété `overflow-x` est définie avec l'un des mots-clés définis ci-ap
 - `auto`
   - : Le comportement dépend de l'agent utilisateur. Les navigateurs de bureau comme Firefox peuvent afficher des barres de défilement si le contenu dépasse.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -111,15 +116,11 @@ La propriété `overflow-x` est définie avec l'un des mots-clés définis ci-ap
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow-x', 'overflow-x')}} | {{Spec2('CSS3 Overflow')}} |              |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-x")}}
+{{Compat}}
 
 ## Voir aussi
 

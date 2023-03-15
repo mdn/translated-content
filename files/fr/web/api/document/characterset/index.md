@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/characterSet
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.characterSet`** propriété en lecture seule, renvoie l'encodage du document en cours. Un encodage décrit l'ensemble des caractères possibles et la façon de décoder les octets en ces caractères.
@@ -35,10 +36,8 @@ var string = document.characterSet
 
 ## Spécifications
 
-| Specification                                                                                    | Etat                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-characterset', 'characterSet')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.characterSet")}}
+{{Compat}}

@@ -1,14 +1,8 @@
 ---
 title: Element.part
 slug: Web/API/Element/part
-tags:
-  - API
-  - Element
-  - プロパティ
-  - リファレンス
-  - part
-browser-compat: api.Element.part
 ---
+
 {{ ApiRef("DOM") }}
 
 **`part`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素の部品識別子（すなわち `part` 属性を使用して設定されたもの）を {{domxref("DOMTokenList")}} で返します。これらはシャドウ DOM の部品を {{cssxref("::part")}} 擬似要素でスタイル付けするために使用することができます。

@@ -3,7 +3,6 @@ title: Web Performance
 slug: Web/Performance
 translation_of: Web/Performance
 ---
-Translation in progress
 
 Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.
 
@@ -33,11 +32,11 @@ The MDN [Web Performance Learning Area](/fr/docs/Learn/Performance) contains mod
 ## Using Performance APIs
 
 - [Performance API](/fr/docs/Web/API/Performance_API/Using_the_Performance_API)
-  - : This guide describes how to use the [`Performance`](/fr/docs/Web/API/Performance "The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.") interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard.
+  - : This guide describes how to use the [`Performance`](/fr/docs/Web/API/Performance) interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard.
 - [Resource Timing API](/fr/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
   - : [Resource loading and timing](/fr/docs/Web/API/Resource_Timing_API) the loading of those resources, including managing the resource buffer and coping with CORS
 - [The performance timeline](/fr/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-  - : The [Performance Timeline](/fr/docs/Web/API/Performance_Timeline) standard defines extensions to the [`Performance`](/fr/docs/Web/API/Performance "The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.") interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
+  - : The [Performance Timeline](/fr/docs/Web/API/Performance_Timeline) standard defines extensions to the [`Performance`](/fr/docs/Web/API/Performance) interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
 - [User Timing API](/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
   - : Create application specific timestamps using the [user timing API](/fr/docs/Web/API/User_Timing_API)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
 - [Frame Timing API](/fr/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
@@ -152,7 +151,7 @@ The MDN [Web Performance Learning Area](/fr/docs/Learn/Performance) contains mod
 - [CSS and JavaScript animation performance](/fr/Apps/Build/Performance/CSS_JavaScript_animation_performance)
   - : Animations are critical for a pleasurable user experience. This article discusses the performance differences between CSS- and JavaScript-based animations.
 
-## See also
+## Voir aussi
 
 HTML
 

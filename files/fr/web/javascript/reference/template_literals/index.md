@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/Littéraux_gabarits
 ---
+
 {{JsSidebar("More")}}
 
 Les littéraux de gabarits sont des littéraux de chaînes de caractères permettant d'intégrer des expressions. Avec eux, on peut utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation.
@@ -31,7 +32,7 @@ etiquette `texte ${expression} texte`
 
 ## Description
 
-Les gabarits sont délimités par des caractères [accent grave](https://fr.wikipedia.org/wiki/Accent_grave) (\` \`)  au lieu des apostrophes doubles ou simples. Les gabarits peuvent contenir des espaces réservés (_placeholders_). Ces espaces sont indiqués par le signe dollar ($) et des accolades (`${expression})`. Les expressions dans les espaces réservés et le texte compris dans ces espaces sont passés à une fonction.
+Les gabarits sont délimités par des caractères [accent grave](https://fr.wikipedia.org/wiki/Accent_grave) (\` \`) au lieu des apostrophes doubles ou simples. Les gabarits peuvent contenir des espaces réservés (_placeholders_). Ces espaces sont indiqués par le signe dollar ($) et des accolades (`${expression})`. Les expressions dans les espaces réservés et le texte compris dans ces espaces sont passés à une fonction.
 
 Pour créer la chaîne finale, la fonction par défaut concatène simplement les différentes parties en une seule chaîne. Toutefois, on peut utiliser une fonction spécifique pour obtenir un comportement différent et recomposer la chaîne avec une autre logique. On parlera alors [de gabarit étiqueté (cf. ci-après)](#Gabarits_étiquetés).
 
@@ -232,14 +233,11 @@ let mauvaise = `mauvaise séquence d'échappement : \unicode`;
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires                                                                                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-template-literals', 'Template Literals')}} | {{Spec2('ES2015')}}     | Définition initiale. Définie dans plusieurs sections de la spécification : [Template Literals](https://www.ecma-international.org/ecma-262/6.0/#sec-template-literals), [Tagged Templates](https://www.ecma-international.org/ecma-262/6.0/#sec-tagged-templates) |
-| {{SpecName('ESDraft', '#sec-template-literals', 'Template Literals')}} | {{Spec2('ESDraft')}} | Définie dans plusieurs sections de la spécification : [Template Literals](https://tc39.github.io/ecma262/#sec-template-literals), [Tagged Templates](https://tc39.github.io/ecma262/#sec-tagged-templates)                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.grammar.template_literals")}}
+{{Compat}}
 
 ## Voir aussi
 

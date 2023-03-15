@@ -3,6 +3,7 @@ title: AudioBuffer.copyToChannel()
 slug: Web/API/AudioBuffer/copyToChannel
 translation_of: Web/API/AudioBuffer/copyToChannel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode `copyToChannel()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) copie les échantillons du tableau source vers le canal de l'`AudioBuffer` spécifié.
@@ -33,15 +34,13 @@ tableauDonnees.copyFromChannel(autreTableau,1,0);
 tableauDonnees.copyToChannel (autreTableau,0,0);
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                                                                                                | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-copyToChannel-void-Float32Array-source-long-channelNumber-unsigned-long-startInChannel', 'copyToChannel')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.copyToChannel")}}
+{{Compat}}
 
 ## Voir aussi
 

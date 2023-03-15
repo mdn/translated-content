@@ -3,6 +3,7 @@ title: IDBObjectStore.deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
 translation_of: Web/API/IDBObjectStore/deleteIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`deleteIndex()`** de l'interface {{domxref("IDBObjectStore")}} supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié ({{domxref("IDBObjectStore")}}).
@@ -38,7 +39,7 @@ Void.
 
 ## Exemple
 
-Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","<code>onupgradeneeded</code>")}} être utilisé pour mettre à jour la structure de la base de données quand un numéro de version supérieure est chargé.
+Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded", "onupgradeneeded")}} être utilisé pour mettre à jour la structure de la base de données quand un numéro de version supérieure est chargé.
 
 Des méthode **`deleteIndex()`** sont utilisées pour supprimer d'anciens index du magasin d'objet `toDoList`.
 
@@ -90,17 +91,15 @@ DBOpenRequest.onupgradeneeded = function(event) {
 };
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-deleteIndex-void-DOMString-indexName', 'deleteIndex()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.deleteIndex")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -110,4 +109,4 @@ DBOpenRequest.onupgradeneeded = function(event) {
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

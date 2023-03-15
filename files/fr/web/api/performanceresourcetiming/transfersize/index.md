@@ -11,6 +11,7 @@ tags:
   - transferSize
 translation_of: Web/API/PerformanceResourceTiming/transferSize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`transferSize`** représente la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus la charge utile du corps de la réponse (comme défini par la [RFC 7230](https://httpwg.github.io/specs/rfc7230.html#message.body)).
@@ -63,10 +64,8 @@ function check_PerformanceEntries() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-transfersize', 'transferSize')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.transferSize")}}
+{{Compat}}

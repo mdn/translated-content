@@ -1,16 +1,21 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
+page-type: web-api-instance-method
 translation_of: Web/API/StorageManager/estimate
+browser-compat: api.StorageManager.estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
-La méthode **`estimate()`** de l’interface {{domxref("StorageManager")}} demande au gestionnaire de stockage d’obtenir des informations de quota et d’usage pour l’origine actuelle. Cette méthode opère de manière asynchrone, elle renvoie donc une {{jsxref("Promise")}} qui se résoud une fois que l’information est disponible. La fonction gérant la résolution de la promesse reçoit en entrée un {{domxref("StorageEstimate")}} avec les données de quota et d’usage.
+La méthode **`estimate()`**, rattachée à l'interface [`StorageManager`](/fr/docs/Web/API/StorageManager), demande au gestionnaire de stockage l'espace occupé (`usage`) et l'espace disponible (`quota`) pour [l'origine](/fr/docs/Glossary/Same-origin_policy) courante.
+
+Cette méthode est asynchrone est renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue lorsque l'information est disponible. Le gestionnaire de réussite de la promesse est appelé avec un objet contenant les données pour l'usage actuel et le quota restant.
 
 ## Syntaxe
 
 ```js
-var estimatePromise = StorageManager.estimate();
+estimate()
 ```
 
 ### Paramètres
@@ -19,49 +24,60 @@ Aucun.
 
 ### Valeur de retour
 
-Une {{jsxref('Promise')}} qui se résoud en un objet qui se conforme au dictionnaire {{domxref('StorageEstimate')}}. Ce dictionnaire contient des estimations de la quantité d’espace disponible à l’origine ou à l’application (dans {{domxref("StorageEstimate.quota")}}), ainsi que la quantité d’espace actuellement utilisé (dans {{domxref("StorageEstimate.usage")}}). Ces nombres ne sont pas exacts&nbsp;; entre la compression, la dé-duplication, et l’obfuscation pour des raisons de sécurité, ils ne seront pas précis.
+Une promesse (un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) qui est résolue avec un objet doté des propriétés suivantes&nbsp;:
 
-Il est possible de constater que le `quota` varie d’application en application, basé sur des facteurs tels que la fréquence à laquelle l’utilisateur ou l’utilisatrice la visite, des données de popularité de sites bien connus, et ainsi de suite.
+- `quota`
+  - : Une valeur numérique, exprimée en octets, qui fournit une approximation prudente de l'espace de stockage disponible sur l'appareil ou l'ordinateur de la personne pour cette origine ou cette application web. Il est possible que davantage d'espace soit disponible, mais ce n'est pas nécessairement le cas.
+- `usage`
+  - : Une valeur numérique, exprimée en octets, qui fournit une approximation de l'espace de stockage actuellement utilisé par le site ou l'application, par rapport à l'espace total disponible indiqué par `quota`.
+- `usageDetails` {{Non-standard_Inline}}
+  - : Un objet contenant une décomposition de `usage` par système de stockage. Toutes les propriétés incluses sur cet objet auront un `usage` supérieur à 0 et tout système de stockage avec `usage` à 0 ne sera pas fourni comme propriété de cet objet.
 
-## Exemple
+> **Note :** Les valeurs renvoyées ne sont pas précisément exactes. Cela est lié à la compression, la déduplication de données et au masquage des informations pour des raisons de sécurité.
 
-Dans cet exemple, nous obtenons des estimations d’usage et présentons le pourcentage de capacité de stockage actuellement utilisé à l’utilisateur ou à l’utilisatrice.
+Vous pourrez observer que `quota` varie en fonction des origines. Cette variation est basée sur plusieurs facteurs dont&nbsp;:
 
-### Contenu HTML
+- La fréquence de visite du site
+- Les données publiques quant à la popularité du site
+- Les signaux d'engagement fournis par la personne comme la mise en favori, l'inscription à l'écran d'accueil, ou l'acceptation des notifications <i lang="en">push</i>.
+
+## Exemples
+
+Dans cet exemple, on récupère les estimations de l'espace utilisé et du quota total afin de présenter un pourcentage de l'espace actuellement occupé sur la page.
+
+### HTML
 
 ```html
-<p>
-  Vous utilisez actuellement environ <span id="percent">
-  </span>% de votre espace disponible.
-</p>
+<label>
+  Vous utilisez actuellement <output id="percent">
+  </output>% du stockage disponible.
+</label>
 ```
 
-### Contenu JavaScript
+### JavaScript
 
 ```js
 navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").textContent =
-      (estimate.usage / estimate.quota).toFixed(2);
+  document.getElementById("percent").value =
+      (estimate.usage / estimate.quota * 100).toFixed(2);
 });
 ```
 
 ### Résultat
 
-{{ EmbedLiveSample('Exemple', 600, 40) }}
+{{EmbedLiveSample('', 600, 40)}}
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('Storage','#dom-storagemanager-estimate','estimate()')}} | {{Spec2('Storage')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## Voir aussi
 
-- l’API Storage
-- {{domxref("Storage")}}, l’objet renvoyé par {{domxref("Window.localStorage")}}
-- {{domxref("StorageManager")}}
-- {{domxref("navigator.storage")}}
+- [L'API Storage](/fr/docs/Web/API/Storage_API)
+- [`Storage`](/fr/docs/Web/API/Storage), l'objet renvoyé par [`Window.localStorage`](/fr/docs/Web/API/Window/localStorage)
+- [`StorageManager`](/fr/docs/Web/API/StorageManager)
+- [`navigator.storage`](/fr/docs/Web/API/Navigator/storage)

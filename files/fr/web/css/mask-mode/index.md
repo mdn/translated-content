@@ -4,6 +4,7 @@ slug: Web/CSS/mask-mode
 translation_of: Web/CSS/mask-mode
 browser-compat: css.properties.mask-mode
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-mode`** détermine si le masque défini par [`mask-image`](/fr/docs/Web/CSS/mask-image) est considéré comme un masque de luminance ou un masque alpha (transparence).

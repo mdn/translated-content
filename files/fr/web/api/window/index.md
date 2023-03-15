@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window
 ---
+
 {{APIRef}}
 
 L'objet `window` représente une fenêtre contenant un document DOM ; la propriété `document` pointe vers le [document DOM](/fr-FR/docs/DOM/document) chargé dans cette fenêtre. Une fenêtre pour un document donné peut être obtenue en utilisant la propriété {{Domxref("document.defaultView")}}.
@@ -251,7 +252,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Annule la capture des évènements d'un certain type par la fenêtre.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Indique au navigateur qu'une animation est en cours, en demandant au navigateur de planifier une redessinage de la fenêtre lors de l'image d'animation suivante.
-- {{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}
+- {{domxref("Window.requestIdleCallback()")}} {{experimental_inline}}
   - : Active la planification de tâches pendant les périodes d'inactivité du navigateur.
 - {{domxref("Window.resizeBy()")}}
   - : Redimensionne la fenêtre en cours d'une certaine quantité.
@@ -318,7 +319,7 @@ Ce sont des propriétés de l'objet window qui peuvent être définies pour éta
 
 _Cette interface hérite des gestionnaires d'événements de l'interface {{domxref("EventTarget")}} et elle implémente les gestionnaires d'événements de {{domxref("WindowEventHandlers")}}._
 
-> **Note :** à partir de {{Gecko ("9.0")}}, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
+> **Note :** à partir de Gecko 9.0, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
 
@@ -327,9 +328,9 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 <!---->
 
 - {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Appelé lorsque la boîte de dialogue d'impression est fermée. Voir l'événement {{event ("afterprint")}}.
+  - : Appelé lorsque la boîte de dialogue d'impression est fermée. Voir l'événement [`afterprint`](/fr/docs/Web/API/Window/afterprint_event).
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Appelé lorsque la boîte de dialogue d'impression est ouverte. Voir l'événement {{event ("beforeprint")}}.
+  - : Appelé lorsque la boîte de dialogue d'impression est ouverte. Voir l'événement [`beforeprint`](/fr/docs/Web/API/Window/beforeprint_event).
 - {{domxref("Window.onbeforeinstallprompt")}}
   - : Propriété de gestionnaire d'événements qui est déclenchée avant qu'un utilisateur ne soit invité à enregistrer un site Web sur un écran d'accueil sur mobile.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
@@ -374,149 +375,84 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
   - : Propriété de gestionnaire d'événements pour tout changement d'orientation de l'appareil.
 - {{domxref("Window.ondeviceproximity")}}
   - : Propriété de gestionnaire d'événement pour l'événement de proximité de l'appareil.
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : Appelé lorsqu'une ressource ne se charge pas OU lorsqu'une erreur se produit lors de l'exécution. Voir l'événement {{event("error")}}.
-
-<!---->
-
+  - : Appelé lorsqu'une ressource ne se charge pas OU lorsqu'une erreur se produit lors de l'exécution. Voir l'événement [`error`](/fr/docs/Web/API/Window/error_event).
 - {{domxref("GlobalEventHandlers.onfocus")}}
-  - : Appelé après que la fenêtre a reçu ou récupéré la focalisation. Voir les événements {{event("focus")}}.
-
-<!---->
-
+  - : Appelé après que la fenêtre a reçu ou récupéré la focalisation. Voir les événements [`focus`](/fr/docs/Web/API/Window/focus_event).
 - {{domxref("WindowEventHandlers.onhashchange")}}
-  - : Propriété de gestionnaire d'événements pour les événements {{event('hashchange')}} dans la fenêtre ; appelé lorsque la partie de l'URL après la marque hash ("#") change.
+  - : Propriété de gestionnaire d'événements pour les événements [`hashchange`](/fr/docs/Web/API/Window/hashchange_event) dans la fenêtre ; appelé lorsque la partie de l'URL après la marque hash ("#") change.
 - {{domxref("Window.onappinstalled")}}
-  - : Appelé lorsque la page est installée en tant que webapp. Voir l'événement {{event('appinstalled')}}.
+  - : Appelé lorsque la page est installée en tant que webapp. Voir l'événement [`appinstalled`](/fr/docs/Web/API/Window/appinstalled_event).
 - {{domxref("Window.ongamepadconnected")}}
-  - : Représente un gestionnaire d'événements qui sera exécuté lorsqu'une manette de jeu est branchée (lorsque l'événement {{event('gamepadconnected')}} se déclenche).
+  - : Représente un gestionnaire d'événements qui sera exécuté lorsqu'une manette de jeu est branchée (lorsque l'événement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) se déclenche).
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : Représente un gestionnaire d'événements qui s'exécutera quand une manette de jeu est débranchée (lorsque l'événement {{event('gamepaddisconnected')}} se déclenche).
+  - : Représente un gestionnaire d'événements qui s'exécutera quand une manette de jeu est débranchée (lorsque l'événement [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) se déclenche).
 - {{domxref("Window.oninput")}}
   - : Appelée lorsque la valeur d'un élément \<input> change.
-- {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : Appelé lorsque vous commencez à presser une touche QUELCONQUE. Voir l'événement {{event("keydown")}}.
-
-<!---->
-
-- {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : Appelé lorsqu'une touche (à l'exception de Shift, Fn et CapsLock) est en position pressée. Voir l'événement {{event("keypress")}}.
-
-<!---->
-
-- {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : Appelé lorsque vous avez fini de relâcher une touche QUELCONQUE. Voir l'événement {{event("keyup")}}.
-
-<!---->
-
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : Propriété de gestionnaire d'événements pour les événements {{event("languagechange")}} dans la fenêtre.
+  - : Propriété de gestionnaire d'événements pour les événements [`languagechange`](/fr/docs/Web/API/Window/languagechange_event) dans la fenêtre.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Appelé après que toutes les ressources et les DOM ont été entièrement chargés. NE SERA PAS appelé lorsque la page est chargée à partir du cache, comme avec le bouton arrière.
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Appelé quand un bouton QUELCONQUE de la souris est pressé.
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onmousemove")}}
   - : Appelé en continu quand la souris est déplacée dans la fenêtre.
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onmouseout")}}
   - : Appelé lorsque le pointeur quitte la fenêtre.
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onmouseover")}}
   - : Appelé lorsque le pointeur entre dans la fenêtre.
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Appelé quand un bouton QUELCONQUE de la souris est relâché.
-
-<!---->
-
 - {{domxref("Window.onmozbeforepaint")}}
   - : Propriété de gestionnaire d'événements pour l'événement MozBeforePaint, qui est déclenché avant de repeindre la fenêtre si l'événement a été demandé par un appel à la méthode {{domxref("Window.mozRequestAnimationFrame()")}}.
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Appelé lorsque la connexion réseau est perdue. Voir l'événement {{event("offline")}}.
+  - : Appelé lorsque la connexion réseau est perdue. Voir l'événement [`offline`](/fr/docs/Web/API/Window/offline_event).
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Appelé lorsque la connexion réseau est établie. Voir l'événement {{event("online")}}.
+  - : Appelé lorsque la connexion réseau est établie. Voir l'événement [`online`](/fr/docs/Web/API/Window/online_event).
 - {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Appelé lorsque l'utilisateur quitte la page, avant l'événement onunload. Voir l'événement {{event("pagehide")}}.
+  - : Appelé lorsque l'utilisateur quitte la page, avant l'événement onunload. Voir l'événement [`pagehide`](/fr/docs/Web/API/Window/pagehide_event).
 - {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Appelé après toutes les ressources et les DOM ont été entièrement chargés. Voir l'événement {{event("pageshow")}}.
+  - : Appelé après toutes les ressources et les DOM ont été entièrement chargés. Voir l'événement [`pageshow`](/fr/docs/Web/API/Window/pageshow_event).
 - {{domxref("Window.onpaint")}}
   - : Propriété de gestionnaire d'évènement pour les évènements de dessin de la fenêtre.
-
-<!---->
-
 - {{domxref("WindowEventHandlers.onpopstate")}}
   - : Appelé quand le bouton arrière est pressé.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}
   - : Gestionnaire d'événements pour les événements de rejet {{jsxref("Promise")}} gérés.
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : Appelé lorsqu'un formulaire est réinitialisé
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onresize")}}
   - : Appelé en continu lorsque vous redimensionnez la fenêtre.
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onscroll")}}
   - : Appelé lorsque la barre de défilement est déplacée par un moyen QUELCONQUE. Si la ressource correspond entièrement à la fenêtre, cet événement ne peut pas être invoqué.
-
-<!---->
-
 - {{domxref("GlobalEventHandlers.onwheel")}}
   - : Appelé lorsque la roue de la souris est tournée autour d'un axe quelconque.
 - {{domxref("GlobalEventHandlers.onselect")}}
   - : Appelé après le texte dans un champ de saisie est sélectionné.
-
-<!---->
-
-- {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("selectionchange")}} est déclenché.
 - {{domxref("WindowEventHandlers.onstorage")}}
-  - : Appelé en cas de changement dans le stockage de session ou le stockage local. Voir l'événement {{event("storage")}}.
+  - : Appelé en cas de changement dans le stockage de session ou le stockage local. Voir l'événement [`storage`](/fr/docs/Web/API/Window/storage_event).
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Appelé lorsqu'un formulaire est soumis.
-
-<!---->
-
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
   - : Gestionnaire d'événements pour les événements de rejet {{jsxref("Promise")}} non gérés.
 - {{domxref("WindowEventHandlers.onunload")}}
   - : Appelé lorsque l'utilisateur quitte la page.
-
-<!---->
-
 - {{domxref("Window.onuserproximity")}}
   - : Propriété de gestionnaire d'événements pour les événements de proximité d'utilisateur.
 - {{domxref("Window.onvrdisplayconnect")}}
-  - : Représente un gestionnaire d'événements qui s'exécutera lorsqu'un périphérique RV compatible a été connecté à l'ordinateur (lorsque l'événement {{event("vrdisplayconnected")}} se déclenche).
+  - : Représente un gestionnaire d'événements qui s'exécutera lorsqu'un périphérique RV compatible a été connecté à l'ordinateur (lorsque l'événement [`vrdisplayconnect`](/fr/docs/Web/API/Window/vrdisplayconnect_event) se déclenche).
 - {{domxref("Window.onvrdisplaydisconnect")}}
-  - : Représente un gestionnaire d'événements qui s'exécutera lorsqu'un périphérique RV compatible a été déconnecté de l'ordinateur (lorsque l'événement {{event("vrdisplaydisconnected")}} se déclenche).
+  - : Représente un gestionnaire d'événements qui s'exécutera lorsqu'un périphérique RV compatible a été déconnecté de l'ordinateur (lorsque l'événement [`vrdisplaydisconnect`](/fr/docs/Web/API/Window/vrdisplaydisconnect_event) se déclenche).
 - {{domxref("Window.onvrdisplayactivate")}}
-  - : Représente un gestionnaire d'événements qui s'exécutera lorsqu'un affichage peut être présenté (lorsque l'événement {{event("vrdisplayactivate")}} se déclenche), par exemple si un HMD a été déplacé pour sortir de veille, ou a été réveillé en le mettant sur soi.
+  - : Représente un gestionnaire d'événements qui s'exécutera lorsqu'un affichage peut être présenté (lorsque l'événement [`vrdisplayactivate`](/fr/docs/Web/API/Window/vrdisplayactivate_event) se déclenche), par exemple si un HMD a été déplacé pour sortir de veille, ou a été réveillé en le mettant sur soi.
 - {{domxref("Window.onvrdisplaydeactivate")}}
-  - : Représente un gestionnaire d'événements qui s'exécute lorsqu'un affichage ne peut plus être présenté (lorsque l'événement {{event ("vrdisplaydeactivate")}} se déclenche), par exemple si un HMD est passé en veille ou en hibernation en raison d'une période d'inactivité.
+  - : Représente un gestionnaire d'événements qui s'exécute lorsqu'un affichage ne peut plus être présenté (lorsque l'événement [`vrdisplaydeactivate`](/fr/docs/Web/API/Window/vrdisplaydeactivate_event) se déclenche), par exemple si un HMD est passé en veille ou en hibernation en raison d'une période d'inactivité.
 - {{domxref("Window.onvrdisplayblur")}}
-  - : Représente un gestionnaire d'événements qui s'exécutera lorsque la présentation sur un affichage a été suspendue pour une raison quelconque par le navigateur, le SE ou le matériel de RV (lorsque l'événement {{event("vrdisplayblur")}} se déclenche - par exemple, lorsque l'utilisateur interagit avec un menu système ou un navigateur, pour empêcher le suivi ou la perte d'expérience.
+  - : Représente un gestionnaire d'événements qui s'exécutera lorsque la présentation sur un affichage a été suspendue pour une raison quelconque par le navigateur, le SE ou le matériel de RV (lorsque l'événement [`vrdisplayblur`](/fr/docs/Web/API/Window/vrdisplayblur_event) se déclenche - par exemple, lorsque l'utilisateur interagit avec un menu système ou un navigateur, pour empêcher le suivi ou la perte d'expérience.
 - {{domxref("Window.onvrdisplayfocus")}}
-  - : Représente un gestionnaire d'événements qui sera exécuté lorsque la présentation sur un afficheur a repris après avoir perdu la focalisation (lorsque l'événement {{event("vrdisplayfocus")}} se déclenche).
+  - : Représente un gestionnaire d'événements qui sera exécuté lorsque la présentation sur un afficheur a repris après avoir perdu la focalisation (lorsque l'événement [`vrdisplayfocus`](/fr/docs/Web/API/Window/vrdisplayfocus_event) se déclenche).
 - {{domxref("Window.onvrdisplaypresentchange")}}
-  - : Représente un gestionnaire d'événements qui s'exécute lorsque l'état de présentation d'un périphérique de RV change, c'est-à-dire qu'il passe de présentation à non présentation, ou vice versa (lorsque l'événement {{event("vrdisplaypresentchange")}} se déclenche).
+  - : Représente un gestionnaire d'événements qui s'exécute lorsque l'état de présentation d'un périphérique de RV change, c'est-à-dire qu'il passe de présentation à non présentation, ou vice versa (lorsque l'événement [`vrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) se déclenche).
 
 ## Constructeurs
 
@@ -535,7 +471,7 @@ Voir aussi les [Interfaces DOM](/fr-FR/docs/DOM/DOM_Reference).
 - {{domxref("Window.XMLSerializer")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/en-US/docs/DOM/Using_web_workers)
+  - : Used for creating a [Web worker](/fr/docs/DOM/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}

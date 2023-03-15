@@ -6,6 +6,7 @@ translation_of: Web/API/crossOriginIsolated
 original_slug: Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated
 browser-compat: api.crossOriginIsolated
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 La propriété globale en lecture seule **`crossOriginIsolated`** renvoie une valeur booléenne indiquant si un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) peut être envoyé via un appel à [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).

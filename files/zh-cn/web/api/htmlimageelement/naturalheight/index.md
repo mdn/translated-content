@@ -1,16 +1,8 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
-tags:
-- API
-- HTMLImageElement
-- Intrinsic Height
-- Reference
-- Property
-- Vertical
-- naturalHeight
-- size
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} 接口的 **`naturalHeight`** 属性是一个只读值，它返回图像固有的（自然的）、修正高度后的 {{Glossary("CSS pixel" , "CSS 像素")}}。

@@ -1,14 +1,8 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Event.target
-translation_of: Web/API/Event/target
 ---
+
 {{ApiRef("DOM")}}
 
 **`target`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが配信されたオブジェクトへの参照です。これは、イベントのバブリングまたはキャプチャ段階でイベントハンドラーが呼び出されたときの {{domxref("Event.currentTarget")}} とは異なります。

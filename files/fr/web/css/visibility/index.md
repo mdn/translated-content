@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 La propriété **`visibility`** peut être utilisée afin de cacher un élément tout en conservant occupé l'espace dans lequel il aurait été visible. Elle permet aussi de masquer des lignes ou des colonnes dans un tableau (cf. {{HTMLElement("table")}}).
@@ -46,9 +47,13 @@ La propriété `visibility` est définie avec l'un des mots-clés suivants.
     - Pour les éléments XUL, la taille calculée des éléments vaut toujours zéro, quel que soit les autres styles qui pourraient affecter la taille, les marges continuent de s'appliquer.
     - Pour les autres éléments, `collapse` est traité comme `hidden`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Interpolation
 
@@ -138,18 +143,11 @@ Utiliser la propriété `visibility` avec la valeur `hidden` retirera l'objet de
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}} | {{Spec2('CSS3 Flexbox')}}         | Définition de la valeur `collapse` pour les éléments flexibles. |
-| {{SpecName('CSS3 Box', '#visibility-prop', 'visibility')}}             | {{Spec2('CSS3 Box')}}             | Aucune modification.                                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'visibility')}} | {{Spec2('CSS3 Transitions')}} | `visibility` peut désormais être animée.                        |
-| {{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale.                                            |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.visibility")}}
+{{Compat}}
 
 ## Voir aussi
 

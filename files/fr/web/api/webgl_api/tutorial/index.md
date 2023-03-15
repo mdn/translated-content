@@ -8,7 +8,8 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/Tutorial
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL](http://www.khronos.org/webgl/) permet au contenu web d'utiliser une API basée sur [OpenGL ES](http://www.khronos.org/opengles/) 2.0 pour effectuer des rendus 3D dans un {{HTMLElement("canvas")}} HTML dans les navigateurs qui le supportent, sans avoir recours à des modules complémentaires. Les programmes WebGL sont constitués de code de contrôle rédigé en JavaScript, et de code d'effets spéciaux (code shader) qui est exécuté sur l'Unité de Traitement Graphique (GPU) d'un ordinateur. Les éléments WebGL peuvent être mélangés avec d'autres éléments HTML et composés avec d'autres parties de la page ou du fond de la page.
 
@@ -16,7 +17,7 @@ Ce tutoriel décrit comment utiliser l'élément `<canvas>` pour dessiner des gr
 
 ## Avant que vous ne commenciez
 
-L'utilisation de l'élément `<canvas>` n'est pas très difficile, mais vous avez besoin d'une compréhension de base de l'[HTML](/en-US/docs/Web/HTML) et du [JavaScript](/en-US/docs/Web/JavaScript). L'élément `<canvas>` et WebGL ne sont pas supportés par certains anciens navigateurs, mais ils sont supportés dans les versions récentes de tous les principaux navigateurs. Pour dessiner des graphiques sur le canevas, on utilise un objet de contexte Javascript, qui crée des graphiques à la volée.
+L'utilisation de l'élément `<canvas>` n'est pas très difficile, mais vous avez besoin d'une compréhension de base de l'[HTML](/fr/docs/Web/HTML) et du [JavaScript](/fr/docs/Web/JavaScript). L'élément `<canvas>` et WebGL ne sont pas supportés par certains anciens navigateurs, mais ils sont supportés dans les versions récentes de tous les principaux navigateurs. Pour dessiner des graphiques sur le canevas, on utilise un objet de contexte Javascript, qui crée des graphiques à la volée.
 
 ## Dans ce tutoriel
 

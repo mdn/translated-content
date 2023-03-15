@@ -1,19 +1,8 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - HTMLInputElement
-  - Input
-  - インターフェイス
-  - NeedsContent
-  - NeedsMarkupWork
-  - リファレンス
-browser-compat: api.HTMLInputElement
-translation_of: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement`** インターフェイスは {{HtmlElement("input")}} 要素のオプション、レイアウト、表示方法を操作するための特別なプロパティやメソッドを提供します。

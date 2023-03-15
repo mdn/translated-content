@@ -1,18 +1,18 @@
 ---
 title: Utilizando XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
-En esta guía le echaremos un vistazo a cómo usar
+En esta guía le echaremos un vistazo a cómo usar
 {{domxref("XMLHttpRequest")}} para enviar solicitudes [HTTP](/es/docs/Web/HTTP)
 con el objetivo de intercambiar datos entre el sitio web y el servidor.
 
 Se incluyen ejemplos, tanto para los casos de uso comunes de `XMLHttpRequest`,
 como para los más inusuales.
 
-Para enviar una solicitud HTTP, cree un objeto `XMLHttpRequest`, abra una URL y
+Para enviar una solicitud HTTP, cree un objeto `XMLHttpRequest`, abra una URL y
 envíe la solicitud. Una vez que la transacción haya sido completada, el objeto
 contendrá información útil tal como el cuerpo de la respuesta y el estado [HTTP
 status](/es/docs/Web/HTTP/Status) del resultado.
@@ -40,8 +40,7 @@ de estos dos tipos de peticiones en la página [peticiones síncronas
 y asíncronas](/es/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
 Workers.
 
-> **Nota:** A partir de Gecko 30.0 {{ geckoRelease("30.0")
-  }}, las peticiones síncronas en el hilo principal han sido marcadas como obsoletas debido a
+> **Nota:** A partir de Gecko 30.0 (Firefox 30.0 / Thunderbird 30.0 / SeaMonkey 2.27), las peticiones síncronas en el hilo principal han sido marcadas como obsoletas debido a
 > los efectos negativos en la experiencia del usuario.
 
 > **Nota:** La función constructora
@@ -144,12 +143,12 @@ recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest/Sending_and_Receiv
 ocurrir mientras se procesa la solicitud. Esto incluye notificaciones periódicas
 del progreso, notificaciones de error, etc.
 
-La implementación para la monitorización de eventos DOM {{event("progress")}} de transferencias `XMLHttpRequest`
+La implementación para la monitorización de eventos DOM [`progress`](/es/docs/Web/Reference/Events/progress) de transferencias `XMLHttpRequest`
 sigue la [especificación de eventos de progreso](https://xhr.spec.whatwg.org/#interface-progressevent): estos
 eventos implementan la interfaz {{domxref("ProgressEvent")}}. Los eventos reales que puedes monitorizar
 para determinar el estado de una transferencia en curso son:
 
-- {{event("progress")}}
+- [`progress`](/es/docs/Web/Reference/Events/progress)
   - : La cantidad de datos que se han recibido ha cambiado.
 - {{domxref("XMLHttpRequest/load_event", "load")}}
   - : La transferencia se ha completado; todos los datos están ahora en el `response`.
@@ -221,14 +220,14 @@ oReq.open();
 > **Nota:** Los eventos de progreso no están disponibles para el
 > protocolo `file:`.
 
-> **Nota:** A partir de {{Gecko("9.0")}}, se puede confiar en que los eventos de progreso
+> **Nota:** A partir de Gecko 9.0, se puede confiar en que los eventos de progreso
 > lleguen para cada trozo de datos recibidos, incluyendo el último trozo en los casos
 > en los que se recibe el último paquete y se cierra la conexión antes de que se
 > dispare el evento de progreso. En este caso, el evento de progreso se dispara automáticamente
 > cuando se produce el evento de carga para ese paquete. Esto te permite ahora monitorizar
 > de forma fiable el progreso observando únicamente el evento "progress".
 
-> **Nota**: A partir de {{Gecko("12.0")}}, si su evento de progreso es llamado con
+> **Nota**: A partir de Gecko 12.0, si su evento de progreso es llamado con
 > un `responseType` de "moz-blob", el valor de la respuesta es un
 > {{domxref("Blob")}} que contiene los datos recibidos hasta el momento.
 
@@ -651,7 +650,7 @@ AJAXSubmit(myForm);
 > de cargar contenido binario, considere utilizar la API `FormData`.
 
 > **Nota:** El método no estándar `sendAsBinary`
-> se considera obsoleto a partir de Gecko 31 {{geckoRelease(31)}} y se eliminará pronto.
+> se considera obsoleto a partir de Gecko 31 (Firefox 31 / Thunderbird 31 / SeaMonkey 2.28) y se eliminará pronto.
 > En su lugar se puede utilizar el método estándar `send(Blob data)`.
 
 ### Uso de los objetos FormData
@@ -895,32 +894,28 @@ XMLHttpRequest que se dispara en un evento onunload para una ventana, el esperad
 XMLHttpRequest se crea cuando la ventana a cerrar sigue ahí, y finalmente
 enviar la petición (en otras palabras, `open()`) cuando esta ventana ha perdido su foco
 y otra ventana toma el foco. La forma más eficaz de evitar este problema es
-es establecer una escucha en el evento {{event("activate")}} de la nueva ventana que se activa una vez que la
-ventana terminada tenga su evento {{event("unload")}} disparado.
+es establecer una escucha en el evento [`activate`](/es/docs/Web/Reference/Events/activate) de la nueva ventana que se activa una vez que la
+ventana terminada tenga su evento [`unload`](/es/docs/Web/Reference/Events/unload) disparado.
 
 ## Workers
 
 Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
-{{bug(678057)}} para más detalles. Otros navegadores pueden manejar esto de manera diferente.
+[Error 678057 en Firefox](https://bugzil.la/678057) para más detalles. Otros navegadores pueden manejar esto de manera diferente.
 
 ## Especificaciones
 
-{{Specifications("api.XMLHttpRequest")}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Véase también
 
 1. [MDN introducción a AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
-1. [HTML en
-    XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-1. [Control de acceso HTTP](/es/docs/Web/HTTP/CORS)
-1. [XMLHttpRequest -
-    REST y la experiencia de usuario enriquecida](https://www.peej.co.uk/articles/rich-user-experience.html)
-1. [Documentación de Microsoft](https://msdn.microsoft.com/library/ms535874)
-1. ["Uso del objeto XMLHttpRequest"
-    (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-1. [El objeto `XMLHttpRequest`:
-    Especificación WHATWG](https://xhr.spec.whatwg.org/)
+2. [HTML en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+3. [Control de acceso HTTP](/es/docs/Web/HTTP/CORS)
+4. [XMLHttpRequest - REST y la experiencia de usuario enriquecida](https://www.peej.co.uk/articles/rich-user-experience.html)
+5. [Documentación de Microsoft](https://msdn.microsoft.com/library/ms535874)
+6. ["Uso del objeto XMLHttpRequest" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+7. [El objeto `XMLHttpRequest`: Especificación WHATWG](https://xhr.spec.whatwg.org/)

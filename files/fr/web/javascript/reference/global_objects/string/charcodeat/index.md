@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/charCodeAt
 ---
+
 {{JSRef}}
 
 La méthode **`charCodeAt()`** retourne un entier compris entre 0 et 65535 qui correspond au code UTF-16 d'un caractère de la chaîne situé à une position donnée.
@@ -128,16 +129,11 @@ function knownCharCodeAt (str, idx) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.5', 'String.prototype.charCodeAt')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.charCodeAt")}}
+{{Compat}}
 
 ## Voir aussi
 

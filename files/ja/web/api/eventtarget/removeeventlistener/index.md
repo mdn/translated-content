@@ -1,12 +1,8 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.EventTarget.removeEventListener
-translation_of: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM")}}
 
 **`removeEventListener()`** は {{domxref("EventTarget")}} インターフェイスのメソッドで、以前に {{domxref("EventTarget.addEventListener()")}} で登録されたイベントリスナーを取り外します。
@@ -17,7 +13,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 {{domxref("EventListener")}} が {{domxref("EventTarget")}} の他のリスナーのイベント処理中に外された場合、イベントによって起動させることはありません。しかし、再接続は可能です。
 
-> **Warning:** リスナーが _capture_ フラグを設定したものと設定しないものの 2 つ登録されている場合、それぞれを別々に取り外す必要があります。キャプチャするリスナーを取り外しても、同じリスナーのキャプチャしないバージョンには影響しませんし、その逆も同様です。
+> **警告:** リスナーが _capture_ フラグを設定したものと設定しないものの 2 つ登録されている場合、それぞれを別々に取り外す必要があります。キャプチャするリスナーを取り外しても、同じリスナーのキャプチャしないバージョンには影響しませんし、その逆も同様です。
 
 イベントリスナーを取り外すには、 {{domxref("AbortSignal")}} を {{domxref("EventTarget/addEventListener()", "addEventListener()")}} に渡して、後でそのシグナルを所有するコントローラーで {{domxref("AbortController/abort()", "abort()")}} を呼び出して行うことも可能です。
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/openCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openCursor()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, renvoie un nouvel objet {{domxref("IDBCursorWithValue")}} qu'on peut utiliser pour parcourir un magasin d'objets avec un curseur.
@@ -66,13 +67,11 @@ request.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.openCursor")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -82,4 +81,4 @@ request.onsuccess = function(event) {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -7,11 +7,12 @@ tags:
 translation_of: Web/CSS/Layout_mode
 original_slug: Web/CSS/Mode_de_mise_en_page
 ---
+
 {{CSSRef}}
 
 Un **mode de disposition CSS** (_layout mode_), parfois raccourci en « disposition » est un algorithme qui détermine la position et la taille des boîtes des éléments en fonction des interactions avec leurs voisins et leurs ancêtres. Il existe plusieurs modes de disposition :
 
-- _[Le flux normal (](/fr/docs/Web/CSS/CSS_Flow_Layout)_[normal flow](/en-US/docs/Web/CSS/CSS_Flow_Layout)_[)](/en-US/docs/Web/CSS/CSS_Flow_Layout)_ : tous les éléments font partie du flux normal par défaut. Le flux normal inclut la disposition en bloc qui permet d'organiser les boîtes comme les paragraphes et la disposition en ligne qui permet d'organiser les éléments en ligne comme le texte.
+- _[Le flux normal (](/fr/docs/Web/CSS/CSS_Flow_Layout)_[normal flow](/fr/docs/Web/CSS/CSS_Flow_Layout)_[)](/fr/docs/Web/CSS/CSS_Flow_Layout)_ : tous les éléments font partie du flux normal par défaut. Le flux normal inclut la disposition en bloc qui permet d'organiser les boîtes comme les paragraphes et la disposition en ligne qui permet d'organiser les éléments en ligne comme le texte.
 - [*La disposition en tableau (*Table layout*)*](/fr/docs/Web/CSS/CSS_Table) : cette disposition est conçue pour organiser des tableaux.
 - *La disposition flottante (*Float layout*)* : cette disposition est conçue pour positionner des éléments à gauche ou à droite du reste du contenu en flux normal et qui évolue « autour » de ces éléments.
 - [*La disposition positionnée (*Positioned layout*)*](/fr/docs/Web/CSS/CSS_Positioning) : cette disposition est conçue afin de positionner des éléments sans interaction avec les autres.

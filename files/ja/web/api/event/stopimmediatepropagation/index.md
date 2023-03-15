@@ -1,13 +1,8 @@
 ---
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
-page-type: web-api-instance-method
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Event.stopImmediatePropagation
-translation_of: Web/API/Event/stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 **`stopImmediatePropagation()`** は {{domxref("Event")}} インターフェイスのメソッドで、呼び出されている同じイベントの他のリスナーを抑止します。

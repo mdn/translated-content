@@ -1,16 +1,8 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-  - white-space
-browser-compat: css.properties.white-space
-translation_of: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 **`white-space`** は CSS のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。
@@ -22,7 +14,7 @@ translation_of: Web/CSS/white-space
 - ホワイトスペースを折り畳むかどうか、およびその方法。
 - 行を自動折り返しの場面で折り返すことができるかどうか。
 
-> **Note:** *要素の内部で*折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。
+> **メモ:** *要素の内部で*折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。
 
 ## 構文
 
@@ -129,7 +121,7 @@ white-space: unset;
   </tbody>
 </table>
 
-> **Note:** **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
+> **メモ:** **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
 >
 > - 空白
 >   - : 空白 (U+0020)、タブ (U+0009)、区切り文字 (改行など)。

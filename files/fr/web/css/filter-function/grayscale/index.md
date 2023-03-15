@@ -5,6 +5,7 @@ translation_of: Web/CSS/filter-function/grayscale()
 original_slug: Web/CSS/filter-function/grayscale()
 browser-compat: css.types.filter-function.grayscale
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`grayscale()`** convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).

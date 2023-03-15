@@ -14,6 +14,7 @@ tags:
   - domComplete
 translation_of: Web/API/PerformanceTiming/domComplete
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domComplete`](/fr/docs/Web/API/PerformanceNavigationTiming/domComplete) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
@@ -28,13 +29,11 @@ let time = performanceTiming.domComplete;
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-domcomplete', 'PerformanceTiming.domComplete')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.domComplete")}}
+{{Compat}}
 
 ## Voir aussi
 

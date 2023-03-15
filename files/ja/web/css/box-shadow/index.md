@@ -1,21 +1,8 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - CSS スタイル
-  - HTML Colors
-  - リファレンス
-  - 影
-  - Styles
-  - Styling HTML
-  - box-shadow
-  - recipe:css-property
-browser-compat: css.properties.box-shadow
-translation_of: Web/CSS/box-shadow
 ---
+
 {{CSSRef}}
 
 **`box-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のフレームの周囲にシャドウ効果を追加します。カンマで区切ることで、複数の効果を設定することができます。ボックスの影は要素からの相対的な X および Y のオフセット、ぼかしと拡散の半径、色で記述します。
@@ -120,11 +107,11 @@ But still, like air, I'll rise.</q>
 
 ```css
 blockquote {
-  padding: 20px;
-  box-shadow:
+  padding: 20px;
+  box-shadow:
        inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 ```
 

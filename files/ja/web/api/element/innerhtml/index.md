@@ -1,19 +1,8 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - Parsing HTML
-  - プロパティ
-  - リファレンス
-  - innerHTML
-  - プロパティ
-browser-compat: api.Element.innerHTML
-translation_of: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} オブジェクトの **`innerHTML`** プロパティは、要素内の HTML または XML のマークアップを取得したり設定したりします。
@@ -53,13 +42,13 @@ let contents = myElement.innerHTML;
 
 これで、 HTML のコンテンツのノードの HTML マークアップを見ることができます。
 
-> **Note:** 返される HTML または XML の断片は、現在の要素の中身に基づいて生成されますので、返される断片のマークアップや整形方法は、元のページのマークアップと同じであるとは限りません。
+> **メモ:** 返される HTML または XML の断片は、現在の要素の中身に基づいて生成されますので、返される断片のマークアップや整形方法は、元のページのマークアップと同じであるとは限りません。
 
 ### 要素の中身の置き換え
 
 `innerHTML` の値を設定することで、既存の要素の内容を新しい内容に置き換えることが簡単にできます。
 
-> **Note:** 挿入される文字列に悪意のある内容が含まれる可能性がある場合、[セキュリティ上のリスク](#セキュリティの考慮事項)になります。
+> **メモ:** 挿入される文字列に悪意のある内容が含まれる可能性がある場合、[セキュリティ上のリスク](#セキュリティの考慮事項)になります。
 > ユーザーが提供したデータを挿入する場合は、 {{domxref("Element.SetHTML()")}} を使用するよう常に検討してください。こちらは挿入する前に無害化を行います。
 
 例えば、文書の {{domxref("Document.body", "body")}} 属性の内容を消去することで、文書の内容全体を消去することができます。
@@ -126,7 +115,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // この場合は無害
 ```
 
-これは{{interwiki("wikipedia", "クロスサイトスクリプティング")}}攻撃のように見えますが、結果的には無害です。 HTML5 では `innerHTML` で挿入された {{HTMLElement("script")}} タグは[実行するべきではない](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)と定義しているからです。
+これは[クロスサイトスクリプティング](https://ja.wikipedia.org/wiki/クロスサイトスクリプティング)攻撃のように見えますが、結果的には無害です。 HTML5 では `innerHTML` で挿入された {{HTMLElement("script")}} タグは[実行するべきではない](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)と定義しているからです。
 
 しかし、次のように {{HTMLElement("script")}} を使わずに JavaScript を実行する方法もあるので、制御することができない文字列を設定するために `innerHTML` を使用するたびに、セキュリティリスクは残ります。
 
@@ -140,7 +129,7 @@ el.innerHTML = name; // アラートが表示される
 - {{domxref("Element.SetHTML()")}} で DOM に挿入する前にテキストを無害化する。
 - プレーンテキストを挿入する際には、代わりに {{domxref("Node.textContent")}} を使用する。これは渡されたコンテンツを HTML として解釈するのではなく、生のテキストとして挿入します。
 
-> **Warning:** プロジェクトに対して何らかの形のセキュリティレビューが行われた場合、 `innerHTML` は多くの場合で、コードが拒絶される結果になります。
+> **警告:** プロジェクトに対して何らかの形のセキュリティレビューが行われた場合、 `innerHTML` は多くの場合で、コードが拒絶される結果になります。
 > 例えば、[ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions)の中で [`innerHTML` を使用した場合](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation)、拡張機能を [addons.mozilla.org](https://addons.mozilla.org/) に提出すると、自動レビュープロセスを通過できないでしょう。
 > 代替方法については、[ページへ外部コンテンツを安全に挿入する](/ja/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)を参照してください。
 

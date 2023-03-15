@@ -13,6 +13,7 @@ tags:
   - referrer
 translation_of: Web/HTTP/Headers/Content-Security-Policy/referrer
 ---
+
 {{HTTPSidebar}} {{deprecated_header}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`referrer`** spécifie des informations dans l'en-tête HTTP {{HTTPHeader("Referer")}} (avec un seul r) pour les liens externes d'une page. Cette API est dépréciée et supprimée des navigateurs.
@@ -53,7 +54,7 @@ Cette fonctionnalité ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.referrer")}}
+{{Compat}}
 
 ## Voir aussi
 

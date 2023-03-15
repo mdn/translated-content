@@ -14,6 +14,7 @@ tags:
   - domContentLoadedEventStart
 translation_of: Web/API/PerformanceTiming/domContentLoadedEventStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domContentLoadedEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
@@ -28,13 +29,11 @@ let time = performanceTiming.domContentLoadedEventStart;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                            | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-domcontentloadedeventstart', 'PerformanceTiming.domContentLoadedEventStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.domContentLoadedEventStart")}}
+{{Compat}}
 
 ## Voir aussi
 

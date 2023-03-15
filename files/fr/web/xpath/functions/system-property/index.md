@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/system-property
 original_slug: Web/XPath/Fonctions/system-property
 ---
+
 {{ XsltRef() }}
 
 La fonction `system-property()` retourne un objet représentant la propriété système donnée.

@@ -1,17 +1,6 @@
 ---
 title: AudioParam.setValueCurveAtTime()
 slug: Web/API/AudioParam/setValueCurveAtTime
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - setValueCurveAtTime
-browser-compat: api.AudioParam.setValueCurveAtTime
 ---
 {{APIRef("Web Audio API")}}
 

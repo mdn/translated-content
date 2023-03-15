@@ -1,26 +1,13 @@
 ---
 title: 画面キャプチャ API の使用
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
-tags:
-  - API
-  - キャプチャ
-  - 会議
-  - ガイド
-  - メディア
-  - 画面キャプチャ
-  - 画面キャプチャ API
-  - 共有
-  - 動画
-  - WebRTC
-  - display
-  - getDisplayMedia
-  - screen
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 この記事では、画面キャプチャ API とその {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッドを使用して、 [WebRTC](/ja/docs/Web/API/WebRTC_API) 会議セッション中に画面の一部または全部をストリーミング、録音、共有用に取得する方法を検証していきます。
 
-> **Note:** 最近のバージョンの [WebRTC adapter.js shim](https://github.com/webrtcHacks/adapter) には `getDisplayMedia()` の実装が含まれており、画面共有をサポートしているが現在の標準 API を実装していないブラウザーで画面共有を可能にすることができるので便利かもしれません。これは、少なくとも Chrome、Edge、Firefox で動作します。
+> **メモ:** 最近のバージョンの [WebRTC adapter.js shim](https://github.com/webrtcHacks/adapter) には `getDisplayMedia()` の実装が含まれており、画面共有をサポートしているが現在の標準 API を実装していないブラウザーで画面共有を可能にすることができるので便利かもしれません。これは、少なくとも Chrome、Edge、Firefox で動作します。
 
 ## 画面の内容のキャプチャ
 
@@ -76,7 +63,7 @@ function startCapture(displayMediaOptions) {
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} に渡される制約オブジェクトは、結果のストリームを設定するために使用されるオブジェクトです。
 
-> **Note:** メディア API における制約のほとんどの用途とは異なり、ここでは、ストリーム構成を定義するためにのみ使用され、利用可能な選択肢をフィルタリングするために使用されるわけではありません。
+> **メモ:** メディア API における制約のほとんどの用途とは異なり、ここでは、ストリーム構成を定義するためにのみ使用され、利用可能な選択肢をフィルタリングするために使用されるわけではありません。
 
 [共有画面トラックのプロパティ](/ja/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks)では、 {{domxref("MediaTrackConstraints")}}、{{domxref("MediaTrackSupportedConstraints")}}、{{domxref("MediaTrackSettings")}} に追加された画面キャプチャストリームの構成に関する制約について参照できます。
 
@@ -84,17 +71,17 @@ function startCapture(displayMediaOptions) {
 
 たとえば、動画に {{domxref("MediaTrackConstraints.width", "width")}} 制約を指定すると、ユーザーが共有する領域を選択した後に動画を拡大縮小することによって適用されます。ソース自体のサイズに制約を設けるものではありません。
 
-> **Note:** 制約によって、画面共有 API でキャプチャ可能なソースのリストが変更されることは決してありません。このため、ウェブアプリケーションでは、1 つの項目が残るまでソース リストを制限することによって、ユーザーに特定のコンテンツを共有するように強制することはできません。
+> **メモ:** 制約によって、画面共有 API でキャプチャ可能なソースのリストが変更されることは決してありません。このため、ウェブアプリケーションでは、1 つの項目が残るまでソース リストを制限することによって、ユーザーに特定のコンテンツを共有するように強制することはできません。
 
 表示のキャプチャが行われている間、画面共有を行っているマシンは、共有が行われていることをユーザーに認識させるために、何らかのインジケーターを表示します。
 
-> **Note:** プライバシーとセキュリティ上の理由から、画面共有のソースは {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} を使って列挙することができないようになっています。これに関連して、`getDisplayMedia()` で利用できるソースに変更があった場合も、 {{domxref("MediaDevices/devicechange_event", "devicechange")}} イベントは送信されません。
+> **メモ:** プライバシーとセキュリティ上の理由から、画面共有のソースは {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} を使って列挙することができないようになっています。これに関連して、`getDisplayMedia()` で利用できるソースに変更があった場合も、 {{domxref("MediaDevices/devicechange_event", "devicechange")}} イベントは送信されません。
 
 ### 共有音声のキャプチャ
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} は、ユーザーの画面（またはその一部）の動画をキャプチャするために最も一般的に使用されています。しかし、{{Glossary("user agent", "ユーザーエージェント")}}は、動画コンテンツと一緒に音声のキャプチャを許可する場合があります。この音声のソースは、選択されたウィンドウ、コンピューター全体のオーディオシステム、またはユーザーのマイク（または上記のすべての組み合わせ）であるかもしれません。
 
-音声の共有が必要なプロジェクトを始める前に、 {{SectionOnPage("/ja/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} を確認し、互換性を希望するブラウザーがキャプチャした画面ストリームに音声のサポートがあるかどうかを確認してください。
+音声の共有が必要なプロジェクトを始める前に、 [ブラウザーの互換性](/ja/docs/Web/API/MediaDevices/getDisplayMedia#%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%83%BC%E3%81%AE%E4%BA%92%E6%8F%9B%E6%80%A7) を確認し、互換性を希望するブラウザーがキャプチャした画面ストリームに音声のサポートがあるかどうかを確認してください。
 
 音声を含む画面の共有を要求するには、 `getDisplayMedia()` に渡すオプションは次のようになります。
 
@@ -124,7 +111,7 @@ const gdmOptions = {
 
 音声のキャプチャは常にオプションです。ウェブコンテンツが音声と動画の両方を含むストリームを要求した場合でも、返される {{domxref("MediaStream")}} は、音声なしの 1 つの動画トラックのみとなる場合があります。
 
-> **Note:** プロパティによっては広く実装されておらず、エンジンで使用されない場合もあります。例えば `cursor` は [対応が限定されています](/ja/docs/Web/API/MediaTrackConstraints/cursor#ブラウザーの互換性)。
+> **メモ:** プロパティによっては広く実装されておらず、エンジンで使用されない場合もあります。例えば `cursor` は [対応が限定されています](/ja/docs/Web/API/MediaTrackConstraints/cursor#ブラウザーの互換性)。
 
 ## キャプチャしたストリームの使用
 
@@ -162,7 +149,7 @@ const gdmOptions = {
 
 オブジェクト `displayMediaOptions` には `getDisplayMedia()` に渡す制約が含まれています。ここでは {{domxref("MediaTrackConstraints.cursor", "cursor")}} プロパティを `always` に設定しており、マウスカーソルを常にキャプチャメディアに含めることを指定しています。
 
-> **Note:** プロパティによっては広く実装されておらず、エンジンで使用されないかもしれません。例えば `cursor` は [サポートが限定されています](/ja/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
+> **メモ:** プロパティによっては広く実装されておらず、エンジンで使用されないかもしれません。例えば `cursor` は [サポートが限定されています](/ja/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
 
 最後に、イベントリスナーを設定して、スタートボタンとストップボタンに対するユーザーのクリックを検出します。
 

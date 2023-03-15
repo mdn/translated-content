@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/clz32
 ---
+
 {{JSRef}}
 
 La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la représentation binaire sur 32 bits d'un nombre.
@@ -58,14 +59,11 @@ Math.clz32(3.5)              // 30
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-math.clz32', 'Math.clz32')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.clz32")}}
+{{Compat}}
 
 ## Voir aussi
 

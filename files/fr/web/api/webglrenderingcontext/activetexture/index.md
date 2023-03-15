@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.activeTexture()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) indique quelle unité de texture doit être rendue active.
@@ -22,7 +23,7 @@ void gl.activeTexture(texture);
 ### Paramètres
 
 - `texture`
-  - : L'unité de texture à rendre active. La valueur est une `gl.TEXTUREI` où *I* est dans la plage de 0 à`gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`.
+  - : L'unité de texture à rendre active. La valueur est une `gl.TEXTUREI` où *I* est dans la plage de 0 à `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`.
 
 ### Valeur retournée
 
@@ -30,7 +31,7 @@ Aucune.
 
 ### Exceptions
 
-Si *texture* n'est pas l'une des `gl.TEXTUREI`, où *I* est dans la plage de 0 à`gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`, une erreur `gl.INVALID_ENUM` est déclenchée.
+Si *texture* n'est pas l'une des `gl.TEXTUREI`, où *I* est dans la plage de 0 à `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`, une erreur `gl.INVALID_ENUM` est déclenchée.
 
 ## Exemples
 
@@ -56,14 +57,11 @@ gl.getParameter(gl.ACTIVE_TEXTURE);
 
 ## Spécifications
 
-| Spécification                                                                                    | Statué                               | Commentaire               |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "activeTexture")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glActiveTexture.xml", "glActiveTexture")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.activeTexture")}}
+{{Compat}}
 
 ## Voir aussi
 

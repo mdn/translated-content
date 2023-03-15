@@ -3,6 +3,7 @@ title: HTMLDocument
 slug: Web/API/HTMLDocument
 translation_of: Web/API/HTMLDocument
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLDocument`** est une interface abstraite de [DOM](/fr-FR/docs/DOM) qui fournit un accès aux propriétés spéciales et aux méthodes non présentes par défaut dans un document ordinaire (XML).

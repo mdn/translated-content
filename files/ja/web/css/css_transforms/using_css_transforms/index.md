@@ -1,27 +1,15 @@
 ---
 title: CSS 座標変換の使用
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
-tags:
-  - 3D
-  - Advanced
-  - CSS
-  - CSS 座標変換
-  - グラフィック
-  - ガイド
-  - 回転
-  - 拡大縮小
-  - Scaling
-  - perspective
-  - rotation
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
+
 {{CSSRef}}
 
 **CSS 座標変換** (transform) は、座標空間を編集することで、通常のフロー処理を混乱させずに影響下にあるコンテンツの形状や位置を変えることができます。このガイドは座標変換の使用についての解説を行ないます。
 
 CSS 座標変換は、アフィン線形変換を HTML 要素に対して適用する一連の CSS プロパティによって実現されます。座標変換には、二次元と三次元空間の両方について回転 (rotation)、傾斜 (skewing)、拡大縮小 (scaling)、平行移動 (translation) があります。
 
-> **Warning:** [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)によって配置された要素に対してのみ `transform` を実行することができます。言うまでもなく、 `display: block` である要素がボックスモデルで配置されます。
+> **警告:** [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)によって配置された要素に対してのみ `transform` を実行することができます。言うまでもなく、 `display: block` である要素がボックスモデルで配置されます。
 
 ## CSS 座標変換のプロパティ
 
@@ -80,72 +68,72 @@ CSS 座標変換の定義に使われる重要なプロパティが 2 つあり�
 
 ```html
 <table>
-  <tbody>
-    <tr>
-      <th><code>perspective: 250px;</code>
-      </th>
-      <th><code>perspective: 350px;</code>
-      </th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube pers250">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube pers350">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th><code>perspective: 500px;</code>
-      </th>
-      <th><code>perspective: 650px;</code>
-      </th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube pers500">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube pers650">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-  </tbody>
+  <tbody>
+    <tr>
+      <th><code>perspective: 250px;</code>
+      </th>
+      <th><code>perspective: 350px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers250">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers350">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><code>perspective: 500px;</code>
+      </th>
+      <th><code>perspective: 650px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers500">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers650">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 

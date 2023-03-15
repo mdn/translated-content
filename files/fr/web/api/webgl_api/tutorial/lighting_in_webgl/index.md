@@ -4,7 +4,8 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Eclairage_en_WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
+
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 La première chose à comprendre à propos de WebGL est que contrairement au standard OpenGL, WebGL n'a pas de support pour l'éclairage. Vous avez à le faire par vous même. Heureusement ce n'est pas si dur à faire, et cet article va vous expliquer quelques bases.
 
@@ -18,7 +19,7 @@ Il y a trois types basiques d'éclairage :
 2. **Directional light (Lumière Directionnelle)** est une lumière émise depuis une direction spécifique. Par exemple le soleil, est une lumière directionnelle.
 3. **Point light** **(Point de lumière)** est une lumière émise depuis un point, éméttant une lumière dans toutes les directions, contrairement à la Lumière Directionnelle. C'est comme ceci que les lumières fonctionnent principalement dans notre monde, comme par exemple une ampoule.
 
-Pour notre tutorial, nous allons simplifier le model d'éclairage, en considérant seulement une unique lumière directionnelle et une lumière ambiante. Nous allons réutiliser notre [précédent exemple avec le cube en rotation](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+Pour notre tutorial, nous allons simplifier le model d'éclairage, en considérant seulement une unique lumière directionnelle et une lumière ambiante. Nous allons réutiliser notre [précédent exemple avec le cube en rotation](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 Une fois que nous avons appréhendé le concept de source et de réfléction de la lumière, il y a deux choses que nous avons besoin d'implémenter pour nos lumières directionnelles.
 

@@ -1,16 +1,8 @@
 ---
 title: GeolocationCoordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - プロパティ
-  - 安全なコンテキスト
-  - latitude
-browser-compat: api.GeolocationCoordinates.latitude
-translation_of: Web/API/GeolocationCoordinates/latitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.latitude`** は読み取り専用のプロパティであり、 `double` 値でその位置の緯度を 10 進形式で表します。

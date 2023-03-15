@@ -1,15 +1,8 @@
 ---
 title: WritableStream()
 slug: Web/API/WritableStream/WritableStream
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Streams
-  - WritableStream
-translation_of: Web/API/WritableStream/WritableStream
 ---
+
 {{APIRef("Streams")}}
 
 **`WritableStream()`** 构造函数创建一个新的 {{domxref("WritableStream")}} 对象实例。
@@ -121,7 +114,7 @@ sendMessage("Hello, world.", writableStream);
 
 ### 背压
 
-由于 API 支持背压的方式（其在代码中的实现）可能不太明显。要了解背压是如何实现的，请注意以下三点:
+由于 API 支持背压的方式（其在代码中的实现）可能不太明显。要了解背压是如何实现的，请注意以下三点：
 
 - 为创建计数策略（第 35 行）而设置的 `highWaterMark` 属性，其用于设置 `WritableStream` 实例处理单个 `write()` 操作时可接受的最大数据量。在该示例中，它是可以传递给 `defaultWriter.write()` 的最大数据量（第 11 行）。
 - `defaultWriter.ready` 属性返回一个当 sink（`WritableStream` 构造函数的第一个属性）完成写入数据时兑现的 promise。数据源可以写入更多的数据（第 9 行）或者调用 `close()`（第 24 行）。过早调用 close() 会阻止数据写入。这就是示例调用 `defaultWriter.ready` 两次的原因（第 9 行和第 22 行）。

@@ -1,19 +1,11 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - 元素
-  - 参考
-translation_of: Web/HTML/Element/hr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-**HTML `<hr>`  元素**表示段落级元素之间的主题转换（例如，一个故事中的场景的改变，或一个章节的主题的改变）。
+**HTML `<hr>`  元素**表示段落级元素之间的主题转换（例如，一个故事中的场景的改变，或一个章节的主题的改变）。
 
 在 HTML 的早期版本中，它是一个水平线。现在它仍能在可视化浏览器中表现为水平线，但目前被定义为语义上的，而不是表现层面上。所以如果想画一条横线，请使用适当的 css 样式来修饰。
 
@@ -53,12 +45,12 @@ translation_of: Web/HTML/Element/hr
     </tr>
     <tr>
       <th scope="row">隐式 ARIA 角色</th>
-      <td>{{ARIARole("separator")}}</td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        {{ARIARole("presentation")}} 或 {{ARIARole("none")}}
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

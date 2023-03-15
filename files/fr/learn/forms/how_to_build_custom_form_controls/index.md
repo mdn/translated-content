@@ -12,6 +12,7 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés
 ---
+
 {{LearnSidebar}}
 
 Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
@@ -350,12 +351,12 @@ Avant de commencer, il est important de se rappeler quelque chose de très impor
 - Le script ne se charge pas. La chose est très courante, en particulier dans le domaine des mobiles pour lesquels le réseau n'est pas sûr.
 - Le script est bogué. Il faut toujours prendre en considération cette éventualité.
 - Le script est en conflit avec un autre script tierce‑partie. Cela peut se produire avec des suites de scripts ou n'importe quel marque page utilisé par l'utilisateur.
-- Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « [No script](https://addons.mozilla.org/fr/firefox/addon/noscript/) » de Firefox ou « [Scripts »](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) de Chrome).
+- Le script est en conflit avec, ou est affecté par un extension de navigateur (comme l'extension « [No script](https://addons.mozilla.org/fr/firefox/addon/noscript/) » de Firefox ou « [Scripts »](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) de Chrome).
 - L'utilisateur utilise un navigateur ancien et l'une des fonctions dont vous avez besoin n'est pas prise en charge. Cela se produira fréquemment lorsque vous utiliserez des API de pointe.s.
 
 En raison de ces aléas, il est vraiment important de considérer avec sérieux ce qui se passe si JavaScript ne fonctionne pas. Traiter en détail cette question est hors de la portée de cet article parce qu'elle est étroitement liée à la façon dont vous voulez rendre votre script générique et réutilisable, mais nous prendrons en considération les bases de ce sujet dans notre exemple.
 
-Ainsi, si notre code JavaScript ne s'exécute pas, nous reviendrons à l'affichage d'un élément  {{HTMLElement("select")}} standard. Pour y parvenir, nous avons besoin de deux choses.
+Ainsi, si notre code JavaScript ne s'exécute pas, nous reviendrons à l'affichage d'un élément {{HTMLElement("select")}} standard. Pour y parvenir, nous avons besoin de deux choses.
 
 Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} régulier avant chaque utilisation de notre widget personnalisé. Ceci est également nécessaire pour pouvoir envoyer les données de notre widget personnalisé avec le reste de nos données du formulaire ; nous reviendrons sur ce point plus tard.
 
@@ -385,7 +386,7 @@ Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} réguli
 </body>
 ```
 
-Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre de cacher l'élément qui ne sert pas (c'est-à-dire l'élément{{HTMLElement("select")}} « réel »  si notre script ne fonctionne pas, ou le widget personnalisé s'il fonctionne). Notez que par défaut, le code HTML cache le widget personnalisé.
+Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre de cacher l'élément qui ne sert pas (c'est-à-dire l'élément{{HTMLElement("select")}} « réel » si notre script ne fonctionne pas, ou le widget personnalisé s'il fonctionne). Notez que par défaut, le code HTML cache le widget personnalisé.
 
 ```css
 .widget select,
@@ -449,10 +450,10 @@ Les fonctionnalités que nous prévoyons d'utiliser sont les suivantes (classée
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (ce n'est pas du DOM mais du JavaScript moderne)
+3. [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach) (ce n'est pas du DOM mais du JavaScript moderne)
 4. {{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). C'est important, car les objets  `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach"), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
+Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array). C'est important, car les objets `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -714,7 +715,7 @@ window.addEventListener('load', function () {
 });
 ```
 
-Dans le code ci-dessus, il faut noter l'utilisation de la propriété [`tabIndex`](/fr/docs/Web/API/HTMLElement/tabIndex "/en-US/docs/Web/API/HTMLElement/tabIndex"). Utiliser cette propriété est nécessaire pour être sûr que le widget natif n'obtiendra jamais le focus et que le widget personnalisé l'obtiendra quand l'utilisateur utilise le clavier ou la souris.
+Dans le code ci-dessus, il faut noter l'utilisation de la propriété [`tabIndex`](/fr/docs/Web/API/HTMLElement/tabIndex). Utiliser cette propriété est nécessaire pour être sûr que le widget natif n'obtiendra jamais le focus et que le widget personnalisé l'obtiendra quand l'utilisateur utilise le clavier ou la souris.
 
 Et voilà, nous avons terminé ! Voici le résultat :
 
@@ -747,11 +748,11 @@ Mais attendez, avons‑nous vraiment terminé ?
 
 Nous venons de faire quelque chose qui fonctionne, même si nous sommes loin d'avoir une boîte de sélection avec toutes les fonctionnalités, elle fonctionne parfaitement. Mais ce que nous avons fait n'est rien de plus que de jouer avec les DOM. Elle n'a pas de sémantique réelle, et même si elle ressemble à une boîte de sélection, du point de vue du navigateur, ce n'en est pas une, de sorte que les technologies d'assistance ne pourront pas comprendre que c'est une boîte de sélection. Bref, cette jolie nouvelle boîte de sélection n'est pas accessible !
 
-Heureusement, il existe une solution et elle s'appelle [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA"). ARIA signifie « Accessible Rich Internet Application » et c'est une [norme W3C](http://www.w3.org/TR/wai-aria/) spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.
+Heureusement, il existe une solution et elle s'appelle [ARIA](/fr/docs/Accessibility/ARIA). ARIA signifie « Accessible Rich Internet Application » et c'est une [norme W3C](http://www.w3.org/TR/wai-aria/) spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.
 
 ### L'attribut `role`
 
-L'attribut clé utilisé par [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") est l'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques"). L'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques") accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de [`listbox`](/fr/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role"). C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle `option`).
+L'attribut clé utilisé par [ARIA](/fr/docs/Accessibility/ARIA) est l'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques). L'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques) accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de [`listbox`](/fr/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role). C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle `option`).
 
 Il faut aussi noter qu'ARIA définit les rôles appliqués par défaut aux balises HTML standard. Par exemple, l'élément {{HTMLElement("table")}} correspond au rôle `grid`, et l'élément {{HTMLElement("ul")}} correspond au rôle `list`. Comme nous utilisons un élément {{HTMLElement("ul")}}, nous voulons nous assurer que le rôle `listbox` de notre widget remplacera le rôle `list` de l'élément {{HTMLElement("ul")}}. À cette fin, nous utiliserons le rôle `presentation`. Ce rôle est conçu pour nous permettre d'indiquer qu'un élément n'a pas de signification particulière, et est utilisé uniquement pour présenter de l'information. Nous l'appliquerons à notre élément {{HTMLElement("ul")}}.
 
@@ -773,11 +774,11 @@ Pour prendre en charge le rôle `listbos`, nous n'avons qu'à mettre à jour not
 </div>
 ```
 
-> **Note :** Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/CSS/Attribute_selectors "/en-US/docs/CSS/Attribute_selectors").
+> **Note :** Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/CSS/Attribute_selectors).
 
-### L'attribut  `aria-selected`
+### L'attribut `aria-selected`
 
-Utiliser l'attribut `role` ne suffit pas. [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") fournit également de nombreux états et attributs de propriété. Plus vous les utiliserez, mieux votre widget sera compris par les techniques d'assistance. Dans notre cas, nous limiterons notre utilisation à un seul attribut : `aria-selected`.
+Utiliser l'attribut `role` ne suffit pas. [ARIA](/fr/docs/Accessibility/ARIA) fournit également de nombreux états et attributs de propriété. Plus vous les utiliserez, mieux votre widget sera compris par les techniques d'assistance. Dans notre cas, nous limiterons notre utilisation à un seul attribut : `aria-selected`.
 
 L'attribut `aria-selected` s'utilise pour marquer l'option actuellement sélectionnée ; ceci permet aux techniques d'assistance d'informer l'utilisateur quelle est la sélection en cours. Nous l'utiliserons dynamiquement avec JavaScript pour marquer l'option sélectionnée chaque fois que l'utilisateur en choisit une. Pour cela, nous devons réviser la fonction `updateValue()` :
 
@@ -835,7 +836,7 @@ Voici quelques bibliothèques à prendre en considération avant de coder les v�
 - [jQuery UI](http://jqueryui.com/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 - [Nice Forms](http://www.emblematiq.com/lab/niceforms/)
-- [et beaucoup d'autres…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a "https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a")
+- [et beaucoup d'autres…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a)
 
 Si vous voulez aller plus loin, le code de cet exemple mérite quelques amélioration avant de devenir générique et réutilisable. C'est un exercice que vous pouvez essayer de faire. Deux conseils pour vous aider : le premier argument pour toutes nos fonctions est le même, ce qui signifie que ces fonctions ont besoin du même contexte. Il serait avisé de construire un objet pour partager ce contexte. En outre, vous devrez éprouver ses fonctionnalités, c'est-à-dire qu'il doit pouvoir fonctionner avec les divers navigateurs dont la compatibilité avec les normes Web qu'ils utilisent varie. Amusez-vous bien !
 

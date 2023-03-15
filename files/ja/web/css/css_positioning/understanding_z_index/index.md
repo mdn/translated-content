@@ -1,15 +1,8 @@
 ---
 title: CSS の z-index を理解する
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
+
 {{CSSRef}}
 
 最も基本的な場合では、 [HTML](/ja/docs/Web/HTML) のページは二次元であると考えることができ、テキスト、画像、その他の要素が重なることなくページに並べられます。この場合、単一のレンダリングの流れがあり、すべての要素で他の要素との間で取る間隔が分かっています。{{cssxref("z-index")}} 属性で、コンテンツの描画時にオブジェクトの重なり合いの順番を調整することができます。

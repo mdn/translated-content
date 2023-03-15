@@ -1,17 +1,9 @@
 ---
 title: '<ol>: 順序付きリスト要素'
 slug: Web/HTML/Element/ol
-tags:
-  - 要素
-  - HTML
-  - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
-  - リファレンス
-browser-compat: html.elements.ol
-translation_of: Web/HTML/Element/ol
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
 
@@ -24,7 +16,7 @@ translation_of: Web/HTML/Element/ol
         <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>。また、<code>&#x3C;ol></code> 要素の子が少なくとも 1 個の {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/Guide/HTML/Content_categories#palpable_content">知覚可能コンテンツ</a>。
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。また、<code>&#x3C;ol></code> 要素の子が少なくとも 1 個の {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。
       </td>
     </tr>
     <tr>
@@ -40,7 +32,7 @@ translation_of: Web/HTML/Element/ol
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>
@@ -52,12 +44,12 @@ translation_of: Web/HTML/Element/ol
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}},
-        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
-        {{ARIARole("toolbar")}}, {{ARIARole("tree")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>
       </td>
     </tr>
     <tr>
@@ -87,7 +79,7 @@ translation_of: Web/HTML/Element/ol
 
     指定された種類は、異なる {{HTMLAttrxRef("type", "li")}} 属性が内部の {{HTMLElement("li")}} 要素で使用されない限り、リスト全体に使用されます。
 
-    > **Note:** （項目が番号や文字で参照される法律文書や技術文書のように）リスト番号の種類に重要性がない限り、代わりに CSS の {{CSSxRef("list-style-type")}} プロパティを使用してください。
+    > **メモ:** （項目が番号や文字で参照される法律文書や技術文書のように）リスト番号の種類に重要性がない限り、代わりに CSS の {{CSSxRef("list-style-type")}} プロパティを使用してください。
 
 ## 使用上の注意
 

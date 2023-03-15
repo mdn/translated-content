@@ -1,13 +1,6 @@
 ---
 title: shadow DOM 사용하기
 slug: Web/Web_Components/Using_shadow_DOM
-tags:
-  - API
-  - DOM
-  - Guide
-  - Web Components
-  - shadow dom
-translation_of: Web/Web_Components/Using_shadow_DOM
 ---
 {{DefaultAPISidebar("Web Components")}}
 
@@ -17,7 +10,7 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 
 ## 중요 내용 보기
 
-이 문서는 여러분이 이미 [DOM (Document Object Model)](/en-US/docs/Web/API/Document_Object_Model/Introduction)의 개념에 익숙하다고 가정합니다. DOM이란 마크업 문서에서 나타나는 여러 가지 요소들과 텍스트 문자열을 나타내는 연결된 노드들의 트리같은 구조입니다 (웹 문서의 경우 보통 HTML 문서). 예제로서, 다음의 HTML fragment를 고려해 보세요.
+이 문서는 여러분이 이미 [DOM (Document Object Model)](/ko/docs/Web/API/Document_Object_Model/Introduction)의 개념에 익숙하다고 가정합니다. DOM이란 마크업 문서에서 나타나는 여러 가지 요소들과 텍스트 문자열을 나타내는 연결된 노드들의 트리같은 구조입니다 (웹 문서의 경우 보통 HTML 문서). 예제로서, 다음의 HTML fragment를 고려해 보세요.
 
 ```html
 <!DOCTYPE html>

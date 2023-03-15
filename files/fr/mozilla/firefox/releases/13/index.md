@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/13
 original_slug: Mozilla/Firefox/Versions/13
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume les principaux changements dans Firefox 13 qui sont utiles aux développeurs.
@@ -113,6 +114,6 @@ A partir de Firefox 13, Firefox pour Windows requiert au minimum Windows XP Serv
 - Les alias `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset` et `MozOutlineColor`, qui ont tous été retirés des précédentes versions de Gecko, ont été supprimés de `nsIDOMCSS2Properties`, qui aurait dû avoir ces alias.
 - L'attribut `excludeItemIfParentHasAnnotation` de `nsINavHistoryQueryOptions` a été retiré, avec l'opération de requête correspondante. Il existait les livemarks, qui n'existent plus.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('12')}}

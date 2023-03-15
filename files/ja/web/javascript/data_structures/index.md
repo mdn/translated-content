@@ -1,13 +1,8 @@
 ---
 title: JavaScript のデータ型とデータ構造
 slug: Web/JavaScript/Data_structures
-tags:
-  - Beginner
-  - Guide
-  - JavaScript
-  - Types
-translation_of: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 プログラミング言語には、どれにも組み込みデータ構造がありますが、ふつうは言語ごとに異なります。この記事では、JavaScript で使用可能な組み込みデータ構造の一覧と、他のデータ構造の構築にも使えるように、それらがどのような性質を持ち合わせているかについて述べることにします。また可能である場合は、他のプログラミング言語におけるデータ構造との対比も行います。
@@ -26,23 +21,23 @@ foo     = true;  // foo は論理型になった
 
 最新の ECMAScript 標準では、次の 9 つの型が定義されています。
 
-- **データ型**のうち 6 種類は[プリミティブ](/ja/docs/Glossary/Primitive)であり、 [`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) 演算子で確認することができます。
+- **データ型**のうち 6 種類は[プリミティブ](/ja/docs/Glossary/Primitive)であり、 [`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) 演算子で確認することができます。
 
-  - [`undefined`](/ja/docs/Glossary/undefined) : `typeof instance === "undefined"`
-  - [論理型 (Boolean)](/ja/docs/Glossary/Boolean) : `typeof instance === "boolean"`
-  - [数値型 (Number)](/ja/docs/Glossary/Number) : `typeof instance === "number"`
-  - [文字列型 (String)](/ja/docs/Glossary/String) : `typeof instance === "string"`
-  - [長整数型 (BigInt)](/ja/docs/Glossary/BigInt) : `typeof instance === "bigint"`
-  - [シンボル型 (Symbol)](/ja/docs/Glossary/Symbol) : `typeof instance === "symbol"`
+  - [`undefined`](/ja/docs/Glossary/undefined) : `typeof instance === "undefined"`
+  - [論理型 (Boolean)](/ja/docs/Glossary/Boolean) : `typeof instance === "boolean"`
+  - [数値型 (Number)](/ja/docs/Glossary/Number) : `typeof instance === "number"`
+  - [文字列型 (String)](/ja/docs/Glossary/String) : `typeof instance === "string"`
+  - [長整数型 (BigInt)](/ja/docs/Glossary/BigInt) : `typeof instance === "bigint"`
+  - [シンボル型 (Symbol)](/ja/docs/Glossary/Symbol) : `typeof instance === "symbol"`
 
 - **構造型**:
 
-  - [オブジェクト (Object)](/ja/docs/Glossary/Object) : `typeof instance === "object"` です。データでありませんが、特別な**構造型**であり、あらゆる[構築された](/ja/docs/Learn/JavaScript/Objects#the_constructor)オブジェクトのインスタンスのためのに使用されます。 `new {{jsxref("Object")}}`, `new {{jsxref("Array")}}`, `new {{jsxref("Map")}}`, `new {{jsxref("Set")}}`, `new {{jsxref("WeakMap")}}`, `new {{jsxref("WeakSet")}}`, `new {{jsxref("Date")}}` など、 [`new` キーワード](/ja/docs/Web/JavaScript/Reference/Operators/new)で作られたほぼすべてのものです。
-  - [関数 (Function)](/ja/docs/Glossary/Function) : データ構造ではありませんが、 `typeof` 演算子に対して `typeof instance === "function"` を返します。これは単に関数の特別な省略形ですが、すべての関数のコンストラクターは `Object` コンストラクターから派生しています。
+  - [オブジェクト (Object)](/ja/docs/Glossary/Object) : `typeof instance === "object"` です。データでありませんが、特別な**構造型**であり、あらゆる[構築された](/ja/docs/Learn/JavaScript/Objects#the_constructor)オブジェクトのインスタンスのためのに使用されます。 `new {{jsxref("Object")}}`, `new {{jsxref("Array")}}`, `new {{jsxref("Map")}}`, `new {{jsxref("Set")}}`, `new {{jsxref("WeakMap")}}`, `new {{jsxref("WeakSet")}}`, `new {{jsxref("Date")}}` など、 [`new` キーワード](/ja/docs/Web/JavaScript/Reference/Operators/new)で作られたほぼすべてのものです。
+  - [関数 (Function)](/ja/docs/Glossary/Function) : データ構造ではありませんが、 `typeof` 演算子に対して `typeof instance === "function"` を返します。これは単に関数の特別な省略形ですが、すべての関数のコンストラクターは `Object` コンストラクターから派生しています。
 
 - **構造的ルート**プリミティブ:
 
-  - [`null`](/ja/docs/Glossary/Null) : `typeof instance === "object"` です。特殊な[プリミティブ](/ja/docs/Glossary/Primitive)型で、値には別な用途があります。オブジェクトが継承されていない場合、 `null` が表示されます。
+  - [`null`](/ja/docs/Glossary/Null) : `typeof instance === "object"` です。特殊な[プリミティブ](/ja/docs/Glossary/Primitive)型で、値には別な用途があります。オブジェクトが継承されていない場合、 `null` が表示されます。
 
 `typeof` 演算子は、データ型を判定する以外の用途では意味を持たないことに注意してください。 `Object` から派生した構造的な型を `typeof` で判定しても、常に `"object"` が返されるので意味がありません。オブジェクトの型を確認するための適切な方法は、 {{jsxref("Operators/instanceof", "instanceof")}} キーワードを使用することです。しかし、その場合でも判定を誤ることがあるかもしれません。
 
@@ -54,7 +49,7 @@ foo     = true;  // foo は論理型になった
 
 ### 論理型 (Boolean)
 
-論理型は論理の状態を表すもので、 `true` と `false` の 2 つの値があります。詳しくは[論理型](/ja/docs/Glossary/Boolean)および {{jsxref("Boolean")}} を参照してください。
+論理型は論理の状態を表すもので、 `true` と `false` の 2 つの値があります。詳しくは[論理型](/ja/docs/Glossary/Boolean)および {{jsxref("Boolean")}} を参照してください。
 
 ### null 型
 
@@ -68,11 +63,11 @@ null 型は値が `null` の 1 つしかありません。詳しくは {{jsxref(
 
 ECMAScript には、**数値型** (Number) と**長整数型** (BigInt、下記参照) の 2 つの組み込み数値型があります。
 
-数値型は [IEEE 754 での倍精度浮動小数点数](https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0) (-(2^53 − 1) から 2^53 − 1 まで間の数値) です。浮動小数点数の表現に加えて、3 つの記号的な値 `+Infinity`, `-Infinity`, {{jsxref("NaN")}} ("**N**ot a **N**umber") があります。
+数値型は [IEEE 754 での倍精度浮動小数点数](https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0) (-(2^53 − 1) から 2^53 − 1 まで間の数値) です。浮動小数点数の表現に加えて、3 つの記号的な値 `+Infinity`, `-Infinity`, {{jsxref("NaN")}} ("**N**ot a **N**umber") があります。
 
 {{jsxref("Infinity", "±Infinity")}} 内で使用可能な最大値または最小値を確認するには、定数 {{jsxref("Number.MAX_VALUE")}} または {{jsxref("Number.MIN_VALUE")}} を使用できます。
 
-> **Note:** ECMAScript 2015 からは、{{jsxref("Number.isSafeInteger()")}}, {{jsxref("Number.MAX_SAFE_INTEGER")}}, {{jsxref("Number.MIN_SAFE_INTEGER")}} を使用して、数値が倍精度浮動小数点数の範囲内にあるかどうかを確認することができるようになりました。
+> **メモ:** ECMAScript 2015 からは、{{jsxref("Number.isSafeInteger()")}}, {{jsxref("Number.MAX_SAFE_INTEGER")}}, {{jsxref("Number.MIN_SAFE_INTEGER")}} を使用して、数値が倍精度浮動小数点数の範囲内にあるかどうかを確認することができるようになりました。
 >
 > この範囲を超えた JavaScript の整数値は正確ではなくなり、倍精度浮動小数点値の近似値に丸められます。
 
@@ -89,7 +84,7 @@ Infinity
 
 多くの場合、数値はその値のみを表しますが、JavaScript には{{jsxref("Operators", "バイナリー (ビット単位) 演算子", "", 1)}}も用意されています。
 
-> **Note:** ビット演算子で[ビットマスク](https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B9%E3%82%AF_%28%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6%29)を使用すれば、 1 つの数値で複数の論理値を表現することも*可能です*が、 JavaScript は (論理型の配列や名前付きプロパティに論理値が割り当てられたオブジェクトのような) 論理値の集合を表現する手段を提供しているため、この行いは悪い習慣として考えられます。ビットマスクはコードの可読性、わかりやすさ、保守性を大きく損ないます。
+> **メモ:** ビット演算子で[ビットマスク](https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B9%E3%82%AF_%28%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6%29)を使用すれば、 1 つの数値で複数の論理値を表現することも*可能です*が、 JavaScript は (論理型の配列や名前付きプロパティに論理値が割り当てられたオブジェクトのような) 論理値の集合を表現する手段を提供しているため、この行いは悪い習慣として考えられます。ビットマスクはコードの可読性、わかりやすさ、保守性を大きく損ないます。
 
 ローカルストレージの容量的制約への対処や、ビット単位での転送量を考える必要のある極限状態など、非常に特殊なケースにおいてはこうしたテクニックが必要となるでしょう。このテクニックは、あくまでも最適化が必要な場合の最終手段としてのみ考慮すべきです。
 
@@ -133,7 +128,7 @@ JavaScript の文字列型は、テキストデータを表すために使用し
 
 - 結合することで、複合文字列を簡単に作成できます。
 - 文字列は簡単にデバッグできます (出力される情報は常に文字列に含まれているものです)。
-- 文字列は多くの API ([入力フィールド](/ja/docs/Web/API/HTMLInputElement)、[ローカルストレージ](/ja/docs/Web/API/Web_Storage_API)の値、 [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest "XMLHttpRequest (XHR) オブジェクトを使用して、サーバーと対話することができます。ページ全体を更新することなく、 URL からデータを取得することができます。これにより、ユーザーの操作を中断することなく、ウェブページの一部だけを更新することができます。") の `responseText` を使用したレスポンス、など) において共通分母であり、文字列だけで作業したいという誘惑に駆られることがあります。
+- 文字列は多くの API ([入力フィールド](/ja/docs/Web/API/HTMLInputElement)、[ローカルストレージ](/ja/docs/Web/API/Web_Storage_API)の値、 [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) の `responseText` を使用したレスポンス、など) において共通分母であり、文字列だけで作業したいという誘惑に駆られることがあります。
 
 規則さえあれば、どのようなデータ構造でも文字列で表現することが可能ですが、これは良い考えとは言えません。例えば、区切り文字を使用することでリストを模倣することができますが (JavaScript の配列の方が適しています)、残念なことに区切り文字がリストの要素となってしまった場合、リストが壊れてしまいます。エスケープした文字を使用することでこの問題に対処することは可能ですが、その規則をすべてに用意する必要がある上、不必要なメンテナンスの負担を生み出します。
 
@@ -155,7 +150,7 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 
 オブジェクトには、*データ*プロパティと*アクセサー*プロパティという特定の属性を持つ 2 種類のプロパティがあります。
 
-> **Note:** 各プロパティに対応する*属性*は JavaScript エンジンによって内部的に使用されるので、直接アクセスすることはできません。そのため、属性は 1 つではなく 2 つの角括弧で表示されています。
+> **メモ:** 各プロパティに対応する*属性*は JavaScript エンジンによって内部的に使用されるので、直接アクセスすることはできません。そのため、属性は 1 つではなく 2 つの角括弧で表示されています。
 >
 > 詳しくは {{jsxref("Object.defineProperty()")}} を参照してください。
 
@@ -258,8 +253,8 @@ JavaScript のオブジェクトは*キー*と*値*を所持しています。�
 | {{jsxref("Uint32Array")}}         | `0` ～ `4294967295`           | 4             | 32 ビット 符号なし整数値                                                      | `unsigned long`       | `uint32_t`                      |
 | {{jsxref("Float32Array")}}     | `1.2E-38` ～ `3.4E38`         | 4             | 32 ビット IEEE 浮動小数点数 (7 桁の有効数字、例: `1.1234567`)   | `unrestricted float`  | `float`                         |
 | {{jsxref("Float64Array")}}     | `5E-324` ～ `1.8E308`         | 8             | 64 ビット IEEE 浮動小数点数 (16 桁の有効数字 例: `1.123...15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | `-2^63` ～ `2^63 - 1`         | 8             | 64 ビット 2 の補数方式の符号付き整数値                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | `0` ～ `2^64 - 1`             | 8             | 64 ビット 符号なし整数値                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| {{jsxref("BigInt64Array")}}     | `-2^63` ～ `2^63 - 1`         | 8             | 64 ビット 2 の補数方式の符号付き整数値                                       | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}     | `0` ～ `2^64 - 1`             | 8             | 64 ビット 符号なし整数値                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### キー付きコレクション: Map, Set, WeakMap, WeakSet
 
@@ -267,7 +262,7 @@ ECMAScript 第 6 編 で導入されたこれらのデータ構造は、オブ�
 
 `Map` と `WeakMap` の違いは、前者ではオブジェクトキーを列挙できることです。これにより、後者の場合にガベージコレクションの最適化が可能になります。
 
-純粋な ECMAScript 5 で `Map` と `Set` を実装することもできますが、オブジェクトを比較することはできないので (例えば `&lt;` 「未満」の意味で)、検索性能が必然的に線形になります。これらのネイティブ実装 (`WeakMap` を含む) は、一定時間に対してほぼ対数的な検索性能を持つことができます。
+純粋な ECMAScript 5 で `Map` と `Set` を実装することもできますが、オブジェクトを比較することはできないので (例えば `&lt;` 「未満」の意味で)、検索性能が必然的に線形になります。これらのネイティブ実装 (`WeakMap` を含む) は、一定時間に対してほぼ対数的な検索性能を持つことができます。
 
 通常、DOM ノードにデータをバインドするには、オブジェクトに直接プロパティを設定するか、 `data-*` 属性を使用します。これらの手法は同じコンテクストで実行されるあらゆるスクリプトからデータの利用が可能であるため、不都合な面を持ち合わせていました。 `Map` や `WeakMap` を使うと、オブジェクトへの*プライベート*なデータバインドを簡単に行うことができます。
 

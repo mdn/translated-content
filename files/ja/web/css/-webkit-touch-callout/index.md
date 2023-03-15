@@ -1,18 +1,8 @@
 ---
 title: '-webkit-touch-callout'
 slug: Web/CSS/-webkit-touch-callout
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - NeedsLiveSample
-  - 標準外
-  - リファレンス
-  - WebKit
-  - recipe:css-property
-browser-compat: css.properties.-webkit-touch-callout
-translation_of: Web/CSS/-webkit-touch-callout
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 `-webkit-touch-callout` は [CSS](/ja/docs/Web/CSS) のプロパティで、対象を長押しすることで現れるコールアウト表示を制御します。
@@ -67,5 +57,5 @@ iOS 上で対象が長押しされたとき、 Safari はそのリンクに関�
 
 ## 関連情報
 
-- [WebKit CSS 拡張](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
 - [Apple の開発者ドキュメントにおける -webkit-touch-callout](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)

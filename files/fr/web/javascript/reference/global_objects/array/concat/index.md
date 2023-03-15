@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/concat
 browser-compat: javascript.builtins.Array.concat
 ---
+
 {{JSRef}}
 
 La méthode **`concat()`** est utilisée afin de fusionner deux ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération.

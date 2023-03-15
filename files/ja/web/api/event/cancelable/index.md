@@ -1,14 +1,8 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.cancelable
-translation_of: Web/API/Event/cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 **`cancelable`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントがキャンセル可能かどうか、イベントが発生しないように抑止することができるかを示します。

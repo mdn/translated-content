@@ -13,6 +13,7 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 ---
+
 {{AddonSidebar()}}
 
 Obtient des informations sur toutes les fenêtres ouvertes, en les passant dans un rappel.
@@ -34,17 +35,17 @@ var gettingAll = browser.windows.getAll(
   - : `object`. Cela contrôle ce que les objets {{WebExtAPIRef('windows.Window')}} sont récupérés.
 
     - `populate`{{optional_inline}}
-      - : `boolean` Par défaut à `false`.  S'il est défini sur `true`, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété `tabs` qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets `Tab` contiendront les propriétés `url`, `title` et `favIconUrl` uniquement si le fichier manifest de l'extension contient les permissions `"tabs"`.
+      - : `boolean` Par défaut à `false`. S'il est défini sur `true`, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété `tabs` qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets `Tab` contiendront les propriétés `url`, `title` et `favIconUrl` uniquement si le fichier manifest de l'extension contient les permissions `"tabs"`.
     - `windowTypes`{{optional_inline}}
       - : `Un ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si cette option est définie, les objets {{WebExtAPIRef('windows.Window')}} renvoyés seront filtrés en fonction de leur type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un ensemble d'objets  {{WebExtAPIRef('windows.Window')}}, représentant toutes les fenêtres qui correspondent aux critères donnés. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un ensemble d'objets {{WebExtAPIRef('windows.Window')}}, représentant toutes les fenêtres qui correspondent aux critères donnés. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getAll")}}
+{{Compat}}
 
 ## Exemples
 
@@ -79,7 +80,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +108,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

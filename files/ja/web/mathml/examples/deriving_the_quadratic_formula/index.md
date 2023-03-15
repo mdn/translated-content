@@ -1,16 +1,8 @@
 ---
 title: 'MathML: 二次方程式の解の公式を導く'
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
-tags:
-  - 初心者
-  - 教育
-  - 例
-  - ガイド
-  - HTML5
-  - MathML
-  - NeedsBeginnerUpdate
-translation_of: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 ---
+
 このページでは、二次方程式の解の公式の導出について概説します。
 
 二次方程式の一般形をとり、 x について解きます。

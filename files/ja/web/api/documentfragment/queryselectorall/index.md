@@ -1,14 +1,8 @@
 ---
 title: DocumentFragment.querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - メソッド
-browser-compat: api.DocumentFragment.querySelectorAll
-translation_of: Web/API/DocumentFragment/querySelectorAll
 ---
+
 {{ApiRef("DOM")}}
 
 **`DocumentFragment.querySelectorAll()`** メソッドは {{domxref("NodeList")}} で、 {{domxref("DocumentFragment")}} の中で指定されたセレクター群に一致する要素の一覧を（文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して）返します。

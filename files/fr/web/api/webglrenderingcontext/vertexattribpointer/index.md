@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.vertexAttribPointer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) spécifie la disposition en mémoire de l'objet de tampon vertex. Elle doit être appelée une fois pour chaque attribut de sommet.
@@ -58,9 +59,9 @@ Aucune.
 ### Exceptions
 
 - Une erreur `gl.INVALID_VALUE` est déclenchée si `decalage` est négatif.
-- Une erreur `gl.INVALID_OPERATION` est déclenchée si  `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
-- Une erreur  `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
-- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur  `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
+- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
 
 ## Description
 
@@ -217,33 +218,11 @@ gl.enableVertexAttribArray(texUVLoc);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "vertexAttribPointer")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glVertexAttribPointer.xml", "glVertexAttribPointer")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.vertexAttribPointer")}}
+{{Compat}}
 
 ## Voir aussi
 

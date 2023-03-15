@@ -4,6 +4,7 @@ slug: Web/API/Window/showModalDialog
 translation_of: Web/API/Window/showModalDialog
 browser-compat: api.Window.showModalDialog
 ---
+
 {{deprecated_header}}{{APIRef}}
 
 > **Attention :** Cette fonctionnalité a été retirée. Veuillez corriger les sites ou applications web sous votre responsabilité qui l'utiliseraient encore.

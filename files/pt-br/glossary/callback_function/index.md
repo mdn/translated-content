@@ -1,7 +1,6 @@
 ---
 title: Função Callback
 slug: Glossary/Callback_function
-translation_of: Glossary/Callback_function
 original_slug: Glossario/Callback_function
 ---
 
@@ -30,4 +29,4 @@ Note, no entanto, que callbacks são normalmente utilizados para continuar a exe
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Callback", "Callback")}} no Wikipedia
+- {{interwiki("wikipedia", "Callback", "Callback")}} no Wikipedia

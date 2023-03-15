@@ -3,6 +3,7 @@ title: Introduction
 slug: Web/JavaScript/Guide/Introduction
 translation_of: Web/JavaScript/Guide/Introduction
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 Ce chapitre introduit JavaScript et présente certains de ses concepts fondamentaux.

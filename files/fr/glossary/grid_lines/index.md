@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Grid_Lines
 original_slug: Glossaire/Lignes_de_grille_(lines)
 ---
+
 Les **lignes de grille** sont créées avec la définition des {{glossary("Grid Tracks", "pistes")}} (_tracks_) dans la grille explicite pour [une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout). Dans l'exemple suivant, est présentée une grille qui a 3 pistes de colonnes et 2 pistes de lignes. Cela nous donne 4 lignes de colonnes _(column lines_) et 3 lignes de lignes _(row lines)_.
 
 ## Exemple
@@ -153,7 +154,7 @@ Les lignes créées dans la grille explicite peuvent être nommées, en ajoutant
 
 {{ EmbedLiveSample('Nommage_des_lignes', '500', '250') }}
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de propriété
 

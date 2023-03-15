@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
 translation_of: Web/API/CanvasRenderingContext2D/stroke
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.stroke()`** de l'API Canvas 2D dessine le chemin actuel ou donné avec le style de trait actuel utilisant la règle d'enroulement non nulle.
@@ -85,13 +86,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroke", "CanvasRenderingContext2D.stroke")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.stroke")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,24 +1,11 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML 入力型
-  - HTML フォーム
-  - HTML input
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-  - Week
-  - 週
-browser-compat: html.elements.input.input-week
-translation_of: Web/HTML/Element/input/week
+l10n:
+  sourceCommit: e1f571eced916f60ca387ecb562271f6235beb5c
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`week`** 型は、年と、その年の [ISO 8601 週番号](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) (つまり、第 1 週から第 [52 または 53](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) 週) を簡単に入力することができる入力欄を生成します。
 
@@ -28,18 +15,18 @@ translation_of: Web/HTML/Element/input/week
 
 Chrome/Opera では、 `week` コントロールは週と年の値を埋めるスロット、もっと視覚的に選択するためのポップアップカレンダーインターフェイス、コントロールの値を消去するための "X" ボタンを提供します。
 
-![](week-control-chrome.png)
+![「2017年第01週」と書かれた入力欄。 2017 の背景は、フォーカスリングと同じ青色です。入力欄には、×やクリア、上下の小さな矢印がついたスピナー、大きな下矢印の 3 つのアイコンがあります。 2017 年 1 月に設定された入力の下には、カレンダーがポップアップで表示されている。カレンダーの最初の列は週番号が 1、2、3、4、5、6 と並んでいる。その右側に一か月分のカレンダーがある。第 1 週と 1 月 2 日～ 8 日がある行はハイライトされています。月と同じ行に、次の月と前の月を右と左に移動するボタンがあります。](week-control-chrome.png)
 
 Edge の `week` コントロールはもう少し凝っており、年と週を選ぶスライドするリールが開きます。
 
-![](week-control-edge.png)
+!['week 01, 2017' と書かれた入力。下に2列のポップアップが開いている。左列には、第 48 週から第 52 週まで、第 01 週から第 05 週までと続く、週のリストが掲載されている。右辺には、 2012 年から 2022 年までの年号が並んでいる。 01 週と 2017 年は真ん中で、青背景で強調されている。一番下には、チェックマークと X ボタンがある。](week-control-edge.png)
 
 <table class="properties">
   <tbody>
     <tr>
       <td><strong><a href="#値">値</a></strong></td>
       <td>
-        年と週を表す {{domxref("DOMString")}}、または空欄
+        年と週を表す文字列、または空欄
       </td>
     </tr>
     <tr>
@@ -66,6 +53,10 @@ Edge の `week` コントロールはもう少し凝っており、年と週を�
       </td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -78,13 +69,13 @@ Edge の `week` コントロールはもう少し凝っており、年と週を�
 
 ## 値
 
-{{domxref("DOMString")}} で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats#week_strings)で説明しています。
+文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats#week_strings)で説明しています。
 
 次のように {{htmlattrxref("value", "input")}} 属性に値を入れることで、既定値を設定することができます。
 
 ```html
 <label for="week">どの週に始めたいですか。</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('Value', 600, 60)}}
@@ -94,7 +85,7 @@ Edge の `week` コントロールはもう少し凝っており、年と週を�
 次のように、 JavaScript から入力要素の {{domxref("HTMLInputElement.value", "value")}} プロパティを使用して、値を取得したり設定したりすることもできます。
 
 ```js
-var weekControl = document.querySelector('input[type="week"]');
+const weekControl = document.querySelector('input[type="week"]');
 weekControl.value = '2017-W45';
 ```
 
@@ -118,7 +109,7 @@ weekControl.value = '2017-W45';
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value`  プロパティを設定することで変更することができます。
 
-> **Note:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### step
 
@@ -126,11 +117,11 @@ weekControl.value = '2017-W45';
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
-> **Note:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `week` 入力欄では、 `step` の値は週数で指定され、 604,800,000 が乗じられます（ミリ秒単位の数値であるため)。 `step` の既定値は 1 であり、 1 週を表します。既定の刻みの既定値は -259,200,000 で、これは 1970 年の最初の週 (`1970-W01`) です。
 
-<em>現時点で、 `week` 入力欄で `step` に `any` の値が何を意味するかが不明確です。これは情報が決定次第、更新されるでしょう。</em>
+_現時点で、 `week` 入力欄で `step` に `any` の値が何を意味するかが不明確です。これは情報が決定次第、更新されるでしょう。_
 
 ## week 入力欄の使用
 
@@ -145,7 +136,7 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 ```html
 <form>
   <label for="week">どの週から始めますか。</label>
-  <input id="week" type="week" name="week">
+  <input id="week" type="week" name="week" />
 </form>
 ```
 
@@ -170,8 +161,7 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 ```html
 <form>
   <label for="week">どの週から始めますか。</label>
-  <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52">
+  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
   <span class="validity"></span>
 </form>
 ```
@@ -194,15 +184,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -219,12 +209,17 @@ input:valid+span:after {
 <form>
   <div>
     <label for="week">どの週から始めますか。</label>
-    <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2017-W52"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="フォームを送信">
+    <input type="submit" value="フォームを送信" />
   </div>
 </form>
 ```
@@ -235,17 +230,17 @@ input:valid+span:after {
 
 対応していないブラウザーを使用している方のためのスクリーンショットです。
 
-![](week-validation-chrome.png)
+![週番号フォームコントロールには、週番号があるべき場所に2本のダッシュがあります。黄色の警告マークと「このフィールドに入力してください」というポップアップが、入力のフォーカスリングと同じ青色でハイライトされている 2 つのダッシュから発せられています。](week-validation-chrome.png)
 
-> **Warning:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、間違った種類のデータなど) が送信された場合に災害が発生するおそれがあります。
+> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）が送信された場合に災害が発生するおそれがあります。
 
-## ブラウザーの対応の扱い
+## ブラウザーの互換性の扱い
 
 前述のように、現時点で week 入力欄を利用する上で一番の問題はブラウザーの互換性です。デスクトップでは Safari と Firefox は対応しておらず、 IE の古いバージョンも対応していません。
 
 Android や iOS のようなモバイルプラットフォームは、このような入力型が実に有効であり、タッチスクリーン環境で実に簡単に値を選択できる専用のユーザーインターフェイスコントロールを提供します。例えば、 Android 版 Chrome の `week` 選択は、次のようになっています。
 
-![](week-chrome-android.png)
+![モーダルポップアップ。ヘッダーには「週の設定」と書かれている。 2 列あり、左は 2017 が不透明で表示されています。右側は真ん中の 36 が不透明で、その上の 35 と下の 37 が半透明であります。他にオプションはありません。下部には 3 つのテキストリンクまたはボタンがあり、左に「削除」、右に「キャンセル」「設定」と記載されています。](week-chrome-android.png)
 
 対応していないブラウザーでは安全にテキスト入力欄に格下げされますが、これはユーザーインターフェイスの一貫性（表示されるコントロールが異なること）とデータの扱いの 2 つの問題を生じます。
 
@@ -270,8 +265,13 @@ HTML は次のようになります。
 <form>
   <div class="nativeWeekPicker">
     <label for="week">どの週から始めますか。</label>
-    <input id="week" type="week" name="week"
-           min="2017-W01" max="2018-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2018-W52"
+      required />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">どの週から始めますか。</p>
@@ -279,8 +279,7 @@ HTML は次のようになります。
     <div>
       <span>
         <label for="week">Week:</label>
-        <select id="fallbackWeek" name="week">
-        </select>
+        <select id="fallbackWeek" name="week"></select>
       </span>
       <span>
         <label for="year">Year:</label>
@@ -310,15 +309,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -327,24 +326,24 @@ input:valid+span:after {
 
 ```js
 // 変数を定義
-var nativePicker = document.querySelector('.nativeWeekPicker');
-var fallbackPicker = document.querySelector('.fallbackWeekPicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector('.nativeWeekPicker');
+const fallbackPicker = document.querySelector('.fallbackWeekPicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var weekSelect = document.querySelector('#fallbackWeek');
+const yearSelect = document.querySelector('#year');
+const weekSelect = document.querySelector('#fallbackWeek');
 
 // 最初はフォールバックを非表示にする
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
 // 新しい日付入力が文字列入力にフォールバックされるかどうか
-var test = document.createElement('input');
+const test = document.createElement('input');
 
 try {
-  test.type = 'week';
+  test.type = 'week';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.description);
 }
 
 // もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
@@ -360,15 +359,15 @@ if(test.type === 'text') {
 
 function populateWeeks() {
   // 週の選択肢を 52 週で生成
-  for(var i = 1; i <= 52; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 1; i <= 52; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
     weekSelect.appendChild(option);
   }
 }
 ```
 
-> **Note:** 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
+> **メモ:** 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
 
 ## 仕様書
 

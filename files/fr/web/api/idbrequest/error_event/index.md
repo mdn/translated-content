@@ -4,11 +4,12 @@ slug: Web/API/IDBRequest/error_event
 translation_of: Web/API/IDBRequest/onerror
 original_slug: Web/API/IDBRequest/onerror
 ---
+
 {{ APIRef("IndexedDB") }}
 
-le gestionnaire d'événement **`onerror`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`error`](/en-US/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
+le gestionnaire d'événement **`onerror`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`error`](/fr/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
 
-Le gestionnaire d'événement reçoit l'événement [error](/en-US/docs/Web/Events/error) avec le type="error" en paramètre.
+Le gestionnaire d'événement reçoit l'événement [error](/fr/docs/Web/Events/error) avec le type="error" en paramètre.
 
 {{AvailableInWorkers}}
 
@@ -20,7 +21,7 @@ request.onerror = function( event ) { ... };
 
 ## Exemple
 
-L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé au {{domxref("IDBObjectStore","magasin d'objets")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objets. En bas le gestionnaire d'événement `onerror` affiche le code d'erreur si la {{domxref("IDBRequest","requête")}} échoue. Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé au {{domxref("IDBObjectStore","magasin d'objets")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objets. En bas le gestionnaire d'événement `onerror` affiche le code d'erreur si la {{domxref("IDBRequest","requête")}} échoue. Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";
@@ -55,21 +56,19 @@ objectStoreTitleRequest.onerror = function() {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-onerror', 'onerror')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.onerror")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [Error Event](/en-US/docs/Web/Events/error)
+- [Using IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [Error Event](/fr/docs/Web/Events/error)
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

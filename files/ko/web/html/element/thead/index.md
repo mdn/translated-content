@@ -1,17 +1,9 @@
 ---
 title: '<thead>: 표 머릿글 요소'
 slug: Web/HTML/Element/thead
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-browser-compat: html.elements.thead
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<thead>`** [HTML](/ko/docs/Web/HTML) 요소는 테이블의 열의 머리글인 행들의 집합입니다.
 
@@ -109,7 +101,7 @@ browser-compat: html.elements.thead
     - `fuchsia` = "#FF00FF"
     - `aqua` = "#00FFFF"
 
-    > **Note:** 이 특성은 표준이 아니며, Microsoft Internet Explorer의 몇몇 버전에서만 구현되므로 사용하지 마십시오. {{HTMLElement("thead")}} 요소에 스타일을 적용하려면 [CSS](/en-US/docs/Web/CSS)를 사용해야 합니다. **bgcolor** 특성과 비슷한 효과를 내고 싶다면, 관련된 {{HTMLElement("td")}} 또는 {{HTMLElement("th")}} 요소에 [CSS](/en-US/docs/Web/CSS) {{cssxref("background-color")}} 속성을 사용하세요.
+    > **Note:** 이 특성은 표준이 아니며, Microsoft Internet Explorer의 몇몇 버전에서만 구현되므로 사용하지 마십시오. {{HTMLElement("thead")}} 요소에 스타일을 적용하려면 [CSS](/ko/docs/Web/CSS)를 사용해야 합니다. **bgcolor** 특성과 비슷한 효과를 내고 싶다면, 관련된 {{HTMLElement("td")}} 또는 {{HTMLElement("th")}} 요소에 [CSS](/ko/docs/Web/CSS) {{cssxref("background-color")}} 속성을 사용하세요.
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 

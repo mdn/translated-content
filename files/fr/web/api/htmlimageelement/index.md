@@ -3,9 +3,10 @@ title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 translation_of: Web/API/HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
-L'interface  **`HTMLImageElement`** fournit des propriétés et des méthodes spéciales pour manipuler la mise en page et la présentation des éléments {{HTMLElement("img")}} .
+L'interface **`HTMLImageElement`** fournit des propriétés et des méthodes spéciales pour manipuler la mise en page et la présentation des éléments {{HTMLElement("img")}} .
 
 ## Propriétés
 
@@ -38,9 +39,9 @@ _Hérite les propriétés de son parent, {{domxref ("HTMLElement")}}_
 - {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
   - : Retourne un `unsigned long`  représentant la hauteur intrinsèque de l'image en pixels CSS, si elle est disponible ; sinon, 0 est affiché.
 - {{domxref("HTMLImageElement.referrerPolicy")}} {{experimental_inline}}
-  - : Est une {{domxref("DOMString")}} *(chaîne de caractères)* qui reflète l'attribut HTML {{htmlattrxref("referrerpolicy", "img")}}  indiquant la référence à utiliser pour récupérer l'image.
+  - : Est une {{domxref("DOMString")}} *(chaîne de caractères)* qui reflète l'attribut HTML {{htmlattrxref("referrerpolicy", "img")}} indiquant la référence à utiliser pour récupérer l'image.
 - {{domxref("HTMLImageElement.src")}}
-  - : Est une {{domxref("DOMString")}} *(chaîne de caractères)* qui reflète l'attribut HTML  {{htmlattrxref("src", "img")}} contenant l'URL complète de l'image y compris l'URI de base.
+  - : Est une {{domxref("DOMString")}} *(chaîne de caractères)* qui reflète l'attribut HTML {{htmlattrxref("src", "img")}} contenant l'URL complète de l'image y compris l'URI de base.
 - {{domxref("HTMLImageElement.sizes")}} {{experimental_inline}}
   - : Est une {{domxref("DOMString")}} *(chaîne de caractères)* reflétant l'attribut HTML {{htmlattrxref("sizes", "img")}} _(taille)_.
 - {{domxref("HTMLImageElement.srcset")}} {{experimental_inline}}
@@ -65,12 +66,12 @@ _Hérite les propriétés de son parent, {{domxref("HTMLElement")}}._
 
 ## Erreurs
 
-Si une erreur apparaît pendant un essai de chargement ou de rendu de l'image, et si un gestionnaire d'évènements {{htmlattrxref("onerror")}} a été configuré pour gérer les évènements {{event("error")}} , ce gestionnaire est appelé. Cela peut se produire dans un certain nombre de situations, y compris :
+Si une erreur apparaît pendant un essai de chargement ou de rendu de l'image, et si un gestionnaire d'évènements {{htmlattrxref("onerror")}} a été configuré pour gérer les évènements [`error`](/fr/docs/Web/API/Element/error_event), ce gestionnaire est appelé. Cela peut se produire dans un certain nombre de situations, y compris :
 
-- L'attribut  {{htmlattrxref("src", "img")}} est vide ou `null`.
+- L'attribut {{htmlattrxref("src", "img")}} est vide ou `null`.
 - L'URL spécifiée de `src`  est la même que l'URL de la page actuelle de l'utilisateur.
 - L'image spécifiée est corrompue de telle manière qu'elle ne peut être chargée.
-- Les métadonnées de l'image spécifiée sont corrompues empêchant de récupérer ses dimensions,  et aucune dimension n'est spécifiée dans les attributs de l'élément `<img>`.
+- Les métadonnées de l'image spécifiée sont corrompues empêchant de récupérer ses dimensions, et aucune dimension n'est spécifiée dans les attributs de l'élément `<img>`.
 - L'image spécifiée est dans un format non supporté par l'"{{Glossary("user agent")}}".
 
 ## Exemple
@@ -92,18 +93,11 @@ alert(document.images[0].src);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                               | Commentaire                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}         | {{Spec2('Referrer Policy')}} | Ajoute la propriété `referrerPolicy` .                                                                                                                                                                                                                                                                                                                                                         |
-| {{SpecName("CSSOM View", "#excensions-to-the-htmlimageelement-interface", "Extensions to HTMLImageElement")}} | {{Spec2('CSSOM View')}}     | Ajoute les propriétés `x` et`y` .                                                                                                                                                                                                                                                                                                                                                              |
-| {{SpecName('HTML WHATWG', "embedded-content.html#the-img-element", "HTMLImageElement")}}                             | {{Spec2('HTML WHATWG')}}     | Les propriétés suivantes sont ajoutées : `srcset`, `currentSrc` et `sizes`.                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-img-element", "HTMLImageElement")}}                             | {{Spec2('HTML5 W3C')}}         | Un constructeur (avec 2 paramètres facultatifs) est ajouté. Les propriétés suivantes sont maintenant obsolètes : `name`, `border`, `align`, `hspace`, `vspace`, et `longdesc`. Les propriétés suivantes sont maintenant `unsigned et long`, iau lieu de `long`: `height` et `width`. Les propriétés suivantes ont été ajoutées : `crossorigin`, `naturalWidth`, `naturalHeight` et `complete`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-17701901', 'HTMLImgElement')}}                                                     | {{Spec2('DOM2 HTML')}}         | La propriété `lowSrc` a été supprimée. La propriété est maintenant `long`, au lieu des `DOMString`: `height`, `width`, `hspace` et `vspace`.                                                                                                                                                                                                                                                   |
-| {{SpecName('DOM1', 'level-one-html.html#ID-17701901', 'HTMLImgElement')}}                                                 | {{Spec2('DOM1')}}             | définition initiale.                                                                                                                                                                                                                                                                                                                                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLImageElement")}}
+{{Compat}}
 
 ## Voir aussi
 

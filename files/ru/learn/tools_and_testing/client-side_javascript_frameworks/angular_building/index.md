@@ -13,6 +13,7 @@ tags:
   - Сборка
   - Ресурсы
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 В финальной статье об Angular рассказывается, как создать полностью готовое приложение и предоставляются дополнительные ресурсы, которые помогут вам продолжить обучение
@@ -126,4 +127,3 @@ CLI компилирует приложение и помещает резуль
   - [Создание компонента элемента (item component)](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
   - [Фильтрация списка дел](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - [Сборка Angular-приложений и другие ресурсы](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
-  

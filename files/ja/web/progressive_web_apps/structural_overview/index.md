@@ -1,20 +1,8 @@
 ---
 title: プログレッシブウェブアプリの構造的な概要
 slug: Web/Progressive_web_apps/Structural_overview
-tags:
-  - Applications
-  - Apps
-  - Guide
-  - Layout
-  - Overview
-  - PWAs
-  - Progressive web apps
-  - Structure
-  - Web
-  - Webapps
-  - contents
-translation_of: Web/Progressive_web_apps/Structural_overview
 ---
+
 プログレッシブウェブアプリ (PWA) はあらゆるウェブコンテンツに対応していますが、ウェブ上で使用することも、ローカルアプリケーションとしてインストールして実行することも可能なウェブアプリとして認識されるためには、特定の構造を持ち、特定のコンポーネントを含む必要があります。この構造概要では、標準的なウェブアプリケーションを構成する機能と、PWA を構築する際に従うことができるいくつかのデザインパターンを見ていきます。
 
 ## アプリの構造
@@ -113,9 +101,9 @@ js13kPWA のウェブサイトの構造はとてもシンプルです。1 つの
 <main>
   <h1>js13kGames A-Frame entries</h1>
   <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">
-       A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a>
-       competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
-       fork js13kPWA on GitHub</a> to check its source code.</p>
+       A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a>
+       competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
+       fork js13kPWA on GitHub</a> to check its source code.</p>
   <button id="notifications">Request dummy notifications</button>
   <section id="content">
     // Content inserted in here
@@ -123,7 +111,7 @@ js13kPWA のウェブサイトの構造はとてもシンプルです。1 つの
 </main>
 <footer>
   <p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">
-       Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
+       Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
 </footer>
 </body>
 </html>
@@ -139,7 +127,7 @@ js13kPWA のウェブサイトの構造はとてもシンプルです。1 つの
 
 ### app.js: メインアプリの JavaScript
 
-`app.js` というファイルは、アプリが最初にロードされたときに実行されます。このファイルの役割は、主にアプリの初期化ですが、それ以外のこともできます。アプリがどのように機能するかは、このガイドの後の記事で詳しく説明します。
+`app.js` というファイルは、アプリが最初にロードされたときに実行されます。このファイルの役割は、主にアプリの初期化ですが、それ以外のこともできます。アプリがどのように機能するかは、このガイドの後の記事で詳しく説明します。
 
 このアプリが最初に行うことは、次のテンプレートを使ってアプリの表示内容を生成することです。
 
@@ -174,7 +162,7 @@ document.getElementById('content').innerHTML = content;
 
 ```js
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
 }
 ```
 

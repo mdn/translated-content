@@ -1,16 +1,8 @@
 ---
 title: レシピを投稿する
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
-tags:
-  - CSS
-  - 協力
-  - ガイド
-  - レイアウト
-  - テンプレート
-  - 料理帳
-  - レシピ
-translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
 ---
+
 {{CSSRef}}
 
 レイアウト料理帳の例を提供したい場合、このページでは、例を公開するための手順について説明します。

@@ -9,9 +9,10 @@ tags:
   - Type
 translation_of: Web/API/Event/type
 ---
+
 {{APIRef}}
 
-La propriété en lecture seule **Event.type** retourne une chaîne de caractères (_string_) contenant le type de l'événement. Le type est défini lors de la construction de l'événement et est le nom d'usage pour se référer à celui-ci, tel que  `click`, `load` ou `error`.
+La propriété en lecture seule **Event.type** retourne une chaîne de caractères (_string_) contenant le type de l'événement. Le type est défini lors de la construction de l'événement et est le nom d'usage pour se référer à celui-ci, tel que `click`, `load` ou `error`.
 
 L'argument `event` de {{ domxref("EventTarget.addEventListener()") }} et {{ domxref("EventTarget.removeEventListener()") }} n'est pas sensible à la casse.
 
@@ -76,11 +77,8 @@ event.type
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-type', 'Event.type')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM2 Events', '#Events-Event-type', 'Event.type')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.type")}}
+{{Compat}}

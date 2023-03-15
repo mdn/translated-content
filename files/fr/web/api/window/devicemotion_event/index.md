@@ -4,6 +4,7 @@ slug: Web/API/Window/devicemotion_event
 translation_of: Web/API/Window/devicemotion_event
 browser-compat: api.Window.devicemotion_event
 ---
+
 {{APIRef}}
 
 L'évènement `devicemotion` est déclenché à intervalles réguliers et indique la quantité de force physique d'accélération que le périphérique reçoit à ce moment. Il fournit également des informations sur le taux de rotation, si disponible.

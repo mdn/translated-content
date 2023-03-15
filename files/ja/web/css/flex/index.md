@@ -1,15 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/flex
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.flex
-translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 **`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フレックス*アイテム*をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。

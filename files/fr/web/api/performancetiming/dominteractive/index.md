@@ -14,6 +14,7 @@ tags:
   - domInteractive
 translation_of: Web/API/PerformanceTiming/domInteractive
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domInteractive`](/fr/docs/Web/API/PerformanceNavigationTiming/domInteractive) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
@@ -30,13 +31,11 @@ let time = performanceTiming.domInteractive;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-dominteractive', 'PerformanceTiming.domInteractive')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.domInteractive")}}
+{{Compat}}
 
 ## Voir aussi
 

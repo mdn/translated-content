@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 ---
+
 {{AddonSidebar()}}
 
 Un objet de ce type est renvoyé par les auditeurs d'événements qui ont défini le `"blocking"` dans leur argument `extraInfoSpec`.
@@ -35,7 +36,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
       - : `string`. Mot de passe à fournir.
 
 - `cancel`{{optional_inline}}
-  - : `boolean`. Si `true`, la demande est annulée. Vous ne pouvez définir cette propriété dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et  {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
+  - : `boolean`. Si `true`, la demande est annulée. Vous ne pouvez définir cette propriété dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
 - `redirectUrl`{{optional_inline}}
 
   - : `string`. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
@@ -51,9 +52,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `upgradeToSecure`{{optional_inline}}
   - : `boolean`. Si la valeur `true` est est définie et que la requête originale est une requête HTTP, cela empêchera l'envoi de la requête originale et fera plutôt une requête sécurisée (HTTPS). Si une extension renvoie `redirectUrl` dans `onBeforeRequest`, alors `upgradeToSecure` sera ignoré pour cette requête. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.BlockingResponse")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -61,7 +62,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,4 +90,4 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

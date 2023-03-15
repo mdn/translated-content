@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/html
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.
 
@@ -17,7 +18,7 @@ L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML.
 Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
 - {{htmlattrdef("manifest")}}{{deprecated_inline}}
-  - : Définit l'URI d'un manifeste de ressources signifiant que les ressources devraient être mises en cache localement. Voir [Ressources hors-ligne dans Firefox](/fr/docs/Utiliser_Application_Cache "en/Offline_resources_in_Firefox") pour plus de détails.
+  - : Définit l'URI d'un manifeste de ressources signifiant que les ressources devraient être mises en cache localement. Voir [Ressources hors-ligne dans Firefox](/fr/docs/Utiliser_Application_Cache) pour plus de détails.
 - {{htmlattrdef("version")}}{{deprecated_inline}}
   - : Définit la version du document HTML _Document Type Definition_ qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
 - {{htmlattrdef("xmlns")}}
@@ -45,7 +46,7 @@ L'utilisation d'un attribut {{htmlattrxref("lang")}} [valide (au sens de l'IETF)
 
 Ajouter un attribut `lang` valide au sein de l'élément HTML permet également de s'assurer que les métadonnées importantes contenue dans l'élément {{HTMLElement("head")}}, telle que le titre de la page (cf. {{HTMLElement("title")}}) sont énoncées correctement.
 
-- [Comprendre les règles WCAG 3.1](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.1_%E2%80%94_Readable_Make_text_content_readable_and_understandable)
+- [Comprendre les règles WCAG 3.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.1_%E2%80%94_Readable_Make_text_content_readable_and_understandable)
 - _[Understanding Success Criterion 3.1.1 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/meaning-doc-lang-id.html)_
 
 ## Résumé technique
@@ -95,15 +96,11 @@ Ajouter un attribut `lang` valide au sein de l'élément HTML permet également 
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}} | {{Spec2('HTML WHATWG')}} |                                                                              |
-| {{SpecName('HTML5 W3C', 'semantics.html#the-html-element', '&lt;html&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Ajout de l'attribut `manifest`. L'attribut `version` est désormais obsolète. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.3', '&lt;html&gt;')}}             | {{Spec2('HTML4.01')}}     | L'attribut `version` est désormais déprécié.                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.html")}}
+{{Compat}}
 
 ## Voir aussi
 

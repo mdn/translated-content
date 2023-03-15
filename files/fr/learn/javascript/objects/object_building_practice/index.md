@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/JavaScript/Objects/Object_building_practice
 original_slug: Learn/JavaScript/Objects/la_construction_d_objet_en_pratique
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 Dans l'article précédent, nous avons passé en revue l'essentiel de la théorie de l'objet Javascript et sa syntaxe détaillée, vous donnant ainsi des bases solides sur lesquelles commencer. Dans le présent article nous plongeons dans un exercice pratique afin d'accroître votre savoir-faire dans la construction d'objets entièrement personnalisés donnant un résultat plutôt amusant et très coloré.
@@ -59,7 +60,7 @@ Pour commencer, faites des copies locales de nos fichiers [`index.html`](https:/
 
 1. Un document HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
 2. Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
-3. Un peu de JavaScript qui sert à paramétrer l'élément  `<canvas>` et fournir les fonctions globales que nous utiliserons.
+3. Un peu de JavaScript qui sert à paramétrer l'élément `<canvas>` et fournir les fonctions globales que nous utiliserons.
 
 La première partie du script ressemble à ceci :
 
@@ -72,9 +73,9 @@ const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 ```
 
-Ce script prend une référence à l'élément `<canvas>` et ensuite invoque la méthode [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur lui, nous donnant ainsi un contexte sur lequel nous pouvons commencer à dessiner. La variable résultante  (`ctx`)  est l'objet qui représente directement la surface du Canvas où nous pouvons dessiner et qui nous permet de dessiner des formes 2D sur ce dernier.
+Ce script prend une référence à l'élément `<canvas>` et ensuite invoque la méthode [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur lui, nous donnant ainsi un contexte sur lequel nous pouvons commencer à dessiner. La variable résultante (`ctx`) est l'objet qui représente directement la surface du Canvas où nous pouvons dessiner et qui nous permet de dessiner des formes 2D sur ce dernier.
 
-Après, nous configurons les variables `width` (largeur) et `height`(hauteur),  et la largeur et la hauteur de l'élément canvas (représentés par les propriétés `canvas.width` et `canvas.height` ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).
+Après, nous configurons les variables `width` (largeur) et `height` (hauteur), et la largeur et la hauteur de l'élément canvas (représentés par les propriétés `canvas.width` et `canvas.height` ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).
 
 Vous verrez qu'ici nous enchaînons les assignations de valeurs des différentes variables ensemble à des fins de rapidité. Ceci est parfaitement autorisé.
 
@@ -134,7 +135,7 @@ En utilisant cette fonction, nous pouvons dire à notre balle de se dessiner sur
 
   - Les positions `x` et `y` du centre de l'arc — nous spécifions donc les propriétés `x` et `y` de notre balle.
   - Le rayon de l'arc — nous spécifions la propriété `size` de notre balle.
-  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degré et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement, vous êtes obligés de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement  `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
+  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degré et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement, vous êtes obligés de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
 
 - En dernière position, nous utilisons la méthode [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill) qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec `beginPath()`, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec `fillStyle`.
 
@@ -186,16 +187,16 @@ Ball.prototype.update = function() {
 }
 ```
 
-Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du `canvas`. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc, par exemple, si la balle se déplaçait vers le haut (`velY` positif) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (`velY` négatif).
+Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du `canvas`. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc, par exemple, si la balle se déplaçait vers le haut (`velY` positif) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (`velY` négatif).
 
 Dans les quatre cas, nous vérifions&nbsp;:
 
 - Si la coordonnée `x` est plus grande que la largeur du `canvas` (la balle est en train de sortir du côté droit).
 - Si la coordonnée `x` est plus petite que `0` (la balle est en train de sortir du côté gauche).
 - Si la coordonnée `y` est plus grande que la hauteur du `canvas` (la balle est en train de sortir par le bas).
-- Si la coordonnée `y` est plus petite que `0` (la balle est en train de sortir par le haut).
+- Si la coordonnée `y` est plus petite que `0` (la balle est en train de sortir par le haut).
 
-Dans chaque cas, nous incluons la taille (`size`) de la balle dans les calculs parce que les coordonnées `x`/`y` sont situées au centre de la balle, mais nous voulons que le pourtour de la balle rebondisse sur le rebord — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
+Dans chaque cas, nous incluons la taille (`size`) de la balle dans les calculs parce que les coordonnées `x`/`y` sont situées au centre de la balle, mais nous voulons que le pourtour de la balle rebondisse sur le rebord — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
 
 Les deux dernières lignes ajoutent la valeur `velX` à la coordonnée `x` et la valeur `velY` à la coordonnée `y` — la balle est en effet mise en mouvement chaque fois que cette méthode est invoquée.
 

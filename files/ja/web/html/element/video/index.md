@@ -1,28 +1,9 @@
 ---
 title: '<video>: 動画埋め込み要素'
 slug: Web/HTML/Element/video
-tags:
-  - Element
-  - HTML
-  - HTML 動画
-  - HTML Video Player
-  - HTML embedded content
-  - HTML5
-  - Media
-  - Movie Playback
-  - Movies
-  - マルチメディア
-  - Playing Movies
-  - Playing Video
-  - リファレンス
-  - Showing Video
-  - 動画
-  - ウェブ
-browser-compat: html.elements.video
-translation_of: Web/HTML/Element/video
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
 
@@ -40,7 +21,7 @@ translation_of: Web/HTML/Element/video
 
   - : 論理属性です。この属性が指定された場合、データの読み込みが完了し、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
-    > **Note:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
+    > **メモ:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
 
     動画の自動再生を無効にするために `autoplay="false"` を指定しても機能しません。 `<video>` タグにこの属性があれば、動画が自動的に再生されます。自動再生を無効にするには、属性を完全に取り除くことが必要です。
 
@@ -78,7 +59,7 @@ translation_of: Web/HTML/Element/video
     Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
 
 - {{htmlattrdef("height")}}
-  - : 動画の表示領域の高さを、 [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で指定します。（絶対的な値に限ります。[パーセント値は不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)。）
+  - : 動画の表示領域の高さを、 [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で指定します（絶対的な値に限ります。[パーセント値は不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)）。
 - {{htmlattrdef("loop")}}
   - : 論理型の属性です。指定された場合、ブラウザーは動画の末尾に達すると、自動的に先頭に戻ります。
 - {{htmlattrdef("muted")}}
@@ -98,7 +79,7 @@ translation_of: Web/HTML/Element/video
 
     既定値はブラウザーごとに異なります。仕様書では `metadata` を設定するよう助言しています。
 
-    > **Note:**
+    > **メモ:**
     >
     > - `autoplay` 属性は `preload` より優先します。`autoplay` を指定すると、言うまでもなくブラウザーは動画を再生するためにダウンロードを始めなければなりません。
     > - 仕様書は、ブラウザーがこの属性の値に従うことを強制していません。これは単なるヒントです。
@@ -120,7 +101,7 @@ translation_of: Web/HTML/Element/video
   <tbody>
     <tr>
       <td>
-        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}}
+        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
       </td>
       <td>
         {{DOMxRef("ScriptProcessorNode")}} の入力バッファが処理可能になった。
@@ -324,11 +305,33 @@ elem.audioTracks.onremovetrack = function(event) {
 
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して {{domxref("VideoTrackList/addtrack_event", "addtrack")}} および {{domxref("VideoTrackList/removetrack_event", "removetrack")}} イベントを監視することもできます。
 
+### 動画へのサーバーの対応
+
+サーバーで動画の MIME タイプが適切に設定されていないと、動画が表示されないか X 印がついた灰色のボックスが表示される（JavaScript が有効である場合）可能性があります。
+
+Ogg Theora 形式で動画を提供する場合、 Apache Web Server では "video/ogg" MIME タイプに動画ファイルの拡張子を追加すると問題が解決します。もっとも一般的な動画ファイルの拡張子は ".ogm", ".ogv", ".ogg" です。"/etc/apache" の "mime.types" ファイルを編集するか、 `httpd.conf` で `"AddType"` の設定ディレクティブを使用してください。
+
+```
+AddType video/ogg .ogm
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+```
+
+WebM 形式で動画を提供する場合、 Apache Web Server では "/etc/apache" の "mime.types" ファイルまたは `httpd.conf` の "AddType" ディレクティブで動画ファイルの拡張子 (一般的には ".webm") を MIME type "video/webm" に追加することで問題が解決します。
+
+```
+AddType video/webm .webm
+```
+
+ウェブホスティングサービスでは、全体の更新が行われるまでの間、新技術向けに MIME タイプの設定を変更するための簡単なインターフェイスを提供しているかもしれません。
+
 ## 例
 
-### 単純な動画の例
+### 単一のソース
 
 この例では、アクティブ化されたときに動画を再生し、再生を制御するためにブラウザーの既定の動画コントロールをユーザーに提供します。
+
+#### HTML
 
 ```html
 <!-- Simple video example -->
@@ -346,13 +349,17 @@ elem.audioTracks.onremovetrack = function(event) {
 </video>
 ```
 
-{{EmbedLiveSample('Simple_video_example', '640', '370', '', 'Web/HTML/Element/video')}}
+#### 結果
+
+{{EmbedLiveSample('Single source', '', '400')}}
 
 動画の再生が始まるまで、 `poster` 属性で指定された画像がその場所に表示されます。ブラウザーが動画の再生に対応していない場合は、代替テキストが表示されます。
 
-### 複数のソースの例
+### 複数のソース
 
 この例は、メディアの 3 つの異なるソースを提供する最後のものをベースにしています。これにより、ブラウザーで対応している動画コーデックに関係なく、動画を見ることができます。
+
+#### HTML
 
 ```html
 <!-- Using multiple sources as fallbacks for a video tag -->
@@ -374,35 +381,17 @@ elem.audioTracks.onremovetrack = function(event) {
 </video>
 ```
 
-{{EmbedLiveSample('Multiple_sources_example', '640', '370')}}
+#### 結果
+
+{{EmbedLiveSample('Multiple sources', '', '400')}}
 
 はじめに [WebM](/ja/docs/Web/Media/Formats/Containers#webm) を試します。再生できない場合は、 [MP4](/ja/docs/Web/Media/Formats/Containers#mp4) を試します。最後に [Ogg](/ja/docs/Web/Media/Formats/Containers#ogg) を試します。 video 要素に対応していない場合は代替メッセージを表示しますが、すべてのソースに失敗した場合は表示しません。
 
 メディアファイル形式によっては、ファイル形式文字列の一部として [`codecs`](/ja/docs/Web/Media/Formats/codecs_parameter) 引数を使用して、より具体的な情報を提供することができます。比較的簡単な例は `video/webm; codecs="vp8, vorbis"` であり、 [WebM](/ja/docs/Web/Media/Formats/Containers#webm) 映像であり、動画に [VP8](/ja/docs/Web/Media/Formats/Video_codecs#vp8)、音声に [Vorbis](/ja/docs/Web/Media/Formats/Audio_codecs#vorbis) を使用していることを示しています。
 
-### 動画へのサーバーの対応
-
-サーバーで動画の MIME タイプが適切に設定されていないと、動画が表示されないか X 印がついた灰色のボックスが表示される（JavaScript が有効である場合）可能性があります。
-
-Ogg Theora 形式で動画を提供する場合、 Apache Web Server では "video/ogg" MIME タイプに動画ファイルの拡張子を追加すると問題が解決します。もっとも一般的な動画ファイルの拡張子は ".ogm", ".ogv", ".ogg" です。"/etc/apache" の "mime.types" ファイルを編集するか、 `httpd.conf` で `"AddType"` の設定ディレクティブを使用してください。
-
-```
-AddType video/ogg .ogm
-AddType video/ogg .ogv
-AddType video/ogg .ogg
-```
-
-WebM 形式で動画を提供する場合、 Apache Web Server では "/etc/apache" の "mime.types" ファイルまたは `httpd.conf` の "AddType" ディレクティブで動画ファイルの拡張子 (一般的には ".webm") を MIME type "video/webm" に追加することで問題が解決します。
-
-```
-AddType video/webm .webm
-```
-
-ウェブホスティングサービスでは、全体の更新が行われるまでの間、新技術向けに MIME タイプの設定を変更するための簡単なインターフェイスを提供しているかもしれません。
-
 <h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
 
-動画には、実際にコンテンツを説明する字幕と<ruby>文字化情報<rp> (</rp><rt>transcript</rt><rp>) </rp></ruby>を提供するべきです (実装方法について詳しくは [HTML5 動画への字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください) 。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
+動画には、実際にコンテンツを説明する字幕と文字化情報 (transcript) を提供するべきです (実装方法について詳しくは [HTML5 動画への字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください) 。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
 
 注目すべき点は、音声のみのメディアにキャプションを付けることはできますが、キャプションを表示するために要素の video 領域が使用されるため、 {{HTMLElement("video")}} 要素で音声を再生しないとキャプションを付けることができないということです。これは、 video 要素で音声を再生するのに便利な特別なシナリオの 1 つです。
 
@@ -430,7 +419,6 @@ AddType video/webm .webm
 
 字幕は動画の主題を邪魔しないようにしてください。これは [`align` VTT キュー設定](/ja/docs/Web/API/WebVTT_API#cue_settings)を使用して位置を決めることができます。
 
-- [MDN 字幕とクローズドキャプション — プラグイン](/ja/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](/ja/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN WCAG を理解する ― ガイドライン 1.2 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
@@ -446,7 +434,7 @@ AddType video/webm .webm
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >, 記述コンテンツ, 埋め込みコンテンツ。 {{htmlattrxref("controls", "video")}} 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
       </td>
@@ -480,7 +468,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

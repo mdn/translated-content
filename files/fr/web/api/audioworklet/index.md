@@ -17,6 +17,7 @@ tags:
   - sound
 translation_of: Web/API/AudioWorklet
 ---
+
 {{APIRef("Web Audio API")}}{{securecontext_header}}
 
 L'interface **`AudioWorklet`** dans l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) est utilisée pour fournir des scripts de traitement audio personnalisés qui s'exécutent dans un thread séparé afin de fournir un traitement audio à très faible latence. Le code du worklet est exécuté dans le contexte d'exécution global {{domxref("AudioWorkletGlobalScope")}}, en utilisant un thread audio web séparé qui est partagé par le worklet et les autres nœuds audio.
@@ -41,13 +42,11 @@ Voir {{domxref("AudioWorkletNode")}} pour des exemples complets de création de 
 
 ## Spécifications
 
-| Spécification                                                                    | Status                               | Commentaire         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API','#audioworklet','AudioWorklet')}} | {{Spec2('Web Audio API')}} | Définition intiale. |
+{{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioWorklet")}}
+{{Compat}}
 
 ## Voir aussi
 

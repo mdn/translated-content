@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -36,6 +37,6 @@ C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalizati
 "short_name": "MonExtension"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.short_name")}}
+{{Compat}}

@@ -1,19 +1,8 @@
 ---
 title: 'HTML 属性: crossorigin'
 slug: Web/HTML/Attributes/crossorigin
-tags:
-  - 上級者
-  - 属性
-  - CORS
-  - HTML
-  - NeedsContent
-  - リファレンス
-  - セキュリティ
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
-  - https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin
-translation_of: Web/HTML/Attributes/crossorigin
 ---
+
 {{HTMLSidebar}}
 
 **`crossorigin`** 属性は、 {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, {{ HTMLElement("video") }} の各要素で有効であり、 [CORS](/ja/docs/Web/HTTP/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
@@ -60,7 +49,7 @@ translation_of: Web/HTML/Attributes/crossorigin
   </tbody>
 </table>
 
-> **Note:** Firefox 83 より前では、 `crossorigin` 属性は `rel="icon"` に対応していませんでした。 [Chrome についての未解決の問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)もあります。
+> **メモ:** Firefox 83 より前では、 `crossorigin` 属性は `rel="icon"` に対応していませんでした。 [Chrome についての未解決の問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)もあります。
 
 ### 例: `<script>` 要素の `crossorigin`
 
@@ -84,17 +73,7 @@ translation_of: Web/HTML/Attributes/crossorigin
 
 ## ブラウザーの互換性
 
-### script の crossorigin
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### video の crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link の crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## 関連情報
 
