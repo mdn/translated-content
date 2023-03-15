@@ -7,7 +7,6 @@ slug: Web/API/DOMException/name
 
 {{domxref("DOMException")}} 接口中的 **`name`** 是一个只读属性，它返回了与[错误名称](/zh-CN/docs/Web/API/DOMException#%E9%94%99%E8%AF%AF%E5%90%8D%E7%A7%B0)关联的字符串。
 
-
 ## 值
 
 一个字符串。
