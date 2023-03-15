@@ -1,5 +1,5 @@
 ---
-title: WAI-ARIA basics
+title: WAI-ARIA 基础
 slug: Learn/Accessibility/WAI-ARIA_basics
 ---
 
