@@ -80,7 +80,7 @@ document.fonts.ready.then(() => {
 
 注意， `font.load()` 返回一个 `Promise`，你可以通过调用 `.then()` 来处理字体加载的回调函数。在一些情况下，监听 `document.fonts.ready` 会更好，因为它会在文档布局完成且所有的字体都加载完成时触发。
 
-## Interfaces
+## 接口
 
 - {{domxref('FontFace')}}
   - : 表示单个可用的字体。
