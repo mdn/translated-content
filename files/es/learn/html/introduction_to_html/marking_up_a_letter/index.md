@@ -47,7 +47,7 @@ Todos aprendemos a escribir una carta más tarde o más temprano; es también pr
 
 ## Punto de partida
 
-Para comenzar esta prueba, deberemos copiar [el texto que deberemos trabajar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), y el [CSS que necesitaremos incluir](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) en nuestro HTML. Crearemos un archivo nuevo `.html` usando nuestro editor de texto (o alternativamente usaremos otros como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer nuestra prueba).
+Para comenzar esta prueba, deberemos copiar [el texto que deberemos trabajar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), y el [CSS que necesitaremos incluir](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) en nuestro HTML. Crearemos un archivo nuevo `.html` usando nuestro editor de texto (o alternativamente usaremos otros como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer nuestra prueba).
 
 ## Resumen del proyecto a desarrollar
 

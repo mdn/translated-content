@@ -15,7 +15,7 @@ Antes de comenzar este módulo, deberías:
 2. Un entorno básico de trabajo configurado, como se detalla en la sección de [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), y saber como crear y administrar archivos, o lo puedes ver en el módulo [Manejando los archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos).
 3. Conocimiento básico de HTML, como se muestra en [Introducción a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
 
-> **Nota:** Si estás trabajando en un computador/tabla/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si estás trabajando en un computador/tabla/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
