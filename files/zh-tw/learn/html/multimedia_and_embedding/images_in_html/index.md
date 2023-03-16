@@ -483,7 +483,7 @@ p {
 
 ## 試試看!
 
-您已經來到了本文的末端，但是您還記得最重要的內容嗎？ 在繼續往下之前，這裡有些測驗讓您驗證看看您是否都學會了 — [測驗：HTML 圖像](/zh-TW/docs//zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
+您已經來到了本文的末端，但是您還記得最重要的內容嗎？ 在繼續往下之前，這裡有些測驗讓您驗證看看您是否都學會了 — [測驗：HTML 圖像](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
 
 ## 總結
 
