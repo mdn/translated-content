@@ -50,7 +50,7 @@ Para comenzar esta evaluación, debería tomar el [archivo zip que contiene todo
 - CSS para dar el estilo a tu marcado.
 - Las imágenes que serán utilizadas en la página.
 
-Crée el ejemplo en su ordenador personal, o como alternativa utilize un sitio como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer su evaluación.
+Crée el ejemplo en su ordenador personal, o como alternativa utilize un sitio como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación.
 
 ## Breve Proyecto
 
