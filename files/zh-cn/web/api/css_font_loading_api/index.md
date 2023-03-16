@@ -6,25 +6,25 @@ translation_of: Web/API/CSS_Font_Loading_API
 
 {{DefaultAPISidebar("CSS Font Loading API")}}
 
-CSS 字体加载 API 为您提供了动态加载字体资源时的 events 和 interfaces。
+CSS 字体加载 API 为你提供了动态加载字体资源的 `events` 和 `interfaces`。
 
-> **备注：** 此特性在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。（可通过`self.fonts`访问 {{domxref('FontFaceSet')}}）。
+> **备注：** 此特性在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。（你可通过`self.fonts`访问 {{domxref('FontFaceSet')}}）。
 
 ## 概念和用法
 
-CSS 允许开发者使用自定义字体，开发者可以通过 {{cssxref('@font-face')}} 规则下载字体，并将其应用于具有 {{cssxref('font-family')}} 属性的元素。下载字体的点由客户端控制。大多数代理仅在首次需要字体时获取和加载字体，这可能会导致明显的延迟。
+在 CSS 中你可以使用 {{cssxref('@font-face')}} 规则下载字体，并使用 {{cssxref('font-family')}} 属性将字体应用于元素。但是，下载字体流程由客户端控制，大多数客户端仅会在首次需要该字体时才获取、加载该字体，这可能会导致明显的延迟。
 
-CSS 字体加载 API 通过让作者控制和跟踪何时获取和加载字体，以及何时将其添加到文档或工作人员拥有的字体集中，克服了此问题。将字体添加到文档或工作线程字体集允许用户代理在需要时自动获取和加载关联的字体资源。字体可以在添加到字体集之前或之后加载，但必须先将其添加到字体集中，然后才能将其用于绘图。
+CSS 字体加载 API 提供了控制和跟踪字体加载过程的能力，并允许你将其添加到 `Document` 或 `Web Worker` 的字体集中。将字体添加到 `Document` 或 `Web Worker` 的字体集中会让客户端在需要时自动获取、加载字体。字体可以在其被加入字体集之前或之后被加载，但是你必须先将字体添加到字体集，再将其用于绘图。
 
-字体在 {{domxref('FontFace')}} 对象中定义，这些对象指定二进制或 URL 字体源以及字体的其他属性，其方式与 CSS {{cssxref('@font-face')}} 规则大致相同。 FontFace 对象分别使用 Document.fonts 和 WorkerGlobalScope.fonts 添加到文档或工作线程 {{domxref('FontFaceSet')}} 中。作者可以使用 `FontFace` 或 `FontFaceSet` 触发字体下载，并监控加载完成情况。 `FontFaceSet` 还可用于确定何时加载页面所需的所有字体以及文档布局何时完成。
+你可以通过为 {{domxref('FontFace')}} 对象指定字体文件或 URL 字体源及其他属性来定义字体，其使用方式与 CSS {{cssxref('@font-face')}} 规则大致相同。 `FontFace` 对象可以通过 {{domxref('Document.fonts')}} 或 {{domxref('WorkerGlobalScope.fonts')}} 被添加到 `Document` 或 `Web Worker` 的 {{domxref('FontFaceSet')}} 中。你可以使用 `FontFace` 或 `FontFaceSet` 对象下载字体，并监听加载完成事件。 `FontFaceSet` 还可用于确定加载页面所需的所有字体以及文档布局何时完成。
 
-{{domxref('FontFace.status')}} 属性指示字体人脸加载状态： `unloaded` 、 `loading` 、 `loaded` 或 `failed` 。此状态最初为 `unloaded` 。下载文件或处理字体数据时设置为 `loading` ，如果字体定义无效或无法加载字体数据，则设置为 `failed` 。成功获取（如果需要）并加载字体数据后，状态设置为 `loaded` 。
+{{domxref('FontFace.status')}} 属性标识了字体加载状态： `unloaded` 、 `loading` 、 `loaded` 或 `failed` 。此状态最初为 `unloaded` ，下载文件或处理字体数据时为 `loading` ，如果字体定义无效或无法加载字体数据则设置为 `failed` ，成功获取（如果需要）并加载字体数据后，状态设置为 `loaded` 。
 
 ### 定义字体
 
-你可以使用 {{domxref('FontFace')}} 的构造函数创建字体，该函数有3个参数：字体系列、字体源和可选描述符。这些参数与 {{cssxref('@font-face')}} 的参数一致。
+你可以使用 {{domxref('FontFace')}} 的构造函数创建字体，该函数有3个参数：字体系列、字体源和可选的描述符。这些参数与 {{cssxref('@font-face')}} 的参数一致。
 
-其中，字体源可以是 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ，也可以是 URL 指向的字体资源。请注意，URL 字体源需要使用 `url()` 函数包裹 URL。
+其中，字体源可以是字体文件的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ，也可以是 URL 指向的字体文件。请注意，URL 字体源需要使用 `url()` 函数包裹 URL。
 
 ```js
 const font = new FontFace("myfont", "url(myfont.woff)", {
@@ -34,24 +34,25 @@ const font = new FontFace("myfont", "url(myfont.woff)", {
 });
 ```
 
-> **备注：** 与 @font-face 一样，一些描述符表示字体数据中的预期数据并用于字体匹配，而其他描述符实际上设置/定义生成的字体的属性。例如，将 style 设置为“斜体”表示文件包含斜体字体;由作者指定一个符合此条件的文件。
+> **备注：** 与 `@font-face` 一样，一些描述符表示期望的字体属性并用于字体匹配，而其他描述符为设置、定义生成的字体的属性。例如，将 `style` 设置为“斜体”表示文件包含斜体字体，将由开发者指定一个符合此条件的文件。
 
-如果字体定义有效并且可以加载字体数据，则会自动加载具有二进制源的字体 — {{domxref('FontFace.status')}} 在成功时设置为 `loaded` ，否则设置为 `failed` 。具有 URL 源的字体经过验证，但不会自动加载 — 如果字体定义有效，则设置 {{domxref('FontFace.status')}} ，否则设置为 `failed` 。
+对于二进制字体，如果字体定义有效并且成功加载会把 {{domxref('FontFace.status')}} 设置为 `loaded`，否则会设置为 `failed` 。对于 URL 字体，字体有效，且未被加载时 `FontFace.status` 会被设置为 `unloaded`，若字体无效则设置为 `failed` 。
 
 ### 向 Document 或 Web Workers 添加字体
 
-字体通常添加到文档或工作线程 {{domxref('FontFace')}} 中，以允许用户代理在需要时自动加载字体，并且必须添加字体才能使字体用于呈现文本。
-下面的代码显示了要添加到文档中的字体。
+你可以将字体添加到 `Document` 或 `Web Workers` 的 {{domxref('FontFaceSet')}} 中，以允许客户端在需要时自动加载字体。你只能使用添加到 `FontFaceSet` 中的字体呈现文本。
+
+下面的代码显示如何添加字体到文档中。
 
 ```js
-// 定义 FontFace
+// 定义字体
 const font = new FontFace("myfont", "url(myfont.woff)", {
   style: "italic",
   weight: "400",
   stretch: "condensed",
 });
 
-// 把 FontFace 添加到 document.fonts (FontFaceSet)
+// 把字体添加到 document.fonts (FontFaceSet) 中
 document.fonts.add(font);
 ```
 
@@ -62,10 +63,10 @@ document.fonts.add(font);
 以下代码演示如何定义 `FontFace` 并将其添加到 `FontFaceSet`，然后加载字体。
 
 ```js
-// 定义 FontFace
+// 定义字体
 const font = new FontFace("myfont", "url(myfont.woff)");
 
-// 把 FontFace 添加到 document.fonts (FontFaceSet)
+// 把字体添加到 document.fonts (FontFaceSet) 中
 document.fonts.add(font);
 
 // 加载字体
@@ -77,7 +78,7 @@ document.fonts.ready.then(() => {
 });
 ```
 
-注意， `font.load()` 返回一个 `promise`，你可以通过调用 `.then()` 来处理字体加载的回调函数。在一些情况下，使用 `document.fonts.ready` 会更好，因为它会在文档布局完成且所有的字体都加载完成时调用。
+注意， `font.load()` 返回一个 `Promise`，你可以通过调用 `.then()` 来处理字体加载的回调函数。在一些情况下，监听 `document.fonts.ready` 会更好，因为它会在文档布局完成且所有的字体都加载完成时触发。
 
 ## Interfaces
 
@@ -92,11 +93,11 @@ document.fonts.ready.then(() => {
 
 ### 简单字体加载
 
-这是一个非常简单的示例，展示了从 Google Fonts 加载字体，并使用该字体在画布上绘制文本。并且该示例还会在字体创建和加载后，在文本框中显示字体的状态。
+这是一个非常简单的示例，展示了从 Google Fonts 加载字体，并使用该字体在画布上绘制文本。并且该示例还会在字体创建和加载后，在文本框中打印字体状态的日志。
 
 #### HTML
 
-此代码定义用于绘制的画布和用于日志记录的文本区域。
+此代码定义用于绘制的画布和用于打印字体状态日志的文本区域。
 
 ```html
 <canvas id="js-canvas"></canvas>
@@ -105,7 +106,7 @@ document.fonts.ready.then(() => {
 
 ### JavaScript
 
-首先，我们获取显示字体状态的文本框，以及用于使用字体绘制文本的画布。
+首先，我们获取打印字体状态日志的文本框，以及用于使用字体绘制文本的画布。
 
 ```js
 const log = document.getElementById("log");
@@ -115,7 +116,7 @@ canvas.width = 650;
 canvas.height = 75;
 ```
 
-接下来，我们定义一个 URL 源为 Google Fonts 的 FontFace ，并将其添加到 document.fonts。然后我们记录字体状态，为 `unloaded`。
+接下来，我们定义一个 URL 源为 Google Fonts 的 `FontFace` ，并将其添加到 `document.fonts`。此时我们打印字体状态（为 `unloaded`）的日志。
 
 ```js
 const bitterFontFace = new FontFace(
@@ -126,7 +127,7 @@ document.fonts.add(bitterFontFace);
 log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: unloaded
 ```
 
-然后我们调用 {{domxref('FontFace.load()')}} 方法来加载字体，并等待返回的 {{domxref('Promise')}} 对象。一旦 `Promise` 兑现，我们将记录字体状态（为 `loaded` ），并使用已加载的字体绘制文本。
+然后我们调用 {{domxref('FontFace.load()')}} 方法来加载字体，并等待返回的 {{domxref('Promise')}} 对象。当 `Promise` 兑现时，我们打印字体状态（为 `loaded` ）的日志，并使用已加载的字体绘制文本。
 
 ```js
 bitterFontFace.load().then(
@@ -143,18 +144,20 @@ bitterFontFace.load().then(
 );
 ```
 
-注意，我们也可以等待 {{domxref('FontFace.loaded')}} 返回的 `Promise` 对象，也可以等待 {{domxref('FontFaceSet.ready')}} 返回的 `Promise` 对象。
+注意，我们可以等待 {{domxref('FontFace.loaded')}} 返回的 `Promise` 对象，也可以等待 {{domxref('FontFaceSet.ready')}} 返回的 `Promise` 对象。
 
 #### 结果
 
-结果如下所示。它应该以下载的字体显示画布上绘制的字体的名称，以及显示加载前后加载状态的日志。
+结果如下所示。它会使用下载了的字体在 `Canvas` 上绘制字体的名字，并显示字体加载状态的日志。
 {{ EmbedLiveSample('Basic font loading', 700, 180) }}
 
 ### 使用事件加载字体
 
-此示例与上一个示例类似，不同之处在于它使用 `FontFaceSet.load()` 加载字体（而不是使用 `font.load()`）。它还演示了如何侦听字体加载事件。
+此示例与上一个示例类似，不同之处在于它使用 `FontFaceSet.load()` 加载字体（而不是使用 `font.load()`）。它还展示了如何监听字体完成加载事件。
 
 ### HTML
+
+此代码定义用于绘制的画布和用于打印字体状态日志的文本区域。
 
 ```html
 <canvas id="js-canvas"></canvas>
@@ -163,7 +166,8 @@ bitterFontFace.load().then(
 
 ### JavaScript
 
-下面的代码定义了用于绘制文本的画布上下文，及将用于绘制文本的字体，并将其添加到文档字体集中。
+首先，我们获取打印字体状态日志的文本框，以及用于使用字体绘制文本的画布。
+然后，我们定义一个 URL 源为 Google Fonts 的 `FontFace` ，并将其添加到 `document.fonts`。此时我们打印字体状态（为 `unloaded`）的日志。
 
 ```js
 const log = document.getElementById("log");
@@ -181,7 +185,7 @@ document.fonts.add(oxygenFontFace);
 log.textContent += `Oxygen status: ${oxygenFontFace.status}\n`;
 ```
 
-接下来，我们在字体集上使用 `load()` 来加载字体，指定要加载的字体。该方法返回 `Promise` 对象 。如果 `Promise` 兑现，我们将使用字体绘制文本。如果被拒绝，则会记录错误。
+接下来，我们在字体集上使用 `load()` 来加载指定的字体。该方法返回 `Promise` 对象 。如果 `Promise` 兑现，我们将使用该字体绘制文本。如果被拒绝，则会记录错误。
 
 ```js
 document.fonts.load("36px FontFamily Oxygen").then(
@@ -197,7 +201,7 @@ document.fonts.load("36px FontFamily Oxygen").then(
 );
 ```
 
-与其等待承诺，不如使用事件来跟踪字体加载操作。下面的代码侦听 `loading` 和 `loadingerror` 事件，并记录每种情况下的字体数量。在 `loadingdone` 事件侦听器中，我们还遍历字体并记录系列名称。
+除了可以等待承诺，我们也可以使用事件来跟踪字体加载过程。下面的代码监听 `loading` 和 `loadingerror` 事件，并记录每种事件下的字体数量。在 `loadingdone` 事件的回调函数中，我们还遍历字体并记录字体的 `family`。
 
 ```js
 document.fonts.addEventListener("loading", (event) => {
@@ -214,9 +218,7 @@ document.fonts.addEventListener("loadingdone", (event) => {
 });
 ```
 
-最后一段代码演示了如何使用 `FontFaceSet.ready` 返回的承诺监视字体加载的完成。与其他机制不同，当下载文档中定义的所有字体并且布局完成时，这将返回。
-
-当承诺解析时，我们迭代文档字体中的值。
+最后一段代码演示了如何使用 `FontFaceSet.ready` 返回的承诺监听字体加载的完成。此 `Promise` 将会在当前 `Document` 布局完成且字体集中定义的所有字体都加载完成时兑现。当承诺兑现时，我们遍历字体集中的所有字体，并将其属性打印到日志。
 
 ```js
 document.fonts.ready.then(function () {
@@ -233,7 +235,7 @@ document.fonts.ready.then(function () {
 
 #### 结果
 
-下面的输出显示了以 Oxygen 字体绘制的文本。这还显示了事件的日志记录以及 `document.fonts.ready` 返回的承诺何时解析。
+下面的页面显示了用 Oxygen 字体绘制的文本。还显示了事件的日志以及 `document.fonts.ready` 返回的承诺兑现时的输出。
 
 {{ EmbedLiveSample('Font loading with events', 700, 520) }}
 
