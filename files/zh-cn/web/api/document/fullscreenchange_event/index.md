@@ -77,6 +77,8 @@ document
   });
 ```
 
+{{ EmbedLiveSample('示例', 700, 520) }}
+
 ## 规范
 
 {{Specifications}}
