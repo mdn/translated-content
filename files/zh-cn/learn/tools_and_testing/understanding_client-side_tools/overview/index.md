@@ -107,7 +107,7 @@ web 应用程序生命周期的这个阶段通常允许您编写“未来代码�
 
     - [Sass/SCSS](https://sass-lang.com/):这个 CSS 扩展允许您使用变量、嵌套规则、混合、函数和许多其他特性，其中一些特性在本地 CSS 中是可用的 (比如变量)，而另一些则不是。
     - [TypeScript](https://www.typescriptlang.org/):TypeScript 是 JavaScript 的一个超集，它提供了一堆额外的特性。TypeScript 编译器在生成产品时将 TypeScript 代码转换为 JavaScript。
-    - 框架例如 [React](https://reactjs.org/), [Ember](https://emberjs.com/), and [Vue](https://vuejs.org/):框架提供了许多免费的功能，并允许您通过构建在普通 JavaScript 之上的自定义语法来使用它们。在后台，框架的 JavaScript 代码努力解释这个定制语法，并将其呈现为最终的 web 应用程序。
+    - 框架例如 [React](https://reactjs.org/), [Ember](https://emberjs.com/), 和 [Vue](https://vuejs.org/):框架提供了许多免费的功能，并允许您通过构建在普通 JavaScript 之上的自定义语法来使用它们。在后台，框架的 JavaScript 代码努力解释这个定制语法，并将其呈现为最终的 web 应用程序。
 
 ### 开发后阶段
 
