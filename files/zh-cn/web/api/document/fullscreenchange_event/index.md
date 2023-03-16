@@ -1,5 +1,5 @@
 ---
-title: "Document: fullscreenchange 事件"
+title: Document：fullscreenchange 事件
 slug: Web/API/Document/fullscreenchange_event
 ---
 
@@ -61,24 +61,21 @@ function fullscreenchanged(event) {
 }
 
 document.addEventListener("fullscreenchange", fullscreenchanged);
-// or
+// 或
 document.onfullscreenchange = fullscreenchanged;
 
-
-// 当 toggle 按钮被点击，将会切换或退出全屏模式
+// 在 toggle 按钮被点击时，将会进入或退出全屏模式
 document
   .getElementById("toggle-fullscreen")
   .addEventListener("click", function () {
     if (document.fullscreenElement) {
-      // exitFullscreen 方法只能在Document对象上使用。
+      // exitFullscreen 方法只能在 Document 对象上使用。
       document.exitFullscreen();
     } else {
       this.requestFullscreen();
     }
   });
 ```
-
-{{ EmbedLiveSample('示例', 700, 520) }}
 
 ## 规范
 
@@ -91,6 +88,6 @@ document
 ## 参见
 
 - {{domxref("Document/fullscreenerror_event", "fullscreenerror")}}
-- {{domxref("Element")}}: {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 事件
+- {{domxref("Element")}}：{{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 事件
 - [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
 - [Fullscreen API 指南](/ja/docs/Web/API/Fullscreen_API/Guide)
