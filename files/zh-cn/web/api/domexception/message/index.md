@@ -5,7 +5,7 @@ slug: Web/API/DOMException/message
 
 {{ APIRef("DOM") }}
 
-{{domxref("DOMException")}} 接口中的 **`message`** 是一个只读属性，它返回一个字符串来表示与给定[错误名称](/zh-CN/docs/Web/API/DOMException#%E9%94%99%E8%AF%AF%E5%90%8D%E7%A7%B0)关联的消息或描述。
+{{domxref("DOMException")}} 接口的 **`message`** 只读属性返回一个字符串来表示与给定[错误名称](/zh-CN/docs/Web/API/DOMException#错误名称)关联的消息或描述。
 
 ## 值
 
