@@ -67,12 +67,12 @@ document.onfullscreenchange = fullscreenchanged;
 // 在 toggle 按钮被点击时，将会进入或退出全屏模式
 document
   .getElementById("toggle-fullscreen")
-  .addEventListener("click", function () {
+  .addEventListener("click", (event) => {
     if (document.fullscreenElement) {
       // exitFullscreen 方法只能在 Document 对象上使用。
       document.exitFullscreen();
     } else {
-      this.requestFullscreen();
+      el.requestFullscreen();
     }
   });
 ```
