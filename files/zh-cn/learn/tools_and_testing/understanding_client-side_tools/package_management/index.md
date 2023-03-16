@@ -12,11 +12,9 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
     <tr>
       <th scope="row">预备条件：</th>
       <td>
-        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
-        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和
         <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言。
       </td>
-    </tr>
     <tr>
       <th scope="row">目标：</th>
       <td>
@@ -46,7 +44,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
 
 理论上，你可以手动下载和存储项目依赖项，因此软件包管理器是非必须的，但软件包管理器可以帮助你无缝处理安装和卸载包。如果不使用软件包管理器，你将需要手动处理以下工作：
 
-- 找到所有包的正确的 Javascript 文件
+- 找到所有包正确的 Javascript 文件
 - 对它们进行检查以确保没有任何已知的漏洞
 - 下载它们井将它们放在项目的正确位置
 - 编写代码，将包引入你的项目并使用它们（这通常使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)完成， 这是另一个值得深入了解的主题）。
@@ -61,7 +59,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
 
 要看到本地依赖项真正发挥作用，你只需要尝试下载并运行现有项目——如果它能正常工作并且所有依赖项都可以直接使用，这要归功于本地依赖项的可移植性。
 
-> **备注：**npm 不是唯一可用的软件包管理器。有一种成功和流行的替代软件包管理器是 [Yarn](https://yarnpkg.com/)。 Yarn 使用不同的算法解决依赖项，这可能意味着更快的用户体验。还有一些其他新兴的客户端，例如 [pnpm](https://pnpm.js.org/)。
+> **备注：** npm 不是唯一可用的软件包管理器。有一种成功和流行的替代软件包管理器是 [Yarn](https://yarnpkg.com/)。Yarn 使用不同的算法解决依赖项，这可能意味着更快的用户体验。还有一些其他新兴的客户端，例如 [pnpm](https://pnpm.js.org/)。
 
 ## 软件包仓库
 
@@ -96,19 +94,19 @@ npm init
 
 你现在将被要求回答一些问题；npm 将根据答案创建一个默认的 `package.json` 文件：
 
-- `name`：用于标识应用的名称。只需按下<kbd>Return</kbd>接受默认值 `parcel-experiment`。
+- `name`：用于标识应用的名称。只需按下 <kbd>Return</kbd> 接受默认值 `parcel-experiment`。
 
-- `version`：应用的起始版本号。同样，只需按下<kbd>Return</kbd>接受默认值 `1.0.0`。
+- `version`：应用的起始版本号。同样，只需按下 <kbd>Return</kbd> 接受默认值 `1.0.0`。
 
-- `description`：应用目的的简要描述。输入一些非常简单的东西，例如“一个简单的 npm 包，用于学习使用 npm”，然后按下<kbd>Return</kbd>。
+- `description`：应用目的的简要描述。输入一些非常简单的东西，例如“一个简单的 npm 包，用于学习使用 npm”，然后按下 <kbd>Return</kbd>。
 
-- `entry point`：这将是应用的入口 JavaScript 文件。默认的 `index.js` 对这个实验项目是可以的 - 按下<kbd>Return</kbd>。
+- `entry point`：这将是应用的入口 JavaScript 文件。默认的 `index.js` 对这个实验项目是可以的——按下 <kbd>Return</kbd>。
 
-- `test command`、`git repository` 和 `keywords`：按下<kbd>Return</kbd>以将它们暂时留空。
+- `test command`、`git repository` 和 `keywords`：按下 <kbd>Return</kbd> 以将它们暂时留空。
 
-- `author`：项目的作者。输入你自己的姓名，然后按下<kbd>Return</kbd>。
+- `author`：项目的作者。输入你自己的姓名，然后按下 <kbd>Return</kbd>。
 
-- `license`：要发布软件包的许可证。按下<kbd>Return</kbd>来接受默认值。
+- `license`：要发布软件包的许可证。按下 <kbd>Return</kbd> 来接受默认值。
 
 按下 <kbd>Return</kbd> 一次以接受这些设置。
 
@@ -138,7 +136,7 @@ npm init
 npm install parcel-bundler
 ```
 
-一旦完成了_所有准备工作_，我们现在准备进行一些“现代客户端开发”（这实际上意味着使用构建工具使开发人员的体验更加轻松）。但是首先，请再次查看你的 package.json 文件。你将看到 npm 添加了一个新字段——dependencies：
+一旦完成了 _所有准备工作_，我们现在准备进行一些“现代客户端开发”（这实际上意味着使用构建工具使开发人员的体验更加轻松）。但是首先，请再次查看你的 package.json 文件。你将看到 npm 添加了一个新字段——dependencies：
 
 ```json
 "dependencies": {
@@ -175,7 +173,7 @@ Parcel 希望有一个 `index.html` 和一个 `index.js` 文件进行处理，�
 
 ### 尝试使用 Parcel
 
-现在，我们将运行我们新安装的Parcel工具。在终端中运行以下命令：
+现在，我们将运行我们新安装的 Parcel 工具。在终端中运行以下命令：
 
 ```bash
  parcel index.html
