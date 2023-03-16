@@ -152,11 +152,11 @@ web 应用程序生命周期的这个阶段通常允许您编写“未来代码�
   - 例如，如果您正在使用 npm 包管理器来管理依赖项，那么转到[npm homepage](https://www.npmjs.com/) 并搜索您正在寻找的工具的类型，例如，如果您想要日期格式化实用程序，请尝试搜索“date”，如果您想要搜索通用代码格式化程序，则尝试搜索“formatter”。请注意流行度、质量和维护分数，以及软件包最近更新的时间。还可以点击工具页面，了解每个包每月有多少下载，以及它是否有好的文档，可以用来了解它是否完成了您需要它做的事情。以这些标准为基础[date-fns library](https://www.npmjs.com/package/date-fns) 看起来是一个很好的日期格式化工具。在本模块的第 3 章中，您将看到这个工具的实际应用，并了解更多关于包管理器的信息。
   - 如果您正在寻找将工具功能集成到代码编辑器中的插件，请查看代码编辑器的“插件/扩展名”页面 - 请参阅 [Atom packages](https://atom.io/packages) and [VSCode extensions](https://marketplace.visualstudio.com/VSCode),为例。看一看首页上的特色扩展，然后再次尝试搜索你想要的扩展类型 (或者工具名称，例如在 VSCode 扩展页面上搜索“eslint”)。当你得到结果的时候，看看这个扩展有多少颗星或者下载了多少，作为它质量的一个指标。
 
-- 例如，与开发相关的论坛，询问关于使用什么工具的问题[MDN Learn Discourse](https://discourse.mozilla.org/c/mdn/learn), or [Stack Overflow](https://stackoverflow.com/).
+- 与开发相关的论坛，询问关于使用什么工具的问题，例如[MDN Learn Discourse](https://discourse.mozilla.org/c/mdn/learn), 或 [Stack Overflow](https://stackoverflow.com/).
 
 当您选择要使用的工具时，第一个端口应该是工具项目主页。这可能是一个完整的网站，也可能是代码库中的一个 readme 文档。例如 [date-fns docs](https://date-fns.org/docs/Getting-Started)就很好、很完整、很容易理解。然而，有些文档可能相当技术性和学术性，并不适合您的学习需求。
 
-相反，您可能希望找到一些关于如何开始使用特定类型的工具的专门教程。好的起点是搜索网站喜欢[CSS Tricks](https://css-tricks.com/), [Dev](https://dev.to/), [freeCodeCamp](https://www.freecodecamp.org/), and [Smashing Magazine](https://www.smashingmagazine.com/), 因为它们是为 web 开发行业量身定做的。
+相反，您可能希望找到一些关于如何开始使用特定类型的工具的专门教程。好的起点是搜索网站喜欢[CSS Tricks](https://css-tricks.com/), [Dev](https://dev.to/), [freeCodeCamp](https://www.freecodecamp.org/), 和 [Smashing Magazine](https://www.smashingmagazine.com/), 因为它们是为 web 开发行业量身定做的。
 
 同样，在搜索适合自己的工具时，您可能会使用几种不同的工具，试用它们，看看它们是否有意义，是否得到良好的支持，并执行您希望它们执行的任务。这很好，这对学习很有好处，而且随着你获得更多经验，道路会变得更平坦。
 
