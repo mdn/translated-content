@@ -8,7 +8,7 @@ slug: Web/Guide/Mobile
   <ol>
     <li class="toggle">
       <details>
-        <summary>指引</summary>
+        <summary>指南</summary>
         <ol>
           {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
         </ol>
