@@ -9,18 +9,18 @@ slug: Web/CSS/inset
 
 {{EmbedInteractiveExample("pages/css/inset.html")}}
 
-此属性虽然为《CSS 逻辑属性》规范的一部分，但是无论元素的书写模式、行内方向和文本朝向如何，其所定义的都不是逻辑偏移而是实体偏移。
+此属性虽然为《CSS 逻辑属性》规范的一部分，但是无论元素的书写模式、行内方向和文本朝向如何，其所定义的都不是*逻辑*偏移而是*实体*偏移。
 
 ## 语法
 
 ```css
-/* <长度>值 */
+/* 长度值 */
 inset: 10px; /* 应用于所有边 */
 inset: 4px 8px; /* 上下 | 左右 */
 inset: 5px 15px 10px; /* 上 | 左右 | 下 */
 inset: 2.4em 3em 3em 3em; /* 上 | 右 | 下 | 左 */
 
-/* 包含块的宽度（左或右）或高度（上或下）的<百分比> */
+/* 包含块的宽度（左或右）或高度（上或下）的百分比 */
 inset: 10% 5% 5% 5%;
 
 /* 关键词值 */
@@ -38,11 +38,11 @@ inset: unset;
 
 `inset` 属性的取值与 {{cssxref("left")}} 属性相同。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -91,5 +91,5 @@ div {
 ## 参见
 
 - 盒偏移的全称属性：{{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}} 和 {{cssxref("left")}}
-- 映射到的逻辑简写属性：{{cssxref("inset-block")}} 和 {{cssxref("inset-inline")}}
+- 对应的逻辑简写属性：{{cssxref("inset-block")}} 和 {{cssxref("inset-inline")}}
 - {{cssxref("margin")}} 简写属性的多值语法
