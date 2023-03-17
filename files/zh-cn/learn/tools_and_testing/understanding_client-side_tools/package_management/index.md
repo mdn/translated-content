@@ -136,7 +136,7 @@ npm init
 npm install parcel-bundler
 ```
 
-一旦完成了 _所有准备工作_，我们现在准备进行一些“现代客户端开发”（这实际上意味着使用构建工具使开发人员的体验更加轻松）。但是首先，请再次查看你的 package.json 文件。你将看到 npm 添加了一个新字段——dependencies：
+一旦完成了*所有准备工作*，我们现在准备进行一些“现代客户端开发”（这实际上意味着使用构建工具使开发人员的体验更加轻松）。但是首先，请再次查看你的 package.json 文件。你将看到 npm 添加了一个新字段——dependencies：
 
 ```json
 "dependencies": {
@@ -243,7 +243,7 @@ dist/my-project.fb76efcf.js        195.74 KB    8.43s
 dist/index.html                        288 B    806ms
 ```
 
-同样，我们的构建产物在 dist 目录。
+同样，我们的构建产物在 `dist` 目录。
 
 ### 减小应用的文件大小
 
@@ -253,17 +253,17 @@ dist/index.html                        288 B    806ms
 
 如果我们避免使用任何开发工具，并用 `<script src="">` 加载托管的 `date-fns` 库，那么大致相同的事情将会发生——当我们的示例页面在浏览器中加载时，将会下载整个库。
 
-然而，这就是开发工具大放异彩的地方。当它在我们的计算机上运行时，我们可以要求软件检查我们对代码的使用，并在构建中仅包含我们实际使用的函数——这个过程称为“Tree Shaking”。
+然而，这就是开发工具大放异彩的地方。当它在我们的计算机上运行时，我们可以要求软件检查我们对代码的使用，并在构建中仅包含我们实际使用的函数——这个过程称为“摇树优化（Tree Shaking）”。
 
-这非常有意义，因为我们希望减小文件大小，从而使我们的应用程序尽可能快地加载。不同的工具将以不同的方式让你进行 Tree Shaking。
+这非常有意义，因为我们希望减小文件大小，从而使我们的应用程序尽可能快地加载。不同的工具将以不同的方式让你进行摇树优化。
 
 虽然可用的工具的发展日新月异，但有三个主要的打包工具可以将我们的源代码构建为捆绑包：Webpack、[Rollup](https://rollupjs.org/guide/en/) 和 Parcel。可能会有更多其他的工具，但这些是比较流行的：
 
-- RollUp 工具提供 Tree Shaking 和代码拆分作为其核心特性。
+- RollUp 工具提供摇树优化和代码拆分作为其核心特性。
 - Webpack 需要“一些”配置（尽管“一些”可能低估了一些开发人员的 Webpack 配置的复杂性）。
-- 在 Parcel（Parcel 2 之前）的情况下，需要一个特殊的标志——`--experimental-scope-hoisting`——来进行 Tree Shaking 构建。
+- 在 Parcel（Parcel 2 之前）的情况下，需要一个特殊的标志——`--experimental-scope-hoisting`——来进行摇树优化构建。
 
-让我们暂时继续使用Parcel，因为我们已经安装了它。尝试运行以下命令：
+让我们暂时继续使用 Parcel，因为我们已经安装了它。尝试运行以下命令：
 
 ```bash
 parcel build index.html --experimental-scope-hoisting
