@@ -163,12 +163,6 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
   </tbody>
 </table>
 
-### バグへのリンク
-
-- バグ
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) を使うと、 bugzilla.mozilla.org に登録されているバグへのリンクを簡単に作ることができます。構文は `\{{Bug(123456)}}` です。 {{Bug(123456)}} のようなリンクになります。
-
 ### 複数のページからなるガイドのためのナビゲーション補助
 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs)、[`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) は、一連の記事の中でのナビゲーションコントロールを提供します。一方向用のテンプレートでは、 前の または 次の 記事の Wiki 位置を指す 1 つの引数が必要です。 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) については、前の記事、次の記事を指す 2 つの引数を取ります。最初の引数が前の記事を指し、2 番めの引数が次の記事を指します。
