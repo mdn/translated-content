@@ -30,7 +30,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 - キーボードイベントで、 [KeyboardEvent.location](/ja/docs/DOM/KeyboardEvent#Attributes_location) 属性を用いたキーの位置（標準、モディファイアキーの左もしくは右、テンキー上）を調べるためのサポートが実装されました（{{bug("166240")}}）。
 - `KeyboardEvent.keycode` の結果が Windows/Linux/Mac でほぼ同じであった従来のルールよりも優れたルールから算出されるようになりました。そして、それらは アラビア文字、キリル文字, タイ文字などのような、Linux と Mac での非 ASCII 入力可能レイアウトでも利用可能です。[仮想キーコードのための文書](/ja/docs/DOM/KeyboardEvent#Virtual_key_codes)を参照してください。
 - [`range.detach()`](/ja/docs/DOM/range.detach) メソッドは何もしないように変更されました。恐らく、将来的に削除されるでしょう。
-- `HTMLVideoElement.mozHasAudio() メソッドが実装されました。与えられた video 要素に関連づけられた音声トラックがあるかどうかを示します（bug 480376）。`
+- `HTMLVideoElement.mozHasAudio()` メソッドが実装されました。与えられた video 要素に関連づけられた音声トラックがあるかどうかを示します（[Firefox バグ 480376](https://bugzil.la/480376)）。
 - `Performance` API に新しいメソッド `now()` が追加されました。このメソッドは `DOMHighResTimeStamp` 型の高解像度タイマをサポートします（[bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)）。
 - [WebSMS API](/ja/docs/API/WebSMS) が更新され、SMS テキストメッセージが既読か未読かのどちらかを示す `read` 属性がサポートされました。
 - [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) が実装されました。
