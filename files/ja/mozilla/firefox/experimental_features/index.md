@@ -14,7 +14,7 @@ slug: Mozilla/Firefox/Experimental_features
 
 実験的な機能は、 [Firefox 設定エディター](https://support.mozilla.org/ja/kb/about-config-editor-firefox) (Firefox のアドレスバーに `about:config` と入力) を使って、以下に示す関連する*設定*を変更することで、有効または無効にすることができます。
 
-> **メモ:** 編集者の方へ - これらの表に機能を追加する際には、 [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) マクロ `\{{bug(<em>バグ番号</em>)}}` を使って関連するバグへのリンクを含めるようにしてください。
+> **メモ:** 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
 
 ## HTML
 
