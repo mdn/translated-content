@@ -9,7 +9,7 @@ slug: orphaned/Web/API/Document/documentURIObject
 
 このプロパティは、拡張機能のコードなどの (UniversalXPConnect) 特権を持つスクリプトでのみ機能します。ウェブコンテンツではこのプロパティは特別な意味を持たず、他のカスタムプロパティと同様に扱うことしかできません。
 
-特権コードでは、([`XPCNativeWrapper`](/ja/XPCNativeWrapper) の `wrappedJSObject` などの) ラップされていないコンテンツオブジェクトに対してこのプロパティを取得または設定しないように注意しなければなりません。詳しくは {{Bug(324464)}} のコメントを参照して下さい。
+特権コードでは、([`XPCNativeWrapper`](/ja/XPCNativeWrapper) の `wrappedJSObject` などの) ラップされていないコンテンツオブジェクトに対してこのプロパティを取得または設定しないように注意しなければなりません。詳しくは [Firefox バグ 324464](https://bugzil.la/324464) のコメントを参照して下さい。
 
 ## 構文
 

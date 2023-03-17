@@ -54,7 +54,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 これを行うには、イベント `addListener()` の `extraInfoSpec` の引数に"blocking"の値のオプションを渡す必要があります。これによりリスナーが同期します。このリスナーでは {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} オブジェクトを返すことができ、このオブジェクトは加えた修正を指し示します: 例えば、送信したい修正後のリクエストヘッダーなど。
 
-> **警告:** Non-HTTP(S) protocols do not currently support `"blocking"` functionality, so modifying these requests is not available at this time. See {{bug(1475832)}} for more details.
+> **警告:** Non-HTTP(S) protocols do not currently support `"blocking"` functionality, so modifying these requests is not available at this time. See [Firefox バグ 1475832](https://bugzil.la/1475832) for more details.
 
 ## セキュリティ情報へのアクセス
 
