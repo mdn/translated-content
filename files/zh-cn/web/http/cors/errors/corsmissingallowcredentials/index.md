@@ -1,5 +1,5 @@
 ---
-title: "Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'"
+title: 原因：expected 'true' in CORS header 'Access-Control-Allow-Credentials'
 slug: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
 ---
 
@@ -8,7 +8,7 @@ slug: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
 ## 原因
 
 ```plain
-Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'
+原因：expected 'true' in CORS header 'Access-Control-Allow-Credentials'
 ```
 
 ## 哪里出错了？
