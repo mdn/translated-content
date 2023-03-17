@@ -9,17 +9,17 @@ slug: Web/API/Element/scrollIntoView
 
 ## 语法
 
-```js
-element.scrollIntoView(); // 等同于 element.scrollIntoView(true)
-element.scrollIntoView(alignToTop); // Boolean 型参数
-element.scrollIntoView(scrollIntoViewOptions); // Object 型参数
+```js-nolint
+scrollIntoView()
+scrollIntoView(alignToTop)
+scrollIntoView(scrollIntoViewOptions)
 ```
 
 ### 参数
 
 - `alignToTop`{{optional_inline}}
 
-  - : 一个{{jsxref("Boolean")}}值：
+  - : 一个布尔值：
 
     - 如果为 `true`，元素的顶端将和其所在滚动区的可视区域的顶端对齐。相应的 `scrollIntoViewOptions: {block: "start", inline: "nearest"}`。这是这个参数的默认值。
     - 如果为 `false`，元素的底端将和其所在滚动区的可视区域的底端对齐。相应的 `scrollIntoViewOptions: {block: "end", inline: "nearest"}`。
@@ -42,12 +42,12 @@ element.scrollIntoView(scrollIntoViewOptions); // Object 型参数
 ## 示例
 
 ```js
-var element = document.getElementById("box");
+const element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
-element.scrollIntoView({block: "end"});
-element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+element.scrollIntoView({ block: "end" });
+element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 ```
 
 ## 注意
