@@ -830,4 +830,4 @@ Firefox 50 より前のバージョンでは、`AlignSetting` 列挙体（{{domx
 
 WebVTT は Firefox 24 ではデフォルトの `media.webvtt.enabled` の背後に実装されていましたが、デフォルトでは無効になっています。この設定を `true` に設定することで有効にできます。WebVTT は Firefox 31 以降ではデフォルトで有効になっていますが、設定を `false` に設定することで無効にすることができます。
 
-Firefox 58 より前のバージョンでは、`REGION` キーワードは {{domxref("VTTRegion")}} オブジェクトを作成していましたが、使用していませんでした。Firefox 58 は現在 `VTTRegion` とその使用を完全にサポートしています。ただし、この機能は設定 `media.webvtt.regions.enabled` の背後でデフォルトで無効になっています。Firefox 58 で領域のサポートを有効にするには、`true` に設定します。領域は Firefox 59 以降でデフォルトで有効になっています（{{bug(1338030)}} および {{bug(1415805)}} のバグを参照）。
+Firefox 58 より前のバージョンでは、`REGION` キーワードは {{domxref("VTTRegion")}} オブジェクトを作成していましたが、使用していませんでした。Firefox 58 は現在 `VTTRegion` とその使用を完全にサポートしています。ただし、この機能は設定 `media.webvtt.regions.enabled` の背後でデフォルトで無効になっています。Firefox 58 で領域のサポートを有効にするには、`true` に設定します。領域は Firefox 59 以降でデフォルトで有効になっています（[Firefox バグ 1338030](https://bugzil.la/1338030) および [Firefox バグ 1415805](https://bugzil.la/1415805) のバグを参照）。

@@ -7,7 +7,7 @@ slug: Glossary/TLS
 
 最新のブラウザーはすべて TLS プロトコルに対応しており、有効な{{Glossary("Digital certificate", "デジタル証明書")}}の提供をサーバーに要求してその身元を確認し、安全な接続を確立します。クライアントとサーバーの両者がそれぞれのデジタル証明書を提供すれば、相互に認証することができます。
 
-> **メモ:** TLS 1.0 と 1.1 への対応は、2020 年の初頭にすべての主要なブラウザーから削除される予定です。今後はウェブサーバーが TLS 1.2 や 1.3 に対応していることを確認する必要があります。 Firefox はバージョン 74 時点で、古いバージョンの TLS を使用しているサーバーに接続する場合に [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) エラーを返すようになる予定です ({{bug(1606734)}})。
+> **メモ:** TLS 1.0 と 1.1 への対応は、2020 年の初頭にすべての主要なブラウザーから削除される予定です。今後はウェブサーバーが TLS 1.2 や 1.3 に対応していることを確認する必要があります。 Firefox はバージョン 74 時点で、古いバージョンの TLS を使用しているサーバーに接続する場合に [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) エラーを返すようになる予定です ([Firefox バグ 1606734](https://bugzil.la/1606734))。
 
 1. 仕様書
 
