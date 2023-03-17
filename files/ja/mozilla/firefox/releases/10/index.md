@@ -83,7 +83,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 - ESC キーで {{ domxref("window.oninput") }} ハンドラが誤って呼び出されるという、間違った結果にならないようになりました。
 - 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インタフェースは削除されました。
 - {{ domxref("document.createProcessingInstruction()") }} メソッドが HTML ドキュメントでも、XML ドキュメントの場合と同様に動作するようになりました。{{ domxref("ProcessingInstruction") }} ノードは現在も XML ドキュメントでのみサポートされていますが、ノードはドキュメントをまたいで移動させられますので、HTML ドキュメントでも同様にノードを作成することに役立ちます。
-- {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。{{ bug("707142#c13") }} をご覧ください。
+- {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。[Firefox バグ 707142#c13](https://bugzil.la/707142#c13) をご覧ください。
 
 ### CSS
 
