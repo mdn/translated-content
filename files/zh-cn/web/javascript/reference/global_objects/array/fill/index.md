@@ -31,7 +31,7 @@ fill(value, start, end)
     - 负数索引从数组的末端开始计算，如果 `end < 0`，则使用 `end + array.length`。
     - 如果 `end < -array.length`，则使用 `0`。
     - 如果 `end >= array.length` 或 `end` 被省略，则使用 `array.length`，导致所有索引都被填充。
-    - 如果经标准化后，`end` 的位置在 `start` 之前或之上，没有索引被填充。 
+    - 如果经标准化后，`end` 的位置在 `start` 之前或之上，没有索引被填充。
 
 ### 返回值
 
