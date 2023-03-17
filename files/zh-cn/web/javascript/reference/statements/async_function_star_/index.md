@@ -42,7 +42,7 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 
 与使用 `function*` 声明的标准生成器函数不同，异步生成器函数返回一个符合[异步可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)的 {{jsxref("Global_Objects/AsyncGenerator","AsyncGenerator")}} 对象。每次调用 `next()` 都会返回一个 {{jsxref("Promise")}}，该 promise 会兑现为迭代器结果对象。
 
-当从异步生成器生产一个 promsie 时，迭代器结果 promise 的最终状态将与生产（yield）的 promise 状态相同。例如：
+当从异步生成器产生一个 promsie 时，迭代器结果 promise 的最终状态将与生成器产生的 promise 状态相同。例如：
 
 ```js
 async function* foo() {
