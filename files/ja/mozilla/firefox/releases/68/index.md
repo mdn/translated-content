@@ -162,7 +162,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- [CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730) のため、同じディレクトリーにあるファイルを別々のオリジンとして扱うように Firefox を変更しました。これは、file:// URL で読み込んだドキュメントの動作でいくつかの副作用が発生します (調査について {{bug("file-fallout")}} をご覧ください)。例えば、workers を読み込むことができません。
+- [CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730) のため、同じディレクトリーにあるファイルを別々のオリジンとして扱うように Firefox を変更しました。これは、file:// URL で読み込んだドキュメントの動作でいくつかの副作用が発生します (調査について [Firefox バグ 1558299](https://bugzil.la/1558299) をご覧ください)。例えば、workers を読み込むことができません。
 
 ### WebDriver conformance (Marionette)
 
