@@ -38,30 +38,30 @@ l10n:
 
 さらに、現在のツールの代わりに使用したいより良いツールを見つけた場合、または更新したい依存関係の新しいバージョンがリリースされた場合はどうなりますか? これは、いくつかの依存関係についてはそれほど苦痛ではありませんが、多くの依存関係がある大規模なプロジェクトでは、この種のことを追跡するのが非常に困難になる可能性があります。 npm などの **パッケージ マネージャー** を使用する方が理にかなっています。これにより、コードがクリーンに追加および削除され、他の多くの利点が得られることが保証されます。
 
-## What exactly is a package manager?
+## パッケージマネージャーとは正確には何ですか？
 
-We've met [npm](https://www.npmjs.com/) already, but stepping back from npm itself, a package manager is a system that will manage your project dependencies.
+[npm](https://www.npmjs.com/) については既に触れましたが、npm 自体から離れて、パッケージマネージャーはプロジェクトの依存関係を管理するシステムです。
 
-The package manager will provide a method to install new dependencies (also referred to as "packages"), manage where packages are stored on your file system, and offer capabilities for you to publish your own packages.
+パッケージマネージャーは、新しい依存関係 (「パッケージ」とも呼ばれます) をインストールする方法を提供し、ファイルシステム上のパッケージの保存場所を管理し、独自のパッケージを公開する機能を提供します。
 
-In theory, you may not need a package manager and you could manually download and store your project dependencies, but a package manager will seamlessly handle installing and uninstalling packages. If you didn't use one, you'd have to manually handle:
+理論的には、パッケージマネージャーは必要なく、プロジェクトの依存関係を手動でダウンロードして保存することもできますが、パッケージマネージャーはパッケージのインストールとアンインストールをシームレスに処理します。 使用していない場合は、手動で処理する必要があります。
 
-- Finding all the correct package JavaScript files.
-- Checking them to make sure they don't have any known vulnerabilities.
-- Downloading them and putting them in the correct locations in your project.
-- Writing the code to include the package(s) in your application (this tends to be done using [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), another subject that is worth reading up on and understanding).
-- Doing the same thing for all of the packages' sub-dependencies, of which there could be tens, or hundreds.
-- Removing all the files again if you want to remove the packages.
+- すべての正しいパッケージ JavaScript ファイルの検索。
+- それらをチェックして、既知の脆弱性がないことを確認します。
+- それらをダウンロードして、プロジェクト内の正しい場所に配置します。
+- アプリケーションにパッケージを含めるためのコードを作成します (これは、よく読んで理解する価値のあるもう 1 つの主題である [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) モジュールを使用して行われます)。
+- すべてのパッケージのサブ依存関係 (数十または数百になる可能性があります) に対して同じことを行います。
+- パッケージを削除する場合は、すべてのファイルを再度削除します。
 
-In addition, package managers handle duplicate dependencies (something that becomes important and common in front-end development).
+さらに、パッケージマネージャーは重複した依存関係 (フロントエンド開発で重要かつ一般的になるもの) を処理します。
 
-In the case of npm (and JavaScript- and Node-based package managers) you have two options for where you install your dependencies. As we touched on in the previous article, dependencies can be installed globally or locally to your project. Although there tend to be more pros for installing globally, the pros for installing locally are more important — such as code portability and version locking.
+npm (と JavaScript と Node ベースのパッケージマネージャー) の場合、依存関係をインストールする場所には 2 つのオプションがあります。 前回の記事で触れたように、依存関係はプロジェクトにグローバルまたはローカルにインストールできます。 グローバルにインストールする方がメリットが多い傾向にありますが、コードの移植性やバージョンのロックなど、ローカルにインストールする方がより重要です。
 
-For example, if your project relied on Webpack with a certain configuration, you'd want to ensure that if you installed that project on another machine or returned to it much later on, the configuration would still work. If a different version of Webpack was installed, it may not be compatible. To mitigate this, dependencies are installed locally to a project.
+たとえば、プロジェクトが特定の構成の Webpack に依存している場合、そのプロジェクトを別のマシンにインストールしたり、後でそのプロジェクトに戻ったりした場合でも、構成が引き続き機能することを確認する必要があります。 異なるバージョンの Webpack がインストールされている場合、互換性がない可能性があります。 これを軽減するために、依存関係がプロジェクトにローカルにインストールされます。
 
-To see local dependencies really shine, all you need to do is try to download and run an existing project — if it works and all the dependencies work right out of the box, then you have local dependencies to thank for the fact that the code is portable.
+ローカルの依存関係が本当に輝いていることを確認するには、既存のプロジェクトをダウンロードして実行するだけです。ーそれが機能し、すべての依存関係が箱から出してすぐに機能する場合、コードが移植可能であるという事実に感謝するローカル依存関係があります。
 
-> **Note:** npm is not the only package manager available. A successful and popular alternative package manager is [Yarn](https://yarnpkg.com/). Yarn resolves the dependencies using a different algorithm that can mean a faster user experience. There are also a number of other emerging clients, such as [pnpm](https://pnpm.js.org/).
+> **メモ:** 利用可能なパッケージマネージャーは npm だけではありません。 成功し、人気のある代替パッケージマネージャーは [Yarn](https://yarnpkg.com/) です。 Yarn は別のアルゴリズムを使用して依存関係を解決します。これは、より高速なユーザー エクスペリエンスを意味します。 [pnpm](https://pnpm.js.org/) など、他の多くの新しいクライアントもあります。
 
 ## Package registries
 
