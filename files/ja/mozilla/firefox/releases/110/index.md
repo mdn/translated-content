@@ -2,7 +2,7 @@
 title: Firefox 110 for developers
 slug: Mozilla/Firefox/Releases/110
 l10n: 
-  sourceCommit: ed423f006c44e07db7693434b50aea2c373c579f
+  sourceCommit: a264df392ddc9378b59e07e89b9abdb4f0f776d5
 ---
 
 {{FirefoxSidebar}}
@@ -21,6 +21,7 @@ l10n:
   これらのクエリーや関連する長さの単位について、詳しくは [CSS Container Queries](/ja/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) の文書をご覧ください ([Firefox バグ 1809720](https://bugzil.la/1809720))。
 - [color-gamut メディアクエリー](/ja/docs/Web/CSS/@media/color-gamut) をサポートしました ([Firefox バグ 1422237](https://bugzil.la/1422237))。
 - Windows および Linux で、`type="color"` を持つ `<input>` 要素で [`list`](/ja/docs/Web/HTML/Element/datalist#color_type) 属性をサポートしました ([Firefox バグ 960984](https://bugzil.la/960984))。
+- [`@page`](/ja/docs/Web/CSS/@page) アットルールで名前つきページをサポートしました。これは [`page`](/ja/docs/Web/CSS/page) プロパティを使用して、ユーザーが特定のセレクターで改ページを生成することを可能にします ([Firefox バグ 1787947](https://bugzil.la/1787947))。
 
 ### JavaScript
 
