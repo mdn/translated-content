@@ -34,7 +34,7 @@ scrollTo(options)
 
 无 ({{jsxref("undefined")}})。
 
-## 例子
+## 示例
 
 ```js
 element.scrollTo(0, 1000);
