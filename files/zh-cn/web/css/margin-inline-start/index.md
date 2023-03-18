@@ -45,13 +45,15 @@ margin-inline-start: unset;
 
 ### 设置逻辑行首外边距
 
+#### HTML
+
 ```html
 <div>
   <p class="exampleText">Example text</p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -67,7 +69,7 @@ div {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample("设置逻辑行首外边距", 140, 140)}}
 
