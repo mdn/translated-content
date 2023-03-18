@@ -17,7 +17,7 @@ l10n:
 
 {{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーを使うと、別のヘッダーをセーフリストとして追加したり、上記のヘッダーをリストアップすることで後述の追加要件を回避することができます:
 
-#### Additional restrictions
+#### 追加要件
 
 CORS-safelisted headers must also fulfill the following requirements in order to be a CORS-safelisted request header:
 
@@ -26,7 +26,7 @@ CORS-safelisted headers must also fulfill the following requirements in order to
 - For {{HTTPHeader("Content-Type")}}: needs to have a MIME type of its parsed value (ignoring parameters) of either `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`.
 - For any header: the value's length can't be greater than 128.
 
-## See also
+## 関連情報
 
 - {{Glossary("CORS-safelisted response header")}}
 - {{Glossary("Forbidden header name")}}
