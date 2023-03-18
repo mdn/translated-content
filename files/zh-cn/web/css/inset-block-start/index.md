@@ -87,4 +87,4 @@ div {
 
 - 定义其他偏移的属性：{{CSSXref("inset-block-end")}}、{{CSSXref("inset-inline-start")}} 和 {{CSSXref("inset-inline-end")}}
 - 对应的实体属性：{{CSSXref("top")}}、{{CSSXref("right")}}、{{CSSXref("bottom")}} 和 {{CSSXref("left")}}
-- {{CSSXref("writing-mode")}}, {{CSSXref("direction")}}, {{CSSXref("text-orientation")}}
+- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
