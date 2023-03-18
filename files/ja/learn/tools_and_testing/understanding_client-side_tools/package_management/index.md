@@ -77,70 +77,64 @@ npm だけが選択肢ではありません。 独自のパッケージ レジ�
 
 [Parcel](https://parceljs.org/) は、開発者が開発プロセスでよく使用する別のツールです。 Parcel は、依存関係の呼び出しについてコードの内容を監視し、コードが必要とするすべての依存関係を自動的にインストールするという点で賢いです。 また、コードを自動的にビルドすることもできます。
 
-### Setting up the app as an npm package
+### アプリを npm パッケージとしてセットアップする 
 
-First of all, create a new directory to store our experimental app in, somewhere sensible that you'll find again. We'll call it parcel-experiment, but you can call it whatever you like:
+まず、実験的なアプリを保存するための新しいディレクトリを作成します。 これを parcel-experiment と呼びますが、好きなように呼ぶことができます。
 
 ```bash
 mkdir parcel-experiment
 cd parcel-experiment
 ```
 
-Next, let's initialise our app as an npm package, which creates a config file — `package.json` — that allows us to save our configuration details in case we want to recreate this environment later on, or even publish the package to the npm registry (although this is somewhat beyond the scope of this article).
+次に、構成ファイルを作成する npm パッケージとしてアプリを初期化しましょう — `package.json` — これにより、後でこの環境を再作成したり、パッケージを npm レジストリに公開したりする場合に備えて、構成の詳細を保存できます (ただし、これはこの記事の範囲を超えています)。
 
-Type the following command, making sure you are inside the `parcel-experiment` directory:
+`parcel-experiment` ディレクトリ内で、次のコマンドを入力します。
 
 ```bash
 npm init
 ```
 
-You will now be asked some questions; npm will then create a default `package.json` file based on the answers:
+ここで、いくつか質問されます。 npm は、回答に基づいてデフォルトの `package.json` ファイルを作成します。
 
-- `name`: A name to identify the app. Just press
+- `name`: アプリを識別するための名前。
 
-  <kbd>Return</kbd>
+  <kbd>Return</kbd> を入力します。
 
-  to accept the default `parcel-experiment`.
+  デフォルトの `parcel-experiment` がアプリ名になります。
 
-- `version`: The starting version number for the app. Again, just press
+- `version`: アプリの開始バージョン番号。
 
-  <kbd>Return</kbd>
+  再度 <kbd>Return</kbd> を入力します。
 
-  to accept the default `1.0.0`.
+  デフォルトの `1.0.0` がアプリの開始バージョン番号になります。
 
-- `description`: A quick description of the app's purpose. Type in something really simple, like "A simple npm package to learn about using npm", then press
+- `description`: アプリの目的の簡単な説明。 「npm の使い方を学ぶための簡単な npm パッケージ」など、非常に簡単なことを入力してから、
 
-  <kbd>Return</kbd>
+  <kbd>Return</kbd> を入力します。
 
-  .
+- `entry point`: これは、アプリの最上位の JavaScript ファイルになります。 今のところデフォルトの `index.js` で問題ありません。 — 
 
-- `entry point`: This will be the top-level JavaScript file of the app. The default `index.js` is fine for now — press
+  <kbd>Return</kbd> を入力します。
 
-  <kbd>Return</kbd>
+- `test command`, `git repository`, と `keywords` 
 
-  .
+  <kbd>Return</kbd> を入力します。
 
-- `test command`, `git repository`, and `keywords`: press
+  それぞれを入力する時は、空白のままにしておきます。 
 
-  <kbd>Return</kbd>
+- `author`: プロジェクトの作成者。 自分の名前を入力し、
 
-  to leave each of these blank for now.
+  <kbd>Return</kbd> を入力します。
 
-- `author`: The author of the project. Type your own name, and press
+- `license`: パッケージを公開するためのライセンス。 
 
-  <kbd>Return</kbd>
+  <kbd>Return</kbd> を入力します。
 
-  .
+  ここではデフォルトを設定します。 
 
-- `license`: The license to publish the package under. Press
+これらの設定を受け入れるためにもう一度 <kbd>Return</kbd> を入力します。
 
-  <kbd>Return</kbd>
-
-  to accept the default for now.
-
-Press <kbd>Return</kbd> one more time to accept these settings.
-
-Go into your `parcel-experiment` directory and you should now find you've got a package.json file. Open it up and it should look something like this:
+`parcel-experiment` ディレクトリに移動すると、package.json ファイルが作成されていることがわかります。 それを開くと、次のようになります。 
 
 ```json
 {
@@ -156,7 +150,7 @@ Go into your `parcel-experiment` directory and you should now find you've got a 
 }
 ```
 
-So this is the config file that defines your package. This is good for now, so let's move on.
+したがって、これはパッケージを定義する構成ファイルです。 今はこれでいいので、先に進みます。
 
 ### Installing parcel
 
