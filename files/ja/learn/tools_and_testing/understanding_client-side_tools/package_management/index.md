@@ -116,7 +116,7 @@ npm init
 
   <kbd>Return</kbd> を入力します。
 
-- `test command`, `git repository`, と `keywords` 
+- `test command`, `git repository`, と `keywords` :
 
   <kbd>Return</kbd> を入力します。
 
@@ -172,13 +172,13 @@ npm install parcel-bundler
 
 欠点の 1 つは、Parcel が `parcel-experiment` アプリ内でしか利用できないことです。 別のディレクトリで実行することはできません。 しかし、利点は欠点を上回ります。
 
-### Setting up our example app
+### サンプルアプリのセットアップ 
 
-Anyway, on with the setup.
+とにかく、セットアップを続けます。 
 
-Parcel expects an `index.html` and an `index.js` file to work with, but otherwise, it is very unopinionated about how you structure your project. Other tools can be very different, but at least Parcel makes it easy for our initial experiment.
+Parcel は `index.html` と `index.js` ファイルが動作することを期待していますが、それ以外の場合、プロジェクトをどのように構築するかについて非常に意見がありません。 他のツールは非常に異なる場合がありますが、少なくとも Parcel は最初の実験を容易にします。
 
-So now we need to add an `index.html` file to our working directory. Create `index.html` in your test directory, and give it the following contents:
+そのため、 `index.html` ファイルを作業ディレクトリに追加する必要があります。 テスト ディレクトリに `index.html` を作成し、次の内容を指定します。
 
 ```html
 <!DOCTYPE html>
