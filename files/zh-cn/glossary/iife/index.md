@@ -140,17 +140,11 @@ console.log(i); // Uncaught ReferenceError: i is not defined.
 
 当我们点击按钮时，会 alert 0 和 1
 
-## 了解更多
+## 参见
 
-### 了解
+- [立即调用函数表达式](https://zh.wikipedia.org/wiki/立即调用函数表达式)（维基百科）
 
-- [Quick example](/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions)（在“函数”部分的末尾，“自定义对象”之前）
+- [术语表](/zh-CN/docs/Glossary)
 
-### 常识
-
-- [IIFE](https://zh.wikipedia.org/wiki/Immediately-invoked_function_expression) 维基百科
-
-- [相关术语](/zh-CN/docs/Glossary)
-
-  - {{Glossary("Function")}}
-  - {{Glossary("Self-Executing Anonymous Function")}}
+  - {{Glossary("Function", "函数")}}
+  - {{Glossary("Self-Executing Anonymous Function", "自执行匿名函数")}}
