@@ -1,27 +1,26 @@
 ---
-title: Package management basics
+title: パッケージ管理の基本
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
+l10n:
+  sourceCommit: 84747e4b342492f04ec943acd47bb4f8665586cc
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In this article, we'll look at package managers in some detail to understand how we can use them in our own projects — to install project tool dependencies, keep them up-to-date, and more.
+この記事では、パッケージマネージャーを詳細に見て、プロジェクトツールの依存関係をインストールし、それらを最新の状態に保つなど、独自のプロジェクトでパッケージマネージャーを使用する方法を理解します。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件：</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目的：</th>
       <td>
-        To understand what package managers and package repositories are, why
-        they are needed, and the basics of how to use them.
+        パッケージマネージャーとパッケージリポジトリとは何か、必要な理由や使用方法の基本を理解する。
       </td>
     </tr>
   </tbody>
