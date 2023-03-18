@@ -678,18 +678,3 @@ body { max-width: 800px; margin: 0 auto; }
 This article has provided a brief summary of all the layout technologies you should know about. Read on for more information on each individual technology!
 
 {{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/pt-BR/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/pt-BR/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/pt-BR/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/pt-BR/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/pt-BR/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/pt-BR/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
