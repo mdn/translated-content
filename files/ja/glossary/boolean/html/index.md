@@ -13,14 +13,14 @@ boolean 属性の注目すべき特徴として、存在していれば `true` �
 こちらは HTML の boolean 属性 `checked` の例です:
 
 ```html
-<!-- The following checkboxes will be checked on initial rendering -->
+<!-- 次のチェックボックスは最初にレンダリングされた際、チェックされた状態でレンダリングされます -->
 <input type="checkbox" checked />
 <input type="checkbox" checked="" />
 <input type="checkbox" checked="true" />
 <input type="checkbox" checked="false" />
 <input type="checkbox" checked="any value" />
 
-<!-- The following checkbox will not be checked on initial rendering -->
+<!-- 次のチェックボックスは最初にレンダリングされた際、チェックされていない状態でレンダリングされます -->
 <input type="checkbox" />
 ```
 
