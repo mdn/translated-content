@@ -72,6 +72,6 @@ for (const num of array) {
 
 ## Véase también
 
-- [API Web Crypto](/en-US/docs/Web/API/Web_Crypto_API)
+- [API Web Crypto](/es/docs/Web/API/Web_Crypto_API)
 - {{domxref("crypto_property", "crypto")}} para obtener un objeto {{domxref("Crypto")}}.
 - {{jsxref("Math.random")}}, una fuente no criptográfica de números aleatorios.
