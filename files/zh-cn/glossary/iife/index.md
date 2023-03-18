@@ -3,7 +3,7 @@ title: IIFE（立即调用函数表达式）
 slug: Glossary/IIFE
 ---
 
-**IIFE**（立即调用函数表达式）是一个在定义时就会立即执行的 {{glossary("JavaScript")}} {{glossary("function","函数")}}。IIFE 这个名字是由 Ben Alman 在 [他的博客](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife) 中提出的。
+**IIFE**（立即调用函数表达式）是一个在定义时就会立即执行的 {{glossary("JavaScript")}} {{glossary("function","函数")}}。IIFE 这个名字是由 Ben Alman 在[他的博客](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)中提出的。
 
 ```js
 (function () {
@@ -21,7 +21,7 @@ slug: Glossary/IIFE
 
 它是一种设计模式，也被称为 {{glossary("Self-Executing Anonymous Function", "自执行匿名函数")}}，主要包含两部分：
 
-1. 第一部分是一个具有词法作用域的匿名函数，并且用 {{jsxref("Operators/Grouping", "圆括号运算符")}} `()` 运算符闭合起来。这样不但阻止了外界访问 IIFE 中的变量，而且不会污染全局作用域。
+1. 第一部分是一个具有词法作用域的匿名函数，并且用{{jsxref("Operators/Grouping", "圆括号运算符", "", 1)}} `()` 运算符闭合起来。这样不但阻止了外界访问 IIFE 中的变量，而且不会污染全局作用域。
 
 2. 第二部分创建了一个立即执行函数表达式 `()`，通过它，JavaScript 引擎将立即执行该函数。
 
@@ -43,7 +43,7 @@ slug: Glossary/IIFE
 
 ### 执行一个异步函数
 
-[`async`](/zh-cn/docs/Web/JavaScript/Reference/Operators/async_function) IIFE 允许你在比较旧的浏览器或者 JavaScript 运行环境没有 [顶层 await](/zh-cn/docs/Web/JavaScript/Reference/Operators/await#top_level_await) 中使用 [`await`](/zh-cn/docs/Web/JavaScript/Reference/Operators/async_function) 和 [`for-await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)：
+[`async`](/zh-cn/docs/Web/JavaScript/Reference/Operators/async_function) IIFE 允许你在比较旧的浏览器或者 JavaScript 运行环境没有[顶层 await](/zh-cn/docs/Web/JavaScript/Reference/Operators/await#top_level_await) 中使用 [`await`](/zh-cn/docs/Web/JavaScript/Reference/Operators/async_function) 和 [`for-await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)：
 
 ```js
 const getFileStream = async (url) => {
