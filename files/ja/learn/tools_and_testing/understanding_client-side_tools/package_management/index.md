@@ -391,24 +391,24 @@ yarn why date-fns
 
 You can find out more about the individual commands for [npm](https://docs.npmjs.com/cli-documentation/) and [yarn](https://classic.yarnpkg.com/en/docs/cli/) online. Again, [pnpm](https://pnpm.js.org/en/cli/add) commands will have parity with npm, with a handful of additions.
 
-## Making your own commands
+## 独自のコマンドを作成する
 
-The package managers also support creating your own commands and executing them from the command line. For instance, we could create the following command:
+パッケージマネージャーは、独自のコマンドの作成とコマンドラインからの実行もサポートしています。 たとえば、次のコマンドを作成できます。
 
 ```bash
 npm run dev
 # or yarn run dev
 ```
 
-This would run a custom script for starting our project in "development mode". In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
+これにより、プロジェクトを「開発モード」で開始するためのカスタム スクリプトが実行されます。 実際、ローカルでの開発セットアップは本番環境での実行方法とは若干異なる傾向があるため、すべてのプロジェクトにこれを定期的に含めています。
 
-If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, Yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
+以前の Parcel テスト プロジェクトでこれを実行しようとすると、(おそらく) "dev script is missing" と表示されます。 これは、npm、Yarn (など) が `package.json` ファイルの `scripts` プロパティで dev というプロパティを探しているためです。
 
-Parcel can run a development server using the command `parcel serve filename.html`, and we'd like to use that often during our development.
+Parcel はコマンド `parcel serve filename.html` を使用して開発サーバーを実行できます。これを開発中に頻繁に使用したいと考えています。
 
-So, let's create a custom shorthand command — "dev" — in our `package.json`.
+それでは、`package.json` にカスタムの省略形コマンド "dev" を作成しましょう。
 
-If you followed the tutorial from earlier, you should have a `package.json` file inside your parcel-experiment directory. Open it up, and its `scripts` member should look like this:
+前のチュートリアルに従った場合は、パーセル実験ディレクトリ内に `package.json` ファイルがあるはずです。 それを開くと、その `scripts` メンバーは次のようになります。
 
 ```json
 "scripts": {
@@ -416,7 +416,7 @@ If you followed the tutorial from earlier, you should have a `package.json` file
 },
 ```
 
-Update it so that it looks like this, and save the file:
+次のように更新し、ファイルを保存します。
 
 ```json
 "scripts": {
@@ -425,24 +425,24 @@ Update it so that it looks like this, and save the file:
 },
 ```
 
-We've added a custom `dev` command as an npm script.
+カスタム `dev` コマンドを npm スクリプトとして追加しました。
 
-Now try running the following in your terminal, making sure you are inside the `parcel-experiment` directory:
+ターミナルで次のコマンドを実行してみてください。 `parcel-experiment` ディレクトリ内にいることを確認してください。
 
 ```bash
  npm run dev
 ```
 
-This should start Parcel and serve up your `index.html` at the local development server, as we saw before:
+これにより前に見たように、Parcel が起動し、ローカルの開発サーバーで `index.html` が提供されます。
 
 ```bash
 Server running at http://localhost:1234
 ✨  Built in 5.48s.
 ```
 
-In addition, the npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script/), although in most cases your own scripts will run just fine.
+さらに、npm (および yarn) コマンドは、プロジェクトにローカルにインストールされているコマンド ライン ツールを検索してから、従来の方法 (コンピューターが通常ソフトウェアを格納して検索できるようにする場所) で検索するという点で優れています。 [`run` コマンドの技術的な複雑さについて詳しく知る](https://docs.npmjs.com/cli/run-script/)ことができますが、ほとんどの場合、独自のスクリプトは問題なく実行されます。
 
-You can add all kinds of things to the `scripts` property that help you do your job. We certainly have, and [others have too](https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6).
+仕事をするのに役立つあらゆる種類のものを `scripts` プロパティに追加できます。 私たちは確かに持っていますし、[他も持っています](https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6)。
 
 ## Summary
 
