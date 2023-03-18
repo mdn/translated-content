@@ -77,7 +77,7 @@ npm だけが選択肢ではありません。 独自のパッケージ レジ�
 
 [Parcel](https://parceljs.org/) は、開発者が開発プロセスでよく使用する別のツールです。 Parcel は、依存関係の呼び出しについてコードの内容を監視し、コードが必要とするすべての依存関係を自動的にインストールするという点で賢いです。 また、コードを自動的にビルドすることもできます。
 
-### アプリを npm パッケージとしてセットアップする 
+### アプリを npm パッケージとしてセットアップする
 
 まず、実験的なアプリを保存するための新しいディレクトリを作成します。 これを parcel-experiment と呼びますが、好きなように呼ぶことができます。
 
@@ -112,7 +112,7 @@ npm init
 
   <kbd>Return</kbd> を入力します。
 
-- `entry point`: これは、アプリの最上位の JavaScript ファイルになります。 今のところデフォルトの `index.js` で問題ありません。 — 
+- `entry point`: これは、アプリの最上位の JavaScript ファイルになります。 今のところデフォルトの `index.js` で問題ありません。
 
   <kbd>Return</kbd> を入力します。
 
@@ -120,21 +120,21 @@ npm init
 
   <kbd>Return</kbd> を入力します。
 
-  それぞれを入力する時は、空白のままにしておきます。 
+  それぞれを入力する時は、空白のままにしておきます。
 
 - `author`: プロジェクトの作成者。 自分の名前を入力し、
 
   <kbd>Return</kbd> を入力します。
 
-- `license`: パッケージを公開するためのライセンス。 
+- `license`: パッケージを公開するためのライセンス。
 
   <kbd>Return</kbd> を入力します。
 
-  ここではデフォルトを設定します。 
+  ここではデフォルトを設定します。
 
 これらの設定を受け入れるためにもう一度 <kbd>Return</kbd> を入力します。
 
-`parcel-experiment` ディレクトリに移動すると、package.json ファイルが作成されていることがわかります。 それを開くと、次のようになります。 
+`parcel-experiment` ディレクトリに移動すると、package.json ファイルが作成されていることがわかります。 それを開くと、次のようになります。
 
 ```json
 {
@@ -154,7 +154,7 @@ npm init
 
 ### Parcel のインストール
 
-次のコマンドを実行して、Parcel をローカルにインストールします。 
+次のコマンドを実行して、Parcel をローカルにインストールします。
 
 ```bash
 npm install parcel-bundler
@@ -172,9 +172,9 @@ npm install parcel-bundler
 
 欠点の 1 つは、Parcel が `parcel-experiment` アプリ内でしか利用できないことです。 別のディレクトリで実行することはできません。 しかし、利点は欠点を上回ります。
 
-### サンプルアプリのセットアップ 
+### サンプルアプリのセットアップ
 
-とにかく、セットアップを続けます。 
+とにかく、セットアップを続けます。
 
 Parcel は `index.html` と `index.js` ファイルが動作することを期待していますが、それ以外の場合、プロジェクトをどのように構築するかについて非常に意見がありません。 他のツールは非常に異なる場合がありますが、少なくとも Parcel は最初の実験を容易にします。
 
@@ -339,7 +339,7 @@ yarn init
 
 上記のように、これにより一連の質問が表示され、プロジェクトを説明するための一連の質問(名前、ライセンス、説明など) が表示されます。 `package.json` プロジェクトとその依存関係に関するメタ情報が含まれています。
 
-### 依存関係のインストール 
+### 依存関係のインストール
 
 ```bash
 npm install date-fns
@@ -453,4 +453,4 @@ Server running at http://localhost:1234
 ## こちらもご覧ください
 
 - [npm スクリプト リファレンス](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
-- [package.json リファレンス ](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
+- [package.json リファレンス](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
