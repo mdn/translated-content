@@ -54,9 +54,13 @@ svg {
 
 Este elemento implementa la interfaz {{ domxref("SVGCircleElement") }}.
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("svg.elements.circle")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Relacionado
 

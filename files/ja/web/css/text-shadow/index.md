@@ -106,7 +106,7 @@ text-shadow: unset;
 
 ### Quantum CSS のメモ
 
-- Gecko には {{cssxref("transition")}} にバグがあり、色が指定された `text-shadow` から色が指定されていない `text-shadow` へのトランジションが動作しません ({{bug(726550)}})。これは Firefox の新しいパラレル CSS エンジン ([Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) とも呼ばれ、 Firefox 57 でリリースされる予定です) で修正されています。
+- Gecko には {{cssxref("transition")}} にバグがあり、色が指定された `text-shadow` から色が指定されていない `text-shadow` へのトランジションが動作しません ([Firefox バグ 726550](https://bugzil.la/726550))。これは Firefox の新しいパラレル CSS エンジン ([Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) とも呼ばれ、 Firefox 57 でリリースされる予定です) で修正されています。
 
 ## 関連情報
 

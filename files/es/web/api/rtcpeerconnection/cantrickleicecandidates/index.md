@@ -58,9 +58,9 @@ pc.addEventListener('icecandidate', e => {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.RTCPeerConnection.canTrickleIceCandidates")}}
+{{Compat}}
 
 ## See also
 

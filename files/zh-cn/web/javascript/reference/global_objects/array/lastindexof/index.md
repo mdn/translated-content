@@ -35,7 +35,7 @@ lastIndexOf(searchElement, fromIndex)
 
 ## 示例
 
-### 例子：使用 lastIndexOf
+### 示例：使用 lastIndexOf
 
 下例使用 `lastIndexOf` 定位数组中的值。
 
@@ -55,7 +55,7 @@ index = array.lastIndexOf(2, -1);
 // index is 3
 ```
 
-### 例子：查找所有元素
+### 示例：查找所有元素
 
 下例使用 `lastIndexOf` 查找到一个元素在数组中所有的索引（下标），并使用 {{jsxref("Array.push", "push")}} 将所有添加到另一个数组中。
 

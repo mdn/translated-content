@@ -42,7 +42,7 @@ while (i > 0 && i < 5);
 console.log(result);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

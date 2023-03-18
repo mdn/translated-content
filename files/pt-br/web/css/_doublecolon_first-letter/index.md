@@ -29,7 +29,7 @@ Somente um pequeno subconjunto de todas as propriedades CSS pode ser usado dentr
 
 Como toda essa lista será estendida no futuro, é recomendado que você não use qualquer propriedade dentro da declaração do bloco, afim de manter o CSS a qualquer prova.
 
-> **Note:** No CSS 2, os pseudoelementos eram prefixados com um caractere de dois pontos (`:`). Como as pseudo-classes também estavam seguindo a mesma convenção, elas eram indistinguíveis. Para resolver isso, o CSS 2.1 mudou a convenção para pseudoelementos. Agora, um pseudoelemento é prefixado com dois caracteres de dois pontos (`::`) e uma pseudo-classe ainda é prefixado com um único dois pontos (`:`).
+> **Nota:** No CSS 2, os pseudoelementos eram prefixados com um caractere de dois pontos (`:`). Como as pseudo-classes também estavam seguindo a mesma convenção, elas eram indistinguíveis. Para resolver isso, o CSS 2.1 mudou a convenção para pseudoelementos. Agora, um pseudoelemento é prefixado com dois caracteres de dois pontos (`::`) e uma pseudo-classe ainda é prefixado com um único dois pontos (`:`).
 >
 > Exemplo de **pseudoclasse**:
 > `.classedoelemento:hover { ... }`
@@ -38,7 +38,7 @@ Como toda essa lista será estendida no futuro, é recomendado que você não us
 >
 > Como vários navegadores já implementaram a versão CSS 2 em uma versão de lançamento, todos os navegadores que suportam a sintaxe de dois pontos também suportam a antiga sintaxe de dois pontos.
 >
-> > **Warning:** Mas isso pode mudar, portanto use SEMPRE `::` para pseudolementos
+> > **Aviso:** Mas isso pode mudar, portanto use SEMPRE `::` para pseudolementos
 > >
 > > ...a não se que você **precise muito** que seu código seja compatível com Internet Explore 8, então use um carectere de dois pontos.
 

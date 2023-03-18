@@ -1,6 +1,6 @@
 ---
 title: Console.dirxml()
-slug: Web/API/Console/dirxml
+slug: Web/API/console/dirxml
 tags:
   - API
   - DOM

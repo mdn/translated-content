@@ -3,7 +3,7 @@ title: Document.execCommand()
 slug: Web/API/Document/execCommand
 ---
 
-{{ApiRef("DOM")}}{{Obsolete_header}}
+{{ApiRef("DOM")}}
 
 Quando um documento HTML está em [`designMode`](/pt-BR/docs/Web/API/Document/designMode), seu objeto `document` expõe um metodo **`execCommand`** para editar a região editável corrente, algo como elementos [form inputs](/pt-BR/docs/Web/HTML/Element/input) ou [`contentEditable`](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable).
 

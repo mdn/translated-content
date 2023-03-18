@@ -29,9 +29,9 @@ browser.downloads.showDefaultFolder();
 
 Aucun
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.showDefaultFolder")}}
+{{Compat}}
 
 ## Exemples
 

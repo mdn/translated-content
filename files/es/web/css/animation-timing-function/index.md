@@ -59,9 +59,9 @@ Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejempl
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-timing-function")}}
+{{Compat}}
 
 ## Consulte también
 

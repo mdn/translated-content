@@ -59,9 +59,9 @@ La clé de `storage` est un objet qui possède les propriétés requises suivant
   </tbody>
 </table>
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.storage", 10)}}
+{{Compat}}
 
 > **Note :**
 >

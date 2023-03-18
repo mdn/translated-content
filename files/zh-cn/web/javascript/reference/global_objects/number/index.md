@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number
 
 **`Number`** 值表示像 `37` 或 `-9.25` 这样的浮点数值。
 
-`Number` 构造函数包含常量和处理数值的方法。其它类型的值可以使用 `Number()` 函数转换为数值。
+`Number` 构造函数包含常量和处理数值的方法。其他类型的值可以使用 `Number()` 函数转换为数值。
 
 ## 描述
 
@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number
 
 在 JavaScript 代码中，像 `37` 这样的数值字面值是一个浮点值，而不是整数。在常见的日常使用中，没有单独的整数类型。（JavaScript 也有 {{jsxref("BigInt")}} 类型，但它不是为取代日常使用的 Number 而设计的。`37` 仍然是一个数值，而不是 BigInt。）
 
-当作为一个函数使用时，`Number(value)` 将转换字符串或者其它值到 Number 类型。如果该值不能被转换，它会返回 {{jsxref("NaN")}}。
+当作为一个函数使用时，`Number(value)` 将转换字符串或者其他值到 Number 类型。如果该值不能被转换，它会返回 {{jsxref("NaN")}}。
 
 ```js
 Number("123"); // returns the number 123

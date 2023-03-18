@@ -27,7 +27,7 @@ slug: Web/API/Fullscreen_API
 ### Element 中的方法
 
 - {{DOMxRef("Element.requestFullscreen()")}}
-  - : 请求浏览器（user agent）将特定元素（甚至延伸到它的后代元素）置为全屏模式，隐去屏幕上的浏览器所有 UI 元素，以及其它应用。返回一个 {{jsxref("Promise")}}，并会在全屏模式被激活的时候变成 resolved 状态。
+  - : 请求浏览器（user agent）将特定元素（甚至延伸到它的后代元素）置为全屏模式，隐去屏幕上的浏览器所有 UI 元素，以及其他应用。返回一个 {{jsxref("Promise")}}，并会在全屏模式被激活的时候变成 resolved 状态。
 
 ## 属性
 

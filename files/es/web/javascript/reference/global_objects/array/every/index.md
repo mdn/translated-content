@@ -153,7 +153,7 @@ if (!Array.prototype.every) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.every")}}
+{{Compat}}
 
 ## Ver también
 

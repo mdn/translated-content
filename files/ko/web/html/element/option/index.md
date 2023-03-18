@@ -75,4 +75,4 @@ slug: Web/HTML/Element/option
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.option")}}
+{{Compat}}

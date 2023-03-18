@@ -77,7 +77,7 @@ Le type de boîte appliqué à un élément est défini par la valeur de la prop
 
 ## Aparté : les positionnements intérieurs et extérieurs
 
-Au point où nous en sommes, il faut aborder la différence entre les propriétés de positionnement **intérieurs** ("_inner dipslay_") et **extérieurs** ("_outer display_"). Comme nous l'avons évoqué, les boîtes en CSS possèdent un type de positionnement _extérieur_ qui détermine si la boîte est "en ligne" ou bien "en bloc".
+Au point où nous en sommes, il faut aborder la différence entre les propriétés de positionnement **intérieurs** ("_inner display_") et **extérieurs** ("_outer display_"). Comme nous l'avons évoqué, les boîtes en CSS possèdent un type de positionnement _extérieur_ qui détermine si la boîte est "en ligne" ou bien "en bloc".
 
 Cependant, les boîtes ont aussi un type de positionnement intérieur, qui décrit le comportement de mise en page des éléments contenus dans la boîte. Par défaut, les éléments contenus dans la boîte sont affichés dans la **[disposition normale](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)**, ce qui signifie qu'ils se comportent exactement comme n'importe quel autre élément "en bloc" ou "en ligne" (comme décrit auparavant).
 

@@ -90,10 +90,6 @@ Si chaque `imageData` et `path` est un objet `undefined`, `null` ou vide :
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments une fois que l'icône a été définie.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setIcon",2)}}
-
 ## Exemples
 
 Le code ci-dessous utilise une action du navigateur pour basculer un auditeur pour {{WebExtAPIRef("webRequest.onHeadersReceived")}}, et utilise `setIcon()` pour indiquer si l'écoute est activée ou désactivée :
@@ -155,6 +151,10 @@ browser.browserAction.onClicked.addListener((tab) => {
   });
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

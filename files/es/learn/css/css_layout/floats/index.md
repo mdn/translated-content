@@ -496,16 +496,3 @@ padding: 1em;
 Ahora ya sabes todo lo que tienes que saber sobre los flotadores en el desarrollo web moderno. Consulta el artículo sobre [métodos de diseño anticuados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) para obtener información de cómo se solían usar, lo que puede serte útil si tienes que trabajar en proyectos antiguos.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
-
-## En este módulo
-
-- [Introduction to CSS layout](/es/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal Flow](/es/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/es/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/es/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/es/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column Layout](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Legacy Layout Methods](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/es/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/es/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

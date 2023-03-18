@@ -44,9 +44,9 @@ Les événements ont trois fonctions :
     - `name`
       - : `string`. Nom de la commande. Cela correspond au nom donné à la commande dans son [entrée manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.commands.onCommand")}}
+{{Compat}}
 
 ## Exemples
 

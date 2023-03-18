@@ -39,7 +39,7 @@ slug: Web/HTML/Element/output
 这个标签具有 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - {{htmlattrdef("for")}}
-  - : 其它影响计算结果的标签的 ID，可以多个。
+  - : 其他影响计算结果的标签的 ID，可以多个。
 - {{htmlattrdef("form")}}
   - : 与当前标签有关联的 form（从属的表单）。该属性的值必须是当前文档内的表单元素的 ID。如果未指明该属性，output 标签必须是一个 form 的后代标签。该属性的用处在于可以让 output 标签脱离 form 标签，存在于一个网页文档的任意位置。
 - {{htmlattrdef("name")}}

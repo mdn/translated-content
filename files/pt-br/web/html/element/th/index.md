@@ -5,7 +5,7 @@ slug: Web/HTML/Element/th
 
 {{HTMLSidebar}}
 
-O **elemento** **HTML `<th>` **define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}.
+O **elemento HTML `<th>`** define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 
@@ -79,7 +79,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 ### Atributos depreciados
 
-- {{htmlattrdef("align")}} {{obsolete_inline("html5")}}
+- {{htmlattrdef("align")}}
 
   - : Este atributo especifica como o alinhamento horizontal do conteúdo da célula será tratado.
 
@@ -97,7 +97,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     >
     > - Para alcançar o mesmo efeito que os valor `char`, atribue a {{cssxref("text-align")}} o mesmo valor que você usaria para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} no CSS3.
 
-- {{htmlattrdef("axis")}} {{obsolete_inline("html5")}}
+- {{htmlattrdef("axis")}}
 
   - : Este atributo contém uma lista de palavras separadas por espaço. Cada palavra é o `id` de um grupo de células às quais este cabeçalho se aplica.
 
@@ -119,25 +119,25 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Note:** Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando [CSS](/pt-BR/docs/Web/CSS). Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS).
 
-- {{htmlattrdef("char")}} {{obsolete_inline("html5")}}
+- {{htmlattrdef("char")}}
 
   - : O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se {{htmlattrxref("align", "th")}} não está definido no `char`, o atributo é ignorado.
 
     > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}, {{unimplemented_inline}} no CSS3.
 
-- {{htmlattrdef("charoff")}} {{obsolete_inline("html5")}}
+- {{htmlattrdef("charoff")}}
 
   - : Este atributo é usado para mudar os dados da coluna para a direita do caractere especificado pelo atributo **char**. Seu valor especifica o comprimento desse deslocamento.
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente.
 
-- {{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("height")}} {{Deprecated_inline}}
 
   - : Esse atributo é usado para definir uma altura recomendada da célula.
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("height")}}.
 
-- {{htmlattrdef("valign")}} {{obsolete_inline("html5")}}
+- {{htmlattrdef("valign")}}
 
   - : Esse atributo especifica como o texto é alinhado verticalmente na célula.
 
@@ -150,7 +150,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.
 
-- {{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("width")}} {{Deprecated_inline}}
 
   - : Este atributo é usado para definir uma largura de célula recomendada. Espaço adicional pode ser adicionado com as propriedades {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} e {{domxref("HTMLTableElement.cellPadding", "cellpadding")}}, e a largura do elemento {{HTMLElement("col")}} pode criar largura extra. Mas, se a largura de uma coluna for muito estreita para mostrar uma célula específica corretamente, ela será ampliada quando exibida.
 

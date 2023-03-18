@@ -74,7 +74,7 @@ f3();
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.await")}}
+{{Compat}}
 
 ## Véase también
 

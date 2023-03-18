@@ -756,7 +756,7 @@ In order to test the models (and to create some example books and other items th
 3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
     ```bash
-    node populatedb <your mongodb url>​​​​
+    node populatedb <your mongodb url>
     ```
 
     > **Nota:** **Note for Windows operating system users**: If the above command results in the error `DeprecationWarning: current URL string parser is deprecated`, change the `mongoose.connect(mongoDB);` line in `populatedb.js` file with `mongoose.connect(mongoDB, { useNewUrlParser:true });`

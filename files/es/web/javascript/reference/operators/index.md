@@ -221,9 +221,9 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators")}}
+{{Compat}}
 
 ## Ve también
 

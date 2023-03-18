@@ -20,11 +20,11 @@ slug: Web/API/ImageData
 - {{domxref("ImageData.width")}} {{readonlyInline}}
   - : unsigned long형식으로 ImageData의 pixel기준의 실제 가로값입니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

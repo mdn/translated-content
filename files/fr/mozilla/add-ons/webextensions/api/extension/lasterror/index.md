@@ -18,9 +18,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/lastError
 
 Un alias de {{WebExtAPIRef("runtime.lastError")}}.
 
-## Compatibilité du navoigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.lastError")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

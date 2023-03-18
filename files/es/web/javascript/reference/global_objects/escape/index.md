@@ -51,7 +51,7 @@ escape('@*_+-./');    // "@*_+-./"
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.escape")}}
+{{Compat}}
 
 ## Ver más
 

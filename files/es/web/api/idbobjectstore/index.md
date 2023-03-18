@@ -119,9 +119,9 @@ objectStoreRequest.onsuccess = function(event) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBObjectStore")}}
+{{Compat}}
 
 ## See also
 

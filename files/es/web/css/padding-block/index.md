@@ -71,9 +71,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-block")}}
+{{Compat}}
 
 ## Mira también
 

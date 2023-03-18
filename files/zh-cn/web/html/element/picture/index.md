@@ -77,7 +77,7 @@ slug: Web/HTML/Element/picture
 `type` 属性允许你为 {{HTMLElement("source")}} 元素的 `srcset` 属性指向的资源指定一个 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。如果用户代理不支持指定的类型，那么这个 {{HTMLElement("source")}} 元素会被跳过。
 
 ```html
-​<picture>
+<picture>
   <source srcset="mdn-logo.svg" type="image/svg+xml">
   <img src="mdn-logo.png" alt="MDN">
 </picture>

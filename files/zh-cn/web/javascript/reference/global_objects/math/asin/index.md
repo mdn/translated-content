@@ -30,7 +30,7 @@ Math.asin(x)
 
 ## 示例
 
-### 例子：使用 `Math.asin()`
+### 示例：使用 `Math.asin()`
 
 ```js
 Math.asin(-2);  // NaN

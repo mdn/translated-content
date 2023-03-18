@@ -110,7 +110,7 @@ let myVariable = "Bob";
 myVariable = "Steve";
 ```
 
-Observe que as variáveis ​​podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Data_structures):
+Observe que as variáveis podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Data_structures):
 
 <table class="standard-table">
   <thead>
@@ -266,7 +266,7 @@ Um `{{Glossary("operator")}}` é um símbolo matemático que produz um resultado
 
 Existem muito mais operadores para explorar, mas isso é o suficiente por enquanto. Consulte [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators) para obter uma lista completa.
 
-> **Nota:** misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis ​​corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
+> **Nota:** misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
 
 ### Condicionais
 

@@ -113,4 +113,4 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.col")}}
+{{Compat}}

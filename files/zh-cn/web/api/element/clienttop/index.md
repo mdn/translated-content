@@ -7,7 +7,7 @@ slug: Web/API/Element/clientTop
 
 一个元素顶部边框的宽度（以像素表示）。不包括顶部外边距或内边距。`clientTop` 是只读的。
 
-基于 [Gecko](/zh-CN/docs/Web/API/en/Gecko) 的应用从 Gecko 1.9（[Firefox 3](/zh-CN/docs/Web/API/en/Firefox_3) {{ Bug(111207) }}）开始支持 clientTop。该属性在 Firefox 2 或更早的版本中不被支持。
+基于 [Gecko](/zh-CN/docs/Web/API/en/Gecko) 的应用从 Gecko 1.9（[Firefox 3](/zh-CN/docs/Web/API/en/Firefox_3) [Firefox bug 111207](https://bugzil.la/111207)）开始支持 clientTop。该属性在 Firefox 2 或更早的版本中不被支持。
 
 ## 语法
 

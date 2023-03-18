@@ -78,4 +78,4 @@ slug: Web/CSS/-moz-float-edge
 
 ## 関連情報
 
-- {{bug(432891)}}
+- [Firefox バグ 432891](https://bugzil.la/432891)

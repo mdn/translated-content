@@ -296,7 +296,7 @@ slug: Learn/Forms/Other_form_controls
 
 ## 测试你的技能！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其它内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：其他控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Other_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：其他控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Other_controls)。
 
 ## 总结
 

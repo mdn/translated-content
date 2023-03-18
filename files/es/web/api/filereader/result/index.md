@@ -51,7 +51,7 @@ function read(callback) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.FileReader.result")}}
+{{Compat}}
 
 ## Ver también
 

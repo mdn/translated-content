@@ -29,4 +29,4 @@ Bien qu'elle ait été inclue [dans l'ancien brouillon de travail de W3C DOM niv
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.returnValue")}}
+{{Compat}}

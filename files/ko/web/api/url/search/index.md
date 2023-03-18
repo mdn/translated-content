@@ -29,11 +29,11 @@ const url = new URL('https://developer.mozilla.org/ko/docs/Web/API/URL/search?q=
 console.log(url.search); // Logs "?q=123"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

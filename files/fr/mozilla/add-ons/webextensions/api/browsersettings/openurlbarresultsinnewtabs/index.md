@@ -21,9 +21,9 @@ Quand l'utilisateur facalise la barre d'adresse et commence à taper, le navigat
 
 Si la valeur est `true`, alors lorsque l'utiliseur sélectionne l'un des éléments, l'élément est ouvert dans un nouvel onglet. Si la valeur est `false` (valeur par défaut) l'élément est ouvert dans l'onglet en cours.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.openUrlbarResultsInNewTabs")}}
+{{Compat}}
 
 ## Exemples
 

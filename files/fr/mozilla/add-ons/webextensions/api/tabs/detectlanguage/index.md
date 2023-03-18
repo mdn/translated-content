@@ -86,9 +86,9 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.detectLanguage")}}
+{{Compat}}
 
 > **Note :**
 >

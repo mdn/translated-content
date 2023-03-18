@@ -251,7 +251,7 @@ Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la c
 
 Si pruebas nuestro ejemplo de estructura más moderna con un lector de pantalla, verás que el marcado de diseño ya no se interpone ni confunde la lectura del contenido. También es mucho más ágil y más pequeño en términos de tamaño de código, lo que significa que el código es más fácil de mantener y menos ancho de banda para que el usuario lo descargue (especialmente para aquellos con conexiones lentas).
 
-Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Elemento#Seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
+Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Elemento#Seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
 
 > **Nota:** Además de tener una buena semántica y un diseño atractivo, tu contenido debería tener sentido lógico en su orden en el código; siempre puedes colocarlo donde desees usando CSS más adelante, pero deberías tener el orden en el código correcto para empezar, para que lo que se lee a los usuarios de lectores de pantalla tenga sentido.
 
@@ -590,13 +590,3 @@ Ha llegado al final de este artículo, pero ¿recuerdas la información más imp
 Ahora ya deberías conocer bien la escritura de HTML accesible para la mayoría de las ocasiones. Nuestro artículo de conceptos básicos de WAI-ARIA también llenará algunos vacíos en este conocimiento, pero este artículo se ha ocupado de los conceptos básicos. A continuación, exploraremos CSS y JavaScript, y cómo la accesibilidad se ve afectada por su buen o mal uso.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/es/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/es/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/es/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)

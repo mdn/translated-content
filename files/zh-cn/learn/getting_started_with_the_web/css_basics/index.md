@@ -190,7 +190,7 @@ body {
 
 - `width: 600px;` —— 强制页面永远保持 600 像素宽。
 - `margin: 0 auto;` —— 为 `margin` 或 `padding` 等属性设置两个值时，第一个值代表元素的上方**和**下方（在这个例子中设置为 `0`），而第二个值代表左边**和**右边（在这里，`auto` 是一个特殊的值，意思是水平方向上左右对称）。你也可以使用一个，三个或四个值，参考 [这里](/zh-CN/docs/Web/CSS/margin#取值) 。
-- `background-color: #FF9500;` —— 如前文所述，指定元素的背景颜色。我们给 body 用了一种略微偏红的橘色以与深蓝色的 {{htmlelement("html")}} 元素形成反差，你也可以尝试其它颜色。
+- `background-color: #FF9500;` —— 如前文所述，指定元素的背景颜色。我们给 body 用了一种略微偏红的橘色以与深蓝色的 {{htmlelement("html")}} 元素形成反差，你也可以尝试其他颜色。
 - `padding: 0 20px 20px 20px;` —— 我们给内边距设置了四个值来让内容四周产生一点空间。这一次我们不设置上方的内边距，设置右边，下方，左边的内边距为 20 像素。值以上、右、下、左的顺序排列。
 - `border: 5px solid black;` —— 直接为 body 设置 5 像素的黑色实线边框。
 
@@ -246,14 +246,3 @@ img {
 本章介绍的 CSS 知识非常有限，更多内容请访问 [CSS 学习页面](/zh-CN/Learn/CSS)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
-
-## 本章目录
-
-- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [设计网站的外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Web 是如何运作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -114,7 +114,7 @@ Nous étudierons ce point plus en détail dans l'article sur [le fonctionnement 
 
 Voici, par exemple, le tableau de compatibilité pour la propriété [`font-family`](/fr/docs/Web/CSS/font-family).
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## Où continuer
 

@@ -51,13 +51,11 @@ console.log(usedOptions.type);   // "conjunction" (la valeur par défaut)
 
 ## Spécifications
 
-| Spécification                                                                                                                                                     | État                    | Commentaires |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.prototype.resolvedOptions()`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.resolvedOptions) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -21,9 +21,9 @@ Données de pixel pour une image. Doit être un objet [`ImageData`](/fr/docs/Web
 
 Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sidebarAction.ImageDataType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 它提供一组消息通信 API，允许你：
 
 - 在附加组件的不同模块间通信。
-- 和其它的附加组件通信。
+- 和其他的附加组件通信。
 - 和 native 应用通信。
 
 ## Types

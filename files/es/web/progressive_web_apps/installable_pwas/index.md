@@ -18,7 +18,7 @@ Para que el sitio web sea instalable, necesitas lo siguiente:
 - Un icono para representar la aplicación en el dispositivo.
 - Un [servicio worker](/es/docs/Web/API/Service_Worker_API) registrado para permitir que la aplicación funcione sin conexión (actualmente, esto solo lo requiere Chrome para Android)
 
-> **Nota:** Actualmente, solo los navegadores basados en Chromium tal como Chrome, Edge y Samsung Internet requieren el servicio _worker_. Si desarrollas tu aplicación con Firefox, ten en cuenta que necesitarás un servicio _worker_ para que sea compatible con los navegadores basados ​​en Chromium.
+> **Nota:** Actualmente, solo los navegadores basados en Chromium tal como Chrome, Edge y Samsung Internet requieren el servicio _worker_. Si desarrollas tu aplicación con Firefox, ten en cuenta que necesitarás un servicio _worker_ para que sea compatible con los navegadores basados en Chromium.
 
 ### El archivo de manifiesto
 

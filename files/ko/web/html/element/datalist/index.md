@@ -94,7 +94,7 @@ slug: Web/HTML/Element/datalist
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.datalist")}}
+{{Compat}}
 
 ## 폴리필
 

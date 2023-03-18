@@ -238,7 +238,7 @@ python3 manage.py test --verbosity 2
 
 ### 运行特定测试
 
-如果要运行测试的子集，可以通过指定包，模块，`TestCase`子类或方法的完整路径 ​​（包含点）来执行此操作：
+如果要运行测试的子集，可以通过指定包，模块，`TestCase`子类或方法的完整路径 （包含点）来执行此操作：
 
 ```bash
 python3 manage.py test catalog.tests   # Run the specified module
@@ -892,21 +892,3 @@ class AuthorCreate(PermissionRequiredMixin, CreateView):
 - [Testing in Django (Part 1) - Best Practices and Examples](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
-
-## 本系列教程
-
-- [Django introduction](/zh-CN/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-CN/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-CN/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-CN/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-CN/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-CN/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-CN/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-CN/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

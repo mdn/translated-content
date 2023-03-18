@@ -119,4 +119,4 @@ table, th, td {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.caption")}}
+{{Compat}}

@@ -101,4 +101,4 @@ slug: Web/HTML/Element/header
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.header")}}
+{{Compat}}

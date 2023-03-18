@@ -1,6 +1,6 @@
 ---
 title: <input type="text">
-slug: Web/HTML/Element/Input/text
+slug: Web/HTML/Element/input/text
 ---
 
 {{HTMLSidebar}}
@@ -48,7 +48,7 @@ let theText = myTextInput.value;
 
 如果当前文本输入没有约束验证（查看[验证](#验证)小节获取更多详细信息），`value` 值可能是空字符串（`""`）。
 
-## 其它属性
+## 其他属性
 
 除了所有 {{HTMLElement("input")}} 元素上共有的可操作的属性外，文本输入框还支持以下属性：
 

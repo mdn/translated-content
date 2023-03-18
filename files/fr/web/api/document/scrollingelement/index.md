@@ -28,6 +28,6 @@ scrollElm.scrollTop = 0;
 
 {{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}

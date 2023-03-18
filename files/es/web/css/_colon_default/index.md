@@ -62,4 +62,4 @@ input:default + label {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.default")}}
+{{Compat}}

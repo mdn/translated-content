@@ -51,7 +51,7 @@ Object.prototype.toString.call(arr); // "[object Array]"
 - [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
 - [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象返回 `"[object Arguments]"`。其它所有内容，包括用户自定义的类，除非有一个自定义的 `Symbol.toStringTag`，否则都将返回 `"[object Object]"`。
+[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象返回 `"[object Arguments]"`。其他所有内容，包括用户自定义的类，除非有一个自定义的 `Symbol.toStringTag`，否则都将返回 `"[object Object]"`。
 
 在 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 {{jsxref("undefined")}} 上调用 `Object.prototype.toString()` 分别返回 `[object Null]` 和 `[object Undefined]`。
 

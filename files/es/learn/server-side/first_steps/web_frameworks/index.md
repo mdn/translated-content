@@ -279,10 +279,3 @@ Este artículo ha mostrado que los frameworks web pueden hacer fácil el desarro
 Para el próximo artículo de este módulo cambiaremos de dirección ligeramente y consideraremos la seguridad web.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## En este modulo
-
-- [Introducción al lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Introducci%C3%B3n)
-- [Visión general Cliente-Servidor](/es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor)
-- [Frameworks web de lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Web_frameworks)
-- [Seguridad de sitios Web](/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web)

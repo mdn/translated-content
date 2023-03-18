@@ -63,6 +63,6 @@ autocomplete="off"
 
 如果你定义了一个用户管理页面，其中用户可以为其他人指定新的密码，因此你想阻止密码字段的自动填充，你可以使用 `autocomplete="new-password"`。
 
-这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 `autocomplete="new-password"` 的 `<input>` 元素上使用自动填充。例如，Firefox 67 版（见 {{bug(1119063)}}）在这种情况下会停止自动填充；而 Firefox 70 版（见 {{bug(1565407)}}）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见 [`autocomplete` 兼容性表格](/zh-CN/docs/Web/HTML/Attributes/autocomplete#浏览器兼容性)。
+这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 `autocomplete="new-password"` 的 `<input>` 元素上使用自动填充。例如，Firefox 67 版（见 [Firefox bug 1119063](https://bugzil.la/1119063)）在这种情况下会停止自动填充；而 Firefox 70 版（见 [Firefox bug 1565407](https://bugzil.la/1565407)）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见 [`autocomplete` 兼容性表格](/zh-CN/docs/Web/HTML/Attributes/autocomplete#浏览器兼容性)。
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}

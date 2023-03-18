@@ -28,9 +28,9 @@ Un `ElementsPanel` représente l'inspecteur HTML/CSS dans la devtools du navigat
 - [`devtools.panels.ElementsPanel.onSelectionChanged`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged)
   - : Appèle lorsque l'utilisateur sélectionne un élément différent dans la page, par exemple en utilisant l'élément de menu contextuel "inspect élément".
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ElementsPanel", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

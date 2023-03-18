@@ -76,7 +76,7 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 - **{{cssxref("display")}}** 属性 — 标准的 value，比如`block`, `inline` 或者 `inline-block` 元素在正常布局流中的表现形式 (见 [Types of CSS boxes](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)). 接着是全新的布局方式，通过设置`display`的值，比如 [CSS Grid](/zh-CN/docs/Learn/CSS/CSS_layout/Grids) 和 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox).
 - **浮动**——应用 **{{cssxref("float")}}** 值，诸如 `left` 能够让块级元素互相并排成一行，而不是一个堆叠在另一个上面。
-- **{{cssxref("position")}}** 属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 `static` ，使用其它值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。
+- **{{cssxref("position")}}** 属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 `static` ，使用其他值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。
 - **表格布局**— 表格的布局方式可以用在非表格内容上，可以使用`display: table`和相关属性在非表元素上使用。
 - **多列布局**— 这个 [Multi-column layout](/zh-CN/docs/Web/CSS/CSS_Columns) 属性 可以让块按列布局，比如报纸的内容就是一列一列排布的。
 

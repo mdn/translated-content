@@ -1,18 +1,18 @@
-# MDN yari-content-ko 팀에 대한 일반 지침
+# MDN yari-content-ko 팀에 대한 일반 안내서
 
-## yari-content-ko 구성원 변경에 대한 일반 지침
+## yari-content-ko 구성원 변경에 대한 일반 안내서
 
 1. 구성원 변경 요청.
 2. [PEERS_GUIDELINES.md](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md) 페이지의 `Korea (ko) content — the @yari-content-ko team, which consists of:` 수정.
 3. [Localizing MDN][] 페이지의 `Active locales/Korea (ko)/Current contributors` 수정.
 
-## 리뷰어 지침
+## 리뷰어 안내서
 
 1. 최대 2주 이내에 모든 pull request를 검토하고 조치한다.
-2. [MDN 번역 콘텐츠에 대한 일반 지침](/docs/ko/README.md#여러-지침-안내)을 숙지한다.
-3. [용어 지침](./glossary-guide.md)을 숙지하여 일관된 용어를 사용한다.
+2. [MDN 번역 콘텐츠에 대한 일반 안내서](/docs/ko/README.md#여러-안내서)를 숙지한다.
+3. [용어 안내서](./glossary-guide.md)을 숙지하여 일관된 용어를 사용한다.
 
-## yari-content-ko 팀 지침
+## yari-content-ko 팀 안내서
 
 1. 1개월 이내에 실행 가능한 모든 문제를 분류하고 수정한다.
 2. MDN의 Tier 1 콘텐츠를 en-US 버전과 동기화된 상태로 유지하는데 매주 조금의 진전을 보인다.

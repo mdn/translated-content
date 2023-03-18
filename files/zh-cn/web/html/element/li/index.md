@@ -97,7 +97,7 @@ slug: Web/HTML/Element/li
 
 ## 另见
 
-- 其它列表相关的 HTML 元素： {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}, 和过时的 {{HTMLElement("dir")}}；
+- 其他列表相关的 HTML 元素： {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}, 和过时的 {{HTMLElement("dir")}}；
 - 可能特定用于排版 `<li>` 元素的 CSS 属性：
 
   - {{cssxref("list-style")}} 属性，用于选择序号的展示方式，

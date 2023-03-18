@@ -41,9 +41,9 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 
 {{Specifications}}
 
-## Compatibilidad en buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toJSON")}}
+{{Compat}}
 
 ## Ver también
 

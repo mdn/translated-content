@@ -110,7 +110,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
-## 例子
+## 示例
 
 不同的方式创建一个 `Int32Array`
 

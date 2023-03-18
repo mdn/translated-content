@@ -133,7 +133,7 @@ slug: Web/MathML/Authoring
 </html>
 ```
 
-对于不熟悉 LaTex 的作者，可以使用其它的输入方法，例如 [ASCIIMath](http://asciimath.org/#syntax) 或 [jqMath](https://mathscribe.com/author/jqmath.html) 语法。请记得加载 JavaScript 库并使用正确的分隔符：
+对于不熟悉 LaTex 的作者，可以使用其他的输入方法，例如 [ASCIIMath](http://asciimath.org/#syntax) 或 [jqMath](https://mathscribe.com/author/jqmath.html) 语法。请记得加载 JavaScript 库并使用正确的分隔符：
 
 ```html
 <!DOCTYPE html>
@@ -261,7 +261,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 ### 所见即所得编辑器
 
-其它的编辑器直接将编辑数学公式的功能集成到其所见即所得界面。以下截图来自 [LyX](https://www.lyx.org/) 和 [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html)，它们都支持导出 HTML：
+其他的编辑器直接将编辑数学公式的功能集成到其所见即所得界面。以下截图来自 [LyX](https://www.lyx.org/) 和 [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html)，它们都支持导出 HTML：
 
 ![Lyx 的示例](lyx.png)
 

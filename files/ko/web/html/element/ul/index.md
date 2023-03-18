@@ -145,7 +145,7 @@ slug: Web/HTML/Element/ul
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ul")}}
+{{Compat}}
 
 ## 같이 보기
 

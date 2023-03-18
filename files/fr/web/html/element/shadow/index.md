@@ -1,6 +1,6 @@
 ---
 title: '<shadow> : l''élément obsolète pour la racine virtuelle'
-slug: Web/HTML/Element/Shadow
+slug: Web/HTML/Element/shadow
 tags:
   - Composant web
   - Déprécié
@@ -115,7 +115,7 @@ Cet élément ne fait plus partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.shadow")}}
+{{Compat}}
 
 ## Voir aussi
 

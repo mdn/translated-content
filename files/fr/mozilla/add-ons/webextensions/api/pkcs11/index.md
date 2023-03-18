@@ -62,6 +62,6 @@ Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, v
 - {{WebExtAPIRef("pkcs11.uninstallModule()")}}
   - : Désinstalle le module PKCS # 11 nommé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}

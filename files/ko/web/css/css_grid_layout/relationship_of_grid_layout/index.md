@@ -1,7 +1,8 @@
 ---
 title: Relationship of grid layout to other layout methods
-slug: Web/CSS/CSS_Grid_Layout/Relationship_of_grid_layout
+slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
+
 CSS 그리드 레이아웃은 레이아웃 작업을 위한 전체 시스템 중의 일부로서, 다른 CSS 기술과 함께 어우러져 작동하도록 설계되었습니다. 이번 가이드에서는 이미 사용하고 계신 다른 기술과 그리드가 어떻게 잘 어울리는지 설명해 드리겠습니다.
 
 ## 그리드와 플랙스박스

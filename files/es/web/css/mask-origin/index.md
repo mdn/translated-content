@@ -43,9 +43,9 @@ div {
 }
 ```
 
-## Compatibilidad con los distintos navegadores.
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-origin")}}
+{{Compat}}
 
 ## Ver además
 

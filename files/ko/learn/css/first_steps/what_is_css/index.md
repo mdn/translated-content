@@ -99,7 +99,7 @@ CSS 가 지정되면 하나 이상의 브라우저가 이를 구현한 경우에
 
 다음은 CSS [`font-family`](/ko/docs/Web/CSS/font-family) 속성에 대한 데이터 차트입니다.
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## 다음은 뭐죠
 

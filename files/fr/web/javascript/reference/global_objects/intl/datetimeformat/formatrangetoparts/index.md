@@ -57,10 +57,8 @@ fmt.formatRangeToParts(date1, date2);
 
 ## Spécifications
 
-| Specification                                                                                                                                        | Status  | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- |
-| [Intl.DateTimeFormat.prototype.formatRange](https://rawgit.com/fabalbon/proposal-intl-DateTimeFormat-formatRange/master/out/#datetimeformat-objects) | Stage 3 |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DateTimeFormat.formatRangeToParts")}}
+{{Compat}}

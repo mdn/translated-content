@@ -44,9 +44,9 @@ En este ejemplo, un bloque `<nav>` es usado para contener una lista no ordenada 
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.nav")}}
+{{Compat}}
 
 ## Ver también
 

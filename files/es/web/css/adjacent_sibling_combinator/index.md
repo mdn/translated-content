@@ -53,9 +53,9 @@ que coincidiría con los siguientes elementos {{HTMLElement("span")}} :
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.adjacent_sibling")}}
+{{Compat}}
 
 ## Ver también
 

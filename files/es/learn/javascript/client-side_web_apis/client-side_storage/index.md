@@ -752,13 +752,3 @@ Eso es todo por ahora. Esperamos que hayas encontrado útil nuestro resumen de l
 - [API del servicio worker](/es/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## En este módulo
-
-- [Introducción a las APIs web](/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulación de documentos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Obtener datos del servidor](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [API de terceros](/es/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dibujar gráficos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [APIs de video y audio](/es/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Almacenamiento de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

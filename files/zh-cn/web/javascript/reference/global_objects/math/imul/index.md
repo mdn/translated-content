@@ -28,7 +28,7 @@ var product = Math.imul(a, b)
 
 `Math.imul()` 可以进行类似 C 语言的 32 位整数相乘。该特性对于一些项目比如 [Emscripten](http://en.wikipedia.org/wiki/Emscripten) 很有用。因为 `imul()` 是 `Math` 的静态方法，所以用法是 `Math.imul()`，而不是新创建的 `Math` 对象的方法 (`Math` 不是构造函数)。如果使用 JavaScript 浮点数做为 `imul` 的参数，会有性能损失。这是因为相乘前 imul 会将浮点数转换为整数，相乘后会将整数重新转换为浮点数，这两步转换的开销是比较大的。imul 存在的原因是在 AsmJS(目前为止唯一一种环境) 下它是快速的。AsmJS 使 JIST-optimizers 更容易实现 JavaScript 内部的整数。现代浏览器中，唯一能体现出 imul 性能优越的场景是两个 Number 内部以整数的形式相乘 (仅在 AsmJS 下可行)。
 
-## 例子
+## 示例
 
 ```js
 Math.imul(2, 4) // 8

@@ -20,7 +20,7 @@ var fechaEnMiliseg = Date.now();
 
 El método `now` devuelve los milisegundos transcurridos desde las 00:00:00 UTC del 1 de enero de 1970 justo hasta ahora como un {{jsxref("Number")}}.
 
-Cuando se usa `now` para crear registros temporales or identificadores únicos, tenga en cuenta que la precisión de Windows puede ser de 15 milisegundos (vea {{Bug(363258)}}), lo que puede provocar valores iguales si `now` se llama múltiples veces en un breve intervalo de tiempo.
+Cuando se usa `now` para crear registros temporales or identificadores únicos, tenga en cuenta que la precisión de Windows puede ser de 15 milisegundos (vea [Error 363258 en Firefox](https://bugzil.la/363258)), lo que puede provocar valores iguales si `now` se llama múltiples veces en un breve intervalo de tiempo.
 
 ## Ejemplos
 

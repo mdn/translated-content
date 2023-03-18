@@ -191,7 +191,7 @@ Antes de prosseguirmos, vejamos um exemplo em ação.
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 700)}}
 
-Então, o que está acontecendo aqui? Em primeiro lugar, estamos interessados ​​apenas nas primeiras sete regras deste exemplo e, como você notará, incluímos seus valores de especificidade em um comentário antes de cada uma.
+Então, o que está acontecendo aqui? Em primeiro lugar, estamos interessados apenas nas primeiras sete regras deste exemplo e, como você notará, incluímos seus valores de especificidade em um comentário antes de cada uma.
 
 - Os dois primeiros seletores estão competindo pelo estilo da cor de fundo do link - o segundo vence e torna a cor de fundo azul porque tem um seletor de ID extra na cadeia: sua especificidade é 201 vs. 101.
 - O terceiro e o quarto seletores estão competindo pelo estilo da cor do texto do link - o segundo vence e torna o texto branco porque embora tenha um seletor de elemento a menos, o seletor ausente é trocado por um seletor de classe, que vale dez, em vez do que um. Portanto, a especificidade vencedora é 113 contra 104.

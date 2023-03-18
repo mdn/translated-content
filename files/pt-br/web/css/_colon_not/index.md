@@ -8,7 +8,7 @@ slug: Web/CSS/:not
 
 A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) de **negação**, `:not(X)`, é uma notação funcional que recebe um seletor simples X como argumento. Ela seleciona um elemento que não é representado por seu argumento. _X_ não pode conter outro seletor de negação.
 
-> **Note:** **Observações:**- Seletores inúteis podem ser escritos usando esta pseudo-classe. Por exemplo, `:not(*)` seleciona qualquer elemento que não é algum elemento, então a regra nunca é aplicada.
+> **Nota:** Seletores inúteis podem ser escritos usando esta pseudo-classe. Por exemplo, `:not(*)` seleciona qualquer elemento que não é algum elemento, então a regra nunca é aplicada.
 >
 > - É possível sobreescrever outras regras. E.g. `foo:not(bar)` vai selecionar os mesmos elementos do que o mais simples foo. No entanto a [especificação](/pt-BR/docs/Web/CSS/Specificity) é maior no exemplo com `:not`.
 > - `:not(foo){} vai selecionar tudo que não for foo`, **incluindo os elementos {{HTMLElement("html")}} e {{HTMLElement("body")}}.**

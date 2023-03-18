@@ -49,7 +49,7 @@ para.firstChild.data = "Thru-hiking is great, but ";
 assert(para.firstChild.wholeText == "Thru-hiking is great!    However, ");
 ```
 
-`wholeText` 只是文本节点的一个属性，特可以返回连接了所有相邻 (i.e. 没有被其它元素边界分开) 文本节点数据的字符串。
+`wholeText` 只是文本节点的一个属性，特可以返回连接了所有相邻 (i.e. 没有被其他元素边界分开) 文本节点数据的字符串。
 
 现在让我们回到最初的问题。我们想做的是用新的文本替代旧的文本。这就是 {{domxref("Text.replaceWholeText", "replaceWholeText()")}} 用处所在：
 

@@ -16,17 +16,9 @@ Por lo tanto, en los últimos años se ha comenzado a pensar en proporcionar mec
 
 La buena noticia es que los navegadores modernos han comenzado a admitir la funcionalidad de los módulos de forma nativa, y de esto se trata este artículo. Esto solo puede ser algo bueno — los navegadores pueden optimizar la carga de módulos, haciéndolo más eficiente que tener que usar una biblioteca y hacer todo ese procesamiento adicional de lado del cliente, ahorrando viajes de ida y vuelta adicionales.
 
-## Soporte del navegador
+## Compatibilidad con navegadores
 
-El uso de módulos JavaScript nativos depende de las declaraciones {{jsxref("Statements/import", "import")}} y {{jsxref("Statements/export", "export")}}; estas son compatibles con los navegadores de la siguiente manera:
-
-### import
-
-{{Compat("javascript.statements.import")}}
-
-### export
-
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Introducción — un ejemplo
 

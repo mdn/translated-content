@@ -754,17 +754,3 @@ Here are a few libraries you should consider before coding your own:
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise. Also, you need to make it feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
 
 {{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
-
-## In this module
-
-- [Your first HTML form](/es/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/es/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/es/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/es/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/es/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/es/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/es/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/es/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

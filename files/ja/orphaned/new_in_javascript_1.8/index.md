@@ -6,7 +6,7 @@ original_slug: New_in_JavaScript_1.8
 
 JavaScript 1.8 は（[Firefox 3](/ja/docs/Mozilla/Firefox/Releases/3) に組み込まれている） Gecko 1.9 の一部分です。これは [JavaScript 1.7](/ja/docs/Web/JavaScript/New_in_JavaScript/1.7) よりは大きな更新ではありませんが、ECMAScript 4/JavaScript 2 の進歩に追随するための更新がいくつか含まれています。このリリースは [JavaScript 1.6](/ja/docs/Web/JavaScript/New_in_JavaScript/1.6) および [JavaScript 1.7](/ja/docs/Web/JavaScript/New_in_JavaScript/1.7) で仕様化された新機能の全てを含んでいます。
 
-JavaScript 1.8 の開発状況を追うためには、{{Bug(380236)}} を参照してください。この文書の地位については {{Bug(421027)}} を参照してください。
+JavaScript 1.8 の開発状況を追うためには、[Firefox バグ 380236](https://bugzil.la/380236) を参照してください。この文書の地位については [Firefox バグ 421027](https://bugzil.la/421027) を参照してください。
 
 ## JavaScript 1.8 の使用
 
@@ -18,7 +18,7 @@ JavaScript 1.8 のいくつかの新機能を HTML で使用するためには�
 
 もう 1 つの（推奨されない）方法として、`<script>` の非推奨の language 属性を使い、"JavaScript1.8" と定義することでもできます。
 
-[JavaScript shell](/ja/docs/Introduction_to_the_JavaScript_shell) や JavaScript XPCOM コンポーネント、XUL の `<script>` 要素を使うときは、JS の最新バージョン（Mozilla 1.9 では JS1.8）が自動的に使われます（{{Bug(381031)}}, {{Bug(385159)}}）。
+[JavaScript shell](/ja/docs/Introduction_to_the_JavaScript_shell) や JavaScript XPCOM コンポーネント、XUL の `<script>` 要素を使うときは、JS の最新バージョン（Mozilla 1.9 では JS1.8）が自動的に使われます（[Firefox バグ 381031](https://bugzil.la/381031), [Firefox バグ 385159](https://bugzil.la/385159)）。
 
 新たなキーワードである "yield" と "let" を使う必要がある機能は、バージョン 1.7 以上を指定しなければなりません。 なぜなら、既存のコードがそれらのキーワードを変数や関数の名前として使っているかもしれないからです。新しいキーワードを導入していない機能（例えばジェネレータ式）は、JavaScript のバージョンを指定することなく使うことができます。
 
@@ -126,4 +126,4 @@ JavaScript 1.8 では、 [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Obje
 
 ## for..in の分配方法の変更
 
-JavaScript 1.8 のリリースで生じた変更に、JavaScript 1.7 で導入された配列のキー/値の組への[分割代入](/ja/docs/Web/JavaScript/New_in_JavaScript/1.7)に関連するバグ修正があります。これまでは for ( var \[key, value] in array ) を使うことで、配列のキー/値の組を分割代入することができました。しかしこのせいで、配列の配列において値を分割代入することが不可能になっていました。現在この問題は解決しています。({{Bug("366941")}})
+JavaScript 1.8 のリリースで生じた変更に、JavaScript 1.7 で導入された配列のキー/値の組への[分割代入](/ja/docs/Web/JavaScript/New_in_JavaScript/1.7)に関連するバグ修正があります。これまでは for ( var \[key, value] in array ) を使うことで、配列のキー/値の組を分割代入することができました。しかしこのせいで、配列の配列において値を分割代入することが不可能になっていました。現在この問題は解決しています。([Firefox バグ 366941](https://bugzil.la/366941))
