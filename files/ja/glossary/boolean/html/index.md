@@ -26,4 +26,4 @@ boolean 属性の注目すべき特徴として、存在していれば `true` �
 
 ## 関連情報
 
-- [Enumerated](/en-US/docs/Glossary/Enumerated)
+- [Enumerated (列挙型)](/ja/docs/Glossary/Enumerated)
