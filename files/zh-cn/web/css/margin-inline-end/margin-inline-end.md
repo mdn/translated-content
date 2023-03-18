@@ -44,7 +44,7 @@ margin-inline-end: unset;
 
 ## 示例
 
-### 设置行尾内边距
+### 设置逻辑行尾外边距
 
 ### HTML
 
@@ -72,7 +72,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("设置行尾内边距", 140, 140)}}
+{{EmbedLiveSample("设置逻辑行尾外边距", 140, 140)}}
 
 ## 规范
 
