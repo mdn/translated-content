@@ -1,6 +1,6 @@
 ---
 title: caret
-slug: Glossary/caret
+slug: Glossary/Caret
 original_slug: Glossario/caret
 ---
 
