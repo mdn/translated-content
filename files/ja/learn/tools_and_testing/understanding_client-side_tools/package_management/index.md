@@ -330,14 +330,14 @@ npm と pnpm は、コマンド ラインの観点からは似ています。実
 
 パッケージ マネージャーで実行する一般的なアクションを確認しましょう。
 
-### Initialise a new project
+### 新しいプロジェクトを初期化する
 
 ```bash
 npm init
 yarn init
 ```
 
-As shown above, this will prompt and walk you through a series of questions to describe your project (name, license, description, and so on) then generate a `package.json` for you that contains meta-information about your project and its dependencies.
+上記のように、これにより一連の質問が表示され、プロジェクトを説明するための一連の質問 (名前、ライセンス、説明など) が表示されます。 `package.json` プロジェクトとその依存関係に関するメタ情報が含まれています。
 
 ### Installing dependencies
 
