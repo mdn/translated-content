@@ -450,7 +450,7 @@ Server running at http://localhost:1234
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-## See also
+## こちらもご覧ください
 
-- [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
-- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
+- [npm スクリプト リファレンス](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
+- [package.json リファレンス ](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
