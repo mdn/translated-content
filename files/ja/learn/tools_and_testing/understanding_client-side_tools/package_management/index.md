@@ -243,21 +243,21 @@ Parcel は、他の誰かがこのプロジェクトを取得し、使用した�
 
 パッケージ名を知っている限り、コードでそれを使用でき、Parcel はパッケージをローカルディレクトリ (`node_modules` の下) に取り出し、フェッチし、インストール (実際には「コピー」) します。
 
-### Building our code for production
+### 本番用のコードの構築
 
-However, this code is not ready for production. Most build tooling systems will have a "development mode" and a "production mode". The important difference is that a lot of the helpful features you will use in development are not needed in the final site, so will be stripped out for production, e.g. "hot module replacement", "live reloading", and "uncompressed and commented source code". Though far from exhaustive, these are some of the common web development features that are very helpful at the development stage but are not very useful in production. In production, they will just bloat your site.
+ただし、このコードは本番用の準備ができていません。 ほとんどのビルド ツール システムには、"開発モード"と"プロダクションモード"があります。 重要な違いは、開発で使用する便利な機能の多くが最終サイトでは必要ないため、本番環境では取り除かれることです。 "ホットモジュールリプレイス"、"ライブリロード"、および"非圧縮でコメント付きのソースコード"。 すべてを網羅しているわけではありませんが、これらは一般的な Web 開発機能の一部であり、開発段階では非常に役立ちますが、本番環境ではあまり役に立ちません。 本番環境では、サイトが肥大化するだけです。
 
-Now stop the previous Parcel command using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+<kbd>Ctrl</kbd> + <kbd>C</kbd> を使用して、前の Parcel コマンドを停止します。
 
-We can now prepare our bare bones example site for an imaginary deployment. Parcel provides an additional command to generate files that are suited to publication, making bundles (mentioned earlier) with the build option.
+これで、架空の展開用に最小限のサンプルサイトを準備できます。 Parcel は、発行に適したファイルを生成する追加のコマンドを提供し、build オプションでバンドル (前述) を作成します。
 
-Run the following command:
+次のコマンドを実行します。
 
 ```bash
 parcel build index.html
 ```
 
-You should see an output like so:
+次のような出力が表示されるはずです。
 
 ```bash
 ✨  Built in 9.35s.
@@ -267,7 +267,7 @@ dist/my-project.fb76efcf.js        195.74 KB    8.43s
 dist/index.html                        288 B    806ms
 ```
 
-Again, the destination for our production files is the `dist` directory.
+繰り返しますが、本番ファイルのディレクトリは、 `dist` です。
 
 ### Reducing your app's file size
 
