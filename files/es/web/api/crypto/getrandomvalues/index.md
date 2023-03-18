@@ -1,41 +1,64 @@
 ---
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-original_slug: Web/API/RandomSource/Obtenervaloresaleatorios
+original_slug: Web/API/Crypto/getRandomValues
+l10n:
+  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
 {{APIRef("Web Crypto API")}}
 
-El método **`Crypto.getRandomValues()`** permite obtener valores aleatorios criptográficamente fuertes. El array que se pasa como parámetro se rellena con números aleatorios (entiéndase aleatorios en el sentido criptográfico).
+El método **`Crypto.getRandomValues()`** permite obtener valores aleatorios criptográficamente fuertes.
+El array dado como parámetro se rellena con números aleatorios (aleatorios en su significado criptográfico).
 
-Con el fin de garantizar un rendimiento razonable, las distintas implementaciones no utilizan un generador de numeros aleatorios puro, sino que utilizan un generador numérico pseudo-aleatorio, sembrado con un valor con suficiente entropía. Los generadores numéricos pseudo-aleatorios utilizados difieren entre {{Glossary("user agent", "user agents")}}, pero son adecuados para usos criptográficos. Se require también que las distintas implementaciones usen una semilla con suficiente entropía, como una fuente de entropía a nivel de sistema.
+Para garantizar un rendimiento suficiente, las implementaciones no utilizan un verdadero generador de números aleatorios, sino un generador de números pseudoaleatorios _sembrado_ con un valor con suficiente entropía.
+El algoritmo del generador de números pseudoaleatorios (PRNG) puede variar entre {{Glossary("user agent", "user agents")}}, pero es adecuado para fines criptográficos.
+
+`getRandomValues()` es el único miembro de la interfaz `Crypto` que puede utilizarse desde un contexto inseguro.
 
 ## Sintaxis
 
-```
-cryptoObj.getRandomValues(typedArray);
+```js-nolint
+getRandomValues(typedArray)
 ```
 
-### Parámetros
+### Parametros
 
-- _typedArray_
-  - : Es un entero {{jsxref("TypedArray")}}, que puede ser un {{jsxref("Int8Array")}}, un {{jsxref("Uint8Array")}}, un {{jsxref("Int16Array")}}, un {{jsxref("Uint16Array")}}, un {{jsxref("Int32Array")}}, o un {{jsxref("Uint32Array")}}. Todos los elementos dentro del array seran sobreescritos con números aleatorios.
+- `typedArray`
+  - : Un entero {{jsxref("TypedArray")}}, que es uno de los siguientes: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
+    {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
+    {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}},
+    {{jsxref("BigUint64Array")}} (pero **no** `Float32Array` ni `Float64Array`).
+    Todos los elementos de la matriz se sobrescribirán con números aleatorios.
+
+### Valor de retorno
+
+El mismo array pasado como `typedArray` pero con su contenido reemplazado por los nuevos números aleatorios generados.
+Tenga en cuenta que `typedArray` se modifica in situ y no se realiza ninguna copia.
 
 ### Excepciones
 
-- Una [QuotaExceededError](/es/docs/Web/API/DOMException#quotaexceedederror) {{domxref("DOMException")}} es lanzada si la longitud solicitada es mayor a 65536 bytes.
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : Se produce si {{jsxref("TypedArray.byteLength", "byteLength")}} de `typedArray` supera 65,536.
 
-## Ejemplo
+## Notas de uso
+
+No utilice `getRandomValues()` para generar claves de cifrado.
+En su lugar, utilice el método {{domxref("SubtleCrypto.generateKey", "generateKey()")}}.
+Hay algunas razones para ello; por ejemplo, no se garantiza que `getRandomValues()` se ejecute en un contexto seguro.
+
+No existe un grado mínimo de entropía exigido por la especificación Web Cryptography.
+En su lugar, se insta a los User Agents a que proporcionen la mejor entropía que puedan al generar números aleatorios, utilizando un generador de números pseudoaleatorios bien definido y eficiente integrado en el propio User Agent, pero sembrado con valores tomados de una fuente externa de números pseudoaleatorios, como una función de números aleatorios específica de la plataforma, el dispositivo `/dev/urandom` de Unix u otra fuente de datos aleatorios o pseudoaleatorios.
+
+## Ejemplos
 
 ```js
-/* Asumiendo que window.crypto.getRandomValues está disponible */
+const array = new Uint32Array(10);
+self.crypto.getRandomValues(array);
 
-var array = new Uint32Array(10);
-window.crypto.getRandomValues(array);
-
-console.log("Tus numeros de la suerte:");
-for (var i = 0; i < array.length; i++) {
-    console.log(array[i]);
+console.log("Sus números de la suerte:");
+for (const num of array) {
+  console.log(num);
 }
 ```
 
@@ -47,7 +70,8 @@ for (var i = 0; i < array.length; i++) {
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
-- {{ domxref("Window.crypto") }} para obtener un objeto tipo {{domxref("Crypto")}}.
+- [API Web Crypto](/en-US/docs/Web/API/Web_Crypto_API)
+- {{domxref("crypto_property", "crypto")}} para obtener un objeto {{domxref("Crypto")}}.
 - {{jsxref("Math.random")}}, una fuente no criptográfica de números aleatorios.
