@@ -269,31 +269,31 @@ dist/index.html                        288 B    806ms
 
 繰り返しますが、本番ファイルのディレクトリは、 `dist` です。
 
-### Reducing your app's file size
+### アプリのファイルサイズを縮小する
 
-However, as with all tools that "help" developers there's often a tradeoff. In this particular case, it's the file size. The JavaScript bundle my-project.fb76efcf.js is a whopping 195K — very large, given that all it does is print a line of text. Sure, there's some calculation, but we definitely don't need 195K worth of JavaScript to do this!
+ただし、開発者を「助ける」すべてのツールと同様に多くの場合、トレードオフがあります。 この特定のケースでは、それはファイルサイズです。 JavaScript バンドル my-project.fb76efcf.js はなんと 195K にもなり、1 行のテキストを出力するだけなので非常に大きいです。 確かに計算はありますが、これを行うために 195K 相当の JavaScript は絶対に必要ありません!
 
-When you use development tooling it's worth questioning whether they're doing the right thing for you. In this case, the bundle is nearly 200K because it has in fact included the entire `date-fns` library, not just the function we're using.
+開発ツールを使用するときは、それが正しいことを行っているかどうかを検討する価値があります。 この場合、使用している関数だけでなく、実際には `date-fns` ライブラリ全体が含まれているため、バンドルはほぼ 200K になります。
 
-If we had avoided any development tools and pointed a `<script src="">` element to a hosted version of `date-fns`, roughly the same thing would have happened — all of the library would be downloaded when our example page is loaded in a browser.
+開発ツールを一切使用せず、 `<script src="">` 要素を `date-fns` のホストされたバージョンに向けていた場合、ほぼ同じことが起こっていたでしょう — サンプルページのときにすべてのライブラリがダウンロードされます。ブラウザに読み込まれます。
 
-However, this is where development tooling has a chance to shine. Whilst the tooling is on our machine, we can ask the software to inspect our use of the code and only include the functions that we're actually using in production — a process known as "Tree Shaking".
+ただし、ここで開発ツールが活躍する可能性があります。 ツールがマシン上にある間、ソフトウェアにコードの使用を検査し、本番環境で実際に使用している関数のみを含めるように依頼できます。これは"ツリーシェーキング"と呼ばれるプロセスです。
 
-This makes a lot of sense as we want to reduce file size and thus make our app load as quickly as possible. Different tooling will let you tree shake in different ways.
+これは、ファイルサイズを小さくしてアプリの読み込みをできるだけ速くしたいため、非常に理にかなっています。 さまざまなツールを使用すると、さまざまな方法でツリーを振ることができます。
 
-Although the list grows by the month, there are three main offerings for tools that generate bundles from our source code: Webpack, [Rollup](https://rollupjs.org/guide/en/), and Parcel. There will be more available than this, but these are popular ones:
+リストは月ごとに増えていきますが、ソース コードからバンドルを生成するツールには、Webpack、[Rollup](https://rollupjs.org/guide/en/)、および Parcel の 3 つの主なオファリングがあります。 これ以外にも利用できるようになりますが、これらは人気のあるものです。
 
-- The RollUp tool offers tree shaking and code splitting as its core features.
-- Webpack requires some configuration (though "some" might be understating the complexity of some developers' Webpack configurations).
-- In the case of Parcel (prior to Parcel version 2), there's a special flag required — `--experimental-scope-hoisting` — which will tree shake while building.
+- RollUp ツールは、そのコア機能としてツリー シェイキングとコード分割を提供します。
+- Webpack にはいくつかの構成が必要です (「一部」という表現は、一部の開発者の Webpack 構成の複雑さを過小評価している可能性があります)。
+- (Parcel version 2 より前の) Parcel の場合、特別なフラグが必要です — `--experimental-scope-hoisting` — ビルド中にツリーシェークが発生します。
 
-Let's stick with Parcel for now, given that we've already got it installed. Try running the following command:
+すでにインストールされていることを考えると、今のところ Parcel に固執しましょう。 次のコマンドを実行してみてください。
 
 ```bash
 parcel build index.html --experimental-scope-hoisting
 ```
 
-You'll see that this makes a huge difference:
+これにより大きな違いが生じることがわかります。
 
 ```bash
 ✨  Built in 7.87s.
@@ -302,13 +302,13 @@ dist/my-project.86f8a5fc.js    10.34 KB    7.17s
 dist/index.html                   288 B    753ms
 ```
 
-Now the bundle is approximately 10K. Much better.
+現在バンドルは約 10K です。かなり良くなりました。
 
-If we were to release this project to a server, we would only release the files in the `dist` folder. Parcel has automatically handled all the filename changes for us. We recommend having a look at the source code in `dist/index.html` just so you can see what changes Parcel has performed automatically.
+このプロジェクトをサーバーにリリースする場合、`dist` フォルダー内のファイルのみをリリースします。 Parcel は、すべてのファイル名の変更を自動的に処理してくれました。 Parcel が自動的に実行した変更を確認できるように、 `dist/index.html` のソース コードを確認することをお勧めします。
 
-> **Note:** At the time of writing, Parcel 2 had not been released. However when it does, these commands will all still work because the authors of Parcel have had the good sense to name the tool slightly differently. To install Parcel 1.x you have to install `parcel-bundler`, but parcel 2.x is called `parcel`.
+> **メモ:** 執筆時点では、Parcel 2 はリリースされていませんでした。 ただし、Parcel の作成者はツールに少し異なる名前を付けることに良識があったため、これらのコマンドはすべて引き続き機能します。 Parcel 1.x をインストールするには、 `parcel-bundler` をインストールする必要がありますが、parcel 2.x は `parcel` をインストールします。
 
-There's a lot of tools available and the JavaScript package ecosystem is growing at an unprecedented rate, which has pros and cons. There's improvements being made all the time and the choice, for better or worse, is constantly increasing. Faced with the overwhelming choice of tooling, probably the most important lesson is to learn what the tool you select is capable of.
+利用可能なツールはたくさんあり、JavaScript パッケージのエコシステムは前例のない速度で成長していますが、これには長所と短所があります。 常に改善が行われており、良くも悪くも選択肢が増え続けています。 圧倒的なツールの選択に直面した場合、おそらく最も重要な教訓は、選択したツールで何ができるかを学ぶことです。
 
 ## A rough guide to package manager clients
 
