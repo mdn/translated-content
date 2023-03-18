@@ -1,16 +1,16 @@
 ---
-title: Boolean attribute (HTML)
+title: Boolean 属性 (HTML)
 slug: Glossary/Boolean/HTML
 page-type: glossary-definition
 l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
-A **boolean attribute** in HTML is an attribute that can be either `true` or `false`.
+HTML における **boolean 属性** (boolean attribute) とは、`true`（真） か `false`（偽）のどちらか一方の値をとる属性です。
 
-It is worth noticing that a boolean attribute is `true` when it is present, and `false` when it is absent.
+boolean 属性の注目すべき特徴として、存在していれば `true` をとり、存在していなければ `false` をとる、という点があります。
 
-Here's an example of a HTML boolean attribute `checked`:
+こちらは HTML の boolean 属性 `checked` の例です:
 
 ```html
 <!-- The following checkboxes will be checked on initial rendering -->
@@ -24,6 +24,6 @@ Here's an example of a HTML boolean attribute `checked`:
 <input type="checkbox" />
 ```
 
-## See also
+## 関連情報
 
 - [Enumerated](/en-US/docs/Glossary/Enumerated)
