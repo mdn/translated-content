@@ -26,17 +26,17 @@ l10n:
   </tbody>
 </table>
 
-## A dependency in your project
+## プロジェクトの依存関係
 
-A **dependency** is a third-party bit of software that was probably written by someone else and ideally solves a single problem for you. A web project can have any number of dependencies, ranging from none to many, and your dependencies might include sub-dependencies that you didn't explicitly install — your dependencies may have their own dependencies.
+**依存関係**とは、サードパーティ製のソフトウェアであり、おそらく他の誰かによって作成されたものであり、理想的には 1 つの問題を解決してくれます。 Web プロジェクトには、0 から多数の範囲で任意の数の依存関係を含めることができます。また依存関係には、明示的にインストールしていないサブ依存関係が含まれる場合があります。依存関係には、独自の依存関係がある場合があります。
 
-A simple example of a useful dependency that your project might need is some code to calculate relative dates as human-readable text. You could certainly code this yourself, but there's a strong chance that someone else has already solved this problem — why waste time reinventing the wheel? Moreover, a reliable third-party dependency will likely have been tested in a lot of different situations, making it more robust and cross-browser compatible than your own solution.
+プロジェクトで必要になる可能性のある便利な依存関係の簡単な例は、相対日付を人間が判読できるテキストとして計算するコードです。 もちろん自分でコーディングすることもできますが、他の誰かがすでにこの問題を解決している可能性が高いです。 さらに、信頼できるサードパーティの依存関係は、さまざまな状況でテストされている可能性が高く、独自のソリューションよりも堅牢でクロスブラウザー互換性があります.
 
-A project dependency can be an entire JavaScript library or framework — such as React or Vue — or a very small utility like our human-readable date library, or it can be a command line tool such as Prettier or ESLint, which we talked about in previous articles.
+プロジェクトの依存関係は、React や Vue などの JavaScript ライブラリまたはフレームワーク全体、または人間が読める日付ライブラリのような非常に小さなユーティリティ、または以前の記事で説明した Prettier や ESLint などのコマンドラインツールである可能性があります。
 
-Without modern build tools, dependencies like this might be included in your project using a simple [`<script>`](/en-US/docs/Web/HTML/Element/script) element, but this might not work right out of the box and you will likely need some modern tooling to bundle your code and dependencies together when they are released on the web. A bundle is a term that's generally used to refer to a single file on your web server that contains all the JavaScript for your software — typically compressed as much as possible to help reduce the time it takes to get your software downloaded and displayed in your visitors' browser.
+最新のビルド ツールがなければ、単純な [`<script>`](/en-US/docs/Web/HTML/Element/script) 要素を使用して、このような依存関係をプロジェクトに含めることができますが、これはすぐには機能しない可能性があります。 また、コードと依存関係が Web 上にリリースされるときに、コードと依存関係を一緒にバンドルするための最新のツールが必要になる可能性があります。 バンドルとは、通常、ソフトウェアのすべての JavaScript を含む Web サーバー上の単一のファイルを指すために使用される用語です。通常、ソフトウェアをダウンロードしてブラウザの訪問者に表示にかかる時間を短縮するために、可能な限り圧縮されています。
 
-In addition, what happens if you find a better tool that you want to use instead of the current one, or a new version of your dependency is released that you want to update to? This is not too painful for a couple of dependencies, but in larger projects with many dependencies, this kind of thing can become really challenging to keep track of. It makes more sense to use a **package manager** such as npm, as this will guarantee that the code is added and removed cleanly, as well as a host of other advantages.
+さらに、現在のツールの代わりに使用したいより良いツールを見つけた場合、または更新したい依存関係の新しいバージョンがリリースされた場合はどうなりますか? これは、いくつかの依存関係についてはそれほど苦痛ではありませんが、多くの依存関係がある大規模なプロジェクトでは、この種のことを追跡するのが非常に困難になる可能性があります。 npm などの **パッケージ マネージャー** を使用する方が理にかなっています。これにより、コードがクリーンに追加および削除され、他の多くの利点が得られることが保証されます。
 
 ## What exactly is a package manager?
 
