@@ -2,6 +2,8 @@
 title: Boolean attribute (HTML)
 slug: Glossary/Boolean/HTML
 page-type: glossary-definition
+l10n:
+  sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
 A **boolean attribute** in HTML is an attribute that can be either `true` or `false`.
