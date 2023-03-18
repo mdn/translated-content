@@ -46,7 +46,7 @@ margin-inline-end: unset;
 
 ### 设置逻辑行尾外边距
 
-### HTML
+#### HTML
 
 ```html
 <div>
@@ -54,7 +54,7 @@ margin-inline-end: unset;
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -70,7 +70,7 @@ div {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample("设置逻辑行尾外边距", 140, 140)}}
 
