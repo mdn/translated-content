@@ -444,9 +444,9 @@ Server running at http://localhost:1234
 
 仕事をするのに役立つあらゆる種類のものを `scripts` プロパティに追加できます。 私たちは確かに持っていますし、[他も持っています](https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6)。
 
-## Summary
+## まとめ
 
-This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learnt so far into practice.
+これで、パッケージマネージャーのツアーは終了です。 次のステップは、これまでに学んだことをすべて実践して、ツールチェーンのサンプルを構築することです。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
