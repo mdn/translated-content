@@ -63,13 +63,13 @@ npm (と JavaScript と Node ベースのパッケージマネージャー) の�
 
 > **メモ:** 利用可能なパッケージマネージャーは npm だけではありません。 成功し、人気のある代替パッケージマネージャーは [Yarn](https://yarnpkg.com/) です。 Yarn は別のアルゴリズムを使用して依存関係を解決します。これは、より高速なユーザー エクスペリエンスを意味します。 [pnpm](https://pnpm.js.org/) など、他の多くの新しいクライアントもあります。
 
-## Package registries
+## パッケージレジストリ
 
-For a package manager to work, it needs to know where to install packages from, and this comes in the form of a package registry. The registry is a central place where a package is published and thus can be installed from. npm, as well as being a package manager, is also the name of the most commonly-used package registry for JavaScript packages. The npm registry exists at [npmjs.com](https://www.npmjs.com/).
+パッケージマネージャーが機能するには、どこからパッケージをインストールするかを知る必要があり、これはパッケージレジストリの形式で提供されます。 レジストリは、パッケージが公開され、そこからインストールできる中心的な場所です。 npm は、パッケージマネージャーであるだけでなく、JavaScript パッケージで最も一般的に使用されるパッケージ レジストリの名前でもあります。 npm レジストリは [npmjs.com](https://www.npmjs.com/) にあります。
 
-npm is not the only option. You could manage your own package registry — products like [Microsoft Azure](https://azure.microsoft.com/) allow you to create proxies to the npm registry (so you can override or lock certain packages), [GitHub also offers a package registry service](https://github.com/features/packages), and there will be likely more options appearing as time goes on.
+npm だけが選択肢ではありません。 独自のパッケージ レジストリを管理できます。[Microsoft Azure](https://azure.microsoft.com/) などの製品を使用すると、npm レジストリへのプロキシを作成できます (特定のパッケージをオーバーライドまたはロックできます)。[GitHub もパッケージレジストリサービス提供しています。](https://github.com/features/packages) であり、時間が経つにつれてより多くのオプションが表示される可能性があります。
 
-What is important is that you ensure you've chosen the best registry for you. Many projects will use npm, and we'll stick to this in our examples throughout the rest of the module.
+重要なのは、自分に最適なレジストリを選択したことを確認することです。 多くのプロジェクトで npm が使用されるため、モジュールの残りの例ではこれに関係します。
 
 ## Using the package ecosystem
 
