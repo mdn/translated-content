@@ -9,19 +9,30 @@ slug: Web/API/Element/scrollTo
 
 ## 语法
 
-```plain
-element.scrollTo(x-coord, y-coord)
-element.scrollTo(options)
+```js-nolint
+scrollTo(x-coord, y-coord)
+scrollTo(options)
 ```
 
 ### 参数
 
-- `x-coord` 是期望滚动到位置水平轴上距元素左上角的像素。
-- `y-coord` 是期望滚动到位置竖直轴上距元素左上角的像素。
+- `x-coord` 是你想要显示在左上角的元素沿水平轴的像素。
+- `y-coord` 是你想要显示在左上角的元素沿垂直轴的像素。
 
-\- or -
+\- 或者 -
 
-- `options` 是一个{{domxref("ScrollToOptions")}}对象。
+- `options`
+  - : 包含以下参数的字典：
+    - `top`
+      - : 指定沿Y轴滚动窗口或元素的像素数。
+    - `left`
+      - : 指定沿X轴滚动窗口或元素的像素数。
+    - `behavior`
+      - : 指定滚动是否应平稳地动画显示（`smooth`）、在单个跳跃中瞬间完成（`instant`），或由浏览器自行决定（`auto`，默认）。
+
+### 返回值
+
+无 ({{jsxref("undefined")}})。
 
 ## 例子
 
@@ -47,7 +58,7 @@ element.scrollTo({
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}
 - {{domxref("Window.scrollTo()")}}
