@@ -339,16 +339,16 @@ yarn init
 
 上記のように、これにより一連の質問が表示され、プロジェクトを説明するための一連の質問 (名前、ライセンス、説明など) が表示されます。 `package.json` プロジェクトとその依存関係に関するメタ情報が含まれています。
 
-### Installing dependencies
+### 依存関係のインストール 
 
 ```bash
 npm install date-fns
 yarn add date-fns
 ```
 
-We also saw `install` in action above. This would directly add the `date-fns` package to the working directory in a subdirectory called `node_modules`, along with `date-fns`'s own dependencies.
+上記の動作で `install` も見ました。 これにより、 `date-fns` パッケージが、 `date-fns` 自体の依存関係とともに、 `node_modules` と呼ばれるサブディレクトリ内の作業ディレクトリに直接追加されます。
 
-By default, this command will install the latest version of `date-fns`, but you can control this too. You can ask for `date-fns@1`, which gives you the latest 1.x version (which is 1.30.1). Or you could try `date-fns@^2.3.0`, which means the latest version after or including 2.3.0 (2.8.1 at the time of writing).
+デフォルトでは、このコマンドは「date-fns」の最新バージョンをインストールしますが、これも制御できます。 `date-fns@1` を要求すると、最新の 1.x バージョン (1.30.1) が得られます。 または、`date-fns@^2.3.0` を試すこともできます。これは、2.3.0 以降 (執筆時点では 2.8.1) の最新バージョンを意味します。
 
 ### Updating dependencies
 
