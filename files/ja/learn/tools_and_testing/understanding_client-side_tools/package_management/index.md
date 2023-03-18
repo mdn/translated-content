@@ -193,7 +193,7 @@ Parcel は `index.html` と `index.js` ファイルが動作することを期�
 </html>
 ```
 
-Next, we need to add an `index.js` file in the same directory as `index.html`. For now, `index.js` can be empty; it just needs to exist. Create this now.
+次に、 `index.html` と同じディレクトリに `index.js` ファイルを追加する必要があります。 今のところ、 `index.js` は空で構いません。 存在する必要があるだけです。 これを今すぐ作成します。
 
 ### Having fun with Parcel
 
