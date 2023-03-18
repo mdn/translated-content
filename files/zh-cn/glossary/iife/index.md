@@ -19,7 +19,7 @@ slug: Glossary/IIFE
 })();
 ```
 
-它是一种设计模式，也被称为 {{glossary("Self-Executing Anonymous Function", "自执行匿名函数")}}，主要包含两部分：
+它是一种设计模式，也被称为{{glossary("Self-Executing Anonymous Function", "自执行匿名函数")}}，主要包含两部分：
 
 1. 第一部分是一个具有词法作用域的匿名函数，并且用{{jsxref("Operators/Grouping", "圆括号运算符", "", 1)}} `()` 运算符闭合起来。这样不但阻止了外界访问 IIFE 中的变量，而且不会污染全局作用域。
 
@@ -138,7 +138,7 @@ for (let i = 0; i < 2; i++) {
 console.log(i); // Uncaught ReferenceError: i is not defined.
 ```
 
-当我们点击按钮时，会 alert 0 和 1
+当我们点击按钮时，会 alert 0 和 1。
 
 ## 参见
 
