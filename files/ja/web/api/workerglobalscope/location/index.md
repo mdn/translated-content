@@ -2,7 +2,7 @@
 title: WorkerGlobalScope.location
 slug: Web/API/WorkerGlobalScope/location
 l10n:
-  sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
+  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
 {{APIRef("Web Workers API")}}
