@@ -18,7 +18,7 @@ new Number(value)
 - `value`
   - : 创建的 `Number` 对象的数值。
 
-## 例子
+## 示例
 
 ### 创建 Number 对象
 

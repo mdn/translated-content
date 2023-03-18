@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 **`AsyncFunction`** 对象为[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)提供方法。在 JavaScript 中，每个异步函数实际上都是一个 `AsyncFunction` 对象。
 
-注意，`AsyncFunction` *不是*一个全局对象。它可以通过以下代码获取：
+注意，`AsyncFunction` *不是*全局对象。它可以通过以下代码获取：
 
 ```js
 const AsyncFunction = async function () {}.constructor;

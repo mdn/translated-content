@@ -13,7 +13,7 @@ slug: Web/API/Service_Worker_API/Using_Service_Workers
 
 以前の取り組み、 _AppCache_ は、キャッシュする資産をとても簡単に指定することができたため、良いアイディアに見えました。しかしながら、 利用において数多くの取り決めがあり、アプリケーションが完全に取り決めに従わない場合は壊れてしまいました。さらに詳しいことは Jake Archibald の [Application Cache is a Douchebag](http://alistapart.com/article/application-cache-is-a-douchebag) にをお読みください。
 
-> **メモ:** Firefox 84 以降では、 AppCache は取り除かれました（{{bug("1619673")}}）。 Chromium 90 でも削除が計画されており、 Safari でも非推奨になっています。
+> **メモ:** Firefox 84 以降では、 AppCache は取り除かれました（[Firefox バグ 1619673](https://bugzil.la/1619673)）。 Chromium 90 でも削除が計画されており、 Safari でも非推奨になっています。
 
 サービスワーカーは最終的にこれらの問題を解決するでしょう。サービスワーカーの構文は AppCache の構文と比べて複雑です。しかし、代わりに JavaScript を使用して AppCache で動作させていたような振る舞いをより細かく制御し、この問題やその他の多くのことを扱うことができるようになります。サービスワーカーを使用することで、アプリケーションがはじめにキャッシュされた資産を使用するよう簡単に設定することができます。そのため、一度ネットワークからデータを取得しておけば、オフラインでも既定の機能を提供できます（[オフラインファースト](http://offlinefirst.org/)として一般的に知られています）。このようなオフラインの機能はネイティブアプリでは既に使用可能であり、ネイティブアプリがウェブアプリを差し置いて選ばれる理由の一つです。
 
@@ -504,14 +504,14 @@ Firefox もサービスワーカーに関する便利なツールを実装し始
 
 - [`about:debugging`](/ja/docs/Tools/about:debugging) を開くと、サービスワーカーで何が登録されているかを見たり、更新/削除したりすることができます。
 - テストを行う場合、 [Firefox 開発者ツール設定](/ja/docs/Tools/Settings)で、"HTTP による Service Worker を有効化 (ツールボックスを開いたとき)" をチェックすることで、 HTTPS 制約を回避できます。
-- Firefox のカスタマイズオプションで利用できる "Forget" ボタンで、サービスワーカーおよびそのキャッシュを消去することができます ({{bug(1252998)}})。
+- Firefox のカスタマイズオプションで利用できる "Forget" ボタンで、サービスワーカーおよびそのキャッシュを消去することができます ([Firefox バグ 1252998](https://bugzil.la/1252998))。
 
 > **メモ:** ローカルでの開発のために、 `http://localhost` から（例えば `me@localhost:/my/app$ python -m SimpleHTTPServer` を使用して）アプリのサービスを行うことができます。[セキュリティの考慮事項](https://www.w3.org/TR/service-workers/#security-considerations)を参照してください。
 
 ## 関連情報
 
 - [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/) (英語)
-- [The Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) (英語)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) (英語)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
 - [Service Workers 101 cheatsheet](sw101.png) をダウンロード (英語)
 - [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)

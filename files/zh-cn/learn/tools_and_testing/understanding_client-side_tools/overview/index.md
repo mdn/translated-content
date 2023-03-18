@@ -1,5 +1,5 @@
 ---
-title: Client-side tooling overview
+title: 客户端工具概述
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 ---
 
@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">预备条件：</th>
       <td>熟悉核心 HTML，CSS 和 JavaScript 语言。</td>
     </tr>
     <tr>
