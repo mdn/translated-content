@@ -387,9 +387,9 @@ yarn why date-fns
 
 パッケージマネージャーはパッケージの重複を排除するために最善を尽くしますが、インストールされているバージョンを正確に調査することをお勧めします。
 
-### More commands
+### その他のコマンド
 
-You can find out more about the individual commands for [npm](https://docs.npmjs.com/cli-documentation/) and [yarn](https://classic.yarnpkg.com/en/docs/cli/) online. Again, [pnpm](https://pnpm.js.org/en/cli/add) commands will have parity with npm, with a handful of additions.
+[npm](https://docs.npmjs.com/cli-documentation/) および [yarn](https://classic.yarnpkg.com/en/docs/cli/) の個々のコマンドの詳細をオンラインで確認できます。 繰り返しますが、[pnpm](https://pnpm.js.org/en/cli/add) コマンドは npm と同等であり、いくつかの追加があります。
 
 ## 独自のコマンドを作成する
 
