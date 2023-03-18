@@ -195,28 +195,28 @@ Parcel は `index.html` と `index.js` ファイルが動作することを期�
 
 次に、 `index.html` と同じディレクトリに `index.js` ファイルを追加する必要があります。 今のところ、 `index.js` は空で構いません。 存在する必要があるだけです。 これを今すぐ作成します。
 
-### Having fun with Parcel
+### Parcel を楽しむ
 
-Now we'll run our newly installed Parcel tool. In your terminal, run the following command:
+次に、新しくインストールした Parcel ツールを実行します。 ターミナルで、次のコマンドを実行します。
 
 ```bash
  parcel index.html
 ```
 
-You should see something like this printed in your terminal:
+ターミナルに次のような出力が表示されるはずです。
 
 ```bash
 Server running at http://localhost:1234
 ✨  Built in 193ms.
 ```
 
-> **Note:** If you have trouble with the terminal returning a "command not found" type error, try running the above command with the `npx` utility, i.e. `npx parcel index.html`.
+> **メモ:** "command not found" エラーをターミナルに返す場合は、上記のコマンドを `npx` ユーティリティ、つまり `npx parcel index.html`で実行してみてください。
 
-Now we're ready to benefit from the full JavaScript package ecosystem. For a start, there is now a local web server running at `http://localhost:1234`. Go there now and you'll not see anything for now, but what is cool is that when you do make changes to your app, Parcel will rebuild it and refresh the server automatically so you can instantly see the effect your update had.
+これで、完全な JavaScript パッケージ エコシステムを活用する準備が整いました。 まず、 `http://localhost:1234` で実行されているローカル Web サーバーがあります。 ここにアクセスすると、今のところ何も表示されませんが、すばらしいのは、アプリに変更を加えると、Parcel がアプリを再構築してサーバーを自動的に更新するため、更新の効果をすぐに確認できることです。
 
-Now for some page content. Let's say we want to show human-readable relative dates, such as "2 hours ago", "4 days ago" and so on. The [`date-fns`](https://date-fns.org/) package's `formatDistanceToNow()` method is useful for this (there's other packages that do the same thing too).
+次に、いくつかのページ コンテンツについて説明します。 「2時間前」、「4日前」など、人間が読める相対的な日付を表示したいとしましょう。 [`date-fns`](https://date-fns.org/) パッケージの `formatDistanceToNow()` メソッドは役立ちます (同じことを行う他のパッケージもあります)。
 
-In the `index.js` file, add the following code and save it:
+`index.js` ファイルに次のコードを追加して保存します。
 
 ```js
 import { formatDistanceToNow } from "date-fns";
@@ -225,9 +225,9 @@ const date = "1996-09-13 10:00:00";
 document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
 ```
 
-Go back to `http://localhost:1234` and you'll see how long ago it is since the author turned 18.
+`http://localhost:1234` に戻ると、作者が 18 歳になってからどれくらい経ったかがわかります。
 
-What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field have been updated for us:
+上記のコードで特に特別なのは、インストールしていない `date-fns` パッケージの `formatDistanceToNow()` 関数を使用していることです! Parcel は、モジュールが必要であることを発見し、 `npmjs.com` パッケージ レジストリで検索して、自動的にローカルにインストールしました。 これは、 `package.json` ファイルをもう一度見ることで証明できます — `dependencies` フィールドが更新されていることがわかります。
 
 ```json
 "dependencies": {
@@ -236,12 +236,12 @@ What's particularly special about the code above is that it is using the `format
 }
 ```
 
-Parcel has also added the files required for someone else to pick up this project and install any dependencies that we've used. If you take a look in the directory you ran the `parcel` command in, you'll find a number of new files; the most interesting of which are:
+Parcel は、他の誰かがこのプロジェクトを取得し、使用した依存関係をインストールするために必要なファイルも追加しました。 `parcel` コマンドを実行したディレクトリを調べると、多数の新しいファイルが見つかります。 最も興味深いものは次のとおりです。
 
-- `node_modules`: The dependency files of Parcel and date-fns.
-- `dist`: The distribution directory — these are the automatically packaged, minified files Parcel has built for us, and the files it is serving at `localhost:1234`. These are the files you would upload to your web server when releasing the site online for public consumption.
+- `node_modules`: Parcel と date-fns の依存ファイル。
+- `dist`: 配布ディレクトリ — これらは、自動的にパッケージ化され、Parcel がビルドして縮小したファイルであり、 `localhost:1234` で提供されているファイルです。 これらは、サイトを公開してオンラインで公開するときに Web サーバーにアップロードするファイルです。
 
-So long as we know the package name, we can use it in our code and Parcel will go off, fetch, and install (actually "copy") the package into our local directory (under `node_modules`).
+パッケージ名を知っている限り、コードでそれを使用でき、Parcel はパッケージをローカルディレクトリ (`node_modules` の下) に取り出し、フェッチし、インストール (実際には「コピー」) します。
 
 ### Building our code for production
 
