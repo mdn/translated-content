@@ -36,7 +36,7 @@ scroll(options)
 
 无 ({{jsxref("undefined")}})。
 
-## 例子
+## 示例
 
 ```js
 // 将元素沿垂直方向向下滚动 1000 个像素
