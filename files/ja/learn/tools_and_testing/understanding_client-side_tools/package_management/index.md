@@ -376,16 +376,16 @@ yarn audit
 
 脆弱性について学習するための出発点として 、JavaScript パッケージと他のプログラミング言語の両方をカバーする [Snyk プロジェクト](https://snyk.io/) をお勧めします。 
 
-### Checking on a dependency
+### 依存関係のチェック
 
 ```bash
 npm ls date-fns
 yarn why date-fns
 ```
 
-This command will show what version of a dependency is installed and how it came to be included in your project. It's possible that another, top-level, package could have pulled in `date-fns`. It's equally possible (and not ideal) that you have multiple versions of a package in your project (this has been seen many times over with the [lodash](https://lodash.com/) package, as it's so useful).
+このコマンドは、インストールされている依存関係のバージョンと、それがどのようにプロジェクトに含まれるようになったかを示します。 別の最上位パッケージが `date-fns` を取り込んだ可能性があります。 プロジェクトに複数のバージョンのパッケージが存在する可能性も同様にあり得ます (そして理想的ではありません) (これは非常に便利な [lodash](https://lodash.com/) パッケージで何度も見られます)。
 
-Although the package manager will do its best to deduplicate packages you may want to investigate exactly which version is installed.
+パッケージマネージャーはパッケージの重複を排除するために最善を尽くしますが、インストールされているバージョンを正確に調査することをお勧めします。
 
 ### More commands
 
