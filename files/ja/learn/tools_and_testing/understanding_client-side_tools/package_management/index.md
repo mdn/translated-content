@@ -71,11 +71,11 @@ npm だけが選択肢ではありません。 独自のパッケージ レジ�
 
 重要なのは、自分に最適なレジストリを選択したことを確認することです。 多くのプロジェクトで npm が使用されるため、モジュールの残りの例ではこれに関係します。
 
-## Using the package ecosystem
+## パッケージエコシステムの使用
 
-Let's run through an example to get you started with using a package manager and registry to install a command line utility.
+パッケージマネージャーとレジストリを使用してコマンドラインユーティリティをインストールするための例を見てみましょう。
 
-[Parcel](https://parceljs.org/) is another tool that developers commonly use in their development process. Parcel is clever in that it can watch the contents of our code for calls to dependencies and automatically installs any dependencies it sees that our code needs. It can also automatically build our code.
+[Parcel](https://parceljs.org/) は、開発者が開発プロセスでよく使用する別のツールです。 Parcel は、依存関係の呼び出しについてコードの内容を監視し、コードが必要とするすべての依存関係を自動的にインストールするという点で賢いです。 また、コードを自動的にビルドすることもできます。
 
 ### Setting up the app as an npm package
 
