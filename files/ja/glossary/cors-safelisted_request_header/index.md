@@ -19,12 +19,12 @@ l10n:
 
 #### 追加要件
 
-CORS-safelisted headers must also fulfill the following requirements in order to be a CORS-safelisted request header:
+CORS セーフリストリクエストヘッダーとなるためには、次の要件も満たさなければなりません:
 
-- For {{HTTPHeader("Accept-Language")}} and {{HTTPHeader("Content-Language")}}: can only have values consisting of `0-9`, `A-Z`, `a-z`, space or `*,-.;=`.
-- For {{HTTPHeader("Accept")}} and {{HTTPHeader("Content-Type")}}: can't contain a _CORS-unsafe request header byte_: `0x00-0x1F` (except for `0x09 (HT)`, which is allowed), `"():<>?@[\]{}`, and `0x7F (DEL)`.
-- For {{HTTPHeader("Content-Type")}}: needs to have a MIME type of its parsed value (ignoring parameters) of either `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`.
-- For any header: the value's length can't be greater than 128.
+- {{HTTPHeader("Accept-Language")}} と {{HTTPHeader("Content-Language")}} については、値が次の文字のみで構成されていなければなりません: `0-9`・`A-Z`・`a-z`・空白・`*,-.;=`
+- {{HTTPHeader("Accept")}} と {{HTTPHeader("Content-Type")}} については、次の _CORS アンセーフリクエストヘッダーバイト_と呼ばれる文字を含んではいけません: `0x00-0x1F` (ただし、`0x09 (HT)` は含めても良い)・`"():<>?@[\]{}`・`0x7F (DEL)`.
+- {{HTTPHeader("Content-Type")}} について: 値をパースした結果（パラメーターを除く）が、`application/x-www-form-urlencoded` か、`multipart/form-data`、`text/plain` のうち、いずれかの MIME タイプでなければなりません。
+- すべてのヘッダーについて: 値の長さが128バイトを超えてはいけません。
 
 ## 関連情報
 
