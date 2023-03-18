@@ -310,25 +310,25 @@ dist/index.html                   288 B    753ms
 
 利用可能なツールはたくさんあり、JavaScript パッケージのエコシステムは前例のない速度で成長していますが、これには長所と短所があります。 常に改善が行われており、良くも悪くも選択肢が増え続けています。 圧倒的なツールの選択に直面した場合、おそらく最も重要な教訓は、選択したツールで何ができるかを学ぶことです。
 
-## A rough guide to package manager clients
+## パッケージマネージャークライアントの大まかなガイド
 
-This tutorial installed the Parcel package using npm, but as mentioned earlier on there are some alternatives. It's worth at least knowing they exist and having some vague idea of the common commands across the tools. You've already seen some in action, but let's look at the others.
+このチュートリアルでは npm を使用して Parcel パッケージをインストールしましたが、前述のようにいくつかの代替手段があります。 少なくともそれらが存在することを知って、ツール間で共通のコマンドについて漠然とした考えを持つことは価値があります。 すでにいくつかの動作を見てきましたが、他のものを見てみましょう。
 
-The list will grow over time, but at the time of writing, the following main package managers are available:
+リストは時間の経過とともに増加しますが、執筆時点では、次の主要なパッケージ マネージャーが利用可能です。
 
 - npm at [npmjs.org](https://www.npmjs.com/)
 - pnpm at [pnpm.js.org](https://pnpm.js.org/)
 - Yarn at [yarnpkg.com](https://yarnpkg.com/)
 
-npm and pnpm are similar from a command line point of view — in fact, pnpm aims to have full parity over the argument options that npm offers. It differs in that it uses a different method for downloading and storing the packages on your computer, aiming to reduce the overall disk space required.
+npm と pnpm は、コマンド ラインの観点からは似ています。実際、pnpm は、npm が提供する引数オプションと完全に同等であることを目指しています。 パッケージをダウンロードしてコンピューターに保存する方法が異なり、必要な全体的なディスク容量を削減することを目的としています。
 
-Where npm is shown in the examples below, pnpm can be swapped in and the command will work.
+以下の例では npm が示されていますが、pnpm を入れ替えると、コマンドが機能します。
 
-Yarn is often thought to be quicker than npm in terms of the installation process (though your mileage may vary). This is important to developers because there can be a significant amount of time wasted on waiting for dependencies to install (and copy to the computer).
+多くの場合、インストールプロセスに関しては、yarn は npm よりも高速であると考えられています (マイレージは異なる場合があります)。 依存関係のインストール (およびコンピューターへのコピー) を待つためにかなりの時間が浪費される可能性があるため、これは開発者にとって重要です。
 
-> **Note:** The npm package manager is **not** required to install packages from the npm registry, even though they share the same name. pnpm and Yarn can consume the same `package.json` format as npm, and can install any package from the npm and other package registries.
+> **メモ:** npm パッケージ マネージャーは、同じ名前を共有していても、npm レジストリからパッケージをインストールする必要は**ありません**。 pnpm と Yarn は、npm と同じ `package.json` 形式を使用でき、npm およびその他のパッケージレジストリから任意のパッケージをインストールできます。
 
-Let's review the common actions you'll want to perform with package managers.
+パッケージ マネージャーで実行する一般的なアクションを確認しましょう。
 
 ### Initialise a new project
 
