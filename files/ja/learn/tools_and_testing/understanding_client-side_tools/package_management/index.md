@@ -152,15 +152,15 @@ npm init
 
 したがって、これはパッケージを定義する構成ファイルです。 今はこれでいいので、先に進みます。
 
-### Installing parcel
+### Parcel のインストール
 
-Run the following command to install Parcel locally:
+次のコマンドを実行して、Parcel をローカルにインストールします。 
 
 ```bash
 npm install parcel-bundler
 ```
 
-Once that's done _All The Things_, we're now ready for some "modern client-side development" (which really means using build tools to make the developer experience a little easier). First of all however, take another look at your package.json file. You'll see that npm has added a new field, dependencies:
+上記コマンドが全て完了すると、"最新のクライアント側開発" の準備が整います (これは、ビルド ツールを使用して、開発者のエクスペリエンスを少し簡単にすることを意味します)。 ただし、まず最初に、package.json ファイルをもう一度見てください。 npm が新しいフィールドの依存関係を追加したことがわかります。
 
 ```json
 "dependencies": {
@@ -168,9 +168,9 @@ Once that's done _All The Things_, we're now ready for some "modern client-side 
 }
 ```
 
-This is part of the npm magic — if in the future you move your codebase to another location, on another machine, you can recreate the same setup by running the command `npm install`, and npm will look at the dependencies and install them for you.
+これは npm マジックの一部です。将来、コードベースを別の場所、別のマシンに移動した場合、コマンドを実行して同じセットアップを再作成できます。`npm install` を実行すると npm が依存関係を調べてインストールします。
 
-One disadvantage is that Parcel is only available inside our `parcel-experiment` app; you won't be able to run it in a different directory. But the advantages outweigh the disadvantages.
+欠点の 1 つは、Parcel が `parcel-experiment` アプリ内でしか利用できないことです。 別のディレクトリで実行することはできません。 しかし、利点は欠点を上回ります。
 
 ### Setting up our example app
 
