@@ -365,16 +365,16 @@ yarn upgrade
 
 `npm update` は依存関係を `package.json` で定義された範囲を超えてアップグレードしないことを覚えておくことが重要です — これを行うには、そのバージョンを具体的にインストールする必要があります。
 
-### Audit for vulnerabilities
+### 脆弱性の監査
 
 ```bash
 npm audit
 yarn audit
 ```
 
-This will check all of the dependency tree for your project and run the specific versions you're using against a vulnerability database and notify you if there are potential vulnerable packages in your project.
+これにより、プロジェクトのすべての依存関係ツリーがチェックされ、使用している特定のバージョンが脆弱性データベースに対して実行され、プロジェクトに潜在的な脆弱なパッケージがあるかどうかが通知されます。
 
-A good starting point for learning about vulnerabilities is the [Snyk project](https://snyk.io/), which covers both JavaScript packages and other programming languages.
+脆弱性について学習するための出発点として 、JavaScript パッケージと他のプログラミング言語の両方をカバーする [Snyk プロジェクト](https://snyk.io/) をお勧めします。 
 
 ### Checking on a dependency
 
