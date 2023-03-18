@@ -1,6 +1,6 @@
 ---
 title: source
-slug: Web/HTML/Element/Source
+slug: Web/HTML/Element/source
 ---
 
 {{HTMLSidebar}}
