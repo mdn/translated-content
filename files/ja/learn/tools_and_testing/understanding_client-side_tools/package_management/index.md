@@ -350,20 +350,20 @@ yarn add date-fns
 
 デフォルトでは、このコマンドは「date-fns」の最新バージョンをインストールしますが、これも制御できます。 `date-fns@1` を要求すると、最新の 1.x バージョン (1.30.1) が得られます。 または、`date-fns@^2.3.0` を試すこともできます。これは、2.3.0 以降 (執筆時点では 2.8.1) の最新バージョンを意味します。
 
-### Updating dependencies
+### 依存関係の更新
 
 ```bash
 npm update
 yarn upgrade
 ```
 
-This will look at the currently installed dependencies and update them, if there is an update available, within the range that's specified in the package.
+これにより、現在インストールされている依存関係が調べられ、利用可能な更新がある場合は、パッケージで指定されている範囲内で更新されます。
 
-The range is specified in the version of the dependency in your `package.json`, such as `date-fns@^2.0.1` — in this case, the caret character `^` means all minor and patch releases after and including 2.0.1, up to but excluding 3.0.0.
+範囲は、 `package.json` の依存関係のバージョンで指定され、 `date-fns@^2.0.1` — この場合、キャレット文字 `^` 2.0.1 以降、3.0.0 を除くすべてのマイナーおよびパッチリリースを意味します。
 
-This is determined using a system called [semver](https://semver.org/), which might look a bit complicated from the documentation but can be simplified by considering only the summary information and that a version is represented by `MAJOR.MINOR.PATCH`, such as 2.0.1 being major version 2 with patch version 1. An excellent way to try out semver values is to use the [semver calculator](https://semver.npmjs.com/).
+これは [semver](https://semver.org/) と呼ばれるシステムを使用して決定されます。このシステムはドキュメントから見ると少し複雑に見えるかもしれませんが、要約情報とバージョンが `MAJOR.MINOR.PATCH` 、たとえば 2.0.1 はメジャーバージョン 2 でパッチバージョン 1 です。semver 値を試す優れた方法は、[semver Calculator](https://semver.npmjs.com/) を使用することです。
 
-It's important to remember that `npm update` will not upgrade the dependencies to beyond the range defined in the `package.json` — to do this you will need to install that version specifically.
+`npm update` は依存関係を `package.json` で定義された範囲を超えてアップグレードしないことを覚えておくことが重要です — これを行うには、そのバージョンを具体的にインストールする必要があります。
 
 ### Audit for vulnerabilities
 
