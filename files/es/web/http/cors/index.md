@@ -353,18 +353,37 @@ Pero si una petición incluye una credencial (como la cabecera `Cookie`) y la re
 También tenga en cuenta que cualquier cabecera de respuesta `Set-Cookie` en una respuesta no establecería una Cookie si el valor `Access-Control-Allow-Origin` en esa respuesta es el comodín "*" en lugar de un origen real.
 
 #### Cookies de terceros
-## Las cabeceras de respuesta HTTP
-### Control de acceso - Permitir origen
-### Control de Acceso-Exponer Cabeceras
-### Control de acceso-Edad máxima
-### Control de Acceso-Permitir Credenciales
-### Control de acceso-Permitir métodos
-### Control de acceso-permitir cabeceras
-## Las cabeceras de solicitud HTTP
-### Origen
-### Control de acceso-Método de solicitud
-### Control de acceso-Cabeceras de solicitud
-## Especificaciones
-## Compatibilidad con navegadores
-## Véase también
 
+Tenga en cuenta que las Cookies establecidas en las respuestas CORS están sujetas a la políticas normales sobre Cookies de terceros. En el ejemplo anterior, la página se carga desde `foo.example` pero la Cookie de la línea 19 es enviada por `bar.other`, por lo que no se guardaría si el navegador del usuario está configurado para rechazar todas las Cookies de terceros.
+
+La Cookie en la solicitud anterior (línea 10) también puede ser suprimida en las políticas normales sobre Cookies de terceros. Por lo tanto, la política de Cookies aplicada puede anular la capacidad descrita en este capítulo, impidiéndole realizar solicitudes con credenciales.
+
+Se aplicaría la política de Cookies en torno al atributo [Cookies del mismo sitio](/es/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+
+## Las cabeceras de respuesta HTTP
+
+### Control de acceso - Permitir origen
+
+### Control de Acceso-Exponer Cabeceras
+
+### Control de acceso-Edad máxima
+
+### Control de Acceso-Permitir Credenciales
+
+### Control de acceso-Permitir métodos
+
+### Control de acceso-permitir cabeceras
+
+## Las cabeceras de solicitud HTTP
+
+### Origen
+
+### Control de acceso-Método de solicitud
+
+### Control de acceso-Cabeceras de solicitud
+
+## Especificaciones
+
+## Compatibilidad con navegadores
+
+## Véase también
