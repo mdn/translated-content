@@ -7,7 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 
 **`Error()`** 构造函数能够创建一个包含错误信息的对象。
 
-
 ## 语法
 
 ```js-nolint
@@ -24,6 +23,7 @@ Error(message, fileName, lineNumber)
 ```
 
 > **注意：** 调用 `Error()` 时，可以使用关键字 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，也可以不使用。 两种声明方式均能创建一个新的 `Error` 实例。
+
 ### 参数
 
 - `message` {{optional_inline}}
@@ -39,7 +39,7 @@ Error(message, fileName, lineNumber)
 
 ## 示例
 
-### 函数调用 or 构造函数 
+### 函数调用与构造函数
 
 当 `Error` 作为函数使用，即不包含 {{JSxRef("Operators/new", "new")}} 关键字时，它将返回一个 Error 对象。
 因此，直接调用 `Error` 函数将产生与使用 `new` 关键字构造 `Error` 对象相同的输出。
@@ -90,7 +90,7 @@ console.log("cause" in error3); // false
 
 ## 参见
 
-- [`core-js`](https://github.com/zloirock/core-js) 提供了支持 `cause` 等最新特性 (modern behavior) 的 [`Error`  polyfill](https://github.com/zloirock/core-js#ecmascript-error)
+- [`core-js`](https://github.com/zloirock/core-js) 提供了支持 `cause` 等最新特性 (modern behavior) 的 [`Error` polyfill](https://github.com/zloirock/core-js#ecmascript-error)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
 - [Error causes](https://v8.dev/features/error-cause) (v8.dev/features)
