@@ -39,9 +39,9 @@ fill(value, start, end)
 
 ## 描述
 
-`fill()` 是个[可变方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)，不会改变 `this` 的长度，但会改变 `this` 的内容。
+`fill()` 是个[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)，不会改变 `this` 的长度，但会改变 `this` 的内容。
 
-`fill()` 也会使用 `value` 填充[稀疏](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)数组的空腔。
+`fill()` 也会使用 `value` 填充[稀疏](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)数组的空槽。
 
 `fill()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值有一个 `length` 属性。虽然字符串也是类似数组的，但这个方法不适合应用于它们，因为字符串是不可变的。
 
