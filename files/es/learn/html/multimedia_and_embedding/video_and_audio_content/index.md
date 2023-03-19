@@ -203,19 +203,19 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 }
 ```
 
-Encontraras mas documentacion acerca de esto en nuestra {{domxref("TrackEvent")}} documentacion.
+Encontraras mas documentación acerca de esto en nuestra {{domxref("TrackEvent")}} documentación.
 
-## Displaying video text tracks
+## Visualización de pistas de texto en vídeo
 
-Now we'll discuss a slightly more advanced concept that is really useful to know about. Many people can't or don't want to hear the audio/video content they find on the Web, at least at certain times. For example:
+Ahora hablaremos de un concepto un poco más avanzado que es realmente útil conocer. Muchas personas no pueden o no quieren escuchar el contenido de audio/vídeo que encuentran en la Web, al menos en determinados momentos. Por ejemplo:
 
-- Many people have auditory impairments (more commonly known as hard of hearing, or deaf) so can't hear the audio.
-- Others may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library.)
-- People who don't speak the language of the video might want a text transcript or even translation to help them understand the media content.
+- Muchas personas tienen deficiencias auditivas (más comúnmente conocidas como sordos o con dificultades auditivas), por lo que no pueden oír el audio.
+- Otras no pueden oír el audio porque se encuentran en ambientes ruidosos (como un bar abarrotado cuando se retransmite un partido deportivo) o porque no quieren molestar a los demás si están en un lugar tranquilo (como una biblioteca).
+- Las personas que no hablan el idioma del vídeo pueden querer una transcripción de texto o incluso una traducción que les ayude a entender el contenido multimedia.
 
-Wouldn't it be nice to be able to provide these people with a transcript of the words being spoken in the audio/video? Well, thanks to HTML5 video you can, with the [WebVTT](/es/docs/Web/API/Web_Video_Text_Tracks_Format) format and the {{htmlelement("track")}} element.
+¿No estaría bien poder ofrecer a estas personas una transcripción de las palabras que se pronuncian en el audio/vídeo? Pues bien, gracias al vídeo HTML5 se puede, con el formato [WebVTT](/es/docs/Web/API/Web_Video_Text_Tracks_Format) y el elemento {{htmlelement("track")}}.
 
-> **Nota:** "Transcribe" means "to write down spoken words as text." The resulting text is a "transcript."
+> **Nota:** "Transcribir" significa "escribir palabras habladas como texto". El texto resultante es una "transcripción".
 
 WebVTT is a format for writing text files containing multiple strings of text along with metadata such as what time in the video you want each text string to be displayed, and even limited styling/positioning information. These text strings are called **cues**, and you can display different types for different purposes, the most common being:
 
