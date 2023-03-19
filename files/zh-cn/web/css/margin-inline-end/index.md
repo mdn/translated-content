@@ -84,7 +84,7 @@ div {
 
 ## 参见
 
-- [CSS Logical Properties and Values](zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 逻辑属性与值](zh-CN/docs/Web/CSS/CSS_Logical_Properties)
 - {{cssxref("margin-inline-start")}}
-- 映射的物理属性: {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}}
+- 对应的物理属性: {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}
