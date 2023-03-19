@@ -335,6 +335,23 @@ La solicitudes CORS de verificación previa nunca deben incluir credenciales. La
 Firefox 87 permite activar este comportamiento no conforme estableciendo la preferencia: network.cors_preflight.allow_client_cert` to `true` ([Firefox bug 1511151](https://bugzil.la/1511151)). Actualmente, los navegadores basados en Chromium siempre envían certificados TLS de cliente en las solicitudes CORS verificadas previamente ([Chrome bug 775438](https://crbug.com/775438)).
         
 #### Solicitudes con credenciales y comodines
+
+Al responder a una solicitud con credenciales:
+
+- El servidor no debe especificar el comodín "*" para el valor de respuesta de la cabecera `Access-Control-Allow-Origin`, sino que debe especificar un origen explícito, como por ejemplo `Access-Control-Allow-Origin: https://example.com`.
+
+- El servidor no debe especificar el comodín "*" para el valor de respuesta de la cabecera `Access-Control-Allow-Headers`, sino que debe especificar una lista explícita de nombres de cabecera, como por ejemplo `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+
+- El servidor no debe especificar el comodín "*" para el valor de la cabecera `Access-Control-Allow-Methods`, sino que debe especificar una lista explícita de nombres de métodos, como por ejemplo `Access-Control-Allow-Methods: POST, GET`
+
+- El servidor no debe especificar el comodín "*" para el valor de respuesta de la cabecera `Access-Control-Expose-Headers`, sino que debe especificar una lista explícita de nombres de cabecera, como por ejemplo `Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`
+
+Si una solicitud incluye una credencial (comúnmente una cabecera `Cookie`) y la respuesta incluye una cabecera `Access-Control-Allow-Origin: *` (es decir, con el comodín), el navegador bloqueará el acceso a la respuesta e informará de un error CORS en la consola de las herramientas de desarrollo del navegador.
+
+Pero si una petición incluye una credencial (como la cabecera `Cookie`) y la respuesta incluye un origen real en lugar de un comodín (como por ejemplo `Access-Control-Allow-Origin: https://example.com`), entonces el navegador permitirá el acceso a la respuesta desde el origen especificado.
+
+También tenga en cuenta que cualquier cabecera de respuesta `Set-Cookie` en una respuesta no establecería una Cookie si el valor `Access-Control-Allow-Origin` en esa respuesta es el comodín "*" en lugar de un origen real.
+
 #### Cookies de terceros
 ## Las cabeceras de respuesta HTTP
 ### Control de acceso - Permitir origen
