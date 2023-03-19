@@ -9,7 +9,7 @@ slug: Web/HTML/Element/iframe
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
 
-每个嵌入的浏览上下文（embedded browsing context）都有自己的[会话历史记录 (session history)](/zh-CN/docs/Web/API/History)和[DOM 树](/zh-CN/docs/Web/API/Document)。包含嵌入内容的浏览上下文称为 _*父级*浏览上下文_。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
+每个嵌入的浏览上下文（embedded browsing context）都有自己的[会话历史记录 (session history)](/zh-CN/docs/Web/API/History)和[DOM 树](/zh-CN/docs/Web/API/Document)。包含嵌入内容的浏览上下文称为*父级浏览上下文*。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
 
 > **警告：** 页面上的每个`<iframe>`都需要增加内存和其他计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的`<iframe>`，但是你最好还是先看看这么做会不会导致某些性能问题。
 
