@@ -30,7 +30,7 @@ scroll(options)
     - `left`
       - : 指定沿 X 轴滚动窗口或元素的像素数。
     - `behavior`
-      - : `smooth` 表示平滑滚动并产生过渡效果, `instant` 表示立即跳转到指定位置，没有过渡效果，`auto` 或 default 表示浏览器会自动选择滚动时的过渡效果。
+      - : `smooth` 表示平滑滚动并产生过渡效果, `auto` 或 default 会直接跳转到目标位置，没有过渡效果。
 
 ### 返回值
 
