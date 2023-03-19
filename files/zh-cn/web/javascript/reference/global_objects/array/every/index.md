@@ -54,7 +54,7 @@ every(function(element, index, array) { /* … */ }, thisArg)
 
 `every()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)。它为数组中的每个元素调用一次指定的 `callbackFn` 函数，直到 `callbackFn` 返回一个[假值](/zh-CN/docs/Glossary/Falsy)。如果找到这样的元素，`every()` 方法将会立即返回 `false` 并停止遍历数组。否则，如果 `callbackFn` 为每个元素返回一个[真值](/zh-CN/docs/Glossary/Truthy)，`every()` 就会返回 `true`。
 
-`every` 和数学中的"全称量词（∀）"类似。特别的，对于空数组，它只返回 `true`。（这种情况属于[无条件正确](http://en.wikipedia.org/wiki/Vacuous_truth)因为[空集](https://zh.wikipedia.org/wiki/空集)的所有元素都符合给定的条件。）
+`every` 和数学中的全称量词"任意（∀）"类似。特别的，对于空数组，它只返回 `true`。（这种情况属于[无条件正确](http://en.wikipedia.org/wiki/Vacuous_truth)，因为[空集](https://zh.wikipedia.org/wiki/空集)的所有元素都符合给定的条件。）
 
 `callbackFn` 仅针对已分配值的数组索引调用。它不会为[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽调用。
 
@@ -62,7 +62,7 @@ every(function(element, index, array) { /* … */ }, thisArg)
 
 - 当开始调用 `every()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
 - 对已访问索引的更改不会导致再次调用它们的 `callbackFn`。
-- 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被访问时的值。[删除的](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)元素不会被访问。
+- 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被修改后的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素则不会被访问。
 
 > **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
