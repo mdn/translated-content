@@ -71,14 +71,3 @@ Para escolher uma fonte:
 ![](font2.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Com será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [Javascript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)
