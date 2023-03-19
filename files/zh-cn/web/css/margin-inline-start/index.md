@@ -5,7 +5,7 @@ slug: Web/CSS/margin-inline-start
 
 {{CSSRef}}
 
-**`margin-inline-start`** [CSS](/zh-CN/docs/Web/CSS) 属性定义元素的逻辑行首外边距，根据元素的书写模式、方向性和文本方向映射为物理外边距。它根据 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性的值对应于 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 或 {{cssxref("margin-left")}} 属性。
+**`margin-inline-start`** [CSS](/zh-CN/docs/Web/CSS) 属性定义元素的逻辑行首外边距，根据元素的书写模式、方向性和文本方向映射为实体的外边距。它根据 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性的值对应于 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 或 {{cssxref("margin-left")}} 属性。
 
 {{EmbedInteractiveExample("pages/css/margin-inline-start.html")}}
 
