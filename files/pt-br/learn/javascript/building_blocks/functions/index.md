@@ -442,13 +442,3 @@ Este arquivo explorou os conceitos fundamentais por trás das funções, pavimen
 - [Parâmetros padrão](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Funções de flexa](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — referências de conceito avançado
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## Neste módulo
-
-- [Making decisions in your code — conditionals](/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/pt-BR/docs/Learn/JavaScript/Building_blocks/Image_gallery)
