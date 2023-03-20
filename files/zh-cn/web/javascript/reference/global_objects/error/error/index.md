@@ -1,5 +1,5 @@
 ---
-title: Error() constructor
+title: Error() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 ---
 
