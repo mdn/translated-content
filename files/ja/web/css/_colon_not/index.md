@@ -31,10 +31,9 @@ l10n:
 - この擬似クラスはルールの[詳細度](/ja/docs/Web/CSS/Specificity)を上げることができます。例えば、 `#foo:not(#bar)` は単純な `#foo` と同じ要素を選択しますが、2 つの `id` セレクターにより、詳細度はより高くなります。
 - 擬似クラス `:not()` の詳細度は、カンマで区切られたセレクターの引数の中で最も詳細なセレクターの詳細度に置き換えられます。[`:not(:is(argument))`](/ja/docs/Web/CSS/:is) と書かれた場合と同じ詳細度を提供します。
 - `:not(.foo)` は `.foo` ではないすべての要素を選択するため、{{HTMLElement("html")}} や {{HTMLElement("body")}} も選択します。
-- このセレクターは、「Xでない」ものすべてに一致します。これは、[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)と使用すると、対象とする要素を選択する経路が複数できるので、意外な動きをするかもしれません。例えば、`body :not(table) a` は {{HTMLElement("table")}} 内のリンクにも適用されます。{{HTMLElement("tr")}}、{{HTMLElement("td")}}、{{HTMLElement("th")}}、{{HTMLElement("caption")}} などはすべて `:not(table)` の部分に一致するからです。
-- 複数のセレクターを同時に否定することができます。例 えば、`:not(.foo, .bar)` は `:not(.foo):not(.bar)` と同じです。
+- このセレクターは、「Xでない」ものすべてに一致します。これは、[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)と使用すると、対象とする要素を選択する経路が複数できるので、意外な動きをするかもしれません。例えば、`body :not(table) a` は {{HTMLElement("table")}} 内のリンクにも適用されます。{{HTMLElement("tr")}}、{{HTMLElement("tbody")}}、{{HTMLElement("th")}}、{{HTMLElement("td")}}、{{HTMLElement("caption")}} などはすべて `:not(table)` の部分に一致するからです。
+- 複数のセレクターを同時に否定することができます。例えば、`:not(.foo, .bar)` は `:not(.foo):not(.bar)` と同じです。
 - もし `:not()` 擬似クラスに渡されたセレクターのいずれかが無効であったり、ブラウザーが対応していなかったりした場合、ルール全体が無効となります。この挙動を克服するために有効な方法は、寛容なセレクターリストを受け入れる [`:is()`](/ja/docs/Web/CSS/:is) 擬似クラスを使用することです。例えば `:not(.foo, :invalid-pseudo-class)` はルール全体を無効にしてしまいますが、 `:not(is(.foo, :invalid-pseudo-class))` は `.foo` 以外のあらゆる（{{HTMLElement("html")}} や {{HTMLElement("body")}} を含む）要素に一致します。
-
 
 ## 例
 
