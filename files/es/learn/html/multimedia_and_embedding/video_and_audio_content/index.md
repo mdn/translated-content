@@ -273,11 +273,11 @@ Si no puedes obtener ningún vídeo o audio, puedes utilizar nuestros [archivos 
 
 Nos gustaría que
 
-1. 1. Guardes tus archivos de audio y vídeo en un directorio nuevo de tu ordenador.
+1. Guardes tus archivos de audio y vídeo en un directorio nuevo de tu ordenador.
 2. Crees un nuevo archivo HTML en el mismo directorio, llamado `index.html`.
 3. Añade los elementos `<audio>` y `<video>` a la página; haz que muestren los controles por defecto del navegador.
 4. Dales a ambos elementos `<source>` para que los navegadores encuentren el formato de audio que mejor soportan y lo carguen. Estos deben incluir atributos `type`.
-5. 5. Asigna al elemento `<video>` un cartel que se mostrará antes de que empiece a reproducirse el vídeo. Diviértete creando tu propio cartel gráfico.
+5. Asigna al elemento `<video>` un cartel que se mostrará antes de que empiece a reproducirse el vídeo. Diviértete creando tu propio cartel gráfico.
 
 Si lo deseas, puedes buscar pistas de texto y averiguar cómo añadir algunas leyendas a tu vídeo.
 
