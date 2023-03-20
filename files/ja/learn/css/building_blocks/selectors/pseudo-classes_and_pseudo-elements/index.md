@@ -172,24 +172,3 @@ CSS からテキストの文字列を挿入することは、実際には Web �
 | {{cssxref("::spelling-error")}} | ブラウザーによってフラグが付けられた、スペルミスを含むドキュメントの一部に一致します。 |
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
-
-## このモジュールでは
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [タイプ、クラス、ID セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [疑似クラスと疑似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [コンビネーター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [異なるテキスト方向の処理](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [あふれるコンテンツ](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS でのアイテムのサイズ変更](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像、メディア、フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [スタイリングテーブル](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

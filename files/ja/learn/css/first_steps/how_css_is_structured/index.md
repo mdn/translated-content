@@ -521,11 +521,3 @@ padding- left: 10px;
 **ブラウザーが HTML や CSS を解釈してウェブページに作り替えていくながれを多少なりとも知っておくことは開発の役にたちます。そこで、次の記事 「[CSS はどう働くか？」](/ja/docs/Learn/CSS/First_steps/How_CSS_works) では、ブラウザーが Web ページを生成する過程についてみていきましょう。**
 
 **{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}**
-
-## このモジュール内
-
-1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

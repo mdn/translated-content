@@ -65,11 +65,3 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 最初のモジュールを修了しました。おめでとうございます。あなたはもう CSS の基本的な部分は理解できたはずです。そして、スタイルシートの挙動が分かるようになったはずです。次のモジュール、[CSS ブロック構築](/ja/docs/Learn/CSS/Building_blocks)ではいくつかの重要な部分を深く見ていきましょう。
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## このモジュール内
-
-1. [What is CSS?](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3. [How CSS is structured](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [How CSS works](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Using your new knowledge](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
