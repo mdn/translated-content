@@ -61,7 +61,7 @@ try {
 }
 ```
 
-更多示例参考 [错误 > 区分相似的错误](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#区分相似的错误).
+更多示例参考[错误 > 区分相似的错误](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#区分相似的错误)。
 
 ### 省略 options 参数
 
