@@ -691,11 +691,3 @@ window.addEventListener("load", drawOutput);
 Esperamos que hayas disfrutado jugando con el texto en este artículo. El próximo artículo te enseñará todo lo que necesitas saber sobre la aplicación de estilos de lista en HTML.
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Aplicar estilo al texto base y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Aplicación de estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Aplicación de estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

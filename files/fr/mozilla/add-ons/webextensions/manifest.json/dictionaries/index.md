@@ -46,4 +46,4 @@ Les clés des `dictionaries` specifie le `locale_code` pour lequel votre extensi
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.dictionaries")}}
+{{Compat}}

@@ -11,5 +11,4 @@ original_slug: Глоссарий/ECMA
 
 ## Узнать больше
 
-- {{interwiki("wikipedia", "Ecma_International", "Ecma International")}} на Википедии
 - [Официальный сайт Ecma International](http://www.ecma-international.org/)

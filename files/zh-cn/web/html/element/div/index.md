@@ -50,11 +50,11 @@ slug: Web/HTML/Element/div
 
 ## 使用备注
 
-- `<div>` 元素应当仅在没有任何其它语义元素（比如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）可用时使用。
+- `<div>` 元素应当仅在没有任何其他语义元素（比如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）可用时使用。
 
 ## 示例
 
-### 一个简单的例子
+### 一个简单的示例
 
 ```html
 <div>
@@ -65,11 +65,7 @@ slug: Web/HTML/Element/div
 
 结果看起来像这样：
 
-这里可以是任何内容，比如 \<p>, \<table>，一切由你作主！
-
-实例：
-
-{{EmbedLiveSample("A_simple_example", 650, 60)}}
+{{EmbedLiveSample("一个简单的示例", 650, 60)}}
 
 ### 样式实例
 
@@ -98,7 +94,7 @@ slug: Web/HTML/Element/div
 
 #### 结果
 
-{{EmbedLiveSample("A_styled_example", 650, 120)}}
+{{EmbedLiveSample("样式实例", 650, 120)}}
 
 ## 规范
 

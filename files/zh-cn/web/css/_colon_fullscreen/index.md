@@ -15,7 +15,7 @@ slug: Web/CSS/:fullscreen
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -120,9 +120,9 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ### 结果
 
-{{ LiveSampleLink('Example', "(If the 'Enter Fullscreen' button doesn't work, try here)") }}
+{{ LiveSampleLink('示例', "(If the 'Enter Fullscreen' button doesn't work, try here)") }}
 
-{{ EmbedLiveSample('Example','80%','200px') }}
+{{ EmbedLiveSample('示例','80%','200px') }}
 
 ## 规范
 

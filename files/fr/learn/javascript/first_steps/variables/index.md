@@ -398,7 +398,7 @@ Cette expression utilise l'opérateur «&nbsp;inférieur à&nbsp;» (`<`) pour t
 
 ### Tableaux
 
-Une tableau est un objet unique contenant plusieurs valeurs entre crochets séparées par des virgules. Saisissez les lignes suivantes dans la console&nbsp;:
+Un tableau est un objet unique contenant plusieurs valeurs entre crochets séparées par des virgules. Saisissez les lignes suivantes dans la console&nbsp;:
 
 ```js
 var myNameArray = ['Chris', 'Bob', 'Jim'];

@@ -24,9 +24,9 @@ instanceOfFileReader.readAsText(blob[, encoding]);
 
 {{Specifications}}
 
-## Compatibilidad en los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.FileReader.readAsText")}}
+{{Compat}}
 
 ## Vea también
 

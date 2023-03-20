@@ -30,11 +30,11 @@ Object.preventExtensions(obj)
 
 `Object.preventExtensions()`仅阻止添加自身的属性。但其对象类型的原型依然可以添加新的属性。
 
-该方法使得目标对象的 `[[prototype]]` 不可变；任何重新赋值 `[[prototype]]` 操作都会抛出 `TypeError` 。这种行为只针对内部的 `[[prototype]]` 属性，目标对象的其它属性将保持可变。
+该方法使得目标对象的 `[[prototype]]` 不可变；任何重新赋值 `[[prototype]]` 操作都会抛出 `TypeError` 。这种行为只针对内部的 `[[prototype]]` 属性，目标对象的其他属性将保持可变。
 
 一旦将对象变为不可扩展的对象，就再也不能使其可扩展。
 
-## 例子
+## 示例
 
 ```js
 // Object.preventExtensions 将原对象变的不可扩展，并且返回原对象。
@@ -63,8 +63,6 @@ function fail()
 }
 fail();
 ```
-
-​​​​
 
 不可扩展对象的原型是不可变的：
 

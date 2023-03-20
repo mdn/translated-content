@@ -12,7 +12,7 @@ This change means that the aspect ratio of the image is calculated by the browse
 
 In the olden days of web development, it was always seen as a good practice to add `width` and `height` attributes to your HTML {{htmlelement("img")}} elements, so that when browsers first loaded the page, they could put a correctly-sized placeholder box in the layout for each image to appear in when it finally loads.
 
-![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](https://mdn.mozillademos.org/files/16945/ar-guide.jpg)
+![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](ar-guide.jpg)
 
 Without the `width` and `height` attributes, no placeholder space would be created, and when the image finally loaded you would get a noticeable jank in the page layout. This wasn't an attractive thing for your users to see, and could also result in performance issues due to the repainting required after each image loads, hence adding the attributes being a good idea.
 
@@ -43,7 +43,7 @@ img, input[type="image"], video, embed, iframe, marquee, object, table {
 
 This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and `<input type="image">`). When such an element has `width` and `height` attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.
 
-> **メモ:** Currently this effect is being limited to actual `<img>` elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).
+> **メモ:** Currently this effect is being limited to actual `<img>` elements, as applying to other such elements may have undesirable results. See ([Firefox バグ 1583980](https://bugzil.la/1583980)).
 
 When the `width`/`height` of an `<img>` element — as set using HTML attributes — is overidden using CSS using something like this:
 

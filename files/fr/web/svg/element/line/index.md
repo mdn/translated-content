@@ -62,7 +62,7 @@ Cet élément implémente l'interface [`SVGLineElement`](/fr/DOM/SVGLineElement)
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.line")}}
+{{Compat}}
 
 ## Voir aussi
 

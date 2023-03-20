@@ -19,7 +19,7 @@ Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance
 
 Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks.
 
-You can access `CacheStorage` through the global {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.
+You can access `CacheStorage` through the global {{domxref("caches", "caches")}} property.
 
 > **Nota:** CacheStorage always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing, you can get around this by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the Firefox Devtools options/gear menu.
 
@@ -158,12 +158,12 @@ try {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.CacheStorage")}}
+{{Compat}}
 
 ## See also
 
 - [Using Service Workers](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WindowOrWorkerGlobalScope.caches")}}
+- {{domxref("caches")}}

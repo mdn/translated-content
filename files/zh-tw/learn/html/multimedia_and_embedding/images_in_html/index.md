@@ -483,19 +483,10 @@ p {
 
 ## 試試看!
 
-您已經來到了本文的末端，但是您還記得最重要的內容嗎？ 在繼續往下之前，這裡有些測驗讓您驗證看看您是否都學會了 — [測驗：HTML 圖像](/zh-TW/docs//zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
+你已經來到了本文的末端，但是你還記得最重要的內容嗎？在繼續往下之前，這裡有些測驗讓你驗證看看你是否都學會了——[測驗：HTML 圖像](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
 
 ## 總結
 
 目前就是這樣啦。 我們已經詳細介紹了圖片和標題說明。 在下一篇文章中我們將進一步介紹，如何使用 HTML 將視頻和音頻嵌入在網頁中。
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 在這個主題中
-
-- [Images in HTML](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

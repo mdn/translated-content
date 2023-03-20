@@ -40,13 +40,11 @@ Une chaîne de caractères représentant les éléments de la liste et mise en f
 
 ## Spécifications
 
-| Spécification                                                                                                                                 | État                    | Commentaires |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.prototype.format`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.format) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.format")}}
+{{Compat}}
 
 ## Voir aussi
 

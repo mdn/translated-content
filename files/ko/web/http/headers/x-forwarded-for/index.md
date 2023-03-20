@@ -62,7 +62,7 @@ X-ProxyUser-Ip: 203.0.113.19
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.X-Forwarded-For")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

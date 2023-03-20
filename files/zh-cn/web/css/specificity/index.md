@@ -58,7 +58,7 @@ slug: Web/CSS/Specificity
     span { color: red; }
     ```
 
-    无论 c​ss 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
+    无论 css 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
 
 3. 对于（2）的一种特殊情况，当您无其他要指定的内容时，请复制简单的选择器以增加特异性。
 
@@ -174,9 +174,9 @@ div:not(.outer) p {
 
 会在屏幕上出现以下结果：
 
-{{EmbedLiveSample("The_not_exception-example")}}
+{{EmbedLiveSample(":is() 和 :not() 例外规则")}}
 
-### `:where()` 例外规则 {{Experimental_Inline}}
+### `:where()` 例外规则
 
 {{SeeCompatTable}}
 
@@ -224,7 +224,7 @@ div p {
 
 会在屏幕上出现以下结果：
 
-{{EmbedLiveSample("The_where_exception")}}
+{{EmbedLiveSample(":where() 例外规则")}}
 
 ### 基于形式的优先级（Form-based specificity）
 

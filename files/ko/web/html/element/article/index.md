@@ -64,15 +64,15 @@ slug: Web/HTML/Element/article
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ariarole("article")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/article_role'><code>article</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("feed")}}, {{ARIARole("main")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/document_role'><code>document</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/feed_role'><code>feed</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/main_role'><code>main</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/none_role'><code>none</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/region_role'><code>region</code></a>
       </td>
     </tr>
     <tr>
@@ -135,4 +135,4 @@ slug: Web/HTML/Element/article
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.article")}}
+{{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: 异步
 slug: Glossary/Asynchronous
-original_slug: Glossary/异步
 ---
 
 **异步**指两个或两个以上的对象或事件**不**同时存在或发生（或多个相关事物的发生无需等待其前一事物的完成）。在计算机技术中，"异步"一词被用于两大语境。

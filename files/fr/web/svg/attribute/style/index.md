@@ -80,4 +80,4 @@ Les éléments suivants peuvent utiliser l'attribut `style`:
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.style.style")}}
+{{Compat}}

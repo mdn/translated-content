@@ -142,24 +142,3 @@ Los conceptos explicados en esta lección son cada vez más importantes en CSS. 
 En el módulo siguiente, vamos a echar un buen vistazo al desbordamiento en CSS
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
-
-## En este módulo
-
-1. [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Selectores de tipo, clase e ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Selectores de atributo](/es/docs/Web/CSS/Attribute_selectors)
-    - [Pseudoclases y pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinadores](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

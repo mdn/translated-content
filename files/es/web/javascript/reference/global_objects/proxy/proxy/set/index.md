@@ -80,9 +80,9 @@ console.log(p.a)       // 10
 
 {{Specifications}}
 
-## Compatibilidad con los buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Proxy.handler.set")}}
+{{Compat}}
 
 ## Ver también
 

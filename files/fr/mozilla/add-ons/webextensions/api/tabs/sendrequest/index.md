@@ -42,9 +42,9 @@ var sending = browser.tabs.sendRequest(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec l'objet de réponse JSON envoyé par le gestionnaire du message dans le script de contenu, ou sans arguments si le script de contenu n'a pas envoyé de réponse. Si une erreur survient lors de la connexion à l'onglet spécifié ou si une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.sendRequest")}}
+{{Compat}}
 
 > **Note :**
 >

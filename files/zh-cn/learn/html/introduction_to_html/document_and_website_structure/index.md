@@ -1,7 +1,6 @@
 ---
 title: 文档与网站架构
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -129,8 +128,8 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 理解所有 HTML 区段元素具体含义是很有益处的，这一点将随着个人 web 开发经验的逐渐丰富日趋显现。更多细节请查阅 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)。现在，你只需要理解以下主要元素的意义：
 
-- {{HTMLElement('main')}} 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 {{HTMLElement('body')}} 中。最好不要把它嵌套进其它元素。
-- {{HTMLElement('article')}} 包围的内容即一篇文章，与页面其它部分无关（比如一篇博文）。
+- {{HTMLElement('main')}} 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 {{HTMLElement('body')}} 中。最好不要把它嵌套进其他元素。
+- {{HTMLElement('article')}} 包围的内容即一篇文章，与页面其他部分无关（比如一篇博文）。
 - {{HTMLElement('section')}} 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](/zh-CN/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
 - {{HTMLElement('aside')}} 包含一些间接信息（术语条目、作者简介、相关链接，等等）。
 - {{HTMLElement('header')}} 是简介形式的内容。如果它是 {{HTMLElement('body')}} 的子元素，那么就是网站的全局页眉。如果它是 {{HTMLElement('article')}} 或{{HTMLElement('section')}} 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼 [标题](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#增加一个标题)）。
@@ -169,11 +168,13 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 这里不应使用 `<aside>`，因为它和主内容并没有必要的联系（你想在任何地方都能看到它）。甚至不能用 `<section>` ，因为它也不是页面上主内容的一部分。所以在这种情况下就应使用 `<div>`，为满足无障碍使用特征，还应为购物车的标题设置一个可读标签。
 
-> **警告：**`<div>` 非常便利但容易被滥用。由于它们没有语义值，会使 HTML 代码变得混乱。要小心使用，只有在没有更好的语义方案时才选择它，而且要尽可能少用，否则文档的升级和维护工作会非常困难。
+> **警告：** div 元素非常便利但容易被滥用。由于它们没有语义值，会使 HTML 代码变得混乱。要小心使用，只有在没有更好的语义方案时才选择它，而且要尽可能少用，否则文档的升级和维护工作会非常困难。
 
 ### 换行与水平分割线
 
 有时会用到 {{htmlelement("br")}} 和 {{htmlelement("hr")}} 两个元素，需要介绍一下。
+
+#### \<br>：换行元素
 
 `<br>` 可在段落中进行换行；`<br>` 是唯一能够生成多个短行结构（例如邮寄地址或诗歌）的元素。比如：
 
@@ -186,24 +187,21 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 没有 `<br>` 元素，这段会直接显示在长长的一行中（如前文所讲，[HTML 会忽略大部分空格](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#HTML中的空白)）；使用 `<br>` 元素，才使得诗看上去像诗：
 
-从前有个人叫小高
-他说写 HTML 感觉最好
-但他写的代码结构语义一团糟
-他写的标签谁也懂不了。
+{{EmbedLiveSample('br_换行元素', '100%', 150)}}
+
+#### \<hr>：主题性中断元素
 
 `<hr>` 元素在文档中生成一条水平分割线，表示文本中主题的变化（例如话题或场景的改变）。一般就是一条水平的直线。例如：
 
 ```html
 <p>原来这唐僧是个慈悯的圣僧。他见行者哀告，却也回心转意道：“既如此说，且饶你这一次。再休无礼。如若仍前作恶，这咒语颠倒就念二十遍！”行者道：“三十遍也由你，只是我不打人了。”却才伏侍唐僧上马，又将摘来桃子奉上。唐僧在马上也吃了几个，权且充饥。</p>
-<hr>
+<hr />
 <p>却说那妖精，脱命升空。原来行者那一棒不曾打杀妖精，妖精出神去了。他在那云端里，咬牙切齿，暗恨行者道：“几年只闻得讲他手段，今日果然话不虚传。那唐僧已此不认得我，将要吃饭。若低头闻一闻儿，我就一把捞住，却不是我的人了。不期被他走来，弄破我这勾当，又几乎被他打了一棒。若饶了这个和尚，诚然是劳而无功也。我还下去戏他一戏。”</p>
 ```
 
 将渲染成：
 
-原来这唐僧是个慈悯的圣僧。他见行者哀告，却也回心转意道：“既如此说，且饶你这一次。再休无礼。如若仍前作恶，这咒语颠倒就念二十遍！”行者道：“三十遍也由你，只是我不打人了。”却才伏侍唐僧上马，又将摘来桃子奉上。唐僧在马上也吃了几个，权且充饥。
-
-却说那妖精，脱命升空。原来行者那一棒不曾打杀妖精，妖精出神去了。他在那云端里，咬牙切齿，暗恨行者道：“几年只闻得讲他手段，今日果然话不虚传。那唐僧已此不认得我，将要吃饭。若低头闻一闻儿，我就一把捞住，却不是我的人了。不期被他走来，弄破我这勾当，又几乎被他打了一棒。若饶了这个和尚，诚然是劳而无功也。我还下去戏他一戏。”
+{{EmbedLiveSample('hr_主题性中断元素', '100%', '185px')}}
 
 ## 规划一个简单的网站
 
@@ -211,7 +209,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 1. 时刻记住，大多数（不是全部）页面会使用一些相同的元素，例如导航菜单以及页脚内容。若网站为商业站点，不妨在所有页面的页脚都加上联系方式。请记录这些对所有页面都通用的内容：![所有页面共有的内容，包括：站点标题、Logo、联系方式、版权声明、语言等信息。](common-features.png)
 2. 接下来，可为页面结构绘制草图（这里与前文那个站点页面的截图类似）。记录每一块的作用：![简单的页面布局示意图，有页眉、页脚、主内容、侧边栏。](site-structure.png)
-3. 下面，对于期望添加进站点的所有其它（通用内容以外的）内容展开头脑风暴，直接罗列出来。![把假日旅行站点的所有功能罗列到一个列表中](feature-list.png)
+3. 下面，对于期望添加进站点的所有其他（通用内容以外的）内容展开头脑风暴，直接罗列出来。![把假日旅行站点的所有功能罗列到一个列表中](feature-list.png)
 4. 下一步，试着对这些内容进行分组，这样可以让你了解哪些内容可以放在同一个页面。这种做法和 {{glossary("Card sorting", "卡片分类法")}} 非常相似。![假日网站的页面应分 5 类：搜索、特别提供、具体国家信息、搜索结果、购物。](card-sorting.png)
 5. 接下来，试着绘制一个站点地图的草图，使用一个气泡代表网站的一个页面，并绘制连线来表示页面间的一般工作流。主页面一般置于中心，且链接到其他大多数页面；小型网站的大多数页面都可以从主页的导航栏中链接跳转。也可记录下内容的显示方式。![](site-map.png)
 
@@ -225,20 +223,8 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 现在你应该对如何构建网页/站点有了更好的理解。下一节我们将学习如何调试 HTML。
 
-## 另请参阅
+## 参见
 
-- [使用 HTML 区段和大纲](/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)：HTML5 语义元素和大纲算法进阶指南。
+- [使用 HTML 区段和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)：HTML 语义元素和大纲算法进阶指南。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## 本章目录
-
-- [开始学习 HTML](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started)
-- [“头”里有什么？HTML 元信息](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文字处理初步](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构)
-- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

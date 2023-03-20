@@ -53,7 +53,7 @@ slug: Web/HTML/Element/blockquote
 
 如果想要使用短引用（行间引用），可以使用{{HTMLElement("q")}} 标签。
 
-## 例子
+## 示例
 
 下面的这个例子演示了使用 `<blockquote>` 元素引用一段来自 {{RFC(1149)}} 的内容，以禽类作为载体的 IP 数据包传输标准。
 
@@ -75,7 +75,7 @@ slug: Web/HTML/Element/blockquote
 
 上面的 HTML 代码将会生成：
 
-{{EmbedLiveSample("Example", 640, 180)}}
+{{EmbedLiveSample("示例", 640, 180)}}
 
 ## 规范
 

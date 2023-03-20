@@ -16,7 +16,7 @@ slug: Web/API/DOMParser
 ## 语法
 
 ```js
-let domparser = new DOMParser()​​;
+let domparser = new DOMParser();
 ```
 
 ## 方法

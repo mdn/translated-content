@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Instance/Instance
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Instance()`** コンストラクターは、新しい `Instance` オブジェクトを生成します。これはステートフルで実行可能な {{jsxref("WebAssembly.Module")}} のインスタンスです。
 

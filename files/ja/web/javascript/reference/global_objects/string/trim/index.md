@@ -1,6 +1,6 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/trim
+slug: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
 
 {{JSRef}}

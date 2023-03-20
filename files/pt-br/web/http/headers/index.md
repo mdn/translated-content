@@ -121,9 +121,9 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
   - : Contém [cookies](/pt-BR/docs/Web/HTTP/Cookies) HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies do servidor para o agente de usuário.
-- {{HTTPHeader("Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Cookie2")}}
   - : Contém um cookie HTTP enviado anteriormente pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie2")}}, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Cookie")}} em vez disso.
-- {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Set-Cookie2")}}
   - : Envia cookies do servidor para o agente-usuário, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Set-Cookie")}} em vez disso.
 
 ## CORS

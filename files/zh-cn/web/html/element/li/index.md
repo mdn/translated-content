@@ -45,7 +45,7 @@ slug: Web/HTML/Element/li
 
     > **备注：** 这个属性在 HTML 4 中废弃，但是在 HTML 5 中重新引入。
 
-    > **备注：** 在 {{Gecko("9.0")}} 之前，负值会错误地转换为 0。{{Gecko("9.0")}} 开始，所有整数值都可以正确解析。
+    > **备注：** 在 Gecko 9.0 之前，负值会错误地转换为 0。Gecko 9.0 开始，所有整数值都可以正确解析。
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
   - : 这个字符型属性表明了数字的类型：
 
@@ -97,7 +97,7 @@ slug: Web/HTML/Element/li
 
 ## 另见
 
-- 其它列表相关的 HTML 元素： {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}, 和过时的 {{HTMLElement("dir")}}；
+- 其他列表相关的 HTML 元素： {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}, 和过时的 {{HTMLElement("dir")}}；
 - 可能特定用于排版 `<li>` 元素的 CSS 属性：
 
   - {{cssxref("list-style")}} 属性，用于选择序号的展示方式，

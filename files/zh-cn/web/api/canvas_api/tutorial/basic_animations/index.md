@@ -451,7 +451,7 @@ function draw() {
 
 {{EmbedLiveSample("鼠标追踪动画", "500", "500")}}
 
-## 其它例子
+## 其他例子
 
 - [Advanced animations](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : 我们将在下一章看到一些先进的动画技术和物理现象。

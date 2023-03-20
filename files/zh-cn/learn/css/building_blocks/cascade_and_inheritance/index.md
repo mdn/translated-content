@@ -7,7 +7,7 @@ slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 
 本文旨在让你理解 CSS 的一些最基本的概念——层叠、优先级和继承——这些概念决定着如何将 CSS 应用到 HTML 中，以及如何解决冲突。
 
-尽管与课程的其它部分相比，完成这节课可能看起来没有那么直接的相关性，而且更学术性一些，但是理解这些东西将为你以后节省很多痛苦！我们希望你仔细阅读本节，并在继续下一步学习之前，确保你是否理解了这些概念。
+尽管与课程的其他部分相比，完成这节课可能看起来没有那么直接的相关性，而且更学术性一些，但是理解这些东西将为你以后节省很多痛苦！我们希望你仔细阅读本节，并在继续下一步学习之前，确保你是否理解了这些概念。
 
 <table>
   <tbody>
@@ -130,7 +130,7 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 800)}}
 
-试着将 `all` 改成其它可用的值然后观察有什么不一样。
+试着将 `all` 改成其他可用的值然后观察有什么不一样。
 
 ## 理解层叠
 
@@ -200,7 +200,7 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 ### 内联样式
 
-内联样式，即 {{htmlattrxref("style")}} 属性内的样式声明，优先于所有普通的样式，无论其优先级如何。这样的声明没有选择器，但它们的优先级可以理解为 1-0-0-0；即无论选择器中有多少个 ID，它总是比其它任何优先级的权重都要高。
+内联样式，即 {{htmlattrxref("style")}} 属性内的样式声明，优先于所有普通的样式，无论其优先级如何。这样的声明没有选择器，但它们的优先级可以理解为 1-0-0-0；即无论选择器中有多少个 ID，它总是比其他任何优先级的权重都要高。
 
 ### !important
 
@@ -271,27 +271,3 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 如果你开始遇到样式没有按照预期应用的奇怪问题，请回到这里。这可能是一个特殊的问题。
 
 {{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
-
-## 本章目录
-
-- [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [标签、类、ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-- [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)
-- [基本的 CSS 理解](/zh-CN/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [创建精美的信纸](/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [一个漂亮的盒子](/zh-CN/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

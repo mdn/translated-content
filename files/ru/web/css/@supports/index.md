@@ -47,7 +47,7 @@ not ( not ( transform-origin: 2px ) )
 (display: flexbox) and ( not (display: inline-grid) )
 ```
 
-> **Примечание:** **Предупреждение:** there is no need to enclose the `not` operator between two parentheses when at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
+> **Предупреждение:** there is no need to enclose the `not` operator between two parentheses when at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
 
 ### Оператор and
 
@@ -91,7 +91,7 @@ is equivalent to:
 (( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))
 ```
 
-> **Примечание:** **Предупреждение**: when using both `and` and `or` operators, the parentheses must be used in order to define the order in which they apply. If not, the condition is invalid leading to the whole at-rule to be ignored.
+> **Предупреждение:** when using both `and` and `or` operators, the parentheses must be used in order to define the order in which they apply. If not, the condition is invalid leading to the whole at-rule to be ignored.
 
 ### Формальный синтаксис
 

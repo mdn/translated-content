@@ -1,6 +1,6 @@
 ---
 title: Loop
-slug: Glossary/loop
+slug: Glossary/Loop
 tags:
   - Glossary
   - control flow
@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/loop
 original_slug: Глоссарий/loop
 ---
+
 Цикл - это последовательность инструкций, которая постоянно повторяется до тех пор, пока в {{Glossary('computer programming', 'программе')}} не будет выполнено определённое условие. Примером может служить процесс получения элемента данных, его последующего изменения, а затем проверки некоторых {{Glossary ('conditional', 'условий')}}, например, что счётчик достиг заданного числа.
 
 ## Примеры
@@ -70,10 +71,6 @@ while(i < 5){
 
 - Блок кода будет продолжать работать, пока переменная (i) меньше 5.
 
-1. Общие сведения
-
-    1. {{interwiki("wikipedia", "Control_flow#Loops","Control flow")}} на Википедии
-
-2. [MDN Web Docs Glossary](/ru/docs/Glossary)
+1. [MDN Web Docs Glossary](/ru/docs/Glossary)
 
     1. {{Glossary("Loop")}}

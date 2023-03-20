@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Table/grow
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`grow()`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイプメソッドで、 Table インスタンスの大きさを指定された要素数だけ拡張します。
 

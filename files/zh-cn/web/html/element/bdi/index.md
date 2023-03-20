@@ -3,10 +3,9 @@ title: <bdi>
 slug: Web/HTML/Element/bdi
 ---
 
-## Summary
-
 {{HTMLSidebar}}
-**HTML** 双向隔离元素 (** `<bdi>` **) 告诉浏览器的双向算法将其包含的文本与周围的文本隔离，当网站动态插入一些文本且不知道所插入文本的方向性时，此功能特别有用。
+
+**HTML** 双向隔离元素（**`<bdi>`**）告诉浏览器的双向算法将其包含的文本与周围的文本隔离，当网站动态插入一些文本且不知道所插入文本的方向性时，此功能特别有用。
 
 {{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
 

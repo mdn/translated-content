@@ -71,7 +71,7 @@ Le nom local d'un noeud est la partie du nom qualifié du noeud qui arrive aprè
 </ecomm:business>
 ```
 
-> **Note :** Dans {{Gecko("1.9.2")}} et antérieurs, la propriété renvoie la version majuscule du nom local pour les éléments HTML dans les DOM HTML (par opposition aux éléments XHTML dans les DOM XML). Dans les versions plus tardives, en conformité avec HTML5, la propriété renvoie dans la cas du stockage interne du DOM, en minuscule pour les éléments HTML dans les DOM HTML et les éléments XHTML dans les DOM XML. La propriété {{domxref("element.tagName","tagName")}} continue à renvoyer la casse majuscule pour les éléments HTML dans les DOM HTML.
+> **Note :** Dans Gecko 1.9.2 et antérieurs, la propriété renvoie la version majuscule du nom local pour les éléments HTML dans les DOM HTML (par opposition aux éléments XHTML dans les DOM XML). Dans les versions plus tardives, en conformité avec HTML5, la propriété renvoie dans la cas du stockage interne du DOM, en minuscule pour les éléments HTML dans les DOM HTML et les éléments XHTML dans les DOM XML. La propriété {{domxref("element.tagName","tagName")}} continue à renvoyer la casse majuscule pour les éléments HTML dans les DOM HTML.
 
 ## Spécifications
 

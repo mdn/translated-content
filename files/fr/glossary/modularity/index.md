@@ -1,6 +1,6 @@
 ---
 title: Modularité
-slug: Glossary/modularity
+slug: Glossary/Modularity
 tags:
   - CodingScripting
   - Glossaire

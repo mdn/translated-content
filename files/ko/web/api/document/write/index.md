@@ -65,12 +65,9 @@ If the `document.write()` call is embedded within an inlined HTML `<script>` tag
 
 > **참고:** Starting in 55, Chrome will not execute `<script>` elements injected via `document.write()` in case of an HTTP cache miss for users on a 2G connection.
 
-## 사양
+## 명세서
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "#dom-document-write", "document.write(...)")}} | {{Spec2("HTML WHATWG")}} |         |
-| {{SpecName("DOM2 HTML", "html.html#ID-75233634", "document.write(...)")}} | {{Spec2("DOM2 HTML")}}     |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

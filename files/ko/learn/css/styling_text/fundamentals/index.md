@@ -664,11 +664,3 @@ window.addEventListener("load", drawOutput);
 We hoped you enjoyed playing with text in this article! The next article will give you all you need to know about styling HTML lists.
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/ko/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/ko/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/ko/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/ko/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

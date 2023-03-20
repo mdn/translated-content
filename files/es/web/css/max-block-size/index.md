@@ -11,7 +11,7 @@ El tamaño máximo de la otra dimensión se especifica usando la propiedad {{css
 
 Esto es útil porque `max-width` se usa siempre para tamaños horizontales y `max-height` para tamaños verticales, y si necesita establecer longitudes basadas en el tamaño de su contenido de texto, debe ser capaz de hacerlo con la dirección de escritura en cuenta.
 
-En los momentos que normalmente utilizaría `max-height` o `max-width`, debería usar `max-block-size` para establecer el "alto" máximo del contenido (incluso si esto no es un valor vertical) y `max-inline-size` para establecer el "ancho" máximo del contenido (aunque esto puede ser vertical en lugar de horizontal). Vea el {{SectionOnPage("/es/docs/Web/CSS/writing-mode", "Ejemplo")}}, que muestra los diferentes modos de escritura en acción.
+En los momentos que normalmente utilizaría `max-height` o `max-width`, debería usar `max-block-size` para establecer el "alto" máximo del contenido (incluso si esto no es un valor vertical) y `max-inline-size` para establecer el "ancho" máximo del contenido (aunque esto puede ser vertical en lugar de horizontal). Vea el [Ejemplo](/es/docs/Web/CSS/writing-mode#ejemplo), que muestra los diferentes modos de escritura en acción.
 
 {{EmbedInteractiveExample("pages/css/max-block-size.html")}}
 

@@ -73,9 +73,9 @@ dessiner();
 
 {{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.minDecibels")}}
+{{Compat}}
 
 ## Voir aussi
 

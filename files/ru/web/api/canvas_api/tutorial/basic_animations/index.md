@@ -12,7 +12,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/API/Canvas_API/Tutorial/Основы_анимации
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 Поскольку для управления элементами {{HTMLElement ("canvas")}} используется JavaScript, не составляет труда сделать (интерактивные) анимации. В этой главе мы рассмотрим, как делаются некоторые базовые анимации.
 

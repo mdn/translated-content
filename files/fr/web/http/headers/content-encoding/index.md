@@ -78,15 +78,11 @@ Content-Encoding: gzip
 
 ## Spécifications
 
-| Spécification                                                    | Titre                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7932", "Brotli Compressed Data Format")}} | Brotli Compressed Data Format                                 |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}     | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-| {{RFC("2616", "Content-Encoding", "14.11")}}     | Content-Encoding                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Content-Encoding")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,76 +1,66 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+l10n:
+  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
 ---
 
 {{JSRef}}
 
-**`Promise.allSettled()`** メソッドは、与えられたすべてのプロミスが履行されたか拒否された後に、それぞれのプロミスの結果を記述した配列オブジェクトで解決されるプロミスを返します。
-
-一般的には、複数の非同期タスクがあり、お互いに依存せずに正常に完了する場合や、各プロミスの結果を常に知りたい場合に使用されます。
-
-これに対して、 {{jsxref("Promise.all()")}} で返されるプロミスは、タスクがお互いに依存している場合や、タスクのいずれかが拒否されたときにすぐに拒否したい場合にはより適切かもしれません。
+**`Promise.allSettled()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、入力のすべてのプロミスが決定したとき（空の反復可能オブジェクトが渡された場合を含む）に履行され、各プロミスの結果を記述するオブジェクトの配列が返されます。
 
 {{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
 
 ## 構文
 
-```js
-Promise.allSettled(iterable);
+```js-nolint
+Promise.allSettled(iterable)
 ```
 
 ### 引数
 
 - `iterable`
-  - : {{jsxref("Array")}} などの[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)オブジェクトで、それぞれの要素が `Promise` であるものです。
+  - : プロミスの[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)（{{jsxref("Array")}} など）です。
 
 ### 返値
 
-**待ち状態**の {{jsxref("Promise")}} で、指定されたプロミスの集合に含まれるすべてのプロミスが、正常に履行されるか拒否されるかのどちらかで完了すると、**非同期に**解決されます。その際、返されたプロミスのハンドラーには、元のプロミスの集合に含まれるの各プロミスの結果を含む配列が入力として渡されます。
+次のような {{jsxref("Promise")}} です。
 
-ただし、空の反復可能オブジェクトが引数として渡された**場合に限り**、 `Promise.allSettled()` は空の配列として**解決済みの** `Promise` オブジェクトを返します。
+- *反復可能*オブジェクトが空であった場合は、**履行済み**になります。
+- 渡された*反復可能*オブジェクトのすべてのプロミスが（履行または拒否に）決定したとき、**非同期に履行されます**。履行されたプロミスの値はオブジェクトの配列で、それぞれが反復可能なオブジェクトの中の一つのプロミスの結果を記述しています。それぞれの成果オブジェクトには、以下のようなプロパティがあります。
 
-出力されるそれぞれのオブジェクトには、 `status` の文字列が存在します。 status が `fulfilled` (履行) であれば、 `value` が存在します。 status が `rejected` (拒否) であれば、 `reason` が存在します。 value (または reason) はそれぞれのプロミスがどの値で履行 (または拒否) されたかを反映します。
+  - `status`
+    - : 文字列で、 `"fulfilled"` （履行）または `"rejected"` （拒否）をとり、そのプロミスの最終的な状態を示します。
+  - `value`
+    - : `status` が `"fulfilled"` の場合のみ存在します。プロミスが履行された値です。
+  - `reason`
+    - : `status` が `"rejected"` の場合のみ存在します。プロミスが拒否された理由です。
+
+渡された反復可能オブジェクトが空でなく、待機中のプロミスを含んでいない場合、返されたプロミスは（同期ではなく）非同期に履行されます。
+
+## 解説
+
+`Promise.allSettled()` メソッドは[プロミスの並列処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並列処理) メソッドの 1 つです。`Promise.allSettled()` は、通常、正常に完了するために互いに依存しない複数の非同期タスクがある場合、または各プロミスの結果を常に知りたい場合に使用されます。
+
+それに対して、 {{jsxref("Promise.all()")}} が返すプロミスは、タスクが他にも依存している場合や、どれかが拒否されたらすぐに拒否したい場合により適しているかもしれません。
 
 ## 例
 
 ### Promise.allSettled の使用
 
-#### {{JSxRef("Promise.then", "Promise.prototype.then()")}}
-
 ```js
 Promise.allSettled([
   Promise.resolve(33),
-  new Promise(resolve => setTimeout(() => resolve(66), 0)),
+  new Promise((resolve) => setTimeout(() => resolve(66), 0)),
   99,
-  Promise.reject(new Error('an error'))
-])
-.then(values => console.log(values));
+  Promise.reject(new Error("an error")),
+]).then((values) => console.log(values));
 
 // [
-//   {status: "fulfilled", value: 33},
-//   {status: "fulfilled", value: 66},
-//   {status: "fulfilled", value: 99},
-//   {status: "rejected",  reason: Error: an error}
-// ]
-```
-
-#### {{jsxref("Operators/await", "await")}}
-
-```js
-const values = await Promise.allSettled([
-  Promise.resolve(33),
-  new Promise(resolve => setTimeout(() => resolve(66), 0)),
-  99,
-  Promise.reject(new Error('an error'))
-])
-console.log(values)
-
-// [
-//   {status: "fulfilled", value: 33},
-//   {status: "fulfilled", value: 66},
-//   {status: "fulfilled", value: 99},
-//   {status: "rejected",  reason: Error: an error}
+//   { status: 'fulfilled', value: 33 },
+//   { status: 'fulfilled', value: 66 },
+//   { status: 'fulfilled', value: 99 },
+//   { status: 'rejected', reason: Error: an error }
 // ]
 ```
 
@@ -84,9 +74,10 @@ console.log(values)
 
 ## 関連情報
 
-- `Promise.allSettled` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise) で利用できます
-- [Promises](/ja/docs/Archive/Add-ons/Techniques/Promises)
+- [`Promise.allSettled` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-promise)
 - [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)
 - [プロミスを使った行儀のよい非同期のプログラミング](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
+- {{jsxref("Promise.any()")}}
+- {{jsxref("Promise.race()")}}

@@ -44,7 +44,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
 此标签支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}
   - : 这个可枚举的属性定义每一列的元素内容的水平对齐方式，支持的值有：
 
     - `left`，元素中的内容左对齐
@@ -66,11 +66,11 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
     > **备注：** 不要使用这个并未标准化的属性，它只在 IE 的某些版本中生效，{{HTMLElement("colgroup")}} 标签应该使用 CSS 来定义样式。要实现和 **bgcolor** 属性相似的效果，可以在相关的 {{HTMLElement("td")}} 标签上使用 {{cssxref("background-color")}} 属性。 |
 
-- {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}
+- {{htmlattrdef("char")}} {{deprecated_inline}}
   - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "colgroup")}} is not set to `char`, this attribute is ignored, though it will still be used as the default value for the {{htmlattrxref("align", "col")}} of the {{HTMLElement("col")}} which are members of this column group.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "colgroup")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "colgroup")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
-- {{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}
+- {{htmlattrdef("charoff")}} {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the **char** attribute.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
@@ -80,7 +80,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
     > **备注：** This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group. The `span` attribute is not permitted if there are one or more `<col>` elements within the `<colgroup>`.
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}
+- {{htmlattrdef("valign")}} {{deprecated_inline}}
   - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 
     - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.

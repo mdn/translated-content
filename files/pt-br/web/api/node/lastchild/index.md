@@ -23,7 +23,10 @@ var ul = document.getElementById('lista');
 var li_last = ul.lastChild;
 ```
 
-## Specificações
+## Especificação
 
-- {{Spec("https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-61AD09FB", "DOM nível 2: lastChild", "REC")}}
-- {{Spec("http://dom.spec.whatwg.org/#dom-node-lastchild", "DOM padrão: lastChild")}}
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

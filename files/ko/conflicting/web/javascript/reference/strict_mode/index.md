@@ -23,7 +23,7 @@ Strict 모드는 점진적으로 전환 할 수 있도록 설계되었다. 개�
 - Declaring function in blocks `if (a < b) { function f() {} }`
 - Obvious errors
 
-  - Declaring twice the same name for a property name in an object literal `{a: 1, b: 3, a: 7}` This is no longer the case in ECMAScript 2015 ({{bug(1041128)}}).
+  - Declaring twice the same name for a property name in an object literal `{a: 1, b: 3, a: 7}` This is no longer the case in ECMAScript 2015 ([Firefox bug 1041128](https://bugzil.la/1041128)).
   - Declaring two function parameters with the same name `function f(a, b, b) {}`
 
 우리들의 명백한 에러나 나쁜 실수들이 드러나기 때문에 이러한 에러들은 좋다. 이러한 것들은 코드가 실행되기 전에 실행이 된다.

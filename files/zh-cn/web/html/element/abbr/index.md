@@ -44,7 +44,7 @@ slug: Web/HTML/Element/abbr
 
 这个元素只有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。在同 `<abbr>` 元素一起使用的时候，{{htmlattrxref("title")}} 属性有特殊的语法含义; 它必须包含对一个缩写完全天然可读的扩写或者描述。这些文本通常会作为提示，在鼠标指针覆盖到该元素时显示作为一个提示。
 
-你使用的每一个 `<abbr>` 元素与其它同类元素都是相互独立的，为其中一个提供 `title` 不会自动把相同的附加文字依附到其它内容文字相同的元素上。
+你使用的每一个 `<abbr>` 元素与其他同类元素都是相互独立的，为其中一个提供 `title` 不会自动把相同的附加文字依附到其他内容文字相同的元素上。
 
 ## 用法注解
 
@@ -69,7 +69,7 @@ slug: Web/HTML/Element/abbr
 - Opera、Firefox 和其他一些浏览器给这个元素的内容添加一条点状下划线。
 - 一些浏览器不仅添加点状下划线，而且还把元素的内容添加小写大写字母的样式。若要避免这种样式，在 CSS 中添加 {{cssxref('font-variant')}}`: none` 。
 
-## 例子
+## 示例
 
 ### 创建语义化的缩写
 
@@ -83,7 +83,7 @@ slug: Web/HTML/Element/abbr
 
 #### 结果
 
-{{EmbedLiveSample("Marking_up_an_abbreviation_semantically")}}
+{{EmbedLiveSample("创建语义化的缩写")}}
 
 ### 缩写样式
 
@@ -103,13 +103,11 @@ abbr {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Styling_abbreviations")}}
+{{EmbedLiveSample("缩写样式")}}
 
 ### 提供扩展
-
-Adding a {{htmlattrxref("title")}} attribute lets you provide an expansion or definition for the abbreviation or acronym.
 
 添加一个 {{htmlattrxref("title")}} 属性，为缩写提供定义或拓展。
 
@@ -122,11 +120,9 @@ time.</p>
 
 #### 结果
 
-{{EmbedLiveSample("Providing_an_expansion")}}
+{{EmbedLiveSample("提供扩展")}}
 
 ### 定义一个缩写
-
-You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally define an abbreviation, as shown here.
 
 `<abbr>` 与 {{HTMLElement("dfn")}} 联合使用可以定义一个更加正式的缩写，如下：
 
@@ -145,7 +141,7 @@ accessed.</p>
 
 #### 结果
 
-{{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}
+{{EmbedLiveSample("定义一个缩写", 600, 120)}}
 
 可以在 _[How to mark abbreviations and make them understandable](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)_ 中浏览更多深层次的实例。
 

@@ -14,7 +14,7 @@ translation_of: Web/API/TouchList
 
 ## Методы
 
-- {{domxref("TouchList.identifiedTouch()")}} {{obsolete_inline}}
+- {{domxref("TouchList.identifiedTouch()")}}
   - : Возвращает первый объект {{domxref("Touch")}} из списка, чей идентификатор соответствует заданному значению.
 - {{domxref("TouchList.item()")}}
   - : Возвращает объект {{domxref("Touch")}}, находящийся в списке по указанному индексу

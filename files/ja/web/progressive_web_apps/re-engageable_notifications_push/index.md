@@ -91,9 +91,9 @@ self.addEventListener('push', function(e) { /* ... */ });
 
 このデモは 3 つのファイルで構成されています。
 
-- [index.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/index.js) — アプリのソースコードが含まれています。
-- [server.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/server.js) — サーバー部分が含まれています（Node.js で書かれています）。
-- [service-worker.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/service-worker.js) — サービスワーカー固有のコードが含まれています。
+- [index.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/index.js) — アプリのソースコードが含まれています。
+- [server.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/server.js) — サーバー部分が含まれています（Node.js で書かれています）。
+- [service-worker.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/service-worker.js) — サービスワーカー固有のコードが含まれています。
 
 これらすべてを探りましょう。
 
@@ -258,7 +258,7 @@ self.addEventListener('push', function(event) {
 
 {{domxref("ServiceWorkerGlobalScope/push_event", "push")}} イベントのリスナーを追加し、データから取得したテキストからなる `payload` 変数を作成し（またはデータが空の場合に使用する文字列を作成し）、通知がユーザーに表示されるまで待ちます。
 
-それらがどのように処理されるかを知りたい場合は、[サービスワーカークックブック](https://github.com/mdn/serviceworker-cookbook/)（英語）の残りの例を調べてください — [完全なソースコードは GitHub で入手できます](https://github.com/mozilla/serviceworker-cookbook/)。 一般的な使い方だけでなく、ウェブプッシュ、キャッシュ戦略、パフォーマンス、オフラインでの作業など、多数の実用的な例があります。
+それらがどのように処理されるかを知りたい場合は、[サービスワーカークックブック](https://github.com/mdn/serviceworker-cookbook/)（英語）の残りの例を調べてください — [完全なソースコードは GitHub で入手できます](https://github.com/mdn/serviceworker-cookbook/)。 一般的な使い方だけでなく、ウェブプッシュ、キャッシュ戦略、パフォーマンス、オフラインでの作業など、多数の実用的な例があります。
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 

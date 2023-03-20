@@ -1,7 +1,6 @@
 ---
 title: 移动端触摸控制
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
-original_slug: Games/Techniques/Control_mechanisms/移动端触摸控制
 ---
 
 {{GamesSidebar}}

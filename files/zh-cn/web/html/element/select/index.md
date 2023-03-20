@@ -41,7 +41,7 @@ slug: Web/HTML/Element/select
 - {{htmlattrdef("size")}}
   - : 如果控件显示为滚动列表框（如声明了 `multiple`），则此属性表示为控件中同时可见的行数。浏览器不需要将选择元素呈现为滚动列表框。默认值为 0。
 
-> **备注：** 根据 HTML5 规范，默认值应该为 1；但是，在实践中，这样会影响到一些网站，同时其它浏览器也没有那么处理，所以 Mozilla 在 Firefox 中选择继续使用默认值 0。
+> **备注：** 根据 HTML5 规范，默认值应该为 1；但是，在实践中，这样会影响到一些网站，同时其他浏览器也没有那么处理，所以 Mozilla 在 Firefox 中选择继续使用默认值 0。
 
 ## 使用笔记
 
@@ -193,11 +193,11 @@ slug: Web/HTML/Element/select
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("combobox")}} with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise {{ARIARole("listbox")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("menu")}} with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -216,5 +216,5 @@ slug: Web/HTML/Element/select
 
 ## 参见
 
-- 其它表单对象：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- 其他表单对象：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
 - 由 `<select>` 触发的事件： {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}

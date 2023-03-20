@@ -47,7 +47,7 @@ Una solución nativa podría resolver mucho de esto si es implementado correctam
 
 No te enseñaremos como crear archivos de audio y video — eso requiere un conocimiento completamente diferente. Por el contrario, te proporcionamos [archivos de audio y video de muestra con códigos de ejemplo](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para que tu mismo experimentes, en caso de que no puedas conseguirlos por ti mismo.
 
-> **Nota:** **Observación**: Antes de empezar, también deberías saber que hay un puñado de OVPs (proveedores de video online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com) y [Vimeo](https://vimeo.com/), y proveedores de audio como [Soundcloud](https://soundcloud.com/). Tales compañías ofrecen una conveniente fácil forma de hospedar y consumir videos, y que no tienes que preocuparte sobre el enorme ancho de banda que se consume. Los OVPs normalmente usan código prefabricado para incrustar video/audio en tus sitios web; si usas ese camino, puedes evitar algunas dificultates que discutimos en este artículo. Discutiremos este tipo de servicios un poco más en el siguiente artículo.
+> **Nota:** Antes de empezar, también deberías saber que hay un puñado de OVPs (proveedores de video online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com) y [Vimeo](https://vimeo.com/), y proveedores de audio como [Soundcloud](https://soundcloud.com/). Tales compañías ofrecen una conveniente fácil forma de hospedar y consumir videos, y que no tienes que preocuparte sobre el enorme ancho de banda que se consume. Los OVPs normalmente usan código prefabricado para incrustar video/audio en tus sitios web; si usas ese camino, puedes evitar algunas dificultades que discutimos en este artículo. Discutiremos este tipo de servicios un poco más en el siguiente artículo.
 
 ### El elemento \<video>
 
@@ -297,12 +297,3 @@ And that's a wrap; we hope you had fun playing with video and audio in web pages
 - Automated options to [translate multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [Images in HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

@@ -11,7 +11,7 @@ slug: Web/API/Server-sent_events/Using_server-sent_events
 
 ## 从服务器接受事件
 
-服务器发送事件 API 也就是[`EventSource`](/zh-CN/Server-sent_events/EventSource)接口，在你创建一个新的[`EventSource`](/zh-CN/Server-sent_events/EventSource)对象的同时，你可以指定一个接受事件的 URI.例如：
+服务器发送事件 API 也就是 {{domxref("EventSource")}} 接口，在你创建一个新的 {{domxref("EventSource")}} 对象的同时，你可以指定一个接受事件的 URI。例如：
 
 ```
 const evtSource = new EventSource("ssedemo.php");

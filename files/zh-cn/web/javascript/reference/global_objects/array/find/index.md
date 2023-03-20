@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 {{EmbedInteractiveExample("pages/js/array-find.html")}}
 
 - 如果需要在数组中找到对应元素的索引，请使用 {{jsxref("Array.findIndex", "findIndex()")}}。
-- 如果需要查找某个值的索引，请使用 {{jsxref("Array.prototype.indexOf()")}}。（它类似于 {{jsxref("Array.prototype.indexOf()")}}，但只是检查每个元素是否与值相等，而不是使用测试函数。）
+- 如果需要查找某个值的索引，请使用 {{jsxref("Array.prototype.indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但只是检查每个元素是否与值相等，而不是使用测试函数。）
 - 如果需要查找数组中是否存在值，请使用 {{jsxref("Array.prototype.includes()")}}。同样，它检查每个元素是否与值相等，而不是使用测试函数。
 - 如果需要查找是否有元素满足所提供的测试函数，请使用 {{jsxref("Array.prototype.some()")}}。
 

@@ -55,7 +55,7 @@ resize: unset;
 
 #### CSS
 
-{{HTMLElement("textarea")}} 元素在{{gecko("2.0")}} (Firefox 4) 中默认是可以进行缩放的。你可以通过下面的 CSS 代码来重写这种行为：
+{{HTMLElement("textarea")}} 元素在 Gecko 2.0（Firefox 4）中默认是可以进行缩放的。你可以通过下面的 CSS 代码来重写这种行为：
 
 ```css
 textarea.example {

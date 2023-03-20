@@ -44,7 +44,7 @@ HTML 优雅明了，但要是出了错，你会不会一头雾水呢，本节将
 
 ## HTML 和调试
 
-HTML 并不像 Rust 那么难以理解，浏览器并不会将 HTML 编译成其它形式，而是直接解析并显示结果（称之为解释，而非编译）。可以说 HTML 的 {{glossary("element", "元素")}} 语法比 Rust、{{glossary("JavaScript")}} 或 {{glossary("Python")}} 这样“真正的编程语言”更容易理解。浏览器解析 HTML 的过程比编程语言的编译运行的过程要**宽松**得多，但这是一把双刃剑。
+HTML 并不像 Rust 那么难以理解，浏览器并不会将 HTML 编译成其他形式，而是直接解析并显示结果（称之为解释，而非编译）。可以说 HTML 的 {{glossary("element", "元素")}} 语法比 Rust、{{glossary("JavaScript")}} 或 {{glossary("Python")}} 这样“真正的编程语言”更容易理解。浏览器解析 HTML 的过程比编程语言的编译运行的过程要**宽松**得多，但这是一把双刃剑。
 
 ### 宽松的代码
 
@@ -83,7 +83,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 
     - {{htmlelement("p","段落（Paragraph）")}} 和 {{htmlelement("li","列表项（list item）")}} 元素没有结束标签。但是由于元素的结束和另一个的开始很容易推断出来，因此上图中并没有太严重的渲染错误。
     - 第一个 {{htmlelement("strong")}} 元素没有结束标签。这就严重了，因为该元素结束的位置难以确定。事实上所有剩余文本都加粗了。
-    - 一下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>​​​​`。浏览器很难做出正确解释，理由同上。
+    - 一下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>`。浏览器很难做出正确解释，理由同上。
     - {{htmlattrxref("href","a")}} 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
 
 5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Discover_browser_developer_tools)。
@@ -128,7 +128,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 3. 将整个示例文档的代码（而不仅仅是`body`部分）复制粘贴到正中的文本框内。
 4. _点击_ **Check** _按钮。_
 
-将返回一个包含错误和其它信息的列表。
+将返回一个包含错误和其他信息的列表。
 
 ![W3C 验证工具为本示例给出的验证结果。](validation-results.png)
 
@@ -161,15 +161,3 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 以上就是 HTML 调试的一篇入门介绍，同时对于调试 CSS 和 JavaScript 也有帮助，或者你职业生涯中的任一门语言。这也是 HTML 学习一章的最后一节，接下来是两个小测试，点击“下一页”来小试牛刀吧。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
-
-## 本章目录
-
-- [开始学习 HTML](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started)
-- [“头”里有什么？HTML 元信息](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文字处理初步](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构)
-- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

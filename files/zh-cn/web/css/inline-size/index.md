@@ -63,7 +63,7 @@ inline-size: unset;
 }
 ```
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -73,7 +73,7 @@ inline-size: unset;
 
 {{Compat}}
 
-## 参阅
+## 参见
 
 - The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
 - {{cssxref("writing-mode")}}

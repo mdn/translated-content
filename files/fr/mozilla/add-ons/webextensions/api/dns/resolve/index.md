@@ -89,6 +89,6 @@ resolving.then(resolved);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.dns.resolve")}}
+{{Compat}}

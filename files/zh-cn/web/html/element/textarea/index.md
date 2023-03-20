@@ -53,7 +53,7 @@ slug: Web/HTML/Element/textarea
 - {{ htmlattrdef("placeholder") }}
   - : 向用户提示可以在控件中输入的内容。在渲染提示时，占位符文本中的回车符 (\r) 或换行符 (\n) 一定会被作为行断（换行）处理。
 
-    > **备注：** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/zh-CN/docs/Web/HTML/Element/input#label) for a full explanation.
+    > **备注：** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/zh-CN/docs/Web/HTML/Element/input#标签) for a full explanation.
 - {{ htmlattrdef("readonly") }}
   - : 不允许用户修改元素内文本。和 `disabled` 属性不同的是，这个能让用户点击和选择元素内的文本。如果在表单里，这个元素的值还是会跟随表单一起提交。
 - {{ htmlattrdef("required") }}
@@ -149,7 +149,7 @@ This example has a placeholder set. Notice how it disappears when you start typi
 
 {{ EmbedLiveSample('占位符','600','80') }}
 
-> **备注：** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/zh-CN/docs/Web/HTML/Element/input#label) for a full explanation.
+> **备注：** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/zh-CN/docs/Web/HTML/Element/input#标签) for a full explanation.
 
 ### 禁用和只读
 

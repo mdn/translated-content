@@ -511,15 +511,3 @@ window.addEventListener('load', updateCode);
 - {{jsxref("Array")}} — Array 对象引用页面 - 有关此页面中讨论功能的详细参考指南等。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
-
-## 在本单元中
-
-- [What is JavaScript?](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

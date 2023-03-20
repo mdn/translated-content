@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La méthode **`grow()`**, rattachée au prototype de {{jsxref("WebAssembly.Table")}}, permet d'augmenter la taille du tableau WebAssembly d'un nombre d'éléments donné.
 

@@ -1,6 +1,6 @@
 ---
 title: <input type="text">
-slug: Web/HTML/Element/Input/text
+slug: Web/HTML/Element/input/text
 ---
 
 {{HTMLSidebar}}
@@ -48,7 +48,7 @@ let theText = myTextInput.value;
 
 如果当前文本输入没有约束验证（查看[验证](#验证)小节获取更多详细信息），`value` 值可能是空字符串（`""`）。
 
-## 其它属性
+## 其他属性
 
 除了所有 {{HTMLElement("input")}} 元素上共有的可操作的属性外，文本输入框还支持以下属性：
 
@@ -84,7 +84,7 @@ let theText = myTextInput.value;
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` label](/zh-CN/docs/Web/HTML/Element/input#label) 以获取更多信息。
+> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
 ### `readonly`
 

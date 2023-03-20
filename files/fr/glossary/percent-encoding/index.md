@@ -1,6 +1,6 @@
 ---
 title: Encodage-pourcent
-slug: Glossary/percent-encoding
+slug: Glossary/Percent-encoding
 tags:
   - Débutant
   - Glossaire

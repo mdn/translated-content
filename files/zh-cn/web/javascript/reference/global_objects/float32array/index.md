@@ -110,7 +110,7 @@ new Float32Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]()")}}
   - : 返回一个新的包含数组元素的数组迭代器对象。
 
-## 例子
+## 示例
 
 ```js
 // From a length

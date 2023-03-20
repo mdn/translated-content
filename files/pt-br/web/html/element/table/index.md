@@ -7,7 +7,7 @@ slug: Web/HTML/Element/table
 
 O elemento HTML _Table_ (`<table>`) representa dados em duas dimensões ou mais.
 
-> **Note:** **Nota:** Antes da criação do [CSS](/pt-BR/docs/CSS), os elementos HTML eram muitas vezes utilizados para alterar o layout da página. Esta prática tem sido desencorajada desde o HTML 4 e o elemento _Table_ não deve ser utilizado para fins de layout.
+> **Nota:** Antes da criação do [CSS](/pt-BR/docs/CSS), os elementos HTML eram muitas vezes utilizados para alterar o layout da página. Esta prática tem sido desencorajada desde o HTML 4 e o elemento _Table_ não deve ser utilizado para fins de layout.
 
 ## Contexto de uso
 

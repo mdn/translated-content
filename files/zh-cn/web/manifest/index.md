@@ -173,7 +173,7 @@ Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的�
 定义所有 Web 应用程序顶级的默认方向 {{Glossary("Browsing context", "browsing contexts")}}.
 
 ```json
-​​"orientation": "portrait-primary"
+"orientation": "portrait-primary"
 ```
 
 方向可以是以下值之一：

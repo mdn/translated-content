@@ -220,14 +220,14 @@ oReq.open();
 > **Nota:** Los eventos de progreso no están disponibles para el
 > protocolo `file:`.
 
-> **Nota:** A partir de {{Gecko("9.0")}}, se puede confiar en que los eventos de progreso
+> **Nota:** A partir de Gecko 9.0, se puede confiar en que los eventos de progreso
 > lleguen para cada trozo de datos recibidos, incluyendo el último trozo en los casos
 > en los que se recibe el último paquete y se cierra la conexión antes de que se
 > dispare el evento de progreso. En este caso, el evento de progreso se dispara automáticamente
 > cuando se produce el evento de carga para ese paquete. Esto te permite ahora monitorizar
 > de forma fiable el progreso observando únicamente el evento "progress".
 
-> **Nota**: A partir de {{Gecko("12.0")}}, si su evento de progreso es llamado con
+> **Nota**: A partir de Gecko 12.0, si su evento de progreso es llamado con
 > un `responseType` de "moz-blob", el valor de la respuesta es un
 > {{domxref("Blob")}} que contiene los datos recibidos hasta el momento.
 
@@ -900,15 +900,15 @@ ventana terminada tenga su evento [`unload`](/es/docs/Web/Reference/Events/unloa
 ## Workers
 
 Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
-{{bug(678057)}} para más detalles. Otros navegadores pueden manejar esto de manera diferente.
+[Error 678057 en Firefox](https://bugzil.la/678057) para más detalles. Otros navegadores pueden manejar esto de manera diferente.
 
 ## Especificaciones
 
-{{Specifications("api.XMLHttpRequest")}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Véase también
 

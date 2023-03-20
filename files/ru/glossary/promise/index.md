@@ -15,10 +15,6 @@ original_slug: Глоссарий/Promise
 
 Чтобы узнать больше, пройдите по ссылкам
 
-### General knowledge
-
-- {{interwiki("wikipedia", "Futures and promises")}}
-
 ### Technical reference
 
 - {{jsxref("Promise")}} in the [JavaScript Reference](/ru/docs/Web/JavaScript/Reference).

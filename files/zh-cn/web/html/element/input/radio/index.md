@@ -1,6 +1,6 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
+slug: Web/HTML/Element/input/radio
 ---
 
 {{HTMLSidebar}}
@@ -123,7 +123,7 @@ form.addEventListener(
 
   - : 一个布尔值属性，如果出现，代表这个单选按钮是组中被选中的那个。
 
-    不像其它浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 {{htmlattrxref("autocomplete","input")}} 属性来控制这个特性。
+    不像其他浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 {{htmlattrxref("autocomplete","input")}} 属性来控制这个特性。
 
 - {{htmlattrdef("value")}}
 

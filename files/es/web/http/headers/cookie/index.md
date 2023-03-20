@@ -32,13 +32,11 @@ Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;
 
 ## Especificaciones
 
-| Specification                                | Title                           |
-| -------------------------------------------- | ------------------------------- |
-| {{RFC("6265", "Cookie", "5.4")}} | HTTP State Management Mechanism |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Cookie")}}
+{{Compat}}
 
 ## Ver también
 

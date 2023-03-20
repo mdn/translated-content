@@ -5,7 +5,7 @@ slug: Web/API/CacheStorage
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-**`CacheStorage`** 接口表示 {{domxref("Cache")}} 对象的存储。它提供了一个 {{domxref("ServiceWorker")}} 、其它类型 worker 或者 {{domxref("window")}} 范围内可以访问到的所有命名 cache 的主目录（它并不是一定要和 service workers 一起使用，即使它是在 service workers 规范中定义的），并维护一份字符串名称到相应 {{domxref("Cache")}} 对象的映射。
+**`CacheStorage`** 接口表示 {{domxref("Cache")}} 对象的存储。它提供了一个 {{domxref("ServiceWorker")}} 、其他类型 worker 或者 {{domxref("window")}} 范围内可以访问到的所有命名 cache 的主目录（它并不是一定要和 service workers 一起使用，即使它是在 service workers 规范中定义的），并维护一份字符串名称到相应 {{domxref("Cache")}} 对象的映射。
 
 `CacheStorage` 同样暴露了 {{domxref("CacheStorage.open()")}} 和 {{domxref("CacheStorage.match()")}}方法。使用 {{domxref("CacheStorage.open()")}} 获取 {{domxref("Cache")}} 实例。使用 {{domxref("CacheStorage.match()")}} 检查给定的 {{domxref("Request")}} 是否是 `CacheStorage` 对象跟踪的任何 {{domxref("Cache")}} 对象中的键。
 

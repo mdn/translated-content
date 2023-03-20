@@ -75,7 +75,7 @@ function generateDataURI(file) {
 
 ## 安全
 
-> **備註：** Prior to {{Gecko("6.0")}}, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
+> **備註：** Prior to Gecko 6.0, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
 
 ## 常見的問題
 

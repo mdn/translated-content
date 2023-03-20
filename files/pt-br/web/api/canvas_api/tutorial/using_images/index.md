@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 Até agora nós criamos nossos próprios [shapes](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) e aplicamos estilos([applied styles](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)) a eles. Um dos recursos mais interessantes do {{HTMLElement("canvas")}} é a capacidade de usar imagens. Eles podem ser usados para composição dinâmica de fotos ou como pano de fundo de gráficos, como sprites em jogos e assim por diante. Imagens externas podem ser usadas em qualquer formato suportado pelo navegador, tais como PNG, GIF, ou JPEG. Você pode até usar a imagem produzida por outros elementos da tela na mesma página que a fonte!
 

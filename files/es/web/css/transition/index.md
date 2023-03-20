@@ -49,9 +49,9 @@ Hay muchos ejemplos de transiciones CSS en el artículo principal [CSS transitio
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## Véase también
 

@@ -24,23 +24,23 @@ margin-block-start: unset
 
 {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} 属性对应于 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, 和{{cssxref("text-orientation")}}属性定义的值。
 
-它涉及到 {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}},和 {{cssxref("margin-inline-end")}}属性，这些属性是用来定义其它元素的边界。
+它涉及到 {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}},和 {{cssxref("margin-inline-end")}}属性，这些属性是用来定义其他元素的边界。
 
 {{cssinfo}}
 
-## Syntax
+## 语法
 
-### Values
+### 值
 
 `margin-block-start` 属性有着和 {{cssxref("margin-left")}} 属性一样的值。
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
-## 案例
+## 示例
 
-### HTML Content
+### HTML
 
 ```html
 <div>
@@ -48,7 +48,7 @@ margin-block-start: unset
 </div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 div {
@@ -64,17 +64,17 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+{{EmbedLiveSample("示例", 140, 140)}}
 
-## Specification
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## 同样推荐
+## 参见
 
 - 标记的物理属性：{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

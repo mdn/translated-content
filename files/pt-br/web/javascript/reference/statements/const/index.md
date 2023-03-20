@@ -118,7 +118,7 @@ Em versões anteriores do Firefox & Chrome e a partir de Safari 5.1.7 e Opera 12
 
 A declaração `const` foi implementada no Firefox muito antes de `const` aparecer na especificação ECMAScript 6. For `const` ES6 compliance see {{bug(950547)}} and {{bug(611388)}}.
 
-- Iniciando com o Gecko 36 {{geckoRelease("36")}}:
+- Iniciando com o Gecko 36:
 
   - `{const a=1};a` passa a retornar [`ReferenceError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) e não retorna `1` devido block-scoping.
   - `const a;` passa a retornar [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) ("missing = in const declaration`"`): É necessário incializar a constante.

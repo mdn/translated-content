@@ -33,7 +33,7 @@ Cette propriété est uniquement accessible en lecture et ne peut pas être modi
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.dotAll")}}
+{{Compat}}
 
 ## Voir aussi
 

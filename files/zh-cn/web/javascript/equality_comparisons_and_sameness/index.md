@@ -224,7 +224,7 @@ function attemptMutation(v)
 这里是一个会区别对待 -0 和 +0 的内置方法和操作符不完全列表：
 
 - [`- (一元负)`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
-  - : 显而易见，对 `0` 一元负操作得到 `-0`。但表达式的抽象化可能在你没有意识到得情况下导致 `-0` 延续传播。例如当考虑下例时：`js let stoppingForce = obj.mass * -obj.velocity` 如果 `obj.velocity` 是 `0` (或计算结果为 `0`), 一个 `-0` 就在上处产生并被赋值为`stoppingForce 的值。
+  - : 显而易见，对 `0` 一元负操作得到 `-0`。但表达式的抽象化可能在你没有意识到得情况下导致 `-0` 延续传播。例如当考虑下例时：`js let stoppingForce = obj.mass * -obj.velocity` 如果 `obj.velocity` 是 `0` (或计算结果为 `0`), 一个 `-0` 就在上处产生并被赋值为 `stoppingForce` 的值。
 - [`Math.atan2`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2),
   [`Math.ceil`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil),
   [`Math.pow`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/pow),

@@ -1,6 +1,8 @@
 ---
 title: CSSRule.cssText
 slug: Web/API/CSSRule/cssText
+l10n:
+  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
 {{APIRef("CSSOM") }}

@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Access-Control-Expose-Headers
 
 响应标头 **`Access-Control-Expose-Headers`** 允许服务器指示那些响应标头可以暴露给浏览器中运行的脚本，以响应跨源请求。
 
-默认情况下，仅暴露 {{Glossary("CORS-safelisted response header", "CORS 安全列表的响应标头")}}。如果想要让客户端可以访问到其它的标头，服务器必须将它们在 `Access-Control-Expose-Headers` 里面列出来。
+默认情况下，仅暴露 {{Glossary("CORS-safelisted response header", "CORS 安全列表的响应标头")}}。如果想要让客户端可以访问到其他的标头，服务器必须将它们在 `Access-Control-Expose-Headers` 里面列出来。
 
 <table class="properties">
   <tbody>

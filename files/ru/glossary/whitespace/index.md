@@ -20,10 +20,6 @@ original_slug: Глоссарий/Пробельные_символы
     1. [Пробельные символы в модели DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)
     2. {{cssxref("white-space")}}
 
-3. Статья Википедии
-
-    1. {{interwiki("wikipedia", "Whitespace character")}}
-
-4. [Глоссарий](/ru/docs/Glossary)
+3. [Глоссарий](/ru/docs/Glossary)
 
     1. {{Glossary("Character", "Символы")}}

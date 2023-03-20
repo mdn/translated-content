@@ -45,7 +45,7 @@ Express 应用可以使用 Node 支持的所有数据库（Express 本身不支�
 - 使用数据库的原生查询语言（例如 SQL）
 - 使用对象数据模型（Object Data Model，简称 ODM）或对象关系模型（Object Relational Model，简称 ORM）。ODM / ORM 能将网站中的数据表示为 JavaScript 对象，然后将它们映射到底层数据库。一些 ORM 只适用某些特定数据库，还有一些是普遍适用的。
 
-使用 SQL 或其它受到支持的查询语言才能达到最佳性能。ODM 通常慢一些，因为在对象和数据库格式之间存在一层用于映射的翻译代码，使它不一定会选用最高性能的数据库查询（尤其是普遍使用级别的 ODM，它必须在各类数据库功能方面做出更大的折衷）。
+使用 SQL 或其他受到支持的查询语言才能达到最佳性能。ODM 通常慢一些，因为在对象和数据库格式之间存在一层用于映射的翻译代码，使它不一定会选用最高性能的数据库查询（尤其是普遍使用级别的 ODM，它必须在各类数据库功能方面做出更大的折衷）。
 
 使用 ORM 的好处是：程序员可以继续用 JavaScript 对象的思维而不用转向数据库语义的思维。在（同一个或不同网站）使用不同数据库时尤为明显。使用 ORM 还可以更方便地对数据进行验证和检查。
 
@@ -137,7 +137,7 @@ db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));
 
 可以用 `mongoose.connection` 取得默认的 `Connection` 对象。一旦连接，`Connection` 实例将触发打开事件。
 
-> **备注：** 可以使用 `mongoose.createConnection()` 创建其它连接。该函数与 `connect()` 的参数（数据库 URI，包括主机地址、数据库名、端口、选项等）一致，并返回一个 `Connection` 对象。
+> **备注：** 可以使用 `mongoose.createConnection()` 创建其他连接。该函数与 `connect()` 的参数（数据库 URI，包括主机地址、数据库名、端口、选项等）一致，并返回一个 `Connection` 对象。
 
 ### 定义和添加模型
 
@@ -164,7 +164,7 @@ var SomeModelSchema = new Schema({
 });
 ```
 
-上面示例只有两个字段（一个字符串和一个日期），接下来将展示其它字段类型、验证和其它方法。
+上面示例只有两个字段（一个字符串和一个日期），接下来将展示其他字段类型、验证和其他方法。
 
 #### 创建模型
 
@@ -216,7 +216,7 @@ const schema = new Schema(
 代码还展示了声明字段的两种方法：
 
 - 字段名和类型名作为键 - 值对（就像 `name`、`binary` 和 `living`）。
-- 字段名后跟一个对象，在对象中定义 `type` 和字段的其它选项，可以是：
+- 字段名后跟一个对象，在对象中定义 `type` 和字段的其他选项，可以是：
 
   - 默认值。
   - 内置验证器（例如最大/最小值）和自定义验证函数。
@@ -493,7 +493,7 @@ const SomeModelSchema = new Schema({
 module.exports = mongoose.model('SomeModel', SomeModelSchema );
 ```
 
-然后就可以在其它文件中，`require` 并使用该模型。下面是通过 `SomeModel` 模块来获取所有实例的方法。
+然后就可以在其他文件中，`require` 并使用该模型。下面是通过 `SomeModel` 模块来获取所有实例的方法。
 
 ```js
 // 通过 require 模块来创建 SomeModel 模型
@@ -711,7 +711,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 以上代码有点儿新东西，即字段选项（黑体字）：
 
 - `enum`：可以设置字符串允许的值。本例中可指定书籍的状态。（使用枚举可以避免状态中出现错误拼写或不允许的值）
-- `default`：用默认值可以设定新 ​ 建藏书实例的默认状态（为'馆藏维护'），还可以将默认还书期限（`due_back`）日期设置为今天（`now`）。（设置日期时请注意 `Date` 函数的用法！）
+- `default`：用默认值可以设定新 建藏书实例的默认状态（为'馆藏维护'），还可以将默认还书期限（`due_back`）日期设置为今天（`now`）。（设置日期时请注意 `Date` 函数的用法！）
 
 其他内容和之前的模式大同小异。
 
@@ -722,7 +722,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 与之前模型的定义方式相似：
 
 - 该模型应该有一个 `String` 模式类型，命名为 `name` ，用来描述图书种类。
-- `name` 字段应该是必需的，并且有 3 到 ​ ​100 个字符。
+- `name` 字段应该是必需的，并且有 3 到 100 个字符。
 - 声明一个 [虚拟属性](#虚拟属性)，命名为 `url`，返回图书类型 URL。
 - 导出模型。
 
@@ -747,7 +747,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 3. 在命令提示符下用 node 运行此脚本，并以 MongoDB 数据库的 URL 作为参数（同 `app.js` 中替换 `insert_your_database_url_here` 占位符的 URL）：
 
     ```bash
-    node populatedb <mongodb url>​​​​
+    node populatedb <mongodb url>
     ```
 
 4. 该脚本应一路运行至完成，并在终端中记录所创建的项目。
@@ -772,15 +772,3 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 - [填充](http://mongoosejs.com/docs/populate.html) (Mongoose 文档)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## 本章目录
-
-- [Express/Node 入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [设置 Node（Express）开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2：创建站点框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5：显示图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6：使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7：部署至生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

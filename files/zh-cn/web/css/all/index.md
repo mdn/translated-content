@@ -72,68 +72,108 @@ blockquote {
 }
 ```
 
-结果
+### 结果
 
-#### 没有 `all` 属性
+#### A、没有 `all` 属性
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
 ```
 
-{{EmbedLiveSample("ex0", "200", "125")}}
+{{EmbedLiveSample("A、没有 all 属性", "200", "125")}}
 
 {{HTMLElement("blockquote")}} 使用浏览器默认样式，以及另外的定义的背景色与文字颜色。它是一个 block 元素：它之后的文字位于它的下方。
 
-#### `all:unset`
+#### B、`all: initial`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+  all: initial;
+}
 ```
 
-{{EmbedLiveSample("ex1", "200", "125")}}
+{{EmbedLiveSample("B、all: initial", "200", "125")}}
 
 {{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 `transparent` (初始值)，但其 {{cssxref("font-size")}} 仍为 `small` (继承值) ，其 {{cssxref("color")}} 为 `blue` (继承值)。
 
-#### `all:initial`
+#### C、`all:initial`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+  all: inherit;
+}
 ```
 
-{{EmbedLiveSample("ex2", "200", "125")}}
+{{EmbedLiveSample("C、all:initial", "200", "125")}}
 
 {{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 `transparent` (初始值)，其 {{cssxref("font-size")}} 为 `normal` (初始值)，其 {{cssxref("color")}} 为 `black`(初始值)。
 
-#### `all:inherit`
+#### D、`all:inherit`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+  all: unset;
+}
 ```
 
-{{EmbedLiveSample("ex3", "200", "125")}}
+{{EmbedLiveSample("D、all:inherit", "200", "125")}}
 
 {{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 block 元素（继承自其父元素 {{HTMLElement("body")}}），其 {{cssxref("background-color")}} 为 `transparent` (继承值)，其 {{cssxref("font-size")}} 为 `small` (继承值) ，其 {{cssxref("color")}} 为 `blue` (继承值)。
 

@@ -374,7 +374,7 @@ var usersRouter = require('./routes/users');
 
 > **備註：** 此時我們剛剛導入了模塊；我們還沒有真正使用過它的路由（在文件的更下方一點將使用到路由）。
 
-接下來，我們使用導入的 express 模塊 ​​，創建應用程序 `app` 對象，然後使用它來設置視圖（模板）引擎。引擎的設置有兩個部分。首先我們設置 '`views`' 值，來指定模板將被存儲的文件夾（在這種情況下是子文件夾 **/views**）。然後我們設置 '`view engine`' 的值，來指定模板庫（在本例中為 “pug” ）。
+接下來，我們使用導入的 express 模塊 ，創建應用程序 `app` 對象，然後使用它來設置視圖（模板）引擎。引擎的設置有兩個部分。首先我們設置 '`views`' 值，來指定模板將被存儲的文件夾（在這種情況下是子文件夾 **/views**）。然後我們設置 '`view engine`' 的值，來指定模板庫（在本例中為 “pug” ）。
 
 ```js
 var app = express();
@@ -435,7 +435,7 @@ module.exports = app;
 
 ### 路由
 
-路由文檔 **/routes/users.js** 如下所示（路由文件共享一個類似的結構，所以我們不需要也顯示 **index.js**）。首先加載 express 模塊 ​​，並使用它獲取 `express.Router`對象。然後它在該對像上指定一個路由，最後從模塊中導出路由器（這就是允許將文件導入到 **app.js** 中的路由）。
+路由文檔 **/routes/users.js** 如下所示（路由文件共享一個類似的結構，所以我們不需要也顯示 **index.js**）。首先加載 express 模塊 ，並使用它獲取 `express.Router`對象。然後它在該對像上指定一個路由，最後從模塊中導出路由器（這就是允許將文件導入到 **app.js** 中的路由）。
 
 ```js
 var express = require('express');
@@ -492,15 +492,3 @@ block content
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程連結
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

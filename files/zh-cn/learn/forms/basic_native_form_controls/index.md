@@ -81,7 +81,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 ### 隐藏内容
 
-另一个原生的文本框控件是 `hidden` input 类型。它被用于创建对用户不可见的表单部件，但在发送表单时，会与其它的表单数据一起被发送到服务器——例如，你可能希望向服务器提交一个时间戳，说明订单是何时产生的。因为它是隐藏的，所以用户看不到也不能简单地修改该值，它将永远不会获得焦点，屏幕阅读器也不会注意到它。
+另一个原生的文本框控件是 `hidden` input 类型。它被用于创建对用户不可见的表单部件，但在发送表单时，会与其他的表单数据一起被发送到服务器——例如，你可能希望向服务器提交一个时间戳，说明订单是何时产生的。因为它是隐藏的，所以用户看不到也不能简单地修改该值，它将永远不会获得焦点，屏幕阅读器也不会注意到它。
 
 ```html
 <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
@@ -89,7 +89,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 如果您创建了这样一个元素，就需要设置它的 `name` 和 `value` 属性。元素的值可以通过 JavaScript 动态设置。`hidden` input 类型不应有关联的标签（`label` 元素）。
 
-HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中介绍。
+HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中介绍。
 
 ## 可选中项：复选框和单选按钮
 
@@ -322,26 +322,13 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
 
 ## 测试你的技能！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其它内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：基础控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Basic_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：基础控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Basic_controls)。
 
 ## 总结
 
 这篇文章介绍了较老的输入类型——在早期的 HTML 中引入的原始输入类型，它们在所有的浏览器中都得到了很好的支持。在下一节中，我们将介绍 HTML5 中新添加的 `type` 属性。
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
-
-## 本章目录
-
-- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 高级技巧
 

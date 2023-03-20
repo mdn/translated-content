@@ -31,16 +31,9 @@ updateConnectionStatus();
 
 ## 브라우저 호환성
 
-### NetworkInformation
-
-{{Compat("api.NetworkInformation")}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## 같이 보기
 
-- {{ spec("http://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html", "Network Information API Specification", "ED") }}
 - [Online and offline events](/en/Online_and_offline_events)
 - {{domxref("window.navigator.connection")}}

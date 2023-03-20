@@ -26,6 +26,5 @@ WebRTC в основном состоит из следующих частей:
 
 ## Узнать больше
 
-- {{Interwiki("wikipedia", "WebRTC")}} на Wikipedia
 - [WebRTC API на MDN](/ru/docs/Web/API/WebRTC_API)
 - [Поддержка WebRTC браузерами](https://caniuse.com/rtcpeerconnection)

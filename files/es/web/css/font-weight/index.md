@@ -97,6 +97,6 @@ span {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.font-weight")}}
+{{Compat}}

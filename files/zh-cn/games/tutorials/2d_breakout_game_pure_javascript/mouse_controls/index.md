@@ -1,7 +1,6 @@
 ---
 title: 鼠标控制
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/鼠标控制
 ---
 
 {{GamesSidebar}}
@@ -14,7 +13,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/鼠标控制
 
 ## 监听鼠标移动
 
-监听鼠标移动甚至比监听按键更简单：只需监听 {{domxref("Element/mousemove_event", "mousemove")}} 这个事件即可。把下面这行代码和其它事件监听代码放在一起，在 `keyup event` 的下一行：
+监听鼠标移动甚至比监听按键更简单：只需监听 {{domxref("Element/mousemove_event", "mousemove")}} 这个事件即可。把下面这行代码和其他事件监听代码放在一起，在 `keyup event` 的下一行：
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);

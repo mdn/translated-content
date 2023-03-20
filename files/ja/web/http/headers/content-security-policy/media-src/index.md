@@ -1,6 +1,8 @@
 ---
-title: 'CSP: media-src'
+title: "CSP: media-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/media-src
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}
@@ -43,7 +45,7 @@ Content-Security-Policy: media-src <source> <source>;
 
 ## 例
 
-## 違反例
+### 違反する場合
 
 この CSP ヘッダーがある場合、
 
@@ -57,7 +59,7 @@ Content-Security-Policy: media-src https://example.com/
 <audio src="https://not-example.com/audio"></audio>
 
 <video src="https://not-example.com/video">
-  <track kind="subtitles" src="https://not-example.com/subtitles">
+  <track kind="subtitles" src="https://not-example.com/subtitles" />
 </video>
 ```
 

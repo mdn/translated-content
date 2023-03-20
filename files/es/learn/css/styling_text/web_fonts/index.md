@@ -182,11 +182,3 @@ Los navegadores disponen hoy de una tecnología de tipos de letra reciente llama
 Ahora que has leído nuestros artículos sobre nociones de aplicación de estilo al texto, es hora de evaluar cuánto has retenido del módulo a partir de la creación de una composición tipográfica de una página de inicio de una escuela comunitaria.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Texto fundamental y estilo de fuente](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Dar estilo a las listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Dar estilo a los enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Las fuentes web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composición tipográfica de una página de inicio de una escuela comunitaria](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

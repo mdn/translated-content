@@ -28,7 +28,7 @@ Object.isExtensible(obj)
 
 默认情况下，对象是可扩展的：即可以为他们添加新的属性。以及它们的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} 属性可以被更改。{{jsxref("Object.preventExtensions")}}，{{jsxref("Object.seal")}} 或 {{jsxref("Object.freeze")}} 方法都可以标记一个对象为不可扩展（non-extensible）。
 
-## 例子
+## 示例
 
 ```js
 // 新对象默认是可扩展的。

@@ -33,9 +33,9 @@ Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code) pa
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.matchMedia")}}
+{{Compat}}
 
 ## Ver también
 

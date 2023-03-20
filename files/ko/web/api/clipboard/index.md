@@ -42,11 +42,11 @@ For WebExtensions, you can request the clipboardRead and clipboardWrite permissi
 
 In addition, {{domxref("Clipboard.read", "read()")}} and {{domxref("Clipboard.write", "write()")}} are disabled by default and require changing a preference to enable them. Check the compatibility tables for each method before using it.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -52,7 +52,7 @@ Range: bytes=200-1000, 2000-6576, 19000-
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Range")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

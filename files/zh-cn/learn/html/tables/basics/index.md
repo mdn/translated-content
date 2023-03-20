@@ -410,9 +410,3 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 本章节仅仅包含了 HTML 表格的基础。在下一篇文章中，我们将介绍一些稍微更高级的表格功能，并开始考虑方便视力障碍的人士的访问。
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## 在本单元中
-
-- [HTML 表格入门](/zh-CN/docs/Learn/HTML/Tables/Basics)
-- [HTML 表格高级特性和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced)
-- [作业：构建行星数据](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)

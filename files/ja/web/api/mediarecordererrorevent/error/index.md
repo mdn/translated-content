@@ -9,7 +9,7 @@ l10n:
 
  `error` は **{{domxref("MediaRecorderErrorEvent")}}** インタフェースの読み取り専用のプロパティで、{{domxref("MediaRecorder")}} インスタンスによって発生した例外に関する詳細を提供する {{domxref("DOMException")}} オブジェクトです。
 
-`Media​Recorder​Error​Event​` が発生した場合、`MediaRecorder` の {{domxref("MediaRecorder/error_event", "error")}} イベントハンドラーである {{domxref("MediaRecorder/error_event", "onerror")}} によって受けた `MediaRecorderErrorEvent` 内の `error` プロパティを調べることによって、何が問題であるかをある程度判断できます。
+`MediaRecorderErrorEvent` が発生した場合、`MediaRecorder` の {{domxref("MediaRecorder/error_event", "error")}} イベントハンドラーである {{domxref("MediaRecorder/error_event", "onerror")}} によって受けた `MediaRecorderErrorEvent` 内の `error` プロパティを調べることによって、何が問題であるかをある程度判断できます。
 
 ### 値
 
@@ -68,4 +68,4 @@ function recordStream(stream) {
 ## 関連情報
 
 - [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API)
-- [Media​Stream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

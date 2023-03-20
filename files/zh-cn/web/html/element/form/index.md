@@ -35,7 +35,7 @@ slug: Web/HTML/Element/form
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Search_role">search</a></code>, {{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
+   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Search_role">search</a></code>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -130,7 +130,7 @@ slug: Web/HTML/Element/form
 </form>
 ```
 
-{{ EmbedLiveSample('Examples', '100%', 110) }}
+{{ EmbedLiveSample('示例', '100%', 110) }}
 
 ## 规范
 

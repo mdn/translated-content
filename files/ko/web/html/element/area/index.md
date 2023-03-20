@@ -49,7 +49,7 @@ slug: Web/HTML/Element/area
       <th scope="row">암시적 ARIA 역할</th>
       <td>
         {{htmlattrxref("href", "area")}} 특성이 존재하면
-        {{ariarole("link")}}, 그 외의 경우
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/link_role'><code>link</code></a>, 그 외의 경우
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >대응하는 역할 없음</a
         >
@@ -160,4 +160,4 @@ No effect. Browsers ignore it. (The W3C 5.3 fork of the HTML specification defin
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.area")}}
+{{Compat}}

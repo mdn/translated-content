@@ -135,9 +135,9 @@ El elemento {{HTMLElement("blockquote")}} no usa los estilos predeterminados del
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.all")}}
+{{Compat}}
 
 ## Véase también
 

@@ -11,17 +11,17 @@ translation_of: Web/API/HTMLBodyElement
 
 _Наследует свойства о его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("HTMLBodyElement.aLink")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.aLink")}}
   - : Это {{ domxref("DOMString") }} который представляет цвет активных гиперссылок.
-- {{domxref("HTMLBodyElement.background")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.background")}}
   - : Это {{ domxref("DOMString") }} который представляет собой описание расположения фонового изображения ресурса. Обратите внимание, что это не URI, хотя в некоторых старых версиях некоторых браузеров ожидается именно это.
-- {{domxref("HTMLBodyElement.bgColor")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.bgColor")}}
   - : Это {{ domxref("DOMString") }} который представляет собой цвет фона для документа.
-- {{domxref("HTMLBodyElement.link")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.link")}}
   - : Это {{ domxref("DOMString") }} который представляет собой цвет непосещенных ссылок.
-- {{domxref("HTMLBodyElement.text")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.text")}}
   - : Это {{ domxref("DOMString") }} который представляет собой основной цвет текста.
-- {{domxref("HTMLBodyElement.vLink")}} {{obsolete_inline}}
+- {{domxref("HTMLBodyElement.vLink")}}
   - : Это {{ domxref("DOMString") }} который представляет собой цвет посещённых ссылок.
 
 ## Методы

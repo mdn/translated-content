@@ -2,6 +2,7 @@
 title: Window.onbeforeunload
 slug: conflicting/Web/API/Window/beforeunload_event
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
+browser-compat: api.Window.beforeunload_event
 ---
 
 {{ApiRef}}
@@ -18,7 +19,7 @@ window.onbeforeunload = funcRef
 
 - `funcRef` es una referencia a una función o una función anónima.
 - La función debe asignar una cadena de texto como propiedad `returnValue` del objeto Event y devolver la misma cadena.
-- Nota: en Firefox 4 y superiores la cadena de texto no se muestra al usuario (ver {{bug("588292")}}).
+- Nota: en Firefox 4 y superiores la cadena de texto no se muestra al usuario (ver [Error 588292 en Firefox](https://bugzil.la/588292)).
 
 ## Ejemplo
 
@@ -36,13 +37,13 @@ Desde el 25 de mayo de 2011, los estados de la [especificación HTML5](http://ww
 
 Se _puede_ y se _debería_ controlar este evento con {{domxref("EventTarget.addEventListener","window.addEventListener()")}} y el [evento `beforeunload`](/es/docs/Mozilla_event_reference/beforeunload) (más información en los enlaces).
 
-## Compatibilidad con los navegadores
-
-{{Compat("api.WindowEventHandlers.onbeforeunload")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

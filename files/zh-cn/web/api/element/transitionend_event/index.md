@@ -27,7 +27,7 @@ target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
 
 ## 示例
 
-本例中，我们使用了 [`transitionrun`](/zh-CN/docs/Web/API/Element/transitionrun_event) 和 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其它效果来实现连锁反应。
+本例中，我们使用了 [`transitionrun`](/zh-CN/docs/Web/API/Element/transitionrun_event) 和 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其他效果来实现连锁反应。
 
 ### HTML
 

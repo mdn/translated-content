@@ -40,7 +40,7 @@ slug: Web/API/CryptoKey
     - `"sign"`：密钥可用于对消息进行{{domxref("SubtleCrypto.sign()", "签名", "", 1)}}。
     - `"verify"`：密钥可用于{{domxref("SubtleCrypto.verify()", "验证", "", 1)}}签名。
     - `"deriveKey"`：密钥可用于{{domxref("SubtleCrypto.deriveKey()", "派生新的密钥", "", 1)}}。
-    - `"deriveBits"`：密钥可用于{{domxref("SubtleCrypto.deriveBits()", "派生字节序列", "", 1)}}。
+    - `"deriveBits"`：密钥可用于{{domxref("SubtleCrypto.deriveBits()", "派生比特序列", "", 1)}}。
     - `"wrapKey"`：密钥可被{{domxref("SubtleCrypto.wrapKey()", "包装", "", 1)}}。
     - `"unwrapKey"`：密钥可被{{domxref("SubtleCrypto.unwrapKey()", "解包装", "", 1)}}。
 

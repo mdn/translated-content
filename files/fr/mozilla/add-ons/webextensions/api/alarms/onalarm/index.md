@@ -62,7 +62,7 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.onAlarm")}}
+{{Compat}}
 
 > **Note :**
 >

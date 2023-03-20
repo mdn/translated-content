@@ -82,19 +82,9 @@ Al utilizar otros métodos de {{domxref("FileReader")}}, es posible leer los con
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Blob")}}
-
-## Disponilidad del alcance del código en Chrome
-
-El alcance JSM del `Blob`se encuentra disponible sin la necesidad de hacer nada en especial.
-
-En el alcance de arranque, este debe importarse de igual modo:
-
-```js
-const {Blob, Services} = Cu.import('resource://gre/modules/Services.jsm', {});
-```
+{{Compat}}
 
 ## Ver también
 

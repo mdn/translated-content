@@ -123,9 +123,9 @@ img {
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.object-fit")}}
+{{Compat}}
 
 ## Ver también
 

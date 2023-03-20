@@ -19,9 +19,9 @@ Este es un atributo enumerado y no uno _booleano ._ Esto significa que el uso ex
 
 {{Specifications}}
 
-## Compatiblidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.contenteditable")}}
+{{Compat}}
 
 ## Ver también
 

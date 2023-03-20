@@ -46,7 +46,7 @@ a + b;
 
 O console irá alertar "unreachable code after return statement" (código inacessível após a declaração return).
 
-> **Nota:** A partir do Gecko 40 {{geckoRelease(40)}}, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração `return`.
+> **Nota:** A partir do Gecko 40, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração `return`.
 
 ## Exemplos
 

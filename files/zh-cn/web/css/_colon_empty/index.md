@@ -14,11 +14,11 @@ div:empty {
 }
 ```
 
-## 语法
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -51,9 +51,9 @@ body {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample('Examples', 300, 80)}}
+{{EmbedLiveSample('示例', 300, 80)}}
 
 ## 规范
 
@@ -63,7 +63,7 @@ body {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{CSSxRef(":blank")}}
 

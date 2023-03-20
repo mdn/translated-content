@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
 browser-compat: javascript.builtins.WebAssembly.Exception
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Un objet **`WebAssembly.Exception`** représente une exception d'exécution levée depuis WebAssembly vers JavaScript ou levée depuis JavaScript vers un gestionnaire d'exception WebAssembly.
 

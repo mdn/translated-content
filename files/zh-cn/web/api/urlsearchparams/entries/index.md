@@ -3,9 +3,9 @@ title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
 ---
 
-{{APIRef("URL API")}}{{SeeCompatTable}}
+{{APIRef("URL API")}}
 
-**`URLSearchParams.entries()`**方法返回一个{{jsxref("Iteration_protocols",'iterator')}}，允许遍历该对象中包含的所有键/值对。每一组键值对都是 {{domxref("USVString")}}对象
+**`URLSearchParams.entries()`** 方法返回一个{{jsxref("Iteration_protocols",'迭代器')}}，允许遍历该对象中包含的所有键/值对。迭代器返回键/值对，其顺序与它们在查询字符串中出现的顺序相同。每一组键和值都是字符串对象。
 
 > **备注：** 该方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)也是可用的。
 

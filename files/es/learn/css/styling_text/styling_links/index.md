@@ -425,11 +425,3 @@ Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más int
 Esperamos que este artículo te haya proporcionado todo lo que necesitas saber acerca de los enlaces... ¡por ahora! En el artículo final de nuestro módulo de aplicar estilo al texto detallaremos cómo usar tipos de letra personalizados para sitios web (o tipos de letra para web, como se les conoce comúnmente).
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Nociones de aplicación de estilo con CSS a textos y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Aplicar estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Aplicar estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composición tipográfica de una página de inicio de una escuela comunitaria](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

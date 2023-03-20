@@ -50,7 +50,7 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 
 ## 렌더링 컨텍스트
 
-{{HTMLElement("canvas")}} 엘리먼트는 고정 크기의 드로잉 영역을 생성하고 하나 이상의 **렌더링 컨텍스(rendering contexts)**를 노출하여, 출력할 컨텐츠를 생성하고 다루게 됩니다. 본 튜토리얼에서는, 2D 렌더링 컨텍스트를 집중적으로 다룹니다. 다른 컨텍스트는 다른 렌더링 타입을 제공합니다. 예를 들어, [WebGL](/ko/docs/Web/WebGL)은 [OpenGL ES](http://www.khronos.org/opengles/) 을 기반으로 하는 3D 컨텍스트를 사용합니다.
+{{HTMLElement("canvas")}} 엘리먼트는 고정 크기의 드로잉 영역을 생성하고 하나 이상의 **렌더링 컨텍스**(**rendering contexts**)를 노출하여, 출력할 컨텐츠를 생성하고 다루게 됩니다. 본 튜토리얼에서는, 2D 렌더링 컨텍스트를 집중적으로 다룹니다. 다른 컨텍스트는 다른 렌더링 타입을 제공합니다. 예를 들어, [WebGL](/ko/docs/Web/WebGL)은 [OpenGL ES](http://www.khronos.org/opengles/) 을 기반으로 하는 3D 컨텍스트를 사용합니다.
 
 캔버스는 처음에 비어있습니다. 무언가를 표시하기 위해서, 어떤 스크립트가 랜더링 컨텍스트에 접근하여 그리도록 할 필요가 있습니다. {{HTMLElement("canvas")}} 요소는 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 메서드를 이용해서, 랜더링 컨텍스트와 (렌더링 컨텍스트의) 그리기 함수들을 사용할 수 있습니다. getContext() 메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라메터를 가집니다. 본 튜토리얼에서 다루고 있는 2D 그래픽의 경우, {{domxref("CanvasRenderingContext2D")}}을 얻기위해 `"2d"`로 지정합니다.
 
@@ -106,7 +106,7 @@ if (canvas.getContext){
 </html>
 ```
 
-위 스크립트에 `draw()` 함수 문서가 호출되었는데, 이는 문서가 {{event("load")}} 이벤트를 수신하여 페이지 로딩이 완료될 때 한번 실행됩니다. 이 함수 혹은 이와 유사한 함수는, 페이지가 처음 로딩되는 한, {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}}, {{domxref("WindowTimers.setInterval", "window.setInterval()")}}, 혹은 또 다른 이벤트 핸들러 등을 이용하여 호출될 수 있습니다.
+위 스크립트에 `draw()` 함수 문서가 호출되었는데, 이는 문서가 {{domxref("Window/load_event", "load")}} 이벤트를 수신하여 페이지 로딩이 완료될 때 한번 실행됩니다. 이 함수 혹은 이와 유사한 함수는, 페이지가 처음 로딩되는 한, {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}}, {{domxref("WindowTimers.setInterval", "window.setInterval()")}}, 혹은 또 다른 이벤트 핸들러 등을 이용하여 호출될 수 있습니다.
 
 다음은 템플릿이 실제로 어떻게 실행되는지를 보여줍니다. 보이는 바와 같이, 초기에 blank 로 보여집니다.
 

@@ -48,12 +48,12 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("button")}}, {{ARIARole("checkbox")}},
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("radio")}}, {{ARIARole("switch")}},
-        {{ARIARole("tab")}}, {{ARIARole("treeitem")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
       </td>
     </tr>
     <tr>
@@ -120,7 +120,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
   - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
 
-    > **Nota:** **Nota de uso:** Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Headers/Content-Type) en la URL enlazada.
+    > **Nota:** Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Headers/Content-Type) en la URL enlazada.
 
 - {{HTMLAttrDef("coords")}} {{Deprecated_Inline}}
   - : Para utilizar con el siguiente atributo `shape`, este atributo utiliza una lista de números separada por comas para definir las coordenadas del enlace en la página.
@@ -128,7 +128,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
   - : Este atributo era requerido para anclas (_anchors_) que definían una posible ubicación dentro de la página. En HTML 4.01, `id` y `name` podían ser utilizados simultáneamente en un elemento `<a>` simpre y cuando tuvieran valores idénticos.
 
-    > **Nota:** **Nota de uso:** Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/HTML/Global_attributes#attr-id) en su lugar.
+    > **Nota:** Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/HTML/Global_attributes#attr-id) en su lugar.
 
 - {{HTMLAttrDef("rev")}} {{Deprecated_Inline}}
   - : Este atributo especifica un enlace inverso, la relación inversa del atributo **rel**. Fue desechado por ser muy confuso.

@@ -2,7 +2,7 @@
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 l10n:
-  sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
+  sourceCommit: 2c732b2ab1969d6ae887b865b11ba27de225f291
 ---
 
 {{APIRef("Web Workers API")}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 構文
 
-```js
+```js-nolint
 importScripts(path0)
 importScripts(path0, path1)
 importScripts(path0, path1, /* … ,*/ pathN)

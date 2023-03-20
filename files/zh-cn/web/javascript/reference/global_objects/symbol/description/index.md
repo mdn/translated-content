@@ -21,7 +21,7 @@ Symbol.for('foo').description;
 
 {{jsxref("Symbol")}} 对象可以通过一个可选的描述创建，可用于调试，但不能用于访问 symbol 本身。`Symbol.prototype.description` 属性可以用于读取该描述。与 `Symbol.prototype.toString()` 不同的是它不会包含 "`Symbol()`" 的字符串。具体请看实例。
 
-## 实例
+## 示例
 
 ```js
 Symbol('desc').toString();   // "Symbol(desc)"

@@ -62,7 +62,7 @@ slug: Web/HTML/Global_attributes/itemprop
 
 ## 属性
 
-属性拥有的值可能是字符串又或者是 URL。当一个字符串值是一个 URL 的时候，它被用 {{HTMLElement("a")}} 及它的属性值 {{htmlattrxref("href", "a")}} 、{{HTMLElement("img")}} 及它的属性值 {{htmlattrxref("src", "img")}} 、或者其它被链接到或嵌入外部的资源的元素来表述。
+属性拥有的值可能是字符串又或者是 URL。当一个字符串值是一个 URL 的时候，它被用 {{HTMLElement("a")}} 及它的属性值 {{htmlattrxref("href", "a")}} 、{{HTMLElement("img")}} 及它的属性值 {{htmlattrxref("src", "img")}} 、或者其他被链接到或嵌入外部的资源的元素来表述。
 
 ### Three properties with values that are strings
 

@@ -62,7 +62,7 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.concat")}}
+{{Compat}}
 
 ## Ver también
 

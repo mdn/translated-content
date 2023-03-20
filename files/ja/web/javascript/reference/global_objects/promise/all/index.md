@@ -1,206 +1,275 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
+l10n:
+  sourceCommit: 850c667d5df58af4f13085d82ecfff17b24187a7
 ---
 
 {{JSRef}}
 
-**`Promise.all()`** メソッドは入力としてプロミスの集合の反復可能オブジェクトを取り、入力したプロミスの集合の結果の配列に解決される単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力したプロミスがすべて解決されるか、入力した反復可能オブジェクトにプロミスが含まれていない場合に解決されます。入力したプロミスのいずれかが拒否されるか、プロミス以外のものがエラーを発生させると直ちに拒否され、最初に拒否されたメッセージまたはエラーをもって拒否されます。
+**`Promise.all()`** は静的メソッドで、入力としてプロミスの集合の反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力されたプロミスがすべて履行されたとき（空の反復子が渡されたときを含む）、その履行された値の配列で、履行されます。入力されたプロミスのいずれかが拒否されると、その最初の拒否理由とともに拒否されます。
 
 {{EmbedInteractiveExample("pages/js/promise-all.html")}}
 
 ## 構文
 
-```js
-Promise.all(iterable);
+```js-nolint
+Promise.all(iterable)
 ```
 
 ### 引数
 
 - `iterable`
-  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)オブジェクト、例えば {{jsxref("Array")}} など。
+  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)オブジェクト（プロミスの配列 ({{jsxref("Array")}}) など）。
 
 ### 返値
 
-- 渡された*反復可能*オブジェクトが空であった場合は、**解決済み**の {{jsxref("Promise")}} です。
-- 渡された*反復可能*オブジェクトにプロミスがなかった場合、**非同期に解決した** {{jsxref("Promise")}} です。ただし、 Google Chrome 58 ではこの場合。**解決済み**のプロミスを返します。
-- その他の場合は**待機状態**の {{jsxref("Promise")}} 。この返却されるプロミスはそれから、*反復可能*オブジェクトで与えられたすべてのプロミスが解決したとき、**非同期に** (スタックが空になるとすぐに) 解決/拒否されます。下記の「Promise.all の非同期性・同期性」の例を見てください。返値は、実行完了順とは関係なく、 Promise が渡された順に並びます。
+次のような {{jsxref("Promise")}} です。
+
+- *反復可能*オブジェクトが空であった場合は、**履行済み**になります。
+- 渡された*反復可能*オブジェクトのすべてのプロミスが履行されたとき、**非同期に履行されます**。履行された値は、完了順に関係なく、渡されたプロミスの順番で、履行された値の配列となります。渡された*反復可能*オブジェクトが空ではないが、待機中のプロミスがなかった場合、返されたプロミスは（同期的ではなく）非同期的に履行されることに変わりはありません。
+- 渡された*反復可能*オブジェクトのいずれかが拒否された場合は、**非同期に拒否されます**。拒否理由は、最初に拒否されたプロミスの拒否理由になります。
 
 ## 解説
 
-このメソッドは複数のプロミスの結果を集約するのに便利です。このメソッドは、コード全体が正常に動作するために依存している複数の関連する非同期タスクがあり、コードの実行を続ける前にそれらすべてを履行させたい場合によく使われます。
+`Promise.all()` メソッドは、[プロミスの並列処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並列処理)メソッドのうちの一つです。このメソッドは、複数のプロミスの結果を集約するのに便利です。このメソッドは、コード全体が正常に動作するために依存している複数の関連する非同期タスクがあり、コードの実行を続ける前にそれらすべてを履行させたい場合によく使われます。
 
-`Promise.all()` は、入力されたプロミスの**いずれか**が拒否されると直ちに拒否されます。それに対して、{{jsxref("Promise.allSettled()")}} が返すプロミスは、入力されたプロミスが拒否されたかどうかに関わらず、すべての入力されたプロミスが完了するのを待ちます。その結果、入力された反復可能オブジェクトのすべてのプロミスと関数の最終結果を常に返します。
-
-> **メモ:** プロミスの配列の順序は、このメソッドが完了された時点で保持されます。
-
-### 履行の場合
-
-返されたプロミスは、引数として渡された*反復可能*オブジェクトに含まれる**すべて**の解決済みの値 (プロミス以外の値を含む) を含む配列で履行されます。
-
-- 空の*反復可能*オブジェクトが渡された場合は、このメソッドが返すプロミスは同期的に履行されます。解決される値は空の配列です。
-- 空ではない*反復可能*オブジェクトが渡され、**すべて**のプロミスが履行されるか、またはプロミスではなかった場合、このメソッドが返すプロミスは非同期に履行されます。
-
-### 拒否の場合
-
-渡されたプロミスのいずれかが拒否された場合、`Promise.all` は、他のプロミスが解決したかどうかに関わらず、拒否されたプロミスの値で非同期的に拒否されます。
+`Promise.all()` は、入力されたプロミスの**いずれか**が拒否されると直ちに拒否されます。それに対して、{{jsxref("Promise.allSettled()")}} が返すプロミスは、入力されたプロミスのいずれかが拒否されたかどうかに関わらず、すべての入力されたプロミスが完了するのを待ちます。入力された反復可能オブジェクトに含まれるプロミスのすべての最終結果が必要な場合は、`allSettled()` を使用してください。
 
 ## 例
 
-### `Promise.all` の使用
+### Promise.all() の使用
 
-`Promise.all` はすべての履行 (または最初の拒否) を待ちます。
+`Promise.all` はすべての履行（または最初の拒否）を待ちます。
 
 ```js
-var p1 = Promise.resolve(3);
-var p2 = 1337;
-var p3 = new Promise((resolve, reject) => {
+const p1 = Promise.resolve(3);
+const p2 = 1337;
+const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("foo");
   }, 100);
 });
 
-Promise.all([p1, p2, p3]).then(values => {
+Promise.all([p1, p2, p3]).then((values) => {
   console.log(values); // [3, 1337, "foo"]
 });
 ```
 
-*反復可能*オブジェクトにプロミスではない値が含まれる場合は無視されますが、 (プロミスが履行された場合) 返されるプロミスの配列の値にはカウントされます。
+*反復可能*オブジェクトにプロミスではない値が含まれる場合は無視されますが、（プロミスが履行された場合）返されるプロミスの配列の値にはカウントされます。
 
 ```js
-// これは、渡された反復可能オブジェクトが空であるかのようにカウントされるので、履行される
-var p = Promise.all([1,2,3]);
-// これは、渡された反復可能オブジェクトに、 "444" の値で解決されたプロミスだけが含まれているようにカウントされるので、履行される
-var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
-// これは、渡された反復可能オブジェクトに、 "555" の値で拒否されたプロミスだけが含まれているようにカウントされるので、拒否される
-var p3 = Promise.all([1,2,3, Promise.reject(555)]);
+// すべての値がプロミスでないため、返されたプロミスは履行される
+const p = Promise.all([1, 2, 3]);
+// 唯一の入力プロミスはすでに履行されているたので、
+// 返されたプロミスは履行される
+const p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
+// 1 つの（そして唯一の）入力プロミスが拒否される。
+// したがって、返されたプロミスも拒否される。
+const p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
 
-// setTimeout を使うことで、スタックが空になってからコードを実行することができる
-setTimeout(function() {
-    console.log(p);
-    console.log(p2);
-    console.log(p3);
+// setTimeout を使うことで、キューが空になってからコードを実行することができる
+setTimeout(() => {
+  console.log(p);
+  console.log(p2);
+  console.log(p3);
 });
 
-// ログ
+// ログ出力
 // Promise { <state>: "fulfilled", <value>: Array[3] }
 // Promise { <state>: "fulfilled", <value>: Array[4] }
 // Promise { <state>: "rejected", <reason>: 555 }
 ```
 
-### `Promise.all` の非同期性・同期性
+### Promise.all の非同期性・同期性
 
-以下の例では `Promise.all` の非同期性 (または渡された*反復可能*オブジェクトが空の場合、同期性) を実演します。
+以下の例では `Promise.all` の非同期性（または渡された*反復可能*オブジェクトが空の場合、同期性）を実演します。
 
 ```js
-// Promise.all をできるだけ早く起動するために、すでに解決されたプロミスの
-// 配列を引数として渡している
-var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
+// Promise.all をできるだけ早く使用するために、
+// すでに解決されたプロミスの配列を渡す
+const resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
-var p = Promise.all(resolvedPromisesArray);
-//  p の値を直接ログ出力
+const p = Promise.all(resolvedPromisesArray);
+// p の値を直接ログ出力
 console.log(p);
 
 // setTimeout を使用してスタックが空になった後にコードを実行することができる
-setTimeout(function() {
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(() => {
+  console.log("キューが空になりました");
+  console.log(p);
 });
 
-// logs, in order:
+// Logs, in order:
 // Promise { <state>: "pending" }
-// the stack is now empty
+// キューが空になりました
 // Promise { <state>: "fulfilled", <value>: Array[2] }
 ```
 
-`Promise.all` が拒否されたときも同じことが起きます.。
+`Promise.all` が拒否されたときも同じことが起きます。
 
 ```js
-var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
-var p = Promise.all(mixedPromisesArray);
+const mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
+const p = Promise.all(mixedPromisesArray);
 console.log(p);
-setTimeout(function() {
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(() => {
+  console.log("キューが空になりました");
+  console.log(p);
 });
 
-// logs
+// ログ出力
 // Promise { <state>: "pending" }
-// the stack is now empty
+// キューが空になりました
 // Promise { <state>: "rejected", <reason>: 44 }
 ```
 
-しかし、`Promise.all` は渡された*反復可能*オブジェクトが空の**場合だけ**同期的に解決します。
+しかし、`Promise.all` は渡された*反復可能*オブジェクトが空の場合だけ同期的に解決します。
 
 ```js
-var p = Promise.all([]); // 直ちに解決される
-var p2 = Promise.all([1337, "hi"]); // プロミスではない値は無視されるが、評価は非同期に行われる
+const p = Promise.all([]); // 直ちに解決される
+const p2 = Promise.all([1337, "hi"]); // プロミスではない値は無視されるが、評価は非同期に行われる
 console.log(p);
-console.log(p2)
-setTimeout(function() {
-    console.log('the stack is now empty');
-    console.log(p2);
+console.log(p2);
+setTimeout(() => {
+  console.log("キューが空になりました");
+  console.log(p2);
 });
 
-// logs
+// ログ出力:
 // Promise { <state>: "fulfilled", <value>: Array[0] }
 // Promise { <state>: "pending" }
-// the stack is now empty
+// キューが空になりました
 // Promise { <state>: "fulfilled", <value>: Array[2] }
 ```
 
-### `Promise.all`のフェイルファストの挙動
+### Promise.all() と非同期関数の使用
+
+[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)内では、コードを「過剰に待つ」ことはとてもよくあることです。例えば、以下のような関数が指定されたとします。
+
+```js
+function promptForDishChoice() {
+  return new Promise((resolve, reject) => {
+    const dialog = document.createElement("dialog");
+    dialog.innerHTML = `
+<form method="dialog">
+  <p>What would you like to eat?</p>
+  <select>
+    <option value="pizza">Pizza</option>
+    <option value="pasta">Pasta</option>
+    <option value="salad">Salad</option>
+  </select>
+  <menu>
+    <li><button value="cancel">Cancel</button></li>
+    <li><button type="submit" value="ok">OK</button></li>
+  </menu>
+</form>
+    `;
+    dialog.addEventListener("close", () => {
+      if (dialog.returnValue === "ok") {
+        resolve(dialog.querySelector("select").value);
+      } else {
+        reject(new Error("User cancelled dialog"));
+      }
+    });
+    document.body.appendChild(dialog);
+    dialog.showModal();
+  });
+}
+
+async function fetchPrices() {
+  const response = await fetch("/prices");
+  return await response.json();
+}
+```
+
+次のように関数を書くかもしれません。
+
+```js example-bad
+async function getPrice() {
+  const choice = await promptForDishChoice();
+  const prices = await fetchPrices();
+  return prices[choice];
+}
+```
+
+ただし、`promptForChoice` と `fetchPrices` の実行は、互いの結果には依存しないことに注意してください。ユーザーが料理を選んでいる間、バックグラウンドで価格が取得されても問題ありませんが、上記のコードでは [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) 演算子によって選択が行われるまで非同期関数が一時停止し、その後価格が取得されるまで再度一時停止します。`Promise.all` を使用すれば、結果が指定される前にユーザーが価格の取得を待たずに、これらを並行して実行することができます。
+
+```js example-good
+async function getPrice() {
+  const [choice, prices] = await Promise.all([
+    promptForDishChoice(),
+    fetchPrices(),
+  ]);
+  return prices[choice];
+}
+```
+
+`Promise.all` はエラー処理が直感的であるため、ここでの[並列処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#並列処理メソッド)には最適な選択です。もしいずれかのプロミスが拒否されたら、結果がもう利用できなくなり、 await 式全体が例外を発生します。
+
+`Promise.all` はプロミスの反復可能オブジェクトを受け入れるので、いくつかの非同期関数の実行を並列化するために使用するには、非同期関数を呼び出して返されたプロミスを使用する必要があります。関数はプロミスではないので、 `Promise.all` に直接渡しても動作しません。
+
+```js example-bad
+async function getPrice() {
+  const [choice, prices] = await Promise.all([
+    promptForDishChoice,
+    fetchPrices,
+  ]);
+  // `choice` および `prices` は元と同じ非同期関数です。
+  // Promise.all() はプロミスでないものには何もしません。
+}
+```
+
+### Promise.all のフェイルファストの挙動
 
 `Promise.all` は要素のひとつでも拒否されると拒否します。例えば、タイムアウト後に 4 つのプロミスが解決しても、 1 つのプロミスが直ちに拒否された場合、 `Promise.all` は直ちに拒否されます。
 
 ```js
-var p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('one'), 1000);
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("one"), 1000);
 });
-var p2 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('two'), 2000);
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("two"), 2000);
 });
-var p3 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('three'), 3000);
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("three"), 3000);
 });
-var p4 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('four'), 4000);
+const p4 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("four"), 4000);
 });
-var p5 = new Promise((resolve, reject) => {
-  reject(new Error('reject'));
+const p5 = new Promise((resolve, reject) => {
+  reject(new Error("reject"));
 });
 
-// Using .catch:
+// .catch の使用
 Promise.all([p1, p2, p3, p4, p5])
-.then(values => {
-  console.log(values);
-})
-.catch(error => {
-  console.error(error.message)
-});
+  .then((values) => {
+    console.log(values);
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
 
-//From console:
-//"reject"
+// ログ出力:
+// "reject"
 ```
 
 この動作は失敗する可能性を制御することで変更することができます。
 
 ```js
-var p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('p1_delayed_resolution'), 1000);
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("p1_delayed_resolution"), 1000);
 });
 
-var p2 = new Promise((resolve, reject) => {
-  reject(new Error('p2_immediate_rejection'));
+const p2 = new Promise((resolve, reject) => {
+  reject(new Error("p2_immediate_rejection"));
 });
 
-Promise.all([
-  p1.catch(error => { return error }),
-  p2.catch(error => { return error }),
-]).then(values => {
-  console.log(values[0]) // "p1_delayed_resolution"
-  console.error(values[1]) // "Error: p2_immediate_rejection"
-})
+Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
+  (values) => {
+    console.log(values[0]); // "p1_delayed_resolution"
+    console.error(values[1]); // "Error: p2_immediate_rejection"
+  }
+);
 ```
 
 ## 仕様書
@@ -214,4 +283,6 @@ Promise.all([
 ## 関連情報
 
 - {{jsxref("Promise")}}
+- {{jsxref("Promise.allSettled()")}}
+- {{jsxref("Promise.any()")}}
 - {{jsxref("Promise.race()")}}

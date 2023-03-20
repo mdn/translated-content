@@ -35,7 +35,7 @@ someOtherNode.textContent = string;
 
 ### 与 **innerText** 的区别
 
-不要被 `Node.textContent` 和 {{domxref("HTMLElement.innerText")}} 的区别搞混了。虽然名字看起来很相似，但有重要的不同之处：
+不要对 `Node.textContent` 和 {{domxref("HTMLElement.innerText")}} 之间的差异感到困惑。虽然名字看起来很相似，但有重要的不同之处：
 
 - `textContent` 会获取*所有*元素的内容，包括 {{HTMLElement("script")}} 和 {{HTMLElement("style")}} 元素，然而 `innerText` 只展示给人看的元素。
 - `textContent` 会返回节点中的每一个元素。相反，`innerText` 受 CSS 样式的影响，并且不会返回隐藏元素的文本，

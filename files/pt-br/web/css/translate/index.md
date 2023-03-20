@@ -113,4 +113,4 @@ div:hover .translate {
 - {{cssxref('rotate')}}
 - {{cssxref('transform')}}
 
-Note: `skew` não é um valor independente de `transform`
+Nota: `skew` não é um valor independente de `transform`

@@ -7,7 +7,7 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 
 本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读[使用宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)这篇文章。
 
-还有一些不常用或只在特定内容中适用，以及一些弃用的宏的信息，参见[其它宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other)。
+还有一些不常用或只在特定内容中适用，以及一些弃用的宏的信息，参见[其他宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other)。
 
 ## 链接
 
@@ -109,13 +109,6 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
     </tr>
   </tbody>
 </table>
-
-### 链接到某个 Bug
-
-- Bug
-
-  - 通过编号，[`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) 宏可以指向 bugzilla.mozilla.org 站内相应的 bug，`\{{Bug(123456)}}` 会指向 {{Bug(123456)}}。
-  - 类似的，[`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) 宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，`\{{WebkitBug(31277)}}` 会指向 {{WebkitBug(31277)}}。
 
 ### 多页面间的导航栏
 

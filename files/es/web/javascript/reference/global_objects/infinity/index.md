@@ -32,7 +32,7 @@ Para la especificación ECMAScript 5, `Infinity` es de solo lectura (implementad
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Infinity")}}
+{{Compat}}
 
 ## Ver también
 

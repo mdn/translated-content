@@ -35,6 +35,6 @@ La característica `display-mode` se especifica como un valor de palabra clave e
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.display-mode")}}
+{{Compat}}

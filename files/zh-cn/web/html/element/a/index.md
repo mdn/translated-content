@@ -29,7 +29,7 @@ slug: Web/HTML/Element/a
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("button")}}, {{ARIARole("checkbox")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("option")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}, {{ARIARole("treeitem")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></td>
   </tr>
   <tr>
    <th scope="row"><dfn>DOM 接口</dfn></th>
@@ -63,7 +63,7 @@ slug: Web/HTML/Element/a
     - `"no-referrer"` 表示 `Referer:` 头将不会被发送。
     - `"no-referrer-when-downgrade"` 表示当从使用 HTTPS 的页面导航到不使用 TLS(HTTPS) 的来源 时不会发送 `Referer:` 头。如果没有指定策略，这将是用户代理的默认行为。
     - `"origin"` 表示 referrer 将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。
-    - "origin-when-cross-origin" 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer 的路径。
+    - "origin-when-cross-origin" 表示导航到其他源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer 的路径。
     - `'strict-origin-when-cross-origin'`
     - `"unsafe-url"` 表示 referrer 将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的 URLs 数据泄露给不安全的源。
 
@@ -75,7 +75,7 @@ slug: Web/HTML/Element/a
     - `_self`: 当前页面加载，即当前的响应到同一 HTML 4 frame（或 HTML5 浏览上下文）。此值是默认的，如果没有指定属性的话。
     - `_blank`: 新窗口打开，即到一个新的未命名的 HTML4 窗口或 HTML5 浏览器上下文
     - `_parent`: 加载响应到当前框架的 HTML4 父框架或当前的 HTML5 浏览上下文的父浏览上下文。如果没有 parent 框架或者浏览上下文，此选项的行为方式与 `_self` 相同。
-    - `_top`: IHTML4 中：加载的响应成完整的，原来的窗口，取消所有其它 frame。HTML5 中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有 parent）。如果没有 parent 框架或者浏览上下文，此选项的行为方式相同\_self
+    - `_top`: IHTML4 中：加载的响应成完整的，原来的窗口，取消所有其他 frame。HTML5 中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有 parent）。如果没有 parent 框架或者浏览上下文，此选项的行为方式相同\_self
 
       > **备注：** 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Link_types/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
 - {{htmlattrdef("type")}}
@@ -218,4 +218,4 @@ html 3.2 只定义 name, href, rel, rev，和 title 属性。
 
 ## 相关链接
 
-- 其它传递[文本级语义](/zh-CN/docs/HTML/Text_level_semantics_conveying_elements)的元素：{{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
+- 其他传递[文本级语义](/zh-CN/docs/HTML/Text_level_semantics_conveying_elements)的元素：{{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.

@@ -12,7 +12,7 @@ slug: Web/HTML/Element/option
 - _[内容类别](/zh-CN/docs/Web/HTML/Content_categories)_ 无
 - *允许的内容*带有最终转义字符（例如 `&eacute;`）的文本
 - _标记省略_ 开始标记是必需的。如果此元素紧接着是另一个 `<option>` 元素或{{HTMLElement("optgroup")}}, 或者父元素没有其他内容，则结束标记是可选的。
-- _Implicit ARIA role_ {{ARIARole("option")}}
+- _Implicit ARIA role_ [`option`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
 - _Permitted ARIA roles_ No `role` permitted
 - _允许的父元素_ A {{HTMLElement("select")}}, an {{HTMLElement("optgroup")}} or a {{HTMLElement("datalist")}} element.
 - _DOM 接口_ {{domxref("HTMLOptionElement")}}
@@ -44,4 +44,4 @@ slug: Web/HTML/Element/option
 
 ## 另见
 
-- 其它表单相关的元素： {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- 其他表单相关的元素： {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。

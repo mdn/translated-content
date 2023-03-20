@@ -185,7 +185,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td>{{ HTMLElement("input") }}</td>
       <td>
         From the
-        {{SpecName('HTML Media Capture', '#the-capture-attribute','media capture')}}spec,
+        media capture spec,
         specifies a new file can be captured.
       </td>
     </tr>

@@ -82,7 +82,7 @@ slug: Web/HTML/Element/td
   - : This attribute contains a non-negative integer value that indicates for how many columns the cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (1).
 - {{htmlattrdef("headers")}}
   - : This attribute contains a list of space-separated strings, each corresponding to the **id** attribute of the {{HTMLElement("th")}} elements that apply to this element.
-- {{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}
+- {{htmlattrdef("height")}} {{Deprecated_inline}}
   - : This attribute is used to define a recommended cell height.
 
     > **备注：** Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("height")}} property instead.
@@ -101,7 +101,7 @@ slug: Web/HTML/Element/td
     - and `top`: Positions the text near the top of the cell.
 
     > **备注：** Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
-- {{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}
+- {{htmlattrdef("width")}} {{Deprecated_inline}}
   - : This attribute is used to define a recommended cell width. Additional space can be added with the [cellspacing](/zh-CN/docs/Web/API/HTMLTableElement/cellSpacing) and [cellpadding](/zh-CN/docs/Web/API/HTMLTableElement/cellPadding) properties and the width of the {{HTMLElement("col")}} element can also create extra width. But, if a column's width is too narrow to show a particular cell properly, it will be widened when displayed.
 
     > **备注：** Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("width")}} property instead.

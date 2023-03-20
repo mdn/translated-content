@@ -69,7 +69,7 @@ input:out-of-range + label::after {
 
 ### 结果
 
-{{EmbedLiveSample('Example', 600, 140)}}
+{{EmbedLiveSample('示例', 600, 140)}}
 
 ## 规范
 

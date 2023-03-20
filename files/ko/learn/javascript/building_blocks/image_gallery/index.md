@@ -119,13 +119,3 @@ overlay.style.backgroundColor = xxx;
     - 우리가 여러분이 도움을 원하는 문제를 찾을 수 있도록, 실제 과제나 평가 페이지의 링크.
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- [판단 내리기 — 조건문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [함수 — 코드 재사용](/ko/docs/Learn/JavaScript/Building_blocks/Functions)
-- [함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
-- **이미지 갤러리**

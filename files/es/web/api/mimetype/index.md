@@ -22,6 +22,6 @@ La interfaz **`MimeType`** provee información acerca de un tipo MIME asociado c
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.MimeType")}}
+{{Compat}}

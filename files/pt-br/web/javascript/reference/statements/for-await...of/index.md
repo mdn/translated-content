@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for-await...of
 
 {{jsSidebar("Statements")}}
 
-A **declaração** **`for await...of` **cria um loop que itera sobre objetos iteráveis ​​assíncronos, bem como sobre iteráveis ​​síncronos, incluindo: {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-como objetos (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, e iteráveis async/sync. Invoca um hook de iteração personalizado com instruções a serem executadas para o valor de cada propriedade do objeto.
+A **declaração `for await...of`** cria um loop que itera sobre objetos iteráveis assíncronos, bem como sobre iteráveis síncronos, incluindo: {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-como objetos (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, e iteráveis async/sync. Invoca um hook de iteração personalizado com instruções a serem executadas para o valor de cada propriedade do objeto.
 
 ## Sintaxe
 

@@ -94,7 +94,7 @@ Ao usar outros métodos de {{domxref("FileReader")}}, é possível ler o conteú
 
 ### Notas para Gecko
 
-Anterior ao Gecko 12.0 {{ geckoRelease("12.0") }}, havia um bug que afetava o comportamento do [slice](#slice); que não funcionava para as posições `start` e `end` fora do intervalo de valores assinados como 64-bit; este bug foi corrigido para dar suporte a valores assinados como 64-bit.
+Anterior ao Gecko 12.0, havia um bug que afetava o comportamento do [slice](#slice); que não funcionava para as posições `start` e `end` fora do intervalo de valores assinados como 64-bit; este bug foi corrigido para dar suporte a valores assinados como 64-bit.
 
 ## Chrome Code - Disponibilidade de Escopo
 

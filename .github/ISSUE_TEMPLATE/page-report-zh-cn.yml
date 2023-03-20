@@ -5,58 +5,58 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### Before you start
+        ### 在提交议题前
 
-        **Want to change this page yourself?** This content is open source!
-        ↩ Go back and use the _Edit on GitHub_ link on the page.
+        **想要自行修改页面？** 文档内容是开源的！
+        ↩ 返回，并点击页面中的 _Edit the page on Github_ 链接。
 
-        **Is your issue about the browser compatibility table?**
-        ↩ Go back and use the _Report problems with this compatibility data on GitHub_ link on the page.
+        **你的议题与浏览器兼容性表格有关？**
+        ↩ 返回，并点击页面中的 _Report problems with this compatibility data on GitHub_ 链接。
 
-        **Need help with a browser?**
-        🙋 To get help with [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), or another browser, check the browser's support site.
+        **需要与浏览器相关的帮助？**
+        🙋 请访问浏览器支持站点，以获取有关 [Firefox](https://support.mozilla.org/zh-CN/kb/file-bug-report-or-feature-request-mozilla)、[Chrome](https://support.google.com/chrome/answer/95315?ref_topic=7439544)、[Safari](https://www.apple.com/feedback/safari.html) 或其它浏览器的帮助信息。
 
         ---
   - type: input
     id: mdn-url
     attributes:
       label: MDN URL
-      description: Set automatically. Do not modify.
+      description: 此内容自动生成。请勿修改。
     validations:
       required: true
   - type: input
     id: section
     attributes:
-      label: What specific section or headline is this issue about?
+      label: 与此议题相关的小节或标题？
   - type: textarea
     id: problem
     attributes:
-      label: What information was incorrect, unhelpful, or incomplete?
+      label: 哪些信息是错误、无用或不完善的？
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: What did you expect to see?
+      label: 你期望看到什么？
     validations:
       required: true
   - type: textarea
     id: references
     attributes:
-      label: Do you have any supporting links, references, or citations?
-      description: Link to information that helps us confirm your issue.
+      label: 你有什么支持的链接、参考或引用？
+      description: 有助于我们确认你的议题的相关内容（链接）。
   - type: textarea
     id: more-info
     attributes:
-      label: Do you have anything more you want to share?
-      description: For example, steps to reproduce a bug, screenshots, screen recordings, or sample code
+      label: 你还想补充什么内容？
+      description: 例如，复现 bug 的步骤、截图、录屏或示例代码
   - type: markdown
     attributes:
       value: |
         ---
-        You're finished! The following fields are prefilled. Please click **Submit new issue**.
+        你已完成了所有内容！以下字段已被预填充。请点击 **Submit new issue** 按钮。
   - type: textarea
     id: metadata
     attributes:
       label: MDN metadata
-      description: Set automatically. Do not modify.
+      description: 此内容自动生成。请勿修改。

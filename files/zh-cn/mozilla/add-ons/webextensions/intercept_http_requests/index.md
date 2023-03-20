@@ -114,7 +114,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 刚才我们忽略了 `blocking` 选项。要修改请求 就要用到 `blocking` 选项，该选项让侦听器函数阻塞住发往网络请求，浏览器将会等待侦听器返回才会继续处理。阅读{{WebExtAPIRef("webRequest.onBeforeRequest")}}以了解更多有关 `blocking` 的细节。
 
-测试时打开 MDN 上的一个包含诸多图片的页面（如[这个列出了用户接口组件的页面](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface)），重新加载[这个扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)，然后重新加载这个页面。你会看到类似这样的内容：
+测试时打开 MDN 上的一个包含诸多图片的页面（如[这个列出了用户接口组件的页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface)），重新加载[这个扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)，然后重新加载这个页面。你会看到类似这样的内容：
 
 ![Images on a page replaced with a frog image](beastify_by_redirect.png)
 

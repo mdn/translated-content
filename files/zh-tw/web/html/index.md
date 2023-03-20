@@ -45,7 +45,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 ## 進階部份
 
 - [CORS 圖像](/zh-TW/docs/Web/HTML/CORS_enabled_image)
-  - : `當結合了一個適合的`[CORS](/zh-TW/docs/Glossary/CORS)，[`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#attr-crossorigin) 屬性允許 {{HTMLElement("img")}} 元素定義的圖像被從一個地方載入，並被使用於 {{HTMLElement("canvas")}}，即便載入的地方是原處也一樣。
+  - : `當結合了一個適合的`[CORS](/zh-TW/docs/Glossary/CORS)，[`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#crossorigin) 屬性允許 {{HTMLElement("img")}} 元素定義的圖像被從一個地方載入，並被使用於 {{HTMLElement("canvas")}}，即便載入的地方是原處也一樣。
 - [設定 CORS 屬性](/zh-TW/docs/Web/HTML/CORS_settings_attributes)
   - : 有些 HTML 元素可以支援 [CORS](/zh-TW/docs/HTTP/Access_control_CORS),像 {{HTMLElement("img")}} 或者 {{HTMLElement("video")}},有著 `crossorigin` (`crossOrigin` property)的屬性, 讓你能直接使用 CORS 的元素。
 - [管理 HTML 中的焦點](/zh-TW/docs/Web/HTML/Focus_management_in_HTML)

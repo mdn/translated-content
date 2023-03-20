@@ -42,7 +42,7 @@ console.log((function(a, b = 1, c) {}).length); /* 1, solo parámetros antes del
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.length")}}
+{{Compat}}
 
 ## Ver también
 
