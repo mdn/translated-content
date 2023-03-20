@@ -22,7 +22,7 @@ Error(message, fileName)
 Error(message, fileName, lineNumber)
 ```
 
-> **注意：** 调用 `Error()` 时，可以使用关键字 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，也可以不使用。 两种声明方式均能创建一个新的 `Error` 实例。
+> **备注：** 调用 `Error()` 时，可以使用关键字 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，也可以不使用。两种声明方式均能创建一个新的 `Error` 实例。
 
 ### 参数
 
