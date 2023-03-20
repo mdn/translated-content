@@ -13,12 +13,12 @@ slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 
 ## 哪里错了？
 
-{{Glossary("user agent","用户代理","",1)}}不能把所需的 {{HTTPHeader("Origin")}} 标头添加到 {{Glossary("HTTP")}} 请求中。所有的 CORS 请求必须有 `Origin` 标头。
+{{Glossary("user agent","用户代理")}}不能把所需的 {{HTTPHeader("Origin")}} 标头添加到 {{Glossary("HTTP")}} 请求中。所有的 CORS 请求必须有 `Origin` 标头。
 
 例如，如果 JavaScript 代码以增强的权限运行，允许它访问多个域名的内容，则会发生这种情况。
 
 ## 参见
 
 - [HTTP 访问控制（CORS）错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
-- Glossary: {{Glossary("CORS")}}
+- 术语：{{Glossary("CORS")}}
 - [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Access_control_CORS)
