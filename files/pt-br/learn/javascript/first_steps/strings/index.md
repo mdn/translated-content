@@ -310,15 +310,3 @@ Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")
 Então isto é o basico sobre strings em JavaScript. No próximo artigo nós iremos continuar daqui, vendo alguns métodos de construção de strings disponíveis em JavaScript e como nós podemos usá-los para manipular nossa string da forma como quisermos.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## Neste módulo
-
-- [O que é JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Um primeiro mergulho em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [O que deu errado? Solução de erros em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Armazenando a informação que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemática básica em JavaScript — números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Math)
-- [Manipulando texto — strings em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos úteis de strings](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
-- [Avaliação: gerador de história boba](/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator)

@@ -1589,10 +1589,6 @@
     "modified": "2020-04-14T12:32:43.727Z",
     "contributors": ["mfuji09", "Uemmra3", "dskmori", "takaneichinose"]
   },
-  "Glossary/Reference": {
-    "modified": "2020-11-18T02:37:08.917Z",
-    "contributors": ["KNaka88"]
-  },
   "Glossary/Reflow": {
     "modified": "2020-08-17T06:52:14.696Z",
     "contributors": ["eltociear"]
@@ -30668,6 +30664,10 @@
   "WebAssembly/existing_C_to_wasm": {
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
+  },
+  "conflicting/Glossary/Object_reference": {
+    "modified": "2020-11-18T02:37:08.917Z",
+    "contributors": ["KNaka88"]
   },
   "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-06T14:17:48.495Z",

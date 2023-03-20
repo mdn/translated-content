@@ -51,7 +51,7 @@ str.match(regexp)
 
 ## 示例
 
-### 例子：使用 `match`
+### 示例：使用 `match`
 
 在下例中，使用 `match` 查找 "`Chapter`" 紧跟着 1 个或多个数值字符，再紧跟着一个小数点和数值字符 0 次或多次。正则表达式包含 `i` 标志，因此大小写会被忽略。
 
@@ -75,7 +75,7 @@ console.log(found);
 // 'input' 属性是被解析的原始字符串。
 ```
 
-### 例子：`match` 使用全局（global）和忽略大小写（ignore case）标志
+### 示例：`match` 使用全局（global）和忽略大小写（ignore case）标志
 
 下例展示了 `match` 使用 global 和 ignore case 标志。A-E、a-e 的所有字母将会作为一个数组的元素返回。
 

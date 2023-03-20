@@ -23,9 +23,9 @@ dateObj.getUTCDate()
 
 `getUTCDate()` 返回一个 1 到 31 的整数值
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCDate()` 方法
+### 示例：使用 `getUTCDate()` 方法
 
 下面的例子是把当前日期的天数部分赋值给变量 `day`.
 

@@ -286,6 +286,6 @@ JavaScript には組み込みオブジェクトの標準ライブラリがあり
 
 ## 関連情報
 
-- [Nicholas Zakas による、JavaScript における一般的なデータ構造とアルゴリズムのまとめ](https://github.com/nzakas/computer-science-in-javascript/)
-- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/DataStructures_In_Javascript)
+- [Nicholas Zakas による、JavaScript における一般的なデータ構造とアルゴリズムのまとめ](https://github.com/humanwhocodes/computer-science-in-javascript)
+- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
 - [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)

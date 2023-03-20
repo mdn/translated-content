@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS disabled'
+title: 原因：CORS disabled
 slug: Web/HTTP/CORS/Errors/CORSDisabled
 ---
 
@@ -8,7 +8,7 @@ slug: Web/HTTP/CORS/Errors/CORSDisabled
 ## 原因
 
 ```
-原因：CORS 被禁用
+原因：CORS disabled
 ```
 
 ## 哪里错了？

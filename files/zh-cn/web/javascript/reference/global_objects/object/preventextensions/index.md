@@ -34,7 +34,7 @@ Object.preventExtensions(obj)
 
 一旦将对象变为不可扩展的对象，就再也不能使其可扩展。
 
-## 例子
+## 示例
 
 ```js
 // Object.preventExtensions 将原对象变的不可扩展，并且返回原对象。

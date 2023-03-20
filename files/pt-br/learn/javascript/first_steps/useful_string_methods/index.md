@@ -484,15 +484,3 @@ window.addEventListener('load', updateCode);
 Você não pode escapar do fato de que ser capaz de lidar com palavras e frases em programação é muito importante — particularmente em JavaScript, pois os sites são todos sobre comunicação com pessoas. Este artigo forneceu os fundamentos que você precisa saber sobre a manipulação de strings por enquanto. Isso deve atendê-lo bem ao abordar tópicos mais complexos no futuro. Em seguida, vamos ver o último tipo de dados importante que precisamos focar no curto prazo — arrays.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## Neste módulo
-
-- [What is JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/pt-BR/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator)

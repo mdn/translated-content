@@ -15,7 +15,7 @@ Antes de comenzar este módulo, ya deberías:
 2. Sentirte cómodo con los fundamentos de CSS, que se discuten en [Introduction to CSS](/es/docs/Learn/CSS/Introduction_to_CSS).
 3. Entender como diseñar cajas [style boxes](/es/docs/Learn/CSS/Styling_boxes).
 
-> **Nota:** Si estás trabajando en un dispositivo donde no tengas la posibilidad de crear tus propios archivos, puedes probar la mayoría de los ejemplos de código en un programa online como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si estás trabajando en un dispositivo donde no tengas la posibilidad de crear tus propios archivos, puedes probar la mayoría de los ejemplos de código en un programa online como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

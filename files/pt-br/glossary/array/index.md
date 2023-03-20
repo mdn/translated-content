@@ -1,6 +1,6 @@
 ---
 title: Array
-slug: Glossary/array
+slug: Glossary/Array
 original_slug: Glossario/array
 ---
 

@@ -92,7 +92,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 - {{jsxref("TypedArray.@@iterator", "BigInt64Array.prototype[@@iterator]()")}}
   - : 返回一个新的 _array iterator_ 对象，该对象包含数组中每个索引的值。
 
-## 例子
+## 示例
 
 ### 不同的方法去创建一个 `BigInt64Array`
 

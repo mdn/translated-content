@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 
 ## 示例
 
-### 例子：使用 `MIN_VALUE`
+### 示例：使用 `MIN_VALUE`
 
 下面的代码里两个数值相除。如果结果大于或等于 `MIN_VALUE`，则调用 `func1` 函数；否则，调用 `func2` 函数。
 

@@ -1,6 +1,8 @@
 ---
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
+l10n:
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -15,13 +17,13 @@ slug: Web/API/XMLHttpRequest/getResponseHeader
 
 ## 構文
 
-```js
-var myHeader = XMLHttpRequest.getResponseHeader(headerName);
+```js-nolint
+getResponseHeader(headerName)
 ```
 
 ### 引数
 
-- _headerName_
+- `headerName`
   - : 文字列で、テキスト値を取得したいヘッダーの名前を示します。
 
 ### 返値
@@ -33,14 +35,14 @@ var myHeader = XMLHttpRequest.getResponseHeader(headerName);
 この例では、リクエストが生成されて送信され、そして {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} ハンドラーを設定してヘッダーが純真で来たことを示す {{DOMxRef("XMLHttpRequest.readyState", "readyState")}} を監視します。その時が来たら、 {{httpheader("Content-Type")}} ヘッダーの値を読み取ります。 `Content-Type` が求められる値でない場合、 {{DOMxRef("XMLHttpRequest")}} は {{DOMxRef("XMLHttpRequest.abort", "abort()")}} を呼び出してキャンセルします。
 
 ```js
-var client = new XMLHttpRequest();
-client.open("GET", "unicorns-are-teh-awesome.txt", true);
+const client = new XMLHttpRequest();
+client.open("GET", "unicorns-are-awesome.txt", true);
 client.send();
 
-client.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
-    var contentType = client.getResponseHeader("Content-Type");
-    if (contentType != my_expected_type) {
+client.onreadystatechange = () => {
+  if (client.readyState === client.HEADERS_RECEIVED) {
+    const contentType = client.getResponseHeader("Content-Type");
+    if (contentType !== my_expected_type) {
       client.abort();
     }
   }

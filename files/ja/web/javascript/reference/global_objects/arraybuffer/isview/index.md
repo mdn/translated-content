@@ -1,6 +1,8 @@
 ---
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
+l10n:
+  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
 {{JSRef}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 
 ## 構文
 
-```
+```js-nolint
 ArrayBuffer.isView(value)
 ```
 
@@ -51,7 +53,7 @@ ArrayBuffer.isView(dv); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.ArrayBuffer.isView")}}
+{{Compat}}
 
 ## 関連情報
 
