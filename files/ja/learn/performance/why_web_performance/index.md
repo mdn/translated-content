@@ -53,18 +53,3 @@ slug: Learn/Performance/why_web_performance
 ウェブパフォーマンスは、アクセシビリティだけでなく、組織やビジネスの目標を達成するための他のウェブサイトの測定基準にとっても重要です。ウェブサイトのパフォーマンスの良し悪しは、ほとんどのサイトの全体的な有効性と同様に、ユーザー体験と強力に相関しています。これが、ウェブパフォーマンスに注意を払うべき理由です。
 
 {{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
-
-## このモジュール
-
-- [ウェブパフォーマンスの「なぜ」](/ja/docs/Learn/Performance/why_web_performance)
-- [ウェブパフォーマンスとは](/ja/docs/Learn/Performance/What_is_web_performance)
-- [ユーザーはパフォーマンスをどう知覚するのか](/ja/docs/Learn/Performance/perceived_performance)
-- [パフォーマンスの計測](/ja/docs/Learn/Performance/Measuring_performance)
-- [マルチメディア: 画像](/ja/docs/Learn/Performance/Multimedia)
-- [マルチメディア: 動画](/ja/docs/Learn/Performance/video)
-- [JavaScript パフォーマンスのベストプラクティス](/ja/docs/Learn/Performance/JavaScript)
-- [HTML のパフォーマンス特性](/ja/docs/Learn/Performance/HTML)
-- [CSS パフォーマンス特性](/ja/docs/Learn/Performance/CSS)
-- [フォントとパフォーマンス](/ja/docs/Learn/Performance/Fonts)
-- [モバイルパフォーマンス](/ja/docs/Learn/Performance/Mobile)
-- [パフォーマンスの重視](/ja/docs/Learn/Performance/business_case_for_performance)

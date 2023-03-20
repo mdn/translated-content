@@ -61,18 +61,3 @@ slug: Learn/Performance/Measuring_performance
 この記事ではウェブアプリケーションやサイトで利用可能なウェブパフォーマンスの指標の簡単な概要を紹介しました。次は、知覚されるパフォーマンスと、避けられないパフォーマンスへの影響をユーザーに深刻に見せない、あるいは完全に気づかれないようにするいくつかのテクニックを見ていきます。
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
-
-## このモジュール内
-
-- [ウェブパフォーマンスの"なぜ"](/ja/docs/Learn/Performance/why_web_performance)
-- [ウェブパフォーマンスとは何か](/ja/docs/Learn/Performance/What_is_web_performance)
-- [ユーザーはパフォーマンスをどのように知覚するか](/ja/docs/Learn/Performance/Perceived_performance)
-- [パフォーマンスの測定](/ja/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/ja/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/ja/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/ja/docs/Learn/Performance/JavaScript).
-- [HTML performance features](/ja/docs/Learn/Performance/HTML)
-- [CSS performance features](/ja/docs/Learn/Performance/CSS)
-- [Fonts and performance](/ja/docs/Learn/Performance/Fonts)
-- [Mobile performance](/ja/docs/Learn/Performance/Mobile)
-- [パフォーマスに光をあてる](/ja/docs/Learn/Performance/business_case_for_performance)
