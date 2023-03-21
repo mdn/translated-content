@@ -28,7 +28,7 @@ new URLSearchParams(options)
 
 一个 {{domxref("URLSearchParams")}} 实例。
 
-## 例子
+## 示例
 
 下面的例子展示了用各种传入的参数来创建一个 {{domxref("URLSearchParams")}} 对象。
 
