@@ -107,7 +107,7 @@ p.goldie {
 <div class="em_length">Ancho medido en em</div>
 ```
 
-{{EmbedLiveSample('Example using pixels and ems', '500px', '64px')}}
+{{EmbedLiveSample('', '500px', '64px')}}
 
 ### Ejemplo usando porcentaje
 
