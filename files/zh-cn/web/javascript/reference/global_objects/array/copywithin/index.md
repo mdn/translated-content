@@ -43,9 +43,9 @@ copyWithin(target, start, end)
 
 ## 描述
 
-`copyWithin()` 方法的工作原理类似于 C 和 C++ 的 `memmove`，是一种移动[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)数据的高性能方法，与{{jsxref("TypedArray/copyWithin", "TypedArray")}}的同名方法类似。序列在一次中操作被复制和粘贴；即使复制和粘贴区域重叠，粘贴的序列也将具有复制值。
+`copyWithin()` 方法的工作原理类似于 C 和 C++ 的 `memmove`，是一种移动[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)数据的高性能方法，与 {{jsxref("TypedArray/copyWithin", "TypedArray")}} 的同名方法类似。序列在一次中操作被复制和粘贴；即使复制和粘贴区域重叠，粘贴的序列也将具有复制值。
 
-`copyWithin()` 方法会原地[修改](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this` 指向的对象（数组或类数组）的长度，但会更改其的内容，并在必要时创建新属性或删除现有属性。
+`copyWithin()` 是[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this` 指向的对象（数组或类数组）的长度，但会更改其的内容，并在必要时创建新属性或删除现有属性。
 
 `copyWithin()` 方法保留空槽。如果要复制的区域是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则原来的空槽会被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)并被替换为拷贝的空槽。
 
