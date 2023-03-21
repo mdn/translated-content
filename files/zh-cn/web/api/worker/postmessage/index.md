@@ -36,7 +36,7 @@ postMessage(message, transfer)
 
 ## 示例
 
-以下代码显示了如何使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 Worker 对象。当两个表单输入 (`first`和`second)`中的其中一个的输入值改变时， [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件将调用`postMessage()`把两个 input 的值发送给当前 worker。
+下面的代码片段展示了使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 Worker 对象。当两个表单输入框（`first` 和 `second`）的值发生改变时，[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件将调用`postMessage()`把这两个输入框的值发送给当前的 worker。
 
 ```js
 var myWorker = new Worker('worker.js');
