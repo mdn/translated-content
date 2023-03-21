@@ -17,8 +17,6 @@ slug: Web/Guide/AJAX
   </ol>
 </section>
 
-## 新手入门
-
 **异步 JavaScript 和 XML**，或 [**Ajax**](https://www.semanticscholar.org/paper/Ajax%3A-A-New-Approach-to-Web-Applications-Garrett/c440ae765ff19ddd3deda24a92ac39cef9570f1e?p2df) 本身不是一种技术，而是一种将一些现有技术结合起来使用的方法，包括：[HTML](/zh-CN/docs/Web/HTML) 或 [XHTML](/zh-CN/docs/Glossary/XHTML)、[CSS](/zh-CN/docs/Web/CSS)、[JavaScript](/zh-CN/docs/Web/JavaScript)、[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[XML](/zh-CN/docs/Web/XML)、[XSLT](/zh-CN/docs/Web/XSLT)、以及最重要的 {{domxref("XMLHttpRequest")}} 对象。当使用结合了这些技术的 Ajax 模型以后，网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。
 
 尽管 Ajax 中的 X 代表 XML，但是 {{glossary("JSON")}} 才是首选，因为它更加轻量，而且是用 JavaScript 编写的。在 Ajax 模型中，JSON 和 XML 都被用来包装信息。
