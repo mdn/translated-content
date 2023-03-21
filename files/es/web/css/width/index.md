@@ -1,12 +1,21 @@
 ---
 title: width
 slug: Web/CSS/width
+tags:
+  - CSS
+  - Propiedad CSS
+  - Capas
+  - Referencia
+  - Dimensiones
+  - Tamaño
+  - Ancho
+browser-compat: css.properties.width
 ---
 
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`width`** especifica la anchura del area de contenido de un elemento.
-De forma predeterminada, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area),
+La propiedad [CSS](/es/docs/Web/CSS) **`width`** establece el ancho de un elemento.
+Por defecto, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area),
 pero si el {{cssxref("box-sizing")}} se establece en `border-box`,
 establece el ancho del [área del borde](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
 
@@ -17,14 +26,14 @@ Las propiedades {{cssxref("min-width")}} y {{cssxref("max-width")}} sobreescribe
 ## Sintaxis
 
 ```css
-/* Valores en <length> */
+/* Valores en <longitud> */
 width: 300px;
 width: 25em;
 
-/* Valores en <percentage> */
+/* Valores en <porcentaje> */
 width: 75%;
 
-/* Valores clave */
+/* Valores en palabras clave */
 width: max-content;
 width: min-content;
 width: fit-content(20em);
@@ -40,22 +49,22 @@ width: unset;
 
 ### Valores
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxref("&lt;longitud&gt;")}}
   - : Define el ancho como un valor absoluto.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Especifica el `width` como porcentaje de la anchura del bloque contenedor.
+- {{cssxref("&lt;porcentaje&gt;")}}
+  - : Especifica el ancho como porcentaje de la anchura del bloque contenedor.
 - `auto`
-  - : El navegador calculará y seleccionará la anchura para el elemento especificado.
+  - : El navegador calculará y seleccionará el ancho para el elemento especificado.
 - `max-content`
-  - : La anchura preferida intrínseca.
+  - : El ancho preferido intrínseco.
 - `min-content`
-  - : La anchura mínima intrínseca.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : Utiliza la fórmula de `fit-content` con el espacio disponible reemplazado por el argumento especificado, ejemplo, `min(max-content, max(min-content, <longitud-porcentaje>))`.
+  - : La ancho mínimo intrínseco.
+- `fit-content({{cssxref("&lt;longitud-porcentaje&gt;")}})`
+  - : Utiliza la fórmula de ajuste de contenido con el espacio disponible reemplazado por el argumento especificado, ejemplo, `min(max-content, max(min-content, <longitud-porcentaje>))`.
 
 ## Problemas de accesibilidad
 
-Asegúrese de que los elementos establecidos con un `width` no se trunquen y/o no oscurezcan otro contenido cuando se amplía la página para aumentar el tamaño del texto.
+Asegúrese de que los elementos establecidos con un ancho no trunquen y/o oculten otros contenidos cuando se amplía la página para aumentar el tamaño del texto.
 
 - [MDN Entendiendo WCAG, Pauta 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Comprender el criterio de éxito 1.4.4 | W3C Entendiendo WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
@@ -109,7 +118,7 @@ p.goldie {
 
 {{EmbedLiveSample('Ejemplo usando píxeles y ems', '500px', '64px')}}
 
-### Ejemplo usando Porcentaje
+### Ejemplo usando porcentaje
 
 ```css
 .percent {
