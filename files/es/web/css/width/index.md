@@ -49,9 +49,9 @@ width: unset;
 
 ### Valores
 
-- {{cssxref("&lt;longitud&gt;")}}
+- {{cssxref("length")}}
   - : Define el ancho como un valor absoluto.
-- {{cssxref("&lt;porcentaje&gt;")}}
+- {{cssxref("percentage")}}
   - : Especifica el ancho como porcentaje de la anchura del bloque contenedor.
 - `auto`
   - : El navegador calculará y seleccionará el ancho para el elemento especificado.
@@ -59,7 +59,7 @@ width: unset;
   - : El ancho preferido intrínseco.
 - `min-content`
   - : La ancho mínimo intrínseco.
-- `fit-content({{cssxref("&lt;longitud-porcentaje&gt;")}})`
+- `fit-content({{cssxref("length-percentage")}})`
   - : Utiliza la fórmula de ajuste de contenido con el espacio disponible reemplazado por el argumento especificado, ejemplo, `min(max-content, max(min-content, <longitud-porcentaje>))`.
 
 ## Problemas de accesibilidad
@@ -116,7 +116,7 @@ p.goldie {
 <div class="em_length">Ancho medido en em</div>
 ```
 
-{{EmbedLiveSample('Ejemplo usando píxeles y ems', '500px', '64px')}}
+{{EmbedLiveSample('Example using pixels and ems', '500px', '64px')}}
 
 ### Ejemplo usando porcentaje
 
@@ -132,7 +132,7 @@ p.goldie {
 <div class="percent">Ancho en porcentaje</div>
 ```
 
-{{EmbedLiveSample('Ejemplo usando porcentaje', '500px', '64px')}}
+{{EmbedLiveSample('Example using percentage', '500px', '64px')}}
 
 ### Ejemplo usando "max-content"
 
@@ -150,7 +150,7 @@ p.maxgreen {
 <p class="maxgreen">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
 ```
 
-{{EmbedLiveSample('Ejemplo usando "max-content"', '500px', '64px')}}
+{{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
 
 ### Ejemplo usando "min-content"
 
@@ -167,7 +167,7 @@ p.minblue {
 <p class="minblue">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
 ```
 
-{{EmbedLiveSample('Ejemplo usando "min-content"', '500px', '155px')}}
+{{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
 
 ## Especificaciones
 
