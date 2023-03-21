@@ -50,7 +50,7 @@ width: unset;
   - : El ancho preferido intrínseco.
 - `min-content`
   - : EL ancho mínimo intrínseco.
-- `fit-content({{cssxref("length-percentage")}})`
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Utiliza la fórmula de ajuste de contenido con el espacio disponible reemplazado por el argumento especificado, ejemplo, `min(max-content, max(min-content, <longitud-porcentaje>))`.
 
 ## Problemas de accesibilidad
