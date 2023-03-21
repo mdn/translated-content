@@ -49,7 +49,7 @@ var params3 = new URLSearchParams([["foo", 1],["bar", 2]]);
 var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
 ```
 
-这个例子展示了如何从一个已有的带有 URLSearchParams 对象的 URL，用另一个 URLSearchParams 对象创建一个新的 URL。
+这个示例展示了如何使用来自一个带有查询参数（search parameter）的 URL 构建的查询参数对象创建一个新的 URL。
 
 ```js
 const url = new URL("https://example.com/?a=hello&b=world");
