@@ -8,7 +8,7 @@ slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ## 原因
 
 ```plain
-原因：CORS header 'Access-Control-Allow-Origin' does not match 'xyz'"
+原因：CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 ```
 
 ## 出了什么问题？
