@@ -1,40 +1,40 @@
 ---
-title: margin-block-start
-slug: Web/CSS/margin-block-start
+title: margin-block-end
+slug: Web/CSS/margin-block-end
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`margin-block-start`** 定义了元素的逻辑块首外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`margin-block-end`** 定义了元素的逻辑块末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
 
-{{EmbedInteractiveExample("pages/css/margin-block-start.html")}}
+{{EmbedInteractiveExample("pages/css/margin-block-end.html")}}
 
 ## 语法
 
 ```css
 /* 长度值 */
-margin-block-start: 10px; /* 绝对长度 */
-margin-block-start: 1em; /* 相对于文本尺寸 */
-margin-block-start: 5%; /* 相对于最近包含块的宽度 */
+margin-block-end: 10px; /* 绝对长度 */
+margin-block-end: 1em; /* 相对于文本尺寸 */
+margin-block-end: 5%; /* 相对于最近包含块的宽度 */
 
 /* 关键词值 */
-margin-block-start: auto;
+margin-block-end: auto;
 
 /* 全局值 */
-margin-block-start: inherit;
-margin-block-start: initial;
-margin-block-start: revert;
-margin-block-start: revert-layer;
-margin-block-start: unset;
+margin-block-end: inherit;
+margin-block-end: initial;
+margin-block-end: revert;
+margin-block-end: revert-layer;
+margin-block-end: unset;
 ```
 
 根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("margin-top")}}、{{CSSXref("margin-right")}}、{{CSSXref("margin-bottom")}} 或 {{CSSXref("margin-left")}} 属性。
 
-与此属性相关的有 {{CSSXref("margin-block-end")}}、{{CSSXref("margin-inline-start")}} 和 {{CSSXref("margin-inline-end")}} 等定义元素的其他外边距的属性。
+与此属性相关的有 {{CSSXref("margin-block-start")}}、{{CSSXref("margin-inline-start")}} 和 {{CSSXref("margin-inline-end")}} 等定义元素的其他外边距的属性。
 
 ### 取值
 
-`margin-block-start` 属性的取值与 {{CSSXref("margin-left")}} 属性相同。
+`margin-block-end` 属性的取值与 {{CSSXref("margin-left")}} 属性相同。
 
 ## 形式定义
 
@@ -46,7 +46,7 @@ margin-block-start: unset;
 
 ## 示例
 
-### 设置块首外边距
+### 设置块末外边距
 
 #### HTML
 
@@ -66,15 +66,15 @@ div {
 }
 
 .exampleText {
-  writing-mode: vertical-lr;
-  margin-block-start: 20px;
+  writing-mode: vertical-rl;
+  margin-block-end: 20px;
   background-color: #c8c800;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("设置块首外边距", 140, 140)}}
+{{EmbedLiveSample("设置块末外边距", 140, 140)}}
 
 ## 规范
 
