@@ -9,14 +9,11 @@ slug: Web/API/WebCodecs_API
 
 ## 概念和用法
 
-许多 Web API 在内部都使用了媒体编码器。
-例如， {{domxref("Web Audio API")}}, 以及 {{domxref("WebRTC API")}}。
-然而，这些 API 不允许开发者处理视频流的单个帧和未合成的编码音频块或视频块。
+许多 Web API 在内部都使用了媒体编码器。例如，{{domxref("Web Audio API")}}，以及 {{domxref("WebRTC API")}}。然而，这些 API 不允许开发者处理视频流的单个帧和未合成的编码音频块或视频块。
 
-Web 开发者通常使用 WebAssembly 来绕过这一限制，并在浏览器中使用媒体编解码器。然而，这需要额外的带宽来下载浏览器中已经存在的编解码器，降低了性能和电源效率，并增加了额外的开发成本。
+Web 开发者通常使用 WebAssembly 来绕过这一限制，并在浏览器中使用媒体编解码器。然而，这需要额外的带宽来下载浏览器中已经存在的编解码器，降低了性能和能效，并增加了额外的开发成本。
 
-WebCodecs API 提供了对浏览器中已存在的编解码器的访问能力。
-它可以访问原始视频帧、音频数据块、图像解码器、音频和视频的编码器及解码器
+WebCodecs API 提供了对浏览器中已存在的编解码器的访问能力。它可以访问原始视频帧、音频数据块、图像解码器、音频和视频的编码器及解码器
 
 ## 接口
 
@@ -47,8 +44,7 @@ WebCodecs API 提供了对浏览器中已存在的编解码器的访问能力。
 
 ## 示例
 
-在下面这个例子中，获取从 {{domxref("MediaStreamTrackProcessor")}} 中返回的帧，然后对他们进行编码。
-查看完整示例并在文章 [Video processing with WebCodecs](https://web.dev/webcodecs/) 中了解更多。
+在下面这个例子中，获取从 {{domxref("MediaStreamTrackProcessor")}} 中返回的帧，然后对他们进行编码。在文章 [Video processing with WebCodecs](https://web.dev/webcodecs/) 查看完整示例并了解更多细节。
 
 ```js
 let frame_counter = 0;
