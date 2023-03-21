@@ -40,7 +40,7 @@ slug: Web/Guide/AJAX
 - [解析和序列化 XML](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML)
   - : 如何从字符串、文件或通过 JavaScript 解析 XML 文档，以及如何将 XML 文档序列化为字符串或文件。
 - [XPath](/zh-CN/docs/Web/XPath)
-  - : XPath 代表**X**ML **Path** Language，它使用非 XML 语法，提供了一种灵活的方式来寻址（指向）[XML](/zh-CN/docs/Web/XML) 文档的不同部分。除此之外，它还可以用于测试文档中的寻址节点，以确定它们是否匹配模式。
+  - : XPath 代表 **X**ML **Path** Language，它使用非 XML 语法，提供了一种灵活的方式来寻址（指向）[XML](/zh-CN/docs/Web/XML) 文档的不同部分。除此之外，它还可以用于测试文档中的寻址节点，以确定它们是否匹配模式。
 - {{domxref("FileReader")}} API
   - : `FileReader` API 允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓存）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。文件对象可以从用户选择文件后的 {{HTMLElement("input")}} 元素的 {{domxref("FileList")}} 对象中获取，也可以从拖放操作的 {{domxref("DataTransfer")}} 对象获取。
 - [XMLHttpRequest 对 HTML 的支持](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
@@ -53,7 +53,7 @@ slug: Web/Guide/AJAX
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
   - : Fetch API 提供了一个获取资源的接口。对于使用过 {{domxref("XMLHTTPRequest")}} 的人来说非常熟悉，但这个 API 提供了一个更强大和灵活的功能集。
 - [服务端发送事件](/zh-CN/docs/Web/API/Server-sent_events)
-  - : 传统上，一个网页必须向服务器发送请求以接收新数据；也就是说，网页向服务器请求数据。有了服务器发送的事件，服务器就有可能在任何时候向网页发送新的数据，通过推送消息给网页。这些传入的消息可以被视为网页内部的 *[事件](/zh-CN/docs/Web/API/Event) + 数据*。也请参见[使用服务器发送的事件](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)。
+  - : 传统上，一个网页必须向服务器发送请求以接收新数据；也就是说，网页向服务器请求数据。有了服务器发送的事件，服务器就有可能在任何时候向网页发送新的数据，通过推送消息给网页。这些传入的消息可以被视为网页内部的[*事件*](/zh-CN/docs/Web/API/Event) _+ 数据_。也请参见[使用服务器发送的事件](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)。
 
 ## 参见
 
