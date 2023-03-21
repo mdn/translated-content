@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 
 {{JSRef}}
 
-`TypedArray.name` ?属性是描述类型数组构造名的字符串值。
+`TypedArray.name` 属性是描述类型数组构造名的字符串值。
 
 {{js_property_attributes(0,0,0)}}
 
