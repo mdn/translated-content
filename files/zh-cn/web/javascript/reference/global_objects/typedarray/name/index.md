@@ -19,7 +19,7 @@ TypedArray.name;
 
 TypedArray ?对象中，每个元素所含的字节数都与其他元素不同，因此其字节数需要被描述。`name` 属性描述了数组所包含的数据类型。其命名的第一部分可以是 Int(整型)、Uint(无符整型) 或 Float(浮点)；?其第二部分是一个描述数组所包含位数的数字；最后一部分为对象属性 Array(ClampedArray 为特例)。更多信息参见{{jsxref("Uint8ClampedArray")}}。
 
-## 例子
+## 示例
 
 ```js
 Int8Array.name;         // "Int8Array"
