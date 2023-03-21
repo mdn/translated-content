@@ -14,17 +14,17 @@ Ahora que estamos cómodos añadiendo imágenes simples a una página web, el si
       <td>
         Conocimientos básicos de computación,
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/Learn/Getting_started_with_the_web/Installing_basic_software"
           >programas básicos instalados</a
         >, conocimiento básico de
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/es/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabajo con archivos</a
         >, familiaridad con los fundamentos de HTML (como está cubierto en
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Empezando con HTML</a
         >) e
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >Imágenes en HTML</a
         >.
       </td>
@@ -166,7 +166,7 @@ El elemento {{htmlelement("audio")}} funciona exactamente de la misma forma que 
 <audio controls>
   <source src="viper.mp3" type="audio/mp3">
   <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <p>Su navegador no es compatible con audio HTML5. Aquí hay un <a href="viper.mp3">enlace al audio</a> en su lugar.</p>
 </audio>
 ```
 
