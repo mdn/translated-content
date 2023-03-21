@@ -27,7 +27,7 @@ Error(message, fileName, lineNumber)
 ### 参数
 
 - `message` {{optional_inline}}
-  - : 人类可读的错误信息
+  - : 人类可读的错误信息。
 - `options` {{optional_inline}}
   - : 一个包含以下属性的对象：
     - `cause` {{optional_inline}}
@@ -71,9 +71,11 @@ JavaScript 只有在 `options` 参数为对象时才会尝试读取 `options.cau
 // 省略 options 
 const error1 = new Error("Error message");
 console.log("cause" in error1); // false
+
 // 传递原始值 
 const error2 = new Error("Error message", "");
 console.log("cause" in error2); // false
+
 // 传递不包含 cause 属性的对象
 const error3 = new Error("Error message", { details: "http error" });
 console.log("cause" in error3); // false
