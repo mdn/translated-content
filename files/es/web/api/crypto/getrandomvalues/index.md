@@ -9,10 +9,10 @@ l10n:
 {{APIRef("Web Crypto API")}}
 
 El método **`Crypto.getRandomValues()`** permite obtener valores aleatorios criptográficamente fuertes.
-El array dado como parámetro se rellena con números aleatorios (aleatorios en su significado criptográfico).
+El arreglo dado como parámetro se rellena con números aleatorios (aleatorios en su significado criptográfico).
 
 Para garantizar un rendimiento suficiente, las implementaciones no utilizan un verdadero generador de números aleatorios, sino un generador de números pseudoaleatorios _sembrado_ con un valor con suficiente entropía.
-El algoritmo del generador de números pseudoaleatorios (PRNG) puede variar entre {{Glossary("user agent", "user agents")}}, pero es adecuado para fines criptográficos.
+El algoritmo del generador de números pseudoaleatorios (PRNG, por sus siglas en Inglés) puede variar entre {{Glossary("user agent", "_user agents_")}}, pero es adecuado para fines criptográficos.
 
 `getRandomValues()` es el único miembro de la interfaz `Crypto` que puede utilizarse desde un contexto inseguro.
 
@@ -25,16 +25,16 @@ getRandomValues(typedArray)
 ### Parametros
 
 - `typedArray`
-  - : Un entero {{jsxref("TypedArray")}}, que es uno de los siguientes: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
+  - : Un {{jsxref("TypedArray")}} de enteros, que puede ser uno de los siguientes: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
     {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
     {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}},
     {{jsxref("BigUint64Array")}} (pero **no** `Float32Array` ni `Float64Array`).
     Todos los elementos de la matriz se sobrescribirán con números aleatorios.
 
-### Valor de retorno
+### Valor devuelto
 
 El mismo array pasado como `typedArray` pero con su contenido reemplazado por los nuevos números aleatorios generados.
-Tenga en cuenta que `typedArray` se modifica in situ y no se realiza ninguna copia.
+Tenga en cuenta que se modifica el `typedArray` original y no se realiza ninguna copia.
 
 ### Excepciones
 
@@ -48,7 +48,7 @@ En su lugar, utilice el método {{domxref("SubtleCrypto.generateKey", "generateK
 Hay algunas razones para ello; por ejemplo, no se garantiza que `getRandomValues()` se ejecute en un contexto seguro.
 
 No existe un grado mínimo de entropía exigido por la especificación Web Cryptography.
-En su lugar, se insta a los User Agents a que proporcionen la mejor entropía que puedan al generar números aleatorios, utilizando un generador de números pseudoaleatorios bien definido y eficiente integrado en el propio User Agent, pero sembrado con valores tomados de una fuente externa de números pseudoaleatorios, como una función de números aleatorios específica de la plataforma, el dispositivo `/dev/urandom` de Unix u otra fuente de datos aleatorios o pseudoaleatorios.
+En su lugar, se pide a los _User Agents_ a que proporcionen la mejor entropía que puedan al generar números aleatorios, utilizando un generador de números pseudoaleatorios bien definido y eficiente integrado en el propio _User Agent_, pero sembrado con valores tomados de una fuente externa de números pseudoaleatorios, como una función de números aleatorios específica de la plataforma, el dispositivo `/dev/urandom` de Unix u otra fuente de datos aleatorios o pseudoaleatorios.
 
 ## Ejemplos
 
