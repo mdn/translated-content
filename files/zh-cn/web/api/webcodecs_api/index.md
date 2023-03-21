@@ -5,9 +5,7 @@ slug: Web/API/WebCodecs_API
 
 {{DefaultAPISidebar("WebCodecs API")}}
 
-**WebCodecs API**为 web 开发者提供了对视频流的单个帧和音频数据块的底层访问能力。
-这对于那些需要完全控制媒体处理方式的web应用程序非常有用。
-例如，视频或音频编辑器，以及视频会议。
+**WebCodecs API** 为 web 开发者提供了对视频流的单个帧和音频数据块的底层访问能力。这对于那些需要完全控制媒体处理方式的 web 应用程序非常有用。例如，视频或音频编辑器，以及视频会议。
 
 ## 概念和用法
 
