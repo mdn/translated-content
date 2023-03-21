@@ -58,7 +58,7 @@ second.onchange = function() {
 
 ### 转移示例
 
-这个最小化的例子中，`主线程` 创建了一个 `ArrayBuffer`，并将其发送给 `myWorker`，然后让 `myWorker` 将其转移回 `主线程`，并在每个步骤中记录大小。
+这个最小化的例子中，`main` 中创建了一个 `ArrayBuffer`，并将其发送给 `myWorker`，然后让 `myWorker` 将其转移回 `main`，并在每个步骤中记录大小。
 
 #### main.js 代码
 
