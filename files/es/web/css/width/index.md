@@ -17,7 +17,7 @@ Las propiedades {{cssxref("min-width")}} y {{cssxref("max-width")}} sobreescribe
 ## Sintaxis
 
 ```css
-/* Valores en <longitud> */
+/* Valores en <length> */
 width: 300px;
 width: 25em;
 
