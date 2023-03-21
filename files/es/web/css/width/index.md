@@ -21,7 +21,7 @@ Las propiedades {{cssxref("min-width")}} y {{cssxref("max-width")}} sobreescribe
 width: 300px;
 width: 25em;
 
-/* Valores en <porcentaje> */
+/* Valores en <percentage> */
 width: 75%;
 
 /* Valores en palabras clave */
