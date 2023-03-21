@@ -12,7 +12,7 @@ El método **`Crypto.getRandomValues()`** permite obtener valores aleatorios cri
 El arreglo dado como parámetro se rellena con números aleatorios (aleatorios en su significado criptográfico).
 
 Para garantizar un rendimiento suficiente, las implementaciones no utilizan un verdadero generador de números aleatorios, sino un generador de números pseudoaleatorios _sembrado_ con un valor con suficiente entropía.
-El algoritmo del generador de números pseudoaleatorios (PRNG, por sus siglas en Inglés) puede variar entre {{Glossary("user agent", "_user agents_")}}, pero es adecuado para fines criptográficos.
+El algoritmo del generador de números pseudoaleatorios (PRNG, por sus siglas en Inglés) puede variar entre _{{Glossary("user agent", "user agents")}}_, pero es adecuado para fines criptográficos.
 
 `getRandomValues()` es el único miembro de la interfaz `Crypto` que puede utilizarse desde un contexto inseguro.
 
