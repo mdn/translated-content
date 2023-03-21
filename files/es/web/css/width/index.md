@@ -158,7 +158,7 @@ p.minblue {
 <p class="minblue">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
 ```
 
-{{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
+{{EmbedLiveSample('', '500px', '155px')}}
 
 ## Especificaciones
 
