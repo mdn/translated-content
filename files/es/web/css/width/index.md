@@ -141,7 +141,7 @@ p.maxgreen {
 <p class="maxgreen">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
 ```
 
-{{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
+{{EmbedLiveSample('', '500px', '64px')}}
 
 ### Ejemplo usando "min-content"
 
