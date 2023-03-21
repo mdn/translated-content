@@ -123,7 +123,7 @@ p.goldie {
 <div class="percent">Ancho en porcentaje</div>
 ```
 
-{{EmbedLiveSample('Example using percentage', '500px', '64px')}}
+{{EmbedLiveSample('', '500px', '64px')}}
 
 ### Ejemplo usando "max-content"
 
