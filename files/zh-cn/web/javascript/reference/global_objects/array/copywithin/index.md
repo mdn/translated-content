@@ -3,11 +3,15 @@ title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
 
-{{JSRef}}**`copyWithin()`** 方法浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
+{{JSRef}}
+
+**`copyWithin()`** 方法浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。
+
+{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
 
 ## 语法
 
-```js
+```js-nolint
 copyWithin(target)
 copyWithin(target, start)
 copyWithin(target, start, end)
@@ -16,11 +20,22 @@ copyWithin(target, start, end)
 ### 参数
 
 - `target`
-  - : 0 为基底的索引，复制序列到该位置。如果是负数，`target` 将从末尾开始计算。如果 `target` 大于等于 `arr.length`，将不会发生拷贝。如果 `target` 在 `start` 之后，复制的序列将被修改以符合 `arr.length`。
-- `start`
-  - : 0 为基底的索引，开始复制元素的起始位置。如果是负数，`start` 将从末尾开始计算。如果 `start` 被忽略，`copyWithin` 将会从 0 开始复制。
-- `end`
-  - : 0 为基底的索引，开始复制元素的结束位置。`copyWithin` 将会拷贝到该位置，但不包括 `end` 这个位置的元素。如果是负数， `end` 将从末尾开始计算。如果 `end` 被忽略，`copyWithin` 方法将会一直复制至数组结尾（默认为 `arr.length`）。
+  - : 序列开始替换的目标为止，以 0 为起始的下标表示，且将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)
+    - 负索引将从数组末尾开始计数——如果 `target < 0`，则实际是 `target + array.length`。
+    - 如果 `target < -array.length`，则使用 `0`。
+    - 如果 `target >= array.length`，则不会拷贝任何内容。
+    - 如果 `target` 位于 `start` 之后，则复制只会持续到 `array.length` 结束（换句话说，`copyWithin()` 永远不会扩展数组）。
+- `start` {{optional_inline}}
+  - : 要复制的元素序列的起始位置，以 0 为起始的下标表示，且将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)
+    - 负索引将从数组末尾开始计数——如果 `start < 0`，则实际是 `start + array.length`。
+    - 如果省略 `start` 或 `start < -array.length`，则默认为 `0`。
+    - 如果 `start >= array.length`，则不会拷贝任何内容。
+- `end` {{optional_inline}}
+  - : 要复制的元素序列的结束位置，以 0 为起始的下标表示，且将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。`copyWithin` 将会拷贝到该位置，但不包括 `end` 这个位置的元素。
+    - 负索引将从数组末尾开始计数——如果 `end < 0`，则实际是 `end + array.length`。
+    - 如果 `end < -array.length`，则使用`0`。
+    - 如果省略 `end` 或 `end >= array.length`，则默认为 `array.length`，这将导致直到数组末尾的所有元素都被复制。
+    - 如果 `end` 位于 `start` 之前，则不会拷贝任何内容。
 
 ### 返回值
 
@@ -28,45 +43,54 @@ copyWithin(target, start, end)
 
 ## 描述
 
-参数 target、start 和 end 必须为整数。
+`copyWithin()` 方法的工作原理类似于 C 和 C++ 的 `memmove`，是一种移动[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)数据的高性能方法，与 {{jsxref("TypedArray/copyWithin", "TypedArray")}} 的同名方法类似。序列在一次中操作被复制和粘贴；即使复制和粘贴区域重叠，粘贴的序列也将具有复制值。
 
-如果 start 为负，则其指定的索引位置等同于 length+start，length 为数组的长度。end 也是如此。
+`copyWithin()` 是[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this` 指向的对象（数组或类数组）的长度，但会更改其的内容，并在必要时创建新属性或删除现有属性。
 
-copyWithin 方法不要求其 this 值必须是一个数组对象；除此之外，copyWithin 是一个可变方法，它可以改变 this 对象本身，并且返回它，而不仅仅是它的拷贝。
+`copyWithin()` 方法保留空槽。如果要复制的区域是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则原来的空槽会被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)并被替换为拷贝的空槽。
 
-`copyWithin` 就像 C 和 C++ 的 `memcpy` 函数一样，且它是用来移动 {{jsxref("Array")}} 或者 {{jsxref("TypedArray")}} 数据的一个高性能的方法。复制以及粘贴序列这两者是为一体的操作;即使复制和粘贴区域重叠，粘贴的序列也会有拷贝来的值。
-
-`copyWithin` 函数被设计为通用式的，其不要求其 `this` 值必须是一个{{jsxref("Array", "数组")}}对象。
-
-`copyWithin` 是一个可变方法，它不会改变 this 的长度 length，但是会改变 this 本身的内容，且需要时会创建新的属性。
+`copyWithin()` 方法是[通用方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这种方法不适合应用于它们，因为字符串是不可变的。
 
 ## 示例
 
-```plain
-[1, 2, 3, 4, 5].copyWithin(-2)
+### 使用 copyWithin()
+
+```js
+console.log([1, 2, 3, 4, 5].copyWithin(-2));
 // [1, 2, 3, 1, 2]
 
-[1, 2, 3, 4, 5].copyWithin(0, 3)
+console.log([1, 2, 3, 4, 5].copyWithin(0, 3));
 // [4, 5, 3, 4, 5]
 
-[1, 2, 3, 4, 5].copyWithin(0, 3, 4)
+console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
 // [4, 2, 3, 4, 5]
 
-[1, 2, 3, 4, 5].copyWithin(-2, -3, -1)
+console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
 // [1, 2, 3, 3, 4]
+```
 
-[].copyWithin.call({length: 5, 3: 1}, 0, 3);
-// {0: 1, 3: 1, length: 5}
+### 在稀疏数组上使用 copyWithin()
 
-// ES2015 Typed Arrays are subclasses of Array
-var i32a = new Int32Array([1, 2, 3, 4, 5]);
+`copyWithin()` 将保留空插槽。
 
-i32a.copyWithin(0, 2);
-// Int32Array [3, 4, 5, 4, 5]
+```js
+console.log([1, , 3].copyWithin(2, 1, 2)); // [ 1, <2 empty items> ]
+```
 
-// On platforms that are not yet ES2015 compliant:
-[].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
-// Int32Array [4, 2, 3, 4, 5]
+### 在非数组对象上调用 copyWithin()
+
+`copyWithin()` 方法读取 `this` 的 `length` 属性，然后操作所涉及的整数索引。
+
+```js
+const arrayLike = {
+  length: 5,
+  3: 1,
+};
+console.log(Array.prototype.copyWithin.call(arrayLike, 0, 3));
+// { '0': 1, '3': 1, length: 5 }
+console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
+// { '0': 1, length: 5 }
+// '3' 属性被删除，因为在复制的源中是一个空槽
 ```
 
 ## 规范
@@ -80,5 +104,4 @@ i32a.copyWithin(0, 2);
 ## 参见
 
 - [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

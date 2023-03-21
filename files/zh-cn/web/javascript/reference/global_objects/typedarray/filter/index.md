@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 
 {{JSRef}}
 
-**`filter()`**创建新的类型化数组，含有所有通过了测试的元素，测试由提供的函数实现。这个方法的算法和 {{jsxref("Array.prototype.filter()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`filter()`** 创建新的类型化数组，含有所有通过了测试的元素，测试由提供的函数实现。这个方法的算法和 {{jsxref("Array.prototype.filter()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 ## 语法
 
