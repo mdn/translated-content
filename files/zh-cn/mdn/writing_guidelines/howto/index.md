@@ -1,5 +1,5 @@
 ---
-title: 写作指南
+title: MDN Web 文档写作指南
 slug: MDN/Writing_guidelines/Howto
 ---
 
