@@ -1,14 +1,6 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - Propiedad CSS
-  - Capas
-  - Referencia
-  - Dimensiones
-  - Tamaño
-  - Ancho
 browser-compat: css.properties.width
 ---
 
