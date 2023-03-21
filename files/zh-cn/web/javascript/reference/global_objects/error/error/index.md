@@ -94,4 +94,4 @@ console.log("cause" in error3); // false
 - [`core-js`](https://github.com/zloirock/core-js) 提供了支持 `cause` 等最新特性 (modern behavior) 的 [`Error` polyfill](https://github.com/zloirock/core-js#ecmascript-error)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
-- [Error causes](https://v8.dev/features/error-cause) (v8.dev/features)
+- [Error cause](https://v8.dev/features/error-cause)（v8.dev/features）
