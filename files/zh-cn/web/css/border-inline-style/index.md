@@ -42,7 +42,9 @@ border-inline-style: unset;
 
 ## 示例
 
-### HTML Content
+### 设置 border-inline-style
+
+#### HTML
 
 ```html
 <div>
@@ -50,7 +52,7 @@ border-inline-style: unset;
 </div>
 ```
 
-### CSS Content
+#### CSS
 
 ```css
 div {
@@ -66,7 +68,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("示例", 140, 140)}}
+{{EmbedLiveSample("设置 border-inline-style", 140, 140)}}
 
 ## 规范
 
