@@ -2,7 +2,7 @@
 title: 'Glosario de MDN Web Docs: Definiciones de términos relacionados con la Web'
 slug: Glossary
 l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09bed947b2c608428b62a60f07d09dc543f732dc09b
+  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
 Las tecnologías web contienen largas listas de jerga y abreviaturas que se utilizan en la documentación y la codificación. Este glosario proporciona definiciones de palabras y abreviaturas que necesita saber para comprender y crear correctamente para la web.

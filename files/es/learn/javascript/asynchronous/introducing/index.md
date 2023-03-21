@@ -3,7 +3,7 @@ title: Introducción a JavaScript asíncrono
 slug: Learn/JavaScript/Asynchronous/Introducing
 original_slug: Learn/JavaScript/Asynchronous/Concepts
 l10n:
-  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f1805d8b0eb3591009b6b7fee274bb7ed1bc5638f18
+  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
