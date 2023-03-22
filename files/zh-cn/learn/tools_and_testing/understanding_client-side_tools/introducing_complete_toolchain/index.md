@@ -286,7 +286,7 @@ npm install --save-dev eslint prettier babel-eslint
    }
    ```
 
-   使用这些设置，当 Prettier 为你格式化 JavaScript 代码时，它将对所有带引号的值使用单引号，并且不使用尾随逗号（这是 ECMAScript 的新特性，在旧版浏览器中这会导致错误）。你可以在 [Prettier 文档](https://prettier.io/docs/en/configuration.html) 中找到更多关于配置 Prettier 的信息。
+   使用这些设置，当 Prettier 为你格式化 JavaScript 代码时，它将对所有带引号的值使用单引号，并且不使用尾随逗号（这是 ECMAScript 的新特性，在旧版浏览器中这会导致错误）。你可以在 [Prettier 文档](https://prettier.io/docs/en/configuration.html)中找到更多关于配置 Prettier 的信息。
 
 3. 接下来，我们将配置 ESLint——在 `will-it-miss` 目录的根目录中创建另一个名为 `.eslintrc.json` 的文件，并将其设置为以下内容：
 
