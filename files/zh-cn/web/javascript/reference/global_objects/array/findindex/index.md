@@ -5,11 +5,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 {{JSRef}}
 
-**`findIndex()`**方法返回数组中满足提供的测试函数的第一个元素的**索引**。若没有找到对应元素则返回 -1。
+**`findIndex()`** 方法返回数组中满足提供的测试函数的第一个元素的 **索引**。若没有找到对应元素则返回 -1。
 
 {{EmbedInteractiveExample("pages/js/array-findindex.html")}}
 
-另请参见 {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的**值**，而不是其索引。
+另请参见 {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的 **值**，而不是其索引。
 
 ## 语法
 
@@ -48,7 +48,7 @@ findIndex(function(element, index, array) { /* … */ }, thisArg)
 
 ### 返回值
 
-数组中通过提供测试函数的第一个元素的**索引**。否则，返回 -1
+数组中通过提供测试函数的第一个元素的 **索引**。否则，返回 -1
 
 ## 描述
 
