@@ -26,7 +26,7 @@ postMessage(message, transfer)
       如果未提供 `message` 参数，则解析器将抛出 {{jsxref("SyntaxError")}}。如果要传递给 worker 的数据不重要，可以显式传递 `null` 或 `undefined`。
 
 - `transfer` {{optional_inline}}
-  - : 一个可选的 [transferable 对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，用于转移所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），仅在接收方的 worker 中可用。
+  - : 一个可选的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，用于转移所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），仅在接收方的 worker 中可用。
 
     可转移对象是像 {{domxref("ArrayBuffer")}}、{{domxref("MessagePort")}} 或 {{domxref("ImageBitmap")}} 这样的类的实例对象可以被转移，`null` 是不可接受的`转移`值。
 
