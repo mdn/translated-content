@@ -79,7 +79,7 @@ slug: >-
 
 ## 工具的三个阶段
 
-正如我们在 [第一章](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview) 中所讨论的那样，工具链将分为以下阶段：
+正如我们在[第一章](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)中所讨论的那样，工具链将分为以下阶段：
 
 - **安全的网络**：使软件开发体验稳定且更高效。我们也可能将其称为开发环境。
 - **编译与构建**：允许我们在开发过程中使用编程语言（例如 JavaScript）的最新特性或其他语言（例如 JSX 或 TypeScript），然后转译我们的代码，以便生产版本仍在各种浏览器上运行，无论是现代的和陈旧的。
