@@ -33654,9 +33654,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/IndexedDB_API": {
-    "modified": "2019-03-23T22:12:20.973Z",
-    "contributors": ["Taoja"]
   }
 }
