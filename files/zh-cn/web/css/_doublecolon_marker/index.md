@@ -5,18 +5,18 @@ slug: Web/CSS/::marker
 
 {{CSSRef}}
 
-**`::marker`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/zh-CN/CSS/Pseudo-elements)（CSS 伪元素）选中一个 list item 的 marker box，后者通常含有一个项目符号或者数字。它作用在任何设置了[`display: list-item`](/zh-CN/docs/Web/CSS/display)的元素或伪元素上，例如{{HTMLElement("li")}}和{{HTMLElement("summary")}}。
+**`::marker`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/zh-CN/CSS/Pseudo-elements)（CSS 伪元素）选中一个 list item 的 marker box，后者通常含有一个项目符号或者数字。它作用在任何设置了 [`display: list-item`](/zh-CN/docs/Web/CSS/display) 的元素或伪元素上，例如 {{HTMLElement("li")}} 和 {{HTMLElement("summary")}}。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-marker.html", "tabbed-shorter")}}
 
 ## 允许的属性值
 
-在将`::marker`作为选择器的规则中，只能使用某些 CSS 属性：
+在将 `::marker` 作为选择器的规则中，只能使用某些 CSS 属性：
 
-- All [font properties](/zh-CN/docs/Web/CSS/CSS_Fonts)（字体属性）
+- 所有的[字体属性](/zh-CN/docs/Web/CSS/CSS_Fonts)
 - {{CSSxRef("white-space")}} 属性
 - {{CSSxRef("color")}} 属性
-- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} and {{CSSxRef("direction")}} 属性
+- {{CSSxRef("text-combine-upright")}}、 {{CSSxRef("unicode-bidi")}} 和 {{CSSxRef("direction")}} 属性
 - {{CSSxRef("content")}} 属性
 - 所有的 [animation](/zh-CN/docs/Web/CSS/CSS_Animations#properties) 属性和 [transition](/zh-CN/docs/Web/CSS/CSS_Transitions#properties) 属性
 
