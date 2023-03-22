@@ -29,7 +29,7 @@ slug: Web/CSS/CSS_Logical_Properties
 - {{CSSXref("min-block-size")}}
 - {{CSSXref("min-inline-size")}}
 
-### 用于外边距、边界和内边距的属性
+### 用于外边距、边框和内边距的属性
 
 - {{CSSXref("border-block")}}
 - {{CSSXref("border-block-color")}}
@@ -114,8 +114,8 @@ slug: Web/CSS/CSS_Logical_Properties
 ## 指南
 
 - [逻辑属性和逻辑值的基本概念](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
-- [尺寸逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Sizing)
-- [用于外边距、边界和内边距的逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
+- [逻辑尺寸属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Sizing)
+- [用于外边距、边框和内边距的逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
 - [用于浮动和定位的逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
 
 ## 规范
