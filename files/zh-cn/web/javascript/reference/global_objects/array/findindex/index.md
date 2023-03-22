@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 {{EmbedInteractiveExample("pages/js/array-findindex.html")}}
 
-另请参见 {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的 **值**，而不是其索引。
+另请参见 {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的**值**，而不是其索引。
 
 ## 语法
 
