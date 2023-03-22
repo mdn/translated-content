@@ -71,10 +71,10 @@ Atomics.and(ta, 0, 1);
 Atomics.load(ta, 0);
 // 1
 
-Atomics.compareExchange(ta, 0, 5, 12);
-Atomics.load(ta, 0); // 12
+Atomics.compareExchange(ta, 0, 5, 12); // 1
+Atomics.load(ta, 0); // 1
 
-Atomics.exchange(ta, 0, 12);
+Atomics.exchange(ta, 0, 12); // 1
 Atomics.load(ta, 0); // 12
 
 Atomics.isLockFree(1); // true
@@ -82,16 +82,16 @@ Atomics.isLockFree(2); // true
 Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
 
-Atomics.or(ta, 0, 1);
-Atomics.load(ta, 0);  // 5
+Atomics.or(ta, 0, 1); // 12
+Atomics.load(ta, 0);  // 13
 
 Atomics.store(ta, 0, 12); // 12
 
-Atomics.sub(ta, 0, 2);
-Atomics.load(ta, 0); // 3
+Atomics.sub(ta, 0, 2); // 12
+Atomics.load(ta, 0); // 10
 
-Atomics.xor(ta, 0, 1);
-Atomics.load(ta, 0); // 4
+Atomics.xor(ta, 0, 1); // 10
+Atomics.load(ta, 0); // 11
 ```
 
 ### Waiting 和 notifiying
