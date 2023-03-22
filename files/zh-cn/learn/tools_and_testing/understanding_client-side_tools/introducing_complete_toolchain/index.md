@@ -122,7 +122,7 @@ npm 将用于安装我们工具链的后续部分。接下来，我们将安装 
 
 Git 可以通过 git-scm 网站[下载和安装](https://git-scm.com/downloads)——下载适用于你系统的相关安装程序，运行它，并按照屏幕上的提示操作。干就完事了。
 
-你可以以多种不同的方式与 git 进行交互，从使用命令行发出命令，到使用 [git GUI 应用程序](https://git-scm.com/downloads/guis) 通过按按钮发出相同的命令，甚至从直接在代码编辑器内部使用，如下面的 Visual Studio Code 示例所示：
+你可以以多种不同的方式与 git 进行交互，从使用命令行发出命令，到使用 [git GUI 应用程序](https://git-scm.com/downloads/guis)通过按按钮发出相同的命令，甚至从直接在代码编辑器内部使用，如下面的 Visual Studio Code 示例所示：
 
 ![在 VS Code 中显示的 GitHub 集成](vscode-git.png)
 
