@@ -1,6 +1,7 @@
 ---
 title: LockedFile
-slug: Web/API/IDBFileHandle
+slug: conflicting/Web/API/IndexedDB_API
+original_slug: Web/API/IDBFileHandle
 ---
 
 {{APIRef("File System API")}} {{non-standard_header}}

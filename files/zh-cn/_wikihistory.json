@@ -11253,10 +11253,6 @@
     "modified": "2019-03-23T23:19:24.764Z",
     "contributors": ["teoli", "023yangbo"]
   },
-  "Web/API/IDBFileHandle": {
-    "modified": "2019-03-23T22:12:20.973Z",
-    "contributors": ["Taoja"]
-  },
   "Web/API/IDBIndex": {
     "modified": "2020-10-25T12:41:13.535Z",
     "contributors": ["Thinker-Mars", "list", "focus"]
@@ -11402,16 +11398,6 @@
       "ziyunfei",
       "023yangbo",
       "princetoad@gmail.com"
-    ]
-  },
-  "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2019-06-14T00:02:23.198Z",
-    "contributors": [
-      "flyingjust",
-      "jason-grimm",
-      "ShaojieLiu",
-      "Bayes",
-      "wenshin"
     ]
   },
   "Web/API/IndexedDB_API/Checking_when_a_deadline_is_due": {
@@ -14033,6 +14019,16 @@
   "Web/API/Storage_API": {
     "modified": "2020-10-15T22:19:19.587Z",
     "contributors": ["x1shi", "RainSlide"]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2019-06-14T00:02:23.198Z",
+    "contributors": [
+      "flyingjust",
+      "jason-grimm",
+      "ShaojieLiu",
+      "Bayes",
+      "wenshin"
+    ]
   },
   "Web/API/Streams_API": {
     "modified": "2020-10-15T22:17:21.258Z",
@@ -33658,5 +33654,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/API/IndexedDB_API": {
+    "modified": "2019-03-23T22:12:20.973Z",
+    "contributors": ["Taoja"]
   }
 }
