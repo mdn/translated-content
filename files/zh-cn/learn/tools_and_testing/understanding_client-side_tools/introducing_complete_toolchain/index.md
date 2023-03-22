@@ -34,7 +34,7 @@ slug: >-
 
 我们在本文中创建的工具链将用于构建和部署一个迷你网站，该网站列出了有关潜在危险的空间物体的数据（取自 [NASA 开放 API](https://api.nasa.gov/) 之一），这些物体威胁着我们在地球上的存在！它看起来像这样：
 
-![示例网站 “will it miss” 的屏幕截图](will-it-miss-screenshot.png)
+![示例网站“will it miss”的屏幕截图](will-it-miss-screenshot.png)
 
 你可以在 [near-misses.netlify.com](https://near-misses.netlify.app/) 上看到该网站的实时版本。
 
