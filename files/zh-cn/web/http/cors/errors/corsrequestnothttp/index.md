@@ -25,7 +25,7 @@ slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 开发者如果想要在本地进行测试，现在要[设置一个本地服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。由于所有的文件都来自同种方案和域（`loaclhost`），他们都有相同的源，并不会触发跨源错误。
 
-> **备注：** 此更改符合 [URL 规范](https://url.spec.whatwg.org/#origin)，该规范将文件的源行为留给开发者实现，但建议在有疑问时，将文件的来源视为不透明。
+> **备注：** 此更改符合 [URL 规范](https://url.spec.whatwg.org/#origin)，该规范将文件的原始行为留给开发者实现，但建议在有疑问时，将文件的来源视为不透明。
 
 ## 参见
 
