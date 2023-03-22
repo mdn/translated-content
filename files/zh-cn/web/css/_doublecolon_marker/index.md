@@ -5,7 +5,7 @@ slug: Web/CSS/::marker
 
 {{CSSRef}}
 
-**`::marker`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/zh-CN/CSS/Pseudo-elements)（CSS 伪元素）选中一个 list item 的 marker box，后者通常含有一个项目符号或者数字。它作用在任何设置了 [`display: list-item`](/zh-CN/docs/Web/CSS/display) 的元素或伪元素上，例如 {{HTMLElement("li")}} 和 {{HTMLElement("summary")}}。
+CSS 中， **`::marker`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，其将成为匹配选中的元素的标记头（通常为一个符号或数字）。它作用在任何设置了 [`display: list-item`](/zh-CN/docs/Web/CSS/display) 的元素或伪元素上，例如 {{HTMLElement("li")}} 和 {{HTMLElement("summary")}}。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-marker.html", "tabbed-shorter")}}
 
