@@ -43,12 +43,12 @@ var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
+  console.log('向 worker 发送消息');
 }
 
 second.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
+  console.log('向 worker 发送消息');
 }
 ```
 
@@ -145,4 +145,4 @@ ArrayBuffer 在传输后, 其 `byteLength` 将变为 0. 要查看此 Firefox 演
 
 ## 参见
 
-- 它所属 {{domxref("Worker")}} 的接口。
+- 它属于 {{domxref("Worker")}} 接口。
