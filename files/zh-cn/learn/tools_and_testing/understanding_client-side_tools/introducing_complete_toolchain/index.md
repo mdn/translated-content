@@ -198,7 +198,7 @@ ESLint 通过 npm 安装，因此根据第二章中的讨论，你可以选择�
 
 与其他工具一样，代码编辑器集成支持通常对 ESLint 有好处，并且可能更有用，因为它可以在出现问题时向我们提供实时反馈：
 
-![ESLint error integration shown in VS Code](eslint-error.png)
+![VS Code 中集成 ESLint 显示的错误](eslint-error.png)
 
 安装完成后，我们需要配置 Prettier，以便它可以与 ESLint 配合使用。我们将在下一节中进行此操作。
 
@@ -250,7 +250,7 @@ ESLint 通过 npm 安装，因此根据第二章中的讨论，你可以选择�
 
 1. 要获取代码文件，请访问 <https://github.com/remy/mdn-will-it-miss>，下载并解压缩此仓库的内容到本地硬盘的某个位置。你可以通过选择 *Clone or download* > *Download ZIP* 下载整个项目的 zip 文件。
 
-   ![The GitHub will it miss repo](github-will-it-miss.png)
+   ![GitHub 上托管的“will it miss”仓库](github-will-it-miss.png)
 
 2. 现在将项目的 `src` 目录的内容复制到你当前的空 `src` 目录中。
 
