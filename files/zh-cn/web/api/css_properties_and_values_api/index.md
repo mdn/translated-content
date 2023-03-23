@@ -5,7 +5,7 @@ slug: Web/API/CSS_Properties_and_Values_API
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}
 
-**CSS Properties and Values API** — [CSS Houdini](/en-US/docs/Web/Guide/Houdini) API 的一部分 — 允许开发者显式地定义他们的 {{cssxref('--*', 'CSS custom properties')}}，允许设置属性类型检查、默认值以及是否可继承其值。
+**CSS Properties and Values API** — [CSS Houdini](/zh-CN/docs/Web/Guide/Houdini) API 的一部分——允许开发者显式地定义他们的 {{cssxref('--*', 'CSS custom properties')}}，允许设置属性类型检查、默认值以及是否可继承其值。
 
 ## 接口
 
