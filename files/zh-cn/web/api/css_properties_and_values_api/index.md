@@ -1,18 +1,18 @@
 ---
-title: CSS Properties and Values API
+title: CSS 属性和值 API
 slug: Web/API/CSS_Properties_and_Values_API
 ---
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}
 
-**CSS Properties and Values API** — [CSS Houdini](/zh-CN/docs/Web/Guide/Houdini) API 的一部分——允许开发者显式地定义他们的 {{cssxref('--*', 'CSS custom properties')}}，允许设置属性类型检查、默认值以及是否可继承其值。
+**CSS 属性和值 API**（CSS Properties and Values API）——[CSS Houdini](/zh-CN/docs/Web/Guide/Houdini) API 的一部分——允许开发者显式地定义它们的 {{cssxref('--*', 'CSS 自定义属性', '', 1)}}，允许设置属性类型检查、默认值以及是否可继承其值。
 
 ## 接口
 
 - {{domxref('CSS.registerProperty')}}
   - : 定义了浏览器应该如何解析 {{cssxref('--*', 'CSS custom properties')}}。通过 [JavaScript](/zh-CN/docs/Web/JavaScript) 中的 {{domxref('CSS.registerProperty')}} 访问该接口。
 - {{cssxref('@property')}}
-  - : 定义了浏览器应该如何解析 {{cssxref('--*', 'CSS custom properties')}}。通过 [CSS](/zh-CN/docs/Web/CSS) 中的 {{cssxref('@property')}} [at-rule](/zh-CN/docs/Web/CSS/At-rule) 访问该接口。
+  - : 定义了浏览器应该如何解析 {{cssxref('--*', 'CSS custom properties')}}。通过 [CSS](/zh-CN/docs/Web/CSS) 中的 {{cssxref('@property')}} [at 规则](/zh-CN/docs/Web/CSS/At-rule)访问该接口。
 
 ## 示例
 
@@ -47,7 +47,7 @@ window.CSS.registerProperty({
 
 ## 参见
 
-- [Using the CSS properties and values API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [使用 CSS 属性和值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - [CSS Painting API](/zh-CN/docs/Web/API/CSS_Painting_API)
-- [CSS Typed Object Model](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
+- [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
 - [CSS Houdini](/zh-CN/docs/Web/Guide/Houdini)
