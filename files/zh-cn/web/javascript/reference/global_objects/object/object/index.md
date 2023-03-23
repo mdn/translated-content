@@ -39,7 +39,7 @@ console.log(o)
 
 ### 使用 Object 处理 undefined 和 null 类型的情况
 
-下面的例子保存了一个空 `Object` 对象在 `o`:
+下面的示例在 `o` 中保存了一个空 `Object` 对象：
 
 ```js
 const o = new Object();
