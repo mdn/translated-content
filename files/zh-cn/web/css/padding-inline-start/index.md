@@ -5,7 +5,7 @@ slug: Web/CSS/padding-inline-start
 
 {{CSSRef}}
 
-**`padding-inline-start`** [CSS](/zh-CN/docs/Web/CSS) 属性定义了一个元素的逻辑起始边距，根据该元素的书写模式、方向性和文本方向，它映射为一个物理边距。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`padding-inline-start`** 定义了元素的逻辑行首内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
 
 {{EmbedInteractiveExample("pages/css/padding-inline-start.html")}}
 
@@ -13,11 +13,11 @@ slug: Web/CSS/padding-inline-start
 
 ```css
 /* 长度值 */
-padding-inline-start: 10px;   /* 绝对长度 */
-padding-inline-start: 1em;    /* 相对于文本的大小 */
+padding-inline-start: 10px; /* 绝对长度 */
+padding-inline-start: 1em; /* 相对于文本尺寸的长度 */
 
 /* 百分比值 */
-padding-inline-start: 5%;     /* 相对于区块容器的宽度边距 */
+padding-inline-start: 5%; /* 相对于包含块宽度的内边距 */
 
 /* 全局值 */
 padding-inline-start: inherit;
@@ -27,36 +27,36 @@ padding-inline-start: revert-layer;
 padding-inline-start: unset;
 ```
 
-### 值
+### 取值
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 作为固定值的边距大小，必须为非负值。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 作为百分比的边距大小，相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的内联大小（在 {{cssxref("writing-mode")}} 中定义的水平语言中为 _width_），必须是非负值。
+- {{CSSXref("&lt;length&gt;")}}
+  - : 以固定值指定的内边距尺寸。必须非负。
+- {{CSSXref("&lt;percentage&gt;")}}
+  - : 以百分比指定的内边距尺寸，参照[包含块](/zh-CN/docs/Web/CSS/Containing_block)的行向尺寸（即横排语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
 
 ## 描述
 
-在规范中，`padding-inline-start` 属性被定义为与 {{cssxref("padding-top")}} 属性取值相同。然而，它所映射的物理属性取决于 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 的值。因此，它可以映射到{{cssxref("padding-top")}}、{{cssxref("padding-right")}} 或 {{cssxref("padding-left")}}。
+虽然规范定义 `padding-inline-start` 属性的取值与 {{CSSXref("padding-top")}} 属性相同，但是此属性所对应的实体属性取决于 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所设置的值。因此这一属性可能对应于 {{CSSXref("padding-bottom")}}、{{CSSXref("padding-right")}} 或 {{CSSXref("padding-left")}}。
 
-它与 {{cssxref("padding-block-start")}}、{{cssxref("padding-block-end")}} 和 {{cssxref("padding-inline-end")}} 有关，它们定义了该元素的其他边距。
+与此相关的属性有 {{CSSXref("padding-block-start")}}、{{CSSXref("padding-block-end")}} 和 {{CSSXref("padding-inline-end"")}}，这些属性定义了元素的其他内边距。
 
 ## 形式定义
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式语法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 示例
 
-### 设置垂直文字的起始内联边距
+### 为竖排文本设置行首内边距
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">示例文本</p>
 </div>
 ```
 
@@ -78,7 +78,7 @@ div {
 
 #### 结果
 
-{{EmbedLiveSample("设置垂直文字的起始内联边距", 140, 140)}}
+{{EmbedLiveSample("为竖排文本设置行首内边距", 140, 140)}}
 
 ## 规范
 
@@ -90,6 +90,6 @@ div {
 
 ## 参见
 
-- [CSS 逻辑属性和值](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
-- 所映射的物理属性：{{cssxref("padding-top")}}、{{cssxref("padding-right")}}、{{cssxref("padding-bottom")}} 和 {{cssxref("padding-left")}}
-- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- 对应的实体属性：{{CSSXref("padding-top")}}、{{CSSXref("padding-right")}}、{{CSSXref("padding-bottom")}} 和 {{CSSXref("padding-left")}}
+- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
