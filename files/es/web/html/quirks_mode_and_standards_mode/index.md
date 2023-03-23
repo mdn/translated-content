@@ -1,5 +1,5 @@
 ---
-title: Quirks Mode
+title: Modo quirks y modo estándar
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 l10n:
   sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
