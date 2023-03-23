@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 
 {{JSRef("Global_Objects", "Date")}}
 
-getMilliseconds() 方法，根据本地时间，返回一个指定的日期对象的毫秒数。
+**`getMilliseconds()`** 方法根据本地时间，返回一个指定的日期对象的毫秒数。
 
 {{EmbedInteractiveExample("pages/js/date-getmilliseconds.html")}}
 
