@@ -38,7 +38,7 @@ padding-inline-end: unset;
 
 虽然规范定义 `padding-inline-end` 属性的取值与 {{CSSXref("padding-top")}} 属性相同，但是此属性所对应的实体属性取决于 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所设置的值。因此这一属性可能对应于 {{CSSXref("padding-bottom")}}、{{CSSXref("padding-right")}} 或 {{CSSXref("padding-left")}}。
 
-与此相关的属性有 {{CSSXref("padding-block-start")}}、{{CSSXref("padding-block-end")}} 和 {{CSSXref("padding-inline-start"")}}，这些属性定义了元素的其他内边距。
+与此相关的属性有 {{CSSXref("padding-block-start")}}、{{CSSXref("padding-block-end")}} 和 {{CSSXref("padding-inline-start")}}，这些属性定义了元素的其他内边距。
 
 ## 形式定义
 
