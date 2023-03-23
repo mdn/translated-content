@@ -39,17 +39,17 @@ postMessage(message, transfer)
 下面的代码片段展示了使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 {{domxref("Worker")}} 对象。当两个表单输入框（`first` 和 `second`）的值发生改变时，{{domxref("HTMLElement/change_event", "change")}} 事件将调用 `postMessage()`，以将这两个输入框的值发送给当前的 worker。
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('向 worker 发送消息');
-}
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("消息已传递给 worker");
+};
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('向 worker 发送消息');
-}
+second.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("消息已传递给 worker");
+};
 ```
 
 有关完整的示例，请参阅我们的[简单 worker 示例](https://github.com/mdn/simple-web-worker)和（[运行示例](http://mdn.github.io/simple-web-worker/)）。
