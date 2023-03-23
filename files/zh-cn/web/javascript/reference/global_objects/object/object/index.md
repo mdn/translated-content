@@ -9,9 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 
 - 如果给定的值是 {{jsxref("null")}} 或 {{jsxref("undefined")}}, 它会创建并返回一个空对象。
 - 否则，它将返回一个和给定的值相对应的类型的对象。
-- 如果给定值是一个已经存在的对象，则会返回这个已经存在的值（相同地址）。
-
-在非构造函数上下文中调用时， `Object` 和 `new Object()`表现一致。
+- 如果给定值是一个已经存在的对象，则会返回这个值。
 
 ## 语法
 
@@ -25,7 +23,7 @@ new Object(value)
 ### 参数
 
 - `value`
-  - : 任意值
+  - : 任意值。
 
 ## 示例
 
@@ -36,7 +34,7 @@ let o = new Object()
 o.foo = 42
 
 console.log(o)
-// Object { foo: 42 }
+// { foo: 42 }
 ```
 
 ### 使用 Object 处理 undefined 和 null 类型的情况
@@ -44,15 +42,15 @@ console.log(o)
 下面的例子保存了一个空 `Object` 对象在 `o`:
 
 ```js
-let o = new Object()
+const o = new Object();
 ```
 
 ```js
-let o = new Object(undefined)
+const o = new Object(undefined);
 ```
 
 ```js
-let o = new Object(null)
+const o = new Object(null);
 ```
 
 ## 规范
