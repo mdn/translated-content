@@ -45,7 +45,7 @@ window.CSS.registerProperty({
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
