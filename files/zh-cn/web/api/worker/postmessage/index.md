@@ -7,13 +7,13 @@ slug: Web/API/Worker/postMessage
 
 {{domxref("Worker")}} 接口的 **`postMessage()`** 方法可以向 worker 发送消息。第一个参数是要发送到 worker 的数据。该数据可以是任何可以被[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)处理的 JavaScript 对象。
 
-{{domxref("Worker")}} 的 **`postMessage()`** 方法委托给 {{domxref("MessagePort")}} 的 {{domxref("MessagePort.postMessage", "postMessage()")}} 方法，该方法会在事件循环中添加一个任务，对应于接收 {{domxref("MessagePort")}} 的任务队列。
+{{domxref("Worker")}} 的 **`postMessage()`** 方法委托给 {{domxref("MessagePort")}} 的 {{domxref("MessagePort.postMessage", "postMessage()")}} 方法，该方法会在对应的用于接收 {{domxref("MessagePort")}} 的事件循环中添加一个任务。
 
 Worker 可以使用 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 方法将信息发送回生成它的线程。
 
 ## 语法
 
-```js
+```js-nolint
 postMessage(message)
 postMessage(message, transfer)
 ```
@@ -21,14 +21,14 @@ postMessage(message, transfer)
 ### 参数
 
 - `message`
-  - : 要传递给 worker 的对象；这将在传递给 {{domxref("DedicatedWorkerGlobalScope.message_event")}} 事件的数据字段中。这可以是任何值或 JavaScript 对象，可以通过[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)处理，包括循环引用。
+  - : 要传递给 worker 的对象；这将在传递给 {{domxref("DedicatedWorkerGlobalScope.message_event")}} 事件的 `data` 字段中。这可以是任何值或可以通过[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)处理的 JavaScript 对象（可以包含循环引用）。
 
-      如果未提供 `message` 参数，则解析器将抛出 {{jsxref("SyntaxError")}}。如果要传递给 worker 的数据不重要，可以显式传递 `null` 或 `undefined`。
+      如果*未*提供 `message` 参数，则解析器将抛出 {{jsxref("SyntaxError")}}。如果要传递给 worker 的数据不重要，可以显式传递 `null` 或 `undefined`。
 
 - `transfer` {{optional_inline}}
-  - : 一个可选的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，用于转移所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），仅在接收方的 worker 中可用。
+  - : 一个可选的、会被转移所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。如果一个对象的所有权被转移，它将在发送它的上下文中变为不可用（中止），而仅在接收方的 worker 中可用。
 
-    可转移对象是像 {{domxref("ArrayBuffer")}}、{{domxref("MessagePort")}} 或 {{domxref("ImageBitmap")}} 这样的类的实例对象可以被转移，`null` 是不可接受的`转移`值。
+    像 {{domxref("ArrayBuffer")}}、{{domxref("MessagePort")}} 或 {{domxref("ImageBitmap")}} 类的实例才是可转移对象，才能够被转移。不能将 `null` 作为 `transfer` 的值。
 
 ### 返回值
 
@@ -36,7 +36,7 @@ postMessage(message, transfer)
 
 ## 示例
 
-下面的代码片段展示了使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 Worker 对象。当两个表单输入框（`first` 和 `second`）的值发生改变时，[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件将调用 `postMessage()` 把这两个输入框的值发送给当前的 worker。
+下面的代码片段展示了使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 {{domxref("Worker")}} 对象。当两个表单输入框（`first` 和 `second`）的值发生改变时，{{domxref("HTMLElement/change_event", "change")}} 事件将调用 `postMessage()`，以将这两个输入框的值发送给当前的 worker。
 
 ```js
 var myWorker = new Worker('worker.js');
@@ -52,7 +52,7 @@ second.onchange = function() {
 }
 ```
 
-有关完整的示例，请参阅我们的[简单 worker 示例](https://github.com/mdn/simple-web-worker)和([运行示例](http://mdn.github.io/simple-web-worker/)).
+有关完整的示例，请参阅我们的[简单 worker 示例](https://github.com/mdn/simple-web-worker)和（[运行示例](http://mdn.github.io/simple-web-worker/)）。
 
 > **备注：** `postMessage()` 一次只能发送一个对象。如上所示，如果你想传递多个值，可以使用数组。
 
@@ -133,7 +133,7 @@ message from worker received in main:                    MessageEvent { ... }  m
 buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
 ```
 
-ArrayBuffer 在传输后, 其 `byteLength` 将变为 0. 要查看此 Firefox 演示插件的完整工作示例，请参阅此处：[GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
+`ArrayBuffer` 在传输后, 其 `byteLength` 将变为 0。要查看此 Firefox 演示插件的完整可运行示例，请参阅此处：[GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
 
 ## 规范
 
