@@ -25,7 +25,7 @@ Access-Control-Allow-Methods: GET,HEAD,POST
 
 请确保当访问服务时你的代码只使用了允许的 HTTP 方法。
 
-**备注：** 如果服务器的 `Access-Control-Allow-methods` 标头中包含任何未识别的或未定义的方法名称，会出现不同的错误：原因：[`Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'`](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod).
+**备注：** 如果服务器的 `Access-Control-Allow-methods` 标头中包含任何未识别的或未定义的方法名称，会出现不同的错误：原因：[`Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'`](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)。
 
 ## 参见
 
