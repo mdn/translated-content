@@ -16,7 +16,7 @@ slug: Web/API/CSS_Properties_and_Values_API
 
 ## 示例
 
-以下代码在 [JavaScript](/zh-CN/docs/Web/JavaScript) 中使用 {{domxref('CSS.registerProperty')}} 输入一个 {{cssxref('--*', 'CSS custom properties')}}，`--my-color`，将其作为一个颜色，然后为其设置一个默认值，并且不允许继承它的值。
+以下代码在 [JavaScript](/zh-CN/docs/Web/JavaScript) 中使用 {{domxref('CSS.registerProperty')}} 输入一个 {{cssxref('--*', 'CSS 自定义属性')}}，`--my-color`，将其作为一个颜色，然后为其设置一个默认值，并且不允许继承它的值。
 
 ```js
 window.CSS.registerProperty({
