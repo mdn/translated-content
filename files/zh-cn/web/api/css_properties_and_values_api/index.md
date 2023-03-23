@@ -47,7 +47,7 @@ window.CSS.registerProperty({
 
 ## 参见
 
-- [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
-- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)
+- [Using the CSS properties and values API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [CSS Painting API](/zh-CN/docs/Web/API/CSS_Painting_API)
+- [CSS Typed Object Model](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/zh-CN/docs/Web/Guide/Houdini)
