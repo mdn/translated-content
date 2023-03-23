@@ -20,7 +20,7 @@ copyWithin(target, start, end)
 ### 参数
 
 - `target`
-  - : 序列开始替换的目标为止，以 0 为起始的下标表示，且将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)
+  - : 序列开始替换的目标位置，以 0 为起始的下标表示，且将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)
     - 负索引将从数组末尾开始计数——如果 `target < 0`，则实际是 `target + array.length`。
     - 如果 `target < -array.length`，则使用 `0`。
     - 如果 `target >= array.length`，则不会拷贝任何内容。
