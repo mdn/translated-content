@@ -362,17 +362,80 @@ Se aplicaría la política de Cookies en torno al atributo [Cookies del mismo si
 
 ## Las cabeceras de respuesta HTTP
 
+Esta sección enumera las cabeceras de respuesta HTTP que los servidores devuelven para las solicitudes de control de acceso, tal y como se definen en la especificación para el intercambio de recursos entre orígenes. La sección anterior ofrece una visión general de las mismas en acción.
+
 ### Control de acceso - Permitir origen
+
+Un recurso devuelto puede tener la cabecera {{HTTPHeader("Access-Control-Allow-Origin")}} con la siguiente sintaxis:
+
+```http
+Access-Control-Allow-Origin: <origin> | *
+```
+
+`Access-Control-Allow-Origin` especifica un único origen que indica a los navegadores que permitan a ese origen acceder al recurso; O bien - para solicitudes **sin** credenciales- el comodín "`*`" indica a los navegadores que permitan a cualquier origen acceder al recurso.
+
+Por ejemplo, para permitir que el código del origen `https://mozilla.org` acceda al recurso Usted puede especificar:
+
+```http
+Access-Control-Allow-Origin: https://mozilla.org
+Vary: Origin
+```
+
+i el servidor especifica un único origen (que puede cambiar dinámicamente en función del origen solicitante como parte de una lista permitida) en lugar del comodín "`*`", el servidor también debe incluir `Origin` en la cabecera de respuesta {{HTTPHeader("Vary")}} para indicar a los clientes que las respuestas del servidor diferirán en función del valor de la cabecera de respuesta {{HTTPHeader("Origin")}}.
 
 ### Control de Acceso-Exponer Cabeceras
 
+La cabecera {{HTTPHeader("Access-Control-Expose-Headers")}} añade las cabeceras especificadas a las lista permitida a la que JavaScript (como {{domxref("XMLHttpRequest.getResponseHeader()","getResponseHeader()")}}) en los navegadores tiene permitido acceder.
+
+```http
+Access-Control-Expose-Headers: <header-name>[, <header-name>]*
+```
+
+Por ejemplo, lo siguiente:
+
+```http
+Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+```
+
+... permitiría al navegador exponer las cabeceras `X-My-Custom-Header` y `X-Another-Custom-Header`.
+
 ### Control de acceso-Edad máxima
+
+La cabecera {{HTTPHeader("Access-Control-Max-Age")}} indica durante cuánto tiempo se pueden almacenar en caché los resultados de una solicitud de verificación previa. Para ver un ejemplo de solicitud de verificación previa, consulte los ejemplos anteriores.
+
+```http
+Access-Control-Max-Age: <delta-seconds>
+```
+
+El parámetro `delta-seconds` indica el número de segundos durante los cuales los resultados pueden permanecer almacenados en caché. 
 
 ### Control de Acceso-Permitir Credenciales
 
+La cabecera {{HTTPHeader("Access-Control-Allow-Credentials")}} indica si la respuesta a la solicitud se puede exponer o no cuando el indicador `credentials` tiene el valor _true_ (verdadero). Cuando se utiliza como parte de una respuesta a una solicitud de verificación previa, indica si la solicitud real se puede realizar utilizando credenciales. Tenga en cuenta que las solicitudes `GET` simples no se verifican previamente, por lo que si se realiza una solicitud de un recurso con credenciales, si esta cabecera no se devuelve con el recurso, la respuesta es ignorada por el navegador y no se devuelve al contenido web.
+
+```http
+Access-Control-Allow-Credentials: true
+```
+
+Las [Solicitudes con credenciales](#Solicitudes_con_credenciales) se han tratado anteriormente.
+
 ### Control de acceso-Permitir métodos
 
+La cabecera {{HTTPHeader("Access-Control-Allow-Methods")}} especifica el método o métodos permitidos al acceder al recurso. Se utiliza en respuesta a una solicitud de verificación previa. las condiciones bajo las que una solicitud es verificada previamente se han explicado anteriormente.
+
+```http
+Access-Control-Allow-Methods: <method>[, <method>]*
+```
+
+Más arriba se ofrece un ejemplo de solicitud de verificación previa ({{Glossary("preflight request")}}), incluido un ejemplo que envía esta cabecera al navegador.
+
 ### Control de acceso-permitir cabeceras
+
+La cabecera {{HTTPHeader("Access-Control-Allow-Headers")}} se utiliza en respuesta a una solicitud de verificación previa ({{Glossary("preflight request")}}) para indicar qué cabeceras HTTP se pueden utilizar al realizar la solicitud real. Esta cabecera es la respuesta del servidor a la cabecera {{HTTPHeader("Access-Control-Request-Headers")}} del navegador.
+
+```http
+Access-Control-Allow-Headers: <header-name>[, <header-name>]*
+```
 
 ## Las cabeceras de solicitud HTTP
 
