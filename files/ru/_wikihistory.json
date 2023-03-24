@@ -6015,10 +6015,6 @@
       "madarche"
     ]
   },
-  "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2020-12-13T06:01:46.717Z",
-    "contributors": ["tolya.sherbakov"]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2020-01-13T04:48:53.673Z",
     "contributors": [
@@ -6856,6 +6852,10 @@
   "Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T21:56:53.185Z",
     "contributors": ["Roman-Kosov", "megabajtruie"]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2020-12-13T06:01:46.717Z",
+    "contributors": ["tolya.sherbakov"]
   },
   "Web/API/Storage_Access_API": {
     "modified": "2020-10-15T22:32:41.630Z",
