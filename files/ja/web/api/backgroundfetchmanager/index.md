@@ -2,12 +2,12 @@
 title: BackgroundFetchManager
 slug: Web/API/BackgroundFetchManager
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: a0ffb40b9cadb578da554117f0cfb1208a8a2624
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-{{domxref('Background Fetch API','','',' ')}} の **`BackgroundFetchManager`** インターフェイスは、バックグラウンドフェッチ ID をキー、 {{domxref("BackgroundFetchRegistration")}} オブジェクトを値とするマップです。
+**`BackgroundFetchManager`** は{{domxref('Background Fetch API','バックグラウンドフェッチ API','',' ')}} のインターフェイスで、バックグラウンドフェッチ ID をキー、{{domxref("BackgroundFetchRegistration")}} オブジェクトを値とする対応表です。
 
 ## プロパティ
 
@@ -24,7 +24,7 @@ l10n:
 
 ## 例
 
-下記の例は、 {{domxref("ServiceWorkerRegistration")}} オブジェクトから {{domxref("BackgroundFetchManager")}} のインスタンスを取得し、バックグラウンドで動画をダウンロードするために `fetch()` メソッドを呼び出しています。
+下記の例は、 {{domxref("ServiceWorkerRegistration")}} オブジェクトから {{domxref("BackgroundFetchManager")}} のインスタンスを取得し、バックグラウンドでオーディオファイルをダウンロードするために `fetch()` メソッドを呼び出しています。
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
