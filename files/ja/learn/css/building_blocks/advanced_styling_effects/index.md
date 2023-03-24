@@ -391,13 +391,3 @@ window.addEventListener("load", drawOutput);
 この記事が楽しかったことを願っています — ぴかぴかのおもちゃで遊ぶのは概してそうで、最先端のブラウザーで、どのような種類のツールが使用可能になりつつあるのかを見るのはいつも面白いです。 [ボックスの装飾](/ja/docs/Learn/CSS/Styling_boxes)の記事の終わりに到達したので、次に私たちの評価であなたのボックスの装飾のスキルをテストします。
 
 {{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
-
-## このモジュール内の文書
-
-- [ボックスモデルの復習](/ja/docs/Learn/CSS/Styling_boxes/Box_model_recap)
-- [背景](/ja/docs/Learn/CSS/Styling_boxes/Backgrounds)
-- [境界線](/ja/docs/Learn/CSS/Styling_boxes/Borders)
-- [表の装飾](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)
-- [ボックスの高度なエフェクト](/ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects)
-- [装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [かっこいいボックス](/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)

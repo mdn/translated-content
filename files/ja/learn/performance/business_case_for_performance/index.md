@@ -35,18 +35,3 @@ slug: Learn/Performance/business_case_for_performance
 KPI としてコンバージョン率、サイト上の時間、および/またはネットプロモーションのスコアを設定すると、ウェブパフォーマンスの努力に財務および他のビジネス目標の価値を与え、努力の価値を証明するためのメトリクスを使用して、購入を後押しするのに役立ちます。
 
 {{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}
-
-## このモジュール
-
-- [ウェブパフォーマンスの "なぜ"](/ja/docs/Learn/Performance/why_web_performance)
-- [ウェブパフォーマンスとは何ですか？](/ja/docs/Learn/Performance/What_is_web_performance)
-- [ユーザーはパフォーマンスをどのように知覚しますか？](/ja/docs/Learn/Performance/Perceived_performance)
-- [パフォーマンスの測定](/ja/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/ja/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/ja/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/ja/docs/Learn/Performance/JavaScript).
-- [HTML performance features](/ja/docs/Learn/Performance/HTML)
-- [CSS performance features](/ja/docs/Learn/Performance/CSS)
-- [Fonts and performance](/ja/docs/Learn/Performance/Fonts)
-- [Mobile performance](/ja/docs/Learn/Performance/Mobile)
-- [パフォーマンスに光をあてる](/ja/docs/Learn/Performance/business_case_for_performance)

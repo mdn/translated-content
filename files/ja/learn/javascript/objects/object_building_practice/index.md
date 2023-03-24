@@ -280,13 +280,3 @@ Ball.prototype.update = function() {
 - [2D breakout game using Phaser](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) — JavaScript ゲームライブラリを使って 2D ゲームを作るための基本を解説しています。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## このモジュール
-
-- [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)
-- [初心者のためのオブジェクト指向 JavaScript](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object のプロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [JavaScript での継承](/ja/docs/Learn/JavaScript/Objects/Inheritance)
-- [JSON データの操作](/ja/docs/Learn/JavaScript/Objects/JSON)
-- [オブジェクト作成の練習](/ja/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [バウンスボールに機能を追加する](/ja/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

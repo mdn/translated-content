@@ -1,8 +1,7 @@
 ---
 title: ブラウザーのストレージ制限と削除基準
-slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-l10n:
-  sourceCommit: cbfee97866847077a5c7feb3b337ed7d4f3d3424
+slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
+original_slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

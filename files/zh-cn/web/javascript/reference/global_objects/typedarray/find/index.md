@@ -5,9 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 
 {{JSRef}}
 
-如果某个元素满足所提供的测试函数，**`find()`**方法返回类型化数组中的 **值**。否则返回{{jsxref("undefined")}} 。_TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+如果某个元素满足所提供的测试函数，**`find()`** 方法返回类型化数组中的**值**，否则返回 {{jsxref("undefined")}}。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
-同时请参见{{jsxref("TypedArray.findIndex", "findIndex()")}}方法，它返回了类型化数组中所发现元素的 **下标** ，而不是它的值。
+同时请参见 {{jsxref("TypedArray.findIndex", "findIndex()")}} 方法，它返回了类型化数组中所发现元素的**下标**，而不是它的值。
 
 ## 语法
 

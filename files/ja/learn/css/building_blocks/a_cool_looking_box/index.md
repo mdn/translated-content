@@ -54,13 +54,3 @@ original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、[この演習についてのディスカッションスレッド](https://discourse.mozilla.org/t/a-cool-looking-box-assessment/24685)や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！
 
 {{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
-
-## このモジュール内の文書
-
-- [ボックスモデルの復習](/ja/docs/Learn/CSS/Styling_boxes/Box_model_recap)
-- [背景](/ja/docs/Learn/CSS/Styling_boxes/Backgrounds)
-- [境界線](/ja/docs/Learn/CSS/Styling_boxes/Borders)
-- [表の装飾](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)
-- [ボックスの高度なエフェクト](/ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects)
-- [装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [かっこいいボックス](/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)
