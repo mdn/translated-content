@@ -25,7 +25,7 @@ Number(value)
 
 当 `Number` 作为构造函数调用（使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)）时，它创建一个 {{jsxref("Number")}} 对象，并不是原始值。
 
-当 `Number` 作为普通函数调用时，它[将参数强制转换为数值原始值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#数值强制转换)。[BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)被转换为数值。如果值不能转换，则返回 {{jsxref("NaN")}}。
+当 `Number` 作为普通函数调用时，它[将参数强制转换为数值原始值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#数值强制转换)。[BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 被转换为数值。如果值不能转换，则返回 {{jsxref("NaN")}}。
 
 > **警告：** 你会发现你很少会使用到 `Number` 构造函数。
 
