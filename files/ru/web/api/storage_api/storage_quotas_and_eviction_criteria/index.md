@@ -1,12 +1,14 @@
 ---
 title: Browser storage limits and eviction criteria
-slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
+slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 tags:
   - IndexedDB
   - данных
   - клиентская сторона
 translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
+original_slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 Существует целый ряд веб-технологий, которые хранят данные того или иного рода на стороне клиента (то есть на локальном диске). Процесс, с помощью которого браузер решает, сколько места выделить для хранения веб-данных и что удалить, когда этот предел будет достигнут, не прост и отличается между браузерами. В этой статье описывается, как браузеры определяют, какой локальный контент следует очистить и когда, чтобы освободить необходимое локальное пространство для хранения.
