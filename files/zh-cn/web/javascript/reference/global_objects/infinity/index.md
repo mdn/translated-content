@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Infinity
 
 {{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
 
-## 取值
+## 值
 
 与 {{JSXref("Number.POSITIVE_INFINITY")}} 取相同的数值。
 
