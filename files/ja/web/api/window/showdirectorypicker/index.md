@@ -2,7 +2,7 @@
 title: Window.showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
 l10n:
-  sourceCommit: bb8221e061bba27dbdbe5a3698b6c69febf0bc70
+  sourceCommit: c6e1b00e194b214c2f82149aeaa15a944d2b005a
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
