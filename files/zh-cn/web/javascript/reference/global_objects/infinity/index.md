@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Infinity
 
 ## 值
 
-与 {{JSXref("Number.POSITIVE_INFINITY")}} 取相同的数值。
+与 {{JSXref("Number.POSITIVE_INFINITY")}} 的数值相同。
 
 {{js_property_attributes(0,0,0)}}
 
