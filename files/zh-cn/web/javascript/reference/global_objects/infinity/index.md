@@ -21,16 +21,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Infinity
 
 `Infinity` 的初始值是 {{jsxref("Number.POSITIVE_INFINITY")}}。`Infinity`（正无穷大）大于任何值。
 
-该值的意义与数学无穷大略有不同。有关详细信息，请参见{{jsxref("Number.POSITIVE_INFINITY")}}。
+该值的意义与数学无穷大略有不同。有关详细信息，请参见 {{jsxref("Number.POSITIVE_INFINITY")}}。
 
 ## 示例
 
 ```js
-console.log(Infinity          ); /* Infinity */
-console.log(Infinity + 1      ); /* Infinity */
+console.log(Infinity); /* Infinity */
+console.log(Infinity + 1); /* Infinity */
 console.log(Math.pow(10, 1000)); /* Infinity */
-console.log(Math.log(0)       ); /* -Infinity */
-console.log(1 / Infinity      ); /* 0 */
+console.log(Math.log(0)); /* -Infinity */
+console.log(1 / Infinity); /* 0 */
+console.log(1 / 0); /* Infinity */
 ```
 
 ## 规范
