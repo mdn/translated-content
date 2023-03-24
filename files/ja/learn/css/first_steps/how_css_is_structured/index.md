@@ -1,15 +1,39 @@
 ---
-title: CSS の全体像
+title: CSS の構造
 slug: Learn/CSS/First_steps/How_CSS_is_structured
+l10n:
+  sourceCommit: b8e4a710b8a02c2c218e5b58c74183e328b2c57f
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 CSS の概要と基本的な使い方について理解できたので、今度は CSS の構造をもう少し詳しく見てみましょう。
 
-| 前提条件: | 基本的なコンピュータリテラシー、 [基本的なソフトウェアのインストール](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、 基本的な [ファイル操作](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)、 HTML の基本 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で学習)、[基本的な CSS の動作](/ja/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works) |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | CSS の基本的な構文の構造を詳細に学ぶ。                                                                                                                                                                                                                                                                                                                                                |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基本的なコンピュータリテラシー、<a
+          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >基本的なソフトウェアのインストール</a
+        >、基本的な<a
+          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >ファイル操作</a
+        >や HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 入門</a
+        >で学習）に関する基本的な知識、
+        <a href="/ja/docs/Learn/CSS/First_steps/How_CSS_works"
+          >CSS の動作</a
+        >に関する理解。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>CSS の基本的な構文の構造を詳細に学ぶ。</td>
+    </tr>
+  </tbody>
+</table>
 
 ## CSS を HTML に適用する
 
@@ -23,11 +47,11 @@ HTML の `<link>` 要素から外部 CSS スタイルシートを参照してい
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -54,13 +78,13 @@ p {
 
 ```html
 <!-- 現在のディレクトリーの中の styles というサブディレクトリーの中 -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- カレントディレクトリーの中にある styles というサブディレクトリーの中にある、 general というサブディレクトリーの中 -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- ひとつ上のレベルのディレクトリーに行き、その下にある styles というサブディレクトリーの中 -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### 内部スタイルシート
@@ -71,9 +95,9 @@ p {
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
     <style>
       h1 {
@@ -104,13 +128,15 @@ p {
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+      Hello World!
+    </h1>
     <p style="color:red;">This is my first CSS example</p>
   </body>
 </html>
@@ -130,14 +156,13 @@ p {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My CSS experiments</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <p>Create your test HTML here</p>
-
   </body>
 </html>
 ```
@@ -164,7 +189,7 @@ p {
 
 セレクターは CSS に欠かせない構成要素です。[CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)のチュートリアルでは、すでにさまざまな種類のセレクターを見てきました。セレクターは、 HTML 文書のなかでスタイルを適用する対象を指定するものです。もし CSS が期待通りにコンテンツに適用されなかったら、セレクターが一致すると思っていた方法で一致していないのかもしれません。
 
-それぞれの CSS 規則の先頭には、セレクターまたはセレクターのリストを書きます。これによって、ブラウザーにどの要素に CSS 規則を適用するかを指示します。次のコード例は、いずれも有効なセレクター、またはセレクターのリストです。
+それぞれの CSS ルールの先頭には、セレクターまたはセレクターのリストを書きます。これによって、ブラウザーにどの要素に CSS ルールを適用するかを指示します。次のコード例は、いずれも有効なセレクター、またはセレクターのリストです。
 
 ```css
 h1
@@ -177,7 +202,7 @@ a:link
 h1, h2, .intro
 ```
 
-上記のセレクターを使った CSS 規則を作ってみてください。セレクターによってスタイル付けされる HTML を追加します。上記の構文に馴染みのないものがあれば、 MDN を検索してみてください。
+上記のセレクターを使った CSS ルールを作ってみてください。セレクターによってスタイル付けされる HTML を追加します。上記の構文に馴染みのないものがあれば、 MDN を検索してみてください。
 
 > **メモ:** 次のモジュールの記事 [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors) で、セレクターについてより詳しく学ぶことができます。
 
@@ -195,13 +220,13 @@ p {
 }
 ```
 
-HTML 文書の中に `special` のクラスを持つ段落があるとします。両方の規則が適用されます。どちらのセレクターが優先されるでしょうか？段落のテキストが青と赤のどちらになると思いますか？
+HTML 文書の中に `special` のクラスを持つ段落があるとします。両方のルールが適用されます。どちらのセレクターが優先されるでしょうか？段落のテキストが青と赤のどちらになると思いますか？
 
 ```html
 <p class="special">What color am I?</p>
 ```
 
-CSS 言語には、競合が発生した場合にどちらのセレクターが強いかを制御するための規則があります。これらの規則は**カスケード** (cascade) と**詳細度** (specificity) と呼ばれています。以下のコードブロックでは、 `p` セレクターに対して 2 つの規則が定義されていますが、段落テキストは青くなります。これは、段落テキストを青に設定する宣言がスタイルシートの後に現れているからです。後のスタイルは、それより前のスタイルシートに現れた競合するスタイルを置き換えます。これが**カスケード**規則です。
+CSS 言語には、競合が発生した場合にどちらのセレクターが強いかを制御するためのルールがあります。これらのルールは**カスケード** (cascade) と**詳細度** (specificity) と呼ばれています。以下のコードブロックでは、 `p` セレクターに対して 2 つのルールが定義されていますが、段落テキストは青くなります。これは、段落テキストを青に設定する宣言がスタイルシートの後に現れているからです。後のスタイルは、それより前のスタイルシートに現れた競合するスタイルを置き換えます。これが**カスケード**ルールです。
 
 ```css
 p {
@@ -215,11 +240,11 @@ p {
 
 しかし、クラスセレクターと要素セレクターの間に競合がある前の例では、クラスが優先され、赤い段落テキストがレンダリングされます。スタイルシートの後方に競合するスタイルが表示されているにもかかわらず、どうしてこのようなことが起こるのでしょうか？クラスは、要素セレクターよりも**詳細度**が高いことになっており、より具体的であると評価されるので、他の競合するスタイル宣言をキャンセルしたのです。
 
-この実験を自分でやってみましょう。 HTML を追加して、2 つの `p { ... }` 規則をスタイルシートに追加します。次に、最初の `p` セレクターを `.special` に変更して、それがスタイルをどのように変えるかを見てみましょう。
+この実験を自分でやってみましょう。 HTML を追加して、2 つの `p { }` ルールをスタイルシートに追加します。次に、最初の `p` セレクターを `.special` に変更して、それがスタイルをどのように変えるかを見てみましょう。
 
-詳細度とカスケードの規則は、最初は複雑に見えるかもしれません。これらの規則は、 CSS に慣れてくると理解しやすくなります。次のモジュールの [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) の章では、詳細度の計算方法を含めて詳しく説明しています。
+詳細度とカスケードのルールは、最初は複雑に見えるかもしれません。これらのルールは、 CSS に慣れてくると理解しやすくなります。次のモジュールの [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) の章では、詳細度の計算方法を含めて詳しく説明しています。
 
-今のところ、詳細度が存在することを覚えておいてください。スタイルシートの他の何かがより高い詳細度を持っているために、 CSS が期待通りに適用されないことがあります。 1 つの要素に複数の規則が適用される可能性があることを認識することは、この種の問題を解決するための最初のステップです。
+今のところ、詳細度が存在することを覚えておいてください。スタイルシートの他の何かがより高い詳細度を持っているために、 CSS が期待通りに適用されないことがあります。 1 つの要素に複数のルールが適用される可能性があることを認識することは、この種の問題を解決するための最初のステップです。
 
 ## プロパティと値
 
@@ -230,35 +255,39 @@ p {
 
 次の例では、一組のプロパティと値を強調表示しています。プロパティ名は `color` で、値は `blue` です。
 
-![A declaration highlighted in the CSS](declaration.png)
+![CSS で強調された宣言](declaration.png)
 
 プロパティが値と組み合わせられているとき、この組み合わせを _CSS 宣言_ (CSS declaration) と呼びます。 CSS 宣言は _CSS 宣言ブロック_ (CSS Declaration Blocks) の中に入っています。次のコード例では CSS の宣言ブロックを強調しています。
 
-![A highlighted declaration block](declaration-block.png)
+![強調表示された宣言ブロック](declaration-block.png)
 
-そして、 CSS 宣言ブロックは*セレクター*と組になって _CSS 規則セット_ (または _CSS 規則_) になります。1 つは `h1` セレクター用、もう 1 つは `p` セレクター用です。色付きのハイライトは `h1` 規則を識別します。
+そして、 CSS 宣言ブロックは*セレクター*と組になって _CSS ルールセット_ (または _CSS ルール_) になります。1 つは `h1` セレクター用、もう 1 つは `p` セレクター用です。色付きのハイライトは `h1` ルールを識別します。
 
-![The rule for h1 highlighted](rules.png)
+![h1 のルールを強調](rules.png)
 
-CSS プロパティを特定の値に設定することが、文書のレイアウトとスタイルを定義する主な方法です。 CSS エンジンは、どの宣言がページの各要素に適用されるかを計算します。
+CSS プロパティを特定の値に設定することが、文書のレイアウトとスタイルを定義する主な方法です。CSS エンジンは、どの宣言がページの各要素に適用されるかを計算します。
 
-> **警告:** CSS のプロパティと値は大文字と小文字を区別します。それぞれのプロパティと値の組はコロン (`:`) で区切られます。
+CSS のプロパティと値は大文字と小文字を区別しません。それぞれの組にあるプロパティと値はコロン (`:`) で区切られます。
 
-**以下に挙げたプロパティの様々な値を調べてみてください。それぞれの HTML 要素にスタイルを適用する CSS 規則を書いてみてください。**
+**以下に挙げたプロパティの様々な値を調べてみてください。それぞれの HTML 要素にスタイルを適用する CSS ルールを書いてみてください。**
 
-- {{cssxref("font-size")}}
-- {{cssxref("width")}}
-- {{cssxref("background-color")}}
-- {{cssxref("color")}}
-- {{cssxref("border")}}
+- **{{cssxref("font-size")}}**
+- **{{cssxref("width")}}**
+- **{{cssxref("background-color")}}**
+- **{{cssxref("color")}}**
+- **{{cssxref("border")}}**
 
 > **警告:** プロパティが不明だった場合、または指定されたプロパティの値が妥当ではなかった場合は、宣言が*無効*なものとして扱われます。ブラウザーの CSS エンジンはこれを完全に無視します。
 
-> **警告:** CSS (および他のウェブ標準) では、言語ごとに綴りに揺れがあったり確実でない場合には、アメリカ綴りを標準とすることが合意されています。例えば、 `color` は `color` と綴るべきであり、 `colour` では動作しません。
+> **警告:** CSS（および他のウェブ標準）では、言語ごとに綴りに揺れがあったり確実でない場合には、アメリカ綴りを標準とすることが合意されています。例えば、 `color` は `color` と綴るべきであり、 `colour` では動作しません。
 
 ### 関数
 
-ほとんどの値は比較的単純なキーワードや数値ですが、関数の形をとる値もあります。例として、`calc()` 関数があります。これは CSS 内で簡単な数式を行うことができます。
+多くの値は比較的単純なキーワードや数値ですが、中には関数の形式をとる値もあります。
+
+#### calc() 関数
+
+例として、CSS 内で単純な計算を行うことができる `calc()` 関数が挙げられます。
 
 ```html
 <div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
@@ -279,9 +308,11 @@ CSS プロパティを特定の値に設定することが、文書のレイア�
 
 これは次のように表示されます。
 
-{{EmbedLiveSample('calc_example', '100%', 200)}}
+{{EmbedLiveSample('The_calc_function', '100%', 200)}}
 
 関数は、関数名と、関数に渡す値を囲む括弧で構成されています。上記の `calc()` の例では、値は、このボックスの幅を含むブロックの幅の 90% から 30 ピクセルを引いた値と定義しています。計算の結果は、事前に計算して静的な値として入力できるものではありません。
+
+#### 座標変換関数
 
 他の例としては、 {{cssxref("transform")}} のさまざまな値、たとえば `rotate()` などがあります。
 
@@ -301,23 +332,23 @@ CSS プロパティを特定の値に設定することが、文書のレイア�
 
 上記のコードの出力は次のようになります。
 
-{{EmbedLiveSample('transform_example', '100%', 200)}}
+{{EmbedLiveSample('Transform_functions', '100%', 200)}}
 
-以下に挙げたプロパティのそれぞれの値を調べてみましょう。ぞれぞれの HTML 要素にスタイルを適用する CSS 規則を記述してみましょう。
+**以下に挙げたプロパティのそれぞれの値を調べてみましょう。ぞれぞれの HTML 要素にスタイルを適用する CSS ルールを記述してみましょう。**
 
-- {{cssxref("transform")}}
-- {{cssxref("background-image")}}、特に gradient の値
-- {{cssxref("color")}}、特に rgb/rgba/hsl/hsla の値
+- **{{cssxref("transform")}}**
+- **{{cssxref("background-image")}}、特に gradient の値**
+- **{{cssxref("color")}}、特に rgb や hsl の値**
 
-## アット規則
+## アットルール
 
-CSS の[アット規則](/ja/docs/Web/CSS/At-rule) は、 CSS が実行すること、またはそれがどのように動作するべきかの指示を提供します。いくつかのアット規則は、キーワードと値だけのシンプルなものです。例えば、 `@import` はスタイルシートを別の CSS スタイルシートにインポートします。
+CSS の[アットルール](/ja/docs/Web/CSS/At-rule) は、 CSS が実行すること、またはそれがどのように動作するべきかの指示を提供します。いくつかのアットルールは、キーワードと値だけのシンプルなものです。例えば、 `@import` はスタイルシートを別の CSS スタイルシートにインポートします。
 
 ```css
-@import 'styles2.css';
+@import "styles2.css";
 ```
 
-よく目にするであろうアット規則が `@media` があり、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)を作成するために使用されます。メディアクエリは CSS スタイルを提供する条件を使用します。
+よく目にするであろうアットルールが `@media` があり、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)を作成するために使用されます。メディアクエリは CSS スタイルを提供する条件を使用します。
 
 以下の例では、スタイルシートは `<body>` 要素に既定でピンクの背景を定義しています。しかし、ブラウザーのビューポートが 30em よりも広い場合は、青い背景を定義するメディアクエリが続いています。
 
@@ -333,7 +364,7 @@ body {
 }
 ```
 
-これ以外のアット規則にも、これからのチュートリアルで遭遇するでしょう。
+これ以外のアットルールにも、これからのチュートリアルで遭遇するでしょう。
 
 **ビューポートの幅に基づいてスタイルを変更するメディアクエリを追加できるかどうかを確認してください。ブラウザーウィンドウの幅を変更して結果を確認してみてください。**
 
@@ -378,7 +409,7 @@ background-attachment: fixed;
 
 コースの後半では、他にも多くの一括指定プロパティの例に遭遇します。 MDN の [CSS リファレンス](/ja/docs/Web/CSS/Reference)は、あらゆる一括指定プロパティについてのより詳しい情報を得るための良いリソースです。
 
-**自分の CSS の練習でこれらの前述) 使用してみて、それがどのように動作するかをよりよく理解するようにしてください。また、様々な値を使って実験してみてください。**
+**これはどのように動作するのかに慣れるために、自分自身で CSS の練習で宣言（上記）を使用してみてください。異なる値で実験してみるのもよいでしょう。**
 
 > **警告:** CSS の一括指定を使用する際に、省略した値がどのようにリセットされるかはあまり目立たない側面です。 CSS 一括指定で指定されていない値は初期値に戻ります。これは、 CSS 一括指定で省略された値は、**以前に設定された値を上書きしてしまう**可能性があることを意味します。
 
@@ -406,11 +437,13 @@ body {
   }
 }
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
 /* DOM で入れ子になっている特定の要素を処理します。 */
-/* -------------------------------------------------------------------------------------------- */
-div p, #id:first-line {
+div p,
+#id:first-line {
   background-color: red;
   border-radius: 3px;
 }
@@ -425,7 +458,7 @@ div p + p {
 }
 ```
 
-コードを「コメントアウト」すると、試験的にコードの区間を一時的に無効にするのにも便利です。以下の例では、 `.special` の規則はコードを「コメントアウト」することで無効化されています。
+コードを「コメントアウト」すると、試験的にコードの区間を一時的に無効にするのにも便利です。以下の例では、 `.special` のルールはコードを「コメントアウト」することで無効化されています。
 
 ```css
 /*.special {
@@ -443,7 +476,7 @@ p {
 
 ホワイトスペースとは、半角スペース、タブ、改行を意味します。ブラウザーが HTML のホワイトスペースを無視するように、ブラウザーは CSS の中のホワイトスペースを無視します。ホワイトスペースの価値は、読みやすさを向上させるためにあります。
 
-下の例では、それぞれの宣言 (と規則の先頭/末尾) が個別の行で行われています。これは間違いなく、CSS を書くのに良い方法です。これにより、CSS の保守や理解が容易になります。
+下の例では、それぞれの宣言 (とルールの先頭/末尾) が個別の行で行われています。これは間違いなく、CSS を書くのに良い方法です。これにより、CSS の保守や理解が容易になります。
 
 ```css
 body {
@@ -481,9 +514,9 @@ div p + p {
 
 次の例は、同等の CSS をより圧縮したものです。2 つの例は同じように動作しますが、下の例の方が読みにくいでしょう。
 
-```css
+```css-nolint
 body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-@media (min-width: 70em) { body {font-size: 130%;} }
+@media (min-width: 70em) { body { font-size: 130%;}}
 
 h1 {font-size: 1.5em;}
 
@@ -496,28 +529,28 @@ div p + p {padding-top: 0;}
 
 > **警告:** CSS 宣言ではホワイトスペースが値を区切っていますが、**プロパティ名にホワイトスペースが含まれることはありません。**
 
-**例えば、以下の宣言は正しい CSS です。**
+例えば、以下の宣言は正しい CSS です。
 
 ```css
 margin: 0 auto;
 padding-left: 10px;
 ```
 
-**次の例は誤った CSS です:**
+以下の宣言は誤っています。
 
-```css
+```css example-bad
 margin: 0auto;
 padding- left: 10px;
 ```
 
-**`0auto` という書き方をブラウザーは正しい値と解釈してくれません。なぜなら、`margin` プロパティの値 `0`、および `auto` はふたつの別々の値だからです。`padding-`もまた、ブラウザーが認識できる正しいプロパティ名ではありません。**
+空白の間違いがあるのがわかりますか？まず、`0auto`は `margin` プロパティの有効な値として認識されていません。項目 `0auto` は、2 つの別個の値であることを意味しています。`0` と `auto` です。2 つ目は、ブラウザーが `padding-` を有効なプロパティとして認識していないことです。正しいプロパティ名 (`padding-left`) が、誤って空白で区切られています。
 
-**CSS のプロパティに対する複数の値どうしを区別するためには、最低でも 1 個以上の空白をあいだにおく必要があります。また、プロパティの名称や値のひとつひとつは、その一部分だけを切り離したりせず続けて書かなければなりません。**
+常に、別個の値を少なくとも 1 つの空白で区切るようにする必要があります。プロパティ名とプロパティ値は、1 つの切れ目のない文字列としてまとめてください。
 
-**自分の CSS のなかで空白をさまざまに入れてみて、どうすれば CSS が正しく機能して、どうすれば機能しなくなるかたしかめてみましょう。**
+**空白がどのように CSS を壊すのかを調べるために、テスト CSS の中で空白をいじってみてください。**
 
-## 次のステップ
+## まとめ
 
-**ブラウザーが HTML や CSS を解釈してウェブページに作り替えていくながれを多少なりとも知っておくことは開発の役にたちます。そこで、次の記事 「[CSS はどう働くか？」](/ja/docs/Learn/CSS/First_steps/How_CSS_works) では、ブラウザーが Web ページを生成する過程についてみていきましょう。**
+この時点で、CSS がどのように構成されているのかについて、理解が深まっているはずです。また、ブラウザーがどのように HTML と CSS を使用してウェブページを表示するのかを理解しておくことも有益です。次の記事「[CSS はどう働くか](/ja/docs/Learn/CSS/First_steps/How_CSS_works)」で解説しています。
 
-**{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}**
+{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
