@@ -5,7 +5,7 @@ slug: Web/HTTP/Status/413
 
 {{HTTPSidebar}}
 
-响应状态码 **`413 Content Too Large`** 表示请求主体的大小超过了服务器愿意或有能力处理的限度，服务器可能会关闭连接或返回 {{HTTPHeader("Retry-After")}} 首部字段。
+HTTP 响应状态码 **`413 Content Too Large`** 表示请求主体的大小超过了服务器愿意或有能力处理的限度，服务器可能会关闭连接或返回 {{HTTPHeader("Retry-After")}} 首部字段。
 
 在 RFC 9110 标准之前，该响应的短语为 **`Payload Too Large`**，它更加常见。
 
