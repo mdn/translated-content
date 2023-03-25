@@ -21,7 +21,7 @@ new MutationObserver(callback)
 
 - `callback`
 
-  - : 주어진 노드 또는 서브트리와 옵션을 만족하는 DOM 변경을 감지하면 호출할 콜백입니다.
+  - : 주어진 노드 또는 하위 트리와 옵션을 만족하는 DOM 변경을 감지하면 호출할 콜백입니다.
 
     `callback` 함수는 두 개의 매개변수를 받습니다.
 
@@ -80,9 +80,9 @@ const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 ```
 
-주시하고자 하는 서브트리는 `someElement`라는 ID를 가진 요소를 통해 탐색합니다. `observerOptions` 레코드에는 감지기의 옵션을 설정합니다. 자식의 변경과 특성의 변경을 모두 감지하고자 하므로 `childList`와 `attributes`를 모두 `true`로 지정합니다.
+주시하고자 하는 하위 트리는 `someElement`라는 ID를 가진 요소를 통해 탐색합니다. `observerOptions` 레코드에는 감지기의 옵션을 설정합니다. 자식의 변경과 특성의 변경을 모두 감지하고자 하므로 `childList`와 `attributes`를 모두 `true`로 지정합니다.
 
-그 다음에는 감지기 인스턴스를 생성하면서 `callback()` 함수를 지정하고, `target` 노드와 `options` 객체를 제공하여 `observe()`를 호출, 서브트리의 변경 감지를 시작합니다.
+그 다음에는 감지기 인스턴스를 생성하면서 `callback()` 함수를 지정하고, `target` 노드와 `options` 객체를 제공하여 `observe()`를 호출, 하위 트리의 변경 감지를 시작합니다.
 
 이후 {{domxref("MutationObserver.disconnect", "disconnect()")}}를 호출하기 전까지는 DOM 트리의 `targetNode` 아래에서 새로운 요소가 추가되거나 제거되는 경우, 또는 `targetNode`까지 포함하여 요소 중 하나의 특성이 바뀌는 경우 `callback()`이 호출됩니다.
 
