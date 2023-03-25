@@ -61,8 +61,6 @@ find(function (element, index, array) { /* … */ }, thisArg)
 
 `callbackFn` 被调用来处理数组的*每一个*索引，而不仅仅是那些有值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，未赋值的空槽与 `undefined` 表现相同。
 
-`find()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
-
 `find()` 不会改变被调用的数组，但是提供给 `callbackFn` 的函数可能会改变它。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
 
 - 当调用 `find()` 时，`callbackFn` 不会访问超出数组初始长度的任何元素。
@@ -121,7 +119,7 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-console.log([4, 6, 8, 12].find(isPrime)); // undefined, 未找到
+console.log([4, 6, 8, 12].find(isPrime)); // undefined，未找到
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
