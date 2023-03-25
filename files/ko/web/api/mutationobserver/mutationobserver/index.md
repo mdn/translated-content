@@ -60,7 +60,7 @@ function callback(mutationList, observer) {
 
 `callback()` 함수는 감지기의 {{domxref("MutationObserver.observe", "observe()")}}를 호출했을 때 지정한 설정을 만족하는 변경을 감지하면 호출됩니다.
 
-일어난 변경의 종류(자식의 변경, 특성의 변경)는 {{domxref("MutationRecord.type", "mutation.type")}} 속성을 통해 알 수 있습니다.
+일어난 변경의 종류(자식 목록의 변경, 특성의 변경)는 {{domxref("MutationRecord.type", "mutation.type")}} 속성을 통해 알 수 있습니다.
 
 ### 감지기 생성과 시작
 
