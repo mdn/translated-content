@@ -59,7 +59,7 @@ function updateValue(e) {
 
 {{EmbedLiveSample("예제")}}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

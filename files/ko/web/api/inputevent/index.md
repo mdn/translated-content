@@ -36,7 +36,7 @@ l10n:
 - {{DOMxRef('InputEvent.getTargetRanges()')}}
   - : 이 이벤트를 취소하지 않으면 영향을 받는 DOM 범위들의 배열을 반환합니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
