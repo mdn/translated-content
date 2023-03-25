@@ -21,7 +21,7 @@ l10n:
 - {{domxref("MutationObserver.observe()", "observe()")}}
   - : 주어진 설정과 일치하는 DOM 변경이 발생했을 때 `MutationObserver` 인스턴스가 자신의 콜백으로 알림을 수신하도록 설정합니다.
 - {{domxref("MutationObserver.takeRecords()", "takeRecords()")}}
-  - : `MutationObserver`의 알림 큐를 비우고, 큐에서 대기 중이던 알림들은 {{domxref("MutationRecord")}}의 {{jsxref("Array")}}로 반환합니다.
+  - : `MutationObserver`의 알림 큐를 비우고, 큐에서 대기 중이던 알림들은 {{domxref("MutationRecord")}}들로 구성된 새로운 {{jsxref("Array")}}로 반환합니다.
 
 ## 예제
 
