@@ -5,7 +5,7 @@ slug: Web/API/console/debug
 
 {{APIRef("Console API")}}
 
-**console.debug()** 方法将一条消息输出到 web 控制台，消息的日志级别为“debug”。只有在控制台配置为显示调试输出时，才会向用户显示该消息。在大多数情况下，日志级别在控制台 UI 中进行配置。该日志级别可能对应于 **`Debug`** 或 **`Verbose`** 日志级别。
+**`console.debug()`** 方法将一条消息输出到 web 控制台，消息的日志级别为“debug”。只有在控制台配置为显示调试输出时，才会向用户显示该消息。在大多数情况下，日志级别在控制台 UI 中进行配置。该日志级别可能对应于 **`Debug`** 或 **`Verbose`** 日志级别。
 
 {{AvailableInWorkers}}
 
