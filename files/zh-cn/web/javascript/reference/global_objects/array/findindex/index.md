@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 {{JSRef}}
 
-**`findIndex()`**方法返回数组中满足提供的测试函数的第一个元素的**索引**。若没有找到对应元素则返回 -1。
+**`findIndex()`** 方法返回数组中满足提供的测试函数的第一个元素的**索引**。若没有找到对应元素则返回 -1。
 
 {{EmbedInteractiveExample("pages/js/array-findindex.html")}}
 

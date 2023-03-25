@@ -10147,10 +10147,6 @@
       "yyss"
     ]
   },
-  "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2019-05-23T13:25:35.305Z",
-    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "yyss"]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2019-11-01T12:30:23.265Z",
     "contributors": ["Wind1808", "wbamberg", "Uemmra3", "fkmhrk", "yyss"]
@@ -12864,6 +12860,10 @@
   "Web/API/Storage_API": {
     "modified": "2020-10-15T22:20:04.706Z",
     "contributors": ["Uemmra3", "Wind1808"]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2019-05-23T13:25:35.305Z",
+    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "yyss"]
   },
   "Web/API/Storage_Access_API": {
     "modified": "2020-10-15T22:28:07.348Z",
