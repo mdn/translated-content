@@ -5,15 +5,17 @@ slug: Web/CSS/direction
 
 {{CSSRef}}
 
-CSS 属性 **`direction`** 用来设置文本、表列水平溢出的方向。 `rtl` 表示从右到左 (类似希伯来语或阿拉伯语)， `ltr` 表示从左到右 (类似英语等大部分语言).{{EmbedInteractiveExample("pages/css/direction.html")}}
+**`direction`** CSS 属性用于设置文本流的方向，即文本、表格列和水平溢出的方向。对于从右到左书写的语言（如希伯来语或阿拉伯语），应将该属性设置为 `rtl`；对于从左到右书写的语言（如英语和大多数其他语言），则应将该属性设置为 `ltr`。
 
-值得注意的是文本方向通常由文档定义 (e.g., with [HTML's `dir` attribute](/zh-CN/docs/Web/HTML/Global_attributes/dir)) 而不是通过直接使用 `direction` 属性定义。
+{{EmbedInteractiveExample("pages/css/direction.html")}}
 
-该属性设置可以设置块级元素文本的基本方向，也可以设置由通过 {{Cssxref("unicode-bidi")}}属性创建的嵌入元素的方向。与此同时，它还可以设置文本、块级元素的默认对齐方式，以及表行中的单元格的流动方向。
+请注意，文本方向通常在文档中定义（例如，使用 [HTML 的 `dir` 属性](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性），而不是通过直接使用 `direction` 属性来定义。
 
-与 HTML 中的 `dir` 属性不同，`direction`属性不会从表列继承到表单元格，因为 CSS 继承遵从文档流，而表单元格位于行内部，但不在列内部。
+该属性设置可以设置块级元素文本的基本方向，也可以设置由通过 {{Cssxref("unicode-bidi")}} 属性创建的嵌入元素的方向。与此同时，它还可以设置文本、块级元素的默认对齐方式，以及表行中的单元格的流动方向。
 
-`direction` 属性和 {{cssxref("unicode-bidi")}} 属性不受 {{cssxref("all")}} 属性影响。
+与 HTML 中的 `dir` 属性不同，`direction` 属性不会从表列继承到表单元格，因为 CSS 继承遵从文档流，而表单元格位于行内部，但不在列内部。
+
+`direction` 和 {{cssxref("unicode-bidi")}} 属性是唯二不受 {{cssxref("all")}} 简写属性影响的属性。
 
 ## 语法
 
