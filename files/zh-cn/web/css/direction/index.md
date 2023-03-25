@@ -60,7 +60,7 @@ blockquote {
 
 ```html
 <blockquote>
-<p>这个段落是中文的，但错误地从右到左<p>
+<p>这个段落用中文书写的，但是方向是从右到左，是错误的。<p>
 </blockquote>
 
 <blockquote>
