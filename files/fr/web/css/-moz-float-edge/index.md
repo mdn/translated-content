@@ -41,7 +41,10 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+```plain
+-moz-float-edge =
+  border-box | content-box | margin-box | padding-box
+```
 
 ## Exemples
 

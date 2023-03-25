@@ -202,7 +202,7 @@ self.addEventListener('activate', function(e) {
 });
 ```
 
-这样能确保只有那些我们需要的文件会保留在缓存中，我们不需要留下任何的垃圾，毕竟[浏览器的缓存空间是有限的](/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)，手动清理掉这些不需要的缓存是不错的主意。
+这样能确保只有那些我们需要的文件会保留在缓存中，我们不需要留下任何的垃圾，毕竟[浏览器的缓存空间是有限的](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)，手动清理掉这些不需要的缓存是不错的主意。
 
 ## 其他用途
 

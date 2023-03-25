@@ -423,4 +423,4 @@ _可能であれば `const` を使用し、必要ならば `let` を使用する
 
 ここまでで JavaScript の変数の作り方について理解して、それ以外にもそれなりの知識を得ましたね。次の記事では、数値に焦点を当てて、JavaScript の数値計算の基礎について見ていきます。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}

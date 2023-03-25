@@ -449,14 +449,3 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 次の記事では、機能の検出について詳しく説明します。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## このモジュール内の文書
-
-- [はじめてのクロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [テスト実行戦略](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [よくある HTML や CSS の問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [よくある JavaScript の問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [よくあるアクセシビリティの問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [機能検出の実装](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [はじめての自動テスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [テスト自動化環境をセットアップする](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)
