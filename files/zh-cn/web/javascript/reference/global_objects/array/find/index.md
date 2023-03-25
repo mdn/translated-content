@@ -49,7 +49,7 @@ find(function (element, index, array) { /* … */ }, thisArg)
       - : 调用 `find()` 的当前数组。
 
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 时使用的 `this` 值。请参阅[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)。
+  - : 执行 `callbackFn` 时使用的 `this` 值。请参阅[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
@@ -106,9 +106,9 @@ const result = inventory.find(({ name }) => name === "cherries");
 console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
-### 寻找数组中的第一个质数
+### 寻找数组中的第一个素数
 
-下面的例子展示了如何从数组中寻找质数（如果找不到质数则返回 {{jsxref("undefined")}}）：
+下面的例子展示了如何从数组中寻找素数（如果找不到素数则返回 {{jsxref("undefined")}}）：
 
 ```js
 function isPrime(element, index, array) {
@@ -121,7 +121,7 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+console.log([4, 6, 8, 12].find(isPrime)); // undefined, 未找到
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
