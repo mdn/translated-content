@@ -133,7 +133,7 @@ const array = [0, 1, , , , 5, 6];
 
 // 将会打印所有索引，而不仅仅是那些有值的非空槽
 array.find((value, index) => {
-  console.log("Visited index ", index, " with value ", value);
+  console.log(`访问索引 ${index}，值为 ${value}`);
 });
 // 访问索引 0，值为 0
 // 访问索引 1，值为 1
@@ -147,11 +147,11 @@ array.find((value, index) => {
 array.find((value, index) => {
   // 在第一次迭代时删除元素5
   if (index === 0) {
-    console.log("Deleting array[5] with value ", array[5]);
+    console.log(`删除 array[5] 的值 ${array[5]}`);
     delete array[5];
   }
   // 即使删除了，元素5仍然被访问
-  console.log("Visited index ", index, " with value ", value);
+  console.log(`访问索引 ${index}，值为 ${value}`);
 });
 // 删除值为 5 的 array[5]
 // 访问索引 0，值为 0
