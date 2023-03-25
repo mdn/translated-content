@@ -34,8 +34,7 @@ findIndex(function (element, index, array) { /* … */ }, thisArg)
 
 - `callbackFn`
 
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
-  应该为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)来指示已找到匹配的元素。
+  - : 应该为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)来指示已找到匹配的元素。
 
     该函数将被传入以下参数：
 
