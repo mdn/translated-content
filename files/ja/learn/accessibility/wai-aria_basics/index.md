@@ -148,7 +148,7 @@ VoiceOver の Landmarks メニューを見ると（VoiceOver キー + U でア�
 
 ![Mac の VoiceOver によるクイックアクセシビリティのためのメニュー。バナー、ナビゲーション、メイン、補完を含むランドマークヘッダーとランドマークリスト。](landmarks-list.png)
 
-しかし、これは改善することができます。 検索フォームはユーザーが見つけたいと考える重要なランドマークですが、ここでは Landmarks メニューの中に列挙されておらず、検索入力`（<input type="search">`）であるということ以上に目立つランドマークとしても扱われていません。 
+しかし、これは改善することができます。 検索フォームはユーザーが見つけたいと考える重要なランドマークですが、ここでは Landmarks メニューの中に列挙されておらず、検索入力（`<input type="search">`）であるということ以上に目立つランドマークとしても扱われていません。
 
 ARIA の機能を使用してこれを改善しましょう。 まず、 HTML に対していくつかの `role` 属性を追加します。 私達のオリジナルファイルをコピーするか（[index.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) と [style.css](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css) を参照）、 [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) の例（[実際の動作](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）へ移動すると、次の構造を確認できます。
 
