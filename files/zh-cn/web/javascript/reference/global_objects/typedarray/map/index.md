@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 
 {{JSRef}}
 
-**`map()`**方法对类型化数组的每个元素调用提供的函数，并使用结果来创建新的类型化数组。这个方法的算法和 {{jsxref("Array.prototype.map()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`map()`** 方法对类型化数组的每个元素调用提供的函数，并使用结果来创建新的类型化数组。这个方法的算法和 {{jsxref("Array.prototype.map()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 ## 语法
 
