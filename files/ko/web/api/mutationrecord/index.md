@@ -36,7 +36,7 @@ l10n:
 - {{domxref("MutationRecord.type")}} {{ReadOnlyInline}}
   - : 변경 유형을 나타내는 문자열입니다. 특성 변경이면 `attributes`, `CharacterData` 노드 변경이면 `characterData`, 노드 트리의 변경이면 `childList`입니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

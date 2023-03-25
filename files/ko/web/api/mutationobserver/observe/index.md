@@ -131,7 +131,7 @@ observer.observe(userListElement, {
 });
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

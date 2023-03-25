@@ -86,7 +86,7 @@ observer.observe(targetNode, observerOptions);
 
 이후 {{domxref("MutationObserver.disconnect", "disconnect()")}}를 호출하기 전까지는 DOM 트리의 `targetNode` 아래에서 새로운 요소가 추가되거나 제거되는 경우, 또는 `targetNode`까지 포함하여 요소 중 하나의 특성이 바뀌는 경우 `callback()`이 호출됩니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

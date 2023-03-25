@@ -50,7 +50,7 @@ observer.observe(targetNode, observerOptions);
 observer.disconnect();
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
