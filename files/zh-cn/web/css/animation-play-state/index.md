@@ -38,7 +38,7 @@ animation-play-state: unset;
 - `paused`
   - : 当前**动画**已被**停止**。
 
-> **注意：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> **备注：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ## 形式定义
 
@@ -94,7 +94,7 @@ animation-play-state: unset;
 
 {{EmbedLiveSample("暂停动画","100%","250")}}
 
-参见 [CSS 动画]示例(/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)示例。
 
 ## 规范
 
