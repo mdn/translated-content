@@ -3,41 +3,98 @@ title: animation-delay
 slug: Web/CSS/animation-delay
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-## 概述
+**`animation-delay`** [CSS](/zh-CN/docs/Web/CSS) 属性指定从应用动画到元素开始执行动画之前等待的时间量。动画可以稍后开始、立即从开头开始或立即开始并在动画中途播放。
 
-`animation-delay` [CSS](/zh-CN/docs/CSS)属性定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。
+{{EmbedInteractiveExample("pages/css/animation-delay.html")}}
 
-`0s`是该属性的默认值，代表动画在应用到元素上后立即开始执行。否则，该属性的值代表动画样式应用到元素上后到开始执行前的时间长度；
-
-定义一个负值会让动画立即开始。但是动画会从它的动画序列中某位置开始。例如，如果设定值为 -1s，动画会从它的动画序列的第 1 秒位置处立即开始。
-
-如果为动画延迟指定了一个负值，但起始值是隐藏的，则从动画应用于元素的那一刻起就获取起始值。
-
-通常用{{cssxref("animation")}}简写属性一次性设置动画效果较为方便。
-
-{{cssinfo}}
+使用 {{cssxref("animation")}} 的简写属性通常非常方便，可以一次性设置所有动画属性。
 
 ## 语法
 
 ```css
+/* 单个动画 */
 animation-delay: 3s;
-animation-delay: 2s, 4ms;
+animation-delay: 0s;
+animation-delay: -1500ms;
+
+/* 多个动画 */
+animation-delay: 2.1s, 480ms;
+
+/* 全局值 */
+animation-delay: inherit;
+animation-delay: initial;
+animation-delay: revert;
+animation-delay: revert-layer;
+animation-delay: unset;
 ```
 
 ### 值
 
-- `<time>`
-  - : 从动画样式应用到元素上到元素开始执行动画的时间差。该值可用单位为秒 (s) 和毫秒 (ms)。如果未设置单位，定义无效。
+- `{{cssxref("&lt;time&gt;")}}`
 
-### 正式语法
+  - : 动画应该开始的时间偏移量，从应用动画到元素的时刻开始计算。可以用秒（`s`）或毫秒（`ms`）指定。单位是必需的。
 
-{{csssyntax("animation-delay")}}
+    正值表示动画应在指定的时间量过去后开始。默认值为 `0s`，表示动画应立即开始。
+
+    负值会导致动画立即开始，但是从动画循环的某个时间点开始。例如，如果你将 `-1s` 作为动画延迟时间，则动画将立即开始，但是将在动画序列的第1秒开始。如果你为动画延迟指定负值，但起始值是隐含的，则起始值取自应用动画到元素的时刻。
+
+> **备注：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
-参见[CSS animations](/zh-CN/docs/CSS/CSS_animations)
+### 设置动画延迟
+
+这个动画有 2 秒的延迟。
+
+#### HTML
+
+```html
+<div class="box"></div>
+```
+
+#### CSS
+
+```css
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-delay: 2s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```
+
+#### 结果
+
+将鼠标悬停在矩形上来播放动画。
+
+{{EmbedLiveSample("设置动画延迟","100%","250")}}
+
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)以获取示例。
 
 ## 规范
 
@@ -49,5 +106,6 @@ animation-delay: 2s, 4ms;
 
 ## 参见
 
-- [Using CSS animations](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- JavaScript {{domxref("AnimationEvent")}} API
+- 其他相关的动画属性: {{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}
