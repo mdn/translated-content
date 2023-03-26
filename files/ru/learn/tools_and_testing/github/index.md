@@ -49,7 +49,7 @@ original_slug: Learn/Tools_and_testing/GitHub
 - [Hello World (from GitHub)](https://guides.github.com/activities/hello-world/)
   - : Это практическое руководство поможет вам сразу начать пользоваться GitHub. Оно содержит основы использования Git, такие как создание репозиториев, веток, создание коммитов, открытие и слияние пулл-реквестов.
 - [Git Handbook (from GitHub)](https://guides.github.com/introduction/git-handbook/)
-  - : Этот справочник по Git подробнее объясняет, что такое система контроля версий (VCS), что такое репозиторий, как устроен GitHub, описывает основные команды Git, демонстрирует примеры использования Git.
+  - : Этот справочник по Git подробнее объясняет, что такое система контроля версий (VCS), что такое репозиторий, на чём основана модель работы GitHub, описывает команды Git, примеры их использования и многое другое.
 - [Forking Projects (from GitHub)](https://guides.github.com/activities/forking/)
   - : Это руководство объясняет, как при помощи создания ответвления (fork) от чужого проекта мы можете поучавствовать в его разработке.
 - [About Pull Requests (from GitHub)](https://help.github.com/en/articles/about-pull-requests)
