@@ -93,7 +93,7 @@ animation-direction: unset;
 
 {{EmbedLiveSample("反转动画方向","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/CSS/CSS_animations)以获取示例。
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)以获取示例。
 
 ## 规范
 
