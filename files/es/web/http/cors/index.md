@@ -439,14 +439,49 @@ Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 
 ## Las cabeceras de solicitud HTTP
 
+Esta sección enumera las cabeceras que los clientes pueden utilizar al emitir solicitudes HTTP para hacer uso de la función de compartición entre orígenes. Tenga en cuenta que estas cabeceras se establecen por usted cuando realiza invocaciones a servidores. Los desarrolladores que usan la funcionalidad XMLHttpRequest de origen cruzado no tienen que establecer ninguna cabecera de solicitud de uso compartido entre orígenes mediante programación.
+
 ### Origen
+
+La cabecera {{HTTPHeader("Origin")}} indica el origen de la solicitud de acceso de origen cruzado o de la solicitud de verificación previa.
+
+```http
+Origin: <origin>
+```
+
+El origen es una URL que indica el servidor desde el que se inicia la solicitud. No incluye ninguna información de ruta, sólo el nombre del servidor.
+
+> **Nota:** El valor de `origin` puede ser `null`.
+
+Tenga en cuenta que en cualquier solicitud de control de acceso, la cabecera {{HTTPHeader("Origin")}} **siempre** es enviada.
 
 ### Control de acceso-Método de solicitud
 
+La cabecera de solicitud {{HTTPHeader("Access-Control-Request-Method")}} se utiliza cuando se emite una solicitud de verificación previa para que el servidor sepa qué método HTTP se utilizará cuando se realice la solicitud real.
+
+```http
+Access-Control-Request-Method: <method>
+```
+
+Puede encontrar ejemplos de este uso [arriba](#Solicitudes_verificadas_previamente)
+
 ### Control de acceso-Cabeceras de solicitud
+
+La cabecera {{HTTPHeader("Access-Control-Request-Headers")}} se utiliza cuando se emite una solicitud de verificación previa para que el servidor sepa qué cabeceras HTTP se utilizarán cuando se realice la solicitud real (como con {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). Esta cabecera del lado del navegador será respondida por la cabecera complementaria del lado del servidor {{HTTPHeader("Access-Control-Allow-Headers")}}.
+
+```http
+Access-Control-Request-Headers: <field-name>[, <field-name>]*
+```
+
+Puede encontrar ejemplos de este uso [arriba](#Solicitudes_verificadas_previamente)
 
 ## Especificaciones
 
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
+{{Compat}}
+
 ## Véase también
+
