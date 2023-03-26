@@ -41,7 +41,7 @@ every(function(element, index, array) { /* … */ }, thisArg)
     - `index`
       - : 数组中正在处理的当前元素的索引。
     - `array`
-      - : 调用 `every` 的当前数组。
+      - : 调用 `every()` 的当前数组。
 
 - `thisArg` {{optional_inline}}
   - : 执行 `callbackFn` 时使用的 `this` 值。请参阅[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)。
