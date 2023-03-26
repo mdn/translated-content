@@ -19,7 +19,7 @@ l10n:
 
 ## 구문
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} 등의 메서드에 이벤트 이름을 제공하거나, 이벤트 처리기 속성을 사용하세요.
+이벤트 이름을 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 등의 메서드에 제공하거나, 이벤트 처리기 속성을 사용하세요.
 
 ```js
 addEventListener("input", (event) => {});
