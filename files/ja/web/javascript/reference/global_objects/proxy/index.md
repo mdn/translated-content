@@ -83,6 +83,62 @@ console.log(proxy3.message1); // hello
 console.log(proxy3.message2); // world
 ```
 
+`Reflect` メソッドは、オブジェクトの内部メソッドを通じてオブジェクトとやりとりすることに変わりはありません。プロキシー上で呼び出されても、プロキシーを「脱プロキシー」することはありません。プロキシートラップ内で `Reflect` メソッドを使用し、`Reflect` メソッド呼び出しが再びトラップに介入した場合、無限の再帰が発生する可能性があります。
+
+### 用語集
+
+プロキシーの機能について語るとき、以下の用語が使用されます。
+
+- [ハンドラー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy#ハンドラー関数)
+  - : `Proxy` コンストラクターの 2 つ目の引数として渡されるオブジェクト。プロキシーの動作を定義するトラップが格納されています。
+- トラップ
+  - : 対応する[オブジェクト内部メソッド](#オブジェクト内部メソッド)の振る舞いを定義する関数です。（これは、オペレーティングシステムにおける「トラップ」の概念に似ています。）
+- ターゲット
+  - : プロキシーが仮想化するオブジェクト。プロキシーのストレージバックエンドとして多く使用されます。オブジェクトの非拡張性または設定不可能なプロパティに関するインバリアント（変更されない意味づけ）は、対象に対して検証されます。
+- 不変条件
+  - : カスタム処理を実装しても変わらない意味づけ。トラップの実装がハンドラーの不変条件に違反する場合、{{jsxref("TypeError")}}が発生します。
+
+### オブジェクト内部メソッド
+
+[オブジェクト](/ja/docs/Web/JavaScript/Data_structures#オブジェクト)はプロパティの集合体です。しかし、この言語では、オブジェクトに格納されたデータを直接操作するための仕組みは提供されていません。むしろ、オブジェクトは、オブジェクトと対話する方法を指定するいくつかの内部メソッドを定義します。例えば、`obj.x` を読んだとき、以下のようなことが起こると予想されます。
+
+- `x` プロパティは、得られるまで[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)が検索される。
+- `x` がデータプロパティの場合、プロパティ記述子の `value` 属性が返される。
+- `x` がアクセサプロパティの場合、ゲッターを呼び出すと、ゲッターの返値が返される。
+
+言語上、この処理について特別なことは何もありません。既定では、普通のオブジェクトがこの動作で定義された `[[Get]]` 内部メソッドを持っているからに他なりません。`obj.x` プロパティアクセス構文は、単にオブジェクトの `[[Get]]` メソッドを呼び出すだけで、オブジェクトは自分自身で内部メソッドの実装を使用して、返す値を決定します。
+
+別の例として、[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)は通常のオブジェクトと異なり、魔法の[`length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length) プロパティがあり、変更すると自動的に空のスロットに割り当てられたり配列の要素が削除されます。同様に、配列の要素を追加すると、自動的に `length` プロパティが変更されます。これは、配列には `[[DefineOwnProperty]]` という内部メソッドがあり、それが、整数の添字の位置に書き込みが行われたときに `length` を更新したり、`length` が書き込まれたときに配列の内容を更新したりするということを知っているからです。このような、通常のオブジェクトとは異なる実装を持つ内部メソッドを持つオブジェクトは、_エキゾチックオブジェクト_ と呼ばれます。プロキシーオブジェクトは、自分自身でエキゾチックオブジェクトを定義することができます。
+
+すべてのオブジェクトは、以下の内部メソッドを保持しています。
+
+| 内部メソッド         | 対応するトラップ                                                               |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| `[[GetPrototypeOf]]`    | {{jsxref("Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}}                     |
+| `[[SetPrototypeOf]]`    | {{jsxref("Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}}                     |
+| `[[IsExtensible]]`      | {{jsxref("Proxy/Proxy/isExtensible", "isExtensible()")}}                         |
+| `[[PreventExtensions]]` | {{jsxref("Proxy/Proxy/preventExtensions", "preventExtensions()")}}               |
+| `[[GetOwnProperty]]`    | {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "getOwnPropertyDescriptor()")}} |
+| `[[DefineOwnProperty]]` | {{jsxref("Proxy/Proxy/defineProperty", "defineProperty()")}}                     |
+| `[[HasProperty]]`       | {{jsxref("Proxy/Proxy/has", "has()")}}                                           |
+| `[[Get]]`               | {{jsxref("Proxy/Proxy/get", "get()")}}                                           |
+| `[[Set]]`               | {{jsxref("Proxy/Proxy/set", "set()")}}                                           |
+| `[[Delete]]`            | {{jsxref("Proxy/Proxy/deleteProperty", "deleteProperty()")}}                     |
+| `[[OwnPropertyKeys]]`   | {{jsxref("Proxy/Proxy/ownKeys", "ownKeys()")}}                                   |
+
+また、関数オブジェクトは以下の内部メソッドも保有します。
+
+| 内部メソッド | 対応するトラップ                                 |
+| --------------- | -------------------------------------------------- |
+| `[[Call]]`      | {{jsxref("Proxy/Proxy/apply", "apply()")}}         |
+| `[[Construct]]` | {{jsxref("Proxy/Proxy/construct", "construct()")}} |
+
+オブジェクトとやりとりするものはすべて、最終的にはこれらの内部メソッドの呼び出しに帰結し、それらはすべてプロキシーによってカスタマイズ可能であることを理解することは重要です。つまり、ほぼすべての動作が（ある重要な不変条件を除いて）言語で保証されているわけではなく、すべてがオブジェクト自身によって定義されるのです。[`delete obj.x`](/ja/docs/Web/JavaScript/Reference/Operators/delete) を実行したとき、その後 [`"x" in obj`](/ja/docs/Web/JavaScript/Reference/Operators/in) が `false` を保証しているわけではありません。それはオブジェクトの `[[Delete]]` と `[[HasProperty]]` の実装に依存します。`delete obj.x` はコンソールにログ出力したり、グローバルプロパティを変更したり、あるいは既存のプロパティを削除する代わりに新しいプロパティを定義することもできますが、これらの意味づけは自分のコードでは避けるべきでしょう。
+
+内部メソッドはすべて言語自身によって呼び出されるものであり、JavaScript コードで直接アクセスすることはできません。{{jsxref("Reflect")}} 名前空間は、いくつかの入力正規化/検証の他に、内部メソッドを呼び出す以上のことはほとんどしないメソッドを提供しています。それぞれのトラップのページでは、トラップを呼び出す代表的な場面をいくつか挙げていますが、これらの内部メソッドは、多くの場所で呼び出されます。例えば、配列メソッドはこれらの内部メソッドを通して配列に読み書きするので、[`push()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push) などのメソッドは `get()` や `set()` トラップも呼び出します。
+
+内部メソッドのほとんどは、何をするかは簡単です。混乱しそうなのは `[[Set]]` と `[[DefineOwnProperty]]` の 2 つだけです。通常のオブジェクトの場合、前者はセッターを呼び出しますが、後者は呼びません。（また、`[[Set]]` は既存のプロパティがない場合やプロパティがデータプロパティの場合は内部で `[[DefineOwnProperty]]` を呼び出します。）`obj.x = 1` の構文が `[[Set]]` を使用し、{{jsxref("Object.defineProperty()")}} が `[[DefineOwnProperty]]` を使用することは知っているかもしれませんが、他にも組み込みメソッドや構文がどのような意味で使用するかはすぐにわかることではありません。例えば、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)は `[[DefineOwnProperty]]` の意味を使用しており、そのため派生クラスでフィールドを宣言しても、スーパークラスで定義されているセッターは呼び出されません。
+
 ## コンストラクター
 
 - {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
