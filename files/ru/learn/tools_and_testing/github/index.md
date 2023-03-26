@@ -63,7 +63,7 @@ original_slug: Learn/Tools_and_testing/GitHub
 
 - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 - [Git command list](https://git-scm.com/docs) (справочник по командам git)
-- [Mastering markdown](https://guides.github.com/features/mastering-markdown/) (правила оформления сообщений в пулл-реквестах (PR), комментариях, и `.md` файлах).
+- [Mastering markdown](https://guides.github.com/features/mastering-markdown/) (правила оформления сообщений в пулл-реквестах (PR), комментариях, и `.md`-файлах).
 - [Getting Started with GitHub Pages](https://guides.github.com/features/pages/) (правила публикаций страниц и демо-сайтов на GitHub).
 - [Learn Git branching](https://learngitbranching.js.org/) (интерактивный справочник по правилам ветвления в Git)
 - [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (полезный справочник решений конкретных задач, возникающих при работе с Git, и ситуаций, когда что-то пошло не так).
