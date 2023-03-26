@@ -21,7 +21,7 @@ disconnect()
 
 없음.
 
-### Return value
+### 반환 값
 
 없음 ({{jsxref("undefined")}}).
 
