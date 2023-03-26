@@ -87,13 +87,13 @@ function isPrime(element) {
   return true;
 }
 
-console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, 没有找到
-console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
+console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1，没有找到
+console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2（array[2] 是 7）
 ```
 
 ### 在稀疏数组上使用 findIndex()
 
-您可以搜索稀疏数组中的 `undefined` 并来获取空槽的索引。
+你可以搜索稀疏数组中的 `undefined` 并来获取空槽的索引。
 
 ```js
 console.log([1, , 3].findIndex((x) => x === undefined)); // 1
