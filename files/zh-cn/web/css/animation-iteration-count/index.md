@@ -3,30 +3,33 @@ title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
 ---
 
-{{CSSRef}} {{ SeeCompatTable() }}
+{{CSSRef}}
 
-## 概要
-
-**`animation-iteration-count`** [CSS](/zh-CN/CSS) 属性 定义动画在结束前运行的次数 可以是 1 次 无限循环。
-
-如果指定了多个值，每次播放动画时，将使用列表中的下一个值，在使用最后一个值后循环回第一个值。
-
-通常情况下，使用`animation`简写属性，来一次性设置所有动画属性会更方便。
+**`animation-iteration-count`** [CSS](/zh-CN/CSS) 属性设置动画序列在停止前应播放的次数
 
 {{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
+
+使用动画的简写属性 {{cssxref("animation")}} 可以一次性设置所有动画属性，这通常非常方便。
 
 ## 语法
 
 ```css
-/* 值为关键字 */
+/* 关键字值 */
 animation-iteration-count: infinite;
 
-/* 值为数字 */
+/* 数字值 */
 animation-iteration-count: 3;
 animation-iteration-count: 2.4;
 
-/* 指定多个值 */
+/* 多个值 */
 animation-iteration-count: 2, 0, infinite;
+
+/* 全局值 */
+animation-iteration-count: inherit;
+animation-iteration-count: initial;
+animation-iteration-count: revert;
+animation-iteration-count: revert-layer;
+animation-iteration-count: unset;
 ```
 
 `animation-iteration-count` 属性可以指定一个或多个以逗号分隔的值。
@@ -35,16 +38,62 @@ animation-iteration-count: 2, 0, infinite;
 
 - `infinite`
   - : 无限循环播放动画。
-- `<number>`
-  - : 动画播放的次数；默认值为`1`。可以用小数定义循环，来播放动画周期的一部分：例如，`0.5` 将播放到动画周期的一半。不可为负值。
+- `{{cssxref("&lt;number&gt;")}}`
+  - : 动画重复的次数；默认为 `1`。你可以指定非整数值以播放动画循环的一部分：例如，`0.5` 将播放动画循环的一半。负值是无效的。
 
-### Formal syntax
+## 形式定义
+
+{{cssinfo}}
+
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-去看 [CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples. 点击链接去看栗（例）子
+### 设置迭代次数
+
+该动画将会播放 10 次。
+
+#### HTML
+
+```html
+<div class="box"></div>
+```
+
+#### CSS
+
+```css
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-iteration-count: 10;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```
+
+#### 结果
+
+将鼠标悬停在矩形上来播放动画。
+
+{{EmbedLiveSample("Setting iteration count","100%","250")}}
+
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)示例。
 
 ## 规范
 
@@ -56,5 +105,6 @@ animation-iteration-count: 2, 0, infinite;
 
 ## See also
 
-- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- JavaScript {{domxref("AnimationEvent")}} API
+- 其它相关的动画属性: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}
