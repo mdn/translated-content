@@ -103,7 +103,7 @@ animation-iteration-count: unset;
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
