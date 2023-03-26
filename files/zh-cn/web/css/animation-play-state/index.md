@@ -5,8 +5,6 @@ slug: Web/CSS/animation-play-state
 
 {{CSSRef}}
 
-## 概述
-
 **`animation-play-state`** [CSS](/zh-CN/docs/CSS) 属性设置动画是运行还是暂停。
 
 {{EmbedInteractiveExample("pages/css/animation-play-state.html")}}
@@ -46,9 +44,7 @@ animation-play-state: unset;
 
 ### 形式语法
 
-```plain
 {{csssyntax}}
-```
 
 ## 示例
 
@@ -94,7 +90,7 @@ animation-play-state: unset;
 
 {{EmbedLiveSample("暂停动画","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)示例。
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)以获取示例。
 
 ## 规范
 
