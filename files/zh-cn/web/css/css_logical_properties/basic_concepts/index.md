@@ -19,7 +19,7 @@ slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
 
 ![竖排书写模式中的网格](grid-vertical-width-sm.png)
 
-如果我们不用 `width` 属性而用逻辑属性 {{CSSXref("inline-size")}，那现在无论用什么书写模式显示组件都没有问题。
+如果我们不用 `width` 属性而用逻辑属性 {{CSSXref("inline-size")}}，那现在无论用什么书写模式显示组件都没有问题。
 
 ![竖排书写模式中的网格](grid-vertical-inline-size-small.png)
 
