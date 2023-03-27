@@ -51,8 +51,8 @@ l10n:
   - : 브라우저 창의 콘텐츠 영역 높이를 반환합니다. 수평 스크롤바가 존재하면 그 높이도 포함합니다.
 - {{domxref("Window.innerWidth")}} {{readOnlyInline}}
   - : 브라우저 창의 콘텐츠 영역 너비를 반환합니다. 수직 스크롤바가 존재하면 그 높이도 포함합니다.
-- {{domxref("Window.isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}
-  - : 현재 컨텍스트에서 보안 컨텍스트를 요구하는 기능을 사용할 수 있는지 나타냅니다.
+- {{domxref("isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}
+  - : 현재 컨텍스트가 안전한지 (`true`) 안전하지 않은지 (`false`) 나타내는 불리언을 반환합니다.
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : [PWA](/ko/docs/Web/Progressive_web_apps)에서, [`launch_handler`](/ko/docs/Web/Manifest/launch_handler) `client_mode`의 값이 `focus-existing`, `navigate-new`, `navigate-existing` 중 하나라면, `launchQueue`는 {{domxref("LaunchQueue")}} 클래스로의 접근을 제공합니다. `LaunchQueue`를 활용하면 PWA의 실행 탐색 처리를 직접 구현할 수 있습니다.
 - {{domxref("Window.length")}} {{readOnlyInline}}
