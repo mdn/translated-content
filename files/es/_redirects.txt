@@ -2518,7 +2518,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/size	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/size
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/values	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/values
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String	/es/docs/Web/JavaScript/Reference/Global_Objects/String
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/Trim	/es/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/Trim	/es/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/anchor	/es/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/big	/es/docs/Web/JavaScript/Reference/Global_Objects/String/big
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/blink	/es/docs/Web/JavaScript/Reference/Global_Objects/String/blink
