@@ -752,7 +752,7 @@
 /zh-CN/docs/JS-ref/Statements/function*	/zh-CN/docs/Web/JavaScript/Reference/Statements/function*
 /zh-CN/docs/JS-ref/Statements/let	/zh-CN/docs/Web/JavaScript/Reference/Statements/let
 /zh-CN/docs/JS-ref/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-CN/docs/JS-ref/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/zh-CN/docs/JS-ref/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /zh-CN/docs/JS-ref/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/JS-ref/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/JS-ref/String/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat
@@ -953,7 +953,7 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Set	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-CN/docs/JavaScript/Reference/Global_Objects/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/zh-CN/docs/JavaScript/Reference/Global_Objects/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat
@@ -997,7 +997,7 @@
 /zh-CN/docs/JavaScript/Reference/Statements/function*	/zh-CN/docs/Web/JavaScript/Reference/Statements/function*
 /zh-CN/docs/JavaScript/Reference/Statements/let	/zh-CN/docs/Web/JavaScript/Reference/Statements/let
 /zh-CN/docs/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-CN/docs/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/zh-CN/docs/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /zh-CN/docs/JavaScript/Reference/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/JavaScript/Reference/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/JavaScript/Reference/String/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat
@@ -2537,7 +2537,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta	/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta
 /zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-CN/docs/Web/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/zh-CN/docs/Web/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /zh-CN/docs/Web/JavaScript/Reference/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/Web/JavaScript/Reference/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/Web/JavaScript/Reference/String/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat
