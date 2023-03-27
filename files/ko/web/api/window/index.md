@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: c13686d73ba440263243a79a3241d96a23440324
+  sourceCommit: 6e1fe83cb73ee673d811225df496e5795d112d0c
 ---
 
 {{APIRef("DOM")}}
@@ -138,6 +138,25 @@ l10n:
   - : Returns the {{domxref("Scheduler")}} object associated with the current context.
     This is the entry point for using the [Prioritized Task Scheduling API](/ko/docs/Web/API/Prioritized_Task_Scheduling_API).
 
+### Deprecated properties
+
+- {{domxref("Window.content")}} and `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
+- {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
+  - : Gets/sets the status bar text for the given window.
+- {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
+- {{domxref("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : Returns an object with functions for adding external search providers to the browser.
+- {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
+- {{domxref("Window.returnValue")}} {{Deprecated_Inline}}
+  - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
+- {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : Returns a reference to the window object of the sidebar
+- {{domxref("Window.status")}} {{Deprecated_Inline}}
+  - : Gets/sets the text in the statusbar at the bottom of the browser.
+
 ## 인스턴스 메서드
 
 {{domxref("EventTarget")}}의 메서드를 상속합니다.
@@ -146,9 +165,9 @@ l10n:
   - : 경고 대화 상자를 표시합니다.
 - {{domxref("Window.blur()")}}
   - : Sets focus away from the window.
-- {{domxref("Window.cancelAnimationFrame()")}} {{experimental_inline}}
+- {{domxref("Window.cancelAnimationFrame()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
-- {{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}
+- {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
 - {{domxref("Window.clearImmediate()")}}
   - : Cancels the repeated execution set using `setImmediate`.
@@ -156,26 +175,20 @@ l10n:
   - : Closes the current window.
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
-- {{domxref("Window.dispatchEvent()")}}
-  - : Used to trigger an event.
-- {{domxref("Window.dump()")}} {{Non-standard_inline}}
+- {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : Writes a message to the console.
-- {{domxref("Window.find()")}}
+- {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
   - : Sets focus on the current window.
 - {{domxref("Window.getComputedStyle()")}}
   - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
-- {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_inline}}
+- {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_Inline}}
   - : Gets default computed style for the specified element, ignoring author stylesheets.
 - {{domxref("Window.getSelection()")}}
   - : Returns the selection object representing the selected item(s).
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
-- {{domxref("Window.maximize()")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Window.minimize()")}} (top-level XUL windows only)
-  - : Minimizes the window.
 - {{domxref("Window.moveBy()")}}
   - : Moves the current window by a specified amount.
 - {{domxref("Window.moveTo()")}}
@@ -188,9 +201,11 @@ l10n:
   - : Opens the Print Dialog to print the current document.
 - {{domxref("Window.prompt()")}}
   - : Returns the text entered by the user in a prompt dialog.
+- {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
-- {{domxref("Window.requestIdleCallback()")}} {{experimental_inline}}
+- {{domxref("Window.requestIdleCallback()")}}
   - : Enables the scheduling of tasks during a browser's idle periods.
 - {{domxref("Window.resizeBy()")}}
   - : Resizes the current window by a certain amount.
@@ -200,47 +215,68 @@ l10n:
   - : Scrolls the window to a particular place in the document.
 - {{domxref("Window.scrollBy()")}}
   - : Scrolls the document in the window by the given amount.
-- {{domxref("Window.scrollByLines()")}} {{Non-standard_inline}}
+- {{domxref("Window.scrollByLines()")}} {{Non-standard_Inline}}
   - : Scrolls the document by the given number of lines.
-- {{domxref("Window.scrollByPages()")}} {{Non-standard_inline}}
+- {{domxref("Window.scrollByPages()")}} {{Non-standard_Inline}}
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("Window.setCursor()")}} {{Non-standard_inline}} (top-level XUL windows only)
-  - : Changes the cursor for the current window
 - {{domxref("Window.setImmediate()")}}
-  - : Executes a function after the browser has finished other heavy tasks
-- {{domxref("Window.setResizable()")}} {{Non-standard_inline}}
+  - : Executes a function after the browser has finished other heavy tasks.
+- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
   - : Toggles a user's ability to resize a window.
-- {{domxref("Window.sizeToContent()")}} {{Non-standard_inline}}
+- {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
   - : Sizes the window according to its content.
+- {{domxref("Window.showOpenFilePicker()")}} {{Experimental_Inline}}
+  - : Shows a file picker that allows a user to select a file or multiple files.
+- {{domxref("Window.showSaveFilePicker()")}} {{Experimental_Inline}}
+  - : Shows a file picker that allows a user to save a file.
+- {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
+  - : Displays a directory picker which allows the user to select a directory.
 - {{domxref("Window.stop()")}}
   - : This method stops window loading.
-- {{domxref("Window.updateCommands()")}} {{Non-standard_inline}}
+- {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
   - : Updates the state of commands of the current chrome window (UI).
 
 ### Methods implemented from elsewhere
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Register an event handler to a specific event type on the window.
-- {{domxref("WindowOrWorkerGlobalScope.atob()")}}
+- {{domxref("EventTarget.dispatchEvent()")}}
+  - : Used to trigger an event.
+- {{domxref("atob", "atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("WindowOrWorkerGlobalScope.btoa()")}}
+- {{domxref("btoa", "btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.
-- {{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}
-  - : Cancels the delayed execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.
-- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}
-  - : Accepts a variety of different image sources, and returns a {{domxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
-- {{domxref("WindowOrWorkerGlobalScope.fetch()")}}
+- {{domxref("clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
+- {{domxref("clearTimeout()")}}
+  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
+- {{domxref("createImageBitmap()")}}
+  - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
+- {{domxref("fetch()")}}
   - : Starts the process of fetching a resource from the network.
-- {{domxref("EventTarget.removeEventListener")}}
+- {{domxref("EventTarget.removeEventListener()")}}
   - : Removes an event listener from the window.
-- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
+- {{domxref("setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
+- {{domxref("setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
+- {{domxref("reportError()")}}
+  - : Reports an error in a script, emulating an unhandled exception.
+
+### Deprecated methods
+
+- {{domxref("Window.back()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Moves back one in the window history. This method is deprecated; you should instead use {{domxref("History.back", "window.history.back()")}}.
+- {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
+  - : Registers the window to capture all events of the specified type.
+- {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "window.history.forward()")}}.
+- {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
+  - : Releases the window from trapping events of a specific type.
+- {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Displays a modal dialog.
 
 ## 이벤트
 
@@ -363,6 +399,21 @@ Listen to these events using [`addEventListener()`](/ko/docs/Web/API/EventTarget
   - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
   - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+
+### Deprecated events
+
+- {{domxref("Window/orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
+  - : Fired when the orientation of the device has changed.
+- {{domxref("Window/vrdisplayactivate_event", "vrdisplayactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a display is able to be presented to.
+- {{domxref("Window/vrdisplayconnect_event", "vrdisplayconnect")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a compatible VR device has been connected to the computer.
+- {{domxref("Window/vrdisplaydisconnect_event", "vrdisplaydisconnect")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a compatible VR device has been disconnected from the computer.
+- {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a display can no longer be presented to.
+- {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
 
 ## 인터페이스
 
