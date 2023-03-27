@@ -129,30 +129,30 @@ function changeBackground() {
 btn.addEventListener("click", changeBackground);
 ```
 
-### Listening for other events
+### Detectando otros eventos
 
-There are many different events that can be fired by a button element. Let's experiment.
+Existen distintos tipos de eventos que pueden ser lanzados por un elemento de tipo *button*. Hagamos algunos experimentos.
 
-First, make a local copy of [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html), and open it in your browser.
-It's just a copy of the simple random color example we've played with already. Now try changing `click` to the following different values in turn, and observing the results in the example:
+Primero, haz una copia local del archivo [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html), y ábrelo en tu navegador.
+Se trata de una copia del ejemplo sencillo del color aleatorio con el que ya trabajamos anteriormente. Ahora intenta a cambiar `click` por cada uno de los siguientes valores y observa los resultados en el ejemplo:
 
-- [`focus`](/en-US/docs/Web/API/Element/focus_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event) — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button.
-  These are often used to display information about filling in form fields when they are focused, or to display an error message if a form field is filled with an incorrect value.
-- [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event) — The color changes only when the button is double-clicked.
-- [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event) and [`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.
+- [`focus`](/es/docs/Web/API/Element/focus_event) y [`blur`](/es/docs/Web/API/Element/blur_event) — El color cambia cuando el botón es enfocado y desenfocado; Intenta presionar la tecla "Tabulador" para enfocar el botón y presionala de nuevo para desenfocarlo.
+Estos eventos son normalmente utilizados para mostrar información a la hora de completar formularios, o incluso para mostrar un mensaje de error si un campo recibe un valor incorrecto. 
+- [`dblclick`](/es/docs/Web/API/Element/dblclick_event) — El color cambia únicamente cuando se hace doble click sobre el botón.
+- [`mouseover`](/es/docs/Web/API/Element/mouseover_event) y [`mouseout`](/es/docs/Web/API/Element/mouseout_event) — El color cambia cuando el puntero del ratón pasa por encima del botón, o cuando el puntero sale del botón, respectivamente.
 
-Some events, such as `click`, are available on nearly any element. Others are more specific and only useful in certain situations: for example, the [`play`](/en-US/docs/Web/API/HTMLMediaElement/play_event) event is only available on some elements, such as {{htmlelement("video")}}.
+Algunos eventos, como `click`, están disponibles prácticamente en cualquier elemento. Mientras que otros son más específicos y solo son útiles en ciertas situaciones: por ejemplo, el evento [`play`](/es/docs/Web/API/HTMLMediaElement/play_event) solo está disponible en algunos elementos, como {{htmlelement("video")}}.
 
-### Removing listeners
+### Removiendo detectores
 
-If you've added an event handler using `addEventListener()`, you can remove it again using the [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) method. For example, this would remove the `changeBackground()` event handler:
+Si has agregado un manejador de eventos usando `addEventListener()`, puedes removerlo utilizando el método [`removeEventListener()`](/es/docs/Web/API/EventTarget/removeEventListener). Por ejemplo, esto removería el manejador de evento `changeBackground()`:
 
 ```js
 btn.removeEventListener("click", changeBackground);
 ```
 
-Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the `AbortSignal`.
-For example, to add an event handler that we can remove with an `AbortSignal`:
+Los manejadores de eventos también pueden ser removidos al pasarles una {{domxref("AbortSignal")}} al método {{domxref("EventTarget/addEventListener()", "addEventListener()")}} y después llamar al método {{domxref("AbortController/abort()", "abort()")}} sobre el control al que le pertenece la `AbortSignal`.
+Por ejemplo, para agregar un manejador de evento que podemos remover con una `AbortSignal`:
 
 ```js
 const controller = new AbortController();
@@ -164,45 +164,48 @@ btn.addEventListener(
     document.body.style.backgroundColor = rndCol;
   },
   { signal: controller.signal }
-); // pass an AbortSignal to this handler
+); // se pasa una AbortSignal a este manejador
 ```
 
-Then the event handler created by the code above can be removed like this:
+De esta forma, el manejador de evento creado por el código anterior puede ser removido de la siguiente manera:
+
 
 ```js
-controller.abort(); // removes any/all event handlers associated with this controller
+controller.abort(); // remueve cualquier manejador de evento asociado con este controlador.
 ```
 
-For simple, small programs, cleaning up old, unused event handlers isn't necessary, but for larger, more complex programs, it can improve efficiency.
-Also, the ability to remove event handlers allows you to have the same button performing different actions in different circumstances: all you have to do is add or remove handlers.
+Para programas pequeños y simples, limpiar los rastros de manejadores de eventos sin utilizar resulta innecesario. Sin embargo, para programas más complejos, puede traer mejoras de eficiencia.
+Además, la habilidad de remover manejadores de eventos te permite tener al mismo botón ejecutando diferentes acciones en diferentes circunstancias: todo lo que tienes que hacer es agregar o remover manejadores.
 
-### Adding multiple listeners for a single event
+### Agregando varios detectores para un solo evento
 
-By making more than one call to {{domxref("EventTarget/addEventListener()", "addEventListener()")}}, providing different handlers, you can have multiple handlers for a single event:
+Al realizar más de una llamada al método {{domxref("EventTarget/addEventListener()", "addEventListener()")}}, proporcionando distintos manejadores, puedes tener varios detectores para un solo evento:
 
 ```js
 myElement.addEventListener("click", functionA);
 myElement.addEventListener("click", functionB);
 ```
 
-Both functions would now run when the element is clicked.
+Ambas functiones se ejecutarían cuando se hace click en dicho elemento.
 
-### Learn more
+### Conocer más
 
-There are other powerful features and options available with `addEventListener()`.
+Existen otras características y opciones poderosas disponibles para  `addEventListener()`.
 
-These are a little out of scope for this article, but if you want to read them, visit the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) reference pages.
+Éstas se encuentran un poco fuera del alcance de este artículo, pero si quieres saber más de ellas, visita las páginas de referencia para [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) y [`removeEventListener()`](/es/docs/Web/API/EventTarget/removeEventListener).
 
-## Other event listener mechanisms
+## Otros mecanismos para detectar eventos
 
-We recommend that you use `addEventListener()` to register event handlers. It's the most powerful method and scales best with more complex programs. However, there are two other ways of registering event handlers that you might see: _event handler properties_ and _inline event handlers_.
+Te recomendamos que utilices `addEventListener()` para registrar manejadores de eventos. Es el método más potente y que mejor escala para programas más complejos.
+No obstante, existen otras dos formas distintas para registrar manejadores de eventos que deberías conocer.
 
-### Event handler properties
+### Propiedades para manejar eventos
 
-Objects (such as buttons) that can fire events also usually have properties whose name is `on` followed by the name of the event. For example, elements have a property `onclick`.
-This is called an _event handler property_. To listen for the event, you can assign the handler function to the property.
+Los objetos (como botones) que pueden lanzar eventos, normalmente tienen propiedades cuyo nombre es `on` seguido del nombre del evento. Por ejemplo, elementos con la propiedad `onclick`.
+A esto se le conoce como una propiedad para manejar eventos, o _event manager property_.
+Para detectar un evento, puedes asignar la función manejador a dicha propiedad.
 
-For example, we could rewrite the random-color example like this:
+Por ejemplo, podemos reescribir el ejemplo del color aleatorio de esta forma:
 
 ```js
 const btn = document.querySelector("button");
@@ -217,7 +220,7 @@ btn.onclick = () => {
 };
 ```
 
-You can also set the handler property to a named function:
+También puedes establecer la propiedad manejador a una función con nombre:
 
 ```js
 const btn = document.querySelector("button");
@@ -234,26 +237,27 @@ function bgChange() {
 btn.onclick = bgChange;
 ```
 
-With event handler properties, you can't add more than one handler for a single event. For example, you can call `addEventListener('click', handler)` on an element multiple times, with different functions specified in the second argument:
+Al utilizar propiedades para manejar eventos, no es posible agregar más de un manejador para un solo evento.
+Por ejemplo, puedes llamar el método `addEventListener('click', handler)` en un elemento varias veces, pasando diferentes funciones al segundo argumento:
 
 ```js
 element.addEventListener("click", function1);
 element.addEventListener("click", function2);
 ```
 
-This is impossible with event handler properties because any subsequent attempts to set the property will overwrite earlier ones:
+Esto es imposible de lograr con propiedades para manejar eventos debido a que cualquier intento subsecuente para establecer dicha propiedad, habrá sobreescrito las anteriores asignaciones.
 
 ```js
 element.onclick = function1;
 element.onclick = function2;
 ```
 
-### Inline event handlers — don't use these
+### Manejadores de eventos en línea: No los utilices
 
-You might also see a pattern like this in your code:
+Quizá hayas visto un patrón como este en tu código:
 
 ```html
-<button onclick="bgChange()">Press me</button>
+<button onclick="bgChange()">Haz click</button>
 ```
 
 ```js
@@ -263,23 +267,23 @@ function bgChange() {
 }
 ```
 
-The earliest method of registering event handlers found on the Web involved [_event handler HTML attributes_](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) (or _inline event handlers_) like the one shown above — the attribute value is literally the JavaScript code you want to run when the event occurs.
-The above example invokes a function defined inside a {{htmlelement("script")}} element on the same page, but you could also insert JavaScript directly inside the attribute, for example:
+El primer método para el registro de manejadores de eventos en la Web, utilizaba [_atributos HTML para manejar eventos_](/es/docs/Web/HTML/Attributes#event_handler_attributes) (o _manejadores de eventos en línea_) como el que se mostró anteriormente. El valor del atributo es literalmente el código JavaScript que quieres ejecutar cuando el evento ocurra.
+El ejemplo anterior invoca a la función definida dentro de un elemento {{htmlelement("script")}} en la misma página, pero también pueden insertar JavaScript directamente en el atributo, por ejemplo:
 
 ```html
-<button onclick="alert('Hello, this is my old-fashioned event handler!');">
-  Press me
+<button onclick="alert('¡Hola, este es un manejador de eventos anticuado!');">
+  Haz click
 </button>
 ```
 
-You can find HTML attribute equivalents for many of the event handler properties; however, you shouldn't use these — they are considered bad practice.
-It might seem easy to use an event handler attribute if you are doing something really quick, but they quickly become unmanageable and inefficient.
+Puedes encontrar atributos HTML equivalentes para varias de las propiedades para manejar eventos. Sin embargo, no deberías utilizarlos, ya que se consideran una mala práctica.
+Puede parecer fácil utilizar un atributo para manejar un evento si estás haciendo sencillo de forma rápida, pero más adelante se puede volver ineficiente e imposible de manejar.
 
-For a start, it is not a good idea to mix up your HTML and your JavaScript, as it becomes hard to read. Keeping your JavaScript separate is a good practice, and if it is in a separate file you can apply it to multiple HTML documents.
+Para empezar, no es buena idea mezclar tu código HTML y JavaScript, ya que se vuelve difícil de leer. Mantener tu código JavaScript por separado es una buena práctica, además de que si se encuentra en un archivo separado, puedes aplicarlo a distintos documentos HTML.
 
-Even in a single file, inline event handlers are not a good idea.
-One button is OK, but what if you had 100 buttons? You'd have to add 100 attributes to the file; it would quickly turn into a maintenance nightmare.
-With JavaScript, you could easily add an event handler function to all the buttons on the page no matter how many there were, using something like this:
+Incluso en un solo archivo, los manejadores de eventos en línea no son una buena idea.
+Un botón está bien, pero ¿qué tal si tuvieras 100 botones? Tendrías que agregar 100 atributos a ese archivo; de inmediato se convertiría en una pesadilla para mantener.
+Con JavaScript, fácilmente puedes agregar una función para manejar eventos en todos los botones de la página sin importar cuántos de ellos haya, usando algo como esto:
 
 ```js
 const buttons = document.querySelectorAll("button");
@@ -289,9 +293,9 @@ for (const button of buttons) {
 }
 ```
 
-Finally, many common server configurations will disallow inline JavaScript, as a security measure.
+Finalmente, varias configuraciones comunes en servidores desactivan el código JavaScript en línea, como parte de una medida de seguridad.
 
-**You should never use the HTML event handler attributes** — those are outdated, and using them is bad practice.
+**Nunca deberías utilizar atributos HTML para manejar eventos** — Estos están obsoletos y utilizarlos es mala práctica.
 
 ## Event objects
 
