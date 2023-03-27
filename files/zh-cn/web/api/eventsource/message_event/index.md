@@ -1,5 +1,5 @@
 ---
-title: "EventSource：message 事件"
+title: "EventSource.onmessage"
 slug: Web/API/EventSource/message_event
 page-type: web-api-event
 browser-compat: api.EventSource.message_event
