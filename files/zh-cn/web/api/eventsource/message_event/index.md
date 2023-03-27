@@ -14,7 +14,6 @@ browser-compat: api.EventSource.message_event
 ## 语法
 
 在如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
 addEventListener("message", (event) => {});
@@ -80,6 +79,6 @@ evtSource.onmessage = (e) => {
 
 ## 参见
 
-- [使用 Server-sent events](/zh-CN/Server-sent_events/Using_server-sent_events)
+- [使用 Server-sent events](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)
 - [`open`](/zh-CN/docs/Web/API/EventSource/open_event)
 - [`error`](/zh-CN/docs/Web/API/EventSource/error_event)
