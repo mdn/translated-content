@@ -29,22 +29,22 @@ hyphens: unset;
 ### 值
 
 - `none`
-  - : 换行时单词不会被打断，甚至在单词内的字符建议有换行点时。行只会在空白符处换行。
+  - : 即便单词内有建议换行点也不会在那里换行。只会在空白符处换行。
 - `manual`
-  - : Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See [Suggesting line break opportunities](#suggesting_line_break_opportunities) for details.
+  - : 只有当单词内存在建议换行点时，才会在该位置断开单词并使用连字符换行。查看 [建议换行点](#suggesting_line_break_opportunities) 了解详情。
 - `auto`
   - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in [Suggesting line break opportunities](#suggesting_line_break_opportunities), should be preferred over automatically selecting break points whenever possible.
 
-> **备注：** The `auto` setting's behavior depends on the language being properly tagged so that the appropriate hyphenation rules can be selected. You must specify a language using the `lang` HTML attribute in order to guarantee that automatic hyphenation is applied in the language of your choice.
+> **备注：** “auto” 的行为取决于语言是否被正确地设置，以便可以选择适当的断词规则。您必须使用HTML属性 “lang” 指定语言，以确保自动断词在您选择的语言中得到应用。
 
-## Suggesting line break opportunities
+## 建议换行点
 
-There are two Unicode characters that can be used to manually specify potential line break points within text:
+有两个Unicode字符可以用于在文本中手动指定可能的换行点：
 
 - U+2010 (HYPHEN)
-  - : The "hard" hyphen character indicates a visible line break opportunity. Even if the line is not actually broken at that point, the hyphen is still rendered.
+  - : ”硬连字符“表示一个可见的换行点。即使在指定的位置没有真正换行，连字符仍然会显示出来。
 - U+00AD (SHY)
-  - : An invisible, "soft" hyphen. This character is not rendered visibly; instead, it suggests a place where the browser might choose to break the word if necessary. In HTML, you can use `&shy;` to insert a soft hyphen.
+  - : 一个不可见的 “软” 连字符。此字符不会在屏幕上显示出来，而是表示在必要时浏览器可能会在该位置断开单词并出现连字符。在HTML中，可以使用 `&shy;` 来插入软连字符。
 
 ### 形式语法
 
@@ -72,7 +72,7 @@ There are two Unicode characters that can be used to manually specify potential 
 p {
   width: 55px;
   border: 1px solid black;
- }
+}
 p.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;
