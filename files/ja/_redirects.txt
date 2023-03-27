@@ -806,7 +806,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -2438,7 +2438,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
-/ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/JavaScript/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/JavaScript/Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/JavaScript/Reference/Global_Objects/String/anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -2491,7 +2491,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/JavaScript/Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /ja/docs/JavaScript/Reference/Global_Objects/SyntaxError	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/JavaScript/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
@@ -5395,7 +5395,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/dummySlug/Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /ja/docs/dummySlug/Reference/Global_Objects/SyntaxError	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/dummySlug/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
