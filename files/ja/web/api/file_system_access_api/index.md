@@ -150,7 +150,7 @@ async function returnPathDirectories(directoryHandle) {
 
 以下の非同期関数は保存用のファイルピッカーを開き、これはファイルが選択されると {{domxref('FileSystemFileHandle')}} を返します。その後、{{domxref('FileSystemFileHandle.createWritable()')}} メソッドにより書き込み可能なストリームを生成します。
 
-そして、ユーザー定義の {{domxref('Blob')}}  をストリームに書き込み、続いてストリームを閉じます。
+そして、ユーザー定義の {{domxref('Blob')}} をストリームに書き込み、続いてストリームを閉じます。
 
 ```js
 async function saveFile() {
