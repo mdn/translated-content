@@ -19,23 +19,6 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## 생성자
-
-[DOM 인터페이스](/ko/docs/Web/API/Document_Object_Model)도 참고하세요.
-
-- {{domxref("DOMParser")}}
-  - : `DOMParser`는 문자열에 저장한 XML 또는 HTML 소스 코드를 DOM {{domxref("Document")}}로 구문 분석할 수 있습니다. `DOMParser`는 [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/) 명세의 일부입니다.
-- {{domxref("Image")}}
-  - : {{domxref("HTMLImageElement")}}를 생성할 때 사용합니다.
-- {{domxref("Option")}}
-  - : {{domxref("HTMLOptionElement")}}를 생성할 때 사용합니다.
-- {{domxref("Window.StaticRange")}} {{experimental_inline}} {{readonlyinline}}
-  - : {{domxref('StaticRange')}} 객체를 생성하는 {{domxref('StaticRange.StaticRange','StaticRange()')}} 생성자를 반환합니다.
-- {{domxref("Worker")}}
-  - : [Web Worker](/ko/docs/Web/API/Web_Workers_API/Using_web_workers) 생성에 사용합니다.
-- {{domxref("Window.XMLSerializer")}}
-  - : DOM 트리를 XML 또는 HTML 소스로 변환합니다.
-
 ## 인스턴스 속성
 
 {{domxref("EventTarget")}} 인터페이스의 속성을 상속합니다.
