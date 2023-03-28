@@ -11,8 +11,6 @@ slug: Web/CSS/hyphens
 
 > **备注：** 在规范中，没有明确定义连字符的实现规则，所以具体的连字符在不同浏览器中可能有所区别。
 
-{{cssinfo}}
-
 ## 语法
 
 ```css
@@ -35,16 +33,20 @@ hyphens: unset;
 - `auto`
   - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in [Suggesting line break opportunities](#suggesting_line_break_opportunities), should be preferred over automatically selecting break points whenever possible.
 
-> **备注：** `auto` 的行为取决于语言是否被正确地设置，以便可以选择适当的断词规则。您必须使用HTML属性 `lang` 指定语言，以确保自动断词在您选择的语言中得到应用。
+> **备注：** `auto` 的行为取决于语言是否被正确地设置，以便可以选择适当的断词规则。你必须使用 HTML 属性 `lang` 指定语言，以确保自动断词在你选择的语言中得到应用。
 
 ## 建议换行点
 
 有两个 Unicode 字符可以用于在文本中手动指定可能的换行点：
 
-- U+2010 (HYPHEN)
-  - : ”硬连字符“表示一个可见的换行点。即使在指定的位置没有真正换行，连字符仍然会显示出来。
-- U+00AD (SHY)
+- U+2010（HYPHEN）
+  - : “硬”连字符表示一个可见的换行点。即使在指定的位置没有真正换行，连字符仍然会显示出来。
+- U+00AD（SHY）
   - : 一个不可见的“软”连字符。此字符不会在屏幕上显示出来，而是表示在必要时浏览器可能会在该位置断开单词并出现连字符。在 HTML 中，可以使用 `&shy;` 来插入软连字符。
+
+## 形式定义
+
+{{cssinfo}}
 
 ### 形式语法
 
@@ -52,45 +54,38 @@ hyphens: unset;
 
 ## 示例
 
-以下代码段展示了`hyphens`属性取 none/manual/auto 这三类值的效果。
+以下代码段展示了 `hyphens` 属性取 none/manual/auto 这三类值的效果。
 
 ```html
-<ul>
-  <li><code>none</code>: no hyphen; overflow if needed
-    <p lang="en" class="none">An extreme&shy;ly long English word</p>
-  </li>
-  <li><code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
-    <p lang="en" class="manual">An extreme&shy;ly long English word</p>
-  </li>
-  <li><code>auto</code>: hyphen where the algo is deciding (if needed)
-    <p lang="en" class="auto">An extreme&shy;ly long English word</p>
-  </li>
-</ul>
+<dl>
+  <dt><code>none</code>: no hyphen; overflow if needed</dt>
+  <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
+  <dt>
+    <code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
+  </dt>
+  <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
+  <dt><code>auto</code>: hyphens where the algorithm decides (if needed)</dt>
+  <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
+</dl>
 ```
 
 ```css
-p {
+dd {
   width: 55px;
   border: 1px solid black;
 }
-p.none {
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
+dd.none {
   hyphens: none;
 }
-p.manual {
-  -webkit-hyphens: manual;
-  -ms-hyphens: manual;
+dd.manual {
   hyphens: manual;
 }
-p.auto {
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
+dd.auto {
   hyphens: auto;
 }
 ```
 
-{{EmbedLiveSample("示例", "100%", "470'")}}
+{{EmbedLiveSample("示例", "100%", 490)}}
 
 ## 规范
 
