@@ -2,7 +2,7 @@
 title: "HTMLElement: change 이벤트"
 slug: Web/API/HTMLElement/change_event
 l10n:
-  sourceCommit: 4a4dc12d552b6da5fc320369001434cdb46f9f59
+  sourceCommit: 0230ecc4418a1e52bca6b4d03c4eb794f90d04f1
 ---
 
 {{APIRef}}
