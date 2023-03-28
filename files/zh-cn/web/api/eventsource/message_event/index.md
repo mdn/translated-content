@@ -36,7 +36,7 @@ _本接口也继承了父接口 {{domxref("Event")}} 的属性。_
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : 一个字符串，表示事件的唯一 ID。
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : 一个 `MessageEventSource`（可以是一个 {{glossary("WindowProxy")}}，{{domxref("MessagePort")}}，或者 {{domxref("ServiceWorker")}} 对象），表示事件发射器。
+  - : 一个 `MessageEventSource`（可以是一个 {{glossary("WindowProxy")}}、{{domxref("MessagePort")}} 或 {{domxref("ServiceWorker")}} 对象），表示事件发射器。
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : 一个 {{domxref("MessagePort")}} 对象的数组，表示与正在发送消息的通道相关联的端口（如果适用，例如在传递通道消息，或者向共享的 worker 发送消息时）。
 
