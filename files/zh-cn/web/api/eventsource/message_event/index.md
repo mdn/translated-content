@@ -21,7 +21,7 @@ onmessage = (event) => {};
 
 ## 事件类型
 
-一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。
+_一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。_
 
 {{InheritanceDiagram("MessageEvent")}}
 
