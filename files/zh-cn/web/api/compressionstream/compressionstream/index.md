@@ -17,7 +17,7 @@ new CompressionStream(format)
 
 - `format`
 
-  - : 以下允许的压缩格式之一
+  - : 以下允许的压缩格式之一：
 
     - `"gzip"`
     - `"deflate"`
