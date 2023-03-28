@@ -21,7 +21,7 @@ Nesta lição, vamos analisar alguns dos seletores simples, o qual provavelmente
         >, HTML básico (estude
         <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
-        >), e uma ideia de como o CSS funciona  (estude
+        >), e uma ideia de como o CSS funciona (estude
         <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS primeiros passos</a>.)
       </td>
     </tr>
