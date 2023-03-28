@@ -64,7 +64,7 @@ button.setAttribute("name", "helloButton");
 button.setAttribute("disabled", "");
 ```
 
-{{ EmbedLiveSample('Examples', '300', '50') }}
+{{ EmbedLiveSample('예제', '300', '50') }}
 
 이 예제는 다음 두 가지를 보여줍니다.
 
