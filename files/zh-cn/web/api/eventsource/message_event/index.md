@@ -27,7 +27,7 @@ _一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。_
 
 ## 事件属性
 
-_本接口也继承了父接口 {{domxref("Event")}} 的属性_
+_本接口也继承了父接口 {{domxref("Event")}} 的属性。_
 
 - {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : 消息发射器发出的数据。
