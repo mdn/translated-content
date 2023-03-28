@@ -77,6 +77,6 @@ evtSource.onmessage = (e) => {
 
 ## 参见
 
-- [使用 Server-sent events](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [使用 Server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)
 - [`open`](/zh-CN/docs/Web/API/EventSource/open_event)
 - [`error`](/zh-CN/docs/Web/API/EventSource/error_event)
