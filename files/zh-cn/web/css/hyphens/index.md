@@ -35,7 +35,7 @@ hyphens: unset;
 - `auto`
   - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in [Suggesting line break opportunities](#suggesting_line_break_opportunities), should be preferred over automatically selecting break points whenever possible.
 
-> **备注：** “auto” 的行为取决于语言是否被正确地设置，以便可以选择适当的断词规则。您必须使用HTML属性 “lang” 指定语言，以确保自动断词在您选择的语言中得到应用。
+> **备注：** `auto` 的行为取决于语言是否被正确地设置，以便可以选择适当的断词规则。您必须使用HTML属性 `lang` 指定语言，以确保自动断词在您选择的语言中得到应用。
 
 ## 建议换行点
 
