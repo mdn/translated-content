@@ -5,7 +5,7 @@ slug: Web/API/CompressionStream
 
 {{APIRef("Compression Streams API")}}
 
-{{domxref('Compression Stream API','','',' ')}} 的 **`CompressionStream`** 接口是一个用于压缩数据流的 API。
+{{domxref('Compression Streams API', '', '', 1)}} 的 **`CompressionStream`** 接口是一个用于压缩数据流的 API。
 
 ## 构造函数
 
