@@ -5,9 +5,7 @@ slug: Web/API/EventSource/message_event
 
 {{APIRef}}
 
-{{domxref("EventSource")}} API 的 `message` 事件，会在 EventSource 实例收到数据时触发。
-
-此事件不能取消，也不会冒泡。
+{{domxref("EventSource")}} API 的 `message` 事件，会在 EventSource 实例收到数据时触发。此事件不能取消，也不会冒泡。
 
 ## 语法
 
