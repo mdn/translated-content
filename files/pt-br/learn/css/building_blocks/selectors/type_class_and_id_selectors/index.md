@@ -38,7 +38,7 @@ Nesta lição, vamos analisar alguns dos seletores simples, o qual provavelmente
 
 Os **seletores de tipo** podem ser chamados de _seletor de tag_ ou _seletor de elemento_, porque o mesmo seleciona uma tag/elemento HTML no seu documento. No exemplo abaixo, nós usamos os seletores de tipo para selecionar as tag/elemento `span`, `em` e `strong`.
 
-**Tente adicionar uma regra CSS para selecionar a tag/elemento `<h1>`  e mudar sua cor para azul.**
+**Tente adicionar uma regra CSS para selecionar a tag/elemento `<h1>` e mudar sua cor para azul.**
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/type.html", '100%', 1100)}}
 
