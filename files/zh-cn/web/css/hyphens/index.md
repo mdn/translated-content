@@ -31,7 +31,7 @@ hyphens: unset;
 - `none`
   - : 即便单词内有建议换行点也不会在那里换行。只会在空白符处换行。
 - `manual`
-  - : 只有当单词内存在建议换行点时，才会在该位置断开单词并使用连字符换行。查看 [建议换行点](#suggesting_line_break_opportunities) 了解详情。
+  - : 只有当单词内存在建议换行点时，才会在该位置断开单词并使用连字符换行。查看[建议换行点](#建议换行点)了解详情。
 - `auto`
   - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in [Suggesting line break opportunities](#suggesting_line_break_opportunities), should be preferred over automatically selecting break points whenever possible.
 
