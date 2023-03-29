@@ -33,7 +33,7 @@ oninput = (event) => {};
 
 ## 예제
 
-이 예제에서는 {{htmlelement("input")}} 요소의 값을 바꿀 때마다 그걸 기록합니다.
+이 예제에서는 {{htmlelement("input")}} 요소의 값을 바꿀 때마다 기록을 남깁니다.
 
 ### HTML
 
