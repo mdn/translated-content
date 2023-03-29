@@ -2,7 +2,7 @@
 title: 'HTMLElement: input 이벤트'
 slug: Web/API/HTMLElement/input_event
 l10n:
-  sourceCommit: 76c7e0502bb6bfa765946c32562fdc93e8456e19
+  sourceCommit: 0230ecc4418a1e52bca6b4d03c4eb794f90d04f1
 ---
 
 {{APIRef}}
