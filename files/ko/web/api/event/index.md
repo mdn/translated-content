@@ -2,7 +2,7 @@
 title: Event
 slug: Web/API/Event
 l10n:
-  sourceCommit: a4801f2e01333fffdb1827e2cab24e6915441814
+  sourceCommit: abf155210d826c2584d23433eb2eac45a6669d23
 ---
 
 {{APIRef("DOM")}}
