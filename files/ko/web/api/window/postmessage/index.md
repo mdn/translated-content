@@ -9,7 +9,7 @@ slug: Web/API/Window/postMessage
 
 일반적으로, 다른 페이지 간의 스크립트는 각 페이지가 같은 프로토콜, 포트 번호와 호스트을 공유하고 있을 때에("[동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)"으로도 불려 집니다.) 서로 접근할 수 있습니다. **`window.postMessage()`** 는 이 제약 조건을 안전하게 우회하는 기능을 제공합니다.
 
-대체로, 한 window는 다른 window를 참조할 수 있고(_예시,_ `targetWindow = window.opener`), `targetWindow.postMessage()`를 통해 다른 window에 {{domxref("MessageEvent")}}를 전송할 수 있습니다. 이벤트를 받는 window는 이를 통해 필요에 따라 [이벤트를 처리](/ko/docs/Web/Guide/Events)할 수 있습니다. **`window.postMessage()`**를 통해 전달된 인자(예시, "message")는 [이벤트 객체를 통해 이벤트를 받는 window에서 사용](#The_dispatched_event)할 수 있습니다.
+대체로, 한 window는 다른 window를 참조할 수 있고(_예시,_ `targetWindow = window.opener`), `targetWindow.postMessage()`를 통해 다른 window에 {{domxref("MessageEvent")}}를 전송할 수 있습니다. 이벤트를 받는 window는 이를 통해 필요에 따라 [이벤트를 처리](/ko/docs/Web/Guide/Events)할 수 있습니다. **`window.postMessage()`** 를 통해 전달된 인자(예시, "message")는 [이벤트 객체를 통해 이벤트를 받는 window에서 사용](#The_dispatched_event)할 수 있습니다.
 
 ## 문법
 
