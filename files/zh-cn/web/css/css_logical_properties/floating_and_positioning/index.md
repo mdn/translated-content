@@ -1,74 +1,71 @@
 ---
-title: 浮动和定位的逻辑属性
+title: 用于浮动和定位的逻辑属性
 slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-original_slug: Web/CSS/CSS_Logical_Properties/浮动和定位
 ---
 
 {{CSSRef}}
 
-[逻辑属性和值指南](https://drafts.csswg.org/css-logical/) 包含了 {{cssxref("float")}} 和{{cssxref("clear")}}逻辑属性到物理属性的映射，以及与定位布局一起使用的[定位属性](/zh-CN/docs/Web/CSS/CSS_Positioning). 通过本文，我们来看看如何使用它们。
+[逻辑属性与逻辑值规范](https://drafts.csswg.org/css-logical/)包含了 {{CSSXref("float")}} 和 {{CSSXref("clear")}} 的实体值的逻辑对应关系，以及用于[定位布局](/zh-CN/docs/Web/CSS/CSS_Positioning)的定位属性的逻辑对应关系。本指南介绍如何使用这些对应关系。
 
-## Mapped properties and values
+## 属性的和值的对应关系
 
-The table below details the properties and values discussed in this guide along with their physical mappings. They assume a horizontal {{cssxref("writing-mode")}}, with a left-to-right direction.
+下表详列了本指南所论述的属性和值，以及其实体对应关系。假设书写模式（{{CSSXref("writing-mode")}}）为横排，行内方向为从左到右。
 
-| Logical property or value                    | Physical property or value              |
-| -------------------------------------------- | --------------------------------------- |
-| {{cssxref("float")}}: inline-start   | {{cssxref("float")}}: left      |
-| {{cssxref("float")}}: inline-end     | {{cssxref("float")}}: right     |
-| {{cssxref("clear")}}: inline-start   | {{cssxref("clear")}}: left      |
-| {{cssxref("clear")}}: inline-end     | {{cssxref("clear")}}: right     |
-| {{cssxref("inset-inline-start")}} | {{cssxref("left")}}                |
-| {{cssxref("inset-inline-end")}}     | {{cssxref("right")}}            |
-| {{cssxref("inset-block-start")}} | {{cssxref("top")}}                |
-| {{cssxref("inset-block-end")}}     | {{cssxref("bottom")}}            |
-| {{cssxref("text-align")}}: start      | {{cssxref("text-align")}}: left  |
-| {{cssxref("text-align")}}: end        | {{cssxref("text-align")}}: right |
+| 逻辑属性或逻辑值 | 实体属性或实体值 |
+| ---------------------------------- | -------------------------------- |
+| {{CSSXref("float")}}: inline-start | {{CSSXref("float")}}: left       |
+| {{CSSXref("float")}}: inline-end   | {{CSSXref("float")}}: right      |
+| {{CSSXref("clear")}}: inline-start | {{CSSXref("clear")}}: left       |
+| {{CSSXref("clear")}}: inline-end   | {{CSSXref("clear")}}: right      |
+| {{CSSXref("inset-inline-start")}}  | {{CSSXref("left")}}              |
+| {{CSSXref("inset-inline-end")}}    | {{CSSXref("right")}}             |
+| {{CSSXref("inset-block-start")}}   | {{CSSXref("top")}}               |
+| {{CSSXref("inset-block-end")}}     | {{CSSXref("bottom")}}            |
+| {{CSSXref("text-align")}}: start   | {{CSSXref("text-align")}}: left  |
+| {{CSSXref("text-align")}}: end     | {{CSSXref("text-align")}}: right |
 
-In addition to these mapped properties there are some additional shorthand properties made possible by being able to address block and inline dimensions. These have no mapping to physical properties, aside from the {{cssxref("inset")}} property.
+除了这些有对应关系的属性，另有可以处理块向和行向尺度的简写属性。除 {{CSSXref("inset")}} 属性外，这些属性没有与实体属性的对应关系。
 
-| Logical property                     | Purpose                                                                         |
-| ------------------------------------ | ------------------------------------------------------------------------------- |
-| {{cssxref("inset-inline")}} | Sets both of the above inset values for the inline dimension simultaneously.    |
-| {{cssxref("inset-block")}} | Sets both of the above inset values for the block dimension simultaneously.     |
-| {{cssxref("inset")}}         | Sets all four inset values simultaneously with physical mapping of multi-value. |
+| 逻辑属性 | 用途 |
+| --------------------------- | - |
+| {{CSSXref("inset-inline")}} | 为行向尺度同时设置上述两个偏移值。 |
+| {{CSSXref("inset-block")}}  | 为块向尺度同时设置上述两个偏移值。 |
+| {{CSSXref("inset")}}        | 同时设置四个偏移值，多值语法使用实体对应关系。 |
 
-## Float and clear example
+## 浮动和清除浮动的示例
 
-The physical values used with the {{cssxref("float")}} and {{cssxref("clear")}} properties are `left`, `right` and `both`. The Logical Properties specification defines the values `inline-start` and `inline-end` as mappings for `left` and `right`.
+{{CSSXref("float")}} 和 {{CSSXref("clear")}} 属性所用的实体值为 `left`、`right` 和 `both`。逻辑属性规范定义 `inline-start` 和 `inline-end` 值对应于 `left` 和 `right`。
 
-In the example below I have two boxes — the first has the box floated with `float: left`, the second with `float: inline-start`. If you change the `writing-mode` to `vertical-rl` or the `direction` to `rtl` you will see that the left-floated box always sticks to the left, whereas the `inline-start`-floated item follows the `direction` and `writing-mode`.
+在下面的例子里，我有两个盒子——第一个用 `float: left` 设置了浮动，第二个用了 `float: inline-start`。如果把 `writing-mode` 改成 `vertical-rl` 或者把 `direction` 改成 `rtl`，你会看到浮动到左侧的盒子总是贴在左侧，而浮动到 `inline-start` 的元素随着 `direction` 和 `writing-mode` 变动。
 
-{{EmbedGHLiveSample("css-examples/logical/float.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/logical/float.html", "100%", 700)}}
 
-## Example: Inset properties for positioned layout
+## 示例：定位布局的偏移属性
 
-Positioning generally allows us to position an element in a manner relative to its containing block — we essentially inset the item relative to where it would fall based on normal flow. To do this we have historically used the physical properties {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}.
+定位通常可以让我们相对于元素的包含块放置元素——我们就是参照元素在正常流里的位置给元素设置偏移。过去我们用实体属性 {{CSSXref("top")}}、{{CSSXref("right")}}、{{CSSXref("bottom")}} 和 {{CSSXref("left")}} 做这件事。
 
-These properties take a length or a percentage as a value, and relate to the user's screen dimensions.
+这些属性的取值是长度或百分比，而且参照的是用户屏幕的尺度。
 
-New properties have been created in the Logical Properties specification for when you want the positioning to relate to the flow of text in your writing mode. These are as follows: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}} and {{cssxref("inset-inline-end")}}.
+逻辑属性规范创造了新的属性，你可以用来在你的书写模式里参照文本的流向定位。这些属性有：{{CSSXref("inset-block-start")}}、{{CSSXref("inset-block-end")}}、{{CSSXref("inset-inline-start")}} 和 {{CSSXref("inset-inline-end")}}。
 
-In the below example I have used the `inset-block-start` and `inset-inline-end` properties to position the blue box using absolute positioning inside the area with the grey dotted border, which has `position: relative`. Change the `writing-mode` property to `vertical-rl`, or add `direction: rtl`, and see how the flow relative box stays with the text direction.
+在下面的例子里，带灰色点状边框的区域设置了 `position: relative`。为了在这个区域里用绝对定位放置蓝色盒子，我用了 `inset-block-start` 和 `inset-inline-end` 属性。把 `writing-mode` 属性改成 `vertical-rl`，或者加上 `direction: rtl`，看看相对于流的盒子是怎么根据文本方向保持位置的。
 
-{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", "100%", 700)}}
 
-## New two- and four-value shorthands
+## 新的两值和四值简写属性
 
-As with other properties in the specification we have some new shorthand properties, which give the ability to set two or four values at once.
+和规范里的其他属性一样，我们也有新的简写属性可以同时设置两个或者四个值。
 
-- {{cssxref("inset")}} — sets all four sides together with physical mapping.
-- {{cssxref("inset-inline")}} — sets both logical inline insets.
-- {{cssxref("inset-block")}} — sets both logical block insets.
+- {{CSSXref("inset")}}——使用实体对应关系同时设置四边。
+- {{CSSXref("inset-inline")}}——设置两个逻辑行向偏移。
+- {{CSSXref("inset-block")}}——设置两个逻辑块向偏移。
 
-> **备注：** The browsers that have implemented the Logical Properties specification have so far implemented the direct mappings and not the new shorthands. Look to the browser compatibility data section on each property page reference for more details.
+## 示例：text-align 的逻辑值
 
-## Example: Logical values for text-align
+{{CSSXref("text-align")}} 属性有参照文本方向的逻辑值——我们可以不用 `left` 和 `right` 而用 `start` 和 `end`。在下面的例子里，我在第一个块里设置了 `text-align: right`，在第二个里设置了 `text-align: end`。
 
-The {{cssxref("text-align")}} property has logical values that relate to text direction — rather than using `left` and `right` we can use `start` and `end`. In the below example I have set `text-align: right` in the first block and `text-align: end` in the second.
+如果把 `direction` 改成 `rtl`，你会看到第一个块还是右对齐的，但是第二个跑到了在左边的逻辑行末。
 
-If you change the value of `direction` to `rtl` you will see that the alignment stays to the right for the first block, but goes to the logical end on the left in the second.
+{{EmbedGHLiveSample("css-examples/logical/text-align.html", "100%", 700)}}
 
-{{EmbedGHLiveSample("css-examples/logical/text-align.html", '100%', 700)}}
-
-This works in a more consistent way when using box alignment that uses start and end rather than physical directions for alignment.
+相比用实体方向对齐，在使用盒对齐的时候用首和末得到的效果更一致。
