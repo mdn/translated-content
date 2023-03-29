@@ -1,5 +1,5 @@
 ---
-title: XML_介绍
+title: XML 简介
 slug: Web/XML/XML_introduction
 ---
 
