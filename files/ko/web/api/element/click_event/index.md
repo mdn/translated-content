@@ -2,7 +2,7 @@
 title: "Element: click 이벤트"
 slug: Web/API/Element/click_event
 l10n:
-  sourceCommit: 4a4dc12d552b6da5fc320369001434cdb46f9f59
+  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
 ---
 
 {{APIRef}}

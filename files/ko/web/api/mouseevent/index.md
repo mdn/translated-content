@@ -2,7 +2,7 @@
 title: MouseEvent
 slug: Web/API/MouseEvent
 l10n:
-  sourceCommit: 4a4dc12d552b6da5fc320369001434cdb46f9f59
+  sourceCommit: 0d8d3980dc8b8267b60e899c41a76a2832556cbc
 ---
 
 {{APIRef("UI Events")}}
