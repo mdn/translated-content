@@ -1,8 +1,6 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
-l10n:
-  sourceCommit: 5272602a89c279c42e18a0ab3434396fd33808f8
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 ---
 
 {{JSRef}} {{non-standard_header}}

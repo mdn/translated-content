@@ -25071,10 +25071,6 @@
     "modified": "2020-10-30T10:43:18.108Z",
     "contributors": ["mfuji09"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/Stack": {
-    "modified": "2020-10-30T10:57:02.136Z",
-    "contributors": ["mfuji09", "yumetodo", "teoli", "Marsf", "shide55"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/columnNumber": {
     "modified": "2020-10-30T11:16:32.062Z",
     "contributors": ["mfuji09", "yumetodo", "teoli", "Marsf", "shide55"]
@@ -25094,6 +25090,10 @@
   "Web/JavaScript/Reference/Global_Objects/Error/name": {
     "modified": "2020-10-30T11:22:27.061Z",
     "contributors": ["mfuji09", "segayuu", "Marsf", "shide55"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Error/stack": {
+    "modified": "2020-10-30T10:57:02.136Z",
+    "contributors": ["mfuji09", "yumetodo", "teoli", "Marsf", "shide55"]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
     "modified": "2020-10-15T21:35:37.653Z",
@@ -27052,19 +27052,6 @@
     "modified": "2020-11-27T11:32:09.247Z",
     "contributors": ["mfuji09"]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2020-10-28T13:27:56.174Z",
-    "contributors": [
-      "mpcjazz",
-      "ciffelia",
-      "segayuu",
-      "YuichiNukiyama",
-      "teoli",
-      "ethertank",
-      "Potappo",
-      "Yuki Konno"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2020-11-27T10:17:53.705Z",
     "contributors": [
@@ -27519,6 +27506,19 @@
       "ethertank",
       "Mgjbot",
       "Potappo"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2020-10-28T13:27:56.174Z",
+    "contributors": [
+      "mpcjazz",
+      "ciffelia",
+      "segayuu",
+      "YuichiNukiyama",
+      "teoli",
+      "ethertank",
+      "Potappo",
+      "Yuki Konno"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/String/trimEnd": {

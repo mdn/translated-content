@@ -1,5 +1,5 @@
 ---
-title: 自定义属性 (--*)：CSS 变量
+title: 自定义属性（--*）：CSS 变量
 slug: Web/CSS/--*
 ---
 
@@ -29,10 +29,10 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 ### HTML
 
 ```html
-<p id="firstParagraph">This paragraph should have a blue background and yellow text.</p>
-<p id="secondParagraph">This paragraph should have a yellow background and blue text.</p>
+<p id="firstParagraph">此段落应有蓝色背景和黄色文本。</p>
+<p id="secondParagraph">此段落应有黄色背景和蓝色文本。</p>
 <div id="container">
-  <p id="thirdParagraph">This paragraph should have a green background and yellow text.</p>
+  <p id="thirdParagraph">此段落应有绿色背景和黄色文本。</p>
 </div>
 ```
 
@@ -78,5 +78,5 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 
 ## 参见
 
-- [使用 CSS 自定义属性（变量）](/zh-CN/docs/Web/CSS/Using_CSS_variables)
+- [使用 CSS 变量](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
 - {{CSSXref("var", "var()")}} 函数
