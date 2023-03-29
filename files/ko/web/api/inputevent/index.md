@@ -21,13 +21,13 @@ l10n:
 {{domxref("UIEvent")}}와 {{domxref("Event")}} 인터페이스의 속성을 상속합니다.
 
 - {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
-  - : 삽입한 문자들로 구성된 문자열을 반환합니다. 텍스트 삭제처럼 문자를 삽입하는 게 아닌 변경에서는 빈 문자열입니다.
+  - : 삽입한 문자들로 구성된 문자열을 반환합니다. 문자를 삭제하는 등, 텍스트를 삽입하지 않는 변경 사항에서는 빈 문자열일 수 있습니다.
 - {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
   - : 편집 가능한 콘텐츠에 추가나 제거 중인 서식 텍스트 또는 평문 데이터의 정보가 포함된 {{DOMxRef("DataTransfer")}} 객체를 반환합니다.
 - {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
-  - : 편집 가능한 콘텐츠의 변경 유형을 반환합니다. 가능한 유형 목록은 [Input Events Level 1 명세의 Attributes](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes)에서 확인하세요.
+  - : 편집 가능한 콘텐츠의 변경 유형을 반환합니다. 속성 문서에서 가능한 유형의 목록을 확인할 수 있습니다.
 - {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
-  - : 이 이벤트가 {{domxref("Element/compositionstart_event", "compositionstart")}} 이후, {{domxref("Element/compositionend_event", "compositionend")}} 이전에 발생했는지 나타내는 {{jsxref("Boolean")}}입니다.
+  - : 이 이벤트가 {{domxref("Element/compositionstart_event", "compositionstart")}} 이후, {{domxref("Element/compositionend_event", "compositionend")}} 이전에 발생했는지 나타내는 {{jsxref("Boolean")}}을 반환합니다.
 
 ## 인스턴스 메서드
 
