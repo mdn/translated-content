@@ -23,9 +23,9 @@ XML——声明并非是一种标签，其用来传播文档的元数据。
 
 #### 属性
 
-- 版本：
+- `version`
   - : 当前文档使用的版本。
-- 编码：
+- `encoding`
   - : 当前文档使用的编码。
 
 ### 注释
@@ -34,7 +34,7 @@ XML——声明并非是一种标签，其用来传播文档的元数据。
 <!-- Comment -->
 ```
 
-## “标准的” XML（有效且格式良好）
+## “标准的”XML（有效且格式良好）
 
 ### 设计规则的标准
 
@@ -42,7 +42,7 @@ XML——声明并非是一种标签，其用来传播文档的元数据。
 
 - 文档必须是一个格式良好的文档。
 - 文档遵循 XML 所有的语法规则并且有效。
-- 文档遵循特定语义的规则，这些规则通常规定在 XML 或 DTD 规范中（[**文档类型定义**](/zh-CN/docs/Glossary/DTD)）。
+- 文档遵循特定语义的规则，这些规则通常规定在 XML 或 DTD 规范中（[**文档类型定义**](/zh-CN/docs/Glossary/Doctype)）。
 
 ### 示例
 
@@ -74,11 +74,11 @@ XML——声明并非是一种标签，其用来传播文档的元数据。
 
 像 HTML 一样，XML 为一些特别预留的符号定义了一些方法，称为实体（entities），例如用于标记的大于号。下面是五个你必须知道的符号：
 
-| 实体       | 符号 | 描述       |
-| ---------- | ---- | ---------- |
+| 实体       | 符号  | 描述      |
+| ---------- | ---- | -------- |
 | &amp;lt;   | <    | 小于符号   |
 | &amp;gt;   | >    | 大于符号   |
-| &amp;amp;  | &    | 和         |
+| &amp;amp;  | &    | 和        |
 | &amp;quot; | "    | 一个双引号 |
 | &amp;apos; | '    | 一个单引号 |
 
@@ -108,7 +108,7 @@ XML 通常被用作描述，但是还有很多方法去展示 XML 数据。如�
 
 当然，也有其他更有效的方法去展示 XML，**Extensible Stylesheet Language Transformations**（[XSLT](/zh-CN/docs/Web/XSLT)）可以将 XML 转换为其他语言（例如 HTML）。这使得 XML 非常地有力。
 
-```plain
+```xml
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
 ```
 
@@ -120,6 +120,6 @@ XML 通常被用作描述，但是还有很多方法去展示 XML 数据。如�
 
 ## 参见
 
-- [XML.com](http://www.xml.com/)
+- [XML.com](https://www.xml.com/)
 - [扩展标记语言（XML）@ W3.org](https://www.w3.org/XML/)
-- [使用 XML: A List Apart](http://www.alistapart.com/articles/usingxml/)
+- [使用 XML: A List Apart](https://alistapart.com/article/usingxml/)
