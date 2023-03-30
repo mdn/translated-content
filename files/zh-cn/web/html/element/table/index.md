@@ -302,7 +302,7 @@ document
   .tBodies[0].sort((a, b) => a.textContent.localeCompare(b.textContent));
 ```
 
-##### 运行结果
+##### 结果
 
 {{EmbedLiveSample('对表格的行进行排序', '100%', '100')}}
 
@@ -361,7 +361,7 @@ for (const table of allTables) {
 }
 ```
 
-##### 运行结果
+##### 结果
 
 {{EmbedLiveSample('通过点击 th 元素对行进行排序', '100%', '100')}}
 
@@ -595,7 +595,7 @@ tr:last-child td {
 }
 ```
 
-#### 运行结果
+#### 结果
 
 {{EmbedLiveSample('在小空间展示大型表格', '100%', 240)}}
 
