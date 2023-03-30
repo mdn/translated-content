@@ -73,7 +73,7 @@ slug: Web/HTML/Element/table
   </tbody>
 </table>
 
-## `align`
+## 属性
 
 此元素包含所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
@@ -83,24 +83,24 @@ slug: Web/HTML/Element/table
 
   - : 这个[枚举](/zh-CN/docs/Glossary/Enumerated)属性指定了包含在文档中的表格必须如何对齐。可能含有如下值：
 
-  `bgcolor`
-  - `center`：表格将在文档中央显示；
-  - `right`：表格将在文档右侧显示；
+    - `left`：表格将在文档左侧显示；
+    - `center`：表格将在文档中央显示；
+    - `right`：表格将在文档右侧显示；
 
-  `border`ft")}}、{{cssxref("margin-right")}} 为 `auto`，或者将 {{cssxref("margin")}} 设置为 `0 auto` 来实现类似于 align 属性的效果。
+    设置 {{cssxref("margin-left")}}、{{cssxref("margin-right")}} 为 `auto`，或者将 {{cssxref("margin")}} 设置为 `0 auto` 来实现类似于 align 属性的效果。
 
 - `bgcolor` {{Deprecated_inline}}
 
   - : 表格的背景颜色。它是一个 [6 位的十六进制 RGB 编码](/zh-CN/docs/Web/CSS/hex-color)，以 `'#'` 作为前缀。当然也可以使用下面已经被预先定义的[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。
-`cellpadding`
+
     为了实现相似的效果，可以使用 CSS 属性 {{cssxref("background-color")}}。
 
 - `border` {{Deprecated_inline}}
-`cellspacing`
+
   - : 这个整型属性定义了环绕表格外部的框的大小。如果设置为 0，这意味着 [`frame`](#frame) 属性被设置为空。
 
     为了实现相似的效果，可以使用 CSS 简写属性 {{cssxref("border")}}。
-`frame`
+
 - `cellpadding` {{Deprecated_inline}}
 
   - : 这个属性定义了一个单元格的内容和它的边框之间的空间，无论显示与否。如果 cellpadding 的长度是用像素定义的，这个像素大小的空间将被应用到单元格内容的所有四边。如果长度是用百分比值定义的，内容将被居中，总的垂直空间（顶部和底部）将代表这个值。对于总的水平空间（左边和右边）也是如此。
@@ -115,7 +115,7 @@ slug: Web/HTML/Element/table
 
 - `frame` {{Deprecated_inline}}
 
-  `rules`哪个边必须显示。
+  - : 这个枚举属性定义了包围在表格周围的框架的哪个边必须显示。
 
     为了实现相似的效果，可以使用 CSS 属性 {{cssxref("border-style")}} 和 {{cssxref("border-width")}}。
 
@@ -127,7 +127,7 @@ slug: Web/HTML/Element/table
     - `groups`，这将使得分隔线只显示在行组（row group，通过 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 和 {{HTMLElement("tfoot")}} 元素定义）和列组（column group，通过 {{HTMLElement("col")}} 和 {{HTMLElement("colgroup")}} 元素定义）之间
     - `rows`，这将使得分隔线在行之间显示；
     - `cols`，这将使得分隔线在列之间显示；
-  `summary`
+    - `all`，这将使得分隔线在列和行之间显示；
 
     为了实现相似的效果，可以在适当的 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("col")}} 或 {{HTMLElement("colgroup")}} 元素上使用 {{cssxref("border")}} 属性。
 
@@ -139,8 +139,6 @@ slug: Web/HTML/Element/table
 ## 示例
 
 ### 简单的表格
-
-`width`
 
 ```html
 <table>
