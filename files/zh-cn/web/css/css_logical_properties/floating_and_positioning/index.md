@@ -52,7 +52,7 @@ slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 
 {{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", "100%", 700)}}
 
-## 新的两值和四值简写属性
+## 新的二值和四值简写属性
 
 和规范里的其他属性一样，我们也有新的简写属性可以同时设置两个或者四个值。
 
