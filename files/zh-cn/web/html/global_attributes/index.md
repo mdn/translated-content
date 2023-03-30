@@ -5,15 +5,15 @@ slug: Web/HTML/Global_attributes
 
 {{HTMLSidebar("Global_attributes")}}
 
-**全局属性**是所有 HTML 元素共有的属性; 它们可以用于所有元素，即使属性可能对某些元素不起作用。
+**全局属性**是所有 HTML 元素共有的属性；它们可以用于所有元素，即使属性可能对某些元素不起作用。
 
-我们可以在所有的 HTML 元素上指定全局属性，甚至是在标准里没有指定的元素。这意味着任何非标准元素仍必须能够应用这些属性，即使使用这些元素意味着文档不再是 html5 兼容的。例如，虽然`<foo>`不是一个有效的 HTML 元素，但是 html5 兼容的浏览器隐藏了标记为`<foo hidden>...<foo>`的内容。
+我们可以在所有的 HTML 元素上指定全局属性，甚至是在标准里没有指定的元素。这意味着任何非标准元素仍必须能够应用这些属性，即使使用这些元素意味着文档不再是 html5 兼容的。例如，虽然 `<foo>` 不是一个有效的 HTML 元素，但是 HTML5 兼容的浏览器隐藏了标记为 `<foo hidden>...<foo>` 的内容。
 
 除了基本的 HTML 全局属性之外，还存在以下全局属性：
 
-- `xml:lang` 和 `xml:base` ——两者都是从 XHTML 规范继承，但为了兼容性而被保留的。
-- 多重[`aria-*`](/zh-CN/docs/Web/Accessibility/ARIA) 属性，用于改善无障碍。
-- [事件处理程序](/zh-CN/docs/Web/Guide/Events/Event_handlers) 属性：**`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
+- `xml:lang` 和 `xml:base`——两者都是从 XHTML 规范继承，但为了兼容性而被保留的。
+- 多重 [`aria-*`](/zh-CN/docs/Web/Accessibility/ARIA) 属性，用于改善无障碍。
+- [事件处理器](/zh-CN/docs/Web/HTML/Attributes#事件处理器属性)属性：`onabort`、`onautocomplete`、`onautocompleteerror`、`onblur`、`oncancel`、`oncanplay`、`oncanplaythrough`、`onchange`、`onclick`、`onclose`、`oncontextmenu`、`oncuechange`、`ondblclick`、`ondrag`、`ondragend`、`ondragenter`、`ondragleave`、`ondragover`、`ondragstart`、`ondrop`、`ondurationchange`、`onemptied`、`onended`、`onerror`、`onfocus`、`oninput`、`oninvalid`、`onkeydown`、`onkeypress`、`onkeyup`、`onload`、`onloadeddata`、`onloadedmetadata`、`onloadstart`、`onmousedown`、`onmouseenter`、`onmouseleave`、`onmousemove`、`onmouseout`、`onmouseover`、`onmouseup`、`onmousewheel`、`onpause`、`onplay`、`onplaying`、`onprogress`、`onratechange`、`onreset`、`onresize`、`onscroll`、`onseeked`、`onseeking`、`onselect`、`onshow`、`onsort`、`onstalled`、`onsubmit`、`onsuspend`、`ontimeupdate`、`ontoggle`、`onvolumechange`、`onwaiting`。
 
 ## 全局属性列表
 
@@ -22,12 +22,12 @@ slug: Web/HTML/Global_attributes
 - [`autocapitalize`](/zh-CN/docs/Web/HTML/Global_attributes/autocapitalize)
   - : 控制用户的文本输入是否和如何自动大写，它可以有以下的值：
 
-    - `off` or `none`，没有应用自动大写（所有字母都默认为小写字母）。
-    - `on` or `sentences`，每个句子的第一个字母默认为大写字母;所有其他字母都默认为小写字母。
+    - `off` 或 `none`，没有应用自动大写（所有字母都默认为小写字母）。
+    - `on` 或 `sentences`，每个句子的第一个字母默认为大写字母;所有其他字母都默认为小写字母。
     - `words`，每个单词的第一个字母默认为大写字母;所有其他字母都默认为小写字母。
     - `characters`，所有的字母都应该默认为大写。
 - [`class`](/zh-CN/docs/Web/HTML/Global_attributes/class)
-  - : 一个以空格分隔的元素的类名（classes）列表，它允许 CSS 和 Javascript 通过类选择器 ([class selectors](/zh-CN/docs/Web/CSS/Class_selectors)) 或 DOM 方法 ( [`document.getElementsByClassName`](/zh-CN/docs/Web/API/Document/getElementsByClassName)) 来选择和访问特定的元素。
+  - : 一个以空格分隔的元素的类名（classes）列表，它允许 CSS 和 Javascript 通过类选择器（[类选择器](/zh-CN/docs/Web/CSS/Class_selectors)）或 DOM 方法 {{DOMxRef("Document.getElementsByClassName()")}} 来选择和访问特定的元素。
 - [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)
   - : 一个枚举属性（enumerated attribute），表示元素是否可被用户编辑。如果可以，浏览器会调整元素的部件（widget）以允许编辑。
 
@@ -40,9 +40,9 @@ slug: Web/HTML/Global_attributes
 - [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir)
   - : 一个指示元素中文本方向的枚举属性。它的取值如下：
 
-    - ltr，指从*左*到*右*，用于那种从左向右书写的语言（比如英语）；
-    - rtl，指从*右*到*左*，用于那种从右向左书写的语言（比如阿拉伯语）；
-    - auto，指由用户代理决定方向。它在解析元素中字符时会运用一个基本算法，直到发现一个具有强方向性的字符，然后将这一方向应用于整个元素。
+    - `ltr`，指从*左*到*右*，用于那种从左向右书写的语言（比如英语）；
+    - `rtl`，指从*右*到*左*，用于那种从右向左书写的语言（比如阿拉伯语）；
+    - `auto`，指由用户代理决定方向。它在解析元素中字符时会运用一个基本算法，直到发现一个具有强方向性的字符，然后将这一方向应用于整个元素。
 - [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes/draggable)
   - : 一种枚举属性，指示是否可以 使用 [Drag and Drop API](/zh-CN/docs/DragDrop/Drag_and_Drop) 拖动元素。它可以有以下的值：
 
@@ -87,7 +87,7 @@ slug: Web/HTML/Global_attributes
   - : 枚举属性定义是否可以检查元素是否存在拼写错误。它可能具有以下值：
 
     - `true`，表示如果可能，应检查元素是否存在拼写错误;
-    - `false`, 表示不应检查元素的拼写错误。
+    - `false`，表示不应检查元素的拼写错误。
 - [`style`](/zh-CN/docs/Web/HTML/Global_attributes/style)
   - : 含要应用于元素的[CSS](/zh-CN/docs/Web/CSS)样式声明。请注意，建议在单独的文件中定义样式。该属性和{{HTMLElement("style")}}元素主要用于快速样式化，例如用于测试目的。
 - [`tabindex`](/zh-CN/docs/Web/HTML/Global_attributes/tabindex)
@@ -101,8 +101,8 @@ slug: Web/HTML/Global_attributes
 - [`translate`](/zh-CN/docs/Web/HTML/Global_attributes/translate) {{experimental_inline}}
   - : 枚举属性，用于指定在页面本地化时是否转换元素的属性值及其{{domxref("Text")}} 节点子节点的值，或者是否保持它们不变。它可以具有以下值：
 
-    - 空字符串和`"yes"`，表示元素将被翻译。
-    - `"no"`, 表示该元素不会被翻译。
+    - 空字符串和 `"yes"`，表示元素将被翻译。
+    - `"no"`，表示该元素不会被翻译。
 
 ## 规范
 
