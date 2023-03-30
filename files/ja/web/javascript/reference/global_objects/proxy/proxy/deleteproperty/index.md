@@ -32,7 +32,7 @@ new Proxy(target, {
 
 ### 返値
 
-`deleteProperty()` メソッドはプロパティが正しく削除されたかどうか示す[論理値](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)を返さなければなりません。
+`deleteProperty()` メソッドはプロパティが正しく削除されたかどうか示す[論理値](/ja/docs/Web/JavaScript/Data_structures#論理型)を返さなければなりません。
 
 ## 解説
 

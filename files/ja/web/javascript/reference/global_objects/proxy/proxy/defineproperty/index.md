@@ -34,7 +34,7 @@ new Proxy(target, {
 
 ### 返値
 
-`defineProperty()` メソッドはプロパティが正しく定義されたかどうかを表す[論理値](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)を返す必要があります。
+`defineProperty()` メソッドはプロパティが正しく定義されたかどうかを表す[論理値](/ja/docs/Web/JavaScript/Data_structures#論理型)を返す必要があります。
 
 ## 解説
 
