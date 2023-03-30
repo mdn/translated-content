@@ -15,7 +15,7 @@ XML 和基于 XML 的语言的整个结构是建立在{{Glossary("tag","标签")
 
 ### XML 声明
 
-XML——声明并非是一种标签，其用来传播文档的元数据。
+XML——声明并非是一种标签，其用于传输文档的元数据。
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
