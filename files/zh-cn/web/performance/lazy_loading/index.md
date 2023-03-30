@@ -5,7 +5,7 @@ slug: Web/Performance/Lazy_loading
 
 {{QuickLinksWithSubPages("Web/Performance")}}
 
-**延迟加载（懒加载）** 是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
+**延迟加载**（懒加载）是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
 
 延迟加载可以在应用程序的不同时刻发生，但通常会在某些用户交互（例如滚动和导航）上发生。
 
@@ -21,15 +21,17 @@ slug: Web/Performance/Lazy_loading
 
 ### 常规
 
-**代码拆分**
+#### 代码拆分
+
 JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以在前期发送所需的最小代码，改善页面加载时间。其余的可以按需加载。
 
 - 入口点分离：通过应用的入口点分离代码
-- 动态分离：通过[动态 import()](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)语句分离代码
+- 动态分离：通过[动态 import()](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句分离代码
 
 ### JavaScript
 
-**脚本类型模块**
+#### 脚本类型模块
+
 任何类型为 `type="module"` 的脚本标签都被视为一个 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且默认情况下会被延迟。
 
 ### CSS
@@ -48,15 +50,16 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 默认情况下，字体请求会延迟到构造渲染树之前，这可能会导致文本渲染延迟。
 
-可以使用 `<link rel="preload">`、[CSS font-display 属性](/zh-CN/docs/Web/CSS/@font-face/font-display)和[字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API)来覆盖默认行为并预加载网络字体资源。
+可以使用 `<link rel="preload">`、[CSS font-display 属性](/zh-CN/docs/Web/CSS/@font-face/font-display)和[字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 来覆盖默认行为并预加载网络字体资源。
 
-参见[Link 元素](/zh-CN/docs/Web/HTML/Element/link)。
+参见 [Link 元素](/zh-CN/docs/Web/HTML/Element/link)。
 
 ### 图片和 iframe
 
 很多时候，网页包含许多图片，这些图片会影响数据的使用和网页的加载速度。这些图片大部分都在屏幕之外（[非关键](/zh-CN/docs/Web/Performance/Critical_rendering_path)），需要用户互动，如滚动，才能看到它们。
 
-**Loading** 属性
+#### Loading 属性
+
 {{HTMLElement("img")}} 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性（或 {{HTMLElement("iframe")}} 上的 [`loading`](/zh-CN/docs/Web/Element/iframe#loading) 属性）可用于指示浏览器推迟加载屏幕外的图像/iframe，直到用户滚动到其附近。
 
 ```html
@@ -68,17 +71,20 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 你可以通过检查其布尔属性 {{domxref("HTMLImageElement.complete", "complete")}} 的值来确定某个图片是否已经完成加载。
 
-**Polyfill**
+#### Polyfill
+
 包含这个 polyfill，以提供对旧的和目前不兼容的浏览器的支持：[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)。
 
-**Intersection Observer API**
+#### Intersection Observer API
+
 [Intersection Observer](/zh-CN/docs/Web/API/IntersectionObserver) 允许用户得知被观察的元素何时进入或退出浏览器的视口。
 
-**事件处理程序**
+#### 事件处理器
+
 当浏览器的兼容性至关重要时，有以下几种选择：
 
 - [polyfill intersection observer](https://github.com/w3c/IntersectionObserver)
-- 回退到滚动、调整大小或方向变化事件处理程序，以确定特定元素是否在视口中
+- 回退到滚动、调整大小或方向变化事件处理器，以确定特定元素是否在视口中
 
 ## 规范
 
