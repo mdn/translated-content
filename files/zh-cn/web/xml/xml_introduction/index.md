@@ -11,7 +11,7 @@ XML（Extensible Markup Language）是一种类似于 {{Glossary("HTML")}}，但
 
 ## 构建 XML 文档
 
-XML 和基于 XML 的语言的整个结构是建立在{{Glossary("tag","标签")}}之的。
+XML 和基于 XML 的语言的整个结构是建立在{{Glossary("tag","标签")}}之上的。
 
 ### XML 声明
 
