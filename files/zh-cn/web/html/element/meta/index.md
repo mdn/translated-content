@@ -94,13 +94,13 @@ slug: Web/HTML/Element/meta
 
 > **备注：** {{htmlattrxref("name", "meta")}} 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 {{htmlattrxref("name", "meta")}}、{{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
 
-**{{htmlattrdef("charset")}}**
+**`charset`**
 
 这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与 ASCII 大小写无关（ASCII case-insensitive）的"`utf-8`"。
 
-- {{htmlattrdef("content")}}
+- `content`
   - : 此属性包含{{htmlattrxref("http-equiv", "meta")}} 或{{htmlattrxref("name", "meta")}} 属性的值，具体取决于所使用的值。
-- {{htmlattrdef("http-equiv")}}
+- `http-equiv`
 
   - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 头部的名称，如下：
 
@@ -131,7 +131,7 @@ slug: Web/HTML/Element/meta
       > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
       > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
-- {{htmlattrdef("name")}}
+- `name`
   - : `name` 和 `content` 属性可以一起使用，以名 - 值对的方式给文档提供元数据，其中 name 作为元数据的名称，content 作为元数据的值。
     在[标准元数据名称](/zh-CN/docs/Web/HTML/Element/meta/name)中查看 HTML 规范等规范中定义的标准元数据名称。
 

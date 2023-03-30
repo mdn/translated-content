@@ -23,22 +23,22 @@ slug: Web/HTML/Element/select
 
 包括下列[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
   - : 一个 {{domxref("DOMString")}}，为 {{Glossary("user agent", "用户代理")}} 提供自动填充功能的线索。关于该值的完整列表以及如何使用自动填充的详细信息，请参阅 [HTML 自动完成属性](/zh-CN/docs/Web/HTML/Attributes/自动完成属性)。
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : 这个布尔值属性能够让一个对象在页面加载的时候获得焦点。一个文档中只有一个对象可以有这个属性。
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 这个布尔值的属性表示用户不能与该表单控件交互。如果没有声明这个属性，则从它的父元素继承，例如 `fieldset`；如果没有父元素设置了 `disabled` 属性，那么默认该表单对象可用。
-- {{htmlattrdef("form")}}
+- `form`
   - : `<select>` 所关联的{{HTMLElement("form")}} (它的"表单拥有者")。其值必须是在同一文档中的 `<form>` 元素的{{htmlattrxref("id")}}（如果没有设置这个属性， `<select>` 元素则与其任何存在的祖先 `<form>` 元素关联）。
     这个属性让你将 `<select>` 元素与文档中任意位置的 `<form>` 元素相关联，而不仅仅是包含 `<select>` 元素的 `<form>` 元素。这个属性还可以覆盖元素的祖先 `<form>` 元素。
-- {{htmlattrdef("multiple")}}
+- `multiple`
   - : 这个布尔值属性表示列表中的选项是否支持多选。没有声明该值时，一次只能选中一个选项。声明这个属性后，大多数浏览器都会显示一个可滚动的列表框，而非一个下拉菜单。
-- {{htmlattrdef("name")}}
+- `name`
   - : 该属性规定了控件的名称。
-- {{htmlattrdef("required")}}
+- `required`
   - : 一个布尔值属性，表示必须选中一个有非空字符串值的选项。
-- {{htmlattrdef("size")}}
+- `size`
   - : 如果控件显示为滚动列表框（如声明了 `multiple`），则此属性表示为控件中同时可见的行数。浏览器不需要将选择元素呈现为滚动列表框。默认值为 0。
 
 > **备注：** 根据 HTML5 规范，默认值应该为 1；但是，在实践中，这样会影响到一些网站，同时其他浏览器也没有那么处理，所以 Mozilla 在 Firefox 中选择继续使用默认值 0。

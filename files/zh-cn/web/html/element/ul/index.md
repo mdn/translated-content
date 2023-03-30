@@ -71,13 +71,13 @@ slug: Web/HTML/Element/ul
 
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{ htmlattrdef("compact") }} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `compact` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : 此布尔属性提示列表是否需要被渲染为更紧凑的样式。{{glossary("user agent", "用户代理")}}决定如何解释这个属性，且并非所有浏览器都支持它。
 
     > **警告：** 不要使用这个属性，因为它已经被废弃了：请使用 [CSS](/zh-CN/docs/Web/CSS) 来更改样式。如果想达到与 `compact` 属性相同的效果，将 CSS 属性 {{cssxref("line-height")}} 的值设为 `80%` 即可。
 
-- {{ htmlattrdef("type") }} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : 用于设置列表的着重号样式，定义于 HTML3.2 和过渡版本 HTML 4.0/4.01 中的可用值有：
 

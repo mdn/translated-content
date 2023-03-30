@@ -54,7 +54,7 @@ Web 最常用的图像格式是：
 
 此元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("alt")}}
+- `alt`
   - : 定义了图像的备用文本描述。
 
     > **备注：** 浏览器并非总是会显示图像。比如：
@@ -69,7 +69,7 @@ Web 最常用的图像格式是：
 
     将图像复制并粘贴为文本，或是将图像的链接保存为浏览器书签时，也会用到此属性。
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
   - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为“[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas)（tainted）”。
 
     如果*未指定* `crossorigin` 属性，则会发送不启用 CORS 的请求（不会携带 {{httpheader("Origin")}} 请求标头），且浏览器会将图像标记为“被污染”并拒绝对图像数据的访问，阻止其在 {{HTMLElement("canvas")}} 元素中的使用。
@@ -85,7 +85,7 @@ Web 最常用的图像格式是：
 
     如果属性是无效值，浏览器默认将其当做 `anonymous` 关键字。更多信息，请查看 [CORS 属性设置](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。
 
-- {{htmlattrdef("decoding")}}
+- `decoding`
   - : 为浏览器提供图像解码方式上的提示。允许的值：
 
     - `sync`
@@ -95,7 +95,7 @@ Web 最常用的图像格式是：
     - `auto`
       - : 默认值：不指定解码方式，由浏览器决定哪一种对用户来说是最合适的。
 
-- {{htmlattrdef("fetchpriority")}} {{experimental_inline}}
+- `fetchpriority` {{experimental_inline}}
 
   - : 提供获取图像时要使用的相对的优先级提示。允许的值：
 
@@ -106,17 +106,17 @@ Web 最常用的图像格式是：
     - `auto`
       - : 默认值：表示自动确定其相对其他图像的获取优先级。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 图像的固有高度，以像素为单位。必须是没有单位的整数值。
 
     > **备注：** 同时包括 `height` 和 [`width`](#attr-width) 使浏览器在加载图像之前计算图像的长宽比。此长宽比用于保留显示图像所需的空间，减少甚至防止在下载图像并将其绘制到屏幕上时布局的偏移。减少布局偏移是良好用户体验和 Web 性能的主要组成部分。
 
-- {{htmlattrdef("ismap")}}
+- `ismap`
   - : 这个布尔属性表示图像是否是[服务器端图像映射](https://en.wikipedia.org/wiki/Image_map#Server-side)的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
 
     > **备注：** 只有在 `<img>` 元素是一个拥有有效 {{htmlattrxref("href","a")}} 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
 
-- {{htmlattrdef("loading")}}
+- `loading`
   - : 指示浏览器应当如何加载该图像。允许的值：
     - `eager`
       - : 立即加载图像，不管它是否在可视视口（visible viewport）之外（默认值）。
@@ -125,7 +125,7 @@ Web 最常用的图像格式是：
 
     > **备注：** 仅在启用 JavaScript 时才会延迟加载。这是一种反跟踪的措施，因为，如果用户代理在禁用脚本的情况下支持延迟加载，网站仍然跨源通过在图像中策略性地放置图像来跟踪用户在整个会话期间的大致滚动位置，这样服务器可以跟踪请求了多少图像以及请求在何时发起。
 
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
   - : 一个字符串，指示在获取资源时使用的来源地址（referrer）：
 
     - `no-referrer`：不会发送 {{httpheader("Referer")}} 标头。
@@ -137,7 +137,7 @@ Web 最常用的图像格式是：
     - `strict-origin-when-cross-origin`（默认值）：执行同源请求时发送完整的 URL，且仅在协议安全级别保持不变（HTTPS→HTTPS）时发送来源（origin），在目标安全性降低（HTTPS→HTTP）时则不发送来源。
     - `unsafe-url`：来源地址包括来源（origin）*和*路径（path）（但不包括[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为它将来源和路径从受 TLS 保护的资源泄露到不安全的来源。
 
-- {{htmlattrdef("sizes")}}
+- `sizes`
   - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：
 
     1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#语法)。最后一项一定是被忽略的。
@@ -147,9 +147,9 @@ Web 最常用的图像格式是：
 
     资源尺寸的值被用来指定图像的预期尺寸。当 `srcset` 中的资源使用了宽度描述符 `w` 时，{{glossary("User agent", "用户代理")}}会使用当前图像大小来选择 `srcset` 中合适的一个图像 URL。被选中的尺寸影响图像的{{glossary("intrinsic size", "显示大小")}}（如果没有影响大小的 {{glossary("CSS")}} 样式被应用的话）。如果没有设置 `srcset` 属性，或者没有属性值，那么 `sizes` 属性也将不起作用。
 
-- {{htmlattrdef("src")}}
+- `src`
   - : 图像的 {{glossary("URL")}}，这个属性对 `<img>` 元素来说是必需的。在支持 `srcset` 的{{glossary("Browser", "浏览器")}}中，`src` 被当做拥有一个像素密度的描述符 `1x` 的候选图像处理，除非一个图像拥有这个像素密度描述符已经被在 `srcset` 或者 `srcset` 包含 `w` 描述符中定义了。
-- {{htmlattrdef("srcset")}}
+- `srcset`
 
   - : 以逗号分隔的一个或多个字符串列表表明一系列用户代理使用的可能的图像。每一个字符串由以下组成：
 
@@ -165,16 +165,16 @@ Web 最常用的图像格式是：
 
     用户代理自行决定选择任何可用的来源。这位它们提供了一个很大的选择余地，可以根据用户偏好或{{glossary("bandwidth", "带宽")}}条件等因素来进行选择。有关示例，可以参阅[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程。
 
-- {{htmlattrdef("width")}}
+- `width`
   - : 图像的宽度，以像素为单位。必须是没有单位的整数。
-- {{htmlattrdef("usemap")}}
+- `usemap`
   - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/HTML/Element/map)的部分 URL（以 `#` 开始的部分）。
 
     > **备注：** 如果 `<img>` 元素是 {{htmlelement("a")}} 或 {{HTMLElement("button")}} 元素的后代元素则不能使用这个属性。
 
 ### 已废弃的属性
 
-- {{htmlattrdef("align")}} {{Deprecated_Inline}}
+- `align` {{Deprecated_Inline}}
   - : 图像相对于它周围上下文的对齐。使用 {{cssxref('float')}} 和/或 {{cssxref('vertical-align')}} 这两个 {{glossary("CSS")}} 属性作为代替。允许的值：
 
     - `top`
@@ -188,18 +188,18 @@ Web 最常用的图像格式是：
     - `right`
       - : 等价于 `float: right`
 
-- {{htmlattrdef("border")}} {{Deprecated_Inline}}
+- `border` {{Deprecated_Inline}}
   - : 图像周围的边框宽度。使用 {{glossary("CSS")}} 属性 {{cssxref('border')}} 代替此废弃属性。
-- {{htmlattrdef("hspace")}} {{Deprecated_Inline}}
+- `hspace` {{Deprecated_Inline}}
   - : 插入到图像的左侧和右侧的空白像素的值。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
-- {{htmlattrdef("longdesc")}} {{Deprecated_Inline}}
+- `longdesc` {{Deprecated_Inline}}
   - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 {{htmlattrxref("id")}}。
 
     > **备注：** 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
 
-- {{htmlattrdef("name")}} {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}}
   - : 元素的名字。使用 {{htmlattrxref("id")}} 属性代替此废弃属性。
-- {{htmlattrdef("vspace")}} {{Deprecated_Inline}}
+- `vspace` {{Deprecated_Inline}}
   - : 插入到图像的上方和下方的空白像素的数组。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 
 ## 使用 CSS 添加样式
