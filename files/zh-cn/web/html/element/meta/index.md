@@ -94,15 +94,13 @@ slug: Web/HTML/Element/meta
 
 > **备注：** {{htmlattrxref("name", "meta")}} 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 {{htmlattrxref("name", "meta")}}、{{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
 
-**`charset`**
-
-这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与 ASCII 大小写无关（ASCII case-insensitive）的"`utf-8`"。
-
+- `charset`
+  - : 这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与 ASCII 大小写无关（ASCII case-insensitive）的 `utf-8`。
 - `content`
   - : 此属性包含{{htmlattrxref("http-equiv", "meta")}} 或{{htmlattrxref("name", "meta")}} 属性的值，具体取决于所使用的值。
 - `http-equiv`
 
-  - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 头部的名称，如下：
+  - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 标头的名称，如下：
 
     - `content-security-policy`
       它允许页面作者定义当前页的[内容策略](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives)。内容策略主要指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
