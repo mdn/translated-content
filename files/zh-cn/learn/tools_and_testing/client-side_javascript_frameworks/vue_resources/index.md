@@ -13,8 +13,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
       <th scope="row">预备条件：</th>
       <td>
         <p>
-          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解
-          <a
+          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
+          语言，了解<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >终端/命令行</a
           >知识。
