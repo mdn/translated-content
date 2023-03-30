@@ -34,13 +34,13 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_star
 
 Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——不像许多其他框架，您可以使用 Vue 增强现有的 HTML。这使您可以使用 Vue 作为 [jQuery](https://jquery.com/) 等库的临时替代品。
 
-也就是说，您还可以使用 Vue 编写整个单页应用程序 (SPA)。这允许您创建标记完全由 Vue 管理，可以提高开发人员的经验和性能在处理复杂的应用程序。当你需要的时候它还允许您利用其他库对客户端路由和状态进行管理。此外，Vue 需要“中间地带”的方法工具客户端路由和状态管理。虽然 Vue 核心团队维护了建议的函数库，但他们并没有直接捆绑到 Vue 里。这样你就可以选择一个其他路由/状态管理库，来更好地适应您的应用程序。
+话虽如此，您也可以使用 Vue 编写完整的单页应用程序 (SPA)。这允许您创建完全由 Vue 管理的标记，当处理复杂应用程序时可以提高开发人员的体验和性能。它还允许您在需要时利用用于客户端路由和状态管理的库。此外，Vue对于客户端路由和状态管理等工具采取了“中间立场”的方法。虽然Vue核心团队维护这些功能的建议库，但它们并未直接捆绑到Vue中。这允许您选择不同的路由/状态管理库，以使其更适合您的应用程序。
 
 除了允许您逐步将 Vue 集成到您的应用程序中，Vue 还提供了一种渐进的方式编写标记。像大多数框架，Vue 通过组件允许您创建可重用块标记。大多数时候，Vue 组件是使用一个特殊的 HTML 模板的语法写的。当您需要比 HTML 语法允许的更多的控制时，您可以编写 JSX 或纯 JavaScript 函数来定义组件。
 
-在学习本教程的过程中，您可能希望在其他选项卡中打开[Vue 指南](https://cn.vuejs.org/v2/guide/index.html)和[API 文档](https://cn.vuejs.org/v2/api/index.html)，这样，如果您想了解更多信息，可以参考它们。
+在学习本教程的过程中，您可能希望在其他选项卡中打开[Vue 指南](https://cn.vuejs.org/guide/introduction.html)和[API 文档](https://cn.vuejs.org/api/)，这样，如果您想了解更多信息，可以参考它们。
 
-要想对 Vue 和许多其他框架进行比较 (但可能存在偏差)，请参阅 [Vue 文档：与其他框架的比较](https://cn.vuejs.org/v2/guide/comparison.html)。
+要想对 Vue 和许多其他框架进行比较 (但可能存在偏差)，请参阅 [Vue 文档：对比其他框架](https://v2.cn.vuejs.org/v2/guide/comparison.html)。
 
 ## 安装 Vue
 
@@ -49,13 +49,13 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 - 开发环境版本，包含了有帮助的命令行警告
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.45/index.js"></script>
   ```
 
 - 生产环境版本，优化了尺寸和速度，建议您在站点上包含 Vue 时指定版本号，这样任何框架更新都不会影响您的网站。
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+ <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
   ```
 
 然而，这种方法有一些局限性。要构建更复杂的应用程序，您需要使用 [Vue NPM package](https://www.npmjs.com/package/vue)。这将允许您使用 Vue 的高级功能并利用 WebPack 等捆绑包。为了使使用 Vue 构建应用程序更容易，有一个 CLI 来简化开发过程。要使用 npm 软件包和 CLI，您需要：
@@ -83,25 +83,13 @@ yarn global add @vue/cli
 
 ## 初始化一个新项目
 
-为了探索 Vue 中各种各样的特征，我们将建立一个简单的任务清单应用。我们将会使用 Vue 脚手架工具去创建一个新的应用框架并在上面搭建我们的应用。请按照以下步骤：
+为了探索 Vue 中各种各样的特征，我们将建立一个简单的任务清单应用。我们将会使用 Vue 脚手架工具去创建一个新的应用框架并在上面搭建我们的应用。
 
-1. 在终端，用 `cd` 命令进入你想要创建示例的文件夹，然后执行 `vue create moz-todo-vue`。
-
-2. 使用方向键然后按下键盘上的 <kbd>Enter</kbd>，选择 "Manually select features（手动选择功能）" 选项。
-
-3. 你会看到的第一个菜单允许你选择你想要包含在你的项目中的功能。确保 "Babel" 和 "Linter / Formatter" 这两项是被选中的。如果它们没有被选中，使用方向键切换，用空格键选中它们，一旦它们被选中，按下 <kbd>Enter</kbd>，继续进行。
-
-4. 接下来你要为 linter / formatter 选择一个配置。切换选中"Eslint with error prevention only"然后再次按下 <kbd>Enter</kbd>。这样可以辅助我们捕获常见的并且不自以为是的错误。
-
-5. 然后你会被询问需要那种自动化的 lint，选择 "Lint on save"，这样我们在项目中保存文件的时候就会自动检查错误。按下 <kbd>Enter</kbd> 继续。
-
-6. 接着你将需要选择把配置文件放在哪里。"In dedicated config files" 这个选项会把你的配置文件比如 ESLint 单独放在一个文件里。另一个选项 "In package.json" 则会把配置放进项目的 `package.json` 文件里。选择 "In dedicated config files" 然后按下 <kbd>Enter</kbd>。
-
-7. 最后会问你，是否选择把本次的选择作为将来的一个预设配置（Save this as a preset for future projects？），这个就完全由你自己决定了。如果你想把本次的配置作为一个预设配置并且以后想再次使用的话，按下 <kbd>y</kbd>，否则按下 <kbd>n</kbd>。
+在终端，用 `cd` 命令进入你想要创建示例的文件夹，然后执行 `vue create moz-todo-vue`。您可以选择默认选项 `Default ([Vue 3] babel, eslint)` 然后按下键盘上的 <kbd>Enter</kbd> 继续。 CLI 现在将开始构建您的项目，并安装所有依赖项。
 
 然后脚手架工具就开始构建项目，并且安装所需的依赖。
 
-如果你以前从来没有使用过 Vue CLI 的话，你可能还会遇到其他的问题，会让你选择包管理器，你可以通过方向键选择一个你喜欢的，然后从此时起 Vue CLI 就会默认使用你这次选择的包管理器。如果你只后又想换用其他包管理器，你也可以在创建项目执行 `vue create` 的时候传入参数 `--packageManager=<package-manager>`。比如你之前已经选择了 yarn，而你现在在创建 `moz-todo-vue` 示例程序的时候可以通过执行 `vue create moz-todo-vue --packageManager=npm` 来使用 npm 包管理器。
+如果您以前从未运行过Vue CLI，则会再有一个问题 - 您将被要求选择一个包管理器，它默认为yarn。从现在开始，Vue CLI将默认使用此包管理器。如果您此后需要使用不同的包管理器，则可以在运行`vue create`时传入参数 `--packageManager=<package-manager>`。因此，如果您想要使用 `npm` 创建 `moz-todo-vue` 项目，并且之前选择了 `yarn` ，则应运行 `vue create moz-todo-vue --packageManager=npm`。
 
 > **备注：** 我们这里并没有列举所有的配置项，如果你想了解更多信息可以访问 [Vue 官方文档](https://cli.vuejs.org/)的 CLI 部分。
 
@@ -109,9 +97,10 @@ yarn global add @vue/cli
 
 如果前面的步骤都执行顺利的话，脚手架工具应该已经在你的项目中创建了一系列的文件和目录，我们接下来列举一些比较重要的：
 
-- `.eslintrc.js`: 这个是 [eslint](https://eslint.org/) 的配置文件，可以通过它来管理你的校验规则。
+- `package.json`: 该文件包含项目的依赖项列表，以及一些元数据和 `eslint` 配置。
+-  `yarn.lock`: 如果您选择 `yarn` 作为您的包管理器，将生成此文件，其中包含项目所需的所有依赖项和子依赖项的列表。
 - `babel.config.js`: 这个是 [Babel](https://babeljs.io/) 的配置文件，可以在开发中使用 JavaScript 的新特性，并且将其转换为在生产环境中可以跨浏览器运行的旧语法代码。你也可以在这个里配置额外的 babel 插件。
-- `.browserslistrc`: 这个是 [Browserslist](https://github.com/browserslist/browserslist) 的配置文件，可以通过它来控制需要对哪些浏览器进行支持和优化。
+- `jsconfig.json`: 这是一份用于 [Visual Studio Code](https://code.visualstudio.com/docs/languages/jsconfig) 的配置文件，它为 VS Code 提供了关于项目结构的上下文信息，并帮助自动完成。
 - `public`: 这个目录包含一些在 [Webpack](https://webpack.js.org/) 编译过程中没有加工处理过的文件（有一个例外：index.html 会有一些处理）。
 
   - `favicon.ico`: 这个是项目的图标，当前就是一个 Vue 的 logo。
@@ -148,13 +137,13 @@ yarn global add @vue/cli
 
 `<script>` 包含组件中所有的非显示逻辑，最重要的是， `<script>` 标签需要默认导出一个 JS 对象。该对象是您在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个包含 template 模板的对象会被处理和转换成为一个有 `render()` 函数的 Vue 组件。
 
-对于 `App.vue`，我们的默认导出将组件的名称设置为 `app` ，并通过将 `HelloWorld` 组件添加到 `components` 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此您需要将其导入并注册到使用它们的每个组件文件中。这对于拆包 / tree shaking（译者注：一种减小包体积优化方式）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。
+对于 `App.vue`，我们的默认导出将组件的名称设置为 `App` ，并通过将 `HelloWorld` 组件添加到 `components` 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此您需要将其导入并注册到使用它们的每个组件文件中。这对于拆包 / tree shaking（译者注：一种减小包体积优化方式）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。
 
 ```js
 import HelloWorld from './components/HelloWorld.vue';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     // 可以在这里本地注册组件。
     HelloWorld
