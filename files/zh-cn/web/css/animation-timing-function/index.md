@@ -107,6 +107,42 @@ animation-timing-function: unset;
 
 ### 三次贝塞尔示例
 
+```html hidden
+<div class="parent">
+  <div class="ease">ease</div>
+  <div class="easein">ease-in</div>
+  <div class="easeout">ease-out</div>
+  <div class="easeinout">ease-in-out</div>
+  <div class="linear">linear</div>
+  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+</div>
+```
+
+```css hidden
+.parent > div[class] {
+    animation-name: changeme;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-bottom: 4px;
+}
+@keyframes changeme {
+   0% {
+      min-width: 12em;
+      width: 12em;
+      background-color: black;
+      border: 1px solid red;
+      color: white;
+   }
+   100% {
+      width: 90vw;
+      min-width: 24em;
+      background-color: magenta;
+      color: yellow;
+      border: 1px solid orange;
+   }
+}
+```
+
 ```css
 .ease {
   animation-timing-function: ease;
@@ -131,6 +167,44 @@ animation-timing-function: unset;
 {{EmbedLiveSample("三次贝塞尔示例", 600, 200)}}
 
 ### 阶跃动画示例
+
+```html hidden
+<div class="parent">
+  <div class="jump-start">jump-start</div>
+  <div class="jump-end">jump-end</div>
+  <div class="jump-both">jump-both</div>
+  <div class="jump-none">jump-none</div>
+  <div class="start">start</div>
+  <div class="end">end</div>
+  <div class="step-start">step-start</div>
+  <div class="step-end">step-end</div>
+</div>
+```
+
+```css hidden
+.parent > div[class] {
+    animation-name: changeme;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-bottom: 4px;
+}
+@keyframes changeme {
+   0% {
+      min-width: 12em;
+      width: 12em;
+      background-color: black;
+      border: 1px solid red;
+      color: white;
+   }
+   100% {
+      width: 90vw;
+      min-width: 24em;
+      background-color: magenta;
+      color: yellow;
+      border: 1px solid orange;
+   }
+}
+```
 
 ```css
 .jump-start {
