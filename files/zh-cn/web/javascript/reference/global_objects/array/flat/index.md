@@ -79,7 +79,7 @@ console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
 const arrayLike = {
   length: 3,
   0: [1, 2],
-  // 嵌套的类数组的对象不会被展平
+  // 嵌套的类数组对象不会被展平
   1: { length: 2, 0: 3, 1: 4 },
   2: 5,
 };
