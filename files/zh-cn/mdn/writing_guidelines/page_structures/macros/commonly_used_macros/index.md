@@ -64,7 +64,7 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
       <td><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs">HTMLAttrxRef</a></td>
       <td>如果只指明了属性的名字，链接会跳转到 <a href="/zh-CN/docs/Web/HTML/Global_attributes">HTML 全局属性</a>页面对应属性的位置。<br/>如果同时指明 HTML 元素和属性名，则会跳转到元素页面下对应属性的位置。</td>
       <td>
-        <code>\{{HTMLAttrxRef("lang")}}</code> 会指向 {{HTMLAttrxRef("lang")}}。<br /><code>\{{HTMLAttrxRef("type","input")}}</code> 生成的链接则会跳转到 {{HTMLElement("input")}} 元素页面下的 {{HTMLAttrxRef("type","input")}} 属性。
+        <code>\[`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)</code> 会指向 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)。<br /><code>\[`type`](/zh-CN/docs/Web/HTML/Element/input#type)</code> 生成的链接则会跳转到 {{HTMLElement("input")}} 元素页面下的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性。
       </td>
     </tr>
     <tr>

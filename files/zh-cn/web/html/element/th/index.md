@@ -3,7 +3,7 @@ title: <th>
 slug: Web/HTML/Element/th
 ---
 
-**HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 {{htmlattrxref("scope", "th")}} and {{htmlattrxref("headers", "th")}} 属性准确定义的。
+**HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) and [`headers`](/zh-CN/docs/Web/HTML/Element/th#headers) 属性准确定义的。
 
 <table class="properties">
  <tbody>
@@ -53,24 +53,24 @@ slug: Web/HTML/Element/th
     - `center`: 单元格内容居中
     - `right`: 单元格内容右对齐
     - `justify` (仅文字内容): 内容拉伸以覆盖单元格
-    - `char` (仅文字内容): 内容相对`<th>`标签中的某个字符对齐（默认值是页面语言的小数点字符）。该字符由{{htmlattrxref("char", "th")}} 和{{htmlattrxref("charoff", "th")}} 属性定义。对齐方式的默认值是 `left`.
+    - `char` (仅文字内容): 内容相对`<th>`标签中的某个字符对齐（默认值是页面语言的小数点字符）。该字符由[`char`](/zh-CN/docs/Web/HTML/Element/th#char) 和[`charoff`](/zh-CN/docs/Web/HTML/Element/th#charoff) 属性定义。对齐方式的默认值是 `left`.
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。
     >
     > - `left`, `center`, `right` 或 `justify` 这些对齐效果，应该使用 CSS 的{{cssxref("text-align")}} 来实现。
-    > - `char` 的对齐效果使用 CSS 的 {{cssxref("text-align")}} 实现， {{htmlattrxref("char", "th")}}亦同。{{unimplemented_inline}} in CSS3.
+    > - `char` 的对齐效果使用 CSS 的 {{cssxref("text-align")}} 实现， [`char`](/zh-CN/docs/Web/HTML/Element/th#char)亦同。{{unimplemented_inline}} in CSS3.
 
 - `axis` {{Deprecated_Inline}}
   - : 这个属性包含了一个空间分隔的字符串的列表。每个字符串是一组单元格的 ID，而该表头适用于这个 ID。
 
-    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。应该使用 {{htmlattrxref("scope", "th")}} 属性代替。
+    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。应该使用 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 属性代替。
 - `bgcolor` {{Non-standard_inline}}
   - : 这个属性定义了每列中每单元格的背景色。它由带有‘#’前缀的 6 位数的十六进制码组成，并在[sRGB](https://www.w3.org/Graphics/Color/sRGB)中被定义。这个属性可能会用到十六个预定义的颜色字符串儿之一。
 
     > **备注：** 不要使用这个属性，它不是标准属性且仅在某些版本的 Microsoft Internet Explorer 支持：{{HTMLElement("th")}} 元素应当用[CSS](/zh-CN/docs/CSS)来样式化。为了创造出同样的效果只需要使用[CSS](/zh-CN/docs/CSS)中的{{cssxref("background-color")}}属性就可以啦。
 
 - `char` {{Deprecated_inline}}
-  - : 列中的内容与`<th>` 元素中的字母对齐。通常其值包含一个 (.) 来排列数字或者货币值。如果 {{htmlattrxref("align", "th")}}没有被设置为`char`，这个属性就会被忽略。
+  - : 列中的内容与`<th>` 元素中的字母对齐。通常其值包含一个 (.) 来排列数字或者货币值。如果 [`align`](/zh-CN/docs/Web/HTML/Element/th#align)没有被设置为`char`，这个属性就会被忽略。
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。为了达到同样的效果，你可以指定该字母为{{cssxref("text-align")}} 属性中的第一个值，或通过 CSS3 中的{{unimplemented_inline}}。
 

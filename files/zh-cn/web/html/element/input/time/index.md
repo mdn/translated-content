@@ -53,7 +53,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
   <tr>
    <td><strong>支持的常用属性</strong></td>
    <td>
-     {{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("readonly", "input")}} 和 {{htmlattrxref("step", "input")}}
+     [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete)、[`list`](/zh-CN/docs/Web/HTML/Element/input#list)、[`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 和 [`step`](/zh-CN/docs/Web/HTML/Element/input#step)
    </td>
   </tr>
   <tr>
@@ -81,7 +81,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
 
 ### 设置 value 属性
 
-你可以通过在创建 `<input>` 元素时在 {{htmlattrxref("value", "input")}} 属性包含一个合法的时间来设置默认值，比如：
+你可以通过在创建 `<input>` 元素时在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含一个合法的时间来设置默认值，比如：
 
 ```html
 <label for="appt-time">选择约定的时间：</label>
@@ -141,7 +141,7 @@ startTime.addEventListener("input", () => {
 
 ### list
 
-列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### max
 
@@ -159,7 +159,7 @@ startTime.addEventListener("input", () => {
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 {{htmlattrxref("value", "input")}} 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
@@ -186,11 +186,11 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 ### 控制输入框大小
 
-`<input type="time">` 不支持诸如 {{htmlattrxref("size", "input")}} 的表单大小属性，因为时间字符串的长度总是相同的。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="time">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性，因为时间字符串的长度总是相同的。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ### 使用 step 属性
 
-你可以使用 {{htmlattrxref("step", "input")}} 属性来更改每次递增或递减的时间数（例如，点击箭头控件时时间值会以 10 分钟为单位变动）。
+你可以使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性来更改每次递增或递减的时间数（例如，点击箭头控件时时间值会以 10 分钟为单位变动）。
 
 > **备注：** 此属性在不同浏览器之间有一些怪异的行为，并不可靠。
 
@@ -219,7 +219,7 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 ### 设置最大和最小时间
 
-你可以使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性来限制用户可以选择的有效时间。在以下示例中，我们设置了可供选择的最小值 `12:00` 和最大值 `18:00`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效时间。在以下示例中，我们设置了可供选择的最小值 `12:00` 和最大值 `18:00`：
 
 ```html
 <form>
@@ -269,7 +269,7 @@ input:valid + span::after {
 
 #### 使最小值和最大值跨越午夜
 
-如果设置的 {{htmlattrxref("min", "input")}} 属性大于 {{htmlattrxref("max", "input")}} 属性，有效时间范围将环绕午夜，产生一个跨越午夜的有效时间范围。这个功能不被任何其他 input 类型所支持。虽然这个功能[在 HTML 规范中](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)，但它还没有被普遍支持。基于 Chrome 的浏览器从 82 版开始支持该功能，Firefox 在 76 版中加入了该功能。Safari 从 14.1 版开始不支持这个功能。要做好出现这种情况的准备。
+如果设置的 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性，有效时间范围将环绕午夜，产生一个跨越午夜的有效时间范围。这个功能不被任何其他 input 类型所支持。虽然这个功能[在 HTML 规范中](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)，但它还没有被普遍支持。基于 Chrome 的浏览器从 82 版开始支持该功能，Firefox 在 76 版中加入了该功能。Safari 从 14.1 版开始不支持这个功能。要做好出现这种情况的准备。
 
 ```js
 const input = document.createElement('input');
@@ -287,7 +287,7 @@ if (input.validity.valid && input.type === 'time') {
 
 ### 使时间成为必需值
 
-此外，你可以使用 {{htmlattrxref("required", "input")}} 属性来强制填写时间。因此，如果你试图提交一个超出设定范围的时间，或一个空的时间字段，支持的浏览器将显示一个错误。
+此外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写时间。因此，如果你试图提交一个超出设定范围的时间，或一个空的时间字段，支持的浏览器将显示一个错误。
 
 让我们看一个例子；在这里，我们设置了最小和最大的时间，也使这个字段成为必需的：
 
@@ -334,7 +334,7 @@ if (input.validity.valid && input.type === 'time') {
 - `3 o'clock in the afternoon`
 - 等等
 
-一个办法是在你的 `time` 输入上添加 {{htmlattrxref("pattern", "input")}} 属性。即使 `time` 输入不使用它，`text` 输入回退也会使用。例如，试着在一个不支持时间输入的浏览器中查看下面的演示：
+一个办法是在你的 `time` 输入上添加 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。即使 `time` 输入不使用它，`text` 输入回退也会使用。例如，试着在一个不支持时间输入的浏览器中查看下面的演示：
 
 ```html
 <form>

@@ -89,7 +89,7 @@ slug: Web/HTML/Element/link
 - `href`
   - : 此属性指定被链接资源的{{glossary("URL")}}。URL 可以是绝对的，也可以是相对的。
 - `hreflang`
-  - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见 [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt)。仅当设置了 {{htmlattrxref("href", "a")}} 属性时才应设置该属性。
+  - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见 [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt)。仅当设置了 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性时才应设置该属性。
 - `importance` {{Experimental_Inline}}
   - : 指示资源的相对重要性。优先级提示使用以下值委托：**`auto`**: 表示**没有偏好**。浏览器可以使用其自己的启发式方法来确定资源的优先级。**`high`**: 向浏览器指示资源具有高优先级。**`low`**: 向浏览器指示资源的优先级较低。
 
@@ -110,12 +110,12 @@ slug: Web/HTML/Element/link
 - `rel`
   - : 此属性命名链接文档与当前文档的关系。该属性必须是[链接类型值](/zh-CN/docs/Web/HTML/Link_types)的用空格分隔的列表。
 - `sizes`
-  - : 这个属性定义了包含相应资源的可视化媒体中的 icons 的大小。它只有在{{htmlattrxref("rel","link")}}包含 icon 的[link 类型值](/zh-CN/docs/Web/HTML/Link_types)。它可能有如下的规则。
+  - : 这个属性定义了包含相应资源的可视化媒体中的 icons 的大小。它只有在[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)包含 icon 的[link 类型值](/zh-CN/docs/Web/HTML/Link_types)。它可能有如下的规则。
 
     - `any` 表示图标可以按矢量格式缩放到任意大小，例如 `image/svg+xml`。
     - 一个由空白符分隔的尺寸列表。每一个都以`<width in pixels>x<height in pixels>` 或 `<width in pixels>X<height in pixels>给出。`尺寸列表中的每一个尺寸都必须包含在资源里。
 
-    > **备注：** 大多数的 icon 格式只能存储一个 icon。因此绝大多数使用 {{htmlattrxref("sizes")}}时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式都是这样，ICO 使用得更加广泛，推荐你使用它。
+    > **备注：** 大多数的 icon 格式只能存储一个 icon。因此绝大多数使用 [`sizes`](/zh-CN/docs/Web/HTML/Global_attributes#sizes)时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式都是这样，ICO 使用得更加广泛，推荐你使用它。
     >
     > - 苹果的 IOS 系统并不支持这个属性，于是苹果的 IPhone 以及 IPad 使用特殊的、非标准的 [link 类型值](/zh-CN/docs/Web/HTML/Link_types)去定义作为 Web Clip 或开始占位符：`apple-touch-icon` 和 `apple-touch-startup-icon`。
 
@@ -140,9 +140,9 @@ slug: Web/HTML/Element/link
 
     > **备注：** 该属性已淘汰且禁止使用**。要**实现相同效果，可在外链资源中使用 `Content-Type` HTTP header。
 - `rev`{{Deprecated_Inline}}
-  - : 此属性的值显示了 {{HTMLAttrxRef("href", "link")}} 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于{{HTMLAttrxRef("rel", "link")}}的可能值。
+  - : 此属性的值显示了 [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)的可能值。
 
-    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的{{HTMLAttrxRef("rel", "link")}}属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
+    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
 
 ## 示例
 

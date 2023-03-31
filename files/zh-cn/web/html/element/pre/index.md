@@ -45,7 +45,7 @@ slug: Web/HTML/Element/pre
 这个元素只具有全局属性。
 
 - `cols` {{non-standard_inline}}{{Deprecated_Inline}}
-  - : 定义每行的最大字符数。这是一个非标准的属性，作用与{{htmlattrxref("width", "pre")}}相同。要实现这样的效果，应该使用 CSS。
+  - : 定义每行的最大字符数。这是一个非标准的属性，作用与[`width`](/zh-CN/docs/Web/HTML/Element/pre#width)相同。要实现这样的效果，应该使用 CSS。
 - `width` {{Deprecated_Inline}}
   - : 包含每行的最大字符数。虽然在技术上仍被实现，但这个属性没有视觉效果。要实现这样的效果，应该使用 CSS。
 - `wrap` {{non-standard_inline}}
@@ -74,7 +74,7 @@ It is important to provide an alternate description for any images or diagrams c
 
 People experiencing low vision conditions and browsing with the aid of assistive technology such as a screen reader may not understand what the preformatted text characters are representing when they are read out in sequence.
 
-A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by a combination of an {{htmlattrxref("id")}} and the [ARIA](/zh-CN/docs/Web/Accessibility/ARIA) `role` and `aria-labelledby` attributes allow the preformatted text to be announced as an image, with the `figcaption` serving as the image's alternate description.
+A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by a combination of an [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) and the [ARIA](/zh-CN/docs/Web/Accessibility/ARIA) `role` and `aria-labelledby` attributes allow the preformatted text to be announced as an image, with the `figcaption` serving as the image's alternate description.
 
 ### 示例
 

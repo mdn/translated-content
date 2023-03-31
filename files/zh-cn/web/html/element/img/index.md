@@ -16,9 +16,9 @@ slug: Web/HTML/Element/img
 
 还有很多其他属性，可以实现各种不同的目的：
 
-- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 {{htmlattrxref("crossorigin", "img")}} 和 {{htmlattrxref("referrerpolicy", "img")}} 属性。
-- 使用 {{htmlattrxref("width", "img")}} 和 {{htmlattrxref("height", "img")}} 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
-- 使用 {{htmlattrxref("sizes", "img")}} 和 {{htmlattrxref("srcset", "img")}} 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程）。
+- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#crossorigin) 和 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/img#referrerpolicy) 属性。
+- 使用 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
+- 使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 和 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程）。
 
 ## 支持的图像格式
 
@@ -42,7 +42,7 @@ Web 最常用的图像格式是：
 
 ## 图像加载错误
 
-如果在加载或渲染图像时发生错误，且设置了至少一个 {{htmlattrxref("onerror")}} 事件处理器来处理 {{domxref("Element/error_event", "error")}} 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
+如果在加载或渲染图像时发生错误，且设置了至少一个 [`onerror`](/zh-CN/docs/Web/HTML/Global_attributes#onerror) 事件处理器来处理 {{domxref("Element/error_event", "error")}} 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
 
 - `src` 属性的属性值为空（`""`）或者 `null`。
 - `src` 属性的 {{glossary("URL")}} 和用户正在浏览的页面的 URL 完全相同。
@@ -114,7 +114,7 @@ Web 最常用的图像格式是：
 - `ismap`
   - : 这个布尔属性表示图像是否是[服务器端图像映射](https://en.wikipedia.org/wiki/Image_map#Server-side)的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
 
-    > **备注：** 只有在 `<img>` 元素是一个拥有有效 {{htmlattrxref("href","a")}} 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
+    > **备注：** 只有在 `<img>` 元素是一个拥有有效 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
 
 - `loading`
   - : 指示浏览器应当如何加载该图像。允许的值：
@@ -193,12 +193,12 @@ Web 最常用的图像格式是：
 - `hspace` {{Deprecated_Inline}}
   - : 插入到图像的左侧和右侧的空白像素的值。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 - `longdesc` {{Deprecated_Inline}}
-  - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 {{htmlattrxref("id")}}。
+  - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。
 
     > **备注：** 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
 
 - `name` {{Deprecated_Inline}}
-  - : 元素的名字。使用 {{htmlattrxref("id")}} 属性代替此废弃属性。
+  - : 元素的名字。使用 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性代替此废弃属性。
 - `vspace` {{Deprecated_Inline}}
   - : 插入到图像的上方和下方的空白像素的数组。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 
@@ -302,7 +302,7 @@ Web 最常用的图像格式是：
 
 ### title 属性
 
-{{htmlattrxref("title")}} 属性不是 `alt` 属性可接受的替代品。并且，避免将 `alt` 属性的值直接复制到同一幅图片的`title` 属性上。这样可能会让一些屏幕阅读器把同一段描述读两遍，造成一定程度上的困扰。
+[`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性不是 `alt` 属性可接受的替代品。并且，避免将 `alt` 属性的值直接复制到同一幅图片的`title` 属性上。这样可能会让一些屏幕阅读器把同一段描述读两遍，造成一定程度上的困扰。
 
 `title` 属性也不该被用作一幅图片在 `alt` 之外的补充说明信息。如果一幅图片需要小标题，使用 [`figure`](/zh-CN/docs/Web/HTML/Element/figure) 或 [`figcaption`](/zh-CN/docs/Web/HTML/Element/figcaption) 元素。
 

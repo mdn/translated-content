@@ -33,7 +33,7 @@ Edge 的 `month` 控制器看起来像这样的：
   </tr>
   <tr>
    <td><strong>支持的共有属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("readonly", "input")}} 和 {{htmlattrxref("step", "input")}}</td>
+   <td>[`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete)、[`list`](/zh-CN/docs/Web/HTML/Element/input#list)、[`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 和 [`step`](/zh-CN/docs/Web/HTML/Element/input#step)</td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -56,7 +56,7 @@ Edge 的 `month` 控制器看起来像这样的：
 
 ### 设置默认值
 
-你可以通过在 {{htmlattrxref("value", "input")}} 属性中包含月份和年份来设置该输入控件的默认值，像这样：
+你可以通过在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性中包含月份和年份来设置该输入控件的默认值，像这样：
 
 ```html
 <label for="bday-month">你在哪个月出生？</label>
@@ -91,17 +91,17 @@ monthControl.value = '2001-06';
 
 ### list
 
-列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### max
 
-使用在[值](#值)章节中讨论的字符串格式指定的所接受的最大年份和月份。如果输入到该元素的 {{htmlattrxref("value", "input")}} 超过了这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最大值。
+使用在[值](#值)章节中讨论的字符串格式指定的所接受的最大年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过了这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最大值。
 
 该值必须晚于或等于 `min` 属性所指定的年份-月份对。
 
 ### min
 
-使用在[值](#值)章节中讨论的字符串格式指定的所接受的最小年份和月份。如果输入到该元素的 {{htmlattrxref("value", "input")}} 小于这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最小值。
+使用在[值](#值)章节中讨论的字符串格式指定的所接受的最小年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最小值。
 
 该值必须早于或等于 `max` 属性所指定的年份-月份对。
 
@@ -113,7 +113,7 @@ monthControl.value = '2001-06';
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 {{htmlattrxref("value", "input")}} 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
@@ -142,7 +142,7 @@ monthControl.value = '2001-06';
 
 ### 设置最大和最小日期
 
-你可以使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性来限制用户选择日期的范围。在下列的例子中我们指定最小月份 `1900-01` 和最大月份 `2013-12`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户选择日期的范围。在下列的例子中我们指定最小月份 `1900-01` 和最大月份 `2013-12`：
 
 ```html
 <form>
@@ -165,13 +165,13 @@ monthControl.value = '2001-06';
 
 ### 控制输入大小
 
-`<input type="month">` 不支持诸如 {{htmlattrxref("size", "input")}} 的表单大小属性，你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="month">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性，你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ## 验证
 
 默认情况下，`<input type="month">` 不会对输入的值应用任何验证，用户界面实现会屏蔽所有非日期值的输入，尽管这很有用，但是仍然无法完全依赖于该值的合法性。你仍然可以不填入任何值而提交，或输入不合法的日期值（如 4 月 32 日）。
 
-为了避免这种情况，你可以使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 来限制可用的日期（参见[设置最大和最小日期](#设置最大和最小日期)），并使用 {{htmlattrxref("required", "input")}} 属性令日期必填。在支持的浏览器中，当你尝试提交超出范围的日期，或空日期值时，会显示错误信息。
+为了避免这种情况，你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 来限制可用的日期（参见[设置最大和最小日期](#设置最大和最小日期)），并使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性令日期必填。在支持的浏览器中，当你尝试提交超出范围的日期，或空日期值时，会显示错误信息。
 
 我们来看一个例子，这里我们设定了最小和最大的日期，并令该字段必填：
 
@@ -252,7 +252,7 @@ input:valid + span::after {
 - `Month yyyy` (July 2022)
 - 等等
 
-一个办法是在你的 `month` 输入上添加 {{htmlattrxref("pattern", "input")}} 属性。即使 `month` 输入不使用它，text 输入回退也会使用。例如，试着在一个不支持 month 输入的浏览器中查看下面的演示：
+一个办法是在你的 `month` 输入上添加 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。即使 `month` 输入不使用它，text 输入回退也会使用。例如，试着在一个不支持 month 输入的浏览器中查看下面的演示：
 
 ```html
 <form>

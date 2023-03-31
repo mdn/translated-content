@@ -51,7 +51,7 @@ slug: Web/HTML/Element/form
 - `accept`{{Deprecated_Inline}}
   - : 一个逗号分隔的列表，包括服务器能接受的内容类型。
 
-    > **备注：** **此属性已在 HTML5 中被移除并且不再被使用。**作为替代，可以使用 `<input type=file>` 元素中的 {{htmlattrxref("accept", "input")}} 属性。
+    > **备注：** **此属性已在 HTML5 中被移除并且不再被使用。**作为替代，可以使用 `<input type=file>` 元素中的 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性。
 - `accept-charset`
   - : 一个空格分隔或逗号分隔的列表，此列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串 `"UNKNOWN"`。此字符串指的是，和包含此表单元素的文档相同的编码。
     在之前版本的 HTML 中，不同的字符编码可以用空格或逗号分隔。在 HTML5 中，只有空格可以允许作为分隔符。
@@ -77,28 +77,28 @@ slug: Web/HTML/Element/form
 下列属性控制提交表单时的行为。
 
 - `action`
-  - : 处理表单提交的 URL。这个值可被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素上的 {{htmlattrxref("formaction", "button")}} 属性覆盖。
+  - : 处理表单提交的 URL。这个值可被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素上的 [`formaction`](/zh-CN/docs/Web/HTML/Element/button#formaction) 属性覆盖。
 - `enctype`
   - : 当 `method` 属性值为 `post` 时，`enctype` 就是将表单的内容提交给服务器的 [MIME 类型](http://en.wikipedia.org/wiki/Mime_type) 。可能的取值有：
 
     - `application/x-www-form-urlencoded`：未指定属性时的默认值。
     - `multipart/form-data`：当表单包含 `type=file` 的 {{HTMLElement("input")}} 元素时使用此值。
-    - `text/plain`：出现于 HTML5，用于调试。这个值可被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素上的 {{htmlattrxref("formenctype", "button")}} 属性覆盖。
+    - `text/plain`：出现于 HTML5，用于调试。这个值可被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素上的 [`formenctype`](/zh-CN/docs/Web/HTML/Element/button#formenctype) 属性覆盖。
 - `method`
   - : 浏览器使用这种 [HTTP](/zh-CN/docs/HTTP) 方式来提交 表单。可能的值有：
 
     - `post`：指的是 HTTP [POST 方法](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5)；表单数据会包含在表单体内然后发送给服务器。
     - `get`：指的是 HTTP [GET 方法](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)；表单数据会附加在 `action` 属性的 URL 中，并以 '?' 作为分隔符，[没有副作用](/zh-CN/docs/Glossary/Idempotent) 时使用这个方法。
-    - `dialog`：如果表单在 {{HTMLElement("dialog")}} 元素中，提交时关闭对话框。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 {{htmlattrxref("formmethod", "button")}} 属性覆盖。
+    - `dialog`：如果表单在 {{HTMLElement("dialog")}} 元素中，提交时关闭对话框。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 [`formmethod`](/zh-CN/docs/Web/HTML/Element/button#formmethod) 属性覆盖。
 - `novalidate`
-  - : 此布尔值属性表示提交表单时不需要验证表单。如果没有声明该属性（因此表单需要通过验证）。该属性可以被表单中的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 {{htmlattrxref("formnovalidate", "button")}} 属性覆盖。
+  - : 此布尔值属性表示提交表单时不需要验证表单。如果没有声明该属性（因此表单需要通过验证）。该属性可以被表单中的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 [`formnovalidate`](/zh-CN/docs/Web/HTML/Element/button#formnovalidate) 属性覆盖。
 - `target`
   - : 表示在提交表单之后，在哪里显示响应信息。在 HTML 4 中，这是一个 frame 的名字/关键字对。在 HTML5 里，这是一个*浏览上下文* 的名字/关键字（如标签页、窗口或 iframe）。下述关键字有特别含义：
 
     - `_self`：默认值。在相同浏览上下文中加载。
     - `_blank`：在新的未命名的浏览上下文中加载。
     - `_parent`：在当前上下文的父级浏览上下文中加载，如果没有父级，则与 \_self 表现一致。
-    - `_top`：在最顶级的浏览上下文中（即当前上下文的一个没有父级的祖先浏览上下文），如果没有父级，则与 \_self 表现一致。此值可以被 {{HTMLElement("button")}}、 [`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 {{htmlattrxref("formtarget", "button")}} 属性覆盖。
+    - `_top`：在最顶级的浏览上下文中（即当前上下文的一个没有父级的祖先浏览上下文），如果没有父级，则与 \_self 表现一致。此值可以被 {{HTMLElement("button")}}、 [`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 [`formtarget`](/zh-CN/docs/Web/HTML/Element/button#formtarget) 属性覆盖。
 
 ## 示例
 

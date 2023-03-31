@@ -86,4 +86,4 @@ blockquote {
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
-- HTML 的 {{htmlattrxref("dir")}} 全局属性
+- HTML 的 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes#dir) 全局属性

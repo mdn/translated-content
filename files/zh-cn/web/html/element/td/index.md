@@ -54,12 +54,12 @@ slug: Web/HTML/Element/td
     - `center`: The content is centered in the cell.
     - `right`: The content is aligned to the right of the cell.
     - `justify` (with text only): The content is stretched out inside the cell so that it covers its entire width.
-    - `char` (with text only): The content is aligned to a character inside the `<th>` element with minimal offset. This character is defined by the {{htmlattrxref("char", "td")}} and {{htmlattrxref("charoff", "td")}} attributes {{unimplemented_inline(2212)}}.The default value when this attribute is not specified is `left`.
+    - `char` (with text only): The content is aligned to a character inside the `<th>` element with minimal offset. This character is defined by the [`char`](/zh-CN/docs/Web/HTML/Element/td#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/td#charoff) attributes {{unimplemented_inline(2212)}}.The default value when this attribute is not specified is `left`.
 
     > **备注：** Do not use this attribute as it is obsolete in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, apply the CSS {{cssxref("text-align")}} property to the element.
-    > - To achieve the same effect as the `char` value, give the {{cssxref("text-align")}} property the same value you would use for the {{htmlattrxref("char", "td")}}. {{unimplemented_inline}} in CSS3.
+    > - To achieve the same effect as the `char` value, give the {{cssxref("text-align")}} property the same value you would use for the [`char`](/zh-CN/docs/Web/HTML/Element/td#char). {{unimplemented_inline}} in CSS3.
 
 - `axis` {{Deprecated_Inline}}
   - : This attribute contains a list of space-separated strings. Each string is the `id` of a group of cells that this header applies to.
@@ -71,7 +71,7 @@ slug: Web/HTML/Element/td
     > **备注：** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("td")}} element should be styled using [CSS](/zh-CN/docs/CSS). To create a similar effect use the {{cssxref("background-color")}} property in [CSS](/zh-CN/docs/CSS) instead.
 
 - `char` {{Deprecated_Inline}}
-  - : The content in the cell element is aligned to a character. Typical values include a period (.) to align numbers or monetary values. If {{htmlattrxref("align", "td")}} is not set to `char`, this attribute is ignored.
+  - : The content in the cell element is aligned to a character. Typical values include a period (.) to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/td#align) is not set to `char`, this attribute is ignored.
 
     > **备注：** Do not use this attribute as it is obsolete in the latest standard. To achieve the same effect, you can specify the character as the first value of the {{cssxref("text-align")}} property, {{unimplemented_inline}} in CSS3.
 - `charoff` {{Deprecated_Inline}}

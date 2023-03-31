@@ -44,5 +44,5 @@ canvas.mozOpaque = false;
 ## 参考
 
 - 定义它的接口，{{domxref("HTMLCanvasElement")}}.
-- {{HTMLElement("canvas")}} 元素的{{htmlattrxref("moz-opaque", "canvas")}}HTML 属性
+- {{HTMLElement("canvas")}} 元素的[`moz-opaque`](/zh-CN/docs/Web/HTML/Element/canvas#moz-opaque)HTML 属性
 - [为 Firefox OS 优化你的 JavaScript 游戏](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
