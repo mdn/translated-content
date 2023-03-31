@@ -12,7 +12,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ## 语法
 
 ```js-nolint
-// 箭头函数
 every(callbackFn)
 every(callbackFn, thisArg)
 ```
