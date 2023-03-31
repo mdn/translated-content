@@ -12,37 +12,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ## 语法
 
 ```js-nolint
-// 箭头函数
-flatMap((element) => { /* … */ })
-flatMap((element, index) => { /* … */ })
-flatMap((element, index, array) => { /* … */ })
-
-// 回调函数
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
-
-// 內联回调函数
-flatMap(function (element) { /* … */ })
-flatMap(function (element, index) { /* … */ })
-flatMap(function (element, index, array) { /* … */ })
-flatMap(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-
-  - : 一个在数组的每个元素上执行的函数。它应该返回一个包含新数组元素的数组，或者一个单一的非数组值以添加到新数组中。
-
-    该函数将被传入以下参数:
-
+  - : 一个在数组的每个元素上执行的函数。它应该返回一个包含新数组元素的数组，或者一个单一的非数组值以添加到新数组中。该函数将被传入以下参数:
     - `element`
       - : 数组中正在处理的当前元素。
     - `index`
       - : 数组中正在处理的当前元素的索引。
     - `array`
       - : 调用 `flatMap()` 的当前数组。
-
 - `thisArg` {{optional_inline}}
   - : 在执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
