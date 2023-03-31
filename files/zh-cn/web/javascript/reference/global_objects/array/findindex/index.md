@@ -14,39 +14,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ## 语法
 
 ```js-nolint
-// 箭头函数
-findIndex((element) => { /* … */ })
-findIndex((element, index) => { /* … */ })
-findIndex((element, index, array) => { /* … */ })
-
-// 回调函数
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
-
-// 内联回调函数
-findIndex(function (element) { /* … */ })
-findIndex(function (element, index) { /* … */ })
-findIndex(function (element, index, array) { /* … */ })
-findIndex(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-
-  - : 应该为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)来指示已找到匹配的元素。
-
-    该函数将被传入以下参数：
-
+  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)值以指示已找到匹配元素，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
     - `element`
-      - : 数组中正在处理的当前元素。
+      - : 数组中当前正在处理的元素。
     - `index`
-      - : 数组中正在处理的当前元素的索引。
+      - : 正在处理的元素在数组中的索引。
     - `array`
-      - : 调用 `findIndex()` 的当前数组。
-
+      - : 调用了 `findIndex()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 时使用的 `this` 值。请参阅[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
+  - : 执行 `callbackFn` 时用作的 `this` 值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
@@ -125,6 +108,7 @@ console.log(
 
 ## 参见
 
-- [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.findIndex` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.findLast()")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
