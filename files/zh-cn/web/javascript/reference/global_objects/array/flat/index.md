@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 {{JSRef}}
 
-**`flat()`** 方法会根据指定的深度访问子元素和数组，并递归地将所有子数组元素拼接到新的数组中。
+**`flat()`** 方法会根据指定的深度访问递归地元素和子数组，并将所有访问到的子数组元素拼接到新的数组中。
 
 {{EmbedInteractiveExample("pages/js/array-flat.html")}}
 
