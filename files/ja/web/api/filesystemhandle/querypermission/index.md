@@ -65,7 +65,6 @@ async function verifyPermission(fileHandle, withWrite) {
 
 ## 仕様書
 
-
 {{Specifications}}
 
 ## ブラウザーの互換性
