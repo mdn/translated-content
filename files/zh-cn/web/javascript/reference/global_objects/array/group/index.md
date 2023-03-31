@@ -33,7 +33,7 @@ group(callbackFn, thisArg)
 
 ### 返回值
 
-一个带有所有分组属性的 [`无`原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#无原型对象)，每个属性都分配给一个包含相关组元素的数组。
+一个带有所有分组属性的 [`无`原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#无原型对象)，每个属性都分配了一个包含相关组元素的数组。
 
 ### 异常
 
@@ -42,11 +42,11 @@ group(callbackFn, thisArg)
 
 ## 描述
 
-`group()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用一次提供的 `callbackFn` 函数，并返回一个字符串或 symbol（不属于这两种类型的值将被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)），用于指示元素所属的分组。对于每个由回调函数返回的唯一分组名称，在结果对象中创建一个新属性和数组。将每个元素添加到对应其分组的属性中的数组中。
+`group()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用一次提供的 `callbackFn` 函数，并返回一个字符串或 symbol（不属于这两种类型的值将被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)），用于指示元素所属的分组。对于每个由回调函数返回的唯一分组名称，在结果对象中创建一对新属性和数组。每个元素将被添加到其对应分组属性的数组中。
 
 `callbackFn` 作用于数组中的*每个*索引，而不仅仅是已赋值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，空槽的行为表现与 `undefined` 相同。
 
-`group()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同元素的数组对象。但是，作为 `callbackFn` 的函数可以更改数组。请注意，在第一次调用 `callbackFn` *之前*，数组的长度已经被保存。因此：
+`group()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同元素的数组对象。但是，作为 `callbackFn` 的函数可以更改数组。请注意，在第一次调用 `callbackFn`*之前*，数组的长度已经被保存。因此：
 
 - 当开始调用 `group()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
