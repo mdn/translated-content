@@ -1,77 +1,68 @@
 ---
 title: Array.prototype.group()
 slug: Web/JavaScript/Reference/Global_Objects/Array/group
-page-type: javascript-instance-method
-status:
-  - experimental
-browser-compat: javascript.builtins.Array.group
 ---
 
 {{JSRef}} {{SeeCompatTable}}
 
-The **`group()`** method groups the elements of the calling array according to the string values returned by a provided testing function.
-The returned object has separate properties for each group, containing arrays with the elements in the group.
+**`group()`** 方法根据提供的测试函数返回的字符串值，将调用数组的元素分组。返回的对象具有每个组的单独属性，其中包含组中的元素数组。
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupby.html")}} -->
 
-This method should be used when group names can be represented by strings.
-If you need to group elements using a key that is some arbitrary value, use {{jsxref("Array.prototype.groupToMap()")}} instead.
+当分组名称可以用字符串表示时，应使用此方法。如果您需要使用某个任意值作为键来分组元素，请改用 {{jsxref("Array.prototype.groupToMap()")}} 方法。
 
-## Syntax
+## 语法
 
 ```js-nolint
 group(callbackFn)
 group(callbackFn, thisArg)
 ```
 
-### Parameters
+### 参数
 
 - `callbackFn`
-  - : A function to execute for each element in the array. It should return a value that can get coerced into a property key (string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) indicating the group of the current element. The function is called with the following arguments:
+  - : 为数组中的每个元素执行的函数。它应该返回一个值，可以被强制转换成属性键（字符串或 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)），用于指示当前元素所属的分组。该函数被调用时将传入以下参数：
     - `element`
-      - : The current element being processed in the array.
+      - : 数组中当前正在处理的元素。
     - `index`
-      - : The index of the current element being processed in the array.
+      - : 正在处理的元素在数组中的索引。
     - `array`
-      - : The array `group()` was called upon.
+      - : 调用了 `group()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
-### Return value
+### 返回值
 
-A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) with properties for all groups, each assigned to an array containing the elements of the associated group.
+一个带有所有分组属性的 [`无`原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#无原型对象)，每个属性都分配给一个包含相关组元素的数组。
 
-### Exceptions
+### 异常
 
 - `TypeError`
-  - : The specified callback function is not callable.
+  - : 指定的回调函数不可调用。
 
-## Description
+## 描述
 
-The `group()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, returning a string or symbol (values that are neither type are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)) indicating the group of the element.
-A new property and array is created in the result object for each unique group name that is returned by the callback.
-Each element is added to the array in the property that corresponds to its group.
+`group()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用一次提供的 `callbackFn` 函数，并返回一个字符串或 symbol（不属于这两种类型的值将被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)），用于指示元素所属的分组。对于每个由回调函数返回的唯一分组名称，在结果对象中创建一个新属性和数组。将每个元素添加到对应其分组的属性中的数组中。
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
+`callbackFn` 作用于数组中的*每个*索引，而不仅仅是已赋值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，空槽的行为表现与 `undefined` 相同。
 
-The `group()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns an object of arrays that contains the same elements as the ones from the original array. However, the function provided as `callbackFn` can mutate the array. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
+`group()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同元素的数组对象。但是，作为 `callbackFn` 的函数可以更改数组。请注意，在第一次调用 `callbackFn` *之前*，数组的长度已经被保存。因此：
 
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `group()` began.
-- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are visited as if they were `undefined`.
+- 当开始调用 `group()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
+- 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
+- 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被修改后的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素将被当作 `undefined` 而被访问。
 
-> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
+> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
-The returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+返回的对象引用与原始数组*相同*的元素（不是{{glossary("deep copy","深拷贝")}}）。更改这些元素的内部结构将反映在原始数组和返回的对象中。
 
-The `group()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+`group()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
-## Examples
+## 示例
 
-### Using group()
+### 使用 group()
 
-First we define an array containing objects representing an inventory of different foodstuffs.
-Each food has a `type` and a `quantity`.
+首先，我们定义一个包含代表各种食品库存的对象的数组。每种食品都有一个 `type` 和一个 `quantity` 属性。
 
 ```js
 const inventory = [
@@ -83,12 +74,12 @@ const inventory = [
 ];
 ```
 
-The code below groups the elements by the value of their `type` property.
+下面的代码根据元素的 `type` 属性的值对元素进行分组。
 
 ```js
 const result = inventory.group(({ type }) => type);
 
-/* Result is:
+/* 结果是:
 {
   vegetables: [
     { name: 'asparagus', type: 'vegetables', quantity: 5 },
@@ -105,13 +96,9 @@ const result = inventory.group(({ type }) => type);
 */
 ```
 
-The arrow function just returns the `type` of each array element each time it is called.
-Note that the function argument `{ type }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter).
-This unpacks the `type` property of an object passed as a parameter, and assigns it to a variable named `type` in the body of the function.
-This is a very succinct way to access the relevant values of elements within a function.
+箭头函数每次被调用时都只返回每个数组元素的 `type` 属性。请注意，函数参数 `{ type }` 是一个[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数参数传递的对象中提取属性)的基本示例。这会解构传递为参数的对象的 `type` 属性，并将其赋值给函数体中名为 `type` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
 
-We can also create groups inferred from values in one or more properties of the elements.
-Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
+我们还可以创建根据元素的一个或多个属性中的值推断的分组。下面是一个非常类似的示例，根据 `quantity` 字段的值将项目分为 `ok` 或 `restock` 组。
 
 ```js
 function myCallback({ quantity }) {
@@ -120,7 +107,7 @@ function myCallback({ quantity }) {
 
 const result2 = inventory.group(myCallback);
 
-/* Result is:
+/* 结果是:
 {
   restock: [
     { name: "asparagus", type: "vegetables", quantity: 5 },
@@ -135,17 +122,17 @@ const result2 = inventory.group(myCallback);
 */
 ```
 
-### Using group() on sparse arrays
+### 在稀疏数组上使用 group()
 
-When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `group()` method iterates empty slots as if they have the value `undefined`.
+当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用 `group()` 方法时，它会对空槽调用，并将其作为 `undefined` 值进行处理。
 
 ```js
 console.log([1, , 3].group((x) => x)); // { 1: [1], undefined: [undefined], 3: [3] }
 ```
 
-### Calling group() on non-array objects
+### 在非数组对象上调用 group()
 
-The `group()` method reads the `length` property of `this` and then accesses each integer index.
+`group()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
 
 ```js
 const arrayLike = {
@@ -158,15 +145,15 @@ console.log(Array.prototype.group.call(arrayLike, (x) => x % 2));
 // { 0: [2, 4], 1: [3] }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{jsxref("Array.prototype.groupToMap()")}} – Group an array into a map, using any kind of object as a key or value.
-- [Polyfill of `Array.prototype.group` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- {{jsxref("Array.prototype.groupToMap()")}}——使用任何类型的对象作为键或值，将数组分组到映射中。
+- [`core-js` 中 `Array.prototype.group` 的 polyfill](https://github.com/zloirock/core-js#array-grouping)
