@@ -9,18 +9,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/of
 
 **`Array.of()`** 與 **`Array`** 建構式之間的不同在於如何處理整數引數：**`Array.of(7)`** 會建立一個擁有單個元素—`7`—的陣列，而 **`Array(7)`** 會建立一個 `length` 屬性值為 7 的空陣列（**註：**這意味著這個陣列有 7 個空缺欄位（empty slots），而非 7 個值為 `undefined` 的欄位）。
 
-```js
-Array.of(7);       // [7]
-Array.of(1, 2, 3); // [1, 2, 3]
-
-Array(7);          // [ , , , , , , ]
-Array(1, 2, 3);    // [1, 2, 3]
-```
+{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
 
 ## 語法
 
-```plain
-Array.of(element0[, element1[, ...[, elementN]]])
+```js-nolint
+Array.of(element0)
+Array.of(element0, element1)
+Array.of(element0, element1, /* … ,*/ elementN)
 ```
 
 ### 參數
@@ -38,10 +34,34 @@ Array.of(element0[, element1[, ...[, elementN]]])
 
 ## 範例
 
+### 使用 Array.of()
+
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
+```
+
+### 在非陣列建構中使用 of()
+
+The `of()` method can be called on any constructor function that accepts a single argument representing the length of the new array.
+
+```js
+function NotArray(len) {
+  console.log("NotArray called with length", len);
+}
+
+console.log(Array.of.call(NotArray, 1, 2, 3));
+// NotArray called with length 3
+// NotArray { '0': 1, '1': 2, '2': 3, length: 3 }
+
+console.log(Array.of.call(Object)); // [Number: 0] { length: 0 }
+```
+
+When the `this` value is not a constructor, a plain `Array` object is returned.
+
+```js
+console.log(Array.of.call({}, 1)); // [ 1 ]
 ```
 
 ## Polyfill
@@ -66,6 +86,9 @@ if (!Array.of) {
 
 ## 參見
 
+- [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
+- [`Array.of()` & `Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
+- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)
