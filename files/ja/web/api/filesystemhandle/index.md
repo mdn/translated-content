@@ -18,7 +18,7 @@ l10n:
 - {{domxref("FileSystemDirectoryHandle")}}
   - : ディレクトリーエントリーへのハンドルを提供します。
 
-## インスタンスプロパティー
+## インスタンスプロパティ
 
 - {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
   - : エントリーの種類を返します。`'file'` (対応するエントリーがファイルのとき) または `'directory'` です。
