@@ -59,7 +59,7 @@ slug: Web/HTML/Element/input/url
 
 ### list
 
-{{htmlattrdef("list")}} 属性指定了一个 {{HTMLElement("datalist")}} 元素的 id，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+`list` 属性指定了一个 {{HTMLElement("datalist")}} 元素的 id，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### maxlength
 

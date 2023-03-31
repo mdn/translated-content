@@ -13,13 +13,13 @@ slug: Web/HTML/Element/bgsound
 
 ## 属性
 
-- {{htmlattrdef("balance")}}
+- `balance`
   - : 该属性取值在 -10,000 到 +10,000，它决定扬声器之间的音量如何分配。
-- {{htmlattrdef("loop")}}
+- `loop`
   - : 该属性表明音频被播放的次数，是一个数值或者关键字 infinite。
-- {{htmlattrdef("src")}}
+- `src`
   - : 该属性定义了音频文件的 URL，必须是以下格式之一：.wav，.au，.mid
-- {{htmlattrdef("volume")}}
+- `volume`
   - : 该属性值域为 -10,000 到 0，它决定背景音乐的音量大小。
 
 ## 示例

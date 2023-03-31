@@ -41,9 +41,9 @@ slug: Web/HTML/Element/menu
 
 该元素支持[全局属性](/zh-CN/HTML/Global_attributes)，以及以下属性。
 
-- {{HTMLAttrDef("label")}} {{Deprecated_inline}}
+- `label` {{Deprecated_inline}}
   - : The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
-- {{HTMLAttrDef("type")}}
+- `type`
   - : This attribute indicates the kind of menu being declared, and can be one of two values.
 
     - `context` {{Deprecated_inline}} : Indicates the _popup menu_ state, which represents a group of commands activated through another element. This might be as a button menu referenced by a {{HTMLAttrxRef("menu", "button")}} attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a [`contextmenu`](/zh-CN/docs/HTML/Global_attributes#attr-contextmenu) attribute. This value is the default if the attribute is missing and the parent element is also a `<menu>` element.
