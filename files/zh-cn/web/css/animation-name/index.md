@@ -91,7 +91,7 @@ animation-name: unset;
 
 将鼠标悬停在矩形上来播放动画。
 
-{{EmbedLiveSample("示例","100%","250")}}
+{{EmbedLiveSample("命名动画","100%","250")}}
 
 参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)以获取示例。
 
