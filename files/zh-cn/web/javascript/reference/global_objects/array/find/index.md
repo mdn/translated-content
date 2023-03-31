@@ -33,7 +33,7 @@ find(callbackFn, thisArg)
       - : 调用了 `find()` 的数组本身。
 
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 时用作的 `this` 值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
