@@ -7,7 +7,7 @@ slug: Web/WebDriver
 
 WebDriver 是远程控制接口，可以对用户代理进行控制。它提供了一个平台和中立语言协议结构，作为进程外程序远程指导 web 浏览器行为的方法。
 
-具备编写可以在不同平台上的许多浏览器中互换运行的指令集的能力，对于向用户提供一致的体验至关重要。随着网络平台的新一轮发展，设备多样性的增加以及对技术之间真正的互操作性的要求， WebDriver 提供了[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)的工具。
+具备编写可以在不同平台上的许多浏览器中互换运行的指令集的能力，对于向用户提供一致的体验至关重要。随着网络平台的新一轮发展，设备多样性的增加以及对技术之间真正的互操作性的要求，WebDriver 提供了[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)的工具。
 
 WebDriver 所提供的是一组接口，用于发现和操作网络文档中的 DOM 元素，并控制用户代理的行为。它的主要目的是让 web 作者编写测试，从单独的控制过程中实现用户代理的自动化，但也可以用这样的方式，让浏览器内的脚本控制一个（单独的）浏览器。
 
@@ -38,7 +38,7 @@ with webdriver.Firefox() as driver:
         print(f'#{i} {elem.text} ({elem.get_attribute("href")})')
 ```
 
-它会输出：
+它可能会输出：
 
 ```
 #1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
