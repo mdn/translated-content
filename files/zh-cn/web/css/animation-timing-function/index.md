@@ -95,11 +95,11 @@ animation-timing-function: unset;
 
 在关键帧内，`animation-timing-function` 是一个 at-rule-specific 描述符，而不是同名的属性。时间并没有被动画化。相反，关键帧的时间函数会在逐个属性的基础上应用，从指定该函数的关键帧开始，直到下一个指定该属性的关键帧，或者直到动画结束（如果没有后续关键帧指定该属性）。因此，在 `100%` 或 `to` 关键帧上指定的 `animation-timing-function` 永远不会被使用。
 
-### 形式定义
+## 形式定义
 
 {{cssinfo}}
 
-### 形式语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -246,5 +246,7 @@ animation-timing-function: unset;
 ## 参见
 
 - [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
+- [cubic-bezier.com](https://cubic-bezier.com)
 - 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-play-state")}}
