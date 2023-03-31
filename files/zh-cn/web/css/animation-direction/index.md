@@ -37,11 +37,11 @@ animation-direction: unset;
 - `normal`
   - : 动画在每个循环中*正向*播放。换句话说，每次动画循环时，动画将重置为起始状态并重新开始。这是默认值。
 - `reverse`
-  - : 动画在每个循环中反向播放。换句话说，每次动画循环时，动画将重置为结束状态并重新开始。动画步骤将反向执行，并且时间函数也将被反转。例如，`ease-in` 时间函数变为 `ease-out`。
+  - : 动画在每个循环中*反向*播放。换句话说，每次动画循环时，动画将重置为结束状态并重新开始。动画步骤将反向执行，并且时间函数也将被反转。例如，`ease-in` 时间函数变为 `ease-out`。
 - `alternate`
-  - : 动画在每个循环中反向播放，第一次迭代是*正向*播放。确定循环是奇数还是偶数的计数从 1 开始。
+  - : 动画在每个循环中正反交替播放，第一次迭代是*正向*播放。确定循环是奇数还是偶数的计数从 1 开始。
 - `alternate-reverse`
-  - : 动画在每个循环中反向播放，第一次迭代是*反向*播放。确定循环是奇数还是偶数的计数从 1 开始。
+  - : 动画在每个循环中正反交替播放，第一次迭代是*反向*播放。确定循环是奇数还是偶数的计数从 1 开始。
 
 > **备注：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
@@ -107,4 +107,4 @@ animation-direction: unset;
 
 - [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
-- 其他相关的动画属性: {{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}
+- 其他相关的动画属性: {{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}
