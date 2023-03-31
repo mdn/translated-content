@@ -97,7 +97,7 @@ console.log(Array.prototype.flat.call(arrayLike));
 
 ## 参见
 
-- [Polyfill of `Array.prototype.flat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.flat` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}

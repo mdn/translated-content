@@ -97,7 +97,7 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 
 ## 参见
 
-- [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.forEach()")}}
@@ -105,4 +105,3 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 - {{jsxref("Array.prototype.some()")}}
 - [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
