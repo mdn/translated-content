@@ -5,9 +5,9 @@ slug: Web/API/HTMLCanvasElement/mozOpaque
 
 {{APIRef("Canvas API")}}{{non-standard_header}}
 
-非标准的 **`HTMLCanvasElement.mozOpaque`** 是一种 {{jsxref("Boolean")}} 的数据反映了{{HTMLElement("canvas")}}元素的{htmlattrxref("moz-opaque"， "canvas")} HTML 属性。它能够让画布（canvas）将半透明作为一个参考因素。如果画布知道没有半透明因素，作画的性能可以优化。
+非标准的 **`HTMLCanvasElement.mozOpaque`** 是一种 {{jsxref("Boolean")}} 的数据反映了 {{HTMLElement("canvas")}} 元素的 [`moz-opaque`](/zh-CN/docs/Web/HTML/Element/canvas#moz-opaque) HTML 属性。它能够让画布（canvas）将半透明作为一个参考因素。如果画布知道没有半透明因素，作画的性能可以优化。
 
-当使用{{domxref("HTMLCanvasElement.getContext()")}}创建绘图上下文时，该 api 将被标准化为将 alpha 选项设置为 false。应该避免使用 mozOpaque。Firefox 将在未来停止支持它。
+当使用 {{domxref("HTMLCanvasElement.getContext()")}} 创建绘图上下文时，该 api 将被标准化为将 alpha 选项设置为 false。应该避免使用 mozOpaque。Firefox 将在未来停止支持它。
 
 ## 语法
 
@@ -18,7 +18,7 @@ canvas.mozOpaque = true;
 
 ## 示例
 
-有如下{{HTMLElement("canvas")}} 元素：
+有如下 {{HTMLElement("canvas")}} 元素：
 
 ```html
 <canvas id="canvas" width="300" height="300" moz-opaque></canvas>

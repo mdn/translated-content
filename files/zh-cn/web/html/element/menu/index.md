@@ -3,7 +3,7 @@ title: <menu>
 slug: Web/HTML/Element/menu
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{HTMLSidebar}}
 
 **HTML `<menu>` 元素**呈现了一组用户可执行或激活的命令。这既包含了可能出现在屏幕顶端的列表菜单，也包含了那些隐藏在按钮之下、当点击按钮后显示出来的文本菜单。
 
@@ -165,7 +165,4 @@ div {
 
 ## 参见
 
-- Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.
-- The [`contextmenu`](/zh-CN/docs/Web/HTML/Global_attributes#attr-contextmenu) [global attribute](/zh-CN/docs/Web/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with {{HTMLAttrxRef("type", "menu", 'type="context"')}}.
-
-{{HTMLSidebar}}
+- 其他与列表相关的元素：{{HTMLElement("ol")}}、{{HTMLElement("ul")}} 和 {{HTMLElement("li")}}。
