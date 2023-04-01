@@ -2497,6 +2497,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/zh-CN/docs/WebAssembly/JavaScript_interface
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError	/zh-CN/docs/WebAssembly/JavaScript_interface/CompileError
