@@ -1,5 +1,5 @@
 ---
-title: -moz-appearance
+title: appearance
 slug: Web/CSS/appearance
 ---
 
@@ -224,7 +224,7 @@ appearance: unset;
 | `scrollbartrack-horizontal`            | Firefox                    |                                                                                                                                                                                    |
 | `scrollbartrack-vertical`              | Firefox                    |                                                                                                                                                                                    |
 | `searchfield-decoration`               | Safari Edge                |                                                                                                                                                                                    |
-| `searchfield-results-decoration`       | Chrome Safari Edge         | (Works on Chrome 51 on Windows 7)                                                                                                                                                  |
+| `searchfield-results-decoration`       | Chrome Safari Edge         | 可以在 Windows 7 上的 Chrome 51 上使用。|
 | `searchfield-results-button`           | Safari Edge                |                                                                                                                                                                                    |
 | `searchfield-cancel-button`            | Chrome Safari Edge         |                                                                                                                                                                                    |
 | `snapshotted-plugin-overlay`           | Safari                     |                                                                                                                                                                                    |
@@ -232,7 +232,7 @@ appearance: unset;
 | `slider-vertical`                      | Chrome Safari Edge         |                                                                                                                                                                                    |
 | `sliderthumb-horizontal`               | Chrome Safari Edge         |                                                                                                                                                                                    |
 | `sliderthumb-vertical`                 | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `textfield-multiline`                  | Firefox                    | Use `textarea` instead.                                                                                                                                                            |
+| `textfield-multiline`                  | Firefox                    | 使用 `textarea` 代替.                                                                                                                                                            |
 | `-apple-pay-button`                    | Safari                     | 仅适用于 **iOS** 和 **macOS**。从 iOS 10.1 和 macOS 10.12 开始，在 Web 上可用。                                                                                               |
 
 ## 形式定义
