@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/group
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupby.html")}} -->
 
-当分组名称可以用字符串表示时，应使用此方法。如果您需要使用某个任意值作为键来分组元素，请改用 {{jsxref("Array.prototype.groupToMap()")}} 方法。
+当分组名称可以用字符串表示时，应使用此方法。如果你需要使用某个任意值作为键来分组元素，请改用 {{jsxref("Array.prototype.groupToMap()")}} 方法。
 
 ## 语法
 
@@ -33,7 +33,7 @@ group(callbackFn, thisArg)
 
 ### 返回值
 
-一个带有所有分组属性的 [`无`原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#无原型对象)，每个属性都分配了一个包含相关组元素的数组。
+一个带有所有分组属性的 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，每个属性都分配了一个包含相关组元素的数组。
 
 ### 异常
 
@@ -46,7 +46,7 @@ group(callbackFn, thisArg)
 
 `callbackFn` 作用于数组中的*每个*索引，而不仅仅是已赋值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，空槽的行为表现与 `undefined` 相同。
 
-`group()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同元素的数组对象。但是，作为 `callbackFn` 的函数可以更改数组。请注意，在第一次调用 `callbackFn`*之前*，数组的长度已经被保存。因此：
+`group()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同元素的数组对象。但是，作为 `callbackFn` 的函数可以更改数组。请注意，在第一次调用 `callbackFn` _之前_，数组的长度已经被保存。因此：
 
 - 当开始调用 `group()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
@@ -79,7 +79,7 @@ const inventory = [
 ```js
 const result = inventory.group(({ type }) => type);
 
-/* 结果是:
+/* 结果是：
 {
   vegetables: [
     { name: 'asparagus', type: 'vegetables', quantity: 5 },
