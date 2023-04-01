@@ -5,7 +5,7 @@ slug: Web/CSS/animation-timing-function
 
 {{CSSRef}}
 
-**`animation-timing-function`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画在每个周期内的持续时间内如何进行。
+**`animation-timing-function`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画在每个周期的持续时间内如何进行。
 
 {{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}
 
