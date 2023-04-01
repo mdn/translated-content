@@ -35,8 +35,8 @@ slug: Web/HTML/Element/input/datetime-local
     <tr>
       <td><strong>支持的通用属性</strong></td>
       <td>
-        [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete)、[`list`](/zh-CN/docs/Web/HTML/Element/input#list)、[`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly)
-        和 [`step`](/zh-CN/docs/Web/HTML/Element/input#step)
+        <a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
+        和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>

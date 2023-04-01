@@ -46,12 +46,12 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
     - `center`，单元格内容居中对齐
     - `right`，单元格内容右对齐
     - `justify`，插入空白调整单元格中的文本内容（译者注：即两端对齐）
-    - `char`，将文本内容与一个具有最小偏移量的特定字符对齐，字符和偏移量分别由[`char`](/zh-CN/docs/Web/HTML/Element/tbody#char)和[`charoff`](/zh-CN/docs/Web/HTML/Element/tbody#charoff)属性定义。{{unimplemented_inline("2212")}}.若此值未设置，则假定为`left`。
+    - `char`，将文本内容与一个具有最小偏移量的特定字符对齐，字符和偏移量分别由[`char`](/zh-CN/docs/Web/HTML/Element/tbody#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Element/tbody#charoff) 属性定义。若此值未设置，则假定为 `left`。
 
     > **备注：** 此属性在最新标准中已被废弃（不支持），所以请勿使用。
     >
     > - 为达到与`left`, `center`, `right`或`justify`相同的效果，请使用 CSS {{cssxref("text-align")}}属性。
-    > - 为达到与 char 值相同的效果，在 CSS3 中可将[`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char)的值用作{{cssxref("text-align")}}的属性值{{unimplemented_inline}}。
+    > - 为达到与 char 值相同的效果，在 CSS3 中可将 [`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char) 的值用作 {{cssxref("text-align")}} 的属性值。
 
 - `bgcolor` {{Non-standard_inline}}
   - : 此属性定义了列内单元格的背景色。定义此属性使用'#'作为前缀，其后是定义于[sRGB](https://www.w3.org/Graphics/Color/sRGB)的 6 位十六进制码。也可使用 16 种预定义的色彩字符串之一。
@@ -61,7 +61,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 - `char` {{Deprecated_inline}}
   - : 此属性设置单元格对齐的基准字符。当对齐数字或货币值时，一个典型值会带有一个句点 (.)。如果[`align`](/zh-CN/docs/Web/HTML/Element/tfoot#align)未设置为`char`，此属性将被忽略。
 
-    > **备注：** 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与[`char`](/zh-CN/docs/Web/HTML/Element/tbtfootody#char)相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为[`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char)的属性值{{unimplemented_inline}}。
+    > **备注：** 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与[`char`](/zh-CN/docs/Web/HTML/Element/tbtfootody#char)相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为[`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char)的属性值。
 
 - `charoff` {{Deprecated_inline}}
   - : 此属性用作表明列内数据对于对齐基准字符的偏移字符数，对其基准字符由`char`属性指定。

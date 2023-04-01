@@ -19,7 +19,7 @@ slug: Web/HTML/Element/input/submit
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>[`type`](/zh-CN/docs/Web/HTML/Element/input#type) 和 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#type"><code>type</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#value"><code>value</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>

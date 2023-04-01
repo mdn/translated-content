@@ -25,7 +25,7 @@ slug: Web/HTML/Element/input/number
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>[`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete)、[`list`](/zh-CN/docs/Web/HTML/Element/input#list)、[`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 和 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly)</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>

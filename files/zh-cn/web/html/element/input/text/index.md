@@ -21,11 +21,11 @@ slug: Web/HTML/Element/input/text
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>[`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete)、[`list`](/zh-CN/docs/Web/HTML/Element/input#list)、[`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength)、[`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength)、[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern)、[`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder)、[`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly)、[`required`](/zh-CN/docs/Web/HTML/Element/input#required) 和 [`size`](/zh-CN/docs/Web/HTML/Element/input#size)</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#size"><code>size</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
-   <td>[`list`](/zh-CN/docs/Web/HTML/Element/input#list)、<code>value</code></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<code>value</code></td>
   </tr>
     <tr>
       <td><strong>DOM 接口</strong></td>

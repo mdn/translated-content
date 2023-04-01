@@ -3,7 +3,7 @@ title: <th>
 slug: Web/HTML/Element/th
 ---
 
-**HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) and [`headers`](/zh-CN/docs/Web/HTML/Element/th#headers) 属性准确定义的。
+**HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 和 [`headers`](/zh-CN/docs/Web/HTML/Element/th#headers) 属性准确定义的。
 
 <table class="properties">
  <tbody>

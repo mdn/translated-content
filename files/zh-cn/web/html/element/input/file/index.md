@@ -21,7 +21,7 @@ slug: Web/HTML/Element/input/file
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>[`required`](/zh-CN/docs/Web/HTML/Element/input#required)</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
   </tr>
   <tr>
    <td>

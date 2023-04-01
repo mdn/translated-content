@@ -31,7 +31,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
-   <td>[`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete)、[`list`](/zh-CN/docs/Web/HTML/Element/input#list)、[`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 和 [`step`](/zh-CN/docs/Web/HTML/Element/input#step)</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -182,7 +182,7 @@ input:valid + span::after {
 
 ### 使星期值成为必需值
 
-另外，您可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写星期。因此，如果您尝试提交空白的星期字段，则支持的浏览器将显示错误。
+另外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写星期。因此，如果您尝试提交空白的星期字段，则支持的浏览器将显示错误。
 
 让我们看一个例子；在这里，我们设置了最小和最大星期，并令该字段必填：
 

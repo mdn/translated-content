@@ -41,7 +41,7 @@ slug: Web/HTML/Element/meta
           <li>
             <code>&#x3C;meta charset></code>、<code
             >&#x3C;meta http-equiv></code>：{{HTMLElement("head")}} 元素。如果
-            [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 不是编码声明，它也可以放在
+            <a href="/zh-CN/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> 不是编码声明，它也可以放在
             {{HTMLElement("noscript")}} 元素中，它本身在一个
             <code>&#x3C;head></code> 元素内部。
           </li>
@@ -97,7 +97,7 @@ slug: Web/HTML/Element/meta
 - `charset`
   - : 这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与 ASCII 大小写无关（ASCII case-insensitive）的 `utf-8`。
 - `content`
-  - : 此属性包含[`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 或[`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性的值，具体取决于所使用的值。
+  - : 此属性包含 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 或 [`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性的值，具体取决于所使用的值。
 - `http-equiv`
 
   - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 标头的名称，如下：

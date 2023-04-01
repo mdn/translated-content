@@ -23,7 +23,7 @@ slug: Web/HTML/Element/input/reset
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
-   <td>[`type`](/zh-CN/docs/Web/HTML/Element/input#type) 和 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#type"><code>type</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#value"><code>value</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -42,7 +42,7 @@ slug: Web/HTML/Element/input/reset
 
 ## 值
 
-`<input type="reset">` 元素的 `[`value`](/zh-CN/docs/Web/HTML/Element/input#value)` 属性包含一个用做按钮标签的字符串，诸如 `reset` 之类的按钮没有其他值。
+`<input type="reset">` 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含一个用做按钮标签的字符串，诸如 `reset` 之类的按钮没有其他值。
 
 ### 设置 value 属性
 
@@ -108,7 +108,7 @@ slug: Web/HTML/Element/input/reset
 
 {{EmbedLiveSample("添加重置键盘快捷键", 650, 100)}}
 
-上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的，以避免与系统和软件快捷键冲突。在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性）, 尽管这并不是出于无障碍目的的完善的解决方案。
+上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的，以避免与系统和软件快捷键冲突。在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性），尽管这并不是出于无障碍目的的完善的解决方案。
 
 ### 禁用和启用重置按钮
 
