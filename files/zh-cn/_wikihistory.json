@@ -30514,10 +30514,6 @@
     "modified": "2019-03-23T22:19:16.989Z",
     "contributors": ["wizardforcel"]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/name": {
-    "modified": "2019-03-23T22:27:51.557Z",
-    "contributors": ["lsvih"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/of": {
     "modified": "2019-03-23T22:20:06.649Z",
     "contributors": ["xgqfrms-GitHub"]

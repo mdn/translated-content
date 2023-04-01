@@ -165,7 +165,7 @@ Third
 
 時間資訊標注了此段節點的出現時機，其中包括開始時間與結束時間。結束時間必須比開始時間晚，而開始時間必須比先前所有的開始時間晚，或至少是同一時間。
 
-不同時間節點可以設定為同時顯示，但若 WebVTT 檔案是用在 chapters（{{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 `chapters`），則不允許兩段節點同時出現。
+不同時間節點可以設定為同時顯示，但若 WebVTT 檔案是用在 chapters（{{ HTMLElement("track") }} 的 [`kind`](/zh-TW/docs/Web/HTML/Global_attributes#kind) 設定為 `chapters`），則不允許兩段節點同時出現。
 
 每項時間資訊都由五個部分組成：
 
@@ -483,7 +483,7 @@ The payload is where the main information or content is located. In normal usage
 
 ### 文字內容中的標籤
 
-有很多標籤（例如 `<bold>`）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 `chapters` 時，其中所用的 WebVTT 檔案裡就不能使用標籤。
+有很多標籤（例如 `<bold>`）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 [`kind`](/zh-TW/docs/Web/HTML/Global_attributes#kind) 設定為 `chapters` 時，其中所用的 WebVTT 檔案裡就不能使用標籤。
 
 - **時間標籤**
   - : 時間標籤中的時間，必須比該節點的開始時間晚、比同節點先前之其他時間標籤晚，並且早於該節點的結束時間。_當前文字（active text）_ 代表此時間標籤到下個時間標籤（或文字內容的結尾）之間的文字，其他同節點中，比*當前文字* 早的文字都稱為*先前文字（previous text）* ，而晚於*當前文字* 的便稱為*未來文字（future text）* 。如此便可做出卡拉 OK 字幕效果

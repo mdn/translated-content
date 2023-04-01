@@ -15,11 +15,11 @@ _HTML Font 元素_（`<font>`）定义了该内容的字体大小、顏色与表
 
 如同其他 HTML 元素，这个元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("color")}}
+- `color`
   - : 这个属性使用颜色名称或是十六进制的 #RRGGBB 格式，来设置文字的颜色。
-- {{htmlattrdef("face")}}
+- `face`
   - : 这个属性列出了一个或多个逗号分隔的字体名称。默认样式中的文档文字，会使用客户端浏览器所支持的，第一个字体风格来渲染。如果本地系统中并没有安装列出的字体，浏览器会使用系统预设的均衡（proportional）或等宽（fixed-width）字体。
-- {{htmlattrdef("size")}}
+- `size`
   - : 这个属性使用数字或相对值指定文字大小。数字在最小的 7 到最大的 7 之间，默认值为 3。也可以用诸如 +2 或 -3 的相对值指定，这会将其设置为，相对于 {{HTMLElement("basefont")}} 元素 {{htmlattrxref("size", "basefont")}}属性的值，或者如果不存在，则是相对于 3 也就是默认值的值。
 
 ## DOM 接口

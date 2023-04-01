@@ -46,9 +46,9 @@ HTML _time_ 标签 (`<time>`) 用来表示 24 小时制时间或者[公历日期
 
 像所有其他元素一样，此元素拥有可以使用 [通用属性](/zh-CN/HTML/Global_attributes)。
 
-- {{ htmlattrdef("datetime") }}
+- `datetime`
   - : 该属性表示此元素的时间和日期，并且属性值必须是一个[有效的日期格式，并可包含时间](http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time)。如果此值不能被解析为日期，元素不会有一个关联的时间戳。
-- {{ htmlattrdef("pubdate") }}
+- `pubdate`
   - : (该属性仍在被 WHATWG 和 W3C 组织设计和讨论中.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor [article](/zh-CN/HTML/Element/article) element). If true, the `time` element must have a corresponding date. Additionally, each `time` element indicating a publication date must be the only `time` element that does so for that document.
 
 ### DOM 接口

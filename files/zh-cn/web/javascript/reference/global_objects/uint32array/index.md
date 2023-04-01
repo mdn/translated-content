@@ -25,8 +25,6 @@ new Uint32Array(buffer [, byteOffset [, length]]);
   - : 返回一个数值，代表`Uint32Array`中单个元素的字节大小。`Uint32Array` 返回 `4`。
 - Uint32Array.length
   - : 固定值 (static) 属性，值为 3。使用 {{jsxref("TypedArray.prototype.length", "Uint32Array.prototype.length")}} 获得数组的真实长度（元素个数）。
-- {{jsxref("TypedArray.name", "Uint32Array.name")}}
-  - : 返回字符串类型的值，表示构造器的名字。`Uint32Array` 的返回值是："Uint32Array"。
 - {{jsxref("TypedArray.prototype", "Uint32Array.prototype")}}
   - : _TypedArray_ 对象的原型链。
 

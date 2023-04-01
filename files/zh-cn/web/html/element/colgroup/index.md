@@ -44,7 +44,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
 此标签支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : 这个可枚举的属性定义每一列的元素内容的水平对齐方式，支持的值有：
 
     - `left`，元素中的内容左对齐
@@ -61,26 +61,26 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
     > - 如果表格使用了 {{htmlattrxref("colspan", "td")}} 属性，可以通过合并足够多的属性选择器来实现同样的效果，比如 `[colspan=n]`，但这不常用。
     > - 若要实现与 `char` 相同的效果：在 CSS3 中，你可以使用 {{htmlattrxref("char", "colgroup")}} 作为 {{cssxref("text-align")}} 的属性值。 {{unimplemented_inline}}
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- `bgcolor` {{Non-standard_inline}}
   - : 这个属性用于定义列组中的每一个列成员的背景颜色。在 [sRGB](http://www.w3.org/Graphics/Color/sRGB) 的定义中，它是一个以 '#' 开头的 6 位 16 进制值，有 16 个预定义的表示颜色的字符串可以使用
 
     > **备注：** 不要使用这个并未标准化的属性，它只在 IE 的某些版本中生效，{{HTMLElement("colgroup")}} 标签应该使用 CSS 来定义样式。要实现和 **bgcolor** 属性相似的效果，可以在相关的 {{HTMLElement("td")}} 标签上使用 {{cssxref("background-color")}} 属性。 |
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
   - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "colgroup")}} is not set to `char`, this attribute is ignored, though it will still be used as the default value for the {{htmlattrxref("align", "col")}} of the {{HTMLElement("col")}} which are members of this column group.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "colgroup")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "colgroup")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the **char** attribute.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
-- {{htmlattrdef("span")}}
+- `span`
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<colgroup>` element spans. If not present, its default value is `1`.
 
     > **备注：** This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group. The `span` attribute is not permitted if there are one or more `<col>` elements within the `<colgroup>`.
 
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
   - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 
     - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
@@ -94,7 +94,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
     > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
     > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
-- {{htmlattrdef("width")}}
+- `width`
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
 
 ## 示例
