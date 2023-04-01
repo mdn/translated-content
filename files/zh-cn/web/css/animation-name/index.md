@@ -37,7 +37,7 @@ animation-name: unset;
 - `none`
   - : 一个特殊的关键字，表示没有关键帧。它可用于禁用动画，而不改变其他标识符的顺序，或禁用来自级联的动画。
 - {{cssxref("&lt;custom-ident&gt;")}}
-  - : 一个标识动画的名称。该标识符由区分大小写的字母 `a` 到 `z`、数字 `0` 到 `9`、下划线 (`_`) 和/或破折号 (`-`) 组成。第一个非破折号字符必须是一个字母。此外，在标识符开头不能有两个破折号。此外，标识符不能为 `none`、`unset`、`initial` 或 `inherit`。
+  - : 一个标识动画的名称。该标识符由区分大小写的字母 `a` 到 `z`、数字 `0` 到 `9`、下划线（`_`）和/或破折号（`-`）组成。第一个非破折号字符必须是一个字母。此外，在标识符开头不能有两个破折号。此外，标识符不能为 `none`、`unset`、`initial` 或 `inherit`。
 
 > **备注：** 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
