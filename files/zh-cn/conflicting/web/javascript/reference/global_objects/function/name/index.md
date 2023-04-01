@@ -1,6 +1,7 @@
 ---
 title: TypedArray.name
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Function/name
+original_slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 ---
 
 {{JSRef}}
