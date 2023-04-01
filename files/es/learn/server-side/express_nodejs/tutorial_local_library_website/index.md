@@ -57,7 +57,7 @@ Ya se ha aprendido sobre algunos de estos temas y se ha referido brevemente a ot
 
 ## El sitio web LocalLibrary
 
-_LocalLibrary_ es el nombre del sitio web que vamos a desarrollar en esta serie de tutoriales. Tal como esperas, el objetivo del sitio web es proveer un catalogo online para una pequeña libreria, donde los usuarios exploren los libros disponibles y administren sus cuentas.
+_LocalLibrary_ es el nombre del sitio web que vamos a desarrollar en esta serie de tutoriales. Tal como esperas, el objetivo del sitio web es proveer un catalogo en linea para una pequeña libreria, donde los usuarios exploren los libros disponibles y administren sus cuentas.
 
 Este ejemplo ha sido cuidadosamente elegido porque puede escalarse para mostrar tantos o pocos detalles como necesitemos, de igual forma puede usarse para presentar casi todas las caracteristicas de Express. Mas importante aún, nos permite proporcionar una ruta guiada a traves de la funcionalidad que necesita cualquier sitio web:
 
