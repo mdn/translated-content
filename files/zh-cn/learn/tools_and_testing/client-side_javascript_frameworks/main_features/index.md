@@ -5,7 +5,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-每种 JavaScript 框架都有自己不同的方式更新 DOM，处理浏览器事件，为开发者提供愉快的使用体验，这篇文章将探索“四大”框架的主要特性，从高级角度探讨框架的工作方式以及它们之间的区别。
+每种主流的 JavaScript 框架都有自己不同的方式更新 DOM、处理浏览器事件并为开发者提供愉快的使用体验，这篇文章将探索“四大”框架的主要特性，从较高的层次探讨框架的工作方式以及它们之间的区别。
 
 <table>
   <tbody>
@@ -45,7 +45,7 @@ const header = (
 );
 ```
 
-小括号内的表达式表示一个 HTML [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 元素，里面还有一个 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素。第 4 行被花括号围绕着的 `subject` 告诉应用程序要读取常量 `subject` 的值并将其插入到我们的 `<h1>` 元素当中。
+小括号内的表达式表示一个 HTML [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 元素，里面还有一个 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素。第 4 行 `subject` 周围的花括号告诉应用程序要读取常量 `subject` 的值并将其插入到我们的 `<h1>` 元素当中。
 
 当与 React 一起使用时，上一个片段中的 JSX 将被编译成这样：
 
@@ -66,7 +66,7 @@ const header = React.createElement("header", null,
 
 ### Handlebars
 
-[Handlebars](https://handlebarsjs.com/) 是一种简单的模板语言，虽然它并非仅可用于 Ember 应用程序，但它在 Ember 应用程序中被大量使用。Handlebars代码类似于HTML，但它可以选择从其他地方获取数据。这些数据可以用来影响一个应用程序最终建立的 HTML。
+[Handlebars](https://handlebarsjs.com/) 是一种简单的模板语言，虽然它并非仅可用于 Ember 应用程序，但它在 Ember 应用程序中被大量使用。Handlebars 代码类似于 HTML，但它可以选择从其他地方获取数据。这些数据可用于影响应用程序最终构建的 HTML。
 
 与 JSX 相似的是，Handlebars 使用花括号来注入变量的值。不相似的是，Handlebars 使用双花括号，而不是单花括号。
 
@@ -122,7 +122,7 @@ function add(a: number, b: number) {
 
 如前一章所述，大多数框架都有某种组件模型。React 组件可以使用 JSX 编写，Ember 组件可以使用 Handlebars 编写，Angular 和 Vue 组件可以使用模板语法轻松地扩展 HTML。
 
-不管框架的作者们对于如何编写组件有多么不同的看法，每个框架的组件都提供了一种方法来描述组件可能需要的外部属性、组件的内部状态以及用户可以在组件上可以触发的事件。
+不管框架的作者们对于如何编写组件的看法有多么不同，每个框架的组件都提供了一种方法来描述组件可能需要的外部属性、组件应该管理的内部状态以及用户在组件上可以触发的事件。
 
 本节其余部分的代码片段将使用 React 作为示例，并使用 JSX 编写其组件。
 
@@ -192,7 +192,7 @@ function CounterButton() {
 
 ### 事件
 
-为了实现交互性，组件需要对浏览器事件做出响应，这样我们的应用程序才能对用户做出响应。每个框架都为监听浏览器事件提供了自己的语法，这些语法参考了相应的本地浏览器事件的名称。
+为了实现交互性，组件需要对浏览器事件做出响应，这样我们的应用程序才能对用户做出响应。每个框架都为监听浏览器事件提供了自己的语法，这些语法参考了相应的浏览器原生事件的名称。
 
 在 React 中，监听 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件需要一个特殊的属性 `onClick`。让我们更新上述 `CounterButton` 代码，允许它为每次点击计数：
 
@@ -205,11 +205,11 @@ function CounterButton() {
 }
 ```
 
-在这个版本中，我们使用额外的 `useState()` 功能来创建一个特殊的 `setCount()` 函数，我们可以调用它来更新 `count` 的值。我们在第 4 行调用这个函数，并将 `count` 设置为其当前值加1。
+在这个版本中，我们使用额外的 `useState()` 功能来创建一个特殊的 `setCount()` 函数，我们可以调用它来更新 `count` 的值。我们在第 4 行调用这个函数，并将 `count` 设置为其当前值加 1。
 
 ## 为组件添加样式
 
-每个框架都提供了一种为你的组件——或为整个应用程序——定义样式的方法。尽管每个框架定义组件样式的方法略有不同，但它们都给了你多种方法。通过添加一些辅助模块，你可以用 [Sass](https://sass-lang.com/) 或 [Less](https://lesscss.org/) 来为你的框架应用程序设计样式，或者用 [PostCSS](https://postcss.org/) 来转写你的 CSS 样式表。
+每个框架都提供了一种为你的组件或整个应用程序定义样式的方法。尽管每个框架定义组件样式的方法略有不同，但它们都给了你多种方式。通过添加一些辅助模块，你可以用 [Sass](https://sass-lang.com/) 或 [Less](https://lesscss.org/) 来为你的框架应用程序设计样式，或者用 [PostCSS](https://postcss.org/) 来转译你的 CSS 样式表。
 
 ## 处理依赖
 
@@ -251,7 +251,7 @@ import AuthorCredit from "./components/AuthorCredit";
 </App>
 ```
 
-我们的 `App` 组件有 `AuthorCredit` 组件需要的数据。我们可以重写 `Home` 和 `Article`，让它们向下传递属性，但如果我们的数据的来源和目的地之间有很多层，这就会变得很繁琐。这也是过分的：`Home` 和 `Article` 实际上没有使用作者的肖像或署名，但如果我们想把这些信息放到 `AuthorCredit` 中，我们需要改变 `Home` 和 `Article`来适应它。
+我们的 `App` 组件有 `AuthorCredit` 组件需要的数据。我们可以重写 `Home` 和 `Article`，让它们向下传递属性，但如果我们的数据的来源和目的地之间有很多层，这就会变得很繁琐。这也是不合理的：`Home` 和 `Article` 实际上没有使用作者的肖像或署名，但如果我们想把这些信息放到 `AuthorCredit` 中，我们需要改变 `Home` 和 `Article` 来适应它。
 
 通过许多层组件传递数据的问题被称为“属性穿透”，它对大型应用来说并不理想。
 
@@ -263,19 +263,19 @@ Angular 把这个过程称为[依赖注入](https://angular.io/guide/dependency-
 
 在框架上下文中，一个组件的**生命周期**是一个组件从被追加到 DOM 然后被浏览器渲染（通常称为 _mounting_）到从 DOM 中移除（通常称为 _unmounting_）所经历的一系列阶段的集合。每个框架对这些生命周期阶段的命名都不同，而且不是所有的框架都能让开发者访问相同的阶段。所有的框架都遵循相同的一般模型：它们允许开发者在组件 _mount_、_renders_、_unmount_ 以及这两者之间的许多阶段执行某些动作。
 
-渲染阶段是最需要理解的，因为它在用户与应用程序交互时重复的次数最多。每当浏览器需要渲染一些新的东西时，它就会运行，无论这些新的信息是对浏览器中的内容进行补充、删除，还是对现有内容进行编辑。
+*渲染*阶段是最需要了解的，因为它在用户与应用程序交互时重复的次数最多。每当浏览器需要渲染一些新的东西时，它就会运行，无论这些新的信息是对浏览器中的内容进行补充、删除，还是对现有内容进行编辑。
 
 这个 [React 组件的生命周期图](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)提供了对这个概念的总体概述。
 
 ## 渲染元素
 
-就像生命周期一样，框架对如何渲染应用程序采取了不同但相似的方法。所有的框架都会跟踪浏览器 DOM 的当前渲染版本，并且每个框架都会对 DOM 在应用程序中的组件重新渲染时应该如何变化做出略有不同的决定。因为框架为你做出了这些决定，所以通常不会自己与 DOM 互动。这种远离 DOM 的抽象比自己更新 DOM 更复杂、更耗费内存，但如果没有它，框架就不能让你以它们所熟知的声明性方式编程。
+就像生命周期一样，框架对如何渲染应用程序采取了不同但相似的方法。所有的框架都会跟踪浏览器 DOM 的当前渲染版本，并且每个框架都会对 DOM 在应用程序中的组件重新渲染时应该如何变化做出略有不同的决定。因为框架为你做出了这些决定，所以你通常不会自己与 DOM 交互。这种远离 DOM 的抽象比自己更新 DOM 更复杂、更耗费内存，但如果没有它，框架就不能让你以它们所熟知的声明性方式编程。
 
-**虚拟 DOM** 是一种方法，此时关于浏览器的 DOM 信息被存储在 JavaScript 内存中。你的应用程序更新这个 DOM 副本，然后将其与“真正的” DOM（为你的用户实际呈现的 DOM）进行比较，以决定要呈现什么。应用程序建立一个“差异”来比较更新的虚拟 DOM 和当前渲染的 DOM 之间的差异，并使用该差异将更新应用到真实 DOM。React 和 Vue 都利用虚拟 DOM 模型，但它们在建立差异或渲染时应用的逻辑并不完全相同。
+**虚拟 DOM** 是一种方法，此时关于浏览器的 DOM 信息被存储在 JavaScript 内存中。你的应用程序更新这个 DOM 副本，然后将其与“真正的” DOM（为你的用户实际渲染的 DOM）进行比较，以决定要渲染什么。应用程序建立一个“diff“来比较更新的虚拟 DOM 和当前渲染的 DOM 之间的差异，并使用该差异将更新应用到真实 DOM。React 和 Vue 都利用虚拟 DOM 模型，但它们建立“diff”或渲染应用的逻辑并不完全相同。
 
 你可以[在 React 文档阅读到更多有关虚拟 DOM 的信息](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)。
 
-**增量式 DOM** 与虚拟 DOM 类似，它建立一个 DOM 差异来决定渲染什么，但不同的是，它不在 JavaScript 内存中创建一个完整的 DOM副本。它忽略了 DOM 中不需要被改变的部分。Angular 是本模块到目前为止讨论的唯一一个使用增量 DOM 的框架。
+**增量式 DOM** 与虚拟 DOM 类似，它建立一个 DOM “diff”来决定渲染什么，但不同的是，它不在 JavaScript 内存中创建一个完整的 DOM 副本。它忽略了 DOM 中不需要被改变的部分。Angular 是本模块到目前为止讨论的唯一一个使用增量 DOM 的框架。
 
 你可以[在 Auth0 博客阅读到更多有关增量式 DOM 的信息](https://auth0.com/blog/incremental-dom/)。
 
