@@ -14,25 +14,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ## 语法
 
 ```js
-// 无函数
 sort()
-
-// 箭头函数
-sort((a, b) => { /* … */ } )
-
-// 比较函数
 sort(compareFn)
-
-// 内联比较函数
-sort(function compareFn(a, b) { /* … */ })
 ```
 
 ### 参数
 
 - `compareFn` {{optional_inline}}
-
   - : 用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的各个字符的 Unicode 位点进行排序。
-
     - `a`
       - : 第一个用于比较的元素。
     - `b`

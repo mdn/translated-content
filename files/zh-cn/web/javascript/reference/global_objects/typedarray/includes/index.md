@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 
 ## 语法
 
-```plain
-typedarray.includes(searchElement[, fromIndex]);
+```js-nolint
+includes(searchElement)
+includes(searchElement, fromIndex)
 ```
 
 ### 参数

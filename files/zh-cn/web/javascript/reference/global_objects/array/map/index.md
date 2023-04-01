@@ -12,20 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ## 语法
 
 ```js
-// 箭头函数
-map((element) => { /* … */ })
-map((element, index) => { /* … */ })
-map((element, index, array) => { /* … */ })
-
-// 回调函数
 map(callbackFn)
 map(callbackFn, thisArg)
-
-// 内联回调函数
-map(function(element) { /* … */ })
-map(function(element, index) { /* … */ })
-map(function(element, index, array){ /* … */ })
-map(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
@@ -33,14 +21,12 @@ map(function(element, index, array) { /* … */ }, thisArg)
 - `callbackFn`
 
   - : 生成新数组元素的函数，使用三个参数：
-
     - `currentValue`
       - : `callbackFn` 数组中正在处理的当前元素。
     - `index`
       - : `callbackFn` 数组中正在处理的当前元素的索引。
     - `array`
       - : `map` 方法调用的数组。
-
 - `thisArg` {{optional_inline}}
   - : 执行 `callbackFn` 函数时被用作 `this` 的值。
 

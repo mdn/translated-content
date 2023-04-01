@@ -12,35 +12,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 ## 语法
 
 ```js
-// 箭头函数
-filter((element) => { /* … */ } )
-filter((element, index) => { /* … */ } )
-filter((element, index, array) => { /* … */ } )
-
-// 回调函数
 filter(callbackFn)
 filter(callbackFn, thisArg)
-
-// 内联回调函数
-filter(function(element) { /* … */ })
-filter(function(element, index) { /* … */ })
-filter(function(element, index, array){ /* … */ })
-filter(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-
   - : 用来测试数组中每个元素的函数。返回 `true` 表示该元素通过测试，保留该元素，`false` 则不保留。它接受以下三个参数：
-
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`
       - : 正在处理的元素在数组中的索引。
     - `array`
       - : 调用了 `filter()` 的数组本身。
-
 - `thisArg`{{optional_inline}}
   - : 执行 `callbackFn` 时，用于 `this` 的值。
 

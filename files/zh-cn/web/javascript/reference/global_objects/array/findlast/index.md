@@ -20,39 +20,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 ## 语法
 
 ```js
-// 箭头函数
-findLast((element) => { /* … */ } )
-findLast((element, index) => { /* … */ } )
-findLast((element, index, array) => { /* … */ } )
-
-// 回调函数
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
-
-// 内联回调函数
-findLast(function(element) { /* … */ })
-findLast(function(element, index) { /* … */ })
-findLast(function(element, index, array){ /* … */ })
-findLast(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-
-  - : 数组中测试元素的函数。
-
-    函数在被调用时会传递以下参数：
-
+  - : 数组中测试元素的函数。回调必须返回一个[真值](/zh-CN/docs/Glossary/Truthy)，表示发现一个适当的元素，否则返回一个[假植](/zh-CN/docs/Glossary/Falsy)。函数在被调用时会传递以下参数：
     - `element`
       - : 当前遍历到的元素。
     - `index`
       - : 当前遍历到的元素的索引（位置）。
     - `array`
       - : 调用 `findLast()` 的数组本身。
-
-    回调必须返回一个[真值](/zh-CN/docs/Glossary/Truthy)，表示发现一个适当的元素。该元素被 `findLast()` 返回。
-
 - `thisArg` {{optional_inline}}
   - : 执行 `callbackFn` 时，用作 {{jsxref("Operators/this", "this")}} 的对象。
 

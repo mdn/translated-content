@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 
 ## 语法
 
-```plain
-arr.keys()
+```js-nolint
+keys()
 ```
 
 ### 返回值

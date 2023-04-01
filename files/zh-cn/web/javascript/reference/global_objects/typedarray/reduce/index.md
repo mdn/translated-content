@@ -9,16 +9,15 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 
 ## 语法
 
-```plain
-typedarray.reduce(callback[, initialValue])
+```js-nolint
+reduce(callbackFn)
+reduce(callbackFn, initialValue)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 对类型数组的每一个值应用的函数，它接受以下参数：
-
     - `previousValue`
       - : 在上一次迭代中，调用 callback 的返回值，或者是提供的 `initialValue`。
     - `currentValue`
@@ -27,7 +26,6 @@ typedarray.reduce(callback[, initialValue])
       - : 类型化数组中要处理的当前元素的下标
     - `array`
       - : `reduce` 在其上调用的类型化数组。
-
 - `initialValue`
   - : 可选。用作 `callback` 首次调用`的第一个参数的对象。
 

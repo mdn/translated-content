@@ -14,21 +14,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ## 语法
 
 ```js
-// 箭头函数
-reduceRight((accumulator, currentValue) => { /* … */ } )
-reduceRight((accumulator, currentValue, index) => { /* … */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* … */ } )
-reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
-
-// 回调函数
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
-
-// 内联回调函数
-reduceRight(function(accumulator, currentValue) { /* … */ })
-reduceRight(function(accumulator, currentValue, index) { /* … */ })
-reduceRight(function(accumulator, currentValue, index, array){ /* … */ })
-reduceRight(function(accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### 参数

@@ -18,27 +18,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ## 语法
 
 ```js
-// 箭头函数
-reduce((previousValue, currentValue) => { /* … */ } )
-reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
-reduce((previousValue, currentValue, currentIndex, array) => { /* … */ } )
-
-reduce((previousValue, currentValue) => { /* … */ } , initialValue)
-reduce((previousValue, currentValue, currentIndex) => { /* … */ } , initialValue)
-reduce((previousValue, currentValue, currentIndex, array) => { /* … */ }, initialValue)
-
-// 回调函数
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
-
-// 内联回调函数
-reduce(function(previousValue, currentValue) { /* … */ })
-reduce(function(previousValue, currentValue, currentIndex) { /* … */ })
-reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ })
-
-reduce(function(previousValue, currentValue) { /* … */ }, initialValue)
-reduce(function(previousValue, currentValue, currentIndex) { /* … */ }, initialValue)
-reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### 参数

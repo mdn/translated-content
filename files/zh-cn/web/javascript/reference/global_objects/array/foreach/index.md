@@ -12,37 +12,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ## 语法
 
 ```js
-// 箭头函数
-forEach((element) => { /* … */ })
-forEach((element, index) => { /* … */ })
-forEach((element, index, array) => { /* … */ })
-
-// 回调函数
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// 内联回调函数
-forEach(function(element) { /* … */ })
-forEach(function(element, index) { /* … */ })
-forEach(function(element, index, array){ /* … */ })
-forEach(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
 
-  - : 为数组中每个元素执行的函数。
-
-    函数调用时带有以下参数：
-
+  - : 为数组中每个元素执行的函数。并会丢弃它的返回值。函数调用时带有以下参数：
     - `element`
       - : 数组中正在处理的当前元素。
     - `index`
       - : 数组中正在处理的当前元素的索引。
     - `array`
       - : `forEach()` 方法正在操作的数组。
-
 - `thisArg` {{optional_inline}}
   - : 可选参数。当执行回调函数 `callbackFn` 时，用作 `this` 的值。
 
