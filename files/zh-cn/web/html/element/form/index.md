@@ -51,7 +51,7 @@ slug: Web/HTML/Element/form
 - `accept`{{Deprecated_Inline}}
   - : 一个逗号分隔的列表，包括服务器能接受的内容类型。
 
-    > **备注：** **此属性已在 HTML5 中被移除并且不再被使用。**作为替代，可以使用 `<input type=file>` 元素中的 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性。
+    > **备注：** **此属性已在 HTML5 中被移除并且不再被使用**。作为替代，可以使用 `<input type=file>` 元素中的 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性。
 - `accept-charset`
   - : 一个空格分隔或逗号分隔的列表，此列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串 `"UNKNOWN"`。此字符串指的是，和包含此表单元素的文档相同的编码。
     在之前版本的 HTML 中，不同的字符编码可以用空格或逗号分隔。在 HTML5 中，只有空格可以允许作为分隔符。
@@ -98,7 +98,7 @@ slug: Web/HTML/Element/form
     - `_self`：默认值。在相同浏览上下文中加载。
     - `_blank`：在新的未命名的浏览上下文中加载。
     - `_parent`：在当前上下文的父级浏览上下文中加载，如果没有父级，则与 \_self 表现一致。
-    - `_top`：在最顶级的浏览上下文中（即当前上下文的一个没有父级的祖先浏览上下文），如果没有父级，则与 \_self 表现一致。此值可以被 {{HTMLElement("button")}}、 [`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 [`formtarget`](/zh-CN/docs/Web/HTML/Element/button#formtarget) 属性覆盖。
+    - `_top`：在最顶级的浏览上下文中（即当前上下文的一个没有父级的祖先浏览上下文），如果没有父级，则与 \_self 表现一致。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 [`formtarget`](/zh-CN/docs/Web/HTML/Element/button#formtarget) 属性覆盖。
 
 ## 示例
 

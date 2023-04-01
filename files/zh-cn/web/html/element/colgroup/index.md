@@ -17,7 +17,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td>If the [`span`](/zh-CN/docs/Web/HTML/Element/colgroup#span) attribute is present: none, it is an {{Glossary("empty element")}}.<br>
+   <td>If the <a href="/zh-CN/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute is present: none, it is an {{Glossary("empty element")}}.<br>
     If the attribute is not present: zero or more {{HTMLElement("col")}} element</td>
   </tr>
   <tr>

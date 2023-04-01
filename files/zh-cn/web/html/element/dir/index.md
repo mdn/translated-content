@@ -29,7 +29,7 @@ slug: Web/HTML/Element/dir
 
   - {{cssxref('list-style')}} 属性，用于选择序号展示的方式。
   - [CSS 计数器](/zh-CN/docs/CSS_Counters)，用于处理复杂的嵌套列表。
-  - {{Cssxref('line-height')}} 属性，用于模拟废除的 [`compact`](/zh-CN/docs/Web/HTML/Element/dir#compact) 属性。.
+  - {{Cssxref('line-height')}} 属性，用于模拟废除的 [`compact`](/zh-CN/docs/Web/HTML/Element/dir#compact) 属性。
   - {{cssxref('margin')}} 属性，用于控制列表的缩进。
 
 {{HTMLSidebar}}
