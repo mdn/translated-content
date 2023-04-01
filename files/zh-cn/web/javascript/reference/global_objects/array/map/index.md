@@ -19,7 +19,6 @@ map(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-
   - : 生成新数组元素的函数，使用三个参数：
     - `currentValue`
       - : `callbackFn` 数组中正在处理的当前元素。

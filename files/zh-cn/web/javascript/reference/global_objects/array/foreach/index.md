@@ -19,7 +19,6 @@ forEach(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-
   - : 为数组中每个元素执行的函数。并会丢弃它的返回值。函数调用时带有以下参数：
     - `element`
       - : 数组中正在处理的当前元素。
