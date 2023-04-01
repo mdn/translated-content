@@ -5,9 +5,7 @@ slug: Web/CSS/:optional
 
 {{ CSSRef() }}
 
-## 摘要
-
-`:optional` CSS [伪类](/zh-CN/CSS/Pseudo-classes) 表示任意没有[`required`](/zh-CN/docs/Web/HTML/Element/input#required)属性的 {{ HTMLElement("input") }}，{{HTMLElement("select")}} 或 {{ HTMLElement("textarea") }} 元素使用它。
+`:optional` CSS [伪类](/zh-CN/CSS/Pseudo-classes) 表示任意没有[`required`](/zh-CN/docs/Web/HTML/Element/input#required)属性的 {{ HTMLElement("input") }}、{{HTMLElement("select")}} 或 {{ HTMLElement("textarea") }} 元素使用它。
 
 ```
 /* Selects any optional <input> */

@@ -19,7 +19,7 @@ slug: Mozilla/Firefox/Releases/59
 
 ### HTML
 
-- 实现了{{HTMLElement("textarea")}} 元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/textarea#autocomplete)属性 . 这使得你可以启用或禁用元素的表单自动填写。
+- 实现了{{HTMLElement("textarea")}} 元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/textarea#autocomplete) 属性。这使得你可以启用或禁用元素的表单自动填写。
 
 ### CSS
 

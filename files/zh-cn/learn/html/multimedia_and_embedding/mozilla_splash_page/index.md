@@ -67,7 +67,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 ### 为 further info 的链接添加响应式图片
 
-在`further-info`类的 {{htmlelement("div")}}里你会看到四个 {{htmlelement("a")}} 元素，每个都指向一个有趣的、关于 Mozilla 的页面。为了完成这一部分，你需要在每个{{htmlelement("a")}} 元素里插入一个 {{htmlelement("img")}} 元素，需要包含合适的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src)，[`alt`](/zh-CN/docs/Web/HTML/Element/img#alt)，[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性。
+在 `further-info` 类的 {{htmlelement("div")}}里你会看到四个 {{htmlelement("a")}} 元素，每个都指向一个有趣的、关于 Mozilla 的页面。为了完成这一部分，你需要在每个{{htmlelement("a")}} 元素里插入一个 {{htmlelement("img")}} 元素，需要包含合适的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src)、[`alt`](/zh-CN/docs/Web/HTML/Element/img#alt)、[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性。
 
 我们希望每张图片（除了某个本身就是响应式的）在浏览器的视口的宽度小于等于 480px 时使用的 120px 宽的图片，其他情况下选择 400px 的版本。
 

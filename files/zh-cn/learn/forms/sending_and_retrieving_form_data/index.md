@@ -51,7 +51,7 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下:�
 
 {{HTMLElement("form")}}元素定义了如何发送数据。它的所有属性都是为了让您配置当用户点击提交按钮时发送的请求。两个最重要的属性是[`action`](/zh-CN/docs/Web/HTML/Element/form#action)和[`method`](/zh-CN/docs/Web/HTML/Element/form#method)。
 
-#### [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性
+#### `action` 属性
 
 这个属性定义了发送数据要去的位置。它的值必须是一个有效的 URL。如果没有提供此属性，则数据将被发送到包含这个表单的页面的 URL。
 
@@ -81,7 +81,7 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下:�
 
 > **备注：** 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当您这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是您指定了一个不安全的 HTTP URL，它带有[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
 
-#### [`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性
+#### `method` 属性
 
 该属性定义了如何发送数据。[HTTP 协议](/zh-CN/docs/HTTP)提供了几种执行请求的方法；HTML 表单数据可以通过许多不同的方法进行数据传输，其中最常见的是`GET`方法和`POST`方法。
 
@@ -255,7 +255,7 @@ if __name__ == "__main__":
 
 用 HTML 表单发送文件是一个特殊的例子。文件是二进制数据——或者被认为是这样的——而所有其他数据都是文本数据。由于 HTTP 是一种文本协议，所以处理二进制数据有特殊的要求。
 
-### [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性
+### `enctype` 属性
 
 该属性允许您指定在提交表单时所生成的请求中的`Content-Type`的 HTTP 数据头的值。这个数据头非常重要，因为它告诉服务器正在发送什么样的数据。默认情况下，它的值是`application/x-www-form-urlencoded`。它的意思是：“这是已编码为 URL 参数的表单数据。”
 
