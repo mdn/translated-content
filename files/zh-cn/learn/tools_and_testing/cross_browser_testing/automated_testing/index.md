@@ -1,5 +1,5 @@
 ---
-title: 自动测试简介
+title: 自动化测试简介
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 ---
 
