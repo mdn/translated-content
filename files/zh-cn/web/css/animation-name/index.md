@@ -5,7 +5,7 @@ slug: Web/CSS/animation-name
 
 {{CSSRef}}
 
-**`animation-name`** [CSS](/zh-CN/docs/CSS) 属性指定一个或多个 {{cssxref("@keyframes")}} at-rule 的名称，这些 at-rule 描述了要应用于元素的动画。多个 `@keyframes` at-rule 以逗号分隔的名称列表的形式指定。如果指定的名称不匹配任何 `@keyframes` at-rule，则不会对任何属性进行动画处理。
+**`animation-name`** [CSS](/zh-CN/docs/Web/CSS) 属性指定一个或多个 {{cssxref("@keyframes")}} at-rule 的名称，这些 at-rule 描述了要应用于元素的动画。多个 `@keyframes` at-rule 以逗号分隔的名称列表的形式指定。如果指定的名称不匹配任何 `@keyframes` at-rule，则不会对任何属性进行动画处理。
 
 {{EmbedInteractiveExample("pages/css/animation-name.html")}}
 
