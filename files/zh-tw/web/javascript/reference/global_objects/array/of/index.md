@@ -87,6 +87,6 @@ if (!Array.of) {
 ## 參見
 
 - [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array")}}
+- [`Array()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
