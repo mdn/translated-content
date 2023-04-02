@@ -44,7 +44,7 @@ Array.of(undefined); // [undefined]
 
 ### 在非陣列建構中使用 of()
 
-The `of()` method can be called on any constructor function that accepts a single argument representing the length of the new array.
+可以在接受表示新陣列長度的單個參數的任何建構式上調用 `of()` 方法。
 
 ```js
 function NotArray(len) {
