@@ -58,7 +58,7 @@ window.scrollBy({
 });
 ```
 
-## 注意
+## 备注
 
 `window.scrollBy()` 滚动指定的距离，而 {{domxref("window.scroll()")}} 滚动至文档中的绝对位置。参见 {{domxref("window.scrollByLines()")}} 和 {{domxref("window.scrollByPages()")}}。
 
