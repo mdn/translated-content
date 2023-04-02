@@ -90,5 +90,3 @@ if (!Array.of) {
 - {{jsxref("Array")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
-- [`Array.of()` & `Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
-- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)
