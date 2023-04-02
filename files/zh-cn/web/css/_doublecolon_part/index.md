@@ -5,7 +5,7 @@ slug: Web/CSS/::part
 
 {{CSSRef}}
 
-该 **`::part`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 表示在 [阴影树](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 中任何匹配 {{HTMLAttrxRef("part")}} 属性的元素。
+该 **`::part`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 表示在 [阴影树](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 中任何匹配 [`part`](/zh-CN/docs/Web/HTML/Global_attributes#part) 属性的元素。
 
 ```css
 custom-element::part(foo) {
@@ -97,6 +97,6 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 
 ## 相关阅读
 
-- {{HTMLAttrxRef("part")}} 属性 - 用于定义可以被 `::part()` 选取的选择器
-- {{HTMLAttrxRef("exportparts")}} 属性 - 用于将阴影部分从嵌套的阴影树过渡到包含显影树的传递导出。
+- [`part`](/zh-CN/docs/Web/HTML/Global_attributes#part) 属性 - 用于定义可以被 `::part()` 选取的选择器
+- [`exportparts`](/zh-CN/docs/Web/HTML/Global_attributes#exportparts) 属性 - 用于将阴影部分从嵌套的阴影树过渡到包含显影树的传递导出。
 - [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

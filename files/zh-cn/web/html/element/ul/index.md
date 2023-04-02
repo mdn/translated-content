@@ -183,5 +183,5 @@ slug: Web/HTML/Element/ul
 
   - {{CSSxRef("list-style")}} 属性，用于选择显示序数的方法。
   - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)，用于操作复杂的嵌套列表。
-  - {{CSSxRef("line-height")}} 属性，用于模拟过时的 {{HTMLAttrxRef("compact", "ul")}} 属性。
+  - {{CSSxRef("line-height")}} 属性，用于模拟过时的 [`compact`](/zh-CN/docs/Web/HTML/Element/ul#compact) 属性。
   - {{CSSxRef("margin")}} 属性，用于控制列表的缩进。

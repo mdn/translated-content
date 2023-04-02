@@ -45,12 +45,12 @@ slug: Web/HTML/Element/tr
     - `center`, 内容在单元格中居中
     - `right`, 内容在单元格中右对齐
     - `justify`, 增加文本内容之间的空白以伸展这行文本，使得该单元格中的多行文本具有相同的长度。
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} attributes {{unimplemented_inline("2212")}}If this attribute is not set, the parent node's value is inherited.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/tr#charoff) attributes {{unimplemented_inline("2212")}}If this attribute is not set, the parent node's value is inherited.
 
     > **备注：** Do not use this attribute as it is obsolete (not supported) in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "tr")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 - `bgcolor` {{Deprecated_inline}}
   - : This attribute defines the background color of each cell of the row. It can be either an [hexadecimal `#RRGGBB` or `#RGB` value](</zh-CN/docs/Web/CSS/color_value#rgb()>) or a [color keyword](/zh-CN/docs/Web/CSS/color_value#Color_keywords).
@@ -58,9 +58,9 @@ slug: Web/HTML/Element/tr
     > **备注：** the {{HTMLElement("tr")}} element should be styled using [CSS](/zh-CN/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/zh-CN/docs/CSS) property {{cssxref("background-color")}}.
 
 - `char` {{Deprecated_inline}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
 
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "tr")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "tr")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 - `charoff` {{Deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.

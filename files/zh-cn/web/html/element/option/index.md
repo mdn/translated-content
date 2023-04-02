@@ -26,7 +26,7 @@ slug: Web/HTML/Element/option
 - `label`
   - : 这个属性是用于表示选项含义的文本。如果 **`label`** 属性没有定义，它的值就是元素文本内容。
 - `selected`
-  - : 这个布尔属性存在时表明这个选项是否一开始就被选中。如果 `<option>` 元素是 {{HTMLElement("select")}} 元素的子元素，并且 {{HTMLElement("select")}} 元素的 {{htmlattrxref("multiple", "select")}} 属性没有设置，则 {{HTMLElement("select")}} 元素中只有一个 `<option>` 元素可以拥有 `selected` 属性。
+  - : 这个布尔属性存在时表明这个选项是否一开始就被选中。如果 `<option>` 元素是 {{HTMLElement("select")}} 元素的子元素，并且 {{HTMLElement("select")}} 元素的 [`multiple`](/zh-CN/docs/Web/HTML/Element/select#multiple) 属性没有设置，则 {{HTMLElement("select")}} 元素中只有一个 `<option>` 元素可以拥有 `selected` 属性。
 - `value`
   - : 这个属性的值表示该选项被选中时提交给表单的值。如果省略了这个属性，值就从选项元素的文本内容中获取。
 

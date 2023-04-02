@@ -35,7 +35,7 @@ slug: Web/HTML/Element/textarea
   - : 是否使用浏览器的记忆功能自动填充文本。可能的值有：
 
     - `off`: 不使用浏览器的记忆自动填充，使用者必须输入他们想要输入的所有内容。或者网页提供了自己的自动填充方法。
-    - `on`: 浏览器根据用户之前输入的内容或者习惯，在用户输入的时候给出相应输入提示。如果不指明**autocomplete**属性，浏览器会从父级的表单元素上解析是不是开启这个属性。表单元素可以是 `textarea` 元素的父级{{HTMLElement("form")}}或者 `textarea`有跟表单相同的 id（参见下面的 form 属性）。更多请查看{{HTMLElement("form")}}的{{htmlattrxref("autocomplete", "form")}} 属性。
+    - `on`: 浏览器根据用户之前输入的内容或者习惯，在用户输入的时候给出相应输入提示。如果不指明**autocomplete**属性，浏览器会从父级的表单元素上解析是不是开启这个属性。表单元素可以是 `textarea` 元素的父级{{HTMLElement("form")}}或者 `textarea`有跟表单相同的 id（参见下面的 form 属性）。更多请查看{{HTMLElement("form")}}的[`autocomplete`](/zh-CN/docs/Web/HTML/Element/form#autocomplete) 属性。
 - `autofocus`
   - : 页面加载完毕之后是否自动给本元素添加焦点。只有跟表格关联的才能使本属性生效。
 - `cols`

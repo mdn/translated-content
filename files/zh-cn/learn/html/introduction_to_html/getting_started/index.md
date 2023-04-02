@@ -402,7 +402,7 @@ textarea.onkeyup = () => {
 
 ### 布尔属性
 
-有时你会看到没有值的属性，这也是完全可以接受的。这些属性被称为布尔属性。布尔属性只能有一个值，这个值一般与属性名称相同。例如，考虑 {{htmlattrxref("disabled", "input")}} 属性，你可以将其分配给表单输入元素。用它来禁用表单输入元素，这样用户就不能输入了。被禁用的元素通常有一个灰色的外观。示例如下：
+有时你会看到没有值的属性，这也是完全可以接受的。这些属性被称为布尔属性。布尔属性只能有一个值，这个值一般与属性名称相同。例如，考虑 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled) 属性，你可以将其分配给表单输入元素。用它来禁用表单输入元素，这样用户就不能输入了。被禁用的元素通常有一个灰色的外观。示例如下：
 
 ```html
 <input type="text" disabled="disabled" />
@@ -505,7 +505,7 @@ textarea.onkeyup = () => {
 
 2. `<html></html>`: {{htmlelement("html")}} 元素。这个元素包裹了页面中所有的内容，有时被称为根元素。
 3. `<head></head>`: {{htmlelement("head")}} 元素。这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但**不在 HTML 页面中显示**的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述、CSS 样式、字符集声明等等。以后的章节中会学到更多相关的内容。
-4. `<meta charset="utf-8">`: {{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素表示的元数据，比如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}。{{htmlattrxref("charset", "meta")}} 属性将你的文档的字符集设置为 UTF-8，其中包括绝大多数人类书面语言的大多数字符。有了这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不对它进行设置，它可以帮助避免以后的一些问题。
+4. `<meta charset="utf-8">`: {{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素表示的元数据，比如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}。[`charset`](/zh-CN/docs/Web/HTML/Element/meta#charset) 属性将你的文档的字符集设置为 UTF-8，其中包括绝大多数人类书面语言的大多数字符。有了这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不对它进行设置，它可以帮助避免以后的一些问题。
 5. `<title></title>`: {{htmlelement("title")}} 元素。这设置了页面的标题，也就是出现在该页面加载的浏览器标签中的内容。当页面被加入书签时，页面标题也被用来描述该页面。
 6. `<body></body>`: {{htmlelement("body")}} 元素。包含了你访问页面时*所有*显示在页面上的内容，包含文本、图片、视频、游戏、可播放音频轨道等等。
 
