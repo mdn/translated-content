@@ -31,7 +31,6 @@ find(callbackFn, thisArg)
       - : 正在处理的元素在数组中的索引。
     - `array`
       - : 调用了 `find()` 的数组本身。
-
 - `thisArg` {{optional_inline}}
   - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
