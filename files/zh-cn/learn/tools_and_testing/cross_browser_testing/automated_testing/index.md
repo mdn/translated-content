@@ -34,7 +34,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 我们也是这么认为的。手动测试我们在以前的文章中所看到的所有东西可能是一个真正的痛苦。幸运的是，有一些工具可以帮助我们从这种痛苦解放出来。有两种主要方式可以使我们在本模块中讨论的测试自动化：
 
 1. 使用像 [Grunt](https://gruntjs.com/)、[Gulp](https://gulpjs.com/) 或 [npm script](https://docs.npmjs.com/misc/scripts/) 这样的任务运行器在构建过程中运行测试和清理代码。这是执行对代码进行 linting 和压缩、添加 CSS 前缀或转译新生的 JavaScript 功能以达到最大的跨浏览器效果等任务的较好方式。
-2. 使用像 [Selenium](https://www.selenium.dev/) 这样的浏览器自动化系统，在已安装的浏览器上运行特定的测试并返回结果，在浏览器出现故障时提醒你。商业跨浏览器测试应用程序，如 [LambdaTest](https://www.lambdatest.com/)、[Sauce Labs](https://saucelabs.com/)、[BrowserStack](https://www.browserstack.com/) 和 [TestingBot](https://testingbot.com) 都基于 Selenium，但允许你使用一个简单的界面远程访问它们的设置，节省你设置自己测试系统的麻烦。
+2. 使用像 [Selenium](https://www.selenium.dev/) 这样的浏览器自动化系统，在已安装的浏览器上运行特定的测试并返回结果，在浏览器出现故障时提醒你。商业跨浏览器测试应用程序，如 [LambdaTest](https://www.lambdatest.com/)、[Sauce Labs](https://saucelabs.com/)、[BrowserStack](https://www.browserstack.com/) 和 [TestingBot](https://testingbot.com) 都基于 Selenium，但允许你使用一个简单的界面远程访问它们的设置，省去你设置自己测试系统的麻烦。
 
 我们将在下一篇文章中研究如何建立你自己的基于 Selenium 的测试系统。在这篇文章中，我们将看看如何设置一个任务运行器，并使用像上面提到的那些商业系统的基本功能。
 
@@ -326,7 +326,7 @@ exports.watch = watch;
 
 现在试着在你的终端输入 `gulp watch` 命令。现在，Gulp 会监视你的目录，并在你保存 HTML、CSS 或 JavaScript 文件的改动时运行相应的任务。
 
-> **备注：** `*`字符是一个通配符，这里的含义是“当任何这些类型的文件被保存时运行这些任务”。你也可以在你的主要任务中使用通配符，例如 `gulp.src('src/*.css')` 会抓取你所有的 CSS 文件，然后对它们运行管道任务。
+> **备注：** `*` 字符是一个通配符，这里的含义是“当任何这些类型的文件被保存时运行这些任务”。你也可以在你的主要任务中使用通配符，例如 `gulp.src('src/*.css')` 会抓取你所有的 CSS 文件，然后对它们运行管道任务。
 
 你还可以用 Gulp 做很多事情。在 [Gulp 插件目录](https://gulpjs.com/plugins/)中，有成千上万的插件可供搜索。
 
