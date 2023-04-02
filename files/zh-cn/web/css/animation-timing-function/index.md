@@ -5,7 +5,7 @@ slug: Web/CSS/animation-timing-function
 
 {{CSSRef}}
 
-**`animation-timing-function`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画在每个周期内的持续时间内如何进行。
+**`animation-timing-function`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画在每个周期的持续时间内如何进行。
 
 {{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}
 
@@ -46,7 +46,7 @@ animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
 
-> **备注：** 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values)。
+> **备注：** 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ### 值
 
