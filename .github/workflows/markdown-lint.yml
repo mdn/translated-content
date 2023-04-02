@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - .nvmrc
       - .markdownlint-cli2.jsonc
       - package.json
       - yarn.lock
