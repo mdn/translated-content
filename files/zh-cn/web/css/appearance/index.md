@@ -16,7 +16,7 @@ slug: Web/CSS/appearance
 ## 语法
 
 ```css
-/* CSS Level 4 模块支持的值 */
+/* CSS 基本用户界面模块 Level 4 支持的值 */
 appearance: none;
 appearance: auto;
 appearance: menulist-button;
@@ -295,4 +295,4 @@ appearance: unset;
 
 ## 参见
 
-- [关于 CSS 基本用户界面 Level 4 模块的 `appearance` 的定义](https://drafts.csswg.org/css-ui/#appearance-switching)
+- [关于 CSS 基本用户界面模块 Level 4 的 `appearance` 的定义](https://drafts.csswg.org/css-ui/#appearance-switching)
