@@ -5,7 +5,7 @@ slug: Web/CSS/appearance
 
 {{CSSRef}}
 
-**`appearance`** CSS 属性用于控制 UI 控件的本地外观，这些控件的外观通常基于操作系统的主题。
+**`appearance`** CSS 属性用于控制 UI 控件的基于操作系统主题的原生外观。
 
 {{EmbedInteractiveExample("pages/css/appearance.html")}}
 
