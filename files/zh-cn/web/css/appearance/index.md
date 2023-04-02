@@ -234,7 +234,7 @@ appearance: unset;
 | `slider-vertical`                      | Chrome Safari Edge         |                                                                                                                                                                                    |
 | `sliderthumb-horizontal`               | Chrome Safari Edge         |                                                                                                                                                                                    |
 | `sliderthumb-vertical`                 | Chrome Safari Edge         |                                                                                                                                                                                    |
-| `textfield-multiline`                  | Firefox                    | 使用 `textarea` 代替.                                                                                                                                                            |
+| `textfield-multiline`                  | Firefox                    | 使用 `textarea` 代替。                                                                                                                                                            |
 | `-apple-pay-button`                    | Safari                     | 仅适用于 **iOS** 和 **macOS**。从 iOS 10.1 和 macOS 10.12 开始，在 Web 上可用。                                                                                               |
 
 ## 形式定义
