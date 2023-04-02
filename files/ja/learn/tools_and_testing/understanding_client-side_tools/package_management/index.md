@@ -210,7 +210,7 @@ Server running at http://localhost:1234
 ✨  Built in 193ms.
 ```
 
-> **メモ:** 「command not found」エラーをターミナルに返す場合は、上記のコマンドを `npx` ユーティリティ、つまり `npx parcel index.html`で実行してみてください。
+> **メモ:** 「command not found」エラーをターミナルが返す場合は、上記のコマンドを `npx` ユーティリティ、つまり `npx parcel index.html`で実行してみてください。
 
 これで、完全な JavaScript パッケージ エコシステムを活用する準備が整いました。まず、 `http://localhost:1234` で実行されているローカルウェブサーバーがあります。ここにアクセスすると、今のところ何も表示されませんが、すばらしいのは、アプリに変更を加えると、Parcel がアプリを再構築してサーバーを自動的に更新するため、更新の効果をすぐに確認できることです。
 
