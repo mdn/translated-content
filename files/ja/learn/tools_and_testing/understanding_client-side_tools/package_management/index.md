@@ -98,39 +98,31 @@ npm init
 
 - `name`: アプリを識別するための名前。
 
-  <kbd>Return</kbd> を入力します。
-
-  デフォルトの `parcel-experiment` がアプリ名になります。
+  <kbd>Return</kbd> を入力するとデフォルトの `parcel-experiment` がアプリ名になります。
 
 - `version`: アプリの開始バージョン番号。
 
-  再度 <kbd>Return</kbd> を入力します。
+  再度 <kbd>Return</kbd> を入力するとデフォルトの `1.0.0` がアプリの開始バージョン番号になります。
 
-  デフォルトの `1.0.0` がアプリの開始バージョン番号になります。
+- `description`: アプリの目的の簡単な説明。
 
-- `description`: アプリの目的の簡単な説明。「npm の使い方を学ぶための簡単な npm パッケージ」など、非常に簡単なことを入力してから、
+  「npm の使い方を学ぶための簡単な npm パッケージ」など、非常に簡単なことを入力してから、 <kbd>Return</kbd> を入力します。
 
-  <kbd>Return</kbd> を入力します。
+- `entry point`: これは、アプリの最上位の JavaScript ファイルになります。
 
-- `entry point`: これは、アプリの最上位の JavaScript ファイルになります。今のところデフォルトの `index.js` で問題ありません。
-
-  <kbd>Return</kbd> を入力します。
+  今のところデフォルトの `index.js` で問題ないので <kbd>Return</kbd> を入力します。
 
 - `test command`, `git repository`, と `keywords` :
 
-  <kbd>Return</kbd> を入力します。
+  それぞれを入力する時は、空白のままにして <kbd>Return</kbd> を入力します。
 
-  それぞれを入力する時は、空白のままにしておきます。
+- `author`: プロジェクトの作成者。
 
-- `author`: プロジェクトの作成者。自分の名前を入力し、
-
-  <kbd>Return</kbd> を入力します。
+  自分の名前を入力し、<kbd>Return</kbd> を入力します。
 
 - `license`: パッケージを公開するためのライセンス。
 
-  <kbd>Return</kbd> を入力します。
-
-  ここではデフォルトを設定します。
+  ここではデフォルトを設定するので <kbd>Return</kbd> を入力します。
 
 これらの設定を受け入れるためにもう一度 <kbd>Return</kbd> を入力します。
 
