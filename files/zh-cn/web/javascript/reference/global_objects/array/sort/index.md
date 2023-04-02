@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 ## 语法
 
-```js
+```js-nolint
 sort()
 sort(compareFn)
 ```

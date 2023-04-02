@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 ## 语法
 
-```js
+```js-nolint
 Array.from(arrayLike)
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)

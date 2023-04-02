@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 ## 语法
 
-```js
+```js-nolint
 filter(callbackFn)
 filter(callbackFn, thisArg)
 ```

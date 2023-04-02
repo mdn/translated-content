@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 
 ## 语法
 
-```js
+```js-nolint
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
 ```

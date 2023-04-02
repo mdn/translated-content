@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/map
 
 ## 语法
 
-```js
+```js-nolint
 map(callbackFn)
 map(callbackFn, thisArg)
 ```

@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 ## 语法
 
-```js
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 ```

@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 ## 语法
 
-```js
+```js-nolint
 reverse()
 ```
 

@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 
 ## 语法
 
-```js
+```js-nolint
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 ```

@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 ## 语法
 
-```js
+```js-nolint
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 ```

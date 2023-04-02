@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 
 ## 语法
 
-```js
+```js-nolint
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
 ```

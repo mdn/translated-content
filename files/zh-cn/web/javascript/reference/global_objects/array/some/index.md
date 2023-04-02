@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 ## 语法
 
-```js
+```js-nolint
 some(callbackFn)
 some(callbackFn, thisArg)
 ```
