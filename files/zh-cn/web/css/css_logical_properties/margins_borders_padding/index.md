@@ -147,6 +147,6 @@ slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 
 ## 为四值简写属性语法标示逻辑值
 
-规范为 `margin` 属性等四值简写属性提出了相关建议，然而尚未最终确定如何标示逻辑值，讨论见[此事项](https://github.com/w3c/csswg-drafts/issues/1282)。
+规范为 `margin` 属性等四值简写属性提出了相关建议，然而尚未最终确定如何标示逻辑值，讨论见[此议题](https://github.com/w3c/csswg-drafts/issues/1282)。
 
 目前使用如 `margin`、`padding` 或 `border` 等任意四值简写属性将使用实体属性，因此若跟随文档的流向很重要，则暂时使用全称属性。
