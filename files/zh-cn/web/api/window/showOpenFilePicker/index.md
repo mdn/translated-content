@@ -9,7 +9,7 @@ browser-compat: api.Window.showOpenFilePicker
 
 {{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}}接口上的 **`showOpenFilePicker()`** 方法用于显示一个文件选择界面，以使用户选择一个或多个文件并返回这些文件的句柄。
+{{domxref("Window")}} 接口上的 **`showOpenFilePicker()`** 方法用于显示一个文件选择界面，以使用户选择一个或多个文件并返回这些文件的句柄。
 
 ## 用法
 
@@ -33,7 +33,7 @@ showOpenFilePicker()
         - `description`
           - : 可选，对此允许文件类型集合的描述。
         - `accept`
-          - : {{jsxref('Object')}}对象，带有键名为 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)、键值为包含文件扩展名的 {{jsxref('Array')}} 数组的键值对（参考下方的示例）。
+          - : {{jsxref('Object')}} 对象，带有键名为 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)、键值为包含文件扩展名的 {{jsxref('Array')}} 数组的键值对（参考下方的示例）。
 ### 返回值
 
 一个 {{jsxref("Promise")}} 对象，变为完成后内含一个包含 {{domxref('FileSystemFileHandle')}} 对象的 {{jsxref('Array')}} 数组。
@@ -73,7 +73,7 @@ const pickerOpts = {
 let fileHandle;
 
 async function getFile() {
-  // 打开文件选择界面，结构返回的数组中的第一个元素
+  // 打开文件选择界面，解构返回的数组中的第一个元素
   [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
   // 操作文件句柄的后续代码
