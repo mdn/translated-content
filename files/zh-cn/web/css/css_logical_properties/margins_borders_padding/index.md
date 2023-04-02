@@ -51,7 +51,7 @@ slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 | 属性 | 用途 |
 | ---------------------------------- | - |
 | {{CSSXref("border-block")}}        | 为两个块向边框设置 {{CSSXref("border-color")}}、{{CSSXref("border-style")}} 和 {{CSSXref("border-width")}}。 |
-| {{CSSXref("border-block-color")}}  | 为两个块向边框设置 `border-color` 。 |
+| {{CSSXref("border-block-color")}}  | 为两个块向边框设置 `border-color`。 |
 | {{CSSXref("border-block-style")}}  | 为两个块向边框设置 `border-style` 。 |
 | {{CSSXref("border-block-width")}}  | 为两个块向边框设置 `border-width` 。 |
 | {{CSSXref("border-inline")}}       | 为两个行向边框设置 `border-color`、`border-style` 和 `border-width`。 |
