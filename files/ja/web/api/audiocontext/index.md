@@ -25,7 +25,6 @@ _親インターフェイス{{domxref("BaseAudioContext")}}からプロパティ
 - {{domxref("AudioContext.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 現在の出力音声デバイスの sink ID を返します。
 
-
 ## メソッド
 
 親インターフェイス{{domxref("BaseAudioContext")}} からメソッドを継承します。
