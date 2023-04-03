@@ -1,7 +1,6 @@
 ---
 title: 만료 기한 확인하기
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
-page-type: guide
 l10n:
   sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
 ---
