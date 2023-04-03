@@ -32,7 +32,7 @@ animation-name: revert-layer;
 animation-name: unset;
 ```
 
-### 值
+### 取值
 
 - `none`
   - : 一个特殊的关键字，表示没有关键帧。它可用于禁用动画，而不改变其他标识符的顺序，或禁用级联的动画。
