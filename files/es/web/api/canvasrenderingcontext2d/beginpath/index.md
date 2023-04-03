@@ -102,9 +102,9 @@ window.addEventListener("load", drawCanvas);
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.beginPath")}}
+{{Compat}}
 
 ## Ver también
 

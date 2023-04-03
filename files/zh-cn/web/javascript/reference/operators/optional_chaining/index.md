@@ -112,7 +112,7 @@ object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignm
 let arrayItem = arr?.[42];
 ```
 
-## 例子
+## 示例
 
 ### 基本例子
 

@@ -116,7 +116,7 @@ l10n:
       <td><code>\s</code></td>
       <td>
         <p>
-          ホワイトスペース 1 文字に一致します。例えば空白、タブ、改ページ、改行、その他の Unicode 空白文字などです。 <code>[\f\n\r\t\v​\u00a0\u1680​\u2000​-\u200a​\u2028\u2029\u202f\u205f​\u3000\ufeff]</code> に相当します。例えば <code>/\s\w*/</code> は "foo bar" の "bar" に一致します。
+          ホワイトスペース 1 文字に一致します。例えば空白、タブ、改ページ、改行、その他の Unicode 空白文字などです。 <code>[\f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code> に相当します。例えば <code>/\s\w*/</code> は "foo bar" の "bar" に一致します。
         </p>
       </td>
     </tr>
@@ -234,7 +234,7 @@ l10n:
       </td>
       <td>
         <p>
-          <strong>論理和: </strong>"x" または "y" に一致します。パイプ (<code>|<code>) で区切られた各成分は、代替 (<em>alternative</em>)と呼ばれます。例えば、<code>/green|red/</code> は "green apple" の "green" と "red apple" の "red" に一致します。
+          <strong>論理和: </strong>"x" または "y" に一致します。パイプ (<code>|</code>) で区切られた各成分は、代替 (<em>alternative</em>)と呼ばれます。例えば、<code>/green|red/</code> は "green apple" の "green" と "red apple" の "red" に一致します。
         </p>
         <div class="notecard note">
           <p>
@@ -248,7 +248,7 @@ l10n:
 
 ## アサーション
 
-[サーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)には、行や単語の先頭と末尾を示す境目、他にも何らかの形で一致が可能であることを示すパターン（先読み、後読み、条件式など）が含まれます。
+[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)には、行や単語の先頭と末尾を示す境目、他にも何らかの形で一致が可能であることを示すパターン（先読み、後読み、条件式など）が含まれます。
 
 ### 境界型のアサーション
 

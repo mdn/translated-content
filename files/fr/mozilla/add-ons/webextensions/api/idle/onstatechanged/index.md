@@ -51,9 +51,9 @@ Les événements ont trois fonctions :
     - `newState`
       - : {{WebExtAPIRef('idle.IdleState')}}. Le nouvel état est inactif.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle.onStateChanged")}}
+{{Compat}}
 
 ## Exemples
 

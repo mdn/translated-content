@@ -87,7 +87,7 @@ h3::before {
 {{cssxref("counters", "counters()")}} 函数也同样有两种形式：`counters(<counter-name>, <separator>)` 和 `counters(<counter-name>, <separator>, <counter-style>)`。生成的文本由在伪元素范围内所有指定名称的计数器的值组成。这些值从最外层到最内层，使用指定的字符串（`<separator>`）分隔。
 
 以上两个函数均可以使用指定的 `<counter-style>` 来渲染其值（默认值为 `decimal`）。你也可以使用
- {{cssxref("list-style-type")}} 属性其它可选的值，或[自定义样式](/zh-CN/docs/Web/CSS/CSS_Counter_Styles)。
+ {{cssxref("list-style-type")}} 属性其他可选的值，或[自定义样式](/zh-CN/docs/Web/CSS/CSS_Counter_Styles)。
 
 [基础示例](#基础示例)和[计数器嵌套示例](#计数器嵌套示例)这两个示例分别展示了 `counter()` 和 `counters()` 的使用方法。
 
@@ -113,7 +113,7 @@ counter-reset: reversed(section);
 
 使用 {{HTMLElement("ol")}} 元素创建的有序列表，会自动应用名为 `list-item` 的计数器。
 
-和其它的计数器一样，其也是一个默认自增（+1）且初始值为 0 的计数器，对于反向计数器，则以元素数量为初始值，且默认自减（-1）。与自定义的计数器不同，`list-item` 是根据其是否为反向计数器而*自动*自增或自减的。
+和其他的计数器一样，其也是一个默认自增（+1）且初始值为 0 的计数器，对于反向计数器，则以元素数量为初始值，且默认自减（-1）。与自定义的计数器不同，`list-item` 是根据其是否为反向计数器而*自动*自增或自减的。
 
 可以通过 CSS 修改 `list-item` 计数器应用在有序列表上的默认行为。例如，你可以改变默认初始值，或使用 {{cssxref("counter-increment")}} 改变递增或递减的方式。
 

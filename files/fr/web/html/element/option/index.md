@@ -1,6 +1,6 @@
 ---
 title: <option>
-slug: Web/HTML/Element/Option
+slug: Web/HTML/Element/option
 tags:
   - Element
   - Formulaires

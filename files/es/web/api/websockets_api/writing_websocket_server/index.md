@@ -36,8 +36,8 @@ Métodos:
 
 Aquí está como utilizar lo que hemos aprendido:
 
-```cpp
-​using System.Net.Sockets;
+```cs
+using System.Net.Sockets;
 using System.Net;
 using System;
 

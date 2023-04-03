@@ -55,7 +55,7 @@ draw();
 
 结果如下：
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
+{{EmbedLiveSample("fillStyle 示例", 160, 160, "canvas_fillstyle.png")}}
 
 ### `strokeStyle` 示例
 
@@ -86,7 +86,7 @@ draw();
 
 结果如下：
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("strokeStyle 示例", "180", "180", "canvas_strokestyle.png")}}
 
 ## 透明度 Transparency
 
@@ -145,7 +145,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
+{{EmbedLiveSample("globalAlpha 示例", "180", "180", "canvas_globalalpha.png")}}
 
 ### `rgba()` 示例
 
@@ -183,7 +183,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba", "180", "180", "canvas_rgba.png")}}
+{{EmbedLiveSample("rgba() 示例", "180", "180", "canvas_rgba.png")}}
 
 ## 线型 Line styles
 
@@ -235,7 +235,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
+{{EmbedLiveSample("lineWidth 属性的例子", "180", "180", "canvas_linewidth.png")}}
 
 想要获得精确的线条，必须对线条是如何描绘出来的有所理解。见下图，用网格来代表 canvas 的坐标格，每一格对应屏幕上一个像素点。在第一个图中，填充了 (2,1) 至 (5,5) 的矩形，整个区域的边界刚好落在像素边缘上，这样就可以得到的矩形有着清晰的边缘。
 
@@ -251,7 +251,7 @@ draw();
 
 对于那些宽度为偶数的线条，每一边的像素数都是整数，那么你想要其路径是落在像素点之间 (如那从 (3,1) 到 (3,5)) 而不是在像素点的中间。同样，注意到那个例子的垂直线条，其 Y 坐标刚好落在网格线上，如果不是的话，端点上同样会出现半渲染的像素点。
 
-虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其它任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。
+虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其他任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。
 
 #### `lineCap` 属性的例子
 
@@ -296,7 +296,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}
+{{EmbedLiveSample("lineCap 属性的例子", "180", "180", "canvas_linecap.png")}}
 
 #### `lineJoin` 属性的例子
 
@@ -330,7 +330,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
+{{EmbedLiveSample("lineJoin 属性的例子", "180", "180", "canvas_linejoin.png")}}
 
 #### `miterLimit` 属性的演示例子
 
@@ -405,7 +405,7 @@ document.getElementById('miterLimit').value = document.getElementById('canvas').
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "500", "240", "canvas_miterlimit.png")}}
+{{EmbedLiveSample("miterLimit 属性的演示例子", "500", "240", "canvas_miterlimit.png")}}
 
 ### 使用虚线
 
@@ -440,7 +440,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
+{{EmbedLiveSample("使用虚线", "120", "120", "marching-ants.png")}}
 
 ## 渐变 Gradients
 
@@ -469,7 +469,9 @@ lineargradient.addColorStop(0,'white');
 lineargradient.addColorStop(1,'black');
 ```
 
-#### `createLinearGradient` 的例子![](canvas_lineargradient.png)
+#### `createLinearGradient` 的例子
+
+![](canvas_lineargradient.png)
 
 本例中，我弄了两种不同的渐变。第一种是背景色渐变，你会发现，我给同一位置设置了两种颜色，你也可以用这来实现突变的效果，就像这里从白色到绿色的突变。一般情况下，色标的定义是无所谓顺序的，但是色标位置重复时，顺序就变得非常重要了。所以，保持色标定义顺序和它理想的顺序一致，结果应该没什么大问题。
 
@@ -511,7 +513,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
+{{EmbedLiveSample("createLinearGradient 的例子", "180", "180", "canvas_lineargradient.png")}}
 
 ### `createRadialGradient` 的例子
 
@@ -566,7 +568,7 @@ draw();
 
 4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，`#019F62 = rgba(1,159,98,1)`。
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
+{{EmbedLiveSample("createRadialGradient 的例子", "180", "180", "canvas_radialgradient.png")}}
 
 ## 图案样式 Patterns
 
@@ -619,7 +621,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("createPattern_的例子", "180", "180", "canvas_createpattern.png")}}
+{{EmbedLiveSample("createPattern 的例子", "180", "180", "canvas_createpattern.png")}}
 
 ## 阴影 Shadows
 
@@ -659,7 +661,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
+{{EmbedLiveSample("文字阴影的例子", "180", "100", "shadowed-string.png")}}
 
 我们可以通过下一章来了解文字属性和 fillText 方法相关的内容。
 
@@ -694,6 +696,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
+{{EmbedLiveSample("Canvas 填充规则", "110", "110", "fill-rule.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

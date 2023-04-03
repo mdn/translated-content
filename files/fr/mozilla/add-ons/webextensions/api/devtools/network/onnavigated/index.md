@@ -44,9 +44,9 @@ Les événements ont trois fonctions :
     - `url`
       - : `string`. La nouvelle URL pour la fenêtre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.network.onNavigated")}}
+{{Compat}}
 
 ## Exemples
 

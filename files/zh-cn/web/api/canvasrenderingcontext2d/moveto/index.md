@@ -22,11 +22,9 @@ void ctx.moveTo(x, y);
 
 ## 示例
 
-### 使用 `moveTo` 方法
+### 绘制多条子路径
 
 这是一段使用 `moveTo` 方法的简单的代码片段，移动画笔到起始点绘制一条线。
-
-#### HTML
 
 ```html
 <canvas id="canvas"></canvas>
@@ -34,60 +32,25 @@ void ctx.moveTo(x, y);
 
 #### JavaScript
 
+第一条线从 (50, 50) 处开始，至 (200, 50) 处结束。第二条线从 (50, 90) 处开始，至 (280, 120) 处结束。
+
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50,50);
+ctx.moveTo(50, 50); // Begin first sub-path
 ctx.lineTo(200, 50);
+ctx.moveTo(50, 90); // Begin second sub-path
+ctx.lineTo(280, 120);
 ctx.stroke();
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(50,50);
-ctx.lineTo(200, 50);
-ctx.stroke()</textarea>
-```
+{{ EmbedLiveSample('绘制多条子路径-paths', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

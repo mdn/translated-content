@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 
 {{JSRef}}
 
-根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）。
+**`getMonth()`** 方法根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）。
 
 {{EmbedInteractiveExample("pages/js/date-getmonth.html")}}
 
@@ -23,7 +23,7 @@ dateObj.getMonth()
 
 `getMonth`返回一个 0 到 11 的整数值：0 代表一月份，1 代表二月份，2 代表三月份，依次类推。
 
-## 例子
+## 示例
 
 ### 使用 `getMonth()`
 

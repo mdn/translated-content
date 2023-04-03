@@ -49,9 +49,9 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
-개선책은 좁은 화면에서 사이트를 볼 때 이미지의 중요한 상세를 보여 주는 자른 이미지를 보여 주는 것이다. 또 다르게 자른 이미지를 태블릿처럼 중간 정도 너비 화면의 기기에서 보여줄 수 있을 것이다. 이를 보통 **아트 디렉션 문제(art direction problem)**라고 한다. \[아트 디렉션은 ‘연출 방향’ 정도로 번역할 수 있을 듯한데, 보통은 용어를 그대로 사용한다. 반응형 이미지에서는 이미지의 의도가 제대로 전달되도록 기기에 따라 사진의 핵심을 확대해서 보여 주거나 하는 방식을 의미한다. - 역자 주]
+개선책은 좁은 화면에서 사이트를 볼 때 이미지의 중요한 상세를 보여 주는 자른 이미지를 보여 주는 것이다. 또 다르게 자른 이미지를 태블릿처럼 중간 정도 너비 화면의 기기에서 보여줄 수 있을 것이다. 이를 보통 **아트 디렉션 문제(art direction problem)** 라고 한다. \[아트 디렉션은 ‘연출 방향’ 정도로 번역할 수 있을 듯한데, 보통은 용어를 그대로 사용한다. 반응형 이미지에서는 이미지의 의도가 제대로 전달되도록 기기에 따라 사진의 핵심을 확대해서 보여 주거나 하는 방식을 의미한다. - 역자 주]
 
-게다가, 작은 모바일 화면에서는 페이지에 그렇게 큰 이미지를 포함할 필요가 없다. 이것을 **해상도 전환 문제(resolution switching problem)**라고 부른다. [벡터 그래픽 단원](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)에서 배웠듯이, 래스터 이미지\[비트맵 이미지 - 역자 주]는 가로 픽셀들과 세로 픽셀들의 세트로 구성된다. 작은 래스터 이미지를 실제 사이즈보다 확대해서 보면 도트가 깨져 보인다(벡터 그래픽은 그렇지 않은데 반해).
+게다가, 작은 모바일 화면에서는 페이지에 그렇게 큰 이미지를 포함할 필요가 없다. 이것을 **해상도 전환 문제(resolution switching problem)** 라고 부른다. [벡터 그래픽 단원](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)에서 배웠듯이, 래스터 이미지\[비트맵 이미지 - 역자 주]는 가로 픽셀들과 세로 픽셀들의 세트로 구성된다. 작은 래스터 이미지를 실제 사이즈보다 확대해서 보면 도트가 깨져 보인다(벡터 그래픽은 그렇지 않은데 반해).
 
 역으로, 적당한 크기보다 훨씬 작은 화면에 큰 이미지를 표시 할 필요가 없다. 그렇게 하는 것은 대역폭을 낭비하는 것이다. 특히, 모바일 사용자는 기기에 맞는 작은 이미지 대신 데스크톱에 사용되는 커다른 이미지를 다운로드하느라 대역폭을 낭비하고 싶어하지 않는다. 이상적인 상황은 다양한 해상도를 준비해 두고, 웹사이트 데이터를 받는 기기에 따라 적당한 사이즈를 제공하는 것이다.
 
@@ -92,7 +92,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 `srcset`과 `sizes` 속성은 복잡해 보이지만 위에서 보여 준 것처럼 각 행에 속성 값을 나눠 적으면 이해하기 어렵지 않다. 각 값은 쉼표로 구분한 목록으로 적고, 목록의 각 부분은 세 부분으로 구성된다. 이제 각 내용을 살펴 보자.
 
-**`srcset`**은 브라우저에게 제시할 이미지 목록과 그 크기를 정의한다. 각 쉼표 앞에 이렇게 적는다.
+**`srcset`** 은 브라우저에게 제시할 이미지 목록과 그 크기를 정의한다. 각 쉼표 앞에 이렇게 적는다.
 
 1. **이미지 파일명** (`elva-fairy-480w.jpg`.)
 2. 공백
@@ -106,7 +106,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
     를 눌러 정보를 표시 할 수 있다).
 
-**`sizes`**는 미디어 조건문들을 정의하고(예를 들면, 화면 크기) 특정 미디어 조건문이 참일 때 어떤 이미지 크기가 최적인지 나타낸다(앞서 언급한 힌트). 이 경우, 각 쉼표 전에 이렇게 쓴다.
+**`sizes`** 는 미디어 조건문들을 정의하고(예를 들면, 화면 크기) 특정 미디어 조건문이 참일 때 어떤 이미지 크기가 최적인지 나타낸다(앞서 언급한 힌트). 이 경우, 각 쉼표 전에 이렇게 쓴다.
 
 1. **미디어 조건문** (`(max-width:480px)`) — CSS 주제에서 이에 대해 더 많은 것을 배울 수 있을 테지만, 지금 간단히 말하면, 미디어 조건문은 가능한 화면 상태를 기술한다. 이 경우, 이렇게 말하는 것이다: “뷰포트 너비가 480픽셀 이하”.
 2. 공백.
@@ -258,12 +258,3 @@ img {
 - {{htmlelement("source")}}
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [HTML의 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

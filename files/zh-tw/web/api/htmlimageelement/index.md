@@ -16,7 +16,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.align")}} {{Deprecated_Inline}}
   - : Is a {{domxref("DOMString")}} indicating the alignment of the image with respect to the surrounding context.
 - {{domxref("HTMLImageElement.alt")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("alt", "img")}} HTML attribute, thus indicating fallback context for the image.
+  - : Is a {{domxref("DOMString")}} that reflects the [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) HTML attribute, thus indicating fallback context for the image.
 - {{domxref("HTMLImageElement.border")}} {{Deprecated_Inline}}
   - : Is a {{domxref("DOMString")}} that is responsible for the width of the border surrounding the image. This is now deprecated and the CSS {{cssxref("border")}} property should be used instead.
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
@@ -26,11 +26,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns a {{domxref("DOMString")}} representing the URL to the currently displayed image (which may change, for example in response to media queries).
 - {{domxref("HTMLImageElement.height")}}
-  - : 一個反映了 HTML `img` 元素之 {{htmlattrxref("height", "img")}} 屬性的無符號（`unsigned`）整數，表示圖片經渲染後的高度（CSS pixels）。
+  - : 一個反映了 HTML `img` 元素之 [`height`](/zh-TW/docs/Web/HTML/Element/img#height) 屬性的無符號（`unsigned`）整數，表示圖片經渲染後的高度（CSS pixels）。
 - {{domxref("HTMLImageElement.hspace")}} {{Deprecated_Inline}}
   - : Is a `long` representing the space on either side of the image.
 - {{domxref("HTMLImageElement.isMap")}}
-  - : Is a {{domxref("Boolean")}} that reflects the {{htmlattrxref("ismap", "img")}} HTML attribute, indicating that the image is part of a server-side image map.
+  - : Is a {{domxref("Boolean")}} that reflects the [`ismap`](/zh-TW/docs/Web/HTML/Element/img#ismap) HTML attribute, indicating that the image is part of a server-side image map.
 - {{domxref("HTMLImageElement.longDesc")}} {{Deprecated_Inline}}
   - : Is a {{domxref("DOMString")}} representing the URI of a long description of the image.
 - {{domxref("HTMLImageElement.lowSrc")}} {{Deprecated_Inline}}
@@ -42,19 +42,19 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}
   - : 回傳一個代表圖片固有寬度（CSS pixels）的無符號（`unsigned`）整數，如果無法取得則回傳 `0`。
 - {{domxref("HTMLImageElement.referrerPolicy")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "img")}} HTML attribute indicating which referrer to use in order to fetch the image.
+  - : Is a {{domxref("DOMString")}} that reflects the [`referrerpolicy`](/zh-TW/docs/Web/HTML/Element/img#referrerpolicy) HTML attribute indicating which referrer to use in order to fetch the image.
 - {{domxref("HTMLImageElement.src")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "img")}} HTML attribute, containing the full URL of the image including base URI.
+  - : Is a {{domxref("DOMString")}} that reflects the [`src`](/zh-TW/docs/Web/HTML/Element/img#src) HTML attribute, containing the full URL of the image including base URI.
 - {{domxref("HTMLImageElement.sizes")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("sizes", "img")}} HTML attribute.
+  - : Is a {{domxref("DOMString")}} reflecting the [`sizes`](/zh-TW/docs/Web/HTML/Element/img#sizes) HTML attribute.
 - {{domxref("HTMLImageElement.srcset")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("srcset", "img")}} HTML attribute, containing a list of candidate images, separated by a comma (`',', U+002C COMMA`). A candidate image is a URL followed by a `'w'` with the width of the images, or an `'x'` followed by the pixel density.
+  - : Is a {{domxref("DOMString")}} reflecting the [`srcset`](/zh-TW/docs/Web/HTML/Element/img#srcset) HTML attribute, containing a list of candidate images, separated by a comma (`',', U+002C COMMA`). A candidate image is a URL followed by a `'w'` with the width of the images, or an `'x'` followed by the pixel density.
 - {{domxref("HTMLImageElement.useMap")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("usemap", "img")}} HTML attribute, containing a partial URL of a map element.
+  - : Is a {{domxref("DOMString")}} that reflects the [`usemap`](/zh-TW/docs/Web/HTML/Element/img#usemap) HTML attribute, containing a partial URL of a map element.
 - {{domxref("HTMLImageElement.vspace")}} {{Deprecated_Inline}}
   - : Is a `long` representing the space above and below the image.
 - {{domxref("HTMLImageElement.width")}}
-  - : 一個反映了 HTML `img` 元素之 {{htmlattrxref("width", "img")}} 屬性的無符號（`unsigned`）整數，表示圖片經渲染後的寬度（CSS pixels）。
+  - : 一個反映了 HTML `img` 元素之 [`width`](/zh-TW/docs/Web/HTML/Element/img#width) 屬性的無符號（`unsigned`）整數，表示圖片經渲染後的寬度（CSS pixels）。
 - {{domxref("HTMLImageElement.x")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns a `long` representing the horizontal offset from the nearest layer. This property mimics an old Netscape 4 behavior.
 - {{domxref("HTMLImageElement.y")}} {{readonlyInline}} {{experimental_inline}}
@@ -69,9 +69,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Errors
 
-If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the [`error`](/zh-TW/docs/Web/API/Element/error_event) event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while trying to load or render the image, and an [`onerror`](/zh-TW/docs/Web/HTML/Global_attributes#onerror) event handler has been configured to handle the [`error`](/zh-TW/docs/Web/API/Element/error_event) event, that event handler will get called. This can happen in a number of situations, including:
 
-- The {{htmlattrxref("src", "img")}} attribute is empty or `null`.
+- The [`src`](/zh-TW/docs/Web/HTML/Element/img#src) attribute is empty or `null`.
 - The specified `src` URL is the same as the URL of the page the user is currently on.
 - The specified image is corrupted in some way that prevents it from being loaded.
 - The specified image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.

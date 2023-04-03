@@ -1,6 +1,8 @@
 ---
 title: HTMLIFrameElement.referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef}}
@@ -34,10 +36,10 @@ slug: Web/API/HTMLIFrameElement/referrerPolicy
 ## 例
 
 ```js
-var iframe = document.createElement("iframe");
+const iframe = document.createElement("iframe");
 iframe.src = "/";
 iframe.referrerPolicy = "unsafe-url";
-var body = document.getElementsByTagName("body")[0];
+const body = document.querySelector("body");
 body.appendChild(iframe); // 完全な URL をリファラーとして使用して画像を取得
 ```
 

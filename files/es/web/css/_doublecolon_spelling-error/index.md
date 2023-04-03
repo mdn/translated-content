@@ -38,7 +38,7 @@ Solo se puede usar un pequeño subconjunto de propiedades de CSS en una regla co
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.spelling-error")}}
+{{Compat}}
 
 ## Ver también
 

@@ -30,12 +30,3 @@ Tenemos una variedad de macros que se pueden usar para generar automáticamente 
 Tenemos una macro diseñada específicamente para crear [enlaces rápidos](/es/docs/MDN/Structures/Quicklinks):
 
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) crea un conjunto de enlaces rápidos compuestos por las páginas debajo de la página actual (o la página especificada, si se proporciona una). Se generan hasta dos niveles totales de profundidad.
-
-## Obsoletas
-
-Estas macros han sido reemplazadas por otras formas de hacer lo mismo y ya no deberían usarse. Si los encuentra en artículos existentes, reemplácelos.
-
-### Enlaces
-
-- La macro [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) crea una frase que enlaza con el nombre de una sección y el artículo que contiene esa sección. Por ejemplo, `\{{SectionOnPage("/es/docs/Mozilla/Firefox/Releases/21", "Cambios para desarrolladores web")}}` genera lo siguiente: _{{SectionOnPage("/es/docs/ Mozilla/Firefox/Releases/21", "Cambios para desarrolladores web")}}_.
-- La macro [`Link`](https://github.com/mdn/yari/blob/main/kumascript/macros/Link.ejs) inserta un enlace a la página especificada en MDN, utilizando el título de la página como la cadena visible para hacer clic y la información sobre herramientas extraída del resumen de SEO de la página.

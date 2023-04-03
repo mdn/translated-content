@@ -31,11 +31,11 @@ object-position: unset;
 
 > **备注：** 这些定位方式允许被替换元素的对象被定位到内容框外部。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -73,9 +73,9 @@ img {
 
 第一个图像的左边缘距元素框左边缘 10 个像素。第二个图像的右边缘与元素框的右边缘齐平，并位于元素框高度下方 10％处。
 
-### 输出
+### 结果
 
-{{ EmbedLiveSample('Example', '100%','300px') }}
+{{ EmbedLiveSample('示例', '100%','300px') }}
 
 ## 规范
 
@@ -83,7 +83,7 @@ img {
 
 {{cssinfo}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 

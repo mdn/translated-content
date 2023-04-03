@@ -88,7 +88,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-label
 
 {{Specifications}}
 
-## See Also
+## 같이 보기
 
 - {{HTMLElement('label')}} 요소
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)

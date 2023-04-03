@@ -52,7 +52,7 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 
 ## 示例
 
-### 为图像设置 object-fill
+### 为图像设置 object-fit
 
 #### HTML
 
@@ -141,5 +141,5 @@ img {
 
 ## 参见
 
-- 其它与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
+- 其他与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
 - {{cssxref("background-size")}}

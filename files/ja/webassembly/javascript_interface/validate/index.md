@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/validate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.validate()`** 関数は WebAssembly バイナリーコードの[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)を検証し、そのバイト列が有効な wasm モジュールか (`true`)、そうでないか (`false`) を返します。
 

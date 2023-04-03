@@ -36,10 +36,6 @@ W3C의 DOM Level 1 권고안에는 DOM 모듈을 브라우저에서 지원하는
 - [DOM Level 2 Core: implementation](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-102161490)
 - [DOM Level 3 Core: implementation](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-102161490)
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Gecko 19.0 {{geckoRelease("19.0")}}부터 {{domxref("DOMImplementation.hasFeature","hasFeature")}} 메소드는 항상 true를 반환합니다.

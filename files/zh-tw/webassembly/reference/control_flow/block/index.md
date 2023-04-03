@@ -25,6 +25,6 @@ slug: WebAssembly/Reference/Control_flow/block
 )
 ```
 
-| 指令          | 二進制操作碼 |
+| 指令          | 二進制運算碼 |
 | ----------- | ------------- |
 | `block`     | `0x02`        |

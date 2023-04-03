@@ -29,9 +29,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"update_available"`
   - : Une mise à jour de l'extension est disponible.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.RequestUpdateCheckStatus")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

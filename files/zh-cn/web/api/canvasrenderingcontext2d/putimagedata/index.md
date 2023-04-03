@@ -42,7 +42,7 @@ void ctx.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
 
 ## 示例
 
-### 理解`putImageData`
+### 理解 `putImageData`
 
 通过{{domxref("CanvasRenderingContext2D.fillRect()")}}方法实现，更好地理解 putImageData 的执行算法。获取更多信息，参见 [使用 Canvas 控制像素](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
 
@@ -55,106 +55,43 @@ void ctx.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 function putImageData(ctx, imageData, dx, dy,
     dirtyX, dirtyY, dirtyWidth, dirtyHeight) {
-  var data = imageData.data;
-  var height = imageData.height;
-  var width = imageData.width;
+  const data = imageData.data;
+  const height = imageData.height;
+  const width = imageData.width;
   dirtyX = dirtyX || 0;
   dirtyY = dirtyY || 0;
   dirtyWidth = dirtyWidth !== undefined? dirtyWidth: width;
   dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
-  var limitBottom = dirtyY + dirtyHeight;
-  var limitRight = dirtyX + dirtyWidth;
-  for (var y = dirtyY; y < limitBottom; y++) {
-    for (var x = dirtyX; x < limitRight; x++) {
-      var pos = y * width + x;
-      ctx.fillStyle = 'rgba(' + data[pos*4+0]
-                        + ',' + data[pos*4+1]
-                        + ',' + data[pos*4+2]
-                        + ',' + (data[pos*4+3]/255) + ')';
+  const limitBottom = dirtyY + dirtyHeight;
+  const limitRight = dirtyX + dirtyWidth;
+  for (let y = dirtyY; y < limitBottom; y++) {
+    for (let x = dirtyX; x < limitRight; x++) {
+      const pos = y * width + x;
+      ctx.fillStyle =
+        `rgba(${data[pos*4+0]}, ${data[pos*4+1]}, ${data[pos*4+2]}, ${data[pos*4+3]/255})`;
       ctx.fillRect(x + dx, y + dy, 1, 1);
     }
   }
 }
 
 // Draw content onto the canvas
-ctx.fillRect(0,0,100,100);
+ctx.fillRect(0, 0, 100, 100);
 // Create an ImageData object from it
-var imagedata = ctx.getImageData(0,0,100,100);
+const imagedata = ctx.getImageData(0, 0, 100, 100);
 // use the putImageData function that illustrates how putImageData works
 putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.fillRect(0,0,100,100);
-var imagedata = ctx.getImageData(0,0,100,100);
-putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);</textarea>
-```
+{{ EmbedLiveSample('理解 putImageData', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-
-function putImageData(ctx, imageData, dx, dy,
-    dirtyX, dirtyY, dirtyWidth, dirtyHeight) {
-  var data = imageData.data;
-  var height = imageData.height;
-  var width = imageData.width;
-  dirtyX = dirtyX || 0;
-  dirtyY = dirtyY || 0;
-  dirtyWidth = dirtyWidth !== undefined? dirtyWidth: width;
-  dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
-  var limitBottom = dirtyY + dirtyHeight;
-  var limitRight = dirtyX + dirtyWidth;
-  for (var y = dirtyY; y < limitBottom; y++) {
-    for (var x = dirtyX; x < limitRight; x++) {
-      var pos = y * width + x;
-      ctx.fillStyle = 'rgba(' + data[pos*4+0]
-                        + ',' + data[pos*4+1]
-                        + ',' + data[pos*4+2]
-                        + ',' + (data[pos*4+3]/255) + ')';
-      ctx.fillRect(x + dx, y + dy, 1, 1);
-    }
-  }
-}
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

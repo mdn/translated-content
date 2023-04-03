@@ -104,12 +104,7 @@ console.log(obj.baz); // "baz"
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.set")}}
-
-## Notas específicas para SpiderMonkey-specific
-
-- Comenzando con [JavaScript 1.8.1](/es/docs/Web/JavaScript/New_in_JavaScript/1.8.1), los setters ya no son llamados cuando se definen las propiedades en los inicializadores de objetos y arrays.
-- De SpiderMonkey 38 en adelante, un setter con un {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} es un {{jsxref("SyntaxError")}} conforme a la especificación ES6.
+{{Compat}}
 
 ## Ver también
 

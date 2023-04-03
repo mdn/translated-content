@@ -3,7 +3,8 @@ title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 Ранее в этом уроке мы узнали о [сетке холста](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) и **координатном пространстве**. До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.
 
@@ -120,7 +121,7 @@ draw();
 
 В этом примере мы сначала используем `rotate()` для поворота прямоугольника относительно начала координат, а затем, используя `translate()` совместно с `rotate()` поворачиваем прямоугольник относительно его центра.
 
-> **Примечание:** **Памятка**: Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: `radians = (Math.PI/180)*degrees`.
+> **Примечание:** Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: `radians = (Math.PI/180)*degrees`.
 
 ```js
 function draw() {

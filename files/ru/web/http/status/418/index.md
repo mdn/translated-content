@@ -30,7 +30,3 @@ HTTP код ошибки **`418 I'm a teapot`** сообщает о том, чт
 ## Поддержка браузерами
 
 {{Compat}}
-
-## Смотрите также
-
-- {{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}

@@ -18,8 +18,6 @@ slug: Web/CSS/CSS_Table
 - {{cssxref("table-layout")}}
 - {{cssxref("vertical-align")}}
 
-## 명세
+## 명세서
 
-| 명세                                             | 상태                     | 설명      |
-| ------------------------------------------------ | ------------------------ | --------- |
-| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | 초기 정의 |
+{{Specifications}}

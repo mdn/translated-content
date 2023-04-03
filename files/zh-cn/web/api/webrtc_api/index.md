@@ -41,8 +41,6 @@ WebRTC 包含了若干相互关联的 API 和协议以达到这个目标。你�
 
 ## 教程
 
-- [使用 WebRTC adapter.js 提高应用的兼容性](/zh-CN/docs/Web/API/WebRTC_API/adapter.js)
-  - : WebRTC 组织在 GitHub 上提供了[WebRTC 适配器](https://github.com/webrtc/adapter/)，来解决因不同浏览器对 WebRTC 实现不同导致的问题。adapter.js 是一个 JavaScript 库，可以让你写的 WebRTC 应用“一处编写，处处运行”。
 - [使用 WebRTC 拍摄静止的照片](/zh-CN/docs/Web/API/WebRTC_API/Taking_still_photos)
   - : 这篇文章介绍了如何在 WebRTC 的支持下可以访问到电脑或者手机的摄像头并且使用它来拍摄照片。
 - [一个简易 RTCDataChannel 的例子](/zh-CN/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

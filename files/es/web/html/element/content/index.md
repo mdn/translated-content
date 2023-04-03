@@ -85,11 +85,11 @@ Si muestras esto en un explorador web , debe de verse como lo siguiente .
 
 ## Especificaciones
 
-{{Specifications}}
+Este elemento ya no está definido por ninguna especificación.
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.content")}}
+{{Compat}}
 
 ## Ver también
 

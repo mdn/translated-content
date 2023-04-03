@@ -20,7 +20,7 @@ _繼承父類{{domxref("EventTarget")}}的方法。_
 - {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}
   - : 取得一系列關於系統中可用的媒體輸入和媒體輸出設備的資訊。
 - {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
-  - : 返回一個符合{{domxref("MediaTrackSupportedConstraints")}}的物件，該物件標示出{{domxref("MediaStreamTrack")}}介面支援哪些可約束的屬性。請參考{{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}瞭解更多關於`constraints`的資訊。
+  - : 返回一個符合 {{domxref("MediaTrackSupportedConstraints")}} 的物件，該物件標示出 {{domxref("MediaStreamTrack")}} 介面支援哪些可約束的屬性。請參考 [Media Streams API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API/Constraints) 瞭解更多關於 `constraints` 的資訊。
 - {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
   - : 出現提示視窗讓使用者選擇要捕捉整個螢幕或是部分(例如一個視窗)的畫面做為{{domxref("MediaStream")}}，用於分享或錄製。返回值為一個解析為`MediaStream` 的 promise。
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}

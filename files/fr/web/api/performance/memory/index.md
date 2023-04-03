@@ -10,7 +10,7 @@ translation_of: Web/API/Performance/memory
 
 {{APIRef}}
 
-{{Non-standardGeneric('header')}}
+{{Non-standard_Header}}
 
 ## Syntaxe
 
@@ -33,7 +33,7 @@ Aucune
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.memory")}}
+{{Compat}}
 
 ## Voir aussi
 

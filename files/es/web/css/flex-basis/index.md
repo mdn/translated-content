@@ -48,7 +48,7 @@ flex-basis: unset;
     >
     > - Originalmente, "flex-basis:auto" significa "observa mi propiedad width o height".
     > - Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
-    > - Después, ese cambio fue revertido en [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316), y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ({{bug("1105111")}} incluye la inclusión de dicha palabra clave).
+    > - Después, ese cambio fue revertido en [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316), y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ([Error 1105111 en Firefox](https://bugzil.la/1105111) incluye la inclusión de dicha palabra clave).
 
 ### Sintaxis Formal
 
@@ -171,9 +171,9 @@ flex-basis: unset;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-basis")}}
+{{Compat}}
 
 ## Ver también
 

@@ -9,7 +9,7 @@ slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 この記事ではキャプションが付いた動画プレイヤーの例を参照します。この例では [Blender Foundation](http://www.blender.org/foundation/) が作成した [Sintel open movie](http://www.sintel.org/) を使用します。
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 > **メモ:** ソースコードは [Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) にあります。また実際の[動画](http://iandevlin.github.io/mdn/video-player-with-captions/)も見ることもできます。
 

@@ -157,10 +157,24 @@
           "searchPattern": "/([^\\s>])  ([^\\s|])/g",
           "replace": "$1 $2",
           "skipCode": true
+        },
+        {
+          "name": "stuck-definition",
+          "message": "Character is stuck to definition description marker",
+          "searchPattern": "/- :(\\w)/g",
+          "replace": "- : $1",
+          "skipCode": true
+        },
+        {
+          "name": "fqdn-moz-links",
+          "message": "Don't use developer.mozilla.org for links",
+          "search": "](https://developer.mozilla.org/",
+          "replace": "](/",
+          "skipCode": true
         }
       ]
     }
   },
   "customRules": ["markdownlint-rule-search-replace"],
-  "ignores": ["node_modules", "**/conflicting/**", "**/orphaned/**", ".github/", "files/**/web/api/window/frames/index.md"]
+  "ignores": ["node_modules", "**/conflicting/**", "**/orphaned/**", ".github/"]
 }

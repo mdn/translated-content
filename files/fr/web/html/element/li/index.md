@@ -25,7 +25,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > **Note :** Cet attribut a été déprécié en HTML4 mais a été réintroduit en HTML5.
 
-    > **Note :** Avant {{Gecko("9.0")}}, des valeurs négatives étaient incorrectement converties en 0. A partir de {{Gecko("9.0")}}, toutes les valeurs entières ont été correctement analysées.
+    > **Note :** Avant Gecko 9.0, des valeurs négatives étaient incorrectement converties en 0. A partir de Gecko 9.0, toutes les valeurs entières ont été correctement analysées.
 
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
 
@@ -133,12 +133,12 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("presentation")}}, {{ARIARole("radio")}},
-        {{ARIARole("separator")}}, {{ARIARole("tab")}},
-        {{ARIARole("treeitem")}}.
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code>.
       </td>
     </tr>
     <tr>

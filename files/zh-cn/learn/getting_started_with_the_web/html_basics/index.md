@@ -71,7 +71,7 @@ My cat is very grumpy
 不包含任何内容的元素称为空元素。比如 {{htmlelement("img")}} 元素：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 本元素包含两个属性，但是并没有 `</img>` 结束标签，元素里也没有内容。这是因为图像元素不需要通过内容来产生效果，它的作用是向其所在的位置嵌入一个图像。
@@ -107,7 +107,7 @@ My cat is very grumpy
 重温一下 {{htmlelement("img")}} 元素：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 像之前所讲，该元素通过包含图像文件路径的地址属性 `src`，可在所在位置嵌入图像。
@@ -225,14 +225,3 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 在这里，我们只是介绍了一点点 HTML。要学习更多，访问我们的 [HTML 学习主题页面](/zh-CN/docs/Learn/HTML) 。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## 本章目录
-
-- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [设计网站的外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Web 是如何运作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

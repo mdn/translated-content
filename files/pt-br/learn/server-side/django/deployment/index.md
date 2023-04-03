@@ -100,7 +100,7 @@ O [esqueleto do site do Django](/pt-BR/docs/Learn/Server-side/Django/skeleton_we
 
 As configurações críticas que você deve verificar são:
 
-- `DEBUG`. Isso deve ser definido como `False` em produção (`DEBUG = False`). Isso impede que o rastreamento de depuração sensível/confidencial e as informações variáveis ​​sejam exibidas.
+- `DEBUG`. Isso deve ser definido como `False` em produção (`DEBUG = False`). Isso impede que o rastreamento de depuração sensível/confidencial e as informações variáveis sejam exibidas.
 - `SECRET_KEY`. Este é um grande valor aleatório usado para proteção contra CSRF etc. É importante que a chave usada na produção não esteja no controle de origem ou acessível fora do servidor de produção. Os documentos do Django sugerem que isso pode ser melhor carregado de uma variável de ambiente ou lido de um arquivo somente servidor.
 
   ```python
@@ -115,7 +115,7 @@ As configurações críticas que você deve verificar são:
       SECRET_KEY = f.read().strip()
   ```
 
-Vamos mudar o aplicativo LocalLibrary para que possamos ler nosso `SECRET_KEY` e `DEBUG` variáveis ​​de variáveis ​​de ambiente se forem definidas, mas caso contrário, use os valores padrão no arquivo de configuração.
+Vamos mudar o aplicativo LocalLibrary para que possamos ler nosso `SECRET_KEY` e `DEBUG` variáveis de variáveis de ambiente se forem definidas, mas caso contrário, use os valores padrão no arquivo de configuração.
 
 Abra **/locallibrary/settings.py**, desative o original `SECRET_KEY`configuração e adicione as novas linhas conforme mostrado abaixo em **negrito**. Durante o desenvolvimento, nenhuma variável de ambiente será especificada para a chave, então o valor padrão será usado (não importa qual chave você usa aqui, ou se a chave "vaza", porque você não a usará na produção).
 
@@ -134,7 +134,7 @@ Em seguida, comente o existente `DEBUG` configuração e adicione a nova linha m
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ```
 
-O valor do `DEBUG` será `True` por padrão, mas será apenas `False` se o valor do `DJANGO_DEBUG` variável de ambiente é definida para `False`. Observe que as variáveis ​​de ambiente são strings e não tipos Python. Portanto, precisamos comparar strings. A única maneira de definir o `DEBUG` variável para `False` é realmente configurá-lo para a string `False`
+O valor do `DEBUG` será `True` por padrão, mas será apenas `False` se o valor do `DJANGO_DEBUG` variável de ambiente é definida para `False`. Observe que as variáveis de ambiente são strings e não tipos Python. Portanto, precisamos comparar strings. A única maneira de definir o `DEBUG` variável para `False` é realmente configurá-lo para a string `False`
 
 Você pode definir a variável de ambiente como False, emitindo o seguinte comando:
 
@@ -669,21 +669,3 @@ The next step is to read our last few articles, and then complete the assessment
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

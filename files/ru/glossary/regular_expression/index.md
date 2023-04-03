@@ -15,7 +15,6 @@ original_slug: Глоссарий/Regular_expression
 
 ### Общие
 
-- {{Interwiki("wikipedia", "Регулярные выражения")}} на Википедии
 - [Интерактивный учебник](http://regexone.com/)
 - [Визуализированное Регулярное Выражение](http://regexper.com/)
 

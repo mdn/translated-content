@@ -11,7 +11,7 @@ slug: Web/CSS/:first
 
 > **备注：** 你不能改变所有的 css 属性。你只能改变 margins、orphans、widows、文档什么时候换页。别的所有 css 样式都会被忽略。
 
-## 语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -48,7 +48,7 @@ document.querySelector("button").onclick = function(){ window.print() }
 
 点击下面的 print 按钮来打印这个例子。第一页的文字会在中间显示，其他页的内容在默认位置显示。
 
-{{ EmbedLiveSample('Example', '80%', '150px') }}
+{{ EmbedLiveSample('示例', '80%', '150px') }}
 
 > **备注：** 在定义 margin 的时候，你可以只用绝对长度单位，点击 [length](/zh-CN/docs/Web/CSS/length#绝对长度单位) 查看更多内容。
 

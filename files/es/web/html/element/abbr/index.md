@@ -32,9 +32,9 @@ Cada elemento `<abbr>` usado es independiente de todos los otros; dar un `<title
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}
 
 ## Estilo por defecto
 

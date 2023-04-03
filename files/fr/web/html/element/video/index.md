@@ -333,7 +333,7 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

@@ -3,7 +3,8 @@ title: WebAssembly
 slug: WebAssembly/JavaScript_interface
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 **`WebAssembly`** 자바스크립트 객체는 모든 [WebAssembly](/ko/docs/WebAssembly)에 관계된 기능의 네임스페이스로서 역할합니다.
 

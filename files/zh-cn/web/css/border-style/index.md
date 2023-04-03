@@ -52,7 +52,7 @@ border-style: unset;
     | `inset`  |     | 显示为有陷入效果的边框，样式与 `outset` 相反。当它指定到 {{ cssxref("border-collapse") }} 为 `collapsed` 的单元格时，会显示为 `groove` 的样式。                                                                                                    |
     | `outset` |     | 显示为有突出效果的边框，样式与 `inset` 相反。当它指定到 {{ cssxref("border-collapse") }} 为 `collapsed` 的单元格时，会显示为 `ridge` 的样式。                                                                                                      |
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -112,7 +112,7 @@ tr, td {
 
 #### 输出
 
-{{ EmbedLiveSample('Table_with_all_property_values', 300, 200) }}
+{{ EmbedLiveSample('包含所有属性取值的表格', 300, 200) }}
 
 ## 规范
 
@@ -122,6 +122,6 @@ tr, td {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - 和边框有关的 CSS 简写属性：{{ Cssxref("border") }}, {{ Cssxref("border-width") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-radius") }}

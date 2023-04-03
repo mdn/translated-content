@@ -54,7 +54,7 @@ Nuestra [área de aprendizaje CSS](/es/docs/Learn/CSS) presenta múltiples módu
   - [Modelo de caja](/es/docs/CSS/box_model) y [colapso de margen](/es/docs/CSS/margin_collapsing)
   - El [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block)
   - Contextos de [apilamiento](/es/docs/CSS/Understanding_z-index/The_stacking_context) y [formato de bloques](/es/docs/CSS/block_formatting_context)
-  - Valores [iniciales](/es/docs/CSS/initial_value), [calculados](/es/docs/CSS/computed_value), [usados](/es/docs/CSS/used_value)y [actuales](/es/docs/CSS/actual_value)
+  - Valores [iniciales](/es/docs/CSS/initial_value), [calculados](/es/docs/CSS/computed_value), [usados](/es/docs/CSS/used_value) y [actuales](/es/docs/CSS/actual_value)
   - [Propiedades abreviadas de CSS](/es/docs/Web/CSS/Shorthand_properties)
   - [Diseño de caja flexible de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout)
   - [Diseño de cuadrícula CSS (_CSS Grid_)](/es/docs/Web/CSS/CSS_Grid_Layout)
@@ -63,23 +63,23 @@ Nuestra [área de aprendizaje CSS](/es/docs/Learn/CSS) presenta múltiples módu
 
 ## Cookbook
 
-El [libro de cocina de diseño CSS](/es/docs/Web/CSS/Layout_cookbook)[](/es/docs/Web/CSS/Layout_cookbook)tiene como objetivo reunir recetas para patrones de diseño comunes, sobre cosas que puedes necesitar implementar en tus sitios. Además de proporcionar código que puedes usar como punto de partida en tus proyectos, estas recetas destacan las diferentes formas en que se pueden usar las especificaciones de diseño y las elecciones que puedes hacer como desarrollador.
+El [libro de cocina de diseño CSS](/es/docs/Web/CSS/Layout_cookbook)[](/es/docs/Web/CSS/Layout_cookbook) tiene como objetivo reunir recetas para patrones de diseño comunes, sobre cosas que puedes necesitar implementar en tus sitios. Además de proporcionar código que puedes usar como punto de partida en tus proyectos, estas recetas destacan las diferentes formas en que se pueden usar las especificaciones de diseño y las elecciones que puedes hacer como desarrollador.
 
 ## Herramientas para el desarrollo de CSS
 
 - Puede usar el [Servicio de Validación CSS de W3C](https://jigsaw.w3.org/css-validator/) para verificar si su CSS es válido. Esta es una herramienta de depuración de valor incalculable.
 - Las [herramientas para desarrolladores de Firefox](/es/docs/Tools) te permiten ver y editar el CSS de una página en vivo a través de las herramientas [Inspector](/es/docs/Tools/Page_Inspector)y [Editor de estilos](/es/docs/Tools/Style_Editor).
 - La [extensión Web Developer](https://addons.mozilla.org/es/firefox/addon/60) para Firefox le permite rastrear y editar CSS en vivo en sitios vigilados.
-- La comunidad web ha creado varias [herramientas CSS](/es/docs/Web/CSS/Tools)para que las uses.
+- La comunidad web ha creado varias [herramientas CSS](/es/docs/Web/CSS/Tools) para que las uses.
 
 ## Meta errores
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Error 1323667 en Firefox](https://bugzil.la/1323667)
 
 ## Ver también
 
 - [Demos de CSS](/es/docs/Web/Demos_of_open_web_technologies#CSS): obtén un impulso creativo explorando ejemplos de las últimas tecnologías de CSS en acción.
 - Lenguajes web a los que se aplica CSS frecuentemente: [HTML](/es/docs/HTML), [SVG](/es/docs/SVG), [MathML,](/es/docs/Web/MathML) [XHTML](/es/docs/XHTML) y [XML](/es/docs/XML).
-- Tecnologías de Mozilla que hacen un amplio uso de CSS: [extensiones](/es/docs/Extensions) y [temas](/es/Add-ons/Themes)de [Firefox](/es/Firefox)y [Thunderbird](/es/docs/Mozilla/Thunderbird).
+- Tecnologías de Mozilla que hacen un amplio uso de CSS: [extensiones](/es/docs/Extensions) y [temas](/es/Add-ons/Themes) de [Firefox](/es/Firefox) y [Thunderbird](/es/docs/Mozilla/Thunderbird).
 - [Lista de correo de Mozilla](https://lists.mozilla.org/listinfo/dev-tech-layout)
 - [Preguntas de Stackoverflow sobre CSS](https://stackoverflow.com/questions/tagged/css)

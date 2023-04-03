@@ -77,7 +77,7 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
 - {{SVGAttr('baseline-shift')}}
   - : It allows repositioning of the dominant-baseline relative to the dominant-baseline of the parent text content element.
     _Value_: **`auto`**|`baseline`|`super`|`sub`|[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#Percentage)|[\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)|`inherit`; _Animatable_: **Yes**
-- {{SVGAttr('clip')}} {{deprecated_inline('css')}}
+- {{SVGAttr('clip')}} {{deprecated_inline}}
   - : It defines what portion of an element is visible.
     _Value_: **`auto`**|{{cssxref("shape")}}|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('clip-path')}}
@@ -95,7 +95,7 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
 - {{SVGAttr('color-interpolation-filters')}}
   - : It specifies the color space for imaging operations performed via filter effects.
     _Value_: `auto`|`sRGB`|**`linearRGB`**|`inherit`; _Animatable_: **Yes**
-- {{SVGAttr('color-profile')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('color-profile')}} {{deprecated_inline}}
   - : It defines which color profile a raster image included through the {{SVGElement('image')}} element should use.
     _Value_: `auto`|`sRGB`|`linearRGB`|[\<name>](/zh-CN/docs/Web/SVG/Content_type#Name)|[\<IRI>](/zh-CN/docs/Web/SVG/Content_type#IRI)|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('color-rendering')}}
@@ -113,7 +113,7 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
 - {{SVGAttr('dominant-baseline')}}
   - : It defines the baseline used to align the box’s text and inline-level contents.
     _Value_: `auto`|`text-bottom`|`alphabetic`|`ideographic`|`middle`|`central`| `mathematical`|`hanging`|`text-top`; _Animatable_: **Yes**
-- {{SVGAttr('enable-background')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('enable-background')}} {{deprecated_inline}}
   - : It tells the browser how to manage the accumulation of the background image.
     _Value_: **`accumulate`**|`new`|`inherit`; _Animatable_: **No**
 - {{SVGAttr('fill')}}
@@ -155,16 +155,16 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
 - {{SVGAttr('font-weight')}}
   - : It specifies the weight (or boldness) of the font.
     _Value_: **`normal`**|`bold`|`lighter`|`bolder`|`100`|`200`|`300`|`400`|`500`|`600`|`700`|`800`|`900`; _Animatable_: **Yes**
-- {{SVGAttr('glyph-orientation-horizontal')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('glyph-orientation-horizontal')}} {{deprecated_inline}}
   - : It controls glyph orientation when the inline-progression-direction is horizontal.
     _Value_: [\<angle>](/zh-CN/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animatable_: **No**
-- {{SVGAttr('glyph-orientation-vertical')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('glyph-orientation-vertical')}} {{deprecated_inline}}
   - : It controls glyph orientation when the inline-progression-direction is vertical.
     _Value_: **`auto`**|[\<angle>](/zh-CN/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animatable_: **No**
 - {{SVGAttr('image-rendering')}}
   - : It provides a hint to the browser about how to make speed vs. quality tradeoffs as it performs image processing.
     _Value_: **`auto`**|`optimizeQuality`|`optimizeSpeed`; _Animatable_: **Yes**
-- {{SVGAttr('kerning')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('kerning')}} {{deprecated_inline}}
   - : It indicates whether the browser should adjust inter-glyph spacing.
     _Value_: **`auto`**|[\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('letter-spacing')}}

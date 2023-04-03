@@ -1,9 +1,7 @@
 ---
 title: Consola
-slug: Web/API/Console
+slug: Web/API/console
 original_slug: Web/API/Console
-l10n:
-  sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
 
 {{APIRef("Console API")}}
@@ -63,23 +61,23 @@ Esta página documenta los [Métodos](#métodos) disponibles en el objeto `conso
 - {{domxref("console.timeLog()")}}
   - : Muestra el valor del [temporizador](#temporizadores) especificado en la consola.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Agrega un marcador a las herramientas del navegador [Timeline](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) o [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html).
+  - : Agrega un marcador a las herramientas del navegador [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) o [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline).
 - {{domxref("console.trace()")}}
   - : Muestra una [traza de pila](#trazas_de_pila).
 - {{domxref("console.warn()")}}
-  - : Muestra un mensaje de advertencia.Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
+  - : Muestra un mensaje de advertencia. Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
 
 ## Ejemplos
 
 ### Enviar texto a la consola
 
-La característica mas utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
+La característica más utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
 
-Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o mas sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
+Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o más sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
 
 #### Mostrando un solo objeto
 
-La manera mas simple de utilizar los métodos de registro es mostrar un solo objeto:
+La manera más simple de utilizar los métodos de registro es mostrar un solo objeto:
 
 ```js
 var someObject = { str: "Algún texto", id: 5 };

@@ -1,5 +1,5 @@
 ---
-title: 使用图像 Using images
+title: 使用图像
 slug: Web/API/Canvas_API/Tutorial/Using_images
 ---
 
@@ -25,7 +25,7 @@ canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 - **{{domxref("HTMLCanvasElement")}}**
   - : 可以使用另一个 {{HTMLElement("canvas")}} 元素作为你的图片源。
 - **{{domxref("ImageBitmap")}}**
-  - : 这是一个高性能的位图，可以低延迟地绘制，它可以从上述的所有源以及其它几种源中生成。
+  - : 这是一个高性能的位图，可以低延迟地绘制，它可以从上述的所有源以及其他几种源中生成。
 
 这些源统一由 {{domxref("CanvasImageSource")}}类型来引用。
 
@@ -39,13 +39,13 @@ canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 - {{domxref("document.getElementsByTagName()")}}方法
 - 如果你知道你想使用的指定图片的 ID，你可以用{{domxref("document.getElementById()")}}获得这个图片
 
-### 使用其它域名下的图片
+### 使用其他域名下的图片
 
-在 {{domxref("HTMLImageElement")}}上使用[crossOrigin](/zh-CN/docs/HTML/CORS_settings_attributes)属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会[污染 canvas](/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas)。
+在 {{domxref("HTMLImageElement")}}上使用[crossOrigin](/zh-CN/docs/HTML/CORS_settings_attributes)属性，你可以请求加载其他域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会[污染 canvas](/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas)。
 
-### 使用其它 canvas 元素
+### 使用其他 canvas 元素
 
-和引用页面内的图片类似地，用 `document.getElementsByTagName` 或 `document.getElementById` 方法来获取其它 canvas 元素。但你引入的应该是已经准备好的 canvas。
+和引用页面内的图片类似地，用 `document.getElementsByTagName` 或 `document.getElementById` 方法来获取其他 canvas 元素。但你引入的应该是已经准备好的 canvas。
 
 一个常用的应用就是将第二个 canvas 作为另一个大的 canvas 的缩略图。
 
@@ -108,7 +108,7 @@ function getMyVideo() {
 
 > **备注：** SVG 图像必须在 \<svg> 根指定元素的宽度和高度。
 
-### 例子：一个简单的线图
+### 示例：一个简单的线图
 
 ![](canvas_backdrop.png)
 
@@ -141,7 +141,7 @@ function getMyVideo() {
 
 结果看起来是这样的：
 
-{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("示例：一个简单的线图", 220, 160, "canvas_backdrop.png")}}
 
 ## 缩放 Scaling
 
@@ -150,7 +150,7 @@ function getMyVideo() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y, width, height)")}}
   - : 这个方法多了 2 个参数：`width` 和 `height，`这两个参数用来控制 当向 canvas 画入时应该缩放的大小
 
-### 例子：平铺图像
+### 示例：平铺图像
 
 ![](canvas_scale_image.png)
 
@@ -183,20 +183,20 @@ function draw() {
 
 结果看起来像这样：
 
-{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("示例：平铺图像", 160, 160, "canvas_scale_image.png")}}
 
 ## 切片 Slicing
 
 `drawImage` 方法的第三个也是最后一个变种有 8 个新参数，用于控制做切片显示的。
 
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)")}}
-  - : 第一个参数和其它的是相同的，都是一个图像或者另一个 canvas 的引用。其它 8 个参数最好是参照右边的图解，前 4 个是定义图像源的切片位置和大小，后 4 个则是定义切片的目标显示位置和大小。
+  - : 第一个参数和其他的是相同的，都是一个图像或者另一个 canvas 的引用。其他 8 个参数最好是参照右边的图解，前 4 个是定义图像源的切片位置和大小，后 4 个则是定义切片的目标显示位置和大小。
 
 ![](canvas_drawimage.jpg)
 
 切片是个做图像合成的强大工具。假设有一张包含了所有元素的图像，那么你可以用这个方法来合成一个完整图像。例如，你想画一张图表，而手上有一个包含所有必需的文字的 PNG 文件，那么你可以很轻易的根据实际数据的需要来改变最终显示的图表。这方法的另一个好处就是你不需要单独装载每一个图像。
 
-### 例子：相框
+### 示例：相框
 
 ![](canvas_drawimage2.jpg)
 
@@ -230,7 +230,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("示例：相框", 160, 160, "canvas_drawimage2.jpg")}}
 
 ## 画廊示例
 

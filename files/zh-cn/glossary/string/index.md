@@ -12,4 +12,4 @@ slug: Glossary/String
 ### 基本知识
 
 - 维基百科上的[字符串](https://zh.wikipedia.org/wiki/字符串)
-- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures#String_type)
+- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures#string_类型)

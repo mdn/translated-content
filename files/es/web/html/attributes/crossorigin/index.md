@@ -25,5 +25,5 @@ Una clave inválida y un string vacío serán gestionados como una clave anónim
 
 ## Véase también
 
-- [Control de acceso HTTP (CORS)](https://developer.mozilla.org/es/docs/Web/HTTP/CORS)
-- [Atributo HTML: `rel`](https://developer.mozilla.org/es/docs/Web/HTML/Attributes/rel)
+- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/CORS)
+- [Atributo HTML: `rel`](/es/docs/Web/HTML/Attributes/rel)

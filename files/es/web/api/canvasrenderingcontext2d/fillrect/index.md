@@ -92,9 +92,9 @@ window.addEventListener("load", drawCanvas);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.fillRect")}}
+{{Compat}}
 
 ## Documentos relacionados
 

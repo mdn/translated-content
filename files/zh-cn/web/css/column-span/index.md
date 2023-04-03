@@ -31,7 +31,7 @@ column-span: inherit;
 - `all`
   - : 元素横跨所有列。元素出现之前，出现在元素之前的正常流中的内容在所有列之间自动平衡。该元素建立一个新的块格式上下文。
 
-## 例子
+## 示例
 
 下例中的 h2 元素横跨 article 元素中的各列
 
@@ -58,9 +58,9 @@ h2 {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample('Example', 'auto', 120)}}
+{{EmbedLiveSample('示例', 'auto', 120)}}
 
 ## 规范
 

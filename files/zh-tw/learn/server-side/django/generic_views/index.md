@@ -57,7 +57,7 @@ urlpatterns = [
 
 ### View (class-based)
 
-我們可以很容易地，將書本列表列表編寫為常規函數（就像我們之前的索引視圖一樣），進入查詢數據庫中的所有書本，然後調用 render（），將列表傳遞給指定的模板。然而，我們用另一種方 ​​ 法取代，我們將使用基於類的通用列表視圖（ListView）-一個繼承自現有視圖的類。因為通用視圖，已經實現了我們需要的大部分功能，並且遵循 Django 最佳實踐，我們將能夠創建更強大的列表視圖，代碼更多，重複次數最多，最終維護所需。
+我們可以很容易地，將書本列表列表編寫為常規函數（就像我們之前的索引視圖一樣），進入查詢數據庫中的所有書本，然後調用 render（），將列表傳遞給指定的模板。然而，我們用另一種方 法取代，我們將使用基於類的通用列表視圖（ListView）-一個繼承自現有視圖的類。因為通用視圖，已經實現了我們需要的大部分功能，並且遵循 Django 最佳實踐，我們將能夠創建更強大的列表視圖，代碼更多，重複次數最多，最終維護所需。
 
 開啟 catalog / views.py，將以下代碼複製到文件的底部：
 
@@ -574,21 +574,3 @@ In our next articles we'll extend this library to support user accounts, and the
 - [Pagination](https://docs.djangoproject.com/en/2.0/topics/pagination/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

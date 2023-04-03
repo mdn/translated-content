@@ -22,7 +22,7 @@ TypeError: Right-hand side of 'instanceof' is not callable (Chrome)
 
 [`instanceof` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 希望右边的操作数为一个构造对象，即一个有 `prototype` 属性且可以调用的对象。
 
-## 例子
+## 示例
 
 ```js example-bad
 "test" instanceof ""; // TypeError: invalid 'instanceof' operand ""

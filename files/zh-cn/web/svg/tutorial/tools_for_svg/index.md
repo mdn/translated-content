@@ -31,7 +31,7 @@ Batik 是 Apache 软件基金会支持下的一个开源工具集。这个工具
 
 与 [Apache FOP](https://xmlgraphics.apache.org/fop/) 联用，Batki 还可以把 SVG 转换成 PDF。
 
-### 其它呈现器
+### 其他呈现器
 
 要想从一个 SVG 源创建一个光栅图像，存在很多个项目。[ImageMagick](https://imagemagick.org/) 是最著名的命名行图象处理工具之一。Wikipedia 所用到的 Gnome 库 [rsvg](https://wiki.gnome.org/Projects/LibRsvg) 能把它们的 SVG 图形光栅化。
 

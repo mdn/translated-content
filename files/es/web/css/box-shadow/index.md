@@ -124,9 +124,9 @@ Se ha añadido un margen del tamaño de la sombra más ancha para asegurarse de 
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.box-shadow")}}
+{{Compat}}
 
 ## Ver también
 

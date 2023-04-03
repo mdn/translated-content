@@ -64,7 +64,7 @@ f(1, 'a', true);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## Ver también
 

@@ -45,9 +45,9 @@ _The `History`_ _interface doesn't inherit any methods._
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## See also
 

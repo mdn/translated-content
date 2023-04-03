@@ -42,13 +42,7 @@ while (i > 0 && i < 5);
 console.log(result);
 ```
 
-## 자세한 내용
-
-| Specification                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-do-while-statement', 'do-while statement')}} |
-
-## Specifications
+## 명세서
 
 {{Specifications}}
 

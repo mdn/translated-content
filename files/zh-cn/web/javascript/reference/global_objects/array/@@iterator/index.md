@@ -67,30 +67,30 @@ console.log(arrIter.next().value); // e
 
 ```js
 function logIterable(it) {
-  if (!(Symbol.iterator in it)) {
-    console.log(it, " is not an iterable object.");
+  if (typeof it[Symbol.iterator] !== "function") {
+    console.log(it, "不可迭代。");
     return;
   }
-
   for (const letter of it) {
     console.log(letter);
   }
 }
 
-// Array
+// 数组
 logIterable(["a", "b", "c"]);
 // a
 // b
 // c
 
-// string
+// 字符串
 logIterable("abc");
 // a
 // b
 // c
 
+// 数值
 logIterable(123);
-// 123 is not an iterable object.
+// 123 不可迭代。
 ```
 
 ## 规范

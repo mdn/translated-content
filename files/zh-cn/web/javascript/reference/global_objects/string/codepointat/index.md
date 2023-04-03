@@ -28,7 +28,7 @@ str.codePointAt(pos)
 
 Surrogate Pair 是 UTF-16 中用于扩展字符而使用的编码方式，是一种采用四个字节 (两个 UTF-16 编码) 来表示一个字符，称作代理对。
 
-## 例子
+## 示例
 
 ### 使用 `codePointAt()`
 

@@ -29,7 +29,7 @@ slug: Web/HTML/Element/optgroup
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("group")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -48,9 +48,9 @@ slug: Web/HTML/Element/optgroup
 
 这个元素包含 [global attributes](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 如果设置了这个布尔值，则不能选择这个选项组中的任何选项。通常浏览器会置灰这样的控件，它不接受任何浏览器事件，如鼠标点击或者焦点相关的事件。
-- {{htmlattrdef("label")}}
+- `label`
   - : 选项组的名字，浏览器用以在用户界面中标记选项。使用这个元素时必须加上这个属性。
 
 ## 示例

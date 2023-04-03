@@ -27,11 +27,11 @@ width: min(1vw, 4em, 80px);
 - Oftentimes you will want to comine `min()` and `max()` values, or use `min()` within a `clamp()` or `calc()` function.
 - You can provide more than two arguments, if you have multiple constraints to apply.
 
-### Formal syntax
+### 形式语法
 
 {{CSSSyntax}}
 
-## Examples
+## 示例
 
 ### Growing images to a maximum size
 
@@ -82,7 +82,7 @@ form {
 </form>
 ```
 
-{{EmbedLiveSample("Setting_a_maximum_size_for_an_label_and_input", "100%", "80")}}
+{{EmbedLiveSample("给 label 和 input 设置最大值", "100%", "80")}}
 
 Think of the `min()` function as finding the maximum value allowed for a property.
 

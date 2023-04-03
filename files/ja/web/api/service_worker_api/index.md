@@ -70,7 +70,7 @@ slug: Web/API/Service_Worker_API
 
 近い将来、サービスワーカーはネイティブアプリで実現できることに近い、その他いくつもの便利なことを、ウェブプラットフォーム上でも実現する事ができるようになるでしょう。興味深いことに、次のような他の仕様書でも、サービスワーカーのコンテキストを利用できるようになってきています。
 
-- [バックグラウンド同期](https://github.com/slightlyoff/BackgroundSync): ユーザーがサイトにいないときにもサービスワーカーを起動し、キャッシュを更新したりすることができます。
+- [バックグラウンド同期](https://github.com/WICG/background-sync): ユーザーがサイトにいないときにもサービスワーカーを起動し、キャッシュを更新したりすることができます。
 - [プッシュメッセージへの応答](/ja/docs/Web/API/Push_API): 新しいコンテンツが利用可能になった旨を伝えるためにユーザーにメッセージを送るためにサービスワーカーを起動します。
 - 特定の日付・時刻に対する反応
 - 特定の地理的範囲へ入った事を検知する
@@ -124,7 +124,7 @@ slug: Web/API/Service_Worker_API
 
 ## 関連情報
 
-- [ServiceWorker Cookbook](https://github.com/mozilla/serviceworker-cookbook) (英語)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook) (英語)
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test) (英語)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)

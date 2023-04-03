@@ -365,16 +365,3 @@ body {
 - [Using multi-column layouts](/zh-CN/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [CSS 介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流（Normal Flow）](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒子（Flexbox）](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格（Grid）](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动（Floats）](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位（Positioning）](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局（Multiple-column Layout）](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [传统的布局实现（Legacy Layout Methods）](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧有浏览器（Supporting older browsers）](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

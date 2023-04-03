@@ -66,7 +66,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 <!---->
 
-- `close` {{non-standard_inline}} {{obsolete_inline}}
+- `close` {{non-standard_inline}}
   - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("close")}} event is raised.
     Also available via the {{domxref("WorkerGlobalScope.onclose")}} property.
 - `rejectionhandled` {{non-standard_inline}}

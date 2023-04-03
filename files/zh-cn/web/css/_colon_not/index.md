@@ -87,7 +87,7 @@ h2 :not(span.foo) {
 
 ### 结果
 
-{{EmbedLiveSample('Basic_set_of_not_examples', '100%', 320)}}
+{{EmbedLiveSample('设置 :not() 基础示例', '100%', 320)}}
 
 ## 规范
 

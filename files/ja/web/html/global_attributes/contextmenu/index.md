@@ -2,7 +2,7 @@
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
 l10n:
-  sourceCommit: 3afc4a9557e0c71cbcf5491975d8edec38422247
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Deprecated_Header}}{{Non-standard_header}}

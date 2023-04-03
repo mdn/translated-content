@@ -25,7 +25,7 @@ slug: Web/API/URL
 - {{domxref("URL.hostname", "hostname")}}
   - : URL のドメインを含む {{domxref("USVString")}}。
 - {{domxref("URL.href", "href")}}
-  - : URL 全体を含む {{domxref("USVString")}} を返す文字列化関数です。
+  - : URL 全体を含む {{domxref("USVString")}} を返す{{Glossary("stringifier", "文字列化子")}}です。
 - {{domxref("URL.origin", "origin")}} {{readonlyInline}}
   - : URL のオリジン、つまりそのスキーム、ドメイン、およびポートを含む {{domxref("USVString")}} を返します。
 - {{domxref("URL.password", "password")}}

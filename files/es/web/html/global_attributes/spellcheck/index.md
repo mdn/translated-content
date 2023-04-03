@@ -186,9 +186,9 @@ El valor por default de este atributo es dependiente del explorador y del elemen
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.spellcheck")}}
+{{Compat}}
 
 ## Ver también
 

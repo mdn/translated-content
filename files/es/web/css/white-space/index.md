@@ -279,7 +279,7 @@ select.addEventListener("change", function(e) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.white-space")}}
+{{Compat}}
 
 ## See also
 

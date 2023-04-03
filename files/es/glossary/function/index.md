@@ -63,7 +63,7 @@ Una **expresión de una función que se invoca inmediatamente** ({{glossary("IIF
 ```js
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */

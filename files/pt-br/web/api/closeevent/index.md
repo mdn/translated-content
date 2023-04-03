@@ -52,7 +52,7 @@ _Esta interface também herda as propriedades de seu objeto pai, {{domxref("Even
 
 _Esta interface também herda as propriedades de seu objeto pai,_ _{{domxref("Event")}}._
 
-- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{Obsolete_inline}}
+- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}}
   - : Inicializa o valor de um `CloseEvent` criado. Se o evento já tenha sido enviado, este método não realiza nada. Não use este método mais, use o construtor {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} em vez disso.
 
 ## Compatibilidade com navegadores

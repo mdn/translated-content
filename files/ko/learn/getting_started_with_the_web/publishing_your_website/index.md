@@ -74,12 +74,12 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 
 ![](command-line.png)
 
-> **참고:** **노트**: 만약 커맨드라인이 불편하시다면, 같은 일을 하기 위해서 [Git graphical user interface](http://git-scm.com/downloads/guis) 를 사용하는것도 고려해 볼 수 있습니다.
+> **참고:** 만약 커맨드라인이 불편하시다면, 같은 일을 하기 위해서 [Git graphical user interface](http://git-scm.com/downloads/guis) 를 사용하는것도 고려해 볼 수 있습니다.
 
 모든 운영 체제는 커맨드 라인 도구를 갖습니다:
 
 - **윈도우즈**: **Command Prompt** 는 윈도우 키를 누르고 명령 프롬프트 를 입력하고 나타난 리스트에서 이것을 선택하는 것으로 접근할 수 있습니다. 윈도우즈는 리눅스와 맥 OS 와는 다른 그들만의 명령 규칙이 있으므로, 여러분의 장치에 따라 서로 다르다는것을 기억하세요.
-- **맥 OS**: _Applications > Utilities 안에_ **Terminal** 이 있습니다.
+- **맥 OS**: _Applications > Utilities 안에 _**Terminal**_ 이 있습니다.
 - **리눅스**: 보통 _Ctrl + Alt + T_ 로 터미널을 꺼낼 수 있습니다. 만약 작동하지 않는다면 app 바 또는 메뉴에서 **Terminal** 을 찾아보세요.
 
 처음에는 좀 두려우실 수 있지만, 걱정하지마세요 — 기본적인 것들은 금방 익히실 수 있을 것입니다. 무언가를 하기 위해선 명령어를 입력하고 엔터를 누르는 것으로 컴퓨터에게 알려줘야합니다.
@@ -117,7 +117,7 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 
 6. 이제 새 브라우저 탭 (_username.github.io_) 에서 여러분의 GitHub 페이지의 웹 주소로 갈 때, 여러분의 사이트를 온라인에서 보실 수 있습니다! 친구들에게 메일을 보내서 여러분의 실력을 뽐내보세요.
 
-> **참고:** **노트**: 만약 막히셨다면, [GitHub Pages 홈페이지](https://pages.github.com/) 또한 아주 도움이 될 것입니다.
+> **참고:** 만약 막히셨다면, [GitHub Pages 홈페이지](https://pages.github.com/) 또한 아주 도움이 될 것입니다.
 
 ### 더 많은 GitHub 이해
 
@@ -148,14 +148,3 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 - Scott Murray 의 [Cheap or free static web hosting](http://alignedleft.com/resources/cheap-web-hosting) 에는 이용가능한 서비스를 위한 유용한 정보가 있습니다.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

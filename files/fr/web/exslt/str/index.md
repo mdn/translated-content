@@ -12,4 +12,4 @@ Le paquet EXSLT <i lang="en">Strings</i> fournit des fonctions pour la manipulat
 
 ## Compatibilité des navigateurs
 
-{{Compat("xslt.exslt.str")}}
+{{Compat}}

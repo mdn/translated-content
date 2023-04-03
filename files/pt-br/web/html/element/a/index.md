@@ -65,23 +65,23 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
 ### Obsolete attributes
 
-- {{HTMLAttrDef("charset")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("charset")}}
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > **Note:** This attribute is obsolete and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("coords")}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("name")}}
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
 
-- {{HTMLAttrDef("rev")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("rev")}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("shape")}}
 
   - : The shape of the hyperlink’s region in an image map.
 
@@ -145,7 +145,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("link")}} when <code>href</code> attribute is
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code> when <code>href</code> attribute is
         present, otherwise
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >no corresponding role</a
@@ -157,16 +157,16 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
       <td>
         <p>When <code>href</code> attribute is present:</p>
         <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code></li>
         </ul>
         <p>When <code>href</code> attribute is not present:</p>
         <ul>
@@ -188,9 +188,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com"> Mozilla </a>
 ```
 
 #### Result
@@ -208,7 +206,10 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### Result
@@ -219,9 +220,7 @@ a { display: block; margin-bottom: 0.5em }
 
 ```html
 <!-- <a> element links to the section below -->
-<p><a href="#Section_further_down">
-  Jump to the heading below
-</a></p>
+<p><a href="#Section_further_down"> Jump to the heading below </a></p>
 
 <!-- Heading to link to -->
 <h2 id="Section_further_down">Section further down</h2>
@@ -264,7 +263,8 @@ To save a {{HTMLElement("canvas")}} element’s contents as an image, you can cr
 ##### HTML
 
 ```html
-<p>Paint by holding down the mouse button and moving it.
+<p>
+  Paint by holding down the mouse button and moving it.
   <a href="" download="my_painting.png">Download my painting</a>
 </p>
 
@@ -292,28 +292,31 @@ a {
 ##### JavaScript
 
 ```js
-var canvas = document.querySelector('canvas'),
-    c = canvas.getContext('2d');
-c.fillStyle = 'hotpink';
+var canvas = document.querySelector("canvas"),
+  c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
 
 function draw(x, y) {
   if (isDrawing) {
     c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI*2);
+    c.arc(x, y, 10, 0, Math.PI * 2);
     c.closePath();
     c.fill();
   }
 }
 
-canvas.addEventListener('mousemove', event =>
+canvas.addEventListener("mousemove", (event) =>
   draw(event.offsetX, event.offsetY)
 );
-canvas.addEventListener('mousedown', () => isDrawing = true);
-canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
 
-document.querySelector('a').addEventListener('click', event =>
-  event.target.href = canvas.toDataURL()
-);
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL())
+  );
 ```
 
 ##### Result
@@ -337,9 +340,7 @@ Using `target="_blank"` without `rel="noreferrer"` and `rel="noopener"` makes th
 A sadly common mistake is to only link the words “click here” or “here”:
 
 ```html example-bad
-<p>
-  Learn more about our products <a href="/products">here</a>.
-</p>
+<p>Learn more about our products <a href="/products">here</a>.</p>
 ```
 
 #### Strong link text
@@ -347,9 +348,7 @@ A sadly common mistake is to only link the words “click here” or “here”:
 Luckily, this is an easy fix, and it’s actually shorter than the inaccessible version!
 
 ```html example-good
-<p>
-  Learn more <a href="/products">about our products</a>.
-</p>
+<p>Learn more <a href="/products">about our products</a>.</p>
 ```
 
 Assistive software have shortcuts to list all links on a page. However, strong link text benefits all users — the “list all links” shortcut emulates how sighted users quickly scan pages.
@@ -379,22 +378,20 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 #### Link to a non-HTML resource
 
 ```html
-<a href="2017-annual-report.ppt">
-  2017 Annual Report (PowerPoint)
-</a>
+<a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
 If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
 
 ```html
-<a  target="_blank" href="https://www.wikipedia.org">
+<a target="_blank" href="https://www.wikipedia.org">
   Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg">
+  <img alt="(opens in new tab)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg">
+  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -460,12 +457,12 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 ## Specifications
 
-| Specification                                                                                                                            | Status                               | Comment                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------- |
+| Specification                                                                                         | Status                       | Comment                               |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------- |
 | {{SpecName("Referrer Policy", "#referrer-policy-delivery-referrer-attribute", "referrer attribute")}} | {{Spec2("Referrer Policy")}} | Added the `referrerpolicy` attribute. |
-| {{SpecName("HTML WHATWG", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                             | {{Spec2("HTML WHATWG")}}     |                                       |
-| {{SpecName("HTML5 W3C", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                             | {{Spec2("HTML5 W3C")}}         |                                       |
-| {{SpecName("HTML4.01", "struct/links.html#h-12.2", "&lt;a&gt;")}}                                                 | {{Spec2("HTML4.01")}}         |                                       |
+| {{SpecName("HTML WHATWG", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                    | {{Spec2("HTML WHATWG")}}     |                                       |
+| {{SpecName("HTML5 W3C", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                      | {{Spec2("HTML5 W3C")}}       |                                       |
+| {{SpecName("HTML4.01", "struct/links.html#h-12.2", "&lt;a&gt;")}}                                     | {{Spec2("HTML4.01")}}        |                                       |
 
 ## Compatibilidade com navegadores
 

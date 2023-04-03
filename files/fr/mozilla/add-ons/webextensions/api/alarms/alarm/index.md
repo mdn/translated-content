@@ -29,9 +29,9 @@ Les valeurs de ce type sont des objets contenant les propriétés suivantes :
 - `periodInMinutes`{{optional_inline}}
   - : `double` Un nombre qui, s'il n'est pas `null`, indique que l'alarme est périodique et fournit la période.
 
-## Compatibilité des navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.Alarm")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Set-Cookie
 
 {{HTTPSidebar}}
 
-响应标头 **`Set-Cookie`** 被用来由服务器端向用户代理发送 cookie，所以用户代理可再后续的请求中将其发送回服务器。服务器要发送多个 cookie，则应该在同一响应中发送多个 **`Set-Cookie`** 标头。
+响应标头 **`Set-Cookie`** 被用来由服务器端向用户代理发送 cookie，所以用户代理可在后续的请求中将其发送回服务器。服务器要发送多个 cookie，则应该在同一响应中发送多个 **`Set-Cookie`** 标头。
 
 > **警告：** 根据 Fetch 规范，`Set-Cookie` 是一个[禁止的响应标头](https://fetch.spec.whatwg.org/#forbidden-response-header-name)，对应的响应在被暴露给前端代码前，[必须滤除](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)这一响应标头，即浏览器会阻止前端 JavaScript 代码访问 `Set-Cookie` 标头。
 

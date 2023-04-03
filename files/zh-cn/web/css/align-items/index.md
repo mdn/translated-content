@@ -222,9 +222,9 @@ display.addEventListener('change', function (evt) {
 });
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples", "260px", "290px")}}
+{{EmbedLiveSample("示例", "260px", "290px")}}
 
 ## 规范
 
@@ -236,6 +236,6 @@ display.addEventListener('change', function (evt) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [使用 CSS 弹性框](/zh-CN/docs/CSS/Using_CSS_flexible_boxes)

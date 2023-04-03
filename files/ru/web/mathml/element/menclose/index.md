@@ -72,6 +72,6 @@ translation_of: Web/MathML/Element/menclose
 
 - Дополнительные значения для атрибута `notation` были добавлены в следующих релизах:
 
-  - `madruwb` в Gecko 2.0 {{GeckoRelease("2.0")}}.
-  - `updiagonalarrow` в Gecko 24.0 {{GeckoRelease("24.0")}}
-  - `phasorangle` в Gecko 32.0 {{GeckoRelease("32.0")}}
+  - `madruwb` в Gecko 2.0.
+  - `updiagonalarrow` в Gecko 24.0
+  - `phasorangle` в Gecko 32.0

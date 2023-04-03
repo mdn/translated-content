@@ -20,8 +20,8 @@ slug: Web/API/CanvasRenderingContext2D
 要获取画布的 2D 渲染上下文，请在`<canvas>`元素上调用{{domxref("HTMLCanvasElement.getContext()", "getContext()")}}，并提供`'2d'`作为参数：
 
 ```js
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
 ```
 
 有了上下文，您就可以绘制任何喜欢的东西。此代码绘制了一个房子：
@@ -47,32 +47,7 @@ ctx.stroke();
 
 生成的图形如下所示：
 
-```html hidden
-<canvas id="my-house" width="300" height="300"></canvas>
-```
-
-```js hidden
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
-// Set line width
-ctx.lineWidth = 10;
-
-// Wall
-ctx.strokeRect(75, 140, 150, 110);
-
-// Door
-ctx.fillRect(130, 190, 40, 60);
-
-// Roof
-ctx.beginPath();
-ctx.moveTo(50, 140);
-ctx.lineTo(150, 60);
-ctx.lineTo(250, 140);
-ctx.closePath();
-ctx.stroke();
-```
-
-{{EmbedLiveSample('Basic_example', 700, 330)}}
+{{EmbedLiveSample('基础示例', 700, 330)}}
 
 ## 绘制矩形
 
@@ -201,10 +176,8 @@ ctx.stroke();
 
 ## 变换
 
-在 **CanvasRenderingContext2D** 渲染背景中的对象会有一个当前的变换矩阵，一些方法可以对其进行控制。当创建当前的默认路径，绘制文本、图形和{{domxref("Path2D")}}对象的时候，会应用此变换矩阵。下面列出的方法保持历史和兼容性的原因，是为了{{domxref("SVGMatrix")}}对象现在能够应用于大部分 API，将来会被替换。
+在 `CanvasRenderingContext2D` 渲染背景中的对象会有一个当前的变换矩阵，一些方法可以对其进行控制。当创建当前的默认路径，绘制文本、图形和 {{domxref("Path2D")}} 对象的时候，会应用此变换矩阵。下面列出的方法保持历史和兼容性的原因，是为了 {{domxref("DOMMatrix")}} 对象现在能够应用于大部分 API，将来会被替换。
 
-- {{domxref("CanvasRenderingContext2D.currentTransform")}}
-  - : 当前的变换矩阵 ({{domxref("SVGMatrix")}} 对象)。
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : 在变换矩阵中增加旋转，角度变量表示一个顺时针旋转角度并且用弧度表示。
 - {{domxref("CanvasRenderingContext2D.scale()")}}

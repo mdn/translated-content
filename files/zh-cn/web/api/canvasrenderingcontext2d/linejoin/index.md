@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/lineJoin
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.lineJoin`** 是 Canvas 2D API 用来设置 2 个长度不为 0 的相连部分（线段，圆弧，曲线）如何连接在一起的属性（长度为 0 的变形部分，其指定的末端和控制点在同一位置，会被忽略）。
+**`CanvasRenderingContext2D.lineJoin`** 是 Canvas 2D API 用来设置 2 个长度不为 0 的相连部分（线段、圆弧、曲线）如何连接在一起的属性（长度为 0 的变形部分，其指定的末端和控制点在同一位置，会被忽略）。
 
 参见 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中的 [Applying styles and color](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 章节。
 
@@ -19,7 +19,7 @@ ctx.lineJoin = "miter";
 
 ### 选项
 
-此属性有 3 个值： `round`, `bevel` and `miter`。默认值是 `miter。注意：如果 2 个相连部分在同一方向，那么 lineJoin 不会产生任何效果`，因为在那种情况下不会出现连接区域。
+此属性有 3 个值： `round`, `bevel` and `miter`。默认值是 `miter`。注意：如果 2 个相连部分在同一方向，那么 lineJoin 不会产生任何效果，因为在那种情况下不会出现连接区域。
 
 ![](canvas_linejoin.png)
 
@@ -32,7 +32,7 @@ ctx.lineJoin = "miter";
 
 ## 示例
 
-### 使用 `lineJoin` 属性
+### 改变路径中的相连部分
 
 这是一段使用 `lineJoin` 属性的简单的代码片段。
 
@@ -45,92 +45,50 @@ ctx.lineJoin = "miter";
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.lineWidth = 10;
+ctx.lineWidth = 20;
 ctx.lineJoin = "round";
 ctx.beginPath();
-ctx.moveTo(0,0);
-ctx.lineTo(200, 100);
-ctx.lineTo(300,0);
+ctx.moveTo(20, 20);
+ctx.lineTo(190, 100);
+ctx.lineTo(280, 20);
+ctx.lineTo(280, 150);
 ctx.stroke();
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code" style="height:120px;">
-ctx.lineWidth = 10;
-ctx.lineJoin = "round";
-ctx.beginPath();
-ctx.moveTo(0,0);
-ctx.lineTo(200, 100);
-ctx.lineTo(300,0);
-ctx.stroke();</textarea>
-```
+{{ EmbedLiveSample('改变路径中的相连部分', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 380) }}
-
-### `lineJoin` 例子
+### 相连部分对比
 
 下面的例子绘制了 3 条不同的路径，演示 `lineJoin` 属性 3 种不同的设置。
-
-```js
-var ctx = document.getElementById('canvas').getContext('2d');
-var lineJoin = ['round','bevel','miter'];
-ctx.lineWidth = 10;
-
-for (var i = 0; i < lineJoin.length; i++) {
-  ctx.lineJoin = lineJoin[i];
-  ctx.beginPath();
-  ctx.moveTo(-5,5+i*40);
-  ctx.lineTo(35,45+i*40);
-  ctx.lineTo(75,5+i*40);
-  ctx.lineTo(115,45+i*40);
-  ctx.lineTo(155,5+i*40);
-  ctx.stroke();
-}
-```
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
+```js
+const ctx = document.getElementById("canvas").getContext("2d");
+ctx.lineWidth = 10;
 
-## 规范描述
+["round", "bevel", "miter"].forEach((join, i) => {
+  ctx.lineJoin = join;
+  ctx.beginPath();
+  ctx.moveTo(-5, 5 + i * 40);
+  ctx.lineTo(35, 45 + i * 40);
+  ctx.lineTo(75, 5 + i * 40);
+  ctx.lineTo(115, 45 + i * 40);
+  ctx.lineTo(155, 5 + i * 40);
+  ctx.stroke();
+});
+```
+
+{{EmbedLiveSample("相连部分对比", "180", "180", "canvas_linejoin.png")}}
+
+## 规范
 
 {{Specifications}}
 

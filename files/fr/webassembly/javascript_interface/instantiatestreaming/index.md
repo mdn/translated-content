@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateS
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La fonction **`WebAssembly.instantiateStreaming()`** permet de compiler et d'instancier un module WebAssembly depuis un flux source. C'est la méthode la plus efficace, et la plus optimisée, permettant de charger du code WebAssembly.
 

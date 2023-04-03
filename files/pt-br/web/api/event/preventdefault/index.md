@@ -102,7 +102,7 @@ Aqui está o resultado do código anterior:
 
 Chamar preventDefault durante qualquer fase do fluxo de eventos cancela o evento, o que significa que qualquer ação padrão normalmente feita pela aplicação como um resultado do evento não ocorrerá.
 
-> **Nota:** A partir do {{Gecko("6.0")}}, chamar o `preventDefault()` faz com que o {{ domxref("event.defaultPrevented") }} se torne true.
+> **Nota:** A partir do Gecko 6.0, chamar o `preventDefault()` faz com que o {{ domxref("event.defaultPrevented") }} se torne true.
 
 Você pode usar o [event.cancelable](/pt-BR/docs/Web/API/event.cancelable) para checar se o evento é cancelável. Chamar o `preventDefault` para um evento não cancelável não fará efeito.
 

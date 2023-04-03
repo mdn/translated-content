@@ -38,7 +38,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-meter-suboptimum-value")}}
+{{Compat}}
 
 ## Voir aussi
 

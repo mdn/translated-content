@@ -53,7 +53,7 @@ slug: Web/HTML/Element/dialog
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>
@@ -68,7 +68,7 @@ slug: Web/HTML/Element/dialog
 
 > **警告：** `tabindex` 属性不能被使用在 `<dialog>` 元素上。
 
-- {{htmlattrdef("open")}}
+- `open`
   - : 指示这个对话框是激活的和能互动的。当没有设置 `open` 属性时，对话框*不应该*显示给用户。推荐使用 `.show()` 或 `.showModal()` 方法来渲染对话框，而不是使用 `open` 属性。
 
 ## 无障碍考虑

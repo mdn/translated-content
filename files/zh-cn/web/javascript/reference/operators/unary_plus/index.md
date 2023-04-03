@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_plus
 
 {{jsSidebar("Operators")}}
 
-**一元加**（**`+`**）运算符在其操作数之前并计算其操作数，但会尝试将其[转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#数值转换)，如果它还不是的话。
+**一元加**（**`+`**）运算符在其操作数之前并计算其操作数，但会尝试将其[转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，如果它还不是的话。
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
 
@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_plus
 
 ## 描述
 
-虽然一元减（`-`）也可以转换非数字，但一元加是将某些东西转换为数字的最快和首选方法，因为它不对数字执行任何其它操作。它可以转换整数和浮点数的字符串表示形式，以及非字符串值 `true`、`false` 和 `null`。支持十进制和十六进制（以 `0x` 为前缀）格式的整数。支持负数（但不适用于十六进制）。对 BigInt 值使用该运算符会引发 TypeError。如果它无法解析特定值，它将计算为 {{jsxref("NaN")}}。
+虽然一元减（`-`）也可以转换非数字，但一元加是将某些东西转换为数字的最快和首选方法，因为它不对数字执行任何其他操作。它可以转换整数和浮点数的字符串表示形式，以及非字符串值 `true`、`false` 和 `null`。支持十进制和十六进制（以 `0x` 为前缀）格式的整数。支持负数（但不适用于十六进制）。对 BigInt 值使用该运算符会引发 TypeError。如果它无法解析特定值，它将计算为 {{jsxref("NaN")}}。
 
 ## 示例
 

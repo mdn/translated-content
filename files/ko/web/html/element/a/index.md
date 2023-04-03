@@ -123,7 +123,7 @@ slug: Web/HTML/Element/a
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
       <td>
-        <code>href</code> 특성이 존재하면 {{ariarole("link")}}, 그 외의
+        <code>href</code> 특성이 존재하면 <a href='/ko/docs/Web/Accessibility/ARIA/Roles/link_role'><code>link</code></a>, 그 외의
         경우
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >대응하는 역할 없음</a
@@ -135,16 +135,16 @@ slug: Web/HTML/Element/a
       <td>
         <p><code>href</code> 특성이 존재할 경우,</p>
         <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/button_role'><code>button</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/checkbox_role'><code>checkbox</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitem_role'><code>menuitem</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role'><code>menuitemcheckbox</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role'><code>menuitemradio</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/option_role'><code>option</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/radio_role'><code>radio</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/switch_role'><code>switch</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a></li>
+          <li><a href='/ko/docs/Web/Accessibility/ARIA/Roles/treeitem_role'><code>treeitem</code></a></li>
         </ul>
         <p><code>href</code> 특성이 존재하지 않을 경우,</p>
         <ul>
@@ -442,7 +442,7 @@ document.querySelector('a').addEventListener('click', event =>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.a")}}
+{{Compat}}
 
 ## 같이 보기
 

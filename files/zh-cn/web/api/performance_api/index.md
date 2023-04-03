@@ -3,65 +3,72 @@ title: Performance API
 slug: Web/API/Performance_API
 ---
 
-{{DefaultAPISidebar("High Resolution Time")}}
+{{DefaultAPISidebar("Performance API")}}
 
-[高时间采样率](https://www.w3.org/TR/hr-time/)标准定义了{{domxref("Performance")}}接口，该接口支持应用程序中客户端的延时测量。{{domxref("Performance")}}接口被认为是*高采样率*的，因为其精确度可达千分之一毫秒（受硬件或软件限制）。这些接口支持许多使用情形，包括计算帧速率（在动画中可能很重要）和基准测试（例如加载资源的时间）。
+Performance API 是一组用于衡量 web 应用性能的标准。
 
-由于平台的系统时钟会受到各种时滞（例如 NTP 调整）的影响，该接口支持单调时钟，即一直增加的时钟。鉴于这个原因，Performance API 定义了{{domxref("DOMHighResTimeStamp")}}类型，而不是使用{{jsxref("Date.now","Date.now()")}}接口。
+## 概念和用法
 
-## DOMHighResTimeStamp
+衡量和分析各种性能指标对于确保 web 应用的速度非常重要。Performance API 提供了重要的内置指标，并能够将你自己的测量结果添加到浏览器的性能时间线（performance timeline）中。性能时间线使用高精度的时间戳，且可以在开发者工具中显示。你还可以将相关数据发送到用于分析的端点，以根据时间记录性能指标。
 
-{{domxref("DOMHighResTimeStamp")}}类型，顾名思义，表示高采样率的时间戳。此类型是 `double` ，由性能接口使用。该值可以是离散时间戳，也可以是两个离散时间戳之间的时间间隔。
+每一个性能指标都使用一个性能条目（{{domxref("PerformanceEntry")}}）表示。性能条目有名称（`name`）、持续时间（`duration`）、开始时间（`startTime`）和类型（`type`）。每一个性能指标都继承了 `PerformanceEntry` 接口，并对其进行限定。
 
-`DOMHighResTimeStamp` 的单位是毫秒，应精确到 5 µs（微秒）。但是，如果浏览器无法提供精确到 5 微秒的时间数值（例如由于硬件或软件限制），则浏览器可以将该值表示为精确到毫秒的时间（以毫秒为单位）。
+大部分性能条目都在不需要任何额外操作的情况下进行记录，并可以通过 {{domxref("Performance.getEntries()")}} 或（最好）通过 {{domxref("PerformanceObserver")}} 访问。例如，{{domxref("PerformanceEventTiming")}} 条目用于记录花费的时间超过设定阈值的事件。而 Performance API 也允许你使用 {{domxref("PerformanceMark")}} 和 {{domxref("PerformanceMeasure")}} 接口定义和记录自定义事件。
 
-## 方法
+{{domxref("Performance")}} 主接口在全局作用域下可通过 {{domxref("performance_property", "self.performance")}} 访问，并允许你增加自定义性能条目、清除性能条目，以及查询性能条目。
 
-`{{domxref("Performance")}}` 接口具有两个方法。
+{{domxref("PerformanceObserver")}} 接口允许你监听记录的不同类型的性能条目。
 
-{{domxref("Performance.now","now()")}} 方法返回一个{{domxref("DOMHighResTimeStamp")}}，其值取决于{{domxref("PerformanceTiming.navigationStart","navigation start")}}和作用域。如果作用域是 window，则值是创建浏览器上下文的时间；如果作用域是{{domxref("Worker","worker")}}，则值是创建 worker 的时间。
-
-{{domxref("Performance.toJSON","toJSON()")}}方法返回{{domxref("Performance")}}对象的序列化结果，包含可以被序列化的属性。
-
-## 属性
-
-`{{domxref("Performance")}}`接口具有两个属性。
-
-{{domxref("Performance.timing","timing")}}属性返回一个{{domxref("PerformanceTiming")}}对象，其中包含与延时相关的性能信息，例如导航开始的时间，重定向的开始时间和结束时间，响应的开始时间和结束时间等。
-
-`{{domxref("Performance.navigation","navigation")}}` 属性返回一个{{domxref("PerformanceNavigation")}}对象，该对象表示在给定浏览上下文中发生的导航类型，例如从历史记录导航到的页面，通过跟随链接导航到的页面等。
+![Performance API 的 UML 图](diagram.svg)
 
 ## 接口
 
-- {{domxref('Performance')}}
-  - : 提供方法和属性，包含给定页面与计时相关的性能信息。
-- {{domxref('PerformanceEntry')}}
-  - : 提供方法和属性，将单个性能指标封装为性能时间轴的一部分。
-- {{domxref('PerformanceFrameTiming')}}
-  - : 提供方法和属性，包含有关浏览器事件循环的帧计时数据。
-- {{domxref('PerformanceMark')}}
-  - : 条目类型为"`mark`"的{{domxref('PerformanceEntry')}}抽象接口，该类型的条目通过调用{{domxref("Performance.mark","mark()")}}将命名的{{domxref("DOMHighResTimeStamp")}}（mark）添加到浏览器的性能时间轴来创建。
-- {{domxref('PerformanceMeasure')}}
-  - : 条目类型为"`measure`"的{{domxref('PerformanceEntry')}}抽象接口，该类型的条目通过调用{{domxref("Performance.measure","measure()")}}在浏览器的性能时间轴的两个标记之间添加一个命名的{{domxref("DOMHighResTimeStamp")}}（measure）来创建。
-- {{domxref('PerformanceNavigationTiming')}}
-  - : 提供方法和属性，用于存储和检索有关浏览器文档导航事件的[高采样率时间戳](/zh-CN/docs/Web/API/DOMHighResTimeStamp)或其他指标。
-- {{domxref('PerformanceObserver')}}
-  - : 提供方法和属性，用于观察性能测量事件，并在浏览器的性能时间轴中记录新的{{domxref('PerformanceEntry')}}时进行通知。
-- {{domxref('PerformanceResourceTiming')}}
-  - : 提供方法和属性，用于检索和分析有关应用程序资源加载的详细网络计时数据。
+- {{domxref("EventCounts")}}
+  - : 由 {{domxref("performance.eventCounts")}} 返回的只读映射，其中包含每个事件类型被分派的事件数量。
+- {{domxref("LargestContentfulPaint")}}
+  - : 测量视口范围内可见的图像和文本块的最大渲染时间，从页面开始加载时开始记录。
+- {{domxref("Performance")}}
+  - : 用于性能测量的主接口。可在 window 和 worker 上下文中通过 {{domxref("performance_property", "self.performance")}} 来访问。
+- {{domxref("PerformanceElementTiming")}}
+  - : 测量特定元素的渲染时间戳。
+- {{domxref("PerformanceEntry")}}
+  - : 封装了单个性能指标的性能时间线条目。所有性能指标都继承自该接口。
+- {{domxref("PerformanceEventTiming")}}
+  - : 测量事件的延迟和首次输入延迟（FID）。
+- {{domxref("PerformanceLongTaskTiming")}}
+  - : 检测占用渲染并阻止其他任务执行的长任务。
+- {{domxref("PerformanceMark")}}
+  - : 在性能时间线上标记自定义条目。
+- {{domxref("PerformanceMeasure")}}
+  - : 自定义使用两个性能条目表示的时间测量。
+- {{domxref("PerformanceNavigationTiming")}}
+  - : 测量文档导航事件，例如加载文档所需的时间。
+- {{domxref("PerformanceObserver")}}
+  - : 监听记录到性能时间线中的新的性能条目。
+- {{domxref("PerformanceObserverEntryList")}}
+  - : 性能观察器（PerformanceObserver）中监测的条目的列表。
+- {{domxref("PerformancePaintTiming")}}
+  - : 测量网页构建期间的渲染操作。
+- {{domxref("PerformanceResourceTiming")}}
+  - : 测量网络负载指标，例如重定向开始和结束时间、（fetch）请求开始、DNS 查询开始和结束时间，以及图像、脚本、fetch 调用，等资源的响应开始和结束时间。
+- {{domxref("PerformanceServerTiming")}}
+  - : 表示服务器的相关指标，在响应请求时与 {{HTTPHeader("Server-Timing")}} HTTP 标头一起发送。
+- {{domxref("TaskAttributionTiming")}}
+  - : 标识任务类型，及用于长任务测量的容器。
+
+## 教程和指南
+
+- [使用 Performance API](/zh-CN/docs/Web/API/Performance_API/Using_the_Performance_API)
+- [使用性能时间线](/zh-CN/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
+- [使用 User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [使用 Navigation Timing](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)
+- [使用 Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
 
 ## 规范
 
 {{Specifications}}
 
-## 实施状态
+## 参见
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
-
-如{{domxref("Performance")}}接口的“[浏览器兼容性](/zh-CN/docs/Web/API/Performance#Browser_compatibility)”表所示，大部分接口由桌面浏览器广泛实现。
-
-要测试你的浏览器对{{domxref("Performance")}}接口的支持，请运行 [`perf-api-support`](http://mdn.github.io/web-performance/perf-api-support.html) 应用。
-
-## 另见
-
-- [A Primer for Web Performance Timing APIs](http://w3c.github.io/perf-timing-primer/)
+- [Web 性能](/zh-CN/docs/Web/Performance)
+- [学习：Web 性能](/zh-CN/docs/Learn/Performance)

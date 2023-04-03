@@ -66,7 +66,7 @@ Les vraies adresses Web ne sont pas les chaînes agréables et mémorisables que
 
 Ce sont des {{Glossary("IP Address", "adresses IP")}} ; elles représentent un endroit unique sur le Web. Par contre, elles ne sont pas très faciles à retenir (n'est‑ce pas ?). C'est pour cela que le système des noms de domaine (DNS) a été conçu. Les serveurs DNS sont des serveurs spéciaux qui font correspondre une adresse web saisie dans le navigateur (par exemple « mozilla.org ») avec l'adresse réelle (IP) du serveur du site.
 
-Il est possible d'atteindre directement les sites web en utilisant leurs adresses IP. Pour aller sur le site de Mozilla, vous pouvez saisir `63.245.215.20` dans la barre d'adresse d'un nouvel onglet de votre navigateur.
+Il est possible d'atteindre directement les sites web en utilisant leurs adresses IP. Pour aller sur le site de Mozilla, vous pouvez saisir `63.245.215.20` dans la barre d'adresse d'un nouvel onglet de votre navigateur. Vous pouvez utiliser un outil de recherche DNS comme [nslookup.io](https://www.nslookup.io/website-to-ip-lookup/) pour trouver l'adresse IP d'un site web.
 
 ![A domain name is just another form of an IP address](dns-ip.png)
 

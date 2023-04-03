@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 browser-compat: javascript.builtins.WebAssembly.Global
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Un objet **`WebAssembly.Global`** représente une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable pour un ou plusieurs modules WebAssembly ([`WebAssembly.Module`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)). Cela permet de lier dynamiquement plusieurs modules.
 

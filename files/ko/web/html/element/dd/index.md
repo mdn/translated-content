@@ -51,7 +51,7 @@ slug: Web/HTML/Element/dd
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ARIARole("definition")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/definition_role'><code>definition</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
@@ -81,7 +81,7 @@ slug: Web/HTML/Element/dd
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## 같이 보기
 

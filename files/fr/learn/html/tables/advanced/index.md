@@ -282,7 +282,7 @@ Voici la sortie qui en résulte :
 
 ## Tableaux pour utilisateurs malvoyants
 
-Rappelons brièvement comment nous utilisons les tableaux de données. Un tableau peut être un outil pratique pour accéder rapidement à une donnée et rechercher différentes valeurs. Par exemple, un bref coup d'oeil sur le tableau suivant suffit pour savoir combien de bagues ont été vendues à Gand en août dernier. Pour comprendre ces informations, nous faisons visuellement l'association entre les données du tableau et les en-têtes de colonnes et/ou de lignes.
+Rappelons brièvement comment nous utilisons les tableaux de données. Un tableau peut être un outil pratique pour accéder rapidement à une donnée et rechercher différentes valeurs. Par exemple, un bref coup d'œil sur le tableau suivant suffit pour savoir combien de bagues ont été vendues à Gand en août dernier. Pour comprendre ces informations, nous faisons visuellement l'association entre les données du tableau et les en-têtes de colonnes et/ou de lignes.
 
 <table>
   <caption>
@@ -330,7 +330,7 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
       <td>28</td>
     </tr>
     <tr>
-      <th rowspan="2" scope="rowgroup">Pays-bas</th>
+      <th rowspan="2" scope="rowgroup">Pays-Bas</th>
       <th scope="row">Amsterdam</th>
       <td>89</td>
       <td>34</td>
@@ -349,7 +349,7 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
   </tbody>
 </table>
 
-Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprêtation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.
+Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprétation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.
 
 > **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/).
 
@@ -357,13 +357,13 @@ Cette partie de l'article indique des techniques avancées pour rendre les table
 
 ### Utilisation des en-têtes de colonnes et de lignes
 
-Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes. La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interprêter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.
+Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes. La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interpréter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.
 
 Nous avons déjà traité des en-têtes dans notre article précédent — voir [Ajouter des en-têtes avec \<th>](/fr/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements) .
 
 ### L'attribut `scope`
 
-Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguité un en-tête de colonne comme étant un en-tête de colonne ainsi&nbsp;:
+Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguïté un en-tête de colonne comme étant un en-tête de colonne ainsi&nbsp;:
 
 ```html
 <thead>
@@ -391,7 +391,7 @@ Et chaque ligne pourrait également avoir une définition de son en-tête comme 
 
 Les lecteurs d'écran reconnaîtront un balisage structuré comme celui-ci et permettront à leurs utilisateurs de lire en une fois une colonne ou une ligne entière par exemple.
 
-`scope` a deux autres valeurs possibles — `colgroup` et `rowgroup`. Elles sont utilisées pour les en-têtes qui couvrent plusieurs colonnes ou lignes. Si vous revenez au tableau «&nbsp;Articles vendus...&nbsp;» au début de ce paragraphe du présent article, vous voyez que la cellule «&nbsp;Vêtements&nbsp;» se trouve au-dessus des cellules «&nbsp;Pantalons&nbsp;», «&nbsp;Jupes&nbsp;» et «&nbsp;Robes&nbsp;». Toutes ces cellules sont marquées comme en-têtes (`<th>`), mais «&nbsp;Vêtements&nbsp;» est un en-tête de niveau supérieur qui définit trois «&nbsp;sous-en-têtes&nbsp;». «&nbsp;Vêtements&nbsp;» comportera donc un attribut `scope="colgroup"`, alors que les autres doivent recevront un attribut `scope="col"`.
+`scope` a deux autres valeurs possibles — `colgroup` et `rowgroup`. Elles sont utilisées pour les en-têtes qui couvrent plusieurs colonnes ou lignes. Si vous revenez au tableau «&nbsp;Articles vendus...&nbsp;» au début de ce paragraphe du présent article, vous voyez que la cellule «&nbsp;Vêtements&nbsp;» se trouve au-dessus des cellules «&nbsp;Pantalons&nbsp;», «&nbsp;Jupes&nbsp;» et «&nbsp;Robes&nbsp;». Toutes ces cellules sont marquées comme en-têtes (`<th>`), mais «&nbsp;Vêtements&nbsp;» est un en-tête de niveau supérieur qui définit trois «&nbsp;sous-en-têtes&nbsp;». «&nbsp;Vêtements&nbsp;» comportera donc un attribut `scope="colgroup"`, alors que les autres recevront un attribut `scope="col"`.
 
 ### Les attributs `id` et `headers`
 

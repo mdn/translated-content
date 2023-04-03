@@ -41,7 +41,7 @@ slug: Web/HTML/Element/option
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("option")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

@@ -18,7 +18,7 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 
 ## 哪里出错了？
 
-这个错误提示发生于当试图[缩短一个数组的长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length#Shortening_an_array)的时候，其中有元素是不可配置的（[non-configurable](/zh-CN/docs/Web/JavaScript/Data_structures#Properties)）。正常情况下，缩短数组的长度，则超出限度的元素会被删除，而这里指的是这种操作失效的情况。
+这个错误提示发生于当试图[缩短一个数组的长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length#Shortening_an_array)的时候，其中有元素是不可配置的（[non-configurable](/zh-CN/docs/Web/JavaScript/Data_structures#属性)）。正常情况下，缩短数组的长度，则超出限度的元素会被删除，而这里指的是这种操作失效的情况。
 
 `configurable` 特性控制着属性是否可以从对象中删除，以及它的特性（除了 writable 之外）是否可以发生改变。
 

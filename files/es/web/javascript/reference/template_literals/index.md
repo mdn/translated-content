@@ -258,9 +258,9 @@ let bad = `bad escape sequence: \unicode`;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.grammar.template_literals")}}
+{{Compat}}
 
 ## Ver también
 

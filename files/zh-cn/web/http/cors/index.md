@@ -5,7 +5,7 @@ slug: Web/HTTP/CORS
 
 {{HTTPSidebar}}
 
-**跨源资源共享**（{{Glossary("CORS")}}，或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其它{{glossary("origin","源")}}（域、协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
+**跨源资源共享**（{{Glossary("CORS")}}，或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其他{{glossary("origin","源")}}（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
 
@@ -25,15 +25,15 @@ CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源�
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将图片或视频画面绘制到 canvas。
 - [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)。
 
-本文概述了跨源资源共享机制及其所涉及的 HTTP 头。
+本文概述了跨源资源共享机制及其所涉及的 HTTP 标头。
 
 ## 功能概述
 
-跨源资源共享标准新增了一组 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 {{HTTPMethod("GET")}} 以外的 HTTP 请求，或者搭配某些 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的 {{HTTPMethod("POST")}} 请求），浏览器必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨源请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（例如 [Cookie](/zh-CN/docs/Web/HTTP/Cookies) 和 [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication) 相关数据）。
+跨源资源共享标准新增了一组 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 {{HTTPMethod("GET")}} 以外的 HTTP 请求，或者搭配某些 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的 {{HTTPMethod("POST")}} 请求），浏览器必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨源请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（例如 [Cookie](/zh-CN/docs/Web/HTTP/Cookies) 和 [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication)相关数据）。
 
 CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层面*无法*获知到底具体是哪里出了问题。你只能查看浏览器的控制台以得知具体是哪里出现了错误。
 
-接下来的内容将讨论相关场景，并剖析该机制所涉及的 HTTP 首部字段。
+接下来的内容将讨论相关场景，并剖析该机制所涉及的 HTTP 标头字段。
 
 ## 若干访问控制场景
 
@@ -41,7 +41,7 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 
 ### 简单请求
 
-某些请求不会触发 {{Glossary("Preflight_request","CORS 预检请求")}}。在废弃的 [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology) 中称这样的请求为*简单请求*，但是目前的 [Fetch spec](https://fetch.spec.whatwg.org/)（CORS 的现行定义规范）中不再使用这个词语。
+某些请求不会触发 {{Glossary("Preflight_request","CORS 预检请求")}}。在废弃的 [CORS 规范](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)中称这样的请求为*简单请求*，但是目前的 [Fetch 规范](https://fetch.spec.whatwg.org/)（CORS 的现行定义规范）中不再使用这个词语。
 
 其动机是，HTML 4.0 中的 {{HTMLElement("form")}} 元素（早于跨站 {{domxref("XMLHttpRequest")}} 和 {{domxref("fetch")}}）可以向任何来源提交简单请求，所以任何编写服务器的人一定已经在保护{{Glossary("CSRF", "跨站请求伪造攻击")}}（CSRF）。在这个假设下，服务器不必选择加入（通过响应预检请求）来接收任何看起来像表单提交的请求，因为 CSRF 的威胁并不比表单提交的威胁差。然而，服务器仍然必须提供 {{HTTPHeader("Access-Control-Allow-Origin")}} 的选择，以便与脚本*共享*响应。
 
@@ -53,17 +53,17 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- 除了被用户代理自动设置的首部字段（例如 {{HTTPHeader("Connection")}}、{{HTTPHeader("User-Agent")}} 或其他在 Fetch 规范中定义为[禁用首部名称](https://fetch.spec.whatwg.org/#forbidden-header-name) 的首部），允许人为设置的字段为 Fetch 规范定义的 [对 CORS 安全的首部字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)。该集合为：
+- 除了被用户代理自动设置的标头字段（例如 {{HTTPHeader("Connection")}}、{{HTTPHeader("User-Agent")}} 或其他在 Fetch 规范中定义为[禁用标头名称](https://fetch.spec.whatwg.org/#forbidden-header-name)的标头），允许人为设置的字段为 Fetch 规范定义的[对 CORS 安全的标头字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)。该集合为：
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}}（需要注意额外的限制）
-  - {{HTTPHeader("Range")}}（只允许[简单的范围首部值](https://fetch.spec.whatwg.org/#simple-range-header-value) 如 `bytes=256-` 或 `bytes=127-255`）
+  - {{HTTPHeader("Range")}}（只允许[简单的范围标头值](https://fetch.spec.whatwg.org/#simple-range-header-value) 如 `bytes=256-` 或 `bytes=127-255`）
 
-> **备注：** Firefox 还没有将 `Range` 实现为安全的请求首部。参见 [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981)。
+> **备注：** Firefox 还没有将 `Range` 实现为安全的请求标头。参见 [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981)。
 
-- {{HTTPHeader("Content-Type")}} 首部所指定的{{Glossary("MIME type","媒体类型")}}的值仅限于下列三者之一：
+- {{HTTPHeader("Content-Type")}} 标头所指定的{{Glossary("MIME type","媒体类型")}}的值仅限于下列三者之一：
 
   - `text/plain`
   - `multipart/form-data`
@@ -72,13 +72,13 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 - 如果请求是使用 {{domxref("XMLHttpRequest")}} 对象发出的，在返回的 {{domxref("XMLHttpRequest.upload")}} 对象属性上没有注册任何事件监听器；也就是说，给定一个 {{domxref("XMLHttpRequest")}} 实例 `xhr`，没有调用 `xhr.upload.addEventListener()`，以监听该上传请求。
 - 请求中没有使用 {{domxref("ReadableStream")}} 对象。
 
-> **备注：** WebKit Nightly 和 Safari Technology Preview 为 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 首部字段的值添加了额外的限制。如果这些首部字段的值是“非标准”的，WebKit/Safari 就不会将这些请求视为“简单请求”。WebKit/Safari 并没有在文档中列出哪些值是“非标准”的，不过我们可以在这里找到相关讨论：
+> **备注：** WebKit Nightly 和 Safari Technology Preview 为 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 标头字段的值添加了额外的限制。如果这些标头字段的值是“非标准”的，WebKit/Safari 就不会将这些请求视为“简单请求”。WebKit/Safari 并没有在文档中列出哪些值是“非标准”的，不过我们可以在这里找到相关讨论：
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
 > - [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)
 >
-> 其它浏览器并不支持这些额外的限制，因为它们不属于规范的一部分。
+> 其他浏览器并不支持这些额外的限制，因为它们不属于规范的一部分。
 
 比如说，假如站点 `https://foo.example` 的网页应用想要访问 `https://bar.other` 的资源。`foo.example` 的网页中可能包含类似于下面的 JavaScript 代码：
 
@@ -91,7 +91,7 @@ xhr.onreadystatechange = someHandler;
 xhr.send();
 ```
 
-此操作实行了客户端和服务器之间的简单交换，使用 CORS 首部字段来处理权限：
+此操作实行了客户端和服务器之间的简单交换，使用 CORS 标头字段来处理权限：
 
 ![简单 GET 请求的示意图](simple-req.png)
 
@@ -108,7 +108,7 @@ Connection: keep-alive
 Origin: https://foo.example
 ```
 
-请求首部字段 {{HTTPHeader("Origin")}} 表明该请求来源于 `http://foo.example`。
+请求标头字段 {{HTTPHeader("Origin")}} 表明该请求来源于 `http://foo.example`。
 
 让我们来看看服务器如何响应：
 
@@ -154,11 +154,11 @@ xhr.onreadystatechange = handler;
 xhr.send('<person><name>Arun</name></person>');
 ```
 
-上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求首部。这样的请求首部并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求首部，所以该请求需要首先发起“预检请求”。
+上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求标头。这样的请求标头并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求标头，所以该请求需要首先发起“预检请求”。
 
 ![](preflight_correct.png)
 
-> **备注：** 如下所述，实际的 `POST` 请求不会携带 `Access-Control-Request-*` 首部，它们仅用于 `OPTIONS` 请求。
+> **备注：** 如下所述，实际的 `POST` 请求不会携带 `Access-Control-Request-*` 标头，它们仅用于 `OPTIONS` 请求。
 
 下面是服务端和客户端完整的信息交互。首次交互是*预检请求/响应*：
 
@@ -186,14 +186,14 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-从上面的报文中，我们看到，第 1 - 10 行使用 {{HTTPMethod("OPTIONS")}} 方法发送了预检请求，浏览器根据上面的JavaScript代码片断所使用的请求参数来决定是否需要发送，这样服务器就可以回应是否可以接受用实际的请求参数来发送请求。OPTIONS 是 HTTP/1.1 协议中定义的方法，用于从服务器获取更多信息，是{{Glossary("Safe/HTTP", "安全")}}的方法。该方法不会对服务器资源产生影响。注意 OPTIONS 预检请求中同时携带了下面两个首部字段：
+从上面的报文中，我们看到，第 1 - 10 行使用 {{HTTPMethod("OPTIONS")}} 方法发送了预检请求，浏览器根据上面的 JavaScript 代码片断所使用的请求参数来决定是否需要发送，这样服务器就可以回应是否可以接受用实际的请求参数来发送请求。OPTIONS 是 HTTP/1.1 协议中定义的方法，用于从服务器获取更多信息，是{{Glossary("Safe/HTTP", "安全")}}的方法。该方法不会对服务器资源产生影响。注意 OPTIONS 预检请求中同时携带了下面两个标头字段：
 
 ```http
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 ```
 
-首部字段 {{HTTPHeader("Access-Control-Request-Method")}} 告知服务器，实际请求将使用 `POST` 方法。首部字段 {{HTTPHeader("Access-Control-Request-Headers")}} 告知服务器，实际请求将携带两个自定义请求首部字段：`X-PINGOTHER` 与 `Content-Type`。服务器据此决定，该实际请求是否被允许。
+标头字段 {{HTTPHeader("Access-Control-Request-Method")}} 告知服务器，实际请求将使用 `POST` 方法。标头字段 {{HTTPHeader("Access-Control-Request-Headers")}} 告知服务器，实际请求将携带两个自定义请求标头字段：`X-PINGOTHER` 与 `Content-Type`。服务器据此决定，该实际请求是否被允许。
 
 第 12 - 21 行为预检请求的响应，表明服务器将接受后续的实际请求方法（`POST`）和请求头（`X-PINGOTHER`）。重点看第 15 - 18 行：
 
@@ -204,11 +204,11 @@ Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400
 ```
 
-服务器的响应携带了 `Access-Control-Allow-Origin: https://foo.example`，从而限制请求的源域。同时，携带的 `Access-Control-Allow-Methods` 表明服务器允许客户端使用 `POST` 和 `GET` 方法发起请求（与 {{HTTPHeader("Allow")}} 响应首部类似，但该标头具有严格的访问控制）。
+服务器的响应携带了 `Access-Control-Allow-Origin: https://foo.example`，从而限制请求的源域。同时，携带的 `Access-Control-Allow-Methods` 表明服务器允许客户端使用 `POST` 和 `GET` 方法发起请求（与 {{HTTPHeader("Allow")}} 响应标头类似，但该标头具有严格的访问控制）。
 
-首部字段 `Access-Control-Allow-Headers` 表明服务器允许请求中携带字段 `X-PINGOTHER` 与 `Content-Type`。与 `Access-Control-Allow-Methods` 一样，`Access-Control-Allow-Headers` 的值为逗号分割的列表。
+标头字段 `Access-Control-Allow-Headers` 表明服务器允许请求中携带字段 `X-PINGOTHER` 与 `Content-Type`。与 `Access-Control-Allow-Methods` 一样，`Access-Control-Allow-Headers` 的值为逗号分割的列表。
 
-最后，首部字段 {{HTTPHeader("Access-Control-Max-Age")}} 给定了该预检请求可供缓存的时间长短，单位为秒，默认值是 5 秒。在有效时间内，浏览器无须为同一请求再次发起预检请求。以上例子中，该响应的有效时间为 86400 秒，也就是 24 小时。请注意，浏览器自身维护了一个[最大有效时间](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Max-Age)，如果该首部字段的值超过了最大有效时间，将不会生效。
+最后，标头字段 {{HTTPHeader("Access-Control-Max-Age")}} 给定了该预检请求可供缓存的时间长短，单位为秒，默认值是 5 秒。在有效时间内，浏览器无须为同一请求再次发起预检请求。以上例子中，该响应的有效时间为 86400 秒，也就是 24 小时。请注意，浏览器自身维护了一个[最大有效时间](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Max-Age)，如果该标头字段的值超过了最大有效时间，将不会生效。
 
 预检请求完成之后，发送实际请求：
 
@@ -331,7 +331,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 > **备注：** 一些企业认证服务要求在预检请求时发送 TLS 客户端证书，这违反了 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 的规范。
 >
-> Firefox 87 允许通过在设置中设定 `network.cors_preflight.allow_client_cert` 为 `true`（{{bug(1511151)}}）来允许这种不规范的行为。基于 chromium 的浏览器目前总是在 CORS 预检请求中发送 TLS 客户端证书（[Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)）。
+> Firefox 87 允许通过在设置中设定 `network.cors_preflight.allow_client_cert` 为 `true`（[Firefox bug 1511151](https://bugzil.la/1511151)）来允许这种不规范的行为。基于 chromium 的浏览器目前总是在 CORS 预检请求中发送 TLS 客户端证书（[Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)）。
 
 #### 附带身份凭证的请求与通配符
 
@@ -339,15 +339,15 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 - 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符“`*`”，而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
 
-- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为首部名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
 
 - 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符“`*`”，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
 
 对于附带身份凭证的请求（通常是 `Cookie`），
 
-这是因为请求的首部中携带了 `Cookie` 信息，如果 `Access-Control-Allow-Origin` 的值为“`*`”，请求将会失败。而将 `Access-Control-Allow-Origin` 的值设置为 `https://example.com`，则请求将成功执行。
+这是因为请求的标头中携带了 `Cookie` 信息，如果 `Access-Control-Allow-Origin` 的值为“`*`”，请求将会失败。而将 `Access-Control-Allow-Origin` 的值设置为 `https://example.com`，则请求将成功执行。
 
-另外，响应首部中也携带了 `Set-Cookie` 字段，尝试对 Cookie 进行修改。如果操作失败，将会抛出异常。
+另外，响应标头中也携带了 `Set-Cookie` 字段，尝试对 Cookie 进行修改。如果操作失败，将会抛出异常。
 
 #### 第三方 cookie
 
@@ -357,13 +357,13 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性控制。
 
-## HTTP 响应首部字段
+## HTTP 响应标头字段
 
-本节列出了服务器为访问控制请求返回的 HTTP 响应头，这是由跨源资源共享规范定义的。上一小节中，我们已经看到了这些首部字段在实际场景中是如何工作的。
+本节列出了服务器为访问控制请求返回的 HTTP 响应头，这是由跨源资源共享规范定义的。上一小节中，我们已经看到了这些标头字段在实际场景中是如何工作的。
 
 ### Access-Control-Allow-Origin
 
-响应首部中可以携带一个 {{HTTPHeader("Access-Control-Allow-Origin")}} 字段，其语法如下：
+响应标头中可以携带一个 {{HTTPHeader("Access-Control-Allow-Origin")}} 字段，其语法如下：
 
 ```http
 Access-Control-Allow-Origin: <origin> | *
@@ -378,7 +378,7 @@ Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符“`*`”，那么响应首部中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
+如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符“`*`”，那么响应标头中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
 
 ### Access-Control-Expose-Headers
 
@@ -420,7 +420,7 @@ Access-Control-Allow-Credentials: true
 
 ### Access-Control-Allow-Methods
 
-{{HTTPHeader("Access-Control-Allow-Methods")}} 首部字段指定了访问资源时允许使用的请求方法，用于预检请求的响应。其指明了实际请求所允许使用的 HTTP 方法。
+{{HTTPHeader("Access-Control-Allow-Methods")}} 标头字段指定了访问资源时允许使用的请求方法，用于预检请求的响应。其指明了实际请求所允许使用的 HTTP 方法。
 
 ```http
 Access-Control-Allow-Methods: <method>[, <method>]*
@@ -430,19 +430,19 @@ Access-Control-Allow-Methods: <method>[, <method>]*
 
 ### Access-Control-Allow-Headers
 
-{{HTTPHeader("Access-Control-Allow-Headers")}} 首部字段用于{{Glossary("preflight request","预检请求")}}的响应。其指明了实际请求中允许携带的首部字段。这个首部是服务器端对浏览器端 {{HTTPHeader("Access-Control-Request-Headers")}} 标头的响应。
+{{HTTPHeader("Access-Control-Allow-Headers")}} 标头字段用于{{Glossary("preflight request","预检请求")}}的响应。其指明了实际请求中允许携带的标头字段。这个标头是服务器端对浏览器端 {{HTTPHeader("Access-Control-Request-Headers")}} 标头的响应。
 
 ```http
 Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 ```
 
-## HTTP 请求首部字段
+## HTTP 请求标头字段
 
-本节列出了可用于发起跨源请求的首部字段。请注意，这些首部字段无须手动设置。当开发者使用 {{domxref("XMLHttpRequest")}} 对象发起跨源请求时，它们已经被设置就绪。
+本节列出了可用于发起跨源请求的标头字段。请注意，这些标头字段无须手动设置。当开发者使用 {{domxref("XMLHttpRequest")}} 对象发起跨源请求时，它们已经被设置就绪。
 
 ### Origin
 
-{{HTTPHeader("Origin")}} 首部字段表明预检请求或实际跨源请求的源站。
+{{HTTPHeader("Origin")}} 标头字段表明预检请求或实际跨源请求的源站。
 
 ```http
 Origin: <origin>
@@ -452,11 +452,11 @@ origin 参数的值为源站 URL。它不包含任何路径信息，只是服务
 
 > **备注：** `origin` 的值可以为 `null`。
 
-注意，在所有访问控制请求中，{{HTTPHeader("Origin")}} 首部字段**总是**被发送。
+注意，在所有访问控制请求中，{{HTTPHeader("Origin")}} 标头字段**总是**被发送。
 
 ### Access-Control-Request-Method
 
-{{HTTPHeader("Access-Control-Request-Method")}} 首部字段用于预检请求。其作用是，将实际请求所使用的 HTTP 方法告诉服务器。
+{{HTTPHeader("Access-Control-Request-Method")}} 标头字段用于预检请求。其作用是，将实际请求所使用的 HTTP 方法告诉服务器。
 
 ```http
 Access-Control-Request-Method: <method>
@@ -466,7 +466,7 @@ Access-Control-Request-Method: <method>
 
 ### Access-Control-Request-Headers
 
-{{HTTPHeader("Access-Control-Request-Headers")}} 首部字段用于预检请求。其作用是，将实际请求所携带的首部字段（通过 {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}} 等设置的）告诉服务器。这个浏览器端标头将由互补的服务器端标头 {{HTTPHeader("Access-Control-Allow-Headers")}} 回答。
+{{HTTPHeader("Access-Control-Request-Headers")}} 标头字段用于预检请求。其作用是，将实际请求所携带的标头字段（通过 {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}} 等设置的）告诉服务器。这个浏览器端标头将由互补的服务器端标头 {{HTTPHeader("Access-Control-Allow-Headers")}} 回答。
 
 ```http
 Access-Control-Request-Headers: <field-name>[, <field-name>]*

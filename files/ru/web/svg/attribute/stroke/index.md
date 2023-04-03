@@ -23,7 +23,7 @@ translation_of: Web/SVG/Attribute/stroke
 
 ### SVG Line с stroke
 
-#### Пример 1: Нарисуйте прямую зелёную линию, используя **stroke**.
+#### Пример 1: Нарисуйте прямую зелёную линию, используя **stroke**
 
 ```html
 <svg height="50" width="300">
@@ -31,17 +31,17 @@ translation_of: Web/SVG/Attribute/stroke
 </svg>
 ```
 
-{{EmbedLiveSample('Пример_1_Нарисуйте_прямую_зелёную_линию_используя_stroke.', '300', '50', '', 'Web/SVG/Attribute/stroke')}}
+{{EmbedLiveSample('Пример_1_Нарисуйте_прямую_зелёную_линию_используя_stroke', '300', '50')}}
 
-#### Пример 2: Нарисуйте чёрный круг с синей рамкой используя stroke.
+#### Пример 2: Нарисуйте чёрный круг с синей рамкой используя stroke
 
 ```html
-​​<svg height="100" width="100">
+<svg height="100" width="100">
     <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill="black" />
 </svg>
 ```
 
-{{EmbedLiveSample('Пример_2_Нарисуйте_чёрный_круг_с_синей_рамкой_используя_stroke.', '100', '120', '', 'Web/SVG/Attribute/stroke')}}
+{{EmbedLiveSample('Пример_2_Нарисуйте_чёрный_круг_с_синей_рамкой_используя_stroke', '100', '120')}}
 
 ## Использование `context-stroke`
 

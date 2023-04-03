@@ -18,9 +18,9 @@ set(key, value)
 ### 参数
 
 - `key`
-  - : 要添加到 `Map` 对象的元素的键。该值可以是任何[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures#数据类型)（任何[原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)或任何类型的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#对象)）。
+  - : 要添加到 `Map` 对象的元素的键。该值可以是任何[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures#数据类型)（任何[原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)或任何类型的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#object)）。
 - `value`
-  - : 要添加到 `Map` 对象的元素的值。该值可以是任何[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures#数据类型)（任何[原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)或任何类型的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#对象)）。
+  - : 要添加到 `Map` 对象的元素的值。该值可以是任何[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures#数据类型)（任何[原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)或任何类型的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#object)）。
 
 ### 返回值
 

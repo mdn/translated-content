@@ -306,22 +306,3 @@ You can see the finished form in action below (also find it on GitHub — see ou
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
-
-## 在本模塊
-
-- [Your first form](/zh-TW/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/zh-TW/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/zh-TW/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/zh-TW/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/zh-TW/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/zh-TW/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/zh-TW/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/zh-TW/docs/Learn/Forms/Form_validation)
-- [Sending form data](/zh-TW/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Advanced Topics
-
-- [How to build custom form controls](/zh-TW/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/zh-TW/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/zh-TW/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

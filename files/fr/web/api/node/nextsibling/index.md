@@ -76,7 +76,7 @@ L'inclusion possible de nœuds textes dans le DOM doit être prise en compte pou
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.nextSibling")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -38,7 +38,7 @@ slug: Web/HTML/Global_attributes/tabindex
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.tabindex")}}
+{{Compat}}
 
 ## 같이 보기
 

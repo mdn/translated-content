@@ -189,4 +189,4 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.label")}}
+{{Compat}}

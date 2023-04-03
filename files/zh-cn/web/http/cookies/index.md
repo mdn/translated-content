@@ -10,13 +10,13 @@ HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用�
 Cookie 主要用于以下三个方面：
 
 - 会话状态管理
-  - : 如用户登录状态、购物车、游戏分数或其它需要记录的信息
+  - : 如用户登录状态、购物车、游戏分数或其他需要记录的信息
 - 个性化设置
   - : 如用户自定义设置、主题和其他设置
 - 浏览器行为跟踪
   - : 如跟踪分析用户行为等
 
-Cookie 曾一度用于客户端数据的存储，因当时并没有其它合适的存储办法而作为唯一的存储手段，但现在推荐使用现代存储 API。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 [Web storage API](/zh-CN/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 。
+Cookie 曾一度用于客户端数据的存储，因当时并没有其他合适的存储办法而作为唯一的存储手段，但现在推荐使用现代存储 API。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 [Web storage API](/zh-CN/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 。
 
 > **备注：** 要查看 Cookie 存储（或网页上能够使用其他的存储方式），你可以在开发者工具中启用存储查看器（[Storage Inspector](/zh-CN/docs/Tools/Storage_Inspector)）功能，并在存储树上选中 Cookie。
 
@@ -77,7 +77,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 ### 限制访问 Cookie
 
-有两种方法可以确保 `Cookie` 被安全发送，并且不会被意外的参与者或脚本访问：`Secure` 属性和`HttpOnly` 属性。
+有两种方法可以确保 `Cookie` 被安全发送，并且不会被意外的参与者或脚本访问：`Secure` 属性和 `HttpOnly` 属性。
 
 标记为 `Secure` 的 Cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端。它永远不会使用不安全的 HTTP 发送（本地主机除外），这意味着{{Glossary("MitM", "中间人")}}攻击者无法轻松访问它。不安全的站点（在 URL 中带有 `http:`）无法使用 `Secure` 属性设置 cookie。但是，`Secure` 不会阻止对 cookie 中敏感信息的访问。例如，有权访问客户端硬盘（或，如果未设置 `HttpOnly` 属性，则为 JavaScript）的人可以读取和修改它。
 
@@ -97,7 +97,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 
 `Domain` 指定了哪些主机可以接受 Cookie。如果不指定，该属性默认为同一 {{Glossary("host")}} 设置 cookie，*不包含子域名*。如果指定了 `Domain`，则一般包含子域名。因此，指定 `Domain` 比省略它的限制要少。但是，当子域需要共享有关用户的信息时，这可能会有所帮助。
 
-例如，如果设置 `Domain=mozilla.org`，则 Cookie 也包含在子域名中（如`developer.mozilla.org`）。
+例如，如果设置 `Domain=mozilla.org`，则 Cookie 也包含在子域名中（如 `developer.mozilla.org`）。
 
 #### Path 属性
 
@@ -120,7 +120,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 
 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性允许服务器指定是否/何时通过跨站点请求发送（其中{{Glossary("Site","站点")}}由注册的域和*方案*定义：http 或 https）。这提供了一些针对跨站点请求伪造攻击（{{Glossary("CSRF")}}）的保护。它采用三个可能的值：`Strict`、`Lax` 和 `None`。
 
-使用 `Strict`，cookie 仅发送到它来源的站点。`Lax` 与 Strict 相似，只是在用户*导航*到 cookie 的源站点时发送 cookie。例如，通过跟踪来自外部站点的链接。`None` 指定浏览器会在同站请求和跨站请求下继续发送 cookie，但*仅在安全的上下文中*（即，如果 `SameSite=None`，且还必须设置 `Secure` 属性）。如果没有设置 `SameSite` 属性，则将 cookie 视为 `Lax`.
+使用 `Strict`，cookie 仅发送到它来源的站点。`Lax` 与 Strict 相似，只是在用户*导航*到 cookie 的源站点时发送 cookie。例如，通过跟踪来自外部站点的链接。`None` 指定浏览器会在同站请求和跨站请求下继续发送 cookie，但*仅在安全的上下文中*（即，如果 `SameSite=None`，且还必须设置 `Secure` 属性）。如果没有设置 `SameSite` 属性，则将 cookie 视为 `Lax`。
 
 下面是例子：
 
@@ -143,15 +143,15 @@ cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置�
 但是，作为[深度防御措施](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>)，可以使用 *cookie 前缀*来断言有关 cookie 的特定事实。有两个前缀可用：
 
 - `__Host-`
-  - : 如果 cookie 名称具有此前缀，则仅当它也用 `Secure` 属性标记、从安全来源发送、不包括 `Domain` 属性，并将 `Path` 属性设置为 `/` 时，它才在 {{HTTPHeader("Set-Cookie")}} 标头中接受。这样，这些 cookie 可以被视为 "domain-locked”。
+  - : 如果 cookie 名称具有此前缀，则仅当它也用 `Secure` 属性标记、从安全来源发送、不包括 `Domain` 属性，并将 `Path` 属性设置为 `/` 时，它才在 {{HTTPHeader("Set-Cookie")}} 标头中接受。这样，这些 cookie 可以被视为“domain-locked”。
 - `__Secure-`
   - : 如果 cookie 名称具有此前缀，则仅当它也用 `Secure` 属性标记，是从安全来源发送的，它才在 {{HTTPHeader("Set-Cookie")}} 标头中接受。该前缀限制要弱于 `__Host-` 前缀。
 
-带有这些前缀点 Cookie，如果不符合其限制的会被浏览器拒绝。请注意，这确保了如果子域要创建带有前缀的 cookie，那么它将要么局限于该子域，要么被完全忽略。由于应用服务器仅在确定用户是否已通过身份验证或 CSRF 令牌正确时才检查特定的 cookie 名称，因此，这有效地充当了针对会话劫持的防御措施。
+带有这些前缀的 Cookie，如果不符合其限制的会被浏览器拒绝。请注意，这确保了如果子域要创建带有前缀的 cookie，那么它将要么局限于该子域，要么被完全忽略。由于应用服务器仅在确定用户是否已通过身份验证或 CSRF 令牌正确时才检查特定的 cookie 名称，因此，这有效地充当了针对会话劫持的防御措施。
 
 > **备注：** 在应用程序服务器上，Web 应用程序**必须**检查完整的 cookie 名称。用户代理程序在将其发送到请求的 {{HTTPHeader("Cookie")}} 标头之前，**不会**从 cookie 中剥离前缀。
 
-有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅 [Prefixes section of the Set-Cookie reference article](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Cookie_prefixes)。
+有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅[Set-Cookie 参考文章的前缀部分](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Cookie_前缀)。
 
 #### JavaScript 通过 Document.cookie 访问 Cookie
 
@@ -175,7 +175,7 @@ console.log(document.cookie);
 缓解涉及 Cookie 的攻击的方法：
 
 - 使用 `HttpOnly` 属性可防止通过 JavaScript 访问 cookie 值。
-- 用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 `SameSite` 属性设置为 `Strict` 或 `Lax`。（请参见上方的 [SameSite Cookie](/zh-CN/docs/Web/HTTP/Cookies)。）在[支持 SameSite 的浏览器](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility)中，这样做的作用是确保不与跨域请求一起发送身份验证 cookie。因此，这种请求实际上不会向应用服务器进行身份验证。
+- 用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 `SameSite` 属性设置为 `Strict` 或 `Lax`。（请参见上方的 [SameSite 属性](#samesite_属性)。）在[支持 SameSite 的浏览器](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility)中，这样做的作用是确保不与跨站点请求一起发送身份验证 cookie。因此，这种请求实际上不会向应用服务器进行身份验证。
 
 ## 跟踪和隐私
 
@@ -209,7 +209,7 @@ Cookie 与特定域和方案（例如，`http` 或 `https`）相关联，如果�
 
 ## 在浏览器中存储信息的其他方式
 
-在浏览器中存储数据的另一种方法是 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。[window.sessionStorage](/zh-CN/docs/Web/API/Window/sessionStorage) 和[window.localStorage](/zh-CN/docs/Web/API/Window/localStorage) 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie 大，并且永远不会发送到服务器。可以使用 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 或基于它构建的库来存储更多结构化的数据。
+在浏览器中存储数据的另一种方法是 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。[window.sessionStorage](/zh-CN/docs/Web/API/Window/sessionStorage) 和 [window.localStorage](/zh-CN/docs/Web/API/Window/localStorage) 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie 大，并且永远不会发送到服务器。可以使用 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 或基于它构建的库来存储更多结构化的数据。
 
 有一些技术旨在在 cookie 被删除后重新创建它们。这些被称为“僵尸”cookie。这些技术违反了用户的隐私和用户控制原则，可能违反数据隐私法规，并可能使使用它们的网站承担法律责任。
 

@@ -362,6 +362,4 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
 
 ## Compatibilité des navigateurs
 
-### schéma
-
-{{Compat("webextensions.match_patterns.scheme",10)}}
+{{Compat}}

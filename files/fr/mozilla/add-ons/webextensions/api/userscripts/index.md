@@ -44,9 +44,9 @@ Pour utiliser l'API, appelez `{{WebExtAPIRef("userScripts.register","register()"
 - {{WebExtAPIRef("userScripts.onBeforeScript")}}
   - : Un événement disponible pour le script API, enregistré dans [`"user_scripts"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), qui s'exécute avant qu'un script utilisateur ne s'exécute. Utilisez-le pour déclencher l'exportation des API supplémentaires fournies par le script API, afin qu'elles soient disponibles pour le script utilisateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts", 10, 1)}}
+{{Compat}}
 
 ## Voir aussi
 

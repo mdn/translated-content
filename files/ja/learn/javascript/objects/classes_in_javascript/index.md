@@ -386,13 +386,3 @@ JavaScript では、上で示したものとは別に、オブジェクトのプ
 - [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Kyle Simpson による JavaScript を説明したすぐれたシリーズの一部。特に 5 章はプロトタイプについて、我々の説明より相当詳細に説明しています。初心者向けのこのシリーズ記事では単純化した見方を提供してきましたが、いっぽう Kyle は非常に深く論じており、より複雑だがより正確な図を提供しています。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-## このモジュール
-
-- [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)
-- [初心者のためのオブジェクト指向 JavaScript](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object のプロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [JavaScript での継承](/ja/docs/Learn/JavaScript/Objects/Inheritance)
-- [JSON データの操作](/ja/docs/Learn/JavaScript/Objects/JSON)
-- [オブジェクト作成の練習](/ja/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [バウンスボールに機能を追加する](/ja/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

@@ -37,10 +37,6 @@ var removing = browser.permissions.remove(
 
 Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si les permissions répertoriées dans l'argument `permissions` ont été supprimées, ou `false` dans le cas contraire.
 
-## Browser compatibility
-
-{{Compat("webextensions.api.permissions.remove")}}
-
 ## Exemples
 
 Ce code ajoute un gestionnaire de clic qui supprime une permission donnée.
@@ -59,6 +55,10 @@ function remove() {
 
 document.querySelector("#remove").addEventListener("click", remove);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

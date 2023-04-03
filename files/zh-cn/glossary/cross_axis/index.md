@@ -1,7 +1,6 @@
 ---
 title: 交叉轴
 slug: Glossary/Cross_Axis
-original_slug: Glossary/交叉轴
 ---
 
 弹性容器 {{glossary("flexbox")}} 的交叉轴和主轴 {{glossary("main axis")}} 垂直，因此如果弹性方向是 {{cssxref("flex-direction")}} 行 `row` 或者反向行 `row-reverse` ，那么交叉轴就是从上至下地垂直走向的。

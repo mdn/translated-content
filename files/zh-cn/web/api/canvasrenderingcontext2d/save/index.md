@@ -24,7 +24,7 @@ void ctx.save();
 
 ## 示例
 
-### 使用 `save` 方法
+### 保存绘图状态
 
 这是一段简单的代码片段，使用 `save` 方法保存默认的状态，这样，稍后你就可以使用默认的设置绘制一个矩形。
 
@@ -37,63 +37,26 @@ void ctx.save();
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.save(); // 保存默认的状态
-
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
-
-ctx.restore(); // 还原到上次保存的默认状态
-ctx.fillRect(150, 75, 100, 100);
-```
-
-修改下面的代码并在线查看 canvas 的变化：
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
+// Save the current state
 ctx.save();
+
 ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
+
+// Restore to the state saved by the most recent call to save()
 ctx.restore();
-ctx.fillRect(150, 75, 100, 100);</textarea>
+
+ctx.fillRect(150, 40, 100, 100);
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### 结果
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+{{ EmbedLiveSample('保存绘图状态', 700, 180) }}
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

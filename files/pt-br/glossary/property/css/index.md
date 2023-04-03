@@ -1,6 +1,6 @@
 ---
 title: Propriedade (CSS)
-slug: Glossary/property/CSS
+slug: Glossary/Property/CSS
 original_slug: Glossario/property/CSS
 ---
 

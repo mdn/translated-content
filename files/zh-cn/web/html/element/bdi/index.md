@@ -3,10 +3,9 @@ title: <bdi>
 slug: Web/HTML/Element/bdi
 ---
 
-## Summary
-
 {{HTMLSidebar}}
-**HTML** 双向隔离元素 (** `<bdi>` **) 告诉浏览器的双向算法将其包含的文本与周围的文本隔离，当网站动态插入一些文本且不知道所插入文本的方向性时，此功能特别有用。
+
+**HTML** 双向隔离元素（**`<bdi>`**）告诉浏览器的双向算法将其包含的文本与周围的文本隔离，当网站动态插入一些文本且不知道所插入文本的方向性时，此功能特别有用。
 
 {{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
 
@@ -38,8 +37,6 @@ slug: Web/HTML/Element/bdi
 </table>
 
 ## 属性
-
-{{htmlattrdef("dir")}}
 
 如同其他 HTML 元素一样，它包含[全局属性](/zh-CN/docs/HTML/Global_attributes)，但是有一些语义上的细微差别：**dir**属性不继承父元素。如果没有设置，默认值即为 auto，以便浏览器根据元素内容决定元素内容的方向。
 

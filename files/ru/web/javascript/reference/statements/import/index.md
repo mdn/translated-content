@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Statements/import
 
 Динамический импорт полезен в ситуациях, когда вы хотите загрузить модуль условно или по требованию. Статическая форма предпочтительна для загрузки начальных зависимостей и может быть более полезна для инструментов статического анализа и [tree shaking](/ru/docs/Glossary/Tree_shaking).
 
-> **Примечание:** **Внимание:** На данный момент эта функциональность [только начинает поддерживаться](https://jakearchibald.com/2017/es-modules-in-browsers/) браузерами. Полноценная реализация присутствует во многих транспайлерах, таких как TypeScript и [Babel](http://babeljs.io/), а также в сборщиках, например, в [Rollup](https://github.com/rollup/rollup) и [Webpack](https://webpack.js.org/).
+> **Примечание:** На данный момент эта функциональность [только начинает поддерживаться](https://jakearchibald.com/2017/es-modules-in-browsers/) браузерами. Полноценная реализация присутствует во многих транспайлерах, таких как TypeScript и [Babel](http://babeljs.io/), а также в сборщиках, например, в [Rollup](https://github.com/rollup/rollup) и [Webpack](https://webpack.js.org/).
 
 ## Синтаксис
 

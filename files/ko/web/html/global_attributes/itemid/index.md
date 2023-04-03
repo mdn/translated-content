@@ -66,7 +66,7 @@ slug: Web/HTML/Global_attributes/itemid
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemid")}}
+{{compat}}
 
 ## 같이 보기
 

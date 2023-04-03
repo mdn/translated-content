@@ -67,7 +67,7 @@ ctx2.fill();
 
 #### 结果
 
-{{ EmbedLiveSample('Examples', "100%", 180) }}
+{{ EmbedLiveSample('示例', "100%", 180) }}
 
 ## 规范
 

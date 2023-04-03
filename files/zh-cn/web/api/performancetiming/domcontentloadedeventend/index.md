@@ -5,8 +5,6 @@ slug: Web/API/PerformanceTiming/domContentLoadedEventEnd
 
 {{APIRef("Navigation Timing")}}
 
-## Summary
-
 **`PerformanceTiming.domContentLoadedEventEnd`** 为只读属性，返回一个无符号长整型数值（`unsigned long），以 UNIX 时间戳的形式表示一个时刻，这个时刻为所有需要尽早执行的脚本不管是否按顺序，都已经执行完毕。（译注：即 DOM Ready）`
 
 ## Syntax

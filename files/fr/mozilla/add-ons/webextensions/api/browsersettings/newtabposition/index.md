@@ -14,9 +14,9 @@ La valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs 
 - "relatedAfterCurrent": La valeur par défaut. Ouvrez les nouveaux onglets à côté de l'onglet en cours s'ils sont liés à l'onglet en cours (par exemple, s'ils ont été ouverts via un lien dans l'onglet en cours). Sinon, ouvrez les nouveaux onglets à la fin de la bande d'onglets.
 - "atEnd": ouvre tous les onglets à la fin de la bande d'onglets.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.newTabPosition", 10)}}
+{{Compat}}
 
 ## Exemples
 

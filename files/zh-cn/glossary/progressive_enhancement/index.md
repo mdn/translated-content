@@ -1,7 +1,6 @@
 ---
 title: 渐进增强
 slug: Glossary/Progressive_Enhancement
-original_slug: Glossary/渐进增强
 ---
 
 **渐进增强**（Progressive enhancement）是一种设计理念，其核心是为尽可能多的用户提供基本内容和功能，同时进一步为现代化浏览器用户提供最佳体验，运行所有需要的代码。

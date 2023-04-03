@@ -7,7 +7,7 @@ slug: Web/API/Canvas_API/Tutorial/Transformations
 
 在本教程前面的部分中，我们已经了解了 Canvas 网格和坐标空间。到目前为止，我们只是根据我们的需要使用默认的网格，改变整个画布的大小。变形是一种更强大的方法，可以将原点移动到另一点、对网格进行旋转和缩放。
 
-## 状态的保存和恢复 Saving and restoring state
+## 状态的保存和恢复
 
 在了解变形之前，我先介绍两个在你开始绘制复杂图形时必不可少的方法。
 
@@ -34,7 +34,7 @@ Canvas 状态存储在栈中，每当`save()`方法被调用后，当前的状�
 
 当第二次调用 `restore` 时，已经恢复到最初的状态，因此最后是再一次绘制出一个黑色的四方形。
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
+{{EmbedLiveSample("save 和 restore 的应用例子", "180", "180", "canvas_savestate.png")}}
 
 ```js
 function draw() {
@@ -107,7 +107,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
+{{EmbedLiveSample("translate 的例子", "160", "160", "translate.png")}}
 
 ## 旋转 Rotating
 
@@ -208,7 +208,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
+{{EmbedLiveSample("scale 的例子", "160", "160", "scale.png")}}
 
 ## 变形 Transforms
 
@@ -242,7 +242,7 @@ draw();
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
   - : 重置当前变形为单位矩阵，它和调用以下语句是一样的：`ctx.setTransform(1, 0, 0, 1, 0, 0);`
 
-### `transform` / `setTransform` 的例子
+### `transform`/`setTransform` 的例子
 
 ```js
 function draw() {
@@ -273,6 +273,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("transform_setTransform_的例子", "230", "280", "canvas_transform.png")}}
+{{EmbedLiveSample("transform/setTransform 的例子", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

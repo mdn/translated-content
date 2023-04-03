@@ -40,7 +40,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 이미지를 웹사이트에 넣기위해서 {{htmlelement("img")}} 요소를 사용합니다. 이것은 텍스트 내용이나 클로징 태그를 갖지 않는 {{glossary("비어있는 요소 (empty element)")}}이며, 적어도 `src`(풀네임인 source라고 불리곤 합니다)라는 속성 하나는 사용되어야합니다. `src` 속성은 당신이 페이지에 삽입하고자 하는 이미지를 가리키는 경로를 포함합니다. 그 경로는 {{htmlelement("a")}} 요소의 `href` 속성 값처럼 상대경로여도, 절대경로여도 됩니다.
 
-> **참고:** **노트**: 계속하기 전에 절대경로, 상대경로에 대해 복습하기 위해 [A quick primer on URLs and paths](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)를 읽어보세요.
+> **참고:** 계속하기 전에 절대경로, 상대경로에 대해 복습하기 위해 [A quick primer on URLs and paths](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)를 읽어보세요.
 
 예를 들어, 당신의 이미지 파일 이름이 `dinosaur.jpg` 이고, 당신의 HTML 페이지와 같은 디렉토리 아래에 위치한다면 이런 식으로 이미지를 삽입할 수 있습니다:
 
@@ -490,12 +490,3 @@ Summing up: if an image has meaning, in terms of your content, you should use an
 That's all for now. We have covered images and captions in detail. In the next article we'll move it up a gear, looking at how to use HTML to embed video and audio in web pages.
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [Images in HTML](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

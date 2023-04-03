@@ -15,8 +15,8 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 如果你想要完全控制你发布的网页，那么你将需要花钱购置：
 
-- 主机服务 — 在主机服务提供商的 [Web 服务器](/zh-CN/Learn/What_is_a_web_server)上租用文件空间。将你网站的文件上传到这里，然后服务器会提供 Web 用户需求的内容。
-- [域名](/zh-CN/Learn/Understanding_domain_names)——一个可以让人们访问的独一无二的地址，比如 `http://www.mozilla.org`，或 `http://www.bbc.co.uk` 。你可以从**域名注册商**租借域名。
+- 主机服务——在主机服务提供商的 [Web 服务器](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)上租用文件空间。将你网站的文件上传到这里，然后服务器会提供 Web 用户需求的内容。
+- [域名](/zh-CN/docs/Learn/Common_questions/What_is_a_domain_name)——一个可以让人们访问的独一无二的地址，比如 `http://www.mozilla.org` 或 `http://www.bbc.co.uk`。你可以从**域名注册商**租借域名。
 
 许多专业的网站通过这种方法接入互联网。
 
@@ -38,7 +38,7 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 - [GitHub](https://github.com/) 是一个“社交编程”网站。它允许你上传代码库并储存在 [Git](http://git-scm.com/) 版本控制系统里。然后你可以协作代码项目，系统是默认开源的，也就是说世界上任何人都可以找到你 GitHub 上的代码。去使用 GitHub，从中学习并且提高自己吧！你也可以对别人的代码那样做！这是一个非常重要、有用的社区，而且 Git/GitHub 是非常流行的 [版本控制系统](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6) — 大部分科技公司在工作中使用它。GitHub 有一个非常有用的特点叫 [GitHub pages](https://pages.github.com/)，允许你将网站代码放在网上。
 - Google App Engine 是一个让你可以在 Google 的基础架构上构建和运行应用的强劲平台——无论你是需要从头开始构建多级 web 应用还是托管一个静态网站。参阅[How do you host your website on Google App Engine?](/zh-CN/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)以获取更多信息。
 
-不同于大部分其它托管服务，这类工具通常是免费的，不过你只能使用有限的功能。
+不同于大部分其他托管服务，这类工具通常是免费的，不过你只能使用有限的功能。
 
 ### 使用像 CodePen 这样基于 Web 的集成开发环境
 

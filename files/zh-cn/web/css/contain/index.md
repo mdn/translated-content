@@ -66,11 +66,11 @@ The `contain` property is specified as either one of the following:
   - : 表示这个元素的子孙节点不会在它边缘外显示。如果一个元素在视窗外或因其他原因导致不可见，则同样保证它的子孙节点不会被显示。
     Indicates that descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. And if a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 形式化语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -106,7 +106,7 @@ article {
 }
 ```
 
-{{EmbedLiveSample('Simple_layout', '100%', '300')}}
+{{EmbedLiveSample('简单布局', '100%', '300')}}
 
 ### 浮动干涉
 
@@ -139,7 +139,7 @@ article {
 
 As you can see, because of the way floats work, the first image ends up inside the area of the second article:
 
-{{EmbedLiveSample('Float_interference', '100%', '300')}}
+{{EmbedLiveSample('浮动干涉', '100%', '300')}}
 
 ### Fixing with contain
 

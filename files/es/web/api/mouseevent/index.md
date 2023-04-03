@@ -120,9 +120,9 @@ Click on the button to see how the sample works:
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.MouseEvent")}}
+{{Compat}}
 
 ## See also
 

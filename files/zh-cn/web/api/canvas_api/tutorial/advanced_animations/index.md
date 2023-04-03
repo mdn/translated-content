@@ -97,65 +97,71 @@ if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
 }
 ```
 
-### 首个预览
+### 首个示例
 
-让我们看看现今它变得如何。移动你的鼠标到画布里开启动画。
+让我们看看现今它变得如何。
 
-```html hidden
+#### HTML
+
+```html
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
 ```
 
-```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+#### JavaScript
 
-var ball = {
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let raf;
+
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
 ball.draw();
 ```
 
-{{EmbedLiveSample("首个预览", "610", "310")}}
+#### 结果
+
+移动你的鼠标到画布里开启动画。
+
+{{EmbedLiveSample("首个示例", "610", "340")}}
 
 ## 加速度
 
@@ -168,63 +174,69 @@ ball.vy += .25;
 
 这会逐帧减少垂直方向的速度，所以小球最终将只会在地板上弹跳。
 
-```html hidden
+### 第二个示例
+
+#### HTML
+
+```html
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
 ```
 
-```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+#### JavaScript
 
-var ball = {
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let raf;
+
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e){
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e){
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
 ball.draw();
 ```
 
-{{EmbedLiveSample("Second_demo", "610", "310")}}
+#### 结果
+
+{{EmbedLiveSample("第二个示例", "610", "340")}}
 
 ## 长尾效果
 
@@ -235,64 +247,70 @@ ctx.fillStyle = 'rgba(255,255,255,0.3)';
 ctx.fillRect(0,0,canvas.width,canvas.height);
 ```
 
-```html hidden
+### 第三个示例
+
+#### HTML
+
+```html
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
 ```
 
-```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var raf;
+#### JavaScript
 
-var ball = {
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let raf;
+
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.fillStyle = 'rgba(255,255,255,0.3)';
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e){
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e){
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
 ball.draw();
 ```
 
-{{EmbedLiveSample("Third_demo", "610", "310")}}
+#### 结果
+
+{{EmbedLiveSample("第三个示例", "610", "340")}}
 
 ## 添加鼠标控制
 

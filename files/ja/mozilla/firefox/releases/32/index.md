@@ -26,41 +26,41 @@ l10n:
 
 ### CSS
 
-- {{cssxref("mix-blend-mode")}} を既定で有効にしました ({{Bug(952643)}})。
-- release ビルドで、position:sticky を既定で有効にしました (以前は Nightly および Aurora のみ有効) ({{Bug(916315)}})。
-- {{cssxref("box-decoration-break")}} を実装して、非標準の `-moz-background-inline-policy` を削除しました ({{Bug(613659)}})。
-- {{cssxref("flex-grow")}} および {{cssxref("flex-shrink")}} が、0 と 0 以外の値との間でトランジションすることが可能になりました ({{Bug(996945)}})。
+- {{cssxref("mix-blend-mode")}} を既定で有効にしました ([Firefox バグ 952643](https://bugzil.la/952643))。
+- release ビルドで、position:sticky を既定で有効にしました (以前は Nightly および Aurora のみ有効) ([Firefox バグ 916315](https://bugzil.la/916315))。
+- {{cssxref("box-decoration-break")}} を実装して、非標準の `-moz-background-inline-policy` を削除しました ([Firefox バグ 613659](https://bugzil.la/613659))。
+- {{cssxref("flex-grow")}} および {{cssxref("flex-shrink")}} が、0 と 0 以外の値との間でトランジションすることが可能になりました ([Firefox バグ 996945](https://bugzil.la/996945))。
 
 ### HTML
 
-- {{HTMLElement("img")}} 要素の {{HTMLattrxref("srcset", "img")}} プロパティを試験的に実装しました。`dom.image.srcset.enable` を `true` に設定すると有効になります ({{Bug(870021)}})。
-- [**id**](/ja/docs/Web/HTML/Global_attributes/id) および [**class**](/ja/docs/Web/HTML/Global_attributes/class) が真の[グローバル属性](/ja/docs/Web/HTML/Global_attributes)となり、名前空間の有無にかかわらず XML 要素にも適用されるようになりました ({{bug(741295)}})。
+- {{HTMLElement("img")}} 要素の {{HTMLattrxref("srcset", "img")}} プロパティを試験的に実装しました。`dom.image.srcset.enable` を `true` に設定すると有効になります ([Firefox バグ 870021](https://bugzil.la/870021))。
+- [**id**](/ja/docs/Web/HTML/Global_attributes/id) および [**class**](/ja/docs/Web/HTML/Global_attributes/class) が真の[グローバル属性](/ja/docs/Web/HTML/Global_attributes)となり、名前空間の有無にかかわらず XML 要素にも適用されるようになりました ([Firefox バグ 741295](https://bugzil.la/741295))。
 
 ### JavaScript
 
 - 新たな ECMAScript 2015 の組み込みメソッドを実装しました。
 
-  - {{jsxref("Array.from()")}} ({{bug(904723)}})
-  - {{jsxref("Array.prototype.copyWithin()")}} ({{bug(934423)}})
-  - {{jsxref("Number.isSafeInteger()")}} ({{bug(1003764)}})
+  - {{jsxref("Array.from()")}} ([Firefox バグ 904723](https://bugzil.la/904723))
+  - {{jsxref("Array.prototype.copyWithin()")}} ([Firefox バグ 934423](https://bugzil.la/934423))
+  - {{jsxref("Number.isSafeInteger()")}} ([Firefox バグ 1003764](https://bugzil.la/1003764))
 
 ### インターフェイス/API/DOM
 
-- {{domxref("Navigator/languages", "navigator.languages")}} プロパティおよび {{domxref("Window.languagechange_event", "languagechange")}} イベントを実装しました ({{Bug(889335)}})。
-- {{domxref("Navigator.vibrate()")}} メソッドの動作が最新の仕様に適合するようになりました。長すぎる振動は切り詰められます ({{bug(1014581)}})。
-- {{domxref("KeyboardEvent.getModifierState()")}} メソッドおよび {{domxref("MouseEvent.getModifierState()")}} メソッドを、`Accel` 仮想モディファイアをサポートするように拡張しました ({{Bug(1009388)}})。
-- {{domxref("KeyboardEvent.code")}} プロパティを試験的に実装しました。ただし、release ビルドでは無効化しています ({{Bug(865649)}})。
-- {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}} で scope が設定されたセレクター (例えば `querySelector(":scope > li")`) を実装しました ({{Bug(528456)}})。
-- [ウェブアニメーション API](https://dev.w3.org/fxtf/web-animations/) に関して、{{domxref("Document.timeline")}} インターフェイスを実験的に実装しました ({{bug("998246")}})。これは設定項目 `layout.web-animations.api.enabled` で制御されており、現在は Nightly および Aurora のみで有効化しています。
-- [データストア API](/ja/docs/Web/API/Data_Store_API) が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)で使用可能になりました ({{bug("949325")}})。ただし、認定アプリケーションにのみ有効化されています。
-- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の {{domxref("InstallPhaseEvent")}} インターフェイスおよび {{domxref("InstallEvent")}} インターフェイスを実装しました ({{Bug("967264")}})。
-- [MSISDN Verification API](/ja/docs/Web/API/MSISDN_Verification_API) を追加しました。特権アプリに対してのみ有効化されています ({{Bug("988469")}})。
-- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)を Android 版の Firefox が対応しました ({{bug(852935)}})。
-- 仕様や CSS 構文の発展に適合するよう、{{domxref("CSS.escape()")}} を若干変更しました。識別子を `'--'` から始めることが可能になり、2 番目のダッシュ記号はエスケープされません。また、ベンダー識別子はエスケープしません。({{bug(1008719)}})
-- Hit Regions の実装を完全にするために {{domxref("MouseEvent.region")}} が実装されました ({{bug(979692)}}).
-- {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} メソッドは既定では有効になりました ({{bug(1004579)}})。
-- {{domxref("Navigator.doNotTrack")}} プロパティは `'yes'` や `'no'` の代わりに、HTTPの値を反映した `'1'` や `'0'` を返すようになりました ({{bug(887703)}})。
-- [XMLHttpRequest.responseURL](/ja/docs/Web/API/XMLHttpRequest/responseURL) が実装されました ({{bug(998076)}})。
+- {{domxref("Navigator/languages", "navigator.languages")}} プロパティおよび {{domxref("Window.languagechange_event", "languagechange")}} イベントを実装しました ([Firefox バグ 889335](https://bugzil.la/889335))。
+- {{domxref("Navigator.vibrate()")}} メソッドの動作が最新の仕様に適合するようになりました。長すぎる振動は切り詰められます ([Firefox バグ 1014581](https://bugzil.la/1014581))。
+- {{domxref("KeyboardEvent.getModifierState()")}} メソッドおよび {{domxref("MouseEvent.getModifierState()")}} メソッドを、`Accel` 仮想モディファイアをサポートするように拡張しました ([Firefox バグ 1009388](https://bugzil.la/1009388))。
+- {{domxref("KeyboardEvent.code")}} プロパティを試験的に実装しました。ただし、release ビルドでは無効化しています ([Firefox バグ 865649](https://bugzil.la/865649))。
+- {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}} で scope が設定されたセレクター (例えば `querySelector(":scope > li")`) を実装しました ([Firefox バグ 528456](https://bugzil.la/528456))。
+- [ウェブアニメーション API](https://dev.w3.org/fxtf/web-animations/) に関して、{{domxref("Document.timeline")}} インターフェイスを実験的に実装しました ([Firefox バグ 998246](https://bugzil.la/998246))。これは設定項目 `layout.web-animations.api.enabled` で制御されており、現在は Nightly および Aurora のみで有効化しています。
+- [データストア API](/ja/docs/Web/API/Data_Store_API) が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)で使用可能になりました ([Firefox バグ 949325](https://bugzil.la/949325))。ただし、認定アプリケーションにのみ有効化されています。
+- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の {{domxref("InstallPhaseEvent")}} インターフェイスおよび {{domxref("InstallEvent")}} インターフェイスを実装しました ([Firefox バグ 967264](https://bugzil.la/967264))。
+- [MSISDN Verification API](/ja/docs/Web/API/MSISDN_Verification_API) を追加しました。特権アプリに対してのみ有効化されています ([Firefox バグ 988469](https://bugzil.la/988469))。
+- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)を Android 版の Firefox が対応しました ([Firefox バグ 852935](https://bugzil.la/852935))。
+- 仕様や CSS 構文の発展に適合するよう、{{domxref("CSS.escape()")}} を若干変更しました。識別子を `'--'` から始めることが可能になり、2 番目のダッシュ記号はエスケープされません。また、ベンダー識別子はエスケープしません。([Firefox バグ 1008719](https://bugzil.la/1008719))
+- Hit Regions の実装を完全にするために {{domxref("MouseEvent.region")}} が実装されました ([Firefox バグ 979692](https://bugzil.la/979692)).
+- {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} メソッドは既定では有効になりました ([Firefox バグ 1004579](https://bugzil.la/1004579))。
+- {{domxref("Navigator.doNotTrack")}} プロパティは `'yes'` や `'no'` の代わりに、HTTPの値を反映した `'1'` や `'0'` を返すようになりました ([Firefox バグ 887703](https://bugzil.la/887703))。
+- [XMLHttpRequest.responseURL](/ja/docs/Web/API/XMLHttpRequest/responseURL) が実装されました ([Firefox バグ 998076](https://bugzil.la/998076))。
 
 ### MathML
 
@@ -72,7 +72,7 @@ _変更なし。_
 
 ### WebRTC
 
-- ストリームのサイズやフレームレートを制限するため、[WebRTC](/ja/docs/Glossary/WebRTC) の {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}、`width`、`height`、`framerate` に新たな制約を与えました ({{bug("907352")}}):
+- ストリームのサイズやフレームレートを制限するため、[WebRTC](/ja/docs/Glossary/WebRTC) の {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}、`width`、`height`、`framerate` に新たな制約を与えました ([Firefox バグ 907352](https://bugzil.la/907352)):
 
   ```js
   {

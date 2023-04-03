@@ -98,7 +98,7 @@ font-family: #POUND, sans-serif;
 font-family: Hawaii 5-0, sans-serif;
 ```
 
-### 正式语法
+### 形式语法
 
 {{CSSSyntax}}
 
@@ -174,7 +174,7 @@ font-family: Hawaii 5-0, sans-serif;
 </div>
 ```
 
-{{EmbedLiveSample("Some_common_font_families", 600, 120)}}
+{{EmbedLiveSample("一些通用字体", 600, 120)}}
 
 ## 规范
 

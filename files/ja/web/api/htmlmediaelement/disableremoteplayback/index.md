@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +16,7 @@ slug: Web/API/HTMLMediaElement/disableRemotePlayback
 ## 例
 
 ```js
-var obj = document.createElement('audio');
+const obj = document.createElement('audio');
 obj.disableRemotePlayback = true;
 ```
 

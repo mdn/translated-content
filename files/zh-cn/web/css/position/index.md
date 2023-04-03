@@ -36,12 +36,12 @@ CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{
 - `absolute`
   - : 元素会被移出正常文档流，并不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。
 - `fixed`
-  - : 元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。`fixed` 属性会创建新的层叠上下文。当元素祖先的 `transform`, `perspective` 或 `filter` 属性非 `none` 时，容器由视口改为该祖先。
+  - : 元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。`fixed` 属性会创建新的层叠上下文。当元素祖先的 `transform`、`perspective`、`filter` 或 `backdrop-filter` 属性非 `none` 时，容器由视口改为该祖先。
 - `sticky`
-  - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先（nearest scrolling ancestor）*和 [containing block](/zh-CN/docs/Web/CSS/Containing_Block) (最近块级祖先 nearest block-level ancestor)，包括 table-related 元素，基于`top`, `right`, `bottom`, 和 `left`的值进行偏移。偏移值不会影响任何其他元素的位置。
-    该值总是创建一个新的[层叠上下文（stacking context](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的`overflow` 是 `hidden`, `scroll`, `auto`, 或 `overlay`时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见[Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)）。
+  - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先*（nearest scrolling ancestor）和 [containing block](/zh-CN/docs/Web/CSS/Containing_Block)（最近块级祖先 nearest block-level ancestor），包括 table-related 元素，基于 `top`、`right`、`bottom` 和 `left` 的值进行偏移。偏移值不会影响任何其他元素的位置。
+    该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)（stacking context）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见 [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)）。
 
-### 常见语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -49,7 +49,7 @@ CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{
 
 ### 相对定位
 
-相对定位的元素是在文档中的正常位置偏移给定的值，但是不影响其他元素的偏移。下面的例子中，注意未应用定位的其它元素是按照 "Two" 在正常位置的情况下进行布局的。
+相对定位的元素是在文档中的正常位置偏移给定的值，但是不影响其他元素的偏移。下面的例子中，注意未应用定位的其他元素是按照 "Two" 在正常位置的情况下进行布局的。
 
 HTML 内容
 
@@ -79,48 +79,84 @@ HTML 内容
 }
 ```
 
-{{ EmbedLiveSample('Relative_positioning', '600px', '200px') }}
+{{ EmbedLiveSample('相对定位', '600px', '200px') }}
 
 ### 绝对定位
 
-相对定位的元素并未脱离文档流，而绝对定位的元素则脱离了文档流。在布置文档流中其它元素时，绝对定位元素不占据空间。绝对定位元素相对于*最近的非 `static` 祖先元素*定位。当这样的祖先元素不存在时，则相对于 ICB（inital container block, 初始包含块）。例子不严谨，待修正~~下面的示例中，"Three" 元素不存在应用了定位的祖先元素，因此该元素相对于紧邻的祖先（iframe 中的 \<body> 元素）绝对定位。~~
+相对定位的元素并未脱离文档流，而绝对定位的元素则脱离了文档流。在布置文档流中其他元素时，绝对定位元素不占据空间。绝对定位元素相对于*最近的非 `static` 祖先元素*定位。当这样的祖先元素不存在时，则相对于 ICB（initial containing block，初始包含块）。
 
-#### HTML 内容
+#### HTML
 
 ```html
-<div class="box" id="one">One</div>
-<div class="box" id="two">Two</div>
-<div class="box" id="three">Three</div>
-<div class="box" id="four">Four</div>
+<h1>Absolute positioning</h1>
+
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
+
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
+
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
+
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 #### CSS
 
 ```css
-.box {
-   display: inline-block;
-   background: red;
-   width: 100px;
-   height: 100px;
-   float: left;
-   margin: 20px;
-   color: white;
+* {
+  box-sizing: border-box;
 }
 
-#three {
-   position: absolute;
-   top: 20px;
-   left: 20px;
+body {
+  width: 500px;
+  margin: 0 auto;
+}
+
+p {
+  background: aqua;
+  border: 3px solid blue;
+  padding: 10px;
+  margin: 10px;
+}
+
+span {
+  background: red;
+  border: 1px solid black;
+}
+
+.positioned {
+  position: absolute;
+  background: yellow;
+  top: 30px;
+  left: 30px;
 }
 ```
 
-{{ EmbedLiveSample('绝对定位') }}
+#### 结果
+
+{{EmbedLiveSample('绝对定位', '', '420px')}}
 
 ### 固定定位
 
 固定定位与绝对定位相似，但元素的包含块为 viewport 视口。该定位方式常用于创建在滚动屏幕时仍固定在相同位置的元素。在下面的示例中，"One" 元素定位在离页面顶部 80px，离页面左侧 20px 的位置。
 
-#### HTML 内容
+#### HTML
 
 ```html
 <div class="outer">
@@ -146,7 +182,7 @@ HTML 内容
 </div>
 ```
 
-#### CSS 内容
+#### CSS
 
 ```css
 .box {
@@ -267,6 +303,6 @@ dd + dd {
 
 {{cssinfo}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

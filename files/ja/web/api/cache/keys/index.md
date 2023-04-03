@@ -1,11 +1,13 @@
 ---
 title: Cache.keys()
 slug: Web/API/Cache/keys
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("Cache")}} インターフェイスの **`keys()`** メソッドは、{{domxref("Cache")}} キーの配列に解決される {{jsxref("Promise")}} を返します。
+**`keys()`** は {{domxref("Cache")}} インターフェイスのメソッドで、{{domxref("Cache")}} のキーを表す {{domxref("Request")}} の配列に解決される {{jsxref("Promise")}} を返します。
 
 リクエストは、挿入されたのと同じ順序で返されます。
 
@@ -13,51 +15,55 @@ slug: Web/API/Cache/keys
 
 ## 構文
 
-```
-cache.keys(request, {options}).then(function(keys) {
-  // リクエストの配列で何かをする
-});
+```js-nolint
+keys()
+keys(request)
+keys(request, options)
 ```
 
-### パラメーター
+### 引数
 
-- request {{optional_inline}}
+- `request` {{optional_inline}}
   - : 特定のキーが必要な場合、返してほしい {{domxref("Request")}}。 これは、`Request` オブジェクトまたは URL です。
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : プロパティが `keys` 操作でどのように照合するかを制御するオブジェクト。 使用可能なオプションは次のとおりです。
 
-    - `ignoreSearch`: 照合操作で URL のクエリ文字列を無視するかどうかを指定する {{jsxref("Boolean")}}。 `true` に設定すると、`http://foo.com/?value=bar` の `?value=bar` 部分を、照合の実行時に無視します。 デフォルトは `false` です。
-    - `ignoreMethod`: `true` に設定すると、照合操作が {{domxref("Request")}} `HTTP` メソッドを検証しないようにする {{jsxref("Boolean")}}（通常、`GET` および `HEAD` のみが許可されます）。 デフォルトは `false` です。
-    - `ignoreVary`: `true` に設定すると、`VARY` ヘッダーを照合しないように照合操作に指示する {{jsxref("Boolean")}}。 つまり、URL が一致した場合は、{{domxref("Response")}} オブジェクトに `VARY` ヘッダーがあるかどうかに関係なく一致します。 デフォルトは `false` です。
-    - `cacheName`: 検索対象の特定のキャッシュを表す {{domxref("DOMString")}}。 このオプションは `Cache.keys()` によって無視されることに注意してください。
+    - `ignoreSearch`
+      - : 論理値で、照合操作で URL のクエリー文字列を無視するかどうかを指定します。 `true` に設定すると、`http://foo.com/?value=bar` の `?value=bar` 部分を、照合の実行時に無視します。既定値は `false` です。
+    - `ignoreMethod`
+      - : 論理値で、`true` に設定すると、照合操作が {{domxref("Request")}} の `HTTP` メソッドを検証しないようにするします（通常、`GET` および `HEAD` のみが許可されます）。既定値は `false` です。
+    - `ignoreVary`
+      - : 論理値で、`true` に設定すると、`VARY` ヘッダーを照合しないように照合操作に指示します。 つまり、URL が一致した場合は、{{domxref("Response")}} オブジェクトに `VARY` ヘッダーがあるかどうかに関係なく一致します。既定値は `false` です。
+    - `cacheName`
+      - : 文字列で、検索対象の特定のキャッシュを表します。 このオプションは `Cache.keys()` によって無視されることに注意してください。
 
-### 戻り値
+### 返値
 
-{{domxref("Cache")}} キーの配列に解決される {{jsxref("Promise")}}。
+{{domxref("Cache")}} キーの配列に解決される {{jsxref("Promise")}} です。
 
 ## 例
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.keys().then(function(keys) {
-    keys.forEach(function(request, index, array) {
+caches.open("v1").then((cache) => {
+  cache.keys().then((keys) => {
+    keys.forEach((request, index, array) => {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Cache.keys")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("caches")}}

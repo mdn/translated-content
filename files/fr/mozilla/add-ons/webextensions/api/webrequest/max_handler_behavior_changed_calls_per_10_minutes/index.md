@@ -22,9 +22,9 @@ Le nombre maximum de fois que `{{WebExtAPIRef("webRequest.handlerBehaviorChanged
 
 Cette propriété est en lecture seule.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

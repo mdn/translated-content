@@ -7,7 +7,7 @@ slug: Web/HTML/Element/slot
 
 > **备注：** 本翻译的一些术语参考了[Vuejs-中文](https://cn.vuejs.org/v2/guide/components-slots.html)页面。
 
-**HTML `<slot>` 元素**，作为 [Web Components](/zh-CN/docs/Web/Web_Components) 技术套件的一部分，是 Web 组件内的一个占位符。该占位符可以在后期使用自己的标记语言填充，这样您就可以创建单独的 DOM 树，并将它与其它的组件组合在一起。
+**HTML `<slot>` 元素**，作为 [Web Components](/zh-CN/docs/Web/Web_Components) 技术套件的一部分，是 Web 组件内的一个占位符。该占位符可以在后期使用自己的标记语言填充，这样您就可以创建单独的 DOM 树，并将它与其他的组件组合在一起。
 
 <table class="properties">
  <tbody>
@@ -46,7 +46,7 @@ slug: Web/HTML/Element/slot
 
 此元素有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("name")}}
+- `name`
   - : 插槽的名字。拥有 name 属性的插槽叫**具名插槽**。
 
 ## 示例

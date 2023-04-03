@@ -32,7 +32,7 @@ TypeError: "x" is not a function
 
   - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
 
-## 例子
+## 示例
 
 ### 函数的名称错误
 

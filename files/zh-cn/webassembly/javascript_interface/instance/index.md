@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Instance
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{WebAssemblySidebar}} {{SeeCompatTable}}
 
 **`WebAssembly.Instance`** 对象本身是有状态的，是 [WebAssembly.Module](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 的一个可执行实例。`实例`包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
 

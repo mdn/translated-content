@@ -15,7 +15,7 @@ En esta evaluación, se espera que use la demo de bouncing balls del artículo a
 
 Para iniciar esta evaluación, haz una copia local de [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), y [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) de nuestro último artículo en un nuevo directorio en tu ordenador.
 
-> **Nota:** Alternativamente, puede usar un sitio como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene paneles JavaScript / CSS separados, sientase libre de poner en linea elementos `<script>`/`<style>` dentro de la página.
+> **Nota:** Alternativamente, puede usar un sitio como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene paneles JavaScript / CSS separados, sientase libre de poner en linea elementos `<script>`/`<style>` dentro de la página.
 
 ## Resumen del proyecto
 
@@ -153,13 +153,3 @@ Para implementar el contador de puntuación sigue estos pasos:
 Si está siguiendo esta evaluación como parte de un curso organizado, debe poder entregar su trabajo a su maestro / mentor para que lo marque. Si está aprendiendo solo, puede obtener la guía de calificación con bastante facilidad preguntando en el [discussion thread for this exercise](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), o en el [#mdn](irc://irc.mozilla.org/mdn) IRC channel en [Mozilla IRC](https://wiki.mozilla.org/IRC). Prueba a hacer el ejercicio primero — no hay nada que ganar con trampa!
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## En este módulo
-
-- [Object basics](/es/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/es/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

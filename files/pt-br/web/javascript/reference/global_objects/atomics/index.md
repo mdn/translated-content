@@ -57,7 +57,7 @@ Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-spac
 
 ## Observações de compatibilidade
 
-\[3] A especificação de compartilhamento de memória está sendo estabilizada. Anterior ao SpiderMonkey 48 {{geckoRelease(48)}}, a última API e semântica não foram implementadas ainda. As alterações entre as versões 46 e 48 do Firefox são:
+\[3] A especificação de compartilhamento de memória está sendo estabilizada. Anterior ao SpiderMonkey 48, a última API e semântica não foram implementadas ainda. As alterações entre as versões 46 e 48 do Firefox são:
 
 - Os métodos `Atomics.futexWakeOrRequeue()` e `Atomics.fence()` foram totalmente removidos ({{bug(1259544)}} e {{bug(1225028)}}).
 - O método {{jsxref("Atomics.wait()")}} e {{jsxref("Atomics.wake()")}} foram nomeados como `Atomics.futexWait()` e `Atomics.futexWake()` ({{bug(1260910)}}). Os nomes antigos foram mantidos como alias, e serão removidos na versão 49 ({{bug(1262062)}}).

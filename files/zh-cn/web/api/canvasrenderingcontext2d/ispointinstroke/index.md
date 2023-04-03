@@ -30,7 +30,7 @@ boolean ctx.isPointInStroke(path, x, y);
 
 ## 示例
 
-### 使用 `isPointInStroke` 方法
+### 检查当前路径中的点
 
 这只是一个使用 **`isPointInStroke`** 方法的简单的代码片段，用于检测一个点是否在路径的描边线上。
 
@@ -38,62 +38,26 @@ boolean ctx.isPointInStroke(path, x, y);
 
 ```html
 <canvas id="canvas"></canvas>
+<p>In stroke: <code id="result">false</code></p>
 ```
 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const result = document.getElementById('result');
 
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
-console.log(ctx.isPointInStroke(10, 10)); // true
+result.innerText = ctx.isPointInStroke(50, 10);
 ```
 
-修改线面的代码，在线查看 canvas 的变化，并在你的[控制台](/zh-CN/docs/Tools/Browser_Console)查看日至信息：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.stroke();
-console.log(ctx.isPointInStroke(10, 10)); // true</textarea>
-```
+{{ EmbedLiveSample('检查当前路径中的点', 700, 220) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

@@ -34,7 +34,7 @@ slug: Web/API/Element/error_event
 
 ## 示例
 
-### [在线示例](/zh-CN/docs/Web/API/Window/blur_event#%E5%9C%A8%E7%BA%BF%E7%A4%BA%E4%BE%8B)
+### 在线示例
 
 #### HTML
 
@@ -105,7 +105,7 @@ imgError.addEventListener('click', () => {
 
 #### 结果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('在线示例', '100%', '150px') }}
 
 ## 规范
 

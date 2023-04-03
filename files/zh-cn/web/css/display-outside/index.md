@@ -21,7 +21,7 @@ The `<display-outside>` keywords specify the element's outer {{CSSxRef("display"
 
 > **备注：** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
 
-## 举例
+## 示例
 
 In the following example, span elements (normally displayed as inline elements) are set to `display: block` and so break onto new lines and expand to fill their container in the inline dimension.
 
@@ -41,11 +41,11 @@ span {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples", 300, 60)}}
+{{EmbedLiveSample("示例", 300, 60)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -53,7 +53,7 @@ span {
 
 {{Compat}}
 
-## 其它
+## 参见
 
 - {{CSSxRef("display")}}
 

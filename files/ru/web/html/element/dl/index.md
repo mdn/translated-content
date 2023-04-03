@@ -1,5 +1,5 @@
 ---
-title: '<dl>: Элемент списка описаний'
+title: "<dl>: Элемент списка описаний"
 slug: Web/HTML/Element/dl
 tags:
   - Element
@@ -20,13 +20,13 @@ translation_of: Web/HTML/Element/dl
 
 {{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), и если потомки элемента `<dl>` включают одну группу имя-значение явный контент.                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                           | Либо: Ноль или более групп каждая из которых состоит из одного или более элементов {{HTMLElement("dt")}} за которым следует один или более элементов {{HTMLElement("dd")}}, необязательно смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}. Либо: Один или более элементов {{HTMLElement("div")}}, необязательно смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}. |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Разрешённые родители                                             | Любой элемент который принимает [потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент).                                                                                                                                                                                                                                                                                                                                                                 |
-| Разрешённые ARIA-роли                                            | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| DOM-интерфейс                                                    | {{domxref("HTMLDListElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), и если потомки элемента `<dl>` включают одну группу имя-значение явный контент.                                                                                                                                                                                                                                                             |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Допустимое содержимое                                            | Либо: Ноль или более групп каждая из которых состоит из одного или более элементов {{HTMLElement("dt")}} за которым следует один или более элементов {{HTMLElement("dd")}}, необязательно смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}. Либо: Один или более элементов {{HTMLElement("div")}}, необязательно смешанных с элементами {{HTMLElement("script")}} и {{HTMLElement("template")}}. |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Допустимые родители                                              | Любой элемент который принимает [потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент).                                                                                                                                                                                                                                                                                                             |
+| Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                                                                                                                                             |
+| DOM-интерфейс                                                    | {{domxref("HTMLDListElement")}}                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ## Атрибуты
 
@@ -40,10 +40,8 @@ translation_of: Web/HTML/Element/dl
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -60,10 +58,8 @@ translation_of: Web/HTML/Element/dl
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -78,16 +74,12 @@ translation_of: Web/HTML/Element/dl
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
   <dd>
-    The Red Panda also known as the Lesser
-    Panda, Wah, Bear Cat or Firefox, is a
-    mostly herbivorous mammal, slightly larger
-    than a domestic cat (60 cm long).
+    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
+    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
   </dd>
 
   <!-- Other terms and descriptions -->

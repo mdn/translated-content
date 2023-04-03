@@ -1,6 +1,6 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
+slug: Web/API/console/warn
 ---
 
 {{APIRef("Console API")}}

@@ -127,9 +127,9 @@ La clé `options_ui` est un objet avec le contenu suivant :
   }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.options_ui")}}
+{{Compat}}
 
 ## Voir aussi
 

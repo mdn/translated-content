@@ -41,9 +41,9 @@ fetch(myRequest).then(function(response) {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Response.status")}}
+{{Compat}}
 
 ## Ver también
 

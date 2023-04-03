@@ -13,7 +13,7 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 Элемент {{HTMLElement ("canvas")}} является одним из наиболее широко используемых инструментов для рендеринга 2D-графики в Интернете. Однако когда веб-сайты и приложения используют Canvas API на пределе его возможностей, производительность начинает снижаться. В этой статье приводятся предложения по оптимизации использования элемента canvas для обеспечения хорошей работы графики.
 

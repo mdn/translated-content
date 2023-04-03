@@ -128,4 +128,4 @@ CSS {{cssxref("@viewport")}} @-규칙
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.meta.name")}}
+{{Compat}}

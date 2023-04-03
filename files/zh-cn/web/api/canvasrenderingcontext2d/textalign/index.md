@@ -36,7 +36,7 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 
 ## 示例
 
-### 使用 `textAlign` 属性
+### 简单文本对齐
 
 这是一段简单的代码片段，使用 `textAlign` 属性设置文本的不同对齐方式。
 
@@ -49,57 +49,33 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+canvas.width = 350;
+const ctx = canvas.getContext('2d');
+const x = canvas.width / 2;
 
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);
+ctx.beginPath();
+ctx.moveTo(x, 0);
+ctx.lineTo(x, canvas.height);
+ctx.stroke();
+
+ctx.font = '30px serif';
+
+ctx.textAlign = 'left';
+ctx.fillText('left-aligned', x, 40);
+
+ctx.textAlign = 'center';
+ctx.fillText('center-aligned', x, 85);
+
+ctx.textAlign = 'right';
+ctx.fillText('right-aligned', x, 130);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);</textarea>
-```
+{{ EmbedLiveSample('简单文本对齐', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

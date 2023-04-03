@@ -922,7 +922,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>不支持</td>
+              <td>107</td>
               <td>18</td>
               <td>不支持</td>
               <td>11</td>
@@ -932,7 +932,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
           </tbody>
         </table>
         <p>
-          Internet Explorer 和 Edge 仅在具有硬件编解码器的设备上支持 HEVC。
+          Internet Explorer、Chrome 和 Edge 仅在具有硬件编解码器的设备上支持 HEVC。
         </p>
         <p>Mozilla 在受专利保护时不会支持 HEVC。</p>
       </td>

@@ -345,7 +345,7 @@ window.addEventListener("load", drawOutput);
 
 ## Imagens de fundo CSS
 
-Você também pode usar CSS para incorporar imagens em páginas da web (e JavaScript, mas isso é outra história). A propriedade {{cssxref("background-image")}} do CSS, e o outras propriedades `background-*`, são usados ​​para controlar o posicionamento da imagem de fundo. Por exemplo, para colocar uma imagem de plano de fundo em cada parágrafo de uma página, você pode fazer o seguinte:
+Você também pode usar CSS para incorporar imagens em páginas da web (e JavaScript, mas isso é outra história). A propriedade {{cssxref("background-image")}} do CSS, e outras propriedades `background-*`, são usados para controlar o posicionamento da imagem de fundo. Por exemplo, para colocar uma imagem de plano de fundo em cada parágrafo de uma página, você pode fazer o seguinte:
 
 ```css
 p {

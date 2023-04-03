@@ -664,7 +664,7 @@ console.log(a3); // logs [8, 6, 7, 9]
 
 ### 사전적 `this`
 
-화살표 함수 이전 까지 모든 new 함수는 고유한 this 값을 정의(생성자의 경우 new 객체, [엄격 모드](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode)에서는 호출 되지 않음, 함수가 "객체 메서드"로 호출 되는 경우의 기본 객체 등)했습니다. 이런 방식은 객체 지향 프로그래밍 스타일과 잘 맞지 않았습니다.
+화살표 함수 이전 까지 모든 new 함수는 고유한 this 값을 정의(생성자의 경우 new 객체, [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서는 호출 되지 않음, 함수가 "객체 메서드"로 호출 되는 경우의 기본 객체 등)했습니다. 이런 방식은 객체 지향 프로그래밍 스타일과 잘 맞지 않았습니다.
 
 ```js
 function Person() {

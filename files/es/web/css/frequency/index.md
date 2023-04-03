@@ -41,6 +41,6 @@ Aunque todas las unidades representen la misma frecuencia para el valor `0`, la 
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.frequency")}}
+{{Compat}}

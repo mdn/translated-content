@@ -125,7 +125,7 @@ slug: Web/HTML/Element/menu
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## 같이 보기
 

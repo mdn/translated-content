@@ -209,7 +209,7 @@ Dans l'exemple qui précède, un lecteur d'écran annoncerait deux section {{HTM
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

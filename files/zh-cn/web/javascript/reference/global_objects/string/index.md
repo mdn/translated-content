@@ -142,7 +142,7 @@ console.log(eval(s2.valueOf())); // returns the number 4
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 相同的算法转换数字。
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 相同的算法转换 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 首先，对象通过依次调用 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#primitive_coercion)。然后将生成的原始值转换为一个字符串。
+- 首先，对象通过依次调用 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
 
 有几种方法可以在 JavaScript 中实现几乎相同的效果。
 
@@ -328,7 +328,7 @@ otherwise my code is unreadable.";
 > 它们的用途有限，因为它们基于非常古老的 HTML 标准并且仅提供当前可用的 HTML 标记和属性的一个子集。现在已经为它们创建了已弃用或非标准的标记。此外，它们在没有任何验证或清理的情况下进行简单的字符串连接，这使得它们在使用 [`innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML) 直接插入时成为潜在的安全威胁。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 
 - {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}}（超文本目标）
+  - : [`<a name="name">`](/zh-CN/docs/Web/HTML/Element/a#name)（超文本目标）
 - {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
@@ -338,13 +338,13 @@ otherwise my code is unreadable.";
 - {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
+  - : [`<font color="color">`](/zh-CN/docs/Web/HTML/Element/font#color)
 - {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
+  - : [`<font size="size">`](/zh-CN/docs/Web/HTML/Element/font#size)
 - {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}}（链接 URL）
+  - : [`<a href="url">`](/zh-CN/docs/Web/HTML/Element/a#href)（链接 URL）
 - {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}

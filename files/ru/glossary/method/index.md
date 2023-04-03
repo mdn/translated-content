@@ -16,7 +16,6 @@ original_slug: Глоссарий/Method
 
 ### Узнайте об этом
 
-- {{InterWiki("wikipedia","Метод_(программирование)")}} в Wikipedia
 - [Определение методов в JavaScript](/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов) (сравнение традиционного синтаксиса и нового короткого)
 
 ### Техническая информация

@@ -247,7 +247,7 @@ Responde a este elemento usando [`addEventListener()`](/es/docs/Web/API/EventTar
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLInputElement")}}
+{{Compat}}
 
 ## Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: What is accessibility?
+title: 什么是无障碍？
 slug: Learn/Accessibility/What_is_accessibility
 ---
 
@@ -160,17 +160,17 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
-## 在本模块中
+## 本章目录
 
-- [What is accessibility?](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
+- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
 
-## 另见
+## 参见
 
 - [WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
 

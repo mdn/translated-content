@@ -9,19 +9,19 @@ slug: Web/API/Window/devicePixelRatio
 
 これは 1 物理ピクセルの大きさに対する 1 CSS ピクセルの大きさの比率と考えることもできます。もっと簡単に言うと、 1 つの CSS ピクセルが実際にはいくつの物理ピクセルで表示されるかという値です。
 
-これは一般的なディスプレイと、HiDPI (高 DPI) やレティナのように同じ大きさのオブジェクトを描画するのにより多くのピクセルを使って鮮明さを得ているディスプレイとの差異を扱うのに便利です。
+これは一般的なディスプレイと、HiDPI (高 DPI) や Retina のように同じ大きさのオブジェクトを描画するのにより多くのピクセルを使って鮮明さを得ているディスプレイとの差異を扱うのに便利です。
 
 {{domxref("Window.matchMedia", "window.matchMedia()")}} を使うと、`devicePixelRatio` の値の変化（例えば、ユーザーが異なるピクセル解像度の画面へウィンドウをドラッグした時など）を検知することができます。[後述の例](#画面解像度や拡大率の変化の監視)を参照して下さい。
 
 ### 値
 
-倍精度浮動小数点の値であり、 CSS ピクセル解像度に対するディスプレイの物理的なピクセル解像度の比率を表します。この値が 1 であることは、それが伝統的な 96 DPI (プラットフォームによっては 76 DPI) であることを意味し、2 であることは、HiDPI やレティナのディスプレイであると考えられます。それ以外の値が返されることもあり、それは一般的でない低解像度のディスプレイの場合や、より考えられるのはスクリーンが標準的な 96 または 76 DPI の解像度の単純な 2 倍よりも高いピクセル密度を持つ場合です。
+倍精度浮動小数点の値であり、 CSS ピクセル解像度に対するディスプレイの物理的なピクセル解像度の比率を表します。この値が 1 であることは、それが伝統的な 96 DPI (プラットフォームによっては 76 DPI) であることを意味し、2 であることは、HiDPI や Retina のディスプレイであると考えられます。それ以外の値が返されることもあり、それは一般的でない低解像度のディスプレイの場合や、より考えられるのはスクリーンが標準的な 96 または 76 DPI の解像度の単純な 2 倍よりも高いピクセル密度を持つ場合です。
 
 ## 例
 
 ### `<canvas>` の解像度の補正
 
-レティナ画面では {{htmlelement("canvas")}} がぼやけて見えることがあるでしょう。 `window.devicePixelRatio` を使うことで、鮮明に表示するために必要なピクセル密度を調べます。
+Retina 画面では {{htmlelement("canvas")}} がぼやけて見えることがあるでしょう。 `window.devicePixelRatio` を使うことで、鮮明に表示するために必要なピクセル密度を調べます。
 
 #### HTML
 
@@ -41,7 +41,7 @@ canvas.style.width = `${size}px`;
 canvas.style.height = `${size}px`;
 
 // メモリ上における実際のサイズを設定（ピクセル密度の分だけ倍増させます）。
-const scale = window.devicePixelRatio; // レティナでこの値を 1 にするとぼやけた canvas になります
+const scale = window.devicePixelRatio;  // Retina でこの値を 1 にするとぼやけた canvas になります
 canvas.width = Math.floor(size * scale);
 canvas.height = Math.floor(size * scale);
 
@@ -62,7 +62,7 @@ const textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
-[![この画像は、レティナディスプレイにおける異なる値の影響を表すものです。](devicepixelration_diff.jpg)](devicepixelration_diff.jpg)
+[![この画像は、Retina ディスプレイにおける異なる値の影響を表すものです。](devicepixelration_diff.jpg)](devicepixelration_diff.jpg)
 
 ### 画面解像度や拡大率の変化の監視
 
@@ -85,7 +85,7 @@ const updatePixelRatio = () => {
 updatePixelRatio();
 ```
 
-文字列 `mqString` は、メディアクエリーそのものになるように作ります。このメディアクエリーは、`(resolution: 1dppx)` (標準的なディスプレイの場合)、または `(resolution: 2dppx)` (HiDPI / レティナディスプレイの場合) のような内容で始まり、現在のディスプレイ解像度のピクセルあたりのドット数が特定の数であるかをチェックします。
+文字列 `mqString` は、メディアクエリーそのものになるように作ります。このメディアクエリーは、`(resolution: 1dppx)` (標準的なディスプレイの場合)、または `(resolution: 2dppx)` (HiDPI / Retina ディスプレイの場合) のような内容で始まり、現在のディスプレイ解像度のピクセルあたりのドット数が特定の数であるかをチェックします。
 
 関数 `updatePixelRatio()` は、現在の `devicePixelRatio` の値を取得し、`pixelRatioBox` 要素の {{domxref("HTMLElement.innerText", "innerText")}} に、その比率をパーセント値と小数第 2 位までの未加工の 10 進数の値の両方で表示する文字列を設定します。
 
