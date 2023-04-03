@@ -51,7 +51,7 @@ animation-name: unset;
 
 ## 示例
 
-### 命名动画
+### 为动画命名
 
 此动画的 `animation-name` 为 `rotate`。
 
