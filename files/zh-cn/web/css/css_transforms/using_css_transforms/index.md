@@ -32,7 +32,7 @@ CSS 变换通过一系列 CSS 属性实现，通过使用这些属性，可以�
 
 ```html
 <img
-  style="rotate: 90deg;
+  style="transform: rotate: 90deg;
       transform-origin: bottom left;"
   src="logo.png"
   alt="MDN Logo" />
