@@ -14,67 +14,67 @@ browser-compat: html.elements.col
 
 {{HTMLSidebar}}
 
-The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a {{HTMLElement("colgroup")}} element.
+Элемент **`<col>`** [HTML](/en-US/docs/Web/HTML) определяет столбец в таблице и используется для определения общей семантики для всех общих ячеек. Обычно он находится внутри элемента {{HTMLElement("colgroup")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
 
-`<col>` allows styling columns using CSS, but only a few properties will have an effect on the column ([see the CSS 2.1 specification](https://www.w3.org/TR/CSS21/tables.html#columns) for a list).
+`<col>` позволяет стилизовать столбцы с помощью CSS, но не все свойства будут влиять на столбец ([смотри спецификацию CSS 2.1](https://www.w3.org/TR/CSS21/tables.html#columns) для получения списка).
 
 ## Атрибуты
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru-RU/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("span")}}
-  - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
+  - : Этот атрибут содержит целое положительное число, указывающее количество последовательных столбцов, которые заполняет элемент `<col>`. Если он отсутствует, то его значение по умолчанию равно "1".
 
 ### Устаревшие атрибуты
 
-The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
+Следующие атрибуты устарели и не должны использоваться. Они задокументированы ниже для справки при обновлении существующего кода и исключительно для исторического интереса.
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
-  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
+  - : Этот атрибут [enumerated](/en-US/docs/Glossary/Enumerated) указывает, как будет обрабатываться выравнивание содержимого ячейки каждого столбца по горизонтали. Возможными значениями являются:
 
-    - `left`, aligning the content to the left of the cell
-    - `center`, centering the content in the cell
-    - `right`, aligning the content to the right of the cell
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell
+    - `left`, выравнивание содержимого по левому краю ячейки
+    - `center`, выравнивание содержимого по центру ячейки
+    - `right`, выравнивание содержимого по правому краю ячейки
+    - `justify`, добавляет пробелы в текстовое содержимое так, чтобы содержимое было выровнено по ширине ячейки
 
     If this attribute is not set, its value is inherited from the {{htmlattrxref("align", "colgroup")}} of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
 
-    > **Note:** To achieve the same effect as the `left`, `center`, `right` or `justify` values, do not try to set the {{cssxref("text-align")}} property on a selector giving a `<col>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<col>` element, they won't inherit it.
+    > **Примечание:** Чтобы достичь того же эффекта, что и значения `left`, `center`, `right` или `justify`, не пытайтесь установить свойство {{cssxref("text-align")}} для селектора, задающего элемент `<col>`. Поскольку элементы {{HTMLElement("td")}} не являются потомками элемента `<col>`, они не унаследуют его.
     >
-    > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
+    > Если таблица не использует атрибут {{htmlattrxref("colspan", "td")}}, используйте CSS-селектор `td:n-й дочерний элемент(an+b)`. Установите `a` равным нулю, а `b` - положению столбца в таблице, например `td:nth-child(2) { text-align: right; }`, чтобы выровнять второй столбец по правому краю.
     >
-    > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > Если таблица использует атрибут {{htmlattrxref("colspan", "td")}}, эффект может быть достигнут путем объединения соответствующих селекторов атрибутов CSS, таких как `[colspan=n]`, хотя это и не тривиально.
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#named_colors) can also be used.
+  - : Задний фон таблицы. Это [6-значный шестнадцатеричный RGB-код](/en-US/docs/Web/CSS/hex-color) с префиксом "#`. Также можно использовать одно из предопределенных [цветовых ключевых слов](/en-US/docs/Web/CSS/color_value#named_colors).
 
-    To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
+   Чтобы добиться аналогичного эффекта, используйте свойство CSS {{cssref("background-color")}}.
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
+  - : Этот атрибут используется для установки символа, по которому будут выравниваться ячейки в столбце. Типичные значения для этого включают точку (.) при попытке выровнять числа или денежные значения. Если для {{htmlattrxref("align", "col")}} не задано значение `char`, этот атрибут игнорируется.
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+  - : Этот атрибут используется для указания количества символов для смещения данных столбца по сравнению с символами выравнивания, указанными атрибутом `char`.
+- {{{{html attr def("valign")}} {{deprecated_inline}}
 
-  - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
+  - : Этот атрибут определяет выравнивание текста по вертикали в каждой ячейке столбца. Возможными значениями для этого атрибута являются:
 
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - and `top`, which will put the text as close to the top of the cell as it is possible.
+    - `baseline`, располагает текст как можно ближе к нижней части ячейки, но выровняет его по [базовой линии](https://en.wikipedia.org/wiki/Baseline_%28typography%29) символов вместо их нижней части. Если все символы имеют одинаковый размер, это имеет тот же эффект, что и `нижний`.
+    - `bottom`, помещает текст как можно ближе к нижней части ячейки, насколько это возможно;
+    - `middle`, помещает текст по центру ячейки
+    - и `top`, помещает текст как можно ближе к верхней части ячейки, насколько это возможно;
 
-    > **Note:** Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a `<col>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<col>` element, they won't inherit it.
+    > **Примечание:** Не пытайтесь установить свойство {{cssxref("выравнивание по вертикали")}} для селектора, дающего элемент `<col>`. Поскольку элементы {{HTMLElement("td")}} не являются потомками элемента `<col>`, они не унаследуют его.
     >
-    > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector where 'a' is the total number of the columns in the table and 'b' is the ordinal position of the column in the table. Only after this selector the `vertical-align` property can be used.
+    > Если таблица не использует атрибут {{htmlattrxref("colspan", "td")}}, используйте CSS-селектор `td:nth-child(an+b)`, где 'a' - общее количество столбцов в таблице, а 'b' - порядковый номер положение столбца в таблице. Только после этого выбора можно использовать свойство `выравнивание по вертикали`.
     >
-    > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > Если таблица действительно использует атрибут {{htmlattrxref("colspan", "td")}}, эффект может быть достигнут путем объединения соответствующих селекторов атрибутов CSS, таких как `[colspan=n]`, хотя это и не тривиально.
 
 - {{htmlattrdef("width")}} {{deprecated_inline}}
-  - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` also can be used.
+  - : Этот атрибут определяет ширину по умолчанию для каждого столбца в текущей группе столбцов. В дополнение к стандартным значениям в пикселях и процентах, этот атрибут может принимать специальную форму `0*`, что означает, что ширина каждого столбца в группе должна быть минимальной шириной, необходимой для размещения содержимого столбца. Также можно использовать относительную ширину, такую как "5*".
 
 ## Примеры
 
