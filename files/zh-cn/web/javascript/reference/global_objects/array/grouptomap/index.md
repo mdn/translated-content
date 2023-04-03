@@ -1,86 +1,72 @@
 ---
 title: Array.prototype.groupToMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
-page-type: javascript-instance-method
-status:
-  - experimental
-browser-compat: javascript.builtins.Array.groupToMap
 ---
 
 {{JSRef}} {{SeeCompatTable}}
 
-The **`groupToMap()`** method groups the elements of the calling array using the values returned by a provided testing function.
-The final returned {{jsxref("Map")}} uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
+**`groupToMap()`** 方法根据提供的测试函数返回的值对调用数组的元素进行分组。最终返回的 {{jsxref("Map")}} 使用测试函数的唯一值作为键，可以用于获取每个组中的元素数组。
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
 
-The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time.
-If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Array.prototype.group()")}}.
+该方法主要用于分组与对象相关的元素，特别是当该对象可能随时间而变化时。如果对象不变，您可以使用字符串表示它，并使用{{jsxref("Array.prototype.group()")}}分组元素。
 
-## Syntax
+## 语法
 
 ```js-nolint
 groupToMap(callbackFn)
 groupToMap(callbackFn, thisArg)
 ```
 
-### Parameters
+### 参数
 
 - `callbackFn`
-  - : A function to execute for each element in the array. It should return a value ({{Glossary("object")}} or {{Glossary("primitive")}}) indicating the group of the current element. The function is called with the following arguments:
+  - : 为数组中的每个元素执行的函数。它应该返回一个（{{Glossary("object")}} 或 {{Glossary("primitive")}}）来指示当前元素的组。该函数被调用时将传入以下参数：
     - `element`
-      - : The current element being processed in the array.
+      - : 数组中当前正在处理的元素。
     - `index`
-      - : The index of the current element being processed in the array.
+      - : 正在处理的元素在数组中的索引。
     - `array`
-      - : The array `groupToMap()` was called upon.
+      - : 调用了 `groupToMap()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
-### Return value
+### 返回值
 
-A {{jsxref("Map")}} object with keys for each group, each assigned to an array containing the elements of the associated group.
+一个 {{jsxref("Map")}} 对象，其中每个组都有一个键，每个键都分配给一个包含组对应元素的数组。
 
-### Exceptions
+### 异常
 
 - `TypeError`
-  - : The specified callback function is not callable.
+  - : 指定的回调函数不可调用。
 
-## Description
+## 描述
 
-The `groupToMap()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array.
-The callback function returns a value indicating the group of the associated element.
-The values returned by `callbackFn` are used as keys for the {{jsxref("Map")}} returned by `groupToMap()`.
-Each key has an associated array containing all the elements for which the callback returned the same value.
+`groupToMap()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用一次提供的 `callbackFn` 函数一次。该回调函数返回一个值，用以指示相关元素所属的组。`callbackFn` 返回的值用作 `groupToMap()` 返回的 {{jsxref("Map")}} 的键。每个键都有一个相关联的数组，其中包含回调返回相同值的所有元素。
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
+`callbackFn` 函数会被数组中的*每个*索引调用，而不仅仅是那些具有赋值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏)中，空槽的行为表现与 `undefined` 相同。
 
-The `groupToMap()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a map of arrays that contains the same elements as the ones from the original array. However, the function provided as `callbackFn` can mutate the array. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
+`groupToMap()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同元素的数组映射。但是，作为 `callbackFn` 提供的函数可以改变数组。请注意，在第一次调用 `callbackFn` _之前_，数组的长度已经被保存。因此：
 
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `groupToMap()` began.
-- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are visited as if they were `undefined`.
+- 当开始调用 `groupToMap()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
+- 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
+- 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被修改后的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素将被当作 `undefined` 而被访问。
 
-> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
+> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
-The elements in the returned {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
+返回的 {{jsxref("Map")}} 中的元素和原始数组中的元素相同（不是{{glossary("deep copy","深拷贝")}}）。更改元素的内部结构将反映在原始数组和返回的 {{jsxref("Map")}} 中。
 
-The `groupToMap()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+`groupToMap()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
-This method is useful when you need to group information that is related to a particular object that might potentially change over time.
-This is because even if the object is modified, it will continue to work as a key to the returned `Map`.
-If you instead create a string representation for the object and use that as a grouping key in {{jsxref("Array.prototype.group()")}}, you must maintain the mapping between the original object and its representation as the object changes.
+当您需要分组与特定对象相关的信息时，此方法非常有用，因为即使对象被修改，它仍将作为返回的 `Map` 的键继续工作。如果您改为为对象创建字符串表示形式，并在 {{jsxref("Array.prototype.group()")}} 中将其用作分组键，则必须在对象更改时维护原始对象和其表示之间的映射。
 
-> **Note:** To access the groups in the returned `Map`, you must use the same object that was originally used as a key in the `Map` (although you may modify its properties).
-> You can't use another object that just happens to have the same name and properties.
+> **备注：** 要访问返回的 `Map` 中的组，必须使用最初用作 `Map` 键的相同对象（尽管您可以修改其属性）。您不能使用另一个恰好具有相同名称和属性的对象。
 
-## Examples
+## 示例
 
-### Using groupToMap()
+### 使用 groupToMap()
 
-First we define an array containing objects representing an inventory of different foodstuffs.
-Each food has a `type` and a `quantity`.
+首先，我们定义一个包含代表各种食品库存的对象的数组。每种食品都有一个 `type` 和一个 `quantity` 属性。
 
 ```js
 const inventory = [
@@ -92,8 +78,7 @@ const inventory = [
 ];
 ```
 
-The code below uses `groupToMap()` with an arrow function that returns the object keys named `restock` or `sufficient`, depending on whether the element has `quantity < 6`.
-The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
+下面的代码使用带有箭头函数的 `groupToMap()`，该函数返回名为 `restock` 或 `sufficient` 的对象键，具体取决于元素是否具有 `quantity < 6`。返回的 `result` 对象是一个 `Map`，因此我们需要使用键调用 `get()` 来获取数组。
 
 ```js
 const restock = { restock: true };
@@ -105,37 +90,33 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-Note that the function argument `{ quantity }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter).
-This unpacks the `quantity` property of an object passed as a parameter, and assigns it to a variable named `quantity` in the body of the function.
-This is a very succinct way to access the relevant values of elements within a function.
+请注意，函数参数 `{ quantity }` 是一个[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数参数传递的对象中提取属性)的基本示例。这会解构传递为参数的对象的 `quantity` 属性，并将其赋值给函数体中名为 `quantity` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
 
-The key to a `Map` can be modified and still used.
-However you can't recreate the key and still use it.
-For this reason it is important that anything that needs to use the map keeps a reference to its keys.
+`Map` 的键可以被修改并仍然使用。但是，您不能重新创建键并仍然使用它。因此，任何需要使用映射的内容都保留对其键的引用是非常重要的。
 
 ```js
-// The key can be modified and still used
+// 键可以修改并仍然使用
 restock["fast"] = true;
 console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 
-// A new key can't be used, even if it has the same structure!
+// 不能使用新的键，即使它具有相同的结构！
 const restock2 = { restock: true };
 console.log(result.get(restock2)); // undefined
 ```
 
-### Using groupToMap() on sparse arrays
+### 在稀疏数组上使用 groupToMap()
 
-When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `groupToMap()` method iterates empty slots as if they have the value `undefined`.
+当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用 `groupToMap()` 方法时，它会对空槽调用，并将其作为 `undefined` 值进行处理。
 
 ```js
 console.log([1, , 3].groupToMap((x) => x));
 // Map { 1 => [1], undefined => [undefined], 3 => [3] }
 ```
 
-### Calling groupToMap() on non-array objects
+### 在非数组对象上调用 group()
 
-The `groupToMap()` method reads the `length` property of `this` and then accesses each integer index.
+`groupToMap()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
 
 ```js
 const arrayLike = {
@@ -148,15 +129,15 @@ console.log(Array.prototype.groupToMap.call(arrayLike, (x) => x % 2));
 // Map { 0 => [2, 4], 1 => [3] }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{jsxref("Array.prototype.group()")}}
-- [Polyfill of `Array.prototype.group` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [`core-js` 中 `Array.prototype.group` 的 polyfill](https://github.com/zloirock/core-js#array-grouping)
