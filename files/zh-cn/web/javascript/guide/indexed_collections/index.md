@@ -1,5 +1,5 @@
 ---
-title: 索引集合类（Indexed collection）
+title: 索引集合类
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
@@ -9,9 +9,11 @@ slug: Web/JavaScript/Guide/Indexed_collections
 
 *数组*是由名称和索引引用的值构成的有序列表。
 
-例如，考虑一个名为 `emp` 的数组，它包含按数字雇员编号索引的雇员姓名。所以 `emp[0]` 是第 0 位员工，`emp[1]` 是第 1 位员工，以此类推。
+例如，考虑一个名为 `emp` 的数组，它包含按数字雇员编号索引的雇员姓名。所以 `emp[0]` 是 0 号员工，`emp[1]` 是 1 号员工，以此类推。
 
 JavaScript 中没有明确的数组数据类型。但是，你可以使用预定义的 `Array` 对象及其方法来处理应用程序中的数组。`Array` 对象具有以各种方式操作数组的方法，例如连接、反转和排序。它有一个用于确定数组长度的属性和用于正则表达式的其他属性。
+
+在这篇文章中，我们将专注于数组，但许多相同的概念也适用于类型化数组，因为数组和类型化数组共享许多类似的方法。关于类型化数组的更多信息，请参见[类型化数组参考](/zh-CN/docs/Web/JavaScript/Typed_arrays)。
 
 ## 创建数组
 
@@ -30,18 +32,18 @@ const arr3 = [element0, element1, /* … ,*/ elementN];
 为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：
 
 ```js
-// This...
+// 这种方式...
 const arr1 = new Array(arrayLength);
 
-// ...results in the same array as this
+// ...与这种方式会形成相同数组
 const arr2 = Array(arrayLength);
 
-// This has exactly the same effect
+// 这个效果也一样
 const arr3 = [];
 arr3.length = arrayLength;
 ```
 
-> **备注：** 以上代码，数组长度（`arrayLength`）必须为一个数字（`Number`）。否则，将会创建一个只有单个元素（提供的值）的数组。调用 `arr.length` 会返回数组长度，但数组不包含任何元素。{{jsxref("Statements/for...in","for...in")}} 循环在数组上找不到任何属性。
+> **备注：** 以上代码，`arrayLength` 必须为一个 `Number`。否则，将会创建一个只有单个元素（内含提供的值）的数组。调用 `arr.length` 会返回 `arrayLength`，但数组不包含任何元素。{{jsxref("Statements/for...in","for...in")}} 循环在数组上找不到任何属性。
 
 除了上面所示的新定义的变量外，数组还可以被赋值为新对象或现有对象的属性：
 
@@ -50,20 +52,20 @@ const obj = {};
 // …
 obj.prop = [element0, element1, /* … ,*/ elementN];
 
-// OR
+// 或
 const obj = { prop: [element0, element1, /* … ,*/ elementN] };
 ```
 
-如果你希望用单个元素初始化一个数组，而这个元素恰好又是数字（`Number`），那么你必须使用括号语法。当单个的数字（`Number`）传递给 `Array()` 构造函数时，将会被解释为 `arrayLength`，并非单个元素。
+如果你希望用单个元素初始化一个数组，而这个元素恰好又是 `Number`，那么你必须使用括号语法。当单个 `Number` 传递给 `Array()` 构造函数时，将会被解释为 `arrayLength`，并非单个元素。
 
 ```js
-// 创建一个只有唯一元素的数组：the number 42.
+// 创建一个只有唯一元素的数组：数字 42。
 const arr = [42];
 
-// 创建一个没有元素的数组，但是数组的长度被设置成 42.
+// 创建一个没有元素的数组，且数组的长度被设置成 42。
 const arr = Array(42);
 
-// 上面的代码与下面的代码等价
+// 上面的代码与下面的代码等价：
 const arr = [];
 arr.length = 42;
 ```
@@ -74,12 +76,12 @@ arr.length = 42;
 const arr = Array(9.3); // RangeError: Invalid array length
 ```
 
-如果你需要创建任意类型的单元素数组，安全的方式是使用字面值。或者在向数组添加单个元素之前先创建一个空的数组。
+如果你需要创建任意类型的单元素数组，安全的方式是使用数组字面量。或者在向数组添加单个元素之前先创建一个空的数组。
 
 你也可以使用 {{jsxref("Array.of")}} 静态方法来创建包含单个元素的数组。
 
 ```js
-const wisenArray = Array.of(9.3); // wisenArray contains only one element 9.3
+const wisenArray = Array.of(9.3); // wisenArray 只包含一个元素：9.3
 ```
 
 ## 引用数组元素
@@ -92,7 +94,7 @@ const myArray = ['Wind', 'Rain', 'Fire'];
 
 你可以将数组的第一个元素引用为 `myArray[0]`，将数组的第二个元素引用为 `myArray[1]`，等等...元素的索引从零开始。
 
-> **备注：** 你也可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问数组的其他属性，比如对象。
+> **备注：** 你也可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问数组的其他属性，就像对象一样。
 >
 > ```js
 > const arr = ['one', 'two', 'three'];
@@ -111,7 +113,7 @@ emp[1] = 'Phil Lesh';
 emp[2] = 'August West';
 ```
 
-> **备注：** 如果你在以上代码中给数组操作符的是一个非整形数值，那么将作为一个表示数组的对象的属性 (property) 创建，而不是数组的元素。
+> **备注：** 如果你在以上代码中给数组运算符的是一个非整型数值，那么它将作为一个表示数组的对象的属性创建，而不是数组的元素。
 >
 > ```js
 > const arr = [];
@@ -124,17 +126,17 @@ emp[2] = 'August West';
 
 ```js
 const myArray = new Array('Hello', myVar, 3.14159);
-// OR
+// 或
 const myArray = ['Mango', 'Apple', 'Orange'];
 ```
 
 ### 理解 length
 
-在实施层面，JavaScript 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。
+在实现层面，JavaScript 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。
 
-`length` 属性是特殊的，如果存在最后一个元素，则其值总是大于其索引的正整数（在下面的例子中，`'Dusty'` 的索引是 `30`，所以 `cats.length` 返回 `30 + 1`）。
+`length` 属性是特殊的，如果存在最后一个元素，则其值总是大于其索引的正整数（在下面的示例中，`'Dusty'` 的索引是 `30`，所以 `cats.length` 返回 `30 + 1`）。
 
-记住，JavaScript 数组索引是基于 0 的：他们从 `0` 开始，而不是 `1`。这意味着 `length` 属性将比最大的索引值大 1：
+记住，JavaScript 数组索引是基于 0 的：它们从 `0` 开始，而不是 `1`。这意味着 `length` 属性将比最大的索引值大 1：
 
 ```js
 const cats = [];
@@ -151,13 +153,13 @@ const cats = ['Dusty', 'Misty', 'Twiggy'];
 console.log(cats.length); // 3
 
 cats.length = 2;
-console.log(cats); // logs "Dusty, Misty" - Twiggy has been removed
+console.log(cats); // [ 'Dusty', 'Misty' ] - Twiggy 已经被移除了
 
 cats.length = 0;
-console.log(cats); // logs []; the cats array is empty
+console.log(cats); // 输出 []，猫名称的数组现在已经空了
 
 cats.length = 3;
-console.log(cats); // logs [ <3 empty items> ]
+console.log(cats); // 输出 [ <3 empty items> ]
 ```
 
 ### 遍历数组
@@ -165,18 +167,18 @@ console.log(cats); // logs [ <3 empty items> ]
 一种常见的操作是遍历数组的值，以某种方式处理每个值。最简单的方法如下：
 
 ```js
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 for (let i = 0; i < colors.length; i++) {
   console.log(colors[i]);
 }
 ```
 
-如果你确定数组中没有一个元素的求值是 `false` —— 如果你的数组只包含 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 节点，如下，你可以选择一个更高效的土法子：
+如果你确定数组中没有一个元素求值为 `false`（例如，如果你的数组只包含 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 节点），你可以选择一个更高效的土法子：
 
 ```js
-const divs = document.getElementsByTagName('div');
-for (let i = 0, div; div = divs[i]; i++) {
-  /* Process div in some way */
+const divs = document.getElementsByTagName("div");
+for (let i = 0, div; (div = divs[i]); i++) {
+  /* 以某种方式处理 div */
 }
 ```
 
@@ -194,7 +196,7 @@ colors.forEach((color) => console.log(color));
 
 传递给 `forEach` 的函数对数组中的每个元素执行一次，数组元素作为参数传递给该函数。未赋值的值不会在 `forEach` 循环迭代。
 
-注意，在数组定义时省略的元素不会在 `forEach` 遍历时被列出，但是手动赋值为 `undefined` 的元素是会被列出的：
+注意，在数组定义时省略的元素不会在 `forEach` 遍历时被列出，但是手动赋值为 `undefined` 的元素是*会*被列出的：
 
 ```js
 const sparseArray = ['first', 'second', , 'fourth'];
@@ -207,7 +209,7 @@ sparseArray.forEach((element) => {
 // fourth
 
 if (sparseArray[2] === undefined) {
-  console.log('sparseArray[2] is undefined');  // true
+  console.log('sparseArray[2] 是 undefined');  // true
 }
 
 const nonsparseArray = ['first', 'second', undefined, 'fourth'];
@@ -232,21 +234,21 @@ nonsparseArray.forEach((element) => {
 ```js
 let myArray = ['1', '2', '3'];
 myArray = myArray.concat('a', 'b', 'c');
-// myArray is now ["1", "2", "3", "a", "b", "c"]
+// myArray 现在是 ["1", "2", "3", "a", "b", "c"]
 ```
 
 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法将数组中的所有元素连接成一个字符串。
 
 ```js
 const myArray = ['Wind', 'Rain', 'Fire'];
-const list = myArray.join(' - '); // list is "Wind - Rain - Fire"
+const list = myArray.join(' - '); // list 现在是 "Wind - Rain - Fire"
 ```
 
 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 方法在数组末尾添加一个或多个元素，并返回数组操作后的 `length`。
 
 ```js
 const myArray = ['1', '2'];
-myArray.push('3'); // myArray is now ["1", "2", "3"
+myArray.push('3'); // myArray 现在是 ["1", "2", "3"]
 ```
 
 [`pop()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 方法从数组移出最后一个元素，并返回该元素。
@@ -254,7 +256,7 @@ myArray.push('3'); // myArray is now ["1", "2", "3"
 ```js
 const myArray = ['1', '2', '3'];
 const last = myArray.pop();
-// myArray is now ["1", "2"], last = "3"
+// myArray 现在是 ["1", "2"]，last 为 "3"
 ```
 
 [`shift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) 方法从数组移出第一个元素，并返回该元素。
@@ -262,7 +264,7 @@ const last = myArray.pop();
 ```js
 const myArray = ['1', '2', '3'];
 const first = myArray.shift();
-// myArray is now ["2", "3"], first is "1"
+// myArray 现在是 ["2", "3"]，first 为 "1"
 ```
 
 [`unshift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) 方法在数组开头添加一个或多个元素，并返回数组的新长度。
@@ -270,41 +272,40 @@ const first = myArray.shift();
 ```js
 const myArray = ['1', '2', '3'];
 myArray.unshift('4', '5');
-// myArray becomes ["4", "5", "1", "2", "3"]
+// myArray 变成了 ["4", "5", "1", "2", "3"]
 ```
 
 [`slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 方法从数组提取一个片段，并作为一个新数组返回。
 
 ```js
-let myArray = ['a', 'b', 'c', 'd', 'e'];
-myArray = myArray.slice(1, 4); // 包含索引 1，不包括索引 4
-                               // returning [ "b", "c", "d"]
+let myArray = ["a", "b", "c", "d", "e"];
+myArray = myArray.slice(1, 4); // [ "b", "c", "d"]
+// 从索引 1 开始，提取所有的元素，直到索引 3 为止
 ```
 
 [`at()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/at) 方法返回数组中指定索引处的元素，如果索引超出范围，则返回 `undefined`。它主要用于从数组末尾访问元素的负下标。
 
 ```js
 const myArray = ['a', 'b', 'c', 'd', 'e'];
-myArray.at(-2); // "d", the second-last element of myArray
+myArray.at(-2); // "d"，myArray 的倒数第二个元素
 ```
 
-[`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从数组移出一些元素，并（可选地）替换它们。它返回从数组中删除的元素。
+[`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从数组移除一些元素，并（可选地）替换它们。它返回从数组中删除的元素。
 
 ```js
 const myArray = ['1', '2', '3', '4', '5'];
 myArray.splice(1, 3, 'a', 'b', 'c', 'd');
-// myArray is now ["1", "a", "b", "c", "d", "5"]
-// This code started at index one (or where the "2" was),
-// removed 3 elements there, and then inserted all consecutive
-// elements in its place.
+// myArray 现在是 ["1", "a", "b", "c", "d", "5"]
+// 本代码从 1 号索引开始（或元素“2”所在的位置），
+// 移除 3 个元素，然后将后续元素插入到那个位置上。
 ```
 
-[`reverse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 方法颠倒数组元素的顺序：第一个数组元素变为最后一个数组元素，最后一个数组元素变为第一个数组元素。它返回对数组的引用。
+[`reverse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 方法原地颠倒数组元素的顺序：第一个数组元素变为最后一个数组元素，最后一个数组元素变为第一个数组元素。它返回对数组的引用。
 
 ```js
 const myArray = ['1', '2', '3'];
 myArray.reverse();
-// transposes the array so that myArray = [ "3", "2", "1" ]
+// 将原数组颠倒，myArray = [ "3", "2", "1" ]
 ```
 
 [`flat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 方法返回一个新数组，所有子数组元素递归地连接到其中，直到指定的深度。
@@ -312,7 +313,7 @@ myArray.reverse();
 ```js
 let myArray = [1, 2, [3, 4]];
 myArray = myArray.flat();
-// myArray is now [1, 2, 3, 4], since the [3, 4] subarray is flattened
+// myArray 现在是 [1, 2, 3, 4]，因为子数组 [3, 4] 已被展平
 ```
 
 [`sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) 方法对数组的元素进行适当的排序，并返回对数组的引用。
@@ -320,7 +321,7 @@ myArray = myArray.flat();
 ```js
 const myArray = ['Wind', 'Rain', 'Fire'];
 myArray.sort();
-// sorts the array so that myArray = ["Fire", "Rain", "Wind"]
+// 对数组排序，myArray = ["Fire", "Rain", "Wind"]
 ```
 
 `sort()` 也可以接受回调函数来决定如何比较数组元素。使用两个参数调用回调函数，它们是来自数组的两个值。该函数比较这两个值并返回正数、负数或零，表示这两个值的顺序。例如，以下命令将根据字符串的最后一个字母对数组进行排序：
@@ -328,14 +329,14 @@ myArray.sort();
 ```js
 const sortFn = (a, b) => {
   if (a[a.length - 1] < b[b.length - 1]) {
-    return -1; // Negative number => a < b, a comes before b
+    return -1; // 负数 => a < b，a 在 b 之前
   } else if (a[a.length - 1] > b[b.length - 1]) {
-    return 1; // Positive number => a > b, a comes after b
+    return 1; // 正数 => a > b，a 在 b 之后
   }
-  return 0; // Zero => a = b, a and b keep their original order
+  return 0; // 0 => a = b，a 和 b 保持原来的顺序
 }
 myArray.sort(sortFn);
-// sorts the array so that myArray = ["Wind","Fire","Rain"]
+// 对数组排序，myArray = ["Wind","Fire","Rain"]
 ```
 
 - 如果 `a` 小于 `b`，返回 `-1`（或任何负数）
@@ -348,9 +349,9 @@ myArray.sort(sortFn);
 const a = ['a', 'b', 'a', 'b', 'a'];
 console.log(a.indexOf('b')); // 1
 
-// Now try again, starting from after the last match
+// 再试一次，这次从最后一次匹配之后开始
 console.log(a.indexOf('b', 2)); // 3
-console.log(a.indexOf('z')); // -1, because 'z' was not found
+console.log(a.indexOf('z')); // -1, 因为找不到 'z'
 ```
 
 [`lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) 方法的工作原理类似于 `indexOf`，但这是从末尾开始，反向搜索。
@@ -359,7 +360,7 @@ console.log(a.indexOf('z')); // -1, because 'z' was not found
 const a = ['a', 'b', 'c', 'd', 'a', 'b'];
 console.log(a.lastIndexOf('b')); // 5
 
-// Now try again, starting from before the last match
+// 再试一次，这次从最后一次匹配之前开始
 console.log(a.lastIndexOf('b', 4)); // 1
 console.log(a.lastIndexOf('z')); // -1
 ```
@@ -371,7 +372,7 @@ const a = ['a', 'b', 'c'];
 a.forEach((element) => {
   console.log(element);
 });
-// Logs:
+// 输出：
 // a
 // b
 // c
@@ -473,11 +474,14 @@ console.log(a3.some(isNumber)); // false
 
 ```js
 const a = [10, 20, 30];
-const total = a.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+const total = a.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0,
+);
 console.log(total); // 60
 ```
 
-[`reduceRight()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) 方法的工作原理类似于 `reduce()`，但这从最后一个元素开始的。
+[`reduceRight()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) 方法的工作原理类似于 `reduce()`，但从最后一个元素开始。
 
 `reduce` 和 `reduceRight` 是迭代数组方法中最不被人熟知的两个函数。它们应该使用在那些需要把数组的元素两两递归处理，并最终计算成一个单一结果的算法。
 
