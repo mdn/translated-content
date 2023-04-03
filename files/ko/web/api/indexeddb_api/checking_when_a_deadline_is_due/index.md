@@ -122,7 +122,7 @@ const monthCheck = now.getMonth();
 const yearCheck = now.getFullYear();
 ```
 
-{{jsxref("Global_Objects/Date", "Date")}} 객체는 날짜와 시간을 분리할 수 있는 여러 개의 메소드가 존재합니다. 여기서는 현재의 년 (`getFullYear()`를 사용해야 합니다. `getYear()`는 더이상 사용하지 않습니다), 월 (0-11 사이의 숫자를 반환합니다. 예를 들어, 0은 1월을 나타냅니다), 당월의 일 (`getDate()`를 사용해야 합니다. `getDay()`는 1주 기준 1-7 사이의 날짜를 반환합니다), 시 (숫자를 반환합니다), 분 (숫자를 반환합니다)을 가져옵니다.
+{{jsxref("Global_Objects/Date", "Date")}} 객체는 날짜와 시간을 분리할 수 있는 여러 개의 메소드가 존재합니다. 여기서는 현재의 년 (`getFullYear()`를 사용해야 합니다. `getYear()`는 더이상 사용되지 않습니다), 월 (0-11 사이의 숫자를 반환합니다. 예를 들어, 0은 1월을 나타냅니다), 당월의 일 (`getDate()`를 사용해야 합니다. `getDay()`는 1주 기준 1-7 사이의 날짜를 반환합니다), 시 (숫자를 반환합니다), 분 (숫자를 반환합니다)을 가져옵니다.
 
 ```js
   const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
