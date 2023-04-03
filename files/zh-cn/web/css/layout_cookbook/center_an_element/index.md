@@ -23,7 +23,7 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 ## 做出选择
 
-要将一个盒子居中放置在另一个之中，我们需要让作为容器的盒子变成伸缩容器。再将 {{cssxref("align-items")}} 设置为 center 来实现区块轴（block axis，纵向）上的居中，并把 {{cssxref("justify-content")}} 设置为 center 来实现内联轴（inline axis，横向）上的居中。
+要将一个盒子居中放置在另一个之中，我们需要让作为容器的盒子变成伸缩容器。再将 {{cssxref("align-items")}} 设置为 center 来实现区块轴（block axis，纵向）上的居中，并把 {{cssxref("justify-content")}} 设置为 center 来实现行内轴（inline axis，横向）上的居中。
 
 将来我们可能不需要将父容器设置为伸缩容器就可以居中元素，因为此处使用的“盒子对齐”属性也被指定为适用于块布局。然而，当前在块布局上对盒子对齐属性的支持仍然是有限的，因此目前使用伸缩盒子来实现居中还是最可靠的方法。
 
