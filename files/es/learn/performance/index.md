@@ -17,7 +17,7 @@ Existen herramientas, API y mejores prácticas que nos ayudan a medir y mejorar 
 
 Si bien es necesario conocer HTML, CSS y JavaScript para implementar muchas recomendaciones de mejora del rendimiento web, saber cómo crear aplicaciones no es una condición previa necesaria para comprender y medir el rendimiento web.
 
-Varios de los módulos introductorios a continuación no requieren conocimientos de programación, aunque se necesita una comprensión de HTML para el módulo de rendimiento y HTML, se necesita una comprensión de CSS para el módulo de rendimiento y CSS, etc. Recomendamos que trabaje con nuestros módulos introductorios. primero, comenzando con [qué es el rendimiento web](/es/docs/Learn/Performance/What_is_Performance)primero. Los módulos introductorios proporcionan una visión general del rendimiento web. Los tres primeros deben considerarse como lectura obligatoria si usted es un desarrollador o gerente de proyectos. Los módulos enfocados en temas de tecnología son más apropiados para los desarrolladores que utilizan estas tecnologías.
+Varios de los módulos introductorios a continuación no requieren conocimientos de programación, aunque se necesita una comprensión de HTML para el módulo de rendimiento y HTML, se necesita una comprensión de CSS para el módulo de rendimiento y CSS, etc. Recomendamos que trabaje con nuestros módulos introductorios. primero, comenzando con [qué es el rendimiento web](/es/docs/Learn/Performance/What_is_web_performance) primero. Los módulos introductorios proporcionan una visión general del rendimiento web. Los tres primeros deben considerarse como lectura obligatoria si usted es un desarrollador o gerente de proyectos. Los módulos enfocados en temas de tecnología son más apropiados para los desarrolladores que utilizan estas tecnologías.
 
 Los módulos avanzados profundizan en los temas que se resumen en los módulos introductorios y proporcionan una visión general de las API de rendimiento, las herramientas de análisis y prueba y los problemas de cuellos de botella en el rendimiento.
 
@@ -27,7 +27,7 @@ Se recomienda que trabajes a través de [Empezando con la web](/es/docs/Learn/Ge
 
 Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a través de ellos. Definitivamente debes comenzar con el primero.
 
-- [¿Qué es el rendimiento web?](/es/docs/Learn/Performance/What_is_performance)
+- [¿Qué es el rendimiento web?](/es/docs/Learn/Performance/What_is_web_performance)
   - : Este artículo inicia el módulo con una buena visión de lo que realmente es el rendimiento: esto incluye las herramientas, métricas, API, redes y grupos de personas que debemos considerar al pensar en el rendimiento y cómo podemos hacer que el rendimiento sea parte de nuestra web. flujo de trabajo de desarrollo.
 - [¿Cómo perciben los usuarios el rendimiento?](/es/docs/Learn/Performance/Perceived_performance)
   - : Más importante que la rapidez de su sitio web en milisegundos, es la rapidez con la que los usuarios perciben su sitio. Estas percepciones se ven afectadas por el tiempo real de carga de la página, el ralentí, la capacidad de respuesta a la interacción del usuario y la suavidad del desplazamiento y otras animaciones. En este artículo, analizamos las diversas métricas de carga, animación y métricas de capacidad de respuesta, junto con las mejores prácticas para mejorar la percepción del usuario, si no los tiempos reales.
@@ -53,12 +53,12 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 
 ## Módulos avanzados
 
-- Poblando la pagina
+- Poblando la página
   - : Se realiza una solicitud HTTP y, con suerte, unos segundos más tarde, aparece el sitio. Mostrar el contenido implica ejecutar JavaScript, posiblemente modificar el DOM, calcular estilos, calcular el diseño y, finalmente, representar el contenido, lo que implica pintar y componer, y puede involucrar la aceleración de la GPU en un hilo separado.
 - [Entendiendo la latencia](/es/docs/Learn/Performance/Latency)
   - : La latencia es la cantidad de tiempo que tarda entre el navegador que realiza una solicitud de un recurso y el que recibe el primer byte del recurso solicitado. Este artículo explica qué es la latencia, cómo afecta el rendimiento y cómo medir y mejorar la latencia.
 - Entendiendo el ancho de banda
-  - : Bandwidth is the amount of data (measured in Mbps or Kbps) that can be sent per second. This article explains the role of bandwidth in media-rich internet applications, how it can be measured, and how you can optimize applications to make the best use of available bandwidth.
+  - : El ancho de banda es la cantidad de datos (medidos en Mbps o Kbps) que se pueden enviar por segundo. Este artículo explica la función del ancho de banda en las aplicaciones de Internet ricas en medios, cómo se puede medir y cómo se pueden optimizar las aplicaciones para aprovechar al máximo el ancho de banda disponible.
 - HTTP/2 y tú
   - : La capa de transporte, es decir, HTTP, es absolutamente esencial para el funcionamiento de la web, y solo recientemente se ha visto una actualización importante en la forma de HTTP / 2. Fuera de la caja, HTTP / 2 proporciona muchas mejoras de rendimiento y ventajas sobre su predecesor, pero también cambia el panorama. En este artículo, aprenderá lo que HTTP / 2 hace por usted, y cómo ajustar su aplicación para que vaya más allá.
 - El rol de TLS en el rendimiento
@@ -66,7 +66,7 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 - [Perfilando con el perfilador incorporado](/es/docs/Performance/Profiling_with_the_Built-in_Profiler)
   - : Aprenda cómo perfilar el rendimiento de la aplicación con el generador de perfiles integrado de Firefox.
 - Gráficos de rendimiento de lectura
-  - : Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer [tablas de cascada](/es/docs/Tools/Performance/Waterfall), [árboles de llamadas,](/es/docs/Tools/Performance/Call_Tree)Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer, [tablas de llamas](/es/docs/Tools/Performance/Flame_Chart), y [localizaciones](/es/docs/Tools/Performance/Allocations) en su navegador, las herramientas de desarrollo lo ayudarán a comprender los gráficos de cascada y llama en otras herramientas de rendimiento.
+  - : Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer [tablas de cascada](/es/docs/Tools/Performance/Waterfall), [árboles de llamadas,](/es/docs/Tools/Performance/Call_Tree). Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer, [tablas de llamas](/es/docs/Tools/Performance/Flame_Chart), y [localizaciones](/es/docs/Tools/Performance/Allocations) en su navegador, las herramientas de desarrollo lo ayudarán a comprender los gráficos de cascada y llama en otras herramientas de rendimiento.
 - [Rendimiento de animaciones en CSS y JavaScript](/es/Apps/Build/Performance/CSS_JavaScript_animation_performance)
   - : Las animaciones son críticas para una experiencia de usuario placentera. Este artículo analiza las diferencias de rendimiento entre CSS y animaciones basadas en JavaScript.
 - Analizando paquetes de JavaScript
@@ -76,9 +76,9 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 - Controlar la entrega de recursos con sugerencias de recursos
   - : Los navegadores a menudo saben mejor que nosotros cuando se trata de la priorización y la entrega de recursos, pero están lejos de ser clarividentes. Las características nativas del navegador nos permiten sugerirle al navegador cuándo debe conectarse a otro servidor, o precargar un recurso antes de que el navegador sepa que lo necesita. Cuando se usa juiciosamente, esto puede hacer que la experiencia rápida parezca aún más rápida. En este artículo, cubrimos las características nativas del navegador como rel = preconnect, rel = dns-prefetch, rel = prefetch, y rel = precarga, y cómo usarlas para su ventaja.
 
-## Ver también
+## Véase también
 
-- [Mobile performance checklist](/es/docs/Web/Performance/Mobile_performance_checklist)
-- [Optimizing Startup Performance](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
+- [Lista de verificación de rendimiento móvil](/es/docs/Web/Performance/Mobile_performance_checklist)
+- [Optimización del rendimiento de inicio](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
 
 {{LandingPageListSubpages}}
