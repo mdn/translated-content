@@ -17,7 +17,7 @@ var labelElements = input.labels;
 
 {{domxref("NodeList")}} 包含 `<label>` 元素和 `<input>` 元素。
 
-## 实例
+## 示例
 
 ### HTML
 
@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("示例", "100%", 30)}}
 
 ## 规范
 

@@ -1,6 +1,8 @@
 ---
 title: HTTP Cookie の使用
 slug: Web/HTTP/Cookies
+l10n:
+  sourceCommit: 98f4d0818bc8fbe863130b41703df069b0d816bd
 ---
 
 {{HTTPSidebar}}
@@ -18,7 +20,7 @@ Cookie は主に、以下の 3 つの用途で使用されます。
 
 Cookie は、クライアント側の汎用的な記憶領域として使用されたことがあります。これは他にクライアントへデータを保存する手段がなかった頃は合理的でしたが、現在では新しいストレージ API を使用することが推奨されています。 Cookie はすべてのリクエストで送信されるので、（特にモバイルデータ通信で）性能を悪化させる可能性があります。クライアントストレージ向けの新しい API として、[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) (`localStorage` および `sessionStorage`) と [IndexedDB](/ja/docs/Web/API/IndexedDB_API) があります。
 
-> **メモ:** 保存された Cookie (およびウェブページが使用できる他のストレージ) を確認するには、開発ツールの[ストレージインスペクター](/ja/docs/Tools/Storage_Inspector)を有効化して、ストレージのツリーで Cookie を選択してください。
+> **メモ:** 保存された Cookie (およびウェブページが使用できる他のストレージ) を確認するには、開発ツールの[ストレージインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)を有効化して、ストレージのツリーで Cookie を選択してください。
 
 ## Cookie の作成
 
@@ -28,7 +30,7 @@ HTTP リクエストを受け取った後、サーバーはレスポンスで {{
 
 HTTP の {{HTTPHeader("Set-Cookie")}} レスポンスヘッダーは、サーバーがユーザーエージェントへ Cookie を送信するために使用します。単純な Cookie は次のように設定されます。
 
-```html
+```http
 Set-Cookie: <cookie-name>=<cookie-value>
 ```
 
@@ -53,7 +55,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 
 > **メモ:** 様々なサーバー側アプリケーションにおける `Set-Cookie` ヘッダーの使い方を紹介します。
 >
-> - [PHP](https://secure.php.net/manual/ja/function.setcookie.php)
+> - [PHP](https://www.php.net/manual/ja/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value)
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
 > - [Ruby on Rails](https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
@@ -67,7 +69,7 @@ Cookie の持続時間は 2 通りの方法で定義することができます�
 
 例を示します。
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
 ```
 
@@ -85,7 +87,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
 
 例を示します。
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 ```
 
@@ -95,7 +97,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 #### Domain 属性
 
-`Domain` 属性は、Cookie を受信することができるホストを指定します。指定されていない場合は、既定で Cookie を設定したのと同じ{{Glossary("host", "ホスト")}}となり、*サブドメインは除外されます*。 `Domain` が指定された場合、サブドメインは常に含まれます。したがって、 `Domain` を指定すると省略時よりも制限が緩和されます。ただし、サブドメイン間でユーザーに関する情報を共有する場合は有用になるでしょう。
+`Domain` 属性は、Cookie を受信することができるホストを指定します。サーバーが `Domain` を指定しなかった場合、ブラウザーは既定でドメインを Cookie を設定したのと同じ{{Glossary("host", "ホスト")}}とし、*サブドメインは除外します*。 `Domain` が指定された場合、サブドメインは常に含まれます。したがって、 `Domain` を指定すると省略時よりも制限が緩和されます。ただし、サブドメイン間でユーザーに関する情報を共有する場合は有用になるでしょう。
 
 例えば、`Domain=mozilla.org` を設定すると、`developer.mozilla.org` のようなサブドメインも含まれます。
 
@@ -120,14 +122,14 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 `SameSite` 属性により、サーバーがサイト間リクエスト (ここで{{Glossary("Site", "サイト")}}は登録可能なドメインによって定義されます) と一緒に Cookie を送るべきではないことを要求することができます。これは、クロスサイトリクエストフォージェリー攻撃 ({{Glossary("CSRF")}}) に対していくらかの防御となります。取ることができる値は `Strict`, `Lax`, `None` の 3 つです。
 
-`Strict`では、 Cookie は発生したサイトのみに送信されます。
-`Lax` も同様ですが、ユーザーが Cookie のオリジンのサイトに「移動」したときにも Cookie が送信されます。
+`Strict` では、ブラウザーは Cookie の元サイトからのリクエストに対してのみ Cookie を送ります。
+`Lax` も同様ですが、ユーザーが Cookie の元サイトに移動したときに（たとえユーザーが異なる形のサイトから来たとしても）ブラウザーは Cookie を送信します。
 例えば、外部サイトからリンクをたどった場合です。 `None` は Cookie を発生元サイトへリクエストとサイト間のリクエストの両方で送信されますが、*安全なコンテキスト*でのみ送信されます（つまり、 `SameSite=None`なら `Secure` 属性も設定する必要があります）。
 もし `SameSite` 属性が設定されていない場合、 Cookie は `Lax` として扱われます。
 
 次に例を示します。
 
-```
+```http
 Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 
@@ -189,14 +191,17 @@ Cookie への攻撃を緩和する方法には次のようなものがありま�
 Cookie はドメインとスキーム（`http` や `https` など）に関連付けられ、 {{HTTPHeader("Set-Cookie")}} の `Domain` 属性が設定された場合はサブドメインにも関連付けられます。
 Cookie のドメインとスキームが現在のページと一致している場合、その Cookie はこのページと同じサイトからのものと見なされ、_ファーストパーティ Cookie_ と呼ばれます。
 
-ドメインとスキームが異なる場合、そのクッキーは同じサイトのものとはみなされず、_サードパーティ Cookie_ と呼ばれます。
+ドメインとスキームが異なる場合、その Cookie は同じサイトのものとはみなされず、_サードパーティ Cookie_ と呼ばれます。
 ウェブページをホスティングしているサーバーがファーストパーティ Cookie を設定する一方で、ページには他のドメインのサーバーに保存されている画像やその他のコンポーネント (例えば、広告バナー) が含まれている場合があり、サードパーティ Cookie を設定することがあります。
 これらは主にウェブ上での広告やトラッキングに使用されます。
 例えば [Google が使用している Cookie の種類](https://policies.google.com/technologies/types)を参照してください。
 
 サードパーティのサーバーは、複数のサイトにアクセスした際に同じブラウザーから送信された Cookie に基づいて、ユーザーの閲覧履歴や習慣のプロファイルを構築することができます。 Firefox は既定で、トラッカーを含むことが知られているサードパーティの Cookie をブロックします。サードパーティの Cookie (またはトラッキング Cookie ) は、他のブラウザーの設定や拡張機能によってもブロックされる場合があります。 Cookie をブロックすると、一部のサードパーティ製コンポーネント (ソーシャルメディアウィジェットなど) が意図した通りに機能しなくなることがあります。
 
-> **メモ:** サーバーは Cookie を設定する際、 [SameSite 属性](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite)を使用して第三者のサイトに Cookie を送信してよいかどうかを指定することができます（また、指定すべきです）。
+ユーザーのプライバシーを尊重し、サードパーティの追跡を最小限に抑えたい開発者にとって、有益な機能がいくつか使用されています。
+
+- サーバーは Cookie の [SameSite 属性](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite)を設定することで、サードパーティーの Cookie を送るかどうか指定することができます（そしてそうすべきです）。
+- [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Partitioned_cookies) は、開発者が、最上位のサイトごとに別個の Cookie ジャーを持つ、分割されたストレージへの Cookie のオプトインができるようにします。これは、サードパーティのトラッキングに Cookie を使用することを許可しないブラウザーで、サードパーティの Cookie の有効な非トラッキング用途が引き続き動作するようにするものです。
 
 ### Cookie に関する規制
 
@@ -228,7 +233,8 @@ Cookie の使用を対象とした法規制には、以下のようなものが�
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [ストレージインスペクターを使った Cookie の調査](/ja/docs/Tools/Storage_Inspector)
+- [SameSite Cookie](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [ストレージインスペクターを使った Cookie の調査](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie specification: RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 - [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
 - [Cookies, the GDPR, and the ePrivacy Directive](https://gdpr.eu/cookies/)

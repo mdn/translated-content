@@ -29,15 +29,15 @@ Para obtener la altura interna de una ventana, por ejemplo, el alto de una pági
 
 La siguiente figura muestra la diferencia entre `innerHeight` y `outerHeight`.
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
-
-## Compatibilidad del navegador
-
-{{Compat("api.Window.outerHeight")}}
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

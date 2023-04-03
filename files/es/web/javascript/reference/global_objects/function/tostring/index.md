@@ -40,12 +40,7 @@ Function.prototype.toString.call(proxy); // TypeError
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.toString")}}
-
-## Notas específicas para Gecko
-
-- Desde Gecko 17.0 (Firefox 17 / Thunderbird 17 / SeaMonkey 2.14), `Function.prototype.toString()` fue implementada salvando el código fuente de la función. El descompilador fue eliminado, de modo que el parámetro `indentation` ya no se necesita más. Ver {{bug("761723")}} para más detalles.
-- A partir de Gecko 38 (Firefox 38 / Thunderbird 38 / SeaMonkey 2.35), `Function.prototype.toString()` produce error para objetos {{jsxref("Proxy")}} ({{bug(1100936)}}).
+{{Compat}}
 
 ## Ver también
 

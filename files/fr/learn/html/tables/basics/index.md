@@ -62,9 +62,9 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
 
 <table>
   <caption>
-    Données sur les planètes du système solaire (repris de
+    Données sur les planètes du système solaire (repris de la
     <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/"
-      >Nasa's Planetary Fact Sheet - Metric</a
+      >Planetary Fact Sheet - Metric de la NASA</a
     >).
   </caption>
   <thead>
@@ -75,7 +75,7 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <th scope="col">Diamètre (km)</th>
       <th scope="col">Densité (kg/m<sup>3</sup>)</th>
       <th scope="col">Gravité (m/s<sup>2</sup>)</th>
-      <th scope="col">Durée du jour (hours)</th>
+      <th scope="col">Durée du jour (heures)</th>
       <th scope="col">Distance du Soleil (10<sup>6</sup>km)</th>
       <th scope="col">Température moyenne (°C)</th>
       <th scope="col">Nombre de lunes</th>
@@ -195,7 +195,7 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>-225</td>
       <td>5</td>
       <td>
-        Déclassée en tant que planète en 2006 mais décision controverséee.
+        Déclassée en tant que planète en 2006 mais décision controversée.
       </td>
     </tr>
   </tbody>
@@ -213,11 +213,11 @@ Nous n'approfondirons pas le CSS dans ce module, mais nous avons écrit une feui
 
 ### Quand NE PAS utiliser de tableaux en HTML ?
 
-Les tableaux HTML ne doivent être utilisés que pour des données tabulaires — c'est pour cela qu'ils sont conçus. Malheureusement, beaucoup de gens ont utilisé les tableaux HTML pour organiser des pages Web, par exemple : une ligne pour contenir l'en-tête, une ligne pour les colonnes de contenu, une ligne pour le pied de page, etc. Vous pouvez trouver plus de détails et un exemple avec [Mises en page](/fr/docs/Learn/Accessibility/HTML#Page_layouts) dans notre [Module d'apprentissage à l'Accessibilité](/fr/docs/Learn/Accessibility). Cette dispostion a été couramment utilisée car la prise en charge des CSS parmi les navigateurs avait pour coutume d'être effroyable ; ces mises en page sont beaucoup moins fréquentes de nos jours, mais vous pouvez toujours les voir dans certains recoins du Web.
+Les tableaux HTML ne doivent être utilisés que pour des données tabulaires — c'est pour cela qu'ils sont conçus. Malheureusement, beaucoup de gens ont utilisé les tableaux HTML pour organiser des pages Web, par exemple : une ligne pour contenir l'en-tête, une ligne pour les colonnes de contenu, une ligne pour le pied de page, etc. Vous pouvez trouver plus de détails et un exemple avec [Mises en page](/fr/docs/Learn/Accessibility/HTML#Page_layouts) dans notre [Module d'apprentissage à l'Accessibilité](/fr/docs/Learn/Accessibility). Cette disposition a été couramment utilisée car la prise en charge des CSS parmi les navigateurs avait pour coutume d'être effroyable ; ces mises en page sont beaucoup moins fréquentes de nos jours, mais vous pouvez toujours les voir dans certains recoins du Web.
 
 Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS](/fr/docs/Learn/CSS/CSS_layout) est une mauvaise idée. En voici les principales raisons&nbsp;:
 
-1. **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), utilisés par les non-voyants, interprêtent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
+1. **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), utilisés par les non-voyants, interprètent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
 2. **Les tables produisent de la bouillie :** Comme mentionné ci-dessus, les mises en page sur la base de tableaux comportent généralement des structures de balisage plus complexes que des techniques de mise en page appropriées. Le code résultant sera plus difficile à écrire, à maintenir et à déboguer.
 3. **Les tableaux ne s'adaptent pas automatiquement** : Si vous utilisez les propriétés de mise en page ({{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} ou {{htmlelement("div")}}), leur largeur est par défaut 100% de celle du parent. Par contre, les tableaux sont dimensionnés en fonction de leur contenu par défaut, de sorte que des mesures supplémentaires sont nécessaires pour que le style du tableau fonctionne effectivement sur les différents types d'écran.
 
@@ -312,12 +312,12 @@ Intéressons-nous maintenant aux en-têtes du tableau — cellules spéciales qu
     <td>Belle-mère</td>
     <td>Moi</td>
     <td>Moi</td>
-    <td>Belle-soeur</td>
+    <td>Belle-sœur</td>
   </tr>
   <tr>
     <td>Habitudes alimentaires</td>
     <td>Mange tous les restes</td>
-    <td>Grignotte la nourriture</td>
+    <td>Grignote la nourriture</td>
     <td>Mange copieusement</td>
     <td>Mange jusqu'à ce qu'il éclate</td>
   </tr>
@@ -354,12 +354,12 @@ Maintenant, le rendu du tableau réel :
       <td>Belle-mère</td>
       <td>Moi</td>
       <td>Moi</td>
-      <td>Belle-soeur</td>
+      <td>Belle-sœur</td>
     </tr>
     <tr>
       <td>Habitudes alimentaires</td>
       <td>Mange tous les restes</td>
-      <td>Grignotte la nourriture</td>
+      <td>Grignote la nourriture</td>
       <td>Mange copieusement</td>
       <td>Mange jusqu'à ce qu'il éclate</td>
     </tr>
@@ -412,7 +412,7 @@ Le code initial ressemble à cela :
   </tr>
   <tr>
     <th>Poulet</th>
-    <td>Coq</td>
+    <td>Poule</td>
   </tr>
   <tr>
     <td>Coq</td>
@@ -442,7 +442,7 @@ Mais le résultat ne nous donne pas ce que nous voulions :
     </tr>
     <tr>
       <th>Poulet</th>
-      <td>Coq</td>
+      <td>Poule</td>
     </tr>
     <tr>
       <td>Coq</td>
@@ -450,7 +450,7 @@ Mais le résultat ne nous donne pas ce que nous voulions :
   </tbody>
 </table>
 
-Nous avons besoin d'un moyen pour étendre "Animaux", "Hippopotame" et "Crocodile" sur deux colonnes, and "Cheval" et "Poulet" sur deux lignes. Heureusement, les en-têtes de tableau et les cellules ont les attributs `colspan` et `rowspan`, ce qui nous permet justement de faire cela. Les deux acceptent une valeur numérique correspondant au nombre de colonnes ou de lignes à couvrir. Par exemple, `colspan="2"` génère une cellule sur deux colonnes.
+Nous avons besoin d'un moyen pour étendre "Animaux", "Hippopotame" et "Crocodile" sur deux colonnes, et "Cheval" et "Poulet" sur deux lignes. Heureusement, les en-têtes de tableau et les cellules ont les attributs `colspan` et `rowspan`, ce qui nous permet justement de faire cela. Les deux acceptent une valeur numérique correspondant au nombre de colonnes ou de lignes à couvrir. Par exemple, `colspan="2"` génère une cellule sur deux colonnes.
 
 Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 
@@ -463,7 +463,7 @@ Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 
 ## Attribuer un style commun aux colonnes
 
-Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments **[`<col>`](/fr/docs/Web/HTML/Element/col)** and **[`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)**. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne — vous devez généralement spécifier les éléments de style dans chaque `<td>` ou `<th>` de la colonne, ou utiliser un selecteur complexe tel que {{cssxref(":nth-child()")}}.
+Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments **[`<col>`](/fr/docs/Web/HTML/Element/col)** and **[`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)**. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne — vous devez généralement spécifier les éléments de style dans chaque `<td>` ou `<th>` de la colonne, ou utiliser un sélecteur complexe tel que {{cssxref(":nth-child()")}}.
 
 ### Premier exemple
 

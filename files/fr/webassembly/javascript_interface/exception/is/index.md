@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is
 browser-compat: javascript.builtins.WebAssembly.Exception.is
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La méthode **`is()`**, rattachée au prototype d'un objet [`Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception), peut être utilisée afin de déterminer si l'objet `Exception` correspond à une balise donnée.
 

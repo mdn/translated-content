@@ -82,6 +82,6 @@ Les gestionnaires peuvent également être des [pages d'extension](/fr/Add-ons/W
 ]
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.protocol_handlers")}}
+{{Compat}}

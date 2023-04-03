@@ -66,7 +66,7 @@ grid-row: unset;
 
 ## 示例
 
-### HTML Content
+### HTML
 
 ```html
 <div id="grid">
@@ -76,7 +76,7 @@ grid-row: unset;
 </div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 #grid {
@@ -101,7 +101,7 @@ grid-row: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "200px", "200px")}}
+{{EmbedLiveSample("示例", "200px", "200px")}}
 
 ## IE 中的问题
 

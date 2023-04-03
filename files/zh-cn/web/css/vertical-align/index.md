@@ -12,82 +12,7 @@ slug: Web/CSS/vertical-align
 vertical-align 属性可被用于两种环境：
 
 - 使行内元素盒模型与其行内元素容器垂直对齐。例如，用于垂直对齐一行文本内的图片{{HTMLElement("img")}}：
-
-```html hidden
-<p>
-top:<img style="vertical-align:top" src="star.png"/>
-middle:<img style="vertical-align:middle" src="star.png"/>
-bottom:<img style="vertical-align:bottom" src="star.png"/>
-super:<img style="vertical-align:super" src="star.png"/>
-sub:<img style="vertical-align:sub" src="star.png"/>
-</p>
-<p>
-text-top:<img style="vertical-align:text-top" src="star.png"/>
-text-bottom:<img  style="vertical-align:text-bottom" src="star.png"/>
-0.2em:<img style="vertical-align:0.2em" src="star.png"/>
--1em:<img  style="vertical-align:-1em" src="star.png"/>
-20%:<img style="vertical-align:20%" src="star.png"/>
--100%:<img  style="vertical-align:-100%" src="star.png"/>
-</p>
-```
-
-```css hidden
-#* {
-  box-sizing: border-box;
-}
-
-img {
-  margin-right: 0.5em;
-}
-
-p {
-  height: 3em;
-  padding: 0 .5em;
-  font-family: monospace;
-  text-decoration: underline overline;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-```
-
-{{EmbedLiveSample("vertical-align-inline", 1200, 160)}}
-
-- 垂直对齐表格单元内容：
-
-```html hidden
-<table>
-  <tr>
-    <td style="vertical-align: baseline">baseline</td>
-    <td style="vertical-align: top">top</td>
-    <td style="vertical-align: middle">middle</td>
-    <td style="vertical-align: bottom">bottom</td>
-    <td>
-      <p>There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.</p>
-<p>There is another theory which states that this has already happened.</p>
-    </td>
-  </tr>
-</table>
-```
-
-```css hidden
-table {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-td {
-  padding: 0.5em;
-  font-family: monospace;
-}
-```
-
-{{EmbedLiveSample("vertical-align-table", 1200, 230)}}
+- 垂直对齐表格单元内容。
 
 注意 `vertical-align` 只对行内元素、行内块元素和表格单元格元素生效：不能用它垂直对齐[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)。
 
@@ -156,7 +81,7 @@ vertical-align: unset;
 ### 表格单元格的值
 
 - `baseline` (以及 `sub`, `super`, `text-top`, `text-bottom`, `<length>`, `<percentage>`)
-  - : 使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。
+  - : 使单元格的基线，与该行中所有以基线对齐的其他单元格的基线对齐。
 - `top`
   - : 使单元格内边距的上边缘与该行顶部对齐。
 - `middle`
@@ -166,7 +91,7 @@ vertical-align: unset;
 
 可以是负数。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 

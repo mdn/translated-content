@@ -47,9 +47,9 @@ var addingUrl = browser.history.addUrl(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.addUrl")}}
+{{Compat}}
 
 ## Exemples
 

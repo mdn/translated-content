@@ -79,9 +79,9 @@ searching.then(updateFolders, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.update")}}
+{{Compat}}
 
 > **Note :**
 >

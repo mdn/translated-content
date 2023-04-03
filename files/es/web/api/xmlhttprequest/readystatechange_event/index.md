@@ -42,6 +42,6 @@ xhr.send();
 
 {{Specifications}}
 
-## Compatibilidad con navegadores Web
+## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.readystatechange_event")}}
+{{Compat}}

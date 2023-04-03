@@ -99,7 +99,7 @@ slug: Web/HTML/Element/em
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.em")}}
+{{Compat}}
 
 ## 같이 보기
 

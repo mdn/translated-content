@@ -19,7 +19,7 @@ MDN은 <strong>누구나</strong> 문서를 추가하고 수정할 수 있는 �
 
 MDN에 참여하기 위해서는 반드시 MDN 계정을 생성해야합니다. <a href="/ko/docs/MDN/Contribute/Howto/Create_an_MDN_account">계정을 만드는 방법</a>에서 자세한 내용을 확인하세요. 참고로 MDN 계정을 만들려면 <a href="https://github.com/join">Github 계정이 필요합니다</a>. 인증에 Github을 사용하고 있습니다.
 
-신규 문서를 만들고 싶다면 {{SectionOnPage("/ko/docs/MDN/Contribute/Howto/Create_and_edit_pages", "문서 생성 권한 얻기")}}를 참고하세요. 문서를 만드는 권한에 대한 중요 정보가 있습니다. 보안상의 이유로 신규 계정은 문서를 만들 수 없습니다.
+신규 문서를 만들고 싶다면 [문서 생성 권한 얻기](/ko/docs/MDN/Contribute/Howto/Create_and_edit_pages)를 참고하세요. 문서를 만드는 권한에 대한 중요 정보가 있습니다. 보안상의 이유로 신규 계정은 문서를 만들 수 없습니다.
 
 <h3 id="Step_2_할_일_정하기">Step 2: 할 일 정하기</h3>
 

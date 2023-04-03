@@ -7,7 +7,7 @@ slug: Web/API/FileList
 
 Um objeto desse tipo é retornado pela propriedade `files` do elemento HTML {{HTMLElement("input")}}; isso permite acessar a lista de arquivos selecionados com o elemento `<input type="file">`. Também é usado para uma lista de arquivos soltos no conteúdo web usando a API drag and drop; consulte o objeto [`DataTransfer`](/pt-BR/docs/DragDrop/DataTransfer) para detalhes de seu uso.
 
-> **Nota:** Antes do {{Gecko("1.9.2")}}, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do {{Gecko("1.9.2")}}, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.
+> **Nota:** Antes do Gecko 1.9.2, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do Gecko 1.9.2, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.
 
 ## Utilizando a lista de arquivos
 

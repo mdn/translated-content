@@ -57,10 +57,10 @@ console.log(str.search(reDot)) // retorna -1 pois não conseguiu encontrar o pon
 
 ## Notas específicas para a engine Gecko
 
-- Antes do {{Gecko("8.0")}}, `search()` foi implementado incorretamente. Quando era chamadosem parâmetros ou com {{jsxref("undefined")}}, ele buscava pela string '`undefined`', ao invés de buscar pela string vazia. Isto foi corrigido. Agora `'a'.search()` e `'a'.search(undefined)` corretamente retornam 0.
-- A partir do Gecko 39 {{geckoRelease(39)}}, o argumento não-padrão `flags` está defasado (deprecated) e dispara um aviso no console ({{bug(1142351)}}).
-- A partir do Gecko 47 {{geckoRelease(47)}}, o argumento não-padrão `flags` não é mais suportado em builds _non-release_ e em breve será removido inteiramente ({{bug(1245801)}}).
-- A partir do Gecko 49 {{geckoRelease(49)}}, o argumento não-padrão `flags` não é mais suportado ({{bug(1108382)}}).
+- Antes do Gecko 8.0, `search()` foi implementado incorretamente. Quando era chamadosem parâmetros ou com {{jsxref("undefined")}}, ele buscava pela string '`undefined`', ao invés de buscar pela string vazia. Isto foi corrigido. Agora `'a'.search()` e `'a'.search(undefined)` corretamente retornam 0.
+- A partir do Gecko 39, o argumento não-padrão `flags` está defasado (deprecated) e dispara um aviso no console ({{bug(1142351)}}).
+- A partir do Gecko 47, o argumento não-padrão `flags` não é mais suportado em builds _non-release_ e em breve será removido inteiramente ({{bug(1245801)}}).
+- A partir do Gecko 49, o argumento não-padrão `flags` não é mais suportado ({{bug(1108382)}}).
 
 ## Veja também
 

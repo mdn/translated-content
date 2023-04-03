@@ -33,9 +33,9 @@ browser.pageAction.hide(
 - `tabId`
   - : `integer`. L'ID de l'onglet pour lequel vous souhaitez masquer l'action de la page.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.hide")}}
+{{Compat}}
 
 ## Exemples
 

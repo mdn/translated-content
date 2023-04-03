@@ -17,7 +17,7 @@ O **elemento de divisão** **[HTML](/pt-BR/docs/Web/HTML) `<div>` **é um contai
 
 Esse elemento inclui [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-No {{HTMLVersionInline(5)}}, o atributo **align** no **\<div>** é obsoleto {{obsolete_inline}}.
+No {{HTMLVersionInline(5)}}, o atributo **align** no **\<div>** é obsoleto.
 
 ## Exemplos
 

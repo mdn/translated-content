@@ -38,65 +38,43 @@ background-size: initial;
 background-size: unset;
 ```
 
-```html hidden
-<div id="container">
-
-  <div class="subcontainer contain">contain</div>
-  <div class="subcontainer cover">cover</div>
-  <div class="subcontainer width">120px</div>
-  <div class="subcontainer width-height">120px 200px</div>
-
-
-
-</div>
-```
-
-```css hidden
-#container {
-   width: 100%;
-   display:flex;
-   justify-content: space-around;
-   height: 300px;
-   overflow: scroll;
-   background-color: #EEEEEE;
-}
-
-.subcontainer {
-  width: 100%;
-  max-width: 200px;
-  margin: 8px;
-  padding: 5px;
-  background-color: white;
-  background-image: url("eagle.jpg");
-  background-repeat: no-repeat;
-  color: white;
-  font-family: monospace;
-}
-
-.contain {
-  background-size: contain;
-}
-
-.cover {
-  background-size: cover;
-}
-
-.width {
-  background-size: 120px;
-}
-
-.width-height {
-  background-size: 120px 200px;
-}
-```
-
-{{EmbedLiveSample("background-size", 1200, 300, "", "", "example-outcome-frame")}}
-
 注意：没有被背景图片覆盖的背景区域仍然会显示用{{cssxref("background-color")}}属性设置的背景颜色。此外，如果背景图片设置了透明或者半透明属性，衬在背景图片后面的背景色也会显示出来。
 
 {{cssinfo}}
 
 ## 语法
+
+```css
+/* Keyword values */
+background-size: cover;
+background-size: contain;
+
+/* One-value syntax */
+/* the width of the image (height becomes 'auto') */
+background-size: 50%;
+background-size: 3.2em;
+background-size: 12px;
+background-size: auto;
+
+/* Two-value syntax */
+/* first value: width of the image, second value: height */
+background-size: 50% auto;
+background-size: 3em 25%;
+background-size: auto 6px;
+background-size: auto auto;
+
+/* Multiple backgrounds */
+background-size: auto, auto; /* Not to be confused with `auto auto` */
+background-size: 50%, 25%, 25%;
+background-size: 6px, auto, contain;
+
+/* Global values */
+background-size: inherit;
+background-size: initial;
+background-size: revert;
+background-size: revert-layer;
+background-size: unset;
+```
 
 单张图片的背景大小可以使用以下三种方法中的一种来规定：
 
@@ -110,24 +88,6 @@ background-size: unset;
 - 如果有两个数值被给定，第一个将作为宽度值大小，第二个作为高度值大小。
 
 `每个值可以是<length>`, 是 [`<percentage>`](/zh-CN/docs/Web/CSS/background-size#percentage), 或者 [`auto`](/zh-CN/docs/Web/CSS/background-size#auto).
-
-示例：
-
-```
-background-size: contain;
-
-background-size: 50%;
-background-size: 3em;
-
-background-size: auto 1em;
-background-size: 50% 25%;
-```
-
-为了设定超过一张以上的图片尺寸时，需要提供多项数值，它们通过逗号分隔。
-
-```
-background-size: 50% 25%, contain, 3em;
-```
 
 ### 属性值
 
@@ -171,7 +131,36 @@ background-size: 50% 25%, contain, 3em;
 
 ## 案例
 
-[`background-size: cover 演示`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) 与 [`background-size: contain 演示`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) 在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与`background-*属性`的关联](http://whereswalden.com/files/mozilla/background-size/more-examples.html) 很好的说明了单独使用 `background-size` 及与其它属性共同使用。
+[`background-size: cover 演示`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) 与 [`background-size: contain 演示`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) 在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与`background-*属性`的关联](http://whereswalden.com/files/mozilla/background-size/more-examples.html) 很好的说明了单独使用 `background-size` 及与其他属性共同使用。
+
+## 示例
+
+### 大图像平铺
+
+让我们考虑一张大图像——2982x2808 Firefox 的 logo 图像。我们想将此图像的四个副本平铺到一个 300x300 像素的元素中。为实现这一点，我们可以将 `background-size` 的值固定为 150 像素。
+
+#### HTML
+
+```html
+<div class="tiledBackground"></div>
+```
+
+#### CSS
+
+```css
+.tiledBackground {
+  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-size: 150px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid;
+  color: pink;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("大图像平铺", 340, 340)}}
 
 ## 备注
 
@@ -233,7 +222,7 @@ While this property was added in Firefox 3.6, it is possible to stretch a image 
 }
 ```
 
-## 相关链接
+## 参见
 
 - [CSS Reference](/zh-CN/docs/CSS/CSS_Reference)
 - [Multiple backgrounds](/zh-CN/docs/CSS/Multiple_backgrounds)

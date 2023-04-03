@@ -36,13 +36,13 @@ scroll-snap-coordinate: unset;
 - `<position>`
   - : 定义从元素核模型边框边缘开始偏移的 snap 坐标。每一对值中，第一个值给定了 snap 坐标的 x 坐标，第二个值为它的 y 坐标。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="container">
@@ -75,7 +75,7 @@ scroll-snap-coordinate: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #container {
@@ -124,7 +124,7 @@ scroll-snap-coordinate: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "170")}}
+{{EmbedLiveSample("示例", "100%", "170")}}
 
 ## 规范
 

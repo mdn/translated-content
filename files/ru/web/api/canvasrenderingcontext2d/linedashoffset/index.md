@@ -64,7 +64,7 @@ ctx.stroke();
 
 Линия со смещением будет нарисована красным цветом.
 
-{{ EmbedLiveSample('Смещение_штрихов', '', '', '', 'Web/API/CanvasRenderingContext2D/lineDashOffset') }}
+{{ EmbedLiveSample('Смещение_штрихов') }}
 
 ### Эффект марширующих муравьёв
 
@@ -98,7 +98,7 @@ const march = () => {
 march();
 ```
 
-{{ EmbedLiveSample('Эффект_марширующих_муравьёв', '', '', '', 'Web/API/CanvasRenderingContext2D/lineDashOffset') }}
+{{ EmbedLiveSample('Эффект_марширующих_муравьёв') }}
 
 ## Спецификации
 

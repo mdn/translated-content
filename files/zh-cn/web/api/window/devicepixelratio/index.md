@@ -17,11 +17,11 @@ slug: Web/API/Window/devicePixelRatio
 value = window.devicePixelRatio;
 ```
 
-### 值 Value
+### 值
 
 一个双精度浮点值，指示显示器的物理像素分辨率与 CSS 像素分辨率之比。值 1 表示经典 96 DPI（在某些平台上为 76 DPI）显示，而对于 HiDPI / Retina 显示屏则期望值为 2。在异常低分辨率的显示器中，或更常见的是，当屏幕的像素深度比简单地将 96 或 76 DPI 的标准分辨率提高一倍时，可能还会返回其他值。
 
-## 例子
+## 示例
 
 ### 在 `<canvas>` 中更正分辨率
 
@@ -147,9 +147,9 @@ body {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}
+{{EmbedLiveSample("监视屏幕分辨率或缩放级别的更改", "100%", 500)}}
 
 ## 规范
 

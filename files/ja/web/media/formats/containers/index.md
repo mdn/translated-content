@@ -477,7 +477,7 @@ MPEG-4 メディア形式 (`audio/mp4` または `video/mp4`) を指定すると
       <td></td>
       <td>
         <p>あり</p>
-        <p>Firefox の AV1 対応は、Android ({{bug(1672276)}}) と Windows on ARM では無効です （環境設定 <code>media.av1.enabled</code> を <code>true</code> に設定すると有効になります）。</p>
+        <p>Firefox の AV1 対応は、Android ([Firefox バグ 1672276](https://bugzil.la/1672276)) と Windows on ARM では無効です （環境設定 <code>media.av1.enabled</code> を <code>true</code> に設定すると有効になります）。</p>
       </td>
       <td></td>
     </tr>

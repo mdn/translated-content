@@ -201,7 +201,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 此時，你的待辦事項呈現應該如同以往，除了現在我們是從 `App.svelte` 元件來傳遞它們之外。
 
-## 切換和刪除​​待辦事項
+## 切換和刪除待辦事項
 
 讓我們新增一些功能性來切換任務狀態。Svelte 具有用於監聽 DOM 事件的 `on:eventname` 指令。讓我們為勾選框的 `on:click` 事件新增一個處理器來切換已完成的數值。
 
@@ -251,7 +251,7 @@ let totalTodos = todos.length
 let completedTodos = todos.filter((todo) => todo.completed).length
 ```
 
-我們可以在切換和刪除​​待辦事項後重新計算它們，但有一種更簡單的方式可以做到。
+我們可以在切換和刪除待辦事項後重新計算它們，但有一種更簡單的方式可以做到。
 
 可以告訴 Svelte 我們想要 `totalTodos` 和 `completedTodos` 等變數藉由前綴 `$:`，使其具有反應性。Svelte 將產生程式碼以在它們相依的資料發生變化時自動更新它們。
 
@@ -346,11 +346,11 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
    }
    ```
 
-## Giving each to-do a unique ID
+## 給每個待辦事項唯一的 ID
 
-If you try to add new to-dos in your app now, you'll be able to add a new to-do and have it appear in the UI — once. If you try it a second time, it won't work, and you'll get a console message saying "Error: Cannot have duplicate keys in a keyed each". We need unique IDs for our to-dos.
+如果現在嘗試在你的應用程式中加入新的待辦事項，你將可以加入新的待辦事項並讓它出現在使用者介面中——一次。假如你嘗試第二次，它將無作用並且你會得到一條控制台訊息「Error: Cannot have duplicate keys in a keyed each」。看起來我們的待辦事項需要唯一的 ID。
 
-1. Let's declare a `newTodoId` variable calculated from the number of to-dos plus 1, and make it reactive. Add the following snippet to the `<script>` section:
+1. 讓我們宣告一個由待辦事項數量加 1 計算得出的 `newTodoId` 變數並使其具有反應性。將以下程式碼片段新增到 `<script>` 區塊：
 
    ```js
    let newTodoId
@@ -363,11 +363,11 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
      }
    ```
 
-   > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
+   > **備註：** 如你所見，反應性陳述不僅限於單行。以下程式碼也有作用，但可讀性較差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
-2. How does Svelte achieve this? The compiler parses the whole reactive statement, and detects that it depends on the `totalTodos` variable and the `todos` array. So whenever either of them is modified, this code is re-evaluated, updating `newTodoId` accordingly.
+2. Svelte 是如何做到這一點的？編譯器會解析整個反應性陳述並檢測到它依賴於 `totalTodos` 變數和 `todos` 陣列。所以每當它們中任何一個被修改時，都會重新評估程式碼並相應地更新 `newTodoId`。
 
-   Let's use this in our `addTodo()` function. Update it like so:
+   讓我們在 `addTodo()` 函式中使用它。像這樣更新它：
 
    ```js
    function addTodo() {
@@ -376,11 +376,11 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
    }
    ```
 
-## Filtering to-dos by status
+## 藉由狀態過濾待辦事項
 
-Finally for this article, let's implement the ability to filter our to-dos by status. We'll create a variable to hold the current filter, and a helper function that will return the filtered to-dos.
+在本篇文章的最後，讓我們來實現藉由狀態過濾待辦事項的功能。我們將建立一個變數來保存目前的過濾器，以及一個回傳過濾完的待辦事項輔助函式。
 
-1. At the bottom of our `<script>` section add the following:
+1. 在我們的 `<script>` 區塊的底部新增以下內容：
 
    ```js
    let filter = 'all'
@@ -390,11 +390,11 @@ Finally for this article, let's implement the ability to filter our to-dos by st
      todos
    ```
 
-   We use the `filter` variable to control the active filter: _all_, _active_, or _completed_. Just assigning one of these values to the filter variable will activate the filter and update the list of to-dos. Let's see how to achieve this.
+   我們使用 `filter` 變數來控制目前的過濾器：_all_、_active_、_completed_。只要將這些數值中其中一個指定給過濾器變數即可使用該過濾器並更新待辦事項清單。讓我們看看它如何做到這一點。
 
-   The `filterTodos()` function will receive the current filter and the list of to-dos, and return a new array of to-dos filtered accordingly.
+   `filterTodos()` 函式將接收目前的過濾器和待辦事項清單並回傳過濾完的新待辦事項陣列。
 
-2. Let's update the filter button markup to make it dynamic and update the current filter when the user presses one of the filter buttons. Update it like this:
+2. 讓我們更新過濾器按鈕標記以使其動態化，當使用者按下其中一個過濾器按鈕時，更新目前的過濾器。像這樣更新它：
 
    ```html
    <div class="filters btn-group stack-exception">
@@ -416,17 +416,17 @@ Finally for this article, let's implement the ability to filter our to-dos by st
    </div>
    ```
 
-   There are a couple of things going on in this markup.
+   而這個標記當中發生了幾件事。
 
-   We will show the current filter by applying the `btn__primary` class to the active filter button. To conditionally apply style classes to an element we use the `class:name={value}` directive. If the value expression evaluates to truthy, the class name will be applied. You can add many of these directives, with different conditions, to the same element. So when we issue `class:btn__primary={filter === 'all'}`, Svelte will apply the `btn__primary` class if filter equals all.
+   我們透過將 `btn__primary` 類別套用於過濾器按鈕來顯示目前使用中的過濾器。為了有條件地將樣式類別套用於元素上，我們使用 `class:name={value}` 指令。如果數值表達式的計算結果為真，則類別名稱將會被套用。你可以將許多不同條件的指令塞到同一個元素上。所以當我們寫為 `class:btn__primary={filter === 'all'}` 時，假如過濾器（filter）變數等於 all，Svelte 將會套用 `btn__primary` 類別。
 
-   > **Note:** Svelte provides a shortcut which allows us to shorten `<div class:active={active}>` to `<div class:active>` when the class matches the variable name.
+   > **備註：** Svelte 提供了一個便利的捷徑，允許我們在類別與變數名稱相同時，可以將 `<div class:active={active}>` 縮短為 `<div class:active>`。
 
-   Something similar happens with `aria-pressed={filter === 'all'}`: when the JavaScript expression passed between curly braces evaluates to a truthy value, the `aria-pressed` attribute will be added to the button.
+   `aria-pressed={filter === 'all'}` 也是類似的情況：當在大括號之間被傳入的 JavaScript 表達式的計算結果為真時，`aria-pressed` 屬性將被加入到按鈕上。
 
-   Whenever we click on a button, we update the filter variable by issuing `on:click={() => filter = 'all'}`. Read on to find out how Svelte reactivity will take care of the rest.
+   每當我們點擊按鈕時，我們藉由發出 `on:click={() => filter = 'all'}` 來更新過濾器變數。繼續閱讀以了解 Svelte 反應性將如何處理其餘部分。
 
-3. Now we just need to use the helper function in the `{#each}` loop; update it like this:
+3. 現在我們只需要在 `{#each}` 迴圈中使用輔助函式；像這樣更新它：
 
    ```html
    …
@@ -435,108 +435,53 @@ Finally for this article, let's implement the ability to filter our to-dos by st
    …
    ```
 
-   After analyzing our code, Svelte detects that our `filterTodos()` function depends on the variables `filter` and `todos`. And, just like with any other dynamic expression embedded in the markup, whenever any of these dependencies changes, the DOM will be updated accordingly. So whenever `filter` or `todos` changes, the `filterTodos()` function will be re-evaluated and the items inside the loop will be updated.
+   在分析我們的程式碼後，Svelte 檢測到我們的 `filterTodos()` 函式依賴於變數 `filter` 和 `todos`。而就像嵌入在標記中的任何其它動態表達式一樣，每當這些依賴發生變化時，DOM 都會相應地更新。所以每當 `filter` 或 `todos` 發生變化時，`filterTodos()` 函式將會重新評估並更新迴圈內的項目。
 
-> **Note:** Reactivity can be tricky sometimes. Svelte recognizes `filter` as a dependency because we are referencing it in the `filterTodos(filter, todo)` expression. `filter` is a top-level variable, so we might be tempted to remove it from the helper function params, and just call it like this: `filterTodos(todo)`. This would work, but now Svelte has no way to find out that `{#each filterTodos(todos) }` depends on `filter`, and the list of filtered to-dos won't be updated when the filter changes. Always remember that Svelte analyzes our code to find out dependencies, so it's better to be explicit about it and not rely on the visibility of top-level variables. Besides, it's a good practice to make our code clear and explicit about what information it is using.
+> **備註：** 反應性有時會很棘手。Svelte 將 `filter` 識別為依賴，是因為我們在 `filterTodos(filter, todo)` 表達式中參考它。而 `filter` 是一個頂層變數，所以我們可能會想把它從輔助函式參數（params）中刪除，然後像這樣呼叫它：`filterTodos(todo)`。這雖會起作用，但現在 Svelte 會無法發現 `{#each filterTodos(todos) }` 依賴於 `filter` 並且當過濾器變更時，過濾完的待辦事項清單不會再被更新。切記 Svelte 會分析我們的程式碼以找出依賴關係，所以最好明確解釋它，而不是依賴於頂層變數的可見性。此外，讓我們的程式碼清晰並明確地解釋它正在使用的資訊是一個很好的做法。
 
-## The code so far
+## 到目前為止的程式碼
 
 ### Git
 
-To see the state of the code as it should be at the end of this article, access your copy of our repo like this:
+若想要看到本文結束後程式碼所呈現的最終結果，你可以參照下列的方式存取我們已經複製下來的儲存庫：
 
 ```bash
 cd mdn-svelte-tutorial/04-componentizing-our-app
 ```
 
-Or directly download the folder's content:
+或直接下載資料夾內容：
 
 ```bash
 npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
 ```
 
-Remember to run `npm install && npm run dev` to start your app in development mode.
+記得執行 `npm install && npm run dev` 以開發模式來運行你的應用程式。
 
 ### REPL
 
-To see the current state of the code in a REPL, visit:
+若要在 REPL 看見當前程式碼狀態，請點擊如下連結：
 
 <https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2>
 
-## Summary
+## 總結
 
-That will do for now! In this article we already implemented most of our desired functionality. Our app can display, add, and delete to-dos, toggle their completed status, show how many of them are completed, and apply filters.
+截至目前為止做得好！在本篇文章中，我們已經實現了大部分想要的功能。我們的應用程式可以顯示、新增和刪除待辦事項，切換其完成狀態、顯示已完成的數量和使用多個過濾器。
 
-To recap, we covered the following topics:
+回顧一下，我們涵蓋了以下主題：
 
-- Creating and using components
-- Turning static markup into a live template
-- Embedding JavaScript expressions in our markup
-- Iterating over lists using the `{#each}` directive
-- Passing information between components with props
-- Listening to DOM events
-- Declaring reactive statements
-- Basic debugging with `console.log()` and reactive statements
-- Binding HTML properties with the `bind:property` directive
-- Triggering reactivity with assignments
-- Using reactive expressions to filter data
-- Explicitly defining our reactive dependencies
+- 建立和使用元件
+- 轉換靜態標記為動態範本
+- 在標記語言嵌入 JavaScript 表達式
+- 使用 `{#each}` 指令迭代清單
+- 透過屬性在元件之間傳遞資訊
+- 監聽 DOM 事件
+- 宣告反應性陳述
+- 使用 `console.log()` 和反應性陳述進行基本偵錯
+- 使用 `bind:property` 指令綁定 HTML 屬性
+- 透過指定觸發反應性
+- 使用反應性表達式過濾資料
+- 明確定義我們的反應依賴關係
 
-In the next article we will add further functionality, which will allow users to edit to-dos.
+在下一篇文章中，我們將新增更多功能，允許使用者編輯待辦事項。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 於此模組中
-
-- [前端框架介紹](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [React 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [建立我們的 React 待辦清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [元件化我們的 React 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React 互動性：事件與狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React 互動性：編輯、過濾、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Ember 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember 應用程式結構及元件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember 互動性：事件、類別、狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember 互動性：Footer 功能、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 路由](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 資源及偵錯](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Vue 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [建立第一個 Vue 元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [新增待辦表單：Vue 事件、方法、模型](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [透過 CSS 樣式化 Vue 元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 計算屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 條件式渲染：編輯已存在的待辦表單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [聚焦 Vue refs](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Svelte 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [開始寫我們的 Svelte 待辦清單應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 中的動態行為：變數及屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [元件化我們的 Svelte 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [進階 Svelte：反應性、生命週期、無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [和 Svelte stores 共舞](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 中的 TypeScript](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署和下一步](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [開始我們的 Angular 待辦清單應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [樣式化我們的 Angular 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [建立（待辦清單）項目元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [過濾我們的待辦項目](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [建置 Angular 應用程式及更多資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

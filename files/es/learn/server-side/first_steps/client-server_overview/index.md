@@ -304,10 +304,3 @@ En este punto deberías tener una buena visión general de las operaciones que e
 En el módulo siguiente te ayudaremos a elegir el mejor Framework Web para tu primer sitio.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## En este módulo
-
-- [Introducción al lado servidor](/es/docs/Learn/Server-side/First_steps/Introduction)
-- [Visión general Cliente-Servidor](/es/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Frameworks Web de lado servidor](/es/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Seguridad Web](/es/docs/Learn/Server-side/First_steps/Website_security)

@@ -44,9 +44,9 @@ Les événements ont trois fonctions :
     - `title`
       - : `String`. Title of the page visited.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.onTitleChanged")}}
+{{Compat}}
 
 ## Exemples
 

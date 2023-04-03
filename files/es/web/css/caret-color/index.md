@@ -65,6 +65,6 @@ input {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.caret-color")}}
+{{Compat}}

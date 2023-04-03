@@ -51,17 +51,17 @@ element.appendChild(fragment);
 
 ### 结果
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{EmbedLiveSample("示例", 600, 140)}}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
 - {{domxref("documentFragment")}}

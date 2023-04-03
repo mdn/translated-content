@@ -31,9 +31,9 @@ if(mql.matches) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaQueryList.matches")}}
+{{Compat}}
 
 ## See also
 

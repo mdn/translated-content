@@ -223,6 +223,10 @@ function onTouch(evt) {
 
 Una cosa para prevenir cosas como `pinchZoom` en una página es llamar a `preventDefault()` en el segundo toque de una serie. Este comportamiento no está bien definido en los eventos de toque, y resulta en diferentes comportamientos en diferentes navegadores (osea iOS evitará el zoom o acercamiento pero permitirá vista panorámica con ambos dedos. Android permitirá zoom o acercamiento pero no una panorámica. Opera and Firefox actualmente evita panorámica y zoom o acercamiento). Actualmente, no se recomienda depender de ningún comportamiento en particular en este caso, si no mas bien depender de una meta vista para evitar el zoom.
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("api.Touch")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

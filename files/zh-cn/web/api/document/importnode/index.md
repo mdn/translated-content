@@ -3,35 +3,31 @@ title: document.importNode
 slug: Web/API/Document/importNode
 ---
 
-{{ ApiRef() }}
-
-## 概述
+{{APIRef("DOM")}}
 
 将外部文档的一个节点拷贝一份，然后可以把这个拷贝的节点插入到当前文档中。
 
 ## 语法
 
-```
-var node = document.importNode(externalNode, deep);
+```js-nolint
+importNode(externalNode)
+importNode(externalNode, deep)
 ```
 
-- `node`
-  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-CN/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态。
 - `externalNode`
-  - : 将要从外部文档导入的节点。
+  - : 导入当前文档的外部 {{domxref("Node")}} 或 {{domxref("DocumentFragment")}}。
 - `deep` {{ optional_inline() }}
-  - : 一个布尔值，表明是否要导入节点的后代节点。
+  - : 一个布尔值，默认为 `false`。表明是否要导入 `externalNode` 的整个 DOM 子树。
 
-> **备注：** 在 DOM4 规范中 (实现于 Gecko 10.0), `deep` 是个可选的参数。如果省略不写，则使用默认值 `true`, 表示深度克隆。如果你想使用浅克隆，则传入 false 参数。
->
-> 在没有实现 DOM4 的浏览器中，这个参数不可以省略。
+    - `deep` 设置为 `true`，则拷贝 `externalNode` 和它的所有后代。
+    - `deep` 设置为 `false`，则仅拷贝 `externalNode`——新的节点没有后代。
 
-## 例子
+## 示例
 
 ```js
-var iframe = document.getElementsByTagName("iframe")[0];
-var oldNode = iframe.contentDocument.getElementById("myNode");
-var newNode = document.importNode(oldNode, true);
+const iframe  = document.querySelector("iframe");
+const oldNode = iframe.contentWindow.document.getElementById("myNode");
+const newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);
 ```
 
@@ -52,6 +48,6 @@ document.getElementById("container").appendChild(newNode);
 - [DOM Level 2 Core: Document.importNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode)
 - [DOM4 (draft): Document.importNode](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-importnode)
 
-## 相关介绍
+## 参见
 
 - {{ domxref("document.adoptNode()") }}

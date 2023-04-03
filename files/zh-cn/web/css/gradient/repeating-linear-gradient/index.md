@@ -122,7 +122,7 @@ div {
 </ol>
 ```
 
-{{EmbedLiveSample('Example_hidden', '300px', '300px', '')}}
+{{EmbedLiveSample('示例', '300px', '300px', '')}}
 
 ## 规范
 
@@ -132,7 +132,7 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
 - [使用 CSS 渐变](/zh-CN/CSS/Using_CSS_gradients)
 - 其他渐变方法：{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-radial-gradient")}}

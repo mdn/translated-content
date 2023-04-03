@@ -73,9 +73,9 @@ La propiedad `border-top-color` es especificada con un valor unico.
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-top-color")}}
+{{Compat}}
 
 ## Ver tambien
 

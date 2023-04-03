@@ -64,15 +64,13 @@ fetch(url, {
 })
 ```
 
-## 사양
+## 명세서
 
-| Specification                                                                                                                        | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#http-access-control-allow-credentials', 'Access-Control-Allow-Credentials')}} | {{Spec2("Fetch")}} | Initial definition |
+{{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Credentials")}}
+{{Compat}}
 
 ## See also
 

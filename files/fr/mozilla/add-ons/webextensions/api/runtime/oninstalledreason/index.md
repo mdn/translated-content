@@ -31,9 +31,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"shared_module_update"`
   - : Une autre extension, qui contient un module utilisé par cette extension, a été mise à jour.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.OnInstalledReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

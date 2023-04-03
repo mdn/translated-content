@@ -67,7 +67,7 @@ console.log("Iterated over sequence of size: ", result.value); // 5
 
 可以根据需要多次调用该函数，并且每次都返回一个新的 Generator，但每个 Generator 只能迭代一次。
 
-我们现在可以调整上面的例子了。此代码的行为是相同的，但实现更容易编写和读取。
+我们现在可以调整上面的例子了。此代码的行为是相同的，但实现更容易编写和阅读。
 
 ```js
 function* makeRangeIterator(start = 0, end = Infinity, step = 1) {

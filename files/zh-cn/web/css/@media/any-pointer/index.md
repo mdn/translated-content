@@ -63,9 +63,9 @@ input[type="checkbox"]:checked {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -75,6 +75,6 @@ input[type="checkbox"]:checked {
 
 {{Compat}}
 
-## 更多资料
+## 参见
 
 - [`pointer` media feature](/zh-CN/docs/Web/CSS/@media/pointer)

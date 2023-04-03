@@ -45,7 +45,7 @@ element.scrollTop = intValue;
 
 {{EmbedLiveSample("",400,350)}}
 
-![Image:scrollTop.png](/@api/deki/files/842/=ScrollTop.png)
+![Image:scrollTop.png](scrolltop.png)
 
 ## Especificaciones
 

@@ -5,7 +5,7 @@ slug: Web/CSS/widows
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS)属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/Paged_Media)，区域或者[列](/zh-CN/docs/Web/CSS/CSS_Columns)的**顶部**需要结合在一起的最小行数。
+[CSS](/zh-CN/docs/CSS) 属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/Paged_Media)，区域或者[列](/zh-CN/docs/Web/CSS/CSS_Columns)的**顶部**需要结合在一起的最小行数。
 
 ```css
 /* <integer> values */
@@ -27,11 +27,11 @@ widows: unset;
 - {{cssxref("&lt;integer&gt;")}}
   - : 在一个片段打断后，新的片段顶部需要结合在一起的最小行数。该值必须为正值。
 
-## Formal definition
+## 形式定义
 
 {{CSSInfo}}
 
-## Formal syntax
+## 形式语法
 
 {{CSSSyntax}}
 
@@ -69,7 +69,7 @@ p:first-child {
 
 #### 结果
 
-{{EmbedLiveSample("Controlling_column_widows", 400, 160)}}
+{{EmbedLiveSample("控制列布局中的 widows", 400, 160)}}
 
 ## 规范
 
@@ -79,7 +79,7 @@ p:first-child {
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - {{cssxref("orphans")}}
 - [Paged media](/zh-CN/docs/Web/CSS/Paged_Media)

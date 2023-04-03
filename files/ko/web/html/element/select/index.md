@@ -135,7 +135,7 @@ slug: Web/HTML/Element/select
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("menu")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/menu_role'><code>menu</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -150,7 +150,7 @@ slug: Web/HTML/Element/select
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.select")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -251,7 +251,7 @@ JavaScript はアクセシビリティに関して CSS と同じ種類の問題�
 <p><span id="LiveRegion1" aria-live="polite" aria-atomic="false"></span></p>
 ```
 
-Freedom Scientific の [ARIA（Accessible Rich Internet Applications）のライブリージョン](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)（英語）の例で実行中の例を見ることができます — 強調表示された段落はその内容を 10 秒ごとに更新し、スクリーンリーダーはユーザーにこれを読み上げるべきです。[ARIA のライブリージョン - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)（英語）は別の有用な例を提 ​​ 供しています。
+Freedom Scientific の [ARIA（Accessible Rich Internet Applications）のライブリージョン](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)（英語）の例で実行中の例を見ることができます — 強調表示された段落はその内容を 10 秒ごとに更新し、スクリーンリーダーはユーザーにこれを読み上げるべきです。[ARIA のライブリージョン - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)（英語）は別の有用な例を提供しています。
 
 ここでは WAI-ARIA を詳細にカバーするためのスペースはありません。 [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)でもっと詳しく学ぶことができます。
 
@@ -449,14 +449,3 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 次の記事では、機能の検出について詳しく説明します。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## このモジュール内の文書
-
-- [はじめてのクロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [テスト実行戦略](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [よくある HTML や CSS の問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [よくある JavaScript の問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [よくあるアクセシビリティの問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [機能検出の実装](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [はじめての自動テスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [テスト自動化環境をセットアップする](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

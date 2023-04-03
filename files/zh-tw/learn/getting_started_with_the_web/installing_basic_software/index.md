@@ -46,14 +46,3 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 有些例子需要使用伺服器軟體。你可以在 [How do you set up a local testing server?](/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server) 找到作法。
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## 於本模塊
-
-- [安裝基本軟體](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的網站看起來會是什麼樣子？](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [與各式各樣檔案打交道](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基本概念](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基本概念](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基本概念](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [網站的運作方式](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

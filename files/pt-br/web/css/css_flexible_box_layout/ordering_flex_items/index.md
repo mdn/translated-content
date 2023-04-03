@@ -16,13 +16,13 @@ the {{cssxref("flex-direction")}} property can take one of four values:
 - `row-reverse`
 - `column-reverse`
 
-The first two values ​​keep the items in the same order that they appear in the document source order and display them sequentially from the start line.
+The first two values keep the items in the same order that they appear in the document source order and display them sequentially from the start line.
 
 ![The items are displayed in a row starting on the left.](basics1.png)
 
 ![The items are displayed as a column starting from the top ](align10.png)
 
-The second two values ​​reverse the items by switching the start and end lines.
+The second two values reverse the items by switching the start and end lines.
 
 ![The items are displayed in reverse order starting on the right-hand line.](align9.png)
 
@@ -34,7 +34,7 @@ Remember that the start line relates to writing modes. The row-related examples 
 
 This can seem like a neat way to display things in reverse order however you should be mindful that the items are only _visually_ displayed in reverse order. The specification says the following on this matter:
 
-> “Note: The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. This allows authors to manipulate the visual presentation while leaving the source order intact for non-CSS UAs and for linear models such as speech and sequential navigation.” - [Ordering and Orientation](https://www.w3.org/TR/css-flexbox-1/#flow-order)
+> “Nota: The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. This allows authors to manipulate the visual presentation while leaving the source order intact for non-CSS UAs and for linear models such as speech and sequential navigation.” - [Ordering and Orientation](https://www.w3.org/TR/css-flexbox-1/#flow-order)
 
 If your items were links or some other element that the user could tab to, then the tabbing order would be the order that these items appear in the document source — not your visual order.
 
@@ -42,7 +42,7 @@ If you are using a reverse value, or otherwise reordering your items, you should
 
 > “Authors _must not_ use order or the \*-reverse values of flex-flow/flex-direction as a substitute for correct source ordering, as that can ruin the accessibility of the document.”
 
-> **Note:** For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently to other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.
+> **Nota:** For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently to other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.
 
 In the live example below I have added a focus style in order that as you tab from link to link you can see which is highlighted. If you change the order using `flex-direction` you can see how the tab order continues to follow the order that the items are listed in the source.
 

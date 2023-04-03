@@ -35,9 +35,9 @@ C'est un objet avec les propriétés suivantes :
 - `typedCount` {{optional_inline}}
   - : `number`. Le nombre de fois que l'utilisateur a navigué sur cette page en tapant l'adresse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.HistoryItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

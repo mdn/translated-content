@@ -3,6 +3,8 @@ title: grid-template
 slug: Web/CSS/grid-template
 ---
 
+{{CSSRef}}
+
 **`grid-template`**，CSS 属性简写，用以定义网格中{{glossary("grid rows", "行")}}、{{glossary("grid column", "列")}}与{{glossary("grid areas", "分区")}}。
 
 {{EmbedInteractiveExample("pages/css/grid-template.html")}}
@@ -50,7 +52,7 @@ grid-template: unset;
 
 **注：**{{cssxref("grid")}}可如此用，但将重置隐式网格属性。Use `grid` (as opposed to `grid-template`) to prevent these values from cascading in seperately.
 
-### 语法形式
+### 形式语法
 
 {{csssyntax}}
 
@@ -103,7 +105,7 @@ footer {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", "100%", "200px")}}
+{{EmbedLiveSample("示例", "100%", "200px")}}
 
 ## 规范
 
@@ -115,7 +117,7 @@ footer {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-areas")}}
 - 网格布局指导：

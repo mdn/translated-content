@@ -11,7 +11,7 @@ slug: Web/CSS/border-color
 
 各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
 
-境界線の色についての詳細な情報は、 {{SectionOnPage("/ja/docs/Web/HTML/Applying_color", "Borders")}} にあります。
+境界線の色についての詳細な情報は、 [CSS colors](/ja/docs/Web/CSS/CSS_Colors/Applying_color#%E5%A2%83%E7%95%8C%E7%B7%9A_2) にあります。
 
 ## 構成要素のプロパティ
 

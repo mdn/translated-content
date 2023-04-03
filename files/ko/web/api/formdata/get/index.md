@@ -45,11 +45,11 @@ formData.append('username', 'Bob');
 formData.get('username'); // Returns "Chris"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

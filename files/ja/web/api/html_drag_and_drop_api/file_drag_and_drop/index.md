@@ -2,7 +2,7 @@
 title: ファイルのドラッグ & ドロップ
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 l10n:
-  sourceCommit: 7e43ff6a4a712f9e4477a70c453ba116a4dd6601
+  sourceCommit: 0230ecc4418a1e52bca6b4d03c4eb794f90d04f1
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -44,7 +44,7 @@ HTML ドラッグ & ドロップインターフェイスは、ウェブアプリ
 }
 ```
 
-> **メモ:** `dragstart` および `dragend` イベントは、 OS からブラウザーへファイルをドラッグしているときには発生しません。
+> **メモ:** {{domxref("HTMLElement/dragstart_event", "dragstart")}} および {{domxref("HTMLElement/dragend_event", "dragend")}} イベントは、 OS からブラウザーへファイルをドラッグしているときには発生しません。 OS のファイルがブラウザーへドラッグされてきたことを検出するには、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragleave_event", "dragleave")}} を使用してください。
 
 ## ドロップの処理
 
@@ -56,7 +56,7 @@ HTML ドラッグ & ドロップインターフェイスは、ウェブアプリ
 
 ```js
 function dropHandler(ev) {
-  console.log('File(s) dropped');
+  console.log("File(s) dropped");
 
   // 既定の動作で防ぐ（ファイルが開かれないようにする）
   ev.preventDefault();
@@ -65,7 +65,7 @@ function dropHandler(ev) {
     // DataTransferItemList インターフェイスを使用して、ファイルにアクセスする
     [...ev.dataTransfer.items].forEach((item, i) => {
       // ドロップしたものがファイルでない場合は拒否する
-      if (item.kind === 'file') {
+      if (item.kind === "file") {
         const file = item.getAsFile();
         console.log(`… file[${i}].name = ${file.name}`);
       }
@@ -85,7 +85,7 @@ function dropHandler(ev) {
 
 ```js
 function dragOverHandler(ev) {
-  console.log('File(s) in drop zone');
+  console.log("File(s) in drop zone");
 
   // 既定の動作で防ぐ（ファイルが開かれないようにする）
   ev.preventDefault();

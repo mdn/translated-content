@@ -84,11 +84,13 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 </div>
 ```
 
-{{ EmbedLiveSample('writing_1', '500', '420') }}
+{{ EmbedLiveSample('writing-mode', '500', '420') }}
 
 ## 网格布局中的书写模式
 
 现在让我们来做一个网格布局的实验，就可以看到书写模式是如何改变你对块轴和行内轴的看法的。
+
+### 默认书写模式
 
 下面例子是一个二行三列的网格，也就是说有三个沿着块轴方向的轨道。在默认的书写模式下，网格自动定位项目的流向，是从左上开始，向右延伸，填满行内轴方向的三个格子，然后转到下一行，创建一个新的行轨道，继续定位更多的项目：
 
@@ -129,7 +131,9 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 </div>
 ```
 
-{{ EmbedLiveSample('writing_2', '500', '330') }}
+{{ EmbedLiveSample('默认书写模式', '500', '330') }}
+
+### 设置书写模式
 
 如果给网格容器加上 `writing-mode: vertical-lr` 属性，就可以看到块轴和行内轴都转到不同的方向了，块轴从左到右地穿过页面，行内轴则从上到下到流动。
 
@@ -171,7 +175,7 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 </div>
 ```
 
-{{ EmbedLiveSample('writing_3', '500', '330') }}
+{{ EmbedLiveSample('设置书写模式', '500', '330') }}
 
 ![A image showing the direction of Block and Inline when writing-mode is vertical-lr](8-vertical-lr.png)
 
@@ -235,7 +239,7 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 </div>
 ```
 
-{{ EmbedLiveSample('writing_4', '500', '330') }}
+{{ EmbedLiveSample('用于对齐的逻辑值', '500', '330') }}
 
 如果你要看看在先上到下再从右到左的书写模式，把 `vertical-lr` 换成 `vertical-rl`，就能得到一个从右到左的垂直书写模式。
 
@@ -246,6 +250,8 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 ## 基于网格线的定位和书写模式
 
 要切记，当用网格线序号来定位项目时，不管在哪种书写模式下，第 1 行永远代表开始的那条网格线，第 -1 行永远代表结束的那条网格线。
+
+### 从左到右文本的基于网格线的定位
 
 在下面的例子中，网格的默认方向是 `ltr`（从左到右），用基于网格线定位方式定位了三个项目。
 
@@ -298,7 +304,9 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
     </div>
 ```
 
-{{ EmbedLiveSample('writing_5', '500', '330') }}
+{{ EmbedLiveSample('从左到右文本的基于网格线的定位', '500', '330') }}
+
+### 从右到左文本的基于网格线的定位
 
 如果现在为网格容器增加一个 {{cssxref("direction")}} 属性，属性值为 `rtl`，那么 第 1 条线就变到了网格的右侧，而第 -1 条线则变到左侧。
 
@@ -348,7 +356,7 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
     </div>
 ```
 
-{{ EmbedLiveSample('writing_6', '500', '330') }}
+{{ EmbedLiveSample('从右到左文本的基于网格线的定位', '500', '330') }}
 
 这表明，如果要切换页面整体或部分的文本方向，并且正在使用网格线，那么如果不想让布局受到影响，应该命名网格线。有些情况下，比如网格包含文本内容，切换后的结果可能正是你想要的，但对于其他情况却不一定。
 
@@ -415,7 +423,7 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
     </div>
 ```
 
-{{ EmbedLiveSample('writing_7', '500', '330') }}
+{{ EmbedLiveSample('书写模式与网格布局的结合', '500', '330') }}
 
 ## 物理值和网格布局
 

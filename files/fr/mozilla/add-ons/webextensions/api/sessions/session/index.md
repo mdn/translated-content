@@ -38,9 +38,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `window`{{optional_inline}}
   - : `object`. Si l'objet représente une fenêtre fermée, cette propriété est présente et sera un objet {{WebExtAPIRef("windows.Window")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.Session")}}
+{{Compat}}
 
 > **Note :**
 >

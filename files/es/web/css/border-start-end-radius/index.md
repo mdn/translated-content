@@ -68,9 +68,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-start-end-radius")}}
+{{Compat}}
 
 ## Mira también
 

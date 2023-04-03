@@ -154,8 +154,8 @@ applyAnimation.addEventListener('click', () => {
 
 ## 参见
 
-- [CSS 动画](/en-US/docs/Web/CSS/CSS_Animations)
-- [使用 CSS 动画](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - 相关事件：{{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
 - 以 {{domxref("Document")}} 为目标的此事件：{{domxref("Document/animationend_event", "animationend")}}

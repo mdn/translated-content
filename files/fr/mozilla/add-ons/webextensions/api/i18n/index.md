@@ -40,7 +40,7 @@ Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.i18n")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

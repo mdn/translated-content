@@ -33,13 +33,13 @@ scroll-snap-points-x: unset;
 - `repeat(<长度>)`
   - : 定义 snap 点的一个间隔，从容器相关的边缘开始。仅允许正数长度。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="container">
@@ -49,7 +49,7 @@ scroll-snap-points-x: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #container {
@@ -79,7 +79,7 @@ scroll-snap-points-x: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", 220, 220)}}
+{{EmbedLiveSample("示例", 220, 220)}}
 
 ## 规范
 

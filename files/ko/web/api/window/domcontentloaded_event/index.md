@@ -27,11 +27,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 ```
 
-## 사양
+## 명세서
 
-| 사양                                                                                     | 상태                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-domcontentloaded')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## 브라우저 호환성
 

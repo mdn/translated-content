@@ -48,9 +48,9 @@ Les événements ont trois fonctions :
     - `buttonIndex`
       - : `integer`. L'index [zero-based](https://en.wikipedia.org/wiki/Zero-based_numbering) du bouton sur lequel vous avez cliqué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onButtonClicked")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

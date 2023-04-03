@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: tab ロール'
-slug: Web/Accessibility/ARIA/Roles/Tab_Role
+slug: Web/Accessibility/ARIA/Roles/tab_role
 ---
 
 ARIA のタブ (`tab`) ロールは、タブリスト (`tablist`) 内のインタラクティブな要素を示し、アクティブ化されると、関連するタブパネル ([`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)) を表示します。

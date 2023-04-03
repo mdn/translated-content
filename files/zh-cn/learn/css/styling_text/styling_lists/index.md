@@ -246,7 +246,7 @@ ul {
 
 ### start
 
-{{htmlattrxref("start","ol")}} 属性允许你从 1 以外的数字开始计数。示例如下：
+[`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性允许你从 1 以外的数字开始计数。示例如下：
 
 ```html
 <ol start="4">
@@ -263,7 +263,7 @@ ul {
 
 ### reversed
 
-{{htmlattrxref("reversed","ol")}} 属性将启动列表倒计数。示例如下：
+[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性将启动列表倒计数。示例如下：
 
 ```html
 <ol start="4" reversed>
@@ -280,7 +280,7 @@ ul {
 
 ### value
 
-{{htmlattrxref("value","ol")}} 属性允许设置列表项指定数值，示例如下：
+[`value`](/zh-CN/docs/Web/HTML/Element/ol#value) 属性允许设置列表项指定数值，示例如下：
 
 ```html
 <ol>

@@ -56,7 +56,7 @@ En realidad, de aplicar el efecto SVG a XHTML o HTML se hace simplemente asignar
 
 En este ejemplo se incrusta un iframe que contiene el sitio web de Mozilla.org, que se representa con la máscara que se le aplica.
 
-[View this example live](/@api/deki/files/3213/=maskdemo.xhtml).
+[View this example live](maskdemo.xhtml).
 
 ### Ejemplo: Recorte
 
@@ -81,7 +81,7 @@ Tenga en cuenta también que puede realizar cambios en el SVG en tiempo real y v
     circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 ```
 
-[View this example live](/@api/deki/files/3214/=clipdemo.xhtml). El ejemplo incluye un botón, puede hacer clic para cambiar la ruta de clip y ver que el cambio surta efecto.
+[View this example live](clipdemo.xhtml). El ejemplo incluye un botón, puede hacer clic para cambiar la ruta de clip y ver que el cambio surta efecto.
 
 ### Ejemplo: Filtrar
 
@@ -122,7 +122,7 @@ Los cinco filtros se aplican mediante el siguiente código CSS:
   </style>
 ```
 
-[View this example live](/@api/deki/files/3217/=filterdemo.xhtml).
+[View this example live](filterdemo.xhtml).
 
 ## Uso de referencias externas
 

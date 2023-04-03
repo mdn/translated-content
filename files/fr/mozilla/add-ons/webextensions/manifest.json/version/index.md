@@ -59,4 +59,4 @@ console.log(browser.runtime.getManifest().version);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.version")}}
+{{Compat}}

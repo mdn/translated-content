@@ -22,17 +22,17 @@ Puedes usar las características API de audio mejoradas - que son específicas d
 
 - autoplay
   - : Un atributo booleano; si se especifica (incluso aunque el valor sea "false"), el sonido comenzará a reproducirse automáticamente en cuanto sea posible, sin detenerse para terminar de cargar los datos.
-- autobuffer {{ deprecated_inline("2.0") }}
+- autobuffer {{ deprecated_inline }}
   - : Un atributo booleano; si se especifica, el sonido comenzará a reproducirse automáticamente, incluso aunque no se haya configurado para la reproducción automática. Esto continuará hasta que la caché de medios esté llena o se haya descargado el archivo de audio completo, lo que suceda primero. Debería usarse sólo si se espera que el usuario elija reproducir el audio; por ejemplo si el usuario ha navegado hasta una página usando un vínculo de "Reproducir este audio". Este atributo se eliminó de Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) en favor del atributo preload.
 - buffered
   - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }}.
 - controls
   - : Si está presente este atributo, el navegador ofrecerá controles para permitir que el usuario controle la reproducción de audio, incluyendo volumen, búsqueda y pausar/reanudar reproducción.
-- loop {{ unimplemented_inline() }} {{ bug(449157) }}
+- loop {{ unimplemented_inline() }} [Error 449157 en Firefox](https://bugzil.la/449157)
   - : Un atributo booleano; si se especifica, al alcanzar el final del audio, realizaremos la búsqueda automáticamente hasta el principio.
 - mozCurrentSampleOffset {{ non-standard_inline() }}
   - : La posición de desplazamiento, que se especifica como el número de muestras desde el comienzo de la secuencia de audio, en la cual el audio se está reproduciendo actualmente.
-- preload {{ bug(548523) }}
+- preload [Error 548523 en Firefox](https://bugzil.la/548523)
   - : El objetivo de este atributo enumerado es proporcionar una sugerencia al navegador sobre qué cree el autor que proporcionará la mejor experiencia para el usuario . Puede tener uno de los siguientes valores:
     - `none`: sugiere bien que el autor cree que el usuario no tendrá que consultar ese video, bien que el servidor desea minimizar su tráfico; es decir, esta sugerencia indica que no se debe almacenar en caché este video;
     - `metadata`: sugiere que aunque el autor piensa que el usuario no tendrá que consultar ese video, es razonable capturar los metadatos (p. ej. longitud);
@@ -56,7 +56,7 @@ Las compensaciones de tiempo se especifican como valores float que indican el n�
 ## Ejemplos
 
 ```html
-<audio src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"
+<audio src="audiotest_(1).ogg"
        autoplay>
   Your browser does not support the <code>audio</code> element.
 </audio>

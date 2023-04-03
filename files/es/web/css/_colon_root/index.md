@@ -35,4 +35,4 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:root`** de [CSS](/es/docs
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.root")}}
+{{Compat}}

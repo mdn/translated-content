@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.defaultMuted
 slug: Web/API/HTMLMediaElement/defaultMuted
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +16,7 @@ slug: Web/API/HTMLMediaElement/defaultMuted
 ## 例
 
 ```js
-var videoEle = document.createElement('video');
+const videoEle = document.createElement('video');
 videoEle.defaultMuted = true;
 console.log(videoEle.outerHTML); // <video muted=""></video>
 ```

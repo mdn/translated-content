@@ -27,11 +27,11 @@ DataTransferItem.webkitGetAsEntry();
 
 在此示例中，创建了一个放置区域，该放置区域[`drop`](/zh-CN/docs/Web/Events/drop)通过扫描已删除的文件和目录来响应事件，从而输出分层目录列表。
 
-### HTML 内容
+### HTML
 
 HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div)具有 ID 的元素`"dropzone"`，以及带有 ID 的无序列表元素`"listing"`。
 
-```
+```html
 <p>Drag files and/or directories to the box below!</p>
 
 <div id="dropzone">
@@ -46,11 +46,11 @@ HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div
 </ul>
 ```
 
-### CSS 内容
+### CSS
 
 此处显示示例使用的样式。
 
-```
+```css
 #dropzone {
   text-align: center;
   width: 300px;
@@ -76,7 +76,7 @@ body {
 }
 ```
 
-### JavaScript 内容
+### JavaScript
 
 首先，让我们看一下递归`scanFiles()`函数。该函数将[`FileSystemEntry`](/zh-CN/docs/Web/API/FileSystemEntry)表示要扫描和处理的文件系统中的条目（`item`参数）和插入内容列表（`container`参数）的元素作为输入。
 
@@ -147,7 +147,7 @@ dropzone.addEventListener("drop", function(event) {
 
 你可以通过下面的尝试看看它是如何工作的。找到一些文件和目录并将其拖入，然后查看生成的输出。
 
-{{ EmbedLiveSample('Example', 600, 400) }}
+{{ EmbedLiveSample('示例', 600, 400) }}
 
 ## 规范
 

@@ -5,102 +5,109 @@ slug: Web/HTML/Element/hgroup
 
 {{HTMLSidebar}}
 
-**HTML `<hgroup>` element**代表文档章节所属的多级别的目录，它将多个\<h1>至\<h6>的子元素组装到一起。{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+**`<hgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表文档标题和与标题相关联的内容，它将一个 [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素与一个或多个 [`<p>`](/zh-CN/docs/Web/HTML/Element/p) 元素组合在一起。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, heading content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
 ## 属性
 
-这个元素仅包含全局属性。
+这个元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## 使用笔记
+## 使用备注
 
-> **备注：** 本元素已经从 HTML5（W3C）规范中删除，但是它仍旧在 WHATWG 的 HTML 版本里。大多数浏览器都部分地实现，所以它不太可能消失。
-> 然而，考虑到\<hgroup>元素的一个关键存在目标是明确 HTML 规范中如何显示标题的轮廓算法，但因为其轮廓算法 (outline algorithm) 未在任何浏览器中实现，因此 `<hgroup>` 语义仍旧是理论上的建议。
-> HTML5 (W3C) 规范提供了如何标记[副标题，小标题，可选标题和标语](http://www.w3.org/TR/html5/common-idioms.html#sub-head)（Subheadings, subtitles, alternative titles and taglines）的建议。
+`<hgroup>` 元素允许将一个标题与任意次要内容（例如子标题、副标题或口号）组合在一起。在 `<hgroup>` 中，这些类型的内容也表示为 `<p>` 元素。
 
-The `<hgroup>` element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a _multi-level_ heading.
-
-In other words, the `<hgroup>` element prevents any of its secondary [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) children from creating separate sections of their own in the outline—as those [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) elements otherwise normally would if they were not children of any `<hgroup>`.
-
-So in the abstract outline produced by the [HTML outline algorithm defined in the HTML specification](/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm), the `<hgroup>` as a whole forms a single logical heading, with the entire set of [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) children of the `<hgroup>` going into the outline as one _multi-level_ unit, to comprise that single logical heading in the abstract outline.
-
-To produce any (non-abstract) _rendered_ view of such an outline, some choice must be made in the design of the rendering tool about how to render `<hgroup>` headings in such a way as to convey their multi-level nature. There are a variety of ways an `<hgroup>` might be shown in a rendered outline; for example:
-
-- an `<hgroup>` might be shown in a rendered outline in with a colon character and space (": ") or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings
-- an `<hgroup>` might be shown in a rendered outline in with the primary heading followed by parentheses around the secondary heading(s)
-
-Consider the following HTML document:
-
-```plain
-<!DOCTYPE html>
-<title>HTML Standard</title>
-<body>
-  <hgroup id="document-title">
-    <h1>HTML</h1>
-    <h2>Living Standard — Last Updated 12 August 2016</h2>
-  </hgroup>
-  <p>Some intro to the document.</p>
-  <h2>Table of contents</h2>
-  <ol id=toc>...</ol>
-  <h2>First section</h2>
-  <p>Some intro to the first section.</p>
-</body>
-```
-
-A rendered outline for that document might look like the following:
-
-![](outline-colon.png)
-
-That is, the rendered outline might show the primary title, _HTML_, followed by a colon and space, followed by the secondary title, _Living Standard — Last Updated 12 August 2016_.
-
-Or, the rendered outline for that document might instead look like the following:
-
-![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](outline-paren.png)
-
-That is, the rendered outline might show the primary title, _HTML_, followed by the secondary title shown in parentheses: _(Living Standard — Last Updated 12 August 2016)_.
+`<hgroup>` 本身对网页的的文档大纲没有任何影响。而 `<hgroup>` 中所允许的单个标题则会被用于文档大纲。
 
 ## 示例
 
 ```html
-<hgroup>
-  <h1>Main title</h1>
-  <h2>Secondary title</h2>
-</hgroup>
+<!DOCTYPE html>
+<title>HTML 标准</title>
+<body>
+  <hgroup id="document-title">
+    <h1>HTML：现行标准</h1>
+    <p>更新于 2022 年 7 月 12 日</p>
+  </hgroup>
+  <p>文档的介绍。</p>
+  <h2>目录</h2>
+  <ol id="toc">
+    …
+  </ol>
+  <h2>第一节</h2>
+  <p>第一节的介绍。</p>
+</body>
 ```
+
+## 无障碍考虑
+
+目前，`<hgroup>` 没有无障碍的语义。只有其中的元素（标题和可选的段落）会被暴露给浏览器的无障碍 API。
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、标题内容、可感知内容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        零个或多个 {{HTMLElement("p")}} 元素，后跟一个
+        {{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}
+        或 {{HTMLElement("h6")}} 元素，后跟零个或多个
+        {{HTMLElement("p")}} 元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">省略标签</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐式 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有对应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>任意</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Sections and outlines of an HTML5 document](/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document).
+- 与本章节相关的其他元素：{{HTMLElement("body")}}、{{HTMLElement("article")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("nav")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}；
+- [HTML 文档的章节和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)。

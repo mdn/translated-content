@@ -10,13 +10,13 @@ HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用�
 Cookie 主要用于以下三个方面：
 
 - 会话状态管理
-  - : 如用户登录状态、购物车、游戏分数或其它需要记录的信息
+  - : 如用户登录状态、购物车、游戏分数或其他需要记录的信息
 - 个性化设置
   - : 如用户自定义设置、主题和其他设置
 - 浏览器行为跟踪
   - : 如跟踪分析用户行为等
 
-Cookie 曾一度用于客户端数据的存储，因当时并没有其它合适的存储办法而作为唯一的存储手段，但现在推荐使用现代存储 API。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 [Web storage API](/zh-CN/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 。
+Cookie 曾一度用于客户端数据的存储，因当时并没有其他合适的存储办法而作为唯一的存储手段，但现在推荐使用现代存储 API。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 [Web storage API](/zh-CN/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 。
 
 > **备注：** 要查看 Cookie 存储（或网页上能够使用其他的存储方式），你可以在开发者工具中启用存储查看器（[Storage Inspector](/zh-CN/docs/Tools/Storage_Inspector)）功能，并在存储树上选中 Cookie。
 

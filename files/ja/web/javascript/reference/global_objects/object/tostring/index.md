@@ -56,7 +56,7 @@ console.log(bigNum.toString(2));
 
 - 2 は[二進数](https://ja.wikipedia.org/wiki/%E4%BA%8C%E9%80%B2%E6%B3%95)になります。
 - 8 は[八進数](https://ja.wikipedia.org/wiki/%E5%85%AB%E9%80%B2%E6%B3%95)になります。
-- 10 は [十真数](https://ja.wikipedia.org/wiki/%E5%8D%81%E9%80%B2%E6%B3%95)になります。
+- 10 は [十進数](https://ja.wikipedia.org/wiki/%E5%8D%81%E9%80%B2%E6%B3%95)になります。
 - 16 は [十六進数](https://ja.wikipedia.org/wiki/%E5%8D%81%E5%85%AD%E9%80%B2%E6%B3%95)になります。
 
 ## 例

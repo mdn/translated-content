@@ -52,7 +52,7 @@ p:active { background: #eee; }   /* 激活段落 */
 
 #### 结果
 
-{{EmbedLiveSample('Active_links')}}
+{{EmbedLiveSample('激活链接')}}
 
 ### 激活表单元素
 
@@ -79,7 +79,7 @@ form button {
 
 #### 结果
 
-{{EmbedLiveSample('Active_form_elements')}}
+{{EmbedLiveSample('激活表单元素')}}
 
 ## 规范
 

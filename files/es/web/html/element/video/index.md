@@ -24,7 +24,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
   - : Un atributo booleano; si se especifica, el video comenzará automáticamente a almacenarse en el búfer, incluso si no está listo para reproducirse de forma automática. Esto se debe utilizar para los casos en los que se considera probable que el video se reproduzca (por ejemplo, si el usuario accedió a esa página específica para reproducir el video, no si hay un video insertado junto con otros contenidos). El video se almacena en el búfer hasta que el caché de medios esté lleno.
 
-    > **Nota:** **Nota de implementación:** aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo **autobuffer** se ha eliminado en versiones posteriores. Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse. La especificación define un nuevo atributo enumerado, **preload,** para sustituir el atributo **autobuffer,** con una sintaxis diferente. {{ bug (548523) }}
+    > **Nota:** aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo **autobuffer** se ha eliminado en versiones posteriores. Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse. La especificación define un nuevo atributo enumerado, **preload,** para sustituir el atributo **autobuffer,** con una sintaxis diferente. [Error 548523 en Firefox](https://bugzil.la/548523)
 
 - {{ htmlattrdef("buffered") }}
   - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }} .
@@ -34,7 +34,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
   - : La altura del área de visualización del vídeo en píxeles CSS.
 - {{ htmlattrdef("loop") }}
   - : Un atributo booleano; si se especifica, al alcanzar el final del video, buscaremos automáticamente hasta el principio.
-- {{ htmlattrdef("preload") }} {{ bug(548523) }}
+- {{ htmlattrdef("preload") }} [Error 548523 en Firefox](https://bugzil.la/548523)
 
   - : El objetivo de este atributo enumerado es proporcionar una sugerencia al navegador sobre qué cree el autor que llevará a la mejor experiencia para el usuario . Puede tener uno de los siguientes valores:
 
@@ -59,7 +59,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
 Las compensaciones de tiempo se especifican actualmente como valores float que representan el número de segundos que se va a compensar.
 
-> **Nota:** **Nota:** la definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
+> **Nota:** la definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
 
 ## Ejemplos
 

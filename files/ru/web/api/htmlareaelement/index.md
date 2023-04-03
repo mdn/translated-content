@@ -31,7 +31,7 @@ _Наследует свойства от его родителя, {{domxref("HT
   - : Это {{domxref("DOMString")}} содержание которого отображает {{ htmlattrxref("hreflang", "area") }} HTML атрибут, показывающий язык связанного с ним ресурса.
 - {{domxref("HTMLAreaElement.media")}}
   - : Это {{domxref("DOMString")}} содержание которого отображает {{ htmlattrxref("media", "area") }} HTML атрибут, показывающий целевое media, связанного с ним ресурса.
-- {{domxref("HTMLAreaElement.noHref")}} {{obsolete_inline}}
+- {{domxref("HTMLAreaElement.noHref")}}
   - : Это {{domxref("Boolean")}} флаг показывающий, если зона неактивна (`true`) или активна (`false`).
 - {{domxref("URLUtils.password")}}
   - : Это {{domxref("DOMString")}} содержащий пароль указанный перед именем домена.

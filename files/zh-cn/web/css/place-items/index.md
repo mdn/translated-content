@@ -231,7 +231,7 @@ display.addEventListener('change', function (evt) {
 
 #### 结果
 
-{{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
+{{EmbedLiveSample("在弹性容器中排列元素", 260, 290)}}
 
 ## 规范
 
@@ -241,7 +241,7 @@ display.addEventListener('change', function (evt) {
 
 {{Compat}}
 
-## See also
+## 参见
 
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_

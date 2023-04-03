@@ -68,10 +68,10 @@ a.displayName = 'My Function';
 a; // "function My Function()"
 ```
 
-## Specifications
+## Especificaciones
 
-Not part of any specification.
+No es parte de ninguna especificación.
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.displayName")}}
+{{Compat}}

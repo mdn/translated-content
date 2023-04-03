@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 
 ## Синтаксис
 
-```
+```js
 // Инициализатор объекта или литерал
 { [ nameValuePair1[, nameValuePair2[, ...nameValuePairN] ] ] }
 
@@ -127,18 +127,12 @@ new Object([value])
 
 ### Пример: использование `Object` с типами `undefined` и `null`
 
-Следующий пример сохраняет пустой объект `Object` в переменную `o`:
+Следующие примеры сохраняют пустой объект `Object` в переменную `o`:
 
 ```js
-let o = new Object();
-```
-
-```js
-let o = new Object(undefined);
-```
-
-```js
-let o = new Object(null);
+const o = new Object();
+const o = new Object(undefined);
+const o = new Object(null);
 ```
 
 ### Пример: использование `Object` для создания объектов `Boolean`
@@ -147,12 +141,12 @@ let o = new Object(null);
 
 ```js
 // эквивалентно o = new Boolean(true);
-let o = new Object(true);
+const o = new Object(true);
 ```
 
 ```js
 // эквивалентно o = new Boolean(false);
-let o = new Object(Boolean());
+const o = new Object(Boolean());
 ```
 
 ## Спецификации

@@ -29,7 +29,7 @@ l10n:
 
 次に進む前に、テストに使えるように最低でも 2 つのブラウザーをインストールするようにしてください。
 
-> **メモ:** Internet Explorer は最新のウェブ機能と互換性がなく、プロジェクトを実行できない場合があります。使用している人はほとんどいないので、ふつうはhウェブプロジェクトを作るのに意識する必要はありません。学習中であれば、まず意識する必要はありません。時には、それに対応しなければならないプロジェクトに遭遇することもあるかもしれません。
+> **メモ:** Internet Explorer は最新のウェブ機能と互換性がなく、プロジェクトを実行できない場合があります。使用している人はほとんどいないので、ふつうはウェブプロジェクトを作るのに意識する必要はありません。学習中であれば、まず意識する必要はありません。時には、それに対応しなければならないプロジェクトに遭遇することもあるかもしれません。
 
 ### ローカルのウェブサーバーのインストール
 
@@ -50,14 +50,3 @@ l10n:
 - 他にも便利なツールがたくさんあります！
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## このモジュール
-
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

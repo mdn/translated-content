@@ -30,7 +30,7 @@ CSS {{cssxref(":lang")}} 의사 클래스에서는 유효하지 않은 언어의
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.lang")}}
+{{Compat}}
 
 ## 같이 보기
 

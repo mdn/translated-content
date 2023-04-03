@@ -39,7 +39,10 @@ La propiedad [CSS](/es/docs/Web/CSS) no estandarizada **`-moz-float-edge`** espe
 
 ## Sintaxis formal
 
-{{csssyntax}}
+```plain
+-moz-float-edge =
+  border-box | content-box | margin-box | padding-box
+```
 
 ## Ejemplo
 
@@ -78,4 +81,4 @@ No es parte de ningún estándar.
 
 ## Véase también
 
-- {{bug(432891)}}
+- [Error 432891 en Firefox](https://bugzil.la/432891)

@@ -44,9 +44,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lorsque cet événement se produit. Il n'a pas passé de paramètres.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.onImportEnded")}}
+{{Compat}}
 
 ## Exemples
 

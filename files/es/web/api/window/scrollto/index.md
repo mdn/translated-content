@@ -7,7 +7,7 @@ slug: Web/API/Window/scrollTo
 
 ## Resumen
 
-Desplaza el visor a un conjunto específico de coodenadas en el documento.
+Desplaza el visor a un conjunto específico de coordenadas en el documento.
 
 ## Sintaxis
 

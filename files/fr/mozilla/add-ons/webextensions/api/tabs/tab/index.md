@@ -85,9 +85,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `windowId`
   - : `integer`. L'ID de la fenêtre qui héberge cet onglet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.Tab", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

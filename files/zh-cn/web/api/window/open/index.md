@@ -80,13 +80,13 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
 
 **如果你定义了 _strWindowFeatures_ 参数，那么没有在这个字符串中列出的特性会被禁用或移除** （除了 _titlebar_ 和 _close_ 默认设置为 yes）
 
-> **备注：** 如果你使用了 _strWindowFeatures_ 参数，那么只需要列出新窗口中启用的特性，其它的特性（除了*titlebar*和*close*）将被禁用或移除。
+> **备注：** 如果你使用了 _strWindowFeatures_ 参数，那么只需要列出新窗口中启用的特性，其他的特性（除了*titlebar*和*close*）将被禁用或移除。
 
 ## 位置尺寸特征
 
 [Note on position and dimension error correction](#Note_on_position_and_dimension_error_correction)
 
-{{bug(176320)}}
+[Firefox bug 176320](https://bugzil.la/176320)
 
 [Note on precedence](#Note_on_precedence)
 
@@ -129,7 +129,7 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
     Mozilla and Firefox users can force new windows to always render the Navigation Toolbar by setting `dom.disable_window_open_feature.toolbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
 - location
   - : If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar.
-    Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). {{Fx_minversion_note(3, "In Firefox 3, <code>dom.disable_window_open_feature.location</code> now defaults to <var>true</var>, forcing the presence of the Location Bar much like in IE7. See bug 337344 for more information.")}}
+    Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
 - personalbar
   - : If this feature is on, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window.
     Mozilla and Firefox users can force new windows to always render the Personal Toolbar/Bookmarks toolbar by setting `dom.disable_window_open_feature.personalbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).

@@ -86,7 +86,7 @@ slug: Web/API/KeyboardEvent/location
           <strong>Note: </strong>Gecko always returns
           <code>DOM_KEY_LOCATION_MOBILE</code> on Android (Prior to 18), Maemo,
           and <a href="/zh-CN/docs/Mozilla/Boot_to_Gecko">Boot to Gecko</a>.
-          However, at {{gecko("38")}}, this is dropped.
+          However, at Gecko 38, this is dropped.
         </div>
       </td>
     </tr>
@@ -105,7 +105,7 @@ slug: Web/API/KeyboardEvent/location
           <strong>Note: </strong>Gecko never fires trusted key events with
           <code>DOM_KEY_LOCATION_JOYSTICK</code> except on Android. Starting 18,
           native key events on Android may have this value. However, at
-          {{gecko("38")}}, this is dropped.
+          Gecko 38, this is dropped.
         </div>
       </td>
     </tr>

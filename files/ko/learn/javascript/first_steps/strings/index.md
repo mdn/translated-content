@@ -200,15 +200,3 @@ button.onclick = function() {
 여기까지 자바스크립트에서 다루는 문자열의 기본이었습니다. 다음 글에서는 자바스크립트에서 문자열에 사용할 수 있는 기본 제공 메소드를 조작하는 방법에 대해 알아보겠습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

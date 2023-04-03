@@ -79,4 +79,4 @@ body :not(.crazy, .fancy) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.not")}}
+{{Compat}}

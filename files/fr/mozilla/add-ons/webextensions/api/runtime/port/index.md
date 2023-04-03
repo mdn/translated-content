@@ -68,9 +68,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `sender`{{optional_inline}}
   - : {{WebExtAPIRef('runtime.MessageSender')}}. Contient des informations sur l'expéditeur du message. ette propriété ne sera présente que sur les ports transmis aux écouteurs `onConnect`/`onConnectExternal`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.Port")}}
+{{Compat}}
 
 ## Exemples
 

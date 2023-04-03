@@ -1,6 +1,6 @@
 ---
 title: <input>
-slug: Web/HTML/Element/Input
+slug: Web/HTML/Element/input
 translation_of: Web/HTML/Element/input
 ---
 
@@ -68,7 +68,7 @@ translation_of: Web/HTML/Element/input
 
 - {{htmlattrdef("accept")}}
   - : В случае, если значением атрибута **type** является `file`, данный атрибут определяет типы файлов, которые сервер может принять. В противном случае файл игнорируется. Значение должно быть списком уникальных спецификаторов типов содержания, разделённым запятыми:
-- {{htmlattrdef("accesskey")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline", "HTML5")}}
+- {{htmlattrdef("accesskey")}} {{HTMLVersionInline(4)}} only,
   - : Одиночный символ, который пользователь может нажать, чтобы переключить фокус на элемент управления.
 - {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
   - : Определяет "действие-подсказку", которая используется для определения того, как будет обозначаться клавиша enter на мобильных устройствах с виртуальной клавиатурой. Поддерживаемые значения: `go`, `done`, `next`, `search`, и `send`; они автоматически сопоставляются с необходимой строкой (являются чувствительными к регистру).
@@ -155,7 +155,7 @@ translation_of: Web/HTML/Element/input
   - : Works with the **min** and **max** attributes to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this attribute is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
 - {{htmlattrdef("tabindex")}} element-specific in {{HTMLVersionInline(4)}}, global in {{HTMLVersionInline("5")}}
   - : The position of the element in the tabbing navigation order for the current document.
-- {{htmlattrdef("usemap")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline", "HTML5")}}
+- {{htmlattrdef("usemap")}} {{HTMLVersionInline(4)}} only,
   - : The name of a {{HTMLElement("map")}} element to as an image map.
 - {{htmlattrdef("value")}}
   - : The initial value of the control. This attribute is optional except when the value of the **type** attribute is `radio` or `checkbox`.
@@ -169,7 +169,7 @@ translation_of: Web/HTML/Element/input
 
 ### File inputs
 
-> **Примечание:** Starting in {{Gecko("2.0")}}, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Using_files_from_web_applications) for an example and more details.
+> **Примечание:** Starting in Gecko 2.0, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Using_files_from_web_applications) for an example and more details.
 
 You can't set the value of a file picker from a script; doing something like the following has no effect:
 
@@ -247,7 +247,7 @@ The result is:
 
 ### Gecko notes
 
-Starting in Gecko 9.0 {{geckoRelease("9.0")}}, Firefox for Android lets users capture images using their camera and upload them, without having to leave the browser. Web developers can implement this feature by simply specifying setting the `accept` attribute's value to "image/\*" on their `file` input, like this:
+Starting in Gecko 9.0, Firefox for Android lets users capture images using their camera and upload them, without having to leave the browser. Web developers can implement this feature by simply specifying setting the `accept` attribute's value to "image/\*" on their `file` input, like this:
 
 `<input type="file" accept="image/*">`
 

@@ -25,11 +25,11 @@ If a (proxy) server receives valid credentials that are not adequate to gain acc
 
 ### Authentication of cross-origin images
 
-A potential security hole that has recently been fixed by browsers is authentication of cross-site images. From [Firefox 59](/zh-TW/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
+A potential security hole that has recently been fixed by browsers is authentication of cross-site images. From [Firefox 59](/zh-TW/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ([Firefox bug 1423146](https://bugzil.la/1423146)), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
 
 ### Character encoding of HTTP authentication
 
-Browsers use `utf-8` encoding for usernames and passwords. Firefox used to use `ISO-8859-1`, but changed over to `utf-8` for parity with other browsers, and to avoid potential problems as described in {{bug(1419658)}}.
+Browsers use `utf-8` encoding for usernames and passwords. Firefox used to use `ISO-8859-1`, but changed over to `utf-8` for parity with other browsers, and to avoid potential problems as described in [Firefox bug 1419658](https://bugzil.la/1419658).
 
 ### `WWW-Authenticate` and `Proxy-Authenticate` headers
 
@@ -59,7 +59,7 @@ The most common authentication scheme is the "Basic" authentication scheme which
 
 - **Basic** (see {{rfc(7617)}}, base64-encoded credentials. See below for more information.),
 - **Bearer** (see {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources),
-- **Digest** (see {{rfc(7616)}}, only md5 hashing is supported in Firefox, see {{bug(472823)}} for SHA encryption support),
+- **Digest** (see {{rfc(7616)}}, only md5 hashing is supported in Firefox, see [Firefox bug 472823](https://bugzil.la/472823) for SHA encryption support),
 - **HOBA** (see {{rfc(7486)}} (draft), **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based),
 - **Mutual** (see [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)),
 - **AWS4-HMAC-SHA256** (see [AWS docs](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).

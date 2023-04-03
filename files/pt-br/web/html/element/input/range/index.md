@@ -1,6 +1,6 @@
 ---
 title: <input type="range">
-slug: Web/HTML/Element/Input/range
+slug: Web/HTML/Element/input/range
 ---
 
 {{HTMLSidebar}}
@@ -231,7 +231,7 @@ Você pode adicionar rótulos para seu controle usando o atributo {{htmlattrxref
   </tbody>
 </table>
 
-> **Note:** **Nota**: Atualmente nenhum navegador suporta estes recursos totalmente. Firefox não suporta pontos e rótulos, por exemplo, enquanto o Chrome suporta as marcações de pontos, porém não suporta as etiquetas.
+> **Nota:** Atualmente nenhum navegador suporta estes recursos totalmente. Firefox não suporta pontos e rótulos, por exemplo, enquanto o Chrome suporta as marcações de pontos, porém não suporta as etiquetas.
 
 ### Change the orientation
 

@@ -30,11 +30,9 @@ pc.getTransceivers.forEach(transceiver => {
 });
 ```
 
-## 설명서
+## 명세서
 
-| 설명서                                                                                                                                           | 상태                             | 코멘트 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------ |
-| {{SpecName("WebRTC 1.0", "#dom-rtcpeerconnection-gettransceivers", "RTCPeerConnection.getTransceivers()")}} | {{Spec2("WebRTC 1.0")}} |        |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -182,11 +182,9 @@ setDiv(selectElem.value);
 
 {{EmbedLiveSample('필터_함수_비교', '100%', 500)}}
 
-## 명세
+## 명세서
 
-| Specification                                                                                                    | Status                               | Comments            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
+{{Specifications}}
 
 ## 같이 보기
 

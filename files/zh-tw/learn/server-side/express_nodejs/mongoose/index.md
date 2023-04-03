@@ -681,7 +681,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 我們在這裡展示的新東西，是字段選項：
 
 - 枚舉`enum`:這允許我們設置字符串的允許值。在這種情況下，我們用它來指定我們書籍的可用性狀態（使用枚舉，意味著我們可以防止錯誤拼寫和任意值，成為我們的狀態）
-- 默認值`default`:我們使用默認值，將新創 ​​ 建的書本實例的默認狀態，設置為維護，並將默認的`due_back`日期，設置為現在`now`（請注意在設置日期時，如何調用 Date 函數！）
+- 默認值`default`:我們使用默認值，將新創 建的書本實例的默認狀態，設置為維護，並將默認的`due_back`日期，設置為現在`now`（請注意在設置日期時，如何調用 Date 函數！）
 
 其他所有內容，大夥應該在前面教程裡邊已經熟悉了。
 
@@ -692,7 +692,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 該定義將與其他模型非常相似：
 
 - 該模型應該有一個名為`name`的`String`SchemaType ，來描述種類。
-- 這個`name`字段應該是必要的，並且有 3 到 ​​100 個字符。
+- 這個`name`字段應該是必要的，並且有 3 到 100 個字符。
 - 為類型的 URL 聲明虛擬，名為`url`。
 - 導出模型。
 
@@ -715,7 +715,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 3. 在命令提示符下，使用 node 運行此腳本，傳遞 MongoDB 數據庫的 URL（與之前在`app.js`中替換 insert_your_database_url_here 佔位符的那個相同）：
 
     ```bash
-    node populatedb <your mongodb url>​​​​
+    node populatedb <your mongodb url>
     ```
 
 4. 該腳本應一路運行至完成，並在終端中創建它們時顯示各項目。
@@ -740,15 +740,3 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 - [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程連結
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

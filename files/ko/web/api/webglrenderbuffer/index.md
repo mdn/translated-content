@@ -31,7 +31,7 @@ var buffer = gl.createRenderbuffer();
 
 ## 브라우저 호환성
 
-{{Compat("api.WebGLRenderbuffer")}}
+{{Compat}}
 
 ## 함께 보기
 

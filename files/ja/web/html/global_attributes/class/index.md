@@ -1,6 +1,8 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -9,7 +11,7 @@ slug: Web/HTML/Global_attributes/class
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}
 
-仕様書ではクラス名の要件を示していませんが、ウェブ開発者は要素の外見ではなく、意味論的な目的を表す名前を使用することが推奨されます。例えば、あるクラスの要素が*斜体*で表示されるとしても、クラス名は*斜体*であることではなく*特性*を表すようにします。意味論的な名前は、ページの外見を変更した場合でも論理的であり続けます。
+仕様書ではクラス名の要件を示していませんが、ウェブ開発者は要素の外見ではなく、意味論的な目的を表す名前を使用することが推奨されます。例えば、あるクラスの要素が _イタリック体_ で表示されるとしても、クラス名は _attribute_ の方が _italics_ よりも属性を説明します。意味論的な名前は、ページの外見を変更した場合でも論理的であり続けます。
 
 ## 仕様書
 
@@ -17,11 +19,11 @@ slug: Web/HTML/Global_attributes/class
 
 ## ブラウザーの互換性
 
-{{Compat("html.global_attributes.class")}}
+{{Compat}}
 
 ## 関連情報
 
 - すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - {{domxref('element.className')}}
 - {{domxref('element.classList')}}
-- [CSS 入門](/ja/docs/Learn/CSS/)
+- [CSS 入門](/ja/docs/Learn/CSS)

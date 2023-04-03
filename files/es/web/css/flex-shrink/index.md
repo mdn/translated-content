@@ -156,7 +156,7 @@ La propiedad `flex-shrink` se especifica como un único [`<número>`](#number).
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Vea también
 

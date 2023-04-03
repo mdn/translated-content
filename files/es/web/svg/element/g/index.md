@@ -46,6 +46,10 @@ _No hay atributos específicos_
 
 Este elemento implementa la interfaz [`SVGGElement`](/es/docs/DOM/SVGGElement).
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

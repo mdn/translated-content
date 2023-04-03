@@ -93,7 +93,7 @@ transform-origin: unset;
 | `top`    | `0%`   |
 | `bottom` | `100%` |
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 

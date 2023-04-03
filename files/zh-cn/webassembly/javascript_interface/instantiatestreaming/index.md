@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/instantiateStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.instantiateStreaming()`** 方法直接从流式底层源编译和实例化 WebAssembly 模块。这是加载 wasm 代码一种非常有效的优化方式。
 

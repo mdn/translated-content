@@ -19,10 +19,6 @@ _Единый указатель ресурса (Uniform Resource Locator,_ **UR
 
 ## Смотрите также
 
-### Основная информация
-
-- {{Interwiki("wikipedia", "URL")}} в Википедии
-
 ### Узнайте об этом
 
 - [Понимание структуры URL](/ru/docs/Learn/Understanding_URLs) на сайте MDN

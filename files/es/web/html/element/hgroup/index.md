@@ -45,6 +45,10 @@ Este elemento implementa la interfaz `HTMLElement`.
 </hgroup>
 ```
 
-### Compatibilidad
+## Especificaciones
 
-{{Compat("html.elements.hgroup")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

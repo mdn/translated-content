@@ -19,9 +19,9 @@ Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut êt
 
 Notez qu'il s'agit d'un paramètre en lecture seule.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.newTabPageOverride", 10)}}
+{{Compat}}
 
 ## Exemples
 

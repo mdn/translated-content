@@ -63,9 +63,9 @@ Les événements ont trois fonctions :
 - `windowId`
   - : `integer`. L'ID de la fenêtre contenant l'onglet sélectionné.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onActiveChanged")}}
+{{Compat}}
 
 > **Note :**
 >

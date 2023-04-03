@@ -56,51 +56,38 @@ max-width: unset;
 
 {{csssyntax}}
 
-## 例子
+## 示例
+
+### 设置最大像素宽度
 
 在下面的例子里，id 为"child"的\<div>元素设置了 width 值，使它的宽度与父元素"parent"相等 (100%),但是 max-width 值限制了它最大宽度只能到 150px.
 
-```html
-<div id="parent">
-    <div id="child">
-        The Mozilla community produces a lot of great software.
-    </div>
-</div>
-```
-
-```css
-#parent { width: 300px; }
-
-#child  { background: gold;
-          width: 100%;
-          max-width: 150px;
-        }
-```
-
-{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}
-
-fit-content 值可以用来给元素设置基于其内容大小的宽度：
+#### HTML
 
 ```html
 <div id="parent">
-    <div id="child">
-        Child Text
-    </div>
+  <div id="child">
+    Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
+  </div>
 </div>
 ```
 
-```css
-#parent { background: lightblue;
-          width: 300px; }
+#### CSS
 
-#child  { background: gold;
-          width: 100%;
-          max-width: -moz-fit-content;
-          max-width: -webkit-fit-content;
-        }
+```css
+#parent {
+  background: lightblue;
+  width: 300px;
+}
+
+#child {
+  background: gold;
+  width: 100%;
+  max-width: 150px;
+}
 ```
 
-{{EmbedLiveSample("fit-content-demo", 400, 100)}}
+{{EmbedLiveSample("设置最大像素宽度", 350, 100)}}
 
 ## 规范
 
@@ -110,7 +97,7 @@ fit-content 值可以用来给元素设置基于其内容大小的宽度：
 
 {{Compat}}
 
-## 参考链接
+## 参见
 
 - {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
 - [The box model](/zh-CN/CSS/box_model), {{ Cssxref("box-sizing") }}

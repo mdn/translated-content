@@ -14,20 +14,20 @@ slug: Web/CSS/block-size
 ## 语法
 
 ```css
-/* <length> values */
+/* 长度值 */
 block-size: 300px;
 block-size: 25em;
 
-/* <percentage> values */
+/* 百分比值 */
 block-size: 75%;
 
-/* Keyword values */
+/* 关键词值 */
 block-size: max-content;
 block-size: min-content;
 block-size: fit-content(20em);
 block-size: auto;
 
-/* Global values */
+/* 全局值 */
 block-size: inherit;
 block-size: initial;
 block-size: revert;
@@ -49,12 +49,12 @@ block-size: unset;
 
 ## 示例
 
-### 垂直文本的 block-size
+### 竖排文本的块向尺寸
 
 #### HTML
 
 ```html
-<p class="exampleText">Example text</p>
+<p class="exampleText">示例文本</p>
 ```
 
 #### CSS
@@ -69,7 +69,7 @@ block-size: unset;
 
 #### 结果
 
-{{EmbedLiveSample("垂直文本的 block-size")}}
+{{EmbedLiveSample("竖排文本的块向尺寸")}}
 
 ## 规范
 
@@ -81,5 +81,5 @@ block-size: unset;
 
 ## 参见
 
-- 映射至物理方向的属性：{{cssxref("width")}} 和 {{cssxref("height")}}
+- 对应的实体属性：{{CSSXref("width")}} 和 {{CSSXref("height")}}
 - {{cssxref("writing-mode")}}

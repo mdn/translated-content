@@ -11,7 +11,7 @@ slug: Web/CSS/border-color
 
 border-color 雖可一次設定四邊框線色彩，但每個邊框亦可用以下屬性分別指定：{{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}；能因應文字書寫方向改變框線相對位置（the writing mode-aware）的屬性如：{{CSSxRef("border-block-start-color")}}、{{CSSxRef("border-block-end-color")}}、{{CSSxRef("border-inline-start-color")}}、{{CSSxRef("border-inline-end-color")}}，也可達成分別指定的功能。
 
-關於更多邊框色彩的設定說明，請見{{SectionOnPage("/zh-TW/docs/Web/HTML/Applying_color", "borders")}}。
+關於更多邊框色彩的設定說明，請見 [CSS 顏色](/zh-TW/docs/Web/CSS/CSS_Colors/Applying_color#borders_2)。
 
 ## Constituent properties 屬性組成
 

@@ -1,6 +1,6 @@
 ---
 title: Console.debug()
-slug: Web/API/Console/debug
+slug: Web/API/console/debug
 tags:
   - API
   - Développement

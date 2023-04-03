@@ -338,7 +338,7 @@ function foo() {         // source element
 }
 ```
 
-### 例子
+### 示例
 
 ```js
 // 函数声明
@@ -446,7 +446,7 @@ result = padZeros(5,4);  // returns "0005"
 
 ### 检测函数是否存在
 
-你可以通过 **typeof** 操作符检测一个函数是否存在。在下面的例子中，用一个测试来演示检测 window 对象是否拥有一个 noFunc 函数的属性。如果存在，那就使用它；否则就采取其它的一些操作。
+你可以通过 **typeof** 操作符检测一个函数是否存在。在下面的例子中，用一个测试来演示检测 window 对象是否拥有一个 noFunc 函数的属性。如果存在，那就使用它；否则就采取其他的一些操作。
 
 ```js
 if ('function' === typeof window.noFunc) {

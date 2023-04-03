@@ -1,5 +1,5 @@
 ---
-title: '<summary>: The Disclosure Summary element'
+title: "<summary>: The Disclosure Summary element"
 slug: Web/HTML/Element/summary
 translation_of: Web/HTML/Element/summary
 ---
@@ -13,9 +13,9 @@ The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a su
 | Permitted content    | [Phrasing content](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content) or one element of [Heading content](/ru/docs/Web/Guide/HTML/Content_categories#Heading_content) |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tag omission         | None, both the start tag and the end tag are mandatory.                                                                                                                         |
-| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                               |
-| Permitted ARIA roles | {{ARIARole("button")}}                                                                                                                                                    |
-| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                            |
+| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                                         |
+| Permitted ARIA roles | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>                                                                                             |
+| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                                      |
 
 ## Атрибуты
 
@@ -67,7 +67,7 @@ You can use heading elements in `<summary>`, like this:
 ```html
 <details open>
   <summary><h4>Overview</h4></summary>
-    <ol>
+  <ol>
     <li>Cash on hand: $500.00</li>
     <li>Current invoice: $75.30</li>
     <li>Due date: 5/6/19</li>
@@ -98,10 +98,10 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| Specification                                                                                   | Status                   | Comment            |
+| ----------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
 | {{SpecName('HTML WHATWG', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}         | {{Spec2('HTML5.1')}}     | Initial definition |
+| {{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}     | {{Spec2('HTML5.1')}}     | Initial definition |
 
 ## Browser compatibility
 

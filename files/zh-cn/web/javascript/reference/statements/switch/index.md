@@ -117,7 +117,7 @@ switch (foo) {
 }
 ```
 
-即使你把 default 放到其它 case 之上，它仍有效。
+即使你把 default 放到其他 case 之上，它仍有效。
 
 ### 使用多准则 case 的方法
 

@@ -55,9 +55,9 @@ Utilitaires liés à votre extension. Obtenez des URL vers des packages de resso
 - {{WebExtAPIRef("extension.onRequestExternal")}} {{deprecated_inline}}
   - : Lancé lorsqu'une requête est envoyée depuis une autre extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

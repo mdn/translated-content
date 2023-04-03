@@ -83,7 +83,7 @@ window.addEventListener('focus', play);
 
 #### 结果
 
-{{EmbedLiveSample("Live_example")}}
+{{EmbedLiveSample("在线示例")}}
 
 ## 规范
 

@@ -143,7 +143,7 @@ Older Firefox versions implement an older version of the generators proposal. In
 
 #### `IteratorResult` object returned instead of throwing
 
-Starting with Gecko 29, the completed generator function no longer throws a {{jsxref("TypeError")}} "generator has already finished". Instead, it returns an `IteratorResult` object like `{ value: undefined, done: true }` ({{bug(958951)}}).
+Starting with Gecko 29, the completed generator function no longer throws a {{jsxref("TypeError")}} "generator has already finished". Instead, it returns an `IteratorResult` object like `{ value: undefined, done: true }` ([Firefox bug 958951](https://bugzil.la/958951)).
 
 ## 參見
 

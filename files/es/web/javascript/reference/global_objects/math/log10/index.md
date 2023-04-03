@@ -59,9 +59,9 @@ Math.log10 = Math.log10 || function(x) {
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.log10")}}
+{{Compat}}
 
 ## Vea Tambien
 

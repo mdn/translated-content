@@ -157,7 +157,7 @@ You can use most of this API without any special permission. However:
 - {{WebExtAPIRef("tabs.onZoomChange")}}
   - : Fired when a tab is zoomed.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

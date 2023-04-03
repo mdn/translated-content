@@ -9,8 +9,6 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 
 文字可以包括任何 Unicode 字元，即使用那些超出“基本多文種平面”的字元也可以。
 
-{{ fx_minversion_note("3.5", '在Firefox 3.5或之後的版本，當繪圖時，任何對於 <a href="/en/Canvas_tutorial/Applying_styles_and_colors#Shadows">shadow effects</a>（陰影效果）的處理可以使用在文字上。') }}
-
 ## 方法概述
 
 <table>

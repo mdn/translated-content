@@ -56,9 +56,6 @@ Al usar `yarn start` en localhost para el repositorio `mdn/content`, es posible 
 
 La comunidad de español sugiere utilizar las siguientes convenciones al traducir el contenido.
 
-<details>
-  <summary>Traducciones recomendadas</summary>
-
 | Término original                | Traducción                     |
 | ------------------------------- | ------------------------------ |
 | Event listener                  | Detector de eventos            |
@@ -69,8 +66,7 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 | HTML Content o HTML             | HTML                           |
 | JavaScript Content o JavaScript | JavaScript                     |
 | Warning                         | Advertencia                    |
-
-</details>
+| Framework                       | Framework                      |
 
 ## Formateo
 
@@ -85,6 +81,8 @@ Actualmente trabajando en: <https://github.com/mdn/translated-content/issues/863
 Telegram: <https://t.me/+Dr6qKQCAepw4MjFj>
 
 Matrix: <https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org>
+
+MDN Discord, canal #spanish: <https://discord.gg/MkEg2ATW>
 
 <details>
   <summary><h2>Enlaces relevantes</h2></summary>

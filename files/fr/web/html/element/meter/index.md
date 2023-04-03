@@ -1,6 +1,6 @@
 ---
 title: <meter>
-slug: Web/HTML/Element/Meter
+slug: Web/HTML/Element/meter
 tags:
   - Element
   - Formulaires

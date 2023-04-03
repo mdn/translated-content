@@ -36,7 +36,7 @@ Todos os argumentos passado para a função são tratados como nomes dos identif
 
 Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new`) tem o mesmo efeito de invocá-lo como um construtor.
 
-## Propriedas
+## Propriedades
 
 - **`AsyncFunction.length`**
   - : A propriedade tamanho do construtor da `AsyncFunction` cujo valor é 1.

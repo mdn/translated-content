@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Color_masking
 
 这个 WebGL 示例 通过随机的颜色 (random colors) 应用到 colorMask，从而将显示的颜色范围限制在特定的颜色通道 (red/green/blue);
 
-{{EmbedLiveSample("color-masking-source",660,425)}}
-
 ### Masking random colors
+
+{{EmbedLiveSample("Masking random colors",660,425)}}
 
 This example modifies the random color animation by applying color masking with {{domxref("WebGLRenderingContext.colorMask()","colorMask()")}}. You can think of the color masking operation as if looking at the colored canvas through some tinted glass or color filter. So, by masking off the blue and green channels, you are only allowing the red component of pixels to be updated, and therefore it is as if you were looking through a red tinted glass.
 

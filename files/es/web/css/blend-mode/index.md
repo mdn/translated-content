@@ -419,9 +419,9 @@ Los cambios entre modos de mezcla no son interpolados. Cualquier cambio ocurrir�
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.blend-mode")}}
+{{Compat}}
 
 ## Véase también
 

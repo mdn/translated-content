@@ -38,7 +38,7 @@ HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라�
       `POST / HTTP 1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
     - _absolute 형식: 완전한 URL 형식입니다._ 프록시에 연결하는 경우 대부분 `GET`과 함께 사용됩니다.
       `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-    - _authority 형식:_ 도메인 이름 및 옵션 포트(`':'`가 앞에 붙습니다)로 이루어진 URL의 authority component 입니다.​​​​ HTTP 터널을 구축하는 경우에만 `CONNECT`와 함께 사용할 수 있습니다.
+    - _authority 형식:_ 도메인 이름 및 옵션 포트(`':'`가 앞에 붙습니다)로 이루어진 URL의 authority component 입니다. HTTP 터널을 구축하는 경우에만 `CONNECT`와 함께 사용할 수 있습니다.
       `CONNECT developer.mozilla.org:80 HTTP/1.1`
     - _asterisk 형식:_ `OPTIONS`와 함께 별표(`'*'`) 하나로 간단하게 서버 전체를 나타냅니다. `OPTIONS * HTTP/1.1`
 

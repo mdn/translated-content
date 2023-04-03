@@ -1,5 +1,5 @@
 ---
-title: WAI-ARIA basics
+title: WAI-ARIA 基础
 slug: Learn/Accessibility/WAI-ARIA_basics
 ---
 
@@ -402,13 +402,3 @@ function toggleMusician(bool) {
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) — A W3C spec that defines, for each HTML feature, what accessibility (ARIA) semantics that feature implicitly has set on it by the browser, and what WAI-ARIA features you may set on it if extra semantics are required.
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
-
-## 在这个模块：
-
-- [What is accessibility?](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

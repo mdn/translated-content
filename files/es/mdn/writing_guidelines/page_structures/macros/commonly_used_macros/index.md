@@ -44,13 +44,6 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 - [`HTTPMethod`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs) enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Methods).
 - [`HTTPStatus`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs) enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status).
 
-### Enlazar a errores
-
-- `Bugs`
-
-  - [`bug`](https://github.com/mdn/yari/tree/main/kumascript/macros/bug.ejs) te permite enlazar a un error en bugzilla.mozilla.org fácilmente usando esta sintaxis: `\{{Bug(123456)}}`. Esto te da: {{Bug(123456)}}.
-  - [`WebkitBug`](https://github.com/mdn/yari/tree/main/kumascript/macros/WebkitBug.ejs) inserta un enlace a un error en la base de datos de errores de `WebKit`. For example, `\{{WebkitBug(31277)}}` inserta {{WebkitBug(31277)}}.
-
 ### Ayuda a la navegación para guías multipágina
 
 [`Previous`](https://github.com/mdn/yari/tree/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/tree/main/kumascript/macros/Next.ejs) y [`PreviousNext`](https://github.com/mdn/yari/tree/main/kumascript/macros/PreviousNext.ejs) proporcionan controles de navegación para artículos que forman parte de secuencias. Para las plantillas unidireccionales, el único parámetro necesario es la ubicación wiki del artículo anterior o siguiente de la secuencia. Para [`PreviousNext`](https://github.com/mdn/yari/tree/main/kumascript/macros/PreviousNext.ejs), los dos parámetros necesarios son las ubicaciones wiki de los artículos correspondientes. El primer parámetro es para el artículo anterior y el segundo es para el artículo siguiente.
@@ -123,12 +116,11 @@ No utilices el parámetro en ningún área independiente del navegador (HTML, AP
 
 ##### Sintaxis
 
-`\{{Deprecated_Inline}}` o `\{{Deprecated_Inline("gecko5")}}`
+`\{{Deprecated_Inline}}`
 
-##### Ejemplos
+##### Ejemplo
 
 - Icon: {{Deprecated_Inline}}
-- Insignia: {{Deprecated_Inline("gecko5")}}
 
 ### Plantilla de insignias
 

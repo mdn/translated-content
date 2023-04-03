@@ -77,7 +77,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-overflow-scrolling")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,218 +1,121 @@
 ---
-title: keypress
+title: 元素：keypress 事件
 slug: Web/API/Element/keypress_event
 ---
 
-The `keypress` event is fired when a key is pressed down and that key normally produces a character value (use [`input`](/zh-CN/Mozilla_event_reference/input) instead).
+{{APIRef}} {{deprecated_header}}
 
-## General info
+当按下产生字符或符号值的键时，将触发 `keypress` 事件。
 
-- Specification
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline()}}
-- Interface
-  - : [KeyboardEvent](/zh-CN/docs/DOM/KeyboardEvent)
-- Bubbles
-  - : Yes
-- Cancelable
-  - : Yes
-- Target
-  - : Document, Element
-- Default Action
-  - : Varies: `keypress` event; launch text composition system; `blur` and `focus` events; `DOMActivate` event; other event
+产生字符值的键包括字母、数字和标点符号键。不产生字符值的键是修饰键，例如 <kbd>Alt</kbd>、<kbd>Shift</kbd>、<kbd>Ctrl</kbd> 或 <kbd>Meta</kbd> 键。
 
-## Properties
+> **警告：** 由于此事件已被弃用，你应该改用 {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} 或 {{domxref("Element.keydown_event", "keydown")}}。
 
-## Related Events
+## 语法
 
-- [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event)
-- [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
-- [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
-- [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Property</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>target</code> {{readonlyInline}}</td>
-      <td>EventTarget</td>
-      <td>The event target (the topmost target in the DOM tree).</td>
-    </tr>
-    <tr>
-      <td><code>type</code> {{readonlyInline}}</td>
-      <td>DOMString</td>
-      <td>The type of event.</td>
-    </tr>
-    <tr>
-      <td><code>bubbles</code> {{readonlyInline}}</td>
-      <td>Boolean</td>
-      <td>Whether the event normally bubbles or not</td>
-    </tr>
-    <tr>
-      <td><code>cancelable</code> {{readonlyInline}}</td>
-      <td>Boolean</td>
-      <td>Whether the event is cancellable or not?</td>
-    </tr>
-    <tr>
-      <td><code>view</code> {{readonlyInline}}</td>
-      <td>WindowProxy</td>
-      <td>
-        <a href="/zh-CN/docs/Web/API/Document/defaultView"
-          ><code>document.defaultView</code></a
-        >
-        (<code>window</code> of the document)
-      </td>
-    </tr>
-    <tr>
-      <td><code>detail</code> {{readonlyInline}}</td>
-      <td><code>long</code> (<code>float</code>)</td>
-      <td>0.</td>
-    </tr>
-    <tr>
-      <td><code>target</code> {{readonlyInline}}</td>
-      <td>EventTarget (DOM element)</td>
-      <td>
-        Focused element processing the key event, root element if no suitable
-        input element focused.
-      </td>
-    </tr>
-    <tr>
-      <td><code>char</code> {{readonlyInline}}</td>
-      <td>DOMString (string)</td>
-      <td>
-        The character value of the key. If the key corresponds to a printable
-        character, this value is a non-empty Unicode string containing that
-        character. If the key doesn't have a printable representation, this is
-        an empty string. See
-        <a href="/zh-CN/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
-          >key names and char values</a
-        >
-        for the detail.
-        <div class="note">
-          <strong>Note:</strong> If the key is used as a macro that inserts
-          multiple characters, this attribute's value is the entire string, not
-          just the first character.
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><code>key</code> {{readonlyInline}}</td>
-      <td>DOMString (string)</td>
-      <td>
-        The key value of the key represented by the event. If the value has a
-        printed representation, this attribute's value is the same as the
-        <code>char</code> attribute. Otherwise, it's one of the key value
-        strings specified in <a href="#key_values">Key Values</a>. If the key
-        can't be identified, this is the string "Unidentified". See
-        <a href="/zh-CN/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
-          >key names and char values</a
-        >
-        for the detail. Read Only.
-      </td>
-    </tr>
-    <tr>
-      <td><code>charCode</code> {{readonlyInline}}</td>
-      <td>Unsigned long (int)</td>
-      <td>
-        The Unicode reference number of the key; this attribute is used only by
-        the
-        <a href="/zh-CN/docs/Mozilla_event_reference/keypress"
-          ><code>keypress</code></a
-        >
-        event. For keys whose <code>char</code> attribute contains multiple
-        characters, this is the Unicode value of the first character in that
-        attribute.
-        <div class="warning">
-          <strong>Warning:</strong> This attribute is deprecated; you should use
-          <code>char</code> instead, if available.
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><code>keyCode</code> {{readonlyInline}}</td>
-      <td>Unsigned long (int)</td>
-      <td>
-        A system and implementation dependent numerical code identifying the
-        unmodified value of the pressed key. This is usually the decimal ASCII
-        ({{ RFC(20) }}) or Windows 1252 code corresponding to the key; see
-        <a href="virtual_key_codes">Virtual key codes</a> for a list of common
-        values. If the key can't be identified, this value is 0.
-        <div class="warning">
-          <strong>Warning:</strong> This attribute is deprecated; you should use
-          <code>key</code> instead, if available.
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><code>which</code> {{readonlyInline}}</td>
-      <td>Unsigned long (int)</td>
-      <td>
-        A system and implementation dependent numeric code identifying the
-        unmodified value of the pressed key; this is usually the same as
-        <code>keyCode</code>.
-        <div class="warning">
-          <strong>Warning:</strong> This attribute is deprecated; you should use
-          <code>key</code> instead, if available.
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><code>location</code> {{readonlyInline}}</td>
-      <td>long (float)</td>
-      <td>The location of the key on the device.</td>
-    </tr>
-    <tr>
-      <td><code>repeat</code> {{readonlyInline}}</td>
-      <td>boolean</td>
-      <td>
-        <code>true</code> if a key has been depressed long enough to trigger key
-        repetition, otherwise <code>false</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>locale</code> {{readonlyInline}}</td>
-      <td>string</td>
-      <td>
-        The language code for the key event, if available; otherwise, the empty
-        string.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ctrlKey</code> {{readonlyInline}}</td>
-      <td>boolean</td>
-      <td>
-        <code>true</code> if the control key was down when the event was fired.
-        <code>false</code> otherwise.
-      </td>
-    </tr>
-    <tr>
-      <td><code>shiftKey</code> {{readonlyInline}}</td>
-      <td>boolean</td>
-      <td>
-        <code>true</code> if the shift key was down when the event was fired.
-        <code>false</code> otherwise.
-      </td>
-    </tr>
-    <tr>
-      <td><code>altKey</code> {{readonlyInline}}</td>
-      <td>boolean</td>
-      <td>
-        <code>true</code> if the alt key was down when the event was fired.
-        <code>false</code> otherwise.
-      </td>
-    </tr>
-    <tr>
-      <td><code>metaKey</code> {{readonlyInline}}</td>
-      <td>boolean</td>
-      <td>
-        <code>true</code> if the meta key was down when the event was fired.
-        <code>false</code> otherwise.
-      </td>
-    </tr>
-  </tbody>
-</table>
+```js
+addEventListener("keypress", (event) => {});
+
+onkeypress = (event) => {};
+```
+
+## 事件类型
+
+{{DOMxRef("KeyboardEvent")}}。继承自 {{DOMxRef("Event")}}。
+
+{{InheritanceDiagram("KeyboardEvent")}}
+
+## 事件属性
+
+_该接口还继承了其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
+
+- {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
+
+  - : 返回一个布尔值，如果在发生此事件时按下 <kbd>Alt</kbd>（macOS 上的 <kbd>Option</kbd> 或 <kbd>⌥</kbd>）键，则返回 `true`。
+
+- {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
+
+  - : 返回一个字符串，其中包含由事件表示的物理键的代码值。
+
+    > **警告：** 此方法忽略用户的键盘布局，因此，如果用户按下 QWERTY 键盘布局中“Y”位置（在主键盘区域上方的一行中间），即使用户使用 QWERTZ 键盘（这意味着用户期望“Z”，而且所有其他属性都指示为“Z”）或 Dvorak 键盘布局（其中用户期望“F”），此方法仍将始终返回“KeyY”。如果你想向用户显示正确的按键信息，则可以使用 {{domxref("Keyboard.getLayoutMap()")}} 方法。
+
+- {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
+
+  - : 返回一个布尔值，如果生成键事件时 <kbd>Ctrl</kbd> 键处于激活状态，则为 `true`。
+
+- {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
+  - : 返回一个布尔值，如果事件在 `compositionstart` 之后、`compositionend` 之前触发，则为 `true`。
+
+- {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
+  - : 返回一个字符串，表示由事件表示的键的键值。
+
+- {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
+
+  - : 返回一个表示键盘配置的区域设置的语言环境字符串。如果浏览器或设备不知道键盘的语言环境，则可能是空字符串。
+
+    > **备注：** 这并不描述正在输入的数据的区域设置。用户可能在使用一种键盘布局时在输入不同语言的文本。
+
+- {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
+  - : 返回一个数字，表示键在键盘或其他输入设备上的位置。标识位置的常量列表如上面的键盘位置部分所示。
+
+- {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
+
+  - : 如果在生成按键事件时 <kbd>Meta</kbd> 键（在 Mac 键盘上是 <kbd>⌘ Command</kbd> 键，在 Windows 键盘上是 Windows 键（<kbd>⊞</kbd>））处于活动状态，则返回一个布尔值，该布尔值为 `true`。
+
+- {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
+  - : 如果该按键被按住并且正在生成自动重复事件，则此函数返回一个布尔值 `true`。
+
+- {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
+
+  - : 如果在生成按键事件时 <kbd>Shift</kbd> 键处于激活状态，则返回一个布尔值，该布尔值为 `true`。
+
+## 示例
+
+### addEventListener 按键示例
+
+该示例在聚焦 {{HtmlElement("input")}} 元素后，每当你按下一个键时，记录 {{domxref("KeyboardEvent.code")}} 的值。
+
+```html
+<div>
+  <label for="sample">请将光标放在 input 元素上并输入一些内容：</label>
+  <input type="text" name="text" id="sample" />
+</div>
+<p id="log"></p>
+```
+
+```js
+const log = document.getElementById("log");
+const input = document.querySelector("input");
+
+input.addEventListener("keypress", logKey);
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}
+```
+
+{{EmbedLiveSample("示例")}}
+
+### 等同于 onkeypress
+
+```js-nolint
+input.onkeypress = logKey;
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- 事件同样也适用于 {{domxref("Document")}} 接口。
+- 相关事件:
+  - [`input`](/zh-cn/docs/Web/API/HTMLElement/input_event)
+  - [`keydown`](/zh-cn/docs/Web/API/Element/keydown_event)
+  - [`keyup`](/zh-cn/docs/Web/API/Element/keyup_event)

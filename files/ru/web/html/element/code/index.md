@@ -1,5 +1,5 @@
 ---
-title: '<code>: The Inline Code element'
+title: '<code>: элемент отображения кода'
 slug: Web/HTML/Element/code
 tags:
   - HTML

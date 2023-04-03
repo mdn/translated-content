@@ -61,9 +61,9 @@ localStorage.clear();
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.localStorage")}}
+{{Compat}}
 
 ## Ver también
 

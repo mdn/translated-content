@@ -165,7 +165,7 @@ Events have three functions:
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

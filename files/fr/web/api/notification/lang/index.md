@@ -1,6 +1,6 @@
 ---
 title: Notification.lang
-slug: Web/API/notification/lang
+slug: Web/API/Notification/lang
 tags:
   - API
   - API Notifications

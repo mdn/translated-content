@@ -28,6 +28,6 @@ Ninguno.
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.pause")}}
+{{Compat}}

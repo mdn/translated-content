@@ -193,7 +193,7 @@ function sheetError() {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.link", 3)}}
+{{compat}}
 
 ## 같이 보기
 

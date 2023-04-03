@@ -1,6 +1,6 @@
 ---
 title: '<progress> : l''élément d''indicateur de progression'
-slug: Web/HTML/Element/Progress
+slug: Web/HTML/Element/progress
 tags:
   - Element
   - HTML

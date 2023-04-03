@@ -37,7 +37,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}
 
 > **Note :**
 >

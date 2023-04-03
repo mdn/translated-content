@@ -119,18 +119,15 @@ window.addEventListener("load", drawCanvas);
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.drawImage")}}
+{{Compat}}
 
-## Notas de compatibilidad
+## Notas
 
-- Soporte para voltear imagen usando valores negativos para `sw` y `sh` fue añadido en Gecko 5.0 (Firefox 5.0 / Thunderbird 5.0 / SeaMonkey 2.2).
-- Empezando con (Firefox 5.0 / Thunderbird 5.0 / SeaMonkey 2.2) `drawImage()` maneja argumentos negativos de acuerdo con la especificación, volteando el rectangulo alrededor del eje apopiado.
-- Especificación de una imagen `null` o `undefined` al llamar o `drawImage()` correctamente lanzando una excepción `TYPE_MISMATCH_ERR` empezando con (Firefox 5.0 / Thunderbird 5.0 / SeaMonkey 2.2).
-- antes de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), Firefox lanzó una excepción si alguno de los valores de las coordenadas no eran finitos o cero. De acuerado a la especificación esto ya no ocurre.
-- Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6) ahora soporta correctamente CORS para dibujar imágenes a través de dominios sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
-- Gecko 11.0 (Firefox 11.0 / Thunderbird 11.0 / SeaMonkey 2.8) ahora permite SVG-como-una-imagen para ser dibujada en el canvas sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- `drawImage()` solo funciona correctamente en un {{domxref("HTMLVideoElement")}} cuando su {{domxref("HTMLMediaElement.readyState")}} es mayor que 1 (es decir, el evento de búsqueda se activa después de configurar la propiedad `currentTime`).
+- `drawImage()` siempre utilizará del elemento de origen _el tamaño intrínseco en píxeles de CSS_ al dibujar, recortar o escalar.
+- En algunas versiones anteriores del navegador, `drawImage()` ignorará todos los metadatos EXIF en las imágenes, incluida la Orientación. Este comportamiento es especialmente problemático en dispositivos iOS. Debe detectar la Orientación usted mismo y usar la función `rotate()` para corregirla.
 
 ## Mira también
 

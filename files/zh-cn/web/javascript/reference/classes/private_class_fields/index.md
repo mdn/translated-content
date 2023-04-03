@@ -227,7 +227,7 @@ console.log(Derived.publicStaticMethod2());
 
 ## 规范
 
-{{Specifications("javascript.classes")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 

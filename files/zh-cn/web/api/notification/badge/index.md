@@ -1,6 +1,6 @@
 ---
 title: Notification.badge
-slug: Web/API/notification/badge
+slug: Web/API/Notification/badge
 ---
 
 {{SeeCompatTable}}{{APIRef("Notifications API")}}

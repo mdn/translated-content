@@ -18,7 +18,7 @@ translation_of: Web/API/Node/appendChild
 
 Если данный дочерний элемент является {{domxref("DocumentFragment")}}, то все содержимое {{domxref("DocumentFragment")}} перемещается в дочерний список указанного родительского узла.
 
-> **Примечание:** **Доступен новый API!** > [`ParentNode.append()`](/ru/docs/Web/API/ParentNode/append) поддерживает несколько аргументов и добавляемые строки.
+> **Примечание:** Доступен новый API! > [`ParentNode.append()`](/ru/docs/Web/API/ParentNode/append) поддерживает несколько аргументов и добавляемые строки.
 
 ## Синтаксис
 

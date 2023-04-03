@@ -12,10 +12,6 @@ WebKit это торговая марка Apple, а сам фреймворк р
 
 ## Читайте также
 
-### Весь материал
-
-- {{Interwiki("wikipedia", "WebKit")}} на Википедии
-
 ### Технический справочник
 
 - [WebKit CSS extensions](/ru/docs/Web/CSS/Reference/Webkit_Extensions)

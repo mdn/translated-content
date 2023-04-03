@@ -250,7 +250,7 @@ if (typeof Object.assign != 'function') {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.assign")}}
+{{Compat}}
 
 ## Ver también
 

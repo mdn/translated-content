@@ -139,23 +139,9 @@ var z = new Uint8Array(buffer, 1, 4);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Uint8Array")}}
-
-## Notas de compatibilidad
-
-A partir de ECMAScript 2015 (ES6), los constructors de `Uint8Array` requiren ser construidos con un operador {{jsxref("Operators/new", "new")}}. Llamar a un contructor de `Uint8Array` como una función sin `new`, lanzará un {{jsxref("TypeError")}} de ahora en adelante.
-
-```js example-bad
-var dv = Uint8Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Uint8Array([1, 2, 3]);
-```
+{{Compat}}
 
 ## Véase también
 

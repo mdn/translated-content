@@ -71,7 +71,7 @@ isolation: unset;
 }
 ```
 
-{{ EmbedLiveSample('%E7%A4%BA%E4%BE%8B', "230", "230") }}
+{{ EmbedLiveSample('示例', "230", "230") }}
 
 ## 规范
 

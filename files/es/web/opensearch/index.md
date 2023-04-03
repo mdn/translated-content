@@ -120,7 +120,7 @@ Si hay algún error en el fichero XML que describe el complemento, seguramente h
 - Asegúrate de que el documento XML de tu complemento está bien formado. Puedes comprobarlo cargando el fichero directamente en Firefox. Los _Ampersands_ en la plantilla de la URL deben ser escapadas con \&amp; y las etiquetas (_tags_) deben ser cerradas con una barra (`/`) al final o con la correspondiente etiqueta de cierre.
 - El atributo `xmlns` es importante. Sin él, puedes obtener un mensaje de error indicando que "Firefox no pudo descargar el motor de búsqueda desde: (URL)".
 - Ten en cuente que **debes** incluir una URL del tipo `text/html` — los complmentos que sólo incluyan URLs del tipo Atom o [RSS](/es/RSS) (lo cual es válido, pero Firefox no admite) producirán el error "no pudo descargar el motor de búsqueda".
-- Los _favicons_ obtenidos remotamente no deben ser mayores de 10KB (ver {{ Bug(361923) }}).
+- Los _favicons_ obtenidos remotamente no deben ser mayores de 10KB (ver [Error 361923 en Firefox](https://bugzil.la/361923)).
 
 Adicionalmente, el servicio de complementos de búsqueda suministra un mecanismo de registro (_logging_) que puede ser de utilidad a los desarrolladores de complementos. Usa _about:config_ para establecer la preferencia '`browser.search.log`' al valor `true`. La información de registro aparecerá en la consola de errores de Firefox (Tools->Error Console) cuando se añada un complemento de búsqueda.
 
@@ -128,7 +128,7 @@ Adicionalmente, el servicio de complementos de búsqueda suministra un mecanismo
 
 - [OpenSearch - Documentación oficial](http://opensearch.org/)
 - Technorati.com tiene un ejemplo de fichero XML en <http://technorati.com/osd.xml>
-- Más información sobre problemas en la detección automática en bugzilla {{ Bug(340208) }}
+- Más información sobre problemas en la detección automática en bugzilla [Error 340208 en Firefox](https://bugzil.la/340208)
 - Wikipedia - [`data:` URL](http://es.wikipedia.org/wiki/Data:_URL)
 - [Searchy](http://searchy.protecus.de/) - [Crea](http://searchy.protecus.de/en/add2.php) tu propio complemento o usa [la lista de complementos](http://searchy.protecus.de/en/searchbox-add-ons.php).
 - [searchplugins.net](http://www.searchplugins.net) - Crea complementos OpenSearch plugins para ser usados con Firefox 2. [Lista de complementos de búsqueda](http://www.searchplugins.net/pluginlist.aspx)

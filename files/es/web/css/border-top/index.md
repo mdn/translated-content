@@ -71,4 +71,4 @@ element {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-top")}}
+{{Compat}}

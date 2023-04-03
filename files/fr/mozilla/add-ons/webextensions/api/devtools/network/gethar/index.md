@@ -31,9 +31,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet contenant le journal HAR pour l'onglet en cours. Pour plus de détails sur ce que contient l'objet journal, reportez-vous à la [spécification HAR](http://www.softwareishard.com/blog/har-12-spec/#log).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.network.getHAR")}}
+{{Compat}}
 
 ## Exemples
 

@@ -1,6 +1,6 @@
 ---
 title: Character set (文字コード)
-slug: Glossary/character_set
+slug: Glossary/Character_set
 ---
 
 **文字コード**は、コンピューターに{{Glossary("Character", "文字")}} (文字、数字、区切り記号、空白文字などを含む) を理解させるための符号化システムです。

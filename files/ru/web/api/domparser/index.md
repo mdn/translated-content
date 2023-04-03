@@ -45,7 +45,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ## Разбор SVG или HTML
 
-`DOMParser` так же может быть использован для разбора SVG документа {{geckoRelease("10.0")}} или HTML документа {{geckoRelease("12.0")}}. На выходе возможны 3 варианта, в зависимости от переданного MIME типа. Если MIME тип передан как `text/xml`, результирующий объект будет типа `XMLDocument`, если `image/svg+xml`, соответственно `SVGDocument`, а для MIME типа `text/html` - `HTMLDocument`.
+`DOMParser` так же может быть использован для разбора SVG документа Gecko 10.0 или HTML документа Gecko 12.0. На выходе возможны 3 варианта, в зависимости от переданного MIME типа. Если MIME тип передан как `text/xml`, результирующий объект будет типа `XMLDocument`, если `image/svg+xml`, соответственно `SVGDocument`, а для MIME типа `text/html` - `HTMLDocument`.
 
 ```js
 var parser = new DOMParser();

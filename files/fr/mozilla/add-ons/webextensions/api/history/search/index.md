@@ -121,9 +121,9 @@ searching.then(onGot);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.search")}}
+{{Compat}}
 
 > **Note :**
 >

@@ -42,7 +42,7 @@ slug: Web/HTML/Element/blockquote
 
 此元素的属性包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 是一个标注引用的信息的来源文档或者相关信息的 URL。通常用来描述能够解释引文的上下文或者引用的信息。
 
 ## 使用备注
@@ -53,7 +53,7 @@ slug: Web/HTML/Element/blockquote
 
 如果想要使用短引用（行间引用），可以使用{{HTMLElement("q")}} 标签。
 
-## 例子
+## 示例
 
 下面的这个例子演示了使用 `<blockquote>` 元素引用一段来自 {{RFC(1149)}} 的内容，以禽类作为载体的 IP 数据包传输标准。
 
@@ -75,7 +75,7 @@ slug: Web/HTML/Element/blockquote
 
 上面的 HTML 代码将会生成：
 
-{{EmbedLiveSample("Example", 640, 180)}}
+{{EmbedLiveSample("示例", 640, 180)}}
 
 ## 规范
 
