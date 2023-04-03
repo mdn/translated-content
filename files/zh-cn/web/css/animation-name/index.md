@@ -53,7 +53,7 @@ animation-name: unset;
 
 ### 命名动画
 
-此动画的 `animation-name` 叫做 `rotate`。
+此动画的 `animation-name` 为 `rotate`。
 
 #### HTML
 
