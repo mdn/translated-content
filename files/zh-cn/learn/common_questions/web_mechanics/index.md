@@ -10,7 +10,7 @@ slug: Learn/Common_questions/Web_mechanics
 - [互联网是怎么工作的？](/zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work)
   - : **互联网**是 Web 的基石，是让 Web 变得可能的基础设施。本质上来说，互联网是一个大型的相互交流的计算机网络。本文讨论了它在底层是如何工作的。
 - [网页、网站、网络服务器和搜索引擎的区别是什么？](/zh-CN/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
-  - : 本文中我们讲述了各种和 Web 相关的概念：网页，网站，网络服务器，以及搜索引擎。这些概念常常被网络新手混淆，或者被误用。让我们看看它们到底代指的是什么吧！
+  - : 本文中我们讲述了各种和 Web 相关的概念：网页、网站、网络服务器，以及搜索引擎。这些概念常常被网络新手混淆，或者被误用。让我们看看它们到底代指的是什么吧！
 - [什么是超链接？](/zh-CN/docs/Learn/Common_questions/What_are_hyperlinks)
   - : 在本文中，我们将讨论超链接是什么，以及它们为什么重要。
 - [什么是 URL？](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)
