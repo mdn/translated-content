@@ -44,7 +44,7 @@ groupToMap(callbackFn, thisArg)
 
 `groupToMap()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用一次提供的 `callbackFn` 函数一次。该回调函数返回一个值，用以指示相关元素所属的组。`callbackFn` 返回的值用作 `groupToMap()` 返回的 {{jsxref("Map")}} 的键。每个键都有一个相关联的数组，其中包含回调返回相同值的所有元素。
 
-`callbackFn` 函数会被数组中的*每个*索引调用，而不仅仅是那些具有赋值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏)中，空槽的行为表现与 `undefined` 相同。
+`callbackFn` 函数会被数组中的*每个*索引调用，而不仅仅是那些具有赋值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，空槽的行为表现与 `undefined` 相同。
 
 `groupToMap()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同元素的数组映射。但是，作为 `callbackFn` 提供的函数可以改变数组。请注意，在第一次调用 `callbackFn` _之前_，数组的长度已经被保存。因此：
 
