@@ -82,7 +82,7 @@ slug: Web/HTML/Element/input/checkbox
 - `checked`
 
   - : 一个布尔属性，表示该复选框是否被默认选中（当页面加载时）。它不表示这个复选框当前是否被选中：如果复选框的状态被改变，这个内容属性不反映这个变化。此时，只有 {{domxref("HTMLInputElement")}} 的 IDL 属性 `checked` 会更新。
-    > **备注：** 与其他输入控件不同，复选框的值只有在复选框当前状态为 `checked` 时才会被包含在提交的数据中。如果它被选中，那么复选框的 `value` 属性的值就会被报告为输入的值。不像其他浏览器那样，Firefox 默认情况下在不同页面之间会[保持 `<input>` 动态选中的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 {{htmlattrxref("autocomplete","input")}} 属性来控制这个特性。
+    > **备注：** 与其他输入控件不同，复选框的值只有在复选框当前状态为 `checked` 时才会被包含在提交的数据中。如果它被选中，那么复选框的 `value` 属性的值就会被报告为输入的值。不像其他浏览器那样，Firefox 默认情况下在不同页面之间会[保持 `<input>` 动态选中的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性来控制这个特性。
 
 - `value`
 
@@ -201,7 +201,7 @@ function updateDisplay() {
 
 ## 验证方式
 
-复选框支持提供给所有 {{HTMLElement("input")}} 元素的[验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)功能。然而，大部分的 {{domxref("ValidityState")}} 值将永远为 `false`。如果复选框具有 {{htmlattrxref("required", "input")}} 属性，但没有被选中，那么 {{domxref("ValidityState.valueMissing")}} 将为 `true`。
+复选框支持提供给所有 {{HTMLElement("input")}} 元素的[验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)功能。然而，大部分的 {{domxref("ValidityState")}} 值将永远为 `false`。如果复选框具有 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，但没有被选中，那么 {{domxref("ValidityState.valueMissing")}} 将为 `true`。
 
 ## 示例
 

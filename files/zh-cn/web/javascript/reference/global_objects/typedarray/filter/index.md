@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 
 ## 语法
 
-```plain
-typedarray.filter(callback[, thisArg])
+```js-nolint
+filter(callbackFn)
+filter(callbackFn, thisArg)
 ```
 
 ### 参数

@@ -21,7 +21,7 @@ Here we see a standard disclosure widget with the label "System Requirements", i
 
 ![Screenshot of open <details> widget. The triangle now points downward, and a detailed description of what “System Requirements” means is shown.](details-open.png)
 
-From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute.
+From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its [`open`](/zh-CN/docs/Web/HTML/Element/details#open) attribute.
 
 By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 

@@ -11,8 +11,10 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 
 ## 语法
 
-```plain
-typedarray.slice([begin[, end]])
+```js-nolint
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ## 参数

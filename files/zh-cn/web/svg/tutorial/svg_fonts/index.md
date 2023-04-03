@@ -41,7 +41,7 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 紧跟着{{ SVGElement("font-face-src") }}元素的是一个{{ SVGElement("missing-glyph") }}元素。它定义了如果一个特定的字形在字体中找不到，而且也没有回调机制的话，该如何显示。它同时还显示了如何创建字形：在里面简单添加任一个图形化 SVG 内容。你可以在这里使用任何其他的 SVG 元素，甚至是 {{ SVGElement("filter") }}元素、{{ SVGElement("a") }}元素或者 {{ SVGElement("script") }}元素。然而，为了简化字形，你可以简单添加一个属性`d`——它精确定义了字形的形状，就像标准 SVG 路径所做的那样。
 
-真正的字形是用{{ SVGElement("glyph") }}元素定义的。它最重要的属性是`unicode`。它定义了表达这个字形的 unicode 代码点。如果你还在一个字形上指定了{{htmlattrxref("lang")}}属性，你可以更进一步专门限定它为特定的语言（由目标上的`xml:lang`属性表达）。而且，你可以使用任意的 SVG 来定义这个字形，它允许用户代理所支持的很多效果。
+真正的字形是用{{ SVGElement("glyph") }}元素定义的。它最重要的属性是`unicode`。它定义了表达这个字形的 unicode 代码点。如果你还在一个字形上指定了[`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)属性，你可以更进一步专门限定它为特定的语言（由目标上的`xml:lang`属性表达）。而且，你可以使用任意的 SVG 来定义这个字形，它允许用户代理所支持的很多效果。
 
 有两个进一步的元素，可以定义在`font`元素里面：{{ SVGElement("hkern") }}元素和{{ SVGElement("vkern") }}元素。这两个元素每个引用到至少两个字符（属性 u1 和属性 u2）以及一个属性 k。属性 k 决定了那些字符之间的距离应该减少多少。下面的示例指示用户代理把“A”和“V”字符放得比标准的字符间距更靠近一些。
 

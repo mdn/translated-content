@@ -43,26 +43,26 @@ slug: Web/HTML/Element/button
 - `autocomplete` {{non-standard_inline}}
   - : 该属性在 {{HTMLElement("button")}}上的使用并未标准化，只有 Firefox 允许。不像其他浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态（[Firefox persists the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ）。将此属性设置为`off` (i.e. `autocomplete="off"`) 关闭此特性。参见 [Firefox bug 654072](https://bugzil.la/654072)。
 - `disabled`
-  - : 此布尔属性表示用户不能与 button 交互。如果属性值未指定，button 继承包含元素，例如{{HTMLElement("fieldset")}}；如果没有设置**disabled**属性的包含元素，button 将可交互。不像其他浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态。使用{{htmlattrxref("autocomplete","button")}}属性可控制此特性。
+  - : 此布尔属性表示用户不能与 button 交互。如果属性值未指定，button 继承包含元素，例如{{HTMLElement("fieldset")}}；如果没有设置**disabled**属性的包含元素，button 将可交互。不像其他浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态。使用[`autocomplete`](/zh-CN/docs/Web/HTML/Element/button#autocomplete)属性可控制此特性。
 - `form`
   - : 表示 button 元素关联的 form 元素（它的表单拥有者）。此属性值必须为同一文档中的一个{{HTMLElement("form")}}元素的**id**属性。如果此属性未指定，\<button>元素必须是 form 元素的后代。利用此属性，你可以将\<button>元素放置在文档内的任何位置，而不仅仅是作为他们 form 元素的后代。
 - `formaction`
-  - : 表示程序处理 button 提交信息的 URI。如果指定了，将重写 button 表单拥有者的{{htmlattrxref("action","form")}}属性。
+  - : 表示程序处理 button 提交信息的 URI。如果指定了，将重写 button 表单拥有者的[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性。
 - `formenctype`
   - : 如果 button 是 submit 类型，此属性值指定提交表单到服务器的内容类型。可选值：
 
     - `application/x-www-form-urlencoded`: 未指定时的默认值。
-    - `multipart/form-data`: 如果使用{{htmlattrxref("type","input")}}属性的{{HTMLElement("input")}}元素设置文件，使用此值。
-    - `text/plain`如果指定此属性，它将重写 button 的表单拥有者的{{htmlattrxref("enctype","form")}}属性。
+    - `multipart/form-data`: 如果使用[`type`](/zh-CN/docs/Web/HTML/Element/input#type)属性的{{HTMLElement("input")}}元素设置文件，使用此值。
+    - `text/plain`如果指定此属性，它将重写 button 的表单拥有者的[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype)属性。
 - `formmethod`
   - : 如果 button 是 submit 类型，此属性指定浏览器提交表单使用的 HTTP 方法。可选值：
 
     - `post`：来自表单的数据被包含在表单内容中，被发送到服务器。
-    - `get`：来自表单的数据以'?'作为分隔符被附加到 form 的**URI**属性中，得到的 URI 被发送到服务器。当表单没有副作用，且仅包含 ASCII 字符时使用这种方法。如果指定了，此属性会重写 button 拥有者的{{htmlattrxref("method","form")}}属性。
+    - `get`：来自表单的数据以'?'作为分隔符被附加到 form 的**URI**属性中，得到的 URI 被发送到服务器。当表单没有副作用，且仅包含 ASCII 字符时使用这种方法。如果指定了，此属性会重写 button 拥有者的[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性。
 - `formnovalidate`
-  - : 如果 button 是 submit 类型，此布尔属性指定当表单被提交时不需要验证。如果指定了，它会重写 button 拥有者的{{htmlattrxref("novalidate","form")}}属性。
+  - : 如果 button 是 submit 类型，此布尔属性指定当表单被提交时不需要验证。如果指定了，它会重写 button 拥有者的[`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate)属性。
 - `formtarget`
-  - : 如果 button 是 submit 类型，此属性指定一个名称或关键字，表示接收提交的表单后在哪里显示响应。这是一个浏览上下文（例如 tab，window 或内联框架）的名称或关键字。如果指定了，它会重写 button 拥有者的{{htmlattrxref("target", "form")}} 属性。关键字如下：
+  - : 如果 button 是 submit 类型，此属性指定一个名称或关键字，表示接收提交的表单后在哪里显示响应。这是一个浏览上下文（例如 tab，window 或内联框架）的名称或关键字。如果指定了，它会重写 button 拥有者的[`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性。关键字如下：
 
     - `_self`: 在同一个浏览上下文中加载响应作为当前的。未指定时此值为默认值。
     - `_blank`: 在一个新的不知名浏览上下文中加载响应。
@@ -92,7 +92,7 @@ IE8 已经修复了这个问题。
 
 Firefox 出于使用方便的目的，会在获得焦点的按钮上添加一个细小的虚线框。这个边框由浏览器内部的样式表中的 CSS 定义，但如果有必要的话，你可以用 `button{{cssxref("::-moz-focus-inner")}} { }` 重写这个样式。
 
-Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [保持动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ，这个行为在其他浏览器上是没有的。将 {{htmlattrxref("autocomplete","button")}} 属性设置为 `off` 可以禁用这项特性。参见 [Firefox bug 654072](https://bugzil.la/654072)。
+Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [保持动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ，这个行为在其他浏览器上是没有的。将 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/button#autocomplete) 属性设置为 `off` 可以禁用这项特性。参见 [Firefox bug 654072](https://bugzil.la/654072)。
 
 安卓系统上的 Firefox <35 会为每个按钮设置一个默认的 {{ cssxref("background-image") }} 渐变背景（参见 [Firefox bug 763671](https://bugzil.la/763671)）。这项可以通过 `background-image: none` 禁用。
 

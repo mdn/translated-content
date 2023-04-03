@@ -60,7 +60,7 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defines in the [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) IETF document. **xml:lang** has priority over it.
 
 - [`slot`](/zh-TW/docs/Web/HTML/Global_attributes/slot) {{experimental_inline}}
-  - : Assigns a slot in a [shadow DOM](/zh-TW/docs/Web/Web_Components/Shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{htmlattrxref("name", "slot")}} attribute's value matches that `slot` attribute's value.
+  - : Assigns a slot in a [shadow DOM](/zh-TW/docs/Web/Web_Components/Shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/zh-TW/docs/Web/HTML/Element/slot#name) attribute's value matches that `slot` attribute's value.
 - [`spellcheck`](/zh-TW/docs/Web/HTML/Global_attributes/spellcheck) {{experimental_inline}}
   - : Is an enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values: `true`, which indicates that the element should be, if possible, checked for spelling errors;
     - `false`, which indicates that the element should not be checked for spelling errors.

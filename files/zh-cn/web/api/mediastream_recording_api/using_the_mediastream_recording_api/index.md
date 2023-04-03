@@ -245,7 +245,7 @@ mediaRecorder.onstop = function(e) {
 </article>
 ```
 
-之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window\.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的{{htmlattrxref("src", "audio")}}属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。
+之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window\.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的[`src`](/zh-CN/docs/Web/HTML/Element/audio#src)属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。
 
 最后，我们监听删除按钮的 onclick 事件，以便能够删除整个剪辑 HTML 结构。
 

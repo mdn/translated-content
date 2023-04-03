@@ -33,7 +33,7 @@ original_slug: Web/Guide/HTML/Content_categories
 - {{HTMLElement("area")}}，如果它是 {{HTMLElement("map")}} 元素的後代。
 - {{HTMLElement("link")}}，如果[**itemprop**](/zh-TW/docs/HTML/Global_attributes#itemprop) 屬性存在。
 - {{HTMLElement("meta")}}，如果[**itemprop**](/zh-TW/docs/HTML/Global_attributes#itemprop) 屬性存在。
-- {{HTMLElement("style")}}，如果 {{htmlattrxref("scoped","style")}} 屬性存在。
+- {{HTMLElement("style")}}，如果 [`scoped`](/zh-TW/docs/Web/HTML/Element/style#scoped) 屬性存在。
 
 ### 章節型內容（Sectioning content）
 
@@ -77,12 +77,12 @@ original_slug: Web/Guide/HTML/Content_categories
 
 在滿足特定條件下，某些元素也屬這個類型：
 
-- {{HTMLElement("audio")}}，如果 {{htmlattrxref("controls", "audio")}} 元素存在。
-- {{HTMLElement("img")}}，如果 {{htmlattrxref("usemap", "img")}} 元素存在。
-- {{HTMLElement("input")}}，如果 {{htmlattrxref("type", "input")}} 元素不是隱藏狀態。
-- {{HTMLElement("menu")}}，如果 {{htmlattrxref("type", "menu")}} 元素處於 toolbar 狀態。
-- {{HTMLElement("object")}}，如果 {{htmlattrxref("usemap", "object")}} 元素存在。
-- {{HTMLElement("video")}}，如果 {{htmlattrxref("controls", "video")}} 元素存在。
+- {{HTMLElement("audio")}}，如果 [`controls`](/zh-TW/docs/Web/HTML/Element/audio#controls) 元素存在。
+- {{HTMLElement("img")}}，如果 [`usemap`](/zh-TW/docs/Web/HTML/Element/img#usemap) 元素存在。
+- {{HTMLElement("input")}}，如果 [`type`](/zh-TW/docs/Web/HTML/Element/input#type) 元素不是隱藏狀態。
+- {{HTMLElement("menu")}}，如果 [`type`](/zh-TW/docs/Web/HTML/Element/menu#type) 元素處於 toolbar 狀態。
+- {{HTMLElement("object")}}，如果 [`usemap`](/zh-TW/docs/Web/HTML/Element/object#usemap) 元素存在。
+- {{HTMLElement("video")}}，如果 [`controls`](/zh-TW/docs/Web/HTML/Element/video#controls) 元素存在。
 
 ### 捫及內容（Palpable content）
 

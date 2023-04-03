@@ -61,7 +61,7 @@ slug: Web/HTML/Global_attributes
 - [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id)
   - : 定义唯一标识符（ID），该标识符在整个文档中必须是唯一的。其目的是在链接（使用片段标识符），脚本或样式（使用 CSS）时标识元素。
 - [`inputmode`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode)
-  - : 向浏览器提供有关在编辑此元素或其内容时要使用的虚拟键盘配置类型的提示。主要用于 {{HTMLElement("input")}}元素，但在{{HTMLAttrxRef("contenteditable")}}模式下可用于任何元素。
+  - : 向浏览器提供有关在编辑此元素或其内容时要使用的虚拟键盘配置类型的提示。主要用于 {{HTMLElement("input")}}元素，但在[`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable)模式下可用于任何元素。
 - [`is`](/zh-CN/docs/Web/HTML/Global_attributes/is)
   - : 允许您指定标准 HTML 元素应该像已注册的自定义内置元素一样（有关更多详细信息，请参阅使用自定义元素）。
 
@@ -74,7 +74,7 @@ slug: Web/HTML/Global_attributes
 - [`itemref`](/zh-CN/docs/Web/HTML/Global_attributes/itemref)
   - : 只有不是具有`itemscope`属性的元素的后代，它的属性才可以与使用`itemref`项目相关联。它提供了元素 ID 列表（而不是`itemids`）以及文档中其他位置的其他属性。
 - [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes/itemscope)
-  - : `itemscope`（通常）与{{htmlattrxref("itemtype")}}一起使用，以指定包含在关于特定项目代码块中的 HTML。 `itemscope`创建 Item 并定义与之关联的`itemtype`的范围。 `itemtype`是描述项及其属性上下文的词汇表（例如[schema.org](https://schema.org/)）的有效 URL。
+  - : `itemscope`（通常）与[`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype)一起使用，以指定包含在关于特定项目代码块中的 HTML。 `itemscope`创建 Item 并定义与之关联的`itemtype`的范围。 `itemtype`是描述项及其属性上下文的词汇表（例如[schema.org](https://schema.org/)）的有效 URL。
 - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)
   - : 指定将用于在数据结构中定义`itemprops`（项属性）的词汇表的 URL。 [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes/itemscope)用于设置数据结构中按`itemtype`设置的词汇表的生效范围。
 - [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang)
@@ -82,7 +82,7 @@ slug: Web/HTML/Global_attributes
 - [`part`](/zh-CN/docs/Web/HTML/Global_attributes/part) {{Experimental_Inline}}
   - : 元素的部件名称的空格分隔列表。Part 名称允许 CSS 通过{{CSSxRef("::part()")}} 伪元素选择和设置阴影关联树中的特定元素。
 - [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot)
-  - : 将[shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM)阴影关联树中的一个沟槽分配给一个元素：具有`slot`属性的元素被分配给由{{HTMLElement("slot")}}元素创建的沟槽，其{{htmlattrxref("name", "slot")}}属性的值与`slot`属性的值匹配。
+  - : 将[shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM)阴影关联树中的一个沟槽分配给一个元素：具有`slot`属性的元素被分配给由{{HTMLElement("slot")}}元素创建的沟槽，其[`name`](/zh-CN/docs/Web/HTML/Element/slot#name)属性的值与`slot`属性的值匹配。
 - [`spellcheck`](/zh-CN/docs/Web/HTML/Global_attributes/spellcheck) {{experimental_inline}}
   - : 枚举属性定义是否可以检查元素是否存在拼写错误。它可能具有以下值：
 

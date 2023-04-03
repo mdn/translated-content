@@ -59,7 +59,7 @@ slug: Web/HTML/Element/ol
     - `A` 表示大写英文字母编号
     - `i` 表示小写罗马数字编号
     - `I` 表示大写罗马数字编号
-    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 {{HTMLAttrxRef("type", "li")}} 属性。
+    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 [`type`](/zh-CN/docs/Web/HTML/Element/li#type) 属性。
 
     > **备注：** 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。
 
@@ -182,5 +182,5 @@ slug: Web/HTML/Element/ol
 
   - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，
   - [CSS 计数器](/zh-CN/docs/CSS_Counters), 用于处理复杂的嵌套列表，
-  - {{cssxref("line-height")}} 属性，可以模拟过时的 {{htmlattrxref("compact", "ol")}} 属性；
+  - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](/zh-CN/docs/Web/HTML/Element/ol#compact) 属性；
   - {{cssxref("margin")}} 属性，用来控制列表的缩进。

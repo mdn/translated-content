@@ -39,7 +39,7 @@ window.alert(selObj);
 - 范围 (range)
   - : 范围指的是文档中连续的一部分。一个范围包括整个节点，也可以包含节点的一部分，例如文本节点的一部分。用户通常下只能选择一个范围，但是有的时候用户也有可能选择多个范围（例如当用户按下 Control 按键并框选多个区域时，Chrome 中禁止了这个操作，译者注）。“范围”会被作为 {{domxref("Range")}} 对象返回。Range 对象也能通过 DOM 创建、增加、删减。
 - 可编辑元素 (editing host)
-  - : 一个用户可编辑的元素（例如一个使用 {{htmlattrxref("contenteditable")}} 的 HTML 元素，或是在启用了 {{domxref("Document.designMode", "designMode")}} 的 {{domxref("Document")}} 的子元素）。详见 [开发者笔记](#Selection_API_在可编辑元素焦点更改方面的行为)。
+  - : 一个用户可编辑的元素（例如一个使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 的 HTML 元素，或是在启用了 {{domxref("Document.designMode", "designMode")}} 的 {{domxref("Document")}} 的子元素）。详见 [开发者笔记](#Selection_API_在可编辑元素焦点更改方面的行为)。
 
 ## 属性
 
