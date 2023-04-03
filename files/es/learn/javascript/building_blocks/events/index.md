@@ -297,11 +297,12 @@ Finalmente, varias configuraciones comunes en servidores desactivan el código J
 
 **Nunca deberías utilizar atributos HTML para manejar eventos** — Estos están obsoletos y utilizarlos es mala práctica.
 
-## Event objects
+## Objetos evento
 
-Sometimes, inside an event handler function, you'll see a parameter specified with a name such as `event`, `evt`, or `e`.
-This is called the **event object**, and it is automatically passed to event handlers to provide extra features and information.
-For example, let's rewrite our random color example again slightly:
+A menudo, dentro de la función manejadora de eventos verás un parámetro especificado con el nombre de `event`, `evt`, or `e`.
+A este se le conoce como **objeto evento**,
+y es pasado automáticamente a los manejadores de eventos para proporcionar información y características extra.
+Por ejemplo, vamos a reestructurar ligeramente nuestro ejemplo de color aleatorio una vez más:
 
 ```js
 const btn = document.querySelector("button");
@@ -319,23 +320,23 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Note:** You can find the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) for this example on GitHub (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> **Nota:** Puedes encontrar el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) de este ejemplo en Github (además [mira cómo se ejecuta en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
-Here you can see we are including an event object, **e**, in the function, and in the function setting a background color style on `e.target` — which is the button itself.
-The `target` property of the event object is always a reference to the element the event occurred upon.
-So, in this example, we are setting a random background color on the button, not the page.
+Aquí puedes ver que estamos incluyendo un objeto evento **e** en la función, y dentro de nuestra función estamos cambiando el estilo de color de fondo sobre `e.target`, que es el botón como tal.
+La propiedad `target` del objeto evento siempre es una referencia al elemento sobre el cual ocurrió el evento.
+Por lo tanto, en este ejemplo, estamos estableciendo el color de fondo aleatorio en el botón, no la página.
 
-> **Note:** See the [Event delegation](#event_delegation) section below for an example where we use `event.target`.
+> **Nota:** Mira la sección de [delegación de Eventos](#event_delegation) más abajo para ver un ejemplo donde usamos `event.target`.
 
-> **Note:** You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function.
-> `e`/`evt`/`event` is most commonly used by developers because they are short and easy to remember.
-> It's always good to be consistent — with yourself, and with others if possible.
+> **Nota:** Puedes utilizar cualquier nombre para el objeto evento, simplemente debes elegir un nombre que puedas usar para hacer referencia a él dentro de la función manejadora.
+> `e`/`evt`/`event` son los nombres más comunes utilizados por desarrolladores porque son cortos y fáciles de recordar.
+> Siempre es bueno ser consistente, contigo mismo y los demás siempre que sea posible.
 
-### Extra properties of event objects
+### Propiedades extra en los objetos evento
 
-Most event objects have a standard set of properties and methods available on the event object; see the {{domxref("Event")}} object reference for a full list.
+La mayoría de objetos eventos tienen un conjunto estándar de propiedades y métodos disponibles en el objeto evento; visita la referencia del objeto {{domxref("Event")}} para una lista completa.
 
-Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Element/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
+Algunos objetos evento agregan propiedades extra que son relevantes para un tipo de evento en particular. Por ejemplo, el evento {{domxref("Element/keydown_event", "keydown")}} se lanza cuando el usuario presiona una tecla. Su objeto evento es un {{domxref("KeyboardEvent")}}, el cual es un objeto `Event` especializado con una propiedad `key` que nos indica la tecla que fue presionada.
 
 ```html
 <input id="textBox" type="text" />
@@ -357,21 +358,21 @@ div {
 }
 ```
 
-Try typing into the text box and see the output:
+Intenta escribir en la caja de texto y mira el resultado:
 
 {{EmbedLiveSample("Extra_properties_of_event_objects", 100, 100)}}
 
-## Preventing default behavior
+## Evitando el comportamiento por defecto
 
-Sometimes, you'll come across a situation where you want to prevent an event from doing what it does by default.
-The most common example is that of a web form, for example, a custom registration form.
-When you fill in the details and click the submit button, the natural behavior is for the data to be submitted to a specified page on the server for processing, and the browser to be redirected to a "success message" page of some kind (or the same page, if another is not specified).
+En algunas ocasiones, te encontrarás en una situación donde quieres evitar que un evento realice su acción por defecto.
+El escenario más común es el de un formulario web, por ejemplo, un formulario personalizado para un registro.
+Cuando llenas todos los campos y haces click en el botón para enviar, el comportamiento normal es que la información sea enviada a un servidor para que sea procesada, mientras que el navegador se redirecciona a una página donde se muestra un mensaje de "envío exitoso" (o a la misma página si no se especifica otra).
 
-The trouble comes when the user has not submitted the data correctly — as a developer, you want to prevent the submission to the server and give an error message saying what's wrong and what needs to be done to put things right.
-Some browsers support automatic form data validation features, but since many don't, you are advised to not rely on those and implement your own validation checks.
-Let's look at a simple example.
+El problema viene cuando el usuario no ha introducido sus datos correctamente. Como desarrollador, quieres evitar que la información sea enviada al servidor y, en su lugar, mostrar un mensaje de error que señale cuáles son los problemas y qué se necesita para corregirlos.
+Algunos navegadores tienen soporte para características de validación automática de formularios, pero tomando en cuenta que muchos otros no, se te recomienda que no confies en estos mecanismos e implementes tus propias pruebas de validación.
+Veamos un ejemplo.
 
-First, a simple HTML form that requires you to enter your first and last name:
+Primero, un formulario HTML simple que requiere que introduzcas tu nombre y apellido:
 
 ```html
 <form>
@@ -396,8 +397,8 @@ div {
 }
 ```
 
-Now some JavaScript — here we implement a very simple check inside a handler for the [`submit`](/en-US/docs/Web/API/HTMLFormElement/submit_event) event (the submit event is fired on a form when it is submitted) that tests whether the text fields are empty.
-If they are, we call the [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) function on the event object — which stops the form submission — and then display an error message in the paragraph below our form to tell the user what's wrong:
+Ahora un poco de JavaScript. Aquí vamos a implementar una simple prueba dentro del manejador del evento [`submit`](/es/docs/Web/API/HTMLFormElement/submit_event) (el evento *submit* es lanzado en un formulario cuando este se envía) que determina si los campos de texto están vacíos o no.
+En caso de que lo estén, llamamos al método [`preventDefault()`](/es/docs/Web/API/Event/preventDefault) del objeto evento, el cual detiene el envío del formulario y muestra un mensaje de error en el párrafo debajo de nuestro formulario para hacerle saber al usuario cuál es el problema:
 
 ```js
 const form = document.querySelector("form");
@@ -413,20 +414,20 @@ form.addEventListener("submit", (e) => {
 });
 ```
 
-Obviously, this is pretty weak form validation — it wouldn't stop the user from validating the form with spaces or numbers entered into the fields, for example — but it is OK for example purposes.
-The output is as follows:
+Obviamente esta es una validación bastante débil, esto no detendría al usuario de, por ejemplo, llenar los campos del formulario con espacios en blanco o números, pero, es suficiente para los propósitos de nuestro ejemplo.
+El resultado es el siguiente:
 
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
 
-> **Note:** For the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here).
+> **Nota:** Para ver el código fuente completo, aquí tienes el archivo [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (también puedes [verlo ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aquí).
 
-## Event bubbling
+## Bubbling de eventos
 
-Event bubbling describes how the browser handles events targeted at nested elements.
+El *event bubbling* (o burbujeo de eventos) describe como el navegador maneja eventos dirigidos a elementos anidados.
 
-### Setting a listener on a parent element
+### Establaciendo un detector de eventos en un elemento padre
 
-Consider a web page like this:
+Considera una página web como la siguiente:
 
 ```html
 <div id="container">
@@ -435,7 +436,7 @@ Consider a web page like this:
 <pre id="output"></pre>
 ```
 
-Here the button is inside another element, a {{HTMLElement("div")}} element. We say that the `<div>` element here is the **parent** of the element it contains. What happens if we add a click event handler to the parent, then click the button?
+Aquí el elemento *button* se encuentra dentro de otro elemento, de forma específica, un elemento {{HTMLElement("div")}}. En este caso, decimos que el elemento `<div>` es el **padre** del elemento que contiene. ¿Qué sucede si agregamos un manejador para el evento `click` en el padre y luego hacemos click en el botón?
 
 ```js
 const output = document.querySelector("#output");
@@ -449,17 +450,17 @@ container.addEventListener("click", handleClick);
 
 {{ EmbedLiveSample('Setting a listener on a parent element', '100%', 200, "", "") }}
 
-You'll see that the parent fires a click event when the user clicks the button:
+Como puedes ver, el padre lanza el evento `click` cuando el usuario hace click en el botón:
 
 ```
 You clicked on a DIV element
 ```
 
-This makes sense: the button is inside the `<div>`, so when you click the button you're also implicitly clicking the element it is inside.
+Esto tiene sentido, el botón está dentro del elemento `<div>`, por lo tanto, cuando haces click en el botón, de forma implícita estás haciendo click en el elemento en el que se encuentra.
 
-### Bubbling example
+### Ejemplo de bubbling
 
-What happens if we add event listeners to the button _and_ the parent?
+¿Qué sucede si agregamos un detector de eventos al botón _y_ al padre?
 
 ```html
 <body>
@@ -470,7 +471,7 @@ What happens if we add event listeners to the button _and_ the parent?
 </body>
 ```
 
-Let's try adding click event handlers to the button, its parent (the `<div>`), and the {{HTMLElement("body")}} element that contains both of them:
+Intentemos agregar un manejador de evento al botón, a su padre (el `<div>`) y, además, al elemento {{HTMLElement("body")}} que contiene a ambos:
 
 ```js
 const output = document.querySelector("#output");
@@ -488,7 +489,7 @@ button.addEventListener("click", handleClick);
 
 {{ EmbedLiveSample('Bubbling example', '100%', 200, "", "") }}
 
-You'll see that all three elements fire a click event when the user clicks the button:
+Te darás cuenta que los tres elementos lanzan un evento _click_ cuando el usuario hace click en el botón.
 
 ```
 You clicked on a BUTTON element
@@ -496,25 +497,25 @@ You clicked on a DIV element
 You clicked on a BODY element
 ```
 
-In this case:
+En este caso:
 
-- the click on the button fires first
-- followed by the click on its parent (the `<div>` element)
-- followed by the `<div>` element's parent (the `<body>` element).
+- el click en el botón se lanza primero
+- seguido del click en el padre (el elemento `<div>`
+- por último, se lanza en el padre del elemento `<div>` (el elemento `<body>`).
 
-We describe this by saying that the event **bubbles up** from the innermost element that was clicked.
+Para describir esta situación, decimos que el evento **burbujea hacia arriba** (_bubbles up_, en inglés) desde el elemento más interno que recibió un click.
 
-This behavior can be useful and can also cause unexpected problems. In the next sections, we'll see a problem that it causes, and find the solution.
+Este comportamiento puede ser útil a la par de causar problemas inesperados. En las siguientes secciones veremos los problemas que causa y econtraremos una solución.
 
 ### Video player example
 
-In this example our page contains a video, which is hidden initially, and a button labeled "Display video". We want the following interaction:
+En este ejemplo, nuestra página contiene un video, el cual se encuentra oculto inicialmente, y un botón con la etiqueta "Display video". Queremos lograr la siguiente interacción:
 
-- When the user clicks the "Display video" button, show the box containing the video, but don't start playing the video yet.
-- When the user clicks on the video, start playing the video.
-- When the user clicks anywhere in the box outside the video, hide the box.
+- Cuando el usuario hace click en el botón de "Display video", muestra la caja que contiene el video, pero sin iniciar la reproducción del video todavía.
+- Cuando el usuario hace click en el video, inicia la reproducción del video.
+- Cuando el usuario hace click en cualquier lugar fuera de la caja del video, oculta la caja nuevamente.
 
-The HTML looks like this:
+El HTML se ve así:
 
 ```html
 <button>Display video</button>
@@ -532,13 +533,13 @@ The HTML looks like this:
 </div>
 ```
 
-It includes:
+Además incluye:
 
-- a `<button>` element
-- a `<div>` element which initially has a `class="hidden"` attribute
-- a `<video>` element nested inside the `<div>` element.
+- un element `<button>`
+- un elemento `<div>` que inicialmente tiene un atributo `class="hidden"`
+- un elemento `<video>` anidado dentro del elemento `<div>`.
 
-We're using CSS to hide elements with the `"hidden"` class set.
+Estamos usando CSS para ocultar elementos con la clase `"hidden"`.
 
 ```css hidden
 div {
@@ -559,7 +560,7 @@ div video {
 }
 ```
 
-The JavaScript looks like this:
+El código JavaScript se ve así:
 
 ```js
 const btn = document.querySelector("button");
@@ -571,19 +572,19 @@ video.addEventListener("click", () => video.play());
 box.addEventListener("click", () => box.classList.add("hidden"));
 ```
 
-This adds three `'click'` event listeners:
+Éste añade tres manejadores para el evento `'click'`:
 
-- one on the `<button>`, which shows the `<div>` that contains the `<video>`
-- one on the `<video>`, which starts playing the video
-- one on the `<div>`, which hides the video
+- uno en el `<button>`, el cual muestra el `<div>` que contiene al `<video>`
+- uno en el `<video>`, el cual inicia la reproducción del video
+- uno en el `<div>`, el cual oculta el video.
 
-Let's see how this works:
+Veamos como funciona esto:
 
 {{ EmbedLiveSample('Video_player_example', '100%', 500) }}
 
-You should see that when you click the button, the box and the video it contains are shown. But then when you click the video, the video starts to play, but the box is hidden again!
+Deberías ver que cuando haces click en el botón, la caja y el video que contiene son mostrados. Pero cuando haces click en el video, éste empieza a reproducirse pero, ¡la caja se oculta de nuevo!
 
-The video is inside the `<div>` — it is part of it — so clicking the video runs _both_ the event handlers, causing this behavior.
+El video se encuentra dentro del `<div>`, ya que es parte de él, por lo tanto, hacer click en el video ejecuta ambos manejadores de eventos, ocasionando este comportamiento.
 
 ### Fixing the problem with stopPropagation()
 
