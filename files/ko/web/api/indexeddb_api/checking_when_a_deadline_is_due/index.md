@@ -10,7 +10,7 @@ page-type: guide
 
 ![예시 애플리케이션의 스크린샷입니다. 빨간 제목은 To do app이라 적혀 있고, To-do item이 있고, 새로운 To-do를 추가하기 위한 폼이 있다.](to-do-app.png)
 
-이 문서에서 참조할 예제 애플리케이션은 **To-do list 알림**입니다. 이는 간단한 할 일 목록 애플리케이션으로 [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)를 통해 작업 제목 및 마감 기한을 저장하고, [Notification](/en-US/docs/Web/API/Notification) 및 [Vibration](/en-US/docs/Web/API/Vibration_API) API를 통해 마감 날짜에 도달하면 사용자에게 알림을 제공합니다. To-do List 알림 앱은 [GitHub에서 다운로드](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)하여 소스 코드를 수정할 수 있으며, [라이브로 실행중인 앱을 확인](https://mdn.github.io/dom-examples/to-do-notifications/)할 수도 있습니다.
+이 문서에서 참조할 예제 애플리케이션은 **To-do list 알림**입니다. 이는 간단한 할 일 목록 애플리케이션으로 [IndexedDB](/ko/docs/Web/API/IndexedDB_API)를 통해 작업 제목 및 마감 기한을 저장하고, [Notification](/ko/docs/Web/API/Notification) 및 [Vibration](/ko/docs/Web/API/Vibration_API) API를 통해 마감 날짜에 도달하면 사용자에게 알림을 제공합니다. To-do List 알림 앱은 [GitHub에서 다운로드](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)하여 소스 코드를 수정할 수 있으며, [라이브로 실행중인 앱을 확인](https://mdn.github.io/dom-examples/to-do-notifications/)할 수도 있습니다.
 
 ## 기본적인 문제점
 
@@ -174,7 +174,7 @@ if (
 
 현재 날짜와 시간을 IndexedDB에 저장된 값들과 비교할 때 사용할 수 있도록 조합한 후 검증을 해야합니다. 우리는 사용자에게 마감 기한이 지났음을 알리기 위해 모든 값을 일치시켜야 합니다.
 
-`notified === "no"` 검증은 to-do 아이템 하나당 하나의 알림만 받겠다는 설계이므로, 다음 순회에서 검증에 통과하지 못했을 때 `createNotification()` 함수를 통해 값을 `"yes"`로 변경해주어야 합니다. ([IndexedDB 사용하기](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)에 설명이 있습니다.)
+`notified === "no"` 검증은 to-do 아이템 하나당 하나의 알림만 받겠다는 설계이므로, 다음 순회에서 검증에 통과하지 못했을 때 `createNotification()` 함수를 통해 값을 `"yes"`로 변경해주어야 합니다. ([IndexedDB 사용하기](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB)에 설명이 있습니다.)
 
 ```js
     // 우리는 이제 이 데이터 객체에서 notified 값을 "yes"로 변경해야 합니다.
