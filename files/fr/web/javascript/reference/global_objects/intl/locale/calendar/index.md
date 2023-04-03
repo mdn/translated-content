@@ -156,13 +156,11 @@ console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.calendar`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.calendar) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.calendar")}}
+{{Compat}}
 
 ## Voir aussi
 

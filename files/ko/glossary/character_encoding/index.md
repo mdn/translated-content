@@ -1,7 +1,8 @@
 ---
 title: Character encoding
-slug: Glossary/character_encoding
+slug: Glossary/Character_encoding
 ---
+
 인코딩은 바이트와 텍스트 간의 매핑을 정의한다. 바이트 시퀀스는 다양한 텍스트 해석을 허용한다. 특정 인코딩(예를 들면 UTF-8 등)을 지정함으로써 바이트 시퀀스를 해석하는 방법을 지정한다.
 
 예를 들어, HTML에서 우리는 일반적으로 아래 줄과 같이 UTF-8의 문자 인코딩을 선언한다 :

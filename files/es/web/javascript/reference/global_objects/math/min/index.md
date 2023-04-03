@@ -64,7 +64,7 @@ var x = Math.min(f(foo), limite);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.min")}}
+{{Compat}}
 
 ## Ver además
 

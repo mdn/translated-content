@@ -51,9 +51,9 @@ slug: Web/CSS/-webkit-box-reflect
 
 Esta propiedad no está entre los objetivos de la especificación estándar y no será parte de CSS. La manera estándar para conseguir reflexión en CSS es el uso de la función {{cssxref("element", "element()")}}.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-box-reflect")}}
+{{Compat}}
 
 ## Ver además
 

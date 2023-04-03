@@ -109,7 +109,7 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 
     - `visible` : 页面内容至少是部分可见。在实际中，这意味着页面是非最小化窗口的前景选项卡。
     - `hidden` : 页面内容对用户不可见。在实际中，这意味着文档可以是一个后台标签，或是最小化窗口的一部分，或是在操作系统锁屏激活的状态下。
-    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其它值转为该值。
+    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其他值转为该值。
     - 注释：有的浏览器不支持此功能`unloaded` : 页面正在从内存中卸载。
     - 注释：有的浏览器不支持此功能
 

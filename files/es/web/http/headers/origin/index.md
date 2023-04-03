@@ -39,9 +39,9 @@ Origin: https://developer.mozilla.org
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Origin")}}
+{{Compat}}
 
 ## Ver también
 

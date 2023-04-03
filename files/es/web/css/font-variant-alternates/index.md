@@ -87,6 +87,6 @@ p.variant {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.font-variant-alternates")}}
+{{Compat}}

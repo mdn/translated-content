@@ -92,13 +92,3 @@ Si desea que se evalúe su trabajo, o si está atorado y desea pedir ayuda:
     - Un enlace a la tarea actual o página de evaluación, para que podamos encontrar la pregunta con la que desea ayuda.
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## En este módulo
-
-- [¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML)
-- [Prácticas recomendadas de accesibilidad CSS y JavaScript](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Conceptos básicos de WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accesibilidad móvil](/es/docs/Learn/Accessibility/Mobile)
-- [Mobile accessibility](/es/docs/Learn/Accessibility/Mobile)
-- [Solución de problemas de accesibilidad](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)

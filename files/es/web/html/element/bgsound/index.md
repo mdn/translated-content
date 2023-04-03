@@ -37,9 +37,13 @@ Funcionalidad similar puede ser lograda en algunas versiones de Netscape usando 
 
 Puedes escribir bgsound con una etiqueta de cierre automático \<bgsound /> . Ahora bien , desde que este elemento no es parte de un estándar , haciendolo como XHTML no lo hará valido.
 
-## Compatibilidad en exploradores
+## Especificaciones
 
-{{Compat("html.elements.bgsound")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

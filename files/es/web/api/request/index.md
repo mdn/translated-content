@@ -124,9 +124,9 @@ fetch(myRequest)
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Request")}}
+{{Compat}}
 
 ## Ver también
 

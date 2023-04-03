@@ -1,6 +1,6 @@
 ---
 title: <input type="url">
-slug: Web/HTML/Element/Input/url
+slug: Web/HTML/Element/input/url
 ---
 
 {{HTMLSidebar}}
@@ -27,7 +27,7 @@ slug: Web/HTML/Element/Input/url
   </tr>
   <tr>
    <td><strong>支持的通用属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("maxlength", "input")}}、{{htmlattrxref("minlength", "input")}}、{{htmlattrxref("pattern", "input")}}、{{htmlattrxref("placeholder", "input")}}、{{htmlattrxref("readonly", "input")}}、{{htmlattrxref("required", "input")}} 和 {{htmlattrxref("size", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#size"><code>size</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -46,7 +46,7 @@ slug: Web/HTML/Element/Input/url
 
 ## 值
 
-{{HTMLElement("input")}} 元素的 {{htmlattrxref("value", "input")}} 属性包含了自动验证为 URL 格式的字符串。具体来说，有两种可能的格式可以通过验证：
+{{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含了自动验证为 URL 格式的字符串。具体来说，有两种可能的格式可以通过验证：
 
 1. 一个空字符串（""），代表用户没有输入任何值，或者有值被移除。
 2. 一个正确的绝对 URL 格式。这并不代表 URL 所指地址实际存在，但至少要符合格式。简单来说，要类似于 `urlscheme://restofurl`。
@@ -59,7 +59,7 @@ slug: Web/HTML/Element/Input/url
 
 ### list
 
-{{htmlattrdef("list")}} 属性指定了一个 {{HTMLElement("datalist")}} 元素的 id，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+`list` 属性指定了一个 {{HTMLElement("datalist")}} 元素的 id，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### maxlength
 
@@ -79,7 +79,7 @@ slug: Web/HTML/Element/Input/url
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
-> **备注：** 使用 {{htmlattrxref("title", "input")}} 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
+> **备注：** 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
 
 参见[模式验证](#模式验证)小节以获取细节和例子。
 
@@ -135,7 +135,7 @@ Safari 扩展，`autocorrect` 属性是一个字符串，它指示在用户编�
 
 Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键将采取何种操作。
 
-此属性已经废弃：请使用全局属性 {{htmlattrxref("enterkeyhint")}} 作为替代。
+此属性已经废弃：请使用全局属性 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Global_attributes#enterkeyhint) 作为替代。
 
 ## 使用 URL 输入框
 
@@ -155,7 +155,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 {{ EmbedLiveSample('简单的 URL 输入框', 600, 40) }}
 
-请注意，当输入为空或输入一个有效格式的 URL 地址时，认为输入是有效的，但在其他情况下则不认为有效。通过添加 {{htmlattrxref("required", "input")}} 属性，只允许正确格式的 URL；当输入为空时不再被视为有效。
+请注意，当输入为空或输入一个有效格式的 URL 地址时，认为输入是有效的，但在其他情况下则不认为有效。通过添加 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，只允许正确格式的 URL；当输入为空时不再被视为有效。
 
 这里没什么特别的，提交这个表单会将 `myURL=http%3A%2F%2Fwww.example.com` 数据提交至服务器，注意其中的字符是如何进行必要的转义的。
 
@@ -181,7 +181,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 #### 物理元素大小
 
-输入框的物理尺寸可以用 {{htmlattrxref("size", "input")}} 属性来控制。通过它，你可以指定输入框一次可以显示的字符数。例如，在这个例子中，`url` 编辑框的宽度为 30 个字符：
+输入框的物理尺寸可以用 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 属性来控制。通过它，你可以指定输入框一次可以显示的字符数。例如，在这个例子中，`url` 编辑框的宽度为 30 个字符：
 
 ```html
 <input id="myURL" name="myURL" type="url" size="30" />
@@ -191,7 +191,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 #### 元素值长度
 
-输入框的 `size` 是与输入的 URL 本身的长度限制分开的。你可以使用 {{htmlattrxref("minlength", "input")}} 属性为输入的 URL 指定一个最小长度，以字符为单位；同样，使用 {{htmlattrxref("maxlength", "input")}} 来设置输入 URL 的最大长度。如果 `maxLength` 超过 `size`，输入框的内容将根据内容操作需要滚动，以显示当前的选择或插入点。
+输入框的 `size` 是与输入的 URL 本身的长度限制分开的。你可以使用 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 属性为输入的 URL 指定一个最小长度，以字符为单位；同样，使用 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 来设置输入 URL 的最大长度。如果 `maxLength` 超过 `size`，输入框的内容将根据内容操作需要滚动，以显示当前的选择或插入点。
 
 下面的例子创建了一个 30 个字符宽的 URL 地址输入框，要求内容不能短于 10 个字符，不能长于 80 个字符。
 
@@ -213,7 +213,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 #### 使用 value 属性提供单个默认值
 
-你总是可以通过设置 {{htmlattrxref("value", "input")}} 属性来为 `url` 输入框提供一个默认值：
+你总是可以通过设置 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性来为 `url` 输入框提供一个默认值：
 
 ```html
 <input id="myURL" name="myURL" type="url" value="http://www.example.com" />
@@ -223,7 +223,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 #### 提供一系列建议的值
 
-让我们更进一步，你可以通过指定 {{htmlattrxref("list", "input")}} 属性来为用户提供一系列默认的选项。这并不使得用户限制在这些选项中，且允许他们更快选择常用的 URL 地址。它也为 {{htmlattrxref("autocomplete", "input")}} 提供提示。`list` 属性指定了 {{HTMLElement("datalist")}} 的 ID，对于每个可用的选项，包含一个 {{HTMLElement("option")}} 元素；每个 `option` 的 `value` 是 URL 输入框的相应建议值。
+让我们更进一步，你可以通过指定 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性来为用户提供一系列默认的选项。这并不使得用户限制在这些选项中，且允许他们更快选择常用的 URL 地址。它也为 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 提供提示。`list` 属性指定了 {{HTMLElement("datalist")}} 的 ID，对于每个可用的选项，包含一个 {{HTMLElement("option")}} 元素；每个 `option` 的 `value` 是 URL 输入框的相应建议值。
 
 ```html
 <input id="myURL" name="myURL" type="url" list="defaultURLs" />
@@ -243,7 +243,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 #### 为建议值使用 label
 
-你可以选择在一个或所有的 `<option>` 元素上包含 {{htmlattrxref("label", "option")}} 属性来提供文本标签。一些浏览器可能只显示标签，而其他浏览器可能同时显示标签和 URL。
+你可以选择在一个或所有的 `<option>` 元素上包含 [`label`](/zh-CN/docs/Web/HTML/Element/option#label) 属性来提供文本标签。一些浏览器可能只显示标签，而其他浏览器可能同时显示标签和 URL。
 
 ```html
 <input id="myURL" name="myURL" type="url" list="defaultURLs" />
@@ -273,7 +273,7 @@ URL 的语法是相当复杂的。它由 WHATWG 的 [URL 现行标准](https://u
 
 ### 使 URL 必填
 
-如前所述，要使一个 URL 表单项在表单提交前成为必填项（不能让该字段空白），只需要在输入项上包含 {{htmlattrxref("required", "input")}} 属性即可。
+如前所述，要使一个 URL 表单项在表单提交前成为必填项（不能让该字段空白），只需要在输入项上包含 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性即可。
 
 ```html
 <form>
@@ -288,11 +288,11 @@ URL 的语法是相当复杂的。它由 WHATWG 的 [URL 现行标准](https://u
 
 ### 模式验证
 
-如果你需要进一步限制输入的 URL，不仅仅需要“任何看起来像 URL 的字符串”，你可以使用 {{htmlattrxref("pattern", "input")}} 属性来指定一个{{Glossary("regular expression","正则表达式")}}，该值必须与之匹配才有效。
+如果你需要进一步限制输入的 URL，不仅仅需要“任何看起来像 URL 的字符串”，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个{{Glossary("regular expression","正则表达式")}}，该值必须与之匹配才有效。
 
 例如，假设你正在为 Myco 公司的员工建立一个支持页面，如果他们的某个页面出现问题，他们可以联系 IT 部门寻求帮助。在我们的简化表单中，用户需要输入出现问题的页面的 URL，以及描述问题所在的信息。但我们希望只有当输入的 URL 在 Myco 域中时，才能成功地验证该 URL。
 
-由于 `url` 类型的输入可同时进行标准的 URL *和*指定的 {{htmlattrxref("pattern", "input")}} 进行验证，你可以轻松实现。让我们来看看怎么做：
+由于 `url` 类型的输入可同时进行标准的 URL *和*指定的 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 进行验证，你可以轻松实现。让我们来看看怎么做：
 
 ```css hidden
 div {
@@ -347,13 +347,13 @@ input:valid + span::after {
 
 {{EmbedLiveSample("模式验证", 700, 150)}}
 
-首先，表单指定了 {{htmlattrxref("required", "input")}} 属性，这意味着必须输入合法的 URL 地址。
+首先，表单指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，这意味着必须输入合法的 URL 地址。
 
 其次，我们设定 `url` 输入框必须满足的 `pattern` 为 `".*\.myco\..*"`，这个简单的正则表达式要求任意长度的字符串，跟随一个点号，再跟随“myco”，再跟随一个点号，再跟随任意长度的字符串。由于浏览器对给定文字同时运行标准的 URL 过滤器和我们自定义的模式文字过滤器，以上两层认证方法可合并为“确保这是一个合法的 Myco 域 URL”。
 
 这并不完美，但足以满足演示场景的需求。
 
-建议在使用 `pattern` 属性的同时使用 {{htmlattrxref("title")}}。如果你这样做，`title` 必须描述模式；它应该解释数据应该采取什么格式，而不是任何其他信息。这是因为 `title` 可以作为验证错误信息的一部分被显示或读出。例如，浏览器可能会显示”请与请求的格式相匹配。“然后跟随指定的 `title` 。如果你的 `title` 是类似于”URL“的东西，结果就是“请与请求的格式相匹配。URL”，用户体验并不好。
+建议在使用 `pattern` 属性的同时使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title)。如果你这样做，`title` 必须描述模式；它应该解释数据应该采取什么格式，而不是任何其他信息。这是因为 `title` 可以作为验证错误信息的一部分被显示或读出。例如，浏览器可能会显示”请与请求的格式相匹配。“然后跟随指定的 `title` 。如果你的 `title` 是类似于”URL“的东西，结果就是“请与请求的格式相匹配。URL”，用户体验并不好。
 
 这就是为什么我们要指定字符串“URL 必须属于 myco 域”的原因。通过这样做，产生的完整错误信息可能是这样的：“请与请求的格式匹配。URL 必须属于 myco 域”。
 

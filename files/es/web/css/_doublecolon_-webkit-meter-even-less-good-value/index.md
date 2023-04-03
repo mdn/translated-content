@@ -9,10 +9,6 @@ slug: Web/CSS/::-webkit-meter-even-less-good-value
 
 El pseudo-elemento `::-webkit-meter-even-less-good-value` da color rojo al elemento meter cuando el valor y el atributo optimum están fuera del rango establecido y en zonas opuestas. Por ejemplo valor < low < high < optimum o valor> high > low > optimum.
 
-## Especificaciones
-
-No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
-
 ## Ejemplos
 
 ```html
@@ -31,9 +27,13 @@ meter::-webkit-meter-even-less-good-value {
 
 > **Nota:** This will only work in Webkit/Blink-based browsers.
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.selectors.-webkit-meter-even-less-good-value")}}
+No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

@@ -21,7 +21,7 @@ slug: Web/HTML/Element/object
 
 - {{htmlattrdef("archive")}} {{deprecated_inline}}
   - : A space-separated list of URIs for archives of resources for the object.
-- {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}; {{deprecated_inline}}
+- {{htmlattrdef("border")}} {{deprecated_inline}}
   - : The width of a border around the control, in pixels.
 - {{htmlattrdef("classid")}} {{deprecated_inline}}
   - : The URI of the object's implementation. It can be used together with, or in place of, the **data** attribute.

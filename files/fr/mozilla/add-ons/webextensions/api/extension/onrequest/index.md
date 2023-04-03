@@ -61,9 +61,9 @@ Les événements ont trois fonctions :
     - `sendResponse`
       - : `function`. Fonction à appeler (au plus une fois) lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse. Si vous avez plus d'un écouteur `onRequest` dans le même document, un seul peut envoyer une réponse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.onRequest")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

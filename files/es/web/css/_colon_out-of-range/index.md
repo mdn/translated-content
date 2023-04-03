@@ -78,7 +78,7 @@ input:out-of-range + label::after {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.out-of-range")}}
+{{Compat}}
 
 ## Ver también
 

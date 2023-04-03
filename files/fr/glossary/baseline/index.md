@@ -1,6 +1,6 @@
 ---
 title: Ligne de base
-slug: Glossary/baseline
+slug: Glossary/Baseline
 tags:
   - Alignement
   - CSS

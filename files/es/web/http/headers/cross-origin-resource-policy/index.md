@@ -29,9 +29,9 @@ Cross-Origin-Resource-Policy: same-origin
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
+{{Compat}}
 
 ## Ver también
 

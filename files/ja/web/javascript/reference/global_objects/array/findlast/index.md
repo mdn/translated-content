@@ -115,7 +115,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### アロー関数と分割代入の使用
 
-先の例は、アロー関数と[オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)を使用して書くことができるかもしれません。
+先の例は、アロー関数と[オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#オブジェクトの分割代入)を使用して書くことができるかもしれません。
 
 ```js
 const inventory = [

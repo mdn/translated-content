@@ -132,9 +132,9 @@ function sheetError() {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.link")}}
+{{Compat}}
 
 ## Véase también
 

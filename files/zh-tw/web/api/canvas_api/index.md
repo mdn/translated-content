@@ -124,7 +124,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 規範
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## 參見
 

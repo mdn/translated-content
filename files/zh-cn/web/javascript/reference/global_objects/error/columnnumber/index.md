@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 
 **`columnNumber`**属性包含引发此错误的文件行中的列号。
 
-## 例子
+## 示例
 
 ### 使用 `columnNumber`
 

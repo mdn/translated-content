@@ -280,13 +280,3 @@ Esperamos que se haya divertido escribiendo su propio mundo de pelotas que choca
 - [2D juego de ruptura usando Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica los conceptos fundamentales para construir un juego 2D usando una librería de juegos de JavaScript.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## En este módulo
-
-- [Conceptos básicos de los objetos JavaScript](/es/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript orientado a objetos para principiantes](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Prototipos de objetos](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herencia en JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
-- [Trabajando con datos JSON](/es/docs/Learn/JavaScript/Objects/JSON)
-- [Ejercicio práctico de construcción de objetos](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Añadiendo características a nuestra demo de bouncing balls](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

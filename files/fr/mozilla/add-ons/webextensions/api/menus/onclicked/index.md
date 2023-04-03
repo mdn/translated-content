@@ -53,10 +53,6 @@ Les événements ont trois fonctions :
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
 
-## Compatibilté du navigateur
-
-{{Compat("webextensions.api.menus.onClicked", 10)}}
-
 ## Exemples
 
 Cet exemple écoute les clics sur un élément de menu, puis enregistre l'ID de l'élément et l'ID de l'onglet :
@@ -73,6 +69,10 @@ browser.menus.onClicked.addListener((info, tab) => {
               "in tab " + tab.id);
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -12,4 +12,4 @@ Le paquet EXSLT Math fournit des fonctions pour manipuler des valeurs numérique
 
 ## Compatibilité des navigateurs
 
-{{Compat("xslt.exslt.math")}}
+{{Compat}}

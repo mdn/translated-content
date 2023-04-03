@@ -17,9 +17,9 @@ Necesita un eejemplo
 
 No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-page-sequence")}}
+{{Compat}}
 
 ## Ver además
 

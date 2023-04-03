@@ -48,7 +48,7 @@ RegExp(pattern[, flags])
     - `y` （sticky，粘性匹配）
       - : Matches only from the index indicated by the `lastIndex` property of this regular expression in the target string. Does not attempt to match from any later indexes.
 
-## 例子
+## 示例
 
 ### 字面量和构造函数
 

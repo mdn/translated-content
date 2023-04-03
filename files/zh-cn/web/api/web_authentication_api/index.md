@@ -9,7 +9,7 @@ Web Authentication API 继承自 [Credential Management API](/zh-CN/docs/Web/API
 
 ## Web authentication 概念和用例
 
-Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) （非对称加密）替代密码或 SMS 短信在网站上注册、登录、[second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)（双因素验证）。解决了 [phishing](https://en.wikipedia.org/wiki/Phishing)（钓鱼）、[data breaches](https://en.wikipedia.org/wiki/Data_breach)（数据破坏）、SMS 文本攻击、其它双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。
+Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) （非对称加密）替代密码或 SMS 短信在网站上注册、登录、[second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)（双因素验证）。解决了 [phishing](https://en.wikipedia.org/wiki/Phishing)（钓鱼）、[data breaches](https://en.wikipedia.org/wiki/Data_breach)（数据破坏）、SMS 文本攻击、其他双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。
 
 许多网站已实现用户注册账号，登录已有账号的页面，WebAuthn 作为这些页面的替代和补充。类似其他形式的 [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API)（凭据管理 API)。Web Authentication API 有两个对应于注册和登录的基本方法：
 

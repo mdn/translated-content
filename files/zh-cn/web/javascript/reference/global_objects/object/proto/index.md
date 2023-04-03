@@ -84,7 +84,7 @@ obj.myname();//myname
 
 `__proto__` 的读取器 (getter) 暴露了一个对象的内部 `[[Prototype]]` 。对于使用对象字面量创建的对象，这个值是 {{jsxref("Object.prototype")}}。对于使用数组字面量创建的对象，这个值是 {{jsxref("Array.prototype")}}。对于 functions，这个值是{{jsxref("Function.prototype")}}。对于使用 new fun 创建的对象，其中 fun 是由 js 提供的内建构造器函数之一 ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}} 等等），这个值总是 fun.prototype。对于用 JS 定义的其他 JS 构造器函数创建的对象，这个值就是该构造器函数的 prototype 属性。
 
-`__proto__` 的设置器 (setter) 允许对象的 `[[Prototype]]` 被变更。前提是这个对象必须通过 {{jsxref("Object.isExtensible()")}} 判断为是可扩展的，如果不可扩展，则会抛出一个 {{jsxref("Global_Objects/TypeError", "TypeError")}} 错误。要变更的值必须是一个 object 或{{jsxref("Global_Objects/null", "null")}}，提供其它值将不起任何作用。
+`__proto__` 的设置器 (setter) 允许对象的 `[[Prototype]]` 被变更。前提是这个对象必须通过 {{jsxref("Object.isExtensible()")}} 判断为是可扩展的，如果不可扩展，则会抛出一个 {{jsxref("Global_Objects/TypeError", "TypeError")}} 错误。要变更的值必须是一个 object 或{{jsxref("Global_Objects/null", "null")}}，提供其他值将不起任何作用。
 
 要理解原型如何被使用，请查看相关文章：[Inheritance and the prototype chain](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。
 

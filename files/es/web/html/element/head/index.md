@@ -40,9 +40,9 @@ Navegadores modernos que cumplen con el estándar HTML5 construyen automáticame
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## Véase también
 

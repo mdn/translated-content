@@ -40,9 +40,9 @@ fetch(peticion).then(function(respuesta) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Response.ok")}}
+{{Compat}}
 
 ## Ver también
 

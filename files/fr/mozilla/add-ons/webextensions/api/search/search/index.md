@@ -48,9 +48,9 @@ browser.search.search(
 
 Aucune
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.search.search", 10)}}
+{{Compat}}
 
 ## Exemples
 

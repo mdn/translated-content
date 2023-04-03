@@ -1,6 +1,6 @@
 ---
 title: firewall (ファイアウォール)
-slug: Glossary/firewall
+slug: Glossary/Firewall
 original_slug: Glossary/ファイアウォール
 ---
 

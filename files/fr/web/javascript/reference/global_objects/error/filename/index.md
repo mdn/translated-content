@@ -36,7 +36,7 @@ Ne fait partie d'aucune spécification. Non standard.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.fileName")}}
+{{Compat}}
 
 ## Voir aussi
 

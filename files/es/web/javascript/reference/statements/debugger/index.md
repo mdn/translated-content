@@ -36,7 +36,7 @@ Cuando el depurador es invocado, la ejecución se detiene en la sentencia debugg
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.debugger")}}
+{{Compat}}
 
 ## Vea también
 

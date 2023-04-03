@@ -55,4 +55,4 @@ La característica `height` es especificada como un valor {{cssxref("&lt;length&
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.height")}}
+{{Compat}}

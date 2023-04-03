@@ -146,9 +146,9 @@ car2.owner.name
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.new")}}
+{{Compat}}
 
 ## Ve también
 

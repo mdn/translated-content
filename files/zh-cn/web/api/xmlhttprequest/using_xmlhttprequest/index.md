@@ -761,7 +761,7 @@ oReq.send(null);
 
 ## Worker
 
-设置 `overrideMimeType` 后在 {{domxref("Worker")}} 中无法正常工作，详见 {{bug(678057)}}。其他浏览器也许会以不同的手段处理。
+设置 `overrideMimeType` 后在 {{domxref("Worker")}} 中无法正常工作，详见 [Firefox bug 678057](https://bugzil.la/678057)。其他浏览器也许会以不同的手段处理。
 
 ## 规范
 

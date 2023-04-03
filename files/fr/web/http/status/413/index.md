@@ -16,9 +16,11 @@ Le code de statut de réponse **`413 Payload Too Large`** indique que la taille 
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.5.11: 413 Payload Too Large](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.11) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

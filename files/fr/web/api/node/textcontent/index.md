@@ -83,7 +83,7 @@ if (Object.defineProperty
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.textContent")}}
+{{Compat}}
 
 ## Spécifications
 

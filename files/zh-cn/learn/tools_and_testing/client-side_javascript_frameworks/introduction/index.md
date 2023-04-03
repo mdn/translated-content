@@ -59,7 +59,7 @@ Vue，就像 [AngularJS](https://angularjs.org/)，用它自己的代码拓展�
 
 ### React
 
-Facebook 在 2013 年发布了 React。在当时 React 已经被用于 Facebook 内部用来解决许多问题。严格来说 React 本身并不是框架，而是一个用来渲染用户界面组件的库。React 被用来组合*其它*用来构建应用的库——React 和 [React Native](https://reactnative.dev/) 让开发者能够用 JavaScript 构建移动应用；React 和 [ReactDOM](https://reactjs.org/docs/react-dom.html) 使他们能够被用来制作 web 应用程序等。
+Facebook 在 2013 年发布了 React。在当时 React 已经被用于 Facebook 内部用来解决许多问题。严格来说 React 本身并不是框架，而是一个用来渲染用户界面组件的库。React 被用来组合*其他*用来构建应用的库——React 和 [React Native](https://reactnative.dev/) 让开发者能够用 JavaScript 构建移动应用；React 和 [ReactDOM](https://reactjs.org/docs/react-dom.html) 使他们能够被用来制作 web 应用程序等。
 
 因为 React 和 ReactDOM 被经常放在一起使用，通俗地讲，React 可以被理解为是一个 JavaScript 框架。当你通读了这个模块时，我们将使用这种口语化的理解进行描述。
 
@@ -175,7 +175,7 @@ JavaScript 框架都提供了一种更具以*声明性*的方式地编写用户�
 
 你没看错。以上用了 JavaScript 框架的代码用了 6 行就实现了刚刚需要 32 行代码才能实现的功能。如果你对这里的大括号和 `v-` 属性不熟悉，没关系；你会在后面的模块中学习到 Vue 特有的语法。这里要指出的是，这段 Vue 代码看起来很像它所代表的用户界面，而原生 JavaScript 代码则不然。
 
-幸亏有了 Vue，让我们不必编写自己的函数来构建用户界面；我们仅仅需要向 Vue 描述每个项目应该是什么样子，然后 Vue 会以很好的、高效的方式帮我们处理好。因此熟悉 Vue 的开发者可以轻松的加入我们的项目，快速地搞清楚项目是如何运作的。不仅仅是 Vue：使用其它框架也可以提高团队和个人的效率。
+幸亏有了 Vue，让我们不必编写自己的函数来构建用户界面；我们仅仅需要向 Vue 描述每个项目应该是什么样子，然后 Vue 会以很好的、高效的方式帮我们处理好。因此熟悉 Vue 的开发者可以轻松的加入我们的项目，快速地搞清楚项目是如何运作的。不仅仅是 Vue：使用其他框架也可以提高团队和个人的效率。
 
 其实在原生 JavaScript 中也可以做*与此类似*的事情。[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)使得编写表示最终元素外观的 HTML 字符串变得容易起来。对于像创建上文示例的待办事项清单那样简单的应用来说，这可能是一种有用的方法，但它对于管理数千条数据记录，且可以在用户界面上渲染许多独特元素的大型应用程序来说，是难以维护的。
 

@@ -22,30 +22,30 @@ JavaScript はマルチパラダイムの動的言語であり、型や演算子
 
 まずはあらゆる言語の構成要素、「型」を見ることから始めましょう。 JavaScript のプログラムは値を操作し、それらの値はすべて型に属しています。JavaScript の型は次の通りです。
 
-- [Number](/ja/docs/Web/JavaScript/Data_structures#number_type) (数値型)
-- [BigInt](/ja/docs/Web/JavaScript/Data_structures#bigint_type) (長整数型)
-- [String](/ja/docs/Web/JavaScript/Data_structures#string_type) (文字列型)
-- [Boolean](/ja/docs/Web/JavaScript/Data_structures#boolean_type) (論理型)
+- [Number](/ja/docs/Web/JavaScript/Data_structures#数値型) (数値型)
+- [BigInt](/ja/docs/Web/JavaScript/Data_structures#長整数型) (長整数型)
+- [String](/ja/docs/Web/JavaScript/Data_structures#文字列型) (文字列型)
+- [Boolean](/ja/docs/Web/JavaScript/Data_structures#論理型) (論理型)
 - {{jsxref("Function")}} (関数)
-- [Object](/ja/docs/Web/JavaScript/Data_structures#objects) (オブジェクト型)
-- [Symbol](/ja/docs/Web/JavaScript/Data_structures#symbol_type) (シンボル型、ES2015 で新登場)
+- [Object](/ja/docs/Web/JavaScript/Data_structures#オブジェクト) (オブジェクト型)
+- [Symbol](/ja/docs/Web/JavaScript/Data_structures#シンボル型) (シンボル型、ES2015 で新登場)
 
-...ああ、あと [undefined](/ja/docs/Web/JavaScript/Data_structures#undefined_type) と [null](/ja/docs/Web/JavaScript/Data_structures#null_type)、これらはちょっと変わっています。そして {{jsxref("Array")}} (配列)、これは特殊なオブジェクトの一種。さらに {{jsxref("Date")}} (日付) と {{jsxref("RegExp")}} (正規表現)、これらは自由に使えるオブジェクトです。あと技術的に正確なことを言うと、関数もオブジェクトの特殊な型です。したがって、この型の図はより正確にはこうなります。
+...ああ、あと [undefined](/ja/docs/Web/JavaScript/Data_structures#undefined_型) と [null](/ja/docs/Web/JavaScript/Data_structures#null_型)、これらはちょっと変わっています。そして {{jsxref("Array")}} (配列)、これは特殊なオブジェクトの一種。さらに {{jsxref("Date")}} (日付) と {{jsxref("RegExp")}} (正規表現)、これらは自由に使えるオブジェクトです。あと技術的に正確なことを言うと、関数もオブジェクトの特殊な型です。したがって、この型の図はより正確にはこうなります。
 
-- [Number](/ja/docs/Web/JavaScript/Data_structures#number_type) (数値型)
-- [BigInt](/ja/docs/Web/JavaScript/Data_structures#bigint_type) (長整数型)
-- [String](/ja/docs/Web/JavaScript/Data_structures#string_type) (文字列型)
-- [Boolean](/ja/docs/Web/JavaScript/Data_structures#boolean_type) (論理型)
-- [Symbol](/ja/docs/Web/JavaScript/Data_structures#symbol_type) (シンボル型、ES2015 で新登場)
-- [Object](/ja/docs/Web/JavaScript/Data_structures#objects) (オブジェクト型)
+- [Number](/ja/docs/Web/JavaScript/Data_structures#数値型) (数値型)
+- [BigInt](/ja/docs/Web/JavaScript/Data_structures#長整数型) (長整数型)
+- [String](/ja/docs/Web/JavaScript/Data_structures#文字列型) (文字列型)
+- [Boolean](/ja/docs/Web/JavaScript/Data_structures#論理型) (論理型)
+- [Symbol](/ja/docs/Web/JavaScript/Data_structures#シンボル型) (シンボル型、ES2015 で新登場)
+- [Object](/ja/docs/Web/JavaScript/Data_structures#オブジェクト) (オブジェクト型)
 
   - {{jsxref("Function")}} (関数)
   - {{jsxref("Array")}} (配列)
   - {{jsxref("Date")}} (日付)
   - {{jsxref("RegExp")}} (正規表現)
 
-- [null](/ja/docs/Web/JavaScript/Data_structures#null_type)
-- [undefined](/ja/docs/Web/JavaScript/Data_structures#undefined_type)
+- [null](/ja/docs/Web/JavaScript/Data_structures#null_型)
+- [undefined](/ja/docs/Web/JavaScript/Data_structures#undefined_型)
 
 さらにいくつかの組み込み {{jsxref("Error")}} 型もあります。しかし、最初の図のままでいく方が物事はとても簡単になるでしょうから、当面は最初の図で説明します。
 

@@ -388,11 +388,3 @@ Los contadores CSS proporcionan herramientas avanzadas para la personalización 
 La aplicación de estilo a listas se domina con relativa facilidad una vez que conoces algunos principios básicos y propiedades específicas asociados. En el artículo siguiente vamos a continuar con las técnicas de aplicación de estilo a enlaces.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Nociones de aplicación de estilo con CSS a textos y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Aplicar estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Aplicar estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -103,7 +103,7 @@ console.log(numbers.length); // 3
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.length")}}
+{{Compat}}
 
 ## Ver también
 

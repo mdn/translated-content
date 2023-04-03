@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/Matrix_math_for_the_web
 
 行列は、空間内のオブジェクトの変換を表すために使用でき、画像を構築したり、ウェブ上でデータを視覚化したりするときに、多くの主要な種類の計算を実行するために使用されます。 この記事では、行列を作成する方法と、[CSS transform](/ja/docs/Web/Guide/CSS/Using_CSS_transforms) および `matrix3d` transform 型でそれらを使用する方法について説明します。
 
-この記事では [CSS](/ja/docs/Web/CSS) を使用して説明を簡略化しますが、行列は [WebGL](/ja/docs/Web/API/WebGL_API)、[WebXR](/ja/docs/Web/API/WebXR_Device_API)（VR および AR）API、[GLSL シェーダー](/ja/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)などのさまざまなテクノロジーで使用されるコアコンセプトです。 この記事は、[MDN コンテンツキット](https://github.com/TatumCreative/mdn-matrix-math)としても入手できます。 実際の例では、`MDN` という名前のグローバルオブジェクトで使用できる[ユーティリティ関数](https://github.com/TatumCreative/mdn-webgl)のコレクションを使用しています。
+この記事では [CSS](/ja/docs/Web/CSS) を使用して説明を簡略化しますが、行列は [WebGL](/ja/docs/Web/API/WebGL_API)、[WebXR](/ja/docs/Web/API/WebXR_Device_API)（VR および AR）API、[GLSL シェーダー](/ja/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)などのさまざまなテクノロジーで使用されるコアコンセプトです。 この記事は、[MDN コンテンツキット](https://github.com/gregtatum/mdn-matrix-math)としても入手できます。 実際の例では、`MDN` という名前のグローバルオブジェクトで使用できる[ユーティリティ関数](https://github.com/gregtatum/mdn-webgl)のコレクションを使用しています。
 
 ## 変換行列
 
@@ -307,7 +307,7 @@ function rotateAroundZAxis(a) {
 
 ### 複数の変換の合成
 
-行列の合成に使用する関数は `multiplyArrayOfMatrices()` です。 これは、この記事の冒頭で紹介した[ユーティリティ関数](https://github.com/TatumCreative/mdn-webgl)のセットの一部です。 行列の配列を取り、それらを掛け合わせて結果を返します。 WebGL シェーダーコードでは、これは言語に組み込まれており、`*` 演算子を使用できます。 さらに、この例では、上で定義した行列を返す `scale()` 関数と `translate()` 関数を使用しています。
+行列の合成に使用する関数は `multiplyArrayOfMatrices()` です。 これは、この記事の冒頭で紹介した[ユーティリティ関数](https://github.com/gregtatum/mdn-webgl)のセットの一部です。 行列の配列を取り、それらを掛け合わせて結果を返します。 WebGL シェーダーコードでは、これは言語に組み込まれており、`*` 演算子を使用できます。 さらに、この例では、上で定義した行列を返す `scale()` 関数と `translate()` 関数を使用しています。
 
 ```js
 let transformMatrix = MDN.multiplyArrayOfMatrices([

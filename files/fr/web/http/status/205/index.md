@@ -16,13 +16,11 @@ Le code de statut de réponse HTTP **`205 Reset Content`** indique au client de 
 
 ## Spécifications
 
-| Spécification                                                | Titre                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| [RFC 7231, section 6.3.6: 205 Reset Content](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.6) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Notes de compatibilité
+## Compatibilité des navigateurs
 
-Le comportement des navigateurs varie selon que cette réponse inclut incorrectement un corps pour les connexions persistantes. Voir [`204 No Content`](/fr/docs/Web/HTTP/Status/204) pour plus de détails.
+{{Compat}}
 
 ## Voir aussi
 

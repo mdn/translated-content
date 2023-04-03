@@ -50,4 +50,4 @@ Les _attributs SVG de base_ sont tous les attributs communs pouvant être spéci
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.core")}}
+{{Compat}}

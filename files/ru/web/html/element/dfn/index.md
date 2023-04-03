@@ -10,13 +10,13 @@ translation_of: Web/HTML/Element/dfn
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
 
-| [Категории Контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент. |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                        | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.               |
+| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.               |
 | Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                          |
-| Разрешённые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                       |
-| Разрешённые роли ARIA                                      | Любые                                                                                                                                                             |
-| DOM интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                              |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                       |
+| Допустимые ARIA-роли                                       | Любые                                                                                                                                                             |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                              |
 
 ## Атрибуты
 
@@ -83,7 +83,7 @@ translation_of: Web/HTML/Element/dfn
 #### HTML
 
 ```html
-<p><strong>Элемент определения HTML</strong> (<strong><dfn>&lt;dfn&gt;</dfn></strong>)
+<p><strong>Элемент определения HTML</strong> (<strong><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong>)
 используется для обозначения термина, определяемого в контексте фразы или предложения.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine voluptatem
@@ -97,7 +97,7 @@ voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et nihil remitt
 enim possumus hoc agere divinius?</p>
 
 <p>Из-за всего этого мы решили использовать
-элемент<code><a href="#definition-dfn">&lt;dfn&gt;</a></code> для этого проекта.</p>
+элемент <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> для этого проекта.</p>
 ```
 
 Здесь мы видим определение - теперь с атрибутом {{htmlattrxref("id")}} `«definition-dfn»`, который может использоваться в качестве цели для ссылки. Позднее создаётся ссылка с использованием `<a>` и с {{htmlattrxref("href", "a")}}атрибутом, установленным на `«#definition-dfn»`, чтобы установить ссылку обратно на определение.

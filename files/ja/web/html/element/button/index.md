@@ -96,7 +96,7 @@ slug: Web/HTML/Element/button
 - {{htmlattrdef("autofocus")}}
   - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/Web/API/HTMLOrForeignElement/focus)を持つべきであることを指定します。**文書中の要素一つだけにこの属性を設定することができます。**
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : {{HTMLElement("button")}} におけるこの属性は標準外であり、 Firefox 固有のものです。他のブラウザーとは異なり、 Firefox はページを再度読み込む時に[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。そのボタンに `autocomplete="off"` に設定すると、この機能が無効になります。 {{bug(654072)}} をご覧ください。
+  - : {{HTMLElement("button")}} におけるこの属性は標準外であり、 Firefox 固有のものです。他のブラウザーとは異なり、 Firefox はページを再度読み込む時に[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。そのボタンに `autocomplete="off"` に設定すると、この機能が無効になります。 [Firefox バグ 654072](https://bugzil.la/654072) をご覧ください。
 - {{htmlattrdef("disabled")}}
 
   - : 論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。

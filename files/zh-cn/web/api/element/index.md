@@ -219,8 +219,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Element/select_event", "select")}}
   - : Fired when some text has been selected.
     Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-- {{DOMxRef("Element/show_event", "show")}}
-  - : Fired when a [contextmenu](/zh-CN/docs/Mozilla_event_reference/contextmenu) event was fired on/bubbled to an element that has a [contextmenu](/zh-CN/DOM/element.contextmenu) attribute. {{deprecated_inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{DOMxRef("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).

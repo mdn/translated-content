@@ -27,12 +27,16 @@ slug: Web/API/WebSockets_API
 
 - [AJAX](/es/docs/AJAX), [JavaScript](/es/docs/JavaScript)
 
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
 ## Ver también
 
 - [RFC 6455 - The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
 - [WebSocket API Specification](http://www.w3.org/TR/websockets/)
 - [Server-Sent Events](/es/docs/Server-sent_events)
-
-## Compatibilidad con navegadores
-
-{{Compat("api.WebSocket")}}

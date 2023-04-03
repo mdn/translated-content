@@ -39,4 +39,4 @@ La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-moz-device-pixel-ratio")}}
+{{Compat}}

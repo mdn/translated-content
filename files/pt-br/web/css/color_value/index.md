@@ -960,7 +960,7 @@ A cor `rebeccapurple` é equivalente à cor `#639`, e mais informações sobre p
 
 A palavra-chave `transparent` representa uma cor totalmente transparente, isto é, a cor vista será a cor de fundo. Tecnicamente, é um preto com canal alfa no seu valor mínimo e é um atalho para `rgba(0,0,0,0)`.
 
-> **Note:** **Nota histórica**
+> **Nota:** **Nota histórica**
 > A palavra-chave `transparent` não era uma cor verdadeira no CSS nível 2 (Revisão 1). Era uma palavra-chave específica que poderia ser usada no lugar de um valor `<color>` regular em duas propriedades CSS: {{Cssxref("background")}} e {{Cssxref("border")}}. Ela foi adicionada essencialmente para permitir a substituição de cores sólidas herdadas.
 >
 > Com o apoio da opacidade através de [canais alfal](https://en.wikipedia.org/wiki/Alpha_compositing), `transparent` foi redefinida como uma cor verdadeira no Cores CSS nível 3 permitindo seu uso em qualquer lugar onde for exigido um valor para `<color>`, como a propriedade {{Cssxref("color")}}.
@@ -1034,7 +1034,7 @@ rgb(255 0 0 / 40%)  /* 40% opaque red with percentage value for alpha */
 
 ### `hsl()`
 
-> **Note:** In the CSS Color Module Level 4 spec, `hsla()` has been defined as a legacy function with identical grammar and behaviour to `hsl()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
+> **Nota:** In the CSS Color Module Level 4 spec, `hsla()` has been defined as a legacy function with identical grammar and behaviour to `hsl()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
 
 Colors can also be defined via hue, saturation, and lightness, or HSL, by using the `hsl()` functional notation. The advantage of HSL over RGB is that it is far more intuitive: you can guess at the colors you want, and then tweak. It is also easier to create sets of matching colors (by keeping the hue the same and varying the lightness/darkness, and saturation).
 
@@ -1109,7 +1109,7 @@ rgba(255 0 0 / 0.4)  /* 40% opaque red */
 rgba(255 0 0 / 40%)  /* 40% opaque red */
 ```
 
-> **Note:** In the CSS Color Module Level 4 spec, `rgba()` has been defined as a legacy function with identical grammar and behaviour to `rgb()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
+> **Nota:** In the CSS Color Module Level 4 spec, `rgba()` has been defined as a legacy function with identical grammar and behaviour to `rgb()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
 
 ### `hsla()`
 
@@ -1133,7 +1133,7 @@ hsla(240deg 100% 50% / 5%) /* 5% opaque blue */
 hsla(240deg,100%,50%, 0.4)  /* 40% opaque blue */
 ```
 
-> **Note:** In the CSS Color Module Level 4 spec, `hsla()` has been defined as a legacy function with identical grammar and behaviour to `hsl()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
+> **Nota:** In the CSS Color Module Level 4 spec, `hsla()` has been defined as a legacy function with identical grammar and behaviour to `hsl()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
 
 ### System Colors
 

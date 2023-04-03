@@ -111,6 +111,6 @@ svgns|a:hover, svgns|a:active {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.a")}}
+{{Compat}}

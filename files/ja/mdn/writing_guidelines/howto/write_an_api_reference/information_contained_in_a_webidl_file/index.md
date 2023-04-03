@@ -456,7 +456,7 @@ iterable<keyType, valueType>
 - `entries()` は（_keyType_ 型の）索引の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: E{{domxref('FormData.entries()')}}
 - `values()` は値の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.values()')}}
 - `keys()` はキーの[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.keys()')}}
-- Once {{bug(1216751)}} lands, `forEach()`.
+- Once [Firefox バグ 1216751](https://bugzil.la/1216751) lands, `forEach()`.
 
 このようなイテレータを使うと，`for (var p in object)` という構文を， `for (var p in object.entries())` の省略形として使うことができます．インターフェイスの説明の中に、それに関する文を追加します。例: {{domxref('FormData')}}.
 

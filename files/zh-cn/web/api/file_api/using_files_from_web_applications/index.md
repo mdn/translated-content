@@ -7,7 +7,7 @@ slug: Web/API/File_API/Using_files_from_web_applications
 
 通过使用在 HTML5 中加入到 DOM 的 File API，使在 web 内容中让用户选择本地文件然后读取这些文件的内容成为可能。用户可以通过 HTML 中的 {{HTMLElement("input/file", '&lt;input type="file"&gt;')}} 元素或者是通过拖拽来选择本地文件。
 
-如果你想通过扩展或者其它的 chrome 源码浏览器（browser chrome code）使用 DOM File API，是可行的；然而，需要注意有一些附加特性。详细请见 [Using the DOM File API in chrome code](/zh-CN/Extensions/Using_the_DOM_File_API_in_chrome_code)。
+如果你想通过扩展或者其他的 chrome 源码浏览器（browser chrome code）使用 DOM File API，是可行的；然而，需要注意有一些附加特性。详细请见 [Using the DOM File API in chrome code](/zh-CN/Extensions/Using_the_DOM_File_API_in_chrome_code)。
 
 ## 访问被选择的文件
 
@@ -489,7 +489,7 @@ if (isset($_FILES['myFile'])) {
 
 ## 例子：用对象 URL 显示 PDF
 
-对象 URL 可以用于 image 之外的其它东西！它可以用于显示嵌入的 PDF 文件或任何其它浏览器能显示的资源。
+对象 URL 可以用于 image 之外的其他东西！它可以用于显示嵌入的 PDF 文件或任何其他浏览器能显示的资源。
 
 在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将`pdfjs.disabled`设为`false` {{non-standard_inline()}}.
 
@@ -506,9 +506,9 @@ iframe.setAttribute('src', obj_url);
 window.URL.revokeObjectURL(obj_url);
 ```
 
-## 例子：将对象 URL 用于其它文件类型
+## 例子：将对象 URL 用于其他文件类型
 
-你可以用同样方式操作其它格式的文件。这是预览上传的视频的方法：
+你可以用同样方式操作其他格式的文件。这是预览上传的视频的方法：
 
 ```js
 const video = document.getElementById('video');

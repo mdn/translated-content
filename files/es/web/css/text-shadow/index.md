@@ -123,9 +123,9 @@ text-shadow: unset;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-shadow")}}
+{{Compat}}
 
 ## Véase también
 

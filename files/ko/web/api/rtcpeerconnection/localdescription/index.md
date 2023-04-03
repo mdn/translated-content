@@ -15,7 +15,7 @@ slug: Web/API/RTCPeerConnection/localDescription
 const sessionDescription = peerConnection.localDescription;
 ```
 
-기본적으로 반환 값은 해당 속성이 `null`이 아닐 때에만 {{domxref("RTCPeerConnection.pendingLocalDescription")}}의 값입니다. 그렇지 않은 경우에는 {{domxref("RTCPeerConnection.currentLocalDescription")}}의 값이 반환됩니다. 이 알고리즘 및 사용하는 이유에 대한 자세한 설명은 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}를 참조하십시오.
+기본적으로 반환 값은 해당 속성이 `null`이 아닐 때에만 {{domxref("RTCPeerConnection.pendingLocalDescription")}}의 값입니다. 그렇지 않은 경우에는 {{domxref("RTCPeerConnection.currentLocalDescription")}}의 값이 반환됩니다. 이 알고리즘 및 사용하는 이유에 대한 자세한 설명은 [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity)를 참조하십시오.
 
 ## 예시
 

@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: listitem role'
-slug: Web/Accessibility/ARIA/Roles/Listitem_role
+slug: Web/Accessibility/ARIA/Roles/listitem_role
 ---
 
 ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 `list` 角色结合使用，用于标识列表容器。

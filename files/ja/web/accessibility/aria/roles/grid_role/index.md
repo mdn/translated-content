@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: grid ロール'
-slug: Web/Accessibility/ARIA/Roles/Grid_Role
+slug: Web/Accessibility/ARIA/Roles/grid_role
 ---
 
 グリッド (`grid`) ロールは、1 つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。

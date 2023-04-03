@@ -37,9 +37,9 @@ Este elemento sólo incluye los [atributos globales](/es/docs/HTML/Global_attrib
 
 {{Specifications}}
 
-## Compatibilidad navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.sub")}}
+{{Compat}}
 
 ## Ver también
 

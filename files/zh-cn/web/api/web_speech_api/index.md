@@ -40,7 +40,7 @@ Web Speech API 使 Web 应用能够处理语音数据，该项 API 包含以下�
 ### 语音合成
 
 - {{domxref("SpeechSynthesis")}}
-  - : 语音合成服务的控制器接口，可用于获取设备上可用的合成语音，开始、暂停以及其它相关命令的信息。
+  - : 语音合成服务的控制器接口，可用于获取设备上可用的合成语音，开始、暂停以及其他相关命令的信息。
 - {{domxref("SpeechSynthesisErrorEvent")}}
   - : 包含了在发音服务处理 {{domxref("SpeechSynthesisUtterance")}} 对象过程中的信息及报错信息。
 - {{domxref("SpeechSynthesisEvent")}}

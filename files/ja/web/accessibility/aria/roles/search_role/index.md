@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: search ロール'
-slug: Web/Accessibility/ARIA/Roles/Search_role
+slug: Web/Accessibility/ARIA/Roles/search_role
 ---
 
 検索 (`search`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、ページ、サイト、またはサイトのコレクションの検索に使用されるページのセクションを識別するために使用します。

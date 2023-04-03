@@ -40,7 +40,7 @@ xhr.abort();
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.abort")}}
+{{Compat}}
 
 ## Ver también
 

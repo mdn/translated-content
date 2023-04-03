@@ -97,9 +97,9 @@ browser.runtime.onMessage.addListener(request => {
 
 {{WebExtExamples}}
 
-## Compatiblité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.sendMessage")}}
+{{Compat}}
 
 > **Note :**
 >

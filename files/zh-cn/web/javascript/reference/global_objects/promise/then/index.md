@@ -13,14 +13,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 ## 语法
 
-```plain
-p.then(onFulfilled[, onRejected]);
-
-p.then(value => {
-  // fulfillment
-}, reason => {
-  // rejection
-});
+```js-nolint
+then(onFulfilled)
+then(onFulfilled, onRejected)
 ```
 
 ### 参数

@@ -51,9 +51,9 @@ Les événements ont trois fonctions:
     - `areaName`
       - : `string`. Le nom de la zone de stockage (`"sync"`, `"local"` or `"managed"`) auquel les modifications ont été apportées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.onChanged")}}
+{{Compat}}
 
 ## Exemples
 

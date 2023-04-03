@@ -1,6 +1,6 @@
 ---
 title: <a> - элемент ссылки
-slug: Web/HTML/Element/A
+slug: Web/HTML/Element/a
 tags:
   - HTML
   - Веб

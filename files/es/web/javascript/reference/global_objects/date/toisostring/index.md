@@ -66,7 +66,7 @@ if (!Date.prototype.toISOString) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toISOString")}}
+{{Compat}}
 
 ## Ver también
 

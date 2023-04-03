@@ -43,6 +43,6 @@ c'est une [proriété localisable](/fr/Add-ons/WebExtensions/Internationalizatio
 "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.homepage_url")}}
+{{Compat}}

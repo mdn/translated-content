@@ -415,7 +415,7 @@ The iterator will iterate over values of type _valueType_, with keys of type _ke
 - `entries()` that returns an {{jsxref('iterator')}} on the indexes (of type _keyType_). E.g. {{domxref('FormData.entries()')}}
 - `values()` that returns an {{jsxref('iterator')}} on the values. E.g. {{domxref('FormData.values()')}}
 - `keys()` that returns an {{jsxref('iterator')}} on the keys. E.g. {{domxref('FormData.keys()')}}
-- Once {{bug(1216751)}} lands, `forEach()`.
+- Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
 
 Such an iterator allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 

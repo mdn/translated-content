@@ -4,7 +4,7 @@ slug: Web/API/AnimationEvent/elapsedTime
 ---
 {{APIRef("Web Animations API")}}
 
-**`AnimationEvent.elapsedTime`** 읽기 전용 속성은 이벤트가 발생한 시점까지 애니메이션이 재생된 총 시간을 나타내는 `float` 값입니다. 초 단위며, 애니메이션이 일시정지된 시간은 제외합니다. {{event("animationstart")}} 이벤트의 `elapsedTime`은 {{cssxref("animation-delay")}}의 값이 음수인 경우에만 `(-1 * delay)`가 되고, 그 외에는 `0.0`입니다.
+**`AnimationEvent.elapsedTime`** 읽기 전용 속성은 이벤트가 발생한 시점까지 애니메이션이 재생된 총 시간을 나타내는 `float` 값입니다. 초 단위며, 애니메이션이 일시정지된 시간은 제외합니다. {{domxref("Element/animationstart_event", "animationstart")}} 이벤트의 `elapsedTime`은 {{cssxref("animation-delay")}}의 값이 음수인 경우에만 `(-1 * delay)`가 되고, 그 외에는 `0.0`입니다.
 
 ## 구문
 

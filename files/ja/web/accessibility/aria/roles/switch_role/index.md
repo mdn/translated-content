@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: switch ロール'
-slug: Web/Accessibility/ARIA/Roles/Switch_role
+slug: Web/Accessibility/ARIA/Roles/switch_role
 ---
 
 ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)) ロールと機能的に同じですが、かなり一般的な意味を持つ「チェックされた」状態と「チェックされていない」状態を表す代わりに、スイッチ (`switch`) ロールは「オン」と「オフ」の状態を表す点が異なります。
