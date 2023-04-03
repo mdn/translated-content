@@ -1,17 +1,13 @@
 ---
 title: Window.showOpenFilePicker()
 slug: Web/API/Window/showOpenFilePicker
-page-type: web-api-instance-method
-status:
-  - experimental
-browser-compat: api.Window.showOpenFilePicker
 ---
 
 {{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 {{domxref("Window")}} 接口上的 **`showOpenFilePicker()`** 方法用于显示一个文件选择界面，以使用户选择一个或多个文件并返回这些文件的句柄。
 
-## 用法
+## 语法
 
 ```js-nolint
 showOpenFilePicker()
@@ -28,6 +24,7 @@ showOpenFilePicker()
     - `excludeAcceptAllOption`
       - : 布尔值，默认为 `false`。正常情况下，文件选择界面带有一个允许用户选择所有类型文件的过滤选项（展开于文件类型选项中）。设置此选项为 `true` 以使该过滤选项不可用。
     - `types`
+
       - : 表示允许选择的文件类型的 {{jsxref('Array')}} 数组，其中的元素为包含以下选项的对象：
 
         - `description`
@@ -88,7 +85,7 @@ async function getFile() {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [File System Access API](/zh-CN/docs/Web/API/File_System_Access_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
