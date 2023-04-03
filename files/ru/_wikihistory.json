@@ -6015,10 +6015,6 @@
       "madarche"
     ]
   },
-  "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2020-12-13T06:01:46.717Z",
-    "contributors": ["tolya.sherbakov"]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2020-01-13T04:48:53.673Z",
     "contributors": [
@@ -6856,6 +6852,10 @@
   "Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T21:56:53.185Z",
     "contributors": ["Roman-Kosov", "megabajtruie"]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2020-12-13T06:01:46.717Z",
+    "contributors": ["tolya.sherbakov"]
   },
   "Web/API/Storage_Access_API": {
     "modified": "2020-10-15T22:32:41.630Z",
@@ -13269,10 +13269,6 @@
       "Mingun"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/Stack": {
-    "modified": "2019-03-23T23:08:35.216Z",
-    "contributors": ["Mingun"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/columnNumber": {
     "modified": "2019-03-23T23:08:51.041Z",
     "contributors": ["Mingun"]
@@ -13291,6 +13287,10 @@
   },
   "Web/JavaScript/Reference/Global_Objects/Error/name": {
     "modified": "2019-03-23T23:08:51.293Z",
+    "contributors": ["Mingun"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Error/stack": {
+    "modified": "2019-03-23T23:08:35.216Z",
     "contributors": ["Mingun"]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
@@ -14437,10 +14437,6 @@
     "modified": "2020-10-14T10:03:26.063Z",
     "contributors": ["scrum", "SphinxKnight", "Mingun"]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2019-03-23T23:11:20.382Z",
-    "contributors": ["KiraAndMaxim", "Mingun", "Ajooluz"]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2019-03-18T20:48:46.079Z",
     "contributors": ["risenforces", "DenVdmj", "Mingun"]
@@ -14672,6 +14668,10 @@
   "Web/JavaScript/Reference/Global_Objects/String/toUpperCase": {
     "modified": "2019-03-23T23:06:22.989Z",
     "contributors": ["Mingun"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2019-03-23T23:11:20.382Z",
+    "contributors": ["KiraAndMaxim", "Mingun", "Ajooluz"]
   },
   "Web/JavaScript/Reference/Global_Objects/String/trimEnd": {
     "modified": "2019-03-23T23:06:21.966Z",

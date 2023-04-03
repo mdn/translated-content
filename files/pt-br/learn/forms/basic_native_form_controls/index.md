@@ -638,17 +638,3 @@ To dig into the different form widgets, there are some useful external resources
 - [HTML5 Tests - inputs](http://www.quirksmode.org/html5/inputs.html) on Quirksmode (also [available for mobile](http://www.quirksmode.org/html5/inputs_mobile.html) browsers)
 
 {{PreviousMenuNext("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## In this module
-
-- [Your first HTML form](/pt-BR/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/pt-BR/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/pt-BR/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/pt-BR/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/pt-BR/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/pt-BR/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/pt-BR/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/pt-BR/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/pt-BR/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

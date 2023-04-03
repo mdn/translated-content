@@ -23,9 +23,9 @@ dateObj.getMinutes()
 
 `getMinutes` 返回一个 0 到 59 的整数值。
 
-## 例子
+## 示例
 
-### 例子：使用`getMinutes` 方法
+### 示例：使用`getMinutes` 方法
 
 下例中，第二行语句运行过后，变量 `minutes` 的值为 15，也就是说 `Xmas95` 这个日期对象的值为某时 15 分某秒。
 

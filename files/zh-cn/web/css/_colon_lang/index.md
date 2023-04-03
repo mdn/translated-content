@@ -14,7 +14,7 @@ p:lang(en) {
 }
 ```
 
-> **备注：** 在 HTML 中，语言是通过{{htmlattrxref("lang")}} 属性，和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 头）. 对于其他文档类型，也可能存在其他用于确定语言的方法。
+> **备注：** 在 HTML 中，语言是通过[`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性，和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 头）. 对于其他文档类型，也可能存在其他用于确定语言的方法。
 
 ## 语法
 
@@ -64,5 +64,5 @@ p:lang(en) {
 ## 参见
 
 - 语言相关伪类：{{ cssxref(":lang") }}, {{ cssxref(":dir") }}
-- HTML {{htmlattrxref("lang")}} 属性
+- HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性
 - [BCP 47 - Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)

@@ -14,7 +14,7 @@ slug: Web/API/HTMLContentElement
 _此接口继承 {{domxref("HTMLElement")}} 接口的属性。_
 
 - {{domxref("HTMLContentElement.select")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("select", "content") }} HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
+  - : Is a {{domxref("DOMString")}} that reflects the [`select`](/zh-CN/docs/Web/HTML/Element/content#select) HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
 
 ## 方法
 

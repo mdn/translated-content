@@ -558,9 +558,3 @@ Mira cómo sigue en el ejemplo. Si te encallas o quieres verificar tu trabajo, p
 Con esto casi hemos abarcado todos los conceptos básicos de las tablas HTML. En el próximo artículo, veremos algunas características un poco más avanzadas de las tablas y comenzaremos a pensar acerca de su accesibilidad para las personas con discapacidad visual.
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## En este módulo
-
-- [Conceptos básicos de las tablas en HTML](/es/docs/Learn/HTML/Tables/Basics)
-- [Funciones avanzadas de las tablas HTML y accesibilidad](/es/docs/Learn/HTML/Tables/Advanced)
-- [Estructuración de datos planetarios](/es/docs/Learn/HTML/Tables/Structuring_planet_data)

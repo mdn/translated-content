@@ -1718,6 +1718,10 @@
     "modified": "2020-09-30T15:30:34.436Z",
     "contributors": ["chrisdavidmills", "wbamberg", "Netaras"]
   },
+  "MDN/Writing_guidelines/Howto": {
+    "modified": "2019-03-18T20:41:26.193Z",
+    "contributors": ["alattalatta", "wbamberg", "minwook-shin", "plzfday"]
+  },
   "MDN/Writing_guidelines/Howto/Creating_moving_deleting": {
     "modified": "2019-03-23T23:13:39.002Z",
     "contributors": [
@@ -1729,10 +1733,6 @@
       "AlwaysOnce",
       "KwanHong_Lee66"
     ]
-  },
-  "MDN/Writing_guidelines/Howto/Tag": {
-    "modified": "2019-03-18T20:41:26.193Z",
-    "contributors": ["alattalatta", "wbamberg", "minwook-shin", "plzfday"]
   },
   "MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars": {
     "modified": "2020-09-30T12:56:35.846Z",
@@ -9546,10 +9546,6 @@
     "modified": "2020-10-15T21:22:11.475Z",
     "contributors": ["alattalatta", "seungha-kim", "pusanbear", "teoli", "MoGi"]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2020-10-15T21:58:30.718Z",
-    "contributors": ["alattalatta", "dasebee"]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/charAt": {
     "modified": "2020-10-15T21:45:37.005Z",
     "contributors": ["bohyun611kim", "alattalatta", "pusanbear"]
@@ -9664,6 +9660,10 @@
   "Web/JavaScript/Reference/Global_Objects/String/toUpperCase": {
     "modified": "2020-10-15T21:55:16.088Z",
     "contributors": ["alattalatta", "swtpumpkin", "seokju-na"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2020-10-15T21:58:30.718Z",
+    "contributors": ["alattalatta", "dasebee"]
   },
   "Web/JavaScript/Reference/Global_Objects/String/valueOf": {
     "modified": "2020-10-15T22:25:44.637Z",

@@ -24,7 +24,7 @@ Promise.all(iterable);
 
 - 如果传入的参数是一个空的可迭代对象，则返回一个**已完成**（already resolved）状态的 {{jsxref("Promise")}}。
 - 如果传入的参数不包含任何 `promise`，则返回一个**异步完成**（asynchronously resolved）{{jsxref("Promise")}}。注意：Google Chrome 58 在这种情况下返回一个**已完成**（already resolved）状态的 {{jsxref("Promise")}}。
-- 其它情况下返回一个**处理中**（pending）的{{jsxref("Promise")}}。这个返回的 `promise` 之后会在所有的 `promise` 都完成或有一个 `promise` 失败时**异步**地变为完成或失败。见下方关于“Promise.all 的异步或同步”示例。返回值将会按照参数内的 `promise` 顺序排列，而不是由调用 `promise` 的完成顺序决定。
+- 其他情况下返回一个**处理中**（pending）的{{jsxref("Promise")}}。这个返回的 `promise` 之后会在所有的 `promise` 都完成或有一个 `promise` 失败时**异步**地变为完成或失败。见下方关于“Promise.all 的异步或同步”示例。返回值将会按照参数内的 `promise` 顺序排列，而不是由调用 `promise` 的完成顺序决定。
 
 ## 说明
 
@@ -36,7 +36,7 @@ Promise.all(iterable);
 在任何情况下，`Promise.all` 返回的 `promise` 的完成状态的结果都是一个数组，它包含所有的传入迭代参数对象的值（也包括非 `promise` 值）。
 
 失败/拒绝（Rejection）：
-如果传入的 `promise` 中有一个失败（rejected），`Promise.all` 异步地将失败的那个结果给失败状态的回调函数，而不管其它 `promise` 是否完成。
+如果传入的 `promise` 中有一个失败（rejected），`Promise.all` 异步地将失败的那个结果给失败状态的回调函数，而不管其他 `promise` 是否完成。
 
 ## 示例
 

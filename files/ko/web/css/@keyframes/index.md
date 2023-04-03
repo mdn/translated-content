@@ -120,7 +120,7 @@ See [CSS animations](/en/CSS/CSS_animations) for examples.
 
 ## Notes
 
-1. @keyframes not supported in an inline or scoped stylesheet in Firefox ({{bug(830056)}}).
+1. @keyframes not supported in an inline or scoped stylesheet in Firefox ([Firefox bug 830056](https://bugzil.la/830056)).
 
 ## See also
 

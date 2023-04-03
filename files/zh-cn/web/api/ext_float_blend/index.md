@@ -51,7 +51,7 @@ gl.drawArrays(gl.POINTS, 0, 1);
 
 {{Compat}}
 
-## 其它参考
+## 其他参考
 
 - [WebGL API](/zh-CN/docs/Web/API/WebGL_API)
 - [Using WebGL extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)

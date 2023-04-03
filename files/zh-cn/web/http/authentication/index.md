@@ -43,7 +43,7 @@ HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通
 
 浏览器使用 `utf-8` 编码用户名和密码。
 
-Firefox 曾使用 `ISO-8859-1`，但为与其它浏览器保持一致改为 `utf-8`，也为了避免 [Firefox bug 1419658](https://bugzil.la/1419658) 中所描述的潜在问题。
+Firefox 曾使用 `ISO-8859-1`，但为与其他浏览器保持一致改为 `utf-8`，也为了避免 [Firefox bug 1419658](https://bugzil.la/1419658) 中所描述的潜在问题。
 
 ### WWW-Authenticate 与 Proxy-Authenticate 标头
 

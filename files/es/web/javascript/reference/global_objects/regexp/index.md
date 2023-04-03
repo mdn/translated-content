@@ -232,7 +232,7 @@ A partir de Firefox 34, en el caso de un grupo de captura con cuantificadores qu
 // 'grupo: undefined'
 ```
 
-Ten en cuenta que, debido a la compatibilidad web, `RegExp.$N` seguirá devolviendo una cadena vacía en lugar de `undefined` ({{bug(1053944)}}).
+Ten en cuenta que, debido a la compatibilidad web, `RegExp.$N` seguirá devolviendo una cadena vacía en lugar de `undefined` ([Error 1053944 en Firefox](https://bugzil.la/1053944)).
 
 ## Ve también
 

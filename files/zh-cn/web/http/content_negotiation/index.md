@@ -7,7 +7,7 @@ slug: Web/HTTP/Content_negotiation
 
 在 [HTTP](/zh-CN/docs/Glossary/HTTP) 协议中，***内容协商***是一种机制，用于为同一 URI 提供资源不同的{{Glossary("Representation header","表示")}}形式，以帮助用户代理指定最适合用户的表示形式（例如，哪种文档语言、哪种图片格式或者哪种内容编码）。
 
-> **备注：** 你可以在[来自 WHATWG 的维基页面](https://wiki.whatwg.org/wiki/Why_not_conneg)发现 HTTP 内容协商的一些缺点。HTML5 提供其它的选择来进行内容协商，例如 [`<source>` 元素](/zh-CN/docs/Web/HTML/Element/source)。
+> **备注：** 你可以在[来自 WHATWG 的维基页面](https://wiki.whatwg.org/wiki/Why_not_conneg)发现 HTTP 内容协商的一些缺点。HTML5 提供其他的选择来进行内容协商，例如 [`<source>` 元素](/zh-CN/docs/Web/HTML/Element/source)。
 
 ## 内容协商的基本原则
 
@@ -20,11 +20,11 @@ slug: Web/HTTP/Content_negotiation
 - 客户端设置特定的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)（又称为*服务端驱动型内容协商*或者*主动内容协商*），这是进行内容协商的标准方式。
 - 服务器返回 {{HTTPStatus("300")}}（Multiple Choices）或者 {{HTTPStatus("406")}}（Not Acceptable）、{{HTTPStatus("415")}}（Unsupported Media Type）[HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status) （又称为*代理驱动型协商*或者*响应式协商*），这种方式一般用作备选方案。
 
-随着时间的推移，也有其它一些内容协商的提案被提出来，比如[透明内容协商](https://datatracker.ietf.org/doc/html/rfc2295)以及 `Alternates` 标头。但是它们都没有获得人们的认可从而被遗弃。
+随着时间的推移，也有其他一些内容协商的提案被提出来，比如[透明内容协商](https://datatracker.ietf.org/doc/html/rfc2295)以及 `Alternates` 标头。但是它们都没有获得人们的认可从而被遗弃。
 
 ## 服务端驱动型内容协商机制
 
-在*服务端驱动型内容协商*或者主动内容协商中，浏览器（或者其它任何类型的用户代理）会随同 URL 发送一系列的 HTTP 标头。这些标头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。如果它不能提供一个合适的资源，它可能使用 {{HTTPStatus("406")}}（Not Acceptable）、{{HTTPStatus("415")}}（Unsupported Media Type）进行响应并为其支持的媒体类型设置标头（例如，分别对 POST 和 PATCH 请求使用 {{HTTPHeader("Accept-Post")}} 或 {{HTTPHeader("Accept-Patch")}} 标头）。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 [Apache 服务器的内容协商算法](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm)。
+在*服务端驱动型内容协商*或者主动内容协商中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的 HTTP 标头。这些标头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。如果它不能提供一个合适的资源，它可能使用 {{HTTPStatus("406")}}（Not Acceptable）、{{HTTPStatus("415")}}（Unsupported Media Type）进行响应并为其支持的媒体类型设置标头（例如，分别对 POST 和 PATCH 请求使用 {{HTTPHeader("Accept-Post")}} 或 {{HTTPHeader("Accept-Patch")}} 标头）。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 [Apache 服务器的内容协商算法](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm)。
 
 ![客户端请求一个 URL，其中标头表示对内容类型的偏好。服务器有多个由 URL 表示的资源并根据偏好的语言发回内容，然后根据客户端的请求标头压缩请求主体](httpnegoserver.png)
 
@@ -42,7 +42,7 @@ HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型�
 
 {{HTTPHeader("Accept")}} 标头列举了用户代理希望接收的媒体资源的 MIME 类型。其中不同的 MIME 类型之间用逗号分隔，同时每一种 MIME 类型会配有一个品质因数（quality factor），该参数明确了不同 MIME 类型之间的相对优先级。
 
-`Accept` 标头的值由浏览器或其它类型的用户代理确定，并且会由于上下文环境的不同而不同。比如在获取 HTML 页面、图片文件、视频文件或者是脚本文件的时候，无论是通过在地址栏中输入资源地址来获取还是通过 {{HTMLElement("img")}}、{{HTMLElement("video")}} 或 {{HTMLElement("audio")}} 元素引用都是不一样的。浏览器可以自由使用它们认为最为合适的标头值；这里有一份[常见浏览器 Accept 标头默认值](/zh-CN/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)的完整列表。
+`Accept` 标头的值由浏览器或其他类型的用户代理确定，并且会由于上下文环境的不同而不同。比如在获取 HTML 页面、图片文件、视频文件或者是脚本文件的时候，无论是通过在地址栏中输入资源地址来获取还是通过 {{HTMLElement("img")}}、{{HTMLElement("video")}} 或 {{HTMLElement("audio")}} 元素引用都是不一样的。浏览器可以自由使用它们认为最为合适的标头值；这里有一份[常见浏览器 Accept 标头默认值](/zh-CN/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)的完整列表。
 
 ### `Accept-CH` 标头{{experimental_inline}}
 
@@ -64,7 +64,7 @@ HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型�
 
 ### `Accept-Encoding` 标头
 
-{{HTTPHeader("Accept-Encoding")}} 标头明确说明了（接收端）可以接受的内容编码形式（所支持的压缩算法）。该标头的值是一个 Q 因子清单（例如 `br, gzip;q=0.8`），用来提示不同编码类型值的优先级顺序。默认值 `identity` 的优先级最低（除非声明为其它优先级）。
+{{HTTPHeader("Accept-Encoding")}} 标头明确说明了（接收端）可以接受的内容编码形式（所支持的压缩算法）。该标头的值是一个 Q 因子清单（例如 `br, gzip;q=0.8`），用来提示不同编码类型值的优先级顺序。默认值 `identity` 的优先级最低（除非声明为其他优先级）。
 
 将 HTTP 消息进行压缩是一种最重要的提升 Web 站点性能的方法。该方法会减小所要传输的数据量的大小，节省可用带宽。浏览器总是会发送该标头，服务器则应该配置为接受它，并且采用一定的压缩方案。
 
@@ -95,7 +95,7 @@ HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型�
 
 ## 代理驱动型内容协商机制
 
-服务端驱动型内容协商也有一些缺点：它不能很好的扩展。在协商机制中，每一个特性需要对应一个标头。如果想要使用屏幕大小、分辨率或者其它方面的特性，就需要创建一个新的 HTTP 标头。而且在每一次请求中都必须发送这些标头。在标头很少的时候，这并不是问题，但是随着数量的增多，消息的体积会导致性能的下降。带有精确信息的标头发送的越多，信息熵就会越大，也就准许了更多 HTTP 指纹识别行为，以及与此相关的隐私问题的发生。
+服务端驱动型内容协商也有一些缺点：它不能很好的扩展。在协商机制中，每一个特性需要对应一个标头。如果想要使用屏幕大小、分辨率或者其他方面的特性，就需要创建一个新的 HTTP 标头。而且在每一次请求中都必须发送这些标头。在标头很少的时候，这并不是问题，但是随着数量的增多，消息的体积会导致性能的下降。带有精确信息的标头发送的越多，信息熵就会越大，也就准许了更多 HTTP 指纹识别行为，以及与此相关的隐私问题的发生。
 
 从 HTTP 协议制定之初，该协议就准许另外一种协商机制：*代理驱动型内容协商*，或称为*响应式协商*。在这种协商机制中，当面临不明确的请求时，服务器会返回一个页面，其中包含了可供选择的资源的链接。资源呈现给用户，由用户做出选择。
 

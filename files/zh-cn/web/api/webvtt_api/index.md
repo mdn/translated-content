@@ -301,7 +301,7 @@ Some time ago in a place rather distant....
 
 cue 时间线指示 cue 何时显示。它用时间戳表示开始和结束的时间。结束的时间一定大于开始的时间，并且开始时间必须大于或者等于所有之前开始的时间。cue 可能具有重叠的时间。
 
-如果 webVTT 文件用于 chapters（{{HTMLElement("track")}} 的 {{htmlattrxref("kind")}} 是 `chapters`），那么文件中不能有重叠的时间。
+如果 webVTT 文件用于 chapters（{{HTMLElement("track")}} 的 [`kind`](/zh-CN/docs/Web/HTML/Global_attributes#kind) 是 `chapters`），那么文件中不能有重叠的时间。
 
 每个 cue 的时间线都包含五个部分：
 
@@ -441,11 +441,11 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
 
 ### cue 有效内容的文本标签
 
-这里有一些标签，例如 `<b>`。然而，如果 WebVTT 文件在 {{htmlattrxref("kind")}} 属性是 `chapters` 的 {{HTMLElement("track")}} 元素中使用，那么你无法使用这些标签。
+这里有一些标签，例如 `<b>`。然而，如果 WebVTT 文件在 [`kind`](/zh-CN/docs/Web/HTML/Global_attributes#kind) 属性是 `chapters` 的 {{HTMLElement("track")}} 元素中使用，那么你无法使用这些标签。
 
 - 时间戳标签
 
-  - : 时间戳必须大于 cue 开始的时间戳，大于在 cue 有效内容中任意之前的时间戳，并且小于 cue 结束的时间戳。*活动的文本*（active text）是指当前时间戳和下一个时间戳之间的文本或者如果有效内容中没有其它时间戳，则一直到有效内容末尾的文本。有效内容中*活动的文本*之前的任何文本都是*之前已出现的文本*（previous text）。*活动的文本*之后的文本都是*未来即将出现的文本*（future text）。这启用了 karaoke 风格的字幕。
+  - : 时间戳必须大于 cue 开始的时间戳，大于在 cue 有效内容中任意之前的时间戳，并且小于 cue 结束的时间戳。*活动的文本*（active text）是指当前时间戳和下一个时间戳之间的文本或者如果有效内容中没有其他时间戳，则一直到有效内容末尾的文本。有效内容中*活动的文本*之前的任何文本都是*之前已出现的文本*（previous text）。*活动的文本*之后的文本都是*未来即将出现的文本*（future text）。这启用了 karaoke 风格的字幕。
 
     ```plain
     1
@@ -497,7 +497,7 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
 
 - Ruby 标签（`<ruby></ruby>`）
 
-  - : 使用 ruby 文本标签展示 [ruby 字符](https://en.wikipedia.org/wiki/Ruby_character)（即其它字符上的小的注解字符）。
+  - : 使用 ruby 文本标签展示 [ruby 字符](https://en.wikipedia.org/wiki/Ruby_character)（即其他字符上的小的注解字符）。
 
     ```xml
     <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -505,7 +505,7 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
 
 - Ruby 文本标签（`<rt></rt>`）
 
-  - : 使用 ruby 文本标签展示 [ruby 字符](https://en.wikipedia.org/wiki/Ruby_character)（即其它字符上的小的注解字符）。
+  - : 使用 ruby 文本标签展示 [ruby 字符](https://en.wikipedia.org/wiki/Ruby_character)（即其他字符上的小的注解字符）。
 
     ```xml
     <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -541,7 +541,7 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
 编写一个简单的 WebVTT 文件可以遵循以下步骤。开始之前，必须注意你可以使用记事本且保存文件作为“.vtt”的格式。步骤如下所示：
 
 - 打开一个记事本。
-- WebVTT 的第一行是标准化的，类似于其它一些语言，你需要去文件头部标识文件的类型。在第一行，你得这样写：
+- WebVTT 的第一行是标准化的，类似于其他一些语言，你需要去文件头部标识文件的类型。在第一行，你得这样写：
 
   ```plain
   WEBVTT

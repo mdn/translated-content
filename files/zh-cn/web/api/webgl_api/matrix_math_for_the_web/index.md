@@ -77,7 +77,7 @@ function multiplyMatrixAndPoint(matrix, point) {
 var identityResult = multiplyMatrixAndPoint(identityMatrix, [4,3,2,1]);
 ```
 
-返回同一个点并没有什么用处，但还有一些其它的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。
+返回同一个点并没有什么用处，但还有一些其他的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。
 
 ### 两个矩阵相乘
 

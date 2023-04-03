@@ -66,7 +66,7 @@ formatToParts(date)
 
 ## ポリフィル
 
-この機能のポリフィルは、[提案リポジトリー](https://github.com/zbraniecki/proposal-intl-formatToParts)から利用できます。
+この機能のポリフィルは、[提案リポジトリー](https://github.com/tc39/proposal-intl-formatToParts)から利用できます。
 
 ## 例
 

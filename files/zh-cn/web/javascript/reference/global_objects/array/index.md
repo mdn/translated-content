@@ -228,7 +228,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.at()")}}
   - : 返回给定索引处的数组元素。接受从最后一项往回计算的负整数。
 - {{jsxref("Array.prototype.concat()")}}
-  - : 返回一个新数组，该数组由被调用的数组与其它数组或值连接形成。
+  - : 返回一个新数组，该数组由被调用的数组与其他数组或值连接形成。
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : 在数组内复制数组元素序列。
 - {{jsxref("Array.prototype.entries()")}}

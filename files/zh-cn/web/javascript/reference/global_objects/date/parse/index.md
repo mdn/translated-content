@@ -91,9 +91,9 @@ Date.parse('foo-bar 2014');
 // 返回：NaN
 ```
 
-## 例子
+## 示例
 
-### 例子：使用 `Date.parse()`
+### 示例：使用 `Date.parse()`
 
 如果 `IPOdate` 是一个已经存在的 {{jsxref("Date")}} 对象，则可以把其设置为本地时间 1995 年 8 月 9 日。如下：
 

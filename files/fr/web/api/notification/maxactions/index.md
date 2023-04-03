@@ -1,6 +1,6 @@
 ---
 title: Notification.maxActions
-slug: Web/API/notification/maxActions
+slug: Web/API/Notification/maxActions
 tags:
   - API
   - API Notifications

@@ -208,7 +208,7 @@ myP.appendChild(myTextNode);
 
 #### 使用文档对象和 createElement(..) 方法创建新的元素
 
-你可以使用 createElement 来创建新的 HTML 元素或者任何其它你想要的元素。比如，如果你想要创建一个新的 P 作为 BODY 的子元素，你可以使用前面例子的 myBody 并给它接上一个新的元素节点。使用 document.createElement("tagname") 可以方便的创建一个节点。如下：
+你可以使用 createElement 来创建新的 HTML 元素或者任何其他你想要的元素。比如，如果你想要创建一个新的 P 作为 BODY 的子元素，你可以使用前面例子的 myBody 并给它接上一个新的元素节点。使用 document.createElement("tagname") 可以方便的创建一个节点。如下：
 
 ```
 myNewPTAGnode=document.createElement("p");

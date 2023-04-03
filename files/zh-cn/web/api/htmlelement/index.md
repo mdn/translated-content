@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement
 
 {{APIRef}}
 
-HTMLElement 接口表示所有的 [HTML](/zh-CN/docs/Web/HTML) 元素。一些 HTML 元素直接实现了 HTMLElement 接口，其它的间接实现 HTMLElement 接口。
+HTMLElement 接口表示所有的 [HTML](/zh-CN/docs/Web/HTML) 元素。一些 HTML 元素直接实现了 HTMLElement 接口，其他的间接实现 HTMLElement 接口。
 
 ## 属性
 

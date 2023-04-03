@@ -53,7 +53,7 @@ alert(normalObj); // shows [object Object]
 alert(nullProtoObj); // throws error: Cannot convert object to primitive value
 ```
 
-其它方法也同样会失败。
+其他方法也同样会失败。
 
 ```js
 normalObj.valueOf() // shows {}

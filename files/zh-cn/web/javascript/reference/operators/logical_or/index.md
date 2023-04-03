@@ -1,140 +1,146 @@
 ---
-title: Logical OR (||)
+title: 逻辑或（||）
 slug: Web/JavaScript/Reference/Operators/Logical_OR
 ---
 
 {{jsSidebar("Operators")}}
 
-The logical OR (`||`) operator (logical disjunction) for a set of operands is true if and only if one or more of its operands is true. It is typically used with {{jsxref("Boolean")}} (logical) values. When it is, it returns a Boolean value. However, the `||` operator actually returns the value of one of the specified operands, so if this operator is used with non-Boolean values, it will return a non-Boolean value.
+对于一组操作数的**逻辑或**（`||`，逻辑析取）运算符，当且仅当其一个或多个操作数为真，其运算结果为真。它通常与布尔（逻辑）值一起使用。当它是布尔值时，返回一个布尔值。然而，`||` 运算符实际上是返回一个指定的操作数的值，所以如果这个运算符被用于非布尔值，它将返回一个非布尔值。
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
 
 ## 语法
 
-```plain
+```js-nolint
 expr1 || expr2
 ```
 
-## Description
+## 描述
 
-If `expr1` can be converted to `true`, returns `expr1`; else, returns `expr2`.
+如果 `expr1` 能转化为 `true`，返回 `expr1`；否则返回 `expr2`。
 
-If a value can be converted to `true`, the value is so-called {{Glossary("truthy")}}. If a value can be converted to `false`, the value is so-called {{Glossary("falsy")}}.
+能够转化为 `true` 的值叫做{{Glossary("truthy","真值")}}，能够转化为 `false` 的值叫做{{Glossary("falsy","假值")}}。
 
-Examples of expressions that can be converted to false are:
+能够转化为 false 的表达式的示例如下：
 
-- `null`;
-- `NaN`;
-- `0`;
-- empty string (`""` or `''` or ` `` `);
-- `undefined`.
+- `null`；
+- `NaN`；
+- `0`；
+- 空字符串（`""` 或 `''` 或 ` `` `）；
+- `undefined`。
 
-Even though the `||` operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a [boolean primitive](/zh-CN/docs/Web/JavaScript/Data_structures#Boolean_type). To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [NOT operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
+尽管 `||` 运算符可以与非布尔操作数一起使用，但它仍然被认为是一个布尔运算符，因为它的返回值总是可以被转换为[布尔基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)。要明确地将其返回值（或任何一般的表达式）转换为相应的布尔值，请使用双{{JSxRef("Operators/Logical_NOT", "非运算符", "", 1)}}或 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 构造函数。
 
-### Short-circuit evaluation
+### 短路求值
 
-The logical OR expression is evaluated left to right, it is tested for possible "short-circuit" evaluation using the following rule:
+逻辑或从左到右进行求值，它使用如下规则进行“短路”测试：
 
-`(some truthy expression) || expr` is short-circuit evaluated to the truthy expression.
+`(some truthy expression) || expr` 被短路评估为真值。
 
-Short circuit means that the `expr` part above is **not evaluated**, hence any side effects of doing so do not take effect (e.g., if `expr` is a function call, the calling never takes place). This happens because the value of the operator is already determined after the evaluation of the first operand. See example:
+短路意味着上面的 `expr` 部分**不被求值**，因此不会发生任何副作用（例如，如果 `expr` 是一个函数调用，调用就不会发生）。这是因为在对第一个操作数进行评估后，操作数的值已经确定。参见下述示例：
 
 ```js
-function A(){ console.log('called A'); return false; }
-function B(){ console.log('called B'); return true; }
+function A() {
+  console.log("调用了 A");
+  return false;
+}
+function B() {
+  console.log("调用了 B");
+  return true;
+}
 
-console.log( B() || A() );
-// logs "called B" due to the function call,
-// then logs true (which is the resulting value of the operator)
+console.log(B() || A());
+// 由于调用了 B 函数，故会输出 "called B" 到控制台，
+// 然后输出 true（运算符的运算结果）
 ```
 
-### Operator precedence
+### 运算符优先级
 
-The following expressions might seem equivalent, but they are not, because the `&&` operator is executed before the `||` operator (see [operator precedence](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+以下表达式看起来等价，但实际上不是，因为 `&&` 运算符比 `||` 运算符先执行（参见[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)）。
 
 ```js
-true || false && false      // returns true, because && is executed first
-(true || false) && false    // returns false, because operator precedence cannot apply
+true || false && false      // 返回 true，因为 && 先执行
+(true || false) && false    // 返回 false，因为分组运算符优先级更高
 ```
 
-## Examples
+## 示例
 
-### Using OR
+### 使用或运算符
 
-The following code shows examples of the `||` (logical OR) operator.
+下列代码展示了 `||`（逻辑或）运算符的用法。
 
 ```js
-o1 = true  || true       // t || t returns true
-o2 = false || true       // f || t returns true
-o3 = true  || false      // t || f returns true
-o4 = false || (3 == 4)   // f || f returns false
-o5 = 'Cat' || 'Dog'      // t || t returns "Cat"
-o6 = false || 'Cat'      // f || t returns "Cat"
-o7 = 'Cat' || false      // t || f returns "Cat"
-o8 = ''    || false      // f || f returns false
-o9 = false || ''         // f || f returns ""
-o10 = false || varObject // f || object returns varObject
+true || true; // t || t returns true
+false || true; // f || t returns true
+true || false; // t || f returns true
+false || 3 === 4; // f || f returns false
+"Cat" || "Dog"; // t || t returns "Cat"
+false || "Cat"; // f || t returns "Cat"
+"Cat" || false; // t || f returns "Cat"
+"" || false; // f || f returns false
+false || ""; // f || f returns ""
+false || varObject; // f || object returns varObject
 ```
 
-> **备注：** If you use this operator to provide a default value to some variable, be aware that any _falsy_ value will not be used. If you only need to filter out {{jsxref("null")}} or {{jsxref("undefined")}}, consider using [the nullish coalescing operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> **备注：** 如果你使用这个操作符为某些变量提供默认值，要注意任何*假*值都不会被使用。如果你只需要过滤掉 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或 {{jsxref("undefined")}}，可以考虑使用[空值合并运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)。
 
-### Conversion rules for booleans
+### 布尔值转化规则
 
-#### Converting AND to OR
+#### 与运算符转化为或运算符
 
-The following operation involving **booleans**:
+下述涉及到**布尔**运算符的运算：
 
-```js
+```js-nolint
 bCondition1 && bCondition2
 ```
 
-is always equal to:
+总是与此表达式相同：
 
-```js
+```js-nolint
 !(!bCondition1 || !bCondition2)
 ```
 
-#### Converting OR to AND
+#### 或运算符转化为与运算符
 
-The following operation involving **booleans**:
+下述涉及到**布尔**运算符的运算：
 
-```js
+```js-nolint
 bCondition1 || bCondition2
 ```
 
-is always equal to:
+总是与此表达式相同：
 
-```js
+```js-nolint
 !(!bCondition1 && !bCondition2)
 ```
 
-### Removing nested parentheses
+### 去除嵌套的括号
 
-As logical expressions are evaluated left to right, it is always possible to remove parentheses from a complex expression following some rules.
+由于逻辑表达式是从左到右进行求值的，只要遵循一定的规则，总是可以从一个复杂的表达式中删除括号。
 
-The following composite operation involving **booleans**:
+下述涉及到**布尔**运算符的复杂运算：
 
-```js
+```js-nolint
 bCondition1 && (bCondition2 || bCondition3)
 ```
 
-is always equal to:
+总是与此表达式相同：
 
-```js
+```js-nolint
 !(!bCondition1 || !bCondition2 && !bCondition3)
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [The nullish coalescing operator (`??`)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+- {{Glossary("Truthy","真值")}}
+- {{Glossary("Falsy","假值")}}

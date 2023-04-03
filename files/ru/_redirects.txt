@@ -484,6 +484,7 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ru/docs/Web/API/HTMLAnchorElement/toString
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
+/ru/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/ru/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 /ru/docs/Web/API/KeyboardEvent/key/Key_Values	/ru/docs/Web/API/UI_Events/Keyboard_event_key_values
 /ru/docs/Web/API/KeyboardEvent/which	/ru/docs/Web/API/UIEvent/which
 /ru/docs/Web/API/MediaRecorder/ondataavailable	/ru/docs/Web/API/MediaRecorder/dataavailable_event

@@ -752,7 +752,7 @@
 /zh-CN/docs/JS-ref/Statements/function*	/zh-CN/docs/Web/JavaScript/Reference/Statements/function*
 /zh-CN/docs/JS-ref/Statements/let	/zh-CN/docs/Web/JavaScript/Reference/Statements/let
 /zh-CN/docs/JS-ref/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-CN/docs/JS-ref/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/zh-CN/docs/JS-ref/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /zh-CN/docs/JS-ref/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/JS-ref/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/JS-ref/String/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat
@@ -953,7 +953,7 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Set	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-CN/docs/JavaScript/Reference/Global_Objects/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/zh-CN/docs/JavaScript/Reference/Global_Objects/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/JavaScript/Reference/Global_Objects/String/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat
@@ -997,7 +997,7 @@
 /zh-CN/docs/JavaScript/Reference/Statements/function*	/zh-CN/docs/Web/JavaScript/Reference/Statements/function*
 /zh-CN/docs/JavaScript/Reference/Statements/let	/zh-CN/docs/Web/JavaScript/Reference/Statements/let
 /zh-CN/docs/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-CN/docs/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/zh-CN/docs/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /zh-CN/docs/JavaScript/Reference/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/JavaScript/Reference/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/JavaScript/Reference/String/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat
@@ -1148,7 +1148,7 @@
 /zh-CN/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /zh-CN/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /zh-CN/docs/MDN/Contribute/Howto/Create_and_edit_pages	/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
-/zh-CN/docs/MDN/Contribute/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto/Tag
+/zh-CN/docs/MDN/Contribute/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
@@ -1156,7 +1156,7 @@
 /zh-CN/docs/MDN/Contribute/Howto/创建及编辑页面	/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /zh-CN/docs/MDN/Contribute/Howto/如何添加或更新浏览器兼容性数据	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /zh-CN/docs/MDN/Contribute/Howto/学习_交互_在线_起步_开始	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/zh-CN/docs/MDN/Contribute/Howto/标签	/zh-CN/docs/MDN/Writing_guidelines/Howto/Tag
+/zh-CN/docs/MDN/Contribute/Howto/标签	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Contribute/Localize	/zh-CN/docs/MDN/Community/Contributing/Translated_content
 /zh-CN/docs/MDN/Contribute/Markdown_in_MDN	/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /zh-CN/docs/MDN/Contribute/Structures	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
@@ -1187,6 +1187,7 @@
 /zh-CN/docs/MDN/Structures/Macros/Commonly-used_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Structures/Macros/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Structures/Macros/Other	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
+/zh-CN/docs/MDN/Writing_guidelines/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-CN/docs/MDN_at_ten	/zh-CN/docs/MDN/At_ten
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus
@@ -1625,15 +1626,17 @@
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
+/zh-CN/docs/Web/API/IDBFileHandle	/zh-CN/docs/Web/API/IndexedDB_API
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
 /zh-CN/docs/Web/API/Index	/zh-CN/docs/Web/API
+/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
 /zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values	/zh-CN/docs/Web/API/UI_Events/Keyboard_event_key_values
 /zh-CN/docs/Web/API/KeyboardEvent/which	/zh-CN/docs/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/LocalFileSystemSync	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
-/zh-CN/docs/Web/API/LockedFile	/zh-CN/docs/Web/API/IDBFileHandle
+/zh-CN/docs/Web/API/LockedFile	/zh-CN/docs/Web/API/IndexedDB_API
 /zh-CN/docs/Web/API/Long_Tasks_API	/zh-CN/docs/Web/API/PerformanceLongTaskTiming
 /zh-CN/docs/Web/API/MediaCapabilitiesInfo	/zh-CN/docs/Web/API/MediaCapabilities/encodingInfo
 /zh-CN/docs/Web/API/MediaDevices/ondevicechange	/zh-CN/docs/Web/API/MediaDevices/devicechange_event
@@ -2494,6 +2497,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/zh-CN/docs/WebAssembly/JavaScript_interface
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError	/zh-CN/docs/WebAssembly/JavaScript_interface/CompileError
@@ -2534,7 +2538,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta	/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta
 /zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Reference/String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-CN/docs/Web/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/zh-CN/docs/Web/JavaScript/Reference/String/Trim	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /zh-CN/docs/Web/JavaScript/Reference/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/Web/JavaScript/Reference/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/Web/JavaScript/Reference/String/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat

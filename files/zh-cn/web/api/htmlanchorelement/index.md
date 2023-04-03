@@ -26,11 +26,11 @@ _继承其父类 {{domxref("HTMLElement")}} 的属性，并实现 {{domxref("URL
 - {{domxref("URLUtils.hostname")}}
   - : Is a {{domxref("DOMString")}} representing the hostname in the referenced URL.
 - {{domxref("URLUtils.href")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("href", "a")}} HTML attribute, containing a valid URL of a linked resource.
+  - : Is a {{domxref("DOMString")}} that reflects the [`href`](/zh-CN/docs/Web/HTML/Element/a#href) HTML attribute, containing a valid URL of a linked resource.
 - {{domxref("HTMLAnchorElement.hreflang")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.
+  - : Is a {{domxref("DOMString")}} that reflects the [`hreflang`](/zh-CN/docs/Web/HTML/Element/a#hreflang) HTML attribute, indicating the language of the linked resource.
 - {{domxref("HTMLAnchorElement.media")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("media", "a")}} HTML attribute, indicating the intended media for the linked resource.
+  - : Is a {{domxref("DOMString")}} that reflects the [`media`](/zh-CN/docs/Web/HTML/Element/a#media) HTML attribute, indicating the intended media for the linked resource.
 - {{domxref("HTMLAnchorElement.name")}} {{Deprecated_Inline}}
   - : Is a {{domxref("DOMString")}} representing the anchor name.
 - {{domxref("URLUtils.passport")}}
@@ -44,11 +44,11 @@ _继承其父类 {{domxref("HTMLElement")}} 的属性，并实现 {{domxref("URL
 - {{domxref("URLUtils.protocol")}}
   - : Is a {{domxref("DOMString")}} representing the protocol component, including trailing colon ('`:`'), of the referenced URL.
 - {{domxref("HTMLAnchorElement.rel")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, specifying the relationship of the target object to the linked object.
+  - : Is a {{domxref("DOMString")}} that reflects the [`rel`](/zh-CN/docs/Web/HTML/Element/a#rel) HTML attribute, specifying the relationship of the target object to the linked object.
 - {{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, as a list of tokens.
+  - : Returns a {{domxref("DOMTokenList")}} that reflects the [`rel`](/zh-CN/docs/Web/HTML/Element/a#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLAnchorElement.rev")}} {{Deprecated_Inline}}
-  - : Is a {{domxref("DOMString")}} representing that the {{htmlattrxref("rev", "a")}} HTML attribute, specifying the relationship of the link object to the target object.
+  - : Is a {{domxref("DOMString")}} representing that the [`rev`](/zh-CN/docs/Web/HTML/Element/a#rev) HTML attribute, specifying the relationship of the link object to the target object.
 - {{domxref("URLUtils.search")}}
   - : Is a {{domxref("DOMString")}} representing tThe search element, including leading question mark ('`?`'), if any, of the referenced URL.
 - {{domxref("HTMLAnchorElement.shape")}} {{Deprecated_Inline}}
@@ -56,11 +56,11 @@ _继承其父类 {{domxref("HTMLElement")}} 的属性，并实现 {{domxref("URL
 - {{domxref("HTMLAnchorElement.tabindex")}}
   - : Is a `long` containing the position of the element in the tabbing navigation order for the current document.
 - {{domxref("HTMLAnchorElement.target")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("target", "a")}} HTML attribute, indicating where to display the linked resource.
+  - : Is a {{domxref("DOMString")}} that reflects the [`target`](/zh-CN/docs/Web/HTML/Element/a#target) HTML attribute, indicating where to display the linked resource.
 - {{domxref("HTMLAnchorElement.text")}}
   - : Is a {{domxref("DOMString")}} being a synonym for the {{domxref("Node.textContent")}} property.
 - {{domxref("HTMLAnchorElement.type")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("type", "a")}} HTML attribute, indicating the MIME type of the linked resource.
+  - : Is a {{domxref("DOMString")}} that reflects the [`type`](/zh-CN/docs/Web/HTML/Element/a#type) HTML attribute, indicating the MIME type of the linked resource.
 - {{domxref("URLUtils.username")}}
   - : Is a {{domxref("DOMString")}} containing the username specified before the domain name.
 

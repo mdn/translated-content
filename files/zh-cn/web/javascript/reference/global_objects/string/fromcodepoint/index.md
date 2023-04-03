@@ -35,7 +35,7 @@ String.fromCodePoint(num1[, ...[, numN]])
 
 因为 `fromCodePoint()` 是 {{jsxref("String")}} 的一个静态方法，所以只能通过 `String.fromCodePoint()` 这样的方式来使用，不能在你创建的 {{jsxref("String")}} 对象实例上直接调用。
 
-## 例子
+## 示例
 
 ### 使用 `fromCodePoint()`
 

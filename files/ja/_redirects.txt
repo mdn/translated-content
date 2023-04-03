@@ -806,7 +806,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -1870,6 +1870,7 @@
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Index	/ja/docs/Glossary
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
+/ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
@@ -2437,7 +2438,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
-/ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/JavaScript/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/JavaScript/Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/JavaScript/Reference/Global_Objects/String/anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -2490,7 +2491,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/JavaScript/Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /ja/docs/JavaScript/Reference/Global_Objects/SyntaxError	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/JavaScript/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
@@ -2740,7 +2741,7 @@
 /ja/docs/MDN/Contribute/Howto/Document_web_errors	/ja/docs/MDN/Writing_guidelines/Howto/Document_web_errors
 /ja/docs/MDN/Contribute/Howto/Migrate_external_content_to_MDN	/ja/docs/MDN/Community/Issues/Content_suggestions_feature_proposals
 /ja/docs/MDN/Contribute/Howto/Report_a_problem	/ja/docs/MDN/Community/Issues
-/ja/docs/MDN/Contribute/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto/Tag
+/ja/docs/MDN/Contribute/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ja/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ja/docs/MDN/Contribute/Howto/Write_an_API_reference	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
@@ -2811,6 +2812,7 @@
 /ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
+/ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
 /ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/MDN/At_ten/History_of_MDN
@@ -3450,6 +3452,7 @@
 /ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
+/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 /ja/docs/Web/API/LocalFileSystem	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/LocalFileSystemSync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/Location/password	/ja/docs/Web/API/Location
@@ -4759,6 +4762,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RangeError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
@@ -4915,6 +4919,7 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
+/ja/docs/Web/SVG/Compatibility_sources	/ja/docs/Web/SVG
 /ja/docs/Web/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Element/hatchpath	/ja/docs/orphaned/Web/SVG/Element/hatchpath
 /ja/docs/Web/SVG/Index	/ja/docs/Web/SVG
@@ -5390,7 +5395,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/dummySlug/Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /ja/docs/dummySlug/Reference/Global_Objects/SyntaxError	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/dummySlug/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError

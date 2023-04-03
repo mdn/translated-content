@@ -1231,7 +1231,7 @@
 /es/docs/MDN/Contribute/Herramientas	/es/docs/orphaned/MDN/Tools
 /es/docs/MDN/Contribute/Howto	/es/docs/conflicting/MDN/Contribute
 /es/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/es/docs/MDN/Contribute/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto/Tag
+/es/docs/MDN/Contribute/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto
 /es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /es/docs/MDN/Contribute/Markdown_in_MDN	/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /es/docs/MDN/Contribute/Procesos	/es/docs/MDN/Contribute/Processes
@@ -1249,7 +1249,7 @@
 /es/docs/MDN/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Guidelines/Writing_style_guide	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Kuma	/es/docs/MDN/Community/Contributing/Our_repositories
-/es/docs/MDN/Kuma/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
+/es/docs/MDN/Kuma/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
@@ -1260,8 +1260,9 @@
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Tools	/es/docs/orphaned/MDN/Tools
-/es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
-/es/docs/MDN/Tools/KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
+/es/docs/MDN/Tools/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
+/es/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
+/es/docs/MDN/Writing_guidelines/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto
 /es/docs/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
 /es/docs/Manipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
@@ -1681,7 +1682,7 @@
 /es/docs/Web/API/Media_Streams_API	/es/docs/Web/API/Media_Capture_and_Streams_API
 /es/docs/Web/API/Media_Streams_API/Taking_still_photos	/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /es/docs/Web/API/Navigator.getUserMedia	/es/docs/Web/API/Navigator/getUserMedia
-/es/docs/Web/API/NavigatorConcurrentHardware	/es/docs/orphaned/Web/API/NavigatorConcurrentHardware
+/es/docs/Web/API/NavigatorConcurrentHardware	/es/docs/web/api/navigator
 /es/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/es/docs/Web/API/Navigator/hardwareConcurrency
 /es/docs/Web/API/NavigatorGeolocation/geolocation	/es/docs/Web/API/Navigator/geolocation
 /es/docs/Web/API/NavigatorLanguage	/es/docs/orphaned/Web/API/NavigatorLanguage
@@ -2517,7 +2518,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/size	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/size
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/values	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/values
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String	/es/docs/Web/JavaScript/Reference/Global_Objects/String
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/Trim	/es/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/Trim	/es/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/anchor	/es/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/big	/es/docs/Web/JavaScript/Reference/Global_Objects/String/big
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/String/blink	/es/docs/Web/JavaScript/Reference/Global_Objects/String/blink
@@ -2878,6 +2879,8 @@
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
+/es/docs/orphaned/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/orphaned/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
+/es/docs/orphaned/Web/API/NavigatorConcurrentHardware	/es/docs/web/api/navigator
 /es/docs/orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/es/docs/Web/API/Navigator/hardwareConcurrency
 /es/docs/video	/es/docs/Web/HTML/Element/video

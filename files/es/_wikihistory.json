@@ -2672,11 +2672,7 @@
     "modified": "2020-09-30T15:28:56.412Z",
     "contributors": ["chrisdavidmills", "Nachec"]
   },
-  "MDN/Writing_guidelines/Howto/Markdown_in_MDN": {
-    "modified": "2020-09-30T15:28:56.171Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "Jeremie", "LeoHirsch"]
-  },
-  "MDN/Writing_guidelines/Howto/Tag": {
+  "MDN/Writing_guidelines/Howto": {
     "modified": "2019-03-23T23:15:01.953Z",
     "contributors": [
       "wbamberg",
@@ -2690,6 +2686,10 @@
       "anmartinez",
       "LeoHirsch"
     ]
+  },
+  "MDN/Writing_guidelines/Howto/Markdown_in_MDN": {
+    "modified": "2020-09-30T15:28:56.171Z",
+    "contributors": ["chrisdavidmills", "wbamberg", "Jeremie", "LeoHirsch"]
   },
   "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
     "modified": "2019-03-23T23:09:23.417Z",
@@ -12688,17 +12688,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2019-08-18T16:00:14.454Z",
-    "contributors": [
-      "valen2004vega",
-      "raulgg",
-      "baumannzone",
-      "andrpueb",
-      "thzunder",
-      "AnuarMB"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2019-03-23T23:48:20.117Z",
     "contributors": ["paradoja", "teoli", "Talisker", "Mgjbot"]
@@ -12963,6 +12952,17 @@
   "Web/JavaScript/Reference/Global_Objects/String/toUpperCase": {
     "modified": "2019-03-23T23:48:19.033Z",
     "contributors": ["hgutierrez", "teoli", "Talisker", "Mgjbot"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2019-08-18T16:00:14.454Z",
+    "contributors": [
+      "valen2004vega",
+      "raulgg",
+      "baumannzone",
+      "andrpueb",
+      "thzunder",
+      "AnuarMB"
+    ]
   },
   "Web/JavaScript/Reference/Global_Objects/String/trimEnd": {
     "modified": "2020-10-15T22:32:40.984Z",
@@ -15343,16 +15343,6 @@
       "atlas7jean"
     ]
   },
-  "orphaned/MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:48:19.117Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "velizluisma",
-      "Jeremie",
-      "LeoHirsch"
-    ]
-  },
   "orphaned/MDN/Tools/Page_regeneration": {
     "modified": "2020-09-30T16:48:19.365Z",
     "contributors": ["chrisdavidmills", "Anibalismo"]
@@ -15579,9 +15569,6 @@
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2020-01-13T04:48:11.759Z",
     "contributors": ["chrisdavidmills", "fscholz", "elin3t", "sebasmagri"]
-  },
-  "orphaned/Web/API/NavigatorConcurrentHardware": {
-    "modified": "2020-10-15T22:25:58.692Z"
   },
   "orphaned/Web/API/NavigatorLanguage": {
     "modified": "2019-03-23T22:46:20.556Z",

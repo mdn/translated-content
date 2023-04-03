@@ -4839,6 +4839,18 @@
       "lunix01"
     ]
   },
+  "MDN/Writing_guidelines/Howto": {
+    "modified": "2020-04-29T12:58:13.297Z",
+    "contributors": [
+      "targeton",
+      "wbamberg",
+      "yuyx91",
+      "zsusyt",
+      "zhangqiong",
+      "ziyunfei",
+      "ganshenhai"
+    ]
+  },
   "MDN/Writing_guidelines/Howto/Creating_moving_deleting": {
     "modified": "2020-08-13T06:15:42.058Z",
     "contributors": [
@@ -4885,18 +4897,6 @@
   "MDN/Writing_guidelines/Howto/Markdown_in_MDN": {
     "modified": "2020-09-30T15:32:47.524Z",
     "contributors": ["chrisdavidmills", "shc0743"]
-  },
-  "MDN/Writing_guidelines/Howto/Tag": {
-    "modified": "2020-04-29T12:58:13.297Z",
-    "contributors": [
-      "targeton",
-      "wbamberg",
-      "yuyx91",
-      "zsusyt",
-      "zhangqiong",
-      "ziyunfei",
-      "ganshenhai"
-    ]
   },
   "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
     "modified": "2019-03-18T21:16:25.185Z",
@@ -11253,10 +11253,6 @@
     "modified": "2019-03-23T23:19:24.764Z",
     "contributors": ["teoli", "023yangbo"]
   },
-  "Web/API/IDBFileHandle": {
-    "modified": "2019-03-23T22:12:20.973Z",
-    "contributors": ["Taoja"]
-  },
   "Web/API/IDBIndex": {
     "modified": "2020-10-25T12:41:13.535Z",
     "contributors": ["Thinker-Mars", "list", "focus"]
@@ -11402,16 +11398,6 @@
       "ziyunfei",
       "023yangbo",
       "princetoad@gmail.com"
-    ]
-  },
-  "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2019-06-14T00:02:23.198Z",
-    "contributors": [
-      "flyingjust",
-      "jason-grimm",
-      "ShaojieLiu",
-      "Bayes",
-      "wenshin"
     ]
   },
   "Web/API/IndexedDB_API/Checking_when_a_deadline_is_due": {
@@ -14033,6 +14019,16 @@
   "Web/API/Storage_API": {
     "modified": "2020-10-15T22:19:19.587Z",
     "contributors": ["x1shi", "RainSlide"]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2019-06-14T00:02:23.198Z",
+    "contributors": [
+      "flyingjust",
+      "jason-grimm",
+      "ShaojieLiu",
+      "Bayes",
+      "wenshin"
+    ]
   },
   "Web/API/Streams_API": {
     "modified": "2020-10-15T22:17:21.258Z",
@@ -27706,10 +27702,6 @@
       "evilpie"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/Stack": {
-    "modified": "2020-10-15T22:05:59.371Z",
-    "contributors": ["Zoeooo", "gentlelynn"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/columnNumber": {
     "modified": "2019-04-02T14:34:45.679Z",
     "contributors": ["teoli", "buckarooch"]
@@ -27729,6 +27721,10 @@
   "Web/JavaScript/Reference/Global_Objects/Error/name": {
     "modified": "2019-07-05T00:02:19.372Z",
     "contributors": ["yenshen", "teoli", "ziyunfei"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Error/stack": {
+    "modified": "2020-10-15T22:05:59.371Z",
+    "contributors": ["Zoeooo", "gentlelynn"]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
     "modified": "2019-04-02T14:43:23.068Z",
@@ -29788,19 +29784,6 @@
     "modified": "2019-10-14T06:47:30.493Z",
     "contributors": ["SageX", "Dewey."]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2020-10-15T21:07:55.641Z",
-    "contributors": [
-      "brizer",
-      "RainSlide",
-      "SageX",
-      "xgqfrms-GitHub",
-      "Ende93",
-      "helloguangxue",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2019-10-13T02:57:05.433Z",
     "contributors": ["SageX", "xgl", "wwzText", "Noly1990", "teoli", "AlexChao"]
@@ -30265,6 +30248,19 @@
     "modified": "2020-10-15T22:30:43.287Z",
     "contributors": ["LCLx", "Originalee", "ahbiao", "Jabin_Lee"]
   },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2020-10-15T21:07:55.641Z",
+    "contributors": [
+      "brizer",
+      "RainSlide",
+      "SageX",
+      "xgqfrms-GitHub",
+      "Ende93",
+      "helloguangxue",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
   "Web/JavaScript/Reference/Global_Objects/String/trimEnd": {
     "modified": "2020-10-15T21:07:55.509Z",
     "contributors": [
@@ -30517,10 +30513,6 @@
   "Web/JavaScript/Reference/Global_Objects/TypedArray/map": {
     "modified": "2019-03-23T22:19:16.989Z",
     "contributors": ["wizardforcel"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/name": {
-    "modified": "2019-03-23T22:27:51.557Z",
-    "contributors": ["lsvih"]
   },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/of": {
     "modified": "2019-03-23T22:20:06.649Z",

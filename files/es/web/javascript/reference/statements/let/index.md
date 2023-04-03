@@ -233,7 +233,7 @@ El alcance de las variables definidas usando `let` es el mismo bloque `let`, as√
 
 ### expresiones `let`
 
-> **Advertencia:** `Soporte de expresiones let` ha sido removido en Gecko 41 ({{bug(1023609)}}).
+> **Advertencia:** `Soporte de expresiones let` ha sido removido en Gecko 41 ([Error 1023609 en Firefox](https://bugzil.la/1023609)).
 
 Una **expresion `let`** permite establecer variables con alcance dentro de una expresi√≥n.
 
