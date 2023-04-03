@@ -1,0 +1,41 @@
+---
+title: Unsigned 오른쪽 시프트 할당 연산자 (>>>=)
+slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
+---
+
+{{jsSidebar("Operators")}}
+
+**unsigned 오른쪽 시프트 할당(`>>>=`)** 연산자는 지정된 수 만큼의 비트를 오른쪽으로 이동시키고 그 결과를 변수에 할당합니다.
+
+{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
+
+## 구문
+
+```js-nolint
+x >>>= y // x = x >>> y
+```
+
+## 예제
+
+### unsigned 오른쪽 시프트 할당 연산자 사용
+
+```js
+let a = 5; //   (00000000000000000000000000000101)
+a >>>= 2;  // 1 (00000000000000000000000000000001)
+
+let b = -5; // (-00000000000000000000000000000101)
+b >>>= 2;   // 1073741822 (00111111111111111111111111111110)
+```
+
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이 보기
+
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
+- [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
