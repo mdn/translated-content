@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
 
-该方法主要用于分组与对象相关的元素，特别是当该对象可能随时间而变化时。如果对象不变，您可以使用字符串表示它，并使用{{jsxref("Array.prototype.group()")}}分组元素。
+该方法主要用于分组与对象相关的元素，特别是当该对象可能随时间而变化时。如果对象不变，你可以使用字符串表示它，并使用{{jsxref("Array.prototype.group()")}}分组元素。
 
 ## 语法
 
@@ -58,9 +58,9 @@ groupToMap(callbackFn, thisArg)
 
 `groupToMap()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
-当您需要分组与特定对象相关的信息时，此方法非常有用，因为即使对象被修改，它仍将作为返回的 `Map` 的键继续工作。如果您改为为对象创建字符串表示形式，并在 {{jsxref("Array.prototype.group()")}} 中将其用作分组键，则必须在对象更改时维护原始对象和其表示之间的映射。
+当你需要分组与特定对象相关的信息时，此方法非常有用，因为即使对象被修改，它仍将作为返回的 `Map` 的键继续工作。如果你改为为对象创建字符串表示形式，并在 {{jsxref("Array.prototype.group()")}} 中将其用作分组键，则必须在对象更改时维护原始对象和其表示之间的映射。
 
-> **备注：** 要访问返回的 `Map` 中的组，必须使用最初用作 `Map` 键的相同对象（尽管您可以修改其属性）。您不能使用另一个恰好具有相同名称和属性的对象。
+> **备注：** 要访问返回的 `Map` 中的组，必须使用最初用作 `Map` 键的相同对象（尽管你可以修改其属性）。你不能使用另一个恰好具有相同名称和属性的对象。
 
 ## 示例
 
@@ -92,7 +92,7 @@ console.log(result.get(restock));
 
 请注意，函数参数 `{ quantity }` 是一个[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数参数传递的对象中提取属性)的基本示例。这会解构传递为参数的对象的 `quantity` 属性，并将其赋值给函数体中名为 `quantity` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
 
-`Map` 的键可以被修改并仍然使用。但是，您不能重新创建键并仍然使用它。因此，任何需要使用映射的内容都保留对其键的引用是非常重要的。
+`Map` 的键可以被修改并仍然使用。但是，你不能重新创建键并仍然使用它。因此，任何需要使用映射的内容都保留对其键的引用是非常重要的。
 
 ```js
 // 键可以修改并仍然使用
