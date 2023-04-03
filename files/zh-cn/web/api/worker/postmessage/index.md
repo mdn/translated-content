@@ -1,8 +1,6 @@
 ---
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
-page-type: web-api-instance-method
-browser-compat: api.Worker.postMessage
 ---
 
 {{APIRef("Web Workers API")}}

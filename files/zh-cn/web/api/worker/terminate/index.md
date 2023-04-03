@@ -1,8 +1,6 @@
 ---
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
-page-type: web-api-instance-method
-browser-compat: api.Worker.terminate
 ---
 
 {{APIRef("Web Workers API")}}
