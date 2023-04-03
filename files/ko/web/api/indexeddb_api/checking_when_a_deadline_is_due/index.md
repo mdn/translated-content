@@ -16,7 +16,7 @@ page-type: guide
 
 To-do 앱에서는 기계가 읽을 수 있으면서 동시에 사람이 이해하기 쉬운 형식으로 시간 및 날짜를 기록하고, 각 시간과 날짜가 현재를 기준으로 기록되는지 확인하려고 합니다. 기본적으로 우리는 지금 날짜와 시간을 확인한 다음, 저장된 이벤트를 확인하여 그 중 만료 기한이 현재 날짜와 시간과 일치하는 것이 있는지 확인하려고 합니다. 만약 일치한다면, 사용자가 알 수 있는 알림을 주고 싶습니다.
 
-만약 단순이 두 개의 {{jsxref("Global_Objects/Date", "Date")}} 객체를 비교한다면 쉽겠지만, 사람은 JavaScript가 이해할 수 있는 형태로 마감 기한을 저장하는 것을 원치 않을 것입니다. 사람이 이해할 수 있는 날짜는 여러 형태로 표현됩니다.
+만약 단순히 두 개의 {{jsxref("Global_Objects/Date", "Date")}} 객체를 비교한다면 쉽겠지만, 사람은 JavaScript가 이해할 수 있는 형태로 마감 기한을 저장하는 것을 원치 않을 것입니다. 사람이 이해할 수 있는 날짜는 여러 형태로 표현됩니다.
 
 ### 날짜 정보 기록하기
 
@@ -112,7 +112,7 @@ function checkDeadlines() {
   const now = new Date();
 ```
 
-먼저 우리는 빈 {{jsxref("Global_Objects/Date", "Date")}} 객체를 생성해 현재 날짜과 시간을 가져옵니다.
+먼저 우리는 빈 `Date` 객체를 생성해 현재 날짜과 시간을 가져옵니다.
 
 ```js
 const minuteCheck = now.getMinutes();
@@ -122,7 +122,7 @@ const monthCheck = now.getMonth();
 const yearCheck = now.getFullYear();
 ```
 
-{{jsxref("Global_Objects/Date", "Date")}} 객체는 날짜와 시간을 분리할 수 있는 여러 개의 메소드가 존재합니다. 여기서는 현재의 년 (`getFullYear()`를 사용해야 합니다. `getYear()`는 더이상 사용되지 않습니다), 월 (0-11 사이의 숫자를 반환합니다. 예를 들어, 0은 1월을 나타냅니다), 당월의 일 (`getDate()`를 사용해야 합니다. `getDay()`는 1주 기준 1-7 사이의 날짜를 반환합니다), 시 (숫자를 반환합니다), 분 (숫자를 반환합니다)을 가져옵니다.
+`Date` 객체는 날짜와 시간을 분리할 수 있는 여러 개의 메소드가 존재합니다. 여기서는 현재의 년 (`getFullYear()`를 사용해야 합니다. `getYear()`는 더이상 사용되지 않습니다), 월 (0-11 사이의 숫자를 반환합니다. 예를 들어, 0은 1월을 나타냅니다), 당월의 일 (`getDate()`를 사용해야 합니다. `getDay()`는 1주 기준 1-7 사이의 날짜를 반환합니다), 시 (숫자를 반환합니다), 분 (숫자를 반환합니다)을 가져옵니다.
 
 ```js
   const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
@@ -155,7 +155,7 @@ switch (cursor.value.month) {
 }
 ```
 
-먼저 데이터베이스에 저장된 월 이름을 JavaScript가 이해할 수 있는 월 숫자로 변환합니다. 이전에 보았듯이, Javascript의 {{jsxref("Global_Objects/Date", "Date")}} 객체는 0-11 사이의 월 숫자를 생성합니다.
+먼저 데이터베이스에 저장된 월 이름을 JavaScript가 이해할 수 있는 월 숫자로 변환합니다. 이전에 보았듯이, Javascript의 `Date` 객체는 0-11 사이의 월 숫자를 생성합니다.
 
 ```js
 if (
