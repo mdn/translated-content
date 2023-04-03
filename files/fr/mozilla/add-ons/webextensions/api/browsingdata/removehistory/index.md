@@ -41,9 +41,9 @@ var removing = browser.browsingData.removeHistory(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera rempli sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.removeHistory", 10)}}
+{{Compat}}
 
 ## Exemples
 

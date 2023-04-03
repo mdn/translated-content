@@ -218,9 +218,9 @@ Por favor checa <https://github.com/Raynos/function-bind> para ver una solución
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.bind")}}
+{{Compat}}
 
 ## Ver también
 

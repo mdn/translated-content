@@ -2,7 +2,7 @@
 title: マルチタッチ操作
 slug: Web/API/Pointer_events/Multi-touch_interaction
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -173,10 +173,14 @@ function pointerupHandler(ev) {
 function getCache(ev) {
   // このイベントのターゲット要素のキャッシュを返す
   switch (ev.target.id) {
-    case "target1": return evCache1;
-    case "target2": return evCache2;
-    case "target3": return evCache3;
-    default: log("Error with cache handling", ev);
+    case "target1":
+      return evCache1;
+    case "target2":
+      return evCache2;
+    case "target3":
+      return evCache3;
+    default:
+      log("Error with cache handling", ev);
   }
 }
 
@@ -189,7 +193,9 @@ function pushEvent(ev) {
 function removeEvent(ev) {
   // このイベントをターゲットのキャッシュから削除する
   const evCache = getCache(ev);
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId
+  );
   evCache.splice(index, 1);
 }
 ```
@@ -240,16 +246,17 @@ function enableLog(ev) {
 }
 
 function log(name, ev) {
-  const o = document.getElementsByTagName('output')[0];
-  const s = `${name}:<br>`
-    + `  pointerID   = ${ev.pointerId}<br>`
-    + `  pointerType = ${ev.pointerType}<br>`
-    + `  isPrimary   = ${ev.isPrimary}`;
+  const o = document.getElementsByTagName("output")[0];
+  const s =
+    `${name}:<br>` +
+    `  pointerID   = ${ev.pointerId}<br>` +
+    `  pointerType = ${ev.pointerType}<br>` +
+    `  isPrimary   = ${ev.isPrimary}`;
   o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName('output')[0];
+  const o = document.getElementsByTagName("output")[0];
   o.innerHTML = "";
 }
 ```

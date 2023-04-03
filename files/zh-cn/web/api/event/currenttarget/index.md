@@ -38,6 +38,8 @@ for(var i = 0; i < ps.length; i++){
 document.body.addEventListener('click', hide, false);
 ```
 
+> **备注：** `event.currentTarget` 的值*只能*在事件处理过程中被使用。如果你尝试用 {{DOMxRef("console.log()")}} 在控制台打印 `event` 对象，你会发现 `currentTarget` 的值是 `null`。如果你想在控制台打印 `currentTarget` 的值，你应该使用 `console.log(event.currentTarget)`，或者也可以在代码中使用 [`debugger`](/zh-CN/docs/Web/JavaScript/Reference/Statements/debugger) 语句来暂停代码的执行从而看到 `event.currentTarget` 的值。
+
 ## 规范
 
 {{Specifications}}

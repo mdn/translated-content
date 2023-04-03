@@ -379,19 +379,11 @@ new ClassWithPrivateAccessor();
 
 ## Especificaciones
 
-| Especificación                                                                            | Estado  | Comentario |
-| ----------------------------------------------------------------------------------------- | ------- | ---------- |
-| [FieldDefinition production](https://tc39.es/proposal-class-fields/#prod-FieldDefinition) | Stage 3 |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### Campos públicos de clse
-
-{{Compat("javascript.classes.public_class_fields")}}
-
-### Campos privados de clase
-
-{{Compat("javascript.classes.private_class_fields")}}
+{{Compat}}
 
 ## Ver también
 

@@ -286,15 +286,3 @@ En el siguiente artículo, exploraremos el texto y cómo JavaScript nos permite 
 > **Nota:** Si disfrutas de las matemáticas y quieres leer más sobre cómo se implementa en JavaScript, puedes encontrar muchos más detalles en la sección principal de JavaScript de MDN. Los mejores lugares para iniciar con artículos sobre [Numero y fechas](/es/docs/Web/JavaScript/Guide/Numbers_and_dates) y [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators).
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
-
-## En este módulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Un primer acercamiento a JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Corrigiendo JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Guardando la información que necesitas— Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Matem%C3%A1ticas)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos útiles para el manejo de cadenas](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluaciones: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

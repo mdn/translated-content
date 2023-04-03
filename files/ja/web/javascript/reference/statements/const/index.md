@@ -35,7 +35,7 @@ const { bar } = foo; // where foo = { bar:10, baz:12 };
 
 **`const` 宣言**は、値への読み取り専用の参照を作ります。これは、定数に保持されている値は**不変ではなく**、その変数の識別子が再代入できないということです。たとえば、定数の中身がオブジェクトの場合、オブジェクトの内容（プロパティなど）は変更可能です。</p>
 
-「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone)」に関する考慮事項はすべて、{{jsxref("Statements/let", "let")}} と `const` の両方に適用されます。
+「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」に関する考慮事項はすべて、{{jsxref("Statements/let", "let")}} と `const` の両方に適用されます。
 
 定数は、同じスコープ内の関数や変数と同じ名前にすることはできません。
 

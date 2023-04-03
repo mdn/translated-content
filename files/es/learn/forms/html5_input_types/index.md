@@ -277,19 +277,6 @@ That brings us to the end of our tour of the HTML5 form input types. There are a
 
 {{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
-## In this module
-
-- [Your first form](/es/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/es/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/es/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/es/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/es/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/es/docs/Learn/Forms/Form_validation)
-- [Sending form data](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
 ### Advanced Topics
 
 - [How to build custom form controls](/es/docs/Learn/Forms/How_to_build_custom_form_controls)

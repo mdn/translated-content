@@ -63,9 +63,9 @@ h3 {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-emphasis-color")}}
+{{Compat}}
 
 ## Ver También
 

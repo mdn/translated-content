@@ -80,9 +80,9 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.onRemoved")}}
+{{Compat}}
 
 > **Note :**
 >

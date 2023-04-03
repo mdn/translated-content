@@ -73,9 +73,9 @@ Notar que Firefox puede personalizar la tecla de modificación requerida por las
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.accesskey")}}
+{{Compat}}
 
 ## Ver también
 

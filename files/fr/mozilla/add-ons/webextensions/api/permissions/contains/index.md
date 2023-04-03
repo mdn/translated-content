@@ -37,9 +37,9 @@ var getContains = browser.permissions.contains(
 
 Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si l'extension possède déjà toutes les permissions listées dans l'argument des `permissions` , ou `false` dans le cas contraire.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.contains")}}
+{{Compat}}
 
 ## Exemples
 

@@ -155,13 +155,11 @@ Un exemple d'utilisation est disponible
 
 ## Spécifications
 
-| Spécification                                                  | État                   | Commentaires |
-| -------------------------------------------------------------- | ---------------------- | ------------ |
-| [execCommand](https://w3c.github.io/editing/docs/execCommand/) | Brouillon non officiel |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.execCommand")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -30,7 +30,7 @@ La valeur {{domxref("IDBRequestReadyState")}} de la requête, qui peut être l'u
 
 ## Exemples
 
-Dans l'exemple qui suit, on effectue une requête sur un enregistrement avec un titre donné et on recupère l'enregistrement associé grâce au gestionnaire d'évènement `onsuccess` à partir du magasin d'objets {{domxref("IDBObjectStore")}}. Ensuite, on met à jour une des propriétés de cet enregistrement et on replace cet objet mis à jour dans le magasin d'objets via une autre requête. La valeur de la propriété `readyState` pour la deuxième requête est affichée dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre appliction [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. également l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple qui suit, on effectue une requête sur un enregistrement avec un titre donné et on recupère l'enregistrement associé grâce au gestionnaire d'évènement `onsuccess` à partir du magasin d'objets {{domxref("IDBObjectStore")}}. Ensuite, on met à jour une des propriétés de cet enregistrement et on replace cet objet mis à jour dans le magasin d'objets via une autre requête. La valeur de la propriété `readyState` pour la deuxième requête est affichée dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre appliction [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. également l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";

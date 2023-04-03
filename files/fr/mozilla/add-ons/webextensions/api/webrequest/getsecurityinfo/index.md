@@ -50,9 +50,9 @@ var gettingInfo = browser.webRequest.getSecurityInfo(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se résout en un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.getSecurityInfo", 10)}}
+{{Compat}}
 
 ## Exemples
 

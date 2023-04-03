@@ -1,6 +1,6 @@
 ---
 title: marcação
-slug: Glossary/markup
+slug: Glossary/Markup
 original_slug: Glossario/marcação
 ---
 

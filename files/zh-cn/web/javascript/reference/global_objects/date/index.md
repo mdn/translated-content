@@ -44,7 +44,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 当至少提供了年份与月份时，这一形式的 `Date()` 返回的 `Date` 对象中的每一个成员都来自下列参数。没有提供的成员将使用最小可能值（对日期为`1`，其他为`0`）。
 
 - `year`
-  - : 表示年份的整数值。0 到 99 会被映射至 1900 年至 1999 年，其它值代表实际年份。参见 [示例](#例子：将两位数年份映射为_1900_-_1999_年)。
+  - : 表示年份的整数值。0 到 99 会被映射至 1900 年至 1999 年，其他值代表实际年份。参见 [示例](#例子：将两位数年份映射为_1900_-_1999_年)。
 - `monthIndex`
   - : 表示月份的整数值，从 0（1 月）到 11（12 月）。
 - date{{optional_inline}}
@@ -197,9 +197,9 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 - {{jsxref("Date.prototype.valueOf()")}}
   - : 返回一个 {{jsxref("Date")}} 对象的原始值。覆盖了 {{jsxref("Object.prototype.valueOf()")}} 方法。
 
-## 例子
+## 示例
 
-### >例子：创建一个日期对象的几种方法
+### 创建一个日期对象的几种方法
 
 下例展示了用来创建一个日期对象的多种方法。
 
@@ -213,7 +213,7 @@ var birthday = new Date(1995, 11, 17);
 var birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
 
-### 例子：将两位数年份映射为 1900 - 1999 年
+### 将两位数年份映射为 1900 - 1999 年
 
 为了创建和获取 0 到 99 之间的年份，应使用 {{jsxref("Date.prototype.setFullYear()")}} 和 {{jsxref("Date.prototype.getFullYear()")}} 方法。
 
@@ -226,7 +226,7 @@ date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 ```
 
-### 例子：计算经过的时间
+### 计算经过的时间
 
 下例展示了如何以毫秒精度计算两个日期对象的时间差：
 

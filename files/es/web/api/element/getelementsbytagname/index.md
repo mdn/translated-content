@@ -19,7 +19,7 @@ elements =element.getElementsByTagName(tagName)
 - `element` es el elemento a partir del cual debe empezar la búsqueda. Recuerda que sólo se buscan los elementos descendentes del elemento dado, sin incluir el propio elemento.
 - `tagName` es el nombre que se busca. La cadena especial `"*"` representa todos los elementos.
 
-> **Nota:** En Firefox 2 (Gecko 1.8.1) y anteriores, este método no funcionaba correctamente si el árbol contenía algún elemento con etiqueta de nombre conteniendo espacios. (Ver {{ Bug(206053) }} para más detalles).
+> **Nota:** En Firefox 2 (Gecko 1.8.1) y anteriores, este método no funcionaba correctamente si el árbol contenía algún elemento con etiqueta de nombre conteniendo espacios. (Ver [Error 206053 en Firefox](https://bugzil.la/206053) para más detalles).
 >
 > Es recomendable usar [DOM:document.getElementsByTagNameNS](/es/DOM/document.getElementsByTagNameNS) cuando se manejan documentos con "multi-namespace".
 

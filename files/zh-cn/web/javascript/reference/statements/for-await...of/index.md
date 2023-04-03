@@ -24,7 +24,7 @@ for await (variable of iterable) {
 - `iterable`
   - : 被迭代枚举其属性的对象。与 for...of 相比，这里的对象可以返回 `Promise`，如果是这样，那么 `variable` 将是 `Promise` 所包含的值，否则是值本身。
 
-## 例子
+## 示例
 
 ### 迭代异步可迭代对象
 

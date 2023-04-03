@@ -50,7 +50,7 @@ Cet objet hérite de [EventTarget](/fr/docs/Web/API/EventTarget).
 
 ## Exemples
 
-Dans le fragment de code suivant, on ouvre une base de données de façon asynchrone avec {{domxref("IDBFactory")}} puis on gère les cas de succès et d'erreur avant de créer un nouveau magasin d'objet au cas où une mise à jour est nécessaire ({{domxref("IDBdatabase")}}). Pour étudier un exemple complet et fonctionnel, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code suivant, on ouvre une base de données de façon asynchrone avec {{domxref("IDBFactory")}} puis on gère les cas de succès et d'erreur avant de créer un nouveau magasin d'objet au cas où une mise à jour est nécessaire ({{domxref("IDBdatabase")}}). Pour étudier un exemple complet et fonctionnel, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre la base de données

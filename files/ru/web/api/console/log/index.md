@@ -1,6 +1,6 @@
 ---
 title: Console.log()
-slug: Web/API/Console/log
+slug: Web/API/console/log
 tags:
   - Debug
   - Debugging
@@ -10,6 +10,7 @@ tags:
   - метод
 translation_of: Web/API/Console/log
 ---
+
 {{APIRef("Console API")}}
 
 Выводит сообщение в веб-консоль.

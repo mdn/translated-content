@@ -67,9 +67,9 @@ element(#fakeid)                       /* Si 'fakeid' no es un identificador CSS
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.image")}}
+{{Compat}}
 
 ## Véase también
 

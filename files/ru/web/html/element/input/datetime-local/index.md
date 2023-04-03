@@ -1,8 +1,9 @@
 ---
 title: <input type="datetime-local">
-slug: Web/HTML/Element/Input/datetime-local
+slug: Web/HTML/Element/input/datetime-local
 translation_of: Web/HTML/Element/input/datetime-local
 ---
+
 {{HTMLSidebar}}
 
 {{htmlelement("input")}} элемент типа **`datetime-local`** создаёт поля ввода, позволяющие легко ввести дату и время — год, месяц, день, часы и минуты.

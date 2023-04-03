@@ -11,20 +11,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 ## 语法
 
-```js
-// 箭头函数
-Array.from(arrayLike, (element) => { /* … */ } )
-Array.from(arrayLike, (element, index) => { /* … */ } )
-
-// 映射函数
+```js-nolint
+Array.from(arrayLike)
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
-
-// 内联映射函数
-Array.from(arrayLike, function mapFn(element) { /* … */ })
-Array.from(arrayLike, function mapFn(element, index) { /* … */ })
-Array.from(arrayLike, function mapFn(element) { /* … */ }, thisArg)
-Array.from(arrayLike, function mapFn(element, index) { /* … */ }, thisArg)
 ```
 
 ### 参数

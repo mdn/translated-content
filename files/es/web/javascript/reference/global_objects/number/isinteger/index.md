@@ -63,9 +63,9 @@ Number.isInteger = Number.isInteger || function(value) {
 
 {{Specifications}}
 
-## Compatitibilidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isInteger")}}
+{{Compat}}
 
 ## Ver también
 

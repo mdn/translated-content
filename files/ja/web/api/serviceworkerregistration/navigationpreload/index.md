@@ -1,6 +1,8 @@
 ---
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
+l10n:
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
 {{APIRef("Service Workers API")}}

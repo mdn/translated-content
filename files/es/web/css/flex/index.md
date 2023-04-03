@@ -117,9 +117,9 @@ flex.addEventListener("click", function() {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Ver también
 

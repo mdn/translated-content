@@ -53,8 +53,8 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}
   - : Contrôle si le zoom est appliqué sur un modèle par-site ou par-onglet. Si {{WebExtAPIRef("privacy.websites")}}`.resistFingerprinting` est à vrai, ce réglage n'a aucun effet et le modèle de zoom appliqué reste par-onglet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

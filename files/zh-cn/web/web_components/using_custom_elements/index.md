@@ -49,7 +49,7 @@ class WordCount extends HTMLParagraphElement {
 共有两种 custom elements：
 
 - **Autonomous custom elements** 是独立的元素，它不继承其他内建的 HTML 元素。你可以直接把它们写成 HTML 标签的形式，来在页面上使用。例如 `<popup-info>`，或者是`document.createElement("popup-info")`这样。
-- **Customized built-in elements** 继承自基本的 HTML 元素。在创建时，你必须指定所需扩展的元素（正如上面例子所示），使用时，需要先写出基本的元素标签，并通过 {{htmlattrxref("is")}} 属性指定 custom element 的名称。例如`<p is="word-count">`, 或者 `document.createElement("p", { is: "word-count" })`。
+- **Customized built-in elements** 继承自基本的 HTML 元素。在创建时，你必须指定所需扩展的元素（正如上面例子所示），使用时，需要先写出基本的元素标签，并通过 [`is`](/zh-CN/docs/Web/HTML/Global_attributes#is) 属性指定 custom element 的名称。例如`<p is="word-count">`, 或者 `document.createElement("p", { is: "word-count" })`。
 
 ## 示例
 

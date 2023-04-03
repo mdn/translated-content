@@ -1,6 +1,6 @@
 ---
 title: Element.requestFullscreen()
-slug: Web/API/Element/requestFullScreen
+slug: Web/API/Element/requestFullscreen
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -58,4 +58,4 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)

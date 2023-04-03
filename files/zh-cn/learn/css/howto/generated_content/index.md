@@ -41,7 +41,7 @@ A text where I need to <span class="ref">something</span>
 
 {{EmbedLiveSample('文本内容', 600, 30)}}
 
-样式表默认使用 UTF-8 字符集。但也可以通过 link 属性或样式表以及其它方式指定其它字符集。参见 CSS 规范中的 [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23)。
+样式表默认使用 UTF-8 字符集。但也可以通过 link 属性或样式表以及其他方式指定其他字符集。参见 CSS 规范中的 [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23)。
 
 还可以通过转义机制（通过反斜杠转义）指定单个字符。比如，“\265B”是国际象棋黑皇后的符号 ♛。详细内容请参见 [Referring to characters not represented in a character encoding](https://www.w3.org/TR/CSS21/syndata.html#q24) 和 CSS 规范中的 [Characters and case](https://www.w3.org/TR/CSS21/syndata.html#q6)。
 

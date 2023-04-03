@@ -5,27 +5,25 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 
 {{JSRef}}
 
-**`forEach()`**方法对类型化数组的每个元素调用提供的函数。这个方法的算法和 {{jsxref("Array.prototype.forEach()")}} _相同_。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
+**`forEach()`** 方法对类型化数组的每个元素调用提供的函数。这个方法的算法和 {{jsxref("Array.prototype.forEach()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 ## 语法
 
-```plain
-typedarray.forEach(callback[, thisArg])
+```js-nolint
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 产生新的类型化数组的元素的函数，接受三个函数：
-
     - `currentValue`
       - : 类型化数组中要处理的当前元素
     - `index`
       - : 类型化数组中要处理的当前元素的下标
     - `array`
       - : `forEach()`在其上调用的类型化数组
-
 - `thisArg`
   - : 可选，执行`callback`时作为`this`的值。
 

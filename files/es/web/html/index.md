@@ -65,7 +65,7 @@ El [Área de aprendizaje de HTML](/es/docs/Learn/HTML) incluye varios módulos q
 - [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
   - : Los elementos en HTML tienen **atributos**. Se trata de valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas.
 - [Atributos globales](/es/docs/Web/HTML/Global_attributes)
-  - : Los atributos globales se pueden especificar en todos los [elementos HTML](/es/docs/Web/HTML/Element){, _incluso aquellos no especificados en el estándar_. Esto significa que cualquier elemento no estándar debe permitir esos atributos, aunque esos elementos hagan que el documento no sea compatible con HTML5.
+  - : Los atributos globales se pueden especificar en todos los [elementos HTML](/es/docs/Web/HTML/Element), _incluso aquellos no especificados en el estándar_. Esto significa que cualquier elemento no estándar debe permitir esos atributos, aunque esos elementos hagan que el documento no sea compatible con HTML5.
 - [Elementos en línea](/es/docs/Web/HTML/Inline_elements) y [Elementos a nivel de bloque](/es/docs/Web/HTML/Block-level_elements)
   - : Los elementos HTML suelen ser elementos "en línea" o "a nivel de bloque". Un elemento en línea ocupa solo el espacio delimitado por las etiquetas que lo definen. Un elemento a nivel de bloque ocupa todo el espacio de su elemento padre (contenedor), creando así un "bloque".
 - [Tipos de enlaces](/es/docs/Web/HTML/Link_types)
@@ -79,5 +79,5 @@ El [Área de aprendizaje de HTML](/es/docs/Learn/HTML) incluye varios módulos q
 
 ## Temas relacionados
 
-- [Aplicación de color a elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color)
+- [Aplicando color a elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color)
   - : Este artículo cubre la mayoría de las formas en que usas CSS para agregar color al contenido HTML, enumerando qué partes de los documentos HTML se pueden colorear y qué propiedades CSS usar al hacerlo. Incluye ejemplos, enlaces a herramientas de creación de paletas de colores y más.

@@ -31,9 +31,9 @@ Une chaîne de caractères qui décrit l'état actuel de la demande. Ce sera l'u
 - `"failed"`
   - : Une erreur s'est produite et le filtre a été déconnecté de la requête. L'extension peut trouver un message d'erreur dans {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, et ne peut appeler aucune fonction de filtrage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.status", 10)}}
+{{Compat}}
 
 ## Exemples
 

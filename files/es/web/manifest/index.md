@@ -253,4 +253,4 @@ Los manifiestos web se deben servir con el tipo MIME `application/manifest+json`
 
 ## Compatibilidad con navegadores
 
-{{Compat("html.manifest")}}
+{{Compat}}

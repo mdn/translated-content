@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 ## 语法
 
-```js
+```js-nolint
 includes(searchElement)
 includes(searchElement, fromIndex)
 ```

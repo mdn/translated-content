@@ -48,7 +48,7 @@ Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécificatio
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.input")}}
+{{Compat}}
 
 ## Voir aussi
 

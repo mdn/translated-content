@@ -26,7 +26,7 @@ let absolute = new URL(relative, window.location.href)
 
 ## 解决方案
 
-在 Firefox 60 及以后版本中，Mozilla 对相对 URL 的解析是相对于拥有`fetch()`函数的全局的。（见 {{bug(1432272)}}）。因此在上述情形中，URL 是相对于 iframe 的地址进行解析的：
+在 Firefox 60 及以后版本中，Mozilla 对相对 URL 的解析是相对于拥有`fetch()`函数的全局的。（见 [Firefox bug 1432272](https://bugzil.la/1432272)）。因此在上述情形中，URL 是相对于 iframe 的地址进行解析的：
 
 ```js
 let absolute = new URL(relative, frame.contentWindow.location.href)

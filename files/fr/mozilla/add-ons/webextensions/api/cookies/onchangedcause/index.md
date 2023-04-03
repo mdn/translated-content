@@ -33,9 +33,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `overwrite`
   - : Un appel à {{WebExtAPIRef("cookies.set()")}} a remplacé ce cookie par un autre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.OnChangedCause")}}
+{{Compat}}
 
 ## Exemples
 

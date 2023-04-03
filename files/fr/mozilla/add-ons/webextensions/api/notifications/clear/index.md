@@ -37,9 +37,9 @@ var clearing = browser.notifications.clear(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un booléen : `true` la notification a été effacée, ou `false` si ce n'est pas le cas (par exemple, parce que la notification référencée par `id` n'existe pas).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.clear")}}
+{{Compat}}
 
 ## Exemples
 

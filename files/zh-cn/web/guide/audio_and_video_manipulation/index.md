@@ -209,7 +209,7 @@ Web Audio API 可接收各种音源的音频，处理好音频后将其发送回
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | 来自 HTML {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素的音频轨道                                                            | {{domxref("MediaElementAudioSourceNode")}} |
 | 内存中的简单原始音频数据缓冲区                                                                                                             | {{domxref("AudioBufferSourceNode")}}       |
-| 产生正弦波或其它计算波形的振荡器                                                                                                           | {{domxref("OscillatorNode")}}              |
+| 产生正弦波或其他计算波形的振荡器                                                                                                           | {{domxref("OscillatorNode")}}              |
 | 来自 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 的音频轨道（比如麦克风输入，可使用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} | {{domxref("MediaStreamAudioSourceNode")}}  |
 
 ### 音频滤镜
@@ -371,7 +371,7 @@ context.listener.setPosition(0, 0, 0);
 
 ## 示例
 
-- [各种 Web Audio API（及其它）示例](https://github.com/mdn/webaudio-examples)
+- [各种 Web Audio API（及其他）示例](https://github.com/mdn/webaudio-examples)
 - [THREE.js 视频立方体示例](https://github.com/chrisdavidmills/threejs-video-cube)
 - [实时卷积效应](https://github.com/cwilso/web-audio-samples/blob/master/samples/audio/convolution-effects.html)
 
@@ -383,7 +383,7 @@ context.listener.setPosition(0, 0, 0);
 - [HTML playbackRate 解释](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web 空间音效基础](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [将视频帧作为 WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#用视频帧作为纹理)（你也可以使用 [THREE.js](https://threejs.org) WebGL 库（或其它库）来[实现这个效果](https://stemkoski.github.io/Three.js/Video.html)）
+- [将视频帧作为 WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#用视频帧作为纹理)（你也可以使用 [THREE.js](https://threejs.org) WebGL 库（或其他库）来[实现这个效果](https://stemkoski.github.io/Three.js/Video.html)）
 - [WebGL 动画纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
 - [使用 Web Audio API 开发游戏音频（房间效果和滤镜）（2012）](https://web.dev/webaudio-games/#room-effects-and-filters)
 

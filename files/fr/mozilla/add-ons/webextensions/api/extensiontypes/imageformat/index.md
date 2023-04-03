@@ -22,9 +22,9 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 
 Les valeurs de ce type sont des chaines. Les valeurs possibles sont : `"jpeg"`, `"png"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extensionTypes.ImageFormat")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

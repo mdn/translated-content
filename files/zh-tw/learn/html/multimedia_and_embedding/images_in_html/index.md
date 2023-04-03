@@ -324,7 +324,7 @@ A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmleleme
 
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
-> **備註：** From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> **備註：** From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 
@@ -483,7 +483,7 @@ p {
 
 ## 試試看!
 
-您已經來到了本文的末端，但是您還記得最重要的內容嗎？ 在繼續往下之前，這裡有些測驗讓您驗證看看您是否都學會了 — [測驗：HTML 圖像](/zh-TW/docs//zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
+你已經來到了本文的末端，但是你還記得最重要的內容嗎？在繼續往下之前，這裡有些測驗讓你驗證看看你是否都學會了——[測驗：HTML 圖像](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
 
 ## 總結
 

@@ -55,9 +55,9 @@ Apache (.htaccess)
 
 No forma parte de ninguna especificación o borrador.
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.X-XSS-Protection")}}
+{{Compat}}
 
 ## Vea también
 

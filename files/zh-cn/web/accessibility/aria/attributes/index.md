@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA/Attributes
 
 ARIA 属性用于修改无障碍树中定义的元素的状态和属性。
 
-> **备注：** ARIA 仅用于修改无障碍树，进而改变辅助技术向用户呈现内容的方式。ARIA 不会改变元素的功能或行为。当使用非语义化的 HTML 元素来实现其它功能时，你必须使用 JavaScript 来控制元素的实际行为、焦点以及 ARIA 状态。
+> **备注：** ARIA 仅用于修改无障碍树，进而改变辅助技术向用户呈现内容的方式。ARIA 不会改变元素的功能或行为。当使用非语义化的 HTML 元素来实现其他功能时，你必须使用 JavaScript 来控制元素的实际行为、焦点以及 ARIA 状态。
 
 ## ARIA 特性类别
 
@@ -101,7 +101,7 @@ ARIA 的状态和属性（合称为“特性”）共有 4 类：
 - [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
 
-除了 `aria-label` 和 `aria-labelledby` 这两个被“特别禁止”的属性，其它属性是全局适用的。这两个被“特别禁止”的属性无法在具有 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role) 角色或与其同义的 [`none`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role) 角色的元素上使用。
+除了 `aria-label` 和 `aria-labelledby` 这两个被“特别禁止”的属性，其他属性是全局适用的。这两个被“特别禁止”的属性无法在具有 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role) 角色或与其同义的 [`none`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role) 角色的元素上使用。
 
 ## MDN 上介绍的状态和属性
 

@@ -76,4 +76,4 @@ El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.wa
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.universal")}}
+{{Compat}}

@@ -16,7 +16,7 @@ Operator: x ^= y
 Meaning:  x  = x ^ y
 ```
 
-## 例子
+## 示例
 
 ### 使用按位异或赋值
 

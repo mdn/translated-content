@@ -52,6 +52,6 @@ margin-bottom: inherit; /*margen heredado*/
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.margin-bottom")}}
+{{Compat}}

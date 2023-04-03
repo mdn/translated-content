@@ -147,9 +147,9 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.create", 10)}}
+{{Compat}}
 
 > **Note :**
 >

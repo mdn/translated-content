@@ -298,13 +298,3 @@ Para o próximo parâmetro. Este vai envolver um pouco mais de trabalho — vamo
 Parabéns por chegar ao final! Este artigo levou você ao longo de todo o processo de criação de uma função prática personalizada, que com um pouco mais de trabalho poderia ser transplantada em um projeto real. No próximo artigo, vamos encerrar as funções explicando outro conceito relacionado essencial — valores de retorno.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/pt-BR/docs/Learn/JavaScript/Building_blocks/Image_gallery)

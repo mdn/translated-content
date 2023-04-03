@@ -1,6 +1,6 @@
 ---
 title: <input type="reset">
-slug: Web/HTML/Element/Input/reset
+slug: Web/HTML/Element/input/reset
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -23,7 +23,7 @@ slug: Web/HTML/Element/Input/reset
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
-   <td>{{htmlattrxref("type", "input")}} 和 {{htmlattrxref("value", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#type"><code>type</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#value"><code>value</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -42,7 +42,7 @@ slug: Web/HTML/Element/Input/reset
 
 ## 值
 
-`<input type="reset">` 元素的 `{{htmlattrxref("value", "input")}}` 属性包含一个用做按钮标签的字符串，诸如 `reset` 之类的按钮没有其他值。
+`<input type="reset">` 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含一个用做按钮标签的字符串，诸如 `reset` 之类的按钮没有其他值。
 
 ### 设置 value 属性
 
@@ -90,9 +90,9 @@ slug: Web/HTML/Element/Input/reset
 
 ### 添加重置键盘快捷键
 
-像对 {{HTMLElement("input")}} 元素所做的那样，向重置按钮添加一个快捷键是非常有意义的，且可以通过 {{htmlattrxref("accesskey")}} 全局属性来实现。
+像对 {{HTMLElement("input")}} 元素所做的那样，向重置按钮添加一个快捷键是非常有意义的，且可以通过 [`accesskey`](/zh-CN/docs/Web/HTML/Global_attributes#accesskey) 全局属性来实现。
 
-在这个例子中， <kbd>r</kbd> 被指定为访问键（需要按下 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合；关于这些命令的详细列表请参见 {{htmlattrxref("accesskey")}}）。
+在这个例子中， <kbd>r</kbd> 被指定为访问键（需要按下 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合；关于这些命令的详细列表请参见 [`accesskey`](/zh-CN/docs/Web/HTML/Global_attributes#accesskey)）。
 
 ```html
 <form>
@@ -108,11 +108,11 @@ slug: Web/HTML/Element/Input/reset
 
 {{EmbedLiveSample("添加重置键盘快捷键", 650, 100)}}
 
-上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的，以避免与系统和软件快捷键冲突。在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 {{htmlattrxref("title")}} 属性）, 尽管这并不是出于无障碍目的的完善的解决方案。
+上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的，以避免与系统和软件快捷键冲突。在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性），尽管这并不是出于无障碍目的的完善的解决方案。
 
 ### 禁用和启用重置按钮
 
-要禁用重置按钮，只需在其上指定 {{htmlattrxref("disabled")}} 全局属性，如下所示：
+要禁用重置按钮，只需在其上指定 [`disabled`](/zh-CN/docs/Web/HTML/Global_attributes#disabled) 全局属性，如下所示：
 
 ```html
 <input type="reset" value="Disabled" disabled />

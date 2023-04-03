@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 ## 语法
 
-```js
+```js-nolint
 splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1)

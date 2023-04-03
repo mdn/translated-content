@@ -41,9 +41,9 @@ var gettingPopup = browser.pageAction.getPopup(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accompli avec une chaîne contenant l'URL du popup.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.getPopup")}}
+{{Compat}}
 
 ## Exemples
 

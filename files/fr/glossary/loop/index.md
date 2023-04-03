@@ -1,6 +1,6 @@
 ---
 title: boucle
-slug: Glossary/loop
+slug: Glossary/Loop
 tags:
   - Glossaire
   - Programmation

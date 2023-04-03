@@ -15,7 +15,7 @@ HTTP 的传输协议主要依赖于 TCP 来提供从客户端到服务器端之�
 
 ![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
-> **备注：** HTTP/2 新增了其它连接管理模型。
+> **备注：** HTTP/2 新增了其他连接管理模型。
 
 要注意的一个重点是 HTTP 的连接管理适用于两个连续节点之间的连接，它是[逐跳（Hop-by-hop）标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)，而不是[端到端（End-to-end）标头](/zh-CN/docs/Web/HTTP/Headers#端到端（end-to-end）标头)。当模型用于从客户端到第一个代理服务器的连接和从代理服务器到目标服务器之间的连接时（或者任意中间代理）效果可能是不一样的。HTTP 协议头受不同连接模型的影响，比如 {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}，就是[逐跳标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)标头，它们的值是可以被中间节点修改的。
 
@@ -39,7 +39,7 @@ TCP 协议握手本身就是耗费时间的，所以 TCP 可以保持更多的�
 
 长连接也还是有缺点的；就算是在空闲状态，它还是会消耗服务器资源，而且在重负载时，还有可能遭受 {{glossary("DoS attack", "DoS 攻击")}}。这种场景下，可以使用非长连接，即尽快关闭那些空闲的连接，也能对性能有所提升。
 
-HTTP/1.0 里默认并不使用长连接。把 {{HTTPHeader("Connection")}} 设置成 `close` 以外的其它参数都可以让其保持长连接，通常会设置为 `retry-after`。
+HTTP/1.0 里默认并不使用长连接。把 {{HTTPHeader("Connection")}} 设置成 `close` 以外的其他参数都可以让其保持长连接，通常会设置为 `retry-after`。
 
 在 HTTP/1.1 里，默认就是长连接的，不再需要标头（但我们还是会把它加上，万一某个时候因为某种原因要退回到 HTTP/1.0 呢）。
 
