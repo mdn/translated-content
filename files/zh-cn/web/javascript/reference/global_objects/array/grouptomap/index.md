@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
 
-该方法主要用于分组与对象相关的元素，特别是当该对象可能随时间而变化时。如果对象不变，你可以使用字符串表示它，并使用{{jsxref("Array.prototype.group()")}}分组元素。
+该方法主要用于分组与对象相关的元素，特别是当该对象可能随时间而变化时。如果对象不变，你可以使用字符串表示它，并使用 {{jsxref("Array.prototype.group()")}} 分组元素。
 
 ## 语法
 
@@ -21,7 +21,7 @@ groupToMap(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 为数组中的每个元素执行的函数。它应该返回一个（{{Glossary("object")}} 或 {{Glossary("primitive")}}）来指示当前元素的组。该函数被调用时将传入以下参数：
+  - : 为数组中的每个元素执行的函数。它应该返回一个值（{{Glossary("object")}} 或 {{Glossary("primitive")}}）来指示当前元素的组。该函数被调用时将传入以下参数：
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`
@@ -33,7 +33,7 @@ groupToMap(callbackFn, thisArg)
 
 ### 返回值
 
-一个 {{jsxref("Map")}} 对象，其中每个组都有一个键，每个键都分配给一个包含组对应元素的数组。
+一个为每个组分配了键的 {{jsxref("Map")}} 对象，每个键都分配了一个包含相关组元素的数组。
 
 ### 异常
 
@@ -92,10 +92,10 @@ console.log(result.get(restock));
 
 请注意，函数参数 `{ quantity }` 是一个[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数参数传递的对象中提取属性)的基本示例。这会解构传递为参数的对象的 `quantity` 属性，并将其赋值给函数体中名为 `quantity` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
 
-`Map` 的键可以被修改并仍然使用。但是，你不能重新创建键并仍然使用它。因此，任何需要使用映射的内容都保留对其键的引用是非常重要的。
+`Map` 的键在修改后仍可以使用。但是，你不能重新创建键并仍然使用它。因此，任何需要使用映射的内容都保留对其键的引用是非常重要的。
 
 ```js
-// 键可以修改并仍然使用
+// 键被修改后仍可以使用
 restock["fast"] = true;
 console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
