@@ -5,7 +5,7 @@ slug: Web/API/TextMetrics
 
 {{APIRef("Canvas API")}}
 
-`在 canvas 中，TextMetrics` 接口表示文本的尺寸，通过 {{domxref("CanvasRenderingContext2D.measureText()")}} 方法创建。
+在 canvas 中，**`TextMetrics`** 接口表示文本的尺寸，通过 {{domxref("CanvasRenderingContext2D.measureText()")}} 方法创建。
 
 ## 属性
 
@@ -90,7 +90,7 @@ baselines.forEach((baseline, index) => {
 
 当测量一段文本的水平宽度时，由于字母倾斜/斜体导致字符的宽度可能超出其预定的宽度，因此 `actualBoundingBoxLeft` 和 `actualBoundingBoxRight` 的总和可能会比内联盒子的宽度（`width`）更大。
 
-因此， 计算 `actualBoundingBoxLeft` 和 `actualBoundingBoxRight` 的总和是一种更准确地获取文本绝对宽度的方法：
+因此，计算 `actualBoundingBoxLeft` 和 `actualBoundingBoxRight` 的总和是一种更准确地获取文本绝对宽度的方法：
 
 ```js
 const canvas = document.getElementById("canvas");
