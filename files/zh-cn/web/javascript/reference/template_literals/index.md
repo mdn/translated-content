@@ -246,8 +246,7 @@ console.log(callHistory[0] === callHistory[1]); // true; all evaluations of the 
 
 ### 原始字符串
 
-在标签函数的第一个参数中，存在一个特殊的属性`raw` ，我们可以通过它来访问模板字符串的原始字符串，而无需[转义特殊字符](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#在字符串中使用的特殊字符
-)。
+在标签函数的第一个参数中，存在一个特殊的属性`raw` ，我们可以通过它来访问模板字符串的原始字符串，而无需[转义特殊字符](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#在字符串中使用的特殊字符)。
 
 ```js
 function tag(strings) {
