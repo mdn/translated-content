@@ -32,7 +32,7 @@ slug: Web/API/TextMetrics
 - {{domxref("TextMetrics.alphabeticBaseline")}} {{readonlyInline}}
   - : **double** 类型，从{{domxref("CanvasRenderingContext2D.textBaseline")}} 属性标明的水平线到线框的 alphabetic 基线的距离，使用 CSS 像素计算。
 - {{domxref("TextMetrics.ideographicBaseline")}} {{readonlyInline}}
-  - : **double** 类型，从{{domxref("CanvasRenderingContext2D.textBaseline")}} 属性标明的水平线到线框的 ideographic 基线的距离，使用 CSS 像素计算。
+  - : **double** 类型，从 {{domxref("CanvasRenderingContext2D.textBaseline")}} 属性标明的水平线到线框的 ideographic 基线的距离，使用 CSS 像素计算。
 
 ## 示例
 
