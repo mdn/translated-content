@@ -83,11 +83,11 @@ l10n:
 - {{domxref("AudioBuffer")}}
   - : **`AudioBuffer`** インターフェイスは、メモリー上に存在する短い音声資産を表します。音声ファイルから {{ domxref("BaseAudioContext.decodeAudioData") }} メソッドで作成したり、生のデータから {{ domxref("BaseAudioContext.createBuffer") }} で作成したりすることができます。この形式にデコードされた音声は、{{ domxref("AudioBufferSourceNode") }}に格納することができます。
 - {{domxref("AudioBufferSourceNode")}}
-  - : **`AudioBufferSourceNode`** インターフェイスは、{{domxref("AudioBuffer")}}に格納されたメモリー内の音声データからなる音声ソースを表します。音声ソースとして動作するのは、{{domxref("AudioNode")}}です。
+  - : **`AudioBufferSourceNode`** インターフェイスは、{{domxref("AudioBuffer")}} に格納されたメモリー内の音声データからなる音声ソースを表します。これは音源として機能する {{domxref("AudioNode")}} です。
 - {{domxref("MediaElementAudioSourceNode")}}
-  - : **`MediaElementAudioSourceNode`** インターフェイスは、 HTML の {{ htmlelement("audio") }} または {{ htmlelement("video") }} 要素からなる音声ソースを表現します。音声ソースとして動作するのは {{domxref("AudioNode")}} です。
+  - : **`MediaElementAudioSourceNode`** インターフェイスは、HTML の {{ htmlelement("audio") }} または {{ htmlelement("video") }} 要素からなる音声ソースを表現します。これは音源として機能する {{domxref("AudioNode")}} です。
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : **`MediaStreamAudioSourceNode`** インターフェイスは、 {{domxref("MediaStream")}} （ウェブカメラ、マイク、リモートコンピューターから送信されるストリームなど）で構成される音声ソースを表します。ストリーム上に複数の音声トラックが表示されている場合、辞書順（アルファベット順）に最初に {{domxref("MediaStreamTrack.id", "id")}} が来るトラックが使用されます。音声源として機能するのは{{domxref("AudioNode")}}です。
+  - : **`MediaStreamAudioSourceNode`** インターフェイスは、{{domxref("MediaStream")}} （ウェブカメラ、マイク、リモートコンピューターから送信されるストリームなど）で構成される音声ソースを表します。ストリーム上に複数の音声トラックが表示されている場合、辞書順（アルファベット順）に最初に {{domxref("MediaStreamTrack.id", "id")}} が来るトラックが使用されます。これは音源として機能する {{domxref("AudioNode")}} です。
 - {{domxref("MediaStreamTrackAudioSourceNode")}}
   - : {{domxref("MediaStreamTrackAudioSourceNode")}} 型のノードは、データが {{domxref("MediaStreamTrack")}} に由来する音声ソースを表します。ノードを作成するために {{domxref("AudioContext.createMediaStreamTrackSource", "createMediaStreamTrackSource()")}} メソッドを使用する際に、どのトラックを使用するのか指定します。これは `MediaStreamAudioSourceNode` よりも制御を提供します。
 
