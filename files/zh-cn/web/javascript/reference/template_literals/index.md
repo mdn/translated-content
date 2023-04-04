@@ -74,7 +74,7 @@ string text line 2`);
 
 ### 字符串插值
 
-如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)[连接它们](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Strings#连接字符串)：
+如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)[连接它们](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#连接字符串)：
 
 ```js
 var a = 5;
@@ -97,7 +97,7 @@ not ${2 * a + b}.`);
 // not 20."
 ```
 
-注意，这两种语法有一点小区别：模板字面量直接将其表达式[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，而加法则会先强制转换为原语类型。更多相关信息，参见[加法（+）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)。
+注意，这两种语法有一点小区别：模板字面量直接将其表达式[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，而加法则会先强制转换为原语类型。更多相关信息，参见[加法（+）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)。
 
 ### 嵌套模板
 
