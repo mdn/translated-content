@@ -27797,10 +27797,6 @@
     "modified": "2020-11-16T05:49:31.551Z",
     "contributors": ["mfuji09", "shide55"]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/name": {
-    "modified": "2020-11-22T07:12:38.774Z",
-    "contributors": ["mfuji09", "YujiSoftware", "shide55"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/of": {
     "modified": "2020-11-22T08:31:53.944Z",
     "contributors": ["mfuji09", "shide55"]
@@ -30954,6 +30950,10 @@
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/name": {
+    "modified": "2020-11-22T07:12:38.774Z",
+    "contributors": ["mfuji09", "YujiSoftware", "shide55"]
   },
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",

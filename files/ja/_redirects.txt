@@ -4778,6 +4778,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError
+/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/name
 /ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Global_Objects/URIError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/URIError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
