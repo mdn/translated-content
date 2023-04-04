@@ -10,19 +10,19 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提：</th>
+      <th scope="row">预备知识：</th>
       <td>
-        基本的电脑知识，<a
+        基本的电脑知识、<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了必要的软件</a
-        >，<a
+        >、<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
-        >的基础知识，HTML 基础（学习<a
+        >的基础知识、HTML 基础（学习<a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >），理解 CSS 如何工作（学习 <a href="/zh-CN/docs/Learn/CSS/First_steps"
-          >CSS first steps</a
+        >）、理解 CSS 如何工作（学习 <a href="/zh-CN/docs/Learn/CSS/First_steps"
+          >CSS 入门</a
         >）。
       </td>
     </tr>
@@ -101,7 +101,7 @@ slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 视口，即你在浏览器中看到的部分页面，也是有尺寸的。在 CSS 中，我们有与视口尺寸相关的度量单位，即意为视口宽度的 `vw` 单位，以及意为视口高度的 `vh` 单位。使用这些单位，你可以把一些东西做得随用户的视口改变大小。
 
-`1vh`等于视口高度的 1%，`1vw` 则为视口宽度的 1%。你可以用这些单位约束盒子的大小，还有文字的大小。在下面的示例里，我们有一个大小被设为 20vh 和 20vw 的盒子。这个盒子里面有一个字母 `A`，其 {{cssxref("font-size")}} 属性被设成了 10vh。
+`1vh` 等于视口高度的 1%，`1vw` 则为视口宽度的 1%。你可以用这些单位约束盒子的大小，还有文字的大小。在下面的示例里，我们有一个大小被设为 20vh 和 20vw 的盒子。这个盒子里面有一个字母 `A`，其 {{cssxref("font-size")}} 属性被设成了 10vh。
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/vw-vh.html", '100%', 600)}}
 
