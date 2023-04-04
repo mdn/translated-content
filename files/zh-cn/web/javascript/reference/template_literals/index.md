@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/template_strings
 
 {{JsSidebar("More")}}
 
-**模板字面量** 是用反引号 `` ` `` 分隔的字面量，允许[多行字符串](#多行字符串)、带嵌入表达式的[字符串插值](#字符串插值)和一种叫[带标签的模板](#带标签的模板)的特殊结构（译注：几种语法）。
+**模板字面量** 是用反引号 `` ` `` 分隔的字面量，允许[多行字符串](#多行字符串)、带嵌入表达式的[字符串插值](#字符串插值)和一种叫[带标签的模板](#带标签的模板)的特殊结构。（译注：几种语法。）
 
 模板字面量有时被非正式地叫作*模板字符串*，因为它们最常被用作[字符串插值](#字符串插值)（通过替换占位符来创建字符串）。然而，带标签的模板字面量可能不会产生字符串——它可以与自定义[标签函数](#带标签的模板)一起使用，来对模板字面量的不同部分执行任何操作。
 
@@ -77,9 +77,9 @@ string text line 2`);
 如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) [连接它们](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#连接字符串)：
 
 ```js
-var a = 5;
-var b = 10;
-console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
+const a = 5;
+const b = 10;
+console.log("Fifteen is " + (a + b) + " and\nnot " + (2 * a + b) + ".");
 // "Fifteen is 15 and
 // not 20."
 ```
@@ -89,8 +89,8 @@ console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
 有了模板字面量，就可以通过使用占位符 `${expression}` 嵌入待替换的表达式，从而避免串联运算符，并提高代码的可读性：
 
 ```js
-var a = 5;
-var b = 10;
+const a = 5;
+const b = 10;
 console.log(`Fifteen is ${a + b} and
 not ${2 * a + b}.`);
 // "Fifteen is 15 and
@@ -310,7 +310,7 @@ const doc = html`<!DOCTYPE html>
 
 然而，这对于带标签的模板来说是有问题的，除了“熟的”字面量外，这些模板还可以访问原始字面量（转义序列按原样保留）。带标签的模板应该允许嵌入语言（例如 [DSL](https://zh.wikipedia.org/wiki/领域特定语言) 或 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX)），在这些语言里其他转义序列是常见的。因此，从带标签的模板中删除了转义序列诸多格式的语法限制。
 
-不过，非法转义序列在"熟的"当中仍然会体现出来。它们将以 {{jsxref("undefined")}} 元素的形式存在于"熟的"数组之中：
+不过，非法转义序列在 `cooked` 当中仍然会体现出来。它们将以 {{jsxref("undefined")}} 元素的形式存在于 `cooked` 数组之中：
 
 ```js
 function latex(str) {
@@ -336,7 +336,7 @@ let bad = `bad escape sequence: \unicode`;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
