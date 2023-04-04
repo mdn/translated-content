@@ -74,7 +74,7 @@ string text line 2`);
 
 ### 字符串插值
 
-如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)[连接它们](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#连接字符串)：
+如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) [连接它们](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#连接字符串)：
 
 ```js
 var a = 5;
