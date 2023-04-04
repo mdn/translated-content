@@ -107,7 +107,7 @@ o
 </my-paragraph>
 ```
 
-> **Nota:** Los elementos que pueden ser insertados en los slots son conocidos como {{domxref("Slotable")}}; cuando un elemento ha sido insertado en un slot, se dice que fue _eslotado_ por su término en inlgés _slotted._
+> **Nota:** Los elementos que pueden ser insertados en los slots son conocidos como {{domxref("Slotable")}}; cuando un elemento ha sido insertado en un slot, se dice que fue _eslotado_ por su término en inglés _slotted._
 
 > **Nota:** Un {{HTMLElement("slot")}} sin nombre se rellenará con todos los nodos secundarios de nivel superior del elemento personalizado que no tengan el atributo {{htmlattrxref("slot")}}. Esto incluye nodos de texto.
 
@@ -120,7 +120,7 @@ Para finalizar el artículo, veamos algo menos trivial.
 El siguiente conjunto de fragmentos de código muestra cómo usar {{HTMLElement("slot")}} junto con {{HTMLElement("template")}} y algo de JavaScript para:
 
 - crear un elemento **`<element-details>`** con [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) en su [shadow root](/es/docs/Web/API/ShadowRoot)
-- diseñe el elemento **`<element-details>`** de forma que, cuando se use en documentos, sea renderizado desde la composición del contenido del elemento junto con el contenido de su [shadow root,](/es/docs/Web/API/ShadowRoot) es decir, se utilizan partes del contenido del elemento para rellenar el [shadow root](/es/docs/Web/API/ShadowRoot) de los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot)
+- diseñar el elemento **`<element-details>`** de forma que, cuando se use en documentos, sea renderizado desde la composición del contenido del elemento junto con el contenido de su [shadow root,](/es/docs/Web/API/ShadowRoot) es decir, se utilizan partes del contenido del elemento para rellenar el [shadow root](/es/docs/Web/API/ShadowRoot) de los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot)
 
 Observa que es técnicamente posible usar el elemento {{HTMLElement("slot")}} sin un elemento {{HTMLElement("template")}}, por ejemplo, dentro de un elemento {{HTMLElement("div")}} normal, y aun así tomar ventaja de los indicadores de posición de el elemento {{HTMLElement("slot")}} para el contenido del [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM), y al hacerlo puedes evitar el problema de tener que acceder primero a la propiedad `content` del elemento de la plantilla y clonarlo. Sin embargo, por lo general, es más práctico agregar slots dentro de un elemento {{HTMLElement("template")}}, ya que es poco probable que necesites definir un patrón basado en un elemento ya renderizado.
 
