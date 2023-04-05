@@ -158,7 +158,7 @@ console.log(output);
 // That Mike is a youngster.
 ```
 
-标签不必是普通的标识符，你可以使用任何[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#汇总表)大于16的表达式，包括[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)、函数调用、[new 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，甚至其他标签的模板字面量。
+标签不必是普通的标识符，你可以使用任何[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#汇总表)大于 16 的表达式，包括[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)、函数调用、[new 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，甚至其他标签的模板字面量。
 
 ```js
 console.log`Hello`; // [ 'Hello' ]
