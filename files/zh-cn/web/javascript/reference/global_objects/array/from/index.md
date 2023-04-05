@@ -30,7 +30,7 @@ Array.from(arrayLike, mapFn, thisArg)
     - `index`
       - : 数组正在处理的当前元素的索引。
 - `thisArg` {{Optional_inline}}
-  - : 可选参数，执行回调函数 `mapFn` 时用作 `this` 的对象。
+  - : 执行 `mapFn` 时用作 `this` 的值。
 
 ### 返回值
 
@@ -41,11 +41,11 @@ Array.from(arrayLike, mapFn, thisArg)
 `Array.from()` 可以通过以下方式来创建数组对象：
 
 - [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)（例如 {{jsxref("Map")}} 和 {{jsxref("Set")}} 对象）；或者，如果对象是不可迭代的，
-- 类数组对象（有着 `length` 属性和索引元素的对象）。
+- 类数组对象（带有 `length` 属性和索引元素的对象）。
 
 `Array.from()` 绝不会创建稀疏数组。如果 `arrayLike` 对象缺少一些索引属性，那么这些属性在新数组中将是 `undefined`。
 
-`Array.from()` 有一个可选的参数 `mapFn`，该参数允许你在创建数组时为每个元素执行一个函数，类似于 {{jsxref("Array.prototype.map()", "map()")}}。更清楚的是，`Array.from(obj, mapFn, thisArg)` 和 `Array.from(obj).map(mapFn, thisArg)` 具有相同的结果，只是它不会创建中间数组，并且 `mapFn` 仅接受两个参数（`element`、`index`），不接受数组，因为数组仍然在构建中。
+`Array.from()` 有一个可选的参数 `mapFn`，该参数允许你在创建数组时为每个元素执行一个函数，类似于 {{jsxref("Array.prototype.map()", "map()")}}。更明确地说，`Array.from(obj, mapFn, thisArg)` 和 `Array.from(obj).map(mapFn, thisArg)` 具有相同的结果，只是它不会创建中间数组，并且 `mapFn` 仅接受两个参数（`element`、`index`），不接受数组，因为数组仍然在构建中。
 
 > **备注：** 此行为对于[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)更为重要，因为中间数组的值必须被截断，以适应相应的类型。`Array.from()` 的实现与 {{jsxref("TypedArray.from()")}} 具有相同的签名。
 
