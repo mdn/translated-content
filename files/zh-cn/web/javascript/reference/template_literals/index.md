@@ -26,7 +26,7 @@ tagFunction`string text ${expression} string text`
 ### 参数
 
 - `string text`
-  - : 将成为模板字面量的一部分的字符串文本。几乎允许所有字符，包括[换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)和其他[空白字符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)。但是，除非使用了标记函数，否则无效的转义序列将导致语法错误。
+  - : 将成为模板字面量的一部分的字符串文本。几乎允许所有字符，包括[换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)和其他[空白字符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)。但是，除非使用了[标签函数](#带标签的模版字面量及转义序列)，否则无效的转义序列将导致语法错误。
 - `expression`
   - : 要插入当前位置的表达式，其值被转换为字符串或传递给 `tagFunction`。
 - `tagFunction`
