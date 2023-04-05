@@ -26,9 +26,9 @@ Array.from(arrayLike, mapFn, thisArg)
 - `mapFn` {{Optional_inline}}
   - : 调用数组每个元素的函数。如果提供，每个将要添加到数组中的值首先会传递给该函数，然后将 `mapFn` 的返回值增加到数组中。使用以下参数调用该函数：
     - `element`
-      - : 数组正在处理的当前元素。
+      - : 数组当前正在处理的元素。
     - `index`
-      - : 数组正在处理的当前元素的索引。
+      - : 数组当前正在处理的元素的索引。
 - `thisArg` {{Optional_inline}}
   - : 执行 `mapFn` 时用作 `this` 的值。
 
