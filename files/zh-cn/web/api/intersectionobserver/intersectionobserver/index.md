@@ -50,6 +50,6 @@ var observer = new IntersectionObserver(callback[, options]);
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

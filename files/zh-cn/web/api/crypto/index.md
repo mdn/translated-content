@@ -37,7 +37,7 @@ _该接口实现的方法定义在 {{domxref("Crypto/getRandomValues", "RandomSo
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
