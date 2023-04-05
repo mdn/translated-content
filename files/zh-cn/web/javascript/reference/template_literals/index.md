@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/template_strings
 
 ## 语法
 
-```plain
+```js-nolint
 `string text`
 
 `string text line 1
