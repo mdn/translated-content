@@ -179,7 +179,7 @@ recursive`Hello``World`;
 console.log(`Hello``World`); // TypeError: "Hello" is not a function
 ```
 
-唯一的例外是可选的链接，将会抛出语法错误。
+唯一的例外是可选链，这将抛出语法错误。
 
 ```js example-bad
 console.log?.`Hello`; // SyntaxError: Invalid tagged template on optional chain
