@@ -27,7 +27,7 @@ Esta sección proporciona una breve descripción de cada propiedad y método rel
 
 ### requestPointerLock()
 
-La API **Pointer Lock**, similar a la [Fullscreen API](/es-US/docs/Web/API/Fullscreen_API), amplía los elementos DOM añadiendo un nuevo método, {{domxref("Element.requestPointerLock", "requestPointerLock()")}}. El siguiente ejemplo solicita el bloqueo de puntero en un elemento {{htmlelement("canvas")}}:
+La API **Pointer Lock**, similar a la [Fullscreen API](/es/docs/Web/API/Fullscreen_API), amplía los elementos DOM añadiendo un nuevo método, {{domxref("Element.requestPointerLock", "requestPointerLock()")}}. El siguiente ejemplo solicita el bloqueo de puntero en un elemento {{htmlelement("canvas")}}:
 
 ```js
 canvas.addEventListener("click", async () => {
