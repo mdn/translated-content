@@ -173,7 +173,7 @@ recursive`Hello``World`;
 // [ 'World' ] []
 ```
 
-虽然语法可行，但*不带标签的*模板字面量是字符串，并且在链接时会抛出 {{jsxref("TypeError")}}。
+虽然语法可行，但*不带标签的*模板字面量是字符串，并且在链式调用时会抛出 {{jsxref("TypeError")}}。
 
 ```js
 console.log(`Hello``World`); // TypeError: "Hello" is not a function
