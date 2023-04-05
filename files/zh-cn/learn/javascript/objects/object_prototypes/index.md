@@ -5,383 +5,234 @@ slug: Learn/JavaScript/Objects/Object_prototypes
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
 
-通过原型这种机制，JavaScript 中的对象从其他对象继承功能特性；这种继承机制与经典的面向对象编程语言的继承机制不同。本文将探讨这些差别，解释原型链如何工作，并了解如何通过 `prototype` 属性向已有的构造器添加方法
+原型是 JavaScript 对象相互继承特性的机制。在这篇文章中，我们将解释什么是原型，原型链如何工作，以及如何为一个对象设置原型。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">预备知识：</th>
       <td>
-        基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript
-        基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>和
-        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript 基础（参见
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>和<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >创建 JavaScript 代码块</a
-        >）以及面向对象的 JavaScript (OOJS) 基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/Object/Basics"
-          >面向对象编程基本概念</a
+        >）以及面向对象的 JavaScript（OOJS）基础（参见<a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics"
+          >对象简介</a
         >）。
       </td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
       <td>
-        理解 JavaScript 对象原型、原型链如何工作、如何向
-        <code>prototype</code> 属性添加新的方法。
+        理解 JavaScript 对象原型、原型链如何工作、如何设置对象的原型。
       </td>
     </tr>
   </tbody>
 </table>
 
-## 基于原型的语言？
+## 原型链
 
-JavaScript 常被描述为一种**基于原型的语言 (prototype-based language)**——每个对象拥有一个**原型对象**，对象以其原型为模板、从原型继承方法和属性。原型对象也可能拥有原型，并从中继承方法和属性，一层一层、以此类推。这种关系常被称为**原型链 (prototype chain)**，它解释了为何一个对象会拥有定义在其他对象中的属性和方法。
-
-准确地说，这些属性和方法定义在 Object 的构造器函数 (constructor functions) 之上的`prototype`属性上，而非对象实例本身。
-
-在传统的 OOP 中，首先定义“类”，此后创建对象实例时，类中定义的所有属性和方法都被复制到实例中。在 JavaScript 中并不如此复制——而是在对象实例和它的构造器之间建立一个链接（它是\_\_proto\_\_属性，是从构造函数的`prototype`属性派生的），之后通过上溯原型链，在构造器中找到这些属性和方法。
-
-> **备注：** 理解对象的原型（可以通过 [`Object.getPrototypeOf(obj)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)或者已被弃用的[`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)属性获得）与构造函数的 `prototype` 属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，`Object.getPrototypeOf(new Foobar())` 和 `Foobar.prototype` 指向着同一个对象。
-
-以上描述很抽象；我们先看一个例子。
-
-## 使用 Javascript 中的原型
-
-在 javascript 中，函数可以有属性。每个函数都有一个特殊的属性叫作**原型（prototype）**，正如下面所展示的。请注意，下面的代码是独立的一段 (在网页中没有其他代码的情况下，这段代码是安全的)。为了最好的学习体验，你最好打开一个控制台 (在 Chrome 和 Firefox 中，可以按 Ctrl+Shift+I 来打开) 切换到"控制台" 选项卡，复制粘贴下面的 JavaScript 代码，然后按回车来运行。
+在浏览器控制台中，试着创建一个对象字面量：
 
 ```js
-function doSomething(){}
-console.log( doSomething.prototype );
-// It does not matter how you declare the function, a
-//  function in javascript will always have a default
-//  prototype property.
-var doSomething = function(){};
-console.log( doSomething.prototype );
-```
-
-正如上面所看到的，`doSomething` 函数有一个默认的原型属性，它在控制台上面呈现了出来。运行这段代码之后，控制台上面应该出现了像这样的一个对象。
-
-```js
-{
-    constructor: ƒ doSomething(),
-    __proto__: {
-        constructor: ƒ Object(),
-        hasOwnProperty: ƒ hasOwnProperty(),
-        isPrototypeOf: ƒ isPrototypeOf(),
-        propertyIsEnumerable: ƒ propertyIsEnumerable(),
-        toLocaleString: ƒ toLocaleString(),
-        toString: ƒ toString(),
-        valueOf: ƒ valueOf()
-    }
-}
-```
-
-现在，我们可以添加一些属性到 doSomething 的原型上面，如下所示。
-
-```js
-function doSomething(){}
-doSomething.prototype.foo = "bar";
-console.log( doSomething.prototype );
-```
-
-结果：
-
-```js
-{
-    foo: "bar",
-    constructor: ƒ doSomething(),
-    __proto__: {
-        constructor: ƒ Object(),
-        hasOwnProperty: ƒ hasOwnProperty(),
-        isPrototypeOf: ƒ isPrototypeOf(),
-        propertyIsEnumerable: ƒ propertyIsEnumerable(),
-        toLocaleString: ƒ toLocaleString(),
-        toString: ƒ toString(),
-        valueOf: ƒ valueOf()
-    }
-}
-```
-
-然后，我们可以使用 new 运算符来在现在的这个原型基础之上，创建一个 `doSomething` 的实例。正确使用 new 运算符的方法就是在正常调用函数时，在函数名的前面加上一个 `new` 前缀。通过这种方法，在调用函数前加一个 `new` ，它就会返回一个这个函数的实例化对象。然后，就可以在这个对象上面添加一些属性。看。
-
-```js
-function doSomething(){}
-doSomething.prototype.foo = "bar"; // add a property onto the prototype
-var doSomeInstancing = new doSomething();
-doSomeInstancing.prop = "some value"; // add a property onto the object
-console.log( doSomeInstancing );
-```
-
-结果：
-
-```js
-{
-    prop: "some value",
-    __proto__: {
-        foo: "bar",
-        constructor: ƒ doSomething(),
-        __proto__: {
-            constructor: ƒ Object(),
-            hasOwnProperty: ƒ hasOwnProperty(),
-            isPrototypeOf: ƒ isPrototypeOf(),
-            propertyIsEnumerable: ƒ propertyIsEnumerable(),
-            toLocaleString: ƒ toLocaleString(),
-            toString: ƒ toString(),
-            valueOf: ƒ valueOf()
-        }
-    }
-}
-```
-
-就像上面看到的，`doSomeInstancing` 的 `__proto__` 属性就是`doSomething.prototype`. 但是这又有什么用呢？好吧，当你访问 `doSomeInstancing` 的一个属性，浏览器首先查找 `doSomeInstancing` 是否有这个属性。如果 `doSomeInstancing` 没有这个属性，然后浏览器就会在 `doSomeInstancing` 的 `__proto__` 中查找这个属性 (也就是 doSomething.prototype). 如果 doSomeInstancing 的 `__proto__` 有这个属性，那么 doSomeInstancing 的 `__proto__` 上的这个属性就会被使用。否则，如果 doSomeInstancing 的 `__proto__` 没有这个属性，浏览器就会去查找 doSomeInstancing 的 `__proto__` 的 `__proto__` ，看它是否有这个属性。默认情况下，所有函数的原型属性的 `__proto__` 就是 `window.Object.prototype`. 所以 doSomeInstancing 的 `__proto__` 的 `__proto__` (也就是 doSomething.prototype 的 `__proto__` (也就是 `Object.prototype`)) 会被查找是否有这个属性。如果没有在它里面找到这个属性，然后就会在 doSomeInstancing 的 `__proto__` 的 `__proto__` 的 `__proto__` 里面查找。然而这有一个问题：doSomeInstancing 的 `__proto__` 的 `__proto__` 的 `__proto__` 不存在。最后，原型链上面的所有的 `__proto__` 都被找完了，浏览器所有已经声明了的 `__proto__` 上都不存在这个属性，然后就得出结论，这个属性是 `undefined`.
-
-```js
-function doSomething(){}
-doSomething.prototype.foo = "bar";
-var doSomeInstancing = new doSomething();
-doSomeInstancing.prop = "some value";
-console.log("doSomeInstancing.prop:      " + doSomeInstancing.prop);
-console.log("doSomeInstancing.foo:       " + doSomeInstancing.foo);
-console.log("doSomething.prop:           " + doSomething.prop);
-console.log("doSomething.foo:            " + doSomething.foo);
-console.log("doSomething.prototype.prop: " + doSomething.prototype.prop);
-console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);
-```
-
-结果：
-
-```js
-doSomeInstancing.prop:      some value
-doSomeInstancing.foo:       bar
-doSomething.prop:           undefined
-doSomething.foo:            undefined
-doSomething.prototype.prop: undefined
-doSomething.prototype.foo:  bar
-```
-
-## 理解原型对象
-
-让我们回到 `Person()` 构造器的例子。请把这个例子载入浏览器。如果你还没有看完上一篇文章并写好这个例子，也可以使用 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 中的例子（亦可参考[源代码](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)）。
-
-本例中我们将定义一个构造器函数：
-
-```js
-function Person(first, last, age, gender, interests) {
-
-  // 属性与方法定义
-
+const myObject = {
+  city: "Madrid",
+  greet() {
+    console.log(`来自 ${this.city} 的问候`);
+  },
 };
+myObject.greet(); // 来自 Madrid 的问候
 ```
 
-然后创建一个对象实例：
+这里有一个对象，它具有数据属性 `city` 和方法 `greet()`。如果你在控制台中输入对象的名称，然后*跟随一个小数点*（如同 `myObject.`），控制台会列出该对象可用的一系列属性。你会看到，除了 `city` 和 `greet` 外，还有很多其他属性！
 
-```js
-var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+```
+__defineGetter__
+__defineSetter__
+__lookupGetter__
+__lookupSetter__
+__proto__
+city
+constructor
+greet
+hasOwnProperty
+isPrototypeOf
+propertyIsEnumerable
+toLocaleString
+toString
+valueOf
 ```
 
-在 JavaScript 控制台输入 "`person1.`"，你会看到，浏览器将根据这个对象的可用的成员名称进行自动补全：
-
-![](object-available-members.png)
-
-在这个列表中，你可以看到定义在 `person1` 的原型对象、即 `Person()` 构造器中的成员—— `name`、`age`、`gender`、`interests`、`bio`、`greeting`。同时也有一些其他成员—— `watch`、`valueOf` 等等——这些成员定义在 `Person()` 构造器的原型对象、即 [`Object`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object) 之上。下图展示了原型链的运作机制。
-
-![](mdn-graphics-person-person-object-2.png)
-
-那么，调用 `person1` 的“实际定义在 `Object` 上”的方法时，会发生什么？比如：
+试着访问其中一个：
 
 ```js
-person1.valueOf()
+myObject.toString(); // "[object Object]"
 ```
 
-这个方法仅仅返回了被调用对象的值。在这个例子中发生了如下过程：
+它可以成功调用（即使你不知道 `toString()` 到底在做什么）。
 
-- 浏览器首先检查，`person1` 对象是否具有可用的 `valueOf()` 方法。
-- 如果没有，则浏览器检查 `person1` 对象的原型对象（即 `Person`构造函数的 prototype 属性所指向的对象）是否具有可用的 `valueof()` 方法。
-- 如果也没有，则浏览器检查 `Person()` 构造函数的 prototype 属性所指向的对象的原型对象（即 `Object`构造函数的 prototype 属性所指向的对象）是否具有可用的 `valueOf()` 方法。这里有这个方法，于是该方法被调用。
+这些额外的属性是什么，它们是从哪里来的？
 
-> **备注：** 必须重申，原型链中的方法和属性**没有**被复制到其他对象——它们被访问需要通过前面所说的“原型链”的方式。
+JavaScript 中所有的对象都有一个内置属性，称为它的 **prototype**（原型）。它本身是一个对象，故原型对象也会有它自己的原型，逐渐构成了**原型链**。原型链终止于拥有 `null` 作为其原型的对象上。
 
-> **备注：** 没有官方的方法用于直接访问一个对象的原型对象——原型链中的“连接”被定义在一个内部属性中，在 JavaScript 语言标准中用 `[[prototype]]` 表示（参见 {{glossary("ECMAScript")}}）。然而，大多数现代浏览器还是提供了一个名为 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) （前后各有 2 个下划线）的属性，其包含了对象的原型。你可以尝试输入 `person1.__proto__` 和 `person1.__proto__.__proto__`，看看代码中的原型链是什么样的！
+> **备注：** 指向对象原型的属性并**不**是 `prototype`。它的名字不是标准的，但实际上所有浏览器都使用 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)。访问对象原型的标准方法是 {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}}。
 
-## prototype 属性：继承成员被定义的地方
+当你试图访问一个对象的属性时：如果在对象本身中找不到该属性，就会在原型中搜索该属性。如果仍然找不到该属性，那么就搜索原型的原型，以此类推，直到找到该属性，或者到达链的末端，在这种情况下，返回 `undefined`。
 
-那么，那些继承的属性和方法在哪儿定义呢？如果你查看 [`Object`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object) 参考页，会发现左侧列出许多属性和方法——大大超过我们在 `person1` 对象中看到的继承成员的数量。某些属性或方法被继承了，而另一些没有——为什么呢？
+所以，在调用 `myObject.toString()` 时，浏览器做了这些事情：
 
-原因在于，继承的属性和方法是定义在 `prototype` 属性之上的（你可以称之为子命名空间 (sub namespace) ）——那些以 `Object.prototype.` 开头的属性，而非仅仅以 `Object.` 开头的属性。`prototype` 属性的值是一个对象，我们希望被原型链下游的对象继承的属性和方法，都被储存在其中。
+- 在 `myObject` 中寻找 `toString` 属性
+- `myObject` 中找不到 `toString` 属性，故在 `myObject` 的原型对象中寻找 `toString`
+- 其原型对象拥有这个属性，然后调用它。
 
-于是 `Object.prototype.watch()、`[`Object.prototype.valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 等等成员，适用于任何继承自 `Object()` 的对象类型，包括使用构造器创建的新的对象实例。
-
-[`Object.is()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)、[`Object.keys()`](zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)，以及其他不在 `prototype` 对象内的成员，不会被“对象实例”或“继承自 `Object()` 的对象类型”所继承。这些方法/属性仅能被 `Object()` 构造器自身使用。
-
-> **备注：** 这看起来很奇怪——构造器本身就是函数，你怎么可能在构造器这个函数中定义一个方法呢？其实函数也是一个对象类型，你可以查阅 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造器的参考文档以确认这一点。
-
-1. 你可以检查已有的 `prototype` 属性。回到先前的例子，在 JavaScript 控制台输入：
-
-    ```js
-    Person.prototype
-    ```
-
-2. 输出并不多，毕竟我们没有为自定义构造器的原型定义任何成员。缺省状态下，构造器的 `prototype` 属性初始为空白。现在尝试：
-
-    ```js
-    Object.prototype
-    ```
-
-你会看到 `Object` 的 `prototype` 属性上定义了大量的方法；如前所示，继承自 `Object` 的对象都可以使用这些方法。
-
-JavaScript 中到处都是通过原型链继承的例子。比如，你可以尝试从 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)、[`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)、[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) 和 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 全局对象的原型中寻找方法和属性。它们都在原型上定义了一些方法，因此当你创建一个字符串时：
+`myObject` 的原型是什么？为了找到答案，我们可以使用 `Object.getPrototypeOf()` 函数：
 
 ```js
-var myString = 'This is my string.';
+Object.getPrototypeOf(myObject); // Object { }
 ```
 
-`myString` 立即具有了一些有用的方法，如 [`split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split)、[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)、[`replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 等。
+有个对象叫 `Object.prototype`，它是最基础的原型，所有对象默认都拥有它。`Object.prototype` 的原型是 `null`，所以它位于原型链的终点：
 
-> **警告：** `prototype` 属性大概是 JavaScript 中最容易混淆的名称之一。你可能会认为，`this` 关键字指向当前对象的原型对象，其实不是（还记得么？原型对象是一个内部对象，应当使用 `__proto__` 访问）。`prototype` 属性包含（指向）一个对象，你在这个对象中定义需要被继承的成员。
+![myObject 的原型链](myobject-prototype-chain.svg)
 
-**create()**
-
-我们曾经讲过如何用 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 方法创建新的对象实例。
-
-1. 例如，在上个例子的 JavaScript 控制台中输入：
-
-    ```js
-    var person2 = Object.create(person1);
-    ```
-
-2. `create()` 实际做的是从指定原型对象创建一个新的对象。这里以 `person1` 为原型对象创建了 `person2` 对象。在控制台输入：
-
-    ```js
-    person2.__proto__
-    ```
-
-结果返回对象`person1`。
-
-## constructor 属性
-
-每个实例对象都从原型中继承了一个 constructor 属性，该属性指向了用于构造此实例对象的构造函数。
-
-1. 例如，在控制台中尝试下面的指令：
-
-    ```js
-    person1.constructor
-    person2.constructor
-    ```
-
-    都将返回 `Person()` 构造器，因为该构造器包含这些实例的原始定义。
-
-    一个小技巧是，你可以在 `constructor` 属性的末尾添加一对圆括号（括号中包含所需的参数），从而用这个构造器创建另一个对象实例。毕竟构造器是一个函数，故可以通过圆括号调用；只需在前面添加 `new` 关键字，便能将此函数作为构造器使用。
-
-2. 在控制台中输入：
-
-    ```js
-    var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
-    ```
-
-3. 现在尝试访问新建对象的属性，例如：
-
-    ```js
-    person3.name.first
-    person3.age
-    person3.bio()
-    ```
-
-正常工作。通常你不会去用这种方法创建新的实例；但如果你刚好因为某些原因没有原始构造器的引用，那么这种方法就很有用了。
-
-此外，[`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 属性还有其他用途。比如，想要获得某个对象实例的构造器的名字，可以这么用：
+一个对象的原型并不总是 `Object.prototype`，试试这段代码：
 
 ```js
-instanceName.constructor.name
+const myDate = new Date();
+let object = myDate;
+
+do {
+  object = Object.getPrototypeOf(object);
+  console.log(object);
+} while (object);
+
+// Date.prototype
+// Object { }
+// null
 ```
 
-具体地，像这样：
+这段代码创建了 `Date` 对象，然后遍历了它的原型链，记录并输出了原型。从中我们知道 `myDate` 的原型是 `Date.prototype` 对象，*它*（`Date.prototype`）的原型是 `Object.prototype`。
+
+![myDate 的原型链](mydate-prototype-chain.svg)
+
+实际上，如果调用了你所熟悉的方法（如 `myDate2.getMonth()`），是在 `Date.prototype` 上定义的方法调用的。
+
+## 属性遮蔽
+
+如果你在一个对象中定义了一个属性，而在该对象的原型中定义了一个同名的属性，会发生什么？我们来看看：
 
 ```js
-person1.constructor.name
-```
+const myDate = new Date(1995, 11, 17);
 
-## 修改原型
+console.log(myDate.getYear()); // 95
 
-从我们从下面这个例子来看一下如何修改构造器的 `prototype` 属性。
-
-1. 回到 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 的例子，在本地为[源代码](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)创建一个副本。在已有的 JavaScript 的末尾添加如下代码，这段代码将为构造器的 `prototype` 属性添加一个新的方法：
-
-    ```js
-    Person.prototype.farewell = function() {
-      alert(this.name.first + ' has left the building. Bye for now!');
-    }
-    ```
-
-2. 保存代码，在浏览器中加载页面，然后在控制台输入：
-
-    ```js
-    person1.farewell();
-    ```
-
-你会看到一条警告信息，其中还显示了构造器中定义的人名；这很有用。但更关键的是，整条继承链动态地更新了，任何由此构造器创建的对象实例都自动获得了这个方法。
-
-再想一想这个过程。我们的代码中定义了构造器，然后用这个构造器创建了一个对象实例，*此后*向构造器的 `prototype` 添加了一个新的方法：
-
-```js
-function Person(first, last, age, gender, interests) {
-
-  // 属性与方法定义
-
+myDate.getYear = function () {
+  console.log("别的东西！");
 };
 
-var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
-
-Person.prototype.farewell = function() {
-  alert(this.name.first + ' has left the building. Bye for now!');
-}
+myDate.getYear(); // '别的东西！'
 ```
 
-但是 `farewell()` 方法*仍然*可用于 `person1` 对象实例——旧有对象实例的可用功能被自动更新了。这证明了先前描述的原型链模型。这种继承模型下，上游对象的方法不会复制到下游的对象实例中；下游对象本身虽然没有定义这些方法，但浏览器会通过上溯原型链、从上游对象中找到它们。这种继承模型提供了一个强大而可扩展的功能系统。
+鉴于对原型链的描述，这应该是可以预测的。当我们调用 `getYear()` 时，浏览器首先在 `myDate` 中寻找具有该名称的属性，如果 `myDate` 没有定义该属性，才检查原型。因此，当我们给 `myDate` 添加 `getYear()` 时，就会调用 `myDate` 中的版本。
 
-> **备注：** 如果运行样例时遇到问题，请参阅 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 样例（也可查看[即时运行](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)）。
+这叫做属性的“遮蔽作用”。
 
-你很少看到属性定义在 prototype 属性中，因为如此定义不够灵活。比如，你可以添加一个属性：
+## 设置原型
 
-```js
-Person.prototype.fullName = 'Bob Smith';
-```
+在 JavaScript 中，有多种设置对象原型的方法，这里我们将介绍两种：`Object.create()` 和构造函数。
 
-但这不够灵活，因为人们可能不叫这个名字。用 `name.first` 和 `name.last` 组成 `fullName` 会好很多：
+### 使用 Object.create
 
-```js
-Person.prototype.fullName = this.name.first + ' ' + this.name.last;
-```
+`Object.create()` 方法创建一个新的对象，并允许你指定一个将被用作新对象原型的对象。
 
-然而，这么做是无效的，因为本例中 `this` 引用全局范围，而非函数范围。访问这个属性只会得到 `undefined undefined`。但这个语句若放在 先前定义在 `prototype` 上的方法中则有效，因为此时语句位于函数范围内，从而能够成功地转换为对象实例范围。你可能会在 `prototype` 上定义常属性 (constant property) （指那些你永远无需改变的属性），但一般来说，在构造器内定义属性更好。
-
-> **备注：** 关于 `this` 关键字指代（引用）什么范围/哪个对象，这个问题超出了本文讨论范围。事实上，这个问题有点复杂，如果现在你没能理解，也不用担心。
-
-事实上，一种极其常见的对象定义模式是，在构造器（函数体）中定义属性、在 `prototype` 属性上定义方法。如此，构造器只包含属性定义，而方法则分装在不同的代码块，代码更具可读性。例如：
+这里有个示例：
 
 ```js
-// 构造器及其属性定义
-
-function Test(a,b,c,d) {
-  // 属性定义
+const personPrototype = {
+  greet() {
+    console.log("hello!");
+  },
 };
 
-// 定义第一个方法
-
-Test.prototype.x = function () { ... }
-
-// 定义第二个方法
-
-Test.prototype.y = function () { ... }
-
-// 等等……
+const carl = Object.create(personPrototype);
+carl.greet(); // hello!
 ```
 
-在 Piotr Zalewa 的 [school plan app](https://github.com/zalun/school-plan-app/blob/master/stage9/js/index.js) 样例中可以看到这种模式。
+这里我们创建了一个 `personPrototype` 对象，它有一个 `greet()` 方法。然后我们使用 `Object.create()` 来创建一个以 `personPrototype` 为原型的新对象。现在我们可以在新对象上调用 `greet()`，而原型提供了它的实现。
+
+### 使用构造函数
+
+在 JavaScript 中，所有的函数都有一个名为 `prototype` 的属性。当你调用一个函数作为构造函数时，这个属性被设置为新构造对象的原型（按照惯例，在名为 `__proto__` 的属性中）。
+
+因此，如果我们设置一个构造函数的 `prototype`，我们可以确保所有用该构造函数创建的对象都被赋予该原型：
+
+```js
+const personPrototype = {
+  greet() {
+    console.log(`你好，我的名字是 ${this.name}！`);
+  },
+};
+
+function Person(name) {
+  this.name = name;
+}
+
+Object.assign(Person.prototype, personPrototype);
+// or
+// Person.prototype.greet = personPrototype.greet;
+```
+
+这里我们：
+
+- 创建了一个 `personPrototype` 对象，它具有 `greet()` 方法
+- 创建了一个 `Person()` 构造函数，它初始化了要创建人物对象的名字
+
+然后我们使用 [Object.assign](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 将 `personPrototype` 中定义的方法绑定到 `Person` 函数的 `prototype` 属性上。
+
+在这段代码之后，使用 `Person()` 创建的对象将获得 `Person.prototype` 作为其原型，其中自动包含 `greet` 方法。
+
+```js
+const reuben = new Person("Reuben");
+reuben.greet(); // 你好，我的名字是 Reuben！
+```
+
+这也解释了为什么我们之前说 `myDate` 的原型被称为 `Date.prototype`：它是 `Date` 构造函数的 `prototype` 属性。
+
+### 自有属性
+
+我们使用上面的 `Person` 构造函数创建的对象有两个属性：
+
+- `name` 属性，在构造函数中设置，在 `Person` 对象中可以直接看到
+- `greet()` 方法，在原型中设置
+
+我们经常看到这种模式，即方法是在原型上定义的，但数据属性是在构造函数中定义的。这是因为方法通常对我们创建的每个对象都是一样的，而我们通常希望每个对象的数据属性都有自己的值（就像这里每个人都有不同的名字）。
+
+直接在对象中定义的属性，如这里的`name`，被称为**自有属性**，你可以使用静态方法 {{jsxref("Object/hasOwn", "Object.hasOwn()")}} 检查一个属性是否是自有属性：
+
+```js
+const irma = new Person("Irma");
+
+console.log(Object.hasOwn(irma, "name")); // true
+console.log(Object.hasOwn(irma, "greet")); // false
+```
+
+> **备注：** 你也可以在这里使用非静态方法 {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}}，但我们推荐尽可能使用 `Object.hasOwn()` 方法。
+
+## 原型与继承
+
+原型是 JavaScript 的一个强大且非常灵活的功能，使得重用代码和组合对象成为可能。
+
+特别是它们支持某种意义的**继承**。继承是面向对象的编程语言的一个特点，它让程序员表达这样的想法：系统中的一些对象是其他对象的更专门的版本。
+
+例如，如果我们正在为一所学校建模，我们可能有*教授*和*学生*：他们都是*人*，所以有一些共同的特征（例如，他们都有名字），但每个人都可能增加额外的特征（例如，教授有一个他们所教的科目），或者可能以不同的方式实现同一个特征。在一个 OOP 系统中，我们可以说教授和学生都是人的**继承者**。
+
+你可以看到在 JavaScript 中，如果 `Professor` 和 `Student` 对象具有原型 `Person`，那么他们可以继承共同的属性，同时增加和重新定义那些需要不同的属性。
+
+在下一篇文章中，我们将与面向对象编程语言的其他主要特征一起讨论继承，并看看 JavaScript 是如何支持它们的。
 
 ## 总结
 
-本文介绍了 JavaScript 对象原型，包括原型链如何允许对象之间继承特性、`prototype` 属性、如何通过它来向构造器添加方法，以及其他有关主题。
+本文介绍了 JavaScript 对象原型，包括原型对象链如何允许对象相互继承特性，原型属性以及如何使用它来为构造函数添加方法，以及其他相关主题。
 
-下一篇文章中，我们将了解如何在两个自定义的对象间实现功能的继承。
+在下一篇文章中，我们将了解面向对象编程的基本概念。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
