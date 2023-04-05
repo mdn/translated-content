@@ -340,6 +340,6 @@ let bad = `bad escape sequence: \unicode`;
 
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
-- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [ES3 中的类模板字符串](https://gist.github.com/WebReflection/8f227532143e63649804)
+- [ hacks.mozilla.org 上的《深度学习 ES6 之模板字面量》](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
