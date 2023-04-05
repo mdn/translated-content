@@ -242,7 +242,7 @@ console.log(evaluateLiteral() === evaluateLiteral()); // false; each time `tag` 
 console.log(callHistory[0] === callHistory[1]); // true; all evaluations of the same tagged literal would pass in the same strings array
 ```
 
-这允许标签函数以其第一个参数作为标识来缓存结果。为了进一步确保数组值不变，第一个参数及其[原始属性](#原始字符串)都会被[冻结](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen)，因此你将无法改变它们。
+这允许标签函数以其第一个参数作为标识来缓存结果。为了进一步确保数组值不变，第一个参数及其 [`raw` 属性](#原始字符串)都会被[冻结](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen)，因此你将无法改变它们。
 
 ### 原始字符串
 
