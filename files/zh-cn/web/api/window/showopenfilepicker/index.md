@@ -31,6 +31,7 @@ showOpenFilePicker()
           - : 可选，对此允许文件类型集合的描述。
         - `accept`
           - : {{jsxref('Object')}} 对象，带有键名为 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)、键值为包含文件扩展名的 {{jsxref('Array')}} 数组的键值对（参考下方的示例）。
+
 ### 返回值
 
 一个 {{jsxref("Promise")}} 对象，变为完成后内含一个包含 {{domxref('FileSystemFileHandle')}} 对象的 {{jsxref('Array')}} 数组。
