@@ -5,7 +5,7 @@ slug: Web/API/Window/showOpenFilePicker
 
 {{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}} 接口上的 **`showOpenFilePicker()`** 方法用于显示一个文件选择界面，以使用户选择一个或多个文件并返回这些文件的句柄。
+{{domxref("Window")}} 接口的 **`showOpenFilePicker()`** 方法用于显示一个文件选择器，以允许用户选择一个或多个文件并返回这些文件的句柄。
 
 ## 语法
 
@@ -22,7 +22,7 @@ showOpenFilePicker()
     - `multiple`
       - : 布尔值，默认为 `false`。设为 `true` 时允许用户选择多个文件。
     - `excludeAcceptAllOption`
-      - : 布尔值，默认为 `false`。正常情况下，文件选择界面带有一个允许用户选择所有类型文件的过滤选项（展开于文件类型选项中）。设置此选项为 `true` 以使该过滤选项不可用。
+      - : 布尔值，默认为 `false`。默认情况下，文件选择界面带有一个允许用户选择所有类型文件的过滤选项（展开于文件类型选项中）。设置此选项为 `true` 以使该过滤选项不可用。
     - `types`
 
       - : 表示允许选择的文件类型的 {{jsxref('Array')}} 数组，其中的元素为包含以下选项的对象：
@@ -34,7 +34,7 @@ showOpenFilePicker()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}} 对象，变为完成后内含一个包含 {{domxref('FileSystemFileHandle')}} 对象的 {{jsxref('Array')}} 数组。
+一个 {{jsxref("Promise")}} 对象，会兑现一个包含 {{domxref('FileSystemFileHandle')}} 对象的 {{jsxref('Array')}} 数组。
 
 ### 异常
 
@@ -43,7 +43,7 @@ showOpenFilePicker()
 
 ## 安全性
 
-要求发生[临时性用户活动](/en-US/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该功能正常运行。
+要求发生[临时性用户活动](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该功能正常运行。
 
 ## 示例
 
@@ -89,4 +89,4 @@ async function getFile() {
 ## 参见
 
 - [File System Access API](/zh-CN/docs/Web/API/File_System_Access_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [File System Access API：简化对本地文件的访问](https://web.dev/file-system-access/)
