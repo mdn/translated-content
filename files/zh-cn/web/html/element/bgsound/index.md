@@ -36,7 +36,7 @@ slug: Web/HTML/Element/bgsound
 
 你可以使用自闭合标签`<bgsound />`。然后由于它并非标准的一部分，XHTML 会认为它无效。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
