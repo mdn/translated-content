@@ -152,7 +152,7 @@ button {
 - [MDN 理解 WCAG，指南 1.4 的解释](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [理解成功标准 1.4.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
-## 笔记
+## 注意
 
 ### 单选按钮
 
