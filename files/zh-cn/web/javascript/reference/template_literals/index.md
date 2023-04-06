@@ -301,7 +301,7 @@ const doc = html`<!DOCTYPE html>
 
 在普通模板字面量中，字符串字面量中的转义序列都是允许的，任何其他格式不正确的转义序列都是语法错误，包括：
 
-- `\` 后跟 `0` 以外的任何十进制数字，或 `\0` 后跟一个十进制数字，例如 `\9` 和 `\07`（这是一种[已弃用语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#转义序列)）
+- `\` 后跟 `0` 以外的任何十进制数字，或 `\0` 后跟一个十进制数字，例如 `\9` 和 `\07`（这是一种[已弃用的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#转义序列)）
 - `\x` 后跟两位以下十六进制数字，例如`\xz`
 - `\u` 后不跟 `{`，并且后跟四个以下十六进制数字，例如 `\uz`
 - `\u{}` 包含无效的 Unicode 码点——包含一个非十六进制数字，或者它的值大于10FFFF，例如 `\u{110000}` 和 `\u{z}`
@@ -325,7 +325,7 @@ latex`\unicode`
 值得注意的是，这一转义序列限制只对带标签的模板字面量移除，而不包括不带标签的模板字面量：
 
 ```js example-bad
-let bad = `bad escape sequence: \unicode`;
+const bad = `bad escape sequence: \unicode`;
 ```
 
 ## 规范
