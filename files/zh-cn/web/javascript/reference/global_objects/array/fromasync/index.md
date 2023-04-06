@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 
 {{JSRef}} {{SeeCompatTable}}
 
-**`Array.fromAsync()`** 静态方法可以从一个[异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)、[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)或[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)中创建一个新的、浅拷贝的 `Array` 实例。
+**`Array.fromAsync()`** 静态方法可以由一个[异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)、[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)或[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)创建一个新的、浅拷贝的 `Array` 实例。
 
 ## 语法
 
@@ -30,14 +30,14 @@ Array.fromAsync(arrayLike, mapFn, thisArg)
 
 ### 返回值
 
-一个新的 {{jsxref("Promise")}}，其完成值是一个新的 {{jsxref("Array")}} 实例。
+一个新的 {{jsxref("Promise")}}，其兑现值是一个新的 {{jsxref("Array")}} 实例。
 
 ## 描述
 
 `Array.fromAsync()` 允许你从以下对象中创建数组：
 
-- [异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议) (如 {{domxref("ReadableStream")}} 和 {{jsxref("AsyncGenerator")}})；
-- [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议) (如 {{jsxref("Map")}} 和 {{jsxref("Set")}})；
+- [异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议) (如 {{domxref("ReadableStream")}} 和 {{jsxref("AsyncGenerator")}})；或者，如果对象不是异步可迭代的，
+- [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议) (如 {{jsxref("Map")}} 和 {{jsxref("Set")}})；或者，如果对象不可迭代的，
 - 类数组的对象 (带有 `length` 属性和索引元素的对象)。
 
 `Array.fromAsync()` 迭代异步可迭代对象的方式与 {{jsxref("Statements/for-await...of", "for await...of")}} 很相似。`Array.fromAsync()` 在行为上与 {{jsxref("Array.from()")}} 几乎等价，除了以下几点：
