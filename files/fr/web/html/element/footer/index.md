@@ -140,20 +140,17 @@ Comme tous les éléments HTML, cet élément accepte [les attributs universels]
 ## Exemples
 
 ```html
-<h2>Les écrivains français du XIX<sup>ème</sup> siècle</h2>
-
-<ul>
-<li>Hugo</li>
-<li>Flaubert</li>
-<li>Zola</li>
-<li>Maupassant</li>
-</ul>
-
-<footer>
-<small>
-Copyright © 2023 Littérature.com. Tous droits réservés</small>
-
-  </footer>
+<body>
+  <h3>Les écrivains français du XIX<sup>ème</sup> siècle</h3>
+  <ul>
+    <li>Hugo</li>
+    <li>Flaubert</li>
+    <li>Zola</li>
+    <li>Maupassant</li>
+  </ul>
+	
+  <footer><small>Copyright © 2023 Littérature.com. Tous droits réservés.</small></footer>
+</body>
 ```
 
 ```css
