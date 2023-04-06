@@ -5,7 +5,7 @@ slug: Web/CSS/:invalid
 
 {{CSSRef}}
 
-**`:invalid`** 是 [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes)，用来选择任何未通过[验证](/zh-CN/docs/Web/HTML/Constraint_validation)的 {{HTMLElement("form")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}} 或其他 {{HTMLElement("form", "表单")}} 元素。
+**`:invalid`** 是 [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes)，用来选择任何未通过[验证](/zh-CN/docs/Web/HTML/Constraint_validation)的 {{HTMLElement("form")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}或其他 {{HTMLElement("form", "表单")}}元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
 
