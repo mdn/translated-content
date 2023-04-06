@@ -44,7 +44,7 @@ Array.fromAsync(arrayLike, mapFn, thisArg)
 
 - `Array.fromAsync()` 处理异步可迭代对象。
 - `Array.fromAsync()` 返回一个 {{jsxref("Promise")}}，该 Promise 在解析为数组实例之前进行了处理。
-- 如果使用非异步可迭代对象调用 `Array.fromAsync()`，则要添加到数组中的每个元素都会先进行 [await](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 处理。
+- 如果使用非异步可迭代对象调用 `Array.fromAsync()`，则要添加到数组中的每个元素（无论是否为 Promise）都会先 [await](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 其兑现。
 - 如果提供了 `mapFn`，则其输入和输出会在内部进行 `await` 处理。
 
 `Array.fromAsync()` 和 {{jsxref("Promise.all()")}} 都可以将一个 promise 可迭代对象转换为一个数组的 promise。然而，它们有两个关键区别：
