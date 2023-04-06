@@ -148,7 +148,7 @@ Comme tous les éléments HTML, cet élément accepte [les attributs universels]
     <li>Zola</li>
     <li>Maupassant</li>
   </ul>
-	
+
   <footer><small>Copyright © 2023 Littérature.com. Tous droits réservés.</small></footer>
 </body>
 ```
