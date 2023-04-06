@@ -167,7 +167,7 @@ footer {
 
 ### Résultat
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('')}}
 
 ## Accessibilité
 
