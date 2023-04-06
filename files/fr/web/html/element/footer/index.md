@@ -157,9 +157,11 @@ Copyright © 2023 Littérature.com. Tous droits réservés</small>
 ```
 
 ```css
-footer{
-background-color: #aabbab;
-text-align: center;
+footer {
+  text-align:center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #000;
 }
 ```
 
