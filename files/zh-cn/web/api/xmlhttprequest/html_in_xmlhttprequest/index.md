@@ -107,7 +107,7 @@ function detectHtmlInXhr(callback) {
 
 ## 字符编码
 
-如果在 HTTP {{HTTPHeader("Content-Type")}} 头部中声明了字符编码，则使用该字符编码。否则，如果存在字节顺序标记，则使用由字节顺序标记指示的编码。否则，如果存在 {{HTMLElement("meta")}} 元素声明文件的前 1024 个字节中的编码，则使用该编码。否则，文件被解码为 UTF-8。
+如果在 HTTP {{HTTPHeader("Content-Type")}} 标头中声明了字符编码，则使用该字符编码。否则，如果存在字节顺序标记，则使用由字节顺序标记指示的编码。否则，如果存在 {{HTMLElement("meta")}} 元素声明文件的前 1024 个字节中的编码，则使用该编码。否则，文件被解码为 UTF-8。
 
 ## 规范
 
