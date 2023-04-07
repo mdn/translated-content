@@ -164,34 +164,34 @@ svg {
 ## 属性
 
 - {{SVGAttr("markerHeight")}}
-  - : 该属性定义了 marker 视口的高度。*值的类型*：**[\<length>](/en-US/docs/Web/SVG/Content_type#length)**；*默认值*：`3`；*动画*：**有**
+  - : 该属性定义了 marker 视口的高度。*值的类型*：**[\<length>](/zh-CN/docs/Web/SVG/Content_type#长度)**；*默认值*：`3`；*动画*：**有**
 - {{SVGAttr("markerUnits")}}
   - :该属性为 `markerWidth`、`markerHeight` 和 `<marker>` 的内容定义了坐标系。*值的类型*：`userSpaceOnUse`|`strokeWidth` ；*默认值*：`strokeWidth`；*动画*：**有**
 - {{SVGAttr("markerWidth")}}
-  - :该属性定义了 marker 视图的宽度。*值的类型*：**[\<length>](/en-US/docs/Web/SVG/Content_type#length)** ；*默认值*：`3`；*动画*：**有**
+  - :该属性定义了 marker 视图的宽度。*值的类型*：**[\<length>](/zh-CN/docs/Web/SVG/Content_type#长度)** ；*默认值*：`3`；*动画*：**有**
 - {{SVGAttr("orient")}}
-  - :该属性定义了 marker 相对于它所附着到形状的方向。*值的类型*：`auto`|`auto-start-reverse`|**[\<angle>](/en-US/docs/Web/SVG/Content_type#angle)** ；*默认值*：`0`；*动画*：**有**
+  - :该属性定义了 marker 相对于它所附着到形状的方向。*值的类型*：`auto`|`auto-start-reverse`|**[\<angle>](/zh-CN/docs/Web/SVG/Content_type#角度)** ；*默认值*：`0`；*动画*：**有**
 - {{SVGAttr("preserveAspectRatio")}}
   - :该属性定义了 svg 片段在嵌入具有不同宽高比例的容器中应该如何变形。*值的类型*：(`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ；*默认值*：`xMidYMid meet`；*动画*：**有**
 - {{SVGAttr("refX")}}
   - :该属性定义了标记参考点的 x 的坐标。
-    *值的类型*：`left`|`center`|`right`|**[\<coordinate>](/en-US/docs/Web/SVG/Content_type#coordinate)** ；*默认值*：`0`；*动画*：**有**
+    *值的类型*：`left`|`center`|`right`|**[\<coordinate>](/zh-CN/docs/Web/SVG/Content_type#坐标)** ；*默认值*：`0`；*动画*：**有**
 - {{SVGAttr("refY")}}
   - :该属性定义了标记参考点的 y 的坐标。
-    *值的类型*：`top`|`center`|`bottom`|**[\<coordinate>](/en-US/docs/Web/SVG/Content_type#coordinate)** ；*默认值*：`0`；*动画*：**有**
+    *值的类型*：`top`|`center`|`bottom`|**[\<coordinate>](/zh-CN/docs/Web/SVG/Content_type#坐标)** ；*默认值*：`0`；*动画*：**有**
 - {{SVGAttr("viewBox")}}
   - :该属性定义了当前 SVG 片段的 SVG 视口边界。
-    *值的类型*：**[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ；*默认值*：none；*动画*：**有**
+    *值的类型*：**[\<list-of-numbers>](/zh-CN/docs/Web/SVG/Content_type#t值数列)** ；*默认值*：none；*动画*：**有**
 
 ### 全局属性
 
-- [核心属性](/en-US/docs/Web/SVG/Attribute/Core)
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
   - : 最重要地：{{SVGAttr('id')}}、{{SVGAttr('tabindex')}}
-- [样式属性](/en-US/docs/Web/SVG/Attribute/Styling)
+- [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
-- [条件处理属性](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute/Conditional_Processing)
   - : 最重要地：{{SVGAttr('requiredExtensions')}}、{{SVGAttr('systemLanguage')}}
-- [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+- [表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)
   - : 最重要地：{{SVGAttr('clip-path')}}、{{SVGAttr('clip-rule')}}、{{SVGAttr('color')}}、{{SVGAttr('color-interpolation')}}、{{SVGAttr('color-rendering')}}、{{SVGAttr('cursor')}}、{{SVGAttr('display')}}、{{SVGAttr('fill')}}、{{SVGAttr('fill-opacity')}}、{{SVGAttr('fill-rule')}}、{{SVGAttr('filter')}}、{{SVGAttr('mask')}}、{{SVGAttr('opacity')}}、{{SVGAttr('pointer-events')}}、{{SVGAttr('shape-rendering')}}、{{SVGAttr('stroke')}}、{{SVGAttr('stroke-dasharray')}}、{{SVGAttr('stroke-dashoffset')}}、{{SVGAttr('stroke-linecap')}}、{{SVGAttr('stroke-linejoin')}}、{{SVGAttr('stroke-miterlimit')}}、{{SVGAttr('stroke-opacity')}}、{{SVGAttr('stroke-width')}}、{{SVGAttr("transform")}}、{{SVGAttr('vector-effect')}}、{{SVGAttr('visibility')}}
 - ARIA 属性
   - : `aria-activedescendant`、`aria-atomic`、`aria-autocomplete`、`aria-busy`、`aria-checked`、`aria-colcount`、`aria-colindex`、`aria-colspan`、`aria-controls`、`aria-current`、`aria-describedby`、`aria-details`、`aria-disabled`、`aria-dropeffect`、`aria-errormessage`、`aria-expanded`、`aria-flowto`、`aria-grabbed`、`aria-haspopup`、`aria-hidden`、`aria-invalid`、`aria-keyshortcuts`、`aria-label`、`aria-labelledby`、`aria-level`、`aria-live`、`aria-modal`、`aria-multiline`、`aria-multiselectable`、`aria-orientation`、`aria-owns`、`aria-placeholder`、`aria-posinset`、`aria-pressed`、`aria-readonly`、`aria-relevant`、`aria-required`、`aria-roledescription`、`aria-rowcount`、`aria-rowindex`、`aria-rowspan`、`aria-selected`、`aria-setsize`、`aria-sort`、`aria-valuemax`、`aria-valuemin`、`aria-valuenow`、`aria-valuetext`、`role`
