@@ -5,7 +5,7 @@ slug: Web/API/Navigator/gpu
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-**`Navigator.gpu`** 只读属性为当前浏览器上下文返回 {{domxref("GPU")}} 对象，该对象是 {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}} 的入口点。
+**`Navigator.gpu`** 只读属性为当前浏览上下文返回 {{domxref("GPU")}} 对象，该对象是 {{domxref("WebGPU_API", "WebGPU API", "", 1)}} 的入口点。
 
 ## 值
 
@@ -40,4 +40,4 @@ async function init() {
 
 ## 参见
 
-- {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}
+- {{domxref("WebGPU_API", "WebGPU API", "", 1)}}
