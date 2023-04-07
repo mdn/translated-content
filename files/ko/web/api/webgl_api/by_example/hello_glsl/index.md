@@ -1,6 +1,8 @@
 ---
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
+l10n:
+  sourceCommit: a478bbcfae9e8ecc5296ae76639ea014dc1c0123
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
