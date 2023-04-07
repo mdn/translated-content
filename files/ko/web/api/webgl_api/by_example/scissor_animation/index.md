@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/By_example/Scissor_animation
 
 활동을 청소하고 잘라내는 어떤 애니메이션 장난
 
-{{EmbedLiveSample("scissor-animation-source",660,425)}}
+{{EmbedLiveSample("애니메이션_잘라내기",660,425)}}
 
 ### 애니메이션 잘라내기
 
