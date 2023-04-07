@@ -35,7 +35,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 功能检测的思想是，你可以运行一个测试来确定当前浏览器是否支持某个特性，然后有条件地运行代码，以便在*支持*该功能的浏览器和*不支持*该功能的浏览器中提供可接受的体验，如果不这样做，在不支持你在代码中使用的功能的浏览器中将无法正确地显示你的网站，从而产生糟糕的用户体验。
 
-让我们回顾一下，看看我们在[处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#功能检测)中提到的例子——[地理信息 API](/zh-CN/docs/Web/API/Geolocation_API)（它暴露了网络浏览器所运行设备的可用位置数据）有其主要入口点。全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上有一个 `geolocation` 属性。因此，你可以通过使用类似以下的方法来检测浏览器是否支持地理位置：
+让我们回顾一下，看看我们在[处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#功能检测)中提到的例子——[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)（它暴露了网络浏览器所运行设备的可用位置数据）有其主要入口点。全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上有一个 `geolocation` 属性。因此，你可以通过使用类似以下的方法来检测浏览器是否支持地理位置：
 
 ```js
 if ("geolocation" in navigator) {
