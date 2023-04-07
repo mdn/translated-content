@@ -149,6 +149,6 @@ function getRenderingContext() {
 })();
 ```
 
-The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
+이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation)에서도 확인 가능합니다.
 
 {{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
