@@ -2338,7 +2338,7 @@
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture
 /zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins	/zh-CN/docs/Web/HTTP/Headers/Expect-CT
 /zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/zh-CN/docs/Web/HTTP/Headers/Expect-CT
-/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/zh-CN/docs/orphaned/Web/HTTP/Headers/Set-Cookie/SameSite
+/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /zh-CN/docs/Web/HTTP/Headers/Set-Cookie2	/zh-CN/docs/Web/HTTP/Headers/Set-Cookie
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Public_Key_Pinning	/zh-CN/docs/Web/Security/Certificate_Transparency
@@ -2672,6 +2672,7 @@
 /zh-CN/docs/learn/常见问题/What_is_accessibility	/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility
 /zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？	/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 /zh-CN/docs/learn/探索浏览器开发者工具	/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
+/zh-CN/docs/orphaned/Web/HTTP/Headers/Set-Cookie/SameSite	/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /zh-CN/docs/为Firefox_3升级扩展	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /zh-CN/docs/使用Javascript和DOM_Interfaces来处理HTML	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /zh-CN/docs/安全	/zh-CN/docs/Web/Security
