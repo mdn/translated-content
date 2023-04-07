@@ -33,7 +33,7 @@ IndexedDB는 "키"로 인덱싱된 객체를 저장하고 검색할 수 있습�
 - **IndexedDB는 결과를 사용할 수 있을 때 DOM 이벤트를 통해 통지합니다.** DOM 이벤트는 항상 `type` 프로퍼티를 가집니다 (IndexedDB에서는 거의 대부분 `"success"` 또는 `"error"`로 설정됩니다.). DOM 이벤트는 이벤트가 향하는 곳이 어디인지를 나타내는 `target` 프로퍼티도 가집니다. 대부분의 경우에, 이벤트의 `target` 프로퍼티는 데이터베이스 동작의 결과로 생성된 `IDBRequest` 객체를 가리킵니다. 성공 이벤트는 버블링을 일으키지 않으며, 취소될 수 없습니다. 에러 이벤트는 반대로 버블링을 일으키고, 취소될 수도 있습니다. 에러 이벤트는 취소되지 않는 한 실행 중인 모든 트랜잭션을 중단하므로 이는 매우 중요합니다.
 - **IndexedDB는 객체지향적입니다.** IndexedDB는 행과 열의 컬렉션으로 대표되는 테이블을 사용하는 관계형 데이터베이스가 아닙니다. 이는 어플리케이션을 설계하고 구축하는 방식에 영향을 끼치는 중요하고 근본적인 차이입니다.
 
-    전통적인 관계형 데이터 저장소에서는 데이터 행의 컬렉션과 명명된 자료형의 데이터 열을 저장하는 테이블을 갖습니다. IndexedDB는 반대로 특정 타입의 데이터를 저장할 객체 스토어를 생성하고, 자바스크립트 객체를 그 스토어에 저장합니다. 각 객체 스토어는 쿼리와 순회를 효율적으로 만들어주는 인덱스 컬렉션을 갖습니다. 만약 객체지향 데이터베이스 관리 시스템에 친숙하지 않다면, [객체지향 데이터베이스에 대한 Wikipedia 문서](https://en.wikipedia.org/wiki/Object_database)를 읽어보세요.
+    전통적인 관계형 데이터 저장소에서는 데이터 행의 컬렉션과 명명된 자료형의 데이터 열을 저장하는 테이블을 갖습니다. 반면에 IndexedDB는 특정 타입의 데이터를 저장할 객체 저장소를 생성하고, 자바스크립트 객체를 저장소에 저장합니다. 각 객체 저장소는 쿼리와 순회를 효율적으로 만들어주는 인덱스 컬렉션을 갖습니다. 만약 객체지향 데이터베이스 관리 시스템에 친숙하지 않다면, [객체지향 데이터베이스에 대한 Wikipedia 문서](https://en.wikipedia.org/wiki/Object_database)를 읽어보세요.
 
 - **IndexedDB does not use Structured Query Language (SQL).** It uses queries on an index that produces a cursor, which you use to iterate across the result set. If you are not familiar with NoSQL systems, read the [Wikipedia article on NoSQL](https://en.wikipedia.org/wiki/NoSQL).
 - **IndexedDB adheres to a same-origin policy**. An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of databases. Every database has a name that identifies it within an origin.
