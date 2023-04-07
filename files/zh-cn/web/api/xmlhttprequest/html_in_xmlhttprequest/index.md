@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 
 {{APIRef("XMLHttpRequest")}}
 
-W3C {{domxref("XMLHttpRequest")}} 规范为 {{domxref("XMLHttpRequest")}} 添加 [HTML](/zh-CN/docs/Web/HTML) 语法解析功能，此前它仅支持 {{Glossary("XML")}} 语法解析。该功能允许 Web 应用程序使用 `XMLHttpRequest` 以解析的 {{Glossary("DOM")}} 形式获得 HTML 资源。
+W3C {{domxref("XMLHttpRequest")}} 规范为 {{domxref("XMLHttpRequest")}} 添加 [HTML](/zh-CN/docs/Web/HTML) 解析功能，此前它仅支持 {{Glossary("XML")}} 解析。该功能允许 Web 应用程序使用 `XMLHttpRequest` 获得已解析的 {{Glossary("DOM")}} 形式的 HTML 资源。
 
 要了解如何使用 `XMLHttpRequest`，请参阅[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
 
@@ -51,7 +51,7 @@ function HTMLinXHR() {
 
 [在 JSFiddle 中查看](https://jsfiddle.net/HTcKP/1/)
 
-这种方法是同步的，不依赖外部资源，尽管它可能不像下面描述的方法 2 那样可靠，因为它不检查实际特征，而是检查该特征的指示。
+这种方法是同步的，不依赖外部资源，尽管它可能不像下面描述的方法 2 那样可靠，因为它不检查实际功能，而是检查该功能的指示。
 
 ### 方法 2
 
