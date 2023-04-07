@@ -11697,7 +11697,7 @@
       "Witadol"
     ]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-03-29T11:58:13.454Z",
     "contributors": [
       "GalustOsipyan",
@@ -11755,7 +11755,7 @@
       "uleming"
     ]
   },
-  "Web/JavaScript/Guide/Expressions_and_Operators": {
+  "Web/JavaScript/Guide/Expressions_and_operators": {
     "modified": "2020-03-12T19:39:43.277Z",
     "contributors": [
       "mikhail.makarov",
@@ -11862,7 +11862,7 @@
       "IgorGilyazov"
     ]
   },
-  "Web/JavaScript/Guide/Iterators_and_Generators": {
+  "Web/JavaScript/Guide/Iterators_and_generators": {
     "modified": "2020-03-12T19:42:16.480Z",
     "contributors": [
       "AlexanderShushunov",
@@ -11941,7 +11941,7 @@
       "roma-derski"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions": {
+  "Web/JavaScript/Guide/Regular_expressions": {
     "modified": "2020-07-27T10:18:25.178Z",
     "contributors": [
       "touze147",
@@ -11968,11 +11968,11 @@
       "Odysseus"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Assertions": {
+  "Web/JavaScript/Guide/Regular_expressions/Assertions": {
     "modified": "2020-03-12T19:49:10.003Z",
     "contributors": ["AliaksandrZahorski"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Character_Classes": {
+  "Web/JavaScript/Guide/Regular_expressions/Character_classes": {
     "modified": "2020-06-17T18:30:16.759Z",
     "contributors": ["dknight"]
   },
@@ -12006,7 +12006,7 @@
       "Geloosa"
     ]
   },
-  "Web/JavaScript/Guide/Working_with_Objects": {
+  "Web/JavaScript/Guide/Working_with_objects": {
     "modified": "2020-03-12T19:37:53.984Z",
     "contributors": [
       "mikhail.makarov",
@@ -12079,7 +12079,7 @@
       "uleming"
     ]
   },
-  "Web/JavaScript/Language_Overview": {
+  "Web/JavaScript/Language_overview": {
     "modified": "2020-10-21T01:20:45.167Z",
     "contributors": [
       "chimit",
@@ -12109,7 +12109,7 @@
       "Dart"
     ]
   },
-  "Web/JavaScript/Memory_Management": {
+  "Web/JavaScript/Memory_management": {
     "modified": "2020-07-14T20:08:19.176Z",
     "contributors": [
       "irustm",
@@ -12477,7 +12477,7 @@
     "modified": "2020-03-12T19:44:12.151Z",
     "contributors": ["Logiiiin", "pk.prog", "naudachu", "s1lver"]
   },
-  "Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params": {
+  "Web/JavaScript/Reference/Errors/Strict_non_simple_params": {
     "modified": "2020-03-12T19:48:33.429Z",
     "contributors": ["ialexi-bl", "MakarovDs777"]
   },
@@ -15029,7 +15029,7 @@
     "modified": "2020-10-19T04:55:04.550Z",
     "contributors": ["elkabelaya"]
   },
-  "Web/JavaScript/Reference/Operators/Comma_Operator": {
+  "Web/JavaScript/Reference/Operators/Comma_operator": {
     "modified": "2020-10-15T21:21:15.661Z",
     "contributors": [
       "synth",
@@ -15045,7 +15045,7 @@
       "nurbek.ab"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Conditional_Operator": {
+  "Web/JavaScript/Reference/Operators/Conditional_operator": {
     "modified": "2020-09-05T16:58:34.995Z",
     "contributors": [
       "ikzsl",
@@ -15090,7 +15090,7 @@
     "modified": "2020-03-12T19:46:20.455Z",
     "contributors": ["EduardBedratyi", "Nymph", "severn101", "curdwithraisins"]
   },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+  "Web/JavaScript/Reference/Operators/Operator_precedence": {
     "modified": "2020-06-21T17:36:11.552Z",
     "contributors": [
       "Yialo",
@@ -15110,7 +15110,7 @@
     "modified": "2020-10-15T22:22:53.487Z",
     "contributors": ["InoY", "rookhive", "Kassaila", "Dimon24021993"]
   },
-  "Web/JavaScript/Reference/Operators/Property_Accessors": {
+  "Web/JavaScript/Reference/Operators/Property_accessors": {
     "modified": "2020-11-28T14:23:33.816Z",
     "contributors": [
       "ialexi-bl",
@@ -15833,7 +15833,7 @@
     "modified": "2019-04-20T03:25:44.859Z",
     "contributors": ["webmaxru", "chrisdavidmills", "ruslan_g02"]
   },
-  "Web/Progressive_web_apps/Installable_PWAs": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
     "modified": "2020-05-31T18:38:14.629Z",
     "contributors": ["AlexandrKoliukh", "chrisdavidmills", "WhiteApfel"]
   },

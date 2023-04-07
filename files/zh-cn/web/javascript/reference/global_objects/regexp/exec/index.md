@@ -63,14 +63,14 @@ const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 
 下表列出这个脚本的返回值（`result`）：
 
-| 属性  | 值                                                              |
-|-----------|--------------------------------------------------------------------|
+| 属性       | 值                                                                 |
+| --------- | ------------------------------------------------------------------ |
 | `[0]`     | `"Quick Brown Fox Jumps"`                                          |
 | `[1]`     | `"Brown"`                                                          |
 | `[2]`     | `"Jumps"`                                                          |
 | `index`   | `4`                                                                |
 | `indices` | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
-| `input`   | `4`                                                                |
+| `input`   | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
 | `groups`  | `{ color: "brown" }`                                               |
 
 另外，由于正则表达式是全局的（`global`），`re.lastIndex` 会被设置为 `25`。

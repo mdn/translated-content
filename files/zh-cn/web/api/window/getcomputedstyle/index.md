@@ -123,7 +123,7 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 
 在 Firefox 中，属性值为`auto`的会直接返回使用值，而不是`auto`。比如，你在设定了一个元素的 css 为`height:30px; top: auto; bottom:0;`它的父元素`height:100px;`，在请求`top`的计算样式时，Firefox 会返回`'70px' = 100px - 30px;`。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

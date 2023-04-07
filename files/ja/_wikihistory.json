@@ -27797,10 +27797,6 @@
     "modified": "2020-11-16T05:49:31.551Z",
     "contributors": ["mfuji09", "shide55"]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/name": {
-    "modified": "2020-11-22T07:12:38.774Z",
-    "contributors": ["mfuji09", "YujiSoftware", "shide55"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/of": {
     "modified": "2020-11-22T08:31:53.944Z",
     "contributors": ["mfuji09", "shide55"]
