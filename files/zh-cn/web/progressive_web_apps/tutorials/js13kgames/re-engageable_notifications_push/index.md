@@ -1,9 +1,10 @@
 ---
 title: 通过通知推送让 PWA 可重用
-slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
+slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
+original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
+{{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
 以本地缓存实现离线应用是一个强大的特性。允许用户在主屏幕上安装 Web 应用程序则显得更了不起。但除了单纯依赖用户手动打开应用之外，我们还可以走得更远，利用通知和消息推送提高用户参与度，并且随时提供新的内容。
 
@@ -260,6 +261,4 @@ self.addEventListener('push', function(event) {
 
 如果你想知道它们具体是怎么处理的，请随意探索 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 里面剩下的例子。[GitHub 上面提供了完整的源代码](https://github.com/mozilla/serviceworker-cookbook/)，也有大量的示例展示了各种用法，包括 Web 推送、缓存策略、性能、离线运行等等。
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

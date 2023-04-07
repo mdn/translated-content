@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 console.log(arr.0); // a syntax error
 ```
 
-JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问以数字开头的属性。也可以用引号包裹数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
+JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问以数字开头的属性。也可以用引号包裹数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
 
 JavaScript 引擎通过隐式的 `toString`，将 `years[2]` 中的 `2` 强制转换为字符串。因此，`'2'` 和 `'02'` 将指向 `years` 对象上的两个不同的槽位，下面的例子可能是 `true`：
 
@@ -232,7 +232,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : 在数组内复制数组元素序列。
 - {{jsxref("Array.prototype.entries()")}}
-  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象，其中包含数组中每个索引的键/值对。
+  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，其中包含数组中每个索引的键/值对。
 - {{jsxref("Array.prototype.every()")}}
   - : 如果调用数组中的每个元素都满足测试函数，则返回 `true`。
 - {{jsxref("Array.prototype.fill()")}}
@@ -264,7 +264,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.join()")}}
   - : 将数组的所有元素连接为字符串。
 - {{jsxref("Array.prototype.keys()")}}
-  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)，其中包含调用数组中每个索引的键。
+  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)，其中包含调用数组中每个索引的键。
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : 返回在调用数组中可以找到给定元素的最后一个（最大）索引，如果找不到则返回 `-1`。
 - {{jsxref("Array.prototype.map()")}}
@@ -296,7 +296,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.unshift()")}}
   - : 在数组的前面添加一个或多个元素，并返回数组新的 `length`。
 - {{jsxref("Array.prototype.values()")}}
-  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象，该对象包含数组中每个索引的值。
+  - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含数组中每个索引的值。
 - [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
   - : 默认情况下，该方法为 [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 方法的别名。
 
@@ -759,7 +759,7 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 
 - JavaScript 指南：
 
-  - [对象属性索引](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象属性索引)
+  - [对象属性索引](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象属性索引)
   - [索引集合类：数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 
 - [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
