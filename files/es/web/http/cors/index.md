@@ -2,7 +2,7 @@
 title: Intercambio de recursos entre orígenes (CORS)
 slug: Web/HTTP/CORS
 l10n:
-  sourceCommit: eb9eef29f1ccdaf1c8a464dbe4483c78f7a13b2a
+  sourceCommit: 726efed289eb9d62eef723bdc506dc39e4abcbb3
 ---
 
 {{HTTPSidebar}}
@@ -33,7 +33,7 @@ Este es un artículo general sobre la compartición de recursos entre orígenes 
 
 El estándar para recursos compartidos de origen cruzado funciona añadiendo nuevas [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) que permiten a los servidores describir qué orígenes tienen permiso para leer esa información de un navegador web. Además, para los métodos de petición HTTP que pueden causar efectos secundarios en los datos del servidor (en particular los métodos HTTP distintos de {{HTTPMethod("GET")}} o {{HTTPMethod("POST")}} con determinados [tipos MIME](es/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), la especificación exige que los navegadores "comprueben previamente" la petición, solicitando al servidor los métodos admitidos con el método de solicitud HTTP {{HTTPMethod("OPTIONS")}}, y entonces, tras la "aprobación" del servidor, enviando la solicitud real. Los servidores también pueden informar a los clientes de si deben enviar "credenciales" (como [cookies](/es/docs/Web/HTTP/Cookies) y [Autenticación HTTP](/es/docs/Web/HTTP/Authentication)) con las solicitudes.
 
-Los fallos de CORS provocan errores, pero por razones de seguridad, los detalles del error _no están disponibles para JavaScript_. Todo lo que el código sabe es que se ha producido un error. La única forma de determinar específicamente qué salió mal, es mirar en la consola del navegador para obtener más detalles. 
+Los fallos de CORS provocan errores, pero por razones de seguridad, los detalles del error _no están disponibles para JavaScript_. Todo lo que el código sabe es que se ha producido un error. La única forma de determinar específicamente qué salió mal, es mirar en la consola del navegador para obtener más detalles.
 
 En las secciones siguientes se analizan los escenarios y se desglosan las cabeceras HTTP utilizadas.
 
@@ -45,7 +45,7 @@ Presentamos tres escenarios que demuestran cómo funciona el uso compartido de r
 
 Algunas peticiones no activan un {{Glossary("preflight_request","CORSpreflight")}}. Son las llamadas _solicitudes simples_ de la obsoleta [Especificación CORS](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology), aunque la [Especificación Fetch](https://fetch.spec.whatwg.org/) (que ahora define CORS) no utiliza ese término.
 
-El motivo de esto es que el elemento {{HTMLElement("form")}} de HTML4(que es anterior al cruzamiento de sitios web {{domxref"XMLHttpRequest"}} y {{domxref"fetch"}}) pueda enviar peticiones simples a cualquier origen, por lo que cualquiera que escriba un servidor ya debe estar protegiéndose contra {{Glossary("CSRF", "cross-site request forgery")}} (CSRF). Bajo este supuesto, el servidor no tiene que aceptar (respondiendo a una solicitud de verificación previa) recibir cualquier solicitud que parezca un envío de formulario, ya que la amenaza de CSRF no es peor que la del envío de formulario. Sin embargo, el servidor aún debe optar por usar {{HTTPHeader("Access-Control-Allow-Origin")}} para compartir  la respuesta con el script.  
+El motivo de esto es que el elemento {{HTMLElement("form")}} de HTML4(que es anterior al cruzamiento de sitios web {{domxref"XMLHttpRequest"}} y {{domxref"fetch"}}) pueda enviar peticiones simples a cualquier origen, por lo que cualquiera que escriba un servidor ya debe estar protegiéndose contra {{Glossary("CSRF", "cross-site request forgery")}} (CSRF). Bajo este supuesto, el servidor no tiene que aceptar (respondiendo a una solicitud de verificación previa) recibir cualquier solicitud que parezca un envío de formulario, ya que la amenaza de CSRF no es peor que la del envío de formulario. Sin embargo, el servidor aún debe optar por usar {{HTTPHeader("Access-Control-Allow-Origin")}} para compartir la respuesta con el script.
 
 Una petición simple es aquella que cumple todas las siguientes condiciones:
 
@@ -54,16 +54,18 @@ Una petición simple es aquella que cumple todas las siguientes condiciones:
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- 
+-
+
 Aparte de las cabeceras establecidas automáticamente por el agente de usuario (por ejemplo {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}), o [las demás cabeceras definidas en la especificación Fetch como _nombre de cabecera prohibido_](https://fetch.spec.whatwg.org/#forbidden-header-name), las únicas cabeceras que se pueden configurar manualmente son [las que la especificación Fetch define como cabecera de solicitud CORS-safelisted](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), las cuales son:
 
-  - {{HTTPHeader("Accept")}}
-  - {{HTTPHeader("Accept-Language")}}
-  - {{HTTPHeader("Content-Language")}}
-  - {{HTTPHeader("Content-Type")}} (Por favor, tenga en cuenta los siguientes requisitos adicionales)
-  - {{HTTPHeader("Range")}} (solo con un[valor de cabecera de rango simple](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Language")}}
+- {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Type")}} (Por favor, tenga en cuenta los siguientes requisitos adicionales)
+- {{HTTPHeader("Range")}} (solo con un[valor de cabecera de rango simple](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
 
-> **Nota:** Firefox aún no ha implementado `Range` como una cabecera de solicitud CORS-safeliste. Véase el [error 1733981](https://bugzil.la/1733981).  
+> **Nota:** Firefox aún no ha implementado `Range` como una cabecera de solicitud CORS-safeliste. Véase el [error 1733981](https://bugzil.la/1733981).
+
 - Las únicas combinaciones de tipo/subtipo permitidas para el {{Glossary("MIME type","media type")}} especificado en la cabecera {{HTTPHeader("Content-Type")}} son:
 
 - `application/x-www-form-urlencoded`
@@ -159,7 +161,7 @@ El ejemplo anterior crea un cuerpo para enviar con la solicitud `POST`. Además,
 
 ![Diagram of a request that is preflighted](preflight_correct.png)
 
-> **Nota:** Como se describe a continuación, la solicitud `POST` real no incluye las cabeceras `Access-Control-Request-*`. Estas solo son necesarias para la solicitud `OPTIONS`. 
+> **Nota:** Como se describe a continuación, la solicitud `POST` real no incluye las cabeceras `Access-Control-Request-*`. Estas solo son necesarias para la solicitud `OPTIONS`.
 
 Veamos el intercambio completo entre cliente y servidor. El primer intercambio es la solicitud/respuesta verificadas previamente:
 
@@ -196,7 +198,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 La cabecera {{HTTPHeader("Access-Control-Request-Method")}} notifica al servidor, como parte de una solicitud de verificación previa, que cuando se envíe la solicitud real lo hará con un método `POST`. La cabecera {{HTTPHeader("Access-Control-Request-Headers")}} notifica al servidor que cuando se envíe la solicitud real, lo hará con las cabeceras personalizadas `X-PINGOTHER` and `Content-Type`. Ahora, el servidor tiene la oportunidad de determinar si puede aceptar una petición bajo estas condiciones.
 
-Las líneas del código anterior que van desde la 12 hasta la 21, son la respuesta  que devuelve el servidor, que indican que el método de solicitud `POST` y las cabeceras de solicitud `X-PINGOTHER` son aceptables. Echemos un vistazo más de cerca a las líneas que van desde las 15 a la 18:
+Las líneas del código anterior que van desde la 12 hasta la 21, son la respuesta que devuelve el servidor, que indican que el método de solicitud `POST` y las cabeceras de solicitud `X-PINGOTHER` son aceptables. Echemos un vistazo más de cerca a las líneas que van desde las 15 a la 18:
 
 ```http
 Access-Control-Allow-Origin: https://foo.example
@@ -249,7 +251,7 @@ Content-Type: text/plain
 
 Actualmente, no todos los navegadores admiten las redirecciones posteriores a una solicitud verificada previamente. Si se produce una redirección después de una solicitud de este tipo, algunos navegadores a día de hoy informarán con un mensaje de error como el siguiente:
 
-> La solicitud ha sido redirigida a 'https://example.com/foo' lo cual no está permitido para las solicitudes de origen cruzado que requieren verificación previa. 
+> La solicitud ha sido redirigida a 'https://example.com/foo' lo cual no está permitido para las solicitudes de origen cruzado que requieren verificación previa.
 > La solicitud requiere verificación previa, por lo que no tiene permitido seguir las redirecciones de origen cruzado.
 
 El protocolo CORS originalmente requería ese comportamiento, pero [se modificó posteriormente para no exigirlo](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). Sin embargo, no todos los navegadores han implementado el cambio, por lo que todavía muestran el comportamiento requerido originalmente.
@@ -333,7 +335,7 @@ La solicitudes CORS de verificación previa nunca deben incluir credenciales. La
 > **Nota:** Algunos servicios de autenticación de empresas exigen que se envíen certificados de cliente TLS en las solicitudes de verificación previa, lo que contraviene la especificación Fetch.
 
 Firefox 87 permite activar este comportamiento no conforme estableciendo la preferencia: network.cors_preflight.allow_client_cert` to `true` ([Firefox bug 1511151](https://bugzil.la/1511151)). Actualmente, los navegadores basados en Chromium siempre envían certificados TLS de cliente en las solicitudes CORS verificadas previamente ([Chrome bug 775438](https://crbug.com/775438)).
-        
+
 #### Solicitudes con credenciales y comodines
 
 Al responder a una solicitud con credenciales:
@@ -358,7 +360,7 @@ Tenga en cuenta que las Cookies establecidas en las respuestas CORS están sujet
 
 La Cookie en la solicitud anterior (línea 10) también puede ser suprimida en las políticas normales sobre Cookies de terceros. Por lo tanto, la política de Cookies aplicada puede anular la capacidad descrita en este capítulo, impidiéndole realizar solicitudes con credenciales.
 
-Se aplicaría la política de Cookies en torno al atributo [Cookies del mismo sitio](/es/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+Se aplicaría la política de Cookies en torno al atributo [Cookies del mismo sitio](/es/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
 
 ## Las cabeceras de respuesta HTTP
 
@@ -407,7 +409,7 @@ La cabecera {{HTTPHeader("Access-Control-Max-Age")}} indica durante cuánto tiem
 Access-Control-Max-Age: <delta-seconds>
 ```
 
-El parámetro `delta-seconds` indica el número de segundos durante los cuales los resultados pueden permanecer almacenados en caché. 
+El parámetro `delta-seconds` indica el número de segundos durante los cuales los resultados pueden permanecer almacenados en caché.
 
 ### Control de Acceso-Permitir Credenciales
 
@@ -485,3 +487,15 @@ Puede encontrar ejemplos de este uso [arriba](#Solicitudes_verificadas_previamen
 
 ## Véase también
 
+- [Errores CORS](/es/docs/Web/HTTP/CORS/Errors)
+- [Habilitar CORS: Quiero añadir soporte CORS a mi servidor](https://enable-cors.org/server.html)
+- {{domxref("XMLHttpRequest")}}
+- [Obtención de la API](/es/docs/Web/API/Fetch_API)
+- [¿Será CORS?](https://httptoolkit.tech/will-it-cors/) - Explicador y generador de CORS interactivo
+- [Cómo ejecutar el navegador Chrome sin CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
+- [Uso de CORS con todos los navegadores (modernos)](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
+- [Respuesta de Stack Overflow con información sobre cómo solucionar problemas comunes](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+
+  - Cómo evitar la verificación previa de CORS
+  - Cómo utilizar un proxy CORS para evitar la cabecera "No Access-Control-Allow-Origin".
+  - Cómo solucionar _"Access-Control-Allow-Origin header must not be the wildcard"_ ("El encabezado Access-Control-Allow-Origin no debe ser el comodín")
