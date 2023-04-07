@@ -1,6 +1,7 @@
 ---
 title: 渐进式 Web 应用介绍
-slug: Web/Progressive_web_apps/Introduction
+slug: Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+original_slug: Web/Progressive_web_apps/Introduction
 ---
 
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}

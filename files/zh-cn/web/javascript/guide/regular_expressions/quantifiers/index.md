@@ -1,6 +1,6 @@
 ---
 title: 量词
-slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 ---
 

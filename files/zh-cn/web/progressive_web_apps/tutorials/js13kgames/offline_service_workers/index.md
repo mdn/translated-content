@@ -1,6 +1,7 @@
 ---
 title: 通过 Service workers 让 PWA 离线工作
-slug: Web/Progressive_web_apps/Offline_Service_workers
+slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
+original_slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}

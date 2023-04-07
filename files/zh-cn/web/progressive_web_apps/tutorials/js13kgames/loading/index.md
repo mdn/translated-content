@@ -1,7 +1,7 @@
 ---
 title: 渐进式加载
-slug: Web/Progressive_web_apps/Loading
-original_slug: Web/Progressive_web_apps/加载
+slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
+original_slug: Web/Progressive_web_apps/Loading
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}

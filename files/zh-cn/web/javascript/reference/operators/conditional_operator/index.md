@@ -1,6 +1,6 @@
 ---
 title: 条件（三元）运算符
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ---
 
 {{jsSidebar("Operators")}}

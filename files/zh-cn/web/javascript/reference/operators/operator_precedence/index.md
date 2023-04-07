@@ -1,6 +1,6 @@
 ---
 title: 运算符优先级
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
 
 {{jsSidebar("Operators")}}

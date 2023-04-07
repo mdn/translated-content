@@ -1,6 +1,6 @@
 ---
 title: 字符类
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
 {{JSSidebar("JavaScript Guide")}}

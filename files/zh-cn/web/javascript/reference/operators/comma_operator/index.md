@@ -1,6 +1,6 @@
 ---
 title: 逗号运算符（,）
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 ---
 
 {{jsSidebar("Operators")}}

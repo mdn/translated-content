@@ -1,6 +1,6 @@
 ---
 title: 使用对象
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

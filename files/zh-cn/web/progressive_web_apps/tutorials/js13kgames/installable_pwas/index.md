@@ -1,6 +1,7 @@
 ---
 title: 让 PWA 易于安装
-slug: Web/Progressive_web_apps/Installable_PWAs
+slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+original_slug: Web/Progressive_web_apps/Installable_PWAs
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}

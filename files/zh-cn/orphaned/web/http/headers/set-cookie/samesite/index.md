@@ -1,6 +1,7 @@
 ---
 title: SameSite cookies
-slug: Web/HTTP/Headers/Set-Cookie/SameSite
+slug: orphaned/Web/HTTP/Headers/Set-Cookie/SameSite
+original_slug: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
 
 **`SameSite`** 是 HTTP 响应头 {{HTTPHeader("Set-Cookie")}} 的属性之一。它允许您声明该 Cookie 是否仅限于第一方或者同一站点上下文。
