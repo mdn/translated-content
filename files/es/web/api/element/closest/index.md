@@ -4,7 +4,7 @@ slug: Web/API/Element/closest
 page-type: web-api-instance-method
 browser-compat: api.Element.closest
 l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021a122e87245c624ba56197641b4d7b21b643a6021
+  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
 {{APIRef('DOM')}}

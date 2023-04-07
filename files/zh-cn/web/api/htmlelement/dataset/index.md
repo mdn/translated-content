@@ -36,7 +36,7 @@ slug: Web/API/HTMLElement/dataset
     1. **限制**：在转换之前，破折号*不得*立即后跟 ASCII 小写字母 `a` 到 `z`；
     2. 增加 `data-` 前缀；
     3. 在任何 ASCII 大写字母 `A` 到 `Z` 之前增加一个破折号，然后小写该字母。
-    4. 其它字母不做改变。
+    4. 其他字母不做改变。
 
 例如，一个 `data-abc-def` 属性对应于 `dataset.abcDef`。
 

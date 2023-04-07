@@ -41,7 +41,7 @@ exec(str)
 
 在使用 `exec()` 时，`global` 标志位不会在 `sticky` 标志位被设置时生效，而 `match()` 始终会设置 `sticky` 标志位。
 
-`exec()` 是正则表达式的原始方法。许多其它的正则表达式方法会在内部调用 `exec()`——包括一些字符串方法也会调用 `exec()`，如 [`@@replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)。虽然 `exec()` 本身非常强大而又有效，但它通常不能最清楚地表示调用的目的。
+`exec()` 是正则表达式的原始方法。许多其他的正则表达式方法会在内部调用 `exec()`——包括一些字符串方法也会调用 `exec()`，如 [`@@replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)。虽然 `exec()` 本身非常强大而又有效，但它通常不能最清楚地表示调用的目的。
 
 - 如果你只是为了判断是否匹配，请使用 {{jsxref("RegExp.prototype.test()")}} 方法代替。
 - 如果你只是为了找出所有匹配正则表达式的字符串而又不关心捕获组，请使用 {{jsxref("String.prototype.match()")}} 方法代替。此外，{{jsxref("String.prototype.matchAll()")}} 允许你对匹配项进行迭代，这有助于简化匹配字符串的多个部分（带有匹配组）。
@@ -63,14 +63,14 @@ const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 
 下表列出这个脚本的返回值（`result`）：
 
-| 属性  | 值                                                              |
-|-----------|--------------------------------------------------------------------|
+| 属性       | 值                                                                 |
+| --------- | ------------------------------------------------------------------ |
 | `[0]`     | `"Quick Brown Fox Jumps"`                                          |
 | `[1]`     | `"Brown"`                                                          |
 | `[2]`     | `"Jumps"`                                                          |
 | `index`   | `4`                                                                |
 | `indices` | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
-| `input`   | `4`                                                                |
+| `input`   | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
 | `groups`  | `{ color: "brown" }`                                               |
 
 另外，由于正则表达式是全局的（`global`），`re.lastIndex` 会被设置为 `25`。

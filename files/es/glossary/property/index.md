@@ -1,6 +1,6 @@
 ---
 title: Propiedad
-slug: Glossary/property
+slug: Glossary/Property
 original_slug: Glossary/propiedad
 ---
 

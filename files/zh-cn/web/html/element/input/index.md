@@ -1,6 +1,6 @@
 ---
 title: <input>：输入（表单输入）元素
-slug: Web/HTML/Element/Input
+slug: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}
@@ -337,7 +337,7 @@ slug: Web/HTML/Element/Input
 
   - : 布尔属性，对于 `radio` 和 `checkbox` 类型有效。如果在 `radio` 类型上出现，代表该单选按钮是当前同名称组中所选定的那一个。如果在 `checkbox` 类型上出现，代表页面加载时，默认选择该复选框，这并*不*代表复选框当前是否选择：如果复选框状态改变，该内容属性不会反馈这种改变，只会更新 [`HTMLInputElement` 的 `checked` IDL 属性](/zh-CN/docs/Web/API/HTMLInputElement)。
 
-    > **备注：** 与其它输入控件不同，复选框和单选按钮的值只会在 `checked` 状态时才会包括在提交的数据中。如果当前是 `checked` 状态，复选框的名称和值就会被提交。
+    > **备注：** 与其他输入控件不同，复选框和单选按钮的值只会在 `checked` 状态时才会包括在提交的数据中。如果当前是 `checked` 状态，复选框的名称和值就会被提交。
     >
     > 例如，`name` 为 `fruit` 的复选框含有 `value` 为 `cherry` 的一项，且该复选框为选中状态，提交的表单数据将包含 `fruit=cherry`；如果复选框为非活动状态，它不会列入到表单数据中。复选框和单选按钮的默认 `value` 值为 `on`。
 

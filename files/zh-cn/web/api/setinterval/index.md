@@ -148,7 +148,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 ### 一个可能的解决方案
 
-所有现代 JavaScript 运行时（浏览器或其它地方）都支持[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（携带 `this` 对象）——允许我们在 `myArray` 方法内，编写 `setInterval( () => this.myMethod)` 以在回调函数中使用 `this` 指代 `myArray`。
+所有现代 JavaScript 运行时（浏览器或其他地方）都支持[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（携带 `this` 对象）——允许我们在 `myArray` 方法内，编写 `setInterval( () => this.myMethod)` 以在回调函数中使用 `this` 指代 `myArray`。
 
 如果你需要支持 IE 浏览器，请使用 [`Function.prototype.bind()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法，它允许你指定调用给定函数时 `this` 的值。这可以让你避免因为上下文的不同而导致调用的函数的 `this` 不明确而出现的问题。
 
@@ -166,7 +166,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 ### 确保执行时间短于定时器时间间隔
 
-如果你的代码逻辑执行时间可能比定时器时间间隔要长，建议你使用递归调用了 {{domxref("setTimeout()")}} 的具名函数。例如，使用 `setInterval()` 以 5 秒的间隔轮询服务器，可能因网络延迟、服务器无响应以及许多其它的问题而导致请求无法在分配的时间内完成。因此，你可能会发现排队的 XHR 请求没有按顺序返回。
+如果你的代码逻辑执行时间可能比定时器时间间隔要长，建议你使用递归调用了 {{domxref("setTimeout()")}} 的具名函数。例如，使用 `setInterval()` 以 5 秒的间隔轮询服务器，可能因网络延迟、服务器无响应以及许多其他的问题而导致请求无法在分配的时间内完成。因此，你可能会发现排队的 XHR 请求没有按顺序返回。
 
 在这些场景下，应首选递归调用 `setTimeout()` 的模式：
 

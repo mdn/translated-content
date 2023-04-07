@@ -1,6 +1,6 @@
 ---
 title: Curseur "caret"
-slug: Glossary/caret
+slug: Glossary/Caret
 tags:
   - Curseurs
   - Glossaire

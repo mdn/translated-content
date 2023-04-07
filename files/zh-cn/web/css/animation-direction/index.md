@@ -3,45 +3,99 @@ title: animation-direction
 slug: Web/CSS/animation-direction
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-## 概述
+**`animation-direction`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画是应正向播放、反向播放还是在正向和反向之间交替播放。
 
-`animation-direction` CSS 属性指示动画是否反向播放，它通常在简写属性{{cssxref("animation")}}中设定
+{{EmbedInteractiveExample("pages/css/animation-direction.html")}}
 
-{{cssinfo}}
+使用 {{cssxref("animation")}} 的简写属性通常非常方便，可以一次性设置所有动画属性。
 
 ## 语法
 
-```
-Formal syntax:  {{csssyntax("animation-direction")}}
-```
+```css
+/* 单个动画 */
+animation-direction: normal;
+animation-direction: reverse;
+animation-direction: alternate;
+animation-direction: alternate-reverse;
 
-```
-animation-direction: normal
-animation-direction: reverse
-animation-direction: alternate
-animation-direction: alternate-reverse
-animation-direction: normal, reverse
-animation-direction: alternate, reverse, normal
+/* 多个动画 */
+animation-direction: normal, reverse;
+animation-direction: alternate, reverse, normal;
+
+/* 全局值 */
+animation-direction: inherit;
+animation-direction: initial;
+animation-direction: revert;
+animation-direction: revert-layer;
+animation-direction: unset;
 ```
 
 ### 值
 
 - `normal`
-  - : 每个循环内动画向前循环，换言之，每个动画循环结束，动画重置到起点重新开始，这是默认属性。
-- `alternate`
-  - : 动画交替反向运行，反向运行时，动画按步后退，同时，带时间功能的函数也反向，比如，`ease-in` 在反向时成为 `ease-out`。计数取决于开始时是奇数迭代还是偶数迭代
+  - : 动画在每个循环中*正向*播放。换句话说，每次动画循环时，动画将重置为起始状态并重新开始。这是默认值。
 - `reverse`
-  - : 反向运行动画，每周期结束动画由尾到头运行。
+  - : 动画在每个循环中*反向*播放。换句话说，每次动画循环时，动画将重置为结束状态并重新开始。动画步骤将反向执行，并且时间函数也将被反转。例如，`ease-in` 时间函数变为 `ease-out`。
+- `alternate`
+  - : 动画在每个循环中正反交替播放，第一次迭代是*正向*播放。确定循环是奇数还是偶数的计数从 1 开始。
 - `alternate-reverse`
-  - : 反向交替，反向开始交替。动画第一次运行时是反向的，然后下一次是正向，后面依次循环。决定奇数次或偶数次的计数从 1 开始。
+  - : 动画在每个循环中正反交替播放，第一次迭代是*反向*播放。确定循环是奇数还是偶数的计数从 1 开始。
 
-## 例子
+> **备注：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
-See [CSS animations](/zh-CN/docs/CSS/CSS_animations) for examples.
+## 形式定义
 
-## Specifications
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
+
+## 示例
+
+### 反转动画方向
+
+#### HTML
+
+```html
+<div class="box"></div>
+```
+
+#### CSS
+
+```css
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("反转动画方向","100%","250")}}
+
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)以获取示例。
+
+## 规范
 
 {{Specifications}}
 
@@ -49,7 +103,8 @@ See [CSS animations](/zh-CN/docs/CSS/CSS_animations) for examples.
 
 {{Compat}}
 
-## 更多
+## 参见
 
-- [Using CSS animations](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- JavaScript {{domxref("AnimationEvent")}} API
+- 其他相关的动画属性: {{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}

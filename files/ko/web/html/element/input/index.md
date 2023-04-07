@@ -1,6 +1,6 @@
 ---
 title: '<input>: 입력 요소'
-slug: Web/HTML/Element/Input
+slug: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}
@@ -373,7 +373,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for the `image` button only, the alt attribute provides alternative text for the image, displaying the value of the attribute if the image [src](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 - {{htmlattrdef("autocomplete")}}
 
-  - : **Not** a Boolean attribute, the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete email addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.
+  - : **Not** a Boolean attribute, the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete email addresses in an email input field. See [Values](/ko/docs/Web/HTML/Attributes/autocomplete) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color` and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types. See [The HTML autocomplete attribute](/ko/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
 
@@ -571,7 +571,7 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 
   - : The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
-    > **참고:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
+    > **참고:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels and placeholders](/ko/docs/Web/HTML/Element/input) for more information.
 
 - {{htmlattrdef("readonly")}}
 

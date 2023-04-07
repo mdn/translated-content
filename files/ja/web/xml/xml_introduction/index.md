@@ -1,6 +1,6 @@
 ---
 title: XML のイントロダクション
-slug: Web/XML/XML_Introduction
+slug: Web/XML/XML_introduction
 ---
 
 概要: この記事は、'eXtensible Markup Language' (XML、拡張可能マークアップ言語) を紹介し、その使い道について XML は HTML に似たマークアップ言語です。 これは Extensible Markup Language の略で、汎用マークアップ言語として [W3C が推奨する](https://www.w3.org/TR/xml/)仕様です。つまり、他のマークアップ言語とは異なり、XML は事前定義されていないため、独自のタグを定義する必要があります。この言語の主な目的は、インターネットなどのさまざまなシステム間でデータを共有することです。

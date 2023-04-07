@@ -53,7 +53,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ### 委托给其他可迭代对象
 
-除了生成器对象这一种可迭代对象，`yield*` 还可以 `yield` 其它任意的可迭代对象，比如说数组、字符串、`arguments` 对象等等。
+除了生成器对象这一种可迭代对象，`yield*` 还可以 `yield` 其他任意的可迭代对象，比如说数组、字符串、`arguments` 对象等等。
 
 ```js
 function* g3() {

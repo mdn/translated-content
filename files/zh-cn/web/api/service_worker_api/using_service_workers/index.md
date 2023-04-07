@@ -145,7 +145,7 @@ self.addEventListener("install", (event) => {
 
 现在你已经将你的站点资源缓存了，你需要告诉 service worker 让它用这些缓存内容来做点什么。有了 `fetch` 事件，这是很容易做到的。
 
-1. 每次获取 service worker 控制的资源时，都会触发 `fetch` 事件，这些资源包括了指定的作用域内的文档，和这些文档内引用的其它任何资源（比如 `index.html` 发起了一个跨源的请求来嵌入一个图片，这个也会通过 service worker）。
+1. 每次获取 service worker 控制的资源时，都会触发 `fetch` 事件，这些资源包括了指定的作用域内的文档，和这些文档内引用的其他任何资源（比如 `index.html` 发起了一个跨源的请求来嵌入一个图片，这个也会通过 service worker）。
 
 2. 你可以给 service worker 添加一个 `fetch` 的事件监听器，接着调用 event 上的 `respondWith()` 方法来劫持我们的 HTTP 响应，然后你用可以用自己的方法来更新它们。
 
@@ -266,7 +266,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-我们选择了回落的图片，因为唯一的更新是对新图片的，它可能会失败，因为其它的所有内容都依赖于我们之前看到的 `install` 事件监听器中的安装过程。
+我们选择了回落的图片，因为唯一的更新是对新图片的，它可能会失败，因为其他的所有内容都依赖于我们之前看到的 `install` 事件监听器中的安装过程。
 
 ## Service Worker 导航预加载
 
@@ -377,7 +377,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-注意，在此示例中，无论资源是“正常”下载还是预加载，我们都会下载和缓存相同的数据。相反，你可以选择在预加载时下载和缓存其它资源。请参阅 [`NavigationPreloadManager` > 自定义响应](/zh-CN/docs/Web/API/NavigationPreloadManager#custom_responses) 以了解详情。
+注意，在此示例中，无论资源是“正常”下载还是预加载，我们都会下载和缓存相同的数据。相反，你可以选择在预加载时下载和缓存其他资源。请参阅 [`NavigationPreloadManager` > 自定义响应](/zh-CN/docs/Web/API/NavigationPreloadManager#custom_responses) 以了解详情。
 
 ## 更新你的 service worker
 
@@ -404,7 +404,7 @@ self.addEventListener("install", (event) => {
 
       // …
 
-      // 包含新版本需要的其它资源…
+      // 包含新版本需要的其他资源…
     ])
   );
 });
@@ -418,7 +418,7 @@ self.addEventListener("install", (event) => {
 
 正如我们在最后一节看到的那样，当你更新 service worker 到一个新的版本，你将在它的 `install` 事件处理程序中创建一个新的缓存。在仍有由上一个 worker 的版本控制的打开的页面，你就需要同时保留这两个版本的缓存，因为之前的版本需要它缓存的版本。你可以使用 `activate` 事件从之前的缓存中移除数据。
 
-传给 `waitUntil()` 的 promise 会阻塞其它的事件，直到它完成，因此你可以放心，当你在新的 service worker 中得到你的第一个 `fetch` 事件时，你的清理操作已经完成。
+传给 `waitUntil()` 的 promise 会阻塞其他的事件，直到它完成，因此你可以放心，当你在新的 service worker 中得到你的第一个 `fetch` 事件时，你的清理操作已经完成。
 
 ```js
 const deleteCache = async (key) => {

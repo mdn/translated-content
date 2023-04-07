@@ -56,7 +56,7 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
   - : JavaScript 類型陣列提供一個存取二進制資料的機制。
 - [記憶體管理](/zh-TW/docs/Web/JavaScript/Memory_Management)
   - : JavaScript 的記憶體生命週期和垃圾回收機制。
-- [併行模組和事件循環](/zh-TW/docs/Web/JavaScript/EventLoop)
+- [併行模組和事件循環](/zh-TW/docs/Web/JavaScript/Event_loop)
   - : JavaScript 具有基於「事件循環」的併行模組。
 
 ## 參考

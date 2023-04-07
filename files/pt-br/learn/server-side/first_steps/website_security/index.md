@@ -142,10 +142,3 @@ Este artigo explicou o conceito de segurança na web e algumas das ameaças mais
 Com este artigo, você chegou ao final [deste módulo](/pt-BR/docs/Learn/Server-side/First_steps), abordando seus primeiros passos na programação de sites em relação ao servidor. Esperamos que você tenha gostado de aprender esses conceitos fundamentais e agora esteja pronto para selecionar um _Framework web_ e iniciar a programação.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## Neste módulo
-
-- [Introduction to the server side](/pt-BR/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/pt-BR/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)

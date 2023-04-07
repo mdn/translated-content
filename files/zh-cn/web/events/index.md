@@ -3,9 +3,9 @@ title: 事件参考
 slug: Web/Events
 ---
 
-[事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其它的情况。
+[事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其他的情况。
 
-每个事件都使用继承自 {{domxref("Event")}} 接口的对象来表示，可以包括额外的自定义成员属性及函数，以获取事件发生时相关的更多信息。本文为每个事件都提供了一个表格（靠近顶部的区域），其中包含了指向相关事件接口的链接和其它相关的信息。[事件 > 基于 `Event` 的接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)中完整地列出了不同的事件类型。
+每个事件都使用继承自 {{domxref("Event")}} 接口的对象来表示，可以包括额外的自定义成员属性及函数，以获取事件发生时相关的更多信息。本文为每个事件都提供了一个表格（靠近顶部的区域），其中包含了指向相关事件接口的链接和其他相关的信息。[事件 > 基于 `Event` 的接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)中完整地列出了不同的事件类型。
 
 本文提供了你可能感兴趣的主要事件类型（动画、剪切板、worker，等等）的索引，以及实现这些事件的主要的类。最后是所有提供了文档的事件列表。
 
@@ -164,7 +164,7 @@ slug: Web/Events
           > 和<a href="/zh-CN/docs/Web/API/WheelEvent">滚轮事件</a>相关的事件。
         </p>
         <p>
-          拖动和滚轮事件派生自鼠标事件。虽然它们在使用鼠标滚轮和拖放时触发，但它们也可以和其它合适的硬件一起使用。
+          拖动和滚轮事件派生自鼠标事件。虽然它们在使用鼠标滚轮和拖放时触发，但它们也可以和其他合适的硬件一起使用。
         </p>
       </td>
       <td>
@@ -747,7 +747,7 @@ slug: Web/Events
         </p>
         <p>
           用于相应新消息和消息发送的错误。Service
-          worker 还可以收到其它事件的通知，包括推送通知、用户单击显示的通知 push 订阅失效、从内容索引中删除条目，等等。
+          worker 还可以收到其他事件的通知，包括推送通知、用户单击显示的通知 push 订阅失效、从内容索引中删除条目，等等。
         </p>
       </td>
       <td>
@@ -897,7 +897,6 @@ slug: Web/Events
   - [paste event](/zh-CN/docs/Web/API/Element/paste_event)
   - [scroll event](/zh-CN/docs/Web/API/Element/scroll_event)
   - [select event](/zh-CN/docs/Web/API/Element/select_event)
-  - [show event](/zh-CN/docs/Web/API/Element/show_event)
   - [touchcancel event](/zh-CN/docs/Web/API/Element/touchcancel_event)
   - [touchend event](/zh-CN/docs/Web/API/Element/touchend_event)
   - [touchmove event](/zh-CN/docs/Web/API/Element/touchmove_event)

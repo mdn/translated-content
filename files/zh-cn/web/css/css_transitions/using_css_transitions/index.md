@@ -70,7 +70,7 @@ CSS 过渡由简写属性 {{cssxref("transition")}} 定义是最好的方式，�
 **(注意下面示例中过渡无限循环是为了说明例子，过渡只是从开始到结束变化，如果需要循环，查看 [`animation`](/zh-CN/docs/CSS/animation) 。)**
 
 - {{ cssxref("transition-property") }}
-  - : 指定哪个或哪些 CSS 属性用于过渡。只有指定的属性才会在过渡中发生动画，其它属性仍如通常那样瞬间变化。
+  - : 指定哪个或哪些 CSS 属性用于过渡。只有指定的属性才会在过渡中发生动画，其他属性仍如通常那样瞬间变化。
 - {{ cssxref("transition-duration") }}
   - : 指定过渡的时长。或者为所有属性指定一个值，或者指定多个值，为每个属性指定不同的时长。
 - {{ cssxref("transition-timing-function") }}
@@ -258,10 +258,6 @@ p {
 ## 规范
 
 {{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 另见
 

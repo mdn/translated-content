@@ -422,9 +422,3 @@ slug: Learn/HTML/Tables/Advanced
 表の HTML について他にも学べることがいくつかありますが、現時点で知っておく必要があることは全てここで説明しました。 この時点で、HTML の表のスタイリングについて学びたいと思うかもしれません — [スタイリングされた表](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)を参照してください。
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## このモジュール
-
-- [HTML の表の基本](/ja/docs/Learn/HTML/Tables/Basics)
-- [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced)
-- [評価: 太陽系の惑星のデータを構造化する](/ja/docs/Learn/HTML/Tables/Structuring_planet_data)

@@ -48,7 +48,7 @@ slug: Web/API/Streams_API/Concepts
 
 数据由一个 **writer** 写入流中，每次只写入一个分块。分块和可读流的 reader 一样可以有多种类型。你可以用任何方式生成要被写入的块；writer 加上相关的代码称为 **producer**。
 
-当 writer 被创建并开始向一个流写入数据（一个活跃的 writer）时，我们说，它被**锁定**（locked）在该流上。同一时刻，一个 writer 只能向一个可写流写入数据。如果你想要用其它 writer 向流中写入数据，在你将 writer 附着到该流之前，你必须先中止上一个 writer。
+当 writer 被创建并开始向一个流写入数据（一个活跃的 writer）时，我们说，它被**锁定**（locked）在该流上。同一时刻，一个 writer 只能向一个可写流写入数据。如果你想要用其他 writer 向流中写入数据，在你将 writer 附着到该流之前，你必须先中止上一个 writer。
 
 一个 **internal queue** 跟踪已经被写入流的分块但是仍然没有被底层 sink 处理的分块。
 

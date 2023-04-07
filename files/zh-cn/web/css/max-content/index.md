@@ -109,4 +109,4 @@ max-content: unset;
 
 ## 参见
 
-- 其它尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
+- 其他尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}

@@ -310,15 +310,3 @@ El estándar [ISO_639-1](https://es.wikipedia.org/wiki/ISO_639-1) define estos c
 Esto marca el final de nuestra guía rápida del {{Glossary("head")}} de HTML — aún hay muchas más cosas que puedes hacer aquí, pero una guía exhaustiva puede ser aburrida y confusa a estas alturas, ¡y nosotros queremos darte una idea de las cuestiones más comunes con las que te encontrarás aquí por ahora! En el siguiente artículo veremos los fundamentos de texto de HTML.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

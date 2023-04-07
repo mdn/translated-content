@@ -1,6 +1,6 @@
 ---
 title: Jeu de caractères
-slug: Glossary/character_set
+slug: Glossary/Character_set
 tags:
   - Glossary
   - character encoding

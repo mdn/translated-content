@@ -46,7 +46,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 描述
 
-与其它渐变相同，径向渐变是一个[不固定尺寸](/zh-CN/docs/Web/CSS/image#no_intrinsic)的图像，即它没有首选的大小，也没有首选的比例。具体大小将由它所应用的元素的大小决定。
+与其他渐变相同，径向渐变是一个[不固定尺寸](/zh-CN/docs/Web/CSS/image#no_intrinsic)的图像，即它没有首选的大小，也没有首选的比例。具体大小将由它所应用的元素的大小决定。
 
 如要创建重复的径向渐变来填充容器，请使用 CSS 的 {{cssxref("repeating-radial-gradient")}} 方法。
 

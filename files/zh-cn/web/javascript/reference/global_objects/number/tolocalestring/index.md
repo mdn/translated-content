@@ -75,7 +75,7 @@ function toLocaleStringSupportsLocales() {
 }
 ```
 
-早于 ES5.1 的实现中，携带非法参数调用 `toLocaleString` 不需要抛出范围异常。在所有主机环境下，包括那些支持比 ed 5.1 还早的 ECMA-262 的环境，都能有效检测的方法是直接检测 ECMA-402 中的其它特性，它指定 `Number.prototype.toLocaleString` 需要支持地区选项：
+早于 ES5.1 的实现中，携带非法参数调用 `toLocaleString` 不需要抛出范围异常。在所有主机环境下，包括那些支持比 ed 5.1 还早的 ECMA-262 的环境，都能有效检测的方法是直接检测 ECMA-402 中的其他特性，它指定 `Number.prototype.toLocaleString` 需要支持地区选项：
 
 ```js
 function toLocaleStringSupportsOptions() {

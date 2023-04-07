@@ -1,6 +1,6 @@
 ---
 title: window.requestAnimationFrame
-slug: Web/API/Window/requestAnimationFrame
+slug: Web/API/window/requestAnimationFrame
 ---
 
 {{APIRef}}
@@ -13,7 +13,7 @@ slug: Web/API/Window/requestAnimationFrame
 
 回调函数会被传入{{domxref("DOMHighResTimeStamp")}}参数，{{domxref("DOMHighResTimeStamp")}}指示当前被 `requestAnimationFrame()` 排序的回调函数被触发的时间。在同一个帧中的多个回调函数，它们每一个都会接受到一个相同的时间戳，即使在计算上一个回调函数的工作负载期间已经消耗了一些时间。该时间戳是一个十进制数，单位毫秒，最小精度为 1ms(1000μs)。
 
-> **警告：** 请确保总是使用第一个参数 (或其它获得当前时间的方法) 计算每次调用之间的时间间隔，否则动画在高刷新率的屏幕中会运行得更快。请参考下面例子的做法。
+> **警告：** 请确保总是使用第一个参数 (或其他获得当前时间的方法) 计算每次调用之间的时间间隔，否则动画在高刷新率的屏幕中会运行得更快。请参考下面例子的做法。
 
 ## 语法
 

@@ -1,6 +1,6 @@
 ---
 title: Notification.actions
-slug: Web/API/notification/actions
+slug: Web/API/Notification/actions
 ---
 
 {{APIRef("Web Notifications")}}

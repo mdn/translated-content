@@ -193,19 +193,6 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 对于整行或多行代码，此时别再使用 {{HTMLElement("code")}} 元素来格式化了，而应该对其进行[语法高亮](/zh-CN/docs/MDN/Contribute/Markdown_in_MDN#示例代码块)。
 
-#### HTML 元素的样式
-
-HTML 元素的样式有一套自己的规则。遵守这些规则可以让元素及其组件的描述方式保持统一，并且还可以保证能够正确链接到各元素的详细文档页面。
-
-- 元素名称
-  - : 使用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏会生成一个指向该元素详情页的链接。比如，\\{{HTMLElement("title")}} 会生成“{{HTMLElement("title")}}”。如果不想生成链接，就将元素名称用尖括号括起来，然后将其设置为内联代码样式，比如 `<title>`。
-- 属性名称
-  - : 请使用内联代码样式，并且使用**粗体**。
-- 属性定义
-  - : 对正在定义的术语使用 [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) 宏（如 \\{{htmlattrdef("type")}}），这样其他页面就可以使用 [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) 宏来链接到该页面了（例如 \\{{htmlattrxref("type","element")}}）。
-- 属性值
-  - : 请使用内联代码样式，并且注意字符串两边不要加引号，除非是代码的语法要求加引号。举例：当将 `<input>` 元素的 **type** 属性设置为 `email` 或 `tel` 时……
-
 ### 拉丁文缩写
 
 #### 在补充说明的括号中

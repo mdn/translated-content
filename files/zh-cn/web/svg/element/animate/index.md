@@ -31,7 +31,7 @@ html,body,svg { height:100%; margin:0; padding:0; }
   - : {{SVGAttr("begin")}}、{{SVGAttr("dur")}}、{{SVGAttr("end")}}、{{SVGAttr("min")}}、{{SVGAttr("max")}}、{{SVGAttr("restart")}}、{{SVGAttr("repeatCount")}}、{{SVGAttr("repeatDur")}}、{{SVGAttr("fill")}}
 - [动画取值属性](/zh-CN/docs/Web/SVG/Attribute#动画取值属性)
   - : {{SVGAttr("calcMode")}}、{{SVGAttr("values")}}、{{SVGAttr("keyTimes")}}、{{SVGAttr("keySplines")}}、{{SVGAttr("from")}}、{{SVGAttr("to")}}、{{SVGAttr("by")}}
-- [其它动画属性](/zh-CN/docs/Web/SVG/Attribute#动画额外属性)
+- [其他动画属性](/zh-CN/docs/Web/SVG/Attribute#动画额外属性)
   - : 最主要的有：{{SVGAttr("attributeName")}}、{{SVGAttr("additive")}}、{{SVGAttr("accumulate")}}
 - [动画事件属性](/zh-CN/docs/Web/SVG/Attribute#动画事件属性)
   - : 最主要的有：{{SVGAttr("onbegin")}}、{{SVGAttr("onend")}}、{{SVGAttr("onrepeat")}}

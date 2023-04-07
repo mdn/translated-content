@@ -1,5 +1,5 @@
 ---
-title: Qué son los hipervínculos?
+title: ¿Qué son los hipervínculos?
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 original_slug: Learn/Common_questions/What_are_hyperlinks
 ---
@@ -12,12 +12,12 @@ En este artículo, repasaremos qué son los hipervínculos y por qué son import
       <th scope="row">Prerrequisitos:</th>
       <td>
         Debes saber
-        <a href="/en-US/Learn/How_the_Internet_works">how the Internet works</a>
+        <a href="/es/Learn/How_the_Internet_works">como funciona internet</a>.
         Y estar familiarizado con<a
-          href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+          href="/es/docs/Learn/page_vs_site_vs_server_vs_search_engine"
         >
-          the difference between a webpage, a website, a web server, and a
-          search engine</a
+          la diferencia entre una página web, un sitio web, un servidor web y un
+          buscador</a
         >.
       </td>
     </tr>
@@ -44,7 +44,7 @@ Antes de la Web, era bastante difícil acceder a los documentos y pasar de uno a
 
 Los enlaces se destacan del texto circundante al estar subrayados y en texto azul. Toque o haga clic en un enlace para activarlo, o si usa un teclado, presione Tab hasta que el enlace esté enfocado y presione Entrar o la barra espaciadora.
 
-![Example of a basic display and effect of a link in a web page](link-1.png)
+![Ejemplo de visualización básica y efecto de un enlace en una página web](link-1.png)
 
 Los enlaces son el avance que hizo que la Web fuera tan útil y exitosa. En el resto de este artículo, discutimos los diversos tipos de enlaces y su importancia para el diseño web moderno.
 
@@ -69,7 +69,7 @@ Cuando comienzas, no tienes que preocuparte tanto por los enlaces externos y ent
 
 La mayoría de los enlaces vinculan dos páginas web. Las anclas unen dos secciones de un documento. Cuando sigue un enlace que apunta a un ancla, su navegador salta a otra parte del documento actual en lugar de cargar un nuevo documento. Sin embargo, crea y utiliza anclajes de la misma manera que otros enlaces.
 
-![Example of a basic display and effect of an anchor in a web page](link-2.png)
+![Ejemplo de visualización básica y efecto de un ancla en una página web](link-2.png)
 
 ### Enlaces y motores de búsqueda
 
@@ -88,4 +88,4 @@ Los enlaces influyen en la facilidad con que un motor de búsqueda se vinculará
 Ahora querrás configurar algunas páginas web con enlaces.
 
 - Para obtener más antecedentes teóricos, aprenda sobre [URLs y su estructura](/es/docs/Learn/Common_questions/What_is_a_URL), dado que todo enlace apunta a una URL.
-- ¿Quieres algo un poco más práctico? El artículo [Creating hyperlinks](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) de nuestro módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) explica cómo implementar enlaces en detalle.
+- ¿Quieres algo un poco más práctico? El artículo [Creación de hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) de nuestro módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) explica cómo implementar enlaces en detalle.

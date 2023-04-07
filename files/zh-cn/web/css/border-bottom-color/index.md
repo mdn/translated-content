@@ -72,5 +72,5 @@ border-bottom-color: #F5F6F7;
 ## 参见
 
 - 边框相关的 CSS 简写属性 {{Cssxref("border")}}, {{Cssxref("border-bottom")}} 和 {{Cssxref("border-color")}} 。
-- 用于其它边框颜色相关的 CSS 属性： {{Cssxref("border-right-color")}}, {{Cssxref("border-top-color")}}, 和 {{Cssxref("border-left-color")}} 。
-- 同样用于底边的其它边框相关的 CSS 属性： {{cssxref("border-bottom-style")}} 和 {{cssxref("border-bottom-width")}} 。
+- 用于其他边框颜色相关的 CSS 属性： {{Cssxref("border-right-color")}}, {{Cssxref("border-top-color")}}, 和 {{Cssxref("border-left-color")}} 。
+- 同样用于底边的其他边框相关的 CSS 属性： {{cssxref("border-bottom-style")}} 和 {{cssxref("border-bottom-width")}} 。

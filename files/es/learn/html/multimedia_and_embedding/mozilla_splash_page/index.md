@@ -101,12 +101,3 @@ Si quieres evaluar tu trabajo, estás atorado o quieres pedir ayuda:
     - Un enlace a la página de evaluación actual, para que podamos encontrar la pregunta con la que desea ayuda.
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## En este módulo
-
-- [Imágenes in HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenido de Audio y Video](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [De \<object> to \<iframe> - otras tecnologías de inserción](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Agregar gráficos vectoriales a la Web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Imágenes receptivas](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Página de bienvenida de Mozilla](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

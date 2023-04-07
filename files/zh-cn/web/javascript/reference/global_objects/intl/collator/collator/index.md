@@ -77,10 +77,10 @@ Intl.Collator(locales, options)
       - : 字符串中的哪些差异应导致结果值为非零。可能的值为：
 
         - `"base"`：只有字母不同的字符串比较不相等。例如：a ≠ b、a = á、a = A。
-        - `"accent"`：只有不同的基本字母或重音符号和其它变音符号的字符串比较为不相等。例如：a
+        - `"accent"`：只有不同的基本字母或重音符号和其他变音符号的字符串比较为不相等。例如：a
           ≠ b、a ≠ á、a = A。
         - `"case"`：只有不同的基本字母或大小写的字符串比较不相等。例如：a ≠ b、a = á、a ≠ A。
-        - `"variant"`：字符串的字母、重音和其它变音符号，或不同大小写比较不相等。也可以考虑其它差异。例如：a ≠ b、a ≠ á、a ≠ A。
+        - `"variant"`：字符串的字母、重音和其他变音符号，或不同大小写比较不相等。也可以考虑其他差异。例如：a ≠ b、a ≠ á、a ≠ A。
 
         `"sort"` 用法（`usage`）的默认值为 `"variant"`。`"search"` 用法则取决于区域。
 
@@ -125,8 +125,8 @@ Intl.Collator(locales, options)
 以下示例演示了一个字符串在另一个字符串之前、之后或与另一个字符串处于同一级别时可能出现的不同结果：
 
 ```js
-console.log(new Intl.Collator().compare("a", "c")); // -1，或一些其它的负值
-console.log(new Intl.Collator().compare("c", "a")); // 1，或一些其它的正值
+console.log(new Intl.Collator().compare("a", "c")); // -1，或一些其他的负值
+console.log(new Intl.Collator().compare("c", "a")); // 1，或一些其他的正值
 console.log(new Intl.Collator().compare("a", "a")); // 0
 ```
 

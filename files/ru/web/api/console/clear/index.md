@@ -1,6 +1,6 @@
 ---
 title: clear()
-slug: Web/API/Console/clear
+slug: Web/API/console/clear
 tags:
   - API
   - консоль
