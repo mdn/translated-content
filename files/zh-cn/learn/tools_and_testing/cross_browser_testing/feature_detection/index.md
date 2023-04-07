@@ -226,7 +226,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
    <html lang="en-us" class="no-js">…</html>
    ```
 
-此时，试着加载你的页面，你会对 Modernizr 在 CSS 功能方面的工作有一个概念。如果你看一下浏览器开发者工具的 DOM 检查器，你会发现 Modernizr 已经像这样更新了你的` <html>` 元素的 `class` 属性：
+此时，试着加载你的页面，你会对 Modernizr 在 CSS 功能方面的工作有一个概念。如果你看一下浏览器开发者工具的 DOM 检查器，你会发现 Modernizr 已经像这样更新了你的 `<html>` 元素的 `class` 属性：
 
 ```html
 <html
