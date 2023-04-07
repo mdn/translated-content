@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 {{JSRef}}
 
-**`Array.from()`** 静态方法从[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)或[类数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)对象创建一个新的浅拷贝的数组示例。
+**`Array.from()`** 静态方法从[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)或[类数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)对象创建一个新的浅拷贝的数组实例。
 
 转换[异步的可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)对象到数组，可以使用 {{jsxref("Array.fromAsync()")}}。
 
