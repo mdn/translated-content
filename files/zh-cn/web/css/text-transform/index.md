@@ -16,7 +16,7 @@ slug: Web/CSS/text-transform
 - 在荷兰语中（`nl`），`ij` 双字母变为 `IJ`，即使设置了 `text-transform: capitalize`，该属性只大写单词的第一个字母。
 - 在希腊语中（`el`），当整个单词是大写的时候，元音会失去重音（`ά`/`Α`），除了不连贯的 eta（`ή`/`Ή`）。另外，在第一个元音上有重音的双元音会失去重音，在第二个元音上获得重音（`άι`/`ΑΪ`）。
 - 在希腊语中（`el`），小写的西格玛字符有两种形式：`σ` 和 `ς`。`ς` 只在西格玛结束一个词的时候使用。当对大写西格玛（`Σ`）应用 `text-transform: lowercase` 时，浏览器需要根据上下文选择正确的小写形式。
-- 在爱尔兰语中（`ga'），某些前缀字母在基本首字母大写时仍为小写，因此，例如 `text-transform: uppercase` 会将 `ar aon tslí` 变为 `AR AON tSLÍ`，而不是像人们所期望的那样，变为 `AR AON TSLÍ`（仅在 Firefox）。在某些情况下，大写字母也会被删除：`an t-uisce` 转换为 `AN tUISCE`（并且连字符被 `text-transform: lowercase` 正确地重新插入）。
+- 在爱尔兰语中（`ga`），某些前缀字母在基本首字母大写时仍为小写，因此，例如 `text-transform: uppercase` 会将 `ar aon tslí` 变为 `AR AON tSLÍ`，而不是像人们所期望的那样，变为 `AR AON TSLÍ`（仅在 Firefox）。在某些情况下，大写字母也会被删除：`an t-uisce` 转换为 `AN tUISCE`（并且连字符被 `text-transform: lowercase` 正确地重新插入）。
 
 语言由 HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性或 XML [`xml:lang`](/zh-CN/docs/Web/SVG/Attribute/xml:lang) 属性定义。
 
