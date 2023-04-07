@@ -1,6 +1,6 @@
 ---
 title: 並行模型和事件循環
-slug: Web/JavaScript/EventLoop
+slug: Web/JavaScript/Event_loop
 ---
 
 {{JsSidebar("Advanced")}}
@@ -55,13 +55,13 @@ while (queue.waitForMessage()) {
 
 當沒有任何訊息時，`queue.waitForMessage` 會同步地等待新訊息到來。
 
-### 「執行到完成（Run-to-completion）」
+### 執行到完成（Run-to-completion）
 
 每一個訊息處理完成之後才會執行下一個。當分析你的程式的時候，上述提供了優秀的特性，像是當一個函式開始執行時，他不會被取代且其他程式碼執行前先完成（而且可以修改這個函式操作的資料）。這特性與 C 不同，在 C 當中，當一個函式在執行緒中執行時，隨時可以被其他執行緒中的程式碼中止。
 
 這模型的缺點是：若是一個訊息要執行很久才完成，網頁應用程式會無法執行一些使用者的基本操作，如點擊按鈕或是捲動頁面。瀏覽器為了要緩解這問題，會跳出視窗「該動作回應時間過久（a script taking too long to run）」。良好的實作方式是縮短執行訊息，若可能的話，將一個訊息切成數個訊息執行。
 
-### 添加訊息（Adding messages）
+### 添加訊息（Adding message）
 
 瀏覽器中，會添加訊息是由於事件的觸動，以及伴隨著事件的監聽者。若是沒有事件監聽者，則該事件的觸動就不會形成訊息，例如說一個點擊的動作伴隨著點擊事件監聽者就會形成一個新的訊息，其他類事件亦然。
 
@@ -85,7 +85,7 @@ while (queue.waitForMessage()) {
   }
 ```
 
-### 零延遲（Zero delays）
+### 零延遲（Zero delay）
 
 「零延遲」並非意味著回呼函式（callback function）會在 0 毫秒之後立刻執行。當使用延遲 0 毫秒參數來呼叫 [`setTimeout`](/zh-TW/docs/Web/API/setTimeout) 函式並非是程式會過了該段時間就會執行，而是會參考佇列中等待的訊息數量。
 在下面範例中，「this is just a message」會寫在 setTimeout 的回呼訊息被執行之前，因為該時間段參數是要求執行環境處理所需的最少等待時間，而非一個保證時間。
