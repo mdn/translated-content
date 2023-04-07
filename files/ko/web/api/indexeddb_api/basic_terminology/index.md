@@ -8,7 +8,7 @@ page-type: guide
 
 이 문서에서는 IndexedDB의 주요 특성을 설명하고, IndexedDB API를 이해하는 데 관련된 몇 가지 필수적인 용어를 소개합니다.
 
-유용한 문서들: 
+유용한 문서들:
 
 - API 사용법에 대한 상세한 튜토리얼을 원한다면 [IndexedDB 사용하기](/ko-KR/docs/Web/API/IndexedDB_API/Using_IndexedDB)를 확인해보세요.
 - IndexedDB API의 참조 문서를 원한다면, [IndexedDB API](/ko-KR/docs/Web/API/IndexedDB_API) 문서와 IndexedDB에서 사용되는 객체 타입에 대한 하위 문서들을 확인하세요.
