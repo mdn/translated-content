@@ -1,6 +1,7 @@
 ---
 title: 並行模型和事件循環
-slug: Web/JavaScript/EventLoop
+slug: Web/JavaScript/Event_loop
+original_slug: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}
