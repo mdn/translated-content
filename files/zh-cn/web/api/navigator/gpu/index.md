@@ -11,7 +11,7 @@ slug: Web/API/Navigator/gpu
 
 一个 {{domxref("GPU")}} 对象。
 
-## Examples
+## 示例
 
 ```js
 async function init() {
