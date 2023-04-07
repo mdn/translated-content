@@ -9,7 +9,7 @@ slug: Web/API/WebGL_API/By_example/Hello_GLSL
 
 > **참고:** 이 예시는 대부분 모든 최신의 데스크탑 브라우저에서 동작합니다. 하지만 어떤 모바일 혹은 낡은 브라우저에서는 동작하지 않습니다. 만약 캔버스가 공백인 상태로 남아있다면, 당신은 정확히 똑같은 것을 그리는 다음 예시의 결과를 확인하실 수 있습니다. 하지만 다음으로 넘어가기 전에, 여기서 설명과 코드를 읽고 가는 것을 기억하세요
 
-{{EmbedLiveSample("hello-glsl-source",660,425)}}
+{{EmbedLiveSample("Hello_World_program_in_GLSL",660,425)}}
 
 ### Hello World 프로그램 in GLSL
 
