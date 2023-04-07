@@ -48,7 +48,7 @@ console.log('Elemento removido: ' + shifted);
 
 ### Usando o método shift() dentro de um loop de while
 
-O médodo **`shift()`** é frequentemente usado como condição dentro de um loop de while. No exemplo a seguir, cada iteração removerá o elemento seguinte do array, até que ele esteja vazio:
+O médodo `shift()` é frequentemente usado como condição dentro de um loop de while. No exemplo a seguir, cada iteração removerá o elemento seguinte do array, até que ele esteja vazio:
 
 ```js
 var nomes = ["André", "Eduardo", "Paulo", "Cris", "João"];
