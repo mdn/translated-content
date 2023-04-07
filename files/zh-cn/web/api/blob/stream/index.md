@@ -30,7 +30,7 @@ stream()
 - 调用返回 stream 对象的 {{domxref("ReadableStream.tee", "tee()")}} 方法以准备可读流。该方法会返回一个数组，该数组包含两个新的 `ReadableStream` 对象，每个对象都会返回 `Blob` 的内容。
 - 调用返回 stream 对象的 {{domxref("ReadableStream.pipeThrough", "pipeThrough()")}} 方法，通过一个 {{domxref("TransformStream")}} 对象或其他任意可读可写对传输流对象。
 
-## 标准
+## 规范
 
 {{Specifications}}
 
@@ -38,7 +38,7 @@ stream()
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("Body.body")}}
 - [Streams API](/zh-CN/docs/Web/API/Streams_API)
