@@ -33,7 +33,7 @@ slug: Web/CSS/:invalid
   </div>
 
   <div class="field">
-    <label for="email_input">输入一个电子邮件地址:</label>
+    <label for="email_input">输入一个电子邮件地址：</label>
     <input type="email" id="email_input" required />
   </div>
 </form>
