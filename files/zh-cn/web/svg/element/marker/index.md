@@ -166,21 +166,21 @@ svg {
 - {{SVGAttr("markerHeight")}}
   - : 该属性定义了 marker 视口的高度。*值的类型*：**[\<length>](/zh-CN/docs/Web/SVG/Content_type#长度)**；*默认值*：`3`；*动画*：**有**
 - {{SVGAttr("markerUnits")}}
-  - :该属性为 `markerWidth`、`markerHeight` 和 `<marker>` 的内容定义了坐标系。*值的类型*：`userSpaceOnUse`|`strokeWidth` ；*默认值*：`strokeWidth`；*动画*：**有**
+  - : 该属性为 `markerWidth`、`markerHeight` 和 `<marker>` 的内容定义了坐标系。*值的类型*：`userSpaceOnUse`|`strokeWidth` ；*默认值*：`strokeWidth`；*动画*：**有**
 - {{SVGAttr("markerWidth")}}
-  - :该属性定义了 marker 视图的宽度。*值的类型*：**[\<length>](/zh-CN/docs/Web/SVG/Content_type#长度)** ；*默认值*：`3`；*动画*：**有**
+  - : 该属性定义了 marker 视图的宽度。*值的类型*：**[\<length>](/zh-CN/docs/Web/SVG/Content_type#长度)** ；*默认值*：`3`；*动画*：**有**
 - {{SVGAttr("orient")}}
-  - :该属性定义了 marker 相对于它所附着到形状的方向。*值的类型*：`auto`|`auto-start-reverse`|**[\<angle>](/zh-CN/docs/Web/SVG/Content_type#角度)** ；*默认值*：`0`；*动画*：**有**
+  - : 该属性定义了 marker 相对于它所附着到形状的方向。*值的类型*：`auto`|`auto-start-reverse`|**[\<angle>](/zh-CN/docs/Web/SVG/Content_type#角度)** ；*默认值*：`0`；*动画*：**有**
 - {{SVGAttr("preserveAspectRatio")}}
-  - :该属性定义了 svg 片段在嵌入具有不同宽高比例的容器中应该如何变形。*值的类型*：(`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ；*默认值*：`xMidYMid meet`；*动画*：**有**
+  - : 该属性定义了 svg 片段在嵌入具有不同宽高比例的容器中应该如何变形。*值的类型*：(`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ；*默认值*：`xMidYMid meet`；*动画*：**有**
 - {{SVGAttr("refX")}}
-  - :该属性定义了标记参考点的 x 的坐标。
+  - : 该属性定义了标记参考点的 x 的坐标。
     *值的类型*：`left`|`center`|`right`|**[\<coordinate>](/zh-CN/docs/Web/SVG/Content_type#坐标)** ；*默认值*：`0`；*动画*：**有**
 - {{SVGAttr("refY")}}
-  - :该属性定义了标记参考点的 y 的坐标。
+  - : 该属性定义了标记参考点的 y 的坐标。
     *值的类型*：`top`|`center`|`bottom`|**[\<coordinate>](/zh-CN/docs/Web/SVG/Content_type#坐标)** ；*默认值*：`0`；*动画*：**有**
 - {{SVGAttr("viewBox")}}
-  - :该属性定义了当前 SVG 片段的 SVG 视口边界。
+  - : 该属性定义了当前 SVG 片段的 SVG 视口边界。
     *值的类型*：**[\<list-of-numbers>](/zh-CN/docs/Web/SVG/Content_type#t值数列)** ；*默认值*：none；*动画*：**有**
 
 ### 全局属性
