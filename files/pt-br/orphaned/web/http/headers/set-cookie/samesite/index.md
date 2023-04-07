@@ -1,6 +1,7 @@
 ---
 title: SameSite cookies
-slug: Web/HTTP/Headers/Set-Cookie/SameSite
+slug: orphaned/Web/HTTP/Headers/Set-Cookie/SameSite
+original_slug: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
 
 O atributo **`SameSite`** do {{HTTPHeader("Set-Cookie")}} . O cabeçalho de resposta HTTP permite que você declare se o seu cookie deve ser restrito a um contexto de primeira ou mesma parte.
