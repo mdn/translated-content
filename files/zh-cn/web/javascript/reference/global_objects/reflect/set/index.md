@@ -34,7 +34,7 @@ Reflect.set(target, propertyKey, value[, receiver])
 
 ## 描述
 
-`Reflect.set` 方法允许你在对象上设置属性。它的作用是给属性赋值并且就像 [property accessor](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 语法一样，但是它是以函数的方式。
+`Reflect.set` 方法允许你在对象上设置属性。它的作用是给属性赋值并且就像 [property accessor](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 语法一样，但是它是以函数的方式。
 
 ## 示例
 
@@ -73,4 +73,4 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 ## 相关链接
 
 - {{jsxref("Reflect")}}
-- [Property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)
