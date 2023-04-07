@@ -6,7 +6,7 @@ original_slug: Web/Progressive_web_apps/Loading
 
 {{PWASidebar}} {{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-在前面的文章我们介绍了很多 API，例如：[Service Workers](en-US/docs/Web/Apps/Progressive/Offline_Service_workers),、[Web Manifests](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)、[Notifications and Push](/zh-CN/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)，它们让我们的示例应用 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 成为一个渐进式 Web 应用。在这篇文章里我们将会更进一步，使用资源渐进式加载来提高整个应用的性能。
+在前面的文章我们介绍了很多 API，例如：[Service Worker](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)、[Web 应用程序清单](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)、[通知和推送](/zh-CN/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)，它们让我们的示例应用 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 成为一个渐进式 Web 应用。在这篇文章里我们将会更进一步，使用资源渐进式加载来提高整个应用的性能。
 
 ## 首次有效渲染
 

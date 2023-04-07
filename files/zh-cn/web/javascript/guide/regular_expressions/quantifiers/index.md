@@ -181,7 +181,7 @@ console.log(text.match(nonGreedyRegexp));
 // The match is the smallest one possible
 ```
 
-## See also
+## 参见
 
 - [Regular expressions guide](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 

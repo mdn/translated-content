@@ -24,7 +24,7 @@ RegExp(pattern[, flags])
 ### 参数
 
 - `pattern`
-  - : 正则表达式的文本。从 ES5 开始，这也可以是另一个`RegExp`对象或文字 (仅用于两个 RegExp 构造函数符号)。模式可以包含[特殊字符](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#使用特殊字符)来匹配比字面值字符串更广泛的值范围。
+  - : 正则表达式的文本。从 ES5 开始，这也可以是另一个 `RegExp` 对象或文字（仅用于两个 RegExp 构造函数符号）。模式可以包含[特殊字符](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#使用特殊字符)来匹配比字面值字符串更广泛的值范围。
 - `flags`
 
   - : 如果指定，`flags` 是包含要添加的标志的字符串。

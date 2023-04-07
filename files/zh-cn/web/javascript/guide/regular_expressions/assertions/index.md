@@ -224,7 +224,7 @@ let fruitsStartsWithA = fruits.filter(fruit => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-在第二个示例中，^用于在输入的开始处匹配，以及在内部使用时用于创建否定或被补充的字符集 [组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges).
+在第二个示例中，^用于在输入的开始处匹配，以及在内部使用时用于创建否定或被补充的字符集[组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)。
 
 ```plain
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -273,7 +273,7 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 
 ### 不同含义的'?!'：断言和范围的组合用法
 
-不同含义的`?!` 结合使用 [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) `/x(?!y)/` 和 [范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges) `[^?!]`.
+不同含义的 `?!` 结合使用[断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) `/x(?!y)/` 和[范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges) `[^?!]`。
 
 ```plain
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";

@@ -110,10 +110,10 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 概述：[处理对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects)
 
-- [对象和属性](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%B1%9E%E6%80%A7_2)
-- [创建对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#%E5%88%9B%E5%BB%BA%E6%96%B0%E5%AF%B9%E8%B1%A1)
-- [定义方法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95)
-- [getter 和 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#%E5%AE%9A%E4%B9%89_getters_%E4%B8%8E_setters)
+- [对象和属性](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)
+- [创建对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#创建新对象)
+- [定义方法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义方法)
+- [getter 和 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getters_与_setters)
 
 ## 对象模型的细节
 
