@@ -28,7 +28,7 @@ slug: Web/CSS/:invalid
 ```html
 <form>
   <div class="field">
-    <label for="url_input">输入一个 URL:</label>
+    <label for="url_input">输入一个 URL：</label>
     <input type="url" id="url_input" />
   </div>
 
