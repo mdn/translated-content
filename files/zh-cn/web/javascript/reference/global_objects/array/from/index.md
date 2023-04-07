@@ -49,7 +49,7 @@ Array.from(arrayLike, mapFn, thisArg)
 
 > **备注：** 此行为对于[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)更为重要，因为中间数组的值必须被截断，以适应相应的类型。`Array.from()` 的实现与 {{jsxref("TypedArray.from()")}} 具有相同的签名。
 
-`Array.from()` 方法是一个通用的工厂方法。例如，如果一个 `Array` 的子类继承 `from()` 方法，继承的 `from()` 方法将返回新的子类的实例，而不是 `Array` 的实例。事实上，`this` 值可以是任意的构造函数，只要该构造函数接受一个表示新数组长度的单个参数。当一个迭代器对象作为类数组传递时，不带参数调用构造函数；当传递类数组对象时，将携带类数组对象的[规范化长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度属性的规范化)调用构造函数。迭代完成时，将再次设置最终的 `length`。如果 `this` 值并不是构造函数，则使用 `Array` 构造函数。
+`Array.from()` 方法是一个通用的工厂方法。例如，如果一个数组类的子类继承 `from()` 方法，继承的 `from()` 方法将返回新的子类的实例，而不是数组的实例。事实上，`this` 值可以是任意的构造函数，只要该构造函数接受一个表示新数组长度的单个参数。当一个迭代器对象作为类数组传递时，不带参数调用构造函数；当传递类数组对象时，将携带类数组对象的[规范化长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度属性的规范化)调用构造函数。迭代完成时，将再次设置最终的 `length`。如果 `this` 值并不是构造函数，则使用 `Array` 构造函数。
 
 ## 示例
 
@@ -166,7 +166,7 @@ console.log(Array.from.call(NotArray, { length: 1, 0: "foo" }));
 // NotArray { '0': 'foo', length: 1 }
 ```
 
-当 `this` 值不是构造函数，返回一个普通的 `Array` 对象。
+当 `this` 值不是构造函数，返回一个普通的数组对象。
 
 ```js
 console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
