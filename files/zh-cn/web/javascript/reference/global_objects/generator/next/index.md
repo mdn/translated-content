@@ -80,4 +80,4 @@ g.next(2);
 ## 相关链接
 
 - [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iterators and generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)

@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 original_slug: Web/Progressive_web_apps/App_structure
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+{{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
 现在，我们已经知道了 PWA 背后的原理，让我们来看一个推荐的 PWA 结构，这个案例来自一个真实的应用。我们从分析 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 这个应用开始：为什么它要这样构建？这样做又有什么好处？
 
@@ -29,7 +29,7 @@ App Shell 概念试图尽快加载最小用户界面，然后缓存它，以便�
 
 ### 我为什么要用它？
 
-这种架构允许网站从 PWA 功能中获益最多：它可以缓存 App Shell 并以提升大量性能的方式管理动态内容。除了基本外壳之外，您还可以添加其他功能，例如[添加到主屏幕](/zh-CN/docs/Web/Apps/Progressive/Add_to_home_screen)或[推送通知](/zh-CN/docs/Web/API/Push_API)。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。
+这种架构允许网站从 PWA 功能中获益最多：它可以缓存 App Shell 并以提升大量性能的方式管理动态内容。除了基本外壳之外，您还可以添加其他功能，例如[添加到主屏幕](/zh-CN/docs/Web/Apps/Progressive/Guides/Making_PWAs_installable)或[推送通知](/zh-CN/docs/Web/API/Push_API)。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。
 
 在不妥协 web 优势的前提下，网站感觉就像一个原生应用，交互及时、性能可靠。
 
@@ -288,6 +288,4 @@ var games = [
 
 下一篇文章中，我们会探讨更多的细节：Service Worker 如何帮助我们缓存 App Shell 和内容，从而让我们实现离线功能。
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Introduction", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

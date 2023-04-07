@@ -52,6 +52,6 @@ console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation
 
 ## 参见
 
-- [在 JavaScript 中使用正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [在 JavaScript 中使用正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}

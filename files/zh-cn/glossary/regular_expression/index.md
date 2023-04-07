@@ -17,4 +17,4 @@ slug: Glossary/Regular_expression
 
 ### 技术参考
 
-- [在 JavaScript 中写正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [在 JavaScript 中写正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)

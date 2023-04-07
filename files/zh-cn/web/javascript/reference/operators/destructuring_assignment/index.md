@@ -558,7 +558,7 @@ console.log(fizzBuzz); // true
 
 ### 解构基本类型
 
-对象解构几乎等同于[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)。这意味着，如果尝试解构基本类型的值，该值将被包装到相应的包装器对象中，并且在包装器对象上访问该属性。
+对象解构几乎等同于[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)。这意味着，如果尝试解构基本类型的值，该值将被包装到相应的包装器对象中，并且在包装器对象上访问该属性。
 
 ```js
 const { a, toFixed } = 1;

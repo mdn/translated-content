@@ -65,4 +65,4 @@ After:              10100000000000000110000000000001
 
 ## 参见
 
-- [JavaScript 指南：位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#位运算符)
+- [JavaScript 指南：位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)

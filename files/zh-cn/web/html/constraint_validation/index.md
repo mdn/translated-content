@@ -57,7 +57,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         <code>text</code>、<code>search</code>、<code>url</code>、<code>tel</code>、<code>email</code>、<code>password</code>
       </td>
       <td>
-        一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions"
+        一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions"
           >JavaScript 正则表达式</a
         >（以 {{jsxref("RegExp.global", "global")}}、{{jsxref("RegExp.ignoreCase", "ignoreCase")}} 标志编译，且<em>禁用</em>了 {{jsxref("RegExp.multiline", "multiline")}} 标志）
       </td>

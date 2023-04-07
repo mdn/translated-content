@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 original_slug: Web/Progressive_web_apps/Loading
 ---
 
-{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
+{{PWASidebar}} {{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
 在前面的文章我们介绍了很多 API，例如：[Service Workers](en-US/docs/Web/Apps/Progressive/Offline_Service_workers),、[Web Manifests](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)、[Notifications and Push](/zh-CN/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)，它们让我们的示例应用 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 成为一个渐进式 Web 应用。在这篇文章里我们将会更进一步，使用资源渐进式加载来提高整个应用的性能。
 
@@ -156,6 +156,4 @@ if('IntersectionObserver' in window) {
 
 请随意试验这些代码，使用 PWA 的特性来让你现有的应用更加健壮，或者创作出一点新东西。相对于常规的 Web 应用，PWA 存在巨大的优势。
 
-{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
