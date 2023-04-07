@@ -1,7 +1,6 @@
 ---
 title: 模板字符串
 slug: Web/JavaScript/Reference/Template_literals
-original_slug: Web/JavaScript/Reference/template_strings
 ---
 
 {{JsSidebar("More")}}
@@ -37,7 +36,7 @@ tagFunction`string text ${expression} string text`
 模板字面量用反引号（`` ` ``）括起来，而不是双引号（`"`）或单引号（`'`）。
 除了普通字符串外，模板字面量还可以包含*占位符*——一种由美元符号和大括号分隔的嵌入式表达式：`${expression}`。字符串和占位符被传递给一个函数（要么是默认函数，要么是自定义函数）。默认函数（当未提供自定义函数时）只执行[字符串插值](#字符串插值)来替换占位符，然后将这些部分拼接到一个字符串中。
 
-若要提供自定义函数，需在模板字面量之前加上函数名（结果被称为[带标签的模板](#带标签的模板)）。此时，模板字面量被传递给你的标签函数，然后就可以在那里对模板文本的不同部分执行任何操作。
+若要提供自定义函数，需在模板字面量之前加上函数名（结果被称为[**带标签的模板**](#带标签的模板)）。此时，模板字面量被传递给你的标签函数，然后就可以在那里对模板文本的不同部分执行任何操作。
 
 若要转义模板字面量中的反引号（`` ` ``），需在反引号之前加一个反斜杠（`\`）。
 
@@ -53,7 +52,7 @@ tagFunction`string text ${expression} string text`
 
 ### 多行字符串
 
-在源码中（译注：指在 ` `` ` 所包裹的范围内）插入的任何换行符都是模板字面量的一部分。
+在源码中插入的任何换行符都是模板字面量的一部分。
 
 使用普通字符串，可以通过下面的方式得到多行字符串：
 
@@ -97,34 +96,36 @@ not ${2 * a + b}.`);
 // not 20."
 ```
 
-注意，这两种语法有一点小区别：模板字面量直接将其表达式[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，而加法则会先强制转换为原语类型。更多相关信息，参见[加法（`+`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)。
+注意，这两种语法有一点小区别：模板字面量直接将其表达式[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，而加法则会先强制转换为原语类型。更多相关信息，参见[加法（`+`）运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)。
 
 ### 嵌套模板
 
-[字符串插值](#字符串插值)语法是可递归的，即，可以在模板字面量的占位符 `${expression}` 中继续写模板字面量。在某些情况下，嵌套模板是具有可配置字符串的最简单的（也许还是更可读的）方法。例如，不用模板字面量的情况下，如果你想根据特定条件返回某个值，可以执行以下操作：
+在某些情况下，嵌套模板是具有可配置字符串的最简单的（也许还是更可读的）方法。在反引号分隔的模板中，允许在占位符 `${expression}` 中使用内层的反引号。
+
+例如，不用模板字面量的情况下，如果你想根据特定条件返回某个值，可以执行以下操作：
 
 ```js example-bad
-var classes = 'header'
-classes += (isLargeScreen()
-  ? ''
+let classes = "header";
+classes += isLargeScreen()
+  ? ""
   : item.isCollapsed
-  ? ' icon-expander'
-  : ' icon-collapser');
+  ? " icon-expander"
+  : " icon-collapser";
 ```
 
-用模板字面量但不能嵌套时：
+用模板字面量但不嵌套时，你可以这么做：
 
 ```js example-bad
 const classes = `header ${
-  isLargeScreen() ? '' : (item.isCollapsed ? 'icon-expander' : 'icon-collapser')
+  isLargeScreen() ? "" : item.isCollapsed ? "icon-expander" : "icon-collapser"
 }`;
 ```
 
-用模板字面量并可以嵌套时：
+用嵌套模板字面量时，你可以这么做：
 
 ```js example-good
 const classes = `header ${
-  isLargeScreen() ? '' : `icon-${item.isCollapsed ? 'expander' : 'collapser'}`
+  isLargeScreen() ? "" : `icon-${item.isCollapsed ? "expander" : "collapser"}`
 }`;
 ```
 
@@ -133,37 +134,33 @@ const classes = `header ${
 *带标签的*模板是模板字面量的一种更高级的形式，它允许你使用函数解析模板字面量。标签函数的第一个参数包含一个字符串数组，其余的参数与表达式相关。你可以用标签函数对这些参数执行任何操作，并返回被操作过的字符串（或者，也可返回完全不同的内容，见下面的示例）。用作标签的函数名没有限制。
 
 ```js
-let person = 'Mike';
-let age = 28;
+const person = "Mike";
+const age = 28;
 
 function myTag(strings, personExp, ageExp) {
-  let str0 = strings[0]; // "That "
-  let str1 = strings[1]; // " is a "
-  let str2 = strings[2]; // "."
+  const str0 = strings[0]; // "That "
+  const str1 = strings[1]; // " is a "
+  const str2 = strings[2]; // "."
 
-  let ageStr;
-  if (ageExp > 99){
-    ageStr = 'centenarian';
-  } else {
-    ageStr = 'youngster';
-  }
+  const ageStr = ageExp > 99 ? "centenarian" : "youngster";
 
-  // We can even return a string built using a template literal
+  // 我们甚至可以返回使用模板字面量构建的字符串
   return `${str0}${personExp}${str1}${ageStr}${str2}`;
 }
 
-let output = myTag`That ${ person } is a ${ age }.`;
+const output = myTag`That ${person} is a ${age}.`;
 
 console.log(output);
 // That Mike is a youngster.
 ```
 
-标签不必是普通的标识符，你可以使用任何[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#汇总表)大于 16 的表达式，包括[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)、函数调用、[new 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，甚至其他标签的模板字面量。
+标签不必是普通的标识符，你可以使用任何[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#汇总表)大于 16 的表达式，包括[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)、函数调用、[new 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，甚至其他带标签的模板字面量。
 
 ```js
 console.log`Hello`; // [ 'Hello' ]
 console.log.bind(1, 2)`Hello`; // 2 [ 'Hello' ]
 new Function("console.log(arguments)")`Hello`; // [Arguments] { '0': [ 'Hello' ] }
+
 function recursive(strings, ...values) {
   console.log(strings, values);
   return recursive;
@@ -173,7 +170,7 @@ recursive`Hello``World`;
 // [ 'World' ] []
 ```
 
-虽然语法可行，但*不带标签的*模板字面量是字符串，并且在链式调用时会抛出 {{jsxref("TypeError")}}。
+虽然语法从技术上允许这么做，但*不带标签的*模板字面量是字符串，并且在链式调用时会抛出 {{jsxref("TypeError")}}。
 
 ```js
 console.log(`Hello``World`); // TypeError: "Hello" is not a function
@@ -189,7 +186,7 @@ console?.log`Hello`; // SyntaxError: Invalid tagged template on optional chain
 请注意，这两个表达式仍然是可解析的。这意味着它们将不受[自动分号补全](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)的影响，其只会插入分号来修复无法解析的代码。
 
 ```js example-bad
-// Still a syntax error
+// 仍是语法错误
 const a = console?.log
 `Hello`
 ```
@@ -211,8 +208,8 @@ function template(strings, ...keys) {
 
 const t1Closure = template`${0}${1}${0}!`;
 // const t1Closure = template(["","","","!"],0,1,0);
-
 t1Closure("Y", "A"); // "YAY!"
+
 const t2Closure = template`${0} ${"foo"}!`;
 // const t2Closure = template([""," ","!"],0,"foo");
 t2Closure("Hello", { foo: "World" }); // "Hello World!"
@@ -258,7 +255,7 @@ tag`string text line 1 \n string text line 2`;
 // including the two characters '\' and 'n'
 ```
 
-另外，使用{{jsxref("String.raw()")}} 方法创建原始字符串和使用默认模板函数和字符串连接创建是一样的。
+另外，使用 {{jsxref("String.raw()")}} 方法创建原始字符串和使用默认模板函数和字符串连接创建是一样的。
 
 ```js
 let str = String.raw`Hi\n${2+3}!`;
@@ -285,7 +282,7 @@ console.log(identity`Hi\n${2 + 3}!`);
 
 ```js
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
-// Some formatters will format this literal's content as HTML
+// 一些格式化程序会将此字面量的内容格式化为 HTML
 const doc = html`<!DOCTYPE html>
   <html lang="en-US">
     <head>
