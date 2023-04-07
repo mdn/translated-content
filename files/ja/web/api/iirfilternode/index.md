@@ -2,12 +2,12 @@
 title: IIRFilterNode
 slug: Web/API/IIRFilterNode
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("Web Audio API")}}
 
-**IIRFilterNode`** は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、{{domxref("AudioNode")}} プロセッサーであり、一般の **[無限インパルス応答](https://ja.wikipedia.org/wiki/無限インパルス応答)** (IIR) フィルターを実装します。この種類のフィルターは、トーンコントロール機器やグラフィックイコライザーを実装するためにも使用することができます。フィルター応答の引数を指定しますので、必要に応じてチューニングすることができます。
+**`IIRFilterNode`** は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、{{domxref("AudioNode")}} プロセッサーであり、一般の **[無限インパルス応答](https://ja.wikipedia.org/wiki/無限インパルス応答)** (IIR) フィルターを実装します。この種類のフィルターは、トーンコントロール機器やグラフィックイコライザーを実装するためにも使用することができます。フィルター応答の引数を指定しますので、必要に応じてチューニングすることができます。
 
 {{InheritanceDiagram}}
 
