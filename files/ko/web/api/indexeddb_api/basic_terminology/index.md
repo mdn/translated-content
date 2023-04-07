@@ -11,9 +11,9 @@ l10n:
 
 유용한 문서들:
 
-- API 사용법에 대한 상세한 튜토리얼을 원한다면 [IndexedDB 사용하기](/ko-KR/docs/Web/API/IndexedDB_API/Using_IndexedDB)를 확인해보세요.
-- IndexedDB API의 참조 문서를 원한다면, [IndexedDB API](/ko-KR/docs/Web/API/IndexedDB_API) 문서와 IndexedDB에서 사용되는 객체 타입에 대한 하위 문서들을 확인하세요.
-- 브라우저가 어떻게 백그라운드에서 데이터를 저장하는지에 대한 더 자세한 정보는 [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)에서 확인하세요.
+- API 사용법에 대한 상세한 튜토리얼을 원한다면 [IndexedDB 사용하기](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB)를 확인해보세요.
+- IndexedDB API의 참조 문서를 원한다면, [IndexedDB API](/ko/docs/Web/API/IndexedDB_API) 문서와 IndexedDB에서 사용되는 객체 타입에 대한 하위 문서들을 확인하세요.
+- 브라우저가 어떻게 백그라운드에서 데이터를 저장하는지에 대한 더 자세한 정보는 [Browser storage quotas and eviction criteria](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)에서 확인하세요.
 
 ## 주요 특성
 
