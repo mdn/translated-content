@@ -184,6 +184,6 @@ API
 
   - [Web Worker API](/zh-CN/docs/Web/API/Web_Workers_API)
 
-- [PWA](/zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers)
+- [PWA](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
 - [缓存](/zh-CN/docs/Web/HTTP/Caching)
 - 内容分发网络（CDN）

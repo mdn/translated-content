@@ -73,9 +73,9 @@ JavaScript 的核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/
   - : 基于原型继承被外界广泛地误解与低估，这一版块对基于原型的继承作了阐述。
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
   - : Javascript 类型化数组提供了操作原始二进制数据的机制。
-- [内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)
+- [内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)
   - : JavaScript 中的内存生命周期和垃圾回收机制。
-- [并发模型以及事件循环](/zh-CN/docs/Web/JavaScript/EventLoop)
+- [并发模型以及事件循环](/zh-CN/docs/Web/JavaScript/Event_loop)
   - : JavaScript 具有基于“事件循环”的并发模型。
 
 ## 参考
@@ -85,7 +85,7 @@ JavaScript 的核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/
 - [标准对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)
   - : 例如 {{jsxref("Array")}}、{{jsxref("Boolean")}}、{{jsxref("Date")}}、{{jsxref("Error")}}、{{jsxref("Function")}}、{{jsxref("JSON")}}、{{jsxref("Math")}}、{{jsxref("Number")}}、{{jsxref("Object")}}、{{jsxref("RegExp")}}、{{jsxref("String")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}} 、{{jsxref("WeakSet")}} 等标准内置对象。
 - [表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)
-  - : 运算符的作用{{jsxref("Operators/instanceof", "instanceof")}}、{{jsxref("Operators/typeof", "typeof")}}、{{jsxref("Operators/new", "new")}}、{{jsxref("Operators/this", "this")}}，[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)，以及其他运算符。
+  - : 运算符的作用{{jsxref("Operators/instanceof", "instanceof")}}、{{jsxref("Operators/typeof", "typeof")}}、{{jsxref("Operators/new", "new")}}、{{jsxref("Operators/this", "this")}}，[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)，以及其他运算符。
 - [语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements)
   - : 了解 {{jsxref("Statements/do...while", "do-while")}}、{{jsxref("Statements/for...in", "for-in")}}、{{jsxref("Statements/for...of", "for-of")}}、{{jsxref("Statements/try...catch", "try-catch")}}、{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/var", "var")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/if...else", "if-else")}}、{{jsxref("Statements/switch", "switch")}} 以及其他语句和关键字的作用。
 - [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)

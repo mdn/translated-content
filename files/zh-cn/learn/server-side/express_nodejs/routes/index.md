@@ -137,7 +137,7 @@ router.post('/about', (req, res) => {
 - `*`：星号可以替换为任意字符串。例如，路由路径 `'/ab*cd'` 匹配端点 `abcd`、`abXcd`、`abSOMErandomTEXTcd`，等。
 - `()`：将一个字符串视为一体以执行 `?`、`+`、`*` 操作。例如。 `'/ab(cd)?e'` 将对 `(cd)` 进行匹配，将匹配到 `abe` 和 `abcde`。
 
-路由路径也可以是 JavaScript [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。例如，下面的路由路径将匹配 `catfish` 和 `dogfish`，但不会匹配 `catflap`、`catfishhead` 等。注意，正则表达式路径不再用引号 `"..."` 括起来，而是正则表达式语法 `/.../`。
+路由路径也可以是 JavaScript [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。例如，下面的路由路径将匹配 `catfish` 和 `dogfish`，但不会匹配 `catflap`、`catfishhead` 等。注意，正则表达式路径不再用引号 `"..."` 括起来，而是正则表达式语法 `/.../`。
 
 ```js
 app.get(/.*fish$/, (req, res) => {

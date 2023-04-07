@@ -1,9 +1,10 @@
 ---
 title: 让 PWA 易于安装
-slug: Web/Progressive_web_apps/Installable_PWAs
+slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+original_slug: Web/Progressive_web_apps/Installable_PWAs
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
+{{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
 在上一篇文章，我们了解了如何通过 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 让 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 离线工作。我们还可以更进一步，让用户如同本地应用一样在支持的移动浏览器上安装 web 应用。这篇文章讲述如何通过网页清单和添加到主屏特性来做到这一点。
 
@@ -13,7 +14,7 @@ slug: Web/Progressive_web_apps/Installable_PWAs
 
 可安装网站需要满足以下条件：
 
-- 一份网页清单，填好[正确的字段](/zh-CN/Apps/Progressive/Add_to_home_screen#Manifest)
+- 一份网页清单，填好[正确的字段](/zh-CN/Apps/Progressive/Guides/Making_PWAs_installable#manifest)
 - 网站的协议必须是安全的（即使用 HTTPS 协议）
 - 一个在设备上代表应用的图标
 - 一个注册好的 Service Worker，可以让应用离线工作（这仅对于安卓设备上的 Chrome 浏览器是必需的）
@@ -106,10 +107,8 @@ slug: Web/Progressive_web_apps/Installable_PWAs
 
 在本文中，我们学习了如何使用网页清单和安装到主屏特性让 PWA 可安装。
 
-为了获得添加到主屏的更多信息，请阅读[添加到主屏指南](/zh-CN/docs/Web/Apps/Progressive/Add_to_home_screen)。浏览器支持当前限于 Android 平台上的 Firefox 58+、Mobile Chrome、Android Webview 31+ 以及 Android Opera 32+, 但是将来这些限制的影响会逐渐减小。
+为了获得添加到主屏的更多信息，请阅读[添加到主屏指南](/zh-CN/docs/Web/Apps/Progressive/Guides/Making_PWAs_installable)。浏览器支持当前限于 Android 平台上的 Firefox 58+、Mobile Chrome、Android Webview 31+ 以及 Android Opera 32+, 但是将来这些限制的影响会逐渐减小。
 
 现在让我们将目光转移到 PWA 的最后一个难点：通过推送通知再次启动（re-engagement）。
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

@@ -75,5 +75,5 @@ a >>> b
 
 ## 参见
 
-- [JS 指南：位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#位运算符)
+- [JS 指南：位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
 - [无符号右移赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

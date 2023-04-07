@@ -1,7 +1,7 @@
 ---
 title: 添加到主屏幕
-slug: Web/Progressive_web_apps/Add_to_home_screen
-original_slug: Web/Progressive_web_apps/添加到主屏幕
+slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
+original_slug: Web/Progressive_web_apps/Add_to_home_screen
 ---
 
 添加到主屏幕（Add to Home Screen，简称 A2HS）是现代智能手机浏览器中的一项功能，使开发人员可以轻松便捷地将自己喜欢的 Web 应用程序（或网站）的快捷方式添加到主屏幕中，以便用户随后可以通过单击访问它。本指南说明了 A2HS 的使用方式，以及作为开发人员为使用户能利用 A2HS 所需做的事情。
