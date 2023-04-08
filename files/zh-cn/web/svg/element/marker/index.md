@@ -186,7 +186,7 @@ svg {
 ### 全局属性
 
 - [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
-  - : 最重要地：{{SVGAttr('id')}}、{{SVGAttr('tabindex')}}
+  - : 最重要的：{{SVGAttr('id')}}、{{SVGAttr('tabindex')}}
 - [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
 - [条件处理属性](/zh-CN/docs/Web/SVG/Attribute/Conditional_Processing)
