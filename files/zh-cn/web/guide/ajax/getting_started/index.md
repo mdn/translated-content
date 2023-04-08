@@ -1,5 +1,5 @@
 ---
-title: AJAX 入门
+title: 开始使用
 slug: Web/Guide/AJAX/Getting_Started
 ---
 
