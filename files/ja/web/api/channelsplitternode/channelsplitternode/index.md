@@ -3,7 +3,7 @@ title: "ChannelSplitterNode: ChannelSplitterNode() コンストラクター"
 short-title: ChannelSplitterNode()
 slug: Web/API/ChannelSplitterNode/ChannelSplitterNode
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: 670f9e44920895045984a458dcd4cae0304e2fe3
 ---
 
 {{APIRef("Web Audio API")}}
