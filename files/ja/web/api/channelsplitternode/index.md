@@ -2,7 +2,7 @@
 title: ChannelSplitterNode
 slug: Web/API/ChannelSplitterNode
 l10n:
-  sourceCommit: fa1301aead2cee37516b7ad5a5ec2fb21e004227
+  sourceCommit: cf2b7261998f53f10775c1913c3e36cb8a6ced46
 ---
 
 {{APIRef("Web Audio API")}}
