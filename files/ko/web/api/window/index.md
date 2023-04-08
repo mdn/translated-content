@@ -36,7 +36,7 @@ l10n:
 - {{domxref("crypto_property", "Window.crypto")}} {{readOnlyInline}}
   - : 브라우저 암호화 객체를 반환합니다.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : 새로운 [사용자 정의 요소](/ko/docs/Web/Web_Components/Using_custom_elements)를 등록하거나, 이전에 등록한 요소에 대한 정보를 얻을 수 있는 {{domxref("CustomElementRegistry")}} 객체를 반환합니다.
+  - : 새로운 [사용자 정의 요소](/ko/docs/Web/Web_Components/Using_custom_elements)를 등록하거나 이전에 등록한 요소에 대한 정보를 얻을 수 있는, {{domxref("CustomElementRegistry")}} 객체의 참조를 반환합니다.
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
   - : 현재 화면에서의 물리적 픽셀과 CSS 픽셀의 비율을 반환합니다.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
