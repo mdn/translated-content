@@ -177,10 +177,10 @@ method(callbackFn, thisArg)
 
 所有迭代方法都是[复制方法](#复制方法和修改方法)和[通用方法](#通用数组方法)，尽管它们在处理[空槽](#数组方法和空槽)时的行为不同。
 
-以下方法是是迭代方法：
+以下方法是迭代方法：
 
 - {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}#
+- {{jsxref("Array/filter", "filter()")}}
 - {{jsxref("Array/find", "find()")}}
 - {{jsxref("Array/findIndex", "findIndex()")}}
 - {{jsxref("Array/findLast", "findLast()")}}
