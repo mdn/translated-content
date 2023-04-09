@@ -1,8 +1,6 @@
 ---
 title: 文字クラス
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-l10n:
-  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
 {{JSSidebar("JavaScript Guide")}}
