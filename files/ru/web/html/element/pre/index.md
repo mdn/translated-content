@@ -11,26 +11,26 @@ translation_of: Web/HTML/Element/pre
 
 {{HTMLSidebar}}
 
-**Элемент HTML `<pre>` **представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле. Текст обычно отображается с использованием непропорционального ("[monospace](/ru/docs/XUL/Style/monospace)") шрифта. Пробелы внутри этого элемента отображаются как записанные.
+**Элемент HTML `<pre>`** представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле. Текст обычно отображается с использованием непропорционального ("[monospace](/ru/docs/XUL/Style/monospace)") шрифта. Пробелы внутри этого элемента отображаются как записанные.
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), [Явный контент](/ru/docs/Web/Guide/HTML/Content_categories#%D0%AF%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82) |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                              | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content)                                                                                                                                                                                                     |
-| Tag omission                                                     | {{no_tag_omission}}                                                                                                                                                                                                                                                            |
-| Разрешённые родители                                             | Любой элемент, который принимает [содержимое потока](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA)                                                                                                    |
-| Неявная роль ARIA                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                              |
-| Разрешённые роли ARIA                                            | Любые                                                                                                                                                                                                                                                                               |
-| Интерфейс DOM                                                    | {{domxref("HTMLPreElement")}}                                                                                                                                                                                                                                            |
+| Допустимое содержимое                                            | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content)                                                                                                                                                                                                     |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                            |
+| Допустимые родители                                              | Любой элемент, который принимает [содержимое потока](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA)                                                                                                    |
+| Неявные ARIA-роли                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                              |
+| Допустимые ARIA-роли                                             | Любые                                                                                                                                                                                                                                                                               |
+| DOM-интерфейс                                                    | {{domxref("HTMLPreElement")}}                                                                                                                                                                                                                                            |
 
 ## Атрибуты
 
 Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cols")}} {{non-standard_inline}}{{obsolete_inline}}
+- {{htmlattrdef("cols")}} {{non-standard_inline}}
   - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Это был нестандартный синоним {{htmlattrxref("width", "pre")}}. Чтобы добиться такого эффекта, используйте CSS {{Cssxref("width")}}.
-- {{htmlattrdef("width")}} {{obsolete_inline}}
+- {{htmlattrdef("width")}}
   - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Хотя технически он все ещё реализован, этот атрибут не имеет визуального эффекта; чтобы достичь такого эффекта, используйте CSS {{Cssxref("width")}}.
 - {{htmlattrdef("wrap")}} {{non-standard_inline}}
   - : Подсказка, указывающая, как должен происходить перенос. В современных браузерах этот атрибут игнорируется, и никакого визуального эффекта не приводит; чтобы достичь такого эффекта, используйте CSS {{Cssxref("white-space")}}.

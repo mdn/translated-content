@@ -36,7 +36,7 @@ translation_of: Web/SVG/Attribute/stroke
 #### Пример 2: Нарисуйте чёрный круг с синей рамкой используя stroke
 
 ```html
-​​<svg height="100" width="100">
+<svg height="100" width="100">
     <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill="black" />
 </svg>
 ```

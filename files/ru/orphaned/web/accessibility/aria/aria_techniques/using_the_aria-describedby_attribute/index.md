@@ -60,11 +60,11 @@ return you back to the main page</div>
 
 - Атрибут `aria-describedby` не предназначен для ссылки, описывающей внешний ресурс - так как это ID, он должен ссылаться на элемент в том же документе DOM.
 
-### Использование ARIA ролей
+### Использование ARIA-ролей
 
 все элементы базовой разметки
 
-### Связанные ARIA методы
+### Связанные ARIA-методы
 
 - [Using the aria-labelledby attribute](/en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute")
 

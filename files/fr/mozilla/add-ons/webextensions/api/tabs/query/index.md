@@ -151,9 +151,9 @@ querying.then(logTabs, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.query")}}
+{{Compat}}
 
 > **Note :**
 >

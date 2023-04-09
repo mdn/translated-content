@@ -5,10 +5,6 @@ slug: Web/CSS/border-bottom-left-radius
 
 {{CSSRef}}
 
-## Summary
-
-总览
-
 **`border-bottom-left-radius`** 这个 css 属性设置元素左下角的圆角。圆角可以是圆或椭圆（注：应为圆或椭圆的一部分），或者当其中一个值为 0 时，圆角将不被设置，这时这个角将展示为直角。
 
 ![border-bottom-left-radius.png](border-bottom-left-radius.png)

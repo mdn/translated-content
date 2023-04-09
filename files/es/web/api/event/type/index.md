@@ -72,6 +72,6 @@ event.type
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Event.type")}}
+{{Compat}}

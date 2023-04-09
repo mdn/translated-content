@@ -5,114 +5,67 @@ slug: Web/MathML/Element/math
 
 {{MathMLRef}}
 
-MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括在 `<math>` 标记中。另外不可以在一个 `<math>` 元素中嵌套第二个 `<math>` 元素，但是 `<math>` 元素中可以有任意多的子元素。
+**`<math>`** [MathML](/zh-CN/docs/Web/MathML) 元素是顶级的 MathML 元素，用于编写单个数学公式。可以将其放在允许[流式内容](/zh-CN/docs/Web/HTML/Content_categories#流式内容)的 HTML 内容中。
+
+> **备注：** 参阅[编写 MathML 页面](/zh-CN/docs/Web/MathML/Authoring#使用_mathml)以了解如何正确地在网页中集成 MathML 公式，有关更多的演示，请参阅[示例](/zh-CN/docs/Web/MathML/Examples)页面。
 
 ## 属性
 
-除了以下提到的属性， `<math>` 元素接受所有 {{ MathMLElement("mstyle") }} 元素的属性。
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)和以下属性：
 
-- class, id, style
-  - : 用于配合[样式表](/zh-CN/docs/CSS)使用。
-- dir
-  - : 公式的整体方向。取值可以是 `ltr` (从左到右) 或者 `rtl` (从右到左).
-- href
-  - : 用于给公式设置一个超链接的 URI。
-- mathbackground
-  - : 背景颜色`。你可以使用#rgb`格式、 `#rrggbb` 格式和 [HTML 颜色名](/zh-CN/docs/CSS/color_value#Color_Keywords)。
-- mathcolor
-  - : 公式的文本颜色。`你可以使用#rgb`格式、 `#rrggbb` 格式和 [HTML 颜色名](/zh-CN/docs/CSS/color_value#Color_Keywords)。
-- display
+- `display`
 
-  - : 这个枚举属性指定本标记所括的 MathML 代码应该如何被显示。该属性有如下取值：
+  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指定了应如何渲染封闭的 MathML 标记。其可以是以下值之一：
 
-    - `block`, 使用该值会使该 MathML 元素显示于文本之外，成为一个独立的块元素，不受其所在的文本的影响。
-    - `inline`, 使用该值使这段 MathML 显示为行内元素，放置于当前文本的区域中。除非改变文本的显示，否则无法移动这个 MathML 的显示位置。
+    - `block`，这意味着该元素将显示在当前文本范围之外的块中，并将 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `normal`。
+    - `inline`，这意味着该元素将显示在当前的文本范围内，并将 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `compact`。
 
-    如果没有指定该属性值，默认值采用 `inline`。
+    如果没有指定该属性，其默认值为 `inline`。
 
-- mod {{deprecated_inline}}
-  - : 因为[display 属性](/zh-CN/docs/MathML/Element/math#attr-display)的出现而废弃。
-    可用取值为：`display` (效果和`display="block"`一样) 和 and `inline`.
-- overflow
-  - : 指定当该数学公式超过了其运行的范围时应该如何表现。
-    可能的取值为： `linebreak` (默认值), `scroll`, `elide`, `truncate`, `scale`.
+## 示例
 
-## 范例
-
-![Theorem of Pythagoras](/files/3157/math.jpg)
-
-### HTML5 记号
+该示例包含两个 MathML 公式。第一个在其自己的居中的块中渲染，根据需要占用足够的空间。第二个公式则在其文本段落中渲染，缩小其尺寸和间距以最小化其高度。
 
 ```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MathML in HTML5</title>
-  </head>
-  <body>
-
-  <math>
+<p>
+  无穷级数
+  <math display="block">
     <mrow>
-      <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>n</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mo>+</mo>
+          <mn>∞</mn>
+        </mrow>
+      </munderover>
+      <mfrac>
+        <mn>1</mn>
         <msup>
-          <mi>a</mi>
+          <mi>n</mi>
           <mn>2</mn>
         </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
+      </mfrac>
     </mrow>
   </math>
-
-  </body>
-</html>
-```
-
-### XHTML 记号
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <title>MathML in XHTML</title>
-</head>
-<body>
-
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
-    <mrow>
-      <mrow>
-        <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-      <mo>=</mo>
+  的和等于实数
+  <math display="inline">
+    <mfrac>
       <msup>
-        <mi>c</mi>
+        <mi>π</mi>
         <mn>2</mn>
       </msup>
-    </mrow>
-  </math>
-
-</body>
-</html>
+      <mn>6</mn>
+    </mfrac></math
+  >。
+</p>
 ```
 
-**注意：** XHTML 文档如果带有 MathML，必须将文档的 MIME 类型设置为`application/xhtml+xml`进行发送。一般来说可以通过将扩展名改为`.xhtml` 来实现对本地文件的修改。对于 Apache 服务器，你可以[配置`.htaccess`文件](http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) 来达到映射扩展名为正确的 MIME 类型的目的。因为 MathML 被放在一个 XML 文件中，你必须编写一个严格符合 XML 格式的文档。
+{{ EmbedLiveSample('示例', 700, 200) }}
 
 ## 规范
 
@@ -122,14 +75,7 @@ MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括
 
 {{Compat}}
 
-## Gecko-specific 注释
+## 参见
 
-Gecko 7.0 添加了对所有 MathML 属性在顶级 math 元素上的支持。 (也就是说和添加一个{{ MathMLElement("mstyle") }}元素效果一样)。然而，`displaystyle` 属性直到 Gecko 8.0 才 [被添加进实现](https://bugzilla.mozilla.org/show_bug.cgi?id=669719)。
-
-纯文本的 fall-back (`alttext`) 或者指定替代图像的属性`altimg`, `altimg-width`, `altimg-height` 或 `altimg-valign` 目前都还没有在 Gecko 中实现。
-
-## 另见
-
-- HTML top-level element: {{ HTMLElement("html") }}
-- SVG top-level element: {{ SVGElement("svg") }}
-- MathML browser test: For [XHTML](https://www.eyeasme.com/Joe/MathML/MathML_browser_test) and [HTML5](https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test)
+- HTML 顶级元素：{{ HTMLElement("html") }}
+- SVG 顶级元素：{{ SVGElement("svg") }}

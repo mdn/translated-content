@@ -53,6 +53,6 @@ Pour utiliser cette API, vous devez disposer de la [permission](/fr/Add-ons/WebE
 
 {{WebExtExamples("h2")}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy")}}
+{{Compat}}

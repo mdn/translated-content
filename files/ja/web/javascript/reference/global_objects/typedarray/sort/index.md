@@ -1,18 +1,30 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
+l10n:
+  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
 {{JSRef}}
 
-**`sort()`** メソッドは、型付き配列の要素を*その場で*数値的に並べ替え、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
+**`sort()`** メソッドは、型付き配列の要素を*その場で*数値的に並べ替え、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)のうちの一つです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-reverse.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-sort.html","shorter")}}
 
 ## 構文
 
-```
-typedarray.sort([compareFunction])
+```js-nolint
+// 関数なし
+sort()
+
+// アロー関数
+sort((a, b) => { /* ... */ } )
+
+// 比較関数
+sort(compareFn)
+
+// インライン比較関数
+sort(function compareFn(a, b) { /* ... */ })
 ```
 
 ### 引数
@@ -56,4 +68,5 @@ numbers.sort((a, b) => a - b); // 数値を比較
 
 ## 関連情報
 
+- [`TypedArray.prototype.sort` の現代の動作の安定したソートのポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("Array.prototype.sort()")}}

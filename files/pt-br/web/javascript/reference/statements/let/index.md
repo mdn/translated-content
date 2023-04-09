@@ -108,7 +108,7 @@ console.log(a); // 5
 console.log(b); // 1
 ```
 
-É possível usar a keyword _let_ para vincular variáveis ​​localmente no escopo de loops em vez de usar uma variável global (definida usando _var_) para isso.
+É possível usar a keyword _let_ para vincular variáveis localmente no escopo de loops em vez de usar uma variável global (definida usando _var_) para isso.
 
 ```js
 for (let i = 0; i<10; i++) {

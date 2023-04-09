@@ -571,16 +571,3 @@ Skeleton（或者其他任何网格框架）正在做的所有事情是，设定
 你现在理解了多种网格系统是如何建立的。这将会在处理老网站的时候，以及理解 CSS 网格布局的原生网格和那些老系统的不同的时候帮到你。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
-## 模块目录
-
-- [CSS 布局介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [传统布局模式](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基础布局掌握测验](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

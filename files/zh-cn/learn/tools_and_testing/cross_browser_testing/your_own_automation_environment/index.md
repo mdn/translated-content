@@ -45,7 +45,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 ### 在 Node 下建立 Selenium
 
 1. 参考上一个章节[创建 Node 和 npm](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Setting_up_Node_and_npm) 创建一个新的 npm 工程，取一个不同的名字，如 `selenium-test`。
-2. 接下来，我们需要安装一个框架来允许我们从 Node 中运行 Selenium。我们选择 selenium 官方提供的 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)，它的文档更新得很好，维护得也很好。如果你想要其它的选择，[webdriver.io](http://webdriver.io/) 和 [nightwatch.js](http://nightwatchjs.org/) 也都不错。要安装 selenium-webdriver，在你的工程目录下运行如下命令：
+2. 接下来，我们需要安装一个框架来允许我们从 Node 中运行 Selenium。我们选择 selenium 官方提供的 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)，它的文档更新得很好，维护得也很好。如果你想要其他的选择，[webdriver.io](http://webdriver.io/) 和 [nightwatch.js](http://nightwatchjs.org/) 也都不错。要安装 selenium-webdriver，在你的工程目录下运行如下命令：
 
     ```bash
     npm install selenium-webdriver
@@ -395,9 +395,9 @@ driver.quit();
 
 1. 使用好的定位策略：当你[同文档交互](#同文档交互)时，确保你使用的定位器和页面对象是不变的。如对元素进行测试，确保这个元素有固定的 ID 或页面位置，这样可以通过 CSS 选择器定位到它，不至于在下一个迭代就发生变化。尽可能让你的测试稳健，而不是有一点改动就会崩溃。
 2. 写原子测试：一个测试只测一件事，这样有利于跟踪哪一个测试文件执行的是哪种测试。举例来说，前面的`google_test.js` 就只测试了一个简单的用例——页面的搜索结果标题是否正确。我们可以给它改一个名字，这样当我们添加更多的测试文件时它的作用会更直观，比如改为 `results_page_title_set_correctly.js`。
-3. 写独立的测试：每一个测试只需要自己执行，不需要依赖其它的测试。
+3. 写独立的测试：每一个测试只需要自己执行，不需要依赖其他的测试。
 
-除此之外，我们还要提一下测试结果/测试报告——在前面的例子中，我们只是简单的把测试结果通过 `console.log()` 语句打印出来，这个完全只在 JavaScript 中完成，你可以使用任何你想要的测试运行和报告系统，如 [Mocha](https://mochajs.org/)、[Chai](https://www.chaijs.com/) 或其它的工具。
+除此之外，我们还要提一下测试结果/测试报告——在前面的例子中，我们只是简单的把测试结果通过 `console.log()` 语句打印出来，这个完全只在 JavaScript 中完成，你可以使用任何你想要的测试运行和报告系统，如 [Mocha](https://mochajs.org/)、[Chai](https://www.chaijs.com/) 或其他的工具。
 
 1. 举个例子，将 [`mocha_test.js`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/selenium/mocha_test.js) 拷贝到你的工程目录下。把它放到一个叫做 `test` 的子文件夹内，这个例子使用了一长串的 promise 来执行测试的所有步骤，WebDriver 使用这些基于 promise 的方法保证正常工作。
 2. 执行下面的命令在你的工程目录下安装 mocha 测试工具：
@@ -406,7 +406,7 @@ driver.quit();
    npm install --save-dev mocha
    ```
 
-3. 现在可以通过下面的命令运行测试（和任意放到 `test` 目录下的其它东西）:
+3. 现在可以通过下面的命令运行测试（和任意放到 `test` 目录下的其他东西）:
 
    ```bash
    npx mocha --no-timeouts
@@ -588,7 +588,7 @@ driver.quit();
 
 #### 编程填充 BrowserStack 的测试详情
 
-使用 BrowserStack REST API 和其它功能可以给测试添加更多详情，如测试是否通过，为什么通过，测试属于工程的哪个部分等，BrowserStack 默认并没有这些细节！
+使用 BrowserStack REST API 和其他功能可以给测试添加更多详情，如测试是否通过，为什么通过，测试属于工程的哪个部分等，BrowserStack 默认并没有这些细节！
 
 让我们来更新一下 `bstack_google_test.js` 示例，看看它们是怎样运作的：
 
@@ -812,7 +812,7 @@ driver.quit();
 
 ## 将 selenium 和 CI 工具集成
 
-另外，将 Selenium 同 Sauce Labs 之类的其它工具集成到持续集成（CI）工具中是很有用的，这意味着你可以通过 CI 工具来运行测试，只有测试通过才允许提交代码的修改。
+另外，将 Selenium 同 Sauce Labs 之类的其他工具集成到持续集成（CI）工具中是很有用的，这意味着你可以通过 CI 工具来运行测试，只有测试通过才允许提交代码的修改。
 
 在这里不对这个话题进行深入探讨，但是我们建议你从 Travis CI 开始——这大概是最容易入门的 CI 工具了，它与 GitHub 和 Node 等 web 工具都有很好的集成。
 
@@ -832,14 +832,3 @@ driver.quit();
 这个模块应该是有趣的，并且应该给你足够的洞察力来编写和运行自动化测试，以便你开始编写自己的自动化测试。
 
 {{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## 本章目录
-
-- [跨浏览器测试介绍](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [运行测试的策略](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [实现特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [自动化测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [建立自己的自动化测试环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

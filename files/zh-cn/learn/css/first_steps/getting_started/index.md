@@ -157,7 +157,7 @@ li.special {
 }
 ```
 
-这个意思是说，“选中每个 `special` 类的 `li` 元素”。你真要这样，好了，它对 `<span>` 还有其它元素不起作用了。你可以把这个元素再添上去就是了：
+这个意思是说，“选中每个 `special` 类的 `li` 元素”。你真要这样，好了，它对 `<span>` 还有其他元素不起作用了。你可以把这个元素再添上去就是了：
 
 ```css
 li.special,
@@ -167,7 +167,7 @@ span.special {
 }
 ```
 
-你们都是懒人，肯定不想每加一个 special 类的元素就改一遍 CSS 表，你肯定想把一个类的属性应用到多个元素上。所以说，有时还是别管元素，光看类就完事了，除非你意志坚定，坚持对这个类的某一种元素创造规则，还不让其它元素用。
+你们都是懒人，肯定不想每加一个 special 类的元素就改一遍 CSS 表，你肯定想把一个类的属性应用到多个元素上。所以说，有时还是别管元素，光看类就完事了，除非你意志坚定，坚持对这个类的某一种元素创造规则，还不让其他元素用。
 
 ## 根据元素在文档中的位置确定样式
 
@@ -268,11 +268,3 @@ body h1 + p .special {
 在下一节中，我们将看到样式表的结构是什么样的。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## 在此模块
-
-1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [开始学习 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 代码是如何组织的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [开始使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

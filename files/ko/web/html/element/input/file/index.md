@@ -1,6 +1,6 @@
 ---
 title: <input type="file">
-slug: Web/HTML/Element/Input/file
+slug: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar}}
@@ -181,7 +181,7 @@ div {
 - `webkitRelativePath` {{non-standard_inline}}
   - : {{htmlattrxref("webkitdirectory", "input/file")}} 특성을 사용한 경우, 기준 디렉토리에 대한 파일의 상대적인 경로. 비표준 특성이므로 사용에 주의가 필요합니다.
 
-<div class="hidden note"><p><strong>Note</strong>: You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).</p></div>
+<div class="hidden note"><p><strong>Note</strong>: You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).</p></div>
 
 ### 가능한 파일 유형 제한하기
 

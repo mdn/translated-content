@@ -355,19 +355,6 @@ Pero esto es solo el comienzo: ahora ha llegado el momento de profundizar en el 
 
 {{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
-## En este módulo
-
-- [Tu primer formulario](/es/docs/Learn/Forms/Your_first_form)
-- [Cómo estructurar un formulario web](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Los controles de formulario básicos originales](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types)
-- [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls)
-- [Aplicación de estilo a formularios web](/es/docs/Learn/Forms/Styling_web_forms)
-- [Aplicación de estilo a formularios avanzada](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudoclases UI](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Validación del formulario del lado del cliente](/es/docs/Learn/Forms/Form_validation)
-- [Enviar los datos de un formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
 ### Temas avanzados
 
 - [Cómo construir controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)

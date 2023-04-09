@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: list role'
-slug: Web/Accessibility/ARIA/Roles/List_role
+slug: Web/Accessibility/ARIA/Roles/list_role
 ---
 
 ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色结合使用，该角色用于标识包含在列表中的列表项。

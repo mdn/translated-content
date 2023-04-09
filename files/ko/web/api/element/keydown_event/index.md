@@ -217,9 +217,16 @@ original_slug: Web/API/Document/keydown_event
 
 Starting with Gecko 25, a call of `preventDefault()` of `keydown` event prevents to dispatch following `keypress` event. This is valid behavior for D3E spec and the other major web browsers behave so. On the other hand, Gecko 24 or earlier dispatched `keypress` event even if `preventDefault()` of preceding `keydown` event is called. Although the `keypress` event's `defaultPrevented` attribute was `true` in this case.
 
-## Related Events
+## 명세서
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이 보기
+
+- [`input`](/ko/docs/Web/API/HTMLElement/input_event)
+- [`keypress`](/ko/docs/Web/API/Element/keypress_event)
+- [`keyup`](/ko/docs/Web/API/Element/keyup_event)

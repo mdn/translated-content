@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: list ロール'
-slug: Web/Accessibility/ARIA/Roles/List_role
+slug: Web/Accessibility/ARIA/Roles/list_role
 ---
 
 ARIA のリスト (`list`) ロールは、項目のリストを識別するために使用できます。 これは通常、リスト内に含まれるリスト項目を識別するために使用するリスト項目 (`listitem`) ロールと組み合わせて使用します。

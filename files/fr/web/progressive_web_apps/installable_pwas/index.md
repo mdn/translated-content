@@ -1,5 +1,5 @@
 ---
-title: Comment rendre les PWAs installables
+title: Comment rendre les PWA installables
 slug: Web/Progressive_web_apps/Installable_PWAs
 translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
@@ -19,7 +19,7 @@ Pour rendre un site web installable, il a besoin que les éléments suivants soi
 - Un icone représentant l'application sur l'appareil
 - Un service worker enregistré pour permettre à l'application de fonctionner en mode déconnecté (ceci n'est actuellement imposé que par Chrome pour Android)
 
-### Le fichier manisfeste
+### Le fichier manifeste
 
 L'élément clef est un fichier manifeste web qui liste toutes les informations concernant le site web au format JSON.
 

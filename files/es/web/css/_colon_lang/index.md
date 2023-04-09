@@ -57,7 +57,7 @@ En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los eleme
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.lang")}}
+{{Compat}}
 
 ## Ver también
 

@@ -31,9 +31,9 @@ browser.browserAction.enable(
 - `tabId`{{optional_inline}}
   - : `integer`. L'identifiant (ID) de l'onglet pour lequel vous souhaitez activer l'action du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.enable")}}
+{{Compat}}
 
 ## Exemples
 

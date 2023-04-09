@@ -25,7 +25,7 @@ new Proxy(target, handler)
 - `target` 被代理的对象
 - `handler` 被代理对象上的自定义行为
 
-一个空的 `handler` 参数将会创建一个与被代理对象行为几乎完全相同的代理对象。通过在 `handler` 对象上定义一组处理函数，你可以自定义被代理对象的一些特定行为。例如，通过定义 `get()` 你就可以自定义被代理对象的 [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)。
+一个空的 `handler` 参数将会创建一个与被代理对象行为几乎完全相同的代理对象。通过在 `handler` 对象上定义一组处理函数，你可以自定义被代理对象的一些特定行为。例如，通过定义 `get()` 你就可以自定义被代理对象的[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)。
 
 ### 处理函数
 

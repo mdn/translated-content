@@ -68,7 +68,7 @@ for (const [country, capital] of map.entries())
 
 ### Iterating over a generator
 
-[Generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators) 是用来生成可迭代对象的函数。
+[生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#生成器函数)是用来生成可迭代对象的函数。
 
 ```js example-bad
 function* generate(a, b) {
@@ -128,5 +128,5 @@ Array.from(myEmptyIterable);  // []
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
-- [generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators)
+- [生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#生成器函数)
 - [for…of](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

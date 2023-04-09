@@ -1,6 +1,6 @@
 ---
 title: Console.trace()
-slug: Web/API/Console/trace
+slug: Web/API/console/trace
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -42,9 +42,9 @@ foo
 
 {{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.console.trace")}}
+{{Compat}}
 
 ## Ver tambien
 

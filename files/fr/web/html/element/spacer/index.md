@@ -50,4 +50,4 @@ Cet élément ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.spacer")}}
+{{Compat}}

@@ -85,13 +85,13 @@ border: 1px solid black; outline: dotted red;
 
 ## Notas
 
-- `Las esquinas con radio dotted` o `dashed` se muestran como solid, {{bug("382721")}}
-- Existe la posibilidad de que futuras versiones del motor Gecko/Firefox eliminen esta propiedad completamente. Ver {{bug("593717")}}.
+- `Las esquinas con radio dotted` o `dashed` se muestran como solid, [Error 382721 en Firefox](https://bugzil.la/382721)
+- Existe la posibilidad de que futuras versiones del motor Gecko/Firefox eliminen esta propiedad completamente. Ver [Error 593717 en Firefox](https://bugzil.la/593717).
 
 ## Especificaciones
 
 Esta propiedad no se define es ningún estándar CSS.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-moz-outline-radius")}}
+{{Compat}}

@@ -2,7 +2,7 @@
 title: PointerEvent.getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
 ---
 
 {{APIRef("Pointer Events")}}

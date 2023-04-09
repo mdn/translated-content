@@ -47,6 +47,6 @@ Si deux ou plusieurs extensions définissent le même mot-clé, l'extension qui 
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.omnibox")}}
+{{Compat}}

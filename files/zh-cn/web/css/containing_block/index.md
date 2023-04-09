@@ -6,7 +6,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 
 {{cssref}}
 
-一个元素的尺寸和位置经常受其**包含块 (containing block)**的影响。大多数情况下，包含块就是这个元素最近的祖先[块元素](/zh-CN/docs/Web/HTML/Block-level_elements)的[内容区](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。
+一个元素的尺寸和位置经常受其**包含块**（containing block）的影响。大多数情况下，包含块就是这个元素最近的祖先[块元素](/zh-CN/docs/Web/HTML/Block-level_elements)的[内容区域](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#内容区域)，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。
 
 当一个客户端代理（比如说浏览器）展示一个文档的时候，对于每一个元素，它都产生了一个盒子。每一个盒子都被划分为四个区域：
 
@@ -100,7 +100,7 @@ p {
 
 ### Example 2
 
-在这个示例中，P 标签的包含块为 `<body>` **元素，**因为 `<section>` 不再是一个块容器，所以并没有形成一个格式上下文。
+在这个示例中，P 标签的包含块为 `<body>` 元素，因为 `<section>` 不再是一个块容器，所以并没有形成一个格式上下文。
 
 ```html hidden
 <body>

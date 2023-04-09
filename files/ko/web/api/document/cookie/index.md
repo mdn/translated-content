@@ -210,11 +210,11 @@ Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
 Accept: */*
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

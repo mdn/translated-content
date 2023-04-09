@@ -1,6 +1,6 @@
 ---
 title: Environnement de document
-slug: Glossary/document_environment
+slug: Glossary/Document_environment
 tags:
   - Document
   - Environnement

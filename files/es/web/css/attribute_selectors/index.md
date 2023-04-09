@@ -205,7 +205,7 @@ ol[type="A" s] {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.attribute")}}
+{{Compat}}
 
 ## Ver también
 

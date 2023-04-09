@@ -28,13 +28,13 @@ PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソ
 ### PHP の変数
 
 ```php
-​​​​​​​​​​​​​​<?php
+<?php
  // variables
  $nome='Danilo';
  $sobrenome='Santos';
  $pais='Brasil';
  $email='danilocarsan@gmailcom';
-​​​​​​​
+
  // printing the variables
  echo $nome;
  echo $sobrenome;

@@ -25,9 +25,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les proriétés suivante
 - `maxResults`{{optional_inline}}
   - : `number`. Le nombre maximal de résultats à retourner.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.Filter")}}
+{{Compat}}
 
 ## Exemples
 

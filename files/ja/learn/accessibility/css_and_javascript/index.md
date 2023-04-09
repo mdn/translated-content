@@ -281,7 +281,7 @@ function createLink(testItem) {
 
 各リンクは二つの役割を果たします。つまり、何のエラーなのかを教えてくれますし、さらに、そのリンクをクリックする / アクティブにすると問題の入力要素へ直接ジャンプして入力を訂正できるようになっています。
 
-> **メモ:** この例の `focus()` の部分は少し手が込んでいます。Chrome と Edge (と、IE の新しいバージョン) は、リンクがクリックされたときに要素にフォーカスを当てるので、`onclick`/`focus()` ブロックを必要としません。Safari はリンク自体とともにフォーム要素をハイライトするだけであり、そのため、実際にフォーム要素にフォーカスを当てるには `onclick`/`focus()` ブロックが必要です。Firefox は、こうした状況において入力要素に適切にフォーカスを当てることはまったくありません。よって、Firefox のユーザーは、現時点ではこの `onclick`/`focus()` ブロックの利益を享受できません (それ以外のすべてはうまく機能するのですが)。Firefox の問題はすぐに修正されるはずです。というのも、他のブラウザーと同等のふるまいを Firefox にさせるための作業が、今なされている最中ですから ({{bug(277178)}} を参照).
+> **メモ:** この例の `focus()` の部分は少し手が込んでいます。Chrome と Edge (と、IE の新しいバージョン) は、リンクがクリックされたときに要素にフォーカスを当てるので、`onclick`/`focus()` ブロックを必要としません。Safari はリンク自体とともにフォーム要素をハイライトするだけであり、そのため、実際にフォーム要素にフォーカスを当てるには `onclick`/`focus()` ブロックが必要です。Firefox は、こうした状況において入力要素に適切にフォーカスを当てることはまったくありません。よって、Firefox のユーザーは、現時点ではこの `onclick`/`focus()` ブロックの利益を享受できません (それ以外のすべてはうまく機能するのですが)。Firefox の問題はすぐに修正されるはずです。というのも、他のブラウザーと同等のふるまいを Firefox にさせるための作業が、今なされている最中ですから ([Firefox バグ 277178](https://bugzil.la/277178) を参照).
 
 さらに、ソース順における先頭に `errorField` を置いてあります (CSS を使って、UI 上では別のところに配置してありますが)。これが意味することは、ユーザーが、ページの最初に戻ることで、自分のフォーム送信でまさに何が間違っているのかも分かるし、問題の入力要素にも行ける、ということです。
 
@@ -333,13 +333,3 @@ imgThumb.onblur = hideImg;
 次は WAI-ARIA の番です!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## このモジュール内
-
-- [アクセシビリティとは?](/ja/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
-- [CSS と JavaScript のアクセシビリティのベスト・プラクティス](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
-- [モバイルアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
-- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

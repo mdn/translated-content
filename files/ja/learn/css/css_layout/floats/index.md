@@ -107,7 +107,7 @@ body {
 
 {{ EmbedLiveSample('Float_1', '100%', 500) }}
 
-フロートがどのように機能するかを考えてみましょう。 `float` が設定されている要素（この場合は {{htmlelement("div")}} 要素）は、文書の通常のレイアウトフローから除かれ、その親コン ​​ テナ（この場合は {{htmlelement("body")}}）の左側に固定されます。 通常のレイアウトフローで浮動要素の下側に来るコンテンツは、それを包み込み、浮動要素の最上部まで、その右側のスペースを埋めます。 そこで、それは止まるでしょう。
+フロートがどのように機能するかを考えてみましょう。 `float` が設定されている要素（この場合は {{htmlelement("div")}} 要素）は、文書の通常のレイアウトフローから除かれ、その親コンテナ（この場合は {{htmlelement("body")}}）の左側に固定されます。 通常のレイアウトフローで浮動要素の下側に来るコンテンツは、それを包み込み、浮動要素の最上部まで、その右側のスペースを埋めます。 そこで、それは止まるでしょう。
 
 コンテンツを右に浮かべるとまったく同じ効果が得られますが、逆になります。 つまり、浮動要素は右に固定され、コンテンツはその左側を包み込みます。 `float` の値を `right` に変更し、最後のルールセットで {{cssxref("margin-right")}} を {{cssxref("margin-left")}} に置き換えて、結果がどうなるかを確認してください。
 
@@ -482,18 +482,3 @@ body {
 あなたは今、現代のウェブ開発でフロートについて知っておくべきことがすべてわかっています。 過去のレイアウト方法の使用方法については、[過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)に関する記事を参照してください。 古いプロジェクトで作業している場合に便利です。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

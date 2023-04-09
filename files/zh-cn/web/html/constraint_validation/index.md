@@ -16,19 +16,19 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 在 HTML 中，有两种方式声明基本的约束：
 
-- 给 {{ HTMLElement("input") }} 元素的 {{ htmlattrxref("type", "input") }} 属性选择最合适的语义化的值，比如，选择 `email` 类型将会自动创建一个约束，用于检查输入的值是否是一个有效的电子邮件地址。
+- 给 {{ HTMLElement("input") }} 元素的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性选择最合适的语义化的值，比如，选择 `email` 类型将会自动创建一个约束，用于检查输入的值是否是一个有效的电子邮件地址。
 - 设置验证相关的属性值，允许用一种简单的方式来描述基本的约束，而不必要使用 JavaScript。
 
 ### 语义的 input 类型
 
-{{ htmlattrxref("type", "input") }} 属性中的固有约束有：
+[`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性中的固有约束有：
 
 | Input 类型                                                         | 约束描述                                                                                                                                           | 相关违约                                                                    |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | [`<input type="URL">`](/zh-CN/docs/Web/HTML/Element/input/url)     | 值必须为 [URL 现行标准](https://url.spec.whatwg.org/)定义的绝对 [URL](/zh-CN/docs/Learn/Common_questions/What_is_a_URL) 地址。    | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
 | [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) | 该值必须是一个语法上有效的电子邮件地址，其格式一般为 `username@hostname.tld`，但也可以是本地的，如 `username@hostname`。 | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
 
-对于这两种输入类型，如果设置了 {{ htmlattrxref("multiple", "input") }} 属性，可以设置几个值，作为一个逗号分隔的列表。如果其中任何一个不满足这里描述的条件，就会触发 **TypeMismatch** 约束的违反。
+对于这两种输入类型，如果设置了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性，可以设置几个值，作为一个逗号分隔的列表。如果其中任何一个不满足这里描述的条件，就会触发 **TypeMismatch** 约束的违反。
 
 请注意，大多数 input 类型没有内在的约束，因为有些类型被禁止在约束验证中使用，或者有一个净化算法将不正确的值转化为正确的默认值。
 
@@ -57,7 +57,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         <code>text</code>、<code>search</code>、<code>url</code>、<code>tel</code>、<code>email</code>、<code>password</code>
       </td>
       <td>
-        一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions"
+        一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions"
           >JavaScript 正则表达式</a
         >（以 {{jsxref("RegExp.global", "global")}}、{{jsxref("RegExp.ignoreCase", "ignoreCase")}} 标志编译，且<em>禁用</em>了 {{jsxref("RegExp.multiline", "multiline")}} 标志）
       </td>
@@ -253,7 +253,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 调用 `checkValidity()` 也被称为约束的*静态*验证，调用 `reportValidity()` 也被称为约束的*交互*认证。
 > **备注：**
 >
-> - 如果 {{ HTMLElement("form") }} 元素上设置了 {{ htmlattrxref("novalidate", "form") }} 属性，则不发生约束验证交互。
+> - 如果 {{ HTMLElement("form") }} 元素上设置了 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性，则不发生约束验证交互。
 > - 在 [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) 接口上调用 `submit()` 方法并不触发约束条件验证。换句话说，即使表单数据不满足约束条件，该方法也会将其发送到服务器。在提交按钮上调用 `click()` 方法来代替。
 
 ## 使用约束验证 API 进行复杂的约束
@@ -264,7 +264,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 ### 包含多个字段的约束：邮政编码验证
 
-每个国家的邮政编码都不相同。大多数国家允许有一个可选的国家代码前缀（如德国的 `D-`，法国或瑞士的 `F-`），还有其它一些国家的邮政编码只有固定的数字；其他国家，如英国，有更复杂的结构，允许在一些特定的位置有字母。
+每个国家的邮政编码都不相同。大多数国家允许有一个可选的国家代码前缀（如德国的 `D-`，法国或瑞士的 `F-`），还有其他一些国家的邮政编码只有固定的数字；其他国家，如英国，有更复杂的结构，允许在一些特定的位置有字母。
 
 > **备注：** 这不是一个全面的邮政编码验证库，而是关键概念的演示。
 
@@ -396,7 +396,7 @@ window.onload = () => {
 
 #### :required、:optional CSS 伪类
 
-{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许开发者编写选择器，以匹配有 {{ htmlattrxref("required") }} 属性或没有该属性的表单元素。
+{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许开发者编写选择器，以匹配有 [`required`](/zh-CN/docs/Web/HTML/Global_attributes#required) 属性或没有该属性的表单元素。
 
 #### :placeholder-shown CSS 伪类
 
@@ -416,7 +416,7 @@ window.onload = () => {
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}
-  - 提交按钮（使用类型为 `submit` 的 {{HTMLElement("button")}} 元素，或类型为 {{HTMLElement("input/submit", "submit")}} 的 `input` 元素创建。其它类型的按钮不参与约束验证。
+  - 提交按钮（使用类型为 `submit` 的 {{HTMLElement("button")}} 元素，或类型为 {{HTMLElement("input/submit", "submit")}} 的 `input` 元素创建。其他类型的按钮不参与约束验证。
   - {{HTMLElement("textarea")}}
 
 - [`ValidityState`](/zh-CN/docs/Web/API/ValidityState) 接口描述了由上述元素类型的 `validity` 属性返回的对象。它表示一个输入值可能无效的各种方式。它们共同解释了为什么一个元素的值是无效的，则不能被验证。

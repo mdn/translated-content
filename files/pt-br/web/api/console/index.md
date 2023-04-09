@@ -1,6 +1,6 @@
 ---
 title: Console
-slug: Web/API/Console
+slug: Web/API/console
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -15,7 +15,7 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
   - : Emite uma mensagem e traça a sequência de operações até o primeiro argumento for falso.
 - {{domxref("console.count()", "console.count([label])")}}
   - : Mostra o número de vezes que esta linha foi chamada com a label fornecida.
-- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline("5.0")}}
+- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline}}
   - : Um atalho para `log()`; que foi adicionado para melhorar a compatibilidade de páginas já existentes que utilizavam `debug()`. Porém, ao invés destes comandos você deve utilizar {{domxref("console.log()")}}.
 - {{domxref("console.dir()", "console.dir(object)")}}
   - : Exibe uma listagem interativa das propriedades de um objeto JavaScript especificado. Esta listagem permite a você expandir o objeto para visualizar o conteúdo de objetos filhos.
@@ -93,7 +93,7 @@ O output será algo assim:
 
 #### Uso de substituição de string
 
-O Gecko 9.0 {{geckoRelease("9.0")}} introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
+O Gecko 9.0 introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
 
 | String de substituição | Descrição                                                                  |
 | ---------------------- | -------------------------------------------------------------------------- |

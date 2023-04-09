@@ -206,9 +206,9 @@ p {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.clear")}}
+{{Compat}}
 
 ## También puedes ver
 

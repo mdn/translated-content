@@ -3,8 +3,10 @@ title: MDN は 10 周年を迎えました
 slug: MDN/At_ten
 original_slug: MDN_at_ten
 i10n:
-  sourceCommit: 0160aac0e623dacdce4019205f32f7b3d3e58019
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
+
+{{MDNSidebar}}
 
 ウェブのドキュメントを作り続けて 10 周年
 

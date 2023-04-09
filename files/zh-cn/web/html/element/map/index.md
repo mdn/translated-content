@@ -36,7 +36,7 @@ slug: Web/HTML/Element/map
 
 这个元素拥有[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("name")}}
+- `name`
   - : name 属性 给 map 一个名字用来查询，这个属性是必须的，值必须不能为空并且不能带空格。name 属性不准与同文档中其他 map 元素的值相同，如果 id 属性也被添加，name 属性和 id 属性的值必须相同。
 
 ## 示例

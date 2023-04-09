@@ -15,7 +15,7 @@ O **elemento** **HTML** **\<iframe>** (ou _elemento HTML_ _inline frame_) repres
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}
   - : O alinhamento deste elemento em relação ao contexto.
 - {{htmlattrdef("allowfullscreen")}}
   - : Esse atributo pode ser definido como true se o quadro é permitido para ser colocado em modo de tela cheia, chamando seu método de {{domxref("element.mozRequestFullScreen()")}}. Se isto não estiver definido, o elemento não pode ser colocado em modo de tela cheia.

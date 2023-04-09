@@ -14,17 +14,17 @@ Ahora que estamos cómodos añadiendo imágenes simples a una página web, el si
       <td>
         Conocimientos básicos de computación,
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/Learn/Getting_started_with_the_web/Installing_basic_software"
           >programas básicos instalados</a
         >, conocimiento básico de
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/es/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabajo con archivos</a
         >, familiaridad con los fundamentos de HTML (como está cubierto en
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Empezando con HTML</a
         >) e
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >Imágenes en HTML</a
         >.
       </td>
@@ -47,7 +47,7 @@ Una solución nativa podría resolver mucho de esto si es implementado correctam
 
 No te enseñaremos como crear archivos de audio y video — eso requiere un conocimiento completamente diferente. Por el contrario, te proporcionamos [archivos de audio y video de muestra con códigos de ejemplo](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para que tu mismo experimentes, en caso de que no puedas conseguirlos por ti mismo.
 
-> **Nota:** **Observación**: Antes de empezar, también deberías saber que hay un puñado de OVPs (proveedores de video online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com) y [Vimeo](https://vimeo.com/), y proveedores de audio como [Soundcloud](https://soundcloud.com/). Tales compañías ofrecen una conveniente fácil forma de hospedar y consumir videos, y que no tienes que preocuparte sobre el enorme ancho de banda que se consume. Los OVPs normalmente usan código prefabricado para incrustar video/audio en tus sitios web; si usas ese camino, puedes evitar algunas dificultates que discutimos en este artículo. Discutiremos este tipo de servicios un poco más en el siguiente artículo.
+> **Nota:** Antes de empezar, también deberías saber que hay un puñado de OVPs (proveedores de video online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com) y [Vimeo](https://vimeo.com/), y proveedores de audio como [Soundcloud](https://soundcloud.com/). Tales compañías ofrecen una conveniente fácil forma de hospedar y consumir videos, y que no tienes que preocuparte sobre el enorme ancho de banda que se consume. Los OVPs normalmente usan código prefabricado para incrustar video/audio en tus sitios web; si usas ese camino, puedes evitar algunas dificultades que discutimos en este artículo. Discutiremos este tipo de servicios un poco más en el siguiente artículo.
 
 ### El elemento \<video>
 
@@ -70,7 +70,7 @@ Las características a notar son:
 
 El video incrustado se verá así:
 
-![A simple video player showing a video of a small white rabbit](simple-video.png)
+![Un sencillo reproductor de vídeo que muestra un vídeo de un pequeño conejo blanco](simple-video.png)
 
 Puedes [probar el ejemplo](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) aquí (también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)).
 
@@ -102,7 +102,7 @@ Los formatos anteriores existen para comprimir los archivos de audio y video vol
 
 > **Nota:** Debes estar preguntándote por qué sucede esto. El **MP3** (para audio) y el **MP4/H.264** (para video) son ampliamente compatibles y de buena calidad, sin embargo, también están patentados — sus patentes cubren MP3 al menos hasta 2017 y a H.264 hasta 2027, lo que significa que los browsers que no tienen la patente tienen que pagar grandes sumas de dinero para soportar estos formatos. Además, mucha gente no permite el software con restricciones, por estar a favor de formatos abiertos. Por todo esto es que tenemos que proveer múltiples formatos para los diferentes browsers.
 
-Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado (](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)[pruébalo en vivo aquí](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)), o acá:
+Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)[pruébalo en vivo aquí](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)), o acá:
 
 ```html
 <video controls>
@@ -128,13 +128,13 @@ Hay varias otras características que puede incluir en un vídeo HTML5. Eche un 
        poster="poster.png">
   <source src="rabbit320.mp4" type="video/mp4">
   <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <p>Su navegador no soporta vídeo HTML5. Este es un <a href="rabbit320.mp4">enlace al vídeo</a> alternativo.</p>
 </video>
 ```
 
 Esto nos dará un resultado que se parece a esto:
 
-![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](poster_screenshot_updated.png)
+![Un reproductor de vídeo que muestra una imagen de cartel antes de reproducirse. La imagen del cartel dice Extra video fetures example, Lovely rabbit video](poster_screenshot_updated.png)
 
 Las nuevas características son:
 
@@ -156,7 +156,7 @@ Las nuevas características son:
     - `"auto"` almacena el archivo multimedia
     - `"metadata"` almacena solo los metadatos del archivo
 
-Puedes encontrar el ejemplo anterior disponible en [play live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (también [see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Tenga en cuenta que hemos incluido el atributo `autoplay` en la versión en vivo — Si el vídeo comienza a reproducirse tan pronto como se cargue la página no podrá ver la miniatura!
+Puedes encontrar el ejemplo anterior disponible en [reproducir en directo en Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (también [vea el código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Tenga en cuenta que hemos incluido el atributo `autoplay` en la versión en vivo — Si el vídeo comienza a reproducirse tan pronto como se cargue la página no podrá ver la miniatura!
 
 ### El elemento \<audio>
 
@@ -166,13 +166,13 @@ El elemento {{htmlelement("audio")}} funciona exactamente de la misma forma que 
 <audio controls>
   <source src="viper.mp3" type="audio/mp3">
   <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <p>Su navegador no es compatible con audio HTML5. Aquí hay un <a href="viper.mp3">enlace al audio</a> en su lugar.</p>
 </audio>
 ```
 
 Esto produce algo como lo siguiente en un navegador:
 
-![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
+![Un sencillo reproductor de audio con botón de reproducción, temporizador, control de volumen y barra de progreso](audio-player.png)
 
 > **Nota:** Puedes [reproducir este ejemplo de audio](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) en Github (también, puedes ver el [código fuente del reproductor de audio](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
@@ -192,9 +192,9 @@ var mediaElem = document.getElementById("my-media-element");
 mediaElem.load();
 ```
 
-### Detecting track addition and removal
+### Detección de la adición y eliminación de pistas
 
-You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the [`addtrack`](/es/docs/Web/Reference/Events/addtrack) event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
+Puede monitorear las listas de pistas dentro de un elemento multimedia para detectar cuando se añaden o eliminan pistas del elemento multimedia. Por ejemplo, puede ver si se activa el evento [`addtrack`](/es/docs/Web/Reference/Events/addtrack) en el objeto {{domxref("AudioTrackList")}} asociado (recuperado a través de {{domxref("HTMLMediaElement.audioTracks")}}) para saber cuándo se añaden pistas de audio al contenido multimedia:
 
 ```js
 var mediaElem = document.querySelector("video");
@@ -203,51 +203,51 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 }
 ```
 
-Encontraras mas documentacion acerca de esto en nuestra {{domxref("TrackEvent")}} documentacion.
+Encontraras mas documentación acerca de esto en nuestra {{domxref("TrackEvent")}} documentación.
 
-## Displaying video text tracks
+## Visualización de pistas de texto en vídeo
 
-Now we'll discuss a slightly more advanced concept that is really useful to know about. Many people can't or don't want to hear the audio/video content they find on the Web, at least at certain times. For example:
+Ahora hablaremos de un concepto un poco más avanzado que es realmente útil conocer. Muchas personas no pueden o no quieren escuchar el contenido de audio/vídeo que encuentran en la Web, al menos en determinados momentos. Por ejemplo:
 
-- Many people have auditory impairments (more commonly known as hard of hearing, or deaf) so can't hear the audio.
-- Others may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library.)
-- People who don't speak the language of the video might want a text transcript or even translation to help them understand the media content.
+- Muchas personas tienen deficiencias auditivas (más comúnmente conocidas como sordos o con dificultades auditivas), por lo que no pueden oír el audio.
+- Otras no pueden oír el audio porque se encuentran en ambientes ruidosos (como un bar abarrotado cuando se retransmite un partido deportivo) o porque no quieren molestar a los demás si están en un lugar tranquilo (como una biblioteca).
+- Las personas que no hablan el idioma del vídeo pueden querer una transcripción de texto o incluso una traducción que les ayude a entender el contenido multimedia.
 
-Wouldn't it be nice to be able to provide these people with a transcript of the words being spoken in the audio/video? Well, thanks to HTML5 video you can, with the [WebVTT](/es/docs/Web/API/Web_Video_Text_Tracks_Format) format and the {{htmlelement("track")}} element.
+¿No estaría bien poder ofrecer a estas personas una transcripción de las palabras que se pronuncian en el audio/vídeo? Pues bien, gracias al vídeo HTML5 se puede, con el formato [WebVTT](/es/docs/Web/API/Web_Video_Text_Tracks_Format) y el elemento {{htmlelement("track")}}.
 
-> **Nota:** "Transcribe" means "to write down spoken words as text." The resulting text is a "transcript."
+> **Nota:** "Transcribir" significa "escribir palabras habladas como texto". El texto resultante es una "transcripción".
 
-WebVTT is a format for writing text files containing multiple strings of text along with metadata such as what time in the video you want each text string to be displayed, and even limited styling/positioning information. These text strings are called **cues**, and you can display different types for different purposes, the most common being:
+WebVTT es un formato para escribir archivos de texto que contienen múltiples cadenas de texto junto con metadatos tales como en qué momento del vídeo desea que se muestre cada cadena de texto, e incluso información limitada de estilo/posicionamiento. Estas cadenas de texto se llaman **cues**, y se pueden mostrar diferentes tipos para diferentes propósitos, siendo los más comunes:
 
-- subtitles
-  - : Translations of foreign material, for people who don't understand the words spoken in the audio.
-- captions
-  - : Synchronized transcriptions of dialog or descriptions of significant sounds, to let people who can't hear the audio understand what is going on.
-- timed descriptions
-  - : Text for conversion into audio, to serve people with visual impairments.
+- subtítulos
+  - : Traducciones de material extranjero, para personas que no entienden las palabras pronunciadas en el audio.
+- leyendas
+  - : transcripciones sincronizadas de diálogos o descripciones de sonidos significativos, para que las personas que no pueden oír el audio entiendan lo que está pasando.
+- descripciones temporizadas
+  - : Texto para convertir en audio, al servicio de las personas con deficiencias visuales.
 
-A typical WebVTT file will look something like this:
+Un archivo WebVTT típico tendrá este aspecto:
 
 ```
 WEBVTT
 
 1
 00:00:22.230 --> 00:00:24.606
-This is the first subtitle.
+Este es el primer subtítulo.
 
 2
 00:00:30.739 --> 00:00:34.074
-This is the second.
+Este es el segundo.
 
 ...
 ```
 
-To get this displayed along with the HTML media playback, you need to:
+Para que esto se muestre junto con la reproducción multimedia HTML, es necesario:
 
-1. Save it as a `.vtt` file in a sensible place.
-2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.
+1. Guárdelo como archivo `.vtt` en un lugar adecuado.
+2. Enlace el archivo `.vtt` con el elemento {{htmlelement("track")}}. `<track>` debe colocarse dentro de `<audio>` o `<video>`, pero después de todos los elementos `<source>`. Utilice el atributo {{htmlattrxref("kind", "track")}} para especificar si las pistas son "subtítulos", " leyendas" o "descripciones". Además, utilice {{htmlattrxref("srclang", "track")}} para indicar al navegador en qué idioma ha escrito los subtítulos.
 
-Here's an example:
+He aquí un ejemplo:
 
 ```html
 <video controls>
@@ -257,52 +257,43 @@ Here's an example:
 </video>
 ```
 
-This will result in a video that has subtitles displayed, kind of like this:
+El resultado será un vídeo con subtítulos, como éste:
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
+![Reproductor de vídeo con controles como play, stop, volumen y activación y desactivación de subtítulos. El vídeo que se reproduce muestra una escena de un hombre sosteniendo un arma parecida a una lanza, y una leyenda que dice "Esta hoja tiene pasado oscuro".](video-player-with-captions.png)
 
-For more details, please read [Adding captions and subtitles to HTML5 video](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](http://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+Para más detalles, lee [Añadir subtítulos a vídeos HTML5](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Puedes [encontrar el ejemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompaña a este artículo en Github, escrito por Ian Devlin (consulta también el [código fuente](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Este ejemplo utiliza algo de JavaScript para permitir a los usuarios elegir entre diferentes subtítulos. Ten en cuenta que para activar los subtítulos, tienes que pulsar el botón "CC" y seleccionar una opción: English, Deutsch o Español.
 
-> **Nota:** Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
+> **Nota:** Las pistas de texto también te ayudan con {{glossary("SEO")}}, ya que a los motores de búsqueda les gusta especialmente el texto. Las pistas de texto incluso permiten a los motores de búsqueda enlazar directamente con un punto del vídeo.
 
-### Active learning: Embedding your own audio and video
+### Aprendizaje activo: Incorpora tu propio audio y vídeo
 
-For this active learning, we'd (ideally) like you to go out into the world and record some of your own video and audio — most phones these days allow you to record audio and video very easily, and provided you can transfer it on to your computer, you can use it. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs out there to allow you to do this without too much trouble, such as [Miro Video Converter](http://www.mirovideoconverter.com/) and [Audacity](https://sourceforge.net/projects/audacity/). We'd like you to have a go!
+Para este aprendizaje activo, nos gustaría (idealmente) que salieras al mundo y grabaras algo de tu propio vídeo y audio: la mayoría de los teléfonos de hoy en día permiten grabar audio y vídeo muy fácilmente, y siempre que puedas transferirlo a tu ordenador, puedes utilizarlo. Es posible que tengas que hacer alguna conversión para acabar con un WebM y un MP4 en el caso del vídeo, y un MP3 y un Ogg en el caso del audio, pero existen suficientes programas que te permitirán hacerlo sin demasiados problemas, como [Miro Video Converter](http://www.mirovideoconverter.com/) y [Audacity](https://sourceforge.net/projects/audacity/). Nos gustaría que lo intentaras.
 
-If you are unable to source any video or audio, then you can feel free to use our [sample audio and video files](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) to carry out this exercise. You can also use our sample code for reference.
+Si no puedes obtener ningún vídeo o audio, puedes utilizar nuestros [archivos de audio y vídeo de muestra](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para realizar este ejercicio. También puedes utilizar nuestro código de ejemplo como referencia.
 
-We would like you to:
+Nos gustaría que
 
-1. Save your audio and video files in a new directory on your computer.
-2. Create a new HTML file in the same directory, called `index.html`.
-3. Add `<audio>` and `<video>` elements to the page; make them display the default browser controls.
-4. Give both of them `<source>` elements so that browsers will find the audio format they support best and load it. These should include `type` attributes.
-5. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
+1. Guardes tus archivos de audio y vídeo en un directorio nuevo de tu ordenador.
+2. Crees un nuevo archivo HTML en el mismo directorio, llamado `index.html`.
+3. Añade los elementos `<audio>` y `<video>` a la página; haz que muestren los controles por defecto del navegador.
+4. Dales a ambos elementos `<source>` para que los navegadores encuentren el formato de audio que mejor soportan y lo carguen. Estos deben incluir atributos `type`.
+5. Asigna al elemento `<video>` un cartel que se mostrará antes de que empiece a reproducirse el vídeo. Diviértete creando tu propio cartel gráfico.
 
-For an added bonus, you could try researching text tracks, and work out how to add some captions to your video.
+Si lo deseas, puedes buscar pistas de texto y averiguar cómo añadir algunas leyendas a tu vídeo.
 
-## Summary
+## Resumen
 
-And that's a wrap; we hope you had fun playing with video and audio in web pages! In the next article, we'll look at other ways of embedding content on the Web, using technologies like {{htmlelement("iframe")}} and {{htmlelement("object")}}.
+Y con esto terminamos; ¡esperamos que te hayas divertido jugando con vídeo y audio en páginas web! En el próximo artículo, veremos otras formas de incrustar contenido en la Web, utilizando tecnologías como {{htmlelement("iframe")}} y {{htmlelement("object")}}.
 
-## See also
+## Ver también
 
 - {{htmlelement("audio")}}
 - {{htmlelement("video")}}
 - {{htmlelement("source")}}
 - {{htmlelement("track")}}
-- [Adding captions and subtitles to HTML5 video](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [Audio and Video delivery](/es/docs/Web/Apps/Fundamentals/Audio_and_video_delivery): A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.
-- [Audio and Video manipulation](/es/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation): A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)
-- Automated options to [translate multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
+- [Añadir subtítulos a vídeos HTML5](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [Transmisión de audio y vídeo](/es/docs/Web/Apps/Fundamentals/Audio_and_video_delivery): Un montón de detalles sobre cómo poner audio y vídeo en páginas web usando HTML y JavaScript.
+- [Manipulación de audio y vídeo](/es/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation): Un montón de detalles sobre la manipulación de audio y vídeo utilizando JavaScript (por ejemplo, la adición de filtros.)
+- Opciones automatizadas para [traducir multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [Images in HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

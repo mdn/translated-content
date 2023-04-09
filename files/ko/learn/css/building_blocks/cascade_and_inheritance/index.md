@@ -112,7 +112,7 @@ CSS 는 상속을 제어하기 위한 4 가지 특수 범용 속성 값을 제�
 
 > **참고:** 브라우저 지원이 제한된 새로운 값인 {{cssxref("revert")}} 도 있습니다.
 
-> **참고:** 각각에 대한 자세한 내용과 작동 방식에 대한 자세한 내용은 {{SectionOnPage("/en-US/docs/Web/CSS/Cascade", "Origin of CSS declarations")}} 를 참조하십시오.
+> **참고:** 각각에 대한 자세한 내용과 작동 방식에 대한 자세한 내용은 [Origin of CSS declarations](/ko/docs/Web/CSS/Cascade) 를 참조하십시오.
 
 우리는 링크 목록을 보고 보편적 가치가 어떻게 작용하는지 탐구할 수 있습니다. 아래의 라이브 예제를 사용하면 CSS 를 사용하여 변경 작업을 수행할 수 있습니다. 코드를 가지고 노는 것이 HTML 과 CSS 를 이해하는 가장 좋은 방법입니다.
 
@@ -251,24 +251,3 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 스타일이 예상대로 적용되지 않는 이상한 문제가 발생하면 여기를 다시 참조 하십시오. 우선 순위 문제일 수 있습니다.
 
 {{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
-
-## 이번 강의에서는
-
-1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [콘텐츠 overflowing](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

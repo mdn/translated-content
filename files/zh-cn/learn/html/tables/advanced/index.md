@@ -41,7 +41,7 @@ slug: Learn/HTML/Tables/Advanced
 
 标题就放在 `<table>` 标签的下面。
 
-> **备注：** 这个 {{htmlattrxref("summary","table")}} 属性也可以在`<table>` 元素中使用，用来提供一段描述，同样可以被屏幕阅读设备阅读。我们推荐使用 `<caption>` 元素来代替使用，因为 `summary` 被 HTML5 规范， {{glossary("deprecated")}} (废除了)，也不能被视力正常的用户阅读。 (它不会出现在页面上)
+> **备注：** 这个 [`summary`](/zh-CN/docs/Web/HTML/Element/table#summary) 属性也可以在`<table>` 元素中使用，用来提供一段描述，同样可以被屏幕阅读设备阅读。我们推荐使用 `<caption>` 元素来代替使用，因为 `summary` 被 HTML5 规范， {{glossary("deprecated")}} (废除了)，也不能被视力正常的用户阅读。 (它不会出现在页面上)
 
 ### 动手练习：添加一个标题
 
@@ -75,7 +75,7 @@ slug: Learn/HTML/Tables/Advanced
 2. 尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。 "SUM" 行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。
 3. 将明显的标题行改为使用 `<thead>` 元素，"SUM" 行使用 `<tfoot>` 元素，剩余的内容使用 `<tbody>` 元素。
 4. 先保存，再刷新。你会看到，添加了 `<tfoot>` 元素后，导致 "SUM" 这行跑到了表格的底部。
-5. 接着，添加一个 {{htmlattrxref("colspan","td")}} 属性，使 "SUM" 单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
+5. 接着，添加一个 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，使 "SUM" 单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
 6. 让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
 
     ```css
@@ -328,7 +328,7 @@ slug: Learn/HTML/Tables/Advanced
 
 ### scope 属性
 
-本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在 `<th>` 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：
+本篇文章的一个新话题是 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 属性，可以添加在 `<th>` 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：
 
 ```html
 <thead>
@@ -360,7 +360,7 @@ slug: Learn/HTML/Tables/Advanced
 
 ### id 和标题属性
 
-如果要替代 `scope` 属性，可以使用 {{htmlattrxref("id")}} 和 {{htmlattrxref("headers", "td")}} 属性来创造标题与单元格之间的联系。使用方法如下：
+如果要替代 `scope` 属性，可以使用 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 和 [`headers`](/zh-CN/docs/Web/HTML/Element/td#headers) 属性来创造标题与单元格之间的联系。使用方法如下：
 
 1. 为每个`<th>` 元素添加一个唯一的 `id` 。
 2. 为每个 `<td>` 元素添加一个 `headers` 属性。每个单元格的`headers` 属性需要包含它从属于的所有标题的 id，之间用空格分隔开。
@@ -408,9 +408,3 @@ slug: Learn/HTML/Tables/Advanced
 关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 [Styling Tables](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## 本章目录
-
-- [HTML 表格入门](/zh-CN/docs/Learn/HTML/Tables/Basics)
-- [HTML 表格高级特性和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced)
-- [构建行星数据](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)

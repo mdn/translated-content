@@ -229,7 +229,7 @@ Ver [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-cap
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.MediaDevices.getUserMedia")}}
+{{Compat}}
 
 ## Ver También
 

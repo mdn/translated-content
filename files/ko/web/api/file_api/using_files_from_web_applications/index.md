@@ -505,7 +505,7 @@ video.play()
 window.URL.revokeObjectURL(obj_url);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

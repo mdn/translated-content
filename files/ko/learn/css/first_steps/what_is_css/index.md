@@ -99,18 +99,10 @@ CSS 가 지정되면 하나 이상의 브라우저가 이를 구현한 경우에
 
 다음은 CSS [`font-family`](/ko/docs/Web/CSS/font-family) 속성에 대한 데이터 차트입니다.
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## 다음은 뭐죠
 
 CSS 가 무엇인지 이해했으니, 이제 [CSS 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started) 로 넘어가서 CSS 를 직접 작성할 수 있습니다.
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## 이번 강의에서는
-
-1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 로 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [새로운 지식 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

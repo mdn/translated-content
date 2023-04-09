@@ -53,9 +53,9 @@ biquadFilter.gain.value = 25;
 
 {{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.BaseAudioContext.createBiquadFilter")}}
+{{Compat}}
 
 ## Ver tambien
 

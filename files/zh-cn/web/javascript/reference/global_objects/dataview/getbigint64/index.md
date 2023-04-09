@@ -36,7 +36,7 @@ dataview.getBigInt64(byteOffset [, littleEndian])
 - 没有对齐约束;
 - 可以从任何偏移量获取多字节值。
 
-## 例子
+## 示例
 
 ### 使用 `getBigInt64` 方法
 

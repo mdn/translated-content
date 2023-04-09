@@ -15,7 +15,7 @@ slug: Web/API/BaseAudioContext/decodeAudioData
 
 ```
 audioCtx.decodeAudioData(audioData, function(decodedData) {
-  // use the dec​oded data here
+  // use the decoded data here
 });
 ```
 

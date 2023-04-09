@@ -34,9 +34,9 @@ Aucun
 
 `object`. [Window](/fr/docs/Web/API/Window) de la page d'arrière plan.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.getBackgroundPage")}}
+{{Compat}}
 
 ## Exemples
 

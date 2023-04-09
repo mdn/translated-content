@@ -179,7 +179,7 @@ emsdk_env.bat
     #endif
     ```
 
-    默认情况下，Emscripten 生成的代码只会调用 `main()` 函数，其它的函数将被视为无用代码。在一个函数名之前添加 `EMSCRIPTEN_KEEPALIVE` 能够防止这样的事情发生。你需要导入 `emscripten.h` 库来使用 `EMSCRIPTEN_KEEPALIVE`。
+    默认情况下，Emscripten 生成的代码只会调用 `main()` 函数，其他的函数将被视为无用代码。在一个函数名之前添加 `EMSCRIPTEN_KEEPALIVE` 能够防止这样的事情发生。你需要导入 `emscripten.h` 库来使用 `EMSCRIPTEN_KEEPALIVE`。
 
     > **备注：** 为了保证万一你想在 C++ 代码中引用这些代码时代码可以正常工作，我们添加了 `#ifdef` 代码块。由于 C 与 C++ 中名字修饰规则的差异，添加的代码块有可能产生问题，但目前我们设置了这一额外的代码块以保证你使用 C++ 时，这些代码会被视为外部 C 语言函数。
 

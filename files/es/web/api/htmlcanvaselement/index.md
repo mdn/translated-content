@@ -40,9 +40,9 @@ _Herada métodos de la interfaz padre,_ _{{domxref("HTMLElement")}}._
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCanvasElement")}}
+{{Compat}}
 
 ## Ver también
 

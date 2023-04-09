@@ -55,9 +55,9 @@ var getting = browser.cookies.getAll(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets   `{{WebExtAPIRef('cookies.Cookie')}}` correspondant aux propriétés données dans le paramètre `details`. Seuls les cookies non expirés sont renvoyés. Les cookies retournés seront triés par longueur de chemin, du plus long au plus court. Si plusieurs cookies ont la même longueur de chemin, ceux dont l'heure de création est la plus proche seront les premiers.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.getAll")}}
+{{Compat}}
 
 ## Exemples
 

@@ -64,9 +64,9 @@ browser.bookmarks.onCreated.addListener(handleCreated);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.onCreated")}}
+{{Compat}}
 
 > **Note :**
 >

@@ -66,9 +66,9 @@ function errorMsg(msg, error) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## See also
 

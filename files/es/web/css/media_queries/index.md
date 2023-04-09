@@ -45,12 +45,6 @@ Puede obtener más información sobre el uso programático de consultas de medio
 
 {{Specifications}}
 
-## Compatibilidades con navegadores
-
-### @media rule
-
-{{Compat("css.at-rules.media")}}
-
 ## Ver también
 
 - Use {{cssxref ("@ apoya")}} para aplicar estilos que dependen del soporte del navegador para varias tecnologías CSS.

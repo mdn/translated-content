@@ -11,36 +11,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 ## 语法
 
-```js
-// 箭头函数
-filter((element) => { /* … */ } )
-filter((element, index) => { /* … */ } )
-filter((element, index, array) => { /* … */ } )
-
-// 回调函数
+```js-nolint
 filter(callbackFn)
 filter(callbackFn, thisArg)
-
-// 内联回调函数
-filter(function(element) { /* … */ })
-filter(function(element, index) { /* … */ })
-filter(function(element, index, array){ /* … */ })
-filter(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-
   - : 用来测试数组中每个元素的函数。返回 `true` 表示该元素通过测试，保留该元素，`false` 则不保留。它接受以下三个参数：
-
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`
       - : 正在处理的元素在数组中的索引。
     - `array`
       - : 调用了 `filter()` 的数组本身。
-
 - `thisArg`{{optional_inline}}
   - : 执行 `callbackFn` 时，用于 `this` 的值。
 
@@ -83,7 +68,7 @@ const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 
 ### 找出数组中所有的素数
 
-下面的例子返回数组中的所有质数：
+下面的例子返回数组中的所有素数：
 
 ```js
 const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];

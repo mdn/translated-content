@@ -109,7 +109,7 @@ toString.call(undefined);   // [object Undefined]
 toString.call(null);        // [object Null]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

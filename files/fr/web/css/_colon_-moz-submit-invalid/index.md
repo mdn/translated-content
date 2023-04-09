@@ -27,7 +27,7 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-submit-invalid")}}
+{{Compat}}
 
 ## Voir aussi
 

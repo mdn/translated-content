@@ -48,7 +48,7 @@ WeakRef 对象包含对对象的弱引用，这个弱引用被称为该 WeakRef 
 - 你不能更改 WeakRef 的 target，它将始终是第一次指定的 target 或者在回收该 target 时会定义
 - WeakRef 可能永远不会从 deref 返回 undefined，即使没有什么东西能很好地保存 target，因为 GC 可能永远不会决定回收对象。
 
-## 例子
+## 示例
 
 ### 使用 WeakRef 对象
 

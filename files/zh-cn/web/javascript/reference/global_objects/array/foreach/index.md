@@ -11,38 +11,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 ## 语法
 
-```js
-// 箭头函数
-forEach((element) => { /* … */ })
-forEach((element, index) => { /* … */ })
-forEach((element, index, array) => { /* … */ })
-
-// 回调函数
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// 内联回调函数
-forEach(function(element) { /* … */ })
-forEach(function(element, index) { /* … */ })
-forEach(function(element, index, array){ /* … */ })
-forEach(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-
-  - : 为数组中每个元素执行的函数。
-
-    函数调用时带有以下参数：
-
+  - : 为数组中每个元素执行的函数。并会丢弃它的返回值。函数调用时带有以下参数：
     - `element`
       - : 数组中正在处理的当前元素。
     - `index`
       - : 数组中正在处理的当前元素的索引。
     - `array`
       - : `forEach()` 方法正在操作的数组。
-
 - `thisArg` {{optional_inline}}
   - : 可选参数。当执行回调函数 `callbackFn` 时，用作 `this` 的值。
 
@@ -87,6 +70,24 @@ forEach(function(element, index, array) { /* … */ }, thisArg)
 > - {{jsxref("Array.prototype.findIndex()", "findIndex()")}}
 >
 > 译者注：只要条件允许，也可以使用 {{jsxref("Array.prototype.filter()", "filter()")}} 提前过滤出需要遍历的部分，再用 `forEach()` 处理。
+
+`forEach()` 方法要求使用同步函数——它不会等待 promise 执行完成。当你使用 promise（或者 async 函数）作为 `forEach` 的回调函数时，请确保你知道自己在做什么。
+
+```js
+const ratings = [5, 4, 5];
+let sum = 0;
+
+const sumFunction = async (a, b) => a + b;
+ratings.forEach(async (rating) => {
+  sum = await sumFunction(sum, rating);
+});
+
+console.log(sum);
+// 期望的输出：14
+// 实际的输出：0
+```
+
+如果希望按顺序的或者并发的执行一系列操作，可以[查看 promise 组合](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#组合)。
 
 ## 示例
 

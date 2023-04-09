@@ -28,4 +28,4 @@ Les _attributs SVG de traitement conditionnel_ sont tous les attributs qui peuve
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.conditional_processing")}}
+{{Compat}}

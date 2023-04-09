@@ -236,9 +236,9 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
 
 {{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.itemscope")}}
+{{Compat}}
 
 ## Ver tambien
 

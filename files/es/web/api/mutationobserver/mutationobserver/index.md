@@ -75,6 +75,6 @@ Desde este momento y hasta que se llame al método {{domxref("MutationObserver.d
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("api.MutationObserver.MutationObserver")}}
+{{Compat}}

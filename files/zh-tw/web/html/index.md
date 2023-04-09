@@ -45,7 +45,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 ## 進階部份
 
 - [CORS 圖像](/zh-TW/docs/Web/HTML/CORS_enabled_image)
-  - : `當結合了一個適合的`[CORS](/zh-TW/docs/Glossary/CORS)，[`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#attr-crossorigin) 屬性允許 {{HTMLElement("img")}} 元素定義的圖像被從一個地方載入，並被使用於 {{HTMLElement("canvas")}}，即便載入的地方是原處也一樣。
+  - : `當結合了一個適合的`[CORS](/zh-TW/docs/Glossary/CORS)，[`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#crossorigin) 屬性允許 {{HTMLElement("img")}} 元素定義的圖像被從一個地方載入，並被使用於 {{HTMLElement("canvas")}}，即便載入的地方是原處也一樣。
 - [設定 CORS 屬性](/zh-TW/docs/Web/HTML/CORS_settings_attributes)
   - : 有些 HTML 元素可以支援 [CORS](/zh-TW/docs/HTTP/Access_control_CORS),像 {{HTMLElement("img")}} 或者 {{HTMLElement("video")}},有著 `crossorigin` (`crossOrigin` property)的屬性, 讓你能直接使用 CORS 的元素。
 - [管理 HTML 中的焦點](/zh-TW/docs/Web/HTML/Focus_management_in_HTML)
@@ -53,7 +53,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 - [使用 application cache](/zh-TW/docs/Web/HTML/Using_the_application_cache)
   - : Application caching lets web-based applications run offline. You can use the **Application Cache** (_AppCache_) interface to specify resources that the browser should cache and make available to offline users. Applications that are cached load and work correctly even if users click the refresh button when they are offline.
 - [使用 rel="preload" 來預載內容](/zh-TW/docs/Web/HTML/Preloading_content)
-  - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
+  - : The `preload` value of the {{htmlelement("link")}} element's [`rel`](/zh-TW/docs/Web/HTML/Element/link#rel) attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
 ## 參考資料
 

@@ -10,7 +10,7 @@ original_slug: Web/HTML/Elemento/bgsound
 
 El elemento HTML de sonido de fondo (\<bgsound>) es un elemento de Internet Explorer que asocia un sonido de fondo con un página .
 
-> **Nota:** **No usar esto !** Para incrustar un elemento en una página web , se debe de usar el elemento {{HTMLElement("audio")}}
+> **Nota:** Para incrustar un elemento en una página web , se debe de usar el elemento {{HTMLElement("audio")}}
 
 ## Atributos
 
@@ -37,9 +37,13 @@ Funcionalidad similar puede ser lograda en algunas versiones de Netscape usando 
 
 Puedes escribir bgsound con una etiqueta de cierre automático \<bgsound /> . Ahora bien , desde que este elemento no es parte de un estándar , haciendolo como XHTML no lo hará valido.
 
-## Compatibilidad en exploradores
+## Especificaciones
 
-{{Compat("html.elements.bgsound")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

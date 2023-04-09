@@ -134,7 +134,7 @@ Here, we're specifying a timeout of 2000 ms.
 
 ## Synchronous request
 
-> **Nota:** Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> **Nota:** Starting with Gecko 30.0, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 Em casos raros, o uso do método síncrono é preferível ao invés do método assíncrono.
 

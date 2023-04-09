@@ -422,11 +422,11 @@ selectElem.addEventListener('change', () => {
 
 {{EmbedLiveSample('Blend_mode_comparison', '100%', 400)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

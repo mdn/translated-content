@@ -75,9 +75,9 @@ div {
 
 No es parte de ninguna especificación aunque está relacionada con la propiedad {{cssxref("border-block-start")}}.
 
-## Compatibilidad con los distintos navegadores.
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-border-before")}}
+{{Compat}}
 
 ## Ver además
 

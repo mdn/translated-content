@@ -17,8 +17,8 @@ O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opciona
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{Htmlattrdef ("accesskey")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
-  - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados ​​para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.
+- {{Htmlattrdef ("accesskey")}} {{HTMLVersionInline ("4")}} só,
+  - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.
 - {{Htmlattrdef ("alt")}}
   - : Uma alternativa seqüência de texto para exibir em navegadores que não exibem imagens. O texto deve ser formulada de modo a que apresenta o usuário com o mesmo tipo de escolha como a imagem iria oferecer quando exibido sem o texto alternativo. Em HTML4, este atributo é necessário, mas pode ser uma string vazia (""). Em HTML5, este atributo é necessário apenas se o **href** atributo é usado.
 - {{Htmlattrdef ("coords")}}
@@ -29,12 +29,12 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
   - : A meta de hyperlink para a área. Seu valor é uma URL válida. Em HTML4, quer este atributo ou o **nohref** atributo deve estar presente no elemento. Em HTML5, este atributo pode ser omitido; em caso afirmativo, o elemento de área não representa um hiperlink.
 - {{Htmlattrdef ("hreflang")}} {{HTMLVersionInline ("5")}}
   - : Indica o idioma do recurso ligado. Os valores permitidos são determinados por [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) . Utilize este atributo somente se a **href** atributo está presente.
-- {{Htmlattrdef ("name")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
+- {{Htmlattrdef ("name")}} {{HTMLVersionInline ("4")}} só,
   - : Defina um nome para a área clicável de modo que possa ser programado por navegadores mais antigos.
 - {{Htmlattrdef ("media")}} {{HTMLVersionInline ("5")}}
   - : Uma dica da mídia para o qual o recurso ligado foi projetado, por exemplo `impressão e tela` . Se omitido, o padrão é `tudo` . Utilize este atributo somente se a **href** atributo está presente.
 
-- {{Htmlattrdef ("nohref")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
+- {{Htmlattrdef ("nohref")}} {{HTMLVersionInline ("4")}} só,
 
   - : Indica que não existe hyperlink para a área associada. Ou este atributo ou a **href** atributo deve estar presente no elemento.
 
@@ -44,7 +44,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
   - : Para âncoras contendo o **href** atributo, este atributo especifica a relação do objeto de destino para o objeto link. O valor é uma lista de valores de relacionamento, separados por vírgulas. Os valores e sua semântica será registrado por alguma autoridade que poderia ter significado para o autor do documento. A relação padrão, se nenhum outro é dado, é nula. Utilize este atributo somente se a **href** atributo está presente.
 - {{Htmlattrdef ("shape")}}
   - : A forma do ponto de acesso associado. As especificações para colar 5 e HTML 4 definem os valores `rect` , que define uma região rectangular; `círculo` , o qual define uma região circular; `poli` , que define um polígono; e `padrão` , o que indica toda a região além de quaisquer formas definidas. Muitos navegadores, principalmente o Internet Explorer 4 e superior, apoio `circ` , `polígono` , e `retângulo` como valores válidos para **forma** ; estes valores são {{Non-standard_inline}}.
-- {{Htmlattrdef ("tabindex")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
+- {{Htmlattrdef ("tabindex")}} {{HTMLVersionInline ("4")}} só,
   - : Um valor numérico que especifica a posição da área definida na ordem de tabulação browser. Este atributo é global em HTML5.
 - {{Htmlattrdef ("target")}}
 

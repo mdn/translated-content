@@ -18,9 +18,11 @@ Le problème de format peut être causé par les valeurs des en-têtes [`Content
 
 ## Spécifications
 
-| Spécification                                                                | Titre                                                         |
-| ---------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.5.13: 415 Unsupported Media Type](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.13) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

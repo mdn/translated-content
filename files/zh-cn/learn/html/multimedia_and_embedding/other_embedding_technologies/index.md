@@ -38,7 +38,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
         <a href="/zh-CN/docs/Web/HTML/Element/iframe"
           ><code>&#x3C;iframe></code></a
         >
-        元素，在网页中嵌入部件，例如 PDF 文档和其它外部网页。
+        元素，在网页中嵌入部件，例如 PDF 文档和其他外部网页。
       </td>
     </tr>
   </tbody>
@@ -56,7 +56,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 最后，[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 元素出现了（连同其他嵌入内容的方式，如
 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)、[`<video>`](/zh-CN/docs/Web/HTML/Element/video) 等），它提供了一种将整个 web
-页嵌入到另一个网页的方法，看起来就像那个 web 页是另一个网页的一个 {{htmlelement("img")}} 或其它元素一样。{{htmlelement("iframe")}} 现在经常被使用。
+页嵌入到另一个网页的方法，看起来就像那个 web 页是另一个网页的一个 {{htmlelement("img")}} 或其他元素一样。{{htmlelement("iframe")}} 现在经常被使用。
 
 了解完历史之后，让我们继续往下看以了解如何使用它们。
 
@@ -221,11 +221,11 @@ textarea.onkeyup = function () {
 - [`width`](/zh-CN/docs/Web/HTML/Element/iframe#attr-width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/iframe#attr-height)
   - : 这些属性指定你想要的 iframe 的宽度和高度。
 - 备选内容
-  - : 与 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 等其它类似元素相同，你可以在
+  - : 与 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 等其他类似元素相同，你可以在
     `<iframe></iframe>` 标签之间包含备选内容，如果浏览器不支持 `<iframe>`，将会显示备选内容，这种情况下，我们已经添加了一个到该页面的链接。现在你几乎不可能遇到任何不支持
     `<iframe>` 的浏览器。
 - [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#attr-sandbox)
-  - : 该属性需要在已经支持其它 `<iframe>` 功能（例如 IE 10 及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。
+  - : 该属性需要在已经支持其他 `<iframe>` 功能（例如 IE 10 及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。
 
 > **备注：** 为了提高速度，在主内容完成加载后，使用 JavaScript 设置 iframe 的 `src`
 > 属性是个好主意。这使你的页面可以更快地被使用，并减少你的官方页面加载时间（重要的 [SEO](/zh-CN/docs/Glossary/SEO) 指标）。
@@ -244,7 +244,7 @@ textarea.onkeyup = function () {
 一个快速的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。你将不会看到任何内容，但如果你点击[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的*控制台*，你会看到一条消息，告诉你为什么没有显示内容。在
 Firefox 中，你会*被告知：“X-Frame-Options 拒绝加载 `https://developer.mozilla.org/zh-CN/docs/Glossary`*。这是因为构建 MDN
 的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到`<iframe>`的设置（请参阅[配置 CSP 指令](#配置_csp_指令)）这是有必要的——整个
-MDN 页面被嵌入在其它页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
+MDN 页面被嵌入在其他页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
 很多资金。
 
 #### 只有在必要时嵌入
@@ -301,9 +301,9 @@ Java 小程序和 Flash，PDF（可在浏览器中显示为一个 PDF 插件）�
 
 |                                                            | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| 嵌入内容的[网址](/zh-CN/docs/Glossary/URL)                 | {{htmlattrxref('src','embed')}}                                                  | {{htmlattrxref('data','object')}}                                                  |
-| 嵌入内容的*准确*[媒体类型](/zh-CN/docs/Glossary/MIME_type) | {{htmlattrxref('type','embed')}}                                              | {{htmlattrxref('type','object')}}                                                  |
-| 由插件控制的框的高度和宽度（以 CSS 像素为单位）            | {{htmlattrxref('height','embed')}} {{htmlattrxref('width','embed')}} | {{htmlattrxref('height','object')}} {{htmlattrxref('width','object')}} |
+| 嵌入内容的[网址](/zh-CN/docs/Glossary/URL)                 | [`src`](/zh-CN/docs/Web/HTML/Element/embed#src)                                                  | [`data`](/zh-CN/docs/Web/HTML/Element/object#data)                                                  |
+| 嵌入内容的*准确*[媒体类型](/zh-CN/docs/Glossary/MIME_type) | [`type`](/zh-CN/docs/Web/HTML/Element/embed#type)                                              | [`type`](/zh-CN/docs/Web/HTML/Element/object#type)                                                  |
+| 由插件控制的框的高度和宽度（以 CSS 像素为单位）            | [`height`](/zh-CN/docs/Web/HTML/Element/embed#height) [`width`](/zh-CN/docs/Web/HTML/Element/embed#width) | [`height`](/zh-CN/docs/Web/HTML/Element/object#height) [`width`](/zh-CN/docs/Web/HTML/Element/object#width) |
 | 名称和值，将插件作为参数提供                               | 具有这些名称和值的 ad hoc 属性                                                            | 单标签[`<param>`](/zh-CN/docs/Web/HTML/Element/param)元素，包含在内`<object>`                 |
 | 独立的 HTML 内容作为不可用资源的回退                       | 不支持（`<noembed>`已过时）                                                               | 包含在元素`<object>`之后`<param>`                                                             |
 
@@ -354,16 +354,7 @@ BHO 技术。你可以使用 [HTML5 视频](/zh-CN/docs/Learn/HTML/Multimedia_an
 
 在 Web 文档中嵌入其他内容这一主题可以很快变得非常复杂，因此在本文中，我们尝试以一种简单而熟悉的方式来介绍它，这种介绍方式将立即显示出相关性，同时仍暗示了一些涉及更高级功能的技术。刚开始，除了嵌入第三方内容（如地图和视频），你不太可能在网页上使用到嵌入技术。当你变得更有经验时，你可能会开始为他们找到更多的用途。
 
-除了我们在这里讨论的那些外，还有许多涉及嵌入外部内容的技术。我们看到了一些在前面的文章中出现的，如 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)、[`<audio>`](/zh-CN/docs/Web/HTML/Element/audio) 和 [`<img>`](/zh-CN/docs/Web/HTML/Element/img)，但还有其它的有待关注，如 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 用于 JavaScript
+除了我们在这里讨论的那些外，还有许多涉及嵌入外部内容的技术。我们看到了一些在前面的文章中出现的，如 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)、[`<audio>`](/zh-CN/docs/Web/HTML/Element/audio) 和 [`<img>`](/zh-CN/docs/Web/HTML/Element/img)，但还有其他的有待关注，如 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 用于 JavaScript
 生成的 2D 和 3D 图形，[`<svg>`](/zh-CN/docs/Web/SVG/Element/svg) 用于嵌入矢量图形。我们将在此学习模块的下一篇文章中学习[SVG](/zh-CN/docs/Web/SVG)。
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 本章目录
-
-- [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [从 \<object> 到 \<iframe>：其它嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [为网页添加矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla 宣传页面](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

@@ -86,7 +86,7 @@ Streams API 문서와 참조할 만한 예제를 함께 작성하였습니다 �
 
 - [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

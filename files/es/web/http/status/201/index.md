@@ -15,13 +15,11 @@ El caso de uso común de este código de estado es el resultado de una solicitud
 
 ## Especificaciones
 
-| Especificacion                                       | Titulo                                                                       |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------- |
-| {{RFC("7231", "201 Created" , "6.3.2")}} | Protocolo de transferencia de hipertexto (HTTP / 1.1): Semántica y contenido |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.status.201")}}
+{{Compat}}
 
 ## Ver también
 

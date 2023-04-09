@@ -52,13 +52,11 @@ GET /index.html
 
 ## Spécifications
 
-| Spécification                            | Titre                                                         |
-| ---------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "GET", "4.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/methods", "GET")}}
+{{Compat}}
 
 ## Voir aussi
 

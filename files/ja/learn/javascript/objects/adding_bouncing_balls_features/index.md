@@ -196,13 +196,3 @@ window.addEventListener('keydown', (e) => {
     - 実際の課題または評価ページへのリンクにより、助けを求めている問題を見つけることができます。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## このモジュール
-
-- [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)
-- [Object のプロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [オブジェクト指向プログラミングの概念](/ja/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- [JavaScript におけるクラス](/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [JSON データの操作](/ja/docs/Learn/JavaScript/Objects/JSON)
-- [オブジェクト作成の練習](/ja/docs/Learn/JavaScript/Objects/Object_building_practice)
-- **バウンスボールに機能を追加する**

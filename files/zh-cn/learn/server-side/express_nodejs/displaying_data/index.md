@@ -5,7 +5,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
-我们现在准备好要新增网页，以显示[本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)的书本与其它资料。这些网页将包含一个主页，显示我们拥有的每个模型的记录数，以及所有模型的清单和详细信息页面。借此，我们将获得从数据库获取记录、以及使用模板的实战经验。
+我们现在准备好要新增网页，以显示[本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)的书本与其他资料。这些网页将包含一个主页，显示我们拥有的每个模型的记录数，以及所有模型的清单和详细信息页面。借此，我们将获得从数据库获取记录、以及使用模板的实战经验。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -71,15 +71,3 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 - [Moment](http://momentjs.com/docs/) (Moment 官方文件)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程文章列表
-
-- [Express/Node 介绍](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [架设 Node (Express) 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2: 新建网站骨架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3: 使用数据库 (Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4: 路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7: 部署至生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

@@ -258,7 +258,7 @@ tbody > tr > th {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.tbody")}}
+{{Compat}}
 
 ## 같이 보기
 

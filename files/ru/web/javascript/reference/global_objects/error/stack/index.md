@@ -1,6 +1,6 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 tags:
   - Error
   - JavaScript
@@ -85,7 +85,7 @@ a("первый вызов, первый аргумент")@file:///C:/example.h
 
 ### Стек кода в функции `eval()`
 
-Начиная с Firefox 30 {{geckoRelease("30")}}, стек вызовов кода в вызовах `Function()` и `eval()` даёт более подробную информацию о номере строки и колонки внутри этих вызовов. Вызовы `Function` обозначаются `"> Function"`, а вызовы `eval()` обозначаются `"> eval"`. Смотрите {{bug("332176")}}.
+Начиная с Firefox 30, стек вызовов кода в вызовах `Function()` и `eval()` даёт более подробную информацию о номере строки и колонки внутри этих вызовов. Вызовы `Function` обозначаются `"> Function"`, а вызовы `eval()` обозначаются `"> eval"`. Смотрите {{bug("332176")}}.
 
 ```js
 try {
