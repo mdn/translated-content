@@ -202,7 +202,7 @@ C'est une bonne pratique que d'épeler l'acronyme ou l'abréviation lorsqu'elle 
   d'échange de données.</p>
 ```
 
-##### Résltat
+##### Résultat
 
 {{EmbedliveSample('')}}
 
