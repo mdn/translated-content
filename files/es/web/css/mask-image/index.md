@@ -51,9 +51,9 @@ p {
 
 Si se especifican varias imágenes, la región visible que sale como resultado es la combinación de las regiones visibles de cada máscara individual.
 
-## Compatibilidad con los distintos navegadores.
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-image")}}
+{{Compat}}
 
 ## Ver además
 

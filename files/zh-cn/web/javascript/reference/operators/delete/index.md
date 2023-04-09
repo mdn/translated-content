@@ -38,7 +38,7 @@ delete object['property']
 
 ## 描述
 
-与通常的看法不同，`delete`操作符与直接释放内存**无关**。内存管理 通过断开引用来间接完成的，查看[内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)页可了解详情。
+与通常的看法不同，`delete`操作符与直接释放内存**无关**。内存管理 通过断开引用来间接完成的，查看[内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)页可了解详情。
 
 **`delete`** 操作符会从某个对象上移除指定属性。成功删除的时候会返回 `true`，否则返回 `false`。
 

@@ -1,7 +1,8 @@
 ---
 title: 선택자로 DOM 요소 선택하기
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 선택자 API는 DOM에서 {{domxref("Element")}} 노드를 선택자를 통해 빠르고 쉽게 가져올 수 있는 메서드를 제공합니다. 이 방법은 JavaScript 코드에서 반복문을 통해 특성 요소를 탐색하던 이전 방법보다 훨씬 빠릅니다.

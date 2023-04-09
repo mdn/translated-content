@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 
 {{JSRef}}
 
-**`Object.isFrozen()`**方法判断一个对象是否被{{jsxref("Object.freeze()", "冻结", "", 1)}}。
+**`Object.isFrozen()`** 方法判断一个对象是否被{{jsxref("Object.freeze()", "冻结", "", 1)}}。
 
 ## 语法
 
@@ -26,7 +26,7 @@ Object.isFrozen(obj)
 
 一个对象是冻结的是指它不可{{jsxref("Object.isExtensible", "扩展")}}，所有属性都是不可配置的，且所有数据属性（即没有 getter 或 setter 组件的访问器的属性）都是不可写的。
 
-## 例子
+## 示例
 
 ```js
 // 一个对象默认是可扩展的，所以它也是非冻结的。

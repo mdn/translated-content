@@ -1,20 +1,30 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
+l10n:
+  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
 {{HTTPSidebar}}
 
-**`Content-Range`** HTTP 응답 헤더는 전체 바디 메시지에 속한 부분 메시지의 위치를 알려줍니다.
+**`Content-Range`** HTTP 응답 헤더는 전체 바디 메시지에서 부분 메시지가 속한 위치를 알려줍니다.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">헤더 타입</th>
-      <td>{{Glossary("Response header")}}</td>
+      <td>
+        {{Glossary("Response header")}},
+        {{Glossary("Payload header")}}
+      </td>
+    </tr>
+     <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "금지된 헤더 이름")}}</th>
+      <td>아니오</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Simple response header", "CORS-safelisted
+        response-header")}}</th>
       <td>아니오</td>
     </tr>
     <tr>
@@ -28,7 +38,7 @@ slug: Web/HTTP/Headers/Content-Range
 
 ## 문법
 
-```
+```http
 Content-Range: <unit> <range-start>-<range-end>/<size>
 Content-Range: <unit> <range-start>-<range-end>/*
 Content-Range: <unit> */<size>
@@ -47,15 +57,13 @@ Content-Range: <unit> */<size>
 
 ## 예제
 
-```
+```http
 Content-Range: bytes 200-1000/67589
 ```
 
-## 기술 사양
+## 명세서
 
-| 기술 사양                                            | 제목                                                   |
-| ---------------------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "Content-Range", "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+{{Specifications}}
 
 ## 브라우저 호환성
 

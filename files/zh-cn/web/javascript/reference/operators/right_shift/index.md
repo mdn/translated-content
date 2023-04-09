@@ -39,7 +39,7 @@ a >> b
 -9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
 ```
 
-## 例子
+## 示例
 
 ### 使用右移操作
 
@@ -58,5 +58,5 @@ a >> b
 
 ## 参见
 
-- [JS 指南中的位运算](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [JS 指南中的位运算](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
 - [右移赋值操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)

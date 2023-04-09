@@ -1,6 +1,6 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
+slug: Web/API/console/warn
 translation_of: Web/API/Console/warn
 ---
 

@@ -80,6 +80,6 @@ Resultado:
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image")}}
+{{Compat}}

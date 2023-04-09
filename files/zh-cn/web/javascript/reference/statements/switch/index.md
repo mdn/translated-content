@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/switch
 
 {{jsSidebar("Statements")}}
 
-**`switch` 语句**评估一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)，将表达式的值与`case`子句匹配，并执行与该情况相关联的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。
+**`switch` 语句**评估一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#表达式)，将表达式的值与`case`子句匹配，并执行与该情况相关联的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html")}}
 
@@ -117,7 +117,7 @@ switch (foo) {
 }
 ```
 
-即使你把 default 放到其它 case 之上，它仍有效。
+即使你把 default 放到其他 case 之上，它仍有效。
 
 ### 使用多准则 case 的方法
 

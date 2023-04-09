@@ -171,7 +171,7 @@ Some keys toggle the state of an indicator light; these include keys such as Cap
 
 > **备注：** On Linux, Firefox 12 and earlier also dispatched the `keypress` event for these keys.
 
-However, a limitation of the macOS event model causes Caps Lock to dispatch only the `keydown` event. Num Lock was supported on some older laptop models (2007 models and older), but since then, macOS hasn't supported Num Lock even on external keyboards. On older MacBooks with a Num Lock key, that key doesn't generate any key events. Gecko does support the Scroll Lock key if an external keyboard which has an F14 key is connected. In certain older versions of Firefox, this key generated a `keypress` event; this inconsistent behavior was {{bug(602812)}}.
+However, a limitation of the macOS event model causes Caps Lock to dispatch only the `keydown` event. Num Lock was supported on some older laptop models (2007 models and older), but since then, macOS hasn't supported Num Lock even on external keyboards. On older MacBooks with a Num Lock key, that key doesn't generate any key events. Gecko does support the Scroll Lock key if an external keyboard which has an F14 key is connected. In certain older versions of Firefox, this key generated a `keypress` event; this inconsistent behavior was [Firefox bug 602812](https://bugzil.la/602812).
 
 ### Auto-repeat handling
 
@@ -270,7 +270,7 @@ The `KeyboardEvent` interface specification went through numerous draft versions
 
 ### 兼容性说明
 
-- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](</zh-CN/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ({{bug(968056)}}), except for the&#x20;
+- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](</zh-CN/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)), except for the&#x20;
 
   <kbd>Enter</kbd>
 

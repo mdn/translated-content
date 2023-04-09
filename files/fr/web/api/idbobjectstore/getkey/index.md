@@ -80,4 +80,4 @@ openRequest.onsuccess = (event) => {
 - Réglage d'une fourchette de clés : {{domxref("IDBKeyRange")}}
 - Récupération et modification de vos données : {{domxref("IDBObjectStore")}}
 - Utilisation des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence : [Notifications des tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/to-do-notifications/).)
+- Exemple de référence : [Notifications des tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/).)

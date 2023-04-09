@@ -238,11 +238,3 @@ Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不�
 - [Web workers API](/zh-CN/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
-
-## 在本模块中
-
-- [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [如何使用 promises](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-- [实现基于 promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- **workers 简介**
-- [序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

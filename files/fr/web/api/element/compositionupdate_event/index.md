@@ -31,9 +31,13 @@ L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajo
 | `data` {{ReadOnlyInline}}       | [`DOMString`](/fr/docs/Web/API/DOMString) (string) | La chaîne de caractères originale éditée ou une chaîne vide.                               |
 | `locale` {{ReadOnlyInline}}     | [`DOMString`](/fr/docs/Web/API/DOMString) (string) | Le code de la langue pour l'évènement de composition si disponible&nbsp;; sinon une chaîne vide. |
 
-## Compatibilités navigateur
+## Spécifications
 
-{{Compat("api.Element.compositionupdate_event")}}
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

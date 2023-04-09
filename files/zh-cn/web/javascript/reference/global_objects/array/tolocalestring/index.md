@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 
 ## 语法
 
-```js
+```js-nolint
 toLocaleString();
 toLocaleString(locales);
 toLocaleString(locales, options);

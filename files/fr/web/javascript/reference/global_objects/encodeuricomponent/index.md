@@ -49,7 +49,7 @@ console.log(encodeURI(set4)); // ABC%20abc%20123 (l'espace est encodé en %20)
 
 console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
 console.log(encodeURIComponent(set2)); // -_.!~*'()
-console.log(encodeURIComponent(set3)); // #
+console.log(encodeURIComponent(set3)); // %23
 console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (l'espace est encodé en %20)
 ```
 

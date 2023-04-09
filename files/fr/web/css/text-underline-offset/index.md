@@ -84,7 +84,7 @@ p {
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-underline-offset")}}
+{{Compat}}
 
 ## Voir aussi
 

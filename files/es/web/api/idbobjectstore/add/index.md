@@ -102,9 +102,9 @@ function addData() {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBObjectStore.add")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,6 +1,6 @@
 ---
 title: Propriété (JavaScript)
-slug: Glossary/property/JavaScript
+slug: Glossary/Property/JavaScript
 tags:
   - Encodage
   - Glossaire

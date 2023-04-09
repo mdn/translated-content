@@ -3,35 +3,37 @@ title: queueMicrotask()
 slug: Web/API/queueMicrotask
 ---
 
-{{APIRef("HTML DOM")}}{{domxref("Window")}} 或 {{domxref("Worker")}} 接口的 **`queueMicrotask()`** 方法，queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.microtask 是一个简短的函数，它将在当前任务（task）完成其工作之后运行，并且在执行上下文的控制返回到浏览器的事件循环之前，没有其他代码等待运行。The microtask is a short function which will run after the current task has completed its work and when there is no other code waiting to be run before control of the execution context is returned to the browser's event loop.
+{{APIRef("HTML DOM")}}
 
-This lets your code run without interfering with any other, potentially higher priority, code that is pending, but before the browser regains control over the execution context, potentially depending on work you need to complete. You can learn more about how to use microtasks and why you might choose to do so in our [microtask guide](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide).
+{{domxref("Window")}} 或 {{domxref("Worker")}} 接口的 **`queueMicrotask()`** 方法，将微任务加入队列以在控制返回浏览器的事件循环之前的安全时间执行。
 
-The importance of microtasks comes in its ability to perform tasks asynchronously but in a specific order. See [Using microtasks in JavaScript with queueMicrotask()](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
+微任务是一个简短的函数，它将在当前任务完成其工作后运行，并且在执行上下文的控制权返回到浏览器的事件循环之前没有其他代码等待运行时运行。
 
-Microtasks are especially useful for libraries and frameworks that need to perform final cleanup or other just-before-rendering tasks.
+它让你的代码在运行时不会干扰任何可能具有更高优先级的代码的运行，但在浏览器重新获得对执行上下文的控制之前，这可能取决于你需要完成的工作。你可以在我们的[微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)中了解更多关于如何使用微任务以及选择这样做的原因。
 
-`queueMicrotask()` 处于 `WindowOrWorkerGlobalScope` mixin 之下。
+微任务的重要性在于它能够以特定顺序异步执行任务。查看[在 JavaScript 中通过 queueMicrotask() 使用微任务](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)的详情。
+
+微任务对于需要执行最后阶段的任务或其他在渲染之前的任务的库和框架特别有用。
 
 ## 语法
 
 ```plain
-scope.queueMicrotask(function);
+queueMicrotask(() => {/* ... */});
 ```
 
 ### 参数
 
 - `function`
-  - : A {{jsxref("function")}} to be executed when the browser engine determines it is safe to call your code.微任务（microtask）的执行顺序在所有挂起的任务（pending tasks）完成之后，在对浏览器的事件循环产生控制（yielding control to the browser's event loop）之前。
+  - : 当浏览器引擎确定可以安全调用你的代码时执行的 {{jsxref("function")}}。微任务（microtask）的执行顺序在所有进行中的任务（pending task）完成之后，在对浏览器的事件循环产生控制（yielding control to the browser's event loop）之前。
 
 ### 返回值
 
-`undefined`。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
 ```js
-self.queueMicrotask(() => {
+queueMicrotask(() => {
   // 函数的内容
 })
 ```
@@ -46,27 +48,15 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res => res.arrayBuffer()).then(data => {
-      this._cache[url] = data;
-      this._setData(data);
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        this._cache[url] = data;
+        this._setData(data);
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
-```
-
-## polyfill
-
-下面的代码是一份 `queueMicrotask()` 的 polyfill。它通过使用立即 resolve 的 promise 创建一个微任务（microtask），如果无法创建 promise，则回落（fallback）到使用`setTimeout()`。
-
-```js
-if (typeof window.queueMicrotask !== "function") {
-  window.queueMicrotask = function (callback) {
-    Promise.resolve()
-      .then(callback)
-      .catch(e => setTimeout(() => { throw e; }));
-  };
-}
 ```
 
 ## 规范
@@ -79,6 +69,7 @@ if (typeof window.queueMicrotask !== "function") {
 
 ## 参见
 
+- [Polyfill of `queueMicrotask()` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
 - [Using microtasks in JavaScript with queueMicrotask()](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [Asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
 - [queueMicrotask explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)

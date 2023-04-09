@@ -48,9 +48,9 @@ regexObj.compile('new foo', 'g');
 
 {{Specifications}}
 
-## Compatiblidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.compile")}}
+{{Compat}}
 
 ## Ver también
 

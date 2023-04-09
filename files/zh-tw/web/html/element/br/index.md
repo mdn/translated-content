@@ -19,7 +19,7 @@ slug: Web/HTML/Element/br
 
 ### 棄用屬性
 
-- {{htmlattrdef("clear")}}
+- `clear`
   - : 指示中斷後下一行的開始位置。
 
 ## 使用 CSS 樣式化

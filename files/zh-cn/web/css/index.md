@@ -5,7 +5,7 @@ slug: Web/CSS
 
 {{CSSRef}}
 
-**层叠样式表**（Cascading Style Sheets，缩写为 **CSS**）是一种[样式表](/zh-CN/docs/Web/API/StyleSheet)语言，用来描述 [HTML](/zh-CN/docs/Web/HTML) 或 [XML](/zh-CN/docs/Web/XML/XML_introduction)（包括如 [SVG](/zh-CN/docs/Web/SVG)、[MathML](/zh-CN/docs/Web/MathML) 或 {{Glossary("XHTML")}} 之类的 XML 分支语言）文档的呈现。CSS 描述了在屏幕、纸质、音频等其它媒体上的元素应该如何被渲染的问题。
+**层叠样式表**（Cascading Style Sheets，缩写为 **CSS**）是一种[样式表](/zh-CN/docs/Web/API/StyleSheet)语言，用来描述 [HTML](/zh-CN/docs/Web/HTML) 或 [XML](/zh-CN/docs/Web/XML/XML_introduction)（包括如 [SVG](/zh-CN/docs/Web/SVG)、[MathML](/zh-CN/docs/Web/MathML) 或 {{Glossary("XHTML")}} 之类的 XML 分支语言）文档的呈现。CSS 描述了在屏幕、纸质、音频等其他媒体上的元素应该如何被渲染的问题。
 
 CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www.w3.org/Style/CSS/#specs)在 Web 浏览器中进行了标准化。以前，CSS 规范的各个部分的开发是同步进行的，这种方式允许对最新推荐的 CSS 版本进行控制。你可能已经听说过 CSS1、CSS2.1 甚至 CSS3。但是以后将不会再有 CSS3 或者 CSS4；相反，现在的一切都是没有版本号的 CSS。
 
@@ -33,7 +33,7 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 我们的 [CSS 学习区](/zh-CN/docs/Learn/CSS) 以多模块、零基础为特色进行 CSS 的教学——这也就意味着你不需要任何知识基础。
 
 - [学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)
-  - : CSS（层叠样式表）用于设置网页的样式及布局——比如，可以更改内容的字体、颜色、大小以及间距，或是将其分列，或是添加动画及赋予内容其它装饰性的特征。本模块将通过阐述基本原理，展示语法示例，以及如何与 HTML 相联系三方面，为你日后精通 CSS 提供一个友好的开端。
+  - : CSS（层叠样式表）用于设置网页的样式及布局——比如，可以更改内容的字体、颜色、大小以及间距，或是将其分列，或是添加动画及赋予内容其他装饰性的特征。本模块将通过阐述基本原理，展示语法示例，以及如何与 HTML 相联系三方面，为你日后精通 CSS 提供一个友好的开端。
 - [CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)
 
   - : 本模块是[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)的延续，相信你已经熟悉了这门语言及它的语法，并拥有一些使用它的基本经验，是时候更进一步了。本模块着眼于层叠和继承、所有可用的选择器类型、单位、大小、背景、边框、调试等等。
@@ -76,7 +76,7 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 
 ## 自身的错误
 
-- Firefox：{{bug(1323667)}}
+- Firefox：[Firefox bug 1323667](https://bugzil.la/1323667)
 
 ## 相关链接
 

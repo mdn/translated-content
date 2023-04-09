@@ -78,9 +78,9 @@ Les événements ont trois fonctions :
 - `windowId`
   - : number. L'ID de la fenêtre dans laquelle le nouvel onglet est créé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onCreatedNavigationTarget")}}
+{{Compat}}
 
 ## Exemples
 

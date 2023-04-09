@@ -126,7 +126,7 @@ Les événements ont trois fonctions&nbsp;:
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onMessage")}}
+{{Compat}}
 
 ## Exemples
 

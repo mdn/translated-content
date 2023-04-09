@@ -29,9 +29,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `reason`{{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. La raison pour laquelle l'onglet a été désactivé ou désactivé. Non défini si l'état muet de l'onglet n'a jamais été modifié.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.MutedInfo")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

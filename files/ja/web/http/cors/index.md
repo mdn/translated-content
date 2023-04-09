@@ -333,7 +333,7 @@ CORS のプリフライトリクエストに資格情報を含めてはいけま
 
 > **メモ:** エンタープライズ認証サービスの中には、 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 仕様書に反して、プリフライトリクエストで TLS クライアント証明書を送信することを要求するものがあります。
 >
-> Firefox 87 では、`network.cors_preflight.allow_client_cert` を `true` に設定することで、この準拠していない動作を有効にすることができます。({{bug(1511151)}}). Chromium ベースのブラウザーでは現在、CORS プリフライトリクエストで TLS クライアント証明書を常に送信します ([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438))。
+> Firefox 87 では、`network.cors_preflight.allow_client_cert` を `true` に設定することで、この準拠していない動作を有効にすることができます。([Firefox バグ 1511151](https://bugzil.la/1511151)). Chromium ベースのブラウザーでは現在、CORS プリフライトリクエストで TLS クライアント証明書を常に送信します ([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438))。
 
 #### 資格情報付きリクエストとワイルドカード
 

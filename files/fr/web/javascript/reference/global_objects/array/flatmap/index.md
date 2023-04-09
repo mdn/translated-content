@@ -98,13 +98,11 @@ arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
 
 ## Spécifications
 
-| Spécification                                                                                              | État     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------- | -------- | -------------------- |
-| [ECMAScript 2019](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-array.prototype.flatmap) | Finalisé | Proposition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -58,21 +58,16 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-### 추가 예제
+## 명세서
 
-더 보려면, {{Event("resize")}} 이벤트 페이지에 비슷한 예제가 있습니다.
-
-## 사양
-
-- [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-scroll)
-- [CSSOM View](http://www.w3.org/TR/cssom-view/#scrolling-0)
+{{Specifications}}
 
 ## 브라우저 호환성
 
-### iOS UIWebView
+{{Compat}}
 
-iOS UIWebViews에서, 스크롤 중에는 `scroll` 발생하지 않습니다. 스크롤이 끝났을 때, 발생됩니다. [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)를 참고하세요. 사파리와 WKWebViews에서는 이 문제가 발생하지 않습니다.
+## 같이 보기
 
-## 같이보기
-
-- {{domxref("GlobalEventHandlers.onscroll")}}
+- [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event)
+- [Element: `scroll` event](/en-US/docs/Web/API/Element/scroll_event)
+- [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event)

@@ -208,9 +208,9 @@ Para cambiar la indentación de un término, usa la propiedad {{cssxref("margin"
 
 {{Specifications}}
 
-## Compatibilidad Web
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## See also
 

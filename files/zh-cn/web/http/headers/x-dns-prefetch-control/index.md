@@ -46,7 +46,7 @@ DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手�
 
 ### 打开和关闭 DNS 预读取
 
-你可以通过在服务器端发送 `X-DNS-Prefetch-Control` 报头，或是在文档中使用值为 {{ htmlattrxref("http-equiv") }} 的 {{ HTMLElement("meta") }} 标签：
+你可以通过在服务器端发送 `X-DNS-Prefetch-Control` 报头，或是在文档中使用值为 [`http-equiv`](/zh-CN/docs/Web/HTML/Global_attributes#http-equiv) 的 {{ HTMLElement("meta") }} 标签：
 
 ```plain
 <meta http-equiv="x-dns-prefetch-control" content="off">
@@ -56,7 +56,7 @@ DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手�
 
 ### 强制查询特定主机名
 
-你可以通过使用 {{ htmlattrxref("rel","link") }} 属性值为 [link type](/zh-CN/docs/Web/HTML/Link_types) 中的 `dns-prefetch` 的 {{ HTMLElement("link") }} 标签来对特定域名进行预读取：
+你可以通过使用 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性值为 [link type](/zh-CN/docs/Web/HTML/Link_types) 中的 `dns-prefetch` 的 {{ HTMLElement("link") }} 标签来对特定域名进行预读取：
 
 ```html
 <link rel="dns-prefetch" href="http://www.spreadfirefox.com/">

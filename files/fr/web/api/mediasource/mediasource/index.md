@@ -42,9 +42,9 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 ...
 ```
 
-## Compatibilitée des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.MediaSource.MediaSource")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,11 +9,11 @@ Este artículo brinda información sobre cómo comenzar con el *service worker*,
 
 ## La premisa del service worker
 
-Un problema primordial del que los usuarios de la web han adolecido durante años es la pérdida de conectividad. La mejor aplicación web del mundo proporcionará una experiencia de usuario terrible si no la puedes descargar. Ha habido varios intentos de crear tecnologías para resolver este problema, y ​​algunos de los problemas se han resuelto. Pero el problema primordial es que todavía no existe un buen mecanismo de control general para el almacenamiento en caché de activos y las solicitudes de red personalizadas.
+Un problema primordial del que los usuarios de la web han adolecido durante años es la pérdida de conectividad. La mejor aplicación web del mundo proporcionará una experiencia de usuario terrible si no la puedes descargar. Ha habido varios intentos de crear tecnologías para resolver este problema, y algunos de los problemas se han resuelto. Pero el problema primordial es que todavía no existe un buen mecanismo de control general para el almacenamiento en caché de activos y las solicitudes de red personalizadas.
 
 El intento anterior, *AppCache*, parecía ser una buena idea porque te permitía especificar activos para almacenar en caché con mucha facilidad. Sin embargo, hizo muchas suposiciones sobre lo que estabas tratando de hacer y luego se rompió horriblemente cuando tu aplicación no siguió exactamente esas suposiciones. Lee el documento de Jake Archibald (desafortunadamente mal titulado pero bien escrito) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) para obtener más detalles.
 
-> **Nota:** A partir de Firefox 84, se eliminó *AppCache* ({{bug("1619673")}}). También se ha [eliminado](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) de Chromium 95 y está obsoleto en Safari.
+> **Nota:** A partir de Firefox 84, se eliminó *AppCache* ([Error 1619673 en Firefox](https://bugzil.la/1619673)). También se ha [eliminado](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) de Chromium 95 y está obsoleto en Safari.
 
 El *service worker* finalmente debería solucionar estos problemas. La sintaxis del *service worker* es más compleja que la de *AppCache*, pero la compensación es que puedes usar JavaScript para controlar su comportamiento implícito en *AppCache* con un buen grado de fina granularidad, lo que te permite manejar este problema y muchos más. Al usar un *service worker*, puedes configurar fácilmente una aplicación para usar activos almacenados en caché primero, proporcionando así una experiencia predeterminada incluso cuando estás desconectado, antes de obtener más datos de la red (comúnmente conocido como [Primero sin conexión](https://offlinefirst.org/)). Esto ya está disponible con las aplicaciones nativas, que es una de las principales razones por las que las aplicaciones nativas a menudo se eligen en lugar de las aplicaciones web.
 
@@ -503,7 +503,7 @@ Firefox también ha comenzado a implementar algunas herramientas útiles relacio
 
 - Puedes navegar a [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) para ver qué <abbr title="Service Workers">SW</abbr>s están registrados y actualizarlos/eliminarlos.
 - Al realizar pruebas, puedes sortear la restricción de HTTPS marcando la opción "Habilitar *service worker* a través de HTTP (cuando la caja de herramientas está abierta)" en la [Configuración de herramientas de desarrollo de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
-- El botón "Olvidar", disponible en las opciones de personalización de Firefox, se puede usar para borrar los *service workers* y sus cachés ({{bug(1252998)}}).
+- El botón "Olvidar", disponible en las opciones de personalización de Firefox, se puede usar para borrar los *service workers* y sus cachés ([Error 1252998 en Firefox](https://bugzil.la/1252998)).
 
 > **Nota:** Puedes servir tu aplicación desde `http://localhost` (por ejemplo, usando `me@localhost:/my/app$ python -m SimpleHTTPServer`) para el desarrollo local. Ve [Consideraciones de seguridad](https://www.w3.org/TR/service-workers/#security-considerations)
 

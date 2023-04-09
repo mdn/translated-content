@@ -5,24 +5,14 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 
 {{JSRef}}
 
-`TypedArray.of()` 方法创建一个具有可变数量参数的新[类型数组](/zh-CN/docs/) 。此方法几乎与{{jsxref("Array.of()")}} 相同。
+`TypedArray.of()` 方法创建一个具有可变数量参数的新[类型数组](/zh-CN/docs/)。此方法几乎与 {{jsxref("Array.of()")}} 相同。
 
-## 句法
+## 语法
 
-```plain
-TypedArray.of(element0[, element1[, ...[, elementN]]])
-
-where TypedArray is one of:
-
-Int8Array
-Uint8Array
-Uint8ClampedArray
-Int16Array
-Uint16Array
-Int32Array
-Uint32Array
-Float32Array
-Float64Array
+```js-nolint
+TypedArray.of(element0)
+TypedArray.of(element0, element1)
+TypedArray.of(element0, element1, /* ... ,*/ elementN)
 ```
 
 ### 参数
@@ -30,13 +20,13 @@ Float64Array
 - `elementN`
   - : 创建类型数组的元素。
 
-### Return value
+### 返回值
 
 一个新的 {{jsxref("TypedArray")}} 实例。
 
 ## 描述
 
-{{jsxref("Array.of()")}} 和 `TypedArray.of()`之间的一些细微区别：
+{{jsxref("Array.of()")}} 和 `TypedArray.of()` 之间的一些细微区别：
 
 - 如果传递给 TypedArray.of 的这个值不是构造函数，TypedArray.of 将抛出一个{{jsxref("TypeError")}} ，其中 Array.of 默认创建一个新的 {{jsxref("Array")}}。
 - `TypedArray.of` 使用 \[\[Put]] 其中 Array.of 使用 \[\[DefineProperty]]。因此，当使用{{jsxref("Proxy")}} 对象时，它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建新的元素，而不是 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}。

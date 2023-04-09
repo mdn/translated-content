@@ -97,4 +97,4 @@ progress:indeterminate {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.indeterminate")}}
+{{Compat}}

@@ -30,7 +30,7 @@ Atomics.sub(typedArray, index, value)
 - 假如 `typedArray` 不是一个共享的整型 typed array，则抛出 {{jsxref("TypeError")}}。
 - 如果 `index` 超出了 `typedArray` 的边界，则抛出 {{jsxref("RangeError")}}。
 
-## 例子
+## 示例
 
 ```js
 const sab = new SharedArrayBuffer(1024);

@@ -332,7 +332,7 @@ window.addEventListener("load", drawOutput);
 
 ### 布林屬性（Boolean attributes）
 
-你有時會看到一些沒有值的屬性，這完全是可行的。它們叫做布林屬性，他們只能附帶一個值，而這個值一般來說會和屬性的名字一樣。以 {{htmlattrxref("disabled", "input")}} 屬性來說，你可以把它指派為 input 元素的屬性，使得輸入文字的框框變得不能輸入文字。
+你有時會看到一些沒有值的屬性，這完全是可行的。它們叫做布林屬性，他們只能附帶一個值，而這個值一般來說會和屬性的名字一樣。以 [`disabled`](/zh-TW/docs/Web/HTML/Element/input#disabled) 屬性來說，你可以把它指派為 input 元素的屬性，使得輸入文字的框框變得不能輸入文字。
 
 ```html
 <input type="text" disabled="disabled">

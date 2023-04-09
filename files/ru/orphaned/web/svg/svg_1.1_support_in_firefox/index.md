@@ -8,7 +8,7 @@ original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
 Основные примеры синтаксиса и использования SVG вы можете найти в [наборе тестов W3C SVG](https://www.w3.org/Graphics/SVG/Test/20061213/).
 
 > **Примечание:** Начиная с Gecko 2.0, Gecko поддерживает SVG-анимацию с использованием SMIL. Для краткого обзора смотрите [SVG анимация и SMIL](/ru/docs/SVG/SVG_animation_with_SMIL "SVG/SVG animation with SMIL").
-> Будет подготовлена ​​и полная документация для SVG. Когда-нибудь.
+> Будет подготовлена и полная документация для SVG. Когда-нибудь.
 
 Также существует описание поддержки [Mozilla изменений в SVG 2](/ru/docs/Web/SVG/SVG_2_support_in_Mozilla).
 

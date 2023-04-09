@@ -29,9 +29,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - "from_address_bar"
   - : L'utilisateur a déclenché la navigation depuis la barre d'adresse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.TransitionQualifier")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

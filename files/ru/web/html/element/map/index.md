@@ -14,11 +14,11 @@ translation_of: Web/HTML/Element/map
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), явный контент.                                                                  |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                    | Любой [прозрачный](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0) элемент. |
+| Допустимое содержимое                                  | Любой [прозрачный](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0) элемент. |
 | Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                   |
-| Разрешённые родители                                   | Любые элементы, которые принимают [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                   |
-| Разрешённые ARIA роли                                  | Нет                                                                                                                                                                                                                        |
-| DOM интерфейс                                          | {{domxref("HTMLMapElement")}}                                                                                                                                                                                   |
+| Допустимые родители                                    | Любые элементы, которые принимают [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                   |
+| Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                                                        |
+| DOM-интерфейс                                          | {{domxref("HTMLMapElement")}}                                                                                                                                                                                   |
 
 ## Атрибуты
 

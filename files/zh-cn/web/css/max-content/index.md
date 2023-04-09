@@ -3,6 +3,8 @@ title: max-content
 slug: Web/CSS/max-content
 ---
 
+{{CSSRef}}
+
 `max-content` 尺寸关键字代表了内容的最大宽度或最大高度。对于文本内容而言，这意味着内容即便溢出也不会被换行。
 
 ## 语法
@@ -107,4 +109,4 @@ max-content: unset;
 
 ## 参见
 
-- 其它尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
+- 其他尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}

@@ -583,7 +583,7 @@ circle { mix-blend-mode: screen; }
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}
 
 ## Véase también
 

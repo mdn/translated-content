@@ -86,9 +86,9 @@ alert(document.images[0].src);
 
 {{Specifications}}
 
-## Compatibilidad con navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLImageElement")}}
+{{Compat}}
 
 ## Ver también
 

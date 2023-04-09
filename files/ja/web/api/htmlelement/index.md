@@ -2,7 +2,7 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 l10n:
-  sourceCommit: d954e1df58f18f15181bfe33ac64dfad9627f485
+  sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
 ---
 
 {{APIRef("HTML DOM")}}
@@ -20,29 +20,29 @@ _親である {{DOMxRef("Element")}} からプロパティを継承していま�
 - {{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}
   - : 要素に割り当てられたアクセスキーを含む文字列を返します。
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("StylePropertyMap")}} で、その要素の {{htmlattrxref("style")}} 属性の宣言を表します。
+  - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の宣言を表します。
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
 - {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
   - : 論理値で、要素のコンテンツが編集可能か否かを示します。
-- {{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 要素に割り当てたコンテキストメニューを表す {{DOMxRef("HTMLMenuElement")}} です。`null` になる可能性があります。
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : {{DOMxRef("DOMStringMap")}} で、スクリプトが読み書きできる要素の[カスタムデータ属性](/ja/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) を表します。
 - {{DOMxRef("HTMLElement.dir")}}
   - : 文字列で、要素の書字方向を表す `dir` グローバル属性を反映します。利用可能な値は、`"ltr"` および `"rtl"`、`"auto"` です。
 - {{DOMxRef("HTMLElement.draggable")}}
   - : 論理値で、要素がドラッグ可能かどうかを示します。
-- {{DOMxRef("HTMLElement.enterkeyhint")}}
+- {{DOMxRef("HTMLElement.enterKeyHint")}}
   - : 文字列で、仮想キーボードの Enter キーに表示するアクションラベル（またはアイコン）を定義します。
 - {{DOMxRef("HTMLElement.hidden")}}
-  - : 論理値で、要素が非表示であるかどうかを表します。
+  - : 文字列または論理値で、この要素の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性の値を反映します。
 - {{DOMxRef("HTMLElement.inert")}}
   - : 論理値で、ユーザー操作イベント、ページ内テキスト検索（「ページ内を検索」）、テキストの選択において、ユーザーエージェントが指定したノードがないかのように動作するかどうかを示します。
 - {{DOMxRef("HTMLElement.innerText")}}
   - : このノードやその子孫において、表示されるテキストの内容を表します。
     ゲッターとしては、カーソルで要素の内容を選択しクリップボードにコピーした際のテキストに近いものを取得することができます。
     セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{HTMLElement("br")}} 要素に変換します。
+- {{DOMxRef("HTMLElement.inputMode")}}
+  - : 文字列で、この要素の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性の値を反映します。
 - {{DOMxRef("HTMLElement.lang")}}
   - : 文字列で、要素の属性およびテキスト、要素のコンテンツの言語を表します。
 - {{DOMxRef("HTMLElement.noModule")}}
@@ -68,7 +68,7 @@ _親である {{DOMxRef("Element")}} からプロパティを継承していま�
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : 論理値で、[スペルチェック](/ja/docs/Web/HTML/Global_attributes/spellcheck) を制御します。これはすべての HTML 要素に提供されていますが、すべての要素に効果があるとは限りません。
 - {{DOMxRef("HTMLElement.style")}}
-  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の {{htmlattrxref("style")}} 属性の宣言を表します。
+  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の宣言を表します。
 - {{DOMxRef("HTMLElement.tabIndex")}}
   - : `long` 値で、タブ順内の要素の位置を表します。
 - {{DOMxRef("HTMLElement.title")}}

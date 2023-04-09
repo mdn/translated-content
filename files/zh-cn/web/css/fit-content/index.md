@@ -67,4 +67,4 @@ block-size: fit-content;
 
 ## 参见
 
-- 其它尺寸关键字：{{cssxref("min-content")}}、{{cssxref("max-content")}}
+- 其他尺寸关键字：{{cssxref("min-content")}}、{{cssxref("max-content")}}

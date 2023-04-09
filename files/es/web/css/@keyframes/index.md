@@ -81,9 +81,9 @@ Mira los ejemplos del [CSS animations](/en/CSS/CSS_animations).
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.keyframes")}}
+{{Compat}}
 
 ## Vease también
 

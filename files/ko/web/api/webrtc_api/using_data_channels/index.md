@@ -82,7 +82,7 @@ WebRTC 데이터채널은 아웃바운드 데이터에 대해 버퍼링을 제�
 
 이러한 문제점을 해결하기 위해 **스트림 스케쥴러**(**stream schedulers**)라고하는 이름지어져 있으며 SCTP ndata specification이라고도 불리우는 새로운 시스템을 디자인하였습니다. 이 스케쥴러는 WebRTC 데이터 채널에 구현되어 있는 스트림을 포함한 각기 다른 스트림에 메시지를 상호배치하여 전송가능합니다. 이 [제안](https://tools.ietf.org/html/draft-ietf-tsvwg-sctp-ndata)은 IETF 제안(draft form) 상태에 있지만 한번 구현된다면 SCTP 계층은 자동적으로 서브메시지들에게 모든 데이터 채널을 통과할수 있는 기회를 보장하는 상호배치를 하기때문에 기본적으로 사이즈에 제한이 없는 메시지를 보낼수 있게될것입니다.
 
-Firefox는 ndata를 지원하기 위해 현재 구현단계에 있습니다. 일반적인 사용이 언제쯤 가능할지에 대해 궁금하시다면 {{bug(1381145)}} 을 관심있게 보고 계십시요. Chrome 팀은 [Chrome Bug 5696](https://bugs.chromium.org/p/webrtc/issues/detail?id=5696) 를 통해 ndata 지원을 위한 구현을 트래킹하고 있습니다.
+Firefox는 ndata를 지원하기 위해 현재 구현단계에 있습니다. 일반적인 사용이 언제쯤 가능할지에 대해 궁금하시다면 [Firefox bug 1381145](https://bugzil.la/1381145) 을 관심있게 보고 계십시요. Chrome 팀은 [Chrome Bug 5696](https://bugs.chromium.org/p/webrtc/issues/detail?id=5696) 를 통해 ndata 지원을 위한 구현을 트래킹하고 있습니다.
 
 <div class="originaldocinfo"><p>이 섹션에 있는 대부분의 정보는 다음 블로그 포스트를 기반으로 작성되었습니다. <a href="https://lgrahl.de/articles/demystifying-webrtc-dc-size-limit.html">Demystifyijng WebRTC's Data Channel Message Size Limitations</a>, written by Lennart Grahl. 이 블로그를 보시면 더욱 자세한 내용이 나와 있습니다. 그러나 브라우져들은 당시보다 업데이트 되었기때문에 그 정보들은 현재와 맞지 않을 수 도 있습니다. 또한 현재는 시간이 많이 흘러 대부분의 메이저 브라우저에서는 EOR이 구현되어 있습니다.</p></div>
 

@@ -130,7 +130,7 @@ someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
 
 ここでは、 {{domxref("Element/mouseup_event", "mouseup")}} イベントのリスナーを `someElement` 要素に追加しています。第 3 引数の `passiveSupported` が `true` である場合、 `options` オブジェクトを `passive` を `true` に設定して指定しています。そうでない場合は、論理値を渡す必要があることがわかっているので、 `useCapture` 引数の値として `false` を渡しています。
 
-ご希望であれば、 [Modernizr](https://modernizr.com/docs) や [Detect It](https://github.com/rafrex/detect-it) のようなサードパーティ製のライブラリーを使用してこのテストを行うことができます。
+ご希望であれば、 [Modernizr](https://modernizr.com/docs) や [Detect It](https://github.com/rafgraph/detect-it) のようなサードパーティ製のライブラリーを使用してこのテストを行うことができます。
 
 [Web Incubator Community Group](https://wicg.github.io/admin/charter.html) の [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection) の記事を参考にしてください。
 

@@ -74,20 +74,8 @@ Si aun asi sigues atasaco, puedes encontrar la version completamente desarrollad
 
 > **Nota:** Las versiones especificas de node, Express, y los otros modulos con los que se probó esta documentación estan enumeradas en el projecto [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
 
-## Summary
+## Resumen
 
 Ahora que sabes un poco mas del sitio web _LocalLIbrary_ y lo que vas a aprender, es tiempo de comenzar a crear un [skeleton project](/es/docs/Learn/Server-side/Express_Nodejs/skeleton_website)o para contener nuestro ejemplo.
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/es/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/es/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/es/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/es/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/es/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/es/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/es/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/es/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/es/docs/Learn/Server-side/Express_Nodejs/deployment)

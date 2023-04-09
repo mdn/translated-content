@@ -157,9 +157,9 @@ browser.proxy.register(proxyScriptURL);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.register")}}
+{{Compat}}
 
 > **Note :**
 >

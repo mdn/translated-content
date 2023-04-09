@@ -51,7 +51,7 @@ También puede utilizar SHIFT junto a la tecla ALT.</p>
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.MouseEvent.shiftKey")}}
+{{Compat}}
 
 ## Ver más
 

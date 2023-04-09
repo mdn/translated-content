@@ -69,9 +69,9 @@ Les événements ont trois fonctions :
 - `error`
   - : `string`. Le code d'erreur. Il s'agit d'un code d'erreur interne qui n'est pas garanti pour rester identique ou être cohérent d'un navigateur à l'autre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onErrorOccurred")}}
+{{Compat}}
 
 ## Exemples
 

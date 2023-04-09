@@ -39,13 +39,11 @@ typeof Object(1n).valueOf(); // bigint
 
 ## Spécifications
 
-| Spécification                                                                                     | État                    |
-| ------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.valueof) | Proposition de niveau 3 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.valueOf")}}
+{{Compat}}
 
 ## Voir aussi
 

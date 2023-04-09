@@ -27,7 +27,7 @@ slug: Web/Performance/Optimizing_startup_performance
 
 关于如何构建你的启动过程，使得其尽可能异步执行，这里有些建议。（不论是新应用还是移植的）：
 
-- 启动时，在需要异步执行的脚本标签上使用 {{ htmlattrxref("defer") }} 或 {{ htmlattrxref("async") }} 属性。这会允许 HTML 解析器更高效地处理文档。 [Async scripts for asm.js](/zh-CN/docs/Games/Techniques/Async_scripts) 中有更多关于这方面的信息。
+- 启动时，在需要异步执行的脚本标签上使用 [`defer`](/zh-CN/docs/Web/HTML/Global_attributes#defer) 或 [`async`](/zh-CN/docs/Web/HTML/Global_attributes#async) 属性。这会允许 HTML 解析器更高效地处理文档。 [Async scripts for asm.js](/zh-CN/docs/Games/Techniques/Async_scripts) 中有更多关于这方面的信息。
 - 如果你需要解码资源文件（比如，解码 JPEG 文件并将其转换为原始纹理数据，以便随后在 WebGL 中使用），最好在 workers 里做这件事。
 - 当处理浏览器支持的数据格式时（例如，解析图像数据），使用设备或浏览器内置的解码器而不是运行你自己的或者使用 or using one from the original codebase。预先提供的那个基本上一定会快得多，并且能够减小你的应用的启动体积。另外，浏览器可以自动并行化这些解码器的工作。
 - 所有能并行的数据处理都应该并行化。不要一团接一团地处理数据，如果可能的话，同时处理它们！

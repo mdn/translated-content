@@ -19,9 +19,9 @@ Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut êt
 
 La valeur sous-jacente est un booléen.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.cacheEnabled")}}
+{{Compat}}
 
 ## Exemples
 

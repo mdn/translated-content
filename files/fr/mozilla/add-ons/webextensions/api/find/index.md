@@ -26,6 +26,6 @@ Pour utiliser cette API, vous devez disposez de la [permission](/fr/docs/Mozilla
 - {{WebExtAPIRef("find.removeHighlighting()")}}
   - : Supprimez toute mise en évidence.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.find", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}

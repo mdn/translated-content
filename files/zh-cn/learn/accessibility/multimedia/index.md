@@ -294,7 +294,7 @@ This is the second.
 要将此信息与 HTML 媒体播放一起显示，您需要：
 
 - 将其保存为 .vtt 文件，放在一个合理的地方。
-- 使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。`<track>` 应放在 `<audio>` 或 `<video>` 内，但在 `<source>` 元素之后。使用 {{htmlattrxref("kind","track")}} 属性指定提示是字幕、标题还是说明。此外，使用 {{htmlattrxref("srclang","track")}} 告诉浏览器编写字幕所用的语言。
+- 使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。`<track>` 应放在 `<audio>` 或 `<video>` 内，但在 `<source>` 元素之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) 属性指定提示是字幕、标题还是说明。此外，使用 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) 告诉浏览器编写字幕所用的语言。
 
 下面是一个示例：
 

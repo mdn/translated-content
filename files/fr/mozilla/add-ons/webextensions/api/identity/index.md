@@ -56,9 +56,9 @@ Cela aura tendance à être spécifique au fournisseur de services, mais en gén
 - {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
   - : Lancement WAF.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

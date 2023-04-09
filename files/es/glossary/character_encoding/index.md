@@ -1,6 +1,6 @@
 ---
 title: Codificación de caracteres
-slug: Glossary/character_encoding
+slug: Glossary/Character_encoding
 ---
 
 Una codificación define cómo se traducen los bytes a texto y viceversa. Una secuencia de bytes se pueden interpretar de diferentes formas. Eligiendo una codificación en particular (como UTF-8), decimos como la secuencia de bytes debe ser interpretada.

@@ -105,9 +105,9 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Lancé lorsque le périphérique doit être redémarré.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

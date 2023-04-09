@@ -44,9 +44,9 @@ Les événements ont trois fonctions :
     - `permissions`
       - : L'objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été supprimées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.onRemoved")}}
+{{Compat}}
 
 ## Exemples
 

@@ -23,9 +23,9 @@ dateObj.getSeconds()
 
 该方法返回一个 0 到 59 的整数值。
 
-## 例子
+## 示例
 
-### 例子：使用`getSeconds` 方法
+### 示例：使用`getSeconds` 方法
 
 下面第二条语句，基于日期对象 `Xmas95` 的值，把 30 赋值给变量 `secs`。
 

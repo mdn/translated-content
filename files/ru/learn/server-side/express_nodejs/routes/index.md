@@ -100,7 +100,7 @@ router.get('/about', function (req, res) {
 
 Рассмотренный пример использует метод `Router.get()` для ответа на HTTP GET- запросы с указанным путём.
 
-Кроме того, `Router` обеспечивает также методы маршрутизации для других HTTP глаголов, которые обычно используются точно таким же способом: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, ​​​​​​ `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, и `connect()`.
+Кроме того, `Router` обеспечивает также методы маршрутизации для других HTTP глаголов, которые обычно используются точно таким же способом: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, и `connect()`.
 
 Например, код ниже делает то же, что и предыдущий, с путём `/about,` но отвечает на HTTP POST-запросы.
 

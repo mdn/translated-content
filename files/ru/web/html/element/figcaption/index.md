@@ -17,10 +17,10 @@ translation_of: Web/HTML/Element/figcaption
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                                                                                                |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                           | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент)                                                                                                  |
+| Допустимое содержимое                                            | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент)                                                                                                  |
 | Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                |
-| Разрешённые родители                                             | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком.                                                                               |
-| Разрешённые ARIA-роли                                            | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
+| Допустимые родители                                              | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком.                                                                               |
+| Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                         |
 
 ## Атрибуты

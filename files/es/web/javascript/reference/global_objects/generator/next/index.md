@@ -74,9 +74,9 @@ g.next(2);
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Generator.next")}}
+{{Compat}}
 
 ## See also
 

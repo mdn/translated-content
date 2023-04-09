@@ -9,6 +9,8 @@ slug: Web/SVG/Element/svg
 
 > **メモ:** `xmlns` 属性は *SVG ドキュメント*の最も外側の `svg` 要素にのみ必要です。内部の `svg` 要素や HTML 文書の内部には不要です。
 
+## 例
+
 ```css hidden
 html,body,svg { height:100% }
 ```
@@ -24,7 +26,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Exeemple', 150, '100%')}}
+{{EmbedLiveSample('Example', 300, 100)}}
 
 ## 属性
 

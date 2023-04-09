@@ -55,11 +55,11 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `delete`
   - : 現在の選択範囲を削除します。
 - `enableAbsolutePositionEditor`
-  - : 絶対配置の要素を移動させるためのグラバーを有効化または無効化します。 Firefox 64 以降では、既定で無効です。 ({{bug(1490641)}})
+  - : 絶対配置の要素を移動させるためのグラバーを有効化または無効化します。 Firefox 64 以降では、既定で無効です。 ([Firefox バグ 1490641](https://bugzil.la/1490641))
 - `enableInlineTableEditing`
-  - : 表の行/列の挿入・削除コントロールを有効または無効にします。 Firefox 64 以降では、既定で無効です。 ({{bug(1490641)}})
+  - : 表の行/列の挿入・削除コントロールを有効または無効にします。 Firefox 64 以降では、既定で無効です。 ([Firefox バグ 1490641](https://bugzil.la/1490641))
 - `enableObjectResizing`
-  - : 画像、表、絶対配置の要素、などの大きさの変更が可能なオブジェクトにおいて、大きさ変更用のハンドルを有効化または無効化します。 Firefox 64 以降では、既定で無効です。 ({{bug(1490641)}})
+  - : 画像、表、絶対配置の要素、などの大きさの変更が可能なオブジェクトにおいて、大きさ変更用のハンドルを有効化または無効化します。 Firefox 64 以降では、既定で無効です。 ([Firefox バグ 1490641](https://bugzil.la/1490641))
 - `fontName`
   - : 選択範囲または挿入位置のフォント名を変更します。引数としてフォント名の文字列 (`"Arial"` など) が必要です。
 - `fontSize`

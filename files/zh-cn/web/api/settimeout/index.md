@@ -334,7 +334,7 @@ setInterval(f, 0);
 
 为了优化后台 tab 的加载损耗（以及降低耗电量），在未被激活的 tab 中定时器的最小延时限制为 1S(1000ms)。
 
-Firefox 从 version 5 (see {{bug(633421)}}开始采取这种机制，1000ms 的间隔值可以通过 `dom.min_background_timeout_value` 改变。Chrome 从 version 11 ([crbug.com/66078](http://crbug.com/66078)) 开始采用。
+Firefox 从 version 5 (see [Firefox bug 633421](https://bugzil.la/633421)开始采取这种机制，1000ms 的间隔值可以通过 `dom.min_background_timeout_value` 改变。Chrome 从 version 11 ([crbug.com/66078](http://crbug.com/66078)) 开始采用。
 
 Android 版的 Firefox 对未被激活的后台 tabs 的使用了 15min 的最小延迟间隔时间，并且这些 tabs 也能完全不被加载。
 

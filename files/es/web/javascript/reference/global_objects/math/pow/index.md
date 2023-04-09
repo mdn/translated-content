@@ -59,7 +59,7 @@ Math.pow(-7, 1/3); // NaN
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.pow")}}
+{{Compat}}
 
 ## Ver también
 
