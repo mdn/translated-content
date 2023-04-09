@@ -1,6 +1,7 @@
 ---
 title: Resource Timing API
-slug: Web/API/Resource_Timing_API
+slug: Web/API/Performance_API/Resource_timing
+original_slug: Web/API/Resource_Timing_API
 ---
 
 {{DefaultAPISidebar("Resource Timing API")}}

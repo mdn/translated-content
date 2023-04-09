@@ -1,6 +1,7 @@
 ---
 title: プログレッシブウェブアプリの構造的な概要
-slug: Web/Progressive_web_apps/Structural_overview
+slug: Web/Progressive_web_apps/Guides/Structural_overview
+original_slug: Web/Progressive_web_apps/Structural_overview
 ---
 
 プログレッシブウェブアプリ (PWA) はあらゆるウェブコンテンツに対応していますが、ウェブ上で使用することも、ローカルアプリケーションとしてインストールして実行することも可能なウェブアプリとして認識されるためには、特定の構造を持ち、特定のコンポーネントを含む必要があります。この構造概要では、標準的なウェブアプリケーションを構成する機能と、PWA を構築する際に従うことができるいくつかのデザインパターンを見ていきます。

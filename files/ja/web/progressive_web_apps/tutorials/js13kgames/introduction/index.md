@@ -1,6 +1,7 @@
 ---
 title: プログレッシブウェブアプリの紹介
-slug: Web/Progressive_web_apps/Introduction
+slug: Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+original_slug: Web/Progressive_web_apps/Introduction
 l10n:
   sourceCommit: f22e42182591e38590c9add80de91a51bce3cde2
 ---

@@ -1,6 +1,7 @@
 ---
 title: プログレッシブウェブアプリの構造
-slug: Web/Progressive_web_apps/App_structure
+slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
+original_slug: Web/Progressive_web_apps/App_structure
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}

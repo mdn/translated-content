@@ -1,6 +1,7 @@
 ---
 title: ホーム画面に追加
-slug: Web/Progressive_web_apps/Add_to_home_screen
+slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
+original_slug: Web/Progressive_web_apps/Add_to_home_screen
 l10n:
   sourceCommit: 8e1f45b8c0a3671f6e3de43c0764ad610aa345dd
 ---
