@@ -1,6 +1,7 @@
 ---
 title: "Window: toolbar 속성"
 short-title: toolbar
+slug: Web/API/Window/toolbar
 ---
 
 {{APIRef}}
