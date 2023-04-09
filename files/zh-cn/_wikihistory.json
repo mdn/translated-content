@@ -12073,14 +12073,6 @@
     "modified": "2020-10-15T21:52:39.986Z",
     "contributors": ["RainSlide", "zwei76"]
   },
-  "Web/API/Navigation_timing_API": {
-    "modified": "2019-03-23T22:26:10.873Z",
-    "contributors": ["donghua", "xgqfrms-GitHub", "CeHOU", "iamyy"]
-  },
-  "Web/API/Navigation_timing_API/Using_Navigation_Timing": {
-    "modified": "2020-04-02T23:35:26.689Z",
-    "contributors": ["Bayes", "wolf-wolf"]
-  },
   "Web/API/Navigator": {
     "modified": "2020-10-15T21:33:06.758Z",
     "contributors": [
@@ -13003,9 +12995,17 @@
     "modified": "2020-04-20T05:51:10.170Z",
     "contributors": ["luoway"]
   },
-  "Web/API/Performance_Timeline": {
-    "modified": "2020-07-10T11:47:27.766Z",
-    "contributors": ["laampui"]
+  "Web/API/Performance_API/Navigation_timing": {
+    "modified": "2019-03-23T22:26:10.873Z",
+    "contributors": ["donghua", "xgqfrms-GitHub", "CeHOU", "iamyy"]
+  },
+  "Web/API/Performance_API/Resource_timing": {
+    "modified": "2019-03-18T20:44:25.988Z",
+    "contributors": ["linapengzhe", "suchasplus"]
+  },
+  "Web/API/Performance_API/User_timing": {
+    "modified": "2019-03-22T00:28:06.068Z",
+    "contributors": ["suvyme"]
   },
   "Web/API/PeriodicWave": {
     "modified": "2020-10-15T22:17:43.050Z",
@@ -13438,14 +13438,6 @@
   "Web/API/Resize_Observer_API": {
     "modified": "2020-10-15T22:31:10.210Z",
     "contributors": ["brizer"]
-  },
-  "Web/API/Resource_Timing_API": {
-    "modified": "2019-03-18T20:44:25.988Z",
-    "contributors": ["linapengzhe", "suchasplus"]
-  },
-  "Web/API/Resource_Timing_API/Using_the_Resource_Timing_API": {
-    "modified": "2020-08-05T06:24:43.888Z",
-    "contributors": ["EzioShiki", "Mukti"]
   },
   "Web/API/Response": {
     "modified": "2020-10-15T21:46:45.688Z",
@@ -14481,10 +14473,6 @@
   "Web/API/USB": {
     "modified": "2020-10-15T22:20:23.616Z",
     "contributors": ["Himself65", "yuyang"]
-  },
-  "Web/API/User_Timing_API": {
-    "modified": "2019-03-22T00:28:06.068Z",
-    "contributors": ["suvyme"]
   },
   "Web/API/VRDisplay": {
     "modified": "2019-03-23T22:25:25.766Z",
@@ -15688,10 +15676,6 @@
   "Web/API/Window/console": {
     "modified": "2019-03-23T22:25:36.373Z",
     "contributors": ["dujun", "seajean", "WwupengP"]
-  },
-  "Web/API/Window/content": {
-    "modified": "2019-10-10T16:55:47.838Z",
-    "contributors": ["teoli", "khalid32", "ziyunfei"]
   },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:30:15.212Z",
@@ -24033,10 +24017,6 @@
     "modified": "2020-10-15T21:54:55.958Z",
     "contributors": ["wenlonghuo", "superATM", "royIdoodle", "WayneCui"]
   },
-  "Web/HTTP/Headers/Set-Cookie/SameSite": {
-    "modified": "2020-10-15T22:28:42.430Z",
-    "contributors": ["EbeRybDI", "tinaawang"]
-  },
   "Web/HTTP/Headers/SourceMap": {
     "modified": "2020-10-15T21:55:30.390Z",
     "contributors": ["Pada"]
@@ -24827,7 +24807,7 @@
       "ilia"
     ]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-08-12T23:49:07.122Z",
     "contributors": [
       "JobbyM",
@@ -24950,7 +24930,7 @@
       "teoli"
     ]
   },
-  "Web/JavaScript/Guide/Expressions_and_Operators": {
+  "Web/JavaScript/Guide/Expressions_and_operators": {
     "modified": "2020-12-12T02:19:33.855Z",
     "contributors": [
       "柳涤尘",
@@ -25183,7 +25163,7 @@
       "hackerZhang"
     ]
   },
-  "Web/JavaScript/Guide/Iterators_and_Generators": {
+  "Web/JavaScript/Guide/Iterators_and_generators": {
     "modified": "2020-04-19T03:41:05.778Z",
     "contributors": [
       "Russell",
@@ -25319,7 +25299,7 @@
       "wenxiangmao"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions": {
+  "Web/JavaScript/Guide/Regular_expressions": {
     "modified": "2020-11-07T12:19:15.360Z",
     "contributors": [
       "hensonxu",
@@ -25391,7 +25371,7 @@
       "ziyunfei"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Assertions": {
+  "Web/JavaScript/Guide/Regular_expressions/Assertions": {
     "modified": "2020-11-07T12:07:11.701Z",
     "contributors": [
       "hensonxu",
@@ -25404,19 +25384,19 @@
       "liuhao088"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Character_Classes": {
+  "Web/JavaScript/Guide/Regular_expressions/Character_classes": {
     "modified": "2020-06-28T13:35:45.679Z",
     "contributors": ["srq18211"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
+  "Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences": {
     "modified": "2020-08-21T07:28:58.610Z",
     "contributors": ["srq18211"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Quantifiers": {
+  "Web/JavaScript/Guide/Regular_expressions/Quantifiers": {
     "modified": "2020-06-28T13:50:25.946Z",
     "contributors": ["srq18211"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes": {
+  "Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes": {
     "modified": "2020-07-11T06:10:35.787Z",
     "contributors": ["zkmbdbbdd"]
   },
@@ -25470,7 +25450,7 @@
       "TimmyKingFree"
     ]
   },
-  "Web/JavaScript/Guide/Working_with_Objects": {
+  "Web/JavaScript/Guide/Working_with_objects": {
     "modified": "2020-03-21T00:54:40.101Z",
     "contributors": [
       "johnao",
@@ -25580,7 +25560,7 @@
       "YuQiang.Yuan"
     ]
   },
-  "Web/JavaScript/Language_Overview": {
+  "Web/JavaScript/Language_overview": {
     "modified": "2020-12-11T11:33:32.340Z",
     "contributors": [
       "柳涤尘",
@@ -25647,7 +25627,7 @@
       "Laser"
     ]
   },
-  "Web/JavaScript/Memory_Management": {
+  "Web/JavaScript/Memory_management": {
     "modified": "2020-03-12T19:38:33.297Z",
     "contributors": [
       "y00rb",
@@ -26038,7 +26018,7 @@
     "modified": "2020-03-12T19:44:03.324Z",
     "contributors": ["Jack-Q"]
   },
-  "Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params": {
+  "Web/JavaScript/Reference/Errors/Strict_non_simple_params": {
     "modified": "2020-03-12T19:45:16.824Z",
     "contributors": ["xgqfrms-GitHub", "Ende93"]
   },
@@ -30959,11 +30939,11 @@
     "modified": "2020-10-15T22:34:23.846Z",
     "contributors": ["laampui"]
   },
-  "Web/JavaScript/Reference/Operators/Comma_Operator": {
+  "Web/JavaScript/Reference/Operators/Comma_operator": {
     "modified": "2020-10-15T21:32:06.908Z",
     "contributors": ["zhangchen", "xgqfrms-GitHub", "ontheway1215", "AlexChao"]
   },
-  "Web/JavaScript/Reference/Operators/Conditional_Operator": {
+  "Web/JavaScript/Reference/Operators/Conditional_operator": {
     "modified": "2020-10-15T21:37:34.292Z",
     "contributors": [
       "wendy260310",
@@ -31121,7 +31101,7 @@
       "hitme"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+  "Web/JavaScript/Reference/Operators/Operator_precedence": {
     "modified": "2020-09-26T23:18:03.052Z",
     "contributors": [
       "taichiyi",
@@ -31156,7 +31136,7 @@
       "wsv587"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Property_Accessors": {
+  "Web/JavaScript/Reference/Operators/Property_accessors": {
     "modified": "2020-10-15T21:37:38.990Z",
     "contributors": [
       "RainSlide",
@@ -32241,11 +32221,15 @@
       "xgqfrms"
     ]
   },
-  "Web/Progressive_web_apps/Add_to_home_screen": {
+  "Web/Progressive_web_apps/Guides/Making_PWAs_installable": {
     "modified": "2019-11-13T02:27:54.714Z",
     "contributors": ["JC-Ge"]
   },
-  "Web/Progressive_web_apps/App_structure": {
+  "Web/Progressive_web_apps/Responsive/responsive_design_building_blocks": {
+    "modified": "2020-11-17T04:04:41.165Z",
+    "contributors": ["DingGuangbo"]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-05-31T18:38:01.454Z",
     "contributors": [
       "jin_wang",
@@ -32260,7 +32244,7 @@
       "eightHundreds"
     ]
   },
-  "Web/Progressive_web_apps/Installable_PWAs": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
     "modified": "2020-08-03T23:25:28.976Z",
     "contributors": [
       "SDUTWSL",
@@ -32271,7 +32255,7 @@
       "deping_chen"
     ]
   },
-  "Web/Progressive_web_apps/Introduction": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
     "modified": "2019-08-21T09:58:46.102Z",
     "contributors": [
       "jackupdown",
@@ -32281,21 +32265,17 @@
       "yijie_sun"
     ]
   },
-  "Web/Progressive_web_apps/Loading": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {
     "modified": "2019-08-31T10:29:37.985Z",
     "contributors": ["githubxiaominge"]
   },
-  "Web/Progressive_web_apps/Offline_Service_workers": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers": {
     "modified": "2020-07-02T16:41:37.440Z",
     "contributors": ["showad", "nurob", "githubxiaominge", "zjffun"]
   },
-  "Web/Progressive_web_apps/Re-engageable_Notifications_Push": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push": {
     "modified": "2020-05-31T18:38:17.693Z",
     "contributors": ["nurob", "githubxiaominge"]
-  },
-  "Web/Progressive_web_apps/Responsive/responsive_design_building_blocks": {
-    "modified": "2020-11-17T04:04:41.165Z",
-    "contributors": ["DingGuangbo"]
   },
   "Web/SVG": {
     "modified": "2020-05-25T07:08:22.112Z",

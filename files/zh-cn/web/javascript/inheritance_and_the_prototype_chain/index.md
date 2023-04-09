@@ -74,7 +74,7 @@ console.log(o.d); // undefined
 
 代码来源链接：<https://repl.it/@khaled_hossain_code/prototype>
 
-给对象设置属性会创建自有属性。获取和设置行为规则的唯一例外是当继承的属性带有 [getter 或 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) 时。
+给对象设置属性会创建自有属性。获取和设置行为规则的唯一例外是当继承的属性带有 [getter 或 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter) 时。
 
 ### 继承方法
 

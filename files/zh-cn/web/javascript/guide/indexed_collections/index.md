@@ -3,7 +3,7 @@ title: 索引集合类
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 本章介绍按索引值排序的数据集合。包括数组和类数组结构，如 {{jsxref("Array")}} 对象和 {{jsxref("TypedArray")}} 对象。
 
@@ -86,7 +86,7 @@ const wisenArray = Array.of(9.3); // wisenArray 只包含一个元素：9.3
 
 ## 引用数组元素
 
-因为元素也是属性，你可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问。假设你定义了以下数组：
+因为元素也是属性，你可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问。假设你定义了以下数组：
 
 ```js
 const myArray = ['Wind', 'Rain', 'Fire'];
@@ -94,7 +94,7 @@ const myArray = ['Wind', 'Rain', 'Fire'];
 
 你可以将数组的第一个元素引用为 `myArray[0]`，将数组的第二个元素引用为 `myArray[1]`，等等...元素的索引从零开始。
 
-> **备注：** 你也可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问数组的其他属性，就像对象一样。
+> **备注：** 你也可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问数组的其他属性，就像对象一样。
 >
 > ```js
 > const arr = ['one', 'two', 'three'];
@@ -583,7 +583,7 @@ arr.property = "value";
 console.log(arr.property); // "value"
 ```
 
-例如，当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。[`RegExp.prototype.exec()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec)、[`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 和 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的返回值是一个数组。使用数组和正则表达式的的更多信息，参见[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
+例如，当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。[`RegExp.prototype.exec()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec)、[`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 和 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的返回值是一个数组。使用数组和正则表达式的的更多信息，参见[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ## 使用类数组对象
 
@@ -617,4 +617,4 @@ Array.prototype.forEach.call("a string", (chr) => {
 });
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

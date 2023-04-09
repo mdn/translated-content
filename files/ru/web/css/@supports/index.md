@@ -8,62 +8,62 @@ translation_of: Web/CSS/@supports
 
 ## Описание
 
-The `@supports` [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) associates a set of nested statements, in a CSS block, that is delimited by curly braces, with a condition consisting of testing of CSS declarations, that is property-value pairs, combined with arbitrary conjunctions, disjunctions, and negations of them. Such a condition is called a _supports condition_.
+`@supports` ([at-правило](/ru/docs/Web/CSS/At-rule)) связывает набор вложенных правил в блоке CSS-кода, ограниченном фигурными скобками, с условием, представляющим собой одно или несколько проверочных объявлений в виде пар `свойство: значение`, объединенных операторами `and`, `or` или `not` (логические И, ИЛИ, НЕ). Такое условие называется _supports-условием_.
 
-`@supports` gives CSS the ability to perform a _feature query_.
+`@supports` позволяет CSS-коду выполнять _feature query_ (запрос на проверку поддержки различных возможностей CSS в браузере).
 
-The `@supports` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en/CSS/At-rule#Conditional_Group_Rules) and can be accessed via the CSS object model interface {{domxref("CSSSupportsRule")}}.
+Правило `@supports` может быть использовано не только на верхнем уровне вложенности CSS, но и внутри блоков любых других [at-правил](/ru/docs/Web/CSS/At-rule#условные_групповые_правила). Доступ к нему можно получить с помощью интерфейса объектной модели CSS {{domxref("CSSSupportsRule")}}.
 
 ## Синтаксис
 
-A supports condition consists of one or several declarations combined by different logical operators. Precedence of operators can be overruled by using parentheses.
+supports-условие состоит из одного или нескольких CSS-объявлений в сочетании с различными логическими операторами. Приоритет операторов может быть переопределён при помощи круглых скобок.
 
 ### Синтаксис объявления
 
-The simplest expression is a CSS declaration, that is a CSS property name followed by a value, separated by a colon. The following expression
+В простейшем случае, supports-условие представляет собой одно CSS-объявление, то есть, пару вида `свойство: значение`. Следующее выражение
 
 ```css
 ( transform-origin: 5% 5% )
 ```
 
-returns true if the {{ cssxref("transform-origin") }} implements a syntax considering `5% 5%` as valid.
+вернёт `true`, если {{ cssxref("transform-origin") }} поддерживает синтаксис, в котором значение `5% 5%` является допустимым.
 
-A CSS declaration is always surrounded by parentheses.
+CSS-объявление всегда заключается в круглые скобки.
 
 ### Оператор not
 
-The `not` operator can precede any expression to create a new expression, resulting in the negation of the original expression. The following expression
+Оператор `not` (логическое НЕ) может стоять перед любым выражением. `not` возвращает значение, противоположное тому, которое вернуло выражение в круглых скобках после `not`. Следующее выражение
 
 ```css
 not ( transform-origin: 10em 10em 10em )
 ```
 
-returns true if {{ cssxref("transform-origin") }} doesn't implement a syntax considering `10em 10em 10em` as valid.
+вернёт true, если {{ cssxref("transform-origin") }} **не** поддерживает синтаксис, в котором значение `10em 10em 10em` является допустимым.
 
-Like any operator, the `not` operator can be applied to a declaration of any complexity. The following examples are all valid expressions:
+Как и другие операторы, `not` может быть применен к любому составному выражению. Следующие примеры являются синтаксически корректными:
 
 ```css
 not ( not ( transform-origin: 2px ) )
 (display: flexbox) and ( not (display: inline-grid) )
 ```
 
-> **Предупреждение:** there is no need to enclose the `not` operator between two parentheses when at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
+**Примечание:** Нет необходимости заключать оператор `not` в круглые скобки на верхнем уровне вложенности. Однако, скобки обязательны, если `not` используается в сочетании с другими операторами (`and` или `or`).
 
 ### Оператор and
 
-From two expressions, the `and` operator creates a new expression consisting in the conjunction of the two original ones; the resulting expression is true only if both of the original expressions also resolve to true. In this example, the complete expression resolves to true if and only if the two expressions are simultaneously true:
+Оператор `and` (логическое И или _конъюнкция_) объединяет два выражения и возвращает `true` тогда и только тогда, когда оба выражения истинны. В следующем примере всё выражение вернет true только в том случае, если оба выражения в круглых скобках одновременно истинны.
 
 ```css
 (display: table-cell) and (display: list-item)
 ```
 
-Several conjunctions can be juxtaposed without the need of more parentheses:
+В одном выражении может использоваться несколько операторов `and`; при этом нет необходимости использовать дополнительные круглые скобки. Так, выражение
 
 ```css
 (display: table-cell) and (display: list-item) and (display:run-in)
 ```
 
-is equivalent to:
+эквивалентно следующему:
 
 ```css
 (display: table-cell) and ((display: list-item) and (display:run-in))
@@ -71,27 +71,27 @@ is equivalent to:
 
 ### Оператор or
 
-From two expressions, the `or` operator creates a new expression consisting in the disjunction of the two original ones; the resulting expression is true if one, or both, of the original expressions also resolves to true. In this example, the complete expression resolves to true if at least one of the two expressions is true:
+Оператор `or` (логическое ИЛИ или _дизъюнкция_) объединяет два выражения и возвращает `true`, если истинно хотя бы одно из них. В следующем примере вся строка вернёт `true`, если хотя бы одно из выражений, заключенных в круглые скобки, истинно:
 
 ```css
 ( transform-style: preserve ) or ( -moz-transform-style: preserve )
 ```
 
-Several disjunctions can be juxtaposed without the need of more parentheses:
+В одном выражении может использоваться несколько операторов `or`; при этом нет необходимости использовать дополнительные скобки. Так, выражение
 
 ```css
 ( transform-style: preserve ) or ( -moz-transform-style: preserve ) or
 ( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve  )
 ```
 
-is equivalent to:
+эквивалентно следующему:
 
 ```css
 ( transform-style: preserve-3d ) or (( -moz-transform-style: preserve-3d ) or
 (( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))
 ```
 
-> **Предупреждение:** when using both `and` and `or` operators, the parentheses must be used in order to define the order in which they apply. If not, the condition is invalid leading to the whole at-rule to be ignored.
+> **Примечание**: если в выражении используются оба оператора, `and` и `or`, **необходимо использовать скобки**, чтобы указать порядок применения логических операторов. Если скобки не используются, выражение считается некорректным и всё правило `@support` будет полностью проигнорировано.
 
 ### Формальный синтаксис
 
@@ -103,8 +103,8 @@ is equivalent to:
 
 ```css
 @supports (animation-name: test) {
-    … /* specific CSS applied when animations are supported unprefixed */
-    @keyframes { /* @supports being a CSS conditional group at-rule, it can includes other relevant at-rules */
+    … /* размещенные в этом блоке правила будут применены, если браузером поддерживаются свойства анимации без префиксов */
+    @keyframes { /* @supports является условным правилом группировки, оно может содержать в себе другие at-правила */
       …
     }
 }
@@ -115,7 +115,7 @@ is equivalent to:
 ```css
 @supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
             (-ms-perspective: 10px) or (-o-perspective: 10px) ) {
-    … /* specific CSS applied when 3D transforms, eventually prefixed, are supported */
+    … /* размещенные в этом блоке правила будут применены, если браузером поддерживаются свойства 3D трансформации, хотя бы с префиксами */
 }
 ```
 
@@ -123,7 +123,7 @@ is equivalent to:
 
 ```css
 @supports not ((text-align-last:justify) or (-moz-text-align-last:justify) ){
-    … /* specific CSS applied to simulate text-align-last:justify */
+    … /* в этом блоке могут быть размещены CSS-правила, имитирующие правило `text-align-last: justify` */
 }
 ```
 
@@ -139,4 +139,4 @@ is equivalent to:
 
 ## Смотрите также
 
-- The CSSOM class {{ domxref("CSSSupportsRule") }}, and the {{ domxref("CSS.supports") }} method that allows to perform the same check via JavaScript.
+- CSSOM-класс {{ domxref("CSSSupportsRule") }}, а также метод {{ domxref("CSS.supports") }}, позволяющий использовать `@supports`-проверки в JavaScript.

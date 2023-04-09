@@ -1,6 +1,6 @@
 ---
 title: Iteratores e geradores
-slug: Web/JavaScript/Guide/Iterators_and_Generators
+slug: Web/JavaScript/Guide/Iterators_and_generators
 original_slug: Web/JavaScript/Guide/Iteratores_e_geradores
 ---
 

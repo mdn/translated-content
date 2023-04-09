@@ -7018,10 +7018,6 @@
     "modified": "2020-10-15T21:56:19.509Z",
     "contributors": ["claudiombsilva", "thiagorock22", "WaGjUb"]
   },
-  "Web/HTTP/Headers/Set-Cookie/SameSite": {
-    "modified": "2020-10-15T22:31:49.288Z",
-    "contributors": ["ooVictorFranco"]
-  },
   "Web/HTTP/Headers/SourceMap": {
     "modified": "2020-10-15T22:20:50.501Z",
     "contributors": ["ogeidexe"]
@@ -7531,7 +7527,7 @@
       "alexandresn"
     ]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-03-12T19:41:03.578Z",
     "contributors": [
       "GuilhermePiovesan",
@@ -7570,7 +7566,7 @@
       "pkelbert"
     ]
   },
-  "Web/JavaScript/Guide/Expressions_and_Operators": {
+  "Web/JavaScript/Guide/Expressions_and_operators": {
     "modified": "2020-11-13T16:04:53.998Z",
     "contributors": [
       "bragaus",
@@ -7656,7 +7652,7 @@
       "PedroTorresMaschio"
     ]
   },
-  "Web/JavaScript/Guide/Iterators_and_Generators": {
+  "Web/JavaScript/Guide/Iterators_and_generators": {
     "modified": "2020-08-05T20:59:34.854Z",
     "contributors": [
       "jonas-alves",
@@ -7715,7 +7711,7 @@
       "MarceloBRN"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions": {
+  "Web/JavaScript/Guide/Regular_expressions": {
     "modified": "2020-11-20T11:07:29.286Z",
     "contributors": [
       "bragaus",
@@ -7759,7 +7755,7 @@
       "Tiagosb"
     ]
   },
-  "Web/JavaScript/Guide/Working_with_Objects": {
+  "Web/JavaScript/Guide/Working_with_objects": {
     "modified": "2019-10-02T09:41:18.709Z",
     "contributors": [
       "reinaldoamaralstudio",
@@ -7814,7 +7810,7 @@
       "treax"
     ]
   },
-  "Web/JavaScript/Language_Overview": {
+  "Web/JavaScript/Language_overview": {
     "modified": "2020-05-27T17:14:30.277Z",
     "contributors": [
       "ruanpetterson",
@@ -7839,7 +7835,7 @@
       "arthur.luiz"
     ]
   },
-  "Web/JavaScript/Memory_Management": {
+  "Web/JavaScript/Memory_management": {
     "modified": "2020-03-12T19:40:29.251Z",
     "contributors": ["silvaw", "LincePotiguara", "gcacars", "AlanCezarAraujo"]
   },
@@ -9564,10 +9560,6 @@
     "modified": "2020-10-16T00:11:07.868Z",
     "contributors": ["ricardo.passos.cr", "vmardss"]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2020-10-16T00:00:03.933Z",
-    "contributors": ["ricardo.passos.cr", "coloringa", "GlauberF", "Webysther"]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2020-10-15T22:35:00.314Z",
     "contributors": ["ricardo.passos.cr"]
@@ -9814,6 +9806,10 @@
     "modified": "2020-10-15T23:55:31.039Z",
     "contributors": ["ricardo.passos.cr", "PTPAC", "marcelobonatto"]
   },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2020-10-16T00:00:03.933Z",
+    "contributors": ["ricardo.passos.cr", "coloringa", "GlauberF", "Webysther"]
+  },
   "Web/JavaScript/Reference/Global_Objects/String/trimEnd": {
     "modified": "2020-10-16T00:03:20.779Z",
     "contributors": ["ricardo.passos.cr", "pedrollmatias", "FernandoKGA"]
@@ -10042,11 +10038,11 @@
     "modified": "2020-10-15T22:31:57.374Z",
     "contributors": ["joaopedroaats"]
   },
-  "Web/JavaScript/Reference/Operators/Comma_Operator": {
+  "Web/JavaScript/Reference/Operators/Comma_operator": {
     "modified": "2020-03-12T19:39:21.823Z",
     "contributors": ["SphinxKnight", "haskellcamargo", "teoli"]
   },
-  "Web/JavaScript/Reference/Operators/Conditional_Operator": {
+  "Web/JavaScript/Reference/Operators/Conditional_operator": {
     "modified": "2020-03-12T19:39:26.164Z",
     "contributors": ["monnacs", "flaviomicheletti", "SphinxKnight"]
   },
@@ -10074,7 +10070,7 @@
     "modified": "2020-03-12T19:45:20.526Z",
     "contributors": ["holandajunior"]
   },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+  "Web/JavaScript/Reference/Operators/Operator_precedence": {
     "modified": "2020-03-12T19:39:59.148Z",
     "contributors": ["ShadYueh"]
   },
@@ -10082,7 +10078,7 @@
     "modified": "2020-11-27T11:24:17.100Z",
     "contributors": ["myke-oliveira", "gabrieluizramos", "agusmao720919"]
   },
-  "Web/JavaScript/Reference/Operators/Property_Accessors": {
+  "Web/JavaScript/Reference/Operators/Property_accessors": {
     "modified": "2020-03-12T19:44:40.050Z",
     "contributors": ["matheussilvasantos"]
   },
@@ -10478,7 +10474,7 @@
     "modified": "2020-04-06T10:15:30.355Z",
     "contributors": ["R-Santtos", "chrisdavidmills", "mfuji09"]
   },
-  "Web/Progressive_web_apps/Introduction": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
     "modified": "2019-03-18T20:52:09.829Z",
     "contributors": ["chrisdavidmills", "rodolfo.ghiggi"]
   },
@@ -11839,6 +11835,10 @@
   "orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy": {
     "modified": "2020-07-20T20:48:22.250Z",
     "contributors": ["FernandoKGA"]
+  },
+  "orphaned/Web/HTTP/Headers/Set-Cookie/SameSite": {
+    "modified": "2020-10-15T22:31:49.288Z",
+    "contributors": ["ooVictorFranco"]
   },
   "orphaned/Web/JavaScript/Guide/Coleções_chaveadas": {
     "modified": "2020-03-12T19:42:42.934Z",
