@@ -1,6 +1,8 @@
 ---
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_operators
+l10n:
+  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
