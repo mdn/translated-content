@@ -1,6 +1,7 @@
 ---
 title: Performance Timeline
-slug: Web/API/Performance_Timeline
+slug: orphaned/Web/API/Performance_Timeline
+original_slug: Web/API/Performance_Timeline
 ---
 
 {{DefaultAPISidebar("Performance Timeline API")}}

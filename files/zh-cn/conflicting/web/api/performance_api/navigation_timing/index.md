@@ -1,6 +1,7 @@
 ---
 title: Using Navigation Timing
-slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
+slug: conflicting/Web/API/Performance_API/Navigation_timing
+original_slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
 ---
 
 {{DefaultAPISidebar("Navigation Timing")}}

@@ -1,6 +1,7 @@
 ---
 title: window.content
-slug: Web/API/Window/content
+slug: conflicting/Web/API/Window
+original_slug: Web/API/Window/content
 ---
 
 {{ ApiRef() }}

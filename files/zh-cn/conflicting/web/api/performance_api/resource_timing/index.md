@@ -1,6 +1,7 @@
 ---
 title: 使用 Resource Timing API
-slug: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
+slug: conflicting/Web/API/Performance_API/Resource_timing
+original_slug: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 ---
 
 {{DefaultAPISidebar("Resource Timing API")}}

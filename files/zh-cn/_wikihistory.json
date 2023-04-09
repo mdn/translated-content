@@ -12073,14 +12073,6 @@
     "modified": "2020-10-15T21:52:39.986Z",
     "contributors": ["RainSlide", "zwei76"]
   },
-  "Web/API/Navigation_timing_API": {
-    "modified": "2019-03-23T22:26:10.873Z",
-    "contributors": ["donghua", "xgqfrms-GitHub", "CeHOU", "iamyy"]
-  },
-  "Web/API/Navigation_timing_API/Using_Navigation_Timing": {
-    "modified": "2020-04-02T23:35:26.689Z",
-    "contributors": ["Bayes", "wolf-wolf"]
-  },
   "Web/API/Navigator": {
     "modified": "2020-10-15T21:33:06.758Z",
     "contributors": [
@@ -13003,9 +12995,17 @@
     "modified": "2020-04-20T05:51:10.170Z",
     "contributors": ["luoway"]
   },
-  "Web/API/Performance_Timeline": {
-    "modified": "2020-07-10T11:47:27.766Z",
-    "contributors": ["laampui"]
+  "Web/API/Performance_API/Navigation_timing": {
+    "modified": "2019-03-23T22:26:10.873Z",
+    "contributors": ["donghua", "xgqfrms-GitHub", "CeHOU", "iamyy"]
+  },
+  "Web/API/Performance_API/Resource_timing": {
+    "modified": "2019-03-18T20:44:25.988Z",
+    "contributors": ["linapengzhe", "suchasplus"]
+  },
+  "Web/API/Performance_API/User_timing": {
+    "modified": "2019-03-22T00:28:06.068Z",
+    "contributors": ["suvyme"]
   },
   "Web/API/PeriodicWave": {
     "modified": "2020-10-15T22:17:43.050Z",
@@ -13438,14 +13438,6 @@
   "Web/API/Resize_Observer_API": {
     "modified": "2020-10-15T22:31:10.210Z",
     "contributors": ["brizer"]
-  },
-  "Web/API/Resource_Timing_API": {
-    "modified": "2019-03-18T20:44:25.988Z",
-    "contributors": ["linapengzhe", "suchasplus"]
-  },
-  "Web/API/Resource_Timing_API/Using_the_Resource_Timing_API": {
-    "modified": "2020-08-05T06:24:43.888Z",
-    "contributors": ["EzioShiki", "Mukti"]
   },
   "Web/API/Response": {
     "modified": "2020-10-15T21:46:45.688Z",
@@ -14481,10 +14473,6 @@
   "Web/API/USB": {
     "modified": "2020-10-15T22:20:23.616Z",
     "contributors": ["Himself65", "yuyang"]
-  },
-  "Web/API/User_Timing_API": {
-    "modified": "2019-03-22T00:28:06.068Z",
-    "contributors": ["suvyme"]
   },
   "Web/API/VRDisplay": {
     "modified": "2019-03-23T22:25:25.766Z",
@@ -15688,10 +15676,6 @@
   "Web/API/Window/console": {
     "modified": "2019-03-23T22:25:36.373Z",
     "contributors": ["dujun", "seajean", "WwupengP"]
-  },
-  "Web/API/Window/content": {
-    "modified": "2019-10-10T16:55:47.838Z",
-    "contributors": ["teoli", "khalid32", "ziyunfei"]
   },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:30:15.212Z",
@@ -33646,5 +33630,21 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/API/Performance_API/Navigation_timing": {
+    "modified": "2020-04-02T23:35:26.689Z",
+    "contributors": ["Bayes", "wolf-wolf"]
+  },
+  "conflicting/Web/API/Performance_API/Resource_timing": {
+    "modified": "2020-08-05T06:24:43.888Z",
+    "contributors": ["EzioShiki", "Mukti"]
+  },
+  "conflicting/Web/API/Window": {
+    "modified": "2019-10-10T16:55:47.838Z",
+    "contributors": ["teoli", "khalid32", "ziyunfei"]
+  },
+  "orphaned/Web/API/Performance_Timeline": {
+    "modified": "2020-07-10T11:47:27.766Z",
+    "contributors": ["laampui"]
   }
 }

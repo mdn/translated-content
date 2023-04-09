@@ -429,7 +429,7 @@
 /zh-CN/docs/DOM/window.clearImmediate	/zh-CN/docs/Web/API/Window/clearImmediate
 /zh-CN/docs/DOM/window.clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/DOM/window.close	/zh-CN/docs/Web/API/Window/close
-/zh-CN/docs/DOM/window.content	/zh-CN/docs/Web/API/Window/content
+/zh-CN/docs/DOM/window.content	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/DOM/window.document	/zh-CN/docs/Web/API/Window/document
 /zh-CN/docs/DOM/window.find	/zh-CN/docs/Web/API/Window/find
 /zh-CN/docs/DOM/window.frameElement	/zh-CN/docs/Web/API/Window/frameElement
@@ -1651,6 +1651,8 @@
 /zh-CN/docs/Web/API/MutationObserverInit	/zh-CN/docs/Web/API/MutationObserver/observe
 /zh-CN/docs/Web/API/MutationObserverInit/attributeFilter	/zh-CN/docs/Web/API/MutationObserver/observe
 /zh-CN/docs/Web/API/MutationObserverInit/childList	/zh-CN/docs/Web/API/MutationObserver/observe
+/zh-CN/docs/Web/API/Navigation_timing_API	/zh-CN/docs/Web/API/Performance_API/Navigation_timing
+/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing	/zh-CN/docs/conflicting/Web/API/Performance_API/Navigation_timing
 /zh-CN/docs/Web/API/Navigator.battery	/zh-CN/docs/Web/API/Navigator/getBattery
 /zh-CN/docs/Web/API/Navigator.buildID	/zh-CN/docs/Web/API/Navigator/buildID
 /zh-CN/docs/Web/API/Navigator.cookieEnabled	/zh-CN/docs/Web/API/Navigator/cookieEnabled
@@ -1710,6 +1712,7 @@
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
 /zh-CN/docs/Web/API/Performance/onresourcetimingbufferfull	/zh-CN/docs/Web/API/Performance/resourcetimingbufferfull_event
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
+/zh-CN/docs/Web/API/Performance_Timeline	/zh-CN/docs/orphaned/Web/API/Performance_Timeline
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition
 /zh-CN/docs/Web/API/Position/coords	/zh-CN/docs/Web/API/GeolocationPosition/coords
 /zh-CN/docs/Web/API/PositionError	/zh-CN/docs/Web/API/GeolocationPositionError
@@ -1721,6 +1724,8 @@
 /zh-CN/docs/Web/API/RTCPeerConnection/onicecandidate	/zh-CN/docs/Web/API/RTCPeerConnection/icecandidate_event
 /zh-CN/docs/Web/API/RTCPeerConnection/ontrack	/zh-CN/docs/Web/API/RTCPeerConnection/track_event
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
+/zh-CN/docs/Web/API/Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
+/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/zh-CN/docs/conflicting/Web/API/Performance_API/Resource_timing
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
 /zh-CN/docs/Web/API/SVGMatrix	/zh-CN/docs/Web/API/DOMMatrix
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
@@ -1779,6 +1784,7 @@
 /zh-CN/docs/Web/API/URLUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/URLUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/USVString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
+/zh-CN/docs/Web/API/User_Timing_API	/zh-CN/docs/Web/API/Performance_API/User_timing
 /zh-CN/docs/Web/API/VRPose/timeStamp	/zh-CN/docs/Web/API/VRPose
 /zh-CN/docs/Web/API/VisualViewport/onscroll	/zh-CN/docs/Web/API/VisualViewport/scroll_event
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
@@ -1848,6 +1854,7 @@
 /zh-CN/docs/Web/API/Window/btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/Window/caches	/zh-CN/docs/Web/API/caches
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
+/zh-CN/docs/Web/API/Window/content	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozAnimationStartTIme	/zh-CN/docs/Web/API/Animation/startTime
