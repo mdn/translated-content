@@ -120,10 +120,6 @@ Les navigateurs ne prennent pas tous en charge les mêmes [types de fichiers](/f
 </audio>
 ```
 
-### Résultat
-
-{{EmbedLiveSample('')}}
-
 Nous proposons un [guide substantiel et complet des types de fichiers médias](/fr/docs/Web/Media/Formats) et des [codecs audio qui peuvent être utilisés en leur sein](/fr/docs/Web/Media/Formats/Audio_codecs). Est également disponible [un guide des codecs supportés pour la vidéo](/fr/docs/Web/Media/Formats/Video_codecs).
 
 Autres notes d'utilisation :
@@ -202,10 +198,6 @@ Cet exemple précise quelle piste audio intégrer en utilisant l'attribut `src` 
 </audio>
 ```
 
-#### Résultat
-
-{{EmbedLiveSample('')}}
-
 ### Utilisation de plusieurs éléments `<source>`
 
 Dans l'exemple qui suit, le navigateur essaiera de jouer le premier fichier correspondant au premier élément (celui avec le codec Opus) : s'il peut le lire, il n'interprète pas les suivants ; s'il ne peut pas le lire, il tente de lire le deuxième puis, si ce n'est toujours pas possible, le troisième (au format MP3) :
@@ -217,10 +209,6 @@ Dans l'exemple qui suit, le navigateur essaiera de jouer le premier fichier corr
  <source src="toto.mp3" type="audio/mpeg"/>
 </audio>
 ```
-
-#### Résultat
-
-{{EmbedLiveSample('')}}
 
 ## Accessibilité
 
@@ -258,10 +246,6 @@ Une autre bonne pratique consiste à fournir du contenu comme un lien de téléc
   </p>
 </audio>
 ```
-
-#### Résultat
-
-{{EmbedLiveSample('')}}
 
 - [Sous-titrage sur le web](/fr/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
