@@ -39,7 +39,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 ### Elementos customizados
 
 - {{domxref("CustomElementRegistry")}}
-  - : Contém funcionalidade relacionada a elementos personalizados, principalmente o método {{domxref("CustomElementRegistry.define()")}} usado para registrar novos elementos personalizados, para que possam ser usados ​​em seu documento.
+  - : Contém funcionalidade relacionada a elementos personalizados, principalmente o método {{domxref("CustomElementRegistry.define()")}} usado para registrar novos elementos personalizados, para que possam ser usados em seu documento.
 - {{domxref("Window.customElements")}}
   - : Retorna uma referência ao objeto `CustomElementRegistry`.
 - [Callbacks do ciclo de vida](/pt-BR/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)

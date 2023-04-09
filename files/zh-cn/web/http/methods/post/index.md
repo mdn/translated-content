@@ -9,7 +9,7 @@ slug: Web/HTTP/Methods/POST
 
 PUT 和{{HTTPMethod("POST")}}方法的区别是，PUT 方法是幂等的：连续调用一次或者多次的效果相同（无副作用）。连续调用同一个 POST 可能会带来额外的影响，比如多次提交订单。
 
-一个 `POST` 请求通常是通过 [HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)发送，并返回服务器的修改结果。在这种情况下，content type 是通过在 _{{HTMLElement("form")}} 元素中设置正确的 {{htmlattrxref("enctype", "form")}} 属性，或是在 {{HTMLElement("input") }} 和 {{HTMLElement("button")}} 元素中设置 {{htmlattrxref("formenctype", "input")}} 属性来选择的_:
+一个 `POST` 请求通常是通过 [HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)发送，并返回服务器的修改结果。在这种情况下，content type 是通过在 _{{HTMLElement("form")}} 元素中设置正确的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性，或是在 {{HTMLElement("input") }} 和 {{HTMLElement("button")}} 元素中设置 [`formenctype`](/zh-CN/docs/Web/HTML/Element/input#formenctype) 属性来选择的_:
 
 - `application/`_`x-www-form-urlencoded`: 数据被编码成以 `'&'` 分隔的键 - 值对，同时以 `'='` 分隔键和值。非字母或数字的字符会被 _{{glossary("percent-encoding")}}_: 这也就是为什么这种类型不支持二进制数据 (应使用 `multipart/form-data` 代替)._
 - _`multipart/form-data`_

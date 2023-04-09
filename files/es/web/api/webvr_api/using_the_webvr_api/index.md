@@ -31,9 +31,9 @@ Para ilustrar cómo funciona la API de WebVR, estudiaremos nuestro ejemplo raw-w
 
 ![](capture1.png)
 
-> **Nota:** **Nota:** Puedes encontrar el [código fuente de nuestra demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) en GitHub, y [verlo en vivo](https://mdn.github.io/webvr-tests/raw-webgl-example/)también.
+> **Nota:** Puedes encontrar el [código fuente de nuestra demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) en GitHub, y [verlo en vivo](https://mdn.github.io/webvr-tests/raw-webgl-example/)también.
 
-> **Nota:** **Nota:** Si WebVR no funciona en su navegador, es posible que deba asegurarse de que se está ejecutando a través de su tarjeta gráfica. Por ejemplo, para las tarjetas NVIDIA, si el panel de control de NVIDIA se ha configurado correctamente, habrá una opción de menú contextual disponible - haga clic con el botón derecho del ratón en Firefox y seleccione _Ejecutar con procesador gráfico_ > _Procesador NVIDIA de alto rendimiento._
+> **Nota:** Si WebVR no funciona en su navegador, es posible que deba asegurarse de que se está ejecutando a través de su tarjeta gráfica. Por ejemplo, para las tarjetas NVIDIA, si el panel de control de NVIDIA se ha configurado correctamente, habrá una opción de menú contextual disponible - haga clic con el botón derecho del ratón en Firefox y seleccione _Ejecutar con procesador gráfico_ > _Procesador NVIDIA de alto rendimiento._
 
 Nuestra demo presenta el santo grial de las demostraciones de WebGL - un cubo 3D giratorio. Hemos implementado esto usando raw [WebGL API](/es/docs/Web/API/WebGL_API) código. No enseñaremos ningún JavaScript básico o WebGL, solo las partes de WebVR.
 
@@ -44,7 +44,7 @@ Nuestra demo también cuenta con:
 
 Cuando miras a través del código fuente de[nuestro archivo JavaScript principal de demostraciones](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) , puede encontrar fácilmente las partes específicas de WebVR buscando la cadena "WebVR" en comentarios anteriores.
 
-> **Nota:** **Nota:** Para obtener más información sobre JavaScript básico y WebGL, consulte nuestro [material de aprendizaje JavaScrip](/es/docs/Learn/JavaScript) , y nuestro [WebGL Tutorial](/es/docs/Web/API/WebGL_API/Tutorial).
+> **Nota:** Para obtener más información sobre JavaScript básico y WebGL, consulte nuestro [material de aprendizaje JavaScrip](/es/docs/Learn/JavaScript) , y nuestro [WebGL Tutorial](/es/docs/Web/API/WebGL_API/Tutorial).
 
 ## ¿Como funciona?
 
@@ -150,7 +150,7 @@ Inside the promise `then()` block, we check whether the array length is more tha
           console.log('Display found');
 ```
 
-> **Nota:** **Nota:** Es poco probable que tenga varias pantallas VR conectadas a su computadora, y esto es sólo una demostración simple, por lo que esto lo hará por ahora.
+> **Nota:** Es poco probable que tenga varias pantallas VR conectadas a su computadora, y esto es sólo una demostración simple, por lo que esto lo hará por ahora.
 
 ### Starting and stopping the VR presentation
 

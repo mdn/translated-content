@@ -18,10 +18,10 @@ JavaScript 的应用场合极其广泛，简单到幻灯片、照片库、浮动
 JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心编写了大量实用工具，可以使 开发工作事半功倍。其中包括：
 
 - 浏览器应用程序接口（{{Glossary("API","API")}}）—— 浏览器内置的 API 提供了丰富的功能，比如：动态创建 HTML 和设置 CSS 样式、从用户的摄像头采集处理视频流、生成 3D 图像与音频样本等等。
-- 第三方 API —— 让开发者可以在自己的站点中整合其它内容提供者（Twitter、Facebook 等）提供的功能。
+- 第三方 API —— 让开发者可以在自己的站点中整合其他内容提供者（Twitter、Facebook 等）提供的功能。
 - 第三方框架和库 —— 用来快速构建网站和应用。
 
-本节是一篇 JavaScript 简介，因此这个阶段不会对 JavaScript 语言和上述工具做过多的介绍。之后可以到 [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript) 和 MDN 的其它地方学习更多细节。
+本节是一篇 JavaScript 简介，因此这个阶段不会对 JavaScript 语言和上述工具做过多的介绍。之后可以到 [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript) 和 MDN 的其他地方学习更多细节。
 
 下面对语言核心做一个不完整介绍，期间还可以接触到一些浏览器 API 特性。
 
@@ -452,14 +452,3 @@ function setUserName() {
 本章介绍的 JavaScript 知识非常有限，更多内容请访问 [Javascript 学习页面](/zh-CN/docs/Learn/JavaScript)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## 本章目录
-
-- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [设计网站的外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Web 是如何运作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -12,4 +12,4 @@ Le paquet EXSLT <i lang="en">Sets</i> fournit des fonctions pour manipuler des e
 
 ## Compatibilité des navigateurs
 
-{{Compat("xslt.exslt.set")}}
+{{Compat}}

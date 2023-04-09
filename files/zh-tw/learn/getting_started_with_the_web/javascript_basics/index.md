@@ -466,14 +466,3 @@ function setUserName() {
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

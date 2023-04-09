@@ -1,6 +1,6 @@
 ---
 title: Cacheable
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 ---
 
 **캐시 가능(cacheable)** 한 응답은 캐시할 수 있는 HTTP 응답으로, 나중에 검색하고 사용하기 위해 저장하여 새 요청을 서버에 저장합니다. 모든 HTTP 응답을 캐시할 수 있는 것은 아니며, 캐시할 HTTP 응답에 대한 제약 조건은 다음과 같습니다.

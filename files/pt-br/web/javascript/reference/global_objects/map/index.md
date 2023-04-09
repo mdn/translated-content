@@ -47,7 +47,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> Apartir do ES5, isso pode ser ignorado com o {{jsxref("Object.create", "Object.create(null)")}}, mas isso raramente é feito.
+            <strong>Nota:</strong> Apartir do ES5, isso pode ser ignorado com o {{jsxref("Object.create", "Object.create(null)")}}, mas isso raramente é feito.
           </p>
         </div>
       </td>

@@ -30,7 +30,7 @@ throw e;
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.message")}}
+{{Compat}}
 
 ## Ver también
 

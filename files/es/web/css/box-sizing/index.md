@@ -86,9 +86,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## Ver también
 

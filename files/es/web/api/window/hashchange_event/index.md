@@ -83,7 +83,7 @@ En [esta página](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browse
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.hashchange_event")}}
+{{Compat}}
 
 ## Ver también
 

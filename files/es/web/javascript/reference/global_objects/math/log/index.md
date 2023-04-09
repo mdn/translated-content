@@ -64,9 +64,9 @@ If you run `getBaseLog(10, 1000)` it returns `2.9999999999999996` due to floatin
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## See also
 

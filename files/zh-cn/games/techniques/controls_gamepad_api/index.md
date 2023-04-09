@@ -235,7 +235,7 @@ enum GamepadMappingType {
 
 ### 事件
 
-除了当前可用的 `gamepadconnected` 和 `gamepaddisconnected` 事件，其实还有其它事件也曾在规范中，但它们因为不是非常的有用所以被移出了规范。相关讨论仍在进行中，关于它们是否应该恢复规范，以及以什么形式恢复。
+除了当前可用的 `gamepadconnected` 和 `gamepaddisconnected` 事件，其实还有其他事件也曾在规范中，但它们因为不是非常的有用所以被移出了规范。相关讨论仍在进行中，关于它们是否应该恢复规范，以及以什么形式恢复。
 
 ## 总结
 

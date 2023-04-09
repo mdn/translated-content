@@ -9,7 +9,7 @@ slug: Web/API/Window/postMessage
 
 일반적으로, 다른 페이지 간의 스크립트는 각 페이지가 같은 프로토콜, 포트 번호와 호스트을 공유하고 있을 때에("[동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)"으로도 불려 집니다.) 서로 접근할 수 있습니다. **`window.postMessage()`** 는 이 제약 조건을 안전하게 우회하는 기능을 제공합니다.
 
-대체로, 한 window는 다른 window를 참조할 수 있고(_예시,_ `targetWindow = window.opener`), `targetWindow.postMessage()`를 통해 다른 window에 {{domxref("MessageEvent")}}를 전송할 수 있습니다. 이벤트를 받는 window는 이를 통해 필요에 따라 [이벤트를 처리](/ko/docs/Web/Guide/Events)할 수 있습니다. **`window.postMessage()`**를 통해 전달된 인자(예시, "message")는 [이벤트 객체를 통해 이벤트를 받는 window에서 사용](#The_dispatched_event)할 수 있습니다.
+대체로, 한 window는 다른 window를 참조할 수 있고(_예시,_ `targetWindow = window.opener`), `targetWindow.postMessage()`를 통해 다른 window에 {{domxref("MessageEvent")}}를 전송할 수 있습니다. 이벤트를 받는 window는 이를 통해 필요에 따라 [이벤트를 처리](/ko/docs/Web/Guide/Events)할 수 있습니다. **`window.postMessage()`** 를 통해 전달된 인자(예시, "message")는 [이벤트 객체를 통해 이벤트를 받는 window에서 사용](#The_dispatched_event)할 수 있습니다.
 
 ## 문법
 
@@ -126,7 +126,7 @@ window.addEventListener("message", receiveMessage, false);
 
 ### Notes
 
-윈도우 document의 장소와 무관하게, 임의의 윈도우는 언제든지 메시지를 보내기 위해 임의의 다른 윈도우에 있는 함수에 접근할 수도 있습니다. 그래서 이벤트 리스너는 메시지를 취득할 때, `origin` 또는 `source` 프로퍼티를 이용해, 먼저 메시지 송신자의 식별 정보를 **체크해야만 합니다**. 이것은 아무리 강조해도 지나치지 않습니다. 왜냐하면,** `origin` 또는 `source` 프로퍼티의 체크 실패는 크로스 사이트 스크립팅 공격을 가능하게 하기 때문입니다.**
+윈도우 document의 장소와 무관하게, 임의의 윈도우는 언제든지 메시지를 보내기 위해 임의의 다른 윈도우에 있는 함수에 접근할 수도 있습니다. 그래서 이벤트 리스너는 메시지를 취득할 때, `origin` 또는 `source` 프로퍼티를 이용해, 먼저 메시지 송신자의 식별 정보를 **체크해야만 합니다**. 이것은 아무리 강조해도 지나치지 않습니다. 왜냐하면, **`origin` 또는 `source` 프로퍼티의 체크 실패는 크로스 사이트 스크립팅 공격을 가능하게 하기 때문입니다.**
 
 비동기로 전달된 스크립트(타임아웃, 유저 생성 이벤트)에서, `postMessage`의 호출자의 판별이 불가능할 때, `postMessage`에 의해 보내진 이벤트를 기다리는 이벤트 핸들러는 예외를 발생시킵니다.
 
@@ -148,11 +148,11 @@ IDN 호스트 명에 한하여, `origin` 프로퍼티 값은 일관되게 Unicod
 
 마지막으로, `file:` URL의 페이지의 메시지를 보낼 경우 `targetOrigin` 파라미터를 `"*"`로 할 필요가 있습니다. `file://` 은 보안 제한으로 사용할 수 없으며 이 제한은 향후 수정될 수 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

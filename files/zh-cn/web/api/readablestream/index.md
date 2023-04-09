@@ -78,7 +78,7 @@ fetch('https://www.example.org')
 
 ### Async iterator to stream
 
-将[（async）迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)转换为可读流：
+将[（async）迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)转换为可读流：
 
 ```js
 function iteratorToStream(iterator) {

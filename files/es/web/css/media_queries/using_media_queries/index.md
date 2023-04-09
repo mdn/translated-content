@@ -49,7 +49,7 @@ Los _Media Types_ (tipos de medios) describen la categoría general de un dispos
 - `speech`
   - : Destinado a sintetizadores de voz.
 
-> **Nota:** **Tipos de medios depreciados:** CSS2.1 y [Media Queries 3](/es/docs/) definieron varios tipos de medios adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed` y `aural`), pero fueron desaprobados en [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) y no deberían ser usados. El tipo `aural` ha sido reemplazado por `speech`, que es similar.
+> **Advertencia:** CSS2.1 y [Media Queries 3](/es/docs/) definieron varios tipos de medios adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed` y `aural`), pero fueron desaprobados en [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) y no deberían ser usados. El tipo `aural` ha sido reemplazado por `speech`, que es similar.
 
 ### Operadores Lógicos
 

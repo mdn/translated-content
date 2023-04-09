@@ -43,7 +43,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 通常客户端和服务端存储是结合在一起使用的。例如，你可以从数据库中下载一个由网络游戏或音乐播放器应用程序使用的音乐文件，将它们存储在客户端数据库中，并按需要播放它们。用户只需下载音乐文件一次——在随后的访问中，它们将从数据库中检索。
 
-> **备注：** 使用客户端存储 API 可以存储的数据量是有限的（可能是每个 API 单独的和累积的总量）;具体的数量限制取决于浏览器，也可能基于用户设置。有关更多信息，获取更多信息，请参考[浏览器存储限制和清理标准](/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)。
+> **备注：** 使用客户端存储 API 可以存储的数据量是有限的（可能是每个 API 单独的和累积的总量）;具体的数量限制取决于浏览器，也可能基于用户设置。有关更多信息，获取更多信息，请参考[浏览器存储限制和清理标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)。
 
 ### 传统方法：cookies
 
@@ -362,7 +362,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 现在让我们看一下如何将记录添加到数据库中。这将使用我们页面上的表单完成。
 
-在您之前的事件处理程序下面（但仍在`window.onload`处理程序中），添加以下行，该行设置一个`onsubmit`处理程序，该处理程序运行`addData()`在提交表单时调用的函数（当 [元素表示一个可点击的按钮，可以用在表单或文档其它需要使用简单标准按钮的地方。">`<button>`](/zh-CN/docs/Web/HTML/Element/button)按下提交时导致成功提交表单）：
+在您之前的事件处理程序下面（但仍在`window.onload`处理程序中），添加以下行，该行设置一个`onsubmit`处理程序，该处理程序运行`addData()`在提交表单时调用的函数（当 [元素表示一个可点击的按钮，可以用在表单或文档其他需要使用简单标准按钮的地方。">`<button>`](/zh-CN/docs/Web/HTML/Element/button)按下提交时导致成功提交表单）：
 
 ```js
 // Create an onsubmit handler so that when the form is submitted the addData() function is run
@@ -760,13 +760,3 @@ self.addEventListener('fetch', function(e) {
 - [Service worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 在本单元中
-
-- [网页端 API 介绍](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [从服务器获取数据 (fetch)](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [第三方 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [视频和音频 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

@@ -70,14 +70,11 @@ usedOptions.numberingSystem; // "latn"
 
 ## Spécifications
 
-| Spécification                                                                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-|                                                                                                                                                   |                         |              |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-intl.relativetimeformat.prototype.resolvedoptions) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

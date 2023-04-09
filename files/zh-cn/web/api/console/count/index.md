@@ -1,6 +1,6 @@
 ---
 title: Console.count()
-slug: Web/API/Console/count
+slug: Web/API/console/count
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

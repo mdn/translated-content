@@ -74,4 +74,4 @@ El texto que proporciona el nombre accesible del control interactivo se puede oc
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.empty")}}
+{{Compat}}

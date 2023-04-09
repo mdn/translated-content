@@ -57,7 +57,7 @@ Cette propriété n'est pas en voie de standardisation et ne fera pas partie de 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-box-reflect")}}
+{{Compat}}
 
 ## Voir aussi
 

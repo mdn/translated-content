@@ -273,15 +273,3 @@ HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것
 HTML head에 대한 퀵 파이어 투어가 마무리 되었다. 여기에서 보고 할 수 있는 것보다 훨씬 많은 부분이 있지만, 지금 단계에서는 복잡하거나 어렵게 느껴질 수도 있을 것이고 단지 당신에게 지극히 일반적이고 기초적인 사용법만을 제시했을 뿐이다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

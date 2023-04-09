@@ -65,6 +65,6 @@ font-display: optional;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.font-display")}}
+{{Compat}}

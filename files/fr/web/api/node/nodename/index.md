@@ -66,4 +66,4 @@ Notez que la propriété [`tagName`](/fr/DOM/element.tagName) aurait pu être ui
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.nodeName")}}
+{{Compat}}

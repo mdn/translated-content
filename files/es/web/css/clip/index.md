@@ -75,9 +75,9 @@ p { border:dotted;  position:relative; }
 
 {{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.clip")}}
+{{Compat}}
 
 ## Ver también
 

@@ -28,9 +28,9 @@ geo = navigator.geolocation
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Navigator.geolocation")}}
+{{Compat}}
 
 ## Ver también
 

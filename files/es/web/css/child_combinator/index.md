@@ -37,6 +37,6 @@ div > span {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.child")}}
+{{Compat}}

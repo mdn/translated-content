@@ -44,7 +44,7 @@ left:20em; top:-25px; opacity:0.9</span></div>
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.z-index")}}
+{{Compat}}
 
 ## Ver también
 

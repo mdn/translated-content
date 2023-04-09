@@ -61,7 +61,7 @@ Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imá
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.hover")}}
+{{Compat}}
 
 ## Ver también
 

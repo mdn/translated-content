@@ -296,7 +296,7 @@ function createLink(testItem) {
 
 每个链接都有双重用途，即它不仅告诉你错误是什么，而且可以单击它或激活它直接跳转到有问题的输入元素，并且更正输入。
 
-> **备注：** 此示例的 `focus()` 部分有点棘手。Chrome 和 Edge（以及较新版本的 IE）将在单击链接时聚焦元素，而无需 `onclick`/`focus()` 代码块。Safari 只会突出显示表单元素，并自行显示链接，因此需要 `onclick/focus()` 代码块来实际聚焦它。Firefox 没有在上下文中正确的聚焦输入，因此 Firefox 用户目前无法利用这一点（尽管其他一切都正常）。Firefox 问题应该尽快会得到修复——现在的工作是使 Firefox 行为与其他浏览器的行为相同（参见 {{bug(277178)}}）。
+> **备注：** 此示例的 `focus()` 部分有点棘手。Chrome 和 Edge（以及较新版本的 IE）将在单击链接时聚焦元素，而无需 `onclick`/`focus()` 代码块。Safari 只会突出显示表单元素，并自行显示链接，因此需要 `onclick/focus()` 代码块来实际聚焦它。Firefox 没有在上下文中正确的聚焦输入，因此 Firefox 用户目前无法利用这一点（尽管其他一切都正常）。Firefox 问题应该尽快会得到修复——现在的工作是使 Firefox 行为与其他浏览器的行为相同（参见 [Firefox bug 277178](https://bugzil.la/277178)）。
 
 此外，`errorField` 被放置在源顺序的顶部（与 UI 中使用 CSS 时相比，位置不同），这意味着用户可以准确找出表单提交时的问题，并通过返回到页面的开头，来获悉有问题的输入元素。
 
@@ -348,13 +348,3 @@ imgThumb.onblur = hideImg;
 下一篇内容是，WAI-ARIA！
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## 本章目录
-
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

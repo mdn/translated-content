@@ -6,7 +6,7 @@ original_slug: WebAssembly/Caching_modules
 
 {{WebAssemblySidebar}}
 
-> **경고:** Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization은 브라우저로부터의 지원이 종료됩니다. {{bug("1469395")}} 와 [spec issue](https://github.com/WebAssembly/spec/issues/821)를 확인해 보세요.
+> **경고:** Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization은 브라우저로부터의 지원이 종료됩니다. [Firefox bug 1469395](https://bugzil.la/1469395) 와 [spec issue](https://github.com/WebAssembly/spec/issues/821)를 확인해 보세요.
 
 캐싱은 앱 성능 향상에 유용합니다. 컴파일 된 WebAssembly 모듈을 클라이언트에 저장할 수 있으므로 매번 다운로드하거나 컴파일 할 필요가 없습니다. 이 문서에서는 이 문제를 해결하는 모범 사례에 대해 설명합니다.
 
@@ -90,7 +90,7 @@ function instantiateCachedURL(dbVersion, url, importObject) {
 
 ### Using our helper functions
 
-모든 Promise 기반 헬퍼 함수를 ​​정의하여 IndexedDB 캐시 조회의 핵심 로직을 표현할 수 있습니다. 우선 데이터베이스를 열어서, 주어진 `db`에 저장된 key `url`을 가진 컴파일 된 Module을 이미 가지고 있는지 확인합니다.
+모든 Promise 기반 헬퍼 함수를 정의하여 IndexedDB 캐시 조회의 핵심 로직을 표현할 수 있습니다. 우선 데이터베이스를 열어서, 주어진 `db`에 저장된 key `url`을 가진 컴파일 된 Module을 이미 가지고 있는지 확인합니다.
 
 ```js
   return openDatabase().then(db => {

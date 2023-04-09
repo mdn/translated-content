@@ -1,6 +1,6 @@
 ---
 title: <source>
-slug: Web/HTML/Element/Source
+slug: Web/HTML/Element/source
 tags:
   - Element
   - HTML

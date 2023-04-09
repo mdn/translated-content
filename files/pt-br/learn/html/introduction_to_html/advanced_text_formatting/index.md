@@ -474,15 +474,3 @@ O exemplo básico acima fornece apenas uma data legível por máquina simples, m
 Isso marca o fim de nosso estudo da semântica de texto HTML. Lembre-se de que o que você viu durante este curso não é uma lista exaustiva de elementos de texto HTML — queríamos tentar cobrir o essencial, e alguns dos mais comuns que você verá na natureza, ou pelo menos podem achar interessantes. Para encontrar muito mais elementos HTML, você pode dar uma olhada no nosso [HTML element reference](/pt-BR/docs/Web/HTML/Element) (a seção [Inline text semantics](/pt-BR/docs/Web/HTML/Element#Semânticas_textuais_inline) seria um ótimo ponto de partida.) No próximo artigo, examinaremos os elementos HTML que você usaria para estruturar as diferentes partes de um documento HTML.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## Neste módulo
-
-- [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [O que tem na cabeça? Metadados em HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Criando hiperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatação avançada de texto](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estrutura de documentos e sites](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurando HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcando uma carta](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estruturando uma página de conteúdo](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

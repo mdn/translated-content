@@ -1,6 +1,6 @@
 ---
 title: Console.table()
-slug: Web/API/Console/table
+slug: Web/API/console/table
 original_slug: Web/API/Console/tabla
 ---
 
@@ -158,4 +158,4 @@ console.table(data [, columns]);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.console.table")}}
+{{Compat}}

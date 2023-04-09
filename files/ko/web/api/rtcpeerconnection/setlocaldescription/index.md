@@ -46,7 +46,7 @@ myPeerConnection.createOffer().then(myPeerConnection.setLocalDescription);
 
 {{domxref("RTCPeerConnection.localDescription")}}의 값이 성공적으로 바뀌거나 혹은 변환이 불가능한 경우 거절되면 fulfill 되는 {{jsxref("Promise")}}입니다. 거절되는 예로는 명시한 설명이 연결에 존재하는 하나 혹은 양쪽 모두의 피어들과 호환이 불가능하면 발생하기도 합니다. 참고로 프로미스의 fulfillment 핸들러는 입력 매개 변수를 받지 않습니다.
 
-> **참고:** 설명을 바꾸는 과정은 변경이 실패해도 연결 상태를 잃지 않게 보장하도록 WebRTC 레이어에 의해서 처리되는 중간 단계를 거칩니다. 이 과정에 대한 자세한 설명은 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}를 참조하십시오.
+> **참고:** 설명을 바꾸는 과정은 변경이 실패해도 연결 상태를 잃지 않게 보장하도록 WebRTC 레이어에 의해서 처리되는 중간 단계를 거칩니다. 이 과정에 대한 자세한 설명은 [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity)를 참조하십시오.
 
 ### 지원이 중단된 매개 변수
 

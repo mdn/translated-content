@@ -29,7 +29,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 ## 概览
 
-本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其它代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
+本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其他代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
 
 以下内容介绍了应用生成器的用法，以及视图 / CSS 的一些不同选项。还介绍了骨架站点的组织结构。最后，我们将介绍站点的运行方法，从而对其进行验证。
 
@@ -295,7 +295,7 @@ var app = require('../app');
 
 > **备注：** `require()` 是一个全局的 node 函数，可将模块导入当前文件。这里使用相对路径指定 **app.js** 模块，并省略了 .**js** 扩展名（可选）。
 
-文件的其余部分先为 `app` 设置端口（环境变量中的预定义值或默认值 3000），再创建一个 HTTP 服务器，然后开始监听请求，报告服务器错误和连接信息。其它内容可暂时忽略（这里所有内容都是机器生成的模板），但感兴趣的话可以随时回来看看。
+文件的其余部分先为 `app` 设置端口（环境变量中的预定义值或默认值 3000），再创建一个 HTTP 服务器，然后开始监听请求，报告服务器错误和连接信息。其他内容可暂时忽略（这里所有内容都是机器生成的模板），但感兴趣的话可以随时回来看看。
 
 ### app.js
 
@@ -391,7 +391,7 @@ module.exports = app;
 
 ### 路由
 
-路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 ​​ 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
+路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
 
 ```js
 var express = require('express');
@@ -448,15 +448,3 @@ block content
 - [在 Express 中使用模板引擎](http://www.expressjs.com.cn/guide/using-template-engines.html)（Express 镜像文档）
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
-
-## 本章目录
-
-- [Express/Node 入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [设置 Node（Express）开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2：创建站点框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5：显示图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6：使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7：部署至生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

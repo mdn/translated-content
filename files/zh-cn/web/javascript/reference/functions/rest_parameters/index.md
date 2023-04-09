@@ -1,6 +1,6 @@
 ---
 title: 剩余参数
-slug: Web/JavaScript/Reference/Functions/Rest_parameters
+slug: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 
 {{jsSidebar("Functions")}}

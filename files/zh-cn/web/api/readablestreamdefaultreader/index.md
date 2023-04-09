@@ -9,7 +9,7 @@ slug: Web/API/ReadableStreamDefaultReader
 
 `ReadableStreamDefaultReader` 可以用于读取底层为任意类型源的 {{domxref("ReadableStream")}}（这与 {{domxref("ReadableStreamBYOBReader")}} 不同，后者仅可以和*底层为字节源*的可读流一起使用）。
 
-然而，请注意，零拷贝传输仅支持自动分配缓冲区的底层字节源这一种底层源。换句话说，流必须同时指定[构造函数](/zh-CN/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其它底层源，流将始终使用来自内置队列的数据满足读取请求。
+然而，请注意，零拷贝传输仅支持自动分配缓冲区的底层字节源这一种底层源。换句话说，流必须同时指定[构造函数](/zh-CN/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其他底层源，流将始终使用来自内置队列的数据满足读取请求。
 
 ## 构造方法
 
@@ -55,11 +55,12 @@ fetch("https://www.example.org/").then((response) => {
 
           // Get the data and send it to the browser via the controller
           controller.enqueue(value);
-        }).then(push);
-      };
+          push();
+        });
+      }
 
       push();
-    }
+    },
   });
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });

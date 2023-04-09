@@ -63,9 +63,9 @@ fetch(myRequest).then(function(response) {
 
 {{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## Ver también
 

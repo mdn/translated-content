@@ -193,7 +193,7 @@ if (!Array.prototype.filter){
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.filter")}}
+{{Compat}}
 
 ## Ver también
 

@@ -55,7 +55,7 @@ function test() {
   var geval = eval; // 等价于在全局作用域调用
   console.log(geval('x + y')); // 间接调用，使用全局作用域，throws ReferenceError 因为`x`未定义
   (0, eval)('x + y'); // 另一个间接调用的例子
-​}
+}
 ```
 
 ## 永远不要使用 `eval`！
@@ -150,7 +150,7 @@ var propName = getPropName(); // 返回 "a" 或 "b"
 eval( 'var result = obj.' + propsName )
 ```
 
-但是，这里并不是必须得使用 `eval()`。事实上，这里并不建议这样使用。可以使用 [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 进行代替，它更快、更安全：
+但是，这里并不是必须得使用 `eval()`。事实上，这里并不建议这样使用。可以使用 [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 进行代替，它更快、更安全：
 
 ```js
 var obj = { a: 20, b: 30 }
@@ -227,7 +227,7 @@ elt.addEventListener('click', function() { ... } , false);
 
 如果你必须执行这段代码，应考虑以更低的权限运行。此建议主要适用于扩展和 XUL 应用程序，可以使用 [Components.utils.evalInSandbox](/zh-CN/docs/Components.utils.evalInSandbox) 做到降低权限。
 
-## 例子
+## 示例
 
 ### 使用 `eval`
 
@@ -297,10 +297,9 @@ var fct2 = eval(fctStr2)  // 返回一个函数
 
 ## Firefox 相关
 
-- 从历史上看，`eval()` 有一个可选的第二个参数，指定上下文执行对象。这个参数是非标准的，并且明确地从 Firefox 4 中删除。请参阅 {{bug(531675)}} 。
+- 从历史上看，`eval()` 有一个可选的第二个参数，指定上下文执行对象。这个参数是非标准的，并且明确地从 Firefox 4 中删除。请参阅 [Firefox bug 531675](https://bugzil.la/531675)。
 
 ## 参见
 
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
-- [Property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [WebExtensions: Using eval in content scripts](</zh-CN/Add-ons/WebExtensions/Content_scripts#Using_eval()_in_content_scripts>)
+- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [WebExtension：在 content script 中使用 eval](/zh-CN/Add-ons/WebExtensions/Content_scripts#在_content_script_中使用_eval)

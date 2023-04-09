@@ -44,7 +44,7 @@ Zoe Mickley Gillenwater は、フレキシブル（柔軟な）サイトを作�
 
 ## レスポンシブデザイン
 
-レスポンシブデザインという用語は、[2010 年に Ethan Marcotte によって初めて作られ](https://alistapart.com/article/responsive-web-design/)、3 つのテクニックを組み合わせて使用 ​​ することを説明しています。
+レスポンシブデザインという用語は、[2010 年に Ethan Marcotte によって初めて作られ](https://alistapart.com/article/responsive-web-design/)、3 つのテクニックを組み合わせて使用することを説明しています。
 
 1. 1 つ目は、Gillenwater が既に検討したフルード（流動的な）グリッドのアイデアであり、Marcotte の記事 [Fluid Grids](https://alistapart.com/article/fluidgrids/)（2009 年に A List Apart で公開）で読むことができます。
 2. 2 番目のテクニックは、[フルード画像](http://unstoppablerobotninja.com/entry/fluid-images)のアイデアです。 `max-width` プロパティを `100%` に設定する非常に簡単なテクニックを使用すると、画像が含まれる列が画像の本来のサイズより狭くなった場合、画像は小さく縮小されますが、大きくなることはありません。 これにより、画像はオーバーフローするのではなく、柔軟なサイズの列に収まるように縮小できますが、列が画像よりも広くなった場合には大きくならず、ピクセル化もされません。
@@ -274,18 +274,3 @@ h1 {
 また、これらのレッスンで学んだレイアウト方法の助けを借りて、レスポンシブデザインを実現することがはるかに容易になりました。 今日の Web 開発が初めてでも、レスポンシブデザインの初期よりも多くのツールを意のままに使用できます。 したがって、参照している資料の年齢を確認する価値があります。 歴史的な記事はまだ有用ですが、CSS と HTML の現代的な用法により、訪問者がどのデバイスを使用してサイトを表示しても、エレガントで便利なデザインをはるかに簡単に作成できます。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -58,7 +58,7 @@ To use this API you must have the "browsingData" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("browsingData.settings()")}}
   - : Gets the current value of settings in the browser's "Clear History" feature.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

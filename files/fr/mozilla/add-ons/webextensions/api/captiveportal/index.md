@@ -39,9 +39,9 @@ Pour utiliser cette API, vous devez disposer de la [permission](/fr/docs/Mozilla
 - {{WebExtAPIRef("captivePortal.onStateChanged")}}
   - : S'allume lorsque l'état de portail captif change
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.captivePortal")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

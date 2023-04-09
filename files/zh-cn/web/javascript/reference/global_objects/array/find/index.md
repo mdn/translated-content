@@ -7,49 +7,32 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 
 **`find()`** 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 {{jsxref("undefined")}}。
 
-{{EmbedInteractiveExample("pages/js/array-find.html")}}
+{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
 
-- 如果需要在数组中找到对应元素的索引，请使用 {{jsxref("Array.findIndex", "findIndex()")}}。
-- 如果需要查找某个值的索引，请使用 {{jsxref("Array.prototype.indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但只是检查每个元素是否与值相等，而不是使用测试函数。）
-- 如果需要查找数组中是否存在值，请使用 {{jsxref("Array.prototype.includes()")}}。同样，它检查每个元素是否与值相等，而不是使用测试函数。
+- 如果需要在数组中找到对应元素的**索引**，请使用 {{jsxref("Array.findIndex", "findIndex()")}}。
+- 如果需要查找**某个值的索引**，请使用 {{jsxref("Array.prototype.indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但只是检查每个元素是否与值相等，而不是使用测试函数。）
+- 如果需要查找数组中是否**存在某个值**，请使用 {{jsxref("Array.prototype.includes()")}}。同样，它检查每个元素是否与值相等，而不是使用测试函数。
 - 如果需要查找是否有元素满足所提供的测试函数，请使用 {{jsxref("Array.prototype.some()")}}。
 
 ## 语法
 
-```js
-// 箭头函数
-find((element) => { /* … */ } )
-find((element, index) => { /* … */ } )
-find((element, index, array) => { /* … */ } )
-
-// 回调函数
+```js-nolint
 find(callbackFn)
 find(callbackFn, thisArg)
-
-// 内联回调函数
-find(function(element) { /* … */ })
-find(function(element, index) { /* … */ })
-find(function(element, index, array){ /* … */ })
-find(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-
-  - : 在数组每一项上执行的函数，接收 3 个参数：
-
+  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)来表示已经找到了匹配的元素。该函数被调用时将传入以下参数：
     - `element`
-      - : 当前遍历到的元素。
+      - : 数组中当前正在处理的元素。
     - `index`
-      - : 当前遍历到的索引。
+      - : 正在处理的元素在数组中的索引。
     - `array`
-      - : 数组本身。
-
-    回调函数必须返回一个[真值](/zh-CN/docs/Glossary/Truthy)来表示找到了匹配的元素。
-
-- `thisArg` {{Optional_inline}}
-  - : 执行回调时用作 `this` 的对象。
+      - : 调用了 `find()` 的数组本身。
+- `thisArg` {{optional_inline}}
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
@@ -57,29 +40,33 @@ find(function(element, index, array) { /* … */ }, thisArg)
 
 ## 描述
 
-`find` 方法对数组中的每一项元素执行一次 `callbackFn` 函数，直至有一个 callbackFn 返回 `true`。当找到了这样一个元素后，该方法会立即返回这个元素的值，否则返回 {{jsxref("undefined")}}。注意 `callbackFn` 函数会为数组中的每个索引调用即从 `0` 到 `length - 1`，而不仅仅是那些被赋值的索引，这意味着对于稀疏数组来说，该方法的效率要低于那些只遍历有值的索引的方法。
+`find()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按索引升序顺序为数组中的每个元素调用提供的 `callbackFn` 函数，直到 `callbackFn` 返回一个[真值](/zh-CN/docs/Glossary/Truthy)。然后 `find()` 返回该元素并停止迭代数组。如果 `callbackFn` 从未返回真值，则 `find()` 返回 {{jsxref("undefined")}}。
 
-`callbackFn` 函数带有 3 个参数：当前元素的值、当前元素的索引，以及数组本身。
+`callbackFn` 被调用来处理数组的*每一个*索引，而不仅仅是那些有值的索引。在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中，未赋值的空槽与 `undefined` 表现相同。
 
-如果提供了 `thisArg` 参数，那么它将作为每次 `callbackFn` 函数执行时的 `this`，如果未提供，则使用 {{jsxref("undefined")}}。
+`find()` 不会改变被调用的数组，但是提供给 `callbackFn` 的函数可能会改变它。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
 
-`find` 方法不会改变数组。
+- 当调用 `find()` 时，`callbackFn` 不会访问超出数组初始长度的任何元素。
+- 对已经访问过的索引的更改不会导致再次在这些元素上调用 `callbackFn`。
+- 如果 `callbackFn` 改变了数组中已存在但尚未被访问的元素，则传递给 `callbackFn` 的该元素的值将是该元素在被访问时的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素被视为 `undefined`。
 
-在第一次调用 `callbackFn` 函数时会确定元素的索引范围，因此在 `find` 方法开始执行之后添加到数组的新元素将不会被 `callbackFn` 函数访问到。如果数组中一个尚未被 `callbackFn` 函数访问到的元素的值被 `callbackFn` 函数所改变，那么当 `callbackFn` 函数访问到它时，它的值是将是根据它在数组中的索引所访问到的当前值。被删除的元素仍旧会被访问到，但是其值已经是 undefined 了。
+> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
+
+`find()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 
-### 用对象的属性查找数组里的对象
+### 在对象数组中通过对象属性进行查找
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
 function isCherries(fruit) {
-  return fruit.name === 'cherries';
+  return fruit.name === "cherries";
 }
 
 console.log(inventory.find(isCherries));
@@ -90,19 +77,19 @@ console.log(inventory.find(isCherries));
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.find(({ name }) => name === 'cherries');
+const result = inventory.find(({ name }) => name === "cherries");
 
-console.log(result) // { name: 'cherries', quantity: 5 }
+console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
-### 寻找数组中的第一个质数
+### 寻找数组中的第一个素数
 
-下面的例子展示了如何从数组中寻找质数（如果找不到质数则返回 {{jsxref("undefined")}}）：
+下面的例子展示了如何从数组中寻找素数（如果找不到素数则返回 {{jsxref("undefined")}}）：
 
 ```js
 function isPrime(element, index, array) {
@@ -115,47 +102,63 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+console.log([4, 6, 8, 12].find(isPrime)); // undefined，未找到
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
-下面的例子表明，不存在和被删除的元素被访问时，传递给回调函数的值是访问它们时的值：
+### 在稀疏数组上使用 find()
+
+在稀疏数组中，空槽*会被*访问的，并被视为 `undefined`。
 
 ```js
-// Declare array with no elements at indexes 2, 3, and 4
-const array = [0,1,,,,5,6];
+// 声明一个在索引 2、3 和 4 处没有元素的数组
+const array = [0, 1, , , , 5, 6];
 
-// Shows all indexes, not just those with assigned values
-array.find(function(value, index) {
-  console.log('Visited index ', index, ' with value ', value);
+// 将会打印所有索引，而不仅仅是那些有值的非空槽
+array.find((value, index) => {
+  console.log(`访问索引 ${index}，值为 ${value}`);
 });
+// 访问索引 0，值为 0
+// 访问索引 1，值为 1
+// 访问索引 2，值为 undefined
+// 访问索引 3，值为 undefined
+// 访问索引 4，值为 undefined
+// 访问索引 5，值为 5
+// 访问索引 6，值为 6
 
-// Shows all indexes, including deleted
-array.find(function(value, index) {
-  // Delete element 5 on first iteration
+// 打印所有索引，包括已删除的
+array.find((value, index) => {
+  // 在第一次迭代时删除元素5
   if (index === 0) {
-    console.log('Deleting array[5] with value ', array[5]);
+    console.log(`删除 array[5] 的值 ${array[5]}`);
     delete array[5];
   }
-  // Element 5 is still visited even though deleted
-  console.log('Visited index ', index, ' with value ', value);
+  // 即使删除了，元素5仍然被访问
+  console.log(`访问索引 ${index}，值为 ${value}`);
 });
-// expected output:
-// Visited index 0 with value 0
-// Visited index 1 with value 1
-// Visited index 2 with value undefined
-// Visited index 3 with value undefined
-// Visited index 4 with value undefined
-// Visited index 5 with value 5
-// Visited index 6 with value 6
-// Deleting array[5] with value 5
-// Visited index 0 with value 0
-// Visited index 1 with value 1
-// Visited index 2 with value undefined
-// Visited index 3 with value undefined
-// Visited index 4 with value undefined
-// Visited index 5 with value undefined
-// Visited index 6 with value 6
+// 删除值为 5 的 array[5]
+// 访问索引 0，值为 0
+// 访问索引 1，值为 1
+// 访问索引 2，值为 undefined
+// 访问索引 3，值为 undefined
+// 访问索引 4，值为 undefined
+// 访问索引 5，值为 undefined
+// 访问索引 6，值为 6
+```
+
+### 在非数组对象上调用 find()
+
+`find()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
+// 7.3
 ```
 
 ## 规范
@@ -168,9 +171,9 @@ array.find(function(value, index) {
 
 ## 参见
 
-- [Polyfill of `Array.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findIndex()")}} – find and return an index
-- {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array
-- {{jsxref("Array.prototype.filter()")}} – remove all non-matching elements
-- {{jsxref("Array.prototype.every()")}} – test all elements
-- {{jsxref("Array.prototype.some()")}} – test until one element matches
+- [`core-js` 中 `Array.prototype.find` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.findIndex()")}}——查找并返回索引
+- {{jsxref("Array.prototype.includes()")}}——测试数组中是否存在一个值
+- {{jsxref("Array.prototype.filter()")}}——删除所有不匹配的元素
+- {{jsxref("Array.prototype.every()")}}——测试数组中所有元素
+- {{jsxref("Array.prototype.some()")}}——测试直到一个元素匹配

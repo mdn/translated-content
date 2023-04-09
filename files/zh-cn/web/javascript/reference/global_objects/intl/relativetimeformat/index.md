@@ -38,9 +38,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 // 在你的区域下创建相对时间格式化程序
 // 显式传入默认值。
 const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "bestfit",// 其它值："lookup"
-  numeric: "always",// 其它值："auto"
-  style: "long",// 其它值："short"或"narrow"
+  localeMatcher: "bestfit",// 其他值："lookup"
+  numeric: "always",// 其他值："auto"
+  style: "long",// 其他值："short"或"narrow"
 });
 
 // 使用负值（-1）格式化相对时间。

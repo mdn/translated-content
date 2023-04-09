@@ -82,9 +82,9 @@ Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/Add-ons/
 - {{WebExtAPIRef("downloads.onChanged")}}
   - : Lorsque l'une des propriétés de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} sauf les changements `bytesReceived`, cet événement se déclenche avec le `downloadId` et un objet contenant les propriétés qui ont changé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

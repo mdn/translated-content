@@ -68,9 +68,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.margin-inline-start")}}
+{{Compat}}
 
 ## Mira también
 

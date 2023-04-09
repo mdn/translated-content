@@ -5,7 +5,7 @@ slug: Web/API/Element/wheel_event
 
 {{APIRef}}
 
-**滚轮**（**`wheel`**）事件会在滚动鼠标滚轮或操作其它类似输入设备时触发。
+**滚轮**（**`wheel`**）事件会在滚动鼠标滚轮或操作其他类似输入设备时触发。
 
 滚轮事件取代了已被弃用的非标准 {{domxref("Element/mousewheel_event", "mousewheel")}} 事件。
 
@@ -58,7 +58,7 @@ _此接口从父接口：{{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 
 
 ### 通过滚轮缩放元素
 
-此示例展示了如何使用鼠标（或其它定点设备）滚轮缩放元素。
+此示例展示了如何使用鼠标（或其他定点设备）滚轮缩放元素。
 
 ```html
 <div>使用鼠标滚轮来进行缩放</div>

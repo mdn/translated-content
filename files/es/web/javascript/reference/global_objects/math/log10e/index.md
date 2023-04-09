@@ -32,9 +32,9 @@ getLog10e(); // 0.4342944819032518
 
 {{Specifications}}
 
-## Navegadores Compatibles
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.LOG10E")}}
+{{Compat}}
 
 ## Ver tambien
 

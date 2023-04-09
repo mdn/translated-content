@@ -30,7 +30,7 @@ Dans notre évaluation, nous vous fournissons des données sur les planètes de 
 
 ## Point de départ
 
-Pour commencer cette évaluation, créez des copies locales de blank-template.html, minimal-table.css et planets-data.txt dans un nouveau répertoire dans votre ordinateur.
+Pour commencer cette évaluation, créez des copies locales de [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css) et [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) dans un nouveau répertoire dans votre ordinateur.
 
 > **Note :** Vous pouvez aussi utiliser un site comme[JSBin](https://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour votre évaluation. Vous pouvez coller les HTML, CSS et JavaScript dans l'un de ces éditeurs en ligne. Si votre éditeur en ligne n'a pas de panneaux séparés JavaScript/CSS, n'hésitez pas à les mettre en ligne `<script>`/`<style>` dans la page HTML.
 

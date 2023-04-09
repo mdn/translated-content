@@ -1,6 +1,6 @@
 ---
 title: Notification.requireInteraction
-slug: Web/API/notification/requireInteraction
+slug: Web/API/Notification/requireInteraction
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

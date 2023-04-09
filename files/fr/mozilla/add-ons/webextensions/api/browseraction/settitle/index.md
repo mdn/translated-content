@@ -54,10 +54,6 @@ browser.browserAction.setTitle(
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
 - Si `windowId` et `tabId` sont tous les deux omis, le titre global est défini.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setTitle",10)}}
-
 ## Exemples
 
 Ce code change le titre entre "ceci" et "ça" chaque fois que l'utilisateur clique sur l'action du navigateur :
@@ -76,6 +72,10 @@ browser.browserAction.onClicked.addListener(() => {
   gettingTitle.then(toggleTitle);
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

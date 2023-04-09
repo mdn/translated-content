@@ -19,16 +19,16 @@ slug: Web/API/BatteryManager
 - {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
   - : 배터리의 충전 상태를 0.0 에서 1.0 사이의 값으로 표현 합니다.
 
-### 이벤트 처리기
+### 이벤트
 
-- {{domxref("BatteryManager.onchargingchange")}}
-  - : {{event("chargingchange")}} 이벤트의 핸들러 입니다. 이 이벤트는 배터리 충전 상태가 변경될 때 발생합니다.
-- {{domxref("BatteryManager.onchargingtimechange")}}
-  - : {{event("chargingtimechange")}} 이벤트의 핸들러 입니다. 이 이벤트는 배터리 충전 시간이 변경될 때 발생합니다.
-- {{domxref("BatteryManager.ondischargingtimechange")}}
-  - : {{event("dischargingtimechange")}} 이벤트의 핸들러 입니다. 이 이벤트는 배터리 방전 시간이 변경될 때 발생합니다.
-- {{domxref("BatteryManager.onlevelchange")}}
-  - : {{event("levelchange")}} 이벤트의 핸들러 입니다. 이 이벤트는 배터리 수준 상태가 변경 될 때 발생합니다.
+- {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}
+  - : {{domxref("BatteryManager.charging", "charging")}} 이벤트의 핸들러 입니다. 이 이벤트는 배터리 충전 상태가 변경될 때 발생합니다.
+- {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}
+  - : {{domxref("BatteryManager.chargingTime", "chargingTime")}} 이벤트의 핸들러 입니다. 이 이벤트는 배터리 충전 시간이 변경될 때 발생합니다.
+- {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}}
+  - : {{domxref("BatteryManager.dischargingTime", "dischargingTime")}} 이벤트의 핸들러 입니다. 이 이벤트는 배터리 방전 시간이 변경될 때 발생합니다.
+- {{domxref("BatteryManager.levelchange_event", "levelchange")}}
+  - : {{domxref("BatteryManager.level", "level")}} 이벤트의 핸들러 입니다. 이 이벤트는 배터리 수준 상태가 변경 될 때 발생합니다.
 
 ## 메서드
 

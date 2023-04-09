@@ -26,7 +26,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ### 錯誤處理
 
-請注意如果解譯過程出錯,目前的`DOMParser不會丟出異常物件(exception)，但是會回傳一個錯誤文件`(請看程式臭蟲{{Bug(45566)}}):
+請注意如果解譯過程出錯,目前的 `DOMParser` 不會丟出異常物件（exception），但是會回傳一個錯誤文件（請看 [Firefox bug 45566](https://bugzil.la/45566)）：
 
 ```xml
 <parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">

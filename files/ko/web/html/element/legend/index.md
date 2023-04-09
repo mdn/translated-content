@@ -63,4 +63,4 @@ slug: Web/HTML/Element/legend
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.legend")}}
+{{Compat}}

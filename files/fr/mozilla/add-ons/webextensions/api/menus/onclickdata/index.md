@@ -59,9 +59,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `wasChecked` {{optional_inline}}
   - : `boolean`. Un indicateur indiquant si une case à cocher ou un élément radio a été vérifié avant d'avoir cliqué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.OnClickData", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

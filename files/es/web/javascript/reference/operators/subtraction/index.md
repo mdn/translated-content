@@ -35,9 +35,9 @@ Operator: x - y
 
 {{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.subtraction")}}
+{{Compat}}
 
 ## También revisa
 

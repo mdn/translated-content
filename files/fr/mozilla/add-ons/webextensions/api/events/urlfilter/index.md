@@ -93,9 +93,9 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 
     - Par exemple: `[80, 443, [1000, 1200]]` correspond à toutes les demandes sur les ports 80, 443, et dans la plage 1000-1200.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events.UrlFilter")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

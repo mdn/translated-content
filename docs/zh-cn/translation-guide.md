@@ -205,7 +205,6 @@ Like this.
 | Accessibility concerns | 无障碍考虑 |
 | Browser compatibility | 浏览器兼容性 |
 | Examples | 示例 |
-| In this module | 本章目录 |
 | See also | 参见 |
 | Specifications | 规范 |
 | Technical summary | 技术概要 |

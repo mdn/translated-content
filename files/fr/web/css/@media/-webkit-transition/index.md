@@ -34,7 +34,7 @@ Cette caractéristique média est une caractéristique média propriétaire lié
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-webkit-transition")}}
+{{Compat}}
 
 ## Voir aussi
 

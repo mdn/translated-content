@@ -1,6 +1,6 @@
 ---
 title: <input>
-slug: Web/HTML/Element/Input
+slug: Web/HTML/Element/input
 ---
 
 O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
@@ -181,7 +181,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
   - : Uma dica para o usuário do que ele pode inserir no controle. O texto do atributo não deve conter quebras de linha. Este atributo é aplicado quando o valor do atributo **type** é `text`, `search`, `tel`, `url` ou `email`; caso contrário, ele é ignorado.
 
-    > **Note:** **Nota:** Não use o atributo `placeholder` no lugar de um elemento {{HTMLElement("label")}}. Os propósitos de cada um são diferentes: o atributo {{HTMLElement("label")}} descreve o papel o elemento do formulário, isto é, ele indica que tipo de informação é esperada. Já o atributo `placeholder` é uma dica sobre o formato que o conteúdo deveria ter. Há casos em que o atributo `placeholder` nunca é exibido para o usuário, portanto o formulário deve ser inteligível sem ele.
+    > **Nota:** Não use o atributo `placeholder` no lugar de um elemento {{HTMLElement("label")}}. Os propósitos de cada um são diferentes: o atributo {{HTMLElement("label")}} descreve o papel o elemento do formulário, isto é, ele indica que tipo de informação é esperada. Já o atributo `placeholder` é uma dica sobre o formato que o conteúdo deveria ter. Há casos em que o atributo `placeholder` nunca é exibido para o usuário, portanto o formulário deve ser inteligível sem ele.
 
 - {{htmlattrdef("readonly")}}
 

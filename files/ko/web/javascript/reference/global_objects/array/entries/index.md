@@ -67,7 +67,7 @@ for (const element of [, "a"].entries()) {
 
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -49,9 +49,9 @@ var gettingCurrent = browser.windows.getCurrent(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`windows.Window`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getCurrent",2)}}
+{{Compat}}
 
 ## Exemples
 

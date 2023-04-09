@@ -133,16 +133,9 @@ for (var i = 0; i < 4; i++) {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.arc")}}
-
-## Notas específicas de Gecko
-
-Comenzando con Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1):
-
-- El parámetro `anticlockwise` es opcional,
-- Especificar un radio negativo ahora arroja un error [`IndexSizeError`](/es/docs/Web/API/DOMError) ("Índice o tamaño es negativo o mayor que la cantidad permitida").
+{{Compat}}
 
 ## Ver también
 

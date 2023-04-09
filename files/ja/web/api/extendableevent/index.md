@@ -11,7 +11,7 @@ l10n:
 
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} が `ExtendableEvent` ハンドラーの外で呼び出された場合、ブラウザーは `InvalidStateError` 例外を発生させます。 また、複数の呼び出しが積み重なり、その結果のプロミスが[存続期間延長プロミス](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises)のリストに追加されることにも注意してください。
 
-> **メモ:** 上記の段落で説明した振る舞いは、Firefox 43 で修正されました（{{bug(1180274)}} を参照）。
+> **メモ:** 上記の段落で説明した振る舞いは、Firefox 43 で修正されました（[Firefox バグ 1180274](https://bugzil.la/1180274) を参照）。
 
 このインターフェイスは、 {{domxref("Event")}} インターフェイスを継承しています。
 

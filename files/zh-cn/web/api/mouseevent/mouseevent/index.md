@@ -69,9 +69,7 @@ slug: Web/API/MouseEvent/MouseEvent
     - `"relatedTarget"`，{{domxref("EventTarget")}} 型可选，默认为 `null`，若事件为 [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event) 或 [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)，则表示刚离开的元素；若事件为 [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event) 或 [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)，则表示刚进入的元素。
     - `"region"`，{{domxref("DOMString")}} 型可选，默认为`null`，标明点击事件影响的区域 DOM 的 id。不影响任何区域的话，请传`null`值。
 
-    在一些实现中，passing anything other than a number for the screen and client fields will throw a `TypeError`.
-
-    > **备注：** 上述 `MouseEventInit` 字典字段还包括从 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 继承来的字典字段。
+    在一些实现中，为屏幕和客户端字段传递数值以外的任何东西都会抛出 {{jsxref("TypeError")}}。
 
 ## 规范
 
@@ -80,49 +78,6 @@ slug: Web/API/MouseEvent/MouseEvent
 ## 浏览器兼容性
 
 {{Compat}}
-
-## Polyfill
-
-You can polyfill the `MouseEvent()` constructor functionality in Internet Explorer 9 and higher with the following code:
-
-```js
-(function (window) {
-  try {
-    new MouseEvent('test');
-    return false; // No need to polyfill
-  } catch (e) {
-    // Need to polyfill - fall through
-  }
-
-    // Polyfills DOM4 MouseEvent
-  var MouseEventPolyfill = function (eventType, params) {
-    params = params || { bubbles: false, cancelable: false };
-    var mouseEvent = document.createEvent('MouseEvent');
-    mouseEvent.initMouseEvent(eventType,
-      params.bubbles,
-      params.cancelable,
-      window,
-      0,
-      params.screenX || 0,
-      params.screenY || 0,
-      params.clientX || 0,
-      params.clientY || 0,
-      params.ctrlKey || false,
-      params.altKey || false,
-      params.shiftKey || false,
-      params.metaKey || false,
-      params.button || 0,
-      params.relatedTarget || null
-    );
-
-    return mouseEvent;
-  }
-
-  MouseEventPolyfill.prototype = Event.prototype;
-
-  window.MouseEvent = MouseEventPolyfill;
-})(window);
-```
 
 ## 参见
 

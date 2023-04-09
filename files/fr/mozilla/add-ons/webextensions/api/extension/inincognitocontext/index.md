@@ -18,9 +18,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
 
 Valeur booléenne, `true` pour les scripts de contenu s'exécutant dans les onglets de navigation privée et pour les pages d'extension exécutées dans un processus de navigation privé..
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.inIncognitoContext")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

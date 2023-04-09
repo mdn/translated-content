@@ -27,7 +27,7 @@ HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文�
 
 该元素不是标准元素，不属于规范的一部分。不信的话，[你自己来看 HTML 规范文档](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

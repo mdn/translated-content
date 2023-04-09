@@ -294,7 +294,7 @@ This is the second.
 要将此信息与 HTML 媒体播放一起显示，您需要：
 
 - 将其保存为 .vtt 文件，放在一个合理的地方。
-- 使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。`<track>` 应放在 `<audio>` 或 `<video>` 内，但在 `<source>` 元素之后。使用 {{htmlattrxref("kind","track")}} 属性指定提示是字幕、标题还是说明。此外，使用 {{htmlattrxref("srclang","track")}} 告诉浏览器编写字幕所用的语言。
+- 使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。`<track>` 应放在 `<audio>` 或 `<video>` 内，但在 `<source>` 元素之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) 属性指定提示是字幕、标题还是说明。此外，使用 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) 告诉浏览器编写字幕所用的语言。
 
 下面是一个示例：
 
@@ -336,13 +336,3 @@ This is the second.
 本章概述了多媒体内容的无障碍问题，以及一些实用的解决方案。
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## 本章目录
-
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

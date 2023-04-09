@@ -74,6 +74,6 @@ El código anterior producirá este efecto:
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

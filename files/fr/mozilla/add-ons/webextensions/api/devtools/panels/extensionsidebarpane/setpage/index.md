@@ -47,9 +47,9 @@ function onCreated(sidebarPane) {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setPage", 10)}}
+{{Compat}}
 
 > **Note :**
 >

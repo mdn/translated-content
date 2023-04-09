@@ -52,9 +52,9 @@ var UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toUTCString")}}
+{{Compat}}
 
 ## Ver también
 

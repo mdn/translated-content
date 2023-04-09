@@ -124,16 +124,16 @@ _Этот интерфейс также наследует свойства от
 
 Эти атрибуты устарели и не должны использоваться, даже если браузер все ещё поддерживает их.
 
-- {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}}
   - : Возвращает значение типа double, указывающее начальную позицию воспроизведения в секундах.
 - {{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : Возвращает значение типа double, представляющее количество каналов в аудиоресурсе (например, 2 для стерео).
 
 ### Устаревшие обработчики событий
 
-- {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}}
   - : Устанавливает {{domxref ("EventHandler")}}, вызываемый, когда медиа-элемент прерывается из-за менеджера аудио-каналов. Это было специфично для Firefox, оно было реализовано для Firefox OS и было удалено в Firefox 55.
-- {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}}
   - : Устанавливает {{domxref ('Event Handler')}}, вызываемый при завершении прерывания. Это было специфично для Firefox, оно было реализовано для Firefox OS и было удалено в Firefox 55.
 
 ## Методы

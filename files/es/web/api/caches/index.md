@@ -47,9 +47,9 @@ this.addEventListener('install', function(event) {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.caches")}}
+{{Compat}}
 
 ## Ver también
 

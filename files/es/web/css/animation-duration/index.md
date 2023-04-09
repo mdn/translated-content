@@ -43,9 +43,9 @@ Visitar [CSS animations](/es/CSS/Usando_animaciones_CSS) para ver algunos ejempl
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-duration")}}
+{{Compat}}
 
 ## Consultar también
 

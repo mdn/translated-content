@@ -55,11 +55,11 @@ Grecko reconhece os seguintes tipos MIME como arquivos Ogg:
 
 ## Ogg Opus
 
-O container Ogg pode também conter um áudio codificado usando o [codec Opus](http://www.opus-codec.org/). Suporte para ele está disponível no Gecko 15.0 {{ geckoRelease("15.0") }} e versões superiores, em navegadores no desktop e dispositivos móveis.
+O container Ogg pode também conter um áudio codificado usando o [codec Opus](http://www.opus-codec.org/). Suporte para ele está disponível no Gecko 15.0 e versões superiores, em navegadores no desktop e dispositivos móveis.
 
 ## Ogg FLAC
 
-O contêiner Ogg pode também conter um áudio codificado usando o [codec FLAC](https://xiph.org/flac/index.html). Suporte para ele está disponível no Gecko 51.0 {{geckoRelease ("51.0")}} e versões superiores, somente no desktop.
+O contêiner Ogg pode também conter um áudio codificado usando o [codec FLAC](https://xiph.org/flac/index.html). Suporte para ele está disponível no Gecko 51.0 e versões superiores, somente no desktop.
 
 ## MP4 H.264 (AAC ou MP3)
 

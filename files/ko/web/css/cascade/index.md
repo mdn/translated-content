@@ -142,7 +142,7 @@ margin-left: 3px
 
 Note that the declaration defined in the user CSS, though having a greater specifity, is not chosen as the cascade algorithm is applied before the specifity algorithm.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

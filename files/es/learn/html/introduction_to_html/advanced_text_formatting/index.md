@@ -780,15 +780,3 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 Esto marca el final de nuestro estudio de la semántica del texto HTML. Ten en cuenta que lo que has visto durante este curso no es una lista exhaustiva de elementos de texto HTML — quisimos tratar de cubrir los aspectos esenciales y algunos de los más comunes que verás en la naturaleza, o al menos podrían resultarte interesantes. Para encontrar muchos más elementos HTML, puedes echarle un vistazo a nuestra [referencia de elementos HTML](/es/docs/Web/HTML/Element) (la [La sección Semántica de texto en línea](/es/docs/Web/HTML/Element#Inline_text_semantics) sería un gran lugar para comenzar). En el próximo artículo veremos los elementos HTML que usarás para estructurar las diferentes partes de un documento HTML.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

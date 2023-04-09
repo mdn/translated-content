@@ -37,4 +37,4 @@ document.forms["myform"].submit();
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFormElement.submit")}}
+{{Compat}}

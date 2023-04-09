@@ -31,7 +31,7 @@ a << b
 移动任意数字 `x` 至左边 `y` 位，得出 `x * 2 ** y`。
 所以例如：`9 << 3` 等价于 `9 * 2³ = 9 * 8 = 72`。
 
-## 例子
+## 示例
 
 ### 使用左移
 
@@ -51,5 +51,5 @@ a << b
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
 - [Left shift assignment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

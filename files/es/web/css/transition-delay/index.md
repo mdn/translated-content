@@ -309,9 +309,9 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.transition-delay")}}
+{{Compat}}
 
 ## See also
 

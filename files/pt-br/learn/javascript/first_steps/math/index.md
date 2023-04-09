@@ -202,7 +202,7 @@ Mas existem alguns tipos mais complexos, que fornecem atalhos úteis para manter
 
 Tente digitar alguns dos exemplos acima em seu console para ter uma ideia de como eles funcionam. Em cada caso, veja se você pode adivinhar qual é o valor antes de digitar a segunda linha.
 
-Note que você pode muito bem usar outros valores ​​no lado direito de cada expressão, por exemplo:
+Note que você pode muito bem usar outros valores no lado direito de cada expressão, por exemplo:
 
 ```js
 var x = 3; // x contém o valor 3
@@ -246,7 +246,7 @@ Não se preocupe se você estragar totalmente o código. Você sempre pode press
 
 > **Nota:** Talvez você já tenha visto alguém usando `==` e`!=` afim de testar igualdade ou desigualdade em JavaScript. Estes são operadores válidos em JavaScript, mas que diferem de `===`/`!==`. As versões anteriores testam se os valores são os mesmos, mas não se os tipos de dados dos valores são os mesmos. As últimas versões estritas testam a igualdade de ambos os valores e seus tipos de dados. Elas tendem a resultar em menos erros, por isso recomendamos que você as use.
 
-Se você tentar inserir alguns desses valores em um console, verá que todos eles retornam `true`/`false` — aqueles booleanos que mencionamos no último artigo. Eles são muito úteis, pois nos permitem tomar decisões em nosso código, e eles são usados ​​toda vez que queremos fazer uma escolha de algum tipo. Por exemplo, booleanos podem ser usados ​​para:
+Se você tentar inserir alguns desses valores em um console, verá que todos eles retornam `true`/`false` — aqueles booleanos que mencionamos no último artigo. Eles são muito úteis, pois nos permitem tomar decisões em nosso código, e eles são usados toda vez que queremos fazer uma escolha de algum tipo. Por exemplo, booleanos podem ser usados para:
 
 - Exibir o text label em um botão, dependendo se um recurso está ativado ou desativado
 - Exibir uma mensagem de 'game over' se um jogo acabou ou uma mensagem de vitória se o jogo foi vencido
@@ -287,7 +287,7 @@ Você pode ver o operador de igualdade sendo usado apenas dentro da função `up
 
 ## Resumo
 
-Neste artigo, cobrimos as informações fundamentais que você precisa saber sobre números em JavaScript, por enquanto. Você verá os números sendo usados ​​de novo e de novo, durante todo o aprendizado de JavaScript. Portanto, é uma boa ideia tirar isso do caminho agora. Se você é uma daquelas pessoas que não gosta de matemática, pode se consolar com o fato de este capítulo ser muito curto.
+Neste artigo, cobrimos as informações fundamentais que você precisa saber sobre números em JavaScript, por enquanto. Você verá os números sendo usados de novo e de novo, durante todo o aprendizado de JavaScript. Portanto, é uma boa ideia tirar isso do caminho agora. Se você é uma daquelas pessoas que não gosta de matemática, pode se consolar com o fato de este capítulo ser muito curto.
 
 No próximo artigo, vamos explorar o texto e como o JavaScript nos permite manipulá-lo.
 

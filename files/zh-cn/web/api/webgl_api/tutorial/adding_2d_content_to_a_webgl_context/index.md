@@ -7,6 +7,35 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 一旦创建 WebGL 上下文创建成功，你就可以在这个上下文里渲染画图了。而对我们而言最简单的事，莫过于绘制一个没有纹理的 2D 图形了。那就让我们从画出一个正方形开始吧。
 
+本项目的完整源代码[可在 GitHub 上获得](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2)。
+
+## 引入 glMatrix 库
+
+该项目使用了 [glMatrix](https://glmatrix.net/) 库来执行其矩阵操作，因此需要引入它。本次示例通过 CDN 形式引入使用。
+
+> **备注：** 更新“index.html”文件，让它看起来像这样：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Demo</title>
+    <link rel="stylesheet" href="./webgl.css" type="text/css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous"
+      defer></script>
+    <script src="webgl-demo.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+  </body>
+</html>
+```
+
 ## 渲染场景
 
 在开始前，我们首先需要明确最重要的一点，虽然我们的例子只是画一个二维物体，但我们仍然是在把它画在一个三维空间里。所以，我们依然需要创建着色器，通过它来渲染我们的简单场景并画出我们的物体。往下，我们将展示正方形是怎样一步步被画出来的。
@@ -21,13 +50,15 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 #### 顶点着色器
 
-每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的缩放空间 (**clipspace**) 坐标系，其中每个轴的坐标范围从 -1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
+每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的[**裁剪空间**](/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection#裁剪空间)坐标系，其中每个轴的坐标范围从 -1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
 
 顶点着色器需要对顶点坐标进行必要的转换，在每个顶点基础上进行其他调整或计算，然后通过将其保存在由 GLSL 提供的特殊变量（我们称为 gl_Position）中来返回变换后的顶点
 
-顶点着色器根据需要，也可以完成其他工作。例如，决定哪个包含 [texel](<https://zh.wikipedia.org/wiki/texel_(graphics)>) 面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/Web/API/WebGL_API/Data#varyings)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
+顶点着色器根据需要，也可以完成其他工作。例如，决定哪个包含 {{Glossary("texel")}} 面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/Web/API/WebGL_API/Data#varyings)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
 
-以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，[在这里您可能可以找到有帮助的文章](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).。
+以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，[在这里您可能可以找到有帮助的文章](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)。
+
+> **备注：** 添加下面代码到 `main()` 函数中：
 
 ```js
 // Vertex shader program
@@ -50,6 +81,10 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 **片段着色器**在顶点着色器处理完图形的顶点后，会被要绘制的每个图形的每个像素点调用一次。它的职责是确定像素的颜色，通过指定应用到像素的纹理元素（也就是图形纹理中的像素），获取纹理元素的颜色，然后将适当的光照应用于颜色。之后颜色存储在特殊变量 gl_FragColor 中，返回到 WebGL 层。该颜色将最终绘制到屏幕上图形对应像素的对应位置。
 
+在这种情况下，我们每次都会返回白色，因为我们只是在画一个白色的正方形，没有使用光照。
+
+> **备注：** 添加下面代码到 `main()` 函数中：
+
 ```js
 const fsSource = `
     void main() {
@@ -60,7 +95,9 @@ const fsSource = `
 
 ### 初始化着色器
 
-现在我们已经定义了两个着色器，我们需要将它们传递给 WebGL，编译并将它们连接在一起。下面的代码通过调用 loadShader（），为着色器传递类型和来源，创建了两个着色器。然后创建一个附加着色器的程序，将它们连接在一起。如果编译或链接失败，代码将弹出 alert。
+现在我们已经定义了两个着色器，我们需要将它们传递给 WebGL，编译并将它们连接在一起。下面的代码通过调用 `loadShader()`，为着色器传递类型和来源，创建了两个着色器。然后创建一个附加着色器的程序，将它们连接在一起。如果编译或链接失败，代码将弹出 alert。
+
+> **备注：** 将下面两个函数添加到“webgl-demo.js”文件中：
 
 ```js
 //
@@ -76,7 +113,7 @@ function initShaderProgram(gl, vsSource, fsSource) {
   gl.attachShader(shaderProgram, fragmentShader);
   gl.linkProgram(shaderProgram);
 
-  // 创建失败，alert
+  // 如果创建失败，alert
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
     alert('Unable to initialize the shader program: ' + gl.getProgramInfoLog(shaderProgram));
     return null;
@@ -125,11 +162,15 @@ loadShader 函数将 WebGL 上下文，着色器类型和`源码`作为参数输
 
 我们可以像这样调用这段代码
 
+> **备注：** 添加下面代码到 `main()` 函数中：
+
 ```js
   const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 ```
 
-在创建着色器程序之后，我们需要查找 WebGL 返回分配的输入位置。在上述情况下，我们有一个属性和两个 uniforms。属性从缓冲区接收值。顶点着色器的每次迭代都从分配给该属性的缓冲区接收下一个值。uniforms 类似于 JavaScript 全局变量。它们在着色器的所有迭代中保持相同的值。由于属性和统一的位置是特定于单个着色器程序的，因此我们将它们存储在一起以使它们易于传递
+在创建着色器程序之后，我们需要查找 WebGL 返回分配的输入位置。在上述情况下，我们有一个属性和两个 [Uniform](/zh-CN/docs/Web/API/WebGL_API/Data#uniforms) 。属性从缓冲区接收值。顶点着色器的每次迭代都从分配给该属性的缓冲区接收下一个值。uniform 类似于 JavaScript 全局变量。它们在着色器的所有迭代中保持相同的值。由于属性和统一的位置是特定于单个着色器程序的，因此我们将它们存储在一起以使它们易于传递
+
+> **备注：** 添加下面代码到 `main()` 函数中：
 
 ```js
 const programInfo = {
@@ -148,39 +189,37 @@ const programInfo = {
 
 在画正方形前，我们需要创建一个缓冲器来存储它的顶点。我们会用到名字为 initBuffers() 的函数。当我们了解到更多 WebGL 的高级概念时，这段代码会将有更多参数，变得更加复杂，并且用来创建更多的三维物体。
 
+> **备注：** 创建一个新文件叫“init-buffers.js”，并填写如下内容：
+
 ```js
 function initBuffers(gl) {
-
-  // Create a buffer for the square's positions.
-
-  const positionBuffer = gl.createBuffer();
-
-  // Select the positionBuffer as the one to apply buffer
-  // operations to from here out.
-
-  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-
-  // Now create an array of positions for the square.
-
-  const positions = [
-     1.0,  1.0,
-    -1.0,  1.0,
-     1.0, -1.0,
-    -1.0, -1.0,
-  ];
-
-  // Now pass the list of positions into WebGL to build the
-  // shape. We do this by creating a Float32Array from the
-  // JavaScript array, then use it to fill the current buffer.
-
-  gl.bufferData(gl.ARRAY_BUFFER,
-                new Float32Array(positions),
-                gl.STATIC_DRAW);
+  const positionBuffer = initPositionBuffer(gl);
 
   return {
     position: positionBuffer,
   };
 }
+
+function initPositionBuffer(gl) {
+  // Create a buffer for the square's positions.
+  const positionBuffer = gl.createBuffer();
+
+  // Select the positionBuffer as the one to apply buffer
+  // operations to from here out.
+  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+
+  // Now create an array of positions for the square.
+  const positions = [1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, -1.0];
+
+  // Now pass the list of positions into WebGL to build the
+  // shape. We do this by creating a Float32Array from the
+  // JavaScript array, then use it to fill the current buffer.
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+
+  return positionBuffer;
+}
+
+export { initBuffers }; 
 ```
 
 这段代码简单给出了绘画场景的本质。首先，它调用 gl 的成员函数 {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} 得到了缓冲对象并存储在顶点缓冲器。然后调用 {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} 函数绑定上下文。
@@ -191,7 +230,7 @@ function initBuffers(gl) {
 
 当着色器和物体都创建好后，我们可以开始渲染这个场景了。因为我们这个例子不会产生动画，所以 drawScene() 方法非常简单。它还使用了几个工具函数，稍后我们会介绍。
 
-> **备注：** 你可能会得到这样一段错误报告：“mat4 is not defined”，意思是说你缺少`glmatrix`库。该库的 js 文件[gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js)可以从[这里](https://github.com/mdn/webgl-examples/issues/20)获得。
+> **备注：** 创建一个新文件叫“draw-scene.js”，并填写如下内容：
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -278,11 +317,54 @@ function drawScene(gl, programInfo, buffers) {
     gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
   }
 }
+
+// Tell WebGL how to pull out the positions from the position
+// buffer into the vertexPosition attribute.
+function setPositionAttribute(gl, buffers, programInfo) {
+  const numComponents = 2; // pull out 2 values per iteration
+  const type = gl.FLOAT; // the data in the buffer is 32bit floats
+  const normalize = false; // don't normalize
+  const stride = 0; // how many bytes to get from one set of values to the next
+  // 0 = use type and numComponents above
+  const offset = 0; // how many bytes inside the buffer to start from
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.vertexPosition,
+    numComponents,
+    type,
+    normalize,
+    stride,
+    offset
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
+}
+
+export { drawScene };
 ```
 
 第一步，用背景色擦除画布，接着建立摄像机透视矩阵。设置 45 度的视图角度，并且设置一个适合实际图像的宽高比。指定在摄像机距离 0.1 到 100 单位长度的范围内的物体可见。
 
 接着加载特定位置，并把正方形放在距离摄像机 6 个单位的的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。
+
+最后，让我们引入 `initBuffers()` 和 `drawScene()`。
+
+> **备注：** 在“webgl-demo.js”文件头部添加如下代码：
+
+```js
+import { initBuffers } from "./init-buffers.js";
+import { drawScene } from "./draw-scene.js";
+```
+
+> **备注：** 在 `main()` 函数结尾处添加如下代码：
+
+```js
+// Here's where we call the routine that builds all the
+// objects we'll be drawing.
+const buffers = initBuffers(gl);
+
+// Draw the scene
+drawScene(gl, programInfo, buffers);
+```
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
@@ -292,9 +374,10 @@ function drawScene(gl, programInfo, buffers) {
 
 矩阵计算是一个很复杂的运算。没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是[glMatrix library](http://glmatrix.net/).
 
-## 相关资料
+## 参见
 
+- [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) WebGLFundamentals
 - [Matrices](http://mathworld.wolfram.com/Matrix.html) 线上数学百科全书
-- [Matrix](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) 维基百科
+- 维基百科上的[矩阵](https://zh.wikipedia.org/wiki/矩阵)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

@@ -50,9 +50,9 @@ La fonction d'écouteur recevra deux paramètres: une chaine de `text`, et un {{
 - `disposition`
   - : {{WebExtAPIRef("omnibox.OnInputEnteredDisposition", "OnInputEnteredDisposition")}}. Une {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} énumération, indiquant si l'extension doit ouvrir la page dans l'onglet en cours, dans un nouvel onglet de premier plan ou dans un nouvel onglet d'arrière-plan.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.onInputEntered")}}
+{{Compat}}
 
 ## Exemples
 

@@ -5,7 +5,7 @@ slug: Web/HTML/Element/abbr
 
 {{HTMLSidebar}}
 
-**HTML 缩写元素**（**`<abbr>`**）用于代表缩写，并且可以通过可选的 {{htmlattrxref("title")}} 属性提供完整的描述。若使用 `title` 属性，则它必须且仅可包含完整的描述内容。
+**HTML 缩写元素**（**`<abbr>`**）用于代表缩写，并且可以通过可选的 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性提供完整的描述。若使用 `title` 属性，则它必须且仅可包含完整的描述内容。
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
@@ -42,9 +42,9 @@ slug: Web/HTML/Element/abbr
 
 ## 属性
 
-这个元素只有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。在同 `<abbr>` 元素一起使用的时候，{{htmlattrxref("title")}} 属性有特殊的语法含义; 它必须包含对一个缩写完全天然可读的扩写或者描述。这些文本通常会作为提示，在鼠标指针覆盖到该元素时显示作为一个提示。
+这个元素只有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。在同 `<abbr>` 元素一起使用的时候，[`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性有特殊的语法含义; 它必须包含对一个缩写完全天然可读的扩写或者描述。这些文本通常会作为提示，在鼠标指针覆盖到该元素时显示作为一个提示。
 
-你使用的每一个 `<abbr>` 元素与其它同类元素都是相互独立的，为其中一个提供 `title` 不会自动把相同的附加文字依附到其它内容文字相同的元素上。
+你使用的每一个 `<abbr>` 元素与其他同类元素都是相互独立的，为其中一个提供 `title` 不会自动把相同的附加文字依附到其他内容文字相同的元素上。
 
 ## 用法注解
 
@@ -52,7 +52,7 @@ slug: Web/HTML/Element/abbr
 
 当然，我们不是所有的缩写都要使用`<abbr>`标记。但是其在下面一些场景很有帮助：
 
-- 当你想为缩写在文档流外提供一段扩展或定义的时候，为 `<abbr>` 设置一个合适的{{htmlattrxref("title")}}。
+- 当你想为缩写在文档流外提供一段扩展或定义的时候，为 `<abbr>` 设置一个合适的[`title`](/zh-CN/docs/Web/HTML/Global_attributes#title)。
 - 在定义一个读者可能不太熟悉的缩写时，使用 `<abbr>` 和`title`属性或内联的文本来表现这个术语。
 - 当文本中出现需要进行语义上的标注的缩写词时，`<abbr>`元素可用于依次将其作用样式和脚本。
 - 可以将 `<abbr>` 与 {{HTMLElement("dfn")}} 配合使用来建立缩写或首字母缩略词的定义。请参阅下面的示例 [定义一个缩写](#定义一个缩写)。
@@ -109,7 +109,7 @@ abbr {
 
 ### 提供扩展
 
-添加一个 {{htmlattrxref("title")}} 属性，为缩写提供定义或拓展。
+添加一个 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性，为缩写提供定义或拓展。
 
 #### HTML
 

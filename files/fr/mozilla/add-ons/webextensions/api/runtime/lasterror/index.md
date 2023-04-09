@@ -74,9 +74,9 @@ setCookie.then(logCookie, logError);
 
 > **Note :** `runtime.lastError` est un alias pour {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.lastError")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

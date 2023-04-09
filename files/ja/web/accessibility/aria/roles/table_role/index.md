@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: table ロール'
-slug: Web/Accessibility/ARIA/Roles/Table_Role
+slug: Web/Accessibility/ARIA/Roles/table_role
 ---
 
 \\{{ariaref}}

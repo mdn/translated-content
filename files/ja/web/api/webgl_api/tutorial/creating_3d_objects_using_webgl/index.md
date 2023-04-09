@@ -125,8 +125,8 @@ gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
 
 以上で、6 つの面が鮮やかな色で塗られたキューブが回転しながら跳ね回るアニメーションが完成しました。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510)}}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample5/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

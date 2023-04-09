@@ -1,6 +1,6 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
+slug: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}
@@ -9,7 +9,7 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** **Nota**: Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
+> **Nota:** Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
 
 <table class="properties">
   <tbody>

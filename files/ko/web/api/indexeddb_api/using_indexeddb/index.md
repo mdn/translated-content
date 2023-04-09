@@ -84,7 +84,7 @@ request.onsuccess = function(event) {
 
 The IndexedDB API는 오류 처리의 필요성을 최소화하도록 설계되었기 때문에 많은 오류 이벤트를 볼 수는 없을 것입니다. (적어도 API에 익숙하지 않은 경우). 그러나 데이터베이스를 여는 경우 오류 이벤트를 발생하는 몇 가지 일반적인 조건이 있습니다. 가장 많은 문제는 사용자가 웹 응용 프로그램에 데이터베이스를 만들 수 있는 권한을 주지 않기로 결정한 것입니다. IndexedDB의 주요 설계 목표 중 하나는 많은 양의 데이터를 오프라인에서 사용할 수 있도록 하는 것입니다. (각 브라우저에서 저장할 수 있는 저장 용량에 대한 자세한 내용은 [Storage limits](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits) 를 참조하십시오.)
 
-일부 광고 네트워크나 악의적인 웹 사이트가 컴퓨터를 오염시키는 것을 브라우저는 원하지 않기 때문에 브라우저는 특정 웹 응용 프로그램이 처음으로 저장용 IndexedDB를 열려고 할 때 사용자에게 메시지를 보냅니다. 사용자가 액세스를 허용하거나 거부할 수 있습니다. 또한, 개인정보 보호 모드의 브라우저에서 IndexedDB 공간은 시크릿 세션이 닫힐 때까지 메모리 내에서만 지속됩니다. (Firefox의 개인정보 보호 브라우징 모드와 Chrome 의 시크릿 모드가 있지만, Firefox 의 경우 2015년 11월 현재 아직 미구현({{Bug("781982")}} 참조)이므로, 개인정보 보호 브라우징 모드의 Firefox에서는 IndexedDB를 사용할 수 없습니다).
+일부 광고 네트워크나 악의적인 웹 사이트가 컴퓨터를 오염시키는 것을 브라우저는 원하지 않기 때문에 브라우저는 특정 웹 응용 프로그램이 처음으로 저장용 IndexedDB를 열려고 할 때 사용자에게 메시지를 보냅니다. 사용자가 액세스를 허용하거나 거부할 수 있습니다. 또한, 개인정보 보호 모드의 브라우저에서 IndexedDB 공간은 시크릿 세션이 닫힐 때까지 메모리 내에서만 지속됩니다. (Firefox의 개인정보 보호 브라우징 모드와 Chrome 의 시크릿 모드가 있지만, Firefox 의 경우 2015년 11월 현재 아직 미구현([Firefox bug 781982](https://bugzil.la/781982) 참조)이므로, 개인정보 보호 브라우징 모드의 Firefox에서는 IndexedDB를 사용할 수 없습니다).
 
 이제, 사용자가 데이터베이스 생성 요청을 허용하여 success 콜백을 트리거하는 success 이벤트를 받았다고 가정합니다; 그 다음은 무엇을 해야할까요? 이 요청은 `indexedDB.open()`을 호출하여 생성되었고, `request.result` 는 `IDBDatabase` 의 인스턴스이므로, 이후에 이것을 사용하기 위해 저장하기 원할 것은 확실합니다. 코드는 다음과 같이 할 수 있습니다:
 
@@ -248,7 +248,7 @@ request.onupgradeneeded = function (event) {
 
 이미 존재하는 객체 저장소의 레코드를 읽기 위해서 트랜잭션은 `readonly` 혹은 `readwrite` 모드이면 됩니다. 이미 존재하는 객체 저장소에 변경점을 기록하기 위해서는 트랜잭션이 반드시 `readwrite` 모드여야합니다. 특정 트랜잭션은 {{domxref("IDBDatabase.transaction")}} 으로 열 수 있습니다. 이 메소드는 접근하고 싶은 객체 저장소들의 배열로 정의된 범위인 `storeNames`와 트랜잭션의 모드`mode` (`readonly` 혹은 `readwrite`), 2개의 인자를 받습니다. 이 메소드는 객체 저장소에 접근할 수 있는 {{domxref("IDBIndex.objectStore")}} 메소드를 포함한 트랜잭션 객체를 반환합니다. 모드가 지정되지 않는다면 기본적으로 트랜잭션은 `readonly` 모드로 열립니다.
 
-> **참고:** As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete`event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
+> **참고:** As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete`event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
 트랜잭션에서 적합한 범위와 모드를 사용함으로써 자료 접근을 빠르게 할 수 있습니다. 여기 두개의 팁이 있습니다:
 
@@ -567,7 +567,7 @@ You should also listen for `VersionError` errors to handle the situation where a
 
 IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.
 
-Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (see {{bug("1147821")}}.)
+Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (see [Firefox bug 1147821](https://bugzil.la/1147821).)
 
 ## Warning about browser shutdown
 
@@ -587,7 +587,7 @@ First, you should take care to always leave your database in a consistent state 
 
 Second, you should never tie database transactions to unload events. If the unload event is triggered by the browser closing, any transactions created in the unload event handler will never complete. An intuitive approach to maintaining some information across browser sessions is to read it from the database when the browser (or a particular page) is opened, update it as the user interacts with the browser, and then save it to the database when the browser (or page) closes. However, this will not work. The database transactions will be created in the unload event handler, but because they are asynchronous they will be aborted before they can execute.
 
-In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See {{ bug(870645) }}. As a workaround for this normal shutdown notification, you might track your transactions and add a `beforeunload` event to warn the user if any transactions have not yet completed at the time of unloading.
+In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See [Firefox bug 870645](https://bugzil.la/870645). As a workaround for this normal shutdown notification, you might track your transactions and add a `beforeunload` event to warn the user if any transactions have not yet completed at the time of unloading.
 
 At least with the addition of the abort notifications and {{domxref("IDBDatabase.onclose")}}, you can know when this has happened.
 

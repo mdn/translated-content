@@ -20,12 +20,12 @@ A interface IDBFactory, pertencente a [IndexedDB API](/pt-BR/docs/IndexedDB) , p
 
 ### Métodos Obsoletos
 
-- [`IDBFactory.open`](/en-US/docs/Web/API/IDBFactory.open-obsolete), a versão original {{ obsolete_inline }}
+- [`IDBFactory.open`](/en-US/docs/Web/API/IDBFactory.open-obsolete), a versão original
   - : Este método realizava [conexão com uma base de dados](/pt-BR/docs/IndexedDB#gloss_database_connection), ele ainda é usado em alguns navegadores.
 
 ## Exemplo
 
-No código abaixo, realizamos uma conexão com um banco de dados e incluímos manipuladores para os casos de sucesso e erro. Você pode obter o [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app como exemplo ([Visualizar exemplo](http://mdn.github.io/to-do-notifications/).)
+No código abaixo, realizamos uma conexão com um banco de dados e incluímos manipuladores para os casos de sucesso e erro. Você pode obter o [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app como exemplo ([Visualizar exemplo](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 var note = document.querySelector("ul");
@@ -73,4 +73,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Configurando um Intervalo de chaves: {{domxref("IDBKeyRange")}}
 - Recuperando e modificando dados: {{domxref("IDBObjectStore")}}
 - Usando cursors: {{domxref("IDBCursor")}}
-- Exemplo de referência: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([Visualizar exemplo](http://mdn.github.io/to-do-notifications/).)
+- Exemplo de referência: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([Visualizar exemplo](https://mdn.github.io/dom-examples/to-do-notifications/).)

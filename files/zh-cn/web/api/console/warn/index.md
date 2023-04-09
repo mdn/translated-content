@@ -1,6 +1,6 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
+slug: Web/API/console/warn
 ---
 
 {{APIRef("Console API")}}
@@ -33,7 +33,7 @@ console.warn(msg [, subst1, ..., substN]);
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
