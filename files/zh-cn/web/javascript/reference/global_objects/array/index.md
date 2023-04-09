@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 数组元素是对象属性，就像 `toString` 是属性一样（具体来说，`toString()` 是一种方法）。然而，尝试按以下方式访问数组的元素会抛出语法错误，因为属性名无效：
 
 ```js example-bad
-console.log(arr.0); // 一个语法错误
+console.log(arr.0); // 语法错误
 ```
 
 JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问以数字开头的属性。也可以用引号包裹数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
@@ -218,7 +218,7 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 `length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或 `undefined`，它也会表现得好像它的值是 `0`。
 
-JavaScript 避免将 `length` 设置为[不安全的整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)。如果 `length` 将被设置为大于 2<sup>53</sup> - 1 的数字，则所有内置方法都将抛出一个 {{jsxref("TypeError")}}。但是，由于数组的 {{jsxref("Array/length", "length")}} 属性在设置为大于 2<sup>32</sup> 时会抛出错误，因此通常不会达到安全整数阈值，除非该方法在非数组对象上调用。
+JavaScript 避免将 `length` 设置为[不安全的整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)。如果 `length` 将被设置为大于 2<sup>53</sup> - 1 的数字，则所有内置方法都将抛出 {{jsxref("TypeError")}}。但是，由于数组的 {{jsxref("Array/length", "length")}} 属性在设置为大于 2<sup>32</sup> 时会抛出错误，因此通常不会达到安全整数阈值，除非该方法在非数组对象上调用。
 
 ```js
 Array.prototype.flat.call({}); // []
