@@ -18,4 +18,4 @@ slug: Web/API/Navigator/geolocation
 
 ## 같이 보기
 
-- [위치정보 사용하기](/ko/docs/WebAPI/Using_geolocation)
+- [Geolocation API 사용하기](/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
