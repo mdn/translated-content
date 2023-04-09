@@ -1,24 +1,26 @@
 ---
 title: CSS リファレンス
 slug: Web/CSS/Reference
+l10n:
+  sourceCommit: 62c5c3f5655002f230bf0153fbdf8a883611014a
 ---
 
 {{CSSRef}}
 
-この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Types)、[関数記法](/ja/docs/Web/CSS/CSS_Functions)、[アット規則](/ja/docs/Web/CSS/At-rule) の [アルファベット順の索引](#Keyword_index) として利用できます。また、すべての CSS [種類別セレクター](#Selectors) の一覧および [重要な CSS の概念](#Concepts) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#DOM-CSS_CSSOM) も含まれています。
+この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Types)、[関数記法](/ja/docs/Web/CSS/CSS_Functions)、[アットルール](/ja/docs/Web/CSS/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
-## 基本的な規則と構文
+## 基本的なルールと構文
 
-### スタイル規則の構文
+### スタイルルールの構文
 
 ```
-スタイル規則 ::=
+スタイルルール ::=
     セレクターリスト {
       プロパティリスト
     }
 ```
 
-... ここで
+ここで、
 
 ```
 セレクターリスト ::=
@@ -29,9 +31,9 @@ slug: Web/CSS/Reference
     [プロパティ : 値] [; プロパティリスト]
 ```
 
-下記の [_セレクター_](#Selectors)、[_疑似クラス_](#Pseudo)、_[疑似要素](#Pseudo)_ の一覧を参照してください。 各指定*値*の構文は、各指定*プロパティ*に定義されたデータ型に依存します。
+下記の [_セレクター_](#セレクター)、[_擬似クラス_](#擬似クラスと擬似要素)、_[擬似要素](#擬似クラスと擬似要素)_ の一覧を参照してください。 各指定*値*の構文は、各指定*プロパティ*に定義されたデータ型に依存します。
 
-#### スタイル規則の例
+#### スタイルルールの例
 
 ```css
 strong {
@@ -43,15 +45,15 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn/CSS/Building_blocks/Selectors)をご覧ください。規則定義内での [CSS 構文](/ja/docs/Web/CSS/syntax) エラーは、その規則全体を無効にするので十分に注意してください。無効な規則はブラウザーにより無視されます。 CSS 規則の定義はすべて (ASCII) [テキストベース](https://www.w3.org/TR/css-syntax-3/#intro) であり、DOM-CSS / CSSOM (規則管理システム) は [オブジェクトベース](https://www.w3.org/TR/cssom/#introduction) なので注意してください。
+初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn/CSS/Building_blocks/Selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/Syntax) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて (ASCII) [テキストベース](https://www.w3.org/TR/css-syntax-3/#intro) であり、DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://www.w3.org/TR/cssom/#introduction) なので注意してください。
 
-### アット規則構文
+### アットルールの構文
 
-これには多くの異なる構造的な書式があるため、その各構文は [アット規則](/ja/docs/Web/CSS/At-rule) のページをご覧ください。
+アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/At-rule)のページをご覧ください。
 
 ## 索引
 
-> **メモ:** この索引のプロパティ名には、CSS 標準の名前と異なる [JavaScript 名](/ja/docs/Web/CSS/CSS_Properties_Reference) は含まれて**いません**。
+> **メモ:** この索引でのプロパティ名は、CSS 標準の名前と異なる JavaScript の名前は含んでいません。
 
 {{CSS_Ref}}
 
@@ -63,7 +65,7 @@ div.menu-bar li:hover > ul {
 
 **基本セレクター**は基礎的なセレクターです。これらは最も基本的なセレクターで、他のより複雑なセレクターを作成するために頻繁に組み合わせられます。
 
-- [全称セレクター](/ja/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [全称セレクター](/ja/docs/Web/CSS/Universal_selectors) `*`
 - [要素型セレクター](/ja/docs/Web/CSS/Type_selectors) `elementname`
 - [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) `.classname`
 - [ID セレクター](/ja/docs/Web/CSS/ID_selectors) `#idname`
@@ -76,7 +78,7 @@ div.menu-bar li:hover > ul {
 
 ### 結合子
 
-結合子 (Combinators) は二つ以上の単純セレクターの関係、例えば「`A` は `B` の子である」や「`A` は is `B` の子孫である」などを確立するためのセレクターです。
+結合子 (Combinator) は 2 つ以上の単純セレクターの関係、例えば「`A` は `B` の子である」や「`A` は `B` の子孫である」などを確立し、複合セレクターを作成するためのセレクターです。
 
 - [隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
   - : `A` と `B` のそれぞれで選択された要素が同じ親を持ち、かつ `B` で選択された要素が `A` で選択された要素の水平的な直後にあることを指定します。
@@ -103,10 +105,10 @@ div.menu-bar li:hover > ul {
 ### 構文と意味
 
 - [CSS 構文](/ja/docs/Web/CSS/Syntax)
-- [アット規則](/ja/docs/Web/CSS/At-rule)
+- [アットルール](/ja/docs/Web/CSS/At-rule)
 - [カスケード](/ja/docs/Web/CSS/Cascade)
 - [コメント](/ja/docs/Web/CSS/Comments)
-- [記述子](</ja/docs/Glossary/Descriptor_(CSS)>)
+- [記述子](</ja/docs/Glossary/CSS_Descriptor>)
 - [継承](/ja/docs/Web/CSS/inheritance)
 - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
 - [優先度](/ja/docs/Web/CSS/Specificity)
@@ -126,19 +128,19 @@ div.menu-bar li:hover > ul {
 ### レイアウト
 
 - [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)
-- [ボックスモデル](/ja/docs/Web/CSS/box_model)
-- [包含ブロック](/ja/docs/Web/CSS/All_About_The_Containing_Block)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [包含ブロック](/ja/docs/Web/CSS/Containing_block)
 - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 - [置換要素](/ja/docs/Web/CSS/Replaced_element)
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
-- [視覚書式設定モデル](/ja/docs/Web/Guide/CSS/Visual_formatting_model)
+- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 
 ### 主なオブジェクトの種類
 
-- {{DOMxRef("DocumentOrShadowRoot.styleSheets")}}
+- {{DOMxRef("Document.styleSheets")}}
 - `{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}`
 - `cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}` (セレクターとスタイル)
 - `cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}`
@@ -156,7 +158,6 @@ div.menu-bar li:hover > ul {
 
 - [Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) (`-moz-` 接頭辞付き)
 - [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) (ほとんどが `-webkit-` 接頭辞付き)
-- [Microsoft CSS 拡張](/ja/docs/Web/CSS/Microsoft_Extensions) (`-ms-` 接頭辞付き)
 
 ## 外部リンク
 

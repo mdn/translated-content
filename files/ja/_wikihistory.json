@@ -1589,10 +1589,6 @@
     "modified": "2020-04-14T12:32:43.727Z",
     "contributors": ["mfuji09", "Uemmra3", "dskmori", "takaneichinose"]
   },
-  "Glossary/Reference": {
-    "modified": "2020-11-18T02:37:08.917Z",
-    "contributors": ["KNaka88"]
-  },
   "Glossary/Reflow": {
     "modified": "2020-08-17T06:52:14.696Z",
     "contributors": ["eltociear"]
@@ -10151,10 +10147,6 @@
       "yyss"
     ]
   },
-  "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2019-05-23T13:25:35.305Z",
-    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "yyss"]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2019-11-01T12:30:23.265Z",
     "contributors": ["Wind1808", "wbamberg", "Uemmra3", "fkmhrk", "yyss"]
@@ -12868,6 +12860,10 @@
   "Web/API/Storage_API": {
     "modified": "2020-10-15T22:20:04.706Z",
     "contributors": ["Uemmra3", "Wind1808"]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2019-05-23T13:25:35.305Z",
+    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "yyss"]
   },
   "Web/API/Storage_Access_API": {
     "modified": "2020-10-15T22:28:07.348Z",
@@ -25075,10 +25071,6 @@
     "modified": "2020-10-30T10:43:18.108Z",
     "contributors": ["mfuji09"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/Stack": {
-    "modified": "2020-10-30T10:57:02.136Z",
-    "contributors": ["mfuji09", "yumetodo", "teoli", "Marsf", "shide55"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/columnNumber": {
     "modified": "2020-10-30T11:16:32.062Z",
     "contributors": ["mfuji09", "yumetodo", "teoli", "Marsf", "shide55"]
@@ -25098,6 +25090,10 @@
   "Web/JavaScript/Reference/Global_Objects/Error/name": {
     "modified": "2020-10-30T11:22:27.061Z",
     "contributors": ["mfuji09", "segayuu", "Marsf", "shide55"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Error/stack": {
+    "modified": "2020-10-30T10:57:02.136Z",
+    "contributors": ["mfuji09", "yumetodo", "teoli", "Marsf", "shide55"]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
     "modified": "2020-10-15T21:35:37.653Z",
@@ -27056,19 +27052,6 @@
     "modified": "2020-11-27T11:32:09.247Z",
     "contributors": ["mfuji09"]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2020-10-28T13:27:56.174Z",
-    "contributors": [
-      "mpcjazz",
-      "ciffelia",
-      "segayuu",
-      "YuichiNukiyama",
-      "teoli",
-      "ethertank",
-      "Potappo",
-      "Yuki Konno"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2020-11-27T10:17:53.705Z",
     "contributors": [
@@ -27525,6 +27508,19 @@
       "Potappo"
     ]
   },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2020-10-28T13:27:56.174Z",
+    "contributors": [
+      "mpcjazz",
+      "ciffelia",
+      "segayuu",
+      "YuichiNukiyama",
+      "teoli",
+      "ethertank",
+      "Potappo",
+      "Yuki Konno"
+    ]
+  },
   "Web/JavaScript/Reference/Global_Objects/String/trimEnd": {
     "modified": "2020-11-23T13:55:09.422Z",
     "contributors": [
@@ -27800,10 +27796,6 @@
   "Web/JavaScript/Reference/Global_Objects/TypedArray/map": {
     "modified": "2020-11-16T05:49:31.551Z",
     "contributors": ["mfuji09", "shide55"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/name": {
-    "modified": "2020-11-22T07:12:38.774Z",
-    "contributors": ["mfuji09", "YujiSoftware", "shide55"]
   },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/of": {
     "modified": "2020-11-22T08:31:53.944Z",

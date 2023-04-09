@@ -1,154 +1,215 @@
 ---
-title: ループコード
+title: ループするコード
 slug: Learn/JavaScript/Building_blocks/Looping_code
+l10n:
+  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 プログラミング言語は、繰り返し実行するタスクを素早く終わらせるのがとても得意です。基本的な計算処理から、同じような作業がたくさんあるのならどんな状況でもこなします。今度は JavaScript でそういった目的を果たすために使用するループ構造を見てみましょう。
 
-| 前提条件: | 基本的なコンピューターの知識および HTML と CSS への理解、[JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)。 |
-| --------- | ----------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | JavaScript でループの使い方を理解する。                                                                                 |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基本的なコンピューターの知識、HTML と CSS への理解、
+        <a href="/ja/docs/Learn/JavaScript/First_steps"
+          >JavaScript の第一歩</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>JavaScript でのループの使い方を理解する。</td>
+    </tr>
+  </tbody>
+</table>
 
-## ループの中にとどまる
+## なぜループが有用か
 
-ループ、ループ、ループ。[朝食用シリアル](https://en.wikipedia.org/wiki/Froot_Loops)や、[ジェットコースター](https://en.wikipedia.org/wiki/Vertical_loop)、[音楽](<https://en.wikipedia.org/wiki/Loop_(music)>)でもおなじみですが、プログラミングにおいても、とても重要な概念です。プログラミングにおけるループとは同じことを何度も何度も繰り返すことで、**反復**や**繰り返し**とも言われます。
+ループは、同じことを何度も何度も繰り返すものです。多くの場合、コードはループを一巡するたびに少しずつ異なり、また、同じコードを実行しても変数が異なることもあります。
 
-それでは、農家のケースについて考えてみましょう。彼は家族を養うため十分な食料があるか確認しようとしています。それを実現するため、以下のようなループを使用するでしょう。
+### ループコードの例
 
-![](loop_js-02-farm.png)
+例えば、{{htmlelement("canvas")}} 要素に 100 個のランダムな円を描画したいとします（\[更新] ボタンを押すと、例を何度も実行して異なるランダムコレクションを見ることができます）。
 
-ループにはたいてい以下のような機能があります。
-
-- **カウンター:** ループの開始地点で、初期化される値です。(上記の絵の、"I have no food" \[食料がない] の部分です)。
-- **条件:** ループの実行を継続するか終了するかを決める true/false の判定です。たいていはカウンターがある値に達した場合に終了します。上記の絵の、"Do I have enough food?" \[十分な食料があるか？] の部分です。例えば、家族に食べさせる 10 個の食料が必要である、というようなことです。
-- **イテレーター:** これは一般的には条件が `true`. では無くなるまで、カウンターの値をループごとに少量ずつ増加させます。上記の絵には明示的には描いていませんが、農家が 1 時間に 2 つの食料を集めることができると考えるとします。この場合、1 時間ごとに 2 つずつ食料が増えていき、農家は十分な食料が集まったかを確認することができます。もし食料が 10 個になったら (条件が true では無くなったため、ループが終了するポイント)、集めるのをやめて家に帰ることができるでしょう。
-
-{{glossary("pseudocode", "疑似コード")}}では、以下のようになるでしょう。
-
+```html hidden
+<button>更新</button> <canvas></canvas>
 ```
-loop(food = 0; foodNeeded = 10) {
-  if (food >= foodNeeded) {
-    exit loop;
-    // 十分な食料が集まりました。家に帰りましょう
-  } else {
-    food += 2; // 1 時間経って 2 つの食料を集めました
-    // ループはさらに続きます
-  }
+
+```css hidden
+html {
+  width: 100%;
+  height: inherit;
+  background: #ddd;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 ```
 
-最初に、必要な食料が 10 に設定され、農家が現在持っている食料は 0 に設定されます。ループの繰り返しごとに、農家の持っている食料が必要な食料の数に等しいかを調べています。もしそうであれば、ループを抜けられます。そうでなければ、農家は 1 時間ごとに 2 つの食料を集めるのを繰り返します。
+{{ EmbedLiveSample('Looping_code_example', '100%', 400) }}
 
-### どうしてこんなことをするの？
+こちらはこの例を実装している JavaScript コードです。
 
-これで、恐らくループの背後にあるコンセプトが理解できたことでしょう。けれど、「それが JavaScript のコードを書くのにどう役立つの？」と思っているかもしれませんね。先ほど**ループは同じことを繰り返すこと**だと言いいましたが、それは**素早く繰り返し同じ作業を完了させる**のに最適なことなのです。
+```js
+const btn = document.querySelector('button');
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 
-たいてい、コードはループの連続する反復のたびごとにわずかに異なるものになります。つまり、似ているけれどわずかに異なる多数のタスク全体を完了出来るのです。もしたくさんの異なる計算をしなければならないとしたら、同じことを何度も何度もするのではなく、それぞれ異なることをしたいですよね。
+document.addEventListener('DOMContentLoaded', () => {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+})
 
-ループがどれだけ素晴らしいものかを説明する例を見てみましょう。100 個のランダムな円を {{htmlelement("canvas")}} 要素に描きたいとします (*更新*ボタンを押して、例を何度となく実行し、結果が異なることを見てみましょう。)
+function random(number) {
+  return Math.floor(Math.random()*number);
+}
 
-```html hidden
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>キャンバスに描くランダムな円</title>
-    <style>
-      html {
-        width: 100%;
-        height: inherit;
-        background: #ddd;
-      }
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+    ctx.fill();
+  }
+}
 
-      canvas {
-        display: block;
-      }
-
-      body {
-        margin: 0;
-      }
-
-      button {
-        position: absolute;
-        top: 5px;
-        left: 5px;
-      }
-    </style>
-  </head>
-  <body>
-
-  <button>更新</button>
-
-  <canvas></canvas>
-
-
-    <script>
-    const btn = document.querySelector('button');
-    const canvas = document.querySelector('canvas');
-    const ctx = canvas.getContext('2d');
-
-    let WIDTH = document.documentElement.clientWidth;
-    let HEIGHT = document.documentElement.clientHeight;
-
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
-
-    function random(number) {
-      return Math.floor(Math.random()*number);
-    }
-
-    function draw() {
-      ctx.clearRect(0,0,WIDTH,HEIGHT);
-      for (let i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-        ctx.fill();
-      }
-    }
-
-    btn.addEventListener('click',draw);
-
-    </script>
-
-  </body>
-</html>
+btn.addEventListener('click',draw);
 ```
 
-{{ EmbedLiveSample('Hidden_code', '100%', 400, "", "", "hide-codepen-jsfiddle") }}
+### ループありとループなし
 
-今はコードをすべて理解する必要はありません。ですが、コードの一部で 100 個の円を実際に描いている箇所を見てみましょう。
+これですべてのコードを理解する必要はありませんが、実際に 100 個の円を描画している部分を見てみましょう。
 
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
   ctx.fillStyle = 'rgba(255,0,0,0.5)';
-  ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+  ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
 ```
 
-- `random(x)` はコードの前半で定義され、`0` から `x-1` までの整数を返します
-- `WIDTH` と `HEIGHT` は、内側のブラウザーウィンドウの幅と高さです。
+- `random(x)` は、コードの手前で定義されており、 `0` と `x-1` の間の実数を返します。
 
-基本的な考えがわかりましたか？このコードをループを使用して 100 回実行しますが、毎回ページ内のランダムな場所に円を描いています。必要なコードは 100 個の円を描くときも、1000 個でも 10,000 個でも同じです。1 か所だけ変更すればいいのです。
+基本的なことが分かると思います。ループを使用してこのコードを 100 回反復処理し、それぞれがページ上のランダムな位置に円を描画します。
+必要なコードの量は、100 個の円を描画する場合でも、1000 個の円を描画する場合でも、1 万個の円を描画する場合でも同じです。
+変更しなければならないのは、たった一つの数字だけです。
 
-ここでループを使用しないとすれば、次のコードを描きたい数だけ繰り返し書かなければなりません。
+もしここでループを使用していなければ、描画したい円ごとに以下のコードを繰り返して書く必要があります。
 
 ```js
 ctx.beginPath();
 ctx.fillStyle = 'rgba(255,0,0,0.5)';
-ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
 
-これはとてもつまらなく、素早くメンテナンスするのが難しいコードです。ループが一番良いです。
+これはとても退屈で、メンテナンスも大変でしょう。
+
+## コレクション内のループ処理
+
+ループを使用する場合のほとんどは、アイテムのコレクションがあって、すべてのアイテムに対して何かを行いたいときです。
+
+{{jsxref("Array")}} は、コレクションの一種です。このコースの[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)の章で紹介しました。
+しかし、JavaScript には他にも {{jsxref("Set")}} や {{jsxref("Map")}} などのコレクションがあります。
+
+### for...of ループ
+
+コレクションをループ処理する基本的なツールは {{jsxref("statements/for...of","for...of")}} ループです。
+
+```js
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+for (const cat of cats) {
+  console.log(cat);
+}
+```
+
+この例では、`for (const cat of cats)` は次のように言っています。
+
+1. コレクション `cats` が指定されたら、コレクション内の最初のアイテムを取得する。
+2. それを変数 `cat` に割り当てて、中括弧 `{}` で囲まれたコードを実行する。
+3. 次のアイテムを取得し、コレクションの終わりに達するまで (2) を繰り返す。
+
+### map() と filter()
+
+JavaScript には、コレクションに対してより特化したループもあるので、ここではそのうちの 2つを紹介します。
+
+`map()` を使用すると、コレクション内の各アイテムに対して何かを行い、変更されたアイテムを格納した新しいコレクションを作成することができます。
+
+```js
+function toUpper(string) {
+  return string.toUpperCase();
+}
+
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+const upperCats = cats.map(toUpper);
+
+console.log(upperCats);
+// [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+```
+
+ここでは、{{jsxref("Array.prototype.map()","cats.map()")}} に関数を渡すと、`map()` は配列内のそれぞれのアイテムにその関数を 1 回ずつ、そのアイテムを渡して呼び出します。そして、それぞれの関数呼び出しの返値を新しい配列に追加し、最後に新しい配列を返します。この場合、提供した関数はアイテムを大文字に変換するので、結果として得られる配列には、すべてのネコ科動物がが大文字で格納されます。
+
+```
+[ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+```
+
+{{jsxref("Array.prototype.filter()","filter()")}} を使用すると、コレクション内のそれぞれのアイテムをテストし、一致するアイテムのみを格納した新しいコレクションを作成することができます。
+
+```js
+function lCat(cat) {
+  return cat.startsWith('L');
+}
+
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+const filtered = cats.filter(lCat);
+
+console.log(filtered);
+// [ "Leopard", "Lion" ]
+```
+
+これは `map()` とよく似ていますが、渡す関数が[論理値](/ja/docs/Learn/JavaScript/First_steps/Variables#論理値)を返す点が異なります。 もし `true` を返すなら、アイテムは新しい配列に含まれます。
+この関数では、アイテムが文字「L」で始まるかどうかをテストするので、結果は名前が「L」で始まる猫だけを含む配列になります。
+
+```
+[ "Leopard", "Lion" ]
+```
+
+なお、`map()` と `filter()` は、どちらもよく関数式と一緒に使われます。これは[関数](/ja/docs/Learn/JavaScript/Building_blocks/Functions)モジュールで学びます。
+関数式を使用すると、上の例をもっとコンパクトに書き直すことができます。
+
+```js
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+const filtered = cats.filter((cat) => cat.startsWith('L'));
+console.log(filtered);
+// [ "Leopard", "Lion" ]
+```
 
 ## 標準的な for ループ
 
-ここからは、具体的なループの構造を見ていきましょう。最初は、特によく使うことになるであろう [for](/ja/docs/Web/JavaScript/Reference/Statements/for) ループについてです。構文は以下の通りです。
+上の「円を描く」例では、ループさせるアイテムのコレクションがある訳ではありません。実際には、同じコードを 100 回実行したいだけです。
+このような用途では、{{jsxref("statements/for","for")}} ループを使用する必要があります。
+これは以下のような構文があります。構文は以下の通りです。
 
 ```
 for (初期化処理; 条件; 最後の式) {
@@ -156,112 +217,156 @@ for (初期化処理; 条件; 最後の式) {
 }
 ```
 
-ここでは...
+ここでは、次のようになります。
 
 1. `for` キーワードに続き括弧があります。
-2. 括弧の中にはセミコロンで区切られて以下の項目があります。
+2. 括弧の中には、セミコロンで区切られた以下の項目があります。
 
-    1. **初期化処理**: これはたいていの場合、繰り返し回数分増やしていく変数の初期化処理となります。この変数を**カウンター変数**と呼ぶことがあります。
-    2. **条件**: 既に取り上げた通り、これはループが繰り返しをやめるべき条件を定義します。ほとんどの場合は比較演算子を伴って、終了条件を満たしているかを判定します。
-    3. **最後の式**: これはループの 1 回が終了する度に評価される (または実行される) コードです。大体、カウンター変数を増やし(または減らし)、条件が `true` では無くなるポイントに近づけていきます。
+   1. **初期化処理**: これはたいていの場合、繰り返し回数分増やしていく変数の初期化処理となります。
+      この変数を**カウンター変数**と呼ぶことがあります。
+   2. **条件**: これは、ループがいつ繰り返しをやめるかを定義します。
+    これはふつう、比較演算子を伴って、終了条件に達したかどうかを確認します。
+   3. **最後の式**: これはループの 1 回が終了する度に評価される（または実行される）コードです。
+      通常、カウンター変数を増加させ（場合によっては減少させ）、条件が `true` ではなくなるポイントに近づけていきます。
 
-3. そして中括弧があり、中括弧の中のコードブロックが各ループの繰り返しで実行されます。
+3. コードのブロックを格納する中括弧。このコードは、ループが反復処理されるたびに実行されます。
 
-それでは実際の例を見て、これらを明確に分かるようにしてみましょう。
+### 平方の計算
 
-```js
-const cats = ['ビル', 'ジェフ', 'ピート', 'ビッグルズ', 'ジャスミン'];
-let info = '私の猫の名前は、';
-const para = document.querySelector('p');
-
-for (let i = 0; i < cats.length; i++) {
-  info += cats[i] + '、';
-}
-
-para.textContent = info;
-```
-
-これで次の結果が得られます。
+実際の例を見て、これらの機能をより明確にイメージできるようにしましょう。
 
 ```html hidden
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>for ループの例</title>
-    <style>
-
-    </style>
-  </head>
-  <body>
-
-  <p></p>
-
-
-    <script>
-    const cats = ['ビル', 'ジェフ', 'ピート', 'ビッグルズ', 'ジャスミン'];
-    let info = '私の猫の名前は、';
-    const para = document.querySelector('p');
-
-    for (let i = 0; i < cats.length; i++) {
-      info += cats[i] + '、';
-    }
-
-    para.textContent = info;
-
-    </script>
-
-  </body>
-</html>
+<button id="calculate">計算</button>
+<button id="clear">クリア</button>
+<pre id="results"></pre>
 ```
 
-{{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
+```js
+const results = document.querySelector('#results');
 
-> **メモ:** [このコードは GitHub でも](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html)見られます ([動くデモも](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)ありますよ)。
+function calculate() {
+  for (let i = 1; i < 10; i++) {
+    const newResult = `${i} x ${i} = ${i * i}`;
+    results.textContent += `${newResult}\n`;
+  }
+  results.textContent += '\n完了!';
+}
 
-これは配列のすべての要素に対して、繰り返し何かを実行するループの使用例です。JavaScript ではとてもよく見られるパターンです。
+const calculateBtn = document.querySelector('#calculate');
+const clearBtn = document.querySelector('#clear');
 
-1. `i` をカウンター変数(イニシャライザーやイテレーター変数ともいう)として、`0` から開始します (`let i = 0`)。
-2. `i` が `cats` 配列の長さより小さくなくなるまで実行すると、ループには指定されています。これは重要です、条件にはループが継続するための条件が示されています。今回は、`i < cats.length` が真となるため、ループは継続します。
-3. ループの内側では、現在繰り返し対象となる項目 (`cats[i]` は `cats[i に入っているそのときの値]` となります) を `info` 変数に対してカンマとスペースとともに結合しています。つまり...
+calculateBtn.addEventListener('click', calculate);
+clearBtn.addEventListener('click', () => results.textContent = '');
+```
 
-    1. 初回の実行時には、`i = 0` なので `cats[0] + ', '` ("ビル、") が `info` に対して結合されます。
-    2. 2 回目の実行時には、`i = 1` なので `cats[1] + ', '` ("ジェフ、") が `info` に対して結合されます。
-    3. このように、ループ内の処理が実行されるたび、1 が `i` に加算され (`i++`)、次の処理が開始されます。
+これは次のような出力結果となります。
 
-4. `i` が `cats.length` の値 (ここでは 5) と等しくなったときにループは終了し、ブラウザーはループの後に続くコードを実行します。
+{{ EmbedLiveSample('Calculating squares', '100%', 250) }}
 
-> **メモ:** 条件を `i <= cats.length` ではなく、`i < cats.length` としているのは、コンピューターが数値を 1 からではなく、0 から数えるためです。コードでも `i` を `0` から始め、`i = 4` (配列内の要素の最後のインデックス) となるまで加算していきます。配列内の要素が 5 つなので `cats.length` は 5 となりますが、`i = 5` とすると、(配列に 5 のインデックスの要素がないので) `undefined` となってしまいます。なので、`cats.length` と同じ値まで (`i <=`) ではなく、`i` の最大値を 1 減らして `cats.length` より小さくなる (`i <`) まで加算しています。
+このコードは、1 から 9 までの数字の平方を計算し、その結果を書き出します。コードの中心は、計算を行う `for` ループです。
 
-> **メモ:** 条件の指定でよくある間違いは「以下」(`<=`) ではなく、「等しい」(`===`) を使ってしまうことです。もし、`i = 5` となるまでループを実行したければ、終了条件は `i <= cats.length` と指定しなければなりません。`i === cats.length` と指定した場合、ループは 1 度も実行されずに終了してしまいます。なぜなら、ループの最初では `i` が `5` ではないため、そこで終わってしまうからです。
+`for (let i = 1; i < 10; i++)` の行を 3 つの部分に分割してみましょう。
 
-残る小さな問題は、出力された文が完全ではないことです。
+1. `let i = 1`: カウンター変数である `i` は `1` から始めます。ループを一周するたびにカウンターに代入するため、カウンターに `let` を使用しなければならないことに注意してください。
+2. `i < 10`: `i` が `10` よりも小さい限り、ループを繰り返し続けます。
+3. `i++`: ループを一周するたびに `i` に 1 を加算します。
 
-> 私の猫の名前は、ビル、ジェフ、ピート、ビッグルズ、ジャスミン、
+ループの内部では、現在の `i` の値の平方、すなわち `i * i` を計算します。計算した内容と結果を表す文字列を作成し、出力テキストに追加します。また、次に追加した文字列が改行されるように、`\n` も追加しています。すなわち、
 
-ループの最後の結合処理を変更して文の最後が「、」で終わらないようにしたいと思います。まったく問題ありません。ループの中に条件ブロックを挿入して、これに対処しましょう。
+1. 最初の実行時は `i = 1` なので `1 x 1 = 1` を追加します。
+2. 二番目の実行時は `i = 2` なので `2 x 2 = 4` を追加します。
+3. 以下、同様に行います。
+4. `i` が `10` と等しくなったら、ループの実行を停止して、ループの下の次のコードにまっすぐ移動し、`完了!` というメッセージを新しい行に出力します。
+
+### for ループでコレクションを繰り返し処理
+
+`for` ループの代わりに、`for...of` ループを使用してコレクションを反復処理することができます。
+
+上の `for...of` の例をもう一度見てみましょう。
 
 ```js
-for (let i = 0; i < cats.length; i++) {
-  if (i === cats.length - 1) {
-    info += cats[i] + 'です。';
-  } else {
-    info += cats[i] + '、';
-  }
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+for (const cat of cats) {
+  console.log(cat);
 }
 ```
 
-> **メモ:** [このコードは GitHub でも](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)見られます ([動いているデモも](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)あります)。
+このコードは次のように書き換えることができます。
 
-> **警告:** for ループ (他のループも同様) では、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が true では無くなるポイントに達するようにする必要があります。もしそうで無い場合、ループは永遠に回り続け、ブラウザーが強制的に停止するか、クラッシュしてしまうでしょう。これは**無限ループ**といいます。
+```js
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
 
-## break でループを終了する
+for (let i = 0; i < cats.length; i++) {
+  console.log(cats[i]);
+}
+```
 
-すべての繰り返し処理が終了する前にループを終了したいとき、[break](/ja/docs/Web/JavaScript/Reference/Statements/break) 文を使用して終了させることができます。前回の記事、[switch 文](/ja/Learn/JavaScript/Building_blocks/conditionals#switch_statements)で、入力した値が switch 文の case にマッチしたとき、switch 文を抜け、それ以降のコードを実行するために `break` 文を使用しました。
+このループでは、`i` を `0` で開始し、`i` が配列の長さに達した時点で停止しています。
+そして、ループの中で `i` を使って、配列のそれぞれのアイテムに順番にアクセスしています。
+
+JavaScript の初期のバージョンでは、`for...of` は存在しなかったので、これが配列を反復処理する標準的な方法でした。
+しかし、この方法は、コードにバグを引き起こす可能性が高くなります。例えば、
+
+- 配列の添字が 1 ではなく 0 から始まることを忘れて、`i` を `1` から始めてしまうかもしれません。
+- 最後の配列の添字が `length - 1` にあることを忘れて、`i <= cats.length` で止めてしまうかもしれません。
+
+このような理由から、通常は、できる限り `for...of` を使用するのがベストです。
+
+時には、配列を繰り返し処理するために `for` ループを使用する必要があります。
+例えば、以下のコードでは、猫の一覧をメッセージとして出力したい。
+
+```js
+const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+let myFavoriteCats = 'My cats are called ';
+
+for (const cat of cats) {
+  myFavoriteCats += `${cat}, `
+}
+
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
+```
+
+最終的に出力される文章はあまり整ったものではありません。
+
+```
+My cats are called Pete, Biggles, Jasmine,
+```
+
+最後の猫については、このように別の処理をしてくれるのが望ましいと思います。
+
+```
+My cats are called Pete, Biggles, and Jasmine.
+```
+
+しかし、これを行うには、ループがいつ最後の反復処理に入ったかを知る必要があります。そのためには、`for` ループを使い、`i` の値を調べればよいのです。
+
+```js
+const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+let myFavoriteCats = 'My cats are called ';
+
+for (let i = 0; i < cats.length; i++) {
+  if (i === cats.length - 1) {   // 配列の最後にいる場合
+    myFavoriteCats += `and ${cats[i]}.`
+  } else {
+    myFavoriteCats += `${cats[i]}, `
+  }
+}
+
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+```
+
+## break でループを終了
+
+すべての反復処理が終了する前にループを終了したいときは、[break](/ja/docs/Web/JavaScript/Reference/Statements/break) 文を使用して終了させることができます。
+前回の記事の [switch 文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#switch_文)で、入力した値が switch 文の case に一致したとき、switch 文を抜け、それ以降のコードを実行するために `break` 文を使用しました。
 
 これはループでも同様で、`break` 文を使用することで即時にループを抜けて、ブラウザーに続きのコードを実行させることができます。
 
-それでは、連絡先 (電話番号を持っている) の配列の中から特定の連絡先を検索してみましょう。まずは HTML です。検索するテキスト入力用の {{htmlelement("input")}} 要素と、検索内容を送信 (submit) する {{htmlelement("button")}} 要素、検索結果を表示する {{htmlelement("p")}} 要素を備えます。
+連絡先や電話番号の配列を検索して、見つけたい番号だけを返したいとします。
+まずは HTML です。検索するテキスト入力用の {{htmlelement("input")}} 要素と、検索内容を送信 (submit) する {{htmlelement("button")}} 要素、検索結果を表示する {{htmlelement("p")}} 要素を備えます。
 
 ```html
 <label for="search">連絡先の名前: </label>
@@ -271,7 +376,7 @@ for (let i = 0; i < cats.length; i++) {
 <p></p>
 ```
 
-現在の JavaScript について：
+現在の JavaScript では、
 
 ```js
 const contacts = ['クリス:2232322', 'サラ:3453456', 'ビル:7654322', 'メアリー:9998769', 'ダイアン:9384975'];
@@ -279,161 +384,92 @@ const para = document.querySelector('p');
 const input = document.querySelector('input');
 const btn = document.querySelector('button');
 
-btn.addEventListener('click', function() {
-  let searchName = input.value.toLowerCase();
+btn.addEventListener('click', () => {
+  const searchName = input.value.toLowerCase();
   input.value = '';
   input.focus();
-  for (let i = 0; i < contacts.length; i++) {
-    let splitContact = contacts[i].split(':');
+  para.textContent = '';
+  for (const contact of contacts) {
+    const splitContact = contact.split(':');
     if (splitContact[0].toLowerCase() === searchName) {
-      para.textContent = splitContact[0] + ' の電話番号は ' + splitContact[1] + ' です。';
+      para.textContent = `${splitContact[0]}の電話番号は${splitContact[1]}です。`;
       break;
-    } else {
-      para.textContent = '連絡先が見つかりません。';
     }
+  }
+  if (para.textContent === '') {
+   para.textContent = '連絡先が見つかりません。';
+ }
+});
+```
+
+{{ EmbedLiveSample('Exiting_loops_with_break', '100%', 100) }}
+
+1. コードの先頭で、いくつか変数を宣言しています。その中に、連絡先の情報を持った配列があり、各要素は名前と電話番号をコロンで区切った文字列となっています。
+2. 次に、ボタン (`btn`) にイベントリスナーを設定しています。ボタンが押されたときに検索結果が戻ってくるようになっています。
+3. テキスト入力欄に入力された値を `searchName` という変数に格納してから、次の検索に備え、入力欄をクリアし、フォーカスを設定しています。検索に大文字小文字を区別しないよう、文字列に [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を実行しているのに注意してください。
+4. ここからが本題の `for...of` ループです。
+
+    1. ループの中では、まず現在の連絡先をコロン文字で分割し、結果の 2 つの値を `splitContact` という配列に格納します。
+    2. それから、条件文を用いて、`splitContact[0]` （連絡先の名前）が入力された `searchName` にまた [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を使って小文字化したものと等しいかを判定します。
+      もし等しければ、文字列を段落に入れてその連絡先の電話番号を示し、`break` を使用してループを終了しています。
+
+5. ループの後、連絡先が設定されたかどうかをチェックし、設定されていない場合は段落テキストを「連絡先が見つかりません。」に設定しています。
+
+> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) で見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります）。
+
+## continue で繰り返しをスキップする
+
+[continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) 文は `break` と同じような動作をします。けれど、ループを完全に抜けてしまうのではなく、次の繰り返しまで飛ばします。
+それでは、今度は入力として数値を受け取り、その数以下で整数の平方である値のみを返すという例を見てみましょう。
+
+HTML は基本的に前回の例と同じで、単純なテキスト入力と、出力用の段落があります。
+
+```html
+<label for="number">数値を入力してください: </label>
+<input id="number" type="text" />
+<button>整数の平方を生成</button>
+
+<p>出力:</p>
+```
+
+JavaScript もほとんど同じですが、ループ自体が若干異なります。
+
+```js
+const para = document.querySelector('p');
+const input = document.querySelector('input');
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', () => {
+  para.textContent = 'Output: ';
+  const num = input.value;
+  input.value = '';
+  input.focus();
+  for (let i = 1; i <= num; i++) {
+    let sqRoot = Math.sqrt(i);
+    if (Math.floor(sqRoot) !== sqRoot) {
+      continue;
+    }
+    para.textContent += `${i} `;
   }
 });
 ```
 
-```html hidden
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>連絡先検索の例</title>
-    <style>
-
-    </style>
-  </head>
-  <body>
-
-  <label for="search">連絡先の名前: </label>
-  <input id="search" type="text">
-  <button>検索</button>
-
-  <p></p>
-
-
-    <script>
-    const contacts = ['クリス:2232322', 'サラ:3453456', 'ビル:7654322', 'メアリー:9998769', 'ダイアン:9384975'];
-    const para = document.querySelector('p');
-    const input = document.querySelector('input');
-    const btn = document.querySelector('button');
-
-    btn.addEventListener('click', function() {
-      let searchName = input.value;
-      input.value = '';
-      input.focus();
-      for (let i = 0; i < contacts.length; i++) {
-        let splitContact = contacts[i].split(':');
-        if (splitContact[0] === searchName) {
-          para.textContent = splitContact[0] + ' の電話番号は ' + splitContact[1] + ' です。';
-          break;
-        } else {
-          para.textContent = '連絡先が見つかりません。';
-        }
-      }
-    });
-    </script>
-
-  </body>
-</html>
-```
-
-{{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
-
-1. コードの先頭で、いくつか変数を宣言しています。その中に、連絡先の情報を持った配列があり、各要素は名前と電話番号をコロンで区切った文字列となっています。
-2. 次に、ボタン (`btn`) にイベントリスナーを設定しています。ボタンが押されたときに検索結果が戻ってくるようになっています。
-3. テキスト入力欄に入力された値を `searchName` という変数に格納してから、次の検索に備え、入力欄をクリアし、フォーカスを設定しています。検索に大文字小文字を気にしないよう、文字列に [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を実行しているのに注意してください。
-4. ここからが本題の for ループです。
-
-    1. カウンター変数を `0` から始め、`contacts.length` より小さくなくなるまで、ループの繰り返しの度に `i` を 1 増やしていきます。
-    2. ループの内側では、まず現在の連絡先 (`contacts[i]`) をコロンの文字で分割し、`splitContact` という配列に格納します。
-    3. それから、条件文を用いて、`splitContact[0]` (連絡先の名前) が入力された `searchName` にまた [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を使って小文字化したものと等しいかを判定します。もし等しければ、連絡先の電話番号を段落 ({{htmlelement("p")}} 要素) に表示し、`break` を使用してループを終了しています。
-
-5. `(contacts.length-1)` 回目の繰り返しの後に、もし連絡先の名前が入力された検索語に一致しなければ、段落に「連絡先が見つかりません。」という文字列を表示し、条件が true では無くなるまでループを継続します。
-
-> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) で見ることができます ([動いているデモ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります)。
-
-## continue で繰り返しをスキップする
-
-[continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) 文は `break` と同じような動作をします。けれど、ループを完全に抜けてしまうのではなく、次の繰り返しまで飛ばします。それでは、今度は入力として数値を受け取り、その数以下で整数の平方である値のみを返すという例を見てみましょう。
-
-HTML は基本的に先ほどの例と同様で、1 つのテキストボックスと出力用の段落があります。JavaScript もループ自体を除けばほぼ同じですので、違う部分のみを示します。
-
-```js
-let num = input.value;
-
-for (let i = 1; i <= num; i++) {
-  let sqRoot = Math.sqrt(i);
-  if (Math.floor(sqRoot) !== sqRoot) {
-    continue;
-  }
-
-  para.textContent += i + ' ';
-}
-```
-
 出力結果はこちらです。
 
-```html hidden
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>整数の平方根の生成</title>
-    <style>
+{{ EmbedLiveSample('Skipping_iterations_with_continue', '100%', 100) }}
 
-    </style>
-  </head>
-  <body>
-
-  <label for="number">数値を入力してください: </label>
-  <input id="number" type="text">
-  <button>整数の平方根を生成</button>
-
-  <p>出力結果: </p>
-
-
-    <script>
-    const para = document.querySelector('p');
-    const input = document.querySelector('input');
-    const btn = document.querySelector('button');
-
-    btn.addEventListener('click', function() {
-      para.textContent = 'Output: ';
-      let num = input.value;
-      input.value = '';
-      input.focus();
-      for (let i = 1; i <= num; i++) {
-        let sqRoot = Math.sqrt(i);
-        if (Math.floor(sqRoot) !== sqRoot) {
-          continue;
-        }
-
-        para.textContent += i + ' ';
-      }
-    });
-    </script>
-
-  </body>
-</html>
-```
-
-{{ EmbedLiveSample('Hidden_code_4', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
-
-1. 今回の入力内容は数値 (`num`) です。`for` ループには、カウンターの初期値として、(今回は 0 ではなく) 1 が与えられ、終了する条件としてカウンターが入力値 (`num`) より大きくなった場合と指定されており、イテレーターとして、カウンターに 1 ずつ加算するよう指定されています。
-2. ループ内部では、各値の平方根を [Math.sqrt(i)](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt) を使用して求め、求めた平方根を切り捨てた値が、切り捨てる前の平方根と等しいかどうかを調べています (切り捨てには [Math.floor()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) に任意の数値を渡します)。
+1. 今回の入力内容は数値 (`num`) です。`for` ループには、カウンターの初期値として、（今回は 0 ではなく）1 が与えられ、終了する条件としてカウンターが入力値 (`num`) より大きくなった場合と指定されており、イテレーターとして、カウンターに 1 ずつ加算するよう指定されています。
+2. ループ内部では、各値の平方根を [Math.sqrt(i)](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt) を使用して求め、求めた平方根を切り捨てた値が、切り捨てる前の平方根と等しいかどうかを調べています（切り捨てには [Math.floor()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) に任意の数値を渡します）。
 3. もし、平方根と切り捨てた数値が等しくないのなら (`!==`)、平方根は整数ではないことを示しています。整数以外には興味がありませんので、`continue` 文を用いて、その数値をどこにも保持することなく、次のループの繰り返しまでスキップします。
 4. もし、その平方根が整数値であるならば、if ブロックは飛ばされるので、`continue` 文は実行されません。代わりに、現在の `i` の値を段落の内容の後ろにスペースと一緒に結合します。
 
-> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) でも見ることができます ([動いているデモ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)もあります)。
+> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) でも見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)もあります）。
 
-## while と do ... while
+## while と do...while
 
-`for` は JavaScript で利用可能な唯一のループのタイプではありません。実際には多くのものがありますが、これらのすべてを理解する必要はありませんが、仕事の同じ機能をわずかに異なる方法で認識できるように、他のものの構造を見ておく価値があります。
+`for` は JavaScript で利用可能な唯一のループの種類ではありません。実際には多くのものがありますが、これらのすべてを理解する必要はありませんが、仕事の同じ機能をわずかに異なる方法で認識できるように、他のものの構造を見ておく価値があります。
 
-まず、while ループを見てみましょう。このループの構文は次のようになります。
+まず、[while](/ja/docs/Web/JavaScript/Reference/Statements/while) ループを見てみましょう。このループの構文は次のようになります。
 
 ```
 初期化処理
@@ -444,29 +480,38 @@ while (条件) {
 }
 ```
 
-これは for ループとよく似ていますが、初期化条件はループの前に設定され、最後の式は実行するコードの後のループ内に含まれます。これら二つの項目は丸括弧の中に含まれません。条件は、`for` ではなく `while` キーワードが前に付いた括弧内に含まれています。
+これは `for` ループととてもよく似た動作をしますが、初期化変数がループの前に設定される点と、最後の式が、これら 2 つの項目が括弧の中に入っているのではなく、実行するコードの後にループの中に含まれている点が異なります。
+条件は括弧の中に入っており、その前には `for` ではなく `while` キーワードが置かれています。
 
-for ループにもある３つの項目が、for ループとおなじ順序で定義されています。これは理にかなっています。条件が true では無くなるポイントに達したかどうかを確認する前に初期化処理を定義する必要があります ; ループ内のコードが実行された後（1 回の繰り返しの完了）、最期の式が実行されます。これは、条件がまだ true である場合にのみ発生します。
+同じ 3 つの項目が、for ループの中で定義されているのと同じ順番で存在しています。
+これは、条件が真かどうかをチェックする前に、初期化処理を定義しておく必要があるためです。
+そして、ループ内のコードが実行された（反復処理が完了した）後に最後の式が実行されますが、これは条件がまだ真である場合にのみ実行されます。
 
-猫のリストの例をもう一度見てみましょう。ただし、while ループを使うように書き直してみましょう：
+猫のリストの例をもう一度見てみましょう。ただし、while ループを使うように書き直してみましょう。
 
 ```js
+const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+let myFavoriteCats = 'My cats are called ';
+
 let i = 0;
 
 while (i < cats.length) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    myFavoriteCats += `and ${cats[i]}.`;
   } else {
-    info += cats[i] + ', ';
+    myFavoriteCats += `${cats[i]}, `;
   }
 
   i++;
 }
+
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **メモ:** これは期待どおりに動作します。[GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
+> **メモ:** これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)を見ることもできます）。
 
-[do ... while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) ループは非常によく似ていますが、while 構造にはバリエーションがあります。
+[do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) ループはとてもよく似ていますが、while 構造の別な形です。
 
 ```
 初期化処理
@@ -477,61 +522,70 @@ do {
 } while (条件)
 ```
 
-この場合、初期化処理は、ループが始まる前に、再び最初に来ています。キーワードは、実行するコードと最期の式を含む中括弧の直前にあります。
+この場合、初期化処理は再び、ループが始まる前に来ています。キーワードは、実行するコードと最期の式を含む中括弧の直前にあります。
 
-ここでの違いは、条件がほかの全ての後にあり、括弧で囲まれ、その前に `while` キーワードが付いていることです。`do...while` ループでは、中括弧内のコードは、チェックが再度実行されるかどうかを確認する前に常に 1 回実行されます (while と for の場合、チェックが最初に来るため、コードは実行されない可能性があります) 。
+`do...while` ループと `while` ループの主な違いは、_`do...while` ループの中のコードは常に少なくとも 1 回は実行される_ ということです。それは、ループ内のコードの後に条件が来るからです。つまり、常にそのコードを実行し、その後、もう一度実行する必要があるかどうかをチェックするのです。`while` ループや `for` ループでは、チェックが最初に来るので、そのコードは一度も実行されないかもしれません。
 
-`do...while` ループを使用するように、猫のリストの例をもう一度書き直してみましょう：
+`do...while` ループを使用するように、猫のリストの例をもう一度書き直してみましょう。
 
 ```js
+const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+let myFavoriteCats = 'My cats are called ';
+
 let i = 0;
 
 do {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    myFavoriteCats += `and ${cats[i]}.`;
   } else {
-    info += cats[i] + ', ';
+    myFavoriteCats += `${cats[i]}, `;
   }
 
   i++;
 } while (i < cats.length);
+
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **メモ:** 再度、これは期待どおりに動作します。[GitHub でライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
+> **メモ:** こちらも、これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
 
-> **警告:** while と do ... while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。そうしなければループは永遠に進み、ブラウザーはそれ強制的に停止させるか、クラッシュします。これは**無限ループ**と呼ばれます。
+> **警告:** while と do...while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。
+> そうしなければループは永遠に進み、ブラウザーはそれ強制的に停止させるか、クラッシュします。これは**無限ループ**と呼ばれます。
 
-## アクティブラーニング: カウントダウンを開始します!
+## アクティブラーニング: 発射のカウントダウン
 
-この練習では、出力ボックスへの簡単な起動カウントダウンを 10 から Blast off まで印字してください。具体的には、
+この練習では、出力ボックスへの簡単な発射のカウントダウンを 10 から Blast off まで表示してください。
+具体的には、次のようなことをしていただきます。
 
-- 10 から 0 までのループ。イニシャライザを提供します — `let i = 10;`.
-- 各繰り返しに対して、新しい段落を作成し、それを出力\<div>に追加します。これは、`const output = document.querySelector('.output');`を使用して選択したものです。コメントでは、ループ内のどこかで使用する必要がある 3 つのコード行を提供しました
+- 10 から 0 までのループ。初期化処理として `let i = 10;` を示します。
+- それぞれの反復処理に対して、新しい段落を作成し、それを出力用の `<div>` に追加します。`const output = document.querySelector('.output');` を使うことを選択しました。
+  コメント内で、ループ内のどこかで使用する必要がある 3 つのコード行を提供します。
 
-  - `const para = document.createElement('p');` — 新しいパラグラフを作成します
-  - `output.appendChild(para);` — 出力の `<div>`にパラグラフを追加します。
-  - `para.textContent =` — パラグラフ内のテキストを、イコールの後の右辺においたものにする。
+  - `const para = document.createElement('p');` — 新しい段落を作成します。
+  - `output.appendChild(para);` — 出力の `<div>` に段落を追加します。
+  - `para.textContent =` — 段落内のテキストを、イコール記号の後の右辺においたものにします。
 
-- 反復回数が異なると、その反復の段落に異なるテキストを入れる必要があります（条件文と複数の `para.textContent =` 行が必要です）。
+- 反復回数が異なれば、その反復回数の段落に入れるテキストも異なります（条件文と複数の `para.textContent =` 行が必要です）。
 
-  - 数字が 10 の場合、パラグラフに "Countdown 10" と出力する。
-  - 数字が 0 の場合、パラグラフに "Blast off!" と出力する。
-  - その他の数字では、パラグラフにその数字を出力する。
+  - 数字が 10 の場合、段落に "Countdown 10" と出力する。
+  - 数字が 0 の場合、段落に "Blast off!" と出力する。
+  - その他の数字では、段落にその数字を出力する。
 
-- イテレーターを含めることを忘れないでください！ですが、この例では各反復の後にカウント(アップではなく)ダウンするため、`i++` は要らないでしょう — 減少方向にどうやって反復しますか？
+- イテレーターを含めることを忘れないでください！ですが、この例では各反復の後にカウント（アップではなく）ダウンするため、`i++` は要らないでしょう。減少方向にどうやって反復するのでしょうか？
 
-> **メモ:** あなたがループ(例えば (while(i>=0))からタイピングを始めると、ブラウザーが固まってしまうかもしれません。終了条件をまだ入力していないからです。注意して下さい。この問題に対処するにはコメントの中にコードを書き始めて、完了してからコメントを削除することです。
+> **メモ:** あなたがループ（例えば while(i>=0)）からタイピングを始めると、ブラウザーが固まってしまうかもしれません。終了条件をまだ入力していないからです。注意して下さい。この問題に対処するにはコメントの中にコードを書き始めて、完了してからコメントを削除することです。
 
-間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。
+間違えた場合は、［リセット］ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、［解答を表示］を押して解決策を見てください。
 
 ```html hidden
-<h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
+<h2>ライブ出力</h2>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
-</div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<h2>編集可能なコード</h2>
+<p class="a11y-label">
+  Esc を押すと、コード領域からフォーカスを外すことができます（Tab はタブ文字を挿入します）。
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
 output.innerHTML = '';
@@ -544,12 +598,12 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="解答を表示" />
 </div>
 ```
 
-```css hidden
+```css
 html {
   font-family: sans-serif;
 }
@@ -586,22 +640,41 @@ reset.addEventListener('click', function() {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = '解答を表示';
   updateCode();
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === '解答を表示') {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = '解答を隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = '解答を表示';
   }
   updateCode();
 });
 
-let jsSolution = 'const output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+let jsSolution = `const output = document.querySelector('.output');
+output.innerHTML = '';
+
+let i = 10;
+
+while (i >= 0) {
+  const para = document.createElement('p');
+  if (i === 10) {
+    para.textContent = \`Countdown \${i}\`;
+  } else if (i === 0) {
+    para.textContent = 'Blast off!';
+  } else {
+    para.textContent = i;
+  }
+
+  output.appendChild(para);
+
+  i--;
+}`;
+
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -623,12 +696,12 @@ textarea.onkeydown = function(e){
 
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  let caretPos = textarea.selectionStart;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -637,10 +710,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === '解答を表示') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -650,48 +723,51 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Active_learning', '100%', 880, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Active_learning_Launch_countdown', '100%', 900) }}
 
 ## アクティブラーニング: ゲストリストに記入する
 
-この演習では、配列に格納された名前のリストを取得して、それらをゲストリストに入れることが必要です。しかし、これはそれほど簡単ではありません — 彼らは貪欲で失礼で、常にすべての食べ物を食べるので、私たちはフィルとローラを入れさせたくありません！ 私たちは 2 つのリストを持っています。1 つは承認するゲストのためのもの、もう 1 つは拒否するゲストのためのものです。
+この演習では、配列に格納された名前のリストを、ゲストリストにしていただきます。しかし、フィルとローラは貪欲で無礼で、いつも料理を全部食べてしまうので、ゲストに入れたくありません！私たちは 2 つのリストを用意しました。1 つはゲストを認めるためのリスト、もう 1 つはゲストを拒否するためのリストです。
 
-具体的には、
+具体的には、次のようなことをしていただきます。
 
-- 0 から `people` 配列の長さまで反復するループを作成します。`let i = 0;` の初期化処理で始める必要がありますが、どのような条件が必要ですか？
+- 0 から `people` 配列の長さまで反復するループを作成します。
 - 各ループ反復中に、条件文を使用して現在の配列項目が "Phil" または "Lola" に等しいかチェックします。
 
-  - そうである場合は、`refused` パラグラフの `textContent` の最後に配列項目を連結し、その後にカンマとスペースを続けます
-  - そうでない場合は、配列項目を、`admitted` パラグラフの `textContent` の末尾に連結し、その後にカンマとスペースを続けます
+  - そうである場合は、`refused` 段落の `textContent` の最後に配列項目を連結し、その後にカンマとスペースを続けます
+  - そうでない場合は、配列項目を、`admitted` 段落の `textContent` の末尾に連結し、その後にカンマとスペースを続けます
 
-私たちはすでにあなたに次のものを提供しました：
+既に提供されているものは次のものです。
 
-- `let i = 0;` — イニシャライザー
 - `refused.textContent +=` — `refused.textContent` の後に文字を連結する開始行
 - `admitted.textContent +=` — `admitted.textContent` の後に文字を連結する開始行
 
-特別ボーナス問題 — 上のタスクを正常に完了すると、カンマで区切られた 2 つの名前リストが残されますが、それらは整頓されません。それぞれの末尾にカンマがあります。それぞれの場合に最後のカンマを切り取り、末尾にピリオドを追加した行をどのように書くかという問題を解決出来ますか？ヘルプのため[便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)の記事を見てみてください。
+特別ボーナス問題 — 上のタスクを正常に完了すると、カンマで区切られた 2 つの名前リストが残されますが、それらは整頓されません。それぞれの末尾にカンマがあります。
+それぞれの場合に最後のカンマを切り取り、末尾にピリオドを追加した行をどのように書くかという問題を解決出来ますか？
+ヘルプのため[便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)の記事を見てみてください。
 
 間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。
 
 ```html hidden
-<h2>Live output</h2>
+<h2>ライブ出力</h2>
 <div class="output" style="height: 100px;overflow: auto;">
   <p class="admitted">Admit: </p>
   <p class="refused">Refuse: </p>
 </div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<h2>編集可能なコード</h2>
+<p class="a11y-label">
+  Esc を押すと、コード領域からフォーカスを外すことができます（Tab はタブ文字を挿入します）。
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
 const admitted = document.querySelector('.admitted');
 const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: '
+refused.textContent = 'Refuse: ';
 
-// let i = 0;
+// loop starts here
 
 // refused.textContent += ;
 // admitted.textContent += ;
@@ -699,8 +775,8 @@ refused.textContent = 'Refuse: '
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="解答を表示"
 </div>
 ```
 
@@ -741,22 +817,41 @@ reset.addEventListener('click', function() {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "解答を表示";
   updateCode();
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if(solution.value === "解答を表示") {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "解答を表示";
   }
   updateCode();
 });
 
-const jsSolution = 'const people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nconst admitted = document.querySelector(\'.admitted\');\nconst refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nlet i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+const jsSolution = `
+const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+const admitted = document.querySelector('.admitted');
+const refused = document.querySelector('.refused');
+
+admitted.textContent = 'Admit: ';
+refused.textContent = 'Refuse: ';
+
+for (const person of people) {
+  if (person === 'Phil' || person === 'Lola') {
+    refused.textContent += \`\${person}, \`;
+  } else {
+    admitted.textContent += \`\${person}, \`;
+  }
+}
+
+refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';
+admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';`;
+
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -778,12 +873,12 @@ textarea.onkeydown = function(e){
 
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
-  const tcaretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  let caretPos = textarea.selectionStart;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -792,10 +887,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if(solution.value === "解答を表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -805,13 +900,27 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Active_learning_2', '100%', 680, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Active_learning_Filling_in_a_guest_list', '100%', 680) }}
 
-## どのタイプのループを使用しますか？
+## どの種類のループを使用するのか
 
-基本的な用途では for、while、do ... while ループはほぼ互換性があります。それらはすべて同じ問題を解決するために使用することができます。どちらを使用するかは、あなたの個人的な好みに大きく左右されます。これは、どれが最も覚えやすいか、最も直感的かということです。それらをもう一度見てみましょう。
+配列やそれを扱うオブジェクトを反復処理し、各項目の添字の位置にアクセスする必要がない場合は、`for...of`が最良の選択となります。読みやすいし、間違うことも少ないからです。
 
-まずは `for`:
+その他の用途では、`for`、`while`、`do...while` のループはほとんど互換性があります。
+これらはすべて同じ問題を解決するために使うことができ、どれを使うかは個人的な好み、つまり覚えやすいか直感的かによって大きく変わってきます。
+少なくとも最初は `for` をお勧めします。初期化処理、条件、最後の式がすべて括弧の中にきちんと入るので、どこに何があるのかがわかりやすく、見落としがないかをチェックしやすいからです。
+
+では、もう一度見てみましょう。
+
+まずは `for...of` です。
+
+```
+for (const 項目 of 配列) {
+  // 実行するコード
+}
+```
+
+`for` です。
 
 ```
 for (初期化処理; 条件; 最後の式) {
@@ -819,7 +928,7 @@ for (初期化処理; 条件; 最後の式) {
 }
 ```
 
-`while`:
+`while` です。
 
 ```
 初期化処理
@@ -830,7 +939,7 @@ while (条件) {
 }
 ```
 
-そして最後は `do...while`:
+そして最後は `do...while` です。
 
 ```
 初期化処理
@@ -841,8 +950,6 @@ do {
 } while (条件)
 ```
 
-少なくとも最初は `for` から始めることをお勧めします。すべてを覚えておくことが簡単だからです。初期化処理、条件、最後の式をすべて括弧内にきちんと入れなければならないので、それらがどこにあるかや見落としていないことの確認が簡単です。
-
 > **メモ:** 高度な/特殊な状況やこの記事の範囲を超えて有用な、他のループタイプ/機能もあります。ループ学習をさらに進めたい場合は、高度な[ループと反復処理ガイド](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)をお読みください。
 
 ## スキルをテストしよう!
@@ -851,26 +958,17 @@ do {
 
 ## まとめ
 
-この記事では、背後にある基本的な概念と、JavaScript でコードをループする際に使用できるさまざまなオプションについて説明しました。今はループが反復コードを処理するための良い仕組みである理由がはっきり分かり、自身の例で使用できることを誇らしく思うでしょう。
+この記事では、背後にある基本的な概念と、JavaScript でコードをループする際に使用できるさまざまなオプションについて説明しました。
+ループが繰り返しの多いコードを処理するのに適したメカニズムであることを理解し、自分の例でループを使う気になったはずです。
 
-あなたが理解できなかったことがあれば、記事をもう一度読んだり、ヘルプを求めて[私たちに連絡](/ja/docs/Learn#Contact_us)してください。
+理解できなかったことがあれば、記事をもう一度読んだり、ヘルプを求めて[私たちに連絡](/ja/docs/Learn#連絡方法)してください。
 
 ## 関連情報
 
 - [ループと反復処理](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [for 文のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/for)
+- [for...of のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
 - [while](/ja/docs/Web/JavaScript/Reference/Statements/while) と [do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) リファレンス
 - [break](/ja/docs/Web/JavaScript/Reference/Statements/break) と [continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) リファレンス
 - [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — 高度なループのベストプラクティス
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
-
-## このモジュール
-
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
-- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

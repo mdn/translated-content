@@ -9,8 +9,10 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 
 ## 语法
 
-```plain
-typedarray.fill(value[, start = 0[, end = this.length]])
+```js-nolint
+fill(value)
+fill(value, start)
+fill(value, start, end)
 ```
 
 ### 参数

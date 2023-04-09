@@ -3845,7 +3845,7 @@
     "modified": "2020-03-12T19:44:59.221Z",
     "contributors": ["jsgao0", "flyinglimao"]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-03-12T19:44:52.158Z",
     "contributors": [
       "xuan0123",
@@ -3881,7 +3881,7 @@
       "Kaiyeh"
     ]
   },
-  "Web/JavaScript/Guide/Expressions_and_Operators": {
+  "Web/JavaScript/Guide/Expressions_and_operators": {
     "modified": "2020-10-12T06:55:01.538Z",
     "contributors": ["ShawnLin", "jackblackevo", "Kaiyeh"]
   },
@@ -3939,7 +3939,7 @@
       "sycheng"
     ]
   },
-  "Web/JavaScript/Guide/Iterators_and_Generators": {
+  "Web/JavaScript/Guide/Iterators_and_generators": {
     "modified": "2020-03-23T19:43:30.431Z",
     "contributors": ["hiimeimei", "wanjingzhang"]
   },
@@ -3955,7 +3955,7 @@
     "modified": "2020-08-17T03:02:46.243Z",
     "contributors": ["kenchill", "UnciaX"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions": {
+  "Web/JavaScript/Guide/Regular_expressions": {
     "modified": "2020-05-25T23:31:32.570Z",
     "contributors": [
       "LeoWangJ",
@@ -3980,7 +3980,7 @@
     "modified": "2020-03-12T19:47:23.033Z",
     "contributors": ["HamiltonWang", "flyinglimao"]
   },
-  "Web/JavaScript/Guide/Working_with_Objects": {
+  "Web/JavaScript/Guide/Working_with_objects": {
     "modified": "2020-03-12T19:38:34.548Z",
     "contributors": [
       "Euphokumiko",
@@ -4013,7 +4013,7 @@
     "modified": "2020-03-12T19:35:23.439Z",
     "contributors": ["jackblackevo", "fscholz", "irvinfly", "chiayuan"]
   },
-  "Web/JavaScript/Language_Overview": {
+  "Web/JavaScript/Language_overview": {
     "modified": "2020-03-12T19:36:04.881Z",
     "contributors": [
       "kourge",
@@ -4034,7 +4034,7 @@
       "BobChao"
     ]
   },
-  "Web/JavaScript/Memory_Management": {
+  "Web/JavaScript/Memory_management": {
     "modified": "2020-12-04T15:05:56.547Z",
     "contributors": ["chengr4", "ballfish", "mybaseball52"]
   },
@@ -4707,11 +4707,11 @@
       "ethertank"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Comma_Operator": {
+  "Web/JavaScript/Reference/Operators/Comma_operator": {
     "modified": "2020-03-12T19:45:21.494Z",
     "contributors": ["jackblackevo"]
   },
-  "Web/JavaScript/Reference/Operators/Conditional_Operator": {
+  "Web/JavaScript/Reference/Operators/Conditional_operator": {
     "modified": "2020-10-15T22:29:30.361Z",
     "contributors": ["liaocCM"]
   },
@@ -4730,7 +4730,7 @@
     "modified": "2020-03-12T19:46:20.319Z",
     "contributors": ["cyanchu", "jackblackevo"]
   },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+  "Web/JavaScript/Reference/Operators/Operator_precedence": {
     "modified": "2020-03-12T19:45:00.937Z",
     "contributors": ["KateWuSH", "jackblackevo"]
   },

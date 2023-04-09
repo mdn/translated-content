@@ -7,16 +7,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 
 **`Array.isArray()`** 用于确定传递的值是否是一个 {{jsxref("Array")}}。
 
-```js
-Array.isArray([1, 2, 3]);  // true
-Array.isArray({foo: 123}); // false
-Array.isArray('foobar');   // false
-Array.isArray(undefined);  // false
-```
+{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
 
 ## 语法
 
-```js
+```js-nolint
 Array.isArray(value)
 ```
 

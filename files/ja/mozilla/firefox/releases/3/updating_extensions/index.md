@@ -110,7 +110,7 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 - `nsIDOMScrollListener`
 - `nsIDOMMutationListener`
 - `nsIDOMPageTransitionListener`
-- `nsICloseAllWindows` ({{ Bug(386200) }} 参照)
+- `nsICloseAllWindows` ([Firefox バグ 386200](https://bugzil.la/386200) 参照)
 
 ### Step 4: 関連するクローム周りの変更を確認する
 
@@ -155,16 +155,16 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 _もし、拡張機能を Firefox 3 対応にするために必要な小さい変更があったら、ここに追加してください。_
 
 - `chrome://browser/base/utilityOverlay.js` は、セキュリティ上の理由からサポートされなくなりました。これまでこのスクリプトを利用していた場合は、`chrome://browser/content/utilityOverlay.js` へ切り替えてください。
-- `nsIAboutModule` の実装には、`getURIFlags` メソッドのサポートが必要になりました。詳しくは [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) を参照してください。これは新しい `about:` URI を提供する拡張機能に影響します。 ({{ Bug(337746) }})
-- [`<xul:tabbrowser>`](/ja/docs/Mozilla/Tech/XUL/tabbrowser) 要素は「ツールキット」の一部ではなくなりました ({{ Bug(339964) }})。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
+- `nsIAboutModule` の実装には、`getURIFlags` メソッドのサポートが必要になりました。詳しくは [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) を参照してください。これは新しい `about:` URI を提供する拡張機能に影響します。 ([Firefox バグ 337746](https://bugzil.la/337746))
+- [`<xul:tabbrowser>`](/ja/docs/Mozilla/Tech/XUL/tabbrowser) 要素は「ツールキット」の一部ではなくなりました ([Firefox バグ 339964](https://bugzil.la/339964))。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
 - `nsISupports_proxies` の変更と、おそらくスレッド関連インターフェイスへの変更については、ドキュメントを用意する必要があります。
-- XUL ファイル内で `<?xml-stylesheet ?>` などの XML 処理命令を用いている場合、 {{ Bug(319654) }} で行われた以下の変更に注意してください。
+- XUL ファイル内で `<?xml-stylesheet ?>` などの XML 処理命令を用いている場合、 [Firefox バグ 319654](https://bugzil.la/319654) で行われた以下の変更に注意してください。
 
   1. XML PI が XUL ドキュメントの DOM に追加されました。これは、 {{ Domxref("Node.firstChild", "document.firstChild") }} が必ずしもルート要素を返すとは限らない、ということを意味します。スクリプト内でルートドキュメントを得るには、代わりに {{ Domxref("document.documentElement") }} を用いてください。
   2. `<?xml-stylesheet ?>` と `<?xul-overlay ?>` 処理命令は、ドキュメントの前文以外の場所に書かれた場合、動作しなくなりました。
 
-- `window.addEventListener("load", myFunc, true)` がウェブコンテンツが読み込まれた際 (ブラウザーのページ読み込み時) に呼び出されなくなりました。これは、 {{ Bug(296639) }} によって inner ウィンドウと outer ウィンドウの関係が変わったことによります。簡単な修正方法は `gBrowser.addEventListener("load", myFunc, true)` を使うことで、[ここ](/ja/docs/Code_snippets/Tabbed_browser#detecting_page_load)書かれている通りです。この方法は Firefox 2 でも有効です。
+- `window.addEventListener("load", myFunc, true)` がウェブコンテンツが読み込まれた際 (ブラウザーのページ読み込み時) に呼び出されなくなりました。これは、 [Firefox バグ 296639](https://bugzil.la/296639) によって inner ウィンドウと outer ウィンドウの関係が変わったことによります。簡単な修正方法は `gBrowser.addEventListener("load", myFunc, true)` を使うことで、[ここ](/ja/docs/Code_snippets/Tabbed_browser#detecting_page_load)書かれている通りです。この方法は Firefox 2 でも有効です。
 - `content.window.getSelection()` は、文字列を返す、非推奨となった `content.document.getSelection()` とは異なり、オブジェクトを返します (`toString()` を使えば文字列に変換できます)。
 - `event.preventBubble()` は Firefox 3 で非推奨となり、Firefox 3 で削除されました。Firefox 2 でも動作する [`event.stopPropagation()`](/ja/docs/Web/API/Event/stopPropagation) を使ってください。
-- `setTimeout()` を使って開始されるタイマーは、{{ Bug(52209) }} のために行われた修正によって、モーダル形式のウィンドウではブロックされるようになりました。代わりに `nsITimer` を使ってください。
+- `setTimeout()` を使って開始されるタイマーは、[Firefox バグ 52209](https://bugzil.la/52209) のために行われた修正によって、モーダル形式のウィンドウではブロックされるようになりました。代わりに `nsITimer` を使ってください。
 - 信頼できないソース（例：ウェブサイト）が拡張のクロームにアクセスできるようにする必要がある場合は、新しい [`contentaccessible` フラグ](/ja/docs/Chrome_Registration#contentaccessible) を使わなければなりません。

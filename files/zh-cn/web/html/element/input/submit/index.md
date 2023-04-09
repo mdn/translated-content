@@ -19,7 +19,7 @@ slug: Web/HTML/Element/input/submit
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>{{htmlattrxref("type", "input")}} 和 {{htmlattrxref("value", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#type"><code>type</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#value"><code>value</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -38,7 +38,7 @@ slug: Web/HTML/Element/input/submit
 
 ## 值
 
-`<input type="submit">` 元素的 {{htmlattrxref("value", "input")}} 属性包含一个展示在按钮标签上的字符串。如果没有指定 value 属性，按钮就不会拥有真值。
+`<input type="submit">` 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含一个展示在按钮标签上的字符串。如果没有指定 value 属性，按钮就不会拥有真值。
 
 ### 设置 value 属性
 
@@ -64,7 +64,7 @@ slug: Web/HTML/Element/input/submit
 
 ### formaction
 
-一个字符串，指示要将数据提交到的 URL。这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 {{htmlattrxref("action", "form")}} 属性。
+一个字符串，指示要将数据提交到的 URL。这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
 
 此属性在 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素和 {{HTMLElement("button")}} 元素上也可用。
 
@@ -75,22 +75,22 @@ slug: Web/HTML/Element/input/submit
 - `application/x-www-form-urlencoded`
   - : 这是默认值，它使用 {{jsxref("encodeURI", "encodeURI()")}} 之类的算法对文本进行 URL 编码后，以字符串形式发送表单数据。
 - `multipart/form-data`
-  - : 使用 {{domxref("FormData")}} API 来管理数据，从而允许将文件提交到服务器。如果表单包含 {{htmlattrxref("type", "input")}} `file` ([`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)) 的任何 {{HTMLElement("input")}} 元素，则必须使用此编码类型。
+  - : 使用 {{domxref("FormData")}} API 来管理数据，从而允许将文件提交到服务器。如果表单包含 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)) 的任何 {{HTMLElement("input")}} 元素，则必须使用此编码类型。
 - `text/plain`
   - : 纯文本；通常仅对调试有用，调试人员可以轻松查看要提交的数据。
 
-如果指定了 `formenctype` 属性，则该属性的值将覆盖所属表单的 {{htmlattrxref("action", "form")}} 属性。
+如果指定了 `formenctype` 属性，则该属性的值将覆盖所属表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
 
 此属性在 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素和 {{HTMLElement("button")}} 元素上也可用。
 
 ### formmethod
 
-一个字符串，指示提交表单数据时要使用的 HTTP 方法；此值将覆盖所属表单上给出的任何 {{htmlattrxref("method", "form")}} 属性。允许的值为：
+一个字符串，指示提交表单数据时要使用的 HTTP 方法；此值将覆盖所属表单上给出的任何 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) 属性。允许的值为：
 
 - `get`
-  - : URL 通过 `formaction` 或 {{htmlattrxref("action", "form")}} 属性给出的 URL 开始，加上一个问号（“?”）字符，然后加上表单的数据，按照 `formenctype` 或表单的{{htmlattrxref("enctype", "form")}} 属性的描述进行编码。然后使用 HTTP {{HTTPMethod("get")}} 请求将这个 URL 发送到服务器。这种方法对于只包含 ASCII 字符且没有副作用的简单表单很有效。这是默认值。
+  - : URL 通过 `formaction` 或 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性给出的 URL 开始，加上一个问号（“?”）字符，然后加上表单的数据，按照 `formenctype` 或表单的[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性的描述进行编码。然后使用 HTTP {{HTTPMethod("get")}} 请求将这个 URL 发送到服务器。这种方法对于只包含 ASCII 字符且没有副作用的简单表单很有效。这是默认值。
 - `post`
-  - : 表单的数据包含在请求的正文中，该请求的正文使用 HTTP {{HTTPMethod("post")}} 请求发送到由 `formaction` 或 {{htmlattrxref("action", "form")}} 属性指定的 URL 请求。此方法支持复杂的数据和文件附件。
+  - : 表单的数据包含在请求的正文中，该请求的正文使用 HTTP {{HTTPMethod("post")}} 请求发送到由 `formaction` 或 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性指定的 URL 请求。此方法支持复杂的数据和文件附件。
 - `dialog`
   - : 此方法用于指示按钮仅关闭与输入关联的对话框，而根本不传输表单数据。
 
@@ -98,13 +98,13 @@ slug: Web/HTML/Element/input/submit
 
 ### formnovalidate
 
-布尔属性，如果存在，则指定在提交给服务器之前不应对表单进行验证。这将覆盖所属表单上的 {{htmlattrxref("novalidate", "form")}} 属性的值。
+布尔属性，如果存在，则指定在提交给服务器之前不应对表单进行验证。这将覆盖所属表单上的 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性的值。
 
 此属性在 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素和 {{HTMLElement("button")}} 元素上也可用。
 
 ### formtarget
 
-一个字符串，它指定一个名称或关键字，该名称或关键字指示提交表单后在何处显示收到的响应。该字符串必须是**浏览上下文**的名称（即选项卡、窗口或 {{HTMLElement("iframe")}}）。此处指定的值将覆盖 {{HTMLElement("form")}} 上拥有此输入的 {{htmlattrxref("target", "form")}} 属性。
+一个字符串，它指定一个名称或关键字，该名称或关键字指示提交表单后在何处显示收到的响应。该字符串必须是**浏览上下文**的名称（即选项卡、窗口或 {{HTMLElement("iframe")}}）。此处指定的值将覆盖 {{HTMLElement("form")}} 上拥有此输入的 [`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性。
 
 除了选项卡、窗口或内联框架的实际名称之外，还可以使用一些特殊的关键字：
 

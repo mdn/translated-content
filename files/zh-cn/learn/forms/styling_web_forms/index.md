@@ -37,7 +37,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 一些元素难以被美化，并且可能需要一些复杂的技巧，偶尔需要高级的 CSS3 知识。
 
-这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。{{htmlattrxref("placeholder", "input")}} 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。
+这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。[`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。
 
 我们会在[如何构建自定义表单挂件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)一文中讲述如何处理更多特定的问题。
 

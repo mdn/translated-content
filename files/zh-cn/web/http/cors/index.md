@@ -355,7 +355,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 请求中的 cookie（第 10 行）也可能在正常的第三方 cookie 策略下被阻止。因此，强制执行的 cookie 策略可能会使本节描述的内容无效（阻止你发出任何携带凭据的请求）。
 
-Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性控制。
+Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性控制。
 
 ## HTTP 响应标头字段
 

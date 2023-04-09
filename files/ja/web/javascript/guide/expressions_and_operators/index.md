@@ -2,7 +2,7 @@
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_Operators
 l10n:
-  sourceCommit: 6ebc97ff44612ef04d2cde60bfe9049bc8482bb5
+  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
@@ -83,7 +83,7 @@ JavaScript は _二項演算子_ や _単項演算子_ を実装しており、�
 | [ビット論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| f()`     |
 | [論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = f())`   |
 | [論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = f())` |
-| [Null 合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
+| [Null 合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)     | `x ??= f()`        | `x ?? (x = f())`   |
 
 ### プロパティへの代入
 
@@ -123,11 +123,11 @@ console.log(val); // 0 と表示
 より複雑な代入方法、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文は、配列やオブジェクトのリテラル構造を反映した構文を用いて、配列やオブジェクトからデータを抽出することができる JavaScript の式です。
 
 ```js
-const foo = ['one', 'two', 'three'];
+const foo = ["one", "two", "three"];
 
 // 分割を行わない代入
-const one   = foo[0];
-const two   = foo[1];
+const one = foo[0];
+const two = foo[1];
 const three = foo[2];
 
 // 分割代入
@@ -162,7 +162,7 @@ x = g(); // 変数 x に g() の返値を再代入します。
 代入式を連鎖させたり入れ子にしたりすることで、その結果自体を別の変数に代入することができます。
 また、ログに記録したり、配列リテラルや関数呼び出しの中に入れたりすることも可能です。
 
-```js
+```js-nolint
 let x;
 const y = (x = f()); // または const y = x = f(); と同等
 console.log(y); // assignment x = f() の返値を出力
@@ -172,7 +172,7 @@ console.log(x = f()); // 返値を直接出力
 // 代入式は、配列リテラルの要素や関数呼び出しの引数など、
 // 一般に式が許される場所であればどこでも入れ子にすることが
 // できます。
-console.log([ 0, x = f(), 0 ]);
+console.log([0, x = f(), 0]);
 console.log(f(0, x = f(), 0));
 ```
 
@@ -189,12 +189,12 @@ console.log(f(0, x = f(), 0));
 例えば、次のような関数 `f` と `g`、変数 `x` と `y` が宣言されていると仮定します。
 
 ```js
-function f () {
-  console.log('F!');
+function f() {
+  console.log("F!");
   return 2;
 }
-function g () {
-  console.log('G!');
+function g() {
+  console.log("G!");
   return 3;
 }
 let x, y;
@@ -202,10 +202,10 @@ let x, y;
 
 この 3 つの例を考えてみましょう。
 
-```js
-y = x = f()
-y = [ f(), x = g() ]
-x[f()] = g()
+```js-nolint
+y = x = f();
+y = [f(), x = g()];
+x[f()] = g();
 ```
 
 #### 評価例 1
@@ -275,7 +275,7 @@ x[f()] = g()
 
 特に、 [`const`][], [`let`][], [`var`][] 文の中に変数連鎖を入れると、しばしばうまく行かなくなります。代入連鎖の中で一番外側/左側の変数だけが宣言され、他の変数は `const`/`let`/`var` 文では宣言されないからです。例えば、
 
-```js
+```js-nolint
 const z = y = x = f();
 ```
 
@@ -546,7 +546,7 @@ const var2 = 4;
 ビットシフト演算子は 2 つのオペランドをとります。第 1 オペランドはシフトされる数を指定し、第 2 オペランドは、第 1 オペランドをシフトさせるビット数を指定します。
 シフト演算の方向は使用する演算子によって決まります。
 
-シフト演算子はそのオペランドを 32 ビット整数に変換し、結果を[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型_number)または[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint)のどちらかで返します。特に、左のオペランドの型が長整数型であった場合、長整数型を返します。それ以外の場合は数値型を返します。
+シフト演算子はそのオペランドを 32 ビット整数に変換し、結果を[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型)または[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型)のどちらかで返します。特に、左のオペランドの型が長整数型であった場合、長整数型を返します。それ以外の場合は数値型を返します。
 
 シフト演算子の種類は次表のとおりです。
 
@@ -652,25 +652,25 @@ const var2 = 4;
 以下のコードでは、 `&&` （論理積）演算子の例を示します。
 
 ```js
-const a1 =  true && true; // t && t は true を返す
-const a2 =  true && false; // t && f は false を返す
+const a1 = true && true; // t && t は true を返す
+const a2 = true && false; // t && f は false を返す
 const a3 = false && true; // f && t は false を返す
-const a4 = false && (3 === 4); // f && f は false を返す
-const a5 = 'Cat' && 'Dog'; // t && t は Dog を返す
-const a6 = false && 'Cat'; // f && t は false を返す
-const a7 = 'Cat' && false; // t && f は false を返す
+const a4 = false && 3 === 4; // f && f は false を返す
+const a5 = "Cat" && "Dog"; // t && t は Dog を返す
+const a6 = false && "Cat"; // f && t は false を返す
+const a7 = "Cat" && false; // t && f は false を返す
 ```
 
 以下のコードでは、 || （論理和）演算子の例を示します。
 
 ```js
-const o1 =  true || true; // t || t は true を返す
+const o1 = true || true; // t || t は true を返す
 const o2 = false || true; // f || t は true を返す
-const o3 =  true || false; // t || f は true を返す
-const o4 = false || (3 === 4); // f || f は false を返す
-const o5 = 'Cat' || 'Dog'; // t || t は Cat を返す
-const o6 = false || 'Cat'; // f || t は Cat を返す
-const o7 = 'Cat' || false; // t || f は Cat を返す
+const o3 = true || false; // t || f は true を返す
+const o4 = false || 3 === 4; // f || f は false を返す
+const o5 = "Cat" || "Dog"; // t || t は Cat を返す
+const o6 = false || "Cat"; // f || t は Cat を返す
+const o7 = "Cat" || false; // t || f は Cat を返す
 ```
 
 以下のコードでは、 ! （論理否定）演算子の例を示します。
@@ -678,7 +678,7 @@ const o7 = 'Cat' || false; // t || f は Cat を返す
 ```js
 const n1 = !true; // !t は false を返す
 const n2 = !false; // !f は true を返す
-const n3 = !'Cat'; // !t は false を返す
+const n3 = !"Cat"; // !t は false を返す
 ```
 
 ### 短絡評価
@@ -694,7 +694,7 @@ const n3 = !'Cat'; // !t は false を返す
 
 ## 長整数型の演算子
 
-数値同士の間で使用できるほとんどの演算子は、[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint)の値の間でも同様に使用することができます。
+数値同士の間で使用できるほとんどの演算子は、[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型)の値の間でも同様に使用することができます。
 
 ```js
 // 長整数型の加算
@@ -738,7 +738,7 @@ const b = 3 > 2n; // true
 例えば、
 
 ```js
-console.log('my ' + 'string'); // 文字列 "my string" がログに表示される。
+console.log("my " + "string"); // 文字列 "my string" がログに表示される。
 ```
 
 短縮表記した代入演算子 `+=` も文字列の結合に使用できます。
@@ -746,15 +746,15 @@ console.log('my ' + 'string'); // 文字列 "my string" がログに表示され
 例えば、
 
 ```js
-let mystring = 'alpha';
-mystring += 'bet'; // "alphabet" と評価されて、mystring にその値を代入します。
+let mystring = "alpha";
+mystring += "bet"; // "alphabet" と評価されて、mystring にその値を代入します。
 ```
 
 ### 条件（三項）演算子
 
 [条件演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)は JavaScript で唯一 3 つのオペランドを取る演算子です。条件に基づいて 2 つの値のうちの 1 つを選択します。構文は以下の通りです。
 
-```js
+```js-nolint
 condition ? val1 : val2
 ```
 
@@ -763,7 +763,7 @@ condition ? val1 : val2
 例えば、
 
 ```js
-const status = age >= 18 ? 'adult' : 'minor';
+const status = age >= 18 ? "adult" : "minor";
 ```
 
 この文では、`age` が 18 以上の場合、変数 `status` に "adult" の値が代入されます。そうでない場合 `status` には "minor" が代入されます。
@@ -781,7 +781,7 @@ const x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const a = [x, x, x, x, x];
 
 for (let i = 0, j = 9; i <= j; i++, j--) {
-//                                ^
+  //                              ^
   console.log(`a[${i}][${j}]= ${a[i][j]}`);
 }
 ```
@@ -809,7 +809,7 @@ delete objectName[index];
 ```js
 delete Math.PI; // false を返す（構成不可のプロパティは削除できない）
 
-const myObj = {h: 4};
+const myObj = { h: 4 };
 delete myObj.h; // true を返す（ユーザー定義のプロパティは削除できる）
 ```
 
@@ -823,34 +823,28 @@ delete myObj.h; // true を返す（ユーザー定義のプロパティは削�
 
 ### typeof
 
-[`typeof` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/typeof)は次の方法のうち、どちらかの方法で使用します。
-
-```js
-typeof オペランド
-```
-
-`typeof` 演算子は、未評価のオペランドの型を指す文字列を返します。
+[`typeof` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/typeof)は、未評価のオペランドの型を指す文字列を返します。
 `オペランド`には返される型を調べる対象となる文字列、キーワード、オブジェクトを指定します。
 括弧はあってもなくてもかまいません。
 
 以下の変数を定義したとしましょう。
 
 ```js
-const myFun = new Function('5 + 2');
-const shape = 'round';
+const myFun = new Function("5 + 2");
+const shape = "round";
 const size = 1;
-const foo = ['Apple', 'Mango', 'Orange'];
+const foo = ["Apple", "Mango", "Orange"];
 const today = new Date();
 ```
 
 `typeof` 演算子は、変数の型に応じて以下の値を返します。
 
 ```js
-typeof myFun;       // "function" を返す
-typeof shape;       // "string" を返す
-typeof size;        // "number" を返す
-typeof foo;         // "object" を返す
-typeof today;       // "object" を返す
+typeof myFun; // "function" を返す
+typeof shape; // "string" を返す
+typeof size; // "number" を返す
+typeof foo; // "object" を返す
+typeof today; // "object" を返す
 typeof doesntExist; // "undefined" を返す
 ```
 
@@ -864,47 +858,40 @@ typeof null; // "object" を返す
 数値や文字列に対して、 `typeof` 演算子は以下の結果を返します。
 
 ```js
-typeof 62;            // "number" を返す
-typeof 'Hello world'; // "string" を返す
+typeof 62; // "number" を返す
+typeof "Hello world"; // "string" を返す
 ```
 
 プロパティ値に対して、 `typeof` 演算子はプロパティが持つ値の型を返します。
 
 ```js
 typeof document.lastModified; // "string" を返す
-typeof window.length;         // "number" を返す
-typeof Math.LN2;              // "number" を返す
+typeof window.length; // "number" を返す
+typeof Math.LN2; // "number" を返す
 ```
 
 メソッドや関数に対して、 `typeof` 演算子は以下の結果を返します。
 
 ```js
-typeof blur;        // "function" を返す
-typeof eval;        // "function" を返す
-typeof parseInt;    // "function" を返す
+typeof blur; // "function" を返す
+typeof eval; // "function" を返す
+typeof parseInt; // "function" を返す
 typeof shape.split; // "function" を返す
 ```
 
 定義済みオブジェクトに対して、 `typeof` 演算子は以下の結果を返します。
 
 ```js
-typeof Date;     // "function" を返す
+typeof Date; // "function" を返す
 typeof Function; // "function" を返す
-typeof Math;     // "object" を返す
-typeof Option;   // "function" を返す
-typeof String;   // "function" を返す
+typeof Math; // "object" を返す
+typeof Option; // "function" を返す
+typeof String; // "function" を返す
 ```
 
 ### void
 
-[`void` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/void)は以下のどちらかの方法で使用します。
-
-```js
-void (式)
-void 式
-```
-
-`void` 演算子は、値を返さずに評価する式を指定します。`式`は評価する JavaScript の式となります。式の周りの括弧はあってもなくてもかまいませんが、使用する方が見た目がよいです。
+[`void` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/void)は、値を返さずに評価する式を指定します。`式`は評価する JavaScript の式となります。式の周りの括弧はあってもなくてもかまいませんが、使用する方が見た目がよいです。
 
 ## 関係演算子
 
@@ -914,7 +901,7 @@ void 式
 
 [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)は、指定したプロパティが指定のオブジェクトにある場合に `true` を返します。構文は以下のとおりです。
 
-```js
+```js-nolint
 プロパティ名または数値 in オブジェクト名
 ```
 
@@ -924,30 +911,30 @@ void 式
 
 ```js
 // 配列
-const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
-0 in trees;        // true を返す
-3 in trees;        // true を返す
-6 in trees;        // false を返す
-'bay' in trees;    // false を返す（インデックスの指す値ではなく、
-                   // インデックスの数字を指定しなければならない）
-'length' in trees; // true を返す（length は Array のプロパティ）
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
+0 in trees; // true を返す
+3 in trees; // true を返す
+6 in trees; // false を返す
+"bay" in trees; // false を返す
+// （インデックスの指す値ではなく、インデックスの数字を指定しなければならない）
+"length" in trees; // true を返す（length は Array のプロパティ）
 
 // 定義済みオブジェクト
-'PI' in Math;          // true を返す
-const myString = new String('coral');
-'length' in myString;  // true を返す
+"PI" in Math; // true を返す
+const myString = new String("coral");
+"length" in myString; // true を返す
 
 // ユーザー定義オブジェクト
-const mycar = { make: 'Honda', model: 'Accord', year: 1998 };
-'make' in mycar;  // returns true
-'model' in mycar; // returns true
+const mycar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in mycar; // returns true
+"model" in mycar; // returns true
 ```
 
 ### instanceof
 
 [`instanceof` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/instanceof)は、指定されたオブジェクトが指定されたオブジェクトの種類である場合に `true` を返します。構文は以下のとおりです。
 
-```js
+```js-nolint
 オブジェクト名 instanceof オブジェクト型
 ```
 
@@ -973,16 +960,16 @@ if (theDay instanceof Date) {
 [`this` キーワード](/ja/docs/Web/JavaScript/Reference/Operators/this)を使用することで、現在のオブジェクトを参照できます。一般的に `this` は、メソッド内の呼び出しオブジェクトを指します。 `this` は、ドット表記またはブラケット表記で使用します。
 
 ```js
-this['propertyName']
-this.propertyName
+this["propertyName"];
+this.propertyName;
 ```
 
 `validate` という関数があり、オブジェクトと上限と下限の値を渡すことでオブジェクトの `value` プロパティを検証するものであるとしましょう。
 
 ```js
 function validate(obj, lowval, hival) {
-  if ((obj.value < lowval) || (obj.value > hival)) {
-    console.log('Invalid Value!');
+  if (obj.value < lowval || obj.value > hival) {
+    console.log("Invalid Value!");
   }
 }
 ```
@@ -998,7 +985,7 @@ function validate(obj, lowval, hival) {
 
 グループ化演算子 `( )` は式内での評価の優先順位を制御します。例えば、加算が最初に評価されるよう、最初に行われる演算を乗算と除算から加算と減算へと上書きすることができます。
 
-```js
+```js-nolint
 const a = 1;
 const b = 2;
 const c = 3;
@@ -1030,8 +1017,8 @@ const オブジェクト名 = new objectType(引数1, 引数2, /* …, */ 引数
 これは下の例のように、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)と共に使って親のコンストラクターを呼び出すのに便利です。
 
 ```js
-super([引数]); // 親のコンストラクターを呼び出す。
-super.親の関数([引数]);
+super(引数); // 親のコンストラクターを呼び出す。
+super.親の関数(引数);
 ```
 
 {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}

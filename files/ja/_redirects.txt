@@ -806,7 +806,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -1870,6 +1870,7 @@
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Index	/ja/docs/Glossary
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
+/ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
@@ -2437,7 +2438,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
-/ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/JavaScript/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/JavaScript/Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/JavaScript/Reference/Global_Objects/String/anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -2490,7 +2491,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/JavaScript/Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /ja/docs/JavaScript/Reference/Global_Objects/SyntaxError	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/JavaScript/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
@@ -3451,6 +3452,7 @@
 /ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
+/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 /ja/docs/Web/API/LocalFileSystem	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/LocalFileSystemSync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/Location/password	/ja/docs/Web/API/Location
@@ -4776,6 +4778,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError
+/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name
 /ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Global_Objects/URIError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/URIError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
@@ -5393,7 +5396,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+/ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 /ja/docs/dummySlug/Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /ja/docs/dummySlug/Reference/Global_Objects/SyntaxError	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/dummySlug/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError

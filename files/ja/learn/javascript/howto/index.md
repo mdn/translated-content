@@ -217,8 +217,8 @@ JavaScript のデバッグに関する詳細については、[JavaScript のよ
 ### オブジェクト指向 JavaScript
 
 - [オブジェクトのプロトタイプとは何か](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [コンストラクタープロパティとは何か、どのように使用するか](/ja/docs/Learn/JavaScript/Objects/Object_prototypes#The_constructor_property)
-- [どのようにコンストラクターにメソッドを追加するか](/ja/docs/Learn/JavaScript/Objects/Object_prototypes#Modifying_prototypes)
+- [コンストラクタープロパティとは何か、どのように使用するか](/ja/docs/Learn/JavaScript/Objects/Object_prototypes#コンストラクターの使用)
+- [どのようにコンストラクターにメソッドを追加するか](/ja/docs/Learn/JavaScript/Objects/Object_prototypes#コンストラクターの使用)
 - [継承元からメンバーを引き継いで新しいコンストラクターを作成するには](/ja/docs/Learn/JavaScript/Objects/Inheritance)
 - [JavaScript で継承を使用すべきときはいつか](/ja/docs/Learn/JavaScript/Objects/Inheritance#Object_member_summary)
 
