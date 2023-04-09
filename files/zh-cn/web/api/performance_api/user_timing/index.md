@@ -10,7 +10,7 @@ original_slug: Web/API/User_Timing_API
 
 `mark` 事件可以指定任意的名字并且可以在放在应用的任何位置，`measure` 事件也可以指定为任意的名字，但是需要放在两个 mark 之间，所以它实际上是两个 mark 的中间点。
 
-此文档提供了对 `mark` 和 `measure` {{domxref("PerformanceEntry.entryType","性能事件类型")}}的概览，包括四个拓展了{{domxref("Performance")}}接口的`User Timing`方法。想要了解这两种性能事件类型和相关方法的更多详细内容和示例代码，请查阅[使用自定义时间测量 API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)。
+此文档提供了对 `mark` 和 `measure` {{domxref("PerformanceEntry.entryType","性能事件类型")}}的概览，包括四个拓展了 {{domxref("Performance")}} 接口的 `User Timing` 方法。
 
 ## 性能`标记`
 

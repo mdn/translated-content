@@ -134,7 +134,7 @@ See also the [DOM Interfaces](/zh-CN/docs/DOM/DOM_Reference).
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : 返回当前窗口或子窗口的父窗口的引用。
 - {{domxref("Window.performance")}} {{readOnlyInline}}
-  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/zh-CN/docs/Navigation_timing) data. See also [Using Navigation Timing](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
+  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/zh-CN/docs/Navigation_timing) data. See also [Navigation Timing API](/zh-CN/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : 返回 personalbar 对象，它的可视性可以在窗口中切换。
 - {{domxref("Window.pkcs11")}} {{Deprecated_Inline}}
