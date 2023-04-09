@@ -7,7 +7,7 @@ slug: Web/CSS/contain-intrinsic-block-size
 
 [CSS](/zh-CN/docs/Web/CSS) [逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties) **`contain-intrinsic-block-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_Containment#尺寸局限)时浏览器用于布局的元素块向尺寸。
 
-块向尺寸为元素在垂直于行内文本流的方向上的尺寸。在如标准英文等横向{{CSSXref("writing-mode", "书写模式")}}中，块向尺寸为纵向尺度（高度）；在纵向书写模式中，块向尺寸为横向尺度。
+块向尺寸为元素在垂直于行内文本流的方向上的尺寸。在如标准英文等横向书写模式（{{CSSXref("writing-mode")}}）中，块向尺寸为纵向尺度（高度）；在纵向书写模式中，块向尺寸为横向尺度。
 
 ## 语法
 
@@ -43,16 +43,11 @@ contain-intrinsic-block-size: unset;
 
 ## 描述
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/contain) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility).
+此属性的应用常常伴随如 {{CSSXref("contain", "contain: size")}} 和 {{CSSXref("content-visibility")}} 等可触发尺寸局限的要素。
 
-Size containment allows a user agent to lay out an element as though it had a fixed size.
-This prevents unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
-By default, size containment treats elements as though they had no contents and may collapse the layout in the same way as if the contents had no width or height.
-The `contain-intrinsic-block-size` property allows authors to specify an appropriate value to be used as the block-size for layout.
+尺寸局限允许用户代理将元素视为具有固定尺寸进行布局。由此避免为确定实际尺寸而重渲子元素，阻止不必要的重排（进而改善用户体验）。尺寸局限默认将元素视为不包含内容，且可按与内容无宽度或高度相同的方式折叠布局。`contain-intrinsic-block-size` 允许作者为布局所用的块向尺寸指定合适的值。
 
-The `auto <length>` value allows the block-size of an element to be stored if the element is ever "normally rendered" (with its child elements) and then used instead of the specified value when the element does not have any content.
-This allows offscreen elements with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) to benefit from size containment without developers having to be precise in their estimates of element size.
-The remembered value is not used if the child elements are being rendered; if size containment is enabled, the `<length>` value will be used.
+`auto 长度`值允许元素“被正常渲染”（包括其子元素）后存储其块向尺寸，再在元素不包含任何内容时使用此值而非指定值。由此允许有 {{CSSXref("content-visibility", "content-visibility: auto")}} 的屏外元素无需开发者精确估计元素尺寸即可受益于尺寸局限。在子元素渲染时，不使用记忆值；若启用尺寸局限，则将使用`长度`值。
 
 ## 形式定义
 
