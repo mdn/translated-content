@@ -36,15 +36,15 @@ Array.fromAsync(arrayLike, mapFn, thisArg)
 
 `Array.fromAsync()` 允许你从以下对象中创建数组：
 
-- [异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议) (如 {{domxref("ReadableStream")}} 和 {{jsxref("AsyncGenerator")}})；或者，如果对象不是异步可迭代的，
-- [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议) (如 {{jsxref("Map")}} 和 {{jsxref("Set")}})；或者，如果对象不可迭代的，
-- 类数组的对象 (带有 `length` 属性和索引元素的对象)。
+- [异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)（如 {{domxref("ReadableStream")}} 和 {{jsxref("AsyncGenerator")}}）；或者，如果对象不是异步可迭代的，
+- [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（如 {{jsxref("Map")}} 和 {{jsxref("Set")}}）；或者，如果对象是不可迭代的，
+- 类数组的对象（带有 `length` 属性和索引元素的对象）。
 
 `Array.fromAsync()` 迭代异步可迭代对象的方式与 {{jsxref("Statements/for-await...of", "for await...of")}} 很相似。`Array.fromAsync()` 在行为上与 {{jsxref("Array.from()")}} 几乎等价，除了以下几点：
 
 - `Array.fromAsync()` 处理异步可迭代对象。
-- `Array.fromAsync()` 返回一个 {{jsxref("Promise")}}，该 Promise 在解析为数组实例之前进行了处理。
-- 如果使用非异步可迭代对象调用 `Array.fromAsync()`，则要添加到数组中的每个元素（无论是否为 Promise）都会先 [await](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 其兑现。
+- `Array.fromAsync()` 返回一个 {{jsxref("Promise")}}，会兑现数组实例。
+- 如果使用非异步可迭代对象调用 `Array.fromAsync()`，则要添加到数组中的每个元素（无论是否为 Promise）都会先等待其兑现。
 - 如果提供了 `mapFn`，则其输入和输出会在内部进行 `await` 处理。
 
 `Array.fromAsync()` 和 {{jsxref("Promise.all()")}} 都可以将一个 promise 可迭代对象转换为一个数组的 promise。然而，它们有两个关键区别：
