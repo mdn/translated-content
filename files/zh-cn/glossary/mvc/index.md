@@ -13,4 +13,4 @@ slug: Glossary/MVC
 
 ## 参见
 
-- 维基百科上的 [Model–view–controller](https://zh.wikipedia.org/wiki/Model–view–controller) 词条
+- 维基百科上的 [MVC 模式](https://zh.wikipedia.org/wiki/MVC)词条

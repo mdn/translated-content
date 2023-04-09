@@ -10,4 +10,4 @@ slug: Glossary/FTP
 ## 参见
 
 - [通过 FTP 上传文件的初学者教程](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
-- 维基百科上的 [FTP](https://zh.wikipedia.org/wiki/File_Transfer_Protocol)
+- 维基百科上的 [FTP](https://zh.wikipedia.org/wiki/文件传输协议)

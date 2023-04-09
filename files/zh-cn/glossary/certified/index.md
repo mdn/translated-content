@@ -9,4 +9,4 @@ slug: Glossary/Certified
 
 ## 参见
 
-- 维基百科中的[证书](https://zh.wikipedia.org/wiki/Professional_certification_(computer_technology)#Information_systems_security)
+- 维基百科中的[证书](https://zh.wikipedia.org/wiki/專業認證)
