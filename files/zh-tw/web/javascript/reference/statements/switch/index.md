@@ -3,7 +3,9 @@ title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 ---
 
-{{jsSidebar("Statements")}}**`switch` 語句** 會比對一個 [表達式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators) 裡頭的值是否符合 `case` 條件，然後執行跟這個條件相關的 [陳述式](/zh-TW/docs/Web/JavaScript/Reference/Statements), 以及此一符合條件以外，剩下其他條件裡的陳述式。
+{{jsSidebar("Statements")}}
+
+**`switch` 語句**會比對一個[表達式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)裡頭的值是否符合 `case` 條件，然後執行跟這個條件相關的[陳述式](/zh-TW/docs/Web/JavaScript/Reference/Statements)，以及此一符合條件以外，剩下其他條件裡的陳述式。
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html")}}
 

@@ -40,11 +40,11 @@ slug: Web/HTML/Element/html
 
 元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("manifest")}} {{Deprecated_Inline}}
+- `manifest` {{Deprecated_Inline}}
   - : 指定一个 资源清单的 URI，指示应在本地缓存的资源。请参阅 [使用应用程序缓存](/zh-CN/docs/HTML/Using_the_application_cache) 获取详细信息。
-- {{htmlattrdef("version")}} {{Deprecated_Inline}}
+- `version` {{Deprecated_Inline}}
   - : 指定控制当前文档的 HTML 版本{{glossary("DTD", "文档类型定义")}} 。这个属性已不再需要，因为这在文档类型声明中是多余的版本信息。
-- {{htmlattrdef("xmlns")}}
+- `xmlns`
   - : 指派文档的 XML 命名空间。默认的值是`"http://www.w3.org/1999/xhtml"`。这在 XHTML 中是必要的，而在 HTML 中则是可选的。
 
 ## 示例

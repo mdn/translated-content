@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 ## 语法
 
-```js
+```js-nolint
 shift()
 ```
 

@@ -16,8 +16,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.BYTES_PER_ELEMENT")}}
   - : 返回元素大小的数值。在 `Uint16Array` 情况下为 `2`。
-- {{jsxref("TypedArray.name", "Uint16Array.name")}}
-  - : 返回构造函数名称的字符串值。在 `Uint16Array` 情况下，类型为： "Uint16Array"。
 
 ## 静态方法
 

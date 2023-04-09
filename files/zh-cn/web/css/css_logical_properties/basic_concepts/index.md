@@ -1,68 +1,53 @@
 ---
-title: 逻辑属性的和值的基本概念
+title: 逻辑属性与逻辑值的基本概念
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
-original_slug: Web/CSS/CSS_Logical_Properties/Basic_conceptsjie
 ---
 
 {{CSSRef}}
 
-逻辑属性与值详述中为 CSS 中许多属性和值引入相对浮动功能。本文介绍了详述，同时对浮动相关的属性和值做出了解释。
+逻辑属性与逻辑值规范为 CSS 中的许多属性和值引入了相对于流的对应关系。本文介绍此规范，并解释相对于流的属性与值。
 
-## 我们为什么需要逻辑属性？
+## 为什么我们需要逻辑属性？
 
-传统 CSS 根据屏幕的物理大小定义了 traditionally has sized things according to the physical dimensions of the screen. Therefore we describe boxes as having a {{CSSxRef("width")}} and {{CSSxRef("height")}}, position items from the `top` and `left`, float things left, assign borders, margin, and padding to the `top`, `right`, `bottom`, `left`, etc. The [Logical Properties and Values specification](https://drafts.csswg.org/css-logical/) defines mappings for these physical values to their logical, or flow relative, counterparts — e.g. `start` and `end` as opposed to `left` and `right`/`top` and `bottom`.
+传统的 CSS 根据屏幕的实体尺度设置物体尺寸。因此我们说盒子具有宽度（{{CSSXref("width")}}）和高度（{{CSSXref("height")}}），参照上侧（`top`）和左侧（`left`）为元素定位，将物体浮动至左侧，为上侧（`top`）、右侧（`right`）、下侧（`bottom`）、左侧（`left`）赋予边框和内外边距，等等。[逻辑属性与逻辑值规范](https://drafts.csswg.org/css-logical/)定义了从这些实体值到与之等价的逻辑值（即相对于流的值）的对应关系——如 `left` 和 `right`，或者 `top` 和 `bottom` 对应于 `start` 和 `end`。
 
-An example of why these mappings might be needed is as follows. I have a Layout using CSS Grid, the grid container has a width applied and I am using the {{CSSxRef("align-self")}} and {{CSSxRef("justify-self")}} properties to align the items. These properties are flow relative — `justify-self: start` aligns the item to the start on the inline dimension, `align-self: start` does the same on the block dimension.
+举个例子说明为什么会需要这些对应关系。我有一个布局用了 CSS 网格，网格容器应用了宽度属性，而且我用 {{CSSXref("align-self")}} 和 {{CSSXref("justify-self")}} 属性对齐元素。这些属性是相对于流的——`justify-self: start` 将元素对齐到行首，`align-self: start` 在块向上的效果类似。
 
-![A grid in a horizontal writing mode](grid-horizontal-width-sm.png)
+![横排书写模式中的网格](grid-horizontal-width-sm.png)
 
-If I now change the writing mode of this component to `vertical-rl` using the {{CSSxRef("writing-mode")}} property, the alignment continues to work in the same way. The inline dimension is now running vertically and the block dimension horizontally. The grid doesn't look the same however, as the width assigned to the container is a horizontal measure, a measure tied to the physical and not the logical or flow relative running of the text.
+如果我现在用 {{CSSXref("writing-mode")}} 属性把这个组件的书写模式改成 `vertical-rl`，那么对齐方式还是一样的。现在行向是竖直方向而块向是水平方向。然而网格变了样，这是因为给容器赋的宽度是水平尺度，与它挂钩的是文本的实体延伸方向，而非逻辑或相对于流的延伸方向。
 
-![A grid in vertical writing mode.](grid-vertical-width-sm.png)
+![竖排书写模式中的网格](grid-vertical-width-sm.png)
 
-If instead of the `width` property we use the logical property {{CSSxRef("inline-size")}}, the component now works the same way no matter which writing mode it is displayed using.
+如果我们不用 `width` 属性而用逻辑属性 {{CSSXref("inline-size")}}，那现在无论用什么书写模式显示组件都没有问题。
 
-![A grid layout in vertical writing mode](grid-vertical-inline-size-small.png)
+![竖排书写模式中的网格](grid-vertical-inline-size-small.png)
 
-You can try this out in the live example below. Change `writing-mode` from `vertical-rl` to `horizontal-tb` on `.box` to see how the different properties change the layout.
+你可以在下面的运行实例里尝试一下。把 `.grid` 的 `writing-mode` 从 `vertical-rl` 改成 `horizontal-tb`，看看不同的属性是怎么改变布局的。
 
-{{EmbedGHLiveSample("css-examples/logical/intro-grid-example.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/logical/intro-grid-example.html", "100%", 700)}}
 
-When working with a site in a writing mode other than a horizontal, top to bottom one, or when using writing modes for creative reasons, being able to relate to the flow of the content makes a lot of sense.
+在不是从横排上到下的书写模式里做网站，或者在用书写模式做创意的时候，能够对应到内容的流向上是非常合理的。
 
-## Block and inline dimensions
+## 块向与行向尺度
 
-A key concept of working with flow relative properties and values is the two dimensions of block and inline. As we saw above, newer CSS layout methods such as Flexbox and Grid Layout use the concepts of `block` and `inline` rather than `right` and `left`/`top` and `bottom` when aligning items.
+在使用相对于流的属性和值时，一个关键的概念是块向与行向这两个方向。上文我们已经看到在对齐元素时，诸如弹性盒和网格布局等新的 CSS 布局方法所用的概念是块向（`block`）和行向（`inline`），而非右侧（`right`）和左侧（`left`），或者上侧（`top`）和下侧（`bottom`）。
 
-The `inline` dimension is the dimension along which a line of text runs in the writing mode in use. Therefore, in an English document with the text running horizontally left to right, or an Arabic document with the text running horizontally right to left, the inline dimension is _horizontal_. Switch to a vertical writing mode (e.g. a Japanese document) and the inline dimension is now _vertical_, as lines in that writing mode run vertically.
+行向是指在所用的书写模式中，一行文本延伸的方向。因此在从左到右横排的英文文档，或者从右到左横排的阿拉伯文文档中，行向为*水平方向*。若切换至竖排书写模式（如日文文档）则行向变为*竖直方向*，这是因为文本在这种书写模式中竖直延伸。
 
-The block dimension is the other dimension, and the direction in which blocks — such as paragraphs — display one after the other. In English and Arabic these run vertically, whereas in any vertical writing mode these run horizontally.
+块向是指另一方向，即块——例如段落——依次显示的方向。在英文和阿拉伯文中，块沿竖直方向依次排列，而块在任意竖排书写模式中沿水平方向依次排列。
 
-The below diagram shows the inline and block directions in a horizontal writing mode:
+下图展示了横排书写模式中的行向与块向：
 
-![diagram showing the inline axis running horizontally, block axis vertically.](mdn-horizontal.png)
+![行向轴与块向轴分别水平和竖直延伸的图示](mdn-horizontal.png)
 
-This diagram shows block and inline in a vertical writing mode:
+此图展示了竖排书写模式中的块向与行向：
 
-![Diagram showing the block axis running horizontally the inline axis vertically.](mdn-vertical.png)
+![块向轴与行向轴分别水平和竖直延伸的图示](mdn-vertical.png)
 
-## Browser support
+## 参见
 
-Logical Properties and Values can be thought of as a couple of groups in terms of current browser support. Some of the properties are essentially mappings from the physical versions, for example {{CSSxRef("inline-size")}} for {{CSSxRef("width")}} or {{CSSxRef("margin-inline-start")}} rather than {{CSSxRef("margin-left")}}. These mapped properties are starting to see good browser support, and if you look at the individual pages for the properties in the [reference here on MDN](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#Reference) you will see that Edge is the only modern browser currently missing these.
-
-There are then a group of properties which do not have a direct mapping in terms of existing physical properties. These are shorthands made possible by the fact that we can refer to both edges of the block or inline dimension at once. An example would be {{CSSxRef("margin-block")}}, which is a shorthand setting for {{CSSxRef("margin-block-start")}} and {{CSSxRef("margin-block-end")}}. These currently have no browser support.
-
-> **备注：** The CSS Working Group are currently trying to decide what to do about the four-value shorthands for logical properties, for example the equivalents to setting four physical properties at once, like margins with the {{CSSxRef("margin")}} property. We would need some kind of modifier if we were to reuse `margin` for flow-relative properties. If you would like to read the suggestions or comment on them the relevant GitHub issue is [#1282](https://github.com/w3c/csswg-drafts/issues/1282).
-
-### Testing for browser support
-
-You can test for support of logical properties and values using feature queries. For example you could set a {{CSSxRef("width")}}, test for {{CSSxRef("inline-size")}} and, if it is supported, set the `width` to `auto` and the `inline-size` to the original `width` value.
-
-{{EmbedGHLiveSample("css-examples/logical/intro-feature-queries.html", "100%", 700)}}
-
-## See also
-
-- [Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [Box Alignment in Flex Layout](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [网格布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+- [弹性布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
 - [Understanding Logical Properties and Values](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
-- [Writing Modes](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+- [书写模式](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)

@@ -52,5 +52,5 @@ slug: Web/HTML/Element/datalist
 
 ## 参见
 
-- {{ HTMLElement("input") }} 元素，它更特殊的 {{ htmlattrxref("list", "input") }} 属性;
+- {{ HTMLElement("input") }} 元素，它更特殊的 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性;
 - {{ HTMLElement("option") }}元素。

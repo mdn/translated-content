@@ -47,10 +47,10 @@ slug: Mozilla/Firefox/Releases/78
 
 - The {{JSxRef("RegExp")}} engine [has been updated](https://hacks.mozilla.org/2020/06/a-new-regexp-engine-in-spidermonkey/) and now supports all new features introduced in ECMAScript 2018:
 
-  - [Lookbehind assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) ([Firefox bug 1225665](https://bugzil.la/1225665))
+  - [Lookbehind assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) ([Firefox bug 1225665](https://bugzil.la/1225665))
   - {{JSxRef("RegExp.prototype.dotAll")}} ([Firefox bug 1361856](https://bugzil.la/1361856))
-  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) ([Firefox bug 1361876](https://bugzil.la/1361876))
-  - [Named capture groups](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) ([Firefox bug 1362154](https://bugzil.la/1362154))
+  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes) ([Firefox bug 1361876](https://bugzil.la/1361876))
+  - [Named capture groups](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges) ([Firefox bug 1362154](https://bugzil.la/1362154))
 
 - Due to a [WebIDL spec change](https://github.com/heycam/webidl/pull/357) in mid-2020, we've [added a `Symbol.toStringTag` property to all DOM prototype objects](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#toStringTag_available_on_all_DOM_prototype_objects) ([Firefox bug 1277799](https://bugzil.la/1277799)).
 - The garbage collection of {{jsxref("WeakMap")}} objects has been improved. `WeakMaps` are now marked incrementally ([Firefox bug 1167452](https://bugzil.la/1167452)).

@@ -24,8 +24,6 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : 返回元素字节数。在 `Float32Array` 的情况下返回 4。
 - Float32Array.length
   - : 长度属性的值为 3。关于其实际长度 (元素数量) 参见{{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}}。
-- {{jsxref("TypedArray.name", "Float32Array.name")}}
-  - : 返回构造函数名字的字符串值。在 `Float32Array` 类型的情况下为："Float32Array"。
 - {{jsxref("TypedArray.prototype", "Float32Array.prototype")}}
   - : _TypedArray_ 对象的原型。
 

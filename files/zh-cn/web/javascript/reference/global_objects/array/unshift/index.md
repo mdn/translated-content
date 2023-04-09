@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 
 ## 语法
 
-```js
+```js-nolint
 unshift(element0)
 unshift(element0, element1)
 unshift(element0, element1, /* … ,*/ elementN)

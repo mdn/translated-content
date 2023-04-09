@@ -1,6 +1,6 @@
 ---
 title: Operador Condicional Ternário
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 original_slug: Web/JavaScript/Reference/Operators/Operador_Condicional
 ---
 

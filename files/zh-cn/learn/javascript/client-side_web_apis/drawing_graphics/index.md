@@ -363,7 +363,7 @@ ctx.fillText('Canvas text', 50, 150);
     image.src = 'firefox.png';
     ```
 
-    这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造器创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与非空 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 {{htmlattrxref("src", "img")}} 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
+    这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造器创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与非空 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
 
 3. 这次我们尝试用 `drawImage()` 函数来嵌入图片，应确保图片先载入完毕，否则运行会出错。可以通过 `onload` 事件处理器来达成，该函数只在图片调用完毕后才会调用。在上文代码末尾添加以下内容：
 
@@ -534,7 +534,7 @@ loop();
     ctx.translate(width/2, height/2);
     ```
 
-3. 创建一个新的 {{domxref("HTMLImageElement")}} 对象，把它的 {{htmlattrxref("src", "img")}} 设置为所需图片，添加一个 `onload` 事件处理器，使 `draw()` 函数在图片载入后触发。
+3. 创建一个新的 {{domxref("HTMLImageElement")}} 对象，把它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 设置为所需图片，添加一个 `onload` 事件处理器，使 `draw()` 函数在图片载入后触发。
 
     ```js
     var image = new Image();

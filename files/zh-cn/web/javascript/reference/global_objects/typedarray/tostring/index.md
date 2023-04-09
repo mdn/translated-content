@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 
 ## 语法
 
-```plain
-typedarray.toString()
+```js-nolint
+values()
 ```
 
 ### 返回值

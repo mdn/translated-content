@@ -64,7 +64,7 @@ slug: Web/HTML/Element/tbody
 
 ### 废弃的属性
 
-- {{ htmlattrdef("align") }} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指定了每个单元格的水平对齐方式。可能的值如下：
 
@@ -72,7 +72,7 @@ slug: Web/HTML/Element/tbody
     - `center`，表格内容居中对齐
     - `right`，表格内容右对齐
     - `justify`，在文本内容中插入空格，使内容在单元格中对齐。
-    - `char`，将文本内容对准一个特殊的字符，其最小偏移量由 {{ htmlattrxref("char", "tbody") }} 和 {{ htmlattrxref("charoff", "tbody") }} 属性定义。
+    - `char`，将文本内容对准一个特殊的字符，其最小偏移量由 [`char`](/zh-CN/docs/Web/HTML/Element/tbody#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Element/tbody#charoff) 属性定义。
 
     如果没有设定该属性，则假定使用 `left` 值。
 
@@ -80,17 +80,17 @@ slug: Web/HTML/Element/tbody
 
     > **备注：** `text-align` 属性的 `align="char"` 取值尚未在任何浏览器中实现。请参阅 [`text-align` 的浏览器兼容性小节](/zh-CN/docs/Web/CSS/text-align#浏览器兼容性)以获取 `<string>` 的可能取值。
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 表格的背景颜色。它是一个以 '`#`' 开头的 [6 位数十六进制 RGB 代码](/zh-CN/docs/Web/CSS/color_value#rgb_颜色)。也可以使用任意一个预定义的[颜色关键字](/zh-CN/docs/Web/CSS/color_value#颜色关键字)。
 
     由于该属性已经废弃，请使用 CSS {{cssxref("background-color")}} 属性作为替代。
 
-- {{ htmlattrdef("char") }} {{deprecated_inline}}
-  - : 该属性用于设置列中单元格的对齐字符。当试图对齐数字或货币价值时，其典型值包括一个句号（`.`）。如果 {{htmlattrxref("align", "tbody")}} 没有设置为 `char`，这个属性就会被忽略。
-- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : 该属性用于设置列中单元格的对齐字符。当试图对齐数字或货币价值时，其典型值包括一个句号（`.`）。如果 [`align`](/zh-CN/docs/Web/HTML/Element/tbody#align) 没有设置为 `char`，这个属性就会被忽略。
+- `charoff` {{deprecated_inline}}
   - : 这个属性用来表示从 `char` 属性指定的对齐字符中偏移列数据的字符数。
-- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : 该属性指定了每个单元格的垂直对齐方式。可能的值如下：
 
@@ -257,7 +257,7 @@ thead > tr > th {
 </table>
 ```
 
-注意，每个专业都放在了分开的 `<tbody>` 块之下，其中的第一列包含了一个带有 {{htmlattrxref("colspan", "th")}} 属性的 {{HTMLElement("th")}} 元素，横跨了整个表格的宽度。该标题列出了包含在 `<tbody>` 中的专业名称。
+注意，每个专业都放在了分开的 `<tbody>` 块之下，其中的第一列包含了一个带有 [`colspan`](/zh-CN/docs/Web/HTML/Element/th#colspan) 属性的 {{HTMLElement("th")}} 元素，横跨了整个表格的宽度。该标题列出了包含在 `<tbody>` 中的专业名称。
 
 在每个专业的 `<tbody>` 下的剩余行包含两个单元格：第一个是学生的 ID，第二个是它们的名字。
 

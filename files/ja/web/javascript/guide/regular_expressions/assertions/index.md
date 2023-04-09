@@ -1,8 +1,6 @@
 ---
 title: アサーション
-slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
-l10n:
-  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
+slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 ---
 
 {{jsSidebar("JavaScript Guide")}}

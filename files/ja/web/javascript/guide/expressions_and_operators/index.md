@@ -1,8 +1,6 @@
 ---
 title: 式と演算子
-slug: Web/JavaScript/Guide/Expressions_and_Operators
-l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
@@ -546,7 +544,7 @@ const var2 = 4;
 ビットシフト演算子は 2 つのオペランドをとります。第 1 オペランドはシフトされる数を指定し、第 2 オペランドは、第 1 オペランドをシフトさせるビット数を指定します。
 シフト演算の方向は使用する演算子によって決まります。
 
-シフト演算子はそのオペランドを 32 ビット整数に変換し、結果を[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型_number)または[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint)のどちらかで返します。特に、左のオペランドの型が長整数型であった場合、長整数型を返します。それ以外の場合は数値型を返します。
+シフト演算子はそのオペランドを 32 ビット整数に変換し、結果を[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型)または[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型)のどちらかで返します。特に、左のオペランドの型が長整数型であった場合、長整数型を返します。それ以外の場合は数値型を返します。
 
 シフト演算子の種類は次表のとおりです。
 
@@ -694,7 +692,7 @@ const n3 = !"Cat"; // !t は false を返す
 
 ## 長整数型の演算子
 
-数値同士の間で使用できるほとんどの演算子は、[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint)の値の間でも同様に使用することができます。
+数値同士の間で使用できるほとんどの演算子は、[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型)の値の間でも同様に使用することができます。
 
 ```js
 // 長整数型の加算

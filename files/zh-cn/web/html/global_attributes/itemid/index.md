@@ -68,13 +68,13 @@ slug: Web/HTML/Global_attributes/itemid
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 其他 microdata 相关的全局属性
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/zh-CN/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/zh-CN/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype)

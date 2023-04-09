@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 ## 语法
 
-```js
+```js-nolint
 indexOf(searchElement)
 indexOf(searchElement, fromIndex)
 ```

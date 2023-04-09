@@ -11,12 +11,6 @@ slug: Glossary/MVC
 2. View: 负责界面的布局和显示。
 3. Controller: 负责模型和界面之间的交互。
 
-## Learn more
+## 参见
 
-### General knowledge
-
-- [Model–view–controller](https://zh.wikipedia.org/wiki/Model–view–controller) on Wikipedia
-
-### Learning MVC
-
-- [MVC architecture](/zh-CN/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)
+- 维基百科上的 [MVC 模式](https://zh.wikipedia.org/wiki/MVC)词条
