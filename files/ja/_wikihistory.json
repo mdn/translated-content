@@ -30830,24 +30830,9 @@
     "modified": "2019-03-18T21:40:37.855Z",
     "contributors": ["e53e04ac"]
   },
-  "conflicting/Web/API/Performance_API/Resource_timing": {
-    "modified": "2019-07-01T22:07:06.959Z",
-    "contributors": ["kemsakurai", "silverskyvicto"]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
-  },
-  "conflicting/Web/API/Window": {
-    "modified": "2019-03-23T23:49:49.879Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "nobuoka",
-      "ethertank",
-      "Shoot",
-      "Potappo"
-    ]
   },
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T23:28:42.286Z",
@@ -31026,14 +31011,6 @@
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
   },
-  "orphaned/Web/API/Performance_Timeline": {
-    "modified": "2019-06-09T11:10:20.490Z",
-    "contributors": ["silverskyvicto"]
-  },
-  "orphaned/Web/API/Performance_Timeline/Using_Performance_Timeline": {
-    "modified": "2019-06-03T14:50:37.101Z",
-    "contributors": ["silverskyvicto"]
-  },
   "orphaned/Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2020-04-13T14:01:47.252Z",
     "contributors": ["mfuji09", "Marsf"]
@@ -31163,10 +31140,6 @@
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
-  },
-  "orphaned/Web/HTTP/Headers/Set-Cookie/SameSite": {
-    "modified": "2020-10-15T22:30:51.978Z",
-    "contributors": ["pcw", "silverskyvicto"]
   },
   "orphaned/Web/JavaScript/Guide/Expressions": {
     "modified": "2019-03-24T00:01:13.077Z",

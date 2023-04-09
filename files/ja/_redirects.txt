@@ -1449,7 +1449,7 @@
 /ja/docs/DOM/window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/DOM/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
-/ja/docs/DOM/window.content	/ja/docs/conflicting/Web/API/Window
+/ja/docs/DOM/window.content	/ja/docs/Web/API/Window
 /ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
@@ -1670,7 +1670,7 @@
 /ja/docs/DOM:window.close	/ja/docs/Web/API/Window/close
 /ja/docs/DOM:window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
-/ja/docs/DOM:window.content	/ja/docs/conflicting/Web/API/Window
+/ja/docs/DOM:window.content	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
@@ -3547,9 +3547,6 @@
 /ja/docs/Web/API/Notification/onerror	/ja/docs/Web/API/Notification/error_event
 /ja/docs/Web/API/Notification/onshow	/ja/docs/Web/API/Notification/show_event
 /ja/docs/Web/API/Performance/onresourcetimingbufferfull	/ja/docs/Web/API/Performance/resourcetimingbufferfull_event
-/ja/docs/Web/API/Performance_API/Using_the_Performance_API	/ja/docs/orphaned/Web/API/Performance_API/Using_the_Performance_API
-/ja/docs/Web/API/Performance_Timeline	/ja/docs/orphaned/Web/API/Performance_Timeline
-/ja/docs/Web/API/Performance_Timeline/Using_Performance_Timeline	/ja/docs/orphaned/Web/API/Performance_Timeline/Using_Performance_Timeline
 /ja/docs/Web/API/PermissionStatus/onchange	/ja/docs/Web/API/PermissionStatus/change_event
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
@@ -3574,7 +3571,7 @@
 /ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
 /ja/docs/Web/API/Request/priority	/ja/docs/orphaned/Web/API/Request/priority
 /ja/docs/Web/API/Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
-/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/ja/docs/conflicting/Web/API/Performance_API/Resource_timing
+/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
 /ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
 /ja/docs/Web/API/ScrollToOptions	/ja/docs/Web/API/Window/scroll
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
@@ -3667,7 +3664,7 @@
 /ja/docs/Web/API/Window/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
-/ja/docs/Web/API/Window/content	/ja/docs/conflicting/Web/API/Window
+/ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3869,7 +3866,7 @@
 /ja/docs/Web/API/window.close	/ja/docs/Web/API/Window/close
 /ja/docs/Web/API/window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
-/ja/docs/Web/API/window.content	/ja/docs/conflicting/Web/API/Window
+/ja/docs/Web/API/window.content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
@@ -4561,7 +4558,6 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/web-share	/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
-/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/ja/docs/orphaned/Web/HTTP/Headers/Set-Cookie/SameSite
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
 /ja/docs/Web/HTTP/Index	/ja/docs/Web/HTTP
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
