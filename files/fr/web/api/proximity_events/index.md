@@ -46,13 +46,7 @@ window.addEventListener('userproximity', function(event) {
 
 ## Compatibilité des navigateurs
 
-### `DeviceProximityEvent`
-
-{{Compat("api.DeviceProximityEvent")}}
-
-### `UserProximityEvent`
-
-{{Compat("api.UserProximityEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

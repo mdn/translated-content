@@ -42,9 +42,9 @@ Math.floor(3 / 2) // 1
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.division")}}
+{{Compat}}
 
 ## Ver también
 

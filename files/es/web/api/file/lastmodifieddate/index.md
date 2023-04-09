@@ -37,7 +37,7 @@ _Aunque estaba presente en las primeras versiones de la especificacion de File A
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.File.lastModifiedDate")}}
+{{Compat}}
 
 ## Vea también
 

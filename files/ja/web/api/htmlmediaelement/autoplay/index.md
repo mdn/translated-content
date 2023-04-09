@@ -1,11 +1,13 @@
 ---
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTML DOM")}}
 
-**HTMLMediaElement.autoplay** プロパティは、 HTML の {{htmlattrxref("autoplay", "video")}} 属性を反映しています。これは、再生に必要なメディアが揃った時点で自動的に再生を開始するかどうかを示します。
+**`HTMLMediaElement.autoplay`** プロパティは、 HTML の {{htmlattrxref("autoplay", "video")}} 属性を反映しています。これは、メディアが中断なく再生できるようになった時点で自動的に再生を開始するかどうかを示します。
 
 ソースが {{domxref("MediaStream")}} で `autoplay` プロパティが `true` のメディア要素は、アクティブになると（つまり、{{domxref("MediaStream.active")}} が `true` になると）再生を開始します。
 
@@ -21,18 +23,17 @@ slug: Web/API/HTMLMediaElement/autoplay
 
 ## 例
 
-...
-
 ```html
 <video id="video" controls>
-  <source src="https://player.vimeo.com/external/250688977.sd.mp4?s=d14b1f1a971dde13c79d6e436b88a6a928dfe26b&profile_id=165">
+  <source
+    src="https://player.vimeo.com/external/250688977.sd.mp4?s=d14b1f1a971dde13c79d6e436b88a6a928dfe26b&profile_id=165" />
 </video>
 ```
 
 ```js
-*** autoplay を無効にする（推奨） ***
-      既定値は false です
-        document.querySelector('#video').autoplay = false;
+// 自動再生を無効化（推奨）
+// false が既定値です
+document.querySelector('#video').autoplay = false;
 ```
 
 ## 仕様書

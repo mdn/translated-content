@@ -18,7 +18,7 @@ slug: Web/API/Encoding_API
 - A [shim](http://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
 - [`StringView`](/en-US/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -26,7 +26,7 @@ slug: Web/API/Encoding_API
 
 ### `TextDecoder`
 
-{{Compat("api.TextDecoder")}}
+{{Compat}}
 
 ### `TextEncoder`
 

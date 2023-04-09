@@ -252,10 +252,6 @@ getComputedStyle(element).getPropertyValue("--my-var");
 element.style.setProperty("--my-var", jsVar + 4);
 ```
 
-## Compatibilidad en navegadores
-
-{{Compat("css.properties.custom-property")}}
-
 ## Ver también
 
 - [`custom properties`](/es/docs/Web/CSS/--*)

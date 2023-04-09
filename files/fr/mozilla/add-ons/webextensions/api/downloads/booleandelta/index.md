@@ -27,9 +27,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `previous`{{optional_inline}}
   - : Un `boolean` représentant la valeur booléenne précédente.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.BooleanDelta")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

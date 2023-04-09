@@ -136,10 +136,10 @@ CSS からテキストの文字列を挿入することは、実際には Web �
 | {{cssxref(":local-link")}}                 | 現在のドキュメントと同じサイトにあるページを指すリンクに一致します。                                                                                                                                                                                                                         |
 | {{cssxref(":is", ":is()")}}                 | 渡されたセレクターリスト内の任意のセレクターに一致します。                                                                                                                                                                                                                                   |
 | {{cssxref(":not")}}                             | このセレクターに値として渡されるセレクターで一致しないものと一致します。                                                                                                                                                                                                                     |
-| {{cssxref(":nth-​​child")}}             | 兄弟のリストの要素に一致します — 兄弟は*an+b*の形式の式で一致します（たとえば、2n + 1 は 1、3、5、7 番目などの要素に一致します。すべてが奇数です）。                                                                                                                                         |
-| {{cssxref(":nth-​​of-type")}}         | 特定のタイプの兄弟（ `<p>` 要素など）のリストの要素に一致します — 兄弟は*、an+b*という形式の式で一致します（たとえば、2n + 1 は、その要素のタイプの 1、3、5 、7 番目などに一致します。すべて奇数です。）                                                                                     |
-| {{cssxref(":nth-​​last-child")}}     | 兄弟のリストの要素を末尾から逆に数えて一致させます。兄弟は*an+b*の形式の式で一致します（たとえば、2n + 1 はシーケンスの最後の要素、次にその 2 つ前の要素、次にその 2 つ前の要素などと一致します。最後から数えてすべての奇数の要素。）                                                        |
-| {{cssxref(":nth-​​last-of-type")}} | 特定のタイプの兄弟のリスト（ `<p>` 要素など）の要素を最後から逆に数えて一致させます。兄弟は*、an+b*という形式の式で一致します（たとえば、2n + 1 は、シーケンス内のそのタイプの最後の要素、次にその 2 つ前の要素、次にその 2 つ前の要素などと一致します。最後から数えてすべての奇数の要素。） |
+| {{cssxref(":nth-child")}}             | 兄弟のリストの要素に一致します — 兄弟は*an+b*の形式の式で一致します（たとえば、2n + 1 は 1、3、5、7 番目などの要素に一致します。すべてが奇数です）。                                                                                                                                         |
+| {{cssxref(":nth-of-type")}}         | 特定のタイプの兄弟（ `<p>` 要素など）のリストの要素に一致します — 兄弟は*、an+b*という形式の式で一致します（たとえば、2n + 1 は、その要素のタイプの 1、3、5 、7 番目などに一致します。すべて奇数です。）                                                                                     |
+| {{cssxref(":nth-last-child")}}     | 兄弟のリストの要素を末尾から逆に数えて一致させます。兄弟は*an+b*の形式の式で一致します（たとえば、2n + 1 はシーケンスの最後の要素、次にその 2 つ前の要素、次にその 2 つ前の要素などと一致します。最後から数えてすべての奇数の要素。）                                                        |
+| {{cssxref(":nth-last-of-type")}} | 特定のタイプの兄弟のリスト（ `<p>` 要素など）の要素を最後から逆に数えて一致させます。兄弟は*、an+b*という形式の式で一致します（たとえば、2n + 1 は、シーケンス内のそのタイプの最後の要素、次にその 2 つ前の要素、次にその 2 つ前の要素などと一致します。最後から数えてすべての奇数の要素。） |
 | {{cssxref(":only-child")}}                 | 兄弟がない要素に一致します。                                                                                                                                                                                                                                                                 |
 | {{cssxref(":only-of-type")}}                 | 兄弟間でそのタイプの唯一の要素である要素に一致します。                                                                                                                                                                                                                                       |
 | {{cssxref(":optional")}}                     | 不要なフォーム要素に一致します。                                                                                                                                                                                                                                                             |
@@ -172,24 +172,3 @@ CSS からテキストの文字列を挿入することは、実際には Web �
 | {{cssxref("::spelling-error")}} | ブラウザーによってフラグが付けられた、スペルミスを含むドキュメントの一部に一致します。 |
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
-
-## このモジュールでは
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [タイプ、クラス、ID セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [疑似クラスと疑似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [コンビネーター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [異なるテキスト方向の処理](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [あふれるコンテンツ](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS でのアイテムのサイズ変更](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像、メディア、フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [スタイリングテーブル](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

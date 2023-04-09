@@ -105,7 +105,7 @@ python3 manage.py runserver
 
 이제 **Home** 페이지로 되돌아가서 (홈 링크를 사용해서) **Author** 와 **Genre** 목록들을 보세요 — 새로운 책들을 추가하면서 이미 몇 가지 목록들이 있겠지만, 조금 더 추가해도 됩니다.
 
-아직 가지고 있지 않은 것은 Book Instance들입니다. 왜냐하면 Books에서 만들어지지 않았기 때문이죠( `BookInstance`에서 `Book`을 만들 수 있긴 하지만 — 이것은 `ForeignKey` 필드의 특성입니다). Home 페이지로 되돌아가서 연관된 **추가(Add)**버튼을 눌러 아래의 Add book Instance 화면을 나타내세요. 크고 전역적으로 고유한 id에 주의하세요. 이것은 도서관에서 한 권의 책을 개별적으로 식별하는 데 사용할 수 있습니다.
+아직 가지고 있지 않은 것은 Book Instance들입니다. 왜냐하면 Books에서 만들어지지 않았기 때문이죠( `BookInstance`에서 `Book`을 만들 수 있긴 하지만 — 이것은 `ForeignKey` 필드의 특성입니다). Home 페이지로 되돌아가서 연관된 **추가**(**Add**)버튼을 눌러 아래의 Add book Instance 화면을 나타내세요. 크고 전역적으로 고유한 id에 주의하세요. 이것은 도서관에서 한 권의 책을 개별적으로 식별하는 데 사용할 수 있습니다.
 
 ![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
@@ -330,21 +330,3 @@ class BookAdmin(admin.ModelAdmin):
 - [The Django Admin site](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

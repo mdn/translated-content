@@ -5,7 +5,7 @@ slug: Web/API/ExtendableEvent
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}作为 service worker 生命周期的一部分，**`ExtendableEvent`** 接口延长了在全局范围上 [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install_event) 和 [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate_event) 事件的生命周期。这样可以确保在升级数据库架构并删除过时的 caches 之前，不会调度任何函数事件（如{{domxref("FetchEvent")}}）。如果在`ExtendableEvent`处理程序之外调用{{domxref("ExtendableEvent.waitUntil","waitUntil()")}}，浏览器应该抛出一个`InvalidStateError`；还要注意，多个调用将堆积起来，结果 promises 将添加到[extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises).
 
-> **备注：** 上述段落中描述的行为在 firefox 43 中得到了修复（参见 {{bug(1180274)}} ）。
+> **备注：** 上述段落中描述的行为在 firefox 43 中得到了修复（参见 [Firefox bug 1180274](https://bugzil.la/1180274)）。
 
 此接口继承自{{domxref("Event")}}接口。
 

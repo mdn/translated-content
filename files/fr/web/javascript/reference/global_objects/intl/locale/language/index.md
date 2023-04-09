@@ -44,13 +44,11 @@ console.log(langObj.language); // Affichera "es" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.language`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.language) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.language")}}
+{{Compat}}
 
 ## Voir aussi
 

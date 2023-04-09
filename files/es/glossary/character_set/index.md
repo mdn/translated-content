@@ -1,6 +1,6 @@
 ---
 title: Conjunto de caracteres
-slug: Glossary/character_set
+slug: Glossary/Character_set
 original_slug: Glossary/conjunto_de_caracteres
 ---
 

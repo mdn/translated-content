@@ -140,5 +140,5 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
 - {{cssxref(":-moz-full-screen-ancestor")}}

@@ -21,6 +21,6 @@ La valeur sous-jacente est un booléen.
 
 Par défaut, closeTabsByDoubleClick est faux. Le réglage peut être modifié par l'utilisateur dans about:config.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.closeTabsByDoubleClick")}}
+{{Compat}}

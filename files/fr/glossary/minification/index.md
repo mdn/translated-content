@@ -1,6 +1,6 @@
 ---
 title: minification
-slug: Glossary/minification
+slug: Glossary/Minification
 translation_of: Glossary/minification
 original_slug: Glossaire/minification
 ---

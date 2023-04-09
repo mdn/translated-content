@@ -115,7 +115,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a list of the {{HTMLElement("form")}} elements within the current document.
 - {{domxref("Document.head")}}
   - : Returns the {{HTMLElement("head")}} element of the current document.
-- {{domxref("Document.height")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Document.height")}} {{non-standard_inline}}
   - : Gets/sets the height of the current document.
 - {{domxref("Document.images")}}
   - : Returns a list of the images in the current document.
@@ -141,7 +141,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a string containing the URL of the current document.
 - {{domxref("Document.vlinkColor")}} {{Deprecated_inline}}
   - : Gets/sets the color of visited hyperlinks.
-- {{domxref("Document.width")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Document.width")}} {{non-standard_inline}}
   - : Returns the width of the current document.
 
 ### Event handlers
@@ -177,7 +177,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Creates a new element with the given tag name.
 - {{domxref("Document.createElementNS","Document.createElementNS(String namespace, String name)")}}
   - : Creates a new element with the given tag name and namespace URI.
-- {{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}} {{obsolete_inline}}
+- {{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}}
   - : Creates a new entity reference object and returns it.
 - {{domxref("Document.createEvent","Document.createEvent(String interface)")}}
   - : Creates an event object.
@@ -207,13 +207,13 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a clone of a node from an external document.
 - {{domxref("document.mozSetImageElement")}} {{non-standard_inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
-- {{domxref("Document.normalizeDocument()")}} {{obsolete_inline}}
+- {{domxref("Document.normalizeDocument()")}}
   - : Replaces entities, normalizes text nodes, etc.
 - {{domxref("Document.releaseCapture()")}} {{non-standard_inline}}
   - : Releases the current mouse capture if it's on an element in this document.
 - {{domxref("Document.releaseEvents")}} {{non-standard_inline}} {{Deprecated_inline}}
   - : See {{domxref("window.releaseEvents")}}.
-- {{domxref("document.routeEvent")}} {{non-standard_inline}} {{obsolete_inline(24)}}
+- {{domxref("document.routeEvent")}} {{non-standard_inline}}
   - : See {{domxref("window.routeEvent")}}.
 
 The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
@@ -302,13 +302,13 @@ Mozilla defines a set of non-standard properties made only for XUL content:
 Mozilla also define some non-standard methods:
 
 - {{domxref("Document.execCommandShowHelp")}} {{deprecated_inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0.
 - {{domxref("Document.getBoxObjectFor")}} {{deprecated_inline}}
   - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
 - {{domxref("Document.loadOverlay")}}
   - : Loads a [XUL overlay](/ru/docs/XUL_Overlays) dynamically. This only works in XUL documents.
 - {{domxref("document.queryCommandText")}} {{deprecated_inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything but throw an exception, and was removed in Gecko 14.0.
 
 ### Internet Explorer notes
 

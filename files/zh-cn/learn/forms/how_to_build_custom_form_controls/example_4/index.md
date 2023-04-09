@@ -1,7 +1,6 @@
 ---
 title: Example 4
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
-original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_4
 ---
 
 这是解释 [如何构建自定义表单小部件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets) 的第四个示例。

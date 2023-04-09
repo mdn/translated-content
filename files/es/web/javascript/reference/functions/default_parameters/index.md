@@ -218,9 +218,9 @@ f()  // 6
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.default_parameters")}}
+{{Compat}}
 
 ## Ve también
 

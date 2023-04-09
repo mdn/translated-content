@@ -28,9 +28,11 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("clipboard.setImageData()")}}
   - : Copiez une image dans le presse-papiers.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.clipboard", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}}
+
+{{WebExtExamples("h2")}}
 
 > **Note :**
 >

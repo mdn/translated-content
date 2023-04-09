@@ -71,9 +71,9 @@ Les événements ont trois fonctions:
         - Soit garder une référence à l'argumen `sendResponse` et retourne `true` à partir de la fonction d'écouteur. Vous pourrez ensuite appeler `sendResponse` après le retour de la fonction d'écouteur..
         - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onMessageExternal")}}
+{{Compat}}
 
 ## Exemples
 

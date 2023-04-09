@@ -94,7 +94,7 @@ Content-Security-Policy: connect-src 'self';
                          worker-src 'self'
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

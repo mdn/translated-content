@@ -76,9 +76,9 @@ textTrackElem.oncuechange = (event) => {
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.TextTrack.cuechange_event")}}
+{{Compat}}
 
 ## Ver también
 

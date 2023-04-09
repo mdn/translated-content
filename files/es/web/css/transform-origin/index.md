@@ -85,7 +85,7 @@ Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## Ver también
 

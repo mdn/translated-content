@@ -41,9 +41,9 @@ div {
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-clip")}}
+{{Compat}}
 
 ## Ver además
 

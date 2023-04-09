@@ -59,9 +59,9 @@ evtSource.onmessage = function(e) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.EventSource")}}
+{{Compat}}
 
 ## Ver también
 

@@ -17,8 +17,8 @@ var element = document.getElementById(id);
 
 ### 参数
 
-- **`element`**是一个 [Element](/zh-CN/docs/Web/API/Element) 对象。如果当前文档中拥有特定 ID 的元素不存在则返回 null.
-- **`id`**是大小写敏感的字符串，代表了所要查找的元素的唯一 ID.
+- `element` 是一个 [Element](/zh-CN/docs/Web/API/Element) 对象。如果当前文档中拥有特定 ID 的元素不存在则返回 null。
+- `id` 是大小写敏感的字符串，代表了所要查找的元素的唯一 ID。
 
 ### 返回值
 
@@ -46,7 +46,7 @@ var element = document.getElementById(id);
 
 ```js
 function changeColor(newColor) {
-​  var elem = document.getElementById('para');
+  var elem = document.getElementById('para');
   elem.style.color = newColor;
 }
 ```

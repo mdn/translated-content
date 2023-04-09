@@ -1,6 +1,6 @@
 ---
 title: Cacheable
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 ---
 
 Una respuesta **_cacheable_** es una respuesta HTTP que se puede almacenar en caché, que se almacena para recuperarla y usarla más tarde, guardando una nueva solicitud en el servidor. No todas las respuestas HTTP se pueden almacenar en caché, estas son las siguientes restricciones para que una respuesta HTTP se almacene en caché:

@@ -48,8 +48,6 @@ var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
 f();  // 6
 ```
 
-Подробные примеры синтаксиса можно посмотреть [здесь](http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax).
-
 ## Описание
 
 Смотрите также ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/).

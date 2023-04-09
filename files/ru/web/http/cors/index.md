@@ -50,7 +50,9 @@ Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, ис�
 
 ### Простые запросы
 
-Некоторые запросы не заставляют срабатывать [CORS preflight](/ru/docs/Web/HTTP/Access_control_CORS#Preflighted_requests). Они называются “простыми запросами” в данной статье, хотя {{SpecName('Fetch')}} спецификация, определяющая CORS, не использует этот термин. Запрос, для которого не срабатывает [CORS preflight](/ru/docs/Web/HTTP/Access_control_CORS#Preflighted_requests)— так называемый “простой запросы”—это запрос, удовлетворяющий следующим условиям:
+Некоторые запросы не заставляют срабатывать {{Glossary("Preflight_request","CORS preflight")}}. Они называются _простыми запросами_ согласно устаревшей [спецификации CORS (англ.)](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology), тогда как [спецификация Fetch](https://fetch.spec.whatwg.org/), которая в настоящее время определяет CORS, не использует данный термин.
+
+«Простой запрос» — это запрос, удовлетворяющий следующим условиям:
 
 - Допустимые методы для запроса:
 
@@ -74,23 +76,19 @@ Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, ис�
 - Не должны быть зарегистрированы обработчики событий на любой объект {{domxref("XMLHttpRequestUpload")}} используемый в запросе; это достигается использованием свойства {{domxref("XMLHttpRequest.upload")}}.
 - В запросе не должен использоваться объект типа {{domxref("ReadableStream")}}.
 
-> **Примечание:** **Замечание:** These are the same kinds of cross-site requests that web content can already issue, and no response data is released to the requester unless the server sends an appropriate header. Therefore, sites that prevent cross-site request forgery have nothing new to fear from HTTP access control.
+> **Примечание:** These are the same kinds of cross-site requests that web content can already issue, and no response data is released to the requester unless the server sends an appropriate header. Therefore, sites that prevent cross-site request forgery have nothing new to fear from HTTP access control.
 
-> **Примечание:** **Замечание:** WebKit Nightly и Safari Technology Preview устанавливают дополнительные ограничения на значения, допустимые в заголовках {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, и {{HTTPHeader("Content-Language")}}. Если любой из этих заголовков имеет "нестандартное" значение, WebKit/Safari используют предварительный запрос. Значения, которые WebKit/Safari считают "нестандартными" для этих заголовков, перечислены только в следующих проблемах WebKit: [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566), и [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363). Во всех других браузерах подобных дополнительных ограничений нет, потому что они не являются частью спецификации.
+> **Примечание:** WebKit Nightly и Safari Technology Preview устанавливают дополнительные ограничения на значения, допустимые в заголовках {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, и {{HTTPHeader("Content-Language")}}. Если любой из этих заголовков имеет "нестандартное" значение, WebKit/Safari используют предварительный запрос. Значения, которые WebKit/Safari считают "нестандартными" для этих заголовков, перечислены только в следующих проблемах WebKit: [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178), [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566), и [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363). Во всех других браузерах подобных дополнительных ограничений нет, потому что они не являются частью спецификации.
 
 Например, представьте, что содержимое домена `http://foo.example` хочет обратиться к содержимому `http://bar.other`. На домене `http://foo.example` может использоваться следующий Javascript код:
 
 ```js
-var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+const xhr = new XMLHttpRequest();
+const url = "https://bar.other/resources/public-data/";
 
-function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
-    invocation.onreadystatechange = handler;
-    invocation.send();
-  }
-}
+xhr.open("GET", url);
+xhr.onreadystatechange = someHandler;
+xhr.send();
 ```
 
 Это приведёт к простому обмену запросами между клиентом и сервером, используя CORS заголовки для обработки привилегий:
@@ -193,7 +191,7 @@ function callOtherDomain(){
 
 ![](preflight_correct.png)
 
-> **Примечание:** **Замечание:** как описано ниже, фактический `POST` запрос не включает `Access-Control-Request-*` заголовки; они нужны только для `OPTIONS` запроса.
+> **Примечание:** как описано ниже, фактический `POST` запрос не включает `Access-Control-Request-*` заголовки; они нужны только для `OPTIONS` запроса.
 
 Давайте посмотрим на полный обмен между клиентом и сервером. Первый обмен - это _предварительный_ _запрос/ответ_:
 

@@ -14,7 +14,7 @@ original_slug: Web/Guide/HTML/Content_categories
 
 > **メモ:** コンテンツカテゴリーとその機能比較についての詳細な説明は、この記事の範囲外です。詳しく知りたければ、 [HTML 仕様書の関連部分](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)を読みましょう。
 
-[![様々なコンテンツカテゴリーの相互関係を示すベン図。以下の節では、これらの関係をテキストで説明します。](content_categories_venn.png)](/ja/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
+[![様々なコンテンツカテゴリーの相互関係を示すベン図。以下の節では、これらの関係をテキストで説明します。](content_categories_venn.png)](content_categories_venn.png)
 
 ## 主要コンテンツカテゴリー
 

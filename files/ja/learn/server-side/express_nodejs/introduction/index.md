@@ -115,7 +115,7 @@ Express は指図をしません。リクエストを処理するチェインの
 
 Express は特定の HTTP 動詞 (`GET`, `POST`, `SET` など) と URL パターン ("Route") に対してどの関数が呼び出されるかを指定するメソッドと、どのテンプレート ("view") エンジンが使用されるかを指定するメソッドを提供します。テンプレートエンジンを使用するには、レスポンスをレンダリングするためのテンプレートファイルを配置します。Express ミドルウェアを使用して、Cookie、セッション、およびユーザー、`POST`/`GET` パラメーターなどのサポートを追加することができます。Node がサポートするデータベース・メカニズムを使用できます (Express はデータベース関連の動作を定義しません)。
 
-次のセクションでは、Express およびノー ​​ ド・コードを使用して作業するときに表示される一般的な事項について説明します。
+次のセクションでは、Express およびノード・コードを使用して作業するときに表示される一般的な事項について説明します。
 
 ### Helloworld Express
 
@@ -498,15 +498,3 @@ Express は、構造や使用するコンポーネントに関しては何も想
 - [Error handling](http://expressjs.com/ja/guide/error-handling.html) (Express ドキュメント)
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
-
-## このモジュール
-
-- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express チュートリアル: 地域図書館のウェブサイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express チュートリアル Part 2: スケルトンウェブサイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

@@ -148,9 +148,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-bottom-right-radius")}}
+{{Compat}}
 
 ## Véase también
 

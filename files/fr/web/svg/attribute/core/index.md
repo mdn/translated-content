@@ -40,7 +40,7 @@ Les _attributs SVG de base_ sont tous les attributs communs pouvant être spéci
 
     _Valeur_: Tout ID de langage valide; _Animation_: **Non**
 
-- {{SVGAttr('xml:space')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('xml:space')}} {{deprecated_inline}}
 
   - : SVG prend en charge l'attribut XML standard `xml:space` pour spécifier le traitement des caractères d'espaces dans les données d'un élément {{ SVGElement("text") }} donné.
 
@@ -50,4 +50,4 @@ Les _attributs SVG de base_ sont tous les attributs communs pouvant être spéci
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.core")}}
+{{Compat}}

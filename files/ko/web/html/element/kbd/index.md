@@ -180,7 +180,7 @@ HTML을 업데이트해 앞선 스타일을 적용합니다.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.kbd")}}
+{{Compat}}
 
 ## 같이 보기
 

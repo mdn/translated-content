@@ -51,6 +51,6 @@ El codigo de arriba de renderizara así:
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.percentage")}}
+{{Compat}}

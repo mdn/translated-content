@@ -161,4 +161,4 @@ Outras palavras chaves usadas nesta seção.
 
 - Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in `nsISelectionPrivate`.
 - Mozilla source code: [`Selection.webidl`](https://searchfox.org/mozilla-central/source/dom/webidl/Selection.webidl)
-- {{DOMxRef("Selection.selectionLanguageChange()")}}{{Obsolete_Inline("gecko29")}} used to be exposed to the web content until Firefox 29
+- {{DOMxRef("Selection.selectionLanguageChange()")}} used to be exposed to the web content until Firefox 29

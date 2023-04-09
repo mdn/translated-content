@@ -1,6 +1,6 @@
 ---
 title: Window.getDefaultComputedStyle()
-slug: Web/API/Window/getDefaultComputedStyle
+slug: Web/API/window/getDefaultComputedStyle
 tags:
   - API
   - CSS
@@ -88,4 +88,4 @@ Proposé au groupe de travail CSS.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.getDefaultComputedStyle")}}
+{{Compat}}

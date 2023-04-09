@@ -72,7 +72,7 @@ const loop = x => {
 // Declared functions can't be called immediately this way
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */

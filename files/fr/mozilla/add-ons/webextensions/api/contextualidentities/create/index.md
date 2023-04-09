@@ -71,9 +71,9 @@ var createContext = browser.contextualIdentities.create(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit la nouvelle identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.create")}}
+{{Compat}}
 
 ## Exemples
 

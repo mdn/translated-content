@@ -1,6 +1,6 @@
 ---
 title: window.requestAnimationFrame()
-slug: Web/API/Window/requestAnimationFrame
+slug: Web/API/window/requestAnimationFrame
 ---
 
 {{APIRef}}
@@ -57,7 +57,7 @@ window.requestAnimationFrame(step);
 
 {{Compat("api.Window.requestAnimationFrame")}}
 
-\[1] Anteriro ao Gecko 11.0 {{geckoRelease("11.0")}}, mozRequestAnimationFrame() podia ser chamado sem parâmetros de entrada. Isso não é mais suportado, como provavelmente não será parte do padrão
+\[1] Anteriro ao Gecko 11.0, mozRequestAnimationFrame() podia ser chamado sem parâmetros de entrada. Isso não é mais suportado, como provavelmente não será parte do padrão
 
 \[2] O parâmetro do callback é {{domxref("DOMTimeStamp")}} ao invés de {{domxref("DOMHighResTimeStamp")}} se a versão prefixada do método foi utilizada `DOMTimeStamp` possui apenas precisão de milisegundo, mas `DOMHighResTimeStamp` possui precisão mínima de microsegundos. Portanto, o tempo zero é diferente: `DOMHighResTimeStamp` possui o mesmo tempo zero que `performance.now()`, mas DOMTimeStamp possui o mesmo tempo zero que `Date.now().`
 

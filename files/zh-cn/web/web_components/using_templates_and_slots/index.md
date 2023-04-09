@@ -88,7 +88,7 @@ customElements.define('my-paragraph',
 
 如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持 slot 属性，则`<my-paragraph>`仅包含后备内容"My default text"。(译者注：此处的意思是使用\<my-paragraph>时内部不包裹任何内容时会显示 slot 定义好的默认值。具体使用可参考下面)
 
-要定义插槽内容，我们在`<my-paragraph>`元素内包括一个 HTML 结构，该结构具有{{htmlattrxref("slot")}}属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。和以前一样，它可以是您喜欢的任何东西，例如：
+要定义插槽内容，我们在`<my-paragraph>`元素内包括一个 HTML 结构，该结构具有[`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot)属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。和以前一样，它可以是您喜欢的任何东西，例如：
 
 ```html
 <my-paragraph>
@@ -163,7 +163,7 @@ customElements.define('my-paragraph',
 上面这个{{HTMLElement("template")}} 有几个特征：
 
 - {{HTMLElement("template")}} 标签有一个 {{HTMLElement("style")}} 标签，里面有一些 只能在当前{{HTMLElement("template")}} 的派生中生效的 CSS 样式
-- {{HTMLElement("template")}} 用 `<slot>` 和它的 {{htmlattrxref("name", "slot")}} 属性生成一个 [命名的槽 (named slots)](/zh-CN/docs/Web/HTML/Element/slot#named-slot)：
+- {{HTMLElement("template")}} 用 `<slot>` 和它的 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性生成一个 [命名的槽 (named slots)](/zh-CN/docs/Web/HTML/Element/slot#named-slot)：
 
   - `<slot name="element-name">`
   - `<slot name="description">`

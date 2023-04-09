@@ -73,9 +73,9 @@ p.underover {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-decoration")}}
+{{Compat}}
 
 ## Véase también
 

@@ -255,17 +255,16 @@ for(i=0 ; i<els.length ; i++){
 
 In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
 
-## Browser compatibility
+## Especificaciones
 
-{{Compat("api.EventTarget.addEventListener")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## See Also
 
 - [element.removeEventListener()](/es/docs/DOM/element.removeEventListener)
 - [Creating and triggering custom events](/es/docs/DOM/Creating_and_triggering_events)
 - [More details on the use of `this` in event handlers](http://www.quirksmode.org/js/this.html)
-
-## Specification
-
-- [DOM Level 2 Events: EventTarget.addEventListener](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener)
-- [DOM Level 3 Events: EventTarget.addEventListener](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener)

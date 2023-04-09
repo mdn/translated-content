@@ -681,7 +681,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 我們在這裡展示的新東西，是字段選項：
 
 - 枚舉`enum`:這允許我們設置字符串的允許值。在這種情況下，我們用它來指定我們書籍的可用性狀態（使用枚舉，意味著我們可以防止錯誤拼寫和任意值，成為我們的狀態）
-- 默認值`default`:我們使用默認值，將新創 ​​ 建的書本實例的默認狀態，設置為維護，並將默認的`due_back`日期，設置為現在`now`（請注意在設置日期時，如何調用 Date 函數！）
+- 默認值`default`:我們使用默認值，將新創 建的書本實例的默認狀態，設置為維護，並將默認的`due_back`日期，設置為現在`now`（請注意在設置日期時，如何調用 Date 函數！）
 
 其他所有內容，大夥應該在前面教程裡邊已經熟悉了。
 
@@ -692,7 +692,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 該定義將與其他模型非常相似：
 
 - 該模型應該有一個名為`name`的`String`SchemaType ，來描述種類。
-- 這個`name`字段應該是必要的，並且有 3 到 ​​100 個字符。
+- 這個`name`字段應該是必要的，並且有 3 到 100 個字符。
 - 為類型的 URL 聲明虛擬，名為`url`。
 - 導出模型。
 
@@ -715,7 +715,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 3. 在命令提示符下，使用 node 運行此腳本，傳遞 MongoDB 數據庫的 URL（與之前在`app.js`中替換 insert_your_database_url_here 佔位符的那個相同）：
 
     ```bash
-    node populatedb <your mongodb url>​​​​
+    node populatedb <your mongodb url>
     ```
 
 4. 該腳本應一路運行至完成，並在終端中創建它們時顯示各項目。
@@ -740,15 +740,3 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 - [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## 本系列課程
-
-- [Express/Node 介紹](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [設定 Node（Express）開發環境](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教學 1: 本地圖書館網站](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教學 2: 建立骨架網站](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教學 3: 使用資料庫（Mongoose）](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教學 4: 路由與控制器](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教學 5: 呈現圖書館的資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教學 6: 使用表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教學 7: 佈署到正式環境](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

@@ -1,6 +1,6 @@
 ---
 title: <input type="email">
-slug: Web/HTML/Element/Input/email
+slug: Web/HTML/Element/input/email
 ---
 
 {{HTMLSidebar}}
@@ -13,11 +13,11 @@ slug: Web/HTML/Element/Input/email
 
 ## 值
 
-{{HTMLElement("input")}} 元素的 {{htmlattrxref("value", "input")}} 属性包含会自动验证是否为正确邮件地址形式的字符串。具体来说，此处有三种格式可以通过验证：
+{{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含会自动验证是否为正确邮件地址形式的字符串。具体来说，此处有三种格式可以通过验证：
 
 1. 一个空字符串（“”），表示用户未输入值或该值已被删除。
 2. 单个符合格式的电子邮件地址。并不代表该邮件地址存在，而是说它至少在格式上是正确的，简单地讲就是 `username@domain` 或者 `username@domain.tld`，当然并不局限于此，关于匹配电子邮件地址验证算法的{{Glossary("regular expression","正则表达式")}}，参见[验证](#验证)一节。
-3. 当且仅当指定了 {{htmlattrxref("multiple", "input")}} 属性时，值可以是一个列表，该列表包含一串符合格式的电子邮件地址，且每个地址之间用逗号分隔。列表中，位于每个地址之前和之后的任何空白字符都会被移除。
+3. 当且仅当指定了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性时，值可以是一个列表，该列表包含一串符合格式的电子邮件地址，且每个地址之间用逗号分隔。列表中，位于每个地址之前和之后的任何空白字符都会被移除。
 
 关于如何验证电子邮件地址以保证其格式正确的细节，参见[验证](#验证)一节。
 
@@ -27,7 +27,7 @@ slug: Web/HTML/Element/Input/email
 
 ### list
 
-list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### maxlength
 
@@ -45,15 +45,15 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 一个布尔属性，如果存在，代表用户可以输入多个由逗号和可选空白字符分开的电子邮件地址。参见示例[允许多个邮件地址](#允许多个邮件地址)，或 [HTML 属性: multiple](/zh-CN/docs/Web/HTML/Attributes/multiple) 一文以获取更多信息。
 
-> **备注：** 一般地，如果你指定了 {{htmlattrxref("required", "input")}} 属性，那么用户将必须输入一个合法的邮件地址。然而，如果你添加了 `multiple` 属性，一系列零地址（一个空字符串，或完全为空白字符的字符串）也是合法的。也就是说，当指定了 `multiple` 时，用户甚至不需要输入一个邮件地址，无论是否指定了 `required`。
+> **备注：** 一般地，如果你指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，那么用户将必须输入一个合法的邮件地址。然而，如果你添加了 `multiple` 属性，一系列零地址（一个空字符串，或完全为空白字符的字符串）也是合法的。也就是说，当指定了 `multiple` 时，用户甚至不需要输入一个邮件地址，无论是否指定了 `required`。
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果没有指定模式，或指定了无效的模式，则不会应用任何正则表达式，且该属性将被完全忽略。
 
-> **备注：** 使用 {{htmlattrxref("title", "input")}} 属性来指定大多数浏览器将作为工具提示的文本，以解释匹配该模式的要求是什么。还应该在附近包括其他解释性的文本。
+> **备注：** 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性来指定大多数浏览器将作为工具提示的文本，以解释匹配该模式的要求是什么。还应该在附近包括其他解释性的文本。
 
 参阅[模式验证](#模式验证)一节以获取详细说明和示例。
 
@@ -95,11 +95,11 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 {{ EmbedLiveSample('一个简单的 email 输入', 600, 40) }}
 
-请注意，在空的时候和输入一个有效格式的电子邮件地址的时候，它被认为是有效的，但在其他情况下，则不被认为是有效的。通过添加 {{htmlattrxref("required", "input")}} 属性，只允许输入有效格式的电子邮件地址；当输入为空时不再被视为有效。
+请注意，在空的时候和输入一个有效格式的电子邮件地址的时候，它被认为是有效的，但在其他情况下，则不被认为是有效的。通过添加 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，只允许输入有效格式的电子邮件地址；当输入为空时不再被视为有效。
 
 ### 允许多个邮件地址
 
-通过添加 {{htmlattrxref("multiple", "input")}} 布尔属性，输入框可以接受多个邮件地址。
+通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 布尔属性，输入框可以接受多个邮件地址。
 
 ```html
 <input id="emailAddress" type="email" multiple />
@@ -144,7 +144,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 #### 输入框物理大小
 
-输入框的物理尺寸可以用 {{htmlattrxref("size", "input")}} 属性来控制。通过它，你可以指定输入框一次可以显示的字符数。在这个例子中，`email` 编辑框有 15 个字符宽：
+输入框的物理尺寸可以用 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 属性来控制。通过它，你可以指定输入框一次可以显示的字符数。在这个例子中，`email` 编辑框有 15 个字符宽：
 
 ```html
 <input type="email" size="15" />
@@ -154,7 +154,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 #### 元素值的长度
 
-`size` 与输入的电子邮件地址本身的长度限制是分开的，所以你可以让字段在一个小空间里适应，同时仍然允许输入更长的电子邮件地址字符串。你可以使用 {{htmlattrxref("minlength", "input")}} 属性为输入的电子邮件地址指定一个最小长度，以字符为单位；同样，使用 {{htmlattrxref("maxlength", "input")}} 来设置输入电子邮件地址的最大长度。
+`size` 与输入的电子邮件地址本身的长度限制是分开的，所以你可以让字段在一个小空间里适应，同时仍然允许输入更长的电子邮件地址字符串。你可以使用 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 属性为输入的电子邮件地址指定一个最小长度，以字符为单位；同样，使用 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 来设置输入电子邮件地址的最大长度。
 
 下面的例子创建了一个 32 个字符宽的电子邮件地址输入框，要求内容不能短于 3 个字符，不能长于 64 个字符。
 
@@ -168,7 +168,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 #### 使用 value 属性提供单个默认值
 
-像往常一样，你可以通过设置 {{htmlattrxref("value", "input")}} 属性，为 `email` 输入框提供一个默认值：
+像往常一样，你可以通过设置 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性，为 `email` 输入框提供一个默认值：
 
 ```html
 <input type="email" value="default@example.com" />
@@ -178,7 +178,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 #### 提供推荐值列表
 
-再进一步，你可以提供一个默认选项的列表，用户可以通过指定 {{htmlattrxref("list", "input")}} 属性从中选择。这并不限制用户使用这些选项，但可以让他们更快地选择常用的电子邮件地址。这也为 {{htmlattrxref("autocomplete", "input")}} 提供提示。`list` 属性指定了 {{HTMLElement("datalist")}} 的 ID，它又包含了每个建议值的一个 {{HTMLElement("option")}} 元素；每个 `option` 的 `value` 是电子邮件输入框的对应建议值。
+再进一步，你可以提供一个默认选项的列表，用户可以通过指定 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性从中选择。这并不限制用户使用这些选项，但可以让他们更快地选择常用的电子邮件地址。这也为 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 提供提示。`list` 属性指定了 {{HTMLElement("datalist")}} 的 ID，它又包含了每个建议值的一个 {{HTMLElement("option")}} 元素；每个 `option` 的 `value` 是电子邮件输入框的对应建议值。
 
 ```html
 <input type="email" size="40" list="defaultEmails" />
@@ -216,11 +216,11 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### 模式验证
 
-如果你需要进一步限制输入的邮件地址，不仅仅需要“任何看起来像邮件地址的字符串”，你可以使用 {{htmlattrxref("pattern", "input")}} 属性来指定一个{{Glossary("regular expression","正则表达式")}}，该值必须与之匹配才有效。如果指定了 {{htmlattrxref("multiple", "input")}} 属性，每个由逗号分开的值必须满足该{{Glossary("regular expression","正则表达式")}}。
+如果你需要进一步限制输入的邮件地址，不仅仅需要“任何看起来像邮件地址的字符串”，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个{{Glossary("regular expression","正则表达式")}}，该值必须与之匹配才有效。如果指定了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性，每个由逗号分开的值必须满足该{{Glossary("regular expression","正则表达式")}}。
 
 例如，假设你正在为 Best Startup Ever, Inc. 公司的员工建立一个支持页面，如果他们的某个页面出现问题，他们可以联系 IT 部门寻求帮助。在我们的简化表单中，用户需要输入出现他们的邮箱地址，以及描述遇到的问题。为了安全起见，我们希望用户不仅提供了有效的邮箱地址，而且还是一个内部邮件地址。
 
-由于 `email` 类型的输入会对标准邮箱地址*和*自定义 {{htmlattrxref("pattern", "input")}} 同时进行校验，你可以很方便地实现这些。我们来看看如何这样做：
+由于 `email` 类型的输入会对标准邮箱地址*和*自定义 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 同时进行校验，你可以很方便地实现这些。我们来看看如何这样做：
 
 ```html
 <form>
@@ -254,17 +254,17 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 我们的 {{HTMLElement("form")}} 表单包含一个 `email` 类型的 {{HTMLElement("input")}}，用于用户电子邮件地址，一个 {{HTMLElement("textarea")}}，用来输入他们的 IT 信息，以及一个 `<input>` 类型为 [`"submit"`](/zh-CN/docs/Web/HTML/Element/Input/submit) 的按钮，用来创建一个提交表单。每个文本输入框都有一个 {{HTMLElement("label")}} 与之相关，让用户知道对他们的期望。
 
-让我们仔细看看电子邮件地址输入框。它的 {{htmlattrxref("size", "input")}} 和 {{htmlattrxref("maxlength", "input")}} 属性都被设置为 64，以便为 64 个字符的电子邮件地址提供空间，并将实际输入的字符数限制在最大 64 个。这里还指定了 {{htmlattrxref("required", "input")}} 属性，使得用户必须提供一个有效的电子邮件地址。
+让我们仔细看看电子邮件地址输入框。它的 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性都被设置为 64，以便为 64 个字符的电子邮件地址提供空间，并将实际输入的字符数限制在最大 64 个。这里还指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，使得用户必须提供一个有效的电子邮件地址。
 
-表单中提供了一个适当的 {{htmlattrxref("placeholder", "input")}}——`username@beststartupever.com`，以证明什么是有效的条目。这个字符串表明，应该输入一个电子邮件地址，并建议它应该是一个企业的 beststartupever.com 账户。此外，使用 `email` 类型将验证文本以确保它的格式像一个电子邮件地址。如果输入框中的文本不是电子邮件地址，你会得到一个错误信息，看起来像这样：
+表单中提供了一个适当的 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder)——`username@beststartupever.com`，以证明什么是有效的条目。这个字符串表明，应该输入一个电子邮件地址，并建议它应该是一个企业的 beststartupever.com 账户。此外，使用 `email` 类型将验证文本以确保它的格式像一个电子邮件地址。如果输入框中的文本不是电子邮件地址，你会得到一个错误信息，看起来像这样：
 
 ![Invalid email address in error state with a popout from the input reading 'please enter an email address'.](enter-valid-email-address.png)
 
-如果我们让事情停留在这个阶段，我们至少会在合法的电子邮件地址上进行验证。但我们想走得更远：我们想确保电子邮件地址实际上是“_username_@beststartupever.com”的形式。这就是我们要使用 {{htmlattrxref("pattern", "input")}} 的地方。我们将 `pattern` 设置为 `.+@beststartupever.com`。这个简单的正则表达式要求一个至少由一个任何类型的字符组成的字符串，然后是“@”，后面是域名“beststartupever.com”。
+如果我们让事情停留在这个阶段，我们至少会在合法的电子邮件地址上进行验证。但我们想走得更远：我们想确保电子邮件地址实际上是“_username_@beststartupever.com”的形式。这就是我们要使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 的地方。我们将 `pattern` 设置为 `.+@beststartupever.com`。这个简单的正则表达式要求一个至少由一个任何类型的字符组成的字符串，然后是“@”，后面是域名“beststartupever.com”。
 
 请注意，这根本不是一个有效的电子邮件地址过滤器；它允许诸如“ @beststartupever.com”（注意前面的空格）或“@@beststartupever.com”这样的内容，它们都是无效的。然而，浏览器对指定的文本同时运行标准的电子邮件地址过滤器*和*我们的自定义模式。结果，我们的验证结果是：“确保这类似于一个有效的电子邮件地址，如果是的话，确保它也是一个 beststartupever.com 的地址。”
 
-建议在使用 `pattern` 属性的同时使用 {{htmlattrxref("title")}}。如果你这样做，`title` *必须*描述该模式。也就是说，它应该解释数据应该采取什么格式，而不是任何其他信息。这是因为 `title` 可以作为验证错误信息的一部分被显示或说出。例如，浏览器可能会显示“输入的文本不符合要求的模式。”，随后是你指定的 `title`。如果你的 `title` 是类似于“Email address”的字符串，结果将是“输入的文本不符合要求的模式。Email address”，这不太通顺。
+建议在使用 `pattern` 属性的同时使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title)。如果你这样做，`title` *必须*描述该模式。也就是说，它应该解释数据应该采取什么格式，而不是任何其他信息。这是因为 `title` 可以作为验证错误信息的一部分被显示或说出。例如，浏览器可能会显示“输入的文本不符合要求的模式。”，随后是你指定的 `title`。如果你的 `title` 是类似于“Email address”的字符串，结果将是“输入的文本不符合要求的模式。Email address”，这不太通顺。
 
 这就是为什么我们指定字符串“请只提供 Best Startup Ever 公司的电子邮件地址”。通过这样做，所产生的完整错误信息可能是这样的：“输入的文本不符合要求的模式。请只提供 Best Startup Ever 公司的电子邮件地址”。
 
@@ -276,7 +276,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 这里我们有一个 ID 为 `emailAddress` 的电子邮件输入框，它最多可以有 256 个字符长。输入框本身的宽度为 64 个字符，并在字段为空时显示文本 `user@example.gov` 作为占位符。此外，通过使用[`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple)属性，该框被配置为允许用户输入零个或多个电子邮件地址，用逗号分隔，如[允许多个电子邮件地址](#允许多个电子邮件地址)中所述。最后，[`list`](/zh-CN/docs/Web/HTML/Attributes/list) 属性包含一个 {{HTMLElement("datalist")}} 的 ID，其 {{HTMLElement("option")}} 指定一组建议值，供用户选择。
 
-作为补充，{{HTMLElement("label")}} 元素被用来为电子邮件输入框建立一个标签，其 {{htmlattrxref("for", "label")}} 属性引用了 {{HTMLElement("input")}} 元素的 `emailAddress` ID。通过这种方式将这两个元素联系起来，点击标签将聚焦输入元素。
+作为补充，{{HTMLElement("label")}} 元素被用来为电子邮件输入框建立一个标签，其 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 属性引用了 {{HTMLElement("input")}} 元素的 `emailAddress` ID。通过这种方式将这两个元素联系起来，点击标签将聚焦输入元素。
 
 ```html
 <label for="emailAddress">电子邮件</label><br />
@@ -320,7 +320,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
     <tr>
       <td><strong>支持的通用属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("maxlength", "input")}}、{{htmlattrxref("minlength", "input")}}、{{htmlattrxref("multiple", "input")}}、{{htmlattrxref("name", "input")}}、{{htmlattrxref("pattern", "input")}}、{{htmlattrxref("placeholder", "input")}}、{{htmlattrxref("readonly", "input")}}、{{htmlattrxref("required", "input")}}、{{htmlattrxref("size", "input")}} 和 {{htmlattrxref("type", "input")}}
+        <a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#name"><code>name</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#size"><code>size</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#type"><code>type</code></a>
       </td>
     </tr>
     <tr>

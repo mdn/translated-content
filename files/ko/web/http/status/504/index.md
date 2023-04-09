@@ -10,7 +10,7 @@ slug: Web/HTTP/Status/504
 
 ## 상태
 
-```
+```http
 504 Gateway Timeout
 ```
 

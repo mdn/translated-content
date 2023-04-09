@@ -39,9 +39,9 @@ console.log(typeof num);    // número
 
 {{Specifications}}
 
-## Compatibilidad con navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.valueOf")}}
+{{Compat}}
 
 ## Ver también
 

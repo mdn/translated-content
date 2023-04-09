@@ -87,7 +87,7 @@ Ahora tienes el [contexto de renderizado 2D](/es/docs/Web/API/CanvasRenderingCon
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## See also
 

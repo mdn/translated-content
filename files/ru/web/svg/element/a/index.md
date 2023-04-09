@@ -86,7 +86,7 @@ svg|a:hover, svg|a:active {
 - {{htmlattrxref("type", "a")}}
   - : {{Glossary("MIME type")}} для ссылки URL.
     _Тип_: **\<string>** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : URL или фрагмент URL, на который указывает гиперссылка. Может понадобиться для обратной совместимости со старыми браузерами.
     _Тип_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
 

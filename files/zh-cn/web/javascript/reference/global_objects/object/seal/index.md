@@ -32,7 +32,7 @@ Object.seal(obj)
 
 返回被密封对象的引用。
 
-## 例子
+## 示例
 
 ```js
 var obj = {

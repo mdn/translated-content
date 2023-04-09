@@ -54,7 +54,7 @@ wm.set(obj, 'baz');
 
 ## Notas específicas ao Firefox
 
-- Antes do Firefox 33 {{geckoRelease("33")}}, `WeakMap.prototype.set` retornava `undefined` e, portanto, não era encadeável. Isso foi resolvido ({{bug(1031632)}}). O comportamento também podia ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+- Antes do Firefox 33, `WeakMap.prototype.set` retornava `undefined` e, portanto, não era encadeável. Isso foi resolvido ({{bug(1031632)}}). O comportamento também podia ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
 ## Ver também
 

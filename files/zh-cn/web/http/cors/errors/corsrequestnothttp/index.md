@@ -1,5 +1,5 @@
 ---
-title: 原因：CORS 请求不是 HTTP
+title: 原因：CORS request not HTTP
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
 
@@ -8,24 +8,27 @@ slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ## 原因
 
 ```plain
-原因：CORS 请求不是 HTTP
+原因：CORS request not HTTP
 ```
 
-## 哪里出错了？
+## 哪里错了？
 
-{{Glossary("CORS")}} 请求只能使用 HTTPS URL 方案，但请求指定的 URL 可能是不同类型。这种情况经常发生在 URL 指定本地文件，例如使用了 `file:///` 的 URL。
+{{Glossary("CORS")}} 请求只能用于 HTTP 或 HTTPS URL 方案，但请求指定的 URL 可能是不同类型。这种情况经常发生在 URL 指定本地文件，例如使用了 `file:///` 的 URL。
 
-要解决此问题，请确保在发出涉及 CORS 的请求时使用 HTTPS URL，例如 {{domxref("XMLHttpRequest")}}，[Fetch](/zh-CN/docs/Web/API/Fetch_API) API，或 Web Fonts（`@font-face`），或 [WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL), 或 XSL 样式表。
+要解决此问题，请确保在发出涉及 CORS 的请求时使用 HTTPS URL，例如 {{domxref("XMLHttpRequest")}}、[Fetch](/zh-CN/docs/Web/API/Fetch_API) API、Web 字体（`@font-face`）、[WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)以及 XSL 样式表。
 
-### 自 Firefox 68 本地文件安全性的改变
+### 加载本地文件
 
-当用户在 Firefox 67 或更早版本中使用 `file:///` URI 打开页面时，页面来源被定义为打开页面的目录。同一目录及其子目录中的资源均被视为具有相同的来源，符合 CORS 同源规则。
+来自相同的目录或者子目录的本地文件在历史上被视为[同源](/zh-CN/docs/Web/Security/Same-origin_policy)的。这意味着在测试期间可以从本地目录或子目录加载文件以及它的所有子资源，而不会触发 CORS 错误。
 
-为响应 [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730)，Firefox 68 及更高版本中定义，使用 `file:///` URL 打开页面的来源唯一。因此，同一目录或其子目录中的其他资源不再满足 CORS 同源规则。这个新的表现通过 `privacy.file_unique_origin` 这一首选项控制，默认启用。
+不幸地是，这有安全隐患，正如此公告所述：[CVE-2019-11730](https://www.mozilla.org/zh-CN/security/advisories/mfsa2019-21/#CVE-2019-11730)。很多浏览器，包括 Firfox 和 Chrome，现在将所有本地文件视为*不透明*来源（默认）。因此，加载包含本地资源的本地文件现在会导致 CORS 错误。
 
-## 参考
+开发者如果想要在本地进行测试，现在要[设置一个本地服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。由于所有的文件都来自同种方案和域（`loaclhost`），它们都有相同的源，并不会触发跨源错误。
+
+> **备注：** 此更改符合 [URL 规范](https://url.spec.whatwg.org/#origin)，该规范将文件的原始行为留给开发者实现，但建议在有疑问时，将文件的来源视为不透明。
+
+## 参见
 
 - [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
-- 术语：{{Glossary("CORS")}}
 - [CORS 介绍](/zh-CN/docs/Web/HTTP/CORS)
-- [什么是 URL？](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)
+- [什么是 URL？](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

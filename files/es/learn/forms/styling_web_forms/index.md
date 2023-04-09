@@ -375,19 +375,6 @@ Como puede ver, siempre que queramos crear formularios con solo campos de texto 
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-## En este módulo
-
-- [Tu primer formulario](/es/docs/Learn/Forms/Your_first_form)
-- [Cómo estructurar un formulario web](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Controles básicos de formularios nativos](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [Los tipos de entrada de HTML5](/es/docs/Learn/Forms/HTML5_input_types)
-- [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls)
-- [Estilizando formularios HTML](/es/docs/Learn/Forms/Styling_web_forms)
-- [Estilo de formulario avanzado](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudoclases de interfaz de usuario](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Validación de formularios del lado del cliente](/es/docs/Learn/Forms/Form_validation)
-- [Envío de datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
 ### Temas avanzados
 
 - [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)

@@ -45,9 +45,9 @@ El almacenamiento tiene tres propiedades, que representan los diferentes tipos d
 - {{WebExtAPIRef("storage.onChanged")}}
   - : Se dispara cuando uno o más elementos cambian en un área de almacenamiento.
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("webextensions.api.storage")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

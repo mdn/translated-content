@@ -62,9 +62,9 @@ function adcElemento () {
 
 - Quando chamada em um objeto de documento marcado como um documento HTML, `createElement()` torna seu argumento caixa-baixa antes de criá-lo.
 - Para criar um elemento com um nome qualificado e _namespace URI_, use {{ domxref("document.createElementNS()") }}.
-- Antes do Gecko 2.0 {{ geckoRelease("2.0") }} você podia incluir os símbolos de menor que e maior que em volta da `tagName` no modo _quirks_; a partir do Gecko 2.0, a função comporta-se da mesma forma em ambos os modos _quirks_ e estrito.
-- A partir do Gecko 19.0 {{geckoRelease("19.0")}}, `createElement(null)` funciona como `createElement("null")`. Note que o Opera torna `null` uma _string_, mas ambos Chrome e Internet Explorer lançarão erros.
-- A partir do Gecko 22.0 {{geckoRelease("22.0")}} `createElement()` não mais usa a interface {{domxref("HTMLSpanElement")}} quando o argumento é "bgsounds", "multicol", or "image". Ao invés disso, `HTMLUnknownElement` é usado para "bgsound", "multicol" e {{domxref("HTMLElement")}} `HTMLElement` é usado para "image".
+- Antes do Gecko 2.0 você podia incluir os símbolos de menor que e maior que em volta da `tagName` no modo _quirks_; a partir do Gecko 2.0, a função comporta-se da mesma forma em ambos os modos _quirks_ e estrito.
+- A partir do Gecko 19.0, `createElement(null)` funciona como `createElement("null")`. Note que o Opera torna `null` uma _string_, mas ambos Chrome e Internet Explorer lançarão erros.
+- A partir do Gecko 22.0 `createElement()` não mais usa a interface {{domxref("HTMLSpanElement")}} quando o argumento é "bgsounds", "multicol", or "image". Ao invés disso, `HTMLUnknownElement` é usado para "bgsound", "multicol" e {{domxref("HTMLElement")}} `HTMLElement` é usado para "image".
 - A implementação Gecko de `createElement` não se conforma à especificação DOM para documentos XUL e XHTML: `localName` e `namespaceURI` não estão definidos para `null` no elemento criado. Veja {{ Bug(280692) }} para detalhes.
 
 ## Especificações

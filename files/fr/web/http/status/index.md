@@ -163,7 +163,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## Voir aussi
 

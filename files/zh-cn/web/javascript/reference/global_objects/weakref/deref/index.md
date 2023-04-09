@@ -19,7 +19,7 @@ obj = ref.deref();
 
 有关一些重要说明，请参阅{{jsxref("WeakRef")}}页面上的[Notes on WeakRefs](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Notes_on_WeakRefs) 。
 
-## 例子
+## 示例
 
 ### 使用 deref
 

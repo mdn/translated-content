@@ -59,7 +59,7 @@ modules 目录下的两个模块的描述如下：
 
 ## `.mjs` 与 `.js`
 
-纵观此文，我们使用 `.js` 扩展名的模块文件，但在其它一些文章中，你可能会看到 `.mjs` 扩展名的使用。[V8 推荐了这样的做法](https://v8.dev/features/modules#mjs)，比如有下列理由：
+纵观此文，我们使用 `.js` 扩展名的模块文件，但在其他一些文章中，你可能会看到 `.mjs` 扩展名的使用。[V8 推荐了这样的做法](https://v8.dev/features/modules#mjs)，比如有下列理由：
 
 - 比较清晰，这可以指出哪些文件是模块，哪些是常规的 JavaScript。
 - 这能保证你的模块可以被运行时环境和构建工具识别，比如 [Node.js](https://nodejs.org/api/esm.html#esm_enabling) 和 [Babel](https://babeljs.io/docs/en/options#sourcetype)。

@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - files/**/_redirects.txt
-      - files/**/index.html
+      - .nvmrc
+      - files/**
       - .github/workflows/pr-check_redirects.yml
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: "yarn"
           cache-dependency-path: mdn/content/yarn.lock
 

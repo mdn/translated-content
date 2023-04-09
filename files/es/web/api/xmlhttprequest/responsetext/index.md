@@ -34,4 +34,4 @@ xhr.send(null);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.responseText")}}
+{{Compat}}

@@ -32,9 +32,9 @@ Comme toutes les APIs de `devtools`, cette API n'est disponible que pour exécut
 - [`devtools.inspectedWindow.reload()`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload)
   - : Rechargez le document de la fenêtre destination.
 
-## Comptatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.inspectedWindow")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

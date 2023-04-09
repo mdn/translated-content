@@ -25,8 +25,8 @@ Le type **`bookmarks.BookmarkTreeNodeType`** est utilisé pour décrire si un n�
 - `"folder"`: le noeud est un dossier.
 - `"separator"`: le noeud est un séparateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}

@@ -502,7 +502,7 @@ new Path2D(d);    // 从 SVG 建立 Path 对象
 
 Path2D API 添加了 `addPath`作为将`path`结合起来的方法。当你想要从几个元素中来创建对象时，这将会很实用。比如：
 
-- **{{domxref("Path2D.addPath", "Path2D.addPath(path [, transform])")}}​**
+- **{{domxref("Path2D.addPath", "Path2D.addPath(path [, transform])")}}**
   - : 添加了一条路径到当前路径（可能添加了一个变换矩阵）。
 
 ### Path2D 示例

@@ -81,7 +81,7 @@ Object.getOwnPropertyDescriptor("foo", 0);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Ver también
 

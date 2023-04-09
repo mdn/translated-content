@@ -151,7 +151,7 @@ favDialog.addEventListener('close', function onClose() {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dialog")}}
+{{Compat}}
 
 ## 폴리필
 

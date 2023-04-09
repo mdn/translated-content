@@ -37,9 +37,9 @@ browser.pageAction.setPopup(
     - `popup`
       - : `string`. URL vers le fichier HTML à afficher dans un popup. Si elle est définie sur une chaîne vide (''), aucune fenêtre contextuelle n'est affichée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.setPopup")}}
+{{Compat}}
 
 ## Exemples
 

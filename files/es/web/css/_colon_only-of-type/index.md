@@ -56,7 +56,7 @@ main :only-of-type {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.only-of-type")}}
+{{Compat}}
 
 ## Ver también
 

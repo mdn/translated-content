@@ -24,15 +24,13 @@ if (node.parentElement) {
 }
 ```
 
-## Compatibilidad en navegadores
-
-En algunos navegadores, la propiedad `elementoPadre` es solo definida en nodos que ellos mismos son {{domxref("Element")}}. En particular, esto no está definido en nodos de texto.
-
-{{Compat("api.Node.parentElement")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

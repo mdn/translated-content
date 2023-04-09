@@ -54,7 +54,7 @@ Cette fonctionnalité ne fait partie d'aucune spécification bien qu'elle ait [d
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-focusring")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -58,9 +58,9 @@ createBookmark.then(onCreated);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.create")}}
+{{Compat}}
 
 > **Note :**
 >

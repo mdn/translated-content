@@ -176,7 +176,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 
 Вы задаёте элемент `<ul>` как обычно, но указываете имя модифицированного элемента в атрибуте `is`.
 
-> **Примечание:** **Замечание**: Полный [исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) доступен здесь.
+> **Примечание:** Полный [исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) доступен здесь.
 
 ## Использование lifecycle callbacks
 
@@ -259,4 +259,4 @@ static get observedAttributes() {return ['w', 'l']; }
 
 В нашем случае он расположен в начале конструктора.
 
-> **Примечание:** **Замещение**: Смотрите [полный исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) здесь.
+> **Примечание:** Смотрите [полный исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) здесь.

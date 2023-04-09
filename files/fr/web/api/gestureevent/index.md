@@ -50,7 +50,7 @@ _Ne fait partie d'aucune spécification._ Apple a une [description dans la bibli
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GestureEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

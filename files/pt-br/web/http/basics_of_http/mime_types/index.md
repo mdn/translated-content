@@ -8,11 +8,11 @@ original_slug: Web/HTTP/Basico_sobre_HTTP/MIME_types
 
 O **MIME type** é o mecanismo para dizer ao cliente a variedade de documentos transmitidos: a extensão de um nome de arquivo não tem significado na web. Portanto, é importante que o servidor esteja configurado corretamente, de modo que o _MIME-type_ correto seja transmitido com cada documento. Os navegadores costumam usar o _MIME-type_ para determinar qual ação usar como padrão para fazer quando um recurso é obtido.
 
-Existem muitos tipos de documentos, por isso há muitos _MIME-types_. Neste artigo, listaremos os mais importantes para o desenvolvimento da Web, mas você pode encontrá-los para os tipos de documento aplicáveis ​​neste artigo dedicado: [Lista completa de _MIME types_](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)_._
+Existem muitos tipos de documentos, por isso há muitos _MIME-types_. Neste artigo, listaremos os mais importantes para o desenvolvimento da Web, mas você pode encontrá-los para os tipos de documento aplicáveis neste artigo dedicado: [Lista completa de _MIME types_](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)_._
 
 _MIME types_ não são a única maneira de transmitir as informações do tipo de documento:
 
-- Os sufixos de nome são usados ​​às vezes, especialmente em sistemas Microsoft Windows. Nem todos os sistemas operacionais consideram esses sufixos significativos (especialmente Linux e Mac OS), e como um tipo MIME externo, não há garantia de que eles estejam corretos.
+- Os sufixos de nome são usados às vezes, especialmente em sistemas Microsoft Windows. Nem todos os sistemas operacionais consideram esses sufixos significativos (especialmente Linux e Mac OS), e como um tipo MIME externo, não há garantia de que eles estejam corretos.
 - Números mágicos. A sintaxe dos diferentes tipos de arquivos permite a inferência de tipo de arquivo, olhando para a estrutura. Por exemplo. Cada arquivo GIF começa com o valor hexadecimal 47 49 46 38 \[GIF89] ou arquivos PNG com 89 50 4E 47 \[.PNG]. Nem todos os tipos de arquivos têm números mágicos, portanto este não é um sistema 100% confiável.
 
 Na Web, apenas o _MIME type_ é relevante e deve ser definido com cuidado. Navegadores e servidores usavam frequentemente heurísticas baseadas em sufixos ou números mágicos para definir o tipo MIME, verificar a coerência ou encontrar o tipo MIME correto quando apenas um tipo genérico foi fornecido.
@@ -63,7 +63,7 @@ multipart/form-data
 multipart/byteranges
 ```
 
-_Multipart types_ indicam uma categoria de documento que são quebrados em partes distintas, muitas vezes com diferentes tipos MIME. É uma maneira de representar um documento composto. Com exceção de `multipart/form-data`, que são usados ​​em relação de [formularios HTML](/pt-BR/docs/Web/Guide/HTML/Forms) e metodo {{HTTPMethod("POST")}}, e `multipart/byteranges` que são usados em conjunto com {{HTTPStatus("206")}} `Mensagem de status de conteúdo parcial para enviar apenas um subconjunto de um documento inteiro, o HTTP não manipula documentos de várias partes de uma maneira específica: a mensagem é simplesmente transmitida ao navegador (o que provavelmente irá propor uma janela Salvar como, sem saber como exibir o documento).`
+_Multipart types_ indicam uma categoria de documento que são quebrados em partes distintas, muitas vezes com diferentes tipos MIME. É uma maneira de representar um documento composto. Com exceção de `multipart/form-data`, que são usados em relação de [formularios HTML](/pt-BR/docs/Web/Guide/HTML/Forms) e metodo {{HTTPMethod("POST")}}, e `multipart/byteranges` que são usados em conjunto com {{HTTPStatus("206")}} `Mensagem de status de conteúdo parcial para enviar apenas um subconjunto de um documento inteiro, o HTTP não manipula documentos de várias partes de uma maneira específica: a mensagem é simplesmente transmitida ao navegador (o que provavelmente irá propor uma janela Salvar como, sem saber como exibir o documento).`
 
 ## Importantes _MIME types_ para desenvolvedores Web
 
@@ -113,7 +113,7 @@ O tipo MIME de tais arquivos principalmente representam os formatos de contêine
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | Um arquivo de áudio no formato de recipiente WAVE. O codec de áudio PCM (WAVE codec "1") é freqüentemente suportado, mas outros codecs têm suporte mais limitado (se houver).                |
 | `audio/webm`                                            | Um arquivo de áudio no formato de contêiner WebM. Vorbis e Opus são os codecs de áudio mais comuns.                                                                                          |
-| `video/webm`                                            | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner WebM. VP8 e VP9 são os codecs video os mais comuns usados ​​dentro dele; Vorbis e Opus os codecs de áudio mais comuns. |
+| `video/webm`                                            | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner WebM. VP8 e VP9 são os codecs video os mais comuns usados dentro dele; Vorbis e Opus os codecs de áudio mais comuns. |
 | `audio/ogg`                                             | Um arquivo de áudio no formato de contêiner OGG. Vorbis é o codec de áudio mais comum usado em tal recipiente.                                                                               |
 | `video/ogg`                                             | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                  |
 | `application/ogg`                                       | Um arquivo de áudio ou vídeo usando o formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                             |

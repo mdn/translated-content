@@ -110,7 +110,7 @@ La entrada de tipo `number` solo debe usarse para números incrementales, especi
 
 Los elementos `<input type="number">` pueden ayudar a simplificar tu trabajo cuando construyes la interfaz de usuario y la lógica para introducir números en un formulario. Cuando creas una entrada con el valor de `type` adecuado, `number`, consigues validación automática de que el texto introducido es un número y usualmente un conjunto de botones arriba/abajo para incrementar o disminuir el valor.
 
-> **Advertencia:** Ten en mente que, lógicamente, no deberías poder ingresar otros caracteres que no sean números dentro de una entrada numérica. Parece haber algo de desacuerdo acerca de esto entre navegadores; ver {{bug(1398528)}}.
+> **Advertencia:** Ten en mente que, lógicamente, no deberías poder ingresar otros caracteres que no sean números dentro de una entrada numérica. Parece haber algo de desacuerdo acerca de esto entre navegadores; ver [Error 1398528 en Firefox](https://bugzil.la/1398528).
 
 > **Nota:** Un usuario puede jugar con tu HTML tras bambalinas, así que tu sitio _no debe_ usar validación simple del lado del cliente para ningún fin de seguridad. Tú _debes_ verificar en el lado del servidor cualquier transacción en la cual el valor provisto pueda tener alguna implicación de seguridad de cualquier tipo.
 

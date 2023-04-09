@@ -10,6 +10,5 @@ original_slug: Глоссарий/CSRF
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Межсайтовая_подделка_запроса")}} на Wikipedia
 - [Prevention measures](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>)
 - [MDN security tutorial](/en-US/Learn/tutorial/Information_Security_Basics)

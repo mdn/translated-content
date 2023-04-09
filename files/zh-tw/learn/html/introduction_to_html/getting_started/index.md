@@ -332,7 +332,7 @@ window.addEventListener("load", drawOutput);
 
 ### 布林屬性（Boolean attributes）
 
-你有時會看到一些沒有值的屬性，這完全是可行的。它們叫做布林屬性，他們只能附帶一個值，而這個值一般來說會和屬性的名字一樣。以 {{htmlattrxref("disabled", "input")}} 屬性來說，你可以把它指派為 input 元素的屬性，使得輸入文字的框框變得不能輸入文字。
+你有時會看到一些沒有值的屬性，這完全是可行的。它們叫做布林屬性，他們只能附帶一個值，而這個值一般來說會和屬性的名字一樣。以 [`disabled`](/zh-TW/docs/Web/HTML/Element/input#disabled) 屬性來說，你可以把它指派為 input 元素的屬性，使得輸入文字的框框變得不能輸入文字。
 
 ```html
 <input type="text" disabled="disabled">
@@ -596,15 +596,3 @@ HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始
 - [用 CSS 為 HTML 元素修改顏色](/zh-TW/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## 在本主題中的內容
-
-- [HTML 入門](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [標頭裡是什麼？HTML 中的後設資料（metadata）](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文字基礎概念](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [建立超連結](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [進階文字格式](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文件與網站架構](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML 除錯](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [設個字母](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [架構出具備內容的網頁](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -132,7 +132,7 @@ es equivalente a:
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.supports")}}
+{{Compat}}
 
 ## Ver también
 

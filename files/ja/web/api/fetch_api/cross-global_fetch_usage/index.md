@@ -30,7 +30,7 @@ let absolute = new URL(relative, window.location.href)
 
 ## 解決策
 
-Firefox 60 以降では、 Mozilla は、使用している `fetch()` 関数を所有するグローバルに対して相対 URL を解決するようになりました（{{bug(1432272)}} を参照）。 したがって、上記の場合、次のように、 iframe の位置に対して解決します。
+Firefox 60 以降では、 Mozilla は、使用している `fetch()` 関数を所有するグローバルに対して相対 URL を解決するようになりました（[Firefox バグ 1432272](https://bugzil.la/1432272) を参照）。 したがって、上記の場合、次のように、 iframe の位置に対して解決します。
 
 ```js
 let absolute = new URL(relative, frame.contentWindow.location.href)

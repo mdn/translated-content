@@ -30,7 +30,7 @@ console.log(obj.paused); // true
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.paused")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,6 +1,6 @@
 ---
 title: Приоритет операторов
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 tags:
   - JavaScript
   - Операторы
@@ -8,6 +8,7 @@ tags:
   - приоритет операторов
 translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **Приоритет операторов** определяет порядок, в котором операторы выполняются. Операторы с более высоким приоритетом выполняются первыми.

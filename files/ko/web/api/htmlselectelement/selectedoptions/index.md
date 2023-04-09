@@ -94,14 +94,14 @@ The resulting content looks like this in action:
 
 {{EmbedLiveSample("Example", 600, 250)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Forms/The_native_form_widgets", "Drop-down content")}}
+- [Drop-down content](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)

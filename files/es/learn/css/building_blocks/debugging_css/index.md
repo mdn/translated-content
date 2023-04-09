@@ -158,8 +158,6 @@ Los navegadores simplemente ignoran el CSS que no entienden. Si la propiedad o e
 
 También puedes echar un vistazo a las tablas de compatibilidad de navegadores en la parte inferior de cada página de propiedades del proyecto MDN. Te muestran la compatibilidad de cada navegador para esa propiedad, a menudo desglosado si hay compatibilidad para un uso de la propiedad y no para otros. La tabla siguiente muestra los datos de compatibilidad para la propiedad {{cssxref ("shape-outside")}}.
 
-{{compat("css.shape-outside")}}
-
 ### ¿Hay algo más que anule tu CSS?
 
 Aquí es donde la información que has aprendido sobre la especificidad será muy útil. Si tienes algo más específico que anula lo que intentas hacer, puedes entrar en un juego muy frustrante de tratar de resolverlo sin saber qué tienes que resolver. Sin embargo, como hemos dicho, las DevTools te mostrarán qué CSS se ha aplicado y así puedes averiguar cómo hacer que el nuevo selector sea lo suficientemente específico como para anularlo.
@@ -186,24 +184,3 @@ En el caso de que tu problema sea en realidad un error en un navegador, también
 A medida que adquieras más experiencia con CSS, descubrirás que vas adquiriendo rapidez para descubrir de dónde vienen los problemas. Sin embargo, incluso los más experimentados a veces nos preguntamos qué pasa. Adoptar un enfoque metódico, hacer un caso de prueba reducido y explicar el problema a otra persona suele dar un buen resultado para encontrar una solución.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## En este módulo
-
-1. [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Las pseudoclases y los pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Selectores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [El modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

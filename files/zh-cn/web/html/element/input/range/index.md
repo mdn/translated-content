@@ -25,7 +25,7 @@ slug: Web/HTML/Element/input/range
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("max", "input")}}、{{htmlattrxref("min", "input")}} 和 {{htmlattrxref("step", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#max"><code>max</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#min"><code>min</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -46,14 +46,14 @@ slug: Web/HTML/Element/input/range
 
 没有可用的模式验证。但是，执行以下形式的自动验证：
 
-- 如果将 {{htmlattrxref("value", "input")}} 设置为无法转换为有效浮点数的值，则验证将失败，因为输入框的值是错误的。
-- 该值不得小于 {{htmlattrxref("min", "input")}}，默认值为 0。
-- 该值将不大于 {{htmlattrxref("max", "input")}}，默认值为 100。
-- 该值将是 {{htmlattrxref("step", "input")}} 的整倍数，默认值为 1。
+- 如果将 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 设置为无法转换为有效浮点数的值，则验证将失败，因为输入框的值是错误的。
+- 该值不得小于 [`min`](/zh-CN/docs/Web/HTML/Element/input#min)，默认值为 0。
+- 该值将不大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max)，默认值为 100。
+- 该值将是 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 的整倍数，默认值为 1。
 
 ### 值
 
-{{htmlattrxref("value", "input")}} 属性包含所选数字的字符串表示形式。该值绝不能为空字符串（`""`）。默认值介于指定的最小值和最大值之间，除非最大值实际上小于最小值，在这种情况下，默认值将设置 `min` 属性的值。确定默认值的算法是：
+[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含所选数字的字符串表示形式。该值绝不能为空字符串（`""`）。默认值介于指定的最小值和最大值之间，除非最大值实际上小于最小值，在这种情况下，默认值将设置 `min` 属性的值。确定默认值的算法是：
 
 ```js
 defaultValue =
@@ -76,19 +76,19 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### max
 
-允许值范围内的最大值。如果输入到元素中的 {{htmlattrxref("value", "input")}} 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。如果输入到元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
 
 此值必须大于或等于 `min` 属性的值。请参见 HTML [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性。
 
 ### min
 
-允许值范围内的最小值。如果元素的{{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 指定的值不是有效数字，则输入没有最小值。
 
 该值必须小于或等于 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值。请参见 HTML [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 属性。
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 min 属性决定，否则，使用 {{htmlattrxref("value", "input")}} 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 min 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#min) 之外）。
 
@@ -119,7 +119,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### 指定最小值和最大值
 
-默认情况下，最小值为 0，最大值为 100。如果这不是想要的值，则可以通过更改 {{htmlattrxref("min", "input")}} 和/或 {{htmlattrxref("max", "input")}} 属性。这些可以是任何浮点值。
+默认情况下，最小值为 0，最大值为 100。如果这不是想要的值，则可以通过更改 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和/或 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性。这些可以是任何浮点值。
 
 例如，要要求用户输入介于 -10 和 10 之间的值，可以使用：
 
@@ -131,7 +131,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### 设置值的粒度
 
-默认情况下，粒度为 1，表示该值始终是整数。可以通过更改 {{htmlattrxref("step")}} 属性控制粒度。例如，如果需要一个介于 5 到 10 之间的值（精确到两位小数），则应将 `step` 的值设置为 0.01：
+默认情况下，粒度为 1，表示该值始终是整数。可以通过更改 [`step`](/zh-CN/docs/Web/HTML/Global_attributes#step) 属性控制粒度。例如，如果需要一个介于 5 到 10 之间的值（精确到两位小数），则应将 `step` 的值设置为 0.01：
 
 #### 设置 step 属性
 
@@ -143,7 +143,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 #### 设置 step 为“any”
 
-如果要接受任何值而不论扩展到小数点后多少位，可以为 {{htmlattrxref("step", "input")}} 属性指定值 `any`。
+如果要接受任何值而不论扩展到小数点后多少位，可以为 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性指定值 `any`。
 
 ```html
 <input type="range" min="0" max="3.14" step="any" />
@@ -155,7 +155,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### 添加井号标记
 
-为了在 range 控制器中添加井号标记，要包含 `list` 属性，赋予它某个定义了一系列控件上的井号标记 {{HTMLElement("datalist")}} 元素的 `id`。每个点使用带有 {{htmlattrxref("value", "option")}} 属性的 {{HTMLElement("option")}} 元素设置需要添加标记的点。
+为了在 range 控制器中添加井号标记，要包含 `list` 属性，赋予它某个定义了一系列控件上的井号标记 {{HTMLElement("datalist")}} 元素的 `id`。每个点使用带有 [`value`](/zh-CN/docs/Web/HTML/Element/option#value) 属性的 {{HTMLElement("option")}} 元素设置需要添加标记的点。
 
 #### HTML
 

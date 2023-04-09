@@ -1,5 +1,5 @@
 ---
-title: 'Reason: CORS disabled'
+title: 原因：CORS disabled
 slug: Web/HTTP/CORS/Errors/CORSDisabled
 ---
 
@@ -8,7 +8,7 @@ slug: Web/HTTP/CORS/Errors/CORSDisabled
 ## 原因
 
 ```
-原因：CORS 被禁用
+原因：CORS disabled
 ```
 
 ## 哪里错了？
@@ -19,6 +19,6 @@ slug: Web/HTTP/CORS/Errors/CORSDisabled
 
 ## 参见
 
-- [HTTP 访问控制（CORS）错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - 术语：{{Glossary("CORS")}}
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [CORS 介绍](/zh-CN/docs/Web/HTTP/CORS)

@@ -146,9 +146,9 @@ var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa'
 
 {{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.split")}}
+{{Compat}}
 
 ## Ver también
 

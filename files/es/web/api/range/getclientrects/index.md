@@ -25,9 +25,9 @@ rectList = range.getClientRects();
 
 {{Specifications}}
 
-## Compatibilidad en los Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Range.getClientRects")}}
+{{Compat}}
 
 ## Ver también
 

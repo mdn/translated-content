@@ -27,9 +27,9 @@ function isInPage(node) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.contains")}}
+{{Compat}}
 
 ## Ver también
 

@@ -18,7 +18,7 @@ _HTML 纯文本元素_ (`<plaintext>`) 将起始标签后面的任何东西渲�
 
 ## 属性
 
-除了 [全局属性](/zh-CN/docs/Web/HTML/global_attributes) 之外，这个元素没有其它属性。
+除了 [全局属性](/zh-CN/docs/Web/HTML/global_attributes) 之外，这个元素没有其他属性。
 
 ## DOM 接口
 

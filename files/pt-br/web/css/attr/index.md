@@ -25,7 +25,7 @@ attr(data-width px, inherit);
 attr(data-something, 'default');
 ```
 
-> **Note:** **Nota:** A função `attr()` pode ser utilizada com qualquer propriedade CSS, mas o suporte para propriedades que não sejam {{cssxref("content")}} é experimental.
+> **Nota:** A função `attr()` pode ser utilizada com qualquer propriedade CSS, mas o suporte para propriedades que não sejam {{cssxref("content")}} é experimental.
 
 ## Sintaxe
 

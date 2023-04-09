@@ -17,7 +17,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 ### JavaScript
 
 - `WeakMap.set()` メソッドの戻り値はそれ自身から `undefined` に替わりました。
-- Firefox 7 以降で正規表現のハンドリングに関する不具合がありましたが、修正されました。詳しくは {{ bug("683838") }} をご覧ください。
+- Firefox 7 以降で正規表現のハンドリングに関する不具合がありましたが、修正されました。詳しくは [Firefox バグ 683838](https://bugzil.la/683838) をご覧ください。
 - [ECMAScript 5 strict mode](/ja/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (すなわち、`"use strict;"` 以降) では、[E4X](/ja/docs/E4X) の構文を使用できなくなりました。
 
 ### DOM
@@ -83,7 +83,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 - ESC キーで {{ domxref("window.oninput") }} ハンドラが誤って呼び出されるという、間違った結果にならないようになりました。
 - 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インタフェースは削除されました。
 - {{ domxref("document.createProcessingInstruction()") }} メソッドが HTML ドキュメントでも、XML ドキュメントの場合と同様に動作するようになりました。{{ domxref("ProcessingInstruction") }} ノードは現在も XML ドキュメントでのみサポートされていますが、ノードはドキュメントをまたいで移動させられますので、HTML ドキュメントでも同様にノードを作成することに役立ちます。
-- {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。{{ bug("707142#c13") }} をご覧ください。
+- {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。[Firefox バグ 707142#c13](https://bugzil.la/707142#c13) をご覧ください。
 
 ### CSS
 
@@ -139,7 +139,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 ### ビルドシステムの変更
 
-- 実際はビルドを成功できないようにしてしまう、`--disable-rdf` ビルドオプションが削除されました。RDF サポートの完全な削除を可能にする作業は進行中ですが、現在の XUL ではこの機能が必須です。RDF を必要とする最後の痕跡を削除する作業の進捗については {{ bug("559505") }} をご覧ください。
+- 実際はビルドを成功できないようにしてしまう、`--disable-rdf` ビルドオプションが削除されました。RDF サポートの完全な削除を可能にする作業は進行中ですが、現在の XUL ではこの機能が必須です。RDF を必要とする最後の痕跡を削除する作業の進捗については [Firefox バグ 559505](https://bugzil.la/559505) をご覧ください。
 - `--disable-smil` ビルドオプションは削除されました。
 
 ## 関連情報

@@ -128,7 +128,7 @@ Object.getOwnPropertyNames('foo');
 
 ## Notas específicas para SpiderMonkey
 
-Antes do SpiderMonkey 28 {{geckoRelease("28")}}, `Object.getOwnPropertyNames` não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ({{bug("724768")}}).
+Antes do SpiderMonkey 28, `Object.getOwnPropertyNames` não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ({{bug("724768")}}).
 
 ## Veja também
 

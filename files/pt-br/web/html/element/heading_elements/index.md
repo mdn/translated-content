@@ -23,7 +23,7 @@ Elementos de **cabeçalho** são implementados em seis níveis, `<h1>` é o mais
 
 Esses elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-O atributo **align** está {{deprecated_inline}} no {{HTMLVersionInline(4.01)}} e {{obsolete_inline}} no {{HTMLVersionInline(5)}}.
+O atributo **align** está {{deprecated_inline}} no {{HTMLVersionInline(4.01)}} e no {{HTMLVersionInline(5)}}.
 
 ## Exemplos
 

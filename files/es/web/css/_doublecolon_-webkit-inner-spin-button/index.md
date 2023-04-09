@@ -31,9 +31,9 @@ input::-webkit-inner-spin-button {
 
 No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-webkit-inner-spin-button")}}
+{{Compat}}
 
 ## Ver además
 

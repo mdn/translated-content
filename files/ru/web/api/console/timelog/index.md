@@ -1,6 +1,6 @@
 ---
 title: Console.timeLog()
-slug: Web/API/Console/timeLog
+slug: Web/API/console/timeLog
 translation_of: Web/API/Console/timeLog
 ---
 

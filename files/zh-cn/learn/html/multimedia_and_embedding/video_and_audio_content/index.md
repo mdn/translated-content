@@ -57,9 +57,9 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 当中的一些属性如下：
 
-- {{htmlattrxref("src","video")}}
+- [`src`](/zh-CN/docs/Web/HTML/Element/video#src)
   - : 同 {{htmlelement("img")}} 标签使用方式相同，`src` 属性指向你想要嵌入网页当中的视频资源，他们的使用方式完全相同。
-- {{htmlattrxref("controls","video")}}
+- [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)
   - : 用户必须能够控制视频和音频的回放功能。你可以使用 `controls` 来包含浏览器提供的控件界面，同时你也可以使用合适的 [JavaScript API](/zh-CN/docs/Web/API/HTMLMediaElement) 创建自己的界面。界面中至少要包含开始、停止以及调整音量的功能。
 - `<video>` 标签内的内容
   - : 这个叫做**后备内容** — 当浏览器不支持 `<video>` 标签的时候，就会显示这段内容，这使得我们能够对旧的浏览器提供回退内容。你可以添加任何后备内容，在这个例子中我们提供了一个指向这个视频文件的链接，从而使用户至少可以访问到这个文件，而不会局限于浏览器的支持。
@@ -144,17 +144,17 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 新的特性：
 
-- {{htmlattrxref("width","video")}} 和 {{htmlattrxref("height","video")}}
+- [`width`](/zh-CN/docs/Web/HTML/Element/video#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/video#height)
   - : 你可以用属性控制视频的尺寸，也可以用 {{Glossary("CSS")}} 来控制视频尺寸。无论使用哪种方式，视频都会保持它原始的长宽比 — 也叫做**纵横比**。如果你设置的尺寸没有保持视频原始长宽比，那么视频边框将会拉伸，而未被视频内容填充的部分，将会显示默认的背景颜色。
-- {{htmlattrxref("autoplay","video")}}
+- [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay)
   - : 这个属性会使音频和视频内容立即播放，即使页面的其他部分还没有加载完全。建议不要应用这个属性在你的网站上，因为用户们会比较反感自动播放的媒体文件。
-- {{htmlattrxref("loop","video")}}
+- [`loop`](/zh-CN/docs/Web/HTML/Element/video#loop)
   - : 这个属性可以让音频或者视频文件循环播放。同样不建议使用，除非有必要。
-- {{htmlattrxref("muted","video")}}
+- [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted)
   - : 这个属性会导致媒体播放时，默认关闭声音。
-- {{htmlattrxref("poster","video")}}
+- [`poster`](/zh-CN/docs/Web/HTML/Element/video#poster)
   - : 这个属性指向了一个图像的 URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。
-- {{htmlattrxref("preload","video")}}
+- [`preload`](/zh-CN/docs/Web/HTML/Element/video#preload)
 
   - : 这个属性被用来缓冲较大的文件，有 3 个值可选：
 
@@ -251,7 +251,7 @@ WEBVTT
 让其与 HTML 媒体一起显示，你需要做如下工作：
 
 1. 以 .vtt 后缀名保存文件。
-2. 用 {{htmlelement("track")}} 标签链接 .vtt 文件， `<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 {{htmlattrxref("kind","track")}} 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 {{htmlattrxref("srclang","track")}} 来告诉浏览器你是用什么语言来编写的 subtitles。
+2. 用 {{htmlelement("track")}} 标签链接 .vtt 文件， `<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) 来告诉浏览器你是用什么语言来编写的 subtitles。
 
 如下：
 
@@ -307,12 +307,3 @@ WEBVTT
 - Automated options to [translate multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 本章目录
-
-- [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [从 \<object> 到 \<iframe>：其它嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [为网页添加矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla 宣传页面](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

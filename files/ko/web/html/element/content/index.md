@@ -92,13 +92,13 @@ If you display this in a web browser it should look like the following.
 
 ![content example](content-example.png)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("html.elements.content")}}
+{{Compat}}
 
 ## See also
 

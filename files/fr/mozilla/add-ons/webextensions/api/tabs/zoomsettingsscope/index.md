@@ -27,9 +27,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - "per-tab"
   - : Les changements de zoom ne prennent effet que dans cet onglet et les changements de zoom dans les autres onglets n'affectent pas le zoom de cet onglet. De plus, les changements de zoom `per-tab` ont réinitialisés lors de la navigation ; la navigation dans un onglet charge toujours les pages avec `per-origin` de zoom d'origine.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.ZoomSettingsScope")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

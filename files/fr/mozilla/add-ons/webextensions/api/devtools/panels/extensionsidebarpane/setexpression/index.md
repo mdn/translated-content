@@ -46,9 +46,9 @@ var evaluating = browser.devtools.panels.setExpression(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans arguments, une fois l'expression évaluée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -5,8 +5,6 @@ slug: Web/API/AnimationEvent
 
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
-## Summary
-
 **`AnimationEvent`** 接口表示提供与动画相关的信息的事件。
 
 {{InheritanceDiagram}}

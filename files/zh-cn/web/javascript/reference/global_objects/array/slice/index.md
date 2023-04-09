@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 ## 语法
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

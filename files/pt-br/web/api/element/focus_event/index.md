@@ -21,7 +21,7 @@ O evento `focus` é acionado assim que um elemento recebe um foco. O grande dife
 - Ação Padrão
   - : Nenhuma.
 
-> **Nota:** Note: The interface was {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})
+> **Nota:** Note: The interface was {{ domxref("Event") }} prior to Gecko 24. ({{ bug(855741) }})
 
 ## Propriedades
 

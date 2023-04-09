@@ -35,7 +35,7 @@ _{{domxref("AudioNode")}}_ 를 부모로 가지는 프로퍼티.
 ### Event handlers
 
 - {{domxref("AudioBufferSourceNode.onended")}}
-  - : {{event("Event_handlers", "event handler")}}로 {{event("ended_(Web_Audio)", "ended")}}이벤트와 연관된 콜백함수를 가진다.
+  - : event handlers로 ended 이벤트와 연관된 콜백함수를 가진다.
 
 ## Methods
 

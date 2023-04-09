@@ -38,7 +38,7 @@ The `toLocaleUpperCase()` method returns the value of the string converted to up
 Also notice that conversion is not necessarily a 1:1 character mapping, as some characters might result in two (or even more) characters when transformed to upper-case. Therefore the length of the result string can differ from the input length. This also implies that the conversion is not stable, so i.E. the following can return `false`:
 `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`
 
-## 例子
+## 示例
 
 ### 使用 `toLocaleUpperCase()`
 

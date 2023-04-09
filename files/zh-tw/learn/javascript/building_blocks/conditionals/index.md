@@ -767,13 +767,3 @@ And that's all you really need to know about conditional structures in JavaScrip
 - [Conditional (ternary) operator reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

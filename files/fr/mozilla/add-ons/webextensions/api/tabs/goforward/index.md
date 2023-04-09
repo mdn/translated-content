@@ -39,9 +39,9 @@ var goingForward = browser.tabs.goForward(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est tenue lorsque la navigation sur la page se termine.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.goForward")}}
+{{Compat}}
 
 ## Exemples
 

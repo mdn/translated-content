@@ -27,7 +27,6 @@ window.onload = function() {
 
 ### База знаний
 
-- {{Interwiki("wikipedia", "jQuery")}} В Википедии
 - [jQuery website(официальный веб-сайт)](https://jquery.com/)
 
 ### Техническая информация

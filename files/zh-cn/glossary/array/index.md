@@ -1,6 +1,6 @@
 ---
 title: Array（数组）
-slug: Glossary/array
+slug: Glossary/Array
 ---
 
 数组对象是一个有序的数据（根据语言不同，数据可以是{{Glossary("primitive","原始类型")}}或{{Glossary("object","对象类型")}}）集合。相对于变量，数组可用于在一个变量中存储多个变量值。

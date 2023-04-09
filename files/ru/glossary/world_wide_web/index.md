@@ -31,5 +31,4 @@ original_slug: Глоссарий/World_Wide_Web
 
 ### Общие ведомости
 
-- {{Interwiki("wikipedia", "World Wide Web")}} в Википедии
 - [Сайт международного сообщества W3C](http://w3.org)

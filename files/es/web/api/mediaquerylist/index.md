@@ -65,9 +65,9 @@ mql.addListener(screenTest);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## Ver también
 
