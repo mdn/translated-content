@@ -161,7 +161,7 @@ JSON データは GitHub の <https://mdn.github.io/learning-area/javascript/ooj
 
 この JSON をスクリプトに読み込んで、DOM 操作を使って次のように表示することにします。
 
-!["Super hero squad" （おしゃれなフォント）と題され、 "Hometown: Metro City // Formed: 2016" と副題が付けられた文書の画像。見出しの下記 3 列には、それぞれ "Molecule Man", "Madame Uppercut", "Eternal Flame" というタイトルが付けられています。それぞれの列には、ヒーローの秘密の正体名、年齢、スーパーパワーが掲載されています。](json-superheroes.png)
+![（おしゃれなフォントで）"Super hero squad" と題され、 "Hometown: Metro City // Formed: 2016" と副題が付けられた文書の画像。見出しの下記 3 列には、それぞれ "Molecule Man", "Madame Uppercut", "Eternal Flame" というタイトルが付けられています。それぞれの列には、ヒーローの秘密の正体名、年齢、スーパーパワーが掲載されています。](json-superheroes.png)
 
 ### 最上位の関数
 
