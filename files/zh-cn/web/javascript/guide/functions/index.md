@@ -643,13 +643,13 @@ var p = new Person();
 JavaScript 语言有好些个顶级的内建函数：
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-  - : **`eval()`**方法会对一串字符串形式的 JavaScript 代码字符求值。
+  - : **`eval()`** 方法会对一串字符串形式的 JavaScript 代码字符求值。
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
-  - : **`uneval()`**方法创建的一个{{jsxref("Object")}}的源代码的字符串表示。
+  - : **`uneval()`** 方法创建的一个{{jsxref("Object")}}的源代码的字符串表示。
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-  - : **`isFinite()`**函数判断传入的值是否是有限的数值。如果需要的话，其参数首先被转换为一个数值。
+  - : **`isFinite()`** 函数判断传入的值是否是有限的数值。如果需要的话，其参数首先被转换为一个数值。
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : **`isNaN()`**函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN`函数内部的[`强制转换规则`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description)十分有趣；另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)来判断数值类型。
+  - : **`isNaN()`** 函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN`函数内部的[`强制转换规则`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description)十分有趣；另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)来判断数值类型。
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : **`parseFloat()`** 函数解析字符串参数，并返回一个浮点数。
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}
@@ -657,9 +657,9 @@ JavaScript 语言有好些个顶级的内建函数：
 - {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
   - : **`decodeURI()`** 函数对先前经过{{jsxref("Global_Objects/encodeURI", "encodeURI")}}函数或者其他类似方法编码过的字符串进行解码。
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-  - : **`decodeURIComponent()`**方法对先前经过{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}函数或者其他类似方法编码过的字符串进行解码。
+  - : **`decodeURIComponent()`** 方法对先前经过{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}函数或者其他类似方法编码过的字符串进行解码。
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-  - : **`encodeURI()`**方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
+  - : **`encodeURI()`** 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
   - : **`encodeURIComponent()`** 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
 - {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
