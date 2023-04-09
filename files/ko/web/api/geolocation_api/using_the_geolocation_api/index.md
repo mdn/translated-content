@@ -96,7 +96,7 @@ function success(position) {
 }
 ```
 
-그러나 `GeolocationCoordinates` 객체에서 고도, 속도, 장치의 방향, 위경도와 고도의 정확도 등 다른 다양한 정보도 가져올 수 있습니다.
+그러나 `GeolocationCoordinates` 객체에서 고도, 속도, 장치의 방향, 위경도와 고도의 오차범위 등 다른 다양한 정보도 가져올 수 있습니다.
 
 ## 오류 처리
 
