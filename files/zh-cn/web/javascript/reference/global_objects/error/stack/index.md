@@ -111,7 +111,7 @@ try {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Components.stack](/zh-CN/docs/Components.stack)
 - 外部项目：[TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)

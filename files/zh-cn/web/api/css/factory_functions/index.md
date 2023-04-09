@@ -84,6 +84,6 @@ console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref('CSSUnitValue.CSSUnitValue()')}}
