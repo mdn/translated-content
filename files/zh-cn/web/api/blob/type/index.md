@@ -50,7 +50,7 @@ input.addEventListener("change", (event) => {
     allowedFileTypes.includes(file.type)
   );
   output.innerText = allAllowed
-    ? "所有文件都满足！"
+    ? "所有文件都符合！"
     : "请只选择图片文件。";
 });
 ```
