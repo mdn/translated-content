@@ -9,7 +9,6 @@ slug: Web/API/Selection/toString
 
 ## 语法
 
-
 ```js-nolint
 toString()
 ```
