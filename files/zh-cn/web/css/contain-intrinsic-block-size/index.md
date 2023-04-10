@@ -15,11 +15,11 @@ slug: Web/CSS/contain-intrinsic-block-size
 /* 关键词值 */
 contain-intrinsic-block-size: none;
 
-/* 长度值 */
+/* <length> 值 */
 contain-intrinsic-block-size: 1000px;
 contain-intrinsic-block-size: 10rem;
 
-/* auto 长度 */
+/* auto <length> */
 contain-intrinsic-block-size: auto 300px;
 
 /* 全局值 */
@@ -36,10 +36,10 @@ contain-intrinsic-block-size: unset;
 
 - `none`
   - : 元素无固有块向尺寸。
-- `长度`
-  - : 元素具有指定的块向尺寸，以{{CSSXref("&lt;length&gt;", "长度")}}数据类型表示。
-- `auto 长度`
-  - : 当元素在尺寸局限中且正在跳过其内容（例如元素在屏外且设置了 `content-visibility: auto`）时，块向尺寸为记忆值——即元素在上次渲染其子元素时的实际尺寸。若元素从未渲染其子元素导致无正常渲染时的元素尺寸的记忆值，或者元素未在跳过其内容，块向尺寸为指定的`长度`。
+- `<length>`
+  - : 元素具有指定的块向尺寸，以 {{CSSXref("&lt;length&gt;")}} 数据类型表示。
+- `auto <length>`
+  - : 当元素在尺寸局限中且正在跳过其内容（例如元素在屏外且设置了 `content-visibility: auto`）时，块向尺寸为记忆值——即元素在上次渲染其子元素时的实际尺寸。若元素从未渲染其子元素导致无正常渲染时的元素尺寸的记忆值，或者元素未在跳过其内容，块向尺寸为指定的 `<length>`。
 
 ## 描述
 
@@ -47,7 +47,7 @@ contain-intrinsic-block-size: unset;
 
 尺寸局限允许用户代理将元素视为具有固定尺寸进行布局。由此避免为确定实际尺寸而重渲子元素，阻止不必要的重排（进而改善用户体验）。尺寸局限默认将元素视为不包含内容，且可按与内容无宽度或高度相同的方式折叠布局。`contain-intrinsic-block-size` 允许作者为布局所用的块向尺寸指定合适的值。
 
-`auto 长度`值允许元素“被正常渲染”（包括其子元素）后存储其块向尺寸，再在元素不包含任何内容时使用此值而非指定值。由此允许有 {{CSSXref("content-visibility", "content-visibility: auto")}} 的屏外元素无需开发者精确估计元素尺寸即可受益于尺寸局限。在子元素渲染时，不使用记忆值；若启用尺寸局限，则将使用`长度`值。
+`auto <length>` 值允许元素“被正常渲染”（包括其子元素）后存储其块向尺寸，再在元素不包含任何内容时使用此值而非指定值。由此允许有 {{CSSXref("content-visibility", "content-visibility: auto")}} 的屏外元素无需开发者精确估计元素尺寸即可受益于尺寸局限。在子元素渲染时，不使用记忆值；若启用尺寸局限，则将使用 `<length>` 值。
 
 ## 形式定义
 
