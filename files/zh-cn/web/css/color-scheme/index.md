@@ -40,7 +40,7 @@ color-scheme: unset;
   - : 表示可以使用操作系统深色配色方案渲染元素。
 - `only`
 
-  - : 禁止用户代理覆盖元素的颜色方案
+  - : 禁止用户代理覆盖元素的颜色方案。
 
     可以使用 `color-scheme: only light;` 应用于特定的元素或 `:root`，以关闭由 Chrome 的[自动深色主题](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out)引起的颜色覆盖。
 
