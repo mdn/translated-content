@@ -14,8 +14,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_pro
       <td>
         <p>
           熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-          href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a
-          href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
+            href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a
+            href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >终端/命令行</a
           >知识。
@@ -37,7 +37,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_pro
 
 ## 使用计算属性
 
-现在我们想为待办事项列表添加一个摘要计数器。这在为用户提供帮助的同时，也保留了列表的标签作为辅助。如果我们在待办事项列表中完成了 5 项中的 2 项，那么我们的摘要可以是 “已完成 2/5”。似乎我们应该这样做:
+现在我们想为待办事项列表添加一个摘要计数器。这在为用户提供帮助的同时，也保留了列表的标签作为辅助。如果我们在待办事项列表中完成了 5 项中的 2 项，那么我们的摘要可以是“已完成 2/5”。似乎我们应该这样做：
 
 ```html
 <h2>\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed</h2>
@@ -64,7 +64,7 @@ computed: {
 
 现在我们可以直接将 `\{{listSummary}}` 添加到模板中。我们把它添加到一个 `<h2>` 元素中，放在 `<ul>` 上。我们还添加了一个 `id` 和一个 `aria-labelledby` 属性，将 `<h2>` 的内容指定为 `<ul>` 元素的标签。
 
-添加用于展示摘要的 `<h2>` ，并更新 `App` 模板中的 `<ul>` ，如下所示：
+添加用于展示摘要的 `<h2>`，并更新 `App` 模板中的 `<ul>`，如下所示：
 
 ```html
 <h2 id="list-summary">\{{listSummary}}</h2>
@@ -81,7 +81,7 @@ computed: {
 
 我们可以捕获复选框更新的事件，并相应地管理列表。
 
-由于我们不依赖于按下按钮来触发更新，我们可以为每个复选框附加一个 `@change` 事件处理方法，而不是使用 `v-model` 。
+由于我们不依赖于按下按钮来触发更新，我们可以为每个复选框附加一个 `@change` 事件处理方法，而不是使用 `v-model`。
 
 把 `ToDoItem.vue` 中的 `<input>` 元素改成下面这样：
 
@@ -109,9 +109,9 @@ updateDoneStatus(toDoId) {
 </to-do-item>
 ```
 
-现在如果你勾选了一个 `ToDoItem` ，你应该会看到摘要更新了!
+现在如果你勾选了一个 `ToDoItem`，你应该会看到摘要更新了!
 
-![我们的应用程序，添加了一个已完成待办的计数器。目前它显示已完成5项中的3项](todo-counter.png)
+![我们的应用程序，添加了一个已完成待办的计数器。目前它显示已完成 5 项中的 3 项](todo-counter.png)
 
 ## 总结
 
