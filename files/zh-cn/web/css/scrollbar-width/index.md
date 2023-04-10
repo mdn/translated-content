@@ -23,7 +23,7 @@ scrollbar-width: revert-layer;
 scrollbar-width: unset;
 ```
 
-### Values
+### 取值
 
 - _\<scrollbar-width>_
 
