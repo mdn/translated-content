@@ -76,8 +76,8 @@ window.requestAnimationFrame(step);
 ## 参见
 
 - {{domxref("Window.cancelAnimationFrame()")}}
-- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) – Blog post
-- [requestAnimationFrame 用于智能动画制作](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
+- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html)——博文
+- [requestAnimationFrame 用于智能动画制作](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/)——博文
 - [用 JavaScript 做动画：从 setInterval 到 requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)——博文
 - [TestUFO：测试你的网络浏览器 requestAnimationFrame() 的时间偏差](https://www.testufo.com/#test=animation-time-graph)
 - Paul Irish：[requestAnimationFrame API：现在具有亚毫秒级的精度](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
