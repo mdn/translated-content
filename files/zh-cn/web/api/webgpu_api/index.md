@@ -24,7 +24,7 @@ WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的�
 
 ## 通用模型
 
-设备 GPU 和运行 WebGPU API 的web 浏览器之间有多个抽象层。理解这些，对你开始学习 WebGPU 很有用：
+设备 GPU 和运行 WebGPU API 的 web 浏览器之间有多个抽象层。理解这些，对你开始学习 WebGPU 很有用：
 
 ![提供一个基本的堆栈图，展示 WebGPU 架构中不同元素在设备上的位置关系。](basic-webgpu-stack.png)
 
@@ -42,13 +42,13 @@ WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的�
 
 ## 获取设备的访问权限
 
-A logical device — represented by a {{domxref("GPUDevice")}} object instance — is the basis from which a web app accesses all WebGPU functionality. Accessing a device is done as follows:
+逻辑设备（通过 {{domxref("GPUDevice")}} 对象实例表示）是 web 应用程序访问所有 WebGPU 功能的基础。访问设备的过程如下：
 
-1. The {{domxref("Navigator.gpu")}} property (or {{domxref("WorkerNavigator.gpu")}} if you are using WebGPU functionality from inside a worker) returns the {{domxref("GPU")}} object for the current context.
-2. You access an adapter via the {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} method. This method accepts an optional settings object allowing you to request for example a high-performance or low-energy adapter. If this is not included, the device will provide access to the default adapter, which is good enough for most purposes.
-3. A device can be requested via {{domxref("GPUAdapter.requestDevice()")}}. This method also accepts an options object (referred to as a descriptor), which can be used to specify the exact features and limits you want the logical device to have. If this is not included, the supplied device will have a reasonable general-purpose spec that is good enough for most purposes.
+1. {{domxref("Navigator.gpu")}} 属性（或 {{domxref("WorkerNavigator.gpu")}}，如果你在 worker 内部使用 WebGPU 功能）为当前上下文返回 {{domxref("GPU")}} 对象。
+2. 通过 {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} 方法访问适配器。该方法接受一个可选的设置对象，其允许你请求一个高性能或者低功耗的适配器。如果没有可选的对象，设备将提供对默认适配器的访问，这对于大多数用途来说足够了。
+3. 设备可以通过 {{domxref("GPUAdapter.requestDevice()")}} 请求。该方法接受一个可选的对象（称为描述符），该设备可以用于指定你想要逻辑设备具有的确切功能和限制。如果没有可选的对象，所提供的设备将使用合理的通用的规则，这对于大多数用途来说够了。
 
-Putting this together with some feature detection checks, the above process could be achieved as follows:
+将其与一些特征检测检查结合起来，可以按如下方式实现上述过程：
 
 ```js
 async function init() {
@@ -69,36 +69,36 @@ async function init() {
 
 ## 管线和着色器：WebGPU 应用程序的构成
 
-A pipeline is a logical structure containing programmable stages that are completed to get your program's work done. WebGPU is currently able to handle two types of pipeline:
+管线（pipeline）是一个逻辑结构，其包含在你完成程序工作的可编程阶段。WebGPU 目前能够处理两种类型的管线：
 
-- A render pipeline renders graphics, typically into a {{htmlelement("canvas")}} element, but it could also render graphics offscreen. It has two main stages:
+- 渲染管线用于渲染图形，通常渲染到 {{htmlelement("canvas")}} 元素中，但它也可以在画面之外的地方渲染图形。它有两个主要阶段：
 
-  - A vertex stage, in which a vertex shader takes positioning data fed into the GPU and uses it to position a series of vertices in 3D space by applying specified effects like rotation, translation, or perspective. The vertices are then assembled into primitives such as triangles (the basic building block of rendered graphics) and rasterized by the GPU to figure out what pixels each one should cover on the drawing canvas.
+  - 顶点阶段：在该阶段中，顶点着色器（vertex shader）接受 GPU 输入的位置数据并使用像旋转、平移或透视等特定的效果将顶点在 3D 空间中定位。然后，这些顶点会被组装成基本的渲染图元，例如三角形等，然后通过 GPU 进行光栅化，计算出每个顶点应该覆盖在 canvas 上的哪些像素。
 
-  - A fragment stage, in which a fragment shader computes the color for each pixel covered by the primitives produced by the vertex shader. These computations frequently use inputs such as images (in the form of textures) that provide surface details and the position and color of virtual lights.
+  - 片段阶段：在该阶段中，片段着色器（fragment shader）计算由顶点着色器生成的基本图元所覆盖的每个像素的颜色。这些计算通常使用输入，如图像（以纹理的方式）提供表面细节以及虚拟化光源的位置和颜色。
 
-- A compute pipeline is for general computation. A compute pipeline contains a single compute stage in which a compute shader takes general data, processes it in parallel across a specified number of workgroups, then returns the result in one or more buffers. The buffers can contain any kind of data.
+- 计算管线用于通用计算。计算管线包含单独的计算阶段，在该阶段中，计算着色器（compute shader）接受通用的数据，在指定数量的工作组之间并行处理数据，然后将结果返回到一个或者多个缓冲区。这些缓冲区可以包含任意类型的数据。
 
-The shaders mentioned above are sets of instructions processed by the GPU. WebGPU shaders are written in a low-level Rust-like language called [WebGPU Shader Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL).
+上面提到的着色器是通过 GPU 处理的指令集。WebGPU 着色器语言是用称为 [WebGPU 着色器语言](https://gpuweb.github.io/gpuweb/wgsl/)（WGSL）的低级的类 Rust 语言编写的。
 
-There are several different ways in which you could architect a WebGPU app, but the process will likely contain the following steps:
+你可以通过几种不同的方式去构建 WebGPU 应用程序，但该过程应包含以下步骤：
 
-1. [Create shader modules](#create_shader_modules): Write your shader code in WGSL and package it into one or more shader modules.
-2. [Get and configure the canvas context](#get_and_configure_the_canvas_context): Get the `webgpu` context of a `<canvas>` element and configure it to receive information on what graphics to render from your GPU logical device. This step is not necessary if your app has no graphical output, such as one that only uses compute pipelines.
-3. [Create resources containing your data](#create_a_buffer_and_write_our_triangle_data_into_it): The data that you want processed by your pipelines needs to be stored in GPU buffers or textures to be accessed by your app.
-4. [Create pipelines](#define_and_create_the_render_pipeline): Define pipeline descriptors that describe the desired pipelines in detail, including the required data structure, bindings, shaders, and resource layouts, then create pipelines from them. Our basic demos only contain a single pipeline, but non-trivial apps will usually contain multiple pipelines for different purposes.
-5. [Run a compute/rendering pass](#running_a_rendering_pass): This involves a number of substeps:
-   1. Create a command encoder that can encode a set of commands to be passed to the GPU to execute.
-   2. Create a pass encoder object on which compute/render commands are issued.
-   3. Run commands to specify which pipelines to use, what buffer(s) to get the required data from, how many drawing operations to run (in the case of render pipelines), etc.
-   4. Finalize the command list and encapsulate it in a command buffer.
-   5. Submit the command buffer to the GPU via the logical device's command queue.
+1. [创建着色器模块](#创建着色器模块)：在 WGSL 写你的着色器代码并将其打包到一个或者多个着色器模块。
+2. [获取和配置 canvas 上下文](#获取和配置_canvas_上下文)：获取 `<canvas>` 元素的 `webgpu` 上下文并将其配置为从你的 GPU 逻辑设备接收有关渲染的图形信息。如果你的应用程序没有图形输出（例如仅使用计算管线），则此步骤是不需要的。
+3. [创建包含你数据的资源](#创建缓冲区并将我们的三角形数据写入)：你想要通过你的管线处理的数据存储在 GPU 缓冲区或者纹理中，以供应用程序访问。
+4. [创建管线](#定义和创建渲染管线)：定义管线描述符，详细地描述管线，包含所需的数据结构、绑定、着色器和资源布局，然后从中创建管线。我们的基本演示仅包含单个管线，但复杂的应用程序通常会包含多个用于不同目的的管线。
+5. [允许计算/渲染通道](#运行渲染通道)：这涉及许多子步骤：
+   1. 创建一个命令编码器，它可以对一组传递给 GPU 的命令执行编码。
+   2. 创建一个通道编码器对象，该对象用于发出计算/渲染命令。
+   3. 运行命令，指定使用哪些管线、从那个缓冲区获取数据、运行多少次绘制操作等。
+   4. 完成命令列表后，将其封装到命令缓冲区中。
+   5. 通过逻辑设备的命令队列提交命令到缓冲区。
 
-In the sections below, we will examine a basic render pipeline demo, to allow you to explore what it requires. Later on, we'll also examine a [basic compute pipeline](#basic_compute_pipeline) example, looking at how it differs from the render pipeline.
+在下面的部分，我们将研究一个基本的渲染管线演示，让你知道探索它需要什么。稍后，我们也将研究一个[基础的计算管线](#基础的计算管线)示例，看看它与渲染管线有什么不同。
 
 ## 基础的渲染管线
 
-In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) we give a `<canvas>` element a solid blue background and draw a triangle onto it.
+在我们的[基础的渲染管线示例中](https://mdn.github.io/dom-examples/webgpu-render-demo/)，我们给 `<canvas>` 元素一个纯蓝色背景并且在其上绘制三角形。
 
 ### 创建着色器模块
 
@@ -248,7 +248,7 @@ Finally, we can create a {{domxref("GPURenderPipeline")}} based on our `pipeline
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 ```
 
-### 执行一次渲染通道
+### 运行渲染通道
 
 Now that all the setup is done, we can actually run a rendering pass and draw something onto our `<canvas>`. To encode any commands to be later issued to the GPU, you need to create a {{domxref("GPUCommandEncoder")}} instance, which is done using a {{domxref("GPUDevice.createCommandEncoder()")}} call.
 
@@ -393,7 +393,7 @@ const bindGroup = device.createBindGroup({
 
 > **Note:** You could retrieve an implicit layout to use when creating a bind group by calling the {{domxref("GPUComputePipeline.getBindGroupLayout()")}} method. There is also a version available for render pipelines: see {{domxref("GPURenderPipeline.getBindGroupLayout()")}}.
 
-### 创建一个计算管线
+### 创建计算管线
 
 With the above all in place, we can now create a compute pipeline by calling {{domxref("GPUDevice.createComputePipeline()")}}, passing it a pipeline descriptor object. This works in a similar way to creating a render pipeline. We describe the compute shader, specifying what module to find the code in and what the entry point is. We also specify a `layout` for the pipeline, in this case creating a layout based on the `bindGroupLayout` we defined earlier via a {{domxref("GPUDevice.createPipelineLayout()")}} call.
 
@@ -411,7 +411,7 @@ const computePipeline = device.createComputePipeline({
 
 One difference here from the render pipeline layout is that we are not specifying a primitive type, as we are not drawing anything.
 
-### 运行一次计算通道
+### 运行计算通道
 
 Running a compute pass is similar in structure to running a rendering pass, with some different commands. For a start, the pass encoder is created using {{domxref("GPUCommandEncoder.beginComputePass()")}}.
 
