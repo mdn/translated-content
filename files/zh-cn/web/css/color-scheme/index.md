@@ -54,9 +54,9 @@ color-scheme: unset;
 
 ## 示例
 
-### 适应配色方案
+### 应用配色方案
 
-要将整个页面配置为使用用户的配色方案首选项，请在 {{cssxref(":root")}} 元素上指定 `color-scheme` 。
+要将整个页面配置为使用用户的配色方案首选项，请在 {{cssxref(":root")}} 元素上指定 `color-scheme`。
 
 ```css
 :root {
