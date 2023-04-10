@@ -19,7 +19,7 @@ slug: Glossary/Flex_Container
 - {{cssxref("flex-wrap")}}
 - {{cssxref("justify-content")}}
 
-### 延伸阅读
+### 拓展阅读
 
 - CSS 弹性盒指南：*[弹性盒的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)*
 - CSS 弹性盒指南：*[在弹性容器中对齐项目](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)*
