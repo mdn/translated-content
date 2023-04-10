@@ -14,9 +14,9 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_pro
       <td>
         <p>
           熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-          href="/en-US/docs/Learn/CSS">CSS</a> 和 <a
-          href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a
+          href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >终端/命令行</a
           >知识。
         </p>
