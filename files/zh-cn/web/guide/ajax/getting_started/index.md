@@ -16,7 +16,7 @@ AJAX 代表异步的 JavaScript 和 XML（**A**synchronous **J**avaScript **A**n
 - 在不重新加载页面的情况下发送请求给服务器。
 - 接收并使用从服务器发来的数据。
 
-## 第一步——发送 http 请求
+## 第一步——发送 HTTP 请求
 
 为了使用 JavaScript 向服务器发送一个 [HTTP](/zh-CN/docs/Web/HTTP) 请求，你需要一个包含必要函数功能的对象实例。这就是为什么会有 `XMLHttpRequest` 的原因。
 
