@@ -1,269 +1,407 @@
 ---
-title: CSS 的值与单位
+title: CSS values and units
 slug: Learn/CSS/Building_blocks/Values_and_units
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
-CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上的任何属性页将帮助你理解对任何特定属性有效的值。在本节课中，我们将学习一些最常用的值和单位。
+Every property used in CSS has a value type defining the set of values that are allowed for that property. Taking a look at any property page on MDN will help you understand the values associated with a value type that are valid for any particular property. In this lesson we will take a look at some of the most frequently used value types, and their most common values and units.
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">Prerequisites:</th>
       <td>
-        基本的计算机知识，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >安装基本的软件</a
-        >，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >文件处理</a
-        >基本知识，HTML 基础知识 (<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
-          >学习 HTML 入门</a
-        >)，以及 CSS 如何工作的基本常识 (如果完全不了解 CSS，请移步
-        <a href="/zh-CN/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)
+        Basic computer literacy,
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >basic software installed</a
+        >, basic knowledge of
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >working with files</a
+        >, HTML basics (study
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Introduction to HTML</a
+        >), and an idea of how CSS works (study
+        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>).
       </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
-      <td>了解 CSS 属性中使用的不同类型的值和单位。</td>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn about the different types of values and units used in CSS
+        properties.
+      </td>
     </tr>
   </tbody>
 </table>
 
-## 什么是 CSS 的值？
+## What is a CSS value?
 
-在 CSS 规范和 MDN 的属性页上，你将能够发现值的存在，因为它们将被尖括号包围，如`<color>`或`<length>`。当你看到值`<color>`对特定属性有效时，这意味着你可以使用任何有效的颜色作为该属性的值，如 [`<color>`](/zh-CN/docs/Web/CSS/color_value)参考页面所列。
+In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or [`<length>`](/en-US/docs/Web/CSS/length). When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
-> **备注：** 你还将看到被称为数据类型的 CSS 值。这些术语基本上是可以互换的——当你在 CSS 中看到一些被称为数据类型的东西时，它实际上只是一种表示值的奇特方式。
+> **Note:** You'll also see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
 
-> **备注：** 是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 [\<color>](/zh-CN/docs/Web/CSS/color_value) 数据类型)。你可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。
+> **Note:** Yes, CSS value types tend to be denoted using angle brackets to differentiate them from CSS properties (e.g., the {{cssxref("color")}} property, versus the [`<color>`](/en-US/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
 
-在下面的例子中，我们使用关键字设置标题的颜色，使用`rgb()`函数设置背景：
+In the following example, we have set the color of our heading using a keyword, and the background using the `rgb()` function:
 
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
-CSS 中的值类型是一种定义了一些可使用的值的集合的方式。这意味着如果你看到的 `<color>` 是有效的，那么你就不需要考虑可以使用哪种类型——不管是关键字、十六进制值还是 `rgb()` 函数等都是有效的。如果浏览器支持这些可用的 `<color>` 值，则可以使用它们当中的任意一个。MDN 上针对每个值类型的页面将提供有关浏览器支持的信息。例如，如果你查看 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 的页面，你将看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持。
+A value type in CSS is a way to define a collection of allowable values. This means that if you see `<color>` as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, `rgb()` functions, etc. You can use _any_ available `<color>` values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for [`<color>`](/en-US/docs/Web/CSS/color_value) you will see that the browser compatibility section lists different types of color values and support for them.
 
-让我们来看看你可能经常遇到的一些值和单位类型，并提供一些示例，以便你尝试使用各种值的可能性。
+Let's have a look at some of the types of values and units you may frequently encounter, with examples so that you can try out different possible values.
 
-## 数字，长度和百分比
+## Numbers, lengths, and percentages
 
-你可能会发现自己在 CSS 中使用了各种数值数据类型。以下全部归类为数值：
+There are various numeric value types that you might find yourself using in CSS. The following are all classed as numeric:
 
-| 数值类型                                         | 描述                                                                                                                                                              |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/zh-CN/docs/Web/CSS/integer)       | [`<integer>`](/zh-CN/docs/Web/CSS/integer)是一个整数，比如 1024 或 -55。                                                                                          |
-| [`<number>`](/zh-CN/docs/Web/CSS/number)         | [`<number>`](/zh-CN/docs/Web/CSS/number)表示一个小数——它可能有小数点后面的部分，也可能没有，例如 0.255、128 或 -1.2。                                             |
-| `<dimension>`                                    | `<dimension>`是一个`<number>`，它有一个附加的单位，例如 45deg、5s 或 10px。`<dimension>`是一个伞形类别，包括`<length>`、`<angle>`、`<time>`和`<resolution>`类型。 |
-| [`<percentage>`](/zh-CN/docs/Web/CSS/percentage) | [`<percentage>`](/zh-CN/docs/Web/CSS/percentage)表示一些其他值的一部分，例如 50%。百分比值总是相对于另一个量，例如，一个元素的长度相对于其父元素的长度。          |
+<table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Data type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/CSS/integer">&#x3C;integer></a></code>
+      </td>
+      <td>
+        An <code>&#x3C;integer></code> is a whole number such as
+        <code>1024</code> or <code>-55</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></code>
+      </td>
+      <td>
+        A <code>&#x3C;number></code> represents a decimal number — it may or may
+        not have a decimal point with a fractional component. For
+        example, <code>0.255</code>, <code>128</code>, or <code>-1.2</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/CSS/dimension">&#x3C;dimension></a></code
+        >
+      </td>
+      <td>
+        A <code>&#x3C;dimension></code> is a <code>&#x3C;number></code> with a
+        unit attached to it. For example, <code>45deg</code>, <code>5s</code>,
+        or <code>10px</code>. <code>&#x3C;dimension></code> is an umbrella
+        category that includes the
+        <code><a href="/en-US/docs/Web/CSS/length">&#x3C;length></a></code
+        >, <code><a href="/en-US/docs/Web/CSS/angle">&#x3C;angle></a></code
+        >, <code><a href="/en-US/docs/Web/CSS/time">&#x3C;time></a></code
+        >, and
+        <code
+          ><a href="/en-US/docs/Web/CSS/resolution">&#x3C;resolution></a></code
+        >
+        types.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/CSS/percentage">&#x3C;percentage></a></code
+        >
+      </td>
+      <td>
+        A <code>&#x3C;percentage></code> represents a fraction of some other
+        value. For example, <code>50%</code>. Percentage values are always
+        relative to another quantity. For example, an element's length is
+        relative to its parent element's length.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-### 长度
+### Lengths
 
-最常见的数字类型是`<length>`，例如 10px(像素) 或 30em。CSS 中有两种类型的长度——相对长度和绝对长度。重要的是要知道它们之间的区别，以便理解他们控制的元素将变得有多大。
+The numeric type you will come across most frequently is [`<length>`](/en-US/docs/Web/CSS/length). For example, `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
 
-#### 绝对长度单位
+#### Absolute length units
 
-以下都是**绝对**长度单位——它们与其他任何东西都没有关系，通常被认为总是相同的大小。
+The following are all **absolute** length units — they are not relative to anything else, and are generally considered to always be the same size.
 
-| 单位 | 名称         | 等价换算            |
-| ---- | ------------ | ------------------- |
-| `cm` | 厘米         | 1cm = 96px/2.54     |
-| `mm` | 毫米         | 1mm = 1/10th of 1cm |
-| `Q`  | 四分之一毫米 | 1Q = 1/40th of 1cm  |
-| `in` | 英寸         | 1in = 2.54cm = 96px |
-| `pc` | 十二点活字   | 1pc = 1/6th of 1in  |
-| `pt` | 点           | 1pt = 1/72th of 1in |
-| `px` | 像素         | 1px = 1/96th of 1in |
+| Unit | Name                | Equivalent to            |
+| ---- | ------------------- | ------------------------ |
+| `cm` | Centimeters         | 1cm = 37.8px = 25.2/64in |
+| `mm` | Millimeters         | 1mm = 1/10th of 1cm      |
+| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm       |
+| `in` | Inches              | 1in = 2.54cm = 96px      |
+| `pc` | Picas               | 1pc = 1/6th of 1in       |
+| `pt` | Points              | 1pt = 1/72nd of 1in      |
+| `px` | Pixels              | 1px = 1/96th of 1in      |
 
-这些值中的大多数在用于打印时比用于屏幕输出时更有用。例如，我们通常不会在屏幕上使用 cm。惟一一个你经常使用的值，估计就是 px(像素)。
+Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
 
-#### 相对长度单位
+#### Relative length units
 
-相对长度单位相对于其他一些东西，比如父元素的字体大小，或者视图端口的大小。使用相对单位的好处是，经过一些仔细的规划，你可以使文本或其他元素的大小与页面上的其他内容相对应。下表列出了 web 开发中一些最有用的单位。
+Relative length units are relative to something else, perhaps the size of the parent element's font, or the size of the viewport. The benefit of using relative units is that with some careful planning you can make it so the size of text or other elements scales relative to everything else on the page. Some of the most useful units for web development are listed in the table below.
 
-| 单位   | 相对于                                                                                        |
-| ------ | --------------------------------------------------------------------------------------------- |
-| `em`   | 在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width |
-| `ex`   | 字符“x”的高度                                                                                 |
-| `ch`   | 数字“0”的宽度                                                                                 |
-| `rem`  | 根元素的字体大小                                                                              |
-| `lh`   | 元素的 line-height                                                                            |
-| `vw`   | 视窗宽度的 1%                                                                                 |
-| `vh`   | 视窗高度的 1%                                                                                 |
-| `vmin` | 视窗较小尺寸的 1%                                                                             |
-| `vmax` | 视图大尺寸的 1%                                                                               |
+<table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Unit</th>
+      <th scope="col">Relative to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>em</code></td>
+      <td>
+        Font size of the parent, in the case of typographical properties like
+        <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code
+        >, and font size of the element itself, in the case of other properties
+        like <code><a href="/en-US/docs/Web/CSS/width">width</a></code
+        >.
+      </td>
+    </tr>
+    <tr>
+      <td><code>ex</code></td>
+      <td>x-height of the element's font.</td>
+    </tr>
+    <tr>
+      <td><code>ch</code></td>
+      <td>
+        The advance measure (width) of the glyph "0" of the element's font.
+      </td>
+    </tr>
+    <tr>
+      <td><code>rem</code></td>
+      <td>Font size of the root element.</td>
+    </tr>
+    <tr>
+      <td><code>lh</code></td>
+      <td>Line height of the element.</td>
+    </tr>
+    <tr>
+      <td><code>rlh</code></td>
+      <td>Line height of the root element. When used on the <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code> or <code><a href="/en-US/docs/Web/CSS/line-height">line-height</a></code
+        > properties of the root element, it refers to the properties' initial value.</td>
+    </tr>
+    <tr>
+      <td><code>vw</code></td>
+      <td>1% of the viewport's width.</td>
+    </tr>
+    <tr>
+      <td><code>vh</code></td>
+      <td>1% of the viewport's height.</td>
+    </tr>
+    <tr>
+      <td><code>vmin</code></td>
+      <td>1% of the viewport's smaller dimension.</td>
+    </tr>
+    <tr>
+      <td><code>vmax</code></td>
+      <td>1% of the viewport's larger dimension.</td>
+    </tr>
+    <tr>
+      <td><code>vb</code></td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">block axis</a>.</td>
+    </tr>
+    <tr>
+      <td><code>vi</code></td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">inline axis</a>.</td>
+    </tr>
+    <tr>
+      <td><code>svw, svh</code></td>
+      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>'s width and height, respectively.</td>
+    </tr>
+    <tr>
+      <td><code>lvw, lvh</code></td>
+      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>'s width and height, respectively.</td>
+    </tr>
+    <tr>
+      <td><code>dvw, dvh</code></td>
+      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>'s width and height, respectively.</td>
+    </tr>
+  </tbody>
+</table>
 
-#### 探索一个例子
+#### Exploring an example
 
-在下面的示例中，你可以看到一些相对长度单位和绝对长度单位的行为。第一个框以像素为单位设置{{cssxref("width")}}。作为一个绝对单位，这个宽度将保持不变，无论其他如何变化。
+In the example below, you can see how some relative and absolute length units behave. The first box has a {{cssxref("width")}} set in pixels. As an absolute unit, this width will remain the same no matter what else changes.
 
-第二个框的宽度设置为`vw`(视口宽度) 单位。这个值相对于视口宽度，所以 10`vw`是视口宽度的 10%。如果你更改浏览器窗口的宽度，那么框的大小应该会更改，但是这个示例使用\<iframe>嵌入到页面中，所以这将不起作用。要查看实际情况，你必须在打开示例的浏览器选项卡后尝试该示例 [试一试](https://mdn.github.io/css-examples/learn/values-units/length.html)。
+The second box has a width set in `vw` (viewport width) units. This value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. If you change the width of your browser window, the size of the box should change. However this example is embedded into the page using an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), so this won't work. To see this in action you'll have to [try the example after opening it in its own browser tab](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
-第三个盒子使用 em 单位。这些是相对于字体大小的。我在包含{{htmlelement("div")}}的元素上设置了一个 1em 的字体大小，它有一个`.wrapper`类。将这个值更改为 1.5em，你将看到所有元素的字体大小都增加了，但是只有最后一项会变宽，因为宽度与字体大小有关。
+The third box uses `em` units. These are relative to the font size. I've set a font size of `1em` on the containing {{htmlelement("div")}}, which has a class of `.wrapper`. Change this value to `1.5em` and you will see that the font size of all the elements increases, but only the last item will get wider, as its width is relative to that font size.
 
-按照上面的说明操作之后，尝试以其他方式处理这些值，看看你将收获什么。
+After following the instructions above, try playing with the values in other ways, to see what you get.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/length.html", '100%', 820)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/length.html", '100%', 900)}}
 
 #### ems and rems
 
-`em`和`rem`是你在从框到文本调整大小时最常遇到的两个相对长度。了解这些方法是如何工作的以及它们之间的区别是很有意义的，尤其是当你开始学习更复杂的主题时，比如样式化文本或 CSS 布局。下面的示例提供了一个演示。
+`em` and `rem` are the two relative lengths you are likely to encounter most frequently when sizing anything from boxes to text. It's worth understanding how these work, and the differences between them, especially when you start getting on to more complex subjects like [styling text](/en-US/docs/Learn/CSS/Styling_text) or [CSS layout](/en-US/docs/Learn/CSS/CSS_layout). The below example provides a demonstration.
 
-HTML 是一组嵌套的列表—我们总共有三个列表，并且两个示例都有相同的 HTML。唯一的区别是第一个类具有 ems，第二个类具有 rems。
+The HTML illustrated below is a set of nested lists — we have three lists in total and both examples have the same HTML. The only difference is that the first has a class of _ems_ and the second a class of _rems_.
 
-首先，我们将 16px 设置为`<html>`元素的字体大小。
+To start with, we set 16px as the font size on the `<html>` element.
 
-概括地说，在排版属性中 em 单位的意思是“父元素的字体大小”。带有 ems 类的{{htmlelement("ul")}}内的{{htmlelement("li")}}元素从它们的父元素中获取大小。因此，每一个连续的嵌套级别都会逐渐变大，因为每个嵌套的字体大小都被设置为 1.3em—是其父嵌套字体大小的 1.3 倍。
+**To recap, the em unit means "my parent element's font-size"** in the case of typography. The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `ems` take their sizing from their parent. So each successive level of nesting gets progressively larger, as each has its font size set to `1.3em` — 1.3 times its parent's font size.
 
-概括地说，rem 单位的意思是“根元素的字体大小”。(“根 em”的 rem 标准。){{htmlelement("ul")}}内的{{htmlelement("li")}}元素和一个 rems 类从根元素 (`<html>)`中获取它们的大小。这意味着每一个连续的嵌套层都不会不断变大。
+**To recap, the rem unit means "The root element's font-size"** (rem stands for "root em"). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
 
-但是，如果你在 CSS 中更改\<html>字体大小，你将看到所有其他相关内容都发生了更改，包括 rem 和 em 大小的文本。
+However, if you change the `<html>` element's `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1100)}}
 
-### 百分比
+### Percentages
 
-在许多情况下，百分比与长度的处理方法是一样的。百分比的问题在于，它们总是相对于其他值设置的。例如，如果将元素的字体大小设置为百分比，那么它将是元素父元素字体大小的百分比。如果使用百分比作为宽度值，那么它将是父值宽度的百分比。
+In a lot of cases, a percentage is treated in the same way as a length. The thing with percentages is that they are always set relative to some other value. For example, if you set an element's `font-size` as a percentage, it will be a percentage of the `font-size` of the element's parent. If you use a percentage for a `width` value, it will be a percentage of the `width` of the parent.
 
-在下面的示例中，两个百分比大小的框和两个像素大小的框具有相同的类名。分别为 200px 和 40% 宽。
+In the below example the two percentage-sized boxes and the two pixel-sized boxes have the same class names. The sets are 40% and 200px wide respectively.
 
-不同之处在于，第二组两个框位于一个 400 像素宽的包装器中。第二个 200px 宽的盒子和第一个一样宽，但是第二个 40% 的盒子现在是 400px 的 40%——比第一个窄多了！
+The difference is that the second set of two boxes is inside a wrapper that is 400 pixels wide. The second 200px wide box is the same width as the first one, but the second 40% box is now 40% of 400px — a lot narrower than the first one!
 
-尝试更改包装器的宽度或百分比值，看看这是如何工作的。
+**Try changing the width of the wrapper or the percentage value to see how this works.**
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 1000)}}
 
-下一个示例以百分比设置字体大小。每个`<li>`都有 80% 的字体大小，因此嵌套列表项在从父级继承其大小时将逐渐变小。
+The next example has font sizes set in percentages. Each `<li>` has a `font-size` of 80%; therefore, the nested list items become progressively smaller as they inherit their sizing from their parent.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 800)}}
 
-注意，虽然许多值接受长度或百分比，但也有一些值只接受长度。你可以在 MDN 属性引用页面上看到它能接受哪些值。如果允许的值包括`<length-percent>`，则可以使用长度或百分比。如果允许的值只包含\<length>，则不可能使用百分比。
+Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
 
-### 数字
+### Numbers
 
-有些值接受数字，不添加任何单位。接受无单位数字的属性的一个例子是不透明度属性（`opacity` ），它控制元素的不透明度 (它的透明程度)。此属性接受 0(完全透明) 和 1(完全不透明) 之间的数字。
+Some value types accept numbers, without any unit added to them. An example of a property which accepts a unitless number is the `opacity` property, which controls the opacity of an element (how transparent it is). This property accepts a number between `0` (fully transparent) and `1` (fully opaque).
 
-在下面的示例中，尝试将不透明度值更改为 0 到 1 之间的各种小数值，并查看框及其内容是如何变得透明或者不透明的。
+**In the below example, try changing the value of `opacity` to various decimal values between `0` and `1` and see how the box and its contents become more or less opaque.**
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}}
+{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 600)}}
 
-> **备注：** 当你在 CSS 中使用数字作为值时，它不应该用引号括起来。
+> **Note:** When you use a number in CSS as a value it should not be surrounded in quotes.
 
-## 颜色
+## Color
 
-在 CSS 中指定颜色的方法有很多，其中一些是最近才实现的。在 CSS 中，相同的颜色值可以在任何地方使用，无论你指定的是文本颜色、背景颜色还是其他颜色。
+There are many ways to specify color in CSS, some of which are more recently implemented than others. The same color values can be used everywhere in CSS, whether you are specifying text color, background color, or whatever else.
 
-现代计算机的标准颜色系统是 24 位的，它允许通过不同的红、绿、蓝通道的组合显示大约 1670 万种不同的颜色，每个通道有 256 个不同的值 (256 x 256 x 256 = 16,777,216)。让我们来看看在 CSS 中指定颜色的一些方法。
+The standard color system available in modern computers supports 24-bit colors, which allows the display of about 16.7 million distinct colors via a combination of different red, green and blue channels with 256 different values per channel (256 x 256 x 256 = 16,777,216). Let's have a look at some of the ways in which we can specify colors in CSS.
 
-> **备注：** 在本教程中，我们将研究具有良好浏览器支持的常用指定颜色的方法；虽然还有其他的，但是他们没有很好的支持，也不太常见。
+> **Note:** In this tutorial we will look at the common methods of specifying color that have good browser support; there are others but they don't have as good support and are less common.
 
-### 颜色关键词
+### Color keywords
 
-在这学习示例或 MDN 上的其他示例中，你经常会看到使用的颜色关键字，因为它们是一种指定颜色的简单易懂的方式。有一些关键词，其中一些有相当有趣的名字！你可以在页面上看到 [`<color>`](/zh-CN/docs/Web/CSS/color_value)值的完整列表。
+Quite often in examples here in the learn section or elsewhere on MDN you will see the color keywords used, as they are a simple and understandable way of specifying color. There are a number of these keywords, some of which have fairly entertaining names! You can see a full list on the page for the [`<color>`](/en-US/docs/Web/CSS/color_value) value type.
 
-**在下面的示例中尝试使用不同的颜色值，以了解它们是如何工作的。**
+**Try playing with different color values in the live examples below, to get more of an idea how they work.**
 
-### 十六进制 RGB 值
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-keywords.html", '100%', 800)}}
 
-你可能遇到的下一种颜色值类型是十六进制代码。每个十六进制值由一个散列/磅符号 (#) 和六个十六进制数字组成，每个十六进制数字都可以取 0 到 f(代表 15) 之间的 16 个值中的一个——所以是 0123456789abcdef。每对值表示一个通道—红色、绿色和蓝色—并允许我们为每个通道指定 256 个可用值中的任意一个 (16 x 16 = 256)。
+### Hexadecimal RGB values
 
-这些值有点复杂，不太容易理解，但是它们比关键字更通用——你可以使用十六进制值来表示你想在配色方案中使用的任何颜色。
+The next type of color value you are likely to encounter is hexadecimal codes. Each hex value consists of a hash/pound symbol (#) followed by six hexadecimal numbers, each of which can take one of 16 values between 0 and f (which represents 15) — so `0123456789abcdef`. Each pair of values represents one of the channels — red, green and blue — and allows us to specify any of the 256 available values for each (16 x 16 = 256).
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}}
+These values are a bit more complex and less easy to understand, but they are a lot more versatile than keywords — you can use hex values to represent any color you want to use in your color scheme.
 
-**同样，大胆尝试更改值，看看颜色如何变化吧！**
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 800)}}
 
-### RGB 和 RGBA 的值
+**Again, try changing the values to see how the colors vary.**
 
-我们将在这里讨论的第三种方案是 RGB。RGB 值是一个函数—RGB()—它有三个参数，表示颜色的红色、绿色和蓝色通道值，与十六进制值的方法非常相似。RGB 的不同之处在于，每个通道不是由两个十六进制数字表示的，而是由一个介于 0 到 255 之间的十进制数字表示的——这有点容易理解。
+### RGB and RGBA values
 
-让我们重写上一个例子，使用 RGB 颜色：
+The third scheme we'll talk about here is RGB. An RGB value is a function — `rgb()` — which is given three parameters that represent the red, green, and blue channel values of the colors, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 — somewhat easier to understand.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}}
+Let's rewrite our last example to use RGB colors:
 
-你还可以使用 RGBA 颜色——它们的工作方式与 RGB 颜色完全相同，因此你可以使用任何 RGB 值，但是有第四个值表示颜色的 alpha 通道，它控制不透明度。如果将这个值设置为`0`，它将使颜色完全透明，而设置为`1`将使颜色完全不透明。介于两者之间的值提供了不同级别的透明度。
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 800)}}
 
-> **备注：** 在颜色上设置 alpha 通道与使用我们前面看到的{{cssxref("opacity")}}属性有一个关键区别。当你使用不透明度时，你让元素和它里面的所有东西都不透明，而使用 RGBA 颜色只让你指定的颜色不透明。
+You can pass a fourth parameter to `rgb()`, which represents the alpha channel of the color, which controls opacity. If you set this value to `0` it will make the color fully transparent, whereas `1` will make it fully opaque. Values in between give you different levels of transparency.
 
-在下面的例子中，我添加了一个背景图片到我们的彩色方块的包含块中。然后我设置了不同的不透明度值——注意当 alpha 通道值较小时，背景如何显示的。
+> **Note:** Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGB with an alpha parameter colors only makes the color you are specifying opaque.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 770)}}
+In the example below, we have added a background image to the containing block of our colored boxes. We have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.
 
-**在本例中，尝试更改 alpha 通道值，看看它如何影响颜色输出。**
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 900)}}
 
-> **备注：** 在某种程度上，现代浏览器得到了更新，从而让`rgba()` 和`rgb()` （以及 `hsl()`和 `hsla()`;见下文）成为彼此的纯别名并开始表现完全相同，因此`rgba()` 和`rgb()` 接受带有和不带有 alpha 通道值的颜色。尝试将上面示例的`rgba()` 函数更改为`rgb()` ，看看颜色是否仍然有效！使用哪种样式由你决定，但是将非透明和透明的颜色定义分开使用不同的功能可以（非常）更好地支持浏览器，并且可以直观地指示代码中定义透明颜色的位置。
+**In this example, try changing the alpha channel values to see how it affects the color output.**
 
-### HSL 和 HSLA 的值
+> **Note:** In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`, but for backwards compatibility with old websites, the `rgba()` syntax is still supported, and has exactly the same behavior as `rgb()`.
 
-与 RGB 相比，HSL 颜色模型的支持稍差一些 (在旧版本的 IE 中不支持)，它是在设计师们感兴趣之后实现的。`hsl()` 函数接受色调、饱和度和亮度值作为参数，而不是红色、绿色和蓝色值，这些值的不同方式组合，可以区分 1670 万种颜色：
+### HSL and HSLA values
 
-- **色调**：颜色的底色。这个值在 0 和 360 之间，表示色轮周围的角度。
-- **饱和度**：颜色有多饱和？它的值为 0 - 100%，其中 0 为无颜色 (它将显示为灰色阴影)，100% 为全色饱和度
-- **亮度**：颜色有多亮？它从 0 - 100% 中获取一个值，其中 0 表示没有光 (它将完全显示为黑色)，100% 表示完全亮 (它将完全显示为白色)
+An alternative way to specify colors is the HSL color model. Instead of red, green, and blue values, the `hsl()` function accepts hue, saturation, and lightness values, which are used to distinguish between the 16.7 million colors, but in a different way:
 
-我们可以更新 RGB 的例子来使用 HSL 颜色，就像这样：
+- **Hue**: The base shade of the color. This takes a value between 0 and 360, representing the angles around a {{glossary("color wheel")}}.
+- **Saturation**: How saturated is the color? This takes a value from 0–100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation
+- **Lightness**: How light or bright is the color? This takes a value from 0–100%, where 0 is no light (it will appear completely black) and 100% is full light (it will appear completely white)
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}}
+We can update the RGB example to use HSL colors like this:
 
-就像 RGB 有 RGBA 一样，HSL 也有 HSLA 等效物，它使你能够指定 alpha 通道值。我已经在下面通过将 RGBA 示例更改为使用 HSLA 颜色来演示了这一点。
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 800)}}
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}}
+Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opacity:
 
-你可以在项目中使用这些颜色值中的任何一个。对于大多数项目，你可能会选择一个调色板，然后在整个项目中使用这些颜色——以及你所选择的定义这些颜色的方法。你可以混合使用不同的颜色模型，但是为了一致性，通常最好是你的整个项目使用相同的一个！
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 900)}}
 
-## 图片
+> **Note:** In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
 
-[`<image>`](/zh-CN/docs/Web/CSS/image) 数据类型用于图像为有效值的任何地方。它可以是一个通过 `url()`函数指向的实际图像文件，也可以是一个渐变。
+You can use any of these color values in your projects. It is likely that for most projects you will decide on a color palette and then use those colors — and your chosen method of specifying color — throughout the whole project. You can mix and match color models, however for consistency it is usually best if your entire project uses the same one!
 
-在下面的例子中，我们演示了一个图像和一个渐变作为 CSS `background-image`属性的值。
+## Images
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}}
+The [`<image>`](/en-US/docs/Web/CSS/image) value type is used wherever an image is a valid value. This can be an actual image file pointed to via a `url()` function, or a gradient.
 
-> **备注：** `<image>`还有一些其他可能的值，但是这些都是较新的，并且目前对浏览器的支持很差。如果你想了解`<image>`数据类型，请查看 MDN 页面。
+In the example below, we have demonstrated an image and a gradient in use as a value for the CSS `background-image` property.
 
-## 位置
+{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 900)}}
 
-[`<position>`](/zh-CN/docs/Web/CSS/position_value) 数据类型表示一组 2D 坐标，用于定位一个元素，如背景图像 (通过 [`background-position`](/zh-CN/docs/Web/CSS/background-position))。它可以使用关键字 (如 `top`, `left`, `bottom`, `right`, 以及`center` ) 将元素与 2D 框的特定边界对齐，以及表示框的顶部和左侧边缘偏移量的长度。
+> **Note:** There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
 
-一个典型的位置值由两个值组成——第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 `center`。
+## Position
 
-在下面的示例中，我们使用关键字将背景图像从容器的顶部到右侧放置了 40px。
+The [`<position>`](/en-US/docs/Web/CSS/position_value) value type represents a set of 2D coordinates, used to position an item such as a background image (via [`background-position`](/en-US/docs/Web/CSS/background-position)). It can take keywords such as `top`, `left`, `bottom`, `right`, and `center` to align items with specific bounds of a 2D box, along with lengths, which represent offsets from the top and left-hand edges of the box.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}}
+A typical position value consists of two values — the first sets the position horizontally, the second vertically. If you only specify values for one axis the other will default to `center`.
 
-**尝试使用这些值，看看如何把这些图像移来移去。**
+In the following example we have positioned a background image 40px from the top and to the right of the container using a keyword.
 
-## 字符串和标识符
+{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 800)}}
 
-在上面的示例中，我们看到关键字被用作值的地方 (例如`<color>`关键字，如 `red`, `black`, `rebeccapurple`, and `goldenrod`)。这些关键字被更准确地描述为标识符，一个 CSS 可以理解的特殊值。因此它们没有使用引号括起来——它们不被当作字符串。
+**Play around with these values to see how you can push the image around.**
 
-在某些地方可以使用 CSS 中的字符串，例如 [在指定生成的内容时](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after)。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。
+## Strings and identifiers
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
+Throughout the examples above, we've seen places where keywords are used as a value (for example `<color>` keywords like `red`, `black`, `rebeccapurple`, and `goldenrod`). These keywords are more accurately described as _identifiers_, a special value that CSS understands. As such they are not quoted — they are not treated as strings.
 
-## 函数
+There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the example below, we use unquoted color keywords along with a quoted generated content string.
 
-我们将查看的最后一种类型的值是一组称为函数的值。在编程中，函数是一段可重用的代码，可以多次运行，以完成重复的任务，对开发人员和计算机都是如此。函数通常与 JavaScript、Python 或 c++等语言相关联，但它们也以属性值的形式存在于 CSS 中。我们已经在颜色部分看到了函数的作用——`rgb()`、`hsl()`等。用于从文件返回图像的值——`url()`——也是一个函数。
+{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 600)}}
 
-行为更类似于传统编程语言的值是`calc()`函数。这个函数使你能够在 CSS 中进行简单的计算。如果你希望计算出在为项目编写 CSS 时无法定义的值，并且需要浏览器在运行时为你计算出这些值，那么它特别有用。
+## Functions
 
-例如，下面我们使用`calc()`使框宽为 20% + 100px。20% 是根据父容器.wrapper 的宽度来计算的，因此如果宽度改变，它也会改变。我们不能事先做这个计算，因为我们不知道父类的 20% 是多少，所以我们使用`calc()`来告诉浏览器为我们做这个计算。
+The final type of value we will take a look at is the group of values known as functions. In programming, a function is a reusable section of code that can be run multiple times to complete a repetitive task with minimum effort on the part of both the developer and the computer. Functions are usually associated with languages like JavaScript, Python, or C++, but they do exist in CSS too, as property values. We've already seen functions in action in the Colors section — `rgb()`, `hsl()`, etc. The value used to return an image from a file — `url()` — is also a function.
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 450)}}
+A value that behaves more like something you might find in a traditional programming language is the `calc()` CSS function. This function gives you the ability to do simple calculations inside your CSS. It's particularly useful if you want to work out values that you can't define when writing the CSS for your project, and need the browser to work out for you at runtime.
 
-## 总结
+For example, below we are using `calc()` to make the box `20% + 100px` wide. The 20% is calculated from the width of the parent container `.wrapper` and so will change if that width changes. We can't do this calculation beforehand because we don't know what 20% of the parent will be, so we use `calc()` to tell the browser to do it for us.
 
-本文简要介绍了你可能会遇到的最常见的值和单位类型。你可以看看所有不同类型的 [CSS 的值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units) 参考页面；当你学习这些课程时，你将会遇到很多这样的情况。
+{{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 500)}}
 
-需要记住的关键一点是，每个属性都有一个已定义的允许值列表，每个值都有一个定义来解释子值是什么。然后你可以在 MDN 上查看详细信息。
+## Test your skills!
 
-例如，理解 [`<image>`](/zh-CN/docs/Web/CSS/image)还允许你创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_tasks).
+
+## Summary
+
+This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) reference page — you will encounter many of these in use as you work through these lessons.
+
+The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that [`<image>`](/en-US/docs/Web/CSS/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
+
+In the next article, we'll take a look at how [items are sized](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) in CSS.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
