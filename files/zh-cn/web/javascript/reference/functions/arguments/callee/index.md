@@ -143,6 +143,6 @@ john(); //John Smith
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{jsxref("Function")}}
