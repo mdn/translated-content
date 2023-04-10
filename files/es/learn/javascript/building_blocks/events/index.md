@@ -586,12 +586,13 @@ Deberías ver que cuando haces click en el botón, la caja y el video que contie
 
 El video se encuentra dentro del `<div>`, ya que es parte de él, por lo tanto, hacer click en el video ejecuta ambos manejadores de eventos, ocasionando este comportamiento.
 
-### Fixing the problem with stopPropagation()
+### Resolviendo el problema con stopPropagation()
 
-As we saw in the last section, event bubbling can sometimes create problems, but there is a way to prevent it.
-The [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when called inside an event handler, prevents the event from bubbling up to any other elements.
+Como pudimos ver en la anterior sección, a veces el _event bubbling_ puede ocasionar problemas, pero existe una manera de prevenirlos.
+El objeto [`Event`](/es/docs/Web/API/Event) 
+contiene un método llamado [`stopPropagation()`](/es/docs/Web/API/Event/stopPropagation) que cuando es llamado dentro de un manejador de evento, evita que el evento burbujee hacia los elementos de más arriba.
 
-We can fix our current problem by changing the JavaScript to this:
+Podemos solucionar nuestro problema actual al cambiar el código JavaScript por lo siguiente:
 
 ```js
 const btn = document.querySelector("button");
@@ -608,7 +609,7 @@ video.addEventListener("click", (event) => {
 box.addEventListener("click", () => box.classList.add("hidden"));
 ```
 
-All we're doing here is calling `stopPropagation()` on the event object in the handler for the `<video>` element's `'click'` event. This will stop that event from bubbling up to the box. Now try clicking the button and then the video:
+Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en el objeto evento dentro del manejador del evento `'click'` para el elemento `<video>`. Esto evitará que el evento burbujee hacia la caja de más arriba. Ahora intenta hacer click en el botón y luego en el video:
 
 {{EmbedLiveSample("Fixing the problem with stopPropagation()", '100%', 500)}}
 
@@ -647,13 +648,13 @@ div video {
 }
 ```
 
-### Event capture
+### Captura de eventos
 
-An alternative form of event propagation is _event capture_. This is like event bubbling but the order is reversed: so instead of the event firing first on the innermost element targeted, and then on successively less nested elements, the event fires first on the _least nested_ element, and then on successively more nested elements, until the target is reached.
+Una forma alternativa para la propagación de eventos es _captura de eventos_ (_event capture_, en inglés). Esta es parecida al _bubbling_ pero el sentido está invertido: en vez de que el evento se lance primero en el elemento objetivo más anidado y, sucesivamente, en elementos menos anidados, el evento se lanza primero en el elemento _menos anidado_, y luego en los elementos más anidados, hasta que el objetivo es alcanzado.
 
-Event capture is disabled by default. To enable it you have to pass the `capture` option in `addEventListener()`.
+La captura de eventos está desactivada por defecto. Para activarla debes pasar la opción `capture` al método `addEventListener()`.
 
-This example is just like the [bubbling example](#bubbling_example) we saw earlier, except that we have used the `capture` option:
+Este ejemplo es parecido al [ejemplo de _bubbling_](#bubbling_example) que vimos anteriormente, a excepción de que ahora hemos usado la opción `capture`:
 
 ```html
 <body>
@@ -680,7 +681,7 @@ button.addEventListener("click", handleClick);
 
 {{ EmbedLiveSample('Event capture', '100%', 200, "", "") }}
 
-In this case, the order of messages is reversed: the `<body>` event handler fires first, followed by the `<div>` event handler, followed by the `<button>` event handler:
+En este caso, el orden de los mensajes está invertido: el manejador de evento del `<body>` se lanza primero, seguido del manejador del `<div>` y por el último el manejador del `<button>`:
 
 ```
 You clicked on a BODY element
@@ -688,17 +689,18 @@ You clicked on a DIV element
 You clicked on a BUTTON element
 ```
 
-Why bother with both capturing and bubbling? In the bad old days, when browsers were much less cross-compatible than now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is what modern browsers implement.
+¿Por qué molestarse con ambos métodos, captura y burbujeo? En los malos viejos tiempos, cuando los navegadores eran mucho menos compatibles entre sí, Netscape utilizaba solamente captura de eventos, mientras que Internet Explorer solo usaba burbujeo de eventos. Cuando W3C decidió tratar de estandarizar este comportamiento y llegar a un acuerdo, terminaron con este sistema que incluye ambos métodos, el cual está implementado por los navegadores modernos.
 
-By default almost all event handlers are registered in the bubbling phase, and this makes more sense most of the time.
+Por defecto, casi todos los manejadores de eventos están registrados en la fase de burbujeo, lo cual tiene sentido la mayoría de veces.
 
-## Event delegation
+## Delegación de eventos
 
-In the last section, we looked at a problem caused by event bubbling and how to fix it. Event bubbling isn't just annoying, though: it can be very useful. In particular, it enables **event delegation**. In this practice, when we want some code to run when the user interacts with any one of a large number of child elements, we set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually.
+En la anterior sección, vimos un problema ocasionado por el burbujeo de eventos y cómo solucionarlo.
+El burbujeo de eventos no simplemente es molesto, sino que puede resultar bastante útil. Particularmente, hace posible la **delegación de eventos**. En esta técnica, cuando queremos que cierto código se ejecute cuando el usuario interacciona con cualquiera de un gran número de elementos descendientes, establecemos el detector de eventos en el padre y dejamos que los eventos burbujeen hasta el padre, en vez de establecer el detector de eventos individualmente en cada descendiente.
 
-Let's go back to our first example, where we set the background color of the whole page when the user clicked a button. Suppose that instead, the page is divided into 16 tiles, and we want to set each tile to a random color when the user clicks that tile.
+Regresemos a nuestro primer ejemplo, donde establecemos el color de toda la página cuando el usuario hace click en un botón. Imagina que en su lugar, la página está dividida en 16 secciones, y queremos establecer un color de fondo aleatorio en cada sección cuando el usuario hace click en una sección.
 
-Here's the HTML:
+Aquí está el HTML:
 
 ```html
 <div id="container">
@@ -721,7 +723,7 @@ Here's the HTML:
 </div>
 ```
 
-We have a little CSS, to set the size and position of the tiles:
+Estamos usando un poco de CSS para establecer el tamaño y posición de las secciones:
 
 ```css
 .tile {
@@ -731,7 +733,8 @@ We have a little CSS, to set the size and position of the tiles:
 }
 ```
 
-Now in JavaScript, we could add a click event handler for every tile. But a much simpler and more efficient option is to set the click event handler on the parent, and rely on event bubbling to ensure that the handler is executed when the user clicks on a tile:
+Ahora desde JavaScript podemos agregar un manejador del evento click para cada sección.
+Pero una solución más sencilla y más eficiente sería agregar un solo detector de eventos en el padre, y aprovecharnos del burbujeo de eventos para asegurarnos de que el manejador se ejecuta cuando el usuario hace click en una sección:
 
 ```js
 function random(number) {
@@ -751,42 +754,43 @@ container.addEventListener(
 );
 ```
 
-The output is as follows (try clicking around on it):
+El resultado es de la siguiente forma (intenta hacer click alreador):
 
 {{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
 
-> **Note:** In this example, we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
+> **Nota:** En este ejemplo, estamos usando `event.target` para obtener el elemento objetivo del evento (es decir, el elemento más interno). Si queremos acceder al elemento que manejó el evento (en este caso, el contenedor), podemos usar `event.currentTarget`.
 
-> **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
+> **Nota:** Ve el archivo [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) para el código completo; además velo [ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) aquí.
 
-## It's not just web pages
+## No es solamente en paǵinas web
 
-Events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
-In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.
+Los eventos no son exclusivos de JavaScript, la mayoría de lenguajes de programación poseen algún tipo de modelo de eventos. El funcionamiento de estos modelos puede ser diferente de lo que tenemos en JavaScript.
+De hecho, el modelo de eventos en JavaScript para páginas web es diferente del modelo de eventos de JavaScript cuando se usa en otros entornos.
 
-For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
-The [Node.js event model](https://nodejs.org/api/events.html) relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like `on()` to register an event listener, and `once()` to register an event listener that unregisters after it has run once.
-The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) provide a good example.
+Por ejemplo, [Node.js](/es/docs/Learn/Server-side/Express_Nodejs) es un tiempo de ejecución (_runtime, en inglés_) bastante popular que le permite a los desarrolladores usar JavaScript para crear aplicaciones de redes y del lado del servidor.
+El [modelo de eventos de Node.js](https://nodejs.org/api/events.html) se basa en detectores para detectar eventos y emisores para emitir eventos periodicamente, esto no suena muy alejado de lo que conocemos pero, el código sí es bastante diferente. En este modelo, se usan funciones como `on()` para registrar un detector de eventos, y `once()` para registrar un detector de eventos que elimina su registro después de haber sido ejecutado una vez.
 
-You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
-The event model is similar to the web events model, but a bit different — event listeners' properties are camel-cased (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
-See the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) page for an example.
+La [documentación del evento HTTP connect](https://nodejs.org/api/http.html#event-connect) proporciona un buen ejemplo.
 
-You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.
+También puedes utilizar JavaScript para construir extensiones multi-navegador (mejoras en la funcionalidad de los navegadores) usando una tecnología llamada [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).
+El modelo de eventos es similar al modelo de los eventos de la web, salvo por pequeñas diferencias. Por ejemplo, las propiedades para detectar eventos utilizan el estilo _camel-case_ (`onMessage` en vez de `onmessage`), y necesitan ser combinadas con la función `addListener`.
+Visita la página de [`runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) para ver un ejemplo.
 
-## Test your skills!
+No necesitas entender nada sobre otros entornos de ejecución en este punto en tu camino de aprendizaje, simplemente queriamos aclarar que los eventos suelen ser diferentes en distintos entornos de programación.
 
-You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see [Test your skills: Events](/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events).
+## ¡Pon a prueba tus habilidades!
 
-## Conclusion
+Haz llegado al final de este artículo pero, ¿Recuerdas la información más importante? Para verificar que has retenido esta información antes de que continúes, visita la página de [Pon a prueba tus habilidades: Eventos](/es/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events).
 
-You should now know all you need to know about web events at this early stage.
-As mentioned, events are not really part of the core JavaScript — they are defined in browser Web APIs.
+## Conclusión
 
-Also, it is important to understand that the different contexts in which JavaScript is used have different event models — from Web APIs to other areas such as browser WebExtensions and Node.js (server-side JavaScript).
-We are not expecting you to understand all of these areas now, but it certainly helps to understand the basics of events as you forge ahead with learning web development.
+Por ahora deberías saber todo lo que necesitas sobre eventos en la web. Como mencionamos anteriormente, los eventos en realidad no son parte del núcleo de JavaScript, ya que estos son definidos como parte de la API del navegador.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](https://discourse.mozilla.org/c/mdn/learn/250) to ask for help.
+De igual forma, es importante entender que los diferentes contextos en los que JavaScript se usa, tienen diferentes modelos de eventos, desde Web APIs a otras áreas como WebExtensions y Node.js (JavaScript del lado del servidor).
+
+No estamos esperando que entiendas todas estás áreas justo ahora, pero sin duda mencionar estos temas te ayudará a entender los aspectos básicos de los eventos mientras sigues adelante en tu proceso de aprendizaje de desarrollo web.
+
+Si hay algo que no te quedó muy claro, tómate la libertad de leer de nuevo el artículo o [contáctanos](https://discourse.mozilla.org/c/mdn/learn/250) para pedir ayuda.
 
 ## See also
 
