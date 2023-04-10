@@ -30,7 +30,7 @@ color-scheme: unset;
 
 `color-scheme` 属性的值必须是以上关键字之一。
 
-### Values
+### 取值
 
 - `normal`
   - ：表示元素未指定任何配色方案，因此应使用浏览器的默认配色方案呈现。
