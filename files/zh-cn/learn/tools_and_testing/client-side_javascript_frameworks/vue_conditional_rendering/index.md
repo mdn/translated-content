@@ -1,5 +1,5 @@
 ---
-title: "Vue 中的条件渲染: 编辑现有的待办事项"
+title: "Vue 中的条件渲染：编辑现有的待办事项"
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
 ---
