@@ -1,5 +1,5 @@
 ---
-title: Block (CSS)
+title: 区块（CSS）
 slug: Glossary/Block/CSS
 ---
 
