@@ -3,7 +3,7 @@ title: 主轴
 slug: Glossary/Main_Axis
 ---
 
-主轴是由弹性容器 {{glossary("flexbox")}} 中弹性方向 {{cssxref("flex-direction")}} 属性所定义的的。弹性方向 `flex-direction` 有四个取值，分别是：
+{{glossary("flexbox", "弹性盒")}}的主轴由 {{cssxref("flex-direction")}} 属性设置的方向所定义。`flex-direction` 有四个取值，分别是：
 
 - `row`
 - `row-reverse`
@@ -16,9 +16,9 @@ slug: Glossary/Main_Axis
 
 选择 `column` 或者 `column-reverse`，那么主轴会沿块向从页面上侧延伸到下侧。
 
-![Three flex items taking up the full width of the container, displayed one below the other in code order. Flex-direction is set to column. The main axis is vertical i.e. from top to bottom](basics2.png)
+![三个弹性项目占据了容器的全部宽度，按代码顺序依次从上到下显示。flex-direction 设置为 column。主轴为纵向的，即从上到下。](basics2.png)
 
-在主轴上，你可以用 `flex` 属性来增加可用空间，从而控制弹性元素的尺寸，你还可以用 `justify-content` 属性来控制元素周围的空间、间距。
+在主轴上，项目的 `flex` 属性可将任何可用空间加入项目自身，由此可控制弹性项目的尺寸。或者你可以用 `justify-content` 属性控制项目之间和周围的空间。
 
 ## 参见
 
