@@ -13,7 +13,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_pro
       <th scope="row">预备条件：</th>
       <td>
         <p>
-          熟悉核心 <a href="/en-US/docs/Learn/HTML">HTML</a>、<a
+          熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
           href="/en-US/docs/Learn/CSS">CSS</a> 和 <a
           href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
             href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
