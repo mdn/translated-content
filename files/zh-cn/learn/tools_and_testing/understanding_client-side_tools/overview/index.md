@@ -156,7 +156,7 @@ web 应用程序生命周期的这个阶段通常允许您编写“未来代码�
 
 当您选择要使用的工具时，第一个端口应该是工具项目主页。这可能是一个完整的网站，也可能是代码库中的一个 readme 文档。例如 [date-fns docs](https://date-fns.org/docs/Getting-Started)就很好、很完整、很容易理解。然而，有些文档可能相当技术性和学术性，并不适合您的学习需求。
 
-相反，您可能希望找到一些关于如何开始使用特定类型的工具的专门教程。好的起点是搜索网站喜欢[CSS Tricks](https://css-tricks.com/), [Dev](https://dev.to/), [freeCodeCamp](https://www.freecodecamp.org/), 和 [Smashing Magazine](https://www.smashingmagazine.com/), 因为它们是为 web 开发行业量身定做的。
+相反，你可能希望找到一些关于如何开始使用特定类型的工具的专门教程。好的起点在诸如 [CSS Tricks](https://css-tricks.com/)、[Dev](https://dev.to/)、[freeCodeCamp](https://www.freecodecamp.org/) 和 [Smashing Magazine](https://www.smashingmagazine.com/) 等网站中进行搜索，因为它们是为 web 开发行业量身定做的。
 
 同样，在搜索适合自己的工具时，您可能会使用几种不同的工具，试用它们，看看它们是否有意义，是否得到良好的支持，并执行您希望它们执行的任务。这很好，这对学习很有好处，而且随着你获得更多经验，道路会变得更平坦。
 
