@@ -66,7 +66,7 @@ X-Content-Type-Options: nosniff
 
 - {{HTTPHeader("Content-Type")}}
 - La [définition originale](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) de X-Content-Type-Options par Microsoft.
-- L'[Outil Obserservatoire Mozilla](https://observatory.mozilla.org/) teste la configuration (y compris en-tête) des sites Web pour la sécurité et la sûreté.
+- L'[Outil Observatoire Mozilla](https://observatory.mozilla.org/) teste la configuration (y compris en-tête) des sites Web pour la sécurité et la sûreté.
 - [Atténuer les attaques MIME Confusion dans Firefox.](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
 - [Blocage de la lecture croisée (CORB)](https://fetch.spec.whatwg.org/#corb)
 - [Google Docs CORB explicatif](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)
