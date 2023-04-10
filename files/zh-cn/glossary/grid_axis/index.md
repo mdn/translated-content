@@ -1,5 +1,5 @@
 ---
-title: 网格布局
+title: 网格轴
 slug: Glossary/Grid_Axis
 ---
 
