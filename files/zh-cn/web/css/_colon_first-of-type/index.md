@@ -40,7 +40,7 @@ p:first-of-type {
 
 #### 结果
 
-{{EmbedLiveSample('Styling_the_first_paragraph')}}
+{{EmbedLiveSample('装饰第一个段落')}}
 
 ### 嵌套元素
 
