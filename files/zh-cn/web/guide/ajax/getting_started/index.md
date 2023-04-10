@@ -158,7 +158,7 @@ if (httpRequest.status === 200) {
 - 请求已通过然后（`onreadystatechange`）传给 `alertContents()` 执行。
 - `alertContents()` 检查返回的响应是否 OK，然后 `alert()` 文件 `test.html` 的内容。
 
-> **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求，这会使得调试过程异常艰难。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数（详情见[缓存绕过](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#绕开缓存)）。
+> **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求，这会使得调试过程异常艰难。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数（详情见[绕过缓存](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#绕过缓存)）。
 
 > **备注：** 如果变量 `httpRequest` 在全局范围内使用，它会在 `makeRequest()` 函数中被相互覆盖，从而导致资源竞争。为了避免这个情况，请在包含 AJAX 函数的[闭包](/zh-CN/docs/Web/JavaScript/Closures)中声明 `httpRequest` 变量。
 
@@ -254,7 +254,7 @@ function makeRequest(url, userName) {
 { "userData": "Jane", "computedString": "Hi, Jane!" }
 ```
 
-为了在 `alertContents()` 中使用这个数据，我们可不能只是 alert `responseText` ，我们要解析它并 alert `computedString`，这才是我们想要的属性：
+为了在 `alertContents()` 中使用这个数据，我们可不能只是 alert `responseText`，我们要解析它并 alert `computedString`，这才是我们想要的属性：
 
 ```js
 function alertContents() {
