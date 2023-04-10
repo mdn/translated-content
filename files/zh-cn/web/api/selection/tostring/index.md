@@ -30,7 +30,7 @@ selection 对象代表的字符串。
 
 ```js
 alert(window.getSelection()); // 被调用时
-aalert(window.getSelection().toString()); // 真实情况
+alert(window.getSelection().toString()); // 真实情况
 ```
 
 ## 规范
