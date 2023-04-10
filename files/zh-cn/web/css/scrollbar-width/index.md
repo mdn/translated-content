@@ -7,10 +7,6 @@ slug: Web/CSS/scrollbar-width
 
 **`scrollbar-width`** 属性允许开发者在元素显示滚动条时设置滚动条的最大宽度。
 
-{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
-
-{{cssinfo}}
-
 ## Syntax
 
 ```css
