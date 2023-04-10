@@ -42,7 +42,7 @@ color-scheme: unset;
 
   - : 禁止用户代理覆盖元素的颜色方案
 
-    可以使用 `color-scheme: only light` 应用于特定的元素或 `:root`，以关闭由 Chrome 的[自动深色主题](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out)引起的颜色覆盖。
+    可以使用 `color-scheme: only light;` 应用于特定的元素或 `:root`，以关闭由 Chrome 的[自动深色主题](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out)引起的颜色覆盖。
 
 ## 形式定义
 
