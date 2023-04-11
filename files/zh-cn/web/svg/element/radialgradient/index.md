@@ -63,6 +63,19 @@ svg {
 - {{SVGAttr("xlink:href")}}
   - : {{Deprecated_Header}}对另一个将被用作模板的 `<radialGradient>` 元素的 [\<IRI>](/zh-CN/docs/Web/SVG/Content_type#iri) 引用。*值类型*：[**\<IRI>**](/zh-CN/docs/Web/SVG/Content_type#iri)；*默认值*：none；*可使用动画*：**是**
 
+### 全局属性
+
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
+  - : 最重要的：{{SVGAttr('id')}}
+- [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
+- 事件属性
+  - : [全局事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#全局事件属性)、[文档元素事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#文档元素事件属性)
+- [表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)
+  - : 最重要的：{{SVGAttr('clip-path')}}、{{SVGAttr('clip-rule')}}、{{SVGAttr('color')}}、{{SVGAttr('color-interpolation')}}、{{SVGAttr('color-rendering')}}、{{SVGAttr('cursor')}}、{{SVGAttr('display')}}、{{SVGAttr('fill')}}、{{SVGAttr('fill-opacity')}}、{{SVGAttr('fill-rule')}}、{{SVGAttr('filter')}}、{{SVGAttr('mask')}}、{{SVGAttr('opacity')}}、{{SVGAttr('pointer-events')}}、{{SVGAttr('shape-rendering')}}、{{SVGAttr('stroke')}}、{{SVGAttr('stroke-dasharray')}}、{{SVGAttr('stroke-dashoffset')}}、{{SVGAttr('stroke-linecap')}}、{{SVGAttr('stroke-linejoin')}}、{{SVGAttr('stroke-miterlimit')}}、{{SVGAttr('stroke-opacity')}}、{{SVGAttr('stroke-width')}}、{{SVGAttr("transform")}}、{{SVGAttr('vector-effect')}}、{{SVGAttr('visibility')}}
+- XLink 属性
+  - : {{SVGAttr("xlink:href")}}、{{SVGAttr("xlink:title")}}
+
 ## 使用说明
 
 {{svginfo}}
