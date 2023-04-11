@@ -2,6 +2,8 @@
 title: "Window: toolbar 속성"
 short-title: toolbar
 slug: Web/API/Window/toolbar
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
