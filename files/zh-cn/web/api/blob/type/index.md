@@ -57,7 +57,7 @@ input.addEventListener("change", (event) => {
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
