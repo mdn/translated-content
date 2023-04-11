@@ -77,7 +77,6 @@ for (var j = 0; j < faceColors.length; ++j) {
 function initIndexBuffer(gl) {
   const indexBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
-  
   // This array defines each face as two triangles, using the
   // indices into the vertex array to specify each triangle's
   // position.
