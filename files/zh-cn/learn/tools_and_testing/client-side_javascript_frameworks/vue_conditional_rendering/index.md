@@ -452,7 +452,7 @@ The `<input>` of `type="checkbox"` listens for `change` events.
 **结果：**`deleteToDo()` 方法被调用，它会触发 `item-deleted` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
 
 `<to-do-item-edit-form>` listens for:
-`<to-do-item-edit-form>` 监听:
+`<to-do-item-edit-form>` 监听：
 
 - `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` component when the form is successfully submitted.
   **Result**: `itemEdited()` method is invoked, which emits the `item-edited` event (which is then listened for inside `App.vue`, see above), and sets `this.isEditing` back to `false`, so that the edit form is no longer shown on re-render.
