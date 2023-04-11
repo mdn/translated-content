@@ -213,7 +213,7 @@ methods: {
 通过 `v:if` 和 `v:else` 有条件地显示组件
 
 Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
-现在我们有了一个可用的 `isEditing` 标志来表示事项正在被编辑（或者未被编辑）。如果 `isEditing` 为真，我们会用这个标志来展示我们的 `ToDoItemEditForm` 而不是复选框。为此，我们将使用另一个 Vue 指令：[`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
+现在我们有了一个可用的 `isEditing` 标志来表示事项正在被编辑（或者未被编辑）。如果 `isEditing` 为真，我们会用这个标志来展示我们的 `ToDoItemEditForm` 而不是复选框。为此，我们将使用另一个 Vue 指令：[`v-if`](https://vuejs.org/api/built-in-directives.html#v-if)。
 
 The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) and [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
  `v-if` 指令只会在传递给它的值为真的情况下渲染一个块。这和 `if` 语句在 JavaScript 起作用的方式相似。`v-if` 也有对应的 [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) 和 [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) 指令，在 Vue 模板中提供相当于 JavaScript 的 `else if` 和 `else` 逻辑。
