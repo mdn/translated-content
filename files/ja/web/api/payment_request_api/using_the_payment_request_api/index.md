@@ -79,7 +79,7 @@ request.show().then((paymentResponse) => {
 
 他にも知っておくと有益な決済リクエストメソッドがいくつかあります。
 
-{{domxref("PaymentRequest.canMakePayment()")}} は、決済処理を始める前に `PaymentRequest` オブジェクトが決済可能かどうか調べるために使用できます。これは、疎運在するかどうかを示す論理値を履行されたプロミスを返します。例えば次のようになります。
+{{domxref("PaymentRequest.canMakePayment()")}} は、決済処理を始める前に `PaymentRequest` オブジェクトが決済可能かどうか調べるために使用できます。これは、存在するかどうかを示す論理値を履行されたプロミスを返します。例えば次のようになります。
 
 ```js
 // 決済が可能かどうかを調べるためのダミー決済リクエスト
