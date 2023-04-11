@@ -44,7 +44,7 @@ observer.unobserve(document.getElementById("elementToObserve"));
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API)
 - {{domxref("IntersectionObserver.observe()")}}
