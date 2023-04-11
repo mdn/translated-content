@@ -110,7 +110,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(), {
 
 決済リクエスト API に対応しているかどうかは、ユーザーのブラウザーが {{domxref("PaymentRequest")}} に対応しているかどうか、つまり `if (window.PaymentRequest)` を調べることで効果的に検出することができます。
 
-以下のスニペットでは、販売者のページでこのチェックを行い、`true` が返された場合、チェックアウトボタンを更新して古いウェブ形成の代わりに `PaymentRequest` を使用するようにしています。
+以下のスニペットでは、販売者のページでこのチェックを行い、`true` が返された場合、チェックアウトボタンを更新して古いウェブフォームの代わりに `PaymentRequest` を使用するようにしています。
 
 ```js
 const checkoutButton = document.getElementById("checkout-button");
