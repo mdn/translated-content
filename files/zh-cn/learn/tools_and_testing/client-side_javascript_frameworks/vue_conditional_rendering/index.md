@@ -381,7 +381,7 @@ So, let's implement the fix in `ToDoItem.vue`:
    ```
 
 2. Add the following block below the data() { } block:
-2. 在 `data() { }` 代码块的下面，添加以下内容:
+2. 在 `data() { }` 代码块的下面，添加以下内容：
 
    ```js
    computed: {
