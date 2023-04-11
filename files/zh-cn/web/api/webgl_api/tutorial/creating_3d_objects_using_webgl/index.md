@@ -147,7 +147,7 @@ gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 let cubeRotation = 0.0;
 ```
 
-> **备注：** 在 `drawScene()` 函数声明中，将变量 `squareRotation` 替换成 `cubeRotation`： 
+> **备注：** 在 `drawScene()` 函数声明中，将变量 `squareRotation` 替换成 `cubeRotation`：
 
 ```js-nolint
 function drawScene(gl, programInfo, buffers, cubeRotation) {
