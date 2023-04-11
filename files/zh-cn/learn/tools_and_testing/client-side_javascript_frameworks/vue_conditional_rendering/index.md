@@ -424,7 +424,7 @@ To understand this better, it is a good idea to write out a flow chart, descript
   **结果：**`updateDoneStatus()` 方法被调用来更新相关 todo 项的完成状态。
 - 当按下“Delete”按钮时，`ToDoItem` 组件内的 `deleteToDo()` 方法触发 `item-deleted` 事件。
   **结果：**`deleteToDo()` 方法被调用，来删除相关的 todo 项。
-- 当监听到 `ToDoItemEditForm` 内部的 `onSubmit()` 方法触发的 `item-edited` 事件时，`ToDoItem` 组件中的 `itemEdited()` 方法触发 `item-edited` 事件。是的，两个不同的 `item-edited` 事件连锁发生了!
+- 当监听到 `ToDoItemEditForm` 内部的 `onSubmit()` 方法触发的 `item-edited` 事件时，`ToDoItem` 组件中的 `itemEdited()` 方法触发 `item-edited` 事件。是的，两个不同的 `item-edited` 事件连锁发生了！
   **结果：**`editToDo()` 方法被调用，来更新相关 todo 项的标签。
 
 ### ToDoForm.vue
