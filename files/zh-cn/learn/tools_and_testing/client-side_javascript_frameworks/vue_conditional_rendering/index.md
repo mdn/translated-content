@@ -191,7 +191,7 @@ methods: {
   }
 ```
 
-## 通过 `v:if` 和 `v:else` 有条件地显示组件
+## 通过 v:if 和 v:else 有条件地显示组件
 
 现在我们有了一个可用的 `isEditing` 标志来表示事项正在被编辑（或者未被编辑）。如果 `isEditing` 为真，我们会用这个标志来展示我们的 `ToDoItemEditForm` 而不是复选框。为此，我们将使用另一个 Vue 指令：[`v-if`](https://vuejs.org/api/built-in-directives.html#v-if)。
 
