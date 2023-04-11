@@ -40,11 +40,13 @@ l10n:
   :
 ```
 
-## 페이지 갱신 표시
+## 문서 갱신 표시
 
-번역된 페이지가 `en-US` 페이지에 대해 얼마나 뒤쳐져 있는지 알 수 있는 마땅한 방법이 없습니다. `l10n.sourceCommit` 메타데이터를 추가하여 현재 문서가 명시된 `en-US`의 hash 까지 최신 상태를 유지하고 있음을 나타낼 수 있습니다. (참고: [How to indicate "content parity" of localized documents vs en-US counterparts?](https://github.com/orgs/mdn/discussions/129))
+번역된 문서가 `en-US` 문서에 대해 얼마나 뒤쳐져 있는지 알 수 있는 마땅한 방법이 없습니다. `l10n.sourceCommit` 메타데이터를 추가하여 현재 문서가 명시된 `en-US`의 hash 까지 최신 상태를 유지하고 있음을 나타낼 수 있습니다. (참고: [How to indicate "content parity" of localized documents vs en-US counterparts?](https://github.com/orgs/mdn/discussions/129))
 
-- sourceCommit: `en-US` 페이지의 가장 최신 40자리 hash를 명시합니다.
+- sourceCommit: 기여하는 문서와 동일한 `en-US` 문서의 가장 최신 40자리 hash를 명시합니다. (예: `slug: Glossary/Array` 문서에 대해 기여할 때, [content 저장소](https://github.com/mdn/content)의 `slug: Glossary/Array` 문서에서 가장 최신 40자리 hash를 명시합니다.)
+
+> **주의:** content 저장소의 가장 최신 hash가 아닌, content 저장소에서 기여하는 문서와 동일한 위치의 파일에 대한 hash 입니다.
 
 ```markdown
 ---
