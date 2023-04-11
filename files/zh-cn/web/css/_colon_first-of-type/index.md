@@ -17,7 +17,7 @@ slug: Web/CSS/:first-of-type
 }
 ```
 
-## 例子
+## 示例
 
 ### 装饰第一个段落
 
@@ -71,7 +71,7 @@ article :first-of-type {
 
 #### 结果
 
-{{EmbedLiveSample('Nested_elements', 500)}}
+{{EmbedLiveSample('嵌套元素', 500)}}
 
 ## 规范
 
