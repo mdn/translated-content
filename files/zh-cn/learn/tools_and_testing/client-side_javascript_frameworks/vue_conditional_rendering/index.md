@@ -347,7 +347,7 @@ Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to loo
 ```
 
 And there you have it — you should now be able to edit and delete items from the list!
-就这样--你现在应该能够编辑和删除列表中的项目了!
+就这样--你现在应该能够编辑和删除列表中的项目了！
 
 ## Fixing a small bug with isDone status
 修复 `isDone` 状态的一个小错误
