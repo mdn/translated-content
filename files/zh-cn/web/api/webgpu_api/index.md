@@ -260,7 +260,7 @@ const commandEncoder = device.createCommandEncoder();
 
 1. 要渲染到的纹理视图；我们通过 {{domxref("GPUTexture.createView", "context.getCurrentTexture().createView()")}} 从 `<canvas>` 创建一个新视图。
 2. 纹理视图一旦加载并且在任何绘制发生之前，将“清除”视图到一个指定的颜色。这就是导致三角形后面出现蓝色背景的原因。
-3. 我们还要在当前的渲染通道中存储这个颜色附着的值。
+3. 我们还要在当前的渲染通道中存储这个颜色附件的值。
 
 ```js
 const clearColor = { r: 0.0, g: 0.5, b: 1.0, a: 1.0 };
