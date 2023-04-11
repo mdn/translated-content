@@ -624,6 +624,7 @@
 /pt-BR/docs/Web/API/HTMLElement/contextMenu	/pt-BR/docs/orphaned/Web/API/HTMLElement/contextMenu
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
+/pt-BR/docs/Web/API/Navigation_timing_API	/pt-BR/docs/Web/API/Performance_API/Navigation_timing
 /pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/getBattery
 /pt-BR/docs/Web/API/Navigator/battery	/pt-BR/docs/Web/API/Navigator/getBattery
 /pt-BR/docs/Web/API/Node.appendChild	/pt-BR/docs/Web/API/Node/appendChild

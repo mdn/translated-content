@@ -187,6 +187,6 @@ div {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - border-radius 相关 CSS 属性：{{cssxref("border-radius")}}, 其他边角属性： {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, and {{cssxref("border-bottom-left-radius")}}.

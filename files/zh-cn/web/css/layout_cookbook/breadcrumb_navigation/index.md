@@ -31,7 +31,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
 - [提供面包屑路径](https://www.w3.org/TR/WCAG20-TECHS/G65.html)

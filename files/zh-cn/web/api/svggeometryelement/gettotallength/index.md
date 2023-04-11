@@ -27,6 +27,6 @@ float someElement.getTotalLength();
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{DOMxRef("SVGGeometryElement.getTotalLength()")}}

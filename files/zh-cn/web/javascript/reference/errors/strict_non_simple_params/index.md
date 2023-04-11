@@ -100,7 +100,7 @@ var callback = (() => {
 })();
 ```
 
-## 也可以看看
+## 参见
 
 - {{jsxref("Strict_mode", "Strict mode", "", 1)}}
 - {{jsxref("Statements/function", "函数语句", "", 1)}}

@@ -1304,7 +1304,7 @@ input {
 
 > **备注：** `window.indexedDB.open()` 是异步的。该方法在 `success` 事件触发前很长一段时间就执行完毕。这意味着一个调用 `open()` 和 `onsuccess` 的方法（例如 `openDb()`），会在 `onsuccess` 句柄开始运行前就已经返回了。这种情况同样适用于其他请求方法，比如 `transaction()` 和 `get()`。
 
-## 另请参阅
+## 参见
 
 如有需要，请进一步阅读以获取更多信息。
 

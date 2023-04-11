@@ -3621,10 +3621,6 @@
     "modified": "2020-10-15T21:33:46.490Z",
     "contributors": ["mateusvelleda", "alexanmtz", "diegolw"]
   },
-  "Web/API/Navigation_timing_API": {
-    "modified": "2019-03-23T22:50:45.488Z",
-    "contributors": ["MarcelMorais", "Gutem"]
-  },
   "Web/API/Navigator": {
     "modified": "2019-03-23T23:01:42.784Z",
     "contributors": ["wbamberg", "teoli"]
@@ -3770,6 +3766,10 @@
   "Web/API/Performance_API": {
     "modified": "2020-04-24T14:27:05.156Z",
     "contributors": ["rbertoche"]
+  },
+  "Web/API/Performance_API/Navigation_timing": {
+    "modified": "2019-03-23T22:50:45.488Z",
+    "contributors": ["MarcelMorais", "Gutem"]
   },
   "Web/API/ProcessingInstruction": {
     "modified": "2019-03-18T21:38:06.302Z",

@@ -144,7 +144,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 - Cet élément ne doit pas contenir plus d'informations que l'information de contact, par exemple une date de publication (qui appartiendrait à l'élément [`<time>`](/fr/docs/Web/HTML/Element/time)).
 - Typiquement un élément `<address>` peut être placé dans l'élément [`<footer>`](/fr/docs/Web/HTML/Element/footer) de la section courante, s'il y en a une.
 
-## Exemple
+## Exemples
 
 ```html
 <address>
@@ -163,7 +163,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple", "100%", 190)}}
+{{EmbedLiveSample("Exemples", "100%", 190)}}
 
 Bien que le rendu par défaut du texte de l'élément `<address>` utilise le même style par défaut que les éléments [`<i>`](/fr/docs/Web/HTML/Element/i) ou [`<em>`](/fr/docs/Web/HTML/Element/em), il est plus approprié d'utiliser cet élément lorsque l'on traite d'informations de contact, étant donné qu'il apporte des informations sémantiques supplémentaires.
 

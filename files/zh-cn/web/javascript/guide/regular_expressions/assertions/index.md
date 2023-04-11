@@ -294,7 +294,7 @@ let ripe_oranges = oranges.filter( fruit => fruit.match(/(?<=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 
-## 另请参阅
+## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 

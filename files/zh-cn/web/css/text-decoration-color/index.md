@@ -78,7 +78,7 @@ Color alone should not be used to convey meaning. For example, change of text an
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - 当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。
 - {{cssxref("&lt;color&gt;")}} 数据类型

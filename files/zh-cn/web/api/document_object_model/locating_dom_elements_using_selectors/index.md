@@ -38,7 +38,7 @@ var el = document.querySelector( "#main, #basic, #exclamation" );
 
 `querySelector()` and `querySelectorAll()` 里可以使用任何 CSS 选择器。
 
-## 另请参阅
+## 参见
 
 - [Selectors API](http://www.w3.org/TR/selectors-api/)
 - [`element.querySelector`](/zh-CN/docs/DOM/Element.querySelector)
