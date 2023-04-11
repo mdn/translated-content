@@ -17,7 +17,7 @@ WebGL 和用于编写 WebGL 着色器代码的 [GLSL](<https://www.khronos.org/o
 
 然而，WebGL 有一些需要解决的基本问题：
 
-- 自 WebGL 发布以来，出现了新一代的原生 GPU API——最受欢迎的是 [微软的 Direct3D 12](https://docs.microsoft.com/en-us/windows/win32/direct3d12/direct3d-12-graphics)、[苹果的 Metal](https://developer.apple.com/metal/) 以及[科纳斯组织的 Vulkan](https://www.vulkan.org/)——它们提供了大量新功能。并没有任何计划对 OpenGL（以及 WebGL）进行更多更新，因此它将不会获得任意这些新的功能。然而，WebGPU 将在未来添加这些新功能。
+- 自 WebGL 发布以来，出现了新一代的原生 GPU API——最受欢迎的是 [微软的 Direct3D 12](https://docs.microsoft.com/zh-cn/windows/win32/direct3d12/direct3d-12-graphics)、[苹果的 Metal](https://developer.apple.com/metal/) 以及[科纳斯组织的 Vulkan](https://www.vulkan.org/)——它们提供了大量新功能。并没有任何计划对 OpenGL（以及 WebGL）进行更多更新，因此它将不会获得任意这些新的功能。然而，WebGPU 将在未来添加这些新功能。
 - 无论是在同时渲染的对象方面，还是新渲染功能的使用方面，3D 图形应用程序的需求都在逐渐变高。
 
 WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的通用架构，它会让你感到更加丝滑。它支持图形渲染，同时对 GPGPU 计算也有一流的支持。在 CPU 端渲染单个对象的成本要低得多，并且它支持现代化的 GPU 渲染功能，例如，基于计算的粒子和用于后期处理的滤镜，如颜色效果、锐化和景深模拟。此外，它也可以直接在 GPU 上处理诸如剔除和骨骼动画模型等耗费大量计算资源的任务。
@@ -469,7 +469,7 @@ Each {{domxref("GPUDevice")}} instance maintains its own error scope stack. This
 
 Once you are done capturing errors, you can end capture by invoking {{domxref("GPUDevice.popErrorScope()")}}. This pops the scope from the stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUInternalError")}}, {{domxref("GPUOutOfMemoryError")}}, or {{domxref("GPUValidationError")}}) describing the first error captured in the scope, or `null` if no errors were captured.
 
-We have attempted to provide useful information to help you understand why errors are occurring in your WebGPU code in "Validation" sections where appropriate, which list criteria to meet to avoid errors. See for example the [`GPUDevice.createBindGroup()` Validation section](/en-US/docs/Web/API/GPUDevice/createBindGroup#validation). Some of this information is complex; rather than repeat the spec, we have decided to just list error criteria that are:
+We have attempted to provide useful information to help you understand why errors are occurring in your WebGPU code in "Validation" sections where appropriate, which list criteria to meet to avoid errors. See for example the [`GPUDevice.createBindGroup()` Validation section](/zh-CN/docs/Web/API/GPUDevice/createBindGroup#validation). Some of this information is complex; rather than repeat the spec, we have decided to just list error criteria that are:
 
 - Non-obvious, for example combinations of descriptor properties that produce validation errors. There is no point telling you to make sure you use the correct descriptor object structure. That is both obvious and vague.
 - Developer-controlled. Some of the error criteria are purely based on internals and not really relevant to web developers.
@@ -483,100 +483,100 @@ You can find more information about WebGPU error handling in the explainer — s
 ### API 的入口点
 
 - {{domxref("Navigator.gpu")}} / {{domxref("WorkerNavigator.gpu")}}
-  - : The entry point for the API — returns the {{domxref("GPU")}} object for the current context.
+  - : API 的入口点——返回当前上下文的 {{domxref("GPU")}} 对象。
 - {{domxref("GPU")}}
-  - : The starting point for using WebGPU. It can be used to return a {{domxref("GPUAdapter")}}.
+  - : 使用 WebGPU 的起点。它可用于返回 {{domxref("GPUAdapter")}}。
 - {{domxref("GPUAdapter")}}
-  - : Represents a GPU adapter. From this you can request a {{domxref("GPUDevice")}}, adapter info, features, and limits.
+  - : 表示 GPU 适配器。你可以从这里请求 {{domxref("GPUDevice")}}、适配器信息、功能和限制。
 - {{domxref("GPUAdapterInfo")}}
-  - : Contains identifying information about an adapter.
+  - : 包含有关适配器的标识信息。
 
 ### 配置 GPUDevice
 
 - {{domxref("GPUDevice")}}
-  - : Represents a logical GPU device. This is the main interface through which the majority of WebGPU functionality is accessed.
+  - : 表示逻辑 GPU 设备。这是访问大多数 WebGPU 功能的主要接口
 - {{domxref("GPUSupportedFeatures")}}
-  - : A [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object that describes additional functionality supported by a {{domxref("GPUAdapter")}} or {{domxref("GPUDevice")}}.
+  - : 一个[类 Set](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 对象，该对象通过 {{domxref("GPUAdapter")}} 或 {{domxref("GPUDevice")}} 描述了额外的功能。
 - {{domxref("GPUSupportedLimits")}}
-  - : Describes the limits supported by a {{domxref("GPUAdapter")}} or {{domxref("GPUDevice")}}.
+  - : 描述 {{domxref("GPUAdapter")}} 或 {{domxref("GPUDevice")}} 支持的限制。
 
-### 配置一个渲染 `<canvas>`
+### 配置渲染 `<canvas>`
 
-- {{domxref("HTMLCanvasElement.getContext()")}} — the `"webgpu"` `contextType`
-  - : Invoking `getContext()` with the `"webgpu"` `contextType` returns a {{domxref("GPUCanvasContext")}} object instance, which can then be configured with {{domxref("GPUCanvasContext.configure()")}}.
+- {{domxref("HTMLCanvasElement.getContext()")}}——`contextType` 为 `"webgpu"`
+  - : 使用 `contextType` 为 `"webgpu"` 调用 `getContext()` 方法，其会返回一个 {{domxref("GPUCanvasContext")}} 对象实例，然后可以使用 {{domxref("GPUCanvasContext.configure()")}} 对其进行配置
 - {{domxref("GPUCanvasContext")}}
-  - : Represents the WebGPU rendering context of an {{htmlelement("canvas")}} element.
+  - : 表示 `<canvas>` 元素的 WebGPU 渲染上下文。
 
 ### 表示管线资源
 
 - {{domxref("GPUBuffer")}}
-  - : Represents a block of memory that can be used to store raw data to use in GPU operations.
+  - : 表示内存块，其可以用于在 GPU 操作中存储原始数据。
 - {{domxref("GPUExternalTexture")}}
-  - : A wrapper object containing an {{domxref("HTMLVideoElement")}} snapshot that can be used as a texture in GPU rendering operations.
+  - : 包含 {{domxref("HTMLVideoElement")}} 快照的包装器对象，可用作 GPU 渲染操作中的纹理。
 - {{domxref("GPUSampler")}}
-  - : Controls how shaders transform and filter texture resource data.
+  - : 控制着色器如何转换和过滤纹理资源数据。
 - {{domxref("GPUShaderModule")}}
-  - : A reference to an internal shader module object, a container for WGSL shader code that can be submitted to the GPU to execution by a pipeline.
+  - : 对内部着色器模块对象的引用，它是 WGSL 着色器代码的容器，通过管线提交给 GPU 执行。
 - {{domxref("GPUTexture")}}
-  - : A container used to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
+  - : 用于存储 1D、2D 或 3D 数据数组（例如图像）以在 GPU 渲染操作中使用的容器。
 - {{domxref("GPUTextureView")}}
-  - : A view onto some subset of the texture subresources defined by a particular {{domxref("GPUTexture")}}.
+  - : 由特定 {{domxref("GPUTexture")}} 定义的纹理子资源的某个子集的视图。
 
 ### 表示管线
 
 - {{domxref("GPUBindGroup")}}
-  - : Based on a {{domxref("GPUBindGroupLayout")}}, a `GPUBindGroup` defines a set of resources to be bound together in a group and how those resources are used in shader stages.
+  - : 基于 {{domxref("GPUBindGroupLayout")}}，`GPUBindGroup` 定义了一组要绑定在一起的资源以及如何在着色阶段使用这些资源。
 - {{domxref("GPUBindGroupLayout")}}
-  - : Defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating {{domxref("GPUBindGroup")}}s.
+  - : 定义相关 GPU 资源的结构和用途，例如将在管线中使用的缓冲区，并在创建 {{domxref("GPUBindGroup")}} 时用作模板。
 - {{domxref("GPUComputePipeline")}}
-  - : Controls the compute shader stage and can be used in a {{domxref("GPUComputePassEncoder")}}.
+  - : 控制计算着色阶段，可以在 {{domxref("GPUComputePassEncoder")}} 中使用。
 - {{domxref("GPUPipelineLayout")}}
-  - : Defines the {{domxref("GPUBindGroupLayout")}}s used by a pipeline. {{domxref("GPUBindGroup")}}s used with the pipeline during command encoding must have compatible {{domxref("GPUBindGroupLayout")}}s.
+  - : 定义管线使用的 {{domxref("GPUBindGroupLayout")}}。在指令编码期间与管线一起使用的 {{domxref("GPUBindGroup")}} 必须具有兼容的 {{domxref("GPUBindGroupLayout")}}。
 - {{domxref("GPURenderPipeline")}}
-  - : Controls the vertex and fragment shader stages and can be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
+  - : 控制顶点和片元着色阶段，可以在 {{domxref("GPURenderPassEncoder")}} 或 {{domxref("GPURenderBundleEncoder")}} 使用。
 
 ### 编码并向 GPU 提交指令
 
 - {{domxref("GPUCommandBuffer")}}
-  - : Represents a recorded list of GPU commands that can be submitted to a {{domxref("GPUQueue")}} for execution.
+  - : 表示 GPU 指令的录制列表，其可以提交给 {{domxref("GPUQueue")}} 执行。
 - {{domxref("GPUCommandEncoder")}}
-  - : Represents a command encoder, used to encode commands to be issued to the GPU.
+  - : 表示指令编码器，用于编码指令发布给 GPU。
 - {{domxref("GPUComputePassEncoder")}}
-  - : Encodes commands related to controlling the compute shader stage, as issued by a {{domxref("GPUComputePipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
+  - : 编码与控制计算着色阶段相关的指令，由 {{domxref("GPUComputePipeline")}} 发出。是 {{domxref("GPUCommandEncoder")}} 整体编码激活过后的一部分。
 - {{domxref("GPUQueue")}}
-  - : controls execution of encoded commands on the GPU.
+  - : 控制 GPU 编码指令的执行。
 - {{domxref("GPURenderBundle")}}
-  - : A container for pre-recorded bundles of commands (see {{domxref("GPURenderBundleEncoder")}}).
+  - : 预先录制的指令 bundle 的容器（参见 {{domxref("GPURenderBundleEncoder")}}）。
 - {{domxref("GPURenderBundleEncoder")}}
-  - : Used to pre-record bundles of commands. These can be reused in {{domxref("GPURenderPassEncoder")}}s via the {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} method, as many times as required.
+  - : 用于预先记录指令的 bundle。这些可以通过 {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} 方法在 {{domxref("GPURenderPassEncoder")}} 中根据需要重复使用。
 - {{domxref("GPURenderPassEncoder")}}
-  - : Encodes commands related to controlling the vertex and fragment shader stages, as issued by a {{domxref("GPURenderPipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
+  - : 编码与控制顶点和片段着色阶段相关的指令，由 {{domxref("GPURenderPipeline")}} 发出。是 {{domxref("GPUCommandEncoder")}} 整体编码激活过后的一部分。
 
 ### 在渲染通道中执行查询
 
 - {{domxref("GPUQuerySet")}}
-  - : Used to record the results of queries on passes, such as occlusion or timestamp queries.
+  - : 用于记录通道中查询的结果，例如遮挡或时间戳查询。
 
 ### 调试错误
 
 - {{domxref("GPUCompilationInfo")}}
-  - : An array of {{domxref("GPUCompilationMessage")}} objects, generated by the GPU shader module compiler to help diagnose problems with shader code.
+  - : {{domxref("GPUCompilationMessage")}} 对象数组，由 GPU 着色器模块编译器生成，用于帮助诊断着色器代码问题。
 - {{domxref("GPUCompilationMessage")}}
-  - : Represents a single informational, warning, or error message generated by the GPU shader module compiler.
+  - : 表示由 GPU 着色器模块编译器生成的单个信息、警告或错误消息。
 - {{domxref("GPUDeviceLostInfo")}}
-  - : Returned when the {{domxref("GPUDevice.lost")}} {{jsxref("Promise")}} resolves, providing information as to why the device was lost.
+  - : 当 {{domxref("GPUDevice.lost")}} {{jsxref("Promise")}} 兑现时返回，提供有关设备丢失原因的信息。
 - {{domxref("GPUError")}}
-  - : The base interface for errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
+  - : {{domxref("GPUDevice.popErrorScope")}} 和 {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} 事件显示错误的基本接口。
 - {{domxref("GPUInternalError")}}
-  - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Indicates that an operation failed for a system or implementation-specific reason, even when all validation requirements were satisfied.
+  - : {{domxref("GPUDevice.popErrorScope")}} 和 {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} 事件显示的错误类型之一。表示操作因系统或特定于实现的原因而失败，即使满足所有验证要求也会失败。
 - {{domxref("GPUOutOfMemoryError")}}
-  - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Indicates that there was not enough free memory to complete the requested operation.
+  - : {{domxref("GPUDevice.popErrorScope")}} 和 {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} 事件显示的错误类型之一。表示没有足够的可用内存来完成请求的操作。
 - {{domxref("GPUPipelineError")}}
-  - : Describes a pipeline failure. The value received when a {{jsxref("Promise")}} returned by a {{domxref("GPUDevice.createComputePipelineAsync()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call rejects.
+  - : 描述管线的失败。当 {{domxref("GPUDevice.createComputePipelineAsync()")}} 或 {{domxref("GPUDevice.createRenderPipelineAsync()")}} 调用返回的 {{jsxref("Promise")}} 被拒绝时，接收到的值。
 - {{domxref("GPUUncapturedErrorEvent")}}
-  - : The event object type for the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
+  - : {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} 事件的事件对象类型。
 - {{domxref("GPUValidationError")}}
-  - : One of the types of errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event. Describes an application error indicating that an operation did not pass the WebGPU API's validation constraints.
+  - : {{domxref("GPUDevice.popErrorScope")}} 和 {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} 事件显示的错误类型之一。描述一个应用程序错误，指示操作未通过 WebGPU API 的验证约束。
 
 ## 示例
 
