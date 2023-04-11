@@ -29,25 +29,27 @@ document.body.appendChild(templateContent);
 
 虽然是个简单的例子，但您已经可以开始了解它是多么的有用了。
 
-## 在 Web Components 中使用模板
+## 在 Web Component 中使用模板
 
-模板 (Templates) 本身就是有用的，而与 web 组件 (web component) 一起使用效果更好。我们定义一个 web 组件使用模板作为阴影 (shadow) DOM 的内容，叫它 `<my-paragraph>`：
+模板（Template）本身就是有用的，而与 web 组件（web component）一起使用效果更好。我们定义一个 web 组件使用模板作为阴影（shadow）DOM 的内容，叫它 `<my-paragraph>`：
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('my-paragraph');
+      let template = document.getElementById("my-paragraph");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'})
+      const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(templateContent.cloneNode(true));
+    }
   }
-});
+);
 ```
 
-要注意的关键是我们使用{{domxref("Node.cloneNode()")}} 方法添加了模板的拷贝到阴影的根结点上。
+要注意的关键是我们使用 {{domxref("Node.cloneNode()")}} 方法添加了模板的拷贝到阴影的根结点上。
 
 因为我们添加了模板的内容到 shadow DOM，所以我们可以加入一些样式信息到模板的 {{htmlelement("style")}} 标签里，这些样式信息稍后会封装到自定义的元素中。如果只给它添加到一个标准的 DOM 中是不起作用的。
 
