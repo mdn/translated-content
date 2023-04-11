@@ -38,7 +38,7 @@ delete object[property]
 
 ## 描述
 
-`delete` 运算符与其他像[`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operator/typeof)这样的一元运算符具有相同的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)。因此，它接受任何由更高优先级的运算符形成的表达式。然而，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，以下形式会导致早期语法错误：
+`delete` 运算符与其他像 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operator/typeof) 这样的一元运算符具有相同的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)。因此，它接受任何由更高优先级的运算符形成的表达式。然而，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，以下形式会导致早期语法错误：
 
 ```js example-bad
 delete identifier;
