@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioNode") }} インターフェイス の **`channelCount`** プロパティは、このノードへの入力について[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)を行う際、何個のチャンネルを用いるかを決定するとき用いる整数です。
+{{ domxref("AudioNode") }} インターフェイスの **`channelCount`** プロパティは、このノードへの入力について[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)を行う際、何個のチャンネルを用いるかを決定するとき用いる整数です。
 
 `channelCount` の使用法と正確な定義は、{{domxref("AudioNode.channelCountMode")}} の値によって以下のようになります。
 
