@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 ## 语法
 
-```js
+```js-nolint
 lastIndexOf(searchElement)
 lastIndexOf(searchElement, fromIndex)
 ```

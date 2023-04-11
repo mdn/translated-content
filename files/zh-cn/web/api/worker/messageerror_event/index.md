@@ -76,7 +76,7 @@ worker.onmessageerror = (event) => {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [`Worker.postMessage()`](/zh-CN/docs/Web/API/Worker/postMessage)
 - 相关事件：[`message`](/zh-CN/docs/Web/API/Worker/message_event).

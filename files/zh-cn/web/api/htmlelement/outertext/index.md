@@ -21,7 +21,7 @@ slug: Web/API/HTMLElement/outerText
 
 微软 **[在 MSDN 有一篇描述。](<https://msdn.microsoft.com/en-us/library/ms534311(v=vs.85).aspx>)**
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

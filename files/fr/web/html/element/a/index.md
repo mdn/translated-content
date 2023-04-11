@@ -244,7 +244,7 @@ a { display: block; margin-bottom: 0.5em }
 
 #### Résultat
 
-{{EmbedLiveSample("Créer_des_liens_vers_des_URL_relatives", "100%", 120)}}
+{{EmbedLiveSample("")}}
 
 ### Créer un lien vers un élément de la même page
 
@@ -258,6 +258,10 @@ a { display: block; margin-bottom: 0.5em }
 <h2 id="section_further_down">Section plus bas</h2>
 ```
 
+#### Résultat
+
+{{EmbedLiveSample('')}}
+
 > **Note :** Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Créer un lien avec une adresse électronique
@@ -268,6 +272,10 @@ Pour créer des liens qui s'ouvrent dans le programme de messagerie de l'utilisa
 <a href="mailto:nowhere@mozilla.org">Envoyer un courriel nulle part</a>
 ```
 
+#### Résultat
+
+{{EmbedLiveSample('')}}
+
 Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'un corps de message, voir [Liens de courrier électronique](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links) ou [RFC 6068](https://tools.ietf.org/html/rfc6068).
 
 ### Créer un lien avec les numéros de téléphone
@@ -276,6 +284,10 @@ Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'u
 <a href="tel:+49.157.0156">+49 157 0156</a>
 <a href="tel:+1(555)5309">(555) 5309</a>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
 
 `tel:` le comportement du lien varie en fonction des capacités du périphérique :
 
@@ -374,6 +386,10 @@ Une erreur tristement courante consiste à ne relier que les mots « cliquez ici
 </p>
 ```
 
+##### Résultat
+
+{{EmbedLiveSample('')}}
+
 #### Texte de lien fort
 
 Heureusement, il s'agit d'une solution facile, et elle est en fait plus courte que la version inaccessible !
@@ -383,6 +399,10 @@ Heureusement, il s'agit d'une solution facile, et elle est en fait plus courte q
   En savoir plus <a href="/products">à propos de nos produits</a>.
 </p>
 ```
+
+##### Résultat
+
+{{EmbedLiveSample('')}}
 
 Les logiciels d'assistance disposent de raccourcis permettant de lister tous les liens d'une page. Cependant, un texte de lien fort profite à tous les utilisateurs − le raccourci « liste de tous les liens » imite la façon dont les utilisateurs voyants parcourent rapidement les pages.
 
@@ -449,6 +469,10 @@ Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est
 
   <main id="content"> <!-- Le lien "skip" renvoie vers ici -->
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
 
 Ce lien permet alors de passer plus facilement le contenu qui se répète sur l'ensemble des pages (l'en-tête et la barre de navigation par exemple).
 

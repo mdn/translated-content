@@ -1,6 +1,6 @@
 ---
 title: 正規表現
-slug: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 l10n:
   sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---

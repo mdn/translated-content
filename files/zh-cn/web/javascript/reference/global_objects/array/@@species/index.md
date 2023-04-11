@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 
 ## 语法
 
-```js
+```js-nolint
 Array[Symbol.species]
 ```
 

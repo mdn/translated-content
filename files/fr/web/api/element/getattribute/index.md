@@ -30,8 +30,9 @@ où
 
 Soit l'HTML :
 
-```js
-const div1 = document.getElementById("div1");
+```html
+<!-- exemple de div en HTML -->
+<div id="div1">Hi Champ!</div>
 ```
 
 Exemple de JavaScript :

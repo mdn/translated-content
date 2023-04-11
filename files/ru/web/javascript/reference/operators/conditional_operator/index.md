@@ -1,6 +1,6 @@
 ---
 title: Условный (тернарный) оператор
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 tags:
   - JavaScript
   - Оператор

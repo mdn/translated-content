@@ -280,7 +280,7 @@ Then this specific 'voice' will be stylable like so:
 
 > **备注：** Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
 
-## 浏览器兼容
+## 浏览器兼容性
 
 [Browser support for WebVTT and the `<track>` element](http://caniuse.com/webvtt) is fairly good, although some browsers differ slightly in their implementation.
 

@@ -43,7 +43,7 @@ original_slug: Web/媒体
 - [在 HTML 中使用音频和视频资源](/zh-CN/docs/Web/Media/HTML_media)
   - : 这里是一篇使用 HTML `<audio>` 和 `<video>` 元素的指南。
 - [Web 设计中的媒体无障碍指南](/zh-CN/docs/Learn/Accessibility/Multimedia)
-  - : 在本指南中，我们将介绍 web 设计人员和开发人员创建的内容能让具有不同能力的人可以访问的方法。这个范围包括从 {{HTMLElement("img")}} 元素上简单地使用 {{htmlattrxref("alt", "img")}} 属性到为屏幕阅读者提供字幕标记的媒体。
+  - : 在本指南中，我们将介绍 web 设计人员和开发人员创建的内容能让具有不同能力的人可以访问的方法。这个范围包括从 {{HTMLElement("img")}} 元素上简单地使用 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 属性到为屏幕阅读者提供字幕标记的媒体。
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
   - : 关于文件类型和编解码器对于 web 上的图像、音频和视频媒体有效的指南。这包括使用何种格式处理什么内容的建议、最佳实践，以及如何提供后备方案和如何对媒体类型进行优先排序，还包括针对每个媒体容器和编解码器的一般浏览器支持信息。
 - [音频和视频推流](/zh-CN/docs/Web/Media/Streaming)

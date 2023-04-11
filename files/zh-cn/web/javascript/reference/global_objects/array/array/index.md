@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 
 ## 语法
 
-```js
+```js-nolint
 new Array(element0, element1, /* … ,*/ elementN)
 new Array(arrayLength)
 

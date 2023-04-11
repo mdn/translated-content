@@ -46,7 +46,7 @@ slug: Web/HTML/Element/slot
 
 此元素有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("name")}}
+- `name`
   - : 插槽的名字。拥有 name 属性的插槽叫**具名插槽**。
 
 ## 示例

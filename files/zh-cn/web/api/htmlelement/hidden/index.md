@@ -119,5 +119,5 @@ h1 {
 
 ## 参见
 
-- {{htmlattrxref("hidden")}} 属性
+- [`hidden`](/zh-CN/docs/Web/HTML/Global_attributes#hidden) 属性
 - {{cssxref("display")}}

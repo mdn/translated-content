@@ -223,7 +223,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 ### 块引用
 
-如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 {{htmlelement("blockquote")}} 元素包裹起来表示，并且在 {{htmlattrxref("cite","blockquote")}} 属性里用 URL 来指向引用的资源。例如，下面的示例代码就是引用的 MDN 的 `<blockquote>` 元素页面：
+如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 {{htmlelement("blockquote")}} 元素包裹起来表示，并且在 [`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性里用 URL 来指向引用的资源。例如，下面的示例代码就是引用的 MDN 的 `<blockquote>` 元素页面：
 
 ```html
 <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
@@ -263,7 +263,7 @@ for short quotations that don't require paragraph breaks.</q></p>
 
 ### 引文
 
-{{htmlattrxref("cite","blockquote")}} 属性的内容看起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
+[`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性的内容看起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
 
 这里有 {{htmlelement("cite")}} 元素，但它是为了包含所引用资源的标题（如书名）。然而，你没有理由不把 `<cite>` 内的文字以某种方式链接到引用源。
 
@@ -435,7 +435,7 @@ textarea.onkeyup = () => {
 
 另一个你在 Web 上看到的相当常见的元素是 {{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释。当包括这两种情况时，在第一次使用时提供纯文本的完整扩展，同时用 `<abbr>` 来标记缩写。这为用户代理提供了如何公布/显示内容的提示，同时告知所有用户该缩写的含义。
 
-如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 {{htmlattrxref("title")}} 属性的值：
+如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性的值：
 
 ### 缩略语示例
 

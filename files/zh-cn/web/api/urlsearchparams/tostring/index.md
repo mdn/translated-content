@@ -33,7 +33,7 @@ console.log(params.toString());
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

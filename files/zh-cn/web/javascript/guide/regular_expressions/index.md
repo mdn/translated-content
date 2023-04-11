@@ -1,6 +1,6 @@
 ---
 title: 正则表达式
-slug: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
@@ -41,15 +41,15 @@ var re = new RegExp("ab+c");
 
 下面的页面与表格列出了一个正则表达式中可以利用的特殊字符的完整列表和描述。
 
-- [断言（Assertions）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [断言（Assertions）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - : 表示一个匹配在某些条件下发生。断言包含先行断言、后行断言和条件表达式。
-- [字符类（Character Classes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+- [字符类（Character Classes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - : 区分不同类型的字符，例如区分字母和数字。
-- [组和范围（Groups and Ranges）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- [组和范围（Groups and Ranges）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
   - : 表示表达式字符的分组和范围。
-- [量词（Quantifiers）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+- [量词（Quantifiers）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - : 表示匹配的字符或表达式的数量。
-- [Unicode 属性转义（Unicode Property Escapes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+- [Unicode 属性转义（Unicode Property Escapes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
   - : 基于 unicode 字符属性区分字符。例如大写和小写字母、数学符号和标点。
 
 <table class="standard-table">
@@ -215,7 +215,7 @@ var re = new RegExp("ab+c");
           <code>\1</code>、<code>\2</code>、...、<code>\n</code>
           是用在正则表达式的匹配环节，详情可以参阅后文的
           <a
-            href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference"
+            href="#special-backreference"
             >\n</a
           >
           条目。而在正则表达式的替换环节，则要使用像
@@ -239,8 +239,8 @@ var re = new RegExp("ab+c");
           的最后一个字符 'o'。如果使用非捕获括号，则
           <code>{1,2}</code> 会应用于整个 'foo' 单词。更多信息，可以参阅下文的
           <a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses"
-            >Using parentheses</a
+            href="#使用括号的子字符串匹配"
+            >使用括号的子字符串匹配</a
           >
           条目。
         </p>
@@ -613,7 +613,7 @@ function escapeRegExp(string) {
 }
 ```
 
-正则表达式后的"g"是一个表示全局搜索选项或标记，将在整个字符串查找并返回所有匹配结果。这将在下面的[通过标志进行高级搜索](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#%E9%80%9A%E8%BF%87%E6%A0%87%E5%BF%97%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2)详述。
+正则表达式后的"g"是一个表示全局搜索选项或标记，将在整个字符串查找并返回所有匹配结果。这将在下面的[通过标志进行高级搜索](#通过标志进行高级搜索)详述。
 
 为什么这个没有内建在 JavaScript 中？之前有计划在 RegExp 对象中添加一个 Function，但在[TC39](https://github.com/benjamingr/RegExp.escape/issues/37)中被否决了。
 
@@ -708,7 +708,7 @@ var myArray = myRe.exec("cdbbdbsbz");
       <td>
         开始下一个匹配的起始索引值。（这个属性只有在使用 g 参数时可用在
         <a
-          href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#.E9.80.9A.E8.BF.87.E5.8F.82.E6.95.B0.E8.BF.9B.E8.A1.8C.E9.AB.98.E7.BA.A7.E6.90.9C.E7.B4.A2"
+          href="#通过标志进行高级搜索"
           >通过参数进行高级搜索</a
         >
         一节有详细的描述.)

@@ -200,7 +200,7 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 ### 内联样式
 
-内联样式，即 {{htmlattrxref("style")}} 属性内的样式声明，优先于所有普通的样式，无论其优先级如何。这样的声明没有选择器，但它们的优先级可以理解为 1-0-0-0；即无论选择器中有多少个 ID，它总是比其他任何优先级的权重都要高。
+内联样式，即 [`style`](/zh-CN/docs/Web/HTML/Global_attributes#style) 属性内的样式声明，优先于所有普通的样式，无论其优先级如何。这样的声明没有选择器，但它们的优先级可以理解为 1-0-0-0；即无论选择器中有多少个 ID，它总是比其他任何优先级的权重都要高。
 
 ### !important
 
@@ -216,7 +216,7 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 1. 你会发现第三个规则 {{cssxref("color")}} 和 {{cssxref("padding")}} 的值被应用了，但是 {{cssxref("background-color")}} 没有。为什么？应该三个都应用，因为顺序规则是后面覆盖前面。
 2. 无论如何，上面的规则赢了，因为类选择器比元素选择器有更高的优先级。
-3. 两个元素都有 `better` {{htmlattrxref("class")}}，但是第二个有 {{htmlattrxref("id")}} 。因为 ID 选择器比类选择器优先级更高（一个页面只能有一个独特的 ID，但是很多元素都有相同的类——ID 对于目标非常独特），红色背景和 1px 黑色边框应该都被应用到第二个元素，第一个元素应该是灰色背景和 no border，根据类选择器。
+3. 两个元素都有 `better` [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class)，但是第二个有 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 。因为 ID 选择器比类选择器优先级更高（一个页面只能有一个独特的 ID，但是很多元素都有相同的类——ID 对于目标非常独特），红色背景和 1px 黑色边框应该都被应用到第二个元素，第一个元素应该是灰色背景和 no border，根据类选择器。
 4. 第二个元素有红色背景但是没有边框。为什么？因为 `!important` 声明在第二条规则里——在 `border: none` 后面，说明即使计算优先级低，这个属性也使用这个值。
 
 > **备注：** 覆盖 `!important` 唯一的办法就是另一个 `!important` 具有相同*优先级*而且顺序靠后，或者更高优先级。
