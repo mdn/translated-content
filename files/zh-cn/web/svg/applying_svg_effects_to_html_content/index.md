@@ -19,7 +19,7 @@ slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 <style>p { mask: url(#my-mask); }</style>
 ```
 
-在上面的例子中，所有段落会被[ID](/zh-CN/docs/Web/HTML/Global_attributes/id) 为`my-mask 的 [SVG `<mask>`](/zh-CN/docs/Web/SVG/Element/mask)遮罩。
+在上面的例子中，所有段落会被 [ID](/zh-CN/docs/Web/HTML/Global_attributes/id) 为 `my-mask` 的 [SVG `<mask>`](/zh-CN/docs/Web/SVG/Element/mask) 遮罩。
 
 ### 示例：Masking
 
