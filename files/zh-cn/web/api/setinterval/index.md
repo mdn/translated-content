@@ -152,7 +152,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 如果你需要支持 IE 浏览器，请使用 [`Function.prototype.bind()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法，它允许你指定调用给定函数时 `this` 的值。这可以让你避免因为上下文的不同而导致调用的函数的 `this` 不明确而出现的问题。
 
-## 使用备注
+## 使用说明
 
 `setInterval()` 函数通常用于为重复执行的函数设置一个时间间隔（例如：动画）。你可以使用 {{domxref("clearInterval()")}} 取消定时器。
 
