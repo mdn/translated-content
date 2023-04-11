@@ -505,7 +505,7 @@ app.get("/", function (req, res) {
 
 ### ファイル構造
 
-Express は、構造や使用するコンポーネントに関しては何も想定していません。ルート、ビュー、静的ファイル、およびその他のアプリケーション固有のロジックは、任意のディレクトリー構造を持つ任意の数のファイルに存在できます。 Express アプリケーション全体を 1 つのファイルにまとめることは完全に可能ですが、通常は機能 (アカウント管理、ブログ、ディスカッション掲示板など) およびアーキテクチャ上の問題のドメイン ([MVC アーキテクチャ](/ja/docs/Web/Apps/Build/Modern_web_app_architecture/MVC_architecture)を使用している場合は、モデル、ビュー、コントローラーなど) に基づいてアプリケーションをファイルに分割します。
+Express は、構造や使用するコンポーネントに関しては何も想定していません。ルート、ビュー、静的ファイル、およびその他のアプリケーション固有のロジックは、任意のディレクトリー構造を持つ任意の数のファイルに存在できます。 Express アプリケーション全体を 1 つのファイルにまとめることは完全に可能ですが、通常は機能 (アカウント管理、ブログ、ディスカッション掲示板など) およびアーキテクチャ上の問題のドメイン ([MVC アーキテクチャ](/ja/docs/Glossary/MVC)を使用している場合は、モデル、ビュー、コントローラーなど) に基づいてアプリケーションをファイルに分割します。
 
 後のトピックでは、ウェブアプリケーションを作成するために簡単に拡張できるモジュール式のアプリケーションスケルトンを作成する Express Application Generator を使用します。
 
@@ -526,7 +526,7 @@ Express は、構造や使用するコンポーネントに関しては何も想
 - [ミドルウェアの使用](https://expressjs.com/ja/guide/using-middleware.html)（Express ドキュメント）
 - [Express アプリケーションで使用するミドルウェアの作成](https://expressjs.com/ja/guide/writing-middleware.html)（Express ドキュメント）
 - [データベースの統合](https://expressjs.com/ja/guide/database-integration.html)（Express ドキュメント）
-- [Serving static files in Express](https://expressjs.com/ja/starter/static-files.html)（Express ドキュメント）
-- [Error handling](https://expressjs.com/ja/guide/error-handling.html)（Express ドキュメント）
+- [Express での静的ファイルの提供](https://expressjs.com/ja/starter/static-files.html)（Express ドキュメント）
+- [エラー処理](https://expressjs.com/ja/guide/error-handling.html)（Express ドキュメント）
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
