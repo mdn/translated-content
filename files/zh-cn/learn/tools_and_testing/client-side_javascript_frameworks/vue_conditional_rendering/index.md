@@ -374,7 +374,7 @@ So, let's implement the fix in `ToDoItem.vue`:
 所以，让我们来修复一下 `ToDoItem.vue`：
 
 1. Remove the following line from inside our `data()` property:
-1. 从 `data()` 的属性中删除这一行:
+1. 从 `data()` 的属性中删除这一行：
 
    ```js
    isDone: this.done,
