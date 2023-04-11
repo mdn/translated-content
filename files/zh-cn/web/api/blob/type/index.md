@@ -5,7 +5,7 @@ slug: Web/API/Blob/type
 
 {{APIRef("File API")}}
 
-[`Blob`](/zh-CN/docs/Web/API/Blob) 对象的 **`type`** 属性给出文件的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)。
+[`Blob`](/zh-CN/docs/Web/API/Blob) 对象的 **`type`** 属性给出文件的 {{Glossary("MIME type", "MIME 类型")}}。
 
 ## 值
 
