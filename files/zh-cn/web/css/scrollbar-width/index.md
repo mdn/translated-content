@@ -29,12 +29,22 @@ scrollbar-width: unset;
 
   - : 将滚动条的宽度定义为数值宽度或者预定义宽度，当被定义为预定义宽度时，则必须为下列值之一：
 
-    | `auto` | 系统默认的滚动条宽度                                   |
-    | ------ | ------------------------------------------------------ |
-    | `thin` | 系统提供的瘦滚动条宽度，或者比默认滚动条宽度更窄的宽度 |
-    | `none` | 不显示滚动条，但是该元素依然可以滚动                   |
-
-    注意：scrollbar-width 的长度值有可能从规范中删除，scrollbar-width 属性本身也是如此。 ([Issue 1958](https://github.com/w3c/csswg-drafts/issues/1958))
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><code>auto</code></td>
+          <td>系统默认的滚动条宽度。</td>
+        </tr>
+        <tr>
+          <td><code>thin</code></td>
+          <td>系统提供的瘦滚动条宽度，或者比默认滚动条宽度更窄的宽度。</td>
+        </tr>
+        <tr>
+          <td><code>none</code></td>
+          <td>不显示滚动条，但是该元素依然可以滚动。</td>
+        </tr>
+      </tbody>
+    </table>
 
     > **备注：** 用户代理必须将应用于根元素的任何 `scrollbar-width` 值应用于视口。
 
@@ -44,8 +54,8 @@ scrollbar-width: unset;
 
 WCAG 准则 2.1.1（键盘）已经存在很长时间，以便为基本键盘可访问性提供建议，并且这应该包括内容区域的滚动。在 WCAG 2.1 中引入的准则 2.5.5（目标大小）建议触摸目标的宽度和高度至少为44像素（尽管在高分辨率屏幕上这个问题会更严重，建议进行全面测试）。
 
-- [MDN 理解 WCAG，指南 2.1 解释](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.1_—_keyboard_accessible_make_all_functionality_available_from_a_keyboard)
-- [MDN 理解 WCAG，指南 2.5 解释](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.5_input_modalities_make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard.s/)
+- [MDN 理解 WCAG，指南 2.1 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.1_—_keyboard_accessible_make_all_functionality_available_from_a_keyboard)
+- [MDN 理解 WCAG，指南 2.5 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.5_input_modalities_make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard.s/)
 - [理解成功标准 2.1.1 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [理解成功标准 2.5.5 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 
