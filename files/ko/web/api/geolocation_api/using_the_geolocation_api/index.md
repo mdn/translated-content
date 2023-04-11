@@ -1,6 +1,8 @@
 ---
 title: Geolocation API 사용하기
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
+l10n:
+  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}

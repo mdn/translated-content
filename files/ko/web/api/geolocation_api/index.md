@@ -1,6 +1,8 @@
 ---
 title: Geolocation API
 slug: Web/API/Geolocation_API
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
