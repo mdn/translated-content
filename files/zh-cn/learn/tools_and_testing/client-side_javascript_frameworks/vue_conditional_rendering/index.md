@@ -123,27 +123,26 @@ We can start by creating a separate component to handle the editing functionalit
 ```
 
 > **Note:** Walk through the above code then read the below description to make sure you understand everything the component is doing before moving on. This is a useful way to help reinforce everything you've learned so far.
-**注意:**浏览以上代码，然后阅读下面的描述，以确保在继续之前理解组件正在做的所有事情。这是一种有用的方法，可以帮助你巩固到目前为止所学的知识。
+> **注意：** 理解上面的代码，然后阅读下面的说明，以确保你在继续学习之前弄清楚该组件的所有功能。这是一个有用的方法，它可以帮助你巩固到目前为止所学到的一切。
 
 This code sets up the core of the edit functionality. We create a form with an `<input>` field for editing the name of our to-do.
-这段代码设置了编辑功能的核心。我们创建了一个带有“<input>”字段的表单，用于编辑待办事项的名称。
+这段代码完成了编辑功能的核心部分。我们创建了一个表单，其中包含一个 `<input>` 标签，用于编辑我们的待办事项的名称。
 
 There is a "Save" button and a "Cancel" button:
-有“保存”按钮和“取消”按钮:
+有一个“保存”按钮和“取消”按钮：
 
 - When the "Save" button is clicked, the component emits the new label via an `item-edited` event.
 - When the "Cancel" button is clicked, the component signals this by emitting an `edit-cancelled` event.
-- 当单击“Save”按钮时，组件通过“item-edited”事件发出新标签。
-- 当单击“Cancel”按钮时，组件通过发出“edit-cancelled”事件来发出信号。
+- 当“保存”按钮被点击，组件通过一个 `item-edited` 事件发出一个标签。
+- 当“取消”按钮被点击，组件通过 `edit-cancelled` 事件发出信号
 
 ## Modifying our ToDoItem component
-修改ToDoItem组件
+修改我们的 ToDoTtem 组件
 
-Before we can add `ToDoItemEditForm` to our app, we need to make a few modifications to our `ToDoItem` component. Specifically, we need to add a variable to track if the item is being edited, and a button to toggle that variable. We'll also add a `Delete` button since deletion is closely related.
-在我们可以添加' ToDoItemEditForm '到我们的应用程序之前，我们需要对' ToDoItem '组件做一些修改。具体来说，我们需要添加一个变量来跟踪条目是否正在被编辑，以及一个按钮来切换该变量。我们还将添加一个“删除”按钮，因为删除与此密切相关。
+
 
 Update your `ToDoItem`'s template as shown below.
-如下所示更新您的ToDoItem模板。
+像下面展示的这样更新你的 `ToDoItem` 的模板。
 
 ```html
 <template>
@@ -170,21 +169,21 @@ Update your `ToDoItem`'s template as shown below.
 ```
 
 We've added a wrapper `<div>` around the whole template for layout purposes.
-为了布局，我们在整个模板周围添加了一个包装器' <div> '。
+我们在整个模板外面添加了一个包装器 `<div>` 用于布局。
 
 We've also added "Edit" and "Delete" buttons:
-我们还增加了“编辑”和“删除”按钮:
+我们还添加了“编辑”和“删除”按钮：
 
 - The "Edit" button, when clicked, will toggle displaying the `ToDoItemEditForm` component so we can use it to edit our todo item, via an event handler function called `toggleToItemEditForm()`. This handler will set an `isEditing` flag to true. To do that, we'll need to first define it inside our `data()` property.
 - The "Delete" button, when clicked, will delete the todo item via an event handler function called `deleteToDo()`. In this handler we'll emit an `item-deleted` event to our parent component so the list can be updated.
-- “编辑”按钮，点击时，将切换显示' ToDoItemEditForm '组件，以便我们可以使用它来编辑我们的todo项目，通过一个事件处理函数称为' toggleToItemEditForm() '。这个处理程序将把“isEditing”标记设置为true。要做到这一点，我们首先需要在' data() '属性中定义它。
-- 点击“删除”按钮时，将通过名为“deleteToDo()”的事件处理函数删除待办事项项。在这个处理程序中，我们将向父组件发出一个' item-deleted '事件，以便更新列表。
+- 当点击“编辑”按钮时，将切换显示 “ToDoItemEditForm”组件，这样我们就可以通过一个名为 “toggleToItemEditForm()”的事件处理函数来编辑我们的待办事项。这个处理函数将设置 `isEditing` 标志为真。要做到这一点，我们需要首先在我们的 `data()` 属性中定义它。
+- 当点击“删除”按钮时，将通过名为 `deleteToDo()` 的事件处理函数删除待办事项。在这个处理器中我们将向我们的父组件发送 `item-deleted` 事件一更新列表。
 
 Let's define our click handlers, and the necessary `isEditing` flag.
-让我们定义我们的点击处理程序，以及必要的' isEditing '标志。
+接下来我们定义我们的点击事件处理器和必要的 `isEditing` 标志。
 
 Add `isEditing` below your existing `isDone` data point:
-在现有的“isDone”数据点下面添加“isEditing”
+在现有的 `isDone` 数据点下面添加 `isEditing`：
 
 ```js
 data() {
@@ -196,7 +195,7 @@ data() {
 ```
 
 Now add your methods inside a methods property, right below your `data()` property:
-现在将你的方法添加到一个methods属性中，就在你的' data() '属性的正下方:
+现在将你的方法添加到 methods 属性中，就在你的 `data()` 属性下面
 
 ```js
 methods: {
