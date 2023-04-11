@@ -1,5 +1,5 @@
 ---
-title: Creating 3D objects using WebGL
+title: 使用 WebGL 创建 3D 对象
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 ---
 
