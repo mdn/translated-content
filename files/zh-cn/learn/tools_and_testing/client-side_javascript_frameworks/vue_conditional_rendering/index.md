@@ -40,7 +40,7 @@ Now it is time to add one of the major parts of functionality that we're still m
 创建编辑组件
 
 We can start by creating a separate component to handle the editing functionality. In your `components` directory, create a new file called `ToDoItemEditForm.vue`. Copy the following code into that file:
-我们可以先创建一个单独的组件来处理编辑功能。在你的 `components` 文件夹下，创建一个名叫`ToDoItemEditForm.vue` 的新文件。复制下面的代码到那个文件：
+我们可以先创建一个单独的组件来处理编辑功能。在你的 `components` 文件夹下，创建一个名叫 `ToDoItemEditForm.vue` 的新文件。复制下面的代码到那个文件：
 
 ```html
 <template>
@@ -395,11 +395,11 @@ Now when you save and reload, you'll find that the problem is solved — the che
 现在，当你保存并重新加载时，你将发现问题已经解决：当你在 todo 项的模板之间切换时，复选框的状态被保留了。
 
 ## Understanding the tangle of events
-认识到事件的混乱
+理解事件的混乱
 
 One of the most potentially confusing parts is the tangle of standard and custom events we've used to trigger all the interactivity in our app. 
 To understand this better, it is a good idea to write out a flow chart, description, or diagram of what events are emitted where, where they are being listened for, and what happens as a result of them firing.
-最可能令人困惑的部分之一是，我们用来触发应用程序中所有交互的事件的混乱。为了更好地理解这一点，最好编写一个流程图、描述或图表，说明是什么事件，在哪里触发和监听，以及触发后会发生什么。
+最可能令人困惑的部分之一是：我们用来触发应用程序中所有交互的事件的混乱。为了更好地理解这一点，最好编写一个流程图、描述或图表，说明是什么事件，在哪里触发和监听，以及触发后会发生什么。
 
 ### App.vue
 
@@ -409,7 +409,7 @@ To understand this better, it is a good idea to write out a flow chart, descript
 - `todo-added` event emitted by the `onSubmit()` method inside the `ToDoForm` component when the form is submitted.
   **Result**: `addToDo()` method invoked to add new todo item to the `ToDoItems` array.
 - `todo-added` 事件，由 `ToDoForm` 组件内的 `onSubmit()` 方法在提交表单时触发。
-  **Result**：`addToDo()` 方法被调用，用于向 `ToDoItems` 数组添加新的 todo 项。
+  **结果：**`addToDo()` 方法被调用，用于向 `ToDoItems` 数组添加新的 todo 项。
 
 `<to-do-item>` listens for:
 `<to-do-item>` 监听：
@@ -421,35 +421,35 @@ To understand this better, it is a good idea to write out a flow chart, descript
 - `item-edited` event emitted by the `itemEdited()` method inside the `ToDoItem` component when the `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` has been successfully listened for. Yes, this is a chain of two different `item-edited` events!
   **Result**: `editToDo()` method invoked to update label of associated todo item.
 - `checkbox-changed` 事件由 `ToDoItem` 组件中的复选框 `<input>` 选中状态变化时触发。
-  **结果**：`updateDoneStatus()` 方法被调用来更新相关 todo 项的完成状态。
+  **结果：**`updateDoneStatus()` 方法被调用来更新相关 todo 项的完成状态。
 - 当按下“Delete”按钮时，`ToDoItem` 组件内的 `deleteToDo()` 方法触发 `item-deleted` 事件。
-  **结果**：`deleteToDo()` 方法被调用，来删除相关的 todo 项。
+  **结果：**`deleteToDo()` 方法被调用，来删除相关的 todo 项。
 - 当监听到 `ToDoItemEditForm` 内部的 `onSubmit()` 方法触发的 `item-edited` 事件时，`ToDoItem` 组件中的 `itemEdited()` 方法触发 `item-edited` 事件。是的，两个不同的 `item-edited` 事件连锁发生了!
-  **结果**：`editToDo()` 方法被调用，来更新相关 todo 项的标签。
+  **结果：**`editToDo()` 方法被调用，来更新相关 todo 项的标签。
 
 ### ToDoForm.vue
 
 `<form>` listens for `submit` event.
 **Result**: `onSubmit()` method is invoked, which checks that the new label is not empty, then emits the `todo-added` event (which is then listened for inside `App.vue`, see above), and finally clears the new label `<input>`.
 `<form>` 监听 `submit` 事件。
-**结果**：`onSubmit()` 方法被调用。该方法检查新标签是否为空，然后触发 `todo-added` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文），最后清除新标签 `<input>`。
+**结果：**`onSubmit()` 方法被调用。该方法检查新标签是否为空，然后触发 `todo-added` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文），最后清除新标签 `<input>`。
 
 ### ToDoItem.vue
 
 The `<input>` of `type="checkbox"` listens for `change` events.
 **Result**: `checkbox-changed` event emitted when the checkbox is checked/unchecked (which is then listened for inside `App.vue`; see above).
 满足`type="checkbox"` 的 `<input>` 元素监听 `change` 事件。
-**结果**：当勾选/取消勾选复选框时触发 `checkbox-changed` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
+**结果：**当勾选/取消勾选复选框时触发 `checkbox-changed` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
 
 "Edit" `<button>` listens for `click` event.
 **Result**: `toggleToItemEditForm()` method is invoked, which toggles `this.isEditing` to `true`, which in turn displays the todo item's edit form on re-render.
 “Edit” `<button>` 监听 `click` 事件。
-**结果**：`toggleToItemEditForm()` 方法被调用。`this.isEditing` 变成 `true`，在重新渲染时，依次显示 todo 项的编辑表单。
+**结果：**`toggleToItemEditForm()` 方法被调用。`this.isEditing` 变成 `true`，在重新渲染时，依次显示 todo 项的编辑表单。
 
 "Delete" `<button>` listens for `click` event.
 **Result**: `deleteToDo()` method is invoked, which emits the `item-deleted` event (which is then listened for inside `App.vue`; see above).
 “Delete” `<button>` 监听 `click` 事件。
-**结果**：`deleteToDo()` 方法被调用，它会触发 `item-deleted` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
+**结果：**`deleteToDo()` 方法被调用，它会触发 `item-deleted` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
 
 `<to-do-item-edit-form>` listens for:
 `<to-do-item-edit-form>` 监听:
@@ -459,21 +459,21 @@ The `<input>` of `type="checkbox"` listens for `change` events.
 - `edit-cancelled` event emitted by the `onCancel()` method inside the `ToDoItemEditForm` component when the "Cancel" button is clicked.
   **Result**: `editCancelled()` method is invoked, which sets `this.isEditing` back to `false`, so that the edit form is no longer shown on re-render.
 - `item-edited` 事件：当成功提交表单时，`ToDoItemEditForm` 组件中的 `onSubmit()` 方法会触发 `item-edited` 事件。
-**结果**：`itemEdited()` 方法被调用，它会触发 `item-edited` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文），并设置 `this.isEditing` 为 `false`，这样在重新渲染时，编辑的表单将不再显示。
+  **结果：**`itemEdited()` 方法被调用，它会触发 `item-edited` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文），并设置 `this.isEditing` 为 `false`，这样在重新渲染时，编辑的表单将不再显示。
 - `edit-cancelled` 事件：点击“Cancel”按钮时，`ToDoItemEditForm` 组件内的 `onCancel()` 方法会触发 `edit-cancelled` 事件。
-**结果**：`editCancelled()` 方法被调用，`isEditing` 被设置回 `false`，这样在重新渲染时，编辑的表单将不再显示。
+  **结果：**`editCancelled()` 方法被调用，`isEditing` 被设置回 `false`，这样在重新渲染时，编辑的表单将不再显示。
 
 ### ToDoItemEditForm.vue
 
 `<form>` listens for `submit` event.
 **Result**: `onSubmit()` method is invoked, which checks to see if the new label value is not blank, and not the same as the old one, and if so emits the `item-edited` event (which is then listened for inside `ToDoItem.vue`, see above).
 `<form>` 监听 `submit` 事件。
-**结果**：`onSubmit()` 方法被调用。该方法检查新的标签值是否为空，与旧的标签值是否相同。如果是，则发出 `item-edited` 事件（随后 `ToDoItem.vue` 中的元素监听到了该事件；见上文）。
+**结果：**`onSubmit()` 方法被调用。该方法检查新的标签值是否为空，与旧的标签值是否相同。如果是，则发出 `item-edited` 事件（随后 `ToDoItem.vue` 中的元素监听到了该事件；见上文）。
 
 "Cancel" `<button>` listens for `click` event.
 **Result**: `onCancel()` method is invoked, which emits the `edit-cancelled` event (which is then listened for inside `ToDoItem.vue`, see above).
 “Cancel” `<button>` 监听 `click` 事件。
-**结果**：`onCancel()` 方法被调用。它触发 `edit-cancelled` 事件（随后 `ToDoItem.vue` 中的元素监听到了该事件；见上文）。
+**结果：**`onCancel()` 方法被调用。它触发 `edit-cancelled` 事件（随后 `ToDoItem.vue` 中的元素监听到了该事件；见上文）。
 
 ## 总结
 
