@@ -42,9 +42,9 @@ customElements.define('my-paragraph',
       let templateContent = template.content;
 
       const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(templateContent.cloneNode(true));
+      shadowRoot.appendChild(templateContent.cloneNode(true));
   }
-})
+});
 ```
 
 要注意的关键是我们使用{{domxref("Node.cloneNode()")}} 方法添加了模板的拷贝到阴影的根结点上。
