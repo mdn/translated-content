@@ -6,42 +6,40 @@ slug: >-
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Now it is time to add one of the major parts of functionality that we're still missing — the ability to edit existing todo items. To do this, we will take advantage of Vue's conditional rendering capabilities — namely `v-if` and `v-else` — to allow us to toggle between the existing todo item view, and an edit view where you can update todo item labels. We'll also look at adding functionality to delete todo items.
+现在是时候添加我们还缺少的主要功能之一了--编辑现有的待办事项的能力。为此，我们将利用 Vue 的条件渲染功能--即 `v-if` 和 `v-else` --来允许我们在现有待办事项的视图和可以更新待办事项标签的编辑视图之间进行切换。我们还将考虑添加删除待办事项的功能。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">预备条件：</th>
       <td>
         <p>
-          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
-          knowledge of the
+          熟悉核心的  <a href="/en-US/docs/Learn/HTML">HTML</a>、
+          <a href="/en-US/docs/Learn/CSS">CSS</a>、和
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言，了解
           <a
             href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >terminal/command line</a
+            >终端/命令行</a
           >.
         </p>
         <p>
-          Vue components are written as a combination of JavaScript objects that
-          manage the app's data and an HTML-based template syntax that maps to
-          the underlying DOM structure. For installation, and to use some of the
-          more advanced features of Vue (like Single File Components or render
-          functions), you'll need a terminal with node + npm installed.
+          Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM
+          结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue
+          的一些更高级的功能（例如“单文件组件（SFC）”或渲染功能），你将需要一个装有
+          node + npm 的终端。
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To learn how to do conditional rendering in Vue.</td>
+      <th scope="row">目标：</th>
+      <td>学习如何在 Vue 中做条件渲染</td>
     </tr>
   </tbody>
 </table>
 
-## Creating an editing component
+## 创建一个可编辑的组件
 
-We can start by creating a separate component to handle the editing functionality. In your `components` directory, create a new file called `ToDoItemEditForm.vue`. Copy the following code into that file:
+我们可以先创建一个单独的组件来处理编辑功能。在你的 `components` 文件夹下，创建一个名叫`ToDoItemEditForm.vue` 的新文件。复制下面的代码到那个文件：
 
 ```html
 <template>
@@ -123,20 +121,20 @@ We can start by creating a separate component to handle the editing functionalit
 </style>
 ```
 
-> **Note:** Walk through the above code then read the below description to make sure you understand everything the component is doing before moving on. This is a useful way to help reinforce everything you've learned so far.
+> **注意：** 理解上面的代码，然后阅读下面的说明，以确保你在继续学习之前弄清楚该组件的所有功能。这是一个有用的方法，它可以帮助你巩固到目前为止所学到的一切。
 
-This code sets up the core of the edit functionality. We create a form with an `<input>` field for editing the name of our to-do.
+这段代码完成了编辑功能的核心部分。我们创建了一个表单，其中包含一个 `<input>` 标签，用于编辑我们的待办事项的名称。
 
-There is a "Save" button and a "Cancel" button:
+有一个“保存”按钮和“取消”按钮：
 
-- When the "Save" button is clicked, the component emits the new label via an `item-edited` event.
-- When the "Cancel" button is clicked, the component signals this by emitting an `edit-cancelled` event.
+- 当“保存”按钮被点击，组件通过一个 `item-edited` 事件发出一个标签。
+- 当“取消”按钮被点击，组件通过  `edit-cancelled` 事件发出信号。
 
-## Modifying our ToDoItem component
+## 修改我们的 ToDoTtem 组件
 
-Before we can add `ToDoItemEditForm` to our app, we need to make a few modifications to our `ToDoItem` component. Specifically, we need to add a variable to track if the item is being edited, and a button to toggle that variable. We'll also add a `Delete` button since deletion is closely related.
+在我们给我们的应用程序添加 `ToDoItemEditForm` 之前，我们需要对我们的 `ToDoItem` 组件做出一些修改。具体来说，我们需要一个变量来监控是否有事项正在被编辑，以及一个按钮来切换那个变量。由于删除是密切相关的，我们也将添加一个 `Delete` 按钮。
 
-Update your `ToDoItem`'s template as shown below.
+像下面展示的这样更新你的 `ToDoItem` 的模板。
 
 ```html
 <template>
@@ -162,16 +160,18 @@ Update your `ToDoItem`'s template as shown below.
 </template>
 ```
 
-We've added a wrapper `<div>` around the whole template for layout purposes.
+我们在整个模板外面添加了一个包装器 `<div>` 用于布局。
 
 We've also added "Edit" and "Delete" buttons:
+我们还添加了“编辑”和“删除”按钮：
 
-- The "Edit" button, when clicked, will toggle displaying the `ToDoItemEditForm` component so we can use it to edit our todo item, via an event handler function called `toggleToItemEditForm()`. This handler will set an `isEditing` flag to true. To do that, we'll need to first define it inside our `data()` property.
-- The "Delete" button, when clicked, will delete the todo item via an event handler function called `deleteToDo()`. In this handler we'll emit an `item-deleted` event to our parent component so the list can be updated.
+- 当点击“编辑”按钮时，将切换显示 “ToDoItemEditForm”组件，这样我们就可以通过一个名为 “toggleToItemEditForm()”的事件处理函数来编辑我们的待办事项。这个处理函数将设置 `isEditing` 标志为真。要做到这一点，我们需要首先在我们的 `data()` 属性中定义它。
 
-Let's define our click handlers, and the necessary `isEditing` flag.
+- 当点击“删除”按钮时，将通过名为 `deleteToDo()` 的事件处理函数删除待办事项。在这个处理器中我们将向我们的父组件发送 `item-deleted` 事件一更新列表。
 
-Add `isEditing` below your existing `isDone` data point:
+接下来我们定义我们的点击事件处理器和必要的 `isEditing` 标志。
+
+在现有的 `isDone` 数据点下面添加 `isEditing`：
 
 ```js
 data() {
@@ -182,7 +182,7 @@ data() {
 }
 ```
 
-Now add your methods inside a methods property, right below your `data()` property:
+现在将你的方法添加到 methods 属性中，就在你的 `data()` 属性下面：
 
 ```js
 methods: {
@@ -195,29 +195,30 @@ methods: {
   }
 ```
 
-## Conditionally displaying components via v:if and v:else
+## 通过 v:if 和 v:else 有条件地显示组件
 
-Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
+现在我们有了一个可用的 `isEditing` 标志来表示事项正在被编辑（或者未被编辑）。如果 `isEditing` 为真，我们会用这个标志来展示我们的 `ToDoItemEditForm` 而不是复选框。为此，我们将使用另一个 Vue 指令：[`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
 
-The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) and [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
+ `v-if` 指令只会在传递给它的值为真的情况下渲染一个块。这和 `if` 语句在 JavaScript 起作用的方式相似。`v-if` 也有对应的 [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) 和 [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) 指令，在Vue模板中提供相当于 JavaScript 的 `else if` 和 `else` 逻辑。
 
 It's important to note that `v-else` and `v-else-if` blocks need to be the first sibling of a `v-if`/`v-else-if` block, otherwise Vue will not recognize them. You can also attach `v-if` to a `<template>` tag if you need to conditionally render an entire template.
+需要注意的是，`v-else` 和 `v-else-if` 块需要是 `v-if`/`v-else-if` 块的第一个兄弟，否则 Vue 将无法识别它们。如果你需要条件渲染整个模板，你也可以将 `v-if` 添加到 `<template>` 标签上。
 
-Lastly, you can use a `v-if` + `v-else` at the root of your component to display only one block or another, since Vue will only render one of these blocks at a time. We'll do this in our app, as it will allow us to replace the code that displays our to-do item with the edit form.
+最后，由于 Vue 只会在一个事件渲染这些块中的一个，你可以在根组件使用 `v-if` + `v-else` 来只显示一个块。我们将在我们的应用程序中这样做，因为这将使我们能够用编辑表单替换显示待办事项的代码。
 
-First of all add `v-if="!isEditing"` to the root `<div>` in your `ToDoItem` component,
+首先在你的 `ToDoItem` 组件的根`<div>` 添加 `v-if="!isEditing"` 
 
 ```html
 <div class="stack-small" v-if="!isEditing"></div>
 ```
 
-Next, below that `<div>`'s closing tag add the following line:
+接下来，在该`<div>`的关闭标签下面添加下面这行：
 
 ```html
 <to-do-item-edit-form v-else :id="id" :label="label"></to-do-item-edit-form>
 ```
 
-We also need to import and register the `ToDoItemEditForm` component, so we can use it inside this template. Add this line at the top of your `<script>` element:
+我们还需要导入和注册`ToDoItemEditForm` 组件，这样我才能在这个模板里面使用它。在你的 `<script>` 元素的顶部添加这行：
 
 ```js
 import ToDoItemEditForm from "./ToDoItemEditForm";
@@ -231,17 +232,17 @@ components: {
 },
 ```
 
-Now, if you go to your app and click a todo item's "Edit" button, you should see the checkbox replaced with the edit form.
+现在，如果你打开你的应用程序并点击了一个待办事项的“编辑”按钮，你应该可以看到编辑表单代替了复选框。
 
-![The todo list app, with Edit and Delete buttons shown, and one of the todos in edit mode, with an edit input and save and cancel buttons shown](todo-edit-delete.png)
+![任务列表应用程序，显示有编辑和删除按钮，并且其中一个任务处于编辑模式，显示有编辑输入框和保存及取消按钮。](todo-edit-delete.png)
 
-However, there's currently no way to go back. To fix that, we need to add some more event handlers to our component.
+然而，目前还没有退出编辑的方法。为了解决这个问题，我们需要在组件中添加一些更多的事件处理程序。
 
-## Getting back out of edit mode
+## 退出编辑模式
 
-First, we need to add an `itemEdited()` method to our `ToDoItem` component's `methods`. This method should take the new item label as an argument, emit an `itemEdited` event to the parent component, and set `isEditing` to `false`.
+首先，我们需要添加一个在我们  `ToDoItem` 组件的 `methods` 里添加一个 `itemEdited()` 方法。这个方法应该接受新的事项标签作为参数，向父组件发出一个`itemEdited`事件，并将 `isEditing` 设置为 `false`。
 
-Add it now, below your existing methods:
+现在在你现存的方法下添加它：
 
 ```js
 itemEdited(newLabel) {
@@ -250,7 +251,7 @@ itemEdited(newLabel) {
 }
 ```
 
-Next, we'll need an `editCancelled()` method. This method will take no arguments and just serve to set `isEditing` back to `false`. Add this method below the previous one:
+接下来，我们需要一个 `editCancelled()` 方法。这个方法没有参数，只是将`isEditing` 设置回 `false` 。在下面这个方法之前添加这个方法：
 
 ```js
 editCancelled() {
@@ -258,9 +259,9 @@ editCancelled() {
 }
 ```
 
-Last for this section, we'll add event handlers for the events emitted by the `ToDoItemEditForm` component, and attach the appropriate methods to each event.
+本节最后，我们将为 `ToDoItemEditForm` 组件发出的事件添加事件处理程序，并为每个事件添加适当的方法。
 
-Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so:
+更新你的 `<to-do-item-edit-form></to-do-item-edit-form>` 调用，看起来像这样：
 
 ```html
 <to-do-item-edit-form
@@ -274,9 +275,9 @@ Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so
 
 ## Updating and deleting todo items
 
-Now we can toggle between the edit form and the checkbox. However, we haven't actually handled updating the `ToDoItems` array back in `App.vue`. To fix that, we need to listen for the `item-edited` event, and update the list accordingly. We'll also want to handle the delete event so that we can delete todo items.
+现在，我们可以在编辑表单和复选框之间切换了。然而，我们实际上没有处理在 `App.vue` 中更新 `ToDoItems` 数组的操作。为了解决这个问题，我们需要监听 `item-edited` 事件，并相应地更新列表。我们还需要处理删除事件，以便删除待办事项。
 
-Add the following new methods to your `App.vue`'s component object, below the existing methods inside the `methods` property:
+在你的 `App.vue` 组件实体中添加下面新的方法，在 `methods` 属性里现存方法下面：
 
 ```js
 deleteToDo(toDoId) {
@@ -289,12 +290,12 @@ editToDo(toDoId, newLabel) {
 }
 ```
 
-Next, we'll add the event listeners for the `item-deleted` and `item-edited` events:
+接下来，我们将为 `item-deleted` 和 `item-edited` 事件添加事件监听器：
 
-- For `item-deleted`, you'll need to pass the `item.id` to the method.
-- For `item-edited`, you'll need to pass the `item.id` and the special `$event` variable. This is a special Vue variable used to pass event data to methods. When using native HTML events (like `click`), this will pass the native event object to your method.
+- 对 `item-deleted`，你需要把 `item.id` 传递给该方法。
+- For `item-edited`, you'll need to pass the `item.id` and the special `$event` variable. This is a special Vue variable used to pass event data to methods. When using native HTML events (like `click`), this will pass the native event object to your method.对于`item-edited`，你需要传递 `item.id` 和特殊的 `$event` 变量。这是一个特殊的 Vue 变量，用于传递事件数据给方法。当使用本地HTML事件（如 `click` ）时，它将把本地事件对象传递给你的方法。
 
-Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
+更新`App.vue`模板内的`<to-do-item>`调用，看起来像这样：
 
 ```html
 <to-do-item
@@ -307,11 +308,11 @@ Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to loo
 </to-do-item>
 ```
 
-And there you have it — you should now be able to edit and delete items from the list!
+就这样--你现在应该能够编辑和删除列表中的项目了!
 
-## Fixing a small bug with isDone status
+## 修复 isDone 状态的一个小错误
 
-This is great so far, but we've actually introduced a bug by adding in the edit functionality. Try doing this:
+到目前为止一切很好，但实际上在添加编辑功能时我们引入了一个错误。试着这样做：
 
 1. Check (or uncheck) one of the todo checkboxes.
 2. Press the "Edit" button for that todo item.
