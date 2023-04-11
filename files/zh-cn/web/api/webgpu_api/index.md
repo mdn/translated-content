@@ -17,7 +17,7 @@ WebGL 和用于编写 WebGL 着色器代码的 [GLSL](<https://www.khronos.org/o
 
 然而，WebGL 有一些需要解决的基本问题：
 
-- 自 WebGL 发布以来，出现了新一代的原生 GPU API——最受欢迎的是 [微软的 Direct3D 12](https://docs.microsoft.com/zh-cn/windows/win32/direct3d12/direct3d-12-graphics)、[苹果的 Metal](https://developer.apple.com/metal/) 以及[科纳斯组织的 Vulkan](https://www.vulkan.org/)——它们提供了大量新功能。并没有任何计划对 OpenGL（以及 WebGL）进行更多更新，因此它将不会获得任意这些新的功能。然而，WebGPU 将在未来添加这些新功能。
+- 自 WebGL 发布以来，出现了新一代的原生 GPU API——最受欢迎的是[微软的 Direct3D 12](https://docs.microsoft.com/zh-cn/windows/win32/direct3d12/direct3d-12-graphics)、[苹果的 Metal](https://developer.apple.com/metal/) 以及[科纳斯组织的 Vulkan](https://www.vulkan.org/)——它们提供了大量新功能。并没有任何计划对 OpenGL（以及 WebGL）进行更多更新，因此它将不会获得任意这些新的功能。然而，WebGPU 将在未来添加这些新功能。
 - 无论是在同时渲染的对象方面，还是新渲染功能的使用方面，3D 图形应用程序的需求都在逐渐变高。
 
 WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的通用架构，它会让你感到更加丝滑。它支持图形渲染，同时对 GPGPU 计算也有一流的支持。在 CPU 端渲染单个对象的成本要低得多，并且它支持现代化的 GPU 渲染功能，例如，基于计算的粒子和用于后期处理的滤镜，如颜色效果、锐化和景深模拟。此外，它也可以直接在 GPU 上处理诸如剔除和骨骼动画模型等耗费大量计算资源的任务。
@@ -197,12 +197,12 @@ const vertexBuffers = [
   {
     attributes: [
       {
-        shaderLocation: 0, // position
+        shaderLocation: 0, // 位置
         offset: 0,
         format: "float32x4",
       },
       {
-        shaderLocation: 1, // color
+        shaderLocation: 1, // 颜色
         offset: 16,
         format: "float32x4",
       },
@@ -307,12 +307,12 @@ device.queue.submit([commandEncoder.finish()]);
 
 ## 基础的计算管线
 
-In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), we get the GPU to calculate some values, store them in an output buffer, copy the data across to a staging buffer, then map that staging buffer so that the data can be read out to JavaScript and logged to the console.
+在我们的[基础计算演示中](https://mdn.github.io/dom-examples/webgpu-compute-demo/)，我们让 GPU 计算一些值，将它们存储到输出缓存中，将数据复制到暂存缓冲区，然后映射该暂存缓冲区，以便数据可以读出到 JavaScript 并且记录到控制台。
 
-The app follows a similar structure to the basic rendering demo. We create a {{domxref("GPUDevice")}} reference in the same way as before, and encapsulate our shader code into a {{domxref("GPUShaderModule")}} via a {{domxref("GPUDevice.createShaderModule()")}} call. The difference here is that our shader code only has one shader stage, a `@compute` stage:
+该应用程序与基础的渲染演示有着相似的结构。我们以与之前相同的方式创建一个 {{domxref("GPUDevice")}} 引用，并通过调用 {{domxref("GPUDevice.createShaderModule()")}} 将我们的着色器代码封装到 {{domxref("GPUShaderModule")}}。这里的区别在于我们的着色器代码仅有一个着色阶段，`@compute` 阶段：
 
 ```js
-// Define global buffer size
+// 定义全局的缓冲区大小
 const BUFFER_SIZE = 1000;
 
 const shader = `
@@ -340,10 +340,10 @@ fn main(
 
 ### 创建缓冲区处理我们的数据
 
-In this example we create two {{domxref("GPUBuffer")}} instances to handle our data, an `output` buffer to write the GPU calculation results to at high speed, and a `stagingBuffer` that we'll copy the `output` contents to, which can be mapped to allow JavaScript to access the values.
+在该示例中，我们创建了两个 {{domxref("GPUBuffer")}} 实例去处理我们的数据，`output` 缓冲区高速地写入 GPU 计算结果，`stagingBuffer` 缓冲区用于将 `output` 的内容复制到自身，它可以被映射以允许 JavaScript 访问这些值。
 
-- `output` is specified as a storage buffer that will be the source of a copy operation.
-- `stagingBuffer` is specified as a buffer that can be mapped for reading by JavaScript, and will be the destination of a copy operation.
+- 指定 `output` 为一个存储缓冲区，它将成为复制操作的源。
+- 指定 `stagingBuffer` 可以被映射为一个由 JavaScript 读取的缓冲区，并将成为复制操作的目标。
 
 ```js
 const output = device.createBuffer({
@@ -359,7 +359,7 @@ const stagingBuffer = device.createBuffer({
 
 ### 创建绑定组布局
 
-When the pipeline is created, we specify a bind group to use for the pipeline. This involves first creating a {{domxref("GPUBindGroupLayout")}} (via a call to {{domxref("GPUDevice.createBindGroupLayout()")}}) that defines the structure and purpose of GPU resources such as buffers that will be used in this pipeline. This layout is used as a template for bind groups to adhere to. In this case we give the pipeline access to a single memory buffer, tied to binding slot 0 (this matches the relevant binding number in our shader code — `@binding(0)`), usable in the compute stage of the pipeline, and with the buffer's purpose defined as `storage`.
+当创建管线时，我们需要为管线指定一个绑定组。这将首先创建 {{domxref("GPUBindGroupLayout")}}（通过调用 {{domxref("GPUDevice.createBindGroupLayout()")}}），该布局定义了 GPU 资源（例如将在此管线中使用的缓冲区）的结构和用途。此布局将用作绑定组的模板。在这种情况下，我们将管线与一个单一的内存缓冲区绑定，绑定到绑定槽 0（这与我们的着色器代码中的相关绑定号匹配——`@binding(0)`），可在管线的计算阶段使用，并将缓冲区的用途定义为 `storage`。
 
 ```js
 const bindGroupLayout = device.createBindGroupLayout({
@@ -375,7 +375,7 @@ const bindGroupLayout = device.createBindGroupLayout({
 });
 ```
 
-Next we create a {{domxref("GPUBindGroup")}} by calling {{domxref("GPUDevice.createBindGroup()")}}. We pass this method call a descriptor object that specifies the bind group layout to base this bind group on, and the details of the variable to bind to the slot defined in the layout. In this case, we are declaring binding 0, and specifying that the `output` buffer we defined earlier should be bound to it).
+下一步，我们通过调用 {{domxref("GPUDevice.createBindGroup()")}} 创建 {{domxref("GPUBindGroup")}}。我们通过此方法调用一个描述符对象，该对象指定了这个绑定组应该基于的绑定组布局，以及绑定到布局中定义的插槽变量的详细信息。在这种情况下，我们声明了绑定插槽 0，并指定了之前定义的 `output` 缓冲区应该绑定到它。
 
 ```js
 const bindGroup = device.createBindGroup({
@@ -391,11 +391,11 @@ const bindGroup = device.createBindGroup({
 });
 ```
 
-> **Note:** You could retrieve an implicit layout to use when creating a bind group by calling the {{domxref("GPUComputePipeline.getBindGroupLayout()")}} method. There is also a version available for render pipelines: see {{domxref("GPURenderPipeline.getBindGroupLayout()")}}.
+> **备注：** 你可以通过调用 {{domxref("GPUComputePipeline.getBindGroupLayout()")}} 方法检索在创建绑定组时使用的隐式布局。还有一个可以用于渲染管线的版本：参见 {{domxref("GPURenderPipeline.getBindGroupLayout()")}}。
 
 ### 创建计算管线
 
-With the above all in place, we can now create a compute pipeline by calling {{domxref("GPUDevice.createComputePipeline()")}}, passing it a pipeline descriptor object. This works in a similar way to creating a render pipeline. We describe the compute shader, specifying what module to find the code in and what the entry point is. We also specify a `layout` for the pipeline, in this case creating a layout based on the `bindGroupLayout` we defined earlier via a {{domxref("GPUDevice.createPipelineLayout()")}} call.
+上述一切就绪后，我们现在可以通过调用 {{domxref("GPUDevice.createComputePipeline()")}} 并向它传递一个管线描述符对象创建计算管线这个。这与创建渲染管线的方式类似。我们描述计算着色器，指定在那个模块中查找代码以及入口点是什么。我们也为管线指定了 `layout`，在本例中，我们通过调用 {{domxref("GPUDevice.createPipelineLayout()")}} 创建一个基于之前定义的 `bindGroupLayout` 的布局。
 
 ```js
 const computePipeline = device.createComputePipeline({
@@ -409,15 +409,15 @@ const computePipeline = device.createComputePipeline({
 });
 ```
 
-One difference here from the render pipeline layout is that we are not specifying a primitive type, as we are not drawing anything.
+唯一的区别是，这里我们没有指定原始类型，因为我们不需要绘制任何东西。
 
 ### 运行计算通道
 
-Running a compute pass is similar in structure to running a rendering pass, with some different commands. For a start, the pass encoder is created using {{domxref("GPUCommandEncoder.beginComputePass()")}}.
+在结构上，运行计算通道与运行渲染通道类似。首先，我们使用 {{domxref("GPUCommandEncoder.beginComputePass()")}} 创建通道编码器。
 
-When issuing the commands, we specify the pipeline to use in the same way as before, using {{domxref("GPUComputePassEncoder.setPipeline()")}}. We then however use {{domxref("GPUComputePassEncoder.setBindGroup()")}} to specify that we want to use our `bindGroup` to specify the data to use in the calculation, and {{domxref("GPUComputePassEncoder.dispatchWorkgroups()")}} to specify the number of GPU workgroups to use to run the calculations.
+在发出指令时，我们使用相同的方式指定管线，使用 {{domxref("GPUComputePassEncoder.setPipeline()")}}。然后，我们使用 {{domxref("GPUComputePassEncoder.setBindGroup()")}} 指定想要使用的 `bindGroup` 来指定在计算中使用的数据，并使用 {{domxref("GPUComputePassEncoder.dispatchWorkgroups()")}} 指定要运行并行计算的 GPU 工作组的数量。
 
-We then signal the end of the render pass command list using {{domxref("GPURenderPassEncoder.end()")}}.
+最后，我们使用 {{domxref("GPURenderPassEncoder.end()")}} 发出渲染通道指令结束的信号。
 
 ```js
 passEncoder.setPipeline(computePipeline);
@@ -429,30 +429,30 @@ passEncoder.end();
 
 ### 将结果读回 JavaScript
 
-Before submitting the encoded commands to the GPU for execution using {{domxref("GPUQueue.submit()")}}, we copy the contents of the `output` buffer to the `stagingBuffer` buffer using {{domxref("GPUCommandEncoder.copyBufferToBuffer()")}}.
+在使用 {{domxref("GPUQueue.submit()")}} 将编码指令提交给 GPU 执行之前，我们使用 {{domxref("GPUCommandEncoder.copyBufferToBuffer()")}} 将 `output` 缓冲区的内容复制到 `stagingBuffer` 缓冲区中。
 
 ```js
-// Copy output buffer to staging buffer
+// 复制 output 缓冲去到 staging 缓冲区
 commandEncoder.copyBufferToBuffer(
   output,
-  0, // Source offset
+  0, // 来源缓冲区偏移量
   stagingBuffer,
-  0, // Destination offset
+  0, // 目的缓冲区偏移量
   BUFFER_SIZE
 );
 
-// End frame by passing array of command buffers to command queue for execution
+// 通过将命令缓冲区数组传递给命令队列以执行来结束
 device.queue.submit([commandEncoder.finish()]);
 ```
 
-Once the output data is available in the `stagingBuffer`, we use the {{domxref("GPUBuffer.mapAsync()")}} method to map the data to intermediate memory, grab a reference to the mapped range using {{domxref("GPUBuffer.getMappedRange()")}}, copy the data into JavaScript, and then log it to the console. We also unmap the `stagingBuffer` once we are finished with it.
+一旦输出数据可用于 `stagingBuffer`，我们使用 {{domxref("GPUBuffer.mapAsync()")}} 方法将数据映射到中间内存，并使用 {{domxref("GPUBuffer.getMappedRange()")}} 获取映射范围的引用，将数据复制到 JavaScrip，并将其记录到控制台。完成后，我们还会取消映射到 `stagingBuffer`。
 
 ```js
-// map staging buffer to read results back to JS
+// 映射 staging 缓冲区，以便读回到 JS
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
-  0, // Offset
-  BUFFER_SIZE // Length
+  0, // 偏移量
+  BUFFER_SIZE // 长度
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
@@ -463,20 +463,20 @@ console.log(new Float32Array(data));
 
 ## GPU 错误处理
 
-WebGPU calls are validated asynchronously in the GPU process. If errors are found, the problem call is marked as invalid on the GPU side. If another call is made that relies on the return value of an invalidated call, that object will also be marked as invalid, and so on. For this reason, errors in WebGPU are referred to as "contagious".
+WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错误，有问题的调用会在 GPU 端标记为无效。如果依赖于一个无效调用返回值的另一个调用被执行，那么该对象将也被标记为无效，以此类推。一次，WebGPU 的错误被称为“传染性错误”。
 
-Each {{domxref("GPUDevice")}} instance maintains its own error scope stack. This stack is initially empty, but you can start pushing an error scope to the stack by invoking {{domxref("GPUDevice.pushErrorScope()")}} to capture errors of a particular type.
+每个 {{domxref("GPUDevice")}} 实例都维护这自己的错误作用域栈。这个栈最初是空的，但是你可以通过调用 {{domxref("GPUDevice.pushErrorScope()")}} 来开始推入错误作用域到栈，以捕获特定类型的错误。
 
-Once you are done capturing errors, you can end capture by invoking {{domxref("GPUDevice.popErrorScope()")}}. This pops the scope from the stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUInternalError")}}, {{domxref("GPUOutOfMemoryError")}}, or {{domxref("GPUValidationError")}}) describing the first error captured in the scope, or `null` if no errors were captured.
+一旦完成错误捕获，你可以通过调用 {{domxref("GPUDevice.popErrorScope()")}} 来结束捕获。这会从栈中弹出作用域并返回一个 {{jsxref("Promise")}}，该 Promise 兑现为一个对象（{{domxref("GPUInternalError")}}、{{domxref("GPUOutOfMemoryError")}} 或 {{domxref("GPUValidationError")}}），描述在作用域内捕获的第一个错误，如果没有错误捕获，则是 `null`。
 
-We have attempted to provide useful information to help you understand why errors are occurring in your WebGPU code in "Validation" sections where appropriate, which list criteria to meet to avoid errors. See for example the [`GPUDevice.createBindGroup()` Validation section](/zh-CN/docs/Web/API/GPUDevice/createBindGroup#validation). Some of this information is complex; rather than repeat the spec, we have decided to just list error criteria that are:
+在适当的“验证”部分，我们试图去提供帮助你理解为什么你的 WebGPU 代码发生错误的有用信息，其中列出了避免错误的条件。例如，参见 [`GPUDevice.createBindGroup()` 检验部分](/zh-CN/docs/Web/API/GPUDevice/createBindGroup#检验)。其中一些信息很复杂，我们决定仅列出以下错误标准，而不是重复规范：
 
-- Non-obvious, for example combinations of descriptor properties that produce validation errors. There is no point telling you to make sure you use the correct descriptor object structure. That is both obvious and vague.
-- Developer-controlled. Some of the error criteria are purely based on internals and not really relevant to web developers.
+- 不明显的错误标准，例如导致验证错误的描述符属性的组合。没有必要告诉你确保使用正确的描述符对象结构。这既是显而易见的又是模糊的。
+- 由开发者控制的错误标准。一些错误标准仅基于内部因素，对于 web 开发者并不真正相关。
 
-You can find more information about WebGPU error handling in the explainer — see [Object validity and destroyed-ness](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed) and [Errors](https://gpuweb.github.io/gpuweb/explainer/#errors). [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling) provides useful real-world examples and advice.
+你可以在关于 WebGPU 错误处理的解释中找到更多有关信息——参见[对象的有效性和销毁状态](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed)以及[错误](https://gpuweb.github.io/gpuweb/explainer/#errors)。[WebGPU 错误处理的最佳实践](https://toji.dev/webgpu-best-practices/error-handling)提供了很多有关真实世界的示例和建议的有用信息。
 
-> **Note:** The historic way of handling errors in WebGL is to provide a {{domxref("WebGLRenderingContext.getError", "getError()")}} method to return error information. This is problematic in that it returns errors synchronously, which is bad for performance — each call requires a round-trip to the GPU and requires all previously issued operations to be finished. Its state model is also flat, meaning that errors can leak between unrelated code. The creators of WebGPU were determined to improve on this.
+> **备注：** 在 WebGL 中处理的错误的历史方式是提供一个 {{domxref("WebGLRenderingContext.getError", "getError()")}} 方法，该方法返回错误的信息。这种方式存在问题，因为它会同步返回错误，这对性能是不利的——每次调用都需要往返到 GPU 并且需要所有先前发出的操作都已经完成。它的状态模型也是扁平的，这意味着错误可以在不相关的代码之间泄露。WebGPU 的创建者决定改变这一点。
 
 ## 接口
 
@@ -494,7 +494,7 @@ You can find more information about WebGPU error handling in the explainer — s
 ### 配置 GPUDevice
 
 - {{domxref("GPUDevice")}}
-  - : 表示逻辑 GPU 设备。这是访问大多数 WebGPU 功能的主要接口
+  - : 表示逻辑 GPU 设备。这是访问大多数 WebGPU 功能的主要接口。
 - {{domxref("GPUSupportedFeatures")}}
   - : 一个[类 Set](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 对象，该对象通过 {{domxref("GPUAdapter")}} 或 {{domxref("GPUDevice")}} 描述了额外的功能。
 - {{domxref("GPUSupportedLimits")}}
