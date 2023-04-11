@@ -267,7 +267,7 @@ However, there's currently no way to go back. To fix that, we need to add some m
 退出编辑模式
 
 First, we need to add an `itemEdited()` method to our `ToDoItem` component's `methods`. This method should take the new item label as an argument, emit an `itemEdited` event to the parent component, and set `isEditing` to `false`.
-首先，我们需要添加一个在我们 `ToDoItem` 组件的 `methods` 里添加一个 `itemEdited()` 方法。这个方法应该接受新的事项标签作为参数，向父组件发出一个 `itemEdited` 事件，并将 `isEditing` 设置为 `false`。
+首先，我们需要在 `ToDoItem` 组件的 `methods` 里添加一个 `itemEdited()` 方法。这个方法应该接受新的事项标签作为参数，向父组件发出一个 `itemEdited` 事件，并将 `isEditing` 设置为 `false`。
 
 Add it now, below your existing methods:
 现在在你现存的方法下添加它：
