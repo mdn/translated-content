@@ -73,9 +73,9 @@ async function init() {
 
 - 渲染管线用于渲染图形，通常渲染到 {{htmlelement("canvas")}} 元素中，但它也可以在画面之外的地方渲染图形。它有两个主要阶段：
 
-  - 顶点阶段：在该阶段中，顶点着色器（vertex shader）接受 GPU 输入的位置数据并使用像旋转、平移或透视等特定的效果将顶点在 3D 空间中定位。然后，这些顶点会被组装成基本的渲染图元，例如三角形等，然后通过 GPU 进行光栅化，计算出每个顶点应该覆盖在 canvas 上的哪些像素。
+  - 顶点着色阶段：在该阶段中，顶点着色器（vertex shader）接受 GPU 输入的位置数据并使用像旋转、平移或透视等特定的效果将顶点在 3D 空间中定位。然后，这些顶点会被组装成基本的渲染图元，例如三角形等，然后通过 GPU 进行光栅化，计算出每个顶点应该覆盖在 canvas 上的哪些像素。
 
-  - 片段阶段：在该阶段中，片段着色器（fragment shader）计算由顶点着色器生成的基本图元所覆盖的每个像素的颜色。这些计算通常使用输入，如图像（以纹理的方式）提供表面细节以及虚拟化光源的位置和颜色。
+  - 片元着色阶段：在该阶段中，片元着色器（fragment shader）计算由顶点着色器生成的基本图元所覆盖的每个像素的颜色。这些计算通常使用输入，如图像（以纹理的方式）提供表面细节以及虚拟化光源的位置和颜色。
 
 - 计算管线用于通用计算。计算管线包含单独的计算阶段，在该阶段中，计算着色器（compute shader）接受通用的数据，在指定数量的工作组之间并行处理数据，然后将结果返回到一个或者多个缓冲区。这些缓冲区可以包含任意类型的数据。
 
@@ -88,11 +88,11 @@ async function init() {
 3. [创建包含你数据的资源](#创建缓冲区并将我们的三角形数据写入)：你想要通过你的管线处理的数据存储在 GPU 缓冲区或者纹理中，以供应用程序访问。
 4. [创建管线](#定义和创建渲染管线)：定义管线描述符，详细地描述管线，包含所需的数据结构、绑定、着色器和资源布局，然后从中创建管线。我们的基本演示仅包含单个管线，但复杂的应用程序通常会包含多个用于不同目的的管线。
 5. [允许计算/渲染通道](#运行渲染通道)：这涉及许多子步骤：
-   1. 创建一个命令编码器，它可以对一组传递给 GPU 的命令执行编码。
-   2. 创建一个通道编码器对象，该对象用于发出计算/渲染命令。
-   3. 运行命令，指定使用哪些管线、从那个缓冲区获取数据、运行多少次绘制操作等。
-   4. 完成命令列表后，将其封装到命令缓冲区中。
-   5. 通过逻辑设备的命令队列提交命令到缓冲区。
+   1. 创建一个指令编码器，它可以对一组传递给 GPU 的指令执行编码。
+   2. 创建一个通道编码器对象，该对象用于发出计算/渲染指令。
+   3. 运行指令，指定使用哪些管线、从那个缓冲区获取数据、运行多少次绘制操作等。
+   4. 完成指令列表后，将其封装到指令缓冲区中。
+   5. 通过逻辑设备的指令队列提交指令到缓冲区。
 
 在下面的部分，我们将研究一个基本的渲染管线演示，让你知道探索它需要什么。稍后，我们也将研究一个[基础的计算管线](#基础的计算管线)示例，看看它与渲染管线有什么不同。
 
@@ -102,7 +102,7 @@ async function init() {
 
 ### 创建着色器模块
 
-We are using the following shader code. The vertex shader stage (`@vertex` block) accepts a chunk of data containing a position and a color, positions the vertex according to the given position, interpolates the color, then passes the data along to the fragment shader stage. The fragment shader stage (`@fragment` block) accepts the data from the vertex shader stage and colors the vertex according to the given color.
+我们使用以下着色器代码。顶点着色阶段（`@vertex` 代码块）接受包含位置和颜色的数据分块，根据给定的位置定位顶点，插入颜色，然后将数据传入到片元着色器阶段。片元着色阶段（`@fragment` 代码块）接受来自顶点着色器阶段的数据，并更具给定的颜色为顶点着色。
 
 ```js
 const shaders = `
@@ -129,9 +129,9 @@ fn fragment_main(fragData: VertexOut) -> @location(0) vec4f
 `;
 ```
 
-> **Note:** In our demos we are storing our shader code inside a template literal, but you can store it anywhere from which it can easily be retrieved as text to be fed into your WebGPU program. For example, another common practice is to store shaders inside a {{htmlelement("script")}} element and retrieve the contents using {{domxref("Node.textContent")}}. The correct mime type to use for WGSL is `text/wgsl`.
+> **备注：** 在我们的演示中，我们将我们的代码存储在模板字面量中，但是你可以将其存储在任何地方，以便可以很容易地将其作为文本取回，并输入到你的 WebGPU 程序中。例如，另一种常见的作法是将着色器存储在 {{htmlelement("script")}} 元素中并且使用 {{domxref("Node.textContent")}} 取回内容。用于 WGSL 的正确 MIME 类型是 `text/wgsl`。
 
-To make your shader code available to WebGPU, you have to put it inside a {{domxref("GPUShaderModule")}} via a {{domxref("GPUDevice.createShaderModule()")}} call, passing your shader code as a property inside a descriptor object. For example:
+为了确保你的着色器代码可提供给 WebGPU，你必须通过 {{domxref("GPUDevice.createShaderModule()")}} 调用，将其放入 {{domxref("GPUShaderModule")}} 中，将你的着色器代码作为描述符对象中的属性传递。例如：
 
 ```js
 const shaderModule = device.createShaderModule({
@@ -141,9 +141,9 @@ const shaderModule = device.createShaderModule({
 
 ### 获取和配置 canvas 上下文
 
-In a render pipeline, we need to specify somewhere to render the graphics to. In this case we are getting a reference to an onscreen `<canvas>` element then calling {{domxref("HTMLCanvasElement.getContext()")}} with a parameter of `webgpu` to return its GPU context (a {{domxref("GPUCanvasContext")}} instance).
+在渲染管线中，我们需要指定在哪个位置渲染图形。在这种情况下，我们获得对屏幕上 `<canvas>` 元素速度引用，然后使用 `webgpu` 参数 调用 {{domxref("HTMLCanvasElement.getContext()")}}，以返回它的 GPU 上下文（一个 {{domxref("GPUCanvasContext")}} 实例）。
 
-From there, we configure the context with a call to {{domxref("GPUCanvasContext.configure()")}}, passing it an options object containing the {{domxref("GPUDevice")}} that the rendering information will come from, the format the textures will have, and the alpha mode to use when rendering semi-transparent textures.
+从这里继续，我们将通过调用 {{domxref("GPUCanvasContext.configure()")}} 去配置上下文，向它传递包含渲染信息的可选对象，包括 {{domxref("GPUDevice")}}、纹理的格式以及在半透明纹理时使用的 alpha 模式。
 
 ```js
 const canvas = document.querySelector("#gpuCanvas");
@@ -156,11 +156,11 @@ context.configure({
 });
 ```
 
-> **Note:** The best practice for determining the texture format is to use the {{domxref("GPU.getPreferredCanvasFormat()")}} method; this selects the most efficient format (either `bgra8unorm` or `rgba8unorm`) for the user's device.
+> **备注：** 确定纹理格式的最佳做法是使用 {{domxref("GPU.getPreferredCanvasFormat()")}} 方法；这将为用户的设备选择最有效的格式（`bgra8unorm` 或 `rgba8unorm`）。
 
 ### 创建缓冲区并将我们的三角形数据写入
 
-Next we will provide our WebGPU program with our data, in a form it can use. Our data is initially provided in a {{jsxref("Float32Array")}}, which contains 8 data points for each triangle vertex — X, Y, Z, W for position, and R, G, B, A for color.
+接下来，我们将以 WebGPU 可以使用的数据形式向它的程序提供我们的数据。我们的数据最初在 {{jsxref("Float32Array")}} 中提供，每个三角形包含 8 个数据点——X、Y、Z、W 代表位置，R、G、B、A 代表颜色。
 
 ```js
 const vertices = new Float32Array([
@@ -169,9 +169,9 @@ const vertices = new Float32Array([
 ]);
 ```
 
-However, we've got an issue here. We need to get our data into a {{domxref("GPUBuffer")}}. Behind the scenes, this type of buffer is stored in memory very tightly integrated with the GPU's cores to allow for the desired high performance processing. As a side effect, this memory can't be accessed by processes running on the host system, like the browser.
+但是，我们这里有一个问题。我们需要将我们的数据放入 {{domxref("GPUBuffer")}}。在幕后，这种类型的缓冲区与 GPU 的核心非常紧密的集成在一起，以实现所需的高性能处理。由于副作用，该内存不能通过主机系统上运行的进程（例如浏览器）访问。
 
-The {{domxref("GPUBuffer")}} is created via a call to {{domxref("GPUDevice.createBuffer()")}}. We give it a size equal to the length of the `vertices` array so it can contain all the data, and `VERTEX` and `COPY_DST` usage flags to indicate that the buffer will be used as a vertex buffer and the destination of copy operations.
+{{domxref("GPUBuffer")}} 通过调用 {{domxref("GPUDevice.createBuffer()")}} 创建。我们给它与 `vertices` 数组长度等同的大小，这样它可以包含所有数据，以及 `VERTEX` 和 `COPY_DST` 使用标志去指示缓冲区将用于顶点缓冲区和复制操作的目的地。
 
 ```js
 const vertexBuffer = device.createBuffer({
@@ -180,7 +180,7 @@ const vertexBuffer = device.createBuffer({
 });
 ```
 
-We could handle getting our data into the `GPUBuffer` using a mapping operation, like we use in the [compute pipeline example](#basic_compute_pipeline) to read data from the GPU back to JavaScript. However, in this case we are going to use the handy {{domxref("GPUQueue.writeBuffer()")}} convenience method, which takes as its parameters the buffer to write to, the data source to write from, an offset value for each, and the size of data to write (we've specified the whole length of the array). The browser then works out the most efficient way to handle writing the data.
+我们将使用映射操作将我们的数据放入 `GPUBuffer`，就像我们在[计算管线实例](#基础的计算管线)中，将数据从 GPU 读回到 JavaScript。然而，在这种情况下，我们将使用便利的 {{domxref("GPUQueue.writeBuffer()")}} 方法，它将要写入缓冲区的、要写入数据源的、每个偏移值和要写入数据的的大小作为参数（我们已经指定了数据的整个长度）。然后浏览器会找出写入数据的最高效的方式。
 
 ```js
 device.queue.writeBuffer(vertexBuffer, 0, vertices, 0, vertices.length);
@@ -188,9 +188,9 @@ device.queue.writeBuffer(vertexBuffer, 0, vertices, 0, vertices.length);
 
 ### 定义和创建渲染管线
 
-Now we've got our data into a buffer, the next part of the setup is to actually create our pipeline, ready to be used for rendering.
+现在我们已经将数据放入缓冲区，设置的下一部分是实际创建我们的管线，为渲染准备好。
 
-First of all, we create an object that describes the required layout of our vertex data. This perfectly describes what we saw earlier on in our `vertices` array and vertex shader stage — each vertex has position and color data. Both are formatted in `float32x4` format (which maps to the WGSL `vec4<f32>` type), and the color data starts at an offset of 16 bytes into each vertex. `arrayStride` specifies the stride, meaning the number of bytes making up each vertex, and `stepMode` specifies that the data should be fetched per-vertex.
+首先，我们创建一个对象，该对象描述我们顶点数据所需的布局。这完美地描述了我们在 `vertices` 数组和顶点着色阶段看到的内容——每个顶点都有位置和颜色数据。两者都采用 `float32x4` 格式（映射到 WGSL 的 `vec4<f32>` 类型），颜色数据从每个顶点的 16 字节偏移量开始。`arrayStride` 指定了步幅，表示构成每个顶点的字节数，`stepMode` 指定了应该按顶点获取数据。
 
 ```js
 const vertexBuffers = [
@@ -213,11 +213,11 @@ const vertexBuffers = [
 ];
 ```
 
-Next, we create a descriptor object that specifies the configuration of our render pipeline stages. For both the shader stages, we specify the {{domxref("GPUShaderModule")}} that the relevant code can be found in (`shaderModule`), and the name of the function that acts as the entry point for each stage.
+下一步，我们创建一个描述符对象，该对象指定了我们渲染管线阶段的配置。对于两个着色阶段，我们指定了可以在 `shaderModule` 中找到相关代码的 {{domxref("GPUShaderModule")}}，以及找到每个阶段入口点的函数名称。
 
-In addition, in the case of the vertex shader stage we provide our `vertexBuffers` object to provide the expected state of our vertex data. And in the case of our fragment shader stage, we provide an array of color target states that indicate the specified rendering format (this matches the format specified in our canvas context config earlier).
+此外，在顶点着色阶段，我们提供我们的 `vertexBuffers` 对象，来提供顶点数据的预期状态。在我们的片元着色阶段，我们提供了一组颜色目标说明的数组，其指示渲染的格式（这与我们之前在 canvas 上下文配置中指定的格式相匹配）。
 
-We also specify a `primitive` state, which in this case just states the type of primitive we will be drawing, and a `layout` of `auto`. The `layout` property defines the layout (structure, purpose, and type) of all the GPU resources (buffers, textures, etc.) used during the execution of the pipeline. In more complex apps, this would take the form of a {{domxref("GPUPipelineLayout")}} object, created using {{domxref("GPUDevice.createPipelineLayout()")}} (you can see an example in our [Basic compute pipeline](#basic_compute_pipeline)), which allows the GPU to figure out how to run the pipeline most efficiently ahead of time. Here however we are specifying the `auto` value, which will cause the pipeline to generate an implicit bind group layout based on any bindings defined in the shader code.
+我们也指定了一个 `primitive` 说明，在这种情况下，它只是说明了我们将要绘制的原始类型，以及 `layout` 为 `auto`。`layout` 属性定义了在管线执行期间，所有 GPU 资源（缓冲区、纹理等）的布局（结构、用途和类型。在更复杂的应用程序中，这将采用 {{domxref("GPUPipelineLayout")}} 对象的形式，使用 {{domxref("GPUDevice.createPipelineLayout()")}} 创建（你可以在我们的[基础的计算管线](#基础的计算管线)看见这个示例），它允许 GPU 提前弄清楚如何更有效地运行管线。然而，在这里我们指定了 `auto` 值，这将导致管线基于着色器代码中定义的任何绑定生成隐式绑定组布局。
 
 ```js
 const pipelineDescriptor = {
@@ -242,7 +242,7 @@ const pipelineDescriptor = {
 };
 ```
 
-Finally, we can create a {{domxref("GPURenderPipeline")}} based on our `pipelineDescriptor` object, by passing it in as a parameter to a {{domxref("GPUDevice.createRenderPipeline()")}} method call.
+最终，我们通过传递 `pipelineDescriptor` 参数给 {{domxref("GPUDevice.createRenderPipeline()")}} 方法调用，我们创建了一个 {{domxref("GPURenderPipeline")}}。
 
 ```js
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
@@ -250,17 +250,17 @@ const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
 ### 运行渲染通道
 
-Now that all the setup is done, we can actually run a rendering pass and draw something onto our `<canvas>`. To encode any commands to be later issued to the GPU, you need to create a {{domxref("GPUCommandEncoder")}} instance, which is done using a {{domxref("GPUDevice.createCommandEncoder()")}} call.
+现在所有设置都已完成，实际上，我们可以运行一个渲染通道兵器在我们的 `<canvas>` 上进行绘制。为了对稍后发送给 GPU 的任何指令进行编码，你需要创建一个 {{domxref("GPUCommandEncoder")}} 实例，这是调用 {{domxref("GPUDevice.createCommandEncoder()")}} 完成的。
 
 ```js
 const commandEncoder = device.createCommandEncoder();
 ```
 
-Next up we start the rendering pass running by creating a {{domxref("GPURenderPassEncoder")}} instance with a {{domxref("GPUCommandEncoder.beginRenderPass()")}} call. This method takes a descriptor object as a parameter, the only mandatory property of which is a `colorAttachments` array. In this case, we specify:
+下一步，我们通过调用 {{domxref("GPUCommandEncoder.beginRenderPass()")}} 创建 {{domxref("GPURenderPassEncoder")}} 实例来开始运行渲染通道。该方法采用一个描述符对象作为参数，唯一的必须属性是 `colorAttachments` 数组。在该实例中，我们指定了：
 
-1. A texture view to render into; we create a new view from the `<canvas>` via {{domxref("GPUTexture.createView", "context.getCurrentTexture().createView()")}}.
-2. That the view should be "cleared" to a specified color once loaded and before any drawing takes place. This is what causes the blue background behind the triangle.
-3. That the value of the current rendering pass should be stored for this color attachment.
+1. 要渲染到的纹理视图；我们通过 {{domxref("GPUTexture.createView", "context.getCurrentTexture().createView()")}} 从 `<canvas>` 创建一个新视图。
+2. 纹理视图一旦加载并且在任何绘制发生之前，将“清除”视图到一个指定的颜色。这就是导致三角形后面出现蓝色背景的原因。
+3. 我们还要在当前的渲染通道中存储这个颜色附着的值。
 
 ```js
 const clearColor = { r: 0.0, g: 0.5, b: 1.0, a: 1.0 };
@@ -279,11 +279,11 @@ const renderPassDescriptor = {
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 ```
 
-Now we can invoke methods of the rendering pass encoder to draw our triangle:
+现在，我们可以调用渲染通道编码器的方法去绘制我们的三角形：
 
-1. {{domxref("GPURenderPassEncoder.setPipeline()")}} is called with our `renderPipeline` object as a parameter to specify the pipeline to use for the rendering pass.
-2. {{domxref("GPURenderPassEncoder.setVertexBuffer()")}} is called with our `vertexBuffer` object as a parameter to act as the data source to pass to the pipeline to render. The first parameter is the slot to set the vertex buffer for, and is a reference to the index of the element in the `vertexBuffers` array which describes this buffer's layout.
-3. {{domxref("GPURenderPassEncoder.draw()")}} sets the drawing in motion. There is data for three vertices inside our `vertexBuffer`, so we set a vertex count value of `3` to draw them all.
+1. 将我们的 `renderPipeline` 对象作为 {{domxref("GPURenderPassEncoder.setPipeline()")}} 方法的参数调用，以指定用于渲染管线的通道。
+2. 将我们的 `vertexBuffer` 对象作为 {{domxref("GPURenderPassEncoder.setVertexBuffer()")}} 方法的参数调用，作为数据源传递给管线进行渲染。第一个参数是设置顶点缓冲区的插槽，这是对 `vertexBuffers` 数组中描述该缓冲区布局的元素索引的引。
+3. {{domxref("GPURenderPassEncoder.draw()")}} 设置动态绘制。在我们的 `vertexBuffer` 中有三个顶点的数据，所以我们将顶点数值设置为 `3` 去绘制它们。
 
 ```js
 passEncoder.setPipeline(renderPipeline);
@@ -291,13 +291,13 @@ passEncoder.setVertexBuffer(0, vertexBuffer);
 passEncoder.draw(3);
 ```
 
-To finish encoding the sequence of commands and issue them to the GPU, three more steps are needed.
+要完成对指令序列的编码并将它们发送给 GPU，还需要三个步骤。
 
-1. We invoke the {{domxref("GPURenderPassEncoder.end()")}} method to signal the end of the render pass command list.
-2. We invoke the {{domxref("GPUCommandEncoder.finish()")}} method to complete recording of the issued command sequence and encapsulate it into a {{domxref("GPUCommandBuffer")}} object instance.
-3. We submit the {{domxref("GPUCommandBuffer")}} to the device's command queue (represented by a {{domxref("GPUQueue")}} instance) to be sent to the GPU. The device's queue is available via the {{domxref("GPUDevice.queue")}} property, and an array of {{domxref("GPUCommandBuffer")}} instances can be added to the queue via a {{domxref("GPUQueue.submit()")}} call.
+1. 我们调用 {{domxref("GPURenderPassEncoder.end()")}} 方法去给渲染指令列表发出结束的信号。
+2. 我们调用 {{domxref("GPUCommandEncoder.finish()")}} 方法去完成对发出指令序列的记录，并将其封装到 {{domxref("GPUCommandBuffer")}} 对象中。
+3. 我们提交 {{domxref("GPUCommandBuffer")}} 到设备的指令队列中（通过 {{domxref("GPUQueue")}} 实例表示）已发送给 GPU。这个设备的队列可以通过 {{domxref("GPUDevice.queue")}} 属性获取，并可以通过 {{domxref("GPUQueue.submit()")}} 调用将 {{domxref("GPUCommandBuffer")}} 实例数组增加到队列中。
 
-These three steps can be achieved via the following two lines:
+这三个步骤可以通过以下两行来实现。
 
 ```js
 passEncoder.end();
@@ -427,7 +427,7 @@ passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
 passEncoder.end();
 ```
 
-### Reading the results back to JavaScript
+### 将结果读回 JavaScript
 
 Before submitting the encoded commands to the GPU for execution using {{domxref("GPUQueue.submit()")}}, we copy the contents of the `output` buffer to the `stagingBuffer` buffer using {{domxref("GPUCommandEncoder.copyBufferToBuffer()")}}.
 
@@ -535,7 +535,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPURenderPipeline")}}
   - : Controls the vertex and fragment shader stages and can be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
 
-### 编码并向 GPU 提交命令
+### 编码并向 GPU 提交指令
 
 - {{domxref("GPUCommandBuffer")}}
   - : Represents a recorded list of GPU commands that can be submitted to a {{domxref("GPUQueue")}} for execution.
