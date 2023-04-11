@@ -134,7 +134,7 @@ There is a "Save" button and a "Cancel" button:
 - When the "Save" button is clicked, the component emits the new label via an `item-edited` event.
 - When the "Cancel" button is clicked, the component signals this by emitting an `edit-cancelled` event.
 - 当“Save”按钮被点击时，组件通过 `item-edited` 事件创建一个新标签。
-- 当“Cancel”按钮被点击时，组件通过  `edit-cancelled` 事件发出信号。
+- 当“Cancel”按钮被点击时，组件通过 `edit-cancelled` 事件发出信号。
 
 ## Modifying our ToDoItem component
 修改我们的 `ToDoTtem` 组件
@@ -216,7 +216,7 @@ Now we have an `isEditing` flag that we can use to signify that the item is bein
 现在我们有了一个可用的 `isEditing` 标志来表示事项正在被编辑（或者未被编辑）。如果 `isEditing` 为真，我们会用这个标志来展示我们的 `ToDoItemEditForm` 而不是复选框。为此，我们将使用另一个 Vue 指令：[`v-if`](https://vuejs.org/api/built-in-directives.html#v-if).
 
 The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) and [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
- `v-if` 指令只会在传递给它的值为真的情况下渲染一个块。这和 `if` 语句在 JavaScript 起作用的方式相似。`v-if` 也有对应的 [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) 和 [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) 指令，在Vue模板中提供相当于 JavaScript 的 `else if` 和 `else` 逻辑。
+ `v-if` 指令只会在传递给它的值为真的情况下渲染一个块。这和 `if` 语句在 JavaScript 起作用的方式相似。`v-if` 也有对应的 [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) 和 [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) 指令，在 Vue 模板中提供相当于 JavaScript 的 `else if` 和 `else` 逻辑。
 
 It's important to note that `v-else` and `v-else-if` blocks need to be the first sibling of a `v-if`/`v-else-if` block, otherwise Vue will not recognize them. You can also attach `v-if` to a `<template>` tag if you need to conditionally render an entire template.
 需要注意的是，`v-else` 和 `v-else-if` 块需要是 `v-if`/`v-else-if` 块的第一个兄弟，否则 Vue 将无法识别它们。如果你需要条件渲染整个模板，你也可以将 `v-if` 添加到 `<template>` 标签上。
@@ -280,7 +280,7 @@ itemEdited(newLabel) {
 ```
 
 Next, we'll need an `editCancelled()` method. This method will take no arguments and just serve to set `isEditing` back to `false`. Add this method below the previous one:
-接下来，我们需要一个 `editCancelled()` 方法。这个方法没有参数，只是将 `isEditing` 设置回 `false` 。在下面这个方法之前添加这个方法：
+接下来，我们需要一个 `editCancelled()` 方法。这个方法没有参数，只是将 `isEditing` 设置回 `false`。在下面这个方法之前添加这个方法：
 
 ```js
 editCancelled() {
@@ -330,10 +330,10 @@ Next, we'll add the event listeners for the `item-deleted` and `item-edited` eve
 - For `item-deleted`, you'll need to pass the `item.id` to the method.
 - For `item-edited`, you'll need to pass the `item.id` and the special `$event` variable. This is a special Vue variable used to pass event data to methods. When using native HTML events (like `click`), this will pass the native event object to your method.
 - 对于 `item-deleted`，你需要把 `item.id` 传递给该方法。
-- 对于 `item-edited`，你需要传递 `item.id` 和特殊的 `$event` 变量。这是一个特殊的 Vue 变量，用于传递事件数据给方法。当使用本地HTML事件（如 `click` ）时，它将把本地事件对象传递给你的方法。
+- 对于 `item-edited`，你需要传递 `item.id` 和特殊的 `$event` 变量。这是一个特殊的 Vue 变量，用于传递事件数据给方法。当使用本地 HTML 事件（如 `click`）时，它将把本地事件对象传递给你的方法。
 
 Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
-更新`App.vue`模板内的`<to-do-item>`调用，看起来像这样：
+更新 `App.vue` 模板内的 `<to-do-item></to-do-item>` 元素，看起来像这样：
 
 ```html
 <to-do-item
