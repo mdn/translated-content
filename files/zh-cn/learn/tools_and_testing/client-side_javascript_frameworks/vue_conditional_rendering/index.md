@@ -158,7 +158,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_
 </template>
 ```
 
-我们在整个模板外面添加了一个包装元素 `<div>` 用于布局。
+我们在整个模板外面添加了一个用于布局的包装元素 `<div>`。
 
 我们还添加了“Edit”和“Delete”按钮：
 
