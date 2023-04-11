@@ -476,7 +476,7 @@ WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错�
 
 你可以在关于 WebGPU 错误处理的解释中找到更多有关信息——参见[对象的有效性和销毁状态](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed)以及[错误](https://gpuweb.github.io/gpuweb/explainer/#errors)。[WebGPU 错误处理的最佳实践](https://toji.dev/webgpu-best-practices/error-handling)提供了很多有关真实世界的示例和建议的有用信息。
 
-> **备注：** 在 WebGL 中处理的错误的历史方式是提供一个 {{domxref("WebGLRenderingContext.getError", "getError()")}} 方法，该方法返回错误的信息。这种方式存在问题，因为它会同步返回错误，这对性能是不利的——每次调用都需要往返到 GPU 并且需要所有先前发出的操作都已经完成。它的状态模型也是扁平的，这意味着错误可以在不相关的代码之间泄露。WebGPU 的创建者决定改变这一点。
+> **备注：** 在 WebGL 中处理错误的历史方式是提供一个 {{domxref("WebGLRenderingContext.getError", "getError()")}} 方法，该方法返回错误的信息。这种方式存在问题，因为它会同步返回错误，这对性能是不利的——每次调用都需要往返到 GPU 并且需要所有先前发出的操作都已经完成。它的状态模型也是扁平的，这意味着错误可以在不相关的代码之间泄露。WebGPU 的创建者决定改变这一点。
 
 ## 接口
 
