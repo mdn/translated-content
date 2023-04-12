@@ -17,11 +17,11 @@ WebGL 和用于编写 WebGL 着色器代码的 [GLSL](<https://www.khronos.org/o
 
 然而，WebGL 有一些需要解决的基本问题：
 
-- 自 WebGL 发布以来，出现了新一代的原生 GPU API——最受欢迎的是[微软的 Direct3D 12](https://docs.microsoft.com/zh-cn/windows/win32/direct3d12/direct3d-12-graphics)、[苹果的 Metal](https://developer.apple.com/metal/) 以及[科纳斯组织的 Vulkan](https://www.vulkan.org/)——它们提供了大量新功能。并没有任何计划对 OpenGL（以及 WebGL）进行更多更新，因此它将不会获得任意这些新的功能。然而，WebGPU 将在未来添加这些新功能。
+- 自 WebGL 发布以来，出现了新一代的原生 GPU API——最受欢迎的是[微软的 Direct3D 12](https://docs.microsoft.com/zh-cn/windows/win32/direct3d12/direct3d-12-graphics)、[苹果的 Metal](https://developer.apple.com/metal/) 以及[科纳斯组织的 Vulkan](https://www.vulkan.org/)——它们提供了大量新特性。并没有任何计划对 OpenGL（以及 WebGL）进行更多更新，因此它将不会获得任意这些新的特性。然而，WebGPU 将在未来添加这些新特性。
 - WebGL 完全基于绘制图形并将它们渲染到画布的用例。它并不能很好地处理通用 GPU（GPGPU）的计算。GPGPU 计算对于很多不同的用例显得越来越重要，例如那些基于机器学习的模型。
-- 无论是在同时渲染的对象方面，还是新渲染功能的使用方面，3D 图形应用程序的需求都在逐渐变高。
+- 无论是在同时渲染的对象方面，还是新渲染特性的使用方面，3D 图形应用程序的需求都在逐渐变高。
 
-WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的通用架构，它会让你感到更加丝滑。它支持图形渲染，同时对 GPGPU 计算也有一流的支持。在 CPU 端渲染单个对象的成本要低得多，并且它支持现代化的 GPU 渲染功能，例如，基于计算的粒子和用于后期处理的滤镜，如颜色效果、锐化和景深模拟。此外，它也可以直接在 GPU 上处理诸如剔除和骨骼动画模型等耗费大量计算资源的任务。
+WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的通用架构，它会让你感到更加丝滑。它支持图形渲染，同时对 GPGPU 计算也有一流的支持。在 CPU 端渲染单个对象的成本要低得多，并且它支持现代化的 GPU 渲染特性，例如，基于计算的粒子和用于后期处理的滤镜，如颜色效果、锐化和景深模拟。此外，它也可以直接在 GPU 上处理诸如剔除和骨骼动画模型等耗费大量计算资源的任务。
 
 ## 通用模型
 
@@ -47,9 +47,9 @@ WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的�
 
 1. {{domxref("Navigator.gpu")}} 属性（或 {{domxref("WorkerNavigator.gpu")}}，如果你在 worker 内部使用 WebGPU 功能）为当前上下文返回 {{domxref("GPU")}} 对象。
 2. 通过 {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} 方法访问适配器。该方法接受一个可选的设置对象，其允许你请求一个高性能或者低功耗的适配器。如果没有可选的对象，设备将提供对默认适配器的访问，这对于大多数用途来说足够了。
-3. 设备可以通过 {{domxref("GPUAdapter.requestDevice()")}} 请求。该方法接受一个可选的对象（称为描述符），该设备可以用于指定你想要逻辑设备具有的确切功能和限制。如果没有可选的对象，所提供的设备将使用合理的通用的规则，这对于大多数用途来说够了。
+3. 设备可以通过 {{domxref("GPUAdapter.requestDevice()")}} 请求。该方法接受一个可选的对象（称为描述符），该设备可以用于指定你想要逻辑设备具有的确切特性和限制。如果没有可选的对象，所提供的设备将使用合理的通用的规则，这对于大多数用途来说够了。
 
-将其与一些特征检测检查结合起来，可以按如下方式实现上述过程：
+将其与一些特性检测检查结合起来，可以按如下方式实现上述过程：
 
 ```js
 async function init() {
@@ -488,7 +488,7 @@ WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错�
 - {{domxref("GPU")}}
   - : 使用 WebGPU 的起点。它可用于返回 {{domxref("GPUAdapter")}}。
 - {{domxref("GPUAdapter")}}
-  - : 表示 GPU 适配器。你可以从这里请求 {{domxref("GPUDevice")}}、适配器信息、功能和限制。
+  - : 表示 GPU 适配器。你可以从这里请求 {{domxref("GPUDevice")}}、适配器信息、特性和限制。
 - {{domxref("GPUAdapterInfo")}}
   - : 包含有关适配器的标识信息。
 
