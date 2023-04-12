@@ -6253,10 +6253,6 @@
     "modified": "2020-10-15T22:22:43.654Z",
     "contributors": ["ellizii"]
   },
-  "Web/API/Navigation_timing_API": {
-    "modified": "2019-03-23T22:26:37.338Z",
-    "contributors": ["frooeyzanny", "Zaynullin", "andrewsezko"]
-  },
   "Web/API/Navigator": {
     "modified": "2019-03-18T20:54:33.010Z",
     "contributors": [
@@ -6544,6 +6540,10 @@
   "Web/API/Performance/now": {
     "modified": "2019-12-02T17:54:34.173Z",
     "contributors": ["VoloshchenkoAl", "icamys", "illyaV"]
+  },
+  "Web/API/Performance_API/Navigation_timing": {
+    "modified": "2019-03-23T22:26:37.338Z",
+    "contributors": ["frooeyzanny", "Zaynullin", "andrewsezko"]
   },
   "Web/API/Pointer_Lock_API": {
     "modified": "2019-03-23T23:04:56.807Z",
