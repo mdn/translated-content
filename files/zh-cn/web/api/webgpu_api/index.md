@@ -5,9 +5,9 @@ slug: Web/API/WebGPU_API
 
 {{SeeCompatTable}}{{DefaultAPISidebar("WebGPU API")}}
 
-**WebGPU API** 使 web 开发人员能够使用底层系统的 GPU（图形处理单元）进行高性能计算并绘制可在浏览器中渲染的复杂图形。
+**WebGPU API** 使 web 开发人员能够使用底层系统的 GPU（图形处理器）进行高性能计算并绘制可在浏览器中渲染的复杂图形。
 
-WebGPU 是 {{domxref("WebGL_API", "WebGL", "", 1)}} 的继任者，为现代 GPU 提供更好的兼容、支持更通用的 GPU 计算、更快的操作以及能够访问到更高级的 GPU 特征。
+WebGPU 是 {{domxref("WebGL_API", "WebGL", "", 1)}} 的继任者，为现代 GPU 提供更好的兼容、支持更通用的 GPU 计算、更快的操作以及能够访问到更高级的 GPU 特性。
 
 ## 概念和使用
 
@@ -18,6 +18,7 @@ WebGL 和用于编写 WebGL 着色器代码的 [GLSL](<https://www.khronos.org/o
 然而，WebGL 有一些需要解决的基本问题：
 
 - 自 WebGL 发布以来，出现了新一代的原生 GPU API——最受欢迎的是[微软的 Direct3D 12](https://docs.microsoft.com/zh-cn/windows/win32/direct3d12/direct3d-12-graphics)、[苹果的 Metal](https://developer.apple.com/metal/) 以及[科纳斯组织的 Vulkan](https://www.vulkan.org/)——它们提供了大量新功能。并没有任何计划对 OpenGL（以及 WebGL）进行更多更新，因此它将不会获得任意这些新的功能。然而，WebGPU 将在未来添加这些新功能。
+- WebGL 完全基于绘制图形并将它们渲染到画布的用例。它并不能很好地处理通用 GPU（GPGPU）的计算。GPGPU 计算对于很多不同的用例显得越来越重要，例如那些基于机器学习的模型。
 - 无论是在同时渲染的对象方面，还是新渲染功能的使用方面，3D 图形应用程序的需求都在逐渐变高。
 
 WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的通用架构，它会让你感到更加丝滑。它支持图形渲染，同时对 GPGPU 计算也有一流的支持。在 CPU 端渲染单个对象的成本要低得多，并且它支持现代化的 GPU 渲染功能，例如，基于计算的粒子和用于后期处理的滤镜，如颜色效果、锐化和景深模拟。此外，它也可以直接在 GPU 上处理诸如剔除和骨骼动画模型等耗费大量计算资源的任务。
