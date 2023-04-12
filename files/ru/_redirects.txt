@@ -490,6 +490,7 @@
 /ru/docs/Web/API/MediaRecorder/ondataavailable	/ru/docs/Web/API/MediaRecorder/dataavailable_event
 /ru/docs/Web/API/Media_Streams_API/Taking_still_photos	/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /ru/docs/Web/API/MouseEvent/which	/ru/docs/conflicting/Web/API/UIEvent/which
+/ru/docs/Web/API/Navigation_timing_API	/ru/docs/Web/API/Performance_API/Navigation_timing
 /ru/docs/Web/API/Navigator/battery	/ru/docs/Web/API/Navigator/getBattery
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
 /ru/docs/Web/API/Node.appendChild	/ru/docs/Web/API/Node/appendChild
