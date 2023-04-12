@@ -123,7 +123,7 @@ Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un 
 </blockquote>
 ```
 
-### Résultat 
+### Résultat
 
 {{EmbedLiveSample("", 640, 200)}}
 
