@@ -388,6 +388,6 @@ editToDo(toDoId, newLabel) {
 
 ## 总结
 
-这篇文章相当密集，我们在这里讨论了很多内容。现在我们的应用中有了编辑和删除功能，这非常令人兴奋。现在，我们的 Vue 系列已经接近尾声。最后一个要讨论的功能是焦点管理，或者换句话说：我们应如何提高应用程序的[键盘可访问性](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Keyboard)。
+这篇文章相当密集，我们在这里讨论了很多内容。现在我们的应用中有了编辑和删除功能，这非常令人兴奋。现在，我们的 Vue 系列已经接近尾声。最后一个要讨论的功能是焦点管理，或者换句话说：我们应如何提高应用程序的[键盘无障碍](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Keyboard)。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
