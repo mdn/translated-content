@@ -23,23 +23,33 @@ translation_of: Learn/Tools_and_testing
 
 {{LearnSidebar}}
 
-Once you've started to become comfortable programming with core web technologies (like HTML, CSS, and JavaScript), and you start to get more experience, read more resources, and learn more tips and tricks, you'll start to come across all kind of tools, from ready-rolled CSS and JavaScript, to testing and automation apps, and more besides. As your web projects become larger and more complex, you'll want to start taking advantage of some of these tools, and working out reliable testing plans for your code. This part of the learning area aims to give you what you need get started and make informed choices.
+Однажды вы начнете без труда пользоваться основными веб технологиями, такими как: HTML, CSS и JavaScript. Вы станете более опытным, прочитаете множество статей, изучите много трюков программирования. И тогда вы начнете использовать еще больше инструментов и подходов : от шаблонного CSS и JavaScript до тестирования, автоматизации тестирования приложений и многого другого. По мере усложнения ваших веб приложений, вам захочется использовать инструментарий более продвинуто, получать больше пользы от создаваемого тестового кода. Цель этого раздела - дать основные понятия об инструментах и технологиях , которые помогут ориентироваться в тестировании.
 
-The web industry is an exciting place to work, but it is not without its complications. The core technologies we use to build web sites are fairly stable now, but new features are being added all the time, and new tools — that facilitate working with, and are built on top of these technologies — are constantly appearing. On top of that, we still need to keep cross-browser support in the forefront of our minds, and make sure that our code follows best practices that allow our projects to work across different browsers and devices that our users are using to browse the Web, and be usable by people with disabilities.
+Индустрия веб разработки - потрясающее место для работы, но и здесь часто приходится встречаться с трудностями. Основные технологии разработки уже достаточно прочно устоялись, тем не менее, регулярно добавляется новая функциональность, становятся популярными новые инструменты , которые облегчают работу с нововведениями. К тому же, нам все еще требуется поддерживать кросс-браузерную функциональность, а также быть уверенными, что наш код соответствует лучшим практикам и работает одинаково хорошо и доступно во всех средах, которые используют клиенты наших сервисов.
 
-Working out what tools you should be using can be a difficult process, so we have written this set of articles to inform you of what types of tool are available, what they can do for you, and how to make use of the current industry favourites.
+<Понять, с чем работать для большего удобства - может оказаться нелегким выбором. Чтобы облегчить этот выбор, мы описали несколько статей, которые помогут понять основы инструментов и найти среди них (и аналогичных) наиболее удобный.
 
-> **Примечание:** Because new tools appear and old ones go out of fashion all the time, we have deliberately written this material to be as neutral as possible — we want to focus first and foremost on the general types of tasks these tools will help you accomplish, and keep prescribing specific tools to a minimum. We obviously need to show tool usage to demonstrate specific techniques, but be clear that we do not necessarily recommend these tools as the best or only way to do things — in most cases there are other ways, but we want to provide you with a clear methodology that works.
+> **Примечание:** Новые и старые инструменты сменяются регулярно, поэтому мы описали следующие статьи, сохраняя нейтральность в выборе — мы хотим показать их базовые принципы, описать задачи, которые они решают. На примерах мы рассмотрим основные техники решения задач, но мы не настаиваем на утверждении, что это единственный верный путь решения поставленных задач. В большинстве случаев есть альтернативные способы с использованием иных инструменотов. Мы только описываем основные подходы и методологии.
 
-## Learning pathway
+## План обучения
 
-You should really learn the basics of the core [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), and [JavaScript](/ru/docs/Learn/JavaScript) languages first before attempting to use the tools detailed here. For example, you'll need to know the fundamentals of these languages before you start debugging problems in complex web code, or making effective use of JavaScript libraries, or writing tests and running them against your code using test runners, etc.
+Вам необходимо ознакомиться со следующими разделами: [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), и с основами [JavaScript](/ru/docs/Learn/JavaScript) до того, как начинать пользоваться инструментами , описанными в этом разделе. Например, вам понадобится понимание основ этих технологий во время отладки кода полноценных веб приложений, использования сторонних JavaScript библиотек или при написании тестового кода вашего сервиса.
 
-You need a solid foundation first.
+В первую очередь вам необходимо разобраться с основами.
 
-## Modules
+## Модули
 
-- Real world web development tools (TBD)
-  - : In this module, we explore the different kinds of web development tools available. This includes reviewing the most common kinds of tasks you may be called on to solve, how they can fit together in a workflow, and the best tools currently avaiable for carrying out those tasks.
-- [Cross browser testing](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing)
-  - : This module looks specifically at the area of testing web projects across different browsers. Here we look identifying your target audience (e.g. what users, browsers and devices do you most need to worry about?), how to go about doing testing, the main issues that you'll face with different types of code and how to fix/mitigate those, what tools are most useful in helping you test and fix problems, and how to use automation to speed up testing.
+- Инструменты тестирования веба в реальности (TBD)
+В этом разделе описаны различные типы инструментов веб разработки. На их примерах описаны типовые решаемые задачи, описаны возможности интеграции инструментов друг с другом.
+
+- [Понимание принципов веб разработки на стороне клиента](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools)
+Инструменты на стороне клиента могут напугать вас, но эта серия статей призвана проиллюстрировать назначение некоторых из наиболее распространенных типов инструментов на стороне клиента, объяснить ,как вы можете связать их вместе, как установить их с помощью менеджеров пакетов и управлять ими с помощью командной строки. Также мы рассмотрим на примере, как использование связок инструментов поможет получить повышение производительности.
+
+- [Понимание работы JavaScript фреймворков на стороне клиента](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+Фреймворки JavaScript — неотъемлемая часть современной веб-разработки, предоставляющая разработчикам испытанные инструменты для создания масштабируемых интерактивных веб-приложений. Многие современные компании используют фреймворки в качестве стандартной части своего инструментария, поэтому для многих задач фронтенд-разработки теперь требуется опыт работы с фреймворками. Этот модуль дает вам некоторые базовые знания о том, как работают клиентские фреймворки и как они вписываются в ваш набор инструментов, прежде чем перейти к серии руководств, охватывающих некоторые из самых популярных на сегодняшний день.
+
+- [Git и GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub)
+Все разработчики используют какую-либо систему контроля версий (VCS) - инструмент, позволяющий им работать над проектом сообща с другими разработчиками, не опасаясь, что они перезапишут работу друг друга. VCS позволяет возвращаться к предыдущим версиям базы кода, если возникает потребность. Самая популярная VCS (по крайней мере, среди веб-разработчиков) — это Git. GitHub — сайт, предоставляющий хостинг для ваших репозиториев и несколько инструментов для работы с ними. Этот модуль направлен на то, чтобы научить вас работать с Git и использовать GitHub.
+
+- [Кросс-браузерное тестирование](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
+В этом модуле особое внимание уделяется области тестирования веб-проектов в разных браузерах. Здесь мы рассмотрим, как определить вашу целевую аудиторию (например, о каких пользователях, браузерах и устройствах вам больше всего нужно беспокоиться), как провести тестирование, основные проблемы, с которыми вы столкнетесь, с различными типами кода. Рассмотрим, какие инструменты наиболее полезны для тестирования и устранения проблем, и как использовать автоматизацию для ускорения тестирования.
