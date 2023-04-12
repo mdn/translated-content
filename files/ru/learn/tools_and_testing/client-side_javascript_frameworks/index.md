@@ -4,6 +4,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 original_slug: Learn/Tools_and_testing/Фронтенд_JavaScript_фреймворки
 ---
+
 {{LearnSidebar}}
 JavaScript-фреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированныеинструменты для создания масштабируемых и интерактивных веб-приложений. Многиесовременные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
 
@@ -21,93 +22,93 @@ JavaScript-фреймворки являются неотъемлемой час
 
 **[Начните прямо сейчас с "Введение в фронтенд фреймворки"](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
 
-## Prerequisites
+## Предварительные требования
 
-You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), and especially [JavaScript](/ru/docs/Learn/JavaScript).
+Для начала вам нужно хорошо понимать базовые языки веб разработки прежде, чем вы перейдете к изучению фреймворков для клиентов — [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), и особенно [JavaScript](/ru/docs/Learn/JavaScript).
 
-Your code will be richer and more professional as a result, and you'll be able to troubleshoot problems with more confidence if you understand the fundamental web platform features that the frameworks are building on top of.
+В результате ваш код будет более насыщенным и профессиональным, и вы сможете увереннее решать проблемы, если вы понимаете фундаментальные функции веб-платформы, на которых основаны фреймворки.
 
-## Introductory guides
+## Вводные руководства
 
-- [1. Introduction to client-side frameworks](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-  - : We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
-- [2. Framework main features](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-  - : Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of “the big 4” frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
+- [1. Введение в разработку на стороне клиента](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+  - : Мы начинаем наше изучение фреймворков с общего обзора этой области, рассматривая краткую историю JavaScript и фреймворков, почему фреймворки существуют и что они дают нам, как начать думать о выборе фреймворка для изучения и какие альтернативы существуют для фреймворков на клиентской стороне.
+- [2. Основные особенности фреймворков](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+  - : Каждый крупный фреймворк на JavaScript имеет различный подход к обновлению DOM, обработке событий браузера и обеспечению приятного опыта разработчика. В этой статье будут рассмотрены основные функции "Большой четверки" фреймворков, изучая, как фреймворки обычно работают на высоком уровне, и какие различия между ними.
 
-## React tutorials
+## Руководства по React
 
-> **Примечание:** React tutorials last tested in May 2020, with React/ReactDOM 16.13.1 and create-react-app 3.4.1.
+> **Примечание:** Учебные пособия по React последний раз тестировались в мае 2020 года, с использованием React/ReactDOM 16.13.1 и create-react-app 3.4.1.
 >
-> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
+> Если вам нужно проверить свой код по нашей версии, вы можете найти готовую версию кода примера React-приложения в нашем [todo-react repository](https://github.com/mdn/todo-react). Для запуска кода воспользуйтесь <https://mdn.github.io/todo-react-build/>.
 
-- [1. Getting started with React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
-- [2. Beginning our React todo list](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - : Let's say that we’ve been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
-- [3. Componentizing our React app](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - : At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn’t have any hard rules for what is and isn’t a component – that’s up to you! In this article we will show you a sensible way to break our app up into components.
-- [4. React interactivity: Events and state](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - : With our component plan worked out, it's now time to start updating our app from a completely static UI to one that actually allows us to interact and change things. In this article we'll do this, digging into events and state along the way.
-- [5. React interactivity: Editing, filtering, conditional rendering](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - : As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks, and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.
-- [6. Accessibility in React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - : In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.
-- [7. React resources](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-  - : Our final article provides you with a list of React resources that you can use to go further in your learning.
+- [1. Начало работы с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - : В этой статье мы познакомимся с React. Мы узнаем немного подробностей о его происхождении и области применения, настроим базовый инструментарий React на нашем локальном компьютере, создадим и поиграем с простым стартовым приложением, изучая процесс работы React.
+- [2. Сбор списка задач на React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - : Допустим, нам поручили создать на React приложение, которое позволяет пользователям добавлять, редактировать и удалять задачи, над которыми они хотят работать, а также отмечать задачи как выполненные без их удаления. В этой статье мы рассмотрим создание базовой структуры компонента `App` и оформление его стиля, готовых к определению отдельных компонентов и добавлению интерактивности, которую мы добавим позже.
+- [3. Создание компонент приложения на React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - : На данный момент наше приложение - это монолит. Прежде чем мы сможем заставить его делать что-то, нам нужно разбить его на управляемые и описательные компоненты. В React нет жестких правил для того, что является компонентом и что нет - это зависит от вас! В этой статье мы покажем вам разумный способ разбить наше приложение на компоненты.
+- [4. Интерактивность React: События и состояния](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - : С нашим планом компонентов мы готовы начать обновление нашего приложения с полностью статического пользовательского интерфейса до интерфейса, который действительно позволяет нам взаимодействовать и изменять вещи. В этой статье мы сделаем это, изучая события и состояние на пути.
+- [5. Интерактивность React: изменение состояния и условный рендеринг](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - : По мере того, как мы приближаемся к концу нашего путешествия в React (по крайней мере, на данный момент), мы добавим последние штрихи к основным функциональным областям нашего приложения для списка задач. Это включает возможность редактирования существующих задач и фильтрацию списка задач между всеми, выполненными и невыполненными задачами. По пути мы рассмотрим условное рендеринг пользовательского интерфейса.
+- [6. Доступность React приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - : В нашей последней статье урока мы сосредоточимся на доступности, включая управление фокусом в React, которое может улучшить удобство использования и уменьшить путаницу как для пользователей, работающих только с клавиатурой, так и для пользователей, пользующихся скринридерами.
+- [7. Ресурсы React приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - : В нашей последней статье мы предоставляем вам список ресурсов по React, которые вы можете использовать для продолжения своего обучения.
 
-## Ember tutorials
+## Руководство по Ember
 
-> **Примечание:** Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
+> **Примечание:** Учебные пособия по Ember последний раз тестировались в мае 2020 года с версией Ember/Ember CLI 3.18.0.
 >
-> If you need to check your code against our version, you can find a finished version of the sample Ember app code in the [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). For a running live version, see <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (this also includes a few additional features not covered in the tutorial).
+> Если вам нужно проверить свой код по нашей версии, вы можете найти готовую версию образца кода приложения Ember в [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). Для запущенной онлайн-версии воспользуйтесь <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (здесь также есть несколько дополнительных функций, которые не рассматриваются в учебнике).
 
-- [1. Getting started with Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - : In our first Ember article we will look at how Ember works and what it's useful for, install the Ember toolchain locally, create a sample app, and then do some initial setup to get it ready for development.
-- [2. Ember app structure and componentization](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - : In this article we'll get right on with planning out the structure of our TodoMVC Ember app, adding in the HTML for it, and then breaking that HTML structure into components.
-- [3. Ember interactivity: Events, classes and state](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - : At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.
-- [4. Ember Interactivity: Footer functionality, conditional rendering](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - : Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e. where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
-- [5. Routing in Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - : In this article we learn about routing, or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".
-- [6. Ember resources and troubleshooting](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-  - : Our final Ember article provides you with a list of resources that you can use to go further in your learning, plus some useful troubleshooting and other information.
+- [1. Начало работы с Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - : В нашей первой статье по Ember мы рассмотрим, как работает Ember и для чего он полезен, установим локально инструментарий Ember, создадим образец приложения и выполним начальную настройку, чтобы подготовить его к разработке.
+- [2. Структура Ember приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - : В этой статье мы приступим к планированию структуры нашего приложения TodoMVC на Ember, добавим HTML-разметку для него, а затем разобьем эту структуру HTML на компоненты.
+- [3. Ember интерактивность: события, классы и состояния](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - : Далее мы начнем добавлять некоторую интерактивность в наше приложение, предоставляя возможность добавлять и отображать новые задачи в списке. По ходу дела мы рассмотрим использование событий в Ember, создание классов компонентов для хранения JavaScript-кода, контролирующего интерактивные функции, и настройку сервиса для отслеживания состояния данных нашего приложения.
+- [4. Ember интерактивность: Footer функциональность, условная отрисовка компонент](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - : Теперь пришло время приступить к функционалу Footer нашего приложения. Здесь мы обновим счетчик задач, чтобы отображалось правильное количество оставшихся задач для завершения, а также применим правильное оформление для выполненных задач (т.е. где флажок отмечен). Мы также свяжем нашу кнопку «Очистить выполненные» с соответствующей функциональностью. В процессе мы изучим использование условного рендеринга в наших шаблонах.
+- [5. Маршрутизация в Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - : В этой статье мы узнаем о маршрутизации или фильтрации на основе URL-адресов, как это иногда называется. Мы будем использовать ее для создания уникального URL-адреса для каждого из трех представлений задач - "Все", "Активные" и "Завершенные".
+- [6. Ember ресурсы и решение проблем](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - : В последнем разделе по Ember представлен перечень ресурсов для самостоятельного изучения и улучшения навыков , которые могут оказаться полезными при решении возникающих проблем в разработке.
 
-## Vue tutorials
+## Vue руководство
 
-> **Примечание:** Vue tutorials last tested in May 2020, with Vue 2.6.11.
+> **Примечание:** Vue руководство было написано в мае 2020, для Vue 2.6.11.
 >
-> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
+> Если вам нужно проверить свой код по нашей версии, вы можете найти готовую версию образца кода приложения в [todo-vue repository](https://github.com/mdn/todo-vue). Для запуска онлайн версии перейдите к <https://mdn.github.io/todo-vue/dist/>.
 
-- [1. Getting started with Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - : Now let's introduce Vue, the third of our frameworks. In this article we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.
-- [2. Creating our first Vue component](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - : Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.
-- [3. Rendering a list of Vue components](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - : At this point we've got a fully working component; we're now ready to add multiple `ToDoItem` components to our App. In this artcle we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
-- [4. Adding a new todo form: Vue events, methods, and models](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - : We now have sample data in place, and a loop that takes each bit of data and renders it inside a `ToDoItem` in our app. What we really need next is the ability to allow our users to enter their own todo items into the app, and for that we'll need a text `<input>`, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. This is what we'll cover in this article.
-- [5. Styling Vue components with CSS](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - : The time has finally come to make our app look a bit nicer. In this article we'll explore the different ways of styling Vue components with CSS.
-- [6. Using Vue computed properties](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - : In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods, but only re-run when one of their dependencies changes.
-- [7. Vue conditional rendering: editing existing todos](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - : Now it is time to add one of the major parts of functionality that we're still missing — the ability to edit existing todo items. To do this, we will take advantage of Vue's conditional rendering capabilities — namely `v-if` and `v-else` — to allow us to toggle between the existing todo item view, and an edit view where you can update todo item labels. We'll also look at adding functionality to delete todo items.
-- [8. Focus management with Vue refs](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - : We are nearly done with Vue. The last bit of functionality to look at is focus management, or put another way, how we can improve our app's keyboard accessibility. We'll look at using Vue refs to handle this — an advanced feature that allows you to have direct access to the underlying DOM nodes below the virtual DOM, or direct access from one component to the internal DOM structure of a child component.
-- [9. Vue resources](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-  - : Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
+- [1. Начало работы с Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - : Теперь давайте рассмотрим Vue, третий из наших фреймворков. В этой статье мы немного погрузимся в предысторию Vue, узнаем, как его установить и создать новый проект, изучим высокоуровневую структуру всего проекта и отдельного компонента, посмотрим, как запустить проект локально, и подготовьте его, чтобы начать сборку нашего примера.
+- [2. Создание первого компонента](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - :Теперь пришло время углубиться в Vue и создать собственный пользовательский компонент — мы начнем с создания компонента для представления каждого элемента в списке задач. Попутно мы узнаем о нескольких важных концепциях, таких как вызов компонентов внутри других компонентов, передача им данных через свойства и сохранение состояния данных.
+- [3. Отрисовка списка](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - : На данный момент у нас есть полностью рабочий компонент; теперь мы готовы добавить несколько компонентов ToDoItem в наше приложение. В этой статье мы рассмотрим добавление набора данных элемента списка задач в наш компонент App.vue, который мы затем пройдем по циклу и отобразим внутри. Компоненты `ToDoItem`, использующие директиву `v-for`.
+- [4. Добавление новой формы: события, методы, модели](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - : Теперь у нас есть образцы данных и цикл, который берет каждый бит данных и отображает их внутри «ToDoItem» в нашем приложении. Что нам действительно нужно дальше, так это возможность разрешить нашим пользователям вводить свои собственные элементы списка дел в приложение, и для этого нам понадобится текст `<input>`, событие, которое будет запускаться при отправке данных, метод для срабатывает при отправке, чтобы добавить данные и перерисовать список, а также модель для управления данными. Это то, что мы рассмотрим в этой статье.
+- [5. Оформление Vue компонентов с CSS](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - : Наконец-то пришло время сделать наше приложение немного красивее. В этой статье мы рассмотрим различные способы стилизации компонентов Vue с помощью CSS.
+- [6. Использование вычисляемых свойств Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - : В этой статье мы добавим счетчик, который отображает количество выполненных задач, используя функцию Vue, называемую вычисляемыми свойствами. Они работают аналогично методам, но перезапускаются только при изменении одной из их зависимостей.
+- [7. Условный рендеринг Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - : Теперь пришло время добавить одну из основных частей функциональности, которой нам все еще не хватает — возможность редактировать все существующие элементы. Для этого мы воспользуемся возможностями условного рендеринга Vue, а именно `v-if` и `v-else`, чтобы позволить нам переключаться между существующим представлением элементов задач и представлением редактирования, где вы можете обновлять метки элементов задач. . Мы также рассмотрим возможность добавления функции удаления всех элементов.
+- [8. Управление фокусом в приложении](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - : Мы почти закончили с Vue. Последняя часть функциональности, на которую стоит обратить внимание, — это управление фокусом или, другими словами, то, как мы можем улучшить доступность клавиатуры нашего приложения. Мы рассмотрим использование Vue refs для решения этой проблемы — расширенная функция, которая позволяет вам иметь прямой доступ к базовым узлам DOM ниже виртуального DOM или прямой доступ из одного компонента к внутренней структуре DOM дочернего компонента.
+- [9. Vue ресурсы](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - : Теперь мы завершим наше изучение Vue, предоставив вам список ресурсов, которые вы можете использовать для дальнейшего обучения, а также некоторые другие полезные советы.
 
-## Which frameworks did we choose?
+## Какие фреймворки мы выбрали?
 
-We are publishing our initial set of articles with guides focusing on three of the major frameworks out there — React/ReactDOM, Ember, and Vue. There is a variety of reasons for this:
+Мы публикуем наш первоначальный набор статей с руководствами, посвященными трем основным платформам — React/ReactDOM, Ember и Vue. Этому есть множество причин:
 
-- They are popular choices that will be around for a while — like with any software tool, it is good to stick with actively-developed choices that are likely to not be discontinued next week, and which will be desirable additions to your skillset when looking for a job.
-- They have strong communities and good documentation. It is very important to be able to get help with learning a complex subject, especially when you are just starting out.
-- We don't have the resources to cover _all_ modern frameworks. That list would be very difficult to keep up-to-date anyway, as new ones appear all the time.
-- As a beginner, trying to choose what to focus on out of the huge number of choices available is a very real problem. Keeping the list short is therefore helpful.
+- Это популярный выбор, который будет актуален некоторое время — как и в случае с любым программным инструментом, хорошо придерживаться активно разрабатываемых вариантов, которые, скорее всего, не будут сняты с производства на следующей неделе и которые будут желательными дополнениями к вашему набору навыков при поиске. для работы.
+- У них сильные сообщества и хорошая документация. Очень важно иметь возможность получить помощь в изучении сложного предмета, особенно когда вы только начинаете.
+- У нас нет ресурсов, чтобы охватить все современные фреймворки. В любом случае этот список будет очень сложно поддерживать в актуальном состоянии, так как постоянно появляются новые.
+- Как новичок, пытаясь выбрать, на чем сосредоточиться из огромного количества доступных вариантов, это очень реальная проблема. Поэтому полезно делать список коротким.
 
-We want to say this up front — we've **not** chosen the frameworks we are focusing on because we think they are the best, or because we endorse them in any way. We just think they score highly on the above criteria.
+Мы хотим сказать это заранее — мы **не** выбрали фреймворки, на которых мы сосредоточены, потому что мы считаем их лучшими или потому что мы поддерживаем их каким-либо образом. Мы просто думаем, что они высоко оценивают вышеуказанные критерии.
 
-Note that we were hoping to have more frameworks included upon intial publication, but we decided to release the content and then add more framework guides later, rather than delay it longer. If your favourite framework is not represented in this content and you'd like to help change that, feel free to discuss it with us! Get in touch with us via [Matrix](https://wiki.mozilla.org/Matrix), or [Discourse](https://discourse.mozilla.org/c/mdn), or drop us a mail on the [mdn-admins list](mailto:mdn-admins@mozilla.org).
+Обратите внимание, что мы надеялись включить больше фреймворков при первоначальной публикации, но решили опубликовать контент, а затем добавить больше руководств по фреймворкам позже, а не откладывать это надолго. Если ваш любимый фреймворк не представлен в этом материале и вы хотели бы помочь изменить его, не стесняйтесь обсуждать это с нами! Свяжитесь с нами через [Matrix](https://wiki.mozilla.org/Matrix), или [Discourse](https://discourse.mozilla.org/c/mdn), отправьте нам ээлектронное письмо [mdn-admins list](mailto:mdn-admins@mozilla.org).
