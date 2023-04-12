@@ -343,36 +343,36 @@ editToDo(toDoId, newLabel) {
 
 ### App.vue
 
-`<to-do-form>` 监听 `todo-added` 事件，由 `ToDoForm` 组件内的 `onSubmit()` 方法在提交表单时触发。**结果：**`addToDo()` 方法被调用，用于向 `ToDoItems` 数组添加新的 todo 项。
+`<to-do-form>` 监听 `todo-added` 事件，由 `ToDoForm` 组件内的 `onSubmit()` 方法在提交表单时触发。**结果**：`addToDo()` 方法被调用，用于向 `ToDoItems` 数组添加新的 todo 项。
 
 `<to-do-item>` 监听：
 
-- `checkbox-changed` 事件由 `ToDoItem` 组件中的复选框 `<input>` 选中状态变化时触发。**结果：**`updateDoneStatus()` 方法被调用来更新相关 todo 项的完成状态。
-- 当按下“Delete”按钮时，`ToDoItem` 组件内的 `deleteToDo()` 方法触发 `item-deleted` 事件。**结果：**`deleteToDo()` 方法被调用，来删除相关的 todo 项。
-- 当监听到 `ToDoItemEditForm` 内部的 `onSubmit()` 方法触发的 `item-edited` 事件时，`ToDoItem` 组件中的 `itemEdited()` 方法触发 `item-edited` 事件。是的，两个不同的 `item-edited` 事件连锁发生了！**结果：**`editToDo()` 方法被调用，来更新相关 todo 项的标签。
+- `checkbox-changed` 事件由 `ToDoItem` 组件中的复选框 `<input>` 选中状态变化时触发。**结果**：`updateDoneStatus()` 方法被调用来更新相关 todo 项的完成状态。
+- 当按下“Delete”按钮时，`ToDoItem` 组件内的 `deleteToDo()` 方法触发 `item-deleted` 事件。**结果**：`deleteToDo()` 方法被调用，来删除相关的 todo 项。
+- 当监听到 `ToDoItemEditForm` 内部的 `onSubmit()` 方法触发的 `item-edited` 事件时，`ToDoItem` 组件中的 `itemEdited()` 方法触发 `item-edited` 事件。是的，两个不同的 `item-edited` 事件连锁发生了！**结果**：`editToDo()` 方法被调用，来更新相关 todo 项的标签。
 
 ### ToDoForm.vue
 
-`<form>` 监听 `submit` 事件。**结果：**`onSubmit()` 方法被调用。该方法检查新标签是否为空，然后触发 `todo-added` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文），最后清除新标签 `<input>`。
+`<form>` 监听 `submit` 事件。**结果**：`onSubmit()` 方法被调用。该方法检查新标签是否为空，然后触发 `todo-added` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文），最后清除新标签 `<input>`。
 
 ### ToDoItem.vue
 
-满足`type="checkbox"` 的 `<input>` 元素监听 `change` 事件。**结果：** 当勾选/取消勾选复选框时触发 `checkbox-changed` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
+满足`type="checkbox"` 的 `<input>` 元素监听 `change` 事件。**结果**：当勾选/取消勾选复选框时触发 `checkbox-changed` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
 
-“Edit” `<button>` 监听 `click` 事件。**结果：**`toggleToItemEditForm()` 方法被调用。`this.isEditing` 变成 `true`，在重新渲染时，依次显示 todo 项的编辑表单。
+“Edit” `<button>` 监听 `click` 事件。**结果**：`toggleToItemEditForm()` 方法被调用。`this.isEditing` 变成 `true`，在重新渲染时，依次显示 todo 项的编辑表单。
 
-“Delete” `<button>` 监听 `click` 事件。**结果：**`deleteToDo()` 方法被调用，它会触发 `item-deleted` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
+“Delete” `<button>` 监听 `click` 事件。**结果**：`deleteToDo()` 方法被调用，它会触发 `item-deleted` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文）。
 
 `<to-do-item-edit-form>` 监听：
 
-- `item-edited` 事件：当成功提交表单时，`ToDoItemEditForm` 组件中的 `onSubmit()` 方法会触发 `item-edited` 事件。**结果：**`itemEdited()` 方法被调用，它会触发 `item-edited` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文），并设置 `this.isEditing` 为 `false`，这样在重新渲染时，编辑的表单将不再显示。
-- `edit-cancelled` 事件：点击“Cancel”按钮时，`ToDoItemEditForm` 组件内的 `onCancel()` 方法会触发 `edit-cancelled` 事件。**结果：**`editCancelled()` 方法被调用，`isEditing` 被设置回 `false`，这样在重新渲染时，编辑的表单将不再显示。
+- `item-edited` 事件：当成功提交表单时，`ToDoItemEditForm` 组件中的 `onSubmit()` 方法会触发 `item-edited` 事件。**结果**：`itemEdited()` 方法被调用，它会触发 `item-edited` 事件（随后 `App.vue` 中的元素监听到了该事件；见上文），并设置 `this.isEditing` 为 `false`，这样在重新渲染时，编辑的表单将不再显示。
+- `edit-cancelled` 事件：点击“Cancel”按钮时，`ToDoItemEditForm` 组件内的 `onCancel()` 方法会触发 `edit-cancelled` 事件。**结果**：`editCancelled()` 方法被调用，`isEditing` 被设置回 `false`，这样在重新渲染时，编辑的表单将不再显示。
 
 ### ToDoItemEditForm.vue
 
-`<form>` 监听 `submit` 事件。**结果：**`onSubmit()` 方法被调用。该方法检查新的标签值是否为空，与旧的标签值是否相同。如果是，则发出 `item-edited` 事件（随后 `ToDoItem.vue` 中的元素监听到了该事件；见上文）。
+`<form>` 监听 `submit` 事件。**结果**：`onSubmit()` 方法被调用。该方法检查新的标签值是否为空，与旧的标签值是否相同。如果是，则发出 `item-edited` 事件（随后 `ToDoItem.vue` 中的元素监听到了该事件；见上文）。
 
-“Cancel” `<button>` 监听 `click` 事件。**结果：**`onCancel()` 方法被调用。它触发 `edit-cancelled` 事件（随后 `ToDoItem.vue` 中的元素监听到了该事件；见上文）。
+“Cancel” `<button>` 监听 `click` 事件。**结果**：`onCancel()` 方法被调用。它触发 `edit-cancelled` 事件（随后 `ToDoItem.vue` 中的元素监听到了该事件；见上文）。
 
 ## 总结
 
