@@ -50,7 +50,7 @@ Mountain View, CA<br>
 USA<br>
 ```
 
-### Résultat
+#### Résultat
 
 {{EmbedLiveSample('Simple_rupture_de_ligne', '', '130')}}
 
