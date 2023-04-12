@@ -47,7 +47,7 @@ mkdir src/components
 touch src/components/Todo.js
 ```
 
-Notre nouveau fichier `Todo.js` est actuellement vide&nbsp;! Ouvrez le et ajoutez cette première ligne&nbsp;:
+Notre nouveau fichier `Todo.js` est actuellement vide&nbsp;! Ouvrez-le et ajoutez cette première ligne&nbsp;:
 
 ```jsx
 import React from "react";
@@ -63,7 +63,7 @@ export default function Todo() {
 }
 ```
 
-Jusque là tout va bien, mais notre composant doit retourner quelque chose&nbsp;! Retournez au fichier `src/App.js`, copiez le premier [`<li>`](/fr/docs/Web/HTML/Element/li) de la liste non ordonnée, puis collez-le dans `Todo.js` afin que ce dernier contienne ceci&nbsp;:
+Jusque-là tout va bien, mais notre composant doit retourner quelque chose&nbsp;! Retournez au fichier `src/App.js`, copiez le premier [`<li>`](/fr/docs/Web/HTML/Element/li) de la liste non ordonnée, puis collez-le dans `Todo.js` afin que ce dernier contienne ceci&nbsp;:
 
 ```jsx
 export default function Todo() {
@@ -110,7 +110,7 @@ Avec ce composant importé, vous pouvez remplacer toutes les balises `<li>` dans
 </ul>
 ```
 
-Lorsque vous retournez sur votre naviguateur, vous remarquerez quelque chose de fâcheux&nbsp;: votre liste répète maintenant la première tâche trois fois&nbsp;!
+Lorsque vous retournez sur votre navigateur, vous remarquerez quelque chose de fâcheux&nbsp;: votre liste répète maintenant la première tâche trois fois&nbsp;!
 
 ![Notre application de liste de tâche avec les composants todo répétés, car le libellé est présent en dur dans le composant](todo-list-repeating-todos.png)
 
@@ -183,17 +183,17 @@ Comme précédemment, nous devons retourner dans `Todo.js` pour utiliser réelle
 <input id="todo-0" type="checkbox" defaultChecked={props.completed} />
 ```
 
-Et votre naviguateur se mettra à jour et affichera seulement `Manger` comme coché:
+Et votre navigateur se mettra à jour et affichera seulement `Manger` comme coché&nbsp;:
 
 ![Notre application de liste de tâches, avec différents états : certaines cases sont cochées et d'autres non](todo-list-differing-checked-states.png)
 
-Si vous changez la <i lang="en">prop</i> `completed` de chaque composant `<Todo />`, votre naviguateur cochera ou decochera la case correspondante en même temps.
+Si vous changez la <i lang="en">prop</i> `completed` de chaque composant `<Todo />`, votre navigateur cochera ou décochera la case correspondante en même temps.
 
 ### Identifiez-vous
 
 À l'heure actuelle, notre composant `<Todo />` fournit le même attribut `id`, avec la valeur `todo-0`, pour chaque tâche. Cela ne respecte pas les règles HTML, car les [identifiants (`id`)](/fr/docs/Web/HTML/Global_attributes/id) doivent être uniques (ils sont utilisés comme identifiants uniques pour les fragments de document, CSS, JavaScript, etc.). Cela signifie que nous devons donner à notre composant une prop `id` qui prend une valeur unique pour chaque `Todo`.
 
-Pour suivre le même schéma qu'au départ, donnons à chaque instance du composant `<Todo />` un identifiant au format `todo-i`, où `i` est incrementé d'une unité à chaque fois&nbsp;:
+Pour suivre le même schéma qu'au départ, donnons à chaque instance du composant `<Todo />` un identifiant au format `todo-i`, où `i` est incrémenté d'une unité à chaque fois&nbsp;:
 
 ```jsx
 <Todo name="Manger" completed={true} id="todo-0" />
@@ -214,7 +214,7 @@ Retournez maintenant dans `Todo.js` et utilisez la <i lang="en">prop</i> `id`. E
 
 ## Jusqu'ici, tout va bien&nbsp;?
 
-Nous utilisons React correctement, mais pourrions faire encore mieux&nbsp;! Notre code est répétitif. Les trois lignes qui rendent notre composant `<Todo />` sont presque identiques, avec une seule différence&nbsp;: la valeur de chaque <i lang="en">prop<i>.
+Nous utilisons React correctement, mais pourrions faire encore mieux&nbsp;! Notre code est répétitif. Les trois lignes qui rendent notre composant `<Todo />` sont presque identiques, avec une seule différence&nbsp;: la valeur de chaque <i lang="en">prop</i>.
 
 Nous pouvons nettoyer notre code grâce à l'une des notions principales de JavaScript&nbsp;: l'itération. Pour utiliser l'itération, nous devons d'abord repenser nos tâches.
 
@@ -455,7 +455,7 @@ Nous voilà à la fin de cet article où nous avons approfondi la façon de déc
 
   - [Démarrer avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - [Commencer notre liste de tâches en React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Organiser notre application React en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - **Organiser notre application React en composants**
   - [Interactivité avec React&nbsp;: évènements et état](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - [Interactivité avec React&nbsp;: édition, filtrage, rendu conditionnel](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - [L'accessibilité avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
