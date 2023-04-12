@@ -32,7 +32,7 @@ will-change: unset;
 - _谨慎使用。_ 浏览器进行的优化通常是在尽可能短的时间内删除优化并恢复到正常状态。但是，将 `will-change` 直接添加到样式表中意味着目标元素通常会在不久的将来发生变化，而浏览器会保留优化更长的时间。因此，最好的做法是在更改发生之前和之后使用脚本代码开启和关闭 `will-change`。
 - _不要为了过早优化而将 `will-change` 应用于元素。_ 如果你的页面表现良好，则不要仅仅为了提高一点速度而将 `will-change` 属性添加到元素中。`will-change` 旨在作为最后的手段使用，以尝试解决现有的性能问题。不应该用来预测性能问题。过度使用 `will-change` 将导致内存使用过多，并导致更复杂的渲染发生，因为浏览器试图为可能的更改做准备。这将导致更差的性能。
 - _要给它足够的时间来发挥作用。_ 该属性旨在为开发者提供一种方法，让用户代理提前了解可能会发生变化的属性。然后浏览器可以选择在实际属性更改之前应用所需的任何提前优化。因此，重要的是给浏览器一些时间来实际执行优化。找到一些方法，预测某些事情将会在稍微提前的时间内发生，并在那时设置 `will-change`。
-- _请注意。_ 当与创建[堆叠上下文](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)的属性值一起使用（例如 will-change: opacity）时，`will-change` 实际上可能会影响元素的视觉外观，因为堆叠上下文是提前创建的。
+- _请注意_。当与创建[层叠上下文](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)的属性值一起使用（例如 will-change: opacity）时，`will-change` 实际上可能会影响元素的视觉外观，因为层叠上下文是提前创建的。
 
 ## 语法
 
