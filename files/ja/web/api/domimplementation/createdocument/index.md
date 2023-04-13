@@ -1,40 +1,35 @@
 ---
-title: "DOMImplementation: createDocument() method"
-short-title: createDocument()
+title: "DOMImplementation: createDocument() メソッド"
 slug: Web/API/DOMImplementation/createDocument
-page-type: web-api-instance-method
-browser-compat: api.DOMImplementation.createDocument
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef("DOM")}}
 
-The **`DOMImplementation.createDocument()`** method creates and
-returns an {{domxref("XMLDocument")}}.
+**`DOMImplementation.createDocument()`** メソッドは、 {{domxref("XMLDocument")}} を作成して返します。
 
-## Syntax
+## 構文
 
 ```js-nolint
 createDocument(namespaceURI, qualifiedNameStr)
 createDocument(namespaceURI, qualifiedNameStr, documentType)
 ```
 
-### Parameters
+### 引数
 
 - `namespaceURI`
-  - : A string containing the namespace URI of the document to be
-    created, or `null` if the document doesn't belong to one.
+  - : 作成する文書の名前空間 URI を格納した文字列です。文書が名前空間に属さない場合は `null` です。
 - `qualifiedNameStr`
-  - : A string containing the qualified name, that is an optional
-    prefix and colon plus the local root element name, of the document to be created.
+  - : 作成する文書の修飾名（オプションで接頭辞とコロンにローカルルート要素名を加えたもの）を格納した文字列です。
 - `documentType` {{optional_inline}}
-  - : Is the {{domxref("DocumentType")}} of the document to be created. It defaults to
-    `null`.
+  - : 作成する文書の {{domxref("DocumentType")}} です。既定値は `null` です。
 
-### Return value
+### 返値
 
-None ({{jsxref("undefined")}}).
+なし ({{jsxref("undefined")}})。
 
-## Examples
+## 例
 
 ```js
 const doc = document.implementation.createDocument(
@@ -48,14 +43,14 @@ doc.documentElement.appendChild(body);
 alert(doc.getElementById("abc")); // [object HTMLBodyElement]
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- The {{domxref("DOMImplementation")}} interface it belongs to.
+- 所属先の {{domxref("DOMImplementation")}} インターフェイス
