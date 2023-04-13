@@ -203,13 +203,13 @@ Like this.
 | 英文 | 简体中文翻译 |
 | --- | ---------- |
 | Accessibility concerns | 无障碍考虑 |
+| Active learning | 动手练习 |
 | Browser compatibility | 浏览器兼容性 |
 | Examples | 示例 |
 | See also | 参见 |
 | Specifications | 规范 |
 | Technical summary | 技术概要 |
 | Usage notes | 使用说明 |
-| Active learning | （“学习”含义）动手练习 |
 
 [如何使用 markdown 来撰写文档]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [文章标签]: https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Howto/Tag
