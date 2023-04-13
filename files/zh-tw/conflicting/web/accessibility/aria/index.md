@@ -1,6 +1,7 @@
 ---
 title: Forms
-slug: Web/Accessibility/ARIA/forms
+slug: conflicting/Web/Accessibility/ARIA
+original_slug: Web/Accessibility/ARIA/forms
 ---
 
 下列連結提供多種技術的資訊來處進網頁表格的存取:

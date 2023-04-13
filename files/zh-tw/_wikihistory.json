@@ -2931,10 +2931,6 @@
     "modified": "2019-03-18T21:39:54.388Z",
     "contributors": ["oooooo"]
   },
-  "Web/Accessibility/ARIA/forms": {
-    "modified": "2019-06-27T12:10:30.271Z",
-    "contributors": ["FredericChang", "Sheppy"]
-  },
   "Web/Accessibility/Mobile_accessibility_checklist": {
     "modified": "2019-03-18T21:32:14.782Z",
     "contributors": ["li-liam"]
@@ -5059,5 +5055,9 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-06-27T12:10:30.271Z",
+    "contributors": ["FredericChang", "Sheppy"]
   }
 }
