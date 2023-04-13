@@ -151,10 +151,10 @@ export default function Todo(props) {
       </div>
       <div className="btn-group">
         <button type="button" className="btn">
-          Edit <span className="visually-hidden">{props.name}</span>
+          Éditer <span className="visually-hidden">{props.name}</span>
         </button>
         <button type="button" className="btn btn__danger">
-          Delete <span className="visually-hidden">{props.name}</span>
+          Supprimer <span className="visually-hidden">{props.name}</span>
         </button>
       </div>
     </li>
@@ -281,7 +281,7 @@ Cela nous permet d'afficher à nouveau tous les composants, mais nous avons enco
 Pour résoudre ce problème, nous devons retourner un composant `<Todo />` depuis notre fonction `map()`. Rappelez-vous que JSX nous permet de mélanger les structures JavaScript et de balisage&nbsp;! Essayons ce qui suit au lieu de ce que nous avons déjà&nbsp;:
 
 ```jsx
-  const taskList = props.tasks.map((task) => <Todo />);
+const taskList = props.tasks.map((task) => <Todo />);
 ```
 
 Regardez à nouveau votre application&nbsp;: maintenant nos tâches ressemblent plus à ce qu'elles étaient, mais il manque les noms des tâches elles-mêmes. Rappelez-vous que chaque tâche que nous ajoutons possède les propriétés `id`, `name`, et `completed` que nous voulons passer dans notre composant `<Todo />`. Si nous rassemblons toutes ces connaissances, nous obtenons un code comme celui-ci&nbsp;:
@@ -379,7 +379,7 @@ function FilterButton(props) {
   return (
     <button type="button" className="btn toggle-btn" aria-pressed="true">
       <span className="visually-hidden">Afficher </span>
-      <span>Toutes </span>
+      <span>Toutes</span>
       <span className="visually-hidden"> les tâches</span>
     </button>
   );
@@ -445,58 +445,3 @@ Avec cela, nous sommes _presque_ prêts à aborder l'interactivité dans notre a
 Nous voilà à la fin de cet article où nous avons approfondi la façon de décomposer notre application en composants et de traiter leur rendu efficacement. Nous allons maintenant examiner comment gérer les évènements dans React et commencer à ajouter de l'interactivité.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## Dans ce module
-
-- [Introduction aux <i lang="en">frameworks</i> côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Fonctionnalités principales des <i lang="en">frameworks</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Démarrer avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Commencer notre liste de tâches en React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - **Organiser notre application React en composants**
-  - [Interactivité avec React&nbsp;: évènements et état](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [Interactivité avec React&nbsp;: édition, filtrage, rendu conditionnel](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [L'accessibilité avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [Ressources React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Démarrer avec Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Structure d'une application Ember et organisation en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Interactivité avec Ember&nbsp;: évènements, classes et état](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Interactivité avec Ember&nbsp;: pied de page, rendu conditionnel](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routage avec Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ressources Ember et diagnostic des problèmes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Démarrer avec Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Création de notre premier composant Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Afficher une liste de components Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Ajouter un formulaire pour une nouvelle tâche&nbsp;: évènements Vue, méthodes et modèles](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Mettre en forme les composants Vue avec CSS](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Utiliser les propriétés calculées de Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Rendu conditionnel avec Vue&nbsp;: éditer les tâches existantes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Gestion du focus avec les références Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Ressources Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Démarrer avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Démarrer notre application de liste de tâches Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Comportement dynamique avec Svelte&nbsp;: travailler avec les variables et les <i lang="en">props</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Organiser notre application Svelte en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Svelte avancé&nbsp;: réactivité, cycle de vie, accessibilité](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Travailler avec les magasins de données Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Prise en charge de TypeScript par Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Déploiement et prochaines étapes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Démarrer avec Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Commencer notre application de liste de tâches Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Mettre en forme notre application Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Créer un composant pour une tâche](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtrer les éléments de la liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Compiler des applications Angular et autres ressources complémentaires](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
