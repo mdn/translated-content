@@ -45,7 +45,7 @@ slug: Learn/HTML/Tables/Advanced
 
 > **备注：** [`summary`](/zh-CN/docs/Web/HTML/Element/table#summary) 属性也可以在 `<table>` 元素中使用，用来提供一段描述，同样可以被屏幕阅读设备阅读。我们推荐使用 `<caption>` 元素来代替，因为 `summary` 已经废弃了，且不能被视力正常的用户阅读（它不会出现在页面上）。
 
-### 主动学习：添加一个标题
+### 动手练习：添加一个标题
 
 我们来试试看吧，回顾一下我们在之前的文章中第一次遇到的例子。.
 
@@ -69,7 +69,7 @@ slug: Learn/HTML/Tables/Advanced
 
 > **备注：** `<tbody>` 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 `<tbody>` 的例子，然后在你的[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。
 
-### 主动学习：添加表格结构
+### 动手练习：添加表格结构
 
 让我们动手使用这些新元素。
 
@@ -205,7 +205,7 @@ slug: Learn/HTML/Tables/Advanced
 </html>
 ```
 
-{{ EmbedLiveSample('主动学习：添加表格结构', '100%', 300) }}
+{{ EmbedLiveSample('动手练习：添加表格结构', '100%', 300) }}
 
 > **备注：** 你也可以在 GitHub 上找到 [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html)（[查看在线运行版本](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)）。
 
@@ -407,7 +407,7 @@ th {
 
 > **备注：** 这种方法在标题和数据单元格之间建立了非常精确的关联，但是它使用了**非常多**的标记，而且没有留下任何错误的空间。对于大多数表格来说，`scope` 方法通常就足够了。
 
-### 主动学习：使用 scope 和 headers
+### 动手练习：使用 scope 和 headers
 
 1. 对于这个最后的练习，首先把 [items-sold.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) 复制到你的本地环境。
 2. 现在尝试添加适当的 `scope` 属性来让表格变得更加恰当。
