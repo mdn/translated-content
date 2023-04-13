@@ -1589,6 +1589,7 @@
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
 /zh-CN/docs/Web/API/HTMLBaseFontElement	/zh-CN/docs/Web/CSS/CSS_Fonts
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
+/zh-CN/docs/Web/API/HTMLContentElement	/zh-CN/docs/Web/API/HTMLSlotElement
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/Web/API/HTMLElement.dir	/zh-CN/docs/Web/API/HTMLElement/dir
@@ -2008,6 +2009,7 @@
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden
+/zh-CN/docs/Web/Accessibility/ARIA/forms	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Accessibility/ARIA/forms/alerts	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/zh-CN/docs/Web/Guide/Audio_and_video_delivery
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
@@ -2291,6 +2293,7 @@
 /zh-CN/docs/Web/HTML/Element/Video/ended_event	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_Fonts
+/zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
 /zh-CN/docs/Web/HTML/Element/video/play_event	/zh-CN/docs/Web/API/HTMLMediaElement/play_event
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
