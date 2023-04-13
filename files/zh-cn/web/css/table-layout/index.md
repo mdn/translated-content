@@ -26,7 +26,7 @@ table-layout: unset;
 
 ### 取值
 
-- {{Cssxref("auto")}}
+- `auto`
   - : 默认情况下，大多数浏览器使用自动表格布局算法。表格及其单元格的宽度会根据内容自动调整大小。
 - `fixed`
 
@@ -34,7 +34,7 @@ table-layout: unset;
 
     在 "fixed" 布局方法下，一旦下载并分析了第一行表格，整个表格就可以被渲染出来。这可以加快渲染时间，相比于 "automatic" 布局方法，但是后续单元格内容可能不适合提供的列宽。单元格使用 {{Cssxref("overflow")}} 属性来确定是否要剪裁任何溢出的内容，但仅当表格具有已知宽度时才会生效；否则，它们不会溢出到单元格之外。
 
-### 形式语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -48,7 +48,7 @@ table-layout: unset;
 
 这个例子使用了固定的表格布局，结合 {{cssxref("width")}} 属性，限制了表格的宽度。{{cssxref("text-overflow")}} 属性被用来在单词太长无法容纳时应用省略号。如果表格布局是 "auto"，表格将会根据其内容自动扩展大小，而不考虑指定的 width。
 
-### HTML
+#### HTML
 
 ```html
 <table>
@@ -71,7 +71,7 @@ table-layout: unset;
 </table>
 ```
 
-### CSS
+#### CSS
 
 ```css
 table {
@@ -88,7 +88,7 @@ td {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample('具有文本溢出的固定宽度表格')}}
 
