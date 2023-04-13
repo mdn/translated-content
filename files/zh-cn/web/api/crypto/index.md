@@ -27,7 +27,7 @@ _该接口实现的方法定义在 {{domxref("Crypto/getRandomValues", "RandomSo
 - {{domxref("Crypto.randomUUID()")}}
   - : 返回一个随机生成的，长度为 36 字符的第四版 UUID。
 
-## 使用备注
+## 使用说明
 
 即使不安全的上下文中存在 `Crypto` 接口（即 {{domxref("crypto_property", "crypto")}} 属性），你也应该避免在不安全的上下文中使用 Web Crypto API。`Crypto` 的 {{domxref("Crypto.getRandomValues", "getRandomValues()")}} 方法在不安全的上下文中可用，而 {{domxref("Crypto.subtle", "subtle")}} 属性则不可用。
 

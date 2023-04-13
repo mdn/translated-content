@@ -177,7 +177,7 @@ l10n:
 以下のようにすると、バックグラウンドで音声グラフを非常に高速に処理/レンダリングし、端末のスピーカーではなく {{domxref("AudioBuffer")}} にレンダリングすることができます。
 
 - {{domxref("OfflineAudioContext")}}
-  - : **`OfflineAudioContext`** は {{domxref("AudioContext")}} の一種で、{{domxref("AudioNode")}} を組み合わせて、音声処理を行うグラフを表現しています。通常の `AudioContext`と異なり`、`OfflineAudioContext` は音声を出力せず、バッファー内で高速に処理を行います。
+  - : **`OfflineAudioContext`** は {{domxref("AudioContext")}} の一種で、{{domxref("AudioNode")}} を組み合わせて、音声処理を行うグラフを表現しています。通常の `AudioContext`と異なり、`OfflineAudioContext` は音声を出力せず、バッファー内で高速に処理を行います。
 - {{domxref("OfflineAudioContext/complete_event", "complete")}} (イベント)
   - : `complete` イベントは {{domxref("OfflineAudioContext")}} の処理が終了した時に発火します。
 - {{domxref("OfflineAudioCompletionEvent")}}
