@@ -10315,10 +10315,6 @@
     "modified": "2019-03-23T22:04:23.393Z",
     "contributors": ["YeeMarco"]
   },
-  "Web/API/HTMLContentElement": {
-    "modified": "2020-10-15T22:31:35.188Z",
-    "contributors": ["RainSlide", "laampui"]
-  },
   "Web/API/HTMLDataElement": {
     "modified": "2020-10-15T22:23:28.834Z"
   },
@@ -16962,10 +16958,6 @@
     "modified": "2019-03-23T22:05:01.811Z",
     "contributors": ["TiaossuP"]
   },
-  "Web/Accessibility/ARIA/forms": {
-    "modified": "2019-03-23T22:16:33.505Z",
-    "contributors": ["jack-chensonglin"]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-23T22:13:24.205Z",
     "contributors": ["huguangju"]
@@ -22073,10 +22065,6 @@
     "modified": "2020-10-15T21:37:46.269Z",
     "contributors": ["RainSlide", "Soyaine", "PandaadnaP", "FredWe"]
   },
-  "Web/HTML/Element/content": {
-    "modified": "2019-03-23T22:10:12.369Z",
-    "contributors": ["wizardforcel"]
-  },
   "Web/HTML/Element/data": {
     "modified": "2020-10-15T21:28:38.554Z",
     "contributors": ["RainSlide", "hxl"]
@@ -22817,10 +22805,6 @@
       "ReyCG",
       "ziyunfei"
     ]
-  },
-  "Web/HTML/Element/shadow": {
-    "modified": "2019-03-23T22:10:02.975Z",
-    "contributors": ["wizardforcel"]
   },
   "Web/HTML/Element/slot": {
     "modified": "2020-10-15T21:54:42.237Z",
@@ -33630,5 +33614,21 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/API/HTMLSlotElement": {
+    "modified": "2020-10-15T22:31:35.188Z",
+    "contributors": ["RainSlide", "laampui"]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-03-23T22:16:33.505Z",
+    "contributors": ["jack-chensonglin"]
+  },
+  "conflicting/Web/HTML/Element/slot": {
+    "modified": "2019-03-23T22:10:12.369Z",
+    "contributors": ["wizardforcel"]
+  },
+  "orphaned/Web/HTML/Element/shadow": {
+    "modified": "2019-03-23T22:10:02.975Z",
+    "contributors": ["wizardforcel"]
   }
 }

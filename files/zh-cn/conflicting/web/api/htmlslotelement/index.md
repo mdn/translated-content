@@ -1,6 +1,7 @@
 ---
 title: HTMLContentElement
-slug: Web/API/HTMLContentElement
+slug: conflicting/Web/API/HTMLSlotElement
+original_slug: Web/API/HTMLContentElement
 ---
 
 {{ APIRef("Web Components") }}

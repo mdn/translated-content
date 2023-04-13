@@ -1,7 +1,9 @@
 ---
 title: Forms
-slug: Web/Accessibility/ARIA/forms
+slug: conflicting/Web/Accessibility/ARIA
+original_slug: Web/Accessibility/ARIA/forms
 ---
+
 The following pages provide various techniques for improving the accessibility of web forms:
 
 接下来的网页会为 web 表单技术的人提供一系列的知识：
