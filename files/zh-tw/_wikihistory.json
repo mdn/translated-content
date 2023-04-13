@@ -5055,9 +5055,5 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
-  },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-06-27T12:10:30.271Z",
-    "contributors": ["FredericChang", "Sheppy"]
   }
 }
