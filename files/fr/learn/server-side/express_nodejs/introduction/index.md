@@ -521,4 +521,18 @@ Félicitations, vous avez terminé la première étape de votre voyage Express/N
 
 Bien sûr, Express est délibérément un cadre d'application web très léger, et une grande partie de ses avantages et de son potentiel provient de bibliothèques et de fonctionnalités tierces. Nous les examinerons plus en détail dans les articles suivants. Dans notre prochain article, nous nous pencherons sur la configuration d'un environnement de développement Node, afin que vous puissiez commencer à voir du code Express en action.
 
+## Voir aussi
+
+- [Venkat.R - Gestion de plusieurs versions de Node](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)
+- [Modules](https://nodejs.org/api/modules.html#modules_modules) (docs Node)
+- [Express](https://expressjs.com/) (page d'accueil)
+- [Routage de base](https://expressjs.com/fr/starter/basic-routing.html) (docs Express)
+- [Guide de routage](https://expressjs.com/fr/guide/routing.html) (docs Express)
+- [Utilisation de moteurs de modèles avec Express](https://expressjs.com/fr/guide/using-template-engines.html) (docs Express)
+- [Utilisation d'intergiciel](https://expressjs.com/fr/guide/using-middleware.html) (docs Express)
+- [Écriture d'intergiciels à utiliser dans les applications Express](https://expressjs.com/fr/guide/writing-middleware.html) (docs Express)
+- [Intégration des bases de données](https://expressjs.com/fr/guide/database-integration.html) (docs Express)
+- [Servir les fichiers statiques dans Express](https://expressjs.com/fr/starter/static-files.html) (docs Express)
+- [Gestion des erreurs](https://expressjs.com/fr/guide/error-handling.html) (docs Express)
+
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
