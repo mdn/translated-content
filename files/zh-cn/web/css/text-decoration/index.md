@@ -44,7 +44,7 @@ text-decoration: unset;
 - {{cssxref("text-decoration-color")}}
   - : 设置装饰的颜色。
 - {{cssxref("text-decoration-style")}}
-  - : 设置装饰的线条的颜色，例如 `solid`、`wavy` 或者 `dashed`.
+  - : 设置装饰的线条的颜色，例如 `solid`、`wavy` 或者 `dashed`。
 - {{cssxref("text-decoration-thickness")}}
   - : 设置用于装饰的线条粗细。
 
@@ -91,13 +91,13 @@ text-decoration: unset;
 ```
 
 ```html
-<p class="under">此文本下方有一行。</p>
-<p class="over">此文本上面有一行。</p>
+<p class="under">此文本下方有一行线。</p>
+<p class="over">此文本上面有一行线。</p>
 <p class="line">此文本有一条线穿过它。</p>
 <p>此<a class="plain" href="#">链接不会具有下划线</a>，因为链接默认加下划线。移除锚点上的文本装饰时要小心，因为用户通常依赖下划线来表示超链接</p>
-<p class="underover">This text has lines above <em>and</em> below it.</p>
+<p class="underover">此文本在其上方<em>和</em>下方都有线条。</p>
 <p class="thick">在浏览器支持的情况下，此文本具有非常粗的紫色下划线。</p>
-<p class="blink">此文本可能会为您闪烁，具体取决于您使用的浏览器。</p>
+<p class="blink">此文本可能会为你闪烁，具体取决于您使用的浏览器。</p>
 ```
 
 {{EmbedLiveSample('文本装饰值的演示','auto','320')}}
