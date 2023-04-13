@@ -5,7 +5,7 @@ slug: Web/API/CSS_Object_Model
 
 {{DefaultAPISidebar("CSSOM")}}
 
-**CSS 对象模型** 是一组允许用 JavaScript 操纵 CSS 的 API。它很像 DOM，但针对的是 CSS 而不是 HTML。它允许用户动态地读取和修改 CSS 样式。
+**CSS 对象模型**是一组允许用 JavaScript 操纵 CSS 的 API。它很像 DOM，但针对的是 CSS 而不是 HTML。它允许用户动态地读取和修改 CSS 样式。
 
 CSS 的值是没有类型的，也就是使用 {{JSxRef("String")}} 对象来表示。
 
