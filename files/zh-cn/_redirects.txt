@@ -1589,7 +1589,7 @@
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
 /zh-CN/docs/Web/API/HTMLBaseFontElement	/zh-CN/docs/Web/CSS/CSS_Fonts
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
-/zh-CN/docs/Web/API/HTMLContentElement	/zh-CN/docs/conflicting/Web/API/HTMLSlotElement
+/zh-CN/docs/Web/API/HTMLContentElement	/zh-CN/docs/Web/API/HTMLSlotElement
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/Web/API/HTMLElement.dir	/zh-CN/docs/Web/API/HTMLElement/dir
@@ -2293,7 +2293,7 @@
 /zh-CN/docs/Web/HTML/Element/Video/ended_event	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_Fonts
-/zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/conflicting/Web/HTML/Element/slot
+/zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
 /zh-CN/docs/Web/HTML/Element/shadow	/zh-CN/docs/orphaned/Web/HTML/Element/shadow
 /zh-CN/docs/Web/HTML/Element/video/play_event	/zh-CN/docs/Web/API/HTMLMediaElement/play_event
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
