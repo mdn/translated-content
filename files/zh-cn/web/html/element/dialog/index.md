@@ -83,7 +83,7 @@ slug: Web/HTML/Element/dialog
 
 确保你的对话框实现不会破坏预期的默认行为，并遵循正确的标签建议。
 
-## 使用备注
+## 使用说明
 
 - {{HTMLElement("form")}} 元素可关闭含有属性 `method="dialog"` 的对话框。当提交表单时，对话框的 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 属性将会等于表单中被使用的提交按钮的 `value`。
 - {{cssxref('::backdrop')}} CSS 伪元素可用于给使用 {{domxref("HTMLDialogElement.showModal()")}} 显示的 `<dialog>` 元素背景添加样式，例如在对话框被打开激活时，调暗背景中不可访问的内容。

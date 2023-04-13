@@ -118,7 +118,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 - **`width`** {{deprecated_inline}}
   - : Cet attribut définit la largeur, en pixels, dont l'applet a besoin
 
-## Exemple
+## Exemples
 
 ### HTML
 

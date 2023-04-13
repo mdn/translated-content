@@ -54,7 +54,7 @@ slug: Web/Tutorials
 
 ### 中级课程
 
-- [JavaScript 再深入](/zh-CN/docs/Web/JavaScript/Language_Overview)
+- [JavaScript 再深入](/zh-CN/docs/Web/JavaScript/Language_overview)
   - : 针对于中等水平的开发者的关于 Javascript 编程语言的一个回顾。
 - [Eloquent JavaScript](http://eloquentjavascript.net/contents.html)
   - : 一本中级和高级 JavaScript 使用方法的全面指南。（译者注：简体中文版《JavaScript 编程精解》已由机械工业出版社华章公司出版发行）

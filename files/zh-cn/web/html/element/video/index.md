@@ -157,7 +157,7 @@ AddType video/webm .webm
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
 

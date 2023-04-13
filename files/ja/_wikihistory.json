@@ -10726,10 +10726,6 @@
     "modified": "2020-10-15T22:31:19.070Z",
     "contributors": ["Wind1808"]
   },
-  "Web/API/Navigation_timing_API": {
-    "modified": "2020-05-22T07:07:10.290Z",
-    "contributors": ["TakayukiTorii", "Marsf"]
-  },
   "Web/API/Navigator": {
     "modified": "2020-10-15T21:33:08.866Z",
     "contributors": [
@@ -11664,12 +11660,16 @@
     "modified": "2019-06-03T15:05:35.208Z",
     "contributors": ["silverskyvicto"]
   },
-  "Web/API/Performance_Timeline": {
-    "modified": "2019-06-09T11:10:20.490Z",
+  "Web/API/Performance_API/Navigation_timing": {
+    "modified": "2020-05-22T07:07:10.290Z",
+    "contributors": ["TakayukiTorii", "Marsf"]
+  },
+  "Web/API/Performance_API/Resource_timing": {
+    "modified": "2019-06-09T10:59:03.914Z",
     "contributors": ["silverskyvicto"]
   },
-  "Web/API/Performance_Timeline/Using_Performance_Timeline": {
-    "modified": "2019-06-03T14:50:37.101Z",
+  "Web/API/Performance_API/User_timing": {
+    "modified": "2019-06-09T11:03:19.144Z",
     "contributors": ["silverskyvicto"]
   },
   "Web/API/PermissionStatus": {
@@ -12191,14 +12191,6 @@
   "Web/API/ResizeObserverEntry/contentRect": {
     "modified": "2020-10-15T22:27:51.023Z",
     "contributors": ["mfuji09"]
-  },
-  "Web/API/Resource_Timing_API": {
-    "modified": "2019-06-09T10:59:03.914Z",
-    "contributors": ["silverskyvicto"]
-  },
-  "Web/API/Resource_Timing_API/Using_the_Resource_Timing_API": {
-    "modified": "2019-07-01T22:07:06.959Z",
-    "contributors": ["kemsakurai", "silverskyvicto"]
   },
   "Web/API/Response": {
     "modified": "2020-10-15T21:41:34.402Z",
@@ -13274,10 +13266,6 @@
     "modified": "2020-10-15T21:22:31.047Z",
     "contributors": ["mfuji09", "yyss", "AshfaqHossain", "ethertank"]
   },
-  "Web/API/User_Timing_API": {
-    "modified": "2019-06-09T11:03:19.144Z",
-    "contributors": ["silverskyvicto"]
-  },
   "Web/API/VRDisplay": {
     "modified": "2020-10-15T21:40:29.390Z",
     "contributors": ["eltociear", "rootx"]
@@ -14141,17 +14129,6 @@
   "Web/API/Window/console": {
     "modified": "2019-03-23T22:03:50.688Z",
     "contributors": ["mdmss37"]
-  },
-  "Web/API/Window/content": {
-    "modified": "2019-03-23T23:49:49.879Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "nobuoka",
-      "ethertank",
-      "Shoot",
-      "Potappo"
-    ]
   },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:27:12.990Z",
@@ -22446,10 +22423,6 @@
     "modified": "2020-10-15T22:09:30.672Z",
     "contributors": ["silverskyvicto"]
   },
-  "Web/HTTP/Headers/Set-Cookie/SameSite": {
-    "modified": "2020-10-15T22:30:51.978Z",
-    "contributors": ["pcw", "silverskyvicto"]
-  },
   "Web/HTTP/Headers/SourceMap": {
     "modified": "2020-10-15T22:09:30.889Z",
     "contributors": ["silverskyvicto"]
@@ -22964,7 +22937,7 @@
       "kachick"
     ]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-06-08T03:36:00.567Z",
     "contributors": [
       "tkms0106",
@@ -23021,7 +22994,7 @@
       "electrolysis"
     ]
   },
-  "Web/JavaScript/Guide/Expressions_and_Operators": {
+  "Web/JavaScript/Guide/Expressions_and_operators": {
     "modified": "2020-10-29T09:35:53.177Z",
     "contributors": [
       "mpcjazz",
@@ -23130,7 +23103,7 @@
       "Shuyas"
     ]
   },
-  "Web/JavaScript/Guide/Iterators_and_Generators": {
+  "Web/JavaScript/Guide/Iterators_and_generators": {
     "modified": "2020-10-16T00:16:55.815Z",
     "contributors": [
       "mpcjazz",
@@ -23202,7 +23175,7 @@
       "shide55"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions": {
+  "Web/JavaScript/Guide/Regular_expressions": {
     "modified": "2020-10-15T21:18:19.808Z",
     "contributors": [
       "Lichit",
@@ -23230,19 +23203,19 @@
       "electrolysis"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Assertions": {
+  "Web/JavaScript/Guide/Regular_expressions/Assertions": {
     "modified": "2020-10-15T22:19:13.629Z",
     "contributors": ["Potappo", "segayuu"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Character_Classes": {
+  "Web/JavaScript/Guide/Regular_expressions/Character_classes": {
     "modified": "2020-10-15T22:19:18.776Z",
     "contributors": ["Potappo", "segayuu"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
+  "Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences": {
     "modified": "2020-10-15T22:19:15.466Z",
     "contributors": ["Potappo", "dlwe", "segayuu"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Quantifiers": {
+  "Web/JavaScript/Guide/Regular_expressions/Quantifiers": {
     "modified": "2020-10-15T22:19:14.166Z",
     "contributors": ["Potappo", "segayuu"]
   },
@@ -23276,7 +23249,7 @@
       "tisanyan"
     ]
   },
-  "Web/JavaScript/Guide/Working_with_Objects": {
+  "Web/JavaScript/Guide/Working_with_objects": {
     "modified": "2020-10-21T01:05:16.069Z",
     "contributors": [
       "mpcjazz",
@@ -23319,7 +23292,7 @@
       "shirayuki"
     ]
   },
-  "Web/JavaScript/Language_Overview": {
+  "Web/JavaScript/Language_overview": {
     "modified": "2020-07-24T03:48:20.022Z",
     "contributors": [
       "pcw",
@@ -23336,7 +23309,7 @@
       "Mgjbot"
     ]
   },
-  "Web/JavaScript/Memory_Management": {
+  "Web/JavaScript/Memory_management": {
     "modified": "2020-03-12T19:41:39.393Z",
     "contributors": [
       "sottar",
@@ -23704,7 +23677,7 @@
     "modified": "2020-05-01T14:07:04.773Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
   },
-  "Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params": {
+  "Web/JavaScript/Reference/Errors/Strict_non_simple_params": {
     "modified": "2020-03-12T19:45:05.346Z",
     "contributors": ["okayurisotto", "koba04", "YuichiNukiyama"]
   },
@@ -28244,7 +28217,7 @@
     "modified": "2020-10-15T22:32:47.198Z",
     "contributors": ["mpcjazz", "eltociear"]
   },
-  "Web/JavaScript/Reference/Operators/Comma_Operator": {
+  "Web/JavaScript/Reference/Operators/Comma_operator": {
     "modified": "2020-10-15T21:06:23.418Z",
     "contributors": [
       "mpcjazz",
@@ -28256,7 +28229,7 @@
       "Potappo"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Conditional_Operator": {
+  "Web/JavaScript/Reference/Operators/Conditional_operator": {
     "modified": "2020-10-15T21:19:38.048Z",
     "contributors": ["mfuji09", "yyss", "teoli"]
   },
@@ -28392,7 +28365,7 @@
       "shide55"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+  "Web/JavaScript/Reference/Operators/Operator_precedence": {
     "modified": "2020-10-25T13:41:08.173Z",
     "contributors": [
       "mpcjazz",
@@ -28411,7 +28384,7 @@
     "modified": "2020-10-15T22:22:12.601Z",
     "contributors": ["mpcjazz", "mfuji09", "frodo821", "Marsf", "hiroto7"]
   },
-  "Web/JavaScript/Reference/Operators/Property_Accessors": {
+  "Web/JavaScript/Reference/Operators/Property_accessors": {
     "modified": "2020-10-15T21:06:24.472Z",
     "contributors": [
       "mfuji09",
@@ -29395,7 +29368,7 @@
       "Uemmra3"
     ]
   },
-  "Web/Progressive_web_apps/Add_to_home_screen": {
+  "Web/Progressive_web_apps/Guides/Making_PWAs_installable": {
     "modified": "2020-12-06T08:20:43.592Z",
     "contributors": [
       "mfuji09",
@@ -29404,15 +29377,15 @@
       "k-kuwahara"
     ]
   },
-  "Web/Progressive_web_apps/App_structure": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-08-07T03:55:19.974Z",
     "contributors": ["mfuji09", "Wind1808", "chrisdavidmills", "silverskyvicto"]
   },
-  "Web/Progressive_web_apps/Installable_PWAs": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
     "modified": "2020-08-07T04:55:28.888Z",
     "contributors": ["mfuji09", "Wind1808", "chrisdavidmills"]
   },
-  "Web/Progressive_web_apps/Introduction": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
     "modified": "2020-02-27T11:44:15.897Z",
     "contributors": [
       "Uemmra3",
@@ -29424,15 +29397,15 @@
       "szk0u"
     ]
   },
-  "Web/Progressive_web_apps/Loading": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {
     "modified": "2019-11-04T15:24:56.030Z",
     "contributors": ["mfuji09", "Wind1808"]
   },
-  "Web/Progressive_web_apps/Offline_Service_workers": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers": {
     "modified": "2020-08-16T03:29:52.576Z",
     "contributors": ["mfuji09", "Wind1808", "chrisdavidmills"]
   },
-  "Web/Progressive_web_apps/Re-engageable_Notifications_Push": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push": {
     "modified": "2020-08-07T04:08:11.939Z",
     "contributors": ["mfuji09", "Wind1808", "chrisdavidmills"]
   },

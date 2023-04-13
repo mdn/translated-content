@@ -1,9 +1,11 @@
 ---
 title: JSON の操作
 slug: Learn/JavaScript/Objects/JSON
+l10n:
+  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON) は、構造化データを表現するための標準のテキストベースの形式で、 JavaScript のオブジェクト構文に基づいています。ウェブアプリケーションでデータを転送する場合によく使われます（例えば、複数のデータをサーバーからクライアントへ送信して、ウェブページ上に表示する場合などで、その逆もあります）。頻繁に見かけるデータ形式ですので、この記事では JavaScript を使用して JSON を扱うのに必要なすべてのこと、例えば JSON を解釈してその中のデータにアクセスしたり、 JSON を作成したりする方法を説明します。
 
@@ -15,7 +17,7 @@ JavaScript Object Notation (JSON) は、構造化データを表現するため�
         基礎的なコンピューターの知識、HTML と CSS への基本的な理解、基礎的な JavaScript の理解（<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>と <a href="/ja/docs/Learn/JavaScript/Building_blocks">JavaScript の構成要素</a>を参照）とオブジェクト指向 JavaScript の基本（<a href="/ja/docs/Learn/JavaScript/Objects/Basics">JavaScript オブジェクトの基本</a>を参照）。</td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">目標:</th>
       <td>
         JSON に格納されたデータを扱う方法、JSON 文字列の生成方法について理解すること。
       </td>
@@ -29,7 +31,7 @@ JavaScript Object Notation (JSON) は、構造化データを表現するため�
 
 JSON は文字列として存在します。ですので、ネットワークを通してデータを転送したい場合に便利です。 JSON データへアクセスしたい場合は、JavaScript オブジェクトへ変換する必要があります。 JavaScript にはこれらを相互に変換できるメソッドを持った [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) というグローバルなオブジェクトがあるので、変換は難しくありません。
 
-> **メモ:** 文字列をネイティブオブジェクトへ変換することは「デシリアライゼーション」 (_deserialization_) と呼ばれており、ネイティブオブジェクトをネットワークを通して転送できように文字列へ変換することは「シリアライゼーション」 (_serialization_) と呼ばれています。
+> **メモ:** 文字列をネイティブオブジェクトへ変換することは「デシリアライズ」 (_deserialization_) と呼ばれており、ネイティブオブジェクトをネットワークを通して転送できように文字列へ変換することは「シリアライズ」 (_serialization_) と呼ばれています。
 
 JSON 文字列はそれ自身をファイルとして格納することもできます。 `.json` という拡張子の付いたただのテキストファイルで、 {{glossary("MIME type", "MIME タイプ")}}は `application/json` です。
 
@@ -49,11 +51,7 @@ JSON 文字列はそれ自身をファイルとして格納することもでき
       "name": "Molecule Man",
       "age": 29,
       "secretIdentity": "Dan Jukes",
-      "powers": [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
     },
     {
       "name": "Madame Uppercut",
@@ -100,7 +98,7 @@ superHeroes['members'][1]['powers'][2]
 4. そのオブジェクト内で、 `powers` プロパティへアクセスするため, `["powers"]` と指定します。
 5. `powers` プロパティは選択したヒーローの能力を含んだ配列となっており、その中の 3 番目が欲しいので、 `[2]` と記述します。
 
-> **メモ:** 上記の JSON は [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) で参照することができます（ページ内の[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)を参照してください）。ページを読み込んで見て、ブラウザーのコンソールで変数内のデータにアクセスしてみてください。
+> **メモ:** 上記の JSON は [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) で参照することができます（ページ内の[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)を参照してください）。ページを読み込んで見て、ブラウザーのコンソールで変数内のデータにアクセスしてみてください。
 
 ## JSON の配列
 
@@ -112,11 +110,7 @@ superHeroes['members'][1]['powers'][2]
     "name": "Molecule Man",
     "age": 29,
     "secretIdentity": "Dan Jukes",
-    "powers": [
-      "Radiation resistance",
-      "Turning tiny",
-      "Radiation blast"
-    ]
+    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
   },
   {
     "name": "Madame Uppercut",
@@ -147,76 +141,60 @@ superHeroes['members'][1]['powers'][2]
 
 ### はじめに
 
-まず、 [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) と [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css) のコピーをローカルに作成してください。後者は例題ページをスタイリングするための CSS であり、前者は簡単な HTML です。
+まず、 [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) と [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) のコピーをローカルに作成してください。後者は例題ページをスタイリングするための CSS であり、前者は簡単な HTML です。加えて、{{HTMLElement("script")}} 要素で、この演習で書くJavaScriptコードを格納します。
 
 ```html
 <header>
+
 </header>
 
 <section>
+
 </section>
+
+<script>
+
+</script>
 ```
 
-他には、この演習で書く JavaScript を含んだ {{HTMLElement("script")}} 要素があります。この時点では、{{HTMLElement("header")}} 要素と {{HTMLElement("section")}} 要素 を取得して、変数へ代入している 2 行コードのみが書かれています。
+JSON データは GitHub の <https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json> で利用できます。
+
+この JSON をスクリプトに読み込んで、DOM 操作を使って次のように表示することにします。
+
+![（おしゃれなフォントで）"Super hero squad" と題され、 "Hometown: Metro City // Formed: 2016" と副題が付けられた文書の画像。見出しの下記 3 列には、それぞれ "Molecule Man", "Madame Uppercut", "Eternal Flame" というタイトルが付けられています。それぞれの列には、ヒーローの秘密の正体名、年齢、スーパーパワーが掲載されています。](json-superheroes.png)
+
+### 最上位の関数
+
+最上位の関数はこんな感じです。
 
 ```js
-const header = document.querySelector('header');
-const section = document.querySelector('section');
+async function populate() {
+
+  const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+  const request = new Request(requestURL);
+
+  const response = await fetch(request);
+  const superHeroes = await response.json();
+
+  populateHeader(superHeroes);
+  populateHeroes(superHeroes);
+
+}
 ```
 
-演習用の JSON データは <https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json> に用意してあります。
+JSON を取得するには、[フェッチ](/ja/docs/Web/API/Fetch_API)という API を使用しています。
+この API では、JavaScript を介してサーバーからリソースを取得するためのネットワークリクエストを行うことができます（画像、テキスト、JSON、HTML スニペットなど）。つまり、ページ全体を再読み込みしなくても、コンテンツの小さなセクションを更新できるのです。
 
-これを演習ページに読み込み、いくらかの DOM 操作を行って表示します。このようになります。
+この関数では、最初の 4 つの行でフェッチ API を使用して、サーバーから JSON を取得しています。
 
-![](json-superheroes.png)
+- GitHub の URL を格納するために、`requestURL` という変数を宣言します。
+- URL を使用して新しい {{domxref("Request")}} オブジェクトを初期化します。
+- {{domxref("fetch", "fetch()")}} 関数を使用してネットワーク要求を行い、{{domxref("Response")}} オブジェクトを返します。
+- レスポンスオブジェクトの {{domxref("Response/json", "json()")}} 関数を使用して、レスポンスを JSON で取得します。
 
-### JSON の取得
+> **メモ:** `fetch()` API は**非同期**です。非同期関数については[次のモジュール](/ja/docs/Learn/JavaScript/Asynchronous)でたくさん学びますが、今は、フェッチ API を使用する関数名の前にキーワード {{jsxref("Statements/async_function", "async")}}、あらゆる非同期関数への呼び出し前にキーワード {{jsxref("Operators/await", "await")}} が必要だということだけ言っておきます。
 
-JSON を取得するには、{{domxref("XMLHttpRequest")}} (しばしば **XHR** と呼ばれる) という API を使用します。これは非常に便利な JavaScript オブジェクトで、JavaScript を使用してサーバーからリソース (例：画像、テキスト、JSON、さらには HTML スニペットなど) を取得するネットワークリクエストを行うことができます。つまりページ全体を再読み込みせずに、小さな部分のコンテンツを更新することができます。これにより、よりレスポンシブなウェブページを作成できますが、それをもっと詳細に教えるのはこの記事の範囲を超えています。
-
-1. まず、取得したい JSON がある URL を変数へ代入します。次のコードを JavaScript の最後の行へ追加してください。
-
-    ```js
-    let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-    ```
-
-2. HTTP リクエストを作成するのに、 `XMLHttpRequest` コンストラクターに `new` キーワードを付けて使用することで、新しいリクエストインスタンスを作成する必要があります。先ほどのコードの下に、次のコードを追加してください。
-
-    ```js
-    let request = new XMLHttpRequest();
-    ```
-
-3. 新しいリクエストを開始するには、 [`open()`](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを使います。 次のコードを追加してください。
-
-    ```js
-    request.open('GET', requestURL);
-    ```
-
-    このメソッドは最低 2 つの引数を取ります（他に任意の引数を与えることもできます）。今回の簡単な例では、必要なのは必須の引数 2 つだけです。
-
-    - リクエストを開始する際に HTTP のメソッドを決める必要があります。今回のケースでは、単純にデータを取得するだけですので [`GET`](/ja/docs/Web/HTTP/Methods/GET) が良いでしょう。
-    - リクエストを送る先の URL。今回は JSON ファイルを置いた URL です。
-
-4. 次に、以下の 2 行のコードを追加してください。XHR オブジェクトがサーバーから返されるデータを判断できるように [`responseType`](/ja/docs/Web/API/XMLHttpRequest/responseType) に JSON を指定します。この場合、ブラウザー側で JavaScript オブジェクトへ変換してくれます。それから、 [`send()`](/ja/docs/Web/API/XMLHttpRequest/send) メソッドでリクエストを送信します。
-
-    ```js
-    request.responseType = 'json';
-    request.send();
-    ```
-
-5. 最後に、サーバーからのレスポンスを待ち、それを処理するコードを用意するので、以下のコードをこれまでのコードの下に追加してください。
-
-    ```js
-    request.onload = function() {
-      const superHeroes = request.response;
-      populateHeader(superHeroes);
-      showHeroes(superHeroes);
-    }
-    ```
-
-ここでは 、先ほどのリクエストに対するレスポンス（[`response`](/ja/docs/Web/API/XMLHttpRequest/response) プロパティから取得できます）を `superHeroes` と いう変数へ代入しています。つまり、この変数に JSON を元に生成された JavaScript オブジェクトが格納されているということです。それから 2 つの関数をそのオブジェクトを引数として与えて呼び出しています。最初の関数は引数のデータを `<header>` へ埋め込み、2 つ目は各ヒーローごとの情報カードを作り、`<section>` へ埋め込みます。
-
-上記の処理は、リクエストオブジェクトで load イベントが発生した時に呼び出されるイベントハンドラー（[`onload`](/ja/docs/Web/API/XMLHttpRequestEventTarget/onload) を参照）に記述しました。このイベントは、レスポンスがうまく取得できた場合に呼び出されるので、 `request.response` を使って何か処理をしようとしたときに、それが必ず利用できることが保証されています。
+すべて完了すると、`superHeroes` 変数に JSON を基にした JavaScript オブジェクトが格納されます。最初のオブジェクトは `<header>` を正しいデータで満たし、2 つ目はチームの各ヒーローの情報カードを作成し、それを `<section>` に挿入しています。
 
 ### ヘッダーへの値の設定
 
@@ -224,27 +202,29 @@ JSON を取得するには、{{domxref("XMLHttpRequest")}} (しばしば **XHR**
 
 ```js
 function populateHeader(obj) {
+  const header = document.querySelector('header');
   const myH1 = document.createElement('h1');
-  myH1.textContent = obj['squadName'];
+  myH1.textContent = obj.squadName;
   header.appendChild(myH1);
 
   const myPara = document.createElement('p');
-  myPara.textContent = 'Hometown: ' + obj['homeTown'] + ' // Formed: ' + obj['formed'];
+  myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
   header.appendChild(myPara);
 }
 ```
 
-まず、 {{HTMLElement("h1")}} 要素を [`createElement()`](/ja/docs/Web/API/Document/createElement) で生成し、その [`textContent`](/ja/docs/Web/API/Node/textContent) プロパティにそのオブジェクトの `squadName` プロパティを設定し、そしてそれを [`appendChild()`](/ja/docs/Web/API/Node/appendChild) で header に追加します。そして、段落についても同様に、要素を生成し、内容のテキストを設定し、 header に追加します。違いは、設定するテキストがこのオブジェクトの `homeTown` と `formed` の各プロパティを結合したものであるという点だけです。
+まず、{{HTMLElement("Heading_Elements", "h1")}} 要素を [`createElement()`](/ja/docs/Web/API/Document/createElement) で生成し、その [`textContent`](/ja/docs/Web/API/Node/textContent) プロパティにそのオブジェクトの `squadName` プロパティを設定し、そしてそれを [`appendChild()`](/ja/docs/Web/API/Node/appendChild) で header に追加します。そして、段落についても同様に、要素を生成し、内容のテキストを設定し、 header に追加します。唯一の違いは、そのテキストがオブジェクトの `homeTown` と `formed` プロパティの両方を格納した[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)に設定されることです。
 
 ### ヒーロー情報カードの作成
 
 次に、以下の関数をコードの下へ追加してください。この関数はスーパーヒーローカードの作成と画面表示を行います。
 
 ```js
-function showHeroes(obj) {
-  const heroes = obj['members'];
+function populateHeroes(obj) {
+  const section = document.querySelector('section');
+  const heroes = obj.members;
 
-  for (let i = 0; i < heroes.length; i++) {
+  for (const hero of heroes) {
     const myArticle = document.createElement('article');
     const myH2 = document.createElement('h2');
     const myPara1 = document.createElement('p');
@@ -252,15 +232,15 @@ function showHeroes(obj) {
     const myPara3 = document.createElement('p');
     const myList = document.createElement('ul');
 
-    myH2.textContent = heroes[i].name;
-    myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-    myPara2.textContent = 'Age: ' + heroes[i].age;
+    myH2.textContent = hero.name;
+    myPara1.textContent = `Secret identity: ${hero.secretIdentity}`;
+    myPara2.textContent = `Age: ${hero.age}`;
     myPara3.textContent = 'Superpowers:';
 
-    const superPowers = heroes[i].powers;
-    for (let j = 0; j < superPowers.length; j++) {
+    const superPowers = hero.powers;
+    for (const power of superPowers) {
       const listItem = document.createElement('li');
-      listItem.textContent = superPowers[j];
+      listItem.textContent = power;
       myList.appendChild(listItem);
     }
 
@@ -277,7 +257,7 @@ function showHeroes(obj) {
 
 始めに、JavaScript オブジェクトの `members` プロパティを新しい変数に保存します。この配列には複数のオブジェクトがあり、それぞれにヒーローについての情報が入ります。
 
-次に、[for ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop)を使って配列のそれぞれのオブジェクトを反復処理します。それぞれの次のようなことを行います。
+次に、[for...of ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#the_for...of_loop)を使って配列のそれぞれのオブジェクトを反復処理します。それぞれの次のようなことを行います。
 
 1. 新しい要素をいくつか作成します。`<article>` 1 つ、 `<h2>` 1 つ、 `<p>` 3 つ、`<ul>` 1 つです。
 2. `<h2>` の中身を現在のヒーローの名前 (`name`) にします。
@@ -286,35 +266,47 @@ function showHeroes(obj) {
 5. 別の `for` ループを使用して、今のヒーローの超能力を反復処理します。それぞれに対して `<li>` 要素を作成し、中に超能力を入れ、 `listItem` に `<ul>` 要素（`myList`）を `appendChild()` で追加します。
 6. 最後に、 `<h2>`、`<p>`、`<ul>` を `<article>` (`myArticle`) の中に追加してから、その `<article>` を `<section>` の中に追加します。これらを追加する順序は重要で、これが HTML の中で表示される順序になります。
 
-> **メモ:** 試してみるための例が上手く取得できなかった場合は、 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) ソースコードを参照してみてください（こちらで[ライブ実行](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)もできます）。
+> **メモ:** 試してみるための例が上手く取得できなかった場合は、 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) ソースコードを参照してみてください（こちらで[ライブ実行](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)もできます）。
 
 > **メモ:** もし、 JavaScript オブジェクトへのアクセスに使用しているドット/ブラケット記法がよく分からない場合は、 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) を別のタブやテキストエディターで開き、それを参照しながら JavaScript を読んでみるとよいでしょう。また、ドットやブラケット記法の詳細については、 [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の記事を見返してみてください。
 
-## オブジェクトとテキスト間の変換
+### 最上位の関数の呼び出し
 
-上記の例では、 XHR リクエストで JSON レスポンスを直接 JavaScript オブジェクトに変換するように設定したため、 JavaScript オブジェクトへのアクセスはシンプルでした。
+最後に、最上位の `populate()` 関数を呼び出す必要があります。
 
 ```js
-request.responseType = 'json';
+populate();
 ```
+
+## オブジェクトとテキスト間の変換
+
+上記の例では、`response.json()` を使用してネットワークレスポンスを直接 JavaScript オブジェクトに変換しているので、JavaScript オブジェクトへのアクセスはシンプルでした。
 
 しかし、時にはそれほど幸運ではないこともあります。生の JSON 文字列を受け取り、それを自分自身でオブジェクトに変換する必要がある場合もあります。また、 JavaScript のオブジェクトをネットワーク経由で送信したい場合、送信前に JSON （文字列）に変換する必要があります。幸い、この 2 つの問題はウェブ開発ではよくあることなので、ブラウザーでは組み込みの [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクトが利用でき、それには以下の 2 つのメソッドが備わっています。
 
 - [`parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): JSON 文字列を引数に取り、それに対する JavaScript オブジェクトを返します。
 - [`stringify()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): オブジェクトを引数に取り、等価な JSON 文字列を返します。
 
-前者の動作例が [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) にあります（[ソース](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html) を見て下さい）。ここでは以前に作成した例とまったく同じことをしていますが、 XHR では生の JSON 文字列を返すようにして、それを `parse()` で JavaScript オブジェクトに変換しているところだけが異なります。コードの重要な部分は以下の通りです。
+前者の動作例が [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) にあります（[ソース](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html) を見て下さい）。ここでは以前に作成した例とまったく同じことをしていますが、次の部分が異なります。
+
+- レスポンスの {{domxref("Response/text", "text()")}} メソッドを呼び出すことで、JSON ではなくテキストとしてレスポンスを取得する
+- 次に、`parse()` を使用して、テキストを JavaScript オブジェクトに変換する
+
+コードの重要な部分は以下の通りです。
 
 ```js
-request.open('GET', requestURL);
-request.responseType = 'text'; // now we're getting a string!
-request.send();
+async function populate() {
 
-request.onload = function() {
-  const superHeroesText = request.response; // get the string from the response
-  const superHeroes = JSON.parse(superHeroesText); // convert it to an object
+  const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+  const request = new Request(requestURL);
+
+  const response = await fetch(request);
+  const superHeroesText = await response.text();
+
+  const superHeroes = JSON.parse(superHeroesText);
   populateHeader(superHeroes);
-  showHeroes(superHeroes);
+  populateHeroes(superHeroes);
+
 }
 ```
 
@@ -329,20 +321,20 @@ myString
 
 ここでは、 JavaScript オブジェクトを作成してその中身を確認しています。次に `stringify()` を使って JSON 文字列に変換し、返値を新しい変数に保存し、その値も確認しています。
 
-## スキルをテストしてみましょう！
+## スキルをテストしてみましょう
 
 この記事はここまでですが、最重要事項を覚えていますか？先に進む前に、これが身に付いているかどうかを確認するためのテストがいくつかあります。[スキルテスト: JSON](/ja/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)を参照してください。
 
 ## まとめ
 
-この節では、プログラム内で、JSON を生成する、JSON を解釈する、JSON データを参照するなど、JSON を扱う方法について簡単に説明しました。次の節では、オブジェクト指向 JavaScript について見ていくことにします。
+この記事では、プログラム内で、JSON を生成する、JSON を解釈する、JSON データを参照するなど、JSON を扱う方法について簡単に説明しました。次の記事では、オブジェクト指向 JavaScript について見ていくことにします。
 
 ## 関連情報
 
 - [JSON リファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON)
-- [XMLHttpRequest オブジェクトリファレンス](/ja/docs/Web/API/XMLHttpRequest)
-- [XMLHttpRequest の利用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [フェッチ API の概要](/ja/docs/Web/API/Fetch_API)
+- [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
 - [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
-- [ECMA のオフィシャル JSON Web サイト](http://json.org/)
+- [ECMA のオフィシャル JSON ウェブサイト](https://json.org)
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
