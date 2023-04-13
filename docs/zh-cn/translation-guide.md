@@ -209,6 +209,7 @@ Like this.
 | Specifications | 规范 |
 | Technical summary | 技术概要 |
 | Usage notes | 使用说明 |
+| Active learning | （“学习”含义）动手练习 |
 
 [如何使用 markdown 来撰写文档]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [文章标签]: https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Howto/Tag
