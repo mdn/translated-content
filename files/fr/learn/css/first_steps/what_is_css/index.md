@@ -121,11 +121,3 @@ Voici, par exemple, le tableau de compatibilité pour la propriété [`font-fami
 Maintenant que vous avez compris ce qu'est CSS, vous pourrez commencer à écrire vos premières règles de style dans la leçon [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started).
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## Dans ce module
-
-1. [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

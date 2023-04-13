@@ -250,11 +250,3 @@ Bien qu'ils ne puissent pas utiliser toutes les API auxquelles le document a acc
 - [L'API <i lang="en">Web Workers</i>](fr/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
-
-## Dans ce module
-
-- [Présentation de JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Comment utiliser les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implémentation d'une API basée sur les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- **Introduction aux <i lang="en">workers</i>**
-- [Évaluation&nbsp;: séquencer les animations](/fr/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

@@ -40,7 +40,7 @@ Sec-Fetch-User: ?1
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{HTTPHeader("Sec-Fetch-Dest")}}
 - {{HTTPHeader("Sec-Fetch-Mode")}}

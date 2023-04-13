@@ -64,15 +64,15 @@ slug: Web/HTML/Element/hr
 
 该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : 设置对齐方式。如果没有值，默认值为 `left`。
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : 使用颜色名或十六进制设置颜色。
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : 去除阴影。
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : 使用像素设置高度。
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : 使用像素或者百分比设置宽度。
 
 ## 示例

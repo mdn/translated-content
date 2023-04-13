@@ -180,7 +180,7 @@ JavaScript 中的基本关键字和常用表达式。
 
 ### 条件（三元）运算符
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
   - : 条件元素运算符把两个结果中其中一个符合运算逻辑的值返回。
 
 ### 赋值运算符
@@ -224,7 +224,7 @@ JavaScript 中的基本关键字和常用表达式。
 
 ### 逗号运算符
 
-- 逗号操作符 {{JSxRef("Operators/Comma_Operator", ",")}}
+- 逗号操作符 {{JSxRef("Operators/Comma_operator", ",")}}
   - : 逗号操作符允许在一个判断状态中有多个表达式去进行运算并且最后返回最后一个表达式的值。
 
 ## 规范
@@ -237,4 +237,4 @@ JavaScript 中的基本关键字和常用表达式。
 
 ## 参见
 
-- [运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

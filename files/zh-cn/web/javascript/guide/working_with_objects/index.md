@@ -1,6 +1,6 @@
 ---
 title: 使用对象
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
@@ -36,7 +36,7 @@ myCar.year = 1969;
 myCar.noProperty; // undefined
 ```
 
-JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 [property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 `myCar` 对象的属性：
+JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 [property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 `myCar` 对象的属性：
 
 ```js
 myCar["make"] = "Ford";
@@ -389,11 +389,11 @@ function validate(obj, lowval, hival) {
 </form>
 ```
 
-## **定义 getters 与 setters**
+## 定义 getter 与 setter
 
 一个 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 是一个获取某个特定属性的值的方法。一个 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 是一个设定某个属性的值的方法。你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。定义 getter 和 setter 的语法采用对象字面量语法。
 
-下面例子描述了 getters 和 setters 是如何为用户定义的对象 `o` 工作的。
+下面例子描述了 getter 和 setter 是如何为用户定义的对象 `o` 工作的。
 
 ```js
 var o = {
@@ -526,4 +526,4 @@ fruit === fruitbear // return true
 - 想要深入了解，请阅读[details of javaScript's objects model](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
 - 想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 [JavaScript classes](/zh-CN/docs/Web/JavaScript/Reference/Classes) 章节。
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

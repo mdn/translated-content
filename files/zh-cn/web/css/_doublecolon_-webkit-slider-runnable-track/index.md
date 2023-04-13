@@ -13,7 +13,7 @@ input\[type=range]**`::-webkit-slider-runnable-track`**`{`border-radius: 10px; /
 
 **`::-webkit-slider-runnable-track`** 不是任何规范的一部分。这是 WebKit/Blink 特有的伪元素 (也就是 chrome/safari 浏览器内核特有的)
 
-### 另请参阅
+### 参见
 
 - ::-webkit-slider-thumb
 - 与其他浏览器内核功能类似的伪类

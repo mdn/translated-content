@@ -14,7 +14,7 @@ The **`HTMLDataElement`** interface provides special properties (beyond the regu
 _從它的父繼承屬性, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDataElement.value")}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("value", "data")}} HTML attribute, containing a machine-readable form of the element's value.
+  - : Is a {{domxref("DOMString")}} reflecting the [`value`](/zh-TW/docs/Web/HTML/Element/data#value) HTML attribute, containing a machine-readable form of the element's value.
 
 ## 方法
 

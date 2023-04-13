@@ -23,7 +23,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 ### CSS
 
-- 縦書き文章のレイアウト機能を、デフォルトで有効にしました ({{bug(1138384)}})。以下の CSS プロパティが使用可能になりました:
+- 縦書き文章のレイアウト機能を、デフォルトで有効にしました ([Firefox バグ 1138384](https://bugzil.la/1138384))。以下の CSS プロパティが使用可能になりました:
 
   - 書字方向を選択する: {{cssxref("writing-mode")}}
   - 文字の向きを制御する: {{cssxref("text-orientation")}}.
@@ -35,27 +35,27 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
   - 方向に依存しない {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} および幅、スタイル、色を個別に指定するプロパティ: {{cssxref("border-block-start")}}、{{cssxref("border-block-start-width")}}、{{cssxref("border-block-start-style")}}、{{cssxref("border-block-start-color")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-end-width")}}、{{cssxref("border-block-end-style")}}、{{cssxref("border-block-end-color")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-inline-start-width")}}、{{cssxref("border-inline-start-style")}}、{{cssxref("border-inline-start-color")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-end-width")}}、{{cssxref("border-inline-end-style")}}、{{cssxref("border-inline-end-color")}}
   - 方向に依存しない {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}}: {{cssxref("offset-block-start")}}、{{cssxref("offset-block-end")}}、{{cssxref("offset-inline-start")}}、{{cssxref("offset-inline-end")}}
 
-- SVG で {{cssxref("transform-origin")}} プロパティをサポートしました。また、{{cssxref("transform-box")}} プロパティを実装しました ({{bug(923193)}})。
+- SVG で {{cssxref("transform-origin")}} プロパティをサポートしました。また、{{cssxref("transform-box")}} プロパティを実装しました ([Firefox バグ 923193](https://bugzil.la/923193))。
 
 ### HTML
 
-- `href` 属性を持たない {{HTMLElement("a")}} は、インタラクティブコンテンツとして分類しないようになりました。{{HTMLElement("label")}} 要素内でクリックすると、ラベル付けされたコンテンツがアクティブになります ({{bug(1167816)}})。
-- サイトアイコン (favicon およびショートカットアイコン) で、SVG アイコンをサポートしました ({{bug(366324)}})。
-- [\<link rel='preconnect'>](/ja/docs/Web/HTML/Element/link) で、{{htmlattrxref('crossorigin', 'link')}} 属性をサポートしました ({{bug(1174152)}})。
-- picture 要素がリサイズやビューポートの変化に反応しない問題を修正しました ({{bug(1135812)}})。
+- `href` 属性を持たない {{HTMLElement("a")}} は、インタラクティブコンテンツとして分類しないようになりました。{{HTMLElement("label")}} 要素内でクリックすると、ラベル付けされたコンテンツがアクティブになります ([Firefox バグ 1167816](https://bugzil.la/1167816))。
+- サイトアイコン (favicon およびショートカットアイコン) で、SVG アイコンをサポートしました ([Firefox バグ 366324](https://bugzil.la/366324))。
+- [\<link rel='preconnect'>](/ja/docs/Web/HTML/Element/link) で、{{htmlattrxref('crossorigin', 'link')}} 属性をサポートしました ([Firefox バグ 1174152](https://bugzil.la/1174152))。
+- picture 要素がリサイズやビューポートの変化に反応しない問題を修正しました ([Firefox バグ 1135812](https://bugzil.la/1135812))。
 
 ### JavaScript
 
-- {{jsxref("Date.prototype")}} は {{jsxref("Date")}} のインスタンスではなく、通常のオブジェクトになりました ({{bug(861219)}})。
-- {{jsxref("Date.prototype.toString")}} は、ジェネリックなメソッドになりました ({{bug(861219)}}).
-- {{jsxref("Symbol.species")}} を追加しました ({{bug(1131043)}})。
-- {{jsxref("Map.@@species", "Map[@@species]")}} および {{jsxref("Set.@@species", "Set[@@species]")}} ゲッタを追加しました ({{bug(1131043)}})。
-- 非標準の {{jsxref("Statements/let", "let 式", "#let_expressions", 1)}}を廃止しました ({{bug(1023609)}})。
-- {{jsxref("Functions/Default_parameters", "既定値の代入を含む、分割されたパラメータ", "#Destructured_parameter_with_default_value_assignment", 1)}}をサポートしました ({{bug(1018628)}})。
-- ES6 に従い、[メソッドの定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で波括弧が必要になりました。波括弧を欠いた構文はエラーになります ({{bug(1150855)}})。
-- コンストラクタ形式の[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) (ジェネレータメソッドを除く) は不可になりました ({{bug(1059908)}} および {{bug(1166950)}})。
+- {{jsxref("Date.prototype")}} は {{jsxref("Date")}} のインスタンスではなく、通常のオブジェクトになりました ([Firefox バグ 861219](https://bugzil.la/861219))。
+- {{jsxref("Date.prototype.toString")}} は、ジェネリックなメソッドになりました ([Firefox バグ 861219](https://bugzil.la/861219)).
+- {{jsxref("Symbol.species")}} を追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
+- {{jsxref("Map.@@species", "Map[@@species]")}} および {{jsxref("Set.@@species", "Set[@@species]")}} ゲッタを追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
+- 非標準の {{jsxref("Statements/let", "let 式", "#let_expressions", 1)}}を廃止しました ([Firefox バグ 1023609](https://bugzil.la/1023609))。
+- {{jsxref("Functions/Default_parameters", "既定値の代入を含む、分割されたパラメータ", "#Destructured_parameter_with_default_value_assignment", 1)}}をサポートしました ([Firefox バグ 1018628](https://bugzil.la/1018628))。
+- ES6 に従い、[メソッドの定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で波括弧が必要になりました。波括弧を欠いた構文はエラーになります ([Firefox バグ 1150855](https://bugzil.la/1150855))。
+- コンストラクタ形式の[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) (ジェネレータメソッドを除く) は不可になりました ([Firefox バグ 1059908](https://bugzil.la/1059908) および [Firefox バグ 1166950](https://bugzil.la/1166950))。
 - ES6 使用への準拠の一環として `([a, b]) = [1, 2]` や `({a, b}) = { a: 1, b: 2 }` といった、括弧でくくるパターンの [destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 構文は無効と判断され、{{jsxref("SyntaxError")}} が発生するようになりました。詳しくは [Jeff Walden のブログ記事](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) をご覧ください。
-- [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) 構文をサポートしました ({{bug(1141865)}})。
+- [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) 構文をサポートしました ([Firefox バグ 1141865](https://bugzil.la/1141865))。
 
 ### インターフェイス/API/DOM
 
@@ -63,75 +63,75 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 - 切り取り、コピー、貼り付けのコマンド制御を改良して、JS プログラムから Web コンテンツのコピーや切り取りが可能になりました:
 
-  - {{domxref("Document.queryCommandSupported()")}} に引数として `'paste'` コマンドを与えると、実際に操作を行うための十分な権限がない場合に `false` を返します ({{bug(1161721)}})。
-  - {{domxref("Document.queryCommandSupported()")}} に引数として `'cut'` または `'copy'` を与えると、ユーザが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に `true` を返すようになりました ({{bug(1162952)}})。
-  - 引数として `'cut'` または `'copy'` を与えた {{domxref("Document.execCommand()")}} は動作しますが、ユーザが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に限ります ({{bug(1012662)}})。
-  - {{domxref("Document.execCommand()")}} でコマンドが未サポートまたは無効である場合に、例外が発生しないようになりました ({{bug(1027560)}})。
+  - {{domxref("Document.queryCommandSupported()")}} に引数として `'paste'` コマンドを与えると、実際に操作を行うための十分な権限がない場合に `false` を返します ([Firefox バグ 1161721](https://bugzil.la/1161721))。
+  - {{domxref("Document.queryCommandSupported()")}} に引数として `'cut'` または `'copy'` を与えると、ユーザが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に `true` を返すようになりました ([Firefox バグ 1162952](https://bugzil.la/1162952))。
+  - 引数として `'cut'` または `'copy'` を与えた {{domxref("Document.execCommand()")}} は動作しますが、ユーザが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に限ります ([Firefox バグ 1012662](https://bugzil.la/1012662))。
+  - {{domxref("Document.execCommand()")}} でコマンドが未サポートまたは無効である場合に、例外が発生しないようになりました ([Firefox バグ 1027560](https://bugzil.la/1027560))。
 
 #### イベント
 
-- 非標準の {{domxref("CloseEvent.initCloseEvent()")}} メソッド、および {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} メソッドを使用して {{domxref("CloseEvent")}} を生成する機能を削除しました。代わりに、標準のコンストラクタである {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} を使用してください ({{bug(1161950)}})。
-- デスクトップ版の Nightly で、{{domxref("PointerEvent")}} がデフォルトで有効になりました。Developer Edition、Beta、Release では無効であり、少なくともいくつかのバージョンの間は有効化しない予定です。({{bug(1166347)}})
-- 接頭辞なしの {{domxref("MouseEvent.movementX")}} および {{domxref("MouseEvent.movementY")}}}} を追加しました。接頭辞つきのプロパティは非推奨になり、将来のある時点で削除する予定です ({{bug(1164981)}})。
+- 非標準の {{domxref("CloseEvent.initCloseEvent()")}} メソッド、および {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} メソッドを使用して {{domxref("CloseEvent")}} を生成する機能を削除しました。代わりに、標準のコンストラクタである {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} を使用してください ([Firefox バグ 1161950](https://bugzil.la/1161950))。
+- デスクトップ版の Nightly で、{{domxref("PointerEvent")}} がデフォルトで有効になりました。Developer Edition、Beta、Release では無効であり、少なくともいくつかのバージョンの間は有効化しない予定です。([Firefox バグ 1166347](https://bugzil.la/1166347))
+- 接頭辞なしの {{domxref("MouseEvent.movementX")}} および {{domxref("MouseEvent.movementY")}}}} を追加しました。接頭辞つきのプロパティは非推奨になり、将来のある時点で削除する予定です ([Firefox バグ 1164981](https://bugzil.la/1164981))。
 
 #### Web Crypto
 
-- {{domxref("SubtleCrypto.importKey()")}} および {{domxref("SubtleCrypto.exportKey()")}} で `ECDH` 鍵をサポートしました ({{bug(1050175)}})。
+- {{domxref("SubtleCrypto.importKey()")}} および {{domxref("SubtleCrypto.exportKey()")}} で `ECDH` 鍵をサポートしました ([Firefox バグ 1050175](https://bugzil.la/1050175))。
 
 #### Canvas API
 
-- {{domxref("HTMLCanvasElement.captureStream()")}} および {{domxref("CanvasCaptureMediaStream")}} を追加して、{{HTMLElement("canvas")}} の表示内容をリアルタイムに流すことが可能になりました ({{bug(1032848)}})。
-- {{domxref("MediaStream.id")}} が、ストリームのユニークな ID を返すようになりました ({{bug(1089798)}})。
-- {{domxref("CanvasRenderingContext2D.filter")}} の初期値が、正しく `none` が設定されるようになりました ({{bug(1163124)}})。
+- {{domxref("HTMLCanvasElement.captureStream()")}} および {{domxref("CanvasCaptureMediaStream")}} を追加して、{{HTMLElement("canvas")}} の表示内容をリアルタイムに流すことが可能になりました ([Firefox バグ 1032848](https://bugzil.la/1032848))。
+- {{domxref("MediaStream.id")}} が、ストリームのユニークな ID を返すようになりました ([Firefox バグ 1089798](https://bugzil.la/1089798))。
+- {{domxref("CanvasRenderingContext2D.filter")}} の初期値が、正しく `none` が設定されるようになりました ([Firefox バグ 1163124](https://bugzil.la/1163124))。
 
 #### Service Worker
 
 - [Service Worker](/ja/docs/Web/API/ServiceWorker_API) の実験的な実装を改良しました:
 
-  - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} を実装しました ({{bug(1131352)}})。
-  - {{domxref("Clients.claim()")}} を追加しました ({{bug(1130684)}})。
-  - Service Worker で機能する上記以外のイベントは {{domxref("ExtendableEvent")}} から継承しており、{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} メソッドにアクセスできます ({{bug("1160527")}})。
+  - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} を実装しました ([Firefox バグ 1131352](https://bugzil.la/1131352))。
+  - {{domxref("Clients.claim()")}} を追加しました ([Firefox バグ 1130684](https://bugzil.la/1130684))。
+  - Service Worker で機能する上記以外のイベントは {{domxref("ExtendableEvent")}} から継承しており、{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} メソッドにアクセスできます ([Firefox バグ 1160527](https://bugzil.la/1160527))。
 
-- {{domxref("CacheStorage")}} および {{domxref("Cache")}} インターフェイスをサポートしました ({{bug("1110144")}})。
+- {{domxref("CacheStorage")}} および {{domxref("Cache")}} インターフェイスをサポートしました ([Firefox バグ 1110144](https://bugzil.la/1110144))。
 
 #### WebGL
 
-- WebGL コンテキスト属性 `failIfMajorPerformanceCaveat` を追加しました。また、システムのパフォーマンスが低い場合にコンテキスト生成を失敗させることを示すために、{{domxref("HTMLCanvasElement.getContext()")}} で WebGL コンテキストを生成する際にこの属性を設定できるようになりました ({{bug(1164970)}})。
+- WebGL コンテキスト属性 `failIfMajorPerformanceCaveat` を追加しました。また、システムのパフォーマンスが低い場合にコンテキスト生成を失敗させることを示すために、{{domxref("HTMLCanvasElement.getContext()")}} で WebGL コンテキストを生成する際にこの属性を設定できるようになりました ([Firefox バグ 1164970](https://bugzil.la/1164970))。
 
 #### その他
 
-- OS X および Windows で、{{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} はネットワーク接続の状態に応じて変化するようになりました (以前は "オフライン作業" モードを選択しなければ常に `true` を返していました) ({{bug(654579)}})。
-- {{domxref("MessagePort")}} および {{domxref("MessageChannel")}} が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました。また、デフォルトですべての状況で有効になりました ({{bug(952139)}} および {{bug(911972)}})。
-- User Timing API が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ({{bug(1155761)}})。
-- [Notifications API](/ja/docs/Web/API/Notifications_API) が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ({{bug(916893)}})。
-- {{domxref("DOMRequest")}} および {{domxref("DOMCursor")}} が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ({{bug(1167650)}})。
-- [CSS Font Loading API](/ja/docs/Web/API/CSSFontLoading_API) を全面的に実装して、デフォルトで有効にしました ({{bug(1149381)}})。
-- Shared workers が、プライベートドキュメント (すなわち、プライベートウィンドウで開いているドキュメント) と非プライベートドキュメントとの間で共有されないようになりました ({{bug(1177621)}})。
-- {{domxref("URLUtilsSearchParams.searchParams")}} プロパティが読み取り専用になりました ({{bug(1174731)}})。
-- {{domxref('URLUtils.hash')}} プロパティが、URL フラグメントをデコードしないようになりました ({{bug(1093611)}})。
+- OS X および Windows で、{{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} はネットワーク接続の状態に応じて変化するようになりました (以前は "オフライン作業" モードを選択しなければ常に `true` を返していました) ([Firefox バグ 654579](https://bugzil.la/654579))。
+- {{domxref("MessagePort")}} および {{domxref("MessageChannel")}} が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました。また、デフォルトですべての状況で有効になりました ([Firefox バグ 952139](https://bugzil.la/952139) および [Firefox バグ 911972](https://bugzil.la/911972))。
+- User Timing API が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ([Firefox バグ 1155761](https://bugzil.la/1155761))。
+- [Notifications API](/ja/docs/Web/API/Notifications_API) が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ([Firefox バグ 916893](https://bugzil.la/916893))。
+- {{domxref("DOMRequest")}} および {{domxref("DOMCursor")}} が [Web workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました ([Firefox バグ 1167650](https://bugzil.la/1167650))。
+- [CSS Font Loading API](/ja/docs/Web/API/CSSFontLoading_API) を全面的に実装して、デフォルトで有効にしました ([Firefox バグ 1149381](https://bugzil.la/1149381))。
+- Shared workers が、プライベートドキュメント (すなわち、プライベートウィンドウで開いているドキュメント) と非プライベートドキュメントとの間で共有されないようになりました ([Firefox バグ 1177621](https://bugzil.la/1177621))。
+- {{domxref("URLUtilsSearchParams.searchParams")}} プロパティが読み取り専用になりました ([Firefox バグ 1174731](https://bugzil.la/1174731))。
+- {{domxref('URLUtils.hash')}} プロパティが、URL フラグメントをデコードしないようになりました ([Firefox バグ 1093611](https://bugzil.la/1093611))。
 
 ### MathML
 
 #### 新たな既定フォントとフォールバックフォントの制御
 
-数式では特別なフォントが必要です。これまで、そのフォントは `mathml.css` ユーザエージェントスタイルシート ({{MathMLElement("math")}} タグに font-family を設定) および設定項目 `font.mathfont-family` (伸縮する大型演算子で使用するフォールバックフォントを設定) でハードコードされていました。Firefox 41 より `<math>` タグへ自動的に設定される `x-math` 内部言語と、それに対応する設定項目 (例えば `font.name.serif.x-math`) を導入しました。ユーザエージェントスタイルシートでは `<math>` タグの font-family を serif に設定して、設定項目 `font.mathfont-family` を `font.name.serif.x-math` で置き換えました。また、すべてのプラットフォームで、フォールバックフォントは基本的に "Latin Modern Math" が先頭にある同一のリストを使用するようになりました。既定フォント/フォールバックフォントは、標準の言語別フォント設定メニューで設定できます。詳しくは {{bug(947654)}} および {{bug(1160456)}} をご覧ください。
+数式では特別なフォントが必要です。これまで、そのフォントは `mathml.css` ユーザエージェントスタイルシート ({{MathMLElement("math")}} タグに font-family を設定) および設定項目 `font.mathfont-family` (伸縮する大型演算子で使用するフォールバックフォントを設定) でハードコードされていました。Firefox 41 より `<math>` タグへ自動的に設定される `x-math` 内部言語と、それに対応する設定項目 (例えば `font.name.serif.x-math`) を導入しました。ユーザエージェントスタイルシートでは `<math>` タグの font-family を serif に設定して、設定項目 `font.mathfont-family` を `font.name.serif.x-math` で置き換えました。また、すべてのプラットフォームで、フォールバックフォントは基本的に "Latin Modern Math" が先頭にある同一のリストを使用するようになりました。既定フォント/フォールバックフォントは、標準の言語別フォント設定メニューで設定できます。詳しくは [Firefox バグ 947654](https://bugzil.la/947654) および [Firefox バグ 1160456](https://bugzil.la/1160456) をご覧ください。
 
 ### SVG
 
-- サイトアイコン (favicon、ショートカットアイコン) で SVG をサポートしました ({{bug(366324)}})。
+- サイトアイコン (favicon、ショートカットアイコン) で SVG をサポートしました ([Firefox バグ 366324](https://bugzil.la/366324))。
 
 ### Audio/Video
 
-- 設定項目 `media.autoplay.enabled` が、信頼されていない {{domxref("HTMLMediaElement.play()")}} の起動 (ユーザ以外が作動したスクリプトから呼び出される場合) に対しても適用されるようになりました ({{bug(659285)}})。
+- 設定項目 `media.autoplay.enabled` が、信頼されていない {{domxref("HTMLMediaElement.play()")}} の起動 (ユーザ以外が作動したスクリプトから呼び出される場合) に対しても適用されるようになりました ([Firefox バグ 659285](https://bugzil.la/659285))。
 
 ## ネットワーク
 
-- `X-Content-Duration` ヘッダのサポートを廃止しました ({{Bug(1160695)}})。
-- HTTP/2 プロトコルの草案版のサポートを廃止しました ({{bug(1132357)}})。
+- `X-Content-Duration` ヘッダのサポートを廃止しました ([Firefox バグ 1160695](https://bugzil.la/1160695))。
+- HTTP/2 プロトコルの草案版のサポートを廃止しました ([Firefox バグ 1132357](https://bugzil.la/1132357))。
 
 ## セキュリティ
 
-- [CSP](/ja/docs/Web/Security/CSP) 1.1 の `manifest-src` [ディレクティブ](/ja/docs/Web/Security/CSP/CSP_policy_directives)をサポートしました ({{bug(1089255)}})。
+- [CSP](/ja/docs/Web/Security/CSP) 1.1 の `manifest-src` [ディレクティブ](/ja/docs/Web/Security/CSP/CSP_policy_directives)をサポートしました ([Firefox バグ 1089255](https://bugzil.la/1089255))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
@@ -153,7 +153,7 @@ _変更なし。_
 
 ### その他
 
-- window のルートウィジェットを {{HTMLElement("canvas")}} に描画するための、新たな chrome コンテキスト限定の内部 API である {{domxref("CanvasRenderingContext2D.drawWidgetAsOnScreen()")}} を追加しました。この API は、オンスクリーンのウィジェットを取得するために OS を使用します。詳しくは {{bug(1167477)}} をご覧ください。
+- window のルートウィジェットを {{HTMLElement("canvas")}} に描画するための、新たな chrome コンテキスト限定の内部 API である {{domxref("CanvasRenderingContext2D.drawWidgetAsOnScreen()")}} を追加しました。この API は、オンスクリーンのウィジェットを取得するために OS を使用します。詳しくは [Firefox バグ 1167477](https://bugzil.la/1167477) をご覧ください。
 
 ## 関連情報
 

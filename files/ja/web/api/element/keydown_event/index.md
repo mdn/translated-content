@@ -13,7 +13,7 @@ slug: Web/API/Element/keydown_event
 
 キーボードイベントは `<inputs>`, `<textarea>` と `contentEditable` 属性または `tabindex="-1"` を持つものだけが生成します。
 
-Firefox 65 以降では、CJKT ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントが IME 変換中に発行されるようになりました（{{bug(354358)}}）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、IME によって処理されたイベントに関連する `keyCode` に設定される特別な値です）。
+Firefox 65 以降では、CJKT ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントが IME 変換中に発行されるようになりました（[Firefox バグ 354358](https://bugzil.la/354358)）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、IME によって処理されたイベントに関連する `keyCode` に設定される特別な値です）。
 
 ```js
 eventTarget.addEventListener("keydown", event => {

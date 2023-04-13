@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">预备条件：</th>
       <td>
         熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
         <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和

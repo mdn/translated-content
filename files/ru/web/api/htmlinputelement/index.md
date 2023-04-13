@@ -147,7 +147,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
         element is not contained in a form element:
         <ul>
           <li>
-            {{ HTMLVersionInline(5) }} this can be the
+            this can be the
             {{ htmlattrxref("id", "form") }} attribute of any
             {{ HTMLElement("form") }} element in the same document. Even
             if the attribute is set on {{ HTMLElement("input") }},
@@ -155,7 +155,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
             {{ HTMLElement("form") }} element.
           </li>
           <li>
-            {{ HTMLVersionInline(4) }} this must be <code>null</code>.
+            this must be <code>null</code>.
           </li>
         </ul>
       </td>
@@ -337,7 +337,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
         <p>
           Reflects the {{ htmlattrxref("readonly", "input") }} HTML
           attribute, indicating that the user cannot modify the value of the
-          control.<br />{{HTMLVersionInline(5)}}This is ignored if the
+          control.<br />This is ignored if the
           value of the {{htmlattrxref("type","input")}} attribute is
           hidden, range, color, checkbox, radio, file, or a button type.
         </p>
@@ -385,7 +385,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
         attribute, containing size of the control. This value is in pixels
         unless the value of {{htmlattrxref("type","input")}} is text
         or password, in which case, it is an integer number of characters.
-        {{ HTMLVersionInline(5) }} Applies only when
+        Applies only when
         {{htmlattrxref("type","input")}} is set to text, search,
         tel, url, email, or password; otherwise it is ignored.
       </td>

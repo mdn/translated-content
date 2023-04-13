@@ -12,7 +12,7 @@ Una tarea muy común en HTML es la estructuración de datos, y para esto hay mú
 
 Antes de comenzar este módulo, deberías de saber las cosas básicas de HTML — ver [Introducción a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
 
-> **Nota:** Si estas trabjando en un ordenador/tableta/otro dispositivo en el que no puedes crear tus propios archivos, puedes probar la mayoría de ejemplos online en webs como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si estas trabjando en un ordenador/tableta/otro dispositivo en el que no puedes crear tus propios archivos, puedes probar la mayoría de ejemplos online en webs como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

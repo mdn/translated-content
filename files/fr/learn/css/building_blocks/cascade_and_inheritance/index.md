@@ -259,28 +259,3 @@ Si vous n'avez pas encore complètement compris la cascade, la spécificité et 
 Si vous rencontrez des problèmes étranges où votre mise en forme ne s'applique pas ou de façon inattendue, revenez voir cette page, il se peut que ce soit un problème de spécificité.
 
 {{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-- [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [Sélecteurs de type, de classe, et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- **Cascade, spécificité, et héritage**
-
-- [Modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Gérer les différentes directions du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Dimensionner les objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [Images, média, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [Mise en forme des tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [Débogage du CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organiser une base de code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)
-- [Évaluation&nbsp;: compréhension fondamentale de CSS](/fr/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [Évaluation&nbsp;: création d'un papier à lettre élégant](/fr/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [Évaluation&nbsp;: une boîte cool](/fr/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

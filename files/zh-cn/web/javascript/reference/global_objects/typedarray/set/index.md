@@ -9,9 +9,12 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 
 ## 语法
 
-```plain
-typedarray.set(array[, offset])
-typedarray.set(typedarray[, offset])
+```js-nolint
+set(array)
+set(array, targetOffset)
+
+set(typedarray)
+set(typedarray, targetOffset)
 ```
 
 ### 参数

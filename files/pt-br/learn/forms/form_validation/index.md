@@ -740,17 +740,3 @@ A validação de formulário não requer JavaScript complexo, mas requer pensar 
 - Indique exatamente onde ocorre o erro (especialmente em formulários grandes).
 
 {{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
-
-## Neste módulo
-
-- [Seu primeiro formulário HTML](/pt-BR/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [Como estruturar um formulário HTML](/pt-BR/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [Os widgets de formulário nativos](/pt-BR/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Enviando dados do formulário](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Validação de dados do formulário](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
-- [Como criar widgets de formulário personalizados](/pt-BR/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Enviando formulários por JavaScript](/pt-BR/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [Formulários HTML em navegadores legados](/pt-BR/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Estilizando formulários HTML](/pt-BR/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Estilo avançado para formulários HTML](/pt-BR/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Tabela de compatibilidade de propriedades para widgets de formulário](/pt-BR/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

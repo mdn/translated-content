@@ -184,13 +184,3 @@ Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou
 - [Fonction Callback en JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — Une façon courante en JavaScript consiste à passer une fonction à une autre en tant qu'argument, qui est alors appelée à l'intérieur de la première fonction. Cela va au delà de la portée de ce cours, mais mériterait d'être étudier rapidement.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## Dans ce module
-
-- [Prendre des décisions dans le code — conditions](/fr/docs/Apprendre/JavaScript/Building_blocks/conditionals)
-- [Les boucles dans le code](/fr/docs/Apprendre/JavaScript/Building_blocks/Looping_code)
-- [Fonctions — Des blocs de code réutilisables](/fr/docs/Apprendre/JavaScript/Building_blocks/Fonctions)
-- [Construire vos propres fonctions](/fr/docs/Apprendre/JavaScript/Building_blocks/Build_your_own_function)
-- [Valeurs de retour des fonctions](/fr/docs/Apprendre/JavaScript/Building_blocks/Return_values)
-- [Introduction aux événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements)
-- [Galerie d'images](/fr/docs/Apprendre/JavaScript/Building_blocks/Image_gallery)

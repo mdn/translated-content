@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 
 ## 语法
 
-```plain
-typedarray.lastIndexOf(searchElement[, fromIndex = typedarray.length])
+```js-nolint
+lastIndexOf(searchElement)
+lastIndexOf(searchElement, fromIndex)
 ```
 
 ### 参数

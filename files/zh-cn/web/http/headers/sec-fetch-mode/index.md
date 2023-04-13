@@ -50,7 +50,7 @@ Sec-Fetch-Mode: websocket
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{HTTPHeader("Sec-Fetch-Site")}}
 - {{HTTPHeader("Sec-Fetch-User")}}
