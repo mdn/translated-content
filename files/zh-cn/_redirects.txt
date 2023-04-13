@@ -2009,7 +2009,7 @@
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden
-/zh-CN/docs/Web/Accessibility/ARIA/forms	/zh-CN/docs/conflicting/Web/Accessibility/ARIA
+/zh-CN/docs/Web/Accessibility/ARIA/forms	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Accessibility/ARIA/forms/alerts	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/zh-CN/docs/Web/Guide/Audio_and_video_delivery
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
