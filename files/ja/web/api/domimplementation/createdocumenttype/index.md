@@ -1,40 +1,34 @@
 ---
-title: "DOMImplementation: createDocumentType() method"
-short-title: createDocumentType()
+title: "DOMImplementation: createDocumentType() メソッド"
 slug: Web/API/DOMImplementation/createDocumentType
-page-type: web-api-instance-method
-browser-compat: api.DOMImplementation.createDocumentType
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ ApiRef("DOM")}}
 
-The **`DOMImplementation.createDocumentType()`** method returns
-a {{domxref("DocumentType")}} object which can either be used with
-{{domxref("DOMImplementation.createDocument")}} upon document creation or can be put
-into the document via methods like {{domxref("Node.insertBefore()")}} or
-{{domxref("Node.replaceChild()")}}.
+**`DOMImplementation.createDocumentType()`** メソッドは {{domxref("DocumentType")}} オブジェクトを返します。これは文書作成時に {{domxref("DOMImplementation.createDocument")}} で使用したり、{{domxref("Node.insertBefore()")}} や {{domxref("Node.replaceChild()")}} などのメソッドで文書中に置いたりすることができます。
 
-## Syntax
+## 構文
 
 ```js-nolint
 createDocumentType(qualifiedNameStr, publicId, systemId)
 ```
 
-### Parameters
+### 引数
 
 - `qualifiedNameStr`
-  - : A string containing the qualified name, like
-    `svg:svg`.
+  - : 修飾名の入った文字列です。例えば `svg:svg` です。
 - `publicId`
-  - : A string containing the `PUBLIC` identifier.
+  - : `PUBLIC` 識別子の入った文字列です。
 - `systemId`
-  - : A string containing the `SYSTEM` identifiers.
+  - : `SYSTEM` 識別子の入った文字列です。
 
-### Return value
+### 返値
 
-A [`DocumentType`](/en-US/docs/Web/API/DocumentType).
+[`DocumentType`](/ja/docs/Web/API/DocumentType) です。
 
-## Examples
+## 例
 
 ```js
 const dt = document.implementation.createDocumentType(
@@ -50,14 +44,14 @@ const d = document.implementation.createDocument(
 alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- The {{domxref("DOMImplementation")}} interface it belongs to.
+- 所属先の {{domxref("DOMImplementation")}} インターフェイス
