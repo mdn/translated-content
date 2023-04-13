@@ -1,39 +1,35 @@
 ---
-title: "DOMImplementation: createHTMLDocument() method"
-short-title: createHTMLDocument()
+title: "DOMImplementation: createHTMLDocument() メソッド"
 slug: Web/API/DOMImplementation/createHTMLDocument
-page-type: web-api-instance-method
-browser-compat: api.DOMImplementation.createHTMLDocument
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef("DOM")}}
 
-The
-**`DOMImplementation.createHTMLDocument()`** method creates a
-new HTML {{ domxref("Document") }}.
+**`DOMImplementation.createHTMLDocument()`** メソッドは、新しい HTML 文書 ({{ domxref("Document") }}) を作成します。
 
-## Syntax
+## 構文
 
 ```js-nolint
 createHTMLDocument()
 createHTMLDocument(title)
 ```
 
-### Parameters
+### 引数
 
 - `title` {{optional_inline}}
-  - : A string containing the title to give the new HTML document.
+  - : 新しい HTML 文書に与えるタイトルを含む文字列です。
 
-### Return value
+### 返値
 
-A new HTML {{domxref("Document")}} object.
+新しい HTML の {{domxref("Document")}} オブジェクトです。
 
-## Examples
+## 例
 
-This example creates a new HTML document and inserts it into an {{
-  HTMLElement("iframe") }} in the current document.
+この例では、新しい HTML 文書を作成し、現在の文書内の {{ HTMLElement("iframe") }} に挿入しています。
 
-Here's the HTML for this example:
+この例の HTML は次の通りです。
 
 ```html
 <body>
@@ -45,7 +41,7 @@ Here's the HTML for this example:
 </body>
 ```
 
-The JavaScript implementation of `makeDocument()` follows:
+JavaScript による `makeDocument()` は次の通りです。
 
 ```js
 function makeDocument() {
@@ -71,20 +67,13 @@ function makeDocument() {
 }
 ```
 
-The code in lines 4–12 handle creating the new HTML document and inserting some content
-into it. Line 4 uses `createHTMLDocument()` to construct a new HTML document
-whose {{ HTMLElement("title") }} is `"New Document"`. Lines 5 and 6 create a
-new paragraph element with some simple content, and then lines 8–12 handle inserting the
-new paragraph into the new document.
+4～12 行目のコードは、新しい HTML 文書を作成し、その文書へのコンテンツの挿入を処理するものです。4 行目で `createHTMLDocument()` を用いて、{{ HTMLElement("title") }} が `"New Document"` である新しい HTML 文書を作成しています。5 行目と 6 行目で単純なコンテンツを持つ新しい段落要素を作成し、8～12 行目で新しい段落を新しい文書に挿入する処理をしています。
 
-Line 16 pulls the `contentDocument` of the frame; this is the document into
-which we'll be injecting the new content. The next two lines handle importing the
-contents of our new document into the new document's context. Finally, line 20 actually
-replaces the contents of the frame with the new document's contents.
+16 行目はフレームの `contentDocument` を取り出しています。これは新しいコンテンツを注入する文書内のものです。次の 2 行は、新しい文書のコンテンツを新しい文書のコンテキストにインポートする処理です。最後に、20 行目で実際にフレームのコンテンツを新しい文書のコンテンツに置き換えます。
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/createHTMLDocument.html)
+[ライブサンプルを見る](https://media.prod.mdn.mozit.cloud/samples/domref/createHTMLDocument.html)
 
-The returned document is pre-constructed with the following HTML:
+返される文書は、以下の HTML であらかじめ構成されたものになります。
 
 ```html
 <!DOCTYPE html>
@@ -99,14 +88,14 @@ The returned document is pre-constructed with the following HTML:
 </html>
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- The {{domxref("DOMImplementation")}} interface it belongs to.
+- 所属先の {{domxref("DOMImplementation")}} インターフェイス
