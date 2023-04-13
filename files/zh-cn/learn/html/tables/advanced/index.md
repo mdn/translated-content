@@ -419,6 +419,8 @@ th {
 
 关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。接下来，你可以在 [HTML 表格测评](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)中测试自己的水平了，祝你玩得开心！
 
-如果你已经在学习 CSS，并且在评估中表现良好，你就可以继续学习 HTML 表格的样式，参见[样式化表格](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables)。
+如果你已经在学习 CSS，并且在评估中表现良好，你就可以继续学习 HTML 表格的样式，参见[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)。
+
+如果你想要入门 CSS，请前往 [CSS 学习区](/zh-CN/docs/Learn/CSS)！
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
