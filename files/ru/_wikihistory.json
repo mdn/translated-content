@@ -5670,10 +5670,6 @@
     "modified": "2019-03-23T22:28:29.128Z",
     "contributors": ["DrozdMargo", "timur-gilauri"]
   },
-  "Web/API/HTMLContentElement": {
-    "modified": "2020-10-15T22:07:13.411Z",
-    "contributors": ["AnatoliyVolkov"]
-  },
   "Web/API/HTMLDataElement": {
     "modified": "2019-03-23T22:43:36.990Z",
     "contributors": ["AlexAlex"]
@@ -5873,6 +5869,10 @@
   "Web/API/HTMLSelectElement/setCustomValidity": {
     "modified": "2019-03-18T20:37:27.097Z",
     "contributors": ["swymmwys", "Sparks"]
+  },
+  "Web/API/HTMLSlotElement": {
+    "modified": "2020-10-15T22:07:13.411Z",
+    "contributors": ["AnatoliyVolkov"]
   },
   "Web/API/HTMLTableCellElement": {
     "modified": "2019-03-23T22:35:01.649Z",
