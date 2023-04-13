@@ -1,50 +1,42 @@
 ---
-title: "DOMImplementation: hasFeature() method"
-short-title: hasFeature()
+title: "DOMImplementation: hasFeature() メソッド"
 slug: Web/API/DOMImplementation/hasFeature
-page-type: web-api-instance-method
-status:
-  - deprecated
-browser-compat: api.DOMImplementation.hasFeature
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef("DOM")}}{{Deprecated_Header}}
 
-The
-**`DOMImplementation.hasFeature()`** method returns a
-boolean flag indicating if a given feature is supported. It is
-deprecated and modern browsers return `true` in all cases.
+**`DOMImplementation.hasFeature()`** メソッドは、指定された機能に対応しているかどうかを示す論理値を返します。これは非推奨です。現代のブラウザーはすべて `true` を返します。
 
-The different implementations fairly diverged in what kind of features were reported.
-The latest version of the spec settled to force this method to always return
-`true`, where the functionality was accurate and in use.
+どのような機能を報告するかは、実装にばらつきがありました。
+最新版の仕様では、このメソッドは機能が正確で使用できる場合は、常に `true` を返すように決定されました。
 
-## Syntax
+## 構文
 
 ```js-nolint
 hasFeature(feature, version)
 ```
 
-### Parameters
+### 引数
 
 - `feature`
-  - : A string representing the feature name.
+  - : 機能名を表す文字列です。
 - `version`
-  - : A string representing the version of the specification defining
-    the feature.
+  - : 機能を定義する仕様のバージョンを表す文字列です。
 
-### Return value
+### 返値
 
-None ({{jsxref("undefined")}}).
+なし ({{jsxref("undefined")}})。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- The {{domxref("DOMImplementation")}} interface it belongs to.
+- 所属先の {{domxref("DOMImplementation")}} インターフェイス
