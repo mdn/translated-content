@@ -2294,7 +2294,6 @@
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_Fonts
 /zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
-/zh-CN/docs/Web/HTML/Element/shadow	/zh-CN/docs/orphaned/Web/HTML/Element/shadow
 /zh-CN/docs/Web/HTML/Element/video/play_event	/zh-CN/docs/Web/API/HTMLMediaElement/play_event
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
