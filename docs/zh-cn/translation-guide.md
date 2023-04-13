@@ -203,6 +203,7 @@ Like this.
 | 英文 | 简体中文翻译 |
 | --- | ---------- |
 | Accessibility concerns | 无障碍考虑 |
+| Active learning | 动手练习 |
 | Browser compatibility | 浏览器兼容性 |
 | Examples | 示例 |
 | See also | 参见 |
