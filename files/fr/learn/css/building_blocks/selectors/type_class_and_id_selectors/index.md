@@ -110,24 +110,3 @@ Un sélecteur d'ID commence par un `#` plutôt que par un point, mais est essent
 Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_d_atrribut).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
-
-## Dans ce cours
-
-1. [Cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)
