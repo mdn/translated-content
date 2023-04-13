@@ -54,8 +54,8 @@ aspect-ratio: 0.5;
 
 {{Compat}}
 
-## 相关阅读
+## 参见
 
-- [关联媒体容器元素的宽度与高度到它的宽高比上](/zh-CN/docs/Web/Media/images/aspect_ratio_mapping)
-- [为 CSS 设计一个宽高比单元](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
+- [图像的 aspect-ratio：防止卡顿](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
+- [为 CSS 设计纵横比单位](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [设置图像的高度和宽度再次变得重要起来](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
