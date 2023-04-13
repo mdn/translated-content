@@ -73,7 +73,7 @@ Content-Type: text/plain
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{HTTPHeader("Accept")}} and {{HTTPHeader("Accept-Charset")}}
 - {{HTTPHeader("Content-Disposition")}}

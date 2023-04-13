@@ -36,29 +36,29 @@ Los siguientes enlaces apuntan a soluciones comunes a los problemas cotidianos q
 - [Cómo controlar el contenido que desborda](/es/Learn/CSS/Introduction_to_CSS/Box_model#Overflow)
 - [Cómo controlar la parte de una caja CSS en la que se dibuja el fondo](/es/Learn/CSS/Introduction_to_CSS/Box_model#Background_clip)
 - [Cómo defino un elemento inline, block o inline-block?](/es/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)
-- [How to create fancy boxes](/es/docs/Learn/CSS/Howto/create_fancy_boxes) (also see the [Styling boxes](/es/docs/Learn/CSS/Styling_boxes) module, generally).
-- [How to use `background-clip` to control how much of the box your background image covers](/es/Learn/CSS/Introduction_to_CSS/Box_model#Background_clip).
-- [How to change the box model completely using `box-sizing`](/es/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely)
-- [How to control backgrounds](/es/Learn/CSS/Styling_boxes/Backgrounds)
-- [How to control borders](/es/Learn/CSS/Styling_boxes/Borders)
-- [How to style an HTML table](/es/Learn/CSS/Styling_boxes/Styling_tables)
-- [How to add shadows to boxes](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Box_shadows)
+- [Cómo crear cajas elegantes](/es/docs/Learn/CSS/Howto/create_fancy_boxes) (ver también el módulo [Cajas de estilo](/es/docs/Learn/CSS/Styling_boxes), en general).
+- [Cómo usar `background-clip` para controlar qué parte del cuadro cubre la imagen de fondo](/es/Learn/CSS/Introduction_to_CSS/Box_model#Background_clip).
+- [Cómo cambiar completamente el modelo de la caja usando `box-sizing`](/es/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely)
+- [Cómo controlar los fondos](/es/Learn/CSS/Styling_boxes/Backgrounds)
+- [Cómo controlar los bordes](/es/Learn/CSS/Styling_boxes/Borders)
+- [Cómo diseñar una tabla HTML](/es/Learn/CSS/Styling_boxes/Styling_tables)
+- [Cómo agregar sombras a las cajas](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Box_shadows)
 
-## Uncommon or advanced techniques
+## Técnicas poco comunes o avanzadas
 
-Beyond the basics, CSS is allows very advanced design techniques. These articles help you tackle the hardest use cases you may face.
+Más allá de lo básico, CSS permite técnicas de diseño muy avanzadas. Estos artículos lo ayudan a abordar los casos de uso más difíciles que puede enfrentar.
 
 ### General
 
-- [How to calculate specificity of a CSS selector](/es/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity)
-- [How to control inheritance in CSS](/es/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Controlling_inheritance)
+- [Cómo calcular la especificidad de un selector CSS](/es/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity)
+- [Cómo controlar la herencia en CSS](/es/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Controlling_inheritance)
 
-### Advanced effects
+### Efectos avanzados
 
-- [How to use filters in CSS](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Filters)
-- [How to use blend modes in CSS](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Blend_modes)
+- [Cómo usar filtros en CSS](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Filters)
+- [Cómo usar los modos de fusión en CSS](/es/Learn/CSS/Styling_boxes/Advanced_box_effects#Blend_modes)
 
-### Layout
+### Diseño
 
-- [Using CSS flexible boxes](/es/docs/Web/Guide/CSS/Flexible_boxes)
-- [Using CSS multi-column layouts](/es/docs/Web/Guide/CSS/Using_multi-column_layouts)
+- [Usar cajas flexibles en CSS](/es/docs/Web/Guide/CSS/Flexible_boxes)
+- [Uso de diseños de varias columnas en CSS](/es/docs/Web/Guide/CSS/Using_multi-column_layouts)

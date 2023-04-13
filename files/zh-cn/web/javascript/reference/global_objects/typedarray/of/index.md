@@ -48,7 +48,7 @@ Int16Array.of(undefined);    // IntArray [ 0 ]
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{jsxref("TypedArray.from()")}}
 - {{jsxref("Array.of()")}}

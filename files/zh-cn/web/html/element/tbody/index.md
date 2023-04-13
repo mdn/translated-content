@@ -101,7 +101,7 @@ slug: Web/HTML/Element/tbody
 
     由于该属性已经废弃，请使用 CSS {{cssxref("vertical-align")}} 属性作为替代。
 
-## 使用注意事项
+## 使用说明
 
 - 如果表格包含 {{HTMLElement("thead")}} 块（语义上标识表头行），那么 `<tbody>` 块*必须*紧随它。
 - 如果你使用 `<tbody>`，你就不能同时拥有表格行（{{HTMLElement("tr")}} 元素），它们是 {{HTMLElement("table")}} 的直接子元素，但不包括在 `<tbody>` 内。如果使用了 `<tbody>`，所有非标题和非页脚的行都必须在其内。

@@ -1,6 +1,6 @@
 ---
 title: Unicode プロパティエスケープ
-slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
+slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
 l10n:
   sourceCommit: 1d0a8a8c0782b30e0afe81cab0f55846730c7f5f
 ---

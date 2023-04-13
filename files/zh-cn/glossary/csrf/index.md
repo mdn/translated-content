@@ -13,10 +13,7 @@ slug: Glossary/CSRF
 
 有很多预防 CSRF 的方法，比如实现 {{glossary("REST", "RESTful API")}}，增加 secure token 等等。
 
-## 了解更多
-
-### 公共知识
+## 参见
 
 - [跨站请求伪造](https://zh.wikipedia.org/wiki/跨站请求伪造) on Wikipedia
 - [防御方法](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>)
-- [MDN 安全手册](/zh-CN/Learn/tutorial/Information_Security_Basics)

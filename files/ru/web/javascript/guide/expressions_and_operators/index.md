@@ -1,6 +1,6 @@
 ---
 title: Выражения и операторы
-slug: Web/JavaScript/Guide/Expressions_and_Operators
+slug: Web/JavaScript/Guide/Expressions_and_operators
 tags:
   - Beginner
   - Expressions

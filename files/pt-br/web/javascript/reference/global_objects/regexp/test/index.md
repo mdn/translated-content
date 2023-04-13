@@ -14,7 +14,7 @@ regexObj.test(str)
 ### Parâmetros
 
 - `str`
-  - : A string que confrontará a expressão regular.
+  - : A string que confrontará a expressão regular. Todos os valores são convertidos em strings, portanto, omiti-lo ou passar undefined faz com que test() procure a string "undefined".
 
 ### Retorno
 
