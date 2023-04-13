@@ -407,21 +407,3 @@ Nous allons nous appuyer sur ces éléments pour concevoir dans le prochain chap
 - [Fonctions raccourcis de Django](https://docs.djangoproject.com/fr/2.2/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

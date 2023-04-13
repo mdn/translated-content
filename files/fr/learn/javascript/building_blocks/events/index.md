@@ -571,13 +571,3 @@ S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'a
 - [Event reference](/fr/docs/Web/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
-
-## Dans ce module
-
-- [Prendre des décisions dans le code - les conditions](/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Les boucles dans le code](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [les fonctions - des blocs de code réutilisables](/fr/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Construisez votre propre fonction](/fr/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [les valeurs de retour des fonctions](/fr/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction aux événements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- [Galerie d'images](/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery)

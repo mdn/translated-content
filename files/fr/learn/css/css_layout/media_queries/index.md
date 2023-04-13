@@ -434,18 +434,3 @@ You could use the starting point that we have created to test out more media que
 You could also experiment with adding different components and seeing whether the addition of a media query, or using a layout method like flexbox or grid is the most appropriate way to make the components responsive. Very often there is no right or wrong way — you should experiment and see which works best for your design and content.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -210,17 +210,3 @@ Même si des scripts comme Modernizr sont très attentifs aux performances, le c
 Comme vous pouvez le constater, opérer avec des navigateurs historiques n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
 
 Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Learn/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Débuter_sur_MDN).
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

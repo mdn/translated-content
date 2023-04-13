@@ -635,13 +635,3 @@ C'est tout ce qu'il est nécessaire de connaître à propos des structures condi
 - [Référence opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel)
 
 {{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}
-
-## Dans ce module
-
-- [Prendre des décisions dans du code — conditions](/fr/Apprendre/JavaScript/Building_blocks/conditionals)
-- [Les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)
-- [Fonctions — blocs de code réutilisables](/fr/Apprendre/JavaScript/Building_blocks/Fonctions)
-- [Construire vos propres fonctions](/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function)
-- [Valeurs de retour des fonctions](/fr/Apprendre/JavaScript/Building_blocks/Return_values)
-- [Introduction aux événements](/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements)
-- [Gallerie d'images](/fr/Apprendre/JavaScript/Building_blocks/Image_gallery)
