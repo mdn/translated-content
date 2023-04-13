@@ -56,6 +56,6 @@ aspect-ratio: 0.5;
 
 ## 参见
 
-- [图像的 aspect-ratio：防止卡顿](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
+- [图像的 aspect-ratio：防止卡顿](/zh-CN/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
 - [为 CSS 设计纵横比单位](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [设置图像的高度和宽度再次变得重要起来](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
