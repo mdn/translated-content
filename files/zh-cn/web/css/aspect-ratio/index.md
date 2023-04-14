@@ -24,9 +24,9 @@ aspect-ratio: unset;
 ### 取值
 
 - `auto`
-  - : 具有固有宽高比的[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)将使用该宽高比，否则盒子没有首选的宽高比。涉及固有宽高比的尺寸计算始终使用内容盒的尺寸。
+  - : 具有固有纵横比的[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)将使用此纵横比，否则盒子无首选纵横比。涉及固有纵横比的尺寸计算始终使用内容盒的尺寸。
 - {{cssxref("&lt;ratio&gt;")}}
-  - : 盒子的首选宽高比是指定的 `width` / `height` 比率。如果省略 `height` 和前面的斜杠字符，则 `height` 默认为 `1`。涉及首选宽高比的尺寸计算使用由 `box-sizing` 所指定的盒子的尺寸。
+  - : 盒子的首选纵横比为指定的 `width` / `height` 比率。如果省略 `height` 和前面的斜杠字符，则 `height` 默认为 `1`。涉及首选纵横比的尺寸计算使用由 `box-sizing` 所指定的盒子的尺寸。
 
 ## 形式定义
 
