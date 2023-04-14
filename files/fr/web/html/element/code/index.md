@@ -108,7 +108,7 @@ Un paragraphe de texte qui contient `<code>` :
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', '', 100)}}
+{{EmbedLiveSample('', '', 100)}}
 
 ## Notes
 
