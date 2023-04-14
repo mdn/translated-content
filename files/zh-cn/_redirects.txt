@@ -2606,9 +2606,13 @@
 /zh-CN/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/WebGL/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /zh-CN/docs/Web/WebGL/用WebGL来画2D图形	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-/zh-CN/docs/Web/Web_Components/Custom_Elements	/zh-CN/docs/Web/Web_Components/Using_custom_elements
-/zh-CN/docs/Web/Web_Components/HTML_Imports	/zh-CN/docs/Web/Web_Components
-/zh-CN/docs/Web/Web_Components/HTML导入	/zh-CN/docs/Web/Web_Components
+/zh-CN/docs/Web/Web_Components	/zh-CN/docs/Web/API/Web_components
+/zh-CN/docs/Web/Web_Components/Custom_Elements	/zh-CN/docs/Web/API/Web_components/Using_custom_elements
+/zh-CN/docs/Web/Web_Components/HTML_Imports	/zh-CN/docs/Web/API/Web_components
+/zh-CN/docs/Web/Web_Components/HTML导入	/zh-CN/docs/Web/API/Web_components
+/zh-CN/docs/Web/Web_Components/Using_custom_elements	/zh-CN/docs/Web/API/Web_components/Using_custom_elements
+/zh-CN/docs/Web/Web_Components/Using_shadow_DOM	/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM
+/zh-CN/docs/Web/Web_Components/Using_templates_and_slots	/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots
 /zh-CN/docs/Web/XSLT/Elements	/zh-CN/docs/Web/XSLT/Element
 /zh-CN/docs/Web/媒体	/zh-CN/docs/Web/Media
 /zh-CN/docs/Web/媒体/Autoplay_guide	/zh-CN/docs/Web/Media/Autoplay_guide
