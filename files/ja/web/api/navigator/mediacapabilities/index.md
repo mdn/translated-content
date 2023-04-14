@@ -1,6 +1,8 @@
 ---
-title: "Navigator: mediaCapabilities プロパティ"
+title: 'Navigator: mediaCapabilities プロパティ'
 slug: Web/API/Navigator/mediaCapabilities
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 **`Navigator.mediaCapabilities`** プロパティは読み取り専用で、 [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API) で定義されています。
@@ -38,7 +40,7 @@ navigator.mediaCapabilities
 
 ## ブラウザーの対応
 
-{{Compat("api.Navigator.mediaCapabilities")}}
+{{Compat()}}
 
 ## 関連情報
 
