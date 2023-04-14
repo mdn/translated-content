@@ -25,7 +25,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
     <tr>
       <th scope="row">目标：</th>
       <td>
-        了解功能检测的概念，并能够在 CSS 和 JavaScript 中实现合适的解决方案。
+        了解特性检测的概念，并能够在 CSS 和 JavaScript 中实现合适的解决方案。
       </td>
     </tr>
   </tbody>
@@ -33,9 +33,9 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 ## 特性检测的概念
 
-特性检测的思想是，你可以运行一个测试来确定当前浏览器是否支持某个特性，然后有条件地运行代码，以便在*支持*该功能的浏览器和*不支持*该功能的浏览器中提供可接受的体验，如果不这样做，在不支持你在代码中使用的功能的浏览器中将无法正确地显示你的网站，从而产生糟糕的用户体验。
+特性检测的思想是，你可以运行一个测试来确定当前浏览器是否支持某个特性，然后有条件地运行代码，以便在*支持*该特性的浏览器和*不支持*该特性的浏览器中提供可接受的体验，如果不这样做，在不支持你在代码中使用的特性的浏览器中将无法正确地显示你的网站，从而产生糟糕的用户体验。
 
-让我们回顾一下，看看我们在[处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#功能检测)中提到的例子——[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)（它暴露了网络浏览器所运行设备的可用位置数据）有其主要入口点。全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上有一个 `geolocation` 属性。因此，你可以通过使用类似以下的方法来检测浏览器是否支持地理位置：
+让我们回顾一下，看看我们在[处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#特性检测)中提到的例子——[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)（它暴露了网络浏览器所运行设备的可用位置数据）有其主要入口点。全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上有一个 `geolocation` 属性。因此，你可以通过使用类似以下的方法来检测浏览器是否支持地理位置：
 
 ```js
 if ("geolocation" in navigator) {
@@ -85,7 +85,7 @@ if ("geolocation" in navigator) {
 
 #### @supports
 
-CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。这与[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)的工作方式类似，只是它不是根据分辨率、屏幕宽度或长宽比等媒体特性选择性地应用 CSS，而是根据是否支持某个 CSS 功能来选择性地应用 CSS，类似于 `CSS.supports()`。
+CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。这与[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)的工作方式类似，只是它不是根据分辨率、屏幕宽度或长宽比等媒体特性选择性地应用 CSS，而是根据是否支持某个 CSS 特性来选择性地应用 CSS，类似于 `CSS.supports()`。
 
 例如，我们可以使用 `@supports` 重写我们之前的例子：
 
@@ -128,10 +128,10 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
 
 我们在前面已经看到了一个 JavaScript 特性检测测试的例子。一般来说，这种测试是通过几种常见的模式之一完成的。
 
-但请记住，有些功能是已知不可检测的，见 Modernizr 在 2016 年发布的[不可检测的列表](https://github.com/Modernizr/Modernizr/wiki/Undetectables)。
+但请记住，有些特性是已知不可检测的，见 Modernizr 在 2016 年发布的[不可检测的列表](https://github.com/Modernizr/Modernizr/wiki/Undetectables)。
 
 - 对象的成员
-  - : 检查一个特定的方法或属性（通常是使用 API 的入口或你正在检测的其他功能）是否存在于其父 `Object` 中。
+  - : 检查一个特定的方法或属性（通常是使用 API 的入口或你正在检测的其他特性）是否存在于其父 `Object` 中。
 
     我们前面的例子使用这种模式来检测 [Geolocation](/zh-CN/docs/Web/API/Geolocation_API) 的支持，通过测试 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象的 `geolocation`成员：
 
@@ -159,11 +159,11 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
 
 - 方法在元素上的特定返回值
 
-  - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，然后检查该元素上是否存在一个方法。如果有的话，检查它的返回值。请参阅[深入了解 HTML 视频格式检测](https://diveinto.html5doctor.com/detect.html#video-formats)中的功能测试，了解这种模式的一个例子。
+  - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，然后检查该元素上是否存在一个方法。如果有的话，检查它的返回值。请参阅[深入了解 HTML 视频格式检测](https://diveinto.html5doctor.com/detect.html#video-formats)中的特性测试，了解这种模式的一个例子。
 
 - 元素保留分配的属性值
 
-  - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，将一个属性设置为特定值，然后检查该值是否被保留。关于这种模式的例子，请参见[深入了解 HTML \<input> 类型检测](https://diveinto.html5doctor.com/detect.html#input-types)中的功能测试。
+  - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，将一个属性设置为特定值，然后检查该值是否被保留。关于这种模式的例子，请参见[深入了解 HTML \<input> 类型检测](https://diveinto.html5doctor.com/detect.html#input-types)中的特性测试。
 
 #### matchMedia
 
@@ -181,7 +181,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 <link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
 ```
 
-然后我们在 JavaScript 中多次使用 `matchMedia()`，只在小屏幕布局时运行 Brick 导航功能（在宽屏幕布局中，所有东西都可以一次看到，所以我们不需要在不同的视图之间导航）。
+然后我们在 JavaScript 中多次使用 `matchMedia()`，只在小屏幕布局时运行 Brick 导航特性（在宽屏幕布局中，所有东西都可以一次看到，所以我们不需要在不同的视图之间导航）。
 
 ```js
 if (window.matchMedia("(max-width: 480px)").matches) {
@@ -272,9 +272,9 @@ main {
 }
 ```
 
-那么，这是如何工作的呢？因为所有这些类名都被放在了 `<html>` 元素上，你可以使用特定的后代选择器来针对那些支持或不支持某个功能的浏览器。所以在这里，我们只对支持 subgrid 的浏览器应用最上面的规则，而对不支持的浏览器应用最下面的规则（`no-csssubgrid`）。
+那么，这是如何工作的呢？因为所有这些类名都被放在了 `<html>` 元素上，你可以使用特定的后代选择器来针对那些支持或不支持某个特性的浏览器。所以在这里，我们只对支持 subgrid 的浏览器应用最上面的规则，而对不支持的浏览器应用最下面的规则（`no-csssubgrid`）。
 
-> **备注：** Modernizr 的所有 HTML 和 JavaScript 特性测试都以类名的形式报告，因此，如果需要，你可以根据浏览器是否支持 HTML 或 JavaScript 功能，有选择地应用 CSS。
+> **备注：** Modernizr 的所有 HTML 和 JavaScript 特性测试都以类名的形式报告，因此，如果需要，你可以根据浏览器是否支持 HTML 或 JavaScript 特性，有选择地应用 CSS。
 
 ### JavaScript
 
