@@ -24,6 +24,7 @@ getBattery()
 一个 {{JSxRef("Promise")}} 值，当兑现时会得到含有电源状态信息的 {{DOMxRef("BatteryManager")}} 对象。
 
 ### 异常
+
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 对该特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
 - `SecurityError`
