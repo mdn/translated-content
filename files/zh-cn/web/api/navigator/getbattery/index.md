@@ -21,19 +21,13 @@ getBattery()
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}} 值，当兑现时会调用其含有单个 {{DOMxRef("BatteryManager")}} 参数的处理器，它可以用于获得电源的状态信息。
+一个 {{JSxRef("Promise")}} 值，当兑现时会得到含有电源状态信息的 {{DOMxRef("BatteryManager")}} 对象。
 
 ### 异常
-
-此方法并不抛出异常，但是它会拒绝返回的 promise 值，将它传递至 {{domxref("DOMException")}} 中，其 `name` 值为下列之一：
-
 - `NotAllowedError` {{domxref("DOMException")}}
-
   - : 对该特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
-
 - `SecurityError`
-
-  - : 用户代理不会向不安全环境中暴露电源信息，此方法在不安全的环境中被调用了。
+  - : 用户代理不会向不安全上下文暴露电源信息，而此方法在不安全的上下文中被调用了。
 
 ## 示例
 
