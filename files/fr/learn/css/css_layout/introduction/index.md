@@ -697,16 +697,3 @@ body { max-width: 800px; margin: 0 auto; }
 Cet article donne un bref résumé de toutes les techniques de mise en page à connaître. Poursuivez la lecture pour en savoir plus à propos de chaque technique !
 
 {{NextMenu("Apprendre/CSS/CSS_layout/Floats", "Apprendre/CSS/CSS_layout")}}
-
-## In this module
-
-- [La mise en page avec les CSS](/fr/docs/Apprendre/CSS/CSS_layout)
-- [Cours normal](/fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column Layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Legacy Layout Methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

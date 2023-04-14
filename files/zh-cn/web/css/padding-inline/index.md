@@ -19,18 +19,19 @@ slug: Web/CSS/padding-inline
 ## 语法
 
 ```css
-/* 长度值 */
+/* <length> 值 */
 padding-inline: 10px 20px; /* 绝对长度 */
 padding-inline: 1em 2em; /* 相对于文本尺寸 */
 padding-inline: 10px; /* 同时设置行首和行末值 */
 
-/* 百分比值 */
-padding-inline: 5% 2%; /* 相对于最近包含块的宽度 */
+/* <percentage> 值 */
+padding-inline: 5% 2%; /* 相对于最近包含区块的宽度 */
 
 /* 全局值 */
 padding-inline: inherit;
 padding-inline: initial;
 padding-inline: revert;
+padding-inline: revert-layer;
 padding-inline: unset;
 ```
 
@@ -41,7 +42,7 @@ padding-inline: unset;
 - {{CSSXref("&lt;length&gt;")}}
   - : 以固定值指定的内边距尺寸。必须非负。
 - {{CSSXref("&lt;percentage&gt;")}}
-  - : 以百分比指定的内边距尺寸，参照[包含块](/zh-CN/docs/Web/CSS/Containing_block)的行向尺寸（即横排语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
+  - : 以百分比指定的内边距尺寸，参照[包含区块](/zh-CN/docs/Web/CSS/Containing_block)的行向尺寸（即横向语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
 
 ## 描述
 

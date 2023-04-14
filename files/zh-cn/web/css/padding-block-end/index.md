@@ -12,12 +12,12 @@ slug: Web/CSS/padding-block-end
 ## 语法
 
 ```css
-/* 长度值 */
+/* <length> 值 */
 padding-block-end: 10px; /* 绝对长度 */
 padding-block-end: 1em; /* 相对于文本尺寸的长度 */
 
-/* 百分比值 */
-padding-block-end: 5%; /* 相对于包含块宽度的内边距 */
+/* <percentage> 值 */
+padding-block-end: 5%; /* 相对于包含区块宽度的内边距 */
 
 /* 全局值 */
 padding-block-end: inherit;
@@ -32,7 +32,7 @@ padding-block-end: unset;
 - {{CSSXref("&lt;length&gt;")}}
   - : 以固定值指定的内边距尺寸。必须非负。
 - {{CSSXref("&lt;percentage&gt;")}}
-  - : 以百分比指定的内边距尺寸，参照[包含块](/zh-CN/docs/Web/CSS/Containing_block)的行向尺寸（即横排语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
+  - : 以百分比指定的内边距尺寸，参照[包含区块](/zh-CN/docs/Web/CSS/Containing_block)的行向尺寸（即横向语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
 
 ## 描述
 
