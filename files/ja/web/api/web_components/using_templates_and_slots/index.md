@@ -1,6 +1,7 @@
 ---
 title: テンプレートとスロットの使用
-slug: Web/Web_Components/Using_templates_and_slots
+slug: Web/API/Web_components/Using_templates_and_slots
+original_slug: Web/Web_Components/Using_templates_and_slots
 ---
 
 {{DefaultAPISidebar("Web Components")}}

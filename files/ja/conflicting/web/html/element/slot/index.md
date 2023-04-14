@@ -1,6 +1,7 @@
 ---
 title: '<content>: シャドウ DOM のコンテンツのプレイスホルダー要素'
-slug: Web/HTML/Element/content
+slug: conflicting/Web/HTML/Element/slot
+original_slug: Web/HTML/Element/content
 ---
 
 {{Deprecated_header}}

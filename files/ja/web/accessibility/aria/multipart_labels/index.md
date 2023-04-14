@@ -1,6 +1,7 @@
 ---
 title: '複数の部分に分かれたラベル: 内部にフィールドがあるラベルに ARIA を使用'
-slug: Web/Accessibility/ARIA/forms/Multipart_labels
+slug: Web/Accessibility/ARIA/Multipart_labels
+original_slug: Web/Accessibility/ARIA/forms/Multipart_labels
 ---
 
 ## 問題点

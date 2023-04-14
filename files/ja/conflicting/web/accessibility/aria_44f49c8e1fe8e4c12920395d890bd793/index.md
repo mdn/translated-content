@@ -1,6 +1,7 @@
 ---
 title: フォーム
-slug: Web/Accessibility/ARIA/forms
+slug: conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793
+original_slug: Web/Accessibility/ARIA/forms
 ---
 
 以下のページでは、ウェブフォームのアクセシビリティを向上させるさまざまなテクニックを紹介します。

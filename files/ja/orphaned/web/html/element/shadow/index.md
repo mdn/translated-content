@@ -1,6 +1,7 @@
 ---
 title: '<shadow>: 廃止されたシャドウルート要素'
-slug: Web/HTML/Element/shadow
+slug: orphaned/Web/HTML/Element/shadow
+original_slug: Web/HTML/Element/shadow
 ---
 
 {{deprecated_header}}
