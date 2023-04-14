@@ -1,6 +1,7 @@
 ---
 title: HTMLShadowElement
-slug: Web/API/HTMLShadowElement
+slug: orphaned/Web/API/HTMLShadowElement
+original_slug: Web/API/HTMLShadowElement
 ---
 
 {{ APIRef("Web Components") }}
