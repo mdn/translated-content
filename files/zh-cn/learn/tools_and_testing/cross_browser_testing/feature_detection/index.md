@@ -1,11 +1,11 @@
 ---
-title: 实现功能检测
+title: 实现特性检测
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-功能检测涉及到确定浏览器是否支持某个代码块，并根据是否支持（或不支持）运行不同的代码，从而使浏览器能够始终提供工作体验，而不是在某些浏览器中崩溃/出错。本文详细介绍了如何编写自己的简单功能检测，如何使用库来加速实现，以及功能检测的本地功能，如 `@supports`。
+特性检测涉及到确定浏览器是否支持某个代码块，并根据是否支持（或不支持）运行不同的代码，从而使浏览器能够始终提供工作体验，而不是在某些浏览器中崩溃/出错。本文详细介绍了如何编写自己的简单特性检测，如何使用库来加速实现，以及特性检测的本地功能，如 `@supports`。
 
 <table>
   <tbody>
@@ -31,9 +31,9 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
   </tbody>
 </table>
 
-## 功能检测的概念
+## 特性检测的概念
 
-功能检测的思想是，你可以运行一个测试来确定当前浏览器是否支持某个特性，然后有条件地运行代码，以便在*支持*该功能的浏览器和*不支持*该功能的浏览器中提供可接受的体验，如果不这样做，在不支持你在代码中使用的功能的浏览器中将无法正确地显示你的网站，从而产生糟糕的用户体验。
+特性检测的思想是，你可以运行一个测试来确定当前浏览器是否支持某个特性，然后有条件地运行代码，以便在*支持*该功能的浏览器和*不支持*该功能的浏览器中提供可接受的体验，如果不这样做，在不支持你在代码中使用的功能的浏览器中将无法正确地显示你的网站，从而产生糟糕的用户体验。
 
 让我们回顾一下，看看我们在[处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#功能检测)中提到的例子——[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)（它暴露了网络浏览器所运行设备的可用位置数据）有其主要入口点。全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上有一个 `geolocation` 属性。因此，你可以通过使用类似以下的方法来检测浏览器是否支持地理位置：
 
@@ -47,17 +47,17 @@ if ("geolocation" in navigator) {
 }
 ```
 
-要检测一个单一的功能，`if` 语句效果很好。对于复杂的应用，考虑使用一个成熟的特征检测库，而不是自己编写。Modernizr 是特征检测测试的工业标准，我们将在后面讲述一下。
+要检测一个单一的特性，`if` 语句效果很好。对于复杂的应用，考虑使用一个成熟的特性检测库，而不是自己编写。Modernizr 是特性检测测试的工业标准，我们将在后面讲述一下。
 
-在我们继续之前，先说一件事——不要把功能检测和**浏览器嗅探**混淆起来（检测什么特定的浏览器在访问网站）——这是一种糟糕的做法，应该不惜一切代价加以阻止。参见[使用不良的浏览器嗅探代码](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#使用不良的浏览器嗅探代码)以了解更多细节。
+在我们继续之前，先说一件事——不要把特性检测和**浏览器嗅探**混淆起来（检测什么特定的浏览器在访问网站）——这是一种糟糕的做法，应该不惜一切代价加以阻止。参见[使用不良的浏览器嗅探代码](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#使用不良的浏览器嗅探代码)以了解更多细节。
 
-## 撰写自己的功能检测代码
+## 撰写自己的特性检测代码
 
-在本节中，我们将研究如何在 CSS 和 JavaScript 中实现自己的功能检测测试。
+在本节中，我们将研究如何在 CSS 和 JavaScript 中实现自己的特性检测测试。
 
 ### CSS
 
-你可以通过在 JavaScript 中测试 [*element.style.property*](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来编写 CSS 功能测试。
+你可以通过在 JavaScript 中测试 [*element.style.property*](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来编写 CSS 特性测试。
 
 一个经典的例子可能是测试浏览器是否支持 [Subgrid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Subgrid)；对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/grid-template-rows) 的 subgrid 值的浏览器，我们可以在布局上使用 subgrid。对于不使用 subgrid 的浏览器，我们可以使用普通的网格，它可以正常工作，但没有那么酷的外观。
 
@@ -85,7 +85,7 @@ if ("geolocation" in navigator) {
 
 #### @supports
 
-CSS 有一个原生的功能检测机制：{{cssxref("@supports")}} at-规则。这与[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)的工作方式类似，只是它不是根据分辨率、屏幕宽度或长宽比等媒体特征选择性地应用 CSS，而是根据是否支持某个 CSS 功能来选择性地应用 CSS，类似于 `CSS.supports()`。
+CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。这与[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)的工作方式类似，只是它不是根据分辨率、屏幕宽度或长宽比等媒体特性选择性地应用 CSS，而是根据是否支持某个 CSS 功能来选择性地应用 CSS，类似于 `CSS.supports()`。
 
 例如，我们可以使用 `@supports` 重写我们之前的例子：
 
@@ -122,11 +122,11 @@ CSS 有一个原生的功能检测机制：{{cssxref("@supports")}} at-规则。
 }
 ```
 
-这比前面的例子更方便，我们可以在 CSS 中进行所有的特征检测，不需要 JavaScript；而且我们可以在一个 CSS 文件中处理所有的逻辑，减少 HTTP 请求。由于这个原因，它是确定浏览器对 CSS 特性支持的首选方法。
+这比前面的例子更方便，我们可以在 CSS 中进行所有的特性检测，不需要 JavaScript；而且我们可以在一个 CSS 文件中处理所有的逻辑，减少 HTTP 请求。由于这个原因，它是确定浏览器对 CSS 特性支持的首选方法。
 
 ### JavaScript
 
-我们在前面已经看到了一个 JavaScript 功能检测测试的例子。一般来说，这种测试是通过几种常见的模式之一完成的。
+我们在前面已经看到了一个 JavaScript 特性检测测试的例子。一般来说，这种测试是通过几种常见的模式之一完成的。
 
 但请记住，有些功能是已知不可检测的，见 Modernizr 在 2016 年发布的[不可检测的列表](https://github.com/Modernizr/Modernizr/wiki/Undetectables)。
 
@@ -167,7 +167,7 @@ CSS 有一个原生的功能检测机制：{{cssxref("@supports")}} at-规则。
 
 #### matchMedia
 
-我们还想提到 {{domxref("Window.matchMedia")}}。在这一点上，我们也要提到 JavaScript 的功能。这是一个允许你在 JavaScript 内部运行媒体查询测试的属性。它看起来像这样：
+现在，我们还想提到 {{domxref("Window.matchMedia")}} 这个 JavaScript 特性。这是一个允许你在 JavaScript 内部运行媒体查询测试的属性。它看起来像这样：
 
 ```js
 if (window.matchMedia("(max-width: 480px)").matches) {
@@ -189,11 +189,11 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 }
 ```
 
-## 使用 Modernizr 实现功能检测
+## 使用 Modernizr 实现特性检测
 
-使用上述技术实现自己的功能检测测试是可能的。然而，你也可以使用一个专门的功能检测库，因为它使事情变得更加简单。所有特征检测库之母是 [Modernizr](https://modernizr.com/)，它可以检测你所需要的一切。现在让我们来看看如何使用它。
+使用上述技术实现自己的特性检测测试是可能的。然而，你也可以使用一个专门的特性检测库，因为它使事情变得更加简单。所有特性检测库之母是 [Modernizr](https://modernizr.com/)，它可以检测你所需要的一切。现在让我们来看看如何使用它。
 
-当你在尝试使用 Modernizr 时，你不妨使用开发版，它包括所有可能的功能检测测试。现在就来下载吧：
+当你在尝试使用 Modernizr 时，你不妨使用开发版，它包括所有可能的特性检测测试。现在就来下载吧：
 
 1. 点击 [Development build](https://modernizr.com/download?do_not_use_in_production) 链接。
 2. 点击页面上方的粉色大型 _Build_ 按钮。
@@ -201,7 +201,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 
 把它保存在合理的地方，就像你在本系列中一直使用的其他指南的目录。
 
-当你在生产环境中使用 Modernizr 时，你可以到你已经访问过的[下载页面](https://modernizr.com/download)，点击加号按钮，只包括你需要的特征检测。然后，当你点击 _Build_ 按钮时，你将下载一个只包含这些功能检测的自定义构建，使文件大小更小。
+当你在生产环境中使用 Modernizr 时，你可以到你已经访问过的[下载页面](https://modernizr.com/download)，点击加号按钮，只包括你需要的特性检测。然后，当你点击 _Build_ 按钮时，你将下载一个只包含这些特性检测的自定义构建，使文件大小更小。
 
 ### CSS
 
@@ -226,20 +226,20 @@ if (window.matchMedia("(max-width: 480px)").matches) {
    <html lang="en-us" class="no-js">…</html>
    ```
 
-此时，试着加载你的页面，你会对 Modernizr 在 CSS 功能方面的工作有一个概念。如果你看一下浏览器开发者工具的 DOM 检查器，你会发现 Modernizr 已经像这样更新了你的 `<html>` 元素的 `class` 属性：
+此时，试着加载你的页面，你会对 Modernizr 在 CSS 特性方面的工作有一个概念。如果你看一下浏览器开发者工具的 DOM 检查器，你会发现 Modernizr 已经像这样更新了你的 `<html>` 元素的 `class` 属性：
 
 ```html
 <html
   class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">…</html>
 ```
 
-它现在包含了大量的类，表示对不同技术特征的支持状态。举例来说，如果浏览器完全不支持 grid，`<html>` 将被赋予 `no-cssgrid` 的类名。如果你在类列表中搜索，你还会看到其他与网格有关的类，比如：
+它现在包含了大量的类，表示对不同技术特性的支持状态。举例来说，如果浏览器完全不支持 grid，`<html>` 将被赋予 `no-cssgrid` 的类名。如果你在类列表中搜索，你还会看到其他与网格有关的类，比如：
 
 - `cssgridlegacy` 或 `no-cssgridlegacy`，取决于是否支持传统版本的网格。
 
-> **备注：** 你可以找到大部分类名的含义列表——见 [Modernizr 检测的功能](https://modernizr.com/docs#features)。
+> **备注：** 你可以找到大部分类名的含义列表——见 [Modernizr 检测的特性](https://modernizr.com/docs#features)。
 
-不幸的是，Modernizr 并没有测试对一些新的 CSS 功能的支持，如容器查询、层叠层或子网格。如果它这样做了，我们将以如下方式更新我们的 `@supports` 例子：
+不幸的是，Modernizr 并没有测试对一些新的 CSS 特性的支持，如容器查询、层叠层或子网格。如果它这样做了，我们将以如下方式更新我们的 `@supports` 例子：
 
 ```css
 main {
@@ -274,11 +274,11 @@ main {
 
 那么，这是如何工作的呢？因为所有这些类名都被放在了 `<html>` 元素上，你可以使用特定的后代选择器来针对那些支持或不支持某个功能的浏览器。所以在这里，我们只对支持 subgrid 的浏览器应用最上面的规则，而对不支持的浏览器应用最下面的规则（`no-csssubgrid`）。
 
-> **备注：** Modernizr 的所有 HTML 和 JavaScript 功能测试都以类名的形式报告，因此，如果需要，你可以根据浏览器是否支持 HTML 或 JavaScript 功能，有选择地应用 CSS。
+> **备注：** Modernizr 的所有 HTML 和 JavaScript 特性测试都以类名的形式报告，因此，如果需要，你可以根据浏览器是否支持 HTML 或 JavaScript 功能，有选择地应用 CSS。
 
 ### JavaScript
 
-Modernizr 也同样为实现 JavaScript 功能检测做了充分准备。它通过使全局的 `Modernizr` 对象对它所应用的页面可用，它包含了作为 `true`/`false` 属性的特征检测的结果。
+Modernizr 也同样为实现 JavaScript 特性检测做了充分准备。它通过使全局的 `Modernizr` 对象对它所应用的页面可用，它包含了作为 `true`/`false` 属性的特性检测结果。
 
 例如，在浏览器中加载我们的 [`modernizr-css.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html) 示例，然后试着在你的 JavaScript 控制台中输入 `Modernizr.`，然后再输入其中的一些类名（这里也一样）。比如：
 
@@ -288,7 +288,7 @@ Modernizr.xhr2
 Modernizr.fetch
 ```
 
-控制台将返回 `true`/`false` 值，表示你的浏览器是否支持这些功能。
+控制台将返回 `true`/`false` 值，表示你的浏览器是否支持这些特性。
 
 让我们看一个示例来说明你如何使用这些属性。
 
@@ -323,7 +323,7 @@ Modernizr.fetch
 
 ## 总结
 
-这篇文章合理地涵盖了功能检测的细节，通过主要的概念，向你展示了如何实现你自己的功能检测测试和使用 Modernizr 库来更容易地实现测试。
+这篇文章合理地涵盖了特性检测的细节，通过主要的概念，向你展示了如何实现你自己的特性检测测试和使用 Modernizr 库来更容易地实现测试。
 
 接下来，我们将了解一下自动测试。
 
