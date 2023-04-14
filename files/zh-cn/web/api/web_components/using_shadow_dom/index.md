@@ -1,6 +1,7 @@
 ---
 title: 使用 shadow DOM
-slug: Web/Web_Components/Using_shadow_DOM
+slug: Web/API/Web_components/Using_shadow_DOM
+original_slug: Web/Web_Components/Using_shadow_DOM
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -191,7 +192,7 @@ wrapper.appendChild(info);
 
 ### 使用我们的 custom element
 
-完成类的定义之后，使用元素也是一样简单，只需将 custom element 放在页面上，正如 [Using custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) 中讲解的那样：
+完成类的定义之后，使用元素也是一样简单，只需将 custom element 放在页面上，正如 [Using custom element](/zh-CN/docs/Web/API/Web_components/Using_custom_elements) 中讲解的那样：
 
 ```js
 // 定义新的元素
@@ -225,5 +226,5 @@ shadow.appendChild(linkElem);
 
 ## 参见
 
-- [使用 custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements)
-- [使用 templates 与 slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
+- [使用 custom elements](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)
+- [使用 templates 与 slots](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)

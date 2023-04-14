@@ -94,4 +94,4 @@ simple-custom:defined {
 
 ## 参见
 
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web component](/zh-CN/docs/Web/API/Web_components)

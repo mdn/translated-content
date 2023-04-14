@@ -315,4 +315,4 @@ some-element::after {
 
 - {{CSSxRef(":where", ":where()")}}——类似于 `:is()`，但是其[优先级](/zh-CN/docs/Web/CSS/Specificity)为 0。
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [Web component](/zh-CN/docs/Web/Web_Components)
+- [Web component](/zh-CN/docs/Web/API/Web_components)
