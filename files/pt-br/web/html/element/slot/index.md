@@ -1,7 +1,7 @@
 ---
 title: '<content>: The Shadow DOM Content Placeholder element (obsolete)'
-slug: Web/HTML/Element/content
-original_slug: Web/HTML/Element/conteúdo
+slug: Web/HTML/Element/slot
+original_slug: Web/HTML/Element/content
 ---
 
 {{Deprecated_header}}
