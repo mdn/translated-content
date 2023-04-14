@@ -145,9 +145,9 @@ gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 
 立方体的每个面都由 2 个三角形组成，那就是每个面需要 6 个顶点，或者说总共 36 个顶点，尽管有许多重复的。然而，因为索引数组的每个元素都是简单的整数类型，所以每一帧动画需要传递给渲染程序的数据也不是很多。
 
-最后，让我们把变量 `squareRotation` 替换成 `cubeRotation` 并添加 X 与 Y 轴的旋转。
+最后，让我们把变量 `squareRotation` 替换成 `cubeRotation` 并添加 X 轴的第二个旋转。
 
-> **备注：** 在 “webgl-demo.js” 头部，把变量 `squareRotation` 替换成 `cubeRotation`：
+> **备注：** 在“webgl-demo.js”文件的头部，把变量 `squareRotation` 替换成 `cubeRotation`：
 
 ```js
 let cubeRotation = 0.0;
@@ -159,7 +159,7 @@ let cubeRotation = 0.0;
 function drawScene(gl, programInfo, buffers, cubeRotation) {
 ```
 
-> **备注：** 在 `drawScene()`函数中， 用下面代码替换之前 `mat4.rotate` 函数：
+> **备注：** 在 `drawScene()` 函数中， 用下面代码替换之前的 `mat4.rotate` 函数：
 
 ```js
 mat4.rotate(
@@ -182,7 +182,7 @@ mat4.rotate(
 ); // axis to rotate around (X)
 ```
 
-> **备注：** 在 `main()` 函数中，替换 `drawScene()` 函数参数中 `squareRotation` 为 `cubeRotation`：
+> **备注：** 在 `main()` 函数中，替换 `drawScene()` 函数调用参数中的 `squareRotation` 为 `cubeRotation`：
 
 ```js
 drawScene(gl, programInfo, buffers, cubeRotation);
