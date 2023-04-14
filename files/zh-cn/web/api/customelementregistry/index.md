@@ -10,7 +10,7 @@ slug: Web/API/CustomElementRegistry
 ## 方法
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : 定义一个新的[自定义元素](/zh-CN/docs/Web/Web_Components/Custom_Elements)。
+  - : 定义一个新的[自定义元素](/zh-CN/docs/Web/API/Web_components/Custom_Elements)。
 - {{domxref("CustomElementRegistry.get()")}}
   - : 返回指定自定义元素的构造函数，如果未定义自定义元素，则返回`undefined`。
 - {{domxref("CustomElementRegistry.upgrade()")}}

@@ -28,11 +28,11 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 
 ## 教程
 
-- [使用自定义元素](/zh-CN/docs/Web/Web_Components/Using_custom_elements)
+- [使用自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)
   - : 介绍如何使用自定义元素的功能来创建简单的 web component，以及生命周期回调和其他更高级的功能。
-- [使用 shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)
+- [使用 shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)
   - : 介绍 shadow DOM 的基础知识，展示如何向元素中附加 shadow DOM，添加到 shadow DOM 树，添加样式等等。
-- [使用 template 和 slot](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
+- [使用 template 和 slot](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)
   - : 介绍如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素定义可重用的 HTML 结构，然后在 Web component 中使用该结构。
 
 ## 参考
@@ -43,7 +43,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
   - : 包含自定义元素相关功能，最值得注意的是 {{domxref("CustomElementRegistry.define()")}} 方法用来注册新的自定义元素，这样就可以在文档中使用它们。
 - {{domxref("Window.customElements")}}
   - : 返回 `CustomElementRegistry` 对象的引用。
-- [生命周期回调](/zh-CN/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
+- [生命周期回调](/zh-CN/docs/Web/API/Web_components/Using_custom_elements#Using_the_lifecycle_callbacks)
   - : 定义在自定义元素的类定义中的特殊回调函数，影响其行为：
     - `connectedCallback`：当自定义元素第一次被连接到文档 DOM 时被调用。
     - `disconnectedCallback`：当自定义元素与文档 DOM 断开连接时被调用。
@@ -57,9 +57,9 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 - CSS 伪类
   - : 与自定义元素特别相关的伪类：
     - {{cssxref(":defined")}}：匹配任何已定义的元素，包括内置元素和使用 `CustomElementRegistry.define()` 定义的自定义元素。
-    - {{cssxref(":host")}}：选择 [shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（containing the CSS it is used inside）。
-    - {{cssxref(":host()")}}：选择 [shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器的 shadow host 元素。
-    - {{cssxref(":host-context", ":host-context()")}}：选择 [shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器匹配元素的子 shadow host 元素。
+    - {{cssxref(":host")}}：选择 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（containing the CSS it is used inside）。
+    - {{cssxref(":host()")}}：选择 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器的 shadow host 元素。
+    - {{cssxref(":host-context", ":host-context()")}}：选择 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器匹配元素的子 shadow host 元素。
 
 ### Shadow DOM
 
