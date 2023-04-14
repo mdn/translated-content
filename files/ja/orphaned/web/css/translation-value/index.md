@@ -1,6 +1,7 @@
 ---
 title: <translation-value>
-slug: Web/CSS/translation-value
+slug: orphaned/Web/CSS/translation-value
+original_slug: Web/CSS/translation-value
 ---
 
 {{CSSRef}}

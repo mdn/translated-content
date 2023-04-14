@@ -1,7 +1,7 @@
 ---
 title: アクセシビリティのよくある質問
-slug: Web/Accessibility/FAQ
-original_slug: Web/Accessibility/Accessibility_FAQ
+slug: conflicting/Web/Accessibility_03cd49955d56afae93f0dd7b95901d33
+original_slug: Web/Accessibility/FAQ
 ---
 
 ## アクセシビリティについて、どこから始めたらよいですか?

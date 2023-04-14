@@ -1,6 +1,7 @@
 ---
 title: カスタム要素の使用
-slug: Web/Web_Components/Using_custom_elements
+slug: Web/API/Web_components/Using_custom_elements
+original_slug: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}

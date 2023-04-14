@@ -1,8 +1,7 @@
 ---
 title: MathML の属性値
-slug: Web/MathML/Attribute/Values
-l10n:
-  sourceCommit: 279d9e30f96c909ae91d230ace18cd32ff5354f4
+slug: Web/MathML/Values
+original_slug: Web/MathML/Attribute/Values
 ---
 
 <section id="Quick_links">
