@@ -29,7 +29,7 @@ after(param1, param2, /* … ,*/ paramN)
 ### 例外
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : ノードが階層内の指定の位置の挿入できなかった場合に発生します。
+  - : ノードが階層内の指定の位置に挿入できなかった場合に発生します。
 
 ## 例
 
