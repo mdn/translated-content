@@ -30794,10 +30794,6 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/API/HTMLSlotElement": {
-    "modified": "2020-10-15T22:07:00.804Z",
-    "contributors": ["yumemi-kuwahara"]
-  },
   "conflicting/Web/API/MediaDevices/getUserMedia": {
     "modified": "2019-03-18T21:40:37.855Z",
     "contributors": ["e53e04ac"]
@@ -30805,10 +30801,6 @@
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
-  },
-  "conflicting/Web/Accessibility": {
-    "modified": "2019-01-16T15:58:24.110Z",
-    "contributors": ["teoli", "Marsf"]
   },
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T23:28:42.286Z",
@@ -30826,17 +30818,9 @@
     "modified": "2019-03-18T21:35:01.506Z",
     "contributors": ["Uemmra3"]
   },
-  "conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793": {
-    "modified": "2019-03-23T23:28:40.736Z",
-    "contributors": ["yyss", "teoli", "anastasia"]
-  },
   "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
     "modified": "2019-03-23T23:28:35.294Z",
     "contributors": ["yyss", "teoli"]
-  },
-  "conflicting/Web/Accessibility_03cd49955d56afae93f0dd7b95901d33": {
-    "modified": "2019-01-16T15:46:21.729Z",
-    "contributors": ["teoli", "Marsf"]
   },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
@@ -30853,10 +30837,6 @@
   "conflicting/Web/CSS/transform-function/skewX": {
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
-  },
-  "conflicting/Web/HTML/Element/slot": {
-    "modified": "2020-10-15T21:51:15.311Z",
-    "contributors": ["mfuji09", "dskmori", "masa100"]
   },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
@@ -30995,14 +30975,6 @@
     "modified": "2020-10-15T22:22:28.350Z",
     "contributors": ["Wind1808"]
   },
-  "orphaned/Web/API/HTMLShadowElement": {
-    "modified": "2019-03-23T22:36:30.362Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/API/HTMLShadowElement/getDistributedNodes": {
-    "modified": "2019-03-23T22:36:28.052Z",
-    "contributors": ["YuichiNukiyama"]
-  },
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
@@ -31136,10 +31108,6 @@
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
-  },
-  "orphaned/Web/HTML/Element/shadow": {
-    "modified": "2020-10-15T21:44:39.186Z",
-    "contributors": ["mfuji09", "yyss", "YuichiNukiyama"]
   },
   "orphaned/Web/JavaScript/Guide/Expressions": {
     "modified": "2019-03-24T00:01:13.077Z",
