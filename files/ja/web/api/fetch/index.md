@@ -36,7 +36,7 @@ fetch(resource, options)
     - 文字列または{{Glossary("stringifier", "文字列化")}}できるその他のオブジェクト（{{domxref("URL")}} オブジェクトを含む）。取得したいリソースの直接の URL を含む文字列です。
     - {{domxref("Request")}} オブジェクト。
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : リクエストに適用したいカスタム設定を含むオブジェクト。可能なオプションは以下の通りです。
 

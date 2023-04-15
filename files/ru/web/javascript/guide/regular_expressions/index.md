@@ -1,6 +1,6 @@
 ---
 title: Регулярные выражения
-slug: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 

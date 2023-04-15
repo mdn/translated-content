@@ -13,36 +13,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 ## 语法
 
-```js
-// 箭头函数
-some((element) => { /* … */ } )
-some((element, index) => { /* … */ } )
-some((element, index, array) => { /* … */ } )
-
-// 回调函数
+```js-nolint
 some(callbackFn)
 some(callbackFn, thisArg)
-
-// 内联回调函数
-some(function(element) { /* … */ })
-some(function(element, index) { /* … */ })
-some(function(element, index, array){ /* … */ })
-some(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 用来测试每个元素的函数，接受三个参数：
-
     - `element`
       - : 数组中正在处理的元素。
     - `index` {{Optional_inline}}
       - : 数组中正在处理的元素的索引值。
     - `array`{{Optional_inline}}
       - : `some()`被调用的数组。
-
 - `thisArg`{{Optional_inline}}
   - : 执行 `callback` 时使用的 `this` 值。
 

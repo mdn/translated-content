@@ -9,7 +9,7 @@ slug: Web/HTML/Element/div
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-作为一个“纯粹的”容器，`<div>` 元素在语义上不表示任何特定类型的内容。然而，其可以将内容分组，从而可以使用{{htmlattrxref("class")}}或是{{htmlattrxref("id")}}属性方便的定义内容的格式，也可以在一段文档中划分标记出使用另一种语言书写的内容（使用{{htmlattrxref("lang")}} 属性）等等。
+作为一个“纯粹的”容器，`<div>` 元素在语义上不表示任何特定类型的内容。然而，其可以将内容分组，从而可以使用[`class`](/zh-CN/docs/Web/HTML/Global_attributes#class)或是[`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)属性方便的定义内容的格式，也可以在一段文档中划分标记出使用另一种语言书写的内容（使用[`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）等等。
 
 <table class="properties">
  <tbody>
@@ -48,7 +48,7 @@ slug: Web/HTML/Element/div
 
 > **备注：** `align` 属性已废弃；不要再使用它了。你应当使用 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 或 [CSS Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 来对齐、定位页面上的 `<div>` 元素。
 
-## 使用备注
+## 使用说明
 
 - `<div>` 元素应当仅在没有任何其他语义元素（比如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）可用时使用。
 
@@ -69,7 +69,7 @@ slug: Web/HTML/Element/div
 
 ### 样式实例
 
-本例使用 CSS 将样式应用于\<div>，从而创建一个阴影框。注意使用\<div>上的 {{htmlattrxref("class")}}属性将名为“shadowbox”的样式应用于元素。
+本例使用 CSS 将样式应用于\<div>，从而创建一个阴影框。注意使用\<div>上的 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class)属性将名为“shadowbox”的样式应用于元素。
 
 #### HTML
 

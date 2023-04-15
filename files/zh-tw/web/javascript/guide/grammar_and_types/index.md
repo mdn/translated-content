@@ -663,7 +663,7 @@ This chapter focuses on basic syntax for declarations and types. To learn more a
 - [Control flow and error handling](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Loops and iteration](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [Functions](/zh-TW/docs/Web/JavaScript/Guide/Functions)
-- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 In the next chapter, we will have a look at control flow constructs and error handling.
 

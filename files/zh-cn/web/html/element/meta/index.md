@@ -41,7 +41,7 @@ slug: Web/HTML/Element/meta
           <li>
             <code>&#x3C;meta charset></code>、<code
             >&#x3C;meta http-equiv></code>：{{HTMLElement("head")}} 元素。如果
-            {{htmlattrxref("http-equiv", "meta")}} 不是编码声明，它也可以放在
+            <a href="/zh-CN/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> 不是编码声明，它也可以放在
             {{HTMLElement("noscript")}} 元素中，它本身在一个
             <code>&#x3C;head></code> 元素内部。
           </li>
@@ -83,26 +83,24 @@ slug: Web/HTML/Element/meta
 
 `<meta>` 元素定义的元数据的类型包括以下几种：
 
-- 如果设置了 {{htmlattrxref("name", "meta")}} 属性，`<meta>` 元素提供的是文档级别（_document-level_）的元数据，应用于整个页面。
-- 如果设置了 {{htmlattrxref("http-equiv", "meta")}} 属性，`<meta>` 元素则是编译指令，提供的信息与类似命名的 HTTP 头部相同。
-- 如果设置了 {{htmlattrxref("charset", "meta")}} 属性，`<meta>` 元素是一个字符集声明，告诉文档使用哪种字符编码。
-- 如果设置了 {{htmlattrxref("itemprop")}} 属性，`<meta>` 元素提供用户定义的元数据。
+- 如果设置了 [`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性，`<meta>` 元素提供的是文档级别（_document-level_）的元数据，应用于整个页面。
+- 如果设置了 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 属性，`<meta>` 元素则是编译指令，提供的信息与类似命名的 HTTP 头部相同。
+- 如果设置了 [`charset`](/zh-CN/docs/Web/HTML/Element/meta#charset) 属性，`<meta>` 元素是一个字符集声明，告诉文档使用哪种字符编码。
+- 如果设置了 [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop) 属性，`<meta>` 元素提供用户定义的元数据。
 
 ## 属性
 
 此元素包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** {{htmlattrxref("name", "meta")}} 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 {{htmlattrxref("name", "meta")}}、{{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
+> **备注：** [`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 [`name`](/zh-CN/docs/Web/HTML/Element/meta#name)、[`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 或者 [`charset`](/zh-CN/docs/Web/HTML/Element/meta#charset) 三者中任何一个属性时，[`itemprop`](/zh-CN/docs/Web/HTML/Element/meta#itemprop) 属性不能被使用。
 
-**{{htmlattrdef("charset")}}**
+- `charset`
+  - : 这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与 ASCII 大小写无关（ASCII case-insensitive）的 `utf-8`。
+- `content`
+  - : 此属性包含 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 或 [`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性的值，具体取决于所使用的值。
+- `http-equiv`
 
-这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与 ASCII 大小写无关（ASCII case-insensitive）的"`utf-8`"。
-
-- {{htmlattrdef("content")}}
-  - : 此属性包含{{htmlattrxref("http-equiv", "meta")}} 或{{htmlattrxref("name", "meta")}} 属性的值，具体取决于所使用的值。
-- {{htmlattrdef("http-equiv")}}
-
-  - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 头部的名称，如下：
+  - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 标头的名称，如下：
 
     - `content-security-policy`
       它允许页面作者定义当前页的[内容策略](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives)。内容策略主要指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
@@ -118,8 +116,8 @@ slug: Web/HTML/Element/meta
     - `refresh`
       这个属性指定：
 
-      - 如果 {{htmlattrxref("content", "meta")}} 只包含一个正整数，则为重新载入页面的时间间隔 (秒)；
-      - 如果 {{htmlattrxref("content", "meta")}} 包含一个正整数，并且后面跟着字符串 '`;url=`' 和一个合法的 URL，则是重定向到指定链接的时间间隔 (秒) 无障碍相关考虑：设置了 `refresh` 值的页面可能有时间间隔太短的风险。使用诸如屏幕朗读这样的辅助技术来浏览网页的人可能会由于自动跳转而来不及读完或理解网页的内容。这样不经提示而突然进行的页面刷新也可能会让有视力障碍的人群感到迷惑。
+      - 如果 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 只包含一个正整数，则为重新载入页面的时间间隔 (秒)；
+      - 如果 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 包含一个正整数，并且后面跟着字符串 '`;url=`' 和一个合法的 URL，则是重定向到指定链接的时间间隔 (秒) 无障碍相关考虑：设置了 `refresh` 值的页面可能有时间间隔太短的风险。使用诸如屏幕朗读这样的辅助技术来浏览网页的人可能会由于自动跳转而来不及读完或理解网页的内容。这样不经提示而突然进行的页面刷新也可能会让有视力障碍的人群感到迷惑。
 
       > **警告：**
       >
@@ -131,7 +129,7 @@ slug: Web/HTML/Element/meta
       > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
       > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
-- {{htmlattrdef("name")}}
+- `name`
   - : `name` 和 `content` 属性可以一起使用，以名 - 值对的方式给文档提供元数据，其中 name 作为元数据的名称，content 作为元数据的值。
     在[标准元数据名称](/zh-CN/docs/Web/HTML/Element/meta/name)中查看 HTML 规范等规范中定义的标准元数据名称。
 

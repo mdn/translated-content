@@ -118,7 +118,7 @@ Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.c
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("report-uri")}} directive

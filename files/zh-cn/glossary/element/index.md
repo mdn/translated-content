@@ -11,5 +11,5 @@ slug: Glossary/Element
 ## 相关信息
 
 - [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [自定义元素（Custom elements）](/zh-CN/docs/Web/Web_Components/Using_custom_elements)
+- [自定义元素（Custom element）](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)
 - {{domxref("Element")}} 接口，在 DOM 中表示一个元素

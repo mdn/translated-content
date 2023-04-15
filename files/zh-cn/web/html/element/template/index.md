@@ -126,4 +126,4 @@ table td {
 ## 参见
 
 - Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
-- [Using templates and slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
+- [Using templates and slots](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)

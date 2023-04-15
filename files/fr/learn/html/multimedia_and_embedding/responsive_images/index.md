@@ -231,11 +231,3 @@ Cet article est aussi la conclusion de l'ensemble du module [Multimedia et inté
 - [`<source>`](/fr/docs/Web/HTML/Element/Source)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
-
-## Dans ce module
-
-- [Images en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenus audio et video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [De `<object>` à `<iframe>` — autres techniques d'intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Ajout de graphiques vectoriels dans le web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Écran d'accueil Mozilla](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

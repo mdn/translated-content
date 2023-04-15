@@ -3,7 +3,7 @@ title: 函数
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 函数是 JavaScript 中的基本组件之一。一个函数是 JavaScript 过程 — 一组执行任务或计算值的语句。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
 
@@ -116,7 +116,7 @@ if (num == 0){
 
 除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。
 
-当一个函数是一个对象的属性时，称之为**方法**。了解更多关于对象和方法的知识 [使用对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)。
+当一个函数是一个对象的属性时，称之为**方法**。了解更多关于对象和方法的知识 [使用对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects)。
 
 ## 调用函数
 
@@ -148,7 +148,7 @@ const square = function (n) {
 }
 ```
 
-函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见 [用对象编程](/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)）就是一个将对象作为参数的例子。
+函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见[用对象编程](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)）就是一个将对象作为参数的例子。
 
 函数可以被递归，就是说函数可以调用其本身。例如，下面这个函数就是用递归计算阶乘：
 
@@ -643,23 +643,23 @@ var p = new Person();
 JavaScript 语言有好些个顶级的内建函数：
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-  - : **`eval()`**方法会对一串字符串形式的 JavaScript 代码字符求值。
+  - : **`eval()`** 方法会对一串字符串形式的 JavaScript 代码字符求值。
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
-  - : **`uneval()`**方法创建的一个{{jsxref("Object")}}的源代码的字符串表示。
+  - : **`uneval()`** 方法创建的一个 {{jsxref("Object")}} 的源代码的字符串表示。
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-  - : **`isFinite()`**函数判断传入的值是否是有限的数值。如果需要的话，其参数首先被转换为一个数值。
+  - : **`isFinite()`** 函数判断传入的值是否是有限的数值。如果需要的话，其参数首先被转换为一个数值。
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : **`isNaN()`**函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN`函数内部的[`强制转换规则`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description)十分有趣；另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)来判断数值类型。
+  - : **`isNaN()`** 函数判断一个值是否是 {{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN` 函数内部的[强制转换规则](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#描述)十分有趣；另一个可供选择的是 ECMAScript 6 中定义 {{jsxref("Number.isNaN()")}}, 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 来判断数值类型。
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : **`parseFloat()`** 函数解析字符串参数，并返回一个浮点数。
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}
   - : **`parseInt()`** 函数解析字符串参数，并返回指定的基数（基础数学中的数制）的整数。
 - {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-  - : **`decodeURI()`** 函数对先前经过{{jsxref("Global_Objects/encodeURI", "encodeURI")}}函数或者其他类似方法编码过的字符串进行解码。
+  - : **`decodeURI()`** 函数对先前经过 {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 函数或者其他类似方法编码过的字符串进行解码。
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-  - : **`decodeURIComponent()`**方法对先前经过{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}函数或者其他类似方法编码过的字符串进行解码。
+  - : **`decodeURIComponent()`** 方法对先前经过 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 函数或者其他类似方法编码过的字符串进行解码。
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-  - : **`encodeURI()`**方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
+  - : **`encodeURI()`** 方法通过用以一个、两个、三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
   - : **`encodeURIComponent()`** 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
 - {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
@@ -667,4 +667,4 @@ JavaScript 语言有好些个顶级的内建函数：
 - {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
   - : 已废弃的 **`unescape()`** 方法计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像{{jsxref("Global_Objects/escape", "escape")}}里介绍的一样。因为 `unescape` 已经废弃，建议使用{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}或者{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} 替代本方法。
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

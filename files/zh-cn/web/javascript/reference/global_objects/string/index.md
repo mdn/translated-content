@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String
 
 ## 描述
 
-字符串对于保存以文本形式表示的数据很有用。一些最常用的字符串操作是检查他们的{{jsxref("String/length","长度")}}，使用 [+ 和 += 字符串操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators)构建和连接它们，使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法检查子字符串的存在或者位置，或使用 {{jsxref("String.prototype.substring()", "substring()")}} 方法提取子字符串。
+字符串对于保存以文本形式表示的数据很有用。一些最常用的字符串操作是检查他们的{{jsxref("String/length","长度")}}，使用 [+ 和 += 字符串操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#字符串运算符)构建和连接它们，使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法检查子字符串的存在或者位置，或使用 {{jsxref("String.prototype.substring()", "substring()")}} 方法提取子字符串。
 
 ### 创建字符串
 
@@ -328,7 +328,7 @@ otherwise my code is unreadable.";
 > 它们的用途有限，因为它们基于非常古老的 HTML 标准并且仅提供当前可用的 HTML 标记和属性的一个子集。现在已经为它们创建了已弃用或非标准的标记。此外，它们在没有任何验证或清理的情况下进行简单的字符串连接，这使得它们在使用 [`innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML) 直接插入时成为潜在的安全威胁。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 
 - {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}}（超文本目标）
+  - : [`<a name="name">`](/zh-CN/docs/Web/HTML/Element/a#name)（超文本目标）
 - {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
@@ -338,13 +338,13 @@ otherwise my code is unreadable.";
 - {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
+  - : [`<font color="color">`](/zh-CN/docs/Web/HTML/Element/font#color)
 - {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
+  - : [`<font size="size">`](/zh-CN/docs/Web/HTML/Element/font#size)
 - {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
-  - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}}（链接 URL）
+  - : [`<a href="url">`](/zh-CN/docs/Web/HTML/Element/a#href)（链接 URL）
 - {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}

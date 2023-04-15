@@ -106,9 +106,9 @@ Un paragraphe de texte qui contient `<code>` :
 </p>
 ```
 
-La sortie générée par ce HTML ressemble à ceci :
+### Résultat
 
-{{EmbedLiveSample('Exemples', '', 100)}}
+{{EmbedLiveSample('', '', 100)}}
 
 ## Notes
 

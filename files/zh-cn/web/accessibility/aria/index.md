@@ -63,8 +63,6 @@ function updateProgress(percentComplete) {
 
 - [Enhancing page navigation with ARIA landmarks](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : 使用 ARIA 地标改进屏幕阅读器用户的网页导航的一个很好的介绍。参考 [ARIA landmark implementation notes](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) 和真实站点上的示例（截至 2011 年 7 月更新）。
-- [Improving form accessibility](/zh-CN/docs/Web/Accessibility/ARIA/forms)
-  - : ARIA 不仅适用于动态内容！了解如何使用附加 ARIA 属性提高 HTML 表单的无障碍。
 
 ## 脚本小部件的 ARIA
 
