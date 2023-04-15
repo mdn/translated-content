@@ -1,6 +1,7 @@
 ---
 title: 使用 async 進行非同步流控制
-slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
+slug: conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
+original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
 
 有些*本地圖書館*網頁的控制器代碼，會依賴多重非同步要求的結果，可能會需要以某種特定次序運行，或者以平行方式運行。為了管理流控制，並在我們所有需要用到的信息，都已經可以取用的時候，再繪製網頁，我們將使用許多人採用的 node [async](https://www.npmjs.com/package/async) 模組。
