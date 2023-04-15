@@ -51,7 +51,7 @@ slug: Web/HTTP/Permissions_Policy
 
 ## 与权限 API 的关系
 
-权限策略和{{domxref("Permissions API", "权限 API", "", "nocode")}}密切相关，但又有所不同。由这两种技术控制其权限的功能是重叠的。
+权限策略和{{domxref("Permissions API", "权限 API", "", 1)}}密切相关，但又有所不同。由这两种技术控制其权限的功能是重叠的。
 
 - 权限策略允许服务器设置某项功能是否可以在特定的文档中使用（或在文档中嵌入`<frame>`）。这些被称为**策略控制的**特性————见[权限策略指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
 - 权限 API 根据用户授予的权限对功能的访问进行把关。这些功能被记录在[权限注册表](https://w3c.github.io/permissions-registry/)中。
