@@ -19,7 +19,7 @@ slug: Web/API/GPUCanvasContext
 - {{domxref("GPUCanvasContext.configure", "configure()")}} {{Experimental_Inline}}
   - : 使用给定的 {{domxref("GPUDevice")}} 配置渲染上下文并清除 canvas 为透明的黑色。
 - {{domxref("GPUCanvasContext.getCurrentTexture", "getCurrentTexture()")}} {{Experimental_Inline}}
-  - : 返回一个有 canvas 上下文合成到文档的 {{domxref("GPUTexture")}}。
+  - : 返回一个由 canvas 上下文合成到文档的 {{domxref("GPUTexture")}}。
 - {{domxref("GPUCanvasContext.unconfigure", "unconfigure()")}} {{Experimental_Inline}}
   - : 移除预设的上下文配置，并销毁在配置 canvas 上下文时生成的任何配置。
 
