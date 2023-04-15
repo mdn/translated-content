@@ -90,7 +90,7 @@ td {
 
 #### 结果
 
-{{EmbedLiveSample('具有文本溢出的固定宽度表格')}}
+{{EmbedLiveSample('具有 text-overflow 的固定宽度表格')}}
 
 ## 规范
 
