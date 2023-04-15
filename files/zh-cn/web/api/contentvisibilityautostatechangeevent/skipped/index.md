@@ -1,5 +1,6 @@
 ---
 title: "ContentVisibilityAutoStateChangeEvent：skipped 属性"
+short-title: skipped
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 ---
 
