@@ -5,13 +5,11 @@ slug: Web/API/Event/target
 
 {{ ApiRef("DOM") }}
 
-触发事件的对象 (某个 DOM 元素) 的引用。当事件处理程序在事件的冒泡或捕获阶段被调用时，它与{{domxref("event.currentTarget")}}不同。
+{{domxref("Event")}} 接口的只读 target 属性是对事件分派到的对象(某个 DOM 元素)的引用。当事件处理程序在事件的冒泡或捕获阶段被调用时，它与{{domxref("event.currentTarget")}}不同。
 
-## 语法
+## 值
 
-```
-let theTarget = event.target
-```
+与 {{domxref("EventTarget")}} 有关。
 
 ## 示例
 
@@ -34,6 +32,7 @@ function hide(e){
 }
 
 // 添加监听事件到列表，当每个 <li> 被点击的时候都会触发。
+// 第三个参数 `false` 表示在事件冒泡阶段处理该事件。
 ul.addEventListener('click', hide, false);
 ```
 
