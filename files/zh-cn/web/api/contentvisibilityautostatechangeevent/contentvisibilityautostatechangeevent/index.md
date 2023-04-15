@@ -1,5 +1,5 @@
 ---
-title: "ContentVisibilityAutoStateChangeEvent：ContentVisibilityAutoStateChangeEvent() 构造函数"
+title: ContentVisibilityAutoStateChangeEvent：ContentVisibilityAutoStateChangeEvent() 构造函数
 short-title: ContentVisibilityAutoStateChangeEvent()
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 ---
