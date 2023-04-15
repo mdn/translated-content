@@ -67,7 +67,7 @@ l10n:
 
 - [`RTCInboundRtpStreamStats.trackIdentifier`](/ja/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) をサポートしました。
   これにより開発者は、{{domxref("RTCPeerConnection.getStats()")}} を使用しているときに `inbound-rtp` 統計値と特定のトラックを関連づけることができます。
-  (詳しくは [Firefox bug 1804676](https://bugzil.la/1804676) をご覧ください)
+  (詳しくは [Firefox bug 1680606](https://bugzil.la/1680606) をご覧ください)
 
 #### 廃止
 
