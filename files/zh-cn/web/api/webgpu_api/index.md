@@ -39,7 +39,7 @@ WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的�
 
 - 本机 GPU API 是操作系统（例如 macOS 上的 Metal）的一部分，是一种允许本机应用程序使用 GPU 功能的编程接口。API 指令通过驱动程序发送到 GPU（并接收响应）。一个系统可以有多个本机操作系统 API 和驱动程序可用于与 GPU 通信，尽管上述图示仅假设一个设备仅有一个本机 API/驱动器程序。
 - 浏览器的 WebGPU 实现了通过本机 GPU API 与 GPU 进行通信。WebGPU 设配器在你的代码中实际上表示地是一个物理 GPU 和可利用的驱动程序。
-- 逻辑设备是一种抽象，通过它，单个 web 应用程序可以以分区的方式访问 GPU 功能。逻辑设备需要提供复用的功能。因为一个物理设备的 GPU可能同时被多个应用程序和进程使用，包括许多 web 引用程序。为了安全和逻辑上的原因，每个 web 应用程序都需要能够隔离地访问 WebGPU。
+- 逻辑设备是一种抽象，通过它，单个 web 应用程序可以以分区的方式访问 GPU 功能。逻辑设备需要提供复用的功能。因为一个物理设备的 GPU 可能同时被多个应用程序和进程使用，包括许多 web 引用程序。为了安全和逻辑上的原因，每个 web 应用程序都需要能够隔离地访问 WebGPU。
 
 ## 获取设备的访问权限
 
@@ -91,7 +91,7 @@ async function init() {
 5. [允许计算/渲染通道](#运行渲染通道)：这涉及许多子步骤：
    1. 创建一个指令编码器，它可以对一组传递给 GPU 的指令执行编码。
    2. 创建一个通道编码器对象，该对象用于发出计算/渲染指令。
-   3. 运行指令，指定使用哪些管线、从那个缓冲区获取数据、运行多少次绘制操作等。
+   3. 运行指令，指定使用哪些管线、从哪个缓冲区获取数据、运行多少次绘制操作等。
    4. 完成指令列表后，将其封装到指令缓冲区中。
    5. 通过逻辑设备的指令队列提交指令到缓冲区。
 
@@ -142,7 +142,7 @@ const shaderModule = device.createShaderModule({
 
 ### 获取和配置 canvas 上下文
 
-在渲染管线中，我们需要指定在哪个位置渲染图形。在这种情况下，我们获得对屏幕上 `<canvas>` 元素速度引用，然后使用 `webgpu` 参数 调用 {{domxref("HTMLCanvasElement.getContext()")}}，以返回它的 GPU 上下文（一个 {{domxref("GPUCanvasContext")}} 实例）。
+在渲染管线中，我们需要指定在哪个位置渲染图形。在这种情况下，我们获得对屏幕上 `<canvas>` 元素的引用，然后使用 `webgpu` 参数调用 {{domxref("HTMLCanvasElement.getContext()")}}，以返回它的 GPU 上下文（一个 {{domxref("GPUCanvasContext")}} 实例）。
 
 从这里继续，我们将通过调用 {{domxref("GPUCanvasContext.configure()")}} 去配置上下文，向它传递包含渲染信息的可选对象，包括 {{domxref("GPUDevice")}}、纹理的格式以及在半透明纹理时使用的 alpha 模式。
 
@@ -251,7 +251,7 @@ const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
 ### 运行渲染通道
 
-现在所有设置都已完成，实际上，我们可以运行一个渲染通道兵器在我们的 `<canvas>` 上进行绘制。为了对稍后发送给 GPU 的任何指令进行编码，你需要创建一个 {{domxref("GPUCommandEncoder")}} 实例，这是调用 {{domxref("GPUDevice.createCommandEncoder()")}} 完成的。
+现在所有设置都已完成，实际上，我们可以运行一个渲染通道并在我们的 `<canvas>` 上进行绘制。为了对稍后发送给 GPU 的任何指令进行编码，你需要创建一个 {{domxref("GPUCommandEncoder")}} 实例，这是调用 {{domxref("GPUDevice.createCommandEncoder()")}} 完成的。
 
 ```js
 const commandEncoder = device.createCommandEncoder();
@@ -396,7 +396,7 @@ const bindGroup = device.createBindGroup({
 
 ### 创建计算管线
 
-上述一切就绪后，我们现在可以通过调用 {{domxref("GPUDevice.createComputePipeline()")}} 并向它传递一个管线描述符对象创建计算管线这个。这与创建渲染管线的方式类似。我们描述计算着色器，指定在那个模块中查找代码以及入口点是什么。我们也为管线指定了 `layout`，在本例中，我们通过调用 {{domxref("GPUDevice.createPipelineLayout()")}} 创建一个基于之前定义的 `bindGroupLayout` 的布局。
+上述一切就绪后，我们现在可以通过调用 {{domxref("GPUDevice.createComputePipeline()")}} 并向它传递一个管线描述符对象创建计算管线。这与创建渲染管线的方式类似。我们描述计算着色器，指定在哪个模块中查找代码以及入口点是什么。我们也为管线指定了 `layout`，在本例中，我们通过调用 {{domxref("GPUDevice.createPipelineLayout()")}} 创建一个基于之前定义的 `bindGroupLayout` 的布局。
 
 ```js
 const computePipeline = device.createComputePipeline({
@@ -464,7 +464,7 @@ console.log(new Float32Array(data));
 
 ## GPU 错误处理
 
-WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错误，有问题的调用会在 GPU 端标记为无效。如果依赖于一个无效调用返回值的另一个调用被执行，那么该对象将也被标记为无效，以此类推。一次，WebGPU 的错误被称为“传染性错误”。
+WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错误，有问题的调用会在 GPU 端标记为无效。如果依赖于一个无效调用返回值的另一个调用被执行，那么该对象将也被标记为无效，以此类推。因此，WebGPU 的错误被称为“传染性错误”。
 
 每个 {{domxref("GPUDevice")}} 实例都维护这自己的错误作用域栈。这个栈最初是空的，但是你可以通过调用 {{domxref("GPUDevice.pushErrorScope()")}} 来开始推入错误作用域到栈，以捕获特定类型的错误。
 
@@ -504,7 +504,7 @@ WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错�
 ### 配置渲染 `<canvas>`
 
 - {{domxref("HTMLCanvasElement.getContext()")}}——`contextType` 为 `"webgpu"`
-  - : 使用 `contextType` 为 `"webgpu"` 调用 `getContext()` 方法，其会返回一个 {{domxref("GPUCanvasContext")}} 对象实例，然后可以使用 {{domxref("GPUCanvasContext.configure()")}} 对其进行配置
+  - : 使用 `contextType` 为 `"webgpu"` 调用 `getContext()` 方法，其会返回一个 {{domxref("GPUCanvasContext")}} 对象实例，然后可以使用 {{domxref("GPUCanvasContext.configure()")}} 对其进行配置。
 - {{domxref("GPUCanvasContext")}}
   - : 表示 `<canvas>` 元素的 WebGPU 渲染上下文。
 
