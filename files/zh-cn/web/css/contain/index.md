@@ -92,7 +92,7 @@ div {
   height: 100px;
   background: red;
   margin: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 ```
 
@@ -224,7 +224,7 @@ CSS 引号受类似影响，与引号相关的 {{CSSXref("content")}} 值被限�
 
 ```css
 body {
-  quotes: "[" "]" "‹" "›";
+  quotes: "【" "】" "〈" "〉";
 }
 .open-quote:before {
   content: open-quote;
