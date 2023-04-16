@@ -1,5 +1,5 @@
 ---
-title: "GPU: requestAdapter() method"
+title: GPU：requestAdapter() 方法
 slug: Web/API/GPU/requestAdapter
 ---
 
