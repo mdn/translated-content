@@ -1,6 +1,5 @@
 ---
 title: "AudioWorkletGlobalScope: registerProcessor() メソッド"
-short-title: registerProcessor()
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
