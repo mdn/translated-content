@@ -5,11 +5,11 @@ slug: Web/CSS/:empty
 
 {{CSSRef}}
 
-**`:empty`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/CSS/Pseudo-classes)表示没有子元素的任何元素。子元素可以是元素节点或文本（包括空格）。注释、处理指令和 CSS 内容不影响元素是否被认为为空。
+**`:empty`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/CSS/Pseudo-classes)用于选择不包含任何子元素的元素。子元素可以是元素节点或文本，包括空格。但是注释、处理指令和 CSS {{cssxref("content", "内容")}}不会影响元素是否被认为为空。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-empty.html", "tabbed-shorter")}}
 
-> **备注：** 在[选择器 Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) 中，`:empty` 伪类被更改为像 {{CSSxRef(":-moz-only-whitespace")}} 一样运作，但目前还没有浏览器支持它。
+> **备注：** 在[选择器 Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) 中，`:empty` 伪类被更改为类似于 {{CSSxRef(":-moz-only-whitespace")}}，但目前还没有浏览器支持它。
 
 ## 语法
 
@@ -25,7 +25,7 @@ slug: Web/CSS/:empty
 
 ```html
 <div class="box"><!-- 它将呈现为青柠色。 --></div>
-<div class="box">I will be pink.</div>
+<div class="box">我将会是粉色。</div>
 <div class="box">
   <!-- 由于这个注释周围存在空格，所以它将在旧版本的浏览器中呈现为粉色。 -->
 </div>
