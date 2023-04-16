@@ -17,11 +17,11 @@ Prenons ce fragment de HTML&nbsp;:
 <input type="file" id="input" multiple />
 ```
 
-L'API <i lang="en">File</i> permet d'accéder à un objet [`FileList`](/fr/docs/Web/API/FileList) qui contient des objets [`File`](/fr/docs/Web/API/File) représentant les fichiers sélectionnées par l'utilisatrice ou l'utilisateur.
+L'API <i lang="en">File</i> permet d'accéder à un objet [`FileList`](/fr/docs/Web/API/FileList) qui contient des objets [`File`](/fr/docs/Web/API/File) représentant les fichiers sélectionnés par l'utilisatrice ou l'utilisateur.
 
 L'attribut `multiple` placé sur l'élément `input` permet de sélectionner plusieurs fichiers.
 
-On peut accéder au premier fichier sélectionné grâce à un sélecteur DOM classique&nbsp:
+On peut accéder au premier fichier sélectionné grâce à un sélecteur DOM classique&nbsp;:
 
 ```js
 const fichierSelectionne = document.getElementById("input").files[0];
@@ -527,7 +527,7 @@ if (isset($_FILES['myFile'])) {
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here</div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Glissez-déposez votre fichier ici.</div>
     </div>
 </body>
 </html>
