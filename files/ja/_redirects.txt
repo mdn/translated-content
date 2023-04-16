@@ -2696,7 +2696,7 @@
 /ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/非同期	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
-/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/ja/docs/conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
+/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data
 /ja/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry	/ja/docs/orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 /ja/docs/Link_prefetching_FAQ	/ja/docs/Web/HTTP/Link_prefetching_FAQ
 /ja/docs/Localization	/ja/docs/Glossary/Localization
