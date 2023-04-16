@@ -19,7 +19,7 @@ filter(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy) 值以将元素保留在结果数组中，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy) 值。该函数被调用时将传入以下参数：
+  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)以将元素保留在结果数组中，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`
