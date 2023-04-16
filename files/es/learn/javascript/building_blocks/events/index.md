@@ -16,7 +16,7 @@ Este no será un estudio exhaustivo, solo veremos lo que necesitas saber en esta
     <tr>
       <th scope="row">Pre-requisitos:</th>
       <td>
-	Conocimientos básicos de informática, entendimiento básico de HTML y CSS, <a href="/es/docs/Learn/JavaScript/First_steps"
+  Conocimientos básicos de informática, entendimiento básico de HTML y CSS, <a href="/es/docs/Learn/JavaScript/First_steps"
           >Primeros pasos con JavaScript</a
         >.
       </td>
@@ -49,14 +49,14 @@ A partir de esto (y dando un vistazo a la [referencia de eventos](/es/docs/Web/E
 
 Para reaccionar a un evento, puedes asociarle un **manejador de eventos**. Esto es un bloque de código (normalmente una función de JavaScript que tú como programador creas) que se ejecuta cuando el evento ocurre.
 Cuando uno de estos bloques de código se configura para ejecutarse en respuesta de un evento, decimos que estamos **registrando un manejador de evento**.
-Nota: Los manejador de eventos a veces son llamados **detectores de eventos**. Estos términos, para lo que nos concierne justo ahora, son intercambiables, aunque hablando de forma estricta, hacen referencia  a dos mecanismos que trabajan juntos.
+Nota: Los manejador de eventos a veces son llamados **detectores de eventos**. Estos términos, para lo que nos concierne justo ahora, son intercambiables, aunque hablando de forma estricta, hacen referencia a dos mecanismos que trabajan juntos.
 Los detectores de eventos están pendientes a que ocurra un evento, mientras que el manejador es el código que se ejecuta en respuesta del evento.
 
 > **Nota:** Los eventos en la web no son parte del núcleo del lenguaje JavaScript, éstos están definidos como parte de las APIs del navegador.
 
 ### Un ejemplo: manejando un evento de click
 
-En el siguiente ejemplo, tenemos un único {{htmlelement("button")}} en la página:
+En el siguiente ejemplo, tenemos un único elemento {{htmlelement("button")}} en la página:
 
 ```html
 <button>Change color</button>
@@ -109,8 +109,8 @@ btn.addEventListener("click", () => {
 El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario hace click sobre él. Entonces define la función `addEventListener()` que estamos llamando aquí. Le estamos pasando dos parámetros:
 
 - la cadena `"click"`, para indicar que queremos detectar el evento de click.
-Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/en-US/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
-- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/en-US/docs/Web/HTML/Element/body) a ese color.
+Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/es/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
+- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Element/body) a ese color.
 
 Es válido crear una función manejador con su propio nombre, de la siguiente forma:
 
@@ -137,7 +137,7 @@ Primero, haz una copia local del archivo [random-color-addeventlistener.html](ht
 Se trata de una copia del ejemplo sencillo del color aleatorio con el que ya trabajamos anteriormente. Ahora intenta a cambiar `click` por cada uno de los siguientes valores y observa los resultados en el ejemplo:
 
 - [`focus`](/es/docs/Web/API/Element/focus_event) y [`blur`](/es/docs/Web/API/Element/blur_event) — El color cambia cuando el botón es enfocado y desenfocado; Intenta presionar la tecla "Tabulador" para enfocar el botón y presionala de nuevo para desenfocarlo.
-Estos eventos son normalmente utilizados para mostrar información a la hora de completar formularios, o incluso para mostrar un mensaje de error si un campo recibe un valor incorrecto. 
+Estos eventos son normalmente utilizados para mostrar información a la hora de completar formularios, o incluso para mostrar un mensaje de error si un campo recibe un valor incorrecto.
 - [`dblclick`](/es/docs/Web/API/Element/dblclick_event) — El color cambia únicamente cuando se hace doble click sobre el botón.
 - [`mouseover`](/es/docs/Web/API/Element/mouseover_event) y [`mouseout`](/es/docs/Web/API/Element/mouseout_event) — El color cambia cuando el puntero del ratón pasa por encima del botón, o cuando el puntero sale del botón, respectivamente.
 
@@ -169,7 +169,6 @@ btn.addEventListener(
 
 De esta forma, el manejador de evento creado por el código anterior puede ser removido de la siguiente manera:
 
-
 ```js
 controller.abort(); // remueve cualquier manejador de evento asociado con este controlador.
 ```
@@ -190,7 +189,7 @@ Ambas functiones se ejecutarían cuando se hace click en dicho elemento.
 
 ### Conocer más
 
-Existen otras características y opciones poderosas disponibles para  `addEventListener()`.
+Existen otras características y opciones poderosas disponibles para `addEventListener()`.
 
 Éstas se encuentran un poco fuera del alcance de este artículo, pero si quieres saber más de ellas, visita las páginas de referencia para [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) y [`removeEventListener()`](/es/docs/Web/API/EventTarget/removeEventListener).
 
@@ -425,7 +424,7 @@ El resultado es el siguiente:
 
 El *event bubbling* (o burbujeo de eventos) describe como el navegador maneja eventos dirigidos a elementos anidados.
 
-### Establaciendo un detector de eventos en un elemento padre
+### Estableciendo un detector de eventos en un elemento padre
 
 Considera una página web como la siguiente:
 
@@ -507,7 +506,7 @@ Para describir esta situación, decimos que el evento **burbujea hacia arriba** 
 
 Este comportamiento puede ser útil a la par de causar problemas inesperados. En las siguientes secciones veremos los problemas que causa y econtraremos una solución.
 
-### Video player example
+### Ejemplo de un reproductor de video
 
 En este ejemplo, nuestra página contiene un video, el cual se encuentra oculto inicialmente, y un botón con la etiqueta "Display video". Queremos lograr la siguiente interacción:
 
@@ -589,7 +588,7 @@ El video se encuentra dentro del `<div>`, ya que es parte de él, por lo tanto, 
 ### Resolviendo el problema con stopPropagation()
 
 Como pudimos ver en la anterior sección, a veces el _event bubbling_ puede ocasionar problemas, pero existe una manera de prevenirlos.
-El objeto [`Event`](/es/docs/Web/API/Event) 
+El objeto [`Event`](/es/docs/Web/API/Event)
 contiene un método llamado [`stopPropagation()`](/es/docs/Web/API/Event/stopPropagation) que cuando es llamado dentro de un manejador de evento, evita que el evento burbujee hacia los elementos de más arriba.
 
 Podemos solucionar nuestro problema actual al cambiar el código JavaScript por lo siguiente:
@@ -792,11 +791,11 @@ No estamos esperando que entiendas todas estás áreas justo ahora, pero sin dud
 
 Si hay algo que no te quedó muy claro, tómate la libertad de leer de nuevo el artículo o [contáctanos](https://discourse.mozilla.org/c/mdn/learn/250) para pedir ayuda.
 
-## See also
+## Véase también
 
-- [domevents.dev](https://domevents.dev/) — a very useful interactive playground app that enables learning about the behavior of the DOM Event system through exploration.
-- [Event reference](/en-US/docs/Web/Events)
-- [Event order](https://www.quirksmode.org/js/events_order.html) (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.
-- [Event accessing](https://www.quirksmode.org/js/events_access.html) (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.
+- [domevents.dev](https://domevents.dev/) — una aplicación interactiva bastante útil para aprender el comportamiento del sistema de eventos del DOM a través de la exploración.
+- [Referencia de eventos](/es/docs/Web/Events)
+- [Orden de eventos](https://www.quirksmode.org/js/events_order.html) (debate sobre captura y burbujeo) - un excelente y detallado artículo por Peter-Paul Koch.
+- [Event accessing](https://www.quirksmode.org/js/events_access.html) (debate sobre el objeto evento) - otro excelente y detallado artículo por Peter-Paul Koch.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
