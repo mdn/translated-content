@@ -53,4 +53,4 @@ async function init() {
 
 ## 参见
 
-- [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
+- [WebGPU API](/zh-CN/docs/Web/API/WebGPU_API)
