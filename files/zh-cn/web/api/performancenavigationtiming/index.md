@@ -52,7 +52,7 @@ slug: Web/API/PerformanceNavigationTiming
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{readonlyInline}}
   - : 表示在当前浏览上下文中上次非重定向导航以来的重定向次数的数字。
 - {{domxref('PerformanceNavigationTiming.type')}} {{readonlyInline}}
-  - : 一个表示导航类型的字符串，取值为：`"navigate"`，`"reload"`，`"back_forward"` 或 `"prerender"`。
+  - : 一个表示导航类型的字符串，取值为：`"navigate"`、`"reload"`、`"back_forward"` 或 `"prerender"`。
 - {{domxref('PerformanceNavigationTiming.unloadEventEnd')}} {{readonlyInline}}
   - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`unload`](/zh-CN/docs/Web/API/Window/unload_event) 事件处理程序结束的时间。
 - {{domxref('PerformanceNavigationTiming.unloadEventStart')}} {{readonlyInline}}
