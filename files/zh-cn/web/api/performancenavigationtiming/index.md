@@ -48,7 +48,7 @@ slug: Web/API/PerformanceNavigationTiming
 - {{domxref('PerformanceNavigationTiming.loadEventEnd')}} {{readonlyInline}}
   - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理程序结束的时间。
 - {{domxref('PerformanceNavigationTiming.loadEventStart')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理程序开始的时间。
+  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理器开始的时间。
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{readonlyInline}}
   - : 表示在当前浏览上下文中上次非重定向导航以来的重定向次数的数字。
 - {{domxref('PerformanceNavigationTiming.type')}} {{readonlyInline}}
