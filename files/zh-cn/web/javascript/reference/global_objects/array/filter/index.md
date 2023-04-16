@@ -31,13 +31,13 @@ filter(callbackFn, thisArg)
 
 ### 返回值
 
-返回给定数组的部分[浅拷贝](/zh-CN//docs/Glossary/Shallow_copy)，其中只包括通过提供的函数实现的测试的元素。如果没有元素通过测试，则返回一个空数组。
+返回给定数组的一部分的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)，其中只包括通过提供的函数实现的测试的元素。如果没有元素通过测试，则返回一个空数组。
 
 ## 描述
 
 `filter()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用提供的 `callbackFn` 函数一次，并构造一个由所有返回[真值](/zh-CN/docs/Glossary/Truthy)的元素值组成的新数组。未通过 `callbackFn` 测试的数组元素不会包含在新数组中。
 
-`callbackFn` 仅对已分配值的数组索引调用。它不会对[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽位调用。
+`callbackFn` 仅对已分配值的数组索引调用。它不会对[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽调用。
 
 `filter()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同的元素（其中某些元素已被过滤掉）的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。但是，作为 `callbackFn` 的函数可以更改数组。请注意，在第一次调用 `callbackFn` _之前_，数组的长度已经被保存。因此：
 
