@@ -1,6 +1,5 @@
 ---
 title: "AudioWorkletNode: parameters プロパティ"
-short-title: parameters
 slug: Web/API/AudioWorkletNode/parameters
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
