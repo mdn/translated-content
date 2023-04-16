@@ -40,7 +40,7 @@ slug: Web/API/PerformanceNavigationTiming
 - {{domxref('PerformanceNavigationTiming.domComplete')}} {{readonlyInline}}
   - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示用户代理将文档的 [`readyState`](/zh-CN/docs/Web/API/Document/readyState) 设置为 `"complete"` 的时间。
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventEnd')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件处理程序结束的时间。
+  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件处理器结束的时间。
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventStart')}} {{readonlyInline}}
   - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件处理器开始的时间。
 - {{domxref('PerformanceNavigationTiming.domInteractive')}} {{readonlyInline}}
