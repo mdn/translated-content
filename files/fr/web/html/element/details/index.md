@@ -167,7 +167,7 @@ Pour obtenir une boîte `<details>` dans un état ouvert, il suffit d'ajouter l'
 
 #### Résultat
 
-{{EmbedLiveSample("Créer_un_contrôle_déjà_ouvert", "", 130)}}
+{{EmbedLiveSample("", "", 130)}}
 
 ### Personnaliser l'apparence
 
