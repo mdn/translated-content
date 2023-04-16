@@ -20,7 +20,7 @@ slug: Web/API/GPUAdapterInfo
 - {{domxref("GPUAdapterInfo.device", "device")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : 适配器供应商的标识符。如果不能获得，则返回空字符串。
 - {{domxref("GPUAdapterInfo.vendor", "vendor")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : 适配器供应商的名称。如果空字符串不可用，则返回空字符串。
+  - : 适配器供应商的名称。如果不能获得，则返回空字符串。
 
 ## 示例
 
