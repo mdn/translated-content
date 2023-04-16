@@ -1,171 +1,107 @@
 ---
-title: Différenciateurs Firefox
+title: Différenciateurs de Firefox pour les extensions
 slug: Mozilla/Add-ons/WebExtensions/Firefox_differentiators
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox
-  - NeedMarkupWork
-  - Themes
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Firefox_differentiators
+l10n:
+  sourceCommit: 27837ffc9a967eba2b56fe4c0a00d58dd4f72ab5
 ---
 
 {{AddonSidebar}}
 
-Firefox est un excellent endroit pour commencer le développement de votre extension de navigateur. Pour commencer, vous obtenez la conformité la plus élevée avec l'API d'extension de navigateur proposée, y compris l'utilisation de l'espace de noms `browser.*` et les promesses pour la gestion des événements asynchrones. Ensuite, il y a une communauté de développeurs de vulgarisation très solidaire, prêts à vous aider.
+Firefox est un bon navigateur pour commencer le développement de votre extension de navigateur en raison de sa forte compatibilité avec l'API Extension et de sa communauté de développeuses et développeurs.
 
-Firefox offre également des fonctionnalités uniques que vous pouvez utiliser pour créer des extensions plus sûres, plus faciles à utiliser et plus attrayantes visuellement. Jetez un coup d’œil à ce qui est disponible:
+Firefox offre également des fonctionnalités spécifiques, n'étant pas présentes dans les autres navigateurs. Jetez un coup d'œil à ce qui est disponible&nbsp;:
 
-<table>
+<table class="standard-table">
   <tbody>
     <tr>
       <td>
-        <p>
-          Aider les utilisateurs à séparer les activités de leur navigateur avec
-          les
-          <a href="/fr/Add-ons/WebExtensions/API/contextualIdentities"
-            >identités contextuelles</a
-          >
-          (Contextual Identities ou Containers). Donner aux groupes d'onglets
-          leur propre stockage de navigateur local : stockage de cookies et
-          données locales dans localStorage et indexedDB. Ainsi, les détails
-          tels que les préférences du site, les sessions ouvertes et les données
-          de suivi des publicités restent confidentiels dans les onglets.
-        </p>
+        <p>Permettre aux utilisatrices et utilisateurs de séparer leurs activités en ligne avec <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities">les identités contextuelles</a> (aussi appelées conteneurs). Elles permettent de grouper des onglets avec un stockage local distinct dans le navigateur et de garder en mémoire les préférences des sites, les sessions en cours et d'isoler les données de pistage publicitaire.</p>
       </td>
-      <td><img alt="containers.png" /></td>
+      <td>
+        <img alt="Illustration du menu des conteneurs" src="containers.png" />
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Enregistrez et affichez des informations supplémentaires ou
-          complémentaires sur une page Web à l'aide du composant de l'interface
-          utilisation
-          <a href="/fr/Add-ons/WebExtensions/user_interface/Sidebars">Sidebar</a
-          >, un panneau situé à côté des pages Web.
-        </p>
+        <p>Enregistrer et afficher des informations supplémentaires ou complémentaires à propos d'une page web grâce à <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">la barre latérale</a>, un panneau visible à côté des pages web.</p>
       </td>
-      <td><img src="sidebar.png" /></td>
+      <td>
+        <img alt="Illustration de la barre latérale dans un exemple d'annotation, en vis-à-vis d'une page web" src="sidebar.png"/>
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Mieux intégrer votre extension avec le navigateur en utilisant la
-          possibilité de choisir le style du navigateur dans les actions des
-          pages et du navigateur ainsi que dans la barre latérale de l'interface
-          utilisateur. Définissez, dans le fichier <code>manifest.json</code>,
-          les URLs où une action de page est affichée ou masquée, et choisissez
-          où placer l'icône d'action du navigateur.
-        </p>
+        <p>Intégrez votre extension dans le navigateur grâce à la possibilité de sélectionner le style du navigateur selon le navigateur et l'activation des actions du navigateur dans la barre latérale. Utilisez le fichier <code>manifest.json</code> pour définir les URL où une action doit être montrée ou cachée et choisir où placer l'icône d'action.</p>
       </td>
-      <td><img src="icon_placement.png" /></td>
+      <td>
+        <img alt="Illustration d'une icône d'action navigateur placée dans le panneau du menu" src="icon_placement.png"/>
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Aidez les utilisateurs à localiser le contenu qui les intéresse dans
-          une page web, avec la possibilité de
-          <a href="/fr/Add-ons/WebExtensions/API/find"
-            >trouver et mettre en surbrillance le texte dans une page web</a
-          >.
-        </p>
+        <p>Aider les utilisatrices et utilisateurs à repérer le contenu d'intérêt dans une page web grâce à la capacité à <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/find">chercher et surligner du texte dans une page web</a>.</p>
       </td>
-      <td><img src="find.png" /></td>
+      <td>
+        <img alt="Illustration du surlignement d'une occurrence trouvée dans le contenu d'une page" src="find.png"/>
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Effectuez des recherches directement à partir de votre extension, avec
-          des fonctions pour
-          <a href="/fr/Add-ons/WebExtensions/API/search"
-            >obtenir des détails sur les moteurs de recherche et effectuer une
-            recherche</a
-          >.
-        </p>
+        <p>Effectuez des recherches directement depuis votre extension en exploitant des fonctionnalités pour <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/search">obtenir des détails sur les moteurs de recherches et exécuter une recherche</a>.</p>
       </td>
-      <td><img src="search_extension.png" /></td>
+      <td>
+        <img alt="La page Wikipédia qui affiche le résultat de la recherche pour le mot-clé &#x22;extension&#x22;" src="search_extension.png"/>
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Ajoutez une dimension supplémentaire à vos thèmes en
-          <a href="/fr/Add-ons/WebExtensions/API/theme"
-            >mettant à jour le thème du navigateur au moment de l'exécution</a
-          >. Avec cette fonction, vous pouvez alterner les thèmes par heure de
-          la journée, appliquer un thème différent lorsque les utilisateurs
-          naviguent sur votre site Web, refléter les actions des utilisateurs
-          dans votre extension, et plus encore.
-        </p>
+        <p>Ajoutez une dimension supplémentaire à vos thèmes <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme">en mettant à jour le thème du navigateur à l'exécution</a>. Grâce à cette fonctionnalité, vous pouvez alterner entre différents thèmes selon l'heure de la journée, appliquer un thème différent lorsque les personnes visitent votre site, accentuer les actions de l'extension, etc.</p>
       </td>
-      <td><img src="dynamic_theme.png" /></td>
+      <td>
+        <img alt="Illustration suggérant que le thème change avec le temps" src="dynamic_theme.png"/>
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Effectuez des recherches directement à partir de votre extension, avec
-          des fonctions pour obtenir les détails avec la <a
-            href="/fr/Add-ons/WebExtensions/API/browserSettings"
-            >possibilité de modifier (certains) paramètres globaux du
-            navigateur</a
-          >.
-        </p>
+        <p>Fournir un contrôle sur l'expérience de navigation en permettant aux extensions de <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">modifier (certains) paramètres généraux du navigateur</a>.</p>
       </td>
-      <td><img src="extension_controlling_settings.png" /></td>
+      <td>
+        <img alt="Exemple d'un paramètre de Firefox indiquant qu'il est contrôlé par une extension" src="extension_controlling_settings.png"/>
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Permettez aux utilisateurs d'ajouter de manière fiable les
-          fonctionnalités de votre extension à de nouvelles pages et de nouveaux
-          sites, avec la possibilité <a
-            href="/fr/Add-ons/WebExtensions/API/contentScripts"
-            >enregistrer et de désinscrire des scripts de contenu au moment de
-            l'exécution</a
-          >.
-        </p>
+        <p>Permettre aux utilisatrices et utilisateurs d'ajouter les fonctionnalités de votre extension à de nouvelles pages et sites en <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts">inscrivant et désinscrivant des scripts de contenu à l'exécution</a>.</p>
       </td>
-      <td><img src="script_inject.png" /></td>
+      <td>
+        <img alt="Illustration d'un exemple de code utilisé pour injecter un script de contenu à la demande" src="script_inject.png"/>
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Profitez des services externes pour gérer les protocoles ou les types
-          de contenu en enregistrant les <a
-            href="/fr/Add-ons/WebExtensions/manifest.json/protocol_handlers"
-            >gestionnaires de protocole</a
-          >
-          dans le <code>manifest.json</code>.
-        </p>
+        <p>Tirer parti de services tiers pour gérer des protocoles ou des types de contenu en enregistrant <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">des gestionnaires de protocole</a> dans le fichier <code>manifest.json</code>.</p>
       </td>
-      <td><img src="protocol.png" /></td>
+      <td>
+        <img alt="Illustration d'un code définissant un gestionnaire de protocole" src="protocol.png"/>
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Effectuer des tâches Web supplémentaires telles que la
-          <a href="/fr/Add-ons/WebExtensions/API/dns"
-            >résolution des noms de domaines </a
-          >et
-          <a href="/fr/Add-ons/WebExtensions/API/proxy"
-            >proxying des requêtes web</a
-          >.
-        </p>
+        <p>Réaliser des tâches additionnelles pour le trafic web comme <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/dns">la résolution de noms de domaines</a> et <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy">l'envoi des requêtes web à un serveur mandataire (<i lang="en">proxy</i>)</a>.</p>
       </td>
-      <td><img src="proxy_settings.png" /></td>
+      <td>
+        <img alt="Exemple des paramètres de proxy de Firefox" src="proxy_settings.png" />
+      </td>
     </tr>
     <tr>
       <td>
-        <p>
-          Ajoutez des fonctionnalités de sécurité avancées à l'aide des
-          <a href="/fr/Add-ons/WebExtensions/API/pkcs11"
-            >modules de sécurités PKCS #11 aux clés et certificats source</a
-          >.
-        </p>
+        <p>Fonctionnalités de sécurité avancées <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11">à l'aide des modules de sécurité PKCS #11 pour créer des clés et des certificats</a>.</p>
       </td>
-      <td><img src="certificate_key.png" /></td>
+      <td>
+        <img alt="Icônes dessinées au trait, représentant un certificat papier et une clé" src="certificate_key.png"/>
+      </td>
     </tr>
   </tbody>
 </table>
 
-Icônes de [icon8](https://www.icons8.com)
+Icônes provenant de [icon8](https://icons8.com/)
