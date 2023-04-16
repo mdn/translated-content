@@ -3587,10 +3587,6 @@
     "modified": "2020-07-16T22:38:34.353Z",
     "contributors": ["silverskyvicto"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async": {
-    "modified": "2020-07-16T22:38:32.914Z",
-    "contributors": ["11sthkr09", "silverskyvicto"]
-  },
   "Learn/Server-side/Express_Nodejs/Introduction": {
     "modified": "2020-07-16T22:38:10.974Z",
     "contributors": [
@@ -17059,6 +17055,10 @@
     "modified": "2020-12-03T15:27:41.759Z",
     "contributors": ["mfuji09", "FumiyaShibusawa", "ethertank", "sii"]
   },
+  "Web/CSS/Inheritance": {
+    "modified": "2020-09-16T06:01:11.329Z",
+    "contributors": ["mfuji09", "inkusu", "ethertank", "Marsf"]
+  },
   "Web/CSS/Layout_cookbook": {
     "modified": "2019-04-27T01:38:18.486Z",
     "contributors": ["Wind1808", "mfuji09"]
@@ -18892,10 +18892,6 @@
   "Web/CSS/inherit": {
     "modified": "2020-10-15T21:18:45.619Z",
     "contributors": ["mfuji09", "ethertank", "Marsf"]
-  },
-  "Web/CSS/inheritance": {
-    "modified": "2020-09-16T06:01:11.329Z",
-    "contributors": ["mfuji09", "inkusu", "ethertank", "Marsf"]
   },
   "Web/CSS/initial": {
     "modified": "2020-10-15T21:22:35.882Z",
