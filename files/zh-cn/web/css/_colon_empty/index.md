@@ -24,7 +24,7 @@ slug: Web/CSS/:empty
 ### HTML
 
 ```html
-<div class="box"><!-- 我将呈现为青柠色。 --></div>
+<div class="box"><!-- 它将呈现为青柠色。 --></div>
 <div class="box">I will be pink.</div>
 <div class="box">
   <!-- 由于这个注释周围存在空格，所以它将在旧版本的浏览器中呈现为粉色。 -->
@@ -33,22 +33,6 @@ slug: Web/CSS/:empty
   <p>
     <!-- 由于这个注释周围存在无法折叠的空格和元素，所以它将在所有浏览器中呈现为粉色。 -->
   </p>
-</div>
-```
-
-## 形式语法
-
-{{csssyntax}}
-
-## 示例
-
-### HTML
-
-```html
-<div class="box"><!-- I will be lime --></div>
-<div class="box">I will be pink</div>
-<div class="box">
-    <!-- I will be pink because of the whitespace around this comment -->
 </div>
 ```
 
