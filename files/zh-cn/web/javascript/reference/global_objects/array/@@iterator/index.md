@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 
 {{JSRef}}
 
-{{jsxref("Array")}} 实例的 **`[@@iterator]()`** 方法实现了[迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)，允许数组被大多数期望可迭代的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会生成数组中每个索引的值。
+{{jsxref("Array")}} 实例的 **`[@@iterator]()`** 方法实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，允许数组被大多数期望可迭代的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会生成数组中每个索引的值。
 
 该属性的初始值与 {{jsxref("Array.prototype.values")}} 属性的初始值是相同的函数对象。
 
