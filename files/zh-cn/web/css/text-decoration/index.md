@@ -112,6 +112,6 @@ text-decoration: unset;
 
 ## 参见
 
-- 各个文本装饰属性分别是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-thickness")}}。
+- 包括文本装饰属性分别是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-thickness")}}。
 - {{cssxref("text-decoration-skip-ink")}}、{{cssxref("text-underline-offset")}} 和 {{cssxref("text-underline-position")}} 属性也会影响文本装饰，但不包括在缩写中。
 - {{cssxref("list-style")}} 属性控制 {{HTMLElement("ol")}} 和 {{HTMLElement("ul")}} 列表的每一项的外观。
