@@ -28,7 +28,7 @@ slug: Web/CSS/:hover
 #### HTML
 
 ```html
-<a href="#">Try hovering over this link.</a>
+<a href="#">尝试将鼠标悬停到该元素上。</a>
 ```
 
 #### CSS
