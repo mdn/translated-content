@@ -1,6 +1,5 @@
 ---
 title: GPU：getPreferredCanvasFormat() 方法
-short-title: getPreferredCanvasFormat()
 slug: Web/API/GPU/getPreferredCanvasFormat
 ---
 
