@@ -1,11 +1,13 @@
 ---
 title: Асинхронное управление потоками при помощи async
-slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
+slug: conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
 tags:
   - Node
   - Часть 5
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
+original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
+
 Код контроллера для некоторых страниц библиотеки будет зависеть от результатов многих асинхронных запросов, которые должны выполняться в определённом порядке или параллельно. Для того, чтобы управлять потоком выполнения, и выводить страницы, когда получена вся необходимая информация, будет использован [async](https://www.npmjs.com/package/async) - известный модуль node.
 
 > **Примечание:** В JavaScript существует много других способов управления асинхронным поведением и потоком выполнения, включая такой относительно новый элемент языка JavaScript как [промисы](/ru/docs/Mozilla/Add-ons/Techniques/Promises) (promises).
