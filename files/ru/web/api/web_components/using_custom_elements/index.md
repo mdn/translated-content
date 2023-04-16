@@ -1,9 +1,10 @@
 ---
 title: Использование пользовательских элементов
-slug: Web/Web_Components/Using_custom_elements
+slug: Web/API/Web_components/Using_custom_elements
 translation_of: Web/Web_Components/Using_custom_elements
-original_slug: Web/Web_Components/Использование_пользовательских_элементов
+original_slug: Web/Web_Components/Using_custom_elements
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Одна из ключевых особенностей стандарта Веб-компонент это возможность создавать пользовательские элементы на HTML-странице, инкапсулирующие функциональность, вместо того чтобы создавать длинную, вложенную группу элементов, которые бы вместе реализовывали нужную пользовательскую фичу. Эта статья является вводной по использованию пользовательских HTML-компонент.
