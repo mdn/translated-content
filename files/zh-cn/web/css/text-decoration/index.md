@@ -9,7 +9,7 @@ slug: Web/CSS/text-decoration
 
 {{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 
-文本装饰会覆盖子孙文本元素。这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。例如，在标记 `<p>This text has <em>some emphasized words</em> in it.</p>` 中，样式规则 `p { text-decoration: underline; }` 会导致整个段落被下划线划掉。样式规则 `em { text-decoration: none; }` 不会有任何变化；整个段落仍然会被下划线划掉。但是，规则 `em { text-decoration: overline; }` 会导致 "some emphasized words" 上出现第二个装饰。
+文本装饰会覆盖子孙文本元素。这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。例如，在标记 `<p>This text has <em>some emphasized words</em> in it.</p>` 中，样式规则 `p { text-decoration: underline; }` 会导致整个段落被下划线划掉。样式规则 `em { text-decoration: none; }` 不会有任何变化；整个段落仍然会被下划线划掉。但是，规则 `em { text-decoration: overline; }` 会导致“some emphasized words”上出现第二个装饰。
 
 ## 复合属性
 
