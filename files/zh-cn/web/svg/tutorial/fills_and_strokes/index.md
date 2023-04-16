@@ -3,6 +3,8 @@ title: 填充和边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
 可以使用几种方法来着色（包括指定对象的属性）使用内联 CSS 样式、内嵌 CSS 样式，或者使用外部 CSS 样式文件。大多数的 web 网站的 SVG 使用的是内联样式 CSS，对于这些方法都有优缺点。
@@ -97,13 +99,15 @@ CSS 可以利用 style 属性插入到元素的行间：
  <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
 ```
 
-或者利用 \<style> 设置一段样式段落。就像在 HTML 里这样的 \<style> 一般放在`<head>`里，在 svg 里 \<style> 则放在[`<defs>`](/zh-CN/SVG/Element/defs)标签里。`<defs>`表示定义，这里面可以定义一些不会在 SVG 图形中出现、但是可以被其他元素使用的元素。
+或者，它可以被移到你所包含的一个特殊的样式部分。不过，我们不会像 HTML 那样把这样的部分塞进 `<head>` 部分，而是把它包含在一个叫做 {{SVGElement("defs")}} 的区域。
+
+{{SVGElement("defs")}} 表示定义，这里面可以定义一些不会在 SVG 图形中出现、但是可以被其他元素使用的元素。
 
 ```xml
 <?xml version="1.0" standalone="no"?>
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
   <defs>
-    <style type="text/css"><![CDATA[
+    <style><![CDATA[
        #MyRect {
          stroke: black;
          fill: red;
@@ -136,7 +140,7 @@ CSS 可以利用 style 属性插入到元素的行间：
 </svg>
 ```
 
-style.css 看起来就像这样：
+`style.css` 看起来就像这样：
 
 ```css
 #MyRect {

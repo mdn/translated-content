@@ -2986,10 +2986,6 @@
     "modified": "2020-07-16T22:38:34.518Z",
     "contributors": ["alxatr"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async": {
-    "modified": "2020-07-16T22:38:33.391Z",
-    "contributors": ["mikemoll", "alxatr"]
-  },
   "Learn/Server-side/Express_Nodejs/Introduction": {
     "modified": "2020-10-28T17:14:05.095Z",
     "contributors": [
@@ -5670,10 +5666,6 @@
     "modified": "2019-03-23T22:28:29.128Z",
     "contributors": ["DrozdMargo", "timur-gilauri"]
   },
-  "Web/API/HTMLContentElement": {
-    "modified": "2020-10-15T22:07:13.411Z",
-    "contributors": ["AnatoliyVolkov"]
-  },
   "Web/API/HTMLDataElement": {
     "modified": "2019-03-23T22:43:36.990Z",
     "contributors": ["AlexAlex"]
@@ -5874,6 +5866,10 @@
     "modified": "2019-03-18T20:37:27.097Z",
     "contributors": ["swymmwys", "Sparks"]
   },
+  "Web/API/HTMLSlotElement": {
+    "modified": "2020-10-15T22:07:13.411Z",
+    "contributors": ["AnatoliyVolkov"]
+  },
   "Web/API/HTMLTableCellElement": {
     "modified": "2019-03-23T22:35:01.649Z",
     "contributors": ["boris00043llkm"]
@@ -6014,10 +6010,6 @@
       "Skholastik",
       "madarche"
     ]
-  },
-  "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
-    "modified": "2020-12-13T06:01:46.717Z",
-    "contributors": ["tolya.sherbakov"]
   },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2020-01-13T04:48:53.673Z",
@@ -6256,10 +6248,6 @@
   "Web/API/NamedNodeMap/getNamedItem": {
     "modified": "2020-10-15T22:22:43.654Z",
     "contributors": ["ellizii"]
-  },
-  "Web/API/Navigation_timing_API": {
-    "modified": "2019-03-23T22:26:37.338Z",
-    "contributors": ["frooeyzanny", "Zaynullin", "andrewsezko"]
   },
   "Web/API/Navigator": {
     "modified": "2019-03-18T20:54:33.010Z",
@@ -6548,6 +6536,10 @@
   "Web/API/Performance/now": {
     "modified": "2019-12-02T17:54:34.173Z",
     "contributors": ["VoloshchenkoAl", "icamys", "illyaV"]
+  },
+  "Web/API/Performance_API/Navigation_timing": {
+    "modified": "2019-03-23T22:26:37.338Z",
+    "contributors": ["frooeyzanny", "Zaynullin", "andrewsezko"]
   },
   "Web/API/Pointer_Lock_API": {
     "modified": "2019-03-23T23:04:56.807Z",
@@ -6856,6 +6848,10 @@
   "Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T21:56:53.185Z",
     "contributors": ["Roman-Kosov", "megabajtruie"]
+  },
+  "Web/API/Storage_API/Storage_quotas_and_eviction_criteria": {
+    "modified": "2020-12-13T06:01:46.717Z",
+    "contributors": ["tolya.sherbakov"]
   },
   "Web/API/Storage_Access_API": {
     "modified": "2020-10-15T22:32:41.630Z",
@@ -7352,6 +7348,25 @@
       "padenot",
       "finalex"
     ]
+  },
+  "Web/API/Web_components": {
+    "modified": "2020-09-03T10:16:00.956Z",
+    "contributors": [
+      "m.tven18",
+      "Loosefer",
+      "Akh-rman",
+      "shmel115",
+      "newbornfrontender",
+      "Peccansy",
+      "alinofka",
+      "curdwithraisins",
+      "dmitrykurmanov",
+      "Kalita-Roman"
+    ]
+  },
+  "Web/API/Web_components/Using_custom_elements": {
+    "modified": "2020-01-05T09:04:07.966Z",
+    "contributors": ["Anonymous", "BurkovBA", "curtdp", "curdwithraisins"]
   },
   "Web/API/Window": {
     "modified": "2019-03-23T23:09:39.081Z",
@@ -8817,6 +8832,10 @@
     "modified": "2019-03-23T23:13:48.018Z",
     "contributors": ["bezik", "BychekRU", "bilazikboy"]
   },
+  "Web/CSS/Inheritance": {
+    "modified": "2019-03-23T22:44:45.904Z",
+    "contributors": ["ViktorPalansky", "BychekRU"]
+  },
   "Web/CSS/Layout_cookbook": {
     "modified": "2020-09-30T16:32:50.977Z",
     "contributors": ["vnezapno", "VitalyKrenel", "chrisdavidmills"]
@@ -9567,10 +9586,6 @@
   "Web/CSS/inherit": {
     "modified": "2020-10-15T22:09:42.824Z",
     "contributors": ["vpkopylov", "bsergey"]
-  },
-  "Web/CSS/inheritance": {
-    "modified": "2019-03-23T22:44:45.904Z",
-    "contributors": ["ViktorPalansky", "BychekRU"]
   },
   "Web/CSS/initial": {
     "modified": "2020-10-15T22:09:53.246Z",
@@ -11697,7 +11712,7 @@
       "Witadol"
     ]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-03-29T11:58:13.454Z",
     "contributors": [
       "GalustOsipyan",
@@ -11755,7 +11770,7 @@
       "uleming"
     ]
   },
-  "Web/JavaScript/Guide/Expressions_and_Operators": {
+  "Web/JavaScript/Guide/Expressions_and_operators": {
     "modified": "2020-03-12T19:39:43.277Z",
     "contributors": [
       "mikhail.makarov",
@@ -11862,7 +11877,7 @@
       "IgorGilyazov"
     ]
   },
-  "Web/JavaScript/Guide/Iterators_and_Generators": {
+  "Web/JavaScript/Guide/Iterators_and_generators": {
     "modified": "2020-03-12T19:42:16.480Z",
     "contributors": [
       "AlexanderShushunov",
@@ -11941,7 +11956,7 @@
       "roma-derski"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions": {
+  "Web/JavaScript/Guide/Regular_expressions": {
     "modified": "2020-07-27T10:18:25.178Z",
     "contributors": [
       "touze147",
@@ -11968,11 +11983,11 @@
       "Odysseus"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Assertions": {
+  "Web/JavaScript/Guide/Regular_expressions/Assertions": {
     "modified": "2020-03-12T19:49:10.003Z",
     "contributors": ["AliaksandrZahorski"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Character_Classes": {
+  "Web/JavaScript/Guide/Regular_expressions/Character_classes": {
     "modified": "2020-06-17T18:30:16.759Z",
     "contributors": ["dknight"]
   },
@@ -12006,7 +12021,7 @@
       "Geloosa"
     ]
   },
-  "Web/JavaScript/Guide/Working_with_Objects": {
+  "Web/JavaScript/Guide/Working_with_objects": {
     "modified": "2020-03-12T19:37:53.984Z",
     "contributors": [
       "mikhail.makarov",
@@ -12079,7 +12094,7 @@
       "uleming"
     ]
   },
-  "Web/JavaScript/Language_Overview": {
+  "Web/JavaScript/Language_overview": {
     "modified": "2020-10-21T01:20:45.167Z",
     "contributors": [
       "chimit",
@@ -12109,7 +12124,7 @@
       "Dart"
     ]
   },
-  "Web/JavaScript/Memory_Management": {
+  "Web/JavaScript/Memory_management": {
     "modified": "2020-07-14T20:08:19.176Z",
     "contributors": [
       "irustm",
@@ -12477,7 +12492,7 @@
     "modified": "2020-03-12T19:44:12.151Z",
     "contributors": ["Logiiiin", "pk.prog", "naudachu", "s1lver"]
   },
-  "Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params": {
+  "Web/JavaScript/Reference/Errors/Strict_non_simple_params": {
     "modified": "2020-03-12T19:48:33.429Z",
     "contributors": ["ialexi-bl", "MakarovDs777"]
   },
@@ -13269,10 +13284,6 @@
       "Mingun"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/Stack": {
-    "modified": "2019-03-23T23:08:35.216Z",
-    "contributors": ["Mingun"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/columnNumber": {
     "modified": "2019-03-23T23:08:51.041Z",
     "contributors": ["Mingun"]
@@ -13291,6 +13302,10 @@
   },
   "Web/JavaScript/Reference/Global_Objects/Error/name": {
     "modified": "2019-03-23T23:08:51.293Z",
+    "contributors": ["Mingun"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Error/stack": {
+    "modified": "2019-03-23T23:08:35.216Z",
     "contributors": ["Mingun"]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
@@ -14437,10 +14452,6 @@
     "modified": "2020-10-14T10:03:26.063Z",
     "contributors": ["scrum", "SphinxKnight", "Mingun"]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/Trim": {
-    "modified": "2019-03-23T23:11:20.382Z",
-    "contributors": ["KiraAndMaxim", "Mingun", "Ajooluz"]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2019-03-18T20:48:46.079Z",
     "contributors": ["risenforces", "DenVdmj", "Mingun"]
@@ -14672,6 +14683,10 @@
   "Web/JavaScript/Reference/Global_Objects/String/toUpperCase": {
     "modified": "2019-03-23T23:06:22.989Z",
     "contributors": ["Mingun"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/String/trim": {
+    "modified": "2019-03-23T23:11:20.382Z",
+    "contributors": ["KiraAndMaxim", "Mingun", "Ajooluz"]
   },
   "Web/JavaScript/Reference/Global_Objects/String/trimEnd": {
     "modified": "2019-03-23T23:06:21.966Z",
@@ -15029,7 +15044,7 @@
     "modified": "2020-10-19T04:55:04.550Z",
     "contributors": ["elkabelaya"]
   },
-  "Web/JavaScript/Reference/Operators/Comma_Operator": {
+  "Web/JavaScript/Reference/Operators/Comma_operator": {
     "modified": "2020-10-15T21:21:15.661Z",
     "contributors": [
       "synth",
@@ -15045,7 +15060,7 @@
       "nurbek.ab"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Conditional_Operator": {
+  "Web/JavaScript/Reference/Operators/Conditional_operator": {
     "modified": "2020-09-05T16:58:34.995Z",
     "contributors": [
       "ikzsl",
@@ -15090,7 +15105,7 @@
     "modified": "2020-03-12T19:46:20.455Z",
     "contributors": ["EduardBedratyi", "Nymph", "severn101", "curdwithraisins"]
   },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+  "Web/JavaScript/Reference/Operators/Operator_precedence": {
     "modified": "2020-06-21T17:36:11.552Z",
     "contributors": [
       "Yialo",
@@ -15110,7 +15125,7 @@
     "modified": "2020-10-15T22:22:53.487Z",
     "contributors": ["InoY", "rookhive", "Kassaila", "Dimon24021993"]
   },
-  "Web/JavaScript/Reference/Operators/Property_Accessors": {
+  "Web/JavaScript/Reference/Operators/Property_accessors": {
     "modified": "2020-11-28T14:23:33.816Z",
     "contributors": [
       "ialexi-bl",
@@ -15833,7 +15848,7 @@
     "modified": "2019-04-20T03:25:44.859Z",
     "contributors": ["webmaxru", "chrisdavidmills", "ruslan_g02"]
   },
-  "Web/Progressive_web_apps/Installable_PWAs": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
     "modified": "2020-05-31T18:38:14.629Z",
     "contributors": ["AlexandrKoliukh", "chrisdavidmills", "WhiteApfel"]
   },
@@ -16330,25 +16345,6 @@
       "aleks_root"
     ]
   },
-  "Web/Web_Components": {
-    "modified": "2020-09-03T10:16:00.956Z",
-    "contributors": [
-      "m.tven18",
-      "Loosefer",
-      "Akh-rman",
-      "shmel115",
-      "newbornfrontender",
-      "Peccansy",
-      "alinofka",
-      "curdwithraisins",
-      "dmitrykurmanov",
-      "Kalita-Roman"
-    ]
-  },
-  "Web/Web_Components/Using_custom_elements": {
-    "modified": "2020-01-05T09:04:07.966Z",
-    "contributors": ["Anonymous", "BurkovBA", "curtdp", "curdwithraisins"]
-  },
   "Web/XML": {
     "modified": "2019-03-24T13:24:33.354Z"
   },
@@ -16533,6 +16529,10 @@
       "superpuper32",
       "GennadyGlushenkov"
     ]
+  },
+  "conflicting/Learn/Server-side/Express_Nodejs/Displaying_data": {
+    "modified": "2020-07-16T22:38:33.391Z",
+    "contributors": ["mikemoll", "alxatr"]
   },
   "conflicting/MDN": {
     "modified": "2020-11-05T06:23:08.678Z",

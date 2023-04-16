@@ -17,7 +17,7 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。�
 
 - 阅读更多关于 [IndexedDB 背后的概念](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB)。
 - 从[使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB) 指南的第一准则中学习异步使用 IndexedDB。
-- 同时使用 IndexedDB 储存离线数据和 Service Workers 储存离线资源，其简述请查看 [Service Workers 制作离线 PWA](/zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers)。
+- 同时使用 IndexedDB 储存离线数据和 Service Workers 储存离线资源，其简述请查看 [Service Workers 制作离线 PWA](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)。
 
 > **备注：** 正如大多数的 web 储存解决方案一样，IndexedDB 也遵守[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。因此当你在某个域名下操作储存数据的时候，你不能操作其他域名下的数据。
 

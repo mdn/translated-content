@@ -21,7 +21,7 @@ slug: Web/HTML/Element/input/file
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>{{htmlattrxref("required", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
   </tr>
   <tr>
    <td>
@@ -50,7 +50,7 @@ slug: Web/HTML/Element/input/file
 
 ## 值
 
-文件 input 的 {{htmlattrxref("value", "input")}} 属性包含了一个字符串，表示已选择文件的路径。如果用户没有选择任何文件，则该值为空字符串（`""`）。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。可以使用 [input 的 `HTMLInputElement.files` 属性](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#获取被选择文件的信息)标识其他文件。
+文件 input 的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含了一个字符串，表示已选择文件的路径。如果用户没有选择任何文件，则该值为空字符串（`""`）。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。可以使用 [input 的 `HTMLInputElement.files` 属性](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#获取被选择文件的信息)标识其他文件。
 
 > **备注：** 为了阻止恶意软件猜测文件路径，该值的字符串表示[总是以 `C:\fakepath\` 为前缀的文件名](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)，而并不是文件的真实路径。
 
@@ -137,7 +137,7 @@ div {
 
 无论用户的设备或操作系统是什么，文件输入都提供一个按钮，打开一个允许用户选择文件的文件选择对话框。
 
-通过包含上述的 {{htmlattrxref("multiple", "input/file")}} 属性，可以指定一次选择多个文件。用户可以用他们选择的平台允许的任何方式从文件选择器中选择多个文件（如按住 <kbd>Shift</kbd> 或 <kbd>Control</kbd>，然后单击）。如果只想让用户为每个 `<input>` 选择一个文件，那么省略 `multiple` 属性。
+通过包含上述的 [`multiple`](/zh-CN/docs/Web/HTML/Element/input/file#multiple) 属性，可以指定一次选择多个文件。用户可以用他们选择的平台允许的任何方式从文件选择器中选择多个文件（如按住 <kbd>Shift</kbd> 或 <kbd>Control</kbd>，然后单击）。如果只想让用户为每个 `<input>` 选择一个文件，那么省略 `multiple` 属性。
 
 ### 获取已选择文件的信息
 
@@ -156,7 +156,7 @@ div {
 - `type`
   - : 文件的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
 - `webkitRelativePath` {{non-standard_inline}}
-  - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 {{htmlattrxref("webkitdirectory", "input/file")}} 属性的 `file` 选择器）。_这是非标准的，应该谨慎使用。_
+  - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Element/input/file#webkitdirectory) 属性的 `file` 选择器）。_这是非标准的，应该谨慎使用。_
 
 > **备注：** 你可以在所有现代浏览器中读写 `HTMLInputElement.files` 的值；该特性已经添加到了 Firefox 57 中（见 [Firefox bug 1384030](https://bugzil.la/1384030)）。
 
@@ -164,7 +164,7 @@ div {
 
 通常，你不希望用户能够选择任意类型的文件；相反，你通常希望它们选择特定类型的文件。例如，如果你的文件输入让用户上传个人资料图片，您可能希望他们选择 Web 兼容的图像格式，如 {{Glossary("JPEG")}} 或 {{Glossary("PNG")}}。
 
-可以用 {{htmlattrxref("accept","input/file")}} 属性指定可接受的文件类型，它是一个以逗号间隔的文件扩展名和 MIME 类型列表。一些例子如下所示：
+可以用 [`accept`](/zh-CN/docs/Web/HTML/Element/input/file#accept) 属性指定可接受的文件类型，它是一个以逗号间隔的文件扩展名和 MIME 类型列表。一些例子如下所示：
 
 - `accept="image/png"` 或 `accept=".png"`——接受 PNG 文件。
 - `accept="image/png, image/jpeg"` 或 `accept=".png, .jpg, .jpeg"`——接受 PNG 或 JPEG 文件。
@@ -337,7 +337,7 @@ input.addEventListener('change', updateImageDisplay);
 - 如果是，我们：
 
   - 将其名称和文件大小输出到预览区 `<div>` 的一个列表项中（从 `file.name` 和 `file.size` 获取这些信息）。定制的 `returnFileSize()` 函数返回一个用 bytes/KB/MB 表示的可读性良好的文件大小（默认情况下，浏览器以绝对字节数报告大小）。
-  - 通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 {{htmlattrxref("src", "img")}} 设置为缩略图。
+  - 通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 设置为缩略图。
 
 - 如果文件类型无效，则在列表项中显示一条消息，告诉用户需要选择一个其他的文件类型。
 

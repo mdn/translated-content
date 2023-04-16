@@ -1,6 +1,6 @@
 ---
 title: Propriété
-slug: Glossary/property
+slug: Glossary/Property
 tags:
   - Désambiguïsation
   - Glossaire

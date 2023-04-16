@@ -75,7 +75,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 </table>
 ```
 
-由于{{htmlattrxref("scope","th")}}、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}}等特性，表格被很好地标记了，易于使用，并且易于访问，不幸的是，它在屏幕上呈现时看起来不太好（见它的预览版 [punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)）：
+由于[`scope`](/zh-CN/docs/Web/HTML/Element/th#scope)、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}}等特性，表格被很好地标记了，易于使用，并且易于访问，不幸的是，它在屏幕上呈现时看起来不太好（见它的预览版 [punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)）：
 
 ![](table-unstyled.png)
 

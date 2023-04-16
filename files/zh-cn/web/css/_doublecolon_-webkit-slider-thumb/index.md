@@ -34,7 +34,7 @@ input[type=range]::-webkit-slider-runnable-track{
 
 这不是任何规范中的一部分，这是 webkit/bink 内核特有的 (chrome/safari)
 
-## 另请参阅
+## 参见
 
 - ::-webkit-slider-runnable-track
 - 其他浏览器内与该功能类似的伪类

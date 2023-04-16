@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 {{JSRef}}
 
-**`entries()`** 方法返回一个新的**数组迭代器**对象，该对象包含数组中每个索引的键/值对。
+**`entries()`** 方法返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象包含数组中每个索引的键/值对。
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
@@ -17,13 +17,13 @@ entries()
 
 ### 返回值
 
-一个新的 {{jsxref("Array")}} 迭代器对象。
+一个新的[可迭代迭代器对象](/zh-CNs/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
 ## 描述
 
 当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用时，`entries()` 方法迭代空槽，就像它们的值为 `undefined` 一样。
 
-`entries()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)。它只要求 `this` 值具有 `length` 属性和以整数为键的属性。
+`entries()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只要求 `this` 值具有 `length` 属性和以整数为键的属性。
 
 ## 示例
 
@@ -97,7 +97,7 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 
 ## 参见
 
-- [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.forEach()")}}
@@ -105,4 +105,3 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 - {{jsxref("Array.prototype.some()")}}
 - [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

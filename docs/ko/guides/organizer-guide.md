@@ -21,13 +21,18 @@
 
 ### 과거 구성원
 
+- [@nKiNk](https://github.com/nKiNk)
+
 ### 현재 구성원
 
+- [sunhpark42](https://github.com/sunhpark42)
+- [jho2301](https://github.com/jho2301)
+- [swimjiy](https://github.com/swimjiy)
+- [wisedog](https://github.com/wisedog)
 - [@cos18](https://github.com/cos18)
 - [@yechoi42](https://github.com/yechoi42)
 - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
 - [@pje1740](https://github.com/pje1740)
-- [@nKiNk](https://github.com/nKiNk)
 - [@yujo11](https://github.com/yujo11)
 - [@hochan222](https://github.com/hochan222)
 

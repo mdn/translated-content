@@ -23,7 +23,7 @@ slug: Web/HTML/Element/input/radio
 
 ### 定义一个单选按钮组
 
-一个单选按钮组由具有相同 {{htmlattrxref("name", "input")}} 属性的单选按钮组成。一旦单选按钮组被建立，选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。
+一个单选按钮组由具有相同 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的单选按钮组成。一旦单选按钮组被建立，选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。
 
 你可以在一个页面上创建多个单选按钮组，只要每一组拥有唯一的 `name` 属性即可。
 
@@ -52,7 +52,7 @@ slug: Web/HTML/Element/input/radio
 </form>
 ```
 
-你可以在这里看到三个单选按钮，每个按钮的 `name` 属性都设置为 `contact`，并且都含有在单选按钮组中唯一的 `value` 属性。每一个单选按钮也有一个给 {{HTMLElement("label")}} 元素的 {{htmlattrxref("for", "label")}} 属性使用的 {{domxref("Element.id", "id")}}，将标签（label）和单选按钮关联。
+你可以在这里看到三个单选按钮，每个按钮的 `name` 属性都设置为 `contact`，并且都含有在单选按钮组中唯一的 `value` 属性。每一个单选按钮也有一个给 {{HTMLElement("label")}} 元素的 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 属性使用的 {{domxref("Element.id", "id")}}，将标签（label）和单选按钮关联。
 
 你可以在这里查看这个例子：
 
@@ -119,17 +119,17 @@ form.addEventListener(
 
 除了所有 {{HTMLElement("input")}} 元素共通的属性外，`radio` 输入还支持以下属性：
 
-- {{htmlattrdef("checked")}}
+- `checked`
 
   - : 一个布尔值属性，如果出现，代表这个单选按钮是组中被选中的那个。
 
-    不像其他浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 {{htmlattrxref("autocomplete","input")}} 属性来控制这个特性。
+    不像其他浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性来控制这个特性。
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : `value` 属性是所有 {{HTMLElement("input")}} 元素共有的属性之一；然而，对于 `radio` 类型的输入，有特殊用途：当表单提交时，只有当前选定的单选按钮才会提交到服务器，并且报告的值为 `value` 属性的值。如果没有指定 `value`，默认为字符串 `on`。这个行为已经在[值](#值)这一节中描述。
 
-- {{htmlattrdef("required")}}
+- `required`
   - : `required` 属性是所有 {{HTMLElement("input")}} 元素共有的属性之一。如果含有相同 name 的单选按钮组中任意一个按钮包含 `required` 属性，那么该组的单选按钮必须被选定，即使它并不需要应用该属性。
 
 ## 使用单选输入

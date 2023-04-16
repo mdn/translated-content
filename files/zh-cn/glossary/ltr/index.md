@@ -20,8 +20,8 @@ slug: Glossary/LTR
 
 - [HTML 全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
-  - {{htmlattrxref("dir")}}
-  - {{htmlattrxref("lang")}}
+  - [`dir`](/zh-CN/docs/Web/HTML/Global_attributes#dir)
+  - [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)
 
 - [CSS](/zh-CN/docs/Web/CSS)
 

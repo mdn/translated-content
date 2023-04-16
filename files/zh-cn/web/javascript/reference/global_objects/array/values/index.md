@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/values
 
 ## 语法
 
-```js
+```js-nolint
 values()
 ```
 

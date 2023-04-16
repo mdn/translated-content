@@ -77,14 +77,3 @@ Por agora, isso é tudo o que precisamos saber.
 Por agora, é isso. Sua pasta deve parecer algo do tipo:
 
 ![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png){{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Como será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [Javascript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

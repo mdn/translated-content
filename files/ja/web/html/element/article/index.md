@@ -1,11 +1,13 @@
 ---
 title: '<article>: 記事コンテンツ要素'
 slug: Web/HTML/Element/article
+l10n:
+  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<article>` 要素**は文書、ページ、アプリケーション、サイトなどの中で自己完結しており、 (集合したものの中で) 個別に配信や再利用を行うことを意図した構成物を表します。例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。
+**`<article>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書、ページ、アプリケーション、サイトなどの中で自己完結しており、（集合したものの中で）個別に配信や再利用を行うことを意図した構成物を表します。例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。
 
 {{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
 
@@ -15,7 +17,7 @@ slug: Web/HTML/Element/article
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -63,10 +65,10 @@ slug: Web/HTML/Element/article
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>
       </td>
     </tr>
     <tr>
@@ -82,23 +84,26 @@ slug: Web/HTML/Element/article
 
 ## 使用上の注意
 
-- それぞれの `<article>` は、子要素として見出し ([`<h1>`-`<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素) を含むなどの方法で識別できるようにするべきです。
+- それぞれの `<article>` は、子要素として見出し（[`<h1>` - `<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素）を含むなどの方法で識別できるようにするべきです。
 - `<article>` 要素を入れ子にした場合、内側の要素は外側の要素に関する記事を表します。例えばブログ投稿へのコメントは、ブログ投稿を表す `<article>` 内へ入れ子にした `<article>` 要素にできます。
 - `<article>` 要素の著者情報は {{HTMLElement("address")}} 要素で提供できますが、入れ子にされた `<article>` 要素には適用されません。
-- `<article>` 要素の発行日時は、 {{HTMLElement("time")}} 要素の {{htmlattrxref("datetime", "time")}} 属性で示すことができます。なお、 _{{HTMLElement("time")}} 要素の {{htmlattrxref("pubdate", "time")}} 属性は {{glossary("W3C")}} {{glossary("HTML5")}} 標準から外されました。_
+- `<article>` 要素の発行日時は、 {{HTMLElement("time")}} 要素の [`datetime`](/ja/docs/Web/HTML/Element/time#datetime) 属性で示すことができます。
 
 ## 例
 
+### HTML
+
 ```html
 <article class="film_review">
-  <header>
-    <h2>Jurassic Park</h2>
-  </header>
+  <h2>Jurassic Park</h2>
   <section class="main_review">
+    <h3>Review</h3>
     <p>Dinos were great!</p>
   </section>
   <section class="user_reviews">
+    <h3>User reviews</h3>
     <article class="user_review">
+      <h4>Too scary!</h4>
       <p>Way too scary for me.</p>
       <footer>
         <p>
@@ -109,6 +114,7 @@ slug: Web/HTML/Element/article
       </footer>
     </article>
     <article class="user_review">
+      <h4>Love the dinos!</h4>
       <p>I agree, dinos are my favorite.</p>
       <footer>
         <p>
@@ -129,15 +135,19 @@ slug: Web/HTML/Element/article
 </article>
 ```
 
+### 結果
+
+{{EmbedLiveSample('Examples')}}
+
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.article")}}
+{{Compat}}
 
 ## 関連情報
 
-- 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)

@@ -116,7 +116,7 @@ SVG 除了迄今为止所描述的以外还有其他优点：
 
 ### 疑难解答和跨浏览器支持
 
-对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，您可以从`src`属性引用 PNG 或 JPG，并使用{{htmlattrxref("srcset", "img")}}属性 只有最近的浏览器才能识别）来引用 SVG。在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG：
+对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，您可以从`src`属性引用 PNG 或 JPG，并使用[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)属性 只有最近的浏览器才能识别）来引用 SVG。在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG：
 
 ```html
 <img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">

@@ -537,18 +537,3 @@ On espère que vous vous êtes amusé⋅e à jouer avec le positionnement de bas
 - [Exemples pratiques de positionnement](/fr/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), pour quelques idées utiles supplémentaires.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Le flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Les boîtes flexibles (<i lang="en">Flexbox</i>)](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Le flottement](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- **Le positionnement**
-- [La disposition avec plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Conception adaptative (<i lang="en">responsive design</i>)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guide pour débuter avec les requêtes média](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Méthodes de disposition historiques](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prendre en charge les anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Compréhension des fondamentaux de la disposition](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

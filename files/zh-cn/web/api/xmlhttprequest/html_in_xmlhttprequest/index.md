@@ -1,43 +1,48 @@
 ---
-title: HTML in XMLHttpRequest
+title: XMLHttpRequest 中的 HTML
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 ---
 
-W3C {{domxref("XMLHttpRequest")}} 规范为 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)添加 HTML 语法解析功能，此前仅支持 XML 语法解析。该功能允许 Web 应用程序使用`XMLHttpRequest` 作为解析的 DOM。
+{{APIRef("XMLHttpRequest")}}
 
-## 局限
+W3C {{domxref("XMLHttpRequest")}} 规范为 {{domxref("XMLHttpRequest")}} 添加 [HTML](/zh-CN/docs/Web/HTML) 解析功能，此前它仅支持 {{Glossary("XML")}} 解析。该功能允许 Web 应用程序使用 `XMLHttpRequest` 获得已解析的 {{Glossary("DOM")}} 形式的 HTML 资源。
 
-为了阻止同步使用 XMLHttpRequest，HTML 在同步模式下不支持使用。并且，只有当 responseType 属性设置为 'document' 的情况下，HTML 支持才可用。这种限制避免了浪费时间解析 HTML，而传统代码在默认模式下使用 XMLHttpRequest 来检索 `text/html` 资源的 responseText. 此外，该限制避免了遗留代码的问题，该代码假定 HTTP 错误页面（通常具有 `text/html` 响应正文）的 responseXML 为空。
+要了解如何使用 `XMLHttpRequest`，请参阅[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+
+## 局限性
+
+为了阻止同步使用 `XMLHttpRequest`，HTML 支持在同步模式下是不可用的。另外，只有当 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性被设置为 `"document"` 时，才会有 HTML 支持。这一限制避免了当遗留代码在默认模式下使用 `XMLHttpRequest` 来检索 {{domxref("XMLHttpRequest.responseText", "responseText")}}，对 `text/html` 资源进行无用的解析而浪费时间。同时，这个限制也避免了遗留代码的问题，这些代码假定 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 对于 HTTP 错误页面（通常有一个 `text/html` 响应体）是 `null`。
 
 ## 用法
 
-使用 XMLHttpRequest 将 HTML 资源恢复为 DOM 就像使用 XMLHttpRequest 将 XML 资源恢复为 DOM 一样，除了您不能使用同步模式，您必须通过将字符串“document”分配给 responseType 属性来显式请求文档调用 `open()` 之后调用 `send` 之前的 XMLHttpRequest 对象。
+使用 {{domxref("XMLHttpRequest")}} 检索作为 DOM 的 HTML 资源，就像使用 `XMLHttpRequest` 检索作为 DOM 的 XML 资源一样，只是你不能使用同步模式，你必须在调用 {{domxref("XMLHttpRequest.open", "open()")}} 之后，{{domxref("XMLHttpRequest.send", "send()")}} 之前，将字符串 `"document"` 分配给 {{domxref("XMLHttpRequest", "responseType")}} 对象的属性，来明确请求一个文档。
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.onload = function() {
-  console.log(this.responseXML.title);
+const xhr = new XMLHttpRequest();
+xhr.onload = () => {
+  console.log(xhr.responseXML.title);
 }
 xhr.open("GET", "file.html");
 xhr.responseType = "document";
 xhr.send();
 ```
 
-## 功能检测
+## 特性检测
 
 ### 方法 1
 
-该方法依赖于功能的“强制异步”性质。当你尝试设置一个以“sync”方式打开的 XMLHttpRequest 对象后，尝试将设置 responseType 会在实现该功能的浏览器上引发错误，其他浏览器则运行良好。
+该方法依赖于功能的“强制异步”性质。当你试图设置 `XMLHttpRequest` 对象的 `responseType` 时，它以“同步”方式打开。这在实现该功能的浏览器中会出现错误，而在其他浏览器中则可以正常工作。
 
 ```js
 function HTMLinXHR() {
-  if (!window.XMLHttpRequest)
+  if (!window.XMLHttpRequest) {
     return false;
-  var req = new window.XMLHttpRequest();
+  }
+  const req = new window.XMLHttpRequest();
   req.open('GET', window.location.href, false);
   try {
     req.responseType = 'document';
-  } catch(e) {
+  } catch (e) {
     return true;
   }
   return false;
@@ -46,35 +51,36 @@ function HTMLinXHR() {
 
 [在 JSFiddle 中查看](https://jsfiddle.net/HTcKP/1/)
 
-This method is synchronous, does not rely on external assets though it may not be as reliable as method 2 described below since it does not check the actual feature but an indication of that feature.
+这种方法是同步的，不依赖外部资源，尽管它可能不像下面描述的方法 2 那样可靠，因为它不检查实际功能，而是检查该功能的指示。
 
 ### 方法 2
 
-检测浏览器是否支持 XMLHttpRequest 中的 HTML 解析有两个挑战。首先，检测结果是异步获取的，因为 HTML 支持仅在异步模式下可用。Second, you have to actually fetch a test document over HTTP, because testing with a `data:` URL would end up testing `data:`URL support at the same time.
+在 {{domxref("XMLHttpRequest")}} 中准确检测一个浏览器是否支持 HTML 解析有两个挑战。首先，检测结果是以异步方式获得的，因为只有在异步模式下才有 HTML 支持。其次，你必须通过 HTTP 实际获取一个测试文档，因为用 `data:` URL进行测试，最终会同时测试 `data:` URL支持。
 
-因此，为了检测 HTML 支持，服务器上需要一个测试 HTML 文件。这个测试文件很小，格式不是很完整：
+因此，为了检测 HTML 支持，服务器上需要一个测试 HTML 文件。这个测试文件很小，其 XML 格式不是很完整：
 
 ```js
 <title>&amp;&<</title>
 ```
 
-如果文件名为 detect.html，以下功能可用于检测 HTML 解析支持：
+如果文件名为 `detect.html`，以下功能可用于检测 HTML 解析支持：
 
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    window.setTimeout(function() { callback(false); }, 0);
+    setTimeout(function() { callback(false); }, 0);
+
     return;
   }
-  var done = false;
-  var xhr = new window.XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && !done) {
+  let done = false;
+  const xhr = new window.XMLHttpRequest();
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4 && !done) {
       done = true;
-      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title == "&&<"));
+      callback(!!(xhr.responseXML && xhr.responseXML.title && xhr.responseXML.title === "&&<"));
     }
   }
-  xhr.onabort = xhr.onerror = function() {
+  xhr.onabort = xhr.onerror = () => {
     if (!done) {
       done = true;
       callback(false);
@@ -85,7 +91,7 @@ function detectHtmlInXhr(callback) {
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    window.setTimeout(function() {
+    setTimeout(function() {
       if (!done) {
         done = true;
         callback(false);
@@ -95,38 +101,23 @@ function detectHtmlInXhr(callback) {
 }
 ```
 
-参数 callback 是一个函数，如果 HTML 解析是支持的，则将以 true 作为唯一参数被异步调用，如果不支持 HTML 解析，则为 false。
+参数 `callback` 是一个函数，如果 HTML 解析是支持的，则将以 `true` 作为唯一参数被异步调用，如果不支持 HTML 解析，则为 `false`。
 
 [在 JSFiddle 中查看](https://jsfiddle.net/xfvXR/1/)
 
 ## 字符编码
 
-如果在 HTTP Content-Type 头部中声明了字符编码，则使用该字符编码。否则，如果存在字节顺序标记，则使用由字节顺序标记指示的编码。否则，如果有一个 meta tag 声明文件的前 1024 个字节中的编码，则使用该编码。否则，文件被解码为 UTF-8。
+如果在 HTTP {{HTTPHeader("Content-Type")}} 标头中声明了字符编码，则使用该字符编码。否则，如果存在字节顺序标记，则使用由字节顺序标记指示的编码。否则，如果存在 {{HTMLElement("meta")}} 元素声明文件的前 1024 个字节中的编码，则使用该编码。否则，文件被解码为 UTF-8。
 
-## 老版本的浏览器中处理 HTML
-
-XMLHttpRequest 最初只支持 XML 解析。HTML 解析支持是最近的一个补充。对于较老的浏览器，您甚至可以使用与正则表达式关联的 responseText 属性，以获取例如已知其 ID 的 HTML 元素的源代码：
-
-```js
-function getHTML (oXHR, sTargetId) {
-  var  rOpen = new RegExp("<(?!\!)\\s*([^\\s>]+)[^>]*\\s+id\\=[\"\']" + sTargetId + "[\"\'][^>]*>" ,"i"),
-       sSrc = oXHR.responseText, aExec = rOpen.exec(sSrc);
-
-  return aExec ? (new RegExp("(?:(?:.(?!<\\s*" + aExec[1] + "[^>]*[>]))*.?<\\s*" + aExec[1] + "[^>]*[>](?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?<\\s*\/\\s*" + aExec[1] + "\\s*>)*(?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?", "i")).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || "" : "";
-}
-
-var oReq = new XMLHttpRequest();
-oReq.open("GET", "yourPage.html", true);
-oReq.onload = function () { console.log(getHTML(this, "intro")); };
-oReq.send(null);
-```
-
-> **备注：** 该解决方案对于解释器来说更为昂贵。**仅在确实需要的情况下使用**。
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("XMLHttpRequest")}}
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

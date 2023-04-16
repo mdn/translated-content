@@ -72,4 +72,4 @@ Object.getOwnPropertyDescriptor(prototype, "foo").get
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JS 指南：定义访问器属性](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [JS 指南：定义访问器属性](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter)

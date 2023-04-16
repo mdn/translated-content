@@ -1,9 +1,9 @@
 ---
-title: 'Element: lostpointercapture イベント'
+title: "Element: lostpointercapture イベント"
 slug: Web/API/Element/lostpointercapture_event
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 l10n:
-  sourceCommit: 3efb6cc0c72738d127ccd0829196b9dd24a726a6
+  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
 ---
 
 {{APIRef}}
@@ -15,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('lostpointercapture', (event) => {});
+addEventListener("lostpointercapture", (event) => {});
 
-onlostpointercapture = (event) => { };
+onlostpointercapture = (event) => {};
 ```
 
 ## イベント型
@@ -56,13 +56,13 @@ _このインターフェイスは {{domxref("MouseEvent")}} および {{domxref
 この例は要素で `lostpointercapture` イベントを待ち受けし、その要素の `pointerdown` でポインターをキャプチャします。その後でユーザーがポインターを開放すると、 `lostpointercapture` が発生します。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('lostpointercapture', () => {
-  console.log('I\'ve been released!')
+para.addEventListener("lostpointercapture", () => {
+  console.log("I've been released!");
 });
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
@@ -70,13 +70,13 @@ para.addEventListener('pointerdown', (event) => {
 同じ例ですが、 `onlostpointercapture` イベントハンドラーを使用して行います。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onlostpointercapture = () => {
-  console.log('I\'ve been released!')
+  console.log("I've been released!");
 };
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
