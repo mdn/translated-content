@@ -24,7 +24,7 @@ slug: Web/API/PerformanceNavigationTiming
 - {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
   - : 返回 `"navigation"`。
 - {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
-  - : 返回 [文档的 URL](/zh-CN/docs/Web/API/Document/URL)。
+  - : 返回[文档的 URL](/zh-CN/docs/Web/API/Document/URL)。
 - {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
   - : 返回值为 0 的 {{domxref("DOMHighResTimeStamp")}}。
 - {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
