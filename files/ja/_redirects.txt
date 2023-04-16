@@ -423,7 +423,7 @@
 /ja/docs/CSS/image	/ja/docs/Web/CSS/image
 /ja/docs/CSS/image-rendering	/ja/docs/Web/CSS/image-rendering
 /ja/docs/CSS/inherit	/ja/docs/Web/CSS/inherit
-/ja/docs/CSS/inheritance	/ja/docs/Web/CSS/inheritance
+/ja/docs/CSS/inheritance	/ja/docs/Web/CSS/Inheritance
 /ja/docs/CSS/initial	/ja/docs/Web/CSS/initial
 /ja/docs/CSS/initial_value	/ja/docs/Web/CSS/initial_value
 /ja/docs/CSS/initial_value-redirect-1	/ja/docs/Web/CSS/initial_value
@@ -544,7 +544,7 @@
 /ja/docs/CSS:color	/ja/docs/Web/CSS/color
 /ja/docs/CSS:computed_value	/ja/docs/Web/CSS/computed_value
 /ja/docs/CSS:font	/ja/docs/Web/CSS/font
-/ja/docs/CSS:inheritance	/ja/docs/Web/CSS/inheritance
+/ja/docs/CSS:inheritance	/ja/docs/Web/CSS/Inheritance
 /ja/docs/CSS:initial_value	/ja/docs/Web/CSS/initial_value
 /ja/docs/CSS:min-width	/ja/docs/Web/CSS/min-width
 /ja/docs/CSS_Reference	/ja/docs/Web/CSS/Reference
@@ -2696,6 +2696,7 @@
 /ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/非同期	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
+/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/ja/docs/conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
 /ja/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry	/ja/docs/orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 /ja/docs/Link_prefetching_FAQ	/ja/docs/Web/HTTP/Link_prefetching_FAQ
 /ja/docs/Localization	/ja/docs/Glossary/Localization
