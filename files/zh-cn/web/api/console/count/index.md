@@ -5,7 +5,7 @@ slug: Web/API/console/count
 
 {{APIRef("Console API")}}
 
-**`console.count()`** 方法会记录 `count()` 被调用的次数。
+**`console.count()`** 方法会记录调用 `count()` 的次数。
 
 {{AvailableInWorkers}}
 
