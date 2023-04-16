@@ -1,6 +1,7 @@
 ---
 title: async を使用した非同期フロー制御
-slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
+slug: conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
+original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
 
 _LocalLibrary_ 中のいくつかのコントローラーのコードは、複数の非同期リクエストの結果に依存しています。そのため、操作を特定の順序もしくは並列して実行することが必要になる場合があります。フロー制御を管理して、必要となるすべての情報を取得した後でページをレンダリングするために、ここでは人気のある node [async](https://www.npmjs.com/package/async) を使うことにします。
