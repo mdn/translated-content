@@ -5,7 +5,7 @@ slug: Web/API/console/count
 
 {{APIRef("Console API")}}
 
-**`console.count()`** 方法会记录 `count()` 方法被调用的次数。
+**`console.count()`** 方法会记录 `count()` 被调用的次数。
 
 {{AvailableInWorkers}}
 
@@ -54,7 +54,7 @@ console.count();
 "default: 4"
 ```
 
-标签显示为`默认`，因为没有提供明确的标签。
+标签显示为 `default`，因为没有提供明确的标签。
 
 如果我们将 `user` 变量作为 `label` 参数传递给第一次调用 `count()`，并将字符串”alice“传递给第二次调用：
 
