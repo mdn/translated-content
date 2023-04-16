@@ -1,6 +1,8 @@
 ---
 title: Introducción a los eventos
 slug: Learn/JavaScript/Building_blocks/Events
+l10n:
+  sourceCommit: ac5dfaa2f71a7381cd8fdd4cb554507f375ac19c 
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
