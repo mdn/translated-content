@@ -50,6 +50,7 @@ var keys = [];
 with(Array.prototype) {
   keys.push("something");
 }
+```
 
 当 ECMAScript 2015 引入 {{jsxref("Array.prototype.keys()")}} 方法时，如果 `@@unscopables` 数据属性也没有被引入，那么 `keys.push('something')` 调用将会出现问题——因为 JavaScript 运行时会将 `keys` 解释为 {{jsxref("Array.prototype.keys()")}} 方法，而不是示例代码中定义的 `keys` 数组。
 
