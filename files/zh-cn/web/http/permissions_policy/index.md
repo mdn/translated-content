@@ -31,7 +31,7 @@ slug: Web/HTTP/Permissions_Policy
 
 > **备注：** 新引入的特性可能有一个明确的 API 来提示状态。后来与权限策略整合的现有特性通常会使用现有机制。
 
-权限策略允许你控制哪些源可以使用哪些特性，无论是在顶层页面还是在嵌入的 {{htmlelement("iframe")}} 中。其目的是为良好的用户体验执行最佳实践，并对*敏感*或*强大*的特性（指在执行相关代码之前需要用户明确许可使用的功能）提供细化控制。
+权限策略允许你控制哪些源可以使用哪些特性，无论是在顶层页面还是在嵌入的 {{htmlelement("iframe")}} 中。其目的是为良好的用户体验执行最佳实践，并对*敏感*或*强大*的特性（指在执行相关代码之前需要用户明确许可使用的特性）提供细化控制。
 
 权限策略提供两种指定策略的方法：
 
@@ -51,10 +51,10 @@ slug: Web/HTTP/Permissions_Policy
 
 ## 与权限 API 的关系
 
-权限策略和{{domxref("Permissions API", "权限 API", "", 1)}}密切相关，但又有所不同。由这两种技术控制其权限的功能是重叠的。
+权限策略和{{domxref("Permissions API", "权限 API", "", 1)}}密切相关，但又有所不同。由这两种技术控制其权限的特性是重叠的。
 
 - 权限策略允许服务器设置某项特性是否可以在特定的文档中使用（或在文档中嵌入`<frame>`）。这些被称为**策略控制的**特性————见[权限策略指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
-- 权限 API 根据用户授予的权限对特性的访问进行把关。这些功能被记录在[权限注册表](https://w3c.github.io/permissions-registry/)中。
+- 权限 API 根据用户授予的权限对特性的访问进行把关。这些特性被记录在[权限注册表](https://w3c.github.io/permissions-registry/)中。
 
 每种特性使用的识别字符串在两者之间保持一致，例如，`geolocation` 代表 {{domxref("Geolocation API", "地理位置 API", "", "nocode")}}。权限注册表中的大多数 API 特性也有相应的权限策略指令。一个例外是 {{domxref("Notifications API", "通知 API", "", "nocode")}}。
 
@@ -138,7 +138,7 @@ Permissions-Policy: camera=*
 
 ## iframe 语法
 
-对于一个 `<iframe>` 来说，其允许的源也必须在父页面的允许列表中。由于这种[继承行为](#嵌入式内容的继承策略)，最好在 HTTP 头中指定最广泛的可接受的功能支持，然后在每个 `<iframe>` 中指定你需要的支持子集。
+对于一个 `<iframe>` 来说，其允许的源也必须在父页面的允许列表中。由于这种[继承行为](#嵌入式内容的继承策略)，最好在 HTTP 头中指定最广泛的可接受的特性支持，然后在每个 `<iframe>` 中指定你需要的支持子集。
 
 一般的语法看起来像这样：
 
@@ -162,7 +162,7 @@ Permissions-Policy: camera=*
 
 这很重要：默认情况下，如果一个 `<iframe>` 导航到另一个源，策略就不会应用到 `<iframe>` 导航到的源。通过在 `allow` 属性中列出 `<iframe>` 导航到的源，应用于原始 `<iframe>` 的许可策略将被应用于 `<iframe>` 导航到的源。
 
-通过在 `allow` 属性中包含一个分号分隔的策略指令列表，可以同时控制多个功能。
+通过在 `allow` 属性中包含一个分号分隔的策略指令列表，可以同时控制多个特性。
 
 ```html
 <iframe
@@ -170,7 +170,7 @@ Permissions-Policy: camera=*
   allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"></iframe>
 ```
 
-值得特别一提的是 `src` 值。我们在上面提到，使用这个 allowlist 值意味着相关的功能在这个 `<iframe>` 中是被允许的，只要加载到其中的文档与它的 {{HTMLElement('iframe','src','#属性')}} 属性中的 URL 来自同一来源。这个值是 `allow` 中所列特性的*默认* `allowlist` 值，所以下面这些是等价的：
+值得特别一提的是 `src` 值。我们在上面提到，使用这个 allowlist 值意味着相关的特性在这个 `<iframe>` 中是被允许的，只要加载到其中的文档与它的 {{HTMLElement('iframe','src','#属性')}} 属性中的 URL 来自同一来源。这个值是 `allow` 中所列特性的*默认* `allowlist` 值，所以下面这些是等价的：
 
 ```html
 <iframe src="https://example.com" allow="geolocation 'src'">
@@ -184,7 +184,7 @@ Permissions-Policy: camera=*
 
 脚本会继承其浏览上下文的策略，而不管其源如何。这意味着顶层的脚本会继承主文件的策略。
 
-所有 `<iframe>` 都继承其父页的策略。如果 `<iframe>` 有一个 `allow` 属性，*并且*父页面有一个 {{HTTPHeader("Permissions-Policy")}} 标头，父页面和 `allow` 属性的策略将被合并，使用最严格的子集。对于一个 `<iframe>` 来说，要启用一个功能，其源必须是在父页和 `allow` 属性的允许列表中。
+所有 `<iframe>` 都继承其父页的策略。如果 `<iframe>` 有一个 `allow` 属性，*并且*父页面有一个 {{HTTPHeader("Permissions-Policy")}} 标头，父页面和 `allow` 属性的策略将被合并，使用最严格的子集。对于一个 `<iframe>` 来说，要启用一种特性，其源必须是在父页和 `allow` 属性的允许列表中。
 
 在一个策略中禁用一个特性是单向的切换。如果子框架被它的父框架禁用了一个特性，那么这个子框架就不能重新启用它，这个子框架的任何后代也不能。
 
