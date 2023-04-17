@@ -51,7 +51,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 - 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么范围，因此它的值是否是你所期望的。你可以阅读[“this”的含义](/zh-CN/docs/Learn/JavaScript/Objects/Basics#this的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定你把功能应用到正确的 `this` 作用域。
 - 在使用全局变量进行迭代的循环中不正确地使用函数（更普遍的是“弄错作用域”）。例如，在 [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) 中（见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)），我们使用一个用 `var` 定义的变量循环了 10 次，每次都创建一个段落并给它添加一个 [onclick](/zh-CN/docs/Web/API/Element/click_event) 事件处理器。当点击时，我们希望每个段落都能显示一个包含其编号（创建时的 `i` 值）的警告信息。但是，它们都报告 `i` 为 11，因为 `for` 循环在调用嵌套函数之前就完成了所有的迭代。
 
-  > **备注：** 最简单的解决方案是用 `let `而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。不幸的是，这在 IE11 中不能正常工作，这就是为什么我们没有在“好的” for 循环中使用这种方法。
+  > **备注：** 最简单的解决方案是用 `let` 而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。不幸的是，这在 IE11 中不能正常工作，这就是为什么我们没有在“好的” for 循环中使用这种方法。
 
 - 在试图使用它们返回的值之前，确保异步操作已经返回。例如，[这个 Ajax 例子](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#第三步——简单的示例)在尝试使用响应之前，会检查以确保请求已经完成，响应已经返回。由于 JavaScript 语言中引入了 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，这种操作变得更加容易处理。
 
