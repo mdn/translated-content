@@ -31,7 +31,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 从历史上看，JavaScript 早就已经受到跨浏览器兼容性问题的困扰。早在 20 世纪 90 年代，当时的主要浏览器选择（Internet Explorer 和 Netscape）的脚本以不同的语言风格实现（Netscape 使用 JavaScript，IE 使用 JScript，还提供 VBScript 作为选项），虽然至少 JavaScript 和 JScript 在某种程度上是兼容的（都基于 {{glossary("ECMAScript")}} 规范），但往往以相互冲突、不兼容的方式实现，给开发者带来很多恶梦。
 
-这种不兼容问题一直持续到 21 世纪初，因为旧的浏览器仍然在使用，仍然需要支持。这也是 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——抽象出浏览器实现的差异（例如 见[如何进行 HTTP 请求](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#第一步——发送_http_请求)中的代码片段），所以开发人员只需要写一点简单的代码（见 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)），jQuery（或你使用的任何库）将在底层处理这些差异，而无需开发人员考虑这些。
+这种不兼容问题一直持续到 21 世纪初，因为旧的浏览器仍然在使用，仍然需要支持。这也是 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——抽象出浏览器实现的差异（例如见[如何进行 HTTP 请求](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#第一步——发送_http_请求)中的代码片段），所以开发人员只需要写一点简单的代码（见 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)），jQuery（或你使用的任何库）将在底层处理这些差异，而无需开发人员考虑这些。
 
 从那时起，情况有了明显的改善；现代浏览器在支持“经典的 JavaScript 功能”方面做得很好，而且随着支持老式浏览器的要求降低，使用这种代码的要求也在减少（尽管这样，请记住，它们并没有完全消失）。
 
@@ -208,7 +208,7 @@ request.onload = function() {
 - 为了避免加载超过你需要的 JavaScript，请使用 [Browserify](https://browserify.org/) 这样的解决方案将你的脚本捆绑成一个文件。一般来说，减少 HTTP 请求的数量对性能非常有利。
 - 在你将文件加载到你的生产服务器之前，通过最小化使你的文件变得更小。最小化将所有的代码压缩到一个巨大的单行中，使其占用的文件大小大大减少。这很难看，但当它完成后，你不需要阅读它！这最好使用像 [Uglify](https://github.com/mishoo/UglifyJS) 这样的最小化工具来完成（也有一个在线版本，见[JSCompress.com](https://jscompress.com/)）。
 - 当使用 API 时，确保在不使用 API 特性时将其关闭；一些 API 调用可能非常耗费处理能力。例如，当显示一个视频流时，确保在你看不到它时将其关闭。当使用重复的地理定位调用跟踪设备的位置时，确保在用户停止使用时将其关闭。
-- 对于性能来说，动画的成本确实很高。很多 JavaScript 库提供了由 JavaScript 编程的动画功能，但通过像 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)这样的本地浏览器功能 （或新生的[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）做动画要比 JavaScript 更具成本效益。阅读 Brian Birtles 的 [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解一些关于动画为何开销大的真正有用的理论，关于如何提高动画性能的提示，以及关于 Web 动画 API 的信息。
+- 对于性能来说，动画的成本确实很高。很多 JavaScript 库提供了由 JavaScript 编程的动画功能，但通过像 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)这样的本地浏览器功能（或新生的[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）做动画要比 JavaScript 更具成本效益。阅读 Brian Birtles 的 [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解一些关于动画为何开销大的真正有用的理论，关于如何提高动画性能的提示，以及关于 Web 动画 API 的信息。
 
 > **备注：** Addy Osmani 的 [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) 包含了大量的细节和一些提升 JavaScript 性能的优秀技巧。
 
@@ -245,7 +245,7 @@ request.onload = function() {
 
 有几种策略可以处理浏览器之间与特性支持有关的不兼容问题；让我们来探讨一下最常见的策略。
 
-> **备注：** 这些策略并不是独立存在的，当然，你可以根据需要将它们结合起来。例如，你可以使用特性检测来确定一个功能是否被支持；如果不被支持，你可以运行代码来加载一个 polyfill 或一个库来处理缺乏支持的问题。
+> **备注：** 这些策略并不是独立存在的，当然，你可以根据需要将它们结合起来。例如，你可以使用特性检测来确定一种特性是否被支持；如果不被支持，你可以运行代码来加载一个 polyfill 或一个库来处理缺乏支持的问题。
 
 #### 特性检测
 
