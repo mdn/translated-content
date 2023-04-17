@@ -5,7 +5,7 @@ slug: Web/CSS/:placeholder-shown
 
 {{CSSRef}}
 
-**`:placeholder-shown`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 表示当前显示[占位符文本](/zh-CN/docs/Web/HTML/Element/input#attr-placeholder)的任何 {{htmlElement("input")}} 或 {{htmlElement("textarea")}} 元素。
+**`:placeholder-shown`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes)表示当前显示[占位符文本](/zh-CN/docs/Web/HTML/Element/input#attr-placeholder)的任何 {{htmlElement("input")}} 或 {{htmlElement("textarea")}} 元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
 
