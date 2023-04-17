@@ -170,7 +170,7 @@ element {
 
 ## 自定义属性备用值
 
-用 {{cssxref("var()")}} 函数可以定义多个**备用值**(fallback value)，当给定值未定义时将会用备用值替换。这对于 [Custom Elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) 和 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 都很有用。
+用 {{cssxref("var()")}} 函数可以定义多个**备用值**（fallback value），当给定值未定义时将会用备用值替换。这对于 [Custom Element](/zh-CN/docs/Web/API/Web_components/Using_custom_elements) 和 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 都很有用。
 
 > **备注：** 备用值并不是用于实现浏览器兼容性的。如果浏览器不支持 CSS 自定义属性，备用值也没什么用。它仅对支持 CSS 自定义属性的浏览器提供了一个备份机制，该机制仅当给定值未定义或是无效值的时候生效。
 

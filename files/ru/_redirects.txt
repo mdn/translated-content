@@ -279,6 +279,7 @@
 /ru/docs/Learn/Server-side/Django/Введение	/ru/docs/Learn/Server-side/Django/Introduction
 /ru/docs/Learn/Server-side/Django/Разворачивание	/ru/docs/Learn/Server-side/Django/Deployment
 /ru/docs/Learn/Server-side/Django/Сессии	/ru/docs/Learn/Server-side/Django/Sessions
+/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/ru/docs/conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
 /ru/docs/Learn/Server-side/Express_Nodejs/Учебник_сайт_local_library	/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 /ru/docs/Learn/Server-side/First_steps/Веб_Безопасность	/ru/docs/Learn/Server-side/First_steps/Website_security
 /ru/docs/Learn/Tools_and_testing/ГитХаб	/ru/docs/Learn/Tools_and_testing/GitHub
@@ -468,6 +469,7 @@
 /ru/docs/Web/API/GlobalEventHandlers/onsubmit	/ru/docs/Web/API/HTMLFormElement/submit_event
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLBaseFontElement	/ru/docs/conflicting/Web/CSS/CSS_Fonts
+/ru/docs/Web/API/HTMLContentElement	/ru/docs/Web/API/HTMLSlotElement
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLElement/pointerover_event	/ru/docs/Web/API/Element/pointerover_event
 /ru/docs/Web/API/HTMLElement/transitionend_event	/ru/docs/Web/API/Element/transitionend_event
@@ -906,8 +908,10 @@
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/WebGL/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ru/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+/ru/docs/Web/Web_Components	/ru/docs/Web/API/Web_components
 /ru/docs/Web/Web_Components/HTML_Imports	/ru/docs/conflicting/Web/Web_Components
-/ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/Web_Components/Using_custom_elements
+/ru/docs/Web/Web_Components/Using_custom_elements	/ru/docs/Web/API/Web_components/Using_custom_elements
+/ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/XPath/Funkcje	/ru/docs/Web/XPath/Functions
 /ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/Web/Манифест	/ru/docs/Web/Manifest

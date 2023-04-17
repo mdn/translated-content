@@ -110,6 +110,10 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 </dialog>
 ```
 
+#### Résultat
+
+{{EmbedLiveSample('')}}
+
 ### Exemple avancé
 
 #### HTML
@@ -170,7 +174,7 @@ favDialog.addEventListener('close', function onClose() {
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_avancé", "", 300)}}
+{{EmbedLiveSample("", "", 300)}}
 
 ## Spécifications
 

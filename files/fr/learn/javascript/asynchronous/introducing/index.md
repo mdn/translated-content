@@ -317,11 +317,3 @@ Lorsqu'on imbrique les fonctions de rappel ainsi, il devient très difficile de 
 C'est pour ces raisons que la plupart des API asynchrones modernes n'utilisent plus les <i lang="en">callbacks</i>. À la place, la programmation asynchrone en JavaScript utilise [les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), et c'est ce que nous verrons dans le prochain article.
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## Dans ce module
-
-- **Introduction au JavaScript asynchrone**
-- [Comment utiliser les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implémenter une API utilisant les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introduction aux <i lang="en">workers</i>](/fr/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Évaluation&nbsp;: ordonnancer des animations](/fr/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

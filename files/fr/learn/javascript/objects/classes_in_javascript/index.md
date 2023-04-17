@@ -259,13 +259,3 @@ Dans le prochain article, nous jetterons un regard sur comment travailler avec l
 - [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — une partie de l'excellente série de manuels sur le JavaScript de Kyle Simpson. Le chapitre 5 en particulier jette un regard beaucoup plus approfondi sur les prototypes que nous ne l'avons fait ici. Nous avons présenté ici une vue simplifiée dans cette série d'articles dédiée aux débutants, tandis que Kyle est allé dans les détails les plus profonds et fournit une image beaucoup plus complexe et plus précise.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-## Dans ce module
-
-- [Les bases de l'Objet](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript Orienté Objet pour débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Prototypes d'Objet](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [L'héritage en JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
-- [Travailler avec les données JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Construire les Objets dans la pratique](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Ajouter des fonctionnalités à la démo de nos balles bondissantes](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

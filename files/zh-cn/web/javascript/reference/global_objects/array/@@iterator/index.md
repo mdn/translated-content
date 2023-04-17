@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 
 {{JSRef}}
 
-`Array` 对象的 **`@@iterator`** 方法实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，并允许数组被大多数期望可迭代的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环。它返回一个迭代器，生成数组中每个索引的值。
+{{jsxref("Array")}} 实例的 **`[@@iterator]()`** 方法实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，允许数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会产生数组中每个索引的值。
 
 该属性的初始值与 {{jsxref("Array.prototype.values")}} 属性的初始值是相同的函数对象。
 
@@ -17,7 +17,7 @@ array[Symbol.iterator]()
 
 ### 返回值
 
-与 {{jsxref("Array.prototype.values()")}} 相同的返回值：一个新的可迭代迭代器对象，它生成数组中每个索引的值。
+与 {{jsxref("Array.prototype.values()")}} 相同的返回值：一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会生成数组中每个索引的值。
 
 ## 示例
 
@@ -103,7 +103,7 @@ logIterable(123);
 
 ## 参见
 
-- [Polyfill of `Array.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype[@@iterator]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.forEach()")}}
