@@ -123,7 +123,7 @@ console.log(fruits.length); // 2
 
 ### 复制方法和修改方法
 
-有些方法不会改变调用该方法的现有数组，而是返回一个新的数组。它们通过首先构造一个新数组，然后填充元素来实现。复制始终是[浅层次的](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制初始创建的数组之外的任何内容。原始数组的元素将按以下方式复制到新数组中：
+有些方法不会修改调用该方法的现有数组，而是返回一个新的数组。它们通过首先构造一个新数组，然后填充元素来实现。复制始终是[*浅层次的*](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制一开始创建的数组之外的任何内容。原始数组的元素将按以下方式复制到新数组中：
 
 - 对象：对象引用被复制到新数组中。原数组和新数组都引用同一个对象。也就是说，如果一个被引用的对象被修改，新数组和原数组都可以看到更改。
 - 基本类型，如字符串、数字和布尔值（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：它们的值被复制到新数组中。
@@ -149,12 +149,12 @@ console.log(fruits.length); // 2
 
 注意，{{jsxref("Array/group", "group()")}} 和 {{jsxref("Array/groupToMap", "groupToMap()")}} 不使用 `@@species` 为每个组条目创建新数组，而是始终使用普通的 `Array` 构造函数。从概念上讲，它们也不是复制方法。
 
-下表列出了改变原始数组的方法，以及相应的非改变方法：
+下表列出了会修改原始数组的方法，以及相应的非修改方法：
 
-| 改变原数组的方法                                  | 相应的非改变方法                                        |
+| 修改方法                                  | 相应的非修改方法                                        |
 | ---------------------------------------------- | ----------------------------------------------------- |
-| {{jsxref("Array/copyWithin", "copyWithin()")}} | 没有对应的非改变方法                                     |
-| {{jsxref("Array/fill", "fill()")}}             | 没有对应的非改变方法                                     |
+| {{jsxref("Array/copyWithin", "copyWithin()")}} | 没有相应的非修改方法                                       |
+| {{jsxref("Array/fill", "fill()")}}             | 没有相应的非修改方法                                       |
 | {{jsxref("Array/pop", "pop()")}}               | {{jsxref("Array/slice", "slice(0, -1)")}}             |
 | {{jsxref("Array/push", "push(v1, v2)")}}       | {{jsxref("Array/concat", "concat([v1, v2])")}}        |
 | {{jsxref("Array/reverse", "reverse()")}}       | {{jsxref("Array/toReversed", "toReversed()")}}        |
@@ -163,10 +163,10 @@ console.log(fruits.length); // 2
 | {{jsxref("Array/splice", "splice()")}}         | {{jsxref("Array/toSpliced", "toSpliced()")}}          |
 | {{jsxref("Array/unshift", "unshift(v1, v2)")}} | {{jsxref("Array/concat", "toSpliced(0, 0, v1, v2)")}} |
 
-将改变原数组的方法转换为非改变方法的一种简单方式是使用[展开语法](/zb-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或 {{jsxref("Array/slice", "slice()")}} 先创建一个副本：
+将改变原数组的方法转换为非修改方法的一种简单方式是使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或 {{jsxref("Array/slice", "slice()")}} 先创建一个副本：
 
 ```js-nolint
-arr.copyWithin(0, 1, 2); // 不改变了 arr
+arr.copyWithin(0, 1, 2); // 改变了 arr
 const arr2 = arr.slice().copyWithin(0, 1, 2); // 不改变 arr
 const arr3 = [...arr].copyWithin(0, 1, 2); // 不改变 arr
 ```
