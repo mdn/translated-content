@@ -5,7 +5,7 @@ slug: Web/CSS/:only-child
 
 {{CSSRef}}
 
-**`:only-child`** CSS [伪类](/zh-CN/docs/CSS/Pseudo-classes)表示没有任何兄弟元素的元素。这与 `:first-child:last-child` 或 `:nth-child(1):nth-last-child(1)` 相同，但前者具有更小的权重性。
+**`:only-child`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示没有任何兄弟元素的元素。这与 `:first-child:last-child` 或 `:nth-child(1):nth-last-child(1)` 相同，但前者具有更小的权重性。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-child.html", "tabbed-shorter")}}
 
@@ -35,7 +35,7 @@ slug: Web/CSS/:only-child
   <div>我是第二个兄弟元素。</div>
   <div>
     我是第三个兄弟元素。
-    <div>但这里是唯一的子元素。</div>
+    <div>但这又是唯一的子元素。</div>
   </div>
 </div>
 ```
