@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**El intercambio de recursos de origen cruzado**  ({{Glossary("CORS")}}, por sus siglas en inglés), es un mecanismo basado en cabeceras {{Glossary("HTTP")}} que permite a un servidor indicar cualquier dominio, esquema o puerto con un {{Glossary("origin", "origen")}} distinto del suyo desde el que un navegador debería permitir la carga de recursos. CORS también se basa en un mecanismo por el cual los navegadores realizan una solicitud de "verificación previa" al servidor que aloja el recurso de origen cruzado, con el fin de comprobar que el servidor permitirá la solicitud real. En esa comprobación previa, el navegador envía cabeceras que indican el método HTTP y las cabeceras que se utilizarán en la solicitud real.
+**El intercambio de recursos de origen cruzado** ({{Glossary("CORS")}}, por sus siglas en inglés), es un mecanismo basado en cabeceras {{Glossary("HTTP")}} que permite a un servidor indicar cualquier dominio, esquema o puerto con un {{Glossary("origin", "origen")}} distinto del suyo desde el que un navegador debería permitir la carga de recursos. CORS también se basa en un mecanismo por el cual los navegadores realizan una solicitud de "verificación previa" al servidor que aloja el recurso de origen cruzado, con el fin de comprobar que el servidor permitirá la solicitud real. En esa comprobación previa, el navegador envía cabeceras que indican el método HTTP y las cabeceras que se utilizarán en la solicitud real.
 
 Un ejemplo de solicitud de origen cruzado: el código JavaScript del front-end servido desde `https://domain-a.com` utiliza {{domxref("XMLHttpRequest")}} para realizar una solicitud a `https://domain-b.com/data.json` .
 
