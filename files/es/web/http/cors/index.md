@@ -54,7 +54,6 @@ Una petición simple es aquella que cumple todas las siguientes condiciones:
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-
 - Además de las cabeceras establecidas automáticamente por el agente de usuario (por ejemplo {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}), o [las demás cabeceras definidas en la especificación Fetch como _nombre de cabecera prohibido_](https://fetch.spec.whatwg.org/#forbidden-header-name), las únicas cabeceras que se pueden configurar manualmente son [las que la especificación Fetch define como cabecera de solicitud CORS-safelisted](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), las cuales son:
 
   - {{HTTPHeader("Accept")}}
@@ -334,7 +333,6 @@ La solicitudes CORS de verificación previa nunca deben incluir credenciales. La
 > **Nota:** Algunos servicios de autenticación de empresas exigen que se envíen certificados de cliente TLS en las solicitudes de verificación previa, lo que contraviene la especificación [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials).
 >
 > Firefox 87 permite habilitar este comportamiento no conforme configurando la preferencia: `network.cors_preflight.allow_client_cert` en `true` ([error 1511151 en Firefox](https://bugzil.la/1511151)). Actualmente, los navegadores basados en Chromium siempre envían certificados de cliente TLS en solicitudes de verificación previa de CORS ([error 775438 en Chrome](https://crbug.com/775438)).
-
 
 #### Solicitudes con credenciales y comodines
 
