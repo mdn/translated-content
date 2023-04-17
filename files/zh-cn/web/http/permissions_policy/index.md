@@ -5,7 +5,7 @@ slug: Web/HTTP/Permissions_Policy
 
 {{HTTPSidebar}}
 
-**权限策略**为网站开发人员提供了明确声明哪些功能可以或不可以在网站上使用的机制。定义一组“策略”，限制网站代码可以访问哪些 API，或者修改浏览器对某些功能的默认行为。这使你能够执行最佳做法（即使是在代码库的发展过程中），也可以更安全地编排第三方内容。
+**权限策略**为网站开发人员提供了明确声明哪些功能可以或不可以在网站上使用的机制。定义一组“策略”，限制网站代码可以访问哪些 API，或者修改浏览器对某些特性的默认行为。这使你能够执行最佳做法（即使是在代码库的发展过程中），也可以更安全地编排第三方内容。
 
 权限策略与{{Glossary("CSP","内容安全策略")}}相似，但是它控制的是特性而非安全行为。
 
@@ -25,13 +25,13 @@ slug: Web/HTTP/Permissions_Policy
 一些方法包括：
 
 - 对于需要用户权限授予的 JavaScript API，会返回“权限拒绝”。
-- 提供访问功能的 JavaScript API 返回 `false` 值或抛出一个错误。
+- 提供某些特性的 JavaScript API 返回 `false` 值或抛出一个错误。
 - API 甚至没有对外暴露，好像它们不存在一样。
 - 控制特性行为的选项有不同的默认值。
 
-> **备注：** 新引入的功能可能有一个明确的 API 来提示状态。后来与权限策略整合的现有功能通常会使用现有机制。
+> **备注：** 新引入的特性可能有一个明确的 API 来提示状态。后来与权限策略整合的现有特性通常会使用现有机制。
 
-权限策略允许你控制哪些源可以使用哪些功能，无论是在顶层页面还是在嵌入的 {{htmlelement("iframe")}} 中。其目的是为良好的用户体验执行最佳实践，并对*敏感*或*强大*的功能（指在执行相关代码之前需要用户明确许可使用的功能）提供细化控制。
+权限策略允许你控制哪些源可以使用哪些特性，无论是在顶层页面还是在嵌入的 {{htmlelement("iframe")}} 中。其目的是为良好的用户体验执行最佳实践，并对*敏感*或*强大*的特性（指在执行相关代码之前需要用户明确许可使用的功能）提供细化控制。
 
 权限策略提供两种指定策略的方法：
 
@@ -223,5 +223,5 @@ Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
 - {{HTTPHeader("Permissions-Policy")}} HTTP 标头
 - iframe 的 {{HTMLElement("iframe", "allow", "#属性")}} 属性
 - [使用权限特征控制浏览器特性](https://developer.chrome.com/en/docs/privacy-sandbox/permissions-policy/)：使用指南，其中还包含几个演示链接。
-- [chromestatus.com 上的权限/特征策略](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
+- [chromestatus.com 上的权限/特性策略](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
