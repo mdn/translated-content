@@ -42,7 +42,7 @@ content-visibility: unset;
 
 {{CSSSyntax}}
 
-## 无障碍考量
+## 无障碍考虑
 
 `content-visibility: auto` 属性中的屏外内容仍在文档对象模型和无障碍树中。由此允许在改善页面性能时不负面影响无障碍性。
 
