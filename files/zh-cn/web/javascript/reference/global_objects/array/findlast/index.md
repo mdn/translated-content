@@ -47,17 +47,16 @@ findLast(callbackFn, thisArg)
 
 `callbackFn` 会被数组中的*每个*元素调用，而不仅仅是那些被赋值的元素。对于[稀疏数组]()来说，空槽行为和`undefined`相同。
 
-如果为 `findLast()` 提供了 `thisArg` 参数，它将在每次调用 `callbackFn` 时作为 `this` 值。如果没有被提供，则使用 {{jsxref("undefined")}}。
-
-`findLast()` 方法不会改变调用它的数组，但是提供的 `callbackFn` 可以。`findLast()` 处理的元素是在第一次调用 `callbackFn` *之前*设置的。因此：
+`findLast()` 方法不会改变调用它的数组，但是提供的 `callbackFn` 可以。但是请注意，数组的长度是在第一次调用`callbackFn`*之前*保存的。因此：
 
 - `callbackFn` 不会访问在调用 `findLast()` 开始后才添加到数组中的任何元素。
 - 给已访问过的索引重新赋值将不会被 `callbackFn` 重新访问。
 - 给初始的范围外的索引赋值，其将不会被 `callbackFn` 访问。
-- 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，则其传递给 `callbackFn` 的值将是 `findLast()` 访问该元素索引时的值。
-- 仍然会访问已{{jsxref("Operators/delete", "删除")}}的元素。
+- 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，则其传递给 `callbackFn` 的值将是 `findLast()` 访问该元素索引时的值。[已删除](/en-US/docs/Web/JavaScript/Reference/Operators/delete)元素会被当做`undefined`来访问。
 
 >**警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
+
+`findLast()`方法是[通用的](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)。它只期望`this`值具有`length`属性和整数键的属性
 
 ## 示例
 
@@ -120,22 +119,29 @@ function isPrime(element) {
 console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
+### 在稀疏数组上使用findLast()
 
-### 访问不存在和删除的元素
+稀疏数组中的空槽*被*访问，并被视为`undefined`
 
-以下示例显示访问了不存在和已删除的元素，并且传递给回调的值是访问它们时的值：
 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those with assigned values
-array.findLast(function(value, index) {
+array.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
 });
+// Visited index 6 with value 6
+// Visited index 5 with value 5
+// Visited index 4 with value undefined
+// Visited index 3 with value undefined
+// Visited index 2 with value undefined
+// Visited index 1 with value 1
+// Visited index 0 with value 0
 
 // Shows all indexes, including deleted
-array.findLast(function(value, index) {
+array.findLast((value, index) => {
   // Delete element 5 on first iteration
   if (index === 6) {
     console.log(`Deleting array[5] with value ${array[5]}`);
@@ -144,22 +150,30 @@ array.findLast(function(value, index) {
   // Element 5 is still visited even though deleted
   console.log(`Visited index ${index} with value ${value}`);
 });
-// expected output:
-// > "Visited index 6 with value 6"
-// > "Visited index 5 with value 5"
-// > "Visited index 4 with value undefined"
-// > "Visited index 3 with value undefined"
-// > "Visited index 2 with value undefined"
-// > "Visited index 1 with value 1"
-// > "Visited index 0 with value 0"
-// > "Deleting array[5] with value 5"
-// > "Visited index 6 with value 6"
-// > "Visited index 5 with value undefined"
-// > "Visited index 4 with value undefined"
-// > "Visited index 3 with value undefined"
-// > "Visited index 2 with value undefined"
-// > "Visited index 1 with value 1"
-// > "Visited index 0 with value 0"
+// Deleting array[5] with value 5
+// Visited index 6 with value 6
+// Visited index 5 with value undefined
+// Visited index 4 with value undefined
+// Visited index 3 with value undefined
+// Visited index 2 with value undefined
+// Visited index 1 with value 1
+// Visited index 0 with value 0
+```
+
+### 在非数组对象上调用findLast()
+
+`findLast()`方法读取`this`的`length`属性，然后访问每个整数索引
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
+); // 4
 ```
 
 ## 规范
@@ -173,8 +187,13 @@ array.findLast(function(value, index) {
 ## 参见
 
 - [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findLastIndex()")}} – find last element and return its index
-- {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array
-- {{jsxref("Array.prototype.filter()")}} – remove all non-matching elements
-- {{jsxref("Array.prototype.every()")}} – test all elements
-- {{jsxref("Array.prototype.some()")}} – test until one element matches
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("Array.prototype.filter()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}
