@@ -29,7 +29,7 @@ debug(msg, subst1, /* …, */ substN)
 - `msg`
   - : Une chaîne de caractères JavaScript contenant zéro ou plusieurs chaînes de caractères de substitution, remplacées respectivement par `subst1`, `substN`.
 - `subst1` … `substN`
-  - : Des objets JavaScript à utiliser pour remplacer les chaînes de substitution de `msg`. Cela fournit un contrôle supplémentaire sur le format de la sortie. Voir [Utiliser les chaînes de caractères de substitution](/fr/docs/Web/API/Console#using_string_substitutions) qui décrit le fonctionnement des substitutions.
+  - : Des objets JavaScript à utiliser pour remplacer les chaînes de substitution de `msg`. Cela fournit un contrôle supplémentaire sur le format de la sortie. Voir [Utiliser les chaînes de caractères de substitution](/fr/docs/Web/API/Console#utiliser_les_caractères_de_substitution) qui décrit le fonctionnement des substitutions.
 
 Voir [Afficher du texte dans la console](/fr/docs/Web/API/Console#afficher_du_texte_dans_la_console) dans la documentation de l'objet [`console`](/fr/docs/Web/API/Console) pour plus de détails.
 
