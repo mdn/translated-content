@@ -51,7 +51,7 @@ var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
 console.log(madeAString);
 // join() 函数接受一个数组，将
-// 所有数组项连接成一个单一的
+// 所有数组元素连接成一个单一的
 // 字符串，并返回这个新字符串
 ```
 
@@ -60,7 +60,7 @@ console.log(madeAString);
 ```js
 var myNumber = Math.random()
 // random() 函数生成一个随机
-// 数字在0和1之间，并返回该
+// 数字在 0 和 1 之间，并返回该
 // 数字
 ```
 
@@ -232,9 +232,9 @@ var newString = myText.replace('string', 'sausage');
 ```js
 var myArray = ['我', '爱', '巧克力', '青蛙'];
 var madeAString = myArray.join(' ');
-// returns '我 爱 巧克力 青蛙'
+// 返回 '我 爱 巧克力 青蛙'
 var madeAString = myArray.join();
-// returns '我,爱,巧克力,青蛙'
+// 返回 '我,爱,巧克力,青蛙'
 ```
 
 如果没有包含参数来指定加入/分隔符，默认情况下会使用逗号
