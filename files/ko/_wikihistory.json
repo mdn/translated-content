@@ -1906,10 +1906,6 @@
     "modified": "2020-02-05T05:41:56.954Z",
     "contributors": ["SphinxKnight", "junthus", "gs.won"]
   },
-  "Mozilla/Add-ons/WebExtensions/Content_scripts": {
-    "modified": "2020-02-05T05:41:58.739Z",
-    "contributors": ["SphinxKnight", "grizlupo"]
-  },
   "Mozilla/Add-ons/WebExtensions/Examples": {
     "modified": "2020-02-05T05:41:58.537Z",
     "contributors": ["SphinxKnight", "gs.won"]
@@ -2157,10 +2153,6 @@
   "Web/API/Cache": {
     "modified": "2020-10-15T21:39:42.857Z",
     "contributors": ["alattalatta", "LeeJunyeol", "oinochoe", "jpmedley"]
-  },
-  "Web/API/Cache/put": {
-    "modified": "2020-10-15T21:39:41.309Z",
-    "contributors": ["alattalatta", "minias"]
   },
   "Web/API/CanvasCaptureMediaStreamTrack": {
     "modified": "2020-12-04T10:32:28.199Z"
