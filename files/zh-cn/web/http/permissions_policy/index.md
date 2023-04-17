@@ -56,7 +56,7 @@ slug: Web/HTTP/Permissions_Policy
 - 权限策略允许服务器设置某项特性是否可以在特定的文档中使用（或在文档中嵌入`<frame>`）。这些被称为**策略控制的**特性————见[权限策略指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
 - 权限 API 根据用户授予的权限对特性的访问进行把关。这些功能被记录在[权限注册表](https://w3c.github.io/permissions-registry/)中。
 
-每个功能使用的识别字符串在两者之间保持一致，例如，`geolocation` 代表 {{domxref("Geolocation API", "地理位置 API", "", "nocode")}}。权限注册表中的大多数 API 功能也有相应的权限策略指令。一个例外是 {{domxref("Notifications API", "通知 API", "", "nocode")}}。
+每种特性使用的识别字符串在两者之间保持一致，例如，`geolocation` 代表 {{domxref("Geolocation API", "地理位置 API", "", "nocode")}}。权限注册表中的大多数 API 特性也有相应的权限策略指令。一个例外是 {{domxref("Notifications API", "通知 API", "", "nocode")}}。
 
 一般来说，当权限策略阻止使用一个强大的特性时，用户甚至不会被要求获得使用权限，而权限 API {{domxref("Permissions.query", "query()")}} 方法将返回 {{domxref("PermissionStatus.state", "state")}} 值为 `denied`。
 
