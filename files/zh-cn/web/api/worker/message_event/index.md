@@ -7,11 +7,11 @@ slug: Web/API/Worker/message_event
 
 当 worker 的父级接收到来自其 worker 的消息时（也就是说，当 worker 通过 [`DedicatedWorkerGlobalScope.postMessage()`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) 发送消息时），会在 {{domxref('Worker')}} 对象上触发 `message` 事件。
 
-这个事件既不能取消也不能冒泡。
+此事件不能取消，也不会冒泡。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中使用事件名字，或者使用事件处理程序属性。
+在如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者使用事件处理器属性。
 
 ```js
 addEventListener("message", (event) => {});
@@ -50,7 +50,7 @@ worker.addEventListener("message", (event) => {
 });
 ```
 
-另外，也可以使用 `onmessage` 事件处理属性进行监听：
+另外，也可以使用 `onmessage` 事件处理器属性进行监听：
 
 ```js
 const worker = new Worker("static/scripts/worker.js");
