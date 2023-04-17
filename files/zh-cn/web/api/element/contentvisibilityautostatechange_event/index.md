@@ -1,6 +1,5 @@
 ---
 title: Element：contentvisibilityautostatechange 事件
-short-title: contentvisibilityautostatechange
 slug: Web/API/Element/contentvisibilityautostatechange_event
 ---
 
