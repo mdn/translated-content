@@ -38,7 +38,7 @@ requestAdapter(options)
 
 如果你希望阻止你的应用程序运行在备用的适配器，你应该在请求 {{domxref("GPUDevice")}} 之前检查 {{domxref("GPUAdapter.isFallbackAdapter")}} 属性。
 
-> **备注：** 该规范包含 `requestAdapter()` 的 `forceFallbackAdapter` 选项。这是一个布尔值，如果设置为 `true` ，则强制用户代理返回备用适配器（如果可用）。然而，任何浏览器仍没有支持这一点。
+> **备注：** 该规范包含 `requestAdapter()` 的 `forceFallbackAdapter` 选项。这是一个布尔值，如果设置为 `true`，则强制用户代理返回备用适配器（如果可用）。然而，任何浏览器仍没有支持这一点。
 
 ### 返回值
 
