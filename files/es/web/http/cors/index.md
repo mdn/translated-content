@@ -94,7 +94,7 @@ xhr.send();
 
 Esta operación realiza un intercambio sencillo entre el cliente y el servidor, utilizando cabeceras CORS para gestionar los privilegios:
 
-![Diagram of simple CORS GET request](simple-req.png)
+![Diagrama de solicitud CORS GET simple](simple-req.png)
 
 Veamos lo que el navegador enviará al servidor en este caso:
 
@@ -157,7 +157,7 @@ xhr.send("<person><name>Arun</name></person>");
 
 El ejemplo anterior crea un cuerpo para enviar con la solicitud `POST`. Además, se establece una cabecera de petición HTTP `X-PINGOTHER` no estándar. Dichas cabeceras no son parte de HTTP/1.1, pero suelen ser útiles para las aplicaciones web. Puesto que la petición utiliza un `Content-Type` de `text/xml` y puesto que se establece una cabecera personalizada, esta petición es "verificada previamente".
 
-![Diagram of a request that is preflighted](preflight_correct.png)
+![Diagrama de una solicitud con verificación previa](preflight_correct.png)
 
 > **Nota:** Como se describe a continuación, la solicitud `POST` real no incluye las cabeceras `Access-Control-Request-*`. Estas solo son necesarias para la solicitud `OPTIONS`.
 
@@ -290,7 +290,7 @@ function callOtherDomain() {
 
 La línea 7 muestra la bandera en {{domxref("XMLHttpRequest")}} que debe establecerse para realizar la invocación con Cookies, concretamente el valor booleano en `withCredentials`. Por defecto, la invocación se realiza sin Cookies. Dado que se trata de uns simple petición GET, no se comprueba previamente, pero el navegador rechazará cualquier respuesta que no tenga la cabecera {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`, y **no** pondrá la respuesta a disposición del contenido web invocador.
 
-![Diagram of a simple GET request with Access-Control-Allow-Credentials](cred-req-updated.png)
+![Diagrama de una solicitud GET simple con Access-Control-Allow-Credentials](cred-req-updated.png)
 
 He aquí un ejemplo de intercambio entre cliente y servidor:
 
