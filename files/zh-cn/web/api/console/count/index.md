@@ -56,7 +56,7 @@ console.count();
 
 标签显示为 `default`，因为没有提供明确的标签。
 
-如果我们将 `user` 变量作为 `label` 参数传递给第一次调用 `count()`，并将字符串”alice“传递给第二次调用：
+如果我们将 `user` 变量作为 `count()` 函数的 `label` 参数传递给第一个调用，并将字符串”alice“作为第二个调用的参数：
 
 ```js
 let user = "";
