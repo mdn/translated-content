@@ -23,9 +23,11 @@ onmessage = (event) => {};
 
 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。
 
+{{InheritanceDiagram("MessageEvent")}}
+
 ## 事件属性
 
-这个接口也从父级 {{domxref("Event")}} 中继承了属性。
+这个接口也从其父级 {{domxref("Event")}} 中继承了属性。
 
 - {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : 消息发送者发送的数据。
