@@ -2,6 +2,8 @@
 title: "GeolocationCoordinates: heading 속성"
 short-title: heading
 slug: Web/API/GeolocationCoordinates/heading
+l10n:
+  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}

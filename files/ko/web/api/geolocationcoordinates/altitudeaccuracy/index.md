@@ -2,6 +2,8 @@
 title: "GeolocationCoordinates: altitudeAccuracy 속성"
 short-title: altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
+l10n:
+  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
