@@ -1,5 +1,5 @@
 ---
-title: console.count()
+title: console：count() 方法
 slug: Web/API/console/count
 ---
 
