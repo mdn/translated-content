@@ -44,8 +44,8 @@ slug: Web/HTTP/Permissions_Policy
 
 为了控制每个特性，会撰写包含以下这些方面的策略：
 
-- **指令**确定了要控制的功能名称。见[不同的可用指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
-- **允许列表**是该特性应该被控制的源列表。你可以为所有或特定的源启用一个功能，或者阻止它在所有源中的使用。
+- **指令**确定了要控制的特性名称。见[不同的可用指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
+- **允许列表**是该特性应该被控制的源列表。你可以为所有或特定的源启用一种特性，或者阻止它在所有源中的使用。
 
 请看下面的多个示例。
 
@@ -53,12 +53,12 @@ slug: Web/HTTP/Permissions_Policy
 
 权限策略和{{domxref("Permissions API", "权限 API", "", 1)}}密切相关，但又有所不同。由这两种技术控制其权限的功能是重叠的。
 
-- 权限策略允许服务器设置某项功能是否可以在特定的文档中使用（或在文档中嵌入`<frame>`）。这些被称为**策略控制的**特性————见[权限策略指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
-- 权限 API 根据用户授予的权限对功能的访问进行把关。这些功能被记录在[权限注册表](https://w3c.github.io/permissions-registry/)中。
+- 权限策略允许服务器设置某项特性是否可以在特定的文档中使用（或在文档中嵌入`<frame>`）。这些被称为**策略控制的**特性————见[权限策略指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
+- 权限 API 根据用户授予的权限对特性的访问进行把关。这些功能被记录在[权限注册表](https://w3c.github.io/permissions-registry/)中。
 
 每个功能使用的识别字符串在两者之间保持一致，例如，`geolocation` 代表 {{domxref("Geolocation API", "地理位置 API", "", "nocode")}}。权限注册表中的大多数 API 功能也有相应的权限策略指令。一个例外是 {{domxref("Notifications API", "通知 API", "", "nocode")}}。
 
-一般来说，当权限策略阻止使用一个强大的功能时，用户甚至不会被要求获得使用权限，而权限 API {{domxref("Permissions.query", "query()")}} 方法将返回 {{domxref("PermissionStatus.state", "state")}} 值为 `denied`。
+一般来说，当权限策略阻止使用一个强大的特性时，用户甚至不会被要求获得使用权限，而权限 API {{domxref("Permissions.query", "query()")}} 方法将返回 {{domxref("PermissionStatus.state", "state")}} 值为 `denied`。
 
 参见[权限 > 与权限策略规范的关系](https://w3c.github.io/permissions/#relationship-to-permissions-policy)。
 
@@ -66,11 +66,11 @@ slug: Web/HTTP/Permissions_Policy
 
 一个允许列表是一系列源的列表，它采取一个或多个包含在括号中的下列值，用空格隔开：
 
-- `*`：该功能将被允许在本文档和所有嵌套浏览上下文（`<iframe>`）中使用，无论其源如何。
-- `()`（空允许列表）：该功能在顶层和嵌套浏览环境中被禁用。等价的 `<iframe>` 的 `allow` 属性值是 `'none'`。
-- `self`：该功能只允许在本文档和同一来源的所有嵌套浏览环境（`<iframe>`）中使用。在嵌套浏览的情况下，该特征不允许出现在跨源文件中。`self` 可以被认为是 `https://your-site.example.com` 的简写。对应的 `<iframe>` 的 `allow` 属性值是 `self`。
-- `src`：只要载入该框架的文件与该框架 {{HTMLElement('iframe','src','#Attributes')}} 属性中的 URL 来源相同，该功能在该 `<iframe>` 中就被允许。这个值只用于 `<iframe>` 的 `allow` 属性，并且是 `<iframe>` 的*默认* `allowlist` 值。
-- `"<origin>"`：该特征允许用于特定的源（如 `"https://a.example.com"`）。源应该用空格隔开。请注意，`<iframe>` allow 属性中的源是不加引号的。
+- `*`：该特性将被允许在本文档和所有嵌套浏览上下文（`<iframe>`）中使用，无论其源如何。
+- `()`（空允许列表）：该特性在顶层和嵌套浏览环境中被禁用。等价的 `<iframe>` 的 `allow` 属性值是 `'none'`。
+- `self`：该特性只允许在本文档和同一来源的所有嵌套浏览环境（`<iframe>`）中使用。在嵌套浏览的情况下，该特性不允许出现在跨源文件中。`self` 可以被认为是 `https://your-site.example.com` 的简写。对应的 `<iframe>` 的 `allow` 属性值是 `self`。
+- `src`：只要载入该框架的文件与该框架 {{HTMLElement('iframe','src','#Attributes')}} 属性中的 URL 来源相同，该特性在该 `<iframe>` 中就被允许。这个值只用于 `<iframe>` 的 `allow` 属性，并且是 `<iframe>` 的*默认* `allowlist` 值。
+- `"<origin>"`：该特性允许用于特定的源（如 `"https://a.example.com"`）。源应该用空格隔开。请注意，`<iframe>` allow 属性中的源是不加引号的。
 
 值 `*` 和 `()` 只能单独使用，而 `self` 和 `src` 可以与一个或多个源结合使用。
 
@@ -104,7 +104,7 @@ slug: Web/HTTP/Permissions_Policy
 - `(src "https://a.example.com" "https://b.example.com")`
 - `("https://*.example.com")`
 
-## 权限特征标头语法
+## 权限特性标头语法
 
 一般的语法看起来像这样：
 
@@ -124,7 +124,7 @@ Permissions-Policy: geolocation=()
 Permissions-Policy: geolocation=(self "https://a.example.com" "https://b.example.com")
 ```
 
-通过发送带有逗号分隔的策略列表的标头，或者通过为每个策略发送单独的标头，可以同时控制几个功能。
+通过发送带有逗号分隔的策略列表的标头，或者通过为每个策略发送单独的标头，可以同时控制几种特性。
 
 例如，以下这些是等价的：
 
@@ -178,7 +178,7 @@ Permissions-Policy: camera=*
 ></iframe>
 ```
 
-> **备注：** 你会注意到，`<iframe>` 策略的语法与 `Permissions-Policy` 标头的语法有些不同。前者仍然使用与旧的特征策略规范相同的语法，它被权限策略所取代。
+> **备注：** 你会注意到，`<iframe>` 策略的语法与 `Permissions-Policy` 标头的语法有些不同。前者仍然使用与旧的特性策略规范相同的语法，它被权限策略所取代。
 
 ## 嵌入式内容的继承策略
 
@@ -222,6 +222,6 @@ Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
 
 - {{HTTPHeader("Permissions-Policy")}} HTTP 标头
 - iframe 的 {{HTMLElement("iframe", "allow", "#属性")}} 属性
-- [使用权限特征控制浏览器特性](https://developer.chrome.com/en/docs/privacy-sandbox/permissions-policy/)：使用指南，其中还包含几个演示链接。
+- [使用权限特性控制浏览器特性](https://developer.chrome.com/en/docs/privacy-sandbox/permissions-policy/)：使用指南，其中还包含几个演示链接。
 - [chromestatus.com 上的权限/特性策略](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
