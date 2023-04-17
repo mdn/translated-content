@@ -151,10 +151,10 @@ console.log(fruits.length); // 2
 
 下表列出了会修改原始数组的方法，以及相应的非修改方法：
 
-| 修改方法                                  | 相应的非修改方法                                        |
+| 修改方法                                        | 相应的非修改方法                                        |
 | ---------------------------------------------- | ----------------------------------------------------- |
-| {{jsxref("Array/copyWithin", "copyWithin()")}} | 没有相应的非修改方法                                       |
-| {{jsxref("Array/fill", "fill()")}}             | 没有相应的非修改方法                                       |
+| {{jsxref("Array/copyWithin", "copyWithin()")}} | 没有相应的非修改方法                                     |
+| {{jsxref("Array/fill", "fill()")}}             | 没有相应的非修改方法                                     |
 | {{jsxref("Array/pop", "pop()")}}               | {{jsxref("Array/slice", "slice(0, -1)")}}             |
 | {{jsxref("Array/push", "push(v1, v2)")}}       | {{jsxref("Array/concat", "concat([v1, v2])")}}        |
 | {{jsxref("Array/reverse", "reverse()")}}       | {{jsxref("Array/toReversed", "toReversed()")}}        |
