@@ -238,7 +238,7 @@ request.onload = function() {
 
 - [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)、[Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 和其他在客户端存储网页数据的 API。
 - 使用单独线程运行 JavaScript 代码的 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API)，以提升性能。
-- 使用真实 3D 图形的 [WebGL API](/zh-CN/docs/Learn/WebGL)。
+- 使用真实 3D 图形的 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)。
 - 提供附加音频控制功能的 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)。
 - 用于多人、实时视频/音频连接（如视频会议）的 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)。
 - 用于在浏览器中设计虚拟现实体验的 [WebVR API](/zh-CN/docs/Web/API/WebVR_API)（例如，用 VR 硬件输入的数据控制 3D 视图）。
