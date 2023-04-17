@@ -6,7 +6,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-现在我们了解一些常见的浏览器 JavaScript 问题，并且看看如何修复它们。这个包括如何使用浏览器开发工具跟踪和修复问题、使用 Polyfill 或第三方库解决问题、如果让一些现代 JavaScript 的特性也能在旧的浏览器下面工作等。
+现在我们了解一些常见的浏览器 JavaScript 问题，并且看看如何修复它们。这个包括如何使用浏览器开发工具跟踪和修复问题、使用 Polyfill 或第三方库解决问题以及如何让一些现代 JavaScript 的特性也能在旧的浏览器下面工作等。
 
 <table>
   <tbody>
