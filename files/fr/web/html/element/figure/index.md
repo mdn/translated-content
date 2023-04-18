@@ -100,9 +100,9 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 </figure>
 ```
 
-{{EmbedLiveSample("", "100%", 480)}}
-
 #### Résultat
+
+{{EmbedLiveSample("", "100%", 480)}}
 
 ### Extrait de code
 
