@@ -628,6 +628,7 @@ Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en e
     </p>
   </video>
 </div>
+```
 
 ```css hidden
 div {
