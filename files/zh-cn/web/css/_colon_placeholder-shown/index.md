@@ -131,5 +131,5 @@ input.studentid:placeholder-shown {
 ## 参见
 
 - {{CSSxRef("::placeholder")}} 伪元素为占位符*自身*设置样式。
-- 相关的 HTML 元素：{{HTMLElement("input")}}, {{HTMLElement("textarea")}}
+- 相关的 HTML 元素：{{HTMLElement("input")}}、{{HTMLElement("textarea")}}
 - [HTML 表单](/zh-CN/docs/Learn/Forms)
