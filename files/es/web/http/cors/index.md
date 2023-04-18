@@ -27,7 +27,7 @@ Este [estándar para el intercambio de recursos de origen cruzado](https://fetch
 - Imágenes / cuadros de vídeo dibujados en un _canvas_ utilizando {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
 - [Formas CSS a partir de imágenes](/es/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
 
-Este es un artículo general sobre el uso compartido de recursos de origen cruzado e incluye una discusión sobre los encabezados HTTP necesarios.
+Este es un artículo general sobre el uso compartido de recursos de origen cruzado e incluye una discusión sobre las cabeceras HTTP necesarias.
 
 ## Resumen funcional
 
@@ -62,7 +62,7 @@ Una petición simple es aquella que cumple todas las siguientes condiciones:
   - {{HTTPHeader("Content-Type")}} (Por favor, tenga en cuenta los siguientes requisitos adicionales)
   - {{HTTPHeader("Range")}} (solo con un [valor de cabecera de rango simple](https://fetch.spec.whatwg.org/#simple-range-header-value); por ejemplo, `bytes=256-` o `bytes=127-255`)
 
-> **Nota:** Firefox aún no ha implementado `Range` como un encabezado de solicitud en la lista segura. Véase el [error 1733981 en Firefox](https://bugzil.la/1733981).
+> **Nota:** Firefox aún no ha implementado `Range` como una cabecera de solicitud en la lista segura. Véase el [error 1733981 en Firefox](https://bugzil.la/1733981).
 
 - Las únicas combinaciones de tipo/subtipo permitidas para el {{Glossary("MIME type","media type")}} especificado en la cabecera {{HTTPHeader("Content-Type")}} son:
 
