@@ -36,7 +36,7 @@ findLast(callbackFn, thisArg)
     - `array`
       - : 调用 `findLast()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 时，用作 {{jsxref("Operators/this", "this")}} 的值。详见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)
+  - : 执行 `callbackFn` 时，用作 {{jsxref("Operators/this", "this")}} 的值。详见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
