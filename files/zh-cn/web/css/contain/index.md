@@ -49,8 +49,8 @@ contain: unset;
 
 `contain` 属性可有下列取值中的任意一个：
 
-- 关键词 `none` **或**
-- 以任意顺序由空格分隔的关键词 `size`（或 `inline-size`）、`layout`、`style` 和 `paint` 中的至少一个**或**
+- 关键词 `none`，**或**
+- 以任意顺序由空格分隔的关键词 `size`（或 `inline-size`）、`layout`、`style` 和 `paint` 中的至少一个，**或**
 - 简写值 `strict` 或 `content` 之一
 
 这些关键词有下列含义：
