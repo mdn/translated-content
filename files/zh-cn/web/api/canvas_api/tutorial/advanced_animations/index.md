@@ -81,7 +81,7 @@ canvas.addEventListener('mouseout', function(e){
   window.cancelAnimationFrame(raf);
 });
 
-ball.draw();
+draw();
 ```
 
 ## 边界
