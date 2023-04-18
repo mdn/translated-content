@@ -19,7 +19,7 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 > **标注：**
 >
-> [下载这份示例](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
+> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
 
 ## 做出选择
 
