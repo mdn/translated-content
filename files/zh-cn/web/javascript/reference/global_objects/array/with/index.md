@@ -1,8 +1,6 @@
 ---
 title: Array.prototype.with()
 slug: Web/JavaScript/Reference/Global_Objects/Array/with
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.with
 ---
 
 {{JSRef}}
