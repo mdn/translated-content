@@ -5,7 +5,7 @@ slug: Web/CSS/contain
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`contain`** 标示了元素及其内容尽可能独立于文档树的其余部分。局限使 DOM 的一部分得以被隔离，且通过将布局、样式、绘制、尺寸或其任意组合的计算限制于 DOM 子树而非整个页面使性能受益。局限也可用于限制 CSS 计数器和引号的范围。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`contain`** 标示了元素及其内容尽可能独立于文档树的其余部分。局限使 DOM 的一部分得以被隔离，且通过将布局、样式、绘制、尺寸或其任意组合的计算限制于 DOM 子树而非整个页面使性能受益。局限也可用于限制 CSS 计数器和引号的作用域。
 
 {{EmbedInteractiveExample("pages/css/contain.html")}}
 
@@ -68,7 +68,7 @@ contain: unset;
 - `layout`
   - : 从页面的其余部分中隔离出元素的内部布局。此值意味着元素外的任意内容和元素内部布局互不影响。
 - `style`
-  - : 对于可在元素及其后代外产生影响的属性，其影响将不会逃离包含元素。计数器和引号被限制于元素及其内容的范围中。
+  - : 对于可在元素及其后代外产生影响的属性，其影响将不会逃离包含元素。计数器和引号的作用域被限制为元素及其内容。
 - `paint`
   - : 元素后代不在元素边界外显示。若包含盒在屏外，则浏览器无需绘制其被局限的元素——这些元素因为完全局限于此盒故必定也在屏外。若后代元素溢出包含元素的边界，则此后代元素将被裁剪至包含元素的边框盒。
 
@@ -175,7 +175,7 @@ div {
 
 ### 样式局限
 
-样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/quotes)限制于被局限元素的范围中。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性被限制于元素范围中，且将元素视为在文档根部。
+样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
 
 #### 局限与计数器
 
@@ -206,13 +206,13 @@ li::before {
 }
 ```
 
-若无局限，则计数器将在每个元素上从 1 增加到 5。样式局限导致 {{CSSXref("counter-increment")}} 属性被限制于元素子树的范围中，计数器从 1 重新开始：
+若无局限，则计数器将在每个元素上从 1 增加到 5。样式局限导致 {{CSSXref("counter-increment")}} 属性的作用域被限制为元素子树，计数器从 1 重新开始：
 
 {{EmbedLiveSample("Containment_and_counters", "100%", 140)}}
 
 #### 局限与引号
 
-CSS 引号受类似影响，与引号相关的 {{CSSXref("content")}} 值被限制于元素范围中：
+CSS 引号受类似影响，与引号相关的 {{CSSXref("content")}} 值的作用域被限制为此元素：
 
 ```html
 <!-- 有样式局限 -->
