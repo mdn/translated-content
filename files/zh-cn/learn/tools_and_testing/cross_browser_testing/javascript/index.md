@@ -79,7 +79,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 4. 你可以在列表最顶部看到 **lint**。首先使用 _Install_ 按钮安装这个软件包，因为其他 linter 都依赖它工作。然后安装 **linter-jshint** 插件。
 5. 在软件包安装完成后，试着加载一个 JavaScript 文件：你会看到任何问题都在行号旁边用绿色（警告）和红色（错误）的圆圈突出显示，底部的一个单独面板提供了行号、错误信息，有时还提供了建议值或其他修复方法。
 
-![JS Hint应用程序的屏幕截图。狭窄的左边面板是一个文件浏览器或树形。右边的面板有两个部分。顶部有一个标签，打开一个彩色编码和行数的 JavaScript 文件。最下面是错误和警告。错误是红色的，而警告是橙色的。如果某一行有错误或警告，在行号旁边会有一个红色或橙色的点。](jshint-linter.png)其他流行的编辑器也有类似的 linting 包可用。例如，见 [JSHint 安装页面](https://jshint.com/install/)的“文本编辑器和 IDE 的插件”部分。
+![JSHint 程序的屏幕截图。狭窄的左边面板是一个文件浏览器或树形。右边的面板有两个部分。顶部有一个标签，打开一个彩色编码和行数的 JavaScript 文件。最下面是错误和警告。错误是红色的，而警告是橙色的。如果某一行有错误或警告，在行号旁边会有一个红色或橙色的点。](jshint-linter.png)其他流行的编辑器也有类似的 linting 包可用。例如，见 [JSHint 安装页面](https://jshint.com/install/)的“文本编辑器和 IDE 的插件”部分。
 
 #### 其他方式
 
