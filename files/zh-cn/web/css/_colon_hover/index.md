@@ -58,5 +58,5 @@ a:hover {
 
 ## 参见
 
-- [Chromium bug #370155: 在设置移动视口的网站上，不要使 `:hover` 在触摸时保持悬停状态。](https://crbug.com/370155)
-- [Chromium bug #306581: 当页面无法滚动时，在触摸时立即显示 `:hover` 和 `:active` 状态。](https://crbug.com/306581)
+- [Chromium bug #370155：在设置移动端视口的网站上，不要使 `:hover` 在触摸时保持悬停状态。](https://crbug.com/370155)
+- [Chromium bug #306581：当页面无法滚动时，在触摸时立即显示 `:hover` 和 `:active` 状态。](https://crbug.com/306581)
