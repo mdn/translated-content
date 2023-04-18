@@ -46,7 +46,7 @@ configure(configuration)
         ```
 
     - `viewFormats` {{optional_inline}}
-      - : 视图从 `getCurrentTexture()` 返回的纹理创建的可能使用的格式数组。有关所有可能的值，请参阅[纹理格式](https://gpuweb.github.io/gpuweb/#texture-formats)
+      - : 视图从 `getCurrentTexture()` 返回的纹理创建时可能使用的格式数组。有关所有可能的值，请参阅[纹理格式](https://gpuweb.github.io/gpuweb/#texture-formats)。
 
 ### 返回值
 
