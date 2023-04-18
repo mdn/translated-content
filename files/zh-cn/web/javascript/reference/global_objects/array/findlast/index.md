@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 
 **`findLast()`** 方法以相反的顺序迭代数组，并返回满足提供的测试函数的第一个元素的值。如果没有找到对应元素，则返回 {{jsxref("undefined")}}。
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
-
 如果你需要找到：
 
 - *第一个*匹配的元素，使用 {{jsxref("Array.findIndex", "find()")}}。
@@ -16,6 +14,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 - *值的索引*，使用 {{jsxref("Array.prototype.indexOf()")}}。（它类似于 {{jsxref("Array.findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
 - 该数组中是否*存在*一个值，使用 {{jsxref("Array.prototype.includes()")}}。同样地，它检查每个元素是否和值相等，而不是使用一个测试函数。
 - 是否有任意一个元素满足提供的测试函数，使用 {{jsxref("Array.prototype.some()")}}。
+
+
+{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
 
 ## 语法
 
