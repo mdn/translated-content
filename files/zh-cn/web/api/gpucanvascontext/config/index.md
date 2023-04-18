@@ -37,7 +37,7 @@ configure(configuration)
         - `GPUTextureUsage.COPY_DST`：纹理可用于拷贝/写入操作的目标，例如，调用 {{domxref("GPUCommandEncoder.copyTextureToTexture()")}} 方法的 destination 参数。
         - `GPUTextureUsage.RENDER_ATTACHMENT`：纹理可用于渲染通道中的颜色附件，例如，调用 {{domxref("GPUCommandEncoder.beginRenderPass()")}} 中要使用的颜色附件视图。`usage` 的默认值是 `GPUTextureUsage.RENDER_ATTACHMENT`，但请注意，如果明确设置了不同的值，则不会自动地包含它；在这种情况下，你需要去主动过添加。
         - `GPUTextureUsage.TEXTURE_BINDING`：纹理可绑定以在着色器中用作采样纹理，例如，调用 {{domxref("GPUDevice.createBindGroup()")}} 的要使用的绑定组条目。
-        - `GPUTextureUsage.STORAGE_BINDING`: 纹理可绑定以在着色器中用作存储纹理，例如，调用 {{domxref("GPUDevice.createBindGroup()")}} 的要使用的绑定组条目。
+        - `GPUTextureUsage.STORAGE_BINDING`：纹理可绑定以在着色器中用作存储纹理，例如，调用 {{domxref("GPUDevice.createBindGroup()")}} 的要使用的绑定组条目。
 
         请注意，可以通过管道符分隔值来指定多种可能的用法，例如：
 
