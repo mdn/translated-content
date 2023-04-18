@@ -1,5 +1,5 @@
 ---
-title: 'Worker: messageerror event'
+title: Worker：messageerror 事件
 slug: Web/API/Worker/messageerror_event
 ---
 
