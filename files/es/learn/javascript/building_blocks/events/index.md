@@ -9,7 +9,7 @@ l10n:
 
 Los eventos son cosas que pasan en el sistema que estás programando, el cual se encarga de avisarte para que tu código pueda hacer algo al respecto.
 
-Por ejemplo, si el usuario hace click en el botón de una página web, puede que quieras reaccionar a esa acción y mostrar una tarjeta con información.
+Por ejemplo, si el usuario hace clic en el botón de una página web, puede que quieras reaccionar a esa acción y mostrar una tarjeta con información.
 En este artículo vamos a discutir algunos conceptos importantes sobre los eventos y cómo funcionan en el navegador.
 Este no será un estudio exhaustivo, solo veremos lo que necesitas saber en esta etapa.
 
@@ -39,7 +39,7 @@ Existen distintos tipos de eventos que pueden ocurrir.
 
 Por ejemplo:
 
-- El usuario selecciona, hace click o pasa el ratón por encima de cierto elemento.
+- El usuario selecciona, hace clic o pasa el ratón por encima de cierto elemento.
 - El usuario presiona una tecla del teclado.
 - El usuario redimensiona o cierra la ventana del navegador.
 - Una página web terminó de cargarse.
@@ -56,7 +56,7 @@ Los detectores de eventos están pendientes a que ocurra un evento, mientras que
 
 > **Nota:** Los eventos en la web no son parte del núcleo del lenguaje JavaScript, éstos están definidos como parte de las APIs del navegador.
 
-### Un ejemplo: manejando un evento de click
+### Un ejemplo: manejando un evento de clic
 
 En el siguiente ejemplo, tenemos un único elemento {{htmlelement("button")}} en la página:
 
@@ -85,7 +85,7 @@ btn.addEventListener("click", () => {
 });
 ```
 
-La salida del ejemplo es de la siguiente forma. Intenta hacer click en el botón:
+La salida del ejemplo es de la siguiente forma. Intenta hacer clic en el botón:
 
 {{ EmbedLiveSample('An example: handling a click event', '100%', 200, "", "") }}
 
@@ -108,9 +108,9 @@ btn.addEventListener("click", () => {
 });
 ```
 
-El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario hace click sobre él. Entonces define la función `addEventListener()` que estamos llamando aquí. Le estamos pasando dos parámetros:
+El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario hace clic sobre él. Entonces define la función `addEventListener()` que estamos llamando aquí. Le estamos pasando dos parámetros:
 
-- la cadena `"click"`, para indicar que queremos detectar el evento de click.
+- la cadena `"click"`, para indicar que queremos detectar el evento de clic.
 Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/es/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
 - una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Element/body) a ese color.
 
@@ -140,7 +140,7 @@ Se trata de una copia del ejemplo sencillo del color aleatorio con el que ya tra
 
 - [`focus`](/es/docs/Web/API/Element/focus_event) y [`blur`](/es/docs/Web/API/Element/blur_event) — El color cambia cuando el botón es enfocado y desenfocado; Intenta presionar la tecla "Tabulador" para enfocar el botón y presionala de nuevo para desenfocarlo.
 Estos eventos son normalmente utilizados para mostrar información a la hora de completar formularios, o incluso para mostrar un mensaje de error si un campo recibe un valor incorrecto.
-- [`dblclick`](/es/docs/Web/API/Element/dblclick_event) — El color cambia únicamente cuando se hace doble click sobre el botón.
+- [`dblclick`](/es/docs/Web/API/Element/dblclick_event) — El color cambia únicamente cuando se hace doble clic sobre el botón.
 - [`mouseover`](/es/docs/Web/API/Element/mouseover_event) y [`mouseout`](/es/docs/Web/API/Element/mouseout_event) — El color cambia cuando el puntero del ratón pasa por encima del botón, o cuando el puntero sale del botón, respectivamente.
 
 Algunos eventos, como `click`, están disponibles prácticamente en cualquier elemento. Mientras que otros son más específicos y solo son útiles en ciertas situaciones: por ejemplo, el evento [`play`](/es/docs/Web/API/HTMLMediaElement/play_event) solo está disponible en algunos elementos, como {{htmlelement("video")}}.
@@ -187,7 +187,7 @@ myElement.addEventListener("click", functionA);
 myElement.addEventListener("click", functionB);
 ```
 
-Ambas functiones se ejecutarían cuando se hace click en dicho elemento.
+Ambas functiones se ejecutarían cuando se hace clic en dicho elemento.
 
 ### Conocer más
 
@@ -258,7 +258,7 @@ element.onclick = function2;
 Quizá hayas visto un patrón como este en tu código:
 
 ```html
-<button onclick="bgChange()">Haz click</button>
+<button onclick="bgChange()">Haz clic</button>
 ```
 
 ```js
@@ -367,7 +367,7 @@ Intenta escribir en la caja de texto y mira el resultado:
 
 En algunas ocasiones, te encontrarás en una situación donde quieres evitar que un evento realice su acción por defecto.
 El escenario más común es el de un formulario web, por ejemplo, un formulario personalizado para un registro.
-Cuando llenas todos los campos y haces click en el botón para enviar, el comportamiento normal es que la información sea enviada a un servidor para que sea procesada, mientras que el navegador se redirecciona a una página donde se muestra un mensaje de "envío exitoso" (o a la misma página si no se especifica otra).
+Cuando llenas todos los campos y haces clic en el botón para enviar, el comportamiento normal es que la información sea enviada a un servidor para que sea procesada, mientras que el navegador se redirecciona a una página donde se muestra un mensaje de "envío exitoso" (o a la misma página si no se especifica otra).
 
 El problema viene cuando el usuario no ha introducido sus datos correctamente. Como desarrollador, quieres evitar que la información sea enviada al servidor y, en su lugar, mostrar un mensaje de error que señale cuáles son los problemas y qué se necesita para corregirlos.
 Algunos navegadores tienen soporte para características de validación automática de formularios, pero tomando en cuenta que muchos otros no, se te recomienda que no confies en estos mecanismos e implementes tus propias pruebas de validación.
@@ -432,17 +432,17 @@ Considera una página web como la siguiente:
 
 ```html
 <div id="container">
-  <button>Click me!</button>
+  <button>¡Haz clic en mi!</button>
 </div>
 <pre id="output"></pre>
 ```
 
-Aquí el elemento *button* se encuentra dentro de otro elemento, de forma específica, un elemento {{HTMLElement("div")}}. En este caso, decimos que el elemento `<div>` es el **padre** del elemento que contiene. ¿Qué sucede si agregamos un manejador para el evento `click` en el padre y luego hacemos click en el botón?
+Aquí el elemento *button* se encuentra dentro de otro elemento, de forma específica, un elemento {{HTMLElement("div")}}. En este caso, decimos que el elemento `<div>` es el **padre** del elemento que contiene. ¿Qué sucede si agregamos un manejador para el evento `click` en el padre y luego hacemos clic en el botón?
 
 ```js
 const output = document.querySelector("#output");
 function handleClick(e) {
-  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+  output.textContent += `Hiciste clic en un elemento ${e.currentTarget.tagName}\n`;
 }
 
 const container = document.querySelector("#container");
@@ -451,13 +451,13 @@ container.addEventListener("click", handleClick);
 
 {{ EmbedLiveSample('Setting a listener on a parent element', '100%', 200, "", "") }}
 
-Como puedes ver, el padre lanza el evento `click` cuando el usuario hace click en el botón:
+Como puedes ver, el padre lanza el evento `click` cuando el usuario hace clic en el botón:
 
 ```
-You clicked on a DIV element
+Hiciste clic en un elemento DIV
 ```
 
-Esto tiene sentido, el botón está dentro del elemento `<div>`, por lo tanto, cuando haces click en el botón, de forma implícita estás haciendo click en el elemento en el que se encuentra.
+Esto tiene sentido, el botón está dentro del elemento `<div>`, por lo tanto, cuando haces clic en el botón, de forma implícita estás haciendo clic en el elemento en el que se encuentra.
 
 ### Ejemplo de bubbling
 
@@ -466,7 +466,7 @@ Esto tiene sentido, el botón está dentro del elemento `<div>`, por lo tanto, c
 ```html
 <body>
   <div id="container">
-    <button>Click me!</button>
+    <button>¡Haz clic en mi!</button>
   </div>
   <pre id="output"></pre>
 </body>
@@ -477,7 +477,7 @@ Intentemos agregar un manejador de evento al botón, a su padre (el `<div>`) y, 
 ```js
 const output = document.querySelector("#output");
 function handleClick(e) {
-  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+  output.textContent += `Hiciste clic en un elemento ${e.currentTarget.tagName}\n`;
 }
 
 const container = document.querySelector("#container");
@@ -490,21 +490,21 @@ button.addEventListener("click", handleClick);
 
 {{ EmbedLiveSample('Bubbling example', '100%', 200, "", "") }}
 
-Te darás cuenta que los tres elementos lanzan un evento _click_ cuando el usuario hace click en el botón.
+Te darás cuenta que los tres elementos lanzan un evento _click_ cuando el usuario hace clic en el botón.
 
 ```
-You clicked on a BUTTON element
-You clicked on a DIV element
-You clicked on a BODY element
+Hiciste clic en un elemento BUTTON
+Hiciste clic en un elemento DIV
+Hiciste clic en un elemento BODY
 ```
 
 En este caso:
 
-- el click en el botón se lanza primero
-- seguido del click en el padre (el elemento `<div>`
+- el clic en el botón se lanza primero
+- seguido del clic en el padre (el elemento `<div>`)
 - por último, se lanza en el padre del elemento `<div>` (el elemento `<body>`).
 
-Para describir esta situación, decimos que el evento **burbujea hacia arriba** (_bubbles up_, en inglés) desde el elemento más interno que recibió un click.
+Para describir esta situación, decimos que el evento **burbujea hacia arriba** (_bubbles up_, en inglés) desde el elemento más interno que recibió un clic.
 
 Este comportamiento puede ser útil a la par de causar problemas inesperados. En las siguientes secciones veremos los problemas que causa y econtraremos una solución.
 
@@ -512,14 +512,14 @@ Este comportamiento puede ser útil a la par de causar problemas inesperados. En
 
 En este ejemplo, nuestra página contiene un video, el cual se encuentra oculto inicialmente, y un botón con la etiqueta "Display video". Queremos lograr la siguiente interacción:
 
-- Cuando el usuario hace click en el botón de "Display video", muestra la caja que contiene el video, pero sin iniciar la reproducción del video todavía.
-- Cuando el usuario hace click en el video, inicia la reproducción del video.
-- Cuando el usuario hace click en cualquier lugar fuera de la caja del video, oculta la caja nuevamente.
+- Cuando el usuario hace clic en el botón de "Display video", muestra la caja que contiene el video, pero sin iniciar la reproducción del video todavía.
+- Cuando el usuario hace clic en el video, inicia la reproducción del video.
+- Cuando el usuario hace clic en cualquier lugar fuera de la caja del video, oculta la caja nuevamente.
 
 El HTML se ve así:
 
 ```html
-<button>Display video</button>
+<button>Mostrar vídeo</button>
 
 <div class="hidden">
   <video>
@@ -583,9 +583,9 @@ Veamos como funciona esto:
 
 {{ EmbedLiveSample('Video_player_example', '100%', 500) }}
 
-Deberías ver que cuando haces click en el botón, la caja y el video que contiene son mostrados. Pero cuando haces click en el video, éste empieza a reproducirse pero, ¡la caja se oculta de nuevo!
+Deberías ver que cuando haces clic en el botón, la caja y el video que contiene son mostrados. Pero cuando haces clic en el video, éste empieza a reproducirse pero, ¡la caja se oculta de nuevo!
 
-El video se encuentra dentro del `<div>`, ya que es parte de él, por lo tanto, hacer click en el video ejecuta ambos manejadores de eventos, ocasionando este comportamiento.
+El video se encuentra dentro del `<div>`, ya que es parte de él, por lo tanto, hacer clic en el video ejecuta ambos manejadores de eventos, ocasionando este comportamiento.
 
 ### Resolviendo el problema con stopPropagation()
 
@@ -610,7 +610,7 @@ video.addEventListener("click", (event) => {
 box.addEventListener("click", () => box.classList.add("hidden"));
 ```
 
-Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en el objeto evento dentro del manejador del evento `'click'` para el elemento `<video>`. Esto evitará que el evento burbujee hacia la caja de más arriba. Ahora intenta hacer click en el botón y luego en el video:
+Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en el objeto evento dentro del manejador del evento `'click'` para el elemento `<video>`. Esto evitará que el evento burbujee hacia la caja de más arriba. Ahora intenta hacer clic en el botón y luego en el video:
 
 {{EmbedLiveSample("Fixing the problem with stopPropagation()", '100%', 500)}}
 
@@ -660,7 +660,7 @@ Este ejemplo es parecido al [ejemplo de _bubbling_](#bubbling_example) que vimos
 ```html
 <body>
   <div id="container">
-    <button>Click me!</button>
+    <button>¡Haz clic en mi!</button>
   </div>
   <pre id="output"></pre>
 </body>
@@ -669,7 +669,7 @@ Este ejemplo es parecido al [ejemplo de _bubbling_](#bubbling_example) que vimos
 ```js
 const output = document.querySelector("#output");
 function handleClick(e) {
-  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+  output.textContent += `Hiciste clic en un elemento ${e.currentTarget.tagName}\n`;
 }
 
 const container = document.querySelector("#container");
@@ -685,9 +685,9 @@ button.addEventListener("click", handleClick);
 En este caso, el orden de los mensajes está invertido: el manejador de evento del `<body>` se lanza primero, seguido del manejador del `<div>` y por el último el manejador del `<button>`:
 
 ```
-You clicked on a BODY element
-You clicked on a DIV element
-You clicked on a BUTTON element
+Hiciste clic en un elemento BODY
+Hiciste clic en un elemento DIV
+Hiciste clic en un elemento BUTTON
 ```
 
 ¿Por qué molestarse con ambos métodos, captura y burbujeo? En los malos viejos tiempos, cuando los navegadores eran mucho menos compatibles entre sí, Netscape utilizaba solamente captura de eventos, mientras que Internet Explorer solo usaba burbujeo de eventos. Cuando W3C decidió tratar de estandarizar este comportamiento y llegar a un acuerdo, terminaron con este sistema que incluye ambos métodos, el cual está implementado por los navegadores modernos.
@@ -699,7 +699,7 @@ Por defecto, casi todos los manejadores de eventos están registrados en la fase
 En la anterior sección, vimos un problema ocasionado por el burbujeo de eventos y cómo solucionarlo.
 El burbujeo de eventos no simplemente es molesto, sino que puede resultar bastante útil. Particularmente, hace posible la **delegación de eventos**. En esta técnica, cuando queremos que cierto código se ejecute cuando el usuario interacciona con cualquiera de un gran número de elementos descendientes, establecemos el detector de eventos en el padre y dejamos que los eventos burbujeen hasta el padre, en vez de establecer el detector de eventos individualmente en cada descendiente.
 
-Regresemos a nuestro primer ejemplo, donde establecemos el color de toda la página cuando el usuario hace click en un botón. Imagina que en su lugar, la página está dividida en 16 secciones, y queremos establecer un color de fondo aleatorio en cada sección cuando el usuario hace click en una sección.
+Regresemos a nuestro primer ejemplo, donde establecemos el color de toda la página cuando el usuario hace clic en un botón. Imagina que en su lugar, la página está dividida en 16 secciones, y queremos establecer un color de fondo aleatorio en cada sección cuando el usuario hace clic en una sección.
 
 Aquí está el HTML:
 
@@ -734,8 +734,8 @@ Estamos usando un poco de CSS para establecer el tamaño y posición de las secc
 }
 ```
 
-Ahora desde JavaScript podemos agregar un manejador del evento click para cada sección.
-Pero una solución más sencilla y más eficiente sería agregar un solo detector de eventos en el padre, y aprovecharnos del burbujeo de eventos para asegurarnos de que el manejador se ejecuta cuando el usuario hace click en una sección:
+Ahora desde JavaScript podemos agregar un manejador del evento clic para cada sección.
+Pero una solución más sencilla y más eficiente sería agregar un solo detector de eventos en el padre, y aprovecharnos del burbujeo de eventos para asegurarnos de que el manejador se ejecuta cuando el usuario hace clic en una sección:
 
 ```js
 function random(number) {
@@ -755,7 +755,7 @@ container.addEventListener(
 );
 ```
 
-El resultado es de la siguiente forma (intenta hacer click alreador):
+El resultado es de la siguiente forma (intenta hacer clic alreador):
 
 {{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
 
