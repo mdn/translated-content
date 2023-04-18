@@ -265,9 +265,9 @@ if ("geolocation" in navigator) {
 
 最后一点，不要把特性检测和**浏览器嗅探**（检测什么特定的浏览器在访问网站）混淆起来，这是一种可怕的做法，应该不惜一切代价加以阻止。更多细节请参见[使用不良的浏览器嗅探代码](#使用不良的浏览器嗅探代码)，稍后我们就会讲到。
 
-> **备注：** 有些特征是已知不可检测的——见 Modernizr 的[不可检测特性列表](https://github.com/Modernizr/Modernizr/wiki/Undetectables)。
+> **备注：** 有些特性是已知不可检测的——见 Modernizr 的[不可检测特性列表](https://github.com/Modernizr/Modernizr/wiki/Undetectables)。
 
-> **备注：** 特征检测将在本模块后面的专门文章中更详细地介绍。
+> **备注：** 特性检测将在本模块后面的专门文章中更详细地介绍。
 
 #### 库
 
