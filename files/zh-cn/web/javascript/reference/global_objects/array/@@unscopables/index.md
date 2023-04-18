@@ -5,7 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 
 {{JSRef}}
 
-Symbol 属性 **`@@unscopable`** 包含了所有 ES2015 (ES6) 中新定义的、且并未被更早的 ECMAScript 标准收纳的属性名。这些属性被排除在由 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句绑定的环境中。
 
 `Array.prototype` 的 **`@@unscopables`** 数据属性被所有 {{jsxref("Array")}} 实例共享。它包含在 ES2015(ES6) 版本之前 ECMAScript 标准中未收纳的属性名，并且这些属性被排除在由 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句绑定的环境中。
 
