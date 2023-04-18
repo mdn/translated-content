@@ -17,9 +17,9 @@ page-type: guide
 这些值具有以下作用：
 
 - `size`
-  - ：查询将基于容器的[行向和块向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度。将布局、样式和大小的限制应用于容器。
+  - ：查询将基于容器的[行向和块向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和大小的限制应用于容器。
 - `inline-size`
-  - ：查询将基于容器的[行向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度。将布局、样式和行向大小的限制应用于元素。
+  - ：查询将基于容器的[行向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和行向大小的限制应用于元素。
 - `normal`
   - ：该元素不是任何容器大小查询的查询容器，但仍然是容器样式查询的查询容器。
 
@@ -91,12 +91,12 @@ page-type: guide
 
 - `cqw`：查询容器宽度的 1%
 - `cqh`：查询容器高度的 1%
-- `cqi`：查询容器内联尺寸的 1%
+- `cqi`：查询容器行向尺寸的 1%
 - `cqb`：查询容器块尺寸的 1%
 - `cqmin`：`cqi` 和 `cqb` 中较小的值
 - `cqmax`：`cqi` 和 `cqb` 中较大的值
 
-以下示例使用 `cqi` 单位根据容器的内联尺寸设置标题的字体大小：
+以下示例使用 `cqi` 单位根据容器的行向尺寸设置标题的字体大小：
 
 ```css
 @container (min-width: 700px) {
