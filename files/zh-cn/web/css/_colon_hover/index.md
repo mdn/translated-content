@@ -9,7 +9,7 @@ slug: Web/CSS/:hover
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-hover.html", "tabbed-shorter")}}
 
-`:hover` 伪类定义的样式将被任何后续的链接相关伪类（{{ cssxref(":link") }}、{{ cssxref(":visited") }}、或 {{ cssxref(":active") }}）覆盖，这些伪类的特殊性至少相等。为了适当地为链接设置样式，应该在 `:link`和 `:visited` 规则之后但在 `:active` 规则之前放置 `:hover` 规则，即按照 _LVHA 定义的顺序_：`link` - `:visited` - `:hover` - `:active`。
+`:hover` 伪类定义的样式将被任何后续的链接相关伪类（{{ cssxref(":link") }}、{{ cssxref(":visited") }} 或 {{ cssxref(":active") }}）覆盖，这些伪类的特殊性至少相等。为了适当地为链接设置样式，应该在 `:link`和 `:visited` 规则之后，`:active` 规则之前放置 `:hover` 规则，即按照 _LVHA 定义的顺序_：`link` — `:visited` — `:hover` — `:active`。
 
 > **备注：** 在触摸屏上，`:hover` 伪类可能存在问题。根据不同的浏览器，`:hover` 伪类可能永远不会匹配，只会在触摸一个元素后短暂匹配，或者即使用户停止触摸并且直到用户触摸另一个元素之前仍然匹配。Web 开发人员应确保内容可以在具有有限或不存在悬停功能的设备上访问。
 
