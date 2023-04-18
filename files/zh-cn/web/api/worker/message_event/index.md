@@ -1,5 +1,5 @@
 ---
-title: 'Worker: message event'
+title: Worker：message 事件
 slug: Web/API/Worker/message_event
 ---
 
