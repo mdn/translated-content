@@ -42,7 +42,7 @@ requestAdapter(options)
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，如果请求成功，会兑现为一个 {{domxref("GPUAdapter")}} 对象实例。
+一个 {{jsxref("Promise")}}，如果请求成功，会兑现一个 {{domxref("GPUAdapter")}} 对象实例。
 
 如果未能获取合适的适配器，`requestAdapter()` 将决议为 `null`。
 
