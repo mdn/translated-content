@@ -127,7 +127,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `no-referrer`
       - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) n'est pas envoyé.
     - `no-referrer-when-downgrade`
-      - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) ne sera pas envoyé aux origines dans TLS/HTTPS.
+      - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) ne sera pas envoyé aux origines sans TLS/HTTPS.
     - `origin`:
       - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn/Common_questions/What_is_a_URL).
     - `origin-when-cross-origin`
