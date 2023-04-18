@@ -50,18 +50,18 @@ Por ejemplo:
 A partir de esto (y dando un vistazo a la [referencia de eventos](/es/docs/Web/Events) de MDN) puedes observar que existen **muchos** eventos que pueden ser lanzados.
 
 Para reaccionar a un evento, puedes asociarle un **manejador de eventos**. Esto es un bloque de código (normalmente una función de JavaScript que tú como programador creas) que se ejecuta cuando el evento ocurre.
-Cuando uno de estos bloques de código se configura para ejecutarse en respuesta de un evento, decimos que estamos **registrando un manejador de evento**.
-Nota: Los manejador de eventos a veces son llamados **detectores de eventos**. Estos términos, para lo que nos concierne justo ahora, son intercambiables, aunque hablando de forma estricta, hacen referencia a dos mecanismos que trabajan juntos.
+Cuando uno de estos bloques de código se configura para ejecutarse en respuesta de un evento, decimos que estamos **registrando un manejador de eventos**.
+Nota: Los manejadores de eventos a veces son llamados **detectores de eventos**. Estos términos, para lo que nos concierne justo ahora, son intercambiables, aunque hablando de forma estricta, hacen referencia a dos mecanismos que trabajan juntos.
 Los detectores de eventos están pendientes a que ocurra un evento, mientras que el manejador es el código que se ejecuta en respuesta del evento.
 
-> **Nota:** Los eventos en la web no son parte del núcleo del lenguaje JavaScript, éstos están definidos como parte de las APIs del navegador.
+> **Nota:** Los eventos en la web no son parte del núcleo del lenguaje JavaScript, éstos están definidos como parte de las API del navegador.
 
 ### Un ejemplo: manejando un evento de clic
 
 En el siguiente ejemplo, tenemos un único elemento {{htmlelement("button")}} en la página:
 
 ```html
-<button>Change color</button>
+<button>Cambiar el color</button>
 ```
 
 ```css hidden
@@ -91,7 +91,7 @@ La salida del ejemplo es de la siguiente forma. Intenta hacer clic en el botón:
 
 ## Utilizando addEventListener()
 
-Como pudimos ver en el anterior ejemplo, los objetos que pueden lanzar eventos tienen el método {{domxref("EventTarget/addEventListener", "addEventListener()")}}, y este es el mecanismo recomendado para registrar manejadores de eventos.
+Como pudimos ver en el ejemplo anterior, los objetos que pueden lanzar eventos tienen el método {{domxref("EventTarget/addEventListener", "addEventListener()")}}, y este es el mecanismo recomendado para registrar manejadores de eventos.
 
 Ahora veamos más de cerca el código del ejemplo anterior:
 
@@ -133,7 +133,7 @@ btn.addEventListener("click", changeBackground);
 
 ### Detectando otros eventos
 
-Existen distintos tipos de eventos que pueden ser lanzados por un elemento de tipo *button*. Hagamos algunos experimentos.
+Existen distintos tipos de eventos que pueden ser lanzados por un elemento de tipo botón. Hagamos algunos experimentos.
 
 Primero, haz una copia local del archivo [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html), y ábrelo en tu navegador.
 Se trata de una copia del ejemplo sencillo del color aleatorio con el que ya trabajamos anteriormente. Ahora intenta a cambiar `click` por cada uno de los siguientes valores y observa los resultados en el ejemplo:
@@ -203,7 +203,7 @@ No obstante, existen otras dos formas distintas para registrar manejadores de ev
 ### Propiedades para manejar eventos
 
 Los objetos (como botones) que pueden lanzar eventos, normalmente tienen propiedades cuyo nombre es `on` seguido del nombre del evento. Por ejemplo, elementos con la propiedad `onclick`.
-A esto se le conoce como una propiedad para manejar eventos, o _event manager property_.
+A esto se le conoce como una propiedad para manejar eventos, o _event handler property_.
 Para detectar un evento, puedes asignar la función manejador a dicha propiedad.
 
 Por ejemplo, podemos reescribir el ejemplo del color aleatorio de esta forma:
@@ -349,7 +349,7 @@ const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
 textBox.addEventListener(
   "keydown",
-  (event) => (output.textContent = `You pressed "${event.key}".`)
+  (event) => (output.textContent = `Presionaste "${event.key}".`)
 );
 ```
 
@@ -378,11 +378,11 @@ Primero, un formulario HTML simple que requiere que introduzcas tu nombre y apel
 ```html
 <form>
   <div>
-    <label for="fname">First name: </label>
+    <label for="fname">Nombre: </label>
     <input id="fname" type="text" />
   </div>
   <div>
-    <label for="lname">Last name: </label>
+    <label for="lname">Apellido: </label>
     <input id="lname" type="text" />
   </div>
   <div>
@@ -410,7 +410,7 @@ const para = document.querySelector("p");
 form.addEventListener("submit", (e) => {
   if (fname.value === "" || lname.value === "") {
     e.preventDefault();
-    para.textContent = "You need to fill in both names!";
+    para.textContent = "¡Necesitas completar ambos campos!";
   }
 });
 ```
@@ -422,9 +422,9 @@ El resultado es el siguiente:
 
 > **Nota:** Para ver el código fuente completo, aquí tienes el archivo [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (también puedes [verlo ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aquí).
 
-## Bubbling de eventos
+## Burbujeo de eventos
 
-El *event bubbling* (o burbujeo de eventos) describe como el navegador maneja eventos dirigidos a elementos anidados.
+El burbujeo de eventos (o _event bubbling_) describe como el navegador maneja eventos dirigidos a elementos anidados.
 
 ### Estableciendo un detector de eventos en un elemento padre
 
@@ -437,7 +437,7 @@ Considera una página web como la siguiente:
 <pre id="output"></pre>
 ```
 
-Aquí el elemento *button* se encuentra dentro de otro elemento, de forma específica, un elemento {{HTMLElement("div")}}. En este caso, decimos que el elemento `<div>` es el **padre** del elemento que contiene. ¿Qué sucede si agregamos un manejador para el evento `click` en el padre y luego hacemos clic en el botón?
+Aquí el botón se encuentra dentro de otro elemento, de forma específica, un elemento {{HTMLElement("div")}}. En este caso, decimos que el elemento `<div>` es el **padre** del elemento que contiene. ¿Qué sucede si agregamos un manejador para el evento `click` en el padre y luego hacemos clic en el botón?
 
 ```js
 const output = document.querySelector("#output");
@@ -459,7 +459,7 @@ Hiciste clic en un elemento DIV
 
 Esto tiene sentido, el botón está dentro del elemento `<div>`, por lo tanto, cuando haces clic en el botón, de forma implícita estás haciendo clic en el elemento en el que se encuentra.
 
-### Ejemplo de bubbling
+### Ejemplo de burbujeo
 
 ¿Qué sucede si agregamos un detector de eventos al botón _y_ al padre?
 
@@ -472,7 +472,7 @@ Esto tiene sentido, el botón está dentro del elemento `<div>`, por lo tanto, c
 </body>
 ```
 
-Intentemos agregar un manejador de evento al botón, a su padre (el `<div>`) y, además, al elemento {{HTMLElement("body")}} que contiene a ambos:
+Intentemos agregar un manejador de eventos al botón, a su padre (el `<div>`) y, además, al elemento {{HTMLElement("body")}} que contiene a ambos:
 
 ```js
 const output = document.querySelector("#output");
@@ -490,7 +490,7 @@ button.addEventListener("click", handleClick);
 
 {{ EmbedLiveSample('Bubbling example', '100%', 200, "", "") }}
 
-Te darás cuenta que los tres elementos lanzan un evento _click_ cuando el usuario hace clic en el botón.
+Te darás cuenta que los tres elementos lanzan un evento de clic cuando el usuario hace clic en el botón:
 
 ```
 Hiciste clic en un elemento BUTTON
@@ -527,8 +527,8 @@ El HTML se ve así:
       src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
       type="video/webm" />
     <p>
-      Your browser doesn't support HTML video. Here is a
-      <a href="rabbit320.mp4">link to the video</a> instead.
+      Su navegador no es compatible con video HTML. Aquí hay un
+      <a href="rabbit320.mp4">enlace al video</a> en su lugar.
     </p>
   </video>
 </div>
@@ -615,7 +615,7 @@ Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en e
 {{EmbedLiveSample("Fixing the problem with stopPropagation()", '100%', 500)}}
 
 ```html hidden
-<button>Display video</button>
+<button>Mostrar vídeo</button>
 
 <div class="hidden">
   <video>
@@ -623,12 +623,11 @@ Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en e
       src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
       type="video/webm" />
     <p>
-      Your browser doesn't support HTML video. Here is a
-      <a href="rabbit320.mp4">link to the video</a> instead.
+      Su navegador no es compatible con video HTML. Aquí hay un
+      <a href="rabbit320.mp4">enlace al video</a> en su lugar.
     </p>
   </video>
 </div>
-```
 
 ```css hidden
 div {
@@ -651,11 +650,11 @@ div video {
 
 ### Captura de eventos
 
-Una forma alternativa para la propagación de eventos es _captura de eventos_ (_event capture_, en inglés). Esta es parecida al _bubbling_ pero el sentido está invertido: en vez de que el evento se lance primero en el elemento objetivo más anidado y, sucesivamente, en elementos menos anidados, el evento se lanza primero en el elemento _menos anidado_, y luego en los elementos más anidados, hasta que el objetivo es alcanzado.
+Una forma alternativa para la propagación de eventos es la _captura de eventos_ (_event capture_, en inglés). Esta es parecida al _bubbling_ pero el sentido está invertido: en vez de que el evento se lance primero en el elemento objetivo más anidado y, sucesivamente, en elementos menos anidados, el evento se lanza primero en el elemento _menos anidado_, y luego en los elementos más anidados, hasta que el objetivo es alcanzado.
 
 La captura de eventos está desactivada por defecto. Para activarla debes pasar la opción `capture` al método `addEventListener()`.
 
-Este ejemplo es parecido al [ejemplo de _bubbling_](#bubbling_example) que vimos anteriormente, a excepción de que ahora hemos usado la opción `capture`:
+Este ejemplo es parecido al [ejemplo de burbujeo](#bubbling_example) que vimos anteriormente, a excepción de que ahora hemos usado la opción `capture`:
 
 ```html
 <body>
@@ -696,7 +695,7 @@ Por defecto, casi todos los manejadores de eventos están registrados en la fase
 
 ## Delegación de eventos
 
-En la anterior sección, vimos un problema ocasionado por el burbujeo de eventos y cómo solucionarlo.
+En la sección anterior, vimos un problema ocasionado por el burbujeo de eventos y cómo solucionarlo.
 El burbujeo de eventos no simplemente es molesto, sino que puede resultar bastante útil. Particularmente, hace posible la **delegación de eventos**. En esta técnica, cuando queremos que cierto código se ejecute cuando el usuario interacciona con cualquiera de un gran número de elementos descendientes, establecemos el detector de eventos en el padre y dejamos que los eventos burbujeen hasta el padre, en vez de establecer el detector de eventos individualmente en cada descendiente.
 
 Regresemos a nuestro primer ejemplo, donde establecemos el color de toda la página cuando el usuario hace clic en un botón. Imagina que en su lugar, la página está dividida en 16 secciones, y queremos establecer un color de fondo aleatorio en cada sección cuando el usuario hace clic en una sección.
@@ -768,7 +767,7 @@ El resultado es de la siguiente forma (intenta hacer clic alreador):
 Los eventos no son exclusivos de JavaScript, la mayoría de lenguajes de programación poseen algún tipo de modelo de eventos. El funcionamiento de estos modelos puede ser diferente de lo que tenemos en JavaScript.
 De hecho, el modelo de eventos en JavaScript para páginas web es diferente del modelo de eventos de JavaScript cuando se usa en otros entornos.
 
-Por ejemplo, [Node.js](/es/docs/Learn/Server-side/Express_Nodejs) es un tiempo de ejecución (_runtime, en inglés_) bastante popular que le permite a los desarrolladores usar JavaScript para crear aplicaciones de redes y del lado del servidor.
+Por ejemplo, [Node.js](/es/docs/Learn/Server-side/Express_Nodejs) es un entorno de ejecución (_runtime, en inglés_) bastante popular que le permite a los desarrolladores usar JavaScript para crear aplicaciones de redes y del lado del servidor.
 El [modelo de eventos de Node.js](https://nodejs.org/api/events.html) se basa en detectores para detectar eventos y emisores para emitir eventos periodicamente, esto no suena muy alejado de lo que conocemos pero, el código sí es bastante diferente. En este modelo, se usan funciones como `on()` para registrar un detector de eventos, y `once()` para registrar un detector de eventos que elimina su registro después de haber sido ejecutado una vez.
 
 La [documentación del evento HTTP connect](https://nodejs.org/api/http.html#event-connect) proporciona un buen ejemplo.
@@ -787,7 +786,7 @@ Haz llegado al final de este artículo pero, ¿Recuerdas la información más im
 
 Por ahora deberías saber todo lo que necesitas sobre eventos en la web. Como mencionamos anteriormente, los eventos en realidad no son parte del núcleo de JavaScript, ya que estos son definidos como parte de la API del navegador.
 
-De igual forma, es importante entender que los diferentes contextos en los que JavaScript se usa, tienen diferentes modelos de eventos, desde Web APIs a otras áreas como WebExtensions y Node.js (JavaScript del lado del servidor).
+De igual forma, es importante entender que los diferentes contextos en los que JavaScript se usa, tienen diferentes modelos de eventos, desde las API Web a otras áreas como WebExtensions y Node.js (JavaScript del lado del servidor).
 
 No estamos esperando que entiendas todas estás áreas justo ahora, pero sin duda mencionar estos temas te ayudará a entender los aspectos básicos de los eventos mientras sigues adelante en tu proceso de aprendizaje de desarrollo web.
 
