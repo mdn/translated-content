@@ -63,7 +63,7 @@ body {
 
 ## 无障碍考虑
 
-辅助技术（如屏幕阅读器）无法解析交互内容为空的情况。所有交互内容必须具有可访问的名称，这是通过为交互控件的父元素（如[锚点](/zh-CN/docs/Web/HTML/Element/a)、[按钮](/zh-CN/docs/Web/HTML/Element/button)等）提供文本值来创建的。可访问名称将交互控件暴露给[可访问性树](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)，这是一个通信信息有用于辅助技术的 API。
+辅助技术（如屏幕阅读器）无法解析交互内容为空的情况。所有交互内容必须具有无障碍名称，这是通过为交互控件的父元素（如[锚点](/zh-CN/docs/Web/HTML/Element/a)、[按钮](/zh-CN/docs/Web/HTML/Element/button)等）提供文本值来创建的。可访问名称将交互控件暴露给[无障碍树](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)，这是一个传达对辅助技术有用的信息的 API。
 
 提供交互控件的可访问名称的文本可以使用[一些属性的组合](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)进行隐藏，这些属性可以将其在视觉上从屏幕上移除，但可以被辅助技术解析。这通常用于仅依靠图标来传达目的的按钮。
 
