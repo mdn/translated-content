@@ -12,9 +12,9 @@ page-type: guide
 
 ## 使用容器查询
 
-要使用容器查询，你需要在元素上声明一个**容器上下文（Containment context）**，以便浏览器知道你可能希望稍后查询此容器的尺寸。为此，请使用 {{Cssxref("container-type")}} 属性，值为 `size`、`inline-size` 或 `normal`。
+要使用容器查询，你需要在元素上声明一个**局限上下文**，以便浏览器知道你可能希望稍后查询此容器的尺寸。为此，请使用 {{Cssxref("container-type")}} 属性，值为 `size`、`inline-size` 或 `normal`。
 
-这些值具有以下作用：
+这些值具有以下效果：
 
 - `size`
   - ：查询将基于容器的[行向和块向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和大小的限制应用于容器。
@@ -28,8 +28,8 @@ page-type: guide
 ```html
 <div class="post">
   <div class="card">
-    <h2>Card title</h2>
-    <p>Card content</p>
+    <h2>卡片标题</h2>
+    <p>卡片内容</p>
   </div>
 </div>
 ```
@@ -42,7 +42,7 @@ page-type: guide
 }
 ```
 
-接下来，使用 {{cssxref("@container")}} 的 at 规则来定义容器查询。以下示例中的查询将根据具有容器上下文的最近祖先元素的大小应用样式于元素。具体而言，如果容器宽度大于 `700px`，则此查询将为卡片标题应用更大的字体大小：
+接下来，使用 at 规则 {{cssxref("@container")}} 定义容器查询。以下示例中的查询将根据具有局限上下文的最近祖先元素的大小应用样式于元素。具体而言，如果容器宽度大于 `700px`，则此查询将为卡片标题应用更大的字体大小：
 
 ```css
 /* 默认的卡片标题样式 */
@@ -60,9 +60,9 @@ page-type: guide
 
 使用容器查询时，卡片可以在页面的多个区域中重复使用，无需每次都知道它放置在的具体位置。如果包含卡片的容器宽度小于 `700px`，卡片标题的字体将变小，如果卡片在宽度大于 `700px` 的容器中，则卡片标题的字体将变大。有关容器查询语法的更多信息，请参阅 {{cssxref("@container")}} 页面。
 
-### 命名容器上下文
+### 为局限上下文命名
 
-在前面的部分中，容器查询是基于最近具有容器上下文的祖先元素应用样式的。可以使用 {{Cssxref("container-name")}} 属性为容器上下文命名。命名后，可以在 `@container` 查询中使用该名称以定位特定容器。以下示例创建了一个名为 `sidebar` 的容器上下文：
+在上一节中，容器查询基于有局限上下文的最近祖先元素应用样式。可以使用 {{Cssxref("container-name")}} 属性为局限上下文命名。命名后，可以在 `@container` 查询中使用该名称针对特定容器。以下示例创建了一个名为 `sidebar` 的局限上下文：
 
 ```css
 .post {
@@ -71,7 +71,7 @@ page-type: guide
 }
 ```
 
-然后，你可以使用 `@container` 的 at 规则来定位此容器上下文：
+然后，你可以使用 at 规则 `@container` 针对此局限上下文：
 
 ```css
 @container sidebar (min-width: 700px) {
@@ -81,7 +81,7 @@ page-type: guide
 }
 ```
 
-有关命名容器上下文的更多信息，请参见 {{cssxref("container-name")}} 页面。
+有关为局限上下文命名的更多信息，请参见 {{cssxref("container-name")}} 页面。
 
 ### 简写容器语法
 
@@ -119,7 +119,7 @@ page-type: guide
 }
 ```
 
-如果您想在视口较小的设备上使用单列布局，则可以使用媒体查询来更改网格模板：
+如果你想在视口较小的设备上使用单列布局，则可以使用媒体查询来更改网格模板：
 
 ```css
 @media (max-width: 700px) {
@@ -131,7 +131,7 @@ page-type: guide
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/Web/CSS/Media_Queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)
 - CSS {{Cssxref("@container")}} at 规则
 - CSS {{Cssxref("contain")}} 属性
 - CSS {{Cssxref("container")}} 简写属性
