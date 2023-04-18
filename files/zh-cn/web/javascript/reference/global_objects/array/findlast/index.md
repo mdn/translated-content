@@ -46,7 +46,7 @@ findLast(callbackFn, thisArg)
 
 `findLast()` 是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。该方法对数组每一个元素按降序（索引从大到小）执行 `callbackFn` 函数，直到 `callbackFn` 返回一个[真值](/zh-CN/docs/Glossary/Truthy)。然后 `findLast()` 返回该元素的值并停止遍历数组。如果 `callbackFn` 没有返回一个真值，则 `findLast()` 返回 {{jsxref("undefined")}}。
 
-`callbackFn` 会被数组中的*每个*元素调用，而不仅仅是那些被赋值的元素。对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)来说，空槽行为和`undefined`相同。
+`callbackFn` 会被数组中的*每个*元素调用，而不仅仅是那些被赋值的元素。对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)来说，空槽行为和 `undefined` 相同。
 
 `findLast()` 方法不会改变调用它的数组，但是提供的 `callbackFn` 可以。但是请注意，数组的长度是在第一次调用 `callbackFn` *之前*保存的。因此：
 
@@ -56,7 +56,7 @@ findLast(callbackFn, thisArg)
 
 >**警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
 
-`findLast()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性
+`findLast()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
 ## 示例
 
@@ -162,7 +162,7 @@ array.findLast((value, index) => {
 
 ### 在非数组对象上调用 findLast()
 
-`findLast()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引
+`findLast()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
 
 ```js
 const arrayLike = {
