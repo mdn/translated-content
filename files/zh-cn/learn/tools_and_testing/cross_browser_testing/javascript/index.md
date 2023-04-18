@@ -263,7 +263,7 @@ if ("geolocation" in navigator) {
 
 你也可以为 CSS 特性编写这样的测试，例如测试 *[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)* 是否存在（例如：`paragraph.style.transform !== undefined`）。但对于 CSS 和 JavaScript 来说，使用一个成熟的特性检测库可能比一直写自己的更好。Modernizr 是特性检测测试的工业标准。
 
-最后一点，不要把特征检测和**浏览器嗅探**混淆起来（检测什么特定的浏览器在访问网站），这是一种可怕的做法，应该不惜一切代价加以阻止。更多细节请参见[使用不良的浏览器嗅探代码](#使用不良的浏览器嗅探代码)，稍后我们就会讲到。
+最后一点，不要把特性检测和**浏览器嗅探**（检测什么特定的浏览器在访问网站）混淆起来，这是一种可怕的做法，应该不惜一切代价加以阻止。更多细节请参见[使用不良的浏览器嗅探代码](#使用不良的浏览器嗅探代码)，稍后我们就会讲到。
 
 > **备注：** 有些特征是已知不可检测的——见 Modernizr 的[不可检测特性列表](https://github.com/Modernizr/Modernizr/wiki/Undetectables)。
 
