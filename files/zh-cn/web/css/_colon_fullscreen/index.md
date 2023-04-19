@@ -28,12 +28,10 @@ slug: Web/CSS/:fullscreen
 该页面的 HTML 如下所示：
 
 ```html
-<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
+<h1>MDN Web 文档演示: :fullscreen pseudo-class</h1>
 
 <p>
-  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
-  change the style of a button used to toggle fullscreen mode on and off,
-  entirely using CSS.
+  此演示使用 <code>:fullscreen</code> 伪类完全使用 CSS 来实现自动更改用于开启和关闭全屏模式的按钮的样式。
 </p>
 
 <button id="fs-toggle">切换全屏</button>
