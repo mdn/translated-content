@@ -9,12 +9,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 
 如果你需要找到：
 
-- *第一个*匹配的元素，使用 {{jsxref("Array.findIndex", "find()")}}。
-- 数组中最后一个匹配元素的*索引*，使用 {{jsxref("Array.findLastIndex", "findLastIndex()")}}。
-- *值的索引*，使用 {{jsxref("Array.prototype.indexOf()")}}。（它类似于 {{jsxref("Array.findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
-- 该数组中是否*存在*一个值，使用 {{jsxref("Array.prototype.includes()")}}。同样地，它检查每个元素是否和值相等，而不是使用一个测试函数。
-- 是否有任意一个元素满足提供的测试函数，使用 {{jsxref("Array.prototype.some()")}}。
-
+- *第一个*匹配的元素，使用 {{jsxref("Array/find", "find()")}}。
+- 数组中最后一个匹配元素的*索引*，使用 {{jsxref("Array/findLastIndex", "findLastIndex()")}}。
+- *值的索引*，使用 {{jsxref("Array/indexOf", "indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
+- 该数组中是否*存在*一个值，使用 {{jsxref("Array/includes()", "includes()")}}。同样地，它检查每个元素是否和值相等，而不是使用一个测试函数。
+- 是否有任意一个元素满足提供的测试函数，使用 {{jsxref("Array/some()", "some()")}}。
 
 {{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
 
@@ -72,7 +71,7 @@ const inventory = [
   {name: 'cherries', quantity: 5}
 ];
 
-// return true inventory stock is low
+// 真实的库存低时返回 true
 function isNotEnough(item) {
   return item.quantity < 2;
 }
@@ -83,7 +82,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### 使用箭头函数和解构
 
-前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)来编写：
+前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构对象)来编写：
 
 ```js
 const inventory = [
@@ -116,48 +115,48 @@ function isPrime(element) {
   return true;
 }
 
-console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
+console.log([4, 6, 8, 12].findLast(isPrime)); // undefined，没有找到
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
+
 ### 在稀疏数组上使用 findLast()
 
-稀疏数组中的空槽*被*访问，并被视为 `undefined`
-
+稀疏数组中的空槽*被*访问，并被视为 `undefined`。
 
 ```js
-// Declare array with no elements at indexes 2, 3, and 4
+// 声明一个在索引 2、3 和 4 处没有元素的数组
 const array = [0, 1, , , , 5, 6];
 
-// Shows all indexes, not just those with assigned values
+// 显示所有的索引（不只包括那些被赋值的）
 array.findLast((value, index) => {
-  console.log(`Visited index ${index} with value ${value}`);
+  console.log(`访问索引 ${index}，值为 ${value}`);
 });
-// Visited index 6 with value 6
-// Visited index 5 with value 5
-// Visited index 4 with value undefined
-// Visited index 3 with value undefined
-// Visited index 2 with value undefined
-// Visited index 1 with value 1
-// Visited index 0 with value 0
+// 访问索引 6，值为 6
+// 访问索引 5，值为 5
+// 访问索引 4，值为 undefined
+// 访问索引 3，值为 undefined
+// 访问索引 2，值为 undefined
+// 访问索引 1，值为 1
+// 访问索引 0，值为 0
 
-// Shows all indexes, including deleted
+// 显示所有的索引（包括已被删除的）
 array.findLast((value, index) => {
-  // Delete element 5 on first iteration
+  // 在第一次迭代时删除值为 5 的元素
   if (index === 6) {
-    console.log(`Deleting array[5] with value ${array[5]}`);
+    console.log(`删除值为 array[5]，其值为 ${array[5]}`);
     delete array[5];
   }
-  // Element 5 is still visited even though deleted
-  console.log(`Visited index ${index} with value ${value}`);
+  // 元素 5 在被删除后，仍会被访问
+  console.log(`访问索引 ${index}，值为 ${value}`);
 });
-// Deleting array[5] with value 5
-// Visited index 6 with value 6
-// Visited index 5 with value undefined
-// Visited index 4 with value undefined
-// Visited index 3 with value undefined
-// Visited index 2 with value undefined
-// Visited index 1 with value 1
-// Visited index 0 with value 0
+// 删除值为 array[5]，其值为 6
+// 访问索引 6，值为 6
+// 访问索引 5，值为 undefined
+// 访问索引 4，值为 undefined
+// 访问索引 3，值为 undefined
+// 访问索引 2，值为 undefined
+// 访问索引 1，值为 1
+// 访问索引 0，值为 0
 ```
 
 ### 在非数组对象上调用 findLast()
@@ -186,7 +185,7 @@ console.log(
 
 ## 参见
 
-- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.findLast` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
