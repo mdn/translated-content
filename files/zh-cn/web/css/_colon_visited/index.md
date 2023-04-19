@@ -21,7 +21,7 @@ slug: Web/CSS/:visited
 - 虽然这些样式可以改变用户最终的颜色外观，但 {{domxref("window.getComputedStyle")}} 方法将存在并且始终返回非访问颜色的值。
 - [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素永远不会被 `:visited` 匹配。
 
-> **备注：** 有关这些限制及其背后原因的更多信息，请参阅 [隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)。
+> **备注：** 有关这些限制及其背后原因的更多信息，请参阅[隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)。
 
 ## 示例
 
