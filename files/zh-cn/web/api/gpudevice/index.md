@@ -13,7 +13,7 @@ slug: Web/API/GPUDevice
 
 ## 实例属性
 
-_继承自它的父接口 {{DOMxRef("EventTarget")}} 的属性。_
+_从其父接口 {{DOMxRef("EventTarget")}} 继承属性。_
 
 - {{domxref("GPUDevice.features", "features")}} {{Experimental_Inline}} {{ReadOnlyInline}}
 
@@ -29,14 +29,14 @@ _继承自它的父接口 {{DOMxRef("EventTarget")}} 的属性。_
 
 - {{domxref("GPUDevice.lost", "lost")}} {{Experimental_Inline}} {{ReadOnlyInline}}
 
-  - : 包含一个 {{jsxref("Promise")}}，该 promise 在设备的整个生命周期内一直保留待定状态，当失去设备时，会使用 {{domxref("GPUDeviceLostInfo")}} 对象兑现。
+  - : 包含一个 {{jsxref("Promise")}}，该 promise 在设备的整个生命周期内一直保留待定状态，当失去设备时，会兑现为 {{domxref("GPUDeviceLostInfo")}}。
 
 - {{domxref("GPUDevice.queue", "queue")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : 返回设备主要的 {{domxref("GPUQueue")}}。
 
 ## 实例方法
 
-_继承自它的父接口 {{DOMxRef("EventTarget")}} 的方法。_
+_从其父接口 {{DOMxRef("EventTarget")}} 继承方法。_
 
 - {{domxref("GPUDevice.createBindGroup", "createBindGroup()")}} {{Experimental_Inline}}
 
@@ -48,7 +48,7 @@ _继承自它的父接口 {{DOMxRef("EventTarget")}} 的方法。_
 
 - {{domxref("GPUDevice.createBuffer", "createBuffer()")}} {{Experimental_Inline}}
 
-  - : 创建一个 {{domxref("GPUBuffer")}}，在其中存储用于 GPU 操作的原始数据。
+  - : 创建一个 {{domxref("GPUBuffer")}}，在其中存储用于 GPU 运算的原始数据。
 
 - {{domxref("GPUDevice.createCommandEncoder", "createCommandEncoder()")}} {{Experimental_Inline}}
 
@@ -104,7 +104,7 @@ _继承自它的父接口 {{DOMxRef("EventTarget")}} 的方法。_
 
 - {{domxref("GPUDevice.popErrorScope", "popErrorScope()")}} {{Experimental_Inline}}
 
-  - : 从错误范围堆栈中弹出一个现有的 GPU 错误作用域，并返回一个 Promise，该 Promise 使用一个对象（{{domxref("GPUInternalError")}}、{{domxref("GPUOutOfMemoryError")}} 或 {{domxref("GPUValidationError")}}）兑现，描述作用域中捕获的第一个错误，如果没有发生错误，则为 `null`。
+  - : 从错误范围堆栈中弹出一个现有的 GPU 错误作用域，并返回一个 Promise，会兑现为一个对象（{{domxref("GPUInternalError")}}、{{domxref("GPUOutOfMemoryError")}} 或 {{domxref("GPUValidationError")}}），描述作用域中捕获的第一个错误，如果没有发生错误，则为 `null`。
 
 - {{domxref("GPUDevice.pushErrorScope", "pushErrorScope()")}} {{Experimental_Inline}}
   - : 将新的 GPU 错误作用域推入到设备的错误作用域栈上，允许你捕获特定类型的错误。
@@ -137,7 +137,7 @@ async function init() {
 }
 ```
 
-有关 `GPUDevice` 使用的更多示例，请参阅上面列出的单个成员页面和以下的演示网站：
+有关 `GPUDevice` 使用的更多示例，请参阅上面列出的单个页面和以下的演示网站：
 
 - [基础的计算示例](https://mdn.github.io/dom-examples/webgpu-compute-demo/)
 - [基础的渲染示例](https://mdn.github.io/dom-examples/webgpu-render-demo/)
