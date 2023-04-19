@@ -58,13 +58,13 @@ console.log(fruits[0]); // "Apple"
 const arrayEmpty = new Array(2);
 
 console.log(arrayEmpty.length); // 2
-console.log(arrayEmpty[0]); // undefined; 实际上是一个空槽
+console.log(arrayEmpty[0]); // undefined；实际上是一个空槽
 console.log(0 in arrayEmpty); // false
 console.log(1 in arrayEmpty); // false
 ```
 
 ```js
-const arrayOfOne = new Array("2"); // Not the number 2 but the string "2"
+const arrayOfOne = new Array("2"); // 这里是字符串 "2" 而不是数字 2
 
 console.log(arrayOfOne.length); // 1
 console.log(arrayOfOne[0]); // "2"
