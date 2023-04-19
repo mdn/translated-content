@@ -58,3 +58,11 @@ svg|a {
 *|a {
 }
 ```
+
+## 瀏覽器支援度
+
+{{Compat}}
+
+## 延伸閱讀
+
+- [命名空間速成班](/zh-TW/docs/Web/SVG/Namespaces_Crash_Course)
