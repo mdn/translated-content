@@ -29,7 +29,7 @@ array.with(index, value)
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : `index > array.length` 或 `index < -array.length` 时抛出.
+  - : `index > array.length` 或 `index < -array.length` 时抛出。
 
 ## 描述
 
