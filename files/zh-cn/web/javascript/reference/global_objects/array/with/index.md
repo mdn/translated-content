@@ -18,7 +18,7 @@ array.with(index, value)
 - `index`
   - : 要修改的数组索引（从 0 开始）, [将会转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
     - 负数索引会从数组末尾开始计数——即当 `index < 0` 时，会使用 `index + array.length`。
-    - 如果索引超出数组边界，会抛出 {{jsxref("RangeError")}}。
+    - 如果规范化后的索引超出数组边界，会抛出 {{jsxref("RangeError")}}。
 - `value`
   - : 赋给 index 的任何值。
 
