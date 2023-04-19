@@ -5,7 +5,7 @@ slug: Web/CSS/:focus-within
 
 {{CSSRef}}
 
-**`:focus-within`** [CSS](/zh-CN/docs/Web/CSS) 伪类表示当元素或其任意后代元素被聚焦时，将匹配该元素。换言之，它表示 {{CSSxRef(":focus")}} 伪类匹配到该元素自身或它的后代时，该伪类生效。（这也包括 [shadow tree](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 中的后代元素。）
+**`:focus-within`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示当元素或其任意后代元素被聚焦时，将匹配该元素。换言之，它表示 {{CSSxRef(":focus")}} 伪类匹配到该元素自身或它的后代时，该伪类生效。（这也包括 [shadow 树](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 中的后代元素。）
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-within.html", "tabbed-shorter")}}
 
