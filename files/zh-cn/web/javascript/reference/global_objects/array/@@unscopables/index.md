@@ -34,9 +34,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 - [`toSpliced()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
 - [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
-`Array.prototype[@@unscopables]` 是一个空对象，只包含所有上述属性，且对应值为 `true`。它的[原型是 `null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，因此不会意外地使 `Object.prototype` 属性（比如 [`toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)）变为不可作用域，而令在 `with` 语句中调用数组的 `toString()` 方法仍然有效。
+`Array.prototype[@@unscopables]` 是一个只包含所有上述属性且对应值为 `true` 的空对象。它的[原型是 `null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，因此不会意外地使 `Object.prototype` 属性（比如 [`toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)）变为非作用域属性，而令在 `with` 语句中调用数组的 `toString()` 方法仍然有效。
 
-请参阅 {{jsxref("Symbol.unscopables")}} 了解如何为自定义对象设置不可作用域属性。
+请参阅 {{jsxref("Symbol.unscopables")}} 了解如何为自定义对象设置非作用域属性。
 
 ## 示例
 
