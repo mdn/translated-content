@@ -24,7 +24,7 @@ JSON オブジェクトは、[JSON のインポートマップ表現](#json_の�
 </script>
 ```
 
-`src`、`async`、`nomodule`、`defer`、`crossorigin`、`integrity`、`referrerpolicy` の各俗世右派指定することはできません。
+`src`、`async`、`nomodule`、`defer`、`crossorigin`、`integrity`、`referrerpolicy` の各属性は指定することはできません。
 
 文書内のインライン定義された最初のインポートマップのみが処理され、それ以降のインポートマップや外部インポートマップは無視されます。
 処理されない（無視される） `type="importmap"` を持つスクリプト要素では [`error` イベント](/ja/docs/Web/API/Element/error_event)が発行されます。
