@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Intersection Observer API")}}
 
-La propriété en lecture seule **`target`**, rattachée à l'interface [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry) indique [l'élément](/fr/docs/Web/API/Element) ciblé pour lequel la proportion d'intesection avec la racine d'intersection a changé.
+La propriété en lecture seule **`target`**, rattachée à l'interface [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry) indique [l'élément](/fr/docs/Web/API/Element) ciblé pour lequel la proportion d'intersection avec la racine d'intersection a changé.
 
 ## Valeur
 
@@ -25,7 +25,7 @@ function intersectionCallback(entries) {
 }
 ```
 
-Pour un exemple plus concret, voir [Gérer les changements d'intersection](/fr/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#handling_intersection_changes).
+Pour un exemple plus concret, voir [Gérer les changements d'intersection](/fr/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#gerer_les_changements_dintersection).
 
 ## Spécifications
 

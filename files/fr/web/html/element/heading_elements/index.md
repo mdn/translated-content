@@ -59,7 +59,7 @@ Ces éléments incluent uniquement les [attributs universels](/fr/docs/Web/HTML/
 
 Bien qu'il soit permis par le standard HTML d'utiliser plusieurs éléments `<h1>` sur une même page tant que ceux-ci ne sont pas [imbriqués](#imbrication), cela est considéré comme une mauvaise pratique. Une page devrait généralement avoir un seul élément `<h1>` qui décrit le contenu de la page (semblable à l'élément [`<title>`](/fr/docs/Web/HTML/Element/title)).
 
-> **Note :** L'imbrication de plusieurs éléments `<h1>` au sein [d'éléments sectionnants](/fr/docs/Web/HTML/Element#content_sectioning) imbriqués était autorisée dans d'anciennes versions du standard HTML. Toutefois, cela a toujours été considéré comme une mauvaise pratique et ce n'est plus conforme. Pour en savoir plus, vous pouvez lire le billet [<i lang="en">There Is No Document Outline Algorithm</i> d'Adrian Roselli (en anglais)](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
+> **Note :** L'imbrication de plusieurs éléments `<h1>` au sein [d'éléments sectionnants](/fr/docs/Web/HTML/Element#sectionnement_du_contenu) imbriqués était autorisée dans d'anciennes versions du standard HTML. Toutefois, cela a toujours été considéré comme une mauvaise pratique et ce n'est plus conforme. Pour en savoir plus, vous pouvez lire le billet [<i lang="en">There Is No Document Outline Algorithm</i> d'Adrian Roselli (en anglais)](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
 
 Mieux vaudra donc utiliser un seul élément `<h1>` par page et [l'imbrication de titres d'autres niveaux](#imbrication) sans sauter de niveaux.
 

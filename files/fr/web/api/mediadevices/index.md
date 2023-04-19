@@ -22,7 +22,7 @@ _Hérite des méthodes de son interface parente, [`EventTarget`](/fr/docs/Web/AP
 - [`enumerateDevices()`](/fr/docs/Web/API/MediaDevices/enumerateDevices)
   - : Fournit un tableau d'informations sur les appareils média (en entrée et en sortie) disponibles sur le système.
 - [`getSupportedConstraints()`](/fr/docs/Web/API/MediaDevices/getSupportedConstraints)
-  - : Renvoie un objet dont le format respecte [`MediaTrackSupportedConstraints`](/fr/docs/Web/API/MediaTrackSupportedConstraints) et qui indique les propriétés contraintes qui sont prise en charge par l'interface [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack). Voir [l'API <i lang="en">Media Streams</i>](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) pour en savoir plus à propos des contraintes et leur utilisation.
+  - : Renvoie un objet dont le format respecte [`MediaTrackSupportedConstraints`](/fr/docs/Web/API/MediaTrackSupportedConstraints) et qui indique les propriétés contraintes qui sont prises en charge par l'interface [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack). Voir [l'API <i lang="en">Media Streams</i>](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) pour en savoir plus à propos des contraintes et leur utilisation.
 - [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia)
   - : Demande à la personne de sélectionner un affichage ou une portion d'un affichage (par exemple une fenêtre) pour le/la capturer comme [`MediaStream`](/fr/docs/Web/API/MediaStream) à des fins de partage ou d'enregistrement. Cette méthode renvoie une promesse qui se résout en `MediaStream`.
 - [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)
@@ -84,6 +84,6 @@ navigator.mediaDevices.getUserMedia(constraints)
 ## Voir aussi
 
 - [L'API de capture et des flux multimédia](/en-US/docs/Web/API/Media_Capture_and_Streams_API)&nbsp;: l'API à laquelle appartient cette interface.
-- [L'API de captture d'écran](/en-US/docs/Web/API/Screen_Capture_API)&nbsp;: l'API qui définit la méthode [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia).
+- [L'API de capture d'écran](/en-US/docs/Web/API/Screen_Capture_API)&nbsp;: l'API qui définit la méthode [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia).
 - [L'API WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - [`Navigator.mediaDevices`](/fr/docs/Web/API/Navigator/mediaDevices) qui fournit une référence à un objet `MediaDevices` permettant d'accéder aux appareils.
