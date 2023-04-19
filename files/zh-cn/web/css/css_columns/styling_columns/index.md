@@ -29,7 +29,7 @@ slug: Web/CSS/CSS_Columns/Styling_Columns
 
 这些属性应用于多列容器元素，因此所有列将具有相同的分栏线条。分栏线条仅在列之间绘制，而不在外部边缘绘制。分栏线条还应仅在具有内容的列之间绘制。
 
-在接下来的示例中，使用长格式值创建了一个宽度为 5 像素、颜色为 `rebeccapurple` 的点状分栏线条。
+在接下来的示例中，使用长格式值创建了一个宽度为 5px、颜色为 `rebeccapurple` 的点状分栏线条。
 
 {{EmbedGHLiveSample("css-examples/multicol/styling/column-rule.html", '100%', 550)}}
 
