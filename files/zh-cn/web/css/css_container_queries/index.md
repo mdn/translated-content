@@ -1,7 +1,6 @@
 ---
 title: CSS 容器查询
 slug: Web/CSS/CSS_Container_Queries
-page-type: guide
 ---
 
 {{CSSRef}}
@@ -17,11 +16,11 @@ page-type: guide
 这些值具有以下效果：
 
 - `size`
-  - ：查询将基于容器的[行向和块向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和大小的限制应用于容器。
+  - : 查询将基于容器的[行向和块向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和大小的限制应用于容器。
 - `inline-size`
-  - ：查询将基于容器的[行向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和行向大小的限制应用于元素。
+  - : 查询将基于容器的[行向](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#块向与行向尺度)尺度，将布局、样式和行向大小的限制应用于元素。
 - `normal`
-  - ：该元素不是任何容器大小查询的查询容器，但仍然是容器样式查询的查询容器。
+  - : 该元素不是任何容器大小查询的查询容器，但仍然是容器样式查询的查询容器。
 
 考虑以下带有标题和一些文本的博客文章的卡片组件示例：
 
@@ -118,7 +117,7 @@ page-type: guide
 }
 ```
 
-有关这些单位的更多信息，请参阅[容器查询长度单位](/zh-CN/docs/Web/CSS/length#容器查询长度单位) 参考。
+有关这些单位的更多信息，请参阅[容器查询长度单位](/zh-CN/docs/Web/CSS/length#容器查询长度单位)参考。
 
 ## 容器查询的回退
 
