@@ -58,7 +58,7 @@ worker.addEventListener("messageerror", (event) => {
 });
 ```
 
-同样，可以使用 [`onmessageerror`](/zh-CN/docs/Web/API/Window/messageerror_event) 事件处理属性监听事件：
+同样，可以使用 `onmessageerror` 事件处理器属性监听事件：
 
 ```js
 // main.js
