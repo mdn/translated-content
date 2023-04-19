@@ -5,7 +5,7 @@ slug: Web/API/GPUAdapterInfo
 
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
-{{domxref("WebGPU API", "WebGPU API", "", 1)}} 的 **`GPUAdapterInfo`** 接口包含关于 {{domxref("GPUAdapter")}} 的识别信息。
+{{domxref("WebGPU API", "WebGPU API", "", 1)}} 的 **`GPUAdapterInfo`** 接口包含关于 {{domxref("GPUAdapter")}} 的标识信息。
 
 使用 {{domxref("GPUAdapter.requestAdapterInfo()")}} 方法去请求 `GPUAdapterInfo` 对象。
 
