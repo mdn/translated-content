@@ -184,7 +184,7 @@ return {
 
 接下来我们会修改顶点着色器代码，现在不再需要获取顶点颜色数据，而是获取纹理坐标数据。
 
-> **注意：** 在你的`main()`函数中更新`vsSource`定义，像这样：
+> **注意：** 在你的 `main()` 函数中更新 `vsSource` 定义，像这样：
 
 ```js
 const vsSource = `
@@ -290,7 +290,7 @@ gl.bindTexture(gl.TEXTURE_2D, texture);
 gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
 ```
 
-WebGL提供了至少 8 个纹理单元；其中第一个是 `gl.TEXTURE0` 。我们告诉 WebGL 我们想影响 0 号单元。然后我们调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}}，将纹理绑定到 0 号纹理单元的 `TEXTURE_2D` 绑定点。然后我们告诉着色器，对于 `uSampler` 来说，使用 0 号纹理单元。
+GL 最多可同时注册 32 张纹理；`gl.TEXTURE0` 是第一张。我们把我们之前加载的纹理绑定到了第一个寄存器，然后着色器程序里的采样器 `uSampler` 就会完成它的功能：使用纹理。
 
 最后，在 `drawScene()` 函数中添加 `texture` 作为参数，包括它被定义和被调用的地方。
 
