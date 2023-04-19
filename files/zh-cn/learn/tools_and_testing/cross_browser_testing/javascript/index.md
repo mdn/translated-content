@@ -38,7 +38,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 这些天来，大多数的跨浏览器 JavaScript 问题是这样的：
 
 - 劣质的浏览器嗅探代码、特性检测代码和供应商前缀的使用阻碍了浏览器运行它们本来可以很好使用的代码。
-- 开发者在他们的代码中使用了新的 JavaScript 功能、现代网络 API 等，并发现这些功能在旧的浏览器中无法使用。
+- 开发者在他们的代码中使用了新的 JavaScript 功能、现代 web API 等，并发现这些功能在旧的浏览器中无法使用。
 
 我们将在下文进一步探究这个问题。
 
@@ -59,7 +59,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 ### Linter
 
-就像 [HTML 和 CSS](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Linter) 所说的一样，使用 linter 可以确保撰写出质量更高，错误更少的 JavaScript 代码，它可以指出错误，也可以标记出关于不良做法的警告等，并且可以自定义为更严格或更宽松的错误/警告报告。我们推荐的 JavaScript/ECMAScript linter 是 [JSHint](https://jshint.com/) 和 [ESLint](https://eslint.org/)；它们能以多种方式使用，其中一些我们将在下面详细介绍。
+就像 [HTML 和 CSS](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#linter) 所说的一样，使用 linter 可以确保撰写出质量更高，错误更少的 JavaScript 代码，它可以指出错误，也可以标记出关于不良做法的警告等，并且可以自定义为更严格或更宽松的错误/警告报告。我们推荐的 JavaScript/ECMAScript linter 是 [JSHint](https://jshint.com/) 和 [ESLint](https://eslint.org/)；它们能以多种方式使用，其中一些我们将在下面详细介绍。
 
 #### 在线检查器
 
@@ -74,7 +74,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 要安装它：
 
 1. 安装 Atom（如果你没有已经安装的最新版本）——从上述 Atom 网页链接中下载它。
-2. 前往 Atom 的 _Preferences..._ 对话框（也就是说，在 Mac 中选择 _Atom > Preferences..._，或在 Windows/Linux 中选择 _File > Preferences..._ ）并选择左侧菜单中的 _Install_ 选项。
+2. 前往 Atom 的 _Preferences..._ 对话框（也就是说，在 Mac 中选择 _Atom > Preferences..._，或在 Windows/Linux 中选择 _File > Preferences..._）并选择左侧菜单中的 _Install_ 选项。
 3. 在 _Search packages_ 文本字段，输入“jslint”并按下回车/换行键来查找 linting 相关软件包。
 4. 你可以在列表最顶部看到 **lint**。首先使用 _Install_ 按钮安装这个软件包，因为其他 linter 都依赖它工作。然后安装 **linter-jshint** 插件。
 5. 在软件包安装完成后，试着加载一个 JavaScript 文件：你会看到任何问题都在行号旁边用绿色（警告）和红色（错误）的圆圈突出显示，底部的一个单独面板提供了行号、错误信息，有时还提供了建议值或其他修复方法。
@@ -136,7 +136,7 @@ showHeroes(superHeroes);
 
 #### Console 相关 API
 
-你可能已经知道这段代码有什么问题，但让我们再探讨一下，看看你可以如何调查这个问题。首先，[Console](/zh-CN/docs/Web/API/Console) API 允许 JavaScript 代码与浏览器的 JavaScript 控制台交互。它有许多可用的功能，但你经常使用的主要功能是 [`console.log()`](/zh-CN/docs/Web/API/Console/log)，它可以向控制台打印一条自定义信息。
+你可能已经知道这段代码有什么问题，但让我们再探讨一下，看看你可以如何调查这个问题。首先，[Console](/zh-CN/docs/Web/API/console) API 允许 JavaScript 代码与浏览器的 JavaScript 控制台交互。它有许多可用的功能，但你经常使用的主要功能是 [`console.log()`](/zh-CN/docs/Web/API/console/log)，它可以向控制台打印一条自定义信息。
 
 尝试将这样代码插入到第 31 行下方：
 
@@ -170,7 +170,7 @@ request.onload = function() {
 
 不幸的是，我们仍然有同样的错误，问题并没有消失。现在让我们使用浏览器开发工具的一个更复杂的功能来调查一下这个问题，它在 Firefox 中被称为 [JavaScript 调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)。
 
-> **备注：** 其他浏览器中也有类似的工具；Chrome 中的 [Sources tab](https://developer.chrome.com/docs/devtools/#sources)，Safari中的调试器（见 [Safari Web 开发工具](https://developer.apple.com/safari/tools/)）等。
+> **备注：** 其他浏览器中也有类似的工具；Chrome 中的 [Sources tab](https://developer.chrome.com/docs/devtools/#sources)，Safari 中的调试器（见 [Safari Web 开发工具](https://developer.apple.com/safari/tools/)）等。
 
 在 Firefox 中，调试器标签页大致如图所示：
 
@@ -203,12 +203,12 @@ request.onload = function() {
 
 ### 性能问题
 
-随着你的应用程序变得越来越复杂，你开始使用更多的 JavaScript，并可能会遇到性能问题，特别是在较慢的设备上查看应用程序时。性能是一个很大的话题，我们没有时间在这里详细介绍它。以下是一些快速提示：
+随着你的应用程序变得越来越复杂，你开始使用更多的 JavaScript，并可能会遇到性能问题，特别是在较慢的设备上查看应用程序时。性能是一个宽泛的话题，我们没有时间在这里详细介绍它。以下是一些快速提示：
 
 - 为了避免加载超过你需要的 JavaScript，请使用 [Browserify](https://browserify.org/) 这样的解决方案将你的脚本捆绑成一个文件。一般来说，减少 HTTP 请求的数量对性能非常有利。
 - 在你将文件加载到你的生产服务器之前，通过最小化使你的文件变得更小。最小化将所有的代码压缩到一个巨大的单行中，使其占用的文件大小大大减少。这很难看，但当它完成后，你不需要阅读它！这最好使用像 [Uglify](https://github.com/mishoo/UglifyJS) 这样的最小化工具来完成（也有一个在线版本，见[JSCompress.com](https://jscompress.com/)）。
 - 当使用 API 时，确保在不使用 API 特性时将其关闭；一些 API 调用可能非常耗费处理能力。例如，当显示一个视频流时，确保在你看不到它时将其关闭。当使用重复的地理定位调用跟踪设备的位置时，确保在用户停止使用时将其关闭。
-- 对于性能来说，动画的成本确实很高。很多 JavaScript 库提供了由 JavaScript 编程的动画功能，但通过像 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)这样的本地浏览器功能（或新生的[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）做动画要比 JavaScript 更具成本效益。阅读 Brian Birtles 的 [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解一些关于动画为何开销大的真正有用的理论，关于如何提高动画性能的提示，以及关于 Web 动画 API 的信息。
+- 对于性能来说，动画的成本确实很高。很多 JavaScript 库提供了由 JavaScript 编程的动画功能，但通过像 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)这样的本地浏览器功能（或新生的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）做动画要比 JavaScript 更具成本效益。阅读 Brian Birtles 的 [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解一些关于动画为何开销大的真正有用的理论，关于如何提高动画性能的提示，以及关于 Web 动画 API 的信息。
 
 > **备注：** Addy Osmani 的 [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) 包含了大量的细节和一些提升 JavaScript 性能的优秀技巧。
 
@@ -231,10 +231,10 @@ request.onload = function() {
 
 - [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)是一个伟大的新功能，用于执行异步操作，并确保这些操作在依赖其结果的代码被用于其他用途之前完成。举个例子，[Fetch API](/zh-CN/docs/Web/API/fetch)（相当于现代的 [XMLHTTPRequest](/zh-CN/docs/Web/API/XMLHttpRequest)）使用 promise 来获取网络上的资源，并确保在使用这些资源之前已经返回响应（例如在 {{htmlelement("img")}} 元素内显示图片）。除了 IE 以外，所有现代浏览器中都支持这种特性。
 - [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)为编写[匿名函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#匿名函数)提供了一个更短、更方便的语法。关于一个快速的例子，请看 [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html)（也请看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html)）。除了 IE 以外，所有现代浏览器都支持这种特性。
-- 在你的JavaScript代码的顶部声明[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，会使它在解析时有更严格的规则，这意味着会有更多的警告和错误被抛出，一些本来可以接受的东西也会被禁止。可以说，使用严格模式是一个好主意，因为它能使代码更好、更有效率。所有现代浏览器都支持严格模式。
+- 在你的 JavaScript 代码的顶部声明[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，会使它在解析时有更严格的规则，这意味着会有更多的警告和错误被抛出，一些本来可以接受的东西也会被禁止。可以说，使用严格模式是一个好主意，因为它能使代码更好、更有效率。所有现代浏览器都支持严格模式。
 - [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)允许 JavaScript 代码访问和处理原始二进制数据，这在浏览器API开始处理原始视频和音频数据流时是必要的。它可以在 IE10 及以上版本以及所有现代浏览器中使用。
 
-还有许多新的 API 出现在最近的浏览器版本中，而这些 API 在旧的浏览器版本中无法使用，例如：
+还有许多新的 API 出现在最近的浏览器版本中，而这些 API 在旧版本的浏览器中无法使用，例如：
 
 - [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)、[Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 和其他在客户端存储网页数据的 API。
 - 使用单独线程运行 JavaScript 代码的 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API)，以提升性能。
@@ -285,7 +285,7 @@ JavaScript 库往往有几个主要的种类（有些库包含其中的一个以
 
 库的基本用法往往包括下载库的文件（JavaScript，可能还有一些 CSS 或其他依赖项）并将其附加到你的页面上（例如通过 {{htmlelement("script")}} 元素），尽管这些库通常还有许多其他用法选择，例如将其作为 [Bower](https://bower.io/) 组件安装，或通过 [Webpack](https://webpack.github.io/) 模块捆绑器将其作为依赖项。你将阅读这些库的单独安装页面以获得更多信息。
 
-> **备注：** 你也会在网络上遇到一些 JavaScript 框架，比如 [Ember](https://emberjs.com/) 和 [Angular](https://angularjs.org/)。库通常可用于解决个别问题并放入现有网站中，而框架则更倾向于开发复杂网络应用的完整解决方案。
+> **备注：** 你也会在网络上遇到一些 JavaScript 框架，比如 [Ember](https://emberjs.com/) 和 [Angular](https://angularjs.org/)。库通常可用于解决个别问题并放入现有网站中，而框架则更倾向于开发复杂 web 应用的完整解决方案。
 
 #### Polyfill
 
