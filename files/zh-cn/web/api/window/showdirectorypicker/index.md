@@ -22,7 +22,7 @@ showDirectoryPicker()
     - `id`
       - : 通过指定 ID，浏览器能够记住不同 ID 所对应的目录。当使用相同的 ID 打开另一个目录选择器时，选择器会打开相同的目录。
     - `mode`
-      - : 字符串，默认为 `"read"` ，可对目录进行只读访问。设为 `"readwrite"` 可对目录进行读写访问。
+      - : 字符串，默认为 `"read"`，可对目录进行只读访问。设为 `"readwrite"` 可对目录进行读写访问。
     - `startIn`
       - : 一个 `FileSystemHandle` 对象或者代表某个众所周知的目录的字符串（如：`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"`、`"videos"`）。用于指定选择器的起始目录。
 
