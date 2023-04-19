@@ -10,7 +10,7 @@ slug: Web/API/WebGL_API/By_example/Textures_from_code
 
 ### 코드로 텍스쳐 그리기
 
-Texturing a point sprite with calculations done per-pixel in the fragment shader.
+fragment shader에서 픽셀 단위로 계산된 스프라이트 텍스쳐를 그립니다.
 
 ```html hidden
 <p>Texture from code. Simple demonstration
