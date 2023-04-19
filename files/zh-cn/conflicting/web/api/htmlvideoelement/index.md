@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.autoPictureInPicture
-slug: Web/API/HTMLVideoElement/autoPictureInPicture
+slug: conflicting/Web/API/HTMLVideoElement
+original_slug: Web/API/HTMLVideoElement/autoPictureInPicture
 ---
 
 {{APIRef("HTML DOM")}}

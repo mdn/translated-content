@@ -1624,6 +1624,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/Web/API/HTMLMediaElement/error_event
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
+/zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/conflicting/Web/API/HTMLVideoElement
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
