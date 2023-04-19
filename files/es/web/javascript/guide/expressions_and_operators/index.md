@@ -1,6 +1,6 @@
 ---
 title: Expresiones y operadores
-slug: Web/JavaScript/Guide/Expressions_and_Operators
+slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
 {{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
