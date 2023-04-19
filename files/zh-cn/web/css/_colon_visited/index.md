@@ -5,7 +5,7 @@ slug: Web/CSS/:visited
 
 {{CSSRef}}
 
-**`:visited`** CSS[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)会在用户访问链接后生效，出于隐私保护的原因，使用该选择器可以修改的样式非常有限。`:visited` 伪类仅适用于带有 `href` 属性的 {{htmlelement("a")}} 和 {{htmlelement("area")}} 元素。
+**`:visited`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)会在用户访问链接后生效，出于隐私保护的原因，使用该选择器可以修改的样式非常有限。`:visited` 伪类仅适用于带有 `href` 属性的 {{htmlelement("a")}} 和 {{htmlelement("area")}} 元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
 
@@ -17,7 +17,7 @@ slug: Web/CSS/:visited
 
 - 允许使用的 CSS 属性为{{ cssxref("color") }}、{{ cssxref("background-color") }}、{{ cssxref("border-color") }}、{{ cssxref("border-bottom-color") }}、{{ cssxref("border-left-color")}}、{{ cssxref("border-right-color") }}、{{ cssxref("border-top-color") }}、{{ cssxref("column-rule-color") }}、{{ cssxref("outline-color")}}、{{ cssxref("text-decoration-color") }} 和 {{ cssxref("text-emphasis-color") }}。
 - 允许使用的 SVG 属性为{{SVGAttr("fill")}} 和 {{SVGAttr("stroke")}}。
-- 允许使用的样式的 αlpha 分量 (透明度) 将被忽略。设置在 `:visited` 中的样式将使用元素的非 `:visited` 访问状态的 αlpha 分量。在 Firefox 中，当 alpha 分量为 `0` 时，`:visited` 中设置的样式将被完全忽略。。
+- 允许使用的样式的 alpha 分量（透明度）将被忽略。设置在 `:visited` 中的样式将使用元素的非 `:visited` 访问状态的 alpha 分量。在 Firefox 中，当 alpha 分量为 `0` 时，`:visited` 中设置的样式将被完全忽略。
 - 虽然这些样式可以改变用户最终的颜色外观，但 {{domxref("window.getComputedStyle")}} 方法将存在并且始终返回非访问颜色的值。
 - [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素永远不会被 `:visited` 匹配。
 
