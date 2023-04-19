@@ -9,14 +9,14 @@ slug: Web/CSS/:visited
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
 
-这个样式可能会被后声明的其他链接相关的伪类覆盖，这些伪类包括 ({{cssxref(":link")}}, {{cssxref(":hover")}},和{{cssxref(":active")}})。要适当地设置链接样式，请将`:visited` 规则放在`:link` 规则之后，但在`:hover` 和`:active` 规则之前，参照 LVHA _顺序_:`:link` — `:visited` — `:hover` — `:active`。
+这个样式可能会被后声明的其他链接相关的伪类覆盖，这些伪类包括 ({{cssxref(":link")}}、{{cssxref(":hover")}} 和 {{cssxref(":active")}})。要适当地设置链接样式，请将 `:visited` 规则放在 `:link` 规则之后，但在 `:hover` 和 `:active` 规则之前，参照 LVHA _顺序_：`:link` — `:visited` — `:hover` — `:active`。
 
 ## 限制
 
 出于隐私原因，浏览器严格限制你可以让此伪类应用的样式，以及使用它们的方式：
 
-- 允许使用的 CSS 属性为{{ cssxref("color") }}、{{ cssxref("background-color") }}、{{ cssxref("border-color") }}、{{ cssxref("border-bottom-color") }}、{{ cssxref("border-left-color")}}、{{ cssxref("border-right-color") }}、{{ cssxref("border-top-color") }}、{{ cssxref("column-rule-color") }}、{{ cssxref("outline-color")}}、{{ cssxref("text-decoration-color") }} 和 {{ cssxref("text-emphasis-color") }}。
-- 允许使用的 SVG 属性为{{SVGAttr("fill")}} 和 {{SVGAttr("stroke")}}。
+- 允许使用的 CSS 属性有 {{ cssxref("color") }}、{{ cssxref("background-color") }}、{{ cssxref("border-color") }}、{{ cssxref("border-bottom-color") }}、{{ cssxref("border-left-color")}}、{{ cssxref("border-right-color") }}、{{ cssxref("border-top-color") }}、{{ cssxref("column-rule-color") }}、{{ cssxref("outline-color")}}、{{ cssxref("text-decoration-color") }} 和 {{ cssxref("text-emphasis-color") }}。
+- 允许使用的 SVG 属性有 {{SVGAttr("fill")}} 和 {{SVGAttr("stroke")}}。
 - 允许使用的样式的 alpha 分量（透明度）将被忽略。设置在 `:visited` 中的样式将使用元素的非 `:visited` 访问状态的 alpha 分量。在 Firefox 中，当 alpha 分量为 `0` 时，`:visited` 中设置的样式将被完全忽略。
 - 虽然这些样式可以改变用户最终的颜色外观，但 {{domxref("window.getComputedStyle")}} 方法将存在并且始终返回非访问颜色的值。
 - [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素永远不会被 `:visited` 匹配。
