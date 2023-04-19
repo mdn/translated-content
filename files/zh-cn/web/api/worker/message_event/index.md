@@ -27,7 +27,7 @@ onmessage = (event) => {};
 
 ## 事件属性
 
-这个接口也从其父级 {{domxref("Event")}} 中继承了属性。
+此接口也从其父接口 {{domxref("Event")}} 继承属性。
 
 - {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : 消息发送者发送的数据。
