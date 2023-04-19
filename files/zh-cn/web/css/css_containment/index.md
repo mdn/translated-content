@@ -100,7 +100,7 @@ article {
 }
 ```
 
-尽管名称如此，但是样式局限不提供如由 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 可得的域限样式。其主要用途为防止 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)可在元素中被更改的情形出现，此情形可影响树的其余部分。
+尽管名称如此，但是样式局限不提供如由 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 可得的域限（scoped）样式。其主要用途为防止 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)可在元素中被更改的情形出现，此情形可影响树的其余部分。
 
 使用 `contain: style` 将确保由 {{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性所创建的新计数器的作用域被限制为此子树。
 
