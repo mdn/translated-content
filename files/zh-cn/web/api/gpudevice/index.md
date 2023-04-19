@@ -137,7 +137,7 @@ async function init() {
 }
 ```
 
-有关 `GPUDevice` 使用的更多示例，请参阅上面列出的单个页面和以下的演示网站：
+有关 `GPUDevice` 使用的更多示例，请参阅上面列出的每个成员页面和以下的演示网站：
 
 - [基础的计算示例](https://mdn.github.io/dom-examples/webgpu-compute-demo/)
 - [基础的渲染示例](https://mdn.github.io/dom-examples/webgpu-render-demo/)
