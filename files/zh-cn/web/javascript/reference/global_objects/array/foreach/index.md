@@ -53,7 +53,7 @@ forEach(callbackFn, thisArg)
 
 可以通过像 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 和 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 这样的循环语句来实现提前终止。当不需要进一步迭代时，诸如 {{jsxref("Array/every", "every()")}}、{{jsxref("Array/some", "some()")}}、{{jsxref("Array/find", "find()")}} 和 {{jsxref("Array/findIndex", "findIndex()")}} 等数组方法也会立即停止迭代。
 
-`forEach()` 期望的是一个同步函数，它不会等待 Promise。在使用 Promise（或异步函数）作为 `forEach` 回调时，请确保您意识到这一点可能带来的影响。
+`forEach()` 期望的是一个同步函数，它不会等待 Promise。在使用 Promise（或异步函数）作为 `forEach` 回调时，请确保你意识到这一点可能带来的影响。
 
 ```js
 const ratings = [5, 4, 5];
