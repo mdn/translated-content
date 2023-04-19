@@ -1,5 +1,5 @@
 ---
-title: Worker: error 事件
+title: Worker：error 事件
 slug: Web/API/Worker/error_event
 ---
 
