@@ -39,19 +39,19 @@ findLastIndex(callbackFn, thisArg)
 
 ## 描述
 
-`findLastIndex()` 方法是一个[迭代方法](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素按下标顺序调用一次提供的`callbackFn` 函数，直到 `callbackFn` 返回一个[真值](/zh-CN/docs/Glossary/Truthy)。然后`findLastIndex()` 返回元素的索引并且停止遍历数组。如果 `callbackFn` 没有返回一个真值，则 `findLastIndex()` 返回 `-1`。
+`findLastIndex()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素按下标顺序调用一次提供的 `callbackFn` 函数，直到 `callbackFn` 返回一个[真值](/zh-CN/docs/Glossary/Truthy)。然后 `findLastIndex()` 返回元素的索引并且停止遍历数组。如果 `callbackFn` 没有返回一个真值，则 `findLastIndex()` 返回 `-1`。
 
-`callbackFn` 会为数组中的每个元素调用，而不仅仅是那些被赋值的元素，这意味着对于[稀疏数组](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)来说，空槽行为和 `undefined` 相同。
+`callbackFn` 会为数组中的每个元素调用，而不仅仅是那些被赋值的元素，这意味着对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)来说，空槽的行为和 `undefined` 相同。
 
 `findLastIndex()` 方法不会改变调用它的数组，但是提供的 `callbackFn` 可以。`findLastIndex()` 处理的元素是在第一次调用 `callbackFn` *之前*设置的。因此：
 
 - `callbackFn` 不会访问在调用 `findLastIndex()` 开始后才添加到数组中的任何元素。
-- 对已访问索引的更改不会导致对它们再次调用`callbackFn` 函数。
-- 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，它传递给`callbackFn` 的值将是该元素被访问时的值。[已删除](/en-US/docs/Web/JavaScript/Reference/Operators/delete)元素被当作未定义的来访问.
+- 对已访问索引的更改不会导致对它们再次调用 `callbackFn` 函数。
+- 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，它传递给`callbackFn` 的值将是该元素被访问时的值。[已删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)元素被当作未定义的来访问。
 
 >**警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
 
-`findLastIndex()` 方法是[通用的](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#通用的数组方法)。它只期望`this` 值具有`length` 属性和整型键属性。
+`findLastIndex()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整型键属性。
 
 ## 示例
 
@@ -76,17 +76,17 @@ console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
 
-### 在稀疏数组上使用findLastIndex()
+### 在稀疏数组上使用 findLastIndex()
 
-你可以在稀疏数组中搜索`undefined` 并获得空槽的索引。
+你可以在稀疏数组中搜索 `undefined` 并获得空槽的索引。
 
 ```js
 console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
 ```
 
-### 在非数组对象上调用findLastIndex()
+### 在非数组对象上调用 findLastIndex()
 
-`findLastIndex()` 方法读取`this` 的`length` 属性，然后访问每个整数索引。
+`findLastIndex()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
 
 ```js
 const arrayLike = {
