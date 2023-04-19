@@ -1,7 +1,6 @@
 ---
 title: 多列布局的样式
 slug: Web/CSS/CSS_Columns/Styling_Columns
-page-type: guide
 ---
 
 {{CSSRef}}
@@ -14,7 +13,7 @@ page-type: guide
 
 ## 列间距
 
-列之间的间距由 `column-gap` 属性控制。该属性最初在多列布局规范中定义。然而，现在它在 [盒子对齐](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)中定义，以便统一其他规范（如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)）中的盒子间距。
+列之间的间距由 `column-gap` 属性控制。该属性最初在多列布局规范中定义。然而，现在它在[盒子对齐](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)中定义，以便统一其他规范（如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)）中的盒子间距。
 
 在多列中，`column-gap` 的初始值为 `1em`。这意味着你的列不会相互挤压。在其他布局方法中，`column-gap` 的初始值为 0。如果使用关键字值 "normal"，间距将设置为 1em。
 
