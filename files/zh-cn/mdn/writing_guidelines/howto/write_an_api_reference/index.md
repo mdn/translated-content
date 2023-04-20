@@ -216,8 +216,8 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
     - \\{{Non-standard_header}}
 
 3. **描述**：接口页面的第一段应该对接口的总体目的进行简短的描述。如果需要额外的描述，你也可以多写几段。如果这个接口实际上是一个字典，你应该用这个术语而不是“接口”。
-4. **继承图**：使用 [`\{{InheritanceDiagram}}](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) 宏来嵌入接口的 SVG 继承图。
-5. **属性列表、方法列表**：这些部分的标题应该是“Properties”和“Methods”，并使用 {{domxref}} 宏提供到该接口的每个属性/方法的参考页的链接，以及每个属性/方法的描述。这些应该用[描述/定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)来标注。每个描述都应该是短小精悍的，尽可能使用一句话进行概括。参见“用\{{domxref}}宏引用其他 API 功能”一节，以了解创建其他页面链接的更快方法。
+4. **继承图**：使用 [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) 宏来嵌入接口的 SVG 继承图。
+5. **属性列表、方法列表**：这些部分的标题应该是“Properties”和“Methods”，并使用 \\{{domxref}} 宏提供到该接口的每个属性/方法的参考页的链接，以及每个属性/方法的描述。这些应该用[描述/定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)来标注。每个描述都应该是短小精悍的，尽可能使用一句话进行概括。参见“用 \\{{domxref}} 宏引用其他 API 功能”一节，以了解创建其他页面链接的更快方法。
 
    在这两部分的开头，在属性/方法列表的开始之前，用适当的斜体句子表示继承性：
    - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
@@ -225,7 +225,7 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
 
-    > **备注：** 只读属性应该使用 \{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \{{domxref}} 链接在同一行（如果需要使用 \{{experimentalInline}}、\{{non-standard_Inline}} 和 \{{deprecatedInline}} 宏，则需要放置在它们之后）。
+    > **备注：** 只读属性应该使用 \\{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \\{{domxref}} 链接在同一行（如果需要使用 \\{{experimentalInline}}、\\{{non-standard_Inline}} 和 \\{{deprecatedInline}} 宏，则需要放置在它们之后）。
 
 6. **示例**：包括一个代码清单，以显示 API 的主要功能的典型用法。你不应该列出所有的代码，而应该列出其中一个有趣的子集。对于一个完整的代码清单，你可以参考包含完整示例的 [GitHub](https://github.com/) 仓库，你也可以链接到使用 [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) 功能创建的实时示例（当然，只要它只使用客户端代码）。如果该示例是可视化的，你也可以使用 MDN [实时示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)功能，使其在页面上实时播放。
 7. **标准表格**：此时你需要包含一个标准表格——参见“创建规范参考表格”一节以获得更多信息。
