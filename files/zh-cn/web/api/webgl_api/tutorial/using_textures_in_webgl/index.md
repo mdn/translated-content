@@ -134,6 +134,7 @@ const texture = loadTexture(gl, "cubetexture.png");
 gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 
 ```
+
 这里用到的图片可以用本地同目录下图片代替。
 
 ## 映射纹理到面
