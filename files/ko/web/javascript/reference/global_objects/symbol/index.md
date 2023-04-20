@@ -1,7 +1,8 @@
 ---
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-original_slug: Glossary/Symbol
+l10n:
+  sourceCommit: 427e8d03276b4915c08c5f0541452fb1c830c295
 ---
 
 {{JSRef}}
