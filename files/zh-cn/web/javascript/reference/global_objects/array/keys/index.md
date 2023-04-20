@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 
 {{JSRef}}
 
-**`keys()`** 方法返回一个新的 _[数组迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ 对象，其中包含数组中每个索引的键。
+**`keys()`** 方法返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，其中包含数组中每个索引的键。
 
 {{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
