@@ -1,8 +1,6 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.includes
 ---
 
 {{JSRef}}
@@ -23,18 +21,18 @@ includes(searchElement, fromIndex)
 - `searchElement`
   - : 需要查找的值。
 - `fromIndex` {{optional_inline}}
-  - ：从零开始搜索的索引，[转换为整数](/zh-cn/docs/Web/JavaScript/Reference/Global_Objects/Number#转换为整数)。
-    - 负索引从数组末尾开始计数 —— 假如 `fromIndex < 0` ， `fromIndex + array.length` 被调用。然而，在这种情况下，仍然从前到后搜索数组。
-    - 如果 `fromIndex < -array.length` 或者省略 `fromIndex` ，则使用 `0` ，导致搜索整个数组。
-    - 如果 `fromIndex >= array.length` ，则不会搜索数组并返回 `false` 。
+  - ：从零开始搜索的索引，[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#转换为整数)。
+    - 负索引从数组末尾开始计数——假如 `fromIndex < 0`，`fromIndex + array.length` 被调用。然而，在这种情况下，仍然从前到后搜索数组。
+    - 如果 `fromIndex < -array.length` 或者省略 `fromIndex`，则使用 `0`，导致搜索整个数组。
+    - 如果 `fromIndex >= array.length`，则不会搜索数组并返回 `false`。
 
 ### 返回值
 
-一个布尔值，如果在数组中找到 `searchElement` 值，则该值为 `true` （或者在指定的索引 `fromIndex` 所指示的数组部分中找到 `searchElement` 值）。
+一个布尔值，如果在数组中找到 `searchElement` 值，则该值为 `true`（或者在指定的索引 `fromIndex` 所指示的数组部分中找到 `searchElement` 值）。
 
 ## 描述
 
-`includes()` 方法使用[SameValueZero](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)算法将 `searchElement` 与数组中的元素进行比较。0的值都被认为是相等的，不管符号是什么。（即 `-0` 等于 `0` ），但 `false` 不被认为与 `0` 相同。[`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)可以被正确搜索。
+`includes()` 方法使用[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法将 `searchElement` 与数组中的元素进行比较。0 值都被认为是相等的，不管符号是什么。（即 `-0` 等于 `0`），但 `false` 不被认为与 `0` 相同。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 可以被正确搜索。
 
 当使用[稀疏数组](/zh-cn/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时， `includes()` 方法迭代空槽，就像它们的值 `undefined` 一样。
 
@@ -66,7 +64,7 @@ arr.includes("c", 100); // false
 
 ### 计算出的索引小于 0
 
-如果 `fromIndex` 为负值，计算出的索引将作为开始搜索 `searchElement` 的位置。如果计算出的索引小于 `0` ，则整个数组都会被搜索。
+如果 `fromIndex` 为负值，计算出的索引将作为开始搜索 `searchElement` 的位置。如果计算出的索引小于 `0`，则整个数组都会被搜索。
 
 ```js
 // array length is 3
@@ -116,7 +114,7 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 
 ## 参见
 
-- [Polyfill of `Array.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.includes` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.indexOf()")}}
