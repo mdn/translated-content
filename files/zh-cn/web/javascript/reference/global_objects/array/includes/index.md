@@ -43,6 +43,7 @@ includes(searchElement, fromIndex)
 ## 示例
 
 ### 使用 includes() 方法
+
 ```js
 [1, 2, 3].includes(2); // true
 [1, 2, 3].includes(4); // false
