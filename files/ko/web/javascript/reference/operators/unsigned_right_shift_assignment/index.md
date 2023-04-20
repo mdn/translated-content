@@ -1,6 +1,8 @@
 ---
 title: Unsigned 오른쪽 시프트 할당 연산자 (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
+l10n:
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{jsSidebar("Operators")}}
