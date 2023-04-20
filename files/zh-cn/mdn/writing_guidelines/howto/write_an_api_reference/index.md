@@ -118,7 +118,6 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 - 路径名：_close_
 - URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext/close](/zh-CN/docs/Web/API/AudioContext/close)
 
-
 - 标题：_AudioContext.createGain()_
 - 路径名：_createGain_
 - URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext/createGain](/zh-CN/docs/Web/API/BaseAudioContext/createGain)
@@ -221,7 +220,6 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 5. **属性列表、方法列表**：这些部分的标题应该是“Properties”和“Methods”，并使用 {{domxref}} 宏提供到该接口的每个属性/方法的参考页的链接，以及每个属性/方法的描述。这些应该用[描述/定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)来标注。每个描述都应该是短小精悍的，尽可能使用一句话进行概括。参见“用\{{domxref}}宏引用其他 API 功能”一节，以了解创建其他页面链接的更快方法。
 
    在这两部分的开头，在属性/方法列表的开始之前，用适当的斜体句子表示继承性：
-    
    - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    - _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
