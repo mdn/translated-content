@@ -1,8 +1,6 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-page-type: javascript-static-method
-browser-compat: javascript.builtins.Array.isArray
 ---
 
 {{JSRef}}
@@ -24,22 +22,22 @@ Array.isArray(value)
 
 ### 返回值
 
-如果值是 {{jsxref("Array")}}，则为 `true`；否则为 `false`。如果 `value` 是 {{jsxref("TypedArray")}} 实例，则总是返回 `false` 。
+如果值是 {{jsxref("Array")}}，则为 `true`；否则为 `false`。如果 `value` 是 {{jsxref("TypedArray")}} 实例，则总是返回 `false`。
 
 ## 描述
 
-`Array.isarray()` 检查传递的值是否为 {{jsxref("Array")}} 。它不检查值的原型链，也不依赖于它所附加的 `Array` 构造函数。对于使用数组字面语法或 `array` 构造函数创建的任何值，它都会返回 `true` 。这使得它可以安全地使用跨领域对象，其中 `Array` 构造函数的身份是不同的，因此会导致[`instanceof Array`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)失败。
+`Array.isarray()` 检查传递的值是否为 {{jsxref("Array")}}。它不检查值的原型链，也不依赖于它所附加的 `Array` 构造函数。对于使用数组字面语法或 `array` 构造函数创建的任何值，它都会返回 `true`。这使得它可以安全地使用跨领域对象，其中 `Array` 构造函数的身份是不同的，因此会导致[`instanceof Array`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)失败。
 
 有关更多细节，请参阅文章[“确定 JavaScript 对象是否为数组”](https://web.mit.edu/jwalden/www/isArray.html)。
 
-`Array.isarray()` 也拒绝带有 `Array.prototype` 的对象。在它的原型链中，但不是实际的数组， `instanceof Array` 会被接受。
+`Array.isarray()` 也拒绝带有 `Array.prototype` 的对象。在它的原型链中，但不是实际的数组，`instanceof Array` 会被接受。
 
 ## 示例
 
 ### 使用 Array.isArray()
 
 ```js
-// 下面的函数调用都返回 true 。
+// 下面的函数调用都返回 true。
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
@@ -48,7 +46,7 @@ Array.isArray(new Array(3));
 // 鲜为人知的事实：其实 Array.prototype 也是一个数组。
 Array.isArray(Array.prototype);
 
-// 下面的函数调用都返回 false
+// 下面的函数调用都返回 false。
 Array.isArray();
 Array.isArray({});
 Array.isArray(null);
@@ -74,7 +72,7 @@ const arr = new xArray(1, 2, 3); // [1, 2, 3]
 
 // 正确检查 Array
 Array.isArray(arr);  // true
-// arr 的原型是 xArray 。prototype ，它是一个不同于 Array.prototype 的对象
+// arr 的原型是 xArray。prototype，它是一个不同于 Array.prototype 的对象
 arr instanceof Array; // false
 ```
 
@@ -88,6 +86,6 @@ arr instanceof Array; // false
 
 ## 参见
 
-- [Polyfill of `Array.isArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [向 `core-js` 填充 `Array.isArray`](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
