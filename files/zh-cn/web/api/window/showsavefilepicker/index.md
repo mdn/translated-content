@@ -1,5 +1,5 @@
 ---
-title: "Window.showSaveFilePicker()"
+title: Window：showSaveFilePicker() 方法
 slug: Web/API/Window/showSaveFilePicker
 ---
 
@@ -43,7 +43,7 @@ showSaveFilePicker()
 
 ## 安全性
 
-要求发生[临时性用户活动](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该功能正常运行。
+要求发生[临时性用户活动](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
 
 ## 示例
 
@@ -74,4 +74,4 @@ async function getNewFileHandle() {
 ## 参见
 
 - [File System Access API](/zh-CN/docs/Web/API/File_System_Access_API)
-- [The File System Access API: 简化对本地文件的访问](https://web.dev/file-system-access/)
+- [The File System Access API：简化对本地文件的访问](https://web.dev/file-system-access/)

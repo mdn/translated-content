@@ -1,5 +1,5 @@
 ---
-title: Window.showOpenFilePicker()
+title: Window：showOpenFilePicker() 方法
 slug: Web/API/Window/showOpenFilePicker
 ---
 

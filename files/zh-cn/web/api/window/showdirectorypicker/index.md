@@ -1,5 +1,5 @@
 ---
-title: "Window.showDirectoryPicker()"
+title: "Window：showDirectoryPicker() 方法"
 slug: Web/API/Window/showDirectoryPicker
 ---
 
@@ -37,7 +37,7 @@ showDirectoryPicker()
 
 ## 安全性
 
-要求发生[临时性用户活动](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该功能正常运行。
+要求发生[临时性用户活动](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
 
 ## 示例
 
@@ -47,7 +47,7 @@ showDirectoryPicker()
 async function getDir() {
   const dirHandle = await window.showDirectoryPicker();
 
-  //操作 dirHandle 的后续代码
+  // 操作 dirHandle 的后续代码
 }
 ```
 
