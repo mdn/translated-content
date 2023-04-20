@@ -40,7 +40,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 
 ## 示例
 
-请想象下面的 `keys.push('something')` 是在 ECMAScript 2015 之前编写的代码中调用的。
+假设下面的 `keys.push('something')` 是在 ECMAScript 2015 之前编写的代码中调用的。
 
 ```js
 var keys = [];
@@ -64,4 +64,8 @@ with(Array.prototype) {
 
 ## 参见
 
+- [`core-js` 中 `Array.prototype[@@unscopables]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Statements/with", "with")}}
 - {{jsxref("Symbol.unscopables")}}
