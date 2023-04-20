@@ -399,7 +399,6 @@
 /ko/docs/Mozilla/애드온들/WebExtensions/API/webRequest	/ko/docs/Mozilla/Add-ons/WebExtensions/API/webRequest
 /ko/docs/Mozilla/애드온들/WebExtensions/API/webRequest/onBeforeRequest	/ko/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 /ko/docs/Mozilla/애드온들/WebExtensions/Anatomy_of_a_WebExtension	/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-/ko/docs/Mozilla/애드온들/WebExtensions/Content_scripts	/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
 /ko/docs/Mozilla/애드온들/WebExtensions/Examples	/ko/docs/Mozilla/Add-ons/WebExtensions/Examples
 /ko/docs/Mozilla/애드온들/WebExtensions/Package_your_extension_	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /ko/docs/Mozilla/애드온들/WebExtensions/Porting_a_Google_Chrome_extension	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
