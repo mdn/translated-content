@@ -16,6 +16,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 添加下面两个函数到"webgl-demo.js"中：
 
 ```js
+
 //
 // Initialize a texture and load an image.
 // When the image finished loading copy it into the texture.
@@ -83,6 +84,7 @@ function loadTexture(gl, url) {
 function isPowerOf2(value) {
   return (value & (value - 1)) === 0;
 }
+
 ```
 
 函数 `initTextures()` 首先调用 WebGL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 WebGL 纹理对象。然后使用`texImage2D()`函数上传一个蓝色像素。这样即使我们的图像需要一些时间来下载，纹理也立即可用作纯蓝色。
@@ -108,12 +110,14 @@ WebGL1仅支持使用过滤方式为`NEAREST`或`LINEAR`的非2的幂次方纹�
 多级渐进纹理和纹理坐标重复可以通过调用 {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} 来禁用，当然首先你已经通过调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 绑定过纹理了。这样虽然已经可以使用非 2 的幂纹理了，但是你将无法使用多级渐进纹理，纹理坐标包装，纹理坐标重复，而且无法控制设备如何处理你的纹理。
 
 ```js
+
 // gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 // Prevents s-coordinate wrapping (repeating).
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 // Prevents t-coordinate wrapping (repeating).
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
 ```
 
 现在，当使用以上参数时，兼容 WebGL 的设备就会自动变得可以使用任何分辨率的纹理（当然还要考虑像素上限）。如果不使用上面这些参数的话，任何非 2 的幂纹理使用都会失败然后返回一张纯黑图片。
@@ -123,10 +127,12 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 添加下面的代码到`main()`函数，紧跟在调用`initBuffers()`之后：
 
 ```js
+
 // Load texture
 const texture = loadTexture(gl, "cubetexture.png");
 // Flip image pixels into the bottom-to-top order that WebGL expects.
 gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+
 ```
 这里用到的图片可以用本地同目录下图片代替。
 
@@ -134,7 +140,9 @@ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 
 现在，纹理已加载并准备就绪。这将取代`initBuffers()`中为设置每个立方体面颜色而存在的所有先前代码。
 添加这个函数到"init-buffer.js"模块：
+
 ```js
+
 function initTextureBuffer(gl) {
   const textureCoordBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
@@ -162,6 +170,7 @@ function initTextureBuffer(gl) {
 
   return textureCoordBuffer;
 }
+
 ```
 
 首先，这段代码创建了一个WebGL缓冲区，我们将在其中存储每个面的纹理坐标，然后将该缓冲区绑定为将要写入的数组。
@@ -174,6 +183,7 @@ function initTextureBuffer(gl) {
 下面是修改后的"init-buffers.js"模块中的`initBuffers()`函数：
 
 ```js
+
 function initBuffers(gl) {
   // 初始化顶点缓冲区并将它赋值给positionBuffer变量
   const positionBuffer = initPositionBuffer(gl);
@@ -189,6 +199,7 @@ function initBuffers(gl) {
     indices: indexBuffer,
   };
 }
+
 ```
 ## 更新着色器
 
@@ -201,6 +212,7 @@ function initBuffers(gl) {
 像这样更新`main()`函数中的`vsSource`声明：
 
 ```js
+
 const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec2 aTextureCoord;
@@ -215,6 +227,7 @@ const vsSource = `
       vTextureCoord = aTextureCoord;
     }
   `;
+  
 ```
 
 代码的关键更改在于不再获取顶点颜色数据转而获取和设置纹理坐标数据；这样就能把顶点与其对应的纹理联系在一起了。
@@ -224,6 +237,7 @@ const vsSource = `
 那么片段着色器也要相应地进行更改，像这样更新`main()`函数中的`fsSource`声明：
 
 ```js
+
 const fsSource = `
     varying highp vec2 vTextureCoord;
 
@@ -245,6 +259,7 @@ const fsSource = `
 请按照以下方式更新您`main()`函数中的`programInfo`声明：
 
 ```js
+
 const programInfo = {
   program: shaderProgram,
   attribLocations: {
@@ -267,6 +282,7 @@ const programInfo = {
 在“draw-scene.js”模块的`drawScene()`函数中，添加以下函数：
 
 ```js
+
 // 告诉WebGL如何从缓冲区中提取纹理坐标
 function setTextureAttribute(gl, buffers, programInfo) {
   const num = 2; // 每个坐标由2个值组成
@@ -285,17 +301,21 @@ function setTextureAttribute(gl, buffers, programInfo) {
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
 }
+
 ```
 
 在“draw-scene.js”模块的`drawScene()`函数中，将调用`setColorAttribute()`替换为以下代码：
 
 ```js
+
 setTextureAttribute(gl, buffers, programInfo);
+
 ```
 
 在您的`drawScene()`函数中，在两次调用`gl.uniformMatrix4fv()`之后，添加以下代码：
 
 ```js
+
 // Tell WebGL we want to affect texture unit 0
 gl.activeTexture(gl.TEXTURE0);
 
@@ -314,11 +334,17 @@ WebGL 最多可同时注册 32 张纹理；`gl.TEXTURE0` 是第一张。我们�
 请更新`drawScene()`函数的声明以添加新参数：
 
 ```js
+
 function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+
 ```
+
 在`main()`函数调用`drawScene`时添加传参`texture`：
+
 ```js
+
 drawScene(gl, programInfo, buffers, texture, cubeRotation);
+
 ```
 
 好，现在我们的立方体就会像这样旋转起来了。
