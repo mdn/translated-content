@@ -19,7 +19,7 @@ toReversed()
 
 ## 描述
 
-`toReversed()` 方法将调用该方法的数组对象的元素以相反的顺序转置，并返回一个新数组。
+`toReversed()` 方法将调用该方法的数组对象的元素以相反的顺序调换，并返回一个新数组。
 
 当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`toReversed()` 方法会将空插槽迭代为 `undefined` 值。
 
@@ -51,7 +51,7 @@ console.log([1, , 3, 4].toReversed()); // [4, 3, undefined, 1]
 
 ### 在非数组对象上调用 toReversed()
 
-`toReversed()` 方法读取 `this` 的 `length` 属性。然后按降序访问 `length - 1` 和 `0` 之间的每个索引，并将原始数组中该索引的值添加到新数组中相应的索引中。
+`toReversed()` 方法读取 `this` 的 `length` 属性。然后按降序访问 `length - 1` 和 `0` 之间的每个索引，并将原始数组中该索引的值添加到新数组相应的索引中。
 
 ```js
 const arrayLike = {
@@ -61,7 +61,7 @@ const arrayLike = {
 };
 console.log(Array.prototype.toReversed.call(arrayLike));
 // [4, undefined, undefined]
-// '0' 和 '1' 两个索引不存在，所以它们成为 undefined
+// '0' 和 '1' 两个索引不存在，所以它们会变成 undefined
 ```
 
 ## 规范
