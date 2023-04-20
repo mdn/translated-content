@@ -1,6 +1,8 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
+page-type: javascript-instance-method
+browser-compat: javascript.builtins.Array.indexOf
 ---
 
 {{JSRef}}
@@ -21,15 +23,22 @@ indexOf(searchElement, fromIndex)
 - `searchElement`
   - : 要查找的元素。
 - `fromIndex` {{optional_inline}}
-  - : 开始查找的位置。如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回 -1。如果参数中提供的索引值是一个负值，则将其作为数组末尾的一个抵消，即 -1 表示从最后一个元素开始查找，-2 表示从倒数第二个元素开始查找，以此类推。注意：如果参数中提供的索引值是一个负值，并不改变其查找顺序，查找顺序仍然是从前向后查询数组。如果抵消后的索引值仍小于 0，则整个数组都将会被查询。其默认值为 0。
+  - ：从零开始搜索的索引，[转换为整数](/zh-cn/docs/Web/JavaScript/Reference/Global_Objects/Number#转换为整数)。
+    - ：负索引从数组末尾开始计数-如果 `frommindex < 0` ，使用 `frommindex + array.length` 。注意，在这种情况下，仍然从前到后搜索数组。
+    - ：如果 `fromIndex < -array.length` 或者省略了 `fromIndex` ，导致整个数组被搜索。
+    - ：如果 `fromIndex >= array.length` ，数组不会继续搜索并返回 `-1` 。
 
 ### 返回值
 
-首个被找到的元素在数组中的索引位置; 若没有找到则返回 **-1**。
+首个被找到的元素在数组中的索引位置; 若没有找到则返回 **-1** 。
 
 ## 描述
 
-`indexOf` 使用[全等运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===`，或称为三等号运算符的方法相同）判断 `searchElement` 与数组中包含的元素之间的关系。
+`indexOf()` 使用[全等运算](/zh-cn/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===` 操作符使用的算法相同）将 `searchElement` 与数组中的元素进行比较。[`NaN`](/zh-cn/docs/Web/JavaScript/Reference/Global_Objects/NaN)值永远不会作为相等的值进行比较，因此当 `searchElement` 为 `NaN` 时 `indexOf()` 总是返回 `-1` 。
+
+`indexOf()` 方法会跳过[稀疏数组](/zh-cn/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽。
+
+`indexOf()` 方法是[通用的](/zh-cn/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整型键属性。
 
 ## 示例
 
@@ -39,19 +48,26 @@ indexOf(searchElement, fromIndex)
 
 ```js
 const array = [2, 9, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
+array.indexOf(2); // 0
+array.indexOf(7); // -1
+array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
+```
+
+你没法使用 `indexOf()` 来搜索 `NaN` 。
+
+```js
+const array = [NaN];
+array.indexOf(NaN); // -1
 ```
 
 ### 找出指定元素出现的所有位置
 
 ```js
 const indices = [];
-const array = ['a', 'b', 'a', 'c', 'a', 'd'];
-const element = 'a';
+const array = ["a", "b", "a", "c", "a", "d"];
+const element = "a";
 let idx = array.indexOf(element);
 while (idx !== -1) {
   indices.push(idx);
@@ -64,7 +80,7 @@ console.log(indices);
 ### 判断一个元素是否在数组里，不在则更新数组
 
 ```js
-function updateVegetablesCollection (veggies, veggie) {
+function updateVegetablesCollection(veggies, veggie) {
   if (veggies.indexOf(veggie) === -1) {
     veggies.push(veggie);
     console.log(`New veggies collection is: ${veggies}`);
@@ -73,12 +89,37 @@ function updateVegetablesCollection (veggies, veggie) {
   }
 }
 
-const veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+const veggies = ["potato", "tomato", "chillies", "green-pepper"];
 
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // New veggies collection is: potato,tomato,chillies,green-pepper,spinach
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // spinach already exists in the veggies collection.
+```
+
+### 在稀疏数组中使用 indexOf()
+
+不能使用 `indexOf()` 在稀疏数组中搜索空槽。
+
+```js
+console.log([1, , 3].indexOf(undefined)); // -1
+```
+
+### 在非数组对象上调用 indexOf()
+
+`indexOf()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.indexOf.call(arrayLike, 2));
+// 0
+console.log(Array.prototype.indexOf.call(arrayLike, 5));
+// -1
 ```
 
 ## 规范
@@ -92,6 +133,10 @@ updateVegetablesCollection(veggies, 'spinach');
 ## 参见
 
 - [Polyfill of `Array.prototype.indexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.lastIndexOf()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
 - {{jsxref("String.prototype.indexOf()")}}
