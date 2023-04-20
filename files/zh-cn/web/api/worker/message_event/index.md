@@ -27,7 +27,7 @@ onmessage = (event) => {};
 
 ## 事件属性
 
-此接口也从其父接口 {{domxref("Event")}} 继承属性。
+_此接口也从其父接口 {{domxref("Event")}} 继承属性。_
 
 - {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : 消息发送者发送的数据。
@@ -80,5 +80,5 @@ self.postMessage("I'm alive!");
 
 ## 参见
 
-- 相关事件：[`messageerror`](/zh-CN/docs/Web/API/Worker/messageerror_event).
-- [`DedicatedWorkerGlobalScope.postMessage()`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/postMessage).
+- 相关事件：[`messageerror`](/zh-CN/docs/Web/API/Worker/messageerror_event)。
+- [`DedicatedWorkerGlobalScope.postMessage()`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/postMessage)。
