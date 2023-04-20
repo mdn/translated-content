@@ -275,4 +275,4 @@ function handleObjectValues(obj) {
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}
 
-[등록되지 않은 심볼]: /ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry
+[등록되지 않은 심볼]: /ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#전역_심볼_레지스트리의_공유_심볼
