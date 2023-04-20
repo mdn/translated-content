@@ -27,7 +27,7 @@ forEach(callbackFn, thisArg)
     - `array`
       - : 调用了 `forEach()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : 可选参数。当执行回调函数 `callbackFn` 时，用作 `this` 的值。
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
@@ -35,7 +35,7 @@ forEach(callbackFn, thisArg)
 
 ## 描述
 
-`forEach()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按升序索引顺序为数组中的每个元素调用一次提供的 `callbackFn` 函数。与 {{jsxref("Array.prototype.map()", "map()")}} 不同，`forEach()` 总是返回 {{jsxref("undefined")}}，而且不能链式调用。典型的用法是在链的末尾执行副作用。
+`forEach()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按索引升序地为数组中的每个元素调用一次提供的 `callbackFn` 函数。与 {{jsxref("Array.prototype.map()", "map()")}} 不同，`forEach()` 总是返回 {{jsxref("undefined")}}，而且不能链式调用。典型的用法是在链的末尾执行某些操作。
 
 `callbackFn` 仅对已赋值的数组索引调用。对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽，它不会被调用。
 
