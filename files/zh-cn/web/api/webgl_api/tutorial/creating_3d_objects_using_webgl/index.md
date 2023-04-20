@@ -52,7 +52,7 @@ const numComponents = 3;
 > **备注：** 在“init-buffers.js”文件 `initColorBuffer()` 函数中，用下面代码替换 `colors` 定义：
 
 ```js
-var colors = [
+var faceColors = [
   [1.0,  1.0,  1.0,  1.0],    // Front face: white
   [1.0,  0.0,  0.0,  1.0],    // Back face: red
   [0.0,  1.0,  0.0,  1.0],    // Top face: green
