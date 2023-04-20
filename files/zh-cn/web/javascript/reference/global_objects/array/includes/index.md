@@ -21,7 +21,7 @@ includes(searchElement, fromIndex)
 - `searchElement`
   - : 需要查找的值。
 - `fromIndex` {{optional_inline}}
-  - ：从零开始搜索的索引，[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#转换为整数)。
+  - : 开始搜索的索引（从零开始），[会转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#转换为整数)。
     - 负索引从数组末尾开始计数——如果 `fromIndex < 0`，那么实际使用的是 `fromIndex + array.length`。然而在这种情况下，数组搜索仍然从前往后。
     - 如果 `fromIndex < -array.length` 或者省略 `fromIndex`，则使用 `0`，导致整个数组被搜索。
     - 如果 `fromIndex >= array.length`，则不会搜索数组并返回 `false`。
@@ -67,9 +67,9 @@ arr.includes("c", 100); // false
 如果 `fromIndex` 为负值，计算出的索引将作为开始搜索 `searchElement` 的位置。如果计算出的索引小于 `0`，则整个数组都会被搜索。
 
 ```js
-// array length is 3
-// fromIndex is -100
-// computed index is 3 + (-100) = -97
+// 数组长度为 3
+// fromIndex 为 -100
+// 计算出的索引为 3 + (-100) = -97
 
 const arr = ["a", "b", "c"];
 
@@ -81,7 +81,7 @@ arr.includes("a", -2); // false
 
 ### 对稀疏数组使用 includes() 方法
 
-你可以在稀疏数组中搜索 `undefined` ，得到 `true` 。
+你可以在稀疏数组中搜索 `undefined`，得到 `true` 。
 
 ```js
 console.log([1, , 3].includes(undefined)); // true
@@ -115,7 +115,7 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.includes` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.find()")}}
