@@ -1,5 +1,5 @@
 ---
-title: "Window：showDirectoryPicker() 方法"
+title: Window：showDirectoryPicker() 方法
 slug: Web/API/Window/showDirectoryPicker
 ---
 
