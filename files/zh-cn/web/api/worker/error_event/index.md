@@ -5,7 +5,7 @@ slug: Web/API/Worker/error_event
 
 {{APIRef("Web Workers API")}}
 
-当 worker 发生错误时，就会触发 {{domxref("Worker")}} 接口的 **`error`** 事件。
+{{domxref("Worker")}} 接口的 **`error`** 事件会在 worker 发生错误时触发。
 
 ## 语法
 
