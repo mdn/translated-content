@@ -13,29 +13,85 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 > **备注：** 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](zh-CN/docs/Web/HTTP/Access_control_CORS)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。下面的例子就是支持跨域访问的。
 
-加载纹理的代码如下：
+添加下面两个函数到"webgl-demo.js"中：
 
 ```js
-function initTextures() {
-  cubeTexture = gl.createTexture();
-  cubeImage = new Image();
-  cubeImage.onload = function() { handleTextureLoaded(cubeImage, cubeTexture); }
-  cubeImage.src = "cubetexture.png";
+
+//
+// Initialize a texture and load an image.
+// When the image finished loading copy it into the texture.
+//
+function loadTexture(gl, url) {
+  const texture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, texture);
+
+  // Because images have to be downloaded over the internet
+  // they might take a moment until they are ready.
+  // Until then put a single pixel in the texture so we can
+  // use it immediately. When the image has finished downloading
+  // we'll update the texture with the contents of the image.
+  const level = 0;
+  const internalFormat = gl.RGBA;
+  const width = 1;
+  const height = 1;
+  const border = 0;
+  const srcFormat = gl.RGBA;
+  const srcType = gl.UNSIGNED_BYTE;
+  const pixel = new Uint8Array([0, 0, 255, 255]); // opaque blue
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    level,
+    internalFormat,
+    width,
+    height,
+    border,
+    srcFormat,
+    srcType,
+    pixel
+  );
+
+  const image = new Image();
+  image.onload = () => {
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texImage2D(
+      gl.TEXTURE_2D,
+      level,
+      internalFormat,
+      srcFormat,
+      srcType,
+      image
+    );
+
+    // WebGL1 has different requirements for power of 2 images
+    // vs. non power of 2 images so check if the image is a
+    // power of 2 in both dimensions.
+    if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
+      // Yes, it's a power of 2. Generate mips.
+      gl.generateMipmap(gl.TEXTURE_2D);
+    } else {
+      // No, it's not a power of 2. Turn off mips and set
+      // wrapping to clamp to edge
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    }
+  };
+  image.src = url;
+
+  return texture;
 }
 
-function handleTextureLoaded(image, texture) {
-  gl.bindTexture(gl.TEXTURE_2D, texture);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
-  gl.generateMipmap(gl.TEXTURE_2D);
-  gl.bindTexture(gl.TEXTURE_2D, null);
+function isPowerOf2(value) {
+  return (value & (value - 1)) === 0;
 }
+
 ```
 
-函数 `initTextures()` 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 GL 纹理对象 cubeTexture。为了把图片文件加载到纹理，代码首先创建了一个 `Image` 对象然后把需要当作纹理使用的图形文件加载了进来。当图片加载完成后回调函数 `handleTextureLoaded()` 就会执行。
+函数 `initTextures()` 首先调用 WebGL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 WebGL 纹理对象。然后使用`texImage2D()`函数上传一个蓝色像素。这样即使我们的图像需要一些时间来下载，纹理也立即可用作纯蓝色。
 
-接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 `gl.TEXTURE_2D 来让它成为当前操作纹理。然后通过调用` {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。
+为了从图像文件中加载纹理，需要创建一个 `Image` 对象，并将 `src` 赋值为我们希望用作纹理的图像的 URL。我们分配给 `image.onload` 的函数将在图像下载完成后被调用。在那时，我们再次调用 `texImage2D()`，这次使用图像作为纹理的源。之后，我们根据下载的图像是否在两个维度中都为2的幂次方，为纹理设置纹理过滤器和纹理坐标包装。
+
+WebGL1仅支持使用过滤方式为`NEAREST`或`LINEAR`的非2的幂次方纹理，并且无法为它们生成多级渐进纹理。此外，它们的纹理坐标包装模式必须设置为`CLAMP_TO_EDGE`。如果纹理在两个维度上都是2的幂次方，则WebGL可以进行更高质量的过滤，可以使用多级渐进纹理，并且可以将纹理坐标包装模式设置为“REPEAT”或“MIRRORED_REPEAT”。
 
 > **备注：** 在多数情况下，纹理的宽和高都必须是 2 的幂（如：1，2，4，8，16 等等）。如果有什么特殊情况请参考下面的“[非 2 的幂纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#非2的幂纹理)”小节。
 
@@ -54,141 +110,249 @@ function handleTextureLoaded(image, texture) {
 多级渐进纹理和纹理坐标重复可以通过调用 {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} 来禁用，当然首先你已经通过调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 绑定过纹理了。这样虽然已经可以使用非 2 的幂纹理了，但是你将无法使用多级渐进纹理，纹理坐标包装，纹理坐标重复，而且无法控制设备如何处理你的纹理。
 
 ```js
+
 // gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 // Prevents s-coordinate wrapping (repeating).
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 // Prevents t-coordinate wrapping (repeating).
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
 ```
 
 现在，当使用以上参数时，兼容 WebGL 的设备就会自动变得可以使用任何分辨率的纹理（当然还要考虑像素上限）。如果不使用上面这些参数的话，任何非 2 的幂纹理使用都会失败然后返回一张纯黑图片。
 
-## 映射纹理到面
+为了加载图像，在我们的`main()`函数中添加对`loadTexture()`函数的调用。这可以在`initBuffers(gl)`调用之后添加。但需要注意的是：浏览器会从加载的图像中按从左上角开始的自上而下顺序复制像素，而WebGL需要按自下而上的顺序——从左下角开始的像素顺序。所以为了防止渲染时图像纹理方向错误，我们还需要调用`pixelStorei()`并将`gl.UNPACK_FLIP_Y_WEBGL`参数设置为`true`，以调整像素顺序，使其翻转成WebGL需要的自下而上顺序。
 
-现在，纹理已经加载好了，而且已经可以使用了。但是在使用之前我们还要创建好纹理坐标到立方体各个面的顶点的映射关系。下面的代码通过替换之前的设置每个面颜色的代码，当然还是在 `initBuffers()` 函数里。
+添加下面的代码到`main()`函数，紧跟在调用`initBuffers()`之后：
 
 ```js
-cubeVerticesTextureCoordBuffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
 
-var textureCoordinates = [
-  // Front
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
-  // Back
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
-  // Top
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
-  // Bottom
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
-  // Right
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0,
-  // Left
-  0.0,  0.0,
-  1.0,  0.0,
-  1.0,  1.0,
-  0.0,  1.0
-];
+// Load texture
+const texture = loadTexture(gl, "cubetexture.png");
+// Flip image pixels into the bottom-to-top order that WebGL expects.
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
-              gl.STATIC_DRAW);
+```
+这里用到的图片可以用本地同目录下图片代替。
+
+## 映射纹理到面
+
+现在，纹理已加载并准备就绪。这将取代`initBuffers()`中为设置每个立方体面颜色而存在的所有先前代码。
+添加这个函数到"init-buffer.js"模块：
+
+```js
+
+function initTextureBuffer(gl) {
+  const textureCoordBuffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
+
+  const textureCoordinates = [
+    // Front
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // Back
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // Top
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // Bottom
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // Right
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // Left
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  ];
+
+  gl.bufferData(
+    gl.ARRAY_BUFFER,
+    new Float32Array(textureCoordinates),
+    gl.STATIC_DRAW
+  );
+
+  return textureCoordBuffer;
+}
+
 ```
 
-首先，代码创建了一个 GL 缓存区，用来保存每个面的纹理坐标信息，然后把这个缓存区绑定到 GL 以方便我们写入数据。
+首先，这段代码创建了一个WebGL缓冲区，我们将在其中存储每个面的纹理坐标，然后将该缓冲区绑定为将要写入的数组。
+`textureCoordinates` 数组定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。
 
-`数组变量 textureCoordinates` 中定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。
+一旦我们建立了纹理映射数组，我们将数组传递到缓冲区中，这样WebGL就可以使用该数据了。然后我们返回新的缓冲区。
 
-纹理坐标信息给定了之后，把这个数组里的数据都写到 GL 缓存区，这样 GL 就能使用这个坐标数据了。
+接下来，我们需要更新`initBuffers()`来创建并返回纹理坐标缓冲区代替颜色缓冲区。
+
+下面是修改后的"init-buffers.js"模块中的`initBuffers()`函数：
+
+```js
+
+function initBuffers(gl) {
+  // 初始化顶点缓冲区并将它赋值给positionBuffer变量
+  const positionBuffer = initPositionBuffer(gl);
+  //   const colorBuffer = initColorBuffer(gl);
+  const indexBuffer = initIndexBuffer(gl);
+  const textureCoordBuffer = initTextureBuffer(gl);
+  // 返回一个对象，包含了初始化好的positionBuffer
+
+  return {
+    position: positionBuffer,
+    // color: colorBuffer,
+    textureCoord: textureCoordBuffer,
+    indices: indexBuffer,
+  };
+}
+
+```
 
 ## 更新着色器
 
 为了使用纹理来代替单一的颜色，着色器程序和着色器程序的初始化代码都需要进行修改。
 
-先让我们看一看需要加入函数 initShaders() 里的非常简单的改变：
-
-```js
-textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
-gl.enableVertexAttribArray(textureCoordAttribute);
-gl.vertexAttribPointer(texCoordAttribute, 2, gl.FLOAT, false, 0, 0);
-```
-
-这段代码中我们使用包含纹理坐标信息的属性替换之前使用的顶点颜色属性。
-
 ### 顶点着色器
 
-接下来我们会修改顶点着色器代码，现在不再需要获取顶点颜色数据，而是获取纹理坐标数据。
+我们需要更改顶点着色器，使其不再获取颜色数据，而是获取纹理坐标数据。
 
-```html
-<script id="shader-vs" type="x-shader/x-vertex">
-  attribute vec3 aVertexPosition;
-  attribute vec2 aTextureCoord;
+像这样更新`main()`函数中的`vsSource`声明：
 
-  uniform mat4 uMVMatrix;
-  uniform mat4 uPMatrix;
+```js
 
-  varying highp vec2 vTextureCoord;
+const vsSource = `
+    attribute vec4 aVertexPosition;
+    attribute vec2 aTextureCoord;
 
-  void main(void) {
-    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-    vTextureCoord = aTextureCoord;
-  }
-</script>
+    uniform mat4 uModelViewMatrix;
+    uniform mat4 uProjectionMatrix;
+
+    varying highp vec2 vTextureCoord;
+
+    void main(void) {
+      gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
+      vTextureCoord = aTextureCoord;
+    }
+  `;
+
 ```
 
 代码的关键更改在于不再获取顶点颜色数据转而获取和设置纹理坐标数据；这样就能把顶点与其对应的纹理联系在一起了。
 
 ### 片段着色器
 
-那么片段着色器也要相应地进行更改：
+那么片段着色器也要相应地进行更改，像这样更新`main()`函数中的`fsSource`声明：
 
-```html
-<script id="shader-fs" type="x-shader/x-fragment">
-  varying highp vec2 vTextureCoord;
+```js
 
-  uniform sampler2D uSampler;
+const fsSource = `
+    varying highp vec2 vTextureCoord;
 
-  void main(void) {
-    gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));
-  }
-</script>
+    uniform sampler2D uSampler;
+
+    void main(void) {
+      gl_FragColor = texture2D(uSampler, vTextureCoord);
+    }
+  `;
+
 ```
 
 现在的代码不会再使用一个简单的颜色值填充片段颜色，片段的颜色是通过采样器使用最好的映射方式从纹理中的每一个像素计算出来的。
 
-## 绘制具体纹理贴图的立方体
+### Attribute 和 Uniform 位置
 
-接下来是对 `drawScene()` 函数的更改，为了使整体的代码看起来更简洁，我们去掉了让立方体位置变化的代码，现在它只会随着时间的变化进行旋转，而为了使用纹理，所要进行的代码更改确是很少的。
+由于我们更改了一个属性并添加了一个统一变量，因此需要查找它们的位置。
 
-使用下面的代码代替映射颜色到纹理的代码：
+请按照以下方式更新您`main()`函数中的`programInfo`声明：
 
 ```js
-gl.activeTexture(gl.TEXTURE0);
-gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
+
+const programInfo = {
+  program: shaderProgram,
+  attribLocations: {
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+    textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
+  },
+  uniformLocations: {
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+    uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
+  },
+};
+
 ```
 
-GL 最多可同时注册 32 张纹理；`gl.TEXTURE0 是第一张。我们把我们之前加载的纹理绑定到了第一个寄存器，然后着色器程序里的采样器 uSampler` 就会完成它的功能：使用纹理。
+## 绘制具体纹理贴图的立方体
+
+`drawScene()`函数的修改很简单。
+
+在“draw-scene.js”模块的`drawScene()`函数中，添加以下函数：
+
+```js
+
+// 告诉WebGL如何从缓冲区中提取纹理坐标
+function setTextureAttribute(gl, buffers, programInfo) {
+  const num = 2; // 每个坐标由2个值组成
+  const type = gl.FLOAT; // 缓冲区中的数据为32位浮点数
+  const normalize = false; // 不做标准化处理
+  const stride = 0; // 从一个坐标到下一个坐标要获取多少字节
+  const offset = 0; // 从缓冲区内的第几个字节开始获取数据
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.textureCoord,
+    num,
+    type,
+    normalize,
+    stride,
+    offset
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
+}
+
+```
+
+在“draw-scene.js”模块的`drawScene()`函数中，将调用`setColorAttribute()`替换为以下代码：
+
+```js
+
+setTextureAttribute(gl, buffers, programInfo);
+
+```
+
+在您的`drawScene()`函数中，在两次调用`gl.uniformMatrix4fv()`之后，添加以下代码：
+
+```js
+
+// Tell WebGL we want to affect texture unit 0
+gl.activeTexture(gl.TEXTURE0);
+
+// Bind the texture to texture unit 0
+gl.bindTexture(gl.TEXTURE_2D, texture);
+
+// Tell the shader we bound the texture to texture unit 0
+gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
+
+```
+
+WebGL 最多可同时注册 32 张纹理；`gl.TEXTURE0` 是第一张。我们把我们之前加载的纹理绑定到了第一个寄存器，然后着色器程序里的采样器 `uSampler` 就会完成它的功能：使用纹理。
+
+最后，将`texture`作为参数添加到`drawScene()`函数中，同时定义和调用该函数。
+
+请更新`drawScene()`函数的声明以添加新参数：
+
+```js
+
+function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+
+```
+
+在`main()`函数调用`drawScene`时添加传参`texture`：
+
+```js
+
+drawScene(gl, programInfo, buffers, texture, cubeRotation);
+
+```
 
 好，现在我们的立方体就会像这样旋转起来了。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[查看完整示例代码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [在新窗口里打开示例](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[查看完整示例代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [在新窗口里打开示例](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## 关于跨域纹理
 
