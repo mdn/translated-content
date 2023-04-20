@@ -21,7 +21,7 @@ slug: Web/HTML/Element/script/type/importmap
 </script>
 ```
 
-不得 `src`、`async`、`nomodule`、`defer`、`crossorigin`、`integrity` 和 `referrerpolicy` 属性。
+不得指定 `src`、`async`、`nomodule`、`defer`、`crossorigin`、`integrity` 和 `referrerpolicy` 属性。
 
 仅处理文档中具有内联定义的第一个导入映射；忽略任何额外的导入映射和外部导入映射。
 
