@@ -1,8 +1,6 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.keys
 ---
 
 {{JSRef}}
@@ -23,7 +21,7 @@ keys()
 
 ## 描述
 
-当使用[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时， `keys()` 方法迭代空槽，就像它们的值 `undefined` 一样。
+当使用[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`keys()` 方法迭代空槽，就像它们的值 `undefined` 一样。
 
 `keys()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用的数组方法)。它只期望 `this` 值具有 `length` 属性和整型键属性。
 
@@ -31,7 +29,7 @@ keys()
 
 ### 在稀疏数组中使用 keys()
 
-与 {{jsxref("Object.keys()")}} 只包含数组中实际存在的键不同， `keys()` 迭代器不会忽略缺失属性的键。
+与 {{jsxref("Object.keys()")}} 只包含数组中实际存在的键不同，`keys()` 迭代器不会忽略缺失属性的键。
 
 ```js
 const arr = ["a", , "c"];
@@ -43,7 +41,7 @@ console.log(denseKeys); // [0, 1, 2]
 
 ### 在非数组对象上调用 keys()
 
-`keys()` 方法读取 `this` 的 `length` 属性，然后生成0到 `length - 1` 之间的所有整数索引。
+`keys()` 方法读取 `this` 的 `length` 属性，然后生成 0 到 `length - 1` 之间的所有整数索引。
 
 ```js
 const arrayLike = {
@@ -68,7 +66,7 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 ## 参见
 
 - [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
