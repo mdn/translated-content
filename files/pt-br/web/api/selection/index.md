@@ -94,7 +94,7 @@ Como consta nas [Especificações da API de seleção](https://www.w3.org/TR/sel
 
 Seleção e foco de input (indicado por {{DOMxRef("Document.activeElement")}}) tem uma relação complexa, que depende do navegador. Para um código compatível com vários navegadores, o melhor é manter os códigos separados.
 
-O Safari e o Chrome (ao contrário do Firefox) historicamente foca no elemento contendo a seleção quando a seleção é modificada programaticamente, mas isto pode mudar no futuro (veja [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) e {{WebKitBug("38696")}}).
+O Safari e o Chrome (ao contrário do Firefox) historicamente foca no elemento contendo a seleção quando a seleção é modificada programaticamente, mas isto pode mudar no futuro (veja [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) e [WebKit bug 38696](https://webkit.org/b/38696)).
 
 ### Comportamento da API de Seleção em termos de edição e alterações de foco do host
 

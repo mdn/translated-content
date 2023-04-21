@@ -83,9 +83,9 @@ El encabezamiento del documento:
 - Utiliza el [Validador de HTML W3C HTML](https://validator.w3.org/) para validar tu HTML; recibirás puntos de bonificación si se valida.
 - No necesitas conocer CSS para hacer este ejercicio; solo debes poner el CSS proporcionado en el elemento HTML adecuado.
 
-## Example
+## Ejemplo
 
-The following screenshot shows an example of what the letter might look like after being marked up.
+La siguiente captura de pantalla muestra un ejemplo de cómo se vería la carta después de marcarla.
 
 ![](letter-update.png)
 
