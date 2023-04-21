@@ -1,117 +1,119 @@
 ---
-title: Aprende sobre desarrollo web
+title: Aprende desarrollo web
 slug: Learn
+l10n:
+  sourceCommit: f22e2f56c6cc82b43b6a14fa213755512e23cd8f
 ---
 
 {{LearnSidebar}}
 
-¡Hola! Bienvenido al área de aprendizaje de MDN. Si quieres aprender a crear tus propias páginas web, sitios o aplicaciones, has venido al lugar indicado.
+Bienvenido al área de aprendizaje de MDN. Este conjunto de artículos tiene como objetivo guiar a los principiantes al desarrollo web con todo lo que necesitan para comenzar a codificar sitios web.
 
-El objetivo de esta área de MDN no es llevarte de «principiante» a «experto», sino de «principiante» a «cómodo». A partir de ese punto, deberías poder comenzar a abrirte camino, aprendiendo del [resto de MDN](/es/) y de otras fuentes de niveles intermedio hasta avanzado, las cuales asumen que tienes un vasto conocimiento previamente adquirido.
+El objetivo de esta área de MDN no es llevarte de "principiante" a "experto", sino llevarte de "principiante" a "cómodo". A partir de ahí, deberías poder empezar a abrirte camino, aprendiendo de [el resto de MDN](/es/), y otros recursos de intermedios a avanzados que suponen mucho conocimiento previo.
 
-Si eres del todo un principiante, el desarrollo web puede ser un reto —pero no te preocupes, te llevaremos de la mano y te proveeremos de suficientes detalles para hacerte sentir cómodo y que aprendas los temas apropiadamente—. Para que te sientas como en casa, ya seas un estudiante (por tu cuenta o como parte de un grupo), un maestro buscando material para sus clases, un aficionado o alguien que simplemente desea entender mejor cómo funcionan las tecnologías web.
+Si eres un principiante, el desarrollo web puede ser un desafío: iremos de la mano y te brindaremos suficientes detalles para que te sientas cómodo y aprendas los temas correctamente. Debes sentirte como en casa, ya sea que seas un estudiante que está aprendiendo desarrollo web (por su cuenta o como parte de una clase), un maestro que busca materiales para la clase, un aficionado o alguien que solo quiere saber más sobre cómo funcionan las tecnologías web.
 
-## Novedades
-
-El contenido del área de aprendizaje se amplía con regularidad. Se han comenzado a guardar [notas de publicación del área de aprendizaje](/es/docs/Learn/Release_notes) para mostrar lo que ha cambiado. ¡Revísalas frecuentemente para mantenerte actualizado!
-
-Si tienes preguntas sobre temas que te gustaría que se abordaran o te parece que faltan, envía un mensaje en el [Foro de discusión](https://discourse.mozilla.org/c/mdn), de la comunidad Mozilla (sitio en inglés).
-
-> ### ¿Quieres convertirte en un desarrollador de interfaz de usuario web?
+> **Observación:**
 >
-> Hemos elaborado un curso que incluye toda la información esencial que necesitas para alcanzar tu objetivo.
+> #### ¿Quieres convertirte en un desarrollador web front-end?
 >
-> [Empieza aquí](/docs/Learn/Front-end_web_developer)
+> Hemos preparado un curso que incluye toda la información esencial que necesita para trabajar hacia su objetivo.
+>
+> [**Empezar**](/es/docs/Learn/Front-end_web_developer)
 
-## Dónde empezar
+## Donde empezar
 
-Para continuar, piensa cuál de las siguientes afirmaciones te describe mejor y ve a la página de inicio enlazada:
+- Principiante
+  - : Si eres un principiante en el desarrollo web, te recomendamos que empieces trabajando con nuestro módulo [Cómo empezar con la web](/es/docs/Learn/Getting_started_with_the_web), que proporciona una introducción práctica al desarrollo web.
+- Mas allá de lo básico
+  - : Si ya tienes un poco de conocimiento, el siguiente paso es aprender {{glossary("HTML")}} y {{glossary("CSS")}} en detalle: comience con nuestra [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y pase a nuestro módulo [Primeros pasos con CSS](/es/docs/Learn/CSS/First_steps).
+- Pasando al código
+  - : Si ya te sientes cómodo con HTML y CSS, o si estás principalmente interesado en la codificación, querrá pasar a {{glossary("JavaScript")}} o al desarrollo del lado del servidor. Comience con nuestros módulos [Primeros pasos de JavaScript](/es/docs/Learn/JavaScript/First_steps) y [Primeros pasos del lado del servidor](/es/docs/Learn/Server-side/First_steps).
+- _Frameworks_ y herramientas
+  - : Después de dominar los conceptos básicos de HTML, CSS y JavaScript estándar, debe aprender sobre [herramientas de desarrollo web del lado del cliente](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools), y luego considerar profundizar en [_frameworks_ de JavaScript del lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), y [programación de sitios web del lado del servidor](/es/docs/Learn/Server-side).
 
-- **Soy un principiante:** ¡Bienvenido! Si eres un completo novel en desarrollo web, definitivamente el mejor lugar para empezar es el módulo [Primeros pasos en la web](/es/docs/Learn/Getting_started_with_the_web). Una introducción práctica que te dará las bases necesarias para iniciar y avanzar en el desarrollo web.
-- **Conozco la web:** ¡Muy bien! Si ya tienes un poco de conocimiento en ese caso te sugerimos profundizar en el corazón de las tecnologías web. El siguiente paso es conocer en detalle {{Glossary("HTML")}} y {{Glossary("CSS")}}: empieza con el módulo de introducción a [Introducción a HTML](/es/docs/Learn/HTML) y sigue con el módulo de [primeros pasos en CSS](/es/docs/Learn/CSS).
-- **Me interesa javascript:** Si ya te sientes cómodo con el HTML y el CSS, o principalmente estás interesado en la codificación, querrás pasar al desarrollo de {{Glossary("JavaScript")}} o al desarrollo de lado del servidor. Comienza con los módulos de [primeros pasos con JavaScript](/es/docs/Learn/JavaScript/First_steps) y [primeros pasos en la programación de lado del servidor](/es/docs/Learn/Server-side/Primeros_pasos).
-- **Soy experto en la web:** ¡Excelente! Después de dominar los fundamentos del HTML, CSS y JavaScript puedes estar interesado en explorar las [Guías avanzadas](/es/docs/Web/Guide) y [Tutoriales](/es/docs/Web/Tutoriales). Otra excelente idea es aprender sobre las [herramientas de desarrollo web de lado del cliente](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools) y luego considerar ahondar en los [marcos de desarrollo («frameworks») de JavaScript de lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), y la [Programación de sitios web de lado del servidor](/es/docs/Learn/Server-side). Finalmente deberías considerar [Contribuir al Área de Aprendizaje](/es/docs/Learn/como_Contribuir).
+> **Nota:** Nuestro [glosario](/es/docs/Glossary) proporciona definiciones terminológicas. Además, si tienes una pregunta específica sobre desarrollo web, nuestra sección [Preguntas comunes](/es/docs/Learn/Common_questions) puede tener algo para ayudarte.
 
-> **Nota:** el [glosario](/es/docs/Glossary) proporciona definición de términos. Además, si tienes una pregunta específica sobre el desarrollo web, la sección de [preguntas frecuentes](/es/docs/Learn/Common_questions) te puede brindar información de gran utilidad.
+## Temas cubiertos
 
-## Temas tratados
+La siguiente es una lista de todos los temas que cubrimos en el área de aprendizaje de MDN.
 
-La siguiente es una lista de todos los temas tratados en el área de aprendizaje de MDN.
+- [Comenzando con la web](/es/docs/Learn/Getting_started_with_the_web)
+  - : Proporciona una introducción práctica al desarrollo web para principiantes.
+- [HTML: Estructura de la web](/es/docs/Learn/HTML)
+  - : HTML es el lenguaje que usamos para estructurar las diferentes partes de nuestro contenido y definir cuál es su significado o propósito. Este tema enseña HTML en detalle.
+- [CSS: Dar estilo a la web](/es/docs/Learn/CSS)
+  - : CSS es el lenguaje que usamos para controlar el estilo y el diseño de tu contenido web, así como para agregar comportamientos como la animación. Este tema proporciona una cobertura completa de CSS.
+- [JavaScript: Código dinámico del lado del cliente](/es/docs/Learn/JavaScript)
+  - : JavaScript es el lenguaje utilizado para agregar funcionalidad dinámica a las páginas web. Este tema enseña todos los elementos esenciales necesarios para sentirse cómodo con la escritura y la comprensión de JavaScript.
+- [Formularios web: Trabajar con datos de usuario](/es/docs/Learn/Forms)
+  - : Los formularios web son una herramienta potente para interactuar con los usuarios; por lo general, se utilizan para recopilar datos de los usuarios o permitirles controlar una interfaz de usuario. En los artículos que se enumeran a continuación, cubriremos todos los aspectos esenciales de la estructuración, el estilo y la interacción con formularios web.
+- [Accesibilidad: Hacer que la web sea utilizable por todos](/es/docs/Learn/Accessibility)
+  - : La accesibilidad es la práctica de hacer que el contenido web esté disponible para la mayor cantidad de personas posible, independientemente de la discapacidad, el dispositivo, el lugar u otros factores diferenciadores. Este tema te brinda todo lo que necesitas saber.
+- [Rendimiento web: Hacer que los sitios web sean rápidos y responsivos](/es/docs/Learn/Performance)
+  - : El rendimiento web es el arte de garantizar que las aplicaciones web se descarguen rápidamente y respondan a la interacción del usuario, independientemente del ancho de banda, el tamaño de la pantalla, la red o las capacidades del dispositivo del usuario.
+- [MathML](/es/docs/Learn/MathML)
+  - : MathML es el lenguaje que podemos usar para escribir fórmulas matemáticas en páginas web usando fracciones, scripts, radicales, matrices, integrales, series, etc. Este tema cubre MathML.
+- [Herramientas y pruebas](/es/docs/Learn/Tools_and_testing)
+  - : Este tema cubre las herramientas que usan los desarrolladores para facilitar su trabajo, como herramientas de prueba entre navegadores, _linters_, formateadores, herramientas de transformación, sistemas de control de versiones, herramientas de implementación y _frameworks_ JavaScript del lado del cliente.
+- [Programación de sitios web del lado del servidor](/es/docs/Learn/Server-side)
+  - : Incluso si te estás concentrando en el desarrollo web del lado del cliente, sigue siendo útil saber cómo funcionan los servidores y las características del código del lado del servidor. Este tema proporciona una introducción general sobre cómo funciona el lado del servidor y tutoriales detallados que muestran cómo crear una aplicación del lado del servidor utilizando dos _frameworks_ populares: Django (Python) y Express (Node.js).
 
-- [Primeros pasos en la web](/es/docs/Learn/Getting_started_with_the_web)
-  - : Proporciona una introducción práctica al desarrollo de la web para principiantes.
-- [HTML](/es/docs/Learn/HTML)
-  - : HTML es el lenguaje utilizado para estructurar las diferentes partes del contenido y definir su significado o propósito. Este tema enseña el HTML en detalle.
-- [CSS](/es/docs/Learn/CSS)
-  - : CSS es el lenguaje que se utiliza para estilizar y organizar el contenido web, así como para añadir comportamiento tal como la animación. Este tema proporciona una amplia cobertura de CSS.
-- [JavaScript — Scripts dinámicos de lado del cliente](/es/docs/Learn/JavaScript)
-  - : JavaScript es el lenguaje de scripts usado para añadir funcionalidad dinámica a las páginas web. Este tema enseña todo lo esencial necesario para sentirte cómodo con la escritura y comprensión de JavaScript.
-- [Formularios HTML](/es/docs/Learn/HTML/Forms)
-  - : Los formularios HTML son un potente instrumento para interactuar con los usuarios — frecuentemente se utilizan para reunir datos de los usuarios, o permitirte controlar la interfaz de usuario. En los artículos enumerados a continuación, se cubrirán todos los aspectos esenciales de la estructuración, estilizado e interacción con los formularios web.
-- [Accesibilidad](/es/docs/Learn/Accessibility)
-  - : La accesibilidad es la práctica de hacer que el contenido web esté disponible para tantas personas como sea posible, independientemente de la discapacidad, el dispositivo, la ubicación u otros factores diferenciadores. Este tema te da todo lo que necesitas saber.
-- [Rendimiento web — hace que los sitios web sean rápidos y responsivos](/es/docs/Learn/Performance)
-  - : El rendimiento web es el arte de asegurarte de que las aplicaciones web se descarguen rápidamente y respondan a la interacción del usuario, independientemente del ancho de banda, el tamaño de la pantalla, la red o las capacidades del dispositivo del usuario.
-- [Herramientas y pruebas](/es/docs/Learn/Herramientas_y_pruebas)
-  - : Este tema abarca las herramientas que los desarrolladores utilizan para facilitar su trabajo, como las herramientas de prueba entre navegadores, analizadores de errores de código fuente, formateadores, herramientas de transformación, sistemas de control de versiones, herramientas de despliegue y marcos de desarrollo JavaScript de lado del cliente.
-- [Programación del lado servidor](/es/docs/Learn/Server-side)
-  - : Aunque te concentres en el desarrollo web de lado del cliente, sigue siendo útil saber cómo funcionan los servidores y las características del código del lado del servidor. Este tema proporciona una introducción general a cómo funciona el lado del servidor y tutoriales detallados que muestran cómo construir una aplicación de lado del servidor utilizando dos marcos de desarrollo populares: Django (Python) y Express (Node.js).
+## Obtener nuestros ejemplos de código
 
-## Obtener el código de los ejemplos
+Los ejemplos de código que encontrará en el Área de aprendizaje están todos [disponibles en GitHub](https://github.com/mdn/learning-area/). Si desea copiarlos todos en su computadora, la forma más fácil es [descargar un ZIP de la última rama del código principal](https://codeload.github.com/mdn/learning-area/zip/main).
 
-Todo el código de los ejemplos propuestos en el área de aprendizaje se encuentra disponible en [GitHub](https://github.com/mdn/learning-area//). Si quieres, los puedes copiar para tenerlos en tu ordenador, la manera más fácil es [descargar un ZIP de la última rama del código maestro](https://github.com/mdn/learning-area/archive/master.zip).
+Si prefiere copiar el repositorio de una manera más flexible que permita actualizaciones automáticas, puede seguir las instrucciones a continuación:
 
-Si prefieres copiar el código de una forma más flexible que te permita actualizaciones automáticas, puedes seguir estas instrucciones más complejas:
-
-1. [Instala Git](https://git-scm.com/downloads) en tu máquina. Este es el sistema de control de versiones de software con el que trabaja GitHub principalmente.
-2. Abre tu [consola de comandos](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) o terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [MacOS X](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line))
-3. Para copiar el repositorio del área de aprendizaje a un directorio llamado `learning-area` en la ubicación actual, en la ventana de tu Terminal o en la línea de comandos, debes usar el siguiente comando.
+1. [Instalar Git](https://git-scm.com/downloads) en su máquina. Este es el software del sistema de control de versiones subyacente sobre el que funciona GitHub.
+2. Abra el [símbolo del sistema](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) o terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)) de su computadora.
+3. Para copiar el repositorio del área de aprendizaje en una carpeta llamada área de aprendizaje en la ubicación actual a la que apunta su símbolo del sistema/terminal, usa el siguiente comando:
 
    ```bash
    git clone https://github.com/mdn/learning-area
    ```
 
-4. Ahora puedes entrar en el directorio y encontrar todos los archivos que descargaste (posiblemente con el explorador de archivos o el [comando `cd`](https://es.wikipedia.org/wiki/Chdir)).
+4. Ahora puedes ingresar al directorio y encontrar los archivos que buscas (ya sea usando su Finder/Explorador de archivos o el comando [`cd`](<https://en.wikipedia.org/wiki/Cd_(command)>)) .
 
-Puedes actualizar el repositorio `learning-area` con los últimos cambios que se hayan hecho a la versión principal en GitHub con los siguientes pasos:
+Puedes actualizar el repositorio `learning-area` con cualquier cambio realizado en la versión principal en GitHub con los siguientes pasos:
 
-1. En tu intérprete de comandos/terminal, ve dentro del directorio `learning-area` usando `cd`. Por ejemplo, si estuvieras en el directorio padre:
+1. En el símbolo del sistema/terminal, ve al directorio `learning-area` usando `cd`. Por ejemplo, si estuviera en el directorio principal:
 
    ```bash
    cd learning-area
    ```
 
-2. Puedes realizar actualizaciones al repositorio usando el siguiente comando:
+2. Actualice el repositorio usando el siguiente comando:
 
    ```bash
    git pull
    ```
 
-## Contáctanos
+## Contactanos
 
-Si tienes alguna pregunta o deseas saber hacia dónde ir, Mozilla es una comunidad mundial de entusiastas de la web, incluyendo mentores y profesores, encantados de ayudarte. Ponte en contacto con ellos mediante WebMaker: Conoce y dialoga con los mentores y profesores en el [Foro de Discusión en Español](https://discourse.mozilla.org/c/community-portal/mozilla-hispano/). Encuentra [Eventos](https://foro.mozilla-hispano.org/c/difusion-eventos) y aprende acerca de la Web con profesionales. Nos gustaría saber cualquier cosa de ti, si bien crees que algo está mal o falta en el sitio, o quieres solicitar nuevos temas de aprendizaje, solicitar ayuda con elementos que no comprendes o cualquier otra pregunta o inquietud que tengas.
+Si quieres ponerte en contacto sobre cualquier cosa, utiliza los [canales de comunicación](/es/docs/MDN/Community/Communication_channels). Nos gustaría saber de ti sobre cualquier cosa que creas que está mal o que falta en el sitio, solicitudes de nuevos temas de aprendizaje, solicitudes de ayuda con elementos que no comprendes o cualquier otra pregunta o inquietud.
 
-Si estás interesado en ayudar a desarrollar/mejorar el contenido, consulta [cómo puedes ayudar](/es/docs/Learn/Como_Contribuir) y, ¡pónte en contacto!; estaremos más que felices de hablar contigo, bien seas un alumno, un maestro, un desarrollador web experimentado o alguien más, interesado en ayudar a mejorar la experiencia de aprendizaje.
+Si estás interesado en ayudar a desarrollar/mejorar el contenido, echa un vistazo a [cómo puedes ayudar](/es/docs/MDN/Contribute) ¡y ponte en contacto! Estamos más que felices de hablar contigo, ya sea un alumno, un maestro, un desarrollador web experimentado o cualquier otra persona interesada en ayudar a mejorar la experiencia de aprendizaje.
 
-## Ve también
+## Véase también
 
-- [Boletín informativo para desarrolladores de Mozilla](https://www.mozilla.org/es/newsletter/developer/)
-  - : Nuestro boletín para desarrolladores web, es un excelente recurso para todos los niveles de experiencia.
+- [Boletín para desarrolladores de Mozilla](https://www.mozilla.org/es/newsletter/developer/)
+  - : Nuestro boletín para desarrolladores web, que es un excelente recurso para todos los niveles de experiencia.
 - [Aprende JavaScript](https://learnjavascript.online/)
-  - : Un excelente recurso para los aspirantes a desarrolladores web — aprende JavaScript en un entorno interactivo, con lecciones breves y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratuitas y el curso completo está disponible por un pequeño pago único.
+  - : Un recurso excelente para los aspirantes a desarrolladores web: aprenda JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratuitas y el curso completo está disponible por un pequeño pago único.
 - [Web desmitificada](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : Una gran serie de videos que explican los fundamentos de la web, dirigida a principiantes absolutos en el desarrollo web. Creada por [Jérémie Patonnier](https://twitter.com/JeremiePat).
+  - : Una gran serie de videos que explican los fundamentos web, dirigidos a principiantes en el desarrollo web. Creado por [Jérémie Patonnier](https://twitter.com/JeremiePat).
 - [Codecademy](https://www.codecademy.com/)
   - : Un gran sitio interactivo para aprender lenguajes de programación desde cero.
 - [BitDegree](https://www.bitdegree.org/learn/)
-  - : Teoría básica de la codificación con un proceso de aprendizaje ludificado. Enfocado principalmente a principiantes.
+  - : Teoría básica de codificación con un proceso de aprendizaje gamificado. Principalmente enfocado a principiantes.
 - [Code.org](https://code.org/)
-  - : Teoría y práctica de codificación básica, principalmente dirigida a niños/principiantes.
+  - : Teoría y práctica de codificación básica, dirigida principalmente a niños/principiantes.
 - [EXLskills](https://exlskills.com/learn-en/courses)
-  - : Cursos gratuitos y abiertos para aprender habilidades tecnológicas, con tutorías y aprendizaje basado en proyectos.
+  - : Cursos gratuitos y abiertos para el aprendizaje de habilidades tecnológicas, con tutoría y aprendizaje basado en proyectos.
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : Sitio interactivo con tutoriales y proyectos para aprender desarrollo web.
 - [Mapa de alfabetización web](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
-  - : Un marco de desarrollo para la alfabetización web a nivel de entrada y las habilidades del siglo XXI, que también brindan acceso a actividades de enseñanza clasificadas por categoría.
+  - : Un _framework_ para la alfabetización web básica y las habilidades del siglo XXI, que también proporciona acceso a actividades de enseñanza ordenadas por categoría.
 - [Edabit](https://edabit.com/challenges/javascript)
   - : Miles de desafíos interactivos de JavaScript.
