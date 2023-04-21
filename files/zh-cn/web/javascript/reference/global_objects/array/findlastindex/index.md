@@ -38,7 +38,7 @@ findLastIndex(callbackFn, thisArg)
 
 ## 描述
 
-`findLastIndex()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素按下标顺序调用一次提供的 `callbackFn` 函数，直到 `callbackFn` 返回一个[真值](/zh-CN/docs/Glossary/Truthy)。然后 `findLastIndex()` 返回元素的索引并且停止遍历数组。如果 `callbackFn` 没有返回一个真值，则 `findLastIndex()` 返回 `-1`。
+`findLastIndex()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素按索引降序调用一次提供的 `callbackFn` 函数，直到 `callbackFn` 返回一个[真值](/zh-CN/docs/Glossary/Truthy)。然后 `findLastIndex()` 返回元素的索引并且停止遍历数组。如果 `callbackFn` 没有返回一个真值，则 `findLastIndex()` 返回 `-1`。
 
 `callbackFn` 会为数组中的每个元素调用，而不仅仅是那些被赋值的元素，这意味着对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)来说，空槽的行为和 `undefined` 相同。
 
