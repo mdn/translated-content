@@ -263,7 +263,7 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 function cached(getter) {
   // 문자열 ULRs과 결과값의 WeekRefs를 연결하는 Map
   const cache = new Map();
-  // 값이 가비지 콜렉트될 때마다, 캐시의 키가 아규먼트인 콜백이 호출되어
+  // 값이 가비지 콜렉트될 때마다, 캐시의 키가 인수인 콜백이 호출되어
   // 캐시 entry를 제거할 수 있도록 함
   const registry = new FinalizationRegistry((key) => {
     // Note: WeakRef가 정말로 비었는지 테스트하는 것이 매우 중요합니다.
