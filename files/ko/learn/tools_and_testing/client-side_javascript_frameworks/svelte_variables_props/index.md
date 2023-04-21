@@ -288,7 +288,7 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    변수 `newTodoName`의 값이 변경될 때마다 입력의 `value` 속성에 반영되며 입력에서 키를 누를 때마다 변수 `newTodoName`의 내용을 업데이트합니다.
 
-   이것은 입력에 대한 양방향 데이터 바인딩의 정형화된 구현입니다. 하지만 이렇게 할 필요는 없습니다 왜냐하면 Svelte는 [`bind:property`](https://svelte.dev/docs#bind_element_property) 지시문을 사용하여 모든 속성을 변수에 바인딩하는 더 쉬운 방법을 제공합니다.
+   이는 입력에 대한 양방향 데이터 바인딩을 수동으로 구현한 것입니다. 하지만 이렇게 할 필요는 없습니다 왜냐하면 Svelte는 [`bind:property`](https://svelte.dev/docs#bind_element_property) 지시문을 사용하여 모든 속성을 변수에 바인딩하는 더 쉬운 방법을 제공합니다.
 
    ```html
    <input bind:value={newTodoName} />
