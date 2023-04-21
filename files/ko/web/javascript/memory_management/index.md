@@ -186,7 +186,7 @@ node --expose-gc --inspect index.js
 
 [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)과 [`WeakSet`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)은 각 non-weak에 대응되는 [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)과 [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)의 API를 모방한 데이터 구조입니다. `WeakMap`은 키-값 쌍의 콜렉션을 제공하는 반면, `WeakSet`은 유일한 값들로 이뤄진 콜렉션을 제공합니다. 각각은 추가, 삭제, 조회 기능을 제공합니다.
 
-`WeakMap`과 `WeakSet`의 이름은 _weakly held_ 값이라는 개념에서 따왔습니다.  만약 `x`가 `y`에 의해 weekly held되었다라는 의미는 비록 `x`를 `y`를 통해 접근할 수 있지만 표시하고-쓸기 알고리즘은 다른 것이 `x`를 _strongly hold_ 하고 있지 않은 이상 닿을 수 있는 것으로 간주하지 않습니다. 여기서 논의되고 있는 것을 제외한, 대부분의 데이터 구조는 전달된 오브젝트를 strongly hold하기에 오브젝트에 언제든 접근할 수 있습니다. `WeakMap`과 `WeakSet`의 키는 프로그램의 어떤 것도 키를 참조하지 않는다면 가비지 콜렉션될 수 있습니다 (`WeakMap`에서 값은 그이후 가비지 콜렉션될 수 있음). 이 부분은 아래 두 가지 특성을 통해 보장됩니다:
+`WeakMap`과 `WeakSet`의 이름은 _weakly held_ 값이라는 개념에서 따왔습니다. 만약 `x`가 `y`에 의해 weekly held되었다라는 의미는 비록 `x`를 `y`를 통해 접근할 수 있지만 표시하고-쓸기 알고리즘은 다른 것이 `x`를 _strongly hold_ 하고 있지 않은 이상 닿을 수 있는 것으로 간주하지 않습니다. 여기서 논의되고 있는 것을 제외한, 대부분의 데이터 구조는 전달된 오브젝트를 strongly hold하기에 오브젝트에 언제든 접근할 수 있습니다. `WeakMap`과 `WeakSet`의 키는 프로그램의 어떤 것도 키를 참조하지 않는다면 가비지 콜렉션될 수 있습니다 (`WeakMap`에서 값은 그이후 가비지 콜렉션될 수 있음). 이 부분은 아래 두 가지 특성을 통해 보장됩니다:
 
 - `WeakMap`과 `WeakSet`은 오직 오브젝트만 저장합니다. 그 이유는 오직 오브젝트들만이 가비지 콜렉트되고 원시값들은 복사되기에(`1 === 1`이나 `{} !== {}`이기에), 원시값들이 콜렉션에 영원히 남도록 합니다.
 - `WeakMap`과 `WeakSet`은 순회할 수 없습니다. 이 특성은 오브젝트의 상태를 관찰하거나 (보유하지 않는다면 가비지 콜렉션 대상이 되어야할) 임의의 키를 보유하기 위해 `Array.from(map.keys()).length`를 사용하는 것을 막습니다. (가비지 콜렉션은 최대한 영향을 느끼지 못하도록 수행되어야 합니다.)
@@ -258,7 +258,6 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 [`FinalizationRegistry`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)는 가비지 콜렉션을 관찰하기 위해 더욱 강력한 메커니즘을 제공합니다. `FinalizationRegistry`는 오브젝트를 등록하고 가비지 콜렉트되었을 때 알림을 받을 수 있도록 합니다. 예로, 위의 캐시 시스템에서 오브젝트가 실제 값을 보유하고 있는지 여부에 상관없이 `WeakRef`실제 값이 가비지 콜렉션 대상이 됩니다. 또한 시간이 흐르며 `Map`은 다량의 의미없는 엔트리를 축적하게 됩니다. `FinalizationRegistry`를 사용하여 아래와 같이 해제를 할 수 있습니다.
 
-
 ```js
 function cached(getter) {
   // 문자열 ULRs과 결과값의 WeekRefs를 연결하는 Map
@@ -287,6 +286,6 @@ function cached(getter) {
 const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 ```
 
-성능과 보안의 측면에서, 정확히 어느 시점에 콜백이 호출될지, 반드시 호출될지 보장할 수 없습니다. `FinalizationRegistry`는 오직 크리티컬하지 않은 해제를 위해서만 사용되어야 합니다. 이 밖에도 항상 `finally` 블록을 수행하는 [`try...finally`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch)와 같은 좀 더 결정적인 리소스 관리 방식이 있습니다. `WeakRef`와 `FinalizationRegistry`은 순전히 장시간 실행되는 프로그램의 메모리 사용 최적화를 위해 존재합니다. 
+성능과 보안의 측면에서, 정확히 어느 시점에 콜백이 호출될지, 반드시 호출될지 보장할 수 없습니다. `FinalizationRegistry`는 오직 크리티컬하지 않은 해제를 위해서만 사용되어야 합니다. 이 밖에도 항상 `finally` 블록을 수행하는 [`try...finally`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch)와 같은 좀 더 결정적인 리소스 관리 방식이 있습니다. `WeakRef`와 `FinalizationRegistry`은 순전히 장시간 실행되는 프로그램의 메모리 사용 최적화를 위해 존재합니다.
 
 [`WeakRef`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)와 [`FinalizationRegistry`](/ko/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)를 통해 각각의 상세한 API를 추가적으로 확인하실 수 있습니다.
