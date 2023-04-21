@@ -86,6 +86,6 @@ arr instanceof Array; // false
 
 ## 参见
 
-- [向 `core-js` 填充 `Array.isArray`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.isArray` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
