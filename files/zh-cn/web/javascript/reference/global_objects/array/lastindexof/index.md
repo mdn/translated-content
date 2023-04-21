@@ -42,7 +42,7 @@ lastIndexOf(searchElement, fromIndex)
 
 ## 示例
 
-### 使用 lastIndexOf
+### 使用 lastIndexOf()
 
 下例使用 `lastIndexOf()` 定位数组中的值。
 
@@ -63,7 +63,7 @@ const array = [NaN];
 array.lastIndexOf(NaN); // -1
 ```
 
-### 查找所有元素
+### 查找元素出现的所有索引
 
 下例使用 `lastIndexOf` 查找到一个元素在数组中所有的索引（下标），并在找到它们时用 {{jsxref("Array.push", "push")}} 将它们添加到另一个数组中。
 
