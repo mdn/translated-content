@@ -19,12 +19,12 @@ indexOf(searchElement, fromIndex)
 ### 参数
 
 - `searchElement`
-  - : 要查找的元素。
+  - : 数组中要查找的元素。
 - `fromIndex` {{optional_inline}}
-  - ：从零开始搜索的索引，[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
-    - ：负索引从数组末尾开始计数-如果 `frommindex < 0` ，使用 `frommindex + array.length` 。注意，在这种情况下，仍然从前到后搜索数组。
-    - ：如果 `fromIndex < -array.length` 或者省略了 `fromIndex` ，导致整个数组被搜索。
-    - ：如果 `fromIndex >= array.length` ，数组不会继续搜索并返回 `-1` 。
+  - : 开始搜索的索引（从零开始），[会转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+    - 负索引从数组末尾开始计数——如果 `frommindex < 0`，使用 `frommindex + array.length`。注意，在这种情况下，仍然从前到后搜索数组。
+    - 如果 `fromIndex < -array.length` 或者省略了 `fromIndex` ，将使用 `0`，而导致整个数组被搜索。
+    - 如果 `fromIndex >= array.length`，数组不会继续搜索并返回 `-1`。
 
 ### 返回值
 
@@ -32,11 +32,11 @@ indexOf(searchElement, fromIndex)
 
 ## 描述
 
-`indexOf()` 使用[严格相等（===）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===` 操作符使用的算法相同）将 `searchElement` 与数组中的元素进行比较。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)值永远不会作为相等的值进行比较，因此当 `searchElement` 为 `NaN` 时 `indexOf()` 总是返回 `-1` 。
+`indexOf()` 使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===` 运算符使用的算法相同）将 `searchElement` 与数组中的元素进行比较。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值永远不会被比较为相等，因此当 `searchElement` 为 `NaN` 时 `indexOf()` 总是返回 `-1`。
 
 `indexOf()` 方法会跳过[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽。
 
-`indexOf()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整型键属性。
+`indexOf()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 
@@ -53,7 +53,7 @@ array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
 
-你没法使用 `indexOf()` 来搜索 `NaN` 。
+你没法使用 `indexOf()` 来搜索 `NaN`。
 
 ```js
 const array = [NaN];
