@@ -9,7 +9,7 @@ slug: Web/API/History_API/Working_with_the_History_API
 
 ## 添加和修改历史记录
 
-使用 {{DOMxRef("History.pushState", "pushState()")}} 可以改变在你改变状态后创建的 {{domxref("XMLHttpRequest")}} 对象的 HTTP 头中使用的 referrer。引用者将是创建 {{domxref("XMLHttpRequest")} }对象时其窗口为 `this` 的文档的 URL。
+使用 {{DOMxRef("History.pushState", "pushState()")}} 可以改变在你改变状态后创建的 {{domxref("XMLHttpRequest")}} 对象的 HTTP 头中使用的 referrer。引用者将是创建 {{domxref("XMLHttpRequest")}} 对象时其窗口为 `this` 的文档的 URL。
 
 ### pushState() 方法示例
 
