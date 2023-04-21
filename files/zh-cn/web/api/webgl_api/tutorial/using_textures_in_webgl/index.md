@@ -1,5 +1,5 @@
 ---
-title: Using textures in WebGL
+title: 在 WebGL 中使用纹理
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
 
