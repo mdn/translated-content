@@ -37,7 +37,7 @@ slug: Web/CSS/:fullscreen
 <button id="fs-toggle">切换全屏</button>
 ```
 
-ID 为“fs-toggle”的 {{HTMLElement("button")}} 将根据文档是否处于全屏模式而在淡红色和淡绿色之间切换。
+ID 为 `"fs-toggle"` 的 {{HTMLElement("button")}} 将根据文档是否处于全屏模式而在淡红色和淡绿色之间切换。
 
 ### CSS
 
@@ -49,7 +49,7 @@ CSS 中实现这一功能的关键在于两条规则。第一条规则用于在�
 }
 ```
 
-当文档 _处于_ 全屏模式时，将应用以下 CSS，将背景颜色设置为淡红色。
+当文档*处于*全屏模式时，将应用以下 CSS，将背景颜色设置为淡红色。
 
 ```css
 #fs-toggle:fullscreen {
