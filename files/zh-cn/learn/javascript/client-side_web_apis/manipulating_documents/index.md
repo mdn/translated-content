@@ -30,7 +30,7 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 
 ![web 浏览器的重要部分；文档就是网页。窗口包括整个文档，也包括标签。导航器是浏览器，它包括窗口（包括文档）和所有其他窗口](document-window-navigator.png)
 
-- 窗口（window）是载入网页的浏览器标签；在 JavaScript 中，它由 {{domxref("Window")}} 对象表示。使用这个对象上的方法，你可以做一些事情，比如返回窗口的大小（见 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}），操作加载到窗口的文档，在客户端存储该文档的特定数据（例如使用本地数据库或其他存储机制），为当前窗口附加一个[事件处理器](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#a_series_of_fortunate_events)等。
+- 窗口（window）是载入网页的浏览器标签；在 JavaScript 中，它由 {{domxref("Window")}} 对象表示。使用这个对象上的方法，你可以做一些事情，比如返回窗口的大小（见 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}），操作加载到窗口的文档，在客户端存储该文档的特定数据（例如使用本地数据库或其他存储机制），为当前窗口附加一个[事件处理器](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#一系列事件)等。
 - 导航器（navigator）在网络上出现时，代表浏览器的状态和身份（即用户代理）。在 JavaScript 中，它由 {{domxref("Navigator")}} 对象表示。你可以用这个对象来检索用户的首选语言、用户网络摄像头的媒体流等信息。
 - 文档（document，在浏览器中用 DOM 表示）是加载到窗口的实际页面，在 JavaScript 中，它由 {{domxref("Document")}} 对象表示。你可以使用这个对象来返回和操作构成文档的 HTML 和 CSS 的信息，例如，在 DOM 中获得一个元素的引用，改变其文本内容，对其应用新的样式，创建新的元素并将其作为子元素添加到当前元素中，甚至完全删除它。
 
@@ -79,7 +79,7 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 - **父节点**: 里面有另一个节点的节点。例如上面的例子中 `BODY` 是 `SECTION` 的父节点。
 - **兄弟节点**: DOM 树中位于同一等级的节点。例如上面例子中，`IMG` 和 `P` 是兄弟。
 
-在使用 DOM 之前，熟悉这些术语是很有用的，因为你会遇到的一些代码术语都会用到它们。如果你学习过 CSS，你可能也会遇到它们（例如，子孙选择器，子选择器）。
+在使用 DOM 之前，熟悉这些术语是很有用的，因为你会遇到的一些代码术语都会用到它们。如果你学习过 CSS，你可能也会遇到它们（例如，子孙选择器、子选择器）。
 
 ## 动手练习：基本的 DOM 操作
 
@@ -110,7 +110,7 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 对于获取元素引用，还有一些更旧的方法，如：
 
 - {{domxref("Document.getElementById()")}}，选择一个 `id` 属性值已知的元素，例如 `<p id="myId">My paragraph</p>`。ID 作为参数传递给函数，即 `const elementRef = document.getElementById('myId')`。
-- {{domxref("Document.getElementsByTagName()")}}，返回页面中包含的所有已知类型元素的数组。如 `<p>`、`<a>` 等。元素类型作为参数传递给函数，即 `const elementRefArray = document.getElementsByTagName('p')`.
+- {{domxref("Document.getElementsByTagName()")}}，返回页面中包含的所有已知类型元素的数组。如 `<p>`、`<a>` 等。元素类型作为参数传递给函数，即 `const elementRefArray = document.getElementsByTagName('p')`。
 
 这两种方法在旧的浏览器中比现代方法如 `querySelector()` 更好用，但没有那么方便。看一看，看看你还能找到什么其他的方法！
 
@@ -260,19 +260,19 @@ linkPara.parentNode.removeChild(linkPara);
 
 要完成实验，要按照下面的步骤，确保购物单的行为如上所述。
 
-1. 首先，下载[shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html)文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 list 和一个空的 list 以及 {{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
-2. 创建三个变量来保存列表的 ({{htmlelement("ul")}})、{{htmlelement("input")}} 和 {{htmlelement("button")}} 元素的引用。
+1. 首先，下载 [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) 文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 div 和一个空的列表以及 {{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
+2. 创建三个变量来保存列表（{{htmlelement("ul")}}）、{{htmlelement("input")}} 和 {{htmlelement("button")}} 元素的引用。
 3. 创建一个[函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)响应点击按钮。
 4. 在函数体内，开始要在一个变量中存储输入框的当前[值](/zh-CN/docs/Web/API/HTMLInputElement#属性)。
 5. 然后，为输入框元素设置空字符串 `''` 以清空它。
-6. 创建三个新元素：一个 list 项（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
-7. 将 span 和按钮附加到列表项的子节点。
+6. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
+7. 将 span 和按钮附加到列表元素的子节点。
 8. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为“Delete”。
-9. 将 list 项附加到列表的子节点中。
-10. 为删除按钮绑定事件处理程序。当点击按钮时，删除它所在的整个 list 项（`<li>...</li>`）。
+9. 将列表元素附加到列表的子节点中。
+10. 为删除按钮绑定事件处理程序。当点击按钮时，删除它所在的整个列表元素（`<li>...</li>`）。
 11. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法聚焦输入框准备输入下一个购物项。
 
-> **备注：** 如果你卡住了，请查看[完成的购物清单](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)（[查看其在线版本](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)）。
+> **备注：** 如果你卡住了，请查看[完成的购物清单](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)（[查看其在线版本](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)）。
 
 ## 总结
 
@@ -280,7 +280,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 ## 参见
 
-你还可以使用更多的特性来操作文档，检查一些参考，看看你能发现些什么：
+你还可以使用更多的特性来操作文档，查看这些参考，看看你能发现些什么：
 
 - {{domxref("Document")}}
 - {{domxref("Window")}}
