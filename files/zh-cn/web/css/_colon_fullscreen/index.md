@@ -71,5 +71,5 @@ CSS 中实现这一功能的关键在于两条规则。第一条规则用于在�
 - [Fullscreen API 指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
-- DOM API: {{ domxref("Element.requestFullscreen()") }}、{{ domxref("Document.exitFullscreen()") }} 和 {{ domxref("Document.fullscreenElement") }}
+- DOM API：{{ domxref("Element.requestFullscreen()") }}、{{ domxref("Document.exitFullscreen()") }} 和 {{ domxref("Document.fullscreenElement") }}
 - [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
