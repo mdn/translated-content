@@ -12,10 +12,10 @@ slug: Web/CSS/margin-block-end
 ## 语法
 
 ```css
-/* 长度值 */
+/* <length> 值 */
 margin-block-end: 10px; /* 绝对长度 */
 margin-block-end: 1em; /* 相对于文本尺寸 */
-margin-block-end: 5%; /* 相对于最近包含块的宽度 */
+margin-block-end: 5%; /* 相对于最近区块容器的宽度 */
 
 /* 关键词值 */
 margin-block-end: auto;
