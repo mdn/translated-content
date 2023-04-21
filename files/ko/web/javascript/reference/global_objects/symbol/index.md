@@ -141,7 +141,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
 
 ### 심볼에 typeof 연산자 사용하기
 
-The {{jsxref("Operators/typeof", "typeof")}} operator can help you to identify Symbols.
+{{jsxref("Operators/typeof", "typeof")}} 연산자는 심볼을 식별하는데 도움이 될 수 있습니다.
 
 ```js
 typeof Symbol() === "symbol";
