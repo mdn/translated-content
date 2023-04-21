@@ -24,13 +24,13 @@ slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 ## web 浏览器的重要部分
 
-web 浏览器是非常复杂的软件，有许多活动部件，其中许多部件不能由 web 开发者用 JavaScript 控制或操纵。你可能认为这种限制是件坏事，但浏览器作出这些锁定是有原因的，主要是围绕安全问题。想象一下，如果一个网站可以获得你存储的密码或其他敏感信息，并像你一样登录网站，会发生什么？
+web 浏览器是非常复杂的软件，有许多活动部件，其中许多部件不能由 web 开发者用 JavaScript 控制或操纵。你可能认为这种限制是件坏事，但浏览器作出这些限制是有原因的，主要是围绕安全问题。想象一下，如果网站可以访问你存储的密码或其他敏感信息，且像你本人一样登录那些网站，会发生什么？
 
 尽管有这些限制，Web API 仍然给我们提供了大量的功能，使我们能够用网页做很多事情。在你的代码中，有几个非常明显的部分你会经常参考。考虑下图，它代表了浏览器中直接参与浏览网页的主要部分：
 
 ![web 浏览器的重要部分；文档就是网页。窗口包括整个文档，也包括标签。导航器是浏览器，它包括窗口（包括文档）和所有其他窗口](document-window-navigator.png)
 
-- 窗口（window）是网页被载入的浏览器标签；在 JavaScript 中，它由 {{domxref("Window")}} 对象表示。使用这个对象上的方法，你可以做一些事情，比如返回窗口的大小（见 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}），操作加载到窗口的文档，在客户端存储该文档的特定数据（例如使用本地数据库或其他存储机制），为当前窗口附加一个[事件处理器](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#a_series_of_fortunate_events)等。
+- 窗口（window）是载入网页的浏览器标签；在 JavaScript 中，它由 {{domxref("Window")}} 对象表示。使用这个对象上的方法，你可以做一些事情，比如返回窗口的大小（见 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}），操作加载到窗口的文档，在客户端存储该文档的特定数据（例如使用本地数据库或其他存储机制），为当前窗口附加一个[事件处理器](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#a_series_of_fortunate_events)等。
 - 导航器（navigator）在网络上出现时，代表浏览器的状态和身份（即用户代理）。在 JavaScript 中，它由 {{domxref("Navigator")}} 对象表示。你可以用这个对象来检索用户的首选语言、用户网络摄像头的媒体流等信息。
 - 文档（document，在浏览器中用 DOM 表示）是加载到窗口的实际页面，在 JavaScript 中，它由 {{domxref("Document")}} 对象表示。你可以使用这个对象来返回和操作构成文档的 HTML 和 CSS 的信息，例如，在 DOM 中获得一个元素的引用，改变其文本内容，对其应用新的样式，创建新的元素并将其作为子元素添加到当前元素中，甚至完全删除它。
 
