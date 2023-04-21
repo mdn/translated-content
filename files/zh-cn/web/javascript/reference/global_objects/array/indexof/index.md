@@ -1,8 +1,6 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.indexOf
 ---
 
 {{JSRef}}
@@ -30,7 +28,7 @@ indexOf(searchElement, fromIndex)
 
 ### 返回值
 
-首个被找到的元素在数组中的索引位置; 若没有找到则返回 **-1** 。
+首个被找到的元素在数组中的索引位置; 若没有找到则返回 **-1**。
 
 ## 描述
 
@@ -132,7 +130,7 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 
 ## 参见
 
-- [Polyfill of `Array.prototype.indexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.indexOf` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
