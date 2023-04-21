@@ -289,4 +289,4 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 성능과 보안의 측면에서, 정확히 어느 시점에 콜백이 호출될지, 반드시 호출될지 보장할 수 없습니다. `FinalizationRegistry`는 오직 크리티컬하지 않은 해제를 위해서만 사용되어야 합니다. 이 밖에도 항상 `finally` 블록을 수행하는 [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)와 같은 좀 더 결정적인 리소스 관리 방식이 있습니다. `WeakRef`와 `FinalizationRegistry`은 순전히 장시간 실행되는 프로그램의 메모리 사용 최적화를 위해 존재합니다. 
 
-[`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)와 [`FinalizationRegistry`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)를 통해 각각의 상세한 API를 추가적으로 확인하실 수 있습니다.
+[`WeakRef`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)와 [`FinalizationRegistry`](/ko/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)를 통해 각각의 상세한 API를 추가적으로 확인하실 수 있습니다.
