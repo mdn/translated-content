@@ -5,19 +5,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/length
 
 {{JSRef}}
 
-**`length`** 是 `Array` 的实例属性表示该数组中元素的个数。该值是一个无符号 32-bit 整数，并且其数值总是大于数组最高项的下标。
+**`length`** 是 `Array` 的实例属性，表示该数组中元素的个数。该值是一个无符号 32 位整数，并且其数值总是大于数组最大下标。
 
 {{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
 
 ## 值
 
-值是一个小于 2<sup>32</sup> 的非负整数。
+一个小于 2<sup>32</sup> 的非负整数。
 
 {{js_property_attributes(1, 0, 0)}}
 
 ## 描述
 
-`length` 属性的值是一个非负整数，值小于 2<sup>32</sup>。
+`length` 属性的值是一个小于 2<sup>32</sup> 的非负整数
 
 ```js
 const listA = [1, 2, 3];
@@ -62,7 +62,7 @@ arr.forEach(element => console.log(element));
 
 ## 示例
 
-### 在数组上迭代
+### 遍历数组
 
 在下面的示例中，通过查看 `length` 属性来遍历数组 `numbers`。然后将每个元素中的值加倍。
 
@@ -72,7 +72,7 @@ const length = numbers.length;
 for (let i = 0; i < length; i++) {
   numbers[i] *= 2;
 }
-// numbers is now [2, 4, 6, 8, 10]
+// 遍历后的结果 [2, 4, 6, 8, 10]
 ```
 
 ### 缩短数组
@@ -88,7 +88,7 @@ if (numbers.length > 3) {
 
 console.log(numbers); // [1, 2, 3]
 console.log(numbers.length); // 3
-console.log(numbers[3]); // undefined; the extra elements are deleted
+console.log(numbers[3]); // undefined；多余的元素会被删除
 ```
 
 ### 创建固定长度的空数组
