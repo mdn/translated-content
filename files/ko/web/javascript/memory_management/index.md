@@ -235,7 +235,7 @@ class MyWeakMap {
 
 > **Note:** `WeakRef`와 `FinalizationRegistry`는 가비지 콜렉션 구조에 대한 직접적인 내부 탐색을 제공합니다. 런타임 시맨틱은 완전히 보장될 수 없기에 [사용을 안할 수 있다면 안하는 것](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible)을 권장합니다.
 
-값이 오브젝트인 모든 변수들은 해당 오브젝트에 대한 참조입니다. 그러나, 그러한 참조는 _strong_ 합니다 - 그런 변수가 있다면 가비지 컬렉터가 오브젝트를 마킹하는 것을 막습니다. [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)는 오브젝트에 대한 _weak reference_로 오브젝트가 가비지 컬렉트 될 수 있도록 하는 동시에 오브젝트가 존재하는 동안 컨텐츠에 접근하는 것을 가능하게 합니다.
+값이 오브젝트인 모든 변수들은 해당 오브젝트에 대한 참조입니다. 그러나, 그러한 참조는 _strong_ 합니다 - 그런 변수가 있다면 가비지 컬렉터가 오브젝트를 마킹하는 것을 막습니다. [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)는 오브젝트에 대한 _weak reference_ 로 오브젝트가 가비지 컬렉트 될 수 있도록 하는 동시에 오브젝트가 존재하는 동안 컨텐츠에 접근하는 것을 가능하게 합니다.
 
 `WeakRef`의 한 가지 사용례는 문자열 URLs을 큰 오브젝트에 매핑하는 캐시시스템입니다. 이런 목적을 위해 `WeakMap`를 사용할 수는 없는데, 그 이유는 `WeakMap` 오브젝트는 weakly held인 _키_ 를 가지나 _값_ 은 그렇지 않기 때문입니다 - 만약 키에 접근하면, 항상 결정적으로 값을 얻습니다 (키에 접근할 수 있다는 것이 키가 아직 존재한다는 것을 의미하기 때문에). 이 부분에서 키에 접근 시 `undefined`를 얻는 것은 (만약 상응한 값도 메모리 상에 존재하지 않는다면) 다시 계산하면 되기에 괜찮으나, 우리는 닿을 수 없는 오브젝트가 캐시 상에서 존재하기는 원하지 않습니다. 이러한 경우에, 우리는 일반적인 `Map`에 각각의 값이 오브젝트의 실제값이 아닌 `WeakRef`이 되도록 구성할 수 있습니다.
 
