@@ -31,6 +31,7 @@ var myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```
+> **Note :** Il y a une autre façon d'arrêter le worker depuis le worker lui même : la méthode {{domxref("DedicatedWorkerGlobalScope.close")}}.
 
 ## Spécifications
 
@@ -43,3 +44,6 @@ myWorker.terminate();
 ## Voir aussi
 
 L'interface {{domxref("Worker")}} à laquelle elle appartient.
+
+La méthode {{domxref("DedicatedWorkerGlobalScope.close")}} de l'instance du worker.
+
