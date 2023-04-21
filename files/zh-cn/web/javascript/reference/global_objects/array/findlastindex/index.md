@@ -26,16 +26,15 @@ findLastIndex(callbackFn, thisArg)
     - `element`
       - : 当前遍历到的元素。
     - `index`
-      - : 当前遍历到的元素的索引。
+      - : 当前正在处理的元素的索引。
     - `array`
       - : 调用 `findLast()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 时，用作 {{jsxref("Operators/this", "this")}} 的值。
+  - : 执行 `callbackFn` 时，用作 {{jsxref("Operators/this", "this")}} 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
-数组中通过测试的最后一个（最高索引）元素的索引。
-如果没有任何元素匹配，则返回 -1。
+数组中通过测试的最后一个（最高索引）元素的索引。如果没有找到任何匹配的元素，则返回 -1。
 
 ## 描述
 
