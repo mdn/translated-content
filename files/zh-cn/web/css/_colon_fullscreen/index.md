@@ -5,7 +5,7 @@ slug: Web/CSS/:fullscreen
 
 {{CSSRef}}
 
-**`:fullscreen`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配当前处于全屏模式的所有元素。如果有多个元素被放置在全屏模式下，则此选择器将匹配所有这些元素。
+**`:fullscreen`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配当前处于全屏模式的所有元素。如果有多个元素被放置在全屏模式下，则此选择器将匹配所有这些元素。
 
 ## 语法
 
