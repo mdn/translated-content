@@ -256,7 +256,7 @@ function cached(getter) {
 const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 ```
 
-[`FinalizationRegistry`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)는 가비지 콜렉션을 관찰하기 위해 더욱 강력한 메커니즘을 제공합니다. `FinalizationRegistry`는 오브젝트를 등록하고 가비지 콜렉트되었을 때 알림을 받을 수 있도록 합니다. 예로, 위의 캐시 시스템에서 `WeakRef` 오브젝트가 실제 값을 보유하고 있는지 여부에 상관없이 실제 값이 가비지 콜렉션 대상이 되나 시간이 흐르며 `Map`은 다량의 의미없는 entry를 축적하게 됩니다. `FinalizationRegistry`를 사용하여 아래와 같이 해제를 할 수 있습니다.
+[`FinalizationRegistry`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)는 가비지 콜렉션을 관찰하기 위해 더욱 강력한 메커니즘을 제공합니다. `FinalizationRegistry`는 오브젝트를 등록하고 가비지 콜렉트되었을 때 알림을 받을 수 있도록 합니다. 예로, 위의 캐시 시스템에서 오브젝트가 실제 값을 보유하고 있는지 여부에 상관없이 `WeakRef`실제 값이 가비지 콜렉션 대상이 됩니다. 또한 시간이 흐르며 `Map`은 다량의 의미없는 엔트리를 축적하게 됩니다. `FinalizationRegistry`를 사용하여 아래와 같이 해제를 할 수 있습니다.
 
 
 ```js
