@@ -63,7 +63,7 @@ slug: Web/CSS/CSS_Container_Queries
 
 ### 为局限上下文命名
 
-在上一节中，容器查询基于有局限上下文的最近祖先元素应用样式。可以使用 {{Cssxref("container-name")}} 属性为局限上下文命名。命名后，可以在 `@container` 查询中使用该名称针对特定容器。以下示例创建了一个名为 `sidebar` 的局限上下文：
+在上一节中，容器查询基于有局限上下文的最近祖先元素应用样式。可以使用 {{Cssxref("container-name")}} 属性为局限上下文命名。命名后，可以在 `@container` 查询中使用该名称以选择特定容器。以下示例创建了一个名为 `sidebar` 的局限上下文：
 
 ```css
 .post {
@@ -72,7 +72,7 @@ slug: Web/CSS/CSS_Container_Queries
 }
 ```
 
-然后，你可以使用 at 规则 `@container` 针对此局限上下文：
+然后，你可以使用 at 规则 `@container` 选择此局限上下文：
 
 ```css
 @container sidebar (min-width: 700px) {
