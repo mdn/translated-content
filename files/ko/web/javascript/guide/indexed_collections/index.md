@@ -1,5 +1,5 @@
 ---
-title: Indexed collections
+title: 인덱스 기반 컬렉션
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
