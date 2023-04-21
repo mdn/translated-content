@@ -23,8 +23,6 @@ lastIndexOf(searchElement, fromIndex)
 - `searchElement`
   - : 被查找的元素。
 - `fromIndex` {{optional_inline}}
-  - : 从此位置开始逆向查找。默认为数组的长度减 1(`arr.length - 1`)，即整个数组都被查找。如果该值大于或等于数组的长度，则整个数组会被查找。如果为负值，将其视为从数组末尾向前的偏移。即使该值为负，数组仍然会被从后向前查找。如果该值为负时，其绝对值大于数组长度，则方法返回 -1，即数组不会被查找。
-
   - 以 0 起始的索引，表明反向搜索的起始位置，[会被转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
     - 如果 `fromIndex < 0`，则从数组末尾开始倒数计数——即使用 `fromIndex + array.length` 的值。
     - 如果 `fromIndex < -array.length`，则不搜索数组并返回 `-1`。从概念上讲，你可以把它想象成从数组开始之前不存在的位置开始反向搜索，这条路径上没有任何数组元素，因此 `searchElement` 永远不会被找到。
@@ -38,11 +36,7 @@ lastIndexOf(searchElement, fromIndex)
 
 `lastIndexOf` 使用[严格相等](zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===` 运算符使用的算法相同）比较 `searchElement` 和数组中的元素。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值不 `===` 任何值，因此当 `searchElement` 为 `NaN` 时 `lastIndexOf()` 总是返回 `-1`。
 
-The `lastIndexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
-
 `lastIndexOf()` 方法跳过[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽。
-
-The `lastIndexOf()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 `lastIndexOf()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
