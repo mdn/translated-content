@@ -17,11 +17,11 @@ keys()
 
 ### 返回值
 
-一个新的[可迭代的迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
+一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
 ## 描述
 
-当使用[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`keys()` 方法迭代空槽，就像它们的值 `undefined` 一样。
+当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`keys()` 方法迭代空槽，就像它们的值 `undefined` 一样。
 
 `keys()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用的数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
@@ -41,7 +41,7 @@ console.log(denseKeys); // [0, 1, 2]
 
 ### 在非数组对象上调用 keys()
 
-`keys()` 方法读取 `this` 的 `length` 属性，然后生成 0 到 `length - 1` 之间的所有整数索引。
+`keys()` 方法读取 `this` 的 `length` 属性，然后生成 0 到 `length - 1` 之间的所有整数索引。实际并不会访问索引。
 
 ```js
 const arrayLike = {
@@ -65,11 +65,11 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 
 ## 参见
 
-- [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.keys` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
 - [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
 - {{jsxref("TypedArray.prototype.keys()")}}
-- [迭代的协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
