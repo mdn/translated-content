@@ -5,13 +5,13 @@ slug: Web/CSS/:visited
 
 {{CSSRef}}
 
-**`:visited`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)会在用户访问链接后生效，出于隐私保护的原因，使用该选择器可以修改的样式非常有限。`:visited` 伪类仅适用于带有 `href` 属性的 {{htmlelement("a")}} 和 {{htmlelement("area")}} 元素。
+**`:visited`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)会在用户访问链接后生效，出于隐私保护的原因，使用该选择器可以修改的样式非常有限。`:visited` 伪类仅适用于带有 `href` 属性的 {{htmlelement("a")}} 和 {{htmlelement("area")}} 元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
 
 由 `:visited` 和未访问的 [`:link`](/zh-CN/docs/Web/CSS/:link) 伪类定义的样式可以被任何后续的用户动作伪类（{{cssxref(":hover")}} 或 {{cssxref(":active")}}）覆盖，只要它们的特殊性至少相等。为了适当地样式化链接，将 `:visited` 规则放置在 `:link` 规则之后但在 `:hover` 和 `:active` 规则之前，按照 _LVHA 顺序定义_：`link` — `:visited` — `:hover` — `:active`。`:visited` 伪类和 `:link` 伪类是互斥的。
 
-## 限制
+## 隐私限制
 
 出于隐私原因，浏览器严格限制你可以让此伪类应用的样式，以及使用它们的方式：
 
@@ -22,6 +22,14 @@ slug: Web/CSS/:visited
 - [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素永远不会被 `:visited` 匹配。
 
 > **备注：** 有关这些限制及其背后原因的更多信息，请参阅[隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)。
+
+## 语法
+
+```css
+:visited {
+  /* ... */
+}
+```
 
 ## 示例
 
