@@ -9,7 +9,7 @@ slug: Web/CSS/:visited
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
 
-这个样式可能会被后声明的其他链接相关的伪类覆盖，这些伪类包括 ({{cssxref(":link")}}、{{cssxref(":hover")}} 和 {{cssxref(":active")}})。要适当地设置链接样式，请将 `:visited` 规则放在 `:link` 规则之后，但在 `:hover` 和 `:active` 规则之前，参照 LVHA _顺序_：`:link` — `:visited` — `:hover` — `:active`。
+由 `:visited` 和未访问的 [`:link`](/zh-CN/docs/Web/CSS/:link) 伪类定义的样式可以被任何后续的用户动作伪类（{{cssxref(":hover")}} 或 {{cssxref(":active")}}）覆盖，只要它们的特殊性至少相等。为了适当地样式化链接，将 `:visited` 规则放置在 `:link` 规则之后但在 `:hover` 和 `:active` 规则之前，按照 _LVHA 顺序定义_：`link` — `:visited` — `:hover` — `:active`。`:visited` 伪类和 `:link` 伪类是互斥的。
 
 ## 限制
 
