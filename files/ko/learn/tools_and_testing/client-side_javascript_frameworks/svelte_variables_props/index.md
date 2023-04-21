@@ -333,7 +333,7 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    [`on:eventname`](https://svelte.dev/docs#on_element_event) 지시문은 `|` 문자를 사용하여 DOM 이벤트에 수식어를 추가하는 것을 지원합니다. 이 경우 `preventDefault` 수식어는 핸들러를 실행하기 전에 `event.preventDefault()`를 호출하는 코드를 생성하도록 Svelte에 지시합니다. 사용 가능한 다른 수식어를 보려면 이전 링크를 살펴보세요.
 
-7. 이 시점에서 새 할일을 추가하려고 하면 새 할 일은 할 일 배열에 추가되지만 UI는 업데이트되지 않습니다. Svelte에서는 [반응성은 할당으로 트리거됨](https://svelte.dev/docs#2_Assignments_are_reactive)을 기억하세요. 즉, `addTodo()` 함수가 실행되고 요소가 `todos` 배열에 추가되지만 Svelte는 push 메서드가 배열을 수정했음을 감지하지 못하므로 작업 `<ul>`을 새로 고치지 않습니다.
+7. 이 시점에서 새 할 일을 추가하려고 하면 새 할 일은 할 일 배열에 추가되지만 UI는 업데이트되지 않습니다. Svelte에서는 [반응성은 할당으로 트리거됨](https://svelte.dev/docs#2_Assignments_are_reactive)을 기억하세요. 즉, `addTodo()` 함수가 실행되고 요소가 `todos` 배열에 추가되지만 Svelte는 push 메서드가 배열을 수정했음을 감지하지 못하므로 작업 `<ul>`을 새로 고치지 않습니다.
 
    `addTodo()` 함수의 끝에 `todos = todos`를 추가하면 문제가 해결되지만, 함수의 끝에 포함시켜야 하는 것이 이상해 보입니다. 대신 `push()` 메서드를 제거하고 [확산 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)을 사용하여 동일한 결과를 얻습니다. `todos` 배열에 새로운 개체를 추가한 것과 동일한 `todos` 배열을 할당합니다.
 
