@@ -301,7 +301,7 @@ const myRequest = new Request("flowers.jpg", myInit);
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - [Fetch API](/ko/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
