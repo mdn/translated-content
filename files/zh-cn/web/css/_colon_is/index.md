@@ -1,5 +1,5 @@
 ---
-title: ':is() (:matches(), :any())'
+title: ':is()'
 slug: Web/CSS/:is
 ---
 
