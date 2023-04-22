@@ -256,7 +256,7 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 属性页必须具有如下部分：
 
 1. **标题**：页面的标题必须为 **InterfaceName.propertyName**。接口名称必须以大写字母开头。尽管接口在 JavaScript 中是在对象的原型上实现的，但我们不会像在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)中那样，在标题中包括`.prototype.`。
-2. **\\{{APIRef}}**：在每个属性页的第一行中包含 \{{APIRef}} 宏，将 API 的名称作为参数，例如 \{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
+2. **\\{{APIRef}}**：在每个属性页的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
     ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
@@ -294,7 +294,7 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 方法页需要包含以下部分：
 
 1. **标题**: 页面的标题必须为 **InterfaceName.method()**（含有一对英文括号），但页面路径名不能包含括号。另外，接口名称必须以大写字母开头。尽管接口在 JavaScript 中是在对象的原型上实现的，但我们不会像在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)中那样，在标题中包括`.prototype.`。
-2. **\\{{APIRef}}**：在每个方法页的第一行中包含 \{{APIRef}} 宏，将 API 的名称作为参数，例如 \{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
+2. **\\{{APIRef}}**：在每个方法页的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
     ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
