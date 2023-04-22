@@ -5,7 +5,7 @@ slug: Web/CSS/:any-link
 
 {{CSSRef}}
 
-**`:any-link`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 选择器表示作为超链接源锚点的元素，无论是否已被访问。换言之，它匹配每个具有 `href` 属性的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素。因此，它匹配所有匹配 {{cssxref(":link")}} 或 {{cssxref(":visited")}} 的元素。
+**`:any-link`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器表示作为超链接源锚点的元素，无论是否已被访问。换言之，它匹配每个具有 `href` 属性的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素。因此，它匹配所有匹配 {{cssxref(":link")}} 或 {{cssxref(":visited")}} 的元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-any-link.html", "tabbed-shorter")}}
 
