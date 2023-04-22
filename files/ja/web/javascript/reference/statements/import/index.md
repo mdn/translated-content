@@ -44,7 +44,18 @@ import "module-name";
 
 ## 説明
 
-`name` パラメータは、エクスポートを参照する名前空間のように用いられる「モジュールオブジェクト」の名前です。`export` パラメータは名前がつけられたエクスポートをそれぞれ指定します。それに対して、`import * as name` 構文はすべてをインポートします。構文の意味を明らかにするため、下記に例を示します。
+`import` 宣言はモジュールのトップレベル（要するにブロックや関数などの中以外）にのみ書くことができます。パーサーが `import` 宣言をモジュール以外の文脈（例えば `type="module"` のない `<script>` タグ、`eval`、`new Function` など、「スクリプト」や「関数の本体」をパース時の目標として持つもの） で検出すると、`SyntaxError`を発生させます。モジュール以外の文脈でモジュールをロードするには、[ダイナミックインポート](/ja/docs/Web/JavaScript/Reference/Operators/import)という構文を代わりに使用してください。
+
+`import`宣言は構文的に硬直したものとなっています。例えば、文字列リテラルしか指定子に使えなかったり、トップレベルでしか使用できなかったり、すべてのバインディングが識別子でなければならない、といった制限があります。この制限により、モジュールは評価する前に静的に解析してリンクさせることができます。これはモジュールを非同期にロードする上で鍵となる性質で、[トップレベル await](/ja/docs/Web/JavaScript/Guide/Modules#top_level_await) といった機能を実現させてくれています。
+
+`import`宣言には4つの形式があります:
+
+- [名前付き import](#名前付き_import): `import { export1, export2 } from "module-name";`
+- [デフォルトの import](#デフォルトの_import): `import defaultExport from "module-name";`
+- [名前空間の import](#名前空間の_import): `import * as name from "module-name";`
+- [副作用の import](#副作用のためだけにモジュールをインポートする): `import "module-name";`
+
+構文の意味を明らかにするため、下記に例を示します。
 
 ### モジュールのコンテンツすべてをインポートする
 
