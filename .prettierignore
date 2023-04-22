@@ -1,8 +1,44 @@
 build/
 
-# Ignore markdown files till full pass is made on each folder
-*.md
+# A full pass on all Markdown files is being performed.
+# When starting a new folder, please expand the glob pattern
+# and remove the corresponding line from this file.
+# The following folders still need a full pass:
 
-# The following paths have had a full pass
-!/files/zh-tw/games/**/*.md
-!/files/zh-tw/glossary/**/*.md
+# system files
+.github/**/*.md
+README.md
+/docs/README.md
+
+# es
+/docs/es/**/*.md
+/files/es/**/*.md
+
+# fr
+/files/fr/**/*.md
+
+# ja
+/files/ja/**/*.md
+
+# ko
+/docs/ko/**/*.md
+/files/ko/**/*.md
+
+# pt-br
+/files/pt-br/**/*.md
+
+# ru
+/docs/ru/**/*.md
+/files/ru/**/*.md
+
+# zh-cn
+/docs/zh-cn/**/*.md
+/files/zh-cn/**/*.md
+
+# zh-tw
+/docs/zh-tw/**/*.md
+/files/zh-tw/learn/**/*.md
+/files/zh-tw/mdn/**/*.md
+/files/zh-tw/mozilla/**/*.md
+/files/zh-tw/web/**/*.md
+/files/zh-tw/webassembly/**/*.md
