@@ -7,7 +7,7 @@
 /ko/docs/AJAX	/ko/docs/Web/Guide/AJAX
 /ko/docs/AJAX/Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
 /ko/docs/AJAX:Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
-/ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
+/ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_overview
 /ko/docs/About_JavaScript	/ko/docs/Web/JavaScript
 /ko/docs/About_the_Document_Object_Model	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Accessibility	/ko/docs/Web/Accessibility
@@ -703,7 +703,7 @@
 /ko/docs/Web/HTTP/Index	/ko/docs/Web/HTTP
 /ko/docs/Web/HTTP/User_agent를_이용한_브라우저_감지	/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /ko/docs/Web/HTTP/상태_코드	/ko/docs/Web/HTTP/Status
-/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
+/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_overview
 /ko/docs/Web/JavaScript/About	/ko/docs/Web/JavaScript
 /ko/docs/Web/JavaScript/About_JavaScript	/ko/docs/Web/JavaScript
 /ko/docs/Web/JavaScript/EventLoop	/ko/docs/Web/JavaScript/Event_loop
