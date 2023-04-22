@@ -7,7 +7,7 @@
 /ko/docs/AJAX	/ko/docs/Web/Guide/AJAX
 /ko/docs/AJAX/Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
 /ko/docs/AJAX:Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
-/ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_overview
+/ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
 /ko/docs/About_JavaScript	/ko/docs/Web/JavaScript
 /ko/docs/About_the_Document_Object_Model	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Accessibility	/ko/docs/Web/Accessibility
@@ -559,7 +559,7 @@
 /ko/docs/Web/API/window.screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
 /ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label
-/ko/docs/Web/Accessibility/ARIA/forms	/ko/docs/conflicting/Web/Accessibility/ARIA
+/ko/docs/Web/Accessibility/ARIA/forms	/ko/docs/Web/Accessibility/ARIA
 /ko/docs/Web/CSS/@viewport	/ko/docs/Web/CSS
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders
@@ -679,7 +679,7 @@
 /ko/docs/Web/HTML/Canvas/Tutorial/변형	/ko/docs/Web/API/Canvas_API/Tutorial/Transformations
 /ko/docs/Web/HTML/Element/Video/canplay_event	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/HTML/Element/Video/canplaythrough_event	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
-/ko/docs/Web/HTML/Element/content	/ko/docs/conflicting/Web/HTML/Element/slot
+/ko/docs/Web/HTML/Element/content	/ko/docs/Web/HTML/Element/slot
 /ko/docs/Web/HTML/Element/h1	/ko/docs/Web/HTML/Element/Heading_Elements
 /ko/docs/Web/HTML/Element/h2	/ko/docs/Web/HTML/Element/Heading_Elements
 /ko/docs/Web/HTML/Element/h3	/ko/docs/Web/HTML/Element/Heading_Elements
@@ -741,7 +741,7 @@
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply	/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 /ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError
-/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/name
+/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/name
 /ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/ko/docs/WebAssembly/JavaScript_interface
 /ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError	/ko/docs/WebAssembly/JavaScript_interface/CompileError
 /ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global	/ko/docs/WebAssembly/JavaScript_interface/Global
