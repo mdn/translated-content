@@ -53,7 +53,7 @@ See also the [DOM Interfaces](/zh-CN/docs/DOM/DOM_Reference).
 - {{domxref("Window.content")}} 和 `Window._content` {{Non-standard_inline}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回当前 window 的 content 元素的引用。通过带下划线的过时变种方法不再可以获得 Web content。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
+  - : returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/zh-CN/docs/Web/API/Web_components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : 返回浏览器 crypto 对象。
 - {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
@@ -134,7 +134,7 @@ See also the [DOM Interfaces](/zh-CN/docs/DOM/DOM_Reference).
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : 返回当前窗口或子窗口的父窗口的引用。
 - {{domxref("Window.performance")}} {{readOnlyInline}}
-  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/zh-CN/docs/Navigation_timing) data. See also [Using Navigation Timing](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
+  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/zh-CN/docs/Navigation_timing) data. See also [Navigation Timing API](/zh-CN/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : 返回 personalbar 对象，它的可视性可以在窗口中切换。
 - {{domxref("Window.pkcs11")}} {{Deprecated_Inline}}

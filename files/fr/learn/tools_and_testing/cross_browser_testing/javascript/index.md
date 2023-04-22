@@ -487,14 +487,3 @@ Il y'a bien d'autres problèmes que vous allez rencontrer avec le JavaScript ; l
 Voilà c'est le JavaScript. Facile hein ? Peut-être pas aussi facile, mais cet article devrait au moins vous donner un départ, et quelques idées sur comment attaquer les problèmes liés au JavaScript que vous allez rencontrer.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Dans ce module
-
-- [Introduction au test en navigateur croisé](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Stratégies pour mener à bien vos tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Gérer les problèmes courants en HTML et CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

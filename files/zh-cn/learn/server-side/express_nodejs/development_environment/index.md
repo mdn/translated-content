@@ -362,7 +362,7 @@ DEBUG 命令可以展示应用运行时返回的有用的日志信息，如下�
 
 下一节将开始用上述的环境和工具通过实战逐步搭建一个完整的 web 应用。
 
-## 另请参阅
+## 参见
 
 - [Node.js 下载页面](https://nodejs.org/zh-cn/download/) （nodejs.org 官方中文页面）
 - [通过包管理器方式安装 Node.js](https://nodejs.org/zh-cn/download/package-manager/) （nodejs.org 官方中文页面）

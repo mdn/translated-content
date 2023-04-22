@@ -40,7 +40,6 @@ function requestPictureInPicture() {
 ## 参见
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}

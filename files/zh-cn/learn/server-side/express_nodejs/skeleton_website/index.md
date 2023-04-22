@@ -442,7 +442,7 @@ block content
 
 下一节我们开始修改骨架，让它具备一些图书馆网站的功能。
 
-## 另请参阅
+## 参见
 
 - [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) （Express 中文镜像文档）
 - [在 Express 中使用模板引擎](http://www.expressjs.com.cn/guide/using-template-engines.html)（Express 镜像文档）

@@ -106,7 +106,7 @@ slug: Web/MathML/Authoring
 
 使用这种方法可以直接在网页中编写公式，JavaScript 库会负责将它们转换为 MathML。这可能是最简单的方式，但它也有一些问题：必须加载和执行额外的 JavaScript 代码，且作者必须转义保留字符；网络爬虫则无法访问 MathML 的输出……
 
-[自定义元素](/zh-CN/docs/Web/Web_Components/Using_custom_elements)可用于托管这些源代码，并确保对应的 MathML 输出会通过 [shadow 子树](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)被插入和渲染 [TeXZilla](https://github.com/fred-wang/TeXZilla) 的 [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) 元素，[上面的示例](#html_网页中的_mathml)就可以重写成以下更简洁的样子：
+[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)可用于托管这些源代码，并确保对应的 MathML 输出会通过 [shadow 子树](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)被插入和渲染 [TeXZilla](https://github.com/fred-wang/TeXZilla) 的 [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) 元素，[上面的示例](#html_网页中的_mathml)就可以重写成以下更简洁的样子：
 
 ```html
 <!DOCTYPE html>

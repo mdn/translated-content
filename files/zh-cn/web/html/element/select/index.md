@@ -11,7 +11,7 @@ slug: Web/HTML/Element/select
 
 上述例子展示了 `<select>` 的典型用法。元素中设置了 `id` 属性以将其与 {{htmlelement("label")}} 元素关联在一起，提高可及性（accessibility）。`name` 属性表示提交到服务器的相关数据点的名字。每个菜单选项由 `<select>` 中的一个 {{htmlelement("option")}} 元素定义。
 
-每个 `<option>` 元素都应该有一个 {{htmlattrxref("value", "option")}} 属性，其中包含被选中时需要提交到服务器的数据值。如果不含 `value` 属性，则 `value` 值默认为元素中的文本。你可以在 `<option>` 元素中设置一个 {{htmlattrxref("selected")}} 属性以将其设置为页面加载完成时默认选中的元素。
+每个 `<option>` 元素都应该有一个 [`value`](/zh-CN/docs/Web/HTML/Element/option#value) 属性，其中包含被选中时需要提交到服务器的数据值。如果不含 `value` 属性，则 `value` 值默认为元素中的文本。你可以在 `<option>` 元素中设置一个 [`selected`](/zh-CN/docs/Web/HTML/Global_attributes#selected) 属性以将其设置为页面加载完成时默认选中的元素。
 
 `<select>` 元素有一些用于控制元素的特有属性，例如 `multiple` 规定了能不能同时选中多个选项，`size` 规定了一次性显示多少选项。这个元素也支持大多数常见的表单输入元素属性，如 `required`, `disabled`, `autofocus` 等。
 
@@ -30,7 +30,7 @@ slug: Web/HTML/Element/select
 - `disabled`
   - : 这个布尔值的属性表示用户不能与该表单控件交互。如果没有声明这个属性，则从它的父元素继承，例如 `fieldset`；如果没有父元素设置了 `disabled` 属性，那么默认该表单对象可用。
 - `form`
-  - : `<select>` 所关联的{{HTMLElement("form")}} (它的"表单拥有者")。其值必须是在同一文档中的 `<form>` 元素的{{htmlattrxref("id")}}（如果没有设置这个属性， `<select>` 元素则与其任何存在的祖先 `<form>` 元素关联）。
+  - : `<select>` 所关联的{{HTMLElement("form")}} (它的"表单拥有者")。其值必须是在同一文档中的 `<form>` 元素的[`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)（如果没有设置这个属性， `<select>` 元素则与其任何存在的祖先 `<form>` 元素关联）。
     这个属性让你将 `<select>` 元素与文档中任意位置的 `<form>` 元素相关联，而不仅仅是包含 `<select>` 元素的 `<form>` 元素。这个属性还可以覆盖元素的祖先 `<form>` 元素。
 - `multiple`
   - : 这个布尔值属性表示列表中的选项是否支持多选。没有声明该值时，一次只能选中一个选项。声明这个属性后，大多数浏览器都会显示一个可滚动的列表框，而非一个下拉菜单。

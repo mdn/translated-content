@@ -47,7 +47,7 @@ slug: Web/HTML/Element/object
 - `type`
   - : **data** 指定的资源的 MIME 类型，需要为 **data** 和 **type** 中至少一个设置值。
 - `usemap`
-  - : 指向一个 {{HTMLElement("map")}} 元素的 hash-name；格式为‘#’加 map 元素 {{htmlattrxref("name", "map")}} 元素的值。
+  - : 指向一个 {{HTMLElement("map")}} 元素的 hash-name；格式为‘#’加 map 元素 [`name`](/zh-CN/docs/Web/HTML/Element/map#name) 元素的值。
 - `width`
   - : 资源显示的宽度，单位是 CSS 像素。
 

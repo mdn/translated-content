@@ -1,6 +1,6 @@
 ---
 title: 继承
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
 
 {{cssref}}

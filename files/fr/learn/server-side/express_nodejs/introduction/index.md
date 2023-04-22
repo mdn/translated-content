@@ -536,15 +536,3 @@ Bien sûr, Express est délibérément un cadre d'application web très léger, 
 - [Gestion des erreurs](https://expressjs.com/fr/guide/error-handling.html) (docs Express)
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
-
-## Dans ce module
-
-- [Introduction à Express/Node](/fr/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Configuration d'un environnement de développement Node (Express)](/fr/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Tutoriel Express : La bibliothèque locale du site Web](/fr/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Tutoriel Express, partie 2 : Création d'un squelette de site Web](/fr/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Tutoriel Express, partie 3 : Utilisation d'une base de données (avec Mongoose)](/fr/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Tutoriel Express, partie 4 : Routes et contrôleurs](/fr/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Tutoriel Express, partie 5 : Affichage des données de la bibliothèque](/fr/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Tutoriel Express, partie 6 : Travailler avec des formulaires](/fr/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Tutoriel Express, Partie 7 : Déploiement en production](/fr/docs/Learn/Server-side/Express_Nodejs/deployment)

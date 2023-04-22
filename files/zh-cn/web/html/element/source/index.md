@@ -43,7 +43,7 @@ slug: Web/HTML/Element/source
 该元素包含 [全局属性](/zh-CN/docs/HTML/Global_attributes).
 
 - `sizes` {{experimental_inline}}
-  - : Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use.
+  - : Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in [`srcset`](/zh-CN/docs/Web/HTML/Element/source#srcset) to use.
     The `sizes` attribute has an effect only when the {{HTMLElement("source")}} element is the direct child of a {{HTMLElement("picture")}} element.
 - `src`
   - : Required for {{HTMLElement("audio")}} and {{HTMLElement("video")}}, address of the media resource. The value of this attribute is ignored when the `<source>` element is placed inside a {{HTMLElement("picture")}} element.

@@ -193,13 +193,13 @@ Les éléments `<button>` sont beaucoup plus faciles à styliser que les éléme
 
 Si vos boutons ne servent pas à soumettre des données de formulaire à un serveur, assurez-vous de définir leur attribut `type` à `bouton`. Sinon, ils tenteront de soumettre des données de formulaire et de charger la réponse (inexistante), détruisant éventuellement l'état actuel du document.
 
-## Exemple
+## Exemples
 
 ```html
-<button name="button">Cliquez sur moi :)</button>
+<button name="button">Cliquez sur moi</button>
 ```
 
-{{EmbedLiveSample('Exemple', 200, 64)}}
+{{EmbedLiveSample('', 200, 64)}}
 
 ## Problèmes d'accessibilité
 
@@ -209,7 +209,7 @@ Les boutons qui reposent uniquement sur une icône pour représenter une fonctio
 
 Afin de fournir un nom accessible pour un bouton, on fournira un contenu texte dans l'élément qui décrit, de façon concise, la fonctionnalité offerte par le bouton.
 
-#### Exemple
+#### Exemples
 
 ```html
 <button name="favorite" type="button">
@@ -219,6 +219,10 @@ Afin de fournir un nom accessible pour un bouton, on fournira un contenu texte d
   Ajouter aux favoris
 </button>
 ```
+
+##### Résultat
+
+{{EmbedLiveSample('')}}
 
 Si on souhaite que le texte du bouton ne soit pas visible, on peut le faire de façon accessible grâce à une [combinaison de propriétés](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) qui permettent de le masquer visuellement mais qui permet toujours aux technologies d'assistance de l'analyser.
 

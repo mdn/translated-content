@@ -1,6 +1,8 @@
 ---
-title: Node.parentElement
+title: "Node: parentElement プロパティ"
 slug: Web/API/Node/parentElement
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -15,7 +17,7 @@ slug: Web/API/Node/parentElement
 
 ```js
 if (node.parentElement) {
-    node.parentElement.style.color = "red";
+  node.parentElement.style.color = "red";
 }
 ```
 

@@ -439,16 +439,4 @@ Cet article a exploré les concepts fondamentaux inhérents aux fonctions, ouvra
 - [Fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions) — aborde certaines fonctionnalités avancées non incluses ici.
 - [Valeur par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments), [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) — références avancées
 
-<!---->
-
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## Dans ce module
-
-- [Prendre des décisions dans le code — conditions](/fr/Apprendre/JavaScript/Building_blocks/conditionals)
-- [Les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)
-- [Fonctions — des blocs de code réutilisables](/fr/Apprendre/JavaScript/Building_blocks/Fonctions)
-- [Construire votre propre fonction](/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function)
-- [Valeurs de retour des fonctions](/fr/Apprendre/JavaScript/Building_blocks/Return_values)
-- [Introduction aux évènements](/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements)
-- [Galerie d'images](/fr/Apprendre/JavaScript/Building_blocks/Image_gallery)

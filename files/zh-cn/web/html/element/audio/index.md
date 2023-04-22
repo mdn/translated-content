@@ -238,12 +238,12 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, phrasing content, embedded content. If it has a {{htmlattrxref("controls", "audio")}} attribute: interactive content and palpable content.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, phrasing content, embedded content. If it has a [`controls`](/zh-CN/docs/Web/HTML/Element/audio#controls) attribute: interactive content and palpable content.</td>
   </tr>
   <tr>
    <th scope="row">合法内容</th>
    <td>
-    <p>如果元素拥有一个 {{htmlattrxref("src", "audio")}} 属性：合法内容为 0 个或更多 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容<br>
+    <p>如果元素拥有一个 [`src`](/zh-CN/docs/Web/HTML/Element/audio#src) 属性：合法内容为 0 个或更多 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容<br>
      <strong>否则</strong>: 合法内容为零个或多个 {{HTMLElement("source")}} 元素，跟随着 0 个或多个{{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容</p>
    </td>
   </tr>

@@ -7,9 +7,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 **`findIndex()`** 方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回 -1。
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
-
 另请参阅 {{jsxref("Array/find", "find()")}} 方法，它返回满足测试函数的第一个元素（而不是它的索引）。
+
+{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
 
 ## 语法
 
@@ -29,7 +29,7 @@ findIndex(callbackFn, thisArg)
     - `array`
       - : 调用了 `findIndex()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 时用作的 `this` 值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
@@ -55,7 +55,7 @@ findIndex(callbackFn, thisArg)
 
 ### 寻找数组中的首个素数的索引
 
-以下示例返回数组中第一个素数的索引，如果没有素数则返回 -1。
+以下示例返回数组中第一个素数的索引，如果没有素数则返回 `-1`。
 
 ```js
 function isPrime(element) {

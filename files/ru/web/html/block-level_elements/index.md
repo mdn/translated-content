@@ -51,15 +51,15 @@ p { background-color: #8ABB55; }
 
 - {{ HTMLElement("address") }}
   - : Контактная информация.
-- {{ HTMLElement("article") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("article") }}
   - : Содержание статьи.
-- {{ HTMLElement("aside") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("aside") }}
   - : Побочное содержание.
 - {{ HTMLElement("blockquote") }}
   - : Длинная («блочная») цитата.
-- {{ HTMLElement("details") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("details") }}
   - : Раскрывающийся блок с подробностями.
-- {{ HTMLElement("dialog") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("dialog") }}
   - : Диалоговое окно.
 - {{ HTMLElement("dd") }}
   - : Описание определения.
@@ -71,27 +71,27 @@ p { background-color: #8ABB55; }
   - : Термин в списке определений.
 - {{ HTMLElement("fieldset") }}
   - : Группирование элементов формы.
-- {{ HTMLElement("figcaption") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("figcaption") }}
   - : Описание для тега {{ HTMLElement("figure") }}.
-- {{ HTMLElement("figure") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("figure") }}
   - : Группирование медиа-контента с подписью (см. {{ HTMLElement("figcaption") }}).
-- {{ HTMLElement("footer") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("footer") }}
   - : Нижняя часть («подвал») раздела или страницы.
 - {{ HTMLElement("form") }}
   - : Форма ввода.
 - {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
   - : Заголовки от первого до шестого уровня.
-- {{ HTMLElement("header") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("header") }}
   - : Верхняя часть («шапка») раздела или страницы.
-- {{ HTMLElement("hgroup") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("hgroup") }}
   - : Группирование заголовков раздела или страницы.
 - {{ HTMLElement("hr") }}
   - : Горизонтальная разделительная линия.
 - {{ HTMLElement("li") }}
   - : Пункт списка.
-- {{ HTMLElement("main") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("main") }}
   - : Содержит основной контент, уникальный для страницы.
-- {{ HTMLElement("nav") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("nav") }}
   - : Содержит навигационные ссылки.
 - {{ HTMLElement("ol") }}
   - : Упорядоченный список.
@@ -99,7 +99,7 @@ p { background-color: #8ABB55; }
   - : Текстовый абзац.
 - {{ HTMLElement("pre") }}
   - : Предварительно форматированный текст.
-- {{ HTMLElement("section") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("section") }}
   - : Раздел веб-страницы.
 - {{ HTMLElement("table") }}
   - : Таблица.

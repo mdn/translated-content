@@ -54,7 +54,7 @@ dataview.getBigInt64(0); // 0n
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

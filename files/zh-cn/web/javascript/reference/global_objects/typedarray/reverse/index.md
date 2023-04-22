@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 
 ## 语法
 
-```plain
-typedarray.reverse();
+```js-nolint
+reverse()
 ```
 
 ### 返回值

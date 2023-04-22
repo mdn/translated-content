@@ -13,21 +13,23 @@ slug: Web/CSS/-webkit-line-clamp
 
 当应用于锚（anchor）元素时，截断可以发生在文本中间，而不必在末尾。
 
-> **备注：** 该属性最初在 WebKit 中实现的，但存在一些问题。由于需要支持旧版本的浏览器，该属性已经被标准化。[CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) 规范还定义了一个 {{cssxref("line-clamp")}} 属性，用来代替此属性并避免一些问题。
+> **备注：** 该属性最初在 WebKit 中实现的，但存在一些问题。由于需要支持旧版本的浏览器，该属性已在 [CSS Overflow Module Level 4](https://w3c.github.io/csswg-drafts/css-overflow-4/#propdef--webkit-line-clamp) 中被标准化。[CSS Overflow Module Level 4](https://w3c.github.io/csswg-drafts/css-overflow-4/#propdef-line-clamp) 规范还定义了一个 {{cssxref("line-clamp")}} 属性，用来代替此属性并避免一些问题。
 
 ## 语法
 
 ```css
-/* Keyword value */
+/* 关键词值 */
 -webkit-line-clamp: none;
 
-/* <integer> values */
+/* 整数值 */
 -webkit-line-clamp: 3;
 -webkit-line-clamp: 10;
 
-/* Global values */
+/* 全局值 */
 -webkit-line-clamp: inherit;
 -webkit-line-clamp: initial;
+-webkit-line-clamp: revert;
+-webkit-line-clamp: revert-layer;
 -webkit-line-clamp: unset;
 ```
 
@@ -52,8 +54,7 @@ slug: Web/CSS/-webkit-line-clamp
 
 ```html
 <p>
-  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
-  An ellipsis will be shown at the point where the text is clamped.
+  在此示例中，<code>-webkit-line-clamp</code> 属性设置为 <code>2</code>，即文本在超过两行后将被截断。文本截断处将显示省略号。
 </p>
 ```
 
@@ -64,7 +65,7 @@ p {
   width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 ```
@@ -83,5 +84,5 @@ p {
 
 ## 参见
 
-- [Line Clampin'（截断多行文本）](https://css-tricks.com/line-clampin/)
+- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
 - {{cssxref("line-clamp")}}

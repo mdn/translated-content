@@ -1,6 +1,6 @@
 ---
 title: Работа с объектами
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
 
