@@ -17,18 +17,19 @@ l10n:
 
 ## 構文
 
-<pre class="syntaxbox brush:js notranslate">import <em>defaultExport</em> from "<em>module-name</em>";
-import * as <em>name</em> from "<em>module-name</em>";
-import { <em>export1</em> } from "<em>module-name</em>";
-import { <em>export1</em> as <em>alias1</em> } from "<em>module-name</em>";
-import { <em>export1</em> , <em>export2</em> } from "<em>module-name</em>";
-import { <em>foo</em> , <em>bar</em> } from "<em>module-name/path/to/specific/un-exported/file</em>";
-import { <em>export1</em> , <em>export2</em> as <em>alias2</em> , [...] } from "<em>module-name</em>";
-import <em>defaultExport</em>, { export1 [ , [...] ] } from "<em>module-name</em>";
-import <em>defaultExport</em>, * as <em>name</em> from "<em>module-name</em>";
-import "<em>module-name</em>";
-var promise = import("<em>module-name</em>");
-</pre>
+```js-nolint
+import defaultExport from "module-name";
+import * as name from "module-name";
+import { export1 } from "module-name";
+import { export1 as alias1 } from "module-name";
+import { default as alias } from "module-name";
+import { export1, export2 } from "module-name";
+import { export1, export2 as alias2, /* … */ } from "module-name";
+import { "string name" as alias } from "module-name";
+import defaultExport, { export1, /* … */ } from "module-name";
+import defaultExport, * as name from "module-name";
+import "module-name";
+```
 
 - `defaultExport`
   - : モジュールからのデフォルトのエクスポートを参照する名前。
