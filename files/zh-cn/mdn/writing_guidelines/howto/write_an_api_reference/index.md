@@ -18,13 +18,13 @@ slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 - HTML、CSS 和 JavaScript 等 Web 技术。JavaScript 是最重要的。
 - 阅读 Web 技术标准。你需要在撰写 API 文档时，随时翻阅这些资料。
 
-其他知识可以在顺道学习到。
+其他知识可以顺路学习到。
 
 ### 先决资源
 
 在开始撰写 API 参考文档前，你需要准备：
 
-1. 最新版的标准：无论是 W3C 建议还是早期的编辑草案，你都应该参考 API 的规范的最新可用草案（或规范）。往往可以通过在网络上搜索到它们。最新版本通常会从所有版本的规范中链接出来，列在“latest draft”或类似的条目下。
+1. 最新版的标准：无论是 W3C 建议还是早期的编辑草案，你都应该参考 API 规范的最新可用草案（或规范）。往往可以通过在网络上搜索到它们。最新版本通常会从所有版本的规范中链接出来，列在“latest draft”或类似的条目下。
 2. 最新版的现代 web 浏览器：这些应该是实验性/alpha 版本，例如 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 或 [Chrome Canary](https://www.google.cn/intl/zh-cn/chrome/canary/)，这些版本更有可能支持你所撰写文档的功能。如果你正在为一个新的/实验性的 API 撰写文档，这一点尤其相关。
 3. 演示页/博客文章/其他信息：尽可能找到充实的参考信息。
 4. 实用的工程人员联系方式：找到一个友好的工程联系人来询问有关规范的问题是非常有用的，这个人可能参与了 API 的标准化或在浏览器中的实现。找到他们的好地方是：
