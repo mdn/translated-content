@@ -5,7 +5,7 @@ slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Guide/Audio_and_video_delivery")}}
 
-在其他文章中我们学会了如何使用 {{ domxref("HTMLMediaElement") }} 和 {{ domxref("Window.fullScreen") }} API [搭建一个跨浏览器的视频播放器](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)以及如何给视频播放器 [添加样式](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)。本文将介绍如何用 {{ domxref("WebVTT_API","WebVTT 格式") }}和 {{ htmlelement("track") }} 元素为视频添加字幕。
+在其他文章中我们学会了如何使用 {{ domxref("HTMLMediaElement") }} 和 {{ domxref("Window.fullScreen") }} API [搭建一个跨浏览器的视频播放器](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)以及如何给视频播放器[添加样式](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)。本文将介绍如何用 {{ domxref("WebVTT_API","WebVTT 格式") }}和 {{ htmlelement("track") }} 元素为视频添加字幕。
 
 ## 带有字幕的视频示例
 
@@ -314,4 +314,4 @@ WebVTT 的一个不太为人所知和支持的功能是通过 [CSS 扩展](https
 
 ## 插件
 
-也有许多开源和商业的 HTML 视频播放器插件提供字幕支持，你可以用它们来代替自己制作。你可以在网上使用 *“HTML 视频播放器插件”* 等搜索词来搜索这些插件。
+也有许多开源和商业的 HTML 视频播放器插件提供字幕支持，你可以用它们来代替自己制作。你可以在网上使用 *“HTML 视频播放器插件”*等搜索词来搜索这些插件。
