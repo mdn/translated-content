@@ -13,7 +13,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 > **备注：** 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](zh-CN/docs/Web/HTTP/Access_control_CORS)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。下面的例子就是支持跨域访问的。
 
-添加下面两个函数到"webgl-demo.js"中：
+添加下面两个函数到“webgl-demo.js”中：
 
 ```js
 
