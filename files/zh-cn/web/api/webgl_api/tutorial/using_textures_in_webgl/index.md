@@ -11,9 +11,9 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 首先加入加载纹理的代码。现在我们只使用一张单一的纹理贴到立方体的 6 个面上，但是同样的方法可以用来加载任意数量的纹理贴图。
 
-> **备注：** 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](zh-CN/docs/Web/HTTP/Access_control_CORS)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。下面的例子就是支持跨域访问的。
+> **备注：** 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](/zh-CN/docs/Web/HTTP/CORS)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。见[下方跨域纹理](#跨域纹理)小节以了解详情。
 
-加载纹理的代码如下：
+> **备注：** 在你的“webgl-demo.js”脚本中添加下面的两个函数：
 
 ```js
 //
@@ -85,11 +85,13 @@ function isPowerOf2(value) {
 }
 ```
 
-函数 `loadTexture()` 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 GL 纹理对象 texture。接下来我们调用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 来为纹理分配内存。这里我们分配了蓝色像素，这样我们就可以在图片加载完成之前使用这个纹理了。当图片加载完成后，我们再调用 `texImage2D()` 来把图片的数据写入纹理。
+函数 `loadTexture()` 首先调用 WebGL 的 {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 WebGL 纹理对象 texture。接下来使用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 以上传一个蓝色的像素点。这样我们就可以在图片下载完成之前使用这个蓝色的纹理了。
+
+要从图片文件加载纹理，接下来创建一个 `Image` 对象，并为 `src` 设置我们想要用作纹理的图片的 URL。我们为 `image.onload` 设置的函数会在图片下载完成时被调用。那时我们再次调用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}，这次我们将图片作为纹理的数据源。之后，我们根据下载的图像在两个维度上是否为 2 的幂来设置纹理的过滤（filter）和平铺（wrap）。
 
 接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 `gl.TEXTURE_2D` 来让它成为当前操作纹理。然后通过调用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。
 
-> **备注：** 在多数情况下，纹理的宽和高都必须是 2 的幂（如：1，2，4，8，16 等等）。如果有什么特殊情况请参考下面的“[非 2 的幂纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#非2的幂纹理)”小节。
+> **备注：** 在多数情况下，纹理的宽和高都必须是 2 的幂（如：1，2，4，8，16 等等）。如果有什么特殊情况请参考下面的“[非 2 的幂纹理](#非_2_的幂纹理)”小节。
 
 代码的接下来两行设置了纹理过滤器，过滤器用来控制当图片缩放时像素如何生成如何插值。在这个例子里，我们对图片放大使用的是线性过滤，而对图片缩小使用的是多级渐进纹理过滤。接下来我们通过调用 {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}} 来生成多级渐进纹理，接着通过给 `gl.TEXTURE_2D` 绑定值 `null` 来告诉 WebGL 我们对当前纹理的操作已经结束了。
 
@@ -120,7 +122,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 
 现在，纹理已经加载好了，而且已经可以使用了。但是在使用之前我们还要创建好纹理坐标到立方体各个面的顶点的映射关系。下面的代码通过替换之前的设置每个面颜色的代码，当然还是在 `initBuffers()` 函数里。
 
-> **备注：** 将下面函数添加到“init-buffer.js”文件中：
+> **备注：** 将下面函数添加到“init-buffer.js”模块中：
 
 ```js
 function initTextureBuffer(gl) {
@@ -160,13 +162,13 @@ function initTextureBuffer(gl) {
 
 接下来，我们需要更新 `initBuffers()` 来创建并返回纹理坐标缓冲区而不是颜色缓冲区。
 
-> **备注：** 在“init-buffers.js”文件的`initBuffers()` 函数中，用下面一行替换 `initColorBuffer()` 的调用
+> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，用下面一行替换 `initColorBuffer()` 的调用：
 
 ```js
 const textureCoordBuffer = initTextureBuffer(gl);
 ```
 
-> **备注：** 在“init-buffers.js”文件的 `initBuffers()` 函数中，用下面一行替换 `return colorBuffer;` 的调用
+> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，用以下内容替换 `return` 语句：
 
 ```js
 return {
@@ -184,7 +186,7 @@ return {
 
 接下来我们会修改顶点着色器代码，现在不再需要获取顶点颜色数据，而是获取纹理坐标数据。
 
-> **注意：** 在你的 `main()` 函数中更新 `vsSource` 定义，像这样：
+> **备注：** 在你的 `main()` 函数中更新 `vsSource` 定义，像这样：
 
 ```js
 const vsSource = `
@@ -225,7 +227,9 @@ const fsSource = `
 
 ### Attribute 与 Uniform 位置
 
-我们需要更新 attribute 和 uniform 变量的位置。
+因为我们修改了 attribute 并添加了 uniform，所以我们需要查找它们的位置。
+
+> **备注：** 在你的 `main()` 函数中，像这样更新 `programInfo` 的定义：
 
 ```js
 const programInfo = {
@@ -246,7 +250,7 @@ const programInfo = {
 
 对 `drawScene()` 函数的更改很简单。
 
-> **备注：** 在“draw-scene.js”文件的 `drawScene()`函数中：
+> **备注：** 在“draw-scene.js”模块的 `drawScene()` 函数中添加以下函数：
 
 ```js
 // tell webgl how to pull out the texture coordinates from buffer
@@ -269,7 +273,7 @@ function setTextureAttribute(gl, buffers, programInfo) {
 }
 ```
 
-> **备注：** 在你的 "draw-scene.js "模块的 `drawScene()` 函数中，用下面一行替换换 `setColorAttribute()` 的调用：
+> **备注：** 在你的“draw-scene.js”模块的 `drawScene()` 函数中，用下面一行替换 `setColorAttribute()` 的调用：
 
 ```js
 setTextureAttribute(gl, buffers, programInfo);
@@ -277,7 +281,7 @@ setTextureAttribute(gl, buffers, programInfo);
 
 然后添加代码来指定要映射到面的纹理。
 
-> **备注：** 在你的`drawScene()`函数中，就在对`gl.uniformMatrix4fv()`的两次调用之后，添加以下代码：
+> **备注：** 在你的 `drawScene()` 函数中，就在对 `gl.uniformMatrix4fv()` 的两次调用之后，添加以下代码：
 
 ```js
 // Tell WebGL we want to affect texture unit 0
@@ -290,17 +294,17 @@ gl.bindTexture(gl.TEXTURE_2D, texture);
 gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
 ```
 
-GL 最多可同时注册 32 张纹理；`gl.TEXTURE0` 是第一张。我们把我们之前加载的纹理绑定到了第一个寄存器，然后着色器程序里的采样器 `uSampler` 就会完成它的功能：使用纹理。
+WebGL 提供了至少 8 个纹理单元，`gl.TEXTURE0` 是第一个。若我们想要改变第一个单元，我们需要调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 以将纹理绑定到纹理单元 0 的 `TEXTURE_2D` 绑定点。然后告诉着色器所用纹理单元 0 作为 `uSampler`。
 
 最后，在 `drawScene()` 函数中添加 `texture` 作为参数，包括它被定义和被调用的地方。
 
-> **备注：** 在你的 `drawScene()` 函数中，用下面一行替换 `drawScene()` 的定义：
+> **备注：** 更新你的 `drawScene()` 函数的定义以添加新的参数：
 
 ```js-nolint
 function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
 ```
 
-> **备注：** 更新你的 `main()` 函数中调用 `drawScene()`的地方：
+> **备注：** 更新你的 `main()` 函数中调用 `drawScene()` 的地方：
 
 ```js
 drawScene(gl, programInfo, buffers, texture, cubeRotation);
@@ -310,20 +314,14 @@ drawScene(gl, programInfo, buffers, texture, cubeRotation);
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[查看完整示例代码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [在新窗口里打开示例](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[查看完整示例代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [在新窗口里打开示例](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
-## 关于跨域纹理
+## 跨域纹理
 
-加载 WebGL 纹理应该也可以说是跨域访问控制里的一个话题。为了在我们的显示内容里使用其他域名里的纹理图片，允许跨域访问也是要考虑的。可以通过查看[HTTP 访问控制](/zh-CN/docs/Web/HTTP/Access_control_CORS)来获取到更多的相关细节。
+加载 WebGL 纹理应该也可以说是跨域访问控制里的一个话题。为了在我们的显示内容里使用其他域名里的纹理图片，允许跨域访问也是要考虑的。可以通过查看[HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)来获取到更多的相关细节。
 
-[这篇文章](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)也对跨域加载纹理到 WebGL 做出了解释。而且文章里面还包含了一个使用的[例子](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html)。
-
-> **备注：** 对跨域加载 WebGL 纹理的支持和对 image 元素的 `crossOrigin` 的属性的支持都是在 Gecko 8.0 版本中实现的。
+[这篇文章](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)也对跨域加载纹理到 WebGL 做出了解释。而且文章里面还包含了一个使用的[例子](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html)。
 
 被污染过的（只写）画布是不能拿来当作 WebGL 纹理来使用的。举个例子来说，当把一张跨域的图片画到一个 2D 的 {{ HTMLElement("canvas") }} 中时，这个画布就是“被污染过的”。
-
-> **备注：** 对 Canvas 2D 的 `drawImage` 的跨域支持已经在 Gecko 9.0 版本实现的。这就意味着使用支持跨域的图片来污染一个 2D 的画布，这张画布也已经可以作为 WebGL 的纹理来使用了。
-
-> **备注：** 视频对跨域的支持以及 {{ HTMLElement("video") }} 元素的 `crossorigin` 属性的支持是在 Gecko 12.0 版本中实现的。
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
