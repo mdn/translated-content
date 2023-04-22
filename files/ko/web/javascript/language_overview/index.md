@@ -1,8 +1,9 @@
 ---
 title: JavaScript 재입문하기 (JS 튜토리얼)
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 어째서 재입문일까요? 왜냐하면, [JavaScript](/ko/docs/Glossary/JavaScript)는 [세계에서 가장 오해받고 있는 프로그래밍 언어](http://javascript.crockford.com/javascript.html)로 악명이 높기 때문입니다. 종종 장난감같다고 조롱당하기도했지만, 이 거짓말같은 단순함 아래에는 몇 가지의 강력한 언어 기능이 숨어 있습니다. Javascript는 현재 엄청나게 많은, 요즘 가장 뜨고있는 애플리케이션들에 사용되고 있어서, 웹 또는 모바일 개발자 누구에게라도 이 기술에 대한 깊은 지식이 중요한 기량이 된다는 것을 보여주고 있습니다.
