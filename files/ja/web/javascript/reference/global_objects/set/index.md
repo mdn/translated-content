@@ -245,7 +245,7 @@ new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
-### Set を使用して、リスト中の値の一意姓を保証
+### Set を使用して、リスト中の値の一意性を保証
 
 ```js
 const array = Array
