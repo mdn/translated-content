@@ -24,7 +24,7 @@ slug: Web/CSS/:lang
 ### 参数
 
 - `<language-code>`
-  - : {{cssxref("&lt;string&gt;")}} 代表了你想定位的语言。可接受的值为在[HTML](/zh-CN/docs/Web/HTML) 规范中指定的值。
+  - : {{cssxref("&lt;string&gt;")}} 代表了你想定位的语言。可接受的值是 [HTML](/zh-CN/docs/Web/HTML) 规范中指定的值。
 
 ## 示例
 
