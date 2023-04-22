@@ -2,3 +2,7 @@ build/
 
 # Ignore markdown files till full pass is made on each folder
 *.md
+
+# The following paths have had a full pass
+!/files/zh-tw/games/**/*.md
+!/files/zh-tw/glossary/**/*.md
