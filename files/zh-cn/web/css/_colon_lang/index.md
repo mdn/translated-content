@@ -9,7 +9,7 @@ slug: Web/CSS/:lang
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-function-lang.html", "tabbed-shorter")}}
 
-> **备注：** 在 HTML 中，语言是通过 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 头）。对于其他文档类型，也可能存在其他用于确定语言的方法。
+> **备注：** 在 HTML 中，语言是通过 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 标头）。对于其他文档类型，也可能存在其他用于确定语言的方法。
 
 ## 语法
 
@@ -28,7 +28,7 @@ slug: Web/CSS/:lang
 
 ## 示例
 
-在这个例子中，`:lang()` 伪类使用[子选择器](/zh-CN/docs/Web/CSS/Child_combinator)来匹配引用元素 ({{htmlElement("q")}}) 的父元素。需要注意的是，此处演示的方法并不是唯一的，最好的方法需要依据文档类型来确定。还需要注意的是， {{glossary("Unicode")}} 值用于指定一些特殊字符的引用。
+在这个例子中，`:lang()` 伪类使用[子组合器](/zh-CN/docs/Web/CSS/Child_combinator)来匹配引用元素 ({{htmlElement("q")}}) 的父元素。需要注意的是，此处演示的方法并不是唯一的，最好的方法需要依据文档类型来确定。还需要注意的是，{{glossary("Unicode")}} 值用于指定一些特殊字符的引用。
 
 ### HTML
 
@@ -74,5 +74,5 @@ slug: Web/CSS/:lang
 
 - 语言相关伪类：{{ cssxref(":lang") }}、{{ cssxref(":dir") }}
 - HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性
-- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) 属性
-- {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}
+- HTML [`translate`](/zh-CN/docs/Web/HTML/Global_attributes#translate) 属性
+- {{RFC(5646, "用于标识语言的标签（也称为 BCP 47）")}}
