@@ -47,7 +47,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 
 导入映射允许开发者在模块标识中指定（几乎）他们想要的任意文本；映射提供了一个相应的值，该值在解析模块标识符时替换文本。
 
-### 暴露模块
+### 裸模块
 
 下面的导入映射定义了一个 `imports` 键，该键具有属性为 `square` 和 `circle` 的“模块标识符映射”。
 
@@ -62,7 +62,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 </script>
 ```
 
-使用导入映射，我们可以导入以上相同的模块，但在我们的模块标识符中要使用“暴露模块”。
+使用导入映射，我们可以导入以上相同的模块，但在我们的模块标识符要使用“裸模块（bare module）”。
 
 ```js
 import { name as squareName, draw } from "square";
@@ -92,7 +92,7 @@ import { name as squareName, draw } from "shapes/circle.js";
 
 ### 模块标识符映射键中的路径
 
-模块标识符键不必是单个单词名称（“暴露名称”）。它们也可以包含路径分隔符或者以路径分隔符结尾，或者是绝对 URL，或者以 `/`、`./` 或 `../` 开始的相对 URL。
+模块标识符键不必是单个单词名称（“裸模块的名称”）。它们也可以包含路径分隔符或者以路径分隔符结尾，或者是绝对 URL，或者以 `/`、`./` 或 `../` 开始的相对 URL。
 
 ```json
 {
