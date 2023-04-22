@@ -1,6 +1,6 @@
 ---
 title: 자바스크립트의 메모리 관리
-slug: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 ---
 
 {{JsSidebar("Advanced")}}
