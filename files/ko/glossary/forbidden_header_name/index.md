@@ -7,7 +7,7 @@ l10n:
 
 **금지된 헤더 이름**은 프로그래밍 방식으로 수정할 수 없는 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)의 이름입니다. 정확히는 {{Glossary("Forbidden response header name", "금지된 응답 헤더 이름")}}과 대비되는 HTTP **요청** 헤더 이름입니다.
 
-이러한 헤더는 사용자 에이전트가 헤더에 대한 모든 권한을 보유하므로 수정할 수 없습니다. `Sec-`로 시작하는 이름은 개발자에게 헤더에 대한 제어 권한을 부여하는 [취득 알고리즘](https://fetch.spec.whatwg.org/#concept-fetch)을 사용하는 API( {{domxref("XMLHttpRequest")}} 등)로부터 안전한 새 헤더를 만들때 사용하기 위해 예약되어 있습니다.
+이러한 헤더는 사용자 에이전트가 헤더에 대한 모든 권한을 보유하므로 수정할 수 없습니다. `Sec-`로 시작하는 이름은 개발자에게 헤더에 대한 제어 권한을 부여하는 [취득 알고리즘](https://fetch.spec.whatwg.org/#concept-fetch)을 사용하는 API({{domxref("XMLHttpRequest")}} 등)로부터 안전한 새 헤더를 만들때 사용하기 위해 예약되어 있습니다.
 
 금지된 헤더 이름은 `Proxy-` 또는 `Sec-` 로 시작하거나 아래 이름 중 하나입니다.
 
