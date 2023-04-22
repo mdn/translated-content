@@ -8,7 +8,7 @@ build/
 # system files
 /.github/**/*.md
 /docs/README.md
-README.md
+/README.md
 
 # es
 /docs/es/**/*.md
