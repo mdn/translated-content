@@ -6,9 +6,9 @@ build/
 # The following folders still need a full pass:
 
 # system files
-.github/**/*.md
-README.md
+/.github/**/*.md
 /docs/README.md
+README.md
 
 # es
 /docs/es/**/*.md
