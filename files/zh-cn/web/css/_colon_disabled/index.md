@@ -19,7 +19,7 @@ slug: Web/CSS/:disabled
 
 ## 示例
 
-这个例子展示了一个基本的发货表单。通过使用 [JavaScript](/zh-CN/docs/Web/JavaScript) {{domxref("HTMLElement/change_event", "change")}} 事件让用户启用/禁用付款字段。
+这个例子展示了一个基本的发货表单。通过使用 [JavaScript](/zh-CN/docs/Web/JavaScript) {{domxref("HTMLElement/change_event", "change")}} 事件让用户启用/禁用账单字段。
 
 ### HTML
 
