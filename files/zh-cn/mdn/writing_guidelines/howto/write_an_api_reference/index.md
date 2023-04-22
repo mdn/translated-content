@@ -126,7 +126,7 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 
 #### 事件页
 
-事件页往往作为其目标接口的子页面，并使用 _eventname_\_event 路径名，标题设置为 `接口名：eventName 事件`。
+事件页往往作为其目标接口的子页面，并使用 _eventname_\_event 路径名，标题设置为 `Interface：eventName 事件`。
 
 不要为 `on` 事件处理程序属性创建页面。在 `eventName_event` 页面上提及访问事件的两种方式。
 
