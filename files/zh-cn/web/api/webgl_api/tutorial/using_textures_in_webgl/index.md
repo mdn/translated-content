@@ -87,7 +87,7 @@ function isPowerOf2(value) {
 
 函数 `loadTexture()` 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 GL 纹理对象 texture。接下来我们调用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 来为纹理分配内存。这里我们分配了蓝色像素，这样我们就可以在图片加载完成之前使用这个纹理了。当图片加载完成后，我们再调用 `texImage2D()` 来把图片的数据写入纹理。
 
-接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 `gl.TEXTURE_2D` 来让它成为当前操作纹理。然后通过调用` {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。
+接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 `gl.TEXTURE_2D` 来让它成为当前操作纹理。然后通过调用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。
 
 > **备注：** 在多数情况下，纹理的宽和高都必须是 2 的幂（如：1，2，4，8，16 等等）。如果有什么特殊情况请参考下面的“[非 2 的幂纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#非2的幂纹理)”小节。
 
