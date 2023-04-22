@@ -9,11 +9,11 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`import`** 文は、他のモジュールによって[エクスポート](/ja/docs/Web/JavaScript/Reference/Statements/export)された読み込み専用のライブバインディングをインポートするために使用します。インポートされたモジュールは、宣言するかどうかにかかわらず、{{JSxRef("Strict_mode","Strict モード")}}になります。`import` 文は、スクリプトに `type="module"` がない限り、埋め込みスクリプトで使用できません。インポートされたバインディングは、バインディングをエクスポートしたモジュールによって更新されるため、ライブバインディングと呼ばれます。
+静的な **`import`** 宣言は、他のモジュールによって[エクスポート](/ja/docs/Web/JavaScript/Reference/Statements/export)された読み込み専用のライブバインディングをインポートするために使用します。インポートしたバインディングは、バインディングをエクスポートしたモジュールによって更新される一方、インポートしているモジュールによって再代入することができないために、「*ライブバインディング*」と呼ばれています。
 
-また、`type="module"` のスクリプトを必要としない動的 **`import()`** という関数のようなものもあります。
+ソースファイルの中で`import`宣言を使用するためには、ランタイムがそのファイルを[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)と見なす必要があります。HTMLでは、{{HTMLElement("script")}}タグに `type="module"` を加えることがこれに相当します。モジュールは、宣言するかどうかにかかわらず、{{JSxRef("Strict_mode","Strict モード")}}になります。
 
-{{HTMLElement("script")}} タグの `nomodule` 属性を使用すると、下位互換性を確保できます。
+また、`type="module"` のスクリプトを必要としない動的な [**`import()`**](/ja/docs/Web/JavaScript/Reference/Operators/import) という関数のようなものもあります。
 
 ## 構文
 
