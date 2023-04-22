@@ -213,7 +213,7 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
     ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 2. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
-    - 对于实验性功能（也就是说，还没处于 CR 级别），使用 \\{{SeeCompatTable}}
+    - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
     - \\{{Deprecated_header}}
     - \\{{Non-standard_header}}
 
@@ -298,7 +298,7 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
     ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
-    - 对于实验性功能（也就是说，还没处于 CR 级别），使用 \\{{SeeCompatTable}}
+    - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
     - \\{{Deprecated_header}}
     - \\{{Non-standard_header}}
 
