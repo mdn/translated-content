@@ -1873,6 +1873,7 @@
 /ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
+/ja/docs/Glossary/Scrollport	/ja/docs/conflicting/Glossary/Scroll_container
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
