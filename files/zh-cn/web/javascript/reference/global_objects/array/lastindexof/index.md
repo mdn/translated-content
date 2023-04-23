@@ -83,7 +83,6 @@ console.log(indices);
 
 需要注意的是，这里必须单独处理 `idx === 0` 的情况，因为如果该元素是数组的第一个元素，则无论 `fromIndex` 参数的值为何，它总是会被找到。这与 {{jsxref("Array.prototype.indexOf", "indexOf")}} 方法不同。
 
-
 ### 在稀疏数组上使用 lastIndexOf()
 
 你不能使用 `lastIndexOf()` 来搜索稀疏数组中的空槽。
