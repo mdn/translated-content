@@ -5,13 +5,13 @@ slug: Web/JavaScript/Equality_comparisons_and_sameness
 
 {{jsSidebar("Intermediate")}}
 
-JavaScript 提供三种不同的值比较操作：
+JavaScript 提供三种不同的值比较运算：
 
 - [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)——严格相等（三个等号）
 - [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)——宽松相等（两个等号）
 - [`Object.is()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
 
-选择哪个操作取决于你需要什么样的比较。简单来说：
+选择哪个运算取决于你需要什么样的比较。简单来说：
 
 - 在比较两个操作数时，双等号（`==`）将执行类型转换，并且会按照 IEEE 754 标准对 `NaN`、`-0` 和 `+0` 进行特殊处理（故 `NaN != NaN`，且 `-0 == +0`）；
 - 三等号（`===`）做的比较与双等号相同（包括对 `NaN`、`-0` 和 `+0` 的特殊处理）但不进行类型转换；如果类型不同，则返回 `false`；
@@ -22,7 +22,7 @@ JavaScript 提供三种不同的值比较操作：
 - [IsLooselyEqual](https://tc39.es/ecma262/#sec-islooselyequal)：`==`
 - [IsStrictlyEqual](https://tc39.es/ecma262/#sec-isstrictlyequal)：`===`
 - [SameValue](https://tc39.es/ecma262/#sec-samevalue)：`Object.is()`
-- [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero)：被许多内置操作使用
+- [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero)：被许多内置运算使用
 
 请注意，这些算法的区别都与它们对原始类型值的处理有关；它们都不会比较参数是否具有理论上相似的结构。对于任何具有相同的结构，但不是同一对象本身的非原始类型对象 `x` 和 `y` ，上述所有形式都将计算为 `false`。
 
@@ -134,14 +134,14 @@ function attemptMutation(v) {
 ```js
 function sameValueZero(x, y) {
   if (typeof x === "number" && typeof y === "number") {
-    // x 和 y 相等 (可能是 -0 和 0) 或它们都是 NaN
+    // x 和 y 相等（可能是 -0 和 0）或它们都是 NaN
     return x === y || (x !== x && y !== y);
   }
   return x === y;
 }
 ```
 
-零值相等与严格相等的区别在于其将 `NaN` 视作相等的，与同值相等的区别在于其将 `-0` 和 `0` 视作相等的。这使得它在搜索期间通常具有最实用的行为，特别是在与 `NaN` 一起使用时。它被用于 [`Array.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、[`TypedArray.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes) 及 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 方法用来比较键的相等性。
+零值相等与严格相等的区别在于其将 `NaN` 视作是相等的，与同值相等的区别在于其将 `-0` 和 `0` 视作相等的。这使得它在搜索期间通常具有最实用的行为，特别是在与 `NaN` 一起使用时。它被用于 [`Array.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、[`TypedArray.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes) 及 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 方法用来比较键的相等性。
 
 ## 相等性方法比较
 
@@ -180,7 +180,7 @@ function sameValueZero(x, y) {
 
 ### 何时使用 Object.is() 而不是三等号
 
-通常情况下，唯一需要关注 `Object.is` 对零的特殊行为的时机是在实施特定的元编程范式时，特别是涉及属性描述符时，当你的工作需要镜像 `Object.defineProperty` 的某些特性时。如果你的用例不需要这样做，建议避免使用 `Object.is`，而改用 `===`。即使你的要求涉及将两个 `NaN` 值之间的比较计算为 `true`，通常特殊处理 `NaN` 检查（使用先前版本的 ECMAScript 中提供的 `isNaN` 方法）比解决相关计算如何影响零的符号更为简单。
+通常情况下，唯一需要关注 {{jsxref("Object.is")}} 对零的特殊行为的时机是在实施特定的元编程范式时，特别是涉及属性描述符时，当你的工作需要镜像 {{jsxref("Object.defineProperty")}} 的某些特性时。如果你的用例不需要这样做，建议避免使用 {{jsxref("Object.is")}}，而改用 [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators)。即使你的要求涉及将两个 {{jsxref("NaN")}} 值之间的比较计算为 `true`，通常特殊处理 {{jsxref("NaN")}} 检查（使用先前版本的 ECMAScript 中提供的 {{jsxref("isNaN")}} 方法）比解决相关计算如何影响零的符号更为简单。
 
 这是一个不全面的列表，其中包含可能导致你的代码中出现 `-0` 和 `+0` 之间差异的内置方法和运算符：
 
@@ -196,7 +196,7 @@ function sameValueZero(x, y) {
 
 - {{jsxref("Math.atan2")}}、{{jsxref("Math.ceil")}}、{{jsxref("Math.pow")}}、{{jsxref("Math.round")}}
 
-  - : 在某些情况下，即使没有 `-0` 作为参数之一，这些方法的返回值仍可能作为表达式中的 `-0` 被引入。例如，使用 `Math.pow` 将 `-Infinity` 的任何负奇数次幂求值为 `-0`。请参阅各个方法的文档。
+  - : 在某些情况下，即使没有 `-0` 作为参数之一，这些方法的返回值仍可能作为表达式中的 `-0` 被引入。例如，使用 `Math.pow` 将 {{jsxref("Infinity", "-Infinity")}} 的任何负奇数次幂求值为 `-0`。请参阅各个方法的文档。
 
 - {{jsxref("Math.floor")}}、{{jsxref("Math.max")}}、{{jsxref("Math.min")}}、{{jsxref("Math.sin")}}、{{jsxref("Math.sqrt")}}、{{jsxref("Math.tan")}}
 
