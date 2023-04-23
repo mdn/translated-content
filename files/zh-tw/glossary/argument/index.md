@@ -9,7 +9,7 @@ slug: Glossary/Argument
 
 ### 基礎知識
 
-- [Difference between Parameter and Argument](https://zh.wikipedia.org/wiki/Parameter_(computer_programming)) on Wikipedia
+- [Difference between Parameter and Argument](<https://zh.wikipedia.org/wiki/Parameter_(computer_programming)>) on Wikipedia
 
 ### 技術參考
 
