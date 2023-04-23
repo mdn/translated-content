@@ -4721,7 +4721,13 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycles	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystems	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/timeZones	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
