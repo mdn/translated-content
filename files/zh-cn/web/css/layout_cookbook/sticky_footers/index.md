@@ -1,6 +1,6 @@
 ---
-title：粘性页脚
-slug：Web/CSS/Layout_cookbook/Sticky_footers
+title: 粘性页脚
+slug: Web/CSS/Layout_cookbook/Sticky_footers
 ---
 
 {{CSSRef}}
