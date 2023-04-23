@@ -1,5 +1,5 @@
 ---
-title: "Array: length"
+title: Array：length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 
@@ -58,7 +58,7 @@ arr.forEach(element => console.log(element));
 // 2
 ```
 
-另请参阅：[`length`与数值属性的关系](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度与数值属性的关系)。
+另请参阅：[`length` 与数值属性的关系](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度与数值属性的关系)。
 
 ## 示例
 
@@ -126,6 +126,6 @@ numbers.push(5); // // TypeError: Cannot assign to read only property 'length' o
 
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
-- [`TypedArray`: `length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
+- [`TypedArray`：`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
 - [`String`: `length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)
 - [RangeError: invalid array length](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
