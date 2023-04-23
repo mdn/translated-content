@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 **`reverse()`** 方法将反转数组中元素的[_位置_](https://en.wikipedia.org/wiki/In-place_algorithm)，并返回该数组。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。换句话说，数组中的元素顺序将转向与前面所述相反的方向。
 
-要在不改变原始数组的情况下反转数组中的元素，使用 {{jsxref(" array /toReversed"， "toReversed()")}}。
+要在不改变原始数组的情况下反转数组中的元素，使用 {{jsxref("Array/toReversed", "toReversed()")}}。
 
 {{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 
