@@ -24,8 +24,8 @@ slug: Web/CSS/:focus
 ### HTML
 
 ```html
-<div><input class="red-input" value="当被获得焦点时我将呈现红色。" /></div>
-<div><input class="blue-input" value="当被获得焦点时我将呈现蓝色。" /></div>
+<div><input class="red-input" value="当获得焦点时我将呈现红色。" /></div>
+<div><input class="blue-input" value="当获得焦点时我将呈现蓝色。" /></div>
 ```
 
 ### CSS
@@ -48,15 +48,15 @@ slug: Web/CSS/:focus
 
 ## 无障碍考虑
 
-请确保视力不佳的人可以看到视觉焦点指示器。这也将有利于任何在明亮空间（如室外阳光下）使用屏幕的人。 [WCAG 2.1 SC 1.4.11 非文本对比度](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) 要求视觉焦点指示符至少为 3 比 1。
+请确保视力不佳的人可以看到视觉焦点指示器。这也将有利于任何在明亮空间（如室外阳光下）使用屏幕的人。[WCAG 2.1 SC 1.4.11 非文本对比度](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) 要求视觉焦点指示符的对比度至少为 3 比 1。
 
 - 无障碍的视觉焦点指示：[让你的网站更具焦点！设计有用且可用的焦点指示器的技巧](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
 ### `:focus { outline: none; }`
 
-永远不要为了仅移除焦点轮廓（可见的焦点指示），而不替换为符合 [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) 非文本对比度标准的焦点轮廓。
+永远不要为了仅移除焦点轮廓（可见的焦点指示），而不替换为符合 [WCAG 2.1 SC 1.4.11 非文本对比度](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)标准的焦点轮廓。
 
-- 快速提示：[永远不要移除 CSS 轮廓](https://www.a11yproject.com/posts/never-remove-css-outlines/)
+- 小建议：[永远不要移除 CSS 轮廓](https://www.a11yproject.com/posts/never-remove-css-outlines/)
 
 ## 规范
 
