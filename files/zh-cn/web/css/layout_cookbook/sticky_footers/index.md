@@ -16,7 +16,16 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 - 当内容不足以填满视口时，页脚粘附在视口底部。
 - 如果页面内容超过视口底部，页脚会正常地位于内容下方。
 
-## 教程
+## 实践指南
+
+{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
+
+> **提示：**
+>
+> [下载此示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html)
+> **注意：** 在这个示例和接下来的示例中，我们使用一个设置为 `min-height: 100%` 的 wrapper，以便我们的实时示例工作。你也可以通过在 {{htmlelement("body")}} 上设置 {{cssxref("min-height")}} 为 `100vh`，然后将其用作网格容器来实现全页面的效果。
+
+## 做出选择
 
 粘性页脚的两种方法之一是使用 CSS Grid Layout。`.wrapper` 的最小高度为 `100%`，这意味着它与所在的容器一样高。然后我们创建一个单列网格布局，包含三行，每个布局部分占一行。
 
