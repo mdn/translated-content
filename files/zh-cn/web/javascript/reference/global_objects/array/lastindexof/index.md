@@ -36,7 +36,7 @@ lastIndexOf(searchElement, fromIndex)
 
 `lastIndexOf` 使用[严格相等](zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===` 运算符使用的算法相同）比较 `searchElement` 和数组中的元素。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值不 `===` 任何值，因此当 `searchElement` 为 `NaN` 时 `lastIndexOf()` 总是返回 `-1`。
 
-`lastIndexOf()` 方法跳过[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽。
+`lastIndexOf()` 方法会跳过[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽。
 
 `lastIndexOf()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
@@ -83,9 +83,6 @@ console.log(indices);
 
 需要注意的是，这里必须单独处理 `idx === 0` 的情况，因为如果该元素是数组的第一个元素，则无论 `fromIndex` 参数的值为何，它总是会被找到。这与 {{jsxref("Array.prototype.indexOf", "indexOf")}} 方法不同。
 
-译注：原英文是针对使用三元操作符语句的作用进行说明的：
-`idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);`
-`idx > 0`时，才进入 lastIndexOf 由后往前移一位进行倒查找；如果`idx == 0`则直接设置`idx = -1`，循环`while (idx != -1)`就结束了。
 
 ### 在稀疏数组上使用 lastIndexOf()
 
