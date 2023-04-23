@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/length
 
 {{JSRef}}
 
-**`length`** 是 `Array` 的实例属性，表示该数组中元素的个数。该值是一个无符号 32 位整数，并且其数值总是大于数组最大下标。
+**`length`** 是 `Array` 的实例属性，表示该数组中元素的个数。该值是一个无符号 32 位整数，并且其数值总是大于数组最大索引。
 
 {{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
 
@@ -29,7 +29,7 @@ console.log(listA.length);
 console.log(listB.length);
 // 6
 
-listB.length = 2 ** 32; // 2 的 32 次方 = 4294967296
+listB.length = 2 ** 32; // 4294967296
 // RangeError: Invalid array length
 
 const listC = new Array(-100) // 负数是不允许的
@@ -103,7 +103,7 @@ console.log(numbers); // [empty x 3]
 
 ### 长度不可写的数组
 
-当添加的元素超过当前长度时，数组会自动更新 `length` 属性。如果 `length` 属性设置为不可写，则数组将无法更新它。这会导致[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)错误。
+当添加的元素超过当前长度时，数组会自动更新 `length` 属性。如果 `length` 属性设置为不可写，则数组将无法更新它。在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中这会导致错误。
 
 ```js
 "use strict";
