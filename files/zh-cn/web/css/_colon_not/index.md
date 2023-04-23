@@ -40,12 +40,12 @@ slug: Web/CSS/:not
 #### HTML
 
 ```html
-<p>I am a paragraph.</p>
-<p class="fancy">I am so very fancy!</p>
-<div>I am NOT a paragraph.</div>
+<p>我是一个段落。</p>
+<p class="fancy">我非常非常喜欢！</p>
+<div>我不是一个段落。</div>
 <h2>
-  <span class="foo">foo inside h2</span>
-  <span class="bar">bar inside h2</span>
+  <span class="foo">foo 在 h2 里面</span>
+  <span class="bar">bar 在 h2 里面</span>
 </h2>
 ```
 
