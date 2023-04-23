@@ -1,5 +1,5 @@
 ---
-title: ':is()'
+title: ":is()"
 slug: Web/CSS/:is
 ---
 
@@ -15,7 +15,7 @@ slug: Web/CSS/:is
 
 ### :is() 和 :where() 的区别
 
-两者之间的区别在于，`:is()` 会计入整个选择器的优先级（它采用其最具体参数的优先级），而 [`:where()`](/zh-CN/docs/Web/CSS/:where) 的优先级为 0。这可以通过 [`:where()` 参考页面上的示例](/zh-CN/docs/Web/CSS/:where#examples)来演示。
+两者之间的区别在于，`:is()` 会计入整个选择器的优先级（它采用其最具体参数的优先级），而 [`:where()`](/zh-CN/docs/Web/CSS/:where) 的优先级为 0。这可以通过 [`:where()` 参考页面上的示例](/zh-CN/docs/Web/CSS/:where#示例)来演示。
 
 ### 可容错选择器解析
 
@@ -214,6 +214,6 @@ some-element::after {
 
 ## 参见
 
-- {{CSSxRef(":where", ":where()")}} - 类似于 `:is()`，但是其[优先级](/zh-CN/docs/Web/CSS/Specificity)为 0。
+- {{CSSxRef(":where", ":where()")}}——类似于 `:is()`，但是其[优先级](/zh-CN/docs/Web/CSS/Specificity)为 0。
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [Web component](/zh-CN/docs/Web/API/Web_components)
+- [Web 组件](/zh-CN/docs/Web/API/Web_components)
