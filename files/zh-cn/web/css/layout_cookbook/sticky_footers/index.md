@@ -1,7 +1,9 @@
 ---
-title：粘性页脚
-slug：Web/CSS/Layout_cookbook/Sticky_footers
+title: 粘性页脚
+slug: Web/CSS/Layout_cookbook/Sticky_footers
 ---
+
+{{CSSRef}}
 
 粘性页脚模式是指当页面内容不足以填满视口高度时，页脚会“粘附”在视口底部的一种模式。在本教程中，我们将介绍创建粘性页脚的几种技术。
 
