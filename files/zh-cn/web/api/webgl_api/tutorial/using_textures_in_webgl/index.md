@@ -139,8 +139,8 @@ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 
 ## 映射纹理到面
 
-现在，纹理已加载并准备就绪。这将取代`initBuffers()`中为设置每个立方体面颜色而存在的所有先前代码。
-添加这个函数到"init-buffer.js"模块：
+现在，纹理已加载并准备就绪。这将取代 `initBuffers()` 中为设置每个立方体面颜色而存在的所有先前代码。
+添加这个函数到“init-buffer.js”模块：
 
 ```js
 
@@ -283,10 +283,10 @@ const programInfo = {
 > **备注：** 在“draw-scene.js”模块的 `drawScene()` 函数中添加以下函数：
 
 ```js
-// 告诉WebGL如何从缓冲区中提取纹理坐标
+// 告诉 WebGL 如何从缓冲区中提取纹理坐标
 function setTextureAttribute(gl, buffers, programInfo) {
-  const num = 2; // 每个坐标由2个值组成
-  const type = gl.FLOAT; // 缓冲区中的数据为32位浮点数
+  const num = 2; // 每个坐标由 2 个值组成
+  const type = gl.FLOAT; // 缓冲区中的数据为 32 位浮点数
   const normalize = false; // 不做标准化处理
   const stride = 0; // 从一个坐标到下一个坐标要获取多少字节
   const offset = 0; // 从缓冲区内的第几个字节开始获取数据
