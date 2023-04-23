@@ -1,56 +1,54 @@
 ---
 title: Array.prototype.toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.toSorted
 ---
 
 {{JSRef}}
 
-The **`toSorted()`** method of an {{jsxref("Array")}} instance is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("Array/sort", "sort()")}} method. It returns a new array with the elements sorted in ascending order.
+{{jsxref("Array")}} 实例的 **`toSorted()`** 方法是 {{jsxref("Array/sort", "sort()")}} 方法的[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)版本。它返回一个新数组，其元素按升序排列。
 
-## Syntax
+## 语法
 
 ```js-nolint
-// Functionless
+// 不传入函数
 toSorted()
 
-// Arrow function
+// 传入箭头函数
 toSorted((a, b) => { /* … */ })
 
-// Compare function
+// 传入比较函数
 toSorted(compareFn)
 
-// Inline compare function
+// 內联比较函数
 toSorted(function compareFn(a, b) { /* … */ })
 ```
 
-### Parameters
+### 参数
 
 - `compareFn` {{optional_inline}}
 
-  - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+  - : 指定一个定义排序顺序的函数。如果省略，则将数组元素转换为字符串，然后根据每个字符的 Unicode 码点值进行排序。
 
     - `a`
-      - : The first element for comparison.
+      - : 用于比较的第一个元素。
     - `b`
-      - : The second element for comparison.
+      - : 用于比较的第二个元素。
 
-### Return value
+### 返回值
 
-A new array with the elements sorted in ascending order.
+一个新数组，其元素按升序排序。
 
-## Description
+## 描述
 
-See {{jsxref("Array/sort", "sort()")}} for more information on the `compareFn` parameter.
+有关 `compareFn` 参数的更多信息，请参阅 {{jsxref("Array/sort", "sort()")}}。
 
-When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `toSorted()` method iterates empty slots as if they have the value `undefined`.
+当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用 `toSorted()` 方法时，它迭代时会将空槽视为具有值 `undefined` 的元素。
 
-The `toSorted()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+`toSorted()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)，它只期望 `this` 值具有 `length` 属性和整数键属性。
 
-## Examples
+## 示例
 
-### Sorting an array
+### 对数组进行排序
 
 ```js
 const months = ["Mar", "Jan", "Feb", "Dec"];
@@ -64,20 +62,20 @@ console.log(sortedValues); // [1, 2, 10, 21]
 console.log(values); // [1, 10, 21, 2]
 ```
 
-For more usage examples, see {{jsxref("Array/sort", "sort()")}}.
+有关更多用法示例，请参见 {{jsxref("Array/sort", "sort()")}}。
 
-### Using toSorted() on sparse arrays
+### 在稀疏数组上使用 toSorted()
 
-Empty slots are sorted as if they have the value `undefined`. They are always sorted to the end of the array and `compareFn` is not called for them.
+空槽被视为具有值 `undefined` 而参加排序。它们总是排序到数组的末尾，并且 `compareFn` 不会对它们进行调用。
 
 ```js
 console.log(["a", "c", , "b"].toSorted()); // ['a', 'b', 'c', undefined]
 console.log([, undefined, "a", "b"].toSorted()); // ["a", "b", undefined, undefined]
 ```
 
-### Calling toSorted() on non-array objects
+### 在非数组对象上调用 toSorted()
 
-The `toSorted()` method reads the `length` property of `this`. It then collects all existing integer-keyed properties in the range of `0` to `length - 1`, sorts them, and writes them into a new array.
+`toSorted()` 方法会读取 `this` 的 `length` 属性。然后它会收集所有在 `0` 到 `length - 1` 范围内的整数键属性，对它们进行排序并将它们写入一个新的数组中。
 
 ```js
 const arrayLike = {
@@ -90,17 +88,17 @@ console.log(Array.prototype.toSorted.call(arrayLike));
 // [4, 5, undefined]
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Polyfill of `Array.prototype.toSorted` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`core-js` 中 `Array.prototype.with` 的 polyfill](https://github.com/zloirock/core-js#change-array-by-copy)
 - {{jsxref("Array.prototype.sort()")}}
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
