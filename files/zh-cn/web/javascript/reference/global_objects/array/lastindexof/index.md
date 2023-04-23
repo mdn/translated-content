@@ -23,7 +23,7 @@ lastIndexOf(searchElement, fromIndex)
 - `searchElement`
   - : 被查找的元素。
 - `fromIndex` {{optional_inline}}
-  - 以 0 起始的索引，表明反向搜索的起始位置，[会被转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+  - : 以 0 起始的索引，表明反向搜索的起始位置，[会被转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
     - 如果 `fromIndex < 0`，则从数组末尾开始倒数计数——即使用 `fromIndex + array.length` 的值。
     - 如果 `fromIndex < -array.length`，则不搜索数组并返回 `-1`。从概念上讲，你可以把它想象成从数组开始之前不存在的位置开始反向搜索，这条路径上没有任何数组元素，因此 `searchElement` 永远不会被找到。
     - 如果 `fromIndex >= array.length` 或者省略了 `fromIndex`，则使用 `array.length - 1`，这会导致搜索整个数组。可以将其理解为从数组尾部之后不存在的位置开始向前搜索。最终会访问到数组最后一个元素，并继续向前开始实际搜索数组元素。
