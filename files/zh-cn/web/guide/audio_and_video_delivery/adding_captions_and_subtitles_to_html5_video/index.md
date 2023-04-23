@@ -1,6 +1,7 @@
 ---
 title: 向 HTML 视频中添加字幕
-slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+slug: >-
+  Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Guide/Audio_and_video_delivery")}}
@@ -50,18 +51,18 @@ HTML 允许我们使用 {{ htmlelement("track") }} 元素来为视频指定字�
   <source src="video/sintel-short.mp4" type="video/mp4" />
   <source src="video/sintel-short.webm" type="video/webm" />
   <track
-    label="英语"
+    label="English"
     kind="subtitles"
     srclang="en"
     src="captions/vtt/sintel-en.vtt"
     default />
   <track
-    label="德语"
+    label="Deutsch"
     kind="subtitles"
     srclang="de"
     src="captions/vtt/sintel-de.vtt" />
   <track
-    label="西班牙语"
+    label="Español"
     kind="subtitles"
     srclang="es"
     src="captions/vtt/sintel-es.vtt" />
@@ -71,7 +72,7 @@ HTML 允许我们使用 {{ htmlelement("track") }} 元素来为视频指定字�
 正如你所看到的，每个 `<track>` 元素都有以下属性设置：
 
 - `kind` 的值为 `subtitles`，表示文件包含的内容类型。
-- `label` 的值表示该字幕是哪种语言，例如 `英语` 或 `德语`。这些标签将出现在用户界面上，让用户轻松选择他们想看的字幕语言。
+- `label` 的值表示该字幕是哪种语言，例如 `English` 或 `Deutsch`。这些标签将出现在用户界面上，让用户轻松选择他们想看的字幕语言。
 - `src` 的值为一个有效的 URL，指向相关的 WebVTT 字幕文件。
 - `srclang` 表示每个字幕文件的内容是什么语言。
 - `default` 属性被设置在携带英语字幕的 `<track>` 元素上，向浏览器表明这是默认的字幕文件定义，当字幕被打开而用户没有做出具体选择时使用。
