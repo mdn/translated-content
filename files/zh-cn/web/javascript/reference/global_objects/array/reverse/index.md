@@ -87,7 +87,7 @@ const arrayLike = {
 };
 console.log(Array.prototype.reverse.call(arrayLike));
 // { '0': 4, length: 3, unrelated: 'foo' }
-// 索引 “2” 被删除了，因为原本的数据中索引 “0” 不存在。
+// 索引“2”被删除了，因为原本的数据中索引“0”不存在。
 ```
 
 ## 规范
