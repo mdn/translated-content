@@ -5,7 +5,7 @@ slug: Web/CSS/:nth-of-type
 
 {{CSSRef}}
 
-**`:nth-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes)基于相同类型（标签名称）的兄弟元素中的位置来匹配元素。
+**`:nth-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于相同类型（标签名称）的兄弟元素中的位置来匹配元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
 
