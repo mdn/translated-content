@@ -73,7 +73,7 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 | Inglés         | Español            |
 |----------------|--------------------|
 | `**Note:**`    | `**Nota:**`        |
-| `**Warning:**` | `**Advertencia**`  |
+| `**Warning:**` | `**Advertencia:**`  |
 | `**Callout:**` | `**Observación:**` |
 
 ## Formateo
