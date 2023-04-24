@@ -71,7 +71,7 @@ console.log(plainObj);
 
 `push`和`pop`方法是通用的，我们可以利用这一点来编写更灵活的代码--如以下示例所示。
 
-请注意，在此示例中，我们不会创建数组来存储对象集合。 相反，我们将集合存储在对象本身上，并在 `Array.prototype.push` 和 `Array.prototype.pop` 上使用 `call` 来欺骗这些方法，让它们认为我们正在处理一个数组。
+请注意，在此示例中，我们不会创建数组来存储对象集合。相反，我们将集合存储在对象本身上，并在 `Array.prototype.push` 和 `Array.prototype.pop` 上使用 `call` 来欺骗这些方法，让它们认为我们正在处理一个数组。
 
 ```js
 const collection = {
