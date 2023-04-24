@@ -92,7 +92,7 @@ Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Globa
 </header>
 ```
 
-### Résultat
+#### Résultat
 
 {{EmbedLiveSample('','100%', '430')}}
 
