@@ -55,8 +55,7 @@ reversed[0] = 5;
 console.log(numbers[0]); // 5
 ```
 
-如果你希望 `reverse()` 不改变原始数组，但返回一个[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)数组，就像其他数组方法（例如 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)）一样，使用 {{jsxref("Array/toReversed", "toReversed()")}} 方法。或者，你可以在调用 `reverse()` 之前做一个浅拷贝，使用[展开语法
-](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或 [`Array.from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)。
+如果你希望 `reverse()` 不改变原始数组，但返回一个[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)数组，就像其他数组方法（例如 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)）一样，使用 {{jsxref("Array/toReversed", "toReversed()")}} 方法。或者，你可以在调用 `reverse()` 之前做一个浅拷贝，使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或 [`Array.from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)。
 
 ```js
 const numbers = [3, 2, 4, 1, 5];
@@ -77,7 +76,7 @@ console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
 
 ### 对非数组对象调用 reverse()
 
-`reverse()` 方法读取 `this` 的 `length` 属性。然后，它访问 `0` 和 `length / 2` 之间的每个索引，并交换两端对应的两个索引。[deleting](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)属性。
+`reverse()` 方法读取 `this` 的 `length` 属性。然后，它访问 `0` 和 `length / 2` 之间的每个索引，并交换两端对应的两个索引，并在必要时，[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)某些属性。
 
 ```js
 const arrayLike = {
