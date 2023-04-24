@@ -25,7 +25,7 @@ toSpliced(start, deleteCount, item1, item2, itemN)
     - 如果 `start >= array.length`，不会删除任何元素，但该方法将作为一个添加函数，添加所提供的元素数量。
 
 - `deleteCount` {{optional_inline}}
-  
+
   - ：一个整数，指示数组中要从 `start` 删除的元素数量。
 
     如果 `deleteCount` 被省略了，或者如果它的值大于或等于由 `start` 指定的位置后面的元素数，将会删除从 `start` 到数组末尾的所有元素。然而，如果你想传递任何 `itemN` 参数，你应该传递 `Infinity` 作为 `deleteCount` 来删除 `start` 之后的所有元素，因为一个显式的 `undefined` 会[被转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)为 `0`。
@@ -33,7 +33,7 @@ toSpliced(start, deleteCount, item1, item2, itemN)
     如果 `deleteCount` 是 `0` 或者负数，则不会删除元素。在这种情况下，你应该指定至少一个新元素（见下文）。
 
 - `item1`, …, `itemN` {{optional_inline}}
-  
+
   - ：元素将从 `start` 开始添加到数组当中。
 
     如果你没有指定任何元素，`toSpliced()` 只会从数组中删除元素。
