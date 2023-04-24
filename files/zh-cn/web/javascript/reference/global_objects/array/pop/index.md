@@ -21,11 +21,11 @@ pop()
 
 ## 描述
 
-`pop()` 方法从一个数组中删除并返回最后一个元素。
+`pop()` 方法从一个数组中删除并返回最后一个元素给调用者。如果你在空数组上调用 `pop()`，它会返回 {{jsxref("undefined")}}。
 
-{{jsxref("Array.prototype.shift()")}} 和 `pop()` 有一样的行为，但是它是作用在数组的第一个元素上的。
+{{jsxref("Array.prototype.shift()")}} 和 `pop()` 有类似的行为，但是它是作用在数组的第一个元素上的。
 
-`pop()` 方法是有副作用的。其改变了 `this` 的长度和内容。如果你想要 `this` 不变，但是返回一个新的最后一个元素被移除的数组，你可以使用 [`arr.slice(0, -1)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 来代替。
+`pop()` 是修改方法。其改变了 `this` 的长度和内容。如果你想要 `this` 不变，但是返回一个新的最后一个元素被移除的数组，你可以使用 [`arr.slice(0, -1)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 来代替。
 
 `pop()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类数组对象，但是由于其不能被修改，所以 `pop()` 方法并不能应用在字符串上。
 
