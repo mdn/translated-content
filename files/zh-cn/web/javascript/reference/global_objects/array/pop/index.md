@@ -23,7 +23,7 @@ pop()
 
 `pop()` 方法从一个数组中删除并返回最后一个元素。
 
-{{jsxref("Array.prototype.shift()")}} 和 `pop()`有一样的行为, 但是他是作用在数组的第一个元素上的。
+{{jsxref("Array.prototype.shift()")}} 和 `pop()` 有一样的行为，但是它是作用在数组的第一个元素上的。
 
 `pop()`方法是有副作用的。其改变了`this`的长度和内容。如果你想要`this`不变，但是返回一个新的最后一个元素被移除的数组，你可以使用[`arr.slice(0, -1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)来代替。
 
