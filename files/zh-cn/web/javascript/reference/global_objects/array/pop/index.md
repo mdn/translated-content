@@ -47,7 +47,7 @@ console.log(popped); // 'sturgeon'
 
 ### 在非数组对象上调用 pop()
 
-`pop()`方法会读取`this`上的`length`属性。如果[规范化的length属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property)为0，`length`会被再次设置为0（或者之前可能是负数或者`undefined`）。否则，[删除](/en-US/docs/Web/JavaScript/Reference/Operators/delete)并返回`length-1`的属性。
+`pop()` 方法会读取 `this` 上的 `length` 属性。如果[规范化的 length 属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property)为 0，`length`会被再次设置为 0（鉴于之前可能是负数或者 `undefined`）。否则，返回并[删除](/en-US/docs/Web/JavaScript/Reference/Operators/delete)位于 `length-1` 处的属性。
 
 ```js
 const arrayLike = {
