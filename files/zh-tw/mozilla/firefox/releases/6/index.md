@@ -53,7 +53,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - [Server-sent events](/zh-TW/Server-sent_events)
   - : Server-sent events make it possible for a web application to ask a server to send events just like any locally-created DOM event.
 
-#### Other changes
+<!---->
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
 - [`BlobBuilder`](/zh-TW/docs/Web/API/BlobBuilder) is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
