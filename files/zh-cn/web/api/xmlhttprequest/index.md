@@ -84,7 +84,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.getResponseHeader()")}}
   - : 返回包含指定响应头的字符串，如果响应尚未收到或响应中不存在该报头，则返回 `null`。
 - {{domxref("XMLHttpRequest.open()")}}
-  - : 初始化一个请求。该方法只能在 JavaScript 代码中使用，若要在 native code 中初始化请求，请使用 [`openRequest()`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)。
+  - : 初始化一个请求。该方法只能在 JavaScript 代码中使用，若要在 native code 中初始化请求，请使用 [`openRequest()`]。
 - {{domxref("XMLHttpRequest.overrideMimeType()")}}
   - : 覆写由服务器返回的 MIME 类型。
 - {{domxref("XMLHttpRequest.send()")}}
@@ -101,7 +101,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
     > **警告：** 该方法不能在 JavaScript 代码中使用。
 
 - {{domxref("XMLHttpRequest.openRequest()")}}
-  - : 初始化一个请求。这个方法只能在原生 C++ 代码中使用；如果用 JavaScript 代码来初始化请求，使用 [`open()`](</zh-cn/nsIXMLHttpRequest#open()>) 代替。可参考 `open()` 的文档。
+  - : 初始化一个请求。这个方法只能在原生 C++ 代码中使用；如果用 JavaScript 代码来初始化请求，使用 [`open()`] 代替。可参考 `open()` 的文档。
 - {{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}
   - : `send()` 方法的变体，用来发送二进制数据。
 
