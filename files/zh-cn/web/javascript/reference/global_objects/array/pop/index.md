@@ -85,10 +85,9 @@ const collection = {
   },
   removeElement() {
     // 每次移除元素时
-    // obj.length都会自动减少
+    // obj.length 都会自动减少
 
-    // 返回pop方法的返回值
-    // 为被移除的元素
+    // 返回 pop 方法的返回值，即被移除的元素
     return [].pop.call(this);
   },
 };
