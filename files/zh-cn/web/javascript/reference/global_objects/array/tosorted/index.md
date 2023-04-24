@@ -42,7 +42,7 @@ toSorted(function compareFn(a, b) { /* … */ })
 
 有关 `compareFn` 参数的更多信息，请参阅 {{jsxref("Array/sort", "sort()")}}。
 
-当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用 `toSorted()` 方法时，它迭代时会将空槽视为具有值 `undefined` 的元素。
+当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用 `toSorted()` 方法时，它迭代时会将空槽视为具有 `undefined` 值的元素。
 
 `toSorted()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)，它只期望 `this` 值具有 `length` 属性和整数键属性。
 
@@ -66,7 +66,7 @@ console.log(values); // [1, 10, 21, 2]
 
 ### 在稀疏数组上使用 toSorted()
 
-空槽被视为具有值 `undefined` 而参加排序。它们总是排序到数组的末尾，并且 `compareFn` 不会对它们进行调用。
+空槽被视为具有 `undefined` 值而被排序。它们总是排序到数组的末尾，并且 `compareFn` 不会对它们进行调用。
 
 ```js
 console.log(["a", "c", , "b"].toSorted()); // ['a', 'b', 'c', undefined]
