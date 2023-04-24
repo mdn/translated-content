@@ -28,7 +28,7 @@ slug: Web/CSS/:not
 - 可以使用此伪类编写无用的选择器。例如，`:not(*)` 匹配任何不是元素的元素，这显然是荒谬的，所以这个附加的规则将永远不被应用。
 - 可以利用这个伪类提高规则的[优先级](/zh-CN/docs/Web/CSS/Specificity)。例如，`#foo:not(#bar)` 和 `#foo` 都将匹配相同的元素，但是具有两个 `id` 的选择器具有更高的优先级。
 - `:not()` 伪类的优先级将由其逗号分割的参数中优先级最高的选择器指定；提供与 [`:not(:is(argument))`](/zh-CN/docs/Web/CSS/:is) 相同的优先级。
-- `:not(.foo)` 将匹配任何非 `.foo` 的元素，*包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}*。
+- `:not(.foo)` 将匹配任何非 `.foo` 的元素，_包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}_。
 - 这个选择器将匹配任意“不是一个 X”的元素。当与[后代选择器](/zh-CN/docs/Web/CSS/Descendant_combinator)一起使用，这可能令人惊讶，因为有多种路径可以选择一个目标元素。例如，`body :not(table) a` 仍将应用 {{HTMLElement("table")}} 中的链接，因为 {{HTMLElement("tr")}}、{{HTMLElement("tbody")}}、{{HTMLElement("th")}}、{{HTMLElement("td")}}、{{HTMLElement("caption")}} 等都可以匹配选择器 `:not(table)` 部分。
 - 你可以同时否定多个选择器。例如：`:not(.foo, .bar)` 等同于 `:not(.foo):not(.bar)`。
 - 如果传递给 `:not()` 伪类的选择器无效或者浏览器不支持，则整个规则都将是无效的。克服这种行为的有效方式是使用：[`:is`](/zh-CN/docs/Web/CSS/:is) 伪类，它接受一个可容错选择器列表。例如 `:not(.foo, :invalid-pseudo-class)` 将使整个规则无效，但是 `:not(:is(.foo, :invalid-pseudo-class))` 将匹配任何（*包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}*）不是 `.foo` 的元素。
