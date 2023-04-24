@@ -61,7 +61,7 @@ console.log(arrayLike);
 // { length: 2, unrelated: 'foo' }
 
 const plainObj = {};
-// 没有length属性，所以长度为0
+// 没有 length 属性，所以长度为 0
 Array.prototype.pop.call(plainObj);
 console.log(plainObj);
 // { length: 0 }
