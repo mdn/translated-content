@@ -31,7 +31,7 @@ var myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```
-> **Note :** Il y a une autre façon d'arrêter le <i lang="en">worker</i> depuis le <i lang="en">worker</i> lui-même&nbsp;: la méthode [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close).
+> **Note:** Les workers dédiés ou partagés peuvent également être stoppés par l'instance du {{domxref("Worker")}} lui même en utilisant les méthodes [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close) ou {{domxref("SharedWorkerGlobalScope.close()")}}.
 
 ## Spécifications
 
@@ -43,6 +43,7 @@ myWorker.terminate();
 
 ## Voir aussi
 
-- L'interface [`Worker`](/fr/docs/Web/API/Worker) à laquelle elle appartient.
-- La méthode [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close) de l'instance du <i lang="en">worker</i>.
+- L'interface [`Worker`](/fr/docs/Web/API/Worker)
+- [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close)
+- {{domxref("SharedWorkerGlobalScope.close()")}}
 
