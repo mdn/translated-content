@@ -17,15 +17,15 @@ shift()
 
 ### 返回值
 
-从数组中删除的元素; 如果数组为空则返回 {{jsxref("undefined")}}。
+从数组中删除的元素；如果数组为空则返回 {{jsxref("undefined")}}。
 
 ## 描述
 
-`shift` 方法移除索引为 0 的元素，并返回被移除的元素，连续索引处的值向下移动。如果 {{jsxref("Array.length", "length")}} 属性的值为 0，则返回 {{jsxref("undefined")}}。
+`shift` 方法移除索引为 0 的元素，并将后续元素的下标依次向前移动，然后返回被移除的元素。如果 {{jsxref("Array.length", "length")}} 属性的值为 0，则返回 {{jsxref("undefined")}}。
 
-{{jsxref("Array/pop", "pop()")}} 方法有着和 `shift()` 相似的行为。但是是作用到数组的最后一个元素上的。
+{{jsxref("Array/pop", "pop()")}} 方法有着和 `shift()` 相似的行为。但是是作用于数组的最后一个元素上的。
 
-`shift()` 方法是一个改变方法。它改变了 `this` 的内容和长度。如果你希望 `this` 的值相同，但返回一个删除第一个元素的新数组，你可以使用 [`arr.slice(1)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 来代替。
+`shift()` 方法是一个改变方法。它改变了 `this` 的内容和长度。如果你希望保持 `this` 的值不变，但返回一个删除了第一个元素的新数组，你可以使用 [`arr.slice(1)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)。
 
 `shift()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这个方法不适合应用于它们，因为字符串是不可变的。
 
@@ -39,20 +39,20 @@ shift()
 const myFish = ["angel", "clown", "mandarin", "surgeon"];
 
 console.log("myFish before:", JSON.stringify(myFish));
-// myFish 之前：['angel', 'clown', 'mandarin', 'surgeon']
+// myFish before:['angel', 'clown', 'mandarin', 'surgeon']
 
 const shifted = myFish.shift();
 
 console.log("myFish after:", myFish);
-// myFish 之后：['clown', 'mandarin', 'surgeon']
+// myFish after:['clown', 'mandarin', 'surgeon']
 
 console.log("Removed this element:", shifted);
-// 被删除的元素：angel
+// Removed this element: angel
 ```
 
 ### 在 while 循环中使用 shift()
 
-shift() 方法经常用于 while 循环的环境中。下例中每个循环将要从一个数组中移除下一项元素，直至它成为空数组。
+shift() 方法经常用于 while 循环的条件中。下例中每次迭代都会从一个数组中移除下一项元素，直至它成为空数组。
 
 ```js
 const names = ["Andrew", "Tyrone", "Paul", "Maria", "Gayatri"];
@@ -65,7 +65,7 @@ while (typeof (i = names.shift()) !== "undefined") {
 
 ### 在非数组对象上调用 shift()
 
-`shift` 方法会读取 `this` 的 `length` 属性。如果[规范化长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度属性的规范化)为 0，`length` 再次设置为 `0` （而之前可能为负值或 `undefined`）。否则，返回 `0` 处的属性，其余属性向左移动 1。`length` 属性递减 1。
+`shift` 方法会读取 `this` 的 `length` 属性。如果[规范化长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度属性的规范化)为 0，`length` 再次设置为 `0`（而之前可能为负值或 `undefined`）。否则，返回 `0` 处的属性，其余属性向左移动 1。`length` 属性递减 1。
 
 ```js
 const arrayLike = {
@@ -74,7 +74,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(Array.prototype.shift.call(arrayLike));
-// undefined, because it is an empty slot
+// undefined, 因为它是一个空槽
 console.log(arrayLike);
 // { '1': 4, length: 2, unrelated: 'foo' }
 
