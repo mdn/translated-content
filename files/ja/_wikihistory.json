@@ -1721,10 +1721,6 @@
     "modified": "2019-03-18T20:53:07.838Z",
     "contributors": ["mfuji09"]
   },
-  "Glossary/Scrollport": {
-    "modified": "2019-03-18T20:53:07.981Z",
-    "contributors": ["mfuji09"]
-  },
   "Glossary/Search_engine": {
     "modified": "2020-03-16T11:09:26.150Z",
     "contributors": ["Uemmra3"]
@@ -30597,6 +30593,10 @@
   "WebAssembly/existing_C_to_wasm": {
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
+  },
+  "conflicting/Glossary/Scroll_container": {
+    "modified": "2019-03-18T20:53:07.981Z",
+    "contributors": ["mfuji09"]
   },
   "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-06T14:17:48.495Z",
