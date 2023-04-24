@@ -20,11 +20,11 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
 
-> **提示：**
+> **标注：**
 >
 > [下载此示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html)
 
-> **注意：** 在这个示例和接下来的示例中，我们使用一个设置为 `min-height: 100%` 的 wrapper，以便我们的实时示例工作。你也可以通过在 {{htmlelement("body")}} 上设置 {{cssxref("min-height")}} 为 `100vh`，然后将其用作网格容器来实现全页面的效果。
+> **备注：** 在这个示例和接下来的示例中，我们使用一个设置为 `min-height: 100%` 的 wrapper，以便我们的实时示例工作。你也可以通过在 {{htmlelement("body")}} 上设置 {{cssxref("min-height")}} 为 `100vh`，然后将其用作网格容器来实现全页面的效果。
 
 ## 做出的选择
 
@@ -38,7 +38,7 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer-flexbox.html", '100%', 720)}}
 
-弹性盒子示例与前一个示例相似，但我们在 `.wrapper` 上使用 `display:flex` 而不是 `display:grid`；我们还将 `flex-direction` 设置为 `column`。接着，我们将主要内容设置为 `flex-grow: 1`，将其他两个元素设置为 `flex-shrink: 0`——这可以防止当内容填充主区域时，它们缩小。
+弹性盒子示例与前一个示例相似，但我们在 `.wrapper` 上使用 `display:flex` 而不是 `display:grid`；我们还将 `flex-direction` 设置为 `column`。接着，我们将主要内容设置为 `flex-grow: 1`，将其他两个元素设置为 `flex-shrink: 0`——当内容填充主区域时，这可以防止它们缩小。
 
 ## 浏览器兼容性
 
