@@ -78,10 +78,9 @@ const collection = {
   length: 0,
   addElements(...elements) {
     // 每次添加元素时
-    // obj.length都会自动增加
+    // obj.length 都会自动增加
 
-    // 返回push方法的返回值
-    // 为length属性的新值
+    // 返回 push 方法的返回值，即 length 属性的新值
     return [].push.call(this, ...elements);
   },
   removeElement() {
