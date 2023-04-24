@@ -27,7 +27,7 @@ pop()
 
 `pop()` 方法是有副作用的。其改变了 `this` 的长度和内容。如果你想要 `this` 不变，但是返回一个新的最后一个元素被移除的数组，你可以使用 [`arr.slice(0, -1)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 来代替。
 
-`pop()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类数组对象，但是由于其不能被修改，所以 `pop()` 方法并不能应用在字符串上。
+`pop()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类数组对象，但是由于其不能被修改，所以 `pop()` 方法并不能应用在字符串上。
 
 ## 示例
 
