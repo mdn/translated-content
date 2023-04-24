@@ -15,8 +15,8 @@ Web 性能就是让网站变得更快，以及让缓慢过程*看起来*更快�
         基本计算机素养、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >基本软件已安装</a
-        >，以及
-        <a href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+        >，以及<a
+        href="/zh-CN/docs/Learn/Getting_started_with_the_web"
           >客户端网络技术</a
         >的基本知识。
       </td>
