@@ -124,9 +124,9 @@ const numFiles = files.length;
 </html>
 ```
 
-## 通过 click() 方法使用隐藏的 file input 元素
+## 通过 click() 方法使用隐藏的文件 input 元素
 
-你可以隐藏公认难看的 file {{ HTMLElement("input") }} 元素并显示你自己的界面来打开文件选择器，然后显示哪个或哪些文件被用户选中了。你可以通过给 input 元素添加 `display:none` 的样式，再调用 {{HTMLElement("input")}} 元素的 {{DOMxRef("HTMLElement.click","click()")}} 方法来实现。
+你可以隐藏公认难看的文件 {{HTMLElement("input")}} 元素并显示你自己的界面来打开文件选择器，然后显示哪个或哪些文件被用户选中了。你可以通过给 input 元素添加 `display:none` 的样式，再调用 {{HTMLElement("input")}} 元素的 {{DOMxRef("HTMLElement.click","click()")}} 方法来实现。
 
 考虑这段 HTML：
 
@@ -159,7 +159,7 @@ fileSelect.addEventListener(
 
 你可以给这个用来打开文件选择器的 {{HTMLElement("button")}} 元素添加任何你想要的样式。
 
-## 使用 label 元素来触发一个隐藏的 file input 元素
+## 使用 label 元素来触发一个隐藏的文件 input 元素
 
 为了允许在不使用 JavaScript（click() 方法）的情况下打开文件选择器，可以使用 {{HTMLElement("label")}} 元素。注意，在这种情况下，input 元素不能用 `display: none` 来隐藏（也不能用 `visibility: hidden`），否则标签就不具有键盘无障碍性。请使用 [visually-hidden 技术](https://www.a11yproject.com/posts/how-to-hide-content/)代替。
 
