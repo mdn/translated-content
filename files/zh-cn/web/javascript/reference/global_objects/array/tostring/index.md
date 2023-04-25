@@ -72,7 +72,7 @@ console.log(Array.prototype.toString.call({ join: "not function" }));
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
