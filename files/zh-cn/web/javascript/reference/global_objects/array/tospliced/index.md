@@ -59,19 +59,19 @@ toSpliced(start, deleteCount, item1, item2, itemN)
 ```js
 const months = ["Jan", "Mar", "Apr", "May"];
 
-// 在索引 1 处添加一个元素。
+// 在索引 1 处添加一个元素
 const months2 = months.toSpliced(1, 0, "Feb");
 console.log(months2); // ["Jan", "Feb", "Mar", "Apr", "May"]
 
-// 从第 2 个索引开始删除两个元素。
+// 从第 2 个索引开始删除两个元素
 const months3 = months2.toSpliced(2, 2);
 console.log(months3); // ["Jan", "Feb", "May"]
 
-// 在索引 1 处用两个新元素替换一个元素。
+// 在索引 1 处用两个新元素替换一个元素
 const months4 = months3.toSpliced(1, 1, "Feb", "Mar");
 console.log(months4); // ["Jan", "Feb", "Mar", "May"]
 
-// 原始数据不会被修改。
+// 原始数据不会被修改
 console.log(months); // ["Jan", "Mar", "Apr", "May"]
 ```
 
