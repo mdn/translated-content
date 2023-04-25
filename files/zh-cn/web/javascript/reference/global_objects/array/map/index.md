@@ -185,7 +185,7 @@ const returnInt = (element) => parseInt(element, 10);
 // 与上面相同，但使用简洁的箭头函数语法
 ["1", "2", "3"].map((str) => parseInt(str)); // [1, 2, 3]
 
-// A simpler way to achieve the above, while avoiding the "gotcha":
+// 实现上述目标更简单的方法，同时避免了“骗招”：
 ["1", "2", "3"].map(Number); // [1, 2, 3]
 
 // 但与 parseInt() 不同，Number() 还会返回一个浮点数或（解析）指数表示法：
