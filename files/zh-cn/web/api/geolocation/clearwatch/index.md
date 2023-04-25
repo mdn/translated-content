@@ -5,7 +5,7 @@ slug: Web/API/Geolocation/clearWatch
 
 {{ APIref("Geolocation API") }}
 
-**`Geolocation.clearWatch()`** 这个方法主要用于使用 {{domxref("Geolocation.watchPosition()")}} 注册的位置监听器或错误监听器。
+**`Geolocation.clearWatch()`** 这个方法主要用于注销之前使用 {{domxref("Geolocation.watchPosition()")}} 注册的位置监听器或错误监听器。
 
 ## 语法
 
