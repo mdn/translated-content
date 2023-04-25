@@ -1,5 +1,5 @@
 ---
-title: Fetch basic concepts
+title: Fetch 기본 개념
 slug: Web/API/Fetch_API/Basic_concepts
 l10n:
   sourceCommit: 4c6b993ad0d43bc679688a3488e13a4ec0b2c3ec
