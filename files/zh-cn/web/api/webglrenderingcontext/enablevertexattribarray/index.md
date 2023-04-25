@@ -26,7 +26,7 @@ void gl.enableVertexAttribArray(index);
 
 ### 返回值
 
-None ({{jsxref("undefined")}}).
+无（{{jsxref("undefined")}}）。
 
 ### 错误
 
