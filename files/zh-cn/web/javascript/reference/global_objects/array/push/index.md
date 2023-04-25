@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/push
 
 {{JSRef}}
 
-**`push()`** 方法将指定的元素添加到数组的末尾，并返回数组的新长度。
+**`push()`** 方法将指定的元素添加到数组的末尾，并返回新的数组长度。
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}
 
