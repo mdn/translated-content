@@ -74,7 +74,7 @@ const arrayLike = {
   2: 4,
 };
 console.log(Array.prototype.shift.call(arrayLike));
-// undefined, 因为它是一个空槽
+// undefined，因为它是一个空槽
 console.log(arrayLike);
 // { '1': 4, length: 2, unrelated: 'foo' }
 
