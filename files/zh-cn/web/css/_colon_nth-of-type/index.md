@@ -13,7 +13,7 @@ slug: Web/CSS/:nth-of-type
 
 `nth-of-type` 伪类用单个参数指定，该参数表示匹配元素的模式。
 
-有关其语法的更详细说明，请参阅 {{Cssxref(":nth-child")}}。
+有关其语法的详细说明，请参阅 {{Cssxref(":nth-child")}}。
 
 ```css-nolint
 :nth-of-type(<an-plus-b> | even | odd) {
