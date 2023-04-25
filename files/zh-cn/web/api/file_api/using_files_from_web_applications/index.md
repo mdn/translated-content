@@ -15,7 +15,7 @@ slug: Web/API/File_API/Using_files_from_web_applications
 <input type="file" id="input" multiple />
 ```
 
-通过文件 API，我们可以访问 {{DOMxRef("FileList")}}，它包含了表示用户所选文件的 {{DOMxRef("File")}} 对象
+通过文件 API，我们可以访问 {{DOMxRef("FileList")}}，它包含了表示用户所选文件的 {{DOMxRef("File")}} 对象。
 
 `input` 元素的 `multiple` 属性允许用户选择多个文件。
 
