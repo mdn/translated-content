@@ -3,7 +3,7 @@ title: Geolocation
 slug: Web/API/Geolocation
 ---
 
-{{APIRef}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`Geolocation`** 接口是一个用来获取设备地理位置的可编程的对象，它可以让 Web 内容访问到设备的地理位置，这将允许网站或应用基于用户的地理位置提供定制的信息。
 
@@ -11,13 +11,13 @@ slug: Web/API/Geolocation
 
 > **备注：** 出于安全考虑，当一个网页尝试获取地理位置信息时，会请求用户批准地理位置访问权限。因为每个浏览器都有各自请求用户批准该权限的策略和方法。
 
-## 属性
+## 实例属性
 
 _`Geolocation` 接口不实现，也不继承任何属性。_
 
-## 方法
+## 实例方法
 
-**`Geolocation`** 接口不继承任何方法。
+_`Geolocation`** 接口不继承任何方法。_
 
 - {{domxref("Geolocation.getCurrentPosition()")}}
   - : 确定设备的位置并返回一个携带位置信息的 {{domxref("Position")}} 对象。
@@ -36,4 +36,4 @@ _`Geolocation` 接口不实现，也不继承任何属性。_
 
 ## 参见
 
-- [使用地理位置定位](/zh-CN/docs/Web/API/Geolocation/Using_geolocation)
+- [使用地理位置定位](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
