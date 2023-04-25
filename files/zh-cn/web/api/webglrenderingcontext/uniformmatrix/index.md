@@ -7,7 +7,7 @@ slug: Web/API/WebGLRenderingContext/uniformMatrix
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.uniformMatrix[234]fv()`** 方法为 uniform variables 指定了矩阵值。
 
-该方法的 3 个版本（ `uniformMatrix2fv()` 、 `uniformMatrix3fv()` 、和 `unifomMatrix4fv()` ），分别以二阶、三阶、和四阶方阵作为输入值，它们应是分别具有 4 ，9 ，16 个浮点数的数组。
+该方法的 3 个版本（`uniformMatrix2fv()`、`uniformMatrix3fv()` 和 `unifomMatrix4fv()`），分别以二阶、三阶和四阶方阵作为输入值，它们应是分别具有 4、9、16 个浮点数的数组。
 
 ## 语法
 
