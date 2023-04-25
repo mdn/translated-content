@@ -29,11 +29,11 @@ push(element0, element1, /* … ,*/ elementN)
 
 ## 描述
 
-`push()` 方法将值附加到一个数组中。
+`push()` 方法将值追加到一个数组中。
 
-{{jsxref("Array.prototype.unshift()")}} 有着和 `push()` 相同的行为，但是其作用在数组的开头。
+{{jsxref("Array.prototype.unshift()")}} 有着和 `push()` 相似的行为，但是其作用于数组的开头。
 
-`push()` 方法是一个变化方法。它改变了 `this` 的内容和长度。如果你希望 `this` 的值相同，但返回一个末尾附加元素的新数组，你可以使用 [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 来代替。请注意，元素被包装在一个额外的数组中——否则，如果元素本身是一个数组，则由于 `concat()` 的行为，它将被展开而不是作为单个元素推送。
+`push()` 方法是一个改变方法。它改变了 `this` 的内容和长度。如果你希望 `this` 的值保持不变，但返回一个末尾追加了元素的新数组，你可以使用 [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 来代替。请注意，这些元素需要被包装在一个额外的数组中——否则，如果元素本身是一个数组，则由于 `concat()` 的行为，它将被展开且其而不是作为单个元素添加到原数组的末尾。
 
 `push()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这个方法不适合应用于它们，因为字符串是不可变的。
 
@@ -90,9 +90,9 @@ console.log(plainObj);
 
 ### 以类似数组的方式使用对象
 
-如上所述，`push` 是通用的，我们可以利用这一点。就像这个例子所展示的，`Array.prototype.push` 可以在一个对象中正常运作。
+如上所述，`push` 被有意设计为通用的，我们可以利用这一点。就像这个例子所展示的，`Array.prototype.push` 可以很好的处理对象。
 
-注意，我们没有创建一个数组来存储对象集合。相反，我们将集合存储在对象本身上，并使用`Array.prototype.push` 的 `call` 来欺骗方法，让它认为我们正在处理一个数组——它只是工作，感谢JavaScript允许我们以任何我们想要的方式建立执行上下文的方式。
+注意，我们没有创建一个数组来存储对象集合。相反，我们将集合存储在对象本身上，并通过`Array.prototype.push` 的 `call` 来调用该方法，让它认为我们正在处理一个数组——归功于 JavaScript 允许我们以任何我们想要的方式建立执行上下文的方式，这样是可行的。
 
 ```js
 const obj = {
@@ -110,7 +110,7 @@ obj.addElem({});
 console.log(obj.length); // 2
 ```
 
-注意，尽管 `obj` 不是一个数组，`push` 方法仍像处理实际数组那般成功地增加了 `obj` 的 `length` 属性。
+注意，尽管 `obj` 不是一个数组，`push` 方法仍成功地增加了 `obj` 的 `length` 属性，就像我们处理一个真正的数组一样。
 
 ## 规范
 
