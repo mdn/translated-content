@@ -17,7 +17,7 @@ _`Geolocation` 接口不实现，也不继承任何属性。_
 
 ## 实例方法
 
-_`Geolocation`** 接口不继承任何方法。_
+_`Geolocation` 接口不继承任何方法。_
 
 - {{domxref("Geolocation.getCurrentPosition()")}}
   - : 确定设备的位置并返回一个携带位置信息的 {{domxref("Position")}} 对象。
