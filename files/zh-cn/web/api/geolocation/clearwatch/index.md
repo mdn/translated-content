@@ -5,7 +5,7 @@ slug: Web/API/Geolocation/clearWatch
 
 {{ APIref("Geolocation API") }}
 
-**`Geolocation.clearWatch()`** 这个方法主要用于注销之前使用 {{domxref("Geolocation.watchPosition()")}} 注册的位置监听器或错误监听器。
+**`Geolocation.clearWatch()`** 这个方法用于注销之前使用 {{domxref("Geolocation.watchPosition()")}} 注册的位置监听器或错误监听器。
 
 ## 语法
 
@@ -60,7 +60,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 参见
 
-- [使用地理位置定位](/zh-CN/docs/WebAPI/Using_geolocation)
+- [使用地理位置定位](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Geolocation")}}
 - {{domxref("Geolocation.watchPosition()")}}
 - {{domxref("Geolocation.getCurrentPosition()")}}
