@@ -33,15 +33,15 @@ push(element0, element1, /* … ,*/ elementN)
 
 {{jsxref("Array.prototype.unshift()")}} 有着和 `push()` 相似的行为，但是其作用于数组的开头。
 
-`push()` 方法是一个修改方法。它改变了 `this` 的内容和长度。如果你希望 `this` 的值保持不变，但返回一个末尾追加了元素的新数组，你可以使用 [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 来代替。请注意，这些元素需要被包装在一个额外的数组中——否则，如果元素本身是一个数组，则由于 `concat()` 的行为，它将被展开且其而不是作为单个元素添加到原数组的末尾。
+`push()` 方法是一个修改方法。它改变了 `this` 的内容和长度。如果你希望 `this` 的值保持不变，但返回一个末尾追加了元素的新数组，你可以使用 [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 来代替。请注意，这些元素需要被包装在一个额外的数组中——否则，如果元素本身是一个数组，由于 `concat()` 的行为，它将被展开且而不是作为单个元素添加到原数组的末尾。
 
-`push()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这个方法不适合应用于它们，因为字符串是不可变的。
+`push()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这个方法不适用于它们，因为字符串是不可变的。
 
 ## 示例
 
 ### 在数组中添加元素
 
-接下来的代码中将会生成包含两个元素的 `sports` 数组，然后向其添加两个元素。`total` 变量将会包含新的数组长度。
+接下来的代码中将会生成包含两个元素的 `sports` 数组，然后向其添加两个元素。`total` 变量将会记录数组的新长度。
 
 ```js
 const sports = ["soccer", "baseball"];
