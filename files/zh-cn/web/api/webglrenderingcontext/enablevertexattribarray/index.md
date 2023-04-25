@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 {{APIRef("WebGL")}}
 
-在[WebGL API](/zh-CN/docs/Web/API/WebGL_API)中，使用 {{domxref("WebGLRenderingContext")}} 中的 **`enableVertexAttribArray()`** 方法，会启用指定索引位置的通用顶点属性数组，让其在渲染时生效。
+在[WebGL API](/zh-CN/docs/Web/API/WebGL_API)中，使用 {{domxref("WebGLRenderingContext")}} 中的 **`enableVertexAttribArray()`** 方法，可以打开属性数组列表中指定索引处的通用顶点属性数组。
 
 > **备注：** 你可以通过以下方法关闭顶点属性数组 {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
 
