@@ -5,7 +5,7 @@ slug: Web/API/File_API/Using_files_from_web_applications
 
 {{APIRef("File API")}}
 
-通过使用文件 API，web 内容可以要求用户选择本地文件，然后读取这些文件的内容。这种选择可以通过使用 HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}} 元素或通过拖放来完成。
+通过使用文件 API，web 内容可以要求用户选择本地文件，然后读取这些文件的内容。这种选择可以通过使用 HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` 元素或通过拖放来完成。
 
 ## 访问被选择的文件
 
