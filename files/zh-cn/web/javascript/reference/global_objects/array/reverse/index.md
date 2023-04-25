@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 {{JSRef}}
 
-**`reverse()`** 方法将[_就地_](https://zh.wikipedia.org/wiki/In-place_algorithm)反转数组中的元素，并返回该数组。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。换句话说，数组中的元素顺序将转向与前面所述相反的方向。
+**`reverse()`** 方法将[_就地_](https://zh.wikipedia.org/wiki/In-place_algorithm)反转数组中的元素，并返回同一数组的引用。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。换句话说，数组中的元素顺序将转向与之前固定方向相反的方向。
 
 要在不改变原始数组的情况下反转数组中的元素，使用 {{jsxref("Array/toReversed", "toReversed()")}}。
 
@@ -19,7 +19,7 @@ reverse()
 
 ### 返回值
 
-对原始数组的引用现在反转了。注意，数组是[_就地_](https://zh.wikipedia.org/wiki/In-place_algorithm)反转的，并且没有复制。
+原始数组反转后的引用。注意，数组是[_就地_](https://zh.wikipedia.org/wiki/In-place_algorithm)反转的，并且没有复制。
 
 ## 描述
 
@@ -33,7 +33,7 @@ reverse()
 
 ### 反转数组中的元素
 
-下面的示例创建一个数组 `items`，其中包含三个元素，然后反转数组。调用 `reverse()` 返回对反向数组 `items`。
+下面的示例创建一个数组 `items`，其中包含三个元素，然后反转数组。调用 `reverse()` 返回对数组 `items` 反转后的引用。
 
 ```js
 const items = [1, 2, 3];
@@ -59,7 +59,7 @@ console.log(numbers[0]); // 5
 
 ```js
 const numbers = [3, 2, 4, 1, 5];
-// [...numbers] 创建一个浅拷贝，因此 reverse() 不会改变原始数据。
+// [...numbers] 创建一个浅拷贝，因此 reverse() 不会改变原始数据
 const reverted = [...numbers].reverse();
 reverted[0] = 5;
 console.log(numbers[0]); // 3
@@ -67,7 +67,7 @@ console.log(numbers[0]); // 3
 
 ### 对稀疏数组使用 reverse()
 
-调用 `reverse()` 后，稀疏数组保持稀疏状态。空槽被复制到它们各自的新索引中作为空槽。
+调用 `reverse()` 后，稀疏数组保持稀疏状态。空槽将以空槽的形式被复制到它们各自的新索引中。
 
 ```js
 console.log([1, , 3].reverse()); // [3, empty, 1]
@@ -86,7 +86,7 @@ const arrayLike = {
 };
 console.log(Array.prototype.reverse.call(arrayLike));
 // { '0': 4, length: 3, unrelated: 'foo' }
-// 索引“2”被删除了，因为原本的数据中索引“0”不存在。
+// 索引“2”被删除了，因为原本的数据中索引“0”不存在了
 ```
 
 ## 规范
