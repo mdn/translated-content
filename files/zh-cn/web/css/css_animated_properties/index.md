@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_animated_properties
 
 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)和[过渡](/zh-CN/docs/Web/CSS/CSS_Transitions)依赖于**动画性**属性这一概念，且所有 CSS 属性除非另有规定否则均有动画性。每个属性的*动画类型*决定了此属性的值如何[结合](https://w3c.github.io/csswg-drafts/css-values/#combining-values)——插值、相加或累积。过渡仅涉及插值，而动画可能使用所有三种结合方法。
 
-> **备注：** 每个 CSS 属性的动画类型列于其“形式定义”表格中（如 {{CSSXref("color", "", "#形式定义")}）。
+> **备注：** 每个 CSS 属性的动画类型列于其“形式定义”表格中（如 {{CSSXref("color", "", "#形式定义")}}）。
 
 > **备注：** 每个 CSS 数据类型的插值方法描述于其“插值”一节中（如 {{CSSXref("&lt;length&gt;", "", "#插值")}}）。
 
