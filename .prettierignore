@@ -38,7 +38,4 @@ build/
 # zh-tw
 /docs/zh-tw/**/*.md
 /files/zh-tw/learn/**/*.md
-/files/zh-tw/mdn/**/*.md
-/files/zh-tw/mozilla/**/*.md
 /files/zh-tw/web/**/*.md
-/files/zh-tw/webassembly/**/*.md
