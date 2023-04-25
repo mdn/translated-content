@@ -114,7 +114,7 @@ console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
 // [ 4, 9, 16 ]
 ```
 
-### 在 NodeList 上可以通用地使用 map()
+### 在 NodeList 上通用地使用 map()
 
 以下示例展示了如何去遍历通过 `querySelectorAll` 得到的对象集合。这是因为 `querySelectorAll` 返回的是一个对象集合 `NodeList`。
 
@@ -157,11 +157,11 @@ console.log(
 
 我们期望输出 `[1, 2, 3]`, 而实际结果是 `[1, NaN, NaN]`.
 
-`parseInt` 函数通常只使用一个参数，但其实可以传入两个参数。第一个参数是表达式，第二个参数是解析该表达式的基数。当在 `Array.prototype.map` 的回调函数中使用 `parseInt` 函数时，`map` 方法会传递3个参数：
+{{jsxref("parseInt")}} 函数通常只使用一个参数，但其实可以传入两个参数。第一个参数是表达式，第二个参数是解析该表达式的基数。当在 `Array.prototype.map` 的回调函数中使用 `parseInt` 函数时，`map` 方法会传递 3 个参数：
 
-- the element
-- the index
-- the array
+- 元素
+- 索引
+- 数组
 
 {{jsxref("parseInt")}} 函数会忽略第三个参数，但是*不会忽略*第二个参数！这可能会导致一些问题。
 
