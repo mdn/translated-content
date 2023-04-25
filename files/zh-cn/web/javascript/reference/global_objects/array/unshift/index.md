@@ -105,7 +105,7 @@ console.log(plainObj);
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [`core-js` 的修复方法中 `Array.prototype.unshift` 的Polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
