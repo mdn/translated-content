@@ -7,9 +7,9 @@ l10n:
 
 {{DefaultAPISidebar("Fetch API")}}
 
-[Fetch API](/ko/docs/Web/API/Fetch_API)는 HTTP 파이프라인을 구성하는 요청과 응답 등의 요소를 JavaScript에서 접근하고 조작할 수 있는 인터페이스를 제공합니다. Fetch API가 제공하는 전역 {{domxref("fetch()")}} 메서드로 네트워크의 리소스를 쉽게 비동기적으로 가져올 수도 있습니다.
+[Fetch API](/ko/docs/Web/API/Fetch_API)는 HTTP 파이프라인을 구성하는 요청과 응답 등의 요소를 JavaScript에서 접근하고 조작할 수 있는 인터페이스를 제공합니다. Fetch API가 제공하는 전역 {{domxref("fetch()")}} 메서드로 네트워크의 리소스를 쉽게 비동기적으로 취득할 수도 있습니다.
 
-콜백 기반 API인 {{domxref("XMLHttpRequest")}}와 달리, Fetch는 [서비스 워커](/ko/docs/Web/API/Service_Worker_API)에서도 쉽게 사용할 수 있는 프로미스 기반의 개선된 대체제입니다. Fetch는 또한 [CORS](/ko/docs/Web/HTTP/CORS)를 포함한 고급 개념을 HTTP 확장으로 정의합니다.
+콜백 기반 API인 {{domxref("XMLHttpRequest")}}와 달리, Fetch API는 [서비스 워커](/ko/docs/Web/API/Service_Worker_API)에서도 쉽게 사용할 수 있는 프로미스 기반의 개선된 대체제입니다. 또한 Fetch API는 [CORS](/ko/docs/Web/HTTP/CORS)를 포함한 고급 개념을 HTTP 확장으로 정의합니다.
 
 기본적인 리소스 취득 요청은 이렇게 생겼습니다.
 
@@ -21,7 +21,7 @@ async function logJSONData() {
 }
 ```
 
-위 코드는 네트워크에서 JSON 파일을 가져와서 콘솔에 출력합니다. 가장 단순한 형태의 `fetch()`는 가져오고자 하는 리소스의 경로를 나타내는 하나의 인수만 받습니다. 응답은 {{domxref("Response")}} 객체로 표현되며, JSON 응답 본문을 바로 반환하지는 않습니다.
+위 코드는 네트워크를 통해 JSON 파일을 취득해서 콘솔에 출력합니다. 가장 단순한 형태의 `fetch()`는 가져오고자 하는 리소스의 경로를 나타내는 하나의 인수만 받습니다. 응답은 {{domxref("Response")}} 객체로 표현되며, JSON 응답 본문을 바로 반환하지는 않습니다.
 
 {{domxref("Response")}} 객체 역시 JSON 응답 본문을 그대로 포함하지는 않습니다. `Response`는 HTTP 응답 전체를 나타내는 객체로, JSON 본문 콘텐츠를 추출하기 위해서는 {{domxref("Response.json()", "json()")}} 메서드를 호출해야 합니다. `json()`은 응답 본문 텍스트를 JSON으로 파싱한 결과로 이행하는, 또 다른 프로미스를 반환합니다.
 
@@ -310,7 +310,7 @@ fetchImage(myRequest);
 const anotherRequest = new Request(myRequest, myInit);
 ```
 
-요청과 응답 본문은 한 번만 읽을 수 있으므로, 복사본 생성은 꽤 유용합니다. 이런 식으로 복사본을 생성하면, 기존에 생성해둔 요청/응답 객체를 다시 사용하되 `init` 옵션만 교체할 수도 있습니다. 복사본은 원본의 본문을 읽기 전에 생성해야 합니다.
+요청과 응답 본문은 한 번만 읽을 수 있으므로 복사본 생성은 꽤 유용합니다. 이런 식으로 복사본을 생성하면, 기존에 생성해둔 요청/응답 객체를 다시 사용하되 `init` 옵션만 교체할 수도 있습니다. 복사본은 원본의 본문을 읽기 전에 생성해야 합니다.
 
 > **참고:** 복사본 생성만을 위한 {{domxref("Request.clone", "clone()")}} 메서드도 있습니다. 생성자와 이 메서드 모두, 이미 본문을 읽은 요청 또는 응답을 복사하려고 시도하면 실패합니다. 복사본의 본문을 읽어도 원본에는 영향을 주지 않습니다.
 
