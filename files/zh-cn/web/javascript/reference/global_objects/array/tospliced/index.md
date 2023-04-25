@@ -107,7 +107,7 @@ console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [`core-js` 中 `Array.prototype.toSpliced` 的 polyfill](https://github.com/zloirock/core-js#change-array-by-copy)
 - {{jsxref("Array.prototype.splice()")}}
