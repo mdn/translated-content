@@ -21,7 +21,7 @@ unshift(element0, element1, /* … ,*/ elementN)
 ### 参数
 
 - `elementN`
-  - : 元素会添加到 `arr` 的开头。
+  - : 添加到 `arr` 开头的元素。
 
 ### 返回值
 
