@@ -59,7 +59,7 @@ console.log(total); // 4
 const vegetables = ["parsnip", "potato"];
 const moreVegs = ["celery", "beetroot"];
 
-// 合并第二个数组到第一个数组中。
+// 合并第二个数组到第一个数组中
 vegetables.push(...moreVegs);
 
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
@@ -82,7 +82,7 @@ console.log(arrayLike);
 // { '2': 4, '3': 1, '4': 2, length: 5, unrelated: 'foo' }
 
 const plainObj = {};
-// 这里没有长度属性，所以长度为 0。
+// 这里没有长度属性，所以长度为 0
 Array.prototype.push.call(plainObj, 1, 2);
 console.log(plainObj);
 // { '0': 1, '1': 2, length: 2 }
@@ -99,12 +99,12 @@ const obj = {
   length: 0,
 
   addElem(elem) {
-    // obj.length 在每次添加元素时自动增加。
+    // obj.length 在每次添加元素时自动增加
     [].push.call(this, elem);
   },
 };
 
-// 让我们添加一些空对象来说明。
+// 让我们添加一些空对象来说明
 obj.addElem({});
 obj.addElem({});
 console.log(obj.length); // 2
