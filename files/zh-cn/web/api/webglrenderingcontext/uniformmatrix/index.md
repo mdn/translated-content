@@ -22,7 +22,7 @@ WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
 - `location`
   - : {{domxref("WebGLUniformLocation")}} 对象包含了要修改的 uniform attribute 位置。位置使用 {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}获得。
 - `transpose`
-  - : {{domxref("GLboolean")}} 指定是否转置矩阵。必须为 `false` 。
+  - : {{domxref("GLboolean")}} 指定是否转置矩阵。必须为 `false`。
 - `value`
   - : {{jsxref("Float32Array")}} 型或者是 `GLfloat` 序列值。这些值被假定按列主序（column major order）的方式提供。
 
