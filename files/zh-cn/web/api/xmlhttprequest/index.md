@@ -84,7 +84,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.send()")}}
   - : 发送请求。如果请求是异步的（默认），那么该方法将在请求发送后立即返回。
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
-  - : 设置 HTTP 请求头的值。必须在 [`open()`](/open) 之后、[`send()`](/send) 之前调用 `setRequestHeader()` 方法。
+  - : 设置 HTTP 请求标头的值。必须在 {{domxref("XMLHttpRequest.open", "open()")}} 之后、{{domxref("XMLHttpRequest.send", "send()")}} 之前调用 `setRequestHeader()` 方法。
 
 ## 事件
 
