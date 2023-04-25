@@ -47,4 +47,3 @@ myWorker.terminate();
 - L'interface [`Worker`](/fr/docs/Web/API/Worker)
 - [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close)
 - [`SharedWorkerGlobalScope.close()`](/fr/docs/Web/API/SharedWorkerGlobalScope/close)
-
