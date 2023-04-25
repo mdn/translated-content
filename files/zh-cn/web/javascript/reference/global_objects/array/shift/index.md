@@ -38,16 +38,16 @@ shift()
 ```js
 const myFish = ["angel", "clown", "mandarin", "surgeon"];
 
-console.log("myFish before:", JSON.stringify(myFish));
-// myFish before:['angel', 'clown', 'mandarin', 'surgeon']
+console.log('调用 shift 之前：' + myFish);
+// "调用 shift 之前：angel,clown,mandarin,surgeon"
 
 const shifted = myFish.shift();
 
-console.log("myFish after:", myFish);
-// myFish after:['clown', 'mandarin', 'surgeon']
+console.log('调用 shift 之后：' + myFish);
+// "调用 shift 之后：clown,mandarin,surgeon"
 
-console.log("Removed this element:", shifted);
-// Removed this element: angel
+console.log('被删除的元素：' + shifted);
+// "被删除的元素：angel"
 ```
 
 ### 在 while 循环中使用 shift()
@@ -79,7 +79,7 @@ console.log(arrayLike);
 // { '1': 4, length: 2, unrelated: 'foo' }
 
 const plainObj = {};
-// There's no length property, so the length is 0
+// 这里没有长度属性，所以长度为 0
 Array.prototype.shift.call(plainObj);
 console.log(plainObj);
 // { length: 0 }
