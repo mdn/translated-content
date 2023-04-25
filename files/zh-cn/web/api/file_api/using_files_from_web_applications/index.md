@@ -33,7 +33,7 @@ const selectedFile = document.getElementById("input").files[0];
 const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles() {
-  const fileList = this.files; /* now you can work with the file list */
+  const fileList = this.files; /* 现在你可以处理文件列表 */
 }
 ```
 
