@@ -122,7 +122,7 @@ console.log(obj.length); // 2
 
 ## 参见
 
-- [`core-js` 中 `Array.prototype.push` 的 Polyfill，并修复此方法](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.push` 的 Polyfill，并对此方法进行了修复](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}
