@@ -1,6 +1,6 @@
 ---
 title: CSS.registerProperty()
-slug: Web/API/CSS/RegisterProperty
+slug: Web/API/CSS/registerProperty
 ---
 
 {{SeeCompatTable}}

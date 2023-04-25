@@ -5927,12 +5927,12 @@
     "modified": "2020-10-15T22:06:15.679Z",
     "contributors": ["Wind1808", "dskmori", "HeRoMo"]
   },
-  "Web/API/CSS/RegisterProperty": {
-    "modified": "2020-10-15T22:33:54.456Z",
-    "contributors": ["Wind1808"]
-  },
   "Web/API/CSS/paintWorklet": {
     "modified": "2020-10-15T22:33:54.529Z",
+    "contributors": ["Wind1808"]
+  },
+  "Web/API/CSS/registerProperty": {
+    "modified": "2020-10-15T22:33:54.456Z",
     "contributors": ["Wind1808"]
   },
   "Web/API/CSS/supports": {
