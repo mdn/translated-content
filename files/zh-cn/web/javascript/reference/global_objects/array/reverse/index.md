@@ -19,7 +19,7 @@ reverse()
 
 ### 返回值
 
-对原始数组的引用现在反转了。注意，数组是[_就地_](https://zh.wikipedia.org/wiki/In-place_algorithm)反向的，并且没有复制。
+对原始数组的引用现在反转了。注意，数组是[_就地_](https://zh.wikipedia.org/wiki/In-place_algorithm)反转的，并且没有复制。
 
 ## 描述
 
@@ -27,7 +27,7 @@ reverse()
 
 `reverse()` 方法会保留空槽。如果源数组是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则空槽对应的新索引将被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)，并且也成为空槽。
 
-`reverse()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这个方法不适合应用于它们，因为字符串是不可变的。
+`reverse()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类数组对象，但这个方法不适用于它们，因为字符串是不可变的。
 
 ## 示例
 
