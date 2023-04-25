@@ -22,7 +22,7 @@ toSpliced(start, deleteCount, item1, item2, itemN)
   - : 数组开始变化时，从 0 开始的索引会[转换成整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
     - 负索引从数组末尾开始计数——如果 `start < 0`，使用 `start + array.length`。
     - 如果 `start < -array.length` 或者省略了 `start`，则使用 `0`。
-    - 如果 `start >= array.length`，不会删除任何元素，但该方法将作为一个添加函数，添加所提供的元素数量。
+    - 如果 `start >= array.length`，不会删除任何元素，但该方法将表现为添加元素的函数，添加提供的所有元素。
 
 - `deleteCount` {{optional_inline}}
 
@@ -40,11 +40,11 @@ toSpliced(start, deleteCount, item1, item2, itemN)
 
 ### 返回值
 
-一个新数组，包含 `start`，`item1`，`item2`，…，`itemN` 之前的所有元素，以及 `start + deleteCount` 之后的所有元素。
+一个新数组，由 `start` 之前的所有元素、`item1`、`item2`、...、`itemN`，以及 `start + deleteCount` 之后的所有元素组成。
 
 ## 描述
 
-`toSpliced()` 方法，像 `splice()` 一样，一次做多件事：它从数组中移除给定数量的元素，从给定的索引开始，然后在相同的索引中插入给定的元素。但是，它返回一个新数组，而不是修改原始数组。因此，此方法不会返回已删除的元素。
+`toSpliced()` 方法与 `splice()` 类似，可以同时完成多个操作：在数组中给定的索引开始移除指定数量的元素，然后在相同的索引处插入给定的元素。但是，它返回一个新数组，而不是修改原始数组。因此，此方法不会返回已删除的元素。
 
 `toSpliced()` 方法不会产生[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)。如果原始数组是稀疏的，在新数组中空槽将会被替换成 `undefined`。
 
@@ -54,7 +54,7 @@ toSpliced(start, deleteCount, item1, item2, itemN)
 
 ### 删除，添加和替换元素
 
-你可以通过使用 `toSpliced()` 来删除，添加和替换数组中的元素，并生成一个比使用 `slice()` 和 `concat()` 更有效的数组。
+你可以通过使用 `toSpliced()` 来删除、添加和替换数组中的元素，并生成一个的数组，这比使用 `slice()` 和 `concat()` 更高效。
 
 ```js
 const months = ["Jan", "Mar", "Apr", "May"];
