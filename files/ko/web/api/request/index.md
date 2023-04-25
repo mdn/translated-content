@@ -18,14 +18,14 @@ l10n:
 
 ## 인스턴스 속성
 
-- {{domxref("Request.body")}} {{readonlyInline}}
+- {{domxref("Request.body")}} {{ReadOnlyInline}}
   - : 본문 내용의 {{domxref("ReadableStream")}}입니다.
-- {{domxref("Request.bodyUsed")}} {{readonlyInline}}
+- {{domxref("Request.bodyUsed")}} {{ReadOnlyInline}}
   - : 요청의 본문이 사용됐는지 아닌지 나타내는 `true` 또는 `false`입니다.
-- {{domxref("Request.cache")}} {{readonlyInline}}
+- {{domxref("Request.cache")}} {{ReadOnlyInline}}
   - : 요청의 캐시 모드(`default`, `reload`, `no-cache` 등)입니다.
-- {{domxref("Request.credentials")}} {{readonlyInline}}
-  - : 요청의 자격 증명(`omit`, `same-origin`, `include` 등)입니다.
+- {{domxref("Request.credentials")}} {{ReadOnlyInline}}
+  - : 요청의 자격 증명(`omit`, `same-origin`, `include` 등)입니다. 기본 값은 `same-origin`입니다.
 - {{domxref("Request.destination")}} {{ReadOnlyInline}}
   - : 요청의 목적지를 묘사하는 문자열을 반환합니다. 요청한 콘텐츠의 유형을 나타내는 문자열입니다.
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}

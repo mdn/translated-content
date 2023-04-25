@@ -18,22 +18,22 @@ l10n:
 
 ## 인스턴스 속성
 
-- {{domxref("Response.body")}} {{readonlyInline}}
+- {{domxref("Response.body")}} {{ReadOnlyInline}}
   - : 본문 내용의 {{domxref("ReadableStream")}}입니다.
-- {{domxref("Response.bodyUsed")}} {{readonlyInline}}
+- {{domxref("Response.bodyUsed")}} {{ReadOnlyInline}}
   - : 응답의 본문이 사용됐는지 아닌지 나타내는 불리언입니다.
 - {{domxref("Response.headers")}} {{ReadOnlyInline}}
   - : 응답에 연관된 {{domxref("Headers")}} 객체입니다.
 - {{domxref("Response.ok")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the response was successful (status in the range `200` – `299`) or not.
+  - : 응답의 성공 (코드가 `200`-`299` 범위 내) 여부를 나타내는 불리언입니다.
 - {{domxref("Response.redirected")}} {{ReadOnlyInline}}
-  - : Indicates whether or not the response is the result of a redirect (that is, its URL list has more than one entry).
+  - : 응답이 리디렉션의 결과인지 (즉, URL 목록이 두 개 이상의 항목을 지녔는지) 나타냅니다.
 - {{domxref("Response.status")}} {{ReadOnlyInline}}
-  - : The status code of the response. (This will be `200` for a success).
+  - : 응답의 상태 코드입니다. 성공 시 `200`입니다.
 - {{domxref("Response.statusText")}} {{ReadOnlyInline}}
-  - : The status message corresponding to the status code. (e.g., `OK` for `200`).
+  - : 상태 코드에 해당하는 상태 메시지입니다. (예시: `200`이면 `OK`)
 - {{domxref("Response.type")}} {{ReadOnlyInline}}
-  - : The type of the response (e.g., `basic`, `cors`).
+  - : 응답 유형입니다. (예시: `basic`, `cros`)
 - {{domxref("Response.url")}} {{ReadOnlyInline}}
   - : 응답 URL입니다.
 
@@ -63,7 +63,7 @@ l10n:
 
 ### 이미지 취득하기
 
-저희의 [기본 취득 예제](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch)([미리보기](https://mdn.github.io/dom-examples/fetch/basic-fetch/))에서는 간단한 `fetch()` 호출을 통해 이미지를 가져와서 {{htmlelement("img")}} 요소에 표시합니다. `fetch()` 호출은 취득 작업과 연관된 `Response`로 이행하는 프로미스를 반환합니다.
+저희의 [기본 `fetch()` 예제](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch)([미리보기](https://mdn.github.io/dom-examples/fetch/basic-fetch/))에서는 간단한 `fetch()` 호출을 통해 이미지를 취득해서 {{htmlelement("img")}} 요소에 표시합니다. `fetch()` 호출은 취득 연산과 연관된 `Response`로 이행하는 프로미스를 반환합니다.
 
 우리는 이미지를 요청하고 있기 때문에, `Response.blob()`을 실행하여 응답에 올바른 MIME 타입을 부여해야 한다는 걸 보실 겁니다.
 
