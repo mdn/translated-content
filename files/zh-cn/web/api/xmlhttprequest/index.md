@@ -69,7 +69,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
 更多现代浏览器，包括 Firefox，除了可以设置 `on*` 属性外，也提供标准的监听器 {{domxref("EventTarget.addEventListener", "addEventListener()")}} API 来监听`XMLHttpRequest` 事件。
 
-## 方法
+## 实例方法
 
 - {{domxref("XMLHttpRequest.abort()")}}
   - : 如果请求已被发出，则立刻中止请求。
