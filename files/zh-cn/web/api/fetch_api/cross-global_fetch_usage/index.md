@@ -5,7 +5,7 @@ slug: Web/API/Fetch_API/Cross-global_fetch_usage
 
 {{DefaultAPISidebar("Fetch API")}}
 
-本文解释了在 fetch 时发生的边缘情况（以及潜在展示相同类型的资源检索行为的其他 API ）。当从 {{htmlelement("iframe")}} 发起涉及相对 URL 的跨源 Fetch 时，相对 URL 会被解析为当前的全局位置，而不是 iframe 的位置。
+本文解释了在 fetch 时发生的边缘情况（以及潜在展示相同类型的资源检索行为的其他 API）。当从 {{htmlelement("iframe")}} 发起涉及相对 URL 的跨源 Fetch 时，相对 URL 会被解析为当前的全局位置，而不是 iframe 的位置。
 
 ## 边缘情况
 
