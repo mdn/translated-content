@@ -54,7 +54,7 @@ console.log(arr);
 // [3, 2, 1, 4, 5, 6]
 ```
 
-`unshift()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类数组对象，但这个方法不适用于它们，因为字符串是不可变的。
+`unshift()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似于数组的，但这个方法不适用于它们，因为字符串是不可变的。
 
 ## 示例
 
