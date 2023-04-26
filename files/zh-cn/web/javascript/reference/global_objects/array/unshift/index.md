@@ -54,7 +54,7 @@ console.log(arr);
 // [3, 2, 1, 4, 5, 6]
 ```
 
-`unshift()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这个方法不适合应用于它们，因为字符串是不可变的。
+`unshift()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类数组对象，但这个方法不适用于它们，因为字符串是不可变的。
 
 ## 示例
 
@@ -78,7 +78,7 @@ arr.unshift([-7, -6], [-5]); // 新的数组长度是 8
 
 ### 在非数组对象中使用 unshift()
 
-`unshift` 方法会读取 `this` 的 `length` 属性。然后，它将 `0` 到 `length - 1` 范围内的所有属性按参数数量右移，并将每个索引从 `0` 开始，并将参数传递给 `unshift()`。最后，它将 `length` 设置为前一个长度加上前置元素的数量。
+`unshift` 方法会读取 `this` 的 `length` 属性。然后，它将 `0` 到 `length - 1` 范围内的所有属性按参数数量右移，并将每个索引从 `0` 开始，并将参数传递给 `unshift()`。最后，它将 `length` 设置为之前的长度加上前置元素的数量。
 
 ```js
 const arrayLike = {
