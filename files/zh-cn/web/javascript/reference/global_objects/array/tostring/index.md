@@ -25,7 +25,7 @@ toString()
 
 ```js
 const arr = [];
-arr.join = 1; // 将 `join` 重新赋值为非函数的值。
+arr.join = 1; // 将 `join` 重新赋值为非函数的值
 console.log(arr.toString()); // [object Array]
 
 console.log(Array.prototype.toString.call({ join: () => 1 })); // 1
