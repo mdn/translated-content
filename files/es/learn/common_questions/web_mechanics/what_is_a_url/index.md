@@ -1,6 +1,7 @@
 ---
 title: ¿Qué es una URL?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
+original_slug: Learn/Common_questions/What_is_a_URL
 ---
 
 Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué son y cómo se estructuran.
