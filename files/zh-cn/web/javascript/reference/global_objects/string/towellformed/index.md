@@ -21,7 +21,7 @@ toWellFormed()
 
 JavaScript 中的字符串是 UTF-16 编码的。UTF-16 编码中有*代理对*的概念，这一概念在 [UTF-16 字符、Unicode 码位和字素簇（grapheme clusters）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)部分有详细介绍。
 
-`toWellFormed()` 迭代字符串的码元，并将任何单独的代理项替换为 [Unicode 替换字符](<https://zh.wikipedia.org/wiki/%E7%89%B9%E6%AE%8A_(Unicode%E5%8D%80%E6%AE%B5)>) U+FFFD `�`。这确保了返回的字符串格式正确并可用于期望正确格式字符串的函数，比如 {{jsxref("encodeURI")}}。由于引擎能够直接访问字符串的内部表示，与自定义实现相比 `toWellFormed()` 更高效。
+`toWellFormed()` 迭代字符串的码元，并将任何单独的代理项替换为 [Unicode 替换字符](<https://zh.wikipedia.org/wiki/特殊_(Unicode區段)>) U+FFFD `�`。这确保了返回的字符串格式正确并可用于期望正确格式字符串的函数，比如 {{jsxref("encodeURI")}}。由于引擎能够直接访问字符串的内部表示，与自定义实现相比 `toWellFormed()` 更高效。
 
 当在某些上下文中使用格式不正确的字符串时，例如 {{domxref("TextEncoder")}}，它们会自动转换为使用相同替换字符的格式正确的字符串。当单独的代理项被呈现时，它们也会呈现为替换字符（一个带有问号的钻石形状）。
 
