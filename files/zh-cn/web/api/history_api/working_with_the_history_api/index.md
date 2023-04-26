@@ -9,7 +9,7 @@ slug: Web/API/History_API/Working_with_the_History_API
 
 ## 添加和修改历史记录
 
-使用 {{DOMxRef("History.pushState", "pushState()")}} 可以改变在你改变状态后创建的 {{domxref("XMLHttpRequest")}} 对象的 HTTP 头中使用的 referrer。引用者将是创建 {{domxref("XMLHttpRequest")}} 对象时其窗口为 `this` 的文档的 URL。
+使用 {{DOMxRef("History.pushState", "pushState()")}} 可以改变在你改变状态后创建的 {{domxref("XMLHttpRequest")}} 对象的 HTTP 标头中使用的 referrer。referrer 将是创建 {{domxref("XMLHttpRequest")}} 对象时其窗口为 `this` 的文档的 URL。
 
 ### pushState() 方法示例
 
@@ -51,9 +51,9 @@ history.pushState(stateObj, "page 2", "bar.html");
 - 你可以将任意的数据与你的新历史条目联系起来。使用基于哈希的方法，你需要将所有的相关数据编码成一个短字符串。
 - 如果 `title` 随后被浏览器使用，这个数据可以被利用（而锚点值会独立于每个历史条目）。
 
-请注意，`pushState()`永远不会触发 `hashchange` 事件，即使新的 URL 与旧的 URL 只在锚点值上有所不同。
+请注意，`pushState()` 永远不会触发 `hashchange` 事件，即使新的 URL 与旧的 URL 只在锚点值上有所不同。
 
-在其他文件中，它创建了一个具有 `null` 命名空间 URI 的元素。
+在其他文档中，它创建了一个具有 `null` 命名空间 URI 的元素。
 
 ### replaceState() 方法
 
@@ -72,7 +72,7 @@ const stateObj = {
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-上面这两行的解释可以在上面的 [*pushState() 方法的例子*](#pushState() 方法示例)部分找到。
+上面这两行的解释可以在上面的 [_pushState() 方法的例子_](#pushstate_方法示例)部分找到。
 
 然后，假设 `https://mozilla.org/bar.html` 执行了下列 JavaScript 代码：
 
@@ -80,7 +80,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
-这将导致URL栏显示 `https://mozilla.org/bar2.html`，但不会导致浏览器加载 `bar2.html` 或甚至检查 `bar2.html` 是否存在。
+这将导致 URL 栏显示 `https://mozilla.org/bar2.html`，但不会导致浏览器加载 `bar2.html` 或甚至检查 `bar2.html` 是否存在。
 
 假设现在用户导航到 `https://www.microsoft.com`，然后点击**返回**按钮。此时，URL 栏将显示 `https://mozilla.org/bar2.html`。如果用户现在再次点击**返回**，URL 栏将显示`https://mozilla.org/foo.html`，完全绕过了 `bar.html`。
 
