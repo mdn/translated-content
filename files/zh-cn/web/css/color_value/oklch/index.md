@@ -25,7 +25,7 @@ oklch(59.69% 0.156 49.77 / .5)
 
   - `H` 为 {{CSSXref("&lt;number&gt;")}} 或 {{CSSXref("&lt;angle&gt;")}}，指定了沿正半 a 轴（紫红方向）的色相角。`90deg` 指向正半 b 轴（芥末黄方向），`180deg` 指向负半 a 轴（蓝绿方向），`270deg` 指向负半 b 轴（天蓝方向）。
 
-  - `A`（阿尔法）可为介于 `0` 和 `1` 之间的 {{CSSXref("&lt;number&gt;")}} 或介于 `0%` 和 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}}，此处数值 `1` 对应 `100%`（完全不透明）。
+  - `A`（alpha）可为介于 `0` 和 `1` 之间的 {{CSSXref("&lt;number&gt;")}} 或介于 `0%` 和 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}}，此处数值 `1` 对应 `100%`（完全不透明）。
 
 ### 形式语法
 
@@ -90,9 +90,9 @@ div {
 
 {{EmbedLiveSample("调整颜色的明度、色度和色相")}}
 
-### 调整颜色的阿尔法值
+### 调整颜色的 alpha 值
 
-下列示例展示了改变颜色函数 `oklch()` 的 `A`（阿尔法）值的效果。为演示不透明度的效果， `red` 和 `red-alpha` 元素与 `#background-div` 元素重叠。`0.4` 的 `A` 值使颜色有 40% 的不透明度。
+下列示例展示了改变颜色函数 `oklch()` 的 `A`（alpha）值的效果。为演示不透明度的效果， `red` 和 `red-alpha` 元素与 `#background-div` 元素重叠。`0.4` 的 `A` 值使颜色有 40% 的不透明度。
 
 #### HTML
 
@@ -132,7 +132,7 @@ div {
 
 #### 结果
 
-{{EmbedLiveSample("调整颜色的阿尔法值")}}
+{{EmbedLiveSample("调整颜色的_alpha_值")}}
 
 ## 规范
 
