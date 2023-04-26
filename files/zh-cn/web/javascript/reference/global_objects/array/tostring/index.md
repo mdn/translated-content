@@ -31,7 +31,7 @@ console.log(arr.toString()); // [object Array]
 console.log(Array.prototype.toString.call({ join: () => 1 })); // 1
 ```
 
-当数组需要被表示为文本值，或者当数组在字符串拼接中被引用时，JavaScript 会自动调用 toString() 方法。
+当数组需要被表示为文本值，或者当数组在字符串拼接中被引用时，JavaScript 会自动调用 `toString()` 方法。
 
 ## 示例
 
