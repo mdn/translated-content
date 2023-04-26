@@ -881,7 +881,7 @@ color: transparent;
   </tbody>
 </table>
 
-起初在 [CSS 第 1 级](https://www.w3.org/TR/REC-CSS1/#color-units)中仅定义了 16 种基本颜色，在 [CSS 第 2 级](https://www.w3.org/TR/CSS2/syndata.html#value-def-color)中添加了 `orange`。Web 设计师认为这些颜色太少，于是浏览器厂商根据 X11 颜色名为颜色添加了大量名字。这些名字先后在 [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/) 和 [CSS 颜色第 3 级](https://www.w3.org/TR/css-color-3/#svg-color) 中获得标准化、正式定义和一致性（某些名字的不同拼写现为别名）。这些颜色名被称为*扩展性颜色关键字*、*X11 颜色*或 *SVG 颜色*。
+起初在 [CSS 第 1 级](https://www.w3.org/TR/REC-CSS1/#color-units)中仅定义了 16 种基本颜色，在 [CSS 第 2 级](https://www.w3.org/TR/CSS2/syndata.html#value-def-color)中添加了 `orange`。Web 设计师认为这些颜色太少，于是浏览器厂商根据 X11 颜色名为颜色添加了大量名字。这些名字先后在 [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/) 和 [CSS 颜色第 3 级](https://www.w3.org/TR/css-color-3/#svg-color)中获得标准化、正式定义和一致性（某些名字的不同拼写现为别名）。这些颜色名被称为*扩展性颜色关键字*、*X11 颜色*或 *SVG 颜色*。
 
 为纪念 [web 先驱 Eric Meyer](https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/)，在 [CSS 颜色第 4 级](https://www.w3.org/TR/css-color-4/#named-colors)中添加了又一种颜色 `rebeccapurple`。
 
