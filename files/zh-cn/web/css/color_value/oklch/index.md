@@ -92,7 +92,7 @@ div {
 
 ### 调整颜色的 alpha 值
 
-下列示例展示了改变颜色函数 `oklch()` 的 `A`（alpha）值的效果。为演示不透明度的效果， `red` 和 `red-alpha` 元素与 `#background-div` 元素重叠。`0.4` 的 `A` 值使颜色有 40% 的不透明度。
+下列示例展示了改变颜色函数 `oklch()` 的 `A`（alpha）值的效果。为演示不透明度的效果，`red` 和 `red-alpha` 元素与 `#background-div` 元素重叠。`0.4` 的 `A` 值使颜色有 40% 的不透明度。
 
 #### HTML
 

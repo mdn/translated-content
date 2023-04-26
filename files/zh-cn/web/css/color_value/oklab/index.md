@@ -101,7 +101,7 @@ div {
 
 ### 用 oklab() 调整不透明度
 
-下列示例展示了改变 `oklab()` 函数的 `A`（alpha）值的效果。为演示不透明度的效果， `red` 和 `red-alpha` 元素与 `#background-div` 元素重叠。给予 `red-alpha` 元素 `0.4` 的不透明度使其显得比 `red` 元素更透明。
+下列示例展示了改变 `oklab()` 函数的 `A`（alpha）值的效果。为演示不透明度的效果，`red` 和 `red-alpha` 元素与 `#background-div` 元素重叠。给予 `red-alpha` 元素 `0.4` 的不透明度使其显得比 `red` 元素更透明。
 
 #### HTML
 
