@@ -49,7 +49,7 @@ On aurait également pu écrire cet exemple avec les deux parties du texte de ba
 </ruby>
 ```
 
-### Résultat
+#### Résultat
 
 {{EmbedLiveSample('')}}
 
