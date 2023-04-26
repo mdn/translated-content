@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Right_shift
 
 {{jsSidebar("Operators")}}
 
-**右移运算符（`>>`）**将一个操作数的二进制表示形式向右移动指定位数，该操作数可以是 `Number` 类型或者 `BigInt` 类型。右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。该操作也称为“符号位传播右移”（sign-propagating right shift）或“算术右移”（arithmetic right shift），因为返回值的符号位与第一个操作数的符号位相同。
+**右移运算符（`>>`）** 将一个操作数的二进制表示形式向右移动指定位数，该操作数可以是 `Number` 类型或者 `BigInt` 类型。右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。该操作也称为“符号位传播右移”（sign-propagating right shift）或“算术右移”（arithmetic right shift），因为返回值的符号位与第一个操作数的符号位相同。
 
 {{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}
 
@@ -17,7 +17,7 @@ x >> y
 
 ## 描述
 
-**右移运算符（`>>`）**针对 `Number` 和 [`BigInt`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 两种类型的操作数进行了重载。对于 `Number` 类型，该运算符返回一个32位整数；对于 `BigInt` 类型，该运算符也返回一个 `BigInt` 。右移运算符首先[将两个操作数强制转换为数值](/zh-CN/docs/Web/JavaScript/Data_structures#%E5%BC%BA%E5%88%B6%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2)并测试它们的类型。如果两个操作数都转换成 `BigInt`，则执行 `BigInt` 右移； 否则，它将两个操作数都转换为 [32 位整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#%E5%9B%BA%E5%AE%9A%E5%AE%BD%E5%BA%A6%E6%95%B0%E5%80%BC%E8%BD%AC%E6%8D%A2)并执行 `Number` 类型右移。 如果一个操作数变为 `BigInt` 而另一个变为 `Number`，则会抛出 {{jsxref("TypeError")}}。
+**右移运算符（`>>`）** 针对 `Number` 和 [`BigInt`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 两种类型的操作数进行了重载。对于 `Number` 类型，该运算符返回一个32位整数；对于 `BigInt` 类型，该运算符也返回一个 `BigInt` 。右移运算符首先[将两个操作数强制转换为数值](/zh-CN/docs/Web/JavaScript/Data_structures#%E5%BC%BA%E5%88%B6%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2)并测试它们的类型。如果两个操作数都转换成 `BigInt`，则执行 `BigInt` 右移； 否则，它将两个操作数都转换为 [32 位整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#%E5%9B%BA%E5%AE%9A%E5%AE%BD%E5%BA%A6%E6%95%B0%E5%80%BC%E8%BD%AC%E6%8D%A2)并执行 `Number` 类型右移。 如果一个操作数变为 `BigInt` 而另一个变为 `Number`，则会抛出 {{jsxref("TypeError")}}。
 
 由于新的数字最左边位与之前数字的最左边位是相同值，故符号位（最左边的位）不会改变，因此被称为“符号位传播”（sign-propagating）。
 
