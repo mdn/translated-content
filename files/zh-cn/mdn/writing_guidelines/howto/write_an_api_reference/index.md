@@ -11,7 +11,7 @@ slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 
 在实际撰写 API 参考文档前，应该提前准备和计划一些事情。
 
-### 先决知识
+### 必备知识
 
 假定阅读这篇指南前你已经在如下方面拥有一些适当的知识：
 
@@ -20,7 +20,7 @@ slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 
 其他知识可以顺路学习到。
 
-### 先决资源
+### 必备资源
 
 在开始撰写 API 参考文档前，你需要准备：
 
