@@ -27,7 +27,7 @@ reverse()
 
 `reverse()` 方法会保留空槽。如果源数组是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则空槽对应的新索引将被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)，并且也成为空槽。
 
-`reverse()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类数组对象，但这个方法不适用于它们，因为字符串是不可变的。
+`reverse()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似于数组的，但这个方法不适用于它们，因为字符串是不可变的。
 
 ## 示例
 
@@ -50,7 +50,7 @@ console.log(items); // [3, 2, 1]
 ```js
 const numbers = [3, 2, 4, 1, 5];
 const reversed = numbers.reverse();
-// numbers 和 reversed 的顺序都是颠倒的 [5, 1, 4, 2, 3]。
+// numbers 和 reversed 的顺序都是颠倒的 [5, 1, 4, 2, 3]
 reversed[0] = 5;
 console.log(numbers[0]); // 5
 ```
