@@ -32,32 +32,12 @@ slug: Web/HTML/Element/blink
 如果真的需要 polyfill，請使用以下的 CSS。它支援 IE10 以上。
 
 ```html
-blink {
-    -webkit-animation: 2s linear infinite condemned_blink_effect; // for android
-    animation: 2s linear infinite condemned_blink_effect;
-}
-@-webkit-keyframes condemned_blink_effect { // for android
-    0% {
-        visibility: hidden;
-    }
-    50% {
-        visibility: hidden;
-    }
-    100% {
-        visibility: visible;
-    }
-}
-@keyframes condemned_blink_effect {
-    0% {
-        visibility: hidden;
-    }
-    50% {
-        visibility: hidden;
-    }
-    100% {
-        visibility: visible;
-    }
-}
+blink { -webkit-animation: 2s linear infinite condemned_blink_effect; // for
+android animation: 2s linear infinite condemned_blink_effect; }
+@-webkit-keyframes condemned_blink_effect { // for android 0% { visibility:
+hidden; } 50% { visibility: hidden; } 100% { visibility: visible; } } @keyframes
+condemned_blink_effect { 0% { visibility: hidden; } 50% { visibility: hidden; }
+100% { visibility: visible; } }
 ```
 
 ## 瀏覽器相容性

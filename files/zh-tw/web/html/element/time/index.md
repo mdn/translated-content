@@ -14,7 +14,7 @@ slug: Web/HTML/Element/time
 | 允許之內容                                          | [Phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content).                                                                                         |
 | 省略標籤                                            | 不可。起始標籤和結束標籤是強制必要的                                                                                                                              |
 | 可接受的副 elements                                 | 任何接受 phrasing content 的 element。                                                                                                                            |
-| DOM interface                                       | {{domxref("HTMLTimeElement")}}                                                                                                                          |
+| DOM interface                                       | {{domxref("HTMLTimeElement")}}                                                                                                                                    |
 
 ## Attributes
 
@@ -42,7 +42,9 @@ slug: Web/HTML/Element/time
 #### HTML
 
 ```html
-<p>The concert took place on <time datetime="2001-05-15T19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15T19:00">May 15</time>.
+</p>
 ```
 
 #### Output

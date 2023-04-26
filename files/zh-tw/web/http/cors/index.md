@@ -87,11 +87,11 @@ slug: Web/HTTP/CORS
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+var url = "http://bar.other/resources/public-data/";
 
 function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.onreadystatechange = handler;
     invocation.send();
   }
@@ -323,11 +323,11 @@ CORS 通訊協定最初要求此預檢請求重新導向的行為，但[在隨�
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/credentialed-content/';
+var url = "http://bar.other/resources/credentialed-content/";
 
-function callOtherDomain(){
-  if(invocation) {
-    invocation.open('GET', url, true);
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();
