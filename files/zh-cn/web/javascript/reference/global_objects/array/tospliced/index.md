@@ -19,8 +19,8 @@ toSpliced(start, deleteCount, item1, item2, itemN)
 ### 参数
 
 - `start`
-  - : 数组开始变化时，从 0 开始的索引会[转换成整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
-    - 负索引从数组末尾开始计数——如果 `start < 0`，使用 `start + array.length`。
+  - : 从 0 开始计算的索引，表示要开始改变数组的位置，它会被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+    - 如果 `start < 0`，则从数组末尾开始计数，使用 `start + array.length`。
     - 如果 `start < -array.length` 或者省略了 `start`，则使用 `0`。
     - 如果 `start >= array.length`，不会删除任何元素，但该方法将表现为添加元素的函数，添加提供的所有元素。
 
