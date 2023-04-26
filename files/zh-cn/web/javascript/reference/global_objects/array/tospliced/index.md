@@ -52,9 +52,9 @@ toSpliced(start, deleteCount, item1, item2, itemN)
 
 ## 示例
 
-### 删除，添加和替换元素
+### 删除、添加和替换元素
 
-你可以通过使用 `toSpliced()` 来删除、添加和替换数组中的元素，并生成一个的数组，这比使用 `slice()` 和 `concat()` 更高效。
+你可以通过使用 `toSpliced()` 来删除、添加和替换数组中的元素，并生成一个新的数组，这比使用 `slice()` 和 `concat()` 更高效。
 
 ```js
 const months = ["Jan", "Mar", "Apr", "May"];
@@ -71,11 +71,11 @@ console.log(months3); // ["Jan", "Feb", "May"]
 const months4 = months3.toSpliced(1, 1, "Feb", "Mar");
 console.log(months4); // ["Jan", "Feb", "Mar", "May"]
 
-// 原始数据不会被修改
+// 原数组不会被修改
 console.log(months); // ["Jan", "Mar", "Apr", "May"]
 ```
 
-### 在稀疏数组中使用 toSpliced()
+### 在稀疏数组上使用 toSpliced()
 
 `toSpliced()` 方法总是会生成一个密集的数组。
 
