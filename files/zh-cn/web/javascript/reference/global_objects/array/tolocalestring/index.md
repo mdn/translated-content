@@ -30,7 +30,7 @@ toLocaleString(locales, options)
 
 ## 描述
 
-`Array.prototype.toLocaleString` 方法遍历数组内容，使用提供的 `locales` 和 `options` 参数调用每个元素的 `toLocaleString` 方法，并使用分隔符（例如逗号“，”）拼接起来。请注意，该方法本身不会使用这两个参数——它只是将其传递给每个元素的 `toLocaleString()`。分隔符的选择取决于主机当前的语言环境，而不是 `locales` 参数。
+`Array.prototype.toLocaleString` 方法遍历数组内容，使用提供的 `locales` 和 `options` 参数调用每个元素的 `toLocaleString` 方法，并使用实现定义的分隔符（例如逗号“，”）拼接起来。请注意，该方法本身不会使用这两个参数——它只是将其传递给每个元素的 `toLocaleString()`。分隔符的选择取决于主机当前的语言环境，而不是 `locales` 参数。
 
 如果一个元素是 `undefined`、`null`，它会被转换为空字符串，而不是 `"null"` 或者 `"undefined"`。
 
