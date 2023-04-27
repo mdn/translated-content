@@ -5,7 +5,7 @@ slug: Web/API/TransformStreamDefaultController
 
 {{DefaultAPISidebar("Streams API")}}
 
-[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStreamDefaultController`** 接口提供了操作关联的 {{domxref("ReadableStream")}} 和 {{domxref("WritableStream")}} 的方法。
+[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStreamDefaultController`** 接口提供了操作关联的 {{domxref("ReadableStream")}} 和 {{domxref("WritableStream")}} 的方法。
 
 当构造 {{domxref("TransformStream")}} 时，会创建一个 `TransformStreamDefaultController`。因此它没有构造函数。获取 `TransformStreamDefaultController` 实例的方式是通过 {{domxref("TransformStream.TransformStream", "TransformStream()")}} 的回调方法。
 
