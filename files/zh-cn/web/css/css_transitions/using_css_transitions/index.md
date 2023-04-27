@@ -91,7 +91,7 @@ div {
 - `elapsedTime`
   - : 浮点数，指示当触发这个事件时过渡已运行的时间（秒）。这个值不受 {{ cssxref("transition-delay") }} 影响。
 
-照例可以用 {{ domxref("element.addEventListener()") }} 方法来监听这个事件：
+照例可以用 {{DOMXref("EventTarget/addEventListener", "addEventListener()")}} 方法来监听这个事件：
 
 ```js
 el.addEventListener("transitionend", updateTransition, true);
@@ -258,4 +258,4 @@ p {
 ## 参见
 
 - [CSS3 Dock Menu](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) using CSS transitions
-- {{DOMXref("TransitionEvent")}} 接口和 {{DOMXref("transitionend_event", "transitionend")}} [`transitionend`](/zh-CN/docs/Mozilla_event_reference/transitionend) 事件
+- {{DOMXref("TransitionEvent")}} 接口和 {{DOMXref("Element/transitionend_event", "transitionend")}} 事件
