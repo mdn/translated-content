@@ -67,7 +67,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 ### 数字和日期对象
 
-用来表示数字、日期和数学计算的对象。
+用来表示数字、日期和执行数学计算的对象。
 
 - {{JSxRef("Number")}}
 - {{JSxRef("BigInt")}}
