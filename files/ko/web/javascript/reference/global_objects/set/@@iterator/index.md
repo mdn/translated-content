@@ -11,7 +11,7 @@ l10n:
 [Iteration 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)을 구현하며,
 [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax) 및
 [`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 루프와 같이
-반복을 예상하는 대부분의 구문에서 Set을 사용할 수 있도록 합니다. Set의 값을 산출하는 반복자를 반환합니다.
+순회를 예상하는 대부분의 구문에서 Set을 사용할 수 있도록 합니다. Set의 값을 산출하는 반복자를 반환합니다.
 
 이 속성의 초기 값은 {{jsxref("Set.prototype.values")}} 속성의 초기 값과 동일한 함수 객체입니다.
 
