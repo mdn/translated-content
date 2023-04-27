@@ -11,12 +11,12 @@ slug: Web/API/ReadableStreamDefaultController
 
 无。`ReadableStreamDefaultController` 实例会在构造 `ReadableStream` 时被自动创造。
 
-## 属性
+## 实例属性
 
 - {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
   - : 返回填充满流的内部队列所需要的大小。
 
-## 方法
+## 实例方法
 
 - {{domxref("ReadableStreamDefaultController.close()")}}
   - : 关闭关联的流。

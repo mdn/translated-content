@@ -41,7 +41,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - `highWaterMark`
       - : 非负整数 - 这定义了在应用背压之前可以包含在内部队列中的块的总数。
     - `size(chunk)`
-      - : 包含参数 `chunk` 的方法 - 这表示每个分块使用的大小（以字节为单位）。
+      - : 包含参数 `chunk` 的方法——这表示每个分块使用的大小（以字节为单位）。
 
     > **备注：** 你可以自定义 `queuingStrategy`，或者使用 {{domxref("ByteLengthQueueingStrategy")}} 或 {{domxref("CountQueueingStrategy")}} 的示例作为对象的值。如果 没有提供 `queuingStrategy`，则默认值与 highWaterMark 为 1 的 `CountQueuingStrategy` 相同。
 

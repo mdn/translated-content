@@ -11,7 +11,7 @@ slug: Web/API/ReadableStreamDefaultReader
 
 然而，请注意，零拷贝传输仅支持自动分配缓冲区的底层字节源这一种底层源。换句话说，流必须同时指定[构造函数](/zh-CN/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其他底层源，流将始终使用来自内置队列的数据满足读取请求。
 
-## 构造方法
+## 构造函数
 
 - [`ReadableStreamDefaultReader()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader)
   - : 创建和返回一个 `ReadableStreamDefaultReader()` 对象实例。
