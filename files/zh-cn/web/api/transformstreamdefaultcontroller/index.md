@@ -9,12 +9,12 @@ slug: Web/API/TransformStreamDefaultController
 
 当构造 {{domxref("TransformStream")}} 时，会创建一个 `TransformStreamDefaultController`。因此它没有构造函数。获取 `TransformStreamDefaultController` 实例的方式是通过 {{domxref("TransformStream.TransformStream", "TransformStream()")}} 的回调方法。
 
-## 属性
+## 实例属性
 
 - {{domxref("TransformStreamDefaultController.desiredSize")}}{{readonlyinline}}
   - : 返回填充满流内部队列的可读端所需要的大小。
 
-## 方法
+## 实例方法
 
 - {{domxref("TransformStreamDefaultController.enqueue()")}}
   - : 排入一个分块（单个数据）到流的可读端。

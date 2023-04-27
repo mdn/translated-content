@@ -14,12 +14,12 @@ slug: Web/API/WritableStream
 - {{domxref("WritableStream.WritableStream", "WritableStream()")}}
   - : 创造一个新的 `WritableStream` 对象。
 
-## 属性
+## 实例属性
 
 - {{domxref("WritableStream.locked")}} {{readonlyinline}}
   - : 一个布尔值，表示 `WritableStream` 是否锁定到一个 writer。
 
-## 方法
+## 实例方法
 
 - {{domxref("WritableStream.abort()")}}
   - : 中止流，使得生产者不能再成功向流写入数据（会立刻返回一个错误状态），并丢弃所有已入队的数据。

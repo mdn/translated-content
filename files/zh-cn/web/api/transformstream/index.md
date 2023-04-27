@@ -18,14 +18,14 @@ slug: Web/API/TransformStream
 - {{domxref("TransformStream.TransformStream", "TransformStream()")}}
   - : 从给定的处理程序中创建并且返回一个转换流对象。
 
-## 属性
+## 实例属性
 
 - {{domxref("TransformStream.readable")}} {{readonlyInline}}
   - : 转换流的 `readable` 端。
 - {{domxref("TransformStream.writable")}} {{readonlyInline}}
   - : 转换流的 `writable` 端。
 
-## 方法
+## 实例方法
 
 无
 
