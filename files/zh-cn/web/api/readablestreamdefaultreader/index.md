@@ -5,7 +5,7 @@ slug: Web/API/ReadableStreamDefaultReader
 
 {{APIRef("Streams")}}
 
-[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **ReadableStreamDefaultReader** 接口表示一个用于读取来自网络提供的流数据（例如 fetch 请求）的默认读取器。
+[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **ReadableStreamDefaultReader** 接口表示一个用于读取来自网络提供的流数据（例如 fetch 请求）的默认 reader。
 
 `ReadableStreamDefaultReader` 可以用于读取底层为任意类型源的 {{domxref("ReadableStream")}}（这与 {{domxref("ReadableStreamBYOBReader")}} 不同，后者仅可以和*底层为字节源*的可读流一起使用）。
 
