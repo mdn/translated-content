@@ -15,7 +15,7 @@ CSS 过渡可以决定哪些属性发生动画效果 (明确地列出这些属�
 
 ## 哪些 CSS 属性可用于过渡？
 
-Web 作者可以定义哪一属性需以何种方式用于动画，由此允许创造复杂的过渡。然而因为为某些属性赋予动画无意义，所以这些属性[无动画性](/zh-CN/docs/CSS/CSS_animated_properties)。
+Web 作者可以定义哪一属性需以何种方式用于动画，由此允许创造复杂的过渡。然而因为为某些属性赋予动画无意义，所以这些属性[无动画性](/zh-CN/docs/Web/CSS/CSS_animated_properties)。
 
 > **备注：** `auto` 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，遵循这点；一些，比如基于 WebKit 的，没有这么严格限制。在 `auto` 上动画结果可能不可预期，这取决于浏览器及其版本，应当避免使用。
 
@@ -70,7 +70,7 @@ CSS 过渡由简写属性 {{cssxref("transition")}} 定义是最好的方式，�
 - {{ cssxref("transition-duration") }}
   - : 指定过渡的时长。或者为所有属性指定一个值，或者指定多个值，为每个属性指定不同的时长。
 - {{ cssxref("transition-timing-function") }}
-  - : 指定一个函数，定义属性值怎么变化。缓动函数 _Timing functions_ 定义属性如何计算。多数 [timing functions](/zh-CN/docs/CSS/timing-function) 由四点定义一个 bezier 曲线。也可以从 [Easing Functions Cheat Sheet](http://easings.net/) 选择缓动效果。
+  - : 指定一个函数，定义属性值怎么变化。缓动函数 _Timing functions_ 定义属性如何计算。多数 [timing functions](/zh-CN/docs/CSS/timing-function) 由四点定义一个 bezier 曲线。也可以从 [Easing Functions Cheat Sheet](https://easings.net/) 选择缓动效果。
 - {{ cssxref("transition-delay") }}
   - : 指定延迟，即属性开始变化时与过渡开始发生时之间的时长。
 
@@ -258,4 +258,4 @@ p {
 ## 参见
 
 - [CSS3 Dock Menu](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) using CSS transitions
-- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/zh-CN/docs/Mozilla_event_reference/transitionend) event.
+- {{DOMXref("TransitionEvent")}} 接口和 {{DOMXref("transitionend_event", "transitionend")}} [`transitionend`](/zh-CN/docs/Mozilla_event_reference/transitionend) 事件
