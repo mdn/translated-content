@@ -7,9 +7,9 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 本章介绍和说明了 JavaScript 中所有的标准内置对象、以及它们的方法和属性。
 
-这里的术语"全局对象"（或标准内置对象）不应与**global 对象**混淆。这里的"全局对象"指的是**处在全局作用域里的多个对象**。
+这里的术语“全局对象”（或标准内置对象）不应与 **global 对象**混淆。这里的“全局对象”指的是**处在全局作用域里的多个对象**。
 
-**global 对象**可以在全局作用域里通过使用{{JSxRef("Operators/this", "this")}}访问到（但只有在 ECMAScript 5 的非严格模式下才可以，在严格模式下得到的是 {{JSxRef("undefined")}}）。其实全局作用域**包含**全局对象中的属性，包括它可能继承来的属性。
+**global 对象**可以在全局作用域里通过使用 {{JSxRef("Operators/this", "this")}} 访问到（但只有在 ECMAScript 5 的非严格模式下才可以，在严格模式下得到的是 {{JSxRef("undefined")}}）。其实全局作用域**包含**全局对象中的属性，包括它可能继承来的属性。
 
 全局作用域中的其他对象则可[由用户的脚本创建](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#创建新对象)，或由宿主程序提供。浏览器环境中所提供的宿主对象的说明可以在这里找到：[API 参考](/zh-CN/docs/Web/API)。
 
@@ -103,7 +103,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 ### 使用键的集合对象
 
-这些集合对象在存储数据时会使用到键，包括可迭代的{{JSxRef("Map")}} 和 {{JSxRef("Set")}}，支持按照插入顺序来迭代元素。
+这些集合对象在存储数据时会使用到键，包括可迭代的 {{JSxRef("Map")}} 和 {{JSxRef("Set")}}，支持按照插入顺序来迭代元素。
 
 - {{JSxRef("Map")}}
 - {{JSxRef("Set")}}
