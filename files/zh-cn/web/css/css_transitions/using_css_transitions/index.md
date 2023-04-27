@@ -1,19 +1,17 @@
 ---
-title: 使用 CSS transitions
+title: 使用 CSS 过渡
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 
-{{CSSRef}} {{SeeCompattable}}
+{{CSSRef}}
 
-**CSS transitions** 提供了一种在更改 CSS 属性时控制动画速度的方法。其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义。
+**CSS 过渡**提供了一种在更改 CSS 属性时控制动画速度的方法。其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS 过渡后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义。
 
-通常将两个状态之间的过渡称为**隐式过渡（implicit transitions）**，因为开始与结束之间的状态由浏览器决定。
+通常将两个状态之间的过渡称为**隐式过渡**，因为开始与结束之间的状态由浏览器决定。
 
 ![A CSS transition tells the browsder to draw the intermediate states between the initial and final states, showing the user a smooth transitions.](/files/4529/TransitionsPrinciple.png)
 
-CSS transitions 可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay），持续多久 (设置 duration) 以及如何动画 (定义*timing function*，比如匀速地或先快后慢)。
-
-> **备注：** transition 可以不用厂商前缀，不过鉴于标准刚刚稳定，对于基于 Webkit 的浏览器仍然需要厂商前缀。如果想兼容旧版本的浏览器那么也需要厂商前缀（例如 Firefox 15 及之前版本，Opera 12 及之前版本)。详情见本页底部的兼容性表格。
+CSS 过渡可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay），持续多久 (设置 duration) 以及如何动画 (定义*timing function*，比如匀速地或先快后慢)。
 
 ## 哪些 CSS 属性可用于过渡？
 
@@ -25,7 +23,7 @@ Web 作者可以定义哪一属性需以何种方式用于动画，由此允许�
 
 ## 多个属性一起动画示例
 
-### HTML 内容
+### HTML
 
 ```html
 <body>
@@ -34,7 +32,7 @@ Web 作者可以定义哪一属性需以何种方式用于动画，由此允许�
 </body>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 .box {
@@ -164,7 +162,7 @@ div {
 
 CSS 的一个常用地方是当鼠标悬停在菜单上时高亮此菜单，使用 transition 效果更佳。
 
-### HTML 内容
+### HTML
 
 ```html
 <div class="sidebar">
@@ -175,7 +173,7 @@ CSS 的一个常用地方是当鼠标悬停在菜单上时高亮此菜单，使�
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 .menuButton {
@@ -257,7 +255,7 @@ p {
 
 {{Specifications}}
 
-## 另见
+## 参见
 
 - [CSS3 Dock Menu](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) using CSS transitions
 - The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/zh-CN/docs/Mozilla_event_reference/transitionend) event.
