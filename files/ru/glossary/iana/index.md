@@ -9,4 +9,3 @@ original_slug: Глоссарий/IANA
 ## Смотрите также:
 
 - [Официальный сайт](https://www.iana.org/)
-- {{interwiki("wikipedia", "Internet Assigned Numbers Authority", "IANA")}} на Википедии

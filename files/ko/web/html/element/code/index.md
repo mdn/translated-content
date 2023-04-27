@@ -80,7 +80,7 @@ CSS `code` 태그 선택자를 사용해 브라우저의 기본 글씨체를 바
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.code")}}
+{{Compat}}
 
 ## 같이 보기
 

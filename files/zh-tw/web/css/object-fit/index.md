@@ -5,8 +5,6 @@ slug: Web/CSS/object-fit
 
 {{CSSRef}}
 
-## Summary
-
 The **`object-fit`** CSS property specifies how the contents of a replaced element should be fitted to the box established by its used height and width.
 
 物件契合(**`object-fit)`**CSS 屬性能指定置換元素(replaced element)的內容要如何契合、安裝到其使用的高度和寬度已確定的框。

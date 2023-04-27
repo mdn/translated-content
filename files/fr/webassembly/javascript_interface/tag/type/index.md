@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/type
 browser-compat: javascript.builtins.WebAssembly.Tag.type
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La méthode **`type()`**, rattachée au prototype d'un objet [`Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag), permet d'accéder à la séquence des types de données associés à la balise.
 

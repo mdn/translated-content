@@ -49,13 +49,7 @@ Web Storage의 두 가지 방식은 다음과 같습니다.
 
 ## 브라우저 호환성
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## 사생활 보호 / 시크릿 모드
 

@@ -33,4 +33,4 @@ La valeur par défaut pour cette propriété sur Firefox est le blanc (`#ffffff`
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.bgColor")}}
+{{Compat}}

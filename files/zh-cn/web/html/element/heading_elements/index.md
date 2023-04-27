@@ -27,7 +27,7 @@ slug: Web/HTML/Element/Heading_Elements
   </tr>
   <tr>
    <th scope="row">允许的 ARIA roles</th>
-   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -65,7 +65,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 下面是这些代码的结果：
 
-{{ EmbedLiveSample('All_headings', '280', '300', '') }}
+{{ EmbedLiveSample('所有标题', '280', '300', '') }}
 
 ### 示例页面
 
@@ -89,7 +89,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 下面是代码的运行结果：
 
-{{ EmbedLiveSample('Example_page', '280', '480', '') }}
+{{ EmbedLiveSample('示例页面', '280', '480', '') }}
 
 ## 无障碍问题
 
@@ -157,7 +157,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 屏幕阅读软件用户的另一种常用导航技术是生成[内容分区](/zh-CN/docs/Web/HTML/Element#内容分区)的列表，并使用其确定页面布局
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
 #### 示例
 

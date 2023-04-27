@@ -29,9 +29,9 @@ Values of this type are objects. They contain the following properties:
 - `url`
   - : `String`. L'URL de la page.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.topSites.MostVisitedURL")}}
+{{Compat}}
 
 ## Exemples
 

@@ -61,9 +61,9 @@ Les événements ont trois fonctions :
         - `cause`
           - : Une valeur {{WebExtAPIRef('cookies.OnChangedCause')}} représentant la raison sous-jacente de la modification du cookie.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.onChanged")}}
+{{Compat}}
 
 ## Exemples
 

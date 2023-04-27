@@ -1,6 +1,6 @@
 ---
 title: <label>
-slug: Web/HTML/Element/Label
+slug: Web/HTML/Element/label
 tags:
   - Element
   - Formulaires

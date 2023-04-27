@@ -18,7 +18,7 @@ slug: Web/API/XPathEvaluator
 - {{DOMxRef("XPathEvaluator.evaluate()")}}
   - : 对 XPath 字符串求值，返回可能的确切类型的匹配结果。
 
-## 例子
+## 示例
 
 下面的实例展示了如何使用`XPathEvaluator`接口。
 
@@ -41,7 +41,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### 结果
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('示例', 400, 70)}}
 
 ## 规范
 
@@ -51,7 +51,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("document.createExpression()")}}
 - {{domxref("XPathExpression")}}

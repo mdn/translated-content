@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 original_slug: Web/API/WebGL_API/Tutorial/Adicionando_conteudo_2D_a_um_contexto_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 Uma vez que você tenha [criado um contexto WebGL](/pt-BR/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL) com sucesso, você pode iniciar a renderizar nele. O mais simples que podemos fazer é desenhar um objeto 2D não texturizado. Então vamos começar por aí, construindo o código necessário para se desenhar um quadrado.
 

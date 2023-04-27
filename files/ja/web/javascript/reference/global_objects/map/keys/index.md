@@ -1,18 +1,20 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
 {{JSRef}}
 
-**`keys()`** メソッドは、 `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい **[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)** オブジェクトを返します。
+**`keys()`** メソッドは、 `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。この具体的な用途では、このイテレーターオブジェクトは反復可能オブジェクトでもあるので、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用することができます。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
 ## 構文
 
-```
-myMap.keys()
+```js-nolint
+keys()
 ```
 
 ### 返値
@@ -24,16 +26,16 @@ myMap.keys()
 ### keys() の使用
 
 ```js
-var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
-var mapIter = myMap.keys();
+const mapIter = myMap.keys();
 
 console.log(mapIter.next().value); // "0"
 console.log(mapIter.next().value); // 1
-console.log(mapIter.next().value); // Object
+console.log(mapIter.next().value); // {}
 ```
 
 ## 仕様書
@@ -42,7 +44,7 @@ console.log(mapIter.next().value); // Object
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Map.keys")}}
+{{Compat}}
 
 ## 関連情報
 

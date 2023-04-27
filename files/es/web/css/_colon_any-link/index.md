@@ -51,4 +51,4 @@ a:-webkit-any-link {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.any-link")}}
+{{Compat}}

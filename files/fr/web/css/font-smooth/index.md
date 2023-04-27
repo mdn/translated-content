@@ -50,7 +50,7 @@ Bien que mentionnée dans les premiers brouillons pour [CSS3 Fonts](https://www.
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-smooth")}}
+{{Compat}}
 
 ## Voir aussi
 

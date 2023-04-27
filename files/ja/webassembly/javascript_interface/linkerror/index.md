@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/LinkError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.RuntimeLinkError`** オブジェクトは、モジュールのインスタンス化の際に発生したエラーを示します (開始した関数での[トラップ](https://webassembly.org/docs/semantics/#traps)を除く)。
 

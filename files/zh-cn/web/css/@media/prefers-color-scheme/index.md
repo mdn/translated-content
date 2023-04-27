@@ -3,6 +3,8 @@ title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
 ---
 
+{{CSSRef}}
+
 **`prefers-color-scheme`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features)用于检测用户是否有将系统的主题色设置为亮色或者暗色。
 
 ## 语法
@@ -20,7 +22,7 @@ slug: Web/CSS/@media/prefers-color-scheme
 >
 > 目前，若结果为 `no-preference`，无法通过此媒体特性获知宿主系统是否支持设置主题色，或者用户是否主动将其设置为无偏好。出于隐私保护等方面的考虑，用户或用户代理也可能在一些情况下在浏览器内部将其设置为 `no-preference`。
 
-## 样例
+## 示例
 
 这个例子使用了一个有黑色背景和白色文字的元素，当用户使用浅色主题时，会翻转黑白颜色。
 
@@ -63,7 +65,7 @@ slug: Web/CSS/@media/prefers-color-scheme
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -78,5 +80,3 @@ slug: Web/CSS/@media/prefers-color-scheme
 - [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
 - Changing color schemes in [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/) and [Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019).
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/CSS/@media/")}}

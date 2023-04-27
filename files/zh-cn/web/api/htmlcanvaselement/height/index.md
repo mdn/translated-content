@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/height
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.height`** 属性是一个正`整数` ，使用了{{HTMLElement("canvas")}} 元素的 HTML 属性{{htmlattrxref("height", "canvas")}}来反映该元素高度的 CSS 像素值。当该属性没有被定义，或被定义为一个无效值（如负值）时，将使用`150`作为它的默认值。
+**`HTMLCanvasElement.height`** 属性是一个正`整数` ，使用了{{HTMLElement("canvas")}} 元素的 HTML 属性[`height`](/zh-CN/docs/Web/HTML/Element/canvas#height)来反映该元素高度的 CSS 像素值。当该属性没有被定义，或被定义为一个无效值（如负值）时，将使用`150`作为它的默认值。
 
 控制 canvas 元素大小的属性有两个，这是其中一个，还有一个是{{domxref("HTMLCanvasElement.width")}}。
 

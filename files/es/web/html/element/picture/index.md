@@ -48,7 +48,7 @@ El atributo `media` permite especificar una media query que el agente de usuario
 El atributo `type` permite especificar un tipo MIME para los recursos dados en el atributo srcset del elemento {{HTMLElement("source")}}. Si el agente de usuario no soporta dicho tipo, el elemento {{HTMLElement("source")}} es omitido.
 
 ```html
-​<picture>
+<picture>
  <source srcset="mdn-logo.svg" type="image/svg+xml">
  <img src="mdn-logo.png" alt="MDN">
 </picture>
@@ -58,9 +58,9 @@ El atributo `type` permite especificar un tipo MIME para los recursos dados en e
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## Ver también
 

@@ -21,7 +21,7 @@ Here we see a standard disclosure widget with the label "System Requirements", i
 
 ![Screenshot of open <details> widget. The triangle now points downward, and a detailed description of what “System Requirements” means is shown.](details-open.png)
 
-From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute.
+From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its [`open`](/zh-CN/docs/Web/HTML/Element/details#open) attribute.
 
 By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 
@@ -62,7 +62,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 
 此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("open")}}
+- `open`
   - : This Boolean attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently visible. The default, `false`, means the details are not visible.
 
 ## 事件
@@ -81,7 +81,7 @@ details.addEventListener("toggle", event => {
 });
 ```
 
-## 例子
+## 示例
 
 ### A simple disclosure example
 

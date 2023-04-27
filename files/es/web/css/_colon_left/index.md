@@ -36,7 +36,7 @@ La dirección principal de escritura del documento determina si una página es "
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.left")}}
+{{Compat}}
 
 ## Ver También
 

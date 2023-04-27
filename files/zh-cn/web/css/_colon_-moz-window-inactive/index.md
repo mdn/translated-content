@@ -25,7 +25,7 @@ slug: Web/CSS/:-moz-window-inactive
 
 ### CSS
 
-```
+```css
 #mybox {
   background: linear-gradient(to bottom, yellow, cyan);
   width: 200px;
@@ -39,11 +39,11 @@ slug: Web/CSS/:-moz-window-inactive
 
 ### 结果
 
-{{EmbedLiveSample('Example', 220, 220)}}
+{{EmbedLiveSample('示例', 220, 220)}}
 
 您可以将其视为{{LiveSampleLink('Example', 'live sample here')}}。
 
-## 产品规格
+## 规范
 
 不属于任何规范。这是专门针对 Gecko 的专有伪类。
 

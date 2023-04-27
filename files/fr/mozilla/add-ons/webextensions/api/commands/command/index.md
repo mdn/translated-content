@@ -31,9 +31,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `shortcut`{{optional_inline}}
   - : `string`. clef(s) utilisée pour exécuter cette commande , spécifiée comme une chaîne comme "Ctrl+Shift+Y".
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.commands.Command")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -3,7 +3,7 @@ title: 函式
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 函式是構成 javascript 的基本要素之一。一個函式本身就是一段 JavaScript 程序—包含用於執行某一個任務或計算的語法。要呼叫某一個函式之前，你必需先在這個函式欲執行的 scope 中定義它。
 
@@ -81,7 +81,7 @@ var factorial = function fac(n) {return n<2 ? 1 : n*fac(n-1)};
 console.log(factorial(3));
 ```
 
-函式表達式在將函式作為一個參數傳遞給其它函式時十分方便。下面的例子展示了一個叫 map 的函式如何 ​​ 被定義，而後呼叫一個匿名函式作為其第一個參數：
+函式表達式在將函式作為一個參數傳遞給其它函式時十分方便。下面的例子展示了一個叫 map 的函式如何 被定義，而後呼叫一個匿名函式作為其第一個參數：
 
 ```js
 function map(f,a) {

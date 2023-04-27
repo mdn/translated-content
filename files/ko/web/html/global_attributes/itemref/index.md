@@ -53,7 +53,7 @@ slug: Web/HTML/Global_attributes/itemref
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemref")}}
+{{Compat}}
 
 ## 같이 보기
 

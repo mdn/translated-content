@@ -14,7 +14,6 @@ The [same-origin security policy (рус. "правило ограничения
 ### Основная база знаний
 
 - [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS) на MDN
-- {{Interwiki("wikipedia", "Cross-origin resource sharing")}} на Wikipedia
 
 ### CORS заголовки
 

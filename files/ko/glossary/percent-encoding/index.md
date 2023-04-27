@@ -1,6 +1,6 @@
 ---
 title: Percent-encoding(퍼센트 인코딩)
-slug: Glossary/percent-encoding
+slug: Glossary/Percent-encoding
 ---
 
 **Percent-encoding** 은 {{Glossary("URL", "URL")}} 맥락에서 특정 의미를 갖는 8비트 문자로 인코딩하는 메커니즘입니다. URL 인코딩이라고도 합니다. 인코딩은 '%' 다음에 변경할 문자를 ASCII 값으로 표현되는 16진수가 위치하는 대체 문자열로 구성됩니다.

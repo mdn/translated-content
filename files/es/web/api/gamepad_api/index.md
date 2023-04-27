@@ -48,9 +48,9 @@ Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/G
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## Ver también
 

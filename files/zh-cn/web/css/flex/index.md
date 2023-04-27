@@ -167,15 +167,15 @@ flex: unset;
 }
 ```
 
-{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("描述", 1200, 370, "", "", "example-outcome-frame")}}
 
 默认情况下，元素不会缩短至小于内容框尺寸，若想改变这一状况，请设置元素的{{cssxref("min-width")}} 与 {{cssxref("min-height")}}属性。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 

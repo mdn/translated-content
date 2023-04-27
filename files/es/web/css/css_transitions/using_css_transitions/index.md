@@ -51,7 +51,7 @@ Las transiciones y las animaciones CSS pueden usarse para animar las siguientes 
 | Propiedad                                                                   | Tipo de valor                                                                                            |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | {{ cssxref("background-color") }}                                | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("background-image") }}                                | solo degradado; no está implementado en Firefox (see {{ bug(536540) }})                           |
+| {{ cssxref("background-image") }}                                | solo degradado; no está implementado en Firefox (see [Error 536540 en Firefox](https://bugzil.la/536540))                           |
 | {{ cssxref("background-position") }}                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
 | {{ cssxref("background-size") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
 | {{ cssxref("border-color") }} (including sub-properties)         | {{cssxref("&lt;color&gt;")}}                                                                     |
@@ -155,7 +155,7 @@ div {
 
 Las funciones de intervalos determinan el cálculo de los valores intermedios de la transición. La función de intervalo puede especificarse proporcionando el gráfico de la función correspondiente, como lo definen los cuatro puntos que definen una cúbica bézier:
 
-![](/@api/deki/files/5226/=transition-timing-function.png)
+![](transition-timing-function.png)
 
 En lugar de especificar directamente una bézier, existen valores de intervalos predeterminados:
 

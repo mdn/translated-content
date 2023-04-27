@@ -17,7 +17,7 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
 </pre>
 
-> **참고:** **노트**: 일반 객체를 key-value 저장소로 사용할 때 [pitfalls](http://www.2ality.com/2012/01/objects-as-maps.html)과 관련된 사항을 막기 위해 Web Storage API(`setItem`, `getItem`, `removeItem`, `key`, `length`)를 사용하는 걸 권장합니다.
+> **참고:** 일반 객체를 key-value 저장소로 사용할 때 [pitfalls](http://www.2ality.com/2012/01/objects-as-maps.html)과 관련된 사항을 막기 위해 Web Storage API(`setItem`, `getItem`, `removeItem`, `key`, `length`)를 사용하는 걸 권장합니다.
 
 Web Storage는 두 메커니즘을 가지고 있습니다.
 
@@ -179,11 +179,11 @@ Here we add an event listener to the `window` object that fires when the {{domxr
 - {{domxref("Storage.removeItem()")}}는 — 삭제하고 싶은 데이터의 키 — 한 개의 인자를 받습니다. 그리고 해당 도메인의 저장소 객체에서 데이터를 제거합니다.
 - {{domxref("Storage.clear()")}}는 아무 인자도 받지 않습니다. 그리고 해당 도메인의 저장소 객체 전체를 비워버립니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

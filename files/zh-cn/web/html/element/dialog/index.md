@@ -53,7 +53,7 @@ slug: Web/HTML/Element/dialog
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>
@@ -68,7 +68,7 @@ slug: Web/HTML/Element/dialog
 
 > **警告：** `tabindex` 属性不能被使用在 `<dialog>` 元素上。
 
-- {{htmlattrdef("open")}}
+- `open`
   - : 指示这个对话框是激活的和能互动的。当没有设置 `open` 属性时，对话框*不应该*显示给用户。推荐使用 `.show()` 或 `.showModal()` 方法来渲染对话框，而不是使用 `open` 属性。
 
 ## 无障碍考虑
@@ -83,7 +83,7 @@ slug: Web/HTML/Element/dialog
 
 确保你的对话框实现不会破坏预期的默认行为，并遵循正确的标签建议。
 
-## 使用备注
+## 使用说明
 
 - {{HTMLElement("form")}} 元素可关闭含有属性 `method="dialog"` 的对话框。当提交表单时，对话框的 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 属性将会等于表单中被使用的提交按钮的 `value`。
 - {{cssxref('::backdrop')}} CSS 伪元素可用于给使用 {{domxref("HTMLDialogElement.showModal()")}} 显示的 `<dialog>` 元素背景添加样式，例如在对话框被打开激活时，调暗背景中不可访问的内容。

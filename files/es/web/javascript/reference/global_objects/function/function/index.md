@@ -56,9 +56,9 @@ Los argumentos "`a`" y "`b`" son nombres de argumentos formales que se utilizan 
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.Function")}}
+{{Compat}}
 
 ## Ve también
 

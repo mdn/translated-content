@@ -31,9 +31,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"prompt"`
   - : Le navigateur invitera l'utilisateur, lui demandant de choisir s'il souhaite l'uniquifier ou l'écraser.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.FilenameConflictAction")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

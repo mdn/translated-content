@@ -66,7 +66,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 ### 对预取内容是否有限制？
 
-是的，只有 http\:// (从 {{ Gecko("1.9.1") }} 开始支持 https\:// ) 的 URL 可以被预取。其他协议（如 FTP）没有对客户端缓存提供足够的支持。
+是的，只有 http\:// (从 Gecko 1.9.1 开始支持 https\:// ) 的 URL 可以被预取。其他协议（如 FTP）没有对客户端缓存提供足够的支持。
 
 ### Mozilla 能够预取不同宿主的文档吗？
 
@@ -116,10 +116,6 @@ It is important that websites adopt `<link>` tag based prefetching instead of tr
 
 除了上面已经提到的引用和 URL 跟随含义外，预取通常会导致访问预取站点的 cookie。（例如，如果您使用 google amazon，则 google 结果页面将预取 www\.amazon.com，从而导致 amazon cookie 来回发送。您可以在 Firefox 中阻止第三方 cookie，请参参阅 [Disabling third party cookies](http://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies)。）
 
-### 关于...？
-
-如果您对链接预取有任何疑问或意见，请随时按我的方式发送它们：-)
-
-#### 也可以看看...
+## 参见
 
 [Prefetching Hints](http://www.edochan.com/programming/pf.htm)

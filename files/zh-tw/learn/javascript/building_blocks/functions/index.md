@@ -1,88 +1,83 @@
 ---
-title: 函數 - 可重複使用的代碼塊
+title: 函數 - 可重複使用的程式碼區塊
 slug: Learn/JavaScript/Building_blocks/Functions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
-編碼中的另一個基本概念是函數，它允許您存儲一段代碼，該代碼在定義的塊內執行單個任務，然後在需要時使用一個簡短命令調用該代碼 - 而不必輸入相同的代碼 代碼多次。 在本文中，我們將探索函數背後的基本概念，例如基本語法，如何調用和定義它們，範圍和參數。
+程式設計的另一個基本概念是函數，它允許您儲存一段程式碼，該程式碼在定義的區塊內執行單個任務，然後在需要時使用一個簡短命令調用該程式碼區塊，而不必多次輸入相同的程式碼。 在本文中，我們將探索函數背後的基本概念，例如基本語法、如何調用和定義它們、作用域範圍與參數。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">先備知識：</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
-        <a href="/zh-TW/docs/Learn/JavaScript/First_steps"
-          >JavaScript first steps</a
-        >.
+        基礎電腦術語、對 HTML 及 CSS 有基本認識、<a href="/zh-TW/docs/Learn/JavaScript/First_steps"
+          >JavaScript 的第一步</a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">學習目標：</th>
       <td>
-        To understand the fundamental concepts behind JavaScript functions.
+        了解 JavaScript 函數背後的基本概念。
       </td>
     </tr>
   </tbody>
 </table>
 
-## Where do I find functions?
+## 我在哪能找到函數？
 
-In JavaScript, you'll find functions everywhere. In fact, we've been using functions all the way through the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly, and really exploring their syntax.
+在 JavaScript 裡，你到處都能看到函數的蹤影。事實上，我們在前面的課程中一直都在用函數，只是沒什麼提及而已。如今是時候讓我們詳細探討函數並認真探索它們的語法了。
 
-Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/zh-TW/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop), [while or do...while loop](/zh-TW/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), or [if...else statement](/zh-TW/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), you are making use of a function.
+幾乎每當你使用了包含一對小括號 — `()` — 的 JavaScritp 結構，並且沒有用到諸如 [for 迴圈](/zh-TW/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop)、[while 與 do...while 迴圈](/zh-TW/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)或 [if...else 敘述](/zh-TW/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)等常見的內建語言結構時，你就是在使用函數。
 
-## Built-in browser functions
+## 瀏覽器內建函數
 
-We've made use of functions built in to the browser a lot in this course. Every time we manipulated a text string, for example:
+到目前為止，我們已在課程中大量使用了瀏覽器內建的函數。例如，每當我們操控一個字串時：
 
 ```js
 var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');
 console.log(newString);
-// the replace() string function takes a string,
-// replaces one substring with another, and returns
-// a new string with the replacement made
+// 字串的 replace() 函數會先替換一段子字串，
+// 再回傳替換過後的新字串
 ```
 
-Or every time we manipulated an array:
+或是每當我們操控一個陣列時：
 
 ```js
 var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
 console.log(madeAString);
-// the join() function takes an array, joins
-// all the array items together into a single
-// string, and returns this new string
+// 陣列的 join() 函數會先將所有陣列元素合併，
+// 形成一個新字串，再回傳該新字串
 ```
 
-Or every time we generated a random number:
+或是每當我們產生一個亂數：
 
 ```js
 var myNumber = Math.random();
-// the random() function generates a random
-// number between 0 and 1, and returns that
-// number
+// random() 函數會先產生一個介於 0 到 1 之間
+// 的亂數，再回傳該數字
 ```
 
-...we were using a function!
+……我們其實當在使用函數。
 
-> **備註：** Feel free to enter these lines into your browser's JavaScript console to re-familiarize yourself with their functionality, if needed.
+> **備註：** 若有需要，你可以瀏覽器的 JavaScript 主控台中輸入以上指令碼，藉此重新熟悉這些功能。
 
-The JavaScript language has many built-in functions to allow you to do useful things without having to write all that code yourself. In fact, some of the code you are calling when you **invoke** (a fancy word for run, or execute) a built in browser function couldn't be written in JavaScript — many of these functions are calling parts of the background browser code, which is written largely in low-level system languages like C++, not web languages like JavaScript.
+JavaScript 語言有很多內建函數，讓你不用重覆寫所有程式碼就能做很多事。事實上，在你執行瀏覽器的內建函數時，你呼叫到的某些程式碼並不能用 JavaScript 來寫──很多這種函數是在部分呼叫瀏覽器背景語言，大多是由 C++ 這種低階系統語言寫成，而非 JavaScript 這種網際網路語言。
 
-Bear in mind that some built-in browser functions are not part of the core JavaScript language — some are defined as part of browser APIs, which build on top of the default language to provide even more functionality (refer to [this early section of our course](/zh-TW/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do) for more descriptions). We'll look at using browser APIs in more detail in a later module.
+麻煩謹記在心，有些瀏覽器內建函數不是 JavaScript 語言核心的一部份──有些被定義為瀏覽器 API 的一部份，它們已預設語言為基礎來提供更多功能（[先前的章節](/zh-TW/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do)裡有更多說明）。在未來的模組中我們會更深入探討瀏覽器 API 的用法。
 
-## Functions versus methods
+## 函數（function） vs 方法（method）
 
-One thing we need to clear up before we move on — technically speaking, built in browser functions are not functions — they are **methods**. This sounds a bit scary and confusing, but don't worry — the words function and method are largely interchangeable, at least for our purposes, at this stage in your learning.
+在我們繼續前，有件事需要先釐清──技術上來說，瀏覽器內建函數並不是函數（function）──它們是**方法（method）**。這聽起來有點令人疑惑，不過別擔心──在你目前的學習階段，「函數」與「方法」這兩個詞彙大多時候是可以互換的，至少對我們的目標而言。
 
-The distinction is that methods are functions defined inside objects. Built-in browser functions (methods) and variables (which are called **properties**) are stored inside structured objects, to make the code more efficient and easier to handle.
+這兩個詞的區別在方法（method）是定義在物件裡的函數（function）。瀏覽器內建函數（方法）和變數（此處被稱作**屬性（property）**）被儲存在建構好的物件裡，令程式碼控制起來更有效率也更簡單。
 
-You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
+你還不需要了解 JavaScript 物件的內部運作──在之後的模組我們會學到物件內部的所有運作方式，以及如何創建你自己的物件。此時，我們只需要釐清方法與函數之間任何可能搞混的地方──在你上網查相關教學資源時很可能兩個詞彙都會碰到。
 
-## Custom functions
+## 自訂函數
 
 You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code), we included a custom `draw()` function that looked like this:
 
@@ -114,7 +109,7 @@ function random(number) {
 
 We needed this function because the browser's built-in [Math.random()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function only generates a random decimal number between 0 and 1. We wanted a random whole number between 0 and a specified number.
 
-## Invoking functions
+## 呼叫函數
 
 You are probably clear on this by now, but just in case ... to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
 
@@ -124,10 +119,10 @@ function myFunction() {
 }
 
 myFunction()
-// calls the function once
+// 呼叫一次函數
 ```
 
-## Anonymous functions
+## 匿名函數
 
 You may see functions defined and invoked in slightly different ways. So far we have just created a function like so:
 
@@ -199,12 +194,11 @@ You will mainly use anonymous functions to just run a load of code in response t
 ```js
 myButton.onclick = function() {
   alert('hello');
-  // I can put as much code
-  // inside here as I want
+  // 這邊你的程式碼想寫多長就寫多長
 }
 ```
 
-## Function parameters
+## 函數參數
 
 Some functions require **parameters** to be specified when you are invoking them — these are values that need to be included inside the function parentheses, which it needs to do its job properly.
 
@@ -230,14 +224,14 @@ It should also be noted that sometimes parameters are optional — you don't hav
 ```js
 var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
-// returns 'I love chocolate frogs'
+// 回傳 'I love chocolate frogs'
 var madeAString = myArray.join();
-// returns 'I,love,chocolate,frogs'
+// 回傳 'I,love,chocolate,frogs'
 ```
 
 If no parameter is included to specify a joining/delimiting character, a comma is used by default.
 
-## Function scope and conflicts
+## 函數作用域及衝突
 
 Let's talk a bit about {{glossary("scope")}} — a very important concept when dealing with functions. When you create a function, the variables and other things defined inside the function are inside their own separate **scope**, meaning that they are locked away in their own separate compartments, unreachable from inside other functions or from code outside the functions.
 
@@ -284,7 +278,7 @@ It is a bit like a zoo. The lions, zebras, tigers, and penguins are kept in thei
 
 The zoo keeper is like the global scope — he or she has the keys to access every enclosure, to restock food, tend to sick animals, etc.
 
-### Active learning: Playing with scope
+### 互動學習：玩轉作用域
 
 Let's look at a real example to demonstrate scoping.
 
@@ -380,7 +374,7 @@ Let's look at a real example to demonstrate scoping.
 
 > **備註：** The [ReferenceError: "x" is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 
-### Functions inside functions
+### 函數裡的函數
 
 Keep in mind that you can call a function from anywhere, even inside another function. This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:
 
@@ -430,24 +424,14 @@ function subFunction3(value) {
 }
 ```
 
-## Conclusion
+## 結論
 
-This article has explored the fundamental concepts behind functions, paving the way for the next one in which we get practical and take you through the steps to building up your own custom function.
+這篇文章探討了函數背後的基本觀念，為下一章的實戰演練以及帶你一步步建立你的自訂函數奠定基礎。
 
-## See also
+## 更多請看
 
-- [Functions detailed guide](/zh-TW/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
-- [Functions reference](/zh-TW/docs/Web/JavaScript/Reference/Functions)
-- [Default parameters](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
+- [函數詳細指南](/zh-TW/docs/Web/JavaScript/Guide/Functions) — 包含一些本文為提及的進階功能
+- [函數參考文件](/zh-TW/docs/Web/JavaScript/Reference/Functions)
+- [預設參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[箭頭函數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — 進階概念參考文件
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

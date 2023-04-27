@@ -16,11 +16,11 @@ La API Web Speech tiene una interfaz principal de control para el - {{domxref ("
 
 ### Demo
 
-Para mostrar un uso sencillo del reconocimiento de voz Web, hemos escrito una demo llamada [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer). Cuando se toca o hace click en la pantalla, se puede decir un color HTML, y el color de fondo de la aplicación cambiará a ese color.
+Para mostrar un uso sencillo del reconocimiento de voz Web, hemos escrito una demo llamada [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). Cuando se toca o hace click en la pantalla, se puede decir un color HTML, y el color de fondo de la aplicación cambiará a ese color.
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
 
-Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/web-speech-api/archive/master.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
+Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
 
 ### Compatibilidad de navegadores
 
@@ -171,11 +171,11 @@ La Web Speech API tiene una interface principal controladora — {{domxref("Spee
 
 ### Demo
 
-Para mostrar un uso sencillo de la síntesis de voz Web, tenemos la demo llamada [Speak easy synthesis](https://mdn.github.io/web-speech-api/speak-easy-synthesis/). Esta incluye un juego de controles de formulario para introducir texto a sintetizar, configurar el tono, velocidad de reproducción y la voz a usar cuando el texto sea pronunciado. Después de introducir el texto se puede presionar <kbd>Enter</kbd>/<kbd>Return</kbd> para escucharlo.
+Para mostrar un uso sencillo de la síntesis de voz Web, tenemos la demo llamada [Speak easy synthesis](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/). Esta incluye un juego de controles de formulario para introducir texto a sintetizar, configurar el tono, velocidad de reproducción y la voz a usar cuando el texto sea pronunciado. Después de introducir el texto se puede presionar <kbd>Enter</kbd>/<kbd>Return</kbd> para escucharlo.
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/web-speech-api/archive/master.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
+Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
 
 ### Compatibilidad de navegadores
 

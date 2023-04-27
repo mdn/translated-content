@@ -37,4 +37,4 @@ _自身の親 {{domxref("Event")}} からのプロパティを継承します。
 
 - {{domxref("Event")}} 基本インターフェイス
 - [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API): メディアのチャンクの準備ができるたびに `BlobEvent` オブジェクトを送信します。
-- [Media​Stream Recording API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream Recording API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

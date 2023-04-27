@@ -29,9 +29,9 @@ Les valeurs par défaut de ces propriétés peuvent varier selon les navigateurs
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est une chaîne de caractères. Ce paramètre permet aux utilisateurs de spécifier les compromissions de performance / confidentialité des médias qui affectent la façon dont le trafic WebRTC sera acheminé et la quantité d'informations d'adresse locale exposées. Il peut prendre l'une des valeurs suivantes :
     `"default" "default_public_and_private_interfaces" "default_public_interface_only" "disable_non_proxied_udp"`
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy.network")}}
+{{Compat}}
 
 ## Exemples
 

@@ -101,7 +101,7 @@ Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement)
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## Articles liés
 

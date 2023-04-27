@@ -51,6 +51,6 @@ Para clonar un nodo con el fin de agregarlo a un domento distinto, utiliza {{dom
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.cloneNode")}}
+{{Compat}}

@@ -277,9 +277,9 @@ const nextTick = (() => {
 
 {{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript/promise","Promise.prototype.then")}}
+{{Compat}}
 
 ## Ver también
 

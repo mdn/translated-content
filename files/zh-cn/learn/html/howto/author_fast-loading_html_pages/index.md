@@ -18,7 +18,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 通过压缩——排除不必要空格，注释，和将脚本、CSS 放入外部文件等减小页面的大小，可以在页面结构改变很小的情况下提高下载性能。
 
-诸如 [HTML Tidy](http://tidy.sourceforge.net/) 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其它工具则可以通过重新格式化源代码来压缩 JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。
+诸如 [HTML Tidy](http://tidy.sourceforge.net/) 这类的工具可以从有效的 HTML 源文件中自动截去行首空格和额外的空行，其他工具则可以通过重新格式化源代码来压缩 JavaScript 或者通过混淆源码将长标识符替换为短标识符来减小文件大小。
 
 ### 最小化文件数量
 
@@ -73,7 +73,7 @@ Further reading:
 
 使用现代 CSS 减少标记（markup）的用量，可以减少对（spacer）图片的需求。在布局方面，图片通常可以用风格化的文本（text）来替代，这样会“节省”许多资源。
 
-使用合法标记还有其它优点。首先，浏览器在解释 HTML 时无需做错误校正（除了一些哲理性的问题，例如，是允许用户输入格式不一致，而后再用程序“校准”或统一化呢？还是加强约束规则，限制用户输入的格式？）。
+使用合法标记还有其他优点。首先，浏览器在解释 HTML 时无需做错误校正（除了一些哲理性的问题，例如，是允许用户输入格式不一致，而后再用程序“校准”或统一化呢？还是加强约束规则，限制用户输入的格式？）。
 
 再者，合法标记可以让那些给你的网站做预处理的工具功能最大化。例如，[HTML Tidy](http://tidy.sourceforge.net/) 可以移除空白（whitespace）和可选的末尾标记（ending tags）；然而，在有严重的错误标记的网页中这些工具便无法工作。
 
@@ -155,7 +155,7 @@ table-layout: fixed;
     - `{{htmlelement('script')}}`
       DHTML 脚本通常在页面完全加载或者所有必要的对象（objects）已初始化完毕之后才能运行。没有必要在页面内容之前加载这些脚本，这只会拖慢页面加载和初始化的体验。在调试维护中把不相关的 script 拆分在不同文件中，且尽量减少文件的数量可以提高性能。如有图像用到了反转效果，你应该在页面内容下载完后预加载这些图像。
 
-## 相关链接
+## 参见
 
 - 书籍：["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
 - 非常棒、讲的很全 [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html) (Yahoo!)

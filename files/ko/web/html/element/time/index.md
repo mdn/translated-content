@@ -112,7 +112,7 @@ slug: Web/HTML/Element/time
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## 같이 보기
 

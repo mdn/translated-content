@@ -1,6 +1,6 @@
 ---
 title: Loop (ループ)
-slug: Glossary/loop
+slug: Glossary/Loop
 ---
 
 ループは、{{Glossary("computer programming","コンピュータプログラミング")}}において、一定の条件に遭遇するまで継続的に繰り返される一連の命令です。例えば、データ項目を取得して加工しながら、カウンターが所定の値に達するなどいくつかの{{Glossary("conditional","条件")}}をチェックするというような処理です。

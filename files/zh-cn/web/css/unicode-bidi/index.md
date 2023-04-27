@@ -45,11 +45,11 @@ unicode-bidi: unset;
   - : 这个关键字在计算元素方向的时候，不考虑父元素的双向状态，也不考虑 {{cssxref("direction")}} 属性的值。它是使用 Unicode 双向算法的 P2 和 P3 规则计算的。
     这个值允许按照 Unicode 双向算法显示已经格式化的数据。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### CSS
 
@@ -73,7 +73,7 @@ unicode-bidi: unset;
 
 ### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

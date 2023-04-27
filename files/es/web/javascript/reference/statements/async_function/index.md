@@ -123,9 +123,9 @@ Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro 
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## Véase también
 

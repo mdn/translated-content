@@ -35,7 +35,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 - {{cssxref("text-emphasis-color")}}
   - : The color to use when drawing emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
 - {{cssxref("caret-color")}}
-  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML {{htmlattrxref("contenteditable")}} attribute is set.
+  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) attribute is set.
 
 ### 盒
 
@@ -65,9 +65,9 @@ You can use the {{cssxref("border")}} shorthand property, which lets you configu
 - {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
   - : These let you color the edges of the border closest to to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
 
-### 其它方式
+### 其他方式
 
-CSS 并不是唯一支持颜色的 web 技术。同时还有其它支持颜色的图形技术。
+CSS 并不是唯一支持颜色的 web 技术。同时还有其他支持颜色的图形技术。
 
 - HTML [Canvas API](/zh-CN/docs/Web/API/Canvas_API)
   - : Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) to learn more.
@@ -200,7 +200,7 @@ th {
 </table>
 ```
 
-{{EmbedLiveSample("hsl-swatches", 300, 260)}}
+{{EmbedLiveSample("HSL 函数表示法s", 300, 260)}}
 
 > **备注：** Note that when you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
@@ -214,7 +214,7 @@ The easiest way to apply color to elements—and the way you'll usually do it—
 
 Let's take a look at an example, starting by looking at the results we're trying to achieve:
 
-{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}
+{{EmbedLiveSample("在样式表中指定颜色", 650, 150)}}
 
 #### HTML
 
@@ -309,7 +309,7 @@ Finally, the `.boxRight` class describes the unique properties of the box that's
 
 ## 让用户选择颜色
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://zh.wikipedia.org/wiki/color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://zh.wikipedia.org/wiki/color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/zh-CN/docs/Web/HTML/Element/input#type) attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#十六进制颜色码) covered above.
 
@@ -317,7 +317,7 @@ The `<input>` element represents a color only in the [hexadecimal string notatio
 
 Let's look at a simple example, in which the user can choose a color. As the user adjusts the color, the border around the example changes to reflect the new color. After finishing up and picking the final color, the color picker's value is displayed.
 
-{{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
+{{EmbedLiveSample("示例：选择一个颜色", 525, 275)}}
 
 > **备注：** On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
 
@@ -470,7 +470,7 @@ You can set `color-adjust` to `exact` to tell the browser that the element or el
 
 > **备注：** There is no guarantee, though, that `color-adjust: exact` will result in your CSS being used exactly as given. If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `color-adjust`.
 
-## 相关链接
+## 参见
 
 - [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/zh-CN/docs/Web/Guide/Graphics)

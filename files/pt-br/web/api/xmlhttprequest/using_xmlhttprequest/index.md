@@ -139,9 +139,9 @@ oReq.open();
 
 > **Nota:** Atualmente, existem bugs em aberto para o evento de progresso que continua fetando a versão 25 do Firefox sobre [OS X](https://bugzilla.mozilla.org/show_bug.cgi?id=908375) e [Linux](https://bugzilla.mozilla.org/show_bug.cgi?id=786953).
 
-> **Nota:** Iniciando no {{Gecko("9.0")}}, eventos de progresso agora podem ser invocados a entrar para cada pedaço de dados recebidos, incluindo o último bloco, nos casos em que o último pacote é recebido e a conexão fechada antes do evento progresso ser disparado. Neste caso, o evento de progresso é automaticamente acionado quando o evento load ocorre para esse pacote. Isso permite que você agora acompanhe de forma confiável apenas observando o evento de progresso
+> **Nota:** Iniciando no Gecko 9.0, eventos de progresso agora podem ser invocados a entrar para cada pedaço de dados recebidos, incluindo o último bloco, nos casos em que o último pacote é recebido e a conexão fechada antes do evento progresso ser disparado. Neste caso, o evento de progresso é automaticamente acionado quando o evento load ocorre para esse pacote. Isso permite que você agora acompanhe de forma confiável apenas observando o evento de progresso
 
-> **Nota:** A partir do {{Gecko("12.0")}}, se o seu evento de progresso e chamado com um `responseType` de "moz-blob", o valor da resposta será um {{domxref("Blob")}} contendo os dados recebidos até agorar.
+> **Nota:** A partir do Gecko 12.0, se o seu evento de progresso e chamado com um `responseType` de "moz-blob", o valor da resposta será um {{domxref("Blob")}} contendo os dados recebidos até agorar.
 
 POde-se também detectar todas as três condições de fim de carga (`abort`, `load`, or `error`) usando o evento `loadend`:
 
@@ -653,10 +653,6 @@ oReq.send(null);
 ```
 
 ## Security
-
-{{fx_minversion_note(3, "Versions of Firefox prior to Firefox 3 allowed you to set the preference <code>capability.policy..XMLHttpRequest.open</code> to <code>allAccess</code> to give specific sites cross-site access. This is no longer supported.")}}
-
-{{fx_minversion_note(5, "Versions of Firefox prior to Firefox 5 could use <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> to request cross-site access. This is no longer supported, even though it produces no warning and permission dialog is still presented.")}}
 
 The recommended way to enable cross-site scripting is to use the `Access-Control-Allow-Origin` HTTP header in the response to the XMLHttpRequest.
 

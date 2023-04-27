@@ -42,12 +42,10 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance)有着涵盖性能要
 
 - [Performance API](/zh-CN/docs/Web/API/Performance_API/Using_the_Performance_API)
   - : 该指南介绍了如何使用 [High-Resolution Time](https://w3c.github.io/hr-time/) 标准中定义的 [`Performance`](/zh-CN/docs/Web/API/Performance) 接口。
-- [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
-  - : [资源加载和定时](/zh-CN/docs/Web/API/Resource_Timing_API)加载这些资源，包括管理资源缓冲区和处理 CORS
-- [性能时间线](/zh-CN/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-  - : [Performance Timeline](/zh-CN/docs/Web/API/Performance_Timeline) 标准定义了对 [`Performance`](/zh-CN/docs/Web/API/Performance) 接口的扩展，以支持应用程序中的客户端延迟测量。这些接口一起可以用来帮助识别应用程序的性能瓶颈。
-- [User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-  - : 使用创建特定于应用程序的时间戳 [user timing API](/zh-CN/docs/Web/API/User_Timing_API) 的“标记”和“度量”条目类型——它们是浏览器性能时间轴的一部分。
+- [Resource Timing API](/zh-CN/docs/Web/API/Performance_API/Resource_timing)
+  - : [资源加载和定时](/zh-CN/docs/Web/API/Performance_API/Resource_timing)加载这些资源，包括管理资源缓冲区和处理 CORS
+- [User Timing API](/zh-CN/docs/Web/API/Performance_API/User_timing)
+  - : 使用创建特定于应用程序的时间戳 user timing API 的“标记”和“度量”条目类型——它们是浏览器性能时间轴的一部分。
 - [Beacon API](/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API)
   - : 使用 [Beacon](/zh-CN/docs/Web/API/Beacon_API) 接口调度发送给服务器的异步非阻塞请求。
 - [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
@@ -141,17 +139,17 @@ JavaScript
 API
 
 - [Performance API](/zh-CN/docs/Web/API/Performance_API)
-- [Navigation Timing API](/zh-CN/docs/Web/API/Navigation_timing_API)
+- [Navigation Timing API](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)
 - [Media Capabilities API](/zh-CN/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
 - [Network Information API](/zh-CN/docs/Web/API/Network_Information_API)
 - [PerformanceNavigationTiming](/zh-CN/docs/Web/API/PerformanceNavigationTiming)
 - [Battery Status API](/zh-CN/docs/Web/API/Battery_Status_API)
 - [Navigator.deviceMemory](/zh-CN/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/zh-CN/docs/Web/API/Intersection_Observer_API)
-- [使用 User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [使用 User Timing API](/zh-CN/docs/Web/API/Performance_API/User_timing)
 - [Long Tasks API](/zh-CN/docs/Web/API/Long_Tasks_API)
 - [High Resolution Timing API](/zh-CN/docs/Web/API/DOMHighResTimeStamp)（[https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)）
-- [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource Timing API](/zh-CN/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/zh-CN/docs/Web/API/Page_Visibility_API)
 - [基于 Background Tasks API 的后台任务调度](/zh-CN/docs/Web/API/Background_Tasks_API)
 
@@ -184,6 +182,6 @@ API
 
   - [Web Worker API](/zh-CN/docs/Web/API/Web_Workers_API)
 
-- [PWA](/zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers)
+- [PWA](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
 - [缓存](/zh-CN/docs/Web/HTTP/Caching)
 - 内容分发网络（CDN）

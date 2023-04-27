@@ -2,6 +2,7 @@
 title: WindowEventHandlers.onhashchange
 slug: conflicting/Web/API/Window/hashchange_event
 original_slug: Web/API/WindowEventHandlers/onhashchange
+browser-compat: api.Window.hashchange_event
 ---
 
 {{APIRef("HTML DOM")}}
@@ -60,6 +61,6 @@ El evento `hashchange` enviado, tiene los siguientes campos:
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WindowEventHandlers.onhashchange")}}
+{{Compat}}

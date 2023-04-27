@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/is
 
 {{HTMLSidebar("Global_attributes")}}
 
-is 全局属性 ( [global attribute](/zh-CN/docs/Web/HTML/Global_attributes) ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( [Using custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) ) 以获取更多详细信息）。
+**`is`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)允许你指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)以获取更多详细信息）。
 
 只有在当前文档中已成功定义 ( [defined](/zh-CN/docs/Web/API/CustomElementRegistry/define) ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。
 
@@ -38,7 +38,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

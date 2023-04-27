@@ -17,7 +17,7 @@ slug: Web/API/DOMTokenList
 ## 方法
 
 - {{domxref("DOMTokenList.item()", "DOMTokenList.item(<var>index</var>)")}}
-  - : 根据传入的索引值返回一个值，如果索引值大于等于符号列表的长度（`length`），则返回 `undefined` 或 `null`，在 {{ gecko("7.0") }} 之前的版本中返回 `null`。
+  - : 根据传入的索引值返回一个值，如果索引值大于等于符号列表的长度（`length`），则返回 `undefined` 或 `null`，在 Gecko 7.0 之前的版本中返回 `null`。
 - {{domxref("DOMTokenList.contains()", "DOMTokenList.contains(<var>token</var>)")}}
   - : 如果 DOMTokenList 列表中包括相应的字符串 `token`，则返回 `true`，否则返回 `false`。
 - {{domxref("DOMTokenList.add()", "DOMTokenList.add(<var>token1</var>[, <var>token2</var>[, ...<var>tokenN</var>]])")}}

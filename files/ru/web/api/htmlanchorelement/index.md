@@ -16,9 +16,9 @@ _Наследует свойства от его родителя, {{domxref("HT
 
 - {{domxref("HTMLAnchorElement.accessKey")}}
   - : Это {{domxref("DOMString")}} отображает собой единичный символ, который переключает фокус ввода на гиперссылку.
-- {{domxref("HTMLAnchorElement.charset")}} {{obsolete_inline}}
+- {{domxref("HTMLAnchorElement.charset")}}
   - : Это {{domxref("DOMString")}} отображает кодировку символов связанного ресурса.
-- {{domxref("HTMLAnchorElement.coords")}} {{obsolete_inline}}
+- {{domxref("HTMLAnchorElement.coords")}}
   - : Это {{domxref("DOMString")}} отображает список координат разделённый запятыми.
 - {{domxref("HTMLAnchorElement.download")}} {{experimental_inline}}
   - : Это {{domxref("DOMString")}} показывать что связанный ресурс предназначен для загрузки, а не для отображения в браузере. Значение представляет предполагаемое имя файла. Если имя не является допустимым именем файла нижележащей ОС, браузер будет адаптировать его. Значение это URL по схеме `http:`, `file:`, `data:` или даже `blob:` (созданный с помощью {{domxref("URL.createObjectURL")}}).
@@ -34,7 +34,7 @@ _Наследует свойства от его родителя, {{domxref("HT
   - : Это {{domxref("DOMString")}} что отображает HTML атрибут {{htmlattrxref("hreflang", "a")}}, показывающий язык связанного ресурса.
 - {{domxref("HTMLAnchorElement.media")}}
   - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("media", "a")}} HTML атрибут, с указанием предполагаемого media для связанного ресурса.
-- {{domxref("HTMLAnchorElement.name")}} {{obsolete_inline}}
+- {{domxref("HTMLAnchorElement.name")}}
   - : Это {{domxref("DOMString")}} отображает имя якоря.
 - {{domxref("URLUtils.password")}}
   - : Это {{domxref("DOMString")}} содержащий пароль, указанный перед именем домена.
@@ -52,11 +52,11 @@ _Наследует свойства от его родителя, {{domxref("HT
   - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("rel", "a")}} HTML атрибут, уточняя взаимоотношения целевого объекта к связанному объекту.
 - {{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}
   - : Возвращает {{domxref("DOMTokenList")}} который отображает {{htmlattrxref("rel", "a")}} HTML атрибут, как список токенов.
-- {{domxref("HTMLAnchorElement.rev")}} {{obsolete_inline}}
+- {{domxref("HTMLAnchorElement.rev")}}
   - : Это {{domxref("DOMString")}} отображающий как {{htmlattrxref("rev", "a")}} HTML атрибут, уточняя взаимоотношения связанного объекта к целевому объекту
 - {{domxref("URLUtils.search")}}
   - : Это {{domxref("DOMString")}} отображающий искомый элемент, включая ведущий знак вопроса ('`?`'), если таковой имеется, в ссылающемся URL.
-- {{domxref("HTMLAnchorElement.shape")}} {{obsolete_inline}}
+- {{domxref("HTMLAnchorElement.shape")}}
   - : Это {{domxref("DOMString")}} отображающий вид активной области.
 - {{domxref("HTMLAnchorElement.tabindex")}}
   - : Это `long` содержащий положение элемента в порядке навигационного переключения для текущего документа.

@@ -23,7 +23,7 @@ HTML（超文本标记语言）中元素大多数都是“块级”元素或[行
 p { background-color: #8ABB55; }
 ```
 
-{{ EmbedLiveSample('Block-level_Example') }}
+{{ EmbedLiveSample('块级元素示例') }}
 
 ## 用法
 
@@ -89,6 +89,6 @@ HTML 标准中块级元素和行内元素的区别至高出现在 4.01 标准中
 - {{ HTMLElement("ul") }}
   - : 无序列表。
 
-### 另请参阅
+### 参见
 
 - [行内元素](/zh-CN/docs/Web/HTML/Inline_elements)

@@ -103,11 +103,11 @@ gen.next('mayonnaise'); // mayonnaise
     var obj = new f; // throws "TypeError: f is not a constructor"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

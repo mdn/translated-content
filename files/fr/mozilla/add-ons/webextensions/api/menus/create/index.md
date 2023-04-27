@@ -180,9 +180,9 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.create", 10)}}
+{{Compat}}
 
 > **Note :**
 >

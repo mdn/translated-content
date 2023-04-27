@@ -104,4 +104,4 @@ slug: Web/HTML/Element/slot
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.slot")}}
+{{Compat}}

@@ -57,7 +57,7 @@ slug: Web/HTML/Element/main
       <th scope="row">가능한 ARIA 역할</th>
       <td>
         기본적으로 <code>main</code> 역할 포함,
-        {{ARIARole("presentation")}} 가능.
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a> 가능.
       </td>
     </tr>
     <tr>
@@ -153,7 +153,7 @@ slug: Web/HTML/Element/main
 </main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## 같이 보기
 

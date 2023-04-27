@@ -41,7 +41,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 - 最新规范中提到的通配符值 (\*) 尚未在以下浏览器中实现：
 
   - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
+  - Firefox: [Firefox bug 1309358](https://bugzil.la/1309358)
   - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
 
 ## 查看更多

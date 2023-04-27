@@ -94,6 +94,6 @@ if (!String.prototype.repeat) {
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.repeat")}}
+{{Compat}}

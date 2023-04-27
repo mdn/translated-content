@@ -33,7 +33,7 @@ if (frameEl) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}
 
 ## Ver también
 

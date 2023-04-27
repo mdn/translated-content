@@ -72,7 +72,7 @@ img {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.object-position")}}
+{{Compat}}
 
 ## Contenido relacionado
 

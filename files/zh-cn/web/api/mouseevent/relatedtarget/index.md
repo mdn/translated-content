@@ -95,9 +95,9 @@ function overListener(event) {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", 700, 280)}}
+{{EmbedLiveSample("示例", 700, 280)}}
 
 ## 规范
 

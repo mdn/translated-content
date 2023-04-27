@@ -72,7 +72,7 @@ slug: Learn/CSS/Building_blocks
 
 在这里，你将练习使用背景和边距来创建一个吸引眼球的盒子。
 
-## 另见
+## 参见
 
 - [高级区块效果](/zh-CN/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
   - : 这篇文章展示了盒子的小技巧，提供了一些高级特性的介绍，这些特性不适合其他类别的样式，比如盒子阴影、混合模式和滤镜。

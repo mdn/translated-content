@@ -479,14 +479,3 @@ Aquí solo has rozado la superficie de JavaScript. Si has disfrutado aprendiendo
   - : ¡Este es un excelente material para los aspirantes a desarrolladores web! Aprende JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiadas por una evaluación automatizada. Las primeras 40 lecciones son gratis. El curso completo está disponible por un pequeño pago único (en inglés).
 
 {{PreviousMenuNext( "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web/Publishing_your_website","Learn/Getting_started_with_the_web")}}
-
-## En este módulo
-
-- [Instalación de software básico](/es/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [¿Cómo será tu sitio web?](/es/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [El trato con archivos](/es/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Conceptos básicos de HTML](/es/Learn/Getting_started_with_the_web/HTML_basics)
-- [Conceptos básicos de CSS](/es/Learn/Getting_started_with_the_web/CSS_basics)
-- [Conceptos básicos de JavaScript](/es/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publica tu sitio web](/es/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Como funciona la web](/es/Learn/Getting_started_with_the_web/How_the_Web_works)

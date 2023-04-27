@@ -15,6 +15,6 @@ slug: Web/API/Document/embeds
 nodeList = document.embeds
 ```
 
-### Specifications
+### 명세서
 
 {{Specifications}}

@@ -129,7 +129,7 @@ Bien que nous ne discutons pas du gain de temps, plusieurs navigateur ont un out
 
 **Note**: Les systèmes (matériels ou logiciels) qui ne sont pas capables d'avoir une précision à la microseconde sont autorisés à fournir une précision à la milliseconde au minimum. Sinon, ils devraient fournir une précision de 0.001ms s'ils en sont capables.
 
-Seule, cette valeur n'est pas très utile, considérant qu'il est relatif à un évènement peu intéressant, mais ils peut quand même être soustrait d'une autre prise de temps pour déterminer plus précisément combien de temps s'est déroulé entre ces deux poins. Pour obtenir une de ces prises de temps, vous pouvez appeler la fonction `window.performance.now()` et stocker le résultat dans une variable.
+Seule, cette valeur n'est pas très utile, considérant qu'il est relatif à un évènement peu intéressant, mais ils peut quand même être soustrait d'une autre prise de temps pour déterminer plus précisément combien de temps s'est déroulé entre ces deux points. Pour obtenir une de ces prises de temps, vous pouvez appeler la fonction `window.performance.now()` et stocker le résultat dans une variable.
 
 ```js
 var tNow = window.performance.now();

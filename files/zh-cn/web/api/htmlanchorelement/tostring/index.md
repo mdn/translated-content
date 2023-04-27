@@ -34,6 +34,6 @@ var result = anchor.toString();
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.

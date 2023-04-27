@@ -51,10 +51,11 @@ Voir aussi [HTTP authentication](/fr/docs/Web/HTTP/Authentication) pour des exem
 
 ## Spécifications
 
-| Spécification                                            | Titre                                  |
-| -------------------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "WWW-Authenticate", "4.1")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                     | The 'Basic' HTTP Authentication Scheme |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

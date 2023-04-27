@@ -137,9 +137,7 @@ span { font-size: 16px; }
 <h1 class="percent">200% H1</h1>
 ```
 
-#### Live Sample
-
-{{EmbedLiveSample('Example_2','600','200')}}
+{{EmbedLiveSample('示例 2','600','200')}}
 
 ## 备注
 

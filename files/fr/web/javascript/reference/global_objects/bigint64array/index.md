@@ -151,13 +151,11 @@ var BigInt64 = new BigInt64Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-typedarrays-and-dataview) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt64Array")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -59,6 +59,6 @@ src: local(font), url(path/to/font.svg) format("svg"),
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.src")}}
+{{Compat}}

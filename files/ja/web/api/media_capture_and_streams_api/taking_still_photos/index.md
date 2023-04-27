@@ -456,5 +456,5 @@ function takepicture() {
 
 - [サンプルコード (GitHub)](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("MediaDevices.getUserMedia")}}
-- {{SectionOnPage("/ja/docs/Web/API/Canvas_API/Tutorial/Using_images", "Using frames from a video")}}
+- [動画のフレームの使用](/ja/docs/Web/API/Canvas_API/Tutorial/Using_images#%E5%8B%95%E7%94%BB%E3%81%AE%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AE%E4%BD%BF%E7%94%A8)
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

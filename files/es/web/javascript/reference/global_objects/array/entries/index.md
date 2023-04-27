@@ -40,7 +40,7 @@ for (let e of iterator) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## Ver también
 

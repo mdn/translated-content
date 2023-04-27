@@ -71,38 +71,38 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 >
 > Note that in some browsers, users can override the `strWindowFeatures` settings and enable (or prevent the disabling of) features.
 
-![Firefox Chrome Toolbars Illustration](/@api/deki/files/210/=FirefoxChromeToolbarsDescription7a.gif)
+![Firefox Chrome Toolbars Illustration](firefoxchrometoolbarsdescription7a.gif)
 
 ### Características de posición y tamaño
 
 [Note on position and dimension error correction](#Note_on_position_and_dimension_error_correction)
 
-{{bug(176320)}}
+[Error 176320 en Firefox](https://bugzil.la/176320)
 
 [Note on precedence](#Note_on_precedence)
 
 - left
-  - : Specifies the distance the new window is placed from the left side of the work area for applications of the user's operating system to the leftmost border (resizing handle) of the browser window. The new window can not be initially positioned offscreen. Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png), ![Opera 6+](/@api/deki/files/288/=Opera6.gif)
+  - : Specifies the distance the new window is placed from the left side of the work area for applications of the user's operating system to the leftmost border (resizing handle) of the browser window. The new window can not be initially positioned offscreen. Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
 - top
-  - : Specifies the distance the new window is placed from the top side of the work area for applications of the user's operating system to the topmost border (resizing handle) of the browser window. The new window can not be initially positioned offscreen. Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png), ![Opera 6+](/@api/deki/files/288/=Opera6.gif)
+  - : Specifies the distance the new window is placed from the top side of the work area for applications of the user's operating system to the topmost border (resizing handle) of the browser window. The new window can not be initially positioned offscreen. Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
 - height
-  - : Specifies the height of the content area, viewing area of the new secondary window in pixels. The height value includes the height of the horizontal scrollbar if present. The minimum required value is 100. [Note on outerHeight versus height (or innerHeight)](#Note_on_outerHeight_versus_height) Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png), ![Opera 6+](/@api/deki/files/288/=Opera6.gif)
+  - : Specifies the height of the content area, viewing area of the new secondary window in pixels. The height value includes the height of the horizontal scrollbar if present. The minimum required value is 100. [Note on outerHeight versus height (or innerHeight)](#Note_on_outerHeight_versus_height) Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
 - width
-  - : Specifies the width of the content area, viewing area of the new secondary window in pixels. The width value includes the width of the vertical scrollbar if present. The width value does not include the sidebar if it is expanded. The minimum required value is 100. Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png), ![Opera 6+](/@api/deki/files/288/=Opera6.gif)
+  - : Specifies the width of the content area, viewing area of the new secondary window in pixels. The width value includes the width of the vertical scrollbar if present. The width value does not include the sidebar if it is expanded. The minimum required value is 100. Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
 - screenX
-  - : Deprecated. Same as [left](#left) but only supported by Netscape and Mozilla-based browsers. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : Deprecated. Same as [left](#left) but only supported by Netscape and Mozilla-based browsers. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - screenY
-  - : Deprecated. Same as [top](#topS) but only supported by Netscape and Mozilla-based browsers. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : Deprecated. Same as [top](#topS) but only supported by Netscape and Mozilla-based browsers. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - centerscreen
   - : Centers the window in relation to its parent's size and position. Requires chrome=yes.
 - outerHeight
-  - : Specifies the height of the whole browser window in pixels. This outerHeight value includes any/all present toolbar, window horizontal scrollbar (if present) and top and bottom window resizing borders. Minimal required value is 100. **Note**: since titlebar is always rendered, then requesting outerHeight=100 will make the innerHeight of the browser window under the minimal 100 pixels. [Note on outerHeight versus height (or innerHeight)](#Note_on_outerHeight_versus_height) Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : Specifies the height of the whole browser window in pixels. This outerHeight value includes any/all present toolbar, window horizontal scrollbar (if present) and top and bottom window resizing borders. Minimal required value is 100. **Note**: since titlebar is always rendered, then requesting outerHeight=100 will make the innerHeight of the browser window under the minimal 100 pixels. [Note on outerHeight versus height (or innerHeight)](#Note_on_outerHeight_versus_height) Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - outerWidth
-  - : Specifies the width of the whole browser window in pixels. This outerWidth value includes the window vertical scrollbar (if present) and left and right window resizing borders. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : Specifies the width of the whole browser window in pixels. This outerWidth value includes the window vertical scrollbar (if present) and left and right window resizing borders. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - innerHeight
-  - : Same as [height](#height) but only supported by Netscape and Mozilla-based browsers. Specifies the height of the content area, viewing area of the new secondary window in pixels. The _innerHeight_ value includes the height of the horizontal scrollbar if present. Minimal required value is 100. [Note on outerHeight versus height (or innerHeight)](#Note_on_outerHeight_versus_height) Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : Same as [height](#height) but only supported by Netscape and Mozilla-based browsers. Specifies the height of the content area, viewing area of the new secondary window in pixels. The _innerHeight_ value includes the height of the horizontal scrollbar if present. Minimal required value is 100. [Note on outerHeight versus height (or innerHeight)](#Note_on_outerHeight_versus_height) Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - innerWidth
-  - : Same as [width](#width) but only supported by Netscape and Mozilla-based browsers. Specifies the width of the content area, viewing area of the new secondary window in pixels. The innerWidth value includes the width of the vertical scrollbar if present. The innerWidth value does not include the sidebar if it is expanded. Minimal required value is 100. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : Same as [width](#width) but only supported by Netscape and Mozilla-based browsers. Specifies the width of the content area, viewing area of the new secondary window in pixels. The innerWidth value includes the width of the vertical scrollbar if present. The innerWidth value does not include the sidebar if it is expanded. Minimal required value is 100. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 ### Barra de herramienta y características de chrome
 
@@ -110,83 +110,87 @@ If the `strWindowFeatures` parameter is used and if no position features are def
   - : example "status=yes", "status=1" and "status" have identical results
 - menubar
 
-  - : If this feature is on, then the new secondary window renders the menubar. Mozilla and Firefox users can force new windows to always render the menubar by setting `dom.disable_window_open_feature.menubar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : If this feature is on, then the new secondary window renders the menubar. Mozilla and Firefox users can force new windows to always render the menubar by setting `dom.disable_window_open_feature.menubar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 - toolbar
-  - : If this feature is on, then the new secondary window renders the Navigation Toolbar (Back, Forward, Reload, Stop buttons). In addition to the Navigation Toolbar, Mozilla-based browsers will render the Tab Bar if it is visible, present in the parent window. (If this feature is set to _no_ all toolbars in the window will be invisible, for example extension toolbars). Mozilla and Firefox users can force new windows to always render the Navigation Toolbar by setting `dom.disable_window_open_feature.toolbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : If this feature is on, then the new secondary window renders the Navigation Toolbar (Back, Forward, Reload, Stop buttons). In addition to the Navigation Toolbar, Mozilla-based browsers will render the Tab Bar if it is visible, present in the parent window. (If this feature is set to _no_ all toolbars in the window will be invisible, for example extension toolbars). Mozilla and Firefox users can force new windows to always render the Navigation Toolbar by setting `dom.disable_window_open_feature.toolbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - location
-  - : If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar. Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). {{Fx_minversion_note(3, "In Firefox 3, <code>dom.disable_window_open_feature.location</code> now defaults to <var>true</var>, forcing the presence of the Location Bar much like in IE7. See bug 337344 for more information.")}} Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png), ![Opera 6+](/@api/deki/files/288/=Opera6.gif)
+  - : If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar. Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
+
+    > **Nota:** In Firefox 3, `dom.disable_window_open_feature.location` now defaults to _true_, forcing the presence of the Location Bar much like in IE7. See bug 337344 for more information.
+
+    Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
 - personalbar
-  - : If this feature is on, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window. Mozilla and Firefox users can force new windows to always render the Personal Toolbar/Bookmarks toolbar by setting `dom.disable_window_open_feature.personalbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
-- directories {{deprecated_inline("2")}}
+  - : If this feature is on, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window. Mozilla and Firefox users can force new windows to always render the Personal Toolbar/Bookmarks toolbar by setting `dom.disable_window_open_feature.personalbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
+- directories {{deprecated_inline}}
   - : Obsolete synonym of personalbar. In IE, it rendered the Links bar. Supported in Gecko up to 1.9.2 and in IE up to 6.
 - status
-  - : If this feature is on, then the new secondary window has a status bar. Users can force the rendering of status bar in all Mozilla-based browsers, in MSIE 6 SP2 ([Note on status bar in XP SP2](#Note_on_security_issues_of_the_status_bar_presence)) and in Opera 6+. The default preference setting in recent Mozilla-based browser releases and in Firefox 1.0 is to force the presence of the status bar. [Note on status bar](#Note_on_status_bar) Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : If this feature is on, then the new secondary window has a status bar. Users can force the rendering of status bar in all Mozilla-based browsers, in MSIE 6 SP2 ([Note on status bar in XP SP2](#Note_on_security_issues_of_the_status_bar_presence)) and in Opera 6+. The default preference setting in recent Mozilla-based browser releases and in Firefox 1.0 is to force the presence of the status bar. [Note on status bar](#Note_on_status_bar) Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 ### Características de funcionalidad de window
 
 - attention {{NonStandardBadge}}
 
-  - : If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See {{SectionOnPage("/en-US/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions", "Internal (Certified) app permissions")}} for more information. Supported in: ![](firefox_os_logo_wordmark-75px.png)
+  - : If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See [Internal (Certified) app permissions](/es/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions#internal_(certified)_app_permissions) for more information. Supported in: ![](firefox_os_logo_wordmark-75px.png)
 
 - dependent
-  - : If on, the new window is said to be dependent of its parent window. A dependent window closes when its parent window closes. A dependent window is minimized on the Windows task bar only when its parent window is minimized. On Windows platforms, a dependent window does not show on the task bar. A dependent window also stays in front of the parent window. Dependent windows are not implemented on MacOS X, this option will be ignored. The dependent feature is currently under revision to be removed ({{Bug(214867)}}) In MSIE 6, the nearest equivalent to this feature is the `showModelessDialog()` method. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : If on, the new window is said to be dependent of its parent window. A dependent window closes when its parent window closes. A dependent window is minimized on the Windows task bar only when its parent window is minimized. On Windows platforms, a dependent window does not show on the task bar. A dependent window also stays in front of the parent window. Dependent windows are not implemented on MacOS X, this option will be ignored. The dependent feature is currently under revision to be removed ([Error 214867 en Firefox](https://bugzil.la/214867)) In MSIE 6, the nearest equivalent to this feature is the `showModelessDialog()` method. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - minimizable
-  - : This setting can only apply to dialog windows; "minimizable" requires `dialog=yes`. If `minimizable` is on, the new dialog window will have a minimize system command icon in the titlebar and it will be minimizable. Any non-dialog window is always minimizable and `minimizable=no` will be ignored. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : This setting can only apply to dialog windows; "minimizable" requires `dialog=yes`. If `minimizable` is on, the new dialog window will have a minimize system command icon in the titlebar and it will be minimizable. Any non-dialog window is always minimizable and `minimizable=no` will be ignored. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - fullscreen
-  - : Do not use. Not implemented in Mozilla. There are no plans to implement this feature in Mozilla. This feature no longer works in MSIE 6 SP2 the way it worked in MSIE 5.x. The Windows taskbar, as well as the titlebar and the status bar of the window are not visible, nor accessible when fullscreen is enabled in MSIE 5.x. `fullscreen` always upsets users with large monitor screen or with dual monitor screen. Forcing `fullscreen` onto other users is also extremely unpopular and is considered an outright rude attempt to impose web author's viewing preferences onto users. [Note on fullscreen](#Note_on_fullscreen) Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png) `fullscreen` does not really work in MSIE 6 SP2.
+  - : Do not use. Not implemented in Mozilla. There are no plans to implement this feature in Mozilla. This feature no longer works in MSIE 6 SP2 the way it worked in MSIE 5.x. The Windows taskbar, as well as the titlebar and the status bar of the window are not visible, nor accessible when fullscreen is enabled in MSIE 5.x. `fullscreen` always upsets users with large monitor screen or with dual monitor screen. Forcing `fullscreen` onto other users is also extremely unpopular and is considered an outright rude attempt to impose web author's viewing preferences onto users. [Note on fullscreen](#Note_on_fullscreen) Supported in: ![Internet Explorer 5+](msie_ico.png) `fullscreen` does not really work in MSIE 6 SP2.
 - resizable
 
   - : If this feature is on, the new secondary window will be resizable. **Note**: Starting with version 1.4, Mozilla-based browsers have a window resizing grippy at the right end of the status bar, this ensures that users can resize the browser window even if the web author requested this secondary window to be non-resizable. In such case, the maximize/restore icon in the window's titlebar will be disabled and the window's borders won't allow resizing but the window will still be resizable via that grippy in the status bar.
 
-    Starting with Firefox 3, secondary windows are always resizable ({{Bug(177838)}})
+    Starting with Firefox 3, secondary windows are always resizable ([Error 177838 en Firefox](https://bugzil.la/177838))
 
-    > **Nota:** **Tip**: For accessibility reasons, it is strongly recommended to set this feature always on
+    > **Nota:** For accessibility reasons, it is strongly recommended to set this feature always on
 
     Mozilla and Firefox users can force new windows to be easily resizable by setting
     `dom.disable_window_open_feature.resizable`
-    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 - scrollbars
 
   - : If this feature is on, the new secondary window will show horizontal and/or vertical scrollbar(s) if the document doesn't fit into the window's viewport.
 
-    > **Nota:** **Tip**: For accessibility reasons, it is strongly encouraged to set this feature always on.
+    > **Nota:** For accessibility reasons, it is strongly encouraged to set this feature always on.
 
     Mozilla and Firefox users can force this option to be always enabled for new windows by setting
     `dom.disable_window_open_feature.scrollbars`
-    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). [Note on scrollbars](#Note_on_scrollbars) Supported in: ![Internet Explorer 5+](/@api/deki/files/260/=MSIE_ico.png), ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). [Note on scrollbars](#Note_on_scrollbars) Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 ### Características que requieren privilegios
 
 The following features require the `UniversalBrowserWrite` privilege, otherwise they will be ignored. Chrome scripts have this privilege automatically, others have to request it from the PrivilegeManager.
 
 - chrome
-  - : **Note**: Starting with Mozilla 1.7/Firefox 0.9, this feature requires the `UniversalBrowserWrite` privilege ({{Bug(244965)}}). Without this privilege, it is ignored. If on, the page is loaded as window's only content, without any of the browser's interface elements. There will be no context menu defined by default and none of the standard keyboard shortcuts will work. The page is supposed to provide a user interface of its own, usually this feature is used to open XUL documents (standard dialogs like the JavaScript Console are opened this way). Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : **Note**: Starting with Mozilla 1.7/Firefox 0.9, this feature requires the `UniversalBrowserWrite` privilege ([Error 244965 en Firefox](https://bugzil.la/244965)). Without this privilege, it is ignored. If on, the page is loaded as window's only content, without any of the browser's interface elements. There will be no context menu defined by default and none of the standard keyboard shortcuts will work. The page is supposed to provide a user interface of its own, usually this feature is used to open XUL documents (standard dialogs like the JavaScript Console are opened this way). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - dialog
-  - : **Note**: Starting with Firefox 44, this feature can only be used with chrome privileges. If content attempts to toggle this feature, it will be ignored. [![MenuSystemCommands.png](/@api/deki/files/268/=MenuSystemCommands.png?size=webview)](/@api/deki/files/268/=MenuSystemCommands.png)The `dialog` feature removes all icons (restore, minimize, maximize) from the window's titlebar, leaving only the close button. Mozilla 1.2+ and Netscape 7.1 will render the other menu system commands (in FF 1.0 and in NS 7.0x, the command system menu is not identified with the Firefox/NS 7.0x icon on the left end of the titlebar: that's probably a bug. You can access the command system menu with a right-click on the titlebar). Dialog windows are windows which have no minimize system command icon and no maximize/restore down system command icon on the titlebar nor in correspondent menu item in the command system menu. They are said to be dialog because their normal, usual purpose is to only notify info and to be dismissed, closed. On Mac systems, dialog windows have a different window border and they may get turned into a sheet. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : **Note**: Starting with Firefox 44, this feature can only be used with chrome privileges. If content attempts to toggle this feature, it will be ignored. [![MenuSystemCommands.png](menusystemcommands.png?size=webview)](menusystemcommands.png)The `dialog` feature removes all icons (restore, minimize, maximize) from the window's titlebar, leaving only the close button. Mozilla 1.2+ and Netscape 7.1 will render the other menu system commands (in FF 1.0 and in NS 7.0x, the command system menu is not identified with the Firefox/NS 7.0x icon on the left end of the titlebar: that's probably a bug. You can access the command system menu with a right-click on the titlebar). Dialog windows are windows which have no minimize system command icon and no maximize/restore down system command icon on the titlebar nor in correspondent menu item in the command system menu. They are said to be dialog because their normal, usual purpose is to only notify info and to be dismissed, closed. On Mac systems, dialog windows have a different window border and they may get turned into a sheet. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - modal
 
-  - : **Note**: Starting with Mozilla 1.2.1, this feature requires the `UniversalBrowserWrite` privilege ({{Bug(180048)}}). Without this privilege, it is ignored. If on, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the [alert() function](/es/docs/DOM/window.alert). The exact behavior of modal windows depends on the platform and on the Mozilla release version.
+  - : **Note**: Starting with Mozilla 1.2.1, this feature requires the `UniversalBrowserWrite` privilege ([Error 180048 en Firefox](https://bugzil.la/180048)). Without this privilege, it is ignored. If on, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the [alert() function](/es/docs/DOM/window.alert). The exact behavior of modal windows depends on the platform and on the Mozilla release version.
 
-    > **Nota:** As of {{Gecko("1.9")}}, the Internet Explorer equivalent to this feature is the {{domxref("window.showModalDialog()")}} method. For compatibility reasons, it's now supported in Firefox. Note also that starting in {{Gecko("2.0")}}, you can use {{domxref("window.showModalDialog()")}} without UniversalBrowserWrite privileges.
+    > **Nota:** As of Gecko 1.9, the Internet Explorer equivalent to this feature is the {{domxref("window.showModalDialog()")}} method. For compatibility reasons, it's now supported in Firefox. Note also that starting in Gecko 2.0, you can use {{domxref("window.showModalDialog()")}} without UniversalBrowserWrite privileges.
 
-    Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+    Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 - titlebar
   - : By default, all new secondary windows have a titlebar. If set to _no or 0_, this feature removes the titlebar from the new secondary window. Mozilla and Firefox users can force new windows to always render the titlebar by setting
     `dom.disable_window_open_feature.titlebar`
-    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - alwaysRaised
-  - : If on, the new window will always be displayed on top of other browser windows, regardless of whether it is active or not. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : If on, the new window will always be displayed on top of other browser windows, regardless of whether it is active or not. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - alwaysLowered
-  - : If on, the new created window floats below, under its own parent when the parent window is not minimized. alwaysLowered windows are often referred as pop-under windows. The alwaysLowered window can not be on top of the parent but the parent window can be minimized. In NS 6.x, the alwaysLowered window has no minimize system command icon and no restore/maximize system command. Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+  - : If on, the new created window floats below, under its own parent when the parent window is not minimized. alwaysLowered windows are often referred as pop-under windows. The alwaysLowered window can not be on top of the parent but the parent window can be minimized. In NS 6.x, the alwaysLowered window has no minimize system command icon and no restore/maximize system command. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - z-lock
   - : Same as `alwaysLowered`.
 - close
   - : When set to _no or 0_, this feature removes the system close command icon and system close menu item. It will only work for dialog windows (`dialog` feature set). `close=no` will override `minimizable=yes`. Mozilla and Firefox users can force new windows to always have a close button by setting
     `dom.disable_window_open_feature.close`
-    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
+    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 The position and size feature elements require a number to be set. The toolbars and window functionalities can be set with a _yes_ or _no_; you can use _1_ instead of _yes_ and _0_ instead of _no_. The toolbar and functionality feature elements also accept the shorthand form: you can turn a feature on by simply listing the feature name in the _features_ string. If you supply the _features_ parameter, then the `titlebar` and `close` are still _yes_ by default, but the other features which have a _yes_/_no_ choice will be _no_ by default and will be turned off.
 
@@ -411,25 +415,25 @@ When extreme changes in context are explicitly identified before they occur, the
       <td style="width: 25%">
         <img
           alt="New window icon from yahoo.com"
-          src="/@api/deki/files/782/=NewwindowYahoo.png"
+          src="newwindowyahoo.png"
         />
       </td>
       <td style="width: 25%">
         <img
           alt="New window icon from microsoft.com"
-          src="/@api/deki/files/780/=NewwinMSIE.gif"
+          src="newwinmsie.gif"
         />
       </td>
       <td style="width: 25%">
         <img
           alt="New window icon from webaim.org"
-          src="/@api/deki/files/296/=Popup_requested_new_window.gif"
+          src="popup_requested_new_window.gif"
         />
       </td>
       <td style="width: 25%">
         <img
           alt="New window icon from sun.com"
-          src="/@api/deki/files/811/=PopupImageSun.gif"
+          src="popupimagesun.gif"
         />
       </td>
     </tr>
@@ -437,25 +441,25 @@ When extreme changes in context are explicitly identified before they occur, the
       <td>
         <img
           alt="New window icon from bbc.co.uk"
-          src="/@api/deki/files/795/=Opennews_rb.gif"
+          src="opennews_rb.gif"
         />
       </td>
       <td>
         <img
           alt="New window icon from Accessible Internet Solutions"
-          src="/@api/deki/files/15/=AIS_NewWindowIcon.png"
+          src="ais_newwindowicon.png"
         />
       </td>
       <td>
         <img
           alt="New window icon from accessify.com"
-          src="/@api/deki/files/809/=Pop-up-launcher.gif"
+          src="pop-up-launcher.gif"
         />
       </td>
       <td>
         <img
           alt="New window icon from webstyleguide.com"
-          src="/@api/deki/files/417/=Webstyleguide_com_newwind.gif"
+          src="webstyleguide_com_newwind.gif"
         />
       </td>
     </tr>
@@ -463,25 +467,25 @@ When extreme changes in context are explicitly identified before they occur, the
       <td>
         <img
           alt="New window icon from an unknown source"
-          src="/@api/deki/files/810/=Popicon_1.gif"
+          src="popicon_1.gif"
         />
       </td>
       <td>
         <img
           alt="New window icon from an unknown source"
-          src="/@api/deki/files/779/=New.gif"
+          src="new.gif"
         />
       </td>
       <td>
         <img
           alt="New window icon from an unknown source"
-          src="/@api/deki/files/419/=WillCreateOrRecycleNewWindow.gif"
+          src="willcreateorrecyclenewwindow.gif"
         />
       </td>
       <td>
         <img
           alt="New window icon from gtalbot.org"
-          src="/@api/deki/files/287/=OpenRequestedPopup.png"
+          src="openrequestedpopup.png"
         />
       </td>
     </tr>
@@ -489,13 +493,13 @@ When extreme changes in context are explicitly identified before they occur, the
       <td colspan="2">
         <img
           alt="New window cursor from draig.de"
-          src="/@api/deki/files/169/=Cursor_LinkNewWindowTargetBlank.png"
+          src="cursor_linknewwindowtargetblank.png"
         />
       </td>
       <td colspan="2">
         <img
           alt="New window cursor from mithgol.ru"
-          src="/@api/deki/files/170/=Cursor_newwindowSergeySokoloff.png"
+          src="cursor_newwindowsergeysokoloff.png"
         />
       </td>
     </tr>
@@ -605,7 +609,7 @@ _References:_
 
 ### Note on outerHeight versus height
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/212/=FirefoxInnerVsOuterHeight.png)
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight.png)
 
 ### Note on refreshing vs. opening a new window/tab
 

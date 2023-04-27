@@ -49,7 +49,7 @@ The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide 
 
 ### Serve X-Content-Duration headers
 
-> **メモ:** As of [Firefox 41](/ja/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See {{Bug(1160695)}} for more details.
+> **メモ:** As of [Firefox 41](/ja/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Firefox バグ 1160695](https://bugzil.la/1160695) for more details.
 
 The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
 
@@ -71,7 +71,7 @@ One common way to reduce the load on a web server is to use [gzip or deflate com
 
 Also, Apache servers don't send the Content-Length response header if gzip encoding is used.
 
-> **メモ:** Starting in {{Gecko("2.0") }}, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.
+> **メモ:** Starting in Gecko 2.0, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.
 
 ### Getting the duration of Ogg media
 

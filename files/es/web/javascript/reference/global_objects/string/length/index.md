@@ -56,7 +56,7 @@ console.log(myString);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.length")}}
+{{Compat}}
 
 ## Ver también
 

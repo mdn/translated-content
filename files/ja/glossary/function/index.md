@@ -69,7 +69,7 @@ const loop = x => {
 // 関数宣言は、この方法で即時実行できません。
 // (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */

@@ -2,7 +2,7 @@
 title: クライアント側のフォーム検証
 slug: Learn/Forms/Form_validation
 l10n:
-  sourceCommit: 8e16e19d3ee35157c81b299c0ccb9d5effd2ac22
+  sourceCommit: af0e71822122feda89495ab9215c131bbe34d65c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -77,7 +77,7 @@ l10n:
 - [`required`](/ja/docs/Web/HTML/Attributes/required): フォームを送信する前に、フォームフィールドに入力する必要があるかどうかを指定します。
 - [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) と [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength): テキストデータ（文字列）の最小・最大長を指定します。
 - [`min`](/ja/docs/Web/HTML/Attributes/min) と [`max`](/ja/docs/Web/HTML/Attributes/max): 数値入力型の最小値、最大値を指定します。
-- `type`: データを数字にするか、メールアドレスにするか、その他のプリセットされた特定の型にするかを指定します。
+- [`type`](/ja/docs/Web/HTML/Element/input#input_の型): データを数字にするか、メールアドレスにするか、その他のプリセットされた特定の型にするかを指定します。
 - [`pattern`](/ja/docs/Web/HTML/Attributes/pattern): データが指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)に一致するかどうかを指定します。
 
 入力データをこの指定されたルールに基いて検証します。検証にパスすれば妥当で検証にパスしなければ妥当ではないと考えます。
@@ -175,7 +175,7 @@ input:valid {
 ### 正規表現での検証
 
 もう一つとてもよく使われる機能は [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で、値として[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を取ります。
-正規表現 (regex) はテキスト文字列の中の文字の組み合わせに一致させるために使うことができるため、フォームの検証には理想的であり、JavaScript と同様に様々な利用ができます。
+正規表現 (regexp) はテキスト文字列の中の文字の組み合わせに一致させるために使うことができるため、フォームの検証には理想的であり、JavaScript と同様に様々な利用ができます。
 
 正規表現はかなり複雑です。このモジュールでは正規表現のすべてを説明する意図はありません。
 いくつかの例を挙げますのでどのように動作するか基本的な考えを把握してください。
@@ -187,7 +187,7 @@ input:valid {
 - `a|b` — 一文字の `a` または `b` に一致する
 - `abc|xyz` — `abc` の並びまたは `xyz` の並びに一致する。これは `abcxyz` や `a` や `y` などには一致しない。
 
-正規表現には多くの組合せがあるので例はここまでとする。完全な一覧や多くの例は、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)のドキュメントを参照してください。
+正規表現には多くの組合せがあるので例はここまでとします。完全な一覧や多くの例は、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)のドキュメントを参照してください。
 
 使用例を実装しましょう。HTML を更新して [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を追加しましょう。
 
@@ -291,7 +291,7 @@ div {
 
 > **メモ:** GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-length.html)も見てください）
 
-> **メモ:** `<input type="number">` （オヨビ `range` や `date` のような他の型）は [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では `step` 属性を入れていませんので、既定値の `1` となります。つまり 3.2 のような浮動小数でも、不正になります。
+> **メモ:** `<input type="number">` （および、 `range` や `date` のような他の型）は [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では `step` 属性を入れていませんので、既定値の `1` となります。つまり 3.2 のような浮動小数でも、不正になります。
 
 ### サンプル全体
 
@@ -333,7 +333,7 @@ HTML の内蔵検証機能の使い方を示す例の全体を示します。ま
     </datalist>
   </p>
   <p>
-    <label for="t2">What's your e-mail address?</label>
+    <label for="t2">What's your email address?</label>
     <input type="email" id="t2" name="email">
   </p>
   <p>
@@ -381,7 +381,7 @@ input:focus:invalid {
 
 {{EmbedLiveSample("Full_example", "100%", 420)}}
 
-入力値と、それをサポートする入力タイプの制約に使える属性の完全なリストは、[検証関連属性](/ja/docs/Web/Guide/HTML/Constraint_validation#検証関連属性)を見てください。
+入力値と、それをサポートする入力型の制約に使える属性の完全なリストは、[検証関連属性](/ja/docs/Web/HTML/Constraint_validation#検証関連属性)を見てください。
 
 > **メモ:** GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-pattern.html)も見てください)
 
@@ -406,14 +406,14 @@ input:focus:invalid {
 - `validationMessage`: コントロールが満たさない検証制約を記述したローカライズされたメッセージを返します（存在する場合）。コントロールが制約検証の候補でない場合（`willValidate`が `false`）、または要素の値が制約を満たしている場合（有効である場合）には、空の文字列を返します。
 - `validity`: 要素の検証状態を説明する `ValidityState` オブジェクトです。取りうる検証状態の詳細は {{domxref("ValidityState")}}のリファレンスを参照してください。下記はよく使われるものを少し、一覧にしています。
 
-  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: 値が指定した {{htmlattrxref("pattern", "input")}}に一致しない場合 `true` を、一致する場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
-  - {{domxref("ValidityState.tooLong", "tooLong")}}: {{htmlattrxref("maxlength", "input")}} 属性で指定した最大値より値が長い場合 `true` を、同じ長さ以下の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
-  - {{domxref("ValidityState.tooShort", "tooShort")}}: {{htmlattrxref("minlength", "input")}} 属性で指定した最小値より値が短い場合 `true` を、同じ長さ以上の場合`false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
-  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: {{htmlattrxref("max", "input")}} 属性で指定し最大値より値が大きい場合`true` を、同じ大きさ以下の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}}CSS 擬似クラスに一致する。
-  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: {{htmlattrxref("min", "input")}} 属性で指定し最小値より値が小さい場合`true` を、同じ大きさ以上の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}}CSS 擬似クラスに一致する。
-  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: 値が要求する文法でない場合 ({{htmlattrxref("type", "input")}} が `email` か `url` のとき)は `true` を、文法が正しい場合は `false` を返す。`true` なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
+  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: 値が指定した [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) に一致しない場合 `true` を、一致する場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
+  - {{domxref("ValidityState.tooLong", "tooLong")}}: [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) 属性で指定した最大値より値が長い場合 `true` を、同じ長さ以下の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
+  - {{domxref("ValidityState.tooShort", "tooShort")}}: [`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性で指定した最小値より値が短い場合 `true` を、同じ長さ以上の場合`false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
+  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定し最大値より値が大きい場合`true` を、同じ大きさ以下の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}}CSS 擬似クラスに一致する。
+  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: [`min`](/ja/docs/Web/HTML/Element/input#min) 属性で指定し最小値より値が小さい場合`true` を、同じ大きさ以上の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}}CSS 擬似クラスに一致する。
+  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: 値が要求する構文でない場合 [`type`](/ja/docs/Web/HTML/Element/input#type) が `email` か `url` のとき)は `true` を、文法が正しい場合は `false` を返す。`true` なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
   - `valid`: 要素が検証制約をすべて満たす、ゆえに妥当とみなされる場合`true` を、いずれかの制約を満たさない場合 `false` を返す。true なら、要素は {{cssxref(":valid")}} CSS 擬似クラスに一致する。そうでない場合は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
-  - `valueMissing`: 要素に {{htmlattrxref("required", "input")}} 属性があって値がない場合は `true` を、そうでない場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
+  - `valueMissing`: 要素に [`required`](/ja/docs/Web/HTML/Element/input#required) 属性があって値がない場合は `true` を、そうでない場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
 
 - `willValidate`: フォームが送信されるときに要素が検証される場合に `true` を返します。そうでない場合は `false` を返します。
 
@@ -453,8 +453,7 @@ const email = document.getElementById("mail");
 
 email.addEventListener("input", (event) => {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity("I am expecting an e-mail address!");
-    email.reportValidity();
+    email.setCustomValidity("メールアドレスを入力してください。");
   } else {
     email.setCustomValidity("");
   }
@@ -463,7 +462,7 @@ email.addEventListener("input", (event) => {
 
 ここでメールアドレス入力への参照を保管して、入力値が変更されるたびに制約コードが走るためのイベントリスナーを追加します。
 
-このコードの中で、 email 入力欄の `validity.typeMismatch` プロパティが `true` を返しているかどうか、つまり、含まれる値が正規の email アドレスのパターンに一致しないことをチェックしています。その場合、{{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}メソッドをカスタムメッセージとともに呼び出し、{{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}で表示されます。これにより、入力が無効となり、フォームを送信しようとすると、送信に失敗し、カスタムエラーメッセージが表示されます。
+このコードの中で、 email 入力欄の `validity.typeMismatch` プロパティが `true` を返しているかどうか、つまり、含まれる値が正規の email アドレスのパターンに一致しないことをチェックしています。その場合、{{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}メソッドをカスタムメッセージとともに呼び出します。これにより、入力が無効となるため、フォームを送信しようとすると、送信に失敗し、カスタムエラーメッセージが表示されます。
 
 `validity.typeMismatch` が `false`の場合、空文字で `setCustomValidity()` メソッドを呼び出します。これは入力が妥当となり、フォームが送信されます。
 
@@ -492,7 +491,7 @@ email.addEventListener("input", (event) => {
 </form>
 ```
 
-この簡単なフォームでは、ブラウザーの自動検証を無効にするために [`novalidate`](/ja/docs/Web/HTML/Element/form#attr-novalidate) 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の擬似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。
+この簡単なフォームでは、ブラウザーの自動検証を無効にするために [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の擬似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。
 
 検証する入力は [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)で、これは `required` (入力必須) で、8 文字の `minlength` があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。
 
@@ -594,11 +593,11 @@ function showError() {
   if (email.validity.valueMissing) {
     // If the field is empty,
     // display the following error message.
-    emailError.textContent = "You need to enter an e-mail address.";
+    emailError.textContent = "You need to enter an email address.";
   } else if (email.validity.typeMismatch) {
     // If the field doesn't contain an email address,
     // display the following error message.
-    emailError.textContent = "Entered value needs to be an e-mail address.";
+    emailError.textContent = "Entered value needs to be an email address.";
   } else if (email.validity.tooShort) {
     // If the data is too short,
     // display the following error message.
@@ -668,7 +667,7 @@ function showError() {
 </form>
 ```
 
-同様に、 CSS も大きく変更する必要はありません。 {{cssxref(":invalid")}} 擬似クラスから実クラスへの変更と、 Internet Explorer 6 で動作しない属性セレクターの使用を避けただけです。
+同様に、 CSS も大きく変更する必要はありません。 {{cssxref(":invalid")}} 擬似クラスから実クラスへの変更と、属性セレクターの使用を避けただけです。
 
 ```css
 body {
@@ -765,7 +764,7 @@ form.addEventListener("submit", (event) => {
   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
   if (!isValid) {
     email.className = "invalid";
-    error.textContent = "I expect an e-mail, darling!";
+    error.textContent = "I expect an email, darling!";
     error.className = "error active";
   } else {
     email.className = "valid";
@@ -796,19 +795,6 @@ form.addEventListener("submit", (event) => {
 フォームが正しく埋められたことをチェックしたら、送信することができます。次の[データ送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)でカバーします。
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## このモジュール
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- **クライアント側のフォーム検証**
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック
 

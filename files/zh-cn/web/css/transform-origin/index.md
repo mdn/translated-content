@@ -93,7 +93,7 @@ transform-origin: unset;
 | `top`    | `0%`   |
 | `bottom` | `100%` |
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -430,7 +430,7 @@ transform-origin: 100% -30%;
 
 {{Cssinfo}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

@@ -1,6 +1,6 @@
 ---
 title: <input type="color">
-slug: Web/HTML/Element/Input/color
+slug: Web/HTML/Element/input/color
 tags:
   - Color Picker
   - Element

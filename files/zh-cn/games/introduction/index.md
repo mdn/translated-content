@@ -1,7 +1,6 @@
 ---
 title: Web 游戏开发简介
 slug: Games/Introduction
-original_slug: Games/简介
 ---
 
 {{GamesSidebar}}
@@ -49,7 +48,7 @@ original_slug: Games/简介
 - [HTML audio](/zh-CN/docs/HTML/Element/audio)
   - : {{HTMLElement("audio")}} 元素可以用来播放一些简单的音效和音乐。如果你想要更多的参与，可以学习[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 来深入了解音频处理的力量！
 - [IndexedDB](/zh-CN/docs/IndexedDB)
-  - : 一个强大的数据存储 API，用来在电脑或者设备上保存用户自己的数据。一个很好的方法用来保存游戏的状态和其它最近的信息，这样在需要的时候不用每次重新下载。也可以用来让你的游戏即使用户没有链接到网络也能继续玩（例如在飞机上的数小时）。
+  - : 一个强大的数据存储 API，用来在电脑或者设备上保存用户自己的数据。一个很好的方法用来保存游戏的状态和其他最近的信息，这样在需要的时候不用每次重新下载。也可以用来让你的游戏即使用户没有链接到网络也能继续玩（例如在飞机上的数小时）。
 - [JavaScript](/zh-CN/docs/JavaScript)
   - : JavaScript 是网络上使用的编程语言，在现代浏览器中正在快速发展，而且一直在快速发展。使用它的力量为您的游戏编写代码，或者使用[Emscripten](https://github.com/kripken/emscripten/wiki)或[Asm.js](http://asmjs.org/spec/latest/)等技术轻松移植您现有的游戏。
 - [Pointer Lock API](/zh-CN/docs/API/Pointer_Lock_API)

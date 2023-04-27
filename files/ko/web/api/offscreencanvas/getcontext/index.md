@@ -6,7 +6,7 @@ slug: Web/API/OffscreenCanvas/getContext
 
 **`OffscreenCanvas.getContext()`** 메소드는 offscreen 캔버스를 위한 드로잉 컨텍스트 반환합니다. 컨텍스트 식별자가 지원되는 상황이 아닐 경우 {{jsxref("null")}}를 반환합니다.
 
-> **참고:** 이 API는 현재 [WebGL1](/ko/docs/Web/API/WebGLRenderingContext)과 [WebGL2](/ko/docs/Web/API/WebGL2RenderingContext) 컨텍스트에서만 실행됩니다. [Canvas 2D API](/ko/docs/Web/API/Canvas_API) 관련 {{bug(801176)}}를 참조하세요.
+> **참고:** 이 API는 현재 [WebGL1](/ko/docs/Web/API/WebGLRenderingContext)과 [WebGL2](/ko/docs/Web/API/WebGL2RenderingContext) 컨텍스트에서만 실행됩니다. [Canvas 2D API](/ko/docs/Web/API/Canvas_API) 관련 [Firefox bug 801176](https://bugzil.la/801176)를 참조하세요.
 
 ## 구문
 
@@ -94,11 +94,11 @@ gl; // WebGLRenderingContext
 gl.canvas; // OffscreenCanvas
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,6 +1,8 @@
 ---
 title: '<html>: HTML 文書 / ルート要素'
 slug: Web/HTML/Element/html
+l10n:
+  sourceCommit: 4a2b6cafbf9bc5b006eedbdf0e9fdf2c8626d5b6
 ---
 
 {{HTMLSidebar}}
@@ -56,7 +58,7 @@ slug: Web/HTML/Element/html
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("manifest")}} {{deprecated_inline}}
+- {{htmlattrdef("manifest")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : ローカルにキャッシュされるべきリソースを示すリソースマニフェストの {{glossary("URI")}} を指定します。
 - {{htmlattrdef("version")}} {{deprecated_inline}}
   - : 現在の文書を管理する HTML の{{glossary("Doctype", "文書型定義")}}のバージョンを指定します。文書型宣言のバージョン情報と重複しているため、この属性は必須ではありません。
@@ -68,8 +70,12 @@ slug: Web/HTML/Element/html
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>...</head>
-  <body>...</body>
+  <head>
+    <!-- … -->
+  </head>
+  <body>
+    <!-- … -->
+  </body>
 </html>
 ```
 
@@ -77,7 +83,7 @@ slug: Web/HTML/Element/html
 
 HTML では `<html>` 要素の開始タグと終了タグを指定する必要はありませんが、ウェブページの {{htmlattrxref("lang")}} を指定できるようにするために、作者はこれを指定することが重要です。 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} に従った有効な言語タグを持つ `lang` 属性を `<html>` 要素に提供すれば、画面の内側へアナウンスするための適切な言語を決定するのに役立ちます。識別言語タグは、ページのコンテンツの大部分で使用されている言語を記述する必要があります。これがないと、画面の内側へ、通常、オペレーティングシステムの設定された言語が既定値として適用され、誤読が発生する可能性があります。
 
-`html` 要素に妥当な `lang` を設定することは、ページで {{HTMLElement("head")}} に含まれる {{HTMLElement("title")}} などの重要なメタデータについても、正しくアナウンスすることができます。
+`<html>` 要素に妥当な `lang` を設定することで、ページで {{HTMLElement("head")}} に含まれる {{HTMLElement("title")}} などの重要なメタデータについても、正しくアナウンスすることができます。
 
 - [MDN "WCAG を理解する ― ガイドライン 3.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
 - [Understanding Success Criterion 3.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)

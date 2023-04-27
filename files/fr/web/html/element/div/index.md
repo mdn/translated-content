@@ -121,9 +121,9 @@ Comme tous les autres éléments HTML, cet élément accepte [les attributs univ
 </div>
 ```
 
-Le résultat ressemble à ceci :
+#### Résultat
 
-{{EmbedLiveSample("Un_exemple_simple", "", 80)}}
+{{EmbedLiveSample("", "", 80)}}
 
 ### Un exemple mis en forme
 
@@ -152,7 +152,7 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 #### Résultat
 
-{{EmbedLiveSample("Un_exemple_mis_en_forme", "", 150)}}
+{{EmbedLiveSample("", "", 150)}}
 
 ## Accessibilité
 

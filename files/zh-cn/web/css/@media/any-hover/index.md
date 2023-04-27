@@ -38,7 +38,7 @@ slug: Web/CSS/@media/any-hover
 
 #### 结果
 
-{{EmbedLiveSample("Testing_whether_input_methods_can_hover")}}
+{{EmbedLiveSample("测试是否有输入机制可以 hover")}}
 
 ## 规范
 

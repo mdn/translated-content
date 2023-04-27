@@ -3,7 +3,7 @@ title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
 original_slug: MDN/Contribute/Localize
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
@@ -23,7 +23,7 @@ l10n:
 
 ### 中国語 (zh-CN, zh-TW)
 
-- ディスカッション: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/)
+- ディスカッション: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/), [Telegram (Mozilla China channel)](https://t.me/mozilla_china)
 - 現在の貢献者: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999)
 
 ### フランス語 (fr)

@@ -57,7 +57,7 @@ slug: Web/HTML/Element/ul
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        {{ARIARole("directory")}}、{{ARIARole("group")}}、{{ARIARole("listbox")}}、{{ARIARole("menu")}}、{{ARIARole("menubar")}}、{{ARIARole("none")}}、{{ARIARole("presentation")}}、{{ARIARole("radiogroup")}}、{{ARIARole("tablist")}}、{{ARIARole("toolbar")}}、{{ARIARole("tree")}}
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>
@@ -71,13 +71,13 @@ slug: Web/HTML/Element/ul
 
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{ htmlattrdef("compact") }} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `compact` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : 此布尔属性提示列表是否需要被渲染为更紧凑的样式。{{glossary("user agent", "用户代理")}}决定如何解释这个属性，且并非所有浏览器都支持它。
 
     > **警告：** 不要使用这个属性，因为它已经被废弃了：请使用 [CSS](/zh-CN/docs/Web/CSS) 来更改样式。如果想达到与 `compact` 属性相同的效果，将 CSS 属性 {{cssxref("line-height")}} 的值设为 `80%` 即可。
 
-- {{ htmlattrdef("type") }} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
 
   - : 用于设置列表的着重号样式，定义于 HTML3.2 和过渡版本 HTML 4.0/4.01 中的可用值有：
 
@@ -183,5 +183,5 @@ slug: Web/HTML/Element/ul
 
   - {{CSSxRef("list-style")}} 属性，用于选择显示序数的方法。
   - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)，用于操作复杂的嵌套列表。
-  - {{CSSxRef("line-height")}} 属性，用于模拟过时的 {{HTMLAttrxRef("compact", "ul")}} 属性。
+  - {{CSSxRef("line-height")}} 属性，用于模拟过时的 [`compact`](/zh-CN/docs/Web/HTML/Element/ul#compact) 属性。
   - {{CSSxRef("margin")}} 属性，用于控制列表的缩进。

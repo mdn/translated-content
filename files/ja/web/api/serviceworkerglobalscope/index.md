@@ -2,7 +2,7 @@
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
 l10n:
-  sourceCommit: e540d79b5bc8893cdcd0b65ec498a6e2c22cfcfa
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
 {{APIRef("Service Workers API")}}
@@ -32,6 +32,8 @@ l10n:
 
 - {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
   - : {{domxref("ServiceWorkerRegistration")}} が新しい {{domxref("ServiceWorkerRegistration.active")}} ワーカーを得た時に発生します。
+- {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}}
+  - : 決済アプリのサービスワーカーで発行され、決済を処理する準備ができたかどうかを調べるために使用されます。特に、販売者のウェブサイトが {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}} を呼び出すと発行されます。
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : {{domxref("ContentIndex", "コンテンツ索引", "", 1)}}からアイテムが取り除かれたときに発生します。
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
@@ -44,6 +46,8 @@ l10n:
   - : 表示された通知をユーザーがクリックしたときに発生します。
 - {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}}
   - : 表示された通知をユーザーが閉じたときに発生します。
+- {{domxref("ServiceWorkerGlobalScope.paymentrequest_event", "paymentrequest")}} {{Experimental_Inline}}
+  - : 販売者のウェブサイトで {{domxref("PaymentRequest.show()")}} メソッドを介して支払いフローが開始されたときに、支払いアプリで発行されます。
 - {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
   - : サービスワーカーのクライアントページから {{domxref("SyncManager.register")}} への呼び出しが行われたときに発生します。ネットワークが有効であるか、すぐに利用可能になるのであれば、直ちに同期が試みられます。
 - {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} {{Experimental_Inline}}

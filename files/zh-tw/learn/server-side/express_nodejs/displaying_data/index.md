@@ -37,18 +37,17 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 本教程分為下列章節，說明為了顯示圖書館網站頁面，如何新增各種特性 。在進入下一個教程之前，你需要閱讀並逐一實作下列章節。
 
-1. [使用 async 控制非同步流](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
-2. [模板入門](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3. [本地圖書館基礎模板](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
-4. [主頁](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-5. [書本清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-6. [書本實例清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7. [日期格式化 - 使用 moment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-8. [作者清單頁面、分類清單頁面、與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-9. [分類詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-10. [書本詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-11. [作者詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-12. [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+1. [模板入門](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
+2. [本地圖書館基礎模板](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+3. [主頁](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+4. [書本清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+5. [書本實例清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+6. [日期格式化 - 使用 moment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+7. [作者清單頁面、分類清單頁面與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+8. [分類詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+9. [書本詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+10. [作者詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+11. [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## 總結
 
@@ -64,15 +63,3 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 - [Moment](http://momentjs.com/docs/) (Moment docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教學連結
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

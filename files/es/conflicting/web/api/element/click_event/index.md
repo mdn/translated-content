@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onclick
 slug: conflicting/Web/API/Element/click_event
 original_slug: Web/API/GlobalEventHandlers/onclick
+browser-compat: api.Element.click_event
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -69,6 +70,6 @@ Solo se puede asignar un controlador `click` a un objeto a la vez con esta propi
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.onclick")}}
+{{Compat}}

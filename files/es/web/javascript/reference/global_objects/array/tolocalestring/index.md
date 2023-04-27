@@ -142,7 +142,7 @@ Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con 
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+{{Compat}}
 
 ## Ver también
 

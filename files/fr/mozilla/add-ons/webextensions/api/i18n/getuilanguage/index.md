@@ -32,9 +32,9 @@ Aucun
 
 `string`. Le code de langue de l'interface utilisateur du navigateur en tant que {{WebExtAPIRef("i18n.LanguageCode")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.i18n.getUILanguage")}}
+{{Compat}}
 
 ## Exemples
 

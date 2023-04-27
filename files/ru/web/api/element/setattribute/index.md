@@ -28,7 +28,7 @@ var b = document.querySelector("button");
 b.setAttribute("disabled", "disabled");
 ```
 
-{{ EmbedLiveSample('Пример', '300', '50', '', 'Web/API/Element/setAttribute') }}
+{{ EmbedLiveSample('Пример', '100%', '50') }}
 
 ## Примечания
 

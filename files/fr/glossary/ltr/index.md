@@ -1,6 +1,6 @@
 ---
 title: ltr
-slug: Glossary/ltr
+slug: Glossary/LTR
 tags:
   - Composing
   - Glossaire

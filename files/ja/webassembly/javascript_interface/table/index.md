@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Table
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Table()`** オブジェクトは JavaScript のラッパーオブジェクトであり、関数の参照を格納する WebAssembly Table を表す配列風の構造を持っています。 JavaScript や WebAssembly のコードで作成されたテーブルは、 JavaScript と WebAssembly の両方からアクセスでき、変更もできます。
 

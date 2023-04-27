@@ -50,10 +50,6 @@ var gettingTitle = browser.browserAction.getTitle(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le titre de l'action du navigateur.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.getTitle",2)}}
-
 ## Exemples
 
 Ce code change le titre entre "ceci" et "cela" chaque fois que l'utilisateur clique sur l'action du navigateur :
@@ -72,6 +68,10 @@ browser.browserAction.onClicked.addListener(() => {
   gettingTitle.then(toggleTitle);
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

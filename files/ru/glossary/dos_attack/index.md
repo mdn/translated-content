@@ -24,6 +24,5 @@ DoS-атаки - это больше категория, чем определё
 
 ## Learn more
 
-- {{interwiki("wikipedia", "Denial-of-service_attack", "Denial-of-service attack")}} on Wikipedia
 - [Denial-of-service on OWASP](https://www.owasp.org/index.php/Denial_of_Service)
 - {{Glossary("Distributed Denial of Service","DDoS")}}

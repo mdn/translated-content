@@ -28,11 +28,11 @@ alert(window.getSelection()) // What is called
 alert(window.getSelection().toString())  // What is actually being effectively called.
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

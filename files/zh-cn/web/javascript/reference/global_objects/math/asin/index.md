@@ -30,14 +30,14 @@ Math.asin(x)
 
 ## 示例
 
-### 例子：使用 `Math.asin()`
+### 示例：使用 `Math.asin()`
 
 ```js
 Math.asin(-2);  // NaN
 Math.asin(-1);  // -1.5707963267948966 (-pi/2)
 Math.asin(0);   // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.570796326794897 (pi/2)
+Math.asin(1);   // 1.5707963267948966 (pi/2)
 Math.asin(2);   // NaN
 ```
 

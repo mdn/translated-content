@@ -176,8 +176,6 @@ Elles utilisent généralement un premier paramètre indiquant le nom de l'élé
 
 La macro [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) permet de créer un lien vers un bogue de bugzilla.mozilla.org avec la syntaxe `\{{Bug(123456)}}`. Un tel appel devrait être remplacé par `[bogue Mozilla 123456](https://bugzilla.mozilla.org/show_bug.cgi?id=123456)`.
 
-La macro [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) fournit un lien vers la base de bogues de WebKit. Un tel lien devrait être remplacé par `[bogue WebKit 7890](https://bugs.webkit.org/show_bug.cgi?id=7890)`.
-
 ### Navigation entre les pages de chapitre d'un guide
 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), et [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) permettent d'afficher des contrôles de navigation pour des articles qui forment une série.

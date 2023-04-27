@@ -313,7 +313,7 @@ Also it's a good practice to provide some content (such as the direct download l
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -328,7 +328,7 @@ Also it's a good practice to provide some content (such as the direct download l
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.audio")}}
+{{Compat}}
 
 ## 같이 보기
 

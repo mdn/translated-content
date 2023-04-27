@@ -61,7 +61,7 @@ Une fois l'objet de configuration créé, il est passé dans le constructeur {{d
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.RTCIceServer")}}
+{{Compat}}
 
 ## Voir aussi
 

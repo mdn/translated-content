@@ -110,7 +110,7 @@ let myVariable = "Bob";
 myVariable = "Steve";
 ```
 
-Observe que as variáveis ​​podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Data_structures):
+Observe que as variáveis podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Data_structures):
 
 <table class="standard-table">
   <thead>
@@ -266,7 +266,7 @@ Um `{{Glossary("operator")}}` é um símbolo matemático que produz um resultado
 
 Existem muito mais operadores para explorar, mas isso é o suficiente por enquanto. Consulte [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators) para obter uma lista completa.
 
-> **Nota:** misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis ​​corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
+> **Nota:** misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
 
 ### Condicionais
 
@@ -470,14 +470,3 @@ Acabamos de arranhar a superfície do JavaScript. Se você gostou de jogar e des
   - : Este é um excelente recurso para aspirantes a desenvolvedores da web! Aprenda JavaScript em um ambiente interativo, com aulas curtas e testes interativos, guiados por uma avaliação automatizada. As primeiras 40 aulas são gratuitas. O curso completo está disponível por um pequeno pagamento único.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [Como será o seu site?](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Noções básicas de HTML](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Noções básicas de CSS](/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Noções básicas de JavaScript](/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicando seu website](/pt-BR/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Como a web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

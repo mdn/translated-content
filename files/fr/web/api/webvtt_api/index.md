@@ -763,24 +763,8 @@ Où `p` et `a` sont les balises utilisées en HTML pour représenter les paragra
 
 ## Spécifications
 
-| Spécification                                                                  |
-| ------------------------------------------------------------------------------ |
-| [WebVTT&nbsp;: le format Web Video Text Tracks](https://w3c.github.io/webvtt/) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Interface `VTTCue`
-
-{{Compat("api.VTTCue", 0)}}
-
-### Interface `TextTrack`
-
-{{Compat("api.TextTrack", 0)}}
-
-### Notes
-
-Avant Firefox 50, l'énumération `AlignSetting` (correspondant aux valeurs possibles de [`VTTCue.align`](/fr/docs/Web/API/VTTCue/align)) incluait par erreur la valeur `"middle"` au lieu de `"center"`. Ceci a été corrigé.
-
-WebVTT a été implémenté par Firefox 24 derrière la préférence `media.webvtt.enabled`, qui était désactivée par défaut. Cette fonctionnalité pouvait être activée en passant la préférence à `true`. WebVTT est activé par défaut à partir de Firefox 31 et peut être désactivé en passant la valeur de la préférence à `false`.
-
-Avant Firefox 58, le mot-clé `REGION` créait des objets [`VTTRegion`](/fr/docs/Web/API/VTTRegion), mais qui n'étaient pas utilisés. Firefox 58 prend complètement en charge `VTTRegion` et son utilisation&nbsp;; toutefois cette fonctionnalité est désactivée par défaut derrière la préférence `media.webvtt.regions.enabled` qu'il faut passer à `true` pour l'activer avec Firefox 58. Les régions sont activées par défaut à partir de Firefox 59 (voir les bugs [1338030](https://bugzilla.mozilla.org/show_bug.cgi?id=1338030) et [1415805](https://bugzilla.mozilla.org/show_bug.cgi?id=1415805)).
+{{Compat}}

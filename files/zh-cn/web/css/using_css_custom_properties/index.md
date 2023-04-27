@@ -88,7 +88,7 @@ element {
 
 其呈现是：
 
-{{EmbedLiveSample("First_steps_with_custom_properties",600,180)}}
+{{EmbedLiveSample("使用自定义属性的第一步",600,180)}}
 
 注意到在 CSS 代码中的重复：背景色 `brown` 被多处设置。对于一些 CSS 声明，是可以在级联关系更高的位置设置，通过 CSS 继承自然地解决这个重复的问题。但在一般项目中，是不可能通过这样的方式去解决。通过在 {{cssxref(":root")}} 伪类上设置自定义属性，然后在整个文档需要的地方使用，可以减少这样的重复性：
 
@@ -138,7 +138,7 @@ element {
 
 自定义属性会继承。这意味着如果在一个给定的元素上，没有为这个自定义属性设置值，在其父元素上的值会被使用。看这一段 HTML：
 
-```
+```html
 <div class="one">
   <div class="two">
     <div class="three"></div>
@@ -149,7 +149,7 @@ element {
 
 配套的 CSS：
 
-```
+```css
 .two {
   --test: 10px;
 }
@@ -170,7 +170,7 @@ element {
 
 ## 自定义属性备用值
 
-用 {{cssxref("var()")}} 函数可以定义多个**备用值**(fallback value)，当给定值未定义时将会用备用值替换。这对于 [Custom Elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) 和 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 都很有用。
+用 {{cssxref("var()")}} 函数可以定义多个**备用值**（fallback value），当给定值未定义时将会用备用值替换。这对于 [Custom Element](/zh-CN/docs/Web/API/Web_components/Using_custom_elements) 和 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 都很有用。
 
 > **备注：** 备用值并不是用于实现浏览器兼容性的。如果浏览器不支持 CSS 自定义属性，备用值也没什么用。它仅对支持 CSS 自定义属性的浏览器提供了一个备份机制，该机制仅当给定值未定义或是无效值的时候生效。
 
@@ -225,9 +225,9 @@ p { color: var(--text-color); }
 1. 检查属性 color 是否为继承属性。是，但是 `<p>` 没有任何父元素定义了 color 属性。转到下一步。
 2. 将该值设置为它的**默认初始值**，比如 black。
 
-### Result
+### 结果
 
-{{EmbedLiveSample('What_happens_with_invalid_variables')}}
+{{EmbedLiveSample('无效变量会导致什么？')}}
 
 段落颜色并不是蓝色，因为无效代换导致了它被替换成了默认初始值的黑色。如果你直接写 `color: 16px` 的话，则会导致语法错误，而前面的定义则会生效（段落显示为蓝色）。
 
@@ -237,7 +237,7 @@ p { color: var(--text-color); }
 
 在 JavaScript 中获取或者修改 CSS 变量和操作普通 CSS 属性是一样的：
 
-```
+```js
 // 获取一个 Dom 节点上的 CSS 变量
 element.style.getPropertyValue("--my-var");
 
@@ -252,7 +252,7 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 {{Compat}}
 
-> **备注：** 自定义属性的前缀 `var-` 是早期标准规定的，后期改为了 `--`。Firefox 31 和以后的版本遵循新的标准。 ({{bug(985838)}})
+> **备注：** 自定义属性的前缀 `var-` 是早期标准规定的，后期改为了 `--`。Firefox 31 和以后的版本遵循新的标准。（[Firefox bug 985838](https://bugzil.la/985838)）
 
 ## 参见
 

@@ -86,7 +86,7 @@ orderButton.addEventListener("click", function() {
 }, false);
 ```
 
-This script sets up a {{event("click")}} event listener on the "Order Now" button. When clicked, the event handler fetches the list of selected options using `selectedOptions`, then iterates over the options in the list. A string is constructed to list the ordered items, with logic to build the list using proper English grammar rules (including a [serial comma](https://en.wikipedia.org/wiki/Serial_comma).
+This script sets up a [`click`](/ko/docs/Web/API/Element/click_event) event listener on the "Order Now" button. When clicked, the event handler fetches the list of selected options using `selectedOptions`, then iterates over the options in the list. A string is constructed to list the ordered items, with logic to build the list using proper English grammar rules (including a [serial comma](https://en.wikipedia.org/wiki/Serial_comma).
 
 ### Result
 
@@ -94,14 +94,14 @@ The resulting content looks like this in action:
 
 {{EmbedLiveSample("Example", 600, 250)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Forms/The_native_form_widgets", "Drop-down content")}}
+- [Drop-down content](/ko/docs/Learn/HTML/Forms/Other_form_controls#drop-down_controls)

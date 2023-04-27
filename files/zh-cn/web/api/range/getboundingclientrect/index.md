@@ -55,7 +55,7 @@ highlight.style.height = `${clientRect.height}px`;
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

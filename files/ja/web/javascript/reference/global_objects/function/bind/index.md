@@ -33,7 +33,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 
 ## 解説
 
-`bind()` 関数は新しい「バインド済み関数 (_bound function_)」を生成します。バインド済み関数を呼び出すと、通常はラップされた関数のほうが実行され、それは「ターゲット関数 (_target function_)」とも呼ばれます。バインド済み関数は、渡された引数、すなわち `this` の値と最初のいくつかの引数を内部の状態として格納します。これらの値は、呼び出し時に渡されるのではなく、あらかじめ格納されています。一般に、`const boundFn = fn.bind(thisArg, arg1, arg2)` は、`const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` とよびだされたじて呼ばれるのと同じだと考えてよいでしょう（ただし `boundFn` が構築されたときではなく、呼び出されたときに効果があります）。
+`bind()` 関数は新しい「バインド済み関数 (_bound function_)」を生成します。バインド済み関数を呼び出すと、通常はラップされた関数のほうが実行され、それは「ターゲット関数 (_target function_)」とも呼ばれます。バインド済み関数は、渡された引数、すなわち `this` の値と最初のいくつかの引数を内部の状態として格納します。これらの値は、呼び出し時に渡されるのではなく、あらかじめ格納されています。一般に、`const boundFn = fn.bind(thisArg, arg1, arg2)` は、`const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` と呼ばれるのと同じだと考えてよいでしょう（ただし `boundFn` が構築されたときではなく、呼び出されたときに効果があります）。
 
 バインド済み関数は、 `boundFn.bind(thisArg, /* その他の引数 */)` を呼び出すことでさらにバインドすることができ、別のバインド済み関数 `boundFn2` が作成されます。なぜなら、`boundFn2` の対象となる関数 `boundFn` はすでに `this` というバインド済み関数を持っているからです。`boundFn2` が呼ばれると、 `boundFn` を呼び出すことになり、それが `fn` を呼び出すことになります。最終的に `fn` が受け取る引数は、順に `boundFn` にバインドされた引数、 `boundFn2` にバインドされた引数、 `boundFn2` で受け取った引数になります。
 
@@ -70,7 +70,7 @@ class Derived extends class {}.bind(null) {}
 // TypeError: Class extends value does not have valid prototype property undefined
 ```
 
-バインド済み関数を [`instanceof`] (/ja/docs/Web/JavaScript/Reference/Operators/instanceof) の右辺として使用する場合、 `instanceof` はターゲット関数（これはバインド済み関数の内部に格納されています）に到達し、 代わりにその `prototype` を読み取ります。
+バインド済み関数を [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) の右辺として使用する場合、 `instanceof` はターゲット関数（これはバインド済み関数の内部に格納されています）に到達し、 代わりにその `prototype` を読み取ります。
 
 ```js
 class Base {}
@@ -153,7 +153,7 @@ console.log(leadingThirtySevenList()); // [37]
 console.log(leadingThirtySevenList(1, 2, 3)); // [37, 1, 2, 3]
 console.log(addThirtySeven(5)); // 42
 console.log(addThirtySeven(5, 10)); // 42
-// (the second argument is ignored)
+// (最後の引数 10 は無視されます)
 ```
 
 ### setTimeout() での利用
@@ -170,7 +170,7 @@ class LateBloomer {
     setTimeout(this.declare.bind(this), 1000);
   }
   declare() {
-    console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
+    console.log(`わたしは花びらが ${this.petalCount} 枚の綺麗な花です！`);
   }
 }
 
@@ -258,7 +258,7 @@ console.log(new BoundDerived() instanceof Derived); // true
 
 ### メソッドのユーティリティ関数への変換
 
-`bind()` は特定の `this` 値を必要とするメソッドを、前回の `this` 引数を通常の引数として受け入れるプレーンなユーティリティ関数に変換したい場合にも役立ちます。これは、汎用的なユーティリティ関数の動作方法に似ています。 `array.map(callback)` を呼び出す代わりに、 `map(array, callback)` を使うと、 `Array.prototype` を変更することを避け、配列でない配列風オブジェクト (`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments など) でも、 `map` が使用できるようになります。
+`bind()` は特定の `this` 値を必要とするメソッドを、前回の `this` 引数を通常の引数として受け入れるプレーンなユーティリティ関数に変換したい場合にも役立ちます。これは、汎用的なユーティリティ関数の動作方法に似ています。 `array.map(callback)` を呼び出す代わりに、 `map(array, callback)` を使うと、 `Array.prototype` を変更することを避け、配列でない配列風オブジェクト（例えば [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) など）でも、 `map` が使用できるようになります。
 
 例として、{{jsxref("Array.prototype.slice()")}} を取り上げます。この関数は、配列に似たオブジェクトを本物の配列へ変換するために使えます。まず、次のようにショートカットを作成するとします。
 

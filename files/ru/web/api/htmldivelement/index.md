@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLDivElement
 
 _Наследует свойства родителя, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLDivElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLDivElement.align")}}
   - : Свойство типа {{domxref("DOMString")}} указывающее выравнивание содержимого элемента относительно окружающего контекста. Принимает следующие значения `"left"`, `"right"`, `"justify"`, `"center"`.
 
 ## Методы

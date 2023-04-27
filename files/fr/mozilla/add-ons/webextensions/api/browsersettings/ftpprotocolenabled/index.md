@@ -20,9 +20,9 @@ Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui détermi
 
 La valeur sous-jaccente est un booléen.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.ftpProtocolEnabled")}}
+{{Compat}}
 
 ## Exemples
 

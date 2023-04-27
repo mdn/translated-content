@@ -35,9 +35,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 
 Compatibilité macOS : A partir de macOS 10.10, le comportement de maximisation par défaut pour les fenêtres a été modifié pour exécuter les applications en plein écran au lieu des fenêtres "zoomées". `fullscreen` fait référence à la fois au navigateur fonctionnant en plein écran et lorsque le contenu dans un onglet utilise l'API Fullscreen.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.WindowState")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

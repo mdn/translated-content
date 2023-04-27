@@ -226,7 +226,7 @@ Dans cet exemple, on utilise `Proxy` afin qu'un attribut alterne entre deux él�
 
 On crée un objet `vue` qui est un proxy pour l'objet avec une `selected`. Le gestionnaire du proxy définit la fonction [`set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set).
 
-Lorsqu'on affecte un élément HTML à `view.selected`, l'attribut `'aria-selected'` de l'élément est placé à `true`. Si on affecte ensuite un autre élément à `view.selected`, ce nouvel élément aura l'attribut `'aria-selected'` défini à `true` et l'élément précédent verra son attribut `'aria-selected'` automatiquement défini à `false`.
+Lorsqu'on affecte un élément HTML à `vue.selected`, l'attribut `'aria-selected'` de l'élément est placé à `true`. Si on affecte ensuite un autre élément à `vue.selected`, ce nouvel élément aura l'attribut `'aria-selected'` défini à `true` et l'élément précédent verra son attribut `'aria-selected'` automatiquement défini à `false`.
 
 ```js
 let vue = new Proxy({
@@ -257,14 +257,14 @@ const element1 = document.getElementById('elem-1');
 const element2 = document.getElementById('elem-2');
 
 // on sélectionne element1
-view.selected = element1;
+vue.selected = element1;
 
 console.log(`element1 : ${element1.getAttribute('aria-selected')}`);
 // element1 : true
 
 // on sélectionne element2 et cela entraîne
 // la déselection automatique de element1
-view.selected = element2;
+vue.selected = element2;
 
 console.log(`element1 : ${element1.getAttribute('aria-selected')}`);
 // element1 : false

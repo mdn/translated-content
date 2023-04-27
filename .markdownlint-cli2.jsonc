@@ -106,6 +106,7 @@
         "h6" // Not always converted currently because of live samples using English IDs
       ]
     },
+    "MD034": false,
     // Fixed upstream, needs PRs in this repo
     "MD036": false,
     // Upstream fixing in https://github.com/mdn/content/pull/20115
@@ -176,5 +177,5 @@
     }
   },
   "customRules": ["markdownlint-rule-search-replace"],
-  "ignores": ["node_modules", "**/conflicting/**", "**/orphaned/**", ".github/", "files/**/web/api/window/frames/index.md"]
+  "ignores": ["node_modules", "**/conflicting/**", "**/orphaned/**", ".github/"]
 }

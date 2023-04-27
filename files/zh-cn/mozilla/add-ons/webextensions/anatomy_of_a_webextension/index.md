@@ -11,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 这是唯一一个在每个扩展里面必须存在的文件。它包含了关于这个扩展插件基本的元数据（metadata），比如它的名字、版本和所需权限。并且，它也对扩展中其他文件进行了链接。
 
-这个 manifest 文件还可以指向其它一些类型的文件：
+这个 manifest 文件还可以指向其他一些类型的文件：
 
 - [后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本): 执行一个长时间运行的逻辑。
 - 图标：用于扩展插件和任何它可能定义的按钮儿。

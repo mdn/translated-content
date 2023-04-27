@@ -52,7 +52,7 @@ Cet élément implémente l'interface [`SVGPathElement`](/fr/DOM/SVGPathElement)
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.path")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -33,9 +33,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 > **Note :** Ces constantes de chaîne ne changeront jamais, mais de nouvelles constantes peuvent être ajoutées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.State")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

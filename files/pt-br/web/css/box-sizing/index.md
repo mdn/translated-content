@@ -22,7 +22,7 @@ box-sizing: inherit
 
 - `content-box`
   - : Essa é o estilo padrão, conforme especificado pela norma CSS. As propriedades {{Cssxref("width")}} (largura) e {{Cssxref("height")}} (altura) são medidas incluindo só o conteúdo, mas não o padding, border ou margin. Nota: Padding, border e margin serão fora da box. Exemplo.: Se .box {width: 350px} então se você aplicar uma propriedade {border: 10px solid black;} o resultado renderizado no navegador (browser) será .box {width: 370px;}
-- `padding-box`{{experimental_inline}} {{obsolete_inline}}
+- `padding-box`{{experimental_inline}}
   - : As propriedades de largura ({{Cssxref("width")}}) e de altura ({{Cssxref("height")}}) incluem o tamanho padding size, mas não incluem a propriedade border ou margem.
 - `border-box`
   - : As propriedades de largura ({{Cssxref("width")}}) e de altura ({{Cssxref("height")}}) incluem o tamanho padding size e a propriedade border, mas não incluem a propriedade margin.

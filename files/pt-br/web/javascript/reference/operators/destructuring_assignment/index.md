@@ -352,8 +352,8 @@ console.log(foo); // "bar"
 
 ## Notas específicas do Firefox
 
-- O Firefox forneceu uma extensão não-padronizada de linguagem em [JS1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7) para desestruturação. Esta extensão foi removida no Gecko 40 {{geckoRelease (40)}}. Consulte {{bug (1083498)}}.
-- A partir do Gecko 41 {{geckoRelease (41)}} e para cumprir com a especificação ES2015, padrões de desestruturação com parênteses, como `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, agora são considerados inválidos e lançarão um {{jsxref ( "SyntaxError")}}. Veja a postagem no blog de Jeff Walden e {{bug (1146136)}} para mais detalhes.
+- O Firefox forneceu uma extensão não-padronizada de linguagem em [JS1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7) para desestruturação. Esta extensão foi removida no Gecko 40. Consulte {{bug (1083498)}}.
+- A partir do Gecko 41 e para cumprir com a especificação ES2015, padrões de desestruturação com parênteses, como `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, agora são considerados inválidos e lançarão um {{jsxref ( "SyntaxError")}}. Veja a postagem no blog de Jeff Walden e {{bug (1146136)}} para mais detalhes.
 
 ## Veja também
 

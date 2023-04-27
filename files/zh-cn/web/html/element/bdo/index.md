@@ -48,7 +48,7 @@ HTML 双向文本替代元素 (**`<bdo>`**) 改写了文本的方向性，使文
 
 元素属性包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
-- {{htmlattrdef("dir")}}
+- `dir`
   - : 在此元素内容中呈现文本的方向。可能的值是：
 
     - ltr: 指示文本应从左到右的方向。
@@ -65,7 +65,7 @@ to left.</bdo></p>
 
 ### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 注意
 
@@ -79,6 +79,6 @@ HTML 4 规范未指定此元素的事件。它们是在 XHTML 中添加的。这
 
 {{Compat}}
 
-## 另参见
+## 参见
 
 - 相关 HTML: {{HTMLElement("bdi")}}

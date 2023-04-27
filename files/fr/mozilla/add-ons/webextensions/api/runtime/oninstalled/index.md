@@ -58,9 +58,9 @@ Les événements ont trois fonctions :
         - `temporary`
           - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant [web-ext run](/fr/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onInstalled", 10)}}
+{{Compat}}
 
 ## Exemples
 

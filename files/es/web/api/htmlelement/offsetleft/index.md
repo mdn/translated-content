@@ -32,7 +32,7 @@ if (tOLeft > 5) {
 
 This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
 
-![Image:offsetLeft.jpg](/@api/deki/files/790/=OffsetLeft.jpg)
+![Image:offsetLeft.jpg](offsetleft.jpg)
 
 ```
 <div style="width: 300px; border-color:blue;
@@ -59,9 +59,9 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.offsetLeft")}}
+{{Compat}}
 
 ## See also
 
