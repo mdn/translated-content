@@ -126,7 +126,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 ### 控制抽象对象
 
-控件抽象可以帮助构造代码，尤其是异步代码（例如不使用深度嵌套的回调）。
+控件抽象对象可以帮助构造代码，尤其是异步代码（例如不使用深度嵌套的回调）。
 
 - {{JSxRef("Iterator")}}
 - {{JSxRef("AsyncIterator")}}
