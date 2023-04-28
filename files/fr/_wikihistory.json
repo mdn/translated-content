@@ -27803,41 +27803,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Glossary/Object_reference": {
-    "modified": "2019-03-23T22:40:24.148Z",
-    "contributors": ["loella16", "xdelatour"]
-  },
-  "conflicting/Web/API/HTMLSlotElement": {
-    "modified": "2019-03-23T22:32:17.762Z",
-    "contributors": ["nobe4"]
-  },
-  "conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56": {
-    "modified": "2019-03-18T20:46:55.702Z",
-    "contributors": ["dragon38800", "nobe4"]
-  },
-  "conflicting/Web/API/IndexedDB_API": {
-    "modified": "2019-03-18T21:38:29.049Z",
-    "contributors": ["loella16"]
-  },
-  "conflicting/Web/API/Window": {
-    "modified": "2019-03-23T23:49:48.265Z",
-    "contributors": ["fscholz", "teoli", "jsx", "Mgjbot", "BenoitL"]
-  },
-  "conflicting/Web/Accessibility": {
-    "modified": "2019-03-23T23:43:56.307Z",
-    "contributors": ["achraf", "Jeremie", "Fredchat"]
-  },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T23:18:04.282Z",
-    "contributors": ["PhilippeV", "Fredchat"]
-  },
-  "conflicting/Web/HTML/Element/slot": {
-    "modified": "2020-10-15T21:26:28.598Z",
-    "contributors": ["SphinxKnight", "Mylainos"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/name": {
-    "modified": "2020-10-15T21:31:15.709Z",
-    "contributors": ["SphinxKnight"]
   }
 }

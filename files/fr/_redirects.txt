@@ -41,16 +41,16 @@
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_button	/fr/docs/Web/Accessibility/ARIA/Roles/button_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog	/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role
 /fr/docs/Accessibilité/ARIA/Zones_live_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
-/fr/docs/Accessibilité/ARIA/formulaires	/fr/docs/conflicting/Web/Accessibility/ARIA
+/fr/docs/Accessibilité/ARIA/formulaires	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/formulaires/Alertes	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/formulaires/Indications_elementaires_pour_les_formulaires	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/formulaires/Labels_multi-options	/fr/docs/Web/Accessibility/ARIA/Multipart_labels
 /fr/docs/Accessibilité/An_overview_of_accessible_web_applications_and_widgets	/fr/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /fr/docs/Accessibilité/Aperçu_d_applications_Web_et_de_composants_dynamiques_accessibles	/fr/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /fr/docs/Accessibilité/Checklist_accessibilite_mobile	/fr/docs/Web/Accessibility/Mobile_accessibility_checklist
-/fr/docs/Accessibilité/Communauté	/fr/docs/conflicting/Web/Accessibility
+/fr/docs/Accessibilité/Communauté	/fr/docs/Web/Accessibility
 /fr/docs/Accessibilité/Développement_Web	/fr/docs/Web/Accessibility
-/fr/docs/Accessibilité:Communauté	/fr/docs/conflicting/Web/Accessibility
+/fr/docs/Accessibilité:Communauté	/fr/docs/Web/Accessibility
 /fr/docs/Accueil	/fr/docs/Web
 /fr/docs/Adaptation_des_applications_XUL_pour_Firefox_1.5	/fr/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 /fr/docs/Améliorations_DOM_dans_Firefox_3	/fr/docs/Mozilla/Firefox/Releases/3/DOM_improvements
@@ -994,7 +994,7 @@
 /fr/docs/DOM/window.close	/fr/docs/Web/API/Window/close
 /fr/docs/DOM/window.closed	/fr/docs/Web/API/Window/closed
 /fr/docs/DOM/window.confirm	/fr/docs/Web/API/Window/confirm
-/fr/docs/DOM/window.content	/fr/docs/conflicting/Web/API/Window
+/fr/docs/DOM/window.content	/fr/docs/Web/API/Window
 /fr/docs/DOM/window.document	/fr/docs/Web/API/Window/document
 /fr/docs/DOM/window.dump	/fr/docs/Web/API/Window/dump
 /fr/docs/DOM/window.fullScreen	/fr/docs/Web/API/Window/fullScreen
@@ -1145,7 +1145,7 @@
 /fr/docs/DOM:window.close	/fr/docs/Web/API/Window/close
 /fr/docs/DOM:window.closed	/fr/docs/Web/API/Window/closed
 /fr/docs/DOM:window.confirm	/fr/docs/Web/API/Window/confirm
-/fr/docs/DOM:window.content	/fr/docs/conflicting/Web/API/Window
+/fr/docs/DOM:window.content	/fr/docs/Web/API/Window
 /fr/docs/DOM:window.document	/fr/docs/Web/API/Window/document
 /fr/docs/DOM:window.dump	/fr/docs/Web/API/Window/dump
 /fr/docs/DOM:window.fullScreen	/fr/docs/Web/API/Window/fullScreen
@@ -1574,7 +1574,7 @@
 /fr/docs/Glossaire/Robots.txt	/fr/docs/Glossary/Robots.txt
 /fr/docs/Glossaire/Ruby	/fr/docs/Glossary/Ruby
 /fr/docs/Glossaire/Récursion	/fr/docs/Glossary/Recursion
-/fr/docs/Glossaire/Référence	/fr/docs/conflicting/Glossary/Object_reference
+/fr/docs/Glossaire/Référence	/fr/docs/Glossary/Object_reference
 /fr/docs/Glossaire/Référence_d_objet	/fr/docs/Glossary/Object_reference
 /fr/docs/Glossaire/SCM	/fr/docs/Glossary/SCM
 /fr/docs/Glossaire/SCTP	/fr/docs/Glossary/SCTP
@@ -1735,7 +1735,7 @@
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
-/fr/docs/Glossary/Reference	/fr/docs/conflicting/Glossary/Object_reference
+/fr/docs/Glossary/Reference	/fr/docs/Glossary/Object_reference
 /fr/docs/Glossary/Symbol	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/TCP
 /fr/docs/Glossary/XHR_(XMLHttpRequest)	/fr/docs/Glossary/XMLHttpRequest
@@ -3838,7 +3838,7 @@
 /fr/docs/Web/API/File/fileSize	/fr/docs/Web/API/Blob/size
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
-/fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/conflicting/Web/API/IndexedDB_API
+/fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/Web/API/IndexedDB_API
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
 /fr/docs/Web/API/GlobalEventHandlers/onabort	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/API/GlobalEventHandlers/onauxclick	/fr/docs/Web/API/Element/auxclick_event
@@ -3868,9 +3868,9 @@
 /fr/docs/Web/API/GlobalEventHandlers/onwheel	/fr/docs/Web/API/Element/wheel_event
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
 /fr/docs/Web/API/HTMLBaseFontElement	/fr/docs/Web/CSS/CSS_Fonts
-/fr/docs/Web/API/HTMLContentElement	/fr/docs/conflicting/Web/API/HTMLSlotElement
+/fr/docs/Web/API/HTMLContentElement	/fr/docs/Web/API/HTMLSlotElement
 /fr/docs/Web/API/HTMLContentElement/getDistributedNodes	/fr/docs/Web/API/HTMLSlotElement
-/fr/docs/Web/API/HTMLContentElement/select	/fr/docs/conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
+/fr/docs/Web/API/HTMLContentElement/select	/fr/docs/Web/API/HTMLSlotElement
 /fr/docs/Web/API/HTMLElement/animationend_event	/fr/docs/Web/API/Element/animationend_event
 /fr/docs/Web/API/HTMLElement/animationiteration_event	/fr/docs/Web/API/Element/animationiteration_event
 /fr/docs/Web/API/HTMLElement/animationstart_event	/fr/docs/Web/API/Element/animationstart_event
@@ -3886,7 +3886,7 @@
 /fr/docs/Web/API/IDBDatabase/onerror	/fr/docs/Web/API/IDBTransaction/error_event
 /fr/docs/Web/API/IDBDatabase/onversionchange	/fr/docs/Web/API/IDBDatabase/versionchange_event
 /fr/docs/Web/API/IDBEnvironment/indexedDB	/fr/docs/Web/API/indexedDB
-/fr/docs/Web/API/IDBFileRequest/lockedFile	/fr/docs/conflicting/Web/API/IndexedDB_API
+/fr/docs/Web/API/IDBFileRequest/lockedFile	/fr/docs/Web/API/IndexedDB_API
 /fr/docs/Web/API/IDBRequest/blocked_event	/fr/docs/Web/API/IDBOpenDBRequest/blocked_event
 /fr/docs/Web/API/IDBRequest/onerror	/fr/docs/Web/API/IDBRequest/error_event
 /fr/docs/Web/API/IDBRequest/onsuccess	/fr/docs/Web/API/IDBRequest/success_event
@@ -4015,7 +4015,7 @@
 /fr/docs/Web/API/Window.close	/fr/docs/Web/API/Window/close
 /fr/docs/Web/API/Window.closed	/fr/docs/Web/API/Window/closed
 /fr/docs/Web/API/Window.confirm	/fr/docs/Web/API/Window/confirm
-/fr/docs/Web/API/Window.content	/fr/docs/conflicting/Web/API/Window
+/fr/docs/Web/API/Window.content	/fr/docs/Web/API/Window
 /fr/docs/Web/API/Window.document	/fr/docs/Web/API/Window/document
 /fr/docs/Web/API/Window.dump	/fr/docs/Web/API/Window/dump
 /fr/docs/Web/API/Window.frames	/fr/docs/Web/API/Window/frames
@@ -4039,7 +4039,7 @@
 /fr/docs/Web/API/Window.showModalDialog	/fr/docs/Web/API/Window/showModalDialog
 /fr/docs/Web/API/Window/URL	/fr/docs/Web/API/URL
 /fr/docs/Web/API/Window/caches	/fr/docs/Web/API/caches
-/fr/docs/Web/API/Window/content	/fr/docs/conflicting/Web/API/Window
+/fr/docs/Web/API/Window/content	/fr/docs/Web/API/Window
 /fr/docs/Web/API/Window/crypto	/fr/docs/Web/API/crypto_property
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
 /fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
@@ -4125,13 +4125,13 @@
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/fr/docs/Web/Accessibility/ARIA/Roles/slider_role
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/fr/docs/Web/Accessibility/ARIA/Roles/status_role
 /fr/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/fr/docs/Web/Accessibility/ARIA
-/fr/docs/Web/Accessibility/ARIA/forms	/fr/docs/conflicting/Web/Accessibility/ARIA
+/fr/docs/Web/Accessibility/ARIA/forms	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/ARIA/forms/Multipart_labels	/fr/docs/Web/Accessibility/ARIA/Multipart_labels
 /fr/docs/Web/Accessibility/ARIA/forms/alerts	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/ARIA/widgets	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/Web/Accessibility/ARIA
-/fr/docs/Web/Accessibility/Community	/fr/docs/conflicting/Web/Accessibility
+/fr/docs/Web/Accessibility/Community	/fr/docs/Web/Accessibility
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /fr/docs/Web/Accessibility/Web_Development	/fr/docs/Web/Accessibility
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Guide/Audio_and_video_delivery
@@ -4753,7 +4753,7 @@
 /fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
 /fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
 /fr/docs/Web/HTML/Element/basefont	/fr/docs/Web/CSS/CSS_Fonts
-/fr/docs/Web/HTML/Element/content	/fr/docs/conflicting/Web/HTML/Element/slot
+/fr/docs/Web/HTML/Element/content	/fr/docs/Web/HTML/Element/slot
 /fr/docs/Web/HTML/Element/h1	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h2	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h3	/fr/docs/Web/HTML/Element/Heading_Elements
@@ -5029,7 +5029,7 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
-/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/name
+/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
@@ -5735,7 +5735,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray/lastIndexOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray/map	/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray/name	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/name
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray/of	/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray/reduce	/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
@@ -6284,6 +6284,7 @@
 /fr/docs/conflicting/Glossary/DOM	/fr/docs/Glossary/DOM
 /fr/docs/conflicting/Glossary/Doctype	/fr/docs/Glossary/Doctype
 /fr/docs/conflicting/Glossary/Firefox_OS	/fr/docs/Glossary/Firefox_OS
+/fr/docs/conflicting/Glossary/Object_reference	/fr/docs/Glossary/Object_reference
 /fr/docs/conflicting/Glossary/TCP	/fr/docs/Glossary/TCP
 /fr/docs/conflicting/Learn	/fr/docs/Learn
 /fr/docs/conflicting/Learn/CSS/Building_blocks	/fr/docs/Learn/CSS/Building_blocks
@@ -6387,10 +6388,13 @@
 /fr/docs/conflicting/Web/API/HTMLInputElement/select_event	/fr/docs/Web/API/HTMLInputElement/select_event
 /fr/docs/conflicting/Web/API/HTMLMediaElement/abort_event	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/conflicting/Web/API/HTMLMediaElement/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
+/fr/docs/conflicting/Web/API/HTMLSlotElement	/fr/docs/Web/API/HTMLSlotElement
+/fr/docs/conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56	/fr/docs/Web/API/HTMLSlotElement
 /fr/docs/conflicting/Web/API/IDBTransaction/abort_event	/fr/docs/Web/API/IDBTransaction/abort_event
 /fr/docs/conflicting/Web/API/IDBTransaction/abort_event_0945f0eeba3f0bcb487692fdcd8d6f40	/fr/docs/Web/API/IDBTransaction/abort_event
 /fr/docs/conflicting/Web/API/IDBTransaction/complete_event	/fr/docs/Web/API/IDBTransaction/complete_event
 /fr/docs/conflicting/Web/API/IDBTransaction/error_event	/fr/docs/Web/API/IDBTransaction/error_event
+/fr/docs/conflicting/Web/API/IndexedDB_API	/fr/docs/Web/API/IndexedDB_API
 /fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/conflicting/Web/API/MediaTrackConstraints	/fr/docs/Web/API/MediaTrackConstraints
 /fr/docs/conflicting/Web/API/Navigator	/fr/docs/Web/API/Navigator
@@ -6415,6 +6419,7 @@
 /fr/docs/conflicting/Web/API/WebVTT_API	/fr/docs/Web/API/WebVTT_API
 /fr/docs/conflicting/Web/API/Web_Storage_API	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/conflicting/Web/API/Web_Workers_API/Using_web_workers	/fr/docs/Web/API/Web_Workers_API/Using_web_workers
+/fr/docs/conflicting/Web/API/Window	/fr/docs/Web/API/Window
 /fr/docs/conflicting/Web/API/Window/afterprint_event	/fr/docs/Web/API/Window/afterprint_event
 /fr/docs/conflicting/Web/API/Window/beforeprint_event	/fr/docs/Web/API/Window/beforeprint_event
 /fr/docs/conflicting/Web/API/Window/beforeunload_event	/fr/docs/Web/API/Window/beforeunload_event
@@ -6433,6 +6438,8 @@
 /fr/docs/conflicting/Web/API/btoa	/fr/docs/Web/API/btoa
 /fr/docs/conflicting/Web/API/origin	/fr/docs/Web/API/origin
 /fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3	/fr/docs/Web/API
+/fr/docs/conflicting/Web/Accessibility	/fr/docs/Web/Accessibility
+/fr/docs/conflicting/Web/Accessibility/ARIA	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/conflicting/Web/Accessibility/ARIA/widgets	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea	/fr/docs/Web/Accessibility/ARIA
@@ -6490,6 +6497,7 @@
 /fr/docs/conflicting/Web/HTML/Attributes/rel	/fr/docs/Web/HTML/Attributes/rel
 /fr/docs/conflicting/Web/HTML/Element	/fr/docs/Web/HTML/Element
 /fr/docs/conflicting/Web/HTML/Element/input/datetime-local	/fr/docs/Web/HTML/Element/input/datetime-local
+/fr/docs/conflicting/Web/HTML/Element/slot	/fr/docs/Web/HTML/Element/slot
 /fr/docs/conflicting/Web/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
 /fr/docs/conflicting/Web/HTML/Global_attributes/contenteditable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP
@@ -6520,6 +6528,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/EvalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError
+/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction	/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/InternalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError
