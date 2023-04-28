@@ -48,7 +48,7 @@ Si vous utilisez une valeur qui inverse cet affichage ou une méthode qui réord
 
 Dans l'exemple qui suit, nous avons ajouté une mise en forme sur le focus afin que vous puissiez voir quel lien est actif lorsque vous naviguez au clavier. Si vous modifier la valeur de `flex-direction`, vous pouvez voir que la navigation au clavier continue de suivre l'ordre dans lequel les éléments sont écrits dans le document source.
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%', 440)}}
+{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%','380')}}
 
 De la même façon, changer la valeur de `flex-direction` ne modifie pas l'ordre avec lequel on navigue parmi les éléments. Cela ne modifie pas non plus l'ordre dans lequel les éléments sont rendus à l'écran. Il s'agit uniquement d'une inversion visuelle.
 
@@ -114,6 +114,6 @@ Visuellement, la date apparaît au-dessus du titre. Toutefois, si la carte étai
 
 Dans cet exemple, la carte sera le conteneur flexible et `flex-direction` aura la valeur `column`. Pour la date, on affectera un ordre avec la propriété `order` qui vaut `-1` qui permettra de la placer au-dessus du titre.
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}
+{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', '730')}}
 
 Ces légères adaptations sont caractéristiques des cas où la propriété `order` se révèle pertinente. L'ordre logique doit suivre l'ordre de lecture et de navigation au clavier dans le document. Il doit maintenir la structure de la façon la plus accessible. `order` peut alors être ensuite utilisé pour opérer des ajustements visuels. Lorsque vous réordonnez des éléments, assurez-vous que cela n'a pas d'impact sur les éléments parmi lesquels on peut naviguer au clavier. De façon générale, assurez-vous que la phase de test via le navigateur inclut également des tests de navigation au clavier (sans souris ni écran tactile). Vous pourrez alors rapidement constater si vos choix de développement rendent certains contenus difficiles d'accès.
