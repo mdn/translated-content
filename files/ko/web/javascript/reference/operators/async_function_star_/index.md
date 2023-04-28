@@ -1,6 +1,8 @@
 ---
 title: async function* 표현식
 slug: Web/JavaScript/Reference/Operators/async_function*
+l10n:
+  sourceCommit: ab97df6ce8865569507bcfc884206a1ed297a690
 ---
 
 {{jsSidebar("Operators")}}
@@ -33,7 +35,7 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-### Parameters
+### 매개변수
 
 - `name` {{optional_inline}}
   - : 함수 이름입니다. 익명 함수의 경우 생략할 수 있습니다. 이름은 함수 본문 내에서만 유효합니다.
@@ -73,7 +75,7 @@ x(6)
 
 - {{jsxref("Statements/async_function*", "async function*")}} statement
 - {{jsxref("AsyncGeneratorFunction")}} object
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [이터레이션 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("GeneratorFunction")}} object
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
