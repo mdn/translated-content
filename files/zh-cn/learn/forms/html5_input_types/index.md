@@ -173,10 +173,10 @@ slug: Learn/Forms/HTML5_input_types
 const price = document.querySelector('#price');
 const output = document.querySelector('.price-output');
 
-output.textContent = price.value;
+output.value = price.value;
 
 price.addEventListener('input', () => {
-  output.textContent = price.value;
+  output.value = price.value;
 });
 ```
 
