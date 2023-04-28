@@ -5,15 +5,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 {{JSRef}}
 
-**`reduce()`** 方法对数组中的每个元素按序执行一个由你提供的 **reducer** 函数，每一次运行 **reducer** 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
+**`reduce()`** 方法对数组中的每个元素按序执行一个提供的 **reducer** 函数，每一次运行 **reducer** 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
 
-第一次执行回调函数时，不存在“上一次的计算结果”。如果需要回调函数从数组索引为 0 的元素开始执行，则需要传递初始值。否则，数组索引为 0 的元素将被用作初始值，迭代器将从第二个元素开始执行（即从索引为 1 而不是 0的位置开始）。
+第一次执行回调函数时，不存在“上一次的计算结果”。如果需要回调函数从数组索引为 0 的元素开始执行，则需要传递初始值。否则，数组索引为 0 的元素将被用作初始值，迭代器将从第二个元素开始执行（即从索引为 1 而不是 0 的位置开始）。
 
 下面的例子能够帮助你理解 `reduce()` 的用处——计算数组所有元素的总和：
 
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
-**reducer** 逐个遍历数组元素，每一步都将当前元素的值添加到前一步的结果中（该结果是是之前所有步骤的总和）——直到没有更多的元素被添加。
+**reducer** 逐个遍历数组元素，每一步都将当前元素的值添加到前一步的结果中（该结果是之前所有步骤的总和）——直到没有更多的元素被添加。
 
 ## 语法
 
@@ -46,7 +46,7 @@ reduce(callbackFn, initialValue)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果数组为空且未提供初始值 `initialValue`，则会抛出异常。
+  - : 如果数组为空且未提供 `initialValue`，则会抛出异常。
 
 ## 描述
 
@@ -56,7 +56,7 @@ reduce(callbackFn, initialValue)
 
 与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduce()` 不接受 `thisArg`参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果`callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
 
-`reduce()` 是[函数式编程](https://zh.wikipedia.org/wiki/函数式编程)中的一个核心概念，在函数式编程中，不可能改变任何值，因此为了累积数组中的所有值，必须在每次迭代中返回一个新的累加器值。这种约定也适用于 JavaScript 的 `reduce()`：应该在可能的情况下使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或其他复制方法来创建新的数组和对象作为累加器，而不是改变现有的累加器。如果你决定改变累加器而不是复制它，请记得仍然在回调中返回修改后的对象，否则下一次迭代将收到`undefined`。
+`reduce()` 是[函数式编程](https://zh.wikipedia.org/wiki/函数式编程)中的一个核心概念，在函数式编程中，不可能改变任何值，因此为了累积数组中的所有值，必须在每次迭代中返回一个新的累加器值。这种约定也适用于 JavaScript 的 `reduce()`：应该在可能的情况下使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或其他复制方法来创建新的数组和对象作为累加器，而不是改变现有的累加器。如果你决定改变累加器而不是复制它，请记得仍然在回调中返回修改后的对象，否则下一次迭代将收到 `undefined`。
 
 `reduce()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
 
