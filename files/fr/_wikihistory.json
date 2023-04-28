@@ -27839,25 +27839,5 @@
   "conflicting/Web/JavaScript/Reference/Global_Objects/Function/name": {
     "modified": "2020-10-15T21:31:15.709Z",
     "contributors": ["SphinxKnight"]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Firefox_differentiators": {
-    "modified": "2019-12-14T15:20:16.560Z",
-    "contributors": ["Mozinet", "hellosct1"]
-  },
-  "orphaned/Web/API/HTMLShadowElement": {
-    "modified": "2019-03-23T22:32:10.748Z",
-    "contributors": ["nobe4"]
-  },
-  "orphaned/Web/CSS/translation-value": {
-    "modified": "2019-04-06T11:47:12.242Z",
-    "contributors": ["SphinxKnight", "J.DMB", "teoli", "louuis"]
-  },
-  "orphaned/Web/HTML/Element/shadow": {
-    "modified": "2020-10-15T21:39:46.549Z",
-    "contributors": ["SphinxKnight", "jean-pierre.gay"]
-  },
-  "orphaned/Web/HTTP/Headers/Set-Cookie/SameSite": {
-    "modified": "2020-10-15T22:30:31.847Z",
-    "contributors": ["SphinxKnight", "Pierstoval"]
   }
 }

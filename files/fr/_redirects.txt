@@ -645,7 +645,6 @@
 /fr/docs/CSS/transition-duration	/fr/docs/Web/CSS/transition-duration
 /fr/docs/CSS/transition-property	/fr/docs/Web/CSS/transition-property
 /fr/docs/CSS/transition-timing-function	/fr/docs/Web/CSS/transition-timing-function
-/fr/docs/CSS/translation-value	/fr/docs/orphaned/Web/CSS/translation-value
 /fr/docs/CSS/unicode-bidi	/fr/docs/Web/CSS/unicode-bidi
 /fr/docs/CSS/uri	/fr/docs/Web/CSS/url
 /fr/docs/CSS/user-ident	/fr/docs/Web/CSS/custom-ident
@@ -3127,7 +3126,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/Compatibilité_navigateurs_API_JavaScript	/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 /fr/docs/Mozilla/Add-ons/WebExtensions/Differences_entre_les_implementations_api	/fr/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /fr/docs/Mozilla/Add-ons/WebExtensions/Exemples	/fr/docs/Mozilla/Add-ons/WebExtensions/Examples
-/fr/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	/fr/docs/orphaned/Mozilla/Add-ons/WebExtensions/Firefox_differentiators
+/fr/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	https://extensionworkshop.com/documentation/develop/unique-firefox-capabilities/
 /fr/docs/Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome	/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 /fr/docs/Mozilla/Add-ons/WebExtensions/Index	/fr/docs/Mozilla/Add-ons/WebExtensions
 /fr/docs/Mozilla/Add-ons/WebExtensions/Intercepter_requêtes_HTTP	/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
@@ -3881,7 +3880,6 @@
 /fr/docs/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
 /fr/docs/Web/API/HTMLOrForeignElement/focus	/fr/docs/Web/API/HTMLElement/focus
 /fr/docs/Web/API/HTMLOrForeignElement/tabIndex	/fr/docs/Web/API/HTMLElement/tabindex
-/fr/docs/Web/API/HTMLShadowElement	/fr/docs/orphaned/Web/API/HTMLShadowElement
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption
 /fr/docs/Web/API/HTMLTableElement.insertRow	/fr/docs/Web/API/HTMLTableElement/insertRow
 /fr/docs/Web/API/IDBDatabase/onabort	/fr/docs/Web/API/IDBTransaction/abort_event
@@ -3945,9 +3943,6 @@
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/Web/API/PasswordCredential
 /fr/docs/Web/API/Performance.now()	/fr/docs/Web/API/Performance/now
 /fr/docs/Web/API/Performance/onresourcetimingbufferfull	/fr/docs/Web/API/Performance/resourcetimingbufferfull_event
-/fr/docs/Web/API/Performance_API/Using_the_Performance_API	/fr/docs/orphaned/Web/API/Performance_API/Using_the_Performance_API
-/fr/docs/Web/API/Performance_Timeline	/fr/docs/orphaned/Web/API/Performance_Timeline
-/fr/docs/Web/API/Performance_Timeline/Using_Performance_Timeline	/fr/docs/orphaned/Web/API/Performance_Timeline/Using_Performance_Timeline
 /fr/docs/Web/API/Pointer_events/gestes_pincer_zoom	/fr/docs/Web/API/Pointer_events/Pinch_zoom_gestures
 /fr/docs/Web/API/PositionOptions	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/Web/API/PositionOptions/enableHighAccuracy	/fr/docs/Web/API/Geolocation/getCurrentPosition
@@ -4561,7 +4556,6 @@
 /fr/docs/Web/CSS/transform-function/translateX()	/fr/docs/Web/CSS/transform-function/translateX
 /fr/docs/Web/CSS/transform-function/translateY()	/fr/docs/Web/CSS/transform-function/translateY
 /fr/docs/Web/CSS/transform-function/translateZ()	/fr/docs/Web/CSS/transform-function/translateZ
-/fr/docs/Web/CSS/translation-value	/fr/docs/orphaned/Web/CSS/translation-value
 /fr/docs/Web/CSS/uri	/fr/docs/Web/CSS/url
 /fr/docs/Web/CSS/url()	/fr/docs/Web/CSS/url
 /fr/docs/Web/CSS/user-ident	/fr/docs/Web/CSS/custom-ident
@@ -4766,7 +4760,6 @@
 /fr/docs/Web/HTML/Element/h4	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h5	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h6	/fr/docs/Web/HTML/Element/Heading_Elements
-/fr/docs/Web/HTML/Element/shadow	/fr/docs/orphaned/Web/HTML/Element/shadow
 /fr/docs/Web/HTML/Element/video/canplaythrough_event	/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /fr/docs/Web/HTML/Element/video/durationchange_event	/fr/docs/Web/API/HTMLMediaElement/durationchange_event
 /fr/docs/Web/HTML/Formats_date_heure_HTML	/fr/docs/Web/HTML/Date_and_time_formats
@@ -4830,7 +4823,7 @@
 /fr/docs/Web/HTTP/Headers/Feature-Policy	/fr/docs/Web/HTTP/Headers/Permissions-Policy
 /fr/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/fr/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
-/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/fr/docs/orphaned/Web/HTTP/Headers/Set-Cookie/SameSite
+/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /fr/docs/Web/HTTP/Index	/fr/docs/Web/HTTP
 /fr/docs/Web/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
 /fr/docs/Web/HTTP/Méthode/CONNECT	/fr/docs/Web/HTTP/Methods/CONNECT
@@ -6594,6 +6587,7 @@
 /fr/docs/orphaned/MDN/Contribute/Documentation_priorities	https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/
 /fr/docs/orphaned/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /fr/docs/orphaned/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
+/fr/docs/orphaned/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	https://extensionworkshop.com/documentation/develop/unique-firefox-capabilities/
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
 /fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#web_console
@@ -6649,6 +6643,7 @@
 /fr/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/fr/docs/Learn/HTML
 /fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/orphaned/Web/HTML/Preloading_content	/fr/docs/Web/HTML/Attributes/rel/preload
+/fr/docs/orphaned/Web/HTTP/Headers/Set-Cookie/SameSite	/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /fr/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /fr/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/orphaned/Web/Reference	/fr/docs/Web
