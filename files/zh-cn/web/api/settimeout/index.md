@@ -48,7 +48,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 
 使用 {{domxref("clearTimeout()")}} 取消延时。
 
-如果要重复调用某个函数（如每*N*毫秒调用一次），考虑使用 {{domxref("setInterval()")}}。
+如果要重复调用某个函数（如每 *N* 毫秒调用一次），考虑使用 {{domxref("setInterval()")}}。
 
 ### 非数字延迟值被默默地强制转化为数字
 
