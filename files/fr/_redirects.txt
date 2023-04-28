@@ -3126,6 +3126,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/Compatibilité_navigateurs_API_JavaScript	/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 /fr/docs/Mozilla/Add-ons/WebExtensions/Differences_entre_les_implementations_api	/fr/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /fr/docs/Mozilla/Add-ons/WebExtensions/Exemples	/fr/docs/Mozilla/Add-ons/WebExtensions/Examples
+/fr/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	https://extensionworkshop.com/documentation/develop/unique-firefox-capabilities/
 /fr/docs/Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome	/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 /fr/docs/Mozilla/Add-ons/WebExtensions/Index	/fr/docs/Mozilla/Add-ons/WebExtensions
 /fr/docs/Mozilla/Add-ons/WebExtensions/Intercepter_requêtes_HTTP	/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests

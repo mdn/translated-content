@@ -5944,10 +5944,6 @@
     "modified": "2019-07-08T08:20:22.550Z",
     "contributors": ["hellosct1"]
   },
-  "Mozilla/Add-ons/WebExtensions/Firefox_differentiators": {
-    "modified": "2019-12-14T15:20:16.560Z",
-    "contributors": ["Mozinet", "hellosct1"]
-  },
   "Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview": {
     "modified": "2020-05-24T09:38:20.083Z",
     "contributors": ["hellosct1"]
