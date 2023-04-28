@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 
 {{JSRef}}
 
-**`toLocaleString()`** 方法返回一个字符串，表示数组中的所有元素。元素通过使用 `toLocaleString` 方法转换为字符串，并且使用特殊字符串（例如逗号“，”）分隔开。
+**`toLocaleString()`** 方法返回一个字符串，表示数组中的所有元素。每个元素通过调用他们自己的 `toLocaleString` 方法转换为字符串，并且使用特定的字符串（例如逗号“，”）分隔开。
 
 {{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}
 
@@ -20,7 +20,7 @@ toLocaleString(locales, options)
 ### 参数
 
 - `locales` {{optional_inline}}
-  - : 带有 BCP 47 语言标签的字符串，或者此类字符串的数组。获取 `locales` 参数的一般形式和解释, 可以参见 [`Intl` 主页面的参数说明](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_参数)。
+  - : 带有 BCP 47 语言标签的字符串，或者此类字符串的数组。对于 `locales` 参数的一般形式和说明，可以参见 [`Intl` 主页面的参数说明](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_参数)。
 - `options` {{optional_inline}}
   - : 一个具有配置属性的对象。对于数字，请参见 {{jsxref("Number.prototype.toLocaleString()")}}；对于日期，请参见 {{jsxref("Date.prototype.toLocaleString()")}}。
 
@@ -30,11 +30,11 @@ toLocaleString(locales, options)
 
 ## 描述
 
-`Array.prototype.toLocaleString` 方法遍历数组内容，使用提供的 `locales` 和 `options` 参数调用每个元素的 `toLocaleString` 方法，并使用实现定义的分隔符（例如逗号“，”）拼接起来。请注意，该方法本身不会使用这两个参数——它只是将其传递给每个元素的 `toLocaleString()`。分隔符的选择取决于主机当前的语言环境，而不是 `locales` 参数。
+`Array.prototype.toLocaleString` 方法遍历数组内容，调用每个元素的 `toLocaleString` 方法并提供了 `locales` 和 `options` 参数，转换后的字符串通过实现定义的分隔符（例如逗号“，”）拼接起来。请注意，该方法本身不会使用这两个参数——它只是将其传递给每个元素的 `toLocaleString()`。分隔符的选择取决于主机当前的语言环境，而不是 `locales` 参数。
 
 如果一个元素是 `undefined`、`null`，它会被转换为空字符串，而不是 `"null"` 或者 `"undefined"`。
 
-当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`toLocaleString()` 方法会把它当作值 `undefined` 一样迭代空槽。
+当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`toLocaleString()` 方法会把空槽当作值 `undefined` 一样迭代它。
 
 `toLocaleString()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
