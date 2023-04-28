@@ -15,7 +15,7 @@ La Network Information (Información de red) API provee información sobre el si
 
 ```js
 var conexion = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-var tipo = connection.effectiveType;
+var tipo = conexion.effectiveType;
 
 function updateConnectionStatus() {
   console.log("Connection type changed from " + tipo + " to " + conexion.effectiveType);
