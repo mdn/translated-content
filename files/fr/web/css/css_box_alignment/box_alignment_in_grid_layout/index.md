@@ -44,7 +44,7 @@ Pour aligner des éléments sur l'axe de bloc, on utilisera les propriétés com
 
 Ces propriétés permettent d'aligner individuellement chacun des éléments au sein de leur zone de grille. Les propriétés `align-items` et `justify-items` sont appliquées au conteneur de grille et définissent `align-self` et `justify-self` pour l'ensemble des sujets d'alignement. Cela signifie qu'on peut indiquer un alignement global au niveau du conteneur puis surcharger cette règle au cas par cas si besoin en utilisant `align-self` ou `justify-self` sur les éléments souhaités.
 
-Les valeurs initiales pour `align-self` et `justify-self` sont `stretch`. Aussi, l'objet sera étiré sur toute la zone de grille qui lui est dédié. Une exception est apportée à cette règle lorsque l'élément possède des proportions intrinsèques (une image par exemple)&nbsp;; dans ce cas, l'élément est aligné avec `start`sur les deux axes et l'élément n'est pas déformé.
+Les valeurs initiales pour `align-self` et `justify-self` sont `stretch`. Aussi, l'objet sera étiré sur toute la zone de grille qui lui est dédié. Une exception est apportée à cette règle lorsque l'élément possède des proportions intrinsèques (une image par exemple)&nbsp;; dans ce cas, l'élément est aligné avec `start` sur les deux axes et l'élément n'est pas déformé.
 
 ## Alignement du contenu
 
@@ -60,7 +60,7 @@ Ces propriétés indiquent comment aligner les pistes de la grille lorsqu'il res
 - [`column-gap`](/fr/docs/Web/CSS/column-gap)
 - [`gap`](/fr/docs/Web/CSS/gap)
 
-La spécification sur les grilles contenaient initialement les définitions des propriétés [`grid-row-gap`](/fr/docs/Web/CSS/row-gap), [`column-gap`](/fr/docs/Web/CSS/grid-column-gap) et [`grid-gap`](/fr/docs/Web/CSS/gap). Les définitions de ces propriétés ont depuis été déplacées dans le module de spécification <i lang="en">Box Alignment</i> et ont respectivement été renommées en [`row-gap`](/fr/docs/Web/CSS/row-gap), [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`gap`](/fr/docs/Web/CSS/gap). Ainsi, elles peuvent être utilisées pour d'autres méthodes de disposition où les gouttières sont pertinentes.
+La spécification sur les grilles contenait initialement les définitions des propriétés [`grid-row-gap`](/fr/docs/Web/CSS/row-gap), [`grid-column-gap`](/fr/docs/Web/CSS/column-gap) et [`grid-gap`](/fr/docs/Web/CSS/gap). Les définitions de ces propriétés ont depuis été déplacées dans le module de spécification <i lang="en">Box Alignment</i> et ont respectivement été renommées en [`row-gap`](/fr/docs/Web/CSS/row-gap), [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`gap`](/fr/docs/Web/CSS/gap). Ainsi, elles peuvent être utilisées pour d'autres méthodes de disposition où les gouttières sont pertinentes.
 
 Les propriétés sans préfixe `grid-` ont été implémentées plus tard par les navigateurs. Afin d'assurer une meilleure compatibilité, vous pouvez doubler les propriétés afin d'utiliser les deux versions.
 
