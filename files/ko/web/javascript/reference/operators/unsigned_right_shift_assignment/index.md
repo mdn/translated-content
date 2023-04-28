@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-**unsigned 오른쪽 시프트 할당(`>>>=`)** 연산자는 지정된 수 만큼의 비트를 오른쪽으로 이동시키고 그 결과를 변수에 할당합니다.
+**unsigned 오른쪽 시프트 할당(`>>>=`)** 연산자는 지정된 수 만큼 [unsigned 오른쪽 시프트 연산](/ko/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)을 수행하고 그 결과를 왼쪽 피연산자에 할당합니다.
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
 
@@ -46,5 +46,5 @@ c >>>= 2n; // 1n
 
 ## 같이 보기
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
-- [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- [Assignment operators in the JS guide](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자)
+- [Unsigned 오른쪽 시프트 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
