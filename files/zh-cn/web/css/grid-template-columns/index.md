@@ -3,7 +3,7 @@ title: grid-template-columns
 slug: Web/CSS/grid-template-columns
 ---
 
-**`grid-template-columns`** 该属性是基于 {{glossary("grid column", "网格列")}}. 的维度，去定义网格线的名称和网格轨道的尺寸大小。
+**`grid-template-columns`** 该属性是基于 {{glossary("grid column", "网格列")}} 的维度，去定义网格线的名称和网格轨道的尺寸大小。
 
 {{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
 
@@ -47,7 +47,7 @@ grid-template-columns: unset;
   - : 非负值且相对于网格容器的 {{cssxref("percentage", "&lt;百分比&gt;")}}。如果网格容器的尺寸大小依赖网格轨道的大小（比如 inline-grid），则百分比值将被视为`auto`。
     为了遵守网格的百分比，网格轨道本身定义的大小，将自动被调整为相对网格容器大小，并且是以最小量将网格轨道调整到最终的大小。
 - {{cssxref("&lt;flex&gt;")}}
-  - : 非负值，用单位 `fr` 来定义网格轨道大小的弹性系数。每个定义了 `<flex>` 的网格轨道会按比例分配剩余的可用空间。当外层用一个 `minmax()` 表示时，它将是一个自动最小值 (即 `minmax(auto, <flex>)` ) .
+  - : 非负值，用单位 `fr` 来定义网格轨道大小的弹性系数。每个定义了 `<flex>` 的网格轨道会按比例分配剩余的可用空间。当外层用一个 `minmax()` 表示时，它将是一个自动最小值 (即 `minmax(auto, <flex>)` ) 。
 - `max-content`
   - : 是一个用来表示以网格项的最大的内容来占据网格轨道的关键字。
 - `min-content`
