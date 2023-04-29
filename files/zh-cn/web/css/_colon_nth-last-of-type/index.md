@@ -30,7 +30,7 @@ slug: Web/CSS/:nth-last-of-type
   <span>这是一个 span。</span>
   <span>这是另一个 span。</span>
   <em>这是起强调作用的。</em>
-  <span>哇，这个 span 变大了！！！</span>
+  <span>哇，这个 span 元素变成了绿色！！！</span>
   <del>这里被删除了。</del>
   <span>这是最后一个 span。</span>
 </div>
