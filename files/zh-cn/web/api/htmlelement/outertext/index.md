@@ -31,7 +31,7 @@ slug: Web/API/HTMLElement/outerText
 </div>
 ```
 
-`outerText` 替换了整个选中的元素，因此 JavaScript 语句 `p.outerText = "替换整个元素"` 替换了整个选中的 `p` 元素：
+`outerText` 替换了整个选中的元素，因此 JavaScript 语句 `p.outerText = "整个元素已替换"` 替换了整个选中的 `p` 元素：
 
 ```html
 <div>整个元素已替换</div>
