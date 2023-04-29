@@ -7,7 +7,7 @@ slug: Web/API/ByteLengthQueuingStrategy/highWaterMark
 
 只读属性 **`ByteLengthQueuingStrategy.highWaterMark`** 返回在应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压)之前，内置队列包含的字节总数。
 
-> **备注：** 与 [`CountQueuingStrategy()`](/zh-CN/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) 不同，其是指定了分块的简单数量，这里的 `highWaterMark` 属性使用 `ByteLengthQueuingStrategy()` 的 `highWaterMark` 参数指定了*字节*数量——具体地说，给定一个分块流，在应用背压之前，内部队列可以包含这些分块多少个字节（而不是这些分块的数量）。
+> **备注：** 与 [`CountQueuingStrategy()`](/zh-CN/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) 不同，后者的 `highWaterMark` 指定了分块的数量，`ByteLengthQueuingStrategy()` 的 `highWaterMark` 参数则指定了*字节*数量——具体地说，给定一个分块流，在应用背压之前，内部队列可以包含这些分块的字节数（而不是这些分块的数量）。
 
 ## 值
 
