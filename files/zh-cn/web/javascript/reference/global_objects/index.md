@@ -21,17 +21,16 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 这些全局属性返回一个简单值，这些值没有自己的属性和方法。
 
+- {{JSxRef("globalThis")}}
 - {{JSxRef("Infinity")}}
 - {{JSxRef("NaN")}}
 - {{JSxRef("undefined")}}
-- {{JSxRef("globalThis")}}
 
 ### 函数属性
 
 全局函数可以直接调用，不需要在调用时指定所属对象，执行结束后会将结果直接返回给调用者。
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/uneval", "uneval()")}}
 - {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
 - {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
 - {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
@@ -40,14 +39,12 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
 - {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- **已废弃**
-
-  - {{JSxRef("Global_Objects/escape", "escape()")}}
-  - {{JSxRef("Global_Objects/unescape", "unescape()")}}
+- {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+- {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
 
 ### 基本对象
 
-顾名思义，基本对象是定义或使用其他对象的基础。基本对象包括一般对象、函数对象和错误对象。
+基本对象是定义或使用其他对象的基础。
 
 - {{JSxRef("Object")}}
 - {{JSxRef("Function")}}
@@ -61,12 +58,12 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{JSxRef("Error")}}
 - {{JSxRef("AggregateError")}}
 - {{JSxRef("EvalError")}}
-- {{JSxRef("InternalError")}}
 - {{JSxRef("RangeError")}}
 - {{JSxRef("ReferenceError")}}
 - {{JSxRef("SyntaxError")}}
 - {{JSxRef("TypeError")}}
 - {{JSxRef("URIError")}}
+- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
 
 ### 数字和日期对象
 
@@ -79,7 +76,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 ### 字符串
 
-用来表示和操作字符串的对象。
+这些对象表示字符串并支持操作字符串。
 
 - {{JSxRef("String")}}
 - {{JSxRef("RegExp")}}
@@ -96,10 +93,10 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{JSxRef("Uint16Array")}}
 - {{JSxRef("Int32Array")}}
 - {{JSxRef("Uint32Array")}}
-- {{JSxRef("Float32Array")}}
-- {{JSxRef("Float64Array")}}
 - {{JSxRef("BigInt64Array")}}
 - {{JSxRef("BigUint64Array")}}
+- {{JSxRef("Float32Array")}}
+- {{JSxRef("Float64Array")}}
 
 ### 使用键的集合对象
 
@@ -120,13 +117,24 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{JSxRef("DataView")}}
 - {{JSxRef("JSON")}}
 
+### 内存管理对象
+
+这些对象会与垃圾回收机制产生交互。
+
+- {{JSxRef("WeakRef")}}
+- {{JSxRef("FinalizationRegistry")}}
+
 ### 控制抽象对象
 
-控件抽象可以帮助构造代码，尤其是异步代码（例如，不使用深度嵌套的回调）。
+控件抽象对象可以帮助构造代码，尤其是异步代码（例如不使用深度嵌套的回调）。
 
+- {{JSxRef("Iterator")}}
+- {{JSxRef("AsyncIterator")}}
 - {{JSxRef("Promise")}}
-- {{JSxRef("Generator")}}
 - {{JSxRef("GeneratorFunction")}}
+- {{JSxRef("AsyncGeneratorFunction")}}
+- {{JSxRef("Generator")}}
+- {{JSxRef("AsyncGenerator")}}
 - {{JSxRef("AsyncFunction")}}
 
 ### 反射
@@ -139,25 +147,13 @@ slug: Web/JavaScript/Reference/Global_Objects
 ECMAScript 核心的附加功能，用于支持多语言处理。
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Locale", "Intl.Locale")}}
-
-### WebAssembly
-
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
-
-### 其他
-
-- {{JSxRef("Functions/arguments", "arguments")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.DisplayNames")}}
+- {{JSxRef("Intl.DurationFormat")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.Locale")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Segmenter")}}
