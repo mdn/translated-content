@@ -20,7 +20,7 @@ slug: Web/API/Streams_API/Concepts
 
 ![](readable_streams.png)
 
-已放入到流中的分块称作 **enqueued**——这意味着它们已经在队列中排队等待被读取。流的一个**内置队列**跟踪了那些尚未读取的分块（请参阅下面的**内部队列和队列策略**部分）。
+已放入到流中的分块称作**已入队**（enqueued）——这意味着它们已经在队列中排队等待被读取。流的一个**内置队列**跟踪了那些尚未读取的分块（请参阅下面的**内部队列和队列策略**部分）。
 
 流中的分块由一个 **reader** 读取——该数据处理过程一次只处理一个分块，允许你对其执行任何类型的操作。reader 加上与它一起运行的其他处理代码合称为一个 **consumer**。
 
@@ -44,7 +44,7 @@ slug: Web/API/Streams_API/Concepts
 
 ## 可写流
 
-一个**可写流**（Writable stream）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对**底层收器接**（underlying sink）的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
+一个**可写流**（Writable stream）是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对**底层接收器**（underlying sink）的抽象——一个更低层次的 I/O 接收器，将原始数据写入其中。
 
 数据由一个 **writer** 写入流中，每次只写入一个分块。分块和可读流的 reader 一样可以有多种类型。你可以用任何方式生成要被写入的块；writer 加上相关的代码称为**生产者**。
 
