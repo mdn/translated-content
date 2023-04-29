@@ -5,7 +5,7 @@ slug: Web/API/CountQueuingStrategy/highWaterMark
 
 {{APIRef("Streams")}}
 
-只读属性 **`CountQueuingStrategy.highWaterMark`** 返回在应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压)之前，内置队列包含的分块总数。
+只读属性 **`CountQueuingStrategy.highWaterMark`** 返回在应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压)之前，内置队列可以包含的分块总数。
 
 ## 值
 
