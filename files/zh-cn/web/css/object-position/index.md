@@ -5,7 +5,7 @@ slug: Web/CSS/object-position
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`）**，在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`**）在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景。
 
 你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在的大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
 
