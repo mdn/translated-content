@@ -5,8 +5,7 @@ slug: Web/API/HTMLElement/outerText
 
 {{APIRef("DOM")}}
 
-{{domxref("HTMLElement")}} 接口的 **`outerText`** 属性返回与 {{domxref("HTMLElement.innerText")}} 相同的值。
-当用作 setter 时，它会用给定的文本替换整个当前节点（这与 'innerText' 不同，后者替换当前节点的 _内部_ 内容）。
+{{domxref("HTMLElement")}} 接口的 **`outerText`** 属性返回与 {{domxref("HTMLElement.innerText")}} 相同的值。当用作 setter 时，它会用给定的文本替换整个当前节点（这与 `innerText` 不同，后者替换当前节点的*内部*内容）。
 
 关于更多信息和示例，请参阅 {{domxref("HTMLElement.innerText")}} 以显示两个属性如何作为 getter 使用。
 
