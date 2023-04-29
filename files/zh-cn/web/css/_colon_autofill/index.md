@@ -64,7 +64,7 @@ input:autofill {
 
 ## 参见
 
-- [Chromium issue 46543: 自动填充输入文本框黄色背景高亮无法关闭](https://crbug.com/46543)
-- [WebKit bug 66032: 允许网站开发者覆盖自动填充字段的颜色。](https://webkit.org/b/66032)
-- [Mozilla bug 740979: 在具有自动填充值的输入元素上实现 `:-moz-autofill` 伪类](https://bugzil.la/740979)
+- [Chromium issue 46543：自动填充输入文本框黄色背景高亮无法关闭](https://crbug.com/46543)
+- [WebKit bug 66032：允许网站开发者覆盖自动填充字段的颜色。](https://webkit.org/b/66032)
+- [Mozilla bug 740979：在具有自动填充值的输入元素上实现 `:-moz-autofill` 伪类](https://bugzil.la/740979)
 - [用户界面模块 Level 4：更多选择器](https://wiki.csswg.org/spec/css4-ui#more-selectors)
