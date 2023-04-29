@@ -24,7 +24,7 @@ slug: Web/API/ReadableStream
 - {{domxref("ReadableStream.getReader()")}}
   - : 创建一个读取器并将流锁定于其上。一旦流被锁定，其他读取器将不能读取它，直到它被释放。
 - {{domxref("ReadableStream.pipeThrough()")}}
-  - : 提供将当前流管道输出到一个转换（transform）流或 writable/readable 流对的链式方法。
+  - : 提供将当前流管道输出到一个转换（transform）流或可写/可读流对的链式方法。
 - {{domxref("ReadableStream.pipeTo()")}}
   - : 将当前 ReadableStream 管道输出到给定的 {{domxref("WritableStream")}}，并返回一个 promise，该 promise 在输出过程成功完成时兑现，在发生错误时拒绝。
 - {{domxref("ReadableStream.tee()")}}
