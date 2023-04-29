@@ -53,7 +53,7 @@ slug: Web/API/HTMLElement/outerText
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.outerHTML")}}
