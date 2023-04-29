@@ -5,7 +5,7 @@ slug: Web/CSS/font-size
 
 {{CSSRef}}
 
-**`font-size`** [CSS](/zh-CN/docs/CSS) 属性设置字体大小。更改字体大小还会更新字体大小相关的 {{cssxref("&lt;length&gt;")}} 单位，例如 `em`、`ex` 等。
+**`font-size`** [CSS](/zh-CN/Web/docs/CSS) 属性设置字体大小。更改字体大小还会更新字体大小相关的 {{cssxref("&lt;length&gt;")}} 单位，例如 `em`、`ex` 等。
 
 {{EmbedInteractiveExample("pages/css/font-size.html")}}
 
