@@ -13,7 +13,7 @@ slug: Web/API/HTMLElement/outerText
 
 一个表示元素及其后代元素的渲染的文本内容的字符串。
 
-如果这个元素本身没有 [被渲染](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (例如，从文档中分离或是从视图中隐藏), 返回值与 {{domxref("Node.textContent")}} 属性的返回值相同。
+如果这个元素本身没有[被渲染](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)（例如，从文档中分离或是从视图中隐藏），返回值与 {{domxref("Node.textContent")}} 属性的返回值相同。
 
 当用作 setter 时，它会用给定的文本替换当前节点的内容，并将任何换行符转义为 {{HTMLElement("br")}} 元素。
 
