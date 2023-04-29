@@ -5,9 +5,9 @@ slug: Web/CSS/object-position
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`）**，在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景（{{cssxref("background")}}）。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`）**，在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景。
 
-你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在（原文：intrinsic）大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
+你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在的大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
 
 {{EmbedInteractiveExample("pages/css/object-position.html")}}
 
@@ -59,18 +59,20 @@ object-position: unset;
 
 ## 示例
 
-### HTML
+### 定位图像内容
 
-这里我们看到包含两个 {{HTMLElement("img")}} 元素的 HTML，分别展示了 MDN 的 logo。
+#### HTML
+
+HTML 包含两个 {{HTMLElement("img")}} 元素，分别展示了 MDN 的 logo。
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
-### CSS
+#### CSS
 
-CSS 包括\<img>元素本身的默认样式，以及两个图像各自的样式。
+CSS 包括 `<img>` 元素本身的默认样式，以及两个图像各自的样式。
 
 ```css
 img {
@@ -93,7 +95,7 @@ img {
 
 第一个图像的左边缘距元素框左边缘 10 个像素。第二个图像的右边缘与元素框的右边缘齐平，并位于元素框高度下方 10％处。
 
-### 结果
+#### 结果
 
 {{ EmbedLiveSample('示例', '100%','300px') }}
 
