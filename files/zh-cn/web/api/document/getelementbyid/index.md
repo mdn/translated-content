@@ -11,13 +11,16 @@ slug: Web/API/Document/getElementById
 
 ## 语法
 
-```js
-var element = document.getElementById(id);
+```js-nolint
+getElementById(id)
 ```
+
+> **备注：** 方法名称中 `"Id"` 的大小写*必须*正确才能使代码正常运行；`getElementByID()` 是*无*效且无法正常运行的，无论它看起来是多么自然。
 
 ### 参数
 
-- `id` 是大小写敏感的字符串，代表了所要查找的元素的唯一 ID。
+- `id`
+  - : 所要查找的元素的 ID。ID 是大小写敏感的字符串，且在文档中是唯一的；应只有一个元素具有任何给定的 ID。
 
 ### 返回值
 
