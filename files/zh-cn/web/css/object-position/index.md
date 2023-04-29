@@ -14,13 +14,31 @@ slug: Web/CSS/object-position
 ## 语法
 
 ```css
-/* <position> values */
-object-position: center top;
-object-position: 100px 50px;
+/* Keyword values */
+object-position: top;
+object-position: bottom;
+object-position: left;
+object-position: right;
+object-position: center;
+
+/* <percentage> values */
+object-position: 25% 75%;
+
+/* <length> values */
+object-position: 0 0;
+object-position: 1cm 2cm;
+object-position: 10ch 8em;
+
+/* Edge offsets values */
+object-position: bottom 10px right 20px;
+object-position: right 3em bottom 10px;
+object-position: top 0 right 10px;
 
 /* Global values */
 object-position: inherit;
 object-position: initial;
+object-position: revert;
+object-position: revert-layer;
 object-position: unset;
 ```
 
@@ -31,7 +49,11 @@ object-position: unset;
 
 > **备注：** 这些定位方式允许被替换元素的对象被定位到内容框外部。
 
-### 形式语法
+## 正式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
@@ -39,9 +61,7 @@ object-position: unset;
 
 ### HTML
 
-Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.
-
-这里我们看到包含两个 img 元素的 HTML，分别展示了 MDN 的 logo
+这里我们看到包含两个 {{HTMLElement("img")}} 元素的 HTML，分别展示了 MDN 的 logo。
 
 ```html
 <img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
@@ -80,8 +100,6 @@ img {
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 
