@@ -21,7 +21,7 @@ slug: Web/API/HTMLElement/outerText
 
 这个例子突出了 `outerText` 和 `innerText` 在用作 setter 时的根本区别（他们用做 getter 时行为完全一致）。
 
-> **备注：** 这个示例是 [innerText 和 outerText 有什么区别？](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435)（Stack overflow）的修订后的版本，由 [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue) 发起，根据 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) 许可证发布。
+> **备注：** 这个示例是 [innerText 和 outerText 有什么区别？](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435)（Stack overflow）的修订后的版本，由 [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue) 发起，基于 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) 许可证发布。
 
 考虑包含如下 HTML 代码的页面：
 
