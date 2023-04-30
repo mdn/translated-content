@@ -106,7 +106,7 @@ setTimeout(() => {
 
 ## 关于“this”的问题
 
-当你向 `setTimeout()` 传递一个函数时，该函数中的 `this` 指向跟你的期望可能不同，这个问题在 [JavaScript 参考](/zh-CN/docs/JavaScript/Reference/Operators/this#回调)中进行了详细解释。
+当你向 `setTimeout()` 传递一个函数时，该函数中的 `this` 指向跟你的期望可能不同，这个问题在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#回调)中进行了详细解释。
 
 由 `setTimeout()` 执行的代码是从一个独立于调用 `setTimeout` 的函数的执行环境中调用的。为被调用的函数设置 `this` 关键字的通常规则适用，如果你没有在调用中或用 `bind` 设置 `this`，它将默认为 `window`（或 `global`）对象。它将与调用 `setTimeout` 的函数的 `this` 值不一样。
 
@@ -316,7 +316,7 @@ foo 被调用
 
 ### 在加载页面时推迟超时
 
-当前标签页正在加载时，Firefox 将推迟触发 `setTimeout()` 计时器。直到主线程被认为是空闲的（类似于 [window.requestIdleCallback()](/zh-CN/docs/Web/API/window/requestIdleCallback)），或者直到加载事件触发完毕，才开始触发。
+当前标签页正在加载时，Firefox 将推迟触发 `setTimeout()` 计时器。直到主线程被认为是空闲的（类似于 [window.requestIdleCallback()](/zh-CN/docs/Web/API/Window/requestIdleCallback)），或者直到加载事件触发完毕，才开始触发。
 
 ### WebExtension 背景页面和定时器
 
