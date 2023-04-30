@@ -29,7 +29,7 @@ slug: Web/CSS/:autofill
 
 ## 示例
 
-以下示例演示了如何使用 `:autofill` 伪类来更改浏览器自动完成后的文本框的边框。为了最佳的浏览器兼容性，建议同时使用 `:-webkit-autofill` 和 `:autofill` 伪类。
+以下示例演示了如何使用 `:autofill` 伪类来更改浏览器自动填充后的文本框的边框。为了最佳的浏览器兼容性，建议同时使用 `:-webkit-autofill` 和 `:autofill` 伪类。
 
 ```css
 input {
