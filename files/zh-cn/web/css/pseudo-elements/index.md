@@ -3,7 +3,7 @@ title: 伪元素
 slug: Web/CSS/Pseudo-elements
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 伪元素是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。下例中的 {{CSSxRef("::first-line")}} 伪元素可改变段落首行文字的样式。
 
