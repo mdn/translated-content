@@ -21,7 +21,7 @@ object-position: left;
 object-position: right;
 object-position: center;
 
-/* <percentage> values */
+/* <percentage> 值 */
 object-position: 25% 75%;
 
 /* <length> values */
