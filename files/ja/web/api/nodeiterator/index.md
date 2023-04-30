@@ -5,7 +5,7 @@ slug: Web/API/NodeIterator
 
 {{APIRef("DOM")}}
 
-**`NodeIterator`** インターフェイスは、DOM のサブツリー内に存在するノードのリストのメンバーに対する反復子を表します。ノードは文書内に現れる順番で返されます。
+**`NodeIterator`** インターフェイスは、DOM のサブツリー内に存在するノードのリストのメンバーに対するイテレーターを表します。ノードは文書内に現れる順番で返されます。
 
 ## 構文
 
@@ -47,7 +47,7 @@ _このインターフェイスが継承するプロパティはありません�
   - : 関連するノードを選択するために使用した {{domxref("NodeFilter")}} を返します。
 - {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
   {{experimental_inline() }}
-  - : 反復子が固定されている {{domxref("Node")}} を返します。
+  - : イテレーターが結び付けられている {{domxref("Node")}} を返します。
 - {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{
   experimental_inline() }}
   - : 論理値のフラグで、 {{domxref("NodeIterator")}} が前に固定されるかどうかを示します。前に固定される場合は `true`、後に固定される場合は `false` になります。
