@@ -9,7 +9,7 @@ slug: Web/CSS/@media/scripting
 
 ## 语法
 
-`scripting` 功能指定为从下面列表中选择的关键字值.
+`scripting` 功能指定为从下面列表中选择的关键字值。
 
 - `none`
   - : 脚本在当前文档上完全不可用。
