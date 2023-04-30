@@ -15,7 +15,7 @@ slug: Web/CSS/:first
 }
 ```
 
-> **备注：** 你不能使用此伪类更改所有的 CSS 属性。您只能更改文档的边距、{{cssxref("orphans")}}、{{cssxref("widows")}}和分页符。此外，在定义边距时，您只能使用[绝对长度](/zh-CN/docs/Web/CSS/length#绝对长度单位)单位。所有其他属性都将被忽略。
+> **备注：** 你不能使用此伪类更改所有的 CSS 属性。你只能更改文档的边距、{{cssxref("orphans")}}、{{cssxref("widows")}} 和分页符。此外，在定义边距时，你只能使用[绝对长度](/zh-CN/docs/Web/CSS/length#绝对长度单位)单位。所有其他属性都将被忽略。
 
 ## 语法
 
