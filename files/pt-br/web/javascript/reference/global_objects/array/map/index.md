@@ -5,6 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/map
 
 {{JSRef("Global_Objects", "Array")}}
 
+{{EmbedInteractiveExample("pages/js/array-map.html")}}
+
 ## Resumo
 
 O método **map()** invoca a função `callback` passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
