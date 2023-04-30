@@ -21,7 +21,7 @@ slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 
 已废弃内容（Deprecated content）是指涵盖一种正在被淘汰的技术或想法的内容。它不再被推荐，预计在相对较近的将来会从浏览器中删除。关于**废弃的**定义的更多信息，请参见[实验性、废弃的和过时的](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)文档。
 
-你可以使用 [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) 宏将页面标记为已废弃。与过时的内容一样，如果该技术是 Gecko 特有的，你可以指定该技术被废弃的 Gecko 版本作为参数。
+你可以使用 [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) 宏将页面标记为已废弃。与过时的内容（Obseleted content）一样，如果该技术是 Gecko 特有的，你可以指定该技术被废弃的 Gecko 版本作为参数。
 
 ## 非标准内容
 
