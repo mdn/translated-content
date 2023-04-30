@@ -52,5 +52,3 @@ transform-style: unset;
 ## 另见
 
 - [Using CSS transforms](/zh-CN/docs/CSS/Using_CSS_transforms)
-
-{{CSSRef}}
