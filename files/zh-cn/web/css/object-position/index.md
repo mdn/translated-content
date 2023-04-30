@@ -24,17 +24,17 @@ object-position: center;
 /* <percentage> 值 */
 object-position: 25% 75%;
 
-/* <length> values */
+/* <length> 值 */
 object-position: 0 0;
 object-position: 1cm 2cm;
 object-position: 10ch 8em;
 
-/* Edge offsets values */
+/* 边缘偏移值 */
 object-position: bottom 10px right 20px;
 object-position: right 3em bottom 10px;
 object-position: top 0 right 10px;
 
-/* Global values */
+/* 全局关键字 */
 object-position: inherit;
 object-position: initial;
 object-position: revert;
