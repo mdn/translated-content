@@ -47,7 +47,7 @@ p:first-child {
 
 #### 结果
 
-{{EmbedLiveSample('基本示例', 500, 200)}}
+{{EmbedLiveSample('基础示例', 500, 200)}}
 
 ### 样式化列表
 
