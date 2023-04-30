@@ -97,7 +97,7 @@ img {
 
 #### 结果
 
-{{ EmbedLiveSample('示例', '100%','300px') }}
+{{ EmbedLiveSample('定位图像内容', '100%','300px') }}
 
 ## 规范
 
