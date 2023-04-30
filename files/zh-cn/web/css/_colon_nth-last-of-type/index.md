@@ -5,7 +5,7 @@ slug: Web/CSS/:nth-last-of-type
 
 {{CSSRef}}
 
-**`:nth-last-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素在相同类型（标签名）的兄弟元素中的位置来匹配元素。
+**`:nth-last-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素在相同类型（标签名）的兄弟元素中相对最后一个元素的位置来匹配元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-of-type.html", "tabbed-shorter")}}
 
