@@ -14,7 +14,7 @@ slug: Web/CSS/object-position
 ## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 object-position: top;
 object-position: bottom;
 object-position: left;
