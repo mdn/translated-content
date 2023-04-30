@@ -19,7 +19,7 @@ slug: Web/CSS/:first-child
 
 ## 示例
 
-### 基本示例
+### 基础示例
 
 #### HTML
 
