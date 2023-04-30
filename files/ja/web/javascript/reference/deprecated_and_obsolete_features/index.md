@@ -117,7 +117,7 @@ console.log("b");
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `__count__`                  | ユーザー定義オブジェクトに直接定義された列挙可能なプロパティの数を返します。                             | [`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                                   |
 | `__parent__`                 | オブジェクトのコンテキストを指し示します。                                                                             | 直接の置き換えなし                                                                                                                                                                |
-| `__iterator__`               | [旧形式の反復子](#旧形式のジェネレーターと反復子)と共に使用                                              | [`Symbol.iterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) および新しい[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) |
+| `__iterator__`               | [旧形式のイテレーター](#旧形式のジェネレーターとイテレーター)と共に使用                                              | [`Symbol.iterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) および新しい[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) |
 | `__noSuchMethod__`           | 存在しないプロパティがメソッドとして呼ばれたときに呼び出されるメソッド。                                          | {{jsxref("Proxy")}}                                                                                                                                                                  |
 | `Object.prototype.eval()`    | 指定したオブジェクトのコンテキスト内の JavaScript コードの文字列を評価します。                              | 直接の置き換えなし                                                                                                                                                                |
 | `Object.observe()`           | オブジェクトに対する変更を非同期に監視します。                                                         | {{jsxref("Proxy")}}                                                                                                                                                                  |
@@ -176,7 +176,7 @@ console.log("b");
 
 配列、数値、文字列などの `toSource()` メソッドと `uneval()` グローバル関数は廃止されました。代わりに [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) を使用するか、自分自身でシリアライゼーションメソッドを書いてください。
 
-### 旧形式のジェネレーターと反復子
+### 旧形式のジェネレーターとイテレーター
 
 旧形式のジェネレーター関数文と旧形式のジェネレーター関数式は削除されました。旧形式のジェネレーター関数の構文は `function` キーワードを再利用しており、本体に 1 つ以上の `yield` 式があると自動的にジェネレーター関数になります - これは今では構文エラーになっています。代わりに [`function*` 文](/ja/docs/Web/JavaScript/Reference/Statements/function*)と [`function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/function*)を使用するようにしてください。
 
@@ -194,12 +194,12 @@ console.log("b");
 (for (x of iterable) for (y of iterable) x + y)
 ```
 
-バージョン 26 以前の Firefox では、標準の[反復子プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)に類似した別の反復子プロトコルを実装していました。オブジェクトが `next()` メソッドを実装しており、呼び出すたびに値を生成し、反復処理の終わりには `StopIteration` オブジェクトを投げている場合は、そのオブジェクトは古い反復子であると言えます。この古い反復子のプロトコルは、標準的な反復子のプロトコルとは異なる形をとっています。
+バージョン 26 以前の Firefox では、標準の[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)に類似した別のイテレータープロトコルを実装していました。オブジェクトが `next()` メソッドを実装しており、呼び出すたびに値を生成し、反復処理の終わりには `StopIteration` オブジェクトを投げている場合は、そのオブジェクトは古いイテレーターであると言えます。この古いイテレーターのプロトコルは、標準的なイテレーターのプロトコルとは異なる形をとっています。
 
 - 値は `IteratorResult` オブジェクトの `value` プロパティではなく、 `next()` 呼び出しの返値として直接返されていました。
 - 反復処理の終了は、`IteratorResult` オブジェクトの `done` プロパティを通じてではなく、 `StopIteration` オブジェクトを投げることで表現されていました。
 
-この機能は、`StopIteration` グローバルコンストラクタとともに、 Firefox 58+ で削除されました。将来に向けた使用方法としては、[`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループと[反復子プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を使用することを検討してください。
+この機能は、`StopIteration` グローバルコンストラクタとともに、 Firefox 58+ で削除されました。将来に向けた使用方法としては、[`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループと[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を使用することを検討してください。
 
 ### シャープ変数
 
