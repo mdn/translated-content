@@ -244,7 +244,7 @@ Une telle légende fournit une aide pour les personnes qui naviguent avec des ou
 
 L'attribut {{htmlattrxref("scope","th")}} peut être redondant dans certains contextes où la portée peut être déterminée avec les autres éléments. Toutefois de nombreux lecteurs d'écran utilisent cet attribut pour répliquer l'organisation générale du tableau. Dans les tableaux plus complexes, `scope` pourra être utilisé afin de fournir les informations nécessaires à l'organisation (tant au moteur HTML qu'aux outils d'assistance).
 
-#### Exemple
+#### Exemples
 
 ```html
 <table>
@@ -271,6 +271,10 @@ L'attribut {{htmlattrxref("scope","th")}} peut être redondant dans certains con
   </tbody>
 </table>
 ```
+
+##### Résultat
+
+{{EmbedLiveSample('')}}
 
 Ajouter `scope="col"` sur un élément {{HTMLElement("th")}} permettra d'aider à décrire le fait que la cellule est en haut de la colonne. Indiquer `scope="row"` sur un élément {{HTMLElement("td")}} permettra d'indiquer que la cellule est la première de la ligne.
 
