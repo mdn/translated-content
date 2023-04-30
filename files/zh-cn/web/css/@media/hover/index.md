@@ -5,7 +5,7 @@ slug: Web/CSS/@media/hover
 
 {{cssref}}
 
-该 **`hover`** [CSS](/zh-CN/docs/CSS) {{cssxref("@media")}} 可以根据用户的主要输入机制是否可以悬停在元素之上来应用样式。
+该 **`hover`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@media")}} 可以根据用户的主要输入机制是否可以悬停在元素之上来应用样式。
 
 ## 语法
 
