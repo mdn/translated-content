@@ -5,7 +5,7 @@ slug: Web/CSS/@media/scripting
 
 {{CSSRef}}
 
-**`scripting`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性) 可以用来测试脚本（例如 JavaScript）是否可用。
+**`scripting`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)可以用来测试脚本（例如 JavaScript）是否可用。
 
 ## 语法
 
