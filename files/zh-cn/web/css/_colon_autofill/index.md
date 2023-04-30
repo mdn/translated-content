@@ -5,7 +5,7 @@ slug: Web/CSS/:autofill
 
 {{CSSRef}}
 
-**`:autofill`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用于匹配当浏览器自动填充表单中的 {{HTMLElement("input")}} 元素的值时。如果用户编辑了字段，则该类将不再匹配。
+当浏览器自动填充表单中的 {{HTMLElement("input")}} 元素的值时，**`:autofill`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)将匹配该 input 元素。如果用户编辑了该字段，则该类将不再匹配。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-autofill.html", "tabbed-shorter")}}
 
