@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-of-type'
+title: ":nth-last-of-type"
 slug: Web/CSS/:nth-last-of-type
 ---
 
@@ -58,4 +58,4 @@ span:nth-last-of-type(2) {
 
 ## 参见
 
-- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}
+- {{Cssxref(":nth-last-child")}}、{{Cssxref(":nth-of-type")}}
