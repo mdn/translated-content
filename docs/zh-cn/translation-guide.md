@@ -143,7 +143,7 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 - 正确：`它指向一个[示例](#示例)`
 - 错误：`它指向一个 [示例](#示例)`
-- 正确：`指向 [MDN 开发者文档](https://developer.mozilla.org/)的链接`
+- 正确：`指向 [MDN 开发者文档](https://developer.mozilla.org/) 的链接`
 - 错误：`指向[MDN开发者文档](https://developer.mozilla.org/)的链接`
 
 请注意，数字与中文之间也请保留空格：
