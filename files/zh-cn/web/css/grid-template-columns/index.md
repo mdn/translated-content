@@ -3,6 +3,8 @@ title: grid-template-columns
 slug: Web/CSS/grid-template-columns
 ---
 
+{{CSSRef}}
+
 **`grid-template-columns`** 该属性是基于 {{glossary("grid column", "网格列")}}. 的维度，去定义网格线的名称和网格轨道的尺寸大小。
 
 {{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
