@@ -88,7 +88,7 @@ yarn content move <from-slug> <to-slug> [locale]
 
 ## 删除页面
 
-只有特定情况下才可以从 MDN Web 文档中删除文档。如果你正在考虑删除页面，请先与 MDN Web 文档团队在[MDN Web 文档聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室)沟通。
+只有特定情况下才可以从 MDN Web 文档中删除文档。如果你正在考虑删除页面，请先与 MDN Web 文档团队在 [MDN Web 文档聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室)沟通。
 
 删除文档或文档树是容易的，我们创建了一个特别的命令来为你处理一些细节：
 
