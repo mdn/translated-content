@@ -20,8 +20,8 @@ slice(start, end)
 ## 参数
 
 - `start` {{optional_inline}}
-  - : 提取起始处的索引（从 `0` 开始）, [转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion)。
-    - 如果索引是负数，则从数组末尾开始计算 —— 如果 `start < 0`，则使用 `start + array.length`。
+  - : 提取起始处的索引（从 `0` 开始）, 会[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+    - 如果索引是负数，则从数组末尾开始计算——如果 `start < 0`，则使用 `start + array.length`。
     - 如果 `start < -array.length` 或者省略了 `start`，则使用 `0`。
     - 如果 `start >= array.length`，则不提取任何元素。
 - `end` {{optional_inline}}
