@@ -35,6 +35,7 @@
 
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
+| Access | 접근 | |
 | Accessibility concerns | 접근성 고려사항 | |
 | Advantages | 장점 | [링크][Introduction_to_HTML5_Game_Development] |
 | Aliasing | 별칭 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
