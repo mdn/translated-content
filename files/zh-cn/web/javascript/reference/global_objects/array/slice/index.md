@@ -41,7 +41,7 @@ slice(start, end)
 
 `slice()` 方法会保留空槽。如果被切片的部分是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)，则返回的数组也是稀疏的。
 
-`slice()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)。它只要求 `this` 上有 `length` 属性和整数键。
+`slice()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只要求 `this` 上有 `length` 属性和整数键。
 
 ## 示例
 
