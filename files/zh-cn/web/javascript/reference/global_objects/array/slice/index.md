@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 {{JSRef}}
 
-**`slice()`** 方法返回一个新的数组对象，这一对象是一个由 `start` 和 `end` 决定的原数组的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)（包括 `start`，不包括`end`），其中 `start` 和 `end` 代表了数组的下标。原始数组不会被改变。
+**`slice()`** 方法返回一个新的数组对象，这一对象是一个由 `start` 和 `end` 决定的原数组的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)（包括 `start`，不包括 `end`），其中 `start` 和 `end` 代表了数组的下标。原始数组不会被改变。
 
 {{EmbedInteractiveExample("pages/js/array-slice.html", "taller")}}
 
