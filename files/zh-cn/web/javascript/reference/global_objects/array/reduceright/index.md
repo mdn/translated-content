@@ -19,20 +19,6 @@ reduceRight(callbackFn, initialValue)
 ### 参数
 
 - `callbackFn`
-  - : 一个回调函数，用于操作数组中的每个元素，它可接受四个参数：
-    - `accumulator`
-      - : 累加器：上一次调用回调函数时，回调函数返回的值。首次调用回调函数时，如果 `initialValue` 存在，累加器即为 `initialValue`，否则须为数组中的最后一个元素（详见下方 `initialValue` 处相关说明）。
-    - `currentValue`
-      - : 当前元素：当前被处理的元素。
-    - `index`{{optional_inline}}
-      - : 数组中当前被处理的元素的索引。
-    - `array`{{optional_inline}}
-      - : 调用 `reduceRight()` 的数组。
-- `initialValue`{{optional_inline}}
-  - : 首次调用 `callback` 函数时，累加器 `accumulator` 的值。如果未提供该初始值，则将使用数组中的最后一个元素，并跳过该元素。如果不给出初始值，则需保证数组不为空。
-    否则，在空数组上调用 `reduce` 或 `reduceRight` 且未提供初始值（例如 `[].reduce( (acc, cur, idx, arr) => {} )` ）的话，会导致类型错误 [`TypeError: reduce of empty array with no initial value`](/zh-CN/docs/Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value)。
-
-- `callbackFn`
   - : 为数组中的每个元素执行的函数。其返回值将作为下一次调用 `callbackFn` 时的 `accumulator` 参数。对于最后一次调用，返回值将成为 `reduceRight()` 的返回值。该函数被调用时将传入以下参数：
     - `accumulator`
       - : 上一次调用回调函数时返回的值，如果指定了 `initialValue` 则为指定的值。 (见下文)
@@ -57,7 +43,7 @@ reduceRight(callbackFn, initialValue)
 
 与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduceRight()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果`callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
 
-`reducreduceRighte()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
+`reduceRighte()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
 
 - 当开始调用 `reduceRight()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
@@ -142,7 +128,7 @@ const flattened = arrays.reduceRight((a, b) => a.concat(b), []);
 // flattened 的值是 [4, 5, 2, 3, 0, 1]
 ```
 
-### 运行一个带有回调每个函数将其结果传给下一个的异步函数列表
+### 串联运行一列异步函数，每个函数都将其结果传给下一个函数
 
 ```js
 const waterfall =

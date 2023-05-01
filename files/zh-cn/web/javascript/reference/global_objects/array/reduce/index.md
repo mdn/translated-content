@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
-**reducer** 逐个遍历数组元素，每一步都将当前元素的值添加到前一步的结果中（该结果是之前所有步骤的总和）——直到没有更多的元素被添加。
+**reducer** 逐个遍历数组元素，每一步都将当前元素的值添加到前一步的结果中（该结果是之前所有步骤结果的总和）——直到没有更多的元素被添加。
 
 ## 语法
 
@@ -35,9 +35,7 @@ reduce(callbackFn, initialValue)
     - `array`
       - : 调用了 `reduce()` 的数组本身。
 - `initialValue` {{optional_inline}}
-  - : 第一次调用回调时初始化 `accumulator` 的值。
-    如果指定了 `initialValue`，则 `callbackFn` 从数组中的第一个值作为 `currentValue` 开始执行。
-    如果没有指定 `initialValue`，则 `accumulator` 初始化为数组中的第一个值，并且 `callbackFn` 从数组中的第二个值作为 `currentValue` 开始执行。在这种情况下，如果数组为空（没有第一个值可以作为 `accumulator` 返回），则会抛出错误。
+  - : 第一次调用回调时初始化 `accumulator` 的值。如果指定了 `initialValue`，则 `callbackFn` 从数组中的第一个值作为 `currentValue` 开始执行。如果没有指定 `initialValue`，则 `accumulator` 初始化为数组中的第一个值，并且 `callbackFn` 从数组中的第二个值作为 `currentValue` 开始执行。在这种情况下，如果数组为空（没有第一个值可以作为 `accumulator` 返回），则会抛出错误。
 
 ### 返回值
 
@@ -54,9 +52,9 @@ reduce(callbackFn, initialValue)
 
 `callbackFn` 仅对已分配值的数组索引进行调用。不会对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽进行调用。
 
-与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduce()` 不接受 `thisArg`参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果`callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
+与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduce()` 不接受 `thisArg`参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
 
-`reduce()` 是[函数式编程](https://zh.wikipedia.org/wiki/函数式编程)中的一个核心概念，在函数式编程中，不可能改变任何值，因此为了累积数组中的所有值，必须在每次迭代中返回一个新的累加器值。这种约定也适用于 JavaScript 的 `reduce()`：应该在可能的情况下使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或其他复制方法来创建新的数组和对象作为累加器，而不是改变现有的累加器。如果你决定改变累加器而不是复制它，请记得仍然在回调中返回修改后的对象，否则下一次迭代将收到 `undefined`。
+`reduce()` 是[函数式编程](https://zh.wikipedia.org/wiki/函数式编程)中的一个核心概念，在函数式编程中，不可能改变任何值，因此为了累积数组中的所有值，必须在每次迭代中返回一个新的累加器。这种约定也适用于 JavaScript 的 `reduce()`：应该在可能的情况下使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或其他复制方法来创建新的数组和对象作为累加器，而不是改变现有的累加器。如果你决定改变累加器而不是复制它，请记得仍然在回调中返回修改后的对象，否则下一次迭代将收到 `undefined`。
 
 `reduce()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
 
@@ -70,7 +68,7 @@ reduce(callbackFn, initialValue)
 
 ### 不应使用 reduce() 的情况
 
-像 `reduce()` 这样的递归函数可能非常强大，但有时可能很难理解，特别是对于经验较少的 JavaScript 开发人员。如果使用其他数组方法可以使代码更清晰，则开发人员必须权衡代码可读性与使用 `reduce()` 带来的好处。如果`reduce()`确实是最佳选择，可以通过良好的文档和语义化的变量命名来提高代码的可读性。
+像 `reduce()` 这样的递归函数可能非常强大，但有时可能很难理解，特别是对于缺乏经验的 JavaScript 开发人员。如果使用其他数组方法可以使代码更清晰，则开发人员必须权衡代码可读性与使用 `reduce()` 带来的好处。如果 `reduce()` 确实是最佳选择，应该通过良好的文档和语义化的变量命名来提高代码的可读性。
 
 ### 边界情况
 
@@ -243,7 +241,7 @@ const friends = [
   },
 ];
 
-// allbooks——列表，其中包含所有朋友的书籍和initialValue中包含的附加列表
+// allbooks——列表，其中包含所有朋友的书籍和 initialValue 中包含的附加列表
 const allbooks = friends.reduce(
   (accumulator, currentValue) => [...accumulator, ...currentValue.books],
   ["Alphabet"],
