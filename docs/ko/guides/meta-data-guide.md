@@ -44,7 +44,7 @@ l10n:
 <summary>참고 문서</summary>
 
 - 2023.05.01: `original_slug` 필수 항목에서 제거 ([링크](https://github.com/mdn/translated-content/issues/7412#issuecomment-1518546547))
-- 2023.05.01: `short-title` 필수 항목 추가 ([링크](https://github.com/mdn/yari/issues/8647#issuecomment-1520722736))
+- 2023.05.01: `short-title` 필수 항목에 추가 ([링크](https://github.com/mdn/yari/issues/8647#issuecomment-1520722736))
 </details>
 
 ## 문서 갱신 표시
