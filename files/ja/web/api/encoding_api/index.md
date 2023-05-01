@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Encoding API")}}
 
-**Encoding API** は、様々な{{Glossary("character encoding", "文字エンコーディング")}}のテキストを扱うメカニズムを提供します。レガシーな {{Glossary("UTF-8")}} 以外のエンコーディングも含みます。
+**エンコーディング API** は、様々な{{Glossary("character encoding", "文字エンコーディング")}}のテキストを扱うメカニズムを提供します。レガシーな {{Glossary("UTF-8")}} 以外のエンコーディングも含みます。
 
 この API は、{{domxref("TextDecoder")}}、{{domxref("TextEncoder")}}、{{domxref("TextDecoderStream")}}、{{domxref("TextEncoderStream")}} の 4 つのインターフェイスを提供します。
 
