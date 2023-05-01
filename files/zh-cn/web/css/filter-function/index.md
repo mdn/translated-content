@@ -3,7 +3,7 @@ title: <filter-function>
 slug: Web/CSS/filter-function
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 **`<filter-function>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) 代表可以改变输入图像外观的图形效果。它可以用于{{cssxref("filter")}} 和 {{cssxref("backdrop-filter")}} 属性。
 
