@@ -1,28 +1,40 @@
 ---
-title: 横幅和公告框
+title: 横幅和通知
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 ---
 
 {{MDNSidebar}}
 
-有时，如果一篇文章涵盖了过时的技术或其他不应该在生产代码中使用的材料，需要添加一个特别的通知。本文涵盖了最常见的情况以及该如何做。
+横幅被添加到一些页面中，特别是 API 参考页面，以突出影响所描述内容使用的重要因素。例如，横幅可以强调一个特定的接口、方法或属性被废弃，并且不应该在生产代码中使用时的情况。
 
-## 如何添加通知框
+本文描述了最重要的横幅以及它们的使用方法。
 
-在大多数情况下，可通过添加一个宏调用来应用这些通知，这会在页面内容中注入一个适当的横幅，并在页面的标签列表中添加一个标签。
+## 如何添加横幅
 
-要做到这一点，需要在文章的顶部插入宏调用，并将新标签添加到列表中。一旦完成，就可以提出拉取请求，并等待更改的审查和合并。从那时起，一个适当的横幅将出现在页面上，任何在寻找最新文章时参考页面标签的宏将知道你所更新的页面是否已被废弃，或是其他状态的改变。
+横幅通过使用宏来添加，它们应当与页面的侧边栏宏一起插入到页面元数据的下方。例如，[Ink API](/zh-CN/docs/Web/API/Ink_API) 页面中插入了 `\{{SeeCompatTable}}` 宏，代表它是[实验性的](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性)功能。
 
-> **备注：** 要学习更多有关编辑的内容，参见我们的 [content 仓库 README](https://github.com/mdn/content)。
+```
+---
+title: Ink API
+slug: Web/API/Ink_API
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.Ink
+---
 
-有时，你可能想把项目列表中的一个项目或表格中的一个项目标记为过时的、废弃的，或其他状态。下面所提及的宏中，存在为以上需求准备的特殊版本：将宏名称末尾的“\_header”换为“\_inline”即可。
+\{{DefaultAPISidebar("Ink API")}}\{{SeeCompatTable}}
+```
 
-## 已废弃内容
+一个有横幅的页面通常也会有“补充性”的页面元数据。例如，一个有 `\{{SeeCompatTable}}` 的页面通常也应该添加 `experimental` 状态（如上所示），以确保它在侧边栏有合适的图标。
 
-已废弃内容（Deprecated content）是指涵盖一种正在被淘汰的技术或想法的内容。它不再被推荐，预计在相对较近的将来会从浏览器中删除。关于**废弃的**定义的更多信息，请参见[实验性、废弃的和过时的](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)文档。
+> **备注：** 横幅宏无需*依赖*元数据，但是其他通过宏插入的内容需要它们。例如，`\{{Compat}}` 宏依赖于元数据 `browser-compat` 的值。
 
-你可以使用 [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) 宏将页面标记为已废弃。与过时的内容（Obseleted content）一样，如果该技术是 Gecko 特有的，你可以指定该技术被废弃的 Gecko 版本作为参数。
+## 应该添加哪些横幅
 
-## 非标准内容
+[页面类型模板](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types#模板)文档中包含了几种最重要的宏。简单来说：
 
-非标准内容（Non-standard content）是指尚未属于 Web 标准的任何内容；这包括任何甚至没有被提议为规范草案的技术，即使它已被多个浏览器实现。应该在这些页面上使用 [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs) 宏。
+- `\{{SeeCompatTable}}`——生成 **This is an experimental technology** 横幅，代表了这项技术是[实验性](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性)的。也需要在页面的 front-matter 中添加值为 `experimental` 的 `status` 属性。
+- `\{{Deprecated_Header}}`——生成 **Deprecated** 横幅，代表这项技术的使用已经[不受鼓励](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#已废弃)。也需要在页面的 front-matter 中添加值为 `deprecated` 的 `status` 属性。
+- `\{{Non-standard_Header}}`——生成 **Non-Standard** 横幅，代表这项技术的使用不是任何正式标准的一部分，即使它已经在很多浏览器中得到了实现。也需要在页面的 front-matter 中添加值为 `non-standard` 的 `status` 属性。
+- `\{{SecureContext_Header}}`——生成 **Secure context** 横幅，代表这项技术只在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中可用。
