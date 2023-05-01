@@ -39,7 +39,7 @@ slice(start, end)
 
 `slice()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)，其中包含了原始数组的一部分元素。
 
-`slice()` 方法会保留空槽。如果被切片的部分是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)，则返回的数组也是稀疏的。
+`slice()` 方法会保留空槽。如果被切片的部分是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则返回的数组也是稀疏的。
 
 `slice()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只要求 `this` 上有 `length` 属性和整数键。
 
