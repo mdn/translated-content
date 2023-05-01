@@ -116,8 +116,8 @@ myArray.myMethod = function (sProperty) {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 };
 
-myArray.myMethod(); // 打印 "zero,one,two"
-myArray.myMethod(1); // 打印 "one"
+myArray.myMethod(); // 输出 "zero,one,two"
+myArray.myMethod(1); // 输出 "one"
 ```
 
 上面这段代码正常工作，当调用 `myArray` 时，它的 `this` 设定为 `myArray`，故在函数中 `this[sProperty]` 与 `myArray[sProperty]` 等价。然而，在以下示例中：
