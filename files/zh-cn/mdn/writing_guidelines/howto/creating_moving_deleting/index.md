@@ -121,6 +121,7 @@ yarn content delete <document-slug> [locale]
    ```sh
    yarn content delete Learn/Accessibility --recursive
    ```
+
 3. 添加重定向。目标页面可以是外部 URL 或 MDN 文档上其他的页面。
 
    ```sh
