@@ -147,7 +147,7 @@ yarn content delete <document-slug> [locale]
 
 ## 编辑现有页面
 
-要编辑页面，你需要在我们的 [content](https://github.com/mdn/content) 仓库（译者注：对于本地化页面，请访问 [translated-content](https://github.com/mdn/translated-content) 仓库）中找到页面源文件。找到它的最简单的方法是导航到要编辑的页面，转到页面的底部，然后点击“Source on GitHub”链接。
+要编辑页面，你需要在我们的 [content](https://github.com/mdn/content) 仓库（译者注：对于本地化页面，请访问 [translated-content](https://github.com/mdn/translated-content) 仓库）中找到页面源文件。找到它的最简单的方法是导航到要编辑的页面，转到页面的底部，然后点击“View the source on GitHub”链接。
 
 ### 预览更改
 
