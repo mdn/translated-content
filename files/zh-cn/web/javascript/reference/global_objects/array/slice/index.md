@@ -57,7 +57,7 @@ var citrus = fruits.slice(1, 3);
 
 ### 使用 `slice`
 
-在下例中，`slice` 从 `myCar` 中创建了一个新数组`newCar`。两个数组都包含了一个 `myHonda` 对象的引用。当 `myHonda` 的 `color` 属性改变为 `purple`，则两个数组中的对应元素都会随之改变。
+在下例中，`slice` 从 `myCar` 中创建了一个新数组 `newCar`。两个数组都包含了一个 `myHonda` 对象的引用。当 `myHonda` 的 `color` 属性改变为 `purple`，则两个数组中的对应元素都会随之改变。
 
 ```js
 // 使用 slice 方法从 myCar 中创建一个 newCar。
