@@ -67,7 +67,7 @@ Object.hasOwn(example, 'prop');             // returns true
 Object.hasOwn(example, 'toString');         // returns false
 Object.hasOwn(example, 'hasOwnProperty');   // returns false
 
-// `in` 运算符对直接属性或继承属性均会返回 true：
+// `in` 运算符对目标对象的直接属性或继承属性均会返回 true：
 'prop' in example;                          // returns true
 'toString' in example;                      // returns true
 'hasOwnProperty' in example;                // returns true
