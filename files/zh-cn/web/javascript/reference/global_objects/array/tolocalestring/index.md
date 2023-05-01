@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 
 {{JSRef}}
 
-**`toLocaleString()`** 方法返回一个字符串，表示数组中的所有元素。每个元素通过调用他们自己的 `toLocaleString` 方法转换为字符串，并且使用特定的字符串（例如逗号“，”）分隔开。
+**`toLocaleString()`** 方法返回一个字符串，表示数组中的所有元素。每个元素通过调用他们自己的 `toLocaleString` 方法转换为字符串，并且使用特定于语言环境的字符串（例如逗号“,”）分隔开。
 
 {{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}
 
@@ -30,7 +30,7 @@ toLocaleString(locales, options)
 
 ## 描述
 
-`Array.prototype.toLocaleString` 方法遍历数组内容，调用每个元素的 `toLocaleString` 方法并提供了 `locales` 和 `options` 参数，转换后的字符串通过实现定义的分隔符（例如逗号“，”）拼接起来。请注意，该方法本身不会使用这两个参数——它只是将其传递给每个元素的 `toLocaleString()`。分隔符的选择取决于主机当前的语言环境，而不是 `locales` 参数。
+`Array.prototype.toLocaleString` 方法遍历数组内容，并使用提供的 `locales` 和 `options` 参数调用每个元素的 `toLocaleString` 方法，通过由实现定义的分隔符（例如逗号“,”）将转换后的字符串拼接起来。请注意，该方法本身不会使用这两个参数——它只是将其传递给每个元素的 `toLocaleString()`。分隔符的选择取决于主机当前的语言环境，而不是 `locales` 参数。
 
 如果一个元素是 `undefined`、`null`，它会被转换为空字符串，而不是 `"null"` 或者 `"undefined"`。
 
@@ -42,7 +42,7 @@ toLocaleString(locales, options)
 
 ### 使用 locales 和 options
 
-数组元素通过使用 `toLocaleString` 方法转换为字符串。
+通过使用 `toLocaleString` 方法将数组元素转换为字符串。
 
 - `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
 - `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
