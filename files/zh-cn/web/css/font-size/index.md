@@ -155,7 +155,7 @@ span {
 
 ### Ex
 
-像 `em` 单位一样，使用 `ex` 单位设置元素的 `font-size` 是计算或动态的。它的行为方式完全相同，只是在使用 `ex` 单位设置 `font-size` 属性时，`font-size` 等于页面上使用的[第一个可用字体](https://www.w3.org/TR/css-fonts-3/#first-available-font)的 x 字母高度。数字值相对地乘以元素继承的 `font-size` 且 `font-size` 相对复合。
+像 `em` 单位一样，使用 `ex` 单位设置元素的 `font-size` 是计算或动态的。它的行为方式完全相同，只是在使用 `ex` 单位设置 `font-size` 属性时，`font-size` 等于页面上使用的[第一个可用字体](https://www.w3.org/TR/css-fonts-3/#first-available-font)的 x 字高度。数字值相对地乘以元素继承的 `font-size` 且 `font-size` 相对复合。
 
 请参阅 W3C 编辑草案，了解有关 `ex` 等[字体相对长度单位](https://drafts.csswg.org/css-values-4/#font-relative-length)的更详细描述。
 
