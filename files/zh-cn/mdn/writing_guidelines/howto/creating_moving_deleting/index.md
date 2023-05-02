@@ -15,7 +15,7 @@ MDN Web 文档的所有页面使用 Markdown 格式书写，所有的内容位�
 
 很多不同的[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)具有一定的结构和支持它们的页面模板，你可以复制这些模板来开始。
 
-一个文档的 `index.md` 文件必须以 `title`、`slug` 和 `page-type` 的 front matter 定义开始。所有这些 front matter 信息都可以在前面提到的页面模板中找到。另外，在类似文件的 `index.md` 中参考这些数据是有帮助的。
+一个文档的 `index.md` 文件必须以 `title`、`slug` 和 `page-type` 的页面元数据（front matter）定义开始。所有这些页面元数据信息都可以在前面提到的页面模板中找到。另外，在类似文件的 `index.md` 中参考这些数据是有帮助的。
 
 创建一个页面的一般步骤是：
 
