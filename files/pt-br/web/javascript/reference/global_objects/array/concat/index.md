@@ -22,13 +22,13 @@ concat(valor1, valor2, /*...,*/ valorN)
 ### Parâmetros
 
 - `valorN` {{optional_inline}}
-  - : Arrays e/ou valores para concatenar em um novo array. Se todos 
-  os parâmetros `valorN` forem omitidos, `concat` retorna uma
-  [shallow copy](/en-US/docs/Glossary/Shallow_copy) de todos os arrays existentes do qual é chamado. Veja a descrição abaixo
-  para mais detalhes.
- 
+  - : Arrays e/ou valores para concatenar em um novo array. Se todos
+    os parâmetros `valorN` forem omitidos, `concat` retorna uma
+    [shallow copy](/en-US/docs/Glossary/Shallow_copy) de todos os arrays existentes do qual é chamado. Veja a descrição abaixo
+    para mais detalhes.
+
 ### Valor de retorno
-  
+
 Uma nova instância {{jsxref("Array")}}.
 
 ## Descrição
