@@ -199,7 +199,7 @@ span {
 
 #### 结果
 
-{{EmbedLiveSample('Setting_font_sizes', 600, 250)}}
+{{EmbedLiveSample('设置字体大小', 600, 250)}}
 
 ## 规范
 
