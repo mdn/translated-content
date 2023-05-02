@@ -5,47 +5,47 @@ slug: Web/API/HTML_DOM_API
 
 {{DefaultAPISidebar("HTML DOM")}}
 
-The **HTML DOM API** is made up of the interfaces that define the functionality of each of the {{Glossary("element", "elements")}} in {{Glossary("HTML")}}, as well as any supporting types and interfaces they rely upon.
+**HTML DOM API** 由一系列接口组成，它们定义了 HTML 中每个元素的功能，以及它们所依赖、所支持的任何类型和接口。
 
-The functional areas included in the HTML DOM API include:
+HTML DOM API 的功能区包括：
 
-- Access to and control of HTML elements via the {{Glossary("DOM")}}.
-- Access to and manipulation of form data.
-- Interacting with the contents of 2D images and the context of an HTML {{HTMLElement("canvas")}}, for example to draw on top of them.
-- Management of media connected to the HTML media elements ({{HTMLElement("audio")}} and {{HTMLElement("video")}}).
-- Dragging and dropping of content on webpages.
-- Access to the browser navigation history
-- Supporting and connective interfaces for other APIs such as [Web Components](/zh-CN/docs/Web/API/Web_components), [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API), [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API), [WebSocket](/zh-CN/docs/Web/API/WebSockets_API), and [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events).
+- 通过 {{Glossary("DOM")}} 访问和控制 HTML 元素。
+- 访问和操作表单数据
+- 与 2D 图像的内容，以及 HTML {{HTMLElement("canvas")}} 的上下文进行交互，例如在其上绘制。
+- 管理连接到 HTML 媒体元素的媒体 ({{HTMLElement("audio")}} 和 {{HTMLElement("video")}})。
+- 在网页上拖放内容。
+- 访问浏览器导航历史记录。
+- 支持和连接其他API的接口，例如 [Web Components](/zh-CN/docs/Web/API/Web_components)、[Web Storage](/zh-CN/docs/Web/API/Web_Storage_API)、[Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)、[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 和 [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events)。
 
-## HTML DOM concepts and usage
+## HTML DOM 概念和用法
 
-In this article, we'll focus on the parts of the HTML DOM that involve engaging with HTML elements. Discussion of other areas, such as [Drag and Drop](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API), [WebSockets](/zh-CN/docs/Web/API/WebSockets_API), [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API), etc. can be found in the documentation for those APIs.
+在本文中，我们将重点关注与 HTML 元素交互的 HTML DOM 部分。其他领域的讨论，例如 [拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)、[WebSockets](/zh-CN/docs/Web/API/WebSockets_API)、[Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 等，可以在这些 API 的文档中找到。
 
-### Structure of an HTML document
+### HTML 文档的结构
 
-The Document Object Model ({{Glossary("DOM")}}) is an architecture that describes the structure of a {{domxref("document")}}; each document is represented by an instance of the interface {{domxref("Document")}}. A document, in turn, consists of a hierarchical tree of **nodes**, in which a node is a fundamental record representing a single object within the document (such as an element or text node).
+文档对象模型（{{Glossary("DOM")}}）是一种描述文档 ({{domxref("document")}}) 结构的架构；每个文档都由接口 {{domxref("Document")}} 的实例表示。而一个文档则由**节点**层次树组成，其中一个节点是代表文档中单个对象（如元素或文本节点）的基本记录。
 
-Nodes may be strictly organizational, providing a means for grouping other nodes together or for providing a point at which a hierarchy can be constructed; other nodes may represent visible components of a document. Each node is based on the {{domxref("Node")}} interface, which provides properties for getting information about the node as well as methods for creating, deleting, and organizing nodes within the DOM.
+节点可以是严格的组织形式，提供将其他节点分组或提供构建层次结构的点；其他节点可能代表文档的可见组件。每个节点都基于 {{domxref("Node")}} 接口，该接口提供了获取有关节点信息以及创建、删除和组织 DOM 中节点的方法。
 
-Nodes don't have any concept of including the content that is actually displayed in the document. They're empty vessels. The fundamental notion of a node that can represent visual content is introduced by the {{domxref("Element")}} interface. An `Element` object instance represents a single element in a document created using either HTML or an {{glossary("XML")}} vocabulary such as {{glossary("SVG")}}.
+节点本身并不包含实际显示在文档中的内容。它们是空容器。节点可以表示视觉内容的基本概念是由 {{domxref("Element")}} 接口引入的。一个 `Element` 对象实例，代表着使用 HTML 或 {{glossary("SVG")}} 等 {{glossary("XML")}} 词汇创建的文档中的单个元素。
 
-For example, consider a document with two elements, one of which has two more elements nested inside it:
+例如，考虑一个包含两个元素的文档，其中一个元素内嵌了另外两个元素：
 
 ![Structure of a document with elements inside a document in a window](dom-structure.svg)
 
-While the {{domxref("Document")}} interface is defined as part of the [DOM](/zh-CN/docs/Web/API/Document_Object_Model) specification, the HTML specification significantly enhances it to add information specific to using the DOM in the context of a web browser, as well as to using it to represent HTML documents specifically.
+虽然 {{domxref("Document")}} 接口是作为 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 规范的一部分定义的，但 HTML 规范显着增强了它，以添加特定于在 Web 浏览器上下文中使用 DOM 以及用于表示 HTML 文档的信息。
 
-Among the things added to `Document` by the HTML standard are:
+HTML 标准添加到 `Document` 中的内容包括：
 
-- Support for accessing various information provided by the {{Glossary("HTTP")}} headers when loading the page, such as the [location](/zh-CN/docs/Web/API/Document/location) from which the document was loaded, [cookies](/zh-CN/docs/Web/API/Document/cookie), [modification date](/zh-CN/docs/Web/API/Document/lastModified), [referring site](/zh-CN/docs/Web/API/Document/referrer), and so forth.
-- Access to lists of elements in the document's {{HTMLElement("head")}} block and [body](/zh-CN/docs/Web/API/Document/body), as well as lists of the [images](/zh-CN/docs/Web/API/Document/images), [links](/zh-CN/docs/Web/API/Document/links), [scripts](/zh-CN/docs/Web/API/Document/scripts), etc. contained in the document.
-- Support for interacting with the user by examining [focus](/zh-CN/docs/Web/API/Document/hasFocus) and by executing commands on [editable content](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable).
-- Event handlers for document [events defined by the HTML standard](/zh-CN/docs/Web/API/GlobalEventHandlers) to allow access to [mouse](/zh-CN/docs/Web/API/MouseEvent) and [keyboard](/zh-CN/docs/Web/API/KeyboardEvent) events, [drag and drop](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API), [media control](/zh-CN/docs/Web/API/HTMLMediaElement), and more.
-- Event handlers for events that can be delivered to both elements and documents; these presently include only [copy](/zh-CN/docs/Web/API/HTMLElement/oncopy), [cut](/zh-CN/docs/Web/API/HTMLElement/oncut), and [paste](/zh-CN/docs/Web/API/HTMLElement/onpaste) actions.
+- 在加载页面时，支持访问 {{Glossary("HTTP")}} 头部提供的各种信息，例如文档加载的 [位置](/zh-CN/docs/Web/API/Document/location)、[cookies](/zh-CN/docs/Web/API/Document/cookie)、[修改日期](/zh-CN/docs/Web/API/Document/lastModified)、[引用站点](/zh-CN/docs/Web/API/Document/referrer) 等。
+- 可以访问文档 {{HTMLElement("head")}} 块和 [body](/zh-CN/docs/Web/API/Document/body) 中元素的列表，以及包含在文档中的 [图像](/zh-CN/docs/Web/API/Document/images)、[链接](/zh-CN/docs/Web/API/Document/links)、[脚本](/zh-CN/docs/Web/API/Document/scripts) 等列表。
+- 支持通过检查 [焦点](/zh-CN/docs/Web/API/Document/hasFocus) 和对 [可编辑内容](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 执行命令来与用户交互。
+- [HTML 标准定义事件](/zh-CN/docs/Web/API/GlobalEventHandlers) 的文档事件处理程序，允许访问 [鼠标](/zh-CN/docs/Web/API/MouseEvent) 和 [键盘](/zh-CN/docs/Web/API/KeyboardEvent) 事件、[拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)、[媒体控制](/zh-CN/docs/Web/API/HTMLMediaElement) 等。
+- 可以传递到元素和文档的事件处理程序；目前仅包括 [复制](/zh-CN/docs/Web/API/HTMLElement/oncopy)、[剪切](/zh-CN/docs/Web/API/HTMLElement/oncut) 和 [粘贴](/zh-CN/docs/Web/API/HTMLElement/onpaste) 操作。
 
-### HTML element interfaces
+### HTML 元素接口
 
-The `Element` interface has been further adapted to represent HTML elements specifically by introducing the {{domxref("HTMLElement")}} interface, which all more specific HTML element classes inherit from. This expands the `Element` class to add HTML-specific general features to the element nodes. Properties added by `HTMLElement` include for example {{domxref("HTMLElement.hidden", "hidden")}} and {{domxref("HTMLElement.innerText", "innerText")}}. `HTMLElement` also adds all the [global event handlers](/zh-CN/docs/Web/API/GlobalEventHandlers).
+`Element` 接口已经进一步适应了 HTML 元素的表示，通过引入 {{domxref("HTMLElement")}} 接口来实现，所有更具体的 HTML 元素类都继承自它。这扩展了 `Element` 类以向元素节点添加特定于 HTML 的通用功能。 `HTMLElement` 添加的属性包括 {{domxref("HTMLElement.hidden", "hidden")}} 和 {{domxref("HTMLElement.innerText", "innerText")}} 等。`HTMLElement` 还添加了所有 [全局事件处理程序](/zh-CN/docs/Web/API/GlobalEventHandlers) 。
 
 An {{Glossary("HTML")}} document is a DOM tree in which each of the nodes is an HTML element, represented by the {{domxref("HTMLElement")}} interface. The `HTMLElement` class, in turn, implements `Node`, so every element is also a node (but not the other way around). This way, the structural features implemented by the {{domxref("Node")}} interface are also available to HTML elements, allowing them to be nested within each other, created and deleted, moved around, and so forth.
 
