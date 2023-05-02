@@ -159,11 +159,11 @@ span {
 
 请参阅 W3C 编辑草案，了解有关 `ex` 等[字体相对长度单位](https://drafts.csswg.org/css-values-4/#font-relative-length)的更详细描述。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
