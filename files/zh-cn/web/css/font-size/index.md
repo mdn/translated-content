@@ -149,7 +149,7 @@ span {
 <span>Outer <span>inner</span> outer</span>
 ```
 
-{{EmbedLiveSample("Rems", 400, 100)}}
+{{EmbedLiveSample("Rem", 400, 100)}}
 
 在这个例子中，“outer inner outer”这些单词都以 25.6 像素的大小显示（假设浏览器的 `font-size` 已保留默认值 16px）。
 
