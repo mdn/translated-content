@@ -62,7 +62,7 @@ font-size: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : 一个正的 {{cssxref("&lt;percentage&gt;")}} 值，相对于父元素的字体大小。
 
-> **备注：** 为了最大化可访问性，通常最好使用相对于用户默认字体大小的值。
+> **备注：** 为了最大化无障碍性，通常最好使用相对于用户默认字体大小的值。
 
 - `math` {{Experimental_Inline}}
   使用特殊的[数学缩放规则](https://w3c.github.io/mathml-core/#the-math-script-level-property)来确定 `font-size` 属性的计算值。
