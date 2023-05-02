@@ -80,15 +80,15 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 尽管与 {{domxref("Element/mouseover_event", "mouseover")}} 类似，但是 `mouseenter` 的不同之处在于当鼠标指针从它后代的物理空间移动到它自己的物理空间时，它不会[冒泡](/zh-CN/docs/Web/API/Event/bubbles)，也不会发送给它的任何后代。
 
-### `mouseenter` 事件的行为：
+### `mouseenter` 事件的行为
 
-![](mouseenter.png)
-输入时，一个 `mouseenter` 事件会向层次结构中的每个元素发送一个鼠标输入事件。在这里，当指针到达文本时，四个事件被发送到层次结构中的四个元素。
+![鼠标移入行为图](mouseenter.png)
+移入时，一个 `mouseenter` 事件会向层次结构中的每个元素发送一个鼠标输入事件。在这里，当指针到达文本时，四个事件被发送到层次结构中的四个元素。
 
-### `mouseover` 事件的行为：
+### `mouseover` 事件的行为
 
-![](mouseover.png)
-单个 `mouseover` 事件被发送到 DOM 树最深的元素中，然后它会按层次结构冒泡，直到它被处理程序取消或者到达根。
+![鼠标悬停行为图](mouseover.png)
+单个 `mouseover` 事件被发送到 DOM 树最深的元素中，然后它会按层次结构冒泡，直到它被处理程序取消或者到达根元素。
 
 由于层次结构很深，发送到 `mouseover` 事件可能相当多，并导致严重的性能问题。在这种情况下，最好是监听 `mouseenter` 事件。
 
@@ -114,7 +114,7 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 #### CSS
 
-给 `div` 一些样式，使其更好的展示。
+向 `div` 添加一些样式，使其更加可视化。
 
 ```css
 #mouseTarget {
