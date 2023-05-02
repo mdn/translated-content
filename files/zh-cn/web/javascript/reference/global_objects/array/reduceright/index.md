@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 
 {{JSRef}}
 
-**`reduceRight()`** 方法接受一个函数作为累加器(accumulator）将数组的每个值（按从右到左的顺序）将其减少为单个值。
+**`reduceRight()`** 方法接受一个函数作为累加器（accumulator）将数组的每个值（按从右到左的顺序）将其减少为单个值。
 
 对于从左至右遍历的相似方法，请参阅 {{jsxref("Array.prototype.reduce()")}}。
 
