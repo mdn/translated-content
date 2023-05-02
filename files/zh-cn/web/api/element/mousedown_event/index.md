@@ -5,7 +5,7 @@ slug: Web/API/Element/mousedown_event
 
 {{APIRef}}
 
-当指针在元素中时，  **`mousedown`** 事件在指针设备（如鼠标或触摸板）按钮按下 {{domxref("Element")}} 时触发。
+当指针在元素中时，**`mousedown`** 事件在指针设备（如鼠标或触摸板）按钮按下 {{domxref("Element")}} 时触发。
 
 > **备注：** `mousedown` 事件与 {{domxref("Element/click_event", "click")}} 事件的区别是， `click` 事件在完整的单击操作完成后触发；也就是说，`click` 事件在按下并释放鼠标按钮后并且指针保留在同一元素内时触发。`mousedown` 事件在最初按下鼠标按钮的那一刻触发。
 
