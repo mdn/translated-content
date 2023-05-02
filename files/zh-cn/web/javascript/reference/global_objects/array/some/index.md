@@ -47,6 +47,8 @@ some(callbackFn, thisArg)
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
 - 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被修改后的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素则不会被访问。
 
+> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
+
 `some()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
