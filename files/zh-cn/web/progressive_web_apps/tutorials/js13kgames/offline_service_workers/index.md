@@ -6,7 +6,7 @@ original_slug: Web/Progressive_web_apps/Offline_Service_workers
 
 {{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-我们已经看到了 js13kPWA 的结构，并且看到了 shell 启动和运行的基本方式，那么现在让我们把目光转向如何使用 Service Worker 实现离线功能。在本文，我们将看到它在 [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) 中是如何使用的（[另请参阅源代码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)）。我们将研究如何添加脱机功能。
+我们已经看到了 js13kPWA 的结构，并且看到了 shell 启动和运行的基本方式，那么现在让我们把目光转向如何使用 Service Worker 实现离线功能。在本文，我们将看到它在 [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) 中是如何使用的（[另请参阅源代码](https://github.com/mdn/pwa-examples/tree/main/js13kpwa)）。我们将研究如何添加脱机功能。
 
 ## Service Worker 解释
 
