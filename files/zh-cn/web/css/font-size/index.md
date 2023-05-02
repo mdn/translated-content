@@ -124,7 +124,7 @@ span {
 
 结果是：
 
-{{EmbedLiveSample("Ems", 400, 100)}}
+{{EmbedLiveSample("Em", 400, 100)}}
 
 假设浏览器的默认 `font-size` 为 16px，则单词“outer”将渲染为 25.6px，但单词“inner”将渲染为 40.96px。这是因为内部 {{HTMLElement("span")}} 的 `font-size` 为 1.6em，相对于其父级的 `font-size`，而其父级又相对于其父级的 `font-size`。这通常被称为复合。
 
