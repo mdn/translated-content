@@ -1,17 +1,18 @@
 ---
 title: Range
 slug: Web/HTTP/Headers/Range
-page-type: htttp-header
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-La cabezera de petición HTTP ,**`Range`**, indica qué parte de un documento debe devolver el servido. Varias partes pueden ser solicitadas con una sola cabezera de **`Rango`** a la vez, y el servidor puede enviar estas partes en un documento multipartes. Si el servidor devuelve rangos, utiliza {{HTTPStatus("206", "206 Contenido Parcial")}}. Si los rangos son inválidos, el servidor devuelve el error {{HTTPStatus("416", "416 No se puede satisfacer Rango")}}. El servidor también puede ignorar el encabezado de Rango y devolver el documento completo con un código de estado {{HTTPStatus("200")}}.
+La cabecera de petición HTTP, **`Range`**, indica qué parte de un documento debe devolver el servidor. Varias partes pueden ser solicitadas con una sola cabecera `Range` a la vez, y el servidor puede enviar estas partes en un documento multipartes. Si el servidor devuelve rangos, utiliza {{HTTPStatus("206", "206 Contenido Parcial")}}. Si los rangos son inválidos, el servidor devuelve el error {{HTTPStatus("416", "416 No se puede satisfacer Range")}}. El servidor también puede ignorar el encabezado de Rango y devolver el documento completo con un código de estado {{HTTPStatus("200")}}.
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Header type</th>
+      <th scope="row">Tipo de cabecera</th>
       <td>{{Glossary("Request header", "Encabezado de petición")}}</td>
     </tr>
     <tr>
@@ -44,7 +45,7 @@ Range: <unit>=-<suffix-length>
 
 ## Ejemplos
 
-Solicitando tres tanges de un archivo.
+Solicitando tres rangos de un archivo.
 
 ```http
 Range: bytes=200-1000, 2000-6576, 19000-
@@ -52,7 +53,7 @@ Range: bytes=200-1000, 2000-6576, 19000-
 
 El valor, `19000-`, del tercer rango especificado, indica que `19000` es la primera posición y omite la última posición `-`, para recuperar todos los bytes desde 19000 hasta el final del archivo.
 
-Solicitar los primeros y último 500 bytes de un archivo. La petición puede ser rechazada por el servidor si el rango sobrepasa la cantidad de bytes del archivo.
+Solicitar los primeros y últimos 500 bytes de un archivo. La petición puede ser rechazada por el servidor si los rangos se superponen.
 
 ```http
 Range: bytes=0-499, -500
@@ -61,6 +62,10 @@ Range: bytes=0-499, -500
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Véase también
 
