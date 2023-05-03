@@ -1,6 +1,7 @@
 ---
 title: JavaScript 型別陣列
-slug: Web/JavaScript/Typed_arrays
+slug: Web/JavaScript/Guide/Typed_arrays
+original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}
