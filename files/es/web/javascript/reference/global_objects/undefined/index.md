@@ -20,7 +20,7 @@ undefined
 
 ## Descripción
 
-`undefined` es una propiedad del _objeto global_, es decir, una variable de alcance global. El valor inicial de `undefined` es el valor primitivo `{{Glossary("Undefined", "undefined")}}`. Es el valor empleado por defecto para las variables inicializadas sin ningún valor definido.
+`undefined` es una propiedad del _objeto global_, es decir, una variable de alcance global. El valor inicial de `undefined` es el valor primitivo `{{Glossary("Undefined", "undefined")}}`.
 
 En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined` es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
 
