@@ -21,7 +21,7 @@ reduceRight(callbackFn, initialValue)
 - `callbackFn`
   - : 为数组中的每个元素执行的函数。其返回值将作为下一次调用 `callbackFn` 时的 `accumulator` 参数。对于最后一次调用，返回值将成为 `reduceRight()` 的返回值。该函数被调用时将传入以下参数：
     - `accumulator`
-      - : 上一次调用回调函数时返回的值，如果指定了 `initialValue` 则为指定的值。 (见下文)
+      - : 上一次调用回调函数时返回的值，如果指定了 `initialValue` 则为指定的值。（见下文）
     - `currentValue`
       - : 数组中当前正在处理的元素。
     - `index`
@@ -41,7 +41,7 @@ reduceRight(callbackFn, initialValue)
 
 `callbackFn` 仅为已分配值的数组索引调用。它不会为[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽调用。
 
-与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduceRight()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果`callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
+与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduceRight()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
 
 `reduceRighte()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
 

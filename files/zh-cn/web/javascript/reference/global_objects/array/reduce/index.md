@@ -50,9 +50,9 @@ reduce(callbackFn, initialValue)
 
 `reduce()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按升序对数组中的所有元素运行一个“reducer”回调函数，并将它们累积到一个单一的值中。每次调用时，`callbackFn` 的返回值都作为 `accumulator` 参数传递到下一次调用中。`accumulator` 的最终值（也就是在数组的最后一次迭代中从 `callbackFn` 返回的值）将作为 `reduce()` 的返回值。
 
-`callbackFn` 仅对已分配值的数组索引进行调用。不会对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽进行调用。
+`callbackFn` 仅对已分配值的数组索引进行调用。不会对[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽进行调用。
 
-与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduce()` 不接受 `thisArg`参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
+与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduce()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
 
 `reduce()` 是[函数式编程](https://zh.wikipedia.org/wiki/函数式编程)中的一个核心概念，在函数式编程中，不可能改变任何值，因此为了累积数组中的所有值，必须在每次迭代中返回一个新的累加器。这种约定也适用于 JavaScript 的 `reduce()`：应该在可能的情况下使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或其他复制方法来创建新的数组和对象作为累加器，而不是改变现有的累加器。如果你决定改变累加器而不是复制它，请记得仍然在回调中返回修改后的对象，否则下一次迭代将收到 `undefined`。
 
@@ -256,7 +256,7 @@ console.log(allbooks);
 
 ### 数组去重
 
-> **注意：** 可以使用 {{jsxref("Set")}} 和 {{jsxref("Array.from()")}} 来实现相同的效果，如 `const arrayWithNoDuplicates = Array.from(new Set(myArray))`，并且性能更好。
+> **备注：** 可以使用 {{jsxref("Set")}} 和 {{jsxref("Array.from()")}} 来实现相同的效果，如 `const arrayWithNoDuplicates = Array.from(new Set(myArray))`，并且性能更好。
 
 ```js
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
