@@ -240,12 +240,11 @@ browser.runtime.onMessage.addListener(eatPage);
 - [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - 使用`content_scripts`的例子：
 
-  - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
-  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
-  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
-  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
+  - [borderify](https://github.com/mdn/webextensions-examples/tree/main/borderify)
+  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
+  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/main/page-to-extension-messaging)
 
 - 使用`tabs.executeScript()`的例子：
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [context-menu-demo](https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo)
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+  - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types)
