@@ -1,7 +1,7 @@
 ---
 title: Arreglos tipados de JavaScript
-slug: Web/JavaScript/Typed_arrays
-original_slug: Web/JavaScript/Vectores_tipados
+slug: Web/JavaScript/Guide/Typed_arrays
+original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}

@@ -1,6 +1,7 @@
 ---
 title: Notification.permission
-slug: Web/API/Notification/permission
+slug: Web/API/Notification/permission_static
+original_slug: Web/API/Notification/permission
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
