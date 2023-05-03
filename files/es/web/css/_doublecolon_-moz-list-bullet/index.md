@@ -1,6 +1,6 @@
 ---
 title: '::-moz-list-bullet'
-slug: Web/CSS/:-moz-list-bullet
+slug: Web/CSS/::-moz-list-bullet
 original_slug: Web/CSS/:-moz-list-bullet
 ---
 

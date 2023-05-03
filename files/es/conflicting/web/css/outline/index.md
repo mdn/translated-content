@@ -1,6 +1,7 @@
 ---
 title: '-moz-outline-radius'
-slug: Web/CSS/-moz-outline-radius
+slug: conflicting/Web/CSS/outline
+original_slug: Web/CSS/-moz-outline-radius
 ---
 
 {{Non-standard_header}}{{CSSRef}}
