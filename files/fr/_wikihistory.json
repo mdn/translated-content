@@ -8709,10 +8709,6 @@
     "modified": "2020-10-15T21:49:52.144Z",
     "contributors": ["SphinxKnight", "irenesmith", "fscholz", "Copen"]
   },
-  "Web/API/Element/error_event": {
-    "modified": "2019-03-23T22:21:21.432Z",
-    "contributors": ["fscholz", "loella16", "Kalwyn"]
-  },
   "Web/API/Element/focusin_event": {
     "modified": "2019-03-23T22:20:35.765Z",
     "contributors": ["fscholz", "Kalwyn"]
@@ -9912,6 +9908,10 @@
     "modified": "2019-04-30T14:21:50.701Z",
     "contributors": ["wbamberg", "fscholz", "areltfc", "Kalwyn"]
   },
+  "Web/API/HTMLElement/error_event": {
+    "modified": "2019-03-23T22:21:21.432Z",
+    "contributors": ["fscholz", "loella16", "Kalwyn"]
+  },
   "Web/API/HTMLElement/hidden": {
     "modified": "2020-10-15T22:34:15.806Z",
     "contributors": ["asgmeonerandom"]
@@ -10429,7 +10429,7 @@
     "modified": "2020-10-15T21:46:17.358Z",
     "contributors": ["Voulto", "SphinxKnight", "gadgino", "Goofy", "jpmedley"]
   },
-  "Web/API/IDBKeyRange/bound": {
+  "Web/API/IDBKeyRange/bound_static": {
     "modified": "2019-03-23T22:33:04.699Z",
     "contributors": ["SphinxKnight", "gadgino"]
   },
@@ -10441,7 +10441,7 @@
     "modified": "2019-03-23T22:33:04.885Z",
     "contributors": ["SphinxKnight", "gadgino"]
   },
-  "Web/API/IDBKeyRange/lowerBound": {
+  "Web/API/IDBKeyRange/lowerBound_static": {
     "modified": "2019-03-23T22:33:05.216Z",
     "contributors": ["SphinxKnight", "gadgino"]
   },
@@ -10449,7 +10449,7 @@
     "modified": "2019-03-23T22:32:57.950Z",
     "contributors": ["SphinxKnight", "gadgino"]
   },
-  "Web/API/IDBKeyRange/only": {
+  "Web/API/IDBKeyRange/only_static": {
     "modified": "2019-03-23T22:33:01.396Z",
     "contributors": ["SphinxKnight", "gadgino"]
   },
@@ -10457,7 +10457,7 @@
     "modified": "2019-03-23T22:33:10.697Z",
     "contributors": ["SphinxKnight", "gadgino"]
   },
-  "Web/API/IDBKeyRange/upperBound": {
+  "Web/API/IDBKeyRange/upperBound_static": {
     "modified": "2019-03-23T22:33:21.510Z",
     "contributors": ["SphinxKnight", "gadgino"]
   },
@@ -11343,11 +11343,11 @@
     "modified": "2020-10-15T22:34:54.385Z",
     "contributors": ["tomderudder"]
   },
-  "Web/API/Notification/maxActions": {
+  "Web/API/Notification/maxActions_static": {
     "modified": "2020-10-15T22:34:53.286Z",
     "contributors": ["tomderudder"]
   },
-  "Web/API/Notification/permission": {
+  "Web/API/Notification/permission_static": {
     "modified": "2020-10-15T22:34:55.540Z",
     "contributors": ["tomderudder"]
   },
@@ -11355,7 +11355,7 @@
     "modified": "2020-10-15T22:34:56.481Z",
     "contributors": ["tomderudder"]
   },
-  "Web/API/Notification/requestPermission": {
+  "Web/API/Notification/requestPermission_static": {
     "modified": "2020-10-15T22:34:52.487Z",
     "contributors": ["tomderudder"]
   },
@@ -12046,7 +12046,7 @@
     "modified": "2020-10-15T22:04:11.269Z",
     "contributors": ["spike008t", "cdelamarre"]
   },
-  "Web/API/URL/createObjectURL": {
+  "Web/API/URL/createObjectURL_static": {
     "modified": "2020-10-15T21:21:40.672Z",
     "contributors": [
       "Watilin",
@@ -12066,7 +12066,7 @@
     "modified": "2020-10-15T22:17:10.990Z",
     "contributors": ["spike008t"]
   },
-  "Web/API/URL/revokeObjectURL": {
+  "Web/API/URL/revokeObjectURL_static": {
     "modified": "2020-10-15T22:07:59.746Z",
     "contributors": ["Watilin"]
   },
@@ -13906,26 +13906,6 @@
     "modified": "2020-10-15T21:28:10.504Z",
     "contributors": ["SphinxKnight", "teoli", "louuis"]
   },
-  "Web/CSS/-moz-outline-radius": {
-    "modified": "2020-10-15T21:18:04.818Z",
-    "contributors": ["SphinxKnight", "teoli", "FredB", "Kyodev", "Fredchat"]
-  },
-  "Web/CSS/-moz-outline-radius-bottomleft": {
-    "modified": "2019-08-07T07:41:04.258Z",
-    "contributors": ["SphinxKnight", "teoli", "FredB", "Fredchat"]
-  },
-  "Web/CSS/-moz-outline-radius-bottomright": {
-    "modified": "2019-08-07T07:41:12.958Z",
-    "contributors": ["SphinxKnight", "teoli", "FredB", "Fredchat"]
-  },
-  "Web/CSS/-moz-outline-radius-topleft": {
-    "modified": "2019-08-07T07:41:19.867Z",
-    "contributors": ["SphinxKnight", "teoli", "FredB", "Fredchat"]
-  },
-  "Web/CSS/-moz-outline-radius-topright": {
-    "modified": "2019-08-07T07:41:29.133Z",
-    "contributors": ["SphinxKnight", "teoli", "FredB", "Fredchat"]
-  },
   "Web/CSS/-moz-user-focus": {
     "modified": "2020-10-15T21:48:29.475Z",
     "contributors": ["SphinxKnight", "teoli"]
@@ -14044,14 +14024,6 @@
     "modified": "2019-04-05T07:43:47.239Z",
     "contributors": ["SphinxKnight", "teoli", "FredB", "Mgjbot", "Fredchat"]
   },
-  "Web/CSS/:-moz-list-bullet": {
-    "modified": "2019-04-05T09:17:36.311Z",
-    "contributors": ["SphinxKnight", "teoli", "xdelatour"]
-  },
-  "Web/CSS/:-moz-list-number": {
-    "modified": "2019-04-05T09:17:28.748Z",
-    "contributors": ["SphinxKnight", "teoli", "xdelatour"]
-  },
   "Web/CSS/:-moz-loading": {
     "modified": "2019-04-05T07:43:32.819Z",
     "contributors": ["SphinxKnight", "teoli", "J.DMB", "louuis"]
@@ -14096,6 +14068,14 @@
   "Web/CSS/::-moz-color-swatch": {
     "modified": "2020-10-15T22:02:12.946Z",
     "contributors": ["SphinxKnight", "tonybengue"]
+  },
+  "Web/CSS/::-moz-list-bullet": {
+    "modified": "2019-04-05T09:17:36.311Z",
+    "contributors": ["SphinxKnight", "teoli", "xdelatour"]
+  },
+  "Web/CSS/::-moz-list-number": {
+    "modified": "2019-04-05T09:17:28.748Z",
+    "contributors": ["SphinxKnight", "teoli", "xdelatour"]
   },
   "Web/CSS/::-moz-page": {
     "modified": "2020-10-15T21:44:27.397Z",
@@ -15599,10 +15579,6 @@
   },
   "Web/CSS/CSS_Scroll_Snap/Basic_concepts": {
     "modified": "2019-06-18T19:40:17.355Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/CSS/CSS_Scroll_Snap_Points": {
-    "modified": "2019-04-26T04:18:54.788Z",
     "contributors": ["SphinxKnight"]
   },
   "Web/CSS/CSS_Scrollbars": {
@@ -22128,6 +22104,10 @@
       "NemoNobobyPersonne"
     ]
   },
+  "Web/JavaScript/Guide/Typed_arrays": {
+    "modified": "2020-10-15T21:27:32.382Z",
+    "contributors": ["SphinxKnight", "rockshappy", "rouflak", "teoli"]
+  },
   "Web/JavaScript/Guide/Using_promises": {
     "modified": "2020-07-03T14:12:15.848Z",
     "contributors": [
@@ -22310,10 +22290,6 @@
     "modified": "2020-03-12T19:43:29.325Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/JavaScript/Reference/Errors/Bad_octal": {
-    "modified": "2020-03-12T19:43:47.808Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/JavaScript/Reference/Errors/Bad_radix": {
     "modified": "2020-03-12T19:43:18.378Z",
     "contributors": ["SphinxKnight"]
@@ -22322,7 +22298,7 @@
     "modified": "2020-03-12T19:45:52.553Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/JavaScript/Reference/Errors/Bad_return_or_yield": {
+  "Web/JavaScript/Reference/Errors/Bad_return": {
     "modified": "2020-03-12T19:43:56.672Z",
     "contributors": ["SphinxKnight"]
   },
@@ -22358,16 +22334,8 @@
     "modified": "2020-03-12T19:45:50.173Z",
     "contributors": ["beamop", "SphinxKnight"]
   },
-  "Web/JavaScript/Reference/Errors/Deprecated_String_generics": {
-    "modified": "2020-03-12T19:45:39.563Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage": {
     "modified": "2020-03-12T19:43:40.831Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Errors/Deprecated_expression_closures": {
-    "modified": "2020-03-12T19:45:40.291Z",
     "contributors": ["SphinxKnight"]
   },
   "Web/JavaScript/Reference/Errors/Deprecated_octal": {
@@ -22376,10 +22344,6 @@
   },
   "Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma": {
     "modified": "2020-03-12T19:43:43.631Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat": {
-    "modified": "2020-03-12T19:45:38.629Z",
     "contributors": ["SphinxKnight"]
   },
   "Web/JavaScript/Reference/Errors/Equal_as_assign": {
@@ -22428,10 +22392,6 @@
   },
   "Web/JavaScript/Reference/Errors/Malformed_URI": {
     "modified": "2020-03-12T19:45:53.291Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Errors/Malformed_formal_parameter": {
-    "modified": "2020-03-12T19:43:17.827Z",
     "contributors": ["SphinxKnight"]
   },
   "Web/JavaScript/Reference/Errors/Missing_bracket_after_list": {
@@ -26232,10 +26192,6 @@
     "modified": "2020-10-15T21:51:41.115Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/JavaScript/Typed_arrays": {
-    "modified": "2020-10-15T21:27:32.382Z",
-    "contributors": ["SphinxKnight", "rockshappy", "rouflak", "teoli"]
-  },
   "Web/Manifest": {
     "modified": "2020-07-07T17:00:42.988Z",
     "contributors": [
@@ -27803,5 +27759,49 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Web/CSS/CSS_Scroll_Snap": {
+    "modified": "2019-04-26T04:18:54.788Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "conflicting/Web/CSS/outline": {
+    "modified": "2020-10-15T21:18:04.818Z",
+    "contributors": ["SphinxKnight", "teoli", "FredB", "Kyodev", "Fredchat"]
+  },
+  "conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2": {
+    "modified": "2019-08-07T07:41:04.258Z",
+    "contributors": ["SphinxKnight", "teoli", "FredB", "Fredchat"]
+  },
+  "conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9": {
+    "modified": "2019-08-07T07:41:12.958Z",
+    "contributors": ["SphinxKnight", "teoli", "FredB", "Fredchat"]
+  },
+  "conflicting/Web/CSS/outline_bfe8e66e2b112d3306d547388792b0af": {
+    "modified": "2019-08-07T07:41:29.133Z",
+    "contributors": ["SphinxKnight", "teoli", "FredB", "Fredchat"]
+  },
+  "conflicting/Web/CSS/outline_cb050209a619bd4beea569386863d484": {
+    "modified": "2019-08-07T07:41:19.867Z",
+    "contributors": ["SphinxKnight", "teoli", "FredB", "Fredchat"]
+  },
+  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
+    "modified": "2020-03-12T19:45:40.291Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_3720fcfc8cf309ee8f3b5f3474dc9e12": {
+    "modified": "2020-03-12T19:45:39.563Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_9896c9277d53005e5ad73315265daed1": {
+    "modified": "2020-03-12T19:45:38.629Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
+    "modified": "2020-03-12T19:43:47.808Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter": {
+    "modified": "2020-03-12T19:43:17.827Z",
+    "contributors": ["SphinxKnight"]
   }
 }
