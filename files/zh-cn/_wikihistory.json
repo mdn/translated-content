@@ -18515,6 +18515,22 @@
       "alimon"
     ]
   },
+  "Web/CSS/Inheritance": {
+    "modified": "2020-05-20T07:33:19.452Z",
+    "contributors": [
+      "AlenYing",
+      "laizenan",
+      "Mookiepiece",
+      "FickXu",
+      "mike-j",
+      "xiaahui",
+      "RainSlide",
+      "zhiquan_yu",
+      "kevinfszu",
+      "teoli",
+      "yan"
+    ]
+  },
   "Web/CSS/Inline_formatting_context": {
     "modified": "2020-07-05T02:58:59.465Z",
     "contributors": ["ylc395"]
@@ -20194,22 +20210,6 @@
   "Web/CSS/inherit": {
     "modified": "2020-10-15T22:03:05.362Z",
     "contributors": ["zhangchen", "kongdanchen"]
-  },
-  "Web/CSS/inheritance": {
-    "modified": "2020-05-20T07:33:19.452Z",
-    "contributors": [
-      "AlenYing",
-      "laizenan",
-      "Mookiepiece",
-      "FickXu",
-      "mike-j",
-      "xiaahui",
-      "RainSlide",
-      "zhiquan_yu",
-      "kevinfszu",
-      "teoli",
-      "yan"
-    ]
   },
   "Web/CSS/initial": {
     "modified": "2020-10-15T21:59:31.745Z",

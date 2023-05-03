@@ -123,14 +123,14 @@ console.log(fruits.length); // 2
 
 ### 复制方法和修改方法
 
-有些方法不改变调用该方法的现有数组，而是返回一个新数组。它们首先访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来确定用于新数组的构造函数。然后用元素填充新构造的数组。复制总是触发[*浅拷贝*](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制初始创建数组以外的任何内容。原数组的元素按如下方式复制到新数组中：
+有些方法不会修改调用该方法的现有数组，而是返回一个新的数组。它们通过首先构造一个新数组，然后填充元素来实现。复制始终是[*浅层次的*](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制一开始创建的数组之外的任何内容。原始数组的元素将按以下方式复制到新数组中：
 
 - 对象：对象引用被复制到新数组中。原数组和新数组都引用同一个对象。也就是说，如果一个被引用的对象被修改，新数组和原数组都可以看到更改。
 - 基本类型，如字符串、数字和布尔值（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：它们的值被复制到新数组中。
 
 其他方法会改变调用该方法的数组，在这种情况下，它们的返回值根据方法的不同而不同：有时是对相同数组的引用，有时是新数组的长度。
 
-以下方法使用 `@@species` 创建新数组：
+以下方法通过访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建新数组，以确定要使用的构造函数：
 
 - {{jsxref("Array/concat", "concat()")}}
 - {{jsxref("Array/filter", "filter()")}}
@@ -140,19 +140,36 @@ console.log(fruits.length); // 2
 - {{jsxref("Array/slice", "slice()")}}
 - {{jsxref("Array/splice", "splice()")}}（构造返回的已删除元素数组）
 
+以下方法总是使用 `Array` 基础构造函数创建新数组：
+
+- {{jsxref("Array/toReversed", "toReversed()")}}
+- {{jsxref("Array/toSorted", "toSorted()")}}
+- {{jsxref("Array/toSpliced", "toSpliced()")}}
+- {{jsxref("Array/with", "with()")}}
+
 注意，{{jsxref("Array/group", "group()")}} 和 {{jsxref("Array/groupToMap", "groupToMap()")}} 不使用 `@@species` 为每个组条目创建新数组，而是始终使用普通的 `Array` 构造函数。从概念上讲，它们也不是复制方法。
 
-以下方法可以对原数组进行修改：
+下表列出了会修改原始数组的方法，以及相应的非修改方法：
 
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/pop", "pop()")}}
-- {{jsxref("Array/push", "push()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/shift", "shift()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
-- {{jsxref("Array/unshift", "unshift()")}}
+| 修改方法                                        | 相应的非修改方法                                        |
+| ---------------------------------------------- | ----------------------------------------------------- |
+| {{jsxref("Array/copyWithin", "copyWithin()")}} | 没有相应的非修改方法                                     |
+| {{jsxref("Array/fill", "fill()")}}             | 没有相应的非修改方法                                     |
+| {{jsxref("Array/pop", "pop()")}}               | {{jsxref("Array/slice", "slice(0, -1)")}}             |
+| {{jsxref("Array/push", "push(v1, v2)")}}       | {{jsxref("Array/concat", "concat([v1, v2])")}}        |
+| {{jsxref("Array/reverse", "reverse()")}}       | {{jsxref("Array/toReversed", "toReversed()")}}        |
+| {{jsxref("Array/shift", "shift()")}}           | {{jsxref("Array/slice", "slice(1)")}}                 |
+| {{jsxref("Array/sort", "sort()")}}             | {{jsxref("Array/toSorted", "toSorted()")}}            |
+| {{jsxref("Array/splice", "splice()")}}         | {{jsxref("Array/toSpliced", "toSpliced()")}}          |
+| {{jsxref("Array/unshift", "unshift(v1, v2)")}} | {{jsxref("Array/toSpliced", "toSpliced(0, 0, v1, v2)")}} |
+
+将改变原数组的方法转换为非修改方法的一种简单方式是使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或 {{jsxref("Array/slice", "slice()")}} 先创建一个副本：
+
+```js-nolint
+arr.copyWithin(0, 1, 2); // 改变了 arr
+const arr2 = arr.slice().copyWithin(0, 1, 2); // 不改变 arr
+const arr3 = [...arr].copyWithin(0, 1, 2); // 不改变 arr
+```
 
 ### 迭代方法
 
@@ -260,7 +277,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Array.from()")}}
   - : 从数组类对象或可迭代对象创建一个新的 `Array` 实例。
-- {{jsxref("Array.fromAsync()")}} {{experimental_inline}}
+- {{jsxref("Array.fromAsync()")}} {{Experimental_Inline}}
   - 从异步可迭代、可迭代或类数组对象创建新的 `Array` 实例。
 - {{jsxref("Array.isArray()")}}
   - : 如果参数是数组则返回 `true` ，否则返回 `false` 。
@@ -349,12 +366,20 @@ f("a", "b"); // 'a+b'
   - : 从数组中添加和/或删除元素。
 - {{jsxref("Array.prototype.toLocaleString()")}}
   - : 返回一个表示调用数组及其元素的本地化字符串。重写 {{jsxref("Object.prototype.toLocaleString()")}} 方法。
+- {{jsxref("Array.prototype.toReversed()")}}
+  - : 返回一个新数组，该数组的元素顺序被反转，但不改变原始数组。
+- {{jsxref("Array.prototype.toSorted()")}}
+  - : 返回一个新数组，其中元素按升序排序，而不改变原始数组。
+- {{jsxref("Array.prototype.toSpliced()")}}
+  - : 返回一个新数组，在给定索引处删除和/或替换了一些元素，而不改变原始数组。
 - {{jsxref("Array.prototype.toString()")}}
   - : 返回一个表示调用数组及其元素的字符串。重写 {{jsxref("Object.prototype.toString()")}} 方法。
 - {{jsxref("Array.prototype.unshift()")}}
   - : 在数组的前面添加一个或多个元素，并返回数组新的 `length`。
 - {{jsxref("Array.prototype.values()")}}
   - : 返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含数组中每个索引的值。
+- {{jsxref("Array.prototype.with()")}}
+  - : 返回一个新数组，其中给定索引处的元素替换为给定值，而不改变原始数组。
 - [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
   - : 默认情况下，该方法为 [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 方法的别名。
 

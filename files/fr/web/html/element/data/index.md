@@ -104,6 +104,10 @@ Dans l'exemple suivant, on affiche des noms de produits avec des codes correspon
 </ul>
 ```
 
+### Résultat
+
+{{EmbedLiveSample('',640,160)}}
+
 ## Spécifications
 
 {{Specifications}}

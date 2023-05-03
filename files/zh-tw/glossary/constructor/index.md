@@ -20,8 +20,7 @@ function Overloaded(arg1, arg2, ...,argN){
 要呼叫 JavaScript 內的建構子 class ，請用 `new` 操作符給 {{glossary("variable")}} 宣告新的 {{glossary("object reference")}}。
 
 ```js
-function Default() {
-}
+function Default() {}
 
 // 新的 Default 物件參照被分派給局部變數 defaultReference
 var defaultReference = new Default();

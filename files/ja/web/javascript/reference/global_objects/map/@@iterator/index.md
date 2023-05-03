@@ -27,7 +27,7 @@ map[Symbol.iterator]()
 
 ### for..of を使用した反復処理
 
-このメソッドを直接呼び出す必要があることはめったにないことに注意してください。`iterator` メソッドが存在することで `Map` オブジェクトを[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)にし、 `for...of` ループなどの反復処理構文が、自動的にこのメソッドを呼呼び出してループのためのイテレータを取得することができます。
+このメソッドを直接呼び出す必要があることはめったにないことに注意してください。`iterator` メソッドが存在することで `Map` オブジェクトを[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)にし、 `for...of` ループなどの反復処理構文が、自動的にこのメソッドを呼び出してループのためのイテレータを取得することができます。
 
 ```js
 const myMap = new Map();

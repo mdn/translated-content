@@ -234,42 +234,42 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 
 ## 技术总结
 
-<table>
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, phrasing content, embedded content. If it has a [`controls`](/zh-CN/docs/Web/HTML/Element/audio#controls) attribute: interactive content and palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">合法内容</th>
-   <td>
-    <p>如果元素拥有一个 [`src`](/zh-CN/docs/Web/HTML/Element/audio#src) 属性：合法内容为 0 个或更多 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容<br>
-     <strong>否则</strong>: 合法内容为零个或多个 {{HTMLElement("source")}} 元素，跟随着 0 个或多个{{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">
-    <p>标签简写</p>
-   </th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">合法的父元素</th>
-   <td>任何能够作为容器的元素</td>
-  </tr>
-  <tr>
-   <th scope="row">隐式 ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">合法 de ARIA roles</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLAudioElement")}}</td>
-  </tr>
- </tbody>
+<table class="properties">
+  <tbody>
+    <tr>
+     <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+     <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、短语内容、嵌入内容。如果它有
+       <a href="/zh-CN/docs/Web/HTML/Element/audio#controls"><code>controls</code></a> 属性：交互内容和可感知内容。
+     </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <p>如果元素拥有 <a href="/zh-CN/docs/Web/HTML/Element/audio#src"><code>src</code></a> 属性：允许的内容为 0 个或更多 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容<br>
+        否则：允许的内容为零个或多个 {{HTMLElement("source")}} 元素，跟随着 0 个或多个 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容。</p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>任何能够作为容器的元素</td>
+    </tr>
+    <tr>
+      <th scope="row">隐式 ARIA 角色</th>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">没有对应的角色</a></td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLAudioElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
 ## 规范

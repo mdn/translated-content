@@ -6,7 +6,7 @@ slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
 
 어떻게 유저와 그래픽 기능들과의 상호작용을 결합시킬까. 유저가 클릭을 할 때 랜덤의 색을 가진 랜더링 컨텍스트를 청소하는 것.
 
-{{EmbedLiveSample("clearing-by-clicking-source",660,425)}}
+{{EmbedLiveSample("랜덤_색을_가진_랜더링_컨텍스트를_청소",660,425)}}
 
 ### 랜덤 색을 가진 랜더링 컨텍스트를 청소
 
@@ -97,6 +97,6 @@ window.addEventListener("load", function setupWebGL (evt) {
 }, false);
 ```
 
-The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking).
+이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking)에서도 확인 가능합니다.
 
 {{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}

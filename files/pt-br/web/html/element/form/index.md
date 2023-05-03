@@ -19,7 +19,7 @@ O **elemento HTML `<form>` **representa uma seção de um documento que contém 
 
 Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("accept")}} {{HTMLVersionInline(4)}}
+- {{htmlattrdef("accept")}}
 
   - : A comma-separated list of content types that the server accepts.
 
@@ -30,7 +30,7 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
     HTML 4: In previous versions of HTML, the different character encodings could be delimited by spaces or commas. This is no longer the case in HTML5, where only spaces are correct.
 - {{htmlattrdef("action")}}
   - : The URI of a program that processes the information submitted via the form. This value can be overridden by a {{htmlattrxref("formaction", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
-- {{htmlattrdef("autocomplete")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("autocomplete")}}
 
   - : Indicates whether controls in this form can by default have their values automatically completed by the browser. This setting can be overridden by an `autocomplete` attribute on an element belonging to the form. Possible values are:
 
@@ -60,7 +60,7 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("name")}}
   - : The name of the form. In HTML 4 its use is deprecated (`id` should be used instead). It must be unique among the forms in a document and not the empty string in HTML 5.
-- {{htmlattrdef("novalidate")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("novalidate")}}
   - : This Boolean attribute indicates that the form is not to be validated when it is submitted. If this attribute is missing (and therefore the form is validated), this default setting can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element belonging to the form.
 - {{htmlattrdef("target")}}
 

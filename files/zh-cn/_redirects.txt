@@ -89,7 +89,7 @@
 /zh-CN/docs/CSS/font-smooth	/zh-CN/docs/Web/CSS/font-smooth
 /zh-CN/docs/CSS/height	/zh-CN/docs/Web/CSS/height
 /zh-CN/docs/CSS/image-orientation	/zh-CN/docs/Web/CSS/image-orientation
-/zh-CN/docs/CSS/inheritance	/zh-CN/docs/Web/CSS/inheritance
+/zh-CN/docs/CSS/inheritance	/zh-CN/docs/Web/CSS/Inheritance
 /zh-CN/docs/CSS/initial_value	/zh-CN/docs/Web/CSS/initial_value
 /zh-CN/docs/CSS/list-style-type	/zh-CN/docs/Web/CSS/list-style-type
 /zh-CN/docs/CSS/margin_collapsing	/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
@@ -1624,6 +1624,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/Web/API/HTMLMediaElement/error_event
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
+/zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event

@@ -8,7 +8,7 @@ original_slug: Web/CSS/Elemento_reemplazo
 
 ## Summary
 
-Dentro de CSS tenemos los **elementos de reemplazo**, cuya representacion esta fuera del ambito de propio CSS. Son un tipo de objeto externo, por tanto su representacion es independiente de CSS. Algunos objetos que normalmente funcionan como objetos de reemplazo son {{HTMLElement("img")}}, {{HTMLElement("object")}}, {{HTMLElement("video")}} o elementos de formulario como {{HTMLElement("textarea")}}, {{HTMLElement("input")}}. Algunos elementos como {{HTMLElement("audio")}} or {{HTMLElement("canvas")}} ejercen como elementos de reemplazo solo en casos especificos. Los objetos insertados a traves de las propiedades CSS {{cssxref("content")}} son _objetos de reemplazo anonimos._.
+Dentro de CSS tenemos los **elementos de reemplazo**, cuya representación esta fuera del ámbito de propio CSS. Son un tipo de objeto externo, por tanto su representación es independiente de CSS. Algunos objetos que normalmente funcionan como objetos de reemplazo son {{HTMLElement("img")}}, {{HTMLElement("object")}}, {{HTMLElement("video")}} o elementos de formulario como {{HTMLElement("textarea")}}, {{HTMLElement("input")}}. Algunos elementos como {{HTMLElement("audio")}} or {{HTMLElement("canvas")}} ejercen como elementos de reemplazo solo en casos especificos. Los objetos insertados a través de las propiedades CSS {{cssxref("content")}} son _objetos de reemplazo anonimos._.
 
 CSS gestiona elementos de reemplazo en casos concretos, por ejemplo al calcular los margenes y algunos `auto` valores.
 
