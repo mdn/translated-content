@@ -4,6 +4,8 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3
 ---
 
+{{CSSRef}}
+
 « [CSS](/zh-CN/CSS) « [Understanding CSS z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 层叠上下文示例 3

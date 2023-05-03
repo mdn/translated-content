@@ -57,7 +57,7 @@ Where you want information about the current tab only, you can get a {{WebExtAPI
 
 ### How to example
 
-To see how {{WebExtAPIRef("tabs.query")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let’s walk through how the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example adds the list of "switch to tabs" to its toolbar button popup.
+To see how {{WebExtAPIRef("tabs.query")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let’s walk through how the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) example adds the list of "switch to tabs" to its toolbar button popup.
 
 ![The tabs tabs tabs toolbar menu showing the switch to tap area](switch_to_tab.png)
 
@@ -270,7 +270,7 @@ The following functions are available:
 
 ### How to example
 
-The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example exercises all of these features except for updating a tab's URL The way in which these APIs are used is similar, so we'll look at one of the more involved implementations, that of the "Move active tab to the beginning of the window list" option.
+The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) example exercises all of these features except for updating a tab's URL The way in which these APIs are used is similar, so we'll look at one of the more involved implementations, that of the "Move active tab to the beginning of the window list" option.
 
 But first, here is a demonstration of the feature in action:
 
@@ -387,17 +387,17 @@ In Firefox the default zoom settings are:
 
 ### How to example
 
-The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example includes three demonstrations of the zoom feature: zoom in, zoom out, and reset zoom. Here is the feature in action:
+The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) example includes three demonstrations of the zoom feature: zoom in, zoom out, and reset zoom. Here is the feature in action:
 
 {{EmbedYouTube("RFr3oYBCg28")}}
 
 Let's take a look at how the zoom in is implemented.
 
-#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json)
+#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json)
 
 None of the zoom functions require permissions, so there are no features in the manifest.json file that need to be highlighted.
 
-#### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
+#### [tabs.html](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html)
 
 We have already discussed how the tabs.html defines the options for this extension, nothing new or unique is done to provide the zoom options.
 
@@ -446,7 +446,7 @@ This can be useful, for example, if you want to highlight certain page elements 
 
 ### How to example
 
-The [apply-css](https://github.com/mdn/webextensions-examples/tree/master/apply-css) example uses these features to add a red border to the web page in the active tab. Here is the feature in action:
+The [apply-css](https://github.com/mdn/webextensions-examples/tree/main/apply-css) example uses these features to add a red border to the web page in the active tab. Here is the feature in action:
 
 {{EmbedYouTube("bcK-GT2Dyhs")}}
 

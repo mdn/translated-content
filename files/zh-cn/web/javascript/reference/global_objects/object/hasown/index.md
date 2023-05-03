@@ -7,19 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 
 如果指定的对象*自身*有指定的属性，则静态方法 **`Object.hasOwn()`** 返回 `true`。如果属性是继承的或者不存在，该方法返回 `false`。
 
-> **备注：** `Object.hasOwn()` 旨在取代 {{jsxref("Object.hasOwnProperty()")}}。
+> **备注：** `Object.hasOwn()` 旨在取代 {{jsxref("Object.prototype.hasOwnProperty()")}}。
 
 {{EmbedInteractiveExample("pages/js/object-hasown.html")}}
 
 ## 语法
 
 ```js-nolint
-hasOwn(instance, prop)
+Object.hasOwn(obj, prop)
 ```
 
 ### 参数
 
-- `instance`
+- `obj`
   - : 要测试的 JavaScript 实例对象。
 - `prop`
   - : 要测试属性的 {{jsxref("String")}} 类型的名称或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
@@ -42,16 +42,16 @@ hasOwn(instance, prop)
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false - 'prop' has not been defined
+Object.hasOwn(example, 'prop');   // false - 目标对象的属性 'prop' 未被定义
 
 example.prop = 'exists';
-Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
+Object.hasOwn(example, 'prop');   // true - 目标对象的属性 'prop' 已被定义
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of null
+Object.hasOwn(example, 'prop');   // true - 目标对象本身的属性存在，值为 null
 
 example.prop = undefined;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of undefined
+Object.hasOwn(example, 'prop');   // true - 目标对象本身的属性存在，值为 undefined
 ```
 
 ### 直接属性和继承属性
@@ -62,12 +62,12 @@ Object.hasOwn(example, 'prop');   // true - own property exists with value of un
 const example = {};
 example.prop = 'exists';
 
-// `hasOwn` will only return true for direct properties:
+// `hasOwn` 静态方法只会对目标对象的直接属性返回 true：
 Object.hasOwn(example, 'prop');             // returns true
 Object.hasOwn(example, 'toString');         // returns false
 Object.hasOwn(example, 'hasOwnProperty');   // returns false
 
-// The `in` operator will return true for direct or inherited properties:
+// `in` 运算符对目标对象的直接属性或继承属性均会返回 true：
 'prop' in example;                          // returns true
 'toString' in example;                      // returns true
 'hasOwnProperty' in example;                // returns true
