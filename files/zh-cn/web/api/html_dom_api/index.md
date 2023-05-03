@@ -47,35 +47,35 @@ HTML 标准添加到 `Document` 中的内容包括：
 
 `Element` 接口已经进一步适应了 HTML 元素的表示，通过引入 {{domxref("HTMLElement")}} 接口来实现，所有更具体的 HTML 元素类都继承自它。这扩展了 `Element` 类以向元素节点添加特定于 HTML 的通用功能。 `HTMLElement` 添加的属性包括 {{domxref("HTMLElement.hidden", "hidden")}} 和 {{domxref("HTMLElement.innerText", "innerText")}} 等。`HTMLElement` 还添加了所有 [全局事件处理程序](/zh-CN/docs/Web/API/GlobalEventHandlers) 。
 
-An {{Glossary("HTML")}} document is a DOM tree in which each of the nodes is an HTML element, represented by the {{domxref("HTMLElement")}} interface. The `HTMLElement` class, in turn, implements `Node`, so every element is also a node (but not the other way around). This way, the structural features implemented by the {{domxref("Node")}} interface are also available to HTML elements, allowing them to be nested within each other, created and deleted, moved around, and so forth.
+一个 {{Glossary("HTML")}} 文档是一个 DOM 树，其中每个节点都是一个 HTML 元素，由 {{domxref("HTMLElement")}} 接口表示。 `HTMLElement` 类实现了 `Node`，因此每个元素也是一个节点（但反过来不成立）。这样，由 {{domxref("Node")}} 接口实现的结构特性也可用于 HTML 元素中，允许它们相互嵌套、创建和删除、移动等。
 
-The `HTMLElement` interface is generic, however, providing only the functionality common to all HTML elements such as the element's ID, its coordinates, the HTML making up the element, information about scroll position, and so forth.
+`HTMLElement` 接口是通用的，它仅提供所有 HTML 元素共有的功能，例如元素的 ID、坐标、构成元素的 HTML 代码、滚动位置等信息。
 
-In order to expand upon the functionality of the core `HTMLElement` interface to provide the features needed by a specific element, the `HTMLElement` class is subclassed to add the needed properties and methods. For example, the {{HTMLElement("canvas")}} element is represented by an object of type {{domxref("HTMLCanvasElement")}}. `HTMLCanvasElement` augments the `HTMLElement` type by adding properties such as {{domxref("HTMLCanvasElement.height", "height")}} and methods like {{domxref("HTMLCanvasElement.getContext", "getContext()")}} to provide canvas-specific features.
+为了扩展核心 `HTMLElement` 接口的功能，以提供特定元素所需的功能，`HTMLElement` 类被子类化以添加所需的属性和方法。例如，{{HTMLElement("canvas")}} 元素由类型为 {{domxref("HTMLCanvasElement")}} 的对象表示。`HTMLElement` 通过添加诸如 {{domxref("HTMLCanvasElement.height", "height")}} 等属性和 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 等方法来增强 `HTMLElement` 类型，从而提供 canvas 特定的功能。
 
-The overall inheritance for HTML element classes looks like this:
+HTML 元素类的总体继承关系如下：
 
-![Hierarchy of interfaces for HTML elements](html-dom-hierarchy.svg)
+![HTML 元素的接口层次结构](html-dom-hierarchy.svg)
 
-As such, an element inherits the properties and methods of all of its ancestors. For example, consider a {{HTMLElement("a")}} element, which is represented in the DOM by an object of type {{domxref("HTMLAnchorElement")}}. The element, then, includes the anchor-specific properties and methods described in that class's documentation, but also those defined by {{domxref("HTMLElement")}} and {{domxref("Element")}}, as well as from {{domxref("Node")}} and, finally, {{domxref("EventTarget")}}.
+因此，元素继承其所有祖先的属性和方法。例如，考虑 {{HTMLElement("a")}} 元素，在 DOM 中由类型为 {{domxref("HTMLAnchorElement")}} 的对象表示。然后，该元素包括在该类文档中描述的特定于锚点的属性和方法，但也包括 {{domxref("HTMLElement")}} 和 {{domxref("Element")}} 定义的那些以及来自 {{domxref("Node")}}，最后是 {{domxref("EventTarget")}} 定义的内容。
 
-Each level defines a key aspect of the utility of the element. From `Node`, the element inherits concepts surrounding the ability for the element to be contained by another element, and to contain other elements itself. Of special importance is what is gained by inheriting from `EventTarget`: the ability to receive and handle events such as mouse clicks, play and pause events, and so forth.
+每个级别定义了元素实用性的一个关键方面。从 `Node` 开始，该元素继承了有关该元素能否被另一个元素包含以及自身包含其他元素的概念。特别重要的是从 `EventTarget` 继承得到什么：接收和处理事件（如鼠标点击、播放和暂停事件等）的能力。
 
-There are elements that share commonalities and thus have an additional intermediary type. For example, the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements both present audiovisual media. The corresponding types, {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}}, are both based upon the common type {{domxref("HTMLMediaElement")}}, which in turn is based upon {{domxref("HTMLElement")}} and so forth. `HTMLMediaElement` defines the methods and properties held in common between audio and video elements.
+有一些元素具有共性，因此还有一个额外的中介类型。例如，{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素都呈现音视频媒体。相应的类型 {{domxref("HTMLAudioElement")}} 和 {{domxref("HTMLVideoElement")}} 都基于通用类型 {{domxref("HTMLMediaElement")}}，后者又基于 {{domxref("HTMLElement")}} 等等。`HTMLMediaElement` 定义了音频和视频元素之间共同拥有的方法和属性。
 
-These element-specific interfaces make up the majority of the HTML DOM API, and are the focus of this article. To learn more about the actual structure of the [DOM](/zh-CN/docs/Web/API/Document_Object_Model), see [Introduction to the DOM](/zh-CN/docs/Web/API/Document_Object_Model/Introduction).
+这些特定于元素的接口构成了大部分HTML DOM API，并且是本文的重点。要了解 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 的实际结构，请参阅 [DOM 概述](/zh-CN/docs/Web/API/Document_Object_Model/Introduction)。
 
-## HTML DOM target audience
+## HTML DOM 的目标受众
 
-The features exposed by the HTML DOM are among the most commonly-used APIs in the web developer's arsenal. All but the most simple web applications will use some features of the HTML DOM.
+HTML DOM 所暴露的特性是 Web 开发人员工具箱中最常用的API之一。除了最简单的 Web 应用程序外，几乎所有 Web 应用程序都会使用 HTML DOM 的某些功能。
 
-## HTML DOM API interfaces
+## HTML DOM API 接口
 
-The majority of the interfaces that comprise the HTML DOM API map almost one-to-one to individual HTML elements, or to a small group of elements with similar functionality. In addition, the HTML DOM API includes a few interfaces and types to support the HTML element interfaces.
+HTML DOM API 中的大多数接口几乎一对一地映射到单个 HTML 元素，或者是具有类似功能的少量元素组。此外，HTML DOM API 还包括一些接口和类型来支持 HTML 元素接口。
 
-### HTML element interfaces
+### HTML 元素接口
 
-These interfaces represent specific HTML elements (or sets of related elements which have the same properties and methods associated with them).
+这些接口代表特定的HTML元素（或具有与它们相关的相同属性和方法集合的元素）。
 
 - [`HTMLAnchorElement`](/zh-CN/docs/Web/API/HTMLAnchorElement)
 - [`HTMLAreaElement`](/zh-CN/docs/Web/API/HTMLAreaElement)
@@ -152,9 +152,9 @@ These interfaces represent specific HTML elements (or sets of related elements w
 - [`HTMLUnknownElement`](/zh-CN/docs/Web/API/HTMLUnknownElement)
 - [`HTMLVideoElement`](/zh-CN/docs/Web/API/HTMLVideoElement)
 
-### Web app and browser integration interfaces
+### Web 应用程序和浏览器集成接口
 
-These interfaces offer access to the browser window and document that contain the HTML, as well as to the browser's state, available plugins (if any), and various configuration options.
+这些接口提供了访问包含 HTML 的浏览器窗口和文档的方式，以及访问浏览器状态、可用插件（如果有）和各种配置选项的方式。
 
 - [`ApplicationCache`](/zh-CN/docs/Web/API/ApplicationCache) {{Deprecated_Inline}}
 - [`BarProp`](/zh-CN/docs/Web/API/BarProp)
@@ -164,9 +164,9 @@ These interfaces offer access to the browser window and document that contain th
 - [`PluginArray`](/zh-CN/docs/Web/API/PluginArray) {{Deprecated_Inline}}
 - [`Window`](/zh-CN/docs/Web/API/Window)
 
-### Form support interfaces
+### 表单支持接口
 
-These interfaces provide structure and functionality required by the elements used to create and manage forms, including the {{HTMLElement("form")}} and {{HTMLElement("input")}} elements.
+这些接口提供了创建和管理表单所需的结构和功能，包括 {{HTMLElement("form")}} 和 {{HTMLElement("input")}} 元素。
 
 - [`FormDataEvent`](/zh-CN/docs/Web/API/FormDataEvent)
 - [`HTMLFormControlsCollection`](/zh-CN/docs/Web/API/HTMLFormControlsCollection)
@@ -174,9 +174,9 @@ These interfaces provide structure and functionality required by the elements us
 - [`RadioNodeList`](/zh-CN/docs/Web/API/RadioNodeList)
 - [`ValidityState`](/zh-CN/docs/Web/API/ValidityState)
 
-### Canvas and image interfaces
+### Canvas 和图像接口
 
-These interfaces represent objects used by the Canvas API as well as the {{HTMLElement("img")}} element and {{HTMLElement("picture")}} elements.
+这些接口代表了 Canvas API 使用的对象，以及 {{HTMLElement("img")}} 元素和 {{HTMLElement("picture")}} 元素。
 
 - [`CanvasGradient`](/zh-CN/docs/Web/API/CanvasGradient)
 - [`CanvasPattern`](/zh-CN/docs/Web/API/CanvasPattern)
@@ -189,9 +189,9 @@ These interfaces represent objects used by the Canvas API as well as the {{HTMLE
 - [`Path2D`](/zh-CN/docs/Web/API/Path2D)
 - [`TextMetrics`](/zh-CN/docs/Web/API/TextMetrics)
 
-### Media interfaces
+### 媒体接口
 
-The media interfaces provide HTML access to the contents of the media elements: {{HTMLElement("audio")}} and {{HTMLElement("video")}}.
+媒体接口提供HTML访问媒体元素：{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 的内容。
 
 - [`AudioTrack`](/zh-CN/docs/Web/API/AudioTrack)
 - [`AudioTrackList`](/zh-CN/docs/Web/API/AudioTrackList)
@@ -205,18 +205,18 @@ The media interfaces provide HTML access to the contents of the media elements: 
 - [`VideoTrack`](/zh-CN/docs/Web/API/VideoTrack)
 - [`VideoTrackList`](/zh-CN/docs/Web/API/VideoTrackList)
 
-### Drag and drop interfaces
+### 拖放接口
 
-These interfaces are used by the [HTML Drag and Drop API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) to represent individual draggable (or dragged) items, groups of dragged or draggable items, and to handle the drag and drop process.
+这些接口被 [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) 用于表示单个可拖动（或已拖动）项目、一组已拖动或可拖动的项目，并处理拖放过程。
 
 - [`DataTransfer`](/zh-CN/docs/Web/API/DataTransfer)
 - [`DataTransferItem`](/zh-CN/docs/Web/API/DataTransferItem)
 - [`DataTransferItemList`](/zh-CN/docs/Web/API/DataTransferItemList)
 - [`DragEvent`](/zh-CN/docs/Web/API/DragEvent)
 
-### Page history interfaces
+### 页面历史接口
 
-The History API interfaces let you access information about the browser's history, as well as to shift the browser's current tab forward and backward through that history.
+History API 接口允许您访问有关浏览器历史记录的信息，并通过该历史记录向前和向后移动浏览器的当前选项卡。
 
 - [`BeforeUnloadEvent`](/zh-CN/docs/Web/API/BeforeUnloadEvent)
 - [`HashChangeEvent`](/zh-CN/docs/Web/API/HashChangeEvent)
@@ -225,15 +225,15 @@ The History API interfaces let you access information about the browser's histor
 - [`PageTransitionEvent`](/zh-CN/docs/Web/API/PageTransitionEvent)
 - [`PopStateEvent`](/zh-CN/docs/Web/API/PopStateEvent)
 
-### Web Components interfaces
+### Web 组件接口
 
-These interfaces are used by the [Web Components API](/zh-CN/docs/Web/API/Web_components) to create and manage the available [custom elements](/zh-CN/docs/Web/API/Web_components/Using_custom_elements).
+这些接口被 [Web Components API](/zh-CN/docs/Web/API/Web_components) 用于创建和管理可用的 [自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)。
 
 - [`CustomElementRegistry`](/zh-CN/docs/Web/API/CustomElementRegistry)
 
-### Miscellaneous and supporting interfaces
+### 杂项和支持接口
 
-These supporting object types are used in a variety of ways in the HTML DOM API; in addition, {{domxref("PromiseRejectionEvent")}} represents the event delivered when a {{Glossary("JavaScript")}} {{jsxref("Promise")}} is rejected.
+这些支持对象类型在 HTML DOM API 中以各种方式使用；此外，{{domxref("PromiseRejectionEvent")}} 表示当 {{Glossary("JavaScript")}} {{jsxref("Promise")}} 被拒绝时传递的事件。
 
 - [`DOMStringList`](/zh-CN/docs/Web/API/DOMStringList)
 - [`DOMStringMap`](/zh-CN/docs/Web/API/DOMStringMap)
@@ -243,20 +243,20 @@ These supporting object types are used in a variety of ways in the HTML DOM API;
 - [`MimeTypeArray`](/zh-CN/docs/Web/API/MimeTypeArray)
 - [`PromiseRejectionEvent`](/zh-CN/docs/Web/API/PromiseRejectionEvent)
 
-### Interfaces belonging to other APIs
+### 属于其他 API 的接口
 
-There are several interfaces which are technically defined in the HTML specification while actually being part of other APIs.
+有几个接口在 HTML 规范中被技术上定义，但实际上是其他 API 的一部分。
 
-#### Web storage interfaces
+#### Web Storage 接口
 
-The [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) provides the ability for web sites to store data either temporarily or permanently on the user's device for later re-use.
+[Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 提供了网站在用户设备上临时或永久存储数据以便后续重用的能力。
 
 - [`Storage`](/zh-CN/docs/Web/API/Storage)
 - [`StorageEvent`](/zh-CN/docs/Web/API/StorageEvent)
 
-#### Web Workers interfaces
+#### Web Workers 接口
 
-These interfaces are used by the [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) both to establish the ability for workers to interact with an app and its content, but also to support messaging between windows or apps.
+这些接口被 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 用于建立 Worker 与应用及其内容交互的能力，同时也支持窗口或应用之间的消息传递。
 
 - [`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)
 - [`DedicatedWorkerGlobalScope`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope)
@@ -270,22 +270,23 @@ These interfaces are used by the [Web Workers API](/zh-CN/docs/Web/API/Web_Worke
 - [`WorkerLocation`](/zh-CN/docs/Web/API/WorkerLocation)
 - [`WorkerNavigator`](</zh-CN/docs/Web/API/WorkerNavigator >)
 
-#### WebSocket interfaces
+#### WebSocket 接口
 
-These interfaces, defined by the HTML specification, are used by the [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API).
+这些接口由 HTML 规范定义，被 [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API) 使用。
 
 - [`CloseEvent`](/zh-CN/docs/Web/API/CloseEvent)
 - [`WebSocket`](/zh-CN/docs/Web/API/WebSocket)
 
-#### Server-sent events interfaces
+#### Server-sent 事件接口
 
-The {{domxref("EventSource")}} interface represents the source which sent or is sending [server-sent events](/zh-CN/docs/Web/API/Server-sent_events).
+{{domxref("EventSource")}} 接口表示发送或正在发送 [server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events) 的源。
 
 - [`EventSource`](/zh-CN/docs/Web/API/EventSource)
 
-## Examples
+## 示例
 
-In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLInputElement.input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
+在这个例子中，一个 {{HTMLElement("input")}} 元素的 {{domxref("HTMLInputElement.input_event", "input")}} 事件被监视，以便根据给定字段当前是否有值来更新表单的 “提交” 按钮状态。
+
 
 #### JavaScript
 
@@ -309,17 +310,17 @@ nameField.addEventListener("input", event => {
 });
 ```
 
-This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`. With these, we can access the properties and methods that provide information about and grant control over these elements.
+这段代码使用 {{domxref("Document")}} 接口的 {{domxref("Document.getElementById", "getElementById()")}} 方法获取代表 ID 为 `userName` 和 `sendButton` 的 {{HTMLElement("input")}} 元素的 DOM 对象。通过这些对象，我们可以访问提供有关和控制这些元素信息的属性和方法。
 
-The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to `true`, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement.focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.
+“发送” 按钮的 {{domxref("HTMLInputElement")}} 对象的 {{domxref("HTMLInputElement.disabled", "disabled")}} 属性被设置为 `true`，这将禁用 “发送” 按钮，使其无法点击。此外，通过调用 {{domxref("HTMLElement")}} 继承的 {{domxref("HTMLElement.focus", "focus()")}} 方法，用户名输入字段成为活动焦点。
 
-Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called to add a handler for the `input` event to the user name input. This code looks at the length of the current value of the input; if it's zero, then the "Send" button is disabled if it's not already disabled. Otherwise, the code ensures that the button is enabled.
+然后调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来为用户名输入添加一个 `input` 事件的处理程序。这段代码查看当前输入值的长度；如果它是零，则禁用 “发送” 按钮（如果尚未禁用）。否则，该代码确保按钮已启用。
 
-With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
+有了这个设置，只要用户名输入框中有值，“发送” 按钮就会一直处于启用状态，当为空时则禁用。
 
 #### HTML
 
-The HTML for the form looks like this:
+表单的 HTML 如下：
 
 ```html
 <p>Please provide the information below. Items marked with "*" are required.</p>
@@ -336,21 +337,21 @@ The HTML for the form looks like this:
 </form>
 ```
 
-#### Result
+#### 结果
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [HTML elements reference](/zh-CN/docs/Web/HTML/Element)
-- [HTML attribute reference](/zh-CN/docs/Web/HTML/Attributes)
-- [Document Object Model (DOM)](/zh-CN/docs/Web/API/Document_Object_Model) reference
-- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): A beginner's guide to manipulating the DOM.
+- [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
+- [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
+- [文档对象模型 (DOM)](/zh-CN/docs/Web/API/Document_Object_Model) 参考
+- [操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): 操作 DOM 的入门指南。
