@@ -5,7 +5,7 @@ slug: Web/CSS/sqrt
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`sqrt()`** 为指数型函数，返回某数的[平方根](https://en.wikipedia.org/wiki/Square_root)。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`sqrt()`** 为指数型函数，返回某数的[平方根](https://zh.wikipedia.org/wiki/平方根)。
 
 函数 `pow(x, 0.5)` 等价于 `sqrt(x)`。
 

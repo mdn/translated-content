@@ -7,7 +7,7 @@ slug: Web/CSS/pow
 
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`pow()`** 为指数型函数，返回底数的某数次方的值。
 
-{{CSSXref("exp")}} 函数为 `pow()` 的特例，其底数为数学常数 [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>)。
+{{CSSXref("exp")}} 函数为 `pow()` 的特例，其底数为数学常数 [e](<https://zh.wikipedia.org/wiki/E_(数学常数)>)。
 
 ## 语法
 
