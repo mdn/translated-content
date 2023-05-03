@@ -32,15 +32,15 @@ await expression
 
 通常、`await` は {{jsxref("Promise")}} を `expression` として渡して、プロミスをアンラップするために使用します。`await` を用いると、プロミスが決定（つまり、履行または拒否）されるまで、その周囲にある `async` 関数の実行が一時的に停止されます。実行が再開されると、`await`式の値は履行されたプロミスの値になります。
 
-プロミスが拒否された場合、`await` 式は拒否された値で例外を発生します。`await` 式を格納した関数は、[エラーのスタックトレースに表示](#improving_stack_trace)されます。それ以外の場合、拒否されたプロミスが待機されなかったり、すぐに返されたりすると、呼び出し側の関数はスタックトレースに現れません。
+プロミスが拒否された場合、`await` 式は拒否された値で例外を発生します。`await` 式を格納した関数は、[エラーのスタックトレースに表示](#スタックトレースの改善)されます。それ以外の場合、拒否されたプロミスが待機されなかったり、すぐに返されたりすると、呼び出し側の関数はスタックトレースに現れません。
 
 `expression` は {{jsxref("Promise.resolve()")}} と同じように解決されます。常に ネイティブの `Promise` に変換され、待ち受けされます。もし `expression` が以下の場合、
 
 - ネイティブの `Promise`（これは `expression` が `Promise` またはそのサブクラスに属し、かつ `expression.constructor === Promise` であることを意味します）の場合: プロミスは `then()` を呼び出すことなく、直接使用され、ネイティブに待ち受けられます。
 - [Thenable オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)の場合（ネイティブでないプロミス、ポリフィル、プロキシー、子クラス、など）: 新しいプロミスは、ネイティブの [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターで、オブジェクトの `then()` メソッドを呼び出して、`resolve` コールバックを渡すことで生成します。
-- - Thenable ではない値: 履行済みの `Promise` を構築して使用します。
+- Thenable ではない値: 履行済みの `Promise` を構築して使用します。
 
-用いたプロミスが既に履行された場合でも、非同期関数の実行は次のティックまで一時停止します。その間に、非同期関数の呼び出し側が実行を再開します。[下記の例をご覧ください](#control_flow_effects_of_await)。
+用いたプロミスが既に履行された場合でも、非同期関数の実行は次のティックまで一時停止します。その間に、非同期関数の呼び出し側が実行を再開します。[下記の例をご覧ください](#await_の制御フローの影響)。
 
 `await` は非同期関数やモジュールの内部でのみ有効であり、それ自体が非同期で、プロミスを返すので、`await` 式はメインスレッドをブロックすることはなく、実際に結果に依存するコード、つまり `await` 式の後に実行を延期するだけです。
 
@@ -69,7 +69,7 @@ f1();
 
 ### Thenable オブジェクト
 
-[Thenable オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables)　は同様に履行されます。
+[Thenable オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) は同様に履行されます。
 
 ```js
 async function f() {
