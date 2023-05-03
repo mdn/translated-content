@@ -8,7 +8,7 @@ original_slug: Web/API/URL/createObjectURL
 
 ## 摘要
 
-靜態方法 **`URL.createObjectURL()`** 用於建立一個帶有 URL 的 {{domxref("DOMString")}} 以代表參數中所傳入的物件. 該 URL 的生命週期與創造它的 window 中的 {{domxref("document")}}一致. 這個新的物件 URL 代表了所指定的 {{domxref("File")}} 物件 或是 {{domxref("Blob")}} 物件.
+靜態方法 **`URL.createObjectURL()`** 用於建立一個帶有 URL 的 {{domxref("DOMString")}} 以代表參數中所傳入的物件. 該 URL 的生命週期與創造它的 window 中的 {{domxref("document")}}一致. 這個新的物件 URL 代表了所指定的 {{domxref("File")}} 物件 或是 {{domxref("Blob")}} 物件。
 
 {{AvailableInWorkers}}
 
