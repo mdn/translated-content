@@ -2037,11 +2037,11 @@
 /zh-CN/docs/Web/Apps/Progressive/Introduction	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
 /zh-CN/docs/Web/CSS/边框分割	/zh-CN/docs/Web/CSS/border-collapse
 /zh-CN/docs/Web/CSS/-moz-appearance	/zh-CN/docs/Web/CSS/appearance
-/zh-CN/docs/Web/CSS/-moz-outline-radius	/zh-CN/docs/conflicting/Web/CSS/outline
-/zh-CN/docs/Web/CSS/-moz-outline-radius-bottomleft	/zh-CN/docs/conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2
-/zh-CN/docs/Web/CSS/-moz-outline-radius-bottomright	/zh-CN/docs/conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9
-/zh-CN/docs/Web/CSS/-moz-outline-radius-topleft	/zh-CN/docs/conflicting/Web/CSS/outline_cb050209a619bd4beea569386863d484
-/zh-CN/docs/Web/CSS/-moz-outline-radius-topright	/zh-CN/docs/conflicting/Web/CSS/outline_bfe8e66e2b112d3306d547388792b0af
+/zh-CN/docs/Web/CSS/-moz-outline-radius	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-moz-outline-radius-bottomleft	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-moz-outline-radius-bottomright	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-moz-outline-radius-topleft	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-moz-outline-radius-topright	/zh-CN/docs/Web/CSS/outline
 /zh-CN/docs/Web/CSS/:blank空白伪类	/zh-CN/docs/Web/CSS/:blank
 /zh-CN/docs/Web/CSS/:host()	/zh-CN/docs/Web/CSS/:host_function
 /zh-CN/docs/Web/CSS/:matches	/zh-CN/docs/Web/CSS/:is
