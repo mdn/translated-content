@@ -30774,10 +30774,6 @@
     "modified": "2019-03-23T23:28:35.294Z",
     "contributors": ["yyss", "teoli"]
   },
-  "conflicting/Web/CSS/CSS_Scroll_Snap": {
-    "modified": "2020-10-15T21:58:12.862Z",
-    "contributors": ["mfuji09", "KitaitiMakoto"]
-  },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
     "contributors": ["mfuji09"]
@@ -30785,26 +30781,6 @@
   "conflicting/Web/CSS/cursor": {
     "modified": "2020-12-06T14:47:19.654Z",
     "contributors": ["mfuji09", "ExE-Boss", "hommaam"]
-  },
-  "conflicting/Web/CSS/outline": {
-    "modified": "2020-10-15T22:12:51.215Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2": {
-    "modified": "2020-10-15T22:12:55.527Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9": {
-    "modified": "2020-10-15T22:12:55.975Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/CSS/outline_bfe8e66e2b112d3306d547388792b0af": {
-    "modified": "2020-10-15T22:12:55.878Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/CSS/outline_cb050209a619bd4beea569386863d484": {
-    "modified": "2020-10-15T22:12:54.222Z",
-    "contributors": ["mfuji09"]
   },
   "conflicting/Web/CSS/print-color-adjust": {
     "modified": "2020-10-15T22:13:00.476Z",
@@ -30863,26 +30839,6 @@
       "Taken",
       "electrolysis"
     ]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
-    "modified": "2020-05-01T14:14:19.889Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_3720fcfc8cf309ee8f3b5f3474dc9e12": {
-    "modified": "2020-05-01T23:26:06.371Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_9896c9277d53005e5ad73315265daed1": {
-    "modified": "2020-03-15T12:56:06.316Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
-  "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
-    "modified": "2020-03-12T19:44:14.490Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter": {
-    "modified": "2020-12-06T07:11:47.549Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
