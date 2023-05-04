@@ -2,7 +2,7 @@
 title: async function* 표현식
 slug: Web/JavaScript/Reference/Operators/async_function*
 l10n:
-  sourceCommit: ab97df6ce8865569507bcfc884206a1ed297a690
+  sourceCommit: 40574fa665cd58de35cc2d30de2a46f5e9d3b484
 ---
 
 {{jsSidebar("Operators")}}
