@@ -76,7 +76,7 @@ console.log("b");
 
 ### Date
 
-- {{jsxref("Global_Objects/Date/getYear", "getYear()")}} 和 {{jsxref("Global_Objects/Date/setYear"、 "setYear()")}}方法受千年虫问题影响，已并入 {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} 和 {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}} 中。
+- {{jsxref("Global_Objects/Date/getYear", "getYear()")}} 和 {{jsxref("Global_Objects/Date/setYear", "setYear()")}}方法受千年虫问题影响，已并入 {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} 和 {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}} 中。
 - `toGMTString()` 方法已被弃用，请使用 {{jsxref("Global_Objects/Date/toUTCString", "toUTCString()")}} 方法。
 
 ### 转义序列
