@@ -1,5 +1,5 @@
 ---
-title: mouseleave
+title: 元素：mouseleave 事件
 slug: Web/API/Element/mouseleave_event
 ---
 
