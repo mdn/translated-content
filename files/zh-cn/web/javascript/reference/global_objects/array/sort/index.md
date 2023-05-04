@@ -138,7 +138,7 @@ const items = [
   { name: "Zeros", value: 37 },
 ];
 
-// 根据value排序
+// 根据 value 排序
 items.sort((a, b) => a.value - b.value);
 
 // 根据name排序
