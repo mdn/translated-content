@@ -39,7 +39,7 @@ slug: Learn/Performance/Measuring_performance
 
 ## 性能 API
 
-编写 web 代码时，有大量的  web API](/zh-CN/docs web/API) 可用，使你可以创建自己的性能测量工具。
+编写 web 代码时，有大量的 web API](/zh-CN/docs web/API) 可用，使你可以创建自己的性能测量工具。
 
 你可以使用[导航计时 API](/zh-CN/docs web/API/Navigation_timing_API) 来测量客户端 web 性能，包括卸载上一个页面所需的时间、域名查找所需的时间、执行窗口加载处理程序所花费的总时间等。你可以将该 API 用于与下图中显示的所有导航事件相关的度量。
 
