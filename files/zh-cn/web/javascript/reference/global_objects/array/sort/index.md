@@ -282,7 +282,6 @@ arr.sort(compareFn);
 
 在这个例子中，`compareFn` 函数不是规范的，因为它不满足反对称性：如果 `a > b`，它返回 `1`；但是通过交换 `a` 和 `b`，它返回了 `0` 而不是一个负值。因此，对于不同的引擎，结果数组也会有所不同。例如，V8（用于 Chrome、Node.js 等）和 JavaScriptCore（用于 Safari）根本不会对数组进行排序，而是返回` [3, 1, 4, 1, 5, 9]`；而 SpiderMonkey（用于 Firefox）将返回升序排序的数组 `[1, 1, 3, 4, 5, 9]`。
 
-However, if the `compareFn` function is changed slightly so that it returns `-1` or `0`:
 然而，如果 `compareFn` 函数稍微改变一下，使其返回 `-1` 或 `0`：
 
 ```js
