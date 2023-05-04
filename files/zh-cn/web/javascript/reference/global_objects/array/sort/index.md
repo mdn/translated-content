@@ -152,7 +152,7 @@ items.sort((a, b) => {
     return 1;
   }
 
-  // name必须想等
+  // name 必须相等
   return 0;
 });
 ```
