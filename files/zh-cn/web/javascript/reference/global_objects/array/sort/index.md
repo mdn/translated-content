@@ -173,7 +173,7 @@ items.sort(function (a, b) {
 ### 使用映射改善排序
 
 `compareFunction` 可能需要对元素做多次映射以实现排序，尤其当 `compareFunction` 较为复杂，且元素较多的时候，某些 `compareFunction` 可能会导致很高的负载。使用 map 辅助排序将会是一个好主意。基本思想是首先将数组中的每个元素比较的实际值取出来，排序后再将数组恢复。
-`compareFn` 可能会在数组中的每个元素上调用多次。根据 `compareFn` 的性质，这可能会产生很高的开销。如果 `compareFn` 执行的工作更多，需要排序的元素更多，使用 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)  进行排序可能更有效率。其思路是遍历数组一次，将用于排序的实际值提取到一个临时数组中，对临时数组进行排序，然后遍历临时数组以获得正确的顺序。
+`compareFn` 可能会在数组中的每个元素上调用多次。根据 `compareFn` 的性质，这可能会产生很高的开销。如果 `compareFn` 执行的工作更多，需要排序的元素更多，使用 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 进行排序可能更有效率。其思路是遍历数组一次，将用于排序的实际值提取到一个临时数组中，对临时数组进行排序，然后遍历临时数组以获得正确的顺序。
 
 ```js
 // 需要被排序的数组
