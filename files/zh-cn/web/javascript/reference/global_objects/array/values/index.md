@@ -27,7 +27,7 @@ values()
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
 ```
 
-当应用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`values()` 方法会将空槽作为 `undefined` 值迭代。
+当应用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`values()` 方法会将空槽作为 `undefined` 迭代。
 
 `values()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只需要 `this` 值具有 `length` 属性和整数键的属性。
 
