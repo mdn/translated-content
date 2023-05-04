@@ -307,7 +307,7 @@ console.log([, undefined, "a", "b"].sort()); // ["a", "b", undefined, empty]
 
 ### 在类数组对象上调用 sort()
 
-`sort()` 方法会读取 `this` 的 `length` 属性。然后它会收集在 `0` 到 `length - 1` 范围内所有已存在的整数键属性，对它们进行排序，然后写回。如果范围内存在缺失的属性，则相应的尾随属性将被 [删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)，好像不存在的属性被排序到末尾一样。
+`sort()` 方法会读取 `this` 的 `length` 属性。然后它会收集在 `0` 到 `length - 1` 范围内所有已存在的整数键属性，对它们进行排序，然后写回。如果范围内存在缺失的属性，则相应的尾随属性将被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)，好像不存在的属性被排序到末尾一样。
 
 ```js
 const arrayLike = {
