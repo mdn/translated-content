@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/values
 
 {{JSRef}}
 
-**`values()`** 方法返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象迭代数组中每个项的值。
+**`values()`** 方法返回一个新的[*数组迭代器*](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象迭代数组中每个元素的值。
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
@@ -17,7 +17,7 @@ values()
 
 ### 返回值
 
-一个新的[*可迭代的迭代器对象*](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
+一个新的[*可迭代迭代器对象*](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
 ## 描述
 
@@ -29,13 +29,13 @@ Array.prototype.values === Array.prototype[Symbol.iterator]; // true
 
 当应用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`values()` 方法会将空槽作为 `undefined` 迭代。
 
-`values()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只需要 `this` 值具有 `length` 属性和整数键的属性。
+`values()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只需要 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 
 ### 使用 for...of 循环进行迭代
 
-由于 `values()` 返回一个可迭代的迭代器对象，你可以使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环来迭代它。
+由于 `values()` 返回一个可迭代迭代器对象，你可以使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环来迭代它。
 
 ```js
 const arr = ["a", "b", "c", "d", "e"];
@@ -46,7 +46,7 @@ for (const letter of iterator) {
 } // "a" "b" "c" "d" "e"
 ```
 
-### 使用 .next() 迭代
+### 使用 next() 迭代
 
 由于返回值也是一个迭代器，你可以直接调用其 `next()` 方法。
 
