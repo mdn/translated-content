@@ -1,5 +1,5 @@
 ---
-title: mouseenter
+title: 元素：mouseenter 事件
 slug: Web/API/Element/mouseenter_event
 ---
 
