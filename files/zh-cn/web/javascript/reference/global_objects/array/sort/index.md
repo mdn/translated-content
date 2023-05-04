@@ -43,7 +43,7 @@ sort(compareFn)
 
 `sort()` 方法保留空槽。如果源数组是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则空槽会被移动到数组的末尾，并始终排在所有 `undefined` 元素的后面。
 
-> **备注：** 在 UTF-16 中，Unicode 字符超出 `\uFFFF` 的范围会被编码为两个代理码位（surrogate code units），这些码位的范围是 `\uD800` 到 `\uDFFF`。每个码位的值都会被单独考虑进行比较。因此，由代理对 `\uD855\uDE51` 形成的字符将排在字符 `\uFF3A` 的前面。
+> **备注：** 在 UTF-16 中，Unicode 字符超出 `\uFFFF` 的范围会被编码为两个代理码位（surrogate code units），这些码位的范围是 `\uD800` 到 `\uDFFF`。每个码位的值都会被单独考虑进行比较。因此，由代理对 `\uD855\uDE51` 组成的字符将排在字符 `\uFF3A` 的前面。
 
 如果提供了 `compareFn`，所有非 `undefined` 的数组元素都会按照比较函数的返回值进行排序（所有的 `undefined` 元素都会被排序到数组的末尾，并且不调用 `compareFn`）。
 
