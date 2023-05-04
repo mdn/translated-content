@@ -129,7 +129,8 @@ console.log("b");
 
 ### String
 
-= 非标准的字符串通用方法，如 `String.slice(myStr, 0, 12)`、`String.replace(myStr, /\./g, "!")` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 53 中被废弃，并在 Firefox  68 中删除。你可以使用 {{jsxref("String", "String.prototype", "实例方法")}} 上的方法和 {{jsxref("Function.call")}} 来代替。
+= 非标准的字符串通用方法，如 `String.slice(myStr, 0, 12)`、`String.replace(myStr, /\./g, "!")` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 53 中被废弃，并在 Firefox 68 中删除。你可以使用 {{jsxref("String", "String.prototype", "实例方法")}}和 {{jsxref("Function.call")}} 来代替。
+
 - `String.prototype.quote` 已在 Firefox 37 中移除。
 - {{jsxref("String.prototype.search")}}、{{jsxref("String.prototype.match")}} 和 {{jsxref("String.prototype.replace")}} 中非标准的 `flags` 参数已被淘汰。
 
