@@ -145,16 +145,16 @@ mouseTarget.addEventListener('mouseleave', (e) => {
 });
 
 function addListItem(text) {
-  // Create a new text node using the supplied text
+  // 使用提供的文本创建新的文本节点
   const newTextNode = document.createTextNode(text);
 
-  // Create a new li element
+  // 创建一个新的 li 元素
   const newListItem = document.createElement("li");
 
-  // Add the text node to the li element
+  // 将文本节点添加到 li 元素
   newListItem.appendChild(newTextNode);
 
-  // Add the newly created list item to list
+  // 将新创建的列表项添加到列表中
   unorderedList.appendChild(newListItem);
 }
 ```
