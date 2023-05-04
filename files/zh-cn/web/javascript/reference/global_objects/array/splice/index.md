@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 {{JSRef}}
 
-**`splice()`** 方法改变一个数组的内容，通过移除或者替代已存在的元素和/或[在指定的位置](https://zh.wikipedia.org/wiki/原地算法)添加新元素。
+**`splice()`** 方法[原地](https://zh.wikipedia.org/wiki/原地算法)改变一个数组的内容，通过移除或者替代已存在的元素和/或添加新元素。
 
 要创建一个删除和/或替换部分内容而不改变原数组的新数组，请使用 {{jsxref("Array/toSpliced", "toSpliced()")}}。要访问数组的一部分而不修改它，参见 {{jsxref("Array.prototype.slice()", "slice()")}}。
 
@@ -32,7 +32,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
 - `deleteCount` {{optional_inline}}
 
-  - : 一个整数，表示数组中要从 `start` 删除的元素数量。
+  - : 一个整数，表示数组中要从 `start` 开始删除的元素数量。
 
     如果省略了 `deleteCount`，或者如果其值大于或等于由 `start` 指定的位置之后的元素数, 那么从 `start` 到数组末尾的所有元素将被删除。但是，如果你想要传递任何 `itemN` 参数，则应将 `Infinity` 作为 `deleteCount` 传递，以删除 `start` 之后的所有元素，因为显式的 `undefined` 会[转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)为 `0`。
 
@@ -46,7 +46,11 @@ splice(start, deleteCount, item1, item2, itemN)
 
 ### 返回值
 
-一个包含了删除的元素的数组。如果只移除一个元素，则返回一个元素的数组。如果没有删除任何元素，则返回一个空数组。
+一个包含了删除的元素的数组。
+
+如果只移除一个元素，则返回一个元素的数组。
+
+如果没有删除任何元素，则返回一个空数组。
 
 ## 描述
 
