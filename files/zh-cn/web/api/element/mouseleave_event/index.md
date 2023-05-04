@@ -5,7 +5,7 @@ slug: Web/API/Element/mouseleave_event
 
 {{APIRef}}
 
-**`mouseleave`** 事件在定点设备（通常是鼠标）的指针移出某个 {{domxref("Element", "元素", "", 1)}} 时被触发。
+**`mouseleave`** 事件在定点设备（通常是鼠标）的指针移出某个{{domxref("Element", "元素", "", 1)}}时被触发。
 
 `mouseleave` 和 {{domxref("Element/mouseout_event", "mouseout")}} 是相似的，但是两者的不同在于 `mouseleave` 不会冒泡而 `mouseout` 会冒泡。这意味着当指针离开元素*及*其所有后代时，会触发 `mouseleave`，而当指针离开元素*或*离开元素的后代（即使指针仍在元素内）时，会触发 `mouseout`。
 
