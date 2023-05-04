@@ -269,7 +269,6 @@ ES10（EcmaScript 2019）以前没有要求稳定性，意味着你可能会得�
 
 ### 使用非规范的比较函数进行排序
 
-If a comparing function does not satisfy all of purity, stability, reflexivity, anti-symmetry, and transitivity rules, as explained in the [description](#description), the program's behavior is not well-defined.
 如果一个比较函数不符合纯函数、稳定性、自反性、反对称性和传递性规则，就像在[描述](#描述)中解释的那样，程序的行为不是一种好的行为。
 
 例如，请看这个示例：
