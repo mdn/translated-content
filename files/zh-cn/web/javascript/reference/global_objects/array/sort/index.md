@@ -39,7 +39,7 @@ sort(compareFn)
 
 ## 描述
 
-如果没有指明 `compareFn` ，所有非 `undefined` 的数组元素都会被转换为字符串，并按照 UTF-16 码点顺序比较字符串进行排序。例如 "Banana" 会被排列到 "cherry" 之前。当数字按由小到大排序时，9 出现在 80 之前，但因为（没有指明 `compareFn`）比较的数字会先被转换为字符串，所以在 Unicode 顺序上 "80" 要比 "9" 要靠前。所有的 `undefined` 元素都会被排序到数组的末尾。
+如果没有指明 `compareFn` ，所有非 `undefined` 的数组元素都会被转换为字符串，并按照 UTF-16 码点顺序比较字符串进行排序。例如“banana”会被排列到“cherry”之前。当数字按由小到大排序时，9 出现在 80 之前，但因为比较的数字会先被转换为字符串，所以在 Unicode 顺序中“80”要比“9”要靠前。所有的 `undefined` 元素都会被排序到数组的末尾。
 
 `sort()` 方法保留空槽。如果源数组是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则空槽会移动到数组的末尾，并始终出现在所有 `undefined` 元素的后面。
 
