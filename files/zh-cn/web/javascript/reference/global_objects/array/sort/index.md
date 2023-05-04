@@ -141,7 +141,7 @@ const items = [
 // 根据 value 排序
 items.sort((a, b) => a.value - b.value);
 
-// 根据name排序
+// 根据 name 排序
 items.sort((a, b) => {
   const nameA = a.name.toUpperCase(); // 忽略大小写
   const nameB = b.name.toUpperCase(); // 忽略大小写
