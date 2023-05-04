@@ -35,7 +35,7 @@ sort(compareFn)
 
 ### 返回值
 
-对原始数组的索引，但是现在已经经过排序了。注意数组是用[原地算法](https://zh.wikipedia.org/wiki/原地算法)进行排序，不会进行赋值。
+经过排序的原始数组的引用。注意数组是*[就地](https://zh.wikipedia.org/wiki/原地算法)*进行排序，不会进行复制。
 
 ## 描述
 
