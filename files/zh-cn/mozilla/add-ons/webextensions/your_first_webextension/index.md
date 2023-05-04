@@ -8,7 +8,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 > **备注：** 如果你熟悉浏览器扩展的基本概念，你可以跳过这一章节，去阅读[如何把扩展文件组合在一起](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，阅读[参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference)以构建你的扩展。访问 [Firefox 扩展工作站](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)，了解有关 Firefox 扩展测试、发布等更多信息。
 在这篇文章中，我们将为 Firefox 创建一个扩展。这个扩展只是给从“`mozilla.org`”或其任意子域名加载的任何页面添加一个红色边框。
 
-该示例的源代码位于 GitHub：<https://github.com/mdn/webextensions-examples/tree/master/borderify>
+该示例的源代码位于 GitHub：<https://github.com/mdn/webextensions-examples/tree/main/borderify>
 
 ## 编写扩展
 

@@ -65,7 +65,7 @@ function fetchVideo() {
 
 > **备注：** 当 `abort()` 被调用时，这个 `fetch()` promise 将 `reject` 一个名为 `AbortError` 的 `DOMException`。
 
-您可以在 [GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api) 上找到这个示例的完整源代码（也可以[在线运行](https://mdn.github.io/dom-examples/abort-api/)）。
+你可以在 [GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api) 上找到这个示例的完整源代码（也可以[在线运行](https://mdn.github.io/dom-examples/abort-api/)）。
 
 ## 规范
 
