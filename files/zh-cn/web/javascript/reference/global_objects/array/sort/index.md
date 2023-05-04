@@ -335,6 +335,6 @@ console.log(Array.prototype.sort.call(arrayLike));
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - {{jsxref("TypedArray.prototype.sort()")}}
-- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
+- [Getting things sorted in V8](https://v8.dev/blog/array-sort) （v8.dev，2018 年 9 月 28 日）
 - [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort)
 - [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)
