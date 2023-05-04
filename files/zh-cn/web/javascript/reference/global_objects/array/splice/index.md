@@ -27,7 +27,7 @@ splice(start, deleteCount, item1, item2, itemN)
   - : 数组发生变化时，从 0 开始的索引会[转换成整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
     - 负索引从数组末尾向后计数——如果 `start < 0`，使用 `start + array.length`。
     - 如果 `start < -array.length`，使用 `0`。
-    - 如果 `start >= array.length`，则不会删除任何元素，但是该方法会作为一个加法函数，添加所提供的元素。
+    - 如果 `start >= array.length`，则不会删除任何元素，但是该方法会作为一个加法函数，添加所提供的那些元素。
     - 如果 `start` 被省略了（和调用 `splice()` 时不传递参数），则不会删除任何元素。这与传递 `undefined` 不同，后者会被转换为 `0`。
 
 - `deleteCount` {{optional_inline}}
