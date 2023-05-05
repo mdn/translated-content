@@ -14,15 +14,15 @@ La Network Information (Información de red) API provee información sobre el si
 ### Detectar cambios de conexiónThis example watches for changes to the user's connection.
 
 ```js
-var conexion = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-var tipo = conexion.effectiveType;
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var tipo = connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log("Connection type changed from " + tipo + " to " + conexion.effectiveType);
-  tipo = conexion.effectiveType;
+  console.log("Connection type changed from " + tipo + " to " + connection.effectiveType);
+  tipo = connection.effectiveType;
 }
 
-conexion.addEventListener('change', updateConnectionStatus);
+connection.addEventListener('change', updateConnectionStatus);
 ```
 
 ### Precargar recursos grandes
