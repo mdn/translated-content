@@ -35,7 +35,7 @@ reduceRight(callbackFn, initialValue)
 
 ### 返回值
 
-缩减操作后的结果值。
+聚合后的结果值。
 
 ## 描述
 
