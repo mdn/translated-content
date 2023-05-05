@@ -33,7 +33,7 @@ slug: Web/HTML/Element/canvas
           >対話型コンテンツ</a
         >のうち {{HTMLElement("a")}} 要素,
         {{HTMLElement("button")}} 要素, {{HTMLElement("input")}}
-        要素の {{htmlattrxref("type", "input")}} 属性が
+        要素の <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性が
         <code>checkbox</code>, <code>radio</code>,
         <code>button</code> のいずれか以外を含まないもの
       </td>

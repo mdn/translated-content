@@ -24,7 +24,7 @@ slug: Web/HTML/Element/head
       <td>
         <p>
           文書が {{HTMLElement("iframe")}} の
-          {{htmlattrxref("srcdoc", "iframe")}}
+          <a href="/ja/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>
           文書である場合、または題名情報がより上位のプロトコル (HTML
           メールの件名の行など)
           で使用される場合は、0個以上のメタデータコンテンツ。

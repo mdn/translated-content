@@ -84,8 +84,8 @@ slug: Web/HTML/Element/meter
   - : 「高」とされる範囲全体の下限値。属性値は、`max` 属性の値より小さく、かつ `low` 属性や `min` 属性の値より大きいものでなくてはなりません (※これらが定義されている場合)。`high` 属性が未定義、もしくはその値が `max` 属性の値より大きい場合、`high` の値は最大値と同じです。
 - {{htmlattrdef("optimum")}}
   - : **最適な数値の範囲**を表します。`min` 属性と `max` 属性によって定義される範囲内の値でなくてはなりません。 `low` 属性と `high` 属性が指定されている場合、この属性の値を含む範囲が最適な数値の範囲とみなされます。例えば、値が `min` 属性と `low` 属性の間のいずれかであった場合、「低」の範囲が最適な数値となります。ブラウザーは optimum の値以下であるかどうかでメーターのバーの色を変更することがあります。
-- {{htmlattrdef("form")}}
-  - : `<meter>` 要素と関連付ける {{HTMLElement("form")}} 要素 (_フォームオーナー_) です。この属性の値は同じ文書内の `<form>` の {{htmlattrxref("id")}} である必要があります。この属性が設定されていなかった場合、その `<meter>` の祖先に `<form>` 要素があれば、それに関連付けられます。この属性は `<meter>` 要素がフォーム関連要素として使用されている場合、例えば対応する [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) の範囲を表示するようなものでのみ使用されます。
+- `form`
+  - : `<meter>` 要素と関連付ける {{HTMLElement("form")}} 要素 (_フォームオーナー_) です。この属性の値は同じ文書内の `<form>` の [`id`](/ja/docs/Web/HTML/Global_attributes#id) である必要があります。この属性が設定されていなかった場合、その `<meter>` の祖先に `<form>` 要素があれば、それに関連付けられます。この属性は `<meter>` 要素がフォーム関連要素として使用されている場合、例えば対応する [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) の範囲を表示するようなものでのみ使用されます。
 
 ## 例
 
@@ -108,7 +108,7 @@ Google Chrome での表示結果は以下のようになります。
 
 ### 「高」の範囲と「低」の範囲の使用例
 
-この例では {{htmlattrxref("min", "meter")}} 属性が省略されています。よって、下限値は `0` となっています。
+この例では [`min`](/ja/docs/Web/HTML/Element/meter#min)t/meter#min)t/meter#min) 属性が省略されています。よって、下限値は `0` となっています。
 
 #### HTML
 

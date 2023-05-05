@@ -385,7 +385,7 @@ elem.audioTrackList.onremovetrack = (event) => {
           >記述コンテンツ</a
         >、<a href="/ja/docs/HTML/Content_categories#埋め込みコンテンツ"
           >埋め込みコンテンツ</a
-        >。 {{htmlattrxref("controls", "audio")}}
+        >。 <a href="/ja/docs/Web/HTML/Element/audio#controls"><code>controls</code></a>
         属性を持つ場合は、<a
           href="/ja/docs/HTML/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
@@ -397,7 +397,7 @@ elem.audioTrackList.onremovetrack = (event) => {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        要素が {{htmlattrxref("src", "audio")}} 属性を持つ場合:
+        要素が <a href="/ja/docs/Web/HTML/Element/audio#src"><code>src</code></a> 属性を持つ場合:
         0個以上の {{HTMLElement("track")}}
         要素とそれに続く、メディア要素を含まない透過的コンテンツ。すなわち
         {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}}

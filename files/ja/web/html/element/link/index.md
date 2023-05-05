@@ -180,8 +180,8 @@ slug: Web/HTML/Element/link
   - : この属性は、リンク先のリソースの言語を示します。
     これは単なる助言です。
     許容される値は {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定めています。
-    この属性は、 {{HTMLAttrxRef("href", "a")}} 属性が提供されている場合にのみ使用します。
-- {{HTMLAttrDef("imagesizes")}}
+    この属性は、 [`href`](/ja/docs/Web/HTML/Element/a#href) 属性が提供されている場合にのみ使用します。
+- `imagesizes`
   - : `rel="preload"` および `as="image"` において、 `imagesizes` 属性は、 `img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)です。
 - {{HTMLAttrDef("imagesrcset")}}
   - : `rel="preload"` および `as="image"` において、 `imagesrcset` 属性は `img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sourceset 属性](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)です。
@@ -213,12 +213,12 @@ slug: Web/HTML/Element/link
   - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Link_types)のリストでなければなりません。
 - {{HTMLAttrDef("sizes")}}
 
-  - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 {{HTMLAttrxRef("rel","link")}} の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
+  - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 [`rel`](/ja/docs/Web/HTML/Element/link#rel) の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
 
     - `any`: `image/svg+xml` のようなベクター画像であるため、どのようなサイズにも調整可能であることを示します。
     - ホワイトスペースで区切られたサイズのリスト。サイズはそれぞれ `<幅のピクセル数>x<高さのピクセル数>` または `<幅のピクセル数>X<高さのピクセル数>` という形式です。それぞれのサイズがリソースに含まれていることが必要です。
 
-    > **メモ:** ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 {{HTMLAttrxRef("sizes")}} 属性はエントリーが 1 個だけになります。
+    > **メモ:** ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性はエントリーが 1 個だけになります。
     > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
 
 - {{HTMLAttrDef("title")}}
@@ -250,10 +250,10 @@ slug: Web/HTML/Element/link
 
 - {{HTMLAttrDef("rev")}} {{deprecated_inline}}
 
-  - : この属性の値は、{{HTMLAttrxRef("href", "link")}} 属性で定義したリンク先文書に対する、現在の文書の関係を示します。従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
-    この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Link_types)は、{{HTMLAttrxRef("rel", "link")}} 向けの値と似ています。
+  - : この属性の値は、[`href`](/ja/docs/Web/HTML/Element/link#href) 属性で定義したリンク先文書に対する、現在の文書の関係を示します。従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
+    この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Link_types)は、[`rel`](/ja/docs/Web/HTML/Element/link#rel) 向けの値と似ています。
 
-    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Link_types)を与えた {{HTMLAttrxRef("rel", "link")}} 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
+    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Link_types)を与えた [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
 
 ## 例
 

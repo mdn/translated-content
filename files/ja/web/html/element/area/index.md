@@ -48,7 +48,7 @@ slug: Web/HTML/Element/area
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        {{htmlattrxref("href", "area")}} 属性がある場合は
+        <a href="/ja/docs/Web/HTML/Element/area#href"><code>href</code></a> 属性がある場合は
         <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>、そうでなければ<a
           href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
@@ -70,8 +70,8 @@ slug: Web/HTML/Element/area
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("alt")}}
-  - : 画像を表示しないブラウザーが代わりに表示するテキスト文字列です。テキストの内容は、代替テキストを表示しない場合に画像が提供する選択肢と同じものをユーザーに与えるような表現にすべきです。この属性は {{htmlattrxref("href", "area")}} 属性が使用されている場合のみ必要です。
+- `alt`
+  - : 画像を表示しないブラウザーが代わりに表示するテキスト文字列です。テキストの内容は、代替テキストを表示しない場合に画像が提供する選択肢と同じものをユーザーに与えるような表現にすべきです。この属性は [`href`](/ja/docs/Web/HTML/Element/area#href) 属性が使用されている場合のみ必要です。
 
 <!---->
 
@@ -88,13 +88,13 @@ slug: Web/HTML/Element/area
 
     値は CSS ピクセルの数です。
 
-- {{htmlattrdef("download")}}
-  - : この属性がある場合は、作者はハイパーリンクをリソースのダウンロードに使用すると考えていることを示します。{{htmlattrxref("download", "a")}} 属性の詳しい説明は {{HTMLElement("a")}} をご覧ください。
-- {{htmlattrdef("href")}}
+- `download`
+  - : この属性がある場合は、作者はハイパーリンクをリソースのダウンロードに使用すると考えていることを示します。[`download`](/ja/docs/Web/HTML/Element/a#download) 属性の詳しい説明は {{HTMLElement("a")}} をご覧ください。
+- `href`
   - : この領域のハイパーリンクの宛先です。この値は有効な URL です。この属性は省略可能です。その場合、その `<area>` 要素はハイパーリンクを提供しません。
-- {{htmlattrdef("hreflang")}}
-  - : リンク先のリソースの言語を示します。許容される値は [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) で定めています。この属性は、 {{htmlattrxref("href", "area")}} 属性を与える場合にのみ使用してください。
-- {{htmlattrdef("ping")}}
+- `hreflang`
+  - : リンク先のリソースの言語を示します。許容される値は [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) で定めています。この属性は、 [`href`](/ja/docs/Web/HTML/Element/area#href) 属性を与える場合にのみ使用してください。
+- `ping`
   - : ハイパーリンクがフォローされたときに、ブラウザーから {{HTTPMethod("POST")}} リクエストが本文を `PING` として (バックグラウンドで) 送信する URL を空白で区切ったリストで記述します。ふつうはトラッキング用に使用します。
 - {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
 
@@ -106,13 +106,13 @@ slug: Web/HTML/Element/area
     - "`origin-when-cross-origin`" は、異なる生成元へのナビゲートではリファラーをスキーム、ホスト、ポートに制限します。同一生成元へのナビゲートでは、リファラーのパスも含めます。
     - "`unsafe-url`" は、リファラーに生成元とパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これは生成元やパスの情報が TLS で保護されたリソースからセキュアでない生成元へ漏えいしますので、安全ではありません。
 
-- {{htmlattrdef("rel")}}
-  - : {{htmlattrxref("href", "area")}} 属性を含むアンカーで、この属性は、対象オブジェクトとリンクオブジェクトの関係を指定します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Link_types)のリストです。値とその意味は、文書作成者にとって意味を持つかもしれない何らかの権威によって登録されています。他に何も与えられていない場合の既定の関係は void です。この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。
-- {{htmlattrdef("shape")}}
+- `rel`
+  - : [`href`](/ja/docs/Web/HTML/Element/area#href) 属性を含むアンカーで、この属性は、対象オブジェクトとリンクオブジェクトの関係を指定します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Link_types)のリストです。値とその意味は、文書作成者にとって意味を持つかもしれない何らかの権威によって登録されています。他に何も与えられていない場合の既定の関係は void です。この属性は [`href`](/ja/docs/Web/HTML/Element/area#href) 属性が存在する場合にのみ使用してください。
+- `shape`
 
   - : 関連づけたホットスポットの形状です。 HTML の仕様書では、長方形の領域を定義する値 `rect`、円形の領域を定義する値 `circle`、多角形を定義する値 `poly`、定義済みの領域以外のすべての領域を示す値 `default` を定めています。
 
-    多くのブラウザー、特に Internet Explorer 4 以降では `circ`, `polygon`, `rectangle` を {{htmlattrxref("shape", "area")}} の有効な値として対応していますが、これらの値は標準外です。
+    多くのブラウザー、特に Internet Explorer 4 以降では `circ`, `polygon`, `rectangle` を [`shape`](/ja/docs/Web/HTML/Element/area#shape) の有効な値として対応していますが、これらの値は標準外です。
 
 - {{htmlattrdef("target")}}
 
@@ -125,7 +125,7 @@ slug: Web/HTML/Element/area
     - `_parent`: 現在のページがフレーム内にある場合は、現在の親の閲覧コンテキストのリソースを表します。親要素がない場合、 `_self` と同じ動作をします。
     - `_top`: 最上位の閲覧コンテキストのリソースを表します (現在の閲覧コンテキストの祖先にあたり、それ以上親のない要素です)。親要素がない場合、 `_self` と同じ動作をします。
 
-    この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。
+    この属性は [`href`](/ja/docs/Web/HTML/Element/area#href) 属性が存在する場合にのみ使用してください。
 
     > **メモ:** 新しいブラウザー (例えば Firefox 79 以降) では、 `target="_blank"` を `<area>` 要素に設定すると、暗黙に同じ動作をする `rel` を `rel="noopener"` と設定します。
 

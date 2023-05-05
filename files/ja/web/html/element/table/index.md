@@ -97,7 +97,7 @@ slug: Web/HTML/Element/table
 
 - {{htmlattrdef("border")}} {{Deprecated_inline}}
 
-  - : この整数値属性は、ピクセル値で、表を囲む枠の大きさを定義します。もし 0 が設定された場合、それは {{htmlattrxref("frame", "table")}} 属性が void に設定されることを意味します。
+  - : この整数値属性は、ピクセル値で、表を囲む枠の大きさを定義します。もし 0 が設定された場合、それは [`frame`](/ja/docs/Web/HTML/Element/table#frame) 属性が void に設定されることを意味します。
 
     同様の効果を得るには、 {{cssxref("border")}} 一括指定プロパティを使用してください。
 
@@ -617,7 +617,7 @@ tr:last-child td {
 
 ### 行と列のスコープ付け
 
-ヘッダー要素の {{htmlattrxref("scope", "th")}} 属性は、単純な内容の場合はスコープが推測できるので冗長になります。しかし、支援技術によっては正しく推測することに失敗する事があるため、ヘッダーにスコープを設定すると使い勝手が向上することがあります。複雑な表では、スコープを指定するとセルとヘッダーの関係に関する必要な情報を提供することができます。
+ヘッダー要素の [`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性は、単純な内容の場合はスコープが推測できるので冗長になります。しかし、支援技術によっては正しく推測することに失敗する事があるため、ヘッダーにスコープを設定すると使い勝手が向上することがあります。複雑な表では、スコープを指定するとセルとヘッダーの関係に関する必要な情報を提供することができます。
 
 #### 例
 
@@ -656,11 +656,11 @@ tr:last-child td {
 
 ### 複雑な表
 
-読み上げソフトのような支援技術は、ヘッダーのセルを厳密に水平又は垂直方向に関連付けすることができない表を解析するのが困難な場合があります。これはつまり、 {{htmlattrxref("colspan", "td")}} に {{htmlattrxref("rowspan", "td")}} 属性がある場合のことです。
+読み上げソフトのような支援技術は、ヘッダーのセルを厳密に水平又は垂直方向に関連付けすることができない表を解析するのが困難な場合があります。これはつまり、 [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) に [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性がある場合のことです。
 
 できれば、テーブルの内容を表現するための別な方法、例えばより小さい表の集合に分解するなどで、 `colspan` 及び `rowspan` 属性に依存する必要がないようにすることを考慮してください。これは支援技術を使用している人が表の内容を理解しやすくするのに加えて、表のレイアウトの関連を理解することが難しい認識障碍を持った人にも利益になります。
 
-表を分割することができないのであれば、 {{htmlattrxref("id")}} 及び {{htmlattrxref("headers", "td")}} 属性の組み合わせを用いて、表のセルとそのセルに関連したヘッダーをプログラム的に結び付けてください。
+表を分割することができないのであれば、 [`id`](/ja/docs/Web/HTML/Global_attributes#id) 及び [`headers`](/ja/docs/Web/HTML/Element/td#headers)ment/td#headers) 属性の組み合わせを用いて、表のセルとそのセルに関連したヘッダーをプログラム的に結び付けてください。
 
 - [MDN 視覚障碍者向けの表](/ja/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)

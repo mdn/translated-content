@@ -83,14 +83,14 @@ slug: Web/HTML/Element/td
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
     - `justify` (テキストのみ): 中身がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は {{htmlattrxref("char", "td")}} 属性および {{htmlattrxref("charoff", "td")}} 属性で定義します。{{unimplemented_inline(2212)}}
+    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/td#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/td#charoff) 属性で定義します。{{unimplemented_inline(2212)}}
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
     > **メモ:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 {{htmlattrxref("char", "td")}} を使用できます。 CSS3 では {{unimplemented_inline}} です。
+    > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 [`char`](/ja/docs/Web/HTML/Element/td#char) を使用できます。 CSS3 では {{unimplemented_inline}} です。
 
 - {{htmlattrdef("axis")}} {{deprecated_inline}}
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
@@ -100,9 +100,9 @@ slug: Web/HTML/Element/td
 
     同様の効果を与えるには、 CSS の {{ cssxref("background-color") }} プロパティを使用してください。
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
-  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 {{htmlattrxref("align", "td")}} 属性が `char` に設定されていない場合、この属性は無視されます。
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 [`align`](/ja/docs/Web/HTML/Element/td#align) 属性が `char` に設定されていない場合、この属性は無視されます。
+- `charoff` {{deprecated_inline}}
   - : この属性は、 **char** 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
 - {{htmlattrdef("height")}} {{deprecated_inline}}
   - : この属性はセルの高さの推奨値を定義するために使用されます。代わりの CSS の {{cssxref("height")}} プロパティを使用してください。

@@ -7,11 +7,11 @@ slug: Web/HTML/Element/picture
 
 **HTML の `<picture>` 要素**は、0 個以上の {{HTMLElement("source")}} 要素と一つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。
 
-ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の {{htmlattrxref("src", "img")}} 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
+ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の [`src`](/ja/docs/Web/HTML/Element/img#src) 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
 
 {{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
 
-どの URL を読み込むかを選択するには、{{Glossary("user agent","ユーザーエージェント")}}はそれぞれの `<source>` 要素の {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, {{htmlattrxref("type", "source")}} 属性を調べて、現在のページのレイアウトや表示機器の能力に最も合う画像を検討します。
+どの URL を読み込むかを選択するには、{{Glossary("user agent","ユーザーエージェント")}}はそれぞれの `<source>` 要素の [`srcset`](/ja/docs/Web/HTML/Element/source#srcset), [`media`](/ja/docs/Web/HTML/Element/source#media), [`type`](/ja/docs/Web/HTML/Element/source#type) 属性を調べて、現在のページのレイアウトや表示機器の能力に最も合う画像を検討します。
 
 `<img>` 要素は 2 つの役割を担います。
 
@@ -24,7 +24,7 @@ slug: Web/HTML/Element/picture
 - 特定の形式に対応していないブラウザーに対して、**代替画像形式を提供する**。
 - 見る人の画面に最も適合する画像を読み込むことで、**通信帯域を節約しページの読み込みをより速くする**。
 
-DPI の高い (高解像度の) ディスプレイのために高解像度版の画像を提供する場合は、代わりに {{htmlattrxref("srcset", "img")}} 属性を `<img>` に使用してください。これによってブラウザーはデータ節約モードでは低解像度版を選択することができ、 `media` 条件を明示的に書かなくてもよくなります。
+DPI の高い (高解像度の) ディスプレイのために高解像度版の画像を提供する場合は、代わりに [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性を `<img>` に使用してください。これによってブラウザーはデータ節約モードでは低解像度版を選択することができ、 `media` 条件を明示的に書かなくてもよくなります。
 
 <table class="properties">
   <tbody>

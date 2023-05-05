@@ -35,7 +35,7 @@ slug: Web/HTML/Element/col
         {{HTMLElement("colgroup")}}
         のみ。ただし開始タグが必須ではないため暗黙的に定義されることがあります。
         {{HTMLElement("colgroup")}} 要素は
-        {{htmlattrxref("span", "colgroup")}}
+        <a href="/ja/docs/Web/HTML/Element/colgroup#span"><code>span</code></a>
         属性を持っていてはいけません。
       </td>
     </tr>
@@ -78,14 +78,14 @@ slug: Web/HTML/Element/col
     - `right` : 内容物をセルの右側に揃えます。
     - `justify`: 内容物がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
 
-    この属性が設定されていない場合、その値は `<col>` 要素が属する {{HTMLElement("colgroup")}} 要素の {{htmlattrxref("align", "colgroup")}} 属性から継承します。それも存在しない場合は、`left` 値であるものとします。
+    この属性が設定されていない場合、その値は `<col>` 要素が属する {{HTMLElement("colgroup")}} 要素の [`align`](/ja/docs/Web/HTML/Element/colgroup#align) 属性から継承します。それも存在しない場合は、`left` 値であるものとします。
 
     > **補足:**
     >
     > - 値 `left`、`center`、`right`、`justify` と同じ効果を得る方法:
     > - {{cssxref("text-align")}} プロパティを `<col>` 要素を与えたセレクターに設定しようとしてはいけません。 {{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
-    > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 `a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
-    > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
+    > - 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 `a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
+    > - 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
@@ -93,9 +93,9 @@ slug: Web/HTML/Element/col
 
     同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
-  - : この属性は、列内のセルで揃える文字を設定します。よく使用する値としては、数値や金額を揃えるときのピリオド (.) があります。 {{htmlattrxref("align", "col")}} 属性が `char` ではない場合は、この属性は無視されます。
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : この属性は、列内のセルで揃える文字を設定します。よく使用する値としては、数値や金額を揃えるときのピリオド (.) があります。 [`align`](/ja/docs/Web/HTML/Element/col#align) 属性が `char` ではない場合は、この属性は無視されます。
+- `charoff` {{deprecated_inline}}
   - : この属性は、 `char` 属性で指定された揃え文字からその列のデータをオフセットする文字数を示します。
 - {{htmlattrdef("valign")}} {{deprecated_inline}}
 
@@ -108,8 +108,8 @@ slug: Web/HTML/Element/col
 
     > **メモ:** **補足:**- {{cssxref("vertical-align")}} プロパティを、 `<col>` 要素を与えたセレクターに設定しようとしてはいけません。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
     >
-    > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、 CSS の `td:nth-child(an+b)` セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用することができます。
-    > - 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
+    > - 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用していない場合は、 CSS の `td:nth-child(an+b)` セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用することができます。
+    > - 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 - {{htmlattrdef("width")}} {{deprecated_inline}}
   - : この属性は、現在の列グループ内の各列に既定の幅を指定します。標準的なピクセル値やパーセント値に加えて、この属性は特別な書式である `0*` も使用できます。これはグループ内の各列の幅を、列の内容物を保持するのに必要最小限の幅にします。`5*` のような幅の相対値も使用できます。

@@ -31,7 +31,7 @@ l10n:
     - `off`: ユーザーはフォームを使用するたびにフィールドへ値を明示的に入力しなければならないか、ドキュメントが独自の自動補完を提供します。ブラウザーは入力内容の自動補完を行いません。
     - `on`: ブラウザーはユーザーが以前入力した値を元に、値の自動補完を行うことができます。
 
-     `autocomplete` 属性を `<textarea>` 要素に指定していない場合、ブラウザーは `<textarea>` 要素のフォームオーナーの `autocomplete` 属性の値を使用します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、textarea 要素の `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の {{htmlattrxref("autocomplete", "form")}} 属性をご覧ください。
+     `autocomplete` 属性を `<textarea>` 要素に指定していない場合、ブラウザーは `<textarea>` 要素のフォームオーナーの `autocomplete` 属性の値を使用します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、textarea 要素の `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
 
 - {{ htmlattrdef("autocorrect") }} {{non-standard_inline}}
 

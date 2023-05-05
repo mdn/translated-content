@@ -436,14 +436,14 @@ AddType video/webm .webm
       <td>
         <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >, 記述コンテンツ, 埋め込みコンテンツ。 {{htmlattrxref("controls", "video")}} 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
+        >, 記述コンテンツ, 埋め込みコンテンツ。 <a href="/ja/docs/Web/HTML/Element/video#controls"><code>controls</code></a> 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
         <p>
-           要素が {{htmlattrxref("src", "video")}} 属性を持つ場合: 0 個以上の {{HTMLElement("track")}} 要素とそれに続く、メディア要素を含まない透過的コンテンツ。すなわち {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}} 要素を子要素として配置してはなりません。
+           要素が <a href="/ja/docs/Web/HTML/Element/video#src"><code>src</code></a> 属性を持つ場合: 0 個以上の {{HTMLElement("track")}} 要素とそれに続く、メディア要素を含まない透過的コンテンツ。すなわち {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}} 要素を子要素として配置してはなりません。
         </p>
         <p>
           その他の場合: 0 個以上の {{HTMLElement("source")}} 要素、0 個以上の {{HTMLElement("track")}} 要素、メディア要素を含まない透過的コンテンツ。すなわち {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}} 要素を子要素として配置してはなりません。

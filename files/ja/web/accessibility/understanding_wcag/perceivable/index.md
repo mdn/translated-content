@@ -34,7 +34,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
     <tr>
       <td>
         複雑な画像や図表には、同じページ上またはリンク先のいずれかにアクセス可能な代替手段を用意するべきです。
-        {{htmlattrxref("longdesc","img")}}
+        <a href="/ja/docs/Web/HTML/Element/img#longdesc"><code>longdesc</code></a>
         属性ではなく通常のリンクを使用してください。
       </td>
       <td>
@@ -157,7 +157,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
           <li>
             画像の代替テキスト —
             コンテンツ画像には、その画像の内容を明確に説明するテキストが含まれているべきです。
-            これは、プログラム的に関連付けることができます（例えば、{{htmlattrxref("alt","img")}}
+            これは、プログラム的に関連付けることができます（例えば、<a href="/ja/docs/Web/HTML/Element/img#alt"><code>alt</code></a>
             テキスト）。
             そうでない場合は、関連付けるのは簡単です（例えば、それを説明し、そのすぐ隣に置きます）。
             これは、たとえあなたが画像を見ることができなくても、完全な意味がまだ推測できることを意味するはずです。

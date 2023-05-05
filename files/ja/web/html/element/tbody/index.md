@@ -76,7 +76,7 @@ slug: Web/HTML/Element/tbody
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
     - `justify`: 中身がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は {{htmlattrxref("char", "tbody")}} 属性および {{htmlattrxref("charoff", "tbody")}} 属性で定義します。
+    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/tbody#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/tbody#charoff) 属性で定義します。
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
@@ -91,7 +91,7 @@ slug: Web/HTML/Element/tbody
     この属性は非推奨であり、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
 - {{ htmlattrdef("char") }} {{deprecated_inline}}
-  - : この属性は、列内のセルで揃える文字を設定します。よくある値としては、数値や金額を揃えようとするときのピリオド (.) があります。{{htmlattrxref("align", "tbody")}} 属性を `char` に設定していない場合は、この属性は無視されます。
+  - : この属性は、列内のセルで揃える文字を設定します。よくある値としては、数値や金額を揃えようとするときのピリオド (.) があります。[`align`](/ja/docs/Web/HTML/Element/tbody#align) 属性を `char` に設定していない場合は、この属性は無視されます。
 - {{ htmlattrdef("charoff") }} {{deprecated_inline}}
   - : この属性は、 `char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
 - {{ htmlattrdef("valign") }} {{deprecated_inline}}
@@ -260,7 +260,7 @@ thead > tr > th {
 </table>
 ```
 
-なお、各専攻は個別の `<tbody>` ブロックに配置され、最初の行に単一の {{HTMLElement("th")}} 要素に {{htmlattrxref("colspan", "th")}} 属性を付けて表の幅全体に広がるようにしています。このヘッダーが `<tbody>` 内の専攻の名前を示します。
+なお、各専攻は個別の `<tbody>` ブロックに配置され、最初の行に単一の {{HTMLElement("th")}} 要素に [`colspan`](/ja/docs/Web/HTML/Element/th#colspan) 属性を付けて表の幅全体に広がるようにしています。このヘッダーが `<tbody>` 内の専攻の名前を示します。
 
 そして、それぞれの専攻の `<tbody>` で残りの行は 2 つのセルから成り、最初の行は学生番号で、2 つ目の行は名前です。
 

@@ -64,14 +64,14 @@ slug: Web/HTML/Element/thead
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
     - `justify`: 中身がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は {{htmlattrxref("char", "thead")}} 属性および {{htmlattrxref("charoff", "thead")}} 属性で定義します。
+    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/thead#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/thead#charoff) 属性で定義します。
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
     > **警告:** この属性は最新の標準仕様で廃止された (対応していない) ため、使用しないでください。
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - CSS3 で `char` の値と同様の効果を得るには、 {{htmlattrxref("char", "thead")}} の値を {{cssxref("text-align")}} プロパティの値として使用することができます。
+    > - CSS3 で `char` の値と同様の効果を得るには、 [`char`](/ja/docs/Web/HTML/Element/thead#char) の値を {{cssxref("text-align")}} プロパティの値として使用することができます。
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -98,9 +98,9 @@ slug: Web/HTML/Element/thead
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 
-  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。{{htmlattrxref("align", "thead")}} 属性を `char` に設定していない場合は、この属性を無視します。
+  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。[`align`](/ja/docs/Web/HTML/Element/thead#align) 属性を `char` に設定していない場合は、この属性を無視します。
 
-    > **メモ:** この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。CSS3 で {{htmlattrxref("char", "thead")}} と同じ効果を得るには、 {{htmlattrxref("char", "thead")}} 属性で使用する文字のセットを {{cssxref("text-align")}} プロパティの値として使用することができます。
+    > **メモ:** この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。CSS3 で [`char`](/ja/docs/Web/HTML/Element/thead#char) と同じ効果を得るには、 [`char`](/ja/docs/Web/HTML/Element/thead#char) 属性で使用する文字のセットを {{cssxref("text-align")}} プロパティの値として使用することができます。
 
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
 

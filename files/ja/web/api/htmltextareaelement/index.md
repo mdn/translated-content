@@ -16,7 +16,7 @@ slug: Web/API/HTMLTextAreaElement
     <tr>
       <td><code>accessKey</code></td>
       <td>
-        <code><em>文字列</em>:</code> この要素の {{htmlattrxref("accesskey", "textarea")}} 属性を取得／設定します。
+        <code><em>文字列</em>:</code> この要素の [`accesskey`](/ja/docs/Web/HTML/Element/textarea#accesskey) 属性を取得／設定します。
       </td>
     </tr>
     <tr>
@@ -32,13 +32,13 @@ slug: Web/API/HTMLTextAreaElement
     <tr>
       <td><code>autofocus</code></td>
       <td>
-        <code><em>論理値</em>:</code> この要素の {{htmlattrxref("autofocus", "textarea")}} 属性を取得／設定します。これはページ読み込み時にこのコントロールにフォーカスを当てるか否かを示します。
+        <code><em>論理値</em>:</code> この要素の [`autofocus`](/ja/docs/Web/HTML/Element/textarea#autofocus) 属性を取得／設定します。これはページ読み込み時にこのコントロールにフォーカスを当てるか否かを示します。
       </td>
     </tr>
     <tr>
       <td><code>cols</code></td>
       <td>
-        <code><em>unsigned long</em>:</code> この要素の {{htmlattrxref("cols", "textarea")}} 属性を取得／設定します。このテキストエリアの表示上の幅を示します。
+        <code><em>unsigned long</em>:</code> この要素の [`cols`](/ja/docs/Web/HTML/Element/textarea#cols) 属性を取得／設定します。このテキストエリアの表示上の幅を示します。
       </td>
     </tr>
     <tr>
@@ -50,13 +50,13 @@ slug: Web/API/HTMLTextAreaElement
     <tr>
       <td><code>disabled</code></td>
       <td>
-        <code><em>論理値</em>:</code> この要素の {{htmlattrxref("disabled", "textarea")}} 属性を取得／設定します。このコントロールを操作不可にするかどうかを示します。
+        <code><em>論理値</em>:</code> この要素の [`disabled`](/ja/docs/Web/HTML/Element/textarea#disabled) 属性を取得／設定します。このコントロールを操作不可にするかどうかを示します。
       </td>
     </tr>
     <tr>
       <td><code>form</code> {{readonlyInline}}</td>
       <td>
-        <code><em>オブジェクト</em>:</code> 親フォーム要素への参照を返します。この要素がフォーム要素配下にない場合、任意の {{HTMLElement("form")}} 要素の {{htmlattrxref("id", "form")}} 属性もしくは <code>null</code> 値になります。
+        <code><em>オブジェクト</em>:</code> 親フォーム要素への参照を返します。この要素がフォーム要素配下にない場合、任意の {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Element/form#id) 属性もしくは <code>null</code> 値になります。
       </td>
     </tr>
     <tr>
@@ -66,44 +66,44 @@ slug: Web/API/HTMLTextAreaElement
     <tr>
       <td><code>maxLength</code></td>
       <td>
-        <code><em>long</em>:</code> この要素の {{htmlattrxref("maxlength", "textarea")}} 属性を取得／設定します。これはユーザーが入力できる最大文字数を示します。この制約は値が変更されたときのみ評価されます。
+        <code><em>long</em>:</code> この要素の [`maxlength`](/ja/docs/Web/HTML/Element/textarea#maxlength) 属性を取得／設定します。これはユーザーが入力できる最大文字数を示します。この制約は値が変更されたときのみ評価されます。
       </td>
     </tr>
     <tr>
       <td><code>minLength</code></td>
       <td>
-        <code><em>long</em>:</code> この要素の {{htmlattrxref("minlength", "textarea")}} 属性を取得／設定します。これはユーザーが入力できる最小文字数を表示します。この制約は値が変更されたときのみ評価されます。
+        <code><em>long</em>:</code> この要素の [`minlength`](/ja/docs/Web/HTML/Element/textarea#minlength) 属性を取得／設定します。これはユーザーが入力できる最小文字数を表示します。この制約は値が変更されたときのみ評価されます。
       </td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>
         <code><em>文字列</em>:</code> この要素の
-        {{htmlattrxref("name", "textarea")}} 属性を取得／設定します。このコントロールの名前が入ります。
+        [`name`](/ja/docs/Web/HTML/Element/textarea#name) 属性を取得／設定します。このコントロールの名前が入ります。
       </td>
     </tr>
     <tr>
       <td><code>placeholder</code></td>
       <td>
-        <code><em>文字列</em>:</code> この要素の {{htmlattrxref("placeholder", "textarea")}} 属性を取得／設定します。これは利用者がこのコントロールに入力するに当たっての助言が入ります。
+        <code><em>文字列</em>:</code> この要素の [`placeholder`](/ja/docs/Web/HTML/Element/textarea#placeholder) 属性を取得／設定します。これは利用者がこのコントロールに入力するに当たっての助言が入ります。
       </td>
     </tr>
     <tr>
       <td><code>readOnly</code></td>
       <td>
-        <code><em>論理値</em>:</code> この要素の {{htmlattrxref("readonly", "textarea")}} 属性を取得／設定します。ユーザーがこのコントロールの値を変更できないことを示します。
+        <code><em>論理値</em>:</code> この要素の [`readonly`](/ja/docs/Web/HTML/Element/textarea#readonly) 属性を取得／設定します。ユーザーがこのコントロールの値を変更できないことを示します。
       </td>
     </tr>
     <tr>
       <td><code>required</code></td>
       <td>
-        <code><em>論理値</em>:</code> この要素の {{htmlattrxref("required", "textarea")}} 属性を取得／設定します。これはユーザーがフォームを送信する前に値を指定しなければならないことを示します。
+        <code><em>論理値</em>:</code> この要素の [`required`](/ja/docs/Web/HTML/Element/textarea#required) 属性を取得／設定します。これはユーザーがフォームを送信する前に値を指定しなければならないことを示します。
       </td>
     </tr>
     <tr>
       <td><code>rows</code></td>
       <td>
-        <code><em>unsigned long</em>:</code> この要素の {{htmlattrxref("rows", "textarea")}} 属性を取得／設定します。このコントロールに表示できるテキストの行数を示します。
+        <code><em>unsigned long</em>:</code> この要素の [`rows`](/ja/docs/Web/HTML/Element/textarea#rows) 属性を取得／設定します。このコントロールに表示できるテキストの行数を示します。
       </td>
     </tr>
     <tr>
@@ -171,7 +171,7 @@ slug: Web/API/HTMLTextAreaElement
     <tr>
       <td><code>wrap</code></td>
       <td>
-        <code><em>文字列</em>:</code> HTML の {{htmlattrxref("wrap", "textarea")}} 属性を取得／設定します。このコントロールでのテキストの折り返し方法を示します。
+        <code><em>文字列</em>:</code> HTML の [`wrap`](/ja/docs/Web/HTML/Element/textarea#wrap) 属性を取得／設定します。このコントロールでのテキストの折り返し方法を示します。
       </td>
     </tr>
     <tr>

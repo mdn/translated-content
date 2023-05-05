@@ -16,7 +16,7 @@ slug: Web/HTML/Element/object
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>、知覚可能コンテンツ、要素が {{htmlattrxref("usemap","object")}} 属性を持つ場合は <a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#リスト化">リスト化</a>/<a href="/ja/docs/Web/Guide/HTML/Content_categories#送信可能">送信可能</a> な <a href="/ja/docs/Web/Guide/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>、知覚可能コンテンツ、要素が <a href="/ja/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> 属性を持つ場合は <a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#リスト化">リスト化</a>/<a href="/ja/docs/Web/Guide/HTML/Content_categories#送信可能">送信可能</a> な <a href="/ja/docs/Web/Guide/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>
       </td>
     </tr>
     <tr>
@@ -79,9 +79,9 @@ slug: Web/HTML/Element/object
   - : オブジェクトの実装とデータの読み込み中にブラウザーに表示することができるメッセージ。
 - {{HTMLAttrDef("type")}}
   - : **data** 属性によって指定されたリソースの [content type](/ja/docs/Glossary/MIME_type)。**data** 属性と **type** 属性のうち、少なくとも 1 つは定義しておく必要があります。
-- {{HTMLAttrDef("usemap")}}
-  - : {{HTMLElement("map")}} 要素を参照するハッシュ名。 '#' の後に map 要素の {{htmlattrxref("name", "map")}} 属性を繋げた文字列を属性値として記述します。
-- {{HTMLAttrDef("width")}}
+- `usemap`
+  - : {{HTMLElement("map")}} 要素を参照するハッシュ名。 '#' の後に map 要素の [`name`](/ja/docs/Web/HTML/Element/map#name) 属性を繋げた文字列を属性値として記述します。
+- `width`
   - : 表示されるリソースの幅を [CSS ピクセル数](https://drafts.csswg.org/css-values/#px) で指定。(絶対値に限ります。[パーセンテージは不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## 例

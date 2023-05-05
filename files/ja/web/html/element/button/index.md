@@ -101,7 +101,7 @@ slug: Web/HTML/Element/button
 
   - : 論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
 
-    Firefox の動作は他のブラウザーと異なり、ページを再読み込みしても {{HTMLElement("button")}} を[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は {{htmlattrxref("autocomplete","button")}} 属性で制御できます。
+    Firefox の動作は他のブラウザーと異なり、ページを再読み込みしても {{HTMLElement("button")}} を[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](/ja/docs/Web/HTML/Element/button#autocomplete) 属性で制御できます。
 
 - {{htmlattrdef("form")}}
 
@@ -109,17 +109,17 @@ slug: Web/HTML/Element/button
 
     この属性によって `<button>` 要素が `<form>` の中になくても、同一文書内にある任意の `<form>` 要素に関連付けることが可能になりました。また、祖先の `<form>` 要素を上書きすることができます。
 
-- {{htmlattrdef("formaction")}}
-  - : このボタンによって送信された情報を処理する URL です。このボタンのフォームオーナーの {{htmlattrxref("action","form")}} 属性よりも優先されます。フォームオーナーがない場合は何もしません。
-- {{htmlattrdef("formenctype")}}
+- `formaction`
+  - : このボタンによって送信された情報を処理する URL です。このボタンのフォームオーナーの [`action`](/ja/docs/Web/HTML/Element/form#action) 属性よりも優先されます。フォームオーナーがない場合は何もしません。
+- `formenctype`
 
   - : このボタンが送信ボタンである場合 (`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合)、送信されるフォームデータのエンコード方法を指定します。指定可能な値は以下の通りです。
 
     - `application/x-www-form-urlencoded`: この属性が使用されなかった場合の既定値。
-    - `multipart/form-data`: {{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性に `file` を指定して使用する場合に使用します。
+    - `multipart/form-data`: {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に `file` を指定して使用する場合に使用します。
     - `text/plain`: デバッグ目的で指定されるものです。実際のフォーム送信で使用するべきではありません。
 
-    この属性が指定された場合、そのボタンのフォームオーナーの {{htmlattrxref("enctype","form")}} 属性より優先されます。
+    この属性が指定された場合、そのボタンのフォームオーナーの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性より優先されます。
 
 - {{htmlattrdef("formmethod")}}
 
@@ -128,17 +128,17 @@ slug: Web/HTML/Element/button
     - `post`: フォームのデータは、サーバーへ送信する際に HTTP リクエストの本文に含められます。フォームにパスワードなどの公開するべきではない情報が含まれている場合は、このメソッドを使用してください。
     - `get`: フォームのデータは、フォームの `action` の URL に、セパレーターとして '?' を使用して追加され、その結果となる URL をサーバーへ送信します。検索フォームのように、まったく[副作用がない](/ja/docs/Glossary/Idempotent)場合にのみ、このメソッドを使用してください。
 
-    指定された場合、この属性はボタンのフォームオーナーの {{htmlattrxref("method","form")}} 属性より優先して使用されます。
+    指定された場合、この属性はボタンのフォームオーナーの [`method`](/ja/docs/Web/HTML/Element/form#method) 属性より優先して使用されます。
 
 - {{htmlattrdef("formnovalidate")}}
 
-  - : 論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を[検証](/ja/docs/Learn/Forms/Form_validation)しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの {{htmlattrxref("novalidate","form")}} 属性より優先して使用されます。
+  - : 論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を[検証](/ja/docs/Learn/Forms/Form_validation)しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性より優先して使用されます。
 
     この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) 要素でも使用できます。
 
 - {{htmlattrdef("formtarget")}}
 
-  - : ボタンが送信ボタンである場合、フォームの送信後に受信するレスポンスを表示する場所を示すユーザー定義の名前、もしくはアンダースコアから始まる標準化されたキーワードです。これは、_閲覧コンテキスト_ (タブ、ウィンドウ、{{HTMLElement("iframe")}}) の `name` またはそれを表すキーワードです。この属性が指定された場合、ボタンのフォームオーナーの {{htmlattrxref("target", "form")}} 属性より優先されます。以下のキーワードは特別な意味を持ちます。
+  - : ボタンが送信ボタンである場合、フォームの送信後に受信するレスポンスを表示する場所を示すユーザー定義の名前、もしくはアンダースコアから始まる標準化されたキーワードです。これは、_閲覧コンテキスト_ (タブ、ウィンドウ、{{HTMLElement("iframe")}}) の `name` またはそれを表すキーワードです。この属性が指定された場合、ボタンのフォームオーナーの [`target`](/ja/docs/Web/HTML/Element/form#target) 属性より優先されます。以下のキーワードは特別な意味を持ちます。
 
     - `_self`: レスポンスを同じ閲覧コンテキストに読み込みます。これは、属性が指定されていない場合の既定値です。
     - `_blank`: レスポンスを新しい無名の閲覧コンテキスト — 普通は、ブラウザーの設定に従い、新しいタブまたはウィンドウ — に読み込みます。

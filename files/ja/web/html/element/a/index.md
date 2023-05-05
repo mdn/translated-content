@@ -92,7 +92,7 @@ slug: Web/HTML/Element/a
 
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
-    > **メモ:** 代わりにグローバル属性の {{HTMLAttrxRef("id")}} を使用してください。
+    > **メモ:** 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してください。
 
 - {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
@@ -380,7 +380,7 @@ document.querySelector('a').addEventListener('click', event =>
 </a>
 ```
 
-リンクの動作を示すためにアイコンを使用する場合は、 {{HTMLAttrxRef("alt", "img", "alt テキスト", "true") }}を確実に入れてください。
+リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Element/img#alt)を確実に入れてください。
 
 ```html
 <a  target="_blank" href="https://www.wikipedia.org">
