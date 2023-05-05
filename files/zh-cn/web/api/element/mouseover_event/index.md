@@ -5,7 +5,7 @@ slug: Web/API/Element/mouseover_event
 
 {{APIRef}}
 
-当一个定点设备（通常指鼠标）在该元素本身或者其子元素上移动时，**`mouseover`** 事件在该 {{domxref("Element")}} 中触发。
+当一个指针设备（通常指鼠标）在该元素本身或者其子元素上移动时，**`mouseover`** 事件在该 {{domxref("Element")}} 中触发。
 
 ## 语法
 
