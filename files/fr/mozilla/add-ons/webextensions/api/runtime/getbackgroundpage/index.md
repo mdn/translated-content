@@ -42,9 +42,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec l'objet [Window](/fr/docs/User%3Amaybe/webidl_mdn/Window) pour la page d'arrière plan, s'il y en a une. Si l'extension n'inclut pas de page d'arrière-plan, la promise est rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getBackgroundPage")}}
+{{Compat}}
 
 ## Exemples
 

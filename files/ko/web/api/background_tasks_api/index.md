@@ -469,11 +469,11 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 {{ EmbedLiveSample('Example', 600, 700) }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

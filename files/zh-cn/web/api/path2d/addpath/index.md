@@ -18,7 +18,7 @@ void path.addPath(path [, transform]);
 - `path`
   - : 需要添加的 {{domxref("Path2D")}} 路径。
 - `transform` {{optional_inline}}
-  - : {{domxref("SVGMatrix")}} 作为新增路径的变换矩阵。
+  - : {{domxref("DOMMatrix")}} 作为新增路径的变换矩阵。
 
 ## 示例
 

@@ -93,6 +93,6 @@ MDN Web 文档需要你的帮助！我们有大量需要完成的工作，比如
 
 > **备注：** 如果你在使用 MDN 时发现了一些错误，却不知道怎么改正，你可以[提交一个 issue](https://github.com/mdn/content/issues/new/choose)。记得写个合适的标题（使用“Dead link”而不说明这个链接在哪里是没有太大帮助的）。如果你发现的问题属于翻译上的错误，[向 translated-content 仓库提交一个 issue](https://github.com/mdn/translated-content/issues/new/choose) 会更加合适。
 
-## 其它有用的页面
+## 其他有用的页面
 
 {{LandingPageListSubPages()}}

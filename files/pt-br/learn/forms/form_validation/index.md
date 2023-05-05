@@ -77,7 +77,7 @@ Quando um elemento é inválido:
 
 ### Restrições de validação em elementos de entrada — começando simples
 
-Nesta seção, veremos alguns dos diferentes recursos HTML5 que podem ser usados ​​para validar elementos {{HTMLElement("input")}}.
+Nesta seção, veremos alguns dos diferentes recursos HTML5 que podem ser usados para validar elementos {{HTMLElement("input")}}.
 
 Vamos começar com um exemplo simples — uma entrada que permite que você escolha sua fruta favorita entre banana ou cereja. Isso envolve um texto simples {{HTMLElement("input")}} com um rótulo correspondente e um envio {{htmlelement("button")}}. Você pode encontrar o código-fonte no GitHub como [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html), e um exemplo ao vivo abaixo:
 
@@ -222,7 +222,7 @@ Aqui está o exemplo rodando ao vivo:
 
 {{EmbedLiveSample("Constraining_the_length_of_your_entries", "100%", 100)}}
 
-> **Nota:** `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo {{htmlattrxref("step", "input")}}, que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados ​​(como os botões numéricos para cima e para baixo).
+> **Nota:** `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo {{htmlattrxref("step", "input")}}, que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
 
 ### Exemplo completo
 
@@ -248,7 +248,7 @@ Aqui está um exemplo completo para mostrar o uso dos recursos de validação in
            pattern="\d+">
   </p>
   <p>
-    <label for="t1">Qual ​​é a sua fruta favorita?<abbr title="Este campo é obrigatório">*</abbr></label>
+    <label for="t1">Qual é a sua fruta favorita?<abbr title="Este campo é obrigatório">*</abbr></label>
     <input type="text" id="t1" name="fruit" list="l1" required
            pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
     <datalist id="l1">
@@ -261,7 +261,7 @@ Aqui está um exemplo completo para mostrar o uso dos recursos de validação in
     </datalist>
   </p>
   <p>
-    <label for="t2">Qual ​​é o seu e-mail?</label>
+    <label for="t2">Qual é o seu e-mail?</label>
     <input type="email" id="t2" name="email">
   </p>
   <p>
@@ -322,7 +322,7 @@ input:focus:invalid {
 
 {{EmbedLiveSample("Exemplo completo", "100%", 420)}}
 
-Consulte [Atributos relacionados à validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes) para obter uma lista completa de atributos que podem ser usados ​​para restringir valores de entrada e os tipos de entrada que suportam eles.
+Consulte [Atributos relacionados à validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes) para obter uma lista completa de atributos que podem ser usados para restringir valores de entrada e os tipos de entrada que suportam eles.
 
 ### Mensagens de erro personalizadas
 
@@ -395,7 +395,7 @@ Mais e mais navegadores agora suportam a API de validação de restrição, e el
 | Método | Descrição |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `checkValidade()` | Retorna `true` se o valor do elemento não tiver problemas de validade; `falso` caso contrário. Se o elemento for inválido, este método também causará um evento {{event("invalid")}} no elemento. |
-| {{domxref("HTMLFormElement.reportValidity()")}} | Retorna `true` se o elemento ou seus controles filho atendem às restrições de validação. Quando `false` é retornado, eventos canceláveis ​​{{event("invalid")}} são acionados para cada elemento inválido e problemas de validação são relatados ao usuário. |
+| {{domxref("HTMLFormElement.reportValidity()")}} | Retorna `true` se o elemento ou seus controles filho atendem às restrições de validação. Quando `false` é retornado, eventos canceláveis {{event("invalid")}} são acionados para cada elemento inválido e problemas de validação são relatados ao usuário. |
 | `setCustomValidity(mensagem)` | Adiciona uma mensagem de erro personalizada ao elemento; se você definir uma mensagem de erro personalizada, o elemento será considerado inválido e o erro especificado será exibido. Isso permite que você use o código JavaScript para estabelecer uma falha de validação diferente daquelas oferecidas pela API de validação de restrição padrão. A mensagem é mostrada ao usuário ao relatar o problema. Se o argumento for a string vazia, o erro personalizado será apagado. |
 
 Para navegadores legados, é possível usar um [polyfill como Hyperform](https://hyperform.js.org/) para compensar a falta de suporte para a API de validação de restrição. Como você já está usando JavaScript, usar um polyfill não é um fardo adicional para o design ou implementação de seu site ou aplicativo da Web.
@@ -655,7 +655,7 @@ function addEvent(element, event, callback) {
   element["on"+event] = function (e) {
     var output = callback(e);
 
-    // Um ​​retorno de chamada que retorna `false` interrompe a cadeia de retorno de chamada
+    // Um retorno de chamada que retorna `false` interrompe a cadeia de retorno de chamada
     // e interrompe a execução do callback do evento.
     if (output === false) return false;
 
@@ -740,17 +740,3 @@ A validação de formulário não requer JavaScript complexo, mas requer pensar 
 - Indique exatamente onde ocorre o erro (especialmente em formulários grandes).
 
 {{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
-
-## Neste módulo
-
-- [Seu primeiro formulário HTML](/pt-BR/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [Como estruturar um formulário HTML](/pt-BR/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [Os widgets de formulário nativos](/pt-BR/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Enviando dados do formulário](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Validação de dados do formulário](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
-- [Como criar widgets de formulário personalizados](/pt-BR/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Enviando formulários por JavaScript](/pt-BR/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [Formulários HTML em navegadores legados](/pt-BR/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Estilizando formulários HTML](/pt-BR/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Estilo avançado para formulários HTML](/pt-BR/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Tabela de compatibilidade de propriedades para widgets de formulário](/pt-BR/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

@@ -3,7 +3,7 @@ title: 计算值
 slug: Web/CSS/computed_value
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 一个 CSS 属性的计算值是指这个属性在由父类转向子类的继承中的值。它通过指定值计算出来：
 

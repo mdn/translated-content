@@ -37,9 +37,9 @@ var settingUrl = browser.runtime.setUninstallURL(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque l'URL a été définie ou rejetée avec un message d'erreur si l'opération a échoué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.setUninstallURL")}}
+{{Compat}}
 
 ## Exemples
 

@@ -35,9 +35,9 @@ console.log(canvas.width); // 300
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCanvasElement.width")}}
+{{Compat}}
 
 ## Ver también
 

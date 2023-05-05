@@ -76,4 +76,4 @@ Para más información (en inglés):
 
 ## Compatibilidad con navegadores
 
-{{Compat("svg.elements.animate")}}
+{{Compat}}

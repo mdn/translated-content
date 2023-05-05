@@ -83,7 +83,7 @@ svg|a:hover, svg|a:active {
 - {{htmlattrxref("type", "a")}}
   - : リンク先の URL の {{Glossary("MIME type", "MIME タイプ")}}です。
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : ハイパーリンクがさす先の URL または URL フラグメントです。古いブラウザー向けの後方互換性のために必要な場合があります。
     _値種別_: **[\<URL>](/ja/docs/Web/SVG/Content_type#URL)** ; _既定値_: _none_; _アニメーション_: **yes**
 

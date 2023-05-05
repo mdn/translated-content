@@ -304,15 +304,3 @@ Llegaste al final de este artículo, pero ¿puédes recordar la información má
 Esto es lo básico que debes saber sobre las cadenas o `string`s en JavaScript. En el siguiente artículo desarrollaremos más sobre esto, observando métodos de construcción de strings disponibles en JavaScript y cómo podemos usarlos para manipular nuestras cadenas de la forma que queremos.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## En este módulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Un primer acercamiento a JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Corrigiendo JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Guardando la información que necesitas— Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos útiles para el manejo de cadenas](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluaciones: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

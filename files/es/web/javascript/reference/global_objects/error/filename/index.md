@@ -26,9 +26,9 @@ throw e;
 
 No forma parte de ningún estándar.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.fileName")}}
+{{Compat}}
 
 ## Ve también
 

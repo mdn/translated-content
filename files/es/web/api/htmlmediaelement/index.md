@@ -169,9 +169,9 @@ These methods are obsolete and should not be used, even if a browser still suppo
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

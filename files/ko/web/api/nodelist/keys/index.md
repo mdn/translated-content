@@ -45,11 +45,11 @@ for(var key of list.keys()) {
 2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

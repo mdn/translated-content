@@ -48,6 +48,6 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
 - [自动化无障碍测试](http://www-archive.mozilla.org/quality/embed/plans/accessibility/nsIAccessibleTestPlan.html)
 - [尖牙屏幕阅读模拟器](http://www.standards-schmandards.com/index.php?show/fangs)
 
-## 其它有用的网站
+## 其他有用的网站
 
 - [屏幕阅读器列表](https://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we)

@@ -18,11 +18,11 @@ slug: Web/HTML/Element/canvas
 
 這個元素的屬性包含全域屬性
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 在 CSS 中以 pixels 表示 座標的空間**高度**（預設是 150）
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}}
+- `moz-opaque` {{non-standard_inline}}
   - : 讓 canvas 知道這個因素是否為半透明的。如果 canvas 知道不是半透明，則提高繪畫的效能
-- {{htmlattrdef("width")}}
+- `width`
   - : 在 CSS 中以 pixels 表示 座標的空間**寬度**（預設是 300）
 
 ## 描述

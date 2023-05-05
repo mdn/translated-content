@@ -70,7 +70,7 @@ La pseudoclase `:dir()` requiere un parámetro, que representa la direccionalida
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.dir")}}
+{{Compat}}
 
 ## Ver también
 

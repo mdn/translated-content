@@ -40,7 +40,7 @@ CSS выше и HTML ниже...
 
 Выведет это:
 
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:not') }}
+{{ EmbedLiveSample('Пример') }}
 
 ## Спецификации
 

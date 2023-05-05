@@ -161,9 +161,9 @@ th {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.writing-mode")}}
+{{Compat}}
 
 ## Véase también
 

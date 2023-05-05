@@ -22,4 +22,4 @@ slug: Web/HTML/Global_attributes/autocapitalize
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.autocapitalize")}}
+{{Compat}}

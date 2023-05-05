@@ -47,9 +47,9 @@ function populateStorage() {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Storage.setItem")}}
+{{Compat}}
 
 ## Vea también
 

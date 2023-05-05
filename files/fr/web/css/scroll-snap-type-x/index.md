@@ -52,4 +52,4 @@ Cette propriété ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-type-x")}}
+{{Compat}}

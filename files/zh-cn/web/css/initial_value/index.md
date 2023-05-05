@@ -3,7 +3,7 @@ title: 初始值
 slug: Web/CSS/initial_value
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS)属性的**初始值**是其默认值，如其定义表中所列。初始值的使用取决于属性是否被继承：
 

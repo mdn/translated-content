@@ -1,6 +1,6 @@
 ---
 title: Массив
-slug: Glossary/array
+slug: Glossary/Array
 tags:
   - JavaScript
   - Массив,
@@ -25,10 +25,6 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 ```
 
 ## Смотрите также
-
-### Основные знания
-
-- {{Interwiki("wikipedia", "Структура данных массива", "Массив")}} на Википедии
 
 ### Техническая справка
 

@@ -287,10 +287,3 @@ def junior(request):
 次のモジュールでは、最初のサイトに最適な Web フレームワークを選択する手助けをします。
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## このモジュールの記事一覧
-
-- [サーバサイドの概要](/ja/docs/Learn/Server-side/First_steps/Introduction)
-- [クライアント - サーバの概要](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [サーバーサイドウェブフレームワーク](/ja/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Web サイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)

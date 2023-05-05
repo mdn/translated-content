@@ -107,16 +107,3 @@ span {
 Maintenant que vous avez vu ce qu'est le cours normal de la mise en page et la façon dont le navigateur présente les choses par défaut, passons à la page suivante pour comprendre comment modifier cet affichage par défaut pour créer une mise en page conforme à votre design.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction to CSS layout](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal Flow](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column Layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Legacy Layout Methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -160,9 +160,9 @@ Esto logueará un mensaje que contiene 'hola mundo!'.
 
 {{Specifications}}
 
-## Compatiblidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.exec")}}
+{{Compat}}
 
 ## Ver también
 

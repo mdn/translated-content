@@ -121,7 +121,7 @@ p3.then(function(v) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Promise.resolve")}}
+{{Compat}}
 
 ## Véase también
 

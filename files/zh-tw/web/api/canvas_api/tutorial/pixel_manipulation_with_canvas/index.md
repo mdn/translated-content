@@ -72,7 +72,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 這個範例使用[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 方法去顯示在鼠標下的顏色。
 
-首先，需要一個正確的滑鼠點`layerX`*​​​​​​​*和 `layerY`。在從[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 提供 pixel 陣列中(array)該點的 pixel 數據(data) 。最後，使用陣列數據(array data)在`<div>`中設置背景色和文字去顯示該色。
+首先，需要一個正確的滑鼠點`layerX` 和 `layerY`。在從[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 提供 pixel 陣列中(array)該點的 pixel 數據(data) 。最後，使用陣列數據(array data)在`<div>`中設置背景色和文字去顯示該色。
 
 ```html hidden
 <canvas id="canvas" width="300" height="227" style="float:left"></canvas>
@@ -251,7 +251,7 @@ The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is u
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/zh-TW/docs/Web/HTML/Element/a#attr-download) to save it to disc, for example.
+Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/zh-TW/docs/Web/HTML/Element/a#download) to save it to disc, for example.
 
 You can also create a {{domxref("Blob")}} from the canvas.
 

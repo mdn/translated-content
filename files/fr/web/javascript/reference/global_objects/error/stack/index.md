@@ -1,6 +1,6 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 tags:
   - Error
   - JavaScript
@@ -117,7 +117,7 @@ Ne fait partie d'aucune spécification. Non-standard.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.stack")}}
+{{Compat}}
 
 ## Voir aussi
 

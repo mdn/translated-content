@@ -293,11 +293,11 @@ setCss();
 
 {{ EmbedLiveSample('Live_sample','100%', '440px')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

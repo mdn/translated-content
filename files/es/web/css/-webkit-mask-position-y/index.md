@@ -69,11 +69,11 @@ La propiedad CSS `-webkit-mask-position-y` fija la posición inicial vertical de
 
 ## Especificaciones
 
-Not part of any specification.
+No forma parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-mask-position-y")}}
+{{Compat}}
 
 ## Ver además
 

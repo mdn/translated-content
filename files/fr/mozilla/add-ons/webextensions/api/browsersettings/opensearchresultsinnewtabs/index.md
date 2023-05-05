@@ -21,9 +21,9 @@ Si la valeur est définie à `true`, lorsque l'utilisateur sélectionne un terme
 
 Notez que cela n'affecte pas le comportement lors de la sélection des éléments de omnibox/awesomebar, uniquement la zone de recherche dédiée..
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.openSearchResultsInNewTabs")}}
+{{Compat}}
 
 ## Exemples
 

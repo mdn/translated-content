@@ -23,7 +23,7 @@ Considere la sigiente imagen SVG (representando la bandera nacional de Italia):
 </svg>
 ```
 
-Esta puede ser incluida en un docuemnto HTML5 de la siguiente manera:
+Esta puede ser incluida en un documento HTML5 de la siguiente manera:
 
 ```html
 <!DOCTYPE html>
@@ -79,6 +79,6 @@ Este elemento implementa [`SVGSVGElement`](/es/docs/Web/API/SVGSVGElement) en la
 
 {{Specifications}}
 
-## Compatibilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.svg")}}
+{{Compat}}

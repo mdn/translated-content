@@ -27,7 +27,7 @@ Firefox에서 `sync.storage` 는 고유한 부가기능 ID에 의존성을 갖�
 
 ## Browser 호환성
 
-{{Compat("webextensions.api.storage.sync")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

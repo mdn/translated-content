@@ -46,9 +46,9 @@ Les événements ont trois fonctions :
     - `raison`
       - : Une valeur {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} — La raison pour laquelle l'événemtn est envoyé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onRestartRequired")}}
+{{Compat}}
 
 ## Exemples
 

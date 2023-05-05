@@ -687,18 +687,3 @@ aside {
 - [CSS 그리드 검사기: 그리드 레이아웃을 검사](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [그리드](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/%EC%9C%84%EC%B9%98%EC%9E%A1%EA%B8%B0)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/%EB%B0%98%EC%9D%91%ED%98%95_%EB%94%94%EC%9E%90%EC%9D%B8)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/%EB%AF%B8%EB%94%94%EC%96%B4_%EC%BF%BC%EB%A6%AC_%EC%B4%88%EB%B3%B4%EC%9E%90_%EC%95%88%EB%82%B4%EC%84%9C)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

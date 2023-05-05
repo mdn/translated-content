@@ -41,9 +41,9 @@ mySet.has("foo");    // Retorna false. El elemento "foo" ya no está presente.
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.delete")}}
+{{Compat}}
 
 ## Ver también
 

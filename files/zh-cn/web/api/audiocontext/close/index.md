@@ -9,7 +9,7 @@ slug: Web/API/AudioContext/close
 
 关闭的 context 不能用来创建新节点，但可以解码音频数据，创建 buffer 等等
 
-该函数不会自动释放所有用`AudioContext 创建的对象`，除非其他引用也都已经解除了。但是，它会强制释放所有可能阻止其它`AudioContexts 被创建或使用`的系统音频资源。挂起 audio context 中音频时间的进度，并停止对音频数据的处理。所有的 AudioContext 创建/阻塞资源都被释放后，返回的{{jsxref("Promise")}}才会被释放。如果在一个{{domxref("OfflineAudioContext")}}上调用该方法，则会抛出`INVALID_STATE_ERR` 异常。
+该函数不会自动释放所有用`AudioContext 创建的对象`，除非其他引用也都已经解除了。但是，它会强制释放所有可能阻止其他`AudioContexts 被创建或使用`的系统音频资源。挂起 audio context 中音频时间的进度，并停止对音频数据的处理。所有的 AudioContext 创建/阻塞资源都被释放后，返回的{{jsxref("Promise")}}才会被释放。如果在一个{{domxref("OfflineAudioContext")}}上调用该方法，则会抛出`INVALID_STATE_ERR` 异常。
 
 ## 语法
 

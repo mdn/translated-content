@@ -294,18 +294,3 @@ h1 {
 또한 이번 단원에서 배운 레이아웃 메서드의 도움으로 반응형 디자인을 달성하기가 훨씬 쉬워졌습니다. 여러분이 당대 웹 개발에 신출내기라면, 반응형 디자인 초창기보다 훨씬 많은 도구가 마련되어 있으니 맘껏 이용하십시요. 따라서 당신이 참조하고 있는 어떤 자료의 연혁을 확인할 가치가 있습니다. 역사적 기록 문서로서 여전히 유용하지만, 사이트 방문자가 이용하는 장치가 무엇이건 관계없이 우아하고 유용한 디자인을 훨씬 쉽게 생성하려면 CSS와 HTML의 현대적 용법이 정답입니다.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [격자](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

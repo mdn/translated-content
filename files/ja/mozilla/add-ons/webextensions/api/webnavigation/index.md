@@ -54,7 +54,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 - {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}
   - : ブラウザーがナビゲーションイベントを開始する直前に発火します。
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
-  - : ナビゲーションがコミットされたときに発火します。少なくともサーバーから新しい document がいくらか取得されてブラウザーが新 document に切り替えると決決めたとき。
+  - : ナビゲーションがコミットされたときに発火します。少なくともサーバーから新しい document がいくらか取得されてブラウザーが新 document に切り替えると決めたとき。
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
   - : ページ内で [DOMContentLoaded](/ja/docs/Web/Events/DOMContentLoaded) イベントが発火したときに発火します。
 - {{WebExtAPIRef("webNavigation.onCompleted")}}

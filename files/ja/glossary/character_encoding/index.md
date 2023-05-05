@@ -1,6 +1,6 @@
 ---
 title: Character encoding (文字エンコーディング)
-slug: Glossary/character_encoding
+slug: Glossary/Character_encoding
 l10n:
   sourceCommit: a0e987d407b31560bde1f982520ee10103db4ba0
 ---

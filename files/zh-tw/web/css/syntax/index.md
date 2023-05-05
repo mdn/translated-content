@@ -30,7 +30,7 @@ Such blocks are naturally called **declaration blocks** and declarations inside 
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **備註：** The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML {{htmlattrxref("style")}} attribute.
+> **備註：** The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/zh-TW/docs/Web/HTML/Global_attributes#style) attribute.
 
 ## CSS rulesets
 

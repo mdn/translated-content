@@ -32,9 +32,9 @@ None.
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.suspend", 10)}}
+{{Compat}}
 
 ## Exemples
 

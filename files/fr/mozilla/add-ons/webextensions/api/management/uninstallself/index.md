@@ -43,9 +43,9 @@ var uninstallingSelf = browser.management.uninstallSelf(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.uninstallSelf")}}
+{{Compat}}
 
 ## Exemples
 

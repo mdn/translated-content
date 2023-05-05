@@ -5,175 +5,239 @@ slug: Web/CSS/contain
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`contain`** 属性允许开发者声明当前元素和它的内容尽可能的*独立*于 DOM 树的其他部分。这使得浏览器在重新计算布局、样式、绘图、大小或这四项的组合时，只影响到有限的 DOM 区域，而不是整个页面，可以有效改善性能。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`contain`** 标示了元素及其内容尽可能独立于文档树的其余部分。局限使 DOM 的一部分得以被隔离，且通过将布局、样式、绘制、尺寸或其任意组合的计算限制于 DOM 子树而非整个页面使性能受益。局限也可用于限制 CSS 计数器和引号的作用域。
 
-这个属性在包含大量独立组件的页面非常实用，它可以防止某个小部件的 CSS 规则改变对页面上的其他东西造成影响。
+{{EmbedInteractiveExample("pages/css/contain.html")}}
 
-> **备注：** If applied (with value: `paint`, `strict` or `content`), this property creates:
+有四种类型的 CSS 局限——尺寸、布局、样式和绘制，且均设置在容器上。此属性为五个标准值的子集或两个简写值之一构成的以空格分隔的列表。在容器内对被局限属性的修改不会传播到被局限元素外的页面的其余部分。局限的主要益处在于浏览器无需经常重渲 DOM 或页面布局，由此在静态页面的渲染中带来小幅性能收益，在更动态的应用中带来更多的性能收益。
+
+在有独立元素组的页面上使用 `contain` 属性较为有用，此属性可以防止元素内部在其包围盒外产生副作用。
+
+> **备注：** 为此属性使用 `layout`、`paint`、`strict` 或 `content` 值将创建：
 >
-> 1. A new [containing block](/zh-CN/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
-> 2. A new [stacking context](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
-> 3. A new [block formatting context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context).
+> 1. 新的[包含区块](/zh-CN/docs/Web/CSS/Containing_block)（针对其 {{CSSXref("position")}} 属性为 `absolute` 或 `foxed` 的后代元素）。
+> 2. 新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。
+> 3. 新的[区块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
 
 ## 语法
 
 ```css
 /* 关键词值 */
 contain: none;
-
-/* 等价于 contain: layout paint size */
 contain: strict;
-
-/* 等价于 contain: layout paint W3C 链接：https://www.w3.org/TR/css-contain-2/#valdef-contain-content*/
 contain: content;
-
 contain: size;
+contain: inline-size;
 contain: layout;
 contain: style;
 contain: paint;
 
-/* 支持指定多个关键词 */
+/* 多个关键词 */
 contain: size paint;
 contain: size layout paint;
+contain: inline-size layout;
 
 /* 全局值 */
 contain: inherit;
 contain: initial;
+contain: revert;
+contain: revert-layer;
 contain: unset;
 ```
 
-The `contain` property is specified as either one of the following:
+### 取值
 
-- Using a single `none`, `strict`, or `content` keyword.
-- Using one or more of the `size`, `layout`, `style`, and `paint` keywords in any order.
+`contain` 属性可有下列取值中的任意一个：
 
-### 属性值
+- 关键词 `none`，**或**
+- 以任意顺序由空格分隔的关键词 `size`（或 `inline-size`）、`layout`、`style` 和 `paint` 中的至少一个，**或**
+- 简写值 `strict` 或 `content` 之一
+
+这些关键词有下列含义：
 
 - `none`
-  - : 表示元素将正常渲染，没有包含规则。
+  - : 元素照常渲染，不应用局限。
 - `strict`
-  - : 表示除了 `style` 外的所有的包含规则应用于这个元素。等价于 `contain: size layout paint`。
+  - : 将所有局限规则应用于元素。此值等价于 `contain: size layout paint style`。
 - `content`
-  - : 表示这个元素上有除了 `size` 和 `style` 外的所有包含规则。等价于 `contain: layout paint`。
+  - : 将除 `size` 外的所有局限规则应用于元素。此值等价于 `contain: layout paint style`。
 - `size`
-  - : 表示这个元素的尺寸计算不依赖于它的子孙元素的尺寸。
+  - : 在行向和块向上将尺寸局限应用于元素。元素尺寸可无视子元素单独计算。此值不可与 `inline-size` 结合使用。
+- `inline-size`
+  - : 将行向尺寸局限应用于元素。元素的行向尺寸可无视子元素单独计算。此值不可与 `size` 结合使用。
 - `layout`
-  - : 表示元素外部无法影响元素内部的布局，反之亦然。
+  - : 从页面的其余部分中隔离出元素的内部布局。此值意味着元素外的任意内容和元素内部布局互不影响。
 - `style`
-  - : 表示那些同时会影响这个元素和其子孙元素的属性，都在这个元素的包含范围内。
-    Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Note that this value is marked "at-risk" in the spec and may not be supported everywhere.
+  - : 对于可在元素及其后代外产生影响的属性，其影响将不会逃离包含元素。计数器和引号的作用域被限制为元素及其内容。
 - `paint`
-  - : 表示这个元素的子孙节点不会在它边缘外显示。如果一个元素在视窗外或因其他原因导致不可见，则同样保证它的子孙节点不会被显示。
-    Indicates that descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. And if a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
+  - : 元素后代不在元素边界外显示。若包含盒在屏外，则浏览器无需绘制其被局限的元素——这些元素因为完全局限于此盒故必定也在屏外。若后代元素溢出包含元素的边界，则此后代元素将被裁剪至包含元素的边框盒。
 
 ## 形式定义
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式语法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 示例
 
-### 简单布局
+### 绘制局限
 
-The markup below consists of a number of articles, each with content:
-
-```html
-<h1>My blog</h1>
-<article>
-  <h2>Heading of a nice article</h2>
-  <p>Content here.</p>
-</article>
-<article>
-  <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
-  <p>More content here.</p>
-</article>
-```
-
-Each `<article>` and `<img>` is given a border, and the images are floated:
+下列示例展示了如何使用 `contain: paint` 防止元素后代在元素边界外被绘制。
 
 ```css
-img {
-  float: left;
-  border: 3px solid black;
-}
-
-article {
-  border: 1px solid black;
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 10px;
+  font-size: 25px;
 }
 ```
 
-{{EmbedLiveSample('简单布局', '100%', '300')}}
+```html
+<div style="contain: paint">
+  <p>此文本将被裁剪至盒子边界。</p>
+</div>
+<div>
+  <p>此文本将不被裁剪至盒子边界。</p>
+</div>
+```
 
-### 浮动干涉
+{{EmbedLiveSample("绘制局限", "100%", 280)}}
 
-If we were to insert another image at the bottom of the first article, a large portion of the DOM tree may be re-laid out or repainted, and this would also interfere with the layout of the second article:
+### 布局局限
+
+考虑下列示例，此示例显示了元素在应用与不应用布局局限时如何表现：
 
 ```html
-<h1>My blog</h1>
-<article>
-  <h2>Heading of a nice article</h2>
-  <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
-</article>
-<article>
-  <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
-  <p>More content here.</p>
-</article>
+<div class="card" style="contain: layout;">
+  <h2>卡片 1</h2>
+  <div class="fixed"><p>固定盒 1</p></div>
+  <div class="float"><p>浮动盒 1</p></div>
+</div>
+<div class="card">
+  <h2>卡片 2</h2>
+  <div class="fixed"><p>固定盒 2</p></div>
+  <div class="float"><p>浮动盒 2</p></div>
+</div>
+<div class="card">
+  <h2>卡片 3</h2>
+  <!-- …… -->
+</div>
 ```
 
 ```css hidden
-img {
-  float: left;
-  border: 3px solid black;
+p {
+  margin: 4px;
+  padding: 4px;
 }
 
-article {
-  border: 1px solid black;
+h2 {
+  margin-bottom: 4px;
+  padding: 10px;
 }
-```
 
-As you can see, because of the way floats work, the first image ends up inside the area of the second article:
-
-{{EmbedLiveSample('浮动干涉', '100%', '300')}}
-
-### Fixing with contain
-
-If we give each `article` the `contain` property with a value of `content`, when new elements are inserted the browser understands it only needs to recalculate the containing element's subtree, and not anything outside it:
-
-```html hidden
-<h1>My blog</h1>
-<article>
-  <h2>Heading of a nice article</h2>
-  <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
-</article>
-<article>
-  <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
-  <p>More content here.</p>
-</article>
+div {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 gray;
+  padding: 6px;
+  margin: 6px;
+}
 ```
 
 ```css
-img {
-  float: left;
-  border: 3px solid black;
+.card {
+  width: 70%;
+  height: 90px;
 }
 
-article {
-  border: 1px solid black;
-  contain: content;
+.fixed {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  background: coral;
+}
+
+.float {
+  float: left;
+  margin: 10px;
+  background: aquamarine;
 }
 ```
 
-This also means that the first image no longer floats down to the second article, and instead stays inside it's containing element's bounds:
+第一张卡片应用了布局局限，其布局被从页面其余部分中隔离开来。我们可以在页面上的其他地方复用这张卡片，无需担心重新计算其他元素的布局。在浮动体与卡片边界重叠时，页面其余部分的元素不受影响。当浏览器重新计算包含元素的子树时，仅有此元素被重新计算。被局限元素之外的任意元素均无需重新计算。此外，固定盒将卡片用作布局容器为自身定位。
 
-{{EmbedLiveSample('Fixing_with_contain', '100%', '330')}}
+第二和第三张卡片无局限。第二张卡片中固定盒的布局上下文为根元素，因此固定盒置于页面右上角。与第二张卡片重叠的浮动体导致第三张卡片出现意外的布局漂移，由 `<h2>` 元素的定位可见此漂移。当出现重新计算时，计算不只限于容器。由此影响性能且干扰页面布局的其余部分。
+
+{{EmbedLiveSample("Layout_containment", "100%", 350)}}
+
+### 样式局限
+
+样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
+
+#### 局限与计数器
+
+下列示例考察了计数器在应用样式局限时如何工作：
+
+```html
+<ul>
+  <li>元素甲</li>
+  <li>元素乙</li>
+  <li class="container">元素丙</li>
+  <li>元素丁</li>
+  <li>元素戊</li>
+</ul>
+```
+
+```css
+body {
+  counter-reset: list-items;
+}
+
+li::before {
+  counter-increment: list-items;
+  content: counter(list-items) "：";
+}
+
+.container {
+  contain: style;
+}
+```
+
+若无局限，则计数器将在每个元素上从 1 增加到 5。样式局限导致 {{CSSXref("counter-increment")}} 属性的作用域被限制为元素子树，计数器从 1 重新开始：
+
+{{EmbedLiveSample("Containment_and_counters", "100%", 140)}}
+
+#### 局限与引号
+
+CSS 引号受类似影响，与引号相关的 {{CSSXref("content")}} 值的作用域被限制为此元素：
+
+```html
+<!-- 有样式局限 -->
+<span class="open-quote">外<span style="contain: style;"><span class="open-quote">内</span></span></span><span class="close-quote">闭</span>
+<br />
+<!-- 无局限 -->
+<span class="open-quote">外<span><span class="open-quote">内</span></span></span><span class="close-quote">闭</span>
+```
+
+```css
+body {
+  quotes: "【" "】" "〈" "〉";
+}
+.open-quote:before {
+  content: open-quote;
+}
+
+.close-quote:after {
+  content: close-quote;
+}
+```
+
+第一个闭引号因为局限而无视内侧的 `span` 并使用外侧 `span` 的闭引号：
+
+{{EmbedLiveSample("Containment_and_quotes", "100%", 40)}}
 
 ## 规范
 
@@ -185,5 +249,7 @@ This also means that the first image no longer floats down to the second article
 
 ## 参见
 
-- [CSS containment](/zh-CN/docs/Web/CSS/CSS_Containment)
-- CSS {{cssxref("position")}} 属性
+- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_Containment)
+- [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_Container_Queries)
+- CSS 属性 {{CSSXref("content-visibility")}}
+- CSS 属性 {{CSSXref("position")}}

@@ -74,4 +74,4 @@ h2 {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.column-span")}}
+{{Compat}}

@@ -59,9 +59,7 @@ Un [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webapp
 
 ## Spécifications
 
-| Spécification                                                             | Statut | Commentaire          |
-| ------------------------------------------------------------------------- | ------ | -------------------- |
-| [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) | Draft  | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

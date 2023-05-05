@@ -66,7 +66,7 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.CONNECT")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

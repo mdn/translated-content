@@ -78,7 +78,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 {{deprecated_header}}
 
-> **警告：** 这些常量将不再可用——它们在 Gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})
+> **警告：** 这些常量将不再可用——它们在 Gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ([Firefox bug 888598](https://bugzil.la/888598))
 
 Transactions 可使用以下三种模式中的一种：
 
@@ -86,7 +86,7 @@ Transactions 可使用以下三种模式中的一种：
 | -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `READ_ONLY`      | "readonly"(0 in Chrome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                                |
 | `READ_WRITE`     | "readwrite"(1 in Chrome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                              |
-| `VERSION_CHANGE` | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。此模式是用于开始使用[IDBDatabase](/zh-CN/docs/IndexedDB/IDBDatabase) 的 [`setVersion()`](/zh-CN/docs/IndexedDB/IDBDatabase#setVersion)方法更新版本号事务。这种模式的事务无法与其它事务并发运行。这种模式下的事务被称为“升级事务”。 |
+| `VERSION_CHANGE` | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。此模式是用于开始使用[IDBDatabase](/zh-CN/docs/IndexedDB/IDBDatabase) 的 [`setVersion()`](/zh-CN/docs/IndexedDB/IDBDatabase#setVersion)方法更新版本号事务。这种模式的事务无法与其他事务并发运行。这种模式下的事务被称为“升级事务”。 |
 
 即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome [the change was made in version 21](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/))。你应当防止出现对象不存在的情况：
 

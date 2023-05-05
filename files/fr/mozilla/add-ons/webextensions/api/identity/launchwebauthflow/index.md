@@ -71,9 +71,9 @@ var authorizing = browser.identity.launchWebAuthFlow(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity.launchWebAuthFlow")}}
+{{Compat}}
 
 ## Exemples
 

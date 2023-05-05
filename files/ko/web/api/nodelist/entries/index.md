@@ -44,11 +44,11 @@ Array [ 1, #text "hey" ]
 Array [ 2, <span> ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

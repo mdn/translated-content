@@ -63,7 +63,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-> **Note:** **Nota:** o atributo global {{htmlattrxref("name", "meta")}} tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo {{htmlattrxref("itemprop", "meta")}} não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.
+> **Nota:** o atributo global {{htmlattrxref("name", "meta")}} tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo {{htmlattrxref("itemprop", "meta")}} não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.
 
 - {{htmlattrdef("charset")}}
 
@@ -88,7 +88,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando {{htmlattrxref("content", "meta")}} e pode ser um dos seguintes:
 
-    - `"content-language"` {{obsolete_inline}}
+    - `"content-language"`
 
       - : este pragma define a linguagem default da página
 
@@ -96,7 +96,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     - `"Content-Security-Policy"`
       - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
-    - `"content-type"` {{obsolete_inline}}
+    - `"content-type"`
 
       - : Esse atributo define o [MIME type](/pt-BR/docs/MIME) e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP `content-type` entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '`text/html`' eventualmente seguido por estes caracteres com a seguinte sintaxe: '`; charset=`_`IANAcharset`_' onde `IANAcharset` é o _MIME preferido nome para um conjunto de caracteres como_ [definido pela IANA.](https://www.iana.org/assignments/character-sets)
 
@@ -114,11 +114,11 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
         - o numero de segundos até a página ser recarregada, se o atributo {{htmlattrxref("content", "meta")}} contém apenas um número inteiro não negativo;
         - o número de segundos até a página ser redirecionada para outro lugar, se o atributo {{htmlattrxref("content", "meta")}} contém um inteiro não negativo seguido de uma string '`;url=`' e uma URL válida.
 
-    - `"set-cookie"` {{obsolete_inline}}
+    - `"set-cookie"`
 
       - : este pragma define um [cookie](/pt-BR/docs/cookie) para a página. este conteúdo deve seguir a sintaxe definida em [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
 
-        > **Note:** **Nota:** não use este pragma está obsoleto. Use HTTP header set-cookie instead.
+        > **Nota:** não use este pragma está obsoleto. Use HTTP header set-cookie instead.
 
 - {{htmlattrdef("name")}}
 
@@ -127,7 +127,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     - `application-name`, define o nome da aplicação que esta rodando na página;
 
-      > **Note:** **Nota:**- Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
+      > **Nota:**- Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
       >
       > - Webpages simples não deveriam definir application-name meta.
 
@@ -144,11 +144,11 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `origin-when-crossorigin`    | Envia uma URL completa (sem parâmetros) ao executar uma solicitação de mesma origem, mas envie apenas a origem do documento para outros casos.                                                            |
       | `unsafe-URL`                 | Envia um URL completo (sem parâmetros) ao executar uma solicitação de mesma origem ou origem cruzada.                                                                                                     |
 
-      > **Note:** **Nota:** alguns browsers suportam keywords `always`, `default`, e `never` para referenciar. estes valores estão descontinuados.
+      > **Nota:** alguns browsers suportam keywords `always`, `default`, e `never` para referenciar. estes valores estão descontinuados.
 
-      > **Note:** **Nota:** dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
+      > **Nota:** dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
 
-    o atributo também pode ter um valor retirado de uma extensa lista definida em [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions). Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados ​​estão entre as propostas:
+    o atributo também pode ter um valor retirado de uma extensa lista definida em [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions). Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados estão entre as propostas:
 
     - `creator`, definindo, em um formato livre, o nome do criador do documento. Note que também pode ser o nome de uma instituição. se há mais de uma, vários elementos {{HTMLElement("meta")}} podem ser usados;
     - `googlebot`, é um sinônimo de `robots`, mas só é seguido por Googlebot, o indexador crawler do Google;
@@ -204,7 +204,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       >
       > - Para aprender sobre esse pragma no Firefox para celular, veja [este artigo](/pt-BR/docs/Mobile/Viewport_meta_tag).
 
-- {{htmlattrdef("scheme")}} {{obsolete_inline}}
+- {{htmlattrdef("scheme")}}
 
   - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos {{htmlattrxref("content", "meta")}} valores, como um formato.
 

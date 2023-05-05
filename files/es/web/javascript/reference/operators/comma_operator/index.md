@@ -1,6 +1,6 @@
 ---
 title: Operador Coma
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 original_slug: Web/JavaScript/Referencia/Operadores/operador_coma
 ---
 
@@ -46,11 +46,11 @@ function myFunc () {
 
 ## Especificaciones
 
-{{Specificaciones}}
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.comma")}}
+{{Compat}}
 
 ## Ver también
 

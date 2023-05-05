@@ -90,6 +90,5 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 - Blog post: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
 - Blog post: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP Article: [HTTP Strict Transport Security](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.md)
-- Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
 - Browser test site: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
 - [Features restricted to secure contexts](/ru/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)

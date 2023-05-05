@@ -33,22 +33,14 @@ try {
 - `try_statements`
   - : Инструкции для выполнения.
 
-<!---->
-
 - `catch_statements_1`, `catch_statements_2`
   - : Инструкции, которые будут выполнены, если произойдёт ошибка в блоке `try`.
-
-<!---->
 
 - `exception_var_1`, `exception_var_2`
   - : Идентификатор для хранения объекта ошибки, который впоследствии используется в блоке `catch`
 
-<!---->
-
 - `condition_1`
   - : Условное выражение.
-
-<!---->
 
 - `finally_statements`
   - : Инструкции, которые выполняются после завершения блока `try`. Выполнение происходит в независимости от того, произошла ошибка или нет.
@@ -295,25 +287,24 @@ catch (e) {
 Если блок `finally` возвращает какое-либо значение, оно становится значением, которое возвращает вся конструкция `try...catch...finally`, вне зависимости от любых инструкций `return` в блоках `try` и `catch`. Также игнорируются исключения, выброшенные блоком `catch`.
 
 ```js
-try {
+(() => {
   try {
-    throw new Error('упс');
+    try {
+      throw new Error("oops");
+    } catch (ex) {
+      console.error("inner", ex.message);
+      throw ex;
+    } finally {
+      console.log("finally");
+      return;
+    }
+  } catch (ex) {
+    console.error("outer", ex.message);
   }
-  catch (e) {
-    console.error('внутренний блок catch', e.message);
-    throw e;
-  }
-  finally {
-    console.log('finally');
-    return;
-  }
-}
-catch (e) {
-  console.error('внешний блок catch', e.message);
-}
+})();
 
-// Output:
-// "внутренний блок catch" "упс"
+// Logs:
+// "inner" "oops"
 // "finally"
 ```
 

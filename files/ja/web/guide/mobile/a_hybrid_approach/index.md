@@ -55,7 +55,7 @@ l10n:
 
 モバイルプラットフォーム向けに開発するための背景やその他のアプローチについては、以下の記事を参照してください。
 
-- [モバイルの親しみやすさとは？](/ja/docs/Web/Guide/Mobile/Mobile-friendliness)
+- [モバイルフレンドリーとは](/ja/docs/Web/Guide/Mobile/Mobile-friendliness)
 - [レスポンシブデザイン](/ja/docs/Web/Progressive_web_apps)
 
 ### 原典情報

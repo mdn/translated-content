@@ -65,7 +65,7 @@ column-count: unset;
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.column-count")}}
+{{Compat}}
 
 ## Ver también
 

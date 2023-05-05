@@ -21,13 +21,13 @@ slug: Web/HTML/Element/option
 
 此元素包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 如果设置了这个布尔属性，则该选项不可选。浏览器通常会将这种控件显示为灰色，并且不再接受任何浏览器事件，例如鼠标点击或者焦点相关的事件。如果这个属性没有设置，而这个元素的其中一个父元素是被禁用的 {{HTMLElement("optgroup")}} 元素，则这个元素仍然是禁用的。
-- {{htmlattrdef("label")}}
+- `label`
   - : 这个属性是用于表示选项含义的文本。如果 **`label`** 属性没有定义，它的值就是元素文本内容。
-- {{htmlattrdef("selected")}}
-  - : 这个布尔属性存在时表明这个选项是否一开始就被选中。如果 `<option>` 元素是 {{HTMLElement("select")}} 元素的子元素，并且 {{HTMLElement("select")}} 元素的 {{htmlattrxref("multiple", "select")}} 属性没有设置，则 {{HTMLElement("select")}} 元素中只有一个 `<option>` 元素可以拥有 `selected` 属性。
-- {{htmlattrdef("value")}}
+- `selected`
+  - : 这个布尔属性存在时表明这个选项是否一开始就被选中。如果 `<option>` 元素是 {{HTMLElement("select")}} 元素的子元素，并且 {{HTMLElement("select")}} 元素的 [`multiple`](/zh-CN/docs/Web/HTML/Element/select#multiple) 属性没有设置，则 {{HTMLElement("select")}} 元素中只有一个 `<option>` 元素可以拥有 `selected` 属性。
+- `value`
   - : 这个属性的值表示该选项被选中时提交给表单的值。如果省略了这个属性，值就从选项元素的文本内容中获取。
 
 ## 示例
@@ -44,4 +44,4 @@ slug: Web/HTML/Element/option
 
 ## 另见
 
-- 其它表单相关的元素： {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- 其他表单相关的元素： {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。

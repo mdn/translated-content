@@ -23,7 +23,7 @@ var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
-[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其它资源。
+[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其他资源。
 
 ## 常量表
 

@@ -303,10 +303,3 @@ Neste ponto, você deve ter uma boa visão geral das operações que o código d
 Em um módulo a seguir, vamos ajudá-lo a escolher o melhor Web Framework para seu primeiro site.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## Neste módulo
-
-- [Introduction to the server side](/pt-BR/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/pt-BR/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)

@@ -43,7 +43,6 @@ function enterPictureInPicture() {
 ## 参见
 
 - {{HTMLElement("video")}} 元素
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

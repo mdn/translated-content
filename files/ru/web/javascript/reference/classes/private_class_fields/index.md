@@ -162,7 +162,7 @@ class ClassWithPrivateMethod {
 
 const instance = new ClassWithPrivateMethod()
 console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Приватные методы экземпляров могут быть генератором, async, или функциями async генератора. Приватные геттеры и сеттеры также возможны:
@@ -185,7 +185,7 @@ class ClassWithPrivateAccessor {
 }
 
 new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
+// expected output: "✨hello world✨"
 ```
 
 ## Спецификации

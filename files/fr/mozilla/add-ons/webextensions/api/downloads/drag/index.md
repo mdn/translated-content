@@ -33,9 +33,9 @@ Cette API est également disponible en tant que `browser.downloads.drag()`.
 - `downloadId`
   - : Un `integer` représentant l'`id` du {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} ein question.
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.drag")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

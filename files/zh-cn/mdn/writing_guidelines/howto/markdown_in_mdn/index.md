@@ -16,7 +16,7 @@ MDN Markdown 的基础是 Github 风格的 Markdown（GFM）：<https://github.g
 GFM 规范定义了两种基础的链接类型：
 
 - [内联链接](https://github.github.com/gfm/#inline-link)：在链接显示的文字后面紧跟链接的地址。
-- [引用链接](https://github.github.com/gfm/#reference-link)：链接的目标在当前文档的其它地方定义。
+- [引用链接](https://github.github.com/gfm/#reference-link)：链接的目标在当前文档的其他地方定义。
 
 在 MDN 上，我们仅允许使用内联链接。
 
@@ -62,7 +62,7 @@ GFM 规范定义了两种基础的链接类型：
     - `cs`——C#
     - `java`——Java
     - `clike`——类 C 语言（对于任何未定义的类 C 语言）
-  - 其它
+  - 其他
     - `python`——Python
     - `php`——PHP
     - `rust`——Rust
@@ -90,7 +90,7 @@ GFM 规范定义了两种基础的链接类型：
   - `sql`——SQL 数据库
   - `diff`——Diff 文件
   - `ignore`——Gitignore 文件
-- 其它
+- 其他
   - `http`——HTTP 标头
   - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（被 [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer) 所使用)
   - `regex`——正则表达式
@@ -104,7 +104,7 @@ const greeting = "I will get syntax highlighting";
 ```
 ````
 
-如果你希望高亮显示的语言未在上方列出，请使用 `plain` 标记代码块。也可以按照[GitHub 讨论](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)提出的流程请求其它语言的高亮支持。
+如果你希望高亮显示的语言未在上方列出，请使用 `plain` 标记代码块。也可以按照[GitHub 讨论](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)提出的流程请求其他语言的高亮支持。
 
 ### 阻止 lint
 
@@ -168,7 +168,7 @@ const greeting = "I'm a bad example";
 
 块引用中的多行由空的块引用生成，就像普通的段落一样。此外，没有空格的多行会像常规 Markdown 行一样被处理和连接。
 
-块引用可以包含代码块和其它块级元素。
+块引用可以包含代码块和其他块级元素。
 
 因为文本 **备注：** 或 **警告：** 也会出现在渲染输出中，因此必须考虑到翻译问题。实际上，这意味这 MDN 支持的每一种语言环境都必须提供这些字符串的翻译，平台必须认识到它们表明了这些结构需要特殊处理。
 

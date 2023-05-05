@@ -1,277 +1,403 @@
 ---
-title: setTimeout
+title: setTimeout()
 slug: Web/API/setTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
+l10n:
+  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
 {{APIRef("HTML DOM")}}
 
-El método **`setTimeout()`** establece un temporizador que ejecuta una función o una porción de código después de que transcurre un tiempo establecido.
+El método global **`setTimeout()`** establece un temporizador que ejecuta una función o una pieza de código específica una vez que expira el temporizador.
 
 ## Sintaxis
 
-```
-var idTemporizador = scope.setTimeout(funcion[, retraso, parametro1, parametro2, ...]);
-var idTimeout = scope.setTimeout(funcion[, retraso]);
-var idTimeout = scope.setTimeout(codigo[, retraso]);
+```js-nolint
+setTimeout(code)
+setTimeout(code, delay)
+
+setTimeout(functionRef)
+setTimeout(functionRef, delay)
+setTimeout(functionRef, delay, param1)
+setTimeout(functionRef, delay, param1, param2)
+setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parámetros
 
-- `funcion`
-  - : Una {{jsxref("function")}} para ejecutar después de que expire el temporizador.
-- `codigo`
-  - : Una sintaxis opcional que le permite incluir una cadena en lugar de una función, la cual es compilada y ejecutada cuando el temporizador expira. Esta sintaxis **no se recomienda** por las mismas razones que hacen del uso de {{jsxref("Global_Objects/eval", "eval()")}} un riesgo de seguridad.
-- `retraso` {{optional_inline}}
-  - : Tiempo, en milisegundos (milésimas de segundo), que el temporizador debe esperar antes de ejecutar la función o el código. Si se omite este parámetro se usa el valor 0. Tenga en cuenta que el retraso real puede ser más prolongado; ver más abajo [Reasons for delays longer than specified](#reasons_for_delays_longer_than_specified).
-- `param1, ..., paramN` {{optional_inline}}
-  - : Parámetros adicionales que se pasan a la función especificada por _func_ una vez el temporizador expira.
+- `functionRef`
+  - : Una {{jsxref("function","función")}} que se ejecutará después de que expire el temporizador.
+- `code`
+  - : Una sintaxis alternativa que le permite incluir una cadena en lugar de una función, que se compila y ejecuta cuando expira el temporizador. Esta sintaxis **no se recomienda** por las mismas razones que hacen que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo para la seguridad.
+- `delay` {{optional_inline}}
 
-> **Nota:** Pasar parámetros adicionales a la función en la primera sintaxis no funciona en Internet Explorer 9 o inferior. Si quiere habilitar esta funcionalidad en ese navegador, debe usar un código de compatibilidad (vea la sección [Callback arguments](#Callback_arguments)).
+  - : El tiempo, en milisegundos, que el temporizador debe esperar antes de que se ejecute la función o el código especificado. Si se omite este parámetro, se utiliza un valor de 0, lo que significa ejecutar "inmediatamente", o más exactamente, el siguiente ciclo de eventos.
 
-### Valor retornado
+    Tenga en cuenta que, en cualquier caso, la demora real puede ser mayor de lo previsto; consulte [Motivos de los retrasos superiores a los especificados](#motivos_de_los_retrasos_superiores_a_los_especificados) a continuación.
 
-El valor retornado `IDtemporizador` es númerico y no es cero; identifica el temporizador creado con la llamada a `setTimeout()`; este valor puede pasarse a {{domxref("clearTimeout()")}} para cancelar el temporizador.
+    También tenga en cuenta que si el valor no es un número, se realiza una [coerción](/es/docs/Glossary/Type_coercion) implícita silenciosamente en el valor para convertirlo en un número, lo que puede generar resultados inesperados y sorprendentes; consulte [Los valores de retardo no numéricos se transforman silenciosamente en números](#los_valores_de_retardo_no_numéricos_se_convierten_silenciosamente_en_números) para ver un ejemplo.
 
-Puede ser útil advertir que `setTimeout()` y {{domxref("setInterval", "setInterval()")}} comparten la misma piscina de IDs, y que tanto `clearTimeout()` como {{domxref("clearInterval", "clearInterval()")}} pueden intercambiarse. Por claridad, sin embargo, debe hacerlos coincidir para evitar confusiones cuando mantenga su código.
+- `param1`, …, `paramN` {{optional_inline}}
+
+  - : Argumentos adicionales que se pasan a través de la función especificada por `functionRef`.
+
+### Valor devuelto
+
+El `timeoutID` devuelto es un valor entero positivo que identifica el temporizador creado por la llamada a `setTimeout()`. Este valor se puede pasar a {{domxref("clearTimeout","clearTimeout()")}} para cancelar el tiempo de espera.
+
+Se garantiza que un valor de `timeoutID` nunca será reutilizado por una llamada posterior a `setTimeout()` o `setInterval()` en el mismo objeto (una ventana o un _worker_). Sin embargo, los diferentes objetos usan grupos separados de ID.
+
+## Descripción
+
+Los tiempos de espera se cancelan usando {{domxref("clearTimeout()")}}.
+
+Para llamar a una función repetidamente (por ejemplo, cada _N_ milisegundos), considere usar {{domxref("setInterval()")}}.
+
+### Los valores de retardo no numéricos se convierten silenciosamente en números
+
+Si se llama a `setTimeout()` con un valor de [_delay_](#delay) que no es un número, una [coerción](/es/docs/Glossary/Type_coercion) implícita se realiza silenciosamente en el valor para convertirlo en un número. Por ejemplo, el siguiente código usa incorrectamente la cadena `"1000"` para el valor _delay_, en lugar del número `1000`, pero aún así funciona, porque cuando se ejecuta el código, la cadena se convierte en el número `1000`. y así el código se ejecuta 1 segundo después.
+
+```js example-bad
+setTimeout(() => {
+  console.log("Retrasado por 1 segundo.");
+}, "1000");
+```
+
+Pero en muchos casos, la coerción de tipo implícito puede conducir a resultados inesperados y sorprendentes. Por ejemplo, cuando se ejecuta el siguiente código, la cadena `"1 segundo"` finalmente se convierte en el número `0` y, por lo tanto, el código se ejecuta inmediatamente, sin demora.
+
+```js example-bad
+setTimeout(() => {
+  console.log("Retrasado por 1 segundo.");
+}, "1 segundo");
+```
+
+Por lo tanto, no use cadenas para el valor de _delay_, sino que use siempre números:
+
+```js example-good
+setTimeout(() => {
+  console.log("Retrasado por 1 segundo.");
+}, 1000);
+```
+
+### Trabajando con funciones asíncronas
+
+`setTimeout()` es una función asíncrona, lo que significa que la función del temporizador no pausará la ejecución de otras funciones en la pila de funciones.
+En otras palabras, no puede usar `setTimeout()` para crear una "pausa" antes de que se active la siguiente función en la pila de funciones.
+
+Vea el siguiente ejemplo:
+
+```js
+setTimeout(() => {
+  console.log("este es el primer mensaje");
+}, 5000);
+setTimeout(() => {
+  console.log("este es el segundo mensaje");
+}, 3000);
+setTimeout(() => {
+  console.log("este es el tercer mensaje");
+}, 1000);
+
+// Salida:
+
+// este es el tercer mensaje
+// este es el segundo mensaje
+// este es el primer mensaje
+```
+
+Tenga en cuenta que la primera función no crea una "pausa" de 5 segundos antes de llamar a la segunda función. En su lugar, se llama a la primera función, pero espera 5 segundos para ejecutarse.
+Mientras la primera función está esperando para ejecutarse, se llama a la segunda función y se aplica una espera de 3 segundos a la segunda función antes de que se ejecute.
+Dado que ni los temporizadores de la primera ni la segunda función se han completado, se llama a la tercera función y completa su ejecución primero. Luego sigue el segundo.
+Luego, finalmente, la primera función se ejecuta después de que finalmente se completa su temporizador.
+
+Para crear una progresión en la que una función solo se dispara después de la finalización de otra función, consulte la documentación de [Promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+### El problema de "this"
+
+Cuando pasa un método a `setTimeout()`, se invocará con un valor `this` que puede diferir de sus expectativas. El tema general se explica detalladamente en la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+
+El código ejecutado por `setTimeout()` se llama desde un contexto de ejecución separado de la función desde la que se llamó a `setTimeout`.
+Se aplican las reglas habituales para configurar la palabra clave `this` para la función llamada, y si no ha configurado `this` en la llamada o con `bind`, se establecerá por defecto en el objeto `window` (o `global`). No será lo mismo que el valor `this` para la función que llamó a `setTimeout`.
+
+Vea el siguiente ejemplo:
+
+```js
+const myArray = ["cero", "uno", "dos"];
+myArray.myMethod = function (sProperty) {
+  console.log(arguments.length > 0 ? this[sProperty] : this);
+};
+
+myArray.myMethod(); // muestra "cero,uno,dos"
+myArray.myMethod(1); // muestra "uno"
+```
+
+Lo anterior funciona porque cuando se llama a `myMethod`, `this` se establece en `myArray` mediante la llamada, por lo que dentro de la función, `this[sProperty]` es equivalente a `myArray[sProperty]`. Sin embargo, en lo siguiente:
+
+```js
+setTimeout(myArray.myMethod, 1.0 * 1000); // muestra "[object Window]" después de 1 segundo
+setTimeout(myArray.myMethod, 1.5 * 1000, "1"); // muestra "undefined" después de 1.5 segundos
+```
+
+La función `myArray.myMethod` se pasa a `setTimeout`, luego, cuando se llama, `this` no está configurado, por lo que se establece de manera predeterminada en el objeto `window`.
+
+Tampoco existe la opción de pasar un `thisArg` a `setTimeout` como ocurre en los métodos Array como {{jsxref("Array.forEach()", "forEach()")}} y {{jsxref("Array.reduce()", "reduce()")}}. Como se muestra a continuación, usar `call` para configurar `this` tampoco funciona.
+
+```js
+setTimeout.call(myArray, myArray.myMethod, 2.0 * 1000); // error
+setTimeout.call(myArray, myArray.myMethod, 2.5 * 1000, 2); // mismo error
+```
+
+#### Soluciones
+
+##### Usar una función contenedora
+
+Una forma común de resolver el problema es usar una función contenedora que establece `this` en el valor requerido:
+
+```js
+setTimeout(function () {
+  myArray.myMethod();
+}, 2.0 * 1000); // muestra "cero,uno,dos" después de 2 segundos
+setTimeout(function () {
+  myArray.myMethod("1");
+}, 2.5 * 1000); // muestra "uno" después de 2.5 segundos
+```
+
+La función contenedora puede ser una función de flecha:
+
+```js
+setTimeout(() => {
+  myArray.myMethod();
+}, 2.0 * 1000); // muestra "cero,uno,dos" después de 2 segundos
+setTimeout(() => {
+  myArray.myMethod("1");
+}, 2.5 * 1000); // muestra "uno" después de 2.5 segundos
+```
+
+##### Usar bind()
+
+Alternativamente, puede usar {{jsxref("Function.bind()", "bind()")}} para establecer el valor de `this` para todas las llamadas a una función determinada:
+
+```js
+const myArray = ["cero", "uno", "dos"];
+const myBoundMethod = function (sProperty) {
+  console.log(arguments.length > 0 ? this[sProperty] : this);
+}.bind(myArray);
+
+myBoundMethod(); // muestra "cero,uno,dos" ya que 'this' está vinculado a myArray en la función
+myBoundMethod(1); // muestra "uno"
+setTimeout(myBoundMethod, 1.0 * 1000); // sigue mostrando "cero,uno,dos" después de 1 segundo debido a que está vinculado
+setTimeout(myBoundMethod, 1.5 * 1000, "1"); // muestra "uno" después de 1.5 segundos
+```
+
+### Pasar cadenas
+
+Pasar una cadena en lugar de una función a `setTimeout()` tiene los mismos problemas que usar [`eval()`](/es/docs/Web/JavaScript/Reference/Global_Objects/eval).
+
+```js example-bad
+// No hacer esto
+setTimeout("console.log('¡Hola mundo!');", 500);
+```
+
+```js example-good
+// Hacer esto en su lugar
+setTimeout(() => {
+  console.log("¡Hola mundo!");
+}, 500);
+```
+
+Una cadena pasada a {{domxref("setTimeout()")}} se evalúa en el contexto global, por lo que los símbolos locales en el contexto donde se llamó a {{domxref("setTimeout()")}} no estarán disponibles cuando la cadena se evalúa como código.
+
+### Motivos de los retrasos superiores a los especificados
+
+Hay una serie de razones por las que un tiempo de espera puede tardar más de lo previsto en activarse.
+Esta sección describe las razones más comunes.
+
+#### Tiempos de espera anidados
+
+Como se especifica en el [estándar HTML](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers), los navegadores impondrán un tiempo de espera mínimo de 4 milisegundos una vez que una llamada anidada a `setTimeout` se ha programado 5 veces.
+
+Esto se puede ver en el siguiente ejemplo, en el que anidamos una llamada a `setTimeout` con un retraso de `0` milisegundos, y registramos el retraso cada vez que se llama al manejador. Las primeras cuatro veces, el retraso es de aproximadamente 0 milisegundos, y después de eso, es de aproximadamente 4 milisegundos:
+
+```html
+<button id="run">Ejecutar</button>
+<table>
+  <thead>
+    <tr>
+      <th>Anterior</th>
+      <th>Éste</th>
+      <th>Retraso actual</th>
+    </tr>
+  </thead>
+  <tbody id="log"></tbody>
+</table>
+```
+
+```js
+let last = 0;
+let iterations = 10;
+
+function timeout() {
+  // registra la hora de esta llamada
+  logline(new Date().getMilliseconds());
+  // si no ha terminado, programa la próxima llamada
+  if (iterations-- > 0) {
+    setTimeout(timeout, 0);
+  }
+}
+
+function run() {
+  // borrar el registro
+  const log = document.querySelector("#log");
+  while (log.lastElementChild) {
+    log.removeChild(log.lastElementChild);
+  }
+
+  // inicializar el recuento de iteraciones y la marca de tiempo de inicio
+  iterations = 10;
+  last = new Date().getMilliseconds();
+  // temporizador de inicio
+  setTimeout(timeout, 0);
+}
+
+function logline(now) {
+  // registrar la última marca de tiempo, la nueva marca de tiempo y la diferencia
+  const tableBody = document.getElementById("log");
+  const logRow = tableBody.insertRow();
+  logRow.insertCell().textContent = last;
+  logRow.insertCell().textContent = now;
+  logRow.insertCell().textContent = now - last;
+  last = now;
+}
+
+document.querySelector("#run").addEventListener("click", run);
+```
+
+```css hidden
+* {
+  font-family: monospace;
+}
+th,
+td {
+  padding: 0 10px 0 10px;
+  text-align: center;
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+```
+
+{{EmbedLiveSample("", 100, 420)}}
+
+#### Tiempos de espera en pestañas inactivas
+
+Para reducir la carga (y el uso de batería asociado) de las pestañas en segundo plano, los navegadores impondrán un tiempo de espera mínimo en las pestañas inactivas. También se puede renunciar si una página está reproduciendo sonido usando una API de audio web {{domxref("AudioContext")}}.
+
+Los detalles de esto dependen del navegador:
+
+- Firefox Desktop y Chrome tienen un tiempo de espera mínimo de 1 segundo para pestañas inactivas.
+- Firefox para Android tiene un tiempo de espera mínimo de 15 minutos para las pestañas inactivas y puede limpiarla por completo.
+- Firefox no acelera las pestañas inactivas si la pestaña contiene un {{domxref("AudioContext")}}.
+
+#### Limitación de scripts de seguimiento
+
+Firefox impone una limitación adicional para las secuencias de comandos que reconoce como secuencias de comandos de seguimiento.
+Cuando se ejecuta en primer plano, el retraso mínimo de limitación sigue siendo de 4 ms. Sin embargo, en las pestañas en segundo plano, el retraso mínimo de limitación es de 10 000 ms, o 10 segundos, que entra en vigor 30 segundos después de que se haya cargado un documento por primera vez.
+
+Consulte [Protección de rastreo](https://wiki.mozilla.org/Security/Tracking_protection) para obtener más detalles.
+
+#### Tiempos de espera tardíos
+
+El tiempo de espera también puede activarse más tarde de lo esperado si la página (o el sistema operativo/navegador) está ocupado con otras tareas.
+Un caso importante a tener en cuenta es que la función o el fragmento de código no se puede ejecutar hasta que el hilo que llamó `setTimeout()` haya terminado. Por ejemplo:
+
+```js
+function foo() {
+  console.log("foo ha sido llamado");
+}
+setTimeout(foo, 0);
+console.log("Después de setTimeout");
+```
+
+Escribirá en la consola:
+
+```
+Después de setTimeout
+foo ha sido llamado
+```
+
+Esto se debe a que, aunque se llamó a `setTimeout` con un retraso de cero, se coloca en una cola y se programa para ejecutarse en la próxima oportunidad; no inmediatamente.
+El código que se está ejecutando actualmente debe completarse antes de que se ejecuten las funciones en la cola, por lo que el orden de ejecución resultante puede no ser el esperado.
+
+#### Aplazamiento de tiempos de espera durante la carga de la página
+
+Firefox aplazará la activación de los temporizadores `setTimeout()` mientras se carga la pestaña actual. La activación se difiere hasta que el subproceso principal se considera inactivo (similar a [window.requestIdleCallback()](/es/docs/Web/API/Window/requestIdleCallback)), o hasta que se activa el evento de carga.
+
+### Temporizadores y páginas de WebExtension
+
+En [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()` no funciona de forma fiable. Los autores de extensiones deben usar la API [`alarms`](/es/docs/Mozilla/Add-ons/WebExtensions/API/alarms) en su lugar.
+
+### Valor de retardo máximo
+
+Los navegadores almacenan internamente el retraso como un entero con signo de 32 bits. Esto provoca un desbordamiento de enteros cuando se utilizan retrasos superiores a 2 147 483 647 ms (alrededor de 24,8 días), lo que hace que el tiempo de espera se ejecute inmediatamente.
 
 ## Ejemplo
 
-El siguiente ejemplo establece dos botones simples en una página web y los engancha a las rutinas `setTimeout()` y `clearTimeout()`. Presionando el primer botón establecerá un temporizador que llama un diálogo de alerta después de dos segundos y guarda el id del temporizador para usarlo con `clearTimeout()`. Opcionalmente puede cancelar este temporizador presionando el segundo botón.
+### Configuración y borrado de tiempos de espera
 
-HTML
+El siguiente ejemplo configura dos botones simples en una página web y los vincula a las rutinas `setTimeout()` y `clearTimeout()`. Al presionar el primer botón, se establecerá un tiempo de espera que muestra un mensaje después de dos segundos y almacena la identificación del tiempo de espera para que la use `clearTimeout()`. Opcionalmente, puede cancelar este tiempo de espera presionando el segundo botón.
 
-```html
-<p>Ejemplo funcional</p>
-<button onclick="delayedAlert();">Muestra una caja de alerta después de dos segundos</button>
-<p></p>
-<button onclick="clearAlert();">Cancela la alerta antes de que ocurra</button>
-```
-
-JavaScript
-
-```js
-var timeoutID;
-
-function delayedAlert() {
-  timeoutID = window.setTimeout(slowAlert, 2000);
-}
-
-function slowAlert() {
-  alert("That was really slow!");
-}
-
-function clearAlert() {
-  window.clearTimeout(timeoutID);
-}
-```
-
-{{ EmbedLiveSample('Example') }}
-
-Vea también [`clearTimeout()` example](/es/docs/DOM/window.clearTimeout#Example).
-
-## Callback arguments
-
-Si necesita pasar un argumento a su función callback, pero necesita que funcione en Internet Explorer, que no soporta el envío de parámetros adicionales (ni con `setTimeout()` o `setInterval()`) usted puede incluir este código de compatibilidad _IE-specific_ que habilitará la funcionalidad estándar de HTML5 para pasar los parámetros adicionales en ese navegador para ambos temporizadores solamente insertandolo al inicio de sus scripts.
-
-```js
-/*\
-|*|
-|*|  IE-specific polyfill which enables the passage of arbitrary arguments to the
-|*|  callback functions of JavaScript timers (HTML5 standard syntax).
-|*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/window.setInterval
-|*|
-|*|  Syntax:
-|*|  var timeoutID = window.setTimeout(func, delay, [param1, param2, ...]);
-|*|  var timeoutID = window.setTimeout(code, delay);
-|*|  var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
-|*|  var intervalID = window.setInterval(code, delay);
-|*|
-\*/
-
-if (document.all && !window.setTimeout.isPolyfill) {
-  var __nativeST__ = window.setTimeout;
-  window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeST__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
-  };
-  window.setTimeout.isPolyfill = true;
-}
-
-if (document.all && !window.setInterval.isPolyfill) {
-  var __nativeSI__ = window.setInterval;
-  window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeSI__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
-  };
-  window.setInterval.isPolyfill = true;
-}
-```
-
-## Arreglo solo para IE
-
-Si quiere una solución completamente no intrusiva con otros navegadores móviles o de escritorio, incluyendo IE 9 y superior, puede usar los comentarios condicionales de JavaScript:
-
-```js
-/*@cc_on
-  // conditional IE < 9 only fix
-  @if (@_jscript_version <= 6)
-  (function(f){
-     window.setTimeout =f(window.setTimeout);
-     window.setInterval =f(window.setInterval);
-  })(function(f){return function(c,t){var a=[].slice.call(arguments,2);return f(function(){c.apply(this,a)},t)}});
-  @end
-@*/
-```
-
-O usar un enfoque más limpio basado en el condicional para IE de HTML:
+#### HTML
 
 ```html
-<!--[if lt IE 9]><script>
-(function(f){
-window.setTimeout =f(window.setTimeout);
-window.setInterval =f(window.setInterval);
-})(function(f){return function(c,t){
-var a=[].slice.call(arguments,2);return f(function(){c.apply(this,a)},t)}
-});
-</script><![endif]-->
+<button onclick="delayedMessage();">Mostrar un mensaje después de dos segundos</button>
+<button onclick="clearMessage();">Cancelar mensaje antes de que suceda</button>
+
+<div id="output"></div>
 ```
 
-Otra posibilidad es usar una función anónima para llamar el callback, pero esta solución es un poco más costosa. Ejemplo:
+#### JavaScript
 
 ```js
-var intervalID = setTimeout(function() { myFunc("uno", "dos", "tres"); }, 1000);
+let timeoutID;
+
+function setOutput(outputContent) {
+  document.querySelector("#output").textContent = outputContent;
+}
+
+function delayedMessage() {
+  setOutput("");
+  timeoutID = setTimeout(setOutput, 2 * 1000, "¡Eso fue muy lento!");
+}
+
+function clearMessage() {
+  clearTimeout(timeoutID);
+}
 ```
 
-Sin embargo, otra posibilidad es usar [function's bind](/es/docs/JavaScript/Reference/Global_Objects/Function/bind). Ejemplo:
-
-```js
-setTimeout(function(arg1){}.bind(undefined, 10));
+```css hidden
+#output {
+  padding: 0.5rem 0;
+}
 ```
 
-## El problema "`this`"
+#### Resultado
 
-Cuando pasa un método a `setTimeout()` (o cualquier otra función , por el estilo), podría ser invocada con el valor de `this` equivocado. Este problema es explicado en detalle en la [referencia de JavaScript](/es/docs/JavaScript/Reference/Operators/this#Method_binding).
+{{EmbedLiveSample('Configuración_y_borrado_de_tiempos_de_espera')}}
 
-### Explicación
+Ver también el [ejemplo `clearTimeout()`](/es/docs/Web/API/clearTimeout#example).
 
-El código ejecutado por `setTimeout()` corre en un contexto de ejecución diferente al de la función por la que fue llamado. Como consecuencia, la palabra clave `this para la función llamada`será asignado al objeto `window` (o `global`); no tendrá el mismo valor del `this` de la función que llamó al `setTimeout`. Vea el siguiente ejemplo:
+## Especificaciones
 
-```js
-myArray = ["cero", "uno", "dos"];
-myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
-};
+{{Specifications}}
 
-myArray.myMethod(); // imprime "cero,uno,dos"
-myArray.myMethod(1); // imprime "uno"
-setTimeout(myArray.myMethod, 1000); // imprime "[object Window]" después de 1 segundo
-setTimeout(myArray.myMethod, 1500, "1"); // imprime "undefined" después de 1.5 segundos
-// intentemos pasar el objeto 'this'
-setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // mismo error
-```
+## Compatibilidad con navegadores
 
-Como puedes ver no hay forma de pasar el objeto `this` a la función callback.
+{{Compat}}
 
-### Una posible solución
+## Véase también
 
-Una posible forma de resolver el problema del "`this`" es reemplazar las dos funciones globales nativas `setTimeout()` or `setInterval()por dos no-nativas` que permitan su invocación a través del método [`Function.prototype.call`](en-US/docs/JavaScript/Reference/Global_Objects/Function/call). El siguiente ejemplo muestra un posible reemplazo:
-
-```js
-// Enable the passage of the 'this' object through the JavaScript timers
-
-var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
-
-window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeST__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
-};
-
-window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeSI__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
-};
-```
-
-> **Nota:** Estos dos reemplazos habilitarán el estándar HTML5 para el paso de argumentos arbitrarios a las funciones callback de los temporizadores en IE. Pueden usarse como polyfills también. Vea el párrafo [Callback arguments](#Callback_arguments).
-
-Prueba de la nueva característica:
-
-```js
-myArray = ["zero", "one", "two"];
-myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
-};
-
-setTimeout(alert, 1500, "Hello world!"); // the standard use of setTimeout and setInterval is preserved, but...
-setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after 2 seconds
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 seconds
-```
-
-No hay soluciones nativas _ad hoc_ a este problema.
-
-> **Nota:** JavaScript 1.8.5 introduce el método [`Function.prototype.bind(`](/es/docs/JavaScript/Reference/Global_Objects/Function/bind), que permite especificar el valor que debería usarse como `this` para todas las llamadas a una función dada. Esto permite evitar fácilmente los problemas en los que no es claro que será, dependiendo del contexto desde el cual la función sea llamada.
-
-## Notas
-
-Puede cancelar el temporizador usando [`window.clearTimeout()`](/es/docs/DOM/window.clearTimeout). Si desea tener una función llamada repetidamente (p.e., cada N milisegundos), considere usar [`window.setInterval()`](/es/docs/DOM/window.setInterval).
-
-Es importante notar que la función o fragmento de código no puede ser ejecutado hasta que el hilo que llamó `setTimeout()` haya terminado.
-
-### Pasando cadenas literales
-
-Pasando una cadena en vez de una función a `setTimeout()` pasa lo mismo que al usar `eval.`
-
-```js
-// Correcto
-window.setTimeout(function() {
-    alert("Hello World!");
-}, 500);
-
-// Incorrecto
-window.setTimeout("alert(\"Hello World!\");", 500);
-```
-
-Las cadenas literales son evaluadas en el contexto global, así que los símbolos locales en el contexto donde `setTimeout()` fue llamado no estarán disponibles cuando la cadena es evaluada como código.
-
-### Minimum/ maximum delay and timeout nesting
-
-[Historically](http://code.google.com/p/chromium/issues/detail?id=792#c10) browsers implement `setTimeout()` "clamping": successive `setTimeout()` calls with `delay` smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, `DOM_MIN_TIMEOUT_VALUE`, is 4 ms (stored in a preference in Firefox: `dom.min_timeout_value`), with a `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` of 5ms.
-
-In fact, 4ms is [specified by the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to (Firefox 5.0 / Thunderbird 5.0 / SeaMonkey 2.2), the minimum timeout value for nested timeouts was 10 ms.
-
-In addition to "clamping", the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks.
-
-To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.postMessage()") }} as [described here](http://dbaron.org/log/20100309-faster-timeouts).
-
-Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a 32-bit signed Integer internally. This causes an Integer overflow when using delays larger than 2147483647, resulting in the timeout being executed immediately.
-
-#### Inactive tabs
-
-In (Firefox 5.0 / Thunderbird 5.0 / SeaMonkey 2.2) and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
-
-## Compatibilidad de navegadores
-
-{{Compat("api.setTimeout")}}
-
-## Especificación
-
-Parte del DOM nivel 0, como se especifica en [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers).
-
-## Vea también
-
-- [JavaScript timers](/es/docs/JavaScript/Timers)
-- [Timer.jsm](/es/docs/Mozilla/JavaScript_code_modules/Timer.jsm)
-- {{domxref("window.setInterval")}}
+- [Polyfill de `setTimeout` que permite pasar argumentos a la devolución de llamada en `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- {{domxref("clearTimeout")}}
+- {{domxref("setInterval()")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons)
+- {{domxref("queueMicrotask()")}}

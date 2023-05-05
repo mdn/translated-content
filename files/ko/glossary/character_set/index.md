@@ -1,6 +1,6 @@
 ---
 title: Character set
-slug: Glossary/character_set
+slug: Glossary/Character_set
 ---
 
 **문자 집합** 은 문자, 숫자, 문장 부호, 공백 등의 {{Glossary("Character", "문자")}}들을 재생하는 방법을 컴퓨터에 알려주는 인코딩 시스템이다.

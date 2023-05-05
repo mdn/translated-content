@@ -89,6 +89,6 @@ HTML 标准中块级元素和行内元素的区别至高出现在 4.01 标准中
 - {{ HTMLElement("ul") }}
   - : 无序列表。
 
-### 另请参阅
+### 参见
 
 - [行内元素](/zh-CN/docs/Web/HTML/Inline_elements)

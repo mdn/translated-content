@@ -75,7 +75,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
     戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
   </dd>
   <dd>
-    写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其它位置（通常位于主线内容旁边一个文本框内）。
+    写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其他位置（通常位于主线内容旁边一个文本框内）。
   </dd>
 </dl>
 ```
@@ -223,7 +223,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 ### 块引用
 
-如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 {{htmlelement("blockquote")}} 元素包裹起来表示，并且在 {{htmlattrxref("cite","blockquote")}} 属性里用 URL 来指向引用的资源。例如，下面的示例代码就是引用的 MDN 的 `<blockquote>` 元素页面：
+如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 {{htmlelement("blockquote")}} 元素包裹起来表示，并且在 [`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性里用 URL 来指向引用的资源。例如，下面的示例代码就是引用的 MDN 的 `<blockquote>` 元素页面：
 
 ```html
 <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
@@ -263,7 +263,7 @@ for short quotations that don't require paragraph breaks.</q></p>
 
 ### 引文
 
-{{htmlattrxref("cite","blockquote")}} 属性的内容看起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
+[`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性的内容看起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
 
 这里有 {{htmlelement("cite")}} 元素，但它是为了包含所引用资源的标题（如书名）。然而，你没有理由不把 `<cite>` 内的文字以某种方式链接到引用源。
 
@@ -435,7 +435,7 @@ textarea.onkeyup = () => {
 
 另一个你在 Web 上看到的相当常见的元素是 {{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释。当包括这两种情况时，在第一次使用时提供纯文本的完整扩展，同时用 `<abbr>` 来标记缩写。这为用户代理提供了如何公布/显示内容的提示，同时告知所有用户该缩写的含义。
 
-如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 {{htmlattrxref("title")}} 属性的值：
+如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性的值：
 
 ### 缩略语示例
 
@@ -590,7 +590,7 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 <address>Chris Mills, Manchester, The Grim North, UK</address>
 ```
 
-其中可以包含更复杂的标记和其它形式的联系方式，如：
+其中可以包含更复杂的标记和其他形式的联系方式，如：
 
 ```html
 <address>
@@ -728,15 +728,3 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 到这里你就完成了 HTML 语义文本元素的学习。但要记住，你在本课程中学到的并不是 HTML 文本元素的详细列表——我们想要尽量覆盖主要的、通用的、常见的，或者至少是有趣的部分。如果你想找到更多的 HTML 元素，可以看一看我们的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)（从[内联文本语义](/zh-CN/docs/Web/HTML/Element#内联文本语义)部分开始会是一个好的选择）。在下一篇文章中我们将会学习用来[组织 HTML 文档不同部分的 HTML 元素](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## 本章目录
-
-- [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [“头”里有什么——HTML 元信息](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文本处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [文本格式进阶](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和站点结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [构建网页内容](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

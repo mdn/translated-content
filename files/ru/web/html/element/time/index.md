@@ -10,12 +10,12 @@ translation_of: Web/HTML/Element/time
 
 > **Примечание:** Этот элемент неуместно использовать, когда точная дата не определена, а также при использовании дат ранее введения Григорианского календаря (из-за проблем с работой с такими датами).
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), явный контент. |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories)                           | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), явный контент. |
 | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                                                        | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                             |
-| Tag omission                                                                               | {{no_tag_omission}}                                                                                                                                                     |
-| Разрешённые родители                                                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                            |
-| Разрешённые ARIA роли                                                                      | Любые                                                                                                                                                                        |
+| Допустимый контент                                                                         | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                             |
+| Пропуск тегов                                                                              | {{no_tag_omission}}                                                                                                                                                     |
+| Допустимые родители                                                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                            |
+| Допустимые ARIA-роли                                                                       | Любые                                                                                                                                                                        |
 | DOM-интерфейс                                                                              | {{domxref("HTMLTimeElement")}}                                                                                                                                     |
 
 ## Атрибуты

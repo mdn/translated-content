@@ -56,7 +56,7 @@ function populateSessionStorage() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Storage.removeItem")}}
+{{Compat}}
 
 ## Vea también
 

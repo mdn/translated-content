@@ -25,20 +25,6 @@ _None._
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### `@document` rule
-
-{{Compat("css.at-rules.document")}}
-
-### `@import` rule
-
-{{Compat("css.at-rules.import")}}
-
-### `@media` rule
-
-{{Compat("css.at-rules.media")}}
-
-### `@supports` rule
-
-{{Compat("css.at-rules.supports")}}
+{{Compat}}

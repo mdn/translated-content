@@ -43,7 +43,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ## 解析連結
 
-一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的[區塊級連結](#區塊級連結block-level_links))，同時，你需要將網路位址填入 {{htmlattrxref("href", "a")}} 屬性中，這個屬性有時也被叫做**超文字參考(Hypertext Reference)**或**目標(target)**。
+一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的[區塊級連結](#區塊級連結block-level_links))，同時，你需要將網路位址填入 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 屬性中，這個屬性有時也被叫做**超文字參考(Hypertext Reference)**或**目標(target)**。
 
 ```html
 <p>I'm creating a link to
@@ -130,7 +130,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ### 文件片段 (Document fragments)
 
-並不是每次都只能連到文件的頂端，你也可以連到 HTML 文件中的某個部分，而這個部分叫做**文件片段(document fragment)**。要做到這件事，你得先為你要連的元素設定 {{htmlattrxref("id")}} 屬性，通常你可以把連結設在標題(heading)上，像是下面這樣：
+並不是每次都只能連到文件的頂端，你也可以連到 HTML 文件中的某個部分，而這個部分叫做**文件片段(document fragment)**。要做到這件事，你得先為你要連的元素設定 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，通常你可以把連結設在標題(heading)上，像是下面這樣：
 
 ```html
 <h2 id="Mailing_address">Mailing address</h2>
@@ -277,7 +277,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 它的結果會像是這樣：[Send email to nowhere](mailto:nowhere@mozilla.org)。
 
-事實上，電子郵件地址是選填的。如果你將它留空 (也就是說，你的 {{htmlattrxref("href", "a")}} 只寫了 "mailto:")，使用者的 mail client 會開啟一個寄信視窗，其中並沒有指定收信人，這在使用「分享」連結時非常有用，使用者可以自行決定要寄給誰。
+事實上，電子郵件地址是選填的。如果你將它留空 (也就是說，你的 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 只寫了 "mailto:")，使用者的 mail client 會開啟一個寄信視窗，其中並沒有指定收信人，這在使用「分享」連結時非常有用，使用者可以自行決定要寄給誰。
 
 ### 指定細節
 
@@ -310,15 +310,3 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 總而言之，以上就是超連結的介紹了！ 稍後你在後續的課程中學到如何位連結增添樣式時，還會再碰到它們。HTML 的下一章，我們將繼續討論文字語義(text semantics)，並看一些進階／不常見的特性，相信你會獲益良多的 — 下一站是：進階文字格式化技巧！
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
-
-## 在本主題中的內容
-
-- [Getting started with HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

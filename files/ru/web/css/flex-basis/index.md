@@ -160,7 +160,7 @@ flex-basis: unset;
 
 ### Results
 
-{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{ EmbedLiveSample('Example', '100%', '360') }}
 
 ## Specifications
 

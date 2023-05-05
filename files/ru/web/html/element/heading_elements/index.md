@@ -8,11 +8,11 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#Flow_content), заголовок контента, явный контент.                                                                                 |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                        | [Фразированное содержание](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                      |
-| Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                                                     |
-| Разрешённые родители                                       | Любые элементы которые принимают [Содержание потока](/ru/docs/Web/HTML/Content_categories#Flow_content); не используй как дочерний {{HTMLElement("hgroup")}} элемент, сейчас он устарел |
-| Разрешённые роли ДМИП                                      | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>          |
-| DOM интерфейс                                              | {{domxref("HTMLHeadingElement")}}                                                                                                                                                       |
+| Допустимое содержимое                                      | [Фразированное содержание](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                      |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                     |
+| Допустимые родители                                        | Любые элементы которые принимают [Содержание потока](/ru/docs/Web/HTML/Content_categories#Flow_content); не используй как дочерний {{HTMLElement("hgroup")}} элемент, сейчас он устарел |
+| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>          |
+| DOM-интерфейс                                              | {{domxref("HTMLHeadingElement")}}                                                                                                                                                       |
 
 ## Атрибуты
 
@@ -102,7 +102,7 @@ translation_of: Web/HTML/Element/Heading_Elements
    2. `h2` Распределение и разнообразие
    3. `h2` Эволюция
 
-      1. `h3` Поздний полиозой
+      1. `h3` Поздний палеозой
       2. `h3` Юрский период
       3. `h3` Меловойский период
       4. `h3` Кайнозойский период

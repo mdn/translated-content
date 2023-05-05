@@ -127,7 +127,7 @@ Os servidores podem armazenar e usar informações sobre clientes para fornecer 
 
 Uma análise mais profunda dos hábitos do usuário pode ser usada para antecipar seus interesses e personalizar ainda mais as respostas e notificações, por exemplo, fornecendo uma lista de locais visitados anteriormente ou que você pode querer ver em um mapa.
 
-> **Nota:**[Google Maps](https://maps.google.com/) salva sua pesquisa e histórico de visitas. Locais visitados ou pesquisados ​​com frequência são destacados mais do que outros.
+> **Nota:**[Google Maps](https://maps.google.com/) salva sua pesquisa e histórico de visitas. Locais visitados ou pesquisados com frequência são destacados mais do que outros.
 >
 > Os resultados de pesquisa do Google são otimizados com base em pesquisas anteriores.
 >

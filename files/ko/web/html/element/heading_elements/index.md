@@ -207,7 +207,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## 같이 보기
 

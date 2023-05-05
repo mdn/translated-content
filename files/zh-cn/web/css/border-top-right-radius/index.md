@@ -3,7 +3,7 @@ title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
 ---
 
-{{ CSSRef("CSS Borders") }}
+{{CSSRef("CSS Borders")}}
 
 ## 概要
 
@@ -417,4 +417,4 @@ border-top-right-radius: inherit
 
 ## 参见
 
-边框半径相关的 CSS 属性：CSS 速记 {{ cssxref("border-radius") }}, 其它角的属性：{{ cssxref("border-top-left-radius") }}, {{ cssxref("border-bottom-right-radius") }}和 {{ cssxref("border-bottom-left-radius") }}。
+边框半径相关的 CSS 属性：CSS 速记 {{ cssxref("border-radius") }}, 其他角的属性：{{ cssxref("border-top-left-radius") }}, {{ cssxref("border-bottom-right-radius") }}和 {{ cssxref("border-bottom-left-radius") }}。

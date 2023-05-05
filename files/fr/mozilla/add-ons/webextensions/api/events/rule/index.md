@@ -33,9 +33,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `priority`{{optional_inline}}
   - : `integer`. Priorité optionnelle de cette règle. Par défaut à 100.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events.Rule")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

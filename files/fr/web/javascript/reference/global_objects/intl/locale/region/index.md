@@ -46,13 +46,11 @@ console.log(regionObj.region);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                    | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.region`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.region) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.region")}}
+{{Compat}}
 
 ## Voir aussi
 

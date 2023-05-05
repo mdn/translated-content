@@ -128,7 +128,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.div")}}
+{{Compat}}
 
 ## 같이 보기
 

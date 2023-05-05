@@ -1,13 +1,15 @@
 ---
 title: HTTP ヘッダー
 slug: Web/HTTP/Headers
+l10n:
+  sourceCommit: be530d13c405c92e4f92e5d01d45cd2d435439b7
 ---
 
 {{HTTPSidebar}}
 
 **HTTP ヘッダー**により、 HTTP リクエストやレスポンスでクライアントやサーバーが追加情報を渡すことができます。 HTTP ヘッダーは、大文字小文字を区別しないヘッダー名とそれに続くコロン (`:`)、 値で構成されます。値の前にある{{Glossary("Whitespace", "ホワイトスペース")}}は無視されます。
 
-私的な独自のヘッダーは、以前は `X-` 接頭辞を使用していましたが、この慣習は 2012 年 6 月の [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) で非推奨になりました。これは、標準外のフィールドが標準になったときに発生する不便さのためです。それ以外のヘッダーは [IANA レジストリー](https://www.iana.org/assignments/message-headers/perm-headers.html)に収録されており、その基になったものは [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) です。また IANA は[新たに提案された HTTP ヘッダーのレジストリー](https://www.iana.org/assignments/message-headers/prov-headers.html)も管理しています。
+私的な独自のヘッダーは、以前は `X-` 接頭辞を使用していましたが、この慣習は 2012 年 6 月の [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) で非推奨になりました。これは、標準外のフィールドが標準になったときに発生する不便さのためです。それ以外のヘッダーは [IANA レジストリー](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)に収録されており、その基になったものは [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) です。また IANA は[新たに提案された HTTP ヘッダーのレジストリー](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)も管理しています。
 
 ヘッダーは、そのコンテキストに応じて分類できます。
 
@@ -57,12 +59,12 @@ slug: Web/HTTP/Headers
   - : レスポンスが古くなると考えられる日時を表します。
 - {{HTTPHeader("Pragma")}}
   - : リクエストからレスポンスへの流れの中でさまざまな影響がある、実装依存のヘッダーです。 `Cache-Control` ヘッダーが未実装である HTTP/1.0 キャッシュとの後方互換性のために使用します。
-- {{HTTPHeader("Warning")}}
+- {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : 起こりうる問題に関する一般警告情報です。
 
 ## クライアントヒント
 
-HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端末の種類やネットワークの状態など、クライアントに関する有用な情報を提供する一連のリクエストヘッダーのことで、サーバーはこれらの条件に合わせて提供するコンテンツを最適化することができます。
+HTTP の[クライアントヒント](/ja/docs/Web/HTTP/Client_hints)とは、端末の種類やネットワークの状態など、クライアントに関する有用な情報を提供する一連のリクエストヘッダーのことで、サーバーはこれらの条件に合わせて提供するコンテンツを最適化することができます。
 
 サーバーは、 {{HTTPHeader("Accept-CH")}} を使用して、クライアントが関心を持っているクライアントヒントヘッダーを積極的に要求します。クライアントは、要求されたヘッダーを後続のリクエストに含めることがあります。
 
@@ -70,21 +72,48 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
   - : サーバーはクライアントヒントに対応していることを、 `Accept-CH` ヘッダーフィールドまたは HTML の `<meta>` 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#attr-http-equiv) 属性で同等の指定をすることで広報することができます。
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
   - : サーバーは、指定された期間サーバーが対応する一連のクライアントヒントを記憶するようクライアントに依頼し、そのサーバーのオリジンに対するその後のリクエストでクライアントヒントを配信できるようにすることができます。
+- {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
+  - : サーバーは {{HttpHeader("Accept-CH")}} と共に `Critical-CH` を使用し、受け入れられるクライアントヒントも[重要なクライアントヒント](/ja/docs/Web/HTTP/Client_hints#重要なクライアントヒント) であることを指定しています。
 
 クライアントヒントの様々なカテゴリーを以下に示します。
 
+### ユーザーエージェントクライアントヒント
+
+[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Client_hints#user-agent_client_hints)は、ユーザーエージェント、それが動作しているプラットフォーム/アーキテクチャ、ユーザーエージェントやプラットフォーム上に設定されたユーザー環境設定に関する情報を提供するリクエストヘッダーです。
+
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
+  - : ユーザーエージェントで動きの縮小を優先する設定。
+- {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
+  - : ユーザーエージェントのブランド名とバージョン。
+- {{HTTPHeader("Sec-CH-UA-Arch")}} {{experimental_inline}}
+  - : ユーザーエージェントの基盤となるプラットフォームアーキテクチャ。
+- {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
+  - : ユーザーエージェントの基本的な CPU アーキテクチャのビット数（例: "64" ビット）。
+- {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
+  - : ユーザーエージェントの意味づけされた完全なバージョン文字列。
+- {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} {{experimental_inline}}<!-- chrome intent to ship Nov 2021 -->
+  - : ユーザーエージェントのブランドリストにある各ブランドのフルバージョン。
+- {{HTTPHeader("Sec-CH-UA-Mobile")}} {{experimental_inline}}
+  - : ユーザーエージェントがモバイル端末で動作している、あるいは、より一般的には、「モバイル」の使い勝手を好んでいる。
+- {{HTTPHeader("Sec-CH-UA-Model")}} {{experimental_inline}}
+  - : ユーザーエージェントの端末モデル。
+- {{HTTPHeader("Sec-CH-UA-Platform")}} {{experimental_inline}}
+  - : ユーザーエージェントの基盤となっているオペレーティングシステム/プラットフォーム。
+- {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
+  - : ユーザーエージェントの基盤となっているオペレーションシステムのバージョン。
+
 ### 端末クライアントヒント
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}
-  - : 数値で、選択された画像レスポンスの CSS ピクセルに対する物理ピクセルの比を示します。
-- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}{{experimental_inline}}
-  - : 技術的には [Device Memory API](/ja/docs/Web/API/Device_Memory_API) の一部で、このヘッダーはクライアントが持つおよその RAM の量を表します。
-- {{HTTPHeader("DPR")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{experimental_inline}}
+  - : 画像リソースを選択するために {{HTTPHeader("DPR")}} クライアントヒントが使用されたリクエストで、 画像デバイスとピクセルの比率を確認するために使用される _レスポンスヘッダー_ です。
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{experimental_inline}}
+  - : 技術的には[端末メモリー API](/ja/docs/Web/API/Device_Memory_API) の一部で、このヘッダーはクライアントが持つおよその RAM の量を表します。
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{experimental_inline}}
   - : クライアントの端末ピクセル比 (DPR)、すなわち CSS ピクセルあたりの物理ピクセル数を示します。
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}{{experimental_inline}}
-  - : 数値で、レイアウトビューポートの幅を CSS ピクセル数で示します。指定されたピクセル数は、それ以上の最小の整数に丸められます (つまり切り上げ)。
-- {{HTTPHeader("Width")}} {{deprecated_inline}}{{experimental_inline}}
-  - : `Width` リクエストヘッダーフィールドは数値で、要求するリソースの幅 (つまり画像の自身の寸法) を物理ピクセル数で示します。
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{experimental_inline}}
+  - : 数値で、レイアウトビューポートの幅を CSS ピクセル数で示します。指定されたピクセル数は、それ以上の最小の整数に丸められます（つまり切り上げ）。
+- {{HTTPHeader("Width")}} {{deprecated_inline}} {{experimental_inline}}
+  - : 数値で、要求するリソースの幅（つまり画像の内在的な寸法）を物理ピクセル数で示します。
 
 ### ネットワーククライアントヒント
 
@@ -116,7 +145,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("Vary")}}
   - : 新しいものを元のサーバーにリクエストするのではなく、キャッシュされたレスポンスが使用できるよう決定するために、リクエストヘッダーを一致させる方法を定めます。
 
-## 接続制御
+## 接続管理
 
 - {{HTTPHeader("Connection")}}
   - : 現在の転送が完了した後も、ネットワークコネクションを維持するかを制御します。
@@ -139,7 +168,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("Expect")}}
   - : リクエストを適切に扱うためにサーバーが実行しなければならないと期待されていることを示します。
 - {{HTTPHeader("Max-Forwards")}}
-  - : TBD
+  - : [`TRACE`](/ja/docs/Web/HTTP/Methods/TRACE) を使用する場合、リクエストが送信者に反映されるまでにできる最大のホップ数を示します。
 
 ## クッキー
 
@@ -147,14 +176,10 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
   - : 過去に {{HTTPHeader("Set-Cookie")}} ヘッダーでサーバーから送信されて保存している [HTTP クッキー](/ja/docs/Web/HTTP/Cookies)を持ちます。
 - {{HTTPHeader("Set-Cookie")}}
   - : サーバーからユーザーエージェントにクッキーを送信します。
-- {{HTTPHeader("Cookie2")}} {{deprecated_inline}}
-  - : 過去に {{HTTPHeader("Set-Cookie2")}} ヘッダーでサーバーから送信された HTTP クッキーを伝えるために使われていましたが、仕様書から廃止されました。代わりに {{HTTPHeader("Cookie")}} を使用してください。
-- {{HTTPHeader("Set-Cookie2")}} {{deprecated_inline}}
-  - : サーバーからユーザーエージェントにクッキーを送信するために使用されていましたが、仕様書から廃止されました。代わりに {{HTTPHeader("Set-Cookie")}} を使用してください。
 
 ## CORS
 
-*CORS についての詳細は、[こちら](CORS)を参照してください。*
+_CORS についての詳細は、[こちら](/ja/docs/Glossary/CORS)を参照してください。_
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : レスポンスが共有可能かを示します。
@@ -212,6 +237,8 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 
 - {{HTTPHeader("Location")}}
   - : ページのリダイレクト先の URL を示します。
+- {{HTTPHeader("Refresh")}}
+  - : ブラウザーにページを再読み込みするか、別のページにリダイレクトするように指示します。 [`http-equiv="refresh"`](/ja/docs/Web/HTML/Element/meta#attr-http-equiv) を持つ `meta` 要素と同じ値をとります。
 
 ## リクエストコンテキスト
 
@@ -258,10 +285,10 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
   - : ウェブの開発者がポリシーの効果を適用せずに監視することで、実験を行うことができます。これらの違反レポートは、 HTTP `POST` リクエストによって指定した URI へ送信される {{Glossary("JSON")}} 文書で構成されます。
 - {{HTTPHeader("Expect-CT")}}
   - : サイトが証明書の透明性要件の報告や実施を選択できるようにします。これにより、そのサイトで不正な証明書の使用に気づかないことを防ぎます。サイトが Expect-CT ヘッダーを有効にした場合、そのサイトの証明書が公開CTログに表示されることを Chrome が確認するようにリクエストしています。
-- {{HTTPHeader("Feature-Policy")}}
-  - : 自身のフレームまたはその中の iframe で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : ウェブアプリケーションをオリジンから独立させるための仕組みを提供します。
+- {{HTTPHeader("Permissions-Policy")}}
+  - : 自身のフレームまたはその中に埋め込まれた {{htmlelement("iframe")}} で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : HTTP の代わりに HTTPS による通信を強制します。
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
@@ -269,24 +296,15 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : ブラウザーで MIME スニッフィングを無効化して、{{HTTPHeader("Content-Type")}} で指定したタイプを強制的に使用させます。
 - {{HTTPHeader("X-Download-Options")}}
-  - : HTTP の [`X-Download-Options`](<https://docs.microsoft.com/ja-jp/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) ヘッダーは、ブラウザー (Internet Explorer) がアプリケーションからのダウンロードでファイルを「開く」の選択肢を表示しないようにし、アプリケーションのコンテキストで実行するアクセス権を得ることがないようにして、ファイルとすることでフィッシング詐欺を防止します。 (メモ: [MS Edge bug](https://developer.microsoft.com/ja-jp/microsoft-edge/platform/issues/18488178/) に関連)
+  - : HTTP の [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) ヘッダーは、ブラウザー (Internet Explorer) がアプリケーションからのダウンロードでファイルを「開く」の選択肢を表示しないようにし、アプリケーションのコンテキストで実行するアクセス権を得ることがないようにして、ファイルとすることでフィッシング詐欺を防止します。
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : ブラウザーがページを {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}} の内部に表示することを許可するかを示します。
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : クロスドメインポリシーファイル (`crossdomain.xml`) を許可するかどうかを指定します。このファイルは、 Adobe の Flash Player、Adobe Acrobat、Microsoft Silverlight、Apache Flex などのクライアントに、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)によって制限されているドメイン間のデータを処理する許可を与えるポリシーを定義することができます。詳細については、 [Cross-domain Policy File Specification](https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html) を参照してください。
+  - : クロスドメインポリシーファイル (`crossdomain.xml`) を許可するかどうかを指定します。このファイルは、 Adobe の Flash Player、Adobe Acrobat、Microsoft Silverlight、Apache Flex などのクライアントに、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)によって制限されているドメイン間のデータを処理する許可を与えるポリシーを定義することができます。詳細については、 [Cross-domain Policy File Specification](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) を参照してください。
 - {{HTTPHeader("X-Powered-By")}}
   - : ホスティング環境やその他のフレームワークによって設定される可能性があり、アプリケーションや訪問者に有益ではない情報を含みます。潜在的な脆弱性が発現することを防ぐために、このヘッダーは設定しないでください。
 - {{HTTPHeader("X-XSS-Protection")}}
   - : クロスサイトスクリプティングのフィルタリングを有効化します。
-
-### HTTP Public Key Pinning (HPKP)
-
-{{Glossary("HPKP", "HTTP Public Key Pinning")}} は非推奨となり、削除されて Certificate Transparency と {{HTTPHeader("Expect-CT")}} に置き換えられました。
-
-- {{HTTPHeader("Public-Key-Pins")}}
-  - : 偽造した証明書による {{Glossary("MITM")}} 攻撃の危険性を軽減するため、特定の暗号公開鍵とウェブサーバーを関連付けます。
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-  - : ピンニングに違反する場合でも、ヘッダーで指定した report-uri にレポートを送信して、クライアントからサーバーへの接続は許可します。
 
 ## メタデータ読み取りリクエストヘッダー
 
@@ -300,8 +318,11 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
   - : ナビゲーションリクエストがユーザー操作によって起動されたかどうかを示すリクエストヘッダーです。これは構造化ヘッダーであり、論理値で、取りうる値は `?0` ならば偽、 `?1` ならば真です。
 - {{HTTPHeader("Sec-Fetch-Dest")}}
   - : リクエストの宛先を示すリクエストヘッダーです。これは構造化ヘッダーで、値はトークンであり、取りうる値は `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, `xslt` です。
+- {{HTTPHeader("Service-Worker-Navigation-Preload")}}
+  - : サービスワーカーの起動中に、リソースに対して {{domxref("fetch()")}} で先制的なリクエストをする際に送られるリクエストヘッダーです。
+    この値は {{domxref("NavigationPreloadManager.setHeaderValue()")}} で設定され、通常の `fetch()` 処理とは異なる形でリソースを返すべきことをサーバーに通知するために使用することができます。
 
-## Server-sent event
+## サーバー送信イベント
 
 - {{HTTPHeader("Last-Event-ID")}}
   - : TBD
@@ -345,13 +366,13 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("Alt-Svc")}}
   - : このサービスにたどり着く他の方法のリストに使用します。
 - {{HTTPHeader("Date")}}
-  - : メッセージを生成した日時です。
+  - : メッセージが生成された日時です。
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : このリクエストが TLS early data で送信されたことを示します。
-- {{HTTPHeader("Large-Allocation")}}
+- {{HTTPHeader("Large-Allocation")}} {{deprecated_inline}}
   - : 読み込み中のページは大量の割り当てが必要であることをブラウザーに伝えます。
 - {{HTTPHeader("Link")}}
-  - : [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) エンティティヘッダーフィールドは、 HTTP ヘッダー内の1つ以上のリンクを記述する方法を提供します。意味的には HTML の {{HTMLElement("link")}} 要素と等価です。
+  - : [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) エンティティヘッダーフィールドは、 HTTP ヘッダー内の 1 つ以上のリンクを記述する方法を提供します。意味的には HTML の {{HTMLElement("link")}} 要素と等価です。
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
   - : [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2)はリクエストを処理するときのプッシュ通知に関するサーバーの動作を定義します。
 - {{HTTPHeader("Retry-After")}}
@@ -363,11 +384,11 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("Server-Timing")}}
   - : 指定されたリクエストとレスポンスのサイクルについて、１つ以上のメトリクスまたは説明を通信します。
 - {{HTTPHeader("Service-Worker-Allowed")}}
-  - : [パス正弦](https://w3c.github.io/ServiceWorker/#path-restriction)を解除するために、[サービスワーカースクリプトのレスポンス](https://w3c.github.io/ServiceWorker/#service-worker-script-response)で使用します。
+  - : [パス制約](https://w3c.github.io/ServiceWorker/#path-restriction)を解除するために、[サービスワーカースクリプトのレスポンス](https://w3c.github.io/ServiceWorker/#service-worker-script-response)で使用します。
 - {{HTTPHeader("SourceMap")}}
-  - : 生成されたコードと <a href="/ja/docs/Tools/Debugger/How_to/Use_a_source_map">ソースマップ</a> を関連付けます。
+  - : 生成されたコードと[ソースマップ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)を関連付けます。
 - {{HTTPHeader("Upgrade")}}
-  - : Upgrade ヘッダーフィールドに関連する RFC 文書は [RFC 7230, section 6.7](https://datatracker.ietf.org/doc/html/rfc7230#section-6.7) です。標準仕様では、現在のクライアント、サーバー、トランスポート層プロトコル接続で別のプロトコルへ更新または変更するための規則を定めています。例えば、このヘッダー標準ではサーバーが Upgrade ヘッダーフィールドを認めて実装すると決める前提で、クライアントが HTTP 1.1 から HTTP 2.0 へ変更することを可能にします。どちらの相手も、 Upgrade ヘッダーフィールドで指定された要件を受け入れる必要はありません。これはクライアントのヘッダーでもサーバーのヘッダーでも使用できます。Upgrade ヘッダーフィールドを指定した場合は、更新オプションを指ヘッダーonnection ヘッダーフィールドも送信者が送信しなければなりません。Connection ヘッダーフィールドについて、詳しくは[前述の RFC のセクション 6.1](https://datatracker.ietf.org/doc/html/rfc7230#section-6.1) をご覧ください。
+  - : Upgrade ヘッダーフィールドに関連する RFC 文書は [RFC 9110, section 7.8](https://httpwg.org/specs/rfc9110.html#field.upgrade) です。標準仕様では、現在のクライアント、サーバー、トランスポート層プロトコル接続で別のプロトコルへ更新または変更するための規則を定めています。例えば、このヘッダー標準ではサーバーが Upgrade ヘッダーフィールドを認めて実装すると決める前提で、クライアントが HTTP 1.1 から [WebSocket](/ja/docs/Glossary/WebSockets) へ変更することを可能にします。どちらの相手も、 Upgrade ヘッダーフィールドで指定された要件を受け入れる必要はありません。これはクライアントのヘッダーでもサーバーのヘッダーでも使用できます。Upgrade ヘッダーフィールドを指定した場合は、更新オプションを指ヘッダーonnection ヘッダーフィールドも送信者が送信しなければなりません。Connection ヘッダーフィールドについて、詳しくは[前述の RFC のセクション 7.6.1](https://httpwg.org/specs/rfc9110.html#field.connection) をご覧ください。
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}
   - : ユーザーがたどるであろうリンクや、ドキュメントが参照する画像、 CSS、 JavaScript などのリソースのドメイン名解決をブラウザーが事前に行う機能である、 DNS プリフェッチを制御します。
 - {{HTTPHeader("X-Firefox-Spdy")}} {{deprecated_inline}} {{non-standard_inline}}
@@ -377,16 +398,16 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("X-Requested-With")}}
   - : TBD
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : [`X-Robots-Tag`](https://developers.google.com/search/reference/robots_meta_tag#xrobotstag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `<meta name="robots" content="...">` と等価です。
+  - : [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `<meta name="robots" content="…">` と等価です。
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : 使用する文書モードを示すために Internet Explorer で使用されています。
 
 ## 協力
 
-[新しい記事を書いたり](/ja/docs/MDN/Contribute/Howto/Document_an_HTTP_header)、既存のものを改善したりすることにご協力ください。
+[新しい記事を書いたり](/ja/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header)、既存のものを改善したりすることにご協力ください。
 
 ## 関連情報
 
 - [Wikipedia の HTTP ヘッダーの一覧のページ](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
-- [IANA レジストリー](https://www.iana.org/assignments/message-headers/perm-headers.html)
+- [IANA レジストリー](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)
 - [HTTP Working Group](https://httpwg.org/specs/)

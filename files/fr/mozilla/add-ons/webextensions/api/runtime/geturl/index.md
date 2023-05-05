@@ -33,9 +33,9 @@ browser.runtime.getURL(
 
 `string`. L'URL complète de la ressource.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getURL")}}
+{{Compat}}
 
 ## Exemples
 

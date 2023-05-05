@@ -42,7 +42,7 @@ Ne fait partie d'aucune spécification. Non standard.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.lineNumber")}}
+{{Compat}}
 
 ## Voir aussi
 

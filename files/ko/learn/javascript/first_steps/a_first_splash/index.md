@@ -510,15 +510,3 @@ guessField.focus();
 예제 따라 해보기가 끝났습니다. 마지막까지 오셨군요. 축하합니다! 최종 코드를 직접 실행해 보거나, MDN에서 준비한 [최종판을 시험해 보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). 여러분의 예제 코드가 잘 돌아가지 않으면 완성본의 [소스 코드](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)와 비교해 보세요.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
-
-## 이 과정은
-
-- [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

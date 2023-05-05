@@ -12,7 +12,9 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
 Существует много случаев, когда возможностей [стандартных виджетов HTML форм](/ru/docs/Learn/HTML/Forms/%D0%A1%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D1%8B%D0%B5_%D0%B2%D0%B8%D0%B4%D0%B6%D0%B5%D1%82%D1%8B_%D1%84%D0%BE%D1%80%D0%BC) недостаточно. Если вы хотите [придать лучший вид](/ru/docs/Advanced_styling_for_HTML_forms) каким-либо виджетам как, например, {{HTMLElement("select")}}, или вы хотите создать особое поведение виджета, то у вас нет другого выбора, кроме как создать собственные виджеты.
 
@@ -305,20 +307,20 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{ EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1") }}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{ EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1") }}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{ EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1") }}
       </td>
     </tr>
     <tr>
       <td colspan="3" style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
+          href="/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
+          title="/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
           >Посмотреть исходный код</a
         >
       </td>
@@ -412,17 +414,17 @@ window.addEventListener("load", function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_2")}}
+        {{ EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2") }}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_2")}}
+        {{ EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2") }}
       </td>
     </tr>
     <tr>
       <td colspan="2" style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
+          href="/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
+          title="/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
           >Посмотреть исходный код</a
         >
       </td>
@@ -587,8 +589,8 @@ window.addEventListener('load', function () {
 
 | Пример                                                                                                                                       |
 | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_3")}} |
-| [Посмотреть исходный код](/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3)                                                    |
+| {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3") }} |
+| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                                                    |
 
 ### Обработка значения виджета
 
@@ -689,8 +691,8 @@ window.addEventListener('load', function () {
 
 | Пример                                                                                                                                       |
 | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_4")}} |
-| [Посмотреть исходный код](/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4)                                                    |
+| {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4") }} |
+| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                                                    |
 
 Но секундочку, мы точно закончили?
 
@@ -756,8 +758,8 @@ function updateValue(select, index) {
 
 | Пример                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_5")}}                  |
-| [Посмотреть исходный код](/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
+| {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5") }}                  |
+| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) |
 
 ## Заключение
 

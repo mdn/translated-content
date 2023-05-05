@@ -147,7 +147,9 @@ Dans cet exemple, on utilise un élément `<details>` sans résumé/intitulé.
 
 Ici, le navigateur utilisera alors un intitulé par défaut (généralement, ce sera "Détails").
 
-{{EmbedLiveSample("Un_exemple_simple", "", 100)}}
+#### Résultat
+
+{{EmbedLiveSample("", "", 100)}}
 
 ### Créer un contrôle déjà ouvert
 
@@ -163,9 +165,9 @@ Pour obtenir une boîte `<details>` dans un état ouvert, il suffit d'ajouter l'
 </details>
 ```
 
-Cela se traduit par :
+#### Résultat
 
-{{EmbedLiveSample("Créer_un_contrôle_déjà_ouvert", "", 130)}}
+{{EmbedLiveSample("", "", 130)}}
 
 ### Personnaliser l'apparence
 

@@ -39,7 +39,7 @@ slug: Web/API/Window/unhandledrejection_event
 - `reason`
   - : 将会传入异常处理方法中的错误原因（如果存在），查看 {{jsxref("Promise.catch", "catch()")}} 相关以获取更多细节。
 
-## 使用备注
+## 使用说明
 
 允许 `unhandlejection` 事件冒泡将最终导致向控制台输出错误消息。可以通过调用 {{domxref("PromiseRejectionEvent")}} 上的 {{domxref("Event.preventDefault", "preventDefault()")}} 来阻止这种情况；请参阅下面的[阻止默认处理](#阻止默认处理)示例。
 

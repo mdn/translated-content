@@ -78,10 +78,6 @@ Notez qu'avant Firefox 55, le règles étaient différentes dans le cas des 2 ar
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
 
-## Compatibilité du navitageur
-
-{{Compat("webextensions.api.runtime.sendMessage")}}
-
 ## Exemples
 
 Voici un script de contenu qui envoie un message au script d'arrière-plan lorsque l'utilisateur clique sur la fenêtre de contenu. La charge utile du message est `{greeting: "Greeting from the content script"}`, et l'expéditeur s'attend également à recevoir une réponse, qui est gérée dans la fonction `handleResponse` :
@@ -120,6 +116,10 @@ function handleMessage(request, sender, sendResponse) {
 
 browser.runtime.onMessage.addListener(handleMessage);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

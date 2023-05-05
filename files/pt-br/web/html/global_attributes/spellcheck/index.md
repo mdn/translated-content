@@ -44,7 +44,7 @@ Por exemplo:
 
 Neste exemplo HTML acima, os dois primeiros campos de texto terão a verificação ortográfica e o terceiro não terá.
 
-Iniciando no Gecko 9.0 {{ geckoRelease("9.0") }}, a verificação ortográfica usa o atributo {{ htmlattrxref("lang", "input") }} do elemento {{ HTMLElement("input") }} para determinar o idioma padrão da verificação ortográfica. Se o {{ HTMLElement("input") }} não tiver o atributo `lang` setado, esse atributo é procurado em cada elemento pai superior até chegar ao elemento raiz do documento.
+Iniciando no Gecko 9.0, a verificação ortográfica usa o atributo {{ htmlattrxref("lang", "input") }} do elemento {{ HTMLElement("input") }} para determinar o idioma padrão da verificação ortográfica. Se o {{ HTMLElement("input") }} não tiver o atributo `lang` setado, esse atributo é procurado em cada elemento pai superior até chegar ao elemento raiz do documento.
 
 Fazendo assim, se o usuário tem os dicionários de Português e Inglês instalados, e um elemento editável tiver o atributo `lang="en"`, o dicionário inglês será automaticamente usado para este elemento.
 

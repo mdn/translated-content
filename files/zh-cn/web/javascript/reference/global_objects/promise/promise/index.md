@@ -63,7 +63,7 @@ new Promise(executor)
 
 当通过 `new` 调用时，`Promise` 构造函数返回一个 promise 对象。当 `resolutionFunc` 或者 `rejectionFunc` 被调用时，该 promise 对象将会“被敲定”。注意，如果您调用 `resolutionFunc` 或者 `rejectionFunc` 时将另一个 Promise 对象作为参数，您可以称其“被敲定（resolved）”，但仍不能称其“被解决（settled）”。
 
-## 例子
+## 示例
 
 我们通过 `new` 关键字和 `Promise` 构造器创建它的对象。这个构造器接受一个名为 "executor function" 的函数。这个函数应当接受两个函数参数。当异步任务成功时，第一个函数（`resolve`）将被调用，并返回一个值代表成功。当其失败时，第二个函数（`reject`）将被调用，并返回失败原因（失败原因通常是一个 error 对象）。
 

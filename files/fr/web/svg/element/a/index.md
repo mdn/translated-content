@@ -85,7 +85,7 @@ svgns|a:hover, svgns|a:active {
 - {{htmlattrxref("rel", "a")}} {{experimental_inline}}
 - {{SVGAttr("target")}}
 - {{htmlattrxref("type", "a")}}
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## Contexte d'utilisation
 

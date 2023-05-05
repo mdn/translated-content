@@ -57,7 +57,7 @@ urlpatterns = [
 
 ### View (class-based)
 
-我們可以很容易地，將書本列表列表編寫為常規函數（就像我們之前的索引視圖一樣），進入查詢數據庫中的所有書本，然後調用 render（），將列表傳遞給指定的模板。然而，我們用另一種方 ​​ 法取代，我們將使用基於類的通用列表視圖（ListView）-一個繼承自現有視圖的類。因為通用視圖，已經實現了我們需要的大部分功能，並且遵循 Django 最佳實踐，我們將能夠創建更強大的列表視圖，代碼更多，重複次數最多，最終維護所需。
+我們可以很容易地，將書本列表列表編寫為常規函數（就像我們之前的索引視圖一樣），進入查詢數據庫中的所有書本，然後調用 render（），將列表傳遞給指定的模板。然而，我們用另一種方 法取代，我們將使用基於類的通用列表視圖（ListView）-一個繼承自現有視圖的類。因為通用視圖，已經實現了我們需要的大部分功能，並且遵循 Django 最佳實踐，我們將能夠創建更強大的列表視圖，代碼更多，重複次數最多，最終維護所需。
 
 開啟 catalog / views.py，將以下代碼複製到文件的底部：
 
@@ -574,21 +574,3 @@ In our next articles we'll extend this library to support user accounts, and the
 - [Pagination](https://docs.djangoproject.com/en/2.0/topics/pagination/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
-
-## 本系列課程
-
-- [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django 教學: 本地圖書館網站](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教學 第 2 部分: 建立網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教學 第 3 部分: 使用模型](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django 教學 第 4 部分: Django 的管理員頁面](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教學 第 5 部分: 創建我們的首頁](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django 教學 第 6 部分: 通用列表與詳細視圖](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教學 第 7 部分: 會話 (Sessions) 框架](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django 教學 第 8 部分: 使用者的身分驗證與權限](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django 教學 第 9 部分: 使用表單](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django 教學 第 10 部分: 測試 Django 網頁應用](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django 教學 第 11 部分: 部署 Django 到生產環境(production)](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django 網頁應用安全](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 迷你部落格](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

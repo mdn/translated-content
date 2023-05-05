@@ -17,9 +17,9 @@ El valor de este atributo no debe contener espacios en blanco. Los navegadores t
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.id")}}
+{{Compat}}
 
 ## Ver también
 

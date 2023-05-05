@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 
 {{JSRef}}
 
-**`keys()`** 返回一个引用的[_迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)对象。它包含按照顺序插入 `Map` 对象中每个元素的 key 值。
+**`keys()`** 返回一个引用的[_迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象。它包含按照顺序插入 `Map` 对象中每个元素的 key 值。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
@@ -19,7 +19,7 @@ keys()
 
 一个新的 {{jsxref("Map")}} 迭代器对象。
 
-## 例子
+## 示例
 
 ### 使用 keys()
 

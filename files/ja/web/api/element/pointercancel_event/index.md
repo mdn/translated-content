@@ -1,9 +1,9 @@
 ---
-title: 'Element: pointercancel イベント'
+title: "Element: pointercancel イベント"
 slug: Web/API/Element/pointercancel_event
 original_slug: Web/API/Document/pointercancel_event
 l10n:
-  sourceCommit: 3efb6cc0c72738d127ccd0829196b9dd24a726a6
+  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
 ---
 
 {{APIRef}}
@@ -24,9 +24,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pointercancel', (event) => {});
+addEventListener("pointercancel", (event) => {});
 
-onpointercancel = (event) => { };
+onpointercancel = (event) => {};
 ```
 
 ## イベント型
@@ -65,20 +65,20 @@ _このインターフェイスは {{domxref("MouseEvent")}} および {{domxref
 `addEventListener()` を使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointercancel', (event) => {
-  console.log('Pointer event cancelled');
+para.addEventListener("pointercancel", (event) => {
+  console.log("Pointer event cancelled");
 });
 ```
 
 `onpointercancel` イベントハンドラープロパティを使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointercancel = (event) => {
-  console.log('Pointer event cancelled');
+  console.log("Pointer event cancelled");
 };
 ```
 

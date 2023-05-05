@@ -153,9 +153,9 @@ browser.menus.create({
 - {{WebExtAPIRef("menus.onShown")}}
   - : Lancé lorsque le navigateur affiche un menu.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

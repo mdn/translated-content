@@ -1,6 +1,6 @@
 ---
 title: <input type="hidden">
-slug: Web/HTML/Element/Input/hidden
+slug: Web/HTML/Element/input/hidden
 page-type: html-element
 tags:
   - Элемент

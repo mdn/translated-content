@@ -1,5 +1,5 @@
 ---
-title: WAI-ARIA basics
+title: WAI-ARIA 基础
 slug: Learn/Accessibility/WAI-ARIA_basics
 ---
 
@@ -112,7 +112,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 ### 路牌/地标（**Signposts/Landmarks**）
 
-WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles)的例子（[在线 demo](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
+WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles)的例子（[在线演示](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
 
 ```html
 <header>
@@ -402,13 +402,3 @@ function toggleMusician(bool) {
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) — A W3C spec that defines, for each HTML feature, what accessibility (ARIA) semantics that feature implicitly has set on it by the browser, and what WAI-ARIA features you may set on it if extra semantics are required.
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
-
-## 本章目录
-
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

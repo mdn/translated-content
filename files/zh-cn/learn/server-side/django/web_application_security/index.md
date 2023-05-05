@@ -132,7 +132,7 @@ Django 还提供了很多其他形式的防护措施 (大部分不是很容易�
 
 ## 总结
 
-Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS 和 CSRF 攻击。本文中，我们已经使用本地图书馆网站来了演示 Django 如何处理一些特定的攻击。我们也提供了关于其它保护措施的简单概述。
+Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS 和 CSRF 攻击。本文中，我们已经使用本地图书馆网站来了演示 Django 如何处理一些特定的攻击。我们也提供了关于其他保护措施的简单概述。
 
 但这仅仅是对网站安全的一个入门。我们强烈建议您阅读 [Django 中的安全](https://docs.djangoproject.com/en/2.0/topics/security/) 以获得更加深入的理解。
 
@@ -146,21 +146,3 @@ Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS
 - [Securing your site](/zh-CN/docs/Web/Security/Securing_your_site) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/zh-CN/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-CN/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-CN/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-CN/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-CN/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-CN/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-CN/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-CN/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

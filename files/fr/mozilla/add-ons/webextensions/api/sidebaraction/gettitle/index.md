@@ -49,10 +49,6 @@ var gettingTitle = browser.sidebarAction.getTitle(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le titre de la barre latérale.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.getTitle",2)}}
-
 ## Exemples
 
 Ce code bascule le titre entre "this" et "that" chaque fois que l'utilisateur clique sur l'action du navigateur
@@ -71,6 +67,10 @@ browser.browserAction.onClicked.addListener(() => {
   gettingTitle.then(toggleTitle);
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -43,7 +43,7 @@ Prueba el resultado:
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.File.name")}}
+{{Compat}}
 
 ## Vea también
 

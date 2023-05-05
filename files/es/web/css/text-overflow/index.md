@@ -425,9 +425,9 @@ p {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-overflow")}}
+{{Compat}}
 
 ## See also
 

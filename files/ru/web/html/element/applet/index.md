@@ -4,8 +4,6 @@ slug: Web/HTML/Element/applet
 translation_of: Web/HTML/Element/applet
 ---
 
-{{obsolete_header}}
-
 Элемент HTML апплет (\<applet>) определяет включение апплета java.
 
 > **Примечание:** Примечание: {{htmlelement("applet")}} элемент был удалён в [Gecko 56](https://bugzilla.mozilla.org/show_bug.cgi?id=1279218) и [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=470301) в конце 2015 года. Удаление рассматривается в [WebKit](https://bugs.webkit.org/show_bug.cgi?id=157926) и [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11946645/).

@@ -147,7 +147,7 @@ her in a languid, sleepy voice.</p>
 
 (Обновите страницу, чтобы увидеть анимацию, или щёлкните по кнопке CodePen, чтобы воспроизвести её в окне CodePen)
 
-{{ EmbedLiveSample('Добавление_других_ключевых_кадров', '100%', '250', '', 'Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy') }}
+{{ EmbedLiveSample('Добавление_других_ключевых_кадров', '100%', '250') }}
 
 ### Настройка повторения
 
@@ -216,7 +216,7 @@ at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.</p>
 ```
 
-{{ EmbedLiveSample('Движение_текста_вправо_и_влево', '100%', '250', '', 'Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy') }}
+{{ EmbedLiveSample('Движение_текста_вправо_и_влево', '100%', '250') }}
 
 ### Использование шорткодов
 

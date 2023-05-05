@@ -1,6 +1,6 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
+slug: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}
@@ -165,7 +165,7 @@ function disableButton() {
 
 {{EmbedLiveSample("继承禁用状态", 650, 100)}}
 
-> **备注：** Firefox 不像其他浏览器那样，它会在不同页面之间保持 {{HTMLElement("button")}} 的[动态禁用的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 {{htmlattrxref("autocomplete","button")}} 属性来控制这个特性。
+> **备注：** Firefox 不像其他浏览器那样，它会在不同页面之间保持 {{HTMLElement("button")}} 的[动态禁用的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/button#autocomplete) 属性来控制这个特性。
 
 ## 验证
 

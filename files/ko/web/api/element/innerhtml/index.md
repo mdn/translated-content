@@ -120,7 +120,7 @@ log("Logging mouse events inside this container...");
 
 `log()` 함수는 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}을 사용하여 {{jsxref("Date")}} 객체에서 현재 시간을 가져 오고, 타임 스탬프와 메시지 텍스트가 있는 문자열을 작성하여 로그 출력을 만듭니다. 그런 다음 메시지는 클래스 `"log"`가 있는 상자에 추가됩니다.
 
-{{domxref("MouseEvent")}} 기반 이벤트 ({{event("mousedown")}}, [`click`](/ko/docs/Web/API/Element/click_event), {{event("mouseenter")}}와 같은) 정보를 기록하는 두 번째 메서드를 추가합니다:
+{{domxref("MouseEvent")}} 기반 이벤트 ({{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}와 같은) 정보를 기록하는 두 번째 메서드를 추가합니다:
 
 ```js
 function logEvent(event) {

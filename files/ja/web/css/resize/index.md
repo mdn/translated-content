@@ -9,7 +9,7 @@ slug: Web/CSS/resize
 
 {{EmbedInteractiveExample("pages/css/resize.html")}}
 
-`resize` は以下の者には適用されません。
+`resize` は以下のものには適用されません。
 
 - インライン要素
 - {{cssxref("overflow")}} プロパティが `visible` であるブロック要素
@@ -32,7 +32,7 @@ resize: revert;
 resize: unset;
 ```
 
-`resize` プロパティは以下の挙げた単一のキーワード値で指定します。
+`resize` プロパティは以下に挙げるキーワードから単一の値を指定します。
 
 ### 値
 
