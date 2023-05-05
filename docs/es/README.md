@@ -68,6 +68,14 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 | Warning                         | Advertencia                    |
 | Framework                       | Framework                      |
 
+### Formatos especiales
+
+| Inglés         | Español            |
+|----------------|--------------------|
+| `**Note:**`    | `**Nota:**`        |
+| `**Warning:**` | `**Advertencia:**`  |
+| `**Callout:**` | `**Observación:**` |
+
 ## Formateo
 
 | Expresión | Como escribirlo |

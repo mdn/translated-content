@@ -24,7 +24,7 @@ Como todos os elementos HTML, esse elemento aceita os [global attributes](/pt-BR
 
 ## Interface do DOM
 
-Esse elemento implemena a interface[`HTMLDetailsElement`](/pt-BR/DOM/HTMLDetailsElement).
+Esse elemento implementa a interface[`HTMLDetailsElement`](/pt-BR/DOM/HTMLDetailsElement).
 
 ## Exemplos
 
@@ -34,10 +34,6 @@ Esse elemento implemena a interface[`HTMLDetailsElement`](/pt-BR/DOM/HTMLDetails
   <p>Mais informações sobre os detalhes.</p>
 </details>
 ```
-
-### Demonstração
-
-[Demo](http://html5-demos.appspot.com/static/html5-whats-new/template/index.html#5)
 
 ## Compatibilidade com navegadores
 

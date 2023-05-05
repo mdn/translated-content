@@ -1,6 +1,6 @@
 ---
 title: Antisèche sur la syntaxe des expressions rationnelles
-slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 ---
 
