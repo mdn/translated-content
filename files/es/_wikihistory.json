@@ -11005,13 +11005,13 @@
     "modified": "2020-03-12T19:48:33.901Z",
     "contributors": ["CatalinaCampos"]
   },
-  "Web/JavaScript/Reference/Errors/Not_a_codepoint": {
-    "modified": "2020-03-12T19:46:46.603Z",
-    "contributors": ["DGun17"]
-  },
   "Web/JavaScript/Reference/Errors/Not_a_function": {
     "modified": "2020-03-12T19:45:06.322Z",
     "contributors": ["PatoDeTuring", "untilbit", "josegarciaclm95"]
+  },
+  "Web/JavaScript/Reference/Errors/Not_a_valid_code_point": {
+    "modified": "2020-03-12T19:46:46.603Z",
+    "contributors": ["DGun17"]
   },
   "Web/JavaScript/Reference/Errors/Not_defined": {
     "modified": "2020-10-08T09:22:13.757Z",
