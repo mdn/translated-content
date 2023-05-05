@@ -3,7 +3,7 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 **`transform-origin`** CSS 属性让你更改一个元素变形的原点。
 

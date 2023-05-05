@@ -38,7 +38,7 @@ customElements.define(name, constructor, options);
 
 ### 自主定制元素
 
-以下代码取自我们的 [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) 示例 ([see it live also](https://mdn.github.io/web-components-examples/popup-info-box-web-component/))。
+以下代码取自我们的 [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component) 示例（[查看实时运行版本](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)）。
 
 ```js
 // Create a class for the element
@@ -128,7 +128,7 @@ customElements.define('popup-info', PopUpInfo);
 
 ### 自定义内置元素
 
-以下代码取自我们的 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) 实例 ([查看实例效果](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+以下代码取自我们的 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) 实例（[查看实例效果](https://mdn.github.io/web-components-examples/word-count-web-component/)）。
 
 ```js
 // Create a class for the element

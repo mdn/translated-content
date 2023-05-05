@@ -9,7 +9,7 @@ slug: Glossary/Character
 
 ### 基本知識
 
-- [Character (computing)](https://zh.wikipedia.org/wiki/Character_(computing)) (維基百科)
+- [Character (computing)](<https://zh.wikipedia.org/wiki/Character_(computing)>) (維基百科)
 - [Character encoding](https://zh.wikipedia.org/wiki/Character_encoding) (維基百科)
 - [ASCII](https://zh.wikipedia.org/wiki/ASCII) (維基百科)
 - [UTF-8](https://zh.wikipedia.org/wiki/UTF-8) (維基百科)

@@ -31,7 +31,7 @@ var source = audioCtx.createMediaStreamSource(stream);
 
 {{ htmlelement("video") }} 元素下面滑动杆控制低音过滤器过滤的程度，滑动杆的值越大，低音更明显
 
-> **备注：** **注意：你可以查看** [在线演示](https://mdn.github.io/webaudio-examples/stream-source-buffer/)，或者 [查看源码](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer)。
+> **备注：** 你可以查看[在线演示](https://mdn.github.io/webaudio-examples/stream-source-buffer/)，或者[查看源码](https://github.com/mdn/webaudio-examples/tree/main/stream-source-buffer)。
 
 ```js
 var pre = document.querySelector('pre');

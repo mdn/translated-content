@@ -7,7 +7,7 @@ slug: Web/API/WritableStreamDefaultWriter/close
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的 **`close()`** 方法用于关闭关联的可写流。
 
-在调用关闭行为之前，底层的 sink 将完成对所有先前写入的分块的处理。在此期间，任何进一步的尝试写入都将失败（不会导致流出错）。
+在调用关闭行为之前，底层的接收器将完成对所有先前写入的分块的处理。在此期间，任何进一步的尝试写入都将失败（不会导致流出错）。
 
 ## 语法
 
@@ -30,7 +30,7 @@ close()
 
 ## 示例
 
-下面的例子说明了这个接口的几个功能。它展示了使用自定义 sink 和由 API 提供的队列策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个分块写入流。最后，`write()` 和 `close()` 方法都会返回 promise，promise 的状态由对应的操作是否成功来决定。
+下面的例子说明了这个接口的几个功能。它展示了使用自定义接收器和由 API 提供的队列策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个分块写入流。最后，`write()` 和 `close()` 方法都会返回 promise，promise 的状态由对应的操作是否成功来决定。
 
 ```js
 const list = document.querySelector('ul');

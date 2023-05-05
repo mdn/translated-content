@@ -1699,6 +1699,8 @@
 /es/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/es/docs/Web/API/Element/nextElementSibling
 /es/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/es/docs/Web/API/Element/previousElementSibling
 /es/docs/Web/API/Notification/onclick	/es/docs/Web/API/Notification/click_event
+/es/docs/Web/API/Notification/permission	/es/docs/Web/API/Notification/permission_static
+/es/docs/Web/API/Notification/requestPermission	/es/docs/Web/API/Notification/requestPermission_static
 /es/docs/Web/API/Notifications_API/Usando_la_API_de_Notificaciones	/es/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /es/docs/Web/API/ParentNode/childElementCount	/es/docs/Web/API/Element/childElementCount
 /es/docs/Web/API/Position	/es/docs/Web/API/GeolocationPosition
@@ -1706,6 +1708,7 @@
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
 /es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Headers/Digest
 /es/docs/Web/API/UIEvent/pageX	/es/docs/Web/API/MouseEvent/pageX
+/es/docs/Web/API/URL/createObjectURL	/es/docs/Web/API/URL/createObjectURL_static
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
@@ -1775,6 +1778,11 @@
 /es/docs/Web/CSS/-moz-box-pack	/es/docs/Web/CSS/box-pack
 /es/docs/Web/CSS/-moz-context-properties	/es/docs/orphaned/Web/CSS/-moz-context-properties
 /es/docs/Web/CSS/-moz-font-language-override	/es/docs/Web/CSS/font-language-override
+/es/docs/Web/CSS/-moz-outline-radius	/es/docs/conflicting/Web/CSS/outline
+/es/docs/Web/CSS/-moz-outline-radius-bottomleft	/es/docs/conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2
+/es/docs/Web/CSS/-moz-outline-radius-bottomright	/es/docs/conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9
+/es/docs/Web/CSS/-moz-outline-radius-topleft	/es/docs/conflicting/Web/CSS/outline_cb050209a619bd4beea569386863d484
+/es/docs/Web/CSS/-moz-outline-radius-topright	/es/docs/conflicting/Web/CSS/outline_bfe8e66e2b112d3306d547388792b0af
 /es/docs/Web/CSS/-moz-user-modify	/es/docs/Web/CSS/user-modify
 /es/docs/Web/CSS/-webkit-mask	/es/docs/Web/CSS/mask
 /es/docs/Web/CSS/-webkit-mask-clip	/es/docs/Web/CSS/mask-clip
@@ -1783,6 +1791,8 @@
 /es/docs/Web/CSS/-webkit-mask-position	/es/docs/Web/CSS/mask-position
 /es/docs/Web/CSS/-webkit-mask-repeat	/es/docs/Web/CSS/mask-repeat
 /es/docs/Web/CSS/-webkit-print-color-adjust	/es/docs/Web/CSS/print-color-adjust
+/es/docs/Web/CSS/:-moz-list-bullet	/es/docs/Web/CSS/::-moz-list-bullet
+/es/docs/Web/CSS/:-moz-list-number	/es/docs/Web/CSS/::-moz-list-number
 /es/docs/Web/CSS/:-moz-locale-dir(ltr)	/es/docs/Web/CSS/:-moz-locale-dir_ltr
 /es/docs/Web/CSS/:-moz-locale-dir(rtl)	/es/docs/Web/CSS/:-moz-locale-dir_rtl
 /es/docs/Web/CSS/:-moz-ui-invalid	/es/docs/Web/CSS/:user-invalid
@@ -2242,8 +2252,11 @@
 /es/docs/Web/JavaScript/Language_Resources	/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /es/docs/Web/JavaScript/Primeros_Pasos	/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /es/docs/Web/JavaScript/Reference/About	/es/docs/conflicting/Web/JavaScript/Reference
+/es/docs/Web/JavaScript/Reference/Errors/Bad_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal
 /es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag
+/es/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/es/docs/conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/es/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/es/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /es/docs/Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos	/es/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params
 /es/docs/Web/JavaScript/Reference/Errors/caracter_ilegal	/es/docs/Web/JavaScript/Reference/Errors/Illegal_character
 /es/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
@@ -2678,9 +2691,10 @@
 /es/docs/Web/JavaScript/Referencia/Sentencias/while	/es/docs/Web/JavaScript/Reference/Statements/while
 /es/docs/Web/JavaScript/Referencia/template_strings	/es/docs/Web/JavaScript/Reference/Template_literals
 /es/docs/Web/JavaScript/Shells	/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
+/es/docs/Web/JavaScript/Typed_arrays	/es/docs/Web/JavaScript/Guide/Typed_arrays
 /es/docs/Web/JavaScript/Una_nueva_introducción_a_JavaScript	/es/docs/Web/JavaScript/Language_overview
 /es/docs/Web/JavaScript/Una_re-introducción_a_JavaScript	/es/docs/Web/JavaScript/Language_overview
-/es/docs/Web/JavaScript/Vectores_tipados	/es/docs/Web/JavaScript/Typed_arrays
+/es/docs/Web/JavaScript/Vectores_tipados	/es/docs/Web/JavaScript/Guide/Typed_arrays
 /es/docs/Web/JavaScript/enumeracion_y_propietario_de_propiedades	/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /es/docs/Web/MathML/Elemento	/es/docs/Web/MathML/Element
 /es/docs/Web/MathML/Elemento/math	/es/docs/Web/MathML/Element/math

@@ -394,7 +394,7 @@ if ("Promise" in window) {
 
 ### 使用 XHR 加载图像
 
-另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载一个图像的例子可在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 仓库中找到。你也可以[看它的实例](https://mdn.github.io/js-examples/promises-test/)。每一步都有注释可以让你详细的了解 Promise 和 XHR 架构。
+另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载一个图像的例子可在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) 仓库中找到。你也可以[看它的实例](https://mdn.github.io/js-examples/promises-test/)。每一步都有注释可以让你详细的了解 Promise 和 XHR 架构。
 
 ## 规范
 
