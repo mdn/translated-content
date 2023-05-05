@@ -84,7 +84,7 @@ slug: Web/HTML/Element/tbody
 
     > **メモ:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#Browser_compatibility) で `<string>` の値を確認してください。
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 表の背景色です。 [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/color_value#RGB_colors)の先頭に '`#`' をつけたものです。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)のうちの一つを利用することもできます。
 

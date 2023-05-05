@@ -24,7 +24,7 @@ l10n:
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : この属性は、コントロールの値をブラウザーが自動的に補完してよいかを示します。以下の値を指定できます。
 

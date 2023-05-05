@@ -66,7 +66,7 @@ l10n:
 
 > **メモ:** `alt` 属性は技術的には省略可能ですが、コンテンツの利用性を最大化するために常に設定してください。
 
-`<input type="image">` の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における {{htmlattrdef("alt", "img")}} 属性と同様に動作します。
+`<input type="image">` の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性と同様に動作します。
 
 ### formaction
 
@@ -173,9 +173,9 @@ l10n:
 
 `<input type="image">` 要素は — 通常の[送信ボタン](/ja/docs/Web/HTML/Element/input/submit)と同様に — 既定のフォームの動作を上書きするいくつかの属性を受け付けます。
 
-- {{htmlattrdef("formaction")}}
+- `formaction`
   - : input 要素から送信された情報を処理するプログラムの URI。要素のフォームオーナーの {{htmlattrxref("action", "form")}} 属性を上書きします。
-- {{htmlattrdef("formenctype")}}
+- `formenctype`
 
   - : サーバーにフォームを送信する際に使用するコンテンツの種類を指定します。指定可能な値は以下のとおりです。
 
@@ -184,7 +184,7 @@ l10n:
 
     この属性が指定された場合、要素のフォームオーナーの {{htmlattrxref("enctype", "form")}} 属性を上書きします。
 
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
 
   - : ブラウザーがフォームを送信するために使用する HTTP メソッドを指定します。指定可能な値は以下のとおりです。
 
@@ -193,9 +193,9 @@ l10n:
 
     指定された場合、この属性は要素のフォームオーナーの {{htmlattrxref("method", "form")}} 属性を上書きします。
 
-- {{htmlattrdef("formnovalidate")}}
+- `formnovalidate`
   - : 論理属性で、フォーム送信時に検証を行わないことを指定します。この属性が指定された場合、要素のフォームオーナーの {{htmlattrxref("novalidate", "form")}} 属性を上書きします。
-- {{htmlattrdef("formtarget")}}
+- `formtarget`
 
   - : フォームを送信した後に受信したレスポンスを表示する場所を示す名前またはキーワードです。これは、閲覧コンテキスト（例えば、タブ、ウィンドウ、インライン枠）の名前、またはキーワードです。この属性が指定された場合、要素のフォームオーナーの {{htmlattrxref("target", "form")}} 属性を上書きします。次のキーワードは特別な意味を持ちます。
 

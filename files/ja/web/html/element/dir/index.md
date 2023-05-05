@@ -17,7 +17,7 @@ slug: Web/HTML/Element/dir
 
 他のすべての HTML 要素と同様、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
 
-- {{htmlattrdef("compact")}}
+- `compact`
   - : これは論理属性で、コンパクトなスタイルでディレクトリー一覧をレンダリングするようヒントを与えるものです。この属性の解釈はユーザーエージェントに委ねられ、また全てのブラウザーで動作するものでもありません。
 
 ## 仕様書

@@ -142,19 +142,4 @@ MDN Web Docs では、HTML 要素について書くためのいくつかのル�
   リンクを作成しない場合は、**名前を山括弧で囲み**、「インラインコード」スタイル（例：`<title>`）を使用してください。
 - **属性名**: 「インラインコード」スタイルを使用して、属性名を `code font` で表示します。
     さらに、その属性が何をするものであるかの説明と関連して言及されるとき、またはページで初めて使用されるときは、 **`bold face`** で記述してください。
-- **属性の定義**: 定義語には [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) マクロを使用してください（例: `\{{htmlattrdef("type")}}`）。 これにより、用語の定義には [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) マクロを使用して、他のページから簡単にリンクすることができます（例: `\{{htmlattrxref("type", "element")}}`）。
 - **属性値**: 属性値に「インラインコード」スタイルを使用して `<code>` を適用し、コードサンプルの構文で必要な場合を除き、文字列の値を引用符で囲まないでください。例: 「`<input>` 要素の `type` 属性に `email` または `tel` を設定したとき ...」とします。
-
-### 末尾のスラッシュ
-
-空要素に XHTML スタイルの末尾のスラッシュを含めないでください、不要ですし、実行速度を遅くします。注意しないと古いブラウザーを中断させます（思い返してみると、 Netscape 4 から問題とはなっていませんが）。
-
-```html example-good
-<input type="text">
-<hr>
-```
-
-```html example-bad
-<input type="text" />
-<hr />
-```
