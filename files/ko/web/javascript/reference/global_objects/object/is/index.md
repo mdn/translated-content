@@ -1,6 +1,8 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 {{JSRef}}
 
@@ -41,9 +43,9 @@ Object.is(value1, value2);
   - 둘 다 {{jsxref("NaN")}}
   - 둘 다 0이나 {{jsxref("NaN")}}이 아니고, 같은 값을 지님
 
-`Object.is()`는 [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) 연산자와 같지 않습니다. `==` 연산자는 같음을 테스트하기 전에 양 쪽(이 같은 형이 아니라면)에 다양한 강제(coercion)를 적용하지만(`"" == false`가 `true`가 되는 것과 같은 행동을 초래), `Object.is`는 어느 값도 강제하지 않습니다.
+`Object.is()`는 [`==`](/ko/docs/Web/JavaScript/Reference/Operators/Equality) 연산자와 같지 않습니다. `==` 연산자는 같음을 테스트하기 전에 양 쪽(이 같은 형이 아니라면)에 다양한 강제(coercion)를 적용하지만(`"" == false`가 `true`가 되는 것과 같은 행동을 초래), `Object.is`는 어느 값도 강제하지 않습니다.
 
-`Object.is()`는 [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) 연산자와도 같지 않습니다. `Object.is()`와 `===`의 유일한 차이는 부호 있는 0과 `NaN` 값들의 처리입니다. `===` 연산자(및 `==` 연산자)는 숫자값 `-0`과 `+0`을 같게 처리하지만, {{jsxref("NaN")}}은 서로 같지 않게 처리합니다.
+`Object.is()`는 [`===`](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality) 연산자와도 같지 않습니다. `Object.is()`와 `===`의 유일한 차이는 부호 있는 0과 `NaN` 값들의 처리입니다. `===` 연산자(및 `==` 연산자)는 숫자값 `-0`과 `+0`을 같게 처리하지만, {{jsxref("NaN")}}은 서로 같지 않게 처리합니다.
 
 ## 예제
 
