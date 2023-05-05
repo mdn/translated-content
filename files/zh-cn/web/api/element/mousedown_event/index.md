@@ -80,7 +80,7 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 
 ## 示例
 
-参见 [`mousemove` 事件](/zh-CN/docs/Web/API/Element/mousemove_event#示例) 的示例。
+参见 [`mousemove` 事件](/zh-CN/docs/Web/API/Element/mousemove_event#示例)的示例。
 
 ## 规范
 
