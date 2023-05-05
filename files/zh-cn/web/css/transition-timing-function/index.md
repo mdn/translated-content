@@ -3,7 +3,7 @@ title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 ---
 
-{{ CSSRef() }}{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 ## 概述
 
