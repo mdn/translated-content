@@ -15,7 +15,7 @@ void gl.bindFramebuffer(target, framebuffer);
 
 ### 参数
 
-- target
+- `target`
 
   - : {{domxref("GLenum")}} 指定绑定点 (目标)。可能的值为：
 
@@ -25,12 +25,12 @@ void gl.bindFramebuffer(target, framebuffer);
       - `gl.DRAW_FRAMEBUFFER`: 相当于`gl.FRAMEBUFFER`，用作绘图，渲染，清除和写入操作。
       - `gl.READ_FRAMEBUFFER`: 用作读取操作的资源。
 
-- framebuffer
+- `framebuffer`
   - : 要绑定的 {{domxref("WebGLFramebuffer")}} 对象。
 
 ### 返回值
 
-None.
+无。
 
 ### 异常
 
