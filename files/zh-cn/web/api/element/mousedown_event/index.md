@@ -60,7 +60,7 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 - {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于整个文档的 Y 轴坐标。
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
-  - : 事件的次要目标（如果存在的话）。
+  - : 事件的次要目标（如果存在）。
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于屏幕的 X 轴坐标。
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
