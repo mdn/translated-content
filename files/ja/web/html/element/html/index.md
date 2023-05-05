@@ -58,11 +58,11 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("manifest")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `manifest` {{deprecated_inline}} {{Non-standard_Inline}}
   - : ローカルにキャッシュされるべきリソースを示すリソースマニフェストの {{glossary("URI")}} を指定します。
-- {{htmlattrdef("version")}} {{deprecated_inline}}
+- `version` {{deprecated_inline}}
   - : 現在の文書を管理する HTML の{{glossary("Doctype", "文書型定義")}}のバージョンを指定します。文書型宣言のバージョン情報と重複しているため、この属性は必須ではありません。
-- {{htmlattrdef("xmlns")}}
+- `xmlns`
   - : 文書の {{glossary("XML")}} {{glossary("Namespace", "名前空間")}}を指定します。既定値は `"http://www.w3.org/1999/xhtml"` です。これは XML {{glossary("parser", "パーサー")}}で解釈される文書では必須、 text/html の文書では任意です。
 
 ## 例

@@ -70,12 +70,12 @@ slug: Web/HTML/Element/area
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("alt")}}
+- `alt`
   - : 画像を表示しないブラウザーが代わりに表示するテキスト文字列です。テキストの内容は、代替テキストを表示しない場合に画像が提供する選択肢と同じものをユーザーに与えるような表現にすべきです。この属性は {{htmlattrxref("href", "area")}} 属性が使用されている場合のみ必要です。
 
 <!---->
 
-- {{htmlattrdef("coords")}}
+- `coords`
 
   - : code>coords 属性は `<area>` の寸法、形状、配置における [`shape`](#attr-shape) 属性の座標を詳述します。
 
@@ -88,15 +88,15 @@ slug: Web/HTML/Element/area
 
     値は CSS ピクセルの数です。
 
-- {{htmlattrdef("download")}}
+- `download`
   - : この属性がある場合は、作者はハイパーリンクをリソースのダウンロードに使用すると考えていることを示します。{{htmlattrxref("download", "a")}} 属性の詳しい説明は {{HTMLElement("a")}} をご覧ください。
-- {{htmlattrdef("href")}}
+- `href`
   - : この領域のハイパーリンクの宛先です。この値は有効な URL です。この属性は省略可能です。その場合、その `<area>` 要素はハイパーリンクを提供しません。
-- {{htmlattrdef("hreflang")}}
+- `hreflang`
   - : リンク先のリソースの言語を示します。許容される値は [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) で定めています。この属性は、 {{htmlattrxref("href", "area")}} 属性を与える場合にのみ使用してください。
-- {{htmlattrdef("ping")}}
+- `ping`
   - : ハイパーリンクがフォローされたときに、ブラウザーから {{HTTPMethod("POST")}} リクエストが本文を `PING` として (バックグラウンドで) 送信する URL を空白で区切ったリストで記述します。ふつうはトラッキング用に使用します。
-- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+- `referrerpolicy` {{experimental_inline}}
 
   - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です:
 
@@ -106,15 +106,15 @@ slug: Web/HTML/Element/area
     - "`origin-when-cross-origin`" は、異なる生成元へのナビゲートではリファラーをスキーム、ホスト、ポートに制限します。同一生成元へのナビゲートでは、リファラーのパスも含めます。
     - "`unsafe-url`" は、リファラーに生成元とパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これは生成元やパスの情報が TLS で保護されたリソースからセキュアでない生成元へ漏えいしますので、安全ではありません。
 
-- {{htmlattrdef("rel")}}
+- `rel`
   - : {{htmlattrxref("href", "area")}} 属性を含むアンカーで、この属性は、対象オブジェクトとリンクオブジェクトの関係を指定します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Link_types)のリストです。値とその意味は、文書作成者にとって意味を持つかもしれない何らかの権威によって登録されています。他に何も与えられていない場合の既定の関係は void です。この属性は {{htmlattrxref("href", "area")}} 属性が存在する場合にのみ使用してください。
-- {{htmlattrdef("shape")}}
+- `shape`
 
   - : 関連づけたホットスポットの形状です。 HTML の仕様書では、長方形の領域を定義する値 `rect`、円形の領域を定義する値 `circle`、多角形を定義する値 `poly`、定義済みの領域以外のすべての領域を示す値 `default` を定めています。
 
     多くのブラウザー、特に Internet Explorer 4 以降では `circ`, `polygon`, `rectangle` を {{htmlattrxref("shape", "area")}} の有効な値として対応していますが、これらの値は標準外です。
 
-- {{htmlattrdef("target")}}
+- `target`
 
   - : キーワードまたは作成者が定義した名前で、リンクされたリソースを表示する{{Glossary("browsing context", "閲覧コンテキスト")}}です。
 
@@ -131,17 +131,17 @@ slug: Web/HTML/Element/area
 
 ### 非推奨の属性
 
-- {{htmlattrdef("name")}} {{deprecated_inline}}
+- `name` {{deprecated_inline}}
   - : 古いブラウザーでスクリプトから使用できるようにするため、クリッカブル領域に名前を定義します。
-- {{htmlattrdef("nohref")}} {{deprecated_inline}}
+- `nohref` {{deprecated_inline}}
 
   - : 関連づけた領域にハイパーリンクがないことを示します。
 
     > **メモ:** HTML5 では `href` 属性を省略すれば十分です。
 
-- {{htmlattrdef("tabindex")}} {{deprecated_inline}}
+- `tabindex` {{deprecated_inline}}
   - : ブラウザーのタブオーダーにおける、定義した領域の位置を示す数値です。この属性は HTML5 のグローバル属性です。
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : この属性は使用しないでください。ブラウザーは無視します (HTML 仕様書の W3C 5.3 では有効なものとして定義していますが、[正規の HTML 仕様書](https://html.spec.whatwg.org/multipage/#the-area-element)では定義していておらず、どのユーザーエージェントでも効果がありません。)
 
 ## 例

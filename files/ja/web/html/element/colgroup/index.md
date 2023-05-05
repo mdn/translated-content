@@ -70,7 +70,7 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("span")}}
+- `span`
 
   - : この属性は正の整数で、 `<colgroup>` 要素がまたがる列の数を示します。存在しない場合の既定値は `1` です。
 
@@ -80,7 +80,7 @@ l10n:
 
 以下の属性は非推奨であり、使用すべきではありません。これらの属性は、既存のコードを更新する際の参考として、また歴史的な興味のためだけに、以下に文書化されています。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : この列挙属性は、各列の内容物の水平方向の配置方法を制御します。以下の値が指定可能です。
 
@@ -98,17 +98,17 @@ l10n:
     >
     > 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/color_value#rgb_色)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#色キーワード)の一つも使用できます。
 
     同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
   - : この属性は、列グループ内の内容をある文字へ整列することを指定します。典型的な値としては、数字や金額を整列させようとするときのピリオド (.) があります。 {{htmlattrxref("align", "colgroup")}} が `char` に設定されていない場合、この属性は無視されますが、この列グループのメンバーである {{HTMLElement("col")}} の {{htmlattrxref("align", "col")}} の既定値として使用されます。
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : この属性は、`char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : この属性は、各列の内容物の垂直方向の配置方法を制御します。以下の値が指定可能です。
 

@@ -13,7 +13,7 @@ l10n:
 
 基本的な HTML グローバル属性に加えて、以下のグローバル属性も存在します。
 
-- {{HTMLAttrDef("xml:lang")}} と {{HTMLAttrDef("xml:base")}}。これらは XHTML 仕様から継承したもので非推奨ですが、互換性のために残されています。
+- `xml:lang` と `xml:base`。これらは XHTML 仕様から継承したもので非推奨ですが、互換性のために残されています。
 - アクセシビリティを確保するために使用される、 ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles) 属性および複数の [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Attributes) 状態およびプロパティ。
 - [イベントハンドラー](/ja/docs/Web/HTML/Attributes#イベントハンドラー)属性: `onabort`, `onautocomplete`, `onautocompleteerror`, `onblur`, `oncancel`, `oncanplay`, `oncanplaythrough`, `onchange`, `onclick`, `onclose`, `oncontextmenu`, `oncuechange`, `ondblclick`, `ondrag`, `ondragend`, `ondragenter`, `ondragleave`, `ondragover`, `ondragstart`, `ondrop`, `ondurationchange`, `onemptied`, `onended`, `onerror`, `onfocus`, `oninput`, `oninvalid`, `onkeydown`, `onkeypress`, `onkeyup`, `onload`, `onloadeddata`, `onloadedmetadata`, `onloadstart`, `onmousedown`, `onmouseenter`, `onmouseleave`, `onmousemove`, `onmouseout`, `onmouseover`, `onmouseup`, `onmousewheel`, `onpause`, `onplay`, `onplaying`, `onprogress`, `onratechange`, `onreset`, `onresize`, `onscroll`, `onseeked`, `onseeking`, `onselect`, `onshow`, `onsort`, `onstalled`, `onsubmit`, `onsuspend`, `ontimeupdate`, `ontoggle`, `onvolumechange`, `onwaiting`
 

@@ -64,15 +64,15 @@ slug: Web/HTML/Element/hr
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : 区切り線の配置を指定します。初期値は `left` です。
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : 区切り線の色を色名、または 16 進数で指定します。
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : 網掛けをしないように指定します。
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : 区切り線の高さをピクセル数で指定します。
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : 区切り線の幅をピクセル数、あるいはパーセントで指定します。
 
 ## 例
