@@ -1,11 +1,11 @@
 ---
-title: Element: mouseenter 事件
+title: 'Element: mouseenter 事件'
 slug: Web/API/Element/mouseenter_event
 ---
 
 {{APIRef}}
 
-当一个定点设备（通常指鼠标）第一次移动到触发事件元素中的激活区域时，**`mouseenter`** 事件在该 {{domxref("Element")}} 中触发。
+**`mouseenter`** 事件在一个指针设备（通常指鼠标）第一次移动到触发事件元素中的激活区域时 {{domxref("Element")}} 触发。
 
 ## 语法
 
@@ -30,9 +30,9 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : 当鼠标事件被触发时，如果按着 <kbd>alt</kbd> 键，返回 `true`。
 - {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
-  - : 触发鼠标事件时，按下按钮的编号。
+  - : 触发鼠标事件时，按下按钮的编号（如果适用）。
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
-  - : 触发鼠标事件时按下的按钮（如果有的话）。
+  - : 触发鼠标事件时按下的按钮（如果存在）。
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于局部 DOM 元素的 X 轴坐标。
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
@@ -58,7 +58,7 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 - {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于整个文档的 Y 轴坐标。
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
-  - : 事件的次要目标（如果有的话）。
+  - : 事件的次要目标（如果存在）。
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于屏幕的 X 轴坐标。
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
@@ -96,7 +96,7 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 ## 示例
 
-[`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event#example) 文档有一个阐述了 `mouseover` 和 `mouseenter` 之间区别的示例。
+[`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event#示例) 文档有一个阐述了 `mouseover` 和 `mouseenter` 之间区别的示例。
 
 ### mouseenter
 
