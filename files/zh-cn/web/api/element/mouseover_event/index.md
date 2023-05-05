@@ -30,9 +30,9 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : 当鼠标事件被触发时，如果按着 <kbd>alt</kbd> 键，返回 `true`。
 - {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
-  - : 触发鼠标事件时，按下按钮的编号。
+  - : 触发鼠标事件时，按下按钮的编号（如果适用）。
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
-  - : 触发鼠标事件时按下的按钮（如果有的话）。
+  - : 触发鼠标事件时按下的按钮（如果存在）。
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于局部 DOM 元素的 X 轴坐标。
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
@@ -58,7 +58,7 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 - {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于整个文档的 Y 轴坐标。
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
-  - : 事件的次要目标（如果有的话）。
+  - : 事件的次要目标（如果存在）。
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于屏幕的 X 轴坐标。
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
