@@ -372,9 +372,9 @@ request.onsuccess = function(event) {
 
 > **참고:** 이 때 우리는 `readwrite` 모드를 사용해야 합니다. 우리가 지금 한 것은 단순히 데이터를 읽어오는 게 아니라, 다시 쓰는 것이기 때문입니다.
 
-### Using a cursor
+### 커서 사용하기
 
-Using `get()` requires that you know which key you want to retrieve. If you want to step through all the values in your object store, then you can use a cursor. Here's what it looks like:
+`get()`을 사용하려면 검색하려는 키를 알고 있어야 합니다. 객체 저장소(object store)의 모든 값을 탐색하려면 커서를 사용할 수 있습니다. 아래는 커서를 사용하는 방법입니다:
 
 ```js
 var objectStore = db.transaction("customers").objectStore("customers");
@@ -391,9 +391,9 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-The `openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
+`openCursor()` 함수는 몇 가지 인자를 받습니다. 첫 번째로, 아래에서 곧 다룰 키 범위 객체(key range object)를 사용하여 검색할 항목의 범위를 제한할 수 있습니다. 두 번째로, 반복할 방향을 지정할 수 있습니다. 위 예제에서는 오름차순으로 모든 객체를 반복합니다. 커서들에 대한 성공 콜백함수는 약간 특이합니다. 커서 자체가 이벤트의 `결과` 입니다 (위 예에서는 축약 표현을 사용하므로 `event.target.result`입니다). 그런 다음 실제 키와 값을 커서 객체의 `key`와 `value` 속성에서 찾을 수 있습니다. 계속 진행하려면 커서에서 continue()를 호출해야 합니다. 데이터의 끝에 도달했거나 `openCursor()` 요청과 일치하는 항목이 없는 경우에도 여전히 성공 콜백이 호출되지만 `result` 속성은 `undefined`입니다.
 
-One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
+커서를 사용하는 일반적인 패턴 중 하나는 객체 저장소의 모든 객체를 검색하여 array에 추가하는 것입니다. 다음과 같이 작성할 수 있습니다:
 
 ```js
 var customers = [];
@@ -410,16 +410,16 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-> **참고:** **Note**: Mozilla has also implemented `getAll()` to handle this case (and `getAllKeys()`, which is currently hidden behind the `dom.indexedDB.experimental` preference in about:config). These aren't part of the IndexedDB standard, so they may disappear in the future. We've included them because we think they're useful. The following code does precisely the same thing as above:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` There is a performance cost associated with looking at the `value` property of a cursor, because the object is created lazily. When you use `getAll()` for example, Gecko must create all the objects at once. If you're just interested in looking at each of the keys, for instance, it is much more efficient to use a cursor than to use `getAll()`. If you're trying to get an array of all the objects in an object store, though, use `getAll()`.
+> **참고:** **Note**: Mozilla는 이런 경우를 처리하기 위해 getAll()을 구현했습니다(그리고 함께 구현한 `getAllKeys()`는 현재 about:config의 `dom.indexedDB.experimental` 설정 뒤에 숨겨져 있습니다.). 이들은 IndexedDB 표준은 아니기 때문에 추후 사라질 수 있습니다. 하지만 우리는 이것들이 유용하다고 생각하기 때문에 포함시켰습니다. 다음 코드는 위 코드와 정확히 같이 동작합니다.:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` 커서의 `value` 속성을 살펴보는 것은 성능상의 비용이 발생합니다. 왜냐하면 해당 객체는 지연 생성되기 때문입니다. 예를 들어 `getAll()` 을 사용할 때, Gecko는 모든 객체를 한 번에 생성합니다. 만약 키 각각을 보는 것에만 관심이 있다면, 커서를 사용하는 것이 `getAll()`을 사용하는 것 보다 훨씬 효율적입니다. 반면에 객체 저장소의 모든 객체 배열을 가져오려는 경우에는 `getAll()`을 사용하세요.
 
-### Using an index
+### index 사용하기
 
-Storing customer data using the SSN as a key is logical since the SSN uniquely identifies an individual. (Whether this is a good idea for privacy is a different question, outside the scope of this article.) If you need to look up a customer by name, however, you'll need to iterate over every SSN in the database until you find the right one. Searching in this fashion would be very slow, so instead you can use an index.
+고객 데이터를 저장할 때 사회보장번호(SSN)를 키로 사용하는 것은 논리적입니다. 왜냐하면 SSN은 각 개인을 고유 식별하기 때문입니다. (이것이 사생활 보호에 좋은 생각인지는 이 아티클의 범위를 벗어난 다른 문제입니다.) 그러나 이름으로 고객을 찾아야 하는 경우 데이터베이스의 모든 SSN을 반복하여 올바른 SSN을 찾아야 합니다. 이러한 방식으로 검색하면 매우 느리기 때문에 인덱스를 대신 사용할 수 있습니다.
 
 ```js
-// First, make sure you created index in request.onupgradeneeded:
+// 먼저, request.onupgradeneeeded로 index를 생성해주세요:
 // objectStore.createIndex("name", "name");
-// Otherwize you will get DOMException.
+// 그렇지 않을 경우 DOMException이 발생합니다.
 
 var index = objectStore.index("name");
 
@@ -428,58 +428,58 @@ index.get("Donna").onsuccess = function(event) {
 };
 ```
 
-The "name" cursor isn't unique, so there could be more than one entry with the `name` set to `"Donna"`. In that case you always get the one with the lowest key value.
+"name"은 고유하지 않기 때문에 `name`값이 `"Donna"`로 설정된 항목이 하나 이상 있을 수 있습니다. 이 경우 항상 가장 낮은 키 값인 결과 하나만 얻게 됩니다.
 
-If you need to access all the entries with a given `name` you can use a cursor. You can open two different types of cursors on indexes. A normal cursor maps the index property to the object in the object store. A key cursor maps the index property to the key used to store the object in the object store. The differences are illustrated here:
+특정 `name`값을 가진 모든 항목에 액세스해야 하는 경우 cursor를 사용할 수 있습니다. 인덱스들 마다 두 가지 다른 종류의 cursor를 열 수 있습니다. 일반적인 커서는 인덱스 속성을 객체 저장소의 객체에 매핑합니다. 그리고 키 커서는 객체를 객체 저장소에 저장하기 위해 사용된 키에 인덱스를 매핑합니다. 이러한 차이점은 다음과 같습니다.:
 
 ```js
-// Using a normal cursor to grab whole customer record objects
+// 일반적인 커서를 사용해서 고객 레코드 전체를 가져오기 
 index.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
-    // cursor.key is a name, like "Bill", and cursor.value is the whole object.
+    // cursor.key는 "Bill"과 같은 이름이며, cursor.value는 객체 전체를 의미합니다.
     alert("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
     cursor.continue();
   }
 };
 
-// Using a key cursor to grab customer record object keys
+// 키 커서를 사용해서 고객 레코드 객체 키를 가져오기
 index.openKeyCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
-    // cursor.key is a name, like "Bill", and cursor.value is the SSN.
-    // No way to directly get the rest of the stored object.
+    // cursor.key는 "Bill"과 같은 이름이며, cursor.value는 사회보장번호(SSN)입니다.
+    // 저장된 객체의 나머지 부분을 직접적으로 가져올 방법은 없습니다.
     alert("Name: " + cursor.key + ", SSN: " + cursor.primaryKey);
     cursor.continue();
   }
 };
 ```
 
-### Specifying the range and direction of cursors
+### 커서들의 범위와 방향을 특정하기
 
-If you would like to limit the range of values you see in a cursor, you can use a key range object and pass it as the first argument to `openCursor()` or `openKeyCursor()`. You can make a key range that only allows a single key, or one the has a lower or upper bound, or one that has both a lower and upper bound. The bound may be "closed" (i.e., the key range includes the given value) or "open" (i.e., the key range does not include the given value). Here's how it works:
+`openCursor()` 또는 `openKeyCursor()`의 첫 번째 인자로 사용할 수 있는 키 범위 객체(key range object)를 사용하여 커서에서 볼 값의 범위를 제한할 수 있습니다. 단일 키만 허용하도록 하는 key range를 만들거나 하한 또는 상한값이 있는 key range를 만들 수 있습니다. 또는 하한 및 상한 값이 모두있는 key range를 만들 수 있습니다. 범위는 "closed"(즉, key range가 주어진 값까지 포함)거나 "open"(즉, key range가 주어진 값은 포함하지 않음)일 수 있습니다. 다음은 key range가 작동하는 방식입니다:
 
 ```js
-// Only match "Donna"
+// "Donna"만을 조회
 var singleKeyRange = IDBKeyRange.only("Donna");
 
-// Match anything past "Bill", including "Bill"
+// "Bill"을 포함한, "Bill" 이후 모든 값을 조회
 var lowerBoundKeyRange = IDBKeyRange.lowerBound("Bill");
 
-// Match anything past "Bill", but don't include "Bill"
+// "Bill"을 제외한, "Bill" 다음 모든 값을 조회
 var lowerBoundOpenKeyRange = IDBKeyRange.lowerBound("Bill", true);
 
-// Match anything up to, but not including, "Donna"
+// "Donna"를 제외한, 이전 모든 값을 조회
 var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 
-// Match anything between "Bill" and "Donna", but not including "Donna"
+// "Donna"를 제외한, "Bill"과 "Donna" 사이 모든 값을 조회
 var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
-// To use one of the key ranges, pass it in as the first argument of openCursor()/openKeyCursor()
+// 위 키 범위 중 하나를 사용하려면, openCursor()/openKeyCursor()에 첫 번째 인자로 넘겨주세요.
 index.openCursor(boundKeyRange).onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
-    // Do something with the matches.
+    // 조회된 값으로 무언가 수행한다.
     cursor.continue();
   }
 };

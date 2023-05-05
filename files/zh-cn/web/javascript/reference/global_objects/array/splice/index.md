@@ -5,7 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 {{JSRef}}
 
-**`splice()`** 方法通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。
+**`splice()`** 方法[原地](https://zh.wikipedia.org/wiki/原地算法)改变一个数组的内容，通过移除或者替代已存在的元素和/或添加新元素。
+
+要创建一个删除和/或替换部分内容而不改变原数组的新数组，请使用 {{jsxref("Array/toSpliced", "toSpliced()")}}。要访问数组的一部分而不修改它，参见 {{jsxref("Array.prototype.slice()", "slice()")}}。
 
 {{EmbedInteractiveExample("pages/js/array-splice.html")}}
 
@@ -21,100 +23,150 @@ splice(start, deleteCount, item1, item2, itemN)
 ### 参数
 
 - `start`
-  - : 指定修改的开始位置（从 0 计数）。如果超出了数组的长度，则从数组末尾开始添加内容；如果是负值，则表示从数组末位开始的第几位（从 -1 计数，这意味着 -n 是倒数第 n 个元素并且等价于 `array.length-n`）；如果负数的绝对值大于数组的长度，则表示开始位置为第 0 位。
+
+  - : 从 0 开始计算的索引，表示要开始改变数组的位置，它会被[转换成整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+    - 负索引从数组末尾开始计算——如果 `start < 0`，使用 `start + array.length`。
+    - 如果 `start < -array.length`，使用 `0`。
+    - 如果 `start >= array.length`，则不会删除任何元素，但是该方法会表现为添加元素的函数，添加所提供的那些元素。
+    - 如果 `start` 被省略了（即调用 `splice()` 时不传递参数），则不会删除任何元素。这与传递 `undefined` 不同，后者会被转换为 `0`。
+
 - `deleteCount` {{optional_inline}}
-  - : 整数，表示要移除的数组元素的个数。如果 `deleteCount` 大于 `start` 之后的元素的总数，则从 `start` 后面的元素都将被删除（含第 `start` 位）。如果 `deleteCount` 被省略了，或者它的值大于等于`array.length - start`(也就是说，如果它大于或者等于`start`之后的所有元素的数量)，那么`start`之后数组的所有元素都会被删除。如果 `deleteCount` 是 0 或者负数，则不移除元素。这种情况下，至少应添加一个新元素。
-- `item1, item2, ...` {{optional_inline}}
-  - : 要添加进数组的元素，从`start` 位置开始。如果不指定，则 `splice()` 将只删除数组元素。
+
+  - : 一个整数，表示数组中要从 `start` 开始删除的元素数量。
+
+    如果省略了 `deleteCount`，或者如果其值大于或等于由 `start` 指定的位置之后的元素数, 那么从 `start` 到数组末尾的所有元素将被删除。但是，如果你想要传递任何 `itemN` 参数，则应将 `Infinity` 作为 `deleteCount` 传递，以删除 `start` 之后的所有元素，因为显式的 `undefined` 会[转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)为 `0`。
+
+    如果 `deleteCount` 是 `0` 或者负数，则不会移除任何元素。在这种情况下，你应该至少指定一个新元素（请参见下文）。
+
+- `item1`, …, `itemN` {{optional_inline}}
+
+  - : 从 `start` 开始要加入到数组中的元素。
+
+    如果不指定任何元素，`splice()` 将只从数组中删除元素。
 
 ### 返回值
 
-由被删除的元素组成的一个数组。如果只删除了一个元素，则返回只包含一个元素的数组。如果没有删除元素，则返回空数组。
+一个包含了删除的元素的数组。
+
+如果只移除一个元素，则返回一个元素的数组。
+
+如果没有删除任何元素，则返回一个空数组。
 
 ## 描述
 
-如果添加进数组的元素个数不等于被删除的元素个数，数组的长度会发生相应的改变。
+`splice()` 方法是一个[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它可能会更改 `this` 的内容。如果指定的要插入的元素数量与要删除的元素数量不同，数组的 `length` 也将会更改。同时，它会使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建一个空数组实例并返回。
+
+如果删除的部分是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则 `splice()` 返回的数组也是稀疏的，对应的索引为空槽。
+
+`splice()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。尽管字符串也类似于数组，但这种方法不适用于它，因为字符串是不可变的。
 
 ## 示例
 
-### 从索引 2 的位置开始删除 0 个元素，插入“drum”
+### 移除索引 2 之前的 0（零）个元素，并插入“drum”
 
 ```js
-var myFish = ["angel", "clown", "mandarin", "sturgeon"];
-var removed = myFish.splice(2, 0, "drum");
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum");
 
-// 运算后的 myFish: ["angel", "clown", "drum", "mandarin", "sturgeon"]
-// 被删除的元素：[], 没有元素被删除
+// 运算后的 myFish 是 ["angel", "clown", "drum", "mandarin", "sturgeon"]
+// removed 是 []，没有元素被删除
 ```
 
-### 从索引 2 的位置开始删除 0 个元素，插入“drum”和 "guitar"
+### 移除索引 2 之前的 0（零）个元素，并插入“drum”和“guitar”
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-var removed = myFish.splice(2, 0, 'drum', 'guitar');
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum", "guitar");
 
-// 运算后的 myFish: ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
-// 被删除的元素：[], 没有元素被删除
+// 运算后的 myFish 是 ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
+// removed 是 []，没有元素被删除
 ```
 
-### 从索引 3 的位置开始删除 1 个元素
+### 在索引 3 处移除 1 个元素
 
 ```js
-var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
-var removed = myFish.splice(3, 1);
+const myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
+const removed = myFish.splice(3, 1);
 
-// 运算后的 myFish: ["angel", "clown", "drum", "sturgeon"]
-// 被删除的元素：["mandarin"]
+// 运算后的 myFish 是 ["angel", "clown", "drum", "sturgeon"]
+// removed 是 ["mandarin"]
 ```
 
-### 从索引 2 的位置开始删除 1 个元素，插入“trumpet”
+### 在索引 2 处移除 1 个元素，并插入“trumpet”
 
 ```js
-var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
-var removed = myFish.splice(2, 1, "trumpet");
+const myFish = ["angel", "clown", "drum", "sturgeon"];
+const removed = myFish.splice(2, 1, "trumpet");
 
-// 运算后的 myFish: ["angel", "clown", "trumpet", "sturgeon"]
-// 被删除的元素：["drum"]
+// 运算后的 myFish 是 ["angel", "clown", "trumpet", "sturgeon"]
+// removed 是 ["drum"]
 ```
 
-### 从索引 0 的位置开始删除 2 个元素，插入"parrot"、"anemone"和"blue"
+### 从索引 0 处移除 2 个元素，并插入“parrot”、“anemone”和“blue”
 
 ```js
-var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
-var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+const myFish = ["angel", "clown", "trumpet", "sturgeon"];
+const removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 
-// 运算后的 myFish: ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
-// 被删除的元素：["angel", "clown"]
+// 运算后的 myFish 是 ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
+// removed 是 ["angel", "clown"]
 ```
 
-### 从索引 2 的位置开始删除 2 个元素
+### 从索引 2 处开始移除 2 个元素
 
 ```js
-var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
-var removed = myFish.splice(myFish.length - 3, 2);
+const myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
+const removed = myFish.splice(2, 2);
 
-// 运算后的 myFish: ["parrot", "anemone", "sturgeon"]
-// 被删除的元素：["blue", "trumpet"]
+// 运算后的 myFish 是 ["parrot", "anemone", "sturgeon"]
+// removed 是 ["blue", "trumpet"]
 ```
 
-### 从索引 -2 的位置开始删除 1 个元素
+### 从索引 -2 处移除 1 个元素
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-var removed = myFish.splice(-2, 1);
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(-2, 1);
 
-// 运算后的 myFish: ["angel", "clown", "sturgeon"]
-// 被删除的元素：["mandarin"]
+// 运算后的 myFish 是 ["angel", "clown", "sturgeon"]
+// removed 是 ["mandarin"]
 ```
 
-### 从索引 2 的位置开始删除所有元素
+### 从索引 2 开始删除所有元素
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-var removed = myFish.splice(2);
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2);
 
-// 运算后的 myFish: ["angel", "clown"]
-// 被删除的元素：["mandarin", "sturgeon"]
+// 运算后的 myFish 是 ["angel", "clown"]
+// removed 是 ["mandarin", "sturgeon"]
+```
+
+### 在稀疏数组中使用 splice()
+
+`splice()` 方法保留了数组的稀疏性。
+
+```js
+const arr = [1, , 3, 4, , 6];
+console.log(arr.splice(1, 2)); // [empty, 3]
+console.log(arr); // [1, 4, empty, 6]
+```
+
+### 在非数组对象中使用 splice()
+
+`splice()` 方法读取 `this` 的 `length` 属性。然后，它根据需要更新整数键属性和 `length` 属性。
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  0: 5,
+  2: 4,
+};
+console.log(Array.prototype.splice.call(arrayLike, 0, 1, 2, 3));
+// [ 5 ]
+console.log(arrayLike);
+// { '0': 2, '1': 3, '3': 4, length: 4, unrelated: 'foo' }
 ```
 
 ## 规范
@@ -127,6 +179,12 @@ var removed = myFish.splice(2);
 
 ## 参见
 
-- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} - 在数组末尾增/删元素；
-- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} - 在数组首部增/删元素；
-- {{jsxref("Array.prototype.concat()", "concat()")}} - 把一个（或多个）数组和（或）值与原数组拼接，返回拼接后的数组。
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.slice()")}}
+- {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.unshift()")}}

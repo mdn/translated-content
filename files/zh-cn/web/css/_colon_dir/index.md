@@ -3,7 +3,7 @@ title: ':dir()'
 slug: Web/CSS/:dir
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 {{ SeeCompatTable() }}
 

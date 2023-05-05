@@ -2682,7 +2682,7 @@
     "modified": "2019-03-23T22:45:27.784Z",
     "contributors": ["jackblackevo", "Sebastianz"]
   },
-  "Web/API/URL/createObjectURL": {
+  "Web/API/URL/createObjectURL_static": {
     "modified": "2019-03-23T22:45:24.757Z",
     "contributors": ["mike-su"]
   },
@@ -3968,6 +3968,16 @@
       "Rplus"
     ]
   },
+  "Web/JavaScript/Guide/Typed_arrays": {
+    "modified": "2020-03-12T19:36:15.816Z",
+    "contributors": [
+      "ballfish",
+      "jackblackevo",
+      "roycrxtw",
+      "teoli",
+      "Kennyluck"
+    ]
+  },
   "Web/JavaScript/Guide/Using_promises": {
     "modified": "2020-03-12T19:47:23.033Z",
     "contributors": ["HamiltonWang", "flyinglimao"]
@@ -4071,7 +4081,7 @@
     "modified": "2020-03-12T19:44:53.537Z",
     "contributors": ["iigmir"]
   },
-  "Web/JavaScript/Reference/Errors/Bad_return_or_yield": {
+  "Web/JavaScript/Reference/Errors/Bad_return": {
     "modified": "2020-03-12T19:44:54.646Z",
     "contributors": ["iigmir"]
   },
@@ -4896,16 +4906,6 @@
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:53:17.228Z",
     "contributors": ["jackblackevo", "xsfishxs"]
-  },
-  "Web/JavaScript/Typed_arrays": {
-    "modified": "2020-03-12T19:36:15.816Z",
-    "contributors": [
-      "ballfish",
-      "jackblackevo",
-      "roycrxtw",
-      "teoli",
-      "Kennyluck"
-    ]
   },
   "Web/Manifest": {
     "modified": "2020-11-18T03:32:37.890Z",

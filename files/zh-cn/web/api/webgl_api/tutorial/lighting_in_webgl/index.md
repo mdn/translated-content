@@ -165,9 +165,9 @@ gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten())
 
 效果就是这样！
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Open this demo on a new page](http://mdn.github.io/webgl-examples/tutorial/sample7/)
+[查看完整的源码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [在新标签页中查看演示](https://mdn.github.io/webgl-examples/webgl-examples/tutorial/sample7/)
 
 ## 读者练习
 
