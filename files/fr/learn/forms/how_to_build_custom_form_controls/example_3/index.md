@@ -8,7 +8,8 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_3
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3
 ---
-Ceci est le troisième exemple expliquant comment [construire des widgets de formulaire personnalisés](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets "/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets").
+
+Ceci est le troisième exemple expliquant comment [construire des widgets de formulaire personnalisés](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets).
 
 ## Changement d'état
 

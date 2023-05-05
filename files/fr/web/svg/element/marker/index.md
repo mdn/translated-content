@@ -6,6 +6,7 @@ tags:
   - SVG Element
 translation_of: Web/SVG/Element/marker
 ---
+
 {{SVGRef}}
 
 L'élément **`<marker>`** définit un élément graphique qui pourra être utilisé pour dessiner des pointes de flèches ou des polymarqueurs sur un élément {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} ou {{SVGElement("polygon")}}.
@@ -51,28 +52,28 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("markerHeight")}}
   - : Définit la hauteur du viewport du marqueur.
-    _Valeur_: **[\<length>](/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
+    _Valeur_: **[\<length>](/fr/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
 - {{SVGAttr("markerUnits")}}
   - : Définit le système de coordnnées pour les attributs `markerWidth`, `markerHeight` et le contenu du `<marker>`.
     _Valeur_: `userSpaceOnUse`|`strokeWidth` ; _Valeur par défaut_: `strokeWidth`; _Animation_: **oui**
 - {{SVGAttr("markerWidth")}}
   - : Définit la largeur du viewport du marqueur.
-    _Valeur_: **[\<length>](/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
+    _Valeur_: **[\<length>](/fr/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
 - {{SVGAttr("orient")}}
   - : Définit l'orientation du marqueur relativement à la forme à laquelle il est attaché.
-    _Valeur_: `auto`|`auto-start-reverse`|**[\<angle>](/docs/Web/SVG/Content_type#Angle)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Valeur_: `auto`|`auto-start-reverse`|**[\<angle>](/fr/docs/Web/SVG/Content_type#Angle)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("preserveAspectRatio")}}
   - : Définit comment le fragment svg doit être déformé s'il est incorporé dans un conteneur avec un rapport hauteur:largeur différent de celui du marqueur.
     _Valeur_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Valeur par défaut_: `xMidYMid meet`; _Animation_: **oui**
 - {{SVGAttr("refX")}}
   - : Définit la coordonnées x du point de référence du marqueur.
-    _Valeur_: `left`|`center`|`right`|**[\<coordinate>](/docs/Web/SVG/Content_type#Coordinate)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Valeur_: `left`|`center`|`right`|**[\<coordinate>](/fr/docs/Web/SVG/Content_type#Coordinate)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("refY")}}
   - : Définit la coordonnées y du point de référence du marqueur.
-    _Valeur_: `top`|`center`|`bottom`|**[\<coordinate>](/docs/Web/SVG/Content_type#Coordinate)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Valeur_: `top`|`center`|`bottom`|**[\<coordinate>](/fr/docs/Web/SVG/Content_type#Coordinate)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("viewBox")}}
   - : Définit la limite de la zone de dessin pour le fragment SVG.
-    _Valeur_: **[\<list-of-numbers>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_: none; _Animation_: **oui**
+    _Valeur_: **[\<list-of-numbers>](/fr/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_: none; _Animation_: **oui**
 
 ### Attributs globaux
 
@@ -93,15 +94,11 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Sp"cification                                                                                    | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("SVG Markers", "#MarkerElement", "&lt;marker&gt;")}}             | {{Spec2("SVG Markers")}} |                     |
-| {{SpecName("SVG2", "painting.html#MarkerElement", "&lt;marker&gt;")}}     | {{Spec2("SVG2")}}         |                     |
-| {{SpecName("SVG1.1", "painting.html#MarkerElement", "&lt;marker&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.marker")}}
+{{Compat}}
 
 ## Voir aussi
 

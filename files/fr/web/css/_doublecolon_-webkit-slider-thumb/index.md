@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-webkit-slider-thumb
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-slider-thumb`** représente le curseur que peut déplacer l'utilisateur le long de la piste d'un élément {{HTMLElement("input")}} de type "`range"` afin de modifier la valeur numérique associée.
@@ -18,7 +19,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-slider-thumb")}}
+{{Compat}}
 
 ## Voir aussi
 

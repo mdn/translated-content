@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/name
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`name`**, rattachée à l'interface {{domxref("IDBIndex")}}, contient une chaîne de caractères qui permet de désigner l'index courant.
@@ -17,8 +18,10 @@ La propriété **`name`**, rattachée à l'interface {{domxref("IDBIndex")}}, co
 
 ## Syntaxe
 
-    var indexName = IDBIndex.name;
-    IDBIndex.name = indexName;
+```js
+var indexName = IDBIndex.name;
+IDBIndex.name = indexName;
+```
 
 ### Valeur
 
@@ -74,17 +77,15 @@ function displayDataByIndex() {
 };
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/to-do-notifications/) ([exemple](https://mdn.github.io/to-do-notifications/)).
+> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.name")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -94,4 +95,4 @@ function displayDataByIndex() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

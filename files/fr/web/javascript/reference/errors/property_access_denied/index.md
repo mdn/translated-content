@@ -9,11 +9,14 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 original_slug: Web/JavaScript/Reference/Erreurs/Property_access_denied
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    Error: Permission denied to access property "x"
+```
+Error: Permission denied to access property "x"
+```
 
 ## Type d'erreur
 

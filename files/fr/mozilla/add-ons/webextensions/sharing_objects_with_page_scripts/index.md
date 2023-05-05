@@ -15,6 +15,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 original_slug: Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_de_page
 ---
+
 {{AddonSidebar}}
 
 > **Note :** Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
@@ -88,7 +89,9 @@ Notez qu'une fois que vous faites cela, vous ne pouvez plus compter sur les prop
 
 Notez également que le déballage est transitif: lorsque vous utilisez `wrappedJSObject`, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:
 
-    XPCNativeWrapper(window.wrappedJSObject.foo);
+```js
+XPCNativeWrapper(window.wrappedJSObject.foo);
+```
 
 voir le document [vision Xray](/fr/Tech/Xray_vision) pour plus de détails à ce sujet.
 
@@ -138,7 +141,7 @@ browser.runtime.onMessage.addListener((message) => {
 Cela fait deux choses :
 
 - exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur
-- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications)  lorsque le message arrive.
+- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications) lorsque le message arrive.
 
 Le script de contenu ressemble à ceci :
 

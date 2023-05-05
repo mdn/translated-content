@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Lexical_grammar
 original_slug: Web/JavaScript/Reference/Grammaire_lexicale
 ---
+
 {{JsSidebar("More")}}
 
 Cette page décrit la grammaire lexicale de JavaScript. Le code source d'un script ECMAScript est analysé de gauche à droite et est converti en une série d'éléments qui sont : des jetons, des caractères de contrôle, des terminateurs de lignes, des commentaires ou des blancs. ECMAScript définit également certains mots-clés et littéraux. ECMAScript possède également des règles pour insérer automatiquement des points-virgules à la fin des instructions.
@@ -19,9 +20,9 @@ Les caractères de contrôle n'ont aucune représentation visuelle mais sont uti
 
 | Point de code | Nom                                                          | Abréviation | Description                                                                                                                                                                                   |
 | ------------- | ------------------------------------------------------------ | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `U+200C`      | Antiliant sans chasse (_zero width non-joiner_ en anglais)   | <ZWNJ>      | Placé entre des caractères pour empêcher qu'ils soient connectés par une ligature dans certaines langues ([Wikipédia](https://fr.wikipedia.org/wiki/Antiliant_sans_chasse)).                  |
-| `U+200D`      | Liant sans chasse (_zero width joiner_ en anglais)           | <ZWJ>       | Placé entre des caractères qui ne seraient normalement pas connectés pour les afficher comme connectés dans certaines langues ([Wikipédia](https://fr.wikipedia.org/wiki/Liant_sans_chasse)). |
-| `U+FEFF`      | Indicateur d'ordre des octets (_byte order mark_ en anglais) | <BOM>       | Utilisé au début d'un script pour indiquer qu'il est en Unicode et quel est l'ordre des octets ([Wikipedia](https://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets)).                  |
+| `U+200C`      | Antiliant sans chasse (_zero width non-joiner_ en anglais)   | \<ZWNJ>      | Placé entre des caractères pour empêcher qu'ils soient connectés par une ligature dans certaines langues ([Wikipédia](https://fr.wikipedia.org/wiki/Antiliant_sans_chasse)).                  |
+| `U+200D`      | Liant sans chasse (_zero width joiner_ en anglais)           | \<ZWJ>       | Placé entre des caractères qui ne seraient normalement pas connectés pour les afficher comme connectés dans certaines langues ([Wikipédia](https://fr.wikipedia.org/wiki/Liant_sans_chasse)). |
+| `U+FEFF`      | Indicateur d'ordre des octets (_byte order mark_ en anglais) | \<BOM>       | Utilisé au début d'un script pour indiquer qu'il est en Unicode et quel est l'ordre des octets ([Wikipedia](https://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets)).                  |
 
 ## Blancs
 
@@ -29,12 +30,12 @@ Les caractères d'espacement (blancs) sont utilisés pour des raisons de lisibil
 
 | Point de code | Nom                                                | Abréviation | Description                                                                                                  | Séquence d'échappement |
 | ------------- | -------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------ | ---------------------- |
-| U+0009        | Tabulation (horizontale)                           | <HT>        | Tabulation horizontale                                                                                       | \t                     |
-| U+000B        | Tabulation verticale                               | <VT>        | Tabulation verticale                                                                                         | \v                     |
-| U+000C        | Caractère de saut de page (_form feed_ en anglais) | <FF>        | Caractère de contrôle pour le saut de page ([Wikipédia](http://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f                     |
-| U+0020        | Espace sécable (_space_ en anglais)                | <SP>        | Espace sécable                                                                                               |                        |
-| U+00A0        | Espace insécable (_no-break space_ en anglais)     | <NBSP>      | Espace insécable                                                                                             |                        |
-| Autres        | Autres caractères d'espaces Unicode                | <USP>       | [Espaces Unicode sur Wikipédia](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode)      |                        |
+| U+0009        | Tabulation (horizontale)                           | \<HT>        | Tabulation horizontale                                                                                       | \t                     |
+| U+000B        | Tabulation verticale                               | \<VT>        | Tabulation verticale                                                                                         | \v                     |
+| U+000C        | Caractère de saut de page (_form feed_ en anglais) | \<FF>        | Caractère de contrôle pour le saut de page ([Wikipédia](http://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f                     |
+| U+0020        | Espace sécable (_space_ en anglais)                | \<SP>        | Espace sécable                                                                                               |                        |
+| U+00A0        | Espace insécable (_no-break space_ en anglais)     | \<NBSP>      | Espace insécable                                                                                             |                        |
+| Autres        | Autres caractères d'espaces Unicode                | \<USP>       | [Espaces Unicode sur Wikipédia](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode)      |                        |
 
 ## Terminateurs de lignes
 
@@ -44,10 +45,10 @@ Seuls les points de code Unicode qui suivent sont traités comme des fins de lig
 
 | Point de code | Nom                      | Abréviation | Description                                                                  | Séquence d'échappement |
 | ------------- | ------------------------ | ----------- | ---------------------------------------------------------------------------- | ---------------------- |
-| U+000A        | Nouvelle ligne           | <LF>        | Caractère de nouvelle ligne pour les systèmes UNIX.                          | \n                     |
-| U+000D        | Retour chariot           | <CR>        | Caractère de nouvelle ligne pour les systèmes Commodore et les premiers Mac. | \r                     |
-| U+2028        | Séparateur de ligne      | <LS>        | [Wikipédia](https://fr.wikipedia.org/wiki/Fin_de_ligne)                      |                        |
-| U+2029        | Séparateur de paragraphe | <PS>        | [Wikipédia](https://fr.wikipedia.org/wiki/Fin_de_ligne)                      |                        |
+| U+000A        | Nouvelle ligne           | \<LF>        | Caractère de nouvelle ligne pour les systèmes UNIX.                          | \n                     |
+| U+000D        | Retour chariot           | \<CR>        | Caractère de nouvelle ligne pour les systèmes Commodore et les premiers Mac. | \r                     |
+| U+2028        | Séparateur de ligne      | \<LS>        | [Wikipédia](https://fr.wikipedia.org/wiki/Fin_de_ligne)                      |                        |
+| U+2029        | Séparateur de paragraphe | \<PS>        | [Wikipédia](https://fr.wikipedia.org/wiki/Fin_de_ligne)                      |                        |
 
 ## Commentaires
 
@@ -461,16 +462,11 @@ a + b;
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName("ES1")}}                                                                                             | {{Spec2("ES1")}}         | Définition initiale.                                                                  |
-| {{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}                                             | {{Spec2('ES5.1')}}     |                                                                                       |
-| {{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}         | {{Spec2('ES6')}}         | Ajout : littéraux binaires et octaux, échappements de points de code Unicode, modèles |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}} | {{Spec2('ESDraft')}} |                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Voir aussi
 

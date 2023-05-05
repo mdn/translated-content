@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the string.
@@ -18,7 +19,9 @@ The **`toString()`** method returns a string representing the specified {{jsxref
 
 ## Syntaxe
 
-    bigIntObj.toString([base])
+```js
+bigIntObj.toString([base])
+```
 
 ### Paramètres
 
@@ -67,13 +70,11 @@ BigInt(-0).toString(); // '0'
 
 ## Spécifications
 
-| Spécification                                                                                      | État                    |
-| -------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.tostring) | Proposition de niveau 3 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

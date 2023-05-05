@@ -8,6 +8,7 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de réponse `ETag` HTTP est un identifiant pour une version spécifique d'une ressource. Il permet aux caches d'être plus efficaces et d'économiser de la bande passante, du fait que le serveur Web n'a pas besoin d'envoyer une réponse complète si le contenu n'a pas changé. Sinon, si le contenu a changé, les etags sont utiles pour empêcher les mises à jour simultanées d'une ressource de s'écraser mutuellement ("collisions en vol").
@@ -29,8 +30,10 @@ Si la ressource à une URL donnée change, une nouvelle valeur `Etag` doit être
 
 ## Syntaxe
 
-    ETag: W/"<etag_value>"
-    ETag: "<etag_value>"
+```
+ETag: W/"<etag_value>"
+ETag: "<etag_value>"
+```
 
 ## Directives
 
@@ -41,8 +44,10 @@ Si la ressource à une URL donnée change, une nouvelle valeur `Etag` doit être
 
 ## Exemples
 
-    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-    ETag: W/"0815"
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+ETag: W/"0815"
+```
 
 ### Évitement des collisions en vol
 
@@ -50,11 +55,15 @@ A l'aide des en-têtes `ETag` et {{HTTPHeader("If-Match")}}, vous pouvez détect
 
 Par exemple, lors de l'édition de MDN, le contenu actuel du wiki est haché et placé dans un `Etag` dans la réponse :
 
-    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 Lors de la sauvegarde des modifications d'une page wiki ("post" des données), la requête {{HTTPMethod("POST")}} contiendra l'en-tête {{HTTPHeader("If-Match")}} contenant les valeurs ETag par rapport auxquelles vérifier la péremption.
 
-    If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 Si les hachages ne correspondent pas, cela signifie que le document a été modifié entre-temps, et une erreur {{HTTPStatus("412")}} `Precondition Failed` est déclenchée.
 
@@ -62,19 +71,19 @@ Si les hachages ne correspondent pas, cela signifie que le document a été modi
 
 Un autre cas d'utilisation typique de l'en-tête `ETag` est de mettre en cache les ressources qui sont inchangées. Si un utilisateur visite à nouveau une URL donnée (qui a un ensemble d'`ETag`), et qu'elle est _périmée_, c'est à dire, trop ancienne pour être considérée comme utilisable, le client enverra en même temps la valeur de son `ETag` dans un champ d'en-tête {{HTTPHeader("If-None-Match")}} :
 
-    If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 Le serveur comparera l'`ETag` du client (envoyé avec `If-None-Match`) à l'`ETag` de sa version en cours de la ressource, et si les deux valeurs correspondent (c'est-à-dire que la ressource n'a pas changé), le serveur renverra un statut {{HTTPStatus( "304")}} Not Modified, sans aucun corps, qui indiquera au client que sa version mise en cache de la réponse est toujours bonne à utiliser (actuelle).
 
 ## Spécifications
 
-| Spécification                            | Titre                                                        |
-| ---------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "ETag", "2.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## Voir aussi
 

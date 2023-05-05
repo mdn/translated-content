@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/fallback
 ---
+
 {{CSSRef}}
 
 Le descripteur **`fallback`**, associé à la règle @ {{cssxref("@counter-style")}} est utilisé afin d'indiquer un style de secours au cas où le style courant ne permet pas de créer une représentation pour le marqueur du compteur pour une valeur donnée. Si le style de secours indiqué ne le permet pas non plus, ce sera le style de secours du style de secours qui sera utilisé et ainsi de suite. Si un style de secours valide n'est pas indiqué, ce sera la valeur `decimal` qui sera utilisée. Les scénarios pour lesquels ce style de secours est utilisé sont :
@@ -22,9 +23,13 @@ fallback: lower-alpha;
 fallback: custom-gangnam-style;
 ```
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -58,15 +63,11 @@ fallback: custom-gangnam-style;
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-fallback', 'fallback')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.fallback")}}
+{{Compat}}
 
 ## Voir aussi
 

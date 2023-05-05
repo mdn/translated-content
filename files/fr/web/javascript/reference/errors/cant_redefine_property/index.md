@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_redefine_property
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_redefine_property
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Cannot modify non-writable property {x} (Edge)
-    TypeError: can't redefine non-configurable property "x" (Firefox)
-    TypeError: Cannot redefine property: "x" (Chrome)
+```
+TypeError: Cannot modify non-writable property {x} (Edge)
+TypeError: can't redefine non-configurable property "x" (Firefox)
+TypeError: Cannot redefine property: "x" (Chrome)
+```
 
 ## Type d'erreur
 

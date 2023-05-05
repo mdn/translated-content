@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau.
@@ -20,8 +21,10 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque �
 
 ## Syntaxe
 
-    arr.forEach(callback);
-    arr.forEach(callback, thisArg);
+```js
+arr.forEach(callback);
+arr.forEach(callback, thisArg);
+```
 
 ### Paramètres
 
@@ -211,7 +214,7 @@ var obj2 = copie(obj1); // obj2 ressemble désormais à obj1
 Dans l'exemple qui suit, on utilise un tableau qui contient quatre élément : `"un"`, `"deux"`, `"trois"`, `"quatre"`. Lorsque le parcours du tableau arrive à l'élément `"deux"`, on décale le tableau d'un cran vers les premiers éléments. Aussi, l'élément `"quatre"` est décalé à la place de `"trois"` et `"trois"` est déplacé à la place de `"deux"`. Pour cette raison, lorsque `forEach` poursuit son parcours, elle saute la valeur "trois". Autrement dit, `forEach` n'utilise pas une copie du tableau au moment où elle est appelée, elle manipule le tableau directement. On voit aussi dans cet exemple que les éléments non initialisés ne sont pas traités par la fonction de rappel.
 
 ```js
-var mots = ["un", "deux", "trois",, "quatre"];
+var mots = ["un", "deux", "trois", "quatre"];
 mots.forEach(function(mot) {
   console.log(mot);
   if (mot === "deux") {
@@ -225,15 +228,11 @@ mots.forEach(function(mot) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.18', 'Array.prototype.forEach')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

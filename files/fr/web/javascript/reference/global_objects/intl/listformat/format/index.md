@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/format
 ---
+
 {{JSRef}}
 
 La méthode **`format()`** renvoie une chaîne de caractères représentant la liste passée en argument, mise en forme selon la langue choisie (lors de la construction de l'objet `Intl.ListFormat`).
@@ -24,7 +25,9 @@ La méthode **`format()`** renvoie une chaîne de caractères qui a été format
 
 ## Syntaxe
 
-    listFormat.format([list]);
+```js
+listFormat.format([list]);
+```
 
 ### Paramètres
 
@@ -37,13 +40,11 @@ Une chaîne de caractères représentant les éléments de la liste et mise en f
 
 ## Spécifications
 
-| Spécification                                                                                                                                 | État                    | Commentaires |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.prototype.format`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.format) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.format")}}
+{{Compat}}
 
 ## Voir aussi
 

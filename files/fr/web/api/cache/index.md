@@ -13,6 +13,7 @@ tags:
   - hors ligne
 translation_of: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}} {{SeeCompatTable}}
 
 L'interface `Cache` fournit un mécanisme de stockage pour les paires d'objets [`Request`](http://fetch.spec.whatwg.org/#request)/[`Response`](http://fetch.spec.whatwg.org/#response) qui sont mises en cache, par exemple dans le cadre du cycle de vie {{domxref("ServiceWorker")}}. Il est à noter que l'interface `Cache` est exposée à des portées fenêtrées ainsi qu'à des service workers. Vous n'êtes pas obligé de l'utiliser avec des services workers, même si elle est définie dans la spécification relative aux services workers.
@@ -112,17 +113,15 @@ self.addEventListener('fetch', function(event) {
 
 ### Storing cookies in Caches
 
-L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("Set-Cookie")}} soient supprimés avant de renvoyer un objet {{domxref("Response")}} à partir de {{domxref("WindowOrWorkerGlobalScope", "fetch()")}}. Ainsi, une réponse stockée dans un cache ne contiendra pas d'en-têtes.
+L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("Set-Cookie")}} soient supprimés avant de renvoyer un objet {{domxref("Response")}} à partir de [`fetch()`](/fr/docs/Web/API/fetch). Ainsi, une réponse stockée dans un cache ne contiendra pas d'en-têtes.
 
 ## Spécifications
 
-| Spécification                                                        | Statut                               | Commentaire          |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#cache', 'Cache')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Cache")}}
+{{Compat}}
 
 ## Voir aussi
 

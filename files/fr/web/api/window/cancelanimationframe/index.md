@@ -11,11 +11,14 @@ tags:
   - Window
 translation_of: Web/API/Window/cancelAnimationFrame
 ---
+
 {{APIRef}}La méthode **`window.cancelAnimationFrame()`** met fin à une animation précédement configurée par un appel à {{domxref("window.requestAnimationFrame()")}}.
 
 ## Syntaxe
 
-    window.cancelAnimationFrame(requestID);
+```js
+window.cancelAnimationFrame(requestID);
+```
 
 ### Paramètres
 
@@ -49,13 +52,11 @@ cancelAnimationFrame(myReq);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{spec("https://www.w3.org/TR/html51/webappapis.html#animation-frames", "Timing control for script-based animations: cancelAnimationFrame", "WD")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.cancelAnimationFrame")}}
+{{Compat}}
 
 ## Voir aussi
 

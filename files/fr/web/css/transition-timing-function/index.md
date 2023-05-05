@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/transition-timing-function
 ---
+
 {{CSSRef}}
 
 La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
@@ -24,34 +25,36 @@ Dans les deux cas, la déclaration CSS reste valide.
 
 ## Syntaxe
 
-    /* Valeurs avec un mot-clé */
-    transition-timing-function: ease;
-    transition-timing-function: ease-in;
-    transition-timing-function: ease-out;
-    transition-timing-function: ease-in-out;
-    transition-timing-function: linear;
-    transition-timing-function: step-start;
-    transition-timing-function: step-end;
+```css
+/* Valeurs avec un mot-clé */
+transition-timing-function: ease;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+transition-timing-function: ease-in-out;
+transition-timing-function: linear;
+transition-timing-function: step-start;
+transition-timing-function: step-end;
 
-    /* Valeurs fonctionnelles */
-    transition-timing-function: steps(4, jump-end);
-    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+/* Valeurs fonctionnelles */
+transition-timing-function: steps(4, jump-end);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
-    /* Valeurs avec une fonction en escalier */
-    transition-timing-function: steps(4, jump-start);
-    transition-timing-function: steps(10, jump-end);
-    transition-timing-function: steps(20, jump-none);
-    transition-timing-function: steps(5, jump-both);
-    transition-timing-function: steps(6, start);
-    transition-timing-function: steps(8, end);
+/* Valeurs avec une fonction en escalier */
+transition-timing-function: steps(4, jump-start);
+transition-timing-function: steps(10, jump-end);
+transition-timing-function: steps(20, jump-none);
+transition-timing-function: steps(5, jump-both);
+transition-timing-function: steps(6, start);
+transition-timing-function: steps(8, end);
 
-    /* Utilisation de plusieurs fonctions */
-    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+/* Utilisation de plusieurs fonctions */
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
-    /* Valeurs globales */
-    transition-timing-function: inherit;
-    transition-timing-function: initial;
-    transition-timing-function: unset;
+/* Valeurs globales */
+transition-timing-function: inherit;
+transition-timing-function: initial;
+transition-timing-function: unset;
+```
 
 ### Valeurs
 
@@ -95,9 +98,13 @@ Dans les deux cas, la déclaration CSS reste valide.
     - `step-end`
       - : Synonyme de `steps(1, jump-end)`
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -249,17 +256,13 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État/th>                                 | Commentaires        |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transition-timing-function")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS "en/CSS/CSS transitions")
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS)
 - {{domxref("TransitionEvent")}}

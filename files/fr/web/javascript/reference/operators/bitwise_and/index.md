@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_and
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur ET binaire (`&`) renvoie un nombre dont la représentation binaire est une séquence de bits où il y a un `1` pour chaque position où les bits des deux opérandes valent `1`.
@@ -45,6 +46,7 @@ La table de vérité pour l'opérateur ET est :
      9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
+
 14 & 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
 ```
 

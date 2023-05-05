@@ -1,16 +1,8 @@
 ---
 title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - Uint16Array
-  - ポリフィル
-browser-compat: javascript.builtins.Uint16Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint16Array
 ---
+
 {{JSRef}}
 
 **`Uint16Array`** は型付き配列で、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 original_slug: Web/JavaScript/Reference/Fonctions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}{{deprecated_header}}
 
 La propriété **`arguments.callee`** contient la fonction en cours d'exécution.
@@ -23,7 +24,7 @@ La propriété **`arguments.callee`** contient la fonction en cours d'exécution
 
 ### Pourquoi `arguments.callee` a-t-il été retiré du mode strict ES5 ?
 
-(adapté d'une réponse [Stack Overflow par olliej](http://stackoverflow.com/a/235760/578288 "http://stackoverflow.com/a/235760/578288"))
+(adapté d'une réponse [Stack Overflow par olliej](http://stackoverflow.com/a/235760/578288))
 
 Aux débuts de JavaScript, il n'était pas possible d'utiliser des expressions de fonction avec des noms. Il était donc impossible de faire une expression de fonction récursive.
 
@@ -130,16 +131,11 @@ jean();
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.arguments.callee")}}
+{{Compat}}
 
 ## Voir aussi
 

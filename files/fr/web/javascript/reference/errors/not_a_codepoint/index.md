@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Not_a_codepoint
 original_slug: Web/JavaScript/Reference/Erreurs/Not_a_codepoint
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    RangeError: Invalid code point {0} (Edge)
-    RangeError: {0} is not a valid code point (Firefox)
-    RangeError: Invalid code point {0} (Chrome)
+```
+RangeError: Invalid code point {0} (Edge)
+RangeError: {0} is not a valid code point (Firefox)
+RangeError: Invalid code point {0} (Chrome)
+```
 
 ## Type d'erreur
 

@@ -1,17 +1,10 @@
 ---
 title: console.timeEnd()
 slug: Web/API/console/timeEnd
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - ウェブ開発
-  - console
-  - ウェブコンソール
-browser-compat: api.console.timeEnd
-translation_of: Web/API/console/timeEnd
+l10n:
+  sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
+
 {{APIRef("Console API")}}
 
 **`console.timeEnd()`** は、以前 {{domxref("console.time()")}} の呼び出しで開始したタイマーを停止します。
@@ -23,13 +16,17 @@ translation_of: Web/API/console/timeEnd
 ## 構文
 
 ```js
-console.timeEnd(label);
+timeEnd(label)
 ```
 
 ### 引数
 
 - `label`
-  - : 停止するタイマーの名前です。停止させると、経過時間が自動的に[ウェブコンソール](/ja/docs/Tools/Web_Console)に停止した時刻を示すインジケーターと共に表示されます。
+  - : 停止するタイマーの名前です。停止させると、経過時間が自動的に[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)に停止した時刻を示すインジケーターと共に表示されます。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -37,7 +34,7 @@ console.timeEnd(label);
 console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
+alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 

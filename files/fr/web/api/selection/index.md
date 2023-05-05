@@ -3,6 +3,7 @@ title: selection
 slug: Web/API/Selection
 translation_of: Web/API/Selection
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -13,12 +14,16 @@ La classe de l'objet retourné par [`window.getSelection()`](Window/getSelection
 
 Un objet `selection` représente les [plages](range) sélectionnées par l'utilisateur. Habituellement, il ne contient qu'une seule plage accessible comme ceci&nbsp;:
 
-    range = sel.getRangeAt(0);
+```js
+range = sel.getRangeAt(0);
+```
 
 L'appel de la méthode [`toString()`](Selection/toString) renvoie le texte contenu dans la sélection. Cet appel peut être automatique, par exemple lorsque l'objet est passé à la fonction alert() :
 
-    selObj = window.getSelection();
-    window.alert(selObj);
+```js
+selObj = window.getSelection();
+window.alert(selObj);
+```
 
 ### Glossaire
 
@@ -40,7 +45,7 @@ Autres mots clés utilisés dans cette section.
 - [focusNode](/fr/docs/Web/API/Selection/focusNode)
   - : Renvoie le nœud où la sélection se termine.
 - [focusOffset](/fr/docs/Web/API/Selection/focusOffset)
-  - : Renvoie un nombre correspondant au décalage du « focus&nbsp;» de la sélection au sein du focus`Node`. Si le focus`Node` est un noeud texte, il s'agit du nombre de caractères précédants le « focus » au sein du focus`Node`. Si le focusNode est un élément, il s'agit du nombre de noeuds enfants du focus`Node` précédant le « focus ».
+  - : Renvoie un nombre correspondant au décalage du « focus&nbsp;» de la sélection au sein du `focusNode`. Si le `focusNode` est un noeud texte, il s'agit du nombre de caractères précédants le « focus » au sein du `focusNode`. Si le focusNode est un élément, il s'agit du nombre de noeuds enfants du `focusNode` précédant le « focus ».
 - [isCollapsed](/fr/docs/Web/API/Selection/isCollapsed)
   - : Renvoie un booléen indiquant si le point de départ et d'arrivée sont à la même position.
 - [rangeCount](/fr/docs/Web/API/Selection/rangeCount)
@@ -77,7 +82,7 @@ Autres mots clés utilisés dans cette section.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Selection")}}
+{{Compat}}
 
 ### Voir aussi
 

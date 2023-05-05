@@ -1,16 +1,8 @@
 ---
 title: HTMLInputElement.stepDown()
 slug: Web/API/HTMLInputElement/stepDown
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - リファレンス
-  - テキスト欄選択 API
-browser-compat: api.HTMLInputElement.stepDown
-translation_of: Web/API/HTMLInputElement/stepDown
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepDown([n])`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
@@ -117,14 +109,14 @@ button.addEventListener('click', function() {
 );
 
 function stepondown() {
-  let input = document.getElementById('theNumber');
-  let val = document.getElementById('decrementer').value;
+  let input = document.getElementById('theNumber');
+  let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* 引数付きで減算 */
-    input.stepDown(val);
-  } else {    /* 引数なしで減算。 0, 5, -2 などを試してください。 */
-    input.stepDown();
-  }
+  if (val) {  /* 引数付きで減算 */
+    input.stepDown(val);
+  } else {    /* 引数なしで減算。 0, 5, -2 などを試してください。 */
+    input.stepDown();
+  }
 }
 ```
 
@@ -160,4 +152,4 @@ input:invalid {
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.stepUp", "HTMLInputElement.stepUp()")}}
 - [`step`](/ja/docs/Web/HTML/Attributes/step),
-  [`min`](/ja/docs/Web/HTML/Attributes/min),  [`max`](/ja/docs/Web/HTML/Attributes/max) 属性
+  [`min`](/ja/docs/Web/HTML/Attributes/min), [`max`](/ja/docs/Web/HTML/Attributes/max) 属性

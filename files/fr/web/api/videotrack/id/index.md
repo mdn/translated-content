@@ -3,6 +3,7 @@ title: VideoTrack.id
 slug: Web/API/VideoTrack/id
 translation_of: Web/API/VideoTrack/id
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété `id` contient une chaîne qui identifie de manière unique une piste représentée par {{domxref("VideoTrack")}}. Cet ID peut être utilisé avec la méthode {{domxref("VideoTrackList.getTrackById()")}} pour localiser une piste spécifique dans le media associé à l'élément media.
@@ -11,7 +12,9 @@ Cet ID peut aussi être utilisé comme un fragement d'URL pour charger une piste
 
 ## Syntaxe
 
-    var trackID = VideoTrack.id;
+```js
+var trackID = VideoTrack.id;
+```
 
 Valeur
 
@@ -19,10 +22,8 @@ Une {{domxref("DOMString")}} qui identifie la piste, utilisable par la suite pou
 
 ## Spécifications
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.VideoTrack.id")}}
+{{Compat}}

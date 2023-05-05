@@ -1,18 +1,8 @@
 ---
 title: unset
 slug: Web/CSS/unset
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - スタイル
-  - unset
-browser-compat: css.types.global_keywords.unset
-translation_of: Web/CSS/unset
 ---
+
 {{CSSRef}}
 
 **`unset`** は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/Web/CSS/initial_value)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/Web/CSS/inheritance#inherited_properties)の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/Web/CSS/inheritance#non-inherited_properties)の場合は {{cssxref("initial")}} キーワードのように動作します。

@@ -1,14 +1,8 @@
 ---
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.getEntries
-translation_of: Web/API/Performance/getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`getEntries()`** メソッドは、そのページのすべての {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。リストのメンバー（エントリー）は、明示的な時点でパフォーマンスマークまたはメジャーを作成することで（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すことで）作成できます。特定の種類のパフォーマンスエントリーや特定の名前のパフォーマンスエントリーにのみ関心がある場合は、 {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} と {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} を参照してください。

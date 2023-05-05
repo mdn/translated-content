@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Delta
 original_slug: Glossaire/Delta
 ---
+
 Le terme **delta** fait référence à la différence entre deux valeurs ou états. Le nom provient de la lettre grecque Δ (delta), qui équivaut à la lettre _D_ dans l'alphabet romain. _Delta_ se réfère simplement à l'utilisation de la lettre Δ comme raccourci pour la _différence_.
 
 Le terme _delta_ est couramment utilisé pour communiquer les changements de vitesse, de position ou d'accélération d'un objet physique ou virtuel. Il est également utilisé pour décrire les changements de volume ou de fréquence des ondes sonores.

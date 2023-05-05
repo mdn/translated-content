@@ -1,10 +1,9 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap
-browser-compat: javascript.builtins.WeakMap
 ---
+
 {{JSRef}}
 
 El objeto `WeakMap` es una colección de pares llave/valor en la que las llaves
@@ -32,7 +31,7 @@ de la guía [colecciónes con llaves](/es/docs/Web/JavaScript/Guide/Keyed_collec
 
 Las llaves de los WeakMaps solamente pueden ser del tipo `Object`. Los {{Glossary("Primitive", "Primitive data types")}} como claves no están permitidos (ej. un {{jsxref("Symbol")}} no pueden ser una clave de `WeakMap`).
 
-### ¿Por qué *Weak*Map?
+### ¿Por qué WeakMap?
 
 Una API de mapeo _podría_ ser implementada en JavaScript con dos arreglos (uno para las llaves, otro para los valores) compartidos por los cuatro métodos de la API.
 Establecer elementos en este mapa implicaría colocar una llave y valor al final de cada uno de los arreglos simultáneamente.

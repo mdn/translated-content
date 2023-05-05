@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 original_slug: Web/JavaScript/Reference/Erreurs/Redeclared_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Let/Const redeclaration (Edge)
-    SyntaxError: redeclaration of formal parameter "x" (Firefox)
-    SyntaxError: Identifier "x" has already been declared (Chrome)
+```
+SyntaxError: Let/Const redeclaration (Edge)
+SyntaxError: redeclaration of formal parameter "x" (Firefox)
+SyntaxError: Identifier "x" has already been declared (Chrome)
+```
 
 ## Type d'erreur
 
@@ -50,7 +53,7 @@ function f(arg) {
 
 ## Notes de compatibilité
 
-- Avant Firefox 49 {{geckoRelease(49)}}, cela provoquait une exception {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- Avant Firefox 49, cela provoquait une exception {{jsxref("TypeError")}} ({{bug(1275240)}}).
 
 ## Voir aussi
 

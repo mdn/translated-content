@@ -1,15 +1,8 @@
 ---
 title: direction
 slug: Web/CSS/direction
-tags:
-  - BiDi
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.direction
-translation_of: Web/CSS/direction
 ---
+
 {{CSSRef}}
 
 **`direction`** は CSS のプロパティで、テキスト、表の列、水平方向のはみ出しの方向を設定します。右書きの言語（ヘブライ語やアラビア語など）では `rtl` を、左書きの言語（英語やそれ以外の多くの言語）では `ltr` を使います。

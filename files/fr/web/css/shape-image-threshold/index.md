@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/shape-image-threshold
 ---
+
 {{CSSRef}}
 
 La propriété **`shape-image-threshold`** définit le seuil, en terme de canal alpha, à utiliser pour extraire la forme d'une image. Cette forme pourra être utilisée pour {{cssxref("shape-outside")}}.
@@ -34,9 +35,13 @@ shape-image-threshold: unset;
 - `<number>`
   - : Un nombre ({{cssxref("&lt;number&gt;")}}) représentant le seuil utilisé pour extraire une forme d'une image. La forme est définie par les pixels dont la valeur du canal alpha est supérieur au seuil indiqué. Un seuil qui est inférieur à 0.0 (transparence totale) ou supérieur à 1.0 (opacité totale) sera ramené dans cet intervalle.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -82,15 +87,11 @@ Dans cet exemple, on utilise un bloc {{HTMLElement("div")}} pour y afficher une 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS Shapes', '#shape-image-threshold-property', 'shape-image-threshold')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.shape-image-threshold")}}
+{{Compat}}
 
 ## Voir aussi
 

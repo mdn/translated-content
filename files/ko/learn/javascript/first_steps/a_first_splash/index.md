@@ -1,99 +1,89 @@
 ---
-title: 자바스크립트 기초
+title: JavaScript에 발 담그기
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Conditionals
-  - Functions
-  - JavaScript
-  - Learn
-  - Objects
-  - Operators
-  - Variables
-  - events
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
-이제 우리는 자바스크립트에 대한 이론적인 몇몇 부분을 살펴볼 것이다. 이곳에서 무엇을 할 수 있는지 실용적인 연습을 통한 자바스크립의 기본적 사항들을 다루는 과정이 되겠다. 하나하나씩 "숫자맞추기" 게임을 간단하게 구성해나갈 것이다.
+JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 알아봤으니 이제 간단한 JavaScript 프로그램을 만들어보면서 개발 과정이 어떤 느낌인지 알아보겠습니다. "숫자 알아맞히기" 게임을 차근차근 따라 만들어봅시다.
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row">알아야할 것들:</th>
-      <td>기본적인 컴퓨터 사용과 HTML CSS와 자바스크립트에 대해 알아야 함.</td>
+      <th scope="row">필요한 사전 지식:</th>
+      <td>
+        기본적인 컴퓨터 이해 능력, HTML과 CSS 기초, JavaScript 기본 개념.
+      </td>
     </tr>
     <tr>
-      <th scope="row">수업 목표:</th>
+      <th scope="row">목표:</th>
       <td>
-        자바스크립트로 코딩하는 것을 처음으로 알아보고 자바스크립트로 쓰여진
-        프로그램이 가지고 있는 특징들을 조금이라도 이해한다.
+        JavaScript 코드를 직접 작성해보고, JavaScript 프로그램 개발에 어떤 것이 필요한지 느껴보기.
       </td>
     </tr>
   </tbody>
 </table>
 
-지금현재로서는 코드를 자세히 이해하려고 하지는 않을 것이다. 단지 지금은 넓게 개념을 이해하고, (다른 프로그래밍 언어를 포함해) 자바스크립트가 어떻게 운용되는지에 대한 아이디어가 필요하다. 자, 이제부터 자세한 부분에 대해 공부하고 알아보자!
+시작하기 전에, 우리의 기대 목표를 먼저 확실하게 짚고 넘어가겠습니다. 이 글을 끝낸 뒤에도, 함께 따라서 작성한 코드를 이해하지 못할 수 있습니다. 그래도 괜찮습니다. 이 시간은 JavaScript의 기능들이 함께 어떻게 동작하는지, JavaScript 코드를 작성하는 게 어떤 느낌인지 알려드리기 위한 시간일 뿐입니다. 여기에서 사용한 기능들은 이후의 다른 여러 글에서 자세하게 짚어볼 테니, 지금 당장은 굳이 모두 이해하려고 애쓰지 마세요.
 
-<div class="note"><p>Note: 자바스크립트에서 보는 다양한 요소들은 여타 프로그래밍 언어와 거의 똑같다.(함수나 반복문 등) 언어마다 문법이 다를 뿐이지 개념은 넓은범위에서 보자면 일맥상통하다.</p></div>
+> **참고:**
+>
+> 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
 
 ## 프로그래머처럼 사고하기
 
-프로그래밍에서 가장 어려운 것은 우리가 배우려고 하는 문법이 아닌, 어떻게 실생활의 문제를 프로그래밍으로 적용시킬까하는 문제이다. 이제부터는 프로그래머처럼 생각하는 것이 필요하다. 이는 일반적으로 프로그램이 필요한 부분과 어떻게 코드가 문제를 해결하기위해 작동되고, 협업해야 되는지에 대한 설명을 알고있어야 된다는 것이다.
+프로그래밍에서 가장 배우기 어려운 부분은 학습할 구문이 아니라, 그 구문을 어떻게 현실 세계의 문제에 적용할까 하는 문제입니다. 그러니 프로그래머처럼 생각해야 합니다. 프로그램의 동작 방식에 대한 설명을 보고, 어떤 코드 기능이 필요한지 파악하고, 이 둘을 어떻게 함께 활용할지 고민하는 과정이죠.
 
-이는 프로그래밍 문법에 대한 경험과 노력, 그리고 창의성을 비롯한 노력의 조합이 필요하다. 코드를 많이 작성할수록 얻는 것은 더 많아질 것이다. 지금 당장 "프로그래머의 사고능력"으로 발전시킨다고는 보장하지는 못하지만, 이 수업을 통해 여러분들에게 프로그래머처럼 생각하는 많은 연습의 기회는 줄 수 있다.
+노력과 프로그래밍 구문에 대한 경험, 연습, 그리고 약간의 창의성이 필요한 일입니다. 하면 할수록 더 잘 하게 될 겁니다. 단 5분 만에 "프로그래머 뇌"를 갖게 될 것이라고 약속할 수는 없겠지만, 프로그래머 사고법을 연습할 수 있는 많은 기회를 이 과정 안에서 제공하겠습니다.
 
-이러한 개념을 마음속에 품고, 앞으로 우리가 만들어나갈 예제를 한번 살펴보자. 여기서 실생활의 문제를 프로그래밍할 수 있도록 쪼개는 일반적인 과정을 볼 것이다.
+그러면, 이 글에서 만들게 될 프로그램을 직접 볼 시간입니다. 주어진 과제를 해결하기 쉬운 더 작은 단위의 작업으로 쪼개는 일반적인 과정도 살펴보겠습니다.
 
-## 예제-숫자맞추기
+## 예제 — 숫자 맞히기 게임
 
-아래 보이는 간단한 게임을 통해, 프로그램을 구성하는 방법을 알아볼 것이다.
+간단한 게임을 만들겠습니다. 바로 아래에서 결과물을 먼저 확인해 보세요.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game", 900, 300)}}
 
-한 번 실행해서 어떻게 이루어져 있는지 살펴보고 알아보자.
+한 번 플레이해 보세요. 다음 단계로 넘어가기 전에 먼저 게임에 익숙해져 보세요.
 
-만약 너의 상사가 예제에 관련되어 다음의 짦은 안내만 주어졌다고 생각해보자.
+이 게임을 만들기 위해서, 여러분의 직장 상사가 게임의 기능을 안내해 주고 가는 상황을 상상해 봅시다.
 
-> 나는 간단하게 숫자 맞추기 게임을 만들고 싶다. 1과 100사의 수 중에서 무작위로 선택되어야하고, 플레이어는 10번의 기회안에 그 숫자를 맞춰야 한다. 각 순서마다 숫자를 맞춰는지 틀렸는지는 당연히 알려줘야 하고, 틀렸다면 큰지 작은지도 포함해서 말해야 한다.또한 이전에 써냈던 번호들도 보여줘야 한다. 게임은 플레이어가 숫자를 맞추던가, 기회를 모두 소진하면 끝나게 된다. 게임이 끝나면 플레이어가 다시 게임을 할 것인지 묻게된다.
+> 간단한 숫자 맞히기 게임을 만들어주세요. 무작위로 선택한 1과 100 사이의 수를 플레이어가 10턴 내에 알아내는 게임입니다. 각 턴 후에는 플레이어가 고른 숫자가 맞았는지 아니면 틀렸는지 알려줘야 하고, 만약 틀린 경우에는 플레이어의 숫자가 너무 낮았는지, 아니면 너무 높았는지를 알려줘야 합니다. 플레이어가 이전에 추측한 숫자들의 기록도 보여줘야 합니다. 게임은 플레이어가 숫자를 맞히거나, 턴을 모두 소모하면 끝납니다. 게임이 끝난 뒤에는 다시 게임을 시작할 수 있는 옵션을 제공해야 합니다.
 
-위의 안내문을 보고, 우선 문제를 가능한 한 작게 쪼개서 간단한 작업으로 만드는 것부터 시작하자.
+상사의 안내 이후에 해야 할 일은, 최대한 프로그래머의 마음가짐을 갖추고, 이 과제를 간단하고 작은 작업으로 나눠보는 것입니다.
 
-1.  1과 100사이의 숫자 중 무작위로 추출한다.
-2.  1부터 플레이어의 차례를 기록한다.
-3.  플레이어에게 숫자를 맞출 수 있게 한다.
-4.  숫자를 맞추면 어딘가에 저장하고, 사용자는 이전의 추측한 숫자를 볼 수 있도록 한다.
-5.  그다음, 숫자가 일치한지 확인한다.
-6.  만약 일치한다면:
+1. 1과 100 사이의 무작위 숫자를 생성하기.
+2. 플레이어의 현재 턴을 기록하기. 1부터 시작.
+3. 플레이어가 정답을 추측할 수 있는 방법을 제공.
+4. 플레이어가 자신의 추측 기록을 확인할 수 있도록, 제출하는 수를 먼저 어딘가에 기록하기.
+5. 그 후, 제출한 수가 정답인지 확인.
+6. 만약 정답이라면...
 
-    1.  축하 메시지를 표시한다.
-    2.  더 이상 숫자를 맞출필요가 없다.
-    3.  플레이어가 다시 게임을 할지 묻는다.
+    1. 축하 메시지 보여주기.
+    2. 이후에 플레이어가 다른 숫자를 제출하면 게임이 망가질 수 있으므로 제출을 막기.
+    3. 게임을 다시 시작할 수 있는 컨트롤 보여주기.
 
-7.  숫자가 틀렸고, 차례가 남아있다면:
+7. 만약 오답이고 아직 플레이어 턴이 남아있다면...
 
-    1.  틀렸다고 알린다.
-    2.  다른 숫자를 입력할 수 있도록 한다.
-    3.  차례가 1 증가한다.
+    1. 오답임을 알려주고 제출한 숫자가 너무 높았는지 아니면 너무 낮았는지 보여주기.
+    2. 다른 숫자의 제출을 허용하기.
+    3. 턴 숫자를 1 늘리기.
 
-8.  숫자가 틀렸고, 차례가 없다면:
+8. 만약 오답인데 플레이어 턴이 남아있지 않다면...
 
-    1.  게임이 종료되었음을 알린다.
-    2.  더 이상 숫자를 맞출필요가 없다..
-    3.  플레이어가 다시 게임을 할지 묻는다.
+    1. 플레이어에게 게임이 끝났음을 알려주기.
+    2. 이후에 플레이어가 다른 숫자를 제출하면 게임이 망가질 수 있으므로 제출을 막기.
+    3. 게임을 다시 시작할 수 있는 컨트롤 보여주기.
 
-9.  게임이 재시작 되면, 게임의 구조와 UI는 완전히 리셋되며, step1 부터 다시 로직이 시작된다.
+9. 게임을 다시 시작하면 게임 로직과 UI를 완전히 초기화하고 1번으로 돌아가기.
 
-이제 다음 단계로 넘어가서 각 단계들을 코드로 어떻게 만들고, 예제 소스와 통합하며, 그와 관련된 자바 스크립트 기능은 무엇인지 살펴보도록 하겠다.
+이제 다음 단계로, 위의 작업들을 코드로 작성해서 예제 프로그램으로 구성하는 법과, 이에 필요한 JavaScript 기능들을 알아보겠습니다.
 
-### 초기 구성
+### 초기 설정
 
-수업에 앞서, 로컬에 [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) 파일을 저장하길 바란다. ([see it live here](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). 그러고 파일을 에디터와 브라우저에서 동시에 열어보자.  간단하게 요약된 설명과 추측하는 폼을 볼 때, 아직 숫자를 입력하는 폼은 아무런 기능을 하지 않는다
+자습서를 시작하기 전에 [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) 파일의 로컬 복사본을 만들어 주세요([실행 결과 미리보기](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). 저장한 파일을 텍스트 에디터와 웹 브라우저에서 각자 열어주세요. 지금 당장은 헤딩과 게임 플레이 방법을 알려주는 문단, 숫자를 입력할 양식을 볼 수는 있지만 아무런 동작도 하지 않을 겁니다.
 
-여러분들의 코드를 추가하는 부분은 HTML안의 {{htmlelement("script")}} 요소 사이에 있다.
+우리가 코드를 추가할 부분은 HTML의 아래쪽, {{htmlelement("script")}} 요소 안입니다.
 
 ```html
 <script>
@@ -103,51 +93,61 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 </script>
 ```
 
-### 데이터 저장을 위한 변수 추가
+### 데이터를 저장할 변수 추가하기
 
-이제 시작해보자! 먼저 {{htmlelement("script")}} 태그안에 다음의 코드들을 추가하자.
+시작해 봅시다. 먼저 {{htmlelement("script")}} 요소 안에 다음 코드를 추가해주세요.
 
 ```js
-var randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-var guesses = document.querySelector('.guesses');
-var lastResult = document.querySelector('.lastResult');
-var lowOrHi = document.querySelector('.lowOrHi');
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
 
-var guessSubmit = document.querySelector('.guessSubmit');
-var guessField = document.querySelector('.guessField');
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.querySelector('.guessField');
 
-var guessCount = 1;
-var resetButton;
+let guessCount = 1;
+let resetButton;
 ```
 
-이 코드의 부분은 프로그램에서 사용될 데이터를 저장할 변수를 세팅해준다. 변수들은 기본적으로 값들을  저장하고 있다. (숫자나 문자열 등). 변수들은 var이라는 키워드를 변수의 이름앞에 붙여줌으로써 선언이된다.  변수 에 넣고자 하는 값 앞에 등호(=)를 통해 변수에 값을 지정할 수 있다.
+위 코드 조각은 우리 프로그램이 사용할 데이터를 담은 변수와 상수를 설정합니다.
 
-예제에서
+변수란 기본적으로 값(숫자, 텍스트 문자열 등)에 이름을 붙이는 것입니다. 변수는 `let` 키워드와 그 뒤의 이름으로 생성할 수 있습니다.
 
-- 첫번째 변수 `randomNumber`는 수학적 알고리즘을 통해 계산해 1과 100사이의 임의의 수를 지정한다 .
-- 다음의 세 개의 변수들은 각각 HTML에서 결과 문장을 저장하는 기준으로 저장되고, 코드상에서 나중에 문장에 추가되도록 사용된다.
+상수 또한 변수처럼 이름을 붙인 값이지만, 변수와 달리 상수의 값은 바꿀 수 없습니다. 우리의 위 코드에서는 사용자 인터페이스의 특정 부분을 가리키는 참조를 상수에 저장하고 있습니다. HTML 요소 내부의 텍스트는 바뀔지 몰라도, 각 상수는 항상 맨 처음 설정한 요소를 가리키게 됩니다. 상수는 `const` 키워드와 그 뒤의 이름으로 생성할 수 있습니다.
+
+변수와 상수에 값을 할당하려면 등호(`=`) 뒤에 원하는 값을 입력하세요.
+
+코드를 자세히 살펴보겠습니다.
+
+- 첫 번째 변수 `randomNumber`에는 수학 알고리즘을 통해 1부터 100 사이의 무작위 수를 할당합니다.
+- 그다음 세 개의 상수는 HTML의 결과 문단을 가리키는 참조를 저장해서, 나중에 문단에 텍스트를 삽입할 때 사용합니다. (세 문단이 모두 한 `<div>` 요소 안에 배치된 것을 확인해보세요. 이 `<div>`는 게임을 초기화할 때 세 문단을 모두 선택하기 위해 사용합니다)
 
   ```html
-  <p class="guesses"></p>
-  <p class="lastResult"></p>
-  <p class="lowOrHi"></p>
+  <div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+  </div>
   ```
 
-- 다음의 2개 변수는 다음의 입력과 버튼을 받고, 추측된 값을 나중에 받도록 하는 역할을 한다.
+- 다음 두 상수는 추측한 숫자를 제출할 때 사용할 양식 텍스트 입력 칸과 제출 버튼의 참조를 저장합니다.
 
   ```html
   <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
   <input type="submit" value="Submit guess" class="guessSubmit">
   ```
 
-- 마지막 2개의 변수에는 (얼마나 많은 추측을 했는지) 추측 개수와, 아직은 있지않은 버튼을 리셋하는 변수가 있다.
+- 마지막 두 변수는 플레이어가 사용한 턴 수인 1과, 지금은 없지만 이 글의 뒤에서 추가할 초기화 버튼의 참조를 저장하기 위해 사용합니다.
 
-<div class="note"><p><strong>주의</strong>: 앞으로 변수에 대해서는 더 많이 배울 것이다. <a href="https://developer.mozilla.org/en-US/docs/user:chrisdavidmills/variables">next article</a>를 참고해보자.</p></div>
+> **참고:**
+>
+> [바로 다음 글](/ko/docs/Learn/JavaScript/First_steps/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
 
 ### 함수
 
-다음으로, 아래의 자바스크립트 코드를 추가하자.
+이제 앞서 작성한 JavaScript 코드 밑에 다음 코드를 추가해 주세요.
 
 ```js
 function checkGuess() {
@@ -155,184 +155,129 @@ function checkGuess() {
 }
 ```
 
-함수는 재사용이 가능한 코드의 묶음으로 한 번만 명시하면 몇번이고 실행이 가능하여 전체적인 코드에서 반복을 줄일 수 있다 . 이는 매우 유용하다. 함수를 정의하는 방법에는 여러가지가 있지만, 일단 여기서는 가장 간단한 방법을 집중적으로 살펴볼 것이다. 앞에 `function`키워드를 사용하고, 함수의 이름을 작성하며, 함수의 이름 뒤에 괄호를 넣어줌으로서 함수를 정의할 수 있다.그러고 나서 중괄호로 묶어준다. 중괄호 안에는 함수가 호출되면 실행되는 반복적인 코드들이 들어있다.
+함수는 한 번 작성한 후 몇 번이든 실행할 수 있는, 재사용 가능한 코드 블록입니다. 같은 코드를 계속 작성할 필요가 없으므로 굉장히 유용합니다. 함수를 정의하는 방법에는 여러 가지가 있지만, 지금은 간단한 방법 하나에 집중하도록 하겠습니다. 위 코드는 `function` 키워드, 이름, 빈 소괄호와 중괄호 쌍(`{ }`)으로 함수를 정의하는 코드입니다. 함수를 호출할 때마다 실행할 코드는 중괄호 쌍 안에 배치합니다.
 
-코드는 괄호 앞에 위치한 함수의 이름을 적음으로 실행된다.
+함수 내부 코드를 실행하기 위해선 함수의 이름을 입력하고, 그 뒤에 소괄호를 덧붙여야 합니다.
 
-코드를 저장하고 브라우저에서 새로고침을 통해 실행해보자.
-
-[developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)에 들어가서 다음의 문장을 입력해보자
+바로 시험해봅시다. 코드를 저장하고, 브라우저를 열어 새로고침으로 페이지를 다시 불러오세요. [개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 열어, 다음 코드를 입력해보세요.
 
 ```js
 checkGuess();
 ```
 
-"I am a placeholder"라고 알리는 alert를 볼 수 있을 것이다. 여기서는 함수가 호출되면 alert가 생성되는 함수로 정의되어 있다.
+키보드의 <kbd>Return</kbd>(<kbd>Enter</kbd>) 키를 누르면 `I am a placeholder`라는 경고 창이 나타날 겁니다. 이로써, 우리 코드 안에 호출할 때마다 경고 창을 띄우는 함수를 정의했습니다.
 
-<div class="note"><p><strong>Note</strong>:더 많은 함수에 대한 내용은 차후의 학습에서 볼 수 있을 것이다.</p></div>
+> **참고:**
+>
+> [이후 과정](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 함수에 대해 많이 배울 수 있습니다.
 
 ### 연산자
 
-자바스크립트의 연산자는 테스트를 진행하고, 수학적인 것을 다루고, 문자열을 결합하는 등의 것들을 가능케한다.
+JavaScript에서는 연산자로 참/거짓 판별, 수학 계산, 문자열 연결 등등 다양한 작업을 수행할 수 있습니다.
 
-다음의 코드를 저장하고 브라우저의 페이지에서 보이도록 새로고침 해보자. [개발자 도구 JavaScript 콘솔](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)을 열고 아래 표시된 에제를 입력 해보자. 표시된대로 정확히 입력하고 Return/Enter 키를 누른 후 어떤 결과가 반환되는지 보자. 브라우저 개발자 도구에 쉽게 액세스 할 수 없는 경우, 아래 표시된 간단한 콘솔을 사용 할 수 있다:
+아직 콘솔을 열지 않았으면, 코드를 저장하고 브라우저를 새로고침한 후 [개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 열어주세요. 이제 연산자 표에서 "예제" 열에 적힌 코드를 직접 입력해 보고, <kbd>Return</kbd>/<kbd>Enter</kbd> 키를 누르면 어떤 결과가 나타나는지 확인해보세요.
 
-<div class="hidden"><h6 id="Hidden_code">Hidden code</h6><pre class="brush: html">&#x3C;!DOCTYPE html>
-&#x3C;html>
-  &#x3C;head>
-    &#x3C;meta charset="utf-8">
-    &#x3C;title>JavaScript console&#x3C;/title>
-    &#x3C;style>
-      * {
-        box-sizing: border-box;
-      }
+먼저 산술 연산자입니다.
 
-      html {
-        background-color: #0C323D;
-        color: #809089;
-        font-family: monospace;
-      }
-
-      body {
-        max-width: 700px;
-      }
-
-      p {
-        margin: 0;
-        width: 1%;
-        padding: 0 1%;
-        font-size: 16px;
-        line-height: 1.5;
-        float: left;
-      }
-
-      .input p {
-        margin-right: 1%;
-      }
-
-      .output p {
-        width: 100%;
-      }
-
-      .input input {
-        width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
-        padding: 0;
-        background: #0C323D;
-        color: #809089;
-      }
-
-      div {
-        clear: both;
-      }
-
-    &#x3C;/style>
-
-&#x3C;/head>
-&#x3C;body>
-
-&#x3C;/body>
-
-&#x3C;script>
-var geval = eval;
-
-    function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
-
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
-      inputDiv.focus();
-
-      inputForm.addEventListener('change', executeCode);
-    }
-
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
-      }
-
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
-
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
-
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
-
-      createInput()
-    }
-
-    createInput();
-
-&#x3C;/script>
-&#x3C;/html></pre></div>
-
-{{ EmbedLiveSample('Hidden_code', '100%', 300) }}
-
-먼저 산술 연산자를 살펴보자.
-
-| 연산자 | 이름              | 예        |
+| 연산자 | 이름              | 예제      |
 | ------ | ----------------- | --------- |
-| `+`    | 더하기            | `6 + 9`   |
+| `+`    | 더하기            | `6 + 9`   |
 | `-`    | 빼기              | `20 - 15` |
 | `*`    | 곱하기            | `3 * 7`   |
 | `/`    | 나누기            | `10 / 5`  |
 
-또한 + 연산자는 문자열들을 서로 연결할때에도 사용된다.(이를 프로그래밍에서 '문자열접합'이라고 한다.) 다음 코드를 입력해보자.
+`+` 연산자는 텍스트 문자열을 합칠 때(프로그래밍에서는 문자열 연결, 결합 등으로 부릅니다)도 사용할 수 있습니다. 아래 코드를 한 줄씩 콘솔에 입력해 보세요.
 
 ```js
-var name = 'Bingo';
+const name = 'Bingo';
 name;
-var hello = ' says hello!';
+const hello = ' says hello!';
 hello;
-var greeting = name + hello;
+const greeting = name + hello;
 greeting;
 ```
 
-그리고 '복합 대입 연산자' 라고 불리는 소스를 간단하게 하는 연산자도 있다. 예를 들어, 단순히 새로운 문자열을 기존에 있는 문자열에 추가하고, 그 결과를 반환받는 일을 하고 있다면 다음 코드를 사용할 수 있다.
+복합 [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators#할당_연산자)라고 부르기도 하는 단축 연산자도 있습니다. 예를 들어, 새로운 텍스트 문자열을 기존 문자열에 연결하고 그 결과를 반환하려면 아래처럼 `+=` 연산자를 사용할 수 있습니다.
 
 ```js
-name += ' says hello!';
+let name1 = 'Bingo';
+name1 += ' says hello!';
 ```
 
-이 코드는 다음 코드와 같은 의미이다.
+위 코드의 결과는 아래와 동일합니다.
 
 ```js
-name = name + ' says hello!';
+let name2 = 'Bingo';
+name2 = name2 + ' says hello!';
 ```
 
-참/거짓을 판명할때 (조건문이 있을 때 — {{anch("Conditionals", "아래")}}를 참조하자) , 비교연산자를 사용한다.
+[조건](#조건)으로 사용하기 위한 참/거짓 판별에는 [비교 연산자](/ko/docs/Web/JavaScript/Reference/Operators#비교_연산자)를 사용합니다.
 
-| Operator | Name                                      | Example                    |
-| -------- | ----------------------------------------- | -------------------------- |
-| `===`    | Strict equality (is it exactly the same?) | `5 === 2 + 4`              |
-| `!==`    | Non-equality (is it not the same?)        | `'Chris' !== 'Ch' + 'ris'` |
-| `<`      | Less than                                 | `10 < 6`                   |
-| `>`      | Greater than                              | `10 > 20`                  |
+<table>
+  <thead>
+    <tr>
+      <th scope="col">연산자</th>
+      <th scope="col">이름</th>
+      <th scope="col">예제</th>
+    </tr>
+    <tr>
+      <td><code>===</code></td>
+      <td>엄격 일치 (정확히 같은가?)</td>
+      <td>
+        <pre class="brush: js">
+5 === 2 + 4 // false
+'Chris' === 'Bob' // false
+5 === 2 + 3 // true
+2 === '2' // false, 숫자와 문자열은 다름
+</pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>!==</code></td>
+      <td>불일치 (같지 않은가?)</td>
+      <td>
+        <pre class="brush: js">
+5 !== 2 + 4 // true
+'Chris' !== 'Bob' // true
+5 !== 2 + 3 // false
+2 !== '2' // true, 숫자와 문자열은 다름
+</pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>&#x3C;</code></td>
+      <td>미만</td>
+      <td>
+        <pre class="brush: js">
+6 &#x3C; 10 // true
+20 &#x3C; 10 // false</pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>></code></td>
+      <td>초과</td>
+      <td>
+        <pre class="brush: js">
+6 > 10 // false
+20 > 10 // true</pre
+        >
+      </td>
+    </tr>
+  </thead>
+</table>
 
-### 조건문
+### 조건
 
-함수가 반환되었을때, 자리표시자 메시지(Placeholder Message, 텍스트를 입력할 때 무엇을 입력해야되는지 알려주는 기능 - 역자)를 표시하지 않는 것이 더 좋을 것이라고 본다 . 우리는 사용자의 추측이 옳은지, 틀린지만 보고 적절하게 응답하도록만 할 것이다.
+다시 `checkGuess()` 함수로 돌아갑시다. 이 함수가 하는 일이 지금처럼 임시로 넣은 메시지를 뱉기만 하는 건 아이어야 할 겁니다. 우리가 `checkGuess()` 함수에 원하는 동작은 플레이어의 추측이 정답인지 아닌지 확인하고, 적합한 반응을 하는 것입니다.
 
-이 시점에서 이제, 현재 checkGuess()함수를 다음과 같이 수정해보자.
+이 시점에서, `checkGuess()` 함수를 아래 코드로 교체하세요.
 
 ```js
 function checkGuess() {
-  var userGuess = Number(guessField.value);
+  const userGuess = Number(guessField.value);
   if (guessCount === 1) {
     guesses.textContent = 'Previous guesses: ';
   }
@@ -345,6 +290,7 @@ function checkGuess() {
     setGameOver();
   } else if (guessCount === 10) {
     lastResult.textContent = '!!!GAME OVER!!!';
+    lowOrHi.textContent = '';
     setGameOver();
   } else {
     lastResult.textContent = 'Wrong!';
@@ -362,43 +308,43 @@ function checkGuess() {
 }
 ```
 
-꽤 코드가 길다. 각 부분별로 이제 하나하나씩 파헤쳐보자!
+꽤 긴 코드군요! 한 구획씩 살펴보면서 어떤 역할을 하는 코드인지 설명하겠습니다.
 
-- 2번 줄까지는 userGuess변수를 선언하고, 텍스트 필드에서 입력된 현재 값들을 변수의 값으로 지정한다. 여기서는 빌트인된 `Number()`메소드(값이 숫자라는 것을 알 수 있다.)로 실행된다.
-- 그러고나서, 처음으로 조건문을 맞닥뜨린다. (3-5번 줄). 조건문 블록은 조건이 옳은지 그른지에 따라 선택적으로 코드가 실행된다. 함수와 비슷하나, 꼭 그렇지는 않다. 가장 간단한 조건문의 형태는 키워드 `if`를 사용하고, 괄호가 있고, 중괄호가 있다. 괄호안에는 조건이 삽입된다. 만약 조건문이 옳다면, 중괄호안의 코드들이 실행된다. 거짓이라면, 다음 코드로 넘어가게 된다. 이 코드에서 조건문은 `guessCount변수가 1인지 이다.` (즉, 현재 플레이어의 게임이 처음인지 아닌지를 판단하는 조건)
+- 첫 줄은 `userGuess`라는 이름의 변수를 선언하고, 텍스트 필드에 입력된 현재 값을 저장합니다. 값을 내장 `Number()` 생성자로 한 번 감싼 이유는 확실하게 숫자 값으로 만들기 위해서입니다. 변수의 값을 바꿀 계획은 없기에 `const` 키워드로 선언했습니다.
+- 그 아래에는 우리의 첫 번째 조건 코드 블록이 위치합니다. 조건 코드 블록을 활용하면 특정 조건이 참이거나 거짓일 때만 선택적으로 코드를 실행할 수 있습니다. 얼핏 보면 함수처럼 보이기도 하지만 조건 코드 블록은 함수가 아닙니다. 가장 간단한 형태의 조건 코드 블록은 `if` 키워드, 소괄호, 그리고 중괄호로 구성됩니다. 소괄호에는 조건 테스트가 들어가며, 이 테스트가 `true`를 반환하면 중괄호 안의 코드를 실행합니다. 테스트가 `false`를 반환하면 중괄호 안의 코드를 실행하지 않고, 조건 블록 아래 코드로 실행을 넘깁니다. 첫 번째 조건 코드 블록에서는 `guessCount` 변수가 `1`과 일치하는지, 즉 플레이어의 첫 턴인지를 테스트하고 있습니다.
 
-```js
-guessCount === 1
-```
+  ```js
+  guessCount === 1
+  ```
 
-참이라면, guessess 변수의 텍스트는 "Previous guesses: "가 된다. 그렇지 않다면, 실행되지 않는다.
+  이 조건이 참이라면 `guesses` 문단의 텍스트 내용을 `Previous guesses:`로 설정하고, 그렇지 않으면 아무것도 하지 않습니다.
 
-- 6번 줄에서는 현재의 userGuess 값에 마지막 guesses 문장을 추가하고, 끝에 공백을 더함으로서 각각의 추측한 수끼리 간격을 두고 보여진다.
-- 다음 블록도 함번 살펴보자(8-24번 줄)
+- 6번째 줄에서는 현재 `userGuess` 변수의 값을 `guesses` 문단의 맨 뒤에 이어붙이고, 그 뒤에 다시 공백을 하나 덧붙여 플레이어의 추측들이 붙어있지 않도록 방지합니다.
+- 다음 블록에서는 몇 개의 검사를 수행합니다.
 
-  - 첫 `if(){ }` 는 처음에 지정한 `randomNumber`과 사용자가 추측한 값(`userGuess`)이 값은지 본다. 참이라고 계산되면, 플레이어는 숫자를 맞춘것이고 게임을 이기게 된다. 따라서 플레이어에게 초록색, 인포메이션 박스로 축하메시지를 보여주고, 게임을 더할지와 관련된 `setGameOver() `함수를 불러온다.
-  - 이제 `else if(){ }` 구조를 사용하여 다른 조건문을 추가하게 된다. 이 조건은 사용자가 마지막 순서인지를 계산한다. 참이라면 프로그램은 이전과 같은 블록을 실행한다. 대신 게임을 이기지는 않았기 때문에 축하메시지를 제외된다
-  - 마지막 블록은  (the `else { }`)로 앞선 두 개의 조건이 모두 거짓일 때 실행된다. (i.e. 숫자를 맞추지도 못하고 차례가 남았을 때). 이 경우, 틀렸음을 알려주고, 정답보다 숫자가 큰지 작은지도 계산하여 적절한 메시지를 표시하도록 한다.
+  - 첫 번째 `if(){ }`에서는 우리의 JavaScript 코드에서 설정한 `randomNumber` 값이 플레이어의 추측과 일치하는지 확인합니다. 일치하는 경우 플레이어가 정답을 맞힌 것이니 적절한 초록색 글자로 축하 메시지를 표시하고, 낮음/높음 힌트 박스의 내용을 지우고, 뒤에 다룰 함수인 `setGameOver()`를 호출합니다.
+  - 그 아래에는 `else if(){ }` 구조를 사용해서 이전 테스트에 다른 테스트를 이어 붙였습니다. 여기선 이 턴이 플레이어의 마지막 턴이었는지 확인합니다. 마지막 턴이었다면 첫 번째 조건 블록과 같은 작업을 수행하지만, 축하 메시지 대신 게임 오버 메시지를 보여줍니다.
+  - 마지막 블록(`else { }`)은 앞선 테스트가 모두 참을 반환하지 않았을 때, 즉 플레이어가 정답을 맞히지도 못했고, 마지막 턴도 아닐 때 실행됩니다. 이 블록에서는 플레이어의 추측이 틀렸다고 말하고, 또 다른 테스트를 통해 추측한 값이 정답 값보다 높은지 낮은지 확인해서 적합한 메시지를 출력합니다.
 
-- 함수상의 마지막 3줄(26-28번 줄)은 다음 숫자 추측을 위한 것이다. guessCount 변수에 1을 더함으로, 사용자의 차례가 지나갔음을 안다. (`++`이란 증감연사자이다. - 1을 더함). 그리고 값에 상관없이 텍스트필드를 공란으로 만들고, 커서를 위치시키므로, 다음값이 입력될 수 있도록 한다.
+- 마지막 세 줄(위 코드에서 26~28번째 줄)에서는 다음 추측을 제출받기 위한 준비를 합니다. `guessCount` 변수에 1을 더하고(`++`는 증가 연산자로, 값을 1만큼 증가시킵니다), 양식 텍스트 필드에 입력된 값을 지운 후 다시 포커스를 부여하여 다음 추측을 입력할 수 있도록 합니다.
 
 ### 이벤트
 
-여기서 우리는 `checkGuess()` 함수를 잘 구현해 보았지만, 아직 호출하지 않았기 때문에 아무런 역할을 하지 않는다. 실제로는  "Submit guess" 버튼이 눌러져야 호출받도록 할 것이므로, 이벤트를 사용해서 구현할 것이다. 이벤트란 버튼을 클릭하고, 페이지가 로딩되고, 비디오가 실행되는 등 코드가 실행되기 위한 응답으로 브라우저상에서 일어나는 액션이다. 이벤트가 발생하여 발생된 이벤트를 처리하는 것을 **이벤트 리스너(event listeners)**라 하고, 이벤트가 발생했을 때 실행되는 코드 블록을 **이벤트 핸들러(event handlers)**라고 한다.
+위의 과정을 통해 `checkGuess()` 함수를 성공적으로 구현했습니다. 하지만 정작 이 함수를 호출하는 곳이 없으니 아직 아무것도 하지 않습니다. "Submit guess" 버튼을 눌렀을 때 `checkGuess()` 함수를 호출하면 이상적이겠네요. **이벤트**를 통해 이 방식을 구현할 수 있습니다. 이벤트란 브라우저에서 발생하는 여러 일들(버튼 클릭, 페이지 로딩, 비디오 재생, ...)입니다. 이벤트가 발생하면 코드 블록이 그 이벤트에 반응해서 실행하도록 설정할 수 있죠. **이벤트 수신기**는 특정 이벤트의 발생을 감지, **이벤트 처리기**를 호출하며 이벤트 처리기가 바로 이벤트에 반응하는 코드 블록입니다.
 
-`checkGuess()`함수의 중괄호가 끝난뒤, 다음의 코드를 추가해보자.
+다음 코드 한 줄을 `checkGuess()` 함수 아래에 추가하세요.
 
 ```js
 guessSubmit.addEventListener('click', checkGuess);
 ```
 
-`이는 guessSubmit` 버튼에 이벤트 리스너를 추가하는 과정이다. 두개의 입력(인수)를 가지는 `addEventListner`메소드이다. 문자열로서 클릭을 처리하는 이벤트이고, 이벤트가 발생했을 때 실행하고자 하는 코드는 `checkGuess()` 함수이다. 특히, {{domxref("EventTarget.addEventListener", "addEventListener()")}}안에서는 함수의 괄호가 필요없다는 것에 주의하자.
+위 코드는 `guessSubmit` 버튼에 이벤트 수신기를 추가합니다. {{domxref("EventTarget.addEventListener", "addEventListener()")}}는 두 개의 입력 값('인자'라고 부릅니다)을 받는 메서드로, 각각 수신할 이벤트 유형(`click`)을 가리키는 문자열과, 이벤트가 발생하면 실행할 코드(`checkGuess()` 함수)입니다. 참고로 `addEventListener()`에 함수를 제공할 때 괄호를 붙이지 않았습니다.
 
-코드를 저장하고 새로고침해보자, 예제가 실행됨을 볼 수 있다.  아직 게임이 종료되면 실행되는 setGameOver() 함수가 정의되지 않았으므로, 정답을 맞췄을때나 추측에 상관없이 실행되었다면 프로그램의 실행이 멈춰야 한다. 필요한 코드를 작성하고 함수를 추가해보자.
+코드를 저장하고 페이지를 다시 불러오세요. 예제가 어느 정도는 동작하는 걸 확인할 수 있을 겁니다. 하지만 아직 하나의 문제가 있는데, 올바른 숫자를 입력하거나 모든 턴을 다 써버리면 게임이 망가진다는 점입니다. 게임이 끝났을 때 실행할 `setGameOver()` 함수를 아직 정의하지 않았기 때문입니다. 빠진 코드를 추가하고, 우리 예제의 기능을 완성해 봅시다.
 
-### 함수로 프로그램 종료하기
+### 게임 기능 마무리
 
-`setGameOver()`함수를 코드 아래쪽에 추가하고 살펴보자.  자바크스립트 코드의 맨 마지막에 추가하도록 하자.
+우선 코드의 맨 아래에 `setGameOver()` 함수를 추가한 뒤에 이 함수가 어떤 일을 하는지 하나씩 살펴봅시다. 지금, 아래의 코드를 여러분의 JavaScript 코드 제일 밑에 덧붙이세요.
 
 ```js
 function setGameOver() {
@@ -406,24 +352,24 @@ function setGameOver() {
   guessSubmit.disabled = true;
   resetButton = document.createElement('button');
   resetButton.textContent = 'Start new game';
-  document.body.appendChild(resetButton);
+  document.body.append(resetButton);
   resetButton.addEventListener('click', resetGame);
 }
 ```
 
-- 2-3번 줄은 텍스트 입력과 버튼의 diabled 속성을 true로 함으로써 작동되지  않도록 한다. 그렇지 않다면 사용자들이 게임이 종료된 후에도 계속 정답을 제출할 것이기 때문에 필수적이다.
-- 4-6번 줄은 새로운 {{htmlelement("button")}} 엘리먼트를 생성하고, "Start new game"라고 표시되게 지정하고 현재의 HTML 아래쪽에 추가하도록 한다.
-- 7번 줄은 새 버튼으로 하여금 이벤트 리스너를 지정하여 클릭되면 `resetGame() `함수가 실행되도록 한다.
+- 첫 두 줄은 텍스트 입력 칸과 제출 버튼의 `disabled` 속성을 `true`로 설정해서 비활성화합니다. 비활성화하지 않으면 게임이 끝난 뒤에도 플레이어가 정답을 추가로 입력해서 게임을 망가뜨릴 수도 있어서 필요한 과정입니다.
+- 그 뒤의 세 줄은 새로운 {{htmlelement("button")}} 요소를 생성하고 텍스트 레이블을 "Start new game"으로 설정해서 우리의 기존 HTML 아래에 추가합니다.
+- 마지막 줄은 위에서 추가한 새 버튼에 이벤트 수신기를 부착해서, 그 버튼을 클릭하면 `resetGame()`이라는 함수를 호출하도록 합니다.
 
-물론 이 함수도 정의해야 한다. 또다시 코드의 가장 아래에 다음 코드를 추가하자.
+`resetGame()`도 정의해야겠죠? 아래 코드를 다시 한번 JavaScript 코드 밑에 덧붙이세요.
 
 ```js
 function resetGame() {
   guessCount = 1;
 
-  var resetParas = document.querySelectorAll('.resultParas p');
-  for (var i = 0 ; i < resetParas.length ; i++) {
-    resetParas[i].textContent = '';
+  const resetParas = document.querySelectorAll('.resultParas p');
+  for (const resetPara of resetParas) {
+    resetPara.textContent = '';
   }
 
   resetButton.parentNode.removeChild(resetButton);
@@ -439,105 +385,116 @@ function resetGame() {
 }
 ```
 
-앞서 보는 함수 블록 코드는 게임이 어떻게 시작되고 사용자가 다시 시작할 수 있도록 초기화하는 코드이다.
+모든 것을 게임의 초기 상태로 되돌려, 플레이어가 새로운 게임을 즐길 수 있도록 하는 함수입니다. 길이가 좀 되네요.
 
-- `guessCount 변수를 1로 한다.`
-- 표시된 정보를 모두 초기화한다.
-- 코드상에서 초기화 버튼을 제거한다.
-- 폼 작성을 위해 텍스트를 입력하는 곳을 비워놓고 커서를 위치시킨다.
-- `lastResult`변수 상의 문장` `배경색을 제거한다.
-- 임의의 수를 다시 지정함으로, 앞선 `randomNumber`와 겹치지 않도록 다시 설정한다.
+- `guessCount`를 다시 1로 낮춥니다.
+- 모든 정보 텍스트 문단의 내용을 지웁니다. `<div class="resultParas"></div>` 안의 모든 문단 요소를 선택, 하나씩 순회하면서 각각의 `textContent`를 `''`(빈 문자열)로 설정하는 방식입니다.
+- HTML에서 초기화 버튼을 제거합니다.
+- 양식 요소를 다시 활성화하고, 입력 칸을 비운 후 포커스를 부여해서 새로운 숫자를 입력받을 준비를 합니다.
+- `lastResult` 문단의 배경색을 제거합니다.
+- 이전 게임과는 다른 숫자를 맞힐 수 있도록 무작위 숫자를 새로 선택합니다.
 
-**축하한다! 이제 여기까지 완료됬다면 프로그램이 정상적으로 작동될 것이다.**
+**여기까지 왔으면 완전히 동작하는 (간단한) 게임을 완성했습니다. 축하합니다!**
 
-이제 살펴볼 것은 코드에서 볼 수 있는 중요한 부분중 하나이다.
+이제, 예제 코드에 나타났었지만 따로 설명하진 않았던 중요한 코드 기능 몇 가지에 대해 설명하고 글을 마치겠습니다.
 
-### 반복문
+### 반복
 
-위 코드상에서  자세히 살펴볼 것 중 하나는 [for](/en-US/docs/Web/JavaScript/Reference/Statements/for) 반복문에 관한 부분이다. 반복문은 프로그래머가 지정한 코드의 부분을 조건에 부합할때까지 계속 실행시키는 등 프로그래밍에서 중요한 개념 중 하나이다.
+특별히 살펴봐야 할 부분 중 하나는 바로 [for...of](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 반복문입니다. 반복은 프로그래밍에서 매우 중요한 개념으로, 특정 조건을 만족할 때까지 하나의 코드 조각을 계속 실행할 수 있는 방법입니다.
 
-시작에 앞서, [browser developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)에 들어가서, 다음을 입력해보자.
-
-```js
-for (var i = 1 ; i < 21 ; i++) { console.log(i) }
-```
-
-어떤 일이 일어났는가? 숫자 1부터 20까지 차례대로 콘솔창에 표시됨을 볼 수 있다.이는 반복이라는 컨셉 때문이다. for 반복문에는 세 개의 입력값(아규먼트)이 있다.
-
-1.  **시작값**: 위 코드에서는 1부터 시작하였지만, 프로그래머 임의대로 지정할 수 있다. i 대신 다른 변수를 사용할 수 있지만, 짧고 기억하기 쉬운 관습으로 인해 간단한 알파벳 i가 주로 사용된다.
-2.  **종료 조건**: 여기서는 `i < 21 라고 명시되었다. 이는 i가 21보다 작을때까지 반복이 이루어진다는 말이다. i가 21이 되었을 때, 반복은 종료된다.`
-3.  **증감식**:  `i++이라 명시된 것은 i에 1씩 더하라는 의미이다.반복은 i의 값에 따라 i가 21이 될때까지 반복된다`. 여기서는 {{domxref("Console.log", "console.log()")}} 를 사용하여 콘솔창에 반복적으로 i의 값을 출력시키는 간단한 예제를 보였다.
-
-숫자 맞추기 프로그램의 앞선 `resetGame()` 함수에서 반복문을 한 번 살펴보자.
+직접 반복을 시험해보려면 [브라우저 개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 다시 열고, 다음 코드를 입력하세요.
 
 ```js
-var resetParas = document.querySelectorAll('.resultParas p');
-for (var i = 0 ; i < resetParas.length ; i++) {
-  resetParas[i].textContent = '';
+const fruits = ['apples', 'bananas', 'cherries'];
+for (const fruit of fruits) {
+  console.log(fruit);
 }
 ```
 
-이 코드에서는 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} 메소드를 사용하여 `<div class="resultParas">`안의 모든 문장들의 배열을 변수로 만들고 있다. 그러고 반복을 통해 각각의 배열 원소에 접근하여, 내용을 제거하게 된다.
+결과가 어떤가요? 세 문자열 `'apples', 'bananas', 'cherries'`가 콘솔에 출력됐을 겁니다.
 
-### 객체에 대한 간단한 고찰
+이것이 반복입니다. `const fruits = ['apples', 'bananas', 'cherries'];`는 배열이라는 걸 생성합니다. 배열이 뭔지는 이 과정 뒤쪽의 [완전한 배열 안내서](/ko/docs/Learn/JavaScript/First_steps/Arrays)에서 알아보는 걸로 하고, 지금 당장은 아이템을 모은 컬렉션(위 코드의 경우, 문자열의 컬렉션)이라고 생각하면 충분합니다.
 
-이제 마지막으로 한단계 더 나아갈 수 있는 부분을 배워보자.  `var resetButton; `아래에 다음 코드를 추가해보자.(코드 위쪽에 있으니 참고하고, 저장까지 해보자)
+`for...of` 반복문을 사용하면 배열의 각 아이템을 하나씩 가져와서, 지정한 JavaScript 코드를 실행할 때 제공할 수 있습니다. `for (const fruit of fruits)`라는 코드의 뜻은 다음과 같습니다.
+
+1. `fruits`의 첫 번째 아이템을 가져옵니다.
+2. `fruit` 변수에 그 아이템을 저장하고, 중괄호(`{ }`) 사이의 코드를 실행합니다.
+3. `fruits`의 다음 아이템을 가져온 후 2번으로 돌아갑니다. `fruits`의 모든 아이템을 가져올 때까지 반복합니다.
+
+이때, 중괄호 사이의 코드는 콘솔에 `fruit`을 출력하는 것입니다.
+
+이제 우리의 숫자 알아맞히기 게임 코드에 포함된 반복을 살펴봅시다. `resetGame()` 함수의 아래 부분에 주목하세요.
+
+```js
+const resetParas = document.querySelectorAll('.resultParas p');
+for (const resetPara of resetParas) {
+  resetPara.textContent = '';
+}
+```
+
+위 코드는 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} 메서드를 사용해서 `<div class="resultParas">` 안의 모든 문단 요소를 가져오고, 반복을 통해 각 문단의 텍스트 콘텐츠를 제거합니다.
+
+`resetParas`는 상수지만, 상수의 내부 속성인 `textContent`는 바꿀 수 있는 점에 주의하세요.
+
+### 객체에 관한 짧은 논의
+
+위 제목에 맞는 내용에 들어가기 전에 우리 코드에 마지막으로 한 번의 수정만 더 하겠습니다. 여러분의 JavaScript 위쪽, `let resetButton;` 바로 밑에 아래의 코드를 추가하고 저장하세요.
 
 ```js
 guessField.focus();
 ```
 
-여기서는 {{domxref("HTMLElement.focus", "focus()")}} 메소드를 통해 자동으로 커서를 페이지가 뜨자마자 {{htmlelement("input")}} 텍스트 필드에 위치시킬 수 있기때문에, 사용자가 처음에 폼 필드를 클릭할 필요없이 바로 글을 쓸 수 있게 된다. 아무것도 아닌 것처럼 보이지만, 사용자에게 굉장히 편리함을 주기 때문에 프로그램에서 좋은 효과를 가져다 준다.
+{{domxref("HTMLElement/focus", "focus()")}} 메서드를 사용해서, 페이지 로딩이 끝나면 텍스트 커서가 자동으로 {{htmlelement("input")}}에 가도록 하는 코드입니다. 즉, 사용자가 양식의 필드를 직접 클릭할 필요 없이 첫 추측을 바로 시작할 수 있는 겁니다. 사소하긴 하지만, 게임을 어떻게 플레이할 수 있는지 시각적으로 제시해줌으로써 사용성을 강화할 수 있는 좋은 방법입니다.
 
-여기서 이루어지는 일들을 좀 더 자세히 분석해보자. 자바스크립트에서는 모든 것이 객체이다. 객체란 하나의 그룹안에 관계되는 기능(함수)들을 모아놓은 것이다.혼자서 객체를 생성할 수 있겠지만, 아직은 이르기 때문에 나중에 살펴보자. 지금은 간단히 브라우저에 내장된 객체를 사용함으로서 좀 더 많은 일들을 해보는 것에 중점을 두자.
+코드를 약간 더 자세히 분석해봅시다. 여러분이 JavaScript에서 마주치고 조작하는 것의 대부분은 객체입니다. 객체란 서로 연관된 기능을 하나로 묶은 겁니다. 여러분만의 객체도 생성할 수 있지만 꽤 고급 주제니 자세한 내용은 훨씬 뒤쪽 과정에서 알아봅시다. 지금은 여러가지 유용한 일을 해주는, 브라우저 내장 객체에 대해서 간단히 훑어보겠습니다.
 
-`여기서는, 먼저 HTML의 입력 폼 필드의 정보를 저장하는 guessField` 변수를 생성해보자. (다음 코드는 맨 위의 변수 선언문에서 볼 수 있다.)
+우리 코드에서, `guessField` 상수는 HTML의 텍스트 입력 칸을 가리키는 참조를 저장하고 있습니다. 위쪽의 다른 변수 및 상수 선언과 함께 있죠.
 
 ```js
-var guessField = document.querySelector('.guessField');
+const guessField = document.querySelector('.guessField');
 ```
 
-이 정보를 얻기 위해, {{domxref("document")}} 객체의 {{domxref("document.querySelector", "querySelector()")}}메소드를 사용한다. `querySelector()는 특정 정보(필요한 요소를 추출하는 `[CSS selector](/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors))`를 가져오는 역할을 한다.`
+이 참조를 가져오기 위해 {{domxref("document")}} 객체의 {{domxref("document.querySelector", "querySelector()")}} 메서드를 사용하는 모습입니다. `querySelector()`는 하나의 정보 — 참조를 가져오고자 하는 요소를 선택할 수 있는 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)를 요구합니다.
 
-`이제 `{{htmlelement("input")}} 요소의 정보를 담고 있기 때문에, 속성(기본적으로 객체안의 변수나 변수 변경이 없는 경우)과 메소드(기본적으로 객체안의 함수)를 접근할 수 있게 된다. 입력 요소에 이용 가능한 메소드 중 하나가 `focus()이며`, 따라서 이 메소드를 통해 텍스트 입력에 커서를 가져다 놓을 수 있는 것이다.
+이제 {{htmlelement("input")}} 요소의 참조를 담고 있으니, `guessField`는 다양한 속성(객체 안에 저장된 변수라고 생각할 수 있음, 일부 속성은 값을 바꿀 수 없음)과 메서드(객체 안에 저장된 함수)에 접근할 수 있습니다. 그 메서드 중 하나가 바로 `focus()`로, 다음과 같이 사용해서 텍스트 입력 칸에 포커스를 부여할 수 있습니다.
 
 ```js
 guessField.focus();
 ```
 
-폼 요소의 정보를 가지고 있지 않은 변수는 `focus()` 를 사용할 수 없다. 예를 들어,  `guesses `변수는 {{htmlelement("p")}} 요소의 정보를 가지고 있고, `guessCount` 변수는 단순한 숫자를 포함하고 있다.
+양식 요소의 참조를 담지 않는 변수로는 `focus()`라는 메서드를 사용할 수 없을 겁니다. 예를 들어, `guesses` 상수는 {{htmlelement("p")}} 요소의 참조를 저장하고, `guessCount` 변수는 숫자를 저장하죠.
 
-### 브라우저 객체로 다루기
+### 브라우저 객체 다뤄보기
 
-이제 브라우저를 객체로서 다뤄보자.
+브라우저 객체를 몇 가지 사용해 봅시다.
 
-1.  먼저, 브라우저에서 프로그램을 연다
-2.  다음 [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)을 실행하고, 자바스크립트 콘솔창을 활성화한다.
-3.  `guessField`의 입력과 콘솔에서 {{htmlelement("input")}} 요소를 포함한 변수를 보여줄 것이다. 변수를 포함한 실행환경 상에 존재하는 객체이름을 콘솔이 자동으로 완성하는 것도 알아야한다.
-4.  다음 코드를 입력하자
+1. 우선 브라우저로 숫자 알아맞히기 게임을 여세요.
+2. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열고, JavaScript 콘솔 탭으로 이동하세요.
+3. 콘솔에 `guessField`를 입력하면 변수에 {{htmlelement("input")}} 요소가 저장되어 있는 것을 확인할 수 있습니다. 그리고 콘솔이 여러분의 실행 환경에 존재하는 객체와 변수 이름들을 자동으로 완성해준다는 것도요.
+4. 이제 콘솔에 아래 코드를 입력하세요.
 
     ```js
     guessField.value = 'Hello';
     ```
 
-    `value` 속성은 텍스트 필드를 통해 입력되는 현재값을 나타낸다. 커맨드 창에 입력하고 어떤 일이 일어나는지 살펴보자.
+    `value` 속성은 입력 칸에 현재 입력된 값을 나타내는 속성입니다. 위의 명령을 실행하면, 입력 칸에 입력된 텍스트가 바뀌게 되죠!
 
-5.  `guesses`에 입력하고 반환값을 살펴보자. 콘솔 창에서 변수가 {{htmlelement("p")}} 요소가 있음을 보여줄 것이다.
-6.  다음 코드를 입력하자.
+5. 콘솔에 `gueesses`를 입력하고 엔터 키로 제출하세요. 콘솔이 변수에 {{htmlelement("p")}}가 저장됐다고 알려줄 겁니다.
+6. 아래 코드를 입력하세요.
 
     ```js
     guesses.value
     ```
 
-    브라우저에서 아무런 문장이 없기 때문에, undefined라고 리턴될 것이다.
+    브라우저가 `undefined`를 보여줄 겁니다. 문단에는 `value` 속성이 없기 때문입니다.
 
-7.  대신, 다음 코드에서 문자를 변경/추가하기 위해서는 {{domxref("Node.textContent", "textContent")}} 속성을 사용한다.
+7. 문단의 텍스트를 바꾸려면 {{domxref("Node.textContent", "textContent")}} 속성을 사용해야 합니다. 이렇게 해보세요.
 
     ```js
     guesses.textContent = 'Where is my paragraph?';
     ```
 
-8.  그러면 이제 다양한 작업을 할 수 있으니, 하나하나 시도해보자.
+8. 더 재밌는 일도 할 수 있습니다. 아래 코드를 한 줄씩 입력해보세요.
 
     ```js
     guesses.style.backgroundColor = 'yellow';
@@ -546,10 +503,10 @@ guessField.focus();
     guesses.style.boxShadow = '3px 3px 6px black';
     ```
 
-    페이지의 모든 요소들을 `style` 속성을 가지고 있기때문에, 모든 요소에 적용가능한 인라인 CSS 스타일을 포함한 속성을 가진 객체를 포함하고 있음을 알 수 있다. 이는 자바스크립트 상에서 CSS 스타일을 동적으로 지정할 수 있음을 알 수 있다.
+    페이지의 모든 요소에는 `style` 속성이 존재합니다. 이 속성은 해당 요소에 지정한 인라인 CSS 스타일을 모두 담고 있는 객체죠. 이걸 활용하면 JavaScript에서 요소의 CSS 스타일을 동적으로 제어할 수 있습니다.
 
-## 결론
+## 지금은 끝!
 
-여기까지 예제를 빌드해보는 과정이었다.  마지막으로 작성된 코드를 실행해보거나,[play with our finished version here](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). 만약 코드가 실행되지 않는다면, [source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)를 참고하자.
+예제 따라 해보기가 끝났습니다. 마지막까지 오셨군요. 축하합니다! 최종 코드를 직접 실행해 보거나, MDN에서 준비한 [최종판을 시험해 보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). 여러분의 예제 코드가 잘 돌아가지 않으면 완성본의 [소스 코드](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)와 비교해 보세요.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}

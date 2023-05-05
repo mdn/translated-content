@@ -11,9 +11,10 @@ tags:
   - XML
 translation_of: Web/SVG/SVG_animation_with_SMIL
 ---
+
 > **Attention :** Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis [suspendu](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) cette décision.
 
-Firefox 4 introduit le support pour les animations [SVG](/fr/SVG "en/SVG") en utilisant [Synchronized Multimedia Integration Language](http://www.w3.org/TR/REC-smil) (SMIL). SMIL permet :
+Firefox 4 introduit le support pour les animations [SVG](/fr/SVG) en utilisant [Synchronized Multimedia Integration Language](http://www.w3.org/TR/REC-smil) (SMIL). SMIL permet :
 
 - d'animer les attributs numériques d'un élément (x, y, ...)
 - d'animer la transformation des attributs (translation ou rotation)
@@ -24,7 +25,7 @@ Pour ce faire, on utilise un élément SVG tel que {{ SVGElement("animate") }}. 
 
 ## Animation pour un attribut
 
-L'exemple suivant anime l'attribut **`cx`** d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }}  dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :
+L'exemple suivant anime l'attribut **`cx`** d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }} dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :
 
 - **`attributeName`**
   - : Le nom de l'attribut à animer.
@@ -70,7 +71,7 @@ Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.
        from="0 60 60"
        to="360 100 60"
        repeatCount="indefinite"
-			/>
+      />
   </rect>
 </svg>
 ```
@@ -85,7 +86,7 @@ L'élement {{ SVGElement("animateMotion") }} permet d'animer la position et la r
 
 Dans cet exemple, un cercle bleu rebondit indéfiniment entre les bords gauche et droit d'une boîte noir. L'animation est ici gérée par l'élément {{ SVGElement("animateMotion") }}.
 
-On crée ici un chemin avec les commandes **M**oveTo, pour définir le point de départ de l'animation**, H**orizontal-line, pour déplacer le cercle de 300 pixels vers la droite, et la commande **Z**, pour fermer le chemin — ce qui permet d'établir une boucle qui revient au début. En définissant la valeur de l'attribut **repeatCount** à `indefinite`, on indique que l'animation doit boucler indéfiniment, tant que l'image SVG existe.
+On crée ici un chemin avec les commandes **MoveTo**, pour définir le point de départ de l'animation, **Horizontal-line**, pour déplacer le cercle de 300 pixels vers la droite, et la commande **Z**, pour fermer le chemin — ce qui permet d'établir une boucle qui revient au début. En définissant la valeur de l'attribut **repeatCount** à `indefinite`, on indique que l'animation doit boucler indéfiniment, tant que l'image SVG existe.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
@@ -121,6 +122,6 @@ Le même exemple que précédemment mais avec une trajectoire courbe.
 
 ## Voir aussi
 
-- [SVG](/fr/SVG "en/SVG")
+- [SVG](/fr/SVG)
 - [SVG Animation Specification](http://www.w3.org/TR/SVG/animate.html)
 - [SMIL Specification](http://www.w3.org/TR/REC-smil)

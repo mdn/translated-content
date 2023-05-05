@@ -1,12 +1,8 @@
 ---
 title: ウェブセキュリティ
 slug: Web/Security
-tags:
-  - Landing
-  - セキュリティ
-  - ウェブ
-translation_of: Web/Security
 ---
+
 ウェブサイトや公開ウェブアプリケーションが安全であることを保証するのは重要なことです。コードの中の単純なバグが、個人情報の漏洩という結果を招くことがありますし、データを盗む方法を見つけようとしている悪い輩があちこちにいます。以下に紹介するセキュリティ方面の記事では、コードの安全性を確保する際に助けとなる情報を提供しています。
 
 ## コンテンツセキュリティ
@@ -29,7 +25,7 @@ translation_of: Web/Security
 - [混在コンテンツでブロックされるウェブサイトを修正するには](/ja/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
   - : ウェブサイトを HTTPS で配信している場合、ページ上にある [能動的な混在コンテンツ](/ja/docs/Web/Security/Mixed_content#mixed_active_content)はすべて既定でブロックされます。結果として、ユーザーからはそのウェブサイトが壊れているように見えるかもしれません (iframe やプラグインが読み込まれないなど)。一方、[受動的な混在コンテンツ](/ja/docs/Web/Security/Mixed_content#mixed_passivedisplay_content)は既定で表示されますが、このようなコンテンツをブロックするようにユーザーが設定することも可能です。このページでは、ウェブ開発者として知っておくべきことを説明します。
 - [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
-  - : **安全なコンテキスト (Secure Context)** とは、(HTTPS/TLS を介して) コンテンツが安全に配信され、安全**ではない**コンテキストとの通信の可能性が限られているという合理的な確信がある `Window`、または `Worker` のことです。多くの Web API が安全なコンテキストでのみ利用可能です。安全なコンテキストの主目的は、{{interwiki("wikipedia", "中間者攻撃", "中間者攻撃者")}}が被害者に更なる危険にさらす可能性がある強力な API にアクセスするのを防ぐことにあります。
+  - : **安全なコンテキスト (Secure Context)** とは、(HTTPS/TLS を介して) コンテンツが安全に配信され、安全**ではない**コンテキストとの通信の可能性が限られているという合理的な確信がある `Window`、または `Worker` のことです。多くの Web API が安全なコンテキストでのみ利用可能です。安全なコンテキストの主目的は、[中間者攻撃者](https://ja.wikipedia.org/wiki/中間者攻撃)が被害者に更なる危険にさらす可能性がある強力な API にアクセスするのを防ぐことにあります。
 - [安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
   - : このリファレンスは、安全なコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です。
 - [脆弱な署名アルゴリズム](/ja/docs/Web/Security/Weak_Signature_Algorithm)
@@ -69,9 +65,9 @@ translation_of: Web/Security
 クリックジャックでは、ユーザーがだまされて、ユーザーが期待するもの以外のアクションを実行する UI 要素をクリックします。
 
 - [HTTP X-Frame-Options](/ja/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーが [`<frame>`](/ja/docs/Web/HTML/Element/frame "<frame> は、他の HTML 文書を表示するための特定の領域を定義する HTML 要素です。フレームは、<frameset> の中で使用します。"), [`<iframe>`](/ja/docs/Web/HTML/Element/iframe "HTML インラインフレーム要素 (<iframe>) は、別の HTML ページを現在のページに埋め込むことで、入れ子式の閲覧コンテキストを表します。"), [`<embed>`](/ja/docs/Web/HTML/Element/embed "HTML の <embed> 要素は、外部のコンテンツを文書内の指定された場所に埋め込みます。このコンテンツは、外部のアプリケーションや、ブラウザーのプラグインなどのインタラクティブなコンテンツのソースによって提供されます。"), [`<object>`](/ja/docs/Web/HTML/Element/object "HTML の <object> 要素は、外部リソースを表します。これは、画像、ネストされた閲覧コンテキスト、またはプラグインによって処理されるリソースとして扱うことができます。") でページをレンダリングできるかどうかを示すことができます。サイトはこれを使用してコンテンツが他のサイトに埋め込まれないようにすることで、クリックジャッキング攻撃を回避できます。
+  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーが [`<frame>`](/ja/docs/Web/HTML/Element/frame), [`<iframe>`](/ja/docs/Web/HTML/Element/iframe), [`<embed>`](/ja/docs/Web/HTML/Element/embed), [`<object>`](/ja/docs/Web/HTML/Element/object) でページをレンダリングできるかどうかを示すことができます。サイトはこれを使用してコンテンツが他のサイトに埋め込まれないようにすることで、クリックジャッキング攻撃を回避できます。
 - [CSP: frame-ancestors](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-  - : HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** ディレクティブは、 {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} を使用して、ページを埋め込むことができる有効な親を指定します。
+  - : HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** ディレクティブは、 {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} を使用して、ページを埋め込むことができる有効な親を指定します。
 
 ## ユーザー情報セキュリティ
 

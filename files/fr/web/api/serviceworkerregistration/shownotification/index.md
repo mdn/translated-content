@@ -12,6 +12,7 @@ tags:
   - showNotification
 translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegistration")}} crée une notification dans un service worker actif.
@@ -20,7 +21,9 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 
 ## Syntaxe
 
-    serviceWorkerRegistration.showNotification(title, [options])
+```js
+serviceWorkerRegistration.showNotification(title, [options])
+```
 
 ### Paramètres
 
@@ -32,11 +35,11 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 
     - `actions`: Un tableau de {{domxref ("NotificationAction")}} représentant les actions disponibles pour l'utilisateur lorsque la notification est présentée. Ce sont des options parmi lesquelles l'utilisateur peut choisir pour agir sur l'action dans le contexte de la notification elle-même. Le nom de l'action est envoyé au gestionnaire de notifications du service worker pour lui faire savoir que l'action a été sélectionnée par l'utilisateur. Les membres du tableau doivent être un objet. Il peut contenir les valeurs suivantes:
 
-      - action: Une {{domxref("DOMString")}}  représentant une action utilisateur à afficher sur la notification.
+      - action: Une {{domxref("DOMString")}} représentant une action utilisateur à afficher sur la notification.
       - title: Une {{domxref("DOMString")}} contenant le texte d'action à montrer à l'utilisateur.
       - icon: Une {{domxref("USVString")}} contenant l'URL d'une icône à afficher avec l'action.
 
-      Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement {{event("notificationclick")}}.
+      Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement [`notificationclick`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event).
 
     - `badge`: Un {{domxref ("USVString")}} contenant l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
     - `body`: Un {{domxref ("DOMString")}} représentant le corps du texte de la notification, qui est affiché sous le titre.
@@ -83,10 +86,8 @@ Vous pouvez également récupérer les détails des {{domxref ("Notification", "
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                     | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Web Notifications','#dom-serviceworkerregistration-shownotification','showNotification()')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration.showNotification")}}
+{{Compat}}

@@ -1,22 +1,13 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - レスポンスヘッダー
-  - ヘッダー
-  - WWW-Authenticate
-  - 認証
-browser-compat: http.headers.WWW-Authenticate
-translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへのアクセス権を得るために使われる [HTTP 認証](/ja/docs/Web/HTTP/Authentication)メソッド (「チャレンジ」) を定義します。</p>
 
-> **Note:** このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Authentication#一般的な_http_認証の枠組み)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)で使用することができます。
+> **メモ:** このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Authentication#一般的な_http_認証の枠組み)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)で使用することができます。
 > それぞれの「チャレンジ」には、サーバーが対応している方式と、その方式型に定義されている追加引数が記載されています。
 
 [HTTP 認証]((/ja/docs/Web/HTTP/Authentication))を使用するサーバーは、保護されたリソースへのリクエストに対して {{HTTPStatus("401")}} `Unauthorized` レスポンスを返します。このレスポンスには、1 つ以上の `WWW-Authenticate` ヘッダーと 1 つ以上の{{Glossary("challenge", "チャレンジ")}}が含まれていなければならず、リソースへのアクセスにどのような認証方式が使用できるか (およびそれぞれの方式が必要とする追加データ) を示します。
@@ -43,6 +34,7 @@ HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへ
 
 1 つ以上のチャレンジを指定する必要があります。
 複数のチャレンジを指定する場合は、カンマで区切って 1 つのヘッダーに入れたり、個々のヘッダーで指定したりすることができます。
+
 ```http
 // チャレンジを単一のヘッダーで指定
 WWW-Authenticate: challenge1, ..., challengeN
@@ -61,7 +53,7 @@ WWW-Authenticate: challengeN
 WWW-Authenticate: <auth-scheme>
 WWW-Authenticate: <auth-scheme> realm=<realm>
 WWW-Authenticate: <auth-scheme> token68
-WWW-Authenticate: <auth-scheme> auth-param1=token1, ..., auth-paramN=auth-paramN-token    
+WWW-Authenticate: <auth-scheme> auth-param1=token1, ..., auth-paramN=auth-paramN-token
 WWW-Authenticate: <auth-scheme> realm=<realm> token68
 WWW-Authenticate: <auth-scheme> realm=<realm> token68 auth-param1=auth-param1-token , ..., auth-paramN=auth-paramN-token 
 WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token 
@@ -76,13 +68,12 @@ WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
 
-
 ## ディレクティブ
 
 - `<auth-scheme>`
   - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)です。有名なものとしては、 [`Basic`](/ja/docs/Web/HTTP/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります (大文字小文字の区別なし)。
 
-    > **Note:** 詳しい情報やオプションについては、[HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)を参照してください。
+    > **メモ:** 詳しい情報やオプションについては、[HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)を参照してください。
 - **realm=**\<realm> {{optional_inline}}
   - : 保護領域を説明する文字列です。
     realm によってサーバーが保護する領域を分割することができ (そのような分割を許可しているスキームが対応している場合)、どの特定のユーザー名/パスワードが必要であるかをユーザーに通知します。
@@ -93,7 +84,6 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 `<auth-scheme>` とキー `realm` 以外の認証引数は、それぞれの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)に固有のものです。
 通常、これらについては関連する仕様を確認する必要があります (一部のスキームのキーを以下に示します)。
-
 
 ### Basic
 
@@ -130,14 +120,13 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
       セッションで有効な値は `"MD5-sess"`、`"SHA-256-sess"`、`"SHA-512-sess"` です。
 - **`qop`**
   - : 引用符の付いた文字列で、サーバーが対応している保護の品質を示します。これは必ず指定しなければならず、認識できないオプションは無視されます。
-      - `"auth"`: 認証
-      - `"auth-int"`: 完全性保護付きの認証
+    - `"auth"`: 認証
+    - `"auth-int"`: 完全性保護付きの認証
 - **`charset="UTF-8"`** {{optional_inline}}
   - : ユーザー名とパスワードを送信する際に、サーバーが優先するエンコード方式をクライアントに伝えます。
       大文字小文字を区別しない文字列 "UTF-8" のみが許可されます。
 - **`userhash`** {{optional_inline}}
   - : サーバーが `"true"` を指定することで、ユーザー名のハッシュ化に対応していることを示すことができます (既定値は `"false"` です)。
-
 
 ## 例
 
@@ -157,12 +146,11 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 `"Basic"` 認証では、資格情報はまず、ユーザー名とパスワードをコロンで結合し (`aladdin:opensesame`)、その結果の文字列を [`base64`](/ja/docs/Glossary/Base64) でエンコードすることで構築します (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
-> **Note:** Apache や nginx サーバーで HTTP Basic 認証を使用してサイトを保護する方法の例については、 <a href="/ja/docs/Web/HTTP/Authentication">HTTP 認証</a> を参照してください。
-
+> **メモ:** Apache や nginx サーバーで HTTP Basic 認証を使用してサイトを保護する方法の例については、 <a href="/ja/docs/Web/HTTP/Authentication">HTTP 認証</a> を参照してください。
 
 ### SHA-256 と MD5 を使用した Digest 認証
 
-> **Note:** この例は、{{RFC("7616")}} "HTTP Digest Access Authentication" から引用しています (この仕様書の他の例では、`SHA-512`、`charset`、`userhash` の使用方法を示しています)。
+> **メモ:** この例は、{{RFC("7616")}} "HTTP Digest Access Authentication" から引用しています (この仕様書の他の例では、`SHA-512`、`charset`、`userhash` の使用方法を示しています)。
 
 クライアントは、Digest 認証で保護された URI "http://www.example.org/dir/index.html" の文書にアクセスしようとしています。
 この文書のユーザー名は "Mufasa" で、パスワードは "Circle of Life" です (各単語の間にスペースがあることに注意してください)。
@@ -217,8 +205,6 @@ Authorization: Digest username="Mufasa",
         6794697cf8db5856cb6c1",
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
 ```
-
-
 
 ## 仕様書
 

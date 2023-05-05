@@ -12,13 +12,14 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBRequest`** de l'API IndexedDB donne accès par ses gestionnaires d'événements aux résultats des requêtes asynchrones sur la base de données, les magasins d'objets ou les index. Chaque opération d'écriture ou lecture sur la base de données utilise une requête.
 
 Cet objet **`IDBRequest`** ne contient aucune information sur le résultat de l'opération, mais dès qu'une information est disponible un événement est déclenché. L'objet **`IDBRequest`** utilise ses gestionnaires d'événements pour le capter et mettre l'information à disposition.
 
-Toute les opération asynchrone retourne immédiatement une instance **`IDBRequest`** avec une propriété `readyState` défini à `'pending'` qui passe à  `'done'` lorsque la requête réussie ou échoue. Quand l'état passe à `done`, chaque requête retourne `result` et `error`, et un évènement est envoyé sur la requête. Quand l'état est sur `pending`, chaque accès à `result` ou `error` lève une exception `InvalidStateError`.
+Toute les opération asynchrone retourne immédiatement une instance **`IDBRequest`** avec une propriété `readyState` défini à `'pending'` qui passe à `'done'` lorsque la requête réussie ou échoue. Quand l'état passe à `done`, chaque requête retourne `result` et `error`, et un évènement est envoyé sur la requête. Quand l'état est sur `pending`, chaque accès à `result` ou `error` lève une exception `InvalidStateError`.
 
 Pour faire simple, chaque méthode asynchrome retourne un objet de requête. Si l'opération réussi, le résultat est disponible dans la propriété `result` et un évènement `success` est lancé ({{domxref("IDBRequest.onsuccess")}}). Si une erreur est rencontrée, une exeption est disponible dans la propriété `error` et un évènement `error` est lancé ({{domxref("IDBRequest.onerror")}}).
 
@@ -52,13 +53,13 @@ _Pas de méthodes spécifiques, mais hérite des méthodes de {{domxref("EventTa
 On peut écouter les évènement avec `addEventListener()` ou bien en assignant un gestionnaire d'évènement à la propriété `oneventname` de cette interface.
 
 - {{domxref("IDBRequest.onerror","onerror")}}
-  - : Le gestionnaire d'événement **`onerror`** de l'interface **`IDBRequest`** capte l'événement [`error`](/en-US/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
+  - : Le gestionnaire d'événement **`onerror`** de l'interface **`IDBRequest`** capte l'événement [`error`](/fr/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
 - {{domxref("IDBRequest.onsuccess","onsuccess")}}
-  - : Le gestionnaire d'événement **`onsuccess`** de l'interface **`IDBRequest`** capte l'événement [`success`](/en-US/docs/Web/Events/success), déclenché quand la requête réussie.
+  - : Le gestionnaire d'événement **`onsuccess`** de l'interface **`IDBRequest`** capte l'événement [`success`](/fr/docs/Web/Events/success), déclenché quand la requête réussie.
 
 ## Exemple
 
-Dans l'exemple suivant, on ouvre une base de données et on fait une requête. Les gestionnaires d'événement `{{domxref("IDBRequest.onsuccess","onsuccess")}}` et `{{domxref("IDBRequest","onerror")}}` sont inclus. Pour un exemple de travail complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([voir l'exemple en direct](http://mdn.github.io/to-do-notifications/)).
+Dans l'exemple suivant, on ouvre une base de données et on fait une requête. Les gestionnaires d'événement `{{domxref("IDBRequest.onsuccess","onsuccess")}}` et `{{domxref("IDBRequest","onerror")}}` sont inclus. Pour un exemple de travail complet, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var db;
@@ -82,14 +83,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB', '#idbrequest', 'IDBRequest')}}     | {{Spec2('IndexedDB')}}     | Définition initiale. |
-| {{SpecName("IndexedDB 2", "#request-api", "IDBRequest")}} | {{Spec2("IndexedDB 2")}} |                      |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -99,4 +97,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Définir un intervalle de clés: {{domxref("IDBKeyRange")}}
 - Récupérer et modifier vos données: {{domxref("IDBObjectStore")}}
 - utiliser les curseurs: {{domxref("IDBCursor")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

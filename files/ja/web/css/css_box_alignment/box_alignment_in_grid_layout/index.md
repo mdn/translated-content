@@ -1,13 +1,8 @@
 ---
 title: グリッドレイアウトでのボックス配置
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
-tags:
-  - CSS
-  - ガイド
-  - ボックス配置
-  - グリッド
-translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 ---
+
 {{CSSRef}}
 
 [ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)の仕様書では、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このページでは、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)においてボックス配置がどのように働くかを探ります。

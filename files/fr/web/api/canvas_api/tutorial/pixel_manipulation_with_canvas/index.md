@@ -4,7 +4,8 @@ slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Pixel_manipulation_with_canvas
 ---
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 Jusqu'à présent, nous n'avons pas examiné dans le détail les pixels réels de notre canevas. Avec l'objet ImageData, vous pouvez directement lire et écrire dans le tableau de données de l'image, pour manipuler les pixels un par un. Nous verrons également comment le lissage (anticrénelage) de l'image peut être contrôlé et comment sauvegarder des images depuis votre canevas.
 
@@ -19,9 +20,9 @@ L'objet {{domxref("ImageData")}} représente les données de pixels sous-jacente
 - `data`
   - : Un {{jsxref("Uint8ClampedArray")}} représentant un tableau monodimensionnel contenant les données dans l'ordre RVBA, ayant des valeurs entières entre 0 et 255 (inclus).
 
-La propriété `data` retourne un tableau {{jsxref("Uint8ClampedArray")}} auquel on peut accéder pour voir plus en détail les données brutes des pixels ; chaque pixel est représenté par quatre valeurs sur un octet (rouge, vert, bleu et alpha, dans cet ordre ; c'est-à-dire, le format "RVBA").  Chaque composante de couleur est représentée par un entier entre 0 et 255. Chaque composante reçoit un indice à l'intérieur du tableau, la composante rouge du pixel supérieur gauche étant à l'indice 0 à l'intérieur du tableau. Les pixels continuent ensuite de gauche à droite, puis vers le bas, jusqu'au bout du tableau.
+La propriété `data` retourne un tableau {{jsxref("Uint8ClampedArray")}} auquel on peut accéder pour voir plus en détail les données brutes des pixels ; chaque pixel est représenté par quatre valeurs sur un octet (rouge, vert, bleu et alpha, dans cet ordre ; c'est-à-dire, le format "RVBA"). Chaque composante de couleur est représentée par un entier entre 0 et 255. Chaque composante reçoit un indice à l'intérieur du tableau, la composante rouge du pixel supérieur gauche étant à l'indice 0 à l'intérieur du tableau. Les pixels continuent ensuite de gauche à droite, puis vers le bas, jusqu'au bout du tableau.
 
-Le {{jsxref("Uint8ClampedArray")}} contient `height`_(hauteur)_ × `width`*(largeur)*  × 4 octets, dont les valeurs d'indices vont de 0 à (`height`×`width`×4)-1.
+Le {{jsxref("Uint8ClampedArray")}} contient `height`_(hauteur)_ × `width`*(largeur)* × 4 octets, dont les valeurs d'indices vont de 0 à (`height` × `width` × 4)-1.
 
 Par exemple, pour lire la valeur de la composante bleue d'un pixel situé en colonne 200, ligne 50 de l'image, vous pouvez faire ce qui suit&nbsp;:
 
@@ -53,13 +54,13 @@ var monImageData = ctx.createImageData(autreImageData);
 
 ## Obtention des données pixel pour un contexte
 
-Pour obtenir un objet  `ImageData` contenant une copie des données pixel pour un contexte de canevas, vous pouvez utiliser la méthode `getImageData()` :
+Pour obtenir un objet `ImageData` contenant une copie des données pixel pour un contexte de canevas, vous pouvez utiliser la méthode `getImageData()` :
 
 ```js
 var monImageData = ctx.getImageData(gauche, haut, largeur, hauteur);
 ```
 
-Cette méthode retourne un objet `ImageData` représentant les données pixel pour la zone du canevas dont les coins sont représentés par les points  (`left`,`top`) _`(gauche,haut)`_, (`left+width`, `top`) _(gauche+largeur, haut)_, (`left`, `top+height`) _(gauche, haut+hauteur)_ et  (`left+width`, `top+height`) _(gauche+largeur, haut+hauteur)_. Les coordonnées sont spécifiées en unités d'espace de coordonnées du canevas.
+Cette méthode retourne un objet `ImageData` représentant les données pixel pour la zone du canevas dont les coins sont représentés par les points (`left`, `top`) _`(gauche,haut)`_, (`left+width`, `top`) _(gauche+largeur, haut)_, (`left`, `top+height`) _(gauche, haut+hauteur)_ et (`left+width`, `top+height`) _(gauche+largeur, haut+hauteur)_. Les coordonnées sont spécifiées en unités d'espace de coordonnées du canevas.
 
 > **Note :** Tous les pixels en dehors du canevas seront retournés comme noirs transparents dans l'objet `ImageData` résultant.
 
@@ -74,26 +75,28 @@ Dans cet exemple, nous utilisons la méthode [`getImageData()`](/fr/docs/Web/API
 <div id="color" style="width:200px;height:50px;float:left"></div>
 ```
 
-    var img = new Image();
-    img.src = './assets/rhino.jpg';
-    var canvas = document.getElementById('canvas');
-    var ctx = canvas.getContext('2d');
-    img.onload = function() {
-      ctx.drawImage(img, 0, 0);
-      img.style.display = 'none';
-    };
-    var color = document.getElementById('color');
-    function pick(event) {
-      var x = event.layerX;
-      var y = event.layerY;
-      var pixel = ctx.getImageData(x, y, 1, 1);
-      var data = pixel.data;
-      var rgba = 'rgba(' + data[0] + ', ' + data[1] +
-                 ', ' + data[2] + ', ' + (data[3] / 255) + ')';
-      color.style.background =  rgba;
-      color.textContent = rgba;
-    }
-    canvas.addEventListener('mousemove', pick);
+```js
+var img = new Image();
+img.src = './assets/rhino.jpg';
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+img.onload = function() {
+  ctx.drawImage(img, 0, 0);
+  img.style.display = 'none';
+};
+var color = document.getElementById('color');
+function pick(event) {
+  var x = event.layerX;
+  var y = event.layerY;
+  var pixel = ctx.getImageData(x, y, 1, 1);
+  var data = pixel.data;
+  var rgba = 'rgba(' + data[0] + ', ' + data[1] +
+              ', ' + data[2] + ', ' + (data[3] / 255) + ')';
+  color.style.background =  rgba;
+  color.textContent = rgba;
+}
+canvas.addEventListener('mousemove', pick);
+```
 
 {{ EmbedLiveSample('Une_pipette_à_couleur', 610, 240) }}
 
@@ -115,7 +118,7 @@ ctx.putImageData(monImageData, 0, 0);
 
 ### Niveaux de gris et inversion de couleurs
 
-Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipedia pour plus d'informations.
+Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipédia pour plus d'informations.
 
 ```html hidden
 <canvas id="canevas" width="300" height="227"></canvas>

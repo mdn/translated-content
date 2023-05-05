@@ -3,6 +3,7 @@ title: Stratégies pour mener à bien vos tests
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Cet article commence en donnant un aperçu sur le sujet des tests sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé ?", "Quels sont les problèmes les plus communs que vous allez rencontrer ?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes ?"
@@ -45,9 +46,9 @@ Par coder de manière défensive, nous voulons dire essayer de construire une so
 
 L'objectif est de mettre en place une liste des navigateurs/appareils sur laquelle vous pouvez vous appuyer lors de vos tests. Vous pouvez la faire aussi simple ou compliquée que vous le souhaitez — par exemple, une approche répandue est d'établir différents grades de niveau de support, quelque chose comme :
 
-1.  Grade A : Navigateurs communs/modernes — Connu pour leur capacité. Tester complètement et fournir un support complet.
-2.  Grade B : Navigateurs plus vieux/ayant moins de capacité — connu pour leur incapacité. Tester, et fournir une expérience plus basique qui donne un accès total au principal de l'information et des services.
-3.  Grade C : Navigateurs rares/inconnus — ne pas tester, mais supposer qu'ils sont capables. Fournir le site complet, qui devrait marcher, au moins avec les solutions de replis disponibles grâce à notre code défensif.
+1. Grade A : Navigateurs communs/modernes — Connu pour leur capacité. Tester complètement et fournir un support complet.
+2. Grade B : Navigateurs plus vieux/ayant moins de capacité — connu pour leur incapacité. Tester, et fournir une expérience plus basique qui donne un accès total au principal de l'information et des services.
+3. Grade C : Navigateurs rares/inconnus — ne pas tester, mais supposer qu'ils sont capables. Fournir le site complet, qui devrait marcher, au moins avec les solutions de replis disponibles grâce à notre code défensif.
 
 Tout au long des sections à venir, nous allons mettre en place une liste de support dans ce format.
 
@@ -67,9 +68,9 @@ Vous savez aussi peut-être qu'un certain nombre de personnes continue d'utilise
 
 Ce qui nous donne pour l'instant la liste de support suivante :
 
-1.  Grade A : Chrome et Firefox pour Windows/Mac, Safari pour Mac, Edge et IE pour Windows (les deux dernières versions de chacun), iOS Safari pour iPhone/iPad, Android stock browser (les deux dernières versions) sur téléphone/tablette, Chrome et Firefox pour Android (les deux dernières versions) sur téléphone/tablette.
-2.  Grade B : IE 9 pour Windows
-3.  Grade C : n/a
+1. Grade A : Chrome et Firefox pour Windows/Mac, Safari pour Mac, Edge et IE pour Windows (les deux dernières versions de chacun), iOS Safari pour iPhone/iPad, Android stock browser (les deux dernières versions) sur téléphone/tablette, Chrome et Firefox pour Android (les deux dernières versions) sur téléphone/tablette.
+2. Grade B : IE 9 pour Windows
+3. Grade C : n/a
 
 Si vous vivez autre part, ou travaillez sur un site qui va être livré autre part (par ex. dans un pays ou un endroit en particulier), alors vous aurez sûrement des navigateurs communs différents à tester.
 
@@ -96,12 +97,12 @@ Mais une analyse historique peut être utile pour trouver des statistiques de su
 
 #### Configurer Google analytics
 
-1.  En premier lieu, vous avez besoin d'un compte Google. Utilisez ce compte afin de vous inscrire sur [Google Analytics](https://www.google.com/analytics/).
-2.  Choisissez l'option [Google Analytics](https://analytics.google.com/analytics/web/) (web), et cliquez sur le bouton _S'inscrire_.
-3.  Entrez les détails sur votre site/appli dans la page d'inscription. C'est très intuitif à configurer ; le champ le plus important où il ne faut pas se tromper est l'URL du site web. Cela doit être l'URL racine de votre site/appli.
-4.  Une fois que vous avez terminé de tout remplir, appuyer sur le bouton _Get Tracking ID_, ensuite acceptez les modalités de services qui apparaissent.
-5.  La prochaine page vous fournit quelques extraits de code et d'autres instructions. Pour un site web basique, ce que vous avez besoin de faire, c'est de copier le bloc de code _Website tracking_ et de le coller sur toutes les différentes pages que vous voulez suivre en utilisant Google Analytics sur votre site. Vous pouvez le placer en-dessous de la balise fermante `</body>`, ou n'importe où d'approprié qui le garderait de se mélanger avec le code de votre application.
-6.  Téléchargez vos modifications sur le serveur de développement, ou autre part où vous avez besoin de votre code.
+1. En premier lieu, vous avez besoin d'un compte Google. Utilisez ce compte afin de vous inscrire sur [Google Analytics](https://www.google.com/analytics/).
+2. Choisissez l'option [Google Analytics](https://analytics.google.com/analytics/web/) (web), et cliquez sur le bouton _S'inscrire_.
+3. Entrez les détails sur votre site/appli dans la page d'inscription. C'est très intuitif à configurer ; le champ le plus important où il ne faut pas se tromper est l'URL du site web. Cela doit être l'URL racine de votre site/appli.
+4. Une fois que vous avez terminé de tout remplir, appuyer sur le bouton _Get Tracking ID_, ensuite acceptez les modalités de services qui apparaissent.
+5. La prochaine page vous fournit quelques extraits de code et d'autres instructions. Pour un site web basique, ce que vous avez besoin de faire, c'est de copier le bloc de code _Website tracking_ et de le coller sur toutes les différentes pages que vous voulez suivre en utilisant Google Analytics sur votre site. Vous pouvez le placer en-dessous de la balise fermante `</body>`, ou n'importe où d'approprié qui le garderait de se mélanger avec le code de votre application.
+6. Téléchargez vos modifications sur le serveur de développement, ou autre part où vous avez besoin de votre code.
 
 C'est bon ! Votre site devrait maintenant être prêt à commencer à reporter l'analyse de données.
 
@@ -129,9 +130,9 @@ Vous pouvez avoir à prendre d'autres considérations supplémentaires. Si vous 
 
 Donc, notre liste de support finale devrait finir par ressemble à ça :
 
-1.  Grade A : Chrome et Firefox pour Windows/Mac, Safari pour Mac, Edge et IE pour Windows (les deux dernières versions de chaque), iOS Safari pour iPhone/iPad, Android stock browser (les deux dernières versions) pour téléphone/tablette, Chrome et Firefox pour Android (les deux dernières versions) sur téléphone/tablette. L'accessibilité qui passe les tests courants.
-2.  Grade B : IE 8 et 9 pour Windows, Opera Mini.
-3.  Grade C : Opera, d'autres bons navigateurs modernes.
+1. Grade A : Chrome et Firefox pour Windows/Mac, Safari pour Mac, Edge et IE pour Windows (les deux dernières versions de chaque), iOS Safari pour iPhone/iPad, Android stock browser (les deux dernières versions) pour téléphone/tablette, Chrome et Firefox pour Android (les deux dernières versions) sur téléphone/tablette. L'accessibilité qui passe les tests courants.
+2. Grade B : IE 8 et 9 pour Windows, Opera Mini.
+3. Grade C : Opera, d'autres bons navigateurs modernes.
 
 ## Qu'est-ce que vous allez tester ?
 
@@ -220,17 +221,17 @@ Les machines virtuelles sont des applications qui s'exécutent sur le bureau de 
 
 Pour utiliser Virtual Box, vous avez besoin de :
 
-1.  Procurez-vous un disque d'installation ou une image (par ex. un ISO) du système d'exploitation que vous voulez émuler. Virtual Box est en mesure de vous les fournir ; la plupart, comme les OSs de Windows, sont des produits commerciaux qui ne peuvent être distribués gratuitement.
-2.  [Téléchargez l'installeur approprié](https://www.virtualbox.org/wiki/Downloads) pour votre système d'exploitation et installez-le.
-3.  Ouvrez l'appli ; vous verrez une vue ressemblant à ceci : ![](virtualbox.png)
-4.  Pour créer une nouvelle machine virtuelle, appuyer sur le bouton _Nouveau_ dans le coin en haut à gauche.
-5.  Suivez les instructions et remplissez les boîtes de dialogues suivantes comme il se doit. Vous allez :
+1. Procurez-vous un disque d'installation ou une image (par ex. un ISO) du système d'exploitation que vous voulez émuler. Virtual Box est en mesure de vous les fournir ; la plupart, comme les OSs de Windows, sont des produits commerciaux qui ne peuvent être distribués gratuitement.
+2. [Téléchargez l'installeur approprié](https://www.virtualbox.org/wiki/Downloads) pour votre système d'exploitation et installez-le.
+3. Ouvrez l'appli ; vous verrez une vue ressemblant à ceci : ![](virtualbox.png)
+4. Pour créer une nouvelle machine virtuelle, appuyer sur le bouton _Nouveau_ dans le coin en haut à gauche.
+5. Suivez les instructions et remplissez les boîtes de dialogues suivantes comme il se doit. Vous allez :
 
-    1.  Donner un nom à votre machine virtuelle
-    2.  Choisir un système d'exploitation et une version que vous allez installer dessus
-    3.  Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)
-    4.  Créer un disque dur virtuel (choisissez les options pas défaut à travers les trois boîtes de dialogues contenant _Créer un disque dur virtuel maintenant_, _IDV (image disque virtuelle)_, _Allocation dynamique_)
-    5.  Choisissez l'emplacement du fichier et la taille du disque dur virtuel (choisir un nom sensé et un emplacement facile à garder, et pour la dimension préciser quelque chose autour de 50Go, ou autant que vous pensez que c'est nécessaire)
+    1. Donner un nom à votre machine virtuelle
+    2. Choisir un système d'exploitation et une version que vous allez installer dessus
+    3. Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)
+    4. Créer un disque dur virtuel (choisissez les options pas défaut à travers les trois boîtes de dialogues contenant _Créer un disque dur virtuel maintenant_, _IDV (image disque virtuelle)_, _Allocation dynamique_)
+    5. Choisissez l'emplacement du fichier et la taille du disque dur virtuel (choisir un nom sensé et un emplacement facile à garder, et pour la dimension préciser quelque chose autour de 50Go, ou autant que vous pensez que c'est nécessaire)
 
 Maintenant la nouvelle virtual box devrait apparaître dans le menu gauche de la fenêtre de l'interface principale de Virtual Box. A ce stade, vous pouvez double-cliquer dessus pour ouvrir la virtual box — cela commencera à démarrer la machine virtuelle, mais il n'y aura pas encore le système d'exploitation d'installé. A cet instant vous devez préciser à la boîte de dialogue l'image de votre programme d'installation, et les étapes s'exécuteront une par une dans la machine virtuelle, exactement comme si c'était un vrai ordinateur.
 
@@ -296,16 +297,3 @@ Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce 
 La prochaine fois nous tournerons notre attention sur les problèmes concrets de votre code que vos tests peuvent révéler, en commençant avec le HTML et le CSS.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-
-
-## Dans ce module
-
-- [Introduction to cross browser testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

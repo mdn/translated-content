@@ -1,14 +1,8 @@
 ---
 title: CookieStore.getAll()
 slug: Web/API/CookieStore/getAll
-tags:
-  - API
-  - Method
-  - Reference
-  - getAll()
-  - CookieStore
-browser-compat: api.CookieStore.getAll
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
 {{domxref("CookieStore")}} インターフェイスの **`getAll()`** メソッドは、渡された名前またはオプションに一致する Cookie のリストを返します。パラメータを何も渡さなければ、現在のコンテキストのすべての Cookie を返します。
@@ -33,7 +27,7 @@ var list = cookieStore.getAll(options);
     - `url`
       - : Cookie の URL が入っている {{domxref("USVString")}} です。
 
-> **Note:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。ドキュメントからは現在の URL の Cookie しか取得できないので、ドキュメントコンテキストで有効な URL はドキュメントの URL のみとなります。
+> **メモ:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。ドキュメントからは現在の URL の Cookie しか取得できないので、ドキュメントコンテキストで有効な URL はドキュメントの URL のみとなります。
 
 ### 返値
 

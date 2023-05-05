@@ -1,12 +1,8 @@
 ---
 title: 演算子の優先順位
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - ガイド
-  - JavaScript
-  - 優先順位
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **演算子の優先順位**は、演算子が互いにどのように解釈されるかを決定します。優先度の高い演算子は、優先度の低い演算子のオペランドになります。
@@ -190,7 +186,6 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
 
 なお、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)はこの表から除外しています。 — 理由は [Stack Overflow の回答](https://stackoverflow.com/a/48656377)を引用します。「[スプレッド構文は演算子ではなく](https://stackoverflow.com/q/44934828/1048572)、優先度はありません。これは配列リテラルと関数呼び出し（およびオブジェクトリテラル）の構文の一部です。」
 
-
 <table class="fullwidth-table">
   <tbody>
     <tr>
@@ -238,7 +233,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining">オプション連鎖</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining">オプショナルチェーン</a>
       </td>
       <td>左から右</td>
       <td><code>?.</code></td>
@@ -273,7 +268,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT">ビットごとの NOT (~)</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT">ビット単位 NOT (~)</a>
       </td>
       <td><code>~ …</code></td>
     </tr>

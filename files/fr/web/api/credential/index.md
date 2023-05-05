@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Credential
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
 L'interface **`Credential`**, rattachée à l'[API Credential Management](/fr/docs/Web/API/Credential_Management_API), fournit des informations relatives à une entité qui seront utilisées comme prérequis à l'établissement d'une relation de confiance.
@@ -39,12 +40,10 @@ Aucune.
 // TBD
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Credential")}}
+{{Compat}}

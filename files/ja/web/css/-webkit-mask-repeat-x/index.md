@@ -1,16 +1,8 @@
 ---
 title: '-webkit-mask-repeat-x'
 slug: Web/CSS/-webkit-mask-repeat-x
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-repeat-x
-translation_of: Web/CSS/-webkit-mask-repeat-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 `-webkit-mask-repeat-x` プロパティは、マスク画像を水平方向に反復 (タイル) するかどうか、どのように反復するかを指定します。
@@ -77,7 +69,7 @@ translation_of: Web/CSS/-webkit-mask-repeat-x
 ```css
 .examplethree {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
-  -webkit-mask-repeat-x: repeat, space;
+  -webkit-mask-repeat-x: repeat, space;
 }
 ```
 

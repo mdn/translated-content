@@ -4,6 +4,7 @@ slug: Web/API/Document/readystatechange_event
 translation_of: Web/API/Document/readystatechange_event
 original_slug: Web/Events/readystatechange
 ---
+
 {{ApiRef}}
 
 L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyState`](/fr/docs/Web/API/Document/readyState) d'un document a changé.
@@ -23,7 +24,7 @@ L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyS
 - Default Action
   - : None.
 
-## propriétés
+## Propriétés
 
 | Property                              | Type                                 | Description                                            |
 | ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
@@ -32,7 +33,7 @@ L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyS
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-## exemple
+## Exemple
 
 ```js
 document.readyState === "complete";
@@ -53,8 +54,8 @@ Cet événement a longtemps été soutenue par Internet Explorer et peut être u
 
 ## Les événements liés
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
+- [`load`](/fr//docs/Web/API/Window/load_event)
+- [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/fr/docs/Web/API/Window/unload_event)

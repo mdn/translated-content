@@ -4,7 +4,8 @@ slug: Web/HTML/Element/input/range
 browser-compat: html.elements.input.input-range
 translation_of: Web/HTML/Element/input/range
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`range`** permettent à l'utilisatrice ou l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/input/number) par exemple).
 
@@ -305,7 +306,6 @@ Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/doc
     </tr>
   </tbody>
 </table>
-
 
 > **Note :** Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
 

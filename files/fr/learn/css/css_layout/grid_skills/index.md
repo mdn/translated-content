@@ -3,6 +3,7 @@ title: 'Testez vos compétences : Grilles'
 slug: Learn/CSS/CSS_layout/Grid_skills
 translation_of: Learn/CSS/CSS_layout/Grid_skills
 ---
+
 {{LearnSidebar}}
 
 Le but de cette tâche est de vous faire travailler avec « _CSS Grid Layout_ » (modèle de disposition en grille) et d'évaluer votre compréhension du comportement d'une grille et des éléments de grille. Vous allez compléter trois petites tâches en utilisant différents éléments des grilles CSS.
@@ -70,7 +71,7 @@ Si vous souhaitez que votre travail soit évalué, ou si vous voulez demander de
 1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez écrire votre propre code ou utiliser celui des fichiers de démarrage fournis ci-dessus.
 2. Rédigez un sujet pour demander une évaluation et/ou une aide dans le [forum Discourse du MDN dans la catégorie «&nbsp;Learning&nbsp;»](https://discourse.mozilla.org/c/mdn/learn). Incluez dans votre message&nbsp;:
 
-  - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
-  - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.
-  - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne (comme expliqué à l'étape 1). C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
-  - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.
+    - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
+    - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.
+    - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne (comme expliqué à l'étape 1). C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
+    - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.

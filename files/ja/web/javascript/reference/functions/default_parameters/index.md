@@ -1,16 +1,8 @@
 ---
 title: デフォルト引数
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-  - Language feature
-  - 言語機能
-  - 関数
-browser-compat: javascript.functions.default_parameters
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **関数のデフォルト引数**は、関数に値が渡されない場合や `undefined` が渡された場合に、デフォルト値で初期化される形式上の引数を指定することができます。
@@ -20,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ## 構文
 
 ```js
-function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { ... }
+function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { /* ... */ }
 ```
 
 ## 解説
@@ -75,7 +67,7 @@ multiply(5, undefined)  // 5
 }
 
 test()           // 'number' (num は 1 に設定)
-test(undefined)  // 'number' (こちらも num は 1 に設定)
+test(undefined) // 'number' (こちらも num は 1 に設定)
 
 // 他の偽値での検査
 test('')         // 'string' (num は '' に設定)
@@ -84,7 +76,7 @@ test(null)       // 'object' (num は null に設定)
 
 ### 呼び出し時の評価
 
-デフォルト引数は*呼び出し時*に評価されるので、(例えば) Python などと異なり、関数が呼ばれる度に新しいオブジェクトが生成されます。
+デフォルト引数は*呼び出し時*に評価されるので、（例えば） Python とは異なり、関数が呼ばれる度に新しいオブジェクトが生成されます。
 
 ```js
 function append(value, array = []) {
@@ -168,7 +160,7 @@ withoutDefaults.call({value: '=^_^='});
 
 ### スコープの影響
 
-デフォルト引数が 1 つ以上定義された場合、引数リスト内の識別子のみに対する[第二のスコープ](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) が生成されます。このスコープは関数本体のために生成されたスコープの親になります。
+デフォルト引数が 1 つ以上定義された場合、引数リスト内の識別子のみに対する[第二のスコープ](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) が生成されます。このスコープは関数本体のために生成されたスコープの親になります。
 
 すなわち、関数の本体で宣言された関数や変数は、デフォルト値の引数初期化子から参照することができません。これを行おうとすると、実行時に {{jsxref("ReferenceError")}} の例外が発生します。
 
@@ -187,7 +179,7 @@ function f(a = go()) { // `f` を呼び出すと `ReferenceError` が発生す�
 ```js example-bad
 function f(a, b = () => console.log(a)) {
   var a = 1
-  b() // `undefined` と表示。デフォルト引数の値は独自のスコープにあるため
+  b() // `undefined` と表示。デフォルト引数の値は独自のスコープにあるため
 }
 ```
 
@@ -208,12 +200,27 @@ f(2)  // [2, undefined]
 
 既定値の代入を、{{jsxref("Operators/Destructuring_assignment", "分割代入", "", 1)}}表記で行うことができます。
 
+これを行う一般的な方法は、空のオブジェクト/配列をオブジェクト/配列に分割代入することです。例えば、 `[x = 1, y = 2] = []` とします。
+このようにすることで、空の配列/オブジェクトを関数に渡しても、あらかじめ設定した値を保持することができます。
+
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
-  return x + y + z
+function preFilledArray([x = 1, y = 2] = []) {
+  return x + y;
 }
 
-f()  // 6
+preFilledArray();       // 3
+preFilledArray([]);     // 3
+preFilledArray([2]);    // 4
+preFilledArray([2, 3]); // 5
+
+// オブジェクトでも同様に動作します。
+function preFilledObject({z = 3} = {}) {
+  return z;
+}
+
+preFilledObject();          // 3
+preFilledObject({});        // 3
+preFilledObject({ z: 2 });  // 2
 ```
 
 ## 仕様書

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setBigUint64
 ---
+
 {{JSRef}}
 
 La méthode **`setBigUint64()`** permet d'enregister un entier non-signé sur 64 bits (type _unsigned long long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
@@ -20,7 +21,9 @@ La méthode **`setBigUint64()`** permet d'enregister un entier non-signé sur 64
 
 ## Syntaxe
 
-    dataview.setBigUint64(positionOctet, value [, littleEndian])
+```js
+dataview.setBigUint64(positionOctet, value [, littleEndian])
+```
 
 ### Paramètres
 
@@ -53,13 +56,11 @@ dataview.getInt32(0); // 3n
 
 ## Spécifications
 
-| Spécification                                                                                                                       | État |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| [Proposition pour `DataView.prototype.setBigUint64()`](https://tc39.github.io/proposal-bigint/#sec-dataview.prototype.setBigUint64) |      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.setBigUint64")}}
+{{Compat}}
 
 ## Voir aussi
 

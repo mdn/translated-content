@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 browser-compat: javascript.builtins.WeakRef.WeakRef
 ---
+
 {{JSRef}}
 
 Le constructeur **`WeakRef`** crée un objet [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
@@ -24,7 +25,7 @@ new WeakRef(objetCible);
 
 ### Créer un nouvel objet WeakRef
 
-Voir la page principale de [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) pour un exemple complet.
+Voir la page principale de [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) pour un exemple complet.
 
 ```js
 class Counter {

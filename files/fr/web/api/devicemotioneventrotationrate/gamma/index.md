@@ -14,13 +14,16 @@ translation_of: Web/API/DeviceMotionEventRotationRate/gamma
 translation_of_original: Web/API/DeviceRotationRate/gamma
 original_slug: Web/API/DeviceRotationRate/gamma
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 Cette propriété indique la vitesse de rotation autour de l'axe Y -- en degrés par seconde -- dans un objet {{ domxref("DeviceRotationRate") }}.
 
 ## Syntaxe
 
-    var gamma = deviceRotationRate.gamma;
+```js
+var gamma = deviceRotationRate.gamma;
+```
 
 Cette propriété est en lecture seule.
 
@@ -31,10 +34,8 @@ Cette propriété est en lecture seule.
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEventRotationRate.gamma")}}
+{{Compat}}

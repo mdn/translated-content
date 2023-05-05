@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/left
 ---
+
 {{CSSRef}}
 
 La propriété **`left`** permet de définir une partie de la position des éléments positionnés. Elle n'a aucun effet pour les éléments non-positionnés.
@@ -65,9 +66,13 @@ left: unset;
     - Pour les éléments positionnés de façon absolue : la position de l'élément selon la valeur de la propriété {{cssxref("right")}}, on considère `width: auto` comme une largeur basée sur le contenu.
     - Pour les éléments positionnés de façon relative : le décalage à gauche de l'élément par rapport à sa position initiale selon la valeur de la propriété {{cssxref("right")}}. SI `right` vaut également `auto`, il n'y a aucun décalage.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -173,17 +178,11 @@ pre {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires                                                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'left')}} | {{Spec2('CSS3 Transitions')}} | `left` peut désormais être animée.                                 |
-| {{SpecName('CSS3 Positioning', '#propdef-left', 'left')}}     | {{Spec2('CSS3 Positioning')}} | Décrit le comportement pour le positionnement adhérent (_sticky_). |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-left', 'left')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.left")}}
+{{Compat}}
 
 ## Voir aussi
 

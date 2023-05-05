@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBRequest/readyState
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`readyState`**, rattachée à l'interface {{domxref("IDBRequest")}}, est une propriété en lecture seule qui indique l'état de la requête.
@@ -19,7 +20,9 @@ Chaque requête démarre avec l'état `pending` (c'est-à-dire en attente). Cet 
 
 ## Syntaxe
 
-    var currentReadyState = request.readyState;
+```js
+var currentReadyState = request.readyState;
+```
 
 ### Valeur
 
@@ -27,7 +30,7 @@ La valeur {{domxref("IDBRequestReadyState")}} de la requête, qui peut être l'u
 
 ## Exemples
 
-Dans l'exemple qui suit, on effectue une requête sur un enregistrement avec un titre donné et on recupère l'enregistrement associé grâce au gestionnaire d'évènement `onsuccess` à partir du magasin d'objets {{domxref("IDBObjectStore")}}. Ensuite, on met à jour une des propriétés de cet enregistrement et on replace cet objet mis à jour dans le magasin d'objets via une autre requête. La valeur de la propriété `readyState` pour la deuxième requête est affichée dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre appliction [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([cf. également l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple qui suit, on effectue une requête sur un enregistrement avec un titre donné et on recupère l'enregistrement associé grâce au gestionnaire d'évènement `onsuccess` à partir du magasin d'objets {{domxref("IDBObjectStore")}}. Ensuite, on met à jour une des propriétés de cet enregistrement et on replace cet objet mis à jour dans le magasin d'objets via une autre requête. La valeur de la propriété `readyState` pour la deuxième requête est affichée dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre appliction [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. également l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";
@@ -64,14 +67,11 @@ objectStoreTitleRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-readyState', 'readyState')}}     | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbrequest-readystate", "readyState")}} | {{Spec2("IndexedDB 2")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.readyState")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -81,4 +81,4 @@ objectStoreTitleRequest.onsuccess = function() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

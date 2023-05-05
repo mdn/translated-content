@@ -1,24 +1,15 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-tags:
-  - Gecko
-  - HAProxy
-  - HTTP
-  - レスポンスヘッダー
-  - セキュリティ
-  - nginx
-browser-compat: http.headers.X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
-**`X-Frame-Options`** は [HTTP](/en-US/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、{{interwiki("wikipedia", "クリックジャッキング")}}攻撃を防ぐために使用することができます。
+**`X-Frame-Options`** は [HTTP](/ja/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、[クリックジャッキング](https://ja.wikipedia.org/wiki/クリックジャッキング)攻撃を防ぐために使用することができます。
 
 セキュリティが強化されるのは、ユーザーが `X-Frame-Options` に対応したブラウザーを使用して文書にアクセスした場合のみです。
 
-**Note:** {{HTTPHeader("Content-Security-Policy")}} ヘッダーに {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがあり、対応しているブラウザーにおいてこのヘッダーを<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">置き換えて</a>います。
-
+**メモ:** {{HTTPHeader("Content-Security-Policy")}} ヘッダーに {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがあり、対応しているブラウザーにおいてこのヘッダーを<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">置き換えて</a>います。
 
 <table class="properties">
   <tbody>
@@ -49,13 +40,13 @@ X-Frame-Options: SAMEORIGIN
 - `DENY`
   - : ページをフレーム内に表示することは、それを試みているサイトが何であろうとできません。
 - `SAMEORIGIN`
-  - : ページは、ページ自体と同じオリジンのフレーム内でのみ表示されます。仕様書ではこのオプションを最上位、親、チェーン全体のどれに適用するかをブラウザーベンダーに任せていますが、すべての祖先が同じオリジンでない限り、利用価値がないと議論されています。 ({{bug(725490)}} を参照)。対応の詳細は{{anch("ブラウザーの互換性")}}もご覧ください。
+  - : ページは、ページ自体と同じオリジンのフレーム内でのみ表示されます。仕様書ではこのオプションを最上位、親、チェーン全体のどれに適用するかをブラウザーベンダーに任せていますが、すべての祖先が同じオリジンでない限り、利用価値がないと議論されています。 ([Firefox バグ 725490](https://bugzil.la/725490) を参照)。対応の詳細は[ブラウザーの互換性](#ブラウザーの互換性)もご覧ください。
 - `ALLOW-FROM uri` {{deprecated_inline}}
-  - : これは廃止されたディレクティブであり、最近のブラウザーでは動作しません。使用しないでください。対応している古いブラウザーでは、ページは指定されたオリジン _uri_ のフレーム内でのみ表示されます。なお、以前の Firefox では `SAMEORIGIN` と同じ問題がありました。 — フレームの祖先が同じオリジンであるかどうかをチェックしません。 {{HTTPHeader("Content-Security-Policy")}} ヘッダーには `frame-ancestors` ディレクティブがあり、代わりにこれを使用することができます。
+  - : これは廃止されたディレクティブであり、最近のブラウザーでは動作しません。使用しないでください。対応している古いブラウザーでは、ページは指定されたオリジン _uri_ のフレーム内でのみ表示されます。なお、以前の Firefox では `SAMEORIGIN` と同じ問題がありました。 — フレームの祖先が同じオリジンであるかどうかをチェックしません。 {{HTTPHeader("Content-Security-Policy")}} ヘッダーには `frame-ancestors` ディレクティブがあり、代わりにこれを使用することができます。
 
 ## 例
 
-> **Note:** X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても意味がありません。例えば、`<meta http-equiv="X-Frame-Options" content="deny">` は効果がありません。使用しないでください。以下の例にあるように、 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
+> **メモ:** X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても意味がありません。例えば、`<meta http-equiv="X-Frame-Options" content="deny">` は効果がありません。使用しないでください。以下の例にあるように、 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
 
 ### Apache の設定
 
@@ -115,7 +106,7 @@ http-response set-header X-Frame-Options SAMEORIGIN
 
 <h3 id="Configuring_Express" name="Configuring_Express">Express の設定</h3>
 
-Express で `X-Frame-Options` ヘッダーを送信するように設定するには、[helmet](https://helmetjs.github.io/) を使用して [frameguard](https://helmetjs.github.io/docs/frameguard/) でヘッダーを設定してください。以下の記述をサーバー設定に追加してください。
+Express で `X-Frame-Options` ヘッダーを送信するように設定するには、[helmet](https://helmetjs.github.io/) を使用して [frameguard](https://helmetjs.github.io/docs/frameguard/) でヘッダーを設定してください。以下の記述をサーバー設定に追加してください。
 
 ```js
 const helmet = require('helmet');

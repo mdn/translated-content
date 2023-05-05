@@ -1,14 +1,8 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - 名前空間
-browser-compat: javascript.builtins.Intl
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
+
 {{JSRef}}
 
 **`Intl`** オブジェクトは、 ECMAScript の国際化 API の名前空間で、言語に依存した文字列の比較、数値の書式化と、日付の書式化を提供します。 **`Intl`** オブジェクトは、いくつかのコンストラクターに加え、国際化コンストラクターや他の言語に関する関数に共通する機能へのアクセスを提供します。
@@ -53,11 +47,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 - ロケール: ロケール識別子またはロケール識別子を持つ [`Intl.Locale`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) オブジェクトです。
 - ロケールのリスト: 何らかの他の値で、オブジェクトに変換され、ロケールの配列として扱われます。
 
-後 2 者では、実際に使用されるロケールは、[ロケールネゴシエーション](#locale_negotiation)によって決定された、最も良く対応しているロケールになります。
+後 2 者では、実際に使用されるロケールは、[ロケールネゴシエーション](#ロケールネゴシエーション)によって決定された、最も良く対応しているロケールになります。
 
 ロケール識別子は以下のものから成る文字列です。
 
-1. 原語サブタグ
+1. 言語サブタグ
 2. (任意で) 文字体系サブタグ
 3. (任意で) 地域 (または国) サブタグ
 4. (任意で) 1 つ以上の変化形サブタグ (すべて固有でなければならない)
@@ -71,9 +65,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 - "`zh-Hans-CN`": 中国 (地域) で使用されている簡体字 (文字体系) で書かれている中国語 (言語)。
 - "`en-emodeng`": 英語 (言語) の "Early modern English" 方言 (変化形)
 
-言語、文字体系、地域 (国を含む)、 (稀に使用される) 変化形を識別するサブタグは、 [IANA 言語サブタグレジストリー](https://www.iana.org/assignments/language-subtag-registry)に登録されています。このレジストリーは長期にわたって定期的に更新されており、実装は常に最新であるとは限らないため、サブタグが広く対応されていることを頼りすぎないようにしてください。
+言語、文字体系、地域 (国を含む)、 (稀に使用される) 変化形を識別するサブタグは、 [IANA 言語サブタグレジストリー](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)に登録されています。このレジストリーは長期にわたって定期的に更新されており、実装は常に最新であるとは限らないため、サブタグが広く対応されていることを頼りすぎないようにしてください。
 
-BCP 47 拡張シーケンスは、単一の数字または文字 (`"x"` 以外) と、ハイフンで区切られた 1 つ以上の 2 から 8 文字の文字または数字によるサブタグで構成されています。それぞれの数字または文字に対して 1 つのシーケンスのみが許可されていますので、 "`de-a-foo-a-foo`" は無効です。 BCP 47 拡張サブタグは [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/master/common/bcp47) で定義されています。現在は 2 つの拡張機能の意味のみが定義されています。
+BCP 47 拡張シーケンスは、単一の数字または文字 (`"x"` 以外) と、ハイフンで区切られた 1 つ以上の 2 から 8 文字の文字または数字によるサブタグで構成されています。それぞれの数字または文字に対して 1 つのシーケンスのみが許可されていますので、 "`de-a-foo-a-foo`" は無効です。 BCP 47 拡張サブタグは [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/main/common/bcp47) で定義されています。現在は 2 つの拡張機能の意味のみが定義されています。
 
 - `"u"` (Unicode) 拡張は {{jsxref("Intl.Collator")}}, {{jsxref("Intl.NumberFormat")}}, {{jsxref("Intl.DateTimeFormat")}} の各オブジェクトにおいて、ロケール固有の動作のカスタマイズを要求するために使用することができます。
 
@@ -86,7 +80,7 @@ BCP 47 拡張シーケンスは、単一の数字または文字 (`"x"` 以外) 
 
 最後に、"x "という文字を使った私的使用の拡張シーケンスがあり、その後にハイフンで区切られた 1 ～ 8 文字または数字のサブタグが 1 つ以上続きます。これにより、アプリケーションが独自に使用する情報をエンコードすることができますが、すべての `Intl` の操作では無視されます。
 
-<h3 id="Locale_negotiation" name="Locale_negotiation">ロケールネゴシエーション</h3>
+### ロケールネゴシエーション
 
 `locales` 引数は、すべての Unicode 拡張を除去した後、アプリケーションからの優先順位付き要求として解釈されます。ランタイムは、利用可能なロケールと比較し、利用可能なロケールのうち最適なものを選びます。マッチングアルゴリズムは二種類あります。 "`lookup`" マッチャーは、[BCP 47](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4) で指定された Lookup アルゴリズムに従います。 "`best fit`" マッチャーでは、ランタイムが少なくとも、あるいは場合によっては、 Lookup アルゴリズムの結果よりもリクエストに適合したロケールを提供します。アプリケーションが `locales` 引数を提供しなかった場合や、リクエストに一致するロケールをランタイムが持っていなかった場合は、ランタイムの既定のロケールが使用されます。マッチャーは、 `options` 引数のプロパティを使って選択することができます (下記参照)。
 
@@ -129,20 +123,19 @@ log("de-DE");
 
 {{Compat}}
 
-
 ## 関連情報
 
 - 導入: [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - コンストラクター
 
-  - {{jsxref("Intl/Collator", "Intl.Collator")}}
-  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-  - {{jsxref("Intl/ListFormat", "Intl.ListFormat")}}
-  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
-  - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
-  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-  - {{jsxref("Intl/Locale", "Intl.Locale")}}
-  - {{jsxref("Intl/Segmenter", "Intl.Segmenter")}}
+  - {{jsxref("Intl/Collator", "Intl.Collator()")}}
+  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
+  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat()")}}
+  - {{jsxref("Intl/PluralRules", "Intl.PluralRules()")}}
+  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
+  - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
 
 - メソッド
 

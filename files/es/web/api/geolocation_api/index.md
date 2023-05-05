@@ -1,9 +1,9 @@
 ---
 title: API de geolocalización
 slug: Web/API/Geolocation_API
-translation_of: Web/API/Geolocation_API
 original_slug: WebAPI/Using_geolocation
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 La **API de geolocalización** permite al usuario compartir su ubicación a las aplicaciones web si así lo desea.
@@ -53,11 +53,11 @@ Consulte [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Us
 
 ## Especificaciones
 
-{{Specifications("api.Geolocation")}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ### Disponibilidad
 
@@ -68,4 +68,3 @@ Dado que Google suele proporcionar la ubicación basada en Wi-Fi, es posible que
 - [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - [API de geolocalización en w3.org](https://www.w3.org/TR/geolocation-API/)
 - [¿Quién movió mi geolocalización?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)
-

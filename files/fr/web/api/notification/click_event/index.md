@@ -11,13 +11,16 @@ tags:
 translation_of: Web/API/Notification/onclick
 original_slug: Web/API/notification/onclick
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-La propriété **`onclick`**, rattachée à l'interface {{domxref("Notification")}}, définit un gestionnaire d'évènement à déclencher lorsque la notification recçoit un évènement {{event("click")}} (qui se produit lorsqu'un utilisateur clique sur la notification).
+La propriété **`onclick`**, rattachée à l'interface {{domxref("Notification")}}, définit un gestionnaire d'évènement à déclencher lorsque la notification recçoit un évènement `click` (qui se produit lorsqu'un utilisateur clique sur la notification).
 
 ## Syntaxe
 
-    Notification.onclick = function(event) { ... };
+```js
+Notification.onclick = function(event) { ... };
+```
 
 Le comportement par défaut consiste à déplacer le focus sur la zone d'affichage (_viewport_) du [contexte de navigation](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) de la notification. Pour éviter ce comportement, on pourra appeler la méthode [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) sur l'objet représentant l'évènement.
 
@@ -34,13 +37,11 @@ notification.onclick = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires      |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------- |
-| {{SpecName('Web Notifications','#dom-notification-onclick','onclick')}} | {{Spec2('Web Notifications')}} | Standard évolutif |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.onclick")}}
+{{Compat}}
 
 ## Voir aussi
 

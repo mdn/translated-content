@@ -4,6 +4,7 @@ slug: Glossary/Alignment_Subject
 translation_of: Glossary/Alignment_Subject
 original_slug: Glossaire/Alignment_Subject
 ---
+
 Dans le [CSS Box Alignment (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_Box_Alignment) l'**alignment subject** (le sujet de l'alignement) est la ou les choses alignées par la propriété.
 
 Pour {{cssxref("justify-self")}} et {{cssxref("align-self")}}, l'**alignment subject** est la marge de la boite sur laquelle la propriété est définie, en utilisant le mode d'écriture de cette zone.
@@ -20,6 +21,6 @@ Pour {{cssxref("justify-content")}} et {{cssxref("align-content")}}, le mode d'�
 - Conteneurs grid
   - : La grille suit l’axe approprié, avec tout espacement inséré entre les pistes ajoutées aux gouttières correspondantes. Les gouttières fusionnées sont traitées comme une seule opportunité d'insertion d'espace.
 
-## Learn more
+## Voir aussi
 
 - [CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)

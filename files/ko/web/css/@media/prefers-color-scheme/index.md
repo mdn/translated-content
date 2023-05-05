@@ -1,15 +1,6 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
-tags:
-- '@media'
-- CSS
-- Reference
-- Web
-- media feature
-- prefers-color-scheme
-browser-compat: css.at-rules.media.prefers-color-scheme
-translation_of: Web/CSS/@media/prefers-color-scheme
 ---
 **`prefers-color-scheme`** [CSS](/ko/docs/Web/CSS) [미디어 특성](/ko/docs/Web/CSS/@media#media_features)은 사용자의 시스템이 라이트 테마나 다크 테마를 사용하는지 탐지하는 데에 사용됩니다.
 
@@ -18,9 +9,9 @@ translation_of: Web/CSS/@media/prefers-color-scheme
 ## 구문
 
 - `light`
-    - : 사용자가 시스템에 라이트 테마를 사용하는 것을 선호하거나 선호하는 테마를 알리지 않았음을 나타냅니다.
+  - : 사용자가 시스템에 라이트 테마를 사용하는 것을 선호하거나 선호하는 테마를 알리지 않았음을 나타냅니다.
 - `dark`
-    - : 사용자가 시스템에 다크 테마를 사용하는 것을 선호한다고 알렸음을 나타냅니다.
+  - : 사용자가 시스템에 다크 테마를 사용하는 것을 선호한다고 알렸음을 나타냅니다.
 
 ## 예제
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBFactory/deleteDatabase
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`deleteDatabase()`**, rattachée à l'interface {{domxref("IDBFactory")}}, permet de demander la suppression d'une base de données. La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération de suppression de façon asynchrone.
@@ -22,11 +23,15 @@ Lorsque la méthode `deleteDatabase()` est invoquée, toutes les autres connexio
 
 La syntaxe actuellement standard est :
 
-    var request = indexedDB.deleteDatabase(nom);
+```js
+var request = indexedDB.deleteDatabase(nom);
+```
 
 Une version expérimentale permet de gérer des options (cf. ci-après) :
 
-    var request = indexedDB.deleteDatabase(nom, options);
+```js
+var request = indexedDB.deleteDatabase(nom, options);
+```
 
 ### Paramètres
 
@@ -57,14 +62,11 @@ DBDeleteRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-deleteDatabase-IDBOpenDBRequest-DOMString-name', 'deleteDatabase()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbfactory-deletedatabase", "deleteDatabase()")}}                                         | {{Spec2("IndexedDB 2")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBFactory.deleteDatabase")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -74,4 +76,4 @@ DBDeleteRequest.onsuccess = function(event) {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

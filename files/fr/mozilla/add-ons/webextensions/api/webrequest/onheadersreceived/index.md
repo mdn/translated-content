@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque les en-têtes de réponse HTTP associés à une requête ont été reçus. Vous pouvez utiliser cet événement pour modifier les en-têtes de réponse HTTP.
@@ -23,11 +24,9 @@ Pour modifier les en-têtes, passez `"blocking"` dans `extraInfoSpec`. Ensuite, 
 
 A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une Promesse qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
-Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking" ](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)dans votre manifest.json.
+Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
 
 Notez qu'il est possible que des extensions entrent en conflit ici. Si deux extensions écoutent `onHeadersReceived` pour la même requête et retournent `responseHeaders` essayant de définir le même en-tête (par exemple, `Content-Security-Policy`), seule une des modifications sera réussie. Si vous voulez voir les en-têtes qui sont effectivement traités par le système, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onResponseStarted", "onResponseStarted", "onResponseStarted")}}, mais vous ne pouvez pas modifier les entêtes sur cet événement
-
-
 
 ## Syntaxe
 
@@ -70,11 +69,11 @@ Les événements ont trois fonctions :
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
     - `"blocking"` pour rendre la requête synchrone, de sorte que vous pouvez modifier les en-têtes de requête et réponse.
-    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet  `détails` transmis à l'auditeur
+    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet `détails` transmis à l'auditeur
 
-## objets supplémentaires
+## Objets supplémentaires
 
-### détails
+### Détails
 
 - `documentUrl`
   - : `string`. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https\://example.com" contient une image ou un iframe, alors le `documentUrl` pour l'image ou l'iframe sera "https\://example.com". Pour un document de niveau supérieur, `documentUrl` n'est pas défini.
@@ -133,9 +132,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onHeadersReceived", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -204,7 +203,8 @@ browser.webRequest.onHeadersReceived.addListener(
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -231,4 +231,4 @@ browser.webRequest.onHeadersReceived.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

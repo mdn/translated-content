@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/link
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossaire/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
 
@@ -20,7 +21,7 @@ Pour lier une feuille de style externe, on inclut un élément `<link>` de la fo
 <link href="main.css" rel="stylesheet">
 ```
 
-Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut  `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Types_de_lien).
+Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Types_de_lien).
 
 Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouvera :
 
@@ -78,7 +79,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 - {{htmlattrdef("disabled")}}
 
-  - : Cet attribut est uniquement utilisable avec les liens avec `rel="stylesheet"`. L'attribut booléen `disabled` indique si la feuille de style référencée devrait être chargée et appliquée au document. Si l'attribut `disabled` est indiqué dans le document HTML lors de son chargement, la feuille de style ne sera pas chargé au chargement de la page. La feuille de style sera uniquement chargée à la demande si (et lorsque) l'attribut `disabled` est retiré ou passé à `false`via un script.
+  - : Cet attribut est uniquement utilisable avec les liens avec `rel="stylesheet"`. L'attribut booléen `disabled` indique si la feuille de style référencée devrait être chargée et appliquée au document. Si l'attribut `disabled` est indiqué dans le document HTML lors de son chargement, la feuille de style ne sera pas chargé au chargement de la page. La feuille de style sera uniquement chargée à la demande si (et lorsque) l'attribut `disabled` est retiré ou passé à `false` via un script.
 
     Toutefois, une fois que la feuille de style a été chargée, toute modification à l'attribut `disabled` n'aura aucun impact, sa valeur ne sera pas liée à la propriété {{domxref("StyleSheet.disabled")}}. Modifier cet attribut ne fait qu'activer/désactiver la capacité de charger et d'appliquer la feuille de style au document.
 
@@ -143,7 +144,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ### Attributs dépréciés, obsolètes ou non-standard
 
-- {{htmlattrdef("charset")}}{{obsolete_inline}}
+- {{htmlattrdef("charset")}}{{deprecated_inline}}
 
   - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
 
@@ -153,7 +154,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
   - : La valeur de cet attribut fournit des informations quant aux fonctions qui peuvent être utilisées sur l'objet lié. Les valeurs sont généralement des méthodes HTTP mais elles peuvent également inclure des informations en avance sur le lien (le navigateur pourrait par exemple choisir un affichage différent pour un lien selon la méthode utilisée). Cet attribut n'est pas pris en charge de façon correcte, y compris par le navigateur qui le définit, Internet Explorer 4. Voir [la page MSDN sur la propriété `methods`](https://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
 - {{htmlattrdef("prefetch")}} {{Non-standard_inline}} {{secureContext_inline}}
   - : Cet attribut permet d'identifier une ressource qui sera nécessaire dans la suite de la navigation et que l'agent utilisateur devrait télécharger. Cela permet à l'agent utilisateur d'avoir un meilleur temps de réponse lorsque la ressource sera nécessaire.
-- {{htmlattrdef("rev")}}{{obsolete_inline}}
+- {{htmlattrdef("rev")}}{{deprecated_inline}}
 
   - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut {{htmlattrxref("href", "link")}}). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Types_de_lien) utilisés pour cet attribut sont semblables aux valeurs autorisés par {{htmlattrxref("rel", "link")}}.
 
@@ -278,18 +279,11 @@ De nombreux exemples avec `<link rel="preload">` peuvent être lus sur [Préchar
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Subresource Integrity", "#HTMLLinkElement", "lt;link&gt;")}}                 | {{Spec2('Subresource Integrity')}} | Ajout de l'attribut `integrity`.                                                                                                                                    |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}         | {{Spec2('HTML WHATWG')}}             | Aucune modification depuis la dernière dérivation.                                                                                                                  |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}                 | Ajout des attributs `crossorigin` et `sizes`. Les valeurs de `media` sont étendues à l'ensemble des requêtes médias, ajout de nombreuses autres valeurs pour `rel`. |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                     | {{Spec2('HTML4.01')}}                 |                                                                                                                                                                     |
-| {{SpecName("Preload")}}                                                                                 | {{Spec2("Preload")}}                 | Définition de `<link rel="preload">` et de l'attribut `as`.                                                                                                         |
-| {{SpecName('Resource Hints','#prefetch','prefetch')}}                                         | {{Spec2('Resource Hints')}}         | Ajout des valeurs `dns-prefetch`, `preconnect`, `prefetch` et `prerender`.                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.link",3)}}
+{{Compat}}
 
 ## Voir aussi
 

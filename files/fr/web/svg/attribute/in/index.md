@@ -7,7 +7,8 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Attribute/in
 ---
-« [SVG Attribute reference home](/fr/SVG/Attribute "en/SVG/Attribute")
+
+« [SVG Attribute reference home](/fr/SVG/Attribute)
 
 L'attribut `in` identifie l'entrée pour la primitive de filtre donnée.
 
@@ -95,7 +96,7 @@ Si la même valeur de {{SVGAttr("result")}} apparaît à de multiples endroits d
 
 ## Éléments
 
-Les éléments suivants peuvent utiliser l'attribut  `in`:
+Les éléments suivants peuvent utiliser l'attribut `in`:
 
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

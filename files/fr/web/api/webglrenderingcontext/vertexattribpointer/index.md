@@ -9,13 +9,16 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.vertexAttribPointer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) spécifie la disposition en mémoire de l'objet de tampon vertex. Elle doit être appelée une fois pour chaque attribut de sommet.
 
 ## Syntaxe
 
-    void gl.vertexAttribPointer(indice, taille, type, normalise, pas, decalage);
+```js
+void gl.vertexAttribPointer(indice, taille, type, normalise, pas, decalage);
+```
 
 ### Paramètres
 
@@ -56,9 +59,9 @@ Aucune.
 ### Exceptions
 
 - Une erreur `gl.INVALID_VALUE` est déclenchée si `decalage` est négatif.
-- Une erreur `gl.INVALID_OPERATION` est déclenchée si  `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
-- Une erreur  `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
-- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur  `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
+- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
 
 ## Description
 
@@ -98,9 +101,9 @@ Vous pouvez appeler {{domxref ("WebGLRenderingContext.getVertexAttrib()", "gl.ge
 
 Cet exemple montre comment envoyer vos attributs de sommet au programme shader. Nous utilisons une structure de données imaginaire, dans laquelle les attributs de chaque sommet sont stockés entrelacés avec une longueur de 20 octets par sommet :
 
-1.  **position :** nous devons stocker les coordonnées X, Y et Z. Pour une précision maximale, nous utilisons des flottants 32 bits ; au total, cela utilise 12 octets ;
-2.  **vecteur normal :** nous avons besoin de stocker les composantes X, Y et Z du vecteur normal, mais comme la précision n'est pas si importante que cela, nous utilisons des entiers signés sur 8 bits. Pour de meilleures performances, nous alignons les données sur 32 bits en stockant également une quatrième composante de valeur zéro, ce qui porte la taille totale à 4 octets. Également, nous indiquons à WebGL de normaliser les valeurs, car nos normales sont toujours dans la plage \[-1, 1] ;
-3.  **coordonnées de texture :** nous avons besoin de stocker les coordonnées U et V ; pour que ces nombres entiers non signés sur 16 bits offrent suffisamment de précision, la taille totale est de 4 octets. Nous indiquons également à WebGL de normaliser les valeurs à \[0, 1].
+1. **position :** nous devons stocker les coordonnées X, Y et Z. Pour une précision maximale, nous utilisons des flottants 32 bits ; au total, cela utilise 12 octets ;
+2. **vecteur normal :** nous avons besoin de stocker les composantes X, Y et Z du vecteur normal, mais comme la précision n'est pas si importante que cela, nous utilisons des entiers signés sur 8 bits. Pour de meilleures performances, nous alignons les données sur 32 bits en stockant également une quatrième composante de valeur zéro, ce qui porte la taille totale à 4 octets. Également, nous indiquons à WebGL de normaliser les valeurs, car nos normales sont toujours dans la plage \[-1, 1] ;
+3. **coordonnées de texture :** nous avons besoin de stocker les coordonnées U et V ; pour que ces nombres entiers non signés sur 16 bits offrent suffisamment de précision, la taille totale est de 4 octets. Nous indiquons également à WebGL de normaliser les valeurs à \[0, 1].
 
 Par exemple, le sommet suivant :
 
@@ -215,33 +218,11 @@ gl.enableVertexAttribArray(texUVLoc);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "vertexAttribPointer")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glVertexAttribPointer.xml", "glVertexAttribPointer")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.vertexAttribPointer")}}
+{{Compat}}
 
 ## Voir aussi
 

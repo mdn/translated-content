@@ -6,16 +6,19 @@ tags:
 translation_of: Web/XSLT/Element/for-each
 original_slug: Web/XSLT/for-each
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:for-each>` sélectionne un ensemble de nœuds et traite chacun d'eux de la même façon. Il est souvent utilisé pour des itérations sur un ensemble de nœuds ou pour changer le nœud courant. Si un ou plusieurs éléments `<xsl:sort>` apparaissent comme enfants de cet élément, le tri est effectué avant le traitement. Autrement, les nœuds sont traités dans l'ordre d'apparition dans le document.
 
 ### Syntaxe
 
-    <xsl:for-each select=EXPRESSION>
-    	<xsl:sort> [optionnel]
-    	MODÈLE
-    </xsl:for-each>
+```xml
+<xsl:for-each select=EXPRESSION>
+  <xsl:sort> [optionnel]
+  MODÈLE
+</xsl:for-each>
+```
 
 ### Attribut obligatoire
 

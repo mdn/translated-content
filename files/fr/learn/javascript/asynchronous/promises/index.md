@@ -1,591 +1,372 @@
 ---
-title: Gérer les opérations asynchrones avec élégance grâce aux promesses
+title: Comment utiliser les promesses
 slug: Learn/JavaScript/Asynchronous/Promises
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Promises
-  - async
-  - asynchronous
-  - catch
-  - finally
-  - then
 translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 
-**Les promesses** sont une fonctionnalité relativement nouvelle du langage JavaScript qui vous permet de reporter d'autres actions jusqu'à ce qu'une action précédente soit terminée, ou de répondre à son échec. Ceci est utile pour mettre en place une séquence d'opérations asynchrones afin qu'elles fonctionnent correctement. Cet article vous montre comment les promesses fonctionnent, comment vous les verrez utilisées avec les API Web, et comment écrire les vôtres.
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
-<table class="standard-table">
+**Les promesses (ou <i lang="en">promises</i> en anglais)** sont une brique fondamentale pour la programmation asynchrone en JavaScript. Une promesse est un objet renvoyé par une fonction asynchrone et qui représente l'état courant de l'opération. Au moment où la promesse est renvoyée à l'appelant, l'opération n'est généralement pas terminée, mais la promesse fournit des méthodes pour gérer la réussite ou l'échec de l'opération.
+
+<table>
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
-      <td>
-        Connaissances informatiques de base, compréhension raisonnable des
-        principes fondamentaux de JavaScript.
-      </td>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>Notions informatiques élémentaires, compréhension raisonnable des notions fondamentales de JavaScript, notamment de la gestion des évènements.</td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
-      <td>Comprendre les promesses et savoir comment les utiliser.</td>
+      <th scope="row">Objectifs&nbsp;:</th>
+      <td>Comprendre comment utiliser les promesses en JavaScript.</td>
     </tr>
   </tbody>
 </table>
 
-## Que sont les promesses ?
+Dans l'article précédent, nous avons abordé l'utilisation des fonctions de rappel (<i lang="en">callbacks</i>) pour implémenter des fonctions asynchrones. Avec cette méthode, on appelle la fonction asynchrone en lui passant une fonction de rappel en argument. La première fonction renvoie sa valeur de retour immédiatement et appelle la fonction de rappel lorsque l'opération est terminée.
 
-Nous avons examiné les [promesses (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) brièvement dans le premier article du cours, mais ici nous allons les examiner de manière beaucoup plus approfondie.
+Avec une API fonctionnant avec des promesses, la fonction asynchrone démarre l'opération et renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). On peut alors attacher des gestionnaires à cette promesse et les gestionnaires seront exécutés lors du succès ou de l'échec de l'opération.
 
-Essentiellement, une promesse est un objet qui représente un état intermédiaire d'une opération - en fait, c'est une _promesse_ qu'un résultat d'une certaine nature sera retourné à un moment donné dans le futur. Il n'y a aucune garantie du moment exact où l'opération se terminera et où le résultat sera renvoyé, mais il _est_ une garantie que lorsque le résultat est disponible, ou que la promesse échoue, le code que vous fournissez sera exécuté afin de faire autre chose avec un résultat réussi, ou de gérer gracieusement un cas d'échec.
+## Utiliser l'API `fetch()`
 
-En général, vous êtes moins intéressé par le temps qu'une opération asynchrone prendra pour renvoyer son résultat (à moins bien sûr qu'elle ne prenne _beaucoup_ trop de temps !), et plus intéressé par le fait de pouvoir répondre à son retour, quel que soit le moment. Et bien sûr, il est agréable que cela ne bloque pas le reste de l'exécution du code.
-
-L'une des utilisations les plus courantes des promesses concerne les API web qui renvoient une promesse. Considérons une hypothétique application de chat vidéo. L'application dispose d'une fenêtre contenant une liste des amis de l'utilisateur, et un clic sur un bouton à côté d'un utilisateur lance un appel vidéo vers cet utilisateur.
-
-Le gestionnaire de ce bouton appelle [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) afin d'avoir accès à la caméra et au microphone de l'utilisateur. Puisque `getUserMedia()` doit s'assurer que l'utilisateur a la permission d'utiliser ces dispositifs _et_ lui demander quel microphone utiliser et quelle caméra utiliser (ou s'il s'agit d'un appel vocal uniquement, parmi d'autres options possibles), il peut bloquer jusqu'à ce que non seulement toutes ces décisions soient prises, mais aussi que la caméra et le microphone soient activés. En outre, l'utilisateur peut ne pas répondre immédiatement à ces demandes d'autorisation. Cela peut potentiellement prendre beaucoup de temps.
-
-Puisque l'appel à `getUserMedia()` est effectué depuis le processus principal du navigateur, l'ensemble du navigateur est bloqué jusqu'à ce que `getUserMedia()` retourne une réponse ! Évidemment, ce n'est pas une option viable ; sans les promesses, tout dans le navigateur devient inutilisable jusqu'à ce que l'utilisateur décide ce qu'il faut faire de la caméra et du microphone. Ainsi, au lieu d'attendre l'utilisateur, d'obtenir l'activation des périphériques choisis et de retourner directement le [`MediaStream`](/fr/docs/Web/API/MediaStream) pour le flux créé à partir des sources sélectionnées, `getUserMedia()` retourne une [`promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec le [`MediaStream`](/fr/docs/Web/API/MediaStream) une fois qu'il est disponible.
-
-Le code qu'utiliserait l'application de chat vidéo pourrait ressembler à ceci :
-
-```js
-function handleCallButton(evt) {
-  setStatusMessage("Appel...");
-  navigator.mediaDevices.getUserMedia({video: true, audio: true})
-    .then(chatStream => {
-      selfViewElem.srcObject = chatStream;
-      chatStream.getTracks().forEach(track => myPeerConnection.addTrack(track, chatStream));
-      setStatusMessage("Connecté");
-    }).catch(err => {
-      setStatusMessage("Échec de la connexion");
-    });
-}
-```
-
-Cette fonction commence par utiliser une fonction appelée `setStatusMessage()` pour mettre à jour un affichage d'état avec le message "Appel...", indiquant qu'un appel est tenté.Il appelle ensuite `getUserMedia()`, demandant un flux qui a à la fois des pistes vidéo et audio, puis une fois que cela a été obtenu, configure un élément vidéo pour montrer le flux provenant de la caméra comme une "vue de soi", puis prend chacune des pistes du flux et les ajoute à la [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection) [WebRTC](/fr/docs/Web/API/WebRTC_API) représentant une connexion à un autre utilisateur. Après cela, l'affichage de l'état est mis à jour pour indiquer "Connecté".
-
-Si `getUserMedia()` échoue, le bloc `catch` s'exécute. Celui-ci utilise `setStatusMessage()` pour mettre à jour la case d'état afin d'indiquer qu'une erreur s'est produite.
-
-La chose importante ici est que l'appel `getUserMedia()` revient presque immédiatement, même si le flux de la caméra n'a pas encore été obtenu. Même si la fonction `handleCallButton()` est déjà retournée au code qui l'a appelée, lorsque `getUserMedia()` a fini de travailler, elle appelle le gestionnaire que vous fournissez. Tant que l'application ne suppose pas que le flux a commencé, elle peut continuer à fonctionner.
-
-> **Note :** Vous pouvez en apprendre davantage sur ce sujet quelque peu avancé, si cela vous intéresse, dans l'article [L'essentiel du WebRTC](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling). Un code similaire à celui-ci, mais beaucoup plus complet, est utilisé dans cet exemple.
-
-## Le problème des fonctions de rappel
-
-Pour bien comprendre pourquoi les promesses sont une bonne chose, il est utile de repenser aux anciennes fonctions de rappel (_callback_) et de comprendre pourquoi elles sont problématiques.
-
-Prenons l'exemple de la commande d'une pizza. Il y a certaines étapes que vous devez franchir pour que votre commande soit réussie, et cela n'a pas vraiment de sens d'essayer de les exécuter dans le désordre, ou dans l'ordre mais avant que chaque étape précédente ne soit tout à fait terminée :
-
-1.  Vous choisissez les garnitures que vous voulez. Cela peut prendre un certain temps si vous êtes indécis, et peut échouer si vous n'arrivez pas à vous décider, ou si vous décidez de prendre un curry à la place.
-2.  Vous passez ensuite votre commande. Le retour d'une pizza peut prendre un certain temps et peut échouer si le restaurant ne dispose pas des ingrédients nécessaires à sa cuisson.
-3.  Vous récupérez ensuite votre pizza et la mangez. Cela peut échouer si, par exemple, vous avez oublié votre portefeuille et ne pouvez pas payer la pizza !
-
-Avec l'ancien modèle de [rappels](/fr/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks), une représentation en pseudo-code de la fonctionnalité ci-dessus pourrait ressembler à quelque chose comme ceci :
-
-```js
-chooseToppings(function(toppings) {
-  placeOrder(toppings, function(order) {
-    collectOrder(order, function(pizza) {
-      eatPizza(pizza);
-    }, failureCallback);
-  }, failureCallback);
-}, failureCallback);
-```
-
-Cela est désordonné et difficile à lire (souvent appelé « [_callback hell_](http://callbackhell.com/) »), nécessite que le `failureCallback()` soit appelé plusieurs fois (une fois pour chaque fonction imbriquée), avec d'autres problèmes en plus.
-
-### Améliorations avec des promesses
-
-Les promesses facilitent grandement l'écriture, l'analyse et l'exécution de situations telles que celle décrite ci-dessus. Si nous avions représenté le pseudo-code ci-dessus en utilisant des promesses asynchrones à la place, nous aurions obtenu quelque chose comme ceci :
-
-```js
-chooseToppings()
-.then(function(toppings) {
-  return placeOrder(toppings);
-})
-.then(function(order) {
-  return collectOrder(order);
-})
-.then(function(pizza) {
-  eatPizza(pizza);
-})
-.catch(failureCallback);
-```
-
-C'est bien mieux - il est plus facile de voir ce qui se passe, nous n'avons besoin que d'un seul bloc `.catch()` pour gérer toutes les erreurs, cela ne bloque pas le processus principal (nous pouvons donc continuer à jouer à des jeux vidéo en attendant que la pizza soit prête à être collectée), et chaque opération a la garantie d'attendre que les opérations précédentes soient terminées avant de s'exécuter. Nous sommes en mesure d'enchaîner plusieurs actions asynchrones pour qu'elles se produisent les unes après les autres de cette façon, car chaque bloc `.then()` renvoie une nouvelle promesse qui se résout lorsque le bloc `.then()` a fini de s'exécuter. Astucieux, non ?
-
-En utilisant les fonctions flèches, vous pouvez simplifier encore plus le code :
-
-```js
-chooseToppings()
-.then(toppings =>
-  placeOrder(toppings)
-)
-.then(order =>
-  collectOrder(order)
-)
-.then(pizza =>
-  eatPizza(pizza)
-)
-.catch(failureCallback);
-```
-
-Ou encore ça :
-
-```js
-chooseToppings()
-.then(toppings => placeOrder(toppings))
-.then(order => collectOrder(order))
-.then(pizza => eatPizza(pizza))
-.catch(failureCallback);
-```
-
-Cela fonctionne car avec les fonctions flèches `() => x` est un raccourci valide pour `() => { return x ; }`.
-
-Vous pourriez même le faire ainsi, puisque les fonctions ne font que passer leurs arguments directement, et qu'il n'y a donc pas besoin de cette couche supplémentaire de fonctions :
-
-```js
-chooseToppings().then(placeOrder).then(collectOrder).then(eatPizza).catch(failureCallback);
-```
-
-Cependant, la lecture n'est pas aussi facile et cette syntaxe peut ne pas être utilisable si vos blocs sont plus complexes que ce que nous avons montré ici.
-
-> **Note :** Vous pouvez apporter d'autres améliorations avec la syntaxe `async`/`await`, que nous aborderons dans le prochain article.
-
-Dans leur forme la plus basique, les promesses sont similaires aux écouteurs d'événements, mais avec quelques différences :
-
-- Une promesse ne peut réussir ou échouer qu'une seule fois. Elle ne peut pas réussir ou échouer deux fois et elle ne peut pas passer du succès à l'échec ou vice versa une fois l'opération terminée.
-- Si une promesse a réussi ou échoué et que vous ajoutez plus tard une de rappel de réussite/échec, la bonne fonction de rappel sera appelée, même si l'événement a eu lieu plus tôt.
-
-## Explication de la syntaxe de base des promesses : exemple concret
-
-Il est important de comprendre les promesses, car la plupart des API Web modernes les utilisent pour les fonctions qui exécutent des tâches potentiellement longues. Pour utiliser les technologies Web modernes, vous devrez utiliser des promesses. Plus loin dans ce chapitre, nous verrons comment écrire votre propre promesse, mais pour l'instant, nous allons nous pencher sur quelques exemples simples que vous rencontrerez dans les API Web.
-
-Dans le premier exemple, nous allons utiliser la méthode [`fetch()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch) pour récupérer une image sur le web, la méthode [`blob()`](/fr/docs/Web/API/Body/blob) pour transformer le contenu brut du corps de la réponse fetch en un objet [`Blob`](/fr/docs/Web/API/Blob), puis afficher ce blob à l'intérieur d'un élément [`<img>`](/fr/docs/Web/HTML/Element/Img). Cet exemple est très similaire à celui que nous avons examiné dans le [premier article](/fr/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript), mais nous le ferons un peu différemment au fur et à mesure que nous vous ferons construire votre propre code basé sur des promesses.
-
-> **Note :** L'exemple suivant ne fonctionnera pas si vous l'exécutez directement à partir du fichier (c'est-à-dire via une URL `file://`). Vous devez l'exécuter via un [serveur de test local](/fr/docs/Learn/Common_questions/set_up_a_local_testing_server), ou utiliser une solution en ligne telle que [Glitch](https://glitch.com/) ou [les pages GitHub](/fr/docs/Learn/Common_questions/Using_Github_pages).
-
-1.  Tout d'abord, téléchargez notre [modèle HTML simple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) et le [fichier image](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg) que nous allons récupérer.
-2.  Ajoutez un élément [`<script>`](/fr/docs/Web/HTML/Element/script) au bas de l'élément HTML [`<body>`](/fr/docs/Web/HTML/Element/body).
-3.  À l'intérieur de votre élément [`<script>`](/fr/docs/Web/HTML/Element/script), ajoutez la ligne suivante :
-
-    ```js
-    let promise = fetch('coffee.jpg');
-    ```
-
-    Cela appelle la méthode `fetch()`, en lui passant en paramètre l'URL de l'image à récupérer sur le réseau. Cette méthode peut également prendre un objet d'options comme second paramètre facultatif, mais nous n'utilisons que la version la plus simple pour le moment. Nous stockons l'objet promesse retourné par `fetch()` à l'intérieur d'une variable appelée `promise`. Comme nous l'avons dit précédemment, cet objet représente un état intermédiaire qui n'est initialement ni un succès ni un échec - le terme officiel pour une promesse dans cet état est **en attente** (_pending_ en anglais).
-
-4.  Pour répondre à l'achèvement réussi de l'opération lorsque cela se produit (dans ce cas, lorsqu'une [réponse](/fr/docs/Web/API/Response) est retournée), nous invoquons la méthode [`.then()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) de l'objet promesse. La fonction de rappel à l'intérieur du bloc `.then()` s'exécute uniquement lorsque l'appel de la promesse se termine avec succès et retourne l'objet [`Response`](/fr/docs/Web/API/Response) — en langage de promesse, lorsqu'elle a été **remplie** (_fullfilled_ en anglais). On lui passe l'objet [`Response`](/fr/docs/Web/API/Response) retourné en tant que paramètre.
-
-    > **Note :** Le fonctionnement d'un bloc `.then()` est similaire à celui de l'ajout d'un écouteur d'événements à un objet à l'aide de `AddEventListener()`. Il ne s'exécute pas avant qu'un événement ne se produise (lorsque la promesse se réalise). La différence la plus notable est qu'un `.then()` ne s'exécutera qu'une fois à chaque fois qu'il sera utilisé, alors qu'un écouteur d'événements pourrait être invoqué plusieurs fois.
-
-    Nous exécutons immédiatement la méthode `blob()` sur cette réponse pour nous assurer que le corps de la réponse est entièrement téléchargé, et lorsqu'il est disponible, le transformer en un objet `Blob` avec lequel nous pouvons faire quelque chose. Le résultat de cette méthode est retourné comme suit :
-
-    ```js
-    response => response.blob()
-    ```
-
-    qui est un raccourci de
-
-    ```js
-    function(response) {
-      return response.blob();
-    }
-    ```
-
-    Malheureusement, nous devons faire un peu plus que cela. Les promesses de récupération n'échouent pas sur les erreurs 404 ou 500 - seulement sur quelque chose de catastrophique comme une panne de réseau. Au lieu de cela, elles réussissent, mais avec la propriété [`response.ok`](/fr/docs/Web/API/Response/ok) définie à `false`. Pour produire une erreur sur un 404, par exemple, nous devons vérifier la valeur de `response.ok`, et si c'est `false`, lancer une erreur, ne renvoyant le blob que si elle est à `true`. Cela peut être fait comme suit - ajoutez les lignes suivantes sous votre première ligne de JavaScript.
-
-    ```js
-    let promise2 = promise.then(response => {
-      if (!response.ok) {
-        throw new Error(`erreur HTTP ! statut : ${response.status}`);
-      } else {
-        return response.blob();
-      }
-    });
-    ```
-
-5.  Chaque appel à la méthode `.then()` crée une nouvelle promesse. Ceci est très utile ; parce que la méthode `blob()` renvoie également une promesse, nous pouvons manipuler l'objet `Blob` qu'elle renvoie sur l'accomplissement en invoquant la méthode `.then()` de la seconde promesse. Parce que nous voulons faire quelque chose d'un peu plus complexe au blob que de simplement exécuter une seule méthode sur lui et renvoyer le résultat, nous devrons envelopper le corps de la fonction dans des accolades cette fois (sinon, ça lancera une erreur).
-
-    Ajoutez ce qui suit à la fin de votre code :
-
-    ```js
-    let promise3 = promise2.then(myBlob => {
-    })
-    ```
-
-6.  Maintenant, remplissons le corps de la fonction de rappel `.then()`. Ajoutez les lignes suivantes à l'intérieur des accolades :
-
-    ```js
-    let objectURL = URL.createObjectURL(myBlob);
-    let image = document.createElement('img');
-    image.src = objectURL;
-    document.body.appendChild(image);
-    ```
-
-    Nous exécutons ici la méthode [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL), en lui passant en paramètre le `Blob` renvoyé lors de la réalisation de la deuxième promesse. Cela permettra de renvoyer une URL pointant vers l'objet. Ensuite, nous créons un élément [`<img>`](/fr/docs/Web/HTML/Element/Img), définissons son attribut `src` comme étant égal à l'URL de l'objet et l'ajoutons au DOM, de sorte que l'image s'affiche sur la page !
-
-Si vous enregistrez le fichier HTML que vous venez de créer et le chargez dans votre navigateur, vous verrez que l'image s'affiche dans la page comme prévu. Bon travail !
-
-> **Note :** Vous remarquerez probablement que ces exemples sont quelque peu artificiels. Vous pourriez tout simplement vous passer de toute la chaîne `fetch()` et `blob()`, et simplement créer un élément `<img>` et définir la valeur de son attribut `src` à l'URL du fichier image, `coffee.jpg`. Nous avons toutefois choisi cet exemple parce qu'il démontre les promesses d'une manière simple et agréable, plutôt que pour sa pertinence dans le monde réel.
-
-### Réagir à un échec
-
-Il manque quelque chose — actuellement, il n'y a rien pour gérer explicitement les erreurs si l'une des promesses **échoue** (_rejects_, en anglais). Nous pouvons ajouter la gestion des erreurs en exécutant la méthode [`.catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) de la promesse précédente. Ajoutez ceci maintenant :
-
-```js
-let errorCase = promise3.catch(e => {
-  console.log('Il y a eu un problème avec votre opération de récupération : ' + e.message);
-});
-```
-
-Pour voir cela en action, essayez de mal orthographier l'URL de l'image et de recharger la page. L'erreur sera signalée dans la console des outils de développement de votre navigateur.
-
-Cela ne fait pas beaucoup plus que si vous ne preniez pas la peine d'inclure le bloc `.catch()` du tout, mais pensez-y - cela nous permet de contrôler la gestion des erreurs exactement comme nous le voulons. Dans une application réelle, votre bloc `.catch()` pourrait réessayer de récupérer l'image, ou afficher une image par défaut, ou demander à l'utilisateur de fournir une URL d'image différente, ou autre.
-
-> **Note :** Vous pouvez voir [notre version de l'exemple en direct](https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch.html) (voir également son [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch.html)).
-
-### Enchaîner les blocs
-
-C'est une façon très manuscrite d'écrire cela ; nous l'avons délibérément fait pour vous aider à comprendre clairement ce qui se passe. Comme nous l'avons montré plus haut dans l'article, vous pouvez enchaîner les blocs `.then()` (et aussi les blocs `.catch()`). Le code ci-dessus pourrait aussi être écrit comme ceci (voir aussi [simple-fetch-chained.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch-chained.html) sur GitHub) :
-
-```js
-fetch('coffee.jpg')
-.then(response => {
-  if (!response.ok) {
-    throw new Error(`Erreur HTTP ! statut : ${response.status}`);
-  } else {
-    return response.blob();
-  }
-})
-.then(myBlob => {
-  let objectURL = URL.createObjectURL(myBlob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch(e => {
-  console.log('Il y a eu un problème avec votre opération de récupération : ' + e.message);
-});
-```
-
-Gardez à l'esprit que la valeur renvoyée par une promesse remplie devient le paramètre transmis à la fonction de rappel du bloc `.then()` suivant.
-
-> **Note :** Les blocs `.then()`/`.catch()` dans les promesses sont essentiellement l'équivalent asynchrone d'un bloc [`try...catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch) dans du code synchrone. Gardez à l'esprit que le `try...catch` synchrone ne fonctionnera pas dans du code asynchrone.
-
-## Récapitulatif de la terminologie des promesses
-
-Il y avait beaucoup à couvrir dans la section ci-dessus, alors revenons-y rapidement pour vous donner un [court guide que vous pouvez mettre en favoris](#promise_terminology_recap) et utiliser pour vous rafraîchir la mémoire à l'avenir. Vous devriez également revoir la section ci-dessus quelques fois de plus pour vous assurer que ces concepts sont bien assimilés.
-
-1.  Lorsqu'une promesse est créée, elle n'est ni dans un état de réussite ni dans un état d'échec. On dit qu'elle est **en attente**.
-2.  Lorsqu'une promesse est retournée, on dit qu'elle est **résolue**.
-
-    1.  Une promesse résolue avec succès est dite **remplie**. Elle retourne une valeur, à laquelle on peut accéder en enchaînant un bloc `.then()` à la fin de la chaîne de promesses. La fonction de rappel à l'intérieur du bloc `.then()` contiendra la valeur de retour de la promesse.
-    2.  Une promesse résolue non aboutie est dite **rejetée**. Elle renvoie une **raison**, un message d'erreur indiquant pourquoi la promesse a été rejetée. On peut accéder à cette raison en enchaînant un bloc `.catch()` à la fin de la chaîne de promesses.
-
-## Exécution du code en réponse à des promesses multiples remplies
-
-L'exemple ci-dessus nous a montré certaines des bases réelles de l'utilisation des promesses. Voyons maintenant quelques fonctionnalités plus avancées. Pour commencer, enchaîner des processus pour qu'ils se réalisent l'un après l'autre, c'est très bien, mais que faire si vous voulez exécuter du code seulement après que tout un tas de promesses aient _toutes_ été remplies ?
-
-Vous pouvez le faire avec la méthode statique ingénieusement nommée [`Promise.all()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/all). Celle-ci prend un tableau de promesses comme paramètre d'entrée et retourne un nouvel objet `Promise` qui ne se réalisera que si et quand _toutes_ les promesses du tableau se réaliseront. Cela ressemble à quelque chose comme ceci :
-
-```js
-Promise.all([a, b, c]).then(values => {
-  ...
-});
-```
-
-Si elles se réalisent toutes, la fonction de callback du bloc `.then()` enchaîné se verra passer un tableau contenant tous ces résultats en paramètre. Si l'une des promesses passées à `Promise.all()` rejette, le bloc entier sera rejeté.
-
-Cela peut être très utile. Imaginez que nous récupérions des informations pour alimenter dynamiquement en contenu une fonction de l'interface utilisateur de notre page. Dans de nombreux cas, il est préférable de recevoir toutes les données et de n'afficher que le contenu complet, plutôt que d'afficher des informations partielles.
-
-Construisons un autre exemple pour montrer cela en action.
-
-1.  Téléchargez une nouvelle copie de notre [modèle de page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html), et mettez à nouveau un élément `<script>` juste avant la balise de fermeture `</body>`.
-2.  Téléchargez nos fichiers sources ([coffee.jpg](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg), [tea.jpg](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/tea.jpg), et [description.txt](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/description.txt)), ou n'hésitez pas à y substituer les vôtres.
-3.  Dans notre script, nous allons d'abord définir une fonction qui retourne les promesses que nous voulons envoyer à `Promise.all()`. Cela serait facile si nous voulions simplement exécuter le bloc `Promise.all()` en réponse à trois opérations `fetch()` qui se terminent. Nous pourrions simplement faire quelque chose comme :
-
-    ```js
-    let a = fetch(url1);
-    let b = fetch(url2);
-    let c = fetch(url3);
-
-    Promise.all([a, b, c]).then(values => {
-      ...
-    });
-    ```
-
-    Lorsque la promesse est réalisée, les `values` (valeurs) passées dans le gestionnaire de réalisation contiendraient trois objets `Response`, un pour chacune des opérations `fetch()` qui se sont terminées.
-
-    Cependant, nous ne voulons pas faire cela. Notre code ne se soucie pas de savoir quand les opérations `fetch()` sont effectuées. Au lieu de cela, ce que nous voulons, ce sont les données chargées. Cela signifie que nous voulons exécuter le bloc `Promise.all()` lorsque nous récupérons des blobs utilisables représentant les images, et une chaîne de texte utilisable. Nous pouvons écrire une fonction qui fait cela ; ajoutez ce qui suit à l'intérieur de votre élément `<script>` :
-
-    ```js
-    function fetchAndDecode(url, type) {
-      return fetch(url).then(response => {
-        if(!response.ok) {
-          throw new Error(`Erreur HTTP ! statut : ${response.status}`);
-        } else {
-          if(type === 'blob') {
-            return response.blob();
-          } else if(type === 'text') {
-            return response.text();
-          }
-        }
-      })
-      .catch(e => {
-        console.log(
-          `Il y a eu un problème avec votre opération de récupération de la ressource "${url}" : ` + e.message);
-      });
-    }
-    ```
-
-    Cela semble un peu complexe, alors nous allons le faire étape par étape :
-
-    1.  Tout d'abord, nous définissons la fonction, en lui passant une URL et une chaîne représentant le type de ressource qu'elle va chercher.
-    2.  À l'intérieur du corps de la fonction, nous avons une structure similaire à celle que nous avons vue dans le premier exemple — nous appelons la fonction `fetch()` pour récupérer la ressource à l'URL spécifiée, puis nous l'enchaînons sur une autre promesse qui renvoie le corps de réponse décodé (ou « lu »). Il s'agissait toujours de la méthode `blob()` dans l'exemple précédent.
-    3.  Cependant, deux choses sont différentes ici :
-
-        - Tout d'abord, la deuxième promesse que nous retournons est différente en fonction de la valeur `type`. À l'intérieur de la fonction de rappel `.then()`, nous incluons une simple déclaration `if ... else if` pour retourner une promesse différente selon le type de fichier que nous devons décoder (dans ce cas, nous avons le choix entre `blob` et `text`, mais il serait facile d'étendre cela pour traiter d'autres types également).
-        - Deuxièmement, nous avons ajouté le mot-clé `return` avant l'appel `fetch()`. Cela a pour effet d'exécuter toute la chaîne, puis d'exécuter le résultat final (c'est-à-dire la promesse retournée par `blob()` ou `text()`) comme valeur de retour de la fonction que nous venons de définir. En effet, les instructions `return` font remonter les résultats au sommet de la chaîne.
-
-    4.  À la fin du bloc, nous enchaînons sur un appel `.catch()`, pour gérer les cas d'erreur qui peuvent survenir avec l'une des promesses passées dans le tableau à `.all()`. Si l'une des promesses est rejetée, le bloc `.catch()` vous fera savoir laquelle avait un problème. Le bloc `.all()` (voir ci-dessous) s'exécutera quand même, mais il n'affichera pas les ressources qui ont eu des problèmes. Rappelez-vous que, une fois que vous avez traité la promesse avec un bloc `.catch()`, la promesse résultante est considérée comme résolue mais avec une valeur de `undefined` ; c'est pourquoi, dans ce cas, le bloc `.all()` sera toujours rempli. Si vous vouliez que le bloc `.all()` rejette, vous devriez plutôt enchaîner le bloc `.catch()` à la fin du `.all()`.
-
-    Le code à l'intérieur du corps de la fonction est asynchrone et basé sur une promesse, donc en fait, la fonction entière agit comme une promesse — pratique.
-
-4.  Ensuite, nous appelons notre fonction trois fois pour commencer le processus de récupération et de décodage des images et du texte et nous stockons chacune des promesses retournées dans une variable. Ajoutez le texte suivant sous votre code précédent :
-
-    ```js
-    let coffee = fetchAndDecode('coffee.jpg', 'blob');
-    let tea = fetchAndDecode('tea.jpg', 'blob');
-    let description = fetchAndDecode('description.txt', 'text');
-    ```
-
-5.  Ensuite, nous allons définir un bloc `Promesse.all()` pour exécuter un certain code uniquement lorsque les trois promesses stockées ci-dessus se sont réalisées avec succès. Pour commencer, ajoutez un bloc avec une fonction de rappel vide à l'intérieur de l'appel `.then()`, comme ceci :
-
-    ```js
-    Promise.all([coffee, tea, description]).then(values => {
-
-    });
-    ```
-
-    Vous pouvez voir qu'elle prend un tableau contenant les promesses comme paramètre. La fonction de rappel `.then()` ne sera exécutée que lorsque les trois promesses seront résolues ; lorsque cela se produira, on lui transmettra un tableau contenant les résultats des promesses individuelles (c'est-à-dire les corps de réponse décodés), un peu comme suit \[coffee-results, tea-results, description-results].
-
-6.  Enfin, ajoutez ce qui suit à l'intérieur de la fonction de rappel. Nous utilisons ici un code de synchronisation assez simple pour stocker les résultats dans des variables séparées (en créant des URL d'objets à partir des blobs), puis nous affichons les images et le texte sur la page.
-
-    ```js
-    console.log(values);
-    // Stocke chaque valeur renvoyée par les promesses dans
-    // des variables distinctes ; crée des URL d'objets à partir des blobs.
-    let objectURL1 = URL.createObjectURL(values[0]);
-    let objectURL2 = URL.createObjectURL(values[1]);
-    let descText = values[2];
-
-    // Affiche les images dans les éléments <img>
-    let image1 = document.createElement('img');
-    let image2 = document.createElement('img');
-    image1.src = objectURL1;
-    image2.src = objectURL2;
-    document.body.appendChild(image1);
-    document.body.appendChild(image2);
-
-    // Affiche le texte d'un paragraphe
-    let para = document.createElement('p');
-    para.textContent = descText;
-    document.body.appendChild(para);
-    ```
-
-7.  Sauvegardez et actualisez et vous devriez voir vos composants d'interface utilisateur chargés, bien que d'une manière peu attrayante !
-
-Le code que nous avons fourni ici pour l'affichage des articles est assez rudimentaire, mais il fonctionne comme une explication pour le moment.
-
-> **Note :** Si vous êtes bloqué, vous pouvez comparer votre version du code à la nôtre, pour voir à quoi elle est censée ressembler - [voir en direct](https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html), et voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html).
-
-> **Note :** Si vous amélioriez ce code, vous pourriez vouloir boucler sur une liste d'éléments à afficher, en récupérant et en décodant chacun d'eux, puis boucler sur les résultats à l'intérieur de `Promise.all()`, en exécutant une fonction différente pour afficher chacun d'eux en fonction du type de code. Cela permettrait de fonctionner pour n'importe quel nombre d'éléments, pas seulement trois.
+> **Note :** Dans cet article, nous étudierons les promesses en copiant des fragments de code dans la console JavaScript du navigateur. Pour ceci&nbsp;:
 >
-> De plus, vous pourriez déterminer quel est le type de fichier récupéré sans avoir besoin d'une propriété `type` explicite. Vous pourriez, par exemple, vérifier l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) de la réponse dans chaque cas en utilisant [`response.headers.get("content-type")`](/fr/docs/Web/API/Headers/get), puis agir en conséquence.
+> 1. Ouvrez un nouvel onglet dans votre navigateur et allez sur la page <https://example.org>.
+> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> 3. Lorsqu'un exemple est présent dans cet article, copiez le contenu dans la console. Vous devrez recharger la page à chaque exemple pour éviter que la console affiche une erreur sur la redéclaration de `fetchPromise()`.
 
-## Exécution d'un code final après l'accomplissement/le rejet d'une promesse.
+Dans cet exemple, nous téléchargerons le fichier JSON situé à l'adresse <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, et nous afficherons des informations à son sujet.
 
-Il y aura des cas où vous voudrez exécuter un bloc de code final après la fin d'une promesse, qu'elle se soit réalisée ou rejetée. Auparavant, vous deviez inclure le même code dans les deux fonctions de rappel `.then()` et `.catch()`, par exemple :
+Pour cela, nous allons envoyer une **requête HTTP** au serveur. Lors d'une requête HTTP, on envoie un message à un serveur distant qui nous renvoie une réponse en retour. Ici, nous enverrons une requête pour obtenir le fichier JSON du serveur. Vous vous souvenez des requêtes HTTP utilisant l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) dans l'article précédent&nbsp;? Ici, nous utiliserons à la place l'API [`fetch()`](/fr/docs/Web/API/fetch), qui est un remplacement moderne de `XMLHttpRequest` et qui utilise les promesses.
+
+Copiez ce qui suit dans la console JavaScript de votre navigateur&nbsp;:
 
 ```js
-myPromise
-.then(response => {
-  doSomething(response);
-  runFinalCode();
-})
-.catch(e => {
-  returnError(e);
-  runFinalCode();
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+console.log(fetchPromise);
+
+fetchPromise.then(reponse => {
+  console.log(`Réponse reçue : ${reponse.status}`);
+});
+
+console.log("Requête initiée…");
+```
+
+Voici ce qu'on fait&nbsp;:
+
+1. On appelle l'API `fetch()` et on affecte la valeur de retour à la variable `fetchPromise`.
+2. Juste après, on affiche la variable `fetchPromise` dans la console. Cela devrait afficher quelque chose comme&nbsp;: `Promise { <state>: "pending" }`, qui indique qu'on a un objet `Promise` dont l'état est `"pending"` (c'est-à-dire, en cours). Cet état indique que l'opération de récupération du fichier est toujours en cours.
+3. On passe une fonction de gestion à la méthode **`then()`** de la promesse. Lorsque l'opération de récupération a réussi (si elle a réussi), la promesse appellera le gestionnaire en lui passant un objet [`Response`](/fr/docs/Web/API/Response), qui contient la réponse du serveur.
+4. On affiche un message dans la console indiquant que la requête a été lancée.
+
+Voici à quoi devrait ressembler l'affichage complet dans la console&nbsp;:
+
+```
+Promise { <state>: "pending" }
+Requête initiée…
+Réponse reçue : 200
+```
+
+On notera que `Requête initiée…` est affiché avant d'avoir reçu une réponse. À la différence d'une fonction synchrone, `fetch()` produit sa valeur de retour alors que la requête est toujours en cours, ce qui permet à notre programme de rester réactif. La réponse affiche [le code de statut HTTP](/fr/docs/Web/HTTP/Status) `200` (OK), ce qui indique que la requête a réussi.
+
+Ça ressemble beaucoup à l'exemple du précédent article où nous avions ajouté des gestionnaires d'évènements à l'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Ici, à la place, on passe un gestionnaire à la méthode `then()` de la promesse renvoyée par l'opération.
+
+## Enchaîner les promesses
+
+Avec l'API `fetch()`, une fois l'objet `Response` obtenu, il faut appeler une autre fonction pour en récupérer les données. Ici, on veut récupérer les données sous forme JSON et on peut appeler la méthode [`json()`](/fr/docs/Web/API/Response/json) de l'objet `Response`. Il s'avère que `json()` est également asynchrone. On a donc le cas où il faut appeler deux fonctions asynchrones à la suite.
+
+Après avoir rechargé la page, copiez ce qui suit dans la console&nbsp;:
+
+```js
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise.then(reponse => {
+  const jsonPromise = reponse.json();
+  jsonPromise.then(json => {
+    console.log(json[0].name);
+  });
 });
 ```
 
-Dans les navigateurs modernes plus récents, la méthode [`.finally()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) est disponible, et peut être enchaînée à la fin de votre chaîne de promesses régulière, ce qui vous permet de réduire les répétitions de code et de faire les choses de manière plus élégante. Le code ci-dessus peut maintenant être écrit comme suit :
+Dans cet exemple, comme auparavant, on ajoute un gestionnaire à la promesse renvoyée par `fetch()` grâce à `then()`. Dans cette version, le gestionnaire appelle `response.json()` puis passe un nouveau gestionnaire `then()` à la promesse renvoyée par `response.json()`.
+
+Cela devrait afficher `"baked beans"` (qui est le nom (`name`) du premier produit du fichier `products.json`).
+
+Mais attendez&nbsp;! Dans l'article précédent, nous avions dit qu'appeler une fonction de rappel dans une autre fonction de rappel créait de plus en plus de niveaux de code imbriqués. Et même que cela pouvait engendrer un <i lang="en">callback hell</i> qui rendrait le code moins compréhensible. N'y a-t-il pas le même risque avec les appels à `then()`&nbsp;?
+
+Bien entendu, il peut y avoir ce risque, mais les promesses disposent d'une caractéristique élégante&nbsp;: *`then()` renvoie lui-même une promesse qui sera réalisée avec le résultat de la fonction qu'on lui a passée*. Cela signifie qu'on peut (et en fait qu'on devrait) réécrire l'exemple précédent comme ceci&nbsp;:
 
 ```js
-myPromise
-.then(response => {
-  doSomething(response);
-})
-.catch(e => {
-  returnError(e);
-})
-.finally(() => {
-  runFinalCode();
-});
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise
+  .then(reponse => {
+    return reponse.json();
+  })
+  .then(json => {
+    console.log(json[0].name);
+  });
 ```
 
-Pour un exemple réel, jetez un œil à notre [démonstration promesse-finally.html](https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-finally.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-finally.html)). Cela fonctionne de la même manière que la démo `Promesse.all()` que nous avons examinée dans la section ci-dessus, sauf que dans la fonction `fetchAndDecode()`, nous enchaînons un appel `finally()` à la fin de la chaîne :
+Ici, au lieu d'appeler le deuxième `then()` au sein du gestionnaire pour le premier `then()`, on peut *renvoyer* la promesse renvoyée par `json()`, puis appeler le deuxième `then()` sur cette valeur de retour. C'est ce qu'on appelle **le chainage de promesses** et cela signifie qu'on peut éviter d'avoir des niveaux croissants d'imbrication des appels de fonctions asynchrones.
+
+Avant de passer à la prochaine étape, il reste quelque chose à ajouter. Il faut vérifier que le serveur a accepté notre requête et a été en mesure d'y répondre avant de tenter de lire la réponse. Pour cela, nous allons vérifier le code de statut de la réponse et lever une exception si ce n'était pas «&nbsp;OK&nbsp;»&nbsp;:
 
 ```js
-function fetchAndDecode(url, type) {
-  return fetch(url).then(response => {
-    if(!response.ok) {
-      throw new Error(`Erreur HTTP ! statut : ${response.status}`);
-    } else {
-      if(type === 'blob') {
-        return response.blob();
-      } else if(type === 'text') {
-        return response.text();
-      }
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise
+  .then(reponse => {
+    if (!reponse.ok) {
+      throw new Error(`Erreur HTTP : ${reponse.status}`);
+    }
+    return reponse.json();
+  })
+  .then(json => {
+    console.log(json[0].name);
+  });
+```
+
+## Intercepter les erreurs
+
+Cela nous amène au dernier sujet&nbsp;: comment gérer les erreurs&nbsp;? L'API `fetch()` peut déclencher une exception pour de nombreuses raisons (par exemple parce qu'il n'y a pas d'accès réseau ou encore parce que l'URL était malformée) et nous déclenchons également une erreur par nous-même si le serveur renvoie une erreur.
+
+Dans l'article précédent, nous avons vu que la gestion d'erreur peut s'avérer délicate avec les fonctions de rappel imbriquées, où il fallait gérer les erreurs à chaque niveau d'imbrication.
+
+Pour la gestion des erreurs, les objets `Promise` fournissent une méthode [`catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch). Elle se comporte un peu comme `then()`&nbsp;: on l'appelle en lui passant une fonction de gestion en argument. Si le gestionnaire passé à `then()` est appelé lorsque l'opération asynchrone a *réussi*, le gestionnaire passé à `catch()` est, quant à lui, appelé lorsque l'opération asynchrone *échoue*.
+
+Si on ajoute `catch()` à la fin de la chaîne des promesses, il sera appelé dès qu'un des appels de fonction asynchrone échoue. Ainsi, il est possible d'implémenter une opération composée de plusieurs appels successifs de fonctions asynchrones et de gérer toutes les erreurs à un seul endroit.
+
+Rechargez la page et essayez la version qui suit `fetch()`. On a ajouté un gestionnaire d'erreur grâce à `catch()`, et on a aussi modifié l'URL afin de faire échouer la requête.
+
+```js
+const fetchPromise = fetch('bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+fetchPromise
+  .then(reponse => {
+    if (!reponse.ok) {
+      throw new Error(`Erreur HTTP : ${reponse.status}`);
+    }
+    return reponse.json();
+  })
+  .then(json => {
+    console.log(json[0].name);
+  })
+  .catch(error => {
+    console.error(`Impossible de récupérer les produits : ${error}`);
+  });
+```
+
+Essayez d'exécuter cette version, vous devriez avoir une erreur affichée dans la console avec le gestionnaire passé à `catch()`.
+
+## Terminologie des promesses
+
+Les promesses ont une terminologie spécifique qu'il est préférable de clarifier.
+
+Pour commencer, une promesse peut être dans l'un de ces trois états&nbsp;:
+
+- **En cours** (<i lang="en">pending</i> en anglais)
+  - : La promesse a été créée et la fonction asynchrone associée n'a pas encore terminé son exécution, on ne sait pas si elle a réussi ou non. Il s'agit dans notre exemple de l'état de la promesse quand elle est renvoyée par l'appel à `fetch()`, et que la requête HTTP est toujours en cours.
+- **Tenue** (ou réussie ou <i lang="en">fulfilled</i> en anglais)
+  - : La fonction asynchrone a réussi. Lorsque la promesse est tenue, le gestionnaire passé à sa méthode `then()` est appelé.
+- **Rompue** (ou échouée ou <i lang="en">rejected</i> en anglais)
+  - : La fonction asynchrone a échoué. Lorsqu'une promesse est rompue, c'est le gestionnaire passé à sa méthode `catch()` qui est appelé.
+
+On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [`404 Not Found`](/fr/docs/Web/HTTP/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la requête.
+
+On utilise parfois le terme **réglée** (<i lang="en">settled</i> en anglais) pour désigner les deux cas de réussite et d'échec (autrement dit, pour dire que l'opération asynchrone n'est plus en cours).
+
+On dit d'une promesse qu'elle est **résolue** (<i lang="en">resolved</i>) si elle est réglée ou si elle suit l'état d'une autre promesse.
+
+L'article [Parlons un peu de notre façon de parler des promesses (en anglais)](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) fournit plus d'explications sur les détails de cette terminologie.
+
+## Combiner plusieurs promesses
+
+Une chaîne de promesse est utile lorsque notre opération se compose de plusieurs fonctions asynchrones et que chacune de ces fonctions doit démarrer à la suite de l'autre. Il existe toutefois d'autres façons de combiner les appels de fonctions asynchrones et l'API `Promise` fournit différentes méthodes utilitaires pour ça.
+
+Parfois, on a besoin que toutes les promesses soient tenues, mais leur exécution ne dépend pas l'une de l'autre. Dans une telle situation, il est plus efficace de lancer toutes les promesses en même temps puis de recevoir une notification lorsqu'elles ont toutes été tenues. La méthode [`Promise.all()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) est l'outil adéquat pour ça. Elle prend comme argument un tableau de promesses et renvoie une seule promesse.
+
+La promesse renvoyée par `Promise.all()` est&nbsp;:
+
+- Tenue lorsque *toutes* les promesses du tableau ont été tenues. Dans ce cas, le gestionnaire `then()` est appelé avec un tableau contenant toutes les réponses, dans le même ordre que le tableau des promesses passé à `all()`
+- Rompue si *au moins une* des promesses du tableau a été rompue. Dans ce cas, le gestionnaire `catch()` est appelé avec l'erreur levée par la promesse du tableau qui a été rompue.
+
+Ainsi&nbsp;:
+
+```js
+const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
+const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+
+Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
+  .then(reponses => {
+    for (const reponse of reponses) {
+      console.log(`${reponse.url} : ${reponse.status}`);
     }
   })
-  .catch(e => {
-    console.log(`Il y a eu un problème avec votre opération de récupération de la ressource "${url}" : ` + e.message);
-  })
-  .finally(() => {
-    console.log(`La tentative de récupération de "${url}" est terminée.`);
+  .catch(error => {
+    console.error(`Erreur de récupération : ${error}`)
   });
+```
+
+Ici, on lance trois requêtes `fetch()` vers trois URL différentes. Si elles réussissent toutes les trois, on affiche le code de statut de chaque. Si l'une d'elles échoue, on affiche l'erreur dans la console.
+
+Avec les URL fournies, toutes les requêtes devraient réussir, même si pour la deuxième, le serveur renvoie `404` (<i lang="en">Not Found</i>) et non `200` (OK) (en effet, le fichier demandé n'existe pas sur le serveur). Voici ce qui devrait donc s'afficher dans la console&nbsp;:
+
+```
+https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json : 200
+https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found : 404
+https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json : 200
+```
+
+Si on essaye le même code avec une URL mal-formée, comme avec&nbsp;:
+
+```js
+const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
+const fetchPromise3 = fetch('bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+
+Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
+  .then(reponses => {
+    for (const reponse of reponses) {
+      console.log(`${reponse.url}: ${reponse.status}`);
+    }
+  })
+  .catch(error => {
+    console.error(`Échec de récupération : ${error}`)
+  });
+```
+
+On peut alors s'attendre à ce que le gestionnaire `catch()` soit exécuté et qu'il y ait un message d'erreur dans la console&nbsp;:
+
+```
+Échec de récupération : TypeError: Failed to fetch
+```
+
+Il arrive aussi qu'on ait plusieurs promesses et que la réussite d'une seule suffise, quelle que soit la promesse qui réussit. Dans ce cas, on pourra utiliser [`Promise.any()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/any). Elle fonctionne comme `Promise.all()`, mais elle est tenue dès qu'une des promesses du tableau a été tenue et rompue uniquement si toutes les promesses du tableau sont rompues&nbsp;:
+
+```js
+const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
+const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+
+Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
+  .then(reponse => {
+    console.log(`${reponse.url}: ${reponse.status}`);
+  })
+  .catch(error => {
+    console.error(`Erreur de récupération : ${error}`)
+  });
+```
+
+On notera que dans ce cas, on ne peut pas prédire la requête qui sera terminée en premier.
+
+Nous avons vu ici uniquement deux fonctions de `Promise` qui permettent de combiner plusieurs promesses. Pour en apprendre plus sur les autres méthodes, vous pouvez consulter la page [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) de la référence JavaScript.
+
+## `async` et `await`
+
+Le mot-clé [`async`](/fr/docs/Web/JavaScript/Reference/Statements/async_function) fournit une façon plus simple de travailler avec du code asynchrone utilisant les promesses. En ajoutant `async` au début d'une fonction, cette dernière devient une fonction asynchrone&nbsp;:
+
+```js
+async function maFonction() {
+  // Voici une fonction asynchrone
 }
 ```
 
-Cela permet d'envoyer un simple message à la console pour nous dire quand chaque tentative de récupération est terminée.
+Dans une fonction asynchrone, on peut utiliser le mot-clé `await` avant un appel à une fonction renvoyant une promesse. De cette façon, le code patiente jusqu'à ce que la promesse soit réglée et la valeur de résolution de la promesse est fournie comme valeur de retour, ou alors la valeur d'échec déclenche une erreur.
 
-> **Note :** `then()`/`catch()`/`finally()` est l'équivalent asynchrone de `try`/`catch`/`finally` en code synchrone.
-
-## Construire vos propres promesses personnalisées
-
-La bonne nouvelle est que, d'une certaine manière, vous avez déjà construit vos propres promesses. Lorsque vous avez enchaîné plusieurs promesses avec des blocs `.then()`, ou que vous les avez autrement combinées pour créer une fonctionnalité personnalisée, vous créez déjà vos propres fonctions asynchrones personnalisées basées sur des promesses. Prenez notre fonction `fetchAndDecode()` des exemples précédents, par exemple.
-
-La combinaison de différentes API basées sur les promesses pour créer des fonctionnalités personnalisées est de loin la façon la plus courante dont vous ferez des choses personnalisées avec les promesses, et montre la flexibilité et la puissance de la base de la plupart des API modernes autour du même principe. Il existe toutefois un autre moyen.
-
-### Utilisation du constructeur Promise()
-
-Il est possible de construire vos propres promesses en utilisant le constructeur [`Promise()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). La principale situation dans laquelle vous voudrez faire cela est lorsque vous avez du code basé sur une API asynchrone de la vieille école qui n'est pas basée sur les promesses, et que vous voulez promettre. Cela s'avère pratique lorsque vous avez besoin d'utiliser du code, des bibliothèques ou des frameworks existants, plus anciens, avec du code moderne basé sur les promesses.
-
-Examinons un exemple simple pour vous aider à démarrer — ici, nous enveloppons un appel [`setTimeout()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) avec une promesse — cela exécute une fonction après deux secondes qui résout la promesse (en passant l'appel [`resolve()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve)) avec une chaîne de caractères de "Succès ! ".
+Cela permet d'écrire du code utilisant des fonctions asynchrones mais qui ressemble à du code synchrone. On pourrait par exemple réécrire notre exemple avec `fetch()` comme ceci&nbsp;:
 
 ```js
-let timeoutPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('Succès !');
-  }, 2000);
-});
-```
-
-`resolve()` et `reject()` sont des fonctions que vous appelez pour réaliser ou rejeter la promesse nouvellement créée. Dans ce cas, la promesse se réalise avec une chaîne de caractères "Succès !".
-
-Ainsi, lorsque vous appelez cette promesse, vous pouvez enchaîner un bloc `.then()` à la fin de celle-ci et on lui passera une chaîne de caractères "Succès !". Dans le code ci-dessous, nous alertons ce message :
-
-```js
-timeoutPromise
-.then((message) => {
-  alert(message);
-})
-```
-
-ou même simplement
-
-```js
-timeoutPromise.then(alert);
-```
-
-Essayez [de l'exécuter en direct](https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise.html) pour voir le résultat (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html)).
-
-L'exemple ci-dessus n'est pas très flexible - la promesse ne peut jamais s'accomplir qu'avec une seule chaîne de caractères, et elle n'a aucune sorte de condition [`reject()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) spécifiée (il est vrai que `setTimeout()` n'a pas vraiment de condition d'échec, donc cela n'a pas d'importance pour cet exemple).
-
-> **Note :** Pourquoi `resolve()`, et pas `fulfill()` ? La réponse que nous vous donnerons, pour l'instant, est _c'est compliqué_.
-
-### Rejeter une promesse personnalisée
-
-Nous pouvons créer une promesse rejetée à l'aide de la méthode [`reject()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) — tout comme `resolve()`, celle-ci prend une seule valeur, mais dans ce cas, c'est la raison du rejet, c'est-à-dire l'erreur qui sera transmise dans le bloc `.catch()`.
-
-Étendons l'exemple précédent pour avoir quelques conditions `reject()` ainsi que pour permettre de transmettre différents messages en cas de succès.
-
-Prenez une copie de l'[exemple précédent](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html), et remplacez la définition de `timeoutPromise()` existante par celle-ci :
-
-```js
-function timeoutPromise(message, interval) {
-  return new Promise((resolve, reject) => {
-    if (message === '' || typeof message !== 'string') {
-      reject('Le message est vide ou n'est pas une chaîne de caractères');
-    } else if (interval < 0 || typeof interval !== 'number') {
-      reject(`L'intervalle est négatif ou n'est pas un nombre`);
-    } else {
-      setTimeout(() => {
-        resolve(message);
-      }, interval);
+async function fetchProducts() {
+  try {
+    // Après cette ligne, notre fonction attendra que l'appel à `fetch()`
+    // soit réglé, soit on aura un objet Response dans la variable reponse
+    // soit on aura une erreur qui sera levée
+    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP : ${response.status}`);
     }
-  });
-};
+    // Après cette ligne, notre fonction attendra que l'appel à
+    // `response.json()` soit réglé et la variable json contiendra
+    // un objet JSON ou alors une erreur sera levée
+    const json = await response.json();
+    console.log(json[0].name);
+  }
+  catch(error) {
+    console.error(`Impossible d'obtenir les produits : ${error}`);
+  }
+}
+
+fetchProducts();
 ```
 
-Ici, nous passons deux arguments dans une fonction personnalisée - un message pour faire quelque chose avec, et l'intervalle de temps à passer avant de faire la chose. À l'intérieur de la fonction, nous renvoyons un nouvel objet `Promise` — l'invocation de la fonction renverra la promesse que nous voulons utiliser.
+On utilise ici `await fetch()` plutôt que de récupérer une promesse. La fonction appelante récupère un objet `Response` directement, comme si `fetch()` était une fonction synchrone&nbsp;!
 
-À l'intérieur du constructeur Promise, nous effectuons plusieurs vérifications dans des structures `if ... else` :
+On peut même utiliser un bloc `try…catch` pour la gestion d'erreurs, de la même façon qu'on peut le faire lorsqu'on utilise du code synchrone.
 
-1.  Tout d'abord, nous vérifions si le message est approprié pour être alerté. Si c'est une chaîne de caractères vide ou pas une chaîne de caractères du tout, nous rejetons la promesse avec un message d'erreur approprié.
-2.  Ensuite, nous vérifions si l'intervalle est une valeur d'intervalle appropriée. S'il est négatif ou n'est pas un nombre, nous rejetons la promesse avec un message d'erreur approprié.
-3.  Enfin, si les paramètres semblent tous deux OK, nous résolvons la promesse avec le message spécifié après que l'intervalle spécifié se soit écoulé en utilisant `setTimeout()`.
+Attention, ceci ne fonctionne qu'au sein des fonctions asynchrones. Les fonctions asynchrones renvoient toujours une promesse et on ne peut donc pas faire ceci&nbsp;:
 
-Puisque la fonction `timeoutPromise()` renvoie un objet `Promise`, nous pouvons enchaîner `.then()`, `.catch()`, etc. sur elle pour faire usage de ses fonctionnalités. Utilisons-le maintenant - remplaçons l'utilisation précédente de `timeoutPromise` par celle-ci :
+```js example-bad
+async function fetchProducts() {
+  try {
+    const reponse = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!reponse.ok) {
+      throw new Error(`Erreur HTTP : ${reponse.status}`);
+    }
+    const json = await reponse.json();
+    return json;
+  }
+  catch(error) {
+    console.error(`Impossible d'obtenir les produits : ${error}`);
+  }
+}
+
+const json = fetchProducts();
+console.log(json[0].name);   // json est un objet Promise, ça ne fonctionnera pas
+```
+
+À la place, il faut plutôt écrire comme ceci&nbsp;:
 
 ```js
-timeoutPromise('Bonjour à tous !', 1000)
-.then(message => {
-   alert(message);
-})
-.catch(e => {
-  console.log('Erreur : ' + e);
-});
+async function fetchProducts() {
+  try {
+    const reponse = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!reponse.ok) {
+      throw new Error(`Erreur HTTP : ${reponse.status}`);
+    }
+    const json = await reponse.json();
+    return json;
+  }
+  catch(error) {
+    console.error(`Impossible d'obtenir les produits : ${error}`);
+  }
+}
+
+const jsonPromise = fetchProducts();
+jsonPromise.then((json) => console.log(json[0].name));
 ```
 
-Lorsque vous enregistrez et exécutez le code tel quel, après une seconde, vous obtiendrez le message d'alerte. Essayez maintenant de définir le message sur une chaîne vide ou l'intervalle sur un nombre négatif, par exemple, et vous pourrez voir la promesse rejetée avec les messages d'erreur appropriés ! Vous pouvez également essayer de faire autre chose avec le message résolu plutôt que de simplement créer une alerte.
+Vous utiliserez probablement les fonctions asynchrones là où vous pourriez utiliser les chaînes de promesse. Elles permettent de travailler avec les promesses de façon plus intuitive.
 
-> **Note :** Vous pouvez trouver notre version de cet exemple sur GitHub sur [custom-promise2.html](https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise2.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise2.html)).
-
-### Un exemple plus concret
-
-L'exemple ci-dessus est resté volontairement simple pour rendre les concepts faciles à comprendre, mais il n'est pas vraiment très asynchrone. La nature asynchrone est essentiellement feinte en utilisant `setTimeout()`, bien qu'il montre quand même que les promesses sont utiles pour créer une fonction personnalisée avec un flux d'opérations raisonnable, une bonne gestion des erreurs, etc.
-
-Un exemple que nous aimerions vous inviter à étudier, qui montre effectivement une application asynchrone utile du constructeur `Promise()`, est [la bibliothèque idb de Jake Archibald](https://github.com/jakearchibald/idb/). Celle-ci prend l'API [IndexedDB API](/fr/docs/Web/API/IndexedDB_API), qui est une API à l'ancienne basée sur des callbacks pour stocker et récupérer des données côté client, et vous permet de l'utiliser avec des promesses. Dans le code, vous verrez que le même type de techniques que nous avons évoqué plus haut est utilisé. Le bloc suivant convertit le modèle de requête de base utilisé par de nombreuses méthodes IndexedDB pour utiliser des promesses ([voir ce code, par exemple](https://github.com/jakearchibald/idb/blob/01082ad696eef05e9c913f55a17cda7b3016b12c/build/esm/wrap-idb-value.js#L30)).
+Il faut garder en tête que, comme les chaînes de promesses, `await` implique que les opérations asynchrones s'exécutent les unes à la suite des autres. C'est utile lorsque le résultat d'une opération dépend de celui de la précédente, mais si ce n'est pas le cas, l'utilisation de `Promise.all()` ou d'autres méthodes pourra s'avérer plus performante.
 
 ## Conclusion
 
-Les promesses sont un bon moyen de construire des applications asynchrones lorsque nous ne connaissons pas la valeur de retour d'une fonction ou le temps qu'elle prendra pour retourner une réponse. Elles permettent d'exprimer et de raisonner plus facilement sur des séquences d'opérations asynchrones sans callbacks profondément imbriqués, et elles supportent un style de gestion des erreurs qui est similaire à l'instruction synchrone `try...catch`.
+Les promesses sont à la base de la programmation asynchrone en JavaScript moderne. Elles permettent d'exprimer et de raisonner avec des ensembles d'opérations asynchrones sans avoir à utiliser des niveaux d'imbrication de fonctions de rappels. De plus, la façon de gérer les erreurs se rapproche de ce qu'on peut avoir avec l'instruction synchrone `try…catch`.
 
-Les promesses fonctionnent dans les dernières versions de tous les navigateurs modernes ; le seul endroit où la prise en charge des promesses posera problème est Opera Mini et IE11 et les versions antérieures.
+Les mots-clés `async` et `await` permettent quant à eux de construire simplement une opération qui consiste en une suite d'appels de fonctions asynchrones, sans avoir à recourir à des chaînes de promesses et en écrivant du code qui ressemble à du code synchrone.
 
-Nous n'avons pas abordé toutes les fonctionnalités des promesses dans cet article, mais seulement les plus intéressantes et les plus utiles. Au fur et à mesure que vous vous familiariserez avec les promesses, vous découvrirez d'autres fonctionnalités et techniques.
+Les promesses fonctionnent pour tous les navigateurs récents. Les seuls environnements où leur prise en charge est problématique sont&nbsp;: Opera Mini et IE11 ainsi que les versions antérieures.
 
-La plupart des API Web modernes sont basées sur des promesses, vous devrez donc comprendre les promesses pour en tirer le meilleur parti. Parmi ces API, citons [WebRTC](/fr/docs/Web/API/WebRTC_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), [MediaStream API](/fr/docs/Web/API/Media_Streams_API), et bien d'autres encore. Les promesses seront de plus en plus importantes au fil du temps, donc apprendre à les utiliser et à les comprendre est une étape importante dans l'apprentissage du JavaScript moderne.
+Nous n'avons pas couvert toutes les fonctionnalités des promesses dans cet article, nous avons seulement vu les aspects les plus utiles et les plus intéressants. Lorsque vous commencerez à en savoir plus sur les promesses, vous rencontrerez d'autres fonctionnalités et d'autres techniques.
+
+De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/Web/API/WebRTC_API), [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API), [l'API de flux média (<i lang="en">Media Streams API</i>)](/fr/docs/Web/API/Media_Streams_API), et bien d'autres.
 
 ## Voir aussi
 
 - [`Promise()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
-- [Nous avons un problème avec les promesses](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) (en) par Nolan Lawson
+- [Utiliser les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
+- [Nous avons un problème avec les promesses (en anglais)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html), un billet de Nolan Lawson
+- [Parlons un peu de notre façon de parler des promesses (en anglais)](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
-
-## Dans ce module
-
-- [Concepts généraux de programmation asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introduction au JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [JavaScript asynchrone coopératif : Délais et intervalles](/fr/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Gérer les opérations asynchrones avec élégance grâce aux Promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Faciliter la programmation asynchrone avec async et await](/fr/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choisir la bonne approche](/fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}

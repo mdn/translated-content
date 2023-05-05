@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/substring
 original_slug: Web/XPath/Fonctions/substring
 ---
+
 {{ XsltRef() }}
 
 La fonction `substring` retourne une partie d'une chaîne donnée.
 
 ### Syntaxe
 
-    substring( chaîne , début [, longueur] )
+```
+substring( chaîne , début [, longueur] )
+```
 
 ### Arguments
 

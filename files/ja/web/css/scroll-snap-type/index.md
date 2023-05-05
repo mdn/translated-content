@@ -1,15 +1,8 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-type
-translation_of: Web/CSS/scroll-snap-type
 ---
+
 {{CSSRef}}
 
 **`scroll-snap-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スナップ点が存在する場合にスクロールコンテナーにどれだけ厳密にスナップ点を強制するかを設定します。

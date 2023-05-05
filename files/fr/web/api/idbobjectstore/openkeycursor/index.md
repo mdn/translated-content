@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/openKeyCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openKeyCursor()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} dont le résultat sera un curseur ({{domxref("IDBCursor")}}) qui pourra être utilisé afin de parcourir les enregistrements correspondants. Cette méthode est utilisée afin de parcourir les clés d'un magasin d'objets grâce à un curseur.
@@ -17,7 +18,9 @@ Afin de déterminer si le curseur a bien été ajouté, on pourra écouter l'év
 
 ## Syntaxe
 
-    var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+```js
+var requete = objectStore.openKeyCursor(optionalKeyRange, optionalDirection);
+```
 
 ### Paramètres
 
@@ -62,13 +65,11 @@ request.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB2', '#dom-idbobjectstore-openkeycursor', 'openKeyCursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.openKeyCursor")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -78,4 +79,4 @@ request.onsuccess = function(event) {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

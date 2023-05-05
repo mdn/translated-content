@@ -1,6 +1,6 @@
 ---
 title: Console.group()
-slug: Web/API/Console/group
+slug: Web/API/console/group
 tags:
   - API
   - DOM
@@ -11,26 +11,27 @@ tags:
   - débogage
 translation_of: Web/API/Console/group
 ---
+
 {{APIRef("Console API")}}
 
-Création d'un nouveau groupe en ligne dans la [console Web](/en-US/docs/Tools/Web_Console). Cela indente les messages de console suivants par un niveau supplémentaire, jusqu'à ce que {{domxref("console.groupEnd()")}} soit appelé.
+Création d'un nouveau groupe en ligne dans la [console Web](/fr/docs/Tools/Web_Console). Cela indente les messages de console suivants par un niveau supplémentaire, jusqu'à ce que {{domxref("console.groupEnd()")}} soit appelé.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
-    console.group();
+```js
+console.group();
+```
 
 ## Paramètres
 
 - `label`
-  - : donne une étiquette au groupe. Facultatif. (Chrome 59 testé). Ne fonctionne pas avec` ``console.groupEnd()`.
+  - : donne une étiquette au groupe. Facultatif. (Chrome 59 testé). Ne fonctionne pas avec `console.groupEnd()`.
 
-{{h3_gecko_minversion("Using groups in the console", "9.0")}}
+## Exemples
 
 Vous pouvez utiliser des groupes imbriqués pour organiser votre sortie en associant visuellement les messages correspondants. Pour créer un nouveau bloc imbriqué, appelez `console.group ()`. La méthode `console.groupCollapsed ()` est similaire, mais le nouveau bloc est réduit et nécessite de cliquer sur un bouton de divulgation pour le lire.
-
-> **Note :** De Gecko 9 jusqu'à Gecko 51, la méthode `groupCollapsed()` n'était pas identique à `group()`. Les groupes réduits sont entièrement pris en charge depuis Gecko 52. Voir {{bug("1088360")}}.
 
 Pour sortir du groupe courant, appeler `console.groupEnd()`. Par exemple, étant donné ce code :
 
@@ -55,13 +56,11 @@ Pour plus de détail, se reporter à l'article [Using groups in the console](/fr
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consolegroupobject-object-", "console.group()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.group")}}
+{{Compat}}
 
 ## Voir aussi
 

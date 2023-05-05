@@ -1,22 +1,11 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Intervals
-  - JavaScript タイマー
-  - MakeBrowserAgnostic
-  - メソッド
-  - NeedsMarkupWork
-  - タイマー
-  - setInterval
-  - Polyfill
-browser-compat: api.setInterval
-translation_of: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
+l10n:
+  sourceCommit: c8485a8f94319d289a8892fd261d2fe38b623aa0
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`setInterval()`** メソッドは {{domxref("Window")}} および {{domxref("Worker")}} メソッドで提供され、一定の遅延間隔を置いて関数やコードスニペットを繰り返し呼び出します。
@@ -25,10 +14,15 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 ## 構文
 
-```js
-var intervalID = setInterval(func, [delay, arg1, arg2, ...]);
-var intervalID = setInterval(function[, delay]);
-var intervalID = setInterval(code, [delay]);
+```js-nolint
+setInterval(code)
+setInterval(code, delay)
+
+setInterval(func)
+setInterval(func, delay)
+setInterval(func, delay, arg0)
+setInterval(func, delay, arg0, arg1)
+setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 ```
 
 ### 引数
@@ -37,12 +31,10 @@ var intervalID = setInterval(code, [delay]);
   - : `delay` ミリ秒が経過するたびに実行する{{jsxref("function", "関数")}}です。最初の実行は `delay` ミリ秒後に行われます。
 - `code`
   - : 関数の代わりに文字列を含める構文も許容されており、 `delay` ミリ秒が経過するたびに文字列をコンパイルして実行します。 {{jsxref("Global_Objects/eval", "eval()")}} の使用にリスクがあるのと同じ理由で、この構文は**推奨しません**。
-- `delay`{{optional_inline}}
-  - : 指定した関数またはコードを実行する前にタイマーが待つべき時間をミリ秒 (1/1000 秒) 単位で指定します。引数が 10 より小さい場合は、10 を使用します。実際の遅延が長くなることがあります。例えば {{SectionOnPage("/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "遅延が指定値より長い理由")}} をご覧ください。
-- `arg1, ..., argN` {{optional_inline}}
+- `delay` {{optional_inline}}
+  - : 指定した関数またはコードを実行する前にタイマーが待つべき時間をミリ秒 (1/1000 秒) 単位で指定します。引数が 10 より小さい場合は、10 を使用します。実際の遅延が長くなることがあります。例えば[遅延の制約](#遅延の制約)をご覧ください。
+- `arg0, …, argN` {{optional_inline}}
   - : タイマーが満了したときに、 _func_ で指定した関数に渡す追加の引数です。
-
-> **Note:** 最初の構文で `setInterval()` に渡す追加の引数は、 Internet Explorer 9 およびそれ以前のバージョンでは機能しないことに注意してください。同様の機能を実現させるには、ポリフィルを使用してください（[コールバックの引数](#コールバックの引数) の節を参照）。
 
 ### 返値
 
@@ -50,7 +42,7 @@ var intervalID = setInterval(code, [delay]);
 
 `setInterval()` と {{domxref("setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることを意識すると役に立つでしょう。ただし明快さのために、コードを整備するときは混乱を避けるため、常に一致させるようにするべきです。
 
-> **Note:** 引数 `delay` は、符号付き 32 ビット整数に変換されます。 IDL における符号付き整数の定義によって、`delay` は事実上 2147483647ms に制限されます。
+> **メモ:** 引数 `delay` は、符号付き 32 ビット整数に変換されます。 IDL における符号付き整数の定義によって、`delay` は事実上 2147483647ms に制限されます。
 
 ## 例
 
@@ -59,7 +51,7 @@ var intervalID = setInterval(code, [delay]);
 以下の例は、 `setInterval()` の基本的な構文を示します。
 
 ```js
-var intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+const intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
 
 function myCallback(a, b)
 {
@@ -110,17 +102,13 @@ function changeColor() {
 
 function flashText() {
   const oElem = document.getElementById("my_box");
-  if (oElem.className === "go") {
-    oElem.className = "stop";
-  } else {
-    oElem.className = "go";
-  }
+  oElem.className = oElem.className === "go" ? "stop" : "go";
 }
 
 function stopTextColor() {
   clearInterval(nIntervId);
   // 変数から intervalID を解放
-  nIntervId = null; 
+  nIntervId = null;
 }
 
 document.getElementById("start").addEventListener("click", changeColor);
@@ -132,66 +120,6 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
 [`clearInterval()`](/ja/docs/Web/API/clearInterval) も参照してください。
-
-## コールバックの引数
-
-前述のとおり、Internet Explorer 9 以前は、 `setTimeout()` や `setInterval()` でコールバック関数に引数を渡すことに対応していません。以下の **IE 専用**コードは、この制限を克服する方法を説明します。使用方法は、スクリプトの先頭に以下のコードを追加するだけです。
-
-```js
-/*\
-|*|
-|*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
-|*|  callback functions of javascript timers (HTML5 standard syntax).
-|*|
-|*|  https://developer.mozilla.org/ja/docs/Web/API/window.setInterval
-|*|
-|*|  Syntax:
-|*|  var timeoutID = window.setTimeout(func, delay[, arg1, arg2, ...]);
-|*|  var timeoutID = window.setTimeout(code, delay);
-|*|  var intervalID = window.setInterval(func, delay[, arg1, arg2, ...]);
-|*|  var intervalID = window.setInterval(code, delay);
-|*|
-\*/
-
-if (document.all && !window.setTimeout.isPolyfill) {
-  var __nativeST__ = window.setTimeout;
-  window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeST__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
-  };
-  window.setTimeout.isPolyfill = true;
-}
-
-if (document.all && !window.setInterval.isPolyfill) {
-  var __nativeSI__ = window.setInterval;
-  window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeSI__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
-  };
-  window.setInterval.isPolyfill = true;
-}
-```
-
-もうひとつの方法は、コールバックに無名関数を使用することです。ただし、この方法は少し多くコストがかかります。例を示します。
-
-```js
-var intervalID = setInterval(function() { myFunc('one', 'two', 'three'); }, 1000);
-```
-
-さらに、次のように[関数の
-bind](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) を使用する方法もあります。
-
-```js
-var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);
-```
-
-{{h3_gecko_minversion("非アクティブなタブ", "5.0")}}
-
-Gecko 5.0 {{geckoRelease("5.0")}} より非アクティブなタブでは、1 秒あたり 1 回を超えて実行しないようにインターバルを制限します。
 
 ## "this" 問題
 
@@ -205,7 +133,7 @@ Gecko 5.0 {{geckoRelease("5.0")}} より非アクティブなタブでは、1 �
 myArray = ['zero', 'one', 'two'];
 
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // "zero,one,two" と表示
@@ -224,45 +152,9 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 同じエラー
 
 ### 取りうる解決策
 
-"`this`" 問題の解決策として、ネイティブの `setTimeout()` および `setInterval()` グローバル関数を、 [`Function.prototype.call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call) メソッドを通して呼び出すことが可能な*非ネイティブ*メソッドに置き換える方法が考えられます。考えられる置き換え方法の例を以下に示します。
+最近の JavaScript ランタイムはすべて（ブラウザーとそそれ以外を含め）、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)と `this` 表記と組み合わせると、 `myArray` メソッドの内部にいる場合は `setInterval(() => this.myMethod())` と記述することが可能です。
 
-```js
-// JavaScript のタイマーで 'this' オブジェクトを通せるようにします
-
-var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
-
-window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeST__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
-};
-
-window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeSI__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
-};
-```
-
-> **Note:** これら 2 つの置き換えにより、IE のタイマーで HTML5 標準の、コールバック関数に任意の引数を渡すことも可能になります。よって、*標準仕様に準拠しない*ポリフィルとしても使用できます。*標準仕様に準拠する*ポリフィルについては、[コールバックの引数](#コールバックの引数)の節をご覧ください。
-
-新機能のテスト:
-
-```js
-myArray = ['zero', 'one', 'two'];
-
-myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
-};
-
-setTimeout(alert, 1500, 'Hello world!'); // the standard use of setTimeout and setInterval is preserved, but...
-setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after 2 seconds
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
-```
-
-> **Note:** JavaScript 1.8.5 で、関数のすべての呼び出しで `this` として使用する値を設定できる、 [`Function.prototype.bind()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) メソッドを導入しました。これにより、関数を呼び出したコンテキストに応じて `this` がどのようになるかが明確にならない問題を簡単に回避できます。また、 ES2015 では[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)に対応して、 this 表記と組み合わせると myArray の内部では setInterval( () => this.myMethod) と記述できます。
+IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) メソッドを使用すると、与えられた関数へのすべての呼び出しに対して `this` として使用する値を指定することができます。これにより、関数が呼び出されたときのコンテキストによって `this` が何であるかが不明確な問題を簡単に回避することができます。
 
 ## 使用上のメモ
 
@@ -283,8 +175,8 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 この場合は、再帰的な `setTimeout()` のパターンを推奨します。
 
 ```js
-(function loop(){
-   setTimeout(function() {
+(function loop() {
+   setTimeout(() => {
       // Your logic here
 
       loop();

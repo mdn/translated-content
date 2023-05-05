@@ -3,9 +3,10 @@ title: ':-moz-only-whitespace'
 slug: Web/CSS/:-moz-only-whitespace
 translation_of: Web/CSS/:-moz-only-whitespace
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Note :** Dans la spécification {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
+> **Note :** Dans la spécification CSS4 Selectors, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-only-whitespace`** correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.
 
@@ -55,11 +56,11 @@ div {
 
 ## Spécifications
 
-Cette pseudo-classe a été renommée en `:blank` dans {{SpecName("CSS4 Selectors", "#changes-2018-02")}} puis la fonctionnalité a été fusionnée avec {{CSSxRef(":empty")}} et {{CSSxRef(":blank")}} a été redéfinie afin d'indiquer un élément {{HTMLElement("input")}} vide.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.moz-only-whitespace")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,6 +3,7 @@ title: Location
 slug: Web/API/Location
 translation_of: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`Location`** représente l'emplacement de l'objet auquel elle est liée. Les changements effectués dessus sont reflétés sur l'objet lié. Les deux interfaces {{domxref("Document")}} et {{domxref("Window")}} sont liées à une `Location`, accessible via {{domxref("Document.location")}} et {{domxref("Window.location")}} respectivement.
@@ -75,12 +76,12 @@ _L'interface `Location` n'hérite d'aucune propriété, mais implémente celles 
 - {{domxref("Location.pathname")}}
   - : Une {{domxref("DOMString")}} contenant un `'/'` initial suivi du chemin de l'URL.
 - {{domxref("Location.search")}}
-  - : Une {{domxref("DOMString")}} contenant un `'?'` suivi des paramètres de l'URL. Les navigateurs moderne fournissent [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#Example) et [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#Example) pour faciliter l'analyse des paramètres de la chaîne de requête (querystring).
+  - : Une {{domxref("DOMString")}} contenant un `'?'` suivi des paramètres de l'URL. Les navigateurs moderne fournissent [URLSearchParams](/fr/docs/Web/API/URLSearchParams/get#Example) et [URL.searchParams](/fr/docs/Web/API/URL/searchParams#Example) pour faciliter l'analyse des paramètres de la chaîne de requête (querystring).
 - {{domxref("Location.hash")}}
   - : Une {{domxref("DOMString")}} contenant un `'#'` suivi de _l'identifiant de fragment_ de l'URL.
-- {{domxref("Location.username")}} {{Obsolete_Inline}}
+- {{domxref("Location.username")}} {{deprecated_inline}}
   - : Une {{domxref("DOMString")}} contenant le nom d'utilisateur spécifié avant le nom de domaine.
-- {{domxref("Location.password")}} {{Obsolete_Inline}}
+- {{domxref("Location.password")}} {{deprecated_inline}}
   - : Une {{domxref("DOMString")}} contenant le mot de passe spécifié avant le nom de domaine.
 - {{domxref("Location.origin")}} {{readOnlyInline}}
   - : Retourne une {{domxref("DOMString")}} contenant la forme canonique de l'origine de la location.
@@ -118,14 +119,11 @@ console.log(url.origin);    // https://developer.mozilla.org:8080
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaires                                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Location")}} | {{Spec2('HTML WHATWG')}} | Pas de différence avec {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Location")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                     |
+{{Specifications}}
 
-## Compatibilité
+## Compatibilité des navigateurs
 
-{{Compat("api.Location")}}
+{{Compat}}
 
 ## Voir aussi
 

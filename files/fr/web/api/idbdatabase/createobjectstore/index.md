@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/createObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`createObjectStore()`**, rattachée à l'interface {{domxref("IDBDatabase")}}, permet d'ajouter un magasin d’objet ou un index à la base de donnée et renvoie un accès vers celui-ci.
@@ -95,13 +96,11 @@ var objectStore = db.createObjectStore(name, optionalParameters);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-createObjectStore-IDBObjectStore-DOMString-name-IDBObjectStoreParameters-optionalParameters', 'createObjectStore()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase.createObjectStore")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -111,4 +110,4 @@ var objectStore = db.createObjectStore(name, optionalParameters);
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

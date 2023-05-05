@@ -1,15 +1,8 @@
 ---
 title: border-top-width
 slug: Web/CSS/border-top-width
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-top-width
-translation_of: Web/CSS/border-top-width
 ---
+
 {{CSSRef}}
 
 **`border-top-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界の幅を設定します。
@@ -46,7 +39,7 @@ border-top-width: unset;
     - `medium`
     - `thick`
 
- > **Note:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+ > **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -95,5 +88,5 @@ div:nth-child(2) {
 
 ## 関連情報
 
- - 他の border-width 関連 CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
- - 他の border-top 関連 CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-top-color")}}
+- 他の border-width 関連 CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
+- 他の border-top 関連 CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-top-color")}}

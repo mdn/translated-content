@@ -13,6 +13,7 @@ tags:
   - test
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Nous allons maintenant aborder les problèmes Javascript en navigateur croisé et comment les résoudre. Cela comprend des informations sur l'utilisation des outils de dev des navigateurs pour localiser et fixer les problèmes, l'utilisation des Polyfills et de librairies pour contourner les problèmes, utiliser les fonctionnalités modernes de Javascript sur des vieux navigateurs, et plus encore.
@@ -92,11 +93,11 @@ Ce n'est pas très pratique de devoir copier et coller votre code sur une page w
 
 Pour l'installer :
 
-1.  Installez Atom (si vous n'avez pas encore une version à jour déjà installée) — téléchargez-le depuis la page Atom linkée plus haut.
-2.  Aller dans la boîte de dialogue _Préférences..._ d'Atom (par ex. en choisissant _Atom_ > _Préférences..._ sur Windows/Linux) et choisissez l'option _Installer_ dans le menu gauche.
-3.  Dans le champs text _Rechercher packages_, taper "jslint" et presser Entrée/Envoyer pour rechercher des packages en liaisons avec le linting.
-4.  Vous devriez voir un package appellé **lint** en haut de la liste. Installez-le en premier (en utilisant le bouton _Installer_), comme les autres sont dépendants de celui-ci pour fonctionner. Ensuite, installez le plugin **linter-jshint**.
-5.  Une fois que les packages ont terminé de s'installer, essayez de charger un fichier JavaScript : vous verrez tous les problèmes surlignés en vert (pour les avertissements) et des cercles rouges (pour les erreurs) à côté des numéros de lignes, et un panneau séparé en bas qui vous fournit les numéros de lignes, les messages d'erreur, et parfois des valeur suggérées ou d'autres solutions.
+1. Installez Atom (si vous n'avez pas encore une version à jour déjà installée) — téléchargez-le depuis la page Atom linkée plus haut.
+2. Aller dans la boîte de dialogue _Préférences..._ d'Atom (par ex. en choisissant _Atom_ > _Préférences..._ sur Windows/Linux) et choisissez l'option _Installer_ dans le menu gauche.
+3. Dans le champs text _Rechercher packages_, taper "jslint" et presser Entrée/Envoyer pour rechercher des packages en liaisons avec le linting.
+4. Vous devriez voir un package appellé **lint** en haut de la liste. Installez-le en premier (en utilisant le bouton _Installer_), comme les autres sont dépendants de celui-ci pour fonctionner. Ensuite, installez le plugin **linter-jshint**.
+5. Une fois que les packages ont terminé de s'installer, essayez de charger un fichier JavaScript : vous verrez tous les problèmes surlignés en vert (pour les avertissements) et des cercles rouges (pour les erreurs) à côté des numéros de lignes, et un panneau séparé en bas qui vous fournit les numéros de lignes, les messages d'erreur, et parfois des valeur suggérées ou d'autres solutions.
 
 ![](jshint-linter.png)D'autres éditeurs répandus ont des packages similaires de linting disponibles. Par exemple, voir la section "Plugins for text editors and IDEs" de la [page d'installation de JSHint](http://jshint.com/install/).
 
@@ -210,10 +211,10 @@ Mettons-nous au travail. Pour commencer, nous savons que l'erreur est renvoyée 
 
 Ici, nous pouvons obtenir des informations très utiles.
 
-1.  Développez la portée `showHeroes` — vous pouvez voir depuis celle-ci que la variable heroes n'est pas définie, indiquant qu'accèder à la propriété `members` de `jsonObj` (première ligne de la fonction) ne marche pas.
-2.  Vous pouvez également voir que la variable `jsonObj` stock une chaîne de caractères, pas un objet JSON.
-3.  En examinant plus loin la pile d'exécutuion, cliquez sur `request.onload` dans la section _Pile d'exécution_. La vue va se mettre à jour pour afficher la fonction `request.onload` dans le panneau central, et sa portée dans la section _Portées_.
-4.  Maintenant si vous développez la portée de `request.onload`, vous verrez que la variable `superHeroes` est également une chaîne de caractères, pas un objet. C'est la solution — notre appel [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) retourne le JSON comme du texte, pas comme du JSON.
+1. Développez la portée `showHeroes` — vous pouvez voir depuis celle-ci que la variable heroes n'est pas définie, indiquant qu'accèder à la propriété `members` de `jsonObj` (première ligne de la fonction) ne marche pas.
+2. Vous pouvez également voir que la variable `jsonObj` stock une chaîne de caractères, pas un objet JSON.
+3. En examinant plus loin la pile d'exécutuion, cliquez sur `request.onload` dans la section _Pile d'exécution_. La vue va se mettre à jour pour afficher la fonction `request.onload` dans le panneau central, et sa portée dans la section _Portées_.
+4. Maintenant si vous développez la portée de `request.onload`, vous verrez que la variable `superHeroes` est également une chaîne de caractères, pas un objet. C'est la solution — notre appel [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) retourne le JSON comme du texte, pas comme du JSON.
 
 > **Note :** Nous aimerions que vous essayez de résoudre ce problème par vous-même. Pour vous donner un indice, vous avez le choix entre [tell the XMLHttpRequest object explicitly to return JSON format](/fr/docs/Web/API/XMLHttpRequest/responseType), ou [conversion entre objet et texte](/fr/docs/Learn/JavaScript/Objects/JSON#Convertion_entre_objets_et_textes) après l'arrivée de la réponse. Si vous restez bloqué, consultez notre exemple [fixed-ajax.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fixed-ajax.html).
 
@@ -226,9 +227,9 @@ Dès que vos applis vont devenir plus complexes vous allez commencer à utiliser
 - Eviter de charger plus de JavaSacript que nécessaire, réunissez vos scripts dans un seul fichier en utilisant une solution comme [Browserify](http://browserify.org/). En général, réduire le nombre de requêtes HTTP est très bon pour la performance.
 - S'assurer que vos fichiers sont le plus petits en les minifiant avant de les charger sur votre serveur de production. Minifier réduit tout le code en une seule et immense ligne, donnant au fichier une taille beaucoup moins importante. C'est vilain, mais vous n'avez pas besoin de la lire lorsque c'est terminé ! Cette tâche est la mieux réalisée avec un outil de minification comme [Uglify](https://github.com/mishoo/UglifyJS2) (il y aussi une version en ligne — voir [JSCompress.com](https://jscompress.com/)).
 - Lorsque que vous utilisez des APIs, assurez-vous de désactiver les fonctionnalités de l'API quand elles ne sont pas utilisées ; certains appels d'API peuvent être très coûteux en puissance de traitement. Par exemple, lorsque vous montrez un stream video, assurez-vous que s'est désactivé quand vous ne pouvez pas le voir. Quand vous tracer la localisation d'un appareil en utilisant des appels répétés de Géolocalisation, assurez-vous de le désactiver quand l'utilisateur arrête de l'utiliser.
-- Les animations peuvent être très coûteuses pour la performance. Beaucoup de librairies JavaScript fournissent des possibilités d'animation programmée avec JavaScript, mais c'est beaucoup plus rentable de faire les animations via les fonctionnalités natives des navigateurs comme [les Animations CSS](/fr/docs/Web/CSS/Animations_CSS) (ou la naissante [Web Animations API](/fr/docs/Web/API/Web_Animations_API)) qu'en JavaScript. Lisez  [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) pour des théories très utiles sur l'animation coûteuse, des conseils sur comment améliorer la performance des animations, et des informations à propos de l'API Web Animations.
+- Les animations peuvent être très coûteuses pour la performance. Beaucoup de librairies JavaScript fournissent des possibilités d'animation programmée avec JavaScript, mais c'est beaucoup plus rentable de faire les animations via les fonctionnalités natives des navigateurs comme [les Animations CSS](/fr/docs/Web/CSS/Animations_CSS) (ou la naissante [Web Animations API](/fr/docs/Web/API/Web_Animations_API)) qu'en JavaScript. Lisez [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) pour des théories très utiles sur l'animation coûteuse, des conseils sur comment améliorer la performance des animations, et des informations à propos de l'API Web Animations.
 
-> **Note :** Le [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/ "Read 'Writing Fast, Memory-Efficient JavaScript'") de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.
+> **Note :** Le [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.
 
 ## Les problèmes JavaScript en navigateur croisé
 
@@ -267,7 +268,7 @@ Il y a plusieurs stratégies pour gérer les incompatibilités entre navigateurs
 
 #### Fonctionnalité de détection
 
-L'idée derrière une fonctionnalité de détection est que vous pouvez exécuter un test pour déterminer si une fonctionnalité est supportée dans le navigateur courant, et ensuite exécuter conditionnellement un code pour fournir une expérience acceptable sur chaque navigateur qui supporte et ne supporte pas la fonctionnalité. A titre d'exemple rapide, l'[API Geolocalisation](/fr/docs/Using_geolocation) (qui présente des données de localisation pour l'appareil sur lequel le navigateur est en train d'être exécuté) a un point d'entrée principal pour son utilisation — une propriété `geolocation` disponible dans l'objet global [Navigator](/fr/docs/Web/API/Navigator).  Par conséquent, vous pouvez détecter si le navigateur supporte la géolocalisation ou non en utilisant quelque chose comme suit :
+L'idée derrière une fonctionnalité de détection est que vous pouvez exécuter un test pour déterminer si une fonctionnalité est supportée dans le navigateur courant, et ensuite exécuter conditionnellement un code pour fournir une expérience acceptable sur chaque navigateur qui supporte et ne supporte pas la fonctionnalité. A titre d'exemple rapide, l'[API Geolocalisation](/fr/docs/Using_geolocation) (qui présente des données de localisation pour l'appareil sur lequel le navigateur est en train d'être exécuté) a un point d'entrée principal pour son utilisation — une propriété `geolocation` disponible dans l'objet global [Navigator](/fr/docs/Web/API/Navigator). Par conséquent, vous pouvez détecter si le navigateur supporte la géolocalisation ou non en utilisant quelque chose comme suit :
 
 ```js
 if("geolocation" in navigator) {
@@ -294,10 +295,10 @@ Les librairies JavaScript sont essentiellement une partie externe d'unités de c
 Les librairies Javascript ont tendance à se réunir en quelques types principaux (certaines librairies serviront plus d'un de ces types) :
 
 - Les librairies utilitaires : Fournissent une quantité de fonctions pour rendre les tâches sans intérêts plus simples et moins ennuyantes à gérer. [jQuery](http://jquery.com/) par exemple fournit son propre système de sélecteurs et de librairies de manipulation de DOM, pour permettre le choix du type de sélecteur CSS, des éléments en JavaScript et une construction du DOM plus simple. Ce n'est plus aussi important aujourd'hui nous avons des fonctionnalités modernes comme les méthodes {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} disponibles selon les navigateurs, mais ça peut toujours être utile quand vous avez besoin de supporter de plus vieux navigateurs.
-- Les librairies de confort : Rendent les choses difficiles plus facile à faire. Par exemple, l'[API WebGL](/fr/Apprendre/WebGL) est vraiment complexe et se révèle difficile à écrire directement, alors la librairie [Three.js](https://threejs.org/) (et d'autres) est construite au-dessus de WebGL et apporte une API plus simple pour créer des objets 3D courants, des aspects, des textures etc. L'[API Service Worker](/fr/docs/Web/API/Service_Worker_API) est aussi très complexe à utiliser, alors des librairies de code ont commencé à apparaitre pour rendre des cas d'usage des Service Worker plus facile à implémenter (voir le [Service Worker Cookbook](https://serviceworke.rs/) pour plusieurs extrait de code utiles).
+- Les librairies de confort : Rendent les choses difficiles plus facile à faire. Par exemple, l'[API WebGL](/fr/Apprendre/WebGL) est vraiment complexe et se révèle difficile à écrire directement, alors la librairie [Three.js](https://threejs.org/) (et d'autres) est construite au-dessus de WebGL et apporte une API plus simple pour créer des objets 3D courants, des aspects, des textures etc. L'[API Service Worker](/fr/docs/Web/API/Service_Worker_API) est aussi très complexe à utiliser, alors des librairies de code ont commencé à apparaitre pour rendre des cas d'usage des Service Worker plus facile à implémenter (voir le [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) pour plusieurs extrait de code utiles).
 - Les librairies d'effets : Ces librairies sont conçues pour vous permettre d'ajouter facilement des effets spéciaux à votre site web. C'était plus utile quand {{glossary("DHTML")}} était à la mode, et implémentait des effets impliquant beaucoup de JavaScript complexe, mais de nos jours les navigateurs ont construit une quantité de fonctionnalités en CSS3 et des APIs pour implémenter les effets plus facilement. Pour une liste de librairies, se référer à [JavaScripting.com/animation](https://www.javascripting.com/animation/).
 - Les librairies d'UI : Fournissent des méthodes pour implémenter des fonctionnalités UI complexes qui serait autrement compliquées à implémenter et à faire fonctionner en navigateur croisé, par exemple [jQuery UI](http://jqueryui.com/) et [Foundation](http://foundation.zurb.com/). Elles ont tendance à être utilisées comme les bases de la configuration de sites complets ; c'est souvent difficile de les implémenter uniquement pour une fonctionnalité UI.
-- Les librairies de nomalisation : Vous fournissent une syntaxe simple qui vous permet de compléter facilement une tâche sans avoir à vous soucier des différences entre navigateur. la librairie utilisera les APIs appopriées en arrière-plan donc la fonctionnalité marchera qu'importe le navigateur (en théorie). Par exemple, [LocalForage](https://github.com/localForage/localForage) est une librairie pour le stockage de données côté client, qui fournit une syntaxe simple pour stocker et extraire les données. En arrière-plan, elle utilise la meilleure API que la navigateur possède pour stocker les données,  que ça soit [IndexedDB](/fr/docs/Web/API/API_IndexedDB), [Web Storage](/fr/docs/Web/API/Web_Storage_API), ou encore WebSQL (qui est maintenant désapprouvée, mais qui est encore supportée dans certaines vieilles versions de Safari/IE). Comme autre exemple, JQuery.
+- Les librairies de nomalisation : Vous fournissent une syntaxe simple qui vous permet de compléter facilement une tâche sans avoir à vous soucier des différences entre navigateur. la librairie utilisera les APIs appopriées en arrière-plan donc la fonctionnalité marchera qu'importe le navigateur (en théorie). Par exemple, [LocalForage](https://github.com/localForage/localForage) est une librairie pour le stockage de données côté client, qui fournit une syntaxe simple pour stocker et extraire les données. En arrière-plan, elle utilise la meilleure API que la navigateur possède pour stocker les données, que ça soit [IndexedDB](/fr/docs/Web/API/API_IndexedDB), [Web Storage](/fr/docs/Web/API/Web_Storage_API), ou encore WebSQL (qui est maintenant désapprouvée, mais qui est encore supportée dans certaines vieilles versions de Safari/IE). Comme autre exemple, JQuery.
 
 Lorsque vous choissisez une librairie pour l'utiliser, assurez-vous qu'elle fonctionne sur l'ensemble des navigateurs que vous voulez supporter, et tester vos implémentations minutieusement. Assurez-vous également que la librairie est répandue et bien supportée, et qu'elle ne va pas devenir obsolète la semaine prochaine. Parler à d'autres développeurs pour savoir ce qu'ils peuvent vous recommander, regarder l'activité et combien de contributeurs la librairie a sur Github (ou qu'importe où elle est stockée), etc.
 
@@ -315,17 +316,18 @@ La liste des modernizr [HTML5 Cross Browser Polyfills](https://github.com/Modern
 
 Observons cet exercice — dans cet exemple nous allons utiliser un polyfill Fetch pour fournir du support pour une API Fetch dans de vieux navigateurs ; nous avons toutefois également besoin d'utiliser le polyfill es6-promise, comme Fetch utilise largement les promises, et les navigateurs qui ne les supportent pas seront toujours bloqués.
 
-1.  Pour commencer, faîtes une copie locale de notre exemple [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) et de [notre belle image de fleurs](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg) dans un nouveau répertoire. Nous allons écrire du code pour récupérer l'image de fleurs et l'afficher sur la page.
-2.  Ensuite, sauvegarder les copies de [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) et de [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) dans le même répertoire que le HTML.
-3.  Appliquer les scripts de polyfill à la page en utilisant le code suivant — placez-les au-dessus de l'élément {{htmlelement("script")}} existant ainsi ils seront déjà disponibles sur la page quand on essaiera d'utiliser Fetch :
+1. Pour commencer, faîtes une copie locale de notre exemple [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) et de [notre belle image de fleurs](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg) dans un nouveau répertoire. Nous allons écrire du code pour récupérer l'image de fleurs et l'afficher sur la page.
+2. Ensuite, sauvegarder les copies de [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) et de [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) dans le même répertoire que le HTML.
+3. Appliquer les scripts de polyfill à la page en utilisant le code suivant — placez-les au-dessus de l'élément {{htmlelement("script")}} existant ainsi ils seront déjà disponibles sur la page quand on essaiera d'utiliser Fetch :
 
     ```js
     <script src="es6-promise.js"></script>
     <script src="fetch.js"></script>
     ```
 
-4.  Dans le {{htmlelement("script")}} original, ajoutez le code suivant :
-5.  ```js
+4. Dans le {{htmlelement("script")}} original, ajoutez le code suivant :
+
+    ```js
     var myImage = document.querySelector('.my-image');
 
     fetch('flowers.jpg').then(function(response) {
@@ -336,7 +338,7 @@ Observons cet exercice — dans cet exemple nous allons utiliser un polyfill Fet
     });
     ```
 
-6.  Maintenant si vous le chargez dans un navigateur qui ne supporte pas Fetch (Safari et IE sont des candidats de choix), vous devriez quand même voir l'image de la fleur apparaitre — cool !
+5. Maintenant si vous le chargez dans un navigateur qui ne supporte pas Fetch (Safari et IE sont des candidats de choix), vous devriez quand même voir l'image de la fleur apparaitre — cool !
     ![](fetch-image.jpg)
 
 > **Note :** Vous pouvez consulter notre version terminée sur [fetch-polyfill-finished.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
@@ -485,14 +487,3 @@ Il y'a bien d'autres problèmes que vous allez rencontrer avec le JavaScript ; l
 Voilà c'est le JavaScript. Facile hein ? Peut-être pas aussi facile, mais cet article devrait au moins vous donner un départ, et quelques idées sur comment attaquer les problèmes liés au JavaScript que vous allez rencontrer.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Dans ce module
-
-- [Introduction au test en navigateur croisé](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Stratégies pour mener à bien vos tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Gérer les problèmes courants en HTML et CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

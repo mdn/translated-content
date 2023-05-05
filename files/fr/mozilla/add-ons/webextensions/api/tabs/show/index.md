@@ -12,6 +12,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/show
 ---
+
 {{AddonSidebar()}}
 
 Affiche un ou plusieurs onglets précédemment masqués par un appel à {{WebExtAPIRef("tabs.hide")}}.
@@ -67,6 +68,6 @@ browser.tabs.show([15, 14, 1]).then(onShown, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.show")}}
+{{Compat}}

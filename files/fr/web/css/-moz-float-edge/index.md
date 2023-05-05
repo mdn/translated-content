@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-float-edge
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (_padding_).
@@ -40,7 +41,10 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+```plain
+-moz-float-edge =
+  border-box | content-box | margin-box | padding-box
+```
 
 ## Exemples
 

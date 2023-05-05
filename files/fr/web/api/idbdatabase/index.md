@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBDatabase`** de l'API IndexedDB fournit [une connexion à la base de données](/fr/docs/Web/API/API_IndexedDB#Se_connecter_à_la_base_de_données). On peut utiliser un objet `IDBDatabase` pour ouvrir une {{domxref("IDBTransaction","transaction")}} sur la base de données puis ajouter, éditer ou supprimer des enregistrements de cette base de données. Cette interface constitue le seul moyen d'accéder et de gérer les versions de la base de données.
@@ -49,7 +50,7 @@ Cet objet hérite de [EventTarget](/fr/docs/Web/API/EventTarget).
 
 ## Exemples
 
-Dans le fragment de code suivant, on ouvre une base de données de façon asynchrone avec {{domxref("IDBFactory")}} puis on gère les cas de succès et d'erreur avant de créer un nouveau magasin d'objet au cas où une mise à jour est nécessaire ({{domxref("IDBdatabase")}}). Pour étudier un exemple complet et fonctionnel, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([voir l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code suivant, on ouvre une base de données de façon asynchrone avec {{domxref("IDBFactory")}} puis on gère les cas de succès et d'erreur avant de créer un nouveau magasin d'objet au cas où une mise à jour est nécessaire ({{domxref("IDBdatabase")}}). Pour étudier un exemple complet et fonctionnel, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre la base de données
@@ -117,13 +118,11 @@ var objectStore = db.transaction('toDoList').objectStore('toDoList');
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#idl-def-IDBDatabase', 'IDBDatabase')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -133,4 +132,4 @@ var objectStore = db.transaction('toDoList').objectStore('toDoList');
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

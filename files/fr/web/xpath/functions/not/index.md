@@ -6,18 +6,21 @@ tags:
 translation_of: Web/XPath/Functions/not
 original_slug: Web/XPath/Fonctions/not
 ---
+
 {{ XsltRef() }}
 
 La fonction `not` évalue une expression booléenne et retourne la valeur opposée.
 
 ### Syntaxe
 
-    not( expression )
+```
+not( expression )
+```
 
 ### Arguments
 
 - `expression` (optionnel)
-  - : L'expression est évaluée exactement comme si elle était passée en tant qu'argument à la fonction [boolean()](fr/XPath/Fonctions/boolean).
+  - : L'expression est évaluée exactement comme si elle était passée en tant qu'argument à la fonction [boolean()](/fr/XPath/Fonctions/boolean).
 
 ### Retour
 
@@ -25,7 +28,7 @@ La fonction `not` évalue une expression booléenne et retourne la valeur oppos�
 
 ### Notes
 
-- Cette fonction devrait se comporter de façon identique à la fonction [boolean()](fr/XPath/Fonctions/boolean), excepté qu'elle retourne la valeur opposée.
+- Cette fonction devrait se comporter de façon identique à la fonction [boolean()](/fr/XPath/Fonctions/boolean), excepté qu'elle retourne la valeur opposée.
 
 ### Définition
 

@@ -1,16 +1,8 @@
 ---
 title: 'Element: cut 이벤트'
 slug: Web/API/Element/cut_event
-tags:
-  - API
-  - Clipboard API
-  - Cut
-  - Element
-  - Event
-  - Reference
-  - Web
-browser-compat: api.Element.cut_event
 ---
+
 {{APIRef}}
 
 **`copy`** 이벤트는 사용자가 브라우저의 사용자 인터페이스를 통해 잘라내기를 했을 때 발생합니다.
@@ -49,7 +41,6 @@ browser-compat: api.Element.cut_event
 [합성](/ko/docs/Web/Events/Creating_and_triggering_events) `cut` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 시스템 클립보드나 문서 내용에 영향을 줄 수 없습니다.
 
 ## 예제
-
 
 ### HTML
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setMonth
 ---
+
 {{JSRef}}
 
 La méthode **`setMonth()`** définit le mois de la date, selon l'heure locale et l'année courante de l'objet {{jsxref("Date")}}
@@ -18,11 +19,15 @@ La méthode **`setMonth()`** définit le mois de la date, selon l'heure locale e
 
 ## Syntaxe
 
-    dateObj.setMonth(valeurMois[, valeurJour])
+```js
+dateObj.setMonth(valeurMois[, valeurJour])
+```
 
 ### Versions antérieures à JavaScript 1.3
 
-    dateObj.setMonth(valeurMois)
+```js
+dateObj.setMonth(valeurMois)
+```
 
 ### Paramètres
 
@@ -61,16 +66,11 @@ leGrandJour.setMonth(6);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.38', 'Date.prototype.setMonth')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setMonth")}}
+{{Compat}}
 
 ## Voir aussi
 

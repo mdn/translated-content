@@ -1,16 +1,9 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/rotate3d()
 original_slug: Web/CSS/transform-function/rotate3d()
-browser-compat: css.types.transform-function.rotate3d
 ---
+
 {{CSSRef}}
 
 **`rotate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)は、要素を三次元空間内の固定した軸を中心に、形を崩さずに回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -19,7 +12,7 @@ browser-compat: css.types.transform-function.rotate3d
 
 三次元空間では、回転には三次元の自由度があり、これらが一緒になって単一の回転軸を表します。回転軸は \[x, y, z] ベクトルによって定義され、 ({{ cssxref("transform-origin") }} プロパティで定義される) 原点を通過します。もし、指定値として、ベクトルが*正規化*されていない場合 (すなわち、3 つの座標の 2 乗の合計が 1 ではない場合)、{{glossary("user agent", "ユーザーエージェント")}}が内部的に正規化します。正規化できないベクトル、例えば null ベクトル \[0, 0, 0] では、回転が無視されますが、 CSS プロパティ全体を無効化はしません。
 
-> **Note:** 二次元平面での回転とは異なり、三次元での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
+> **メモ:** 二次元平面での回転とは異なり、三次元での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
 
 ## 構文
 

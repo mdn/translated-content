@@ -1,15 +1,8 @@
 ---
 title: メディアクエリー
 slug: Web/CSS/Media_Queries
-tags:
-  - CSS
-  - ガイド
-  - メディアクエリー
-  - 概要
-  - リファレンス
-  - レスポンシブデザイン
-translation_of: Web/CSS/Media_Queries
 ---
+
 {{CSSRef}}
 
 **メディアクエリー**によって、サイトやアプリを様々な引数や端末の特性に基づいて合わせることができます。
@@ -50,13 +43,7 @@ translation_of: Web/CSS/Media_Queries
 
 ## 仕様書
 
-| 仕様書                                    | 状態                                   | 備考            |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS5 Media Queries')}}     | {{Spec2('CSS5 Media Queries')}} |                    |
-| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                    |
-| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                    |
-| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                    |
-| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

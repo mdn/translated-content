@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/substring-after
 original_slug: Web/XPath/Fonctions/substring-after
 ---
+
 {{ XsltRef() }}
 
 La fonction `substring-after()` retourne la partie d'une chaîne donnée suivant une sous-chaîne donnée.
 
 ### Syntaxe
 
-    substring-after( bottedefoin , aiguille )
+```
+substring-after( bottedefoin , aiguille )
+```
 
 ### Arguments
 

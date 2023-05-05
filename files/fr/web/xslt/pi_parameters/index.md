@@ -6,17 +6,20 @@ tags:
 translation_of: Web/XSLT/PI_Parameters
 original_slug: Web/XSLT/Paramètres_des_instructions_de_traitement
 ---
+
 ### Présentation
 
-XSLT permet de passer des paramètres à une feuille de style lors de son exécution. C'était déjà possible depuis quelques temps dans l'[XSLTProcessor](fr/XSLTProcessor) sous JavaScript, mais pas lors de l'utilisation de l'instruction de traitement (_PI_, pour Processing Instruction) `<?xml-stylesheet?>`.
+XSLT permet de passer des paramètres à une feuille de style lors de son exécution. C'était déjà possible depuis quelques temps dans l'[XSLTProcessor](/fr/XSLTProcessor) sous JavaScript, mais pas lors de l'utilisation de l'instruction de traitement (_PI_, pour Processing Instruction) `<?xml-stylesheet?>`.
 
-Pour résoudre cela, deux nouvelles PI (Instructions de traitement) ont été implémentées dans [Firefox 2](fr/Firefox_2) (voir la section [Versions supportées](#versions_supportées) plus bas pour plus de détails), `<?xslt-param?>` et `<?xslt-param-namespace?>`. Ces deux PI peuvent contenir des «&nbsp;pseudo attributs&nbsp;» de la même manière que la PI (Instruction de traitement) `xml-stylesheet`.
+Pour résoudre cela, deux nouvelles PI (Instructions de traitement) ont été implémentées dans [Firefox 2](/fr/Firefox_2) (voir la section [Versions supportées](#versions_supportées) plus bas pour plus de détails), `<?xslt-param?>` et `<?xslt-param-namespace?>`. Ces deux PI peuvent contenir des «&nbsp;pseudo attributs&nbsp;» de la même manière que la PI (Instruction de traitement) `xml-stylesheet`.
 
 L'exemple suivant passe les deux paramètres `color` et `size` à la feuille de style style.xsl&nbsp;:
 
-    <?xslt-param name="color" value="blue"?>
-    <?xslt-param name="size" select="2"?>
-    <?xml-stylesheet type="text/xsl" href="style.xsl"?>
+```xml
+<?xslt-param name="color" value="blue"?>
+<?xslt-param name="size" select="2"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+```
 
 Notez que ces PI n'ont aucun effet lorsque la transformation est faite à l'aide de l'objet `XSLTProcessor` en JavaScript.
 
@@ -39,7 +42,7 @@ La PI `xslt-param` accepte quatre attributs&nbsp;:
 - value
   - : Contient la valeur de chaîne du paramètre. La valeur de l'attribut est utilisée comme valeur du paramètre. Le type de donnée sera toujours*chaîne*.
 - select
-  - : Un expression [XPath](fr/XPath) pour le paramètre. La valeur de cet attribut est analysée comme une expressions XPath. Le résultat de l'évaluation de l'expression est utilisé comme valeur pour le paramètre.
+  - : Un expression [XPath](/fr/XPath) pour le paramètre. La valeur de cet attribut est analysée comme une expressions XPath. Le résultat de l'évaluation de l'expression est utilisé comme valeur pour le paramètre.
 
 Si l'attribut **name** est absent ou vide, la PI est ignorée.
 
@@ -55,21 +58,29 @@ Notez que `value="..."` n'est pas strictement égal à `select="'...'"` car valu
 
 Le paramètre `color` contient la chaîne `red`&nbsp;:
 
-    <?xslt-param name="color" value="red"?>
+```xml
+<?xslt-param name="color" value="red"?>
+```
 
 Le paramètre `columns` contient `2`&nbsp;:
 
-    <?xslt-param name="columns" select="2"?>
+```xml
+<?xslt-param name="columns" select="2"?>
+```
 
 Le paramètre `books` contient l'ensemble de noeuds qui regroupe tous les éléments `<book>` de l'espace de nommage `null`&nbsp;:
 
-    <?xslt-param name="books" select="//book"?>
+```xml
+<?xslt-param name="books" select="//book"?>
+```
 
 Le paramètre `show-toc<code> contient le booléen <code>true`&nbsp;:
 
-     <?xslt-param name="show-toc" select="true()"?>
+```xml
+<?xslt-param name="show-toc" select="true()"?>
+```
 
-##### Le contexte de l'attribut*select*
+##### Le contexte de l'attribut select
 
 Le contexte suivant est utilisé pour analyser et évaluer l'expression de l'attribut **select**.
 
@@ -103,8 +114,10 @@ Si **namespace** est absent, la PI est ignorée. Si **namespace** est vide, le m
 
 Le paramètre `books` contient l'ensemble de noeuds qui regroupe tous les éléments `<book>` de l'espace de nommage `http://www.example.org/myNamespace`&nbsp;:
 
-    <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
-    <?xslt-param name="books" select="//my:book"?>
+```xml
+<?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
+<?xslt-param name="books" select="//my:book"?>
+```
 
 ### Versions supportées
 
@@ -113,5 +126,3 @@ Supportées depuis Firefox 2.0.0.1. Dans la version 2, l'attribut **value** est 
 ### Possibilités de développements futurs
 
 Devons-nous autoriser n'importe quelle fonction XSLT dans les expressions&nbsp;? `document()` semble utile, mais il semble difficile de conserver le fait que `generate-id()` devrait produire la même chaîne pour un même document.
-
-Interwiki Language Links

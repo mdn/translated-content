@@ -1,15 +1,8 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
 O objeto **`Map`** contém pares de chave-valor e lembra a ordem original da inserção das chaves. Qualquer valor (objetos e {{glossary("Primitive", "valores primitivos")}}) podem ser usados como chave ou valor.
@@ -24,7 +17,7 @@ Um objeto `Map` itera seus elementos na order da inserção - um loop {{jsxref("
 
 - A igualdade de chaves é baseada no algoritimo [`sameValueZero`](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality).
 
-- O {{jsxref("NaN")}} é considerado o mesmo que o `NaN` (apesar de `NaN !== NaN`) e todos os outros valores são considerados de acordo com a semântica do operador `===`. 
+- O {{jsxref("NaN")}} é considerado o mesmo que o `NaN` (apesar de `NaN !== NaN`) e todos os outros valores são considerados de acordo com a semântica do operador `===`.
 
 - Na especificação atual do ECMAScript, `-0` e `+0` são considerados iguais, embora não tenha sido nos esboços anteriores. Veja _"Equivalência de valor entre -0 e 0"_ em [Compatibilidade com navegadores](#browser_compatibility) para mais detalhes;
 
@@ -54,11 +47,11 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> Apartir do ES5, isso pode ser ignorado com o {{jsxref("Object.create", "Object.create(null)")}}, mas isso raramente é feito.
+            <strong>Nota:</strong> Apartir do ES5, isso pode ser ignorado com o {{jsxref("Object.create", "Object.create(null)")}}, mas isso raramente é feito.
           </p>
         </div>
       </td>
-    </tr> 
+    </tr>
     <tr>
       <th scope="row">Tipos das chaves</th>
       <td>
@@ -103,7 +96,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
     <tr>
       <th scope="row"><p>Tamanho</p></th>
       <td>
-        O número de items dentro de um <code>Map</code> 
+        O número de items dentro de um <code>Map</code>
         é facilmente retornado pela propriedade {{jsxref("Map.prototype.size", "size")}}
       </td>
       <td>
@@ -122,7 +115,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
             >protocolo de iteração</a>, e os objetos não podem ser iterados diretamente usando o <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of"
             >for...of</a
           > (por padrão).
-        </>
+        </p>
         <div class="notecard note">
           <p><strong>Nota:</strong></p>
           <ul>
@@ -164,7 +157,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
         <p>
           (Mas você pode construir sua própria serialização e conversão para o <code>Map</code> usando o
           {{jsxref("JSON.stringify()")}} como o argumento <em>replacer</em>,
-          e usando o  {{jsxref("JSON.parse()")}} com o argumento <em>reviver</em>.
+          e usando o {{jsxref("JSON.parse()")}} com o argumento <em>reviver</em>.
           Veja a questão no Stack Overflow     <a href="https://stackoverflow.com/q/29085197/"
             >How do you JSON.stringify an ES6 Map?</a
           >).
@@ -173,10 +166,10 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
       <td>
         <p>
           Suporte nativo para serialização de {{jsxref("Object", "Objeto")}} para JSON, usando {{jsxref("JSON.stringify()")}}.
-        </p> 
+        </p>
         <p>
-          Suporte nativo para conversão de JSON para {{jsxref("Object", "Objeto")}} usando {{jsxref("JSON.parse()")}}. 
-        </p> 
+          Suporte nativo para conversão de JSON para {{jsxref("Object", "Objeto")}} usando {{jsxref("JSON.parse()")}}.
+        </p>
       </td>
     </tr>
   </tbody>
@@ -204,7 +197,7 @@ wrongMap.delete('bla') // false
 console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
-A maneira correta para armazenar dados dentro do `Map` é através do `set(key,value)` 
+A maneira correta para armazenar dados dentro do `Map` é através do `set(key,value)`
 
 ```js example-good
 const contacts = new Map()
@@ -260,7 +253,7 @@ console.log(contacts.size) // 1
     para cada elemento no objeto `Map` na ordem em que foram inseridos.
 - {{jsxref("Map.forEach", "Map.prototype.forEach(<var>callbackFn</var>[,
     <var>thisArg</var>])")}}
-  - : Invoca o `callbackFn` uma vez para cada par chave-valor presente no objeto `Map`, na ordem em que foram inseridos. Se um parâmetro `thisArg` é provido para o `forEach`, será usado o valor de `this` para cada callback. 
+  - : Invoca o `callbackFn` uma vez para cada par chave-valor presente no objeto `Map`, na ordem em que foram inseridos. Se um parâmetro `thisArg` é provido para o `forEach`, será usado o valor de `this` para cada callback.
 
 ## Exemplos
 
@@ -309,7 +302,7 @@ myMap.get(otherNaN)
 
 ### Iterando o Map com for..of
 
-`Maps` podem ser iterados usando um loop `for..of`: 
+`Maps` podem ser iterados usando um loop `for..of`:
 
 ```js
 const myMap = new Map()
@@ -343,7 +336,7 @@ for (const [key, value] of myMap.entries()) {
 
 ### Iterando o Map com forEach()
 
-`Maps` podem ser iterados usando o 
+`Maps` podem ser iterados usando o
 método {{jsxref("Map.prototype.forEach", "forEach()")}}:
 
 ```js
@@ -353,6 +346,7 @@ myMap.forEach(function(value, key) {
 // 0 = zero
 // 1 = um
 ```
+
 ### Relação com Arrays
 
 ```js
@@ -412,6 +406,7 @@ console.log(merged.get(1)) // uno
 console.log(merged.get(2)) // dos
 console.log(merged.get(3)) // three
 ```
+
 Maps podem ser mesclados com array também:
 
 ```js

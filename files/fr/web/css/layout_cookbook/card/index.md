@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Card
 original_slug: Web/CSS/Layout_cookbook/Carte
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons comment créer des cartes (_cards_ en anglais), disposant éventuellement d'un pied de page, qui peuvent être organisée en listes.
@@ -60,15 +61,7 @@ Selon le contenu des cartes, il est possible voire souhaitable d'appliquer quelq
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.
-
-### grid-template-columns
-
-{{Compat("css.properties.grid-template-columns")}}
-
-### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 ## Voir aussi
 

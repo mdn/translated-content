@@ -8,15 +8,18 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Read-only
 original_slug: Web/JavaScript/Reference/Erreurs/Read-only
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
-    TypeError: "x" is read-only (Firefox)
-    TypeError: 0 is read-only (Firefox)
-    TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
-    TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
+```
+TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+TypeError: "x" is read-only (Firefox)
+TypeError: 0 is read-only (Firefox)
+TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
+TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
+```
 
 ## Type d'erreur
 

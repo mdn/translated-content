@@ -1,18 +1,11 @@
 ---
 title: '@layer'
 slug: Web/CSS/@layer
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Web
-  - layer
-  - cascade
-browser-compat: css.at-rules.layer
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/en-US/docs/Web/CSS) [@规则](/en-US/docs/Web/CSS/At-rule) 中的`@layer`声明了一个 _级联层_， 同一层内的规则将级联在一起， 这给予了开发者对层叠机制的更多控制。
+[CSS](/zh-CN/docs/Web/CSS) [@规则](/zh-CN/docs/Web/CSS/At-rule) 中的`@layer`声明了一个 _级联层_，同一层内的规则将级联在一起，这给予了开发者对层叠机制的更多控制。
 
 ```css
 @layer utilities {
@@ -22,7 +15,7 @@ browser-compat: css.at-rules.layer
 
 ## 语法
 
-`@layer` @规则可以通过三种方式其一来创建级联层。第一种方法如上方代码所示，它创建了一个块级的@规则，其中包含作用于该层内部的CSS规则。
+`@layer` @规则可以通过三种方式其一来创建级联层。第一种方法如上方代码所示，它创建了一个块级的 @规则，其中包含作用于该层内部的 CSS 规则。
 
 ```css
 @layer utilities {
@@ -35,8 +28,8 @@ browser-compat: css.at-rules.layer
   }
 }
 ```
-一个级联层同样可以通过 {{cssxref("@import")}} 来创建，规则存在于被引入的样式表内：
 
+一个级联层同样可以通过 {{cssxref("@import")}} 来创建，规则存在于被引入的样式表内：
 
 ```css
 @import(utilities.css) layer(utilities);
@@ -48,7 +41,6 @@ browser-compat: css.at-rules.layer
 @layer utilities
 ```
 
-
 或者，多个命名层也可以被同时定义。例如：
 
 ```css
@@ -57,9 +49,9 @@ browser-compat: css.at-rules.layer
 
 这一做法很有用，因为层最初被指定的顺序决定了它是否有优先级。对于声明而言，如果同一声明在多个级联层中被指定，最后一层中的将优先于其他层。因此，在上面的例子中，如果 `theme` 层和 `utilities` 层中存在冲突的规则，那么 `utilities` 层中的将优先被应用。
 
-即使 `utilities` 层中规则的 _优先级低于_ `theme` 层中的，该规则仍会被应用。一旦级联层顺序建立之后，优先级和出现顺序都会被忽略。这将使创建CSS选择器变得更加简单，因为你不需要确保每一个选择器都有足够高的优先级来覆盖其他冲突的规则，你只需要确保它们出现在一个顺序更靠后的级联层中。
+即使 `utilities` 层中规则的 _优先级低于_ `theme` 层中的，该规则仍会被应用。一旦级联层顺序建立之后，优先级和出现顺序都会被忽略。这将使创建 CSS 选择器变得更加简单，因为你不需要确保每一个选择器都有足够高的优先级来覆盖其他冲突的规则，你只需要确保它们出现在一个顺序更靠后的级联层中。
 
-> **注**：在已经声明级联层的名字后，它们的顺序随即被确立，你可以重复声明某级联层的名字来向其添加CSS规则。这些样式将被附加到该层的末尾，且级联层之间的顺序不会改变。
+> **备注：** 在已经声明级联层的名字后，它们的顺序随即被确立，你可以重复声明某级联层的名字来向其添加 CSS 规则。这些样式将被附加到该层的末尾，且级联层之间的顺序不会改变。
 
 其他不属于任何一级联层的样式将被集中到同一匿名层，并置于所有层的后部，这意味着任何在层外声明的样式都会覆盖在层内声明的样式。
 
@@ -75,7 +67,7 @@ browser-compat: css.at-rules.layer
 }
 ```
 
-向 `layout` 层内部的 `framework` 层附加规则，只需用 `.` 连接这两层。
+向 `framework` 层内部的 `layout` 层附加规则，只需用 `.` 连接这两层。
 
 ```css
 @layer framework.layout {
@@ -99,15 +91,15 @@ browser-compat: css.at-rules.layer
 
 那么则称为创建了一个匿名层。除创建后无法向其添加规则外，该层和其他命名层功能一致。
 
-## 标准语法
+## 形式语法
 
 {{CSSSyntax}}
 
-## 例子
+## 示例
 
-### 基本例子
+### 基本示例
 
-下方的例子创建了两条CSS规则。其中一条为 `type` 层内部的 {{htmlelement("p")}} 元素创建。另一条规则创建于级联层外部，作用于 `.box p`。
+下方的例子创建了两条 CSS 规则。其中一条为 `type` 层内部的 {{htmlelement("p")}} 元素创建。另一条规则创建于级联层外部，作用于 `.box p`。
 
 没有级联层时，选择器 `.box p` 将会有最高的优先级，因此文字 `Hello, world!` 将被显示为绿色。当`type`层应用在匿名层创建之前时，文本将会是紫色的。
 
@@ -139,11 +131,11 @@ p {
 
 #### 结果
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("基本示例")}}
 
 ### 向已存在的层中添加规则
 
-下方的例子创建了两个没有规则的级联层，随后，CSS规则被添加到这两层中。`base` 层定义了color、border、font-size和padding。`special` 层定义了不同的color属性。因为 `special` 层在定义时排在最后，其中的color属性将被应用，文字的颜色将显示为`rebeccapurple`。`base` 层中的其他规则仍然有效。
+下方的例子创建了两个没有规则的级联层，随后，CSS 规则被添加到这两层中。`base` 层定义了 color、border、font-size 和 padding。`special` 层定义了不同的 color 属性。因为 `special` 层在定义时排在最后，其中的 color 属性将被应用，文字的颜色将显示为`rebeccapurple`。`base` 层中的其他规则仍然有效。
 
 #### HTML
 
@@ -176,7 +168,7 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
 
 #### 结果
 
-{{EmbedLiveSample("Assigning_rules_to_existing_layers")}}
+{{EmbedLiveSample("向已存在的层中添加规则")}}
 
 ## 规范
 

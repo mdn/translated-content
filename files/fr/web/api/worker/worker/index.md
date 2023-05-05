@@ -6,11 +6,12 @@ tags:
   - Reference
 translation_of: Web/API/Worker/Worker
 ---
+
 {{APIRef("Worker")}}
 
-Le constructeur **`Worker()`** crée un objet {{domxref("Worker")}} qui exécute le script à l'URL spécifiée. Ce script doit obéir à la [same-origin policy](/en/Same_origin_policy_for_JavaScript).
+Le constructeur **`Worker()`** crée un objet {{domxref("Worker")}} qui exécute le script à l'URL spécifiée. Ce script doit obéir à la [same-origin policy](/fr/docs/Web/Security/Same-origin_policy).
 
-> **Note :** il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 {{ geckoRelease("10.0") }} et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.
+> **Note :** il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.
 
 ## Syntaxe
 
@@ -53,15 +54,11 @@ Pour un exemple complet, consultez notre [exemple basique d'un worker dédié](h
 
 ## Spécifications
 
-| Spécification                                                            | Statut                           | Commentaire |
-| ------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-worker", "Worker()")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Worker.Worker")}}
-
-> **Note :** Un navigateur peut indiquer avoir un support complet de `Worker()` même s'il ne supporte pas les fichiers worker écrit comme des modules. À partir du premier août 2019, aucun navigateur n'est connu pour avoir un support en production des fichiers _worker_ écrit comme des modules. Sans ces suppports, les fichiers _workers_ écrit sous forme de module et les modules utilisés dans les workers doivent être transpilés ou convertis en non-module pour être utilisables.
+{{Compat}}
 
 ## Voir aussi
 

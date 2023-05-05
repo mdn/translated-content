@@ -3,17 +3,20 @@ title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 translation_of: Web/API/XMLHttpRequest/responseText
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+
+{{APIRef('XMLHttpRequest')}}
 
 La lecture seule {{domxref("XMLHttpRequest")}} propriété **`responseText`** renvoie le texte reçu d'un serveur suite à l'envoi d'une requête.
 
-## Syntax
+## Syntaxe
 
-    var resultText = XMLHttpRequest.responseText;
+```js
+var resultText = XMLHttpRequest.responseText;
+```
 
 ### Value
 
-A {{domxref("DOMString")}} qui contient soit les données textuelles reçues à l'aide du`XMLHttpRequest` ou `null` si la demande a échoué ou `""` si la demande n'a pas encore été envoyée en appelant {{domxref("XMLHttpRequest.send", "send()")}}.
+A {{domxref("DOMString")}} qui contient soit les données textuelles reçues à l'aide du `XMLHttpRequest` ou `null` si la demande a échoué ou `""` si la demande n'a pas encore été envoyée en appelant {{domxref("XMLHttpRequest.send", "send()")}}.
 
 Lors du traitement d'une requête asynchrone, la valeur de `responseText` reçoit toujours le contenu actuel du serveur, même s'il est incomplet car les données n'ont pas encore été complètement reçues.
 
@@ -45,12 +48,10 @@ xhr.onload = function () {
 xhr.send(null);
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                    | Status                               | Comment                |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.responseText")}}
+{{Compat}}

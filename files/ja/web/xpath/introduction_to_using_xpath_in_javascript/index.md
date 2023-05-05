@@ -1,18 +1,9 @@
 ---
 title: JavaScript での XPath の利用の手引き
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-tags:
-  - Add-ons
-  - DOM
-  - Extensions
-  - JavaScript
-  - Transforming_XML_with_XSLT
-  - Web Development
-  - XML
-  - XPath
-  - XSLT
 original_slug: Introduction_to_using_XPath_in_JavaScript
 ---
+
 この文書では、拡張機能やウェブサイトから JavaScript 内で [XPath](/ja/docs/Web/XPath) を使うためのインターフェイスについて解説します。 Mozilla は [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html) のかなりの部分を実装しており、 HTML 文書と XML 文書のどちらに対しても XPath 式を実行することができます。
 
 XPath を使用するための主となるインターフェイスは [document](/ja/docs/Web/API/Document) オブジェクトの [evaluate](/ja/docs/Web/API/Document/evaluate) 関数です。
@@ -49,14 +40,14 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 名前空間リゾルバーを作成するには、普通は [document](/ja/docs/Web/API/Document) オブジェクトの `createNSResolver` メソッドを使います。
 
 ```js
-var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 または、 `XPathEvaluator` オブジェクトの `createNSResolver` メソッドを使います。
 
 ```js
 var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 それから 変数 `nsResolver` を引数 `namespaceResolver` として `document.evaluate` に渡します。
@@ -156,7 +147,7 @@ catch (e) {
 ```js
 var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
-for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
+for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
 {
   alert( nodesSnapshot.snapshotItem(i).textContent );
 }
@@ -226,14 +217,14 @@ while (thisHeading) {
 <?xml version="1.0"?>
 <people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
   <person>
-	<name first="george" last="bush" />
-	<address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-	<phoneNumber>202-456-1111</phoneNumber>
+    <name first="george" last="bush" />
+    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
+    <phoneNumber>202-456-1111</phoneNumber>
   </person>
   <person>
-	<name first="tony" last="blair" />
-	<address street="10 downing street" city="london" country="uk"/>
-	<phoneNumber>020 7925 0918</phoneNumber>
+    <name first="tony" last="blair" />
+    <address street="10 downing street" city="london" country="uk"/>
+    <phoneNumber>020 7925 0918</phoneNumber>
   </person>
 </people>
 ```
@@ -250,7 +241,7 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
 var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
 ```
@@ -269,7 +260,9 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 
 この例は説明のためだけのものです。 この関数は、`xpathExpression` から名前空間接頭辞を取り、その接頭辞に対応する URI を返さなければなりません。例えば、この式は、
 
-    '//xhtml:td/mathml:math'
+```
+'//xhtml:td/mathml:math'
+```
 
 (X)HTML のテーブルデータセル要素の子要素である全ての [MathML](/ja/docs/Web/MathML) 式を選択します。
 
@@ -278,7 +271,7 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 ```js
 function nsResolver(prefix) {
   var ns = {
-    'xhtml' : 'http://www.w3.org/1999/xhtml',
+    'xhtml' : 'http://www.w3.org/1999/xhtml',
     'mathml': 'http://www.w3.org/1998/Math/MathML'
   };
   return ns[prefix] || null;

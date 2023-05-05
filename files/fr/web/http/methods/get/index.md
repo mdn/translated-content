@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Methods/GET
 original_slug: Web/HTTP/Méthode/GET
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP GET** demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
@@ -45,17 +46,17 @@ La **méthode HTTP GET** demande une représentation de la ressource spécifiée
 
 ## Syntaxe
 
-    GET /index.html
+```
+GET /index.html
+```
 
 ## Spécifications
 
-| Spécification                            | Titre                                                         |
-| ---------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "GET", "4.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/methods", "GET")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: '::grammar-error'
 slug: Web/CSS/::grammar-error
-tags:
-  - CSS
-  - 実験的
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.grammar-error
-translation_of: Web/CSS/::grammar-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`::grammar-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{glossary("user agent", "ユーザーエージェント")}}が文法的に正しくないとしたテキストの区間を示します。
@@ -48,9 +41,9 @@ translation_of: Web/CSS/::grammar-error
 #### CSS
 
 ```css
-::grammar-error  {
-  text-decoration: underline red;
-  color: red;
+::grammar-error  {
+  text-decoration: underline red;
+  color: red;
 }
 ```
 

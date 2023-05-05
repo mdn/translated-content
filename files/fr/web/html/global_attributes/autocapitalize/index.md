@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/autocapitalize
 original_slug: Web/HTML/Attributs_universels/autocapitalize
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`autocapitalize`** est un attribut à valeurs contraintes qui contrôle la façon dont le texte saisi est automatiquement converti en majuscules ou non. Voici les valeurs autorisées pour cet attribut :
@@ -24,10 +25,8 @@ L'attribut `autocapitalize` n'entraînera pas de mise en majuscule automatique p
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', "interaction.html#autocapitalization", "autocapitalize")}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.autocapitalize")}}
+{{Compat}}

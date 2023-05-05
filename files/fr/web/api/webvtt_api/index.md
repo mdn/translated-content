@@ -1,151 +1,168 @@
 ---
-title: Web Video Text Tracks Format (WebVTT)
+title: Format Web Video Text Tracks (WebVTT)
 slug: Web/API/WebVTT_API
 translation_of: Web/API/WebVTT_API
 ---
+
 {{DefaultAPISidebar("WebVTT")}}
 
-**Web Video Text Tracks Format** (**WebVTT**) est un format pour afficher du texte en fonction du temps (comme des sous-titres ou des légendes) en utilisant l'élément HTML {{HTMLElement("track")}}. L'objectif de ce format est d'afficher du texte sur {{HTMLElement("video")}}.
+Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Element/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Element/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.
 
-WebVTT est un format texte codé en {{Glossary("UTF-8")}}. On peut utiliser aussi bien des espaces que des tabulations. Il y a aussi une petite API capable de représenter et de modifier ces pistes ainsi que les données nécéssaires à la synchornisation du texte.
+## Fichiers WebVTT
 
-## Les fichiers WebVTT
+Le type MIME pour le format WebVTT est `text/vtt`.
 
-Les fichiers WebVTT ont pour type MIME `text/vtt`.
+Un fichier WebVTT (`.vtt`) contient des répliques qui peuvent être sur une ou plusieurs lignes, comme illustré ici&nbsp;:
 
-Un fichier WebVTT (`.vtt`) contient les répliques qui peuvent être sur une ou plusieurs lignes.
+```plain
+WEBVTT
 
-    WEBVTT
+00:01.000 --> 00:04.000
+- Never drink liquid nitrogen.
 
-    00:01.000 --> 00:04.000
-    Ne jamais boire de l'azote liquide.
+00:05.000 --> 00:09.000
+- It will perforate your stomach.
+- You could die.
+```
 
-    00:05.000 --> 00:09.000
-    - Cela peut perforer l'estomac.
-    - On peut en mourir.
+## Structure WebVTT
 
-## Le corps WebVTT
+La structure d'un fichier WebVTT se compose des éléments suivants, dont certains sont optionnels. Dans l'ordre, on a&nbsp;:
 
-La structure d'un fichier WebVTT consiste en une série de composants, certains d'entre-eux sont optionnels. Dans l'ordre:
+- Un marqueur optionnel pour l'ordre des octets (BOM).
+- La chaîne de caractères `WEBVTT`.
+- Un texte d'en-tête optionnel à droite de `WEBVTT`.
 
-- Indicateur d'ordre des octets {{optional_inline}}
-- La chaîne de caractères "`WEBVTT`".
-- Titre à droite de "`WEBVTT`". {{optional_inline}}
+  - Il est nécessaire d'avoir au moins un espace après `WEBVTT`.
+  - Ce champ peut être utilisé pour ajouter une description au fichier.
+  - Ce champ peut contenir n'importe quoi à l'exception de nouvelles lignes ou de la chaîne de caractères `-->`.
 
-  - Il doit y avoir au moins un espace après "`WEBVTT`".
-  - Vous pouvez l'utiliser pour mettre une description.
-  - Vous pouvez utiliser n'importe quoi à part une nouvelle ligne ou la chaîne "`-->`".
-
-- Une ligne vide équivalente à deux lignes consécutives.
-- Zéros ou plusieurs répliques ou commenatiaires.
+- Une ligne vide, qui est équivalente à deux nouvelles lignes consécutives.
+- Zéro ou plusieurs répliques ou commentaires.
 - Zéro ou plusieurs lignes vides.
 
-##### Exemple 1 - Plus petit fichier WebVTT
+### Exemples
 
-    WEBVTT
+#### Exemple n°1 — le fichier WebVTT le plus simple
 
-##### Exemple 2 - Simple fichier WebVTT contenant un entête
+```plain
+WEBVTT
+```
 
-    WEBVTT - Ce fichier ne possède pas de réplique.
+#### Exemple n°2 — un fichier WebVTT basique avec un en-tête
 
-##### Exemple 3 - Fichier WebVTT courant avec un entête et des répliques
+```plain
+WEBVTT - Ce fichier n'a pas de réplique.
+```
 
-    WEBVTT - Ce fichier possède des répliques.
+#### Exemple n°3 — un exemple de fichier WebVTT usuel avec un en-tête et des répliques
 
-    14
-    00:01:14.815 --> 00:01:18.114
-    - Quoi?
-    - Où sommes-nous?
+```plain
+WEBVTT - Ce fichier contient des répliques.
 
-    15
-    00:01:18.171 --> 00:01:20.991
-    - C'est le pays des grandes chauves-souris.
+14
+00:01:14.815 --> 00:01:18.114
+- What?
+- Where are we now?
 
-    16
-    00:01:21.058 --> 00:01:23.868
-    - [ Cris perçant de chauves-souris ]
-    - Elles ne veulent pas aller dans vos cheveux. Elles attrapent les insectes.
+15
+00:01:18.171 --> 00:01:20.991
+- This is big bat country.
+
+16
+00:01:21.058 --> 00:01:23.868
+- [ Bats Screeching ]
+- They won't get in your hair. They're after the bugs.
+```
 
 ### Structure interne d'un fichier WebVTT
 
-Réexaminons le premier exemple, et observons la structure plus précisément.
+Reprenons un des exemples précédent et voyons la structure des répliques en détails.
 
-    WEBVTT
+```plain
+WEBVTT
 
-    00:01.000 --> 00:04.000
-    Ne jamais boire de l'azote liquide.
+00:01.000 --> 00:04.000
+- Never drink liquid nitrogen.
 
-    00:05.000 --> 00:09.000
-    - Cela peut perforer l'estomac.
-    - On peut en mourir.
+00:05.000 --> 00:09.000
+- It will perforate your stomach.
+- You could die.
+```
 
-    NOTE Cette ligne est la dernière ligne du fichier
+Pour chaque réplique, on a&nbsp;:
 
-Dans chaque réplique:
+- La première ligne qui commence avec un horodatage indiquant le moment à partir duquel le texte présenté après dans le fichier apparaît à l'écran.
+- Sur la même ligne, la chaîne de caractères `-->`.
+- Toujours sur cette ligne, un deuxième horodatage qui indique le moment où le texte arrête d'être affiché.
+- Une ou plusieurs lignes commençant par un tiret (-), qui contiennent chacune une partie du texte à afficher.
 
-- La première ligne commence par un temps correspondant au moment où il apparait.
-- Sur la même ligne nous avons une chaîne `-->`.
-- Nous finissions la ligne par un second temps indiquant la fin de l'affichage du texte.
-- Nous pouvons alors afficher une ou plusieurs lignes commençant par un tiret (-), chacune contenant une partie du texte à afficher.
+Il est aussi possible de placer des commentaires dans un fichier `.vtt` qui peuvent aider à mémoriser les informations importantes concernant les parties du fichier. Ces commentaires doivent être sur des lignes séparées et commencer avec la chaîne de caractères `NOTE`. Nous les aborderons en détails dans la section qui suit.
 
-Nous pouvons aussi mettre des commentaires dans notre fichier `.vtt` afin de nous aider à nous remémorer des informations importantes à propos du fichier. Ils doivent être séparés par une ligne vide et commencer par `NOTE`. Nous en reparlerons dans la prochaine section.
+Il est important de ne pas utiliser de lignes vides supplémentaires au sein d'une réplique ou entre la ligne d'horodatage et le texte de la réplique. En effet, le format WebVTT est basé sur les lignes et une ligne vide terminera la réplique.
 
-Il est important de ne pas utiliser de ligne vide sans réplique, par exemple entre la ligne indiquant le temps et le texte en lui même. WebVTT est basé sur les lignes, une ligne vide ferme la réplique.
+## Commentaires WebVTT
 
-## Les commentaires WebVTT
+Les commentaires sont un composant optionnel qu'on peut ajouter afin d'inclure des informations dans un fichier WebVTT. Les commentaires sont destinés aux personnes qui lisent manuellement le fichier, ils ne seront pas vus des personnes consultant la vidéo. Les commentaires peuvent contenir des sauts de ligne mais pas de lignes vides (ce qui correspond à deux sauts de ligne consécutifs). Une ligne vide indique la fin d'un commentaire.
 
-Les commentaires sont des composants optionels qui peuvent être utilisés pour ajouter des informations à un fichier WebVTT. Les commentaires sont prévus pour ceux qui liront le fichier, ils ne seront pas vus par les utilisateurs. Les commentaires peuvent contenir de nouvelles ligne mais ne peuvent pas contenir de ligne vide ce qui équivaut à deux nouvelles lignes. Une ligne vide correspond à la fin d'un commentaire.
+Un commentaire ne peut pas contenir la chaîne de caractères `-->`, une esperluette (`&`), ou un chevron ouvrant (`<`). Pour utiliser ces caractères, il faudra les échapper, par exemple avec `&amp;` pour l'esperluette et `&lt;` pour le chevron ouvrant. Il est également recommandé d'utiliser l'entité pour le chevron fermant (`&gt;`) plutôt que le caractère littéral correspondant (`>`), cela permet d'éviter la confusion avec les balises.
 
-Un commentaire ne peut contenir la chaîne "`-->`", l'esperluette `&` ou bien le symbole plus-petit que `<`. Si vous voulez utiliser ces caractères, vous devez utiliser les caractères échapés comme `&amp;`pour l'esperluette et `&lt;` pour le plus petit que. Il est aussi recommandé `&gt;` pour le plus grand que, afin d'éviter toutes confusions.
+Un commentaire se compose de trois parties&nbsp;:
 
-Un commentaire est constitué de ces trois composants:
-
-- La chaîne `NOTE`.
+- La chaîne de caractères `NOTE`.
 - Un espace ou une nouvelle ligne.
-- Aucun ou plusieurs caractères sauf ceux indiqué ci-dessus.
+- Zéro ou plusieurs caractères en dehors de ceux indiqués ci-avant.
 
-##### Exemple 4 - Simple commentaire WebVTT
+#### Exemple n°4 — commentaire WebVTT
 
-    NOTE Ceci est un simple commentaire
+```plain
+NOTE Voici un commentaire
+```
 
-##### Exemple 5 - Multi-line comment
+#### Exemple n°5 — commentaire sur plusieurs lignes
 
-    NOTE
-    Un autre commentaire qui est
-    coupé sur plusieurs lignes.
+```plain
+NOTE
+Un commentaire qui s'étend
+sur plusieurs lignes.
 
-    NOTE Vous pouvez aussi faire un commentaire
-    sur plusieurs lignes de cette façon.
+NOTE On peut aussi écrire un commentaire
+sur plusieurs lignes de cette façon.
+```
 
-##### Exemple 6 - Usage commun des commentaires
+#### Exemple n°6 — utilisation usuelle des commentaires
 
-    WEBVTT - Traduction de ce film que j'aime
+```plain
+WEBVTT - Traduction d'un film que j'aime
 
-    NOTE
-    Cette traduction a été faite par Kyle pour que
-    ses amis puissent la voir avec leurs parents.
+NOTE
+Cette traduction a été réalisée par Kyle afin
+que certains de ses amis puissent voir le film
+avec leurs parents.
 
-    1
-    00:02:15.000 --> 00:02:20.000
-    - Ta en kopp varmt te.
-    - Det är inte varmt.
+1
+00:02:15.000 --> 00:02:20.000
+- Ta en kopp varmt te.
+- Det är inte varmt.
 
-    2
-    00:02:20.000 --> 00:02:25.000
-    - Har en kopp te.
-    - Det smakar som te.
+2
+00:02:20.000 --> 00:02:25.000
+- Har en kopp te.
+- Det smakar som te.
 
-    NOTE Cette dernière ligne n'est pas forcément bien traduite.
+NOTE La traduction de cette dernière ligne
+peut être à revoir.
 
-    3
-    00:02:25.000 --> 00:02:30.000
-    - Ta en kopp
+3
+00:02:25.000 --> 00:02:30.000
+- Ta en kopp
+```
 
-## Styliser les répliques WebTT
+## Mettre en forme les sous-titres WebVTT
 
-Vous pouvez styliser des répliques WebVTT en cherchant les éléments qui correspondent à la pseudo-classe {{cssxref("::cue")}}.
+Les sous-titres WebVTT peuvent être mis en forme en ciblant les éléments correspondants avec le pseudo-élément [`::cue`](/fr/docs/Web/CSS/::cue).
 
-### Avec du CSS
+### Avec le CSS du site
 
 ```css
 video::cue {
@@ -158,9 +175,9 @@ video::cue(b) {
 }
 ```
 
-Here, all video elements are styled to use a gray linear gradient as their backgrounds, with a foreground color of `"papayawhip"`. In addition, text boldfaced using the {{HTMLElement("b")}} element are colored `"peachpuff"`.
+Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
 
-The HTML snippet below actually handles displaying the media itself.
+Le fragment de HTML suivant s'occupe quant à lui de gérer l'affichage du média.
 
 ```html
 <video controls autoplay src="video.webm">
@@ -168,9 +185,9 @@ The HTML snippet below actually handles displaying the media itself.
 </video>
 ```
 
-### Within the WebVTT file itself
+### Au sein du fichier WebVTT
 
-You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string `"STYLE"` all by itelf on a line of text, as shown below:
+La mise en forme peut également être définie directement dans le fichier WebVTT. Dans ce cas, on insère les règles CSS dans le fichier et chaque règle est précédée d'une ligne contenant la chaîne de caractères `STYLE`, comme illustré ici&nbsp;:
 
 ```plain
 WEBVTT
@@ -180,9 +197,9 @@ STYLE
   background-image: linear-gradient(to bottom, dimgray, lightgray);
   color: papayawhip;
 }
-/* Style blocks cannot use blank lines nor "dash dash greater than" */
+/* Les blocs de style ne peuvent pas avoir de lignes vides ou "tiret tiret chevron fermant". */
 
-NOTE comment blocks can be used between style blocks.
+NOTE On peut utiliser des blocs de commentaires entre les blocs de style.
 
 STYLE
 ::cue(b) {
@@ -190,19 +207,19 @@ STYLE
 }
 
 00:00:00.000 --> 00:00:10.000
-- Hello <b>world</b>.
+- Coucou <b>monde</b>.
 
-NOTE style blocks cannot appear after the first cue.
+NOTE Les blocs de style ne peuvent pas apparaître après la première réplique.
 ```
 
-We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:
+On peut aussi utiliser des identifiants dans le fichier WebVTT. Ces derniers pourront être utilisés pour définir un style particulier pour certaines répliques données du fichier. Dans l'exemple suivant, on veut que le texte sur la transcription soit surligné en rouge et que les autres parties soient normales. Voici ce qu'on peut faire avec CSS, où on utilise les mêmes séquences d'échappement qu'au sein des pages HTML&nbsp;:
 
 ```plain
 WEBVTT
 
 1
 00:00.000 --> 00:02.000
-That’s an, an, that’s an L!
+That's an, an, that's an L!
 
 crédit de transcription
 00:04.000 --> 00:05.000
@@ -214,7 +231,7 @@ Transcrit par Célestes™
 ::cue(#crédit\ de\ transcription) { color: red; }
 ```
 
-Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
+Le positionnement des pistes de texte est également pris en charge en incluant les informations de positionnement après l'horodatage, comme on peut le voir dans cet exemple (voir [les paramètres des répliques](#paramètres_des_répliques) pour plus d'informations)&nbsp;:
 
 ```plain
 WEBVTT
@@ -231,91 +248,91 @@ What are you waiting for?
 
 ## WebVTT cues
 
-A cue is a single subtitle block that has a single start time, end time, and textual payload. Example 6 consists of the header, a blank line, and then five cues separated by blank lines. A cue consists of five components:
+Une réplique (<i lang="en">cue</i> en anglais) est un bloc de sous-titre distinct qui possède un temps de début, un temps de fin et un texte. Dans l'exemple n°6, on a un en-tête, une ligne vide, puis 5 répliques séparées par des lignes vides. Une réplique possède 5 composants&nbsp;:
 
-- An optional cue identifier followed by a newline.
-- Cue timings.
-- Optional cue settings with at least one space before the first and between each setting.
-- A single newline.
-- The cue payload text.
+- Un identifiant optionnel pour la réplique, suivi d'un saut de ligne.
+- L'horodatage de la réplique.
+- Des paramètres optionnels pour la réplique avec au moins un espace avant le premier paramètre et entre chaque paramètre.
+- Un seul saut de ligne.
+- Le texte de la réplique.
 
-##### Example 7 - Example of a cue
+### Exemples
+
+#### Exemple n°7 — exemple de réplique
 
 ```plain
-1 - Title Crawl
+1 - Texte défilant introductif
 00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-Some time ago in a place rather distant....
+Il y a bien longtemps, dans une galaxie lointaine, très lointaine…
 ```
 
-### Cue identifier
+### Identifiant de réplique
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single newline. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3, ...).
+L'identifiant est un nom qui identifie la réplique. Il peut être utilisé pour faire référence à la réplique depuis un script. Un identifiant ne doit pas contenir de saut de ligne ni la chaîne de caractères `-->`. Il doit se terminer avec un seul saut de ligne. Les identifiants ne sont pas nécessairement uniques, même s'il est habituel de les numéroter (par exemple, 1, 2, 3…).
 
-##### Example 8 - Cue identifier from Example 7
+#### Exemple n°8 — identifiant de réplique de l'exemple n°7
 
 ```plain
-1 - Title Crawl
+1 - Texte défilant introductif
 ```
 
-##### Example 9 - Common usage of identifiers
+#### Exemple n°9 — utilisation habituelle des identifiants
 
 ```plain
 WEBVTT
 
 1
 00:00:22.230 --> 00:00:24.606
-This is the first subtitle.
+Voici le premier sous-titre.
 
 2
 00:00:30.739 --> 00:00:34.074
-This is the second.
+Et là le deuxième.
 
 3
 00:00:34.159 --> 00:00:35.743
-Third
+Ici le troisième.
 ```
 
-### Cue timings
+### Horodatage des répliques
 
-A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
+Un horodatage d'une réplique indique le moment où la réplique est affichée sur la vidéo. Il est composé d'un temps de début et d'un temps de fin. Le temps de fin doit être supérieur au temps de début et le temps de début doit être supérieur ou égal aux temps de début précédents. Les répliques peuvent avoir des horodatages qui se chevauchent.
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} {{htmlattrxref("kind")}} is `chapters`) then the file cannot have overlapping timings.
+Si le fichier est utilisé pour des chapitres (c'est-à-dire des éléments [`<track>`](/fr/docs/Web/HTML/Element/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#attr-kind) vaut `chapters`), le fichier ne pourra pas contenir de durées qui se chevauchent.
 
-Each cue timing contains five components:
+Chaque horodatage contient cinq composants&nbsp;:
 
-- Timestamp for start time.
-- At least one space.
-- The string "`-->".`
-- At least one space.
-- Timestamp for end time.
+- Une heure de début.
+- Au moins un espace.
+- La chaîne de caractères `-->`.
+- Au moins un espace.
+- Une heure de fin, qui doit être supérieure à l'heure de début.
 
-  - Which must be greater than the start time.
-
-The timestamps must be in one of two formats:
+Les heures doivent être dans l'un de ces formats&nbsp;:
 
 - `mm:ss.ttt`
 - `hh:mm:ss.ttt`
 
-Where the components are defined as follows:
+Où&nbsp;:
 
-- `hh` is hours.
+- `hh` désigne les heures
 
-  - Must be at least two digits.
-  - Hours can be greater than two digits (e.g., 9999:00:00.000).
+  - Sur au moins deux chiffres.
+  - Qui peuvent être supérieures à deux chiffres (par exemple `9999:00:00.000`).
 
-- `mm` is minutes.
+- `mm` désigne les minutes
 
-  - Must be between 00 and 59 inclusive.
+  - Comprises entre `00` et `59` (inclus).
 
-- `ss` is seconds.
+- `ss` désigne les secondes.
 
-  - Must be between 00 and 59 inclusive.
+  - Comprises entre `00` et `59` (inclus).
 
-- `ttt` is milliseconds.
+- `ttt` désigne les millisecondes.
 
-  - Must be between 000 and 999 inclusive.
+  - Comprises entre `000` et `999` (inclus).
 
-##### Example 10 - Basic cue timing examples
+#### Exemple n°10 — exemples d'horodatages simples
 
 ```plain
 00:00:22.230 --> 00:00:24.606
@@ -324,7 +341,7 @@ Where the components are defined as follows:
 00:00:35.827 --> 00:00:40.122
 ```
 
-##### Example 11 - Overlapping cue timing examples
+#### Exemple n°11 — exemples d'horodatages qui se chevauchent
 
 ```plain
 00:00:00.000 --> 00:00:10.000
@@ -332,7 +349,7 @@ Where the components are defined as follows:
 00:00:30.000 --> 00:00:50.000
 ```
 
-##### Example 12 - Non-overlapping cue timing examples
+#### Exemple n°12 — exemples d'horodatage qui ne se chevauchent pas
 
 ```plain
 00:00:00.000 --> 00:00:10.000
@@ -341,199 +358,199 @@ Where the components are defined as follows:
 00:02:01.000 --> 00:02:01.000
 ```
 
-### Cue settings
+### Paramètres des répliques
 
-Cue settings are optional components used to position where the cue payload text will be displayed over the video. This includes whether the text is displayed horizontally or vertically. There can be zero or more of them, and they can be used in any order so long as each setting is used no more than once.
+Les paramètres de réplique sont des composants optionnels utilisés afin de positionner le texte affiché sur la vidéo. Cela comprend l'affichage horizontal ou vertical du texte. Il peut y avoir zéro ou plusieurs paramètres, qui peuvent être utilisés dans n'importe quel ordre tant que chaque paramètre n'est pas utilisé plus d'une fois.
 
-The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:
+Les paramètres sont ajoutés à droite de l'horodatage, après au moins un espace après l'horodatage. Il doit y avoir au moins un espace entre chaque paramètre. Le nom d'un paramètre et la valeur associée sont séparés par deux-points (`:`). Les paramètres sont sensibles à la casse et on utilisera donc les minuscules comme indiqué ici. Il existe cinq paramètres&nbsp;:
 
-- **vertical**
+- **`vertical`**
 
-  - Indicates that the text will be displayed vertically rather than horizontally, such as in some Asian languages.
+  - Indique que le texte sera affiché verticalement et pas horizontalement, comme pour certaines langues asiatiques.
 
   <table>
     <thead>
       <tr>
-        <th colspan="2">Table 1 - vertical values</th>
+        <th colspan="2">Tableau 1 - valeurs pour <code>vertical</code></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th><code>vertical:rl</code></th>
-        <td>writing direction is right to left</td>
+        <td>La direction d'écriture est de droite à gauche.</td>
       </tr>
       <tr>
         <th><code>vertical:lr</code></th>
-        <td>writing direction is left to right</td>
+        <td>La direction d'écriture est de gauche à droite.</td>
       </tr>
     </tbody>
   </table>
 
-- **line**
+- **`line`**
 
-  - Specifies where text appears vertically. If vertical is set, line specifies where text appears horizontally.
-  - Value can be a line number.
+  - Indique l'emplacement vertical du texte ou, si le paramètre `vertical` est défini, l'emplacement horizontal du texte.
+  - La valeur peut être un numéro de ligne
 
-    - The line height is the height of the first line of the cue as it appears on the video.
-    - Positive numbers indicate top down.
-    - Negative numbers indicate bottom up.
+    - La hauteur d'une ligne est la hauteur de la première ligne de la réplique telle qu'elle apparaît sur la vidéo.
+    - Les nombres positifs indiquent un placement du haut vers le bas.
+    - Les nombres négatifs indiquent un placement du bas vers le haut.
 
-  - Or value can be a percentage.
+  - Ou un pourcentage
 
-    - Must be an integer (i.e., no decimals) between 0 and 100 inclusive.
-    - Must be followed by a percent sign (%).
+    - Ce doit alors être un entier (sans partie décimale) compris entre 0 et 100.
+    - Qui doit être suivi du signe pourcentage (`%`).
 
   <table>
     <thead>
       <tr>
-        <th colspan="4">Table 2 - line examples</th>
+        <th colspan="4">Tableau 2 - exemples pour <code>line</code></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th></th>
-        <th><code>vertical</code> omitted</th>
+        <th><code>vertical</code> omis</th>
         <th><code>vertical:rl</code></th>
         <th><code>vertical:lr</code></th>
       </tr>
       <tr>
         <th><code>line:0</code></th>
-        <td>top</td>
-        <td>right</td>
-        <td>left</td>
+        <td>haut</td>
+        <td>droite</td>
+        <td>gauche</td>
       </tr>
       <tr>
         <th><code>line:-1</code></th>
-        <td>bottom</td>
-        <td>left</td>
-        <td>right</td>
+        <td>bas</td>
+        <td>gauche</td>
+        <td>droite</td>
       </tr>
       <tr>
         <th><code>line:0%</code></th>
-        <td>top</td>
-        <td>right</td>
-        <td>left</td>
+        <td>haut</td>
+        <td>droite</td>
+        <td>gauche</td>
       </tr>
       <tr>
         <th><code>line:100%</code></th>
-        <td>bottom</td>
-        <td>left</td>
-        <td>right</td>
+        <td>bas</td>
+        <td>gauche</td>
+        <td>droite</td>
       </tr>
     </tbody>
   </table>
 
-- **position**
+- **`position`**
 
-  - Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically.
-  - Value is a percentage.
-  - Must be an integer (no decimals) between 0 and 100 inclusive.
-  - Must be followed by a percent sign (%).
+  - Indique l'emplacement horizontal du texte, ou, si `vertical` est utilisé, l'emplacement vertical du texte.
+  - Sa valeur est un pourcentage.
+  - Ce doit être un entier, sans partie décimale, compris entre 0 et 100 (inclus).
+  - Qui doit être suivi du signe pourcentage (`%`).
 
   <table>
     <thead>
       <tr>
-        <th colspan="4">Table 3 - position examples</th>
+        <th colspan="4">Tableau 3 - exemples pour <code>position</code></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th></th>
-        <th><code>vertical</code> omitted</th>
+        <th><code>vertical</code> omis</th>
         <th><code>vertical:rl</code></th>
         <th><code>vertical:lr</code></th>
       </tr>
       <tr>
         <th><code>position:0%</code></th>
-        <td>left</td>
-        <td>top</td>
-        <td>top</td>
+        <td>gauche</td>
+        <td>haut</td>
+        <td>haut</td>
       </tr>
       <tr>
         <th><code>position:100%</code></th>
-        <td>right</td>
-        <td>bottom</td>
-        <td>bottom</td>
+        <td>droite</td>
+        <td>bas</td>
+        <td>bas</td>
       </tr>
     </tbody>
   </table>
 
-- **size**
+- **`size`**
 
-  - Specifies the width of the text area. If vertical is set, size specifies the height of the text area.
-  - Value is a percentage.
-  - Must be an integer (i.e., no decimals) between 0 and 100 inclusive.
-  - Must be followed by a percent sign (%).
+  - Indique la largeur de la zone de texte, ou, si `vertical` est utilisé, la hauteur de la zone de texte.
+  - Sa valeur est un pourcentage.
+  - Ce doit être un entier, sans partie décimale, compris entre 0 et 100 (inclus).
+  - Qui doit être suivi du signe pourcentage (`%`).
 
   <table>
     <thead>
       <tr>
-        <th colspan="4">Table 4 - size examples</th>
+        <th colspan="4">Tableau 4 - exemples pour <code>size</code></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th></th>
-        <th><code>vertical</code> omitted</th>
+        <th><code>vertical</code> omis</th>
         <th><code>vertical:rl</code></th>
         <th><code>vertical:lr</code></th>
       </tr>
       <tr>
         <th><code>size:100%</code></th>
-        <td>full width</td>
-        <td>full height</td>
-        <td>full height</td>
+        <td>toute la largeur</td>
+        <td>toute la hauteur</td>
+        <td>toute la hauteur</td>
       </tr>
       <tr>
         <th><code>size:50%</code></th>
-        <td>half width</td>
-        <td>half height</td>
-        <td>half height</td>
+        <td>la moitié de la largeur</td>
+        <td>la moitié de la hauteur</td>
+        <td>la moitié de la hauteur</td>
       </tr>
     </tbody>
   </table>
 
-- **align**
+- **`align`**
 
-  - Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
+  - Définit l'alignement du texte. Le texte est aligné au sein de l'espace délimité par le paramètre `size` s'il est utilisé.
 
   <table>
     <thead>
       <tr>
-        <th colspan="4">Table 5 - align values</th>
+        <th colspan="4">Tableau 5 - exemples pour <code>align</code></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th></th>
-        <th><code>vertical</code> omitted</th>
+        <th><code>vertical</code> omis</th>
         <th><code>vertical:rl</code></th>
         <th><code>vertical:lr</code></th>
       </tr>
       <tr>
         <th><code>align:start</code></th>
-        <td>left</td>
-        <td>top</td>
-        <td>top</td>
+        <td>gauche</td>
+        <td>haut</td>
+        <td>haut</td>
       </tr>
       <tr>
         <th><code>align:center</code></th>
-        <td>centred horizontally</td>
-        <td>centred vertically</td>
-        <td>centred vertically</td>
+        <td>centré horizontalement</td>
+        <td>centré verticalement</td>
+        <td>centré verticalement</td>
       </tr>
       <tr>
         <th><code>align:end</code></th>
-        <td>right</td>
-        <td>bottom</td>
-        <td>bottom</td>
+        <td>droite</td>
+        <td>bas</td>
+        <td>bas</td>
       </tr>
     </tbody>
   </table>
 
-##### Example 13 - Cue setting examples
+#### Exemple n°13 — exemples de paramètres de réplique
 
-The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.
+La première ligne illustre l'absence de paramètre. La seconde ligne illustre ce qu'on pourrait faire pour afficher le texte sur un panneau ou une étiquette à l'écran. La troisième ligne pourrait être utilisée pour un titre. La dernière ligne pourrait être utilisée pour du texte d'une langue asiatique.
 
 ```plain
 00:00:05.000 --> 00:00:10.000
@@ -542,68 +559,66 @@ The first line demonstrates no settings. The second line might be used to overla
 00:00:05.000 --> 00:00:10.000 vertical:rt line:-1 align:end
 ```
 
-### Cue payload
+### Charge utile (texte) d'une réplique
 
-The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
+La charge utile d'une réplique contient l'information principale. En règle générale, il s'agit des sous-titres à afficher. Cette charge utile peut contenir des sauts de ligne mais pas de ligne vide (ce qui équivaut à deux sauts de ligne successifs). Une ligne vide indique la fin d'une réplique.
 
-A cue text payload cannot contain the string "`-->"`, the ampersand character (&), or the less-than sign (<). Instead use the escape sequence "\&amp;" for ampersand and "\&lt;" for less-than. It is also recommended that you use the greater-than escape sequence "\&gt;" instead of the greater-than character (>) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
+La charge utile d'une réplique ne peut pas contenir la chaîne de caractères `-->`, une esperluette (`&`), ou un chevron ouvrant (`<`). Il faudra à la place utiliser les entités correspondantes pour les échapper&nbsp;: `&amp;` pour l'esperluette et `&lt;` pour le chevron. Il est recommandé de faire de même pour le chevron fermant (c'est-à-dire d'utiliser `&gt;` plutôt que `>`) pour éviter toute confusion avec les balises. Dans le cas où le fichier WebVTT est utilisé pour des métadonnées, ces restrictions ne s'appliquent pas.
 
-In addition to the three escape sequences mentioned above, there are fours others. They are listed in the table below.
+En plus des trois échappements décrits ci-avant, il existe quatre autres échappements qui sont décrits dans le tableau suivant.
 
 <table>
   <thead>
     <tr>
-      <th colspan="3">Table 6 - Escape sequences</th>
+      <th colspan="3">Tableau 6 - séquences d'échappement</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Name</th>
-      <th>Character</th>
-      <th>Escape Sequence</th>
+      <th>Nom</th>
+      <th>Caractère</th>
+      <th>Séquence d'échappement</th>
     </tr>
     <tr>
-      <td>Ampersand</td>
+      <td>Esperluette</td>
       <td>&#x26;</td>
       <td><code>&#x26;amp;</code></td>
     </tr>
     <tr>
-      <td>Less-than</td>
+      <td>Chevron ouvrant</td>
       <td>&#x3C;</td>
       <td><code>&#x26;lt;</code></td>
     </tr>
     <tr>
-      <td>Greater-than</td>
+      <td>Chevron fermant</td>
       <td>></td>
       <td><code>&#x26;gt;</code></td>
     </tr>
     <tr>
-      <td>Left-to-right mark</td>
+      <td>Marque gauche-à-droite</td>
       <td></td>
       <td><code>&#x26;lrm;</code></td>
     </tr>
     <tr>
-      <td>Right-to-left mark</td>
+      <td>Marque droite-à-gauche</td>
       <td></td>
       <td><code>&#x26;rlm;</code></td>
     </tr>
     <tr>
-      <td>Non-breaking space</td>
-      <td><code></code></td>
+      <td>Espace insécable</td>
+      <td><code>&nbsp;</code></td>
       <td><code>&#x26;nbsp;</code></td>
     </tr>
   </tbody>
 </table>
 
-### Cue payload text tags
+### Balises pour les textes des répliques
 
-There are a number of tags, such as `<bold>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute {{htmlattrxref("kind")}} is `chapters` then you cannot use tags.
+Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. Toutefois, si le fichier WebVTT est utilisé dans un élément [`<track>`](/fr/docs/Web/HTML/Element/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#attr-kind) vaut `chapters`, les balises ne pourront pas être utilisées.
 
-- **Timestamp tag**
+- **Balise d'horodatage**
 
-  - The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The _active text_ is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the _active text_ in the payload is _previous text_ . Any text beyond the _active text_ is _future text_ . This enables karaoke style captions.
-
-  ##### Example 12 - Karaoke style text
+  - L'horodatage porté par cette balise doit être supérieur à celui du début de la réplique, supérieur aux horodatages des balises précédentes pour cette réplique, et inférieur à l'horodatage de fin. Le *texte actif* correspond au texte situé entre l'horodatage et le prochain horodatage (ou l'horodatage de fin de la réplique s'il n'y en a plus d'autres). Tout texte situé avant le *texte actif* correspondra à du *texte précédent*. Tout texte situé après le *texte actif* correspondra à du *texte futur*. Cela permet de représenter des sous-titres comme ceux utilisés au karaoké.
 
   ```plain
   1
@@ -619,167 +634,137 @@ There are a number of tags, such as `<bold>`, that can be used. However, if the 
   That's <00:00:21.000>amore
   ```
 
-The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
+Les balises suivantes sont des balises qui sont autorisées au sein d'une réplique et pour lesquelles il faut avoir la balise ouvrante et la balise fermante (par exemple `<b>texte</b>`).
 
-- **Class tag** (`<c></c>`)
+- **Balise de classe** (`<c></c>`)
 
-  - Style the contained text using a CSS class.
-
-  ##### Example 14 - Class tag
+  - Permet la mise en forme du texte contenu en ciblant la classe avec CSS.
 
   ```html
-  <c.classname>text</c>
+  <c.nomclasse>texte</c>
   ```
 
-- **Italics tag** (`<i></i>`)
+- **Balise d'italique** (`<i></i>`)
 
-  - Italicize the contained text.
-
-  ##### Example 15 - Italics tag
+  - Met en italique le texte contenu.
 
   ```html
-  <i>text</i>
+  <i>texte</i>
   ```
 
-- **Bold tag** (`<b></b>`)
+- **Balise de gras** (`<b></b>`)
 
-  - Bold the contained text.
-
-  ##### Example 16 - Bold tag
+  - Met en gras le texte contenu.
 
   ```html
-  <b>text</b>
+  <b>texte</b>
   ```
 
-- **Underline tag** (`<u></u>`)
+- **Balise de soulignement** (`<u></u>`)
 
-  - Underline the contained text.
-
-  ##### Example 17 - Underline tag
+  - Souligne le texte contenu
 
   ```html
-  <u>text</u>
+  <u>texte</u>
   ```
 
-- **Ruby tag** (`<ruby></ruby>`)
+- **Balise ruby** (`<ruby></ruby>`)
 
-  - Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
-
-  ##### Example 18 - Ruby tag
+  - Utilisée avec les balises de texte ruby afin d'afficher les [annotations ruby](https://fr.wikipedia.org/wiki/Ruby_(linguistique)) (des caractères d'annotation situés au-dessus des autres caractères).
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
   ```
 
-- **Ruby text tag** (`<rt></rt>`)
+- **Balise de texte ruby** (`<rt></rt>`)
 
-  - Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
-
-  ##### Example 19 - Ruby text tag
+  - Utilisée avec les balises ruby afin d'afficher les [annotations ruby](https://fr.wikipedia.org/wiki/Ruby_(linguistique)) (des caractères d'annotation situés au-dessus des autres caractères).
 
   ```html
   <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
   ```
 
-- **Voice tag** (`<v></v>`)
+- **Balise de voix** (`<v></v>`)
 
-  - Similar to class tag, also used to style the contained text using CSS.
-
-  ##### Example 20 - Voice tag
+  - Semblable à la balise de classe, permet également le ciblage à l'aide de CSS pour la mise en forme du texte.
 
   ```html
-  <v Bob>text</v>
+  <v Bob>texte</v>
   ```
 
-## Methods and properties
+## Méthodes et propriétés
 
-The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
+Les méthodes utilisées en WebVTT sont celles utilisées pour modifier la réplique ou la région, les attributs des deux interfaces étant différents. On peut les catégoriser distinctement afin de mieux comprendre les rôles respectifs de ces interfaces pour WebVTT&nbsp;:
 
-- ### VTTCue
+### `VTTCue`
 
-  - The methods which are available in this interface are:
+Les méthodes disponibles avec cette interface sont&nbsp;:
 
-    - GetCueAsHTML to get the HTML of that Cue.
-    - VTT Constructor for creating new objects of Cues.
-    - Autokeyword.
-    - DirectionSetting: to set the direction of caption or text in a file.
-    - LineAlignment: to adjust the line alignment.
-    - PositionAlignSetting: to adjust the position of text.
+- `GetCueAsHTML()` qui permet d'obtenir le code HTML de la réplique.
+- `VTTCue()`, le constructeur qui permet de créer de nouveaux objets.
+- `Autokeyword()`.
+- `DirectionSetting()` qui définit la direction de la légende ou du texte d'un fichier.
+- `LineAlignment()` qui ajuste l'alignement de la ligne.
+- `PositionAlignSetting()` qui ajuste la position du texte.
 
-- ### VTTRegion
+### `VTTRegion`
 
-  - The methods used for region are listed below along with description of their functionality:
+Les méthodes utilisées pour les régions sont&nbsp;:
 
-    - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
-    - VTT Region Constructor: for construction of new VTT Regions.
+- `ScrollSetting()` qui permet d'ajuster le paramètre de défilement pour tous les nœuds présents dans une région donnée.
+- `VTTRegion()`, le constructeur qui permet de créer de nouveaux objets.
 
-## Tutorial on how to write a WebVTT file
+## Tutoriel pour l'écriture d'un fichier WebVTT
 
-There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as ‘.vtt’ file. Steps are given below:
+En plusieurs étapes, il est possible d'écrire un fichier WebVTT simple. Pour commencer, il suffit d'avoir un éditeur de texte et d'enregistrer le fichier en utilisant l'extension '.vtt'. Voici comment procéder&nbsp;:
 
-1.  Open a notepad.
-2.  The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
+1. Ouvrir un éditeur de texte.
+2. La première ligne d'un fichier WebVTT est standardisée et on écrira donc ce qui suit sur la toute première ligne&nbsp;:
 
-```plain
-WEBVTT
-```
+    ```plain
+    WEBVTT
+    ```
 
-Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:
+3. La deuxième ligne est vide et à la troisième ligne, on indique le moment où la première réplique doit être affichée. Ainsi, si la première réplique doit s'afficher après 1 seconde et disparaître après 5 secondes de vidéo, on écrira&nbsp;:
 
-```plain
-00:01.000 --> 00:05.000
-```
+    ```plain
+    00:01.000 --> 00:05.000
+    ```
 
-1.  On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.
-2.  Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
+4. Su la ligne suivante, on écrit le texte correspondant (qui sera donc affiché entre la première et la cinquième seconde, incluses).
+5. En répétant les étapes 3 et 4, on pourra ainsi composer un fichier WebVTT complet pour un fichier audio ou vidéo.
 
-## CSS pseudo-classes
+## Pseudo-classes CSS
 
-CSS pseudo classes allow us to classify the type of object which we want to differentiate from other types of objects. It works in similar manner in WebVTT files as it works in HTML file.
+Les pseudo-classes CSS permettent de classer le type d'un objet à différencier d'un autre type d'objet. Elles fonctionnent de façon similaire entre les fichiers WebVTT et les fichiers HTML.
 
-It is one of the good features supported by WebVTT is the localization and use of class elements which can be used in same way they are used in HTML and CSS to classify the style for particular type of objects, but here these are used for styling and classifying the Cues as shown below:
+WebVTT permet d'utiliser les fonctionnalités de localisation et les classes comme on peut le faire en HTML et CSS afin de classifier la mise en forme d'un certain type d'objet, comme on peut le voir dans cet exemple&nbsp;:
 
 ```plain
 WEBVTT
 
 04:02.500 --> 04:05.000
-J’ai commencé le basket à l'âge de 13, 14 ans
+J'ai commencé le basket à l'âge de 13, 14 ans
 
 04:05.001 --> 04:07.800
 Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
 ```
 
-In the above example it can be observed that we can use the identifier and pseudo class name for defining the language of caption, where `<i>` tag is for italics.
+Dans l'exemple précédent, on peut voir l'utilisation d'un identifiant et d'un nom de pseudo-classe pour indiquer la langue d'une réplique et la balise `<i>` utilisée pour l'italique.
 
-The type of pseudo class is determined by the selector it is using and working is similar in nature as it works in HTML. Following CSS pseudo classes can be used:
+Le type de pseudo-classe est déterminé par le sélecteur utilisé et fonctionne de façon analogue à ce qu'on peut voir en HTML. Les pseudo-classes CSS suivantes peuvent être utilisées&nbsp;:
 
-- Lang (Lanugage): e.g., p:lang(it).
-- Link: e.g., a:link.
-- Nth-last-child: e.g., p:nth-last-child(2).
-- Nth-child(n): e.g., p:nth-child(2).
+- `lang` (par exemple `p:lang(it)`)
+- `link` (par exemple `a:link`)
+- `nth-last-child` (par exemple `p:nth-last-child(2)`)
+- `nth-child` (par exemple `p:nth-child(2)`)
 
-Where p and a are the tags which are used in HTML for paragraph and link, respectively and they can be replaced by identifiers which are used for Cues in WebVTT file.
+Où `p` et `a` sont les balises utilisées en HTML pour représenter les paragraphes et les liens en HTML. Dans un contexte WebVTT, on pourra les remplacer dans ces exemples par des identifiants de réplique.
 
-## Specifications
+## Spécifications
 
-| Specification                                                             |
-| ------------------------------------------------------------------------- |
-| [WebVTT: The Web Video Text Tracks Format](https://w3c.github.io/webvtt/) |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-### `VTTCue` interface
-
-{{Compat("api.VTTCue", 0)}}
-
-### `TextTrack` interface
-
-{{Compat("api.TextTrack", 0)}}
-
-### Notes
-
-Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value `"middle"` instead of `"center"`. This has been corrected.
-
-WebVTT was implemented in Firefox 24 behind the preference {{pref("media.webvtt.enabled")}}, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
-
-Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).
+{{Compat}}

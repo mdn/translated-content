@@ -5,6 +5,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/close
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -13,13 +14,15 @@ Ferme la fenêtre référencée.
 
 ### Syntaxe
 
-    window.close();
+```js
+window.close();
+```
 
 ### Description
 
 Lorsque cette méthode est appelée, la fenêtre référencée est fermée.
 
-Cette méthode est uniquement autorisée à être appelée pour des fenêtres qui ont été ouvertes par un script à l'aide de la méthode [window.open](fr/DOM/window.open). Si la fenêtre n'a pas été ouverte par un script, l'erreur suivante apparaît dans la console JavaScript&nbsp;: `Scripts may not close windows that were not opened by script.`
+Cette méthode est uniquement autorisée à être appelée pour des fenêtres qui ont été ouvertes par un script à l'aide de la méthode [window.open](/fr/DOM/window.open). Si la fenêtre n'a pas été ouverte par un script, l'erreur suivante apparaît dans la console JavaScript&nbsp;: `Scripts may not close windows that were not opened by script.`
 
 #### Exemples
 

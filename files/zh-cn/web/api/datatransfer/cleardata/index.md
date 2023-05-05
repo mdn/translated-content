@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
-tags:
-  - API
-  - DataTransfer
-  - HTML DOM
-  - Method
-  - Reference
-  - clearData
-  - drag and drop
-translation_of: Web/API/DataTransfer/clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.clearData()`** 方法删除给定类型的拖动操作的 {{domxref("DataTransfer","drag data")}}。如果给定类型的数据不存在，则此方法不执行任何操作。
@@ -19,7 +11,8 @@ translation_of: Web/API/DataTransfer/clearData
 
 此方法不会从拖动操作中删除文件，因此如果有任何文件包含在对象的 {{domxref("DataTransfer.types")}} 列表中，仍然可能有一个类型为“Files”的条目在拖动。
 
-> **备注：** 该方法只能在 {{event("dragstart")}} 事件的处理程序中使用，因为这是拖动操作的数据存储唯一能写入的时间。
+> **备注：** 该方法只能在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件的处理程序中使用，因为这是拖动操作的数据存储唯一能写入的时间。
+
 ## 语法
 
 ```js
@@ -145,5 +138,4 @@ window.addEventListener('DOMContentLoaded', function () {
 - [Drag and drop](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

@@ -1,15 +1,8 @@
 ---
 title: 式と演算子
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - JavaScript
-  - Landing page
-  - 演算子
-  - 概要
-  - Reference
-browser-compat: javascript.operators
-translation_of: Web/JavaScript/Reference/Operators
 ---
+
 {{JSSidebar("Operators")}}
 
 この節では、JavaScript 言語のすべての演算子、式、キーワードについて記述しています。
@@ -130,7 +123,7 @@ JavaScript の基本的なキーワードと一般的な式です。
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
   - : 大なりイコール演算子です。
 
-> **Note:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
+> **メモ:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
 
 <h3 id="Equality_operators">等値演算子</h3>
 
@@ -187,7 +180,6 @@ JavaScript の基本的なキーワードと一般的な式です。
 
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
   - : オプショナルチェーン演算子は、参照が [nullish](/ja/docs/Glossary/Nullish) ([`null`](/ja/docs/Web/JavaScript/Reference/Global_Objects/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)) の場合にエラーを発生させるのではなく、`undefined` を返します。
- 
 
 <h3 id="Assignment_operators">代入演算子</h3>
 
@@ -228,7 +220,6 @@ JavaScript の基本的なキーワードと一般的な式です。
 - {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
   {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
   - : 分割代入は、配列やオブジェクトのプロパティを、配列やオブジェクトリテラルに似た構文を使用して変数に代入します。
- 
 
 <h3 id="Comma_operator">カンマ演算子</h3>
 

@@ -4,6 +4,7 @@ slug: Web/CSS/math-style
 translation_of: Web/CSS/math-style
 browser-compat: css.properties.math-style
 ---
+
 {{MDNSidebar}}
 
 La propriété `math-style` détermine si les équations MathML devraient être affichées en hauteur normale ou compacte.
@@ -41,9 +42,11 @@ math-style: unset;
 
 ### CSS
 
-    math {
-      math-style: compact;
-    }
+```css
+math {
+  math-style: compact;
+}
+```
 
 ## Spécifications
 

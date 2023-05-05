@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scrollbar-width
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`scrollbar-width`** permet à un auteur de définir l'épaisseur maximale à utiliser pour la barre de défilement si celle-ci est affichée.
@@ -65,9 +66,13 @@ scrollbar-width: unset;
 
     > **Note :** L'utilisation des longueurs pour `scrollbar-width` est une fonctionnalité qui sera potentiellement abandonnée de la spécification (voir [l'_issue_ 1958](https://github.com/w3c/csswg-drafts/issues/1958)).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -94,15 +99,11 @@ scrollbar-width: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS Scrollbars", "#scrollbar-width", "scrollbar-width")}} | {{Spec2("CSS Scrollbars")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scrollbar-width")}}
+{{Compat}}
 
 ## Voir aussi
 

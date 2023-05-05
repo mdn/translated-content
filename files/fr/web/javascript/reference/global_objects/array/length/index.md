@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/length
 ---
+
 {{JSRef}}
 
 La propriété **`length`** (longueur) est un entier non-signé de 32 bits qui indique le nombre d'éléments présents dans le tableau. Elle est toujours supérieure au plus grand indice du tableau.
@@ -81,18 +82,13 @@ if (etatsUS.length > 50) {
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.4.5.2', 'Array.length')}}                                         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-properties-of-array-instances-length', 'Array.length')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-properties-of-array-instances-length', 'Array.length')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.length")}}
+{{Compat}}
 
 ## Voir aussi
 

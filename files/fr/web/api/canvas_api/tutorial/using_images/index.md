@@ -4,14 +4,15 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 translation_of: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_d'images
 ---
-{{CanvasSidebar}}{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
+
+{{DefaultAPISidebar("Canvas API")}}{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
 
 Jusqu'à présent, nous avons créé nos propres [formes](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) et [styles appliqués](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors). L'une des fonctionnalités les plus intéressantes de [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) est la possibilité d'utiliser des images. Celles-ci peuvent être utilisées pour faire de la composition dynamique de photos ou comme décors de graphes, pour des _sprites_ dans des jeux, et ainsi de suite. Les images externes peuvent être utilisées dans n'importe quel format pris en charge par le navigateur, comme PNG, GIF ou JPEG. Vous pouvez même utiliser l'image produite par d'autres éléments du canevas sur la même page comme source !
 
 L'importation d'images dans un canevas se déroule en deux étapes :
 
-1.  L'obtention d'une référence à un objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) ou à un autre élément canvas en tant que source. Il est également possible d'utiliser des images en fournissant une URL.
-2.  Le dessin de l'image à l'aide de la fonction `drawImage()` .
+1. L'obtention d'une référence à un objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) ou à un autre élément canvas en tant que source. Il est également possible d'utiliser des images en fournissant une URL.
+2. Le dessin de l'image à l'aide de la fonction `drawImage()` .
 
 Voyons comment faire.
 

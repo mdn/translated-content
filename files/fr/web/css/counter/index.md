@@ -9,15 +9,18 @@ tags:
 translation_of: Web/CSS/counter()
 original_slug: Web/CSS/counter()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`counter()`** renvoie une chaîne de caractères qui représente la valeur courante du compteur nommé (dont le nom est passé en argument). Elle est généralement utilisée pour construire un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) mais elle peut tout à fait être utilisée à n'importe quel endroit où une valeur {{cssxref("&lt;string&gt;")}} est attendue.
 
-    /* Usage simple */
-    counter(nomcompteur);
+```css
+/* Usage simple */
+counter(nomcompteur);
 
-    /* Modifier le type d'affichage du compteur */
-    counter(nomcompteur, upper-roman)
+/* Modifier le type d'affichage du compteur */
+counter(nomcompteur, upper-roman)
+```
 
 Un [compteur](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) CSS n'a aucun effet visible en lui-même. C'est la fonction `counter()` (ainsi que `counters()`) qui permet d'utiliser la chaîne de caractère ou l'image résultante.
 
@@ -30,7 +33,7 @@ Un [compteur](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) CSS n'
 ### Valeurs
 
 - {{cssxref("&lt;custom-ident&gt;")}}
-  - : Un nom identifiant le compteur (sensible à la casse). C'est le même nom qui pourra être utilisé avec {{cssxref("counter-reset")}} et  {{cssxref("counter-increment")}}. Le nom ne peut pas commencer avec deux tirets et ne peut pas être l'un des mots-clés `none`, `unset`, `initial` ou `inherit`.
+  - : Un nom identifiant le compteur (sensible à la casse). C'est le même nom qui pourra être utilisé avec {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer avec deux tirets et ne peut pas être l'un des mots-clés `none`, `unset`, `initial` ou `inherit`.
 - `<counter-style>`
   - : Un nom de style de compteur ou une fonction [`symbols()`](</fr/docs/Web/CSS/symbols()>). Le nom d'un style de compteur peut indiquer un compteur [alphabétique, numérique, symbolique ou encore utilisant un système de numération asiatique ou éthiopien](/fr/docs/Web/CSS/list-style-type#valeurs) ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/CSS_Counter_Styles). Si cette valeur n'est pas fournie, le style par défaut est décimal.
 - `none`
@@ -108,14 +111,11 @@ li::after {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("CSS3 Lists", "#counter-functions", "CSS Counters")}} | {{Spec2("CSS3 Lists")}} | Aucune modification. |
-| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.counter")}}
+{{Compat}}
 
 ## Voir aussi
 

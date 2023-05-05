@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées&nbsp;: trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.
@@ -190,7 +191,7 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
 
 ### Trouver une sous-chaîne à l'intérieur d'une chaîne et l'extraire
 
-1.  Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire&nbsp;; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez&nbsp;:
+1. Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire&nbsp;; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez&nbsp;:
 
     ```js
     browserType.indexOf('zilla');
@@ -198,7 +199,7 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
 
     La commande donne 2 comme résultat, car la sous-chaîne «&nbsp;zilla&nbsp;» commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans «&nbsp;mozilla&nbsp;». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent «&nbsp;mozilla ».
 
-2.  On peut faire cela autrement, peut-être plus efficacement encore. Écrivez&nbsp;:
+2. On peut faire cela autrement, peut-être plus efficacement encore. Écrivez&nbsp;:
 
     ```js
     browserType.indexOf('vanilla');
@@ -214,7 +215,7 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
     }
     ```
 
-3.  Lorsque vous savez où la sous-chaîne commence à l'intérieur de la chaîne, et savez à quel caractère elle prend fin, vous pouvez utiliser {{jsxref("String.prototype.slice()", "slice()")}} pour l'extraire. Voyez ce code&nbsp;:
+3. Lorsque vous savez où la sous-chaîne commence à l'intérieur de la chaîne, et savez à quel caractère elle prend fin, vous pouvez utiliser {{jsxref("String.prototype.slice()", "slice()")}} pour l'extraire. Voyez ce code&nbsp;:
 
     ```js
     browserType.slice(0,3);
@@ -222,7 +223,7 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
 
     Il renvoie «&nbsp;moz&nbsp;» — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
 
-4.  Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre&nbsp;! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
+4. Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre&nbsp;! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
 
     ```js
     browserType.slice(2);
@@ -266,9 +267,9 @@ Chaque exemple est accompagné d'un bouton «&nbsp;Réinitialiser&nbsp;», que v
 
 Dans ce premier exercice, nous commencerons simplement — nous avons un tableau de carte de voeux, mais nous voulons les trier pour ne lister que les messages concernant Noël. Nous attendons de vous que vous utilisiez un test conditionnel à l'intérieur d'une structure `if( ... )`, pour tester chaque chaîne et ne l'afficher dans la liste que si elle contient un message concernant Noël.
 
-1.  Réfléchissez d'abord à comment vérifier que le message concerne Noël. Quelle chaîne est présente dans tous ces messages, et quelle méthode pourriez-vous utiliser pour en tester la présence ?
-2.  Il vous faudra alors écrire un test conditionnel sous la forme _opérande1 opérateur opérande2_. La chose à gauche est-elle égale à la chose à droite ? Ou dans notre cas, l'appel de méthode de gauche renvoie-t-il le résultat de droite ?
-3.  Conseil : dans notre cas, il est probablement plus utile de tester si le résultat de l'appel de notre méthode _n'est pas égal_ à un certain résultat.
+1. Réfléchissez d'abord à comment vérifier que le message concerne Noël. Quelle chaîne est présente dans tous ces messages, et quelle méthode pourriez-vous utiliser pour en tester la présence ?
+2. Il vous faudra alors écrire un test conditionnel sous la forme _opérande1 opérateur opérande2_. La chose à gauche est-elle égale à la chose à droite ? Ou dans notre cas, l'appel de méthode de gauche renvoie-t-il le résultat de droite ?
+3. Conseil : dans notre cas, il est probablement plus utile de tester si le résultat de l'appel de notre méthode _n'est pas égal_ à un certain résultat.
 
 ```html hidden
 <div class="output" style="min-height: 125px;">
@@ -339,10 +340,10 @@ window.addEventListener('load', updateCode);
 
 Dans cet exercice, nous avons des noms des villes du Royaume-Uni, mais les majuscules ne sont pas au bon endroit. Nous souhaitons modifier les noms pour qu'ils soient en minuscules à l'exception de la première lettre qui doit être une majuscule. Une bonne manière de faire ceci :
 
-1.  Convertissez la totalité de la chaîne contenue dans la variable `input` en minuscules et stockez-la dans une nouvelle variable.
-2.  Récupérez la première lettre de la chaîne dans cette nouvelle variable et stockez-la dans une autre variable.
-3.  En utilisant la dernière variable comme une sous-chaîne, remplacez la première lettre de la chaîne en minuscules par la première lettre de la chaîne en minuscules transformé en majuscules. Stockez le résultat de cette procédure de remplacement dans une autre nouvelle variable.
-4.  Changez la valeur de la variable `result` afin qu'elle soit égale au résultat final plutôt qu'à `input`.
+1. Convertissez la totalité de la chaîne contenue dans la variable `input` en minuscules et stockez-la dans une nouvelle variable.
+2. Récupérez la première lettre de la chaîne dans cette nouvelle variable et stockez-la dans une autre variable.
+3. En utilisant la dernière variable comme une sous-chaîne, remplacez la première lettre de la chaîne en minuscules par la première lettre de la chaîne en minuscules transformé en majuscules. Stockez le résultat de cette procédure de remplacement dans une autre nouvelle variable.
+4. Changez la valeur de la variable `result` afin qu'elle soit égale au résultat final plutôt qu'à `input`.
 
 > **Note :** Un conseil — les paramètres des méthodes de chaîne n'ont pas besoin d'être des chaînes, elle peuvent aussi être des variables, ou même des variables avec une méthode invoquée sur elles.
 
@@ -408,19 +409,23 @@ window.addEventListener('load', updateCode);
 
 Dans ce dernier exercice, le tableau contient un lot de chaînes contenant des informations à propos d'arrêts de train dans le nord de l'Angleterre. Les chaînes sont des éléments de données contenant le code en trois lettres de l'arrêt, suivi par des données lisibles par machine, suivi par un point-virgule, et enfin le nom de la station lisible par un humain. Par exemple :
 
-    MAN675847583748sjt567654;Manchester Piccadilly
+```
+MAN675847583748sjt567654;Manchester Piccadilly
+```
 
 Nous voulons extraire le code de la station et son nom, et les associer dans une chaîne avec la structure suivante :
 
-    MAN: Manchester Piccadilly
+```
+MAN: Manchester Piccadilly
+```
 
 Nous vous recommandons de procéder de la manière suivante :
 
-1.  Extraire le code de trois lettres de la station et le stocker dans une nouvelle variable.
-2.  Trouver la position du caractère point-virgule.
-3.  Extraire le nom de la station lisible par un humain en utilisant la position du caractère point virgule comme référence, et le stocker dans une nouvelle variable.
-4.  Concaténer les deux nouvelles variables et une chaîne pour fabriquer la chaîne finale.
-5.  Changer la valeur de la variable `result` pour qu'elle soit égale à la chaîne finale, plutôt qu'à `input`.
+1. Extraire le code de trois lettres de la station et le stocker dans une nouvelle variable.
+2. Trouver la position du caractère point-virgule.
+3. Extraire le nom de la station lisible par un humain en utilisant la position du caractère point virgule comme référence, et le stocker dans une nouvelle variable.
+4. Concaténer les deux nouvelles variables et une chaîne pour fabriquer la chaîne finale.
+5. Changer la valeur de la variable `result` pour qu'elle soit égale à la chaîne finale, plutôt qu'à `input`.
 
 ```html hidden
 <div class="output" style="min-height: 125px;">

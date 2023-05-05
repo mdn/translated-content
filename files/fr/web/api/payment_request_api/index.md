@@ -3,9 +3,10 @@ title: Payment Request API
 slug: Web/API/Payment_Request_API
 translation_of: Web/API/Payment_Request_API
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
-L'API *Payment Request* fournit une expérience utilisateur cohérente à la fois pour les acheteurs et pour les vendeurs. Ce n'est pas une nouvelle façon de payer ses achats, c'est plutôt une façon pour les utilisateurs de sélectionner leur moyen de paiement privilégié et de rendre cete information disponible pour le marchand.
+L'API *Payment Request* fournit une expérience utilisateur cohérente à la fois pour les acheteurs et pour les vendeurs. Ce n'est pas une nouvelle façon de payer ses achats, c'est plutôt une façon pour les utilisateurs de sélectionner leur moyen de paiement privilégié et de rendre cette information disponible pour le marchand.
 
 ## Concepts et usages de l'API _Payment Request_
 
@@ -21,7 +22,7 @@ Les avantages de l'utilisation de l'API *Payment Request* avec des règlements p
 
 Pour demander un paiement, une page web crée un {{domxref("PaymentRequest")}} objet en réponse à une action de l'utilisateur qui initie un paiement, comme cliquer sur un bouton "Achat". Le `PaymentRequest` permet à la page web d'interagir avec l'utilisateur prendant qu'il donne les information pour terminer la transaction.
 
-Vous pouvez trouver un guide complet dans l'article [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API).
+Vous pouvez trouver un guide complet dans l'article [Using the Payment Request API](/fr/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API).
 
 > **Note :** L'API est disponible à l'intérieur des éléments cross-origin {{htmlelement("iframe")}} seulement si on leur a affecté l'attribut {{htmlattrxref("allowpaymentrequest","iframe")}}.
 
@@ -53,10 +54,10 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 - {{domxref("PaymentDetailsUpdate")}}
   - : Un objet qui décrit les changements qui doivent être apportés aux détails du paiement dans l'événement dont le serveur à besoin pour mettre à jour l'information à la suite de l'instanciation de l'interface de paiment mais avant que l'utilisateur ne commence à interagir avec.
 
-### Dictionnaires connexes pour la specification *Basic Card*
+### Dictionnaires connexes pour la specification Basic Card
 
 - {{domxref("BasicCardChangeDetails")}}
-  - : Un objet qui donne l'information "_redacted_ address" qui est fournie comme {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} dans l'événement {{event("paymentmethodchange")}} envoyé à {{domxref("PaymentRequest")}} lorsque l'utilisateur modifie les informations de paiement.
+  - : Un objet qui donne l'information "_redacted_ address" qui est fournie comme {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} dans l'événement [`paymentmethodchange`](/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event) envoyé à {{domxref("PaymentRequest")}} lorsque l'utilisateur modifie les informations de paiement.
 - {{domxref("BasicCardErrors")}}
   - : Un message qui fournit tous les messages d'erreur associés avec les champs qui ne sont pas valides dans l'objet {{domxref("BasicCardResponse")}}. Il est utilisé comme valeur de la propriété {{domxref("PaymentValidationErrors.paymentMethod", "paymentMethod")}} dans l'objet {{domxref("PaymentValidationErrors")}} envoyé au {{domxref("PaymentRequest")}} lorsqu'une erreur se produit.
 - {{domxref('BasicCardRequest')}}
@@ -66,22 +67,16 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 
 ## Spécifications
 
-| Specification                                            | Status                                               | Comment                                                                                                                                                       |
-| -------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Payment')}}                         | {{Spec2('Payment')}}                         | Initial definition.                                                                                                                                           |
-| {{SpecName('Basic Card Payment')}}             | {{Spec2('Basic Card Payment')}}             | Defines {{domxref("BasicCardRequest")}} and {{domxref("BasicCardResponse")}}, among other things needed for handling credit card payment |
-| {{SpecName('Payment Method Identifiers')}} | {{Spec2('Payment Method Identifiers')}} | Defines payment method identifiers and how they are validated, and, where applicable, minted and formally registered with the W3C.                            |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-### PaymentRequest interface
+{{Compat}}
 
-{{Compat("api.PaymentRequest", 0)}}
+## Voir aussi
 
-## See also
-
-- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
+- [Using the Payment Request API](/fr/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/fr/docs/Web/API/Payment_Request_API/Concepts)
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
 - [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)

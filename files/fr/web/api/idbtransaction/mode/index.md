@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/mode
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`mode`** de l'interface {{domxref("IDBTransaction")}} renvoie le mode d'accès aux données des magasins d'objet pendant la transaction (autrement dit, s'agit-il d'une transaction en lecture seule ou d'un accès en écriture ?). La valeur par défaut est `readonly`.
@@ -17,7 +18,9 @@ La propriété **`mode`** de l'interface {{domxref("IDBTransaction")}} renvoie l
 
 ## Syntaxe
 
-    var modeCourant = IDBTransaction.mode;
+```js
+var modeCourant = IDBTransaction.mode;
+```
 
 ### Valeur
 
@@ -31,7 +34,7 @@ Un objet {{domxref("IDBTransactionMode")}} qui définit le mode d'accès aux don
 
 ## Exemples
 
-Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On notera que les fonctions attachées aux gestionnaires d'évènement de la transaction permettent de rapporter des informations en cas de succès ou d'échec de la transaction. Enfin, on affiche le mode de la transaction dans la console grâce à la propriété `mode`. Pour un exemple complet, se référer à l'[exemple d'application To-do](https://github.com/mdn/to-do-notifications/) (cf. [la démonstration](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On notera que les fonctions attachées aux gestionnaires d'évènement de la transaction permettent de rapporter des informations en cas de succès ou d'échec de la transaction. Enfin, on affiche le mode de la transaction dans la console grâce à la propriété `mode`. Pour un exemple complet, se référer à l'[exemple d'application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre la base de données
@@ -85,15 +88,13 @@ function addData() {
 };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-mode', 'mode')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.mode")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -103,4 +104,4 @@ function addData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

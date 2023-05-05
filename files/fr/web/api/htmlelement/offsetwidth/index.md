@@ -3,6 +3,7 @@ title: element.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 translation_of: Web/API/HTMLElement/offsetWidth
 ---
+
 {{ ApiRef() }}
 
 ### Résumé
@@ -11,7 +12,9 @@ Renvoie la largeur totale d'un élément.
 
 ### Syntaxe
 
-    var offsetWidth = element.offsetWidth;
+```js
+var offsetWidth = element.offsetWidth;
+```
 
 `offsetWidth` est une propriété en lecture seule.
 

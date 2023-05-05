@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Headers/Server
 original_slug: Web/HTTP/Headers/Serveur
 ---
+
 {{ HTTPSidebar }}
 
 Le paramètre d'entête **`Server`** contient des informations à propos du système (ou sous-système) en place sur le serveur qui s'occupe de la requête.
@@ -29,7 +30,9 @@ Il est préférable d'éviter les valeurs excessivement longues et/ou détaillé
 
 ## Syntaxe
 
-    Server: <valeur>
+```
+Server: <valeur>
+```
 
 ## Directives
 
@@ -38,18 +41,18 @@ Il est préférable d'éviter les valeurs excessivement longues et/ou détaillé
 
 ## Exemples
 
-    Server: Apache/2.4.1 (Unix)
+```
+Server: Apache/2.4.1 (Unix)
+```
 
 ## Spécifications
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Server", "7.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Navigateurs compatibles
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.Server")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{HTTPHeader("Allow")}}

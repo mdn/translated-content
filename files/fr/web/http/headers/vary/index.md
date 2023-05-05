@@ -9,9 +9,10 @@ tags:
   - en-tête
 translation_of: Web/HTTP/Headers/Vary
 ---
+
 {{HTTPSidebar}}
 
-L'en-tête HTTP  **`Vary`** détermine comment les en-têtes de requêtes futures sont associés pour décider si une réponse en cache peut être réutilisée plutôt que de solliciter à nouveau le serveur d'origine. Il est utilisé par le serveur pour indiquer quels en-têtes sont utilisés pour représenter une resource dans un algorithme de [négociation de contenu](/en-US/docs/Web/HTTP/Content_negotiation).
+L'en-tête HTTP **`Vary`** détermine comment les en-têtes de requêtes futures sont associés pour décider si une réponse en cache peut être réutilisée plutôt que de solliciter à nouveau le serveur d'origine. Il est utilisé par le serveur pour indiquer quels en-têtes sont utilisés pour représenter une resource dans un algorithme de [négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation).
 
 L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {{HTTPStatus("304")}} `Not Modified` à ce qu'elle aurait été sur la réponse {{HTTPStatus("200")}} `OK` correspondante.
 
@@ -30,8 +31,10 @@ L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {
 
 ## Syntaxe
 
-    Vary: *
-    Vary: <header-name>, <header-name>, ...
+```
+Vary: *
+Vary: <header-name>, <header-name>, ...
+```
 
 ## Directives
 
@@ -46,21 +49,17 @@ L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {
 
 Lorsque l'en-tête `Vary: User-Agent` est utilisée, les serveurs de cache doivent prendre en compte l'agent de l'utilisateur pour décider de servir la page depuis le cache ou non. Par exemple, si vous servez du contenu différent pour les utilisateurs sur mobile, il aide à éviter qu'une version ordinateur de votre site ne soit distribuée à un utilisateur sur mobile. Il peut aider google et d'autres moteurs de recherche à prendre en compte la version pour mobile d'un site, ainsi que de signaler que le [Cloaking](https://en.wikipedia.org/wiki/Cloaking) n'est pas intentionel.
 
-    Vary: User-Agent
+```
+Vary: User-Agent
+```
 
 ## Spécifications
 
-| Spécification                                | Titre                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Vary")}}
-
-## Notes de compatibilité
-
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+{{Compat}}
 
 ## Voir aussi
 

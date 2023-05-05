@@ -13,15 +13,16 @@ tags:
   - setIcon
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
+
 {{AddonSidebar()}}
 
 Définit l'icône pour l'action du navigateur.
 
 Vous pouvez spécifier une seule icône comme chemin d'accès à un fichier ou un objet {{WebExtAPIRef('browserAction.ImageDataType')}} .
 
-Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets  `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
+Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
 
-Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est  [`default_icon`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
+Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est [`default_icon`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -43,7 +44,7 @@ var settingIcon = browser.browserAction.setIcon(
 
       - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` ou `object`. Il s'agit soit d'un seul objet `ImageData` ou un dictionnaire d'objet.
 
-        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet`ImageData`, et son nom est sa taille, comme ceci :
+        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
 
         ```json
         {
@@ -88,10 +89,6 @@ Si chaque `imageData` et `path` est un objet `undefined`, `null` ou vide :
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments une fois que l'icône a été définie.
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setIcon",2)}}
 
 ## Exemples
 
@@ -155,6 +152,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
 > **Note :**
@@ -163,7 +164,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -190,4 +192,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

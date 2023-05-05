@@ -1,24 +1,13 @@
 ---
 title: console.trace()
 slug: Web/API/console/trace
-tags:
-  - API
-  - Chrome
-  - DOM
-  - デバッグ
-  - Firefox
-  - メソッド
-  - String
-  - ウェブ開発
-  - console.trace()
-  - trace
-  - ウェブコンソール
-browser-compat: api.console.trace
-translation_of: Web/API/Console/trace
+i10n:
+  sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
+
 {{APIRef("Console API")}}
 
-**`console.trace()`** メソッドは、[ウェブコンソール](/ja/docs/Tools/Web_Console)にスタックトレースを出力します。
+**`console.trace()`** メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)にスタックトレースを出力します。
 
 {{AvailableInWorkers}}
 
@@ -27,13 +16,18 @@ translation_of: Web/API/Console/trace
 ## 構文
 
 ```js
-console.trace( [...any, ...data ]);
+trace()
+trace(object1, /* …, */ objectN)
 ```
 
 ### 引数
 
-- `...any, ...data` {{optional_inline}}
+- `objects` {{optional_inline}}
   - : スタックトレースと共にコンソールに出力する 0 個以上のオブジェクトです。これらは {{domxref("console.log()")}} メソッドに渡したのと同じ方法で構成され書式化されます。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 

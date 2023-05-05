@@ -13,6 +13,7 @@ tags:
   - sendMessage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
+
 {{AddonSidebar()}}
 
 Envoie un simple message aux écouteurs d'événement dans votre extension ou une extension différente.
@@ -63,9 +64,9 @@ En fonction des arguments qui lui sont donnés, cette API est parfois ambiguë. 
 
   - Les arguments sont interprétés comme (message, options) et le message est envoyé en interne si le second argument est l'un des suivants :
 
-    1.  Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)
-    2.  null
-    3.  indéfini
+    1. Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)
+    2. null
+    3. indéfini
 
   - Sinon, les arguments sont interprétés comme `(extensionId, message)`. Le message sera envoyé à l'extension identifiée par `extensionId`.
 
@@ -76,10 +77,6 @@ Notez qu'avant Firefox 55, le règles étaient différentes dans le cas des 2 ar
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
-
-## Compatibilité du navitageur
-
-{{Compat("webextensions.api.runtime.sendMessage")}}
 
 ## Exemples
 
@@ -120,6 +117,10 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
 > **Note :**
@@ -128,7 +129,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -155,4 +157,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

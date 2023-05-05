@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/CSS_questions_frequentes
 ---
+
 ## Pourquoi mon CSS, pourtant valide, ne fournit pas un rendu correct ?
 
 Pour afficher un document, les navigateurs utilisent le `DOCTYPE` - contraction de l'anglais _document type_, littéralement «&nbsp;type de document&nbsp;». Ils utilisent un mode qui est compatible avec les standards du Web et avec les bugs des vieux navigateurs. Utiliser un `DOCTYPE` correct et moderne dès le début de votre code HTML améliorera la conformité aux standards du navigateur.
@@ -54,7 +55,7 @@ Quand vous voulez appliquer un style à plusieurs blocs ou éléments dans la m�
 
 Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
 
-Voire [Les sélecteurs CSS](/fr/docs/CSS/Premiers_pas/Les_sélecteurs "Les sélecteurs CSS").
+Voire [Les sélecteurs CSS](/fr/docs/CSS/Premiers_pas/Les_sélecteurs).
 
 ## Comment revenir à la valeur par défaut d'un propriété ?
 
@@ -133,8 +134,6 @@ Pour les feuilles de style CSS, **l'ordre est important**. Si vous définissez u
 }
 ```
 
-
-
 ```html
 <!-- La plupart du texte est en gras sauf "GE",
      qui est en rouge et sans graisse -->
@@ -180,7 +179,7 @@ Dans l'exemple précédent, le problème apparaît avec des règles destinées �
 }
 ```
 
-### Utiliser le sélecteur `*`
+### Utiliser le sélecteur \*
 
 Le sélecteur `*` fait référence à n'importe quel élément et doit donc être utilisé avec soin.
 
@@ -244,7 +243,7 @@ div {
 
 Les règles exactes sont plus complexes lorsque le sélecteur contient plusieurs composants. Pour plus de détails sur la façon dont la spécificité d'un sélecteur est calculé, on pourra lire [le chapitre de la spécification CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity) ou [le chapitre correspondant de la section Apprendre](/fr/Apprendre/CSS/Les_bases/La_cascade_et_l_héritage).
 
-## Quid des propriétés `-moz-*`, `-ms-*`, `-webkit-*`, `-o-*` et `-khtml-*` ?
+## Quid des propriétés -moz-\*, -ms-\*, -webkit-\*, -o-\* et -khtml-\* ?
 
 Ces propriétés, appelées _propriétés préfixées_, sont des extensions au standard CSS. Elles sont utilisées pour les fonctionnalités expérimentales et non-standards afin d'éviter de polluer l'espace de noms usuel pour éviter des incompatibilités lorsque le standard est augmenté.
 

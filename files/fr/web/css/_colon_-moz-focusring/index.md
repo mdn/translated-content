@@ -8,17 +8,20 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-focusring
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-focusring`** est similaire à la pseudo-classe {{cssxref(":focus")}} mais ne cible un élément que si celui-ci a le focus **et** qu'un indicateur doit être dessiné autour ou sur cet élément.
 
 Si `:-moz-focusring` correspond à un élément, `:focus` correspondra également (bien que l'inverse ne soit pas toujours vrai). Cela dépend de l'agent utilisateur qui indique si un anneau de focus doit être dessiné sur l'élément qui a reçu le focus. Cette indication dépend fortement du système d'exploitation et le comportement de cette pseudo-classe diffèrera donc selon les plateformes et/ou les paramètres du système.
 
-> **Note :** Les développeurs utilisent souvent `:-moz-focusring` pour différencier l'atteinte du focus via le **clic de la souris** ou via **la navigation au clavier (avec la tabulation)**. Cette pseudo-classe est également utile si on crée un [élément personnalisé](/en-US/docs/Web/Web_Components/Using_custom_elements) dont on veut changer le style en fonction de son comportement.
+> **Note :** Les développeurs utilisent souvent `:-moz-focusring` pour différencier l'atteinte du focus via le **clic de la souris** ou via **la navigation au clavier (avec la tabulation)**. Cette pseudo-classe est également utile si on crée un [élément personnalisé](/fr/docs/Web/Web_Components/Using_custom_elements) dont on veut changer le style en fonction de son comportement.
 
 ## Syntaxe
 
-    :-moz-focusring
+```css
+:-moz-focusring
+```
 
 ## Exemple
 
@@ -51,7 +54,7 @@ Cette fonctionnalité ne fait partie d'aucune spécification bien qu'elle ait [d
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-focusring")}}
+{{Compat}}
 
 ## Voir aussi
 

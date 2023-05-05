@@ -1,17 +1,9 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
-tags:
-  - API
-  - DOM
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.namespaceURI
-translation_of: Web/API/Element/namespaceURI
 original_slug: Web/API/Node/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.namespaceURI`** は読み取り専用のプロパティで、この要素の名前空間 URI を返します。この要素が名前空間に所属していない場合は `null` を返します。
@@ -39,7 +31,7 @@ if (element.localName == "browser" &&
 
 Firefox 3.5 以前では、 HTML 文書中の HTML 要素の名前空間 URI は `null` です。それ以降のバージョンでは、 HTML5 に準拠し、 XHTML と同様に [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) となります。
 
-DOM Level 2 のメソッド [document.createElementNS](/en-US/docs/Web/API/Document/createElementNS) を用いると、指定した `namespaceURI` を持つ要素を作成することができる。
+DOM Level 2 のメソッド [document.createElementNS](/ja/docs/Web/API/Document/createElementNS) を用いると、指定した `namespaceURI` を持つ要素を作成することができる。
 
 DOM はそれ自体で名前空間の検証を行ったり強制したりすることはありません。必要な検証を行うのは DOM アプリケーションに任されています。また、一度特定の要素に関連付けられた名前空間接頭辞は、変更することができないことに注意しましょう。
 

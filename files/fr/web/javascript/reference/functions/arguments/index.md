@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments
 original_slug: Web/JavaScript/Reference/Fonctions/arguments
 ---
+
 {{jsSidebar("Fonctions")}}
 
 L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant aux arguments passés à une fonction.
@@ -24,7 +25,9 @@ L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant
 
 ## Syntaxe
 
-    arguments
+```js
+arguments
+```
 
 ## Description
 
@@ -73,7 +76,7 @@ var args = [...arguments];
 
 L'objet `arguments` est disponible uniquement dans le corps d'une fonction. Tenter d'accéder à l'objet `arguments` en dehors de la déclaration d'une fonction renvoie une erreur.
 
-Vous pouvez utiliser l'objet `arguments` si vous appelez une fonction avec plus de paramètres que ceux déclarés dans sa signature. Cette technique est utile pour les fonctions qui acceptent un nombre variable d'arguments. Vous pouvez utiliser  {{jsxref("Fonctions/arguments/length", "arguments.length")}} pour déterminer le nombre de paramètres passés à la fonction, puis utiliser chaque argument en utilisant l'objet `arguments`. (Pour déterminer le nombre d'arguments déclarés à la définition de la fonction, il faut utiliser la propriété {{jsxref("Function.length", "length")}}.)
+Vous pouvez utiliser l'objet `arguments` si vous appelez une fonction avec plus de paramètres que ceux déclarés dans sa signature. Cette technique est utile pour les fonctions qui acceptent un nombre variable d'arguments. Vous pouvez utiliser {{jsxref("Fonctions/arguments/length", "arguments.length")}} pour déterminer le nombre de paramètres passés à la fonction, puis utiliser chaque argument en utilisant l'objet `arguments`. (Pour déterminer le nombre d'arguments déclarés à la définition de la fonction, il faut utiliser la propriété {{jsxref("Function.length", "length")}}.)
 
 ### Utiliser `typeof` sur `arguments`
 
@@ -93,7 +96,7 @@ console.log(typeof arguments[0]); // renvoie le type du premier argument
 
 - {{jsxref("Fonctions/arguments/callee", "arguments.callee")}} {{Deprecated_inline}}
   - : Référence à la fonction en cours d'exécution.
-- {{jsxref("Fonctions/arguments/caller", "arguments.caller")}} {{Obsolete_inline}}
+- {{jsxref("Fonctions/arguments/caller", "arguments.caller")}} {{deprecated_inline}}
   - : Référence à la fonction appelante.
 - {{jsxref("Fonctions/arguments/length", "arguments.length")}}
   - : Référence au nombre d'arguments passés à la fonction.
@@ -219,16 +222,11 @@ func(3, 4); // 3 4
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée par JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES2015', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ES2015')}}     |                                                     |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.arguments")}}
+{{Compat}}
 
 ## Voir aussi
 

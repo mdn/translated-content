@@ -1,6 +1,6 @@
 ---
 title: Console.info()
-slug: Web/API/Console/info
+slug: Web/API/console/info
 tags:
   - API
   - Debugging
@@ -9,6 +9,7 @@ tags:
   - web console
 translation_of: Web/API/Console/info
 ---
+
 {{ APIRef("Console API") }}{{Non-standard_header}}
 
 Affiche un message informatif dans la console du navigateur. Dans Firefox et Chrome, une petit icône de _i_ s'affiche devant le message.
@@ -17,8 +18,10 @@ Affiche un message informatif dans la console du navigateur. Dans Firefox et Chr
 
 ## Syntaxe
 
-    console.info(obj1 [, obj2, ..., objN]);
-    console.info(msg [, subst1, ..., substN]);
+```js
+console.info(obj1 [, obj2, ..., objN]);
+console.info(msg [, subst1, ..., substN]);
+```
 
 ### Paramètres
 
@@ -31,15 +34,13 @@ Affiche un message informatif dans la console du navigateur. Dans Firefox et Chr
 
 Voir [Afficher du texte sur la console](/fr/docs/Web/API/Console#Outputting_text_to_the_console) dans la documentation de {{ domxref("console") }} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("Console API", "#info", "console.info()")}} | {{Spec2("Console API")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.info")}}
+{{Compat}}
 
 ## Voir aussi
 

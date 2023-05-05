@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 original_slug: JavaScript/Reference/Annexes/Fonctionnalités_dépréciées
 ---
+
 {{JsSidebar("More")}}
 
 Cette page liste les fonctionnalités de JavaScript qui sont dépréciées (_deprecated_) (c'est-à-dire que ces fonctionnalités sont toujours disponibles mais qu'il est prévu de les retirer) et les fonctionnalités obsolètes (celles qui ne sont plus utilisables).
@@ -124,7 +125,7 @@ Les propriétés qui suivent sont désormais des propriétés des instances de `
 
 - {{jsxref("Object.watch", "watch")}} et {{jsxref("Object.unwatch", "unwatch")}} sont dépréciés. L'objet {{jsxref("Proxy")}} doit être utilisé à la place.
 - `__iterator__` est déprécié.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} est déprécié. {{jsxref("Proxy")}} doit être utilisé à la place.
+- `Object.prototype.__noSuchMethod__` est déprécié. {{jsxref("Proxy")}} doit être utilisé à la place.
 
 ### Méthodes de `Date`
 
@@ -138,7 +139,7 @@ Les propriétés qui suivent sont désormais des propriétés des instances de `
 
 ### Proxy
 
-- [Proxy.create](/en-US/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/en-US/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
+- [Proxy.create](/fr/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/fr/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
 - Les trappes de captures suivantes sont obsolètes :
 
   - `hasOwn` ({{bug(980565)}}, Firefox 33).
@@ -164,14 +165,8 @@ Ces fonctionnalités sont obsolètes et ont intégralement été retirées de Ja
 
 ### Object
 
-| Propriété                                                                                | Description                                                                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{jsxref("Objets_globaux/Object/count", "__count__")}}                 | Renvoie le nombre de propriétés énumérables d'un objet défini par l'utillisateur.              |
-| {{jsxref("Objets_globaux/Object/Parent", "__parent__")}}             | Pointe vers le contexte d'un objet.                                                            |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Évalue une chaine de caractères étant du code JavaScript, dans le contexte de l'objet indiqué. |
-| {{jsxref("Object.observe()")}}                                                 | Observe les modifications apportées à un objet de façon asynchrone.                            |
-| {{jsxref("Object.unobserve()")}}                                             | Retire les observateurs ajoutés à un objet.                                                    |
-| {{jsxref("Object.getNotifier()")}}                                             | Crée un objet qui permet de déclencher un changement de façon synthétique.                     |
+- The [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
 ### `Function`
 
@@ -206,4 +201,4 @@ Voir la page [E4X](/fr/docs/E4X) pour plus d'informations.
 
 ### Sharp variables
 
-Voir la page [sur les variables « Sharp » en JavaScript](/en-US/docs/Archive/Web/Sharp_variables_in_JavaScript) pour plus d'informations.
+Voir la page [sur les variables « Sharp » en JavaScript](/fr/docs/Archive/Web/Sharp_variables_in_JavaScript) pour plus d'informations.

@@ -12,6 +12,7 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 ---
+
 {{AddonSidebar()}}
 
 Un objet `ExtensionInfo` contenant les informations sur l'extension.
@@ -27,7 +28,7 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `enabled`
   - : `boolean`. Que l'extension soit activée ou pas.
 - `homepageUrl`
-  - : `string`. L'URL de la page d'accueil de l'extension, prise en compte de la clé  [homepage_url](/fr/Add-ons/WebExtensions/manifest.json/homepage_url) du fichier manifest.json.
+  - : `string`. L'URL de la page d'accueil de l'extension, prise en compte de la clé [homepage_url](/fr/Add-ons/WebExtensions/manifest.json/homepage_url) du fichier manifest.json.
 - `hostPermissions`
   - : `ensemble` de `chaîne`. Les [permissions d'hôtes](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) de l'extension.
 - `icons`
@@ -60,7 +61,7 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `permissions`
   - : `array` of `string`. les [permissions de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) de l'extension.
 - `shortName`
-  - : `string`. Une courte version du nom de l'extension, prise à partir de la clé  [short_name](/fr/Add-ons/WebExtensions/manifest.json/short_name) du manifest.json.
+  - : `string`. Une courte version du nom de l'extension, prise à partir de la clé [short_name](/fr/Add-ons/WebExtensions/manifest.json/short_name) du manifest.json.
 - `type`
 
   - : `string`. Chaîne décrivant le type d'extension. Ceci permet de distinguer les extensions des applications et des thèmes. Il peut prendre l'une des valeurs suivantes :
@@ -76,11 +77,11 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `version`
   - : `string`. La version de l'extension, tiré de la clé [version](/fr/Add-ons/WebExtensions/manifest.json/version) du manifest.json
 - `versionName`
-  - : `string`. Le nom descriptif pour la version de l'extension, tiré de la clé  [version_name](/fr/Add-ons/WebExtensions/manifest.json/version_name) du manifest.json.
+  - : `string`. Le nom descriptif pour la version de l'extension, tiré de la clé [version_name](/fr/Add-ons/WebExtensions/manifest.json/version_name) du manifest.json.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.ExtensionInfo")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -90,7 +91,8 @@ Il s'agit d'un objet avec les propriétés suivantes :
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -117,4 +119,4 @@ Il s'agit d'un objet avec les propriétés suivantes :
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

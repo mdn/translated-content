@@ -10,19 +10,22 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Reference/Instructions/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
-La déclaration **`async function`** définit une fonction asynchrone qui renvoie un objet {{jsxref("Objets_globaux/AsyncFunction","AsyncFunction")}}. Une fonction asynchrone est une fonction qui s'exécute de façon asynchrone grâce à la boucle d'évènement en utilisant une promesse ({{jsxref("Promise")}}) comme valeur de retour.
+Une fonction asynchrone est une fonction précédée par le mot-clé `async`, et qui peut contenir le mot-clé `await`. `async` et `await` permettent un comportement asynchrone, basé sur une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)), écrite de façon simple, et évitant de configurer explicitement les chaînes de promesse.
 
-On peut également définir des fonctions asynchrones grâce au constructeur {{jsxref("AsyncFunction")}} et via une {{jsxref("Opérateurs/async_function", "expression de fonction asynchrone","",1)}}.
+Les fonctions asynchrones peuvent également être définies comme des [expressions](/fr/docs/Web/JavaScript/Reference/Operators/async_function).
 
 {{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
 
 ## Syntaxe
 
-    async function name([param[, param[, ... param]]]) {
-       instructions
-    }
+```js
+async function name([param[, param[, …param]]]) {
+  instructions
+}
+```
 
 ### Paramètres
 
@@ -143,9 +146,9 @@ setTimeout(parallelPromise, 13000); // identique à parallel
 Dans `sequentialStart`, l'exécution est arrêtée pendant deux secondes avant le premier `await` puis encore une autre seconde avant le deuxième `await`. Le deuxième minuteur n'est pas créé tant que le premier n'est pas écoulé. Le code s'exécute donc au moins en 3 secondes.
 
 Avec `concurrentStart`, les deux minuteurs sont créés puis attendus derrière un `await` Les minuteurs sont exécutés de façon concurrente. L'ensemble du code se termine donc en au moins 2 secondes plutôt qu'en 3 secondes.
-Toutefois, les appels utilisant  `await` sont exécutés séquentiellement et la deuxième instruction avec `await` attendra que la première ait été traitée. Le minuteur le plus rapide est donc créé juste après le premier.
+Toutefois, les appels utilisant `await` sont exécutés séquentiellement et la deuxième instruction avec `await` attendra que la première ait été traitée. Le minuteur le plus rapide est donc créé juste après le premier.
 
-Si on souhaite avoir deux tâches qui s'exécutent réellement en parallèle, on pourra utiliser  `await Promise.all([job1(), job2()])` comme illustré ci-avant avec `parallel`.
+Si on souhaite avoir deux tâches qui s'exécutent réellement en parallèle, on pourra utiliser `await Promise.all([job1(), job2()])` comme illustré ci-avant avec `parallel`.
 
 #### `async`/`await`, `Promise.prototype.then()` et la gestion des erreurs
 
@@ -218,14 +221,11 @@ Lorsqu'on utilise `return toto;`, la valeur `toto` sera immédiatement renvoyée
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-async-function-definitions', 'async function')}}     | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## Voir aussi
 

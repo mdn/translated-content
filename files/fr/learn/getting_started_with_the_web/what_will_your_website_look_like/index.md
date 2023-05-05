@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 original_slug: Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Installation_outils_de_base","Apprendre/Commencer_avec_le_web/Gérer_les_fichiers","Apprendre/Commencer_avec_le_web")}}
 
@@ -22,9 +23,9 @@ Avant de faire quoi que ce soit, vous avez besoin d'idées. Qu'est-ce que votre 
 
 Pour commencer, posez-vous ces questions :
 
-1.  **De quoi va parler mon site web ?** Aimez-vous les chiens, New York ou Pacman ?
-2.  **Quelles informations vais-je présenter sur le sujet ?** Écrivez un titre et quelques paragraphes, et trouvez une image que vous aimeriez mettre sur votre page.
-3.  **Quelle sera l'apparence de mon site web,** en simple termes de survol&nbsp;? Quelle sera la couleur de l'arrière plan ? Quelle sorte de police de caractères est appropriée : formelle, dessin animé, grasse et lourde, subtile ?
+1. **De quoi va parler mon site web ?** Aimez-vous les chiens, New York ou Pacman ?
+2. **Quelles informations vais-je présenter sur le sujet ?** Écrivez un titre et quelques paragraphes, et trouvez une image que vous aimeriez mettre sur votre page.
+3. **Quelle sera l'apparence de mon site web,** en simple termes de survol&nbsp;? Quelle sera la couleur de l'arrière plan ? Quelle sorte de police de caractères est appropriée : formelle, dessin animé, grasse et lourde, subtile ?
 
 > **Note :** Les projets complexes nécessitent des lignes directrices (guidelines) détaillées précisant tout : couleurs, polices, espacement entre éléments de la page, style d'écriture adapté, etc. Ceci est parfois appelé un guide de conception ou une charte graphique, vous pouvez en voir un exemple dans [Firefox OS Guidelines](https://www.mozilla.org/fr/styleguide/products/firefox-os/).
 
@@ -56,9 +57,9 @@ Pour choisir une couleur, utilisez une [palette de couleurs](http://www.code-cou
 
 Pour choisir une image, allez sur [Google Images](https://www.google.com/imghp?gws_rd=ssl) et cherchez une image qui convient.
 
-1.  Quand vous avez trouvé l'image que vous voulez, cliquez sur l'image.
-2.  Appuyez sur le bouton _Afficher l'image_.
-3.  Sur la page suivante, faites un clic-droit sur l'image (Ctrl + clic sur Mac), choisissez _Enregistrer l'image sous…_ et choisissez un endroit sûr pour enregistrer l'image. Ou bien, copiez l'adresse web de l'image depuis la barre d'adresse de votre navigateur pour une utilisation ultérieure.
+1. Quand vous avez trouvé l'image que vous voulez, cliquez sur l'image.
+2. Appuyez sur le bouton _Afficher l'image_.
+3. Sur la page suivante, faites un clic-droit sur l'image (Ctrl + clic sur Mac), choisissez _Enregistrer l'image sous…_ et choisissez un endroit sûr pour enregistrer l'image. Ou bien, copiez l'adresse web de l'image depuis la barre d'adresse de votre navigateur pour une utilisation ultérieure.
 
 ![](Screenshot%20from%202014-11-04%2015:09:21.png)
 
@@ -72,24 +73,13 @@ Pour choisir une image, allez sur [Google Images](https://www.google.com/imghp?g
 
 Pour choisir une police :
 
-1.  Allez sur [Google Fonts](http://www.google.com/fonts) et faites défiler la page jusqu'à en trouver une que vous aimez. Vous pouvez aussi utiliser les contrôles sur la gauche pour filtrer plus précisément les résultats.
-2.  Cliquez sur l'icône _« + »_ (_ajouter_) à côté de la police que vous voulez.
-3.  Cliquez sur le bouton « \* Family Selected » dans le panneau en bas de la page («&nbsp;\*&nbsp;» dépend du nombre de polices sélectionnées).
-4.  Sur la fenêtre contextuelle suivante, vous pouvez copier les lignes de code que Google vous donne dans votre éditeur de texte pour les garder pour plus tard.
+1. Allez sur [Google Fonts](http://www.google.com/fonts) et faites défiler la page jusqu'à en trouver une que vous aimez. Vous pouvez aussi utiliser les contrôles sur la gauche pour filtrer plus précisément les résultats.
+2. Cliquez sur l'icône _« + »_ (_ajouter_) à côté de la police que vous voulez.
+3. Cliquez sur le bouton « \* Family Selected » dans le panneau en bas de la page («&nbsp;\*&nbsp;» dépend du nombre de polices sélectionnées).
+4. Sur la fenêtre contextuelle suivante, vous pouvez copier les lignes de code que Google vous donne dans votre éditeur de texte pour les garder pour plus tard.
 
 ![](font1.png)
 
 ![](font2.png)
 
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Installation_outils_de_base", "Apprendre/Commencer_avec_le_web/Gérer_les_fichiers","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
-- [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
-- [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
-- [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
-- [Bases du JavaScript](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
-- [Publier votre site Web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
-- [Comment fonctionne le Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)

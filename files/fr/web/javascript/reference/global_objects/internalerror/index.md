@@ -1,60 +1,75 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-tags:
-  - Error
-  - InternalError
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 original_slug: Web/JavaScript/Reference/Objets_globaux/InternalError
+browser-compat: javascript.builtins.InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
-L'objet **`InternalError`** indique qu'une erreur liée au moteur JavaScript s'est produite. Par exemple **"InternalError** : Niveau de récursion trop important".
+L'objet **`InternalError`** indique qu'une erreur interne liée au moteur JavaScript s'est produite.
+De telles erreurs se produisent généralement au dépassement d'un seuil, par exemple&nbsp;:
 
-## Syntaxe
+- «&nbsp;trop de cas pour le `switch`&nbsp;»&nbsp;;
+- «&nbsp;trop de parenthèses dans l'expression rationnelle&nbsp;»&nbsp;;
+- «&nbsp;initialisateur de tableau trop grand&nbsp;»&nbsp;;
+- «&nbsp;trop de niveaux de récursion&nbsp;».
 
-    new InternalError([message[, fileName[, lineNumber]]])
+## Constructeur
 
-### Paramètres
+- [`InternalError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError/InternalError)
+  - : Crée un nouvel objet `InternalError`.
 
-- `message`
-  - : Paramètre optionnel. Une description de l'erreur compréhensible pour un être humain.
-- `fileName` {{Non-standard_inline}}
-  - : Paramètre optionnel. Le nom du fichier contenant le code à l'origine de l'erreur.
-- `lineNumber` {{Non-standard_inline}}
-  - : Paramètre optionnel. Le numéro de la ligne du code à l'origine de l'erreur.
+## Propriétés des instances
 
-## Description
+- [`InternalError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
+  - : Message d'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`InternalError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+  - : Nom d'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`InternalError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
+  - : Le chemin du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`InternalError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
+  - : Le numéro de la ligne du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`InternalError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
+  - : Le numéro de colonne de la ligne du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`InternalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+  - : La pile d'appels, héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
-Une exception `InternalError` est levée à chaque fois qu'il se produit une erreur interne au moteur JavaScript.
+## Exemples
 
-Le plus souvent, cette exception se produit lorsque quelque chose atteint un niveau trop élévé. Par exemple :
+### Trop de niveau de récursion
 
-- trop de cas dans une construction switch,
-- trop de parenthèses au sein d'une expression rationnelle,
-- un tableau littéral trop grand,
-- trop de niveaux de récursion.
+Cette fonction récursive s'appelle 10 fois, comme indiquée par la condition d'arrêt.
 
-## Propriétés
+```js
+function boucle(x) {
+  if (x >= 10) {
+    // "x >= 10" représente la condition d'arrêt
+    return;
+  } 
+  // faire des trucs
+  boucle(x + 1); // l'appel récursif
+}
+boucle(0);
+```
 
-- {{jsxref("InternalError.prototype")}}
-  - : Permet l'ajout de nouvelles propriétés à un objet `InternalError`.
+En changeant cette condition avec une valeur extrêmement grande, cela ne fonctionnera plus&nbsp;:
 
-## Méthodes
+```js example-bad
+function boucle(x) {
+  if (x >= 1000000000000) {
+    return;
+  }
+  // faire des trucs
+  boucle(x + 1);
+}
+boucle(0);
 
-L'objet global `InternalError` ne contient pas de méthode propre. En revanche, il hérite de certaines méthodes via sa chaîne de prototypes.
+// InternalError: too much recursion
+```
 
-## Instances de `InternalError`
-
-### Propriétés
-
-{{page("/fr/docs/JavaScript/Reference/Objets_globaux/InternalError/prototype","Properties")}}
-
-### Méthodes
-
-{{page("/fr/docs/JavaScript/Reference/Objets_globaux/InternalError/prototype","Methods")}}
+Pour plus d'informations, voir [la page sur `InternalError: too much recursion`](/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion).
 
 ## Spécifications
 
@@ -62,9 +77,9 @@ Cet objet ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.InternalError")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Error")}}
-- {{jsxref("InternalError.prototype")}}
+- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`InternalError: too much recursion`](/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)

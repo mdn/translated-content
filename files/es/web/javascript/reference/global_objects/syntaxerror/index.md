@@ -1,10 +1,9 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
-translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 original_slug: Web/JavaScript/Referencia/Objetos_globales/SyntaxError
-browser-compat: javascript.builtins.SyntaxError
 ---
+
 {{JSRef}}
 
 El objeto **`SyntaxError`** represta un error cuando se trata de interpretar código que resulta ser inválido sintácticamente. Esto ocurre cuando el motor de JavaScript encuentra el orden de los tokens o los token mismos no son conformes a la sinstaxis del lenguaje cuando se analiza el código.
@@ -72,4 +71,3 @@ try {
 ## Véase también
 
 - {{jsxref("Error")}}
-

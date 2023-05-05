@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Semantics
 original_slug: Glossaire/Sémantique
 ---
+
 En programmation, la **sémantique** fait référence au sens d'une partie de code — par exemple "quel effet aura l'exécution de cette ligne de JavaScript ?", ou "quel est le rôle ou le but de cet élément HTML" (plutôt que "à quoi ressemble-t-il ?".)
 
 Par exemple, l'élément {{htmlelement("h1")}} est un élément sémantique qui donne au texte qu'il contient le rôle (ou le sens) de "titre de premier niveau de votre page."
@@ -45,11 +46,11 @@ Ce sont quelques-uns des éléments sémantiques ([source](http://www.w3schools.
 - {{htmlelement("summary")}}
 - {{htmlelement("time")}}
 
-## **Pour approfondir**
+## Pour approfondir
 
-### **Culture générale**
+### Culture générale
 
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Element#Inline_text_semantics) sur MDN
 - [Problèmes résolus par HTML5](/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Probl%C3%A8mes_r%C3%A9solus_par_HTML5) sur MDN
 - [HTML5 Semantic Elements](http://www.w3schools.com/html/html5_semantic_elements.asp) sur w3schools
-- {{interwiki("wikipedia", "Sémantique des langages de programmation", "La signification de sémantique en informatique")}} sur Wikipédia
+- [Sémantique des langages de programmation](https://fr.wikipedia.org/wiki/S%C3%A9mantique_des_langages_de_programmation) sur Wikipédia

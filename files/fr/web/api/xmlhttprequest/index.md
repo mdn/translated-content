@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 Les objets `XMLHttpRequest` (XHR) permettent d'interagir avec des serveurs. On peut récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisateur.
@@ -33,7 +34,7 @@ Si vos opérations de communication nécessitent l'échange d'évènements ou de
 _Cette interface hérite également des propriétés de {{domxref("XMLHttpRequestEventTarget")}} et de {{domxref("EventTarget")}}._
 
 - {{domxref("XMLHttpRequest.onreadystatechange")}}
-  - : Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) invoqué à chaque fois que l'attribut `readyState` change.
+  - : Un gestionnaire d'évènement invoqué à chaque fois que l'attribut `readyState` change.
 - {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
   - : L'état de la requête sous la forme d'un `unsigned short`.
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
@@ -56,7 +57,7 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
 - {{domxref("XMLHttpRequest.timeout")}}
   - : Un entier `unsigned long` qui représente le nombre de millisecondes qu'une requête peut prendre avant d'être terminée automatiquement.
 - {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) appelé lorsque la requête a expiré.
+  - : Un gestionnaire d'évènement appelé lorsque la requête a expiré.
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : Un objet {{domxref("XMLHttpRequestUpload")}} qui représente le processus d'_upload_.
 - {{domxref("XMLHttpRequest.withCredentials")}}
@@ -65,16 +66,16 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
 ### Propriétés non-standard
 
 - {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
-  - : Un objet {{Interface("nsIChannel")}}. Le canal à utiliser par l'objet lorsqu'il effectue la requête.
+  - : Un objet `nsIChannel`. Le canal à utiliser par l'objet lorsqu'il effectue la requête.
 - {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
   - : Un booléen. S'il est vrai, la requête sera envoyée sans cookie ou en-tête d'autorisation.
 - {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
   - : Un booléen. S'il est vrai, la politique d'origine unique ne sera pas vérifiée pour la requête.
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : Un booléen qui indique si l'objet représente une requête de service en arrière-plan.
-- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : Un objet {{jsxref("ArrayBuffer")}} qui est la réponse à la requête sous la forme d'un tableau typé JavaScript.
-- {{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}
+- {{domxref("XMLHttpRequest.multipart")}} {{deprecated_inline}}
   - : **Cette fonctionnalité spécifique à Gecko a été retirée avec Firefox/Gecko 22.** Veuillez utiliser [les évènements serveurs](/fr/docs/Web/API/Server-sent_events) ou [les web sockets](/fr/docs/Web/API/WebSockets_API) ou encore la propriété `responseText` des évènements de progression.
 
 ### Gestionnaires d'évènement
@@ -83,7 +84,7 @@ Le gestionnaire `onreadystatechange`, comme propriété des instances `XMLHttpRe
 
 D'autres gestionnaires d'évènements ont également été implémentés dans différents navigateurs (`onload`, `onerror`, `onprogress`, etc.). Voir le guide [Manipuler XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest).
 
-La plupart des navigateurs récents gère également les évènements via la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes  `on*`).
+La plupart des navigateurs récents gère également les évènements via la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes `on*`).
 
 ## Méthodes
 
@@ -110,7 +111,7 @@ La plupart des navigateurs récents gère également les évènements via la mé
 > **Attention :** Cette méthode ne doit pas être appelée depuis du code JavaScript.
 
 - {{domxref("XMLHttpRequest.openRequest()")}}
-  - : Initialise une requête depuis du code natif. Voir la méthode [`open()`](</en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()>) ci-avant pour initialiser une requête de façon standard en JavaSCript.
+  - : Initialise une requête depuis du code natif. Voir la méthode [`open()`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open) ci-avant pour initialiser une requête de façon standard en JavaSCript.
 - {{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}
   - : Une variante de `send()` afin d'envoyer des données binaires.
 
@@ -137,13 +138,11 @@ La plupart des navigateurs récents gère également les évènements via la mé
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires                                |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------- |
-| {{SpecName('XMLHttpRequest')}} | {{Spec2('XMLHttpRequest')}} | Standard évolutif, version la plus récente. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Voir aussi
 

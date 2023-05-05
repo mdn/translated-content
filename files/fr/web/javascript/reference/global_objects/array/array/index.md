@@ -9,16 +9,19 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/Array
 ---
+
 {{JSRef}}
 
 Le constructeur **`Array()`** permet de créer des objets {{jsxref("Array")}}.
 
 ## Syntaxe
 
-    [element0, element1, ..., elementN]
+```js
+[element0, element1, ..., elementN]
 
-    new Array(element0, element1[, ...[, elementN]])
-    new Array(longueurTableau)
+new Array(element0, element1[, ...[, elementN]])
+new Array(longueurTableau)
+```
 
 ### Paramètres
 
@@ -64,13 +67,11 @@ console.log(fruits[0]);     // "Pomme"
 
 ## Spécifications
 
-| Spécification                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array-constructor', 'Array constructor')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.Array")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,8 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Property
-browser-compat: javascript.builtins.Map.@@species
 ---
+
 {{JSRef}}
 
 O Acessor de propriedade **`Map[@@species]`** retorna o construtor do `Map`.
@@ -16,7 +11,6 @@ O Acessor de propriedade **`Map[@@species]`** retorna o construtor do `Map`.
 
 O acessor `species` retorna o valor padrão do construtor dos objetos `Map`
 Subclasses de construtores podem sobrescrever isso para mudar o construtor atribuído.
-
 
 ## Exemplos
 
@@ -31,7 +25,7 @@ Map[Symbol.species]; // function Map()
 ### Species em objetos derivados
 
 Em uma objeto derivado (e.g. seu custom map `MyMap`), a `specie` do `MyMap` é o construtor do `MyMap`.
-Porém, você deve querer sobrescrever isso, para retornar o objeto `Map` pai nos métodos derivados de sua classe. 
+Porém, você deve querer sobrescrever isso, para retornar o objeto `Map` pai nos métodos derivados de sua classe.
 
 ```js
 class MyMap extends Map {

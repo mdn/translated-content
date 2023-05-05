@@ -6,15 +6,18 @@ tags:
 translation_of: Web/XSLT/Element/param
 original_slug: Web/XSLT/param
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:param>` définit un paramètre par son nom et, éventuellement, lui attribue une valeur par défaut. Lorsqu'il est utilisé comme élément de premier niveau, le paramètre est global. Utilisé dans un élément `<xsl:template>`, le paramètre est local à ce modèle. Dans ce dernier cas, il doit être le premier élément enfant du modèle.
 
 ### Syntaxe
 
-    <xsl:param name=NOM select=EXPRESSION>
-    	MODÈLE
-    </xsl:param>
+```xml
+<xsl:param name=NOM select=EXPRESSION>
+  MODÈLE
+</xsl:param>
+```
 
 ### Attribut obligatoire
 

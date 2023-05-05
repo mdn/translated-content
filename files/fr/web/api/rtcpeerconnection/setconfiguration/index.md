@@ -9,6 +9,7 @@ tags:
   - setConfiguration
 translation_of: Web/API/RTCPeerConnection/setConfiguration
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 La méthode **`RTCPeerConnection.setConfiguration()`** définit la configuration courante pour la connexion {{domxref("RTCPeerConnection")}} en fonction des valeurs des propriétés de l'objet {{domxref("RTCConfiguration")}} passé en argument. Cela permet de modifier les serveurs ICE et les règles de transport utilisés par la connexion.
@@ -16,13 +17,15 @@ La méthode **`RTCPeerConnection.setConfiguration()`** définit la configuration
 Le cas d'usage le plus probable (bien qu'il ne soit probablement pas répandu) est le remplacement des serveurs ICE à utiliser. Voici deux scénarios pour lesquels cela pourrait se produire :
 
 - L'objet {{domxref("RTCPeerConnection")}} a été instancié sans qu'un serveur ICE soit spécifié. Si le constructeur {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} a été appelé sans paramètre, on doit alors appeler `setConfiguration()` pour ajouter des serveurs ICE avant que la négociation ICE puisse avoir lieu.
-- La connexion doit être renégociée et il faut utiliser un autre ensemble de serveurs ICE pour une certaine raison (ex. l'utilisateur s'est déplacé dans une nouvelle région et il faut donc utiliser de nouveaux serveurs ICE régionaux). Dans ce cas, on pourra appeler `setConfiguration()` pour passer sur les serveurs régionaux puis initier [un redémarrage ICE](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart).
+- La connexion doit être renégociée et il faut utiliser un autre ensemble de serveurs ICE pour une certaine raison (ex. l'utilisateur s'est déplacé dans une nouvelle région et il faut donc utiliser de nouveaux serveurs ICE régionaux). Dans ce cas, on pourra appeler `setConfiguration()` pour passer sur les serveurs régionaux puis initier [un redémarrage ICE](/fr/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart).
 
 > **Note :** On ne peut pas changer les informations d'identité d'une connexion une fois que celle-ci a été créée.
 
 ## Syntaxe
 
-    RTCPeerConnection.setConfiguration(configuration);
+```js
+RTCPeerConnection.setConfiguration(configuration);
+```
 
 ### Paramètres
 
@@ -67,13 +70,11 @@ Pour commencer, on crée une {{domxref("RTCConfiguration")}}, `restartConfig`, e
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                | État                             | Commentaires        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-setConfiguration-void-RTCConfiguration-configuration', 'setConfiguration()')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.RTCPeerConnection.setConfiguration")}}
+{{Compat}}
 
 ## Voir aussi
 

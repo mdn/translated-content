@@ -1,18 +1,8 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した {{jsxref("Intl.DateTimeFormat")}} フォーマッターが生成する文字列のロケールを考慮した書式化を可能にします。
@@ -54,7 +44,7 @@ formatToParts(date)
 - fractionalSecond
   - : 小数点以下の秒として使用される文字列です。例えば "`0`" や "`00`" や "`000`" です。
 - hour
-  - : 時刻として使用される文字列。たとえば "`3`" や "`03`"。
+  - : 時刻として使用される文字列。たとえば "`3`" や "`03`"。
 - literal
   - : 日付や時刻の区切りとして使用される文字列。たとえば "`/`"、"`,`"、"`o'clock`"、"`de`"。
 - minute
@@ -64,19 +54,19 @@ formatToParts(date)
 - relatedYear
   - : カレンダーの表現が year ではなくyearNameである場合、関連する4桁のグレゴリオ暦の年に使用される文字列です。例えば "`2019`" です。
 - second
-  - : 秒として使用される文字列。たとえば、"`07`" や "`42`"。
+  - : 秒として使用される文字列。たとえば、"`07`" や "`42`"。
 - timeZoneName
   - : タイムゾーン名として使用される文字列。たとえば、"`UTC`"。
 - weekday
-  - : 曜日として使用される文字列。たとえば、"`M`" や "`Monday`"、"`Montag`"。
+  - : 曜日として使用される文字列。たとえば、"`M`" や "`Monday`"、"`Montag`"。
 - year
-  - : 年として使用される文字列。たとえば、"`2012`" や "`96`"。
+  - : 年として使用される文字列。たとえば、"`2012`" や "`96`"。
 - yearName
   - : 関連するコンテキストで yearName に使用される文字列、例えば "`geng-zi`" など。
 
 ## ポリフィル
 
-この機能のポリフィルは、[提案リポジトリー](https://github.com/zbraniecki/proposal-intl-formatToParts)から利用できます。
+この機能のポリフィルは、[提案リポジトリー](https://github.com/tc39/proposal-intl-formatToParts)から利用できます。
 
 ## 例
 

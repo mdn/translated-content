@@ -4,6 +4,7 @@ slug: Web/API/DataTransfer/clearData
 translation_of: Web/API/DataTransfer/clearData
 browser-compat: api.DataTransfer.clearData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 La méthode **`DataTransfer.clearData()`** retire les données du type indiqué de l'opération de glisser-déposer. S'il n'existe pas de données pour le type indiqué, cette méthode n'a aucun effet.
@@ -27,7 +28,7 @@ DataTransfer.clearData([format]);
 
 ## Exemple
 
-Cet exemple illustre l'utilisation des méthodes 
+Cet exemple illustre l'utilisation des méthodes
 [`getData()`](/fr/docs/Web/API/DataTransfer/getData),
 [`setData()`](/fr/docs/Web/API/DataTransfer/setData) et `clearData()` de l'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer).
 

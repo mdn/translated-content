@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feConvolveMatrix
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feConvolveMatrix>`** applique une matrice de convolution d'effet de filtre. Une convolution combine les pixels de l'image en entrée avec ceux voisins pour donner une image résultante. On peut obtenir une grande variété d'opérations d'imagerie à l'aide de convolutions, dont le flou, la détection de bord, la netteté, l'estampage et le chanfreinage.
@@ -34,23 +35,29 @@ Remarquez dans la formule ci-dessus que les valeurs de la matrice noyau sont app
 
 Pour illustrer, supposons que l'on ait une image en entrée, de 5x5 pixels, dont les valeurs de couleur pour l'un des canaux de couleur sont les suivantes:
 
-    0    20  40 235 235
-    100 120 140 235 235
-    200 220 240 235 235
-    225 225 255 255 255
-    225 225 255 255 255
+```
+0    20  40 235 235
+100 120 140 235 235
+200 220 240 235 235
+225 225 255 255 255
+225 225 255 255 255
+```
 
 et que l'on définit un noyau de convolution de 3x3 comme ceci:
 
-    1 2 3
-    4 5 6
-    7 8 9
+```
+1 2 3
+4 5 6
+7 8 9
+```
 
 Concentrons-nous sur la valeur de couleur de la deuxième ligne, deuxième colonne (la valeur du pixel source est 120). En supposant le cas le plus simple (quand le quadrillage de pixels de l'image source s'aligne parfaitement avec celui du noyau) et en supposant les valeurs par défaut des attributs `divisor`, `targetX` et `targetY`, alors la valeur de couleur résultante sera :
 
-    (9*  0 + 8* 20 + 7* 40 +
-     6*100 + 5*120 + 4*140 +
-     3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
+```
+(9*  0 + 8* 20 + 7* 40 +
+ 6*100 + 5*120 + 4*140 +
+ 3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
+```
 
 ## Contexte d'utilisation
 
@@ -110,14 +117,11 @@ Cet élément implémente l'interface {{domxref("SVGFEConvolveMatrixElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}}         | {{Spec2("Filters 1.0")}} |                     |
-| {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feConvolveMatrix")}}
+{{Compat}}
 
 ## Voir aussi
 

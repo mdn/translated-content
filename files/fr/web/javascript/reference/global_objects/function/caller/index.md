@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/caller
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété **`function.caller`** renvoie la fonction qui a appelé la fonction donnée. Cette propriété est interdite en mode strict.
@@ -33,11 +34,15 @@ f(2);
 
 Au moment où `stop()` est appelé, la pile sera :
 
-    f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```js
+f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```
 
 Et ceci est vrai :
 
-    stop.caller === g && f.caller === g && g.caller === f
+```js
+stop.caller === g && f.caller === g && g.caller === f
+```
 
 Donc si on essaie d'obtenir la pile de cette façon :
 
@@ -74,7 +79,7 @@ Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.caller")}}
+{{Compat}}
 
 ## Voir aussi
 

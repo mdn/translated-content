@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/HTML_basics
 original_slug: Apprendre/Commencer_avec_le_web/Les_bases_HTML
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Gérer_les_fichiers", "Apprendre/Commencer_avec_le_web/Les_bases_CSS", "Apprendre/Commencer_avec_le_web")}}
 
@@ -20,7 +21,9 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_HTML
 
 HTML n'est pas un langage de programmation. C'est un _langage de balises_ qui définit la structure de votre contenu. HTML se compose d'une série d'**{{Glossary("element", "éléments")}}**, utilisés pour entourer, ou envelopper, les diverses parties du contenu pour les faire apparaître ou agir d'une certaine façon. Les {{Glossary("tag", "balises")}} entourantes peuvent être rendues par un mot ou une image lien hypertexte vers quelque chose d'autre, un texte en italique, une police plus grande ou plus petite, et ainsi de suite. Par exemple, avec la ligne de contenu suivante :
 
-    Mon chat est très grincheux
+```
+Mon chat est très grincheux
+```
 
 Si vous souhaitez que cette ligne reste ainsi, nous indiquerons qu'il s'agit d'un paragraphe en l'entourant des balises paragraphe :
 
@@ -36,10 +39,10 @@ Regardons de plus près cet élément paragraphe :
 
 Les composants principaux de notre élément sont :
 
-1.  **La balise ouvrante :** celle-ci se compose du nom de l'élément (ici « p »), entre deux **chevrons**. Cela indique le début de l'élément, soit l'endroit à partir duquel celui-ci prend effet. Pour notre exemple, cela indique le début du paragraphe.
-2.  **La balise fermante :** ici on a également des chevrons et le nom de l'élément, auxquels on ajoute une barre oblique avant le nom de l'élément. Cela indique la fin de l'élément. Pour notre exemple, cela indique la fin du paragraphe. Oublier la balise fermante est une erreur courante de débutant et peut conduire à de curieux résultats.
-3.  **Le contenu :** C'est le contenu de l'élément. Ici, c'est simplement du texte.
-4.  **L'élément :** Il est composé de la balise ouvrante, de la balise fermante et du contenu.
+1. **La balise ouvrante :** celle-ci se compose du nom de l'élément (ici « p »), entre deux **chevrons**. Cela indique le début de l'élément, soit l'endroit à partir duquel celui-ci prend effet. Pour notre exemple, cela indique le début du paragraphe.
+2. **La balise fermante :** ici on a également des chevrons et le nom de l'élément, auxquels on ajoute une barre oblique avant le nom de l'élément. Cela indique la fin de l'élément. Pour notre exemple, cela indique la fin du paragraphe. Oublier la balise fermante est une erreur courante de débutant et peut conduire à de curieux résultats.
+3. **Le contenu :** C'est le contenu de l'élément. Ici, c'est simplement du texte.
+4. **L'élément :** Il est composé de la balise ouvrante, de la balise fermante et du contenu.
 
 Les éléments peuvent aussi avoir des « attributs », ce qui ressemble à :
 
@@ -49,9 +52,9 @@ Les attributs contiennent des informations supplémentaires qui portent sur l'é
 
 Un attribut doit toujours avoir :
 
-1.  Un espace entre l'attribut et le nom de l'élément ou l'attribut précédent (s'il y a plusieurs attributs) ;
-2.  Un nom (le nom de l'attribut), suivi d'un signe égal « = » ;
-3.  Des guillemets anglais (") pour encadrer la valeur de l'attribut.
+1. Un espace entre l'attribut et le nom de l'élément ou l'attribut précédent (s'il y a plusieurs attributs) ;
+2. Un nom (le nom de l'attribut), suivi d'un signe égal « = » ;
+3. Des guillemets anglais (") pour encadrer la valeur de l'attribut.
 
 ### Imbriquer des éléments
 
@@ -117,8 +120,8 @@ Comme on l'a vu auparavant, cet élément permet d'intégrer une image dans la p
 
 Nous avons aussi utilisé l'attribut `alt` (pour **alt**ernatif). Il contient un texte descriptif de l'image à l'intention des utilisateurs qui ne peuvent pas voir l'image, car&nbsp;:
 
-1.  ils sont mal-voyants. Les utilisateurs handicapés visuellement utilisent souvent des outils nommés lecteurs d'écrans pour lire le texte de cet attribut ;
-2.  quelque chose s'est mal passé et l'image n'a pas pu être affichée. Par exemple, modifiez volontairement le chemin dans votre attribut `src` et faites qu'il soit incorrect. Si vous enregistrez et rechargez la page, vous verrez quelque chose comme ceci à la place de l'image :
+1. ils sont mal-voyants. Les utilisateurs handicapés visuellement utilisent souvent des outils nommés lecteurs d'écrans pour lire le texte de cet attribut ;
+2. quelque chose s'est mal passé et l'image n'a pas pu être affichée. Par exemple, modifiez volontairement le chemin dans votre attribut `src` et faites qu'il soit incorrect. Si vous enregistrez et rechargez la page, vous verrez quelque chose comme ceci à la place de l'image :
 
 ![Mon image de test]()
 
@@ -159,8 +162,8 @@ Ici, vous pouvez ajouter le texte que vous avez choisi lorsque vous avez décid�
 
 Une grande partie du contenu sur le Web est présente sous forme de listes. HTML a donc des éléments utilisés pour représenter ces listes. Le balisage des listes contient toujours au moins deux éléments. Les types de listes utilisés fréquemment sont les listes ordonnées et les listes non-ordonnées :
 
-1.  **Les listes non-ordonnées** sont des listes pour lesquelles l'ordre des éléments n'a pas d'importance (par exemple une liste d'emplettes). La balise utilisée pour ces listes est l'élément {{htmlelement("ul")}} (**ul** signifie <i lang="en">**u**nordered **l**ist</i> liste non-ordonnée en anglais)
-2.  **Les listes ordonnées** sont des listes pour lesquelles l'ordre des éléments est important (par exemple une recette). La balise utilisée pour ces listes est l'élément {{htmlelement("ol")}} (**ol** signifie <i lang="en">**o**rdered **l**ist</i> liste ordonnée en anglais)
+1. **Les listes non-ordonnées** sont des listes pour lesquelles l'ordre des éléments n'a pas d'importance (par exemple une liste d'emplettes). La balise utilisée pour ces listes est l'élément {{htmlelement("ul")}} (**ul** signifie <i lang="en">**u**nordered **l**ist</i> liste non-ordonnée en anglais)
+2. **Les listes ordonnées** sont des listes pour lesquelles l'ordre des éléments est important (par exemple une recette). La balise utilisée pour ces listes est l'élément {{htmlelement("ol")}} (**ol** signifie <i lang="en">**o**rdered **l**ist</i> liste ordonnée en anglais)
 
 Chaque élément d'une liste est balisé avec un élément {{htmlelement("li")}} (**l**ist **i**tem).
 
@@ -190,20 +193,20 @@ On pourrait faire :
 
 Les liens sont très importants, ce sont eux qui font que le web est une **_toile_** sur laquelle on peut naviguer de page en page. Pour créer un lien, il suffit d'utiliser l'élément {{htmlelement("a")}} (le _a_ est un raccourci pour « **a**ncre »). Pour transformer du texte en un lien, suivez ces étapes :
 
-1.  Choisissez un texte (ici, nous travaillerons avec le texte « Manifeste Mozilla ».
-2.  Encadrez le texte dans un élément \<a> :
+1. Choisissez un texte (ici, nous travaillerons avec le texte « Manifeste Mozilla ».
+2. Encadrez le texte dans un élément \<a> :
 
     ```html
     <a>Manifeste Mozilla</a>
     ```
 
-3.  Fournissez un attribut `href` pour l'élément \<a>, de cette façon :
+3. Fournissez un attribut `href` pour l'élément \<a>, de cette façon :
 
     ```html
     <a href="">Manifeste Mozilla</a>
     ```
 
-4.  Dans cet attribut, ajoutez le lien vers le site vers lequel vous voulez diriger les utilisateurs :
+4. Dans cet attribut, ajoutez le lien vers le site vers lequel vous voulez diriger les utilisateurs :
 
     ```html
     <a href="https://www.mozilla.org/fr/about/manifesto/">Manifeste Mozilla</a>
@@ -226,14 +229,3 @@ Si vous êtes bloqué, n'hésitez pas à comparer votre travail avec [l'exemple 
 Dans cet article, nous n'avons fait qu'effleurer la surface de HTML. Pour en apprendre plus sur HTML, vous pouvez vous rendre sur la page [Apprendre HTML](/fr/Apprendre/HTML).
 
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Gérer_les_fichiers", "Apprendre/Commencer_avec_le_web/Les_bases_CSS","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
-- [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
-- [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
-- [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
-- [Bases du JavaScript](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
-- [Publier votre site Web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
-- [Comment fonctionne le Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)

@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -28,7 +29,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 
 Version de l'extension, sous forme de nombres et de caractères ASCII séparés par des points. Pour connaître les détails du format de version, consultez la page [Format de la version](/fr/docs/Toolkit_version_format).
 
-Vous pouvez inspecter le [code de linter des modules complémentaires ](https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10)pour voir comment les versions d'extension pour Firefox sont validées.
+Vous pouvez inspecter le [code de linter des modules complémentaires](https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10) pour voir comment les versions d'extension pour Firefox sont validées.
 
 Notez que [la syntaxe définie pour la version de Chrome](https://developer.chrome.com/extensions/manifest/version) est plus restrictive que celle utilisée par Firefox :
 
@@ -58,4 +59,4 @@ console.log(browser.runtime.getManifest().version);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.version")}}
+{{Compat}}

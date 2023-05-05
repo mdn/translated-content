@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
+
 {{AddonSidebar}}
 
 Découvrez quand le système de l'utilisateur est inactif, vérouillé ou actif.
@@ -28,16 +29,16 @@ Pour utiliser cette API, vous disposez de la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("idle.queryState()")}}
   - : Renvoie `"locked"` si le système est verrouillé, `"idle"` si l'utilisateur n'a généré aucune entrée pendant un nombre de secondes spécifié, ou sinon `"active"`
 - {{WebExtAPIRef("idle.setDetectionInterval()")}}
-  - : Définit l'intervalle utilisé pour déterminer quand le système est inactif pour les événements  {{WebExtAPIRef("idle.onStateChanged")}}.
+  - : Définit l'intervalle utilisé pour déterminer quand le système est inactif pour les événements {{WebExtAPIRef("idle.onStateChanged")}}.
 
 ## Evénements
 
 - {{WebExtAPIRef("idle.onStateChanged")}}
   - : Définit quand le système change d'état.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -47,7 +48,8 @@ Pour utiliser cette API, vous disposez de la [permission](/fr/Add-ons/WebExtensi
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,4 +76,4 @@ Pour utiliser cette API, vous disposez de la [permission](/fr/Add-ons/WebExtensi
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -12,6 +12,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
 ---
+
 {{AddonSidebar()}}
 
 Enregistre la page en cours en tant que fichier PDF. Cela ouvrira une boîte de dialogue, fournie par le système d'exploitation sous-jacent, demandant à l'utilisateur où il veut enregistrer le fichier PDF.
@@ -29,7 +30,7 @@ var saving = browser.tabs.saveAsPDF(
 ### Paramètres
 
 - `pageSettings`
-  - : `object`. Paramètres de la page enregistrée, en tant qu'objet  {{WebExtAPIRef("tabs.PageSettings")}}. Cet objet doit être donné, mais toutes ses propriétés sont facultatives. Toutes les propriétés non spécifiées ici recevront les valeurs par défaut répertoriées dans la documentation  {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}}.
+  - : `object`. Paramètres de la page enregistrée, en tant qu'objet {{WebExtAPIRef("tabs.PageSettings")}}. Cet objet doit être donné, mais toutes ses propriétés sont facultatives. Toutes les propriétés non spécifiées ici recevront les valeurs par défaut répertoriées dans la documentation {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}}.
 
 ### Valeur retournée
 
@@ -54,6 +55,6 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.saveAsPDF")}}
+{{Compat}}

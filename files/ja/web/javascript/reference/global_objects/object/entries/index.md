@@ -1,15 +1,8 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Object.entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
+
 {{JSRef}}
 
 **`Object.entries()`** メソッドは、引数に与えたオブジェクトが所有する、文字列をキーとした列挙可能なプロパティの組 `[key, value]` からなる配列を返します。これは {{jsxref("Statements/for...in", "for...in")}} ループでの反復処理と同様ですが、違いは `for...in` ループではプロトタイプチェーン内のプロパティも列挙されることです。
@@ -47,14 +40,14 @@ Object.entries(obj)
 
 ```js
 if (!Object.entries) {
-  Object.entries = function( obj ){
+  Object.entries = function( obj ){
     var ownProps = Object.keys( obj ),
-        i = ownProps.length,
+        i = ownProps.length,
         resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
+    while (i--)
+      resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
-    return resArray;
+    return resArray;
   };
 }
 ```
@@ -110,7 +103,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### `Object` の反復処理
 
-[配列の分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)を使って、オブジェクトを簡単に反復処理することができます。
+[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
 
 ```js
 const obj = { foo: 'bar', baz: 42 };

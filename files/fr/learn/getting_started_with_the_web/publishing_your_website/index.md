@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 original_slug: Apprendre/Commencer_avec_le_web/Publier_votre_site_web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
 
 Une fois que vous avez fini d'écrire le code et d'organiser les fichiers qui composent votre site, vous devez mettre le site en ligne, ainsi d'autres personnes pourront le trouver. Cet article décrit comment mettre votre extrait de code en ligne avec peu d'efforts.
@@ -47,7 +48,7 @@ En plus, vous aurez besoin d'un programme de {{Glossary("FTP", "Protocole de tra
 Certains outils vous permettent de publier votre site web en ligne :
 
 - [GitHub](https://github.com/) est un site de «&nbsp;codage collaboratif&nbsp;». Il vous permet de téléverser des dépôts de code pour stockage dans le **système de gestion de versions** [Git](http://git-scm.com/)**.** Vous pouvez alors collaborer à des projets de code ; le système est open source par défaut, ce qui signifie que n'importe qui dans le monde peut trouver votre code GitHub, l'utiliser, en tirer des leçons, et l'améliorer. GitHub a une fonctionnalité très utile appelée [Pages GitHub](https://pages.github.com/), qui vous permet de présenter du code de site web en direct sur le web.
-- [Google App Engine](https://cloud.google.com/appengine/ "App Engine - Build Scalable Web & Mobile Backends in Any Language | Google Cloud Platform") est une plateforme puissante qui vous permet de construire et d'exécuter des applications sur l'infrastructure de Google --- que vous ayez besoin de construire une application web multi‑couche à partir de zéro ou d'héberger un site web statique. Voir [Comment héberger votre site Web sur Google App Engine ?](/fr/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) pour plus d'information.
+- [Google App Engine](https://cloud.google.com/appengine/) est une plateforme puissante qui vous permet de construire et d'exécuter des applications sur l'infrastructure de Google --- que vous ayez besoin de construire une application web multi‑couche à partir de zéro ou d'héberger un site web statique. Voir [Comment héberger votre site Web sur Google App Engine ?](/fr/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) pour plus d'information.
 
 Ces options sont généralement gratuites, mais vous risquez d'être dépassé par les limitations du nombre de fonctionnalités.
 
@@ -68,15 +69,15 @@ Faites des essais avec certains de ces exemples et voyez lequel vous aimez le mi
 
 Maintenant, nous allons vous montrer comment publier facilement votre site via les pages GitHub.
 
-1.  Pour commencer, [inscrivez-vous sur GitHub](https://github.com/join) et vérifiez votre adresse e-mail.
-2.  Ensuite, [créez un dépôt](https://github.com/new) dans lequel vous placerez vos fichiers.
-3.  Sur cette page, dans le champ _Repository name_, entrez _username_.github.io : _username_ est votre nom d'utilisateur. Ainsi, par exemple, notre ami bobsmith entrera _bobsmith.github.io_.
+1. Pour commencer, [inscrivez-vous sur GitHub](https://github.com/join) et vérifiez votre adresse e-mail.
+2. Ensuite, [créez un dépôt](https://github.com/new) dans lequel vous placerez vos fichiers.
+3. Sur cette page, dans le champ _Repository name_, entrez _username_.github.io : _username_ est votre nom d'utilisateur. Ainsi, par exemple, notre ami bobsmith entrera _bobsmith.github.io_.
     Également, cochez _Initialize this repository with a README_, puis cliquez sur _Create repository_.![](github-create-repo.png)
-4.  Ensuite, glissez-déposez le contenu du dossier de votre site Web dans votre référentiel, puis cliquez sur _Commit changes_.
+4. Ensuite, glissez-déposez le contenu du dossier de votre site Web dans votre référentiel, puis cliquez sur _Commit changes_.
 
     > **Note :** Assurez-vous que votre dossier comporte bien un fichier _index.html._
 
-5.  Maintenant, naviguez jusqu'à _username_.github.io pour voir votre site web en ligne. Par exemple, pour le nom d'utilisateur _chrisdavidmills_, allez à [chrisdavidmills.github.io](https://chrisdavidmills.github.io/).
+5. Maintenant, naviguez jusqu'à _username_.github.io pour voir votre site web en ligne. Par exemple, pour le nom d'utilisateur _chrisdavidmills_, allez à [chrisdavidmills.github.io](https://chrisdavidmills.github.io/).
 
     > **Note :** Cela peut prendre quelques minutes avant que votre site web soit actif. S'il ne fonctionne pas immédiatement, attendez quelques minutes, puis essayez à nouveau.
 
@@ -91,14 +92,3 @@ Pour en savoir plus, voyez [GitHub Pages Help](https://docs.github.com/en/github
 - [Hébergement de sites web statiques gratuit ou peu cher](http://alignedleft.com/resources/cheap-web-hosting), un billet en anglais par Scott Murray qui permet d'avoir une meilleure idée des services disponibles.
 
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installation des outils de base](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [Quel sera l'aspect de votre site web ?](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Gérer les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Les bases du HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Les bases de CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publier votre site web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

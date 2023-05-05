@@ -6,6 +6,7 @@ tags:
   - Manifeste
 translation_of: Web/Manifest
 ---
+
 Le manifeste d'une application web fournit des informations concernant celle-ci (comme son nom, son auteur, une icône et une description) dans un document texte JSON. Le but du manifeste est d'installer des applications sur l'écran d'accueil d'un appareil, offrant aux utilisateurs un accès plus rapide et une expérience plus riche.
 
 Les manifestes font partie d'un ensemble de technologies appelées les [applications web progressives](/fr/docs/Web/Apps/Progressive) (_progressive web apps_). Il s'agit d'applications web qui peuvent être installées sur la page d'accueil d'un appareil sans que l'utilisateur ait à se rendre dans une boutique d'applications. De plus, une fois installées, elles peuvent être utilisées sans connexion internet et sont capables de recevoir des notifications _push._
@@ -14,7 +15,9 @@ Les manifestes font partie d'un ensemble de technologies appelées les [applicat
 
 Les manifestes des applications Web sont déployés dans vos pages HTML en utilisant une balise lien (_link_) dans l'entête (_head_) de votre document :
 
-    <link rel="manifest" href="/manifest.webmanifest">
+```html
+<link rel="manifest" href="/manifest.webmanifest">
+```
 
 ## Exemple de manifeste
 
@@ -113,7 +116,7 @@ Les valeurs valides sont :
 | `minimal-ui`     | L'application va ressembler et se comporter comme une application autonome, mais elle aura quelques élements d'interface permettant de contrôler la navigation. Les éléments varient en fonction du navigateur web.                                                                                                                                                                     | `browser`               |
 | `browser`        | L'application s'ouvre dans un nouvel onglet ou une nouvelle fenêtre du navigateur, en fonction du navigateur et de la plateforme. C'est la valeur par défaut.                                                                                                                                                                                                                           | (None)                  |
 
-> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
+> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/fr/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
 
 ### `icons`
 
@@ -282,7 +285,7 @@ Définit la couleur du thème par défaut pour une application. Cela affecte par
 
 ## Splash screens
 
-Dans Chrome 47 et supérieur, un écran de lancement (_splashscreen_) est affiché pour une appplication lancée depuis l'écran d'accueil. Cet écran est généré automatiquement en utilisant les propriétés du manifeste de l'application web, particulièrement: `name`, `background_color`, et l'icône du tableau \`icons\`qui est la plus proche de 128dp pour l'appareil.
+Dans Chrome 47 et supérieur, un écran de lancement (_splashscreen_) est affiché pour une appplication lancée depuis l'écran d'accueil. Cet écran est généré automatiquement en utilisant les propriétés du manifeste de l'application web, particulièrement: `name`, `background_color`, et l'icône du tableau `icons` qui est la plus proche de 128dp pour l'appareil.
 
 ## Mime type
 
@@ -290,13 +293,11 @@ Les manifestes doivent être servies en utilisant l'`application/manifest+json` 
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire         |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.manifest")}}
+{{Compat}}
 
 ## Voir aussi
 

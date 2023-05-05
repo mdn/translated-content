@@ -11,13 +11,16 @@ tags:
   - unobserve
 translation_of: Web/API/IntersectionObserver/unobserve
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 La méthode **`unobserve()`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) indique à l'objet `IntersectionObserver` courant de cesser d'observer l'élément cible spécifié.
 
 ## Syntaxe
 
-    IntersectionObserver.unobserve(target);
+```js
+IntersectionObserver.unobserve(target);
+```
 
 ### Paramètres
 
@@ -43,13 +46,11 @@ observer.unobserve(document.getElementById("elementAObserver"));
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-unobserve','IntersectionObserver.unobserve()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.unobserve")}}
+{{Compat}}
 
 ## Voir aussi
 

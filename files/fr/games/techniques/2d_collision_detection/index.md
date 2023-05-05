@@ -9,6 +9,7 @@ tags:
   - Jeux
 translation_of: Games/Techniques/2D_collision_detection
 ---
+
 {{GamesSidebar}}
 
 Les algorithmes de détection de collisions dans les jeux en 2 dimensions dépendent de la forme des objets à détecter (par exemple&nbsp;: rectangle contre rectangle, cercle contre rectangle, cercle contre cercle…). Habituellement, il est préférable d’utiliser une forme générique appelée masque de collision («&nbsp;*hitbox*&nbsp;») qui couvrira l’entité. Ainsi, les collisions ne seront pas assurées au pixel près mais cela permettra d’avoir de bonnes performances pour un grand nombre d’entités à tester.
@@ -67,11 +68,11 @@ Cet algorithme permet de détecter une collision entre deux polygones _convexes_
 
 L’implémentation de cet algorithme est hors de propos sur cette page, nous vous conseillons les articles suivants&nbsp;:
 
-1.  [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)&nbsp;;
-2.  [(Anglais) Collision detection and response (en)](http://www.metanetsoftware.com/technique/tutorialA.html)&nbsp;;
-3.  [Collision detection Using the Separating Axis Theorem (en)](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)&nbsp;;
-4.  [SAT (Separating Axis Theorem) (en)](http://www.codezealot.org/archives/55)&nbsp;;
-5.  [Separation of Axis Theorem (SAT) for Collision Detection (en)](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/).
+1. [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)&nbsp;;
+2. [(Anglais) Collision detection and response (en)](http://www.metanetsoftware.com/technique/tutorialA.html)&nbsp;;
+3. [Collision detection Using the Separating Axis Theorem (en)](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)&nbsp;;
+4. [SAT (Separating Axis Theorem) (en)](http://www.codezealot.org/archives/55)&nbsp;;
+5. [Separation of Axis Theorem (SAT) for Collision Detection (en)](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/).
 
 ## Performances
 
@@ -82,7 +83,7 @@ Alors que la plupart de ces algorithmes de détection de collision sont très si
 La phase large sert à récupérer une liste d’entités qui _pourraient_ entrer en collision. Cela peut être facilement implémenté avec une structure de données spaciale qui vous donnera une meilleure idée d’où est situé chaque entité et de ce qui existe autour d’elle. Par exemple&nbsp;:
 
 - Les _Quad Trees_ (exemple&nbsp;: [JavaScript QuadTree Implementation (en)](http://blogs.adobe.com/digitalmedia/2011/03/javascript-quadtree-implementation/))&nbsp;;
-- Les _R-Trees_ (voir [R-Tree sur Wikipedia.org (en)](http://en.wikipedia.org/wiki/R-tree))&nbsp;;
+- Les _R-Trees_ (voir [R-Tree sur Wikipédia (en anglais)](http://en.wikipedia.org/wiki/R-tree))&nbsp;;
 - Une «&nbsp;*hashmap*&nbsp;».
 
 ### Phase étroite

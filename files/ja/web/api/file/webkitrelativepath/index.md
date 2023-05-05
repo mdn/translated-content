@@ -1,20 +1,8 @@
 ---
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
-tags:
-  - File
-  - File API
-  - File System API
-  - File and Directory Entries API
-  - 標準外
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - ウェブ
-  - webkitRelativePath
-browser-compat: api.File.webkitRelativePath
-translation_of: Web/API/File/webkitRelativePath
 ---
+
 {{APIRef("File API")}}{{non-standard_header}}
 
 **`File.webkitRelativePath`** は、 {{htmlattrxref("webkitdirectory", "input")}} 属性が設定された {{HTMLElement("input")}} 要素でユーザーが選択したディレクトリーに対するファイルのパスを指定する {{domxref("USVString")}} を持つ読み取り専用のプロパティです。

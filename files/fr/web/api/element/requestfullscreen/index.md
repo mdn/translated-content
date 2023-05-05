@@ -1,16 +1,17 @@
 ---
 title: Element.requestFullscreen()
-slug: Web/API/Element/requestFullScreen
+slug: Web/API/Element/requestFullscreen
 tags:
   - Méthode
   - Plein écran
 translation_of: Web/API/Element/requestFullScreen
 ---
+
 {{APIRef("Fullscreen API")}}
 
 La méthode **`Element.requestFullscreen()`** envoie une requête asynchrone pour que l'élément soit affiché en plein écran.
 
-Il n'y a aucune garantie que l'élément passera effectivement en mode plein écran. Si la permission d'entrer en plein écran est acquise, le document recevra un événement {{event("fullscreenchange")}} pour l'informer qu'il est désormais en mode plein écran. Si la permission est refusée, le document recevra un événement {{event('fullscreenerror')}} à la place.
+Il n'y a aucune garantie que l'élément passera effectivement en mode plein écran. Si la permission d'entrer en plein écran est acquise, le document recevra un événement [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) pour l'informer qu'il est désormais en mode plein écran. Si la permission est refusée, le document recevra un événement [`fullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event) à la place.
 
 Cette méthode doit être invoquée par l'interaction d'un utilisateur ou un changement d'orientation du périphérique, sinon elle échouera.
 
@@ -18,27 +19,27 @@ Cette méthode doit être invoquée par l'interaction d'un utilisateur ou un cha
 
 ## Syntaxe
 
-    Element.requestFullscreen();
+```js
+Element.requestFullscreen();
+```
 
 ## Exemple
 
-Avant d'appeler `requestFullScreen()`, mettez en place des gestionnaires (handlers) pour les évenements  {{event("fullscreenchange")}} et {{event("fullscreenerror")}}, pour savoir lorsque vous avez réussi à passer en mode plein écran (ou lorsque la permission de le faire a été refusée).
+Avant d'appeler `requestFullScreen()`, mettez en place des gestionnaires (handlers) pour les évenements [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) et [`fullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event), pour savoir lorsque vous avez réussi à passer en mode plein écran (ou lorsque la permission de le faire a été refusée).
 
 tbd
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Fullscreen", "#dom-element-requestfullscreen", "Element.requestFullScreen()")}} | {{Spec2("Fullscreen")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Full-screen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Full-screen API](/fr/docs/Web/API/Fullscreen_API)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ domxref("Document.fullscreen") }}

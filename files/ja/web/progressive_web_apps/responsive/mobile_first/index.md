@@ -1,17 +1,8 @@
 ---
 title: モバイルファースト
 slug: Web/Progressive_web_apps/Responsive/Mobile_first
-tags:
-  - Apps
-  - CSS
-  - 開発
-  - HTML
-  - Java
-  - JavaScript
-  - モバイル
-  - モバイル開発
-  - モバイルファースト
 ---
+
 この記事では、**モバイルファースト**の原則に従ったウェブサイトのレイアウトを実装するためのガイドを提供します。これは、既定の構成が狭い画面/モバイル端末用であり、広いビューポート用のレイアウト機能がその上に重ねられているレイアウトを作成することを意味します。
 
 ## 最初にやるべきこと - モバイルを既定に
@@ -23,7 +14,7 @@ tags:
 - ビューポートの大きさなどに応じて異なる整形・レイアウト情報を提供している場合、デスク先頭／広い画面用の整形を最初に設定するのではなく、メディアクエリーが適用される前に狭い画面／モバイル用の整形を既定の整形として設定する方が理にかなっています。こうすることで、モバイル端末が資産やその他の情報を再び読み込む必要がなくなります。
 - 機能検出や [matchMedia](/ja/docs/Web/API/Window/matchMedia) のような仕組みを使って、ビューポートの大きさや機能の対応状況などに応じてスクリプト機能を条件付きで読み込む場合は、ほとんどすべてのブラウザーが必要とする基本的なものだけを最初にロードし、その後、食物連鎖の上位にあるブラウザーを徐々に強化していくべきです。
 
-> **Note:** ほとんど何もせずに始めて、必要に応じて作業を進めていく方が、すべてを始めて必要のないものを蓋をしていくよりも、通常は理にかなっています。
+> **メモ:** ほとんど何もせずに始めて、必要に応じて作業を進めていく方が、すべてを始めて必要のないものを蓋をしていくよりも、通常は理にかなっています。
 
 ## モバイルの制約
 
@@ -169,57 +160,57 @@ nav {
 
 ```css
 @media (min-width: 480px) {
-  #bottom, #top {
-    display: none;
-  }
+  #bottom, #top {
+    display: none;
+  }
 
-  article, nav {
-    display: block;
-  }
+  article, nav {
+    display: block;
+  }
 
-  nav ul {
-    text-align: center;
-  }
+  nav ul {
+    text-align: center;
+  }
 
-  nav li {
-    display: inline;
-  }
+  nav li {
+    display: inline;
+  }
 
-  nav li a {
-    border-right: 1px solid #AD66D5;
-    border-bottom: none;
-    display: inline-block;
-    padding: 0 5px;
-    font-size: 1.6em;
-  }
+  nav li a {
+    border-right: 1px solid #AD66D5;
+    border-bottom: none;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1.6em;
+  }
 
-  nav li:last-child a {
-    border-right: none;
-  }
+  nav li:last-child a {
+    border-right: none;
+  }
 
 }
 
 @media (min-width: 600px) {
-  html {
-    background: #eee;
-    height: 100%;
-  }
+  html {
+    background: #eee;
+    height: 100%;
+  }
 
-  body {
-    width: 600px;
-    height: inherit;
-    margin: 0 auto;
-    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
-  }
+  body {
+    width: 600px;
+    height: inherit;
+    margin: 0 auto;
+    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
+  }
 
-  .main > p {
-    background: rgba(255,255,255,0.3);
-  }
+  .main > p {
+    background: rgba(255,255,255,0.3);
+  }
 
-  nav li a {
-    padding: 0 10px;
-    font-size: 2em;
-  }
+  nav li a {
+    padding: 0 10px;
+    font-size: 2em;
+  }
 }
 ```
 
@@ -227,7 +218,7 @@ nav {
 
 2 つ目は、コンテンツの幅を 600px に設定し、空いているスペースの中央に配置し、広いレイアウトのためにグラデーションと素敵な背景画像を追加しています。ここがポイントです。背景画像は 126KB あり、幅の狭いレイアウトには適していません。この画像を「600 ピクセル以上」のメディアクエリーに含めることで、狭い画面の端末はメディアクエリーを読まなくなるので、その画像をダウンロードするために時間と帯域幅を無駄にすることがなくなります。
 
-> **Note:** Firefox のレスポンシブデザインビューは、メディアクエリーがどのように動作しているかを簡単に把握するのに最適な方法です。ツール → ウェブ開発ツール → レスポンシブデザインビューで試してみてください。
+> **メモ:** Firefox のレスポンシブデザインビューは、メディアクエリーがどのように動作しているかを簡単に把握するのに最適な方法です。ツール → ウェブ開発ツール → レスポンシブデザインビューで試してみてください。
 
 ### 機能検出
 

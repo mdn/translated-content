@@ -1,27 +1,25 @@
 ---
-title: Node.removeChild()
+title: "Node: removeChild() メソッド"
 slug: Web/API/Node/removeChild
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.removeChild
-translation_of: Web/API/Node/removeChild
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`removeChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、子ノードを DOM から取り除き、取り除いたノードを返します。
 
-> **Note:** 取り除かれた子ノードへの参照が保持されている限り、子ノードはメモリー内に残りますが、 DOM の一部ではなくなります。
-> 後のコードで再利用することができます。
+> **メモ:** 取り除かれた子ノードへの参照が保持されている限り、子ノードはメモリー内に残りますが、 DOM の一部ではなくなります。
+> これは、後のコードで再利用することができます。
 >
-> `removeChild()` の返値が保持されず、他の参照もなくなった場合は、まもなくメモリーから[自動的に削除](/en-US/docs/Web/JavaScript/Memory_Management)されます。
+> `removeChild()` の返値が保持されず、他の参照もなくなった場合は、まもなくメモリーから[自動的に削除](/ja/docs/Web/JavaScript/Memory_management)されます。
 
-{{domxref("Node.cloneNode()")}} とは異なり、返値は関連付けられた {{domxref("EventListener")}} オブジェクトを保持します。
+{{domxref("Node.cloneNode()")}} とは異なり、返値は関連付けられた {{domxref("EventTarget.addEventListener", "EventListener")}} オブジェクトを保持します。
 
 ## 構文
 
-```js
-removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
 ### 引数
@@ -68,7 +66,7 @@ if (node.parentNode) {
 ある要素からすべての子を削除します。
 
 ```js
-let element = document.getElementById("top");
+let element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
@@ -78,7 +76,7 @@ while (element.firstChild) {
 
 ```html
 <!--HTML コードの例-->
-<div id="top"> </div>
+<div id="top"></div>
 ```
 
 ```js

@@ -3,6 +3,7 @@ title: popstate
 slug: Web/API/Window/popstate_event
 translation_of: Web/API/Window/popstate_event
 ---
+
 L'événement `popstate` est exécuté lorsque l'entrée active de l'historique change. Si l'entrée active de l'historique en cours d'activation a été créé par un appel à `history.pushState()` ou a été affectée par un appel à `history.replaceState()`, la propriété `state` de l'événement `popstate` contient une copie de l'objet `state` de l'entrée d'historique.
 
 Notez qu'un appel à `history.pushState()` ou `history.replaceState()` n'exécutera pas l'événement `popstate`. L'événement `popstate` est uniquement exécuté en réalisant une action dans le navigateur telle que cliquer sur le bouton de retour (ou appeler `history.back()` en JavaScript).
@@ -54,13 +55,11 @@ Notez que même si l'entrée d'historique originelle (pour `http://example.com/e
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-popstate', 'popstate')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.popstate_event")}}
+{{Compat}}
 
 ## Voir aussi
 

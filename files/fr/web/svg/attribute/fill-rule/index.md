@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/fill-rule
 ---
+
 {{SVGRef}}
 
 L'attribut **`fill-rule`** définit l'algorithme à utiliser pour déterminer les parties qui sont considérées _à l'intérieur_ de la forme.
@@ -139,13 +140,10 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('evenodd', '100%', 200)}}
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.fill-rule")}}
-
-## Spécification
-
-| Spécification                                                                                | Statut                   | Commentaire                                     |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#FillRuleProperty", "fill-rule")}}     | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#FillRuleProperty", "fill-rule")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Compat}}

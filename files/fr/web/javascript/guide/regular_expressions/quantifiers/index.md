@@ -1,6 +1,6 @@
 ---
 title: Quantificateurs
-slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 tags:
   - Guide
   - JavaScript
@@ -9,7 +9,8 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 original_slug: Web/JavaScript/Guide/Expressions_régulières/Quantificateurs
 ---
-{{jsSidebar("JavaScript Guide")}}{{draft}}
+
+{{jsSidebar("JavaScript Guide")}}
 
 Les quantificateurs indiquent le nombre de caractères ou d'expressions qu'il faut pour une correspondance.
 

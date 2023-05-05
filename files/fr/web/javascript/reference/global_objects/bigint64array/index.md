@@ -11,17 +11,20 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt64Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`BigInt64Array`** permet de représenter un tableau d'entiers signés représentés sur 64 bits, où l'ordre des octets correspond à celui de la plateforme utilisée. Si on souhaite contrôler l'ordre des octets utilisé (le « boutisme »), on utilisera un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0n`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
 
 ## Syntaxe
 
-    new BigInt64Array();
-    new BigInt64Array(longueur);
-    new BigInt64Array(tableauTypé);
-    new BigInt64Array(objet);
-    new BigInt64Array(tampon [, décalage [, longueur]]);
+```js
+new BigInt64Array();
+new BigInt64Array(longueur);
+new BigInt64Array(tableauTypé);
+new BigInt64Array(objet);
+new BigInt64Array(tampon [, décalage [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe)_.
 
@@ -148,13 +151,11 @@ var BigInt64 = new BigInt64Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-typedarrays-and-dataview) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt64Array")}}
+{{Compat}}
 
 ## Voir aussi
 

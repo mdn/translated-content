@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/translate
 original_slug: Web/HTML/Attributs_universels/translate
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`translate`** est un attribut à valeur contrainte qui peut être utilisé afin d'indiquer si les valeurs d'attribut d'un élément et si les valeurs de ses nœuds {{domxref("Text")}} descendants doivent être traduits lorsque la page est localisée ou s'il faut les laisser inchangés. Les valeurs autorisées pour cet attribut sont :
@@ -36,14 +37,11 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`translate`** e
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires                                                                    |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#attr-translate", "translate")}}         | {{Spec2('HTML WHATWG')}} | Aucun changement depuis la dernière dérivation {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', "dom.html#the-translate-attribute", "translate")}} | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, définition initiale.           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.translate")}}
+{{Compat}}
 
 ## Voir aussi
 

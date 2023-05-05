@@ -1,17 +1,9 @@
 ---
 title: '<i>: 慣用的なテキスト要素'
 slug: Web/HTML/Element/i
-tags:
-  - 要素
-  - HTML
-  - HTML 文字レベルの意味付け
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.i
-translation_of: Web/HTML/Element/i
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<i>`** は [HTML](/ja/docs/Web/HTML) の要素で、何らかの理由で他のテキストと区別されるテキストの範囲を表します。例えば、慣用句、技術用語、分類学上の呼称、などです。英文においてはよくイタリック体で表現されてきたものであり、それがこの要素の `<i>` という名前の元になっています。
 
@@ -24,13 +16,13 @@ translation_of: Web/HTML/Element/i
         <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -40,7 +32,7 @@ translation_of: Web/HTML/Element/i
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>

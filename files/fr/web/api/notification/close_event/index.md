@@ -12,20 +12,23 @@ tags:
 translation_of: Web/API/Notification/onclose
 original_slug: Web/API/notification/onclose
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété **`onclose`** de l'interface {{domxref ("Notification")}} définit un écouteur d'événements pour recevoir les événements {{domxref ("HTMLDialogElement/close_event", "close")}}. Ces événements se produisent lorsqu'une {{domxref ("Notification")}} est fermée.
 
 ## Syntaxe
 
-    Notification.onclose = function(event) { ... }
-    Notification.onclose = (event) => { ... }
+```js
+Notification.onclose = function(event) { ... }
+Notification.onclose = (event) => { ... }
+```
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.onclose")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Notification")}}
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

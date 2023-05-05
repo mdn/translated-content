@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/scrollByLines
 ---
+
 {{ ApiRef() }}
 
 {{Non-standard_header}}
@@ -18,7 +19,9 @@ Fait défiler le document du nombre de lignes spécifié.
 
 ## Syntaxe
 
-    window.scrollByLines(lignes)
+```js
+window.scrollByLines(lignes)
+```
 
 ## Paramètres
 
@@ -41,6 +44,6 @@ Fait défiler le document du nombre de lignes spécifié.
 
 Ne fait partie d'aucune spécification.
 
-## See also
+## Voir aussi
 
 - {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}

@@ -1,17 +1,11 @@
 ---
 title: 大なり (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.greater_than
-translation_of: Web/JavaScript/Reference/Operators/Greater_than
 ---
+
 {{jsSidebar("Operators")}}
 
-大なり演算子 (`>`) は、左辺のオペランドが右辺のオペランドより大きい場合は `true` を返し、それ以外の場合は `false` を返します。
+大なり演算子 (`>`) は、左辺のオペランドが右辺のオペランドより大きい場合は `true` を返し、それ以外の場合は `false` を返します。
 
 {{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}
 

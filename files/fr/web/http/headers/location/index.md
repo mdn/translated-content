@@ -3,6 +3,7 @@ title: Location
 slug: Web/HTTP/Headers/Location
 translation_of: Web/HTTP/Headers/Location
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de réponse `Location` indique l'URL vers laquelle rediriger une page. Il a un sens seulement lorsqu'il est servi avec une réponse d'état `3xx` (redirection) ou `201` (créé).
@@ -33,7 +34,9 @@ En cas de création de ressource, il indique l'URL de la ressource nouvellement 
 
 ## Syntaxe
 
-    Location: <url>
+```
+Location: <url>
+```
 
 ## Directives
 
@@ -42,17 +45,17 @@ En cas de création de ressource, il indique l'URL de la ressource nouvellement 
 
 ## Exemples
 
-    Location: /index.html
+```
+Location: /index.html
+```
 
 ## Spécifications
 
-| Specification                                    | Title                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Location", "7.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.Location")}}
+{{Compat}}
 
 ## Voir aussi
 

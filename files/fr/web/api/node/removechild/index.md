@@ -10,15 +10,22 @@ tags:
   - Suppression
 translation_of: Web/API/Node/removeChild
 ---
+
 {{ ApiRef("DOM") }}
 
 La méthode **`Node.removeChild()`** retire un nœud enfant de l'arbre DOM et retourne le nœud retiré.
 
 ## Syntaxe
 
-    var oldChild = node.removeChild(child);
-    OR
-    node.removeChild(child);
+```js
+var oldChild = node.removeChild(child);
+```
+
+ou
+
+```js
+node.removeChild(child);
+```
 
 - `child` est le nœud enfant à retirer du DOM.
 - `node` est le nœud parent de `child`.
@@ -32,9 +39,9 @@ Si `child` n'est pas un enfant du nœud `element`, la méthode provoque une exce
 
 La méthode peut lever une exception de deux façons :
 
-1.  Si `enfant` était bien un enfant de element et qu'il existe donc dans le DOM, mais qu'il a déjà été retiré, la méthode provoque l'exception suivante :``
+1. Si `enfant` était bien un enfant de element et qu'il existe donc dans le DOM, mais qu'il a déjà été retiré, la méthode provoque l'exception suivante :``
     `Uncaught NotFoundError: Failed to execute 'removeChild' on 'element': The node to be removed is not a child of this node`.
-2.  si l'`enfant` n'existe pas dans le DOM de la page, la méthode provoque l'exception suivante :
+2. si l'`enfant` n'existe pas dans le DOM de la page, la méthode provoque l'exception suivante :
     `Uncaught TypeError: Failed to execute 'removeChild' on 'element': parameter 1 is not of type 'Node'.`
 
 ## Exemples

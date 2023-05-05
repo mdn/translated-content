@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
+
 {{AddonSidebar}}
 
 Si vous avez lu l'article [votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension), vous avez déjà une idée de la manière d'écrire une extension. Dans cet article, nous allons écrire une extension légèrement plus complexe qui illustre un peu plus les API.
@@ -408,26 +409,28 @@ Créez un nouveau répertoire nommé "beasts", et ajoutez-y les trois images, no
 
 D'abord, vérifiez de nouveau que les bons fichiers sont au bon endroit :
 
-    beastify/
+```
+beastify/
 
-      beasts/
-        frog.jpg
-        snake.jpg
-        turtle.jpg
+  beasts/
+    frog.jpg
+    snake.jpg
+    turtle.jpg
 
-      content_scripts/
-        beastify.js
+  content_scripts/
+    beastify.js
 
-      icons/
-        beasts-32.png
-        beasts-48.png
+  icons/
+    beasts-32.png
+    beasts-48.png
 
-      popup/
-        choose_beast.css
-        choose_beast.html
-        choose_beast.js
+  popup/
+    choose_beast.css
+    choose_beast.html
+    choose_beast.js
 
-      manifest.json
+  manifest.json
+```
 
 A partir de Firefox version 45, il est possible d'installer les WebExtensions temporairement.
 

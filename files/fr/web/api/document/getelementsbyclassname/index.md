@@ -8,14 +8,17 @@ tags:
   - Reference
 translation_of: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les noms de classe donnés. Lorsqu'il est appelé sur l'objet document, le document complet est recherché, y compris le nœud racine. Vous pouvez également appeler {{domxref ("Element.getElementsByClassName", "getElementsByClassName ()")}} sur n'importe quel élément; il retournera uniquement les éléments qui sont les descendants de l'élément racine spécifié avec les noms de classes donnés.
 
 ## Syntaxe
 
-    var elements = document.getElementsByClassName(names); // or:
-    var elements = rootElement.getElementsByClassName(names);
+```js
+var elements = document.getElementsByClassName(names); // or:
+var elements = rootElement.getElementsByClassName(names);
+```
 
 - _elements_ est une {{domxref ("HTMLCollection")}} des éléments trouvés.
 - _names_ est une chaîne représentant le nom de la classe des éléments à trouver.
@@ -25,15 +28,21 @@ Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les
 
 Trouve tous les éléments ayant la classe «&nbsp;test&nbsp;»&nbsp;:
 
-     document.getElementsByClassName('test')
+```js
+document.getElementsByClassName('test')
+```
 
 Trouve tous les éléments ayant les classes «&nbsp;rouge&nbsp;» et «&nbsp;test&nbsp;»&nbsp;:
 
-     document.getElementsByClassName('rouge test')
+```js
+document.getElementsByClassName('rouge test')
+```
 
 Trouve tous les éléments qui ont la classe «&nbsp;test&nbsp;» à l'intérieur d'un élément ayant l'ID «&nbsp;main&nbsp;»&nbsp;:
 
-     document.getElementById('main').getElementsByClassName('test')
+```js
+document.getElementById('main').getElementsByClassName('test')
+```
 
 Nous pouvons également utiliser les méthodes de Array.prototype sur toute {{domxref ("HTMLCollection")}} en passant HTMLCollection comme valeur de la méthode. Ici, nous allons trouver tous les éléments div qui ont une classe de 'test':
 
@@ -79,7 +88,7 @@ C'est la méthode d'opération la plus couramment utilisée.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.getElementsByClassName")}}
+{{Compat}}
 
 ## Spécification
 

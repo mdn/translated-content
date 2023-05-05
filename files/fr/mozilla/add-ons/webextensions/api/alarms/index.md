@@ -11,6 +11,7 @@ tags:
   - alarms
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
+
 {{AddonSidebar}}
 
 Programmer le code pour qu'il soit exécuté à un moment précis dans le futur. C'est comme [`setTimeout()`](/fr/docs/Web/API/WindowTimers/setTimeout) and [`setInterval()`](/fr/docs/Web/API/WindowTimers/setInterval) sauf que ces fonctions ne fonctionnent pas avec les pages d'arrière-plan qui sont chargées à la demande. Les alarmes ne persistent pas d'une session à l'autre du navigateur
@@ -44,7 +45,7 @@ Pour pouvoir utiliser cette API, vous devez disposer de la [permission](/fr/Add-
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms")}}
+{{Compat}}
 
 > **Note :**
 >

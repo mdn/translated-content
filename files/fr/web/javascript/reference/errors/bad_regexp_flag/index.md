@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 original_slug: Web/JavaScript/Reference/Erreurs/Bad_regexp_flag
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Syntax error in regular expression (Edge)
-    SyntaxError: invalid regular expression flag "x" (Firefox)
-    SyntaxError: Invalid regular expression flags (Chrome)
+```
+SyntaxError: Syntax error in regular expression (Edge)
+SyntaxError: invalid regular expression flag "x" (Firefox)
+SyntaxError: Invalid regular expression flags (Chrome)
+```
 
 ## Type d'erreur
 

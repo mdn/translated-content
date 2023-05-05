@@ -10,6 +10,7 @@ tags:
   - openKeyCursor
 translation_of: Web/API/IDBIndex/openKeyCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openKeyCursor()`** de {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée un curseur sur l'intervalle de clé passé en argument pour l'index courant.
@@ -24,8 +25,10 @@ Cette méthode positionne le curseur sur la clé appropriée, dans la direction 
 
 ## Syntaxe
 
-    var monIndex = objectStore.index("index");
-    var request = monIndex.openKeyCursor(keyRange,direction);
+```js
+var monIndex = objectStore.index("index");
+var request = monIndex.openKeyCursor(keyRange,direction);
+```
 
 ### Paramètres
 
@@ -117,17 +120,15 @@ function displayDataByIndex() {
 };
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/to-do-notifications/) ([exemple](https://mdn.github.io/to-do-notifications/)).
+> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
-| Spécification                                                                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openKeyCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openKeyCursor()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.openKeyCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

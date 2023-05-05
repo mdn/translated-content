@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/Empty
 original_slug: Web/JavaScript/Reference/Instructions/Vide
 ---
+
 {{jsSidebar("Statements")}}
 
 Une **instruction vide** est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.
@@ -16,7 +17,9 @@ Une **instruction vide** est utilisée pour ne fournir aucune instruction là o�
 
 ## Syntaxe
 
-    ;
+```js
+;
+```
 
 ## Description
 
@@ -60,17 +63,11 @@ else
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-empty-statement', 'Instruction vide')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES6', '#sec-empty-statement', 'instruction vide')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ES5.1', '#sec-12.3', 'instruction vide')}}                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES3', '#sec-12.3', 'instruction vide')}}                     | {{Spec2('ES3')}}         |                      |
-| {{SpecName('ES1', '#sec-12.3', 'instruction vide')}}                     | {{Spec2('ES1')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.empty")}}
+{{Compat}}
 
 ## Voir aussi
 

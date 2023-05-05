@@ -1,6 +1,6 @@
 ---
 title: Apte à être mis en cache
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 tags:
   - Glossaire
   - Mise en cache
@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/cacheable
 original_slug: Glossaire/cacheable
 ---
+
 Une réponse apte à être mise en cache (_cacheable_) est une réponse HTTP qui peut être mise en cache, qui est stockée pour être récupérée et utilisée plus tard, en enregistrant une nouvelle requête sur le serveur. Toutes les réponses HTTP ne peuvent pas être mises en cache, les contraintes suivantes sont requises pour qu'une réponse HTTP soit mise en cache :
 
 - La méthode utilisée dans la requête peut elle-même être mise en cache, c'est une méthode {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}. Une réponse de la méthode {{HTTPMethod("POST")}} peut aussi être mise en cache si le rafraîchissement est indiqué, mais c'est rarement implémenté. D'autres méthodes comme {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} ne peuvent pas être mises en cache et leur résultat pas davantage.
@@ -18,30 +19,36 @@ Notez que certaines requêtes / réponses ne pouvant être mises en cache à un 
 
 Lorsque les deux, la méthode de la requête et l'état de la réponse, peuvent être mis en cache, la réponse à la requête peut être mise en cache :
 
-    GET /pageX.html HTTP/1.1
-    (…)
+```
+GET /pageX.html HTTP/1.1
+(…)
 
-    200 OK
-    (…)
+200 OK
+(…)
+```
 
 Une requête {{HTTPMethod("PUT")}} ne peut pas être mise en cache. De plus, elle invalide les données mises en cache pour une requête au même URI via {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}} :
 
-    PUT /pageX.html HTTP/1.1
-    (…)
+```
+PUT /pageX.html HTTP/1.1
+(…)
 
-    200 OK
-    (…)
+200 OK
+(…)
+```
 
 Un en-tête spécifique {{HTTPHeader("Cache-Control")}} dans la réponse peut empêcher la mise en cache :
 
-    GET /pageX.html HTTP/1.1
-    (…)
+```
+GET /pageX.html HTTP/1.1
+(…)
 
-    200 OK
-    Cache-Control: no-cache
-    (…)
+200 OK
+Cache-Control: no-cache
+(…)
+```
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

@@ -8,12 +8,15 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_curly_after_property_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Expected '}' (Edge)
-    SyntaxError: missing } after property list (Firefox)
+```
+SyntaxError: Expected '}' (Edge)
+SyntaxError: missing } after property list (Firefox)
+```
 
 ## Type d'erreur
 

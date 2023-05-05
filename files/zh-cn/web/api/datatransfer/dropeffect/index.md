@@ -1,23 +1,17 @@
 ---
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-translation_of: Web/API/DataTransfer/dropEffect
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.dropEffect`** 属性控制在拖放操作中给用户的反馈（通常是视觉上的）。它会影响在拖拽过程中光标的手势。例如，当用户 hover 在一个放置目标元素上，浏览器的光标可能会预示了将会发生什么操作。
 
 当 {{domxref("DataTransfer")}} 被创建时，`dropEffect` 被设置为一个字符串。读这个值时会返回它的当前值。设置这个值时，如果这个新的值是下面列出的值中的一个，这个属性的值就会被设置为这个新的值，其他的值都会被忽略。
 
-对于 {{event("dragenter")}} 和 {{event("dragover")}} 事件，`dropEffect` 会根据用户的请求的行为进行初始化。具体如何初始化和浏览器平台有关，但是通常来讲，用户可以通过按住修改键，比如 alt 键来修改想要的行为。当我们期望得到一个指定的行为时而不是用户的请求行为时，可以通过 {{event("dragenter")}} 和 {{event("dragover")}} 事件处理修改 `dropEffect` 的值。
+对于 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件，`dropEffect` 会根据用户的请求的行为进行初始化。具体如何初始化和浏览器平台有关，但是通常来讲，用户可以通过按住修改键，比如 alt 键来修改想要的行为。当我们期望得到一个指定的行为时而不是用户的请求行为时，可以通过 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件处理修改 `dropEffect` 的值。
 
-对于 {{event("drop")}} 和 {{event("dragend")}} 事件，`dropEffect` 会被设置为想要得到的值，即最后一次 {{event("dragenter")}} 或 {{event("dragover")}} 事件后 `dropEffect` 的值。例如，在一个 {{event("dragend")}} 事件中，如果期望得到的 dropEffect 是 “move”，那么被拖拽的数据会从源中移除。
+对于 [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 和 [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件，`dropEffect` 会被设置为想要得到的值，即最后一次 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 或 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件后 `dropEffect` 的值。例如，在一个 [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件中，如果期望得到的 dropEffect 是“move”，那么被拖拽的数据会从源中移除。
 
 ## 语法
 
@@ -36,7 +30,7 @@ dataTransfer.dropEffect;
 - `link`
   - : 在新位置建立源项目的链接
 - `none`
-  - : 项目可能禁止拖放（译者注：还与effectAllowed设置的值相关）
+  - : 项目可能禁止拖放（译者注：还与 effectAllowed 设置的值相关）
 
 将任何其他值赋给 `dropEffect` 都没有效果，这种情况下会保留旧值。
 
@@ -117,5 +111,4 @@ function dragover_handler(ev) {
 - [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

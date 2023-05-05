@@ -8,6 +8,7 @@ tags:
   - Window
 translation_of: Web/API/Window/clearImmediate
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}}.
@@ -16,7 +17,9 @@ Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}
 
 ## Syntaxe
 
-    window.clearImmediate( immediateID )
+```js
+window.clearImmediate( immediateID )
+```
 
 où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
 
@@ -35,14 +38,12 @@ document.getElementById("bouton")
 
 ## Spécifications
 
-| Spécification                                                                                                                              | Statut         | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | -------------- | ------------------- |
-| [Efficient Script Yielding La définition de `setImmediate` dans cette spécification.](https://w3c.github.io/setImmediate/#si-setImmediate) | Editor's Draft | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.clearImmediate")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{DOMxRef("Window.setImmediate()")}}

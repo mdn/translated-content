@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/abort
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`abort()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, permet d'annuler les modifications apportées aux objets de la base de données pendant la transaction courante.
@@ -19,7 +20,9 @@ Tous les objets {{domxref("IDBRequest")}} créés pendant cette transaction verr
 
 ## Syntaxe
 
-    transaction.abort();
+```js
+transaction.abort();
+```
 
 ### Valeur de retour
 
@@ -31,7 +34,7 @@ Cette méthode peut déclencher une exception {{domxref("DOMException")}} du typ
 
 ## Exemples
 
-Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On dispose également de fonctions attachées aux gestionnaires d'évènements de la transaction pour gérer la réussite ou l'échec des opérations. Ensuite, on annule les opérations de la transaction grâce à `abort()`. Pour un exemple complet, vous pouvez consulter [notre application de notifications To-do](https://github.com/mdn/to-do-notifications/) (cf. [la démonstration _live_](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On dispose également de fonctions attachées aux gestionnaires d'évènements de la transaction pour gérer la réussite ou l'échec des opérations. Ensuite, on annule les opérations de la transaction grâce à `abort()`. Pour un exemple complet, vous pouvez consulter [notre application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre la base de données
@@ -87,13 +90,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-abort-void', 'abort')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.abort")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -103,4 +104,4 @@ function addData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

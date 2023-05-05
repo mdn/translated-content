@@ -7,13 +7,12 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
 ---
+
 {{AddonSidebar}}
 
-{{Compat("webextensions.manifest",2)}}
+## Compatibilité des navigateurs
 
-> **Note :**
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+{{Compat}}
 
 ## Voir aussi
 

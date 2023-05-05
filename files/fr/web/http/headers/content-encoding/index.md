@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête **`Content-Encoding`** indique la compression utilisée sur le média contenu dans le corps de la requête. Il permet au client de savoir comment décoder le contenu afin d'obtenir le type de média référencé par l'entête `Content-Type`.
@@ -32,15 +33,17 @@ Il est recommandé de compresser les données autant que possible et donc d'util
 
 ## Syntaxe
 
-    Content-Encoding: gzip
-    Content-Encoding: compress
-    Content-Encoding: deflate
-    Content-Encoding: identity
-    Content-Encoding: br
+```
+Content-Encoding: gzip
+Content-Encoding: compress
+Content-Encoding: deflate
+Content-Encoding: identity
+Content-Encoding: br
 
-    // Plusieurs valeurs selon l'ordre dans lequel ils ont été appliqués
-    Content-Encoding: gzip, identity
-    Content-Encoding: deflate, gzip
+// Plusieurs valeurs selon l'ordre dans lequel ils ont été appliqués
+Content-Encoding: gzip, identity
+Content-Encoding: deflate, gzip
+```
 
 ## Directives
 
@@ -61,25 +64,25 @@ Il est recommandé de compresser les données autant que possible et donc d'util
 
 Côté client, on peut fournir la liste des mécanismes de compression pris en charge en envoyant l'en-tête {{HTTPHeader("Accept-Encoding")}} lors de la négociation de l'encodage.
 
-    Accept-Encoding: gzip, deflate
+```
+Accept-Encoding: gzip, deflate
+```
 
 Le serveur répondra avec le schéma utilisé avec l'en-tête de réponse `Content-Encoding`.
 
-    Content-Encoding: gzip
+```
+Content-Encoding: gzip
+```
 
 À noter que le serveur n'est pas obligé d'utiliser de méthode de compression. La compression dépend fortement des paramètres du serveur et des modules de serveur utilisés.
 
 ## Spécifications
 
-| Spécification                                                    | Titre                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7932", "Brotli Compressed Data Format")}} | Brotli Compressed Data Format                                 |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}     | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-| {{RFC("2616", "Content-Encoding", "14.11")}}     | Content-Encoding                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Content-Encoding")}}
+{{Compat}}
 
 ## Voir aussi
 

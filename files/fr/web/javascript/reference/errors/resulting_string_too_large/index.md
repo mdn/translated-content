@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 original_slug: Web/JavaScript/Reference/Erreurs/Resulting_string_too_large
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    RangeError: argument out of range (Edge)
-    RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
-    RangeError: Invalid count value (Chrome)
+```
+RangeError: argument out of range (Edge)
+RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
+RangeError: Invalid count value (Chrome)
+```
 
 ## Type d'erreur
 

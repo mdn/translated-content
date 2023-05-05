@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/monochrome
 ---
+
 {{CSSRef}}
 
 **`monochrome`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin d'appliquer des styles en fonction du nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil.
@@ -60,11 +61,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                                                                          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#monochrome', 'monochrome')}} | {{Spec2('CSS4 Media Queries')}} | La valeur peut désormais être négative, auquel cas cela correspond à un booléen faux. |
-| {{SpecName('CSS3 Media Queries', '#monochrome', 'monochrome')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. La valeur ne doit pas être négative.                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.monochrome")}}
+{{Compat}}

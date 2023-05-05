@@ -1,18 +1,8 @@
 ---
 title: HTMLTableElement.bgColor
 slug: Web/API/HTMLTableElement/bgColor
-tags:
-  - API
-  - 非推奨
-  - HTML DOM
-  - NeedsBrowserCompatibility
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLTableElement.bgColor
-translation_of: Web/API/HTMLTableElement/bgColor
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.bgcolor`** プロパティは、この表の背景色を表します。

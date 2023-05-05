@@ -1,18 +1,8 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
-tags:
-  - Draft
-  - HTTP
-  - HTTP ヘッダー
-  - Link
-  - NeedsCompatTable
-  - NeedsContent
-  - NeedsSyntax
-  - リファレンス
-browser-compat: http.headers.Link
-translation_of: Web/HTTP/Headers/Link
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Link`** エンティティヘッダーフィールドは、 HTTP ヘッダー内の 1 つ以上のリンクをシリアル化する手段を提供します。意味的には、 HTML の {{HTMLElement("link")}} 要素と同等です。</p>

@@ -1,15 +1,8 @@
 ---
 title: 論理和 (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理演算子
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.logical_or
-translation_of: Web/JavaScript/Reference/Operators/Logical_OR
 ---
+
 {{jsSidebar("Operators")}}
 
 論理和 (`||`) 演算子 (論理的分割) をオペランドの組み合わせに対して使用すると、オペランドのうち 1 つ以上が true である場合に true になります。一般的には論理値（ブール値）で使用されます。その場合は論理値を返します。ただし `||` 演算子は実際には指定されたオペランドのうち一つの値を返すので、この演算子が論理値以外で使用された場合は、論理値以外の値を返すことになります。
@@ -24,7 +17,7 @@ expr1 || expr2
 
 ## 解説
 
-`expr1` が `true` に変換できる場合は `expr1` を返し、それ以外の場合は `expr2` を返します。
+`expr1` が `true` に変換できる場合は `expr1` を返し、それ以外の場合は `expr2` を返します。
 
 ある値が `true` に変換できる場合、その値は真値 ({{Glossary("truthy")}}) と呼ばれます。ある値が `false` に変換できる場合、その値は偽値 ({{Glossary("falsy")}}) と呼ばれます。
 
@@ -36,7 +29,7 @@ false に変換されうる式の例を示します。
 - 空文字列 (`""` または `''` または ` `` `)
 - `undefined`
 
-`||` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の{{JSxRef("Operators/Logical_NOT", "否定演算子", "", 1)}}または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
+`||` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の{{JSxRef("Operators/Logical_NOT", "否定演算子", "", 1)}}または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
 ### 短絡評価
 
@@ -83,7 +76,7 @@ o9 = false || ''         // f || f は "" を返す
 o10 = false || varObject // f || オブジェクトは varObject を返す
 ```
 
-> **Note:** この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 {{jsxref("null")}} や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
+> **メモ:** この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 {{jsxref("null")}} や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
 
 ### 論理型の変換規則
 

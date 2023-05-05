@@ -57,7 +57,7 @@ grid-template-rows: unset;
 ### Значения
 
 - `none`
-  - :  Ключевое слово, означающее отсутствие явного грида. Это значит, что все ряды будут генерироваться автоматически (неявно), а их размер определяться свойством {{cssxref("grid-auto-rows")}}.
+  - : Ключевое слово, означающее отсутствие явного грида. Это значит, что все ряды будут генерироваться автоматически (неявно), а их размер определяться свойством {{cssxref("grid-auto-rows")}}.
 - `[linename]`
   - : [Идентификатор (`<custom-ident>`)](/en-US/docs/Web/CSS/custom-ident) задаёт имя линии. Идентификатор может быть любой допустимой строкой, кроме зарезервированных слов `span` и `auto`. У линий может быть несколько имён, указанных через пробел внутри квадратных скобок, например `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
@@ -90,7 +90,7 @@ grid-template-rows: unset;
 - [`masonry`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
   - : Значение masonry указывает на то, что эта ось должна быть проложена в соответствии с алгоритмом masonry.
 - [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
-  - : Значение `subgrid` указывает на то, что грид примет составную часть родительского грида по данной оси. Поскольку размеры рядов/колонок не указываются явно, они берутся из определения родительского грида. 
+  - : Значение `subgrid` указывает на то, что грид примет составную часть родительского грида по данной оси. Поскольку размеры рядов/колонок не указываются явно, они берутся из определения родительского грида.
 
 > **Предупреждение:** Значение `masonry` появилось в спецификации Grid третьего уровня и на данный момент реализовано в качестве эксперимента и доступно по флагу в Firefox.
 >
@@ -149,7 +149,7 @@ grid-template-rows: unset;
 
 ## Смотрите также
 
-- Related CSS properties: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
-- Video tutorial: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
-- [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- Связанные CSS-свойства: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
+- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
+- Обучающее видео: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
+- [Сабгрид](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)

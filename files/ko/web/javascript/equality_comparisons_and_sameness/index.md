@@ -1,16 +1,8 @@
 ---
 title: 동치 비교 및 동일성
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - Comparison
-  - Equality
-  - Intermediate
-  - JavaScript
-  - SameValue
-  - SameValueZero
-  - Sameness
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 ES2015에는 4가지 같음(equality) 알고리즘이 있습니다:
@@ -28,13 +20,11 @@ JavaScript는 3가지 서로 다른 값 비교 연산을 제공합니다:
 
 어느 연산을 쓸 지 그 선택은 당신이 어떤 종류의 비교를 수행하기 위해 찾고 있는 지에 달렸습니다.
 
-
-
-- 이중 equals (`==`)는 두 가지를 비교할 때 유형 변환을 수행하고 IEEE 754를 준수하기 위해 `NaN`, `-0` 및 `+0`을 특별히 처리합니다 (그래서`NaN != NaN`이고 `-0 == +0`입니다);
+- 이중 equals (`==`)는 두 가지를 비교할 때 유형 변환을 수행하고 IEEE 754를 준수하기 위해 `NaN`, `-0` 및 `+0`을 특별히 처리합니다 (그래서`NaN != NaN`이고 `-0 == +0`입니다);
 - 트리플 equals (`===`)는 이중 equals (`NaN`, `-0` 및 `+0`의 특수 처리 포함)와 동일한 비교를 수행하지만 유형 변환은 수행하지 않습니다. 형식이 다른 경우 `false`가 반환됩니다.
 - `Object.is`는 형식 변환을하지 않으며 `NaN`, `-0` 및 `+0`에 대한 특수 처리를 수행하지 않습니다 (특수 숫자 값을 제외하고는 `===`와 동일한 동작을 제공함).
 
-이들 사이의 구분은 모두 원시형(primitive) 처리와 관련이 있습니다. 매개 변수가 구조적, 개념적으로 유사한 지 비교하는 것이 없습니다. 같은 구조를 가지지만 개체 자체가 각각인 비원시형(non-primitive) 개체 x 및 y의 경우 위의 모든 형태(form)는 false로 평가됩니다.
+이들 사이의 구분은 모두 원시형(primitive) 처리와 관련이 있습니다. 매개 변수가 구조적, 개념적으로 유사한 지 비교하는 것이 없습니다. 같은 구조를 가지지만 개체 자체가 각각인 비원시형(non-primitive) 개체 x 및 y의 경우 위의 모든 형태(form)는 false로 평가됩니다.
 
 ## `===`를 사용하는 엄격한 같음
 
@@ -64,7 +54,7 @@ console.log(obj === undefined); // false
 
 The behavior for performing loose equality using `==` is as follows:
 
-- 느슨한 같음(loose equality)은 두 값이 같은 지 비교합니다, 두 값을 공통(common) 형으로 변환한 후에. 변환 후 (하나 또는 양쪽이 변환을 거칠 수 있음), 최종 같음 비교는 꼭 `===`처럼 수행됩니다. 
+- 느슨한 같음(loose equality)은 두 값이 같은 지 비교합니다, 두 값을 공통(common) 형으로 변환한 후에. 변환 후 (하나 또는 양쪽이 변환을 거칠 수 있음), 최종 같음 비교는 꼭 `===`처럼 수행됩니다.
 - 느슨한 같음은 대칭(_symmetric_)입니다: `A == B`는 `A` 및 `B`가 어떤 값이든 항상 `B == A`와 같은 의미를 갖습니다 (적용된 변환의 순서 말고는).
 - `undefined` and `null` are loosely equal; that is, `undefined == null` is true, and `null == undefined` is true
 
@@ -128,11 +118,11 @@ console.log(big == obj); // true
 console.log(str == obj); // true
 ```
 
-대부분의 경우 느슨한 같음을 사용하는 것은 바람직하지 않습니다. strict equality를 사용한 비교의 결과는 예측하기가 쉽고 형 강제(coercion) 변환이 일어나지 않기에 평가가 빠를 수 있습니다.
+대부분의 경우 느슨한 같음을 사용하는 것은 바람직하지 않습니다. strict equality를 사용한 비교의 결과는 예측하기가 쉽고 형 강제(coercion) 변환이 일어나지 않기에 평가가 빠를 수 있습니다.
 
 ## Same-value equality
 
-등가(same-value) 같음은 최종 사용 사례(use case)를 다룹니다: 두 값이 모든 문맥에서 _기능상 같은지_ 여부를 결정하는. (이 사용 사례는 [리스코프 치환 원칙](https://ko.wikipedia.org/wiki/리스코프_치환_원칙 "Liskov substitution principle")의 실례를 보입니다.) 다음은 불변 속성(property)을 변화시키려 시도할 때 일어나는 한 사례입니다:
+등가(same-value) 같음은 최종 사용 사례(use case)를 다룹니다: 두 값이 모든 문맥에서 _기능상 같은지_ 여부를 결정하는. (이 사용 사례는 [리스코프 치환 원칙](https://ko.wikipedia.org/wiki/리스코프_치환_원칙)의 실례를 보입니다.) 다음은 불변 속성(property)을 변화시키려 시도할 때 일어나는 한 사례입니다:
 
 ```js
 // 불변(immutable) NEGATIVE_ZERO 속성을 Number 생성자에 추가.
@@ -147,7 +137,7 @@ function attemptMutation(v)
 
 `Object.defineProperty`는 변경 불가능한 속성을 변경하려고 시도 할 때 예외를 throw하지만 실제 변경이 요청되지 않으면 아무 것도 수행하지 않습니다. `v`가 `-0`이면, 변경 사항이 요청되지 않고 오류가 발생하지 않습니다. 내부적으로, 불변의 property가 재정의 (redefined)되었을 때, 새롭게 지정된 값은 같은 값의 동등성을 사용해 현재의 값과 비교됩니다.
 
-Same-value equality는 {{jsxref("Object.is")}} 메서드로 제공됩니다.
+Same-value equality는 {{jsxref("Object.is")}} 메서드로 제공됩니다.
 
 ## Same-value-zero equality
 
@@ -155,7 +145,7 @@ Same-value equality는 {{jsxref("Object.is")}} 메서드로 제공됩니다.
 
 ## 스펙 내 추상적 같음, 엄격한 같음 및 등가
 
-In ES5, the comparison performed by [`==`](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) is described in [Section 11.9.3, The Abstract Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). The [`===`](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) comparison is [11.9.6, The Strict Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in [Section 9.12, The SameValue Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-9.12) for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 simply proposes to expose this algorithm through {{jsxref("Object.is")}}.
+In ES5, the comparison performed by [`==`](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) is described in [Section 11.9.3, The Abstract Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). The [`===`](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) comparison is [11.9.6, The Strict Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in [Section 9.12, The SameValue Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-9.12) for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 simply proposes to expose this algorithm through {{jsxref("Object.is")}}.
 
 We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.
 
@@ -163,9 +153,7 @@ We can see that with double and triple equals, with the exception of doing a typ
 
 ES2015 이전에, 이중 등호 및 삼중 등호에 대해 하나가 다른 하나의 "확장"판이라고 (말)했을 지 모릅니다. 예를 들어, 누군가는 이중 등호는 삼중 등호의 확장판이라고 합니다, 전자는 후자가 하는 모든 것을 하지만 그 피연산자에 형 변환을 하기에. 가령, `6 == "6"`. (대신에, 이중 등호는 기준선이고 삼중 등호는 향상판이라고 하는 이도 있습니다, 두 피연산자가 같은 형이길 요구하고 그래서 별도 제약을 추가하기에. 어느 게 더 이해하기 좋은 모델인지는 당신이 상태(things)를 보기 위해 선택한 방법에 달렸습니다.)
 
-However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't simply "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)`evaluated to `false`, we *could* say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} simply has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
-
-
+However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't simply "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)`evaluated to `false`, we *could* say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} simply has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
 
 | x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
 | ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
@@ -202,16 +190,19 @@ In general, the only time {{jsxref("Object.is")}}'s special behavior towards zer
 
 여기 당신 코드에서 그 자체를 드러내기 위해 `-0`과 `+0` 사이의 구별을 일으킬 수도 있는 철저하지 않은(in-exhaustive) 내장 메서드 및 연산자 목록이 있습니다:
 
-- [-(unary negation)](/ko/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29)
-  - ```js
+- {{jsxref("Operators/Unary_negation", "- (unary negation)")}}
+  - : Consider the following example:
+
+  ```js
     let stoppingForce = obj.mass * -obj.velocity;
-    ```
-    If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
+  ```
+
+  If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
   - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
-- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [`~`](/ko/docs/Web/JavaScript/Reference/Operators), [`<<`](/ko/docs/Web/JavaScript/Reference/Operators), [`>>`](/ko/docs/Web/JavaScript/Reference/Operators)
   - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
 Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.

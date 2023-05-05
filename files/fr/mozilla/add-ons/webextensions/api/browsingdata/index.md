@@ -11,6 +11,7 @@ tags:
   - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
+
 {{AddonSidebar}}
 
 Permet aux extensions d'effacer les données accumulées pendant la navigation de l'utilisateur.
@@ -28,7 +29,7 @@ Dans l'API `browsingData`, les données de navigations sont divisées en types :
 
 Vous pouvez utiliser la fonction {{WebExtAPIRef("browsingData.remove()")}} pour supprimer toute combinaison de ces types. Il existe également des fonctions dédiées pour supprimer chaque type particulier de données, comme {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} etc.
 
-Toutes les fonctions `browsingData.remove[X]()` prennent un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}} que vous pouvez utiliser pour contrôler deux autres aspects de la suppression des données :
+Toutes les fonctions `browsingData.remove[X]()` prennent un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} que vous pouvez utiliser pour contrôler deux autres aspects de la suppression des données :
 
 - dans quelle mesure remonter dans le temps pour supprimer des données
 - qu'il s'agisse de supprimer des données uniquement de pages Web normales ou d'applications Web hébergées et de modules complémentaires. Notez que cette option n'est pas encore supportée dans Firefox.
@@ -67,9 +68,9 @@ Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/Add-ons/W
 - {{WebExtAPIRef("browsingData.settings()")}}
   - : Obtient la valeur actuelle des paramètres dans la fonction "Effacer l'historique" du navigateur
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -79,7 +80,8 @@ Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/Add-ons/W
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +108,4 @@ Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/Add-ons/W
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

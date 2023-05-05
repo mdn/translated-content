@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::first-letter
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
@@ -59,7 +60,7 @@ Seul un petit sous-groupe de propriétés CSS peuvent être utilisées dans un b
 - Toutes les propriétés liées à `padding` : {{cssxref("padding")}}, {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
 - Toutes les propriétés liées aux bordures : les raccourcis {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-radius")}}, {{cssxref("border-image")}}, et les propriétés détaillées.
 - La propriété {{cssxref("color")}} .
-- Les propriétés  {{cssxref("text-decoration")}}, {{cssxref("text-shadow")}}, {{cssxref("text-transform")}}, {{cssxref("letter-spacing")}}, {{cssxref("word-spacing")}} (lorsqu'approprié), {{cssxref("line-height")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{cssxref("float")}}, {{cssxref("vertical-align")}} (seulement si `float` vaut `none`).
+- Les propriétés {{cssxref("text-decoration")}}, {{cssxref("text-shadow")}}, {{cssxref("text-transform")}}, {{cssxref("letter-spacing")}}, {{cssxref("word-spacing")}} (lorsqu'approprié), {{cssxref("line-height")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{cssxref("float")}}, {{cssxref("vertical-align")}} (seulement si `float` vaut `none`).
 
 Puisque cette liste sera complétée dans l'avenir, il est recommandé de ne pas utiliser d'autres propriétés dans un bloc de déclaration, de manière à concevoir un CSS pérenne.
 
@@ -116,17 +117,11 @@ p::first-letter {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaire                                                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#first-letter-pseudo', '::first-letter')}}             | {{Spec2('CSS4 Pseudo-Elements')}} | Généralisation des propriétés permises pour la mise en forme du texte et des popriétés de mise en page en-ligne, {{cssxref("opacity")}} et {{cssxref("box-shadow")}}. |
-| {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow avec ::first-letter')}} | {{Spec2('CSS3 Text Decoration')}} | Autorise l'usage de {{cssxref("text-shadow")}} avec `::first-letter`.                                                                                                    |
-| {{SpecName('CSS3 Selectors', '#first-letter', '::first-letter')}}                             | {{Spec2('CSS3 Selectors')}}         | Définition des cas limites comme les listes, ou les comportement spécifiques à certaines langues (comme le digraphe néerlandais `IJ`).                                             |
-| {{SpecName('CSS2.1', 'selector.html#first-letter', '::first-letter')}}                         | {{Spec2('CSS2.1')}}                     | Aucune modification.                                                                                                                                                               |
-| {{SpecName('CSS1', '#the-first-letter-pseudo-element', '::first-letter')}}                 | {{Spec2('CSS1')}}                     | La définition initiale utilisait la syntaxe à un caractère deux-points.                                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## Voir aussi
 

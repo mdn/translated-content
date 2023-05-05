@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-handler-blocked
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-handler-blocked`** permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été bloqué par l'utilisateur.

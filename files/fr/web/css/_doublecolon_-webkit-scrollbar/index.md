@@ -8,7 +8,8 @@ tags:
   - Reference
 translation_of: Web/CSS/::-webkit-scrollbar
 ---
-{{Draft}}{{CSSRef}}{{Non-standard_header}}Le pseudo-élément **`::-webkit-scrollbar`** permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
+
+{{CSSRef}}{{Non-standard_header}}Le pseudo-élément **`::-webkit-scrollbar`** permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
 
 ## Syntaxe
 
@@ -81,33 +82,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-### `::-webkit-scrollbar`
-
-{{Compat("css.selectors.-webkit-scrollbar")}}
-
-### `::-webkit-scrollbar-button`
-
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
-
-### `::-webkit-scrollbar-thumb`
-
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
-
-### `::-webkit-scrollbar-track`
-
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
-
-### `::-webkit-scrollbar-track-piece`
-
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
-
-### `::-webkit-scrollbar-corner`
-
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
-
-### `::-webkit-resizer`
-
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## Voir aussi
 

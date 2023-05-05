@@ -1,22 +1,15 @@
 ---
 title: resize
 slug: Web/CSS/resize
-tags:
-  - CSS 基本ユーザーインターフェイス
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.resize
-translation_of: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 **`resize`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。
 
 {{EmbedInteractiveExample("pages/css/resize.html")}}
 
-`resize` は以下の者には適用されません。
+`resize` は以下のものには適用されません。
 
 - インライン要素
 - {{cssxref("overflow")}} プロパティが `visible` であるブロック要素
@@ -39,7 +32,7 @@ resize: revert;
 resize: unset;
 ```
 
-`resize` プロパティは以下の挙げた単一のキーワード値で指定します。
+`resize` プロパティは以下に挙げるキーワードから単一の値を指定します。
 
 ### 値
 

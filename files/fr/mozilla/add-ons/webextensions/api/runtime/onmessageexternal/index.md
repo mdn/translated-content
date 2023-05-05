@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 ---
+
 {{AddonSidebar()}}Utilisez cet événement pour écouter les messages d'une autre extension.
 
 Pour envoyer un message qui sera reçu par le module d'écoute `onMessageExternal`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
@@ -24,7 +25,7 @@ Avec le message lui-même, l'écouteur est transmis :
 
 Cette API ne peut pas être utilisée dans un script de contenu.
 
-## Syntax
+## Syntaxe
 
 ```js
 browser.runtime.onMessageExternal.addListener()
@@ -70,9 +71,9 @@ Les événements ont trois fonctions:
         - Soit garder une référence à l'argumen `sendResponse` et retourne `true` à partir de la fonction d'écouteur. Vous pourrez ensuite appeler `sendResponse` après le retour de la fonction d'écouteur..
         - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onMessageExternal")}}
+{{Compat}}
 
 ## Exemples
 
@@ -109,7 +110,8 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -136,4 +138,4 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/and
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.and()`** calcule un ET binaire avec une valeur donnée, à un emplacement donné du tableau. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
@@ -18,7 +19,9 @@ La méthode statique **`Atomics.and()`** calcule un ET binaire avec une valeur d
 
 ## Syntaxe
 
-    Atomics.and(typedArray, index, valeur)
+```js
+Atomics.and(typedArray, index, valeur)
+```
 
 ### Paramètres
 
@@ -52,10 +55,13 @@ Un ET binaire fournit la valeur 1 uniquement si `a` et `b` valent 1. La table de
 
 Ainsi, si on calcule le ET binaire de 5 et 1 avec l'instruction `5 & 1`, cela fournira la valeur `0001`, qui correspond à 1 en notation décimale.
 
-    5  0101
-    1  0001
-       ----
-    1  0001
+```
+5  0101
+1  0001
+   ----
+
+1  0001
+```
 
 ## Exemples
 
@@ -70,13 +76,11 @@ Atomics.load(ta, 0);   // 1
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                     |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.and', 'Atomics.and')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.and")}}
+{{Compat}}
 
 ## Voir aussi
 

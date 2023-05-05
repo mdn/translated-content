@@ -3,6 +3,7 @@ title: Les variables CSS
 slug: Web/CSS/Using_CSS_custom_properties
 translation_of: Web/CSS/Using_CSS_custom_properties
 ---
+
 {{CSSRef}}
 
 **Les propriétés personnalisées CSS** (_custom properties_ en anglais, aussi parfois appelés **variables CSS**) sont des entités définies par les développeurs ou les utilisateurs d'une page Web, contenant des valeurs spécifiques utilisables à travers le document. Elles sont initialisées avec des propriétés personnalisées (par exemple **`--main-color: black;`**) et accessibles en utilisant la notation spécifique {{cssxref("var", "var()")}} (par exemple : **`color: var(--main-color);`**).
@@ -196,7 +197,7 @@ Gardez à l'esprit qu'il s'agit de propriétés personnalisées et non de propri
 
 Avec [`var()`](</fr/docs/Web/CSS/var()>) on peut définir plusieurs valeurs par défaut lorsque la variable donnée n'est pas définie. Cela peut s'avérer utile lorsqu'on travaille avec des éléments personnalisés (_Custom Elements_) et le _Shadow DOM_.
 
-Le premier argument passé à la fonction est le nom de la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property "CSS Custom Properties for Cascading Variables Module Level 1") qui doit être substituée. Le deuxième argument, s'il est fourni, indique la valeur par défaut qui est utilisée lorsque la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property "CSS Custom Properties for Cascading Variables Module Level 1") en question est invalide.
+Le premier argument passé à la fonction est le nom de la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property) qui doit être substituée. Le deuxième argument, s'il est fourni, indique la valeur par défaut qui est utilisée lorsque la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property) en question est invalide.
 
 > **Note :** Attention, la valeur fournie comme valeur par défaut ne pourra pas être utilisée si le navigateur ne prend pas en charge les propriétés personnalisées CSS. Elle sera uniquement utilisée si la valeur précédente n'a pu être calculée ou si elle est invalide.
 
@@ -247,10 +248,10 @@ p { color: blue; }
 p { color: var(--text-color); }
 ```
 
-Comme on pourrait s'y attendre, le valeur applique la substitution aec `--text-color` à la place de `var(--text-color)` mais `16px` n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :
+Comme on pourrait s'y attendre, la valeur applique la substitution avec `--text-color` à la place de `var(--text-color)` mais `16px` n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :
 
-1.  Il vérifie si la propriété peut être héritée (ici `color`) : c'est bien le cas mais dans notre exemple `<p>` n'a aucun parent avec une couleur définie, il passe donc à l'étape suivante.
-2.  La valeur utilisée est **la valeur initiale par défaut**, pour `color`, c'est `black`.
+1. Il vérifie si la propriété peut être héritée (ici `color`) : c'est bien le cas mais dans notre exemple `<p>` n'a aucun parent avec une couleur définie, il passe donc à l'étape suivante.
+2. La valeur utilisée est **la valeur initiale par défaut**, pour `color`, c'est `black`.
 
 ### Résultat
 
@@ -277,9 +278,9 @@ element.style.setProperty("--ma-variable", varJS + 4);
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
-> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification  (cf. {{bug(985838)}})
+> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification (cf. {{bug(985838)}})
 
 ## Voir aussi
 

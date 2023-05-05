@@ -12,6 +12,7 @@ translation_of: Web/API/HTMLElement/accessKey
 translation_of_original: Web/API/Element/accessKey
 original_slug: Web/API/Element/accessKey
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **Element.accessKey** définit la touche sur laquelle l'utilisateur doit appuyer pour accéder à l'élément.

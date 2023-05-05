@@ -1,0 +1,59 @@
+---
+title: 'TypeError: переменная "x" переопределяет аргумент'
+slug: orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
+tags:
+  - Errors
+  - JavaScript
+  - Strict Mode
+  - TypeError
+translation_of: Web/JavaScript/Reference/Errors/Var_hides_argument
+original_slug: Web/JavaScript/Reference/Errors/Var_hides_argument
+---
+
+{{jsSidebar("Errors")}}
+
+## Сообщение
+
+```
+TypeError: переменная "x" повторно объявляет аргумент (Firefox)
+```
+
+## Тип ошибки
+
+{{jsxref("TypeError")}} предупреждение только в строгом режиме.
+
+## Что пошло не так?
+
+То же имя переменной происходит в качестве параметра функции, и затем повторно объявляется с помощью назначения var в теле функции. Это может быть конфликт имён, поэтому JavaScript предупреждает об этом.
+
+Эта ошибка возникает как предупреждение только в коде строгого режима. В нестрогом коде повторное объявление игнорируется.
+
+## Примеры
+
+### Неправильные примеры
+
+В этом случае переменная "arg" объявляет аргумент повторно.
+
+```js example-bad
+'use strict';
+
+function f(arg) {
+  var arg = 'foo';
+}
+```
+
+### Правильные примеры
+
+Чтобы исправить это предупреждение, оператор var можно просто опустить, так как переменная уже существует. В других случаях можно переименовать параметр функции или имя переменной.
+
+```js example-good
+'use strict';
+
+function f(arg) {
+  arg = 'foo';
+}
+```
+
+## Смотрите также
+
+- [Strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode)

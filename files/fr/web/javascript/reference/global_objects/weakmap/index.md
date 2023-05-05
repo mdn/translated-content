@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap
 browser-compat: javascript.builtins.WeakMap
 ---
+
 {{JSRef}}
 
 L'objet **`WeakMap`** représente une collection de paires clé-valeur dont les clés sont des objets et pour lesquelles les références sont « faibles » et les valeurs des valeurs quelconques.
@@ -17,7 +18,7 @@ Les clés des objets `WeakMap` sont nécessairement du type `Object`. {{Glossary
 
 Les clés d'une `WeakMap` sont référencées _faiblement_. Cela signifie que s'il n'existe aucune autre référence «&nbsp;forte&nbsp;» vers la clé, l'élément (la clé et la valeur) sera retiré de la `WeakMap` par le ramasse-miettes.
 
-### Pourquoi *Weak*Map ?
+### Pourquoi WeakMap ?
 
 Avec un certain recul, on peut voir que cette API aurait pu être implémentée en JavaScript grâce à deux tableaux (un tableau pour stocker les clés, l'autre pour les valeurs) associées à 4 méthodes.
 
@@ -25,7 +26,7 @@ Une telle implémentation présente deux inconvénients principaux :
 
 1. Le premier est que la recherche serait effectuée en O(n) (avec n le nombre de clés).
 
-2. Le second inconvénient concerne les fuites mémoires. Si la carte (_map_) est construite manuellement, le tableau contenant les clés serait obligé de garder les références vers les objets que sont les clés, ce qui les empêcherait d'être nettoyés par le ramasse-miette. 
+2. Le second inconvénient concerne les fuites mémoires. Si la carte (_map_) est construite manuellement, le tableau contenant les clés serait obligé de garder les références vers les objets que sont les clés, ce qui les empêcherait d'être nettoyés par le ramasse-miette.
 
 Grâce aux objets natifs `WeakMap`, les références vers les clés sont faibles (_weak_) ce qui permet au ramasse-miette de nettoyer l'objet au cas où il n'y aurait pas d'autres références vers cet objet.
 

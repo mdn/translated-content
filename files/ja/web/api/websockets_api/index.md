@@ -1,25 +1,13 @@
 ---
 title: WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
-tags:
-  - API
-  - クライアント
-  - 通信
-  - 概要
-  - サーバー
-  - 双方向
-  - WebSocket
-  - WebSocket API
-  - ウェブソケット
-  - データ
-  - 対話
-translation_of: Web/API/WebSockets_API
 ---
+
 {{DefaultAPISidebar("Websockets API")}}
 
 **WebSocket API** は、ユーザーのブラウザーとサーバー間で対話的な通信セッションを開くことができる先進技術です。この API によって、サーバーにメッセージを送信したり、応答をサーバーにポーリングすることなく、イベント駆動型のレスポンスを受信したりすることができます。
 
-> **Note:** WebSocket のコネクションは機能的にどこか標準 Unix スタイルのソケットに似ていますが、関連はありません。
+> **メモ:** WebSocket のコネクションは機能的にどこか標準 Unix スタイルのソケットに似ていますが、関連はありません。
 
 ## インターフェイス
 
@@ -41,13 +29,13 @@ translation_of: Web/API/WebSockets_API
 
 - [AsyncAPI](https://www.asyncapi.com/): WebSocket のようなイベントドリブン型アーキテクチャを記述するための仕様です。 OpenAPI 仕様で REST API を記述するのと同じように、 WebSocket ベースの API を記述するために使用することができます。 [WebSocket で AsyncAPI の利用を検討すべき理由](https://www.asyncapi.com/blog/websocket-part1)と[利用する方法](https://www.asyncapi.com/blog/websocket-part2)を紹介します。
 - [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/): ブラウザーで動作するクロスプラットフォームのネットワークライブラリです。ブラウザー間の違いを抽象化する WebSocket や WebRTC の C ラッパー、ゲームやその他のアプリで複数ユーザーのネットワーク機能を作成するものから成ります。
-- [µWebSockets](https://github.com/uWebSockets/uWebSockets): [C++11](https://isocpp.org/) および [Node.js](https://nodejs.org) で書かれた可用性の高い WebSocket サーバーとクライアントの実装です。
+- [µWebSockets](https://github.com/uNetworking/uWebSockets): [C++11](https://isocpp.org/) および [Node.js](https://nodejs.org) で書かれた可用性の高い WebSocket サーバーとクライアントの実装です。
 - [ClusterWS](https://github.com/ClusterWS/ClusterWS): [Node.js](https://nodejs.org) でスケーラブルな WebSocket アプリケーションを構築する、軽量で高速で強力なフレームワークです。
 - [CWS](https://github.com/ClusterWS/cWS): Node.js のための高速な C++ による WebSocket の実装です (uWebSockets v0.14 のフォーク)
-- [Socket.IO](https://socket.io): 長いポーリングと WevSocket ベースのサードバーティ―の [Node.js](https://nodejs.org) 用転送プロトコルです。
+- [Socket.IO](https://socket.io): 長いポーリングと WebSocket ベースのサードバーティ―の [Node.js](https://nodejs.org) 用転送プロトコルです。
 - [SocketCluster](http://socketcluster.io/): スケーラビリティに焦点を当てた [Node.js](https://nodejs.org) 用の pub/sub WebSocket フレームワークです。
-- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): [Node.js](https://nodejs.org) 用の WebSocket サーバー API 実装です。
-- [Total.js](http://www.totaljs.com): [Node.js](https://www.nodejs.org) 用の ウェブアプリケーションフレームワーク(使用例: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
+- [WebSocket-Node](https://github.com/theturtle32/WebSocket-Node): [Node.js](https://nodejs.org) 用の WebSocket サーバー API 実装です。
+- [Total.js](http://www.totaljs.com): [Node.js](https://www.nodejs.org) 用の ウェブアプリケーションフレームワーク(使用例: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
 - [Faye](https://www.npmjs.com/package/faye-websocket): [Node.js](https://nodejs.org) 用の [WebSocket](/ja/docs/Web/API/WebSockets_API) (双方向接続) と [EventSource](/ja/docs/Web/API/EventSource/) (片方向接続) サーバーおよびクライアント
 - [SignalR](http://signalr.net/): SignalR は単一のコードだけで、もし WebSockets が使用可能な場合、基盤として WebSockets を使用し、そうでない場合はほかの代替技術にフォールバックします。
 - [Caddy](https://caddyserver.com/docs/websocket): WebSocket として任意のコマンド (stdin/stdout) を中継することができるウェブサーバーです。

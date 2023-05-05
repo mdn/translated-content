@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/7
 original_slug: Mozilla/Firefox/Versions/7
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
@@ -15,7 +16,7 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 
 ### HTML
 
-- La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis {{gecko("2.0")}}.
+- La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis Gecko 2.0.
 - Les propriétés `x` et `y` de {{domxref("HTMLImageElement")}} ont été supprimées.
 - Le paramètre `before` de la méthode `add()` de {{domxref("HTMLSelectElement")}} est désormais optionnel.
 - L'attribut {{htmlattrxref("background", "body")}} de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
@@ -106,8 +107,8 @@ Ces changements affectent les développeurs d'extensions ainsi que les développ
 
 ### XUL
 
-- Les éléments {{xulelem("tree")}} peuvent désormais conserver l'état des triangles d'affichage si les nœuds référencés par les {{XULAttr("datasources")}} ont tous des ID uniques spécifiés par les attributs "id".
-- Les éléments {{xulelem("panel")}} peuvent désormais être configurés pour [permettre à l'utilisateur de les faire glisser en cliquant n'importe où sur leur arrière-plan](/fr/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) avec le nouvel attribut {{XULAttr("backdrag")}}.
+- Les éléments `<tree>` peuvent désormais conserver l'état des triangles d'affichage si les nœuds référencés par les `datasources` ont tous des ID uniques spécifiés par les attributs "id".
+- Les éléments `<panel>` peuvent désormais être configurés pour [permettre à l'utilisateur de les faire glisser en cliquant n'importe où sur leur arrière-plan](/fr/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) avec le nouvel attribut `backdrag`.
 
 ### XPCOM
 
@@ -116,7 +117,7 @@ Ces changements affectent les développeurs d'extensions ainsi que les développ
 
 ### Rapporteur de mémoire
 
-Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui rassemble des données sur demande et effectue un rappel pour chaque résultat généré. Voir {{interface("nsIMemoryMultiReporter")}} et {{interface("nsIMemoryMultiReporterCallback")}} pour les interfaces nécessaires, ainsi que les méthodes {{ifmethod("nsIMemoryReporterManager", "registerMultiReporter")}} et {{ifmethod("nsIMemoryReporterManager", "unregisterMultiReporter")}}.
+Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui rassemble des données sur demande et effectue un rappel pour chaque résultat généré. Voir `nsIMemoryMultiReporter` et `nsIMemoryMultiReporterCallback` pour les interfaces nécessaires, ainsi que les méthodes `nsIMemoryReporterManager.registerMultiReporter()` et `nsIMemoryReporterManager.unregisterMultiReporter()`.
 
 ### Changements de l'expérience utilisateur
 
@@ -130,26 +131,26 @@ Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui ra
 
 ### Changements dans les interfaces
 
-- {{interface("nsISocketTransport")}} offre désormais un nouveau drapeau de connexion : `DISABLE_IPV6`, cela entraîne des tentatives de connexion uniquement aux adresses IPv4, en ignorant toutes les adresses IPv6 disponibles. De plus, {{interface("nsIDNSService")}} offre désormais un nouveau drapeau de résolution : `RESOLVE_DISABLE_IPV6`, ce qui entraîne un résolution des noms de domaine en ne tenant compte que des hôtes IPv4 et en ignorant toutes les adresses IPv6 disponibles. Ces changements permettent d'implémenter la [stratégie "happy eyeballs"](http://tools.ietf.org/html/draft-wing-http-new-tech-00) pour améliorer le temps de réponse lors d'une tentative de connexion sur les hôtes qui supportent à la fois IPv4 et IPv6 (en particulier ceux qui ont brisé la connectivité IPv6).
-- {{interface("inIDOMUtils")}} a deux nouvelles méthodes, {{ifmethod("inIDOMUtils","getChildrenForNode")}} qui renvoie une liste des nœuds enfants d'un noeud et {{ifmethod("inIDOMUtils","getUsedFontFaces")}} qui renvoie la liste des police de caractères utilisées dans une gamme.
-- L'interface `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` a été intégrée dans l'interface {{interface("nsIMarkupDocumentViewer")}}.
-- L'interface `nsIDOMWindow2` a été intégrée dans l'interface {{interface("nsIDOMWindow")}}.
-- L'interface `nsIDOMWindow_2_0_BRANCH` a été intégrée dans l'interface {{interface("nsIDOMWindowInternal")}}.
-- Les méthodes {{interface("nsINavHistoryObserver")}} avec des paramètres d'URI exigent désormais un GUID.
-- L'interface `nsISHistory_2_0_BRANCH` a été intégrée dans l'interface {{interface("nsISHistory")}}.
-- {{interface("nsITelemetry")}} a une nouvelle méthode, {{ifmethod("nsITelemetry","getHistogramById")}} qui retourne un histogramme par son ID, et un nouvel attribut `canRecord` qui, lorsqu'il est défini sur `false` désactive l'enregistrement des statistiques de télémétrie. Les statistiques de télémétrie ne sont plus enregistrées lorsque l'on est en mode de navigation privée. (voir {{bug("661574")}} et {{bug("661573")}})
-  Les histogrammes de télémétrie définis avec {{ifmethod("nsITelemetry","newHistogram")}} ne seront pas rapportés dans le ping de télémétrie.
-- L'interface {{interface("nsIMemoryReporter")}} a été sensiblement modifiée, si vous l'utilisez, vous devez faire quelques ajustements à votre code.
-- Les en-têtes {{interface("nsIXMLHttpRequest")}} fixées par {{ifmethod("nsIXMLHttpRequest","setRequestHeader")}} sont envoyées à la demande lorsque l'on suit une redirection. Auparavant, ces en-têtes n'auraient pas été envoyées.
-- {{interface("nsIDocShell")}} a un nouvel attribut `allowWindowControl`. Si il est `true`, le contenu du docshell est autorisé à contrôler la fenêtre (c'est-à-dire la déplacer ou la redimensionner).
-- L'interface `nsIThreadInternal2` a été intégrée dans l'interface {{interface("nsIThreadInternal")}}.
+- `nsISocketTransport` offre désormais un nouveau drapeau de connexion : `DISABLE_IPV6`, cela entraîne des tentatives de connexion uniquement aux adresses IPv4, en ignorant toutes les adresses IPv6 disponibles. De plus, `nsIDNSService` offre désormais un nouveau drapeau de résolution : `RESOLVE_DISABLE_IPV6`, ce qui entraîne un résolution des noms de domaine en ne tenant compte que des hôtes IPv4 et en ignorant toutes les adresses IPv6 disponibles. Ces changements permettent d'implémenter la [stratégie "happy eyeballs"](http://tools.ietf.org/html/draft-wing-http-new-tech-00) pour améliorer le temps de réponse lors d'une tentative de connexion sur les hôtes qui supportent à la fois IPv4 et IPv6 (en particulier ceux qui ont brisé la connectivité IPv6).
+- `inIDOMUtils` a deux nouvelles méthodes, `inIDOMUtils.getChildrenForNode()` qui renvoie une liste des nœuds enfants d'un noeud et `inIDOMUtils.getUsedFontFaces()` qui renvoie la liste des police de caractères utilisées dans une gamme.
+- L'interface `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` a été intégrée dans l'interface `nsIMarkupDocumentViewer`.
+- L'interface `nsIDOMWindow2` a été intégrée dans l'interface `nsIDOMWindow`.
+- L'interface `nsIDOMWindow_2_0_BRANCH` a été intégrée dans l'interface `nsIDOMWindowInternal`.
+- Les méthodes `nsINavHistoryObserver` avec des paramètres d'URI exigent désormais un GUID.
+- L'interface `nsISHistory_2_0_BRANCH` a été intégrée dans l'interface `nsISHistory`.
+- `nsITelemetry` a une nouvelle méthode, `nsITelemetry.getHistogramById()` qui retourne un histogramme par son ID, et un nouvel attribut `canRecord` qui, lorsqu'il est défini sur `false` désactive l'enregistrement des statistiques de télémétrie. Les statistiques de télémétrie ne sont plus enregistrées lorsque l'on est en mode de navigation privée. (voir {{bug("661574")}} et {{bug("661573")}})
+  Les histogrammes de télémétrie définis avec `nsITelemetry.newHistogram()` ne seront pas rapportés dans le ping de télémétrie.
+- L'interface `nsIMemoryReporter` a été sensiblement modifiée, si vous l'utilisez, vous devez faire quelques ajustements à votre code.
+- Les en-têtes `nsIXMLHttpRequest` fixées par `nsIXMLHttpRequest.setRequestHeader()` sont envoyées à la demande lorsque l'on suit une redirection. Auparavant, ces en-têtes n'auraient pas été envoyées.
+- `nsIDocShell` a un nouvel attribut `allowWindowControl`. Si il est `true`, le contenu du docshell est autorisé à contrôler la fenêtre (c'est-à-dire la déplacer ou la redimensionner).
+- L'interface `nsIThreadInternal2` a été intégrée dans l'interface `nsIThreadInternal`.
 
 #### Nouvelles interfaces
 
-- {{interface("nsIDOMFontFace")}}
+- `nsIDOMFontFace`
   - : Décrit une seule police de caractères.
-- {{interface("nsIDOMFontFaceList")}}
-  - : Décrit une liste de polices de caractères, chacune représentée par {{interface("nsIDOMFontFace")}}.
+- `nsIDOMFontFaceList`
+  - : Décrit une liste de polices de caractères, chacune représentée par `nsIDOMFontFace`.
 
 #### Interfaces supprimées
 
@@ -162,7 +163,7 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 - `nsIDOMDocumentStyle`
 - `nsIDOMNSDocument`
 - `nsIDOMNSFeatureFactory`
-- {{interface("nsIDOMNSHTMLDocument")}}
+- `nsIDOMNSHTMLDocument`
 - `nsIDOMNSHTMLFormElement`
 - `nsIDOMNSHTMLHRElement`
 - `nsIDOMNSHTMLTextAreaElement`
@@ -172,7 +173,7 @@ Les interfaces suivantes ont été supprimées dans le cadre du retrait de l'API
 - `DITestScriptHelper`
 - `DWebBrowserEvents`
 - `DWebBrowserEvents2`
-- {{interface("IDispatch")}}
+- `IDispatch`
 - `IMozControlBridge`
 - `IMozPluginHostCtrl`
 - `IWebBrowser`
@@ -183,7 +184,7 @@ Les interfaces suivantes ont été supprimées dans le cadre du retrait de l'API
 - `IXMLElementCollection`
 - `IXMLError`
 - `nsIActiveXSecurityPolicy`
-- {{interface("nsIDispatchSupport")}}
+- `nsIDispatchSupport`
 - `nsIMozAxPlugin`
 - `nsIScriptEventHandler`
 - `nsIScriptEventManager`
@@ -193,6 +194,6 @@ Les interfaces suivantes ont été supprimées dans le cadre du retrait de l'API
 - La structure de la fenêtre de la bibliothèque (`places.xul`) [a été nettoyée](https://bugzilla.mozilla.org/show_bug.cgi?id=588027). Cela [pourrait casser les extensions](https://bugzilla.mozilla.org/show_bug.cgi?id=677417) et les thèmes
 - L'apparence de la fenêtre d'aperçu avant impression [a été modernisé](https://bugzilla.mozilla.org/show_bug.cgi?id=663028) et les auteurs de thèmes sont invités à avoir le même style en utilisant les pseudo-éléments CSS {{cssxref("::-moz-page")}}, {{cssxref("::-moz-page-sequence")}} et {{cssxref("::-moz-scrolled-page-sequence")}}
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('6')}}

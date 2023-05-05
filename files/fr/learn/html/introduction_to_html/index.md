@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML
 original_slug: Apprendre/HTML/Introduction_à_HTML
 ---
+
 {{LearnSidebar}}
 
 Dans son cœur, {{glossary("HTML")}} est un langage vraiment simple, composé d'éléments appliquables à des fragments de texte dans un document pour leur donner un sens différent (est-ce un paragraphe ? est-ce une liste à puces ? est-ce une partie de tableau ?), pour structurer un document en sections logiques (a‑t‑il un en-tête ? est-il sur trois colonnes ? a-t-il un menu de navigation ?) et pour intégrer du contenu comme images ou vidéos dans une page. Ce module est une introduction aux deux premiers concepts ; il présente les notions fondamentales et la syntaxe à connaître pour comprendre le HTML.
@@ -52,7 +53,7 @@ Les exercices suivants vous permettront de tester votre compréhension des bases
 - [Organiser la structure d'une page](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
   - : Dans cette évaluation, vous devrez organiser la structure d'une page simple avec un en-tête, un pied de page, un menu de navigation, un contenu principal et une barre latérale.
 
-## Voir également
+## Voir aussi
 
 - [Web literacy basics 1](https://teach.mozilla.org/activities/web-lit-basics/)
   - : Un excellent cours de la fondation Mozilla qui évoque et teste un grand nombre de compétences évoquées dans le module « Introduction à HTML ». Les apprenants peuvent s'y familiariser avec la lecture, l'écriture et la participation au Web dans ce module en six parties. Découvrez les fondations du Web à travers la production et la collaboration.

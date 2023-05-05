@@ -12,15 +12,18 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient/focus
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 La méthode **`focus()`** de l'interface {{domxref("WindowClient")}} focus le client en cours et retourne une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} existant.
 
 ## Syntaxe
 
-    Client.focus().then(function(WindowClient) {
-      // utilisez le WindowClient une fois qu'il est focus
-    });
+```js
+Client.focus().then(function(WindowClient) {
+  // utilisez le WindowClient une fois qu'il est focus
+});
+```
 
 ### Paramètres
 
@@ -55,10 +58,8 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires          |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('Service Workers', '#client-focus-method', 'focus()')}} | {{Spec2('Service Workers')}} | Définition initiale.. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient.focus")}}
+{{Compat}}

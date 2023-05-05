@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/entries
 ---
+
 {{JSRef}}
 
 La méthode **`Object.entries()`** renvoie un tableau des propriétés propres énumérables d'un objet dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`, dans le même ordre qu'une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt la chaîne des prototypes).
@@ -20,7 +21,9 @@ L'ordre du tableau renvoyé par cette méthode ne dépend pas de la façon dont 
 
 ## Syntaxe
 
-    Object.entries(obj)
+```js
+Object.entries(obj)
+```
 
 ### Paramètres
 
@@ -33,7 +36,7 @@ Un tableau qui contient les propriétés énumérables propres de l'objet sous l
 
 ## Description
 
-`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments)  `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
+`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments) `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
 
 ## Exemples
 
@@ -120,14 +123,11 @@ if (!Object.entries) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-object.entries', 'Object.entries')}}     | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

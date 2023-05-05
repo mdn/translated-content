@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode/loopEnd
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété **`loopEnd`** de l'interface {{ domxref("AudioBufferSourceNode") }} est un nombre flottant à double précision qui indique, en secondes, à quel moment de l'{{domxref("AudioBuffer")}} la relecture doit s'arrêter, et éventuellement boucler de nouveau en reprenant à la position indiquée par la propriété {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}. Elle n'est prise en compte que si la propriété {{domxref("AudioBufferSourceNode.loop", "loop")}} vaut `true.`
@@ -80,13 +81,11 @@ loopendControl.oninput = function() {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loopEnd', 'loopEnd')}} | {{Spec2('Web Audio API')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.loopEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,8 @@
 ---
 title: '-webkit-transform-2d'
 slug: Web/CSS/@media/-webkit-transform-2d
-tags:
-  - '@media'
-  - CSS
-  - 標準外
-  - リファレンス
-  - WebKit
-  - メディア特性
-browser-compat: css.at-rules.media.-webkit-transform-2d
-translation_of: Web/CSS/@media/-webkit-transform-2d
 ---
+
 {{ Non-standard_header }}
 
 **`-webkit-transform-2d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS の二次元 {{cssxref("transform")}} に対応していれば値が `true` になります。

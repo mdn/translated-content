@@ -1,6 +1,6 @@
 ---
 title: Échappement des propriétés Unicode
-slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
+slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
 tags:
   - Expressions rationnelles
   - Expressions régulières
@@ -10,7 +10,8 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 original_slug: Web/JavaScript/Guide/Expressions_régulières/Échappement_propriétés_Unicode
 ---
-{{jsSidebar("JavaScript Guide")}}{{draft}}
+
+{{jsSidebar("JavaScript Guide")}}
 
 Les séquences d'échappement pour les propriétés Unicode permettent de distinguer les caractères Unicodes en fonction de leurs propriétés : majuscules, minuscules, symboles mathématiques, ponctuation, etc.
 
@@ -60,7 +61,7 @@ Les séquences d'échappement pour les propriétés Unicode permettent de distin
 | `\p{Other_Number} \p{UnicodePropertyName=Other_Number}`               |                                                                                                                  |
 | `\p{Other_Punctuation} \p{UnicodePropertyName=Other_Punctuation}`     |                                                                                                                  |
 | `\p{Paragraph_Separator} \p{UnicodePropertyName=Paragraph_Separator}` |                                                                                                                  |
-| `\p{Private_Use}`Meaning `\p{UnicodePropertyName=Private_Use}`        |                                                                                                                  |
+| `\p{Private_Use} \p{UnicodePropertyName=Private_Use}`        |                                                                                                                  |
 | `\p{Punctuation} \p{UnicodePropertyName=Punctuation}`                 |                                                                                                                  |
 | `\p{Separator} \p{UnicodePropertyName=Separator}`                     |                                                                                                                  |
 | `\p{Space_Separator} \p{UnicodePropertyName=Space_Separator}`         |                                                                                                                  |

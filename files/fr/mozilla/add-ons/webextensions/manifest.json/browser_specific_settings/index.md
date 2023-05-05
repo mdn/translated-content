@@ -8,6 +8,7 @@ tags:
   - browser_specific_settings
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -23,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
           Habituellement, non (mais voir aussi
           <a
             href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
-            >Quand avec-vous besoin d'une ID Complémentaire</a
+            >Quand avez-vous besoin d'un identifiant complémentaire</a
           ><a
             href="/fr/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
             >?</a
@@ -57,7 +58,7 @@ La clé `browser_specific_settings` contient des clés qui sont spécifiques à 
 Actuellement, elle contient uniquement une clé, `gecko`, qui est structurée ainsi :
 
 - `id` est l'ID de l'extension. Facultatif à partir de Firefox 48, obligatoire avant Firefox 48. Voir les [WebExtensions et l'ID des extensions](/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) pour voir quand vous devez spécifier un identifiant complémentaire.
-- `strict_min_version `: la version minimum de Gecko supportée. Les versions contenant un "\*" ne sont pas valides dans ce domaine. Par défaut, c'est "42a1".
+- `strict_min_version` : la version minimum de Gecko supportée. Les versions contenant un "\*" ne sont pas valides dans ce domaine. Par défaut, c'est "42a1".
 - `strict_max_version` : la version maximum de Gecko supportée. Si la version de Firefox sur laquelle l'extension est en cours d'installation ou d'exécution est au-dessus de cette version, l'extension sera désactivée ou ne sera pas autorisée à être installée. Par défaut, c'est "\*", qui désactive la vérification d'une version maximale.
 - `update_url` est lien vers un [manifeste de mise à jour personnalisé](/fr-FR/Add-ons/Install_Manifests#updateURL). Notez que le lien doit commencer par "https". Cette clé consiste à gérer vous-même les mises à jour d'extension (c'est-à-dire pas via AMO).
 
@@ -115,4 +116,4 @@ Exemple avec toutes les clés possibles. Notez que vous n'incluez normalement ni
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.browser_specific_settings")}}
+{{Compat}}

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/clear
 ---
+
 {{JSRef}}
 
 La méthode **`clear()`** permet de retirer tous les éléments d'un ensemble `Set`.
@@ -19,7 +20,9 @@ La méthode **`clear()`** permet de retirer tous les éléments d'un ensemble `S
 
 ## Syntaxe
 
-    monSet.clear();
+```js
+monSet.clear();
+```
 
 ### Valeur de retour
 
@@ -43,14 +46,11 @@ monSet.has("truc")  // false
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.clear', 'Set.prototype.clear')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.clear")}}
+{{Compat}}
 
 ### Voir aussi
 

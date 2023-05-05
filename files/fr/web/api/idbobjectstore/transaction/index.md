@@ -3,6 +3,7 @@ title: IDBObjectStore.transaction
 slug: Web/API/IDBObjectStore/transaction
 translation_of: Web/API/IDBObjectStore/transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La propriété **`transaction`** de l'interface {{domxref("IDBObjectStore")}} renvoie la {{domxref("IDBTransaction","transaction")}} à laquelle l'{{domxref("IDBObjectStore","accès")}} du magasin d'objet appartient.
@@ -30,57 +31,54 @@ La propriété **`transaction`** affiche la transaction à laquelle l'accès du 
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-	note.innerHTML += '<li>Connexion établie.</li>';
+  note.innerHTML += '<li>Connexion établie.</li>';
 
-	//Affecte la connexion à la variable db.
-	db = DBOpenRequest.result;
+  //Affecte la connexion à la variable db.
+  db = DBOpenRequest.result;
 
-	// Exécutez la fonction addData () pour ajouter un enregistrement au magasin d'objet
-	addData();
+  // Exécutez la fonction addData () pour ajouter un enregistrement au magasin d'objet
+  addData();
 };
 function addData() {
-	// un nouvel objet prêt à être emmagasiné
-	newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  // un nouvel objet prêt à être emmagasiné
+  newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
-	// ouvre une transaction de lecture / écriture prête au traitement des données sur la connexion
-	var transaction = db.transaction(["toDoList"], "readwrite");
+  // ouvre une transaction de lecture / écriture prête au traitement des données sur la connexion
+  var transaction = db.transaction(["toDoList"], "readwrite");
 
-	// en cas de succès de l'ouverture de la transaction
-	transaction.oncomplete = function(event) {
-		note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
-	};
-	// en cas d'échec de l'ouverture de la transaction
-	transaction.onerror = function(event) {
-		note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" c\'est produite échec de la transaction.</li>';
-	};
+  // en cas de succès de l'ouverture de la transaction
+  transaction.oncomplete = function(event) {
+    note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
+  };
+  // en cas d'échec de l'ouverture de la transaction
+  transaction.onerror = function(event) {
+    note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" c\'est produite échec de la transaction.</li>';
+  };
 
-	// ouvre l'accès au un magasin "toDoList" de la transaction
-	var objectStore = transaction.objectStore("toDoList");
+  // ouvre l'accès au un magasin "toDoList" de la transaction
+  var objectStore = transaction.objectStore("toDoList");
 
 //->Affiche la transaction de l'accès du magasin d'objet
     console.log(objectStore.transaction);
 
-	// Ajoute un enregistrement
-	var objectStoreRequest = objectStore.add(newItem[0]);
-	objectStoreRequest.onsuccess = function(event) {
-		// signale l'ajout de l'enregistrement
-		note.innerHTML += '<li>Enregistrement ajouté.</li>';
-	};
- };
-
+  // Ajoute un enregistrement
+  var objectStoreRequest = objectStore.add(newItem[0]);
+  objectStoreRequest.onsuccess = function(event) {
+    // signale l'ajout de l'enregistrement
+    note.innerHTML += '<li>Enregistrement ajouté.</li>';
+  };
+};
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                       | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-transaction', 'transaction')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.transaction")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -90,4 +88,4 @@ function addData() {
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

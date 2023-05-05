@@ -8,20 +8,23 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 original_slug: Web/JavaScript/Reference/Erreurs/Not_a_constructor
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Object doesn't support this action (Edge)
-    TypeError: "x" is not a constructor
+```
+TypeError: Object doesn't support this action (Edge)
+TypeError: "x" is not a constructor
 
-    TypeError: Math is not a constructor
-    TypeError: JSON is not a constructor
-    TypeError: Symbol is not a constructor
-    TypeError: Reflect is not a constructor
-    TypeError: Intl is not a constructor
-    TypeError: SIMD is not a constructor
-    TypeError: Atomics is not a constructor
+TypeError: Math is not a constructor
+TypeError: JSON is not a constructor
+TypeError: Symbol is not a constructor
+TypeError: Reflect is not a constructor
+TypeError: Intl is not a constructor
+TypeError: SIMD is not a constructor
+TypeError: Atomics is not a constructor
+```
 
 ## Type d'erreur
 

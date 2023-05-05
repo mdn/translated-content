@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 Parfois, quand vous écrirez du CSS, vous rencontrerez un problème où votre CSS semblera ne pas se comporter comme vous vous y attendrez. Peut-être que vous croirez qu'un certain sélecteur devrait être lié à un élément, mais rien ne se passe, ou une box aura une taille différente de ce que vous espérerez. Cet article vous donnera une ligne directrice pour débeuguer un problème CSS, et vous montrera comment les DevTools (outils de développeur) inclus dans tous les navigateurs modernes peuvent vous aider à comprendre ce qui se passe.
@@ -161,7 +162,7 @@ Browsers simply ignore CSS they don't understand. If the property or value you a
 
 You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. The below table shows the compat data for the {{cssxref("shape-outside")}} property.
 
-{{compat("css.shape-outside")}}
+{{Compat}}
 
 ### Is something else overriding your CSS?
 
@@ -175,10 +176,10 @@ A reduced test case is a code example that demonstrates the problem in the simpl
 
 To create a reduced test case:
 
-1.  If your markup is dynamically generated — for example via a CMS — make a static version of the output that shows the problem. A code sharing site like [CodePen](https://codepen.io/) is useful for hosting reduced test cases, as then they are accessible online and you can easily share them with colleagues. You could start by doing View Source on the page and copying the HTML into CodePen, then grab any relevant CSS and JavaScript and include it too. After that, you can check whether the issue is still evident.
-2.  If removing the JavaScript does not make the issue go away, don't include the JavaScript. If removing the JavaScript _does_ make the issue go away, then remove as much JavaScript as you can, leaving in whatever causes the issue.
-3.  Remove any HTML that does not contribute to the issue. Remove components or even main elements of the layout. Again, try to get down to the smallest amount of code that still shows the issue.
-4.  Remove any CSS that doesn't impact the issue.
+1. If your markup is dynamically generated — for example via a CMS — make a static version of the output that shows the problem. A code sharing site like [CodePen](https://codepen.io/) is useful for hosting reduced test cases, as then they are accessible online and you can easily share them with colleagues. You could start by doing View Source on the page and copying the HTML into CodePen, then grab any relevant CSS and JavaScript and include it too. After that, you can check whether the issue is still evident.
+2. If removing the JavaScript does not make the issue go away, don't include the JavaScript. If removing the JavaScript _does_ make the issue go away, then remove as much JavaScript as you can, leaving in whatever causes the issue.
+3. Remove any HTML that does not contribute to the issue. Remove components or even main elements of the layout. Again, try to get down to the smallest amount of code that still shows the issue.
+4. Remove any CSS that doesn't impact the issue.
 
 In the process of doing this, you may discover what is causing the problem, or at least be able to turn it on and off by removing something specific. It is worth adding some comments to your code as you discover things. If you need to ask for help, they will show the person helping you what you have already tried. This may well give you enough information to be able to search for likely sounding problems and workarounds.
 
@@ -189,24 +190,3 @@ In the instance that your problem is actually a bug in a browser, then a reduced
 As you become more experienced with CSS, you will find that you get faster at figuring out issues. However even the most experienced of us sometimes find ourselves wondering what on earth is going on. Taking a methodical approach, making a reduced test case, and explaining the issue to someone else will usually result in a fix being found.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1.  [Cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3.  [The box model](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

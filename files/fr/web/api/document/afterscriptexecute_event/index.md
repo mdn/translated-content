@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Document/onafterscriptexecute
 original_slug: Web/API/Document/onafterscriptexecute
 ---
+
 {{ ApiRef("DOM") }} {{non-standard_header}}
 
 ## Résumé
@@ -17,7 +18,9 @@ Lancé lorsqu'un élément {{HTMLElement("script")}} statique achève l'exécuti
 
 ## Syntaxe
 
-    document.onafterscriptexecute = funcRef;
+```js
+document.onafterscriptexecute = funcRef;
+```
 
 _funcRef_ est une référence de fonction appelée lorsqu'un évènement est lancé. L'attribut de la `target` (cible) d'évènement est défini sur l'{{domxref("Element")}} script dont l'exécution vient de s'achever.
 

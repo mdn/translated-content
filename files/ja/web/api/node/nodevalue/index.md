@@ -1,12 +1,10 @@
 ---
-title: Node.nodeValue
+title: "Node: nodeValue プロパティ"
 slug: Web/API/Node/nodeValue
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Node.nodeValue
-translation_of: Web/API/Node/nodeValue
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`nodeValue`** は {{domxref("Node")}} インターフェイスのプロパティで、現在のノードの値を返したり設定したりします。
@@ -32,7 +30,7 @@ translation_of: Web/API/Node/nodeValue
 | {{domxref("ProcessingInstruction")}} | 対象を除く内容物全体                |
 | {{domxref("Text")}}                  | テキストノードの中身                |
 
-> **Note:** `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
+> **メモ:** `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
 
 ## 例
 
@@ -45,11 +43,11 @@ translation_of: Web/API/Node/nodeValue
 また、以下のスクリプトを参照してください。
 
 ```js
-let node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.querySelector("body").firstChild;
 let result = "<br/>ノード名:<br/>";
 while (node) {
-  result += node.nodeName + "の値: " + node.nodeValue + "<br/>";
-  node = node.nextSibling
+  result += `${node.nodeName} の値: ${node.nodeValue}<br/>`;
+  node = node.nextSibling;
 }
 
 const output = document.getElementById("result");

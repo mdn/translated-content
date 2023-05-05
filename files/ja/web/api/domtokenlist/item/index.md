@@ -1,18 +1,14 @@
 ---
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.item
-translation_of: Web/API/DOMTokenList/item
 ---
+
 {{APIRef("DOM")}}
 
 **`item()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト内の項目をその位置から取得します。
 
-> **Note:** このメソッドは `[]` 演算子と等価です。
-> したがって、 `aList.item(i)` は `aList[i]` と同じです。 {{jsxref("Array")}} の [[] 演算子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements)と同様です。
+> **メモ:** このメソッドは `[]` 演算子と等価です。
+> したがって、 `aList.item(i)` は `aList[i]` と同じです。 {{jsxref("Array")}} の [[] 演算子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#添字による配列の要素へのアクセス)と同様です。
 
 ## 構文
 
@@ -27,7 +23,7 @@ tokenList.item(index)
 
 ### 返値
 
-返された要素を表す文字列です。数値がそのリストの `length` 以上であった場合は `null` を返します。
+返された要素を表す文字列です。数値がそのリストの `length` 以上であった場合は `null` を返します。
 
 ### 例外
 

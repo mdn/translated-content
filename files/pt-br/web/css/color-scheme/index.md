@@ -1,22 +1,8 @@
 ---
 title: color-scheme
 slug: Web/CSS/color-scheme
-translation_of: Web/CSS/color-scheme
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - color-scheme
-  - recipe:css-property
-browser-compat: css.properties.color-scheme
 ---
+
 {{CSSRef}}
 
 A Propriedade CSS **`color-scheme`** possibilita que um elemento possa indicar em qual esquema de cores é mais amigável de ser renderizado.
@@ -37,21 +23,32 @@ color-scheme: initial;
 color-scheme: revert;
 color-scheme: unset;
 ```
+
 O valor da propriedade `color-scheme` precisa ser uma das palavras-chaves abaixo.
+
 ### Valores
+
 - `normal`
   - : Indica que o elemento não possui nenhum esquema de cores, e deve ser renderizado utilizando o esquema de cores padrão do navegador.
 - `light`
   - : Indica que o elemento pode ser renderizado utilizando o esquema de cores claro do sistema operacional.
 - `dark`
   - : Indica que o elemento pode ser renderizado utilizando o esquema de cores escuro do sistema operacional.
+
 ## Definição formal
+
 {{cssinfo}}
+
 ## Sintaxe formal
+
 {{csssyntax}}
+
 ## Exemplos
+
 ### Adaptando a esquemas de cores
+
 Para fazer com que toda a página tenha o esquema de cores de preferência do usuário declare `color-scheme` no elemento {{cssxref(":root")}}.
+
 ```css
 :root {
   color-scheme: light dark;

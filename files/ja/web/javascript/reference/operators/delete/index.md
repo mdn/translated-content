@@ -1,22 +1,11 @@
 ---
 title: delete 演算子
 slug: Web/JavaScript/Reference/Operators/delete
-tags:
-  - JavaScript
-  - 言語機能
-  - メモリーー管理
-  - Object
-  - Operator
-  - リファレンス
-  - 解放
-  - Unary
-  - delete
-browser-compat: javascript.operators.delete
-translation_of: Web/JavaScript/Reference/Operators/delete
 ---
+
 {{jsSidebar("Operators")}}
 
-JavaScript の **`delete` 演算子**は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されていない場合は、自動的に解放されます。
+JavaScript の **`delete` 演算子**は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されていない場合は、自動的に解放されます。
 
 {{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
@@ -43,7 +32,7 @@ delete object['property']
 ### 返値
 
 プロパティが{{jsxref("Object.hasOwnProperty", "自分自身の", "", 1)}}{{jsxref("Errors/Cant_delete",
-	"構成不可", "", 1)}}のプロパティであった場合、 strict モードでなければ `false` を返します。それ以外の場合は `true` を返します。
+ "構成不可", "", 1)}}のプロパティであった場合、 strict モードでなければ `false` を返します。それ以外の場合は `true` を返します。
 
 ### 例外
 
@@ -53,7 +42,7 @@ delete object['property']
 
 一般的に信じられていることとは異なり (おそらく [C++ における delete](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Memory_Management)を参照してください。
 
-**`delete`** 演算子は指定したプロパティをオブジェクトから取り除きます。削除に成功すると `true` を返し、そうでなければ `false` を返します。
+**`delete`** 演算子は指定したプロパティをオブジェクトから取り除きます。削除に成功すると `true` を返し、そうでなければ `false` を返します。
 
 ただし、次のようなシナリオを考慮することが重要です。
 
@@ -61,7 +50,7 @@ delete object['property']
 - そのオブジェクトのプロトタイプチェーンに同名のプロパティが存在する場合、削除後はプロトタイプチェーンのプロパティをオブジェクトが使うようになります (つまり、`delete` は自身のプロパティにのみ効果があります)。
 - グローバルスコープや関数スコープから {{jsxref("Statements/var","var")}} で宣言されたプロパティは削除できません。
 
-  - そのため、`delete` はグローバルスコープ内の関数を削除できません (関数定義の一部であるか関数式の一部であるかにかかわらず)。
+  - そのため、`delete` はグローバルスコープ内の関数を削除できません (関数定義の一部であるか関数式の一部であるかにかかわらず)。
   - (グローバルスコープを除く) オブジェクトの一部である関数は `delete` で削除できます。
 
 - {{jsxref("Statements/let","let")}} や {{jsxref("Statements/const","const")}} で宣言された任意のプロパティはそれらが宣言されたスコープから削除できません。
@@ -134,7 +123,7 @@ console.log(delete variable2); // false
 ```js
 function func(param) {
   // strict モードでは SyntaxError
-  console.log(delete param); // false
+  console.log(delete param); // false
 }
 
 // strict モードでは SyntaxError

@@ -1,12 +1,8 @@
 ---
 title: CSS スクロールスナップの基本概念
 slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
-tags:
-  - CSS
-  - CSS スクロールスナップ
-  - Guide
-  - concepts
 ---
+
 {{CSSRef}}
 
 [CSS スクロールスナップ仕様書](https://drafts.csswg.org/css-scroll-snap-1/)は、ユーザーが文書をスクロールする際に、特定の位置にスクロールをスナップさせる方法を提供します。これにより、モバイルでも、デスクトップであっても、アプリのような操作感を実現することができます。
@@ -15,7 +11,7 @@ tags:
 
 スクロールスナップ仕様の主要なプロパティは、{{CSSxRef("scroll-snap-type")}} と {{CSSxRef("scroll-snap-align")}} です。`scroll-snap-type` プロパティは、スクロールの種類と方向を指定するために、[スクロールコンテナー](/ja/docs/Glossary/Scroll_container)で使用されます。
 
-`scroll-snap-align` プロパティは子要素で、スクロールがスナップする位置を設定するために使用する必要があります。以下の例では `y` 軸に沿ってスクロールをスナップさせるために、`scroll-snap-align` をセクション要素に使用してスクロールを停止する位置を指定しています。
+`scroll-snap-align` プロパティは子要素で、スクロールがスナップする位置を設定するために使用する必要があります。以下の例では `y` 軸に沿ってスクロールをスナップさせるために、`scroll-snap-align` をセクション要素に使用してスクロールを停止する位置を指定しています。
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-y.html", '100%', 700)}}
 
@@ -33,7 +29,7 @@ tags:
 
 ## scroll-snap-align の使用
 
-{{CSSxRef("scroll-snap-align")}} プロパティには、スクロールコンテナ内でコンテンツがスナップするポイントを示す、`start`、`end`、`center` の値を取ることができます。以下の例では、`scroll-snap-align` の値を変更することで、スクロールの動作がどのように変化するかを確認できます。
+{{CSSxRef("scroll-snap-align")}} プロパティには、スクロールコンテナ内でコンテンツがスナップするポイントを示す、`start`、`end`、`center` の値を取ることができます。以下の例では、`scroll-snap-align` の値を変更することで、スクロールの動作がどのように変化するかを確認できます。
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/align.html", '100%', 700)}}
 
@@ -61,7 +57,7 @@ tags:
 
 このプロパティは、ユーザーがスクローラーの各セクションを確実に確認し、誤ってスキップしてしまわないようにするのに役立ちます。しかし、ユーザーが特定のセクションを探している場合、スクロールの速度が遅くなるという問題があります。
 
-> **Note:** `scroll-snap-stop` プロパティは、現在の勧告候補の仕様ではリスクがあるとされているため、削除される可能性があります。
+> **メモ:** `scroll-snap-stop` プロパティは、現在の勧告候補の仕様ではリスクがあるとされているため、削除される可能性があります。
 
 ## ブラウザーの互換性
 

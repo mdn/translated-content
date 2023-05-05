@@ -3,6 +3,7 @@ title: IDBObjectStore.createIndex()
 slug: Web/API/IDBObjectStore/createIndex
 translation_of: Web/API/IDBObjectStore/createIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`createIndex()`** de l'interface {{domxref("IDBObjectStore")}} met en place sur le magasin d'objet {{domxref("IDBObjectStore","relié")}} un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.
@@ -95,7 +96,7 @@ L'{{domxref("IDBIndex","accès")}} au nouvel index.
 
 ## Exemple
 
-Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","<code>onupgradeneeded</code>")}} être utilisé pour mètre à jour la structure de la base de donnée quand un numéro de version supérieur est chargé.
+Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","onupgradeneeded")}} être utilisé pour mètre à jour la structure de la base de donnée quand un numéro de version supérieur est chargé.
 
 Des méthode **`createIndex()`** sont utilisées pour mètre en place différents index sur le magasin d'objet `toDoList`.
 
@@ -144,17 +145,15 @@ DBOpenRequest.onupgradeneeded = function(event) {
 };
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-createIndex-IDBIndex-DOMString-name-DOMString-sequence-DOMString--keyPath-IDBIndexParameters-optionalParameters', 'createIndex()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.createIndex")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -164,4 +163,4 @@ DBOpenRequest.onupgradeneeded = function(event) {
 - {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
 - {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
 - {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 ---
+
 {{AddonSidebar()}}
 
 Vérifie de voir si un mise à jour de l'extension est disponible.
@@ -34,7 +35,7 @@ None.
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec deux arguments :
 
 - `status`
-  - : Une valeur {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}}  — Le résultat de la vérification de mise à jour.
+  - : Une valeur {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} — Le résultat de la vérification de mise à jour.
 - `details`{{optional_inline}}
 
   - : `object`. Si le `status` est `update_available`, cela contient plus d'informations sur la mise à jour. C'est un objet contenant une simple propriété :
@@ -42,9 +43,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
     - `version`
       - : `string`. La version de la mise à jour.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.requestUpdateCheck")}}
+{{Compat}}
 
 ## Exemples
 
@@ -74,7 +75,8 @@ requestingCheck.then(onRequested, onError);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +103,4 @@ requestingCheck.then(onRequested, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

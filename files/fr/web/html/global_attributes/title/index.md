@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/title
 original_slug: Web/HTML/Attributs_universels/title
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.
@@ -79,16 +80,11 @@ Cela est dû à une prise en charge hétérogène de la part des navigateurs. Si
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires                                                                                                                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "elements.html#the-title-attribute", "title")}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                           |
-| {{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}             | {{Spec2('HTML5.1')}}     | Dérivation de {{SpecName('HTML WHATWG')}}, aucune modification de {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                           |
-| {{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}         | {{Spec2('HTML5 W3C')}}     | Dérivation de {{SpecName('HTML WHATWG')}}. À partir de {{SpecName("HTML4.01")}}, `title` est désormais un attribut universel.                                                                                                                                                                                        |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}         | {{Spec2('HTML4.01')}}     | Pris en charge par l'ensemble des éléments sauf {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}} et {{HTMLElement("title")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.title")}}
+{{Compat}}
 
 ## Voir aussi
 

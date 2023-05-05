@@ -1,10 +1,9 @@
 ---
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
-browser-compat: api.MediaStreamAudioSourceNode
-translation_of: Web/API/MediaStreamAudioSourceNode
 original_slug: Web/API/MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 La interfaz **`MediaStreamAudioSourceNode`** es un tipo de {{domxref("AudioNode")}} que funciona como una fuente de audio cuyo contenido multimedia se recibe de un {{domxref("MediaStream")}} obtenido mediante WebRTC o las API de captura y transmisión de medios.
@@ -13,7 +12,7 @@ Este medio podría venir de un micrófono (a través de {{domxref("MediaDevices.
 
 Un `MediaStreamAudioSourceNode` no tiene entradas y exactamente una salida, y se crea mediante el método {{domxref("AudioContext.createMediaStreamSource()")}}.
 
-`MediaStreamAudioSourceNode` toma el audio del _primer_ {{domxref("MediaStreamTrack")}} cuyo valor de atributo {{domxref("MediaStreamTrack.kind", "kind")}} es `audio`. Consulte {{anch("Orden de pistas")}} para obtener más información sobre el orden de las pistas.
+`MediaStreamAudioSourceNode` toma el audio del _primer_ {{domxref("MediaStreamTrack")}} cuyo valor de atributo {{domxref("MediaStreamTrack.kind", "kind")}} es `audio`. Consulte [Orden de pistas](#orden_de_pistas) para obtener más información sobre el orden de las pistas.
 
 El número de canales emitidos por el nodo coincide con el número de pistas encontradas en la pista de audio seleccionada
 
@@ -89,4 +88,3 @@ Consulte [`AudioContext.createMediaStreamSource()`](/es/docs/Web/API/AudioContex
 - [WebRTC API](/es/docs/Web/API/WebRTC_API)
 - [API de captura de medios y transmisiones (Media Streams)](/es/docs/Web/API/Media_Streams_API)
 - {{domxref("MediaStreamTrackAudioSourceNode")}}
-

@@ -1,12 +1,8 @@
 ---
 title: CSS グリッドレイアウトでの自動配置
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
+
 {{CSSRef}}
 
 CSS グリッドレイアウト仕様書には、作成したグリッド上にアイテムを正確に配置する機能に加えて、グリッドを作成したときに子アイテムの一部またはすべてを配置しなかった場合の動作を制御するルールが含まれています。一連のアイテムでグリッドを作成することで、最も簡単な方法で自動配置を確認することができます。アイテムに配置情報を与えない場合、アイテムはグリッド上の各セルに 1 つずつ配置されます。
@@ -130,12 +126,12 @@ CSS グリッドレイアウト仕様書には、作成したグリッド上に�
      <div>Two</div>
      <div>Three</div>
      <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
+     <br>This cell
+     <br>Has extra
+     <br>content.
+     <br>Max is auto
+     <br>so the row expands.
+     </div>
      <div>Five</div>
 </div>
 ```
@@ -447,7 +443,7 @@ Gridは、グリッド位置が与えられていないアイテムを、仕様�
 
 仕様書には、無名のグリッドアイテムについての記述があります。これは、グリッドコンテナーの中に、他の要素に包まれていない文字列がある場合に作成されます。下の例では、クラスが `grid` の親を `display: grid` に設定したと仮定して、 3 つのグリッドアイテムがあります。最初のアイテムは無名のアイテムで、周囲にマークアップがないため、常に自動配置のルールで処理されます。他の 2 つは、 div で囲まれたグリッドアイテムで、自動配置されるか、配置メソッドを使ってグリッドに配置することができます。
 
-```css
+```html
 <div class="grid">
   この文字列は無名のアイテムになります。
   <div>グリッドアイテムです</div>

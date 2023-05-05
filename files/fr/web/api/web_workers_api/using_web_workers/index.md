@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/API/Web_Workers_API/Utilisation_des_web_workers
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 Les _Web Workers_ sont un outil permettant au contenu web d'exécuter des scripts dans des tâches (_threads_) d'arrière-plan. Le _thread_ associé au _worker_ peut réaliser des tâches sans qu'il y ait d'interférence avec l'interface utilisateur. De plus, les _web workers_ peuvent réaliser des opérations d'entrée/sortie grâce à [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (bien que les attributs `responseXML` et `channel` soient nécessairement vides dans ces cas). Une fois créé, un _worker_ peut envoyer des messages au code JavaScript qui l'a créé. De même, le script initial peut envoyer des messages au _worker_. Cette communication s'effectue grâce à des gestionnaires d'évènements. Dans cet article, nous verrons une introduction à l'utilisation des _web workers_.
@@ -23,7 +24,7 @@ Le contexte du _worker_ est représenté par un objet {{domxref("DedicatedWorker
 
 Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/API_IndexedDB). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
-Les données sont échangées entre le _thread_ du _worker_ et le _thread_ principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode `postMessage()` et réagir aux messages reçus grâce au gestionnaire d'évènement `onmessage` (le message sera contenu dans l'attribut `data` de l'évènement {{event("Message")}} associé). Les données sont copiées dans le message, elles ne sont pas partagées.
+Les données sont échangées entre le _thread_ du _worker_ et le _thread_ principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode `postMessage()` et réagir aux messages reçus grâce au gestionnaire d'évènement `onmessage` (le message sera contenu dans l'attribut `data` de l'évènement [`message`](/fr/docs/Web/API/Worker/message_event) associé). Les données sont copiées dans le message, elles ne sont pas partagées.
 
 Les _workers_ peuvent également déclencher la création d'autres _workers_ tant que ceux-ci restent hébergés sur la même origine que la page parente. De plus, les _workers_ pourront utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour effectuer des opérations réseau mais les attributs `responseXML` et `channel` de `XMLHttpRequest` renverront nécessairement `null`.
 
@@ -216,7 +217,9 @@ Toutefois, la communication entre les _web workers_ est contrôlée explicitemen
 
 Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
 
-    Content-Security-Policy: script-src 'self'
+```
+Content-Security-Policy: script-src 'self'
+```
 
 Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
 
@@ -476,7 +479,7 @@ Les ordinateurs dotés de plusieurs coeurs se généralisent et il peut s'avére
 
 En plus des web _workers_ (dédiés et partagés), il existe d'autres types de _workers_ :
 
-- [Les service _workers_](/en-US/docs/Web/API/ServiceWorker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
+- [Les service _workers_](/fr/docs/Web/API/ServiceWorker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
 - [Les _worklets_ audio](/fr/docs/Web/API/Web_Audio_API#Audio_processing_in_JavaScript) permettent de traiter des signaux audios en arrière-plan (fonctionnalité expérimentale).
 
 ## Fonctions et interfaces disponibles pour les _workers_
@@ -490,13 +493,11 @@ La plupart des fonctionnalités JavaScript standard peuvent être utilisées dan
 
 En revanche, un _worker_ ne pourra pas directement manipuler la page parente et notamment le DOM et les objets de la page. Il faudra effectuer ce traitement indirectement, via des messages.
 
-> **Note :** Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir  [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+> **Note :** Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#workers', 'Web workers')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Voir aussi
 

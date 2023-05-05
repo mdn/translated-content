@@ -1,15 +1,8 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS トランジション
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.transition-duration
-translation_of: Web/CSS/transition-duration
 ---
+
 {{CSSRef}}
 
 **`transition-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、トランジションによるアニメーションが完了するまでの所要時間を秒数またはミリ秒数で指定します。既定値は `0s` であり、これはアニメーションを実行しないことを示します。

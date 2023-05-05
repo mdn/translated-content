@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/matrix3d()
 original_slug: Web/CSS/transform-function/matrix3d()
 browser-compat: css.types.transform-function.matrix3d
 ---
+
 {{CSSRef}}
 
 La fonction **`matrix3d()`** décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).

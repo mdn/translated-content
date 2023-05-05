@@ -1,6 +1,6 @@
 ---
 title: Précédence des opérateurs
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 tags:
   - JavaScript
   - Opérateur
@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 original_slug: Web/JavaScript/Reference/Opérateurs/Précédence_des_opérateurs
 ---
+
 {{jsSidebar("Operators")}}
 
 La **précédence des opérateurs** détermine l'ordre dans lequel les opérateurs sont évalués. Les opérateurs avec la plus haute précédence sont évalués en premier.
@@ -21,7 +22,9 @@ Ainsi, l'opérateur de multiplication (« `*` ») (ayant une précédence plus h
 
 L'associativité détermine l'ordre dans lequel des opérateurs de même précédence sont évalués. Par exemple, considérons l'expression suivante :
 
-    a OP b OP c
+```js
+a OP b OP c
+```
 
 Une associativité de gauche (gauche à droite) signifie qu'elle est évaluée comme `(a OP b) OP c`, tandis qu'une associativité de droite (droite à gauche) signifie qu'elle est interprétée comme `a OP (b OP c)`. Les opérateurs d'affectation sont associatifs de droite, on peut donc écrire :
 

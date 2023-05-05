@@ -1,0 +1,486 @@
+---
+title: 화살표 함수
+slug: Web/JavaScript/Reference/Functions/Arrow_functions
+original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
+---
+
+{{jsSidebar("Functions")}}
+
+화살표 함수 표현(**arrow function expression**)은 [전통적인 함수표현(function)](/ko/docs/Web/JavaScript/Reference/Operators/function)의 간편한 대안입니다. 하지만, 화살표 함수는 몇 가지 제한점이 있고 모든 상황에 사용할 수는 없습니다.
+
+- [this](/ko/docs/Web/JavaScript/Reference/Operators/this), [arguments](/ko/docs/Web/JavaScript/Reference/Functions/arguments)나 [super](/ko/docs/Web/JavaScript/Reference/Operators/super)에 대한 자체 바인딩이 없고, [methods](/ko/docs/Glossary/Method)로 사용해서는 안됩니다.
+- [new.target](/ko/docs/Web/JavaScript/Reference/Operators/new.target)키워드가 없습니다.
+- 일반적으로 스코프를 지정할 때 사용하는 [call](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [apply](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [bind](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) methods를 이용할 수 없습니다.
+- 생성자[(Constructor)](/ko/docs/Web/JavaScript/Reference/Classes/constructor)로 사용할 수 없습니다.
+- [yield](/ko/docs/Web/JavaScript/Reference/Operators/yield)를 화살표 함수 내부에서 사용할 수 없습니다.
+
+{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+
+## 구문
+
+### 기본 구문
+
+```
+    (param1, param2, …, paramN) => { statements }
+    (param1, param2, …, paramN) => expression
+    // 다음과 동일함:  => { return expression; }
+
+    // 매개변수가 하나뿐인 경우 괄호는 선택사항:
+    (singleParam) => { statements }
+    singleParam => { statements }
+
+    // 매개변수가 없는 함수는 괄호가 필요:
+    () => { statements }
+```
+
+### 고급 구문
+
+```
+    // 객체 리터럴 표현을 반환하기 위해서는 함수 본문(body)을 괄호 속에 넣음:
+    params => ({foo: bar})
+
+    // 나머지 매개변수 및 기본 매개변수를 지원함
+    (param1, param2, ...rest) => { statements }
+    (param1 = defaultValue1, param2, …, paramN = defaultValueN) => { statements }
+
+    // 매개변수 목록 내 구조분해할당도 지원됨
+    var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
+    f();  // 6
+```
+
+상세한 구문 예는 [여기](http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax)에서 볼 수 있습니다.
+
+## 설명
+
+[Hacks 블로그 "ES6 In Depth: Arrow functions" 포스트](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/) 참조.
+
+화살표 함수 도입에 영향을 준 두 요소: 보다 짧아진 함수 및 `바인딩하지 않은 this.`
+
+### 짧은 함수
+
+일부 함수 패턴에서는, 짧은 함수가 환영받습니다. 비교해 보세요:
+
+```
+    var elements = [
+      'Hydrogen',
+      'Helium',
+      'Lithium',
+      'Beryllium'
+    ];
+
+    // 이 문장은 배열을 반환함: [8, 6, 7, 9]
+    elements.map(function(element) {
+      return element.length;
+    });
+
+    // 위의 일반적인 함수 표현은 아래 화살표 함수로 쓸 수 있다.
+    elements.map((element) => {
+      return element.length;
+    }); // [8, 6, 7, 9]
+
+    // 파라미터가 하나만 있을 때는 주변 괄호를 생략할 수 있다.
+    elements.map(element => {
+      return element.length;
+    }); // [8, 6, 7, 9]
+
+    // 화살표 함수의 유일한 문장이 'return'일 때 'return'과
+    // 중괄호({})를 생략할 수 있다.
+    elements.map(element => element.length); // [8, 6, 7, 9]
+
+    // 이 경우 length 속성만 필요하므로 destructuring 매개변수를 사용할 수 있다.
+    // 'length'는 우리가 얻고자 하는 속성에 해당하는 반면,
+    // lengthFooBArX'는 변경 가능한 변수의 이름일 뿐이므로
+    // 원하는 유효한 변수명으로 변경할 수 있다.
+    elements.map(({ length: lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
+
+    // destructuring 파라미터 할당도 아래와 같이 작성할 수 있습니다.
+    // 이 예에서 정의한 객체내의 'length'에 값을 지정하지 않은 점에 주목하세요. 대신, "length" 변수의
+    // 리터럴 이름은 우리가 해당 객체에서 꺼내오고 싶은 속성이름 자체로 사용됩니다.
+    elements.map(({ length }) => length); // [8, 6, 7, 9]
+```
+
+### 바인딩 되지 않은 `this`
+
+화살표 함수가 나오기 전까지는, 모든 새로운 함수는, 어떻게 그 함수가 호출되는지에 따라 자신의 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this) 값을 정의했습니다:
+
+- 이 함수가 생성자인 경우는 새로운 객체
+- [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode) 함수 호출에서는 `undefined`
+- 함수가 "객체 메서드"로서 호출된 경우 문맥 객체
+- 등등
+
+이는 객체 지향 스타일로 프로그래밍할 때 별로 좋지않습니다.
+
+```js
+function Person() {
+  // Person() 생성자는 `this`를 자신의 인스턴스로 정의.
+  this.age = 0;
+
+  setInterval(function growUp() {
+    // 비엄격 모드에서, growUp() 함수는 `this`를
+    // 전역 객체로 정의하고, 이는 Person() 생성자에
+    // 정의된 `this`와 다름.
+    this.age++;
+  }, 1000);
+}
+
+var p = new Person();
+```
+
+ECMAScript 3/5 에서는, 이 문제를 `this` 값을 폐쇄될 수 있는 (비전역) 변수에 할당하여 해결했습니다.
+
+```js
+function Person() {
+  var that = this;
+  that.age = 0;
+
+  setInterval(function growUp() {
+    // 콜백은  `that` 변수를 참조하고 이것은 값이 기대한 객체이다.
+    that.age++;
+  }, 1000);
+}
+```
+
+이렇게 하는 대신에, [바인딩한 함수](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)는 적절한 `this` 값이 `growUp()` 함수에 전달될 수 있도록 생성될 수 있습니다.
+
+화살표 함수는 자신의 `this`가 없습니다. 대신 화살표 함수를 둘러싸는 렉시컬 범위(lexical scope)의 `this`가 사용됩니다; 화살표 함수는 일반 변수 조회 규칙(normal variable lookup rules)을 따릅니다. 때문에 현재 범위에서 존재하지 않는 `this`를 찾을 때, 화살표 함수는 바로 바깥 범위에서 `this`를 찾는것으로 검색을 끝내게 됩니다.
+
+따라서 다음 코드에서 `setInterval`에 전달 된 함수 내부의 `this`는 `setInterval`을 포함한 function의 `this`와 동일한 값을 갖습니다.
+
+```js
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this|는 Person 객체를 참조
+  }, 1000);
+}
+
+var p = new Person();
+```
+
+#### 엄격 모드와의 관계
+
+`this`가 렉시컬(lexical, 정적)임을 감안하면, `this`에 관한 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode) 규칙은 그냥 무시됩니다.
+
+```js
+    var f = () => { 'use strict'; return this; };
+    f() === window; // 혹은 전역객체
+```
+
+엄격 모드의 나머지 규칙은 평소대로 적용합니다.
+
+**CORRECTION: START**
+
+NOTE: the previous statement seems false.
+
+Strict mode should prevent creating global variables when assigning to an undeclared identifier in a function.
+
+This code sample using Chrome 81 demonstrates that arrow functions allow the creation of global variables in such situations (both for a concise body and for a normal function body):
+
+```
+    > f1 = x => { y = x; console.log(`x: ${x}, y: ${y}`); return x + 1; }
+    x => { y = x; console.log(`x: ${x}, y: ${y}`); return x + 1; }
+
+    > y
+    VM51587:1 Uncaught ReferenceError: y is not defined
+        at <anonymous>:1:1
+    (anonymous) @ VM51587:1
+
+    > f1(3)
+    VM51533:1 x: 3, y: 3
+    4
+
+    > y
+    3
+
+    > f2 = x => { 'use strict'; z = x; console.log(`x: ${x}, z: ${z}`); return x + 1; }
+    x => { 'use strict'; z = x; console.log(`x: ${x}, z: ${z}`); return x + 1; }
+
+    > z
+    VM51757:1 Uncaught ReferenceError: z is not defined
+        at <anonymous>:1:1
+    (anonymous) @ VM51757:1
+
+    > f2(4)
+    VM51712:1 Uncaught ReferenceError: z is not defined
+        at f2 (<anonymous>:1:29)
+        at <anonymous>:1:1
+    f2 @ VM51712:1
+    (anonymous) @ VM51800:1
+
+    > f3 = x => (z1 = x + 1)
+    x => (z1 = x + 1)
+
+    > z1
+    VM51891:1 Uncaught ReferenceError: z1 is not defined
+        at <anonymous>:1:1
+    (anonymous) @ VM51891:1
+
+    > f3(10)
+    11
+
+    > z1
+    11
+```
+
+f2 illustrates that when explicitly setting the arrow function to apply strict mode, it does throw an error when attempting to assign an undeclared variable.
+
+<https://www.ecma-international.org/ecma-262/10.0/index.html#sec-strict-mode-code>
+
+<https://www.ecma-international.org/ecma-262/10.0/index.html#sec-arrow-function-definitions-runtime-semantics-evaluation>
+
+**CORRECTION: END**
+
+#### call 또는 apply를 통한 피호출
+
+화살표 함수에서는 `this` 가 바인딩되지 않았기 때문에, `call()` 또는 `apply()` 메서드는 인자만 전달 할 수 있습니다. this는 무시됩니다.
+
+```js
+var adder = {
+  base : 1,
+
+  add : function(a) {
+    var f = v => v + this.base;
+    return f(a);
+  },
+
+  addThruCall: function(a) {
+    var f = v => v + this.base;
+    var b = {
+      base : 2
+    };
+
+    return f.call(b, a);
+  }
+};
+
+console.log(adder.add(1));         // 이는 2가 콘솔에 출력될 것임
+console.log(adder.addThruCall(1)); // 이도 2가 콘솔에 출력될 것임
+```
+
+### 바인딩 되지 않은 `arguments`
+
+화살표 함수는 [`arguments` 객체](/ko/docs/Web/JavaScript/Reference/Functions/arguments)를 바인드 하지 않습니다. 때문에, `arguments는` 그저 둘러싸는 범위(scope) 내 이름에 대한 참조입니다.
+
+```js
+var arguments = [1, 2, 3];
+var arr = () => arguments[0];
+
+arr(); // 1
+
+function foo(n) {
+  var f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
+  return f();
+}
+
+foo(1); // 2
+```
+
+화살표 함수는 자신의 `arguments` 객체가 없지만, 대부분의 경우에 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)가 좋은 대안입니다:
+
+```js
+function foo(n) {
+  var f = (...args) => args[0] + n;
+  return f(2);
+}
+
+foo(1); // 3
+```
+
+### 메소드로 사용되는 화살표 함수
+
+이야기 했듯이, 화살표 함수 표현은 메소드 함수가 아닌 형태로 사용 할 수 있습니다. 메소드로 사용하려고 한다면 무슨일이 발생하는지 봅시다.
+
+```js
+'use strict';
+
+var obj = { // does not create a new scope
+  i: 10,
+  b: () => console.log(this.i, this),
+  c: function() {
+    console.log( this.i, this)
+  }
+}
+obj.b(); // prints undefined, Window {...} (or the global object)
+obj.c(); // prints 10, Object {...}
+```
+
+화살표 함수는 자신의 this를 가지고("bind" 바인드)있지 않습니다.{{jsxref("Object.defineProperty()")}}
+
+```js
+'use strict';
+
+var obj = {
+  a: 10
+};
+
+Object.defineProperty(obj, 'b', {
+  get: () => {
+    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
+    return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
+  }
+});
+```
+
+### `new` 연산자 사용
+
+화살표 함수는 생성자로서 사용될 수 없으며 `new`와 함께 사용하면 오류가 발생합니다.
+
+```js
+var Foo = () => {};
+var foo = new Foo(); // TypeError: Foo is not a constructor
+```
+
+### `prototype` 속성 사용
+
+화살표 함수는 `prototype` 속성이 없습니다.
+
+```js
+var Foo = () => {};
+console.log(Foo.prototype); // undefined
+```
+
+### `yield` 키워드 사용
+
+[`yield`](/ko/docs/Web/JavaScript/Reference/Operators/yield) 키워드는 화살표 함수의 본문(그 안에 더 중첩된 함수 내에서 허용한 경우를 제외하고)에 사용될 수 없습니다. 그 결과, 화살표 함수는 생성기(generator)로서 사용될 수 없습니다.
+
+### 함수 본문
+
+화살표 함수는 "concise 바디"든 보통 "block 바디"든 하나를 가질 수 있습니다.
+
+<div class="note"><p>concise바디는 중괄호'{}'로 묶이지않은 한줄짜리 바디이고 block바디는 중괄호로 묶인 바디입니다. 보통 여러줄 쓸때 block바디를 사용합니다.</p></div>
+
+block바디는 자동으로 값을 반환하지 않습니다. `return`을 사용해서 값을 반환해야 합니다.
+
+```js
+var func = x => x * x;                  // concise 바디, 생략된 "return" 여기서는 x * x
+var func = (x, y) => { return x + y; }; // block 바디, "return"이 필요
+```
+
+### 객체 리터럴 반환
+
+간결한 구문 `params => {object:literal}`을 사용한 객체 리터럴 반환은 예상대로 작동하지 않음을 명심하세요:
+
+```js
+var func = () => {  foo: 1  };
+// func() 호출은 undefined를 반환!
+
+var func = () => {  foo: function() {}  };
+// SyntaxError: function 문은 이름이 필요함
+```
+
+이는 중괄호({}) 안 코드가 일련의 문(즉 `foo`는 라벨처럼 취급됩니다, 객체 리터럴 내 키가 아니라)으로 파싱(parse, 구문 분석)되기 때문입니다.
+
+객체 리터럴를 괄호로 감싸는 것을 기억하세요:
+
+```js
+var func = () => ({ foo: 1 });
+```
+
+### 줄바꿈
+
+화살표 함수는 파라메터와 화살표 사이에 개행 문자를 포함 할 수 없습니다.
+
+```js
+var func = (a, b, c)
+           => 1;
+// SyntaxError: expected expression, got '=>'
+```
+
+하지만, 보기 좋은 코드를 유지하고 싶다면, 아래에 보는 것처럼 괄호나 개행을 둠으로써 이를 수정할 수 있습니다.
+
+```js
+    var func = (a, b, c) =>
+      1;
+
+    var func = (a, b, c) => (
+      1
+    );
+
+    var func = (a, b, c) => {
+      return 1
+    };
+
+    var func = (
+      a,
+      b,
+      c
+    ) => 1;
+
+    // SyntaxError가 발생하지 않습니다.
+```
+
+### 파싱순서
+
+화살표 함수 내의 화살표는 연산자가 아닙니다. 그러나 화살표 함수는 평범한 함수와 비교했을 때 [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)와 다르게 반응하는 특별한 파싱룰을 가지고 있습니다.
+
+```js
+let callback;
+
+callback = callback || function() {}; // ok
+
+callback = callback || () => {};
+// SyntaxError: invalid arrow-function arguments
+
+callback = callback || (() => {});    // ok
+```
+
+## 다른 예
+
+### 기본 사용법
+
+```js
+//  empty 화살표 함수는 undefined를 반환
+let empty = () => {};
+
+(() => 'foobar')();
+// "foobar" 반환
+// (this is an Immediately Invoked Function Expression
+
+var simple = a => a > 15 ? 15 : a;
+simple(16); // 15
+simple(10); // 10
+
+let max = (a, b) => a > b ? a : b;
+
+// Easy array filtering, mapping, ...
+
+var arr = [5, 6, 13, 0, 1, 18, 23];
+
+var sum = arr.reduce((a, b) => a + b);
+// 66
+
+var even = arr.filter(v => v % 2 == 0);
+// [6, 0, 18]
+
+var double = arr.map(v => v * 2);
+// [10, 12, 26, 0, 2, 36, 46]
+
+// 더 간결한 promise 체인
+promise.then(a => {
+  // ...
+}).then(b => {
+  // ...
+});
+
+// 매개변수가 없는 경우에도 더 읽기 쉬움
+setTimeout( () => {
+  console.log('I happen sooner');
+  setTimeout( () => {
+    // deeper code
+    console.log('I happen later');
+  }, 1);
+}, 1);
+```
+
+## 명세서
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 참조
+
+- [Hacks 블로그 "ES6 In Depth: Arrow functions" 포스트](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

@@ -8,17 +8,20 @@ tags:
   - Range
 translation_of: Web/API/Range/setStart
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Range.setStart()`** définit la position de départ d'un objet [`Range`](/fr/docs/Web/API/Range).
 
-Si le `startNode` est un {{ domxref("Node") }}  de type `Text`, `Comment`, ou `CDATASection`, alors startOffset est le nombre de caractères depuis le départ du `startNode`. Pour les autres types de `Nœud`, `startOffset` est le nombre de noeuds enfants entre le debut du `startNode`.
+Si le `startNode` est un {{ domxref("Node") }} de type `Text`, `Comment`, ou `CDATASection`, alors startOffset est le nombre de caractères depuis le départ du `startNode`. Pour les autres types de `Nœud`, `startOffset` est le nombre de noeuds enfants entre le debut du `startNode`.
 
 Si vous définissez le point de départ en dessous (plus bas dans le document), le point final entraînera une plage réduite avec les points de départ et de fin réglés tous les deux sur la position de départ spécifiée.
 
 ## Syntaxe
 
-    range.setStart(startNode, startOffset);
+```js
+range.setStart(startNode, startOffset);
+```
 
 ### Paramètres
 
@@ -38,14 +41,11 @@ range.setStart(startNode,startOffset);
 
 ## Spécifications
 
-| Specification                                                                                                                        | Statut                                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}                                         | {{Spec2('DOM WHATWG')}}             |                      |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart', 'Range.setStart()')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Range.setStart")}}
+{{Compat}}
 
 ## Voir aussi
 

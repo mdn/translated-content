@@ -22,7 +22,8 @@ tags:
 translation_of: Web/HTML/Date_and_time_formats
 original_slug: Web/HTML/Formats_date_heure_HTML
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article. Les éléments qui utilisent ces données sont notamment les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) qui permettent de choisir une date, une heure ou les deux, les éléments [`<ins>`](/fr/docs/Web/HTML/Element/ins) et [`<del>`](/fr/docs/Web/HTML/Element/del) dont l'attribut [`ins`](/fr/docs/Web/HTML/Element/ins#attr-datetime) indique la date (ou la date et l'heure) à laquelle l'ajout ou la suppression de contenu a eu lieu.
 
@@ -295,7 +296,7 @@ Une chaîne de caractères représentant une heure peut décrire différentes pr
 
 Voici quelques règles supplémentaires :
 
-- L'heure est toujours exprimée selon une horloge sur 24 heures où `00` correspond à minuit et où `23` correspond à onze heures du soir. Aucune valeur en dehors de l'intervalle `00`-`23` n'est autorisée.
+- L'heure est toujours exprimée selon une horloge sur 24 heures où `00` correspond à minuit et où `23` correspond à onze heures du soir. Aucune valeur en dehors de l'intervalle `00` - `23` n'est autorisée.
 - La valeur représentant les minutes doit être composée de deux chiffres et être située entre `00` et `59`. Les valeurs en dehors de cet intervalle ne sont pas autorisées.
 - Si les secondes ne sont pas exprimées, il ne faut pas que la valeur se termine par un deux-points (après les minutes).
 - Si les secondes sont exprimées, leur nombre doit être entre `00` et `59`. Il n'est pas possible d'indiquer des secondes intercalaires à l'aide de valeurs telles que `60` ou `61`.
@@ -320,8 +321,8 @@ Lorsqu'on définit la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/I
 | `1986-01-28 11:38:00.010` | `1986-01-28T11:38:00.01` | 28 janvier 1986 à 11 heures et 38 minutes passées de 10 millisecondes |
 | `0170-07-31T22:00:00`     | `0170-07-31T22:00`       | 31 juillet 170 à 22 heures                                            |
 
-1.  On notera qu'après la normalisation, on obtient la même chaîne que sur l'exemple précédent : l'espace séparateur a été remplacé par un `"T"` et le zéro de terminaison a été supprimé pour raccourcir la chaîne de l'heure.
-2.  On notera que la forme normalisée de cette date ne contient pas l'expression des secondes.
+1. On notera qu'après la normalisation, on obtient la même chaîne que sur l'exemple précédent : l'espace séparateur a été remplacé par un `"T"` et le zéro de terminaison a été supprimé pour raccourcir la chaîne de l'heure.
+2. On notera que la forme normalisée de cette date ne contient pas l'expression des secondes.
 
 ## Représentation des dates et heures universelles
 
@@ -336,10 +337,10 @@ La chaîne de caractères qui décrit le décalage horaire contient un décalage
 
 La chaîne de caractères indiquant le décalage est directement ajoutée après la valeur pour la date et l'heure. Si la date et l'heure sont déjà exprimées relativement à UTC, on pourra simplement suffixer `"Z"`, sinon, on construira le complément de la façon suivante :
 
-1.  Un caractère indiquant le signe du décalage : le plus ("`+`" ou U+002B) pour les fuseaux situés à l'est du méridien ou le moins ("`-`" ou U+002D) pour les fuseaux situés à l'ouest.
-2.  Deux chiffres indiquant le nombre d'heures de décalage par rapport au méridien. Cette valeur doit être comprise entre `00` et `23`.
-3.  Deux-points ("`:`") (nécessaires uniquement si le décalage contient des minutes)
-4.  Deux chiffres indiquant les minutes de décalage. Cette valeur doit être comprise entre `00` et `59`.
+1. Un caractère indiquant le signe du décalage : le plus ("`+`" ou U+002B) pour les fuseaux situés à l'est du méridien ou le moins ("`-`" ou U+002D) pour les fuseaux situés à l'ouest.
+2. Deux chiffres indiquant le nombre d'heures de décalage par rapport au méridien. Cette valeur doit être comprise entre `00` et `23`.
+3. Deux-points ("`:`") (nécessaires uniquement si le décalage contient des minutes)
+4. Deux chiffres indiquant les minutes de décalage. Cette valeur doit être comprise entre `00` et `59`.
 
 Bien que ces règles permettent d'exprimer des fuseaux horaires entre -23:59 et +23:59, l'intervalle actuel des décalages horaires est -12:00 à +14:00 et il n'y a pas de fuseau horaire pour lequel le décalage en minutes est différent de `00`, `30` ou `45`. Cela peut en théorie évoluer à tout moment car les pays sont libres de modifier leur fuseau horaire quand ils le souhaitent.
 

@@ -9,13 +9,16 @@ tags:
   - Reference
 translation_of: Web/API/Navigator/credentials
 ---
+
 {{securecontext_header}}{{APIRef("")}}
 
 La propriété **`credentials`**, rattachée à l'interface {{domxref("Navigator")}}, renvoie l'interface {{domxref("CredentialsContainer")}} qui expose des méthodes pour demander des informations d'authentification. L'interface {{domxref("CredentialsContainer")}} notifie également l'agent utilisateur lorsqu'un évènement pertinent se produit (une connexion ou une déconnexion réussie par exemple). Cette propriété peut être utilisée pour détecter si la fonctionnalité est prise en charge ou non.
 
 ## Syntaxe
 
-    var credentialsContainer = navigator.credentials
+```js
+var credentialsContainer = navigator.credentials
+```
 
 ### Valeur
 
@@ -36,10 +39,8 @@ if ('credentials' in navigator) {
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.credentials")}}
+{{Compat}}

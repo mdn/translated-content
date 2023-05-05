@@ -10,6 +10,7 @@ tags:
   - samesite
 translation_of: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de réponse HTTP **`Set-Cookie`** est utilisé pour envoyer un cookie depuis le serveur à l'agent utilisateur afin qu'il puisse le renvoyer dans l'avenir. Pour envoyer plusieurs cookies, on enverra plusieurs en-têtes `Set-Cookie` dans la même réponse.
@@ -47,20 +48,21 @@ Pour plus d'information, voir le [guide sur les cookies HTTP](/fr/docs/Web/HTTP/
 
 ## Syntaxe
 
-    Set-Cookie: <cookie-name>=<cookie-value>
-    Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
-    Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<non-zero-digit>
-    Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>
-    Set-Cookie: <cookie-name>=<cookie-value>; Path=<path-value>
-    Set-Cookie: <cookie-name>=<cookie-value>; Secure
-    Set-Cookie: <cookie-name>=<cookie-value>; HttpOnly
+```
+Set-Cookie: <cookie-name>=<cookie-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
+Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<non-zero-digit>
+Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Path=<path-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Secure
 
-    Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Strict
-    Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Lax
-    Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Strict
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Lax
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None
 
-    // L'usage d'attributs multiples est également possible, par exemple :
-    Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnly
+// L'usage d'attributs multiples est également possible, par exemple :
+Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnly
+```
 
 ## Attributs
 
@@ -109,8 +111,8 @@ Pour plus d'information, voir le [guide sur les cookies HTTP](/fr/docs/Web/HTTP/
 
     > **Note :** Les normes relatives aux [Cookies SameSite](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite) ont récemment changé de telle sorte que :
     >
-    > 1.  Le comportement d'envoi des cookies si `SameSite` n'est pas spécifié est `SameSite=Lax`. Auparavant, le comportement par défaut était que les cookies étaient envoyés pour toutes les requêtes.
-    > 2.  Les cookies avec `SameSite=None` doivent désormais également spécifier l'attribut `Secure` (c'est-à-dire qu'ils nécessitent un contexte sécurisé).
+    > 1. Le comportement d'envoi des cookies si `SameSite` n'est pas spécifié est `SameSite=Lax`. Auparavant, le comportement par défaut était que les cookies étaient envoyés pour toutes les requêtes.
+    > 2. Les cookies avec `SameSite=None` doivent désormais également spécifier l'attribut `Secure` (c'est-à-dire qu'ils nécessitent un contexte sécurisé).
     >
     > Les options ci-dessous couvrent le nouveau comportement. Voir le tableau [Compatibilité des navigateurs](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) pour des informations sur la mise en œuvre spécifique des navigateurs (lignes : « `SameSite` : Defaults to `Lax` » et « `SameSite` : Secure context required »).
 
@@ -126,17 +128,21 @@ Pour plus d'information, voir le [guide sur les cookies HTTP](/fr/docs/Web/HTTP/
 
 **Les cookies de session** sont supprimés quand le client s'éteint. Les cookies sont des cookies de session s'ils n'ont pas de directive `Expires` ou `Max-Age`.
 
-    Set-Cookie: sessionId=38afes7a8
+```
+Set-Cookie: sessionId=38afes7a8
+```
 
 ### Cookie permanent
 
 Au lieu d'expirer lorsque le client est fermé, les **cookies permanents** expirent à une date spécifique (`Expires`) ou après une valeur de temps (`Max-Age`).
 
+```
     Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT
+```
 
-<!---->
-
-    Set-Cookie: id=a3fWa; Max-Age=2592000
+```
+Set-Cookie: id=a3fWa; Max-Age=2592000
+```
 
 ### Domaines invalides
 
@@ -144,13 +150,17 @@ Un cookie pour un domaine qui n'inclut pas le serveur qui le définit [doit êtr
 
 Le cookie suivant sera rejeté si le serveur est hébergé sur `originalcompany.com`:
 
-    Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk
+```
+Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk
+```
 
 Un cookie pour un sous-domaine du domaine servi sera rejeté.
 
 Le cookie suivant sera rejeté si le serveur est hébergé sur `example.com`:
 
-    Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
+```
+Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
+```
 
 ### Préfixes de cookie
 
@@ -160,33 +170,28 @@ De plus, les cookies avec le préfixe `__Host-` doivent avoir un `path` qui vaut
 
 > **Attention :** Pour les clients qui n'implémentent pas les préfixes de cookies, vous ne pouvez pas compter sur ces contraintes, les cookies avec un préfixe seront toujours acceptés.
 
-    // Les deux sont acceptés s'ils viennent d'une origine sécurisée (HTTPS)
-    Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
-    Set-Cookie: __Host-ID=123; Secure; Path=/
+```
+// Les deux sont acceptés s'ils viennent d'une origine sécurisée (HTTPS)
+Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
+Set-Cookie: __Host-ID=123; Secure; Path=/
 
-    // Rejeté car l'attribut Secure est manquant
-    Set-Cookie: __Secure-id=1
+// Rejeté car l'attribut Secure est manquant
+Set-Cookie: __Secure-id=1
 
-    // Rejeté car l'attribut Path=/ est manquant
-    Set-Cookie: __Host-id=1; Secure
+// Rejeté car l'attribut Path=/ est manquant
+Set-Cookie: __Host-id=1; Secure
 
-    // Rejeté à cause du domaine qui est spécifié
-    Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
+// Rejeté à cause du domaine qui est spécifié
+Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
+```
 
 ## Spécifications
 
-| Spécification                                                                                    | Titre                                                         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                 | HTTP State Management Mechanism                               |
-| [draft-ietf-httpbis-rfc6265bis-05](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Set-Cookie", 5)}}
-
-## Note de compatibilité
-
-- À partir de Chrome 52 et Firefox 52, les sites non sécurisés (`http:`) ne peuvent plus définir des cookies avec la directive `Secure`.
+{{Compat}}
 
 ## Voir aussi
 

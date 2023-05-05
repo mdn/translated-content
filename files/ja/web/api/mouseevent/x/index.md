@@ -1,15 +1,11 @@
 ---
 title: MouseEvent.x
 slug: Web/API/MouseEvent/x
-tags:
-  - API
-  - DOM
-  - プロパティ
-  - リファレンス
-browser-compat: api.MouseEvent.x
-translation_of: Web/API/MouseEvent/x
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
-{{APIRef}}
+
+{{APIRef("UI Events")}}
 
 **`MouseEvent.x`** プロパティは、 {{domxref("MouseEvent.clientX")}} プロパティの別名です。
 

@@ -1,15 +1,8 @@
 ---
 title: CSSKeyframesRule
 slug: Web/API/CSSKeyframesRule
-tags:
-  - API
-  - CSS アニメーション
-  - CSSOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CSSKeyframesRule
-translation_of: Web/API/CSSKeyframesRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSKeyframesRule`** インターフェイスは、 CSS アニメーションにおけるキーフレームの完全なセットを表すオブジェクトを記述します。これは {{cssxref("@keyframes")}} {{cssxref("at-rule", "アットルール", "", 1)}}全体の内容に対応します。

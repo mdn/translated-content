@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/17
 original_slug: Mozilla/Firefox/Versions/17
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page résume les principaux changements dans Firefox 17 qui sont utiles aux développeurs.
@@ -39,7 +40,7 @@ Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page rés
 - Le support expérimental pour l'objet [`ParallelArray`](/fr/docs/JavaScript/R%C3%A9f%C3%A9rence_JavaScript/Objets_globaux/ParallelArray) a été implémenté. ({{bug(778559)}})
 - Support des itérateurs [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map)/[`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set). ({{bug(725909)}})
 - [E4X](/fr/docs/E4X) est désactivé par défaut pour le contenu Web. ({{bug(778851)}})
-- `__exposedProps__` doit désormais être défini pour les objets JavaScript Chrome exposés au contenu. Les tentatives d'accès à des objets de contenu sans Chrome `__exposedProps__ `échoueront ensembles silencieusement. ({{bug(553102)}})
+- `__exposedProps__` doit désormais être défini pour les objets JavaScript Chrome exposés au contenu. Les tentatives d'accès à des objets de contenu sans Chrome `__exposedProps__` échoueront ensembles silencieusement. ({{bug(553102)}})
 
 ### MathML
 
@@ -57,17 +58,17 @@ La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de c
 
 ### Changements dans les interfaces
 
-- {{interface("nsIInputStream")}}
+- `nsIInputStream`
   - : La méthode `available()` retourne une longueur de 64-bit au lieu de 32-bit. ({{bug(215450)}})
-- {{interface("nsIDOMWindowUtils")}}
+- `nsIDOMWindowUtils`
   - : La méthode `sendMouseScrollEvent()` a été remplacée par `sendWheelEvent()`. ({{bug(719320)}})
-- {{interface("nsIFilePicker")}}
+- `nsIFilePicker`
   - : La méthode `open()`, pour ouvrir la boîte de dialogue d'un fichier de façon asynchrone, a été ajoutée et la méthode `show()` a été dépréciée. ({{bug("731307")}})
-- {{interface("nsIScriptSecurityManager")}}
+- `nsIScriptSecurityManager`
   - : Les méthodes `checkLoadURIStr()` et `checkLoadURI()` ont été retirées. ({{bug(327244)}})
-- {{interface("nsIRefreshURI")}}
+- `nsIRefreshURI`
   - : La méthode `setupRefreshURIFromHeader()` a un paramètre `principal` en plus.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('16')}}
