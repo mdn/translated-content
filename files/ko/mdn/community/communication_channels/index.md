@@ -1,6 +1,8 @@
 ---
 title: 소통 창구
 slug: MDN/Community/Communication_channels
+l10n:
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
