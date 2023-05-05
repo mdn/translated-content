@@ -2,7 +2,7 @@
 title: 文と宣言
 slug: Web/JavaScript/Reference/Statements
 l10n:
-  sourceCommit: 0f248adcab759bdad247a5dbfb7da12dc32bce59
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{jsSidebar("Statements")}}
@@ -61,9 +61,9 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
 - {{jsxref("Statements/for...in", "for...in")}}
   - : オブジェクトの列挙可能なプロパティに対し任意の順番で反復処理を行います。それぞれ個別のプロパティに対し、文を実行できます。
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : 反復可能オブジェクト ({{jsxref("Global_Objects/Array","配列","","true")}}、配列風オブジェクト、[反復子とジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を含む) を反復処理し、それぞれ個別のプロパティの値に対する実行文をともなった反復処理フックを呼び出します。
+  - : 反復可能オブジェクト ({{jsxref("Global_Objects/Array","配列","","true")}}、配列風オブジェクト、[反復子とジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を含む) を反復処理し、それぞれ個別のプロパティの値に対する実行文をともなった反復処理フックを呼び出します。
 - {{jsxref("Statements/for-await...of", "for await...of")}}
-  - : 非同期反復オブジェクト、配列風オブジェクト、[反復子とジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を反復処理し、各固有のプロパティ値で実行する文を実行しつつ、カスタムイテレーションフックを実行する。
+  - : 非同期反復オブジェクト、配列風オブジェクト、[反復子とジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を反復処理し、各固有のプロパティ値で実行する文を実行しつつ、カスタムイテレーションフックを実行する。
 - {{jsxref("Statements/while", "while")}}
   - : テスト条件が真と評価される間、指定した文を実行するループを作成します。この条件は文が実行される前に評価されます。
 
@@ -73,13 +73,15 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
   - : 空文は、文が必要ないが JavaScript の文法上 1 つの文が必要な場合に使います。
 - {{jsxref("Statements/block", "ブロック", "", 1)}}
   - : ブロック文は 0 個以上の文をグループ化するのに使います。ブロックは 1 組の波括弧で囲みます。
+- {{jsxref("Statements/Expression_statement", "式文", "", 1)}}
+  - : 式文は、式を評価し、その結果を破棄します。これにより、関数の実行や変数の更新など、式に付随する効果を実行することができます。
 - {{jsxref("Statements/debugger", "debugger")}}
   - : 利用可能なデバッグ機能を呼び出します。利用可能なデバッグ機能がない場合、この文は無効となります。
 - {{jsxref("Statements/export", "export")}}
   - : 外部モジュールや別のスクリプトでインポートできるように、関数をエクスポートするのに使われます。
 - {{jsxref("Statements/import", "import")}}
   - : 外部モジュールや別のスクリプトからエクスポートされる関数をインポートするのに使われます。
-- {{jsxref("Statements/label", "label", "", 1)}}
+- {{jsxref("Statements/label", "ラベル", "", 1)}}
   - : `break` や `continue` 文を使う際に参照できる識別子を含む文を用意します。
 - {{jsxref("Statements/with", "with")}} {{Deprecated_Inline}}
   - : 文のスコープチェーンを拡張します。
@@ -102,23 +104,23 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
 
 「文」と「宣言」という用語は、JavaScript の形式文法において厳密な意味を持ち、それがコードのどこに配置されるかに影響します。例えば、ほとんどの制御フロー構造では、本体は文だけを受け入れます。例えば [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) の分岐先などです。）
 
-```js
+```js-nolint
 if (条件)
-  文 1;
+  文1;
 else
-  文 2;
+  文2;
 ```
 
 もし、文の代わりに宣言を使用した場合、 {{jsxref("SyntaxError")}} となります。例えば、 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) 宣言は文ではないので、 `if` 文の本体としてそのままの形を使用することはできません。
 
-```js example-bad
+```js-nolint example-bad
 if (条件)
   let i = 0; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
-一方、[`var`](/ja/docs/Web/JavaScript/Reference/Statements/var)は文なので、それ自身で `if` 本体として使用することができます。
+一方、[`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) は文なので、それ自身で `if` 本体として使用することができます。
 
-```js example-good
+```js-nolint example-good
 if (条件)
   var i = 0;
 ```

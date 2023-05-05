@@ -3,6 +3,8 @@ title: 应用值
 slug: Web/CSS/used_value
 ---
 
+{{CSSRef}}
+
 CSS 属性的应用值（used value）是完成所有计算后最终使用的值，可以由 [window.getComputedStyle](/zh-CN/docs/DOM/window.getComputedStyle) 获取。尺寸 (例如 `width`, `line-height`) 单位为像素，简写属性 (例如 background) 与组成属性相符 (例如 `background-color`，`display`) 与 `position`、`float` 相符，每个 CSS 属性都有值。
 
 ## 详情
