@@ -1,10 +1,12 @@
 ---
 title: 'Предупреждение: затворы выражения являются устаревшими'
-slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
+slug: >-
+  conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_ce02ff996e57a0f0af4fbdf5f792ff46
 tags:
   - JavaScript
   - Warning
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
+original_slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 ---
 
 {{jsSidebar("Errors")}}

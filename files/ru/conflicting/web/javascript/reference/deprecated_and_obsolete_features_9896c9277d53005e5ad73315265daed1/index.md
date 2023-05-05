@@ -1,7 +1,9 @@
 ---
 title: 'Warning: Date.prototype.toLocaleFormat (Является устаревшим)'
-slug: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
+slug: >-
+  conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_9896c9277d53005e5ad73315265daed1
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
+original_slug: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 ---
 
 {{jsSidebar("Errors")}}
