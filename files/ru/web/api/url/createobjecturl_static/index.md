@@ -1,7 +1,8 @@
 ---
 title: URL.createObjectURL()
-slug: Web/API/URL/createObjectURL
+slug: Web/API/URL/createObjectURL_static
 translation_of: Web/API/URL/createObjectURL
+original_slug: Web/API/URL/createObjectURL
 ---
 
 {{ApiRef("URL")}}{{SeeCompatTable}}
