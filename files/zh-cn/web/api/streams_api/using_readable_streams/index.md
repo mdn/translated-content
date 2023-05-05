@@ -5,9 +5,9 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 {{apiref("Streams")}}
 
-作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Streams API 的可读流功能呢？可以在这篇文章看到基本介绍。
+作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Stream API 的可读流功能呢？可以在这篇文章看到基本介绍。
 
-> **备注：** 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#概念和用法)以及掌握 [Streams API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
+> **备注：** 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#概念和用法)以及掌握 [Stream API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
 
 > **备注：** 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
@@ -176,7 +176,7 @@ const stream = new ReadableStream({
 
 第一个对象包含着五个成员，仅有第一个是必要的：
 
-1. `start(controller)`——一个在 `ReadableStream` 构建后，立即被调用一次的方法。在这个方法中，你应该包含设置流功能的代码，例如开始生成数据或者以其它的方式访问资源时。
+1. `start(controller)`——一个在 `ReadableStream` 构建后，立即被调用一次的方法。在这个方法中，你应该包含设置流功能的代码，例如开始生成数据或者以其他的方式访问资源时。
 2. `pull(controller)`——一个方法，当被包含时，它会被重复的调用直到填满流的内置队列。当排入更多的分块时，这可以用于控制流。
 3. `cancel()`——一个方法，当被包含时，如果应用发出流将被取消的信号，它将被调用（例如，调用 {{domxref("ReadableStream.cancel()")}}）。内容应该采取任何必要的措施释放对流源的访问。
 4. `type` 和 `autoAllocateChunkSize`——当它们被包含时，会被用来表示流将是一个字节流。字节流将在未来的教程中单独涵盖，因为它们在目的和用例上与常规的（默认的）流有些不同。它们也未在任何地方实施。
@@ -309,9 +309,9 @@ function readStream() {
 
 有时候你可能想要同时读取两次流。该过程由调用 {{domxref("ReadableStream.tee()")}} 实现——它返回一个数组，包含对原始可读流的两个相同的副本可读流，然后可以独立的使用不同的 reader 读取。
 
-举例而言，你在 [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API) 中可能会用到该方法，当你从服务器 fetch 资源，得到一个响应的可读流，你可能会想把这个流拆分成两个，一个流入到浏览器，另一个流入到 ServiceWorker 的缓存。由于 response 的 body 无法被消费两次，以及可读流无法被两个 reader 同时读取，你会需要两个可读流副本来实现需求。
+举例而言，你在 [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API) 中可能会用到该方法，当你从服务器 fetch 资源，得到一个响应的可读流，你可能会想把这个流拆分成两个，一个流入到浏览器，另一个流入到 ServiceWorker 的缓存。由于响应的主体无法被消费两次，以及可读流无法被两个 reader 同时读取，你会需要两个可读流副本来实现需求。
 
-我们提供了一个示例，在我们的[简单 tee 示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-tee-example/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-tee-example/)）。这个示例与我们的简单随机流示例的工作方式大致相同，只是当按钮按下停止生产随机字符串时，将采取自定义流并拷贝流，并且读取这两个生成的流：
+我们提供了一个示例，在我们的[简单拷贝示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-tee-example/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-tee-example/)）。这个示例与我们的简单随机流示例的工作方式大致相同，只是当按钮按下停止生产随机字符串时，将采取自定义流并拷贝流，并且读取这两个生成的流：
 
 ```js
 function teeStream() {

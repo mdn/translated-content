@@ -1,8 +1,9 @@
 ---
 title: <input type="datetime-local">
-slug: Web/HTML/Element/Input/datetime-local
+slug: Web/HTML/Element/input/datetime-local
 translation_of: Web/HTML/Element/input/datetime-local
 ---
+
 {{HTMLSidebar}}
 
 {{htmlelement("input")}} элемент типа **`datetime-local`** создаёт поля ввода, позволяющие легко ввести дату и время — год, месяц, день, часы и минуты.
@@ -13,7 +14,7 @@ translation_of: Web/HTML/Element/input/datetime-local
 <input id="datetime" type="datetime-local">
 ```
 
-{{ EmbedLiveSample('Basic_example', 600, 40) }}
+{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
 
 Для тех из вас, кто не использует поддерживающий браузер, Chrome/Opera datetime-local control выглядит как скриншот ниже. Нажатие на стрелку вниз с правой стороны приводит к выбору даты, чтобы вы могли выбрать дату; вы должны ввести время вручную.
 

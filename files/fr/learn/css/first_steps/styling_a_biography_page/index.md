@@ -91,11 +91,3 @@ Si vous voulez une évaluation de votre travail, ou si vous êtes coincé et rec
 Bravo, vous avez suivi ce cours jusqu'au bout. Avec votre connaissance de CSS, vous comprenez maintenant le fonctionnement d'une feuille de style. Dans le prochain cours, [construire des blocs CSS](/fr/docs/Apprendre/CSS/Building_blocks), nous approfondirons de nombreux points.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Apprendre/CSS/Premiers_pas")}}
-
-## Dans ce cours
-
-1. [Qu'est-ce que CSS ?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
-2. [Commencer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS, comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Mettez en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

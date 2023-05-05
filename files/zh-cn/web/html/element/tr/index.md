@@ -38,36 +38,36 @@ slug: Web/HTML/Element/tr
 
 表格标签支持 [全局特性](/zh-CN/docs/HTML/Global_attributes)。还有一些过期的特性，你应该避免使用它们，但是可以了解它们，会在你阅读旧代码的时候有所帮助。
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}}
+- `align` {{Deprecated_inline}}
   - : 该枚举属性指定每个单元格中内容的水平对齐方式，可使用的属性值如下：
 
     - `left`, 内容在单元格中左对齐
     - `center`, 内容在单元格中居中
     - `right`, 内容在单元格中右对齐
     - `justify`, 增加文本内容之间的空白以伸展这行文本，使得该单元格中的多行文本具有相同的长度。
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} attributes {{unimplemented_inline("2212")}}If this attribute is not set, the parent node's value is inherited.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/tr#charoff) attributes {{unimplemented_inline("2212")}}If this attribute is not set, the parent node's value is inherited.
 
     > **备注：** Do not use this attribute as it is obsolete (not supported) in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "tr")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
   - : This attribute defines the background color of each cell of the row. It can be either an [hexadecimal `#RRGGBB` or `#RGB` value](</zh-CN/docs/Web/CSS/color_value#rgb()>) or a [color keyword](/zh-CN/docs/Web/CSS/color_value#Color_keywords).
 
     > **备注：** the {{HTMLElement("tr")}} element should be styled using [CSS](/zh-CN/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/zh-CN/docs/CSS) property {{cssxref("background-color")}}.
 
-- {{htmlattrdef("char")}} {{Deprecated_inline}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+- `char` {{Deprecated_inline}}
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
 
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "tr")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "tr")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline}}
+- `charoff` {{Deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
     > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline}}
+- `valign` {{Deprecated_inline}}
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
 
     - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.

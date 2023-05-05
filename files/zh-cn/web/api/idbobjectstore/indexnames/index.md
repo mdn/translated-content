@@ -77,7 +77,7 @@ function addData() {
 
 {{Compat}}
 
-## 查看其它内容
+## 查看其他内容
 
 - [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - 启动事务 : {{domxref("IDBDatabase")}}

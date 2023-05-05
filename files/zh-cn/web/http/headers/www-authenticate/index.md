@@ -11,7 +11,7 @@ HTTP **`WWW-Authenticate`** 响应标头定义了 [HTTP 身份验证](/zh-CN/doc
 
 使用 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)的服务器将以 {{HTTPStatus("401")}} `Unauthorized` 响应去响应受保护资源的请求。该响应必须包含至少一个 `WWW-Authenticate` 标头和至少一个{{Glossary("challenge","质询")}}，以指示使用哪些身份验证方案访问资源（以及每个特定方案的任意额外的数据）。
 
-一个 `WWW-Authenticate` 标头中允许多个质询，并且一个响应中允许多个 `WWW-Authenticate` 标头。服务器也可以在其它的响应消息中包含 `WWW-Authenticate` 标头，以指示提供的凭据可能会影响响应。
+一个 `WWW-Authenticate` 标头中允许多个质询，并且一个响应中允许多个 `WWW-Authenticate` 标头。服务器也可以在其他的响应消息中包含 `WWW-Authenticate` 标头，以指示提供的凭据可能会影响响应。
 
 客户端在接收 `WWW-Authenticate` 标头之后，通常会提示用户接收凭据，然后重新请求资源。这个新的请求会使用 {{HTTPHeader("Authorization")}} 标头向服务器提供凭据，并针对所选择的“质询”身份验证方法进行合适的编码。客户端应该选择它理解的最安全的质询（注意，在某些情况下，“最安全”方法是有争议的）。
 
@@ -42,7 +42,7 @@ WWW-Authenticate: challenge1
 WWW-Authenticate: challengeN
 ```
 
-单个质询有着以下的格式。请注意，这些方案的 token（`<auth-scheme>`）是强制性的。`realm`、`token68` 以及其它参数的存在依赖于所选方案的定义。
+单个质询有着以下的格式。请注意，这些方案的 token（`<auth-scheme>`）是强制性的。`realm`、`token68` 以及其他参数的存在依赖于所选方案的定义。
 
 ```http
 // Possible challenge formats (scheme dependent)
@@ -75,7 +75,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 - **realm=**\<realm> {{optional_inline}}
   - : 描述受保护区域的字符串。realm 允许服务器对它受保护的区域进行区分（如果允许支持这种划分方案），并通知用户需要哪个特定的用户名/密码。如果未指定 realm，客户端通常会显示格式化的主机名。
 - `<token68>` {{optional_inline}}
-  - : 一个 token，可能对某些方案有用。该 token 允许使用 66 个未保留的 URI 字符以及其它的一些字符。根据规范，它可以支持 base64、base64url、base32 或者 base16（十六进制）编码，有或者没有填充，但是不包括空格。
+  - : 一个 token，可能对某些方案有用。该 token 允许使用 66 个未保留的 URI 字符以及其他的一些字符。根据规范，它可以支持 base64、base64url、base32 或者 base16（十六进制）编码，有或者没有填充，但是不包括空格。
 
 除了 `<auth-scheme>` 和关键字 `realm`，authorization 参数特定于每个[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。总的来说，你将需要为这些检查相关的规范（下面列出了一小部分方案的关键字）。
 
@@ -97,7 +97,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 - `opaque`
   - : 一个服务器指定的带引号的字符串，应在 {{HTTPHeader("Authorization")}} 中原封不动的返回。这对客户端是不透明的。建议服务器包含 Base64 或十六进制数据。
 - `stale` {{optional_inline}}
-  - : 一个不区分大小写的标志，指示客户端之前的请求因 `nonce` 太旧了（过期）而被拒绝。如果为 `true`，则可以使用新的 `nonce` 加密相同用户名/密码重试请求。如果它是任意其它的值，那么用户名/密码无效，并且必须向用户重新请求。
+  - : 一个不区分大小写的标志，指示客户端之前的请求因 `nonce` 太旧了（过期）而被拒绝。如果为 `true`，则可以使用新的 `nonce` 加密相同用户名/密码重试请求。如果它是任意其他的值，那么用户名/密码无效，并且必须向用户重新请求。
 - `algorithm` {{optional_inline}}
   - : algorithm 被用于产生一个摘要。有效的非会话值是：`"MD5"`（如果未指定，则是默认）、`"SHA-256"`、`"SHA-512"`。有效的会话值是：`"MD5-sess"`、`"SHA-256-sess"`、`"SHA-512-sess"`。
 - `qop`
@@ -131,7 +131,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ### 使用 SHA-256 和 MD5 的 Digest 身份验证
 
-> **备注：** 该示例取自 {{RFC("7616")}}“HTTP Digest Access Authentication”（在规范中的其它示例，展示了 `SHA-512`、`charset` 和 `userhash` 的使用）。
+> **备注：** 该示例取自 {{RFC("7616")}}“HTTP Digest Access Authentication”（在规范中的其他示例，展示了 `SHA-512`、`charset` 和 `userhash` 的使用）。
 
 客户端试图访问“`http://www.example.org/dir/index.html`”处的文档，该文档受到 digest 身份验证的保护。这个文档的用户名是“Mufsas”，并且它的密码是“Circle of Life”（注意，每个单词之间的单个空格）。
 

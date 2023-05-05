@@ -80,7 +80,7 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
 
 **如果你定义了 _strWindowFeatures_ 参数，那么没有在这个字符串中列出的特性会被禁用或移除** （除了 _titlebar_ 和 _close_ 默认设置为 yes）
 
-> **备注：** 如果你使用了 _strWindowFeatures_ 参数，那么只需要列出新窗口中启用的特性，其它的特性（除了*titlebar*和*close*）将被禁用或移除。
+> **备注：** 如果你使用了 _strWindowFeatures_ 参数，那么只需要列出新窗口中启用的特性，其他的特性（除了*titlebar*和*close*）将被禁用或移除。
 
 ## 位置尺寸特征
 

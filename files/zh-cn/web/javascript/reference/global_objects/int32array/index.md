@@ -24,8 +24,6 @@ new Int32Array(buffer [, byteOffset [, length]]);
   - : Returns a number value of the element size. `4` in the case of an `Int32Array`.
 - Int32Array.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int32Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int32Array` type: "Int32Array".
 - {{jsxref("TypedArray.prototype", "Int32Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
@@ -110,7 +108,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
-## 例子
+## 示例
 
 不同的方式创建一个 `Int32Array`
 

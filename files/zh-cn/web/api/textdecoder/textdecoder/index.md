@@ -18,7 +18,7 @@ new TextDecoder(utfLabel, options)
 ### 参数
 
 - `utfLabel` {{optional_inline}}
-  - : 一个字符串，默认是 `"utf-8"`。可以是[任意有效的编码](zh-CN/docs/Web/API/Encoding_API/Encodings)。
+  - : 一个字符串，默认是 `"utf-8"`。可以是[任意有效的编码](/zh-CN/docs/Web/API/Encoding_API/Encodings)。
 - `options` {{optional_inline}}
 
   - : 一个具有属性的对象：

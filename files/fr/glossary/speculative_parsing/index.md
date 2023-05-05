@@ -1,6 +1,6 @@
 ---
 title: Optimisation des pages pour l'analyse spéculative
-slug: Glossary/speculative_parsing
+slug: Glossary/Speculative_parsing
 tags:
   - Avancé
   - Cookies

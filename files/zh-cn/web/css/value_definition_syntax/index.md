@@ -3,7 +3,7 @@ title: CSS 属性值定义语法
 slug: Web/CSS/Value_definition_syntax
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 **CSS 属性值定义语法**（CSS value definition syntax）是用来限定 CSS 属性合法取值的专门语法。在此基础之上，一个 CSS 属性的合法取值也由语义所限制，比如一些数字必须是正数。
 

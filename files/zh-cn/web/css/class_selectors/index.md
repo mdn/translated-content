@@ -5,7 +5,7 @@ slug: Web/CSS/Class_selectors
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **类选择器**根据 {{htmlattrxref("class")}} 属性的内容匹配元素。
+[CSS](/zh-CN/docs/Web/CSS) **类选择器**根据 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 属性的内容匹配元素。
 
 ```css
 /* 所有含有 class="spacious" 类的元素 */

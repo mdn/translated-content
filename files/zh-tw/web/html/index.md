@@ -53,7 +53,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 - [使用 application cache](/zh-TW/docs/Web/HTML/Using_the_application_cache)
   - : Application caching lets web-based applications run offline. You can use the **Application Cache** (_AppCache_) interface to specify resources that the browser should cache and make available to offline users. Applications that are cached load and work correctly even if users click the refresh button when they are offline.
 - [使用 rel="preload" 來預載內容](/zh-TW/docs/Web/HTML/Preloading_content)
-  - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
+  - : The `preload` value of the {{htmlelement("link")}} element's [`rel`](/zh-TW/docs/Web/HTML/Element/link#rel) attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
 ## 參考資料
 

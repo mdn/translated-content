@@ -199,10 +199,3 @@ Finalement, vous devez comprendre que le code côté serveur peut être écrit d
 Dans un futur article, nous vous aiderons à choisir le framework le plus adapté pour la création d'un premier site. Ensuite, nous vous présenterons les principales interactions client-serveur plus en détails.
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## Dans ce module
-
-- [Introduction au côté serveur](/fr/docs/Learn/Server-side/First_steps/Introduction)
-- [Vue d'ensemble Client-Serveur](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Frameworks web côté serveur](/fr/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [La sécurité d'un site web](/fr/docs/Learn/Server-side/First_steps/Website_security)

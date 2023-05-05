@@ -1,6 +1,8 @@
 ---
 title: slot
 slug: Web/HTML/Global_attributes/slot
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}

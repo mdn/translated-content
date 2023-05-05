@@ -3,7 +3,7 @@ title: 通配选择器
 slug: Web/CSS/Universal_selectors
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概述
 

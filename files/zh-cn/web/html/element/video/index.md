@@ -15,39 +15,37 @@ slug: Web/HTML/Element/video
 
 ## 属性
 
-类似于所有其它 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+类似于所有其他 HTML 元素，video 元素也支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("autoplay")}}
+- `autoplay`
   - : 布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
 
-    > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的 [自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。如果使用 `autoplay="false"` 来关闭视频的自动播放功能，会不起作用；只要 `<video>` 标签中有 autoplay 属性，视频就会自动播放。要移除自动播放，需要完全删除该属性在某些浏览器（例如 Chrome 70.0）中，如果没有设置 `muted` 属性，autoplay 将不会生效。
-- {{htmlattrdef("autopictureinpicture")}} {{experimental_inline}}
-  - : 一个布尔属性，如果为 true，那么当用户在当前页面和另一个页面或应用程序之间来回切换时，会自动切换画中画（picture-in-picture）模式。
-- {{htmlattrdef("controls")}}
+    > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的 [自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。如果使用 `autoplay="false"` 来关闭视频的自动播放功能，会不起作用；只要 `<video>` 标签中有 autoplay 属性，视频就会自动播放。要移除自动播放，需要完全删除该属性。在某些浏览器（例如 Chrome 70.0）中，如果没有设置 `muted` 属性，autoplay 将不会生效。
+- `controls`
   - : 加上这个属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量，跨帧，暂停/恢复播放。
-- {{htmlattrdef("controlslist")}} {{experimental_inline}}
+- `controlslist` {{experimental_inline}}
   - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) 属性会帮助浏览器选择在控制面板上显示哪些控件。允许接受的值有 `nodownload`, `nofullscreen` 和 `noremoteplayback`。如果要禁用画中画模式（和控件），请使用 [disablePictureInPicture](#attr-disablepictureinpicture) 属性。
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
   - : 该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image) 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
     - anonymous
       - : 在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将不会携带 cookie、X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。
     - use-credentials
       - : 在发送跨域请求时携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将会携带 cookie、安全令牌、并且执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 **anonymous** 一样使用。查看 [CORS 设置属性](/zh-CN/docs/HTML/CORS_settings_attributes) 获取更多信息。
-- {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}
+- `disablepictureinpicture` {{experimental_inline}}
   - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。该属性可以禁用 `video` 元素的画中画特性，右键菜单中的“画中画”选项会被禁用
-- {{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}
+- `disableRemotePlayback` {{experimental_inline}}
   - : 布尔属性，用于在使用有线（HDMI、DVI 等）和无线技术（Miracast、Chromecast、DLNA、AirPlay 等）连接设备时，禁用远程播放功能。在 Safari 中，您可以使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
-- {{htmlattrdef("height")}}
+- `height`
   - : 视频显示区域的高度，单位是 [CSS 像素](https://drafts.csswg.org/css-values/#px)（仅限绝对值；[不支持百分比](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)）。
-- {{htmlattrdef("loop")}}
+- `loop`
   - : 布尔属性；指定后，会在视频播放结束的时候，自动返回视频开始的地方，继续播放。
-- {{htmlattrdef("muted")}}
+- `muted`
   - : 布尔属性，指明在视频中音频的默认设置。设置后，音频会初始化为静音。默认值是 false, 意味着视频播放的时候音频也会播放。
-- {{htmlattrdef("playsinline")}}
+- `playsinline`
   - : 布尔属性，指明视频将内联（inline）播放，即在元素的播放区域内。请注意，没有此属性并不意味着视频始终是全屏播放的。
-- {{htmlattrdef("poster")}}
+- `poster`
   - : 海报帧图片 URL，用于在视频处于下载中的状态时显示。如果未指定该属性，则在视频第一帧可用之前不会显示任何内容，然后将视频的第一帧会作为海报（poster）帧来显示。
-- {{htmlattrdef("preload")}}
+- `preload`
   - : 该枚举属性旨在提示浏览器，作者认为在播放视频之前，加载哪些内容会达到最佳的用户体验。可能是下列值之一：
 
     - `none`: 表示不应该预加载视频。
@@ -56,9 +54,9 @@ slug: Web/HTML/Element/video
     - _空字符串_: 和值为 `auto` 一致。每个浏览器的默认值都不相同，即使规范建议设置为 `metadata`。
 
     > **备注：** `autoplay` 属性的优先级比 `preload` 高。如果制定了 `autopaly`属性，浏览器显然需要开始下载视频以便回放。规范没有强制浏览器去遵循该属性的值，这仅仅只是个提示。
-- {{htmlattrdef("src")}}
+- `src`
   - : 要嵌到页面的视频的 URL。可选；你也可以使用 video 块内的 {{HTMLElement("source")}} 元素来指定需要嵌到页面的视频。
-- {{htmlattrdef("width")}}
+- `width`
   - : 视频显示区域的宽度，单位是 [CSS 像素](https://drafts.csswg.org/css-values/#px)（仅限绝对值；[不支持百分比](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)）。
 
 ## 事件
@@ -157,7 +155,7 @@ AddType video/webm .webm
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
 

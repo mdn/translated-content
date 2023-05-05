@@ -5,7 +5,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
-我们现在准备好要新增网页，以显示[本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)的书本与其它资料。这些网页将包含一个主页，显示我们拥有的每个模型的记录数，以及所有模型的清单和详细信息页面。借此，我们将获得从数据库获取记录、以及使用模板的实战经验。
+我们现在准备好要新增网页，以显示[本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)的书本与其他资料。这些网页将包含一个主页，显示我们拥有的每个模型的记录数，以及所有模型的清单和详细信息页面。借此，我们将获得从数据库获取记录、以及使用模板的实战经验。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -44,18 +44,17 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 本教程分为下列章节，讲解了为了显示图书馆网站需求的页面而新增各种特性的过程。在进入下一个教程之前，你需要阅读并逐一实现下列章节。
 
-1. [使用 async 进行异步流控制](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
-2. [模版入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3. [本地图书馆基础样版](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
-4. [主页](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-5. [书本清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-6. [书本实例清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7. [日期格式化 - 使用 moment](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-8. [作者清单页面、分类清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)[、](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)[与自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-9. [分类详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-10. [书本详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-11. [作者详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-12. [书本实例详情页面、与自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+1. [模版入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
+2. [本地图书馆基础样版](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+3. [主页](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+4. [书本清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+5. [书本实例清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+6. [日期格式化 - 使用 moment](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+7. [作者清单页面、分类清单页面挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+8. [分类详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+9. [书本详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+10. [作者详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+11. [书本实例详情页面挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## 总结
 

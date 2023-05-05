@@ -2,7 +2,7 @@
 title: HTML ドラッグ & ドロップ API
 slug: Web/API/HTML_Drag_and_Drop_API
 l10n:
-  sourceCommit: 7e43ff6a4a712f9e4477a70c453ba116a4dd6601
+  sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -17,7 +17,7 @@ l10n:
 
 ## ドラッグイベント
 
-HTML ドラッグ & ドロップ では {{domxref("Event", "DOM イベントモデル", "", 1)}} と {{domxref("MouseEvent", "マウスイベント", "", 1)}} を継承した _{{domxref("DragEvent", "ドラッグイベント", "", 1)}}_ を使います。典型的な*ドラッグ操作は* ユーザーが*ドラッグ可能な*要素を選択したときと、*ドロップ可能な*要素に要素をドラッグしたとき、ドラッグ可能な要素を離したときに開始します。
+HTML ドラッグ & ドロップ では {{domxref("Event", "DOM イベントモデル", "", 1)}} と {{domxref("MouseEvent", "マウスイベント", "", 1)}} を継承した _{{domxref("DragEvent", "ドラッグイベント", "", 1)}}_ を使います。典型的な*ドラッグ操作*は、ユーザーが*ドラッグ可能な*要素を選択したときに始まり、ユーザーが*ドロップ可能な*要素に要素をドラッグしたときに継続し、ユーザーがドラッグ可能な要素を離したときに終わります。
 
 ドラッグ操作のあいだ、いくつかのイベント種類が発生し、そのうちいくつかは {{domxref('HTMLElement/drag_event', 'drag')}} や {{domxref('HTMLElement/dragover_event', 'dragover')}} イベントのように、複数発生することもあります。
 
@@ -53,17 +53,13 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 > **メモ:** {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは[相互運用性](#相互運用性)を見てください。
 
-### Gecko 特有のインターフェイス
-
-Mozilla と Firefox は、標準のドラッグ & ドロップのモデルに含まれていないいくつかの機能に対応しています。複数の項目や、文字列以外のデータ (ファイルなど) をドラッグしたりする補助になる*便利な関数*があります。詳しくは[複数の項目のドラッグ & ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)を参照してください。加えて、{{domxref("DataTransfer")}} リファレンスページを見るとすべての [Gecko 固有プロパティ](/ja/docs/Web/API/DataTransfer#gecko_properties)と [Gecko 固有メソッド](/ja/docs/Web/API/DataTransfer#gecko_methods)がわかります。
-
 ## 基本
 
 この節は、アプリにドラッグ & ドロップ機能を追加する基本手順のまとめです。
 
 ### ドラッグ可能なものを特定
 
-要素を*ドラッグ可能*とするには、以下のコードのように {{htmlattrxref("draggable")}} 属性と {{domxref("HTMLElement.dragstart_event","ondragstart")}} のイベントハンドラーを追加することが求められます。
+要素を*ドラッグ可能*とするには、以下のコードのように [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性と {{domxref("HTMLElement.dragstart_event","ondragstart")}} のイベントハンドラーを追加することが求められます。
 
 ```html
 <script>
@@ -99,7 +95,10 @@ function dragstart_handler(ev) {
   // 異なる種類のドラッグデータを追加する
   ev.dataTransfer.setData("text/plain", ev.target.innerText);
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
-  ev.dataTransfer.setData("text/uri-list", ev.target.ownerDocument.location.href);
+  ev.dataTransfer.setData(
+    "text/uri-list",
+    ev.target.ownerDocument.location.href
+  );
 }
 ```
 
@@ -116,7 +115,7 @@ function dragstart_handler(ev) {
   // 注: "example.gif" は実際の画像の URL に変更してください。
   // でないと、既定ののドラッグ画像が使用されます。
   let img = new Image();
-  img.src = 'example.gif';
+  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```
@@ -254,7 +253,6 @@ function dragstart_handler(ev) {
 ## 関連情報
 
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [複数アイテムのドラッグとドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)

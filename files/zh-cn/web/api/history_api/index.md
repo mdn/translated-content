@@ -109,7 +109,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 在 [XUL](/zh-CN/docs/Mozilla/Tech/XUL) 文档中，它创建指定的 XUL 元素。
 
-在其它文档中，它创建一个命名空间 URI 为`null`的元素。
+在其他文档中，它创建一个命名空间 URI 为`null`的元素。
 
 ### replaceState() 方法
 

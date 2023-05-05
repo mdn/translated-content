@@ -805,13 +805,3 @@ Nous avons ici uniquement abordé les bases du canevas. Il existe bien plus de c
   - : Cet exemple utilise un canevas afin de visualiser les données audio de l'API Web Audio en temps réel.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Introduction aux API web](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipuler des documents](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Récupérer des données depuis le server](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Les API tierces](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- **Dessiner des graphismes**
-- [Les API vidéo et audio](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

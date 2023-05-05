@@ -90,7 +90,7 @@ const range  = selObj.getRangeAt(0);
 
 選択と入力フォーカス（{{DOMxRef("Document.activeElement")}} で示される）には、ブラウザーによって異なる複雑な関係があります。ブラウザー間の互換性のあるコードでは、これらを別個に扱う方がよいでしょう。
 
-Safari と Chrome は（Firefox と異なり）現在、プログラムで選択範囲を変更する場合、選択範囲を含む要素にフォーカスを当てます。将来的には変更される可能性があります（[W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) と {{WebKitBug("38696")}} を参照して下さい）。
+Safari と Chrome は（Firefox と異なり）現在、プログラムで選択範囲を変更する場合、選択範囲を含む要素にフォーカスを当てます。将来的には変更される可能性があります（[W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) と [WebKit bug 38696](https://webkit.org/b/38696) を参照して下さい）。
 
 ### 編集ホストのフォーカス変更に関する選択 API の挙動
 

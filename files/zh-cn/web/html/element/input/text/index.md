@@ -21,11 +21,11 @@ slug: Web/HTML/Element/input/text
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("maxlength", "input")}}、{{htmlattrxref("minlength", "input")}}、{{htmlattrxref("pattern", "input")}}、{{htmlattrxref("placeholder", "input")}}、{{htmlattrxref("readonly", "input")}}、{{htmlattrxref("required", "input")}} 和 {{htmlattrxref("size", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#size"><code>size</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
-   <td>{{htmlattrxref("list", "input")}}、<code>value</code></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<code>value</code></td>
   </tr>
     <tr>
       <td><strong>DOM 接口</strong></td>
@@ -40,7 +40,7 @@ slug: Web/HTML/Element/input/text
 
 ## 值
 
-{{htmlattrxref("value", "input")}} 属性是一个包含了文本域当前文字的字符串。你可以在 Javascript 中使用 {{domxref("HTMLInputElement")}} 的 `value` 属性获取这些文字。
+[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性是一个包含了文本域当前文字的字符串。你可以在 Javascript 中使用 {{domxref("HTMLInputElement")}} 的 `value` 属性获取这些文字。
 
 ```js
 let theText = myTextInput.value;
@@ -48,13 +48,13 @@ let theText = myTextInput.value;
 
 如果当前文本输入没有约束验证（查看[验证](#验证)小节获取更多详细信息），`value` 值可能是空字符串（`""`）。
 
-## 其它属性
+## 其他属性
 
 除了所有 {{HTMLElement("input")}} 元素上共有的可操作的属性外，文本输入框还支持以下属性：
 
 ### `list`
 
-列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 {{htmlattrxref("type", "input")}} 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### `maxlength`
 
@@ -70,11 +70,11 @@ let theText = myTextInput.value;
 
 ### `pattern`
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
-> **备注：** 使用 {{htmlattrxref("title", "input")}} 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
+> **备注：** 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
 
 请参照[指定模式](#指定模式)更多内容和例子。
 
@@ -130,7 +130,7 @@ Safari 扩展，`autocorrect` 属性是一个字符串，它指示在用户编�
 
 Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键将采取何种操作。
 
-此属性已经废弃：请使用全局属性 {{htmlattrxref("enterkeyhint")}} 作为替代。
+此属性已经废弃：请使用全局属性 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Global_attributes#enterkeyhint) 作为替代。
 
 ## 使用文本输入框
 
@@ -154,11 +154,11 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 {{EmbedLiveSample("基础示例", 600, 50)}}
 
-提交后，发送到服务器的键/值对的数据将为 `name=Chris`（如果在提交之前输入了“Chris”作为输入值）。你必须记住在 {{HTMLElement("input")}} 元素上包含 {{htmlattrxref("name", "input")}} 属性，否则文本字段的值将不包含在提交的数据中。
+提交后，发送到服务器的键/值对的数据将为 `name=Chris`（如果在提交之前输入了“Chris”作为输入值）。你必须记住在 {{HTMLElement("input")}} 元素上包含 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性，否则文本字段的值将不包含在提交的数据中。
 
 ### 设置占位符
 
-你可以通过使用 {{htmlattrxref("placeholder","input")}} 属性在文本输入中提供一个有用的占位符，提示用户该输入什么。看下面的例子：
+你可以通过使用 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性在文本输入中提供一个有用的占位符，提示用户该输入什么。看下面的例子：
 
 ```html
 <form>
@@ -184,7 +184,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 ### 输入框元素尺寸
 
-可以使用 {{htmlattrxref("size", "input")}} 属性来控制输入框的尺寸。使用它，可以指定文本输入一次可以显示的字符数。这会影响元素的宽度，使你可以按字符而不是像素指定宽度。例如，在此示例中，输入为 30 个字符宽：
+可以使用 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 属性来控制输入框的尺寸。使用它，可以指定文本输入一次可以显示的字符数。这会影响元素的宽度，使你可以按字符而不是像素指定宽度。例如，在此示例中，输入为 30 个字符宽：
 
 ```html
 <form>
@@ -239,7 +239,7 @@ input:valid + span::after {
 
 ### 使输入框必填
 
-你可以使用 {{htmlattrxref("required","input")}} 属性简单地令该输入框在表单提交前必须填入值：
+你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性简单地令该输入框在表单提交前必须填入值：
 
 ```html
 <form>
@@ -282,7 +282,7 @@ input:valid + span::after {
 
 ### 输入值长度
 
-你可以使用 {{htmlattrxref("minlength", "input")}} 属性指定输入值的最小长度（以字符为单位）；同样，也可以使用 {{htmlattrxref("maxlength", "input")}} 设置输入值的最大长度（以字符为单位）。
+你可以使用 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 属性指定输入值的最小长度（以字符为单位）；同样，也可以使用 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 设置输入值的最大长度（以字符为单位）。
 
 下面的示例要求输入的值的长度为 4–8 个字符。
 
@@ -337,7 +337,7 @@ input:valid + span::after {
 
 ### 指定模式
 
-可以使用 {{htmlattrxref("pattern","input")}} 属性指定输入值必须匹配才能被认为是有效的正则表达式（请参照[以正则表达式验证](/zh-CN/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression)）。
+可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定输入值必须匹配才能被认为是有效的正则表达式（请参照[以正则表达式验证](/zh-CN/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression)）。
 
 下面的示例将值限制为 4-8 个字符，并要求该值仅包含小写字母。
 

@@ -15,7 +15,7 @@ The functional areas included in the HTML DOM API include:
 - Management of media connected to the HTML media elements ({{HTMLElement("audio")}} and {{HTMLElement("video")}}).
 - Dragging and dropping of content on webpages.
 - Access to the browser navigation history
-- Supporting and connective interfaces for other APIs such as [Web Components](/zh-CN/docs/Web/Web_Components), [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API), [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API), [WebSocket](/zh-CN/docs/Web/API/WebSockets_API), and [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events).
+- Supporting and connective interfaces for other APIs such as [Web Components](/zh-CN/docs/Web/API/Web_components), [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API), [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API), [WebSocket](/zh-CN/docs/Web/API/WebSockets_API), and [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events).
 
 ## HTML DOM concepts and usage
 
@@ -227,7 +227,7 @@ The History API interfaces let you access information about the browser's histor
 
 ### Web Components interfaces
 
-These interfaces are used by the [Web Components API](/zh-CN/docs/Web/Web_Components) to create and manage the available [custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements).
+These interfaces are used by the [Web Components API](/zh-CN/docs/Web/API/Web_components) to create and manage the available [custom elements](/zh-CN/docs/Web/API/Web_components/Using_custom_elements).
 
 - [`CustomElementRegistry`](/zh-CN/docs/Web/API/CustomElementRegistry)
 

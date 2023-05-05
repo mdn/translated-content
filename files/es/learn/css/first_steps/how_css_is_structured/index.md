@@ -548,11 +548,3 @@ Debes asegurarte siempre de separar los valores distintos entre sí por al menos
 Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo ([Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)) veremos ese proceso.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## En este modulo
-
-1. [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Empezar con el CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
-3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Styling_a_biography_page)

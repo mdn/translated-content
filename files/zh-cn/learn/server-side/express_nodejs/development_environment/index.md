@@ -28,7 +28,7 @@ slug: Learn/Server-side/Express_Nodejs/development_environment
 
 完整的 Express 本地开发环境包括 Nodejs、NPM 包管理器和 **Express 应用生成器**（可选）。
 
-Node 和 NPM 包管理器可以用二进制包、安装程序或系统包管理器一并安装（下文将介绍）。然后在开发每个 Express web 应用时，由 NPM 针对当前应用将 Express（以及模板引擎、数据库驱动程序、身份验证中间件、静态文件托管中间件等其它库）作为依赖项进行安装。
+Node 和 NPM 包管理器可以用二进制包、安装程序或系统包管理器一并安装（下文将介绍）。然后在开发每个 Express web 应用时，由 NPM 针对当前应用将 Express（以及模板引擎、数据库驱动程序、身份验证中间件、静态文件托管中间件等其他库）作为依赖项进行安装。
 
 NPM 也可以安装（全局的）**Express 应用生成器**，可用于创建遵循 [MVC 模式](/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 的 Express 应用框架。它不是必备的，因为无需这个工具就可以创建 Express 应用（或相同架构布局或依赖的 Express 应用）。但我们还是会使用它，因为它更容易上手，还有助于应用结构的模块化管理。
 
@@ -50,15 +50,15 @@ Node 有许多 [发行版本](https://nodejs.org/zh-cn/blog/release/)，新版�
 
 Express 应选用最新版本。
 
-### 数据库和其它依赖该如何选择？
+### 数据库和其他依赖该如何选择？
 
-其它依赖（例如数据库驱动程序、模板引擎、身份认证引擎等）是应用的一部分，使用 NPM 将它们引入到应用环境中。稍后进行讨论。
+其他依赖（例如数据库驱动程序、模板引擎、身份认证引擎等）是应用的一部分，使用 NPM 将它们引入到应用环境中。稍后进行讨论。
 
 ## 安装 Node
 
 先在操作系统上安装 Node.js 和 NPM 后才可使用 Express。接下来将介绍如何最简便地在 Ubuntu 18.04、macOS Mojave 以及 Windows 10 上安装 Node.js 最新的 LTS 版本。.
 
-> **备注：** 以下内容将介绍在上述三种 OS 上安装 Node 和 NPM 的最简便方法。对于其它操作系统，以及更多的安装方法，可以参考 [通过包管理器方式安装 Node.js](https://nodejs.org/zh-cn/download/package-manager/) (nodejs.org).
+> **备注：** 以下内容将介绍在上述三种 OS 上安装 Node 和 NPM 的最简便方法。对于其他操作系统，以及更多的安装方法，可以参考 [通过包管理器方式安装 Node.js](https://nodejs.org/zh-cn/download/package-manager/) (nodejs.org).
 
 ### Windows 和 macOS
 
@@ -150,7 +150,7 @@ $ npm -v
 
 下面介绍用 NPM 下载包、将包保存进工程依赖树，以及在 Node 应用中调用包的方法和步骤。
 
-> **备注：** 现在来讲解获取和安装 Express 包的步骤。稍后解释为什么可以直接对 Express 包（乃至其它包）使用 **Express 应用生成器**。这段对理解 NPM 的工作原理和应用生成器的工作机制有一定的帮助。
+> **备注：** 现在来讲解获取和安装 Express 包的步骤。稍后解释为什么可以直接对 Express 包（乃至其他包）使用 **Express 应用生成器**。这段对理解 NPM 的工作原理和应用生成器的工作机制有一定的帮助。
 
 1. 首先为新应用创建一个目录，并进入它：
 
@@ -256,7 +256,7 @@ npm install eslint --save-dev
 
 在 **package.json** 中，除了定义和获取依赖，还可以定义脚本，然后通过 NPM 的 [run-script](https://docs.npmjs.com/cli/run-script) 命令来运行。这个用法普遍用于自动运行测试单元或部分应用，也可用于构建工具链（比如运行工具来压缩 JavaScript 文件或图片，lint 或分析代码，等等）。
 
-> **备注：** [Gulp](http://gulpjs.com/) 和 [Grunt](http://gruntjs.com/) 等任务运行器可用于运行测试单元或其它外部工具。
+> **备注：** [Gulp](http://gulpjs.com/) 和 [Grunt](http://gruntjs.com/) 等任务运行器可用于运行测试单元或其他外部工具。
 
 比如，可以在 **package.json** 文件中添加以下内容来定义一个脚本，从而对上文的代码运行 eslint（假设应用代码在 /src/js 文件夹下）：
 
@@ -298,7 +298,7 @@ npm install express-generator -g
 express helloworld
 ```
 
-> **备注：** 也可以指定模板库来使用其它丰富的设置。可通过 help 命令来查看所有选项：
+> **备注：** 也可以指定模板库来使用其他丰富的设置。可通过 help 命令来查看所有选项：
 >
 > ```bash
 > $ express --help
@@ -362,7 +362,7 @@ DEBUG 命令可以展示应用运行时返回的有用的日志信息，如下�
 
 下一节将开始用上述的环境和工具通过实战逐步搭建一个完整的 web 应用。
 
-## 另请参阅
+## 参见
 
 - [Node.js 下载页面](https://nodejs.org/zh-cn/download/) （nodejs.org 官方中文页面）
 - [通过包管理器方式安装 Node.js](https://nodejs.org/zh-cn/download/package-manager/) （nodejs.org 官方中文页面）

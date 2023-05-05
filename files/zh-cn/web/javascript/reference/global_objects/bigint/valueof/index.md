@@ -19,7 +19,7 @@ bigIntObj.valueOf()
 
 表示指定 {{jsxref("BigInt")}} 对象的原始 BigInt 值。
 
-## 例子
+## 示例
 
 ### Using `valueOf`
 

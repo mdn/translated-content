@@ -3,7 +3,7 @@ title: ':link'
 slug: Web/CSS/:link
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 总结
 

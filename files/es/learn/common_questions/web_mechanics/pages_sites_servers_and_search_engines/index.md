@@ -31,7 +31,7 @@ En este artículo se describen varios conceptos referidos a la web: Páginas web
 
 ## Resumen
 
-Como cualquier área de conocimiento, la web viene con un montón de jerga. No te preocupes, no te abrumaremos con todo esto (tenemos un glosario por si tienes curiosidad). Sin embargo, hay un unos términos básicos que necesitas entender al principio, ya que escucharás estas expresiones todo el tiempo mientras lees. A veces es fácil de confundir estos términos, puesto que hacen referencia a funcionalidades relacionadas pero diferentes. De hecho, a veces veras estos términos mal utilizados en las noticias y en otros lugares ¡por lo que llegar mezclarlos es entendible!
+Como cualquier área de conocimiento, la web viene con un montón de jerga. No te preocupes, no te abrumaremos con todo esto (tenemos un glosario por si tienes curiosidad). Sin embargo, hay unos términos básicos que necesitas entender al principio, ya que escucharás estas expresiones todo el tiempo mientras lees. A veces es fácil de confundir estos términos, puesto que hacen referencia a funcionalidades relacionadas pero diferentes. De hecho, a veces veras estos términos mal utilizados en las noticias y en otros lugares ¡por lo que llegar a mezclarlos es entendible!
 
 Cubriremos estos términos y tecnologías con más detalle mientras exploramos más, pero estas definiciones rápidas serán un gran comienzo para ti:
 

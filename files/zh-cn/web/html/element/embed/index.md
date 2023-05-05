@@ -42,13 +42,13 @@ slug: Web/HTML/Element/embed
 
 这个元素的属性包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
-- {{htmlattrdef("src")}}
+- `src`
   - : 被嵌套的资源的 URL。
-- {{htmlattrdef("type")}}
+- `type`
   - : 用于选择插件实例化的 MIME 类型。
-- {{htmlattrdef("width")}}
+- `width`
   - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## 例子

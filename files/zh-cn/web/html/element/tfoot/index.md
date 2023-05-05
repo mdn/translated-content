@@ -39,36 +39,36 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 此元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}}
+- `align` {{Deprecated_inline}}
   - : 此枚举属性指定每个单元格内容所使用的水平对齐方式。可选值为：
 
     - `left`，单元格内容左对齐
     - `center`，单元格内容居中对齐
     - `right`，单元格内容右对齐
     - `justify`，插入空白调整单元格中的文本内容（译者注：即两端对齐）
-    - `char`，将文本内容与一个具有最小偏移量的特定字符对齐，字符和偏移量分别由{{htmlattrxref("char", "tbody")}}和{{htmlattrxref("charoff", "tbody")}}属性定义。{{unimplemented_inline("2212")}}.若此值未设置，则假定为`left`。
+    - `char`，将文本内容与一个具有最小偏移量的特定字符对齐，字符和偏移量分别由[`char`](/zh-CN/docs/Web/HTML/Element/tbody#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Element/tbody#charoff) 属性定义。若此值未设置，则假定为 `left`。
 
     > **备注：** 此属性在最新标准中已被废弃（不支持），所以请勿使用。
     >
     > - 为达到与`left`, `center`, `right`或`justify`相同的效果，请使用 CSS {{cssxref("text-align")}}属性。
-    > - 为达到与 char 值相同的效果，在 CSS3 中可将{{htmlattrxref("char", "tfoot")}}的值用作{{cssxref("text-align")}}的属性值{{unimplemented_inline}}。
+    > - 为达到与 char 值相同的效果，在 CSS3 中可将 [`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char) 的值用作 {{cssxref("text-align")}} 的属性值。
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- `bgcolor` {{Non-standard_inline}}
   - : 此属性定义了列内单元格的背景色。定义此属性使用'#'作为前缀，其后是定义于[sRGB](https://www.w3.org/Graphics/Color/sRGB)的 6 位十六进制码。也可使用 16 种预定义的色彩字符串之一。
 
     > **备注：** 请勿使用此属性，因为这并非标准，且只有某些特定版本的 Microsoft Internet Explorer（IE 浏览器）支持：{{HTMLElement("tfoot")}}元素应使用[CSS](/zh-CN/docs/Web/CSS)设计。若想得到与**bgcolor**属性相似的效果，可在相关的 {{HTMLElement("td")}}或{{HTMLElement("th")}}元素中使用[CSS](/zh-CN/docs/Web/CSS) {{cssxref("background-color")}}属性。
 
-- {{htmlattrdef("char")}} {{Deprecated_inline}}
-  - : 此属性设置单元格对齐的基准字符。当对齐数字或货币值时，一个典型值会带有一个句点 (.)。如果{{htmlattrxref("align", "tfoot")}}未设置为`char`，此属性将被忽略。
+- `char` {{Deprecated_inline}}
+  - : 此属性设置单元格对齐的基准字符。当对齐数字或货币值时，一个典型值会带有一个句点 (.)。如果[`align`](/zh-CN/docs/Web/HTML/Element/tfoot#align)未设置为`char`，此属性将被忽略。
 
-    > **备注：** 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与{{htmlattrxref("char", "tbtfootody")}}相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为{{htmlattrxref("char", "tfoot")}}的属性值{{unimplemented_inline}}。
+    > **备注：** 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与[`char`](/zh-CN/docs/Web/HTML/Element/tbtfootody#char)相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为[`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char)的属性值。
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline}}
+- `charoff` {{Deprecated_inline}}
   - : 此属性用作表明列内数据对于对齐基准字符的偏移字符数，对其基准字符由`char`属性指定。
 
     > **备注：** 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline}}
+- `valign` {{Deprecated_inline}}
   - : 此属性指定表头（译者注：英文原文为 table header，疑似错误）中每一行内的文本的垂直对齐方式。此属性的可选值为：
 
     - `baseline`，会使文本尽可能接近单元格底部，但并不向底部对齐，而将它们以字符[基线](https://zh.wikipedia.org/wiki/%E5%9F%BA%E7%B7%9A)对齐。如果所有字符的大小相同，此值与`bottom`的效果相同；

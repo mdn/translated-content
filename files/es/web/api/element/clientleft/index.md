@@ -9,7 +9,7 @@ slug: Web/API/Element/clientLeft
 
 El ancho del borde izquierdo de un elemento en pixel. Incluye el ancho de la barra de desplazamiento vertical, si la dirección del texto es *rtl* (derecha a izquierda) y si hay un desbordamiento que provoque la aparición de la barra en el lado izquierdo. `clientLeft` NO incluye *margin-left* o *padding-left*. `clientLeft` es de sólo lectura.
 
-Las aplicaciones "[Gecko](/es/Gecko)-based applications" implementan `clientLeft` a partir de Gecko 1.9 ([Firefox 3](/es/Firefox_3), ver {{ Bug(111207) }}). Esta propiedad no está implementada en Firefox 2 o anteriores.
+Las aplicaciones "[Gecko](/es/Gecko)-based applications" implementan `clientLeft` a partir de Gecko 1.9 ([Firefox 3](/es/Firefox_3), ver [Error 111207 en Firefox](https://bugzil.la/111207)). Esta propiedad no está implementada en Firefox 2 o anteriores.
 
 ## Sintaxis
 
@@ -26,7 +26,7 @@ var left = element.clientLeft;
 
 <p>Suave, individualista y muy leal, los gatos de Birmania tienen un carácter entre los persas y los siameses. Si le gustan los gatos que no son agresivos, disfrutan estar entre los humanos y son generalmente tranquilos, esta es la raza para usted.</p>
 
-<p><span style="float: right;"><img alt="Image:BirmanCat.jpg"></span>Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas, patas y cola.</p>
+<p>Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas, patas y cola.</p>
 
 <p>La imagen del gato y el texto vienen de <a class="external" href="http://www.best-cat-art.com/">www.best-cat-art.com</a></p>
 
@@ -37,11 +37,9 @@ var left = element.clientLeft;
 
 {{EmbedLiveSample("",400,300)}}
 
-<img alt="Image:clientLeft.png">
+La barra de desplazamiento vertical en el lado izquierdo, aparece cuando la propiedad layout.scrollbar.side tiene el valor 1 o 3
 
-<img alt="La barra de desplazamiento vertical en el lado izquierdo, aparece cuando la propiedad layout.scrollbar.side tiene el valor 1 o 3">
-
-Cuando la propiedad [_layout.scrollbar.side_](http://kb.mozillazine.org/Layout.scrollbar.side)se establece a 1 o a 3 y la dirección de texto está puesta a RTL, **entonces la barra de desplazamiento se pone a la izquierda** y esto afecta a la forma en que se calcula clientLeft.
+Cuando la propiedad [_layout.scrollbar.side_](http://kb.mozillazine.org/Layout.scrollbar.side) se establece a 1 o a 3 y la dirección de texto está puesta a RTL, **entonces la barra de desplazamiento se pone a la izquierda** y esto afecta a la forma en que se calcula clientLeft.
 
 ## Especificaciones
 

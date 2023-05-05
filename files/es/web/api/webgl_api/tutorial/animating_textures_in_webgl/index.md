@@ -104,12 +104,12 @@ Has visto este código antes. Es prácticamente idéntico a la rutina de handleT
 
 ¡Esto es todo al respecto!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[Ver el código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [Abrir esta demo en una nueva página](http://mdn.github.io/webgl-examples/tutorial/sample8/)
+[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) | [Abrir esta demo en una nueva página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## Artículos relacionados
 
-- [Usar audio y video en Firefox](/es/Using_HTML5_audio_and_video)
+- [Usar audio y video en Firefox](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

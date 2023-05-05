@@ -33,7 +33,7 @@ slug: Web/Security/Same-origin_policy
 
 ### 文件源
 
-现代浏览器通常将使用 `file:///` 模式加载的文件的来源视为*不透明的来源*。这意味着，假如一个文件包括来自同一文件夹的其它文件，它们不会被认为来自同一来源，并可能引发 {{Glossary("CORS")}} 错误。
+现代浏览器通常将使用 `file:///` 模式加载的文件的来源视为*不透明的来源*。这意味着，假如一个文件包括来自同一文件夹的其他文件，它们不会被认为来自同一来源，并可能引发 {{Glossary("CORS")}} 错误。
 
 请注意，[URL 规范](https://url.spec.whatwg.org/#origin)指出，文件的来源与实现有关，一些浏览器可能将同一目录或子目录下的文件视为同源文件，尽管这有[安全影响](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730)。
 
@@ -134,7 +134,7 @@ JavaScript 的 API 中，如 {{domxref("HTMLIFrameElement.contentWindow", "ifram
 
 ## 跨源数据存储访问
 
-访问存储在浏览器中的数据，如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 和 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)，是以源进行分割的。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其它源的数据进行读写操作。
+访问存储在浏览器中的数据，如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 和 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)，是以源进行分割的。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其他源的数据进行读写操作。
 
 {{glossary("Cookie", "Cookie")}} 使用不同的源定义方式。一个页面可以为本域和其父域设置 cookie，只要是父域不是公共后缀（public suffix）即可。Firefox 和 Chrome 使用 [Public Suffix List](https://publicsuffix.org/) 检测一个域是否是公共后缀。当你设置 cookie 时，你可以使用 `Domain`、`Path`、`Secure` 和 `HttpOnly` 标记来限定可访问性。当你读取 cookie 时，你无法知道它是在哪里被设置的。即使只使用安全的 https 连接，你所看到的任何 cookie 都有可能是使用不安全的连接进行设置的。
 

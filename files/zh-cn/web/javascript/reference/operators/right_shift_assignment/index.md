@@ -37,5 +37,5 @@ b >>= 2;  // -2 (-00000000000000000000000000000010)
 
 ## 参考
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
 - [右移运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Right_shift)

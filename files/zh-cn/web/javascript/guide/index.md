@@ -62,14 +62,14 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 ## 表达式和运算符
 
-概述：[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+概述：[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-- [赋值](</zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符(Assignment_operators)>) &
-- [比较](</zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#比较运算符(Comparison_operators)>)
-- [算术运算符](</zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#算术运算符(Arithmetic_operators)>)
-- [位运算](</zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#位运算符(Bitwise_operators)>) &
-- [逻辑运算符](</zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#逻辑运算符(Logical_operators)>)
-- [条件（三元）运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_operator)
+- [赋值](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)
+- [比较](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)
+- [算术运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#算术运算符)
+- [位运算](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
+- [逻辑运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#逻辑运算符)
+- [条件（三元）运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#条件（三元）运算符)
 
 ## 数字与日期
 
@@ -88,7 +88,7 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 - [字符串对象](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting#字符串对象)
 - [模版字面量](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting#多行模板字符串)
 - [国际化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting#国际化)
-- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 
 ## 索引集合
 
@@ -108,12 +108,12 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 ## 处理对象
 
-概述：[处理对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)
+概述：[处理对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects)
 
-- [对象和属性](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%B1%9E%E6%80%A7_2)
-- [创建对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#%E5%88%9B%E5%BB%BA%E6%96%B0%E5%AF%B9%E8%B1%A1)
-- [定义方法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95)
-- [getter 和 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#%E5%AE%9A%E4%B9%89_getters_%E4%B8%8E_setters)
+- [对象和属性](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)
+- [创建对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#创建新对象)
+- [定义方法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义方法)
+- [getter 和 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getters_与_setters)
 
 ## 对象模型的细节
 
@@ -135,11 +135,11 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 
 ## 迭代器与生成器
 
-概述：[迭代器与生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+概述：[迭代器与生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)
 
-- [迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#%E8%BF%AD%E4%BB%A3%E5%99%A8)
-- [生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#%E7%94%9F%E6%88%90%E5%99%A8)
-- [可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%AF%B9%E8%B1%A1)
+- [迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#迭代器)
+- [可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)
+- [生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#生成器函数)
 
 ## 元编程
 

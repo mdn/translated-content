@@ -96,7 +96,7 @@ Content-Security-Policy: connect-src 'self';
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("connect-src")}}

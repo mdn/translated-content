@@ -33,7 +33,7 @@ HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通
 
 如果（代理）服务器接受的有效凭据**不足以**访问给定的资源，服务器将响应 {{HTTPStatus("403")}} `Forbidden` 状态码。与 {{HTTPStatus("401")}} `Unauthorized` 或 {{HTTPStatus("407")}} `Proxy Authentication Required` 不同的是，该用户无法进行身份验证并且浏览器不会提出新的的尝试。
 
-在所有情况下，服务器更可能赶回 {{HTTPStatus("404")}} `Not Found` 状态码，以向没有足够权限或者未正确身份验证的用户隐藏页面的存在。
+在所有情况下，服务器更可能返回 {{HTTPStatus("404")}} `Not Found` 状态码，以向没有足够权限或者未正确身份验证的用户隐藏页面的存在。
 
 ### 跨源图片认证
 
@@ -43,7 +43,7 @@ HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通
 
 浏览器使用 `utf-8` 编码用户名和密码。
 
-Firefox 曾使用 `ISO-8859-1`，但为与其它浏览器保持一致改为 `utf-8`，也为了避免 [Firefox bug 1419658](https://bugzil.la/1419658) 中所描述的潜在问题。
+Firefox 曾使用 `ISO-8859-1`，但为与其他浏览器保持一致改为 `utf-8`，也为了避免 [Firefox bug 1419658](https://bugzil.la/1419658) 中所描述的潜在问题。
 
 ### WWW-Authenticate 与 Proxy-Authenticate 标头
 

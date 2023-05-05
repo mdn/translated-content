@@ -168,7 +168,7 @@ Una extensión de Safari, el atributo {{HTMLAttrDef("autocorrect")}} es una cade
 
 Una extensión de Mozilla, compatible con Firefox para Android, que proporciona una pista sobre qué tipo de acción se realizará si el usuario presiona la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras edita el campo. Esta información se usa para decidir qué tipo de etiqueta usar en la tecla <kbd>Intro</kbd> del teclado virtual.
 
-> **Nota:** Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global {{HTMLAttrxRef("enterkeyhint")}}, pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta {{bug(1490661)}}.
+> **Nota:** Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global {{HTMLAttrxRef("enterkeyhint")}}, pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta [Error 1490661 en Firefox](https://bugzil.la/1490661).
 
 Los valores permitidos son: `go`, `done`, `next`, `search` y `send`. El navegador decide, utilizando esta sugerencia, qué etiqueta poner en la tecla Intro.
 

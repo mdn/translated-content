@@ -132,10 +132,10 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的在线�
 这段代码很简单，只是增加了一个点击事件处理器来弹出信息。
 
 ```js
-var el = document.getElementById('item');
-el.onclick = function() {
-  alert('Owww, stop poking me!');
-}
+const el = document.getElementById("item");
+el.onclick = function () {
+  alert("Owww, stop poking me!");
+};
 ```
 
 ### 结果
@@ -155,4 +155,4 @@ el.onclick = function() {
 - 标题命名
   - : 在没有歧义的情况下（如，例子位于“示例”部分中），标题应该简明扼要，仅使用相应语言的名称：HTML、CSS、CSS、JavasScript、SVG 等（见上文）。不应使用如“HTML 内容”或“JavaScript 内容”等标题。但是，如果这样的短标题无法明确内容，可以使用更具体的标题。
 - 使用“结果”块
-  - : 在不同的代码块之后，请在最后调用 `EmbedLiveSample` 宏之前使用“结果”块（见上文）。这样，示例的语义对于阅读器或其它解析页面的工具（如：屏幕阅读器、网络爬虫）都会变得更加清晰。
+  - : 在不同的代码块之后，请在最后调用 `EmbedLiveSample` 宏之前使用“结果”块（见上文）。这样，示例的语义对于阅读器或其他解析页面的工具（如：屏幕阅读器、网络爬虫）都会变得更加清晰。

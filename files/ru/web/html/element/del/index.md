@@ -14,11 +14,11 @@ translation_of: Web/HTML/Element/del
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) или [потоковый контент](/ru/docs/HTML/Content_categories#Flow_content). |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
-| Пропуск тега                                           | {{no_tag_omission}}                                                                                                                      |
+| Допустимое содержимое                                  | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                      |
 | Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                       |
-| Допустимые ARIA роли                                   | Любые                                                                                                                                         |
-| DOM интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
+| Допустимые ARIA-роли                                   | Любые                                                                                                                                         |
+| DOM-интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
 
 ## Атрибуты
 

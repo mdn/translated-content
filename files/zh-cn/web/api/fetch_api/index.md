@@ -11,7 +11,7 @@ Fetch API 提供了一个获取资源的接口（包括跨网络通信）。对�
 
 ## 概念和用法
 
-Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及其它与网络请求有关的）对象的通用定义。这将在未来更多需要它们的地方使用它们，无论是 service worker、Cache API，又或者是其它处理请求和响应的方式，甚至是任何一种需要你自己在程序中生成响应的方式（即使用计算机程序或者个人编程指令）。
+Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及其他与网络请求有关的）对象的通用定义。这将在未来更多需要它们的地方使用它们，无论是 service worker、Cache API，又或者是其他处理请求和响应的方式，甚至是任何一种需要你自己在程序中生成响应的方式（即使用计算机程序或者个人编程指令）。
 
 它同时还为有关联性的概念，例如 CORS 和 HTTP Origin 标头信息，提供一种新的定义，取代它们原来那种分离的定义。
 
@@ -21,7 +21,7 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 
 一旦 {{domxref("Response")}} 被返回，有许多方法可以获取主体定义的内容以及如何处理它。
 
-你也可以通过 {{domxref("Request.Request","Request()")}} 和 {{domxref("Response.Response","Response()")}} 构造函数直接创建请求和响应。但是我们不建议这么做，它们更可能被创建为其它的 API 操作的结果（比如，service worker 中的 {{domxref("FetchEvent.respondWith")}}）。
+你也可以通过 {{domxref("Request.Request","Request()")}} 和 {{domxref("Response.Response","Response()")}} 构造函数直接创建请求和响应。但是我们不建议这么做，它们更可能被创建为其他的 API 操作的结果（比如，service worker 中的 {{domxref("FetchEvent.respondWith")}}）。
 
 ### 与 jQuery 的区别
 
@@ -31,7 +31,7 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 - 除非你在 [init 对象中](/zh-CN/docs/Web/API/fetch#参数)设置（去包含）*credentials*，否则 `fetch()` **将不会发送跨源 cookie**。
 
   - [2018 年 4 月](https://github.com/whatwg/fetch/pull/585)，该规范将默认的 credentials 策略更改为 `'same-origin'`。以下浏览器发布了过时的原生 fetch，并在以下版本中更新：Firefox 61.0b13、Safari 12、Chrome 68。
-  - 如果你的目标时这些旧的浏览器，请务必在所有可能接受 cookie/用户登录状态影响的 API 请求中包含拥有 `credentials: 'same-origin'` 的 [init 对象](/zh-CN/docs/Web/API/fetch#参数)。
+  - 如果你的目标是这些旧的浏览器，请务必在所有可能接受 cookie/用户登录状态影响的 API 请求中包含拥有 `credentials: 'same-origin'` 的 [init 对象](/zh-CN/docs/Web/API/fetch#参数)。
 
 > **备注：** 更多关于 Fetch API 的用法，参考[使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)，以及一些概念 [Fetch 基础概念](/zh-CN/docs/Web/API/Fetch_API/Basic_concepts)。
 
