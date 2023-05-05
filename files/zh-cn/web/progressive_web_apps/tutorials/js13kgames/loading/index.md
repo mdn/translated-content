@@ -152,7 +152,7 @@ if('IntersectionObserver' in window) {
 
 ## 结语
 
-这就是这个系列的所有内容了。我们通过 [js13kPWA 示例应用的源码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) 学习了渐进式 Web 应用的的用法，包括 [PWA 介绍](/zh-CN/docs/Web/Apps/Progressive/Introduction)、[PWA 结构](/zh-CN/docs/Web/Apps/Progressive/App_structure)、[通过 Service Worker 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)、[让 PWA 易于安装](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)，以及最后的通知功能。在 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) 的有趣示例。
+这就是这个系列的所有内容了。我们通过 [js13kPWA 示例应用的源码](https://github.com/mdn/pwa-examples/tree/main/js13kpwa) 学习了渐进式 Web 应用的的用法，包括 [PWA 介绍](/zh-CN/docs/Web/Apps/Progressive/Introduction)、[PWA 结构](/zh-CN/docs/Web/Apps/Progressive/App_structure)、[通过 Service Worker 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)、[让 PWA 易于安装](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)，以及最后的通知功能。在 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) 的有趣示例。
 
 请随意试验这些代码，使用 PWA 的特性来让你现有的应用更加健壮，或者创作出一点新东西。相对于常规的 Web 应用，PWA 存在巨大的优势。
 

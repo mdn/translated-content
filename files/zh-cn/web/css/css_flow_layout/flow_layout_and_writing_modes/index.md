@@ -3,6 +3,8 @@ title: Flow Layout and Writing Modes 流布局和书写模式
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
 ---
 
+{{CSSRef}}
+
 The CSS 2.1 specification, which details how normal flow behaves, assumes a horizontal writing mode. [Layout](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) properties should work in the same way in vertical writing modes. In this guide, we look at how flow layout behaves when used with different document writing modes.
 CSS 2.1 规范详细描述了正常流的行为，它采用了水平写入模式。布局属性在垂直写入模式中的工作方式应该相同。在本指南中，我们将研究流布局在与不同的文档写入模式一起使用时的行为。
 

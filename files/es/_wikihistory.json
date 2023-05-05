@@ -5012,7 +5012,7 @@
     "modified": "2019-03-23T22:59:36.852Z",
     "contributors": ["joxhker"]
   },
-  "Web/API/Notification/permission": {
+  "Web/API/Notification/permission_static": {
     "modified": "2019-03-23T22:07:38.974Z",
     "contributors": ["alanmacgowan", "IXTRUnai"]
   },
@@ -5395,7 +5395,7 @@
     "modified": "2020-10-15T22:21:36.171Z",
     "contributors": ["roberth_dev"]
   },
-  "Web/API/URL/createObjectURL": {
+  "Web/API/URL/createObjectURL_static": {
     "modified": "2019-03-23T22:19:19.805Z",
     "contributors": ["OrlandoDeJesusCuxinYama", "isafrus5", "AzazelN28"]
   },
@@ -6148,32 +6148,6 @@
     "modified": "2019-03-23T22:38:38.798Z",
     "contributors": ["teoli", "anytameleiro"]
   },
-  "Web/CSS/-moz-outline-radius": {
-    "modified": "2019-03-23T22:35:49.017Z",
-    "contributors": [
-      "BubuAnabelas",
-      "teoli",
-      "Simplexible",
-      "Prinz_Rana",
-      "pekechis"
-    ]
-  },
-  "Web/CSS/-moz-outline-radius-bottomleft": {
-    "modified": "2019-03-23T22:35:52.557Z",
-    "contributors": ["pekechis"]
-  },
-  "Web/CSS/-moz-outline-radius-bottomright": {
-    "modified": "2019-03-23T22:35:53.397Z",
-    "contributors": ["pekechis"]
-  },
-  "Web/CSS/-moz-outline-radius-topleft": {
-    "modified": "2019-03-23T22:35:51.509Z",
-    "contributors": ["pekechis"]
-  },
-  "Web/CSS/-moz-outline-radius-topright": {
-    "modified": "2019-03-23T22:35:44.264Z",
-    "contributors": ["pekechis"]
-  },
   "Web/CSS/-moz-user-focus": {
     "modified": "2019-03-23T22:35:52.089Z",
     "contributors": ["teoli", "pekechis"]
@@ -6278,14 +6252,6 @@
     "modified": "2019-03-18T21:15:45.566Z",
     "contributors": ["pekechis"]
   },
-  "Web/CSS/:-moz-list-bullet": {
-    "modified": "2019-03-23T22:29:23.137Z",
-    "contributors": ["pekechis"]
-  },
-  "Web/CSS/:-moz-list-number": {
-    "modified": "2019-03-23T22:29:22.603Z",
-    "contributors": ["pekechis"]
-  },
   "Web/CSS/:-moz-loading": {
     "modified": "2019-03-23T22:33:38.436Z",
     "contributors": ["pekechis"]
@@ -6321,6 +6287,14 @@
   "Web/CSS/::-moz-color-swatch": {
     "modified": "2020-10-15T22:13:15.247Z",
     "contributors": ["Adorta4"]
+  },
+  "Web/CSS/::-moz-list-bullet": {
+    "modified": "2019-03-23T22:29:23.137Z",
+    "contributors": ["pekechis"]
+  },
+  "Web/CSS/::-moz-list-number": {
+    "modified": "2019-03-23T22:29:22.603Z",
+    "contributors": ["pekechis"]
   },
   "Web/CSS/::-moz-page": {
     "modified": "2019-03-23T22:29:23.000Z",
@@ -10771,6 +10745,10 @@
       "jalmeida"
     ]
   },
+  "Web/JavaScript/Guide/Typed_arrays": {
+    "modified": "2020-10-15T21:37:33.978Z",
+    "contributors": ["Nachec", "LeoE"]
+  },
   "Web/JavaScript/Guide/Using_promises": {
     "modified": "2020-05-16T20:15:48.240Z",
     "contributors": [
@@ -10974,13 +10952,13 @@
     "modified": "2020-03-12T19:45:01.208Z",
     "contributors": ["JavScars", "Sheppy"]
   },
-  "Web/JavaScript/Reference/Errors/Bad_octal": {
-    "modified": "2020-03-12T19:45:41.442Z",
-    "contributors": ["HaroldV"]
-  },
   "Web/JavaScript/Reference/Errors/Bad_regexp_flag": {
     "modified": "2020-09-01T13:12:41.234Z",
     "contributors": ["Nachec"]
+  },
+  "Web/JavaScript/Reference/Errors/Deprecated_octal": {
+    "modified": "2020-03-12T19:45:41.442Z",
+    "contributors": ["HaroldV"]
   },
   "Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma": {
     "modified": "2020-03-12T19:45:51.961Z",
@@ -11002,10 +10980,6 @@
   "Web/JavaScript/Reference/Errors/Invalid_date": {
     "modified": "2020-03-12T19:47:15.708Z",
     "contributors": ["untilbit"]
-  },
-  "Web/JavaScript/Reference/Errors/Malformed_formal_parameter": {
-    "modified": "2019-10-12T12:26:22.919Z",
-    "contributors": ["JGmr5"]
   },
   "Web/JavaScript/Reference/Errors/Missing_curly_after_property_list": {
     "modified": "2020-03-12T19:46:53.938Z",
@@ -11031,13 +11005,13 @@
     "modified": "2020-03-12T19:48:33.901Z",
     "contributors": ["CatalinaCampos"]
   },
-  "Web/JavaScript/Reference/Errors/Not_a_codepoint": {
-    "modified": "2020-03-12T19:46:46.603Z",
-    "contributors": ["DGun17"]
-  },
   "Web/JavaScript/Reference/Errors/Not_a_function": {
     "modified": "2020-03-12T19:45:06.322Z",
     "contributors": ["PatoDeTuring", "untilbit", "josegarciaclm95"]
+  },
+  "Web/JavaScript/Reference/Errors/Not_a_valid_code_point": {
+    "modified": "2020-03-12T19:46:46.603Z",
+    "contributors": ["DGun17"]
   },
   "Web/JavaScript/Reference/Errors/Not_defined": {
     "modified": "2020-10-08T09:22:13.757Z",
@@ -13705,10 +13679,6 @@
       "orasio"
     ]
   },
-  "Web/JavaScript/Typed_arrays": {
-    "modified": "2020-10-15T21:37:33.978Z",
-    "contributors": ["Nachec", "LeoE"]
-  },
   "Web/Manifest": {
     "modified": "2020-07-18T01:40:57.131Z",
     "contributors": [
@@ -14713,6 +14683,32 @@
     "modified": "2019-03-23T23:50:19.746Z",
     "contributors": ["teoli", "FredB", "HenryGR"]
   },
+  "conflicting/Web/CSS/outline": {
+    "modified": "2019-03-23T22:35:49.017Z",
+    "contributors": [
+      "BubuAnabelas",
+      "teoli",
+      "Simplexible",
+      "Prinz_Rana",
+      "pekechis"
+    ]
+  },
+  "conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2": {
+    "modified": "2019-03-23T22:35:52.557Z",
+    "contributors": ["pekechis"]
+  },
+  "conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9": {
+    "modified": "2019-03-23T22:35:53.397Z",
+    "contributors": ["pekechis"]
+  },
+  "conflicting/Web/CSS/outline_bfe8e66e2b112d3306d547388792b0af": {
+    "modified": "2019-03-23T22:35:44.264Z",
+    "contributors": ["pekechis"]
+  },
+  "conflicting/Web/CSS/outline_cb050209a619bd4beea569386863d484": {
+    "modified": "2019-03-23T22:35:51.509Z",
+    "contributors": ["pekechis"]
+  },
   "conflicting/Web/CSS/width": {
     "modified": "2019-01-16T15:41:51.944Z",
     "contributors": ["teoli", "Nathymig", "HenryGR", "Mgjbot"]
@@ -14835,6 +14831,10 @@
   "conflicting/Web/JavaScript/Reference": {
     "modified": "2020-03-12T19:36:12.769Z",
     "contributors": ["fscholz", "teoli", "Garf", "Sheppy"]
+  },
+  "conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter": {
+    "modified": "2019-10-12T12:26:22.919Z",
+    "contributors": ["JGmr5"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T22:08:25.338Z",
