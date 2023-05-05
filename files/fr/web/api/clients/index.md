@@ -13,6 +13,7 @@ tags:
   - Workers
 translation_of: Web/API/Clients
 ---
+
 {{APIRef("Service Workers API")}}
 
 L'interface `Clients` permet d'accéder aux objets [`Client`](/fr/docs/Web/API/Client). On y accède via `self.clients` au sein d'un [service worker](/fr/docs/Web/API/Service_Worker_API).
@@ -67,13 +68,11 @@ addEventListener('notificationclick', event => {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clients")}}
+{{Compat}}
 
 ## Voir aussi
 

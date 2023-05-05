@@ -1,13 +1,8 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
-tags:
-  - CSS
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.prefers-contrast
-translation_of: Web/CSS/@media/prefers-contrast
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`prefers-contrast`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがウェブコンテンツをより高い (またはより低い) コントラストで表示するように要求したかどうかを検出するために使用します。
@@ -68,4 +63,4 @@ translation_of: Web/CSS/@media/prefers-contrast
 - Microsoft [-ms-high-contrast](https://msdn.microsoft.com/library/Hh771830) メディア特性
 - CSS の [forced-colors](/ja/docs/Web/CSS/@media/forced-colors) メディアクエリー
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/CSS/@media/")}}

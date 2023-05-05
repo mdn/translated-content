@@ -1,15 +1,10 @@
 ---
 title: 'WebSocket: open イベント'
 slug: Web/API/WebSocket/open_event
-tags:
-  - API
-  - Event
-  - WebSocket
-  - イベント
-  - open
-browser-compat: api.WebSocket.open_event
-translation_of: Web/API/WebSocket/open_event
+l10n:
+  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
+
 {{APIRef}}
 
 `open` イベントは、 `WebSocket` のコネクションが開かれたときに発生します。
@@ -19,9 +14,9 @@ translation_of: Web/API/WebSocket/open_event
 イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('open', event => { })
+addEventListener('open', (event) => { })
 
-onopen = event => { }
+onopen = (event) => { }
 ```
 
 ## イベント型

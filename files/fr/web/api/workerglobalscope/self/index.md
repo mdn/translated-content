@@ -3,9 +3,10 @@ title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
 translation_of: Web/API/WorkerGlobalScope/self
 ---
+
 {{APIRef("Web Workers API")}}
 
-La propriété en lecture seule **`self`** de l'interface {{domxref("WorkerGlobalScope")}} retourne une référence au `WorkerGlobalScope` lui-même. La plupart du temps il s'agit d'un contexte spécifique comme {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, ou {{domxref("ServiceWorkerGlobalScope")}}.
+La propriété en lecture seule **`self`** de l'interface {{domxref("WorkerGlobalScope")}} retourne une référence au `WorkerGlobalScope` lui-même. La plupart du temps il s'agit d'un contexte spécifique comme {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, ou {{domxref("ServiceWorkerGlobalScope")}}.
 
 ## Syntaxe
 
@@ -52,17 +53,15 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
 // etc. etc.
 ```
 
-Cette trace fournit la liste complète des objets disponibles dans le contexte d'un worker, et constitue un test très utile lorsqu'il s'agit de savoir ce qui est disponible ou non au sein d'un worker. Nous maintenons aussi une liste des [Fonctions et classes disponibles dans les Web Workers](/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+Cette trace fournit la liste complète des objets disponibles dans le contexte d'un worker, et constitue un test très utile lorsqu'il s'agit de savoir ce qui est disponible ou non au sein d'un worker. Nous maintenons aussi une liste des [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-workerglobalscope-self', 'self')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.self")}}
+{{Compat}}
 
 ## Voir aussi
 

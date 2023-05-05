@@ -3,13 +3,16 @@ title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
 translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.clearRect()`** de l'API 2D des Canvas met en noir transparent tous les pixels dans le rectangle défini par le point de départ de coordonnées _(x, y)_ et par les tailles _(largeur, hauteur)_, supprimant tout contenu précédemment dessiné.
 
 ## Syntaxe
 
-    void ctx.clearRect(x, y, largeur, hauteur);
+```js
+void ctx.clearRect(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 
@@ -108,13 +111,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.clearRect")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Reporting_directive
 original_slug: Glossaire/Directive_de_rapport
 ---
+
 Les **directives de rapports** **{{Glossary("CSP")}}** sont utilisées dans un en-tête {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}} et contrôlent le processus de génération de rapports sur les violations CSP.
 
 Ces directives CSP sont :
@@ -15,7 +16,7 @@ Ces directives CSP sont :
 - {{CSP("report-uri")}}
 - {{CSP("report-to")}}
 
-## En apprendre plus
+## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}}
 - Autres types de directives:

@@ -7,6 +7,7 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Content-Disposition
 ---
+
 {{HTTPSidebar}}
 
 Dans une réponse HTTP régulière, l'en-tête de réponse `Content-Disposition` est un en-tête indiquant si le contenu devrait être affiché en ligne dans le navigateur, c'est-à-dire en tant que page Web, dans une page Web ou en pièce jointe qui sera téléchargé et enregistré localement.
@@ -49,23 +50,27 @@ L'en-tête `Content-Disposition` est défini dans le contexte plus large des mes
 Le premier paramètre dans le contexte HTTP est en ligne (valeur par défaut, indiquant qu'il peut être affiché à l'intérieur de la page Web ou en tant que page Web) ou pièce jointe (en indiquant qu'il devrait être téléchargé), la plupart des navigateurs présentant une boîte de dialogue "Enregistrer sous" Avec la valeur des paramètres du nom de
 fichier si présent.
 
-    Content-Disposition: inline
-    Content-Disposition: attachment
-    Content-Disposition: attachment; filename="filename.jpg"
+```
+Content-Disposition: inline
+Content-Disposition: attachment
+Content-Disposition: attachment; filename="filename.jpg"
+```
 
 ### En tant qu'en-tête pour un corps à plusieurs parties
 
 Le premier paramètre dans le contexte HTTP est toujours une donnée de forme. Les paramètres supplémentaires sont insensibles à la casse et ont des arguments, qui utilisent la syntaxe de chaîne cité après le signe '='. Les paramètres multiples sont
 séparés par un point-virgule (';').
 
-    Content-Disposition: form-data Content-Disposition: form-data;
-    name="fieldName" Content-Disposition: form-data;
-    name="fieldName"; filename="filename.jpg"
+```
+Content-Disposition: form-data Content-Disposition: form-data;
+name="fieldName" Content-Disposition: form-data;
+name="fieldName"; filename="filename.jpg"
+```
 
 ## Directives
 
 `<name>`
-Est suivie d'une chaîne contenant le nom du champ HTML dans la forme dont le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut {{htmlattrxref("multiple", "input")}} d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.
+Est suivie d'une chaîne contenant le nom du champ HTML dans la forme auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut {{htmlattrxref("multiple", "input")}} d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.
 
 Un `name` avec une valeur de `'_charset_'` indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les pièces sans informations de charset explicites.
 
@@ -92,38 +97,32 @@ Ce fichier HTML simple sera sauvegardé en tant que téléchargement régulier p
 
 Un exemple de formulaire HTML, publié à l'aide du format `multipart / form-data` qui utilise l'en-tête `Content-Disposition`:
 
-    POST /test.html HTTP/1.1
-    Host: example.org
-    Content-Type: multipart/form-data;boundary="boundary"
+```
+POST /test.html HTTP/1.1
+Host: example.org
+Content-Type: multipart/form-data;boundary="boundary"
 
-    --boundary
-    Content-Disposition: form-data; name="field1"
+--boundary
+Content-Disposition: form-data; name="field1"
 
-    value1
-    --boundary
-    Content-Disposition: form-data; name="field2"; filename="example.txt"
+value1
+--boundary
+Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-    value2
-    --boundary--
+value2
+--boundary--
+```
 
 ## Spécifications
 
-| Spécification        | Titre                                                                                                                    |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| {{RFC("7578")}} | Retour des valeurs à partir des formulaires: multipart / form-data                                                       |
-| {{RFC("6266")}} | Utilisation du champ Header Content-Disposition dans le protocole de transfert hypertexte (HTTP)                         |
-| {{RFC("2183")}} | Communiquer des informations de présentation dans les messages Internet: le champ de l'en-tête de disposition de contenu |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/headers/content-disposition")}}
+{{Compat}}
 
-## Notes de compatibilité
+## Voir aussi
 
-- Firefox 5 gère l'en-tête de réponse HTTP `Content-Disposition` plus efficacement si les deux paramètres du nom de fichier et du nom de fichier sont fournis. Il examine tous les noms fournis, en utilisant le paramètre \* du nom de fichier, s'il est disponible, même si un paramètre de nom de fichier est inclus en premier. Auparavant, le premier paramètre correspondant serait utilisé, empêchant ainsi un nom plus approprié d'être utilisé. Voir {{bug (588781)}}.
-
-## Voir également
-
-- [HTML Forms](/en-US/docs/Web/Guide/HTML/Forms)
+- [HTML Forms](/fr/docs/Web/Guide/HTML/Forms)
 - {{HTTPHeader("Content-Type")}} définissant la limite du corps multipartie.
 - L'interface {{domxref("FormData")}} utilisée pour manipuler les données de formulaire à utiliser dans l'API {{domxref("XMLHttpRequest")}}.

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/12
 original_slug: Mozilla/Firefox/Versions/12
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume les principaux changements dans Firefox 12 qui sont utiles aux développeurs.
@@ -55,7 +56,7 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### MathML
 
-- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/Special:Tags?tag=MathML:Token+Elements). C'est particulièrement important pour certaines [notations mathématiques Arabes](http://www.w3.org/TR/arabic-math/).
+- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/fr/docs/Web/MathML/Element#éléments_textuels). C'est particulièrement important pour certaines [notations mathématiques Arabes](https://www.w3.org/TR/arabic-math/).
 - L'attribut d'alignement `align` definit dans MathML3 a été implementé pour {{MathMLElement("munder")}}, {{MathMLElement("mover")}} et {{MathMLElement("munderover")}}.
 
 ### Réseau
@@ -64,8 +65,8 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### Outils de développement
 
-- La [console Web/a> met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.](/fr/docs/Tools/Web_Console)
-- [Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la ](/fr/docs/Tools/Web_Console)[vue 3D](/fr/docs/Tools/Page_Inspector/3D_view) en appuyant sur la touche "r".
+- La [console Web](/fr/docs/Tools/Web_Console) met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.
+- Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la [vue 3D](/fr/docs/Tools/Page_Inspector/3D_view) en appuyant sur la touche "r".
 - Vous pouvez désormais masquer les nœuds dans la [vue 3D](/fr/docs/Tools/Page_Inspector/3D_view) en appuyant sur la touche "x" après les avoir sélectionnés.
 - L'[éditeur de source](/fr/docs/Tools/Using_the_Source_Editor) a plusieurs nouvelles fonctionnalités d'édition et de raccourcis clavier, voir [Utilisation de l'éditeur de source](/fr/docs/Tools/Using_the_Source_Editor) pour plus de détails
 
@@ -86,7 +87,7 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 ### XUL
 
-- La définition des valeurs pour l'attribut {{XULAttr("chromemargin")}} a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
+- La définition des valeurs pour l'attribut `chromemargin` a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
 
 ### XPCOM
 
@@ -101,12 +102,12 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 - L'interface `nsIScreen_MOZILLA_2_0_BRANCH` a été intégré dans `nsIScreen`. Les API définies dans cette interface (pour contrôler la luminosité de l'écran) n'avaient pas encore été documentées, mais désormais elles le sont.
 - L'interface `nsIScriptError2` a été intégré dans `nsIScriptError`.
-- {{ifmethod("nsIDownloadManager", "addDownload")}} est à présent géré de manière asynchrone plutôt que de façon synchrone.
-- La méthode {{ifmethod("imgIContainerObserver", "frameChanged")}} reçoit désormais le premier paramètre d'un objet `imgIRequest` qui identifie la demande correspondante.
-- La méthode {{ifmethod("nsIDOMWindowUtils", "sendTouchEvent")}} a été ajoutée pour permettre de synthétiser les événements tactiles.
-- Vous pouvez désormais faire défiler le contenu spécifié verticalement au centre de la vue en spécifiant `SCROLL_CENTER_VERTICALLY` lors de l'appel de la constante de défilement {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.
-- Le nouvel attribut {{ifattribute("nsIMemoryMultiReporter", "explicitNonHeap")}} a été ajouté ; C'est un moyen plus efficace d'obtenir la somme de toutes les mesures du multi-rapporteur qui mesure ceux qui ont un chemin commençant par "explicit" **et** qui sont de type `KIND_NONHEAP`.
-- L'attribut {{ifattribute("nsIDOMWindowUtils", "paintingSuppressed")}} a été ajouté ; cette valeur booléenne indique si oui ou non la toile est en train d'être supprimée de la fenêtre. C'est utilisé sur mobile pour éviter le rendu sautillant qui se produit lorsque les tentatives pour dessiner la page commencent avant que le contenu disponible soit insuffisant pour le faire.
+- `nsIDownloadManager.addDownload()` est à présent géré de manière asynchrone plutôt que de façon synchrone.
+- La méthode `imgIContainerObserver.frameChanged()` reçoit désormais le premier paramètre d'un objet `imgIRequest` qui identifie la demande correspondante.
+- La méthode `nsIDOMWindowUtils.sendTouchEvent()` a été ajoutée pour permettre de synthétiser les événements tactiles.
+- Vous pouvez désormais faire défiler le contenu spécifié verticalement au centre de la vue en spécifiant `SCROLL_CENTER_VERTICALLY` lors de l'appel de la constante de défilement `nsISelectionController.scrollSelectionIntoView()`.
+- Le nouvel attribut `nsIMemoryMultiReporter.explicitNonHeap` a été ajouté ; C'est un moyen plus efficace d'obtenir la somme de toutes les mesures du multi-rapporteur qui mesure ceux qui ont un chemin commençant par "explicit" **et** qui sont de type `KIND_NONHEAP`.
+- L'attribut `nsIDOMWindowUtils.paintingSuppressed` a été ajouté ; cette valeur booléenne indique si oui ou non la toile est en train d'être supprimée de la fenêtre. C'est utilisé sur mobile pour éviter le rendu sautillant qui se produit lorsque les tentatives pour dessiner la page commencent avant que le contenu disponible soit insuffisant pour le faire.
 - Les interfaces `nsIDocCharset` et `nsIDocumentCharsetInfo` ont été intégrées dans `nsIDocShell`. Dans le cadre de ce travail, le vieil attribut `forcedDetector` a été enlevé, il n'a jamais rien fait.
 
 ### SpiderMonkey
@@ -122,6 +123,6 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 - Le composant d'édition (appelé [Midas](/fr/docs/Midas)) [n'accepte désormais que les évènements](/fr/docs/Using_the_Editor_from_XUL#Editor_event_handling) provenant du code privilégié.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('11')}}

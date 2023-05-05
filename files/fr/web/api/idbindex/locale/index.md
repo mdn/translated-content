@@ -2,50 +2,36 @@
 title: IDBIndex.locale
 slug: Web/API/IDBIndex/locale
 translation_of: Web/API/IDBIndex/locale
+browser-compat: api.IDBIndex.locale
 ---
+
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
-La propriété **`locale`** de l'interface {{domxref("IDBIndex")}} renvoie la localisation de l'index (par exemple fr, ou `en-US`) `si la localisation à été spécifie lors de la mise en place de l'index` (voir les paramètres {{domxref("IDBObjectStore.createIndex")}}).
-
-{{note("Cette propriété renvoie la localisation utilisé par l'index. En d'autres termes, elle ne renverras jamais 'auto'.")}}
-
-## Syntaxe
-
-```js
-var indexLocalisation = myIndex.locale;
-```
+La propriété en lecture seule **`locale`**, rattachée à l'interface [`IDBIndex`](/fr/docs/Web/API/IDBIndex), fournit la locale de l'index (par exemple `en-US`, ou `pl`) si une valeur `locale` a été fournie lors sa création (voir [le paramètre d'options pour `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#parametresindexoptionnel)). On notera que cette propriété renvoie toujours la locale courante utilisée par l'index. Autrement dit, elle ne renvoie jamais `"auto"`.
 
 ## Valeur
 
-Une {{domxref("DOMString","chaîne de caractère")}} représentant la localisation courante de l'index.
+Une chaîne de caractères.
 
-## Exemple
+## Exemples
 
-Dans l'exemple suivant on ouvre une transaction puis un magasin d'objet et enfin l'index `lName`.
+Dans l'exemple qui suit, on ouvre une transaction et un magasin d'objets puis on récupère l'index `lName` d'une base de données de contacts. On utilise ensuite un curseur sur l'index en utilisant [`IDBIndex.openCursor`](/fr/docs/Web/API/IDBIndex/openCursor), ce qui est similaire à l'ouverture d'un curseur directement sur un objet `ObjectStore` avec [`IDBObjectStore.openCursor`](/fr/docs/Web/API/IDBObjectStore/openCursor), mais qui permet de trier les enregistrements renvoyés selon l'index et pas selon la clé primaire.
 
-La valeur de la propriété `Locale` est affichée sur la console.
-
-Finalement, On itère sur tous les enregistrements pour en insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.
+La valeur `locale` est affichée dans la console.
 
 ```js
 function displayDataByIndex() {
   tableEntry.innerHTML = '';
+  const transaction = db.transaction(['contactsList'], 'readonly');
+  const objectStore = transaction.objectStore('contactsList');
 
-  //ouvre un transaction
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  //accés au magasin d'objet
-  var objectStore = transaction.objectStore('contactsList');
+  const monIndex = objectStore.index('lName');
+  console.log(monIndex.locale);
 
-  //on récupère l'index
-  var myIndex = objectStore.index('lName');
-  //on affiche la propriété locale sur la console
-  console.log(myIndex.locale);
-
-  //un curseur qui itère sur l'index
-  myIndex.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+  monIndex.openCursor().onsuccess = function(event) {
+    const cursor = event.target.result;
     if(cursor) {
-      var tableRow = document.createElement('tr');
+      const tableRow = document.createElement('tr');
       tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
                            + '<td>' + cursor.value.lName + '</td>'
                            + '<td>' + cursor.value.fName + '</td>'
@@ -58,28 +44,26 @@ function displayDataByIndex() {
 
       cursor.continue();
     } else {
-      console.log('Tous les enregistrements ont été affichés.');
+      console.log('Tous les résultats ont été affichés.');
     }
   };
 };
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+## Spécifications
 
-## Spécification
-
-Ne fait actuellement partie d'aucune spécification.
+Cette propriété ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.locale")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [Utiliser l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Initier des transactions&nbsp;: [`IDBDatabase`](/fr/docs/Web/API/IDBDatabase)
+- Utiliser des transactions&nbsp;: [`IDBTransaction`](/fr/docs/Web/API/IDBTransaction)
+- Définir un intervalle de clés&nbsp;: [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)
+- Récupérer et modifier les données&nbsp;: [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore)
+- Utiliser les curseurs&nbsp;: [`IDBCursor`](/fr/docs/Web/API/IDBCursor)
+- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/))

@@ -1,15 +1,8 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - CSS プロパティアニメーション
-  - recipe:css-property
-browser-compat: css.properties.animation-iteration-count
-translation_of: Web/CSS/animation-iteration-count
 ---
+
 {{CSSRef}}
 
 **`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
@@ -26,7 +19,7 @@ translation_of: Web/CSS/animation-iteration-count
 /* キーワード値 */
 animation-iteration-count: infinite;
 
-/* &lt;number&gt; 値 */
+/* <number> 値 */
 animation-iteration-count: 3;
 animation-iteration-count: 2.4;
 
@@ -49,7 +42,7 @@ animation-iteration-count: unset;
 - `{{cssxref("&lt;number&gt;")}}`
   - : アニメーションが繰り返される回数です。既定値は `1` です。アニメーション周期の一部を再生したい場合は、非整数の値を指定できます。例えば、 `0.5` はアニメーション周期の半分を再生します。負の数は無効です。
 
-> **Note:** `animation-*` プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values) を参照してください。
+> **メモ:** `animation-*` プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values) を参照してください。
 
 ## 公式定義
 

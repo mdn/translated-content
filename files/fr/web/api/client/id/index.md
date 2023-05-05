@@ -12,6 +12,7 @@ tags:
   - id
 translation_of: Web/API/Client/id
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 La propriété **`id`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'identifiant universellement unique de l'objet {{domxref("Client")}}.
@@ -30,10 +31,8 @@ TBD
 
 ## Spécifications
 
-| Spécification                                                        | Statut                               | Commentaire         |
-| -------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client-id', 'id')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client.id")}}
+{{Compat}}

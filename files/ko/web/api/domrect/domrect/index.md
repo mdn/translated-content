@@ -1,16 +1,8 @@
 ---
 title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
-tags:
-  - API
-  - Constructor
-  - DOM Reference
-  - DOMRect
-  - Geometry
-  - Reference
-browser-compat: api.DOMRect.DOMRect
-translation_of: Web/API/DOMRect/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRect()`** 생성자는 새로운 {{domxref("DOMRect")}} 객체를 생성합니다.

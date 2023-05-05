@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/right
 ---
+
 {{CSSRef}}
 
 La propriété **`right`** définit, en partie, la position des éléments positionnés. La propriété `right` n'a aucun effet sur les éléments non-positionnés.
@@ -64,9 +65,13 @@ right: unset;
 - `inherit`
   - : Un mot-clé indiquant que la valeur est identique à la valeur calculée de l'élément parent (qui peut ne pas être sont bloc contenant). Cette valeur calculée est manipulée comme si elle était de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou comme si elle était le mot-clé `auto`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -105,17 +110,11 @@ right: unset;
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaire                                                           |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'right')}} | {{Spec2('CSS3 Transitions')}} | Définit `right` comme pouvant être animée.                            |
-| {{SpecName('CSS3 Positioning', '#propdef-right', 'right')}} | {{Spec2('CSS3 Positioning')}} | Description du comportement pour le comportement adhérent (_sticky_). |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-right', 'right')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.right")}}
+{{Compat}}
 
 ## Voir aussi
 

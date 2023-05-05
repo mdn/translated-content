@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/::file-selector-button
 original_slug: Web/CSS/::-webkit-file-upload-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-file-upload-button`** représente le bouton d'un élément {{HTMLElement("input")}} de type `file`.
@@ -17,7 +18,9 @@ Ce pseudo-élément n'est pas standard et est uniquement pris en charge par les 
 
 ## Syntaxe
 
-    selecteur::-webkit-file-upload-button
+```css
+selecteur::-webkit-file-upload-button
+```
 
 ## Exemples
 
@@ -53,4 +56,4 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-file-upload-button")}}
+{{Compat}}

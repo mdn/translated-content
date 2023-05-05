@@ -1,16 +1,8 @@
 ---
 title: Animation()
 slug: Web/API/Animation/Animation
-tags:
-  - API
-  - Animation
-  - アニメーション
-  - コンストラクター
-  - リファレンス
-  - ウェブアニメーション API
-browser-compat: api.Animation.Animation
-translation_of: Web/API/Animation/Animation
 ---
+
 {{ APIRef("Web Animations API") }}
 
 **`Animation()`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) のコンストラクターで、新しい `Animation` オブジェクトのインスタンスを返します。

@@ -3,6 +3,7 @@ title: ':lang'
 slug: Web/CSS/:lang
 translation_of: Web/CSS/:lang
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:lang`** permet de définir la mise en forme d'un élément selon la langue dans laquelle il est écrit.
@@ -84,15 +85,11 @@ Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires                                                                                                    |
-| ---------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#lang-pseudo', ':lang()')}} | {{Spec2('CSS4 Selectors')}} | Ajout du _joker_ pour correspondre à toutes les langues. Ajout des listes de langues séparées par des virgules. |
-| {{SpecName('CSS3 Selectors', '#lang-pseudo', ':lang()')}} | {{Spec2('CSS3 Selectors')}} | Aucune modification significative.                                                                              |
-| {{SpecName('CSS2.1', 'selector.html#lang', ':lang()')}}     | {{Spec2('CSS2.1')}}             | Définition initiale.                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.lang")}}
+{{Compat}}
 
 ## Voir aussi
 

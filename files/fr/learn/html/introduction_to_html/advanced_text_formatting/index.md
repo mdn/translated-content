@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
 
 Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article [Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.
@@ -50,12 +51,14 @@ Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'on
 
 Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser [des listes simples en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists), mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — **les listes descriptives**. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :
 
-    soliloque
-    Dans une pièce de théâtre, action d'un acteur adressant à lui-même ses pensées ou sentiments intimes et, de la sorte, les faisant partager à son auditoire (mais pas aux autres personnages de la pièce).
-    monologue
-    Dans une pièce de théâtre, action d'un acteur partageant ses pensées à haute voix avec le public et tous les personnages présents.
-    aparté
-    Dans une pièce de théâtre, action d'un acteur partageant une tirade uniquement avec le public en vue de produire un effet dramatique ou humoristique. Il s'agit le plus souvent d'un sentiment, d'une pensée secrète ou d'une information sur le contexte.
+```
+soliloque
+Dans une pièce de théâtre, action d'un acteur adressant à lui-même ses pensées ou sentiments intimes et, de la sorte, les faisant partager à son auditoire (mais pas aux autres personnages de la pièce).
+monologue
+Dans une pièce de théâtre, action d'un acteur partageant ses pensées à haute voix avec le public et tous les personnages présents.
+aparté
+Dans une pièce de théâtre, action d'un acteur partageant une tirade uniquement avec le public en vue de produire un effet dramatique ou humoristique. Il s'agit le plus souvent d'un sentiment, d'une pensée secrète ou d'une information sur le contexte.
+```
 
 Les listes descriptives utilisent une enveloppe de balisage différente de celle des autres types de listes — {{htmlelement("dl")}}&nbsp;; chaque terme est en plus entouré d'un élément {{htmlelement("dt")}} (**d**escription **t**erm) et chaque description d'un élément {{htmlelement("dd")}} (**d**escription **d**efinition). Terminons en balisant l'exemple ci‑dessus :
 
@@ -290,14 +293,14 @@ Les citations sont affichées avec un police italique par défaut. Vous pouvez v
 
 Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous souhaiterions que&nbsp;:
 
-1.  vous marquiez le paragraphe central comme étant une citation comprenant un attribut `cite`.
-2.  une partie du troisième paragraphe soit balisée en tant que citation en ligne, comprenant aussi un attribut `cite`.
-3.  vous incorporiez un élément `<cite>` pour chaque citation
+1. vous marquiez le paragraphe central comme étant une citation comprenant un attribut `cite`.
+2. une partie du troisième paragraphe soit balisée en tant que citation en ligne, comprenant aussi un attribut `cite`.
+3. vous incorporiez un élément `<cite>` pour chaque citation
 
 L'origine des citations dont vous aurez besoin se trouvent aux pages&nbsp;:
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html pour la citation de Confucius,
-- http\://www\.affirmationsforpositivethinking.com/index.html pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` pour la citation de Confucius,
+- `http://www.affirmationsforpositivethinking.com/index.html` pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
 
 Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant le bouton de même nom. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour obtenir la réponse.
 
@@ -430,9 +433,13 @@ textarea.onkeyup = function(){
 
 Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut {{htmlattrxref("title")}}}. Voyons quelques exemples :
 
-    <p>Nous utilisons l'<abbr title="Hypertext Markup Language">HTML</abbr> pour structurer nos documents web.</p>
+```html
+<p>Nous utilisons l'<abbr title="Hypertext Markup Language">HTML</abbr> pour structurer nos documents web.</p>
+```
 
-    <p>Je pense que le <abbr title="Révérend">R.</abbr> Green l'a fait dans la cuisine avec une tronçonneuse.</p>
+```html
+<p>Je pense que le <abbr title="Révérend">R.</abbr> Green l'a fait dans la cuisine avec une tronçonneuse.</p>
+```
 
 Leur affichage correspond aux deux phrases suivantes (le développement de l'abréviation apparaît dans une infobulle quand le pointeur de souris passe sur le terme) :
 
@@ -688,15 +695,3 @@ L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, m
 Nous voici arrivés à la fin de notre étude de la sémantique des textes en HTML. N'oubliez pas que ce qui précède ne constitue pas la liste exhaustive des éléments texte en HTML — nous avons essayé de couvrir essentiellement les plus courants dans la nature ou du moins ceux que nous avons pensé intéressants. Pour en voir plus, jetez un coup d'oeil à notre [Référence des éléments HTML](/fr/docs/Web/HTML/Element) (la section [sémantique de texte en ligne](/fr/docs/Web/HTML/Element#inline_text_semantics) serait un bon point de départ.) Dans l'article suivant, nous examinerons les éléments HTML à utiliser pour structurer les diverses parties d'un document HTML.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- Formatage avancé du texte
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

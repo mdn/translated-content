@@ -9,9 +9,10 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/Content-Language
 ---
+
 {{HTTPSidebar}}
 
-L'en-tête **`Content-Language`**  est utilisé pour décrire quels langages sont destinés au public, de sorte que cela permette à l'utilisateur de se différencier en fonction de la langue préférée des utilisateurs.
+L'en-tête **`Content-Language`** est utilisé pour décrire quels langages sont destinés au public, de sorte que cela permette à l'utilisateur de se différencier en fonction de la langue préférée des utilisateurs.
 
 Par exemple, si "`Content-Language: de-DE`" est mis en place, cela signifie que la page est destinée à un public parlant l'allemand (par contre, cela n'indique pas que la page est écrite en allemand. Par exemple, elle pourrait être écrite en anglais dans le cadre d'un cours de langue destiné aux allemands).
 
@@ -49,9 +50,11 @@ Si l'en-tête `Content-Language` n'est pas spécifié, par défaut, cela signifi
 
 ## Syntaxe
 
-    Content-Language: de-DE
-    Content-Language: en-US
-    Content-Language: de-DE, en-CA
+```
+Content-Language: de-DE
+Content-Language: en-US
+Content-Language: de-DE, en-CA
+```
 
 ## Directives
 
@@ -81,19 +84,19 @@ L'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) est utilis�
 
 L'en-tête `Content-Language` est utilisé pour spécifier le public destiné à la page, et peut indiquer si cela est plus qu'une seule langue.
 
-    Content-Language: de, en
+```
+Content-Language: de, en
+```
 
 ## Spécifications
 
-| Spécification                                                | Titre                                                          |
-| ------------------------------------------------------------ | -------------------------------------------------------------- |
-| {{RFC("7231", "Content-Language", "3.1.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Sémantiques et Contenu |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Content-Language")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{HTTPHeader("Accept-Language")}}
 - [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)

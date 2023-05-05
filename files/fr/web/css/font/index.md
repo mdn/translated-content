@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/font
 ---
+
 {{CSSRef}}
 
 La propriété **`font`** est :
 
-- une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}},  {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
+- une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
 - ou une propriété permettant d'utiliser une police système pour la police de caractères d'un élément grâce à certains mots-clés spécifiques.
 
 {{EmbedInteractiveExample("pages/css/font.html")}}
@@ -86,7 +87,7 @@ Si `font` est définie comme une propriété raccourcie :
   - : Voir la propriété {{cssxref("line-height")}}.
 - `<'font-family'>`
   - : Voir la propriété {{cssxref("font-family")}}.
-- Polices système :`caption` `icon` `menu` `message-box` `small-caption` `status-bar`
+- Polices système : `caption` `icon` `menu` `message-box` `small-caption` `status-bar`
 
   - : Un mot-clé peut être utilisé pour indiquer une police système spécifique :
 
@@ -131,9 +132,13 @@ Si `font` est définie comme une propriété raccourcie :
 
     La plupart du temps, les navigateurs implémentent d'autres valeurs, préfixées. Par exemple, Gecko implémente `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list` and `-moz-field`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -208,14 +213,8 @@ Si `font` est définie comme une propriété raccourcie :
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                   |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-prop', 'font')}}                         | {{Spec2('CSS3 Fonts')}} | Prise en charge des valeurs de `font-stretch`. |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', 'font-weight')}} | {{Spec2('CSS2.1')}}         | Prise en charge des mots-clés.                 |
-| {{SpecName('CSS1', '#font', 'font')}}                                         | {{Spec2('CSS1')}}         | Définition initiale.                           |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font")}}
+{{Compat}}

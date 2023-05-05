@@ -1,56 +1,42 @@
 ---
 title: JavaScript asynchrone
 slug: Learn/JavaScript/Asynchronous
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Landing
-  - Promises
-  - async
-  - asynchronous
-  - await
-  - callbacks
-  - requestAnimationFrame
-  - setInterval
-  - setTimeout
 translation_of: Learn/JavaScript/Asynchronous
 ---
+
 {{LearnSidebar}}
 
 Dans ce module, nous examinons le [JavaScript](/fr/docs/Glossary/JavaScript) [asynchrone](/fr/docs/Glossary/Asynchronous), pourquoi il est important et comment il peut être utilisé afin de gérer efficacement les opérations potentiellement bloquantes telles que la récupération de ressources sur un serveur.
 
 > **Remarque :**
 >
-> Vous cherchez à devenir une développeuse ou un développeur web front-end ?
+> #### Vous cherchez à devenir développeuse ou développeur web front-end&nbsp;?
 >
 > Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](/fr/docs/Learn/Front-end_web_developer)
+> [**Commencer**](/fr/docs/Learn/Front-end_web_developer)
 
 ## Prérequis
 
 Le JavaScript asynchrone est un sujet assez avancé, et il vous est conseillé de travailler sur les modules [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps) et [Blocs de construction de JavaScript](/fr/docs/Learn/JavaScript/Building_blocks) avant d'attaquer cette leçon.
 
-Si vous n'êtes pas familier avec le concept de programmation asynchrone, vous devriez absolument commencer par l'article [Concepts généraux de programmation asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Concepts) de ce module. Si vous connaissez ce concept, vous pouvez probablement passer directement au module [Introduction au JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing).
-
 > **Note :** Si vous travaillez sur un ordinateur/tablette/autre appareil où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de codage en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com).
 
 ## Guides
 
-- [Concepts généraux de programmation asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Concepts)
-  - : Dans cet article, nous allons passer en revue un certain nombre de concepts importants relatifs à la programmation asynchrone et à la façon dont elle se présente dans les navigateurs web et JavaScript. Vous devez comprendre ces concepts avant de travailler sur les autres articles du module.
 - [Introduction au JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - : Dans cet article, nous récapitulons brièvement les problèmes associés au JavaScript synchrone, et nous jetons un premier coup d'œil à certaines des différentes techniques JavaScript asynchrones que vous rencontrerez, en montrant comment elles peuvent nous aider à résoudre ces problèmes.
-- [JavaScript asynchrone coopératif : Délais et intervalles](/fr/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-  - : Nous examinons ici les méthodes traditionnelles dont dispose JavaScript pour exécuter du code de manière asynchrone après l'écoulement d'une période déterminée ou à un intervalle régulier (par exemple, un nombre déterminé de fois par seconde), nous expliquons à quoi elles servent et nous examinons leurs problèmes inhérents.
-- [Gérer les opérations asynchrones avec élégance grâce aux Promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
-  - : Les promesses sont une fonctionnalité relativement nouvelle du langage JavaScript qui vous permet de reporter d'autres actions jusqu'à ce que l'action précédente soit terminée, ou de réagir à son échec. C'est très utile pour mettre en place une séquence d'opérations qui fonctionne correctement. Cet article vous montre comment les promesses fonctionnent, où vous les verrez utilisées dans les API Web et comment écrire les vôtres.
-- [Faciliter la programmation asynchrone avec async et await](/fr/docs/Learn/JavaScript/Asynchronous/Async_await)
-  - : Les promesses peuvent être quelque peu complexes à mettre en place et à comprendre, c'est pourquoi les navigateurs modernes ont implémenté les fonctions `async` et l'opérateur `await`. Le premier permet aux fonctions standard de se comporter implicitement de manière asynchrone avec les promesses, tandis que le second peut être utilisé à l'intérieur des fonctions `async` pour attendre les promesses avant que la fonction ne continue. Cela rend l'enchaînement des promesses plus simple et plus facile à lire.
-- [Choisir la bonne approche](/fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
-  - : Pour terminer ce module, nous examinerons les différentes techniques et fonctionnalités de codage que nous avons abordées tout au long de ce module, et nous verrons lesquelles vous devez utiliser et à quel moment, avec des recommandations et des rappels des pièges courants le cas échéant.
+  - : Dans cet article, nous verrons ce que sont la programmation **synchrone** et **asynchrone*, pourquoi nous avons souvent besoin de techniques asynchrones, la façon dont les fonctions asynchrones ont été implémentées en JavaScript au cours du temps et les différents problèmes associés.
+- [Comment utiliser les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
+  - : Ici, nous verrons les promesses et comment manipuler les API qui les utilisent. Nous introduirons également les mots-clés `async` et `await`.
+- [Implémenter une API fonctionnant avec les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+  - : Cet article détaille comment implémenter sa propre API utilisant les promesses.
+- [Introduction aux <i lang="en">workers</i>](/fr/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+  - : Les <i lang="en">workers</i> permettent d'exécuter certaines tâches dans un fil d'exécution séparé, afin que le code principal soit réactif. Dans cet article, nous réécrirons une fonction synchrone dont l'exécution est longue en utilisant un <i lang="en">worker</i>.
+
+## Évaluations
+
+- [Ordonnancer des animations](/fr/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
+  - : Dans cette évaluation, on vous demande d'utiliser les promesses afin d'exécuter un ensemble d'animations dans un ordre donné.
 
 ## Voir aussi
 

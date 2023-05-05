@@ -9,6 +9,7 @@ tags:
   - évènements
 translation_of: Web/API/Event/returnValue
 ---
+
 {{APIRef("DOM Events")}}{{Non-standard_header}}{{ Deprecated_header() }}
 
 La propriété **`Event.returnValue`** indique si l'action par défaut pour cet évènement a été empêchée ou non. Elle est définie à `true` (_vrai_) par défaut, permettant à l'action par défaut de se produire. La définition de cette propriété à `false` (_faux_) empêche le déclenchement de l'action par défaut.
@@ -17,8 +18,10 @@ La propriété **`Event.returnValue`** indique si l'action par défaut pour cet 
 
 ## Syntaxe
 
-    event.returnValue = bool;
-    var bool = event.returnValue;
+```js
+event.returnValue = bool;
+var bool = event.returnValue;
+```
 
 ## Spécifications
 
@@ -26,4 +29,4 @@ Bien qu'elle ait été inclue [dans l'ancien brouillon de travail de W3C DOM niv
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.returnValue")}}
+{{Compat}}

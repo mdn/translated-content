@@ -1,15 +1,8 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-width
-translation_of: Web/CSS/column-width
 ---
+
 {{CSSRef}}
 
 **`column-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `column-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、実際の段の幅はより狭くなることがあります。

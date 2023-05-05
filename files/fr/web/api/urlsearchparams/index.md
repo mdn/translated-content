@@ -3,6 +3,7 @@ title: URLSearchParams
 slug: Web/API/URLSearchParams
 translation_of: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 L’interface **`URLSearchParams`** définit des méthodes utilitaires pour travailler avec la _chaîne de requête_ (les paramètres `GET`) d’une URL.
@@ -70,13 +71,11 @@ searchParams.toString(); // "q=URLUtils.searchParams"
 
 ## Spécifications
 
-| Spécification                                                                | Statut               | Commentaire          |
-| ---------------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#urlsearchparams', "URLSearchParams")}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URLSearchParams")}}
+{{Compat}}
 
 ## Voir aussi
 

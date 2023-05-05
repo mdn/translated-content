@@ -3,6 +3,7 @@ title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
 translation_of: Web/API/HTMLFormElement/action
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLFormElement.action`** représente l'action associée à l'élément {{HTMLElement("form")}}.
@@ -11,8 +12,10 @@ L'action d'un formulaire est le programme exécuté sur le serveur lorsque le fo
 
 ## Syntaxe
 
-    string = form.action
-    form.action = string
+```js
+string = form.action
+form.action = string
+```
 
 ## Exemple
 

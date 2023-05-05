@@ -1,12 +1,10 @@
 ---
-title: Node.lookupPrefix()
+title: "Node: lookupPrefix() メソッド"
 slug: Web/API/Node/lookupPrefix
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.lookupPrefix
-translation_of: Web/API/Node/lookupPrefix
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`lookupPrefix()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定された名前空間 URI に対応する接頭辞があれば、それを含む文字列を返します。ない場合は `null` を返します。
@@ -14,15 +12,15 @@ translation_of: Web/API/Node/lookupPrefix
 
 ## 構文
 
-```js
-lookupPrefix(namespace);
+```js-nolint
+lookupPrefix(namespace)
 ```
 
 ### 引数
 
 - `namespace`
   - : 接頭辞を検索するための名前空間の入った文字列です。
-    > **Note:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 
@@ -34,31 +32,42 @@ lookupPrefix(namespace);
 ## 例
 
 ```html
-Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;: <output>未検査</output><br/>
-Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;output&gt;: <output>未検査</output><br/>
-Prefix for <code>http://www.w3.org/TR/html4/</code> on &lt;output&gt;: <output>未検査</output><br/>
-Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;output&gt;: <output>未検査</output><br/>
-Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;svg&gt;: <output>未検査</output><br/>
-Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;svg&gt;: <output>未検査</output><br/>
-Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;: <output>未検査</output><br/>
+Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;:
+<output>未検査</output><br />
+Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;output&gt;:
+<output>未検査</output><br />
+Prefix for <code>http://www.w3.org/TR/html4/</code> on &lt;output&gt;:
+<output>未検査</output><br />
+Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;output&gt;:
+<output>未検査</output><br />
+Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;svg&gt;:
+<output>未検査</output><br />
+Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;svg&gt;:
+<output>未検査</output><br />
+Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;:
+<output>未検査</output><br />
 <svg xmlns:t="http://www.w3.org/2000/svg" height="1"></svg>
 <button>結果を確認するにはクリック</button>
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector("output");
+  const aSvgElt = document.querySelector("svg");
 
-  const result = document.getElementsByTagName('output');
+  const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
-  result[1].value = aHtmlElt.lookupPrefix("http://www.w3.org/XML/1998/namespace"); // false
+  result[1].value = aHtmlElt.lookupPrefix(
+    "http://www.w3.org/XML/1998/namespace"
+  ); // false
   result[2].value = aHtmlElt.lookupPrefix("http://www.w3.org/TR/html4/"); // true
   result[3].value = aHtmlElt.lookupPrefix("https://www.w3.org/1999/xlink"); // false
   result[4].value = aSvgElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
   result[5].value = aSvgElt.lookupPrefix("https://www.w3.org/1999/xlink"); // true
-  result[6].value = aSvgElt.lookupPrefix("http://www.w3.org/XML/1998/namespace"); // false
+  result[6].value = aSvgElt.lookupPrefix(
+    "http://www.w3.org/XML/1998/namespace"
+  ); // false
 });
 ```
 

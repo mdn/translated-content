@@ -12,6 +12,7 @@ tags:
   - getRedirectURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ---
+
 {{AddonSidebar()}}
 
 Génère une URL que vous pouvez utiliser comme URL de redirection.
@@ -34,9 +35,9 @@ None.
 
 Une chaîne contenant une valeur d'URL de redirection.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity.getRedirectURL")}}
+{{Compat}}
 
 ## Exemples
 

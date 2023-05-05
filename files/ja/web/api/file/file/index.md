@@ -1,14 +1,8 @@
 ---
 title: File()
 slug: Web/API/File/File
-tags:
-  - API
-  - コンストラクター
-  - File API
-  - リファレンス
-browser-compat: api.File.File
-translation_of: Web/API/File/File
 ---
+
 {{APIRef("File")}}
 
 **`File()`** コンストラクターは、新しい {{domxref("File")}} オブジェクトのインスタンスを生成します。

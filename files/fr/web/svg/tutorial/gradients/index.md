@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Gradients
 original_slug: Web/SVG/Tutoriel/Gradients
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}
 
 Probablement plus excitant qu'un simple remplissage et contour, est le fait de pouvoir créer et appliquer des dégradés comme remplissage ou contour.
@@ -57,7 +58,9 @@ Dans cet exemple, on dit au dégradé de commencer en rouge, de passer au noir t
 
 Aussi, comme pour le remplissage et le contour, vous pouvez spécifier un attribut `stop-opacity` pour définir l'opacité de la couleur à cette position (encore une fois, à partir de FF3 vous pouvez utiliser les valeurs rgba pour le même effet).
 
-     <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
+```html
+<stop offset="100%" stop-color="yellow" stop-opacity="0.5" />
+```
 
 ### Utiliser le dégradé
 
@@ -67,19 +70,23 @@ Pour utiliser le dégradé, vous devez le référencer avec l'attribut `fill` ou
 
 L'élément `<linearGradient>` peut également prendre différents attributs pour spécifier la taille et l'apparence du dégradé. L'orientation du dégradé est contrôlé par deux points, désignés par les attributs `x1`, `x2`, `y1`, et `y2`. Ces attributs définissent la ligne le long de laquelle le dégradé est tracé. Par défaut, le dégradé est horizontal, mais il peut être orienté autrement grâce à ces attributs. "Gradient2" dans l'exemple précédent crée un dégradé vertical.
 
-     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+```html
+<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+```
 
 ### xlink:href
 
 Vous pouvez également utiliser l'attribut `xlink:href` sur les dégradés. Quand il est utilisé, les attributs et stops d'un dégradé peuvent être réutilisé sur un autre. Ainsi, dans l'exemple précédent, on aurait pu ne pas redéfinir tous les stops dans Gradient2, comme ceci:
 
-     <linearGradient id="Gradient1">
-       <stop id="stop1" offset="0%"/>
-       <stop id="stop2" offset="50%"/>
-       <stop id="stop3" offset="100%"/>
-     </linearGradient>
-     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
-        xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
+```html
+<linearGradient id="Gradient1">
+  <stop id="stop1" offset="0%"/>
+  <stop id="stop2" offset="50%"/>
+  <stop id="stop3" offset="100%"/>
+</linearGradient>
+<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
+```
 
 Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutoriel/Contenu_embarque_SVG)
 
@@ -167,7 +174,7 @@ Cet attribut contrôle ce qu'il arrive quand le dégradé arrive à sa fin, mais
         <stop offset="0%" stop-color="red"/>
         <stop offset="100%" stop-color="blue"/>
       </radialGradient>
-      
+
       <!-- repeat -->
       <radialGradient id="Gradient
             cx="0.5" cy=
@@ -175,7 +182,7 @@ Cet attribut contrôle ce qu'il arrive quand le dégradé arrive à sa fin, mais
         <stop offset="0%
       <stop offset="10
       </radialGradient
-      
+
       <!-- reflect -->
       <radialGradient id="GradientR
            cx="0.5" cy="0.5" r="0.4" fx="0.
@@ -205,17 +212,17 @@ Les deux types de dégradés ont également un attribut `gradientUnits`, qui ind
 - `objectBoundingBox` est la valeur par défaut, c'est ce qu'on a vu jusqu'à présent. Le dégradé est automatiquement redimensionné à la taille de l'objet sur lequel il est appliqué, vous n'avez donc qu'à spécifier les coordonnées de zéro à un (ou de 0% à 100%), et les coordonnées sont automatiquement redimensionnée à la taille de l'objet.
 - `userSpaceOnUse` indique que les valeurs sont absolues. Vous devez donc savoir où se situe l'objet, et placer le dégradé à la même position. Le dégradé radial précédent devrait être ré-écrit comme suit:
 
-      <radialGradient id="Gradient"
-                      cx="60" cy="60" r="50"
-                      fx="35" fy="35"
-                      gradientUnits="userSpaceOnUse">
+  ```html
+  <radialGradient id="Gradient"
+                  cx="60" cy="60" r="50"
+                  fx="35" fy="35"
+                  gradientUnits="userSpaceOnUse">
+  ```
 
 Il y a quelques subtilités concernant l'utilisation de `gradientUnits="objectBoundingBox"` quand les limites de l'objet ne sont pas carrées, mais elles sont assez complexes et nous attendrons quelqu'un de plus au courant pour les expliquer.
 
 ### gradientTransform
 
-Vous pouvez également appliquer une transformation au gradient en utilisant l'attribut `gradientTransform`, mais puisque nous n'avons pas encore introduit les [transformations](/fr/docs/Web/SVG/Tutoriel/Transformations_de_base "en-US/Web/SVG/Tutorial/Basic Transformations"), nous le laisserons de côté pour l'instant.
-
-
+Vous pouvez également appliquer une transformation au gradient en utilisant l'attribut `gradientTransform`, mais puisque nous n'avons pas encore introduit les [transformations](/fr/docs/Web/SVG/Tutoriel/Transformations_de_base), nous le laisserons de côté pour l'instant.
 
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}

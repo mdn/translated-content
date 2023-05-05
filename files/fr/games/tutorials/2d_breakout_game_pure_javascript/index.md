@@ -11,6 +11,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher")}}
@@ -27,15 +28,15 @@ Pour comprendre la plupart des articles de ce tutoriel, vous devez déjà avoir 
 
 Toutes les leçons — et les différentes versions de ce [jeu de casse-brique MDN](http://breakout.enclavegames.com/lesson10.html) que nous allons créer ensemble — sont [disponibles sur GitHub](https://github.com/end3r/Canvas-gamedev-workshop) :
 
-1.  [Créer l'élément canvas et dessiner dessus](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher)
-2.  [Déplacer la balle](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
-3.  [Rebondir sur les murs](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
-4.  [Contrôles clavier](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
-5.  [Jeu terminé](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
-6.  [Construire le mur de briques](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7.  [Détection des collisions](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
-8.  [Afficher le score et gagner](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
-9.  [Contrôles souris](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
+1. [Créer l'élément canvas et dessiner dessus](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher)
+2. [Déplacer la balle](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
+3. [Rebondir sur les murs](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
+4. [Contrôles clavier](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
+5. [Jeu terminé](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
+6. [Construire le mur de briques](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
+7. [Détection des collisions](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
+8. [Afficher le score et gagner](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
+9. [Contrôles souris](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
 10. [Finir](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
 
 Commencer avec du Javascript pur et dur est le meilleur moyen d'acquérir des connaissances de développement de jeu web. Après ceci, vous pourrez prendre n'importe quel "framework" et l'utiliser pour vos projets. Les "frameworks" sont des outils créés avec le langage Javascript ; donc, même si vous voulez travailler avec ces derniers, c'est toujours bon d'apprendre le langage lui-même pour savoir ce qu'il se passe exactement. Les "frameworks" améliorent la vitesse de développement et aident à traiter les parties les moins intéressantes du jeu, mais si quelque chose ne fonctionne pas comme prévu, vous pouvez toujours essayer de déboguer ou juste écrire vos propre solutions en Javascript.

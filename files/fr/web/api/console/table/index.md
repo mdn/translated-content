@@ -1,6 +1,6 @@
 ---
 title: Console.table
-slug: Web/API/Console/table
+slug: Web/API/console/table
 tags:
   - API
   - DOM
@@ -10,6 +10,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}
 
 Affiche des données tabulaires sous la forme d'un tableau.
@@ -18,7 +19,7 @@ Cette fonction prend un argument obligatoire `data`, qui doit être un tableau (
 
 Il affiche `data` sous la forme d'un tableau. Chaque élément dans le tableau fourni (Array) sera affiché comme une ligne dans le tableau. (ou les propriétés énumérables s'il s'agit d'un objet)
 
-La première colonne dans le tableau sera intitulé `(index)`. Si `data` est un tableau (Array), alors les valeurs de cette colonne seront les index du tableau (Array). Si `data` est un objet, alors ses valeurs seront les noms des propriétés.À noter (dans Firefox) :  `console.table` est limité à l'affichage de 1000 lignes (la première ligne est l'index étiqueté)
+La première colonne dans le tableau sera intitulé `(index)`. Si `data` est un tableau (Array), alors les valeurs de cette colonne seront les index du tableau (Array). Si `data` est un objet, alors ses valeurs seront les noms des propriétés.À noter (dans Firefox) : `console.table` est limité à l'affichage de 1000 lignes (la première ligne est l'index étiqueté)
 
 {{AvailableInWorkers}}
 
@@ -122,7 +123,9 @@ Vous pouvez ordonner les colonnes en cliquant sur l'intitulé de la colonne.
 
 ## Syntaxe
 
-    console.table(data [, columns]);
+```js
+console.table(data [, columns]);
+```
 
 ### Paramètres
 
@@ -131,12 +134,10 @@ Vous pouvez ordonner les colonnes en cliquant sur l'intitulé de la colonne.
 - `columns`
   - : Un tableau contenant les noms des colonnes à inclure dans la sortie.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#table", "console.table()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.table")}}
+{{Compat}}

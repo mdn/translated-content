@@ -10,13 +10,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 original_slug: Web/JavaScript/Reference/Erreurs/Invalid_for-of_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: for-of loop head declarations cannot have an initializer (Edge)
-    SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
-    SyntaxError: for-of loop variable declaration may not have an initializer. (Chrome)
+```
+SyntaxError: for-of loop head declarations cannot have an initializer (Edge)
+SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
+SyntaxError: for-of loop variable declaration may not have an initializer. (Chrome)
+```
 
 ## Type d'erreur
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-language-override
 ---
+
 {{CSSRef}}
 
 La propriété **`font-language-override`** permet de contrôler l'utilisation des glyphes spécifiques à une langue pour une police.
@@ -39,9 +40,13 @@ Cette propriété est définie avec le mot-clé `normal` ou avec une chaîne de 
 - `<string>`
   - : Cette chaîne de caractère force le navigateur à utiliser les glyphes de la langue correspondante. Les valeurs qui peuvent être utilisées sont [les valeurs du système de langue OpenType](https://www.microsoft.com/typography/otspec/languagetags.htm).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -73,15 +78,11 @@ p.para2 {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-language-override', 'font-language-override')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-language-override")}}
+{{Compat}}
 
 ## Voir aussi
 

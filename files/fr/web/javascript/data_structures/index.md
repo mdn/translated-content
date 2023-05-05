@@ -4,6 +4,7 @@ slug: Web/JavaScript/Data_structures
 translation_of: Web/JavaScript/Data_structures
 original_slug: Web/JavaScript/Structures_de_données
 ---
+
 {{jsSidebar("More")}}
 
 Les langages de programmation disposent de structures de données natives. Selon les langages, les structures mises à disposition peuvent être différentes. Dans cet article, on listera les structures de données natives en JavaScript. On détaillera leurs propriétés et les façons de les utiliser voire de les combiner. Dans certains cas, on comparera ces structures avec celles d'autres langages.
@@ -96,7 +97,7 @@ false
 true
 ```
 
-À l'instar des nombres classiques, on peut utiliser les opérateurs `+`,  `*`, `-`, `**` et `%`. Un grand entier ne sera pas strictement égal à un nombre mais on pourra avoir une égalité faible.
+À l'instar des nombres classiques, on peut utiliser les opérateurs `+`, `*`, `-`, `**` et `%`. Un grand entier ne sera pas strictement égal à un nombre mais on pourra avoir une égalité faible.
 
 Un grand entier se comportera comme un nombre lorsqu'il est converti en booléen avec `if`, `||`, `&&`, `Boolean` et `!`.
 
@@ -239,7 +240,6 @@ Lorsqu'on souhaite représenter des dates, il est tout indiqué d'utiliser le ty
 De plus, les tableaux héritent de `Array.prototype` qui permet de bénéficier de plusieurs méthodes pour manipuler les tableaux. Par exemple, [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) qui permet de rechercher une valeur dans le tableau ou [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) qui permet d'ajouter un élément au tableau. Les tableaux sont donc indiqués quand on souhaite représenter des listes de valeurs ou d'objets.
 
 [Les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays) (<i lang="en">Typed Arrays</i> en anglais) ont été ajoutés avec ECMAScript 2015 et offrent une vue sous forme d'un tableau pour manipuler des tampons de données binaires. Le tableau qui suit illustre les types de données équivalents en C&nbsp;:
-
 
 <table class="standard-table">
   <tbody>

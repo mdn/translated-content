@@ -10,13 +10,16 @@ tags:
   - Reference
 translation_of: Web/API/Document/preferredStyleSheetSet
 ---
+
 {{APIRef("DOM")}}
 
 Retourne la feuille de style préférée, telle que définie par l'auteur de la page.
 
 ## Syntaxe
 
-    preferredStyleSheetSet = document.preferredStyleSheetSet
+```js
+preferredStyleSheetSet = document.preferredStyleSheetSet
+```
 
 Au retour, `preferredStyleSheetSet` indique la feuille de style préférée par l'auteur. Ceci est déterminé par l'ordre des déclarations des feuilles de style et par l'entête HTTP intitulé `Default-Style`.
 

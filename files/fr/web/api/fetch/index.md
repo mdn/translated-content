@@ -14,9 +14,10 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
+
 {{APIRef("Fetch")}}
 
-La méthode **`fetch()`** du mixin {{domxref("WindowOrWorkerGlobalScope")}} démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire `then` pour identifier les erreurs HTTP.
+La méthode globale **`fetch()`** démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire `then` pour identifier les erreurs HTTP.
 
 `WindowOrWorkerGlobalScope` est aussi bien implémenté par {{domxref("Window")}} que par {{domxref("WorkerGlobalScope")}}, ce qui signifie que la méthode `fetch()` est disponible dans la plupart des cas où vous pourriez en avoir besoin.
 
@@ -28,7 +29,9 @@ La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entêt
 
 ## Syntaxe
 
-    const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
+```js
+const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
+```
 
 ### Paramètres
 
@@ -44,7 +47,7 @@ La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entêt
   - : Un objet qui contient les paramètres de votre requête. Les options possibles sont :
 
     - `method`
-      - : La méthode de la requête, par exemple `GET` ou `POST`.
+      - : La méthode de la requête, par exemple `GET` ou `POST`. Comme spécifié, dans la [spécification WHATWG](https://fetch.spec.whatwg.org/#methods), toute méthode définie dans la [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) sera automatiquement mise en majuscule. Si vous souhaitez utiliser une méthode exotique (comme `PATCH`), vous devrez la mettre en majuscule vous-même. Notez que l'en-tête [`Origin`](/fr/docs/Web/HTTP/Headers/origin) n'était pas défini dans les requêtes `fetch()` avec les méthodes [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) ou [`GET`](/fr/docs/Web/HTTP/Methods/GET) à cause d'un bug pour Firefox avant Firefox 65 (voir [bug 1508661](https://bugzil.la/1508661)).
     - `headers`
       - : Les entêtes à ajouter à votre requête, contenues dans un objet {{domxref("Headers")}} ou dans un objet avec des {{domxref("ByteString")}} pour valeurs.
     - `body`
@@ -142,15 +145,11 @@ let maRequete = new Request('fleurs.jpg', monInit);
 
 ## Spécifications
 
-| Specification                                                        | Statut                                       | Commentaire                                                                                                                                                                         |
-| -------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Fetch','#fetch-method','fetch()')}}     | {{Spec2('Fetch')}}                     | Définie dans un `WindowOrWorkerGlobalScope` dans la nouvelle spécification.                                                                                                         |
-| {{SpecName('Fetch','#dom-global-fetch','fetch()')}} | {{Spec2('Fetch')}}                     | Définition initiale                                                                                                                                                                 |
-| {{SpecName('Credential Management')}}                     | {{Spec2('Credential Management')}} | Ajoute la possiblité d'utiliser une instance de {{domxref("FederatedCredential")}} ou de {{domxref("PasswordCredential")}} comme valeur de `init.credentials`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Voir aussi
 

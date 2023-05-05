@@ -1,14 +1,8 @@
 ---
 title: in 演算子
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - 関係演算子
-browser-compat: javascript.operators.in
-translation_of: Web/JavaScript/Reference/Operators/in
 ---
+
 {{jsSidebar("Operators")}}
 
 **`in` 演算子**は、指定されたプロパティが指定されたオブジェクトにある場合に `true` を返します。
@@ -119,7 +113,7 @@ let empties = new Array(3).fill(undefined)
 
 `in` 演算子を使用して、特定の[クラスのプライベートフィールドまたはメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)がクラスで定義されているかどうかを調べることができます。そのメソッドが存在すれば演算子は `true` を返し、そうでなければ `false` を返します。
 
-> **Note:** クラスの定義されていない*プライベート*フィールドやメソッドにアクセスしようとすると、コードで `throw` が発生します。存在しない可能性があるプライベートフィールドを `in` 演算子でチェックすると、 `try/catch` を使用するより簡潔にすることができます。
+> **メモ:** クラスの定義されていない*プライベート*フィールドやメソッドにアクセスしようとすると、コードで `throw` が発生します。存在しない可能性があるプライベートフィールドを `in` 演算子でチェックすると、 `try/catch` を使用するより簡潔にすることができます。
 
 以下のコードは、指定されたクラスが特定のプライベートメソッドやフィールドを持っているかどうかをチェックする静的関数です。
 

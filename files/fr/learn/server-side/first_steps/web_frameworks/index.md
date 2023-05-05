@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/Premiers_pas/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 L'article précédent nous a montré à quoi ressemble la communication entre les clients et les serveurs web, la nature des demandes et des réponses HTTP et ce qu’une application web côté serveur doit faire pour répondre aux demandes d’un navigateur web. Avec ces connaissances en main, il est temps d'explorer comment les frameworks peuvent nous simplifier la tâche. En chemin, vous comprendrez comment choisir le framework le mieux adapté pour votre première application web côté serveur.
@@ -85,14 +86,14 @@ urlpatterns = [
 
 Les données peuvent être encodées dans une requête HTTP de différentes manières. Une demande HTTP GET pour obtenir des fichiers ou des données du serveur peut coder les données requises dans les paramètres d'URL ou dans la structure d'URL. Une demande HTTP POST de mise à jour une ressource sur le serveur inclura plutôt les informations de mise à jour en tant que "données POST" dans le corps de la demande. La requête HTTP peut également inclure des informations sur la session ou l'utilisateur en cours dans un cookie côté client. Les frameworks web fournissent des mécanismes appropriés au langage de programmation pour accéder à ces informations. Par exemple, l'objet HttpRequest que Django transmet à chaque fonction d'affichage contient des méthodes et des propriétés permettant d'accéder à l'URL cible, le type de demande (par exemple, un HTTP GET), les paramètres GET ou POST, les données de cookie et de session, etc. Django peut également transmettre informations codées dans la structure de l'URL en définissant des "modèles de capture" dans le mappeur d'URL (voir le dernier fragment de code dans la section ci-dessus).
 
-### extraction et simplification de l’accès à la base de données
+### Extraction et simplification de l’accès à la base de données
 
 Les sites web utilisent des bases de données pour stocker des informations à partager avec les utilisateurs et sur les utilisateurs. Les infrastructures web fournissent souvent une couche de base de données qui extrait les opérations de lecture, d'écriture, de requête et de suppression de base de données. Cette couche d'extraction est appelée ORM (Object-Relational Mapper).
 
 L'utilisation d'un ORM présente deux avantages :
 
-1.  Vous pouvez remplacer la base de données sous-jacente sans avoir nécessairement besoin de changer le code qui l'utilise. Cela permet aux développeurs d’optimiser les caractéristiques des différentes bases de données en fonction de leur utilisation.
-2.  La validation de base des données peut être mise en œuvre avec le framework. Il est ainsi plus facile et plus sûr de vérifier que les données sont stockées dans le type de champ de base de données approprié, qu’elles ont le format correct (par exemple une adresse électronique) et qu’elles ne sont en aucun cas malveillantes (les pirates peuvent utiliser certains modèles de code pour agir mal, telles que la suppression des enregistrements de la base de données).
+1. Vous pouvez remplacer la base de données sous-jacente sans avoir nécessairement besoin de changer le code qui l'utilise. Cela permet aux développeurs d’optimiser les caractéristiques des différentes bases de données en fonction de leur utilisation.
+2. La validation de base des données peut être mise en œuvre avec le framework. Il est ainsi plus facile et plus sûr de vérifier que les données sont stockées dans le type de champ de base de données approprié, qu’elles ont le format correct (par exemple une adresse électronique) et qu’elles ne sont en aucun cas malveillantes (les pirates peuvent utiliser certains modèles de code pour agir mal, telles que la suppression des enregistrements de la base de données).
 
 Par exemple, le framework web Django fournit un ORM et fait référence à l'objet utilisé pour définir la structure d'un enregistrement en tant que modèle. Le modèle spécifie les types de champs à stocker, ce qui peut fournir une validation au niveau du champ sur les informations pouvant être stockées (par exemple, un champ de courrier électronique autoriserait uniquement les adresses de courrier électronique valides). Les définitions de champ peuvent également spécifier leur taille maximale, leurs valeurs par défaut, leurs options de liste de sélection, leur aide pour la documentation, leur libellé pour les formulaires, etc. Le modèle ne spécifie aucune information sur la base de données sous-jacente, il s'agit d'un paramètre de configuration susceptible d'être modifié séparément de notre code.
 
@@ -117,7 +118,7 @@ class Team(models.Model):
 
 Le modèle Django fournit une API de requête simple pour la recherche dans la base de données. Cela peut correspondre à plusieurs champs à la fois en utilisant différents critères (par exemple, exact, insensible à la casse, supérieur à, etc.), et peut prendre en charge des instructions complexes (par exemple, vous pouvez spécifier une recherche sur les équipes U11 ayant un nom d'equipe (team name) qui commence par "Fr" ou se termine par "al").
 
-Le deuxième extrait de code montre une fonction d'affichage (gestionnaire de ressources) permettant d'afficher toutes nos équipes U09. Dans ce cas, nous spécifions que nous voulons filtrer tous les enregistrements où le champ team_level a exactement le texte 'U09' (notez dans l exemple ci dessous comment ce critère est transmis à la fonction filter () sous forme d'argument avec le nom du champ et le type de correspondance séparés par un double. underscores: team_level\_\_exact).
+Le deuxième extrait de code montre une fonction d'affichage (gestionnaire de ressources) permettant d'afficher toutes nos équipes U09. Dans ce cas, nous spécifions que nous voulons filtrer tous les enregistrements où le champ team_level a exactement le texte 'U09' (notez dans l exemple ci dessous comment ce critère est transmis à la fonction filter () sous forme d'argument avec le nom du champ et le type de correspondance séparés par un double. underscores: **`team_level__exact`**).
 
 ```python
 #best/views.py
@@ -137,7 +138,7 @@ Les frameworks web fournissent souvent des systèmes de templates. Ceux-ci vous 
 
 Les frameworks web fournissent souvent un mécanisme facilitant la génération d'autres formats à partir de données stockées, notamment {{glossary ("JSON")}} et {{glossary ("XML")}}.
 
-Par exemple, le système de templates Django vous permet de spécifier des variables en utilisant une syntaxe "double-handlebars" (par exemple,` {`` { variable_name ``}``} ` ), qui sera remplacée par les valeurs transmises à partir de la fonction d'affichage lors du rendu d'une page. Le système de templates prend également en charge les expressions (avec la syntaxe:`{% expression %}` ), qui permettent aux templates d'effectuer des opérations simples, telles que l'itération des valeurs de liste transmises au modèle.
+Par exemple, le système de templates Django vous permet de spécifier des variables en utilisant une syntaxe "double-handlebars" (par exemple, `\{{ variable_name }}`), qui sera remplacée par les valeurs transmises à partir de la fonction d'affichage lors du rendu d'une page. Le système de templates prend également en charge les expressions (avec la syntaxe : `{% expression %}`), qui permettent aux templates d'effectuer des opérations simples, telles que l'itération des valeurs de liste transmises au modèle.
 
 > **Note :** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 
@@ -189,13 +190,13 @@ Si vous débutez en programmation, vous choisirez probablement un framework faci
 
 > **Note :** Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](http://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
-> 1.  Navigate to the main sites (linked above)
+> 1. Navigate to the main sites (linked above)
 >
 >     - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started".
 >     - Can you see topics showing how to set up URL routing, templates, and databases/models?
 >     - Are the documents clear?
 >
-> 2.  Navigate to mailing lists for each site (accessible from Community links).
+> 2. Navigate to mailing lists for each site (accessible from Community links).
 >
 >     - How many questions have been posted in the last few days
 >     - How many have responses?
@@ -284,10 +285,3 @@ This article has shown that web frameworks can make it easier to develop and mai
 For the next article in this module we'll change direction slightly and consider web security.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/fr/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/fr/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/fr/docs/Learn/Server-side/First_steps/Website_security)

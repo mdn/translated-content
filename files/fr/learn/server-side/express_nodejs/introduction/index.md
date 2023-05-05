@@ -11,6 +11,7 @@ tags:
   - server-side
 translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
 Dans ce tout premier article consacré à Express, nous répondons aux questions «&nbsp;Qu'est-ce que Node&nbsp;?&nbsp;» et «&nbsp;Qu'est-ce que Express ?&nbsp;», et vous donnons un aperçu de ce qui fait d'Express un framework web si spécial. Nous décrivons les principales fonctionnalités et montrons quelques-uns des principaux composants d'une application Express (bien que vous ne disposiez pas encore d'un environnement de développement pour le tester).
@@ -52,7 +53,7 @@ Dans une perspective de développement de serveur web, Node présente un certain
 - Le JavaScript est un langage de programmation plutôt récent et bénéficie encore d'améliorations dans sa conception en comparaison à d'autres langages web côté serveur (Python, PHP, etc.). Beaucoup d'autres langages nouveaux et populaires compilent/convertissent en JavaScript pour pouvoir utiliser TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.
 - Le gestionnaire de paquets (NPM) offre l'accès à des milliers de bibliothèques réutilisables. Il dispose d'une excellente résolution de dépendances et peut être utilisé pour automatiser la plupart des chaines de compilation.
 - Node.js est portable. Il est disponible sous Microsoft Windows, macOS, Linux, etc. De plus, il est bien supporté par beaucoup d'hébergeurs web qui fournissent souvent une infrastructure spécifique et une documentation pour héberger des sites Node.
-- Node possède une communauté et un écosystème très dynamiques eavec beaucoup de gens désireux d'aider.
+- Node possède une communauté et un écosystème très dynamiques avec beaucoup de gens désireux d'aider.
 
 Vous pouvez utiliser Node.js pour créer un simple serveur web en utilisant l'API Node HTTP.
 
@@ -60,12 +61,14 @@ Vous pouvez utiliser Node.js pour créer un simple serveur web en utilisant l'AP
 
 L'exemple qui suit crée un serveur web qui écoute toutes sortes de requêtes HTTP sur l'URL `https://127.0.0.1:8000/`. Quand une requête est reçue, le script répond avec la chaine « Salut tout le monde ». Si vous avez déjà installé Node, suivez les étapes de l'exemple suivant :
 
-1.  Ouvrez un terminal (sur Windows, ouvrez l'invite de commande (cmd)),
-2.  Créez le dossier où vous voulez sauvegarder le programme, appelez-le par exemple `test-node` et placez-vous dedans en utilisant la commande suivante dans votre console :
+1. Ouvrez un terminal (sur Windows, ouvrez l'invite de commande (cmd)),
+2. Créez le dossier où vous voulez sauvegarder le programme, appelez-le par exemple `test-node` et placez-vous dedans en utilisant la commande suivante dans votre console :
 
-        cd test-node
+    ```bash
+    cd test-node
+    ```
 
-3.  Dans votre éditeur de texte favori, créez un fichier nommé `"hello.js"` et collez ce qui suit dedans :
+3. Dans votre éditeur de texte favori, créez un fichier nommé `"hello.js"` et collez ce qui suit dedans :
 
     ```js
     // Charge le module HTTP
@@ -92,8 +95,8 @@ L'exemple qui suit crée un serveur web qui écoute toutes sortes de requêtes H
     })
     ```
 
-4.  Sauvegardez le fichier dans le dossier créé plus haut.
-5.  Retournez au terminal et tapez :
+4. Sauvegardez le fichier dans le dossier créé plus haut.
+5. Retournez au terminal et tapez :
 
     ```bash
     node hello.js
@@ -383,10 +386,12 @@ app.use(express.static('public'));
 
 Tous les fichiers du répertoire public sont servis en ajoutant leur nom de fichier (_relatif_ au répertoire "public" de base) à l'URL de base. Ainsi, par exemple :
 
-    https://localhost:3000/images/dog.jpg
-    https://localhost:3000/css/style.css
-    https://localhost:3000/js/app.js
-    https://localhost:3000/about.html
+```
+https://localhost:3000/images/dog.jpg
+https://localhost:3000/css/style.css
+https://localhost:3000/js/app.js
+https://localhost:3000/about.html
+```
 
 Vous pouvez appeler `static()` plusieurs fois pour servir plusieurs répertoires. Si un fichier ne peut pas être trouvé par une fonction middleware, alors il sera simplement transmis au _middleware_ suivant (l'ordre dans lequel le _middleware_ est appelé est basé sur votre ordre de déclaration).
 
@@ -403,9 +408,11 @@ app.use('/media', express.static('public'));
 
 Maintenant, vous pouvez charger les fichiers qui se trouvent dans le répertoire `public` à partir du préfixe du chemin `/media`.
 
-    https://localhost:3000/media/images/dog.jpg
-    https://localhost:3000/media/video/cat.mp4
-    https://localhost:3000/media/cry.mp3
+```
+https://localhost:3000/media/images/dog.jpg
+https://localhost:3000/media/video/cat.mp4
+https://localhost:3000/media/cry.mp3
+```
 
 > **Note :** Voir également [Servir des fichiers statiques dans Express](https://expressjs.com/fr/starter/static-files.html).
 
@@ -437,7 +444,7 @@ Les apps _Express_ peuvent utiliser tout mécanisme de base de données pris en 
 Pour les utiliser, vous devez d'abord installer le pilote de base de données à l'aide de NPM. Par exemple, pour installer le pilote de la populaire base de données NoSQL MongoDB, vous devez utiliser la commande suivante :
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 La base de données elle-même peut être installée localement ou sur un serveur en nuage. Dans votre code Express, vous avez besoin du pilote, vous vous connectez à la base de données, puis vous effectuez des opérations de création, lecture, mise à jour et suppression (en anglais, on utilise l'acronyme CRUD qui signifie _Create, Read, Update, Delete_). L'exemple ci-dessous (tiré de la documentation d'Express) montre comment vous pouvez trouver des enregistrements « mammifères » en utilisant MongoDB.
@@ -529,15 +536,3 @@ Bien sûr, Express est délibérément un cadre d'application web très léger, 
 - [Gestion des erreurs](https://expressjs.com/fr/guide/error-handling.html) (docs Express)
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
-
-## Dans ce module
-
-- [Introduction à Express/Node](/fr/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Configuration d'un environnement de développement Node (Express)](/fr/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Tutoriel Express : La bibliothèque locale du site Web](/fr/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Tutoriel Express, partie 2 : Création d'un squelette de site Web](/fr/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Tutoriel Express, partie 3 : Utilisation d'une base de données (avec Mongoose)](/fr/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Tutoriel Express, partie 4 : Routes et contrôleurs](/fr/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Tutoriel Express, partie 5 : Affichage des données de la bibliothèque](/fr/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Tutoriel Express, partie 6 : Travailler avec des formulaires](/fr/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Tutoriel Express, Partie 7 : Déploiement en production](/fr/docs/Learn/Server-side/Express_Nodejs/deployment)

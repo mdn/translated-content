@@ -10,7 +10,6 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
 original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/travailler_avec_userScripts
 ---
-{{draft}}
 
 {{AddonSidebar}}
 
@@ -18,9 +17,9 @@ En implémentant userScripts, les développeurs d'extension peuvent modifier l'a
 
 Implémentez userScripts dans votre extension en suivant les étapes suivantes :
 
-1.  Définissez le script dans le manifeste de l'extension à l'aide de la clé `"user_scripts"`.
-2.  Enregistrer le userScript
-3.  Implémenter les fonctions userScript
+1. Définissez le script dans le manifeste de l'extension à l'aide de la clé `"user_scripts"`.
+2. Enregistrer le userScript
+3. Implémenter les fonctions userScript
 
 Passons en revue les processus à l'aide d'un petit exemple d'extension Web qui illustre le processus. L'exemple est disponible dans le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub.
 
@@ -38,7 +37,7 @@ La propriété "api_script" indique le chemin d'accès au fichier JavaScript qui
 
 ## Charge l'extension d'exemple
 
-Une fois que vous avez téléchargé l'exemple  :
+Une fois que vous avez téléchargé l'exemple :
 
 Naviguez jusqu'à about:debugging, cliquez sur **Charger temporairement une extension...** et double-cliquez sur le manifest des extensions.
 
@@ -52,7 +51,7 @@ Rien ne se passera tant que vous n'aurez pas cliqué sur le bouton **Enregistrer
 
 ## Register the userScript
 
-Avant qu'un userScript puisse être exécuté, il doit être enregistré en utilisant la méthode  `userScripts.register()`. Voici le code pour enregistrer l'extension d'exemple :
+Avant qu'un userScript puisse être exécuté, il doit être enregistré en utilisant la méthode `userScripts.register()`. Voici le code pour enregistrer l'extension d'exemple :
 
 ```js
 async function registerScript() {
@@ -101,7 +100,7 @@ async function registerScript() {
 }
 ```
 
-Ce code initialise d'abord l'objet params pour passer les valeurs à la méthode  [userScripts.register](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register).
+Ce code initialise d'abord l'objet params pour passer les valeurs à la méthode [userScripts.register](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register).
 
 ## Implementer les fonctions userScript
 

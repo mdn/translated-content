@@ -10,14 +10,17 @@ tags:
   - shadow dom
 translation_of: Web/API/ShadowRoot/innerHTML
 ---
+
 {{APIRef("Shadow DOM")}}
 
 La propriété **`innerHTML`**, rattachée à l'interface {{domxref("ShadowRoot")}}, permet de définir ou de récupérer une référence à l'arbre DOM contenu dans la racine `ShadowRoot`.
 
 ## Syntaxe
 
-    var domString = shadowRoot.innerHTML
-    shadowRoot.innerHTML = domString
+```js
+var domString = shadowRoot.innerHTML
+shadowRoot.innerHTML = domString
+```
 
 ### Valeur
 
@@ -38,4 +41,4 @@ Cette propriété ne fait pas encore partie d'une spécification. Voir [cette _i
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot.innerHTML")}}
+{{Compat}}

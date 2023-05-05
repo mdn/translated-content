@@ -1,18 +1,8 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-  - at
-  - Experimental
-  - Polyfill
-browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 O método **`at()`** recebe um valor inteiro e retorna o item referente ao index dele, permitindo valores positivos ou negativos. Valores negativos contam apartir do último item do array.

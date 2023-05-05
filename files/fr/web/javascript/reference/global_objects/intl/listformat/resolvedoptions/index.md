@@ -12,13 +12,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/resolvedOptions
 ---
-{{JSRef}}{{Draft}}
 
-La méthode  **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
+{{JSRef}}
+
+La méthode **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
 
 ## Syntaxe
 
-    listFormat.resolvedOptions()
+```js
+listFormat.resolvedOptions()
+```
 
 ### Valeur de retour
 
@@ -48,13 +51,11 @@ console.log(usedOptions.type);   // "conjunction" (la valeur par défaut)
 
 ## Spécifications
 
-| Spécification                                                                                                                                                     | État                    | Commentaires |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.prototype.resolvedOptions()`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.resolvedOptions) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

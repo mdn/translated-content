@@ -1,15 +1,8 @@
 ---
 title: scripting
 slug: Web/CSS/@media/scripting
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.scripting
-translation_of: Web/CSS/@media/scripting
 ---
+
 {{CSSRef}}
 
 **`scripting`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。

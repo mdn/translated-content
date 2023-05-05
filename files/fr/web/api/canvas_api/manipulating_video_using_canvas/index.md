@@ -7,9 +7,10 @@ tags:
 translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 original_slug: HTML/Manipulating_video_using_canvas
 ---
-{{CanvasSidebar}}
 
-En combinant les possibilités de l'élément [`video`](/En/HTML/Element/Video) avec celles de l'élément [`canvas`](/en/HTML/Canvas), vous pouvez manipuler les données vidéos en temps réel, et y incorporer une variété d'effets visuels. Ce tutoriel explique comment réaliser un travail d'incrustation "chroma-keying" (_fond vert_) en utilisant JavaScript.
+{{DefaultAPISidebar("Canvas API")}}
+
+En combinant les possibilités de l'élément [`video`](/fr/docs/Web/HTML/Element/video) avec celles de l'élément [`canvas`](/fr/docs/Web/HTML/Element/canvas), vous pouvez manipuler les données vidéos en temps réel, et y incorporer une variété d'effets visuels. Ce tutoriel explique comment réaliser un travail d'incrustation "chroma-keying" (_fond vert_) en utilisant JavaScript.
 
 [Voir l'exemple](/samples/video/chroma-key/index.xhtml).
 
@@ -55,9 +56,9 @@ Le document XHTML utilisé pour rendre ce contenu est montré ci-dessous :
 
 Les éléments clés à retenir sont :
 
-1.  Ce document dispose de deux balises [`canvas`](/fr/docs/Web/HTML/Element/canvas), avec les identifiants `c1` et `c2`&nbsp; l'élément `c1` est utilisé pour afficher l'image courante de la vidéo originale, pendant que `c2` est utilisé pour afficher la vidéo après application de l'effet d'incrustation&nbsp;; `c2` est préchargé avec la même image que celle qui sera utilisée pour le remplacement du fond vert.
-2.  Le code JavaScript est importé dans le script nommé `main.js` ; Ce script utilise les fonctionnalités propres à la version 1.8, aussi cette version est précisée, à la ligne 22, quand le script est importé.
-3.  Quand le document se charge, la méthode `processor.doLoad()`, dans le script `main.js`, est exécutée.
+1. Ce document dispose de deux balises [`canvas`](/fr/docs/Web/HTML/Element/canvas), avec les identifiants `c1` et `c2`&nbsp; l'élément `c1` est utilisé pour afficher l'image courante de la vidéo originale, pendant que `c2` est utilisé pour afficher la vidéo après application de l'effet d'incrustation&nbsp;; `c2` est préchargé avec la même image que celle qui sera utilisée pour le remplacement du fond vert.
+2. Le code JavaScript est importé dans le script nommé `main.js` ; Ce script utilise les fonctionnalités propres à la version 1.8, aussi cette version est précisée, à la ligne 22, quand le script est importé.
+3. Quand le document se charge, la méthode `processor.doLoad()`, dans le script `main.js`, est exécutée.
 
 ## Le code JavaScript
 
@@ -65,7 +66,7 @@ Le code JavaScript `main.js` est composé de trois méthodes.
 
 ### Initialisation du lecteur avec effet d'incrustation (_chroma-key_)
 
-La métode `doLoad()` est appelée quand le document XHTML se charge. Cette méthode sert à initialiser chaque variable nécessaire au code traitant l'incrustation (_chroma-key_), ainsi qu'à associer un écouteur d'évènement qui détectera le moment où l'utilisateur lancera la vidéo.
+La méthode `doLoad()` est appelée quand le document XHTML se charge. Cette méthode sert à initialiser chaque variable nécessaire au code traitant l'incrustation (_chroma-key_), ainsi qu'à associer un écouteur d'évènement qui détectera le moment où l'utilisateur lancera la vidéo.
 
 ```js
 var processor;

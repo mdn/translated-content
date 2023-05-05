@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/tabindex
 original_slug: Web/HTML/Attributs_universels/tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`tabindex`** est un entier indiquant si l'élément peut capturer le focus et si c'est le cas, dans quel ordre il le capture lors de la navigation au clavier (généralement à l'aide de la touche <kbd>Tab</kbd>). Si plusieurs éléments partagent la même valeur d'attribut **`tabindex`**, leur ordre sera calculé en fonction de leur position dans le document.
@@ -58,16 +59,11 @@ Les composants rendus interactifs par cette méthode ne feront pas partie de l'[
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires                                                                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#attr-tabindex", "tabindex")}}     | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation, {{SpecName('HTML5.1')}}                                                                                                                                                             |
-| {{SpecName('HTML5.1', "editing.html#the-tabindex-attribute", "tabindex")}} | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, aucune modification depuis {{SpecName('HTML5 W3C')}}                                                                                                                                    |
-| {{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}             | {{Spec2('HTML5 W3C')}}     | Dérivée de {{SpecName('HTML WHATWG')}}. À partir de {{SpecName("HTML4.01")}}, l'attribut est désormais supporté sur tous les éléments, c'est un attribut global à part entière.                                                |
-| {{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}}     | {{Spec2('HTML4.01')}}     | Attribut uniquement supporté sur {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, et {{HTMLElement("textarea")}}. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.tabindex")}}
+{{Compat}}
 
 ## Voir aussi
 

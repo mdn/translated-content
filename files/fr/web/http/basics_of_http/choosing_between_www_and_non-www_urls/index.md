@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 original_slug: Web/HTTP/Basics_of_HTTP/Choisir_entre_les_URLs_www_sans_www
 ---
+
 {{HTTPSidebar}}
 
 Une question récurrente chez les propriétaires de sites web est de choisir entre utiliser des URLs qui débutent ou non par www. Cette page fournit quelques conseils sur la meilleure approche à envisager.
@@ -35,13 +36,13 @@ Dans ce cas, vous devez configurer le serveur qui reçoit les requêtes HTTP (a 
 
 Exemple :
 
-1.  Un serveur reçoit une requête pour `https://www.exemple.org/kadoc` (tandis que le domaine canonique est constitué par exemple.org)
-2.  Le serveur répond via un code {{HTTPStatus(301)}} contenant l'en-tête {{HTTPHeader("Location")}}`: https://exemple.org/kadoc`.
-3.  Le client émet une requête pour le domaine canonique : `https://exemple.org/kadoc`
+1. Un serveur reçoit une requête pour `https://www.exemple.org/kadoc` (tandis que le domaine canonique est constitué par exemple.org)
+2. Le serveur répond via un code {{HTTPStatus(301)}} contenant l'en-tête {{HTTPHeader("Location")}}`: https://exemple.org/kadoc`.
+3. Le client émet une requête pour le domaine canonique : `https://exemple.org/kadoc`
 
 Le [projet HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate) contient un exemple sur [la configuration d'un serveur Apache afin de rediriger un domaine vers un autre](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
-### Utiliser _`< link rel="canonical">`_
+### Utiliser \< link rel="canonical">
 
 Il est possible d'ajouter un élément HTML spécifique {{HTMLElement("link")}} pour indiquer l'adresse canonique de la page. Cela n'a aucun impact sur la personne qui visite la page web, en revanche, elle permet aux robots des moteurs de recherche de connaître l'adresse effective de la page. De cette manière les moteurs de recherche n'indexent pas le contenu de façon répétée. Sans cet élément, ils pourraient penser que la page est dupliquée ou constitue du spam, ce qui entraînerait la disparition de la page dans les index des moteurs de recherche ou un mauvais classement.
 

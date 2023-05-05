@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getBigInt64
 ---
+
 {{JSRef}}
 
 La méthode **`getBigInt64()`** permet de lire un entier signé sur 64 bits (type _long long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
@@ -20,7 +21,9 @@ La méthode **`getBigInt64()`** permet de lire un entier signé sur 64 bits (typ
 
 ## Syntaxe
 
-    dataview.getBigInt64(positionOctet [, littleEndian])
+```js
+dataview.getBigInt64(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 
@@ -54,13 +57,11 @@ dataview.getBigInt64(0); // 0n
 
 ## Spécifications
 
-| Spécification                                                                                                                     | État | Commentaires |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
-| [Proposition pour `DataView.prototype.getBigInt64()`](https://tc39.github.io/proposal-bigint/#sec-dataview.prototype.getbigint64) |      |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getBigInt64")}}
+{{Compat}}
 
 ## Voir aussi
 

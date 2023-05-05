@@ -4,15 +4,16 @@ slug: Web/CSS/CSS_Animations/Using_CSS_animations
 translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 original_slug: Web/CSS/Animations_CSS/Utiliser_les_animations_CSS
 ---
+
 {{CSSRef}}
 
 Les **animations CSS** permettent de créer des transitions entre deux états de mise en forme. Une animation est décrite par deux choses : des propriétés propres à l'animation d'une part et un ensemble d'étapes (_keyframes_) qui indiquent l'état initial, final et éventuellement des états intermédiaires d'autre part.
 
 Trois avantages permettent de distinguer les animations CSS des techniques d'animations utilisant JavaScript :
 
-1.  On peut aisément obtenir des animations simples sans avoir à connaître JavaScript.
-2.  Les animations s'exécuteront correctement même lorsque le système est soumis à une charge modérée. Il est possible que des animations JavaScript s'exécutent lentement si elles sont mal décrites. Dans le cadre des animations CSS, le moteur de rendu peut utiliser certaines techniques (comme le _frame-skipping_) afin que le résultat obtenu soit aussi fluide que possible.
-3.  En laissant le contrôle de l'animation au navigateur, celui-ci peut optimiser les performances et l'efficacité du système, par exemple en réduisant la fréquence de mise à jour des animations qui sont exécutées dans des onglets qui ne sont pas visibles à l'écran.
+1. On peut aisément obtenir des animations simples sans avoir à connaître JavaScript.
+2. Les animations s'exécuteront correctement même lorsque le système est soumis à une charge modérée. Il est possible que des animations JavaScript s'exécutent lentement si elles sont mal décrites. Dans le cadre des animations CSS, le moteur de rendu peut utiliser certaines techniques (comme le _frame-skipping_) afin que le résultat obtenu soit aussi fluide que possible.
+3. En laissant le contrôle de l'animation au navigateur, celui-ci peut optimiser les performances et l'efficacité du système, par exemple en réduisant la fréquence de mise à jour des animations qui sont exécutées dans des onglets qui ne sont pas visibles à l'écran.
 
 ## Paramétrer l'animation
 

@@ -1,15 +1,8 @@
 ---
 title: performance.measure()
 slug: Web/API/Performance/measure
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-  - ウェブワーカー
-browser-compat: api.Performance.measure
-translation_of: Web/API/Performance/measure
 ---
+
 {{APIRef("User Timing API")}}
 
 **`measure()`** メソッドは、マーク間、ナビゲーション開始時刻、または現在時刻の間に、ブラウザーの*パフォーマンスエントリーバッファー*に名前付き {{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。
@@ -76,7 +69,7 @@ measure(measureName, startMark, endMark)
   - `MeasureOptions.start` または `startMark` で指定された場合は、開始マークの{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", 1)}}。
   - `MeasureOptions.end` と `MeasureOptions.duration` から計算されたタイムスタンプ（`MeasureOptions.start` が指定されていない場合）。
   - 指定されておらず、他の値から特定することができない場合は 0。
-  
+
 - {{domxref("PerformanceEntry.duration","duration")}} - {{domxref("DOMHighResTimeStamp")}} で、終了タイムスタンプから `startTime` を引いて計算されたメジャーの時間を設定します。
 
   終了タイムスタンプは以下のいずれかになります。

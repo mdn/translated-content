@@ -1,15 +1,8 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-column-end
-translation_of: Web/CSS/grid-column-end
 ---
+
 {{CSSRef}}
 
 **`grid-column-end`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド列内のグリッドアイテムの末尾位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のブロックの末尾側の端を指定します。
@@ -49,7 +42,7 @@ grid-column-end: unset;
 
   - : `<custom-ident>-end` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
 
-    > **Note:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column-end: foo;` と指定すると名前付きグリッド領域の末尾側の端を選択します (その前に `foo-end` という名前の線が明示的に存在しない限り)。
+    > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column-end: foo;` と指定すると名前付きグリッド領域の末尾側の端を選択します (その前に `foo-end` という名前の線が明示的に存在しない限り)。
 
     そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 

@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Reference
 ---
+
 {{HTMLSidebar}}
 
 Cette référence [HTML](/fr/docs/Web/HTML) décrit l'ensemble des **éléments** et des **attributs** qui peuvent être utilisés en HTML, y compris les **attributs universels** qui peuvent s'appliquer sur tous les éléments.

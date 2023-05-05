@@ -6,20 +6,23 @@ tags:
 translation_of: Web/XSLT/Element/template
 original_slug: Web/XSLT/template
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:template>` définit un modèle produisant une sortie. Au moins l'un des atttributs match et set doit posséder une valeur.
 
 ### Syntaxe
 
-    <xsl:template
-    	match=MOTIF
-    	name=NOM
-    	mode=NOM
-    	priority=NOMBRE>
-    	<xsl:param> [optionnel]
-    	MODÈLE
-    </xsl:template>
+```xml
+<xsl:template
+  match=MOTIF
+  name=NOM
+  mode=NOM
+  priority=NOMBRE>
+  <xsl:param> [optionnel]
+  MODÈLE
+</xsl:template>
+```
 
 ### Attributs obligatoires
 

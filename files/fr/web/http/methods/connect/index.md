@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Methods/CONNECT
 original_slug: Web/HTTP/Méthode/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP `CONNECT`** crée une communication bidirectionnelle avec la ressource demandée. Elle peut être utilisée pour ouvrir un tunnel.
@@ -53,25 +54,27 @@ Par exemple, la méthode `CONNECT` peut être utilisée pour accéder à des sit
 
 ## Syntaxe
 
-    CONNECT www.example.com:443 HTTP/1.1
+```
+CONNECT www.example.com:443 HTTP/1.1
+```
 
 ## Exemple
 
 Certains serveurs proxy pourraient avoir besoin d'une autorisation pour créer un tunnel. Voir aussi l'en-tête {{HTTPHeader("Proxy-Authorization")}}.
 
-    CONNECT server.example.com:80 HTTP/1.1
-    Host: server.example.com:80
-    Proxy-Authorization: basic aGVsbG86d29ybGQ=
+```
+CONNECT server.example.com:80 HTTP/1.1
+Host: server.example.com:80
+Proxy-Authorization: basic aGVsbG86d29ybGQ=
+```
 
 ## Spécifications
 
-| Spécification                                    | Titre                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "CONNECT", "4.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/methods", "CONNECT")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,18 +1,8 @@
 ---
 title: Intl.DisplayNames.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
-tags:
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.DisplayNames.prototype.resolvedOptions()`** メソッドは、現在の {{jsxref("Intl.DisplayNames")}} オブジェクトの初期化時に計算されたロケールとスタイルの書式オプションを反映したプロパティを持つ新しいオブジェクトを返します。

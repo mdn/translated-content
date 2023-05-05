@@ -1,23 +1,16 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
-tags:
-  - CSS
-  - Propiedad CSS
-  - No estandar
-  - Referencia
-  - recipe:css-property
-translation_of: Web/CSS/zoom
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-La propiedad [CSS](/es/docs/Web/CSS) no estándarizada **`zoom`**
-se puede usar para controlar el aumento de escala de un elemento.
-En la medida de lo posible se deben usar [transform: scale()](/es/docs/Web/CSS/transform-function/scale()) en vez de esta propiedad.
+La propiedad no estándar de [CSS](/es/docs/Web/CSS) **`zoom`** se puede usar para controlar el aumento de escala de un elemento. Si es posible, se debe usar {{cssxref("transform-function/scale", "transform: scale()")}} en lugar de esta propiedad. Sin embargo, a diferencia de los CSS Transforms, `zoom` afecta el tamaño del diseño del elemento.
+
+## Sintaxis
 
 ```css
-/* Keyword values */
+/* Valores de palabras clave */
 zoom: normal;
 zoom: reset;
 
@@ -29,13 +22,13 @@ zoom: 200%;
 zoom: 1.1;
 zoom: 0.7;
 
-/* Global values */
+/* Valores globales */
 zoom: inherit;
 zoom: initial;
+zoom: revert;
+zoom: revert-layer;
 zoom: unset;
 ```
-
-## Sintaxis
 
 ### Valores
 
@@ -43,21 +36,19 @@ zoom: unset;
   - : Dibuja el elemento con su tamaño normal.
 - `reset` {{non-standard_inline}}
 
-  - : No cambia la escala del elemento (por ejemplo al presionar `<kbd>Ctrl</kbd>  \+  <kbd>-</kbd>` o `<kbd>Ctrl</kbd>  \+ <kbd>+</kbd>` )
-   
-  - si el usuario aplica `non-pinch-zooming`.
-    Sólo soportado por WebKit (y posiblemente Blink).
+  - : No cambia la escala de este elemento si el usuario aplica zoom no basado en toques al documento (p. ej.: presionando los atajos de teclado <kbd>Ctrl</kbd> \- <kbd>-</kbd> o <kbd>Ctrl</kbd> \+ <kbd>+</kbd>). Sólo soportado por `WebKit` (y posiblemente `Blink`).
 
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Factor de Zoom. `100%` es a tamaño `normal`. Valores superiores a ` 100%` aumentan y valores inferiores al `100%` encogen el elemento.
-- {{cssxref("&lt;number&gt;")}}
-  - : Factor de Zoom. Equivalente al porcentaje correspondiente (`1.0` = `100%` = `normal`). Valores mayores de `1.0` aumentarán el tamaño. Valores menores de `1.0` encogerán.
+  - : Factor de Zoom. `100%` es equivalente a `normal`. Valores superiores a `100%` aumentan y valores inferiores al `100%` alejan el elemento.
 
-## Definición Formal
+- {{cssxref("&lt;number&gt;")}}
+  - : Factor de `zoom`. Equivalente al porcentaje correspondiente (`1.0` = `100%` = `normal`). Valores mayores de `1.0` aumentan. Valores menores de `1.0` alejan.
+
+## Definición formal
 
 {{cssinfo}}
 
-## Sintaxis Formal
+## Sintaxis formal
 
 {{csssyntax}}
 
@@ -93,7 +84,7 @@ p:hover {
 }
 ```
 
-#### Result
+#### Resultado
 
 {{EmbedLiveSample('First_example')}}
 
@@ -139,14 +130,14 @@ div#c {
 
 ## Especificaciones
 
-Esta propiedad no es estándar y tiene su origen en Internet Explorer.
-Apple tiene [una descripción en la Referencia CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15).
+No forma parte de ningún estándar. Esta propiedad tiene su origen en Internet Explorer. Apple tiene [una descripción en la Referencia CSS de Safari](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov de Microsoft posee [un borrador de propuesta de especificación no oficial en Github](https://cdn.jsdelivr.net/gh/atanassov/css-zoom@master/Overview.html).
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## Ver además
+## Véase también
 
 - [Artículo de `zoom` en la página de CSS-Tricks](https://css-tricks.com/almanac/properties/z/zoom/)
+- El descriptor de viewport `zoom` usado con [`@viewport`](/es/docs/Web/CSS/@viewport)
 - [Bug 390936: Implementar la propiedad `zoom` de Internet Explorer para CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) en el rastreador de problemas de Firefox Bugzilla.

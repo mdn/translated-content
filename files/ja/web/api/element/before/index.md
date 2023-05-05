@@ -1,16 +1,9 @@
 ---
 title: Element.before()
 slug: Web/API/Element/before
-tags:
-  - API
-  - DOM
-  - メソッド
-  - Node
-  - リファレンス
-browser-compat: api.Element.before
-translation_of: Web/API/Element/before
 original_slug: Web/API/ChildNode/before
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.before()`** は一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトを、この `Element` の親の子リストの中、この `Element` の直前に挿入します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。

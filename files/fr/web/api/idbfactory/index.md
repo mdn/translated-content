@@ -3,6 +3,7 @@ title: IDBFactory
 slug: Web/API/IDBFactory
 translation_of: Web/API/IDBFactory
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBFactory`** fait partie de l'[API IndexedDB](/fr/docs/Web/API/API_IndexedDB) et permet aux applications d'accéder à des bases de données de façon asynchrone. L'objet qui implémente cette interface est `window.indexedDB`. Autrement dit, on créera et on accèdera à une base de données (voire on la supprimera) directement via cet objet plutôt qu'en utilisant l'objet `IDBFactory`.
@@ -22,7 +23,7 @@ L'interface **`IDBFactory`** fait partie de l'[API IndexedDB](/fr/docs/Web/API/A
 
 ## Exemples
 
-Dans l'exemple qui suit, on effectue une requête sur une base de données et on gère les cas de succès et d'erreur. Vous pouvez consulter un exemple complet sur [notre application To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir l'exemple en _live_](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple qui suit, on effectue une requête sur une base de données et on gère les cas de succès et d'erreur. Vous pouvez consulter un exemple complet sur [notre application To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var note = document.querySelector("ul");
@@ -62,15 +63,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName("IndexedDB", "#idl-def-IDBFactory", "IDBFactory")}} | {{Spec2("IndexedDB")}}     |              |
-| {{SpecName("IndexedDB 2", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 2")}} |              |
-| {{SpecName("IndexedDB 3", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 3")}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBFactory")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -80,4 +77,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

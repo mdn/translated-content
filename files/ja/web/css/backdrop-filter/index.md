@@ -1,20 +1,8 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - CSS
-  - CSS プロパティ
-  - グラフィック
-  - レイアウト
-  - NeedsContent
-  - リファレンス
-  - SVG
-  - SVG フィルター
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.backdrop-filter
-translation_of: Web/CSS/backdrop-filter
 ---
+
 {{CSSRef}}
 
 **`backdrop-filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の*背後*のすべてに適用されるため、効果を見るためには少なくとも一部が透明な要素またはその背景を作成する必要があります。

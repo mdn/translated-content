@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
 original_slug: Web/JavaScript/Reference/Erreurs/Identifier_after_number
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Unexpected identifier after numeric literal (Edge)
-    SyntaxError: identifier starts immediately after numeric literal (Firefox)
-    SyntaxError: Unexpected number (Chrome)
+```
+SyntaxError: Unexpected identifier after numeric literal (Edge)
+SyntaxError: identifier starts immediately after numeric literal (Firefox)
+SyntaxError: Unexpected number (Chrome)
+```
 
 ## Type d'erreur
 

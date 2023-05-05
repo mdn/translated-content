@@ -13,6 +13,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/clear
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 Cette méthode est utilisée pour effacer entièrement le document visé dans les anciennes versions (pre-1.0) de Mozilla.
@@ -21,7 +22,9 @@ Dans les versions récentes des applications basées sur Mozilla ainsi que sur I
 
 ## Syntaxe
 
-    document.clear()
+```js
+document.clear()
+```
 
 ## Spécifications
 
@@ -29,4 +32,4 @@ Dans les versions récentes des applications basées sur Mozilla ainsi que sur I
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.clear")}}
+{{Compat}}

@@ -1,18 +1,9 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - メソッド
-browser-compat: javascript.builtins.String.substr
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
-{{JSRef}}
+
+{{JSRef}} {{deprecated_header}}
 
 **`substr()`** メソッドは、文字列の一部を、指定した位置から後方向に指定した文字数だけ返します。
 
@@ -40,7 +31,7 @@ substr(start, length)
 
 `substr()` は、 `str` のうち `start` の位置から `length` 文字分を数えて抽出します。
 
-- `start` が正の数である場合、文字列の先頭から数えた位置になります。この値は `str.length` が上限になります。
+- `start` が正の数である場合、文字列の先頭から数えた位置になります。この値は `str.length - 1` が上限になります。
 - `start` が負の数である場合、文字列の末尾から数えた位置になります。この値は `-str.length` が下限になります。
 - メモ: Microsoft の JScript では、 `start` の引数が負の数であっても文字列の末尾からの位置にはなりません。
 - `length` が省略された場合、 `substr()` は文字列の末尾までの文字を抽出します。
@@ -65,7 +56,7 @@ if ('ab'.substr(-1) != 'b') {
     return function(start, length) {
       // call the original method
       return substr.call(this,
-      	// did we get a negative start, calculate how much it is from the beginning of the string
+        // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
         length)
@@ -79,7 +70,7 @@ if ('ab'.substr(-1) != 'b') {
 ### substr() の使用
 
 ```js
-var aString = 'Mozilla';
+const aString = 'Mozilla';
 
 console.log(aString.substr(0, 1));   // 'M'
 console.log(aString.substr(1, 0));   // ''
@@ -101,5 +92,6 @@ console.log(aString.substr(20, 2));  // ''
 
 ## 関連情報
 
+- [`core-js` による `String.prototype.substr` のポリフィル](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}

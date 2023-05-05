@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/defineProperty
 ---
+
 {{JSRef}}
 
 La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.defineProperty()")}}.
@@ -102,14 +103,11 @@ Object.defineProperty(p, "name, {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

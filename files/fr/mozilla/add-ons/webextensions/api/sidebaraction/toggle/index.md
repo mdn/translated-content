@@ -12,6 +12,7 @@ tags:
   - toogle
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/toggle
 ---
+
 {{AddonSidebar()}}
 
 Permet de basculer la visibilité de la barre latérale dans la fenêtre active, si la barre latérale appartient à l'extension.
@@ -34,9 +35,9 @@ Aucune.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue sans discussion.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sidebarAction.toggle", 10)}}
+{{Compat}}
 
 ## Exemples
 

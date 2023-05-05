@@ -1,14 +1,8 @@
 ---
 title: CSS ページメディア
 slug: Web/CSS/CSS_Pages
-tags:
-  - CSS
-  - CSS ページメディア
-  - ガイド
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Pages
 ---
+
 {{CSSRef}}
 
 **CSS ページメディア**は CSS のモジュールの一つで、ページ切り替えをどのように扱うかを定義します。
@@ -34,8 +28,4 @@ translation_of: Web/CSS/CSS_Pages
 
 ## 仕様書
 
-| 仕様書                             | 状態                            | 備考    |
-| ---------------------------------- | ------------------------------- | ------- |
-| {{SpecName('CSS3 Paged Media')}}   | {{Spec2('CSS3 Paged Media')}}   |         |
-| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} |         |
-| {{SpecName('CSS2.1')}}             | {{Spec2('CSS2.1')}}             |         |
+{{Specifications}}

@@ -3,6 +3,7 @@ title: Mettre en place un environnement de développement Django
 slug: Learn/Server-side/Django/development_environment
 translation_of: Learn/Server-side/Django/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 Maintenant que vous savez à quoi sert Django, nous allons vous montrer comment mettre en place et tester un environnement de développement Django sous Windows, Linux (Ubuntu) et macOS — Peu importe votre système d'exploitation, cet article devrait vous fournir de quoi commencer à développer des applications Django.
@@ -130,12 +131,12 @@ python3 -V
 
 Vous pouvez facilement installer Python 3 (ainsi que l'outil _pip3_) sur [python.org](https://www.python.org/):
 
-1.  Téléchargez l'installeur requis :
+1. Téléchargez l'installeur requis :
 
-    1.  Allez sur <https://www.python.org/downloads/>
-    2.  Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
+    1. Allez sur <https://www.python.org/downloads/>
+    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
-2.  Localisez le fichier en utilisant le _Finder_, puis double-cliquez le fichier package. Suivez les consignes d'installation.
+2. Localisez le fichier en utilisant le _Finder_, puis double-cliquez le fichier package. Suivez les consignes d'installation.
 
 Vous pouvez désormais confirmer la bonne installation en vérifiant votre version de Python 3 comme indiqué ci-dessous :
 
@@ -154,13 +155,13 @@ pip3 list
 
 Windows n'inclut pas Python par défaut, mais vous pouvez facilement l'installer (ainsi que l'outil _pip3_) sur [python.org](https://www.python.org/)&nbsp;:
 
-1.  Téléchargez l'installeur requis :
+1. Téléchargez l'installeur requis :
 
-    1.  Allez sur <https://www.python.org/downloads/>
-    2.  Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
+    1. Allez sur <https://www.python.org/downloads/>
+    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
-2.  Installez Python en double-cliquant sur le fichier télécharger puis en suivant les consignes d'installation
-3.  Assurez-vous d'avoir coché la case intitulée "Ajouter Python au PATH".
+2. Installez Python en double-cliquant sur le fichier télécharger puis en suivant les consignes d'installation
+3. Assurez-vous d'avoir coché la case intitulée "Ajouter Python au PATH".
 
 Vous pouvez ensuite vérifier que Python s'est correctement installé en tapant le texte suivant dans votre invite de commande :
 
@@ -264,11 +265,13 @@ Ce sont les mêmes lignes que pour Ubuntu, mais le nom du fichier de configurati
 >
 > La commande sera la suivante :
 >
->     >cd ~  # Naviguer vers le répertoire home
->     ls -la # Listez le contenu du répertoire. Vous devriez voir .bash_profile.
->     nano .bash_profile # Ouvrez le fichier avec l'éditeur de texte nano, depuis le terminal.
->     # Allez à la fin du fichier, puis copiez-collez les lignes ci-dessus.
->     # Utilisez Ctrl+X pour quitter nano, sélectionnez Y pour sauvegarder le fichier.
+> ```bash
+> >cd ~  # Naviguer vers le répertoire home
+> ls -la # Listez le contenu du répertoire. Vous devriez voir .bash_profile.
+> nano .bash_profile # Ouvrez le fichier avec l'éditeur de texte nano, depuis le terminal.
+> # Allez à la fin du fichier, puis copiez-collez les lignes ci-dessus.
+> # Utilisez Ctrl+X pour quitter nano, sélectionnez Y pour sauvegarder le fichier.
+> ```
 
 Puis relancez le fichier de configuration en appelant la ligne suivante depuis le terminal :
 
@@ -282,7 +285,9 @@ Vous devriez alors voir apparaître plusieurs lignes de script (les mêmes scrip
 
 Installer [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) est encore plus simple qu'installer _virtualenvwrapper_ , parce que vous n'avez pas besoin de configurer là où l'outil enregistre les informations de l'environnement virtuel (il y a des valeurs par défaut). Tout ce que vous avez besoin de faire est de lancer la commande suivante depuis l'invite de commande :
 
-    pip3 install virtualenvwrapper-win
+```bash
+pip3 install virtualenvwrapper-win
+```
 
 Vous pouvez désormais créer un nouvel environnement virtuel avec la commande `mkvirtualenv`
 
@@ -292,12 +297,14 @@ Maintenant que vous avez installé _virtualenvwrapper_ ou _virtualenvwrapper-win
 
 Vous pouvez désormais créer un nouvel environnement virtuel avec la commande `mkvirtualenv`. Lors de son exécution, vous pourrez voir l'environnement être configuré (ce que vous verrez changera légèrement en fonction de votre plateforme). Lorsque l'exécution de la commande sera terminée, votre environnement virtuel sera actif — vous pouvez voir au début de la ligne de commande le nom de votre environnement entre parenthèses (nous vous montrons le résultat pour Ubuntu ci-dessous, mais la dernière ligne est similaire sur Windows/macOS).
 
-    $ mkvirtualenv my_django_environment
+```bash
+$ mkvirtualenv my_django_environment
 
-    Running virtualenv with interpreter /usr/bin/python3
-    ...
-    virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-    (my_django_environment) ubuntu@ubuntu:~$
+Running virtualenv with interpreter /usr/bin/python3
+...
+virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
+(my_django_environment) ubuntu@ubuntu:~$
+```
 
 Maintenant que vous êtes dans votre environnement virtuel vous pouvez installer Django et commencer à développer.
 
@@ -387,28 +394,10 @@ Vous avez maintenant un environnement de développement Django fonctionnel et op
 
 Dans la section test vous avez aussi vu comment créer un nouveau site web Django en utilisant `django-admin startproject`, et comment aller dessus depuis votre navigateur en utilisant le serveur de développement web (`python3 manage.py runserver`). Dans le prochain article nous détaillerons ce processus, et créant un application web simple mais complète.
 
-## See also
+## Voir aussi
 
 - [Quick Install Guide](https://docs.djangoproject.com/en/2.1/intro/install/) (Django docs)
 - [How to install Django — Complete guide](https://docs.djangoproject.com/en/2.1/topics/install/) (Django docs) - includes information on how to remove Django
 - [How to install Django on Windows](https://docs.djangoproject.com/en/2.1/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/fr/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

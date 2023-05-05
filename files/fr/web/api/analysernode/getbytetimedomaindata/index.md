@@ -3,6 +3,7 @@ title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
 translation_of: Web/API/AnalyserNode/getByteTimeDomainData
 ---
+
 {{ APIRef("Mountain View APIRef Project") }}
 
 La méthode **`getByteTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde, ou du domaine temporel, dans un tableau {{domxref("Uint8Array")}} passé en paramètre.
@@ -28,7 +29,7 @@ Un tableau {{domxref("Uint8Array")}}.
 
 ## Exemple
 
-L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -82,14 +83,12 @@ draw();
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-getByteTimeDomainData-void-Uint8Array-array', 'getByteTimeDomainData()')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.getByteTimeDomainData")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

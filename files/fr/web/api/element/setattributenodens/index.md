@@ -8,13 +8,16 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/setAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNodeNS` ajoute un nouveau nœud attribut avec l'espace de noms et le nom spécifiés.
 
 ## Syntaxe
 
-    replacedAttr = element.setAttributeNodeNS(attributeNode)
+```js
+replacedAttr = element.setAttributeNodeNS(attributeNode)
+```
 
 - `replacedAttr`
   - : Le nœud attribut remplacé, si applicable, renvoyé par cette fonction.
@@ -23,16 +26,18 @@ translation_of: Web/API/Element/setAttributeNodeNS
 
 ## Exemple
 
-    // <div id="one" special-align="utterleft">one</div>
-    // <div id="two">two</div>
+```js
+// <div id="one" special-align="utterleft">one</div>
+// <div id="two">two</div>
 
-    var myns = "http://www.mozilla.org/ns/specialspace";
-    var d1 = document.getElementById("one");
-    var d2 = document.getElementById("two");
-    var a = d1.getAttributeNodeNS(myns, "special-align");
-    d2.setAttributeNodeNS(a);
+var myns = "http://www.mozilla.org/ns/specialspace";
+var d1 = document.getElementById("one");
+var d2 = document.getElementById("two");
+var a = d1.getAttributeNodeNS(myns, "special-align");
+d2.setAttributeNodeNS(a);
 
-    alert(d2.attributes[1].value) // renvoie&nbsp;: "utterleft"
+alert(d2.attributes[1].value) // renvoie&nbsp;: "utterleft"
+```
 
 ## Notes
 

@@ -1,19 +1,8 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - margin-inline
-  - margin-inline-end
-  - recipe:css-property
-browser-compat: css.properties.margin-inline-end
-translation_of: Web/CSS/margin-inline-end
 ---
+
 {{CSSRef}}
 
 **`margin-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。

@@ -1,20 +1,8 @@
 ---
 title: ImageCapture.getPhotoCapabilities()
 slug: Web/API/ImageCapture/getPhotoCapabilities
-tags:
-  - API
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture API
-  - Method
-  - Reference
-  - getPhotoCapabilities
-browser-compat: api.ImageCapture.getPhotoCapabilities
-translation_of: Web/API/ImageCapture/getPhotoCapabilities
 ---
+
 {{APIRef("MediaStream Image")}}
 
 {{domxref("ImageCapture")}} 인터페이스의 **`getPhotoCapabilities()`** 메서드는 사용 가능한 설정 옵션을 담은 {{domxref("PhotoCapabilities")}} 객체로 이행하는 {{jsxref("Promise")}}를 반환합니다.
@@ -28,6 +16,7 @@ const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities()
 ### 반환 값
 
 다음 속성을 포함하는 객체로 이행하는 {{jsxref("Promise")}}.
+
 - `redEyeReduction`
   - : 장치의 적목 현상 감소 기능 적용 여부를 나타내는 `"never"`, `"always"`, `"controllable"` 중 하나를 반환합니다.
 - `imageHeight`

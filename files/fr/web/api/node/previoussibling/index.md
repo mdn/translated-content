@@ -8,13 +8,16 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/previousSibling
 ---
+
 {{APIRef("DOM")}}
 
-La propriété en lecture seule  **`Node.previousSibling`** renvoie le nœud (`node`) précédant immédiatement le nœud courant dans la liste {{domxref("Node.childNodes", "childNodes")}} de son parent, ou `null` s'il s'agit du premier nœud de la liste.
+La propriété en lecture seule **`Node.previousSibling`** renvoie le nœud (`node`) précédant immédiatement le nœud courant dans la liste {{domxref("Node.childNodes", "childNodes")}} de son parent, ou `null` s'il s'agit du premier nœud de la liste.
 
 ## Syntaxe
 
-    previousNode = node.previousSibling;
+```js
+previousNode = node.previousSibling;
+```
 
 ## Exemple
 
@@ -46,7 +49,7 @@ L'opération inverse [`Node.nextSibling`](/fr/docs/Web/API/Node/nextSibling) per
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.previousSibling")}}
+{{Compat}}
 
 ## Voir aussi
 

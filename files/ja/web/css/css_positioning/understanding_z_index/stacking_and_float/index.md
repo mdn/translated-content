@@ -1,37 +1,30 @@
 ---
 title: 浮動ブロックの重ね合わせ
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - リファレンス
-  - Understanding_CSS_z-index
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ---
+
 {{CSSRef}}
 
 浮動 (floated) ブロックについては、重ね合わせ順序が少し異なります。浮動ブロックは位置指定なしのブロックと位置指定ブロックの間に配置されます。
 
-1.  ルート要素の背景と境界
-2.  位置指定なしの子孫ブロック、 HTML 内での出現順
-3.  _浮動ブロック_
-4.  位置指定ありの子孫要素、 HTML 内での出現順
+1. ルート要素の背景と境界
+2. 位置指定なしの子孫ブロック、 HTML 内での出現順
+3. _浮動ブロック_
+4. 位置指定ありの子孫要素、 HTML 内での出現順
 
 位置指定要素、位置指定なしの要素についての説明は、[位置指定の種類](/ja/docs/Web/CSS/position#types_of_positioning)を参照してください。
 
 実際、以下の例に見られるように、位置指定なしのブロック (DIV #4) の背景と境界は、完全に浮動ブロックの影響を受けませんが、内容は影響を受けます。この挙動は、上記のリストに規則を追加することで示すことができます。
 
-1.  ルート要素の背景と境界
-2.  位置指定なしの子孫ブロック、 HTML 内での出現順
-3.  浮動ブロック
-4.  <em>位置指定なしの子孫のインライン要素</em>
-5.  位置指定ありの子孫要素、 HTML 内での出現順
+1. ルート要素の背景と境界
+2. 位置指定なしの子孫ブロック、 HTML 内での出現順
+3. 浮動ブロック
+4. <em>位置指定なしの子孫のインライン要素</em>
+5. 位置指定ありの子孫要素、 HTML 内での出現順
 
 {{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
 
-> **Note:** 位置指定なしのブロック (DIV #4) の `opacity` の値を変更すると、そのブロックの背景と境界が、浮動ブロックや位置指定ブロックの上に飛び出し、おかしな結果になります。これは、仕様書の中で、 `opacity` の値を適用すると新しい重ね合わせコンテキストを作成するという、奇妙な部分によるものです ([What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) を参照してください)。
+> **メモ:** 位置指定なしのブロック (DIV #4) の `opacity` の値を変更すると、そのブロックの背景と境界が、浮動ブロックや位置指定ブロックの上に飛び出し、おかしな結果になります。これは、仕様書の中で、 `opacity` の値を適用すると新しい重ね合わせコンテキストを作成するという、奇妙な部分によるものです ([What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) を参照してください)。
 
 <h2 id="Source_code_for_the_example">例のソースコード</h2>
 
@@ -56,7 +49,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
   <b>DIV #5</b><br />position: absolute;</div>
 
 <div id="rel1">
-  <b>DIV #6</b><br />position: relative;</div>
+  <b>DIV #6</b><br />position: relative;</div>
 ```
 
 ### CSS
@@ -118,11 +111,11 @@ b {
 }
 
 #rel1 {
-  position: relative;
-  border: 1px dashed #996;
-  background-color: #cff;
-  margin: 0px 10px 0px 10px;
-  text-align: left;
+  position: relative;
+  border: 1px dashed #996;
+  background-color: #cff;
+  margin: 0px 10px 0px 10px;
+  text-align: left;
 }
 ```
 

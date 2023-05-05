@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML")}}
 
 L'en-tête {{glossary("Head", "head")}} dans un document HTML est une partie du document qui n'est pas affichée par le navigateur au chargement de la page. Elle contient des informations comme le titre ({{htmlelement("title")}}) de la page, des liens aux {{glossary("CSS")}} (si vous souhaitez composer le contenu HTML avec des CSS), des liens aux favicons personnalisés et d'autres méta-données (auteur du document, mots-clés décrivant le document, etc.). Cet article porte sur tout ceci et plus, pour vous donner de bonnes bases pour gérer les balises et le code qui devraient figurer dans l'en-tête.
@@ -68,20 +69,20 @@ Nous avons déjà vu l'élément {{htmlelement ("title")}} — qui peut être ut
 
 ### Apprentissage actif : inspection d'un exemple simple
 
-1.  Pour commencer cet apprentissage actif, nous vous invitons à télécharger une copie de notre [page-titre-exemple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) sur le dépôt Github. Pour ce faire, soit :
+1. Pour commencer cet apprentissage actif, nous vous invitons à télécharger une copie de notre [page-titre-exemple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) sur le dépôt Github. Pour ce faire, soit :
 
-    1.  copiez et collez le code hors de la page dans un nouveau fichier texte dans votre éditeur de code, puis sauvegardez-le dans un endroit raisonnable.
-    2.  pressez le bouton « Raw » de la page : le texte brut apparaît dans un nouvel onglet du navigateur. Ensuite, choisissez _Fichier> Enregistrer la page sous ..._ dans le menu du navigateur, puis choisissez un endroit pour enregistrer le fichier.
+    1. copiez et collez le code hors de la page dans un nouveau fichier texte dans votre éditeur de code, puis sauvegardez-le dans un endroit raisonnable.
+    2. pressez le bouton « Raw » de la page : le texte brut apparaît dans un nouvel onglet du navigateur. Ensuite, choisissez _Fichier> Enregistrer la page sous ..._ dans le menu du navigateur, puis choisissez un endroit pour enregistrer le fichier.
 
-2.  Maintenant, ouvrez le fichier dans votre navigateur. Vous devriez voir quelque chose comme ça :
+2. Maintenant, ouvrez le fichier dans votre navigateur. Vous devriez voir quelque chose comme ça :
 
-    ![Une simple page web page dont <title> a la valeur «Élément <title>» et <h1> la valeur Élément <h1>.](fr-element-title.png)Il devrait désormais être évident de situer où le contenu de \<h1> apparaît et où celui de `<title>` apparaît !
+    ![Une simple page web page dont \<title> a la valeur «Élément \<title>» et \<h1> la valeur Élément \<h1>.](fr-element-title.png)Il devrait désormais être évident de situer où le contenu de \<h1> apparaît et où celui de `<title>` apparaît !
 
-3.  Vous devriez aussi essayer d'ouvrir ce code dans votre éditeur, modifier le contenu de ces éléments, puis rafraîchir la page dans votre navigateur. Amusez-vous avec ces fonctions.
+3. Vous devriez aussi essayer d'ouvrir ce code dans votre éditeur, modifier le contenu de ces éléments, puis rafraîchir la page dans votre navigateur. Amusez-vous avec ces fonctions.
 
 Le contenu de l'élément `<title>` est aussi utilisé de manières différentes . Par exemple, si vous tentez de marquer cette page dans vos Marques-pages ( _Marques-pages > Marquer cette page_ ou bien l'étoile dans la barre d'outils de Firefox), vous verrez que le contenu de `<title>` est suggéré comme nom pour le marque-page.
 
-![Une page Web marquée dans Firefox ; le nom du signet a été automatiquement rempli avec le contenu de l'élément <title>.](fr-bookmarked.png)
+![Une page Web marquée dans Firefox ; le nom du signet a été automatiquement rempli avec le contenu de l'élément \<title>.](fr-bookmarked.png)
 
 Le contenu de `<title>` est aussi utilisé dans les résultats de recherches, comme vous le verrez ci‑dessous.
 
@@ -137,23 +138,25 @@ Définir une description qui incorpore des mots-clés relatifs au contenu de la 
 
 La description est aussi utilisée dans le résultat des moteurs de recherche. Faisons un exercice pour mieux comprendre.
 
-1.  Allez sur la page d'accueil de [Mozilla Developer Network](/fr/).
-2.  Regardez le source de la page (Clic droit/
+1. Allez sur la page d'accueil de [Mozilla Developer Network](/fr/).
+2. Regardez le source de la page (Clic droit/
 
     <kbd>Ctrl</kbd>
 
     , choissisez « _Code source de la page_ » dans le menu contextuel.)
 
-3.  Trouvez la balise méta `description`. Elle ressemble à ceci :
+3. Trouvez la balise méta `description`. Elle ressemble à ceci :
 
-        <meta name="description" content="MDN Web Docs fournit
-         des informations sur les technologies web ouvertes comme HTML,
-         CSS et les API utilisées pour les sites web et les applications
-         web. On y trouve également de la documentation destinées aux
-         développeurs à propos des produits Mozilla tels que les
-         outils de développement de Firefox.">
+    ```html
+    <meta name="description" content="MDN Web Docs fournit
+      des informations sur les technologies web ouvertes comme HTML,
+      CSS et les API utilisées pour les sites web et les applications
+      web. On y trouve également de la documentation destinées aux
+      développeurs à propos des produits Mozilla tels que les
+      outils de développement de Firefox.">
+    ```
 
-4.  Maintenant, cherchez « Mozilla Developer Network » sur votre moteur de recherche favori (nous avons utilisé Google). Vous remarquerez que le contenu de la `<meta>` description et de l'élément `<title>` sont utilisés dans les résultats de recherche. Cela vaut vraiment la peine !
+4. Maintenant, cherchez « Mozilla Developer Network » sur votre moteur de recherche favori (nous avons utilisé Google). Vous remarquerez que le contenu de la `<meta>` description et de l'élément `<title>` sont utilisés dans les résultats de recherche. Cela vaut vraiment la peine !
 
     ![Une page de recherche Google pour "MDN web docs"](fr-google.png)
 
@@ -193,8 +196,8 @@ La petite favicône, qui existe depuis de nombreuses années, a été la premiè
 
 Une favicône peut être ajoutée à votre page de la façon suivante :
 
-1.  Enregistrez-la dans le même répertoire que la page d'index du site, sous le format `.ico` (la plupart des navigateurs prendront en charge les favicônes dans des formats plus communs comme `.gif` ou `.png`, mais utiliser le format ICO assurera son fonctionnement depuis Internet Explorer 6.)
-2.  Ajoutez la ligne suivante dans votre `<head>` du HTML pour la référencer :
+1. Enregistrez-la dans le même répertoire que la page d'index du site, sous le format `.ico` (la plupart des navigateurs prendront en charge les favicônes dans des formats plus communs comme `.gif` ou `.png`, mais utiliser le format ICO assurera son fonctionnement depuis Internet Explorer 6.)
+2. Ajoutez la ligne suivante dans votre `<head>` du HTML pour la référencer :
 
     ```html
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -243,9 +246,9 @@ Ne vous préoccupez pas de la mise en œuvre de tous ces types d'icônes mainten
 
 ### Apprentissage actif : appliquer des CSS et du JavaScript à une page
 
-1.  Pour commencer cet apprentissage actif, prenez une copie de nos fichiers [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) et [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) , et enregistrez-les sur votre ordinateur dans un même répertoire. Assurez-vous qu'ils sont enregistrés avec les noms et les extensions de fichier corrects.
-2.  Ouvrez le fichier HTML à la fois dans votre navigateur et votre éditeur de texte.
-3.  En suivant les informations fournies ci-dessus, ajoutez les éléments {{htmlelement("link")}} et {{htmlelement("script")}} à votre HTML, afin que les CSS et le JavaScript soient appliqués au HTML.
+1. Pour commencer cet apprentissage actif, prenez une copie de nos fichiers [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) et [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) , et enregistrez-les sur votre ordinateur dans un même répertoire. Assurez-vous qu'ils sont enregistrés avec les noms et les extensions de fichier corrects.
+2. Ouvrez le fichier HTML à la fois dans votre navigateur et votre éditeur de texte.
+3. En suivant les informations fournies ci-dessus, ajoutez les éléments {{htmlelement("link")}} et {{htmlelement("script")}} à votre HTML, afin que les CSS et le JavaScript soient appliqués au HTML.
 
 Si a été fait correctement, après avoir enregistré le HTML, puis actualisé la page, vous verrez que les choses ont changé :
 
@@ -279,15 +282,3 @@ Ces codes sont définis par la norme [ISO 639-1](https://en.wikipedia.org/wiki/I
 Cela marque la fin de notre tour rapide de l'en-tête HTML — il y a beaucoup plus de possibilités ici, mais un panorama exhaustif serait ennuyeux et susceptible de vous embrouiller à ce stade, nous voulions simplement vous donner une idée des éléments les plus courants. Dans l'article suivant, nous allons étudier les fondamentaux du texte HTML.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Getting_started", "Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML
-- [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

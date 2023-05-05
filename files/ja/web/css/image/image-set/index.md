@@ -1,17 +1,9 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
-tags:
-  - CSS
-  - CSS Function
-  - CSS-4 Images
-  - Function
-  - Reference
-  - Web
-translation_of: Web/CSS/image/image-set()
 original_slug: Web/CSS/image/image-set()
-browser-compat: css.types.image.image-set
 ---
+
 {{cssref}}
 
 **`image-set()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)表記で、主に高解像度の画面において、指定されたセットから最も適切な CSS 画像をブラウザーに選択させる方法です。
@@ -47,7 +39,7 @@ where <image-set-option> = [ <image> | <string> ] <resolution> and
 
 {{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-> **Note:** 上記の例では、 `-webkit` の接頭辞が付いた版を Chrome および Safari に対応させるために併用しています。 Firefox 90 では (標準のプロパティを追加していない開発者の互換性を確保するために) `-webkit-image-set()` を `image-set()` の別名として使用する対応が追加されました。
+> **メモ:** 上記の例では、 `-webkit` の接頭辞が付いた版を Chrome および Safari に対応させるために併用しています。 Firefox 90 では (標準のプロパティを追加していない開発者の互換性を確保するために) `-webkit-image-set()` を `image-set()` の別名として使用する対応が追加されました。
 
 ### image-set() を使用して別な画像形式を提供
 

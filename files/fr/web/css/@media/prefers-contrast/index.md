@@ -2,23 +2,25 @@
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
 translation_of: Web/CSS/@media/prefers-contrast
+browser-compat: css.at-rules.media.prefers-contrast
 ---
-{{CSSRef}}{{SeeCompatTable}}{{draft}}
 
-La [caractéristique média](</fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Caractéristiques_média_(media_features)>) **`prefers-contrast`** permet de détecter si l'utilisateur a configuré son système pour utiliser un contraste élevé.
+{{CSSRef}}{{SeeCompatTable}}
+
+La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#caractéristiques_média_media_features) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si l'utilisatrice ou l'utilisateur a configuré son système pour utiliser un contraste élevé (ou faible).
 
 ## Syntaxe
 
 - `no-preference`
-  - : Cette valeur indique que l'utilisateur n'a exprimé aucune préférence particulière. La valeur de ce mot-clé est évaluée à `false` dans un contexte booléen.
-- `high`
-  - : Cette valeur indique que l'utilisateur a configuré son système pour avoir un contraste plus élevé.
-- `low`
-  - : Cette valeur indique que l'utilisateur a configuré son système afin d'avoir un niveau de contraste plus faible.
+  - : Cette valeur indique que qu'aucune préférence particulière n'a été exprimée. La valeur de ce mot-clé est évaluée à `false` dans un contexte booléen.
+- `more`
+  - : Cette valeur indique que le système a été configuré afin d'avoir un contraste plus élevé.
+- `less`
+  - : Cette valeur indique que le système a été configuré afin d'avoir un niveau de contraste plus faible.
 
 ## Préférences utilisateur
 
-À l'heure actuelle, aucun agent utilisateur n'implémente cette fonctionnalité bien que différents systèmes d'exploitation prennent en charge ce type de paramètre.
+Les différents systèmes d'exploitation prennent en charge des réglages de contrastes et les agents utilisateurs peuvent utiliser les valeurs de ces réglages pour déterminer la valeur de cette caractéristique.
 
 ## Exemples
 
@@ -34,32 +36,33 @@ Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
 
 ```css
 .contrast {
-  color: grey;
+  width: 100px;
+  height: 100px;
+  outline: 2px dashed black;
 }
 
-@media (prefers-contrast: high) {
+@media (prefers-contrast: more) {
   .contrast {
-    color: black;
+    outline: 2px solid black;
   }
 }
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("")}}
 
 ## Spécifications
 
-| Specification                                                                                                            | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-contrast', 'prefers-contrast')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.prefers-contrast")}}
+{{Compat}}
 
 ## Voir aussi
 
-- La caractéristique média spécifique à Microsoft [`-ms-high-contrast`](https://msdn.microsoft.com/library/Hh771830)
+- La caractéristique média spécifique à Microsoft [`-ms-high-contrast`](https://docs.microsoft.com/fr-fr/previous-versions/hh771830(v=vs.85))
+- La caractéristique média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}

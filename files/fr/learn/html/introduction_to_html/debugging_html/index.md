@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
 
 Écrire du code HTML, c'est bien, mais si quelque chose se passe mal, que faire pour trouver où est l'erreur dans le code ? Cet article vous indique divers outils pour vous aider à trouver et corriger les erreurs en HTML.
@@ -74,40 +75,42 @@ HTML ne craint pas les erreurs de syntaxe, car les navigateurs l'analysent de ma
 
 Voici le moment venu d'étudier le caractère permissif du code HTML.
 
-1.  Primo, télécharchez notre démo [debug-example](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) et enregistrez‑le localement. Cette démo est délibérement écrite avec des erreurs pour que nous puissions les examiner (le balisage HTML est dit **malformé**, par opposition à **bien-formé**).
-2.  Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
-3.  Constatons que ce n'est pas terrible&nbsp;; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché)&nbsp;:
+1. Primo, télécharchez notre démo [debug-example](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) et enregistrez‑le localement. Cette démo est délibérement écrite avec des erreurs pour que nous puissions les examiner (le balisage HTML est dit **malformé**, par opposition à **bien-formé**).
+2. Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
+3. Constatons que ce n'est pas terrible&nbsp;; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché)&nbsp;:
 
-            <h1>Exemple de HTML à déboguer</h1>
+    ```html
+    <h1>Exemple de HTML à déboguer</h1>
 
-            <p>Quelles sont les causes d'erreur en HTML ?
+    <p>Quelles sont les causes d'erreur en HTML ?
 
-            <ul>
-              <li>Éléments non fermés : si un élément n'est <strong>pas
-                  fermé proprement, ses effets peuvent déborder sur des
-                  zones que vous ne souhaitiez pas.
+    <ul>
+      <li>Éléments non fermés : si un élément n'est <strong>pas
+          fermé proprement, ses effets peuvent déborder sur des
+          zones que vous ne souhaitiez pas.
 
-              <li>Éléments incorrectement imbriqués : imbriquer des
-                  éléments proprement est également très important pour
-                  que le code se comporte correctement.
-                  <strong>caractères gras <em>ou gras et italiques ?</strong>
-                  qu'est‑ce ?</em>
+      <li>Éléments incorrectement imbriqués : imbriquer des
+          éléments proprement est également très important pour
+          que le code se comporte correctement.
+          <strong>caractères gras <em>ou gras et italiques ?</strong>
+          qu'est‑ce ?</em>
 
-              <li>Attributs non fermés : autre source courante de problèmes
-                  en HTML. Voici un exemple: <a href="https://www.mozilla.org/>
-                  lien à la page d'accueil de Mozilla</a>
-            </ul>
+      <li>Attributs non fermés : autre source courante de problèmes
+          en HTML. Voici un exemple: <a href="https://www.mozilla.org">
+          lien à la page d'accueil de Mozilla</a>
+    </ul>
+    ```
 
-4.  Revoyons les problèmes&nbsp;:
+4. Revoyons les problèmes&nbsp;:
 
     - Les élements {{htmlelement("p")}} (paragraphe) et {{htmlelement("li")}} (élément de liste) n'ont pas de balise de fermeture. En voyant l'image ci‑dessus, cela ne semble pas avoir trop sévèrement affecté le rendu, car on voit bien où un élément se termine et où le suivant commence.
     - Le premier élément {{htmlelement("strong")}} n'a pas de balise de fermeture. C'est un peu plus problématique, car il n'est pas possible de dire où l'élément est supposé se terminer. En fait, tout le reste du texte est en gras.
     - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
     - La valeur de l'attribut {{htmlattrxref("href","a")}} n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
 
-5.  Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs).
-6.  Dans l'«&nbsp;Inspecteur&nbsp;», vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;: ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
-7.  Avec l'«&nbsp;Inspecteur&nbsp;», explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox&nbsp;; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
+5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs).
+6. Dans l'«&nbsp;Inspecteur&nbsp;», vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;: ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
+7. Avec l'«&nbsp;Inspecteur&nbsp;», explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox&nbsp;; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
 
     - Les éléments `p` et `li` ont été pourvus de balises fermantes.
     - L'endroit où le premier élément `<strong>` doit être fermé n'est pas clair, donc le navigateur a enveloppé séparément chaque bloc de texte avec ses propres balises `strong`, jusqu'à la fin du document&nbsp;!
@@ -143,10 +146,10 @@ Pour définir le HTML à valider, vous pouvez donner une adresse web (_Validate 
 
 Essayons cet outil avec notre [document exemple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
 
-1.  D'abord, chargez le [Markup Validation Service](https://validator.w3.org/) dans un des onglets du navigateur, si ce n'est déjà fait.
-2.  Basculez sur l'onglet [Validate by Direct Input](https://validator.w3.org/#validate_by_input).
-3.  Copiez la totalité du code du document (pas uniquement l'élément `body`) et collez-le dans la grande zone de texte affichée dans Markup Validation Service.
-4.  Pressez le bouton _Check_.
+1. D'abord, chargez le [Markup Validation Service](https://validator.w3.org/) dans un des onglets du navigateur, si ce n'est déjà fait.
+2. Basculez sur l'onglet [Validate by Direct Input](https://validator.w3.org/#validate_by_input).
+3. Copiez la totalité du code du document (pas uniquement l'élément `body`) et collez-le dans la grande zone de texte affichée dans Markup Validation Service.
+4. Pressez le bouton _Check_.
 
 Cela vous donnera une liste d'erreurs et autres informations.
 
@@ -162,7 +165,9 @@ Les messages d'erreur sont généralement utiles, mais parfois non ; avec un peu
 - «&nbsp;End of file reached when inside an attribute value. Ignoring tag&nbsp;»&nbsp;: c'est peu clair&nbsp;; la remarque se rapporte au fait qu'il y a une valeur d'attribut improprement formée quelque part, peut-être près de la fin du fichier car la fin du fichier apparaît dans la valeur de l'attribut. Le fait que le navigateur ne rende pas le lien est un bon indice pour dire que cet élément est en faute.
 - «&nbsp;End of file seen and there were open elements&nbsp;»&nbsp;: c'est un peu ambigu, mais se réfère au fait qu'à la base des éléments ouverts n'ont pas été proprement fermés. Les numéros de ligne pointent sur les dernières lignes du fichier et ce message d'erreur vient avec une ligne de code qui désigne un exemple d'élément ouvert&nbsp;:
 
-      exemple: <a href="https://www.mozilla.org/>lien à la page d'accueil de Mozilla</a> ↩ </ul>↩ </body>↩</html>
+  ```
+  exemple: <a href="https://www.mozilla.org/>lien à la page d'accueil de Mozilla</a> ↩ </ul>↩ </body>↩</html>
+  ```
 
   > **Note :** un attribut sans guillemet fermant peut entraîner un élément ouvert car le reste du document est interprété comme le contenu de l'attribut.
 
@@ -179,15 +184,3 @@ Vous saurez que toutes vos erreurs sont corrigées quand vous verrez la bannièr
 Voilà donc une introduction au débogage HTML, qui devrait vous donner des compétences utiles sur lesquelles compter lorsque vous commencerez à déboguer des CSS, du JavaScript ou d'autres types de code plus tard dans votre carrière. Ceci marque également la fin des articles d'apprentissage du module Introduction au HTML — maintenant vous pouvez faire un auto‑test avec nos évaluations : le lien ci‑dessous vous dirige sur la première.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fondamentaux du texte HTML](/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/HTML_text_fundamentals)
-- [Creation d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- Déboguer de l'HTML
-- [Faire une Lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

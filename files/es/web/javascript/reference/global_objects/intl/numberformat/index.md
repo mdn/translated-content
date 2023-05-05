@@ -1,10 +1,9 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat
-browser-compat: javascript.builtins.Intl.NumberFormat
 ---
+
 {{JSRef}}
 
 El objecto **`Intl.NumberFormat`** habilita el formato numérico de acuerdo al lenguaje.
@@ -50,7 +49,6 @@ console.log(new Intl.NumberFormat().format(number));
 ```
 
 ### Utilizando la configuración regional
-
 
 Este ejemplo muestra algunas de las variaciones en los formatos de números por región.
 Para obtener el formato del idioma usado en la interfaz de usuario de tu aplicación, asegúrate de especificar dicho idioma (y de ser posible alternativas) utilizando el argumento `locales`:
@@ -103,16 +101,16 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 ### Usando estilos y unidades
 
 ```js
-console.log(new Intl.NumberFormat('pt-PT',  {
-    style: 'unit',
-    unit: 'kilometer-per-hour'
+console.log(new Intl.NumberFormat('pt-PT',  {
+    style: 'unit',
+    unit: 'kilometer-per-hour'
 }).format(50));
 // → 50 km/h
 
 console.log((16).toLocaleString('en-GB', {
-    style: 'unit',
-    unit: 'liter',
-    unitDisplay: 'long'
+    style: 'unit',
+    unit: 'liter',
+    unitDisplay: 'long'
 }));
 // → 16 litros
 ```
@@ -132,4 +130,3 @@ console.log((16).toLocaleString('en-GB', {
 ## Véase también
 
 - {{jsxref("Intl")}}
-

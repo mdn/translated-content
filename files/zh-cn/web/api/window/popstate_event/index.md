@@ -1,18 +1,8 @@
 ---
 title: WindowEventHandlers.onpopstate
 slug: Web/API/Window/popstate_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - HTML5
-  - NeedsSpecTable
-  - Property
-  - Window
-  - events
-translation_of: Web/API/WindowEventHandlers/onpopstate
-original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
+
 {{ApiRef}}
 
 {{domxref("WindowEventHandlers")}} 混入（mixin）中的 `onpopstate` 属性是用于处理 window 对象上的 [`popstate`](/zh-CN/docs/Web/API/Window/popstate_event) 事件的[事件处理程序](/zh-CN/docs/Web/Events/Event_handlers)。

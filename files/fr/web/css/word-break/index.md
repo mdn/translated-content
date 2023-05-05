@@ -4,6 +4,7 @@ slug: Web/CSS/word-break
 translation_of: Web/CSS/word-break
 browser-compat: css.properties.word-break
 ---
+
 {{CSSRef}}
 
 La propriété **`word-break`** est utilisée pour définir la façon dont la césure s'applique pour les endroits où le texte dépasserait de sa boîte de contenu.

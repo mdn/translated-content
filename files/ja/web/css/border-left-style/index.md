@@ -1,22 +1,15 @@
 ---
 title: border-left-style
 slug: Web/CSS/border-left-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-left-style
-translation_of: Web/CSS/border-left-style
 ---
+
 {{CSSRef}}
 
 **`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の {{cssxref("border")}} における線の形状を設定します。
 
 {{EmbedInteractiveExample("pages/css/border-left-style.html")}}
 
-> **Note:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
+> **メモ:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
@@ -116,5 +109,5 @@ tr, td {
 
 ## 関連情報
 
- - その他の形状に関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
- - その他の左側の境界に関するプロパティ: {{Cssxref("border-left")}}, {{Cssxref("border-left-color")}}, {{Cssxref("border-left-width")}}
+- その他の形状に関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
+- その他の左側の境界に関するプロパティ: {{Cssxref("border-left")}}, {{Cssxref("border-left-color")}}, {{Cssxref("border-left-width")}}

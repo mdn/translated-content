@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
 translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
+
 {{APIRef}}
 
 La propriété **CanvasRenderingContext2D.lineCap** de l'API Canvas 2D détermine la façon dont les extrémités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour cette propriété, qui sont : `butt`, `round` et `square`. Par défaut, cette propriété est définie comme `butt`.
@@ -11,9 +12,11 @@ Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canv
 
 ## Syntaxe
 
-    ctx.lineCap = "butt";
-    ctx.lineCap = "round";
-    ctx.lineCap = "square";
+```js
+ctx.lineCap = "butt";
+ctx.lineCap = "round";
+ctx.lineCap = "square";
+```
 
 ### Options
 
@@ -136,17 +139,11 @@ for (var i = 0; i < lineCap.length; i++) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.lineCap")}}
-
-## Notes spécifiques à WebKit/Blink
-
-- Dans les navigateurs basés sur WebKit et Blink, une méthode non-standard et désapprouvée `ctx.setLineCap()` est implémentée en plus de cette propriété.
+{{Compat}}
 
 ## Voir aussi
 

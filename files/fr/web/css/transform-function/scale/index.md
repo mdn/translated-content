@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/scale()
 original_slug: Web/CSS/transform-function/scale()
 browser-compat: css.types.transform-function.scale
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`scale()`** permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
@@ -20,7 +21,6 @@ Lorsque les coordonnées du vecteur sont en dehors de l'intervalle \[`-1, 1]`, l
 ## Syntaxe
 
 La fonction `scale()` s'utilise avec une ou deux valeurs qui indiquent l'échelle à utiliser selon chaque direction.
-
 
 ```css
 scale(sx)

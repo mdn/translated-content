@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/translate
 original_slug: Web/XPath/Fonctions/translate
 ---
+
 {{ XsltRef() }}
 
 La fonction `translate` évalue une chaîne et un ensemble de caractères à traduire, et retourne la chaîne traduite.
 
 ### Syntaxe
 
-    translate( chaîne , abc , XYZ )
+```
+translate( chaîne , abc , XYZ )
+```
 
 ### Arguments
 
@@ -41,21 +44,29 @@ Cependant, `translate` est à l'heure actuelle la fonction la plus proche d'une 
 
 #### Exemple
 
-    <xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'") />
+```xml
+<xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
+```
 
 #### Sortie
 
-    LE RAPIDE RENARD.
+```
+LE RAPIDE RENARD.
+```
 
 - Si `abc` est plus long que `XYZ`, alors chaque occurrence d'un caractère de `abc` qui n'a pas de correspondance dans `XYZ` sera supprimée.
 
 #### Exemple
 
-    <xsl:value-of select="translate('Le renard rapide.', 'renard', 'panda')" />
+```xml
+<xsl:value-of select="translate('Le renard rapide.', 'renard', 'panda')" />
+```
 
 #### Sortie
 
-    La pandp pdpia.
+```
+La pandp pdpia.
+```
 
 - Si `XYZ` contient plus de caractères que `abc`, les caractères supplémentaires sont ignorés.
 

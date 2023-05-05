@@ -1,14 +1,8 @@
 ---
 title: GeolocationCoordinates
 slug: Web/API/GeolocationCoordinates
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - Interface
-  - 安全なコンテキスト
-translation_of: Web/API/GeolocationCoordinates
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates`** インターフェイスは、地球上における端末の位置と高度、およびそれぞれの測位精度を表します。

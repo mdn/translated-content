@@ -1,9 +1,9 @@
 ---
 title: Usando la API de Notificaciones
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 original_slug: Web/API/Notifications_API/Usando_la_API_de_Notificaciones
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La [API de notificaciones](/es/docs/Web/API/Notifications_API) permite que una página web o aplicación envíe notificaciones que se muestran fuera de la página a nivel del sistema; esto permite que las aplicaciones web envíen información a un usuario incluso si la aplicación está inactiva o en segundo plano. Este artículo analiza los aspectos básicos del uso de esta API en tus propias aplicaciones.
@@ -18,7 +18,7 @@ El sistema de notificación del sistema operativo variará, por supuesto, según
 
 Uno de los casos de uso más obvios para las notificaciones web es una aplicación de correo o [IRC (Internet Relay Chat)](/es/docs/Glossary/IRC) basada en la web que necesita notificar al usuario cuando se recibe un mensaje nuevo, incluso si el usuario está haciendo otra cosa con otra aplicación. Ahora existen muchos ejemplos de esto, como [Slack](https://slack.com/).
 
-Hemos escrito un ejemplo del mundo real, una aplicación de lista de tareas, para dar una idea más clara de cómo se pueden usar las notificaciones web. Almacena datos localmente usando la [API IndexedDB](/es/docs/Web/API/IndexedDB_API) y notifica a los usuarios cuando vencen las tareas usando notificaciones del sistema. [Descargue el código de la lista de tareas](https://github.com/mdn/to-do-notifications/tree/gh-pages) o [vea la aplicación ejecutándose en vivo](https://mdn.github.io/to-do-notifications/).
+Hemos escrito un ejemplo del mundo real, una aplicación de lista de tareas, para dar una idea más clara de cómo se pueden usar las notificaciones web. Almacena datos localmente usando la [API IndexedDB](/es/docs/Web/API/IndexedDB_API) y notifica a los usuarios cuando vencen las tareas usando notificaciones del sistema. [Descargue el código de la lista de tareas](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) o [vea la aplicación ejecutándose en vivo](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## Solicitando permisos
 
@@ -119,7 +119,7 @@ function checkNotificationPromise() {
   return true;
 }
 ```
-    
+
 Básicamente tratamos de ver si el método `.then()` está disponible en `requestPermission()`. Si es así, continuamos y devolvemos `true`. Si falla, devolvemos `false` en el bloque `catch() {}`.
 
 ## Crear una notificación
@@ -256,13 +256,12 @@ window.addEventListener('load', function () {
 
 ## Especificaciones
 
-{{Specifications("api.Notification")}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Véase también
 
 - {{ domxref("Notification") }}
-

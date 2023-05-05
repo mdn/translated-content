@@ -5,9 +5,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleTimeString
 browser-compat: javascript.builtins.Date.toLocaleTimeString
 ---
+
 {{JSRef}}
 
-La méthode **`toLocaleTimeString()`** renvoie une chaine de caractères correspondant à l'heure dans la date, exprimée selon une localisation. Les arguments `locales` (définissant la localisation) et `options` permettent aux applications de définir le langage utilisé pour les conventions de format et permettent de personnaliser le comportement de la fonction. 
+La méthode **`toLocaleTimeString()`** renvoie une chaine de caractères correspondant à l'heure dans la date, exprimée selon une localisation. Les arguments `locales` (définissant la localisation) et `options` permettent aux applications de définir le langage utilisé pour les conventions de format et permettent de personnaliser le comportement de la fonction.
 
 Les anciennes implémentations ignorent ces arguments, la locale utilisée et le format de la chaine dépendent uniquement de l'implémentation.
 
@@ -36,7 +37,7 @@ Une chaîne de caractères qui représente l'heure de la date indiquée selon de
 
 ## Performances
 
-Lorsqu'on formate un grand nombre de dates, mieux vaudra créer un objet 
+Lorsqu'on formate un grand nombre de dates, mieux vaudra créer un objet
 [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) et utiliser la fonction fournie par sa propriété [`format`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format)
 property.
 

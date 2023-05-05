@@ -1,19 +1,11 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
-tags:
-  - フォーム入力
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - 入力型
-  - リファレンス
-  - Search
-browser-compat: html.elements.input.input-search
-translation_of: Web/HTML/Element/input/search
+l10n:
+  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Element/input/text) 入力欄と機能的には同じですが、{{Glossary("user agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
 
@@ -22,9 +14,9 @@ translation_of: Web/HTML/Element/input/search
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("値")}}</strong></td>
+      <td><strong><a href="#値">値</a></strong></td>
       <td>
-        検索フィールドに入っている値を表す {{domxref("DOMString")}}。
+        検索フィールドに入っている値を表す文字列。
       </td>
     </tr>
     <tr>
@@ -52,6 +44,10 @@ translation_of: Web/HTML/Element/input/search
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -64,13 +60,13 @@ translation_of: Web/HTML/Element/input/search
 
 ## 値
 
-{{htmlattrxref("value", "input")}} 属性は、テキスト入力欄に入力された現在のテキストの値が入っている {{domxref("DOMString")}} です。 JavaScript では {{domxref("HTMLInputElement.value")}} プロパティを使ってこれを受け取ることができます。
+{{htmlattrxref("value", "input")}} 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement.value")}} プロパティを使ってこれを受け取ることができます。
 
 ```js
 searchTerms = mySearch.value;
 ```
 
-入力欄に検証の制約がない場合（詳しくは{{anch("検証")}}を参照)、値は任意の文字列又は空文字列（`""`) になることがあります。
+入力欄に検証の制約がない場合（詳しくは[検証](#検証)を参照)、値は任意の文字列又は空文字列（`""`) になることがあります。
 
 ## 追加の属性
 
@@ -98,9 +94,9 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **Note:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
-詳細や例については{{anch("Specifying a pattern", "パターンの指定")}}を参照してください。
+詳細や例については[パターンの指定](#パターンの指定)を参照してください。
 
 ### placeholder
 
@@ -108,19 +104,19 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向（{{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **Note:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄（フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄（フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
 
 ### readonly
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
-> **Note:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### size
 
 `size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
-これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 `{{anch("maxlength")}}` 属性を使用してください。
+これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 [`maxlength`](#maxlength) 属性を使用してください。
 
 ### spellcheck
 
@@ -133,7 +129,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 - ""（空文字列) または値なし
   - : スペルチェックについて、要素の既定の動作に従います。これは親の `spellcheck` 設定や、その他の要因に基づくことがあります。
 
-入力欄では、 {{anch("readonly")}} 属性が設定されておらず、かつ無効になっていない場合にスペルチェックを有効にすることができます。
+入力欄では、 [readonly](#readonly) 属性が設定されておらず、かつ無効になっていない場合にスペルチェックを有効にすることができます。
 
 `spellcheck` を読み取ることで返される値は、{{Glossary("user agent", "ユーザーエージェント")}}の設定によって上書きされる場合、コントロール内のスペルチェックの実際の状態を反映しない可能性があります。
 
@@ -160,11 +156,9 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 
 ### mozactionhint
 
-Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。この情報は仮想キーボードの <kbd>Enter</kbd> キーにどのようなラベルを使用するかを決定するために使用されます。
+Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-> **Note:** これはグローバル属性 {{htmlattrxref("enterkeyhint")}} として[標準化されています](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute)が、まだ広くは実装されていません。 Firefox の実装状態の変遷を確認するには、 {{bug(1490661)}} を参照してください。
-
-許可されている値は `go`, `done`, `next`, `search`, `send` です。ブラウザーはこのヒントを使用して、 Enter キーにどのラベルを置くかを決定します。
+この属性は非推奨です。代わりにグローバル属性 {{htmlattrxref("enterkeyhint")}} を使用してください。
 
 ### results
 
@@ -181,7 +175,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q">
+    <input type="search" id="mySearch" name="q" />
     <button>検索</button>
   </div>
 </form>
@@ -199,11 +193,11 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 主な違いはブラウザーによる扱い方です。特筆するべき最初のことは、ブラウザーによっては×印を表示して、クリックすると簡単に検索語を削除できることです。次のスクリーンショットは Chrome のものです。
 
-![](chrome-cross-icon.png)
+![フォーカスリング付きの検索入力で、テキストは 'cats'。入力欄の右横に × のアイコンが並んでいます。](chrome-cross-icon.png)
 
 加えて、最近のブラウザーは以前ドメイン内で入力された検索語を自動的に格納し、そのドメインの検索入力欄で従属的な検索が行われたときに、自動補完オプションに上がってくるようにする傾向があります。これは同じ又は似た検索を繰り返して行う傾向があるユーザーにとって便利です。次のスクリーンショットは Firefox のものです。
 
-![](firefox-auto-complete.png)この点について、検索フォームに適用することができる有用なテクニックを見てみましょう。
+![エラー状態で、フォーカスリングが赤くなっている入力。ユーザーは文字 'h' を入力した。入力ボックスの直下に、 hello と hermansje という 2 つの選択肢を持つポップアップ選択リストが表示されている。](firefox-auto-complete.png)この点について、検索フォームに適用することができる有用なテクニックを見てみましょう。
 
 ### プレイスホルダーの設定
 
@@ -212,8 +206,11 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="サイトを検索...">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="サイトを検索..." />
     <button>検索</button>
   </div>
 </form>
@@ -237,9 +234,12 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ```html
 <form role="search">
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="サイトを検索..."
-     aria-label="Search through site content">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="サイトを検索..."
+      aria-label="Search through site content" />
     <button>検索</button>
   </div>
 </form>
@@ -251,7 +251,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 前回の例から見かけ上の違いはありませんが、画面リーダーのユーザーは追加情報を得る方法があります。
 
-> **Note:** このようなアクセシビリティ機能の詳細ついては、 [Signposts/Landmarks](/ja/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) をご覧ください。
+> **メモ:** このようなアクセシビリティ機能の詳細ついては、 [Signposts/Landmarks](/ja/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) をご覧ください。
 
 ### 物理的な入力要素の寸法
 
@@ -260,8 +260,12 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="サイトを検索..." size="30">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="サイトを検索..."
+      size="30" />
     <button>検索</button>
   </div>
 </form>
@@ -275,23 +279,23 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 `search` 型の `<input>` 要素は、通常の `text` 入力欄と同じ検証機能が利用できます。一般に検索ボックスに検証機能を使うことはあまりないでしょう。多くの場合、ユーザーは何でも入力できますが、既存の形式のデータに対して検索を行う場合など、考慮するべきケースも多少あります。
 
-> **Note:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど) がデータベースに入力された場合に災害が発生するおそれがあります。
+> **メモ:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど) がデータベースに入力された場合に災害が発生するおそれがあります。
 
 ### スタイルにおけるメモ
 
 ユーザーにとって値が妥当かそうでないかが分かりやすくなるように、フォーム要素のスタイル付けに便利な擬似クラスが利用できます。 {{cssxref(":valid")}} および {{cssxref(":invalid")}} です。この節では、以下の CSS を使用して入力欄の値が妥当であれば隣にチェックマークを表示し、妥当な値でなければ隣にバツ（X) マークを表示します。
 
 ```css
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -304,8 +308,12 @@ input:valid ~ span:after {
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="サイトを検索..." required>
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="サイトを検索..."
+      required />
     <button>検索</button>
     <span class="validity"></span>
   </div>
@@ -317,16 +325,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -350,9 +358,15 @@ input:valid ~ span:after {
 <form>
   <div>
     <label for="mySearch">ユーザーを検索</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="ユーザー ID は 4～8 文字です" required
-    size="30" minlength="4" maxlength="8">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="ユーザー ID は 4～8 文字です"
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
     <button>検索</button>
     <span class="validity"></span>
   </div>
@@ -364,16 +378,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -393,9 +407,14 @@ This renders like so:
 <form>
   <div>
     <label for="mySearch">製品 ID で検索:</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="2 文字に続いて 4 桁の数字" required
-    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="2 文字に続いて 4 桁の数字"
+      required
+      size="30"
+      pattern="[A-z]{2}[0-9]{4}" />
     <button>検索</button>
     <span class="validity"></span>
   </div>
@@ -407,16 +426,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -426,7 +445,7 @@ input:valid ~ span:after {
 
 ## 例
 
-[website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) の例ので使用した検索フォーム（[ライブで見る](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）が良い例です。
+[website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) の例ので使用した検索フォーム（[ライブで見る](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）が良い例です。
 
 ## 仕様書
 

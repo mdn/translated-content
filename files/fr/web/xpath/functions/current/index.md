@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/current
 original_slug: Web/XPath/Fonctions/current
 ---
+
 {{ XsltRef() }}
 
 La fonction `current` peut être utilisée pour obtenir le nœud courant dans une instruction XSLT.
 
 ### Syntaxe
 
-    current()
+```
+current()
+```
 
 ### Retour
 
@@ -24,11 +27,13 @@ Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas parti
 
 Le nœud courant est toujours identique au nœud de contexte. Les deux exemples suivants sont sémantiquement équivalents&nbsp;:
 
-    <xsl:value-of select="current()"/>
+```xml
+<xsl:value-of select="current()"/>
+```
 
-<!---->
-
-    <xsl:value-of select="."/>
+```xml
+<xsl:value-of select="."/>
+```
 
 ### Définition
 

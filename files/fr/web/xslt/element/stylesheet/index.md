@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/stylesheet
 original_slug: Web/XSLT/stylesheet
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:stylesheet>` (ou son équivalent `<xsl:transform>`) est l'élément le plus externe d'une feuille de style, celui qui contient tout les autres éléments.
@@ -16,14 +17,16 @@ Un pseudo-attribut est nécessaire pour identifier le document comme étant une 
 
 ### Syntaxe
 
-    <xsl:stylesheet
-    	version=NOMBRE
-    	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    	id=NOM
-    	extension-element-prefixes=LISTE-DE-NOMS
-    	exclude-result-prefixes=LISTE-DE-NOMS>
-    		FEUILLE DE STYLE ENTIÈRE
-    </xsl:stylesheet>
+```xml
+<xsl:stylesheet
+  version=NOMBRE
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  id=NOM
+  extension-element-prefixes=LISTE-DE-NOMS
+  exclude-result-prefixes=LISTE-DE-NOMS>
+    FEUILLE DE STYLE ENTIÈRE
+</xsl:stylesheet>
+```
 
 ### Attribut obligatoire
 

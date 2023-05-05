@@ -2,24 +2,16 @@
 title: React todo list 시작하기
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
-tags:
-  - App
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - Style
-  - client-side
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 여러분이 React로 개념 증명을 만드는, 곧 사용자가 원하는 작업을 추가, 편집, 그리고 삭제할 수 있으며, 작업을 삭제하지 않고 완료로 표시할 수도 있는 앱을 만드는 작업을 맡게 되었다고 가정해 보겠습니다. 이 기사는 기본 `App` 컴포넌트 구조와 스타일링을 설정하는 방법에 대해서 다루며, 여러분은 개별 컴포넌트 정의와 상호작용성을 배울 준비를 갖추게 될 겁니다.
 
-<div class="notecard note">
-<p class="summary"><strong>참고</strong>: 여러분의 코드를 우리의 것과 비교하고 싶다면 <a href="https://github.com/mdn/todo-react">todo-react repository</a>에서 최종적인 버전의 샘플 React 앱 코드를 확인해보세요. 실행 중인 라이브 버전은 <a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>에서 볼 수 있습니다.</p></div>
+> **참고:** 여러분의 코드를 우리의 것과 비교하고 싶다면 [todo-react repository](https://github.com/mdn/todo-react) 에서 최종적인 버전의 샘플 React 앱 코드를 확인해보세요. 실행 중인 라이브 버전은 <https://mdn.github.io/todo-react-build/> 에서 볼 수 있습니다.
+
 <table class="learn-box standard-table">
  <tbody>
   <tr>
@@ -35,9 +27,6 @@ tags:
  </tbody>
 </table>
 
-
-
-
 ## 우리가 만들 애플리케이션의 유저 스토리
 
 소프트웨어 개발에서 유저 스토리(user story)는 사용자의 관점에서 실행 가능한 목표를 뜻합니다. 개발을 시작하기 전에 유저 스토리를 정의하는 것은 매우 도움이 됩니다. 우리의 애플리케이션은 다음과 같은 스토리를 만족해야 합니다:
@@ -52,8 +41,6 @@ tags:
 - 작업을 특정한 집합으로 나누어 보기: 전체 작업, 진행 중인 작업, 혹은 완료된 작업들.
 
 이 스토리들을 하나하나 다뤄보겠습니다.
-
-
 
 ## 프로젝트를 실행하기 전 점검하기
 
@@ -78,13 +65,9 @@ cd ..
 - 삭제하려는 파일 중 두 개는 애플리케이션을 테스트하기 위해 사용됩니다. 이 기사에서는 테스팅에 대해 다루지 않습니다.
 - 위의 터미널 작업을 수행하기 위해 서버를 멈추었다면, `npm start`를 사용하여 다시 시작해야 합니다.
 
-
-
 ## 프로젝트 시작 코드
 
 프로젝트를 시작하기 위해 여러분이 지금 가지고 있는 것을 대신할 `App()` 함수와 애플리케이션을 꾸밀 CSS를 제공하겠습니다.
-
-
 
 ### JSX
 
@@ -191,7 +174,7 @@ function App(props) {
 }
 ```
 
-이제 `public/index.html`을 열고 [`<title>`](/en-US/docs/Web/HTML/Element/title) 요소의 텍스트를 `TodoMatic`으로 바꾸세요. 이렇게 하면 우리의 애플리케이션 상단의 [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements)과 일치할 겁니다.
+이제 `public/index.html`을 열고 [`<title>`](/ko/docs/Web/HTML/Element/title) 요소의 텍스트를 `TodoMatic`으로 바꾸세요. 이렇게 하면 우리의 애플리케이션 상단의 [`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements)과 일치할 겁니다.
 
 ```js
 <title>TodoMatic</title>
@@ -203,14 +186,12 @@ function App(props) {
 
 예쁘지 않고 아무런 기능도 갖추지 않았지만, 괜찮습니다! 곧 꾸밀 거니까요. 우선, JSX가 유저 스토리에 어떻게 대응하는지 살펴봅시다:
 
-- 새로운 작업을 쓰기 위한 [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)와 폼(form)을 제출하기 위한 버튼을 가진 [`<form>`](/en-US/docs/Web/HTML/Element/form) 요소가 있습니다.
+- 새로운 작업을 쓰기 위한 [`<input type="text">`](/ko/docs/Web/HTML/Element/input/text)와 폼(form)을 제출하기 위한 버튼을 가진 [`<form>`](/ko/docs/Web/HTML/Element/form) 요소가 있습니다.
 - 작업을 필터링하기 위한 여러 개의 버튼이 있습니다.
 - 작업이 몇 개 남아있는지 알려주는 헤딩(heading)이 있습니다.
-- 순서가 매겨지지 않은 세 개의 작업이 있습니다. 각각의 작업은 리스트 아이템([`<li>`](/en-US/docs/Web/HTML/Element/li))이며, 편집하거나 삭제하기 위한 버튼과 완료를 표시할 체크 박스를 가지고 있습니다.
+- 순서가 매겨지지 않은 세 개의 작업이 있습니다. 각각의 작업은 리스트 아이템([`<li>`](/ko/docs/Web/HTML/Element/li))이며, 편집하거나 삭제하기 위한 버튼과 완료를 표시할 체크 박스를 가지고 있습니다.
 
 폼은 작업을 *만들* 수 있게 해줍니다; 버튼들은 작업들을 *필터링할* 수 있게 해줍니다; 헤딩과 리스트는 작업들을 *읽을* 수 있게 해줍니다. 작업을 *편집하는* UI는 현재는 없습니다. 이것도 괜찮습니다 – 나중에 만들 거니까요.
-
-
 
 ### 접근성 기능
 
@@ -228,7 +209,7 @@ function App(props) {
 
 클래스 `visually-hidden`는 아직 CSS를 연결하지 않았으므로 아직 아무런 이펙트도 없습니다. 제대로 스타일을 설정하면 이 클래스를 가진 모든 요소가 시력이 정상인 사용자에게는 숨겨지며 스크린 리더 사용자에게만 보입니다 — 이 단어들은 시력이 정상인 사용자들에게 필요하지 않기 때문입니다; 단어들은 추가적인 시각적 맥락(visual context)을 가지고 있지 않은 스크린 리더 사용자들에게 버튼이 무엇을 하는지 더 많은 정보를 제공합니다.
 
-아래에서 [`<ul>`](/en-US/docs/Web/HTML/Element/ul) 요소를 찾을 수 있을 겁니다.
+아래에서 [`<ul>`](/ko/docs/Web/HTML/Element/ul) 요소를 찾을 수 있을 겁니다.
 
 ```js
 <ul
@@ -238,7 +219,7 @@ function App(props) {
 >
 ```
 
-`role` 속성은 보조 기술이 태그가 나타내고 있는 요소의 종류가 무엇인지 설명하는 데 도움이 됩니다. `<ul>`은 기본적으로 리스트처럼 취급되지만, 우리가 추가할 스타일은 리스트의 기능성을 해칩니다. `role="list"`는 `<ul>` 요소가  "리스트"의 의미를 회복하도록 합니다. 이것이 왜 필요한지 알고 싶다면, [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)을 참고하세요.
+`role` 속성은 보조 기술이 태그가 나타내고 있는 요소의 종류가 무엇인지 설명하는 데 도움이 됩니다. `<ul>`은 기본적으로 리스트처럼 취급되지만, 우리가 추가할 스타일은 리스트의 기능성을 해칩니다. `role="list"`는 `<ul>` 요소가 "리스트"의 의미를 회복하도록 합니다. 이것이 왜 필요한지 알고 싶다면, [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)을 참고하세요.
 
 `aria-labelledby` 속성은 보조 기술에게 리스트 헤딩을 헤딩 아래의 리스트의 목적을 나타내는 라벨로 사용하고 있음을 알립니다. 이러한 연관을 만드는 것은 리스트가 더욱 정보가 많은 맥락을 가지게 하여, 스크린 리더 사용자가 리스트의 목적을 더 잘 이해할 수 있도록 합니다.
 
@@ -561,75 +542,8 @@ body {
 
 코드를 저장하고 브라우저로 되돌아오면, 이제 애플리케이션은 적당한 스타일을 가지게 될 겁니다.
 
-
-
 ## 요약
 
 이제 우리의 투두 리스트는 조금 더 진짜 애플리케이션 같아졌습니다! 문제는, 이 앱이 실제로는 아무것도 하지 않는다는 거죠. 다음 챕터에서 해결해봅시다!
 
-
-
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-<h2 id="In_this_module">In this module</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>

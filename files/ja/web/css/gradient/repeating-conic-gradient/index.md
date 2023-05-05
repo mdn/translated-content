@@ -1,20 +1,9 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-translation_of: Web/CSS/gradient/repeating-conic-gradient()
 original_slug: Web/CSS/gradient/repeating-conic-gradient()
-browser-compat: css.types.image.gradient.repeating-conic-gradient
 ---
+
 {{CSSRef}}
 
 **`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 ([単一のグラデーション](conic-gradient())ではなく) 繰り返しのグラデーションからなる、色の遷移が (中心から[放射状に広がるのではなく](repeating-radial-gradient\(\))) 中心点の周りを回転する画像を生成します。
@@ -44,7 +33,7 @@ background: repeating-conic-gradient(
 - `<color-hint>`
   - : 隣接する色経由点の間でグラデーションがどのように進行するかを定義する補間のヒントです。長さは、 2 つの色経由点の間のどの位置でグラデーションの色が色の遷移の中間点に到達するかを定義します。省略した場合、色の遷移の中間点は 2 つの色経由点間の中間点になります。
 
-> **Note:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
+> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じ規則に従います。
 
 ## 解説
 
@@ -56,7 +45,7 @@ background: repeating-conic-gradient(
 
 `<gradient>` は `<image>` データ型に属するため、 `<image>` が使用できるところでしか使用できません。このため、 `conic-gradient()` は {{CSSxRef("background-color")}} や、その他の {{CSSxRef("&lt;color&gt;")}} データ型を使用するプロパティでは動作しません。</p>
 
-> **Note:** 反復しない扇形グラデーションを作成するには、グラデーションを 360 度の回転にするか、 {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} 関数を使用するかしてください。
+> **メモ:** 反復しない扇形グラデーションを作成するには、グラデーションを 360 度の回転にするか、 {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} 関数を使用するかしてください。
 
 ### 反復扇形グラデーションの理解
 
@@ -66,13 +55,15 @@ repeating-conic-gradient の構文は、 {{cssxref("gradient/conic-gradient()", 
 
 上記のグラデーションは 3 分の 1 が青、 3 分の 1 が赤、 3 分の 1 が黄色として定義されています。
 
-    repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
+```css
+repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
 
-    repeating-radial-gradient(red 0 8%, yellow 8% 16%, blue 16% 24%);
+repeating-radial-gradient(red 0 8%, yellow 8% 16%, blue 16% 24%);
 
-    conic-gradient(red 120deg, yellow 120deg 240deg, blue 240deg);
+conic-gradient(red 120deg, yellow 120deg 240deg, blue 240deg);
 
-    radial-gradient(red 33%, yellow 33% 66%, blue 66%);
+radial-gradient(red 33%, yellow 33% 66%, blue 66%);
+```
 
 反復グラデーションを繰り返すためには、最初と最後の色経由点を定義します。繰り返さないグラデーションと同様に、最初と最後の色経由点は、明示的に宣言されていない場合、 0 と 100% または 360deg のいずれかであると仮定されます。これらの値を既定値とした場合、反復アークは360度となるため、繰り返されません。
 

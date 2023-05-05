@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/p
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont [des éléments blocs](/fr/docs/Web/HTML/Éléments_en_bloc).
 
@@ -92,7 +93,7 @@ p {
       <td>
         La balise de début est obligatoire. La balise de fin peut être absente
         si l'élément {{HTMLElement("p")}} est immédiatement suivi d'un
-        élément  {{HTMLElement("address")}},
+        élément {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
         {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
         {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},
@@ -132,15 +133,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                                                    |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}         | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation depuis la spécification W3C {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}     | Obsolescence de l'attribut `align`.                                                                             |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}                 | {{Spec2('HTML4.01')}}     | Définition intiale.                                                                                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.p")}}
+{{Compat}}
 
 ## Voir aussi
 

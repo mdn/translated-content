@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/CSS/Styling_text/Fundamentals
 original_slug: Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 Dans cet article, nous allons commencer le voyage vers la maîtrise des styles du texte avec {{glossary("CSS")}}. Nous passerons en revue les principes de base de mise en forme du texte, y compris la graisse, la famille et le style de police, les codes d'abréviation, l'alignement du texte et autres effets, ainsi que l'espacement des lignes et des lettres.
@@ -43,7 +44,7 @@ Dans cet article, nous allons commencer le voyage vers la maîtrise des styles d
 
 Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'un élément est placé à l'intérieur de la boîte de contenu de cet élément. Il débute en haut à gauche de cette zone (ou en haut à droite, dans le cas des contenus en langues s'écrivant de droite à gauche) et se poursuit vers la fin de la ligne. Arrivé en bout de ligne, il descend à la ligne suivante et continue, puis va à la ligne suivante, jusqu'à ce que tout le contenu ait été placé. Les contenus textuels se comportent comme une suite d'éléments en ligne placés les uns à côté des autres. Aucun saut de ligne n'est créé avant que la fin de la ligne soit atteinte, sauf si vous forcez manuellement le saut de ligne avec l'élément {{htmlelement("br")}}.
 
-> **Note :** si le paragraphe ci‑dessus vous paraît confus,  pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
+> **Note :** si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
 
 Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
 
@@ -339,10 +340,10 @@ text-shadow: 4px 4px 5px red;
 
 Les 4 propriétés sont les suivantes :
 
-1.  Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
-2.  Le décalage vertical de l'ombre par rapport au texte original — cette grandeur se comporte à la base comme la précédente, sauf que l'ombre est portée vers le haut ou vers le bas, et non vers la gauche ou la droite. Cette valeur doit être précisée.
-3.  Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS.
-4.  La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
+1. Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
+2. Le décalage vertical de l'ombre par rapport au texte original — cette grandeur se comporte à la base comme la précédente, sauf que l'ombre est portée vers le haut ou vers le bas, et non vers la gauche ou la droite. Cette valeur doit être précisée.
+3. Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS.
+4. La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
 
 > **Note :** Les valeurs positives de décalage déplacent l'ombre à droite et en bas, mais vous pouvez aussi utiliser des valeurs négatives pour obtenir une ombre à gauche et en haut, par exemple `-1px -1px`.
 
@@ -467,7 +468,7 @@ La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne d
 line-height: 1.5;
 ```
 
-En appliquant cette règle à l'élément {{htmlelement("p")}}  de l'exemple, nous obtenons :
+En appliquant cette règle à l'élément {{htmlelement("p")}} de l'exemple, nous obtenons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>
@@ -682,11 +683,3 @@ window.addEventListener("load", drawOutput);
 Nous espérons que vous avez aimé jouer avec le texte dans cet article ! Le prochain article vous donnera tout ce que vous devez savoir sur le style des listes HTML.
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## Dans ce module
-
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens)
-- [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composition d'une page d'accueil d'une école communale](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

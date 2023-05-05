@@ -3,7 +3,8 @@ title: Optimisation des performances en CSS
 slug: Learn/Performance/CSS
 translation_of: Learn/Performance/CSS
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}} {{draft}}
+
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
 
 Peindre une page non stylisée, puis la repeindre une fois les styles analysés constituerait une mauvaise expérience pour l'utilisateur. C'est pourquoi les feuilles de style CSS bloquent le rendu, sauf si le navigateur sait que les feuilles de style CSS ne sont pas nécessaires. Le navigateur peut peindre la page une fois qu'il a téléchargé le CSS et construit le modèle objet CSS. Les navigateurs suivent un chemin de rendu spécifique : la peinture n'intervient qu'après la mise en page, qui intervient après la création de l'arbre de rendu, qui nécessite à son tour les arbres DOM et CSSOM. Pour optimiser la construction du CSSOM, il faut supprimer les styles inutiles, les minifier, les compresser et les mettre en cache, et répartir les CSS qui ne sont pas nécessaires au chargement de la page dans des fichiers supplémentaires afin de réduire le blocage du rendu CSS.
 
@@ -61,21 +62,6 @@ Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruci
 Enfin, les outils de développement du navigateur sont à votre disposition pour vous aider à cibler les étapes chronophages qui ralentissent le rendu de vos pages et gagner encore en efficacité, au prix parfois de quelques compromis.
 
 {{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
-
-## Dans ce module
-
-- [Le « pourquoi » des performances web](/fr/docs/Learn/Performance/why_web_performance)
-- [Que sont les performances web ?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [Comment les internautes perçoivent-ils les performances ?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimédia : images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimédia : vidéos](/fr/docs/Learn/Performance/video)
-- [Bonnes pratiques Javascript en matière de performance](/fr/docs/Learn/Performance/JavaScript)
-- [Fonctionnalité HTML pour la performance](/fr/docs/Learn/Performance/HTML)
-- [Optimisation des performances en CSS](/fr/docs/Learn/Performance/CSS)
-- [Performance et polices](/fr/docs/Learn/Performance/Fonts)
-- [Performance sur mobile](/fr/docs/Learn/Performance/Mobile)
-- [Placer le focus sur les performances](/fr/docs/Learn/Performance/business_case_for_performance)
 
 ## Voir aussi
 

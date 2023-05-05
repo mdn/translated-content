@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MAX_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 La constante **`Number.MAX_SAFE_INTEGER`** représente la valeur (sûre) maximale d’un nombre entier en JavaScript (2^53 -1).
@@ -37,14 +38,11 @@ Math.pow(2, 53) -1      // 9007199254740991
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.MAX_SAFE_INTEGER")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,15 +3,16 @@ title: Codes de réponse HTTP
 slug: Web/HTTP/Status
 translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/Web/HTTP) a été exécutée avec succès ou non. Les réponses sont regroupées en cinq classes&nbsp;:
 
-1.  [Les réponses informatives](#réponses_informatives) (`100` - `199`),
-2.  [Les réponses de succès](#réponses_de_succès) (`200` - `299`),
-3.  [Les messages de redirection](#messages_de_redirection) (`300` - `399`),
-4.  [Les erreurs du client](#réponses_derreur_côté_client) (`400` - `499`),
-5.  [Les erreurs du serveur](#réponses_derreur_côté_serveur) (`500` - `599`).
+1. [Les réponses informatives](#réponses_informatives) (`100` - `199`),
+2. [Les réponses de succès](#réponses_de_succès) (`200` - `299`),
+3. [Les messages de redirection](#messages_de_redirection) (`300` - `399`),
+4. [Les erreurs du client](#réponses_derreur_côté_client) (`400` - `499`),
+5. [Les erreurs du serveur](#réponses_derreur_côté_serveur) (`500` - `599`).
 
 ## Réponses informatives
 
@@ -30,7 +31,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
   - : La requête a réussi. La signification du succès peut varier selon la méthode HTTP&nbsp;:
 
     - `GET`&nbsp;: La ressource a été récupérée et est retransmise dans le corps du message.
-    - `HEAD`&nbsp;: Les en-têtes d'entité sont présents dans la réponse et il n'y a pas de corps. 
+    - `HEAD`&nbsp;: Les en-têtes d'entité sont présents dans la réponse et il n'y a pas de corps.
     - `PUT` ou `POST`&nbsp;: La ressource décrivant le résultat de l'action est transmise dans le corps du message.
     - `TRACE`&nbsp;: Le corps du message contient le message de requête tel que reçu par le serveur.
 
@@ -162,7 +163,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## Voir aussi
 

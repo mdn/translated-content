@@ -9,13 +9,16 @@ tags:
   - Service Workers
 translation_of: Web/API/ExtendableMessageEvent/data
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La propriété **`data`** est une propriété en lecture seule rattachée à l'interface {{domxref("ExtendableMessageEvent")}} et qui permet d'accéder aux données de l'évènement. Il peut s'agir de n'importe quel type de donnée.
 
 ## Syntaxe
 
-    var mesDonnees = ExtendableMessageEventInstance.data;
+```js
+var mesDonnees = ExtendableMessageEventInstance.data;
+```
 
 ### Valeur
 
@@ -46,13 +49,11 @@ self.onmessage = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                 | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendablemessage-event-data-attribute', 'ExtendableMessageEvent.data')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableMessageEvent.data")}}
+{{Compat}}
 
 ## Voir aussi
 

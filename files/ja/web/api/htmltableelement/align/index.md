@@ -1,18 +1,8 @@
 ---
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
-tags:
-  - API
-  - 非推奨
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLTableElement.align
-translation_of: Web/API/HTMLTableElement/align
 ---
+
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 **`HTMLTableElement.align`** プロパティは、表の配置を表します。

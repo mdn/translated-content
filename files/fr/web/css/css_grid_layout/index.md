@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Grid_Layout
 ---
+
 {{CSSRef}}
 
 Le module **_CSS Grid layout_** (modèle de disposition en grille) est un module de la spécification CSS qui permet de créer des mises en page en divisant l'espace d'affichage en régions utilisables par une application ou en définissant des relations de taille, position et d'empilement entre les éléments HTML.
@@ -155,7 +156,4 @@ Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires                                                                                                  |
-| ------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Grid 2')}} | {{Spec2("CSS Grid 2")}} | Ajout des [« sous-grilles » (_subgrids_)](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base#Sous-grille). |
-| {{SpecName('CSS3 Grid')}}     | {{Spec2('CSS3 Grid')}}     | Définition initiale.                                                                                          |
+{{Specifications}}

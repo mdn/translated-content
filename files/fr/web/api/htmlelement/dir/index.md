@@ -1,50 +1,52 @@
 ---
-title: element.dir
+title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/dir
+browser-compat: api.HTMLElement.dir
 ---
-{{ ApiRef() }}
 
-## Résumé
+{{ApiRef("HTML DOM")}}
 
-L'attribut **`dir`** obtient ou définit la direction d'écriture du texte pour le contenu de l'élément courant.
+La propriété **`HTMLElement.dir`** permet d'obtenir ou de modifier la direction d'écriture du texte du contenu de l'élément courant.
 
-## Syntaxe et valeurs
+La direction d'écriture du texte d'un élément est celle selon laquelle le texte est écrit, ce qui permet de prendre en charge différents systèmes d'écriture. Les langues arabes et hébraïques sont notamment écrites de droite à gauche.
+
+Lorsque la propriété `dir` d'une image vaut `rtl`, ce qui indique que les attributs HTML `title` et `alt` seront mis en forme avec un mode d'écriture de droite à gauche.
+
+Lorsque la propriété `dir` d'un tableau vaut `rtl`, l'ordre des colonnes est arrangé de droite à gauche.
+
+Lorsqua la propriété `dir` d'un élément vaut `auto`, la direction de l'élément est déterminée selon son premier caractère de direction fort ou, par défaut, la direction d'écriture de son élément parent.
+
+> **Note :** Les navigateurs peuvent permettre aux utilisatrices et utilisateurs de modifier la direction d'écriture des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) afin de faciliter l'édition du contenu. Chrome et Safari fournissent une option via le menu contextuel des champs de saisie, Internet Explorer et Edge (ancienne version) utilisent la combinaison de touches <kbd>Ctrl</kbd> + <kbd>Maj gauche</kbd> et <kbd>Ctrl</kbd> + <kbd>Maj droit</kbd>. Firefox utilise <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Maj</kbd> + <kbd>X</kbd> mais *ne* met *pas* à jour la valeur de l'attribut **`dir`**.
+
+## Valeur
+
+Cette propriété peut avoir une de ces valeurs&nbsp;:
+
+- `ltr`, pour l'écriture de gauche à droite (<i lang="en">left-to-right</i> en anglais qui donne `ltr`)
+- `rtl`, pour l'écriture de droite à gauche (<i lang="en">right-to-left</i> en anglais qui donne `rtl`)
+- `auto` pour indiquer la direction de l'élément, telle que déterminée par le moteur selon le contenu de l'élément.
+
+## Exemples
 
 ```js
-var DirectionActuelle = referenceElement.dir;
-referenceElement.dir = NouvelleDirection;
+const parg = document.getElementById('para1');
+parg.dir = 'rtl';
+// on modifie la direction du texte d'un paragraphe
+// portant l'identifiant "para1"
 ```
 
-_DirectionActuelle_ est une variable chaîne de caractères représentant la direction d'écriture du texte pour l'élément courant. _NouvelleDirection_ est une variable chaîne de caractères représentant la nouvelle direction d'écriture du texte souhaitée pour l'élément.
+## Spécifications
 
-Les valeurs possibles pour **`dir`** sont **`ltr`**, pour de gauche à droite (_left-to-right_), et **`rtl`**, pour de droite à gauche (_right-to-left_).
+{{Specifications}}
 
-## Exemple
+## Compatibilité des navigateurs
 
-```js
-var para = document.getElementById("para1");
-para.dir = "rtl";
-// change la direction du texte sur un paragraphe identifié par "para1"
-```
+{{Compat}}
 
-## Notes
+## Voir aussi
 
-La direction d'écriture du texte sur un élément est celle dans laquelle le texte est disposé (pour permettre le support de systèmes multilingues). Les langues arabes et l'hébreu sont des exemples typiques de langues qui utiliseront la direction «&nbsp;rtl&nbsp;» (de droite à gauche).
-
-Une image peut avoir sont attribut `dir` positionné à «&nbsp;rtl&nbsp;», auquel cas les attributs `title` et `alt` seront formatés et définis comme allant de droite à gauche.
-
-Lorsqu'un tableau a sa direction définie comme «&nbsp;rtl&nbsp;», l'ordre des colonnes va de droite à gauche.
-
-{{ gecko_callout_heading("7.0") }}
-
-Avant Gecko 7.0 {{ geckoRelease("7.0") }}, il était possible que la valeur renvoyée ne soit pas toujours en minuscule. A partir de Gecko 7.0, la valeur renvoyée est toujours en minuscule, comme défini dans la spécification.
-
-## Spécification
-
-| Spécification                                                                                                                                                                  | Statut                       | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('DOM2 HTML', 'html.html#ID-52460740', 'dir')}} — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-52460740) (non normative) | {{Spec2('DOM2 HTML')}} |             |
+- [`document.dir`](/fr/docs/Web/API/document/dir)
+- L'attribut universel HTML [`dir`](/fr/docs/Web/HTML/Global_attributes/dir)
+- La propriété CSS [`direction`](/fr/docs/Web/CSS/direction)
+- La pseudo-classe CSS [`:dir`](/fr/docs/Web/CSS/:dir)

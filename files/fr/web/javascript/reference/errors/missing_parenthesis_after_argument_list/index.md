@@ -8,20 +8,21 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_parenthesis_after_argument_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    SyntaxError: Expected ')' (Edge)
-    SyntaxError: missing ) after argument list (Firefox)
+```
+SyntaxError: Expected ')' (Edge)
+SyntaxError: missing ) after argument list (Firefox)
+```
 
 ## Type d'erreur
 
 {{jsxref("SyntaxError")}}.
 
 ## Quel est le problème ?
-
-
 
 Il y a une erreur avec la façon dont une fonction est appelée . Cela peut être une faute de frappe, un opérateur manquant, ou une chaîne non-échappée, par exemple .
 

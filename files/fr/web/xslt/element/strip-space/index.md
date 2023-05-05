@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XSLT/Element/strip-space
 original_slug: Web/XSLT/strip-space
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:strip-space>` définit les éléments du document source dont les noeuds descendants ne contenant que des espaces doivent être supprimés.
 
 ### Syntaxe
 
-    <xsl:strip-space elements=LISTE-DE-NOMS-D-ÉLÉMENTS  />
+```xml
+<xsl:strip-space elements=LISTE-DE-NOMS-D-ÉLÉMENTS  />
+```
 
 ### Attribut obligatoire
 

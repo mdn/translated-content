@@ -11,18 +11,19 @@ tags:
   - Services
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/services
 ---
+
 {{AddonSidebar}}
 
-La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres liés à la vie privée contrôlant les services offerts par le navigateur ou par des tiers. Chaque propriété est un objet  {{WebExtAPIRef("types.BrowserSetting")}}.
+La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres liés à la vie privée contrôlant les services offerts par le navigateur ou par des tiers. Chaque propriété est un objet {{WebExtAPIRef("types.BrowserSetting")}}.
 
 ## Propriétés
 
 - `passwordSavingEnabled`
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à `true`, le gestionnaire de mot de passe du navigateur proposera de stocker des mots de passe lorsque l'utilisateur les entrera. La valeur par défaut est : `true`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy.services", 10)}}
+{{Compat}}
 
 ## Exemples
 

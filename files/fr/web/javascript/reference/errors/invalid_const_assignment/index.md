@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 original_slug: Web/JavaScript/Reference/Erreurs/Invalid_const_assignment
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: invalid assignment to const "x" (Firefox)
-    TypeError: Assignment to constant variable. (Chrome)
-    TypeError: Redeclaration of const 'x' (Edge)
+```
+TypeError: invalid assignment to const "x" (Firefox)
+TypeError: Assignment to constant variable. (Chrome)
+TypeError: Redeclaration of const 'x' (Edge)
+```
 
 ## Type d'erreur
 

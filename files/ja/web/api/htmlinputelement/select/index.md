@@ -1,16 +1,8 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - NeedsCompatTable
-  - リファレンス
-browser-compat: api.HTMLInputElement.select
-translation_of: Web/API/HTMLInputElement/select
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement.select()`** メソッドは、{{HTMLElement("textarea")}} 要素またはテキストフィールドを含む {{HTMLElement("input")}} 要素内のすべてのテキストを選択します。

@@ -1,16 +1,9 @@
 ---
 title: contrast()
 slug: Web/CSS/filter-function/contrast
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/contrast()
 original_slug: Web/CSS/filter-function/contrast()
-browser-compat: css.types.filter-function.contrast
 ---
+
 {{CSSRef}}
 
 **`contrast()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像のコントラストを調整します。結果は {{cssxref("&lt;filter-function&gt;")}} です。

@@ -1,14 +1,8 @@
 ---
 title: CookieStore.get()
 slug: Web/API/CookieStore/get
-tags:
-  - API
-  - Method
-  - Reference
-  - get()
-  - CookieStore
-browser-compat: api.CookieStore.get
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
 {{Domxref("CookieStore")}} インターフェイスの **`get()`** メソッドは、与えられた名前またはオプションオブジェクトを持つ 1 つの Cookie を返します（下記参照）。このメソッドは渡されたパラメータに最初にマッチする Cookie を返します。
@@ -35,7 +29,7 @@ var cookie = CookieStore.get(options);
     - `url`
       - : Cookie の URL が入っている {{domxref("USVString")}} です。
 
-> **Note:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。ドキュメントからは現在の URL の Cookie しか取得できないので、ドキュメントコンテキストで有効な URL はドキュメントの URL のみとなります。
+> **メモ:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。ドキュメントからは現在の URL の Cookie しか取得できないので、ドキュメントコンテキストで有効な URL はドキュメントの URL のみとなります。
 
 ### 返値
 
@@ -64,7 +58,7 @@ var cookie = CookieStore.get(options);
     - `"none"`
       - : Cookie は、すべてのコンテキストで送信されます。
 
-    > **Note:** SameSite cookies の詳細については、 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) をご覧ください。
+    > **メモ:** SameSite cookies の詳細については、 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) をご覧ください。
 
 ### 例外
 

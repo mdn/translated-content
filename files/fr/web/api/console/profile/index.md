@@ -1,6 +1,6 @@
 ---
 title: Console.profile()
-slug: Web/API/Console/profile
+slug: Web/API/console/profile
 tags:
   - API
   - DOM
@@ -9,6 +9,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/profile
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Commence l'enregistrement d'un profil de performance (par exemple, l'outil [performance de Firefox](/fr/docs/Outils/Performance)).
@@ -21,7 +22,9 @@ Pour arrêter l'enregistrement, appeler {{domxref("Console.profileEnd()")}}.
 
 ## Syntaxe
 
-    console.profile(profileName);
+```js
+console.profile(profileName);
+```
 
 ## Paramètres
 
@@ -30,7 +33,7 @@ Pour arrêter l'enregistrement, appeler {{domxref("Console.profileEnd()")}}.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.profile")}}
+{{Compat}}
 
 ## Voir aussi
 

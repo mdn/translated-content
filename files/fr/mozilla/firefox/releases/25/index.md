@@ -9,6 +9,7 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/25
 ---
+
 {{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web
@@ -27,18 +28,18 @@ translation_of: Mozilla/Firefox/Releases/25
 - La prise en charge d'une requête multimédia non standard de Mozilla uniquement pour déterminer la version du système d'exploitation a été ajoutée: [`-moz-os-version`](/fr/docs/Web/Guide/CSS/Media_queries#-moz-os-version) ({{bug("810399")}}). La propriété n'est actuellement implémentée que sur Windows.
 - La propriété CSS {{cssxref("-moz-osx-font-smoothing")}} a été ajoutée ({{bug("857142")}}).
 - Notre support expérimental pour {{cssxref("filter")}} prend désormais en charge la notation fonctionnelle `hue-rotate()` ({{bug(897392)}}). Il est toujours désactivé par défaut.
-- ` page-break-inside``: avoid ` travaille maintenant avec la hauteur d'un bloc ({{bug(883676)}}).
+- `page-break-inside`: `avoid` travaille maintenant avec la hauteur d'un bloc ({{bug(883676)}}).
 
 ### HTML
 
-- L'attribut {{htmlattrxref("srcdoc", "iframe")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}},  est maintenant pris en charge ({{bug("802895")}}).
+- L'attribut {{htmlattrxref("srcdoc", "iframe")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est maintenant pris en charge ({{bug("802895")}}).
 - Lorsqu'elle est utilisée avec un type `"image/jpeg"`, la méthode `HTMLCanvasElement.toBlob` accepte désormais un troisième attribut définissant la qualité de l'image ({{bug("891884")}}).
 
 ### JavaScript
 
 L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) continue!
 
-- La méthode {{jsxref("Array.of()")}} est maintenant implémentée sur  [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) ({{bug("866849")}}).
+- La méthode {{jsxref("Array.of()")}} est maintenant implémentée sur [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) ({{bug("866849")}}).
 - Le support des méthodes {{jsxref("Array.prototype.find()")}} et {{jsxref("Array.prototype.findIndex()")}} a été ajouté ({{bug("885553")}}).
 - Les méthodes {{jsxref("Global_Objects/Number/parseInt", "Number.parseInt()")}} et {{jsxref("Global_Objects/Number/parseFloat", "Number.parseFloat()")}} ont été implémentées ({{bug("886949")}}).
 - Les méthodes {{jsxref("Map.prototype.forEach()")}} et {{jsxref("Set.prototype.forEach()")}} sont maintenant implémentées ({{bug("866847")}}).
@@ -58,7 +59,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 - La méthode `createTBody()` sur l'interface {{domxref("HTMLTableElement")}}, permettant d'obtenir son {{HTMLElement("tbody")}}, est désormais supportée ({{bug("813034")}}).
 - Le paramètre `toStart` de la méthode {{domxref("Range.collapse()")}} est maintenant facultatif et par défaut à `false`, comme défini dans la spécification ({{bug("891340")}}).
 - La prise en charge de l'interface {{domxref("ParentNode")}} sur {{domxref("Document")}} et {{domxref("DocumentFragment")}} a été ajoutée ({{bug("895974")}}).
-- Le `previousElementSibling` et le `nextElementSibling` ont été déplacés vers {{domxref("ChildNode")}} leur permettant d'être appelés non seulement sur un objet {{domxref("Element")}} mais aussi sur un {{domxref("CharacterData")}} ou {{domxref("DocumentType")}}  ({{bug("895974")}}).
+- Le `previousElementSibling` et le `nextElementSibling` ont été déplacés vers {{domxref("ChildNode")}} leur permettant d'être appelés non seulement sur un objet {{domxref("Element")}} mais aussi sur un {{domxref("CharacterData")}} ou {{domxref("DocumentType")}} ({{bug("895974")}}).
 - La propriété `navigator.geolocation` a été mise à jour pour correspondre à la spécification. Il ne renvoie jamais `null`. Lorsque la préférence `geo.enabled` est définie sur `false`, elle renvoie désormais `undefined` ({{bug("884921")}}).
 - L'attribut `videoPlaybackQuality` sur l'interface {{domxref("HTMLVideoElement")}} a été remplacé par la méthode `getVideoPlaybackQuality` ({{bug(889205)}}).
 - L'interface non standard de `GlobalObjectConstructor` a été supprimée ({{bug(898136)}}). Cette interface a été utilisée pour ajouter des arguments aux constructeursd'APIs que les [add-ons](/fr/Add-ons) de Firefox exposaient sur l'objet global. Cette capacité a été supprimée; Notez qu'à l'heure actuelle, il n'y a pas de remplacement pour cette fonctionnalité.

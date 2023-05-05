@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-weight
 ---
+
 {{CSSRef}}
 
 Le descripteur CSS **`font-weight`** permet aux auteurs d'indiquer les graisses pour les polices fournies dans une règle {{cssxref("@font-face")}}. La propriété [`font-weight`](/fr/docs/Web/CSS/font-weight) peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
@@ -20,14 +21,16 @@ Il existe généralement un nombre limité de niveaux de graisse pour une police
 
 ## Syntaxe
 
-    /* Valeurs simples */
-    font-weight: normal;
-    font-weight: bold;
-    font-weight: 400;
+```css
+/* Valeurs simples */
+font-weight: normal;
+font-weight: bold;
+font-weight: 400;
 
-    /* Valeurs multiples */
-    font-weight: normal bold;
-    font-weight: 300 500;
+/* Valeurs multiples */
+font-weight: normal bold;
+font-weight: 300 500;
+```
 
 ### Valeurs
 
@@ -72,12 +75,14 @@ Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"wght
 
 Dans l'exemple suivant, on récupère une police Open Sans et on l'importe en utilisant le niveau de graisse normal.
 
-    @font-face {
-      font-family: "Open Sans";
-      src: local("Open Sans") format("woff2"),
-           url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
-      font-weight: 400;
-    }
+```css
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans") format("woff2"),
+        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+}
+```
 
 ## Accessibilité
 
@@ -88,14 +93,11 @@ Pour les personnes ayant une vision faible, il peut être extrêmement difficile
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-weight')}} | {{Spec2('CSS4 Fonts')}} |              |
-| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-weight')}} | {{Spec2('CSS3 Fonts')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-weight")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,8 @@
 ---
 title: HTMLTableElement.deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.deleteRow
-translation_of: Web/API/HTMLTableElement/deleteRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.deleteRow()`** メソッドは、特定の行 ({{HtmlElement("tr")}}) をこの {{HtmlElement("table")}} から削除します。

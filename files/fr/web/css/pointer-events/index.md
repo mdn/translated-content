@@ -4,9 +4,10 @@ slug: Web/CSS/pointer-events
 translation_of: Web/CSS/pointer-events
 browser-compat: css.properties.pointer-events
 ---
+
 {{CSSRef}}
 
-La propriété [CSS](fr/docs/Web/CSS) **`pointer-events`** permet de contrôler les circonstances dans lesquelles un élément graphique peut être [une cible](/fr/docs/Web/API/Event/target), c'est-à-dire recevoir des évènements de la souris, du pointeur ou du doigt.
+La propriété [CSS](/fr/docs/Web/CSS) **`pointer-events`** permet de contrôler les circonstances dans lesquelles un élément graphique peut être [une cible](/fr/docs/Web/API/Event/target), c'est-à-dire recevoir des évènements de la souris, du pointeur ou du doigt.
 
 {{EmbedInteractiveExample("pages/css/pointer-events.html")}}
 
@@ -62,7 +63,7 @@ La propriété `pointer-events` est définie grâce à un mot-clé parmi ceux de
 
 ## Description
 
-Lorsque cette propriété n'est pas définie pour le contenu SVG, on aura le même effet qu'avec la valeur `visiblePainted`. 
+Lorsque cette propriété n'est pas définie pour le contenu SVG, on aura le même effet qu'avec la valeur `visiblePainted`.
 
 Lorsqu'on utilise la valeur `none`, cela indique que l'élément ne peut pas recevoir d'événement de pointeur mais également qu'on peut passer «&nbsp;au travers&nbsp;» de l'élément pour atteindre des contrôles qui pourraient être «&nbsp;en dessous/derrière&nbsp;».
 
@@ -92,7 +93,7 @@ img {
 
 ### Désactiver les événements de pointeur pour un lien
 
-Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien http\://example.com.
+Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien `http://example.com`.
 
 #### HTML
 
@@ -132,4 +133,3 @@ Bien que l'extension de `pointer-events` au contenu HTML soit incluse dans les p
 - [Spécification WebKit pour étendre la propriété `pointer-events` (en anglais)](https://webkit.org/specs/PointerEventsProperty.html) au contenu (X)HTML
 - La propriété [`user-select`](/fr/docs/Web/CSS/user-select) qui contrôle lorsque l'utilisateur peut sélectionner du texte
 - [La page du wiki de Mozilla pour recenser les cas d'usage nécessitant l'extension des valeurs implémentées pour HTML](https://wiki.mozilla.org/SVG:pointer-events)
-

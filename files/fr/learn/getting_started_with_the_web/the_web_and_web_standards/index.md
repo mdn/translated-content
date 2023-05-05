@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
 original_slug: Apprendre/Commencer_avec_le_web/The_web_and_web_standards
 ---
+
 {{learnsidebar}}
 
 Cet article apporte des connaissances générales sur le Web — Comment il est né, quelles sont les technologies usuelles du web, comment interagissent-elles ensemble, pourquoi "développeur web" est un excellent choix de carrière, et quels types de bonnes pratiques pourrez-vous apprendrez au fil de ce cours.
@@ -74,11 +75,13 @@ Vous êtes probablement en train de lire ces mots à l'aide d'un navigateur web 
 
 Hypertext Transfer Protocol, ou [HTTP](/fr/docs/Web/HTTP/Basics_of_HTTP), est un protocole de communication permettant aux navigateurs web de communiquer avec des serveurs web (qui hébergent les sites web). Une conversation type ressemble à quelque chose comme
 
-    "Bonjour Serveur Web. Peux-tu me fournir les fichiers requis pour afficher bbc.co.uk"?
+```
+"Bonjour Serveur Web. Peux-tu me fournir les fichiers requis pour afficher bbc.co.uk"?
 
-    "Bien sûr Navigateur Web - Les voilà"
+"Bien sûr Navigateur Web - Les voilà"
 
-    [Télécharge les fichiers et affiche la page]
+[Télécharge les fichiers et affiche la page]
+```
 
 La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne ressemble pas vraiment à une conversation humaine, mais cela permet d'en avoir un aperçu.
 

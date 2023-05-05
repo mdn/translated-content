@@ -1,14 +1,8 @@
 ---
 title: HTMLTableSectionElement
 slug: Web/API/HTMLTableSectionElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-browser-compat: api.HTMLTableSectionElement
-translation_of: Web/API/HTMLTableSectionElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTableSectionElement`** インターフェイスは、（継承元でもある通常の {{DOMxRef("HTMLElement")}} オブジェクトのインターフェイスのほかに） HTML の表におけるヘッダー、フッター、本体などのセクションのレイアウトと表現を操作するための特別なプロパティやメソッドを提供します。

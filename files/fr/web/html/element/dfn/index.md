@@ -14,7 +14,8 @@ tags:
 translation_of: Web/HTML/Element/dfn
 browser-compat: html.elements.dfn
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<dfn>`** (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément [`<p>`](/fr/docs/Web/HTML/Element/p), le couple [`<dt>`](/fr/docs/Web/HTML/Element/dt)/[`<dd>`](/fr/docs/Web/HTML/Element/dd) ou l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) qui est le plus proche ancêtre de `<dfn>` est considéré comme la définition du terme.
 
@@ -99,9 +100,9 @@ L'utilisation de l'élément `<dfn>` présente certains aspects peu évidents. N
 
 Le terme à définir est identifié selon ces règles :
 
-1.  Si l'élément `<dfn>` possède un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title), la valeur de l'attribut `title` est considérée comme étant le terme défini. L'élément doit toujours contenir du texte, mais ce texte peut être une abréviation (peut-être en utilisant [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)) ou une autre forme du terme.
-2.  Si le `<dfn>` contient un seul élément enfant et n'a pas de contenu textuel propre, et que l'élément enfant est un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) avec un attribut `title` lui-même, alors la valeur exacte du `<abbr>` de l'élément `title` est le terme défini.
-3.  Sinon, le contenu textuel de l'élément `<dfn>` est le terme défini. Ceci est illustré [dans le premier exemple ci-dessous](#basic_identification_of_a_term).
+1. Si l'élément `<dfn>` possède un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title), la valeur de l'attribut `title` est considérée comme étant le terme défini. L'élément doit toujours contenir du texte, mais ce texte peut être une abréviation (peut-être en utilisant [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)) ou une autre forme du terme.
+2. Si le `<dfn>` contient un seul élément enfant et n'a pas de contenu textuel propre, et que l'élément enfant est un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) avec un attribut `title` lui-même, alors la valeur exacte du `<abbr>` de l'élément `title` est le terme défini.
+3. Sinon, le contenu textuel de l'élément `<dfn>` est le terme défini. Ceci est illustré [dans le premier exemple ci-dessous](#basic_identification_of_a_term).
 
 > **Note :** Si l'élément `<dfn>` possède un attribut `title`, il _doit_ contenir le terme défini et aucun autre texte.
 

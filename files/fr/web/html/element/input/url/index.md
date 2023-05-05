@@ -4,7 +4,8 @@ slug: Web/HTML/Element/input/url
 translation_of: Web/HTML/Element/input/url
 browser-compat: html.elements.input.input-url
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`url`** sont employées afin de permettre à une utilisatrice ou un utilisateur de saisir ou d'éditer une URL.
 
@@ -232,7 +233,6 @@ On peut également fournir une liste d'options parmi lesquelles la personne sais
 {{EmbedLiveSample("", 600, 40)}}
 
 Avec cet élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) et les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) associés, le navigateur affichera les valeurs proposées sous la forme d'une liste déroulante (voire sous un autre format). Au fur et à mesure que la personne saisit dans le champ, la liste se réduit pour ne contenir que les valeurs correspondantes (et ce jusqu'à ce que la personne saisisse une autre valeur ou sélectionne une valeur parmi la liste).
-
 
 #### Utiliser des libellés pour les valeurs suggérées
 

@@ -7,6 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<transform-function>`** représente une fonction qui, lorsqu'elle est appliquée à un élément, permet de modifier sa représentation géométrique. Ces transformations sont généralement exprimées sous forme de matrices et l'image obtenue peut être déterminée en appliquant la matrice de la transformation sur chaque point de l'image. On peut ainsi tourner, redimensionner, distordre. Ce type de donnée est utilisé avec la propriété {{cssxref("transform")}}.
@@ -19,7 +20,7 @@ Il existe plusieurs modèles de repères géométriques permettant de décrire d
 
 ![](coord_in_r2.png)
 
-Pour [le système cartésien](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_cart%C3%A9siennes), chaque point de l'espace est décrit avec deux valeurs, l'abscisse et l'ordonnée. L'origine du repère `(0, 0)` correspond au coin supérieur gauche de l'élément. À la différence des conventions usuelles, l'axe verticale (_y_) se dirige vers le bas. Chaque point est décrit avec la notation `(x,y)`.
+Pour [le système cartésien](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_cart%C3%A9siennes), chaque point de l'espace est décrit avec deux valeurs, l'abscisse et l'ordonnée. L'origine du repère `(0, 0)` correspond au coin supérieur gauche de l'élément. À la différence des conventions usuelles, l'axe vertical (_y_) se dirige vers le bas. Chaque point est décrit avec la notation `(x,y)`.
 
 Chaque fonction linéaire est décrite avec une matrice 2 x 2 :
 
@@ -95,7 +96,7 @@ Plusieurs fonctions sont disponibles en CSS pour décrire des transformations. C
 - [`translate3d()`](</fr/docs/Web/CSS/transform-function/translate3d()>)
   - : La fonction `translate3d()` permet de déplacer un élément dans l'espace en 3D. Cette transformation est caractérisée par un vecteur en 3 dimensions dont les coordonnées définissent les quantités de déplacement respectives aux trois axes.
 - [`translateX()`](/fr/docs/orphaned/Web/CSS/transform-function/translateX)
-  - : La fonction `translateX()` permet de déplacer un élément horizontalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement horizontal. `translateX(tx)`est une notation raccourcie pour  `translate(tx, 0)`.
+  - : La fonction `translateX()` permet de déplacer un élément horizontalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement horizontal. `translateX(tx)` est une notation raccourcie pour `translate(tx, 0)`.
 - [`translateY()`](</fr/docs/Web/CSS/transform-function/translateY()>)
   - : La fonction `translateY()` permet de déplacer un élément verticalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement vertical. `translateY(ty)` est une notation raccourcie pour `translate(0, ty)`.
 - [`translateZ()`](</fr/docs/Web/CSS/transform-function/translateZ()>)
@@ -103,14 +104,11 @@ Plusieurs fonctions sont disponibles en CSS pour décrire des transformations. C
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires                  |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-functions', '&lt;transform-function&gt;')}} | {{Spec2('CSS Transforms 2')}} | Added 3D transform functions. |
-| {{SpecName('CSS3 Transforms', '#transform-functions', '&lt;transform-function&gt;')}}     | {{Spec2('CSS3 Transforms')}}     | Définition initiale.          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.transform-function")}}
+{{Compat}}
 
 ## Voir aussi
 

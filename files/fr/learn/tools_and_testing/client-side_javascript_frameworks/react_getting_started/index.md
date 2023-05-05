@@ -5,6 +5,7 @@ slug: >-
 translation_of: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Dans cet article, nous aurons un premier contact avec React. Nous découvrirons quelques détails sur son contexte et ses cas d'utilisation, effectuerons une configuration basique des outils React sur notre ordinateur local, créerons une application pour démarrer simplement, apprenant au passage les bases du fonctionnement de React.
@@ -82,7 +83,7 @@ const header = (
 );
 ```
 
-> **Note :** Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
+> **Note :** Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
 >
 > ```js
 > const header = <header>
@@ -159,28 +160,30 @@ Lorsque le processus est terminé, naviguez dans le répertoire `moz-todo-react`
 
 create-react-app prépare tout ce dont nous avons besoin pour développer une application React. Sa structure de fichier initiale ressemble à ceci&nbsp;:
 
-    moz-todo-react
-    ├── README.md
-    ├── node_modules
-    ├── package.json
-    ├── package-lock.json
-    ├── .gitignore
-    ├── public
-    │   ├── favicon.ico
-    │   ├── index.html
-    │   ├── logo192.png
-    │   ├── logo512.png
-    │   ├── manifest.json
-    │   └── robots.txt
-    └── src
-        ├── App.css
-        ├── App.js
-        ├── App.test.js
-        ├── index.css
-        ├── index.js
-        ├── logo.svg
-        ├── reportWebVitals.js
-        └── setupTests.js
+```
+moz-todo-react
+├── README.md
+├── node_modules
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reportWebVitals.js
+    └── setupTests.js
+```
 
 Le répertoire **`src`** est l'endroit où nous passerons la plupart de notre temps, car c'est là que réside le code source de notre application.
 
@@ -188,7 +191,7 @@ Le répertoire **`public`** contient des fichiers qui seront lus par votre navig
 
 Le répertoire `public` sera également déployé lorsque vous créerez une version de production pour votre application. Nous n'aborderons pas le déploiement dans ce tutoriel, mais vous devriez pouvoir utiliser une solution similaire à celle décrite dans notre tutoriel [Déployer notre application](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
-Le fichier `package.json` contient des informations sur notre projet que Node.js/npm utilise pour le garder organisé. Ce fichier n'est pas unique aux applications React&nbsp;; create-react-app ne fait qu'utiliser ce mécanisme. Vous n'avez pas du tout besoin de comprendre ce fichier pour terminer ce didacticiel. Cependant, si vous souhaitez en savoir plus, vous pouvez lire [Qu'est-ce que le fichier \`package.json\`&nbsp;? sur NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)&nbsp;; on en parle aussi dans notre tutoriel [Les bases de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
+Le fichier `package.json` contient des informations sur notre projet que Node.js/npm utilise pour le garder organisé. Ce fichier n'est pas unique aux applications React&nbsp;; create-react-app ne fait qu'utiliser ce mécanisme. Vous n'avez pas du tout besoin de comprendre ce fichier pour terminer ce didacticiel. Cependant, si vous souhaitez en savoir plus, vous pouvez lire [Qu'est-ce que le fichier `package.json`&nbsp;? sur NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)&nbsp;; on en parle aussi dans notre tutoriel [Les bases de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
 
 ## Explorer notre premier composant React — `<App/>`
 
@@ -235,6 +238,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 ```
+
 La première instruction importe la bibliothèque React elle-même. Comme React transforme l'instruction JSX que nous écrivons en `React.createElement()`, tous les composants React doivent importer le module `React`. Si vous ignorez cette étape, votre application produira une erreur.
 
 La deuxième instruction importe un logo depuis `'./logo.svg'`. Notez le `./` au début du chemin et l'extension `.svg` à la fin — ceux-ci nous indiquent que le fichier est local et qu'il ne s'agit pas d'un fichier JavaScript. En effet, le fichier `logo.svg` est contenu dans notre répertoire source.
@@ -469,58 +473,3 @@ Dans React&nbsp;:
 - Les props sont écrites comme des attributs à l'intérieur des appels aux composants et sont passées aux composants.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## Dans ce module
-
-- [Introduction aux <i lang="en">frameworks</i> côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Fonctionnalités principales des  <i lang="en">frameworks</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Démarrer avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Débuter notre application React de liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Mettre notre application React en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [Interactivité avec React&nbsp;: évènements et états](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [Interactivité avec React&nbsp;: édition, filtrage, rendu conditionnel](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibilité dans React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [Ressources React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Démarrer avec Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [La structure des applications Ember et des composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Interactivité avec Ember&nbsp;: évènements, classes et états](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Interactivité avec Ember&nbsp;: fonctionnalité de pied de page, rendu conditionnel](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routage avec Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ressources Ember et dépannage](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Démarrer avec Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Créer votre premier composant Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Afficher une liste de composants Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Ajouter un formulaire de tâches&nbsp;: évènements Vue, méthodes, modèles](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Donner du style aux composants Vue avec CSS](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Utiliser les propriétés calculées de Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Rendu conditionnel&nbsp;: éditer une liste de tâches existante](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Gestion du focus avec les références Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Ressources Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Démarrer avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Débuter notre application Svelte de liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Comportement dynamique de Svelte&nbsp;: manipuler les variables et les props](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Organiser notre application Svelte en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Utilisation avancée de Svelte&nbsp;: réactivité, cycle de vie, accessibilité](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Utiliser les <i lang="en">stores</i> Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Prise en charge de TypeScript avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Déploiement et prochaines étapes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-  
-- Angular
-  
-  - [Démarrer avec Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Débuter notre application Angular de liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Mettre en forme notre application Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Créer un composant pour un élément](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtrer les éléments de notre liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Compiler des applications Angular et autres ressources](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

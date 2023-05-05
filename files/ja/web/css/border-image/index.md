@@ -1,22 +1,15 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-image
-translation_of: Web/CSS/border-image
 ---
+
 {{CSSRef}}
 
 **`border-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された要素の周りに画像を描きます。これは要素の通常の[境界](/ja/docs/Web/CSS/border)を置き換えます。
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **Note:** 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
+> **メモ:** 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
 
 ## 構成要素のプロパティ
 
@@ -52,7 +45,7 @@ border-image: unset;
 
 `border-image` プロパティは以下に挙げた 1 つから 5 つの値で指定します。
 
-> **Note:** {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/computed_value) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
+> **メモ:** {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/computed_value) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
 
 ### 値
 

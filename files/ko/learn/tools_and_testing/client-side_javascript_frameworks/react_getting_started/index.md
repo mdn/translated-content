@@ -2,16 +2,8 @@
 title: React 시작하기
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - jsx
-  - props
 ---
+
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
@@ -60,9 +52,9 @@ React는 많은 패턴에 모던 JavaScript의 특징을 이용합니다. JavaSc
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-이 heading 상수는 <b>JSX 표현식(JSX expression)</b> 으로 알려져 있습니다. React는 애플리케이션에 [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 태그를 렌더링할 때 이 표현식을 사용할 수 있습니다.
+이 heading 상수는 **JSX 표현식(JSX expression)** 으로 알려져 있습니다. React는 애플리케이션에 [`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements) 태그를 렌더링할 때 이 표현식을 사용할 수 있습니다.
 
-[`<header>`](/en-US/docs/Web/HTML/Element/header) 태그로 heading을 감싸고 싶다고 가정해보겠습니다. JSX는 HTML에서 하던 것처럼 요소를 다른 요소 안에 중첩할 수 있습니다.
+[`<header>`](/ko/docs/Web/HTML/Element/header) 태그로 heading을 감싸고 싶다고 가정해보겠습니다. JSX는 HTML에서 하던 것처럼 요소를 다른 요소 안에 중첩할 수 있습니다.
 
 ```js
 const header = (
@@ -72,9 +64,7 @@ const header = (
 );
 ```
 
-<div class="notecard note">
-    <p><strong>참고</strong>: 위의 스니펫에 있는 괄호는 JSX에 유일하지도 않고, 여러분의 애플리케이션에 어떠한 영향을 주지도 않습니다. 이들은 여러 줄의 코드가 동일한 표현식의 부분이라는 것을 당신(과 컴퓨터)에게 알려줍니다. header 표현식은 다음과 같이도 쓸 수도 있습니다.</p>
-
+> **참고:** 위의 스니펫에 있는 괄호는 JSX에 유일하지도 않고, 여러분의 애플리케이션에 어떠한 영향을 주지도 않습니다. 이들은 여러 줄의 코드가 동일한 표현식의 부분이라는 것을 당신(과 컴퓨터)에게 알려줍니다. header 표현식은 다음과 같이도 쓸 수도 있습니다.
 
 ```js
 const header = <header>
@@ -82,7 +72,7 @@ const header = <header>
 </header>
 ```
 
-하지만, 표현식을 시작하는 [`<header>`](/en-US/docs/Web/HTML/Element/header) 태그가 클로징 태그와 상응하는 위치에 들여쓰기가 되어있지 않기 때문에 이 코드는 살짝 이상해 보입니다.
+하지만, 표현식을 시작하는 [`<header>`](/ko/docs/Web/HTML/Element/header) 태그가 클로징 태그와 상응하는 위치에 들여쓰기가 되어있지 않기 때문에 이 코드는 살짝 이상해 보입니다.
 
 </div>
 
@@ -104,15 +94,15 @@ JSX에 대해 더 알고 싶다면, React 팀의 [JSX in Depth](https://reactjs.
 
 React를 사용하는 데에는 많은 방법이 있지만, 여기서는 커맨드-라인 인터페이스(command-line interface; CLI) 툴인 create-react-app을 사용할 겁니다. 이전에 말했듯이, 이 툴은 패키지를 설치하고 파일들을 생성하여 앞서 설명한 툴링들로 React 애플리케이션을 개발하는 과정을 신속히 처리합니다.
 
-[create-react-app 없이 웹 사이트에 React를 추가하는 것](https://reactjs.org/docs/add-react-to-a-website.html)은 HTML 파일에서 [`<script>`](/en-US/docs/Web/HTML/Element/script) 요소들을 복사해오는 것으로 가능하지만, create-react-app CLI는 React 애플리케이션을 만드는 가장 흔한 시작점입니다. 애플리케이션을 빌드하는 데에는 더 많은 시간이 걸리나 설정에 걸리는 시간은 줄일 수 있습니다.
+[create-react-app 없이 웹 사이트에 React를 추가하는 것](https://reactjs.org/docs/add-react-to-a-website.html)은 HTML 파일에서 [`<script>`](/ko/docs/Web/HTML/Element/script) 요소들을 복사해오는 것으로 가능하지만, create-react-app CLI는 React 애플리케이션을 만드는 가장 흔한 시작점입니다. 애플리케이션을 빌드하는 데에는 더 많은 시간이 걸리나 설정에 걸리는 시간은 줄일 수 있습니다.
 
 ### 요구되는 것들
 
 create-react-app을 사용하기 위해선 [Node.js](https://nodejs.org/en/)를 설치해야 합니다. LTS(오랜 기간 지원된; long-term support) 버전을 사용하는 것을 추천합니다. Node는 npm (the node package manager)와 npx (the node package runner)를 포함합니다.
 
-Node 대신에 Yarn package manager를 사용할 수도 있습니다. 하지만 이 튜토리얼의 설정에서는 npm을 사용하는 것을 권고합니다. npm과 yarn에 대해 더 자세한 정보는 [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)를 참고하세요.
+Node 대신에 Yarn package manager를 사용할 수도 있습니다. 하지만 이 튜토리얼의 설정에서는 npm을 사용하는 것을 권고합니다. npm과 yarn에 대해 더 자세한 정보는 [Package management basics](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)를 참고하세요.
 
-Windows를 이용하고 있다면 이 튜토리얼에서 언급되는 터미널 커맨드를 사용하기 위해, Unix/MacOS 터미널과 같은 기능을 제공하는 소프트웨어를 설치해야 합니다. **Gitbash** ([git for Windows toolset](https://gitforwindows.org/)의 일부) 혹은 **[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)** (**WSL**) 모두 적합합니다. 이 소프트웨어들이나 일반적인 터미널 커맨드에 대해서 더 자세히 알고 싶다면 [Command line carsh course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)를 참고하세요.
+Windows를 이용하고 있다면 이 튜토리얼에서 언급되는 터미널 커맨드를 사용하기 위해, Unix/MacOS 터미널과 같은 기능을 제공하는 소프트웨어를 설치해야 합니다. **Gitbash** ([git for Windows toolset](https://gitforwindows.org/)의 일부) 혹은 **[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)** (**WSL**) 모두 적합합니다. 이 소프트웨어들이나 일반적인 터미널 커맨드에 대해서 더 자세히 알고 싶다면 [Command line carsh course](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)를 참고하세요.
 
 그리고 React와 ReactDOM이 꽤 최신 브라우저들에서만 작동한다는 것을 명심하세요. IE9+는 몇몇 폴리필을 통하여 가능합니다. 튜토리얼에서는 Firefox, Microsoft Edge, Safari, 혹은 Chrome과 같은 최신 브라우저를 사용하기를 권장합니다.
 
@@ -137,9 +127,7 @@ npx create-react-app moz-todo-react
 - 기본적인 앱 아키텍처를 정의하는 파일과 디렉토리의 구조를 만듭니다.
 - 컴퓨터에 깃이 설치되어있다면, 디렉토리를 깃 레포지토리로 초기화합니다.
 
-<div class="notecard note">
-    <p><strong>참고</strong>: yarn package manager를 설치했다면, create-react-app은 그것을 npm 대신 기본으로 사용할 것입니다. 두 패키지 매니저가 모두 설치되어있고 NPM을 명시적으로 사용하길 원한다면, create-react-app을 실행할 때 플래그 <code>--use-npm</code>을 사용하면 됩니다.</p>
-
+> **참고:** yarn package manager를 설치했다면, create-react-app은 그것을 npm 대신 기본으로 사용할 것입니다. 두 패키지 매니저가 모두 설치되어있고 NPM을 명시적으로 사용하길 원한다면, create-react-app을 실행할 때 플래그 `--use-npm`을 사용하면 됩니다.
 
 ```bash
 npx create-react-app moz-todo-react --use-npm
@@ -180,17 +168,15 @@ moz-todo-react
 
 **`src`** 디렉토리는 애플리케이션의 소스 코드가 있는 곳으로서, 가장 많은 시간을 보낼 곳입니다.
 
-**`public`** 디렉토리는 앱을 개발하는 동안 브라우저가 읽을 파일들을 가지고 있습니다; 이들 중 가장 중요한 것은 `index.html` 입니다. React는 코드를 이 html 파일에 주입하여 브라우저가 코드를 실행할 수 있게 합니다. create-react-app function에 도움이 되는 다른 마크업도 있기 때문에, 무엇을 하는지 모른다면 함부로 편집하지 않도록 주의하세요. 애플리케이션의 타이틀에 반영되도록 `index.html` 파일의 [`<title>`](/en-US/docs/Web/HTML/Element/title) 요소 안의 텍스트를 바꿔야 합니다. 정확한 페이지 타이틀은 접근성을 위해 중요하니까요!
+**`public`** 디렉토리는 앱을 개발하는 동안 브라우저가 읽을 파일들을 가지고 있습니다; 이들 중 가장 중요한 것은 `index.html` 입니다. React는 코드를 이 html 파일에 주입하여 브라우저가 코드를 실행할 수 있게 합니다. create-react-app function에 도움이 되는 다른 마크업도 있기 때문에, 무엇을 하는지 모른다면 함부로 편집하지 않도록 주의하세요. 애플리케이션의 타이틀에 반영되도록 `index.html` 파일의 [`<title>`](/ko/docs/Web/HTML/Element/title) 요소 안의 텍스트를 바꿔야 합니다. 정확한 페이지 타이틀은 접근성을 위해 중요하니까요!
 
-`public` 디렉토리 또한 앱의 프로덕션 버전을 빌드하고 배포할 때 퍼블리시 됩니다. 이 튜토리얼에서는 배포에 대해 다루지 않지만, [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) 튜토리얼에 기술된 것과 비슷한 해결책을 사용할 수 있을 겁니다.
+`public` 디렉토리 또한 앱의 프로덕션 버전을 빌드하고 배포할 때 퍼블리시 됩니다. 이 튜토리얼에서는 배포에 대해 다루지 않지만, [Deploying our app](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) 튜토리얼에 기술된 것과 비슷한 해결책을 사용할 수 있을 겁니다.
 
-`package.json` 파일은 Node.js/npm가 프로젝트를 조직하기 위해 사용하는, 프로젝트에 관련한 정보를 포함하고 있습니다. 이 파일은 React 애플리케이션에 유일하지 않은데요; create-react-app이 이 파일을 수정합니다. 튜토리얼을 완성하기 위해 이 파일을 이해할 필요는 전혀 없지만, 더 자세히 알고 싶다면 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 을 참고해주세요. [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) 에서도 다루고 있답니다.
-
-
+`package.json` 파일은 Node.js/npm가 프로젝트를 조직하기 위해 사용하는, 프로젝트에 관련한 정보를 포함하고 있습니다. 이 파일은 React 애플리케이션에 유일하지 않은데요; create-react-app이 이 파일을 수정합니다. 튜토리얼을 완성하기 위해 이 파일을 이해할 필요는 전혀 없지만, 더 자세히 알고 싶다면 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 을 참고해주세요. [Package management basics](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) 에서도 다루고 있답니다.
 
 ## 첫번째 React 컴포넌트 `</App>` 탐색하기
 
-React에서, <b>컴포넌트(component)</b>는 앱의 일부를 렌더링하는 재사용가능한 모듈입니다. 이 부분들은 클 수도 작을 수도 있지만, 대개 정확하게 정의됩니다; 이들은 단일하고 명확한 목적만을 위해 일합니다.
+React에서, **컴포넌트**(**component**)는 앱의 일부를 렌더링하는 재사용가능한 모듈입니다. 이 부분들은 클 수도 작을 수도 있지만, 대개 정확하게 정의됩니다; 이들은 단일하고 명확한 목적만을 위해 일합니다.
 
 `src/App.js`를 열어봅시다. 이 파일은 첫번째 컴포넌트 `App`과 몇 줄의 코드를 포함하고 있습니다.
 
@@ -222,7 +208,7 @@ function App() {
 export default App;
 ```
 
-`App.js` 파일은 세 개의 부분으로 나눌 수 있습니다: 상단의 [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) 문들, 중앙의 `App` 컴포넌트, 그리고 하단의 [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) 문들. 많은 React 컴포넌트들이 이 패턴을 따르고 있습니다. 
+`App.js` 파일은 세 개의 부분으로 나눌 수 있습니다: 상단의 [`import`](/ko/docs/Web/JavaScript/Reference/Statements/import) 문들, 중앙의 `App` 컴포넌트, 그리고 하단의 [`export`](/ko/docs/Web/JavaScript/Reference/Statements/export) 문들. 많은 React 컴포넌트들이 이 패턴을 따르고 있습니다.
 
 ### Import 문
 
@@ -241,8 +227,6 @@ import './App.css';
 `React` 모듈을 불러올 때는 경로나 익스텐션을 쓰지 않습니다. 이것들은 로컬 파일이 아니라, `package.json`의 의존성 목록에 포함되어 있습니다. 로컬과 이들의 구분을 꼭 주의하세요!
 
 세 번째 명령문은 `App` 컴포넌트에 관련된 CSS를 불러옵니다. 어떤 변수 이름이나 `from`  지시가 없다는 것을 주목해주세요. 이 특별한 import 구문은 JavaScript 모듈 구문이 아니라 웹팩(Webpack)으로부터 온 것입니다. 웹팩은 create-react-app이 우리의 모든 JavaScript 파일을 함께 번들하고 브라우저에 제공하기 위해 사용하는 도구입니다.
-
-
 
 ### `App` 컴포넌트
 
@@ -275,9 +259,9 @@ function App() {
 
 `App` 함수는 JSX 표현식을 반환합니다. 이 표현식은 브라우저가 궁극적으로 DOM에 렌더링할 것을 정의하고 있습니다.
 
-표현식의 어떤 요소들은 HTML에 쓰인 것과 같이 속성들을 가지고 `attribute="value"`와 같은 패턴을 따르고 있습니다. 세 번째 줄에서, 여는 [`div`](/en-US/docs/Web/HTML/Element/div) 태그는 `className` 속성을 가지고 있습니다. 이건 HTML의 [`class`](/en-US/docs/Web/HTML/Global_attributes/class) 속성과 같지만, JSX는 JavaScript이므로 `class` 라는 단어를 쓸 수 없습니다. 거꾸로 말하자면, JavaScript는 이미 이 단어를 특별한 목적을 위해 사용하고 있어 코드 안에서 사용한다면 문제를 발생시킬 것입니다. 같은 이유로 몇 개의 다른 HTML 속성들이 HTML에서 그랬던 것과는 다르게 JSX에서 쓰이고 있습니다.
+표현식의 어떤 요소들은 HTML에 쓰인 것과 같이 속성들을 가지고 `attribute="value"`와 같은 패턴을 따르고 있습니다. 세 번째 줄에서, 여는 [`div`](/ko/docs/Web/HTML/Element/div) 태그는 `className` 속성을 가지고 있습니다. 이건 HTML의 [`class`](/ko/docs/Web/HTML/Global_attributes/class) 속성과 같지만, JSX는 JavaScript이므로 `class` 라는 단어를 쓸 수 없습니다. 거꾸로 말하자면, JavaScript는 이미 이 단어를 특별한 목적을 위해 사용하고 있어 코드 안에서 사용한다면 문제를 발생시킬 것입니다. 같은 이유로 몇 개의 다른 HTML 속성들이 HTML에서 그랬던 것과는 다르게 JSX에서 쓰이고 있습니다.
 
-여섯 번째 줄의 [`<p>`](/en-US/docs/Web/HTML/Element/p) 태그 안의 텍스트를 "Hello, world!"로 바꾸고, 파일을 저장하세요. 브라우저에서 `http://localhost:3000`에 실행되고 있는 개발 서버에 즉시 변화가 렌더링 되는 것을 볼 수 있을 겁니다. 이제 [`<a>`](/en-US/docs/Web/HTML/Element/a) 태그를 지우고 저장해보세요. "Learn React" 링크가 사라질 겁니다.
+여섯 번째 줄의 [`<p>`](/ko/docs/Web/HTML/Element/p) 태그 안의 텍스트를 "Hello, world!"로 바꾸고, 파일을 저장하세요. 브라우저에서 `http://localhost:3000`에 실행되고 있는 개발 서버에 즉시 변화가 렌더링 되는 것을 볼 수 있을 겁니다. 이제 [`<a>`](/ko/docs/Web/HTML/Element/a) 태그를 지우고 저장해보세요. "Learn React" 링크가 사라질 겁니다.
 
 이제 `App` 컴포넌트는 아래와 같을 겁니다.
 
@@ -298,7 +282,7 @@ function App() {
 
 ### Export 문
 
-`App.js` 파일의 최하단에 있는  `export default App`라는 명령문은 `App` 컴포넌트들을 다른 모듈에서 사용할 수 있게 합니다.
+`App.js` 파일의 최하단에 있는 `export default App`라는 명령문은 `App` 컴포넌트들을 다른 모듈에서 사용할 수 있게 합니다.
 
 ## Interrogating the index
 
@@ -333,11 +317,9 @@ serviceWorker.unregister();
 
 이 모든 것이 React에게 우리가 루트로서, 혹은 첫 번째 컴포넌트로서 `App` 컴포넌트를 렌더링하길 원한다고 알려줍니다.
 
-<div class="notecard note">
-    <p><strong>참고</strong>: JSX에서, React 컴포넌트와 HTML 요소는 반드시 닫는 태그가 있어야 합니다. <code>&lt;App&gt;</code> 혹은 <code>&lt;img&gt;</code>라고만 쓰는 것은 오류를 발생시킬 것입니다.</p>
-</div>
+> **참고:** JSX에서, React 컴포넌트와 HTML 요소는 반드시 닫는 태그가 있어야 합니다. `<App>` 혹은 `<img>`라고만 쓰는 것은 오류를 발생시킬 것입니다.
 
-[Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)는 앱 성능에 도움이 되고 오프라인에서 일할 수 있는 웹 애플리케이션의 기능을 제공하는 특별한 코드들이지만, 이 기사에서 다루는 범위는 아닙니다. 다섯 번째 줄과 코드 가장 아래에 있는 것은 지울 수 있습니다.
+[Service workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)는 앱 성능에 도움이 되고 오프라인에서 일할 수 있는 웹 애플리케이션의 기능을 제공하는 특별한 코드들이지만, 이 기사에서 다루는 범위는 아닙니다. 다섯 번째 줄과 코드 가장 아래에 있는 것은 지울 수 있습니다.
 
 최종적인 `index.js`는 다음과 같을 것입니다:
 
@@ -406,7 +388,7 @@ function App() {
 
 ### 컴포넌트 props
 
-<b>prop</b>는 React 컴포넌트에 전달되는 모든 데이터를 뜻합니다. React props는 HTML 속성과 비교할 수 있습니다. HTML 요소는 속성을 가지고 있고 React 컴포넌트는 props를 가지고 있습니다. props는 컴포넌트 호출 안에 쓰이며 `prop="value"`와 같이 HTML 속성과 동일한 구문을 씁니다. React에서, 데이터의 흐름은 단방향(unidirectional)입니다: props는 오직 부모 컴포넌트에서 자식 컴포넌트로 내려갑니다. 그리고 props는 오로지 읽기 전용입니다.
+**prop**는 React 컴포넌트에 전달되는 모든 데이터를 뜻합니다. React props는 HTML 속성과 비교할 수 있습니다. HTML 요소는 속성을 가지고 있고 React 컴포넌트는 props를 가지고 있습니다. props는 컴포넌트 호출 안에 쓰이며 `prop="value"`와 같이 HTML 속성과 동일한 구문을 씁니다. React에서, 데이터의 흐름은 단방향(unidirectional)입니다: props는 오직 부모 컴포넌트에서 자식 컴포넌트로 내려갑니다. 그리고 props는 오로지 읽기 전용입니다.
 
 `index.js`를 열고 `<App />` 호출에 첫 번째 prop를 전달해봅시다.
 
@@ -472,66 +454,3 @@ React에서는:
 - props는 컴포넌트 호출에 속성처럼 쓰이고, 컴포넌트로 전달됩니다.
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
-
-<h2 id="In_this_module">In this module</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>

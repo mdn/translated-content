@@ -6,18 +6,21 @@ tags:
 translation_of: Web/XPath/Functions/unparsed-entity-url
 original_slug: Web/XPath/Fonctions/unparsed-entity-url
 ---
+
 {{ XsltRef() }}
 
 La fonction `unparsed-entity-url()` retourne l'URI d'une entité non analysée avec le nom donné. C'est une donnée non-XML référencée dans le DTD du document source.
 
 ### Syntaxe
 
-    string unparsed-entity-url(chaîne)
+```
+string unparsed-entity-url(chaîne)
+```
 
 ### Arguments
 
 - `chaîne`
-  - : Le nom de l'entité non analysée. Si l'argument n'est pas une chaîne, il est converti suivant les règles de la fonction [`string()`](fr/XPath/Fonctions/string). Le nom doit être un nom XML.
+  - : Le nom de l'entité non analysée. Si l'argument n'est pas une chaîne, il est converti suivant les règles de la fonction [`string()`](/fr/XPath/Fonctions/string). Le nom doit être un nom XML.
 
 ### Retour
 

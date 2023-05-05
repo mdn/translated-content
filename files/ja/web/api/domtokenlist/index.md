@@ -1,12 +1,8 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.DOMTokenList
-translation_of: Web/API/DOMTokenList
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMTokenList`** インターフェイスは、スペースで区切られたトークンのセットを表します。こうしたセットは {{domxref("Element.classList")}} や {{domxref("HTMLLinkElement.relList")}} など、数多くのものから返されるものです。

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 browser-compat: javascript.builtins.TypedArray.at
 ---
+
 {{JSRef}}
 
 La méthode **`at()`** prend comme argument un entier et renvoie l'élément du tableau typé situé à cette position. Il est possible d'utiliser des entiers positifs et négatifs. Si l'argument est négatif, la position est relative à la fin du tableau.

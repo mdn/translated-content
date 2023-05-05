@@ -1,14 +1,8 @@
 ---
 title: CSS
 slug: Web/API/CSS
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Painting
-  - リファレンス
-translation_of: Web/API/CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSS`** インターフェイス は CSS に関連した便利なメソッドを持っています。このインターフェイスにはオブジェクトは実装されていません。静的メソッドのみがあり、実用的なインターフェイスになっています。

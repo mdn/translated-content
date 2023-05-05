@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/removeAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttributeNS` supprime l'attribut spécifié d'un élément.
@@ -16,18 +17,22 @@ Dans Firefox 3 et postérieurs, cette méthode réinitialise les valeurs DOM à 
 
 ## Syntaxe
 
-    element.removeAttributeNS(namespace,attrName);
+```js
+element.removeAttributeNS(namespace,attrName);
+```
 
 - `namespace` est une chaîne qui contient l'espace de noms de l'attribut.
 - `attrName` est une chaîne qui nomme l'attribut à supprimer du noeud en cours.
 
 ## Exemple
 
-    // <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
-    //      special:specialAlign="utterleft" width="200px" />
-    d = document.getElementById("div1");
-    d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-    // l'élément est devenu&nbsp;: <div id="div1" width="200px" />
+```js
+// <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
+//      special:specialAlign="utterleft" width="200px" />
+d = document.getElementById("div1");
+d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
+// l'élément est devenu&nbsp;: <div id="div1" width="200px" />
+```
 
 ## Notes
 

@@ -3,6 +3,7 @@ title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
 translation_of: Web/HTTP/Headers/Accept-Encoding
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête HTTP **`Accept-Encoding`** permet de définir quel sera l'encodage du contenu. Il s'agit généralement de l'algorithme de compression utilisé par le serveur. Le client peut alors décoder le corps de la requête correctement. Utilisant [la négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation), le serveur choisit l'une des propositions d'encodage que le client prend en charge. Le serveur l'utilise et le notifie au client à l'aide de l'en-tête de réponse [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding).
@@ -69,21 +70,21 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 
 ## Exemples
 
-    Accept-Encoding: gzip
+```
+Accept-Encoding: gzip
 
-    Accept-Encoding: gzip, compress, br
+Accept-Encoding: gzip, compress, br
 
-    Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+```
 
 ## Spécifications
 
-| Specification                                                                                 | Title                                                         |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 5.3.4: Accept-Encoding](https://tools.ietf.org/html/rfc7231#section-5.3.4) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Accept-Encoding")}}
+{{Compat}}
 
 ## Voir aussi
 

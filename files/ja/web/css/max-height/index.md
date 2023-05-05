@@ -1,21 +1,8 @@
 ---
 title: max-height
 slug: Web/CSS/max-height
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - 最大
-  - リファレンス
-  - 寸法
-  - height
-  - limit
-  - max-height
-  - recipe:css-property
-  - size
-browser-compat: css.properties.max-height
-translation_of: Web/CSS/max-height
 ---
+
 {{CSSRef}}
 
 **`max-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大高を設定します。これは {{Cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、 `max-height` に指定した値を上回ることを防ぎます。

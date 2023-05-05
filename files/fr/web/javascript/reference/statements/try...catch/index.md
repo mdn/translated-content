@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 original_slug: Web/JavaScript/Reference/Instructions/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`try...catch`** regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.
@@ -16,19 +17,21 @@ L'instruction **`try...catch`** regroupe des instructions à exécuter et défin
 
 ## Syntaxe
 
-    try {
-       instructions_try
-    }
-    [catch (exception_var_1 if condition_1) { // non-standard
-       instructions_catch_1
-    }]
-    ...
-    [catch (exception_var_2) {
-       instructions_catch_2
-    }]
-    [finally {
-       instructions_finally
-    }]
+```js
+try {
+  instructions_try
+}
+catch (exception_var_1 if condition_1) { // non-standard
+  instructions_catch_1
+}
+…
+catch (exception_var_2) {
+  instructions_catch_2
+}
+finally {
+  instructions_finally
+}
+```
 
 - `instructions_try`
   - : Les instructions qu'on souhaite exécuter.
@@ -45,9 +48,9 @@ L'instruction **`try...catch`** regroupe des instructions à exécuter et défin
 
 L'instruction `try` est composée d'un bloc `try` contenant une ou plusieurs instructions, d'au moins une clause `catch` ou d'une clause `finally` ou des deux. On peut donc avoir les trois formes suivantes pour cette instruction :
 
-1.  `try...catch`
-2.  `try...finally`
-3.  `try...catch...finally`
+1. `try…catch`
+2. `try…finally`
+3. `try…catch…finally`
 
 Une clause `catch` contient les instructions à exécuter si une exception est levée par une instruction du bloc `try`. On souhaite généralement que le bloc `try` se déroule sans problème. Si toutefois une erreur se produit, on veut pouvoir contrôler ce qui se passe et on transmet donc le contrôle au bloc `catch`. Si une instruction contenue dans le bloc `try` (ou une fonction appelée depuis le bloc `try`) renvoie une exception, le contrôle sera immédiatement passé à la clause `catch`. Si aucune exception n'est levée, la clause `catch` ne sera pas utilisée.
 
@@ -117,7 +120,7 @@ try {
 
 ### L'identifiant de l'exception
 
-Lorsqu'une exception est levée dans le bloc `try`, _`exception_var`_ (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
+Lorsqu'une exception est levée dans le bloc `try`, `exception_var` (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
 
 ```js
 function isValidJSON(txt){
@@ -254,16 +257,11 @@ Le "oups" externe n'est pas renvoyé car l'instruction `return` est utilisée da
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4                                                                                                                                                       |
-| {{SpecName('ES5.1', '#sec-12.14', 'instruction try')}}             | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                            |
-| {{SpecName('ES6', '#sec-try-statement', 'Instruction try')}}     | {{Spec2('ES6')}}         |                                                                                                                                                                                                            |
-| {{SpecName('ESDraft', '#sec-try-statement', 'try statement')}} | {{Spec2('ESDraft')}} | Points ne faisant pas partie du standard ECMA-262 actuel : utilisation de plusieurs clauses catch et de plusieurs clauses conditionnelles (extension liée à SpiderMonkey, correspondant à JavaScript 1.5). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.try_catch")}}
+{{Compat}}
 
 ## Voir aussi
 

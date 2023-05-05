@@ -6,11 +6,12 @@ tags:
 translation_of: Web/XML/XML_introduction
 original_slug: Web/XML/Introduction_à_XML
 ---
+
 ### Définition
 
 XML, pour _e**X**tensible **M**arkup **L**anguage_ (langage de balisage extensible), est un langage de balisage généraliste [recommandé par le W3C](http://www.w3.org/) comme l'est HTML. XML est un sous-ensemble du langage SGML. Cela signifie que contrairement aux autres langages de balisages, XML n'est pas prédéfini, vous devez définir vos propres balises. Le but principal de ce langage est le partage de données entre différents systèmes, tel qu'Internet.
 
-De nombreux autres langages sont basés sur XML, comme par exemple [XHTML](fr/XHTML), [MathML](fr/MathML), [SVG](fr/SVG), [XUL](fr/XUL), [XBL](fr/XBL), [RSS](fr/RSS) et [RDF](fr/RDF). Vous pouvez créer votre propre langage basé sur XML.
+De nombreux autres langages sont basés sur XML, comme par exemple [XHTML](/fr/XHTML), [MathML](/fr/MathML), [SVG](/fr/SVG), [XUL](/fr/XUL), [XBL](/fr/XBL), [RSS](/fr/RSS) et [RDF](/fr/RDF). Vous pouvez créer votre propre langage basé sur XML.
 
 ### Du XML «&nbsp;correct&nbsp;» (valide et «&nbsp;bien formé&nbsp;»)
 
@@ -22,28 +23,32 @@ La plupart des navigateurs, dont Mozilla, offrent un outil de validation qui inf
 
 Voici un exemple de document mal formé&nbsp;: un des éléments possédant une balise d'ouverture, `<warning>`, n'a pas de balise de fermeture et ce n'est pas un élément vide (ou auto-fermant comme les balises \<br /> ou \<img /> en XHTML).
 
-    <code>
-      <message>
-        <warning>
-          Hello World
-      </message>
-    </code>
+```xml
+<code>
+  <message>
+    <warning>
+      Hello World
+  </message>
+</code>
+```
 
 L'exemple qui suit est correct et «&nbsp;bien formé&nbsp;»&nbsp;:
 
-    <code>
-      <message>
-        <warning>
-          Hello World
-        </warning>
-      </message>
-    </code>
+```xml
+<code>
+  <message>
+    <warning>
+      Hello World
+    </warning>
+  </message>
+</code>
+```
 
-Pour être valide, un document doit se conformer à des règles sémantiques qui sont habituellement définies dans un _XML Schema_ ou une [Document Type Definition](fr/DTD). Un document qui contient une balise non définie n'est pas valide. Dans notre exemple ci-dessus, si nous ne définissons pas la balise `<warning>` alors notre document ne sera pas valide.
+Pour être valide, un document doit se conformer à des règles sémantiques qui sont habituellement définies dans un _XML Schema_ ou une [Document Type Definition](/fr/DTD). Un document qui contient une balise non définie n'est pas valide. Dans notre exemple ci-dessus, si nous ne définissons pas la balise `<warning>` alors notre document ne sera pas valide.
 
 ### Entités
 
-Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe «&nbsp;plus grand que&nbsp;» utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
+Comme le [HTML](/fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe «&nbsp;plus grand que&nbsp;» utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
 
 <table class="standard-table">
   <tbody>
@@ -80,16 +85,18 @@ Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) 
   </tbody>
 </table>
 
-Même s'il n'y a que 5 entités déclarées, il est possible d'en ajouter d'autres grâce à la [Document Type Definition](fr/DTD), comme décrit ci-dessous&nbsp;:
+Même s'il n'y a que 5 entités déclarées, il est possible d'en ajouter d'autres grâce à la [Document Type Definition](/fr/DTD), comme décrit ci-dessous&nbsp;:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE body [
-        <!ENTITY warning "Avertissement&nbsp;: Quelque chose ne fonctionne pas correctement…
-                          Veuillez rafraîchir et réessayer.">
-    ]>
-    <body>
-      <message> &warning; </message>
-    </body>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body [
+    <!ENTITY warning "Avertissement&nbsp;: Quelque chose ne fonctionne pas correctement…
+                      Veuillez rafraîchir et réessayer.">
+]>
+<body>
+  <message> &warning; </message>
+</body>
+```
 
 Vous pouvez également utiliser les références numériques de caractères pour employer ces caractères spéciaux telles que \&#xA9; pour un signe ©. Vous trouverez plus d'informations à propos des références numériques de caractères spéciaux sur [Numeric character reference (en)](http://www.cookwood.com/entities/).
 
@@ -97,13 +104,17 @@ Vous pouvez également utiliser les références numériques de caractères pour
 
 Il y a deux manières différentes d'utiliser le XML pour la présentation, et cela peut aller d'une transformation en HTML à la génération d'un document PDF ou d'images.
 
-Une manière d'appliquer un style sur une page XML est d'utiliser une feuille de style [CSS](fr/CSS) avec la déclaration `xml-stylesheet`.
+Une manière d'appliquer un style sur une page XML est d'utiliser une feuille de style [CSS](/fr/CSS) avec la déclaration `xml-stylesheet`.
 
-    <?xml-stylesheet type="text/css" href="stylesheet.css"?>
+```xml
+<?xml-stylesheet type="text/css" href="stylesheet.css"?>
+```
 
-L'autre technique utilise la puissance de [XSLT](fr/XSLT), qui est capable de transformer les balises XML en toute autre chose, les possibilités sont alors presque infinies.
+L'autre technique utilise la puissance de [XSLT](/fr/XSLT), qui est capable de transformer les balises XML en toute autre chose, les possibilités sont alors presque infinies.
 
-    <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+```xml
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+```
 
 ### Recommandations
 

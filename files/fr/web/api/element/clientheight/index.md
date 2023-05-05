@@ -4,6 +4,7 @@ slug: Web/API/Element/clientHeight
 translation_of: Web/API/Element/clientHeight
 browser-compat: api.Element.clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.clientHeight`** vaut zéro pour les éléments sans CSS ou sans boîte de disposition en ligne/incise ; sinon elle vaut la hauteur interne d'un élément, exprimée en pixels. Cette hauteur inclut le remplissage (<i lang="en">padding</i>) mais exclut les bordures, les marges et les éventuelles barres de défilement horizontales.
@@ -42,4 +43,4 @@ var intElemClientHeight = element.clientHeight;
 
 - [`HTMLElement.offsetHeight`](/fr/docs/Web/API/HTMLElement/offsetHeight)
 - [`Element.scrollHeight`](/fr/docs/Web/API/Element/scrollHeight)
-- [Déterminer les dimensions des éléments](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

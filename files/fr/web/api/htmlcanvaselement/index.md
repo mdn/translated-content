@@ -5,6 +5,7 @@ tags:
   - Canvas
 translation_of: Web/API/HTMLCanvasElement
 ---
+
 {{ApiRef}}
 
 L'interface **`HTMLCanvasElement`** fournit un ensemble de propriétés et de méthodes pour manipuler la disposition et la représentation des éléments canvas. L'interface `HTMLCanvasElement` hérite également des propriétés et des méthodes de l'interface {{domxref("HTMLElement")}}.
@@ -191,7 +192,7 @@ _Méthodes héritées de son parent,_ _{{domxref("HTMLElement")}}._
         Crée un nouveau flux d'entrée qui, quand il est prêt, fournit le contenu
         du canvas en tant que données d'image. Quand le nouveau flux est prêt,
         la fonction de rappel spécifiée
-        {{ifmethod("nsIInputStreamCallback", "onInputStreamReady")}}
+        <code>nsIInputStreamCallback.onInputStreamReady()</code>
         est appelée. Si <code>type</code> n'est pas précisée, Le format de
         l'image est <code>image/png.</code>
         <div class="note">
@@ -306,14 +307,11 @@ Remarquez qu'ici nous créons une image PNG ; si vous ajoutez un second paramèt
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire                                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "embedded-content-0.html#the-canvas-element", "HTMLCanvasElement")}} | {{Spec2('HTML WHATWG')}} | La méthode `getContext()` retourne un {{domxref("RenderingContext")}} au lieu d'un `object` opaque. Les méthodes `supportsContext()`, `setContext()`, `transferControlToProxy()`, `toDataURLHD()`, `toBlobURLHD()` ont été ajoutées. |
-| {{SpecName('HTML5 W3C', "the-canvas-element.html#the-canvas-element", "HTMLCanvasElement")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                                                                                                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLCanvasElement")}}
+{{Compat}}
 
 ## Voir aussi
 

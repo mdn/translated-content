@@ -1,16 +1,9 @@
 ---
 title: rotateX()
 slug: Web/CSS/transform-function/rotateX
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/rotateX()
 original_slug: Web/CSS/transform-function/rotateX()
-browser-compat: css.types.transform-function.rotateX
 ---
+
 {{CSSRef}}
 
 **`rotateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素の形を変化させずに横座標 (水平軸) の周りを回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -19,9 +12,9 @@ browser-compat: css.types.transform-function.rotateX
 
 回転軸は、 {{ cssxref("transform-origin") }} CSS プロパティで定義される原点を通ります。
 
-> **Note:** `rotateX(a)` は `rotate3d(1, 0, 0, a)` と等価です。
+> **メモ:** `rotateX(a)` は `rotate3d(1, 0, 0, a)` と等価です。
 
-> **Note:** 二次元平面での回転とは異なり、三次元での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
+> **メモ:** 二次元平面での回転とは異なり、三次元での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
 
 ## 構文
 

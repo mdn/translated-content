@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 original_slug: Web/CSS/CSS_Columns/Concepts_base_multi-colonnes
 ---
+
 {{CSSRef}}
 
 La disposition sur plusieurs colonnes (« _Multiple-column Layout_ » ou « _multicol_ » en anglais) est un module de spécification pour organiser du contenu sur un ensemble de colonnes, à la façon des colonnes dans un journal imprimé. Dans ce guide, nous verrons comment fonctionne cette spécification et quelques cas d'exemples.
@@ -70,21 +71,27 @@ La [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) `columns`
 
 Ce fragment de code CSS donnera donc le même résultat que pour le premier exemple où `column-count` vaut 3.
 
-    .container {
-      columns: 3;
-    }
+```css
+.container {
+  columns: 3;
+}
+```
 
 Ce fragment de code CSS donnera le même résultat que pour le deuxième exemple où `column-width` vaut `200px`.
 
-    .container {
-      columns: 200px;
-    }
+```css
+.container {
+  columns: 200px;
+}
+```
 
 Enfin, ce fragment de code CSS donnera le même résultat que le troisième exemple où les deux propriétés `column-count` et `column-width` sont définies.
 
-    .container {
-      columns: 2 200px;
-    }
+```css
+.container {
+  columns: 2 200px;
+}
+```
 
 ## Prochaines étapes
 

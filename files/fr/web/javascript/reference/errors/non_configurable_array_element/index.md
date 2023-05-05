@@ -9,12 +9,15 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 original_slug: Web/JavaScript/Reference/Erreurs/Non_configurable_array_element
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: can't delete non-configurable array element (Firefox)
-    TypeError: Cannot delete property '2' of [object Array] (Chrome)
+```
+TypeError: can't delete non-configurable array element (Firefox)
+TypeError: Cannot delete property '2' of [object Array] (Chrome)
+```
 
 ## Type d'erreur
 
@@ -30,7 +33,7 @@ La plupart du temps, les propriétés d'un objet créé avec [un littéral de ta
 
 ## Exemples
 
-### Propriétés non-configurables créées avec  `Object.defineProperty`
+### Propriétés non-configurables créées avec `Object.defineProperty`
 
 Par défaut, la méthode {{jsxref("Object.defineProperty()")}} crée des propriétés non-configurables si on n'indique pas expressément le contraire :
 

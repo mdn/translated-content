@@ -3,6 +3,7 @@ title: Attributs SVG de style
 slug: Web/SVG/Attribute/Styling
 translation_of: Web/SVG/Attribute/Styling
 ---
+
 Les _attributs SVG de style_ sont tous les attributs qui peuvent être spécifiés sur tout élément SVG pour appliquer des styles CSS.
 
 - `class`
@@ -17,7 +18,6 @@ Les _attributs SVG de style_ sont tous les attributs qui peuvent être spécifi�
   - : Spécifie les informations de style d'un élément. Il fonctionne de manière identique à l'attribut {{htmlattrxref('style')}} en HTML.
     _Valeur_: Toute chaîne de caractères valide; _Animation_: **Non**
 
-
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.style")}}
+{{Compat}}

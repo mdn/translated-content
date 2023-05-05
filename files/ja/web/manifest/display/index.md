@@ -1,13 +1,8 @@
 ---
 title: display
 slug: Web/Manifest/display
-tags:
-  - マニフェスト
-  - ウェブ
-  - display
-browser-compat: html.manifest.display
-translation_of: Web/Manifest/display
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -25,9 +20,9 @@ translation_of: Web/Manifest/display
 
 `display` メンバーは、開発者が推奨するウェブサイトの表示モードを判別する文字列です。この表示モードは、ブラウザーの UI をどれだけユーザーに見せるかを変更するものであり、 `browser` (ブラウザーのウィンドウが完全に見える) から `fullscreen` (アプリが全画面になる) までの範囲を取ります。
 
-> **Note:** ブラウザーは指定されたモードに対応していなかった場合は、定義済みの代替チェーンに従います。これは `fullscreen` → `standalone` → `minimal-ui` → `browser` であり、 `browser` が `display` メンバーが指定されていなかった場合の既定値です。
+> **メモ:** ブラウザーは指定されたモードに対応していなかった場合は、定義済みの代替チェーンに従います。これは `fullscreen` → `standalone` → `minimal-ui` → `browser` であり、 `browser` が `display` メンバーが指定されていなかった場合の既定値です。
 
-> **Note:** 表示モードに応じて選択的に CSS を提供するには、 {{cssxref("@media/display-mode", "display-mode")}} メディア特性を使用することができます。これにより、サイトを URL から起動した場合とデスクトップアイコンから起動した場合とでユーザーの操作に一貫性を持たせることができます。
+> **メモ:** 表示モードに応じて選択的に CSS を提供するには、 {{cssxref("@media/display-mode", "display-mode")}} メディア特性を使用することができます。これにより、サイトを URL から起動した場合とデスクトップアイコンから起動した場合とでユーザーの操作に一貫性を持たせることができます。
 
 ## 値
 

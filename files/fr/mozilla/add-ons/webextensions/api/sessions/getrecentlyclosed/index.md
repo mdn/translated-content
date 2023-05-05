@@ -13,6 +13,7 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 ---
+
 {{AddonSidebar()}}
 
 Renvoie un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session du navigation actuelle (c'est à dire l'heure écoulée depuis le démarrage du navigateur).
@@ -34,13 +35,13 @@ var gettingSessions = browser.sessions.getRecentlyClosed(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera rempli avec un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, un pour chacun des derniers onglets fermés ou des fenêtres dans la session de navigation actuelle, jusqu'à  {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} ou le nombre inclus dans l'argument du filtre, le plus petit qui soit. Le tableau est donné à l'inverse de l'ordre dans lequel les onglets ou fenêtres ont été fermés, de sorte que le plus récemment fermé sera à l'index 0.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera rempli avec un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, un pour chacun des derniers onglets fermés ou des fenêtres dans la session de navigation actuelle, jusqu'à {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} ou le nombre inclus dans l'argument du filtre, le plus petit qui soit. Le tableau est donné à l'inverse de l'ordre dans lequel les onglets ou fenêtres ont été fermés, de sorte que le plus récemment fermé sera à l'index 0.
 
 Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.getRecentlyClosed")}}
+{{Compat}}
 
 ## Exemples
 
@@ -80,7 +81,8 @@ browser.browserAction.onClicked.addListener(function() {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,4 +109,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

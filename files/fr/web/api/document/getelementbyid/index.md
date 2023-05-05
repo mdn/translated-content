@@ -3,9 +3,10 @@ title: document.getElementById
 slug: Web/API/Document/getElementById
 translation_of: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
-La méthode **`getElementById()`** de {{domxref("Document")}} renvoie un objet  {{domxref("Element")}} représentant l'élément dont la propriété  {{domxref("Element.id", "id")}} correspond à la chaîne de caractères spécifiée. Étant donné que les ID d'élément doivent être uniques, s'ils sont spécifiés, ils constituent un moyen utile d'accéder rapidement à un élément spécifique.
+La méthode **`getElementById()`** de {{domxref("Document")}} renvoie un objet {{domxref("Element")}} représentant l'élément dont la propriété {{domxref("Element.id", "id")}} correspond à la chaîne de caractères spécifiée. Étant donné que les ID d'élément doivent être uniques, s'ils sont spécifiés, ils constituent un moyen utile d'accéder rapidement à un élément spécifique.
 
 Si vous avez besoin d'accéder à un élément qui n'a pas d'ID, vous pouvez utiliser {{domxref("Document.querySelector","querySelector()")}} pour trouver l'élément en utilisant un {{Glossary("CSS selector","sélecteur")}}.
 
@@ -58,7 +59,7 @@ function changeColor(newColor) {
 
 L'écriture de la lettre capitale de «&nbsp;Id&nbsp;» dans le nom de cette méthode _doit_ être respectée pour que le code fonctionne ; `getElementByID()` n'est pas valide et ne fonctionnera _pas_, même si elle semble naturelle.
 
-Contrairement à d'autres méthodes de recherche d'éléments, comme  {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}, `getElementById` est uniquement disponible comme méthode de l'objet global `document` et _n'est pas_ disponible sur tous les objets du DOM. Parce que les valeurs d'ID doivent être uniques dans l'ensemble du document, il n'y pas besoin d'avoir une version "locale" de la fonction.
+Contrairement à d'autres méthodes de recherche d'éléments, comme {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}, `getElementById` est uniquement disponible comme méthode de l'objet global `document` et _n'est pas_ disponible sur tous les objets du DOM. Parce que les valeurs d'ID doivent être uniques dans l'ensemble du document, il n'y pas besoin d'avoir une version "locale" de la fonction.
 
 ## Autre exemple
 
@@ -98,20 +99,13 @@ var el = document.getElementById('testqq'); // el vaudra null !
 
 **Les documents non-HTML.** Les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom «&nbsp;id&nbsp;» n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut `id` est défini comme étant de type ID dans les langages courants comme [XHTML](/fr/XHTML) ou [XUL](/fr/XUL). Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer `null`.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                | Statut                           | Commentaire                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------- |
-| {{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}} | {{Spec2('DOM1')}}         | Définition initiale de l'interface |
-| {{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM2 Core')}}     | Remplace DOM 1                     |
-| {{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM3 Core')}}     | Remplace DOM 2                     |
-| {{SpecName('DOM WHATWG','#interface-nonelementparentnode','getElementById')}}     | {{Spec2('DOM WHATWG')}} | Remplacera DOM 3                   |
-
-Traduction en français (non normative)&nbsp;: [getElementById](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-getElBId)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.getElementById")}}
+{{Compat}}
 
 ## Voir aussi
 

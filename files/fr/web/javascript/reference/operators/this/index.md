@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/this
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_this
 ---
+
 {{jsSidebar("Operators")}}
 
 En JavaScript, **le mot-clé `this`** se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) ou le mode non-strict.
@@ -18,7 +19,9 @@ Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la f
 
 ## Syntaxe
 
-    this
+```js
+this
+```
 
 ### Valeur
 
@@ -74,7 +77,7 @@ f2() === undefined; // true
 
 En mode strict, la valeur de `this` est conservée (il reste le même) entre le moment de sa définition et l'entrée dans le contexte d'exécution. S'il n'est pas défini, il reste `undefined`. Il pourrait être défini avec n'importe quelle autre valeur, telle que `null` ou `42` ou `"Je ne suis pas this"`.
 
-> **Note :** Dans ce deuxième exemple,`this` vaut {{jsxref("undefined")}} car `f2` a été appelé sans « base » (ex. : `window.f2()`). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet `window`.
+> **Note :** Dans ce deuxième exemple, `this` vaut {{jsxref("undefined")}} car `f2` a été appelé sans « base » (ex. : `window.f2()`). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet `window`.
 
 ### `call` et `apply`
 
@@ -387,17 +390,11 @@ Ici, on utilise `this` à l'intérieur d'une fonction et il n'est pas défini en
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-this-keyword', 'Le mot-clé this')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES2015', '#sec-this-keyword', 'Le mot-clé this')}} | {{Spec2('ES2015')}}     |                                                       |
-| {{SpecName('ES5.1', '#sec-11.1.1', 'Le mot-clé this')}}         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-11.1.1', 'Le mot-clé this')}}             | {{Spec2('ES3')}}         |                                                       |
-| {{SpecName('ES1', '#sec-11.1.1', 'Le mot-clé this')}}             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.this")}}
+{{Compat}}
 
 ## Voir aussi
 

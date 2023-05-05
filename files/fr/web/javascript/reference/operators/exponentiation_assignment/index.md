@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'exponentiation et d'affectation (`**=`) élève la valeur de la variable fournie par son opérande gauche à la puissance indiquée par son opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.

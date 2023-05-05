@@ -3,13 +3,16 @@ title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
 translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.strokeRect()`** de l'API 2D des Canvas dessine le contour d'un rectangle aux coordonnées de l'angle haut gauche _(x, y)_ et aux dimensions déterminées par *largeur* et *hauteur* dans la balise canvas, et en utilisant l'actuel `strokeStyle`.
 
 ## Syntaxe
 
-    void ctx.strokeRect(x, y, largeur, hauteur);
+```js
+void ctx.strokeRect(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 
@@ -89,13 +92,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokerect", "CanvasRenderingContext2D.strokeRect")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.strokeRect")}}
+{{Compat}}
 
 ## Voir aussi
 

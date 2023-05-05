@@ -1,13 +1,8 @@
 ---
 title: scope
 slug: Web/Manifest/scope
-tags:
-  - マニフェスト
-  - ウェブ
-  - scope
-browser-compat: html.manifest.scope
-translation_of: Web/Manifest/scope
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -23,7 +18,7 @@ translation_of: Web/Manifest/scope
   </tbody>
 </table>
 
-_`scope`_ メンバーは文字列型で、このウェブアプリケーションのアプリケーションコンテキストのナビゲーションスコープを定義します。これは、マニフェストが適用されている時に見ることができるウェブページを制限するものです。ユーザーがスコープ外へ移動した場合は、ブラウザータブやウィンドウの中の通常のウェブページに戻ります。
+`scope` メンバーは文字列型で、このウェブアプリケーションのアプリケーションコンテキストのナビゲーションスコープを定義します。これは、マニフェストが適用されている時に見ることができるウェブページを制限するものです。ユーザーがスコープ外へ移動した場合は、ブラウザータブやウィンドウの中の通常のウェブページに戻ります。
 
 `scope` が相対 URL である場合、ベース URL はマニフェストの URL になります。
 

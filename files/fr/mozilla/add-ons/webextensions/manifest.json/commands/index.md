@@ -8,6 +8,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -41,7 +42,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 Utilisez la clé **`commands`** pour définir un ou plusieurs raccourcis clavier pour votre extension.
 
-Chaque raccourci clavier est défini avec un **nom**, une **combination de clé**, et un **description**. Une fois que vous avez défini des commandes dans le fichier `manifest.json`, de votre extension, vous pouvez écouter leurs combinaisons de touches associées avec l'API JavaScript  {{WebExtAPIRef("commands")}}.
+Chaque raccourci clavier est défini avec un **nom**, une **combination de clé**, et un **description**. Une fois que vous avez défini des commandes dans le fichier `manifest.json`, de votre extension, vous pouvez écouter leurs combinaisons de touches associées avec l'API JavaScript {{WebExtAPIRef("commands")}}.
 
 ## Syntaxe
 
@@ -137,7 +138,7 @@ browser.commands.onCommand.addListener(function(command) {
 
 ### Raccourcis spéciaux
 
-Il existe 3 **raccourci spéciaux avec des actions par défaut**, pour lesquels l'événement  {{WebExtAPIRef("commands.onCommand")}} n'est pas déclenché :
+Il existe 3 **raccourci spéciaux avec des actions par défaut**, pour lesquels l'événement {{WebExtAPIRef("commands.onCommand")}} n'est pas déclenché :
 
 - `_execute_browser_action`: fonctionne comme un clic sur une [action de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) de l'extension.
 - `_execute_page_action`: fonctionne comme un clic sur une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions) de l'extension.
@@ -165,14 +166,14 @@ Sur Mac, `"Ctrl"` est interprété comme `"Command"`, donc si vous avez réellem
 
 Les combinaisons de touches doivent être composées de deux ou trois touches :
 
-1.  **modificateur** (obligatoire, à l'exception des touches de fonction). Il peut s'agir de `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`.
-2.  **second modificateur** (facultatif). S'il est fourni, il doit être `"Shift"` ou (pour Firefox ≥ 63) l'un quelconque des `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`. Ne doit pas être le modificateur déjà utilisé comme modificateur principal.
-3.  **touche** (obligatoire). Ce peut être l'une des touches :
+1. **modificateur** (obligatoire, à l'exception des touches de fonction). Il peut s'agir de `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`.
+2. **second modificateur** (facultatif). S'il est fourni, il doit être `"Shift"` ou (pour Firefox ≥ 63) l'un quelconque des `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`. Ne doit pas être le modificateur déjà utilisé comme modificateur principal.
+3. **touche** (obligatoire). Ce peut être l'une des touches :
 
-    - lettres `A`–`Z`
-    - chiffres `0`–`9`
-    - fonctions `F1`–`F12`
-    - `Comma`(virgule), `Period`(point), `Home` (début), `End` (Fin), `PageUp`(page précédente), `PageDown` (page suivante), `Space` (espace), `Insert`(inser), `Delete`(Suppr), `Up` (haut), `Down` (bas), `Left`(gauche), `Right` (droite)
+    - lettres `A` – `Z`
+    - chiffres `0` – `9`
+    - fonctions `F1` – `F12`
+    - `Comma` (virgule), `Period` (point), `Home` (début), `End` (Fin), `PageUp` (page précédente), `PageDown` (page suivante), `Space` (espace), `Insert` (inser), `Delete` (Suppr), `Up` (haut), `Down` (bas), `Left` (gauche), `Right` (droite)
 
 La clé est ensuite donnée sous la forme d'une chaîne contenant l'ensemble des valeurs de clé, dans l'ordre indiqué ci-dessus, séparées "`+`". Par exemple, `"Ctrl+Shift+Z"`.
 
@@ -225,6 +226,6 @@ Définissez deux raccourcis clavier, l'un avec une combinaison de touches spéci
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.commands")}}
+{{Compat}}

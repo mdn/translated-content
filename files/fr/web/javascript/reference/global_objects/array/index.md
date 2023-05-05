@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array
 ---
+
 {{JSRef}}
 
 L'objet global **`Array`** est utilisé pour créer des tableaux. Les tableaux sont des objets de haut-niveau (en termes de complexité homme-machine) semblables à des listes.
@@ -271,6 +272,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 
 - [`Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
   - : Crée un nouvel objet `Array`.
+
 ## Propriétés statiques
 
 - [`get Array[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species)
@@ -313,7 +315,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 - [`Array.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
   - : Renvoie l'indice de l'élément trouvé dans le tableau si un élément du tableau satisfait la condition fixée par la fonction passée en argument ou `-1` si aucun élément n'est trouvé.
 - [`Array.prototype.flat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
-  - : Renvoie un nouveau tableau avec l'ensemble des sous-éléments concaténés récursivement dans le tableau jusqu'à une profondeur indiquée. 
+  - : Renvoie un nouveau tableau avec l'ensemble des sous-éléments concaténés récursivement dans le tableau jusqu'à une profondeur indiquée.
 - [`Array.prototype.flatMap()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
   - : Renvoie un nouveau tableau formé en appliquant une fonction de rappel donnée à chaque élément du tableau puis en «&nbsp;aplatissant&nbsp;» le tableau d'un niveau.
 - [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -360,6 +362,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
   - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
 - <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator()"><code>Array.prototype[@@iterator]()</code></a>
   - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
+
 ## Exemples
 
 ### Créer un tableau
@@ -401,23 +404,25 @@ console.log(plateau.join('\n'));
 
 Voici le résultat affiché :
 
-    T,C,F,R,K,F,C,T
-    P,P,P,P,P,P,P,P
-     , , , , , , ,
-     , , , , , , ,
-     , , , , , , ,
-     , , , , , , ,
-    p,p,p,p,p,p,p,p
-    t,c,f,k,r,f,c,t
+```
+T,C,F,R,K,F,C,T
+P,P,P,P,P,P,P,P
+  , , , , , , ,
+  , , , , , , ,
+  , , , , , , ,
+  , , , , , , ,
+p,p,p,p,p,p,p,p
+t,c,f,k,r,f,c,t
 
-    T,C,F,R,K,F,C,T
-    P,P,P,P,P,P,P,P
-     , , , , , , ,
-     , , , , , , ,
-     , , , ,p, , ,
-     , , , , , , ,
-    p,p,p,p, ,p,p,p
-    t,c,f,k,r,f,c,t
+T,C,F,R,K,F,C,T
+P,P,P,P,P,P,P,P
+  , , , , , , ,
+  , , , , , , ,
+  , , , ,p, , ,
+  , , , , , , ,
+p,p,p,p, ,p,p,p
+t,c,f,k,r,f,c,t
+```
 
 ### Utiliser un tableau pour tabuler un ensemble de valeurs
 
@@ -435,16 +440,16 @@ console.table(values)
 Résulte en
 
 ```plain
-0	1	0
-1	2	2
-2	4	8
-3	8	18
-4	16	32
-5	32	50
-6	64	72
-7	128	98
-8	256	128
-9	512	162
+0  1  0
+1  2  2
+2  4  8
+3  8  18
+4  16  32
+5  32  50
+6  64  72
+7  128  98
+8  256  128
+9  512  162
 ```
 
 (Le première colonne est l'index)
@@ -452,6 +457,7 @@ Résulte en
 ## Spécifications
 
 {{Specifications}}
+
 ## Compatibilité des navigateurs
 
 {{Compat}}

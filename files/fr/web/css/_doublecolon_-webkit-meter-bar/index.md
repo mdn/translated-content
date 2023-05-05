@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-webkit-meter-bar
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-meter-bar`** est un pseudo-élément spécifique à WebKit et permet de mettre en forme l'arrière-plan d'un élément {{HTMLElement("meter")}}.
@@ -49,7 +50,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-meter-bar")}}
+{{Compat}}
 
 ## Voir aussi
 

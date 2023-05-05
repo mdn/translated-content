@@ -1,86 +1,92 @@
 ---
-title: animate
+title: <animate>
 slug: Web/SVG/Element/animate
-tags:
-  - Animation SVG
-  - Element
-  - SVG
 translation_of: Web/SVG/Element/animate
+browser-compat: svg.elements.animate
 ---
+
 {{SVGRef}}
 
-L'élément SVG **`<animate>`** est utilisé pour animer un attribut ou une propriété d'un élément au fil du temps. Il est normalement inséré dans l'élément cible ou référencé par l'attribut `href` de l'élément.
-
-## Contexte d'utilisation
-
-{{svginfo}}
-
-## Attributs
-
-### Attributs globaux
-
-- [Attributs de traitrement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs d'événement d'animation](/fr/docs/Web/SVG/Attribute#Événements_d'animation)
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
-- [Attributs cible d'attributs d'animation](/fr/docs/Web/SVG/Attribute#Animation_cible)
-- [Attributs de timing de l'animation](/fr/docs/Web/SVG/Attribute#Timing_de_l'animation)
-- [Attributs de valeur de l'animation](/fr/docs/Web/SVG/Attribute#Valeurs_de_l'animation)
-- [Attributs d'addition de l'animation](/fr/docs/Web/SVG/Attribute#Addition_de_l'animation)
-- {{SVGAttr("externalResourcesRequired")}}
-
-### Attributs spécifiques
-
-- {{SVGAttr("attributeName")}}
-- {{SVGAttr("attributeType")}}
-- {{SVGAttr("from")}}
-- {{SVGAttr("to")}}
-- {{SVGAttr("dur")}}
-- {{SVGAttr("repeatCount")}}
-
-## Interface DOM
-
-Cet élément implémente l'interface [`SVGAnimateElement`](/fr/docs/Web/DOM/SVGAnimateElement).
+L'élément SVG **`<animate>`** permet d'animer un attribut d'un élément au fil du temps.
 
 ## Exemple
 
-### SVG
+```css hidden
+html,body,svg { height:100%; margin:0; padding:0; }
+```
 
 ```html
-<?xml version="1.0"?>
-<svg width="120" height="120" viewBox="0 0 120 120" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
-
-  <rect x="10" y="10" width="100" height="100">
-    <animate attributeType="XML" attributeName="x" from="-100" to="120"
-        dur="10s" repeatCount="indefinite"/>
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <rect width="10" height="10">
+    <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
   </rect>
 </svg>
 ```
 
-### Résultat
+{{EmbedLiveSample('', 150, '100%')}}
 
-{{EmbedLiveSample("Exemple", 120, 120)}}
+## Attributs
 
-## Problèmes d'accessibilité
+### Attributs d'animation
 
-Les animations qui clignotent peuvent être problématiques pour les personnes ayant des problèmes cognitifs tels que le Trouble du Déficit de l'Attention avec ou sans Hyperactivité (TDAH). De plus, certains types de mouvements peuvent être un élément déclencheur pour les personnes présentant un risque de troubles vestibulaires, d'épilepsie, de migraine et de sensibilité à la scotopie.
+- [Attribut pour le minutage d'une animation](/fr/docs/Web/SVG/Attribute#timing_de_lanimation)
+  - [`begin`](/fr/docs/Web/SVG/Attribute/begin)
+  - [`dur`](/fr/docs/Web/SVG/Attribute/dur)
+  - [`end`](/fr/docs/Web/SVG/Attribute/end)
+  - [`min`](/fr/docs/Web/SVG/Attribute/min)
+  - [`max`](/fr/docs/Web/SVG/Attribute/max)
+  - [`restart`](/fr/docs/Web/SVG/Attribute/restart)
+  - [`repeatCount`](/fr/docs/Web/SVG/Attribute/repeatCount)
+  - [`repeatDur`](/fr/docs/Web/SVG/Attribute/repeatDur)
+  - [`fill`](/fr/docs/Web/SVG/Attribute/fill)
+- [Attributs de valeur pour une animation](/fr/docs/Web/SVG/Attribute#valeurs_de_lanimation)
+  - [`calcMode`](/fr/docs/Web/SVG/Attribute/calcMode)
+  - [`values`](/fr/docs/Web/SVG/Attribute/values)
+  - [`keyTimes`](/fr/docs/Web/SVG/Attribute/keyTimes)
+  - [`keySplines`](/fr/docs/Web/SVG/Attribute/keySplines)
+  - [`from`](/fr/docs/Web/SVG/Attribute/from)
+  - [`to`](/fr/docs/Web/SVG/Attribute/to)
+  - [`by`](/fr/docs/Web/SVG/Attribute/by)
+- [Autres attributs relatifs aux animations](/fr/docs/Web/SVG/Attribute#attributs_danimation)
+  - [`attributeName`](/fr/docs/Web/SVG/Attribute/attributeName)
+  - [`additive`](/fr/docs/Web/SVG/Attribute/additive)
+  - [`accumulate`](/fr/docs/Web/SVG/Attribute/accumulate)
+- [Attributs pour les évènements relatifs aux animations](/fr/docs/Web/SVG/Attribute/Events#événements_danimation)
+  - [`onbegin`](/fr/docs/Web/SVG/Attribute/onbegin)
+  - [`onend`](/fr/docs/Web/SVG/Attribute/onend)
+  - [`onrepeat`](/fr/docs/Web/SVG/Attribute/onrepeat)
 
-Envisagez de créer un mécanisme permettant de suspendre ou de désactiver l'animation, ainsi que d'utiliser la [requête reduced-motion](/fr/docs/Web/CSS/@media/prefers-reduced-motion) pour améliorer l'expérience des utilisateurs ayant définit pour préférence de ne pas avoir d'animations.
+### Attributs universels
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute/Core)
+  - [`id`](/fr/docs/Web/SVG/Attribute/id)
+- [Attributs de mise en forme](/fr/docs/Web/SVG/Attribute/Styling)
+  - [`class`](/fr/docs/Web/SVG/Attribute/class)
+  - [`style`](/fr/docs/Web/SVG/Attribute/style)
+- [Attributs relatifs aux évènements](/fr/docs/Web/SVG/Attribute#attributs_dévénement)
+  - [Attributs pour les évènements universels](/fr/docs/Web/SVG/Attribute/Events#attributs_dévénement_globaux)
+  - [Attributs pour les évènements des éléments du document](/fr/docs/Web/SVG/Attribute/Events#attributs_dévénement_des_éléments_du_document)
+
+## Notes d'utilisation
+
+Cet élément implémente l'interface [`SVGAnimateElement`](/fr/docs/Web/API/SVGAnimateElement).
+
+## Accessibilité
+
+Les animations de clignotement ou de flash peuvent être problématiques pour les personnes avec des troubles de l'attention. De plus, certains types de mouvement peuvent déclencher des troubles vestibulaires, des crises d'épilepsie, des migraines ou une sensibilité scotopique.
+
+Veillez à fournir un mécanisme pour suspendre ou désactiver les animations, par exemple en utilisant [la caractéristique média `@prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) pour proposer une expérience alternative aux personnes qui ont exprimé une préférence pour l'absence d'animations.
+
+- [Concevoir des animations web plus sûres, tenant compte de la sensibilité aux mouvements, un article <i lang="en">A List Apart</i> (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
+- [Une introduction aux requêtes média pour la réduction des mouvements sur CSS-Tricks (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Conception adaptative et gestion du mouvement sur le blog WebKit (en anglais)](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [Guide MDN pour la compréhension de la règle 2.2 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline\_2.2\_%e2%80%94\_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [Comprendre le critère de réussite 2.2.2, un guide du W3C pour la compréhension de WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}     | {{Spec2("SVG Animations 2")}} | Aucun changement    |
-| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}                 | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.animate")}}
+{{Compat}}

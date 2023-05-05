@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.font
-translation_of: Web/API/CanvasRenderingContext2D/font
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.font`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキストスタイルを指定します。この文字列は [CSS の font](/ja/docs/Web/CSS/font) の記述子と同じ構文を用います。
@@ -73,8 +66,8 @@ f.load().then(function() {
 
 ### Gecko 特有のメモ
 
- - Firefox など Gecko ベースのブラウザーでは、このプロパティのほかに標準外かつ非推奨の `ctx.mozTextStyle` を定義しています。代わりに `ctx.font` を使用してください。
- - Gecko では、システムフォントをキャンバスの 2D コンテキストの {{domxref("CanvasRenderingContext2D.font", "font")}} (例えば `menu`) の値として設定した場合、フォントの値を取得しても期待したフォントが返されない (何も返されない) ことがありました。これは、Firefox 57 でリリースされた Firefox の並列 CSS エンジン [Quantum/Stylo]("https://wiki.mozilla.org/Quantum/Stylo) で修正されました (bug 1374885)。
+- Firefox など Gecko ベースのブラウザーでは、このプロパティのほかに標準外かつ非推奨の `ctx.mozTextStyle` を定義しています。代わりに `ctx.font` を使用してください。
+- Gecko では、システムフォントをキャンバスの 2D コンテキストの {{domxref("CanvasRenderingContext2D.font", "font")}} (例えば `menu`) の値として設定した場合、フォントの値を取得しても期待したフォントが返されない (何も返されない) ことがありました。これは、Firefox 57 でリリースされた Firefox の並列 CSS エンジン [Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo) で修正されました (bug 1374885)。
 
 ## 関連情報
 

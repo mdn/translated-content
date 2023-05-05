@@ -1,6 +1,6 @@
 ---
 title: L'opérateur virgule
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 tags:
   - JavaScript
   - Opérateur
@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_virgule
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur **virgule** permet d'évaluer chacun de ses opérandes (de la gauche vers la droite) et de renvoyer la valeur du dernier opérande.
@@ -16,11 +17,13 @@ L'opérateur **virgule** permet d'évaluer chacun de ses opérandes (de la gauch
 
 ## Syntaxe
 
-    expr1, expr2, expr3...
+```js
+expr1, expr2, expr3…
+```
 
 ### Paramètres
 
-- `expr1`, `expr2, expr3...`
+- `expr1`, `expr2, expr3…`
   - : Des expressions JavaScript.
 
 ## Description
@@ -69,16 +72,11 @@ function maFonction () {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires        |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-comma-operator', 'Comma operator')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-comma-operator', 'Comma operator')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-11.14', 'Comma operator')}}             | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES1', '#sec-11.14', 'Comma operator')}}                 | {{Spec2('ES1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.comma")}}
+{{Compat}}
 
 ## Voir aussi
 

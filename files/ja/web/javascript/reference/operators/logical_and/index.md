@@ -1,15 +1,8 @@
 ---
 title: 論理積 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理演算子
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.logical_and
-translation_of: Web/JavaScript/Reference/Operators/Logical_AND
 ---
+
 {{jsSidebar("Operators")}}
 
 論理積 (`&&`) 演算子 (論理結合) を一組の論理型のオペランドに対して使用すると、すべてのオペランドが `true` である場合にのみ `true` になります。それ以外の場合は `false` になります。
@@ -47,7 +40,7 @@ result = 2 && 0;       // result には 0 が代入される
 result = 'foo' && 4;   // result には 4 が代入される
 ```
 
-`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)に変換することが可能であるため、論理演算子と見なすことができます。
+`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型)に変換することが可能であるため、論理演算子と見なすことができます。
 返値（または一般的な式）を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
 ### 短絡評価

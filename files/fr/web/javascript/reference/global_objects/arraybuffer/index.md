@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer
 browser-compat: javascript.builtins.ArrayBuffer
 ---
+
 {{JSRef}}
 
 L'objet **`ArrayBuffer`** est utilisé afin de représenter un tampon (_buffer_) de données binaires de longueur fixe de façon générique.
@@ -12,7 +13,6 @@ L'objet **`ArrayBuffer`** est utilisé afin de représenter un tampon (_buffer_)
 Il s'agit d'un tableau d'octets. Il n'est pas possible de manipuler directement le contenu d'un `ArrayBuffer`, la manipulation se fait de façon indirecte en créant un [tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) qui permet de représenter le tampon dans un format donné qui permet de lire/écrire des contenus dans le tampon de mémoire.
 
 Le constructeur [`ArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) permet de créer un nouvel objet `ArrayBuffer` dont la longueur, en octets, est fournie par l'argument. Il est aussi possible d'obtenir un tableau typé à partir de données existantes, par exemple depuis une chaîne en [Base64](/fr/docs/Glossary/Base64) ou [depuis un fichier local](/fr/docs/Web/API/FileReader/readAsArrayBuffer).
-
 
 ## Constructeur
 

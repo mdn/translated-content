@@ -12,11 +12,12 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 ---
+
 {{AddonSidebar()}}
 
 Un objet décrivant un seul [certificat X.509](https://tools.ietf.org/html/rfc5280).
 
-L'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné par l'objet {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API inclut une propriété de  `certificats` qui est un tableau de ces objets.
+L'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné par l'objet {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API inclut une propriété de `certificats` qui est un tableau de ces objets.
 
 ## Type
 
@@ -65,8 +66,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
     - `end`
       - : `Number`. La fin de la période de validité du certificat, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.CertificateInfo", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}

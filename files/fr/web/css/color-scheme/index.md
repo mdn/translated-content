@@ -4,6 +4,7 @@ slug: Web/CSS/color-scheme
 translation_of: Web/CSS/color-scheme
 browser-compat: css.properties.color-scheme
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`color-scheme`** permet d'indiquer les jeux de couleurs dans lesquels un élément peut être rendu sans risque.

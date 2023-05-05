@@ -9,14 +9,17 @@ tags:
   - scrollTo
 translation_of: Web/API/Element/scrollTo
 ---
+
 {{ APIRef }}
 
 La méthode **`scrollTo()`** de l'interface {{domxref("Element")}} permet de faire défiler le document jusqu'à un jeu de coordonnées particulier.
 
 ## Syntaxe
 
-    element.scrollTo(x-coord, y-coord)
-    element.scrollTo(options)
+```js
+element.scrollTo(x-coord, y-coord)
+element.scrollTo(options)
+```
 
 ### Paramètres
 
@@ -47,13 +50,11 @@ element.scrollTo({
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{ SpecName('CSSOM View', '#dom-element-scrollto-options-options', 'element.scrollTo()') }} | {{ Spec2('CSSOM View') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.scrollTo")}}
+{{Compat}}
 
 ## Voir aussi
 

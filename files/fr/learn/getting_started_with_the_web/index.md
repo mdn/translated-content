@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web
 original_slug: Apprendre/Commencer_avec_le_web
 ---
+
 {{LearnSidebar}}
 
 _Commencer avec le Web_ est une suite concise d'articles vous présentant la pratique du développement web. Vous installerez les outils nécessaires pour construire une simple page web et publier votre code.

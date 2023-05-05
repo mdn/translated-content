@@ -8,6 +8,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 original_slug: Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome
 ---
+
 {{AddonSidebar}}
 
 Les extensions construites à l'aide des API WebExtension sont conçues afin d'être compatibles avec les extensions Chrome et Opera. Les extensions écrites dans ces navigateurs devraient fonctionner, autant que possible, avec très peu de changement dans Firefox.
@@ -81,7 +82,7 @@ Si vous écrivez votre extension en utilisant `browser` et les promesses, l'équ
 
 La page sur la [compatibilité des navigateurs pour les API JavaScript WebExtension](/fr/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) inclut l'ensemble des tableaux de compatibilité. Lorsqu'il existe des réserves autour du support d'un élément d'API donné, ceci est indiqué dans ces tableaux avec un astérisque "\*". Ces réserves sont détaillées la page de documentation respective de l'API.
 
-Ces tableaux sont générés à partir des données de compatibilité stockées en tant que  [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
+Ces tableaux sont générés à partir des données de compatibilité stockées en tant que [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
 
 Le reste de cette section décrit les problèmes de compatibilité qui ne sont pas encore pris en compte dans ces tableaux.
 
@@ -99,7 +100,9 @@ Le reste de cette section décrit les problèmes de compatibilité qui ne sont p
 
 - Dans Firefox, les URL relatives passées à `tabs.executeScript()` ou `tabs.insertCSS()` sont résolues par rapport à l'URL de la page actuelle. Dans Chrome, ces URL sont résolues par rapport à l'URL de base de l'extension. Pour travailler pour l'ensemble des navigateurs, il est donc nécessaire d'indiquer le chemin comme URL absolue, en commençant par la racine de l'extension, comme ceci:
 
-      /chemin/vers/script.json
+  ```
+  /chemin/vers/script.json
+  ```
 
 - Dans Firefox, interroger les onglets avec des URL avec `tabs.query()` nécessitent une permission `"tabs"`. Dans Chrome, il est possible de le faire sans la permission `"tabs"` mais cela limitera les résultats aux onglets dont les URL correspondent aux permissions de l'hôte.
 - Dans Firefox, la promesse `tabs.remove()` est tenue après l'évènement `beforeunload` alors que pour Chrome, le _callback_ n'attend pas `beforeunload`.

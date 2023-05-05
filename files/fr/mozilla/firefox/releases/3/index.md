@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3
 original_slug: Mozilla/Firefox/Versions/3
 ---
+
 {{FirefoxSidebar}}
 
 Pour les développeurs qui désirent prendre connaissance de toutes les nouvelles fonctionnalités de Firefox 3, c'est ici qu'il convient de commencer. Cet article fournit la liste des nouveaux articles couvrant les fonctionnalités qui ont été ajoutées à Firefox 3. Même s'il ne couvre pas nécessairement chaque petite modification, il vous aidera à découvrir les améliorations majeures.
@@ -236,7 +237,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 - **Gestionnaire de protocoles Web.** Des applications Web, comme les webmails, peuvent à présent être utilisées comme des applications de bureau pour gérer les liens `mailto:` venant d'autres sites. Une gestion similaire est fournie pour d'autres protocoles. (Notez que les applications Web doivent s'enregistrer elles-mêmes dans Firefox avant que cela fonctionne.)
 - **Actions de téléchargement faciles à utiliser.** Un nouveau panneau de préférences d'applications fournit une interface améliorée pour la configuration de gestionnaires pour différents types de fichiers et de protocoles.
 - **Apparence visuelle améliorée.** La gestion des images et des polices a été améliorée pour permettre aux sites d'être mieux rendus sur votre écran, avec un rendu des polices plus précis et une meilleure gestion des polices avec des ligatures et des écritures complexes. En outre, les utilisateurs de Mac et Linux (Gnome) remarqueront que Firefox se comporte plus que jamais comme une application native sur leur plateforme, avec une nouvelle apparence.
-- **Gestion des couleurs.** En définissant la préférence `gfx.color_management.enabled` dans `{{ mediawiki.external('about:config') }}`, vous pouvez demander à Firefox d'utiliser les profils de couleur intégrés dans les images afin d'ajuster la représentation des couleurs à votre écran d'affichage.
+- **Gestion des couleurs.** En définissant la préférence `gfx.color_management.enabled` dans `about:config`, vous pouvez demander à Firefox d'utiliser les profils de couleur intégrés dans les images afin d'ajuster la représentation des couleurs à votre écran d'affichage.
 - **Fonctionnement hors ligne.** Les applications Web peuvent bénéficier de nouvelles fonctionnalités leur permettant d'être utilisées même sans connexion Internet active.
 
 ### Sécurité et vie privée
@@ -256,6 +257,6 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 - **Vitesse.** Firefox 3 dispose d'une amélioration des performances grâce au remplacement de la partie s'occupant de l'affichage à l'écran, ainsi que la gestion de la disposition du contenu.
 - **Utilisation mémoire.** Firefox 3 utilise la mémoire de manière plus efficiente avec plus de 300 bugs concernant des fuites mémoire corrigées et de nouvelles fonctionnalités aidant à identifier et libérer automatiquement les blocs mémoire qui ne sont plus utilisés.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('2')}}

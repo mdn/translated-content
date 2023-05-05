@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/hr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<hr>`** représente un changement thématique entre des éléments de paragraphe (par exemple, un changement de décor dans un récit, un changement de sujet au sein d'une section).
 
@@ -101,7 +102,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("presentation")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -112,16 +113,11 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}     | {{Spec2('HTML WHATWG')}} | Définition de l'élément `hr`                                                |
-| {{SpecName('HTML WHATWG', 'rendering.html#the-hr-element-0')}}                     | {{Spec2('HTML WHATWG')}} | Suggestion de rendu par défaut de l'élément `hr`                            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                                                             |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}             | {{Spec2('HTML4.01')}}     | Les attributs `align`, `noshade`, `size`, `width` sont désormais dépréciés. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.hr")}}
+{{Compat}}
 
 ## Voir aussi
 

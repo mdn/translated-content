@@ -1,26 +1,30 @@
 ---
-title: element.offsetParent
+title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
-tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/offsetParent
+browser-compat: api.HTMLElement.offsetParent
 ---
-{{ ApiRef() }}
 
-### Résumé
+{{APIRef("HTML DOM")}}
 
-Renvoie une référence à l'objet qui est l'élément conteneur positionné le plus proche (dans la hiérarchie de positionnement). Si l'élément n'est pas positionné, c'est l'élément racine (html en mode de respect des standards&nbsp;; body en mode de rendu quirks) qui est l'**offsetParent**.
+La propriété en lecture seule **`HTMLElement.offsetParent`** fournit une référence vers le plus proche élément ancêtre positionné (plus proche selon la hiérarchie). S'il n'y a pas d'élément ancêtre positionné, c'est le plus proche ancêtre `td`, `th`, `table` qui sera renvoyé, ou `body` s'il n'y a non plus pas d'élément de tableau comme ancêtre.
 
-### Syntaxe
+> **Note :** `offsetParent` renvoie `null` dans les situations suivantes&nbsp;:
+>
+> - La propriété `display` de l'élément ou de son élément parent vaut `none`.
+> - La propriété `position` de l'élément vaut `fixed` (Firefox renverra `<body>`).
+> - L'élément courant est `<body>` ou `<html>`.
 
-    objetParent = element.offsetParent
+`offsetParent` est utile car [`offsetTop`](/fr/docs/Web/API/HTMLElement/offsetTop) et [`offsetLeft`](/fr/docs/Web/API/HTMLElement/offsetLeft) sont relatifs au bord de remplissage.
 
-### Paramètres
+## Valeur
 
-- `objetParent` est une référence à l'élément dans lequel l'élément courant est positionné.
+Une référence objet vers l'élément dans lequel l'élément courant est décalé.
 
-### Spécification
+## Spécifications
 
-{{ DOM0() }}
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: '-webkit-line-clamp'
 slug: Web/CSS/-webkit-line-clamp
-tags:
-  - '-webkit-line-clamp'
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - recipe:css-property
-browser-compat: css.properties.-webkit-line-clamp
-translation_of: Web/CSS/-webkit-line-clamp
 ---
+
 {{CSSRef}}
 
 **`-webkit-line-clamp`** は CSS のプロパティで、{{Glossary("block container", "ブロックコンテナー")}}の内容を指定した行数に制限することができます。
@@ -20,7 +13,7 @@ translation_of: Web/CSS/-webkit-line-clamp
 
 アンカー要素に適用すると、切り捨てがテキストの途中で行われる場合があるかもしれませんが、必ずしも末尾で切り捨てが行われるとは限りません。
 
-> **Note:** このプロパティは元々 WebKit ブラウザーで実装されていたものですが、いくつかの問題があります。レガシーサポートのために標準化されました。 [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) の仕様では、このプロパティを置き換えて問題を回避することを目的として {{cssxref("line-clamp")}} プロパティが定義されています。
+> **メモ:** このプロパティは元々 WebKit ブラウザーで実装されていたものですが、いくつかの問題があります。レガシーサポートのために標準化されました。 [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) の仕様では、このプロパティを置き換えて問題を回避することを目的として {{cssxref("line-clamp")}} プロパティが定義されています。
 
 ## 構文
 
@@ -59,8 +52,8 @@ translation_of: Web/CSS/-webkit-line-clamp
 
 ```html
 <p>
-  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
-  An ellipsis will be shown at the point where the text is clamped.
+  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
+  An ellipsis will be shown at the point where the text is clamped.
 </p>
 ```
 
@@ -68,10 +61,10 @@ translation_of: Web/CSS/-webkit-line-clamp
 
 ```css
 p {
-  width: 300px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  width: 300px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 ```
@@ -90,5 +83,5 @@ p {
 
 ## 関連情報
 
-- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
 - {{cssxref("line-clamp")}}

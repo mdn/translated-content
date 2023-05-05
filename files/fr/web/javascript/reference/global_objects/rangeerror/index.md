@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 original_slug: Web/JavaScript/Reference/Objets_globaux/RangeError
 browser-compat: javascript.builtins.RangeError
 ---
+
 {{JSRef}}
 
 L'objet **`RangeError`** permet d'indiquer une erreur lorsqu'une valeur fournie n'appartient pas à l'intervalle ou à l'ensemble de valeurs autorisées.
@@ -38,6 +39,7 @@ Par exemple, cela peut être le cas quand&nbsp;:
   - : Le numéro de la colonne dans la ligne du fichier qui a déclenché cette erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 - [`RangeError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
   - : La trace de la pile d'appel. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+
 ## Exemples
 
 ### Utiliser `RangeError`

@@ -1,13 +1,8 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
-tags:
-  - JavaScript
-  - プロパティ
-  - リファレンス
-browser-compat: javascript.builtins.Infinity
-translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 グローバルプロパティ **`Infinity`** は無限大を表す数値です。

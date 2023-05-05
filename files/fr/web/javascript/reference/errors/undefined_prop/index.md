@@ -9,11 +9,14 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 original_slug: Web/JavaScript/Reference/Erreurs/Undefined_prop
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    ReferenceError: reference to undefined property "x" (Firefox)
+```
+ReferenceError: reference to undefined property "x" (Firefox)
+```
 
 ## Type d'erreur
 
@@ -38,7 +41,7 @@ toto.truc; // ReferenceError: reference to undefined property "bar"
 
 ### Exemples valides
 
-Pour éviter cette erreur, il faut que `truc` soit une variable  « définie » ou vérifier son existence avant de l'utiliser (en utilisant par exemple la méthode {{jsxref("Object.prototype.hasOwnProperty()")}}).
+Pour éviter cette erreur, il faut que `truc` soit une variable « définie » ou vérifier son existence avant de l'utiliser (en utilisant par exemple la méthode {{jsxref("Object.prototype.hasOwnProperty()")}}).
 
 ```js example-good
 "use strict";

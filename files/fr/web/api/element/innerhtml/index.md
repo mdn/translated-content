@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/Element/innerHTML
 original_slug: Web/API/Element/innertHTML
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.
@@ -20,13 +21,15 @@ Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un
 
 ## Syntaxe
 
-    const content = element.innerHTML;
+```js
+const content = element.innerHTML;
 
-    element.innerHTML = htmlString;
+element.innerHTML = htmlString;
+```
 
 ### Valeur
 
-Une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
+Une {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
 
 ### Exceptions
 
@@ -71,11 +74,11 @@ document.documentElement.innerHTML = "<pre>" +
 
 #### Détails opérationnels
 
-Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ?  Cela entraîne l'agent utilisateur à suivre ces étapes :
+Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ? Cela entraîne l'agent utilisateur à suivre ces étapes :
 
-1.  La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
-2.  Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.
-3.  Pour tous les autres éléments, le contenu de l'élément est remplacé par les noeuds du nouveau `DocumentFragment`.
+1. La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
+2. Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.
+3. Pour tous les autres éléments, le contenu de l'élément est remplacé par les noeuds du nouveau `DocumentFragment`.
 
 ### Considérations de sécurité
 
@@ -92,7 +95,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // inoffensif dans ce cas
 ```
 
-Bien que cela puisse ressembler à une attaque {{interwiki ("wikipedia", "cross-site_scripting","cross-site scripting")}}, le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Bien que cela puisse ressembler à une attaque [<i lang="en">cross-site scripting</i>](https://fr.wikipedia.org/wiki/Cross-site_scripting), le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
 Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez `innerHTML` pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :
 
@@ -125,7 +128,7 @@ log("Logging mouse events inside this container...");
 
 La fonction `log()` crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe `"log"`.
 
-Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que {{event ("mousedown")}}, {{event ("click")}} et {{event ("mouseenter") }}) :
+Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`click`](/fr/docs/Web/API/Element/click_event) et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)) :
 
 ```js
 function logEvent(event) {
@@ -186,11 +189,9 @@ Le contenu résultant ressemble à ceci. Vous pouvez voir la sortie dans le jour
 
 {{EmbedLiveSample("Exemple", 640, 350)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM Parsing', '#innerhtml', 'Element.innerHTML')}} | {{ Spec2('DOM Parsing') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

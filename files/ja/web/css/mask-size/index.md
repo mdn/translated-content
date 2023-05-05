@@ -1,16 +1,8 @@
 ---
 title: mask-size
 slug: Web/CSS/mask-size
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-size
-translation_of: Web/CSS/mask-size
 ---
+
 {{CSSRef}}
 
 **`mask-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスク画像の寸法を指定します。画像の寸法は、その本質的な比率を維持するために、完全または部分的に制約を受けることがあります。
@@ -47,7 +39,7 @@ mask-size: revert;
 mask-size: unset;
 ```
 
-> **Note:** `mask-size` の後に要素に {{cssxref("mask")}} 一括指定プロパティが指定され、このプロパティの値が設定されていない場合、このプロパティの値は、一括指定プロパティによって初期値にリセットされます。
+> **メモ:** `mask-size` の後に要素に {{cssxref("mask")}} 一括指定プロパティが指定され、このプロパティの値が設定されていない場合、このプロパティの値は、一括指定プロパティによって初期値にリセットされます。
 
 ## 構文
 

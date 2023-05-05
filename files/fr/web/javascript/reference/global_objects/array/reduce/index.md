@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 tags:
   - Array
   - ECMAScript 5
@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reduce
 ---
+
 {{JSRef}}
 
 La méthode **`reduce()`** applique une fonction qui est un « accumulateur » et qui traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.
@@ -19,8 +20,10 @@ La méthode **`reduce()`** applique une fonction qui est un « accumulateur » e
 
 ## Syntaxe
 
-    arr.reduce(callback)
-    arr.reduce(callback, valeurInitiale)
+```js
+arr.reduce(callback)
+arr.reduce(callback, valeurInitiale)
+```
 
 ### Paramètres
 
@@ -48,10 +51,10 @@ La valeur obtenue grâce à la fonction de réduction.
 
 `reduce()` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau et ignore les éléments vides du tableau. La fonction `callback` utilise quatre arguments :
 
-1.  L'accumulateur (la valeur retournée par le précédent appel de la fonction `callback`), ou la valeur initiale s'il sagit du premier appel ;
-2.  la valeur de l'élément courant ;
-3.  l'index de l'élément courant ;
-4.  le tableau parcouru par la méthode.
+1. L'accumulateur (la valeur retournée par le précédent appel de la fonction `callback`), ou la valeur initiale s'il sagit du premier appel ;
+2. la valeur de l'élément courant ;
+3. l'index de l'élément courant ;
+4. le tableau parcouru par la méthode.
 
 La première fois que la fonction `callback` est appelée, `valeurInitiale` et `valeurCourante` peuvent correspondre à un ou deux éléments. Si `valeurInitiale` est fournie dans l'appel de `reduce()`, alors `accumulateur` sera égale à `valeurInitiale` et `valeurCourante` sera égale à la première valeur de la liste. Si `valeurInitiale` n'est pas fournie, alors `accumulateur` sera égale à la première valeur de la liste, et `valeurCourante` sera alors égale à la seconde.
 
@@ -378,15 +381,11 @@ console.log(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.21', 'Array.prototype.reduce()')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémenté dans JavaScript 1.8 |
-| {{SpecName('ES6', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## Voir aussi
 

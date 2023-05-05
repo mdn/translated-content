@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la chaîne de prototypes d'un autre objet.
@@ -21,7 +22,9 @@ La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la ch
 
 ## Syntaxe
 
-    prototypeObj.isPrototypeOf(objet)
+```js
+prototypeObj.isPrototypeOf(objet)
+```
 
 ### Paramètres
 
@@ -73,20 +76,15 @@ if (Toto.prototype.isPrototypeOf(bidule)) {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.isPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{jsxref("Opérateurs/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

@@ -1,15 +1,8 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.word-spacing
-translation_of: Web/CSS/word-spacing
 ---
+
 {{CSSRef}}
 
 **`word-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、タグや単語の間隔に関する挙動を指定します。

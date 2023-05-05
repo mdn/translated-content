@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/maximize
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Locale.prototype.maximize()`** permet d'obtenir les valeurs les plus vraisemblantes pour la langue, le script et la région de la locale en fonction des valeurs existantes.
@@ -18,7 +19,9 @@ La méthode **`Intl.Locale.prototype.maximize()`** permet d'obtenir les valeurs 
 
 ## Syntaxe
 
-    locale.maximize()
+```js
+locale.maximize()
+```
 
 ### Valeur de retour
 
@@ -26,7 +29,7 @@ Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvo
 
 ## Description
 
-Il est parfois utile d'identifier les composantes les plus probables d'une locale en fonction d'un identifiant incomplet. Cette méthode utilise un algorithme qui permet de déduire les composantes restantes les plus probables. Par exemple, si on fournit la langue `"en"`, l'algorithme renverra `"en-Latn-US"`, car l'anglais ne s'écrit qu'avec l'alphabet latin et est le plus largement parlé aux États-Unis. La méthode `maximize()` n'opère que sur les composantes principales (langue, script, région) et pas sur les extensions éventuellement indiquées après `"-u"` (dont [`Locale.hourCycle`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/hourCycle "The Intl.Locale.prototype.hourCycle property is an accessor property that returns the time keeping format convention used by the locale."), [`Locale.calendar`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/calendar "The Intl.Locale.prototype.calendar property is an accessor property which returns the type of calendar used in the Locale.") et [`Locale.numeric`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/numeric "The Intl.Locale.prototype.numeric property is an accessor property that returns whether the locale has special collation handling for numeric characters.") entre autres).
+Il est parfois utile d'identifier les composantes les plus probables d'une locale en fonction d'un identifiant incomplet. Cette méthode utilise un algorithme qui permet de déduire les composantes restantes les plus probables. Par exemple, si on fournit la langue `"en"`, l'algorithme renverra `"en-Latn-US"`, car l'anglais ne s'écrit qu'avec l'alphabet latin et est le plus largement parlé aux États-Unis. La méthode `maximize()` n'opère que sur les composantes principales (langue, script, région) et pas sur les extensions éventuellement indiquées après `"-u"` (dont [`Locale.hourCycle`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/hourCycle), [`Locale.calendar`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/calendar) et [`Locale.numeric`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/numeric) entre autres).
 
 ## Exemples
 
@@ -47,13 +50,11 @@ console.log(myLocMaximized.toString());
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.maximize()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.maximize) |      |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.maximize")}}
+{{Compat}}
 
 ## Voir aussi
 

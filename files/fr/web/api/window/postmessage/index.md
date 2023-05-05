@@ -9,22 +9,25 @@ tags:
   - postMessage
 translation_of: Web/API/Window/postMessage
 ---
+
 {{ ApiRef() }}
 
-La méthode **`window.postMessage`** permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même [origine](/en-US/docs/Glossary/Origin), c'est-à-dire avec le même protocole (généralement `http` ou `https`), le même numéro de port (`80` étant le port par défaut pour  `http`), et le même nom d'hôte (à condition que [document.domain](/en-US/docs/DOM/document.domain) soit initialisé à la même valeur par les deux pages). `window.postMessage` fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.
+La méthode **`window.postMessage`** permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même [origine](/fr/docs/Glossary/Origin), c'est-à-dire avec le même protocole (généralement `http` ou `https`), le même numéro de port (`80` étant le port par défaut pour `http`), et le même nom d'hôte (à condition que [document.domain](/fr/docs/DOM/document.domain) soit initialisé à la même valeur par les deux pages). `window.postMessage` fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.
 
 La méthode `window.postMessage`, quand elle est appelée, provoque l'envoi d'un [`MessageEvent`](/fr/docs/Web/API/MessageEvent) à la fenêtre ciblée une fois que tout script en attente a terminé son exécution (par exemple, les gestionnaires d'évènements restants si `window.postMessage` est appelée depuis un gestionnaire d'évènement, des timeouts en attente enregistrées auparavant, etc.) Le [`MessageEvent`](/fr/docs/Web/API/MessageEvent) est de type `message`, a une propriété `data` qui est initialisée à la valeur du premier argument passé à `window.postMessage`, une propriété `origin` correspondant à l'origine du document principal de la fenêtre appelant `window.postMessage` au moment où `window.postMessage` a été appelée, et une propriété `source` qui est la fenêtre depuis laquelle `window.postMessage` est appelée (les autres propriétés standard d'évènement sont présentes avec leurs valeurs attendues).
 
 ## Syntaxe
 
-    otherWindow.postMessage(message, targetOrigin, [transfer]);
+```js
+otherWindow.postMessage(message, targetOrigin, [transfer]);
+```
 
 - `otherWindow`
   - : Une référence à une autre fenêtre ; une telle référence peut être obtenue, par exemple, _via_ la propriété `contentWindow` d'un élément `iframe`, l'objet retourné par [window.open](/fr/docs/DOM/window.open), ou par index nommé ou numérique de [window.frames](/fr/docs/Web/API/window.frames).
 - `message`
   - : La donnée à envoyer à l'autre fenêtre. Elle est sérialisée en utilisant [l'algorithme de clônage structuré](/fr/docs/Web/Guide/API/DOM/The_structured_clone_algorithm). Cela signifie que vous pouvez passer sereinement une large variété d'objets de données à la fenêtre de destination sans avoir à les sérialiser vous-mêmes. \[1]
 - `targetOrigin`
-  - : Indique quelle doit être l'origine de `otherWindow` pour l'évènement à envoyer, soit comme la chaîne littérale `"*"` (signifiant pas de préférence) soit comme une URI. Si, au moment où l'évènement est inscrit pour être envoyé, le protocole, le nom d'hôte ou le port du document de `otherWindow` ne correspond pas à ceux contenus dans `targetOrigin`,  l'évènement ne sera pas envoyé ; il ne le sera que si les trois correspondent. Ce mécanisme permet de contrôler où les messages sont envoyés ; par exemple, si `postMessage` était utilisé pour transmettre un mot de passe, il serait absolument vital que cet argument soit une URI dont l'origine est la même que le récepteur prévu du message contenant le mot de passe, afin de prévenir l'interception du mot de passe par une tierce-partie malicieuse. **Fournissez toujours une `targetOrigin` spécifique, jamais `*`, si vous savez où le document de l'autre fenêtre est censé se trouver. Ne pas fournir une cible spécifique expose les données que vous envoyez à tout site malicieux à l'écoute.**
+  - : Indique quelle doit être l'origine de `otherWindow` pour l'évènement à envoyer, soit comme la chaîne littérale `"*"` (signifiant pas de préférence) soit comme une URI. Si, au moment où l'évènement est inscrit pour être envoyé, le protocole, le nom d'hôte ou le port du document de `otherWindow` ne correspond pas à ceux contenus dans `targetOrigin`, l'évènement ne sera pas envoyé ; il ne le sera que si les trois correspondent. Ce mécanisme permet de contrôler où les messages sont envoyés ; par exemple, si `postMessage` était utilisé pour transmettre un mot de passe, il serait absolument vital que cet argument soit une URI dont l'origine est la même que le récepteur prévu du message contenant le mot de passe, afin de prévenir l'interception du mot de passe par une tierce-partie malicieuse. **Fournissez toujours une `targetOrigin` spécifique, jamais `*`, si vous savez où le document de l'autre fenêtre est censé se trouver. Ne pas fournir une cible spécifique expose les données que vous envoyez à tout site malicieux à l'écoute.**
 - `transfer` {{optional_Inline}}
   - : Séquence d'objets {{domxref("Transferable")}} qui sera transmise avec le message. La possession de ces objets est cédée à la destination et ils ne sont plus utilisables du côté de l'expéditeur.
 
@@ -37,7 +40,7 @@ window.addEventListener("message", receiveMessage, false);
 
 function receiveMessage(event)
 {
-  if (event.origin&nbsp;!== "http://example.org:8080")
+  if (event.origin !== "http://example.org:8080")
     return;
 
   // ...
@@ -49,7 +52,7 @@ Les propriétés du message envoyé sont :
 - `data`
   - : L'objet passé depuis l'autre fenêtre.
 - `origin`
-  - : L'[origine](/en-US/docs/Origin) de la fenêtre qui a envoyé le message au moment où `postMessage` a été appelée. Des exemples typiques d'origines sont `https://example.org` (sous-entendu port `443`), `http://example.net` (sous-entendu port `80`), et `http://example.com:8080`. Notez qu'il n'est pas garanti que cette origine soit l'origine actuelle ou future de cette fenêtre, qui peut avoir été naviguée vers une adresse différente depuis l'appel à `postMessage`.
+  - : L'[origine](/fr/docs/Origin) de la fenêtre qui a envoyé le message au moment où `postMessage` a été appelée. Des exemples typiques d'origines sont `https://example.org` (sous-entendu port `443`), `http://example.net` (sous-entendu port `80`), et `http://example.com:8080`. Notez qu'il n'est pas garanti que cette origine soit l'origine actuelle ou future de cette fenêtre, qui peut avoir été naviguée vers une adresse différente depuis l'appel à `postMessage`.
 - `source`
   - : Une référence à l'objet [`window`](/fr/docs/DOM/window) qui a envoyé le message ; vous pouvez utiliser ceci pour établir une communication dans les deux sens entre deux fenêtres ayant différentes origines.
 
@@ -86,7 +89,7 @@ function receiveMessage(event)
 {
   // Faisons-nous confiance à l'expéditeur de ce message ?  (il pourrait être
   // différent de la fenêtre que nous avons ouverte au départ, par exemple).
-  if (event.origin&nbsp;!== "http://example.org")
+  if (event.origin !== "http://example.org")
     return;
 
   // event.source est la popup
@@ -104,7 +107,7 @@ window.addEventListener("message", receiveMessage, false);
 function receiveMessage(event)
 {
   // Faisons-nous confiance à l'expéditeur de ce message ?
-  if (event.origin&nbsp;!== "http://example.com:8080")
+  if (event.origin !== "http://example.com:8080")
     return;
 
   // event.source est window.opener
@@ -144,17 +147,14 @@ Enfin, poster un message à une page à une URL `file:` requiert actuellement qu
 
 ## Spécifications
 
-| **Spécification**                                                                                                | **Status**                                   | **Comment**aire                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#dom-window-postmessage", "window.postMessage")}}             | {{Spec2('HTML WHATWG')}}             | Pas de changement depuis {{SpecName('HTML5 Web Messaging')}} |
-| {{SpecName('HTML5 Web Messaging', '#dom-window-postmessage', 'window.postMessage')}} | {{Spec2('HTML5 Web Messaging')}} | Définition initiale.                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.postMessage")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Document.domain](/en-US/docs/DOM/document.domain)
-- [CustomEvent](/en-US/docs/Web/API/CustomEvent)
-- [Interaction entre les pages privilégiées et non privilégiées](/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages)
+- [Document.domain](/fr/docs/DOM/document.domain)
+- [CustomEvent](/fr/docs/Web/API/CustomEvent)
+- [Interaction entre les pages privilégiées et non privilégiées](/fr/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages)

@@ -8,9 +8,10 @@ tags:
   - Reference
 translation_of: Web/CSS/zoom
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-La propriété non-standard **`zoom`** permet de manipuler l'effet d'agrandissement d'un élément. Plutôt que cette propriété non-standard, mieux vaudra utiliser [les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms), si possible. Cependant, contrairement aux transformations CSS, **`zoom`** affecte la taille de l'élément.
+La propriété non-standard **`zoom`** permet de manipuler l'effet d'agrandissement d'un élément. Plutôt que cette propriété non-standard, mieux vaudra utiliser [les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms), si possible. Cependant, contrairement aux transformations CSS, `zoom` affecte la taille de l'élément.
 
 ## Syntaxe
 
@@ -62,7 +63,7 @@ zoom: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : Le facteur de zoom à appliquer. `100%` est équivalent au mot-clé `normal`. Les valeurs supérieures à `100%` agrandissent l'élément et les valeurs inférieures le réduisent.
 - {{cssxref("&lt;number&gt;")}}
-  - : Le facteur de zoom à appliquer. La valeur fonctionne de la même façon que les pourcentages :  `1.0` correspond à `normal` (ou `100%`) , les valeurs supérieures à `1.0` agrandissent l'élément et les valeurs inférieures le réduisent.
+  - : Le facteur de zoom à appliquer. La valeur fonctionne de la même façon que les pourcentages : `1.0` correspond à `normal` (ou `100%`) , les valeurs supérieures à `1.0` agrandissent l'élément et les valeurs inférieures le réduisent.
 
 ### Syntaxe formelle
 
@@ -110,10 +111,10 @@ Cette propriété n'est pas standard et est née avec Internet Explorer. Apple l
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.zoom")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [L'article de CSS-Tricks sur `zoom`](https://css-tricks.com/almanac/properties/z/zoom/)
-- Le descripteur [`zoom`](/fr/docs/conflicting/Web/CSS/@viewport_e065ce90bde08c9679692adbe64f6518) pour la règle @ [`@viewport`](/fr/docs/Web/CSS/@viewport)
+- Le descripteur `zoom` pour la règle @ [`@viewport`](/fr/docs/Web/CSS/@viewport)
 - {{bug("390936")}} à propos de l'implémentation de la propriété dans Firefox

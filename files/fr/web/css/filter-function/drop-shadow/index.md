@@ -5,6 +5,7 @@ translation_of: Web/CSS/filter-function/drop-shadow()
 original_slug: Web/CSS/filter-function/drop-shadow()
 browser-compat: css.types.filter-function.drop-shadow
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat obtenu par cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
@@ -55,6 +56,7 @@ drop-shadow(.5rem .5rem 1rem #e23)
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées

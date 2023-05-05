@@ -1,6 +1,6 @@
 ---
 title: Console.assert()
-slug: Web/API/Console/assert
+slug: Web/API/console/assert
 tags:
   - API
   - DOM
@@ -8,6 +8,7 @@ tags:
   - débogage
 translation_of: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}
 
 Affiche un message d'erreur dans la console si l'assertion est fausse. Si l'assertion est vraie, rien ne se produit.
@@ -20,8 +21,10 @@ Affiche un message d'erreur dans la console si l'assertion est fausse. Si l'asse
 
 ## Syntaxe
 
-    console.assert(assertion, obj1 [, obj2, ..., objN]);
-    console.assert(assertion, msg [, subst1, ..., substN]);
+```js
+console.assert(assertion, obj1 [, obj2, ..., objN]);
+console.assert(assertion, msg [, subst1, ..., substN]);
+```
 
 ### Paramètres
 
@@ -36,17 +39,13 @@ Affiche un message d'erreur dans la console si l'assertion est fausse. Si l'asse
 
 Allez voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Specification                                                                | Status                           | Comment             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#assert", "console.assert()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
+## Compatibilité des navigateurs
 
-
-## Compatibilité entre les navigateurs
-
-{{Compat("api.Console.assert")}}
+{{Compat}}
 
 ## Voir aussi
 

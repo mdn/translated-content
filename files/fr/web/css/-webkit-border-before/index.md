@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-border-before
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-border-before`** est une propriété raccourcie qui permet de définir les propriétés de la bordure pour le début d'un élément dans l'axe de bloc (l'axe logique orthogonal à l'axe de lecture).
@@ -84,7 +85,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-border-before")}}
+{{Compat}}
 
 ## Voir aussi
 

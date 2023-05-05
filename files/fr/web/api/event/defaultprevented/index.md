@@ -8,6 +8,7 @@ tags:
   - Propriété
 translation_of: Web/API/Event/defaultPrevented
 ---
+
 {{APIRef("DOM")}}
 
 ## Résumé
@@ -18,20 +19,22 @@ Retourne un booléen indiquant si {{domxref("event.preventDefault()")}} a été 
 
 ## Syntaxe
 
-    bool = event.defaultPrevented
+```js
+bool = event.defaultPrevented
+```
 
 ## Exemple
 
-     if (e.defaultPrevented) {
-       /* Le comportement par défaut a été inhibé */
-     }
+```js
+if (e.defaultPrevented) {
+  /* Le comportement par défaut a été inhibé */
+}
+```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-event-defaultprevented', 'Event.defaultPrevented()')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.defaultPrevented")}}
+{{Compat}}

@@ -10,14 +10,17 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/texParameter
 ---
+
 {{APIRef("WebGL")}}
 
 Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent les paramètres de texture.
 
 ## Syntaxe
 
-    void gl.texParameterf(GLenum cible, GLenum nomp, GLfloat param);
-    void gl.texParameteri(GLenum cible, GLenum nomp, GLint param);
+```js
+void gl.texParameterf(GLenum cible, GLenum nomp, GLfloat param);
+void gl.texParameteri(GLenum cible, GLenum nomp, GLint param);
+```
 
 ### Paramètres
 
@@ -137,7 +140,7 @@ Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de tex
     <tr>
       <td><code>gl.TEXTURE_WRAP_R</code></td>
       <td>
-        Fonction d'emballage pour la coordonnée de texture  <code>r</code>
+        Fonction d'emballage pour la coordonnée de texture <code>r</code>
       </td>
       <td>
         <code>gl.REPEAT</code> (valeur par défaut),
@@ -160,16 +163,11 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST)
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------ |
-| {{SpecName('WebGL', "#5.14.8", "texParameter[fi]")}}                             | {{Spec2('WebGL')}}             | Définition initiale pour WebGL.                  |
-| {{SpecName('OpenGL ES 2.0', "glTexParameter.xml", "glTexParameter")}}     | {{Spec2('OpenGL ES 2.0')}} | Page man de l’API OpenGL ES 2.0 API (similaire). |
-| {{SpecName('WebGL2', "#3.7.6", "texParameter[fi]")}}                             | {{Spec2('WebGL2')}}             | Définition mise à jour pour WebGL.               |
-| {{SpecName('OpenGL ES 3.0', "glTexParameter.xhtml", "glTexParameter")}} | {{Spec2('OpenGL ES 3.0')}} | Page man de l’API OpenGL ES 3.0 API (similaire). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.texParameterf")}}
+{{Compat}}
 
 ## Voir aussi
 

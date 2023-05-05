@@ -10,6 +10,7 @@ tags:
   - sessionStorage
 translation_of: Web/API/Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 L'API **Web Storage** fournit des mécanismes par lesquels les navigateurs peuvent stocker des paires clé / valeur, d'une manière beaucoup plus intuitive que l'utilisation de cookies.
@@ -21,11 +22,11 @@ Les deux mécanismes au sein du web storage sont les suivantes:
 - `sessionStorage` maintient une zone de stockage distinct pour chaque origine donnée qui est disponible pour la durée de la session de la page (tant que le navigateur est ouvert, y compris les rechargements et restaure)
 - `localStorage` fait la même chose, mais persiste même lorsque le navigateur est fermé et rouvert.
 
-Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (pour être plus précis, pour le support des navigateurs, l'objet `Window` implemente le `WindowLocalStorage` et l'object `WindowSessionStorage`, dont les propriétés `localStorage` et `sessionStorage` dépendent) — L'appel de l'une de ces propriétés va créer une instance de l'objet {{domxref("Storage")}},  à travers de laquelle les éléments de données peuvent être définis, récupérés et éliminés. Un objet de stockage différent est utilisé pour le sessionStorage et le localStorage pour chaque origine — ils fonctionnent et sont contrôlés séparément.
+Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (pour être plus précis, pour le support des navigateurs, l'objet `Window` implemente le `WindowLocalStorage` et l'object `WindowSessionStorage`, dont les propriétés `localStorage` et `sessionStorage` dépendent) — L'appel de l'une de ces propriétés va créer une instance de l'objet {{domxref("Storage")}}, à travers de laquelle les éléments de données peuvent être définis, récupérés et éliminés. Un objet de stockage différent est utilisé pour le sessionStorage et le localStorage pour chaque origine — ils fonctionnent et sont contrôlés séparément.
 
 > **Note :** À partir de Firefox 45, lorsque le navigateur se bloque / redémarre, la quantité de données sauvegardées par origine est limitée à 10 Mo. Cela a été mis en place pour éviter les problèmes de mémoire causés par une utilisation excessive du stockage Web.
 
-> **Note :** L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/en-US/docs/Mozilla/Firefox/Releases/43) et suivantes.)
+> **Note :** L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/fr/docs/Mozilla/Firefox/Releases/43) et suivantes.)
 
 > **Note :** Le <i lang="en">Web Storage</i> n'est pas identique au `mozStorage` (interfaces XPCOM de Mozilla vers SQLite) ou l'API <i lang="en">Session Store</i> (un utilitaire de stockage XPCOM utilisable par des extensions).
 
@@ -40,23 +41,15 @@ Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionS
 
 ## Exemples
 
-Pour illustrer une utilisation typique du stockage Web, nous avons créé un exemple simple, appelé de manière imaginative [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). La [landing page](https://mdn.github.io/dom-examples/web-storage/) fournit des commandes permettant de personnaliser la couleur, la police et l'image décorative. Lorsque vous choisissez différentes options, la page est instantanément mise à jour. De plus, vos choix sont stockés dans `localStorage`. Ainsi, lorsque vous quittez la page puis la rechargez plus tard, vos choix sont mémorisés. En outre, nous avons fourni une [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — Si vous chargez cette page dans un autre onglet, puis modifiez vos choix dans la page d'arrivée, vous verrez les informations de stockage mises à jour générées lors du déclenchement de {{event("StorageEvent")}}.
+Pour illustrer une utilisation typique du stockage Web, nous avons créé un exemple simple, appelé de manière imaginative [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). La [landing page](https://mdn.github.io/dom-examples/web-storage/) fournit des commandes permettant de personnaliser la couleur, la police et l'image décorative. Lorsque vous choisissez différentes options, la page est instantanément mise à jour. De plus, vos choix sont stockés dans `localStorage`. Ainsi, lorsque vous quittez la page puis la rechargez plus tard, vos choix sont mémorisés. En outre, nous avons fourni une [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — Si vous chargez cette page dans un autre onglet, puis modifiez vos choix dans la page d'arrivée, vous verrez les informations de stockage mises à jour générées lors du déclenchement de [`StorageEvent`](/fr/docs/Web/API/StorageEvent).
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Navigation privée / Modes incognito
 

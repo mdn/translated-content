@@ -3,14 +3,17 @@ title: StyleSheet.media
 slug: Web/API/StyleSheet/media
 translation_of: Web/API/StyleSheet/media
 ---
+
 {{APIRef ("CSSOM")}}
 
 **Media** spécifie le support de destination prévu pour les informations de style.
 
 ## Syntaxe
 
-    Medium = stylesheet.media
-    Stylesheet.media = medium
+```js
+Medium = stylesheet.media
+Stylesheet.media = medium
+```
 
 ## Paramètres
 
@@ -18,12 +21,14 @@ translation_of: Web/API/StyleSheet/media
 
 ## Exemple
 
-    <Link rel = "StyleSheet" href = "document.css" type = "text / css" media = "screen" />
+```html
+<Link rel = "StyleSheet" href="document.css" type="text/css" media="screen" />
+```
 
 ## Remarques
 
 La valeur par défaut pour les médias est "écran".
 
-## spécification
+## Spécification
 
 DOM Styles de niveau 2 - FEUILLE DE STYLES

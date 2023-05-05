@@ -9,6 +9,7 @@ tags:
   - audio sprites
 translation_of: Games/Techniques/Audio_for_Web_Games
 ---
+
 {{GamesSidebar}}
 
 L'audio représente une chose essentielle dans n'importe quel jeu vidéo; il apporte de l'information et contribue à l'atmosphère du jeu. La prise en charge de l'audio a évolué de manière rapide mais il reste encore beaucoup de différences de prise en charge entre les navigateurs. Nous avons souvent besoin de décider quelles parties de notre contenu audio est intéressant et laquelle ne l'est pas, et mettre en place une stratégie en conséquence. Cet article fournit un guide détaillé sur l'implémentation de l'audio dans les jeux HTML5, détaillant quels choix technologiques fonctionneront sur le plus grand nombre de navigateurs.
@@ -166,7 +167,7 @@ lt;audio id="myAudio" src="http://jPlayer.org/tmp/countdown.mp3"></audio>
 
 Maintenant, nous avons des boutons avec des heures de début et de fin en quelques secondes. Le fichier MP3 "countdown.mp3" se compose d'un numéro qui est prononcé toutes les 2 secondes, l'idée étant de lire ce numéro lorsque le bouton correspondant est pressé.
 
-Ajoutons du JavaScript pour que ça marche:
+Ajoutons du JavaScript pour que ça marche :
 
 ```js
 var myAudio = document.getElementById('myAudio');
@@ -298,9 +299,9 @@ Regardons maintenant le code. Nous créons d'abord un nouveau {{domxref ("AudioC
 
 `start()` (anciennement appelé `noteOn ())` commence à lire un élément audio. `start ()` demande trois paramètres (facultatifs) :
 
-1.  when _(quand)_ : le temps absolu pour commencer la lecture .
-2.  where (offset) _(où)_ : la partie de l'audio qui doit commencer à être jouée.
-3.  how long _(combien de temps)_ : la durée pendant laquelle elle doit être jouée.
+1. when _(quand)_ : le temps absolu pour commencer la lecture .
+2. where (offset) _(où)_ : la partie de l'audio qui doit commencer à être jouée.
+3. how long _(combien de temps)_ : la durée pendant laquelle elle doit être jouée.
 
 `stop()` prend un paramètre facultatif - when - qui est le délai avant l'arrêt.
 
@@ -314,7 +315,7 @@ Vous pouvez trouver que l'introduction d'une nouvelle piste sonne plus naturelle
 
 Pour ce faire, avant de jouer la piste que vous voulez synchroniser, vous devez calculer combien de temps cela va durer jusqu'au début de la prochaine unité musicale.
 
-Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante  — vous alimentez la valeur initiale de la fonction `start ()` avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :
+Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante — vous alimentez la valeur initiale de la fonction `start ()` avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :
 
 ```js
 if (offset == 0) {
@@ -349,7 +350,7 @@ Ceci est particulièrement utile dans un environnement tridimensionnel rendu en 
 
 > **Note :** Voir [Web Audio API Spatialization Basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) _(Bases de la spacialisation de l'API Web Audio)_ pour plus de détails.
 
-## See Also
+## Voir aussi
 
 - [Web Audio API sur MDN](/fr/docs/Web/API/Web_Audio_API)
 - [`<audio>` sur MDN](/fr/docs/Web/HTML/Element/audio)

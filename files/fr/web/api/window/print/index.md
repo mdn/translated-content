@@ -1,36 +1,43 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
-tags:
-  - API
-  - BesoinDeCompatibilitéAvecLeNavigateur
-  - BesoinDeCompatibilitéAvecLeNavigateurMobile
-  - DOM
-  - Méthode
-  - Reference
-  - Window
+page-type: web-api-instance-method
+browser-compat: api.Window.print
 translation_of: Web/API/Window/print
 ---
-{{ ApiRef() }}
 
-Ouvre la fenêtre de dialogue d'impression pour imprimer le document courant.
+{{APIRef}}
+
+Ouvre la boîte de dialogue pour imprimer le document actuel.
+
+Si le chargement du document est toujours en cours lorsque cette fonction est appelée, l'ouverture de la boîte de dialogue attendra la fin du chargement.
+
+Cette méthode sera bloquante pour le reste de l'exécution tant que la boîte de dialogue pour l'impression restera ouverte.
 
 ## Syntaxe
 
-    window.print()
+```js
+print()
+```
 
-## Notes
+### Paramètres
 
-Disponible à partir de Chrome {{CompatChrome(45.0)}}, cette méthode est bloquée à l'intérieur d'une balise {{htmlelement("iframe")}} sauf si son attribut sandbox a la valeur allow-modal.
+Aucun.
 
-## Spécification
+### Valeur de retour
 
-| Spécification                                                                        | Statut                                       | Commentaire          |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('HTML5 Web application', '#dom-print', 'print()')}} | {{Spec2('HTML5 Web application')}} | Définition initiale. |
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
-## Voir également
+## Spécifications
 
-- [Printing](/en/Printing)
-- {{ domxref("window.onbeforeprint") }}
-- {{ domxref("window.onafterprint") }}
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [Guide sur l'impression](/fr/docs/Web/Guide/Printing)
+- [L'évènement `beforeprint`](/fr/docs/Web/API/Window/beforeprint_event)
+- [L'évènement `afterprint`](/fr/docs/Web/API/Window/afterprint_event)

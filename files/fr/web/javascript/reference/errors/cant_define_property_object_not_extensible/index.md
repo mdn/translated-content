@@ -8,13 +8,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_define_property_object_not_extensible
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
 
-    TypeError: Cannot create property for a non-extensible object (Edge)
-    TypeError: can't define property "x": "obj" is not extensible (Firefox)
-    TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+```
+TypeError: Cannot create property for a non-extensible object (Edge)
+TypeError: can't define property "x": "obj" is not extensible (Firefox)
+TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+```
 
 ## Type d'erreur
 

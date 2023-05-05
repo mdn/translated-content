@@ -1,23 +1,12 @@
 ---
 title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Map.@@iterator
 ---
 {{JSRef}}
 
-
 <p class="seoSummary">O valor inicial da propriedade <strong><code>@@iterator</code></strong>
- é o mesmo objeto função que o valor inicial do método {{jsxref("Map.prototype.entries()", "entries")}} 
+ é o mesmo objeto função que o valor inicial do método {{jsxref("Map.prototype.entries()", "entries")}}
 </p>
-
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
@@ -29,7 +18,7 @@ myMap[Symbol.iterator]
 
 ### Valor retornado
 
-A função iterativa do map, que é a {{jsxref("Map.prototype.entries()", "entries()")}}  por padrão 
+A função iterativa do map, que é a {{jsxref("Map.prototype.entries()", "entries()")}} por padrão
 
 ## Exemplos
 

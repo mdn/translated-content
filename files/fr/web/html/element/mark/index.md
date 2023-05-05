@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/mark
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<mark>`** représente un texte marqué ou surligné à cause de sa pertinence dans le contexte. Il peut par exemple être utilisé afin d'indiquer les correspondances d'un mot-clé recherché au sein d'un document.
 
@@ -18,7 +19,7 @@ L'élément HTML **`<mark>`** représente un texte marqué ou surligné à cause
 
 Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-## **Notes d'utilisation**
+## Notes d'utilisation
 
 - Au sein d'une citation ({{HTMLElement("q")}}) ou dans un autre bloc ({{HTMLElement("blockquote")}}), le texte surligné marque généralement du texte référencé en dehors de la citation ou qui est indiqué pour demander une attention particulière bien que l'auteur ne considère pas ce texte comme important.
 - Au sein du texte principal, le texte surligné marque du texte d'une pertinence partiulière pour l'utilisateur (par exemple lorsqu'il recherche un terme en particulier).
@@ -69,24 +70,26 @@ Hoth.</p>
 
 Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `mark`. On peut le rendre annonçable via la propriété CSS {{cssxref("content")}} et grâce aux pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}.
 
-    mark::before,
-    mark::after {
-      clip-path: inset(100%);
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
+```css
+mark::before,
+mark::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-    mark::before {
-      content: " [Début du marquage]";
-    }
+mark::before {
+  content: " [Début du marquage]";
+}
 
-    mark::after {
-      content: " [Fin du marquage] ";
-    }
+mark::after {
+  content: " [Fin du marquage] ";
+}
+```
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été marqué.
 
@@ -149,11 +152,8 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element','&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.mark")}}
+{{Compat}}

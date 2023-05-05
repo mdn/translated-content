@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/function*
 original_slug: Web/JavaScript/Reference/Opérateurs/function*
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé **`function*`** peut être utilisé pour définir une fonction génératrice à l'intérieur d'une expression.
@@ -19,9 +20,11 @@ Le mot-clé **`function*`** peut être utilisé pour définir une fonction gén�
 
 ## Syntaxe
 
-    function* [nom]([param1[, param2[, ..., paramN]]]) {
-       instructions
-    }
+```js
+function* [nom]([param1[, param2[, …, paramN]]]) {
+  instructions
+}
+```
 
 ### Paramètres
 
@@ -48,14 +51,11 @@ var x = function*(y) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.function_star")}}
+{{Compat}}
 
 ## Voir aussi
 

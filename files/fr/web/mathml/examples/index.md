@@ -11,6 +11,7 @@ tags:
 translation_of: Web/MathML/Examples
 original_slug: Web/MathML/Exemples
 ---
+
 Cette rubrique rassemble des exemples pour vous aider à comprendre comment utiliser MathML dans l'affichage des formules mathématiques complexes au sein de vos pages Web.
 
 - [Théorème de Pythagore](/fr/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)

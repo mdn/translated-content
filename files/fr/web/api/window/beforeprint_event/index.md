@@ -7,6 +7,7 @@ tags:
 translation_of: Web/API/Window/beforeprint_event
 original_slug: Web/Events/beforeprint
 ---
+
 L'événement **`beforeprint`** est déclenché lorsque le document associé est sur le point d'être imprimé ou qu'un "aperçu avant impression" est lancé.
 
 ## Informations générales
@@ -28,9 +29,11 @@ L'événement **`beforeprint`** est déclenché lorsque le document associé est
 
 En utilisant `window.addEventListener()` :
 
-    window.addEventListener("beforeprint", (evenement) => {
-      console.log("Before print");
-    });
+```js
+window.addEventListener("beforeprint", (evenement) => {
+  console.log("Before print");
+});
+```
 
 ## Propriétés
 
@@ -43,4 +46,4 @@ En utilisant `window.addEventListener()` :
 
 ## Evénements liés
 
-- [afterprint](/en-US/docs/Mozilla_event_reference/afterprint)
+- [afterprint](/fr/docs/Mozilla_event_reference/afterprint)

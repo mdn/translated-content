@@ -1,18 +1,10 @@
 ---
 title: console.countReset()
 slug: Web/API/console/countReset
-tags:
-  - API
-  - DOM
-  - デバッグ
-  - メソッド
-  - リファレンス
-  - ウェブ開発
-  - console
-  - ウェブコンソール
-browser-compat: api.console.countReset
-translation_of: Web/API/console/countReset
+l10n:
+  sourceCommit: 710132ffea066697d23e1978478d36090fb448d7
 ---
+
 {{APIRef("Console API")}}
 
 **`console.countReset()`** は {{domxref("console.count()")}} で使われたカウンターをリセットします。
@@ -22,13 +14,18 @@ translation_of: Web/API/console/countReset
 ## 構文
 
 ```js
-console.countReset([label]);
+countReset()
+countReset(label)
 ```
 
 ### 引数
 
 - `label` {{optional_inline}}
   - : 文字列です。指定した場合、 `countReset()` はそのラベルに対するカウントを 0 にリセットします。省略した場合は、 `countReset()` は default のカウンターを 0 にリセットします。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -39,7 +36,7 @@ let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -70,7 +67,7 @@ let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";

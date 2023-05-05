@@ -9,6 +9,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/hasAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 ## Résumé
@@ -33,14 +34,16 @@ localName)
 
 ## Exemple
 
-    // Vérifie que l'attribut existe
-    // avant de définir une valeur
-    var d = document.getElementById("div1");
-    if (d.hasAttributeNS(
-            "http://www.mozilla.org/ns/specialspace/",
-            "special-align")) {
-       d.setAttribute("align", "center");
-    }
+```js
+// Vérifie que l'attribut existe
+// avant de définir une valeur
+var d = document.getElementById("div1");
+if (d.hasAttributeNS(
+        "http://www.mozilla.org/ns/specialspace/",
+        "special-align")) {
+    d.setAttribute("align", "center");
+}
+```
 
 ## Notes
 

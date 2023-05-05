@@ -3,6 +3,7 @@ title: Concepts de WebAssembly
 slug: WebAssembly/Concepts
 translation_of: WebAssembly/Concepts
 ---
+
 {{WebAssemblySidebar}}
 
 Cet article explique les concepts de fonctionnement de WebAssembly, y compris ses objectifs, les problèmes qu'il résout et la manière dont il s'exécute dans le moteur de rendu du navigateur.
@@ -39,7 +40,7 @@ De plus, le coût du téléchargement, du parsing et de la compilation de très 
 
 WebAssembly est un langage différent de JavaScript, mais n'a pas pour but de le remplacer. Il faut plutôt l'envisager comme complément, travaillant "main dans la main" avec JavaScript, permettant ainsi aux développeurs WEB de prendre avantage des points forts de chacun des deux langages :
 
-- JavaScript est un langage haut niveau, flexible et suffisamment expressif pour écrire des applications web.  Il possède beaucoup d'avantages — il est dynamiquement typé, ne nécessite aucune étape de compilation, et a un écosystème foisonnant qui lui fourni de puissants frameworks, bibliothèques, et autres outils.
+- JavaScript est un langage haut niveau, flexible et suffisamment expressif pour écrire des applications web. Il possède beaucoup d'avantages — il est dynamiquement typé, ne nécessite aucune étape de compilation, et a un écosystème foisonnant qui lui fourni de puissants frameworks, bibliothèques, et autres outils.
 - WebAssembly est un langage bas niveau, de style assembleur, avec un format binaire compact qui tourne avec des performances proches du natif et fourni au langage une gestion bas niveau de la mémoire tout comme le C++ et Rust comme cible de compilation afin de pouvoir tourner sur le web. (Notez qu'une [priorité](http://webassembly.org/docs/high-level-goals/) de WebAssembly est de supporter les langages avec modèles de mémoire à garbage-collector dans le futur.)
 
 Avec l'apparition du WebAssembly dans les navigateurs, la machine virtuelle dont nous parlions précédemment charge et exécute deux type de code - JavaScript ET WebAssembly.
@@ -50,7 +51,7 @@ Les deux différents type de code peuvent s'appeler si nécessaire — l'API Web
 
 Il y a différents concepts clefs nécessaires pour comprendre comment fonctionne WebAssembly dans le navigateur. Tous ces concepts se retrouvent totalement dans l'API WebAssembly JavaScript.
 
-- **Module** : Représente un binaire WebAssembly qui a été compilé en code exécutable par le navigateur.  Un module est sans état et - comme un [Blob](/fr/docs/Web/API/Blob) - peut donc être explicitement[ mis en cache dans IndexedDB](/fr/WebAssembly/Caching_modules) ou partagé entre le contexte fenêtre et les workers (via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage)).  Un module déclare des imports et exports au même titre qu'un module ES2015.
+- **Module** : Représente un binaire WebAssembly qui a été compilé en code exécutable par le navigateur. Un module est sans état et - comme un [Blob](/fr/docs/Web/API/Blob) - peut donc être explicitement [mis en cache dans IndexedDB](/fr/WebAssembly/Caching_modules) ou partagé entre le contexte fenêtre et les workers (via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage)). Un module déclare des imports et exports au même titre qu'un module ES2015.
 - **Mémoire** : Représente un ArrayBuffer redimensionnable qui contient un tableau d'octets contiguë accessible en lecture/écriture par les instructions bas niveau d'accès mémoire du WebAssembly.
 - **Table** : Représente un tableau typé de référence (comme par exemple des fonctions) qui ne peut pas être stocké de manière brute en mémoire (pour des raisons de sécurité et de portabilité).
 - **Instance** : Représente un module associé avec tous les états qu'il utilise à l'exécution à savoir la mémoire, la table précédemment citée et un ensemble de données importées. Une instance est comme un module ES2015 qui a été chargée dans un contexte global avec un ensemble d'imports.
@@ -83,11 +84,11 @@ L'outil Emscripten est capable de prendre du code source C/C++ et de le compiler
 
 En résumé, le principe de fonctionnement est le suivant :
 
-1.  D'abord, Emscripten alimente clang+LLVM - une chaîne de compilation open source mature empruntée par exemple à XCode sur OSX - avec le code C/C++.
-2.  Emscripten transforme ensuite le résultat compilé par clang+LLVM en binaire .wasm.
-3.  Par lui-même WebAssembly ne peut pour l'instant pas accéder directement au DOM ; Il peut seulement appeler JavaScript avec des données de type primitif entier ou flottant. Ainsi, pour accéder à toute API Web, WebAssembly a besoin d'appeler du JavaScript qui ensuite effectuera l'appel à l'API Web. C'est pourquoi Emscripten crée le document HTML et le code "passe-plat" JavaScript nécessaire pour atteindre cet objectif.
+1. D'abord, Emscripten alimente clang+LLVM - une chaîne de compilation open source mature empruntée par exemple à XCode sur OSX - avec le code C/C++.
+2. Emscripten transforme ensuite le résultat compilé par clang+LLVM en binaire .wasm.
+3. Par lui-même WebAssembly ne peut pour l'instant pas accéder directement au DOM ; Il peut seulement appeler JavaScript avec des données de type primitif entier ou flottant. Ainsi, pour accéder à toute API Web, WebAssembly a besoin d'appeler du JavaScript qui ensuite effectuera l'appel à l'API Web. C'est pourquoi Emscripten crée le document HTML et le code "passe-plat" JavaScript nécessaire pour atteindre cet objectif.
 
-> **Note :** Il existe des propositions futures pour [ permettre au WebAssembly d'appeler directement l'API Web](https://github.com/WebAssembly/gc/blob/master/README.md).
+> **Note :** Il existe des propositions futures pour [permettre au WebAssembly d'appeler directement l'API Web](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 Le code "passe-plat" en JavaScript n'est pas aussi simple que vous pourriez l'imaginer. Pour le moment, Emscripten implémente des librairies C/C++ populaire comme [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer), [OpenGL](https://en.wikipedia.org/wiki/OpenGL), [OpenAL](https://en.wikipedia.org/wiki/OpenAL), et une partie de [POSIX](https://en.wikipedia.org/wiki/POSIX). Ces bibliothèques sont implémentées sous forme d'API Web et donc chacune d'entre elles requiert un peu de code JavaScript "passe-plat" pour relier WebAssembly à l'API Web sous-jacente.
 

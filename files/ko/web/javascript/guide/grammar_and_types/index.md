@@ -1,13 +1,9 @@
 ---
 title: 문법과 자료형
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Guide
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 이 장은 JavaScript의 기본 문법과 변수 선언, 자료형 및 리터럴을 다룹니다.
@@ -27,9 +23,9 @@ var Früh = "foobar";
 
 JavaScript에서는 명령을 {{Glossary("Statement", "명령문(statement)")}}이라고 부르며, 세미콜론(;)으로 구분합니다.
 
-명령문이 한 줄을 다 차지할 경우에는 세미콜론이 필요하지 않습니다. 그러나 한 줄에 두 개 이상의 명령문이 필요하다면 반드시 세미콜론으로 구분해야 합니다. 
+명령문이 한 줄을 다 차지할 경우에는 세미콜론이 필요하지 않습니다. 그러나 한 줄에 두 개 이상의 명령문이 필요하다면 반드시 세미콜론으로 구분해야 합니다.
 
-> **참고:** ECMAScript는 세미콜론을 자동으로 삽입해 명령문을 끝내는 규칙([ASI](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#자동_세미콜론_삽입))도 가지고 있습니다. (더 많은 정보는 JavaScript의 [어휘 문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)에 대한 자세한 참고서를 참고하세요.) 
+> **참고:** ECMAScript는 세미콜론을 자동으로 삽입해 명령문을 끝내는 규칙([ASI](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#자동_세미콜론_삽입))도 가지고 있습니다. (더 많은 정보는 JavaScript의 [어휘 문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)에 대한 자세한 참고서를 참고하세요.)
 
 하지만, 세미콜론이 필요하지 않은 경우라도 항상 세미콜론으로 끝마치는 편이 버그 예방 차원에서 더 좋은 습관이라고 여겨집니다.
 
@@ -51,9 +47,9 @@ JavaScript의 스크립트 소스는 왼쪽에서 오른쪽으로 탐색하면�
 
 주석은 공백처럼 행동하며 스크립트 실행 시 버려집니다.
 
-> **참고:** 몇몇 자바스크립트 파일의 시작부에 `#!/usr/bin/env node`와 같은 형태의 주석 문법이 쓰이는 것을 볼 수 있습니다. 
-> 
-> 이것은 **해시뱅 주석** 구문이라고 하는데, 이 특별한 주석은 스크립트를 실행할 때 쓸 특별한 자바스크립트 인터프리터의 경로를 설정할 때 쓰입니다. [해시뱅 주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#해시뱅_주석)을 참고하여 자세한 내용을 확인할 수 있습니다.
+> **참고:** 몇몇 자바스크립트 파일의 시작부에 `#!/usr/bin/env node`와 같은 형태의 주석 문법이 쓰이는 것을 볼 수 있습니다.
+>
+> 이것은 **해시뱅 주석** 구문이라고 하는데, 이 특별한 주석은 스크립트를 실행할 때 쓸 특별한 자바스크립트 인터프리터의 경로를 설정할 때 쓰입니다. [해시뱅 주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#해시뱅_주석)을 참고하여 자세한 내용을 확인할 수 있습니다.
 
 ## 선언
 
@@ -70,7 +66,7 @@ JavaScript의 선언에는 3가지 방법이 있습니다.
 
 애플리케이션에서 값에 상징적인 이름으로 변수를 사용합니다. 변수명은 {{Glossary("Identifier", "식별자(identifiers)")}}라고 불리며 특정 규칙을 따릅니다.
 
-JavaScript 식별자는 문자, 밑줄 (`_`) 혹은 달러 기호 (`$`)로 시작해야 하는 반면 이후는 숫자 (`0`–`9`) 일 수도 있습니다. 
+JavaScript 식별자는 문자, 밑줄 (`_`) 혹은 달러 기호 (`$`)로 시작해야 하는 반면 이후는 숫자 (`0`–`9`) 일 수도 있습니다.
 
 JavaScript가 대소문자를 구분하기에, 문자는 "`A`"부터 "`Z`" (대문자)와 "`a`"부터 "`z`" (소문자)까지 모두 포함합니다.
 
@@ -82,7 +78,7 @@ ISO 8859-1 혹은 Unicode 문자(가령 `å` 나 `ü`)도 식별자에 사용할
 
 변수 선언은 아래 3가지 방법으로 가능합니다.
 
-- `var x = 42`와 같이 {{jsxref("Statements/var", "var")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 실행 맥락에 따라  **지역 및 전역 변수**를 선언하는데 모두 사용될 수 있습니다.
+- `var x = 42`와 같이 {{jsxref("Statements/var", "var")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 실행 맥락에 따라 **지역 및 전역 변수**를 선언하는데 모두 사용될 수 있습니다.
 - `let y = 13`와 같이 {{jsxref("Statements/const", "const")}} 혹은 {{jsxref("Statements/let", "let")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 블록 스코프 지역 변수를 선언하는데 사용될 수 있습니다. 아래 [변수 스코프](#변수_스코프)를 참고하세요.
 
 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 구문을 사용하여 [객체 리터럴](#객체_리터럴)에서 값을 풀기 위해 변수를 선언할 수 있습니다. 예를 들면, `let { bar } = foo`. 이 구문은 `bar`라는 이름의 변수를 생성하고 `foo` 객체에 있는 동일한 이름의 키에 해당하는 값을 변수에 할당합니다.
@@ -148,7 +144,7 @@ console.log(n * 32); // 콘솔에 0 으로 로그가 남음
 
 어떤 함수의 바깥에 변수를 선언하면, 현재 문서의 다른 코드에 해당 변수를 사용할 수 있기에 전역 변수라고 합니다. 만약 함수 내부에 변수를 선언하면, 오직 그 함수 내에서만 사용할 수 있기에 지역 변수라고 부릅니다.
 
-ECMAScript 2015 이전의 JavaScript는 [블록 문](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_문) 스코프가 없습니다. 그래서 오히려, 블록 내에 선언된 변수는 그 블록 내에 존재하는 함수(혹은 전역 스코프)에 지역적입니다. 
+ECMAScript 2015 이전의 JavaScript는 [블록 문](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_문) 스코프가 없습니다. 그래서 오히려, 블록 내에 선언된 변수는 그 블록 내에 존재하는 함수(혹은 전역 스코프)에 지역적입니다.
 
 예를 들어서 아래의 코드는 `5`라는 로그가 남는데. `x`의 스코프가 전역 맥락 (혹은 코드가 함수의 일부분이라면 함수 맥락)이기 때문입니다. `x`의 스코프는 `if`문 블록에 제한되지 않습니다.
 
@@ -170,7 +166,7 @@ console.log(y); // ReferenceError: y is not defined
 
 ### 변수 호이스팅
 
-또 다른 JavaScript 변수의 특이한 점은 예외를 받지 않고도, 나중에 선언된 변수를 참조할 수 있다는 것입니다. 
+또 다른 JavaScript 변수의 특이한 점은 예외를 받지 않고도, 나중에 선언된 변수를 참조할 수 있다는 것입니다.
 
 이 개념은 **호이스팅**(hoisting)으로 알려져 있습니다. 즉 JavaScript 변수가 어떤 의미에서 함수나 문의 최상단으로 "올려지는" (혹은 "끌어올려지는") 것을 말합니다. 하지만, 끌어올려진 변수는 `undefined` 값을 반환합니다. 그래서 심지어 이 변수를 사용 혹은 참조한 후에 선언 및 초기화하더라도, 여전히 `undefined`를 반환합니다.
 
@@ -227,7 +223,7 @@ let x = 3;
 
 ### 함수 호이스팅
 
-함수에서는 [함수 선언](/ko/docs/Web/JavaScript/Reference/Statements/function)으로는 호이스팅되지만 [함수 표현식](/en-US/docs/Web/JavaScript/Reference/Operators/function)으로는 호이스팅 되지 않습니다.
+함수에서는 [함수 선언](/ko/docs/Web/JavaScript/Reference/Statements/function)으로는 호이스팅되지만 [함수 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function)으로는 호이스팅 되지 않습니다.
 
 ```js
 /* 함수 선언 */
@@ -249,7 +245,7 @@ var baz = function() {
 
 ### 전역 변수
 
-전역 변수는 사실 전역 객체의 속성(property)입니다. 
+전역 변수는 사실 전역 객체의 속성(property)입니다.
 
 웹 페이지에서 전역 객체는 {{domxref("window")}} 이므로, `windows.variable` 구문을 통해 전역 변수를 설정하고 접근할 수 있습니다.
 
@@ -257,7 +253,7 @@ var baz = function() {
 
 ### 상수
 
-{{jsxref("Statements/const", "const")}} 키워드로 읽기 전용 상수를 만들 수 있습니다. 
+{{jsxref("Statements/const", "const")}} 키워드로 읽기 전용 상수를 만들 수 있습니다.
 
 상수 식별자의 구문은 변수 식별자와 같습니다. 문자, 밑줄이나 달러 기호 (`$`) 로 시작해야 하고 문자, 숫자나 밑줄을 포함할 수 있습니다.
 
@@ -322,7 +318,7 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 
 ### 자료형 변환
 
-JavaScript는 동적 형지정(정형) 언어입니다. 이는 변수를 선언할 때 데이터 형을 지정할 필요가 없음을 의미합니다. 또한 데이터 형이 스크립트 실행 도중 필요에 의해 자동으로 변환됨을 뜻합니다. 
+JavaScript는 동적 형지정(정형) 언어입니다. 이는 변수를 선언할 때 데이터 형을 지정할 필요가 없음을 의미합니다. 또한 데이터 형이 스크립트 실행 도중 필요에 의해 자동으로 변환됨을 뜻합니다.
 
 그래서, 예를 들어, 다음과 같이 변수를 정의할 수 있습니다.
 
@@ -361,7 +357,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 - {{jsxref("parseInt", "parseInt()")}}
 - {{jsxref("parseFloat", "parseFloat()")}}
 
-`parseInt`는 오직 정수만 반환하므로, 소수에서는 사용성이 떨어집니다. 
+`parseInt`는 오직 정수만 반환하므로, 소수에서는 사용성이 떨어집니다.
 
 > **참고:** 게다가 `parseInt`를 잘 사용하기 위해서는 항상 진법(Radix) 매개변수를 포함해야 합니다. 진법 매개변수는 변환에 사용될 진법을 지정하는데 사용됩니다.
 
@@ -413,17 +409,17 @@ let coffees = ['French Roast', 'Colombian', 'Kona'];
 let fish = ['Lion', , 'Angel'];
 ```
 
-이 배열은 값이 있는 두 요소와 빈 요소 하나를 가집니다. 
+이 배열은 값이 있는 두 요소와 빈 요소 하나를 가집니다.
 
 - `fish[0]`은 "Lion"
 - `fish[1]`은 `undefined`
 - `fish[2]`는 "Angel"
 
-만약 요소 목록을 후행(trailing) 쉼표로 끝낸다면, 그 쉼표는 무시됩니다. 
+만약 요소 목록을 후행(trailing) 쉼표로 끝낸다면, 그 쉼표는 무시됩니다.
 
 다음 예제에서, 배열의 `length`는 3입니다. `myList[3]`은 없습니다. 목록의 다른 모든 쉼표는 새로운 요소를 나타냅니다.
 
-> **참고:**  후행 쉼표는 구버전 브라우저에서 오류를 유발할 수 있으므로 제거하는게 최선입니다.
+> **참고:** 후행 쉼표는 구버전 브라우저에서 오류를 유발할 수 있으므로 제거하는게 최선입니다.
 
 ```js
 var myList = ['home', , 'school', ];
@@ -441,7 +437,7 @@ var myList = [ , 'home', , 'school'];
 var myList = ['home', , 'school', , ];
 ```
 
-추가 쉼표의 동작을 이해하는 것은 JavaScript를 언어로서 이해하는데 중요합니다. 
+추가 쉼표의 동작을 이해하는 것은 JavaScript를 언어로서 이해하는데 중요합니다.
 
 하지만 코드를 작성할 때는 빠진 요소의 값을 명시적으로 `undefined`로 선언하는 것이 코드의 명확성과 유지보수성을 높입니다.
 
@@ -449,7 +445,7 @@ var myList = ['home', , 'school', , ];
 
 불리언 형은 `true`와 `false`의 리터럴 값을 가집니다.
 
-> **참고:** 원시 불리언 값 `true` 및 `false`와 {{jsxref("Boolean")}} 객체의 true 및 false 값을 혼동하지 마세요. 
+> **참고:** 원시 불리언 값 `true` 및 `false`와 {{jsxref("Boolean")}} 객체의 true 및 false 값을 혼동하지 마세요.
 >
 > 불리언 객체는 원시 불린 데이터 형을 감싸는 래퍼(wrapper)입니다. 더 많은 정보는 {{jsxref("Boolean")}}을 참고하세요.
 
@@ -467,7 +463,7 @@ JavaScript 숫자 리터럴은 다른 진법의 정수 리터럴과 10진수의 
 - 정수 리터럴에서 `0`으로 시작하거나 `0o`(혹은 `0O`)으로 시작하는 숫자열은 8진수임을 나타냅니다. 8진수 정수 리터럴은 오직 숫자 `0`-`7`만 포함할 수 있습니다.
 - `0x`(나 `0X`)로 시작하는 숫자열은 16진수 정수 리터럴 임을 나타냅니다. 16진수 정수는 숫자 (`0`-`9`) 및 문자 `a`-`f`, `A`-`F`를 포함할 수 있습니다. (문자의 대소문자는 그 값을 변경하지 않습니다. 그러므로 `0xa` = `0xA` = `10` 그리고 `0xf` = `0xF` = `15` 입니다.)
 - `0b` (나 `0B`)로 시작하는 숫자열은 2진수 정수 리터럴 임을 나타냅니다. 2진수 정수 리터럴은 오직 숫자 `0`과 `1`만 포함할 수 있습니다.
-- `n`으로 끝나는 숫자열은 {{jsxref("BigInt")}} 리터럴 임을 나타냅니다. 정수 리터럴은 위의 어떤 진수든 사용할 수 있습니다. `0123n`과 같은 `0`으로 시작하는 8진수 구문은 허용되지 않으나, `0o123n`은 허용됩니다. 
+- `n`으로 끝나는 숫자열은 {{jsxref("BigInt")}} 리터럴 임을 나타냅니다. 정수 리터럴은 위의 어떤 진수든 사용할 수 있습니다. `0123n`과 같은 `0`으로 시작하는 8진수 구문은 허용되지 않으나, `0o123n`은 허용됩니다.
 
 다음은 정수 리터럴 예제입니다.
 
@@ -508,7 +504,7 @@ JavaScript 숫자 리터럴은 다른 진법의 정수 리터럴과 10진수의 
 
 ### 객체 리터럴
 
-객체 리터럴은 중괄호(`{}`)로 묶인 0개 이상인 객체의 속성명과 관련 값 쌍 목록입니다. 
+객체 리터럴은 중괄호(`{}`)로 묶인 0개 이상인 객체의 속성명과 관련 값 쌍 목록입니다.
 
 > **주의:** 문(statement)의 시작에 객체 리터럴을 사용해서는 안됩니다. 이는 `{`가 블록의 시작으로 해석되기 때문에 오류를 유발하거나 의도한 대로 동작하지 않습니다.
 
@@ -541,7 +537,7 @@ console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
 ```
 
-객체 속성명은 빈 문자열 포함 어떤 문자열도 될 수 있습니다. 속성명이 유효한 JavaScript {{Glossary("Identifier","식별자")}}나 숫자가 아닌 경우, 따옴표로 묶여야 합니다. 
+객체 속성명은 빈 문자열 포함 어떤 문자열도 될 수 있습니다. 속성명이 유효한 JavaScript {{Glossary("Identifier","식별자")}}나 숫자가 아닌 경우, 따옴표로 묶여야 합니다.
 
 또한 유효한 식별자가 아닌 속성명은 점(`.`) 속성으로 접근할 수 없습니다. 대신 배열 같은 표기법("`[]`")으로 접근하고 값을 설정할 수 있습니다.
 
@@ -558,7 +554,7 @@ console.log(unusualPropertyNames['!']); // Bang!
 
 #### 향상된 객체 리터럴
 
-ES2015에서, 객체 리터럴은 구성에서 프로토타입 설정, `foo: foo` 할당을 위한 단축 표기, 메서드 정의, `super` 클래스 호출 및 식으로 동적인 속성명 계산을 지원하기 위해 확장됐습니다. 
+ES2015에서, 객체 리터럴은 구성에서 프로토타입 설정, `foo: foo` 할당을 위한 단축 표기, 메서드 정의, `super` 클래스 호출 및 식으로 동적인 속성명 계산을 지원하기 위해 확장됐습니다.
 
 그에 따라 객체 리터럴 및 클래스 선언이 함께 더 가까워지고, 객체 기반 설계는 같은 일부 편의기능으로 득을 볼 수 있습니다.
 
@@ -588,7 +584,7 @@ var re = /ab+c/;
 
 ### 문자열 리터럴
 
-문자열 리터럴은 큰 따옴표(`"`) 혹은 작은 따옴표(`'`)로 묶인 0개 이상의 문자입니다. 문자열은 같은 형 따옴표 (즉 큰 따옴표 쌍이나 작은 따옴표 쌍) 로 구분되어야 합니다. 
+문자열 리터럴은 큰 따옴표(`"`) 혹은 작은 따옴표(`'`)로 묶인 0개 이상의 문자입니다. 문자열은 같은 형 따옴표 (즉 큰 따옴표 쌍이나 작은 따옴표 쌍) 로 구분되어야 합니다.
 
 아래는 문자열 리터럴의 예제입니다.
 
@@ -602,14 +598,14 @@ var re = /ab+c/;
 
 꼭 `String` 객체를 사용할 필요가 없는 경우 문자열 리터럴을 사용해야 합니다. `String` 객체에 대해 자세한 사항은 {{jsxref("String")}}을 참고하세요.
 
-문자열 리터럴 값은  {{jsxref("String")}} 객체의 모든 메서드를 호출할 수 있습니다. JavaScript는 자동으로 문자열 리터럴을 임시 문자열 객체로 변환, 메서드를 호출하고 나서 임시 문자열 객체를 폐기합니다. 또한 문자열 리터럴에서도 `String.length` 속성을 사용할 수 있습니다.
+문자열 리터럴 값은 {{jsxref("String")}} 객체의 모든 메서드를 호출할 수 있습니다. JavaScript는 자동으로 문자열 리터럴을 임시 문자열 객체로 변환, 메서드를 호출하고 나서 임시 문자열 객체를 폐기합니다. 또한 문자열 리터럴에서도 `String.length` 속성을 사용할 수 있습니다.
 
 ```js
 // 공백을 포함한 문자열 내 심볼 갯수가 출력됩니다.
 console.log("John's cat".length)// 여기서는, 10.
 ```
 
-[템플릿 리터럴](/en-US/docs/Web/JavaScript/Reference/Template_literals)도 사용할 수 있습니다. 템플릿 리터럴은 큰 따옴표나 작은 따옴표 대신 백틱 (`` ` ``) ([억음 부호](https://ko.wikipedia.org/wiki/%EC%96%B5%EC%9D%8C_%EB%B6%80%ED%98%B8)) 으로 문자를 감쌉니다. 
+[템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)도 사용할 수 있습니다. 템플릿 리터럴은 큰 따옴표나 작은 따옴표 대신 백틱 (`` ` ``) ([억음 부호](https://ko.wikipedia.org/wiki/%EC%96%B5%EC%9D%8C_%EB%B6%80%ED%98%B8)) 으로 문자를 감쌉니다.
 
 템플릿 리터럴은 문자열 구성을 위한 달콤한 구문을 제공합니다. (이는 Perl, Python 등에 있는 문자열 삽입(interpolation) 기능과 비슷합니다.)
 
@@ -778,7 +774,7 @@ var poem =
 `Roses are red,
 Violets are blue.
 Sugar is sweet,
-and so is foo.``
+and so is foo.`
 ```
 
 ## 추가 정보

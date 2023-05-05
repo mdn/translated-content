@@ -12,12 +12,13 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 ---
+
 {{AddonSidebar()}}
 
 Utilisez cette fonction pour créer un objet {{WebExtAPIRef("webRequest.StreamFilter")}} pour une requête particulière.
 Vous pouvez ensuite utiliser le filtre de flux pour surveiller et modifier la réponse. Vous appelez typiquement cette fonction à partir d'un écouteur d'événements `webRequest`.
 
-Pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires à l'auditeur de l'événement (la permission "webRequest" et la [permission hôte ](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour l'hôte).
+Pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires à l'auditeur de l'événement (la permission "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour l'hôte).
 
 ## Syntaxe
 
@@ -38,7 +39,7 @@ Un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser po
 
 ## Exemples
 
-Cet exemple, tiré de l'extension [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response), crée un filtre dans  {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :
+Cet exemple, tiré de l'extension [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response), crée un filtre dans {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :
 
 ```js
 function listener(details) {
@@ -67,6 +68,6 @@ browser.webRequest.onBeforeRequest.addListener(
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.filterResponseData", 10)}}
+{{Compat}}

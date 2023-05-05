@@ -1,20 +1,13 @@
 ---
 title: '@media'
 slug: Web/CSS/@media
-tags:
-  - '@media'
-  - アットルール
-  - CSS
-  - 条件付き
-  - リファレンス
-browser-compat: css.at-rules.media
-translation_of: Web/CSS/@media
 ---
+
 {{CSSRef}}
 
 **`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
 
-> **Note:** JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
+> **メモ:** JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
 
 ## 構文
 
@@ -56,7 +49,7 @@ translation_of: Web/CSS/@media
 - `speech`
   - : 音声合成向けのものです。
 
-> **Note:** CSS2.1 および [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) では、その他のメディア種別 (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`) が定義されていましたが、これらは [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) で非推奨となったため、使用すべきではありません。
+> **メモ:** CSS2.1 および [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) では、その他のメディア種別 (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`) が定義されていましたが、これらは [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) で非推奨となったため、使用すべきではありません。
 > `aural` タイプは `speech` に置き換えられましたが、これも同様です。
 
 ### メディア特性
@@ -65,7 +58,7 @@ translation_of: Web/CSS/@media
 メディア特性式は、その存在や値を調べるもので、完全に任意です。それぞれのメディア特性式は、括弧で囲む必要があります。
 
 - {{cssxref("@media/any-hover", "any-hover")}}
-  - :  	入力メカニズムで、ユーザーが要素上でのホバーを使用することができるものあるか。
+  - : 入力メカニズムで、ユーザーが要素上でのホバーを使用することができるものがあるか。
     Media Queries Level 4 で追加。
 - {{cssxref("@media/any-pointer", "any-pointer")}}
   - : 入力メカニズムにポインティングデバイスがあるか、もしそうであればどれだけ正確なものであるか。
@@ -78,17 +71,17 @@ translation_of: Web/CSS/@media
   - : ユーザーエージェントおよび出力機器が対応しているおよその色の範囲。
     Media Queries Level 4 で追加。
 - {{cssxref("@media/color-index", "color-index")}}
-  - :  	出力機器の色参照表の項目数、または端末がそのような表を使用していないのであればゼロ。
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}  {{deprecated_inline}}
+  - : 出力機器の色参照表の項目数、または端末がそのような表を使用していないのであればゼロ。
+- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
   - : 出力機器の幅対高さのアスペクト比。
     Media Queries Level 4 で非推奨。
-- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}  
+- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
   - : 出力機器のレンダリング面の高さ。
     Media Queries Level 4 で非推奨。
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : 出力機器のレンダリング面の幅。 Media Queries Level 4 で非推奨。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - :  	ウェブアプリのマニフェストの [`display`](/ja/docs/Web/Manifest#display) メンバーで指定されているアプリケーションの表示モード。
+  - : ウェブアプリのマニフェストの [`display`](/ja/docs/Web/Manifest#display) メンバーで指定されているアプリケーションの表示モード。
     [Web App Manifest 仕様書](https://w3c.github.io/manifest/#the-display-mode-media-feature)で定義。
 - {{cssxref("@media/forced-colors", "forced-colors")}}
   - : ユーザーエージェントがカラーパレットを制限しているかどうかを検出。
@@ -129,13 +122,12 @@ translation_of: Web/CSS/@media
   - : 出力機器のピクセル密度。
 - {{cssxref("@media/scripting", "scripting")}}
   - : 出力機器のスキャン処理方式。
-    Media Queries Level 5.  で追加。
+    Media Queries Level 5. で追加。
 - {{cssxref("@media/update-frequency", "update")}}
   - : どれだけの頻度で出力機器がコンテンツの表示を変更できるか。
     Media Queries Level 4 で追加。
 - {{cssxref("@media/width", "width")}}
   - : スクロールバーの幅を含むビューポートの幅。
-
 
 ### 論理演算子
 
@@ -150,7 +142,7 @@ translation_of: Web/CSS/@media
     カンマで区切られたクエリーのリストの中にある場合は、適用された特定のクエリーのみを反転します。
     `not` 演算子を使用する場合は、メディア種別*も*指定しなければなりません。
 
-    > **Note:** レベル 3 では、個々のメディア特性式を否定するために `not` キーワードを使用することはできず、メディアクエリー全体のみを否定することしかできません。
+    > **メモ:** レベル 3 では、個々のメディア特性式を否定するために `not` キーワードを使用することはできず、メディアクエリー全体のみを否定することしかできません。
 - `only`
   - : クエリー全体が一致する場合にのみスタイルを適用します。
     これは、古いブラウザーが選択したスタイルを適用できないようにするのに便利です。
@@ -161,7 +153,6 @@ translation_of: Web/CSS/@media
     カンマで区切られたリストの各クエリーは、他のクエリーとは別に扱われます。
      したがって、リスト内のクエリーのいずれかが `true` であれば、メディア文全体が `true` を返すことになります。
      言い換えれば、リストは論理的な `or` 演算子のように動作します．
-
 
 ## アクセシビリティの考慮
 

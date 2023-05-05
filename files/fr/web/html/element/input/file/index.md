@@ -1,13 +1,9 @@
 ---
 title: <input type="file">
-slug: Web/HTML/Element/Input/file
-tags:
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/file
+slug: Web/HTML/Element/input/file
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Web/Guide/HTML/Formulaires) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Using_files_from_web_applications).
 
@@ -19,9 +15,9 @@ L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractère
 
 > **Note :**
 >
-> 1.  Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](</en-US/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)>).
-> 2.  Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (`""`).
-> 3.  La chaîne de caractères [est préfixée avec `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) afin d'éviter la fuite d'informations sensibles concernant la structure des fichiers de l'utilisateur.
+> 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](/fr/docs/Using_files_from_web_applications#getting_information_about_selected_files).
+> 2. Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (`""`).
+> 3. La chaîne de caractères [est préfixée avec `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) afin d'éviter la fuite d'informations sensibles concernant la structure des fichiers de l'utilisateur.
 
 ## Attributs supplémentaires
 
@@ -184,15 +180,15 @@ Dans tous les cas (et comme pour les autres éléments envoyés au serveur), il 
 
 ### Notes
 
-1.  À partir de {{Gecko("2.0")}}, appeler la méthode `click()` sur un élément de type `file` ouvre le sélecteur de fichier et permet à un utilisateur de sélectionner les fichiers sur son système d'opération. Pour plus d'exemples, voir Utiliser des fichiers avec des applications web.
-2.  Il n'est pas possible de définir la valeur du sélecteur de fichier via un script. Le code suivant n'aura aucun effet :
+1. À partir de Gecko 2.0, appeler la méthode `click()` sur un élément de type `file` ouvre le sélecteur de fichier et permet à un utilisateur de sélectionner les fichiers sur son système d'opération. Pour plus d'exemples, voir Utiliser des fichiers avec des applications web.
+2. Il n'est pas possible de définir la valeur du sélecteur de fichier via un script. Le code suivant n'aura aucun effet :
 
     ```js
     const input = document.querySelector("input[type=file]");
     input.value = "toto";
     ```
 
-3.  Lorsqu'on choisit un fichier via `<input type="file">`, le chemin réel du fichier source n'est pas transmis dans la valeur de l'attribut `value` pour des raisons de sécurité. À la place, on a le nom du fichier précédé du chemin `C:\fakepath\`. Cela provient de raisons historiques, est pris en charge par la plupart des navigateurs modernes. Cela a même été [inscrit dans la spécification](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+3. Lorsqu'on choisit un fichier via `<input type="file">`, le chemin réel du fichier source n'est pas transmis dans la valeur de l'attribut `value` pour des raisons de sécurité. À la place, on a le nom du fichier précédé du chemin `C:\fakepath\`. Cela provient de raisons historiques, est pris en charge par la plupart des navigateurs modernes. Cela a même été [inscrit dans la spécification](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ## Exemples
 
@@ -296,7 +292,7 @@ input.addEventListener('change', updateImageDisplay);
 
 À chaque fois que la fonction `updateImageDisplay()` est appelée :
 
-- On lance une boucle [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) afin de vider le contenu qui pourrait être dans l'élément `<div>` servant à la prévisualisation.
+- On lance une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while) afin de vider le contenu qui pourrait être dans l'élément `<div>` servant à la prévisualisation.
 - On récupère l'objet {{domxref("FileList")}} qui contient les informations sur les fichiers sélectionnés et on le stocke dans une variable intitulée `curFiles`.
 - On vérifie si aucun fichier n'a été sélectionné (ce qui se traduit par vérifier si `curFiles.length` vaut 0). Si c'est le cas, on place un message dans le `<div>` de prévisualisation pour indiquer qu'aucun fichier n'a été sélectionné.
 - Si des fichiers ont été sélectionnés, on les parcourt afin d'afficher des informations sur ces fichiers dans l'élément `<div>`. Quelques notes :
@@ -439,14 +435,11 @@ Et voici le résultat :
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#file-upload-state-(type=file)', '&lt;input type="file"&gt;')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
-| {{SpecName('HTML5.1', 'sec-forms.html#file-upload-state-typefile', '&lt;input type="file"&gt;')}}     | {{Spec2('HTML5.1')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-file")}}
+{{Compat}}
 
 ## Voir aussi
 

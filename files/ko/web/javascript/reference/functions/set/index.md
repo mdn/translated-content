@@ -1,14 +1,6 @@
 ---
 title: 설정자
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
-browser-compat: javascript.functions.set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
 {{jsSidebar("Functions")}}
 
@@ -41,12 +33,15 @@ JavaScript의 설정자(_setter_)를 사용하면 지정한 속성 값의 변경
 - 설정자의 식별자는 숫자나 문자열일 수 있습니다.
 - 설정자 함수는 최대 한 개의 매개변수만 가질 수 있습니다.
 - 객체 리터럴에서, 같은 속성 키에 다수의 설정자를 바인딩할 수 없습니다.
+
   ```js example-bad
   {
     set x() { }, set x() { }
   }
   ```
+
 - 객체 리터럴에서, 설정자는 데이터 속성과 같은 키를 사용할 수 없습니다.
+
   ```js example-bad
   {
     x: ..., set x() { }
@@ -121,6 +116,7 @@ obj.foo = 'baz';
 console.log(obj.baz);
 //  "baz"
 ```
+
 ## 명세
 
 {{Specifications}}
@@ -134,6 +130,6 @@ console.log(obj.baz);
 - [접근자](/ko/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - JavaScript 안내서의 [접근자와 설정자 정의하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

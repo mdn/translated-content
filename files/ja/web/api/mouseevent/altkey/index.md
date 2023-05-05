@@ -1,26 +1,18 @@
 ---
 title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.altKey
-translation_of: Web/API/MouseEvent/altKey
-translation_of_original: Web/API/event.altKey
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 **`MouseEvent.altKey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていたかどうかを論理値で示します。
 
 オペレーティングシステムによっては、ブラウザーがいつでも <kbd>alt</kbd> キーを検出できるとは限りらないことに注意してください。
 例えば、一部の Linux では、 <kbd>alt</kbd> キーを押しながらマウスの左クリックが、ウィンドウの移動またはリサイズに使われています。
 
-> **Note:** Macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
+> **メモ:** Macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
 
 ## 値
 
@@ -28,7 +20,7 @@ translation_of_original: Web/API/event.altKey
 
 ## 例
 
-この例は、 {{Event("click")}} イベントが発行されたときに `altKey` プロパティを記録します。
+この例は、 {{domxref("Element/click_event", "click")}} イベントが発行されたときに `altKey` プロパティを記録します。
 
 ### HTML
 
@@ -50,7 +42,7 @@ function logKey(e) {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

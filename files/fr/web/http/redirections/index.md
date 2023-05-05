@@ -7,6 +7,7 @@ tags:
   - redirections
 translation_of: Web/HTTP/Redirections
 ---
+
 {{HTTPSidebar}}La redirection d'URL est une technique pour donner à une page, un formulaire ou une application Web entière, plus d'une adresse. HTTP fournit un type particulier de réponses, les **_redirections HTTP_**, pour effectuer cette opération utilisée pour de nombreux objectifs : redirection temporaire pendant la maintenance du site, redirection permanente pour que les liens externes continuent de fonctionner après un changement d'architecture du site, pages de progression lors du téléchargement d'un fichier, etc.
 
 ## Principe
@@ -51,7 +52,7 @@ En plus de ces redirections habituelles, il existe deux redirections spécifique
 
 ## Autre façon de spécifier les redirections
 
-Les redirections HTTP ne sont pas les seuls moyens de définir des redirections. Il existe deux autres méthodes: les redirections HTML en utilisant l'élément {{HTMLElement("meta")}}, et les redirections JavaScript en utilisant le [DOM](/en-US/docs/Web/API/Document_Object_Model).
+Les redirections HTTP ne sont pas les seuls moyens de définir des redirections. Il existe deux autres méthodes: les redirections HTML en utilisant l'élément {{HTMLElement("meta")}}, et les redirections JavaScript en utilisant le [DOM](/fr/docs/Web/API/Document_Object_Model).
 
 ### Redirections HTML
 
@@ -83,9 +84,9 @@ Comme les redirections HTML, cela ne fonctionne pas sur toutes les ressources, e
 
 Avec trois possibilités de redirections d'URL, plusieurs méthodes peuvent être spécifiées en même temps, mais laquelle est appliquée en premier ? L'ordre de priorité est le suivant:
 
-1.  Les redirections HTTP sont toujours exécutées en premier, alors même que la page n'est pas transmise, et ni même lue.
-2.  Les redirections HTML ({{HTMLElement("meta")}}) sont exécutées s'il n'y avait pas de redirections HTTP.
-3.  Les redirections JavaScript sont utilisées en dernier recours, et uniquement si JavaScript est activé côté client.
+1. Les redirections HTTP sont toujours exécutées en premier, alors même que la page n'est pas transmise, et ni même lue.
+2. Les redirections HTML ({{HTMLElement("meta")}}) sont exécutées s'il n'y avait pas de redirections HTTP.
+3. Les redirections JavaScript sont utilisées en dernier recours, et uniquement si JavaScript est activé côté client.
 
 Dans la mesure du possible, utilisez des redirections HTTP, et n'ajoutez pas d'élément {{HTMLElement("meta")}} de redirection. Si quelqu'un change les redirections HTTP et oublie de changer les redirections HTML, les redirections ne seront plus identiques, ce qui pourrait causer une boucle infinie ou d'autres cauchemars.
 
@@ -127,23 +128,29 @@ Les redirections peuvent être définies soit dans le fichier de configuration d
 
 Le module [mod_alias](https://httpd.apache.org/docs/current/mod/mod_alias.html) a des directives `Redirect` et `RedirectMatch` qui définissent une réponse {{HTTPStatus("302")}} (par défaut):
 
-    <VirtualHost *:80>
-    	ServerName example.com
-    	Redirect / http://www.example.com
-    </VirtualHost>
+```
+<VirtualHost *:80>
+  ServerName example.com
+  Redirect / http://www.example.com
+</VirtualHost>
+```
 
 L'URL `http://example.com/` sera redirigée vers `http://www.example.com/`, ainsi que les fichiers ou répertoires qui s'y trouvent (`http://example.com/index.html` sera redirigée vers `http://www.example.com/index.html`)
 
 `RedirectMatch` fait la même chose mais prend une expression régulière pour définir une liste d'URLs concernées:
 
-    RedirectMatch ^/images/(.*)$ http://images.example.com/$1
+```
+RedirectMatch ^/images/(.*)$ http://images.example.com/$1
+```
 
 Tous les documents dans le répertoire `images/` seront redirigés vers un autre domaine.
 
 Si vous ne souhaitez pas configurer une redirection temporaire, un paramètre supplémentaire (soit le code d'état HTTP à utiliser, soit le mot clé `permanent`) peut être utilisé pour configurer un autre type de redirection:
 
-    Redirect permanent / http://www.example.com
-    Redirect 301 / http://www.example.com
+```
+Redirect permanent / http://www.example.com
+Redirect 301 / http://www.example.com
+```
 
 Le module [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) peut également être utilisé pour créer des redirections. Il est plus flexible, mais un peu plus complexe à utiliser.
 
@@ -151,16 +158,20 @@ Le module [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.htm
 
 Dans Nginx, vous créez un bloc `server` spécifique pour le contenu que vous voulez rediriger:
 
-    server {
-    	listen 80;
-    	server_name example.com;
-    	return 301 $scheme://www.example.com$request_uri;
-    }
+```
+server {
+  listen 80;
+  server_name example.com;
+  return 301 $scheme://www.example.com$request_uri;
+}
+```
 
 Pour appliquer une redirection pour un dossier ou un sous-ensemble de pages uniquement, utilisez la directive `rewrite`:
 
-    rewrite ^/images/(.*)$ http://images.example.com/$1 redirect;
-    rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
+```
+rewrite ^/images/(.*)$ http://images.example.com/$1 redirect;
+rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
+```
 
 ### IIS
 
@@ -174,11 +185,15 @@ La plupart du temps, il s'agit d'un problème de serveur, et si le serveur ne pe
 
 Parfois, le serveur ne le détecte pas : une boucle de redirection peut s'étendre sur plusieurs serveurs qui n'ont pas une vue globale de ce qui se passe. Dans ce cas, les navigateurs le détecteront et afficheront un message d'erreur. Firefox affichera:
 
-    Firefox a détecté que le serveur redirige la demande pour cette adresse d'une manière qui n'aboutira pas.
+```
+Firefox a détecté que le serveur redirige la demande pour cette adresse d'une manière qui n'aboutira pas.
+```
 
 tandis que Chrome affichera:
 
-    Cette page Web présente une boucle de redirection
+```
+Cette page Web présente une boucle de redirection
+```
 
 Dans les deux cas, l'utilisateur ne peut pas faire grand-chose (à moins qu'une corruption ne se produise de son côté, comme une inadéquation du cache ou des cookies).
 

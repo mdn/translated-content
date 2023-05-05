@@ -6,6 +6,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/difference
 ---
+
 {{ XsltRef() }}
 `set:difference()` retourne la différence entre deux ensembles de nœuds. En d'autres termes, elle retourne un ensemble de nœuds qui sont dans un des ensembles mais par dans l'autre.
 
@@ -13,7 +14,9 @@ La version*modèle* de `set:difference` applique des modèles à ces nœuds dans
 
 ### Syntaxe
 
-    set:difference(ensembleNœuds1,ensembleNœuds2)
+```
+set:difference(ensembleNœuds1,ensembleNœuds2)
+```
 
 ### Arguments
 

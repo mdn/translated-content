@@ -1,15 +1,8 @@
 ---
 title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
-tags:
-  - API
-  - AudioBuffer
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-browser-compat: api.AudioBuffer.getChannelData
-translation_of: Web/API/AudioBuffer/getChannelData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`getChannelData()`** は {{ domxref("AudioBuffer") }} インターフェイスのメソッドで、 channel 引数（0 が最初のチャンネル）で定義されたチャンネルに結び付けられた PCM データを {{jsxref("Float32Array")}} で返します。
@@ -56,13 +49,13 @@ button.onclick = function() {
    var nowBuffering = myArrayBuffer.getChannelData(channel);
    for (var i = 0; i < frameCount; i++) {
      // Math.random() は [0; 1.0] である
-     // 音声は [-1.0; 1.0] である必要がある
+     // 音声は [-1.0; 1.0] である必要がある
      nowBuffering[i] = Math.random() * 2 - 1;
    }
   }
 
   // AudioBufferSourceNode を得る
-  // これは AudioBuffer を再生するときに使う AudioNode である
+  // これは AudioBuffer を再生するときに使う AudioNode である
   var source = audioCtx.createBufferSource();
   // AudioBufferSourceNode にバッファーを設定する
   source.buffer = myArrayBuffer;
@@ -83,4 +76,4 @@ button.onclick = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,16 +1,8 @@
 ---
 title: Document.createElement()
 slug: Web/API/Document/createElement
-tags:
-  - API
-  - DOM
-  - Document
-  - メソッド
-  - リファレンス
-  - createElement
-browser-compat: api.Document.createElement
-translation_of: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 [HTML](/ja/docs/Web/HTML) 文書において、 **`document.createElement()`** メソッドは _tagName_ で指定された HTML 要素を生成し、または _tagName_ が認識できない場合は {{domxref("HTMLUnknownElement")}} を生成します。
@@ -26,13 +18,13 @@ let element = document.createElement(tagName[, options]);
 - _tagName_
   - : 生成される要素の型を特定する文字列です。生成される要素の {{domxref("Node.nodeName", "nodeName")}} は _tagName_ の値で初期化されます。このメソッドで修飾名 ("html:a" など) を使用しないでください。 HTML 文書で呼び出すと、 `createElement()` は要素を生成する前に _tagName_ を小文字に変換します。 Firefox, Opera, Chrome では、 `createElement(null)` は `createElement("null")` のように動作します。
 - _options_{{optional_inline}}
-  - : 省略可能な `ElementCreationOptions` オブジェクトで、 `is` という名前のプロパティをひとつ持ち、その値は前に `customElements.define()` を使用して定義したカスタム要素の名前です。詳しくは{{anch("ウェブコンポーネントの例")}}を参照してください。
+  - : 省略可能な `ElementCreationOptions` オブジェクトで、 `is` という名前のプロパティをひとつ持ち、その値は前に `customElements.define()` を使用して定義したカスタム要素の名前です。詳しくは[ウェブコンポーネントの例](#ウェブコンポーネントの例)を参照してください。
 
 ### 返値
 
 新しい {{domxref("Element")}} です。
 
-> **Note:** 文書が {{domxref("HTMLDocument", "HTMLDocument", "", "1")}} である場合、新しい {{domxref("HTMLElement", "HTMLElement", "", "1")}} を返しますが、これが最も一般的です。それ以外の場合は新しい {{domxref("Element","Element","","1")}} を返します。
+> **メモ:** 文書が {{domxref("HTMLDocument", "HTMLDocument", "", "1")}} である場合、新しい {{domxref("HTMLElement", "HTMLElement", "", "1")}} を返しますが、これが最も一般的です。それ以外の場合は新しい {{domxref("Element","Element","","1")}} を返します。
 
 ## 例
 
@@ -108,7 +100,7 @@ let expandingList = document.createElement('ul', { is : 'expanding-list' })
 
 新しい要素には [`is`](/ja/docs/Web/HTML/Global_attributes/is) 属性が与えられ、その値はカスタム要素のタグ名になります。
 
-> **Note:** [カスタム要素仕様書](https://www.w3.org/TR/custom-elements/)の以前のバージョンととの後方互換性のため、一部のブラウザーはオブジェクトの代わりに文字列を渡すことを認めており、この文字列はカスタム要素のタグ名です。
+> **メモ:** [カスタム要素仕様書](https://www.w3.org/TR/custom-elements/)の以前のバージョンととの後方互換性のため、一部のブラウザーはオブジェクトの代わりに文字列を渡すことを認めており、この文字列はカスタム要素のタグ名です。
 
 ## 仕様書
 

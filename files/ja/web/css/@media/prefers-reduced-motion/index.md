@@ -1,19 +1,11 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
-tags:
-  - '@media'
-  - アクセシビリティ
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.prefers-reduced-motion
-translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
+
 **`prefers-reduced-motion`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが余計な動きを最少化するよう要求したことを検出するために使用します。
 
-> **Warning:** このページの下部に埋め込まれた例は、拡大縮小の動きがありますが、一部の読者には問題があるかもしれません。前庭運動障害をお持ちの方は、アニメーションを見る前に、お使いの端末のモーション軽減機能を有効にしてください。
+> **警告:** このページの下部に埋め込まれた例は、拡大縮小の動きがありますが、一部の読者には問題があるかもしれません。前庭運動障害をお持ちの方は、アニメーションを見る前に、お使いの端末のモーション軽減機能を有効にしてください。
 
 ## 構文
 
@@ -28,7 +20,7 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 - GTK/GNOME では、 GNOME Tweaks > General タブ (バージョンによっては Appearance タブ) > Animations がオフになっている場合。
 
-    - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/index.php/GTK#Configuration) の `[Settings]` に追加する方法もあります。
+  - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/index.php/GTK#Configuration) の `[Settings]` に追加する方法もあります。
 
 - Windows 10: 設定 > 簡単操作 > ディスプレイ > アニメーションを表示する
 - Windows 7: コントロールパネル > コンピューターの簡単操作センター > コンピューターでの作業に集中しやすくします > 必要のないアニメーションは無効にします (可能な場合)

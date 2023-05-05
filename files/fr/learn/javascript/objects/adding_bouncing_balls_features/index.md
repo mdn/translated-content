@@ -14,6 +14,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: >-
   Learn/JavaScript/Objects/Ajouter_des_fonctionnalités_à_notre_démo_de_balles_rebondissantes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'article précédent comme base, pour y ajouter de nouvelles fonctionnalitées intéressantes.
@@ -47,11 +48,11 @@ Pour commencer, faite une copie locale de [index-finished.html](https://github.c
 
 Notre jeu des balles est assez sympa, mais maintenant il s'agit de le rendre plus interactif en y ajoutant un viseur contrôlé par l'utilisateur, qui va détruire une balle s'il la touche. Nous voulons aussi tester votre capacité en programmation orientée objet en créant un object `Shape()` dont le viseur et les balles peuvent hériter. Pour terminer, nous voulons créer un compteur qui permet d'afficher combien de balles il nous reste encore à détruire.
 
-Ce screenshot vous donne une idée du résultat final:
+Ce screenshot vous donne une idée du résultat final :
 
 ![](bouncing-evil-circle.png)
 
-Si vous voulez en savoir plus, regardez [l'exemple fini ](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
+Si vous voulez en savoir plus, regardez [l'exemple fini](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
 
 ## Vos objectifs
 
@@ -61,11 +62,11 @@ Cette section décrit ce que vous aurez à faire.
 
 Pour commencer, modifions le constructeur de l'objet `Ball()` pour qu'il devienne le constructeur de `Shape()` puis créons en un nouveau pour `Ball()`&nbsp;:
 
-1.  Le constructeur `Shape()` devra définir les propriétés `x`, `y`, `velX`, et `velY` de la même manière que le constructeur `Ball()` auparavant, mais sans les propriétés `color` et `size`.
-2.  `Shape()` doit aussi définir une nouvelle propriété `exists`, qui servira à identifier les balles qu'il reste à détruire dans la fenêtre (celles qui n'ont pas encore été détruites). Elle doit retourner un booléen (`true`/`false`).
-3.  Le constructeur `Ball()` doit hériter des propriétés `x`, `y`, `velX`, `velY`, et `exists` du constructeur `Shape()`.
-4.  `Ball()` doit aussi définir les propriétés `color` et `size`, comme à l'origine.
-5.  N'oubliez pas de définir le prototype de `Ball()` et son constructeur de manière approprié.
+1. Le constructeur `Shape()` devra définir les propriétés `x`, `y`, `velX`, et `velY` de la même manière que le constructeur `Ball()` auparavant, mais sans les propriétés `color` et `size`.
+2. `Shape()` doit aussi définir une nouvelle propriété `exists`, qui servira à identifier les balles qu'il reste à détruire dans la fenêtre (celles qui n'ont pas encore été détruites). Elle doit retourner un booléen (`true`/`false`).
+3. Le constructeur `Ball()` doit hériter des propriétés `x`, `y`, `velX`, `velY`, et `exists` du constructeur `Shape()`.
+4. `Ball()` doit aussi définir les propriétés `color` et `size`, comme à l'origine.
+5. N'oubliez pas de définir le prototype de `Ball()` et son constructeur de manière approprié.
 
 Les méthodes `draw()`, `update()`, et `collisionDetect()` doivent fonctionnées comme avant, sans être modifiées.
 
@@ -108,7 +109,7 @@ Cette méthode à la même fonction que la première partie de `Ball()` `update(
 
 #### `setControls()`
 
-Cette méthode ajoute un écouteur d'évènement `onkeydown` à l'objet `window` ce qui permettra en enfonçant certaine touche du clavier de déplacer le viseur dans la fenêtre. Insérez le code suivant dans la méthode:
+Cette méthode ajoute un écouteur d'évènement `onkeydown` à l'objet `window` ce qui permettra en enfonçant certaine touche du clavier de déplacer le viseur dans la fenêtre. Insérez le code suivant dans la méthode :
 
 ```js
 var _this = this;
@@ -149,8 +150,8 @@ Maintenant que nous avons définit notre viseur, on a besoin de le faire appara�
 
 Pour implémenter le compteur de score, suivez les étapes suivantes:
 
-1.  Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément {{HTMLElement("h1")}} .
-2.  Dans votre fichier CSS, ajouter les règlesz suivantes:
+1. Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément {{HTMLElement("h1")}} .
+2. Dans votre fichier CSS, ajouter les règlesz suivantes:
 
     ```css
     p {
@@ -162,7 +163,7 @@ Pour implémenter le compteur de score, suivez les étapes suivantes:
     }
     ```
 
-3.  Dans votre JavaScript, effectuez les modifications suivante:
+3. Dans votre JavaScript, effectuez les modifications suivante :
 
     - Créez une variable qui contiendra la référence vers le paragraphe.
     - Stocker et afficher le nombre de balle présentent à l'écran.
@@ -179,13 +180,3 @@ Pour implémenter le compteur de score, suivez les étapes suivantes:
 Si vous effectuez cette évalutation dans le cadre d'un cours, vous devriez pouvoir fournir votre travail à votre professeur/mentor pour correction. Si vous apprenez par vous même, vous pouvez obtenir la correction sur [discussion thread for this exercise](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), ou sur [#mdn](irc://irc.mozilla.org/mdn) IRC channel sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Tout d'abord effectuez cet exercice — vous n'obtiendrez jamais rien en trichant !
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## Dans ce Module
-
-- [Object basics](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

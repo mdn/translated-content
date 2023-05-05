@@ -1,15 +1,8 @@
 ---
 title: HTMLTableElement.tHead
 slug: Web/API/HTMLTableElement/tHead
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLTableElement.tHead
-translation_of: Web/API/HTMLTableElement/tHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.tHead`** は {{HTMLElement("table")}} の {{HTMLElement("thead")}} 要素を表します。そのような要素がない場合は、この値は `null` になります。

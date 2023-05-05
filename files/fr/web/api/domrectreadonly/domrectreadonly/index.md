@@ -9,13 +9,16 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/DOMRectReadOnly
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable }}
 
 Le constructeur **`DOMRectReadOnly()`** crée un nouvel objet {{domxref("DOMRectReadOnly")}}.
 
 ## Syntaxe
 
-    var myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height);
+```js
+var myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height);
+```
 
 ### Paramètres
 
@@ -40,13 +43,11 @@ myDOMRect = new DOMRectReadOnly(0,0,100,100);
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Geometry Interfaces', '#DOMRect', 'DOMRect()')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly.DOMRectReadOnly")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -6,15 +6,18 @@ tags:
 translation_of: Web/XSLT/Element/when
 original_slug: Web/XSLT/when
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:when>` apparaît toujours dans un élément `<xsl:choose>`, et se comporte comme une structure conditionelle 'case'.
 
 ### Syntaxe
 
-    <xsl:when test=EXPRESSION>
-    	MODÈLE
-    </xsl:when>
+```xml
+<xsl:when test=EXPRESSION>
+  MODÈLE
+</xsl:when>
+```
 
 ### Attribut obligatoire
 

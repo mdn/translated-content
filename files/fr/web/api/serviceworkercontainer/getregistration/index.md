@@ -3,13 +3,16 @@ title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
 translation_of: Web/API/ServiceWorkerContainer/getRegistration
 ---
+
 {{APIRef("Service Workers API")}}
 
 La méthode **`getRegistration()`** de l'interface {{domxref("ServiceWorkerContainer")}} fournis un objet {{domxref("ServiceWorkerRegistration")}} dont la porté inclue l'URL du document. Cette méthode retourne une {{jsxref("Promise")}} qui se résout avec un {{domxref("ServiceWorkerRegistration")}} ou `undefined`.
 
 ## Syntaxe
 
-    serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistration) { ... });
+```js
+serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistration) { ... });
+```
 
 ### Paramètres
 
@@ -32,10 +35,8 @@ navigator.serviceWorker.getRegistration('/app').then(function(registration) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statuts                              | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-serviceworkercontainer-getregistration', 'ServiceWorkerContainer: getRegistration')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerContainer.getRegistration")}}
+{{Compat}}

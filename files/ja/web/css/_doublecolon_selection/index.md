@@ -1,15 +1,8 @@
 ---
 title: '::selection'
 slug: Web/CSS/::selection
-tags:
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.selection
-translation_of: Web/CSS/::selection
 ---
+
 {{CSSRef}}
 
 **`::selection`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ユーザーが (テキストをマウスでクリックやドラッグすることで) 選択した文書の一部にスタイルを適用します。
@@ -98,7 +91,7 @@ p::selection {
 
 {{Specifications}}
 
-> **Note:** `::selection` は CSS Selectors Level 3 の草稿にはありましたが、 (特に要素がネストされた場合の) 動作の仕様化が途中であることや相互運用性が確保されなかったこと [(W3C Style mailing list での議論に基づく)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html)から、勧告の過程で削除されました。これは [Pseudo-Elements Level 4](https://dev.w3.org/csswg/css-pseudo-4/) で再導入されています。
+> **メモ:** `::selection` は CSS Selectors Level 3 の草稿にはありましたが、 (特に要素がネストされた場合の) 動作の仕様化が途中であることや相互運用性が確保されなかったこと [(W3C Style mailing list での議論に基づく)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html)から、勧告の過程で削除されました。これは [Pseudo-Elements Level 4](https://dev.w3.org/csswg/css-pseudo-4/) で再導入されています。
 
 ## ブラウザーの互換性
 

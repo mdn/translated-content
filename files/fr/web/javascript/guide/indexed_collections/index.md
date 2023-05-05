@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Indexed_collections
 original_slug: Web/JavaScript/Guide/Collections_indexées
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 Ce chapitre présente les collections de données qui sont ordonnées par un indice. Cela inclue les tableaux et les objets semblables à des tableaux que sont les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) et les objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
@@ -443,7 +444,6 @@ Lorsqu'un tableau est le résultat d'une correspondance entre une expression rat
 Certains objets JavaScript tels que [`NodeList`](/fr/docs/Web/API/NodeList) (renvoyé par [`document.getElementsByTagName()`](/fr/docs/Web/API/Document/getElementsByTagName)) ou l'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) (disponible au sein d'une fonction) ressemblent à des tableaux mais n'en sont pas (ils n'ont pas toutes les méthodes décrites ci-avant par exemple). Ainsi, l'objet `arguments` fournit une propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length) mais n'implémente pas la méthode [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
 
 Les méthodes du prototype des tableaux permettent d'utiliser les méthodes d'objets `Array` sur des objets semblables à des tableaux. Attention, elles ne sont pas appelables directement depuis ces objets&nbsp;:
-
 
 ```js example-bad
 function printArguments() {

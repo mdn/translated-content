@@ -1,13 +1,8 @@
 ---
 title: 値の定義構文
 slug: Web/CSS/Value_definition_syntax
-tags:
-  - CSS
-  - ガイド
-  - リファレンス
-  - Syntax
-translation_of: Web/CSS/Value_definition_syntax
 ---
+
 {{CSSRef}}
 
 **CSS の値の定義構文**は、形式文法であり、 CSS プロパティや関数の有効な値の組み合わせ定義するのに使われます。この構文に加えて、有効な値の組み合わせは意味的な制約で有効値の集まりをさらに制限できます (例えば、数値を正の値に限定します)。
@@ -108,7 +103,7 @@ bold && <length>
 - `bold`。どちらの成分も出現しなければなりません。
 - `bold 1em bold`。どちらの成分も 1 度だけ出現しなければなりません。
 
-> **Note:** 並列は二重アンパサンドより優先されます。例えば `bold thin && <length>` は `[ bold thin ] && <length>` と同じ意味です。これは `bold thin <length>` や `<length> bold thin` を含みますが、`bold <length> thin` は含みません。
+> **メモ:** 並列は二重アンパサンドより優先されます。例えば `bold thin && <length>` は `[ bold thin ] && <length>` と同じ意味です。これは `bold thin <length>` や `<length> bold thin` を含みますが、`bold <length> thin` は含みません。
 
 ### 二重バー
 
@@ -129,7 +124,7 @@ bold && <length>
 - `blue yellow`。各成分は最大で 1 回だけ出現できます。
 - `bold`。どの対象の値もこのキーワードを使えません。
 
-> **Note:** 二重アンパサンドは二重バーより優先されます。例えば `bold || thin && <length>` は `bold || [ thin && <length> ]` と同じ意味です。 `bold`, `thin <length>`, `bold thin <length>`, `thin <length> bold` を含みますが、`<length> bold thin` は 含みません。 bold を省略しないのなら、`thin && <length>` 成分全体よりも前か後ろに置く必要があるからです。
+> **メモ:** 二重アンパサンドは二重バーより優先されます。例えば `bold || thin && <length>` は `bold || [ thin && <length> ]` と同じ意味です。 `bold`, `thin <length>`, `bold thin <length>`, `thin <length> bold` を含みますが、`<length> bold thin` は 含みません。 bold を省略しないのなら、`thin && <length>` 成分全体よりも前か後ろに置く必要があるからです。
 
 ### 単一バー
 
@@ -155,7 +150,7 @@ bold && <length>
 - `center 3%`。各成分は 1 つだけ存在しなければなりません。
 - `3em 4.5em`。成分は最大で 1 回だけ存在できます。
 
-> **Note:** 二重バーは単一バーより優先されます。例えば `bold | thin || <length>` は `bold | [ thin || <length> ]` と同じ意味です。`bold`, `thin`, `<length>`, `<length> thin`, や `thin <length>` を含みますが、`bold <length>` は含みません。`|` 結合子の両側それぞれから 1 つだけ対象が存在できるからです。
+> **メモ:** 二重バーは単一バーより優先されます。例えば `bold | thin || <length>` は `bold | [ thin || <length> ]` と同じ意味です。`bold`, `thin`, `<length>`, `<length> thin`, や `thin <length>` を含みますが、`bold <length>` は含みません。`|` 結合子の両側それぞれから 1 つだけ対象が存在できるからです。
 
 ## 成分値の乗算子
 
@@ -380,12 +375,25 @@ bold smaller#
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                     | 備考                         |
-| -------------------------------------------------------------------------------- | ------------------------ | ---------------------------- |
-| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}            | {{Spec2("CSS3 Values")}} | ハッシュ記号乗算子を追加     |
-| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}       | {{Spec2("CSS2.1")}}      | 二重アンパサンド結合子を追加 |
-| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}        | 初回定義                     |
+{{Specifications}}
 
 ## 関連情報
 
-- {{CSS_key_concepts}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)

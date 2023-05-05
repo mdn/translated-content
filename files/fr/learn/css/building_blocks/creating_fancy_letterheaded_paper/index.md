@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 original_slug: Apprendre/CSS/styliser_boites/Creating_fancy_letterheaded_paper
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Apprendre/CSS/styliser_boites")}}
 
 Si vous voulez faire bonne impression, écrire une lettre sur un beau papier à en-tête peut vraiment être un bon début. Dans cet execice, le défi à relever consiste à créer un modèle en ligne pour obtenir ce bel aspect.
@@ -44,10 +45,10 @@ Si vous voulez faire bonne impression, écrire une lettre sur un beau papier à 
 
 Pour débuter cet exercice, vous devez&nbsp;:
 
-- faire une copie locale du [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) et de la [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) — enregistrez‑les sous les noms  `index.html` et `style.css` dans un nouveau répertoire.
-- enregistrer des copies locales des images d'[en‑tête](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [pied de page](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) et  [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) dans le même répertoire que les fichiers de code.
+- faire une copie locale du [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) et de la [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) — enregistrez‑les sous les noms `index.html` et `style.css` dans un nouveau répertoire.
+- enregistrer des copies locales des images d'[en‑tête](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [pied de page](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) et [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) dans le même répertoire que les fichiers de code.
 
-> **Note :** Autrement, vous pouvez utiliser un site comme  [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
+> **Note :** Autrement, vous pouvez utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
 
 ## Résumé du projet
 
@@ -83,22 +84,8 @@ Voici une capture d'écran affichant un exemple de ce à quoi le dessin final re
 
 ![](letterhead.png)
 
-
-
 ## Évaluation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
+Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
 
 {{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
-
-
-
-## Dans ce module
-
-- [Le modèle de boîte&nbsp;: récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
-- [Arrière-plans](/fr/Apprendre/CSS/styliser_boites/Backgrounds)
-- [Encadrements](/fr/docs/Apprendre/CSS/styliser_boites/Borders)
-- [Mise en page des tableaux](/fr/Apprendre/CSS/styliser_boites/Styling_tables)
-- [Effets de boîte avancés](/fr/Apprendre/CSS/styliser_boites/Advanced_box_effects)
-- [Création d'un en-tête de papier à lettre élégant](/fr/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [Une boîte d'aspect rafraîchissant](/fr/Apprendre/CSS/styliser_boites/A_cool_looking_box)

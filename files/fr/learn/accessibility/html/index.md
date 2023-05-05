@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Accessibility/HTML
 original_slug: Apprendre/a11y/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 Une grande partie des contenus web peut être rendue accessible simplement en s'assurant d'utiliser les éléments HTML appropriés systématiquement. Cet article détaille comment HTML peut être utilisé pour un maximum d'accessibilité.
@@ -66,9 +67,9 @@ Non seulement `<button>` possède des styles adéquats par défaut (que vous vou
 
 Le HTML sémantique ne demande pas plus de temps à écrire que du (mauvais) balisage non-sémantique si vous le faites de manière constante dès le début de votre projet, et il a également des bénéfices au delà de l'accessibilité :
 
-1.  **Facilite les développements** — comme mentionné ci-dessus, certaines fonctionnalités sont gratuites, et c'est indiscutablement plus compréhensible.
-2.  **Meilleur pour le mobile** — le HTML sémantique est indiscutablement plus léger en la taille du fichier que le code spaghetti non sémantique, et plus aisé à rendre responsive.
-3.  **Bon pour le SEO** — les moteurs de recherche donnent plus d'importance aux mots clés contenus dans les titres, liens, etc. que des mots-clés contenus dans des `<div>` non sémantiques, et donc vos documents seront plus facilement trouvés par vos clients.
+1. **Facilite les développements** — comme mentionné ci-dessus, certaines fonctionnalités sont gratuites, et c'est indiscutablement plus compréhensible.
+2. **Meilleur pour le mobile** — le HTML sémantique est indiscutablement plus léger en la taille du fichier que le code spaghetti non sémantique, et plus aisé à rendre responsive.
+3. **Bon pour le SEO** — les moteurs de recherche donnent plus d'importance aux mots clés contenus dans les titres, liens, etc. que des mots-clés contenus dans des `<div>` non sémantiques, et donc vos documents seront plus facilement trouvés par vos clients.
 
 Continuons et jetons un œil au HTML accessible dans le détail.
 
@@ -112,10 +113,10 @@ L'une des meilleures aides en accessibilité qu'un utilisateur de lecteur d'écr
 
 Nous avons préparé pour vous une version avec un texte plus long afin de l'essayer avec lecteur d'écran (voir [la bonne sémantique](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si vous essayez de naviguer dans ce document, vous verrez qu'il est assez simple de s'y retrouver :
 
-1.  Le lecteur d'écran lit à voix haute chaque élément au fur et à mesure que vous progressez dans le contenu, vous notifiant ce qui est un paragraphe, ce qui est un titre, etc.
-2.  Il s'arrête après chaque élément, vous laissant aller à n'importe quel endroit vous convenant.
-3.  Vous pouvez sauter au précédent ou au prochain titre avec de nombreux lecteurs d'écran.
-4.  Vous pouvez aussi dresser une liste de tous les titres avec de nombreux lecteurs d'écrans, vous permettant de les utiliser comme une table des matières pratique pour trouver un contenu spécifique.
+1. Le lecteur d'écran lit à voix haute chaque élément au fur et à mesure que vous progressez dans le contenu, vous notifiant ce qui est un paragraphe, ce qui est un titre, etc.
+2. Il s'arrête après chaque élément, vous laissant aller à n'importe quel endroit vous convenant.
+3. Vous pouvez sauter au précédent ou au prochain titre avec de nombreux lecteurs d'écran.
+4. Vous pouvez aussi dresser une liste de tous les titres avec de nombreux lecteurs d'écrans, vous permettant de les utiliser comme une table des matières pratique pour trouver un contenu spécifique.
 
 Les gens écrivent parfois des titres, des paragraphes, etc. utilisant le HTML de présentation et retours à la ligne, quelque chose comme ce qui suit :
 
@@ -230,7 +231,7 @@ Si vous essayez de naviguer à l'aide d'un lecteur d'écran, cela vous indiquera
 
 Les structures de table sont un vestige du passé – elles semblaient logiques lorsque le support CSS n’était pas répandu dans les navigateurs, mais elles semaient la confusion chez les utilisateurs de lecteurs d’écran, tout en étant mauvaises pour de nombreuses autres raisons (utilisation abusive des tableaux, nécessite plus de balisage, design manquant de souplesse). Ne les utilisez pas !
 
-Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un  [exemple plus moderne de structure de site Web](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), qui pourrait ressembler à ceci :
+Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un [exemple plus moderne de structure de site Web](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), qui pourrait ressembler à ceci :
 
 ```html
 <header>
@@ -280,7 +281,7 @@ L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisa
 
 ![](button-focused-unfocused.png)
 
-Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents, par exemple, l'élément  {{htmlelement("select")}} peut avoir ses options affichées et alterner entre les touches fléchées haut et bas).
+Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents, par exemple, l'élément {{htmlelement("select")}} peut avoir ses options affichées et alterner entre les touches fléchées haut et bas).
 
 > **Note :** Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles. Voir comment [gérer les problèmes courants d'accessibilité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Using_native_keyboard_accessibility) pour plus de détails.
 
@@ -334,7 +335,7 @@ Cependant, il est encore une fois que les gens font parfois des choses étranges
 <div data-message="This is from the third button"> Et moi!</div>
 ```
 
-Il est toutefois déconseillé d’utiliser un tel code. Vous perdriez immédiatement l’accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments  {{htmlelement("button")}}. De plus, vous n’obtenez aucun des styles CSS par défaut que les boutons ont.
+Il est toutefois déconseillé d’utiliser un tel code. Vous perdriez immédiatement l’accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments {{htmlelement("button")}}. De plus, vous n’obtenez aucun des styles CSS par défaut que les boutons ont.
 
 #### Remettre l'accessibilité au clavier
 
@@ -447,10 +448,10 @@ Mais cela pose des problèmes : un utilisateur de lecteur d’écran ne peut pas
 
 Regardez maintenant notre tableau d'exemple sur les groupes punk – vous pouvez voir quelques aides à l'accessibilité au travail ici :
 
-- Les en-têtes de tableau sont définis à l'aide d'éléments {{htmlelement("th")}} —  vous pouvez également spécifier s'il s'agit d'en-têtes de lignes ou de colonnes à l'aide de l'attribut `scope`. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran en tant qu'unités simples
+- Les en-têtes de tableau sont définis à l'aide d'éléments {{htmlelement("th")}} — vous pouvez également spécifier s'il s'agit d'en-têtes de lignes ou de colonnes à l'aide de l'attribut `scope`. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran en tant qu'unités simples
 - L'élément {{htmlelement("caption")}} et l'attribut summary `<table>` effectuent tous deux des travaux similaires. Ils agissent en tant que texte alternatif pour une table, offrant ainsi à un utilisateur de lecteur d'écran un résumé rapide et utile du contenu de la table. `<caption>` est généralement préféré car il rend son contenu accessible aux utilisateurs malvoyants, qui pourraient également le trouver utile. Vous n'avez pas vraiment besoin des deux.
 
-> **Note :** voir notre article  [Tableaux HTML&nbsp;: dispositions avancées et accessibilité](/fr/docs/Apprendre/HTML/Tableaux/Advanced) pour plus de détails sur les tables de données accessibles.
+> **Note :** voir notre article [Tableaux HTML&nbsp;: dispositions avancées et accessibilité](/fr/docs/Apprendre/HTML/Tableaux/Advanced) pour plus de détails sur les tables de données accessibles.
 
 ## Alternatives textuelles
 
@@ -458,19 +459,20 @@ Alors que le contenu textuel est intrinsèquement accessible, il n'en est pas de
 
 Nous avons un exemple simple écrit, [accessible-image.html](http://mdn.github.io/learning-area/accessibility/html/accessible-image.html), comporte quatre copies de la même image :
 
-    <img src="dinosaur.png">
+```html
+<img src="dinosaur.png">
 
-    <img src="dinosaur.png"
-         alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées.">
+<img src="dinosaur.png"
+      alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées.">
 
-    <img src="dinosaur.png"
-         alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."
-         title="Le dinosaure rouge de Mozilla ">
+<img src="dinosaur.png"
+      alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."
+      title="Le dinosaure rouge de Mozilla ">
 
+<img src="dinosaur.png" aria-labelledby="dino-label">
 
-    <img src="dinosaur.png" aria-labelledby="dino-label">
-
-    <p id="dino-label"> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées.</p>
+<p id="dino-label"> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées.</p>
+```
 
 La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image&nbsp;». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.
 
@@ -510,7 +512,7 @@ Les images ont également d'autres mécanismes disponibles pour fournir un texte
 
 Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n’est pas toujours pris en charge par les lecteurs d’écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d’écran. Il est sans doute préférable d’inclure la description longue sur la même page que l’image, ou d’y accéder par un lien régulier.
 
-HTML5 comprend deux nouveaux éléments  — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} — qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :
+HTML5 comprend deux nouveaux éléments — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} — qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :
 
 ```html
 <figure>

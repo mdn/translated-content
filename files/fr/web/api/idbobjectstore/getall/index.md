@@ -2,56 +2,71 @@
 title: IDBObjectStore.getAll()
 slug: Web/API/IDBObjectStore/getAll
 translation_of: Web/API/IDBObjectStore/getAll
+browser-compat: api.IDBObjectStore.getAll
 ---
-{{ APIRef("IndexedDB") }}
 
-La méthode **`getAll()`** de l'interface {{domxref("IDBObjectStore")}} fait une {{domxref("IDBRequest","requête")}} qui renvoie un tableau ordonné suivant les clés, des valeurs de tous les enregistrements du magasin d'objet {{domxref("IDBObjectStore","relié")}}. On peut limité le nombre d'enregistrements en les filtrants suivant leurs clés ou en paramétrant le compteur.
+{{APIRef("IndexedDB")}}
 
-{{ Note("Cette méthode renverras un tableau vide si aucun enregistrement ne correspond. Si la valeur est undefined elle prendra une case du tableau.") }}
+La méthode **`getAll()`**, rattachée à l'interface [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore), renvoie un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) contenant tous les objets du magasin d'objets qui correspondent au paramètre indiqué, ou tous les objets du magasin si aucun paramètre n'a été fourni.
+
+Si une valeur a été trouvée, un clone structuré est créé et fourni comme résultat sur l'objet de la requête.
+
+Cette méthode produit les mêmes résultats pour&nbsp;:
+
+- Un enregistrement qui n'existe pas en base de données
+- Un enregistrement qui a une valeur indéfinie
+
+Pour distinguer ces situations, on pourra appeler une de ces deux méthodes&nbsp;:
+
+1. [`openCursor()`](/fr/docs/Web/API/IDBObjectStore/openCursor) en utilisant la même clé. Cette méthode fournira un curseur si l'enregistrement existe et pas de curseur sinon.
+2. [`count()`](/fr/docs/Web/API/IDBObjectStore/count) en utilisant la même clé, qui renverra 1 si la ligne existe et 0 sinon.
 
 ## Syntaxe
 
-    var request = objectStore.getAll(query, count);
+```js
+getAll()
+getAll(query)
+getAll(query, count)
+```
 
-## Paramètres
+### Paramètres
 
-- query {{optional_inline}}
-  - : Une clé ou l'{{domxref("IDBKeyRange","intervalle de clé")}} **pour filtrer**, seule les valeurs des enregistrements correspondant sont renvoyées. Par défaut toutes les valeurs des enregistrements du magasin d'objet sont renvoyées.
-- count {{optional_inline}}
-  - : Le nombre de valeurs d'enregistrement **maximum renvoyées**. Un nombre décimal sera tronqué. Zéro annule le compteur et toutes les valeurs sont retournées.
+- `query` {{optional_inline}}
+  - : Une clé ou un intervalle de clés ([`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)) pour la requête. Si aucune valeur n'est passée, la valeur par défaut sera un intervalle de clé qui sélectionne tous les enregistrements du magasin d'objets.
+- `count` {{optional_inline}}
+  - : Indique le nombre de valeurs à renvoyer si plusieurs valeurs sont trouvées. Si cet argument est négatif ou supérieur à `2^32 - 1`, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 
-## Renvoie
+### Valeur de retour
 
-- Une {{domxref("IDBRequest","requête")}}
-  - : La propriété {{domxref("IDBRequest.result","result")}} de cette requête renvoie le tableau des valeurs des enregistrements en cas de succès.
+Un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) sur lequel les évènements suivants cette opération seront déclenchés.
 
-## Exceptions
+### Exceptions
+
+Cette méthode peut déclencher une exception [`DOMException`](/fr/docs/Web/API/DOMException) avec l'un des types suivants&nbsp;:
 
 - `TransactionInactiveError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si la {{domxref("IDBTransaction","transaction")}} est inactive.
+  - : Levée si la transaction sur l'objet [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore) est inactive
 - `DataError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si la clé où l'{{domxref("IDBKeyRange","intervalle de clé")}} est invalide.
+  - : Levée si la clé ou l'intervalle de clés fourni contient une clé invalide ou est nul.
 - `InvalidStateError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si le magasin d'objets a été supprimé.
-- `TypeError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si le compteur n'est pas un nombre positif.
+  - : Levée si le magasin d'objets [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore) a été supprimé ou retiré.
+- [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+  - : Levée si le paramètre `count` n'est pas compris entre `0` et `2^32 - 1` au sens large.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB2', '#dom-idbobjectstore-getall', 'getAll()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.getAll")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utiliser les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseurs")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [Utiliser l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Initier des transactions&nbsp;: [`IDBDatabase`](/fr/docs/Web/API/IDBDatabase)
+- Utiliser des transactions&nbsp;: [`IDBTransaction`](/fr/docs/Web/API/IDBTransaction)
+- Définir un intervalle de clés&nbsp;: [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)
+- Récupérer et modifier les données&nbsp;: [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore)
+- Utiliser les curseurs&nbsp;: [`IDBCursor`](/fr/docs/Web/API/IDBCursor)
+- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/))

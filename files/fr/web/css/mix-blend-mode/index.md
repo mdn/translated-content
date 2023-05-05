@@ -3,6 +3,7 @@ title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 translation_of: Web/CSS/mix-blend-mode
 ---
+
 {{CSSRef}}
 
 La propriété **`mix-blend-mode`** définit la façon dont le contenu d'un élément doit se mélanger avec le contenu de l'élément parent et avec son arrière-plan.
@@ -41,9 +42,13 @@ mix-blend-mode: unset;
 - `<blend-mode>`
   - : Indique comment la fusion des modes doit intervenir (cf. {{cssxref("&lt;blend-mode&gt;")}}).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -631,15 +636,11 @@ circle {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode')}} | {{Spec2('Compositing')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}
 
 ## Voir aussi
 

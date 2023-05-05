@@ -1,10 +1,9 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 original_slug: Web/JavaScript/Referencia/Objetos_Globales/Date
-browser-compat: javascript.builtins.Date
 ---
+
 {{JSRef}}
 
 Los objetos **`Date`** representan en JavaScript un momento fijo en el tiempo en un formato independiente. El objeto `Date` contiene un `Number` que representa los milisegundos transcurridos desde el 1 de Enero de 1970 UTC.
@@ -15,7 +14,7 @@ Los objetos **`Date`** representan en JavaScript un momento fijo en el tiempo en
 
 ### La época ECMAScript y la marca temporal
 
-Una fecha en JavaScript es fundamentalmente especificada como el número de milisegundos que han pasado desde la [Época ECMAScript](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range) la cuál está definida como el 1 de Enero de 1970, UTC. Esta fecha y hora no son los mismos que en la **Época Unix** (el número de segundos que han pasado desde la media noche del 1 de Enero de 1970, UTC), el cual es el valor predominante base para representar los valores de fecha y hora en los ordenadores. 
+Una fecha en JavaScript es fundamentalmente especificada como el número de milisegundos que han pasado desde la [Época ECMAScript](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range) la cuál está definida como el 1 de Enero de 1970, UTC. Esta fecha y hora no son los mismos que en la **Época Unix** (el número de segundos que han pasado desde la media noche del 1 de Enero de 1970, UTC), el cual es el valor predominante base para representar los valores de fecha y hora en los ordenadores.
 
 > **Nota:** Es importante tener en cuenta que mientras el valor de la hora en el núcleo del objeto `Date` está en UTC, los métodos básicos para recibir la fecha y la hora o sus derivados trabajan todos en la zona horaria local (por ejemplo: máquina huesped).
 
@@ -159,7 +158,7 @@ let birthday = new Date(1995, 11, 17, 3, 24, 0)
 let birthday = new Date(628021800000)            // pasando la marca temporal de la época
 ```
 
-###  Obtener fecha, mes y año u hora
+### Obtener fecha, mes y año u hora
 
 ```js
 const date = new Date();
@@ -251,4 +250,3 @@ En este caso, es más importante retornar únicamente un entero que una simple d
 ## Véase también
 
 - {{jsxref("Date/Date", "Date()")}} constructor
-

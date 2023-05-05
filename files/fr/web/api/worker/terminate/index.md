@@ -3,6 +3,7 @@ title: Worker.terminate()
 slug: Web/API/Worker/terminate
 translation_of: Web/API/Worker/terminate
 ---
+
 {{ apiref("Worker") }}
 
 La méthode **`terminate()`** de l'interface {{domxref("Worker")}} termine immédiatement le {{domxref("Worker")}}. Cette interruption ne permet pas au worker de finaliser ses opérations, il est juste arrêté sur le champ.
@@ -31,16 +32,18 @@ var myWorker = new Worker("worker.js");
 myWorker.terminate();
 ```
 
+> **Note :** Les <i lang="en">workers</i> dédiés ou partagés peuvent également être stoppés par l'instance même du [<i lang="en">worker</i>](/fr/docs/Web/API/Worker) en utilisant les méthodes [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close) ou [`SharedWorkerGlobalScope.close()`](/fr/docs/Web/API/SharedWorkerGlobalScope/close).
+
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.terminate()")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Worker.terminate")}}
+{{Compat}}
 
 ## Voir aussi
 
-L'interface {{domxref("Worker")}} à laquelle elle appartient.
+- L'interface [`Worker`](/fr/docs/Web/API/Worker)
+- [`DedicatedWorkerGlobalScope.close()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/close)
+- [`SharedWorkerGlobalScope.close()`](/fr/docs/Web/API/SharedWorkerGlobalScope/close)

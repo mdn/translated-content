@@ -4,6 +4,7 @@ slug: Web/CSS/@counter-style
 translation_of: Web/CSS/@counter-style
 browser-compat: css.at-rules.counter-style
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@counter-style`** permet aux auteurs de définir des styles de compteurs qui ne font pas partie de l'ensemble des styles natifs prédéfinis. Une règle `@counter-style` explique comment convertir la valeur d'un compteur en une chaîne de caractères correspondantes.
@@ -62,7 +63,6 @@ Chaque `@counter-style` est identifié par un nom et possède un ensemble de des
       suffix: " ";
     }
     ```
-
 
 - [`additive-symbols`](/fr/docs/Web/CSS/@counter-style/additive-symbols)
   - : Certains symboles définis via le descripteur `symbols` sont utilisés par la plupart des algorithmes. Certains systèmes dits «&nbsp;additifs&nbsp;» s'appuient sur des _tuples additifs_ décrit avec ce descripteur. Chaque tuple additif se compose d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids.

@@ -1,25 +1,19 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-tags:
-  - Class
-  - JavaScript
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
+
 {{JSRef}}
 
-**`SharedArrayBuffer`** 对象用来表示一个通用的、固定长度的原始二进制数据缓冲区，类似于 {{jsxref("ArrayBuffer")}} 对象，它们都可以用来在共享内存（shared memory）上创建视图。与 `ArrayBuffer` 不同的是，**`SharedArrayBuffer`** 不能被{{Glossary("Transferable Objects", "转移")}}。
+**`SharedArrayBuffer`** 对象用来表示一个通用的、固定长度的原始二进制数据缓冲区，类似于 {{jsxref("ArrayBuffer")}} 对象，它们都可以用来在共享内存（shared memory）上创建视图。与 `ArrayBuffer` 不同的是，**`SharedArrayBuffer`** 不能被[转移](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
 
 ## 描述
 
 ### 分配及共享内存
 
-为了将一个 {{jsxref("SharedArrayBuffer")}} 对象从一个用户代理共享到另一个用户代理（另一个页面的主进程或者当前页面的一个 `worker`）从而实现共享内存，我们需要运用  [`postMessage`](/zh-CN/docs/Web/API/Worker/postMessage) 和[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
+为了将一个 {{jsxref("SharedArrayBuffer")}} 对象从一个用户代理共享到另一个用户代理（另一个页面的主进程或者当前页面的一个 `worker`）从而实现共享内存，我们需要运用 [`postMessage`](/zh-CN/docs/Web/API/Worker/postMessage) 和[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
 
-结构化克隆算法接收 `SharedArrayBuffers` 对象，或被映射到一个新的 `SharedArrayBuffers` 对象上的 `TypedArrays` 对象。在这两种情况下，这个新的 `SharedArrayBuffer` 对象会被传递到目标用户代理的接收函数上，从而在目标用户代理产生一个新的私有 `SharedArrayBuffer` 对象（正如 {{jsxref("ArrayBuffer")}} 一样）。但是，这两个 `SharedArrayBuffer` 对象指向的共享数据块其实是同一个，所以某一代理对数据块的修改在另一个代理中可见。
+结构化克隆算法接收 `SharedArrayBuffers` 对象，或被映射到一个新的 `SharedArrayBuffers` 对象上的 `TypedArrays` 对象。在这两种情况下，这个新的 `SharedArrayBuffer` 对象会被传递到目标用户代理的接收函数上，从而在目标用户代理产生一个新的私有 `SharedArrayBuffer` 对象（正如 {{jsxref("ArrayBuffer")}} 一样）。但是，这两个 `SharedArrayBuffer` 对象指向的共享数据块其实是同一个，所以某一代理对数据块的修改在另一个代理中可见。
 
 ```js
 var sab = new SharedArrayBuffer(1024);
@@ -30,7 +24,7 @@ worker.postMessage(sab);
 
 共享内存能被同时创建和更新于 `worker` 线程或主线程。依赖于系统（CPU、操作系统、浏览器），变化传递给所有上下文环境需要一段时间。因此需要通过{{jsxref("Atomics", "原子", "", 1)}}操作来进行同步。
 
-### 接受 SharedArrayBuffer 对象的API
+### 接受 SharedArrayBuffer 对象的 API
 
 - {{domxref("WebGLRenderingContext.bufferData()")}}
 - {{domxref("WebGLRenderingContext.bufferSubData()")}}
@@ -38,7 +32,7 @@ worker.postMessage(sab);
 
 ### 安全需求
 
-为应对[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)，所有主流浏览器均默认[于2018年1月5日禁用SharedArrayBuffer](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。在 2020 年，一种新的、安全的方法已经标准化，以重新启用 `SharedArrayBuffer`。通过一些安全措施，[`postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 将不再抛出有关 `SharedArrayBuffer` 对象的异常，跨线程共享内存也变得可用：
+为应对[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)，所有主流浏览器均默认[于 2018 年 1 月 5 日禁用 SharedArrayBuffer](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。在 2020 年，一种新的、安全的方法已经标准化，以重新启用 `SharedArrayBuffer`。通过一些安全措施，[`postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 将不再抛出有关 `SharedArrayBuffer` 对象的异常，跨线程共享内存也变得可用：
 
 作为基准需求，你的文档需处于[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中。
 
@@ -64,9 +58,9 @@ if (crossOriginIsolated) {
 
 参阅 [Planned changes to shared memory](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes)，以了解共享内存在浏览器中的变更计划（例如，Firefox 79）。
 
-### 始终使用 new 运算符来构造 SharedArrayBuffer
+### 始终使用 new 运算符来构造 SharedArrayBuffer
 
-`SharedArrayBuffer` 必须使用 {{jsxref("Operators/new", "new")}} 运算符来构造。作为函数来调用 `SharedArrayBuffer()` 构造函数（如果不用 `new` 运算符），将会抛出 {{jsxref("TypeError")}} 异常。
+`SharedArrayBuffer` 必须使用 {{jsxref("Operators/new", "new")}} 运算符来构造。作为函数来调用 `SharedArrayBuffer()` 构造函数（如果不用 `new` 运算符），将会抛出 {{jsxref("TypeError")}} 异常。
 
 ```js example-bad
 var sab = SharedArrayBuffer(1024);

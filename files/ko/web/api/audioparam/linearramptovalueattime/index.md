@@ -1,16 +1,8 @@
 ---
 title: AudioParam.linearRampToValueAtTime()
 slug: Web/API/AudioParam/linearRampToValueAtTime
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - linearRampToValueAtTime
-browser-compat: api.AudioParam.linearRampToValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioParam") }} 인터페이스의 `linearRampToValueAtTime()` 메서드는 `AudioParam` 의 값에 점진적인 선형 변화를 예정합니다. 변화는 _previous_ 이벤트에 명시된 시간에 시작해, 선형적인 ramp를 따라 `value` 매개변수에 주어진 새로운 값으로 향하고, `endTime` 매개변수에 주어진 시간에 새로운 값에 도달합니다.
@@ -30,7 +22,7 @@ var AudioParam = AudioParam.linearRampToValueAtTime(value, endTime)
 
 ### 반환
 
-이 `AudioParam` 객체에 대한 참조. 몇몇 브라우저에서 이 인터페이스의 오래된 구현은 void를 반환합니다.
+이 `AudioParam` 객체에 대한 참조. 몇몇 브라우저에서 이 인터페이스의 오래된 구현은 void를 반환합니다.
 
 ## 예제
 

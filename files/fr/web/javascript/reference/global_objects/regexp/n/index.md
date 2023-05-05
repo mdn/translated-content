@@ -10,21 +10,24 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/n
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 Les propriétés non-standard **$1, $2, $3, $4, $5, $6, $7, $8, $9** sont des propriétés statiques accessibles en lecture qui contiennent les différents groupes capturés par une expression rationnelle.
 
 ## Syntaxe
 
-    RegExp.$1
-    RegExp.$2
-    RegExp.$3
-    RegExp.$4
-    RegExp.$5
-    RegExp.$6
-    RegExp.$7
-    RegExp.$8
-    RegExp.$9
+```js
+RegExp.$1
+RegExp.$2
+RegExp.$3
+RegExp.$4
+RegExp.$5
+RegExp.$6
+RegExp.$7
+RegExp.$8
+RegExp.$9
+```
 
 ## Description
 
@@ -54,7 +57,7 @@ Ces propriétés ne sont pas standard, elles ne font partie d'aucune spécificat
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.n")}}
+{{Compat}}
 
 ## Voir aussi
 

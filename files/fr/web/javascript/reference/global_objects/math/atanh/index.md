@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atanh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/atanh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.atanh()`** renvoie l'arc tangente hyperbolique d'un nombre :
@@ -20,7 +21,9 @@ La fonction **`Math.atanh()`** renvoie l'arc tangente hyperbolique d'un nombre :
 
 ## Syntaxe
 
-    Math.atanh(x)
+```js
+Math.atanh(x)
+```
 
 ### Paramètres
 
@@ -62,14 +65,11 @@ Math.atanh = Math.atanh || function(x) {
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-math.atanh', 'Math.atanh')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.atanh', 'Math.atanh')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.atanh")}}
+{{Compat}}
 
 ## Voir aussi
 

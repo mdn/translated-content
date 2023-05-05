@@ -1,17 +1,8 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
-tags:
-  - CSS
-  - CSS 断片化
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.break-inside
-translation_of: Web/CSS/break-inside
 ---
+
 {{CSSRef}}
 
 **`break-inside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの途中で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
@@ -35,8 +26,8 @@ break-inside: unset;
 
 区切られるかどうかを判断するために、以下の規則が適用されます。
 
-1.  考慮される三つの値の中の何れかに*区切りを強制する値* (`always`, `left`, `right`, `page`, `column`, `region` の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `break-before` の値は `break-after` の値より優先し、それは更に `break-inside` よりも優先します)。
-2.  考慮される三つの値の中に*区切りを防止する値* (`avoid`, `avoid-page`, `avoid-region`, `avoid-column` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
+1. 考慮される三つの値の中の何れかに*区切りを強制する値* (`always`, `left`, `right`, `page`, `column`, `region` の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `break-before` の値は `break-after` の値より優先し、それは更に `break-inside` よりも優先します)。
+2. 考慮される三つの値の中に*区切りを防止する値* (`avoid`, `avoid-page`, `avoid-region`, `avoid-column` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
 
 強制的な区切りが適用されると、必要に応じてソフトな区切りが追加される場合がありますが、 `avoid` に関する値に解決される要素の境界には追加されません。
 

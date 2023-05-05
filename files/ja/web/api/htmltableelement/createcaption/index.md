@@ -1,22 +1,14 @@
 ---
 title: HTMLTableElement.createCaption()
 slug: Web/API/HTMLTableElement/createCaption
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.createCaption
-translation_of: Web/API/HTMLTableElement/createCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.createCaption()`** メソッドは、この {{HtmlElement("table")}} に関連付けられた {{HtmlElement("caption")}} 要素を返します。
 この表に `<caption>` 要素がない場合が、このメソッドは生成して返します。
 
-> **Note:** キャプションが存在しない場合、 `createCaption()` は新しいキャプションを表に直接挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<caption>` 要素を生成する場合とは異なり、キャプションを個別に追加する必要はありません。
+> **メモ:** キャプションが存在しない場合、 `createCaption()` は新しいキャプションを表に直接挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<caption>` 要素を生成する場合とは異なり、キャプションを個別に追加する必要はありません。
 
 ## 構文
 

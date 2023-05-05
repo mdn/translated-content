@@ -4,6 +4,7 @@ slug: Web/CSS/break-before
 translation_of: Web/CSS/break-before
 browser-compat: css.properties.break-before
 ---
+
 {{CSSRef}}
 
 La propriété **`break-before`** décrit la façon dont la page, la colonne ou la région se fragmente avant la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.
@@ -42,8 +43,8 @@ Chaque point de rupture éventuel (c'est-à-dire chaque frontière d'élément) 
 
 Pour déterminer si on a une rupture, on applique les règles suivantes&nbsp;:
 
-1.  Si l'une des trois valeurs correspond à une rupture forcée (`always`, `left`, `right`, `page`, `column` ou `region`), cette valeur l'emporte. Si plusieurs valeurs décrivent une rupture forcée, c'est celle de l'élément qui apparaît le plus tard dans le flux qui est prise en compte (autrement dit, `break-before` l'emporte sur `break-after`, qui l'emporte sur `break-inside`).
-2.  Si l'une des trois valeurs correspond à une valeur visant à éviter une rupture (`avoid`, `avoid-page`, `avoid-region` ou `avoid-column`), aucune rupture ne sera appliquée à cet endroit.
+1. Si l'une des trois valeurs correspond à une rupture forcée (`always`, `left`, `right`, `page`, `column` ou `region`), cette valeur l'emporte. Si plusieurs valeurs décrivent une rupture forcée, c'est celle de l'élément qui apparaît le plus tard dans le flux qui est prise en compte (autrement dit, `break-before` l'emporte sur `break-after`, qui l'emporte sur `break-inside`).
+2. Si l'une des trois valeurs correspond à une valeur visant à éviter une rupture (`avoid`, `avoid-page`, `avoid-region` ou `avoid-column`), aucune rupture ne sera appliquée à cet endroit.
 
 Une fois que les ruptures forcées ont été appliquées, le moteur peut ajouter des ruptures «&nbsp;douces&nbsp;» sauf aux endroits où les propriétés empêchent les ruptures.
 
@@ -130,17 +131,17 @@ Par défaut, les sous-titres et les paragraphes auraient été disposés de faç
   <h2>Sous-titre</h2>
 
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
-  
+
   <h2>Sous-titre</h2>
-  
+
   <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
-  
+
   <h2>Sous-titre</h2>
-  
+
   <p>Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis. Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat egestas tellus.
-  
+
   <h2>Sous-titre</h2>
-  
+
   <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
 </article>
 ```

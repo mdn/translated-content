@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 Le constructeur **`Intl.Locale`** est une propriété native de l'objet `Intl` représentant l'identifiant d'une locale Unicode.
@@ -18,7 +19,9 @@ Le constructeur **`Intl.Locale`** est une propriété native de l'objet `Intl` r
 
 ## Syntaxe
 
-    new Intl.Locale([tag[, options]])
+```js
+new Intl.Locale([tag[, options]])
+```
 
 ### Paramètres
 
@@ -40,13 +43,11 @@ L'objet `Intl.Locale` possède les propriétés et méthodes suivantes.
 
 ## Spécifications
 
-| Spécification                                                                                 | État                    | Commentaires |
-| --------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#locale-objects) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale")}}
+{{Compat}}
 
 ## Voir aussi
 

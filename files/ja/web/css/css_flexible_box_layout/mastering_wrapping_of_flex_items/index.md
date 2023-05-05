@@ -1,16 +1,8 @@
 ---
 title: フレックスアイテムの折り返しのマスター
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
-tags:
-  - CSS
-  - Flex
-  - ガイド
-  - collapsed items
-  - フレックスボックス
-  - grid
-  - 折り返し
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
+
 {{CSSRef}}
 
 フレックスボックスは一次元のレイアウトとして設計されており、つまりアイテムを行または列として扱います。 — しかし、同時ではありません。しかし、フレックスアイテムを新しい行に折り返し、 {{cssxref("flex-direction")}} が `row` の場合は新しい行を、 `flex-direction` が `column` の場合は新しい列を生成します。このガイドでは、これがどのように動作するのか、何のために設計されているのか、どのような場合にフレックスボックスより [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)が必要になるかを説明します。
@@ -77,7 +69,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 
 次のライブ例では、折り返されていないフレックスコンテナーを使用しています。3 番目のアイテムは他のアイテムよりもコンテンツが多いのですが、`visibility: collapse` に設定されているため、フレックスコンテナーはこのアイテムを表示するために必要な高さの*支柱*を保持しています。CSS から `visibility: collapse` を削除するか、値を `visible` に変更すると、アイテムが消えて、折り畳まれていないアイテムの間にスペースが再分配されますが、フレックスコンテナの高さは変わりません。
 
-> **Note:** Chrome や Safari では折りたたまれている部分は非表示として扱われるため、以下の 2 つの例は Firefox を使用してください。
+> **メモ:** Chrome や Safari では折りたたまれている部分は非表示として扱われるため、以下の 2 つの例は Firefox を使用してください。
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
 

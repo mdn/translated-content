@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-src
 browser-compat: http.headers.csp.Content-Security-Policy.frame-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`frame-src`** spécifie les sources valides pour les contextes de navigation imbriqués chargés avec des éléments tels que [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).

@@ -13,6 +13,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque le volet latéral devient visible suite à un changement d'utilisateur.
@@ -41,9 +42,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.onShown", 10)}}
+{{Compat}}
 
 ## Exemples
 

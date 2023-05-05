@@ -8,13 +8,16 @@ tags:
   - Reference
 translation_of: Web/API/Document/compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
 Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mode_quirks_de_Mozilla)) ou dans le respect des standards.
 
 ## Syntaxe
 
-    mode = document.compatMode
+```js
+mode = document.compatMode
+```
 
 ## Valeurs
 
@@ -35,9 +38,11 @@ Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mo
 
 ## Exemple
 
-    if (document.compatMode == "BackCompat") {
-      // en mode Quirks
-    }
+```js
+if (document.compatMode == "BackCompat") {
+  // en mode Quirks
+}
+```
 
 ## Spécifications
 

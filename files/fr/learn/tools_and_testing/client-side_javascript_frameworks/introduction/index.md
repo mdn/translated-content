@@ -3,6 +3,7 @@ title: Introduction aux frameworks côté client
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
@@ -167,7 +168,7 @@ Read more about the JavaScript used in this section:
 
 Every JavaScript framework offers a way to write user interfaces more _declaratively_. That is, they allow you to write code that describes how your UI should look, and the framework makes it happen in the DOM behind the scenes.
 
-The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance.  By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:
+The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance. By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:
 
 ```html
 <ul>
@@ -246,9 +247,9 @@ The upshot is that you should consider accessibility from the very start of _eve
 
 Each of the frameworks discussed in this module take different approaches to web application development. Each is regularly improving or changing, and each has its pros and cons. Choosing the right framework is a team- and project-dependent process, and you should do your own research to uncover what suits your needs. That said, we've identified a few questions you can ask in order to research your options more effectively:
 
-1.  What browsers does the framework support?
-2.  What domain-specific languages does the framework utilize?
-3.  Does the framework have a strong community and good docs (and other support) available?
+1. What browsers does the framework support?
+2. What domain-specific languages does the framework utilize?
+3. Does the framework have a strong community and good docs (and other support) available?
 
 The table in this section provides a glanceable summary of the current _browser support_ offered by each framework, as well as the **domain-specific languages** with which it can be used.
 
@@ -322,49 +323,3 @@ And that brings us to the end of our introduction to frameworks — we’ve not 
 Our next article goes down to a lower level, looking at the specific kinds of features frameworks tend to offer, and why they work like they do.
 
 {{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

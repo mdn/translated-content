@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/15
 original_slug: Mozilla/Firefox/Versions/15
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.
@@ -31,7 +32,7 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 
 ### DOM
 
-- Les méthodes [`KeyboardEvent.getModifierState()`](/fr/docs/DOM/KeyboardEvent#getModifierState%28%29) et [`MouseEvent.getModifierState()`](/en/DOM/MouseEvent#getModifierState%28%29) de DOM Events Level 3, qui vous permettent de demander l'état des touches de modification, comme `Ctrl` ou `Shift`, ont été implémentées ({{bug(630811)}} et {{bug(731878)}}). Mais le comportement est conforme au dernier brouillon de D3E. Donc, certains noms de touches de modification diffèrent de IE ({{bug(769190)}}).
+- Les méthodes [`KeyboardEvent.getModifierState()`](/fr/docs/Web/API/KeyboardEvent/getModifierState) et [`MouseEvent.getModifierState()`](/fr/docs/Web/API/MouseEvent/getModifierState) de DOM Events Level 3, qui vous permettent de demander l'état des touches de modification, comme `Ctrl` ou `Shift`, ont été implémentées ({{bug(630811)}} et {{bug(731878)}}). Mais le comportement est conforme au dernier brouillon de D3E. Donc, certains noms de touches de modification diffèrent de IE ({{bug(769190)}}).
 - Sur les évènements de la souris, l'attribut [`MouseEvent.buttons`](/fr/docs/DOM/MouseEvent) pour interroger l'état des boutons de la souris, a été implémenté.
 - Sur les évènements du clavier, l'attribut [KeyboardEvent.location](/fr/docs/DOM/KeyboardEvent#Attributes_location) pour interroger l'emplacement de la clé (standard, à gauche ou à droite de la touche de modification, dans le pavé numérique), a été implémenté ({{bug(166240)}}).
 - Le résultat de KeyboardEvent.keyCode a été calculé à partir de meilleures règles qui étaient presque identiques sous Windows/Linux/Mac. Et désormais elles sont disponibles sur certaines configurations de clavier qui n'ont pas la disposition ASCII sur Linux et Mac, comme l'arabe, le cyrillique, thaï et ainsi de suite. Voir [le document des codes pour les touches virtuelles](/fr/docs/DOM/KeyboardEvent#Virtual_key_codes).
@@ -74,7 +75,7 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 - `nsIDOMWindowUtils`
   - : `aModifiers` de `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` et `sendKeyEvent()` supporte toutes les touches de modification qui sont supportées par [`KeyboardEvent.getModifierState()`](/fr/docs/DOM/KeyboardEvent#getModifierState%28%29). Utiliser les valeurs `MODIFIER_*`. Et désormais le 5ème paramètre de `sendKeyEvent()` est changé d'un `boolean` vers un `unsigned long`. Pour la compatibilité ascendante, si l'appelant passe `true` ou `false`, le comportement n'est pas changé. Ce changement permet aux appelants d'indiquer l'emplacement de la touche.
 - `nsIBrowserHistory`
-  - : La méthode `hidePage()` n'a jamais été implémentée, et a été entièrement supprimée dans cette version. La méthode `addPageWithDetails()` a également été supprimée dans le cadre des travaux pour faire une API [Places](/fr/docs/Places) asynchrone ; à la place, utilisez plutôt {{ifmethod("mozIAsyncHistory", "updatePlaces")}}. De plus, l'attribut `count` a été retiré, il ne renvoyé pas un comptage réel à certain moment (à la place, il indiqué simplement si les entrées existées). Vous pouvez utiliser à la place {{ifattribute("nsINavHistoryService", "hasHistoryEntries")}}.
+  - : La méthode `hidePage()` n'a jamais été implémentée, et a été entièrement supprimée dans cette version. La méthode `addPageWithDetails()` a également été supprimée dans le cadre des travaux pour faire une API [Places](/fr/docs/Places) asynchrone ; à la place, utilisez plutôt `mozIAsyncHistory.updatePlaces()`. De plus, l'attribut `count` a été retiré, il ne renvoyé pas un comptage réel à certain moment (à la place, il indiqué simplement si les entrées existées). Vous pouvez utiliser à la place `nsINavHistoryService.hasHistoryEntries`.
 
 <!---->
 
@@ -92,6 +93,6 @@ Les interfaces suivantes ont été supprimées.
 
 - `nsIGlobalHistory`
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('14')}}

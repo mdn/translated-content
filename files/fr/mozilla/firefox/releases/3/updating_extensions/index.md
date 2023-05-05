@@ -6,40 +6,41 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Mise_à_jour_des_extensions_pour_Firefox_3
 ---
-1.  Notes de versions pour développeurs
 
-    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+1. Notes de versions pour développeurs
 
-2.  Modules complémentaires
+    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
-    2.  [Thèmes](/fr/Add-ons/Themes)
+2. Modules complémentaires
 
-3.  Fonctionnement interne de Firefox
+    1. [WebExtensions](/fr/Add-ons/WebExtensions)
+    2. [Thèmes](/fr/Add-ons/Themes)
 
-    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
-    2.  [Gecko](/fr/docs/Mozilla/Gecko)
-    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-    7.  [MFBT](/fr/docs/Mozilla/MFBT)
-    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
+3. Fonctionnement interne de Firefox
+
+    1. [Le projet Mozilla](/fr/docs/Mozilla/)
+    2. [Gecko](/fr/docs/Mozilla/Gecko)
+    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+    4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+    5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+    6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+    7. [MFBT](/fr/docs/Mozilla/MFBT)
+    8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+    9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
     10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
     11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
     12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
-4.  Développer et contribuer
+4. Développer et contribuer
 
-    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
-    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-    5.  [Localisation](/fr/docs/Mozilla/Localization)
-    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
-    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
-    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+    2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+    4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+    5. [Localisation](/fr/docs/Mozilla/Localization)
+    6. [Mercurial](/fr/docs/Mozilla/Mercurial)
+    7. [Assurance qualité](/fr/docs/Mozilla/QA)
+    8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
 Cet article fournit des informations qui seront utiles pour les développeurs désirant mettre à jour leurs extensions pour qu'elles fonctionnent correctement avec Firefox 3.
 
@@ -51,11 +52,15 @@ La première étape — et pour la plupart des extensions la seule qui sera néc
 
 Trouvez simplement la ligne indiquant la version maximale compatible de Firefox (qui, pour Firefox 2, ressemblait probablement à ceci)&nbsp;:
 
-     <em:maxVersion>2.0.*</em:maxVersion>
+```xml
+<em:maxVersion>2.0.*</em:maxVersion>
+```
 
 Modifiez-la pour indiquer la compatibilité avec Firefox 3&nbsp;:
 
-     <em:maxVersion>3.0.*</em:maxVersion>
+```xml
+<em:maxVersion>3.0.*</em:maxVersion>
+```
 
 Et réinstallez ensuite votre extension.
 
@@ -142,23 +147,29 @@ Un changement mineur dans le chrome pourrait nécessiter des changements dans vo
 
 Par exemple, si vous faisiez précédemment un overlay chrome avant la Barre d'état, comme ceci&nbsp;:
 
-    <window id="main-window">
-      <something insertbefore="status-bar" />
-    </window>
+```xml
+<window id="main-window">
+  <something insertbefore="status-bar" />
+</window>
+```
 
 Vous devrez à présent le faire comme ceci&nbsp;:
 
-    <vbox id="browser-bottombox">
-      <something insertbefore="status-bar" />
-    </vbox>
+```xml
+<vbox id="browser-bottombox">
+  <something insertbefore="status-bar" />
+</vbox>
+```
 
 Ou utilisez la technique suivante pour que votre overlay fonctionne tant avec Firefox 2 que Firefox 3&nbsp;:
 
-    <window id="main-window">
-      <vbox id="browser-bottombox" insertbefore="status-bar">
-        <something insertbefore="status-bar" />
-      <vbox>
-    </window>
+```xml
+<window id="main-window">
+  <vbox id="browser-bottombox" insertbefore="status-bar">
+    <something insertbefore="status-bar" />
+  <vbox>
+</window>
+```
 
 > **Note :** Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.
 
@@ -172,8 +183,8 @@ _Ajoutez ici les changements simples que vous avez dû faire à vos extensions p
 - Les changements dans les [proxys nsISupports](/fr/Proxys_nsISupports) et éventuellement aux interfaces liées aux threads doivent être documentés.
 - Si vous utilisez des instructions de traitement XML comme `<?xml-stylesheet ?>` dans vos fichiers XUL, tenez compte des changements effectués dans le [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654)&nbsp;:
 
-  1.  Les instructions de traitement XML sont à présent ajoutées au DOM des documents XUL. Cela signifie que [`document.firstChild`](/fr/docs/Web/API/Document/firstChild) n'est plus forcément l'élément racine. Si vous avez besoin de l'élément racine dans votre script, utilisez plutôt [`document.documentElement`](/fr/docs/Web/API/Document/documentElement).
-  2.  Les instructions de traitement `<?xml-stylesheet ?>` et `<?xul-overlay ?>` n'ont plus d'effet en dehors du prologue du document.
+  1. Les instructions de traitement XML sont à présent ajoutées au DOM des documents XUL. Cela signifie que [`document.firstChild`](/fr/docs/Web/API/Document/firstChild) n'est plus forcément l'élément racine. Si vous avez besoin de l'élément racine dans votre script, utilisez plutôt [`document.documentElement`](/fr/docs/Web/API/Document/documentElement).
+  2. Les instructions de traitement `<?xml-stylesheet ?>` et `<?xul-overlay ?>` n'ont plus d'effet en dehors du prologue du document.
 
 - `window.addEventListener("load", myFunc, true)` n'est pas déclenché au chargement de contenu web (chargement de page dans le navigateur). Ceci est causé par le [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) qui modifie la manière dont les fenêtres internes et externes communiquent. Une correction simple est d'utiliser `gBrowser.addEventListener("load", myFunc, true)` comme décrit dans [les exemples de code](/fr/Extraits_de_code/Onglets_de_navigation#D.C3.A9tection_du_chargement_d.27une_page) et qui fonctionnera dans Firefox 2 également.
 - `content.window.getSelection()` fournit un objet (qui peut être converti en une chaîne avec `toString()`), contrairement à l'ancienne `content.document.getSelection()`, à présent dépréciée, qui renvoie une chaîne.

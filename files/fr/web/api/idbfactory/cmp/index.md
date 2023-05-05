@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBFactory/cmp
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`cmp()`** de l'interface {{domxref("IDBFactory")}} compare deux valeurs de clé et détermine si celles-ci sont égales et sinon, laquelle est la plus grande. Cette opération est utilisée pour l'enregistrement et le parcours des données.
@@ -19,7 +20,9 @@ La méthode **`cmp()`** de l'interface {{domxref("IDBFactory")}} compare deux va
 
 ## Syntaxe
 
-    var resultat = window.indexedDB.cmp(a, b);
+```js
+var resultat = window.indexedDB.cmp(a, b);
+```
 
 ### Paramètres
 
@@ -57,13 +60,11 @@ console.log( "Résultat de la comparaison : " + result );
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-cmp-short-any-first-any-second', 'cmp')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBFactory.cmp")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -73,4 +74,4 @@ console.log( "Résultat de la comparaison : " + result );
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

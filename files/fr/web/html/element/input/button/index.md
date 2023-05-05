@@ -1,17 +1,11 @@
 ---
 title: <input type ="button">
-slug: Web/HTML/Element/Input/button
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/button
+slug: Web/HTML/Element/input/button
 ---
-{{HTMLRef}}
 
-Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{event("click")}}).
+{{HTMLSidebar}}
+
+Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement [`click`](/fr/docs/Web/API/Element/click_event)).
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
@@ -71,7 +65,7 @@ function updateBtn() {
 }
 ```
 
-Dans ce script, on récupère une référence à l'objet {{domxref("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `btn`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui sera utilisée lorsque l'évènement {{event("click")}} se produira sur le bouton.
+Dans ce script, on récupère une référence à l'objet {{domxref("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `btn`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui sera utilisée lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) se produira sur le bouton.
 
 {{EmbedLiveSample("Un_bouton_simple", 650, 100)}}
 
@@ -144,7 +138,7 @@ function disableBtn() {
 
 Si l'attribut `disabled` n'est pas fourni, il est hérité depuis l'élément parent. De cette façon, on peut activer/désactiver des groupes d'éléments en les plaçant dans un conteneur (par exemple un élément {{HTMLElement("fieldset")}}) et en indiquant `disabled` sur le conteneur.
 
-C'est ce qu'illustre l'exemple suivant. Il est semblable à l'exemple précédent mais l'attribut  `disabled` est activé sur l'élément `<fieldset>` lorsqu'on appuie sur le premier bouton. Les trois autres boutons sont donc désactivés pendant deux secondes.
+C'est ce qu'illustre l'exemple suivant. Il est semblable à l'exemple précédent mais l'attribut `disabled` est activé sur l'élément `<fieldset>` lorsqu'on appuie sur le premier bouton. Les trois autres boutons sont donc désactivés pendant deux secondes.
 
 #### Exemple 2
 
@@ -177,7 +171,7 @@ function disableBtn() {
 
 ## Validation
 
-Les éléments ` <input`` type="button" ``> ` n'ont pas de contrainte de validation.
+Les éléments `<input type="button">` n'ont pas de contrainte de validation.
 
 ## Exemples
 
@@ -301,7 +295,7 @@ draw();
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td>{{event("click")}}</td>
+      <td><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en Supported common attributes</strong></td>
@@ -323,14 +317,11 @@ draw();
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Voir aussi
 

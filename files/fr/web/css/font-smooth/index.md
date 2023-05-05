@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-smooth
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`font-smooth`** permet de contrôler l'application d'algorithmes anti-crénelage (_anti-aliasing_) sur le rendu des fontes de caractères.
@@ -40,8 +41,6 @@ font-smooth: 2em;
 
 Bien que mentionnée dans les premiers brouillons pour [CSS3 Fonts](https://www.w3.org/TR/WD-font/#font-smooth), `font-smooth` a été retirée de cette spécification et ne fait plus partie du standard.
 
-
-
 - Valeur initiale : `auto`
 - S'applique à tous les éléments et au contenu généré
 - Héritée : oui
@@ -49,11 +48,9 @@ Bien que mentionnée dans les premiers brouillons pour [CSS3 Fonts](https://www.
 - Type de média : Visuel
 - Valeur calculée : comme la valeur définie
 
-
-
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-smooth")}}
+{{Compat}}
 
 ## Voir aussi
 

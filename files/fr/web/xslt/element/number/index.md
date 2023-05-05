@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/number
 original_slug: Web/XSLT/number
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:number>` compte des éléments de façon séquentielle. Il peut également être utilisé
@@ -13,16 +14,18 @@ pour formater rapidement un nombre.
 
 ### Syntaxe
 
-    <xsl:number
-      count=EXPRESSION
-      level="single" | "multiple" | "any"
-      from=EXPRESSION
-      value=EXPRESSION
-      format=FORMAT-CHAÎNE
-      lang=XML:CODE-LANG
-      letter-value="alphabetic" | "traditional"
-      grouping-separator=CARACTÈRE
-      grouping-size=NOMBRE  />
+```xml
+<xsl:number
+  count=EXPRESSION
+  level="single" | "multiple" | "any"
+  from=EXPRESSION
+  value=EXPRESSION
+  format=FORMAT-CHAÎNE
+  lang=XML:CODE-LANG
+  letter-value="alphabetic" | "traditional"
+  grouping-separator=CARACTÈRE
+  grouping-size=NOMBRE />
+```
 
 ### Attributs obligatoires
 
@@ -41,7 +44,7 @@ Aucun.
 
     - `single`
       - : Numérote de façon séquentielle les nœuds descendants d'un même parent, à la manière des éléments d'une
-        liste. Le processeur va au premier nœud dans l'axe [`ancestor-or-self`](fr/XPath/Axes/ancestor-or-self) qui correspond à l'attribut
+        liste. Le processeur va au premier nœud dans l'axe [`ancestor-or-self`](/fr/XPath/Axes/ancestor-or-self) qui correspond à l'attribut
         `count`, puis compte ce nœud ainsi que tous les nœuds précédents issus de son parent (il
         s'arrête lorsqu'il rencontre une référence à l'attribut `from`, si il en trouve une) qui
         correspond également à l'attribut `count`. Si aucune correspondance n'est trouvée, la
@@ -49,7 +52,7 @@ Aucun.
     - `multiple`
       - : Numérote les nœuds avec une séquence composite qui reflète la position hiérarchique du nœud, par exemple
         1.2.2.5. (le format peut être défini avec l'attribut `format`, par exemple A.1.1). Le
-        processeur vérifie tous les [`ancestors`](fr/XPath/Axes/ancestor) du nœud courant
+        processeur vérifie tous les [`ancestors`](/fr/XPath/Axes/ancestor) du nœud courant
         ainsi que le nœud lui-même, il s'arrête lorsqu'il rencontre une correspondance avec l'attribut
         `from`, si il y en a une. Pour chaque nœud de la liste qui vérifie l'attribut
         `count`, le processeur compte combien il possède de frères vérifiant également cet attribut,
@@ -57,7 +60,7 @@ Aucun.
         une liste vide.
     - `any` (Non supporté à l'heure actuelle)
       - : Numérote tous les nœuds vérifiant `count` de façon séquentielle, sans considération de
-        niveau. Les axes [`ancestor`](fr/XPath/Axes/ancestor), [`self`](fr/XPath/Axes/self) et [`preceding`](fr/XPath/Axes/preceding) sont tous pris en compte. Le processeur
+        niveau. Les axes [`ancestor`](/fr/XPath/Axes/ancestor), [`self`](/fr/XPath/Axes/self) et [`preceding`](/fr/XPath/Axes/preceding) sont tous pris en compte. Le processeur
         débute au nœud courant et continue dans l'ordre inverse du document, s'arrêtant s'il rencontre une
         correspondance avec un attribut `from`. Si aucune correspondance avec l'attribut
         `count` n'est trouvé,e la séquence produite sera une liste vide. Ce niveau n'est pas supporté
@@ -74,17 +77,17 @@ Aucun.
   - : Définit le format du nombre généré&nbsp;:
 
     - format="1"
-      - : \<tt>1 2 3 …\</tt> (C'est le seul format supporté à ce jour)
+      - : `1 2 3 …` (C'est le seul format supporté à ce jour)
     - format="01"
-      - : \<tt>01 02 03 … 09 10 11 …\</tt>
+      - : `01 02 03 … 09 10 11 …`
     - format="a"
-      - : \<tt>a b c … y z aa ab …\</tt>
+      - : `a b c … y z aa ab …`
     - format="A"
-      - : \<tt>A B C … Y Z AA AB …\</tt>
+      - : `A B C … Y Z AA AB …`
     - format="i"
-      - : \<tt>i ii iii iv v …\</tt>
+      - : `i ii iii iv v …`
     - format="I"
-      - : \<tt>I II III IV V …\</tt>
+      - : `I II III IV V …`
 
 - lang (Non supporté à l'heure actuelle)
   - : Définit les alphabets pouvant être utilisés pour les formats de numérotation basés sur les lettres.

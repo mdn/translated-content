@@ -10,6 +10,7 @@ tags:
   - claim
 translation_of: Web/API/Clients/claim
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Worker Clients")}}
 
 La méthode **`claim()`** de l'interface {{domxref("Clients")}} permet à un service worker actif de se définir comme service worker actif de la page client quand le worker et la page sont dans le même scope. Ceci déclenche un évènement {{domxref("ServiceWorkerContainer.oncontrollerchange","oncontrollerchange")}} dans toutes les pages dans la portée du service worker.
@@ -47,19 +48,17 @@ self.addEventListener('activate', function(event) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initiale. Toujours en cours de développement (voir [ticket 414](https://github.com/slightlyoff/ServiceWorker/issues/414) et [ticket 423](https://github.com/slightlyoff/ServiceWorker/issues/423)). |
+{{Specifications}}
 
-## Compatibilité de navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Clients.claim")}}
+{{Compat}}
 
-## À voir aussi
+## Voir aussi
 
-- [Utiliser les Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Example simple de service workers](https://github.com/mdn/sw-test)
 - [Est-ce que les ServiceWorker sont prêt?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Utilisation optimisée des web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Utilisation optimisée des web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)
 - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}

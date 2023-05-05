@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}
 
 Les en-têtes HTTP permettent au client et au serveur de transmettre des informations supplémentaires avec la requête ou la réponse. Un en-tête de requête est constitué de son nom (insensible à la casse) suivi d'un deux-points `:`, puis de sa valeur (sans saut de ligne). L'espace blanc avant la valeur est ignoré.
@@ -140,10 +141,6 @@ Les {{Glossary("Client_hints", "astuces clients")}} HTTP sont enc cours de créa
   - : contient les [cookies HTTP](/fr/docs/HTTP/Cookies) stockés précédemment envoyés par le serveur à l'aide de l'en-tête {{HTTPHeader("Set-Cookie")}}.
 - {{HTTPHeader("Set-Cookie")}}
   - : envoie des cookies du serveur à l'agent utilisateur.
-- {{HTTPHeader("Cookie2")}} {{obsolete_inline}}
-  - : utilisé pour contenir un cookie HTTP, précédemment envoyé par le serveur avec l'en-tête {{HTTPHeader("Set-Cookie2")}}, mais qui a été rendu obsolète par la spécification. Utilisez {{HTTPHeader("Cookie")}} à la place.
-- {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
-  - : utilisé pour envoyer des cookies du serveur à l'agent utilisateur, mais a été rendu obsolète par la spécification. Utilisez {{HTTPHeader("Set-Cookie")}} à la place.
 
 ## [Cross-Origin Resource Sharing (CORS)](/fr/docs/Web/HTTP/CORS)
 
@@ -280,7 +277,7 @@ Les {{Glossary("Client_hints", "astuces clients")}} HTTP sont enc cours de créa
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : indique si un navigateur doit être autorisé à afficher une page dans un {{HTMLElement("frame")}}, {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : Sépcifie si un fichier de règlementation interdomaines (`crossdomain.xml`) est autorisé. Ce fichier peut définir une règle pour accorder aux clients (comme Adobe Flash Player, Adobe Acrobat, Microsoft Silverlight ou Apache Flex) la permission de gérer des données entre domaines qui seraient autrement restreintes à cause de [Same-Origin Policy](/fr/docs/Web/Security/Same-origin_policy). Voir la [spécification Cross-domain Policy File](https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html) pour plus d'informations.
+  - : Spécifie si un fichier de règlementation interdomaines (`crossdomain.xml`) est autorisé. Ce fichier peut définir une règle pour accorder aux clients (comme Adobe Flash Player, Adobe Acrobat, Microsoft Silverlight ou Apache Flex) la permission de gérer des données entre domaines qui seraient autrement restreintes à cause de [Same-Origin Policy](/fr/docs/Web/Security/Same-origin_policy). Voir la [spécification Cross-domain Policy File](https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html) pour plus d'informations.
 - {{HTTPHeader("X-Powered-By")}}
   - : peut être défini par l'environnement hôte ou par d'autres cadriciels, il contient des informations sur eux sans fournir aucun information utile à l'application ni aux visiteurs. Désactivez cet en-tête pour éviter d'exposer des informations et des vulnérabilités potentielles.
 - {{HTTPHeader("X-XSS-Protection")}}

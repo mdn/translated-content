@@ -1,14 +1,8 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.xor
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 ---
+
 {{JSRef}}
 
 **`Atomics.xor()`** は静的メソッドで、配列内の指定した位置にある指定された値とのビット単位の XOR を計算し、その位置にあった古い値を返します。これは不可分操作であり、変更された値が書き戻されるまで他の書き込みが行われないことが保証されます。

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/11
 original_slug: Mozilla/Firefox/Versions/11
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit des informations sur les nouvelles fonctionnalités et les principaux bugs corrigés, ainsi que des liens vers une documentation plus détaillée pour les développeurs web et d'extensions.
@@ -81,10 +82,10 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 
 ### Changements dans les interfaces
 
-- L'interface `mozIAsyncHistory` a une nouvelle méthode {{ifmethod("mozIAsyncHistory","isURIVisited")}} pour vérifier si une URI a été visitée.
-- Une nouvelle interface `mozIVisitStatusCallback` a été ajoutée pour fournir une fonctionnalité de traitement des rappels pour {{ifmethod("mozIAsyncHistory","isURIVisited")}}.
+- L'interface `mozIAsyncHistory` a une nouvelle méthode `mozIAsyncHistory.isURIVisited()` pour vérifier si une URI a été visitée.
+- Une nouvelle interface `mozIVisitStatusCallback` a été ajoutée pour fournir une fonctionnalité de traitement des rappels pour `mozIAsyncHistory.isURIVisited()`.
 - L'interface `nsIMacDockSupport` interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
-- Dans l'interface `nsINavHistoryResultObserver`, vous devez à présent implémenter {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} au lieu des anciennes méthodes `containerOpened()` et `containerClosed()`.
+- Dans l'interface `nsINavHistoryResultObserver`, vous devez à présent implémenter `nsINavHistoryResultObserver.containerStateChanged()` au lieu des anciennes méthodes `containerOpened()` et `containerClosed()`.
 
 #### Interface supprimées
 
@@ -99,7 +100,7 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 
 ### Changement dans les préférences
 
-- {{Pref("ui.tooltipDelay")}}
+- `"ui.tooltipDelay"`
   - : Définit le délai, en millisecondes, entre le moment où le curseur de la souris s'arrête et l'affichage d'une info-bulle.
 
 ### Changement dans le système de compilation
@@ -110,6 +111,6 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 
 - Les extensions qui n'ont pas été mises à jour depuis longtemps sont supposées ne plus être compatible par défaut, ce qui concerne actuellement les add-ons qui indiquent 4.0 pour `maxVersion`.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('10')}}

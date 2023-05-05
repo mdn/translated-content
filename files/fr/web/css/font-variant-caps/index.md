@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-caps
 ---
+
 {{CSSRef}}
 
 La propriété **`font-variant-caps`** permet de contrôler les glyphes utilisés pour représenter les lettres en capitales. Les scripts peuvent avoir différents glyphes de différentes tailles pour les différentes représentations des capitales et cette propriété permet de choisir une de ces formes.
@@ -63,9 +64,13 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 - `titling-caps`
   - : Ce mot-clé active l'utilisation de capitales spéciales pour les titres (à la fois pour les minuscules et majuscules). Généralement, les glyphes majuscules sont conçus pour utiliser les glyphes minuscules et ils apparaissent trop gras quand il y a un long fragment de texte utilisant de tels glyphes. L'objectif de ces glyphes spéciaux est d'éviter un tel effet. Ce mot-clé correspond à la valeur OpenType `titl` ; si la fonte ne supporte pas ce cas, le mot-clé n'aura pas d'action visible.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -102,12 +107,8 @@ L'utilisation de grandes portions de textes avec `font-style: all-small-caps` ou
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant-caps', 'font-variant-caps')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-variant-caps")}}
+{{Compat}}

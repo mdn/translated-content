@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Building_blocks/Events
 translation_of: Learn/JavaScript/Building_blocks/Events
 original_slug: Apprendre/JavaScript/Building_blocks/Evènements
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 Les événements sont des actions ou des occurrences qui se produisent dans le système que vous programmez et dont le système vous informe afin que vous puissiez y répondre d'une manière ou d'une autre si vous le souhaitez. Par exemple, si l'utilisateur clique sur un bouton d'une page Web, vous pouvez répondre à cette action en affichant une boîte d'information. Dans cet article, nous allons discuter de quelques concepts importants concernant les événements, et regarder comment ils fonctionnent dans les navigateurs. Ce ne sera pas une étude exhaustive; mais seulement ce que vous devez savoir à ce stade.
@@ -86,15 +87,13 @@ Ce code sera maintenant exécuté chaque fois que l'événement "click" se décl
 
 Vous pourrez voir cet exemple s'afficher sur toute la page en cliquant sur [ce lien.](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)
 
-
-
 ### Ce ne sont pas que des pages web
 
 Une autre chose qui mérite d'être mentionnée à ce stade est que les événements ne sont pas particuliers à JavaScript - la plupart des langages de programmation ont un certain type de modèle d'événement, et la façon dont cela fonctionne diffère souvent de celle de JavaScript. En fait, le modèle d'événement en JavaScript pour les pages Web diffère du modèle d'événement pour JavaScript tel qu'il est utilisé dans d'autres environnements.
 
 Par exemple, [Node.js](/fr/docs/Learn/Server-side/Express_Nodejs) est un runtime JavaScript très populaire qui permet aux développeurs d'utiliser JavaScript pour créer des applications réseau et serveur. Le modèle [Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) s'appuie sur des écouteurs pour écouter les événements et des émetteurs pour générer des événements périodiquement — bien qu'il ne le semble pas à première vue, le code est très différent, en particulier lorsqu'il utilise des fonctions comme `on()` pour enregistrer un écouteur d'événement, et `once()` pour enregistrer un écouteur d'événement qui s'efface après sa première exécution. le document [HTTP connect event docs](https://nodejs.org/docs/latest-v8.x/api/http.html#http_event_connect) propose un bon exemple d'utilisation.
 
-Comme autre exemple, vous pouvez désormais utiliser JavaScript pour créer des extensions inter-navigateurs — comme améliorations de la fonctionnalité du navigateur — à l'aide d'une technologie appelée [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions). Le modèle d'événement est similaire au modèle d'événements Web, mais un peu différent — les écouteurs d'événements sont sensibles à la casse (p.ex.`onMessage` plutôt que `onmessage`), et doivent êtres combinés à la fonction `addListener`. Jetez un oeil à la page [runtime.onMessage page](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) pour voir un exemple.
+Comme autre exemple, vous pouvez désormais utiliser JavaScript pour créer des extensions inter-navigateurs — comme améliorations de la fonctionnalité du navigateur — à l'aide d'une technologie appelée [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions). Le modèle d'événement est similaire au modèle d'événements Web, mais un peu différent — les écouteurs d'événements sont sensibles à la casse (p.ex. `onMessage` plutôt que `onmessage`), et doivent êtres combinés à la fonction `addListener`. Jetez un oeil à la page [runtime.onMessage page](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) pour voir un exemple.
 
 Vous n'avez pas besoin de comprendre quoi que ce soit à propos d'autres environnements de ce type à ce stade de votre apprentissage; nous voulions juste préciser que les événements peuvent différer selon les environnements de programmation.
 
@@ -237,8 +236,6 @@ En outre, il existe un certain nombre d'autres fonctionnalités et options puiss
 Parmi les trois mécanismes, vous ne devriez certainement pas utiliser les attributs du gestionnaire d'événement HTML - ceux-ci sont obsolètes et constituent une mauvaise pratique, comme mentionné ci-dessus.
 
 Les deux autres sont relativement interchangeables, au moins pour des utilisations simples:
-
-
 
 - Les propriétés du gestionnaire d'événement ont moins de puissance et d'options, mais une meilleure compatibilité entre les navigateurs (prise en charge depuis Internet Explorer 8). Vous devriez probablement commencer par ceux-ci pendant votre apprentissage.
 - Les événements du DOM Niveau 2 (`addEventListener()`, etc.) sont plus puissants, mais peuvent aussi devenir plus complexes et moins bien supportés (supportés depuis Internet Explorer 9). Vous devriez également vous entraîner avec, et tenter de les utiliser si possible.
@@ -498,13 +495,15 @@ btn.onclick = function() {
 
 Nous ajoutons ensuite quelques gestionnaires d'événements `onclick` supplémentaires - le premier à `<div>` et le second à `<video>`. L'idée est que lorsque l'on clique sur la zone du `<div>` en dehors de la vidéo, la boîte doit être masquée à nouveau; Lorsque la vidéo elle-même est cliquée, la vidéo devrait commencer à jouer.
 
-    videoBox.onclick = function() {
-      videoBox.setAttribute('class', 'hidden');
-    };
+```js
+videoBox.onclick = function() {
+  videoBox.setAttribute('class', 'hidden');
+};
 
-    video.onclick = function() {
-      video.play();
-    };
+video.onclick = function() {
+  video.play();
+};
+```
 
 Mais il y a un problème - actuellement, lorsque vous cliquez sur la vidéo, elle commence à jouer, mais cela entraîne le fait que `<div>` est également caché en même temps. C'est parce que la vidéo est dans le `<div>` - elle en fait partie - alors que cliquer sur la vidéo lance les _deux_ gestionnaires d'événements ci-dessus.
 
@@ -547,7 +546,7 @@ Vous pouvez faire une copie locale du [code source show-video-box.html](https://
 
 > **Note :** Pourquoi s'embêter à capturer et bouillonner ? Eh bien, aux heures sombres où les navigateurs étaien peu compatibles entre eux qu'ils ne le sont aujourd'hui, Netscape n'utilisait que la capture d'événements, et Internet Explorer n'utilisait que les bouillonnements. Quand le W3C a décidé d'essayer de normaliser le comportement et de parvenir à un consensus, ils en sont arrivés à ce système qui inclue les deux, qui est celui implémenté dans les navigateurs modernes.
 
-> **Note :** Comme mentionné ci-dessus, par défaut, tous les gestionnaires d'événements sont enregistrés dans la phase de bouillonnement, ce qui est plus logique la plupart du temps. Si vous voulez vraiment enregistrer un événement dans la phase de capture, vous pouvez le faire en enregistrant votre gestionnaire avec [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), et en positionnant la troisième propriété, qui est optionnelle, sur`true`.
+> **Note :** Comme mentionné ci-dessus, par défaut, tous les gestionnaires d'événements sont enregistrés dans la phase de bouillonnement, ce qui est plus logique la plupart du temps. Si vous voulez vraiment enregistrer un événement dans la phase de capture, vous pouvez le faire en enregistrant votre gestionnaire avec [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), et en positionnant la troisième propriété, qui est optionnelle, sur `true`.
 
 #### Délégation d'événement
 
@@ -572,13 +571,3 @@ S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'a
 - [Event reference](/fr/docs/Web/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
-
-## Dans ce module
-
-- [Prendre des décisions dans le code - les conditions](/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Les boucles dans le code](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [les fonctions - des blocs de code réutilisables](/fr/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Construisez votre propre fonction](/fr/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [les valeurs de retour des fonctions](/fr/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction aux événements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- [Galerie d'images](/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery)

@@ -11,6 +11,7 @@ tags:
 translation_of: >-
   Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
 ---
+
 {{AddonSidebar()}}Annule l'inscription des scripts de contenu représentés par cet objet `RegisteredContentScript`.
 
 ## Syntaxe
@@ -27,9 +28,9 @@ None.
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contentScripts.RegisteredContentScript.unregister", 10)}}
+{{Compat}}
 
 ## Exemples
 

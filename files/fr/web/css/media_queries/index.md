@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Media_Queries
 original_slug: Web/CSS/Requêtes_média
 ---
+
 {{CSSRef}}
 
 Les requêtes média, plus souvent appelées **_media queries,_** sont un outil de _responsive design_ qui permet d'adapter la feuille de style CSS en fonction de différents paramètres ou caractéristiques de l'appareil. Par exemple, on pourra appliquer différents styles si l'écran de l'appareil utilisé pour consulter le document est plus petit qu'une taille donnée ou si l'utilisateur tient son appareil en mode portrait ou paysage. La règle @ (ou _at-rule_) {{cssxref("@media")}} est utilisée afin d'appliquer les styles de façon conditionnelle.
@@ -37,13 +38,7 @@ Vous pouvez en découvrir plus dans l'article [Tester des requêtes media](/fr/d
 
 ## Spécifications
 
-| Spécification                                    | État                                     | Commentaires         |
-| ------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS5 Media Queries')}}     | {{Spec2('CSS5 Media Queries')}} |                      |
-| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                      |
-| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                      |
-| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                      |
-| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

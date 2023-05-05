@@ -1,15 +1,8 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Number
-  - ポリフィル
-browser-compat: javascript.builtins.Number.parseInt
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
+
 {{JSRef}}
 
 **`Number.parseInt()`** は、文字列の引数を解釈し、指定された基数の整数値を返します。

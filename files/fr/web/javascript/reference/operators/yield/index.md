@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/yield
 original_slug: Web/JavaScript/Reference/Opérateurs/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou [une fonction génératrice historique](/fr/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).
@@ -18,7 +19,9 @@ Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction géné
 
 ## Syntaxe
 
-    [[rv =]] yield [[expression]];
+```js
+[rv] = yield [expression]
+```
 
 - `expression`
   - : Définit la valeur à retourner depuis la fonction génératrice via [le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérateur_»). Si omise, `undefined` sera retournée à la place.
@@ -48,38 +51,32 @@ Entre le chemin de code du générateur, ses opérateurs `yield`, et la possibil
 
 Le code suivant est la déclaration d'un exemple de fonction génératrice :
 
-    function* compteVentesPommes () {
-      var listeVentes = [3, 7, 5];
-      for (var i = 0; i < listeVentes.length; i++) {
-        yield listeVentes[i];
-      }
-    }
+```js
+function* compteVentesPommes () {
+  var listeVentes = [3, 7, 5];
+  for (var i = 0; i < listeVentes.length; i++) {
+    yield listeVentes[i];
+  }
+}
+```
 
 Une fois qu'une fonction génératrice est définie, elle peut être utilisée en construisant un itérateur comme indiqué.
 
-    var magasinPommes = compteVentesPommes(); // Générateur { }
-    console.log(magasinPommes.next()); // { value: 3, done: false }
-    console.log(magasinPommes.next()); // { value: 7, done: false }
-    console.log(magasinPommes.next()); // { value: 5, done: false }
-    console.log(magasinPommes.next()); // { value: undefined, done: true }
+```js
+var magasinPommes = compteVentesPommes(); // Générateur { }
+console.log(magasinPommes.next()); // { value: 3, done: false }
+console.log(magasinPommes.next()); // { value: 7, done: false }
+console.log(magasinPommes.next()); // { value: 5, done: false }
+console.log(magasinPommes.next()); // { value: undefined, done: true }
+```
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#prod-YieldExpression', 'Yield')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.yield")}}
-
-## Notes spécifiques à Firefox
-
-- À partir de Gecko 29 {{geckoRelease(29)}}, une fonction génératrice terminée ne déclenche plus une {{jsxref("TypeError")}} "generator has already finished". À la place, elle renvoie un objet `IteratorResult` tel que `{ value: undefined, done: true }` ({{bug(958951)}}).
-- À partir de Gecko 33 {{geckoRelease(33)}}, l'analyse de l'expression `yield` a été mise à jour afin d'être conforme aux spécifications ES2015 ({{bug(981599)}}):
-
-  - L'expression après le mot-clé `yield` est optionnelle et l'omettre ne déclenche plus une {{jsxref("SyntaxError")}} : `function* compteVentesPommes() { yield; }`
+{{Compat}}
 
 ## Voir aussi
 

@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 original_slug: Apprendre/CSS/Building_blocks/Advanced_styling_effects
 ---
+
 {{LearnSidebar}}
 
 Cet article est une sorte de boîte à malices : elle introduit certaines des fonctions avancées disponibles pour styliser les boîtes, fonctions n'entrant pas dans catégories vues plus haut — comme les ombres, les mélanges de couleurs ou les filtres.
@@ -74,10 +75,10 @@ donnent le résultat suivant :
 
 Notez les quatre éléments valeur de la propriété `box-shadow` :
 
-1.  La première valeur est la mesure du **décalage horizontal** — distance entre la droite de l'ombre (ou la gauche si négative) et la boîte.
-2.  La deuxième valeur est la mesure du **décalage vertical** — distance vers le bas (vers le haut si négative) dont l'ombre est décalée de la boîte.
-3.  La troisième valeur est le **rayon de flou** — il représente la « quantité » de flou appliquée à l'ombre.
-4.  La valeur de la couleur : **couleur de base** de l'ombre.
+1. La première valeur est la mesure du **décalage horizontal** — distance entre la droite de l'ombre (ou la gauche si négative) et la boîte.
+2. La deuxième valeur est la mesure du **décalage vertical** — distance vers le bas (vers le haut si négative) dont l'ombre est décalée de la boîte.
+3. La troisième valeur est le **rayon de flou** — il représente la « quantité » de flou appliquée à l'ombre.
+4. La valeur de la couleur : **couleur de base** de l'ombre.
 
 Vous pouvez utiliser toutes unités de longueur et de couleur utiles pour définir ces valeurs.
 

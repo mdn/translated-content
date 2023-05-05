@@ -1,39 +1,34 @@
 ---
-title: WindowOrWorkerGlobalScope.origin
+title: origin
 slug: Web/API/origin
-translation_of: Web/API/WindowOrWorkerGlobalScope/origin
-original_slug: Web/API/WindowOrWorkerGlobalScope/origin
+l10n:
+  sourceCommit: 7060fc880765875bbee8d5cd8f54e9170eb2691d
 ---
-{{APIRef()}}{{SeeCompatTable}}
 
-La propriété **`origin`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'origine du scope global, serialisé en chaîne de caractères.
+{{APIRef()}}
 
-## Syntaxe
+La propriété globale en lecture seule **`origin`** renvoie l'origine de la portée globale, sérialisée sous la forme d'une chaîne de caractères.
 
-    var myOrigin = self.origin; // ou simplement origin
+## Valeur
 
-### Valeur
-
-Une {{domxref("USVString")}}.
+Une chaîne de caractères.
 
 ## Exemples
 
-Exécuté depuis un worker, le code suivant permet d'afficher en console le scope global de ce worker à chaque message reçu.
+Exécutée depuis le script d'un <i lang="en">worker</i>, le fragment de code suivant affichera l'origine de la portée globale du <i lang="en">worker</i> dans la console chaque fois qu'il reçoit un message.
 
 ```js
-onmessage = function() {
+onmessage = () => {
   console.log(self.origin);
 };
 ```
 
-Si l'origine n'est pas sous la forme scheme/host/port (par exemple, si vous exécutez le code en local, via `file://`), `origin` retournera la chaîne de caractère `"null"`.
+Si l'origine n'est pas une combinaison schéma/hôte/port (par exemple avec une exécution locale via une URL `file://`), `origin` renverra la chaîne de caractères `"null"`.
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-origin', 'WindowOrWorkerGlobalScope.origin')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.origin")}}
+{{Compat}}

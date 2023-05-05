@@ -12,6 +12,7 @@ tags:
   - onShown
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 ---
+
 {{AddonSidebar()}}
 
 Lancé immédiatement après l'affichage d'une notification.
@@ -33,7 +34,7 @@ Les événements ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
 
-## syntaxe addListener
+## Syntaxe addListener
 
 ### Paramètres
 
@@ -44,9 +45,9 @@ Les événements ont trois fonctions :
     - `notificationId`
       - : `string`. ID de la notification qui a été affichée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onShown")}}
+{{Compat}}
 
 ## Exemples
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'inégalité (`!=`) vérifie si ses deux opérandes ne sont pas égaux et renvoie un booléen correspondant au résultat. À la différence de l'opérateur [d'inégalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality), l'opérateur d'inégalité tente une conversion de ses opérandes avant la comparaison si ceux-ci sont de types différents.

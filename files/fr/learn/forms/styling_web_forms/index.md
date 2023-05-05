@@ -12,9 +12,10 @@ tags:
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-> Dans cet article, nous allons apprendre comment utiliser [les CSS](/fr/docs/CSS "/fr/docs/CSS") avec les formulaires [HTML](/fr/docs/HTML "/fr/docs/HTML") pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent [construire leurs propres widgets HTML](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés "/fr/docs/HTML/Formulaires/Comment_créer_des_blocs_de_formulaires_personnalisés") pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.
+> Dans cet article, nous allons apprendre comment utiliser [les CSS](/fr/docs/CSS) avec les formulaires [HTML](/fr/docs/HTML) pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent [construire leurs propres widgets HTML](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés) pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.
 
 ## Pourquoi est-ce si difficile de modifier l'apparence des formulaires avec CSS&nbsp;?
 
@@ -24,7 +25,7 @@ Quelques années plus tard, les CSS ont été créées et ce qui était une néc
 
 Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.
 
-Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs/Learn/Forms "/fr/docs/Learn/Forms").
+Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs/Learn/Forms).
 
 ### Tous les widgets ne sont pas égaux devant les CSS
 
@@ -34,10 +35,10 @@ Actuellement, quelques difficultés subsistent dans l'utilisation des CSS avec l
 
 L'apparence de certains éléments peut être modifiée sans poser beaucoup de problèmes suivant les diverses plateformes. Ceci inclut les éléments structurels suivants&nbsp;:
 
-1.  {{HTMLElement("form")}}
-2.  {{HTMLElement("fieldset")}}
-3.  {{HTMLElement("label")}}
-4.  {{HTMLElement("output")}}
+1. {{HTMLElement("form")}}
+2. {{HTMLElement("fieldset")}}
+3. {{HTMLElement("label")}}
+4. {{HTMLElement("output")}}
 
 Ceci inclut aussi tous les widgets de champs textuels (qu'ils soient mono ou multi‑lignes), ainsi que les boutons.
 
@@ -47,21 +48,21 @@ L'apparence de certains éléments ne peut être modifiée que rarement et peut 
 
 Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu {{htmlattrxref("placeholder", "input")}} ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
 
-Nous allons voir comment gérer ces cas particuliers dans l'article [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms "/fr/docs/HTML/Formulaires/Apparence_avancée_des_formulaires_HTML").
+Nous allons voir comment gérer ces cas particuliers dans l'article [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 
 #### Le truand
 
 L'apparence de certains éléments n'est tout bonnement pas modifiable en utilisant les CSS. Ceci inclut toutes les interfaces avancées comme les intervalles, la sélection de couleur ou de date ainsi que les éléments déroulants, y compris les éléments {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} et {{HTMLElement("datalist")}}. La sélection de fichiers est aussi connue pour ne pas pouvoir changer d'apparence. Les nouveaux éléments {{HTMLElement("progress")}} et {{HTMLElement("meter")}} font aussi partie de cette catégorie.
 
-Le principal problème avec tous ces widgets vient du fait que leur structure est très complexe et les CSS n'ont pas assez d'expressions pour décrire et modifier l'apparence des éléments. Si vous souhaitez modifier l'apparence des widgets vous devez utiliser JavaScript pour construire une arborescence DOM qui vous permet de modifier l'apparence. Nous explorons cette possibilité dans l'article [Comment créer des widgets de formulaire personnalisés](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés "/fr/docs/HTML/Formulaires/Comment_créer_des_blocs_de_formulaires_personnalisés").
+Le principal problème avec tous ces widgets vient du fait que leur structure est très complexe et les CSS n'ont pas assez d'expressions pour décrire et modifier l'apparence des éléments. Si vous souhaitez modifier l'apparence des widgets vous devez utiliser JavaScript pour construire une arborescence DOM qui vous permet de modifier l'apparence. Nous explorons cette possibilité dans l'article [Comment créer des widgets de formulaire personnalisés](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés).
 
 ## Compositions stylistiques de base
 
-Pour changer l'apparence [des éléments facilement modifiables](/fr/docs/HTML/Formulaires/Apparence_des_formulaires_HTML#Le_bon "/fr/docs/HTML/Formulaires/Apparence_des_formulaires_HTML#Le_bon") avec les CSS, vous ne devriez pas rencontrer de problèmes, puisqu'ils se comportent comme n'importe quel autre élément HTML. Toutefois, les feuilles de style peuvent ne pas être cohérentes entre navigateurs, il y a donc un certain nombre d'astuces à connaître.
+Pour changer l'apparence [des éléments facilement modifiables](/fr/docs/HTML/Formulaires/Apparence_des_formulaires_HTML#Le_bon) avec les CSS, vous ne devriez pas rencontrer de problèmes, puisqu'ils se comportent comme n'importe quel autre élément HTML. Toutefois, les feuilles de style peuvent ne pas être cohérentes entre navigateurs, il y a donc un certain nombre d'astuces à connaître.
 
 ### Champs de recherche
 
-Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire `-webkit-appearance`. Nous allons aborder le sujet plus en détails dans dans l'article&nbsp;: [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms "/fr/docs/Apparence_avancée_des_formulaires_HTML").
+Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire `-webkit-appearance`. Nous allons aborder le sujet plus en détails dans dans l'article&nbsp;: [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 
 #### Exemple
 
@@ -130,7 +131,7 @@ Le positionnement des formulaires HTML n'est pas un problème de manière géné
 
 L'apparence de l'élément {{HTMLElement("legend")}} est facile à modifier à l'exception de sa position. Dans chaque navigateur, l'élément {{HTMLElement("legend")}} est positionné au-dessus de la bordure supérieure de son élément {{HTMLElement("fieldset")}} parent. Il n'existe aucune manière de changer sa position dans le flux HTML. Vous pouvez toutefois le positionner de manière absolue ou relative en utilisant la propriété {{cssxref("position")}}, sinon, ce sera une partie de la bordure de l'élément `fieldset`.
 
-Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut  `label` de chaque élément de formulaire du `fieldset`), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :
+Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut `label` de chaque élément de formulaire du `fieldset`), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :
 
 ##### HTML
 
@@ -169,7 +170,7 @@ Regardons sur un exemple concret la façon de composer un formulaire HTML. Cela 
 
 ### HTML
 
-Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [article de ce guide](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML "/en-US/docs/HTML/Forms/My_first_HTML_form") ; il ne comporte que quelques identifiants supplémentaires et un titre.
+Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [article de ce guide](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML) ; il ne comporte que quelques identifiants supplémentaires et un titre.
 
 ```html
 <form>
@@ -200,22 +201,18 @@ Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [ar
 
 C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons besoin de trois ressources supplémentaires :
 
-1.  L'[image de fond](/files/4151/background.jpg "The postcard background") de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
-2.  Une police de machine à écrire&nbsp;: [«&nbsp;Secret Typewriter&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
-3.  Une police d'écriture manuelle&nbsp;: [«&nbsp;Journal&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
-
-
+1. L'[image de fond](/files/4151/background.jpg) de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
+2. Une police de machine à écrire&nbsp;: [«&nbsp;Secret Typewriter&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
+3. Une police d'écriture manuelle&nbsp;: [«&nbsp;Journal&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
 
 Les polices demandent un supplément de traitement avant de débuter&nbsp;:
 
-1.  Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
-2.  En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.
-3.  Décompressez le fichier zip fourni.
-4.  Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs&nbsp;; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
+1. Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
+2. En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.
+3. Décompressez le fichier zip fourni.
+4. Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs&nbsp;; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
 
 ### Le CSS
-
-
 
 Maintenant nous pouvons approfondir les CSS de l'exemple. Ajoutez tous les blocs de code affichés ci‑dessous dans un élément {{htmlelement("style")}}, l'un après l'autre.
 
@@ -348,7 +345,7 @@ textarea {
 }
 ```
 
-L'élément {{HTMLElement("button")}} est très accommodant avec les CSS ; vous faites ce que vous voulez, même en utilisant les [pseudo-elements](/fr/docs/CSS/Pseudo-elements "/en-US/docs/CSS/Pseudo-elements") !
+L'élément {{HTMLElement("button")}} est très accommodant avec les CSS ; vous faites ce que vous voulez, même en utilisant les [pseudo-elements](/fr/docs/CSS/Pseudo-elements) !
 
 ```css
 button {
@@ -395,17 +392,3 @@ Comme vous pouvez le voir, tant que nous voulons construire des formulaires avec
 Dans le [prochain article](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms), nous verrons comment gérer les widgets des catégories « brutes » et « truands ».
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- Mise en forme des formulaires HTML
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

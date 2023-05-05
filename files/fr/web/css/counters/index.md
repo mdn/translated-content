@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/counters()
 original_slug: Web/CSS/counters()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`counters()`** permet d'obtenir des compteurs imbriqués en renvoyant la concaténation des chaînes de caractères des valeurs des compteurs passés en arguments. La fonction `counters()` peut s'utiliser sous deux formes :
@@ -17,11 +18,13 @@ La fonction CSS **`counters()`** permet d'obtenir des compteurs imbriqués en re
 
 Cette fonction est généralement utilisée sur des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) mais peut théoriquement être utilisée à tout endroit où une valeur [`<string>`](/fr/docs/Web/CSS/string) est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera `decimal`).
 
-    /* Utilisation simple - style decimal par défaut */
-    counters(countername, '-');
+```css
+/* Utilisation simple - style decimal par défaut */
+counters(countername, '-');
 
-    /* Changement du style d'affichage */
-    counters(countername, '.', upper-roman)
+/* Changement du style d'affichage */
+counters(countername, '.', upper-roman)
+```
 
 Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`counter()`](/fr/docs/Web/CSS/counter_function) doivent être utilisées pour créer du contenu.
 
@@ -152,14 +155,11 @@ li::before {
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("CSS3 Lists", "#counter-functions", "CSS Counters")}}         | {{Spec2("CSS3 Lists")}} | Aucune modification. |
-| {{SpecName("CSS2.1", "generate.html#counter-styles", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.counters")}}
+{{Compat}}
 
 ## Voir aussi
 

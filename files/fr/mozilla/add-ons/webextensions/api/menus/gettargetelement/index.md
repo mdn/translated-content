@@ -10,11 +10,12 @@ tags:
   - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 ---
+
 {{AddonSidebar}}
 
 Renvoie l'élément pour un `targetElementId` donné
 
-Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un  `info.targetElementId` donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.
+Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un `info.targetElementId` donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.
 
 La méthode ne fonctionne que dans le document qui inclut l'élément cliqué avec le bouton droit de la souris et la méthode `targetElementId` expire lorsque l'utilisateur ouvre un autre menu contextuel.
 
@@ -24,12 +25,14 @@ Une extension nécessite la permission "menus" pour utiliser cette API
 
 ## Syntaxe
 
-    let elem = browser.menus.getTargetElement(targetElementId);
+```js
+let elem = browser.menus.getTargetElement(targetElementId);
+```
 
 ### Paramètres
 
 - `targetElementId`
-  - : La propriété de l'objet `{{WebExtAPIRef("menus.OnClickData")}}` passé au gestionnaire `{{WebExtAPIRef("menus.onClicked")}}`ou à l'événement `{{WebExtAPIRef("menus.onShown")}}`.
+  - : La propriété de l'objet `{{WebExtAPIRef("menus.OnClickData")}}` passé au gestionnaire `{{WebExtAPIRef("menus.onClicked")}}` ou à l'événement `{{WebExtAPIRef("menus.onShown")}}`.
 
 ### Valeur retournée
 
@@ -55,11 +58,11 @@ browser.menus.create({
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.getTargetElement")}}
+{{Compat}}
 
-## voir aussi
+## Voir aussi
 
 - {{WebExtAPIRef("menus.create")}}
 - {{WebExtAPIRef("menus.OnClickData")}}

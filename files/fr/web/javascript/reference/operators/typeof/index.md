@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Operators/typeof
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof
 browser-compat: javascript.operators.typeof
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur **`typeof`** renvoie une chaîne qui indique le type de son opérande.
@@ -189,6 +190,7 @@ Bien que la spécification requière que les objets exotiques aient des types di
 ## Spécifications
 
 {{Specifications}}
+
 ## Compatibilité des navigateurs
 
 {{Compat}}

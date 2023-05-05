@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/TTL
 original_slug: Glossaire/TTL
 ---
+
 TTL peut se référer soit à :
 
 - la durée de vie d'un paquet dans un réseau (avant de pouvoir être libéré)
@@ -20,11 +21,11 @@ Le TTL, intégré dans le paquet, est généralement défini comme un nombre de 
 
 Dans le contexte du cache, TTL (en tant qu'entier non signé de 32 bits) fait partie de l'{{Glossary("Response header","en-tête de réponse HTTP")}} ou de la requête {{Glossary("DNS")}}, indique la durée en secondes pendant laquelle la ressource peut être mise en cache par le demandeur.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Time_to_Live", "Time to Live")}} sur Wikipedia
+- [<i lang="en">Time to Live</i>](https://fr.wikipedia.org/wiki/Time_to_Live) sur Wikipédia
 
 ### Références techniques
 

@@ -1,17 +1,8 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - Content-Type
-  - HTTP
-  - HTTP header
-  - Representation header
-  - Reference
-  - 表現ヘッダー
-  - ヘッダー
-browser-compat: http.headers.Content-Type
-translation_of: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** 表現ヘッダーは、リソースの{{Glossary("MIME type","メディア種別")}}を示すために使用します。</p>
@@ -54,12 +45,11 @@ Content-Type: multipart/form-data; boundary=something
 ## ディレクティブ
 
 - `media-type`
-  - : リソースやデータの [MIME タイプ](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+  - : リソースやデータの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
 - charset
   - : 標準の文字エンコーディングです。
 - boundary
-  - : マルチパートの本文では `boundary` ディレクティブが必要で、これはメールゲートウェイを通過しても大丈夫だと知られている文字の中から 1～70 文字で構成され、ホワイトスペースで終了しないものです。これはメッセージの複数パートの境界を囲むために使用します。ふつう、ヘッダーの境界は 2 本のダッシュで始まり、最後の境界には最後にも 2 本のダッシュが入ります。</dd>
-</dl>
+  - : マルチパートの本文では `boundary` ディレクティブが必要で、これはメールゲートウェイを通過しても大丈夫だと知られている文字の中から 1～70 文字で構成され、ホワイトスペースで終了しないものです。これはメッセージの複数パートの境界を囲むために使用します。ふつう、ヘッダーの境界は 2 本のダッシュで始まり、最後の境界には最後にも 2 本のダッシュが入ります。
 
 ## 例
 

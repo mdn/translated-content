@@ -1,22 +1,11 @@
 ---
 title: ':blank'
 slug: Web/CSS/:blank
-tags:
-  - ':blank'
-  - CSS
-  - CSS セレクター
-  - Draft
-  - Experimental
-  - NeedsContent
-  - NeedsExample
-  - 擬似クラス
-  - セレクター
-browser-compat: css.selectors.blank
-translation_of: Web/CSS/:blank
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Note:** セレクターは、CSSWG が変更を続けているため、使用するリスクを考慮する必要があります。
+> **メモ:** セレクターは、CSSWG が変更を続けているため、使用するリスクを考慮する必要があります。
 >
 > [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967) を参照してください。
 
@@ -24,7 +13,9 @@ translation_of: Web/CSS/:blank
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:blank
+```
 
 ## 例
 

@@ -1,59 +1,62 @@
 ---
-title: element.click
+title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/click
+browser-compat: api.HTMLElement.click
 ---
-{{ ApiRef() }}
 
-## Résumé
+{{APIRef("HTML DOM")}}
 
-La méthode **click** simule un clic sur un élément.
+La méthode **`HTMLElement.click()`** simule un clic de souris sur un élément.
+
+Lorsque `click()` est appelée sur les éléments qui la prenne en charge (par exemple un élément [`<input>`](/fr/docs/Web/HTML/Element/Input)), elle déclenche l'évènement `click` de cet élément. L'évènement remonte alors vers les éléments situés plus haut dans l'arbre du document (ou le long de la chaîne d'évènement) et déclenche leurs évènements `click` respectifs.
 
 ## Syntaxe
 
-    element.click()
+```js
+click()
+```
 
-## Notes
+### Paramètres
 
-Lorsque la méthode `click` est utilisée sur des éléments où elle est gérée (par exemple un {{HTMLElement("input")}}), elle déclenche également l'évènement `click` de l'élément qui se propagera aux éléments situés plus haut dans l'arbre du document (ou la chaîne évènementielle) et déclenchera aussi leurs évènements `click`. Cependant, la propagation d'un évènement `click` ne déclenchera pas la navigation à partir d'un élément {{HTMLElement("a")}} comme si un vrai clic de souris avait été reçu.
+Aucun.
 
-Au moment où sont écrites ces lignes (Opera Next est à la version 12.11), la méthode `click` d'Opera **sera ignorée silencieusement**, si executée sur un élément {{HTMLElement("input")}} avec un type "file", et une propriété [CSS](/fr/docs/CSS) {{cssxref('display')}} à "none".
+### Valeur de retour
 
-{{gecko_callout_heading("5.0")}}
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
-Avant Gecko 5.0 {{geckoRelease("5.0")}}, Gecko supportait la méthode `click` qu'avec des éléments {{HTMLElement("input")}} de type
-_button_
-,
-_checkbox_
-,
-_radio_
-,
-_reset_
-ou
-_submit_
-. Gecko n'implémentait pas la méthode `click` sur d'autres éléments qui auraient pu répondre à des clics de souris comme les liens (éléments {{HTMLElement("a")}}), et ne déclenchait pas nécessairement l'évènement click d'autres éléments.
+## Exemples
 
-Cependant, maintenant Gecko supporte la méthode sur tous les éléments comme requis par [HTML5](/fr/docs/HTML/HTML5).
+Dans cet exemple, on simule un clic de souris lorsque le pointeur de la souris survole une case à cocher&nbsp;:
 
-D'autres implémentations du DOM peuvent se comporter différemment.
+### HTML
+
+```html
+<form>
+  <input type="checkbox" id="maCaseACocher" onmouseover="maFonction()" onclick="console.log('un évènement click a eu lieu')">
+</form>
+```
+
+### JavaScript
+
+```js
+// Lorsque l'évènement mouseover est déclenché, exécuter maFonction
+function maFonction() {
+  document.getElementById('maCaseACocher').click();
+}
+```
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                 | Statut                       | Commentaires |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-2651361) (non normative) | {{Spec2('DOM2 HTML')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-p>{{Compat("api.HTMLElement.click")}}
+{{Compat}}
 
 ## Voir aussi
 
-- Gestionnaires d'événements liés
-
-  - {{domxref("GlobalEventHandlers.onclick")}}
-  - {{domxref("GlobalEventHandlers.ondblclick")}}
-  - {{domxref("GlobalEventHandlers.onauxclick")}}
+- Les gestionnaires d'évènements associés&nbsp;:
+  - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/GlobalEventHandlers/onclick)
+  - [`GlobalEventHandlers.ondblclick`](/fr/docs/Web/API/GlobalEventHandlers/ondblclick)
+  - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/GlobalEventHandlers/onauxclick)

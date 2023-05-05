@@ -11,6 +11,7 @@ tags:
   - onUninstalled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 ---
+
 {{AddonSidebar()}}
 
 Action quand une extension est désinstallée.
@@ -34,7 +35,7 @@ Les événement ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifie si l'auditeur est enregistré à l'événement. Renvoie `true` s'il est à l'écoute, sinon `false` .
 
-## addListener syntaxe
+## Syntaxe addListener
 
 ### Paramètres
 
@@ -45,9 +46,9 @@ Les événement ont trois fonctions :
     - `info`
       - : [`ExtensionInfo`](/fr/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désinstallé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.onUninstalled")}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,7 +68,8 @@ browser.management.onUninstalled.addListener((info) => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,4 +96,4 @@ browser.management.onUninstalled.addListener((info) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Attribute
 original_slug: Glossaire/Attribut
 ---
+
 Un _attribut_ vient compléter un {{Glossary("tag")}}. Sa présence peut être requise ou facultative. Il peut fournir des méta-informations ou changer le comportement du tag. La syntaxe est `name=value` où _name_ est l'identificateur de l'attribut et _value_ sa valeur attribuée.
 
 ```html
@@ -29,7 +30,7 @@ On peut aussi trouver des attributs sans valeur quand elle n'est pas nécessaire
 <input type="text" required="required">
 ```
 
-## Pour approfondir
+## Voir aussi
 
 ### Informations techniques
 

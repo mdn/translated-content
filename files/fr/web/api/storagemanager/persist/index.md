@@ -3,13 +3,16 @@ title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
 translation_of: Web/API/StorageManager/persist
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
 La méthode **`persist()`** de l’interface {{domxref("StorageManager")}} fait une demande de permission d’utiliser un stockage persistant, et renvoie une {{jsxref('Promise')}} qui se résoud en `true` si la permission est accordée et le mode de boîte est persistant, et `false` dans le cas contraire.
 
 ## Syntaxe
 
-    navigator.storage.persist().then(function(persistent) { ... })
+```js
+navigator.storage.persist().then(function(persistent) { ... })
+```
 
 ### Paramètres
 
@@ -33,10 +36,8 @@ if (navigator.storage && navigator.storage.persist)
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('Storage','#dom-storagemanager-persist','persist')}} | {{Spec2('Storage')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.StorageManager.persist")}}
+{{Compat}}

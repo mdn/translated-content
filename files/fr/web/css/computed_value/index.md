@@ -7,12 +7,13 @@ tags:
 translation_of: Web/CSS/computed_value
 original_slug: Web/CSS/Valeur_calculée
 ---
+
 {{CSSRef}}
 
 La **valeur calculée** d'une propriété CSS est calculée à partir de [la valeur définie](/fr/docs/Web/CSS/Valeur_spécifiée) :
 
-1.  En gérant les valeurs spéciales {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}} et {{cssxref("revert")}}.
-2.  En effectuant les calculs décrits dans la section « Valeur calculée » de chaque résumé de propriété.
+1. En gérant les valeurs spéciales {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}} et {{cssxref("revert")}}.
+2. En effectuant les calculs décrits dans la section « Valeur calculée » de chaque résumé de propriété.
 
 Les calculs utilisés pour obtenir la **valeur calculée** correspondent généralement à la conversion des valeurs relatives (exprimées dans des unités relatives comme `em` ou en pourcentages) en valeur absolue. Ainsi, si un élément possède les valeurs spécifiées suivantes `font-size: 16px` et `padding-top: 2em`. La valeur calculée de la propriété `padding-top` sera `32px` (on double la taille de la police).
 
@@ -24,10 +25,7 @@ Le principal intérêt de la valeur calculée (en dehors de la gestion du passag
 
 ## Spécifications
 
-| Spécification                                                                                    | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName("CSS2.2", "cascade.html#computed-value", "computed-value")}} | {{Spec2("CSS2.2")}} |                      |
-| {{SpecName("CSS2.1", "cascade.html#computed-value", "computed value")}} | {{Spec2("CSS2.1")}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

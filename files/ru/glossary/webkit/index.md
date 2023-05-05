@@ -1,0 +1,17 @@
+---
+title: WebKit
+slug: Glossary/WebKit
+translation_of: Glossary/WebKit
+original_slug: Глоссарий/WebKit
+---
+_WebKit_ это фреймворк который показывает правильно отформатированные веб-страницы на основе их разметки. {{Glossary("Apple Safari")}} и большинство мобильных браузеров зависят от Webkit (Webkit это очень портативный и легко настраиваемый фреймворк).
+
+WebKit начал жизнь как разветвление библиотек **KDE's KHTML** и **KJS**, и с тех пор много частных лиц и компаний внесли свой вклад в его развитие (включая: KDE, Apple, Google, и Nokia).
+
+WebKit это торговая марка Apple, а сам фреймворк раздаётся под BSD-образной лицензией. Однако, 2 важных компонента попадают под лицензию {{Glossary("LGPL")}}: это **WebCore** - визуальная библиотека и движок **JavaScriptCore**.
+
+## Читайте также
+
+### Технический справочник
+
+- [WebKit CSS extensions](/ru/docs/Web/CSS/Reference/Webkit_Extensions)

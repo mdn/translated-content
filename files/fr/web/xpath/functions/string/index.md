@@ -6,13 +6,16 @@ tags:
 translation_of: Web/XPath/Functions/string
 original_slug: Web/XPath/Fonctions/string
 ---
+
 {{ XsltRef() }}
 
 La fonction `string` convertit l'argument passé en une chaîne.
 
 ### Syntaxe
 
-    string( [objet] )
+```
+string( [objet] )
+```
 
 ### Arguments
 

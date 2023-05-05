@@ -8,16 +8,17 @@ tags:
 translation_of: Web/CSS/Scaling_of_SVG_backgrounds
 original_slug: Web/CSS/Redimensionnement_arrière-plans_SVG
 ---
+
 Les images SVG sont très flexibles et lorsqu'on les utilise en CSS avec les propriétés {{cssxref("background-image")}} et {{cssxref("background-size")}}, il faut s'assurer de considérer les différents aspects qui leurs sont propres. Dans cet article, on décrit comment les images SVG sont redimensionnées grâce à ces propriétés.
 
 ## Un algorithme simple
 
 Dans la plupart des cas, l'algorithme utilisé pourra être réduit à ces quatre règles. Ces règles ne sont pas exhaustives et ne couvrent pas certains cas aux limites mais cela sera suffisant ici :
 
-1.  Si {{cssxref("background-size")}} définit une dimension fixe (des pourcentages ou des unités relatives fixées par le contexte), cette dimension l'emporte.
-2.  Si l'image possède des proportions intrinsèques (autrement dit, si le ratio largeur/hauteur est constant : 16:9, 4:3, 2.39:1, 1:1), l'arrière-plan sera affiché en conservant ces proportions.
-3.  Si l'image définit une taille et que celle-ci n'est pas modifiée par une contrainte quelconque, cette taille l'emporte.
-4.  Dans tous les autres cas, l'image est affichée avec la taille de la zone dédiée à l'arrière-plan.
+1. Si {{cssxref("background-size")}} définit une dimension fixe (des pourcentages ou des unités relatives fixées par le contexte), cette dimension l'emporte.
+2. Si l'image possède des proportions intrinsèques (autrement dit, si le ratio largeur/hauteur est constant : 16:9, 4:3, 2.39:1, 1:1), l'arrière-plan sera affiché en conservant ces proportions.
+3. Si l'image définit une taille et que celle-ci n'est pas modifiée par une contrainte quelconque, cette taille l'emporte.
+4. Dans tous les autres cas, l'image est affichée avec la taille de la zone dédiée à l'arrière-plan.
 
 On notera ici que l'algorithme ne prend en cas que les dimensions et/ou les proportions de l'image (leur absence éventullement). Ainsi, une image SVG dont les dimensions sont fixées sera traitée comme une image matricielle de la même taille.
 
@@ -33,7 +34,7 @@ Cette image ne possède ni dimension ni proportion. Quelle que soit sa taille, i
 
 ![](no-dimensions-or-ratio.png)
 
-[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg "no-dimensions-or-ratio.svg")
+[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg)
 
 ### Image sans proportion avec une dimension fixée
 
@@ -41,7 +42,7 @@ Cette image mesure 100 pixels de large mais n'a pas de hauteur ni de proportion 
 
 ![](100px-wide-no-height-or-ratio.png)
 
-[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg "100px-wide-no-height-or-ratio.svg")
+[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg)
 
 ### Image avec une dimension fixée et des proportions intrinsèques
 
@@ -51,7 +52,7 @@ On a ici un cas très proche de l'image pour laquelle on définit une largeur et
 
 ![](100px-height-3x4-ratio.png)
 
-[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg "100px-height-3x4-ratio.svg")
+[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg)
 
 ### Image sans largeur ni hauteur mais avec des proportions intrinsèques
 
@@ -59,7 +60,7 @@ Cette image n'indique pas de hauteur ou de largeur mais un ratio intrinsèque de
 
 ![](no-dimensions-1x1-ratio.png)
 
-[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg "no-dimensions-1x1-ratio.svg")
+[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg)
 
 ## Exemples de redimensionnement
 

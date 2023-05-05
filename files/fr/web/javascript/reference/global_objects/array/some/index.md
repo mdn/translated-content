@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/some
 ---
+
 {{JSRef}}
 
 La méthode **`some()`** teste si au moins un élément du tableau passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.
@@ -22,7 +23,9 @@ La méthode **`some()`** teste si au moins un élément du tableau passe le test
 
 ## Syntaxe
 
-    arr.some(callback[, objetThis])
+```js
+arr.some(callback[, objetThis])
+```
 
 ### Paramètres
 
@@ -50,7 +53,7 @@ La méthode `some()` exécute la fonction `callback` une seule fois pour chaque 
 
 La fonction `callback` est invoquée avec trois paramètres&nbsp;: la valeur de l'élément, l'indice de l'élément et l'objet `Array` parcouru.
 
-Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur  {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 
 La méthode `some()` ne modifie pas le tableau sur lequel elle est appelée.
 
@@ -85,15 +88,11 @@ passed = [12, 5, 8, 1, 4].some(estAssezGrand);
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}                 | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.some', 'Array.prototype.some')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## Voir aussi
 
