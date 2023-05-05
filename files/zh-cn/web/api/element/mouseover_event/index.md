@@ -1,5 +1,5 @@
 ---
-title: 元素：mouseover 事件
+title: Element: mouseover 事件
 slug: Web/API/Element/mouseover_event
 ---
 
