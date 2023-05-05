@@ -68,7 +68,7 @@ slug: Web/HTML/Element/tbody
 
 ### 非推奨の属性
 
-- {{ htmlattrdef("align") }} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : この列挙属性は各セルの中身について、水平方向の配置方法を制御します。以下の値が指定可能です。
 
@@ -90,11 +90,11 @@ slug: Web/HTML/Element/tbody
 
     この属性は非推奨であり、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
-- {{ htmlattrdef("char") }} {{deprecated_inline}}
-  - : この属性は、列内のセルで揃える文字を設定します。よくある値としては、数値や金額を揃えようとするときのピリオド (.) があります。{{htmlattrxref("align", "tbody")}} 属性を `char` に設定していない場合は、この属性は無視されます。
-- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : この属性は、列内のセルで揃える文字を設定します。よくある値としては、数値や金額を揃えようとするときのピリオド (.) があります。[`align`](/ja/docs/Web/HTML/Element/tbody#align) 属性を `char` に設定していない場合は、この属性は無視されます。
+- `charoff` {{deprecated_inline}}
   - : この属性は、 `char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
-- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : この属性は、表本体の各行のセルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 
