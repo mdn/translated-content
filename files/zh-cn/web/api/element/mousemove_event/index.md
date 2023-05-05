@@ -1,11 +1,11 @@
 ---
-title: mousemove
+title: "Element: mousemove 事件"
 slug: Web/API/Element/mousemove_event
 ---
 
 {{APIRef}}
 
-当指针设备 ( 通常指鼠标 ) 在元素上移动时，mousemove 事件被触发。
+`mousemove` 事件在指针设备（通常指鼠标）光标的热点在元素内移动时触发。
 
 ## 基本信息
 
