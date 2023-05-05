@@ -15,7 +15,7 @@ ECMAScript 规范的 [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascrip
 
 > … All of the language features and behaviors specified in this annex have one or more undesirable characteristics and in the absence of legacy usage would be removed from this specification.（本附录中规定的所有语言特性和行为都有一个或多个不理想的特性，在没有遗留使用的情况下，将从本规范中删除。） …
 >
-> … Programmers should not use or assume the existence of these features and behaviors when writing new ECMAScript code.（程序员在编写新的 ECMAScript 代码时，不应该使用或假设这些功能和行为的存在。） …
+> … Programmers should not use or assume the existence of these features and behaviors when writing new ECMAScript code.（程序员在编写新的 ECMAScript 代码时，不应该使用或假设这些特性和行为的存在。） …
 
 其他一些，尽管在规范主体中，也被标记为规范性可选，不应该依赖它们。
 
@@ -33,7 +33,7 @@ console.log("b");
 // 输出 "a" 和 "b"
 ```
 
-`<!--` 和 `-->` 的作用都与 `//` 类似，即起始行注释。`-->` 只在行首有效（以避免与后缀递减和大于运算符相混淆），而 `<!--` 可以出现在行的任何地方。
+`<!--` 和 `-->` 的作用都与 `//` 类似，即起始行注释。`-->` 只在行首有效（以避免与紧跟大于运算符的后缀式自减相混淆），而 `<!--` 可以出现在行的任何地方。
 
 ### RegExp
 
@@ -44,7 +44,7 @@ console.log("b");
 - {{jsxref("RegExp.input", "input, $_")}}
   - : 用于匹配正则表达式的字符串。
 - {{jsxref("RegExp.lastMatch", "lastMatch, $&amp;")}}
-  - : 最后匹配的字串。
+  - : 最后匹配的子串。
 - {{jsxref("RegExp.lastParen", "lastParen, $+")}}
   - : 最后一个括号内的子串匹配。
 - {{jsxref("RegExp.leftContext", "leftContext, $`")}}
@@ -66,7 +66,7 @@ console.log("b");
 ### Object
 
 - [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器已被废弃。使用 [`Object.getPrototypeOf`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) 和 [`Object.setPrototypeOf`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 代替。这不适用于对象字面量中的 `__proto__` 字面键。
-- [`Object.prototype.__defineGetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`Object.prototype.__defineSetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)、[`Object.prototype.__lookupGetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Objects/__lookupGetter__) 和 [`Object.prototype.__lookupSetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) 方法已被废弃。使用 [`Object.getOwnPropertyDescriptor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) 和 [`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)代替。
+- [`Object.prototype.__defineGetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`Object.prototype.__defineSetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)、[`Object.prototype.__lookupGetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__) 和 [`Object.prototype.__lookupSetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) 方法已被废弃。使用 [`Object.getOwnPropertyDescriptor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) 和 [`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)代替。
 
 ### String
 
@@ -81,14 +81,14 @@ console.log("b");
 
 ### 转义序列
 
-- 在字符串和正则表达式字面中，八进制转义序列（后跟一个、两个或三个八进制数字）被弃用。
+- 在字符串和正则表达式字面中，八进制转义序列（\ 后跟一个、两个或三个八进制数字）被弃用。
 - {{jsxref("Global_Objects/escape", "escape")}} 和 {{jsxref("Global_Objects/unescape", "unescape")}} 函数已被弃用。使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}}、{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}、{{jsxref("Global_Objects/decodeURI", "decodeURI")}} 或 {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} 来对特殊字符的转义序列进行编码和解码。
 
 ### 语句
 
-[`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句在严格模式中废弃且不可用。
+[`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句在严格模式中已被弃用且不可用。
 
-在严格模式下，[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环头的 `var` 声明中的初始化器被弃用并产生[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_itializer)。在非严格模式下，它们会被静默地忽略。
+在严格模式下，[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环头的 `var` 声明中的初始化器被弃用并产生[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)。在非严格模式下，它们会被静默地忽略。
 
 ## 过时的特性
 
@@ -106,11 +106,11 @@ console.log("b");
 | {{jsxref("RegExp/multiline", "multiline")}}（也可通过 `RegExp.$*`） | 是否在多行的字符串中搜索。                                                        |
 | {{jsxref("RegExp/source", "source")}}                               | 模式的文本。                                                                     |
 
-`valueOf()` 方法不再专门用于 `RegExp`。它使用 {{jsxref("Object.prototype.valueOf()")}}，并返回自己。
+`valueOf()` 方法不再专门用于 `RegExp`。它使用 {{jsxref("Object.prototype.valueOf()")}}，并返回它本身。
 
 ### Function
 
-- Function 的 `arity` 属性已经过时，使用 [`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length)。
+- Function 的 `arity` 属性已经过时，请使用 [`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 代替。
 
 ### Object
 
@@ -124,13 +124,12 @@ console.log("b");
 | `Object.observe()`           | 异步地观察一个对象的变化。                                                 | {{jsxref("Proxy")}}                                                                                                                                                 |
 | `Object.unobserve()`         | 移除观察器。                                                               | {{jsxref("Proxy")}}                                                                                                                                                 |
 | `Object.getNotifier()`       | 创建一个通知者对象，允许用 `Object.observe()` 来综合触发一个变化的观察者。 | 没有直接的替换方法                                                                                                                                                  |
-| `Object.prototype.watch()`   | 在一个属性上附加一个处理程序回调，当属性被分配时被调用。                   | {{jsxref("Proxy")}}                                                                                                                                                 |
-| `Object.prototype.unwatch()` | 移除一个属性上的观察处理程序。                                             | {{jsxref("Proxy")}}                                                                                                                                                 |
+| `Object.prototype.watch()`   | 在一个属性上附加一个处理器回调，当属性被分配时被调用。                   | {{jsxref("Proxy")}}                                                                                                                                                 |
+| `Object.prototype.unwatch()` | 移除一个属性上的观察处理器。                                             | {{jsxref("Proxy")}}                                                                                                                                                 |
 
 ### String
 
-= 非标准的字符串通用方法，如 `String.slice(myStr, 0, 12)`、`String.replace(myStr, /\./g, "!")` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 53 中被废弃，并在 Firefox 68 中删除。你可以使用 {{jsxref("String", "String.prototype", "实例方法")}}和 {{jsxref("Function.call")}} 来代替。
-
+- 非标准的字符串通用方法，如 `String.slice(myStr, 0, 12)`、`String.replace(myStr, /\./g, "!")` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 53 中被废弃，并在 Firefox 68 中删除。你可以使用 {{jsxref("String", "String.prototype", "实例方法")}} 和 {{jsxref("Function.call")}} 来代替。
 - `String.prototype.quote` 已在 Firefox 37 中移除。
 - {{jsxref("String.prototype.search")}}、{{jsxref("String.prototype.match")}} 和 {{jsxref("String.prototype.replace")}} 中非标准的 `flags` 参数已被淘汰。
 
@@ -203,6 +202,6 @@ Firefox 26 版本之前实现了另一个迭代器协议，与标准的[迭代�
 
 这个功能，连同 `StopIteration` 全局构造函数，在 Firefox 58+ 中被移除。未来可以使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环和[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
-### 变量引用语法（Sharp variables）
+### 变量引用语法（Sharp variable）
 
 变量引用语法已经过时。要创建循环结构，请使用临时变量代替。
