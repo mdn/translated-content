@@ -9,6 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 
 对于从左至右遍历的相似方法，请参阅 {{jsxref("Array.prototype.reduce()")}}。
 
+{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
+
 ## 语法
 
 ```js-nolint
@@ -192,7 +194,7 @@ console.log(right); // "54321"
 
 函数组合是一种将函数组合在一起的机制，其中每个函数的输出都作为下一个函数的输入，最后一个函数的输出是最终的结果。在这个例子中，我们使用 `reduceRight()` 来实现函数组合。
 
-也可以参见维基百科上的[函数组合](https://en.wikipedia.org/wiki/Function_composition_(computer_science))。
+也可以参见维基百科上的[函数组合](<https://en.wikipedia.org/wiki/Function_composition_(computer_science)>)。
 
 ```js
 const compose =
