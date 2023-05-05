@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/attachShader
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **WebGLRenderingContext.attachShader()** 方法负责往 {{domxref("WebGLProgram")}} 添加一个片段或者顶点着色器。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.attachShader()`** 方法负责往 {{domxref("WebGLProgram")}} 添加一个片段或者顶点着色器。
 
 ## 语法
 
