@@ -11,9 +11,12 @@ slug: Web/API/Geolocation/watchPosition
 
 ## 語法
 
-```plain
+```js-nolint
+id = navigator.geolocation.watchPosition(success)
+id = navigator.geolocation.watchPosition(success, error)
 id = navigator.geolocation.watchPosition(success, error, options)
 ```
+
 
 ### 參數
 
