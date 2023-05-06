@@ -130,18 +130,3 @@ Pour les images d'arrière-plan, il est important de mettre en place une valeur 
 Dans cette section nous avons vu l'optimisation des images. Vous avez maintenant une compréhension générale de la façon d'optimiser la bande passante de la moitié des sites web. Ce n'est qu'un des types d'optimisation consommant la bande passante des visiteurs et ralentissant le chargement des pages. Dans le prochain article, nous verrons l'optimisation du critère responsable de 20 % de la consommation de bande passante.
 
 {{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
-
-## Dans ce module
-
-- [Le « pourquoi » des performances web](/fr/docs/Learn/Performance/why_web_performance)
-- [Qu'est-ce que sont les performances web ?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [Comment les visiteurs perçoivent-ils les performances ?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimédia : images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimédia : vidéos](/fr/docs/Learn/Performance/video)
-- [Bonnes pratiques de performances pour JavaScript](/fr/docs/Learn/Performance/JavaScript)
-- [Fonctionnalités de HTML liées aux performances](/fr/docs/Learn/Performance/HTML)
-- [Fonctionnalités de CSS liées aux performances](/fr/docs/Learn/Performance/CSS)
-- [Performances et polices d'écriture](/fr/docs/Learn/Performance/Fonts)
-- [Performances sur mobile](/fr/docs/Learn/Performance/Mobile)
-- [Placer le focus sur les performances](/fr/docs/Learn/Performance/business_case_for_performance)

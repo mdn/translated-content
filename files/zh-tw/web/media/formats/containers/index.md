@@ -1016,13 +1016,13 @@ These suggestions make a number of assumptions. You should carefully consider th
 
 To optimize compatibility, it's worth considering providing more than one version of media files, using the {{HTMLElement("source")}} element to specify each source within the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element. For example, you can offer an Ogg or WebM video as the first choice, with a fallback in MP4 format. You could even choose to offer a retro-like QuickTime or AVI fallback for good measure.
 
-To do this, you create a `<video>` (or `<audio>`) element with no {{htmlattrxref("src", "video")}} attribute. Then add child {{HTMLElement("source")}} elements within the `<video>` element, one for each version of the video you offer. This can be used to offer various versions of a video that can be selected depending on bandwidth availability, but in our case, we'll use it to offer format options.
+To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/zh-TW/docs/Web/HTML/Element/video#src) attribute. Then add child {{HTMLElement("source")}} elements within the `<video>` element, one for each version of the video you offer. This can be used to offer various versions of a video that can be selected depending on bandwidth availability, but in our case, we'll use it to offer format options.
 
 In the example shown here, a video is offered to the browser in two formats: WebM and MP4.
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-The video is offered first in WebM format (with the {{htmlattrxref("type", "video")}} attribute set to `video/webm`). If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`. If neither of those can be played, the text "This browser does not support the HTML5 video element." is presented.
+The video is offered first in WebM format (with the [`type`](/zh-TW/docs/Web/HTML/Element/video#type) attribute set to `video/webm`). If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`. If neither of those can be played, the text "This browser does not support the HTML5 video element." is presented.
 
 ## Specifications
 

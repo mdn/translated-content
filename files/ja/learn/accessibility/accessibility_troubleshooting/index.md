@@ -80,13 +80,3 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
     - 助けてもらいたい問題が見つかるような、タスクや評価のページのリンク
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## このモジュール内
-
-- [アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
-- [CSS と JavaScript のアクセシビリティ成功事例](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
-- [モバイルアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
-- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

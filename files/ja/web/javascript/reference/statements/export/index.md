@@ -69,7 +69,7 @@ export function myFunction() {
 
 `export` キーワードの後には、 `let`, `const`, `var` 宣言や、関数、クラス宣言を使用することができます。また、 `export { name1, name2 }` 構文を使用すると、他の場所で宣言された名前のリストをエクスポートすることができます。`export {}` は空のオブジェクトをエクスポートするわけではないことに注意してください。これは何もエクスポートしない（空の名前のリストをエクスポートする）ノーオペレーション宣言です。
 
-エクスポート宣言は[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)のルールには従いません。`X` という名前自体が宣言される前に、そのモジュールが `X` をエクスポートすることを宣言することができます。
+エクスポート宣言は[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)のルールには従いません。`X` という名前自体が宣言される前に、そのモジュールが `X` をエクスポートすることを宣言することができます。
 
 ```js
 export { x };

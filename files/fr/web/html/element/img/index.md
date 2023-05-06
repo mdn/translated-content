@@ -1,6 +1,6 @@
 ---
 title: '<img> : l''élément d''image embarquée'
-slug: Web/HTML/Element/Img
+slug: Web/HTML/Element/img
 translation_of: Web/HTML/Element/img
 browser-compat: html.elements.img
 ---

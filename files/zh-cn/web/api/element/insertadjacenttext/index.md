@@ -73,7 +73,7 @@ Have a look at our [insertAdjacentText.html](https://mdn.github.io/dom-examples/
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

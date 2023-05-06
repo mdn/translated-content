@@ -1,6 +1,6 @@
 ---
 title: Apte à être mis en cache
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 tags:
   - Glossaire
   - Mise en cache

@@ -160,7 +160,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
             />
           </td>
           <td>
-            現在の位置にアイテムがドロップできないことを示します。<br />{{bug("275173")}}: Windows および Mac OS X では、<code>no-drop</code> は <code>not-allowed</code> と同じです。
+            現在の位置にアイテムがドロップできないことを示します。<br />[Firefox バグ 275173](https://bugzil.la/275173): Windows および Mac OS X では、<code>no-drop</code> は <code>not-allowed</code> と同じです。
           </td>
         </tr>
         <tr style="cursor: not-allowed">
@@ -185,7 +185,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>all-scroll</code></td>
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
-            何かが任意の方向にスクロール (パン) 可能であることを示します。<br />{{bug("275174")}}: Windows では、 <code>all-scroll</code> は <code>move</code> 同じです。
+            何かが任意の方向にスクロール (パン) 可能であることを示します。<br />[Firefox バグ 275174](https://bugzil.la/275174): Windows では、 <code>all-scroll</code> は <code>move</code> 同じです。
           </td>
         </tr>
         <tr style="cursor: col-resize">

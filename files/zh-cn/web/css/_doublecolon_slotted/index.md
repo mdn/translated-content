@@ -3,11 +3,11 @@ title: '::slotted()'
 slug: Web/CSS/::slotted
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
-**`:slotted()`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 用于选定那些被放在 HTML 模板中的元素 (更多请查看 [使用模板和插槽](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots))。
+**`:slotted()`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)用于选定那些被放在 HTML 模板中的元素（更多请查看[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)）。
 
-这个伪类选择器仅仅适用于 [影子节点树 (Shadow Dom)](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)。并且只会选择实际的元素节点，而不包括文本节点。
+这个伪类选择器仅仅适用于[影子节点树（Shadow Dom）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)。并且只会选择实际的元素节点，而不包括文本节点。
 
 ```css
 /* Selects any element placed inside a slot */
@@ -91,4 +91,4 @@ customElements.define('person-details',
 
 ## 参考
 
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web components](/zh-CN/docs/Web/API/Web_components)

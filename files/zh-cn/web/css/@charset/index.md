@@ -3,7 +3,7 @@ title: '@charset'
 slug: Web/CSS/@charset
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 ## 概述
 

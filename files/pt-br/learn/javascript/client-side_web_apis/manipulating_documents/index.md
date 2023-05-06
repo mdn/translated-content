@@ -120,12 +120,13 @@ Esta wiki não suporta JavaScript nas páginas, então não é possível mostrar
   </tbody>
 </table>
 
-> **Nota:** **Notas importantes** sobre esta demonstração:- O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
+> **Nota:** Sobre esta demonstração:
 >
+> - O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
 > - O script trabalha com elementos individuais no DOM. Ele modifica o square's style diretamente. Ele modifica o estilo dos botões indiretamente mudando um atributo.
 > - Em JavaScript, `document.getElementById("square")` é similar em função ao seletor CSS `#square`.
 > - Em JavaScript, `backgroundColor` corresponde à propriedade CSS `background-color`. JavaScript não permite hífens em nomes, então "camelCase" é usada no lugar dele.
-> - Seu browser tem uma regra built-in CSS para `button{{ mediawiki.external('disabled=\"true\"') }}` ela muda a aparência dos botões quando está disabilitado.
+> - Seu browser tem uma regra built-in CSS para `button[disabled="true"]` ela muda a aparência dos botões quando está disabilitado.
 
 | Altere o script para que o quadrado salte 20 cm para a direita quando sua cor mudar e volte para trás quando retornar à cor base. |
 | --------------------------------------------------------------------------------------------------------------------------------- |

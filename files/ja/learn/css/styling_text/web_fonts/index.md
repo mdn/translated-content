@@ -203,11 +203,3 @@ Fontsquirrel によって生成された `@font-face` 構文を調べてみま�
 テキストの装飾の基本についての記事を読み終えたので、今度はモジュール「[コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)」の評価で理解度をテストします。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
-
-## このモジュール内の文書
-
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
-- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
-- **ウェブフォント**
-- [コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

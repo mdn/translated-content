@@ -1,6 +1,6 @@
 ---
 title: audio
-slug: Web/HTML/Element/Audio
+slug: Web/HTML/Element/audio
 ---
 
 ## Sumário

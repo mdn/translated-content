@@ -1,6 +1,6 @@
 ---
 title: non-normatif
-slug: Glossary/non-normative
+slug: Glossary/Non-normative
 tags:
   - Glossaire
   - Infrastructure

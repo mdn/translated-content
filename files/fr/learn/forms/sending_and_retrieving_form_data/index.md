@@ -324,23 +324,3 @@ Si vous voulez en savoir plus par rapport aux applications web, vous pouvez cons
 - [Blog de Chris Shiflett à propos de la sécurité avec PHP](https://shiflett.org/)
 
 {{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les types de saisie HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Autres contrôles de formulaires](/fr/docs/Learn/Forms/Other_form_controls)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudo-classes d'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Form_validation)
-- [Envoi de données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujets avancés
-
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

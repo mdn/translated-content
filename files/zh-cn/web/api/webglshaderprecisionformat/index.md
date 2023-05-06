@@ -33,6 +33,6 @@ gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}

@@ -1,6 +1,6 @@
 ---
 title: Window.getDefaultComputedStyle()
-slug: Web/API/Window/getDefaultComputedStyle
+slug: Web/API/window/getDefaultComputedStyle
 tags:
   - API
   - CSS

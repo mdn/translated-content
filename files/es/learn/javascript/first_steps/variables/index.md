@@ -346,15 +346,3 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 A estas alturas, deberías saber bastante sobre las variables de JavaScript y cómo crearlas. En el próximo artículo, nos centraremos en los números con más detalle, y veremos cómo hacer matemáticas básicas en JavaScript.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
-
-## En este módulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Un primer acercamiento a JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Solución de problemas de JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Almacenar la información que necesitas — Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Útiles métodos de cadena](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluación: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

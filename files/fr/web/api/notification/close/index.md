@@ -1,6 +1,6 @@
 ---
 title: Notification.close()
-slug: Web/API/notification/close
+slug: Web/API/Notification/close
 tags:
   - API
   - API Notifications

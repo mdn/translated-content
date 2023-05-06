@@ -265,7 +265,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### 条件运算符
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### 赋值操作符
 

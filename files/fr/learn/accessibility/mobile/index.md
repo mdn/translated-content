@@ -279,13 +279,3 @@ Dans cet article, nous vous avons fourni des détails sur les problèmes courant
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Article utile sur l'utilisation d'événements tactiles pour que les interactions fonctionnent sur les appareils mobiles.
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
-
-## Dans ce module
-
-- [What is accessibility?](/fr/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/fr/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/fr/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/fr/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/fr/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/fr/docs/Learn/Accessibility/Accessibility_troubleshooting)

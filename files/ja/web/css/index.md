@@ -79,7 +79,7 @@ CSS3 以降、仕様の範囲が大幅に拡大し、CSS モジュールごと�
 
 ## メタバグ
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Firefox バグ 1323667](https://bugzil.la/1323667)
 
 ## 関連情報
 

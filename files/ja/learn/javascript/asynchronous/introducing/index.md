@@ -323,11 +323,3 @@ doOperation();
 このような理由から、現代の非同期 API のほとんどはコールバックを使用しません。その代わり、 JavaScript で非同期プログラミングの基礎となるのはプロミス ({{jsxref("Promise")}}) であり、これが次の記事の主題となります。
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## このモジュール
-
-- **非同期 JavaScript 入門**
-- [プロミスの使い方](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
-- [プロミスベースの API の実装](/ja/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [ワーカー入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [評価課題: アニメーションを順番に再生する](/ja/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

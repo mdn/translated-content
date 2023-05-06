@@ -3,6 +3,8 @@ title: Variable fonts guide
 slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 ---
 
+{{CSSRef}}
+
 **可变字体（Variable fonts）**是 OpenType 字体规范上的演进，它允许将同一字体的多个变体统合进单独的字体文件中。从而无需再将不同字宽、字重或不同样式的字体分割成不同的字体文件。你只需通过 CSS 与一行{{cssxref("@font-face")}}引用，即可获取包含在这个单一文件中的各种字体变体。本文将介绍如何在 Web 中使用可变字体。
 
 > **警告：** 为了能够在您的操作系统上正确地使用可变字体，请确定您的操作系统已经升级到最新版本。例如各 Linux 发行版，应将 Freetype 升级到最新版本。10.13 版本之前的 macOS 不支持可变字体。如果您的操作系统没有升级到最新版，您将无法在网页和 Firefox Developer Tools 中使用可变字体。

@@ -28,7 +28,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 {{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な[\<color>](/ja/docs/Web/CSS/color_value)値を受け入れます。`background-color`は、要素の [**Content box**, **Padding box**](/ja/docs/Learn/CSS/Building_blocks/The_box_model#Parts_of_a_box) の範囲でコンテンツの下に広がります。
 
-次の例では、さまざまな色の値値を使用して、ボックス(`.box`)、見出し(`h2`)、および {{htmlelement("span")}} 要素に背景色を指定しています。
+次の例では、さまざまな色の値を使用して、ボックス(`.box`)、見出し(`h2`)、および {{htmlelement("span")}} 要素に背景色を指定しています。
 
 **利用可能な [\<color>](/ja/docs/Web/CSS/color_value) を使ってみましょう。**
 
@@ -291,24 +291,3 @@ background-position: 10px 20px,  top right;
 次のレッスンでは、ドキュメントの書字モードが CSS とどのように相互作用するかを説明します。テキストが左から右以外の方向に流れる場合に何が起こるのでしょうか？
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
-
-## このモジュール
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

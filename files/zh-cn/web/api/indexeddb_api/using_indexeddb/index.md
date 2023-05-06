@@ -1304,7 +1304,7 @@ input {
 
 > **备注：** `window.indexedDB.open()` 是异步的。该方法在 `success` 事件触发前很长一段时间就执行完毕。这意味着一个调用 `open()` 和 `onsuccess` 的方法（例如 `openDb()`），会在 `onsuccess` 句柄开始运行前就已经返回了。这种情况同样适用于其他请求方法，比如 `transaction()` 和 `get()`。
 
-## 另请参阅
+## 参见
 
 如有需要，请进一步阅读以获取更多信息。
 
@@ -1323,7 +1323,7 @@ input {
 
 ### 库
 
-- [localForage](https://localforage.github.io/localForage/): 一个提供 name:value 的简单语法的客户端数据存储垫片（Polyfill），它基于 IndexedDB 实现，并在不持支 IndexedDB 的浏览器中自动回退只 WebSQL 和 localStorage。
+- [localForage](https://localforage.github.io/localForage/): 一个提供 name:value 的简单语法的客户端数据存储垫片（Polyfill），它基于 IndexedDB 实现，并在不支持 IndexedDB 的浏览器中自动回退只 WebSQL 和 localStorage。
 - [dexie.js](http://www.dexie.org/): 对 IndexedDB 的封装，通过提供更友好和简单语法以进行快速的编码开发。
 - [ZangoDB](https://github.com/erikolson186/zangodb): 一个类 MongoDB 的 IndexedDB 接口实现，提供了诸如过滤、投影、排序、更新和聚合等大多数 MongoDB 常见的特性。
 - [JsStore](http://jsstore.net/): 一个具备类 SQL 语法的简单和先进的 IndexedDB 封装实现。

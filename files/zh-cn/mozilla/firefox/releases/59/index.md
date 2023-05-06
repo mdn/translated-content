@@ -19,7 +19,7 @@ slug: Mozilla/Firefox/Releases/59
 
 ### HTML
 
-- 实现了{{HTMLElement("textarea")}} 元素的 {{htmlattrxref("autocomplete", "textarea")}}属性 . 这使得你可以启用或禁用元素的表单自动填写。
+- 实现了{{HTMLElement("textarea")}} 元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/textarea#autocomplete) 属性。这使得你可以启用或禁用元素的表单自动填写。
 
 ### CSS
 
@@ -37,7 +37,7 @@ _无变化。_
 
 #### 新增 API
 
-- 在 nightly 中默认启用 [Custom elements](/zh-CN/docs/Web/Web_Components/Custom_Elements) v1 ([Firefox bug 1406825](https://bugzil.la/1406825)).
+- 在 nightly 中默认启用 [Custom element](/zh-CN/docs/Web/API/Web_components/Custom_Elements) v1（[Firefox bug 1406825](https://bugzil.la/1406825)）。
 
 #### DOM
 

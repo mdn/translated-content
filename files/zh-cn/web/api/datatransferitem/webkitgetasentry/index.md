@@ -157,7 +157,7 @@ dropzone.addEventListener("drop", function(event) {
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)

@@ -165,7 +165,7 @@ div {
 - `webkitRelativePath` {{non-standard_inline}}
   - : ディレクトリ選択ダイアログ (つまり、 {{htmlattrxref("webkitdirectory", "input/file")}} 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
-> **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see {{bug(1384030)}})。
+> **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
 
 ### 受け付けるファイル型の制限
 

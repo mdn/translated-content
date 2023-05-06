@@ -69,7 +69,7 @@ HTTP 重定向不是定义重定向的唯一方法。还有两个：
 
 ### HTML 重定向机制
 
-HTTP 重定向是创建重定向的最佳方式，但是有时候你并不能控制服务器。针对这些特定的应用情景，可以尝试在页面的 {{HTMLElement("head")}} 中添加一个 {{HTMLElement("meta")}} 元素，并将其 {{htmlattrxref("http-equiv", "meta")}} 属性的值设置为 `refresh`。当显示页面的时候，浏览器会检测该元素，然后跳转到指定的页面。
+HTTP 重定向是创建重定向的最佳方式，但是有时候你并不能控制服务器。针对这些特定的应用情景，可以尝试在页面的 {{HTMLElement("head")}} 中添加一个 {{HTMLElement("meta")}} 元素，并将其 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 属性的值设置为 `refresh`。当显示页面的时候，浏览器会检测该元素，然后跳转到指定的页面。
 
 ```html
 <head>
@@ -77,7 +77,7 @@ HTTP 重定向是创建重定向的最佳方式，但是有时候你并不能控
 </head>
 ```
 
-{{htmlattrxref("content")}} 属性的值开头是一个数字，指示浏览器在等待该数字表示的秒数之后再进行跳转。建议始终将其设置为 `0` 来获取更好的无障碍体验。
+[`content`](/zh-CN/docs/Web/HTML/Global_attributes#content) 属性的值开头是一个数字，指示浏览器在等待该数字表示的秒数之后再进行跳转。建议始终将其设置为 `0` 来获取更好的无障碍体验。
 
 显然，该方法仅适用于 HTML 页面（或类似的页面），然而并不能应用于图片或者其他类型的内容。
 
