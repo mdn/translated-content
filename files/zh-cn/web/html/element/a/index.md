@@ -350,6 +350,7 @@ document
 ### 跳转链接
 **跳转链接**（skip link）是在 {{HTMLElement("body")}} 内容中尽可能早地放置一个链接，指向页面主要内容的开头。通常情况下，CSS 会将跳转链接隐藏在屏幕之外，直到被聚焦。
 
+
 ```html
 <body>
   <a href="#content" class="skip-link">跳转至主要内容</a>
