@@ -6,7 +6,6 @@ slug: Web/HTML/Element/a
 {{HTMLSidebar}}
 
 [HTML](/zh-CN/docs/Web/HTML) **`<a>`** 元素（或称*锚*元素）可以通过[它的 `href` 属性](#href)创建通向其他网页、文件、电子邮件地址、同一页面内的位置或任何其他 URL 的超链接。
-  
 `<a>` 中的内容**应该**指明链接的目标。如果存在 `href` 属性，当 `<a>` 元素聚焦时按下回车键就会激活它。
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
@@ -18,9 +17,7 @@ slug: Web/HTML/Element/a
 - `download`
 
   - : 导致浏览器将链接的 URL 视为下载资源。可以使用或不使用 `filename` 值
-  
     - 如果没有指定值，浏览器会从多个来源决定文件名和扩展名：
-  
       - {{HTTPHeader("Content-Disposition")}} HTTP 标头。
       - URL [路径](/zh-CN/docs/Web/API/URL/pathname)的最后一段。
       - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL) 的 {{domxref("Blob.type")}}。
@@ -340,6 +337,7 @@ document
   <img alt="（PowerPoint 文件）" src="ppt-icon.svg" />
 </a>
 ```
+
 ##### 结果
 
 {{EmbedLiveSample('链接至非 HTML 资源')}}
@@ -350,7 +348,6 @@ document
 - [G201：在打开新窗口时给用户预先警告](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
 ### 跳转链接
-  
 **跳转链接**（skip link）是在 {{HTMLElement("body")}} 内容中尽可能早地放置一个链接，指向页面主要内容的开头。通常情况下，CSS 会将跳转链接隐藏在屏幕之外，直到被聚焦。
 
 ```html
