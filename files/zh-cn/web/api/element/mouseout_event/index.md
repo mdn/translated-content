@@ -1,5 +1,5 @@
 ---
-title: "Element: mouseout 事件"
+title: Element：mouseout 事件
 slug: Web/API/Element/mouseout_event
 ---
 
@@ -28,7 +28,7 @@ onmouseout = (event) => {};
 _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
 
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果按下键盘 <kbd>alt</kbd> 键，返回 `true`。
+  - : 当鼠标事件被触发时，如果 <kbd>alt</kbd> 键已被按下，返回 `true`。
 - {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
   - : 触发鼠标事件时，按下按钮的编号（如果适用）。
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
@@ -38,13 +38,13 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于局部 DOM 元素的 Y 轴坐标。
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果按下键盘 <kbd>control</kbd> 键，返回 `true`。
+  - : 当鼠标事件被触发时，如果 <kbd>control</kbd> 键已被按下，返回 `true`。
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : 返回事件相对于当前层的水平坐标。
 - {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : 返回事件相对于当前层的垂直坐标。
 - {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果按下键盘 <kbd>meta</kbd> 键，返回 `true`。
+  - : 当鼠标事件被触发时，如果 <kbd>meta</kbd> 键已被按下，返回 `true`。
 - {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于最后一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件位置的 X 轴坐标。
 - {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
@@ -64,7 +64,7 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
   - : 鼠标指针相对于屏幕的 Y 轴坐标。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果按下键盘 <kbd>shift</kbd> 键，返回 `true`。
+  - : 当鼠标事件被触发时，如果 <kbd>shift</kbd> 键已被按下，返回 `true`。
 - {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : 产生事件时施加到触摸或平板电脑设备的压力量；该值在 0.0（最小压力）和 1.0（最大压力）之间。你应该使用 {{domxref("PointerEvent")}} 并查看 {{domxref("PointerEvent.pressure", "pressure")}} 属性，而不是使用此废弃的（和非标准）属性。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -138,7 +138,7 @@ test.addEventListener("mouseout", function( event ) {
 
 ## 参见
 
-- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
