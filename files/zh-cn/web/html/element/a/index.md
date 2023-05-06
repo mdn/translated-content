@@ -513,5 +513,5 @@ document
 - {{HTMLElement("link")}} 与 `<a>` 类似，但用于用户看不到的元数据超链接。
 - {{CSSxRef(":link")}} 是一个 CSS 伪类，将匹配 `<a>` 元素，其 `href` 属性中的 URL 用户尚未访问。
 - {{CSSxRef(":visited")}} 是一个 CSS 伪类，将匹配 `<a>` 元素，其 `href` 属性中的 URL 被用户在过去访问过。
-- {{CSSxRef(":any-link")}} 是一个CSS伪类，将匹配带有 `href` 属性的 `<a>` 元素。
+- {{CSSxRef(":any-link")}} 是一个 CSS 伪类，将匹配带有 `href` 属性的 `<a>` 元素。
 - [文本片段](/zh-CN/docs/Web/Text_fragments)是添加到 URL 的用户代理指令，允许内容作者链接到页面上的特定文本，而不需要 ID。
