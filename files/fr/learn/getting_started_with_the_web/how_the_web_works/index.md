@@ -86,14 +86,3 @@ Un peu plus haut dans l'article, nous avons utilisé le terme « paquet » pour 
 Photo de rue : [Street composing](https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ), par [Kevin D](https://www.flickr.com/photos/kdigga/).
 
 {{PreviousMenu("Apprendre/Commencer_avec_le_web/Publier_votre_site_web","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installation des outils de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel sera l'aspect de votre site web ?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
-- [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers)
-- [Les bases du HTML](/fr/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
-- [Les bases de CSS](/fr/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
-- [Les bases de JavaScript](/fr/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
-- [Publier votre site web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
-- [Le fonctionnement du Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)

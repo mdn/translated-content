@@ -59,7 +59,7 @@ Emscripten SDK を取得します。以下の指示に従ってください。<h
 
 ### サンプルコードを実行する
 
-WebAssembly に対応しているブラウザーで `hello.html` を読み込むるだけです。既定で有効なのは Firefox 52, Chrome 57, Opera 44 以降です。
+WebAssembly に対応しているブラウザーで `hello.html` を読み込むだけです。既定で有効なのは Firefox 52, Chrome 57, Opera 44 以降です。
 
 > **メモ:** 生成された HTML ファイル (`hello.html`) をローカルのハードドライブから直接開こうとすると（例: `file://your_path/hello.html`）、 _`both async and sync fetching of the wasm failed` という複数行のエラーメッセージが表示されます。 HTML ファイルを HTTP サーバー (`http://`) で実行する必要があります。詳しくは [ローカルのテストサーバーを設定するには](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server) を参照してください。
 

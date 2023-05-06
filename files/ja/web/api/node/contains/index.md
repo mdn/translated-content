@@ -1,6 +1,8 @@
 ---
-title: Node.contains()
+title: "Node: contains() メソッド"
 slug: Web/API/Node/contains
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -11,8 +13,8 @@ slug: Web/API/Node/contains
 
 ## 構文
 
-```js
-contains(otherNode);
+```js-nolint
+contains(otherNode)
 ```
 
 ### 引数
@@ -34,7 +36,7 @@ contains(otherNode);
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 

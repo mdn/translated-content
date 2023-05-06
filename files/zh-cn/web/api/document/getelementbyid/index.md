@@ -11,14 +11,16 @@ slug: Web/API/Document/getElementById
 
 ## 语法
 
-```js
-var element = document.getElementById(id);
+```js-nolint
+getElementById(id)
 ```
+
+> **备注：** 方法名称中 `"Id"` 的大小写*必须*正确才能使代码正常运行；`getElementByID()` 是*无*效且无法正常运行的，无论它看起来是多么自然。
 
 ### 参数
 
-- `element` 是一个 [Element](/zh-CN/docs/Web/API/Element) 对象。如果当前文档中拥有特定 ID 的元素不存在则返回 null。
-- `id` 是大小写敏感的字符串，代表了所要查找的元素的唯一 ID。
+- `id`
+  - : 所要查找的元素的 ID。ID 是大小写敏感的字符串，且在文档中是唯一的；应只有一个元素具有任何给定的 ID。
 
 ### 返回值
 
@@ -89,7 +91,7 @@ function changeColor(newColor) {
 
 如果没有查找到对应的元素，方法会返回 null。注意 ID 参数是大小写敏感的，所以 document.getElementById("**M**ain") 无法获取到元素\<div id="**m**ain">，因为'M'和'm'是不一样的。
 
-getElementById 方法不会搜索**不在文档中的元素。**当创建一个元素，并且分配 ID 后，你必须要使用[insertBefore](/zh-CN/docs/DOM/Node.insertBefore)或其他类似的方法把元素插入到文档中，之后才能使用 getElementById 获取到：
+getElementById 方法不会搜索**不在文档中的元素**。当创建一个元素，并且分配 ID 后，你必须要使用 {{domxref("Node.insertBefore()")}} 或其他类似的方法把元素插入到文档中，之后才能使用 `getElementById()` 获取到：
 
 ```js
 var element = document.createElement("div");

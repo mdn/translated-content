@@ -37,6 +37,6 @@ SourceMap: /path/to/file.js.map
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Firefox Developer Tools: using a source map](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)

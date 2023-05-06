@@ -113,7 +113,7 @@ interface LockedFile
 - getMetadata(parameters)
   - : 針對後設資料 (Metadata) 而回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此參數亦屬於物件，其中將參數名稱作為物件鍵值，布林值作為數值，進而非同步檢索既有的屬性。無數值則代表 `true`。目前僅有 `size` 與 `lastModified` 為可能的參數。
 - readAsArrayBuffer(size)
-  - : 針對既有` size `的 [ArrayBuffer](/zh-TW/docs/JavaScript/Typed_arrays/ArrayBuffer)，回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。
+  - : 針對既有 `size` 的 [ArrayBuffer](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)，回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。
 - readAsText(size [, encoding])
   - : 針對既有 `size` 的字串，以既定的 `encoding` 回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。[FileReader](/zh-TW/docs/DOM/FileReader) API 中的對等函式，也以相同方式運作。
 

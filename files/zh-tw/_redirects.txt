@@ -374,7 +374,7 @@
 /zh-TW/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Same-origin_policy
 /zh-TW/docs/JavaScript_technologies_overview	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/JavaScript_technologies_overview-redirect-1	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
-/zh-TW/docs/JavaScript_typed_arrays	/zh-TW/docs/Web/JavaScript/Typed_arrays
+/zh-TW/docs/JavaScript_typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-TW/docs/JavaScript_typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/JavaScript_技術簡介	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/JavaScript_正規表達式	/zh-TW/docs/Web/JavaScript/Guide/Regular_expressions
@@ -429,6 +429,7 @@
 /zh-TW/docs/Learn/JavaScript/如何運用	/zh-TW/docs/Learn/JavaScript/Howto
 /zh-TW/docs/Learn/JavaScript/第一步	/zh-TW/docs/Learn/JavaScript/First_steps
 /zh-TW/docs/Learn/Performance/多媒體	/zh-TW/docs/Learn/Performance/Multimedia
+/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data
 /zh-TW/docs/Learn/Server-side/First_steps/介紹	/zh-TW/docs/Learn/Server-side/First_steps/Introduction
 /zh-TW/docs/MDN/About	/zh-TW/docs/MDN/Writing_guidelines
 /zh-TW/docs/MDN/Community/論壇	/en-US/docs/MDN/Community
@@ -590,6 +591,7 @@
 /zh-TW/docs/Web/API/PositionOptions/enableHighAccuracy	/zh-TW/docs/Web/API/Geolocation/getCurrentPosition
 /zh-TW/docs/Web/API/PositionOptions/maximumAge	/zh-TW/docs/Web/API/Geolocation/getCurrentPosition
 /zh-TW/docs/Web/API/PositionOptions/timeout	/zh-TW/docs/Web/API/Geolocation/getCurrentPosition
+/zh-TW/docs/Web/API/URL/createObjectURL	/zh-TW/docs/Web/API/URL/createObjectURL_static
 /zh-TW/docs/Web/API/WebGL_API/Tutorial/WebGL入門	/zh-TW/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /zh-TW/docs/Web/API/Web_Video_Text_Tracks_Format	/zh-TW/docs/Web/API/WebVTT_API
 /zh-TW/docs/Web/API/Window.history	/zh-TW/docs/Web/API/Window/history
@@ -604,6 +606,7 @@
 /zh-TW/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-TW/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-TW/docs/Web/API/document.createTreeWalker	/zh-TW/docs/Web/API/Document/createTreeWalker
 /zh-TW/docs/Web/API/document.querySelector	/zh-TW/docs/Web/API/Document/querySelector
+/zh-TW/docs/Web/Accessibility/ARIA/forms	/zh-TW/docs/Web/Accessibility/ARIA
 /zh-TW/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/zh-TW/docs/Web/Accessibility/ARIA
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
@@ -626,7 +629,7 @@
 /zh-TW/docs/Web/CSS/transform-function/translate3d()	/zh-TW/docs/Web/CSS/transform-function/translate3d
 /zh-TW/docs/Web/CSS/參考	/zh-TW/docs/Web/CSS/Reference
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
-/zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/inheritance
+/zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/Inheritance
 /zh-TW/docs/Web/CSS/語法	/zh-TW/docs/Web/CSS/Syntax
 /zh-TW/docs/Web/Demos_of_open_web_technologies	/zh-TW/docs/Web/Demos
 /zh-TW/docs/Web/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
@@ -719,7 +722,7 @@
 /zh-TW/docs/Web/JavaScript/Guide_old/Regular_Expressions	/zh-TW/docs/Web/JavaScript/Guide/Regular_expressions
 /zh-TW/docs/Web/JavaScript/Guide_old/Working_with_Objects	/zh-TW/docs/Web/JavaScript/Guide/Working_with_objects
 /zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/zh-TW/docs/Learn/JavaScript/Objects
-/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays	/zh-TW/docs/Web/JavaScript/Typed_arrays
+/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/Language_Resources	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
@@ -818,6 +821,7 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Number_物件	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/RegExp_物件	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/String_物件	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String
+/zh-TW/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/zh-TW/docs/Web/JavaScript/Reference/Errors/Bad_return
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function
@@ -832,6 +836,7 @@
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Same-origin_policy
 /zh-TW/docs/Web/JavaScript/Shells	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
+/zh-TW/docs/Web/JavaScript/Typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Data_structures

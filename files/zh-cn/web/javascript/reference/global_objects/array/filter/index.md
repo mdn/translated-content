@@ -19,7 +19,7 @@ filter(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 用来测试数组中每个元素的函数。返回 `true` 表示该元素通过测试，保留该元素，`false` 则不保留。它接受以下三个参数：
+  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)以将元素保留在结果数组中，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`
@@ -27,35 +27,33 @@ filter(callbackFn, thisArg)
     - `array`
       - : 调用了 `filter()` 的数组本身。
 - `thisArg`{{optional_inline}}
-  - : 执行 `callbackFn` 时，用于 `this` 的值。
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
-一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。
+返回给定数组的一部分的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)，其中只包括通过提供的函数实现的测试的元素。如果没有元素通过测试，则返回一个空数组。
 
 ## 描述
 
-`filter()` 为数组中的每个元素调用一次 `callbackFn` 函数，并利用所有使得 `callbackFn` 返回 true 或[等价于 true 的值](/zh-CN/docs/Glossary/Truthy)的元素创建一个新数组。`callbackFn` 只会在已经赋值的索引上被调用，对于那些已经被删除或者从未被赋值的索引不会被调用。那些没有通过 `callbackFn` 测试的元素会被跳过，不会被包含在新数组中。
+`filter()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用提供的 `callbackFn` 函数一次，并构造一个由所有返回[真值](/zh-CN/docs/Glossary/Truthy)的元素值组成的新数组。未通过 `callbackFn` 测试的数组元素不会包含在新数组中。
 
-`callbackFn` 被调用时传入三个参数：
+`callbackFn` 仅对已分配值的数组索引调用。它不会对[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽调用。
 
-1. 元素的值
-2. 元素的索引
-3. 被遍历的数组本身
+`filter()` 方法是一个[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this`，而是返回一个包含与原始数组相同的元素（其中某些元素已被过滤掉）的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。但是，作为 `callbackFn` 的函数可以更改数组。请注意，在第一次调用 `callbackFn` _之前_，数组的长度已经被保存。因此：
 
-如果为 `filter()` 提供一个 `thisArg` 参数，则它会被作为 `callbackFn` 被调用时的 `this` 值。否则，`callbackFn` 的 `this` 值在非严格模式下将是全局对象，严格模式下为 `undefined`。`callbackFn` 函数最终观察到的 `this` 值是根据[通常函数所看到的 `this` 的规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)确定的。
+- 当开始调用 `filter()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
+- 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
+- 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被修改后的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素则不会被访问。
 
-`filter()` 不会改变原数组。
+> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
-`filter()` 遍历的元素范围在第一次调用 `callbackFn` 之前就已经确定了。修改已经访问过的或在确定的范围之外创建的元素，将不会被 `callbackFn` 访问。如果以相同的方式删除数组中的现有元素，则不会访问它们。
-
-> **警告：** 在上一段中描述的并发修改通常会导致难以理解的代码，通常应该避免 (特殊情况除外)。
+`filter()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 
 ### 筛选排除所有较小的值
 
-下例使用 `filter()` 创建了一个新数组，该数组的元素由原数组中值大于 `10` 的元素组成。
+以下示例使用 `filter()` 创建一个过滤数组，该数组删除了所有值小于 `10` 的元素。
 
 ```js
 function isBigEnough(value) {
@@ -118,8 +116,8 @@ console.log('Filtered Array\n', arrByID);
 // 过滤后的数组
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Number of Invalid Entries = ', invalidEntries);
-// Number of Invalid Entries = 5
+console.log('无效条目数量 = ', invalidEntries);
+// 无效条目数量 = 5
 ```
 
 ### 在数组中搜索
@@ -138,6 +136,30 @@ function filterItems(arr, query) {
 
 console.log(filterItems(fruits, 'ap')); // ['apple', 'grapes']
 console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
+```
+
+### 在稀疏数组上使用 filter()
+
+`filter()` 将跳过空槽。
+
+```js
+console.log([1, , undefined].filter((x) => x === undefined)); // [undefined]
+console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
+```
+
+### 在非数组对象上调用 filter()
+
+`filter()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
+// [ 'a', 'b' ]
 ```
 
 ### 影响初始数组（修改、追加和删除）
@@ -190,7 +212,7 @@ console.log(deleteWords);
 
 ## 参见
 
-- [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.filter` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}

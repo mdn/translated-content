@@ -95,8 +95,8 @@ var myObject = {
 
 - [関数とは](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
 - [イベントとは](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [オブジェクトとは](/ja/docs/Learn/JavaScript/Objects/Basics#Object_basics)
-- [JSON とは](/ja/docs/Learn/JavaScript/Objects/JSON#No_really_what_is_JSON)
+- [オブジェクトとは](/ja/docs/Learn/JavaScript/Objects/Basics#オブジェクトの基本)
+- [JSON とは](/ja/docs/Learn/JavaScript/Objects/JSON#json_とは何か)
 - [Web API とは](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#What_are_APIs)
 - [DOM とは](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model)
 
@@ -188,20 +188,20 @@ JavaScript のデバッグに関する詳細については、[JavaScript のよ
 
 ### オブジェクト
 
-- [オブジェクトを作成するには](/ja/docs/Learn/JavaScript/Objects/Basics#Object_basics)
-- [ドット記法とは](/ja/docs/Learn/JavaScript/Objects/Basics#Dot_notation)
-- [角括弧を用いた記法とは](/ja/docs/Learn/JavaScript/Objects/Basics#Bracket_notation)
-- [オブジェクトのメソッドやプロパティを取得、設定するには](/ja/docs/Learn/JavaScript/Objects/Basics#Setting_object_members)
-- [オブジェクトのコンテキストにおける `this` とは何か](/ja/docs/Learn/JavaScript/Objects/Basics#What_is_this)
+- [オブジェクトを作成するには](/ja/docs/Learn/JavaScript/Objects/Basics#オブジェクトの基本)
+- [ドット記法とは](/ja/docs/Learn/JavaScript/Objects/Basics#ドット記法)
+- [角括弧を用いた記法とは](/ja/docs/Learn/JavaScript/Objects/Basics#ブラケット記法)
+- [オブジェクトのメソッドやプロパティを取得、設定するには](/ja/docs/Learn/JavaScript/Objects/Basics#オブジェクトメンバーの設定)
+- [オブジェクトのコンテキストにおける `this` とは何か](/ja/docs/Learn/JavaScript/Objects/Basics#this_とは何か)
 - [オブジェクト指向プログラミングとは](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)
 - [コンストラクターやインスタンスとは何か、それらをどのように作成するか](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Constructors_and_object_instances)
 - [JavaScript でオブジェクトを作成する方法にはどのようなものがあるか](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS#Other_ways_to_create_object_instances)
 
 ### JSON
 
-- [JSON の構造とは、JavaScript から JSON を読み取るには](/ja/docs/Learn/JavaScript/Objects/JSON#JSON_structure)
+- [JSON の構造とは、JavaScript から JSON を読み取るには](/ja/docs/Learn/JavaScript/Objects/JSON#json_の構造)
 - [JSON ファイルをページに読み込むには](/ja/docs/Learn/JavaScript/Objects/JSON#Loading_our_JSON)
-- [JSON からテキストに変換するには、テキストから JSON に変換するには](/ja/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text)
+- [JSON からテキストに変換するには、テキストから JSON に変換するには](/ja/docs/Learn/JavaScript/Objects/JSON#オブジェクトとテキスト間の変換)
 
 ### イベント
 

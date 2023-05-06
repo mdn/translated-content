@@ -432,6 +432,7 @@
 /pt-BR/docs/Learn/Server-side/Django/Sessões	/pt-BR/docs/Learn/Server-side/Django/Sessions
 /pt-BR/docs/Learn/Server-side/Django/Tutorial_website_biblioteca_local	/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website
 /pt-BR/docs/Learn/Server-side/Django/ambiente_de_desenvolvimento	/pt-BR/docs/Learn/Server-side/Django/development_environment
+/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/pt-BR/docs/conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
 /pt-BR/docs/Learn/Server-side/Express_Nodejs/Introdução	/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction
 /pt-BR/docs/Learn/Server-side/Express_Nodejs/ambiente_de_desenvolvimento	/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment
 /pt-BR/docs/Learn/Server-side/First_steps/Introdução	/pt-BR/docs/Learn/Server-side/First_steps/Introduction
@@ -620,10 +621,15 @@
 /pt-BR/docs/Web/API/GlobalEventHandlers/onload	/pt-BR/docs/conflicting/Web/API/Window/load_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/pt-BR/docs/Web/API/Element/lostpointercapture_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onscroll	/pt-BR/docs/Web/API/Element/scroll_event
-/pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
+/pt-BR/docs/Web/API/HTMLContentElement	/pt-BR/docs/conflicting/Web/API/HTMLSlotElement
+/pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
+/pt-BR/docs/Web/API/HTMLContentElement/getDistributedNodes	/pt-BR/docs/Web/API/HTMLSlotElement
+/pt-BR/docs/Web/API/HTMLContentElement/select	/pt-BR/docs/conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
 /pt-BR/docs/Web/API/HTMLElement/contextMenu	/pt-BR/docs/orphaned/Web/API/HTMLElement/contextMenu
+/pt-BR/docs/Web/API/HTMLShadowElement	/pt-BR/docs/orphaned/Web/API/HTMLShadowElement
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
+/pt-BR/docs/Web/API/Navigation_timing_API	/pt-BR/docs/Web/API/Performance_API/Navigation_timing
 /pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/getBattery
 /pt-BR/docs/Web/API/Navigator/battery	/pt-BR/docs/Web/API/Navigator/getBattery
 /pt-BR/docs/Web/API/Node.appendChild	/pt-BR/docs/Web/API/Node/appendChild
@@ -694,8 +700,10 @@
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/pt-BR/docs/Web/Accessibility/ARIA
 /pt-BR/docs/Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /pt-BR/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
+/pt-BR/docs/Web/Accessibility/ARIA/forms	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793
 /pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /pt-BR/docs/Web/Accessibility/ARIA/forms/Dicas_básicas_de_form	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+/pt-BR/docs/Web/Accessibility/ARIA/forms/Multipart_labels	/pt-BR/docs/Web/Accessibility/ARIA/Multipart_labels
 /pt-BR/docs/Web/Accessibility/ARIA/forms/alerts	/pt-BR/docs/conflicting/Web/Accessibility/ARIA
 /pt-BR/docs/Web/Accessibility/ARIA/widgets	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
 /pt-BR/docs/Web/Acessibilidade	/pt-BR/docs/Web/Accessibility
@@ -824,7 +832,8 @@
 /pt-BR/docs/Web/HTML/Controlando_verificacao_ortografica_em_formularios_HTML	/pt-BR/docs/Web/HTML/Global_attributes/spellcheck
 /pt-BR/docs/Web/HTML/Dicas_para_criar_páginas_HTML_de_carregamento_rápido	/pt-BR/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /pt-BR/docs/Web/HTML/Element/Input/data	/pt-BR/docs/Web/HTML/Element/input/date
-/pt-BR/docs/Web/HTML/Element/conteúdo	/pt-BR/docs/Web/HTML/Element/content
+/pt-BR/docs/Web/HTML/Element/content	/pt-BR/docs/Web/HTML/Element/slot
+/pt-BR/docs/Web/HTML/Element/conteúdo	/pt-BR/docs/Web/HTML/Element/slot
 /pt-BR/docs/Web/HTML/Element/figura	/pt-BR/docs/Web/HTML/Element/figure
 /pt-BR/docs/Web/HTML/Elementos_block-level	/pt-BR/docs/Web/HTML/Block-level_elements
 /pt-BR/docs/Web/HTML/Elementos_nlock-level	/pt-BR/docs/Web/HTML/Block-level_elements
@@ -926,7 +935,9 @@
 /pt-BR/docs/Web/SVG/Intensivo_de_Namespaces	/pt-BR/docs/Web/SVG/Namespaces_Crash_Course
 /pt-BR/docs/Web/Tutoriais	/pt-BR/docs/Web/Tutorials
 /pt-BR/docs/Web/WebGL	/pt-BR/docs/Web/API/WebGL_API
-/pt-BR/docs/Web/Web_Components/Usando_custom_elements	/pt-BR/docs/Web/Web_Components/Using_custom_elements
+/pt-BR/docs/Web/Web_Components	/pt-BR/docs/Web/API/Web_components
+/pt-BR/docs/Web/Web_Components/Usando_custom_elements	/pt-BR/docs/Web/API/Web_components/Using_custom_elements
+/pt-BR/docs/Web/Web_Components/Using_custom_elements	/pt-BR/docs/Web/API/Web_components/Using_custom_elements
 /pt-BR/docs/WebAPI/Battery_Status	/pt-BR/docs/Web/API/Battery_Status_API
 /pt-BR/docs/WebAPI/Network_Information	/pt-BR/docs/Web/API/Network_Information_API
 /pt-BR/docs/WebAssembly/Entendendo_o_formato_textual_do_WebAssembly	/pt-BR/docs/WebAssembly/Understanding_the_text_format

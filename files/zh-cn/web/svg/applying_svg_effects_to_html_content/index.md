@@ -3,7 +3,9 @@ title: 在 HTML 内容中应用 SVG 效果
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
-现代浏览器支持在 [CSS](/zh-CN/docs/Web/CSS) 样式中使用 [SVG](/zh-CN/docs/SVG) 来对 HTML 内容应用图像效果。
+{{SVGRef}}
+
+现代浏览器支持在 [CSS](/zh-CN/docs/Web/CSS) 样式中使用 [SVG](/zh-CN/docs/Web/SVG) 来对 HTML 内容应用图像效果。
 
 你可以在同一文件中使用 SVG 样式，也可以通过外部样式表引入。有三个属性可以使用： [`mask`](/zh-CN/docs/Web/CSS/mask), [`clip-path`](/zh-CN/docs/Web/CSS/clip-path), 和 `filter`。
 
@@ -17,7 +19,7 @@ slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 <style>p { mask: url(#my-mask); }</style>
 ```
 
-在上面的例子中，所有段落会被[ID](/zh-CN/docs/Web/HTML/Global_attributes/id) 为`my-mask 的`[SVG `<mask>`](/zh-CN/docs/Web/SVG/Element/mask)遮罩。
+在上面的例子中，所有段落会被 [ID](/zh-CN/docs/Web/HTML/Global_attributes/id) 为 `my-mask` 的 [SVG `<mask>`](/zh-CN/docs/Web/SVG/Element/mask) 遮罩。
 
 ### 示例：Masking
 
@@ -248,6 +250,7 @@ SVG 还可以用于添加比纯 HTML 文本更动态、更灵活的文本添加�
 
 ## 参见
 
-- [SVG](/zh-CN/docs/SVG)
-- [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
-- ~~[SVG External Document References](/web-tech/2008/10/10/svg-external-document-references)~~ (blog post) ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))
+- [SVG](/zh-CN/docs/Web/SVG)
+- {{CSSXref('clip-path')}} 属性
+- {{CSSXref('mask')}} 属性
+- [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)

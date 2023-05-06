@@ -51,7 +51,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
     When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted usage in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/HTML/CORS_settings_attributes) for additional information.
 
 - {{htmlattrdef("height")}}
-  - : The height of the image in {{HTMLVersionInline(5)}} CSS pixels, or {{HTMLVersionInline(4)}} in pixels or as a percentage.
+  - : The height of the image in HTML 5 CSS pixels, or HTML 4 in pixels or as a percentage.
 - {{htmlattrdef("hspace")}} {{deprecated_inline}}
   - : The number of pixels of white space to insert to the left and right of the image.
 - {{htmlattrdef("ismap")}}

@@ -217,7 +217,7 @@ Web 组件是一种与 HTML 相关联的技术，简单来说，它允许开发�
 
 | 元素                         | 描述                                                                                                                                                 |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("slot")}}     | 作为 [Web 组件](/zh-CN/docs/Web/Web_Components)技术套件的一部分，该元素是 web 组建内的占位符，你可以使用你自己的标记填充它，从而让你创建单独的 DOM 树并一起呈现它们。 |
+| {{HTMLElement("slot")}}     | 作为 [Web 组件](/zh-CN/docs/Web/API/Web_components)技术套件的一部分，该元素是 web 组建内的占位符，你可以使用你自己的标记填充它，从而让你创建单独的 DOM 树并一起呈现它们。 |
 | {{HTMLElement("template")}} | 一种保存 HTML 的机制，它不会在加载页面时立即渲染，但随后可以在运行时使用 JavaScript 实例化。                                                                    |
 
 ## 过时的和弃用的元素
@@ -232,7 +232,7 @@ Web 组件是一种与 HTML 相关联的技术，简单来说，它允许开发�
 | {{HTMLElement("big")}}       | 以比周围文本大一号的字体渲染其封闭的文本（例如，`medium` 变 `large`）。最大不超过浏览器允许的最大字体。                                                                                                                                                               |
 | {{HTMLElement("blink")}}     | 使包含其中的文本缓慢闪烁。                                                                                                                                                                                                                                   |
 | {{HTMLElement("center")}}    | 以水平居中的形式显示包含在元素中的块级或内联内容。                                                                                                                                                                                                              |
-| {{HTMLElement("content")}}   | [Web 组件](/zh-CN/docs/Web/Web_Components)技术套件的废弃部分——用于 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 内部作为插入点，并且不可用于任何正常的 HTML。现在已被 {{HTMLElement("slot")}} 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。 |
+| {{HTMLElement("content")}}   | [Web 组件](/zh-CN/docs/Web/API/Web_components)技术套件的废弃部分——用于 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 内部作为插入点，并且不可用于任何正常的 HTML。现在已被 {{HTMLElement("slot")}} 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。 |
 | {{HTMLElement("dir")}}       | 被作为一个文件和/或文件夹的目录的容器，可能还有用户代理应用的样式与图标。请不要使用此过时的元素；请使用用于列表的 {{HTMLElement("ul")}} 元素代替，包含文件列表。                                                                                                             |
 | {{HTMLElement("font")}}      | 定义内容的字体大小、颜色与外观。                                                                                                                                                                                                                              |
 | {{HTMLElement("frame")}}     | 定义一个特定区域，另一个 HTML 文档可以在里面展示。frame 应该在 {{HTMLElement("frameset")}} 中使用。                                                                                                                                                               |
@@ -248,7 +248,7 @@ Web 组件是一种与 HTML 相关联的技术，简单来说，它允许开发�
 | {{HTMLElement("plaintext")}} | 将起始标签后面的任何东西渲染为纯文本，忽略随后的任何 HTML 内容。它没有闭合标签，因为任何后面的东西都会看做纯文本。                                                                                                                                                       |
 | {{HTMLElement("rb")}}        | 用于分隔 ruby 注解的基本文本组件（即正在注解的文本）。一个 `<rb>` 元素应该包装基本文本的每个单独的原子段。                                                                                                                                                            |
 | {{HTMLElement("rtc")}}       | 包含文字的语义注解，用于在 {{HTMLElement("rb")}} 元素中展示。{{HTMLElement("rb")}} 元素可以拥有发音（{{HTMLElement("rt")}}）和语义（{{HTMLElement("rtc")}}）注解。                                                                                                  |
-| {{HTMLElement("shadow")}}    | [Web 组件](/zh-CN/docs/Web/Web_Components)技术套件的废弃部分——目的是用作 Shadow DOM 插入点。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。                                                                                                  |
+| {{HTMLElement("shadow")}}    | [Web 组件](/zh-CN/docs/Web/API/Web_components)技术套件的废弃部分——目的是用作 Shadow DOM 插入点。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。                                                                                                  |
 | {{HTMLElement("spacer")}}    | 它可以向页面插入空白间隔。它由 Netscape 设计，用于实现单像素布局图像的相同效果，Web 设计师用它来向页面添加空白，而不需要实际使用图片。但是，`<spacer>` 不再受任何主流浏览器支持，并且相同效果可以简单由 CSS 实现。                                                                 |
 | {{HTMLElement("strike")}}    | 在文本上放置水平的删除线。                                                                                                                                                                                                                                  |
 | {{HTMLElement("tt")}}        | 创建内联文本，使用用户代理默认的等宽字体渲染。这个元素用于给文本排版，使其等宽展示，就像电报、纯文本屏幕或行式打印机那样。                                                                                                                                                |

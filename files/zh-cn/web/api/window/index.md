@@ -53,7 +53,7 @@ See also the [DOM Interfaces](/zh-CN/docs/DOM/DOM_Reference).
 - {{domxref("Window.content")}} 和 `Window._content` {{Non-standard_inline}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回当前 window 的 content 元素的引用。通过带下划线的过时变种方法不再可以获得 Web content。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
+  - : returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/zh-CN/docs/Web/API/Web_components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : 返回浏览器 crypto 对象。
 - {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}

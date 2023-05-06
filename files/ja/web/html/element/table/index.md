@@ -553,7 +553,7 @@ for (let table of document.querySelectorAll('table')) {
 
 これらのスタイルを見ると、表の {{cssxref("display")}} プロパティが `block` に設定されていることに気づくでしょう。これによりスクロールが可能になりますが、テーブルはその完全性の一部を失い、テーブルのセルが可能な限り小さくなろうとします。この問題を軽減するために、`<tbody>` の {{cssxref("white-space")}} を `nowrap`に設定しました。しかし、 `<thead>` ではこれを行わないようにしています。これは、長いタイトルで列がデータを表示するために必要以上に広くなるのを避けるためです。
 
-下にスクロールしている間、表のヘッダーをページ上に保持するために、 {{cssxref("position")}} を `<th>` 要素の上で粘着するように設定しました。 {{cssxref("border-collapse")}}} を `collapse` に設定して **いない**ことに注意してください。
+下にスクロールしている間、表のヘッダーをページ上に保持するために、 {{cssxref("position")}} を `<th>` 要素の上で粘着するように設定しました。 {{cssxref("border-collapse")}} を `collapse` に設定して **いない**ことに注意してください。
 
 ```css
 table,

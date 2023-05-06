@@ -207,7 +207,6 @@ slug: Web/HTML/Element/input/submit
 
 - {{HTMLElement("input")}} 元素和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - [表单与按钮](/zh-CN/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-- [表单无障碍](/zh-CN/docs/Web/Accessibility/ARIA/forms)
 - [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("button")}} 元素
 - [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -1,90 +1,108 @@
 ---
 title: オブジェクト構築の練習
 slug: Learn/JavaScript/Objects/Object_building_practice
+l10n:
+  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 ここまでの記事で JavaScript オブジェクトの根幹部に関する理論と文法の詳細についてすべてを見てきて、始めていくのに十分な基礎固めをしました。この記事では実練習を行ない、独自の JavaScript オブジェクトを作っていくための実践をしていきましょう — 楽しくてカラフルなものを。
 
-| 前提条件: | 基礎的なコンピューターの知識、HTML と CSS への基本的な理解、基礎的な JavaScript の理解 ([JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)と [JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)を参照) とオブジェクト指向 JavaScript の基本 ([JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Building_blocks)を参照)。 |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | オブジェクトの使い方とオブジェクト指向のテクニックを実世界のコンテストで練習する。                                                                                                                                                                                                                                                                         |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        基礎的なコンピューターの知識、HTML と CSS への基本的な理解、基礎的な JavaScript の理解（<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>と <a href="/ja/docs/Learn/JavaScript/Building_blocks">JavaScript の構成要素</a>を参照）とオブジェクト指向 JavaScript の基本（<a href="/ja/docs/Learn/JavaScript/Objects/Basics">JavaScript オブジェクトの基本</a>を参照）。</td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        オブジェクトの使い方とオブジェクト指向のテクニックを実世界のコンテストで練習する。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## ボールを弾ませよう
 
 この記事では伝統的な「弾むボール」のデモを作ってみて、JavaScript でどれほどオブジェクトが役に立つかお見せしましょう。小さなボールは画面じゅうを跳ねまわり、それぞれがぶつかると色が変わります。完成したものはこんな風に見えることでしょう:
 
-![](bouncing-balls.png)
+![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
 
-この例では画面にボールを描くのに [Canvas API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) を使い、画面をアニメーションさせるのに [requestAnimationFrame](/ja/docs/Web/API/window/requestAnimationFrame) を使います — これらの API について事前の知識は不要です。この記事を読み終わる頃にはこれら API についてもっと知りたくなっているだろうと期待してますが。道中では、イカしたオブジェクトを活用して、ボールを壁で弾ませる、それぞれがぶつかった事を判定する(**衝突判定**という呼び名で知られています)といった上手いテクニックをいくつかお見せしていきます。
+この例では画面にボールを描くのに [キャンバス API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) を使い、画面をアニメーションさせるのに [requestAnimationFrame](/ja/docs/Web/API/window/requestAnimationFrame) を使います — これらの API について事前の知識は不要です。この記事を読み終わる頃にはこれら API についてもっと知りたくなっているだろうと期待してますが。道中では、イカしたオブジェクトを活用して、ボールを壁で弾ませる、それぞれがぶつかった事を判定する(**衝突判定**という呼び名で知られています)といった上手いテクニックをいくつかお見せしていきます。
 
 ## 始めに
 
-始める前に [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), と [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js) ファイルのローカルコピーを作成してください。これらにはそれぞれ、以下が含まれています:
+始める前に [`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css), と [`main.js`](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main.js) ファイルのローカルコピーを作成してください。これらにはそれぞれ、以下が含まれています:
 
-1. とても簡素な HTML 文書で、{{HTMLElement("h1")}} 要素と、ボールを描画するための {{HTMLElement("canvas")}} 要素と、この HTML に CSS と JavaScript を適用するための要素だけからなります。
+1. とても簡素な HTML 文書で、{{HTMLElement("Heading_Elements", "h1")}} 要素と、ボールを描画するための {{HTMLElement("canvas")}} 要素と、この HTML に CSS と JavaScript を適用するための要素だけからなります。
 2. とても簡単なスタイル、主には`<h1>`のスタイルとポジションを指定し、スクロールバーやページ端周辺のマージンを消す(素敵にきれいに見せるため)ためのもの。
 3. `<canvas>`要素を設定し、これから使うことになる汎用の関数を提供する若干の JavaScript。
 
-スクリプトの最初の部分はこんな具合です:
+スクリプトの最初の部分はこのようになります。
 
 ```js
-const canvas = document.querySelector('canvas');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-const ctx = canvas.getContext('2d');
-
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight;
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
 ```
 
-このスクリプトでは`<canvas>`要素への参照を取得し、これに対して [`getContext()`](/ja/docs/Web/API/HTMLCanvasElement/getContext) メソッドを使って描画していくためのコンテキストを取得します。得られる定数 (`ctx`) はキャンバスの描画可能領域を直接表現しており、ここに二次元の形状を書き込む事ができます。
+このスクリプトでは `<canvas>` 要素への参照を取得し、これに対して [`getContext()`](/ja/docs/Web/API/HTMLCanvasElement/getContext) メソッドを使って描画していくためのコンテキストを取得します。得られる定数 (`ctx`) はキャンバスの描画可能領域を直接表現しており、ここに二次元の形状を書き込む事ができます。
 
-次に `width` と `height` 二つの定数をセットし、キャンバス要素の幅と高さ(`canvas.width` と `canvas.height` プロパティで表わされます)をブラウザーのビューポートの幅と高さ(ウェブページが表示される領域です — {{domxref("Window.innerWidth")}} と{{domxref("Window.innerHeight")}} プロパティから取得できます)に等しくします。
+次に `width` と `height` の 2 つの定数をセットし、キャンバス要素の幅と高さ(`canvas.width` と `canvas.height` プロパティで表わされます)をブラウザーのビューポートの幅と高さ(ウェブページが表示される領域です — {{domxref("Window.innerWidth")}} と{{domxref("Window.innerHeight")}} プロパティから取得できます)に等しくします。
 
-変数値をさっと全部同じにするのに、代入が連鎖している事に注意してください — これで全く問題ありません。
+変数の値をさっと全部同じにするのに、代入が連鎖していることに注意してください。これで全く問題ありません。
 
-初期化スクリプトの最後の部分はこんなのです:
+それから、2 つのヘルパー関数を設置します。
 
 ```js
 function random(min, max) {
-  const num = Math.floor(Math.random() * (max - min + 1)) + min;
-  return num;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomRGB() {
+  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 ```
 
-この関数は二つの数を引数に取り、二つ数の範囲内の乱数を戻します。
+`random()` 関数は、2 つの数値を引数に取り、その間の範囲の乱数を返します。`randomRGB()` 関数は、[`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 文字列として表されるランダムな色を生成します。
 
-## 我々のプログラム用のボールを一つモデル化する
+## プログラム用のボールを一つモデル化する
 
-我々のプログラムでは画面中を跳ねまわるたくさんのボールがあります。これらのボールはどれも同じルールで動くので、1 つのオブジェクトで表わすのが理に叶っています。まずはコードの最後に以下のコンストラクターを追加するところから始めましょう。
+我々のプログラムでは画面中を跳ねまわるたくさんのボールがあります。これらのボールはどれも同じルールで動くので、1 つのオブジェクトで表わすのが理に叶っています。まずはコードの最後に以下のクラス定義を追加するところから始めましょう。
 
 ```js
-function Ball(x, y, velX, velY, color, size) {
-  this.x = x;
-  this.y = y;
-  this.velX = velX;
-  this.velY = velY;
-  this.color = color;
-  this.size = size;
+class Ball {
+  constructor(x, y, velX, velY, color, size) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+    this.color = color;
+    this.size = size;
+  }
 }
 ```
 
-ここではいくつかの引数を用意し、我々のプログラムの中で個々のボールが動作するのに必要なプロパティを定義しています:
+今のところ、このクラスにはコンストラクターだけが含まれており、このコンストラクターで、プログラム内で機能するために各ボールが必要とするプロパティを初期化することができます。
 
-- `x`、`y`座標 — ボールが画面のどこからスタートするか表わす水平と垂直の座標。これは 0(画面左上隅)からブラウザービューポートの幅と高さの(画面右下隅)間の値を取ります。
-- 水平と垂直方向の速度(`velX` と `velY`) — 個々のボールには水平と垂直方向の速度が与えられます。実際にはアニメーションが開始されると、これらの値が `x`/`y`座標値に定期的に加算され、各フレームでこの値だけ移動していきます。
+- `x`、`y`座標 — ボールが画面のどこからスタートするか表わす水平と垂直の座標。これは 0（画面左上隅）からブラウザービューポートの幅と高さの（画面右下隅）間の値を取ります。
+- 水平と垂直方向の速度 (`velX` と `velY`) — 個々のボールには水平と垂直方向の速度が与えられます。実際にはアニメーションが開始されると、これらの値が `x`/`y`座標値に定期的に加算され、各フレームでこの値だけ移動していきます。
 - `color` — 個々のボールには色がつけられます。
 - `size` — 個々のボールには大きさがあります — ピクセルを単位とする半径で表わします。
 
-これはプロパティを取り扱いましたが、メソッドはどうしましょう? プログラムの中ではボールに実際に何かさせたいわけです。
+これはプロパティを取り扱いましたが、メソッドはどうしましょうか？プログラムの中ではボールに実際に何かさせたいわけです。
 
 ### ボールを描画する
 
-まず以下の `draw()` メソッドを `Ball()` のプロトタイプ(`prototype`)に追加しましょう:
+まず、以下の `draw()` メソッドを `Ball` クラスに追加しましょう。
 
 ```js
-Ball.prototype.draw = function() {
+draw() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -107,30 +125,30 @@ Ball.prototype.draw = function() {
 これでオブジェクトをテストしてみられるようになりました。
 
 1. コードを保存し、HTML ファイルをブラウザーで読み込みます。
-2. ブラウザーの JavaScript コンソールを開いて、ページをリフレッシュし、キャンバスのサイズがコンソール分小さくなったビューポート領域に合うようにします。
+2. ブラウザーの JavaScript コンソールを開いて、ページを再読み込みし、キャンバスのサイズがコンソール分小さくなったビューポート領域に合うようにします。
 3. 次をタイプして、新しいボールのインスタンスを作成します:
 
-    ```js
-    let testBall = new Ball(50, 100, 4, 4, 'blue', 10);
-    ```
+   ```js
+   const testBall = new Ball(50, 100, 4, 4, "blue", 10);
+   ```
 
-4. そのメンバを呼び出して見てください:
+4. そのメンバを呼び出して見てください。
 
-    ```js
-    testBall.x
-    testBall.size
-    testBall.color
-    testBall.draw()
-    ```
+   ```js
+   testBall.x;
+   testBall.size;
+   testBall.color;
+   testBall.draw();
+   ```
 
 5. 最後の行を入力すると、キャンバスのどこかにボールが表示されたはずです。
 
-### ボールのデータを更新する
+### ボールのデータの更新
 
-ボールを座標に表示できるようになりましたが、ボールを実際に移動させるには、何らかの更新するための関数が必要です。JavaScript ファイルの最後に以下のコードを追加し、`update()` メソッドを `Ball()` の `prototype` に追加します:
+ボールの位置を描画することはできますが、実際にボールを移動させるには、何らかの更新関数が必要です。以下のコードを `Ball` のクラス定義の中に追加してください。
 
 ```js
-Ball.prototype.update = function() {
+update() {
   if ((this.x + this.size) >= width) {
     this.velX = -(this.velX);
   }
@@ -152,16 +170,16 @@ Ball.prototype.update = function() {
 }
 ```
 
-関数の頭から 4 つの部分でボールがキャンバスの端に達したかどうかチェックします。もしそうであれば、関連する速度の向きを反転してボールが反対の向きに移動するようにします。つまり例えば、ボールが上方向に移動していたならば(`velY` が正)、垂直方向の速度をボールが下方向に移動するように変更します(`velY` を負に)。(**訳注**: 左上が原点、右下が座標の正方向ならば、ボールが上に移動する時の velY は負のはずだけど…)
+関数の頭から 4 つの部分でボールがキャンバスの端に達したかどうかチェックします。もしそうであれば、関連する速度の向きを反転してボールが反対の向きに移動するようにします。つまり例えば、ボールが上方向に移動していた（`velY` が負）ならば、垂直方向の速度をボールが下方向に移動するように（`velY` を正に）変更します。
 
-4 つの場合で、次のことを確認しています:
+4 つの場合で、次のことを確認しています。
 
-- `x`座標がキャンバスの幅より大きいか (ボールは右端から飛び出そうとしている)
-- `x`座標が 0 より小さいか (ボールは左端から飛び出そうとしている)
-- `y`座標がキャンバスの高さより大きいか (ボールは下端から飛び出そうとしている)
-- `y`座標が 0 より小さいか (ボールは上端から飛び出そうとしている)
+- `x` 座標がキャンバスの幅より大きいか (ボールは右端から飛び出そうとしている)
+- `x` 座標が 0 より小さいか (ボールは左端から飛び出そうとしている)
+- `y` 座標がキャンバスの高さより大きいか (ボールは下端から飛び出そうとしている)
+- `y` 座標が 0 より小さいか (ボールは上端から飛び出そうとしている)
 
-それぞれの場合で計算にボールの `size` を含めていますが、これは `x`/`y`座標はボールの中心ですが、ボールの端のところで周囲から跳ね返って欲しいからです — 跳ね返る前に画面外にめり込んで欲しくないからです。
+それぞれの場合で計算にボールの `size` を含めていますが、これは `x`/`y` 座標はボールの中心ですが、ボールの端のところで周囲から跳ね返って欲しいからです — 跳ね返る前に画面外にめり込んで欲しくないからです。
 
 最後の二行では `velX` を `x` 座標に、`velY` を `y` 座標に加算しています — 結果ボールはこのメソッドが呼ばれる毎に移動します。
 
@@ -171,98 +189,109 @@ Ball.prototype.update = function() {
 
 さあ、楽しい事をやりましょう。では、キャンバスにボールを追加し、アニメーションさせるところから始めましょう。
 
-1. 最初に、ボールを全部保存しておく場所がどこかに必要です。以下がこれをやってくれます — あなたのコードの最後に追加してください:
+最初に、ボールを全部保存しておく場所がどこかに必要です。以下がこれをやってくれます — あなたのコードの最後に追加してください:
 
-    ```js
-    let balls = [];
+```js
+const balls = [];
 
-    while (balls.length < 25) {
-      let size = random(10,20);
-      let ball = new Ball(
-        // ball position always drawn at least one ball width
-        // away from the edge of the canvas, to avoid drawing errors
-        random(0 + size,width - size),
-        random(0 + size,height - size),
-        random(-7,7),
-        random(-7,7),
-        'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
-        size
-      );
+while (balls.length < 25) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size
+  );
 
-      balls.push(ball);
-    }
-    ```
+  balls.push(ball);
+}
+```
 
-    `while` ループは、我々の `random()`関数で作成したランダムな値を使った新しい `Ball()` のインスタンスを作成し、ボールの配列の後ろに `push()` して追加していきますが、これは配列中のボールの数が 25 に満たない間まで繰り返されます。`balls.length < 25` の数字をいろいろ変えれば表示されるボールの数を増やしたり減らしたりできます。あなたのコンピューターとブラウザーがどれだけ速いかによりますが、ボールを数千にするとアニメーションはかなり遅くなります! 注意してね。
+`while` ループは、 `random()` および `randomRGB()` 関数で作成したランダムな値を使って新しい `Ball()` のインスタンスを作成し、ボールの配列の後ろに `push()` して追加していきますが、これは配列中のボールの数が 25 に満たない間まで繰り返されます。`balls.length < 25` の数字をいろいろ変えれば、配列の中のボールの数を増やしたり減らしたりできます。コンピューターとブラウザーの処理能力によりますが、ボールを数千にするとアニメーションはかなり遅くなります! 注意してね。
 
-2. 以下をあなたのコードの末尾に追加してください:
+次に、以下をあなたのコードの末尾に追加してください。
 
-    ```js
-    function loop() {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-      ctx.fillRect(0, 0, width, height);
+```js
+function loop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
 
-      for (let i = 0; i < balls.length; i++) {
-        balls[i].draw();
-        balls[i].update();
-      }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+  }
 
-      requestAnimationFrame(loop);
-    }
-    ```
+  requestAnimationFrame(loop);
+}
+```
 
-    ものをアニメーションさせるすべてのプログラムには、大概アニメーションループがあり、プログラム内の情報を更新して、アニメーションの各フレームでその結果を表示します。これは大半のゲームや類似するプログラムの基本になります。コード中の `loop()` 関数は以下の事を行ないます:
+ものをアニメーションさせるすべてのプログラムには、大概アニメーションループがあり、プログラム内の情報を更新して、アニメーションの各フレームでその結果を表示します。これは大半のゲームや類似するプログラムの基本になります。コード中の `loop()` 関数は以下の事を行ないます:
 
-    - キャンバスの塗り潰し色を半透明の黒にし、その色でキャンバスの幅と高さいっぱいの長方形を `fillRect()` で描きます(これの 4 つの引数は始点の座標と、描画する長方形の幅と高さになります)。これで次のフレームを描く前に、前のフレームで描いた内容を見えなくします。これをしないと、ボールじゃなくて長い蛇がキャンバスの中を這い回る様を見る事になります! 塗り潰す色は半透明の `rgba(0,0,0,0.25)` なので、以前の何フレーム分かがかすかに残り、ボールが移動した後の軌跡を表現します。もし 0.25 を 1 に変更すると、軌跡は全く見えなくなります。この値を変えて、どんな効果になるか見てみてください。
-    - ループで `balls`配列のボール全部をなめてそれぞれのボールの `draw()` と `update()` 関数を実行し、それぞれを画面に描画してから、次のフレームに備えて必要な位置と速度の更新を行います。
-    - この関数を `requestAnimationFrame()` メソッドを使って再実行します — このメソッドが繰り返し実行され同じ関数名を与えられると、その関数がスムースなアニメーションを行なうために毎秒設定された回数実行されます。これはたいてい再帰的に行われます — つまり関数は毎回その関数自身を呼び出すので、何度も何度も繰り返し実行されます。
+- キャンバスの塗り潰し色を半透明の黒にし、その色でキャンバスの幅と高さいっぱいの長方形を `fillRect()` で描きます(これの 4 つの引数は始点の座標と、描画する長方形の幅と高さになります)。これで次のフレームを描く前に、前のフレームで描いた内容を見えなくします。これをしないと、ボールじゃなくて長い蛇がキャンバスの中を這い回る様を見る事になります! 塗り潰す色は半透明の `rgba(0,0,0,0.25)` なので、以前の何フレーム分かがかすかに残り、ボールが移動した後の軌跡を表現します。もし 0.25 を 1 に変更すると、軌跡は全く見えなくなります。この値を変えて、どんな効果になるか見てみてください。
+- ループで `balls`配列のボール全部をなめてそれぞれのボールの `draw()` と `update()` 関数を実行し、それぞれを画面に描画してから、次のフレームに備えて必要な位置と速度の更新を行います。
+- この関数を `requestAnimationFrame()` メソッドを使って再実行します — このメソッドが繰り返し実行され同じ関数名を与えられると、その関数がスムースなアニメーションを行なうために毎秒設定された回数実行されます。これはたいてい再帰的に行われます — つまり関数は毎回その関数自身を呼び出すので、何度も何度も繰り返し実行されます。
 
-3. 最後に、あなたのコードの最後に次の行を追加します — アニメーションを開始するために、一旦は関数を呼ぶ必要があるのです。
+最後に、コードの最後に次の行を追加します — アニメーションを開始するために、一旦は関数を呼ぶ必要があるのです。
 
-    ```js
-    loop();
-    ```
+```js
+loop();
+```
 
-基本としてはこんなところ — セーブしてリフレッシュして、ボールがはずむのをテストしてみてください!
+基本としてはこんなところ — 保存して再読み込みし、ボールがはずむのをテストしてみてください。
 
-## 衝突判定を追加する
+## 衝突検出の追加
 
 さあ、もうちょっと面白くするため、プログラムに衝突判定を追加して、ボールに他のボールとぶつかったらどうするのか教えましょう。
 
-1. 最初に、以下のメソッド定義を `update()` メソッドを定義した箇所(つまり `Ball.prototype.update` ブロック)の下に追加します
+まず、`Ball` クラスに以下のようなメソッド定義を追加します。
 
-    ```js
-    Ball.prototype.collisionDetect = function() {
-      for (let j = 0; j < balls.length; j++) {
-        if (!(this === balls[j])) {
-          const dx = this.x - balls[j].x;
-          const dy = this.y - balls[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+```js
+collisionDetect() {
+  for (const ball of balls) {
+    if (this !== ball) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < this.size + balls[j].size) {
-            balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
-          }
-        }
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
       }
     }
-    ```
+  }
+}
+```
 
-2. このメソッドはちょっとばかり複雑なので、今はどんな動作をしているのか正確に理解できなくても構いません。説明していきます:
+このメソッドはちょっとばかり複雑なので、今はどんな動作をしているのか正確に理解できなくても構いません。説明していきます。
 
-    - それぞれのボールで、他のボールそれぞれとこのボールが衝突していないか調べなければなりません。そのために、`balls[]`配列すべてのボールを回すために別の `for` ループを始めます。
-    - 内側のループに入ってすぐ、`if`文でループで回しているボールがチェックしているボールと同じか調べています。ボールがそれ自体とぶつかっているかチェックしたくないですから! これのために、現在のボール(collisionDetect メソッドが実行されているボールです)がループ中のボール(現在の collisionDetect メソッド内のループのくりかえし中で参照されているボール)と一致しているかチェックします。`!`を使って等価性チェックを逆にしているので、`if` 文の中のコードはボールが**同じでない**ときだけ実行されます。
-    - そして二つの円が衝突していないか調べるための一般的なアルゴリズムを使っています。基本的には円ないの領域が重なっているかチェックしています。これについて詳しくは [2 次元の衝突判定](/ja/docs/Games/Techniques/2D_collision_detection)で解説されています。
-    - もし衝突が検出されたら、内側の `if`文の中のコードが実行されます。この場合では、両方のボールの `color` プロパティをランダムな新しい色に設定しているだけです。もっと複雑なこと、現実っぽくボールを互いに跳ね返らせたりもできたでしょうが、これを実装したとするともっとずっとに複雑なったでしょう。そのような物理シミュレーションには、[PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/) などのゲームや物理用のライブラリを使う開発者が多いです。
+- それぞれのボールで、他のボールそれぞれとこのボールが衝突していないか調べなければなりません。そのため、別な `for...of` を開始し、`balls[]` 配列内のすべてのボールを回します。
+- 内側のループに入ってすぐ、`if` 文でループで回しているボールがチェックしているボールと同じか調べています。ボールがそれ自体とぶつかっているかチェックしたくないですから! これのために、現在のボール（collisionDetect メソッドが実行されているボールです）がループ中のボール（現在の collisionDetect メソッド内のループのくりかえし中で参照されているボール）と一致しているかチェックします。`!` を使って等価性チェックを逆にしているので、`if` 文の中のコードはボールが**同じでない**ときだけ実行されます。
+- そして二つの円が衝突していないか調べるための一般的なアルゴリズムを使っています。基本的には円ないの領域が重なっているかチェックしています。これについて詳しくは [2 次元の衝突判定](/ja/docs/Games/Techniques/2D_collision_detection)で解説されています。
+- もし衝突が検出されたら、内側の `if` 文の中のコードが実行されます。この場合では、両方のボールの `color` プロパティをランダムな新しい色に設定しているだけです。もっと複雑なこと、現実っぽくボールを互いに跳ね返らせたりもできたでしょうが、これを実装したとするともっとずっとに複雑なったでしょう。そのような物理シミュレーションには、[PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/) などのゲームや物理用のライブラリーを使う開発者が多いです。
 
-3. あなたはアニメーションの各フレーム毎にこのメソッドを呼ばなければなりません。以下を `balls[i].update();` の行の後に追加してください:
+アニメーションの各フレーム毎にこのメソッドを呼び出さなければなりません。`loop()` 関数を更新して、`ball.collisionDetect()` を `ball.update()` の後に呼び出すようにします。
 
-    ```js
-    balls[i].collisionDetect();
-    ```
+```js
+function loop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
 
-4. 保存とデモのリフレッシュをして、ボールがぶつかった時に色が変わるのを見てください!
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
 
-> **メモ:** この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください([ライブ実行版](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます)。
+  requestAnimationFrame(loop);
+}
+```
+
+デモを保存して再読み込みし、ボールがぶつかった時に色が変わるのを見てください。
+
+> **メモ:** この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください（[ライブ実行版](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます）。
 
 ## まとめ
 
@@ -270,13 +299,13 @@ Ball.prototype.update = function() {
 
 オブジェクトに関する記事は以上です — 残るのは、あなが自分のスキルをオブジェクトの評価問題で試してみる事だけです。
 
-## 参考文献
+## 関連情報
 
-- [Canvas tutorial](/ja/docs/Web/API/Canvas_API/Tutorial) — 2D キャンバスの初心者向けガイド。
+- [キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial) — 2D キャンバスの初心者向けガイド。
 - [requestAnimationFrame()](/ja/docs/Web/API/window/requestAnimationFrame)
-- [2D collision detection](/ja/docs/Games/Techniques/2D_collision_detection)
-- [3D collision detection](/ja/docs/Games/Techniques/3D_collision_detection)
-- [2D breakout game using pure JavaScript](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — 2D ゲームの作り方に関する、素晴しい初心者向けチュートリアル。
-- [2D breakout game using Phaser](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) — JavaScript ゲームライブラリを使って 2D ゲームを作るための基本を解説しています。
+- [二次元の衝突検出](/ja/docs/Games/Techniques/2D_collision_detection)
+- [三次元の衝突検出](/ja/docs/Games/Techniques/3D_collision_detection)
+- [純粋な JavaScript を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — 2D ゲームの作り方に関する、素晴しい初心者向けチュートリアル。
+- [Phaser を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) — JavaScript ゲームライブラリーを使って 2D ゲームを作るための基本を解説しています。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}

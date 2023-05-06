@@ -3,7 +3,7 @@ title: ':valid'
 slug: Web/CSS/:valid
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 `:valid` CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示内容[验证](/zh-CN/docs/Web/HTML/HTML5/Constraint_validation)正确的{{ HTMLElement("input") }} 或其他 {{ HTMLElement("form") }} 元素。这能简单地将校验字段展示为一种能让用户辨别出其输入数据的正确性的样式。
 

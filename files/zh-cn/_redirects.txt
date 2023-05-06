@@ -89,7 +89,7 @@
 /zh-CN/docs/CSS/font-smooth	/zh-CN/docs/Web/CSS/font-smooth
 /zh-CN/docs/CSS/height	/zh-CN/docs/Web/CSS/height
 /zh-CN/docs/CSS/image-orientation	/zh-CN/docs/Web/CSS/image-orientation
-/zh-CN/docs/CSS/inheritance	/zh-CN/docs/Web/CSS/inheritance
+/zh-CN/docs/CSS/inheritance	/zh-CN/docs/Web/CSS/Inheritance
 /zh-CN/docs/CSS/initial_value	/zh-CN/docs/Web/CSS/initial_value
 /zh-CN/docs/CSS/list-style-type	/zh-CN/docs/Web/CSS/list-style-type
 /zh-CN/docs/CSS/margin_collapsing	/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
@@ -419,8 +419,8 @@
 /zh-CN/docs/DOM/table.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/DOM/text.replaceWholeText	/zh-CN/docs/Web/API/Text
 /zh-CN/docs/DOM/window	/zh-CN/docs/Web/API/Window
-/zh-CN/docs/DOM/window.URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL
-/zh-CN/docs/DOM/window.URL.revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL
+/zh-CN/docs/DOM/window.URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL_static
+/zh-CN/docs/DOM/window.URL.revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL_static
 /zh-CN/docs/DOM/window.alert	/zh-CN/docs/Web/API/Window/alert
 /zh-CN/docs/DOM/window.applicationCache	/zh-CN/docs/Web/API/Window/applicationCache
 /zh-CN/docs/DOM/window.atob	/zh-CN/docs/Web/API/atob
@@ -1019,7 +1019,7 @@
 /zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
-/zh-CN/docs/JavaScript/Typed_arrays	/zh-CN/docs/Web/JavaScript/Typed_arrays
+/zh-CN/docs/JavaScript/Typed_arrays	/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-CN/docs/JavaScript/内存管理	/zh-CN/docs/Web/JavaScript/Memory_management
 /zh-CN/docs/JavaScript_1.5_核心参考	/zh-CN/docs/Web/JavaScript
 /zh-CN/docs/JavaScript_1.5_核心参考/全局函数/eval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval
@@ -1122,6 +1122,7 @@
 /zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS	/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /zh-CN/docs/Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能	/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
 /zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
+/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data
 /zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍	/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 /zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/介绍	/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction
 /zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/可访问性	/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility
@@ -1328,7 +1329,9 @@
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/Guide/WOFF
 /zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
+/zh-CN/docs/Web/API/AbortSignal/abort	/zh-CN/docs/Web/API/AbortSignal/abort_static
 /zh-CN/docs/Web/API/AbortSignal/onabort	/zh-CN/docs/Web/API/AbortSignal/abort_event
+/zh-CN/docs/Web/API/AbortSignal/timeout	/zh-CN/docs/Web/API/AbortSignal/timeout_static
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
 /zh-CN/docs/Web/API/Animation/oncancel	/zh-CN/docs/Web/API/Animation/cancel_event
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
@@ -1359,6 +1362,9 @@
 /zh-CN/docs/Web/API/BroadcastChannel/onmessage	/zh-CN/docs/Web/API/BroadcastChannel/message_event
 /zh-CN/docs/Web/API/BroadcastChannel/onmessageerror	/zh-CN/docs/Web/API/BroadcastChannel/messageerror_event
 /zh-CN/docs/Web/API/ByteString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
+/zh-CN/docs/Web/API/CSS/escape	/zh-CN/docs/Web/API/CSS/escape_static
+/zh-CN/docs/Web/API/CSS/factory_functions	/zh-CN/docs/Web/API/CSS/factory_functions_static
+/zh-CN/docs/Web/API/CSS/supports	/zh-CN/docs/Web/API/CSS/supports_static
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
 /zh-CN/docs/Web/API/CanvasCaptureMediaStream	/zh-CN/docs/Web/API/CanvasCaptureMediaStreamTrack
@@ -1459,6 +1465,7 @@
 /zh-CN/docs/Web/API/Element/accessKey	/zh-CN/docs/Web/API/HTMLElement/accessKey
 /zh-CN/docs/Web/API/Element/addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
 /zh-CN/docs/Web/API/Element/createShadowRoot	/zh-CN/docs/Web/API/Element/shadowRoot
+/zh-CN/docs/Web/API/Element/error_event	/zh-CN/docs/Web/API/HTMLElement/error_event
 /zh-CN/docs/Web/API/Element/onafterscriptexecute	/zh-CN/docs/Web/API/Document/afterscriptexecute_event
 /zh-CN/docs/Web/API/Element/onbeforescriptexecute	/zh-CN/docs/Web/API/Document/beforescriptexecute_event
 /zh-CN/docs/Web/API/Element/oncopy	/zh-CN/docs/Web/API/HTMLElement/copy_event
@@ -1589,6 +1596,7 @@
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
 /zh-CN/docs/Web/API/HTMLBaseFontElement	/zh-CN/docs/Web/CSS/CSS_Fonts
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
+/zh-CN/docs/Web/API/HTMLContentElement	/zh-CN/docs/Web/API/HTMLSlotElement
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/Web/API/HTMLElement.dir	/zh-CN/docs/Web/API/HTMLElement/dir
@@ -1622,11 +1630,13 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/Web/API/HTMLMediaElement/error_event
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
+/zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
 /zh-CN/docs/Web/API/IDBFileHandle	/zh-CN/docs/Web/API/IndexedDB_API
+/zh-CN/docs/Web/API/IDBKeyRange/lowerBound	/zh-CN/docs/Web/API/IDBKeyRange/lowerBound_static
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
 /zh-CN/docs/Web/API/Index	/zh-CN/docs/Web/API
 /zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
@@ -1640,7 +1650,9 @@
 /zh-CN/docs/Web/API/Long_Tasks_API	/zh-CN/docs/Web/API/PerformanceLongTaskTiming
 /zh-CN/docs/Web/API/MediaCapabilitiesInfo	/zh-CN/docs/Web/API/MediaCapabilities/encodingInfo
 /zh-CN/docs/Web/API/MediaDevices/ondevicechange	/zh-CN/docs/Web/API/MediaDevices/devicechange_event
+/zh-CN/docs/Web/API/MediaRecorder/isTypeSupported	/zh-CN/docs/Web/API/MediaRecorder/isTypeSupported_static
 /zh-CN/docs/Web/API/MediaRecorder/ondataavailable	/zh-CN/docs/Web/API/MediaRecorder/dataavailable_event
+/zh-CN/docs/Web/API/MediaSource/isTypeSupported	/zh-CN/docs/Web/API/MediaSource/isTypeSupported_static
 /zh-CN/docs/Web/API/MediaStream.addTrack	/zh-CN/docs/Web/API/MediaStream/addTrack
 /zh-CN/docs/Web/API/Media_Streams_API	/zh-CN/docs/Web/API/Media_Capture_and_Streams_API
 /zh-CN/docs/Web/API/Media_Streams_API/Taking_still_photos	/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
@@ -1706,6 +1718,8 @@
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
+/zh-CN/docs/Web/API/Notification/permission	/zh-CN/docs/Web/API/Notification/permission_static
+/zh-CN/docs/Web/API/Notification/requestPermission	/zh-CN/docs/Web/API/Notification/requestPermission_static
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode/childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
@@ -1725,6 +1739,8 @@
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
 /zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
+/zh-CN/docs/Web/API/Response/error	/zh-CN/docs/Web/API/Response/error_static
+/zh-CN/docs/Web/API/Response/redirect	/zh-CN/docs/Web/API/Response/redirect_static
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
 /zh-CN/docs/Web/API/SVGMatrix	/zh-CN/docs/Web/API/DOMMatrix
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
@@ -1771,8 +1787,10 @@
 /zh-CN/docs/Web/API/UIEvent/pageY	/zh-CN/docs/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/UIEvent/视图	/zh-CN/docs/Web/API/UIEvent/view
 /zh-CN/docs/Web/API/URL.URL	/zh-CN/docs/Web/API/URL/URL
-/zh-CN/docs/Web/API/URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL
-/zh-CN/docs/Web/API/URL.revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL
+/zh-CN/docs/Web/API/URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL_static
+/zh-CN/docs/Web/API/URL.revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL_static
+/zh-CN/docs/Web/API/URL/createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL_static
+/zh-CN/docs/Web/API/URL/revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL_static
 /zh-CN/docs/Web/API/URL/密码	/zh-CN/docs/Web/API/URL/password
 /zh-CN/docs/Web/API/URLUtils/hash	/zh-CN/docs/Web/API/HTMLAnchorElement/hash
 /zh-CN/docs/Web/API/URLUtils/href	/zh-CN/docs/Web/API/HTMLAnchorElement/href
@@ -2008,6 +2026,7 @@
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden
+/zh-CN/docs/Web/Accessibility/ARIA/forms	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Accessibility/ARIA/forms/alerts	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/zh-CN/docs/Web/Guide/Audio_and_video_delivery
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
@@ -2018,6 +2037,11 @@
 /zh-CN/docs/Web/Apps/Progressive/Introduction	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
 /zh-CN/docs/Web/CSS/边框分割	/zh-CN/docs/Web/CSS/border-collapse
 /zh-CN/docs/Web/CSS/-moz-appearance	/zh-CN/docs/Web/CSS/appearance
+/zh-CN/docs/Web/CSS/-moz-outline-radius	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-moz-outline-radius-bottomleft	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-moz-outline-radius-bottomright	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-moz-outline-radius-topleft	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-moz-outline-radius-topright	/zh-CN/docs/Web/CSS/outline
 /zh-CN/docs/Web/CSS/:blank空白伪类	/zh-CN/docs/Web/CSS/:blank
 /zh-CN/docs/Web/CSS/:host()	/zh-CN/docs/Web/CSS/:host_function
 /zh-CN/docs/Web/CSS/:matches	/zh-CN/docs/Web/CSS/:is
@@ -2161,7 +2185,7 @@
 /zh-CN/docs/Web/Events/dragstart	/zh-CN/docs/Web/API/HTMLElement/dragstart_event
 /zh-CN/docs/Web/Events/drop	/zh-CN/docs/Web/API/HTMLElement/drop_event
 /zh-CN/docs/Web/Events/ended	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
-/zh-CN/docs/Web/Events/error	/zh-CN/docs/Web/API/Element/error_event
+/zh-CN/docs/Web/Events/error	/zh-CN/docs/Web/API/HTMLElement/error_event
 /zh-CN/docs/Web/Events/focus	/zh-CN/docs/Web/API/Element/focus_event
 /zh-CN/docs/Web/Events/focusout	/zh-CN/docs/Web/API/Element/focusout_event
 /zh-CN/docs/Web/Events/fullscreenchange	/zh-CN/docs/Web/API/Document/fullscreenchange_event
@@ -2291,6 +2315,7 @@
 /zh-CN/docs/Web/HTML/Element/Video/ended_event	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_Fonts
+/zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
 /zh-CN/docs/Web/HTML/Element/video/play_event	/zh-CN/docs/Web/API/HTMLMediaElement/play_event
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
@@ -2417,7 +2442,14 @@
 /zh-CN/docs/Web/JavaScript/Reference/Date/toJSON	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /zh-CN/docs/Web/JavaScript/Reference/Date/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
 /zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_octal	/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_octal
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_return
 /zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/zh-CN/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /zh-CN/docs/Web/JavaScript/Reference/Errors/不能添加属性	/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /zh-CN/docs/Web/JavaScript/Reference/Function	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function
 /zh-CN/docs/Web/JavaScript/Reference/Function/apply	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
@@ -2574,6 +2606,7 @@
 /zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+/zh-CN/docs/Web/JavaScript/Typed_arrays	/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-CN/docs/Web/JavaScript/重新认识js	/zh-CN/docs/Web/JavaScript/Language_overview
 /zh-CN/docs/Web/Media/Formats/视频编解码器	/zh-CN/docs/Web/Media/Formats/Video_codecs
 /zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/How_browsers_work
@@ -2603,9 +2636,13 @@
 /zh-CN/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/WebGL/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /zh-CN/docs/Web/WebGL/用WebGL来画2D图形	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-/zh-CN/docs/Web/Web_Components/Custom_Elements	/zh-CN/docs/Web/Web_Components/Using_custom_elements
-/zh-CN/docs/Web/Web_Components/HTML_Imports	/zh-CN/docs/Web/Web_Components
-/zh-CN/docs/Web/Web_Components/HTML导入	/zh-CN/docs/Web/Web_Components
+/zh-CN/docs/Web/Web_Components	/zh-CN/docs/Web/API/Web_components
+/zh-CN/docs/Web/Web_Components/Custom_Elements	/zh-CN/docs/Web/API/Web_components/Using_custom_elements
+/zh-CN/docs/Web/Web_Components/HTML_Imports	/zh-CN/docs/Web/API/Web_components
+/zh-CN/docs/Web/Web_Components/HTML导入	/zh-CN/docs/Web/API/Web_components
+/zh-CN/docs/Web/Web_Components/Using_custom_elements	/zh-CN/docs/Web/API/Web_components/Using_custom_elements
+/zh-CN/docs/Web/Web_Components/Using_shadow_DOM	/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM
+/zh-CN/docs/Web/Web_Components/Using_templates_and_slots	/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots
 /zh-CN/docs/Web/XSLT/Elements	/zh-CN/docs/Web/XSLT/Element
 /zh-CN/docs/Web/媒体	/zh-CN/docs/Web/Media
 /zh-CN/docs/Web/媒体/Autoplay_guide	/zh-CN/docs/Web/Media/Autoplay_guide

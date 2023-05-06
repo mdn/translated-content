@@ -84,18 +84,3 @@ Le suivi des performances est important. Plusieurs facteurs, notamment la vitess
 Les performances Web sont importantes pour l'accessibilité et également pour d'autres mesures de site Web qui servent les objectifs d'une organisation ou d'une entreprise. Les bonnes ou mauvaises performances du site Web sont fortement corrélées à l'expérience utilisateur, ainsi qu'à l'efficacité globale de la plupart des sites. C'est pourquoi vous devez vous soucier des performances Web.
 
 {{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
-
-## Dans ce module
-
-- [The "why" of web performance](/fr/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/fr/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/fr/docs/Learn/Performance/JavaScript).
-- [HTML performance features](/fr/docs/Learn/Performance/HTML)
-- [Optimisation des performances en CSS](/fr/docs/Learn/Performance/CSS)
-- [Fonts and performance](/fr/docs/Learn/Performance/Fonts)
-- [Mobile performance](/fr/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/fr/docs/Learn/Performance/business_case_for_performance)

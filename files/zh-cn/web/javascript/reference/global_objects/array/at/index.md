@@ -106,4 +106,4 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 - {{jsxref("Array.prototype.find()")}}——根据给定的测试返回一个值。
 - {{jsxref("Array.prototype.includes()")}}——测试数组中是否存在某个值。
 - {{jsxref("Array.prototype.indexOf()")}}——返回一个给定元素的索引。
-- [索引集合类](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)

@@ -279,6 +279,7 @@
 /ru/docs/Learn/Server-side/Django/Введение	/ru/docs/Learn/Server-side/Django/Introduction
 /ru/docs/Learn/Server-side/Django/Разворачивание	/ru/docs/Learn/Server-side/Django/Deployment
 /ru/docs/Learn/Server-side/Django/Сессии	/ru/docs/Learn/Server-side/Django/Sessions
+/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/ru/docs/conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
 /ru/docs/Learn/Server-side/Express_Nodejs/Учебник_сайт_local_library	/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 /ru/docs/Learn/Server-side/First_steps/Веб_Безопасность	/ru/docs/Learn/Server-side/First_steps/Website_security
 /ru/docs/Learn/Tools_and_testing/ГитХаб	/ru/docs/Learn/Tools_and_testing/GitHub
@@ -435,6 +436,7 @@
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/Element/createShadowRoot	/ru/docs/Web/API/Element/shadowRoot
+/ru/docs/Web/API/Element/error_event	/ru/docs/Web/API/HTMLElement/error_event
 /ru/docs/Web/API/EventListener	/ru/docs/conflicting/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/File/Using_files_from_web_applications	/ru/docs/Web/API/File_API/Using_files_from_web_applications
@@ -468,6 +470,7 @@
 /ru/docs/Web/API/GlobalEventHandlers/onsubmit	/ru/docs/Web/API/HTMLFormElement/submit_event
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLBaseFontElement	/ru/docs/conflicting/Web/CSS/CSS_Fonts
+/ru/docs/Web/API/HTMLContentElement	/ru/docs/Web/API/HTMLSlotElement
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLElement/pointerover_event	/ru/docs/Web/API/Element/pointerover_event
 /ru/docs/Web/API/HTMLElement/transitionend_event	/ru/docs/Web/API/Element/transitionend_event
@@ -490,6 +493,7 @@
 /ru/docs/Web/API/MediaRecorder/ondataavailable	/ru/docs/Web/API/MediaRecorder/dataavailable_event
 /ru/docs/Web/API/Media_Streams_API/Taking_still_photos	/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /ru/docs/Web/API/MouseEvent/which	/ru/docs/conflicting/Web/API/UIEvent/which
+/ru/docs/Web/API/Navigation_timing_API	/ru/docs/Web/API/Performance_API/Navigation_timing
 /ru/docs/Web/API/Navigator/battery	/ru/docs/Web/API/Navigator/getBattery
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
 /ru/docs/Web/API/Node.appendChild	/ru/docs/Web/API/Node/appendChild
@@ -512,6 +516,7 @@
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
 /ru/docs/Web/API/ServiceWorker/onstatechange	/ru/docs/Web/API/ServiceWorker/statechange_event
 /ru/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ru/docs/conflicting/Web/API/Pointer_events
+/ru/docs/Web/API/URL/createObjectURL	/ru/docs/Web/API/URL/createObjectURL_static
 /ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event
 /ru/docs/Web/API/USB/ondisconnect	/ru/docs/Web/API/USB/disconnect_event
 /ru/docs/Web/API/USVString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
@@ -624,7 +629,7 @@
 /ru/docs/Web/Events/abort_(dom_abort_api)	/ru/docs/Web/API/AbortSignal/abort_event
 /ru/docs/Web/Events/blur	/ru/docs/Web/API/Element/blur_event
 /ru/docs/Web/Events/deviceorientation	/ru/docs/Web/API/Window/deviceorientation_event
-/ru/docs/Web/Events/error	/ru/docs/Web/API/Element/error_event
+/ru/docs/Web/Events/error	/ru/docs/Web/API/HTMLElement/error_event
 /ru/docs/Web/Events/focusin	/ru/docs/Web/API/Element/focusin_event
 /ru/docs/Web/Events/focusout	/ru/docs/Web/API/Element/focusout_event
 /ru/docs/Web/Events/gamepadconnected	/ru/docs/Web/API/Window/gamepadconnected_event
@@ -773,9 +778,16 @@
 /ru/docs/Web/JavaScript/Reference/About	/ru/docs/conflicting/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
+/ru/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal
+/ru/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ru/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ru/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /ru/docs/Web/JavaScript/Reference/Errors/Dead_object	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object
+/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_3720fcfc8cf309ee8f3b5f3474dc9e12
+/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_ce02ff996e57a0f0af4fbdf5f792ff46
+/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_9896c9277d53005e5ad73315265daed1
 /ru/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
+/ru/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/ru/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ru/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /ru/docs/Web/JavaScript/Reference/Errors/Var_hides_argument	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ru/docs/Web/JavaScript/Reference/Errors/Переменные_скрывают_аргумент	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов	/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions
@@ -831,6 +843,7 @@
 /ru/docs/Web/JavaScript/Reference/template_strings	/ru/docs/Web/JavaScript/Reference/Template_literals
 /ru/docs/Web/JavaScript/Reference/Об	/ru/docs/conflicting/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Shells	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
+/ru/docs/Web/JavaScript/Typed_arrays	/ru/docs/Web/JavaScript/Guide/Typed_arrays
 /ru/docs/Web/JavaScript/О_JavaScript	/ru/docs/conflicting/Web/JavaScript
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Methods_Index	/ru/docs/Web/JavaScript/Reference
@@ -905,8 +918,10 @@
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/WebGL/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ru/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+/ru/docs/Web/Web_Components	/ru/docs/Web/API/Web_components
 /ru/docs/Web/Web_Components/HTML_Imports	/ru/docs/conflicting/Web/Web_Components
-/ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/Web_Components/Using_custom_elements
+/ru/docs/Web/Web_Components/Using_custom_elements	/ru/docs/Web/API/Web_components/Using_custom_elements
+/ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/XPath/Funkcje	/ru/docs/Web/XPath/Functions
 /ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/Web/Манифест	/ru/docs/Web/Manifest
