@@ -5,7 +5,7 @@ slug: Web/API/Element/mouseover_event
 
 {{APIRef}}
 
-当一个指针设备（通常指鼠标）在该元素本身或者其子元素上移动时，**`mouseover`** 事件在该{{domxref("Element", "元素", "", 1)}}中触发。
+当一个定点设备（通常指鼠标）在该元素本身或者其子元素上移动时，**`mouseover`** 事件在该{{domxref("Element", "元素", "", 1)}}中触发。
 
 ## 语法
 
@@ -95,15 +95,14 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 ```js
 const test = document.getElementById("test");
 
-// This handler will be executed only once when the cursor
-// moves over the unordered list
+// 当光标移到无序列表上时，此处理函数将仅执行一次
 test.addEventListener(
   "mouseenter",
   (event) => {
-    // highlight the mouseenter target
+    // 突出显示鼠标悬停目标
     event.target.style.color = "purple";
 
-    // reset the color after a short delay
+    // 短暂延迟后重置颜色
     setTimeout(() => {
       event.target.style.color = "";
     }, 500);
@@ -111,15 +110,14 @@ test.addEventListener(
   false
 );
 
-// This handler will be executed every time the cursor
-// is moved over a different list item
+// 每次将光标移动到不同的列表项上时，此处理函数都会执行
 test.addEventListener(
   "mouseover",
   (event) => {
-    // highlight the mouseover target
+    // 突出显示鼠标悬停目标
     event.target.style.color = "orange";
 
-    // reset the color after a short delay
+    // 短暂延迟后重置颜色
     setTimeout(() => {
       event.target.style.color = "";
     }, 500);
