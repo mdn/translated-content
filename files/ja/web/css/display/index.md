@@ -5,7 +5,7 @@ slug: Web/CSS/display
 
 {{CSSRef}}
 
-**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックレベルとインライン要素](/ja/docs/Web/CSS/CSS_Flow_Layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)、[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などを設定します。
+**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックレベルとインラインレベル](/ja/docs/Web/CSS/CSS_Flow_Layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)、[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などを設定します。
 
 正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。個々の仕様書については、[この文書の最後にある表](#仕様書)を参照してください。
 
@@ -89,7 +89,7 @@ display: unset;
     - `grid`
       - : 要素は、ブロックレベルのように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)に従ってレイアウトします。
     - `ruby` {{Experimental_Inline}}
-      - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
+      - : 要素は、インラインレベルのように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
 > **メモ:** 2 値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内側の表示種別のみが指定されていると、外側の表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
 
@@ -168,12 +168,12 @@ display: unset;
 
     - `inline-flex`
 
-      - : 要素は、インライン要素のようにふるまいつつ、その内容物をフレックスボックスモデルに従ってレイアウトします。
+      - : 要素は、インラインレベルのようにふるまいつつ、その内容物をフレックスボックスモデルに従ってレイアウトします。
 
         これは `inline flex` と等価です。
     - `inline-grid`
 
-      - : 要素は、インライン要素のようにふるまいつつ、その内容物をグリッドモデルに従ってレイアウトします。
+      - : 要素は、インラインレベルのようにふるまいつつ、その内容物をグリッドモデルに従ってレイアウトします。
 
         これは `inline grid` と等価です。
 
