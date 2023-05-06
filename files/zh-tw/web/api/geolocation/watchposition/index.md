@@ -17,7 +17,6 @@ id = navigator.geolocation.watchPosition(success, error)
 id = navigator.geolocation.watchPosition(success, error, options)
 ```
 
-
 ### 參數
 
 - _success_
