@@ -166,7 +166,7 @@ Una página web sin contenido que se actualiza dinámicamente se denomina **est�
 
 ## ¿Cómo agregas JavaScript a tu página?
 
-JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de estilo externas y elementos {{htmlelement("style")}} para aplicar hojas de estilo internas a HTML, JavaScript solo necesita un amigo en el mundo de HTML: el elemento {htmlelement("script")}}. Aprendamos cómo funciona esto.
+JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de estilo externas y elementos {{htmlelement("style")}} para aplicar hojas de estilo internas a HTML, JavaScript solo necesita un amigo en el mundo de HTML: el elemento {{htmlelement("script")}}. Aprendamos cómo funciona esto.
 
 ### JavaScript interno
 
