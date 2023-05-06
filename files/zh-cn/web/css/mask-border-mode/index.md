@@ -3,7 +3,7 @@ title: mask-border-mode
 slug: Web/CSS/mask-border-mode
 ---
 
-{{cssref}}{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 该[CSS](/zh-CN/docs/Web/CSS)属性指定使用的混合模式[面具边界](/zh-CN/docs/Web/CSS/mask-border)。**`mask-border-mode`**
 

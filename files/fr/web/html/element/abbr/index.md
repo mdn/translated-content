@@ -195,12 +195,16 @@ l'utiliser.</p>
 
 C'est une bonne pratique que d'épeler l'acronyme ou l'abréviation lorsqu'elle est utilisée pour la première fois. Cela permet au lecteur de mieux comprendre le terme, notamment si celui-ci est technique ou appartient à un jargon spécifique.
 
-#### Exemple
+#### Exemples
 
 ```html
 <p>JavaScript Object Notation (<abbr>JSON</abbr>) est un format léger
   d'échange de données.</p>
 ```
+
+##### Résultat
+
+{{EmbedliveSample('')}}
 
 Cela peut servir aux personnes qui découvrent ces concepts pour la première fois ou pour les personnes souffrant de troubles cognitifs.
 

@@ -112,7 +112,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 ### 路牌/地标（**Signposts/Landmarks**）
 
-WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles)的例子（[在线 demo](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
+WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles)的例子（[在线演示](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
 
 ```html
 <header>

@@ -28,7 +28,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 1. Для начала введите следующие строки:
 
     ```js
-    var string = 'The revolution will not be televised.';
+    const string = 'Революция не будет транслироваться по телевидению.';
     string;
     ```
 
@@ -36,9 +36,9 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 3. Если вы не сделаете этого или пропустите одну из кавычек, вы получите сообщение об ошибке. Попробуйте ввести следующие строки:
 
     ```js example-bad
-    var badString = This is a test;
-    var badString = 'This is a test;
-    var badString = This is a test';
+    const badString = Тест;
+    const badString = 'Тест;
+    const badString = Тест';
     ```
 
     Эти строки не работают, потому что любая текстовая строка без кавычек считается именем переменной, именем свойства, зарезервированным словом или чем-то подобным. Если браузер не может найти его, возникает ошибка (например, «missing, before statement»). Если браузер может видеть, где начинается строка, но не может найти конец строки, как указано во 2-й строке, она жалуется на ошибку (с «unterminated string literal»). Если ваша программа выявляет такие ошибки, вернитесь назад и проверьте все свои строки, чтобы убедиться, что у вас нет пропущенных кавычек.
@@ -46,7 +46,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 4. Следующий код будет выполнен только в том случае, если ранее была объявлена переменная `string` — убедитесь сами:
 
     ```js
-    var badString = string;
+    const badString = string;
     badString;
     ```
 
@@ -57,8 +57,8 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 1. В JavaScript вы можете выбрать одинарные кавычки или двойные кавычки, чтобы обернуть ваши строки. Оба варианта будут работать нормально:
 
     ```js
-    var sgl = 'Single quotes.';
-    var dbl = "Double quotes";
+    const sgl = 'Одиночные кавычки.';
+    const dbl = "Двойные кавычки.";
     sgl;
     dbl;
     ```
@@ -66,14 +66,14 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 2. Существует очень мало различий между одиночными и двойными кавычками, и решение какие из них использовать в коде остаётся на ваше усмотрение. Однако вы должны выбрать один вариант и придерживаться его, иначе ваш код может выдать ошибку, особенно если вы используете разные кавычки в одной строке! Ниже приведён пример:
 
     ```js example-bad
-    var badQuotes = 'What on earth?";
+    const badQuotes = 'Что происходит?";
     ```
 
 3. Браузер будет считать, что строка не была закрыта, потому что в строке может появиться другой тип цитаты, который вы не используете, чтобы хранить ваши строки в переменных. Из примера можно понять, о чем идёт речь (в коде ошибок нет):
 
     ```js
-    var sglDbl = 'Would you eat a "fish supper"?';
-    var dblSgl = "I'm feeling blue.";
+    const sglDbl = 'Я не сказала "да", милорд…';
+    const dblSgl = "Вы не сказали 'нет'… (королева, Бэкингем)";
     sglDbl;
     dblSgl;
     ```
@@ -81,7 +81,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 4. Однако вы не можете включить один и тот же знак кавычки внутри строки, если он используется для их хранения. Ниже приведена ошибка, браузер ошибочно определяет место, где строка кончается:
 
     ```js example-bad
-    var bigmouth = 'I've got no right to take my place...';
+    const bigmouth = 'Жанна Д'Арк — народная героиня Франции.';
     ```
 
     Что приводит нас к следующей теме.
@@ -91,7 +91,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 Чтобы исправить нашу предыдущую строку кода, нам нужно дать понять браузеру, что кавычка в середине строки не является меткой её конца. Экранирование символов означает, что мы делаем что-то с ними, чтобы убедиться, что они распознаются как текст, а не часть кода. В JavaScript мы делаем это, помещая обратную косую черту непосредственно перед символом. Введите эти строки:
 
 ```js
-var bigmouth = 'I\'ve got no right to take my place...';
+const bigmouth = 'Жанна Д\'Арк — народная героиня Франции.';
 bigmouth;
 ```
 
@@ -102,29 +102,29 @@ bigmouth;
 1. Конкатенация — это новомодное программистское слово, которое означает «объединить». Объединение строк в JavaScript использует оператор плюс (+), тот же, который мы используем для сложения чисел, но в этом контексте он делает кое-что другое. Попробуем пример в нашей консоли.
 
     ```js
-    var one = 'Hello, ';
-    var two = 'how are you?';
-    var joined = one + two;
+    const one = 'Привет, ';
+    const two = 'как дела?';
+    const joined = one + two;
     joined;
     ```
 
-    Результат этой программы - это переменная `joined`, содержащая значение "Hello, how are you?".
+    Результат этой программы - это переменная `joined`, содержащая значение "Привет, как дела?".
 
 2. В последнем случае мы просто объединим две строки вместе, но на самом деле, вы можете объединить столько строк, сколько хотите, до тех пор, пока вы ставите `+` между ними. Попробуйте это:
 
     ```js
-    var multiple = one + one + one + one + two;
+    const multiple = one + one + one + one + two;
     multiple;
     ```
 
 3. Вы также можете использовать сочетание переменных и фактических строк. Попробуйте это:
 
     ```js
-    var response = one + 'I am fine — ' + two;
+    const response = one + 'Я в порядке — ' + two;
     response;
     ```
 
-> **Примечание:**Когда вы вводите фактическую строку в свой код, заключённую в одинарные или двойные кавычки, она называется **строковым литералом.**
+> **Примечание:** Когда вы вводите фактическую строку в свой код, заключённую в одинарные или двойные кавычки, она называется **строковым литералом**.
 
 ### Конкатенация строк в контексте
 
@@ -135,11 +135,11 @@ bigmouth;
 ```
 
 ```js
-var button = document.querySelector('button');
+const button = document.querySelector('button');
 
 button.onclick = function() {
-  var name = prompt('What is your name?');
-  alert('Hello ' + name + ', nice to see you!');
+  const name = prompt('Как тебя зовут?');
+  alert('Привет, ' + name + ', рад тебя видеть!');
 }
 ```
 
@@ -160,7 +160,7 @@ button.onclick = function() {
 2. Вы даже можете сделать это с двумя числами, вы можете заставить число стать строкой, обернув её в кавычки. Попробуйте следующее (мы используем оператор `typeof` для того, чтобы установить является ли переменная числом или строкой):
 
     ```js
-    var myDate = '19' + '67';
+    const myDate = '19' + '67';
     typeof myDate;
     ```
 
@@ -169,20 +169,64 @@ button.onclick = function() {
     - Объект {{jsxref ("Number")}} преобразует всё переданное в него в число, если это возможно. Попробуйте следующее:
 
       ```js
-      var myString = '123';
-      var myNum = Number(myString);
+      const myString = '123';
+      const myNum = Number(myString);
       typeof myNum;
       ```
 
     - С другой стороны, каждое число имеет метод, называемый [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString), который преобразует его в эквивалентную строку. Попробуй это:
 
       ```js
-      var myNum = 123;
-      var myString = myNum.toString();
-      typeof myString;
+      const myNum = 123;
+      const myString = myNum.toString();
+      console.log(typeof myString);
       ```
 
-    Эти конструкции могут быть действительно полезны в некоторых ситуациях. Например, если пользователь вводит число в текстовое поле формы, данные будут распознаны как строка. Однако, если вы хотите добавить это число к чему-то, вам понадобится его значение, поэтому вы можете передать его через `Number()`, чтобы справиться с этим. Именно это мы сделали в нашей [Number Guessing Game](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L63), в строке 61.
+  Эти конструкции могут быть действительно полезны в некоторых ситуациях. Например, если пользователь вводит число в текстовое поле формы, данные будут распознаны как строка. Однако, если вы хотите добавить это число к чему-то, вам понадобится его значение, поэтому вы можете передать его через `Number()`, чтобы справиться с этим. Именно это мы сделали в нашей [Number Guessing Game](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L63), в строке 59.
+
+## Совмещение строк с различными выражениями
+
+Вы можете совмещать выражения JavaScript в литералы шаблона, а также простые переменные, и результаты будут включены в конечную строку:
+
+```js
+  const song = "Fight the Youth";
+  const score = 9;
+  const highestScore = 10;
+  const output = `Мне нравится песня ${song}. Я оценил её на ${
+    (score / highestScore) * 100
+  }%.`;
+  console.log(output); // "Мне нравится песня Fight the Youth. Я оценил её на 90%."
+
+```
+
+## Многострочный текст
+
+Литералы шаблона учитывают разрывы строк в исходном коде, поэтому вы можете писать текст в несколько строчек, например:
+
+```js
+  const output = `Мне нравится эта песня. 
+  Я оценил её на 90%.`;
+  console.log(output);
+
+  /*
+  Мне нравится эта песня.
+  Я оценил её на 90%.
+  */
+```
+
+Чтобы получить эквивалентный вывод с использованием обычной строки, вам придется включить в строку символы переноса строки (`\n`):
+
+```js
+  const output = "Мне нравится эта песня.\nЯ оценил её на 90%.";
+  console.log(output);
+
+  /*
+  Мне нравится эта песня.
+  Я оценил её на 90%.
+  */
+```
+
+Смотри нашу справочную страницу [литералов шаблонов](/ru-RU/docs/Web/JavaScript/Reference/Template_literals) для получения дополнительных примеров и подробной информации о расширенных функциях.
 
 ## Заключение
 
@@ -192,12 +236,12 @@ button.onclick = function() {
 
 ## В этом модуле
 
-- [What is JavaScript?](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/ru/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/ru/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/ru/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/ru/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [Что такое JavaScript?](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [Первое погружение в JavaScript](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [Что пошло не так? Устранение ошибок JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Переменные - место хранения необходимой информации](/ru/docs/Learn/JavaScript/First_steps/Variables)
+- [Базовая математика в JavaScript — числа и операторы](/ru/docs/Learn/JavaScript/First_steps/Math)
+- [Работа с текстом — строки в JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings)
+- [Полезные методы для строк](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Массивы](/ru/docs/Learn/JavaScript/First_steps/Arrays)
+- [Генератор глупых историй](/ru/docs/Learn/JavaScript/First_steps/Silly_story_generator)

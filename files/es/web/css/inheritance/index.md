@@ -1,6 +1,6 @@
 ---
 title: Herencia
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
 
 {{ CSSRef() }}

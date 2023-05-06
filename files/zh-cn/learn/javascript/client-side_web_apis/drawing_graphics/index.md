@@ -363,7 +363,7 @@ ctx.fillText('Canvas text', 50, 150);
     image.src = 'firefox.png';
     ```
 
-    这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造器创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与非空 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 {{htmlattrxref("src", "img")}} 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
+    这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造器创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与非空 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
 
 3. 这次我们尝试用 `drawImage()` 函数来嵌入图片，应确保图片先载入完毕，否则运行会出错。可以通过 `onload` 事件处理器来达成，该函数只在图片调用完毕后才会调用。在上文代码末尾添加以下内容：
 
@@ -483,7 +483,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 浏览器自行处理诸如“使动画匀速运行”、“避免在不可见的内容浪费资源”等复杂细节问题。
 
-我们简单回顾一下“弹球”示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html) 或查看 [源代码](https://github.com/mdn/learning-area/tree/master/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
+我们简单回顾一下“弹球”示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html) 或查看 [源代码](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
 
 ```js
 function loop() {
@@ -534,7 +534,7 @@ loop();
     ctx.translate(width/2, height/2);
     ```
 
-3. 创建一个新的 {{domxref("HTMLImageElement")}} 对象，把它的 {{htmlattrxref("src", "img")}} 设置为所需图片，添加一个 `onload` 事件处理器，使 `draw()` 函数在图片载入后触发。
+3. 创建一个新的 {{domxref("HTMLImageElement")}} 对象，把它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 设置为所需图片，添加一个 `onload` 事件处理器，使 `draw()` 函数在图片载入后触发。
 
     ```js
     var image = new Image();
@@ -797,15 +797,15 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-你可以 [到 Github 下载最终代码](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-cube)。
+你可以 [到 Github 下载最终代码](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube)。
 
-> **备注：** 在我们的 GitHub repo 还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
+> **备注：** 在我们的 GitHub repo 还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
 
 ## 小结
 
 此刻你以经了解了一些 Canvas 和 WebGL 图形编程的基本理念和简单应用，你一定产生了不少创作灵感，玩得开心！
 
-## 另请参阅
+## 参见
 
 本文我们只涉及到画布最为基本的内容，以下内容帮你探索更多：
 

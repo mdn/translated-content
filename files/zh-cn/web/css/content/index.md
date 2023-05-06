@@ -3,7 +3,7 @@ title: content
 slug: Web/CSS/content
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概要
 

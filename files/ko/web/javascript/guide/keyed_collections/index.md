@@ -1,5 +1,5 @@
 ---
-title: 키기반의 컬렉션
+title: 키 기반 컬렉션
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
@@ -46,7 +46,7 @@ Object 혹은 Map중에 어느 것을 사용할지를 결정하는데 도움을 
 - 실행 시까지 키를 알수 없고, 모든 키가 동일한 type이며 모든 값들이 동일한 type일 경우에는 objects를 대신해서 map을 사용해라.
 - 각 개별 요소에 대해 적용해야 하는 로직이 있을 경우에는 objects를 사용해라.
 
-### `WeakMap` object
+### `WeakMap` 객체
 
 {{jsxref("WeakMap")}}객체는 object만을 키로 허용하고 값은 임의의 값을 허용하는 키/값 형태의 요소의 집합이다. 키가 가지고 있는 객체에 대한 참조는 객체에 대한 참조가 더이상 존재하지 않을 경우 garbage collection(GC)의 수거 대상이 되는 약한 참조를 의미한다. `WeakMap` API는 Map API와 동일하다.
 

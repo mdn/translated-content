@@ -29,7 +29,7 @@ false に変換されうる式の例を示します。
 - 空文字列 (`""` または `''` または ` `` `)
 - `undefined`
 
-`||` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の{{JSxRef("Operators/Logical_NOT", "否定演算子", "", 1)}}または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
+`||` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の{{JSxRef("Operators/Logical_NOT", "否定演算子", "", 1)}}または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
 ### 短絡評価
 

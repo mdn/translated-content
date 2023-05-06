@@ -67,7 +67,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("plugin-types")}}
   - : 通过限制可以加载的资源类型来限制哪些插件可以被嵌入到文档中。
 - {{CSP("sandbox")}}
-  - : 类似 {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} 属性，为请求的资源启用沙盒。
+  - : 类似 {{HTMLElement("iframe")}} [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 属性，为请求的资源启用沙盒。
 - {{CSP("disown-opener")}} {{Deprecated_Inline}}
   - : 确保资源在导航的时候能够脱离父页面。（windown.opener 对象）Ensures a resource will disown its opener when navigated to.
 

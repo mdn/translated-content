@@ -138,13 +138,3 @@ Si vous souhaitez que votre travail soit évalué, ou si vous êtes bloqué et q
 Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre professeur ou mentor pour la notation. Si vous apprenez en autodidacte, vous pouvez obtenir le guide de notation simplement en le demandant [sur le fil de discussion de cet exercice](https://discourse.mozilla.org/t/image-gallery-assessment/24687), ou sur [#mdn](irc://irc.mozilla.org/mdn) du canal IRC de [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites d'abord l'exercice, vous ne gagnerez rien à tricher!
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## Dans ce module
-
-- [Prendre des décisions dans le code — conditions](/fr/docs/Apprendre/JavaScript/Building_blocks/conditionals)
-- [Les boucles dans le code](/fr/docs/Apprendre/JavaScript/Building_blocks/Looping_code)
-- [Fonctions — des blocs de code réutilisables](/fr/docs/Apprendre/JavaScript/Building_blocks/Fonctions)
-- [Construire vos propres fonctions](/fr/docs/Apprendre/JavaScript/Building_blocks/Build_your_own_function)
-- [Valeurs de retour des fonctions](/fr/docs/Apprendre/JavaScript/Building_blocks/Return_values)
-- [Introduction aux événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements)
-- [Galerie d'images](/fr/docs/Apprendre/JavaScript/Building_blocks/Image_gallery)

@@ -46,7 +46,7 @@ Symbol.for('foo').description; // "foo"
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{jsxref("Symbol.prototype.toString()")}}
 - Polyfill: <https://npmjs.com/symbol.prototype.description>

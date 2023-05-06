@@ -103,5 +103,5 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 
 ## 参见
 
-- [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.copyWithin` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}

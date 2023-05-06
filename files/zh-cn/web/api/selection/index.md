@@ -39,7 +39,7 @@ window.alert(selObj);
 - 范围 (range)
   - : 范围指的是文档中连续的一部分。一个范围包括整个节点，也可以包含节点的一部分，例如文本节点的一部分。用户通常下只能选择一个范围，但是有的时候用户也有可能选择多个范围（例如当用户按下 Control 按键并框选多个区域时，Chrome 中禁止了这个操作，译者注）。“范围”会被作为 {{domxref("Range")}} 对象返回。Range 对象也能通过 DOM 创建、增加、删减。
 - 可编辑元素 (editing host)
-  - : 一个用户可编辑的元素（例如一个使用 {{htmlattrxref("contenteditable")}} 的 HTML 元素，或是在启用了 {{domxref("Document.designMode", "designMode")}} 的 {{domxref("Document")}} 的子元素）。详见 [开发者笔记](#Selection_API_在可编辑元素焦点更改方面的行为)。
+  - : 一个用户可编辑的元素（例如一个使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 的 HTML 元素，或是在启用了 {{domxref("Document.designMode", "designMode")}} 的 {{domxref("Document")}} 的子元素）。详见 [开发者笔记](#Selection_API_在可编辑元素焦点更改方面的行为)。
 
 ## 属性
 
@@ -130,13 +130,11 @@ var range  = selObj.getRangeAt(0);
 
 选择和输入焦点（由 {{domxref("Document.activeElement")}} 表示）有一个复杂的关系，该关系因浏览器而异。在跨浏览器兼容的代码中，最好分别处理它们。
 
-Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 `Selection` 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 [W3C Bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) 和 {{WebKitBug("3869")}}）。
-
-（目前在 WebKit 中，按钮等元素被直接点击不会修改选区，但会将焦点传递，译者注）
+Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 `Selection` 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 [W3C Bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) 和 [WebKit bug 3869](https://webkit.org/b/3869)）。
 
 ### Selection API 在可编辑元素焦点更改方面的行为
 
-Selection API 有一个共同的行为（即在浏览器之间共通），该行为控制在调用某些方法后[可编辑元素](#Glossary)（原文 Editing Hosts，可编辑宿主）的焦点行为如何更改。
+Selection API 有一个共同的行为（即在浏览器之间共通），该行为控制在调用某些方法后*可编辑元素*（Editing Host，可编辑宿主）的焦点行为如何更改。
 
 其行为如下：
 
@@ -144,7 +142,7 @@ Selection API 有一个共同的行为（即在浏览器之间共通），该行
 2. 调用一个 Selection API 方法，从而在可编辑元素内产生一个新选区，来创造一个新的 `Selection` 区域（{{domxref("Range")}}）。
 3. 然后焦点（此处应指显示的，译者注）移到可编辑元素。
 
-**注意：Selection API 方法只能将焦点移动到可编辑元素，而不能移动到其他可焦点元素（例如{{HTMLElement("a")}}）。**
+> **备注：** Selection API 方法只能将焦点移动到可编辑元素，而不能移动到其他可焦点元素（例如 {{HTMLElement("a")}}）。
 
 上述行为适用于使用以下方法产生的选区：
 

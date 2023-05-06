@@ -208,17 +208,17 @@ There are some serious [Security concerns](#security_concerns) to consider with 
 
 This example includes the basic essentials needed to use an `<iframe>`:
 
-- {{htmlattrxref('allowfullscreen','iframe')}}
+- [`allowfullscreen`](/zh-TW/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Full Screen API](/zh-TW/docs/Web/API/Fullscreen_API) (somewhat beyond scope for this article.)
-- {{htmlattrxref('frameborder','iframe')}}
+- [`frameborder`](/zh-TW/docs/Web/HTML/Element/iframe#frameborder)
   - : If set to 1, this tells the browser to draw a border between this frame and other frames, which is the default behaviour. 0 removes the border. Using this isn't really recommended any more, as the same effect can be better achieved using {{cssxref('border')}}`: none;` in your {{Glossary('CSS')}}.
-- {{htmlattrxref('src','iframe')}}
+- [`src`](/zh-TW/docs/Web/HTML/Element/iframe#src)
   - : This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.
-- {{htmlattrxref('width','iframe')}} and {{htmlattrxref('height','iframe')}}
+- [`width`](/zh-TW/docs/Web/HTML/Element/iframe#width) and [`height`](/zh-TW/docs/Web/HTML/Element/iframe#height)
   - : These attributes specify the width and height you want the iframe to be.
 - **F**allback content
   - : In the same way as other similar elements like {{htmlelement("video")}}, you can include fallback content between the opening and closing `<iframe></iframe>` tags that will appear if the browser doesn't support the `<iframe>`. In this case, we have included a link to the page instead. It is unlikely that you'll come across any browser that doesn't support `<iframe>`s these days.
-- {{htmlattrxref('sandbox','iframe')}}
+- [`sandbox`](/zh-TW/docs/Web/HTML/Element/iframe#sandbox)
   - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
 
 > **備註：** In order to improve speed, it's a good idea to set the iframe's `src` attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)
@@ -258,7 +258,7 @@ You want to give attackers as little power as you can to do bad things on your w
 
 Unsandboxed content can do way too much (executing JavaScript, submitting forms, popup windows, etc.) By default, you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
 
-If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the {{htmlattrxref('sandbox','iframe')}} reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/zh-TW/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/zh-TW/docs/Web/HTML/Element/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/zh-TW/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
 
 > **備註：** Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
 
@@ -280,13 +280,13 @@ If you find yourself needing to embed plugin content, this is the kind of inform
 
 |                                                                                         | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
 | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} of the embedded content                                        | {{htmlattrxref('src','embed')}}                                                  | {{htmlattrxref('data','object')}}                                                  |
-| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | {{htmlattrxref('type','embed')}}                                              | {{htmlattrxref('type','object')}}                                                  |
-| height and width (in CSS pixels) of the box controlled by the plugin                    | {{htmlattrxref('height','embed')}} {{htmlattrxref('width','embed')}} | {{htmlattrxref('height','object')}} {{htmlattrxref('width','object')}} |
+| {{glossary("URL")}} of the embedded content                                        | [`src`](/zh-TW/docs/Web/HTML/Element/embed#src)                                                  | [`data`](/zh-TW/docs/Web/HTML/Element/object#data)                                                  |
+| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/zh-TW/docs/Web/HTML/Element/embed#type)                                              | [`type`](/zh-TW/docs/Web/HTML/Element/object#type)                                                  |
+| height and width (in CSS pixels) of the box controlled by the plugin                    | [`height`](/zh-TW/docs/Web/HTML/Element/embed#height) [`width`](/zh-TW/docs/Web/HTML/Element/embed#width) | [`height`](/zh-TW/docs/Web/HTML/Element/object#height) [`width`](/zh-TW/docs/Web/HTML/Element/object#width) |
 | names and values, to feed the plugin as parameters                                      | ad hoc attributes with those names and values                                             | single-tag {{htmlelement("param")}} elements, contained within `<object>`             |
 | independent HTML content as fallback for an unavailable resource                        | not supported (`<noembed>` is obsolete)                                                   | contained within `<object>`, after `<param>` elements                                         |
 
-> **備註：** `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the {{htmlattrxref('typemustmatch','object')}} attribute (only implemented in Firefox and Chrome, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
+> **備註：** `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/zh-TW/docs/Web/HTML/Element/object#typemustmatch) attribute (only implemented in Firefox and Chrome, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
 
 Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie:
 

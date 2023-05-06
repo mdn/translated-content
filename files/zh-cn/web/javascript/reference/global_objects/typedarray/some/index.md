@@ -11,23 +11,21 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 
 ## 语法
 
-```plain
-typedarray.some(callback[, thisArg])
+```js-nolint
+some(callbackFn)
+some(callbackFn, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 一个测试每个元素的函数，有 3 个参数：
-
     - `currentValue`
       - : 在 typed array 中，正在被测试的元素。
     - `index`
       - : 在 typed array 中，正在被测试元素的索引。
     - `array`
       - : 正在被调用的 typed array 本身。
-
 - `thisArg`
   - : 可选的。`callback` 回调函数的 `this` 值 .
 
@@ -87,7 +85,7 @@ if (!Uint8Array.prototype.some) {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

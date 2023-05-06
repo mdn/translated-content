@@ -137,7 +137,7 @@ There are various specific rules to follow when writing about HTML elements, in 
 - Attribute values
   - : Use "Code (inline)" style, and do not use quotation marks around strings, unless needed by the syntax of a code sample. E.g.: When the **type** attribute of an `<input>` element is set to `email` or `tel` ...
 - Labeling attributes
-  - : Use labels like {{HTMLVersionInline(5)}} thoughtfully. For example, use them next to the bold attribute name but not for every occurrence in your body text.
+  - : Use labels like HTML 5 thoughtfully. For example, use them next to the bold attribute name but not for every occurrence in your body text.
 
 ### Latin abbreviations
 
@@ -347,16 +347,6 @@ To automatically create a link to a Bugzilla bug, use this template:
 This results in:
 
 {{Bug(322603)}}
-
-For WebKit bugs, you can use this template:
-
-```
-\{{Webkitbug("322603")}}
-```
-
-This results in:
-
-{{Webkitbug("322603")}}
 
 ### Page tags
 

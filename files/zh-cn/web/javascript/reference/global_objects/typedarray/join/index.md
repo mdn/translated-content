@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 
 ## 语法
 
-```plain
-typedarray.join([separator = ',']);
+```js-nolint
+join()
+join(separator)
 ```
 
 ### 参数

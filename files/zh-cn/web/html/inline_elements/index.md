@@ -42,6 +42,6 @@ span { background-color: #8ABB55; }
 - [a](/zh-CN/docs/Web/HTML/Element/a), [bdo](/zh-CN/docs/Web/HTML/Element/bdo), [br](/zh-CN/docs/Web/HTML/Element/br), [img](/zh-CN/docs/Web/HTML/Element/Img), [map](/zh-CN/docs/Web/HTML/Element/map), [object](/zh-CN/docs/Web/HTML/Element/object), [q](/zh-CN/docs/Web/HTML/Element/q), [script](/zh-CN/docs/Web/HTML/Element/Script), [span](/zh-CN/docs/Web/HTML/Element/span), [sub](/zh-CN/docs/Web/HTML/Element/sub), [sup](/zh-CN/docs/Web/HTML/Element/sup)
 - [button](/zh-CN/docs/Web/HTML/Element/button), [input](/zh-CN/docs/Web/HTML/Element/Input), [label](/zh-CN/docs/Web/HTML/Element/label), [select](/zh-CN/docs/Web/HTML/Element/select), [textarea](/zh-CN/docs/Web/HTML/Element/textarea)
 
-## 另请参阅
+## 参见
 
 - [块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)

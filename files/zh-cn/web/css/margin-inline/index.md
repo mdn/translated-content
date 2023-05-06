@@ -19,10 +19,10 @@ slug: Web/CSS/margin-inline
 ## 语法
 
 ```css
-/* 长度值 */
+/* <length> 值 */
 margin-inline: 10px 20px; /* 绝对长度 */
 margin-inline: 1em 2em; /* 相对于文本尺寸 */
-margin-inline: 5% 2%; /* 相对于最近包含块的宽度 */
+margin-inline: 5% 2%; /* 相对于最近区块容器的宽度 */
 margin-inline: 10px; /* 同时设置行首和行末值 */
 
 /* 关键词值 */

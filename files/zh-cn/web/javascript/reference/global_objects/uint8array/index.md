@@ -24,9 +24,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
   - : 返回数组中元素的字节数，Uint8Array 中返回 1 字节。
 - Uint8Array.length
-  - : 静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint8Array.name")}}
-  - : 返回构造名的字符串，对 Uint8Array 类型而言返回“Uint8Array”
+  - : 静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}。
 - {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
   - : _TypedArray_ 对象的原型。
 

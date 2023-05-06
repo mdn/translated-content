@@ -30,6 +30,6 @@ var deviceMotionEvent = new DeviceMotionEvent(type[, options])
 
 无特别说明。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

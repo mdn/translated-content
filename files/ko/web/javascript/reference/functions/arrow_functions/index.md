@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 
 화살표 함수 표현(**arrow function expression**)은 [전통적인 함수표현(function)](/ko/docs/Web/JavaScript/Reference/Operators/function)의 간편한 대안입니다. 하지만, 화살표 함수는 몇 가지 제한점이 있고 모든 상황에 사용할 수는 없습니다.
 
-- [this](/ko/docs/Web/JavaScript/Reference/Operators/this)나 [super](/ko/docs/Web/JavaScript/Reference/Operators/super)에 대한 바인딩이 없고, [methods](/ko/docs/Glossary/Method) 로 사용될 수 없습니다.
+- [this](/ko/docs/Web/JavaScript/Reference/Operators/this), [arguments](/ko/docs/Web/JavaScript/Reference/Functions/arguments)나 [super](/ko/docs/Web/JavaScript/Reference/Operators/super)에 대한 자체 바인딩이 없고, [methods](/ko/docs/Glossary/Method)로 사용해서는 안됩니다.
 - [new.target](/ko/docs/Web/JavaScript/Reference/Operators/new.target)키워드가 없습니다.
 - 일반적으로 스코프를 지정할 때 사용하는 [call](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [apply](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [bind](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) methods를 이용할 수 없습니다.
 - 생성자[(Constructor)](/ko/docs/Web/JavaScript/Reference/Classes/constructor)로 사용할 수 없습니다.

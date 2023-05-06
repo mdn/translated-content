@@ -79,11 +79,11 @@ original_slug: Web/Guide/HTML/Content_categories
 
 仅在特殊情形下才会属于此类的元素有：
 
-- {{HTMLElement("audio")}}，若 {{htmlattrxref("controls", "audio")}} 属性存在
-- {{HTMLElement("img")}}，若 {{htmlattrxref("usemap", "img")}} 属性存在
+- {{HTMLElement("audio")}}，若 [`controls`](/zh-CN/docs/Web/HTML/Element/audio#controls) 属性存在
+- {{HTMLElement("img")}}，若 [`usemap`](/zh-CN/docs/Web/HTML/Element/img#usemap) 属性存在
 - {{HTMLElement("input")}}，若 [type](/zh-CN/docs/Web/HTML/Element/input#type) 属性不处于隐藏（hidden）状态
-- {{HTMLElement("object")}}，若 {{htmlattrxref("usemap", "object")}} 属性存在
-- {{HTMLElement("video")}}，若 {{htmlattrxref("controls", "video")}} 属性存在
+- {{HTMLElement("object")}}，若 [`usemap`](/zh-CN/docs/Web/HTML/Element/object#usemap) 属性存在
+- {{HTMLElement("video")}}，若 [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls) 属性存在
 
 ### 可感知内容
 

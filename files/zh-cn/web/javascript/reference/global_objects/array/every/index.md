@@ -12,39 +12,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ## 语法
 
 ```js-nolint
-// 箭头函数
-every((element) => { /* … */ } )
-every((element, index) => { /* … */ } )
-every((element, index, array) => { /* … */ } )
-
-// 回调函数
 every(callbackFn)
 every(callbackFn, thisArg)
-
-// 内联回调函数
-every(function(element) { /* … */ })
-every(function(element, index) { /* … */ })
-every(function(element, index, array){ /* … */ })
-every(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
 
 - `callbackFn`
-
-  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)以指示元素通过测试，否则返回一个假值。
-
-    该函数可以接受以下参数：
-
+  - : 为数组中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)以指示元素通过测试，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
     - `element`
-      - : 数组中正在处理的当前元素。
+      - : 数组中当前正在处理的元素。
     - `index`
-      - : 数组中正在处理的当前元素的索引。
+      - : 正在处理的元素在数组中的索引。
     - `array`
-      - : 调用 `every` 的当前数组。
-
+      - : 调用了 `every()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 时使用的 `this` 值。请参阅[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)。
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
@@ -52,7 +35,7 @@ every(function(element, index, array) { /* … */ }, thisArg)
 
 ## 描述
 
-`every()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)。它为数组中的每个元素调用一次指定的 `callbackFn` 函数，直到 `callbackFn` 返回一个[假值](/zh-CN/docs/Glossary/Falsy)。如果找到这样的元素，`every()` 方法将会立即返回 `false` 并停止遍历数组。否则，如果 `callbackFn` 为每个元素返回一个[真值](/zh-CN/docs/Glossary/Truthy)，`every()` 就会返回 `true`。
+`every()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用一次指定的 `callbackFn` 函数，直到 `callbackFn` 返回一个[假值](/zh-CN/docs/Glossary/Falsy)。如果找到这样的元素，`every()` 方法将会立即返回 `false` 并停止遍历数组。否则，如果 `callbackFn` 为每个元素返回一个[真值](/zh-CN/docs/Glossary/Truthy)，`every()` 就会返回 `true`。
 
 `every` 和数学中的全称量词"任意（∀）"类似。特别的，对于空数组，它只返回 `true`。（这种情况属于[无条件正确](https://en.wikipedia.org/wiki/Vacuous_truth)，因为[空集](https://zh.wikipedia.org/wiki/空集)的所有元素都符合给定的条件。）
 
@@ -66,7 +49,7 @@ every(function(element, index, array) { /* … */ }, thisArg)
 
 > **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
-`every()` 方法是[通用数组方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
+`every()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 
@@ -89,6 +72,7 @@ function isBigEnough(element, index, array) {
 ```js
 const isSubset = (array1, array2) =>
   array2.every((element) => array1.includes(element));
+
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 ```
@@ -183,7 +167,7 @@ console.log(
 
 ## 参见
 
-- [Polyfill of `Array.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.every` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.find()")}}

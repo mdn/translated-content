@@ -553,9 +553,3 @@ Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vér
 Cela ne fait que compléter les bases des tableaux HTML. Dans l'article suivant, nous allons voir quelques fonctionnalités de tableaux un peu plus avancées et commencer à penser à quel point elles sont accessibles pour les malvoyants.
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## Dans ce module
-
-- [Bases des tableaux en HTML](/fr/docs/Learn/HTML/Tables/Basics)
-- [Caractéristiques avancées des tableaux en HTML et accessibilité](/fr/docs/Learn/HTML/Tables/Advanced)
-- [Structuration de données sur les planètes](/fr/docs/Learn/HTML/Tables/Structuring_planet_data)
