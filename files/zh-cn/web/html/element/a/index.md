@@ -348,8 +348,8 @@ document
 - [G201：在打开新窗口时给用户预先警告](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
 ### 跳转链接
-**跳转链接**（skip link）是在 {{HTMLElement("body")}} 内容中尽可能早地放置一个链接，指向页面主要内容的开头。通常情况下，CSS 会将跳转链接隐藏在屏幕之外，直到被聚焦。
 
+**跳转链接**（skip link）是在 {{HTMLElement("body")}} 内容中尽可能早地放置一个链接，指向页面主要内容的开头。通常情况下，CSS 会将跳转链接隐藏在屏幕之外，直到被聚焦。
 
 ```html
 <body>
