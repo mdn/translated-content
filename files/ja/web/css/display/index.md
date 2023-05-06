@@ -5,7 +5,7 @@ slug: Web/CSS/display
 
 {{CSSRef}}
 
-**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロック要素とインライン要素](/ja/docs/Web/CSS/CSS_Flow_Layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)、[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などを設定します。
+**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックレベルとインライン要素](/ja/docs/Web/CSS/CSS_Flow_Layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)、[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などを設定します。
 
 正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。個々の仕様書については、[この文書の最後にある表](#仕様書)を参照してください。
 
@@ -81,13 +81,13 @@ display: unset;
         ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context) (BFC) を生成する、または内容物が親の整形コンテキストに吸収されます。
 
     - `flow-root`
-      - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)を確立するブロック要素ボックスを生成し、整形ルートがある場所を定義します。
+      - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)を確立するブロックレベルボックスを生成し、整形ルートがある場所を定義します。
     - `table`
       - : HTML の {{HTMLElement("table")}} 要素と同じように動作します。これは、ブロックレベルボックスを定義します。
     - `flex`
-      - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)に従ってレイアウトします。
+      - : 要素は、ブロックレベルのように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)に従ってレイアウトします。
     - `grid`
-      - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)に従ってレイアウトします。
+      - : 要素は、ブロックレベルのように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)に従ってレイアウトします。
     - `ruby` {{Experimental_Inline}}
       - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
@@ -156,7 +156,7 @@ display: unset;
 
     - `inline-block`
 
-      - : この要素はブロック要素ボックスを生成しますが、周囲のコンテンツに対しては単一のインラインボックスであるかのように流れるようになります (置換要素の場合と似ています)。
+      - : この要素はブロックレベルボックスを生成しますが、周囲のコンテンツに対しては単一のインラインボックスであるかのように流れるようになります (置換要素の場合と似ています)。
 
         これは `inline flow-root` と等価です。
 
