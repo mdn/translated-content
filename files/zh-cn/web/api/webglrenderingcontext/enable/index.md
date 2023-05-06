@@ -5,13 +5,15 @@ slug: Web/API/WebGLRenderingContext/enable
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的**`WebGLRenderingContext.enable()`** 方法，用于对该上下文开启某种特性。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.enable()`** 方法，用于对该上下文开启某种特性。
 
 ## 语法
 
 ```
-void gl.enable(cap);参数
+void gl.enable(cap);
 ```
+
+### 参数
 
 - `cap`
 
@@ -37,7 +39,7 @@ void gl.enable(cap);参数
 
 ### 返回值
 
-None.
+无。
 
 ## 样例
 
