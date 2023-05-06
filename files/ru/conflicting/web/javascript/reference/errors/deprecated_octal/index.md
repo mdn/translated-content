@@ -1,12 +1,14 @@
 ---
 title: 'Внимание: 08/09 не является восьмеричной постоянной по ECMA-262'
-slug: Web/JavaScript/Reference/Errors/Bad_octal
+slug: conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal
 tags:
   - Ошибки
   - Предупреждения
   - Синтаксические ошибки
 translation_of: Web/JavaScript/Reference/Errors/Bad_octal
+original_slug: Web/JavaScript/Reference/Errors/Bad_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
