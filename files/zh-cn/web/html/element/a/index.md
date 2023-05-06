@@ -20,7 +20,7 @@ slug: Web/HTML/Element/a
     - 如果没有指定值，浏览器会从多个来源决定文件名和扩展名：
       - {{HTTPHeader("Content-Disposition")}} HTTP 标头。
       - URL [路径](/zh-CN/docs/Web/API/URL/pathname)的最后一段。
-      - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL) 的 {{domxref("Blob.type")}}。
+      - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
 
     - `filename`：决定文件名的值。`/` 和 `\` 被转化为下划线（`_`）。文件系统可能会阻止文件名中其他的字符，因此浏览器会在必要时适当调整文件名。
 
