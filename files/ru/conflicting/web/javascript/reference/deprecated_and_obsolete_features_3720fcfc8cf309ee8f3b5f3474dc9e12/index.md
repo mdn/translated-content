@@ -75,6 +75,7 @@ String(num).replace(/5/, '2');
 // (если нет, для них так же можно использовать полифилы)
 (function() {
   'use strict';
+
   var i,
     // Мы могли построить массив методов следующим образом, однако метод
     //   getOwnPropertyNames() нельзя реализовать на JavaScript:
@@ -95,6 +96,7 @@ String(num).replace(/5/, '2');
         return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
       };
     };
+
   for (i = 0; i < methodCount; i++) {
     assignStringGeneric(methods[i]);
   }
