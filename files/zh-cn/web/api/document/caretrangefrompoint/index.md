@@ -1,5 +1,5 @@
 ---
-title: "Document: caretRangeFromPoint() 方法"
+title: Document：caretRangeFromPoint() 方法
 slug: Web/API/Document/caretRangeFromPoint
 ---
 
@@ -27,7 +27,7 @@ caretRangeFromPoint(x, y)
 以下之一:
 
 - 一个 {{domxref("Range")}}。
-- `Null`，当 *x* 或 *y* 为负数，超出视口范围或者没有包含文本的节点。
+- `Null`，当 _x_ 或 _y_ 为负数，超出视口范围或者没有包含文本的节点。
 
 ## 示例
 
