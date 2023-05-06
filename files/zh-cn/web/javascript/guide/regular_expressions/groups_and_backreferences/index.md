@@ -208,6 +208,6 @@ do {
   - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
+  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 
 - [正则构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

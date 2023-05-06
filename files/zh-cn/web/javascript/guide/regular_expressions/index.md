@@ -49,7 +49,7 @@ var re = new RegExp("ab+c");
   - : 表示表达式字符的分组和范围。
 - [量词（Quantifiers）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - : 表示匹配的字符或表达式的数量。
-- [Unicode 属性转义（Unicode Property Escapes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
+- [Unicode 属性转义（Unicode Property Escapes）](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - : 基于 unicode 字符属性区分字符。例如大写和小写字母、数学符号和标点。
 
 <table class="standard-table">
