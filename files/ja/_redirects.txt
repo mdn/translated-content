@@ -4665,6 +4665,7 @@
 /ja/docs/Web/JavaScript/Guide/Predefined_Functions/eval_Function	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/eval_Function
 /ja/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries	/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions
 /ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+/ja/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /ja/docs/Web/JavaScript/Guide/Statements	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/Web/JavaScript/Guide/The_Employee_Example	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example
 /ja/docs/Web/JavaScript/Guide/The_Employee_Example/Creating_the_Hierarchy	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Creating_the_Hierarchy
@@ -4692,6 +4693,7 @@
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 /ja/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ja/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/ja/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ja/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /ja/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /ja/docs/Web/JavaScript/Reference/Errors/Var_hides_argument	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ja/docs/Web/JavaScript/Reference/Functions_and_function_scope	/ja/docs/Web/JavaScript/Reference/Functions
