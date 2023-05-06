@@ -4,7 +4,7 @@ slug: Web/CSS/CSSOM_View/Coordinate_systems
 original_slug: Web/CSS/CSSOM_View/坐标系
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 当我们需要在图形上指定一点的坐标[algebra](https://zh.wikipedia.org/wiki/algebra))，这个坐标需要先对于某一个固定点。这个固定点我们称为原点[origin](<https://zh.wikipedia.org/wiki/Origin_(mathematics)>). 这个指定点的坐标即为包含在各个维度上相对于远点的距离值。
 

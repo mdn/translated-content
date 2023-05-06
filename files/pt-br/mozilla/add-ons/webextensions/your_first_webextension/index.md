@@ -112,25 +112,21 @@ borderify/
 
 ### Instalando
 
-Acesse a área de Debugging do Firefox digitando diretamente na barra de endereço: "about:debugging", em seguida clique em "Load Temporary Add-on" e selecione o "borderify.js".
+Acesse a área de Debugging do Firefox digitando diretamente na barra de endereço: "about:debugging", clique na opção "Este Firefox", em seguida clique em "Carregar extensão temporária", então selecione qualquer arquivo da sua pasta de extensões.
 
-{{EmbedYouTube("cer9EUKegG4")}}
+A Extensão agora será instalada e ficará assim até que você reinicie o Firefox.
 
-A Extensão agora será instalado e ficará assim até que você reinicie o Firefox.
-
-Como alternativa, você pode executar a Extansão a partir da linha de comando usando a ferramenta [web-ext](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext).
+Como alternativa, você pode executar a extensão a partir da linha de comando usando a ferramenta [web-ext](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext).
 
 ### Testando
 
-Agora visitar uma página em "mozilla.org" e você deve ver uma borda vermelha em volta da página:
+Agora visite uma página em "mozilla.org" e você deve ver uma borda vermelha em volta da página:
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
+![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
 > **Nota:** Não tente acessar addons.mozilla.org! Os scripts de conteúdo são bloqueados nesse domínio.
 
 Experimente um pouco. Edite o script de conteúdo para alterar a cor da borda ou faça outra coisa com o conteúdo da página. Salve o script de conteúdo e, em seguida, recarregue os arquivos da extensão clicando no botão "Reload" em about:debugging. Você poderá ver as mudanças imediatamente:
-
-{{EmbedYouTube("NuajE60jfGY")}}
 
 - [Saiba mais sobre o carregamento de extensões](/pt-BR/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 

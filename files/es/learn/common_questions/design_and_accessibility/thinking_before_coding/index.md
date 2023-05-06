@@ -25,7 +25,7 @@ Al comenzar con un proyecto web, muchas personas se enfocan en el aspecto técni
 
 Entonces cuando tienes una idea y quieres convertirla en un sitio web, hay un par de cuestiones que debes responder antes que alguna otra cosa:
 
-- ¿Qué es exactamente quiero lograr?
+- ¿Qué es exactamente lo que quiero lograr?
 - ¿Cómo un sitio web me ayudará a alcanzar mis metas?
 - ¿Qué es necesario hacer, y en qué orden, para alcanzar mis metas?
 

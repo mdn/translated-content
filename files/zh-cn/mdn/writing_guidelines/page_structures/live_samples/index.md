@@ -132,10 +132,10 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的在线�
 这段代码很简单，只是增加了一个点击事件处理器来弹出信息。
 
 ```js
-var el = document.getElementById('item');
-el.onclick = function() {
-  alert('Owww, stop poking me!');
-}
+const el = document.getElementById("item");
+el.onclick = function () {
+  alert("Owww, stop poking me!");
+};
 ```
 
 ### 结果

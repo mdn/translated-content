@@ -11,4 +11,4 @@ slug: Glossary/Port
 
 ### 一般知識
 
-- 維基百科上的 [Port](https://zh.wikipedia.org/wiki/Port_(computer_networking)) 條目
+- 維基百科上的 [Port](<https://zh.wikipedia.org/wiki/Port_(computer_networking)>) 條目

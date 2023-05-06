@@ -3,7 +3,7 @@ title: ':required'
 slug: Web/CSS/:required
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 摘要
 
