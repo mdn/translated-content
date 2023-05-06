@@ -6,7 +6,8 @@ slug: Web/HTML/Element/a
 {{HTMLSidebar}}
 
 [HTML](/zh-CN/docs/Web/HTML) **`<a>`** 元素（或称*锚*元素）可以通过[它的 `href` 属性](#href)创建通向其他网页、文件、电子邮件地址、同一页面内的位置或任何其他 URL 的超链接。
-`<a>` 中的内容**应该**指明链接的目标。如果存在 `href` 属性，当 `<a>` 元素聚焦时按下回车键就会激活它。
+
+`<a>` 中的内容*应该*指明链接的目标。如果存在 `href` 属性，当 `<a>` 元素聚焦时按下回车键就会激活它。
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
@@ -16,7 +17,7 @@ slug: Web/HTML/Element/a
 
 - `download`
 
-  - : 导致浏览器将链接的 URL 视为下载资源。可以使用或不使用 `filename` 值
+  - : 导致浏览器将链接的 URL 视为下载资源。可以使用或不使用 `filename` 值：
     - 如果没有指定值，浏览器会从多个来源决定文件名和扩展名：
       - {{HTTPHeader("Content-Disposition")}} HTTP 标头。
       - URL [路径](/zh-CN/docs/Web/API/URL/pathname)的最后一段。
@@ -52,13 +53,14 @@ slug: Web/HTML/Element/a
 
   - : 在跟随链接时，[referrer](/zh-CN/docs/Web/HTTP/Headers/Referer) 需要发送多少内容：
 
-    - `no-referrer`：{{HTTPHeader("Referer")}} 头将不会被发送。
+    - `no-referrer`：{{HTTPHeader("Referer")}} 标头将不会被发送。
     - `no-referrer-when-downgrade`：如果没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}），{{HTTPHeader("Referer")}} 头将不会被发送到{{Glossary("origin","源")}}上。
-    - `origin`：发送的 referrer 将被限制在其页面的来源：[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}} 和{{Glossary("port","端口")}}。
+    - `origin`：发送的 referrer 将被限制在其页面的来源：[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
     - `origin-when-cross-origin`：发送到其他源的 referrer 将只包含协议、主机和端口，而导航到相同的源仍将包括路径。
+    - `same-origin`：将向[同源](/zh-CN/docs/Glossary/Same-origin_policy)地址发送 referrer，但跨源请求不包含 referrer 信息。
     - `strict-origin`：当协议安全级别保持不变（HTTPS→HTTPS）时，只将文档的来源作为 referrer 发送，但不要将其发送到安全性较低的目的地（HTTPS→HTTP）。
     - `strict-origin-when-cross-origin`（默认）：在执行同源请求时发送完整的 URL，在协议安全级别保持不变时只发送源（HTTPS→HTTPS），对安全性较低的目的地不发送标头（HTTPS→HTTP）。
-    - `unsafe-url`：表示 referrer 将会包含源*和*路径（但是不包含[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这样的值是不安全的**，因为它可能会将受 TLS 保护的资源的源和路径泄露到不安全的源中。
+    - `unsafe-url`：表示 referrer 将会包含源*和*路径（但是不包含[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**此值是不安全的**，因为它可能会将受 TLS 保护的资源的源和路径泄露到不安全的源中。
 
 - `rel`
   - : 该属性指定了目标对象到链接对象的关系。
@@ -66,10 +68,10 @@ slug: Web/HTML/Element/a
 
   - : 该属性指定在何处显示链接的 URL，作为*浏览上下文*的名称（标签、窗口或 {{HTMLElement("iframe")}}）。以下关键词对加载 URL 的位置有特殊含义：
 
-    - `_self`: 当前页面加载。（默认）
-    - `_blank`: 通常在新标签页打开，但用户可以通过配置选择在新窗口打开。
-    - `_parent`: 当前浏览环境的父级浏览上下文。如果没有父级框架，行为与 `_self` 相同。
-    - `_top`: 最顶级的浏览上下文（当前浏览上下文中最“高”的祖先）。如果没有祖先，行为与 `_self` 相同。
+    - `_self`：当前页面加载。（默认）
+    - `_blank`：通常在新标签页打开，但用户可以通过配置选择在新窗口打开。
+    - `_parent`：当前浏览环境的父级浏览上下文。如果没有父级框架，行为与 `_self` 相同。
+    - `_top`：最顶级的浏览上下文（当前浏览上下文中最“高”的祖先）。如果没有祖先，行为与 `_self` 相同。
 
       > **备注：** 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
 
@@ -80,9 +82,9 @@ slug: Web/HTML/Element/a
 
 - `charset` {{Deprecated_Inline}}
 
-  - : 此属性定义链接资源的 {{Glossary("character encoding","字符编码")}}。
+  - : 此属性定义链接资源的{{Glossary("character encoding","字符编码")}}。
 
-    > **备注：** 该属性已作废，**不应使用**。为了实现其效果，在链接的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 标头。
+    > **备注：** 该属性已作废，**不应使用**。请在链接的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 标头。
 
 - `coords` {{Deprecated_Inline}}
   - : 与 [`shape` 属性](#shape)一同使用，以逗号分隔的坐标列表。
@@ -93,12 +95,12 @@ slug: Web/HTML/Element/a
     > **备注：** 使用全局属性 [`id`](/zh-CN/docs/HTML/Global_attributes#id) 来代替。
 
 - `rev` {{Deprecated_Inline}}
-  - : 指定一个反向链接；与 [`rel` 属性](#rel)相作用反。因为非常混乱而被废弃。
+  - : 指定一个反向链接；与 [`rel` 属性](#rel)作用相反。因为非常混乱而被废弃。
 - `shape` {{Deprecated_Inline}}
 
-  - : 图像地图（image map）中超链接区域的形状。
+  - : 图像映射（image map）中超链接区域的形状。
 
-    > **备注：** 使用 {{HTMLElement("area")}} 元素来代替图像地图。
+    > **备注：** 使用 {{HTMLElement("area")}} 元素来代替图像映射。
 
 ## 示例
 
@@ -163,7 +165,7 @@ a {
 
 {{EmbedLiveSample('链接到 email 地址')}}
 
-有关 `mailto:` URL 协议的更多细节，比如如何包含主题，正文，或其他预定内容，参考 [Email 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_链接) 或 {{RFC(6068)}}。
+有关 `mailto:` URL 协议的更多细节，比如如何包含主题、正文，或其他预定内容，参考 [Email 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_链接)或 {{RFC(6068)}}。
 
 ### 链接到电话号码
 
@@ -180,10 +182,10 @@ a {
 
 - 蜂窝设备会自动拨出号码。
 - 大多数操作系统都有可以打电话的程序，如 Skype 或 FaceTime。
-- 网站可以通过 {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}拨打电话，如 `web.skype.com`。
+- 网站可以通过 {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} 拨打电话，如 `web.skype.com`。
 - 其他行为包括将号码保存到联系人，或将号码发送到另一个设备。
 
-关于 `tel:` URL 协议的语法、附加功能和其他细节，见{{RFC(3966)}}。
+关于 `tel:` URL 协议的语法、附加特性和其他细节，见 {{RFC(3966)}}。
 
 ### 使用 download 属性将 \<canvas> 保存为 PNG 格式
 
@@ -258,7 +260,7 @@ document
 
 `<a>` 元素会对用户的安全和隐私产生影响。请参阅 [`Referer` 标头：隐私和安全问题](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns)了解情况。
 
-使用 `target="_blank"` 而不使用 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 会使网站容易受到 {{domxref("window.opener")}} 的 API 攻击。不过请注意，在较新的浏览器版本中，设置 `target="_blank"` 隐含地提供了与设置 `rel="noopener"` 同样的保护。详情见[浏览器兼容性](#浏览器兼容性)。
+使用 `target="_blank"` 而不使用 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 会使网站容易受到 {{domxref("window.opener")}} 的 API 攻击。不过请注意，在较新的浏览器版本中，设置 `target="_blank"` 隐式地提供了与设置 `rel="noopener"` 同样的保护。详情见[浏览器兼容性](#浏览器兼容性)。
 
 ## 无障碍
 
@@ -296,7 +298,7 @@ document
 
 锚点元素经常被滥用为假按钮，将其 `href` 设置为 `#` 或 `javascript:void(0)` 以防止页面刷新，然后监听其 `click` 事件。
 
-这些假的 `href` 值在复制/拖动链接、在新的标签/窗口中打开链接、书签、或当 JavaScript 正在加载、出错或被禁用时，会导致意外行为。它们还向辅助技术（如屏幕阅读器）传达不正确的语义。
+这些假的 `href` 值在复制/拖动链接、在新的标签/窗口中打开链接、书签，或当 JavaScript 正在加载、出错或被禁用时，会导致意外行为。它们还向辅助技术（如屏幕阅读器）传达不正确的语义。
 
 请使用 {{HTMLElement("button")}} 代替。一般来说，**你应该只使用超链接来导航到一个真正的 URL**。
 
@@ -402,11 +404,11 @@ document
 
 交互式元素，如链接，放置在视觉上很近的地方，应该有空间将它们分开。间隔有助于有运动控制问题的人，否则他们可能会意外地激活错误的互动内容。
 
-间隔可以使用CSS属性来创建，如 {{CSSxRef("margin")}}。
+间隔可以使用 CSS 属性来创建，如 {{CSSxRef("margin")}}。
 
 - [Hand tremors 和“巨大按钮问题”](https://axesslab.com/hand-tremors/)
 
-## 技术总结
+## 技术概要
 
 <table class="properties">
   <tbody>
