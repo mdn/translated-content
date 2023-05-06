@@ -1,17 +1,18 @@
 ---
 title: Unicode property escapes
-slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
+slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
+original_slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
 ---
 
 {{jsSidebar("JavaScript Guide")}}
 
-**Unicode property escapes** [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 支持根据 Unicode 属性进行匹配，例如我们可以用它来匹配出表情、标点符号、字母 (甚至适用特定语言或文字) 等。同一符号可以拥有多种 Unicode 属性，属性则有 binary ("boolean-like") 和 non-binary 之分。
+**Unicode property escapes** [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 支持根据 Unicode 属性进行匹配，例如我们可以用它来匹配出表情、标点符号、字母（甚至适用特定语言或文字）等。同一符号可以拥有多种 Unicode 属性，属性则有 binary ("boolean-like") 和 non-binary 之分。
 
 {{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
 > **备注：** 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.unicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)。
 
-> **备注：** 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符，但后者浏览器兼容性更好 (截至 2020 一月).
+> **备注：** 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符，但后者浏览器兼容性更好（截至 2020 一月）。
 
 ## 句法
 
