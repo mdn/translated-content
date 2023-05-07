@@ -5,7 +5,7 @@ slug: Web/API/Document/caretPositionFromPoint
 
 {{APIRef("CSSOM View")}}
 
-{{domxref("Document")}} 接口的 **`caretPositionFromPoint()`** 属性返回一个 {{domxref('CaretPosition')}} 对象，其中包含 DOM 节点以及该节点内光标和光标字符偏移量。
+{{domxref("Document")}} 接口的 **`caretPositionFromPoint()`** 属性返回一个 {{domxref('CaretPosition')}} 对象，其中包含 DOM 节点以及该节点内光标和光标的字符偏移量。
 
 ## 语法
 
@@ -30,7 +30,7 @@ caretPositionFromPoint(x, y)
 
 ### 演示
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 以下代码首先检查 `document.caretPositionFromPoint` 支持情况，但如果浏览器不支持，则代码会检查 {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} 并使用它。
 

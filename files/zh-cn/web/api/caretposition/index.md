@@ -19,7 +19,7 @@ slug: Web/API/CaretPosition
 ## 实例方法
 
 - {{domxref("CaretPosition.getClientRect")}} {{Experimental_Inline}}
-  - : 返回光标范围的 client rectangle（译注：类型为 {{domxref("DOMRect")}}）。
+  - : 返回光标范围的客户端矩形。
 
 ## 规范
 
