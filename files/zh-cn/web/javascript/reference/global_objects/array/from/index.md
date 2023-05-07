@@ -112,14 +112,11 @@ f(1, 2, 3);
 ### 使用箭头函数和 Array.from()
 
 ```js
-// 使用箭头函数作为映射函数去
-// 操作多个元素
+// 使用箭头函数作为映射函数去操作多个元素
 Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
-// 生成一个数字序列
-// 因为数组在每个位置都使用 `undefined` 初始化，
-// 下面的 `v` 值将是 `undefined`
+// 生成一个数字序列。因为数组在每个位置都使用 `undefined` 初始化，下面的 `v` 值将是 `undefined`
 Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
 ```
@@ -183,7 +180,9 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 ## 参见
 
 - [`core-js` 中的 `Array.from` Polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}
 - {{jsxref("Array.fromAsync()")}}
 - {{jsxref("Array.prototype.map()")}}
