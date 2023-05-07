@@ -5,7 +5,7 @@ slug: Web/CSS/:link
 
 {{CSSRef}}
 
-**`:link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) 表示尚未被访问的元素，匹配每个具有 `href` 属性的未访问的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素。
+**`:link`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示尚未被访问的元素，匹配每个具有 `href` 属性的未访问的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-link.html", "tabbed-shorter")}}
 
