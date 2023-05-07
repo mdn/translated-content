@@ -1,5 +1,5 @@
 ---
-title: "Document: caretPositionFromPoint() 方法"
+title: Document：caretPositionFromPoint() 方法
 slug: Web/API/Document/caretPositionFromPoint
 ---
 
