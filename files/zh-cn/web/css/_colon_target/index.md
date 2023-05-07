@@ -5,7 +5,7 @@ slug: Web/CSS/:target
 
 {{CSSRef}}
 
-**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一个唯一的页面元素 (目标元素)，其[`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 与当前 URL 片段匹配。
+**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一个唯一的页面元素 (目标元素)，其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 与当前 URL 片段匹配。
 
 ```css
 /* 选择一个 ID 与当前 URL 片段匹配的元素*/
@@ -43,7 +43,7 @@ http://www.example.com/index.html#section2
 #### HTML
 
 ```html
-<h3>Table of Contents</h3>
+<h3>目录</h3>
 <ol>
  <li><a href="#p1">跳转到第一个段落！</a></li>
  <li><a href="#p2">跳转到第二个段落！</a></li>
