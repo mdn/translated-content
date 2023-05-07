@@ -73,7 +73,7 @@ input:required:invalid {
 
 必填的 {{htmlelement("input")}} 应该应用 required 属性。这将确保使用辅助技术（例如屏幕阅读器）导航的人能够了解哪些输入需要有效内容以确保成功提交。
 
-如果表单还包含[可选](/zh-CN/docs/Web/CSS/:optional)输入，则应使用不仅仅依赖于颜色来传达意义的方式来在视觉上指示必填输入。通常使用描述性文本和/或图标。
+如果表单还包含[可选](/zh-CN/docs/Web/CSS/:optional)输入，则不应仅仅依赖于颜色这一种传达意义的方式在视觉上指示必填输入。通常还应使用描述性文本和/或图标。
 
 - [MDN 理解 WCAG，指南 3.3 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
 - [了解成功标准 3.3.2 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
