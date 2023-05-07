@@ -9,7 +9,7 @@ slug: Web/API/CaretPosition
 
 ## 实例属性
 
-*该接口不继承任何属性。*
+_该接口不继承任何属性。_
 
 - {{domxref("CaretPosition.offsetNode")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个包含光标位置节点的 {{domxref("Node")}}。
