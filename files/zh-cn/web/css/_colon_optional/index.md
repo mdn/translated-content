@@ -9,7 +9,7 @@ slug: Web/CSS/:optional
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-optional.html", "tabbed-standard")}}
 
-这个伪类很有用，可以为不需要提交表单的字段设置样式。
+这个伪类很有用，可以为不是必须提交的表单字段设置样式。
 
 > **备注：** {{cssxref(":required")}} 伪类选择*必填*表单字段
 
@@ -23,7 +23,7 @@ slug: Web/CSS/:optional
 
 ## 示例
 
-### 可选字段具有紫色边框。
+### 可选字段具有紫色边框
 
 #### HTML
 
@@ -63,7 +63,7 @@ input:optional {
 
 #### 结果
 
-{{EmbedLiveSample('Examples', 600, 120)}}
+{{EmbedLiveSample('可选字段具有紫色边框', 600, 120)}}
 
 ## 无障碍考虑
 
