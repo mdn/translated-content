@@ -89,4 +89,4 @@ input:out-of-range + label::after {
 ## 参见
 
 - {{cssxref(":in-range")}}
-- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
+- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
