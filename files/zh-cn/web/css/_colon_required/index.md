@@ -5,7 +5,7 @@ slug: Web/CSS/:required
 
 {{CSSRef}}
 
-**`:required`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes)表示任何设置了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性的 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。
+**`:required`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何设置了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性的 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-required.html", "tabbed-standard")}}
 
