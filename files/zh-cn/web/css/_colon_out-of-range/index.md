@@ -5,7 +5,7 @@ slug: Web/CSS/:out-of-range
 
 {{CSSRef}}
 
-**`:out-of-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes)表示一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Element/input#attr-min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#attr-max) 限定的范围外。
+**`:out-of-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Element/input#attr-min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#attr-max) 限定的范围外。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-out-of-range.html", "tabbed-shorter")}}
 
