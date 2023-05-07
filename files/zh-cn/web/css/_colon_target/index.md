@@ -190,4 +190,4 @@ p:target i {
 
 ## 参见
 
-- [在选择中使用 :target 伪类](/zh-CN/docs/Using_the_:target_selector)
+- [在选择器中使用 :target 伪类](/zh-CN/docs/Using_the_:target_selector)
