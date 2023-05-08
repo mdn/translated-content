@@ -5,7 +5,7 @@ slug: Web/API/Element/mouseenter_event
 
 {{APIRef}}
 
-**`mouseenter`** 事件在一个定点设备（通常指鼠标）第一次移动到触发事件{{domxref("Element", "元素", "", 1)}}中的激活区域时触发。
+**`mouseenter`** 事件在定点设备（通常指鼠标）首次移动到{{domxref("Element", "元素", "", 1)}}的激活区域内时触发。
 
 ## 语法
 
