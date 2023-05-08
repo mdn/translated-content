@@ -25,7 +25,7 @@ onmouseenter = (event) => { };
 
 ## 事件属性
 
-_这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
+_这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
 
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : 当鼠标事件被触发时，如果 <kbd>alt</kbd> 键已被按下，返回 `true`。
