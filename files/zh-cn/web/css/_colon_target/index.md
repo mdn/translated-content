@@ -5,7 +5,7 @@ slug: Web/CSS/:target
 
 {{CSSRef}}
 
-**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一个唯一的页面元素 (目标元素)，其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 与当前 URL 片段匹配。
+**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一个唯一的元素（_目标元素_），其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 与当前 URL 片段匹配。
 
 ```css
 /* 选择一个 ID 与当前 URL 片段匹配的元素*/
@@ -20,7 +20,7 @@ slug: Web/CSS/:target
 http://www.example.com/index.html#section2
 ```
 
-若当前 URL 等于上面的 URL时，以下元素将被 `:target` 选择器被选中：
+若当前 URL 等于上面的 URL 时，以下元素将被 `:target` 选择器被选中：
 
 ```html
 <section id="section2">Example</section>
@@ -190,4 +190,4 @@ p:target i {
 
 ## 参见
 
-- [在选择器中使用 :target 伪类](/zh-CN/docs/Using_the_:target_selector)
+- [在选择器中使用 :target 伪类](/zh-CN/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
