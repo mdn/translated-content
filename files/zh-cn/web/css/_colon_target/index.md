@@ -5,7 +5,7 @@ slug: Web/CSS/:target
 
 {{CSSRef}}
 
-**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一个唯一的元素（_目标元素_），其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 与当前 URL 片段匹配。
+**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个唯一的元素（_目标元素_），其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 与当前 URL 片段匹配。
 
 ```css
 /* 选择一个 ID 与当前 URL 片段匹配的元素*/
@@ -36,9 +36,9 @@ http://www.example.com/index.html#section2
 
 ## 示例
 
-### 一个内容列表
+### 一个目录
 
-`:target` 伪类可用于加亮显示页面中可从表格内容中链接到的部分。
+`:target` 伪类可用于高亮显示页面中可从目录中链接到的部分。
 
 #### HTML
 
@@ -51,7 +51,7 @@ http://www.example.com/index.html#section2
 </ol>
 
 <h3>我的趣味文章</h3>
-<p id="p1">您可以使用 URL 片段定位此<i>段落</i>。点击上面的链接试试吧！</p>
+<p id="p1">你可以使用 URL 片段定位此<i>段落</i>。点击上面的链接试试吧！</p>
 <p id="p2">这是<i>另一个段落</i>，也可以从上面的链接访问。 这不是很愉快吗？</p>
 ```
 
@@ -78,13 +78,13 @@ p:target i {
 
 #### 结果
 
-{{EmbedLiveSample('一个内容列表', 500, 300)}}
+{{EmbedLiveSample('一个目录', 500, 300)}}
 
 ### 纯 CSS 高亮
 
-你可以不使用任何 Javascript 代码，只使用 `:target` 伪类创建一个加亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，CSS 就会更改其 `display` 以便显示它们。
+你可以不使用任何 Javascript 代码，只使用 `:target` 伪类创建一个高亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，CSS 就会更改其 `display` 以便显示它们。
 
-> **备注：** 一个基于 `:target` 伪类的更为完善的纯-CSS 加亮框可以在 [GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)) 上找到。
+> **备注：** 一个基于 `:target` 伪类的更为完善的纯 CSS 高亮框可以在 [GitHub](https://github.com/madmurphy/takefive.css/)（[demo](https://madmurphy.github.io/takefive.css/)）上找到。
 
 #### HTML
 
