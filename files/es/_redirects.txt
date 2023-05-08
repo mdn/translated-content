@@ -2239,10 +2239,11 @@
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Aserciones	/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres	/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Cuantificadores	/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers
-/es/docs/Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_Unicode	/es/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
+/es/docs/Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_Unicode	/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Grupos_y_rangos	/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Hoja_de_referencia	/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet
+/es/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /es/docs/Web/JavaScript/Guide/Trabajando_con_objectos	/es/docs/Web/JavaScript/Guide/Working_with_objects
 /es/docs/Web/JavaScript/Guide/Usar_promesas	/es/docs/Web/JavaScript/Guide/Using_promises
 /es/docs/Web/JavaScript/Guide/Valores,_variables_y_literales	/es/docs/Web/JavaScript/Guide/Grammar_and_types
