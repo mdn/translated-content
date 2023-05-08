@@ -126,7 +126,7 @@ test.addEventListener("mouseout", function( event ) {
 
 #### 结果
 
-{{EmbedLiveSample("mouseout_and_mouseleave", 640, 200)}}
+{{EmbedLiveSample('mouseout 和 mouseleave', 640, 200)}}
 
 ## 规范
 
