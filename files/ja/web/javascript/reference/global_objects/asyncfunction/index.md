@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`AsyncFunction` コンストラクター**は、新しい[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)オブジェクトを生成します。 JavaScript では、すべての非同期関数が実際に `AsyncFunction` オブジェクトです。
+**`AsyncFunction`** オブジェクトは、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)のメソッドを提供します。JavaScript では、すべての非同期関数が実際に `AsyncFunction` オブジェクトです。
 
 `AsyncFunction` はグローバルオブジェクトでは*ない*ことに注意してください。これは以下のようなコードで取得することができます。
 
