@@ -183,8 +183,7 @@ Firefox 还支持系统颜色关键字集的一些非标准扩展。
 
 @media (forced-colors: active) {
   .button {
-    /* 改用边框，这是因为在强制颜色模式中
-    box-shadow 被强制变为“none” */
+    /* 改用边框，这是因为在强制颜色模式中 box-shadow 被强制变为“none” */
     border: 2px ButtonBorder solid;
   }
 }
