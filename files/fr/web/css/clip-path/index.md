@@ -572,7 +572,7 @@ svg text.em {
 #### HTML
 
 ```html
-<img id="clipped" src="mdn.svg" alt="MDN logo" />
+<img id="clipped" src="mdn.svg" alt="Logo de MDN" />
 <svg height="0" width="0">
   <defs>
     <clipPath id="cross">
