@@ -5,7 +5,7 @@ slug: Web/CSS/accent-color
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`accent-color`** 为某些元素所生成的用户界面控件设置了{{Glossary("accent", "点缀色")}}。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`accent-color`** 为某些元素所生成的用户界面控件设置了{{Glossary("accent", "强调色")}}。
 
 {{EmbedInteractiveExample("pages/css/accent-color.html")}}
 
@@ -39,9 +39,9 @@ accent-color: unset;
 ### 取值
 
 - `auto`
-  - : 表示用户代理所选颜色，应匹配平台的点缀色（若有）。
+  - : 表示用户代理所选颜色，应匹配平台的强调色（若有）。
 - {{CSSXref("&lt;color&gt;")}}
-  - : 指定用作点缀色的颜色。
+  - : 指定用作强调色的颜色。
 
 ## 形式定义
 
@@ -53,7 +53,7 @@ accent-color: unset;
 
 ## 示例
 
-### 设置自定义点缀色
+### 设置自定义强调色
 
 #### HTML
 
@@ -79,7 +79,7 @@ input.custom {
 
 #### 结果
 
-{{EmbedLiveSample("设置自定义点缀色", 500, 200)}}
+{{EmbedLiveSample("设置自定义强调色", 500, 200)}}
 
 ## 规范
 
