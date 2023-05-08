@@ -276,137 +276,134 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 通过使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 或给这个接口的 `oneventname` 属性指定一个事件监听器来监听这些事件。
 
 - {{domxref("Window/error_event", "error")}}
-  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+  - : 当一个资源加载失败，或不能使用时触发该事件。例如，如果脚本有一个执行错误，或者图像找不到或无效。
 - {{domxref("Window/languagechange_event", "languagechange")}}
-  - : Fired at the global scope object when the user's preferred language changes.
+  - : 当用户的首选语言发生变化时，在全局范围对象中触发该事件。
 - {{domxref("Window.devicemotion_event", "devicemotion")}}
-  - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
+  - : 以固定的时间间隔触发该事件，显示设备所接受的物理加速力的大小和旋转速率（如果有）。
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-  - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+  - : 当磁力计方向传感器提供了关于设备当前方向与地球坐标框架的新数据时，触发该事件。
 - {{domxref("Window/resize_event", "resize")}}
-  - : Fired when the window has been resized.
+  - : 窗口大小发生变化时触发。
 - {{domxref("Window/storage_event", "storage")}}
-  - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
+  - : 当一个存储区域（`localStorage` 或 `sessionStorage`）在另一个文档的上下文中被修改时，触发该事件。
 
 ### 动画事件
 
 - {{domxref("Window/animationcancel_event", "animationcancel")}}
-  - : Fired when an animation unexpectedly aborts.
+  - : 当一个动画意外地中止时，触发该事件。
 - {{domxref("Window/animationend_event", "animationend")}}
-  - : Fired when an animation has completed normally.
+  - : 当一个动画正常完成时，触发该事件。
 - {{domxref("Window/animationiteration_event", "animationiteration")}}
-  - : Fired when an animation iteration has completed.
+  - : 当一个动画迭代完成时，触发该事件。
 - {{domxref("Window/animationstart_event", "animationstart")}}
-  - : Fired when an animation starts.
+  - : 当一个动画开始时，触发该事件。
 
 ### 剪切板事件
 
 - {{domxref("Window/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
+  - : 当用户通过浏览器的用户界面启动一个复制动作时，触发该事件。也可通过 {{domxref("HTMLElement/oncopy", "oncopy")}} 属性设置。
 - {{domxref("Window/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
+  - : 当用户通过浏览器的用户界面启动一个剪切动作时，触发该事件。也可通过 {{domxref("HTMLElement/oncut", "oncut")}} 属性设置。
 - {{domxref("Window/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
+  - : 当用户通过浏览器的用户界面启动一个粘贴动作时，触发该事件。也可通过 {{domxref("HTMLElement/onpaste", "paste")}} 属性设置。
 
 ### 连接事件
 
 - {{domxref("Window/offline_event", "offline")}}
-  - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
+  - : 当浏览器失去了对网络的访问，并且 `navigator.onLine` 的值转换为 `false` 时，触发该事件。
 - {{domxref("Window/online_event", "online")}}
-  - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
+  - : 当浏览器获得了对网络的访问，并且 `navigator.onLine` 的值转换为 `true` 时，触发该事件。
 
 ### 聚焦事件
 
 - {{domxref("Window/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
+  - : 当一个元素失去焦点时，触发该事件。
 - {{domxref("Window/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
+  - : 当一个元素获得焦点时，触发该事件。
 
 ### Gamepad 事件
 
 - {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}
-  - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
+  - : 当浏览器检测到游戏板已被连接或首次使用游戏板的按钮/轴时启动。
 - {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}}
-  - : Fired when the browser detects that a gamepad has been disconnected.
+  - : 当浏览器检测到游戏板被断开连接时启动。
 
 ### 历史记录事件
 
 - {{domxref("Window/hashchange_event", "hashchange")}}
-  - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
+  - : 当 URL 的片段标识符（URL 中以 `#` 符号开头及其后面的部分）发生变化时，触发该事件。
 - {{domxref("Window/pagehide_event", "pagehide")}}
-  - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
+  - : 当浏览器隐藏了当前的文档，而在切换到显示会话历史中的另一个文档时触发该事件。例如，当用户点击“后退”按钮或点击“前进”按钮在会话历史中移动时，就会发生这种情况。
 - {{domxref("Window/pageshow_event", "pageshow")}}
-  - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
+  - : 当浏览器因导航任务而使文件可见时触发该事件，不仅包括页面首次加载时，还包括用户在同一标签内导航到另一个页面后再返回该页面等情况。
 - {{domxref("Window/popstate_event", "popstate")}}
-  - : Fired when the active history entry changes.
+  - : 当活动的历史条目改变时，触发该事件。
 
 ### 加载和卸载事件
 
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
-  - : Fired when the window, the document and its resources are about to be unloaded.
+  - : 当窗口、文档及其资源即将被卸载时，触发该事件。
 - {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+  - : 当文档被完全加载和解析时触发该事件，不需要等待样式表、图像和子框架完成加载。
 - {{domxref("Window/load_event", "load")}}
-  - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
+  - : 当整个页面加载完毕时触发该事件，包括所有依赖资源，如样式表图片。
 - {{domxref("Window/unload_event", "unload")}}
-  - : Fired when the document or a child resource is being unloaded.
+  - : 当文档或子资源正在被卸载时触发，触发该事件。
 
 ### 清单事件
 
 - {{domxref("Window/appinstalled_event", "appinstalled")}}
-  - : Fired when the browser has successfully installed a page as an application.
+  - : 当浏览器成功地将一个页面安装为一个应用程序时，触发该事件。
 - {{domxref("Window/beforeinstallprompt_event", "beforeinstallprompt")}}
-  - : Fired when a user is about to be prompted to install a web application.
+  - : 当用户即将被提示安装一个 web 应用程序时，触发该事件。
 
 ### 消息事件
 
 - {{domxref("Window/message_event", "message")}}
-  - : Fired when the window receives a message, for example from a call to {{domxref("Window/postMessage", "Window.postMessage()")}} from another browsing context.
+  - : 窗口收到消息时触发该事件，例如从另一个浏览上下文中调用 {{domxref("Window/postMessage", "Window.postMessage()")}}。
 - {{domxref("Window/messageerror_event", "messageerror")}}
-  - : Fired when a `Window` object receives a message that can't be deserialized.
+  - : 当 `Window` 对象收到无法反序列化的消息时，触发该事件。
 
 ### 打印事件
 
 - {{domxref("Window/afterprint_event", "afterprint")}}
-  - : Fired after the associated document has started printing or the print preview has been closed.
+  - : 在相关文档开始打印或打印预览关闭后，触发该事件。
 - {{domxref("Window/beforeprint_event", "beforeprint")}}
-  - : Fired when the associated document is about to be printed or previewed for printing.
+  - : 当相关文件即将被打印或预览打印时，触发该事件。
 
 ### Promise 拒绝事件
 
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
-  - : Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.
+  - : 每当一个 JavaScript {{jsxref("Promise")}} 被拒绝时，不管是否有处理程序来捕捉拒绝，都会触发该事件。
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
-  - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
+  - : 当 JavaScript {{jsxref("Promise")}} 被拒绝，但没有处理程序来捕获拒绝时，触发该事件。
 
 ### 渐变事件
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)被取消时，触发该事件。
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)完成时，触发该事件。
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)首次创建时，触发该事件。
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)真正开始时，触发该事件。
 
 ### 已废弃事件
 
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
-  - : Fired when the orientation of the device has changed.
+  - : 当设备的方向改变时，触发该事件。
 - {{domxref("Window/vrdisplayactivate_event", "vrdisplayactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a display is able to be presented to.
+  - : 当显示器可供呈现时，触发该事件。
 - {{domxref("Window/vrdisplayconnect_event", "vrdisplayconnect")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a compatible VR device has been connected to the computer.
+  - : 当兼容的 VR 设备被连接到电脑上时，触发该事件。
 - {{domxref("Window/vrdisplaydisconnect_event", "vrdisplaydisconnect")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a compatible VR device has been disconnected from the computer.
+  - : 当兼容的 VR 设备从电脑上断开时，触发该事件。
 - {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a display can no longer be presented to.
+  - : 当显示器不再可供呈现时，触发该事件。
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
+  - : 当 VR 设备的呈现状态发生变化时触发该事件，即从呈现状态变成不呈现状态，或者反之亦然。
 
 ## 接口
 
