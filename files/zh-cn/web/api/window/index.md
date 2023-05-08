@@ -94,7 +94,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : 返回对当前窗口或子框架的被继承对象的引用。
 - {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
-  - : 返回一个 {{domxref("Performance")}} 对象，其中包括 {{domxref("Performance.timing", "timing")}} 和 {{domxref("Performance.navigation", "navigation")}} 属性，每个属性都是提供[性能相关](/zh-CN/docs/Web/API/Navigation_timing_API)数据的对象。有关其他信息和例子，请参见[使用导航计时](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)。
+  - : 返回一个 {{domxref("Performance")}} 对象，其中包括 {{domxref("Performance.timing", "timing")}} 和 {{domxref("Performance.navigation", "navigation")}} 属性，每个属性都是提供[性能相关](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)数据的对象。有关其他信息和例子，请参见[使用导航计时](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)。
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : 返回 personalbar 对象。
 - {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
@@ -302,11 +302,11 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 ### 剪切板事件
 
 - {{domxref("Window/copy_event", "copy")}}
-  - : 当用户通过浏览器的用户界面启动一个复制动作时，触发该事件。也可通过 {{domxref("HTMLElement/oncopy", "oncopy")}} 属性设置。
+  - : 当用户通过浏览器的用户界面启动一个复制动作时，触发该事件。也可通过 {{domxref("HTMLElement/copy_event", "oncopy")}} 属性设置。
 - {{domxref("Window/cut_event", "cut")}}
-  - : 当用户通过浏览器的用户界面启动一个剪切动作时，触发该事件。也可通过 {{domxref("HTMLElement/oncut", "oncut")}} 属性设置。
+  - : 当用户通过浏览器的用户界面启动一个剪切动作时，触发该事件。也可通过 {{domxref("HTMLElement/cut_event", "oncut")}} 属性设置。
 - {{domxref("Window/paste_event", "paste")}}
-  - : 当用户通过浏览器的用户界面启动一个粘贴动作时，触发该事件。也可通过 {{domxref("HTMLElement/onpaste", "paste")}} 属性设置。
+  - : 当用户通过浏览器的用户界面启动一个粘贴动作时，触发该事件。也可通过 {{domxref("HTMLElement/paste_event", "paste")}} 属性设置。
 
 ### 连接事件
 
