@@ -24,134 +24,134 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 注意，对象类型的属性（例如：覆盖内建元素的原型）被列于下面单独的小节之中。
 
 - {{domxref("caches", "Window.caches")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+  - : 返回与当前环境相关的 {{domxref("CacheStorage")}} 对象。这个对象可以实现一些功能，如存储供离线使用的资源，以及对请求生成自定义响应。
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
-  - : An alias for {{domxref("Window.navigator")}}.
+  - : {{domxref("Window.navigator")}} 对象的别名。
 - {{domxref("Window.closed")}} {{ReadOnlyInline}}
-  - : This property indicates whether the current window is closed or not.
+  - : 此属性表示当前窗口是否关闭。
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
-  - : Returns a reference to the console object which provides access to the browser's debugging console.
+  - : 返回对 console 对象的引用，该对象提供对浏览器调试控制台的访问。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
+  - : 返回一个布尔值，表示当前文档是否在 credentialless 的 {{htmlelement("iframe")}} 中加载。参见 [IFrame credentialless](/zh-CN/docs/Web/Security/IFrame_credentialless) 以了解更多细节。
 - {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
-  - : Returns the browser crypto object.
+  - : 返回浏览器的 crypto 对象。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and get information about previously registered custom elements.
+  - : 返回对 {{domxref("CustomElementRegistry")}} 对象的引用，该对象可用于注册新的[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)并获取之前注册的自定义元素的信息。
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
-  - : Returns the ratio between physical pixels and device independent pixels in the current display.
+  - : 返回当前显示器中物理像素和设备独立像素之间的比率。
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
-  - : Returns a reference to the document that the window contains.
+  - : 返回对 window 所包含的文档的引用。
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
-  - : Returns the element in which the window is embedded, or null if the window is not embedded.
+  - : 返回窗口被嵌入的元素，如果窗口没有被嵌入，则返回空。
 - {{domxref("Window.frames")}} {{ReadOnlyInline}}
-  - : Returns an array of the subframes in the current window.
+  - : 返回当前窗口中的子帧形成的数组。
 - {{domxref("Window.fullScreen")}} {{Non-standard_Inline}}
-  - : This property indicates whether the window is displayed in full screen or not.
+  - : 此属性指示窗口是否以全屏显示。
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
-  - : Returns a reference to the history object.
+  - : 返回对 history 对象的引用。
 - {{domxref("indexedDB", "Window.indexedDB")}} {{ReadOnlyInline}}
-  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
+  - : 为应用程序提供异步访问索引数据库的能力；返回一个 {{domxref("IDBFactory")}} 对象。
 - {{domxref("Window.innerHeight")}} {{ReadOnlyInline}}
-  - : Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.
+  - : 获取浏览器窗口的内容区域的高度，包括（已渲染的）水平滚动条。
 - {{domxref("Window.innerWidth")}} {{ReadOnlyInline}}
-  - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
+  - : 获取浏览器窗口的内容区域的宽度，包括（已渲染的）竖直滚动条。
 - {{domxref("isSecureContext", "Window.isSecureContext")}} {{ReadOnlyInline}}
-  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
+  - : 返回一个布尔值，表示当前上下文安全（`true`）或不安全（`false`）。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
+  - : 当一个[渐进式网络应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
-  - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
+  - : 返回窗口中的帧数。参见 {{domxref("window.frames")}}。
 - {{domxref("Window.location")}}
-  - : Gets/sets the location, or current URL, of the window object.
+  - : 获取/设置 window 对象的位置，或当前的 URL。
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
-  - : Returns the locationbar object.
+  - : 返回 locationbar 对象。
 - {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
-  - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
+  - : 返回一个对用于存储数据的本地存储对象的引用，该对象只能由创建它的源访问。
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
-  - : Returns the menubar object.
+  - : 返回 menubar 对象。
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
+  - : 返回窗口视口左上角的水平（X）坐标，以屏幕坐标表示。这个值是以 CSS 像素为单位报告的。请参阅 `nsIDOMWindowUtils` 中的 `mozScreenPixelsPerCSSPixel`，以获得转换系数，以便在需要时适应屏幕像素。
 - {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
+  - : 返回窗口视口左上角的垂直（Y）坐标，以屏幕坐标表示。这个值是以 CSS 像素为单位报告的。请参阅 `mozScreenPixelsPerCSSPixel`，如果需要的话，可以用一个转换系数来适应屏幕像素。
 - {{domxref("Window.name")}}
-  - : Gets/sets the name of the window.
+  - : 获取/设置 window 对象的名称。
 - {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the current `window`'s associated {{domxref("Navigation")}} object. The entry point for the {{domxref("Navigation API")}}.
+  - : 返回当前 `window` 的相关 {{domxref("Navigation")}} 对象。是 {{domxref("Navigation API")}} 的入口点。
 - {{domxref("Window.navigator")}} {{ReadOnlyInline}}
-  - : Returns a reference to the navigator object.
+  - : 返回对 navigator 对象的引用。
 - {{domxref("Window.opener")}}
-  - : Returns a reference to the window that opened this current window.
+  - : 返回对打开当前窗口的 window 的引用。
 - {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
-  - : Returns the global object's origin, serialized as a string.
+  - : 返回全局对象的源，序列化为一个字符串。
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
-  - : Gets the height of the outside of the browser window.
+  - : 获取浏览器窗口外侧的高度。
 - {{domxref("Window.outerWidth")}} {{ReadOnlyInline}}
-  - : Gets the width of the outside of the browser window.
+  - : 获取浏览器窗口外侧的宽度。
 - {{domxref("Window.scrollX","Window.pageXOffset")}} {{ReadOnlyInline}}
-  - : An alias for {{domxref("window.scrollX")}}.
+  - : {{domxref("window.scrollX")}} 的别名。
 - {{domxref("Window.scrollY","Window.pageYOffset")}} {{ReadOnlyInline}}
-  - : An alias for {{domxref("window.scrollY")}}.
+  - : {{domxref("window.scrollY")}} 的别名。
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
-  - : Returns a reference to the parent of the current window or subframe.
+  - : 返回对当前窗口或子框架的被继承对象的引用。
 - {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Navigation_timing_API) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
+  - : 返回一个 {{domxref("Performance")}} 对象，其中包括 {{domxref("Performance.timing", "timing")}} 和 {{domxref("Performance.navigation", "navigation")}} 属性，每个属性都是提供[性能相关](/zh-CN/docs/Web/API/Navigation_timing_API)数据的对象。有关其他信息和例子，请参见[使用导航计时](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)。
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
-  - : Returns the personalbar object.
+  - : 返回 personalbar 对象。
 - {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
+  - : 返回与当前上下文相关的 {{domxref("Scheduler")}} 对象。这是使用[优先级任务调度 API](/zh-CN/docs/Web/API/Prioritized_Task_Scheduling_API) 的入口。
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
-  - : Returns a reference to the screen object associated with the window.
-- {{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
-  - : Both properties return the horizontal distance from the left border of the user's browser viewport to the left side of the screen.
-- {{domxref("Window.screenY")}} and {{domxref("Window.screenTop")}} {{ReadOnlyInline}}
-  - : Both properties return the vertical distance from the top border of the user's browser viewport to the top side of the screen.
+  - : 返回与该窗口相关的 screen 对象的引用。
+- {{domxref("Window.screenX")}} 和 {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
+  - : 这两个属性都返回从用户浏览器视口的左边界到屏幕左侧的水平距离。
+- {{domxref("Window.screenY")}} 和 {{domxref("Window.screenTop")}} {{ReadOnlyInline}}
+  - : 这两个属性都会返回从用户浏览器视口的上边界到屏幕上侧的垂直距离。
 - {{domxref("Window.scrollbars")}} {{ReadOnlyInline}}
-  - : Returns the scrollbars object.
+  - : 返回 scrollbars 对象。
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.
+  - : 窗口在水平方向上可以滚动的最大偏移量，即文档宽度减去视口宽度。
 - {{domxref("Window.scrollMaxY")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : The maximum offset that the window can be scrolled to vertically (i.e., the document height minus the viewport height).
+  - : 窗口在竖直方向上可以滚动的最大偏移量，即文档高度减去视口高度。
 - {{domxref("Window.scrollX")}} {{ReadOnlyInline}}
-  - : Returns the number of pixels that the document has already been scrolled horizontally.
+  - : 返回文档已经被水平滚动的像素数。
 - {{domxref("Window.scrollY")}} {{ReadOnlyInline}}
-  - : Returns the number of pixels that the document has already been scrolled vertically.
+  - : 返回文档已经被竖直滚动的像素数。
 - {{domxref("Window.self")}} {{ReadOnlyInline}}
-  - : Returns an object reference to the window object itself.
+  - : 返回对 window 对象本身的引用。
 - {{domxref("Window.sessionStorage")}}
-  - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
+  - : 返回对用于存储数据的会话存储对象的引用，这些数据只能由创建它的源访问。
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.
+  - : 返回 {{domxref("SpeechSynthesis")}} 对象，这是使用 [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 语音合成功能的入门点。
 - {{domxref("Window.statusbar")}} {{ReadOnlyInline}}
-  - : Returns the statusbar object.
+  - : 返回 statusbar 对象。
 - {{domxref("Window.toolbar")}} {{ReadOnlyInline}}
-  - : Returns the toolbar object.
+  - : 返回 toolbar 对象。
 - {{domxref("Window.top")}} {{ReadOnlyInline}}
-  - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
+  - : 返回对窗口层次结构中最顶层窗口的引用。这个属性是只读的。
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("VisualViewport")}} object which represents the visual viewport for a given window.
+  - : 返回 {{domxref("VisualViewport")}} 对象，代表一个给定窗口的视觉视口。
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
-  - : Returns a reference to the current window.
-- `window[0]`, `window[1]`, etc.
-  - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
+  - : 返回对当前 window 的引用。
+- `window[0]`、`window[1]` 等
+  - : 以逐帧形式返回对 `window` 对象的引用，要了解更多细节，参见 {{domxref("Window.frames")}}。
 
 ### 已废弃属性
 
-- {{domxref("Window.content")}} and `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
+- {{domxref("Window.content")}} 和 `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : 返回对当前窗口中的内容元素的引用。从 Firefox 57 开始（最初是 Nightly-only），这两个版本都只能从 chrome（的特权）代码中获得，而不再对 web 提供。
 - {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
-  - : Gets/sets the status bar text for the given window.
+  - : 获取/设置给定窗口的状态栏文本。
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
+  - : 返回**当前事件**，即当前由 JavaScript 代码的上下文处理的事件，如果当前没有事件被处理，则返回 `undefined`。应尽可能使用直接传递给事件处理程序的 {{domxref("Event")}} 对象来代替。
 - {{domxref("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Returns an object with functions for adding external search providers to the browser.
+  - : 返回一个带有向浏览器添加外部搜索提供者的功能的对象。
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
+  - : 返回视口相对于设备自然方向的度数（以 90 度为增量）。
 - {{domxref("Window.returnValue")}} {{Deprecated_Inline}}
-  - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
+  - : 返回给调用 {{domxref("window.showModalDialog()")}} 的函数的返回值，以便将该窗口显示为模态对话框。
 - {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Returns a reference to the window object of the sidebar
+  - : 返回对侧边栏的 window 对象的一个引用。
 - {{domxref("Window.status")}} {{Deprecated_Inline}}
-  - : Gets/sets the text in the statusbar at the bottom of the browser.
+  - : 获取/设置浏览器底部状态栏中的文本。
 
 ## 实例方法
 
