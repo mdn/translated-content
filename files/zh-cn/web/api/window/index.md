@@ -158,118 +158,118 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
 - {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
-  - : Register an event handler to a specific event type on the window.
+  - : 为 window 上的特定事件类型注册一个事件处理程序。
 - {{domxref("atob", "Window.atob()")}}
-  - : Decodes a string of data which has been encoded using base-64 encoding.
+  - : 解码一个使用 base-64 编码的数据字符串。
 - {{domxref("Window.alert()")}}
-  - : Displays an alert dialog.
+  - : 显示一个警报对话框。
 - {{domxref("Window.blur()")}}
-  - : Sets focus away from the window.
+  - : 将焦点从窗口上移开。
 - {{domxref("btoa", "Window.btoa()")}}
-  - : Creates a base-64 encoded ASCII string from a string of binary data.
+  - : 从一串二进制数据中创建一个 base-64 编码的 ASCII 字符串。
 - {{domxref("Window.cancelAnimationFrame()")}}
-  - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
+  - : 取消之前使用 {{domxref("Window.requestAnimationFrame")}} 安排的回调。
 - {{domxref("Window.cancelIdleCallback()")}}
-  - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
+  - : 取消之前使用 {{domxref("Window.requestIdleCallback")}} 安排的回调。
 - {{domxref("Window.clearImmediate()")}}
-  - : Cancels the repeated execution set using `setImmediate`.
+  - : 取消使用 `setImmediate` 设置的重复执行任务。
 - {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
+  - : 取消使用 {{domxref("setInterval()")}} 设置的重复执行任务。
 - {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
+  - : 取消使用 {{domxref("setTimeout()")}} 设置的延时执行任务。
 - {{domxref("Window.close()")}}
-  - : Closes the current window.
+  - : 关闭当前窗口。
 - {{domxref("Window.confirm()")}}
-  - : Displays a dialog with a message that the user needs to respond to.
+  - : 显示一个带有用户需要回应的信息的对话框。
 - {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
-  - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
+  - : 接受各种不同的图像源，并返回一个 {{jsxref("Promise")}}，经兑现可得到 {{domxref("ImageBitmap")}}。可以选择将图片源裁剪成以 _(sx, sy)_ 为起点的像素矩形，宽度为 sw，高度为 sh。
 - {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
-  - : Used to trigger an event.
+  - : 用于触发事件。
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
-  - : Writes a message to the console.
+  - : 向控制台中写一条消息。
 - {{domxref("fetch", "Window.fetch()")}}
-  - : Starts the process of fetching a resource from the network.
+  - : 开始从网络获取资源的过程。
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
-  - : Searches for a given string in a window.
+  - : 在窗口中搜索给定的字符串。
 - {{domxref("Window.focus()")}}
-  - : Sets focus on the current window.
+  - : 在当前窗口上设置焦点。
 - {{domxref("Window.getComputedStyle()")}}
-  - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
+  - : 获取指定元素的计算样式。计算的样式表示该元素的所有 CSS 属性的计算值。
 - {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_Inline}}
-  - : Gets default computed style for the specified element, ignoring author stylesheets.
+  - : 获取指定元素的默认计算样式，忽略作者样式表。
 - {{domxref("Window.getSelection()")}}
-  - : Returns the selection object representing the selected item(s).
+  - : 返回代表所选项目的 selection 对象。
 - {{domxref("Window.matchMedia()")}}
-  - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
+  - : 返回代表指定媒体查询字符串的 {{domxref("MediaQueryList")}} 对象。
 - {{domxref("Window.moveBy()")}}
-  - : Moves the current window by a specified amount.
+  - : 将当前窗口移动一个指定的偏量值。
 - {{domxref("Window.moveTo()")}}
-  - : Moves the window to the specified coordinates.
+  - : 将窗口移动到指定的坐标。
 - {{domxref("Window.open()")}}
-  - : Opens a new window.
+  - : 打开一个新窗口。
 - {{domxref("Window.postMessage()")}}
-  - : Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first.
+  - : 为一个窗口向另一个窗口发送一串数据提供了安全的手段，该窗口不需要与第一个窗口在同一域内。
 - {{domxref("Window.print()")}}
-  - : Opens the Print Dialog to print the current document.
+  - : 打开“打印”对话框，打印当前文档。
 - {{domxref("Window.prompt()")}}
-  - : Returns the text entered by the user in a prompt dialog.
+  - : 返回用户在提示对话框中输入的文本。
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
+  - : 返回 {{jsxref("Promise")}}，经兑现可得到包含一个代表本地可用字体的 {{domxref("FontData")}} 对象数组。
 - {{domxref("EventTarget.removeEventListener", "Window.removeEventListener()")}}
-  - : Removes an event listener from the window.
+  - : 从 window 上移除一个事件监听器。
 - {{domxref("reportError", "Window.reportError()")}}
-  - : Reports an error in a script, emulating an unhandled exception.
+  - : 报告一个脚本中的错误，模拟一个未处理的异常。
 - {{domxref("Window.requestAnimationFrame()")}}
-  - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
+  - : 告诉浏览器一个动画正在进行中，要求浏览器为下一个动画帧安排窗口的重绘。
 - {{domxref("Window.requestIdleCallback()")}}
-  - : Enables the scheduling of tasks during a browser's idle periods.
+  - : 启用浏览器空闲期间的任务调度。
 - {{domxref("Window.resizeBy()")}}
-  - : Resizes the current window by a certain amount.
+  - : 将当前窗口的大小调整到一定程度。
 - {{domxref("Window.resizeTo()")}}
-  - : Dynamically resizes window.
+  - : 动态地调整窗口的大小。
 - {{domxref("Window.scroll()")}}
-  - : Scrolls the window to a particular place in the document.
+  - : 将窗口滚动到文档中的一个特定位置。
 - {{domxref("Window.scrollBy()")}}
-  - : Scrolls the document in the window by the given amount.
+  - : 将窗口中的文档按给定值滚动。
 - {{domxref("Window.scrollByLines()")}} {{Non-standard_Inline}}
-  - : Scrolls the document by the given number of lines.
+  - : 按给定的行数滚动文档。
 - {{domxref("Window.scrollByPages()")}} {{Non-standard_Inline}}
-  - : Scrolls the current document by the specified number of pages.
+  - : 按给定的页数滚动文档。
 - {{domxref("Window.scrollTo()")}}
-  - : Scrolls to a particular set of coordinates in the document.
+  - : 将文档滚动至特定坐标。
 - {{domxref("Window.setImmediate()")}}
-  - : Executes a function after the browser has finished other heavy tasks.
+  - : 在浏览器完成其他繁重的任务后执行一个函数。
 - {{domxref("setInterval", "Window.setInterval()")}}
-  - : Schedules a function to execute every time a given number of milliseconds elapses.
+  - : 安排一个函数，在给定的毫秒数过去后执行。
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
-  - : Toggles a user's ability to resize a window.
+  - : 切换用户调整窗口大小的能力。
 - {{domxref("setTimeout", "Window.setTimeout()")}}
-  - : Schedules a function to execute in a given amount of time.
+  - : 安排函数在给定的时间内执行。
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
-  - : Sizes the window according to its content.
+  - : 根据窗口的内容确定其大小。
 - {{domxref("Window.showOpenFilePicker()")}} {{Experimental_Inline}}
-  - : Shows a file picker that allows a user to select a file or multiple files.
+  - : 显示一个文件选择器，允许用户选择一个文件或多个文件。
 - {{domxref("Window.showSaveFilePicker()")}} {{Experimental_Inline}}
-  - : Shows a file picker that allows a user to save a file.
+  - : 显示一个文件选择器，允许用户保存一个文件。
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
-  - : Displays a directory picker which allows the user to select a directory.
+  - : 显示一个目录选择器，允许用户选择一个目录。
 - {{domxref("Window.stop()")}}
-  - : This method stops window loading.
+  - : 该方法停止了窗口的加载。
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
-  - : Updates the state of commands of the current chrome window (UI).
+  - : 更新当前 chrome 窗口（用户界面）的命令状态。
 
 ### 已废弃方法
 
 - {{domxref("Window.back()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Moves back one in the window history. This method is deprecated; you should instead use {{domxref("History.back", "history.back()")}}.
+  - : 在窗口历史中后退一步。该方法已被废弃，应该使用 {{domxref("History.back", "history.back()")}} 代替。
 - {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
-  - : Registers the window to capture all events of the specified type.
+  - : 注册窗口以捕获所有指定类型的事件。
 - {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "history.forward()")}}.
+  - : 在窗口历史中前进一步。该方法已被废弃，应该使用 {{domxref("History.forward", "history.forward()")}} 代替。
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
-  - : Releases the window from trapping events of a specific type.
+  - : 解除窗口对特定类型事件的捕获。
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Displays a modal dialog.
+  - : 显示一个对话框。
 
 ## 事件
 
