@@ -82,17 +82,17 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 
 - [https://example.com#:~:text=asking-,for](https://example.com#:~:text=asking-,for) 滚动到文档中第二次出现 `for` 文本的地方并高亮它。
 - [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=表示-,referrer](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E8%A1%A8%E7%A4%BA-,referrer) 滚动到文档中第一次在文本 `sent` 后方出现 `referrer` 文本的地方并高亮它。这是该文档中 `referrer` 的第五次出现，如果没有前缀，会高亮第一次匹配。
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format) 滚动到文档中第一次在 `linked URL` 后方出现 `'s format` 文本的地方并高亮它。这是该文档中 `linked URL` 的第五次出现，如果没有后缀，会高亮第一次匹配。
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins](/en-US/docs/Web/HTML/Element/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins) 滚动到文档中第一次出现 `The Referer ... be sent` 文本的地方，该文本以 `downgrade:` 开头，以 `to origins` 结尾。这说明了一个更复杂的例子，前缀/后缀被用来锁定你想要链接的特定文本实例。尝试移除前缀，看看会匹配到什么。
+- [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=浏览器,-本身](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E6%B5%8F%E8%A7%88%E5%99%A8,-%E6%9C%AC%E8%BA%AB) 滚动到文档中第一次在 `浏览器` 后方出现 `本身` 文本的地方并高亮它。这是该文档中 `浏览器` 的第七次出现，如果没有后缀，会高亮第一次匹配。
+- [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=浏览器-,对待下载,自动打开。,-自动打开](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E6%B5%8F%E8%A7%88%E5%99%A8-,%E5%AF%B9%E5%BE%85%E4%B8%8B%E8%BD%BD,%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E3%80%82,-%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80) 滚动到文档中第一次出现“对待下载 ... 自动打开。”文本的地方，该文本以“浏览器”为前驱，“自动打开”为后续。这说明了一个更复杂的例子，前缀/后缀被用来锁定你想要链接的特定文本实例。尝试移除前缀，看看会匹配到什么。
 
 ### 使用多个文本片段的 URL
 
 你可以在同一个 URL 中指定多个文本片段，用与字符（`&`）将它们分开来突出显示。让我们看几个例子：
 
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked](/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked) 滚动到文档中第一次出现 `Causes` 和 `linked` 文本的地方并高亮它们。
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute) 滚动并高亮两段文本实例：
-  - 后面有 `'s format` 文本直接跟随的 `linked URL` 文本的第一次出现。
-  - 以 `attributes` 开头，以 `attribute` 结尾的文本的第一个实例，其前缀为 `Deprecated`。
+- [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=链接的%20URL,-，&text=当前-,页面,浏览环境](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E9%93%BE%E6%8E%A5%E7%9A%84%20URL,-，&text=%E5%BD%93%E5%89%8D-,%E9%A1%B5%E9%9D%A2,%E6%B5%8F%E8%A7%88%E7%8E%AF%E5%A2%83) 滚动并高亮两段文本实例：
+  - 后面有 `，` 文本直接跟随的 `链接的 URL` 文本的第一次出现。
+  - 以 `页面` 开头，以 `浏览环境` 结尾的文本的第一个实例，其前缀为 `当前`。
 
 如果你没有看到你的一个或多个文本片段被高亮显示，而且你确信你的语法是正确的，你可能只是高亮显示了一个与你预期不同的实例。它可能被高亮了，但在屏幕之外。
 
