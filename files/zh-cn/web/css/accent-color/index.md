@@ -11,9 +11,9 @@ slug: Web/CSS/accent-color
 
 支持 `accent-color` 属性的浏览器目前将其应用于下列 HTML 元素：
 
-- {{HTMLElement("input/checkbox", "&lt;input type=\"checkbox\"&gt;")}}
-- {{HTMLElement("input/radio", "&lt;input type=\"radio\"&gt;")}}
-- {{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}
+- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio)
+- [`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range)
 - {{HTMLElement("progress")}}
 
 ## 语法
