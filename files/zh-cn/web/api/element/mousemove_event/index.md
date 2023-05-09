@@ -5,7 +5,7 @@ slug: Web/API/Element/mousemove_event
 
 {{APIRef}}
 
-`mousemove` 事件在定点设备（通常指鼠标）的光标在元素内移动时触发。
+`mousemove` 事件在定点设备（通常指鼠标）的光标在元素内移动时，会在该元素上触发。
 
 ## 语法
 
