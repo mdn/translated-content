@@ -157,7 +157,7 @@ function drawLine(context, x1, y1, x2, y2) {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", 640, 450)}}
+{{EmbedLiveSample("示例", 640, 450)}}
 
 ## 规范
 
