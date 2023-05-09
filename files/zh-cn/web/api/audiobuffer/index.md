@@ -31,7 +31,7 @@ AudioBuffer 接口表示存在内存里的一段短小的音频资源，利用{{
 
 ## 例子
 
-以下的例子展示了如何构建一个 AudioBuffer 以及随机用白噪音填充。你可以在 [audio-buffer demo](https://github.com/mdn/webaudio-examples/tree/master/audio-buffer)库发现完整的源代码；一个[running live](https://mdn.github.io/webaudio-examples/audio-buffer/) 的版本也可获得。
+以下的例子展示了如何构建一个 AudioBuffer 以及随机用白噪音填充。你可以在 [audio-buffer 演示](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer)库发现完整的源代码；也可以获得一个[实时运行的](https://mdn.github.io/webaudio-examples/audio-buffer/)的版本。
 
 ```js
 // Stereo

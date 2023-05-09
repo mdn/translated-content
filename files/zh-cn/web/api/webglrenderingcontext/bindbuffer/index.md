@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/bindBuffer
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的 WebGLRenderingContext.bindBuffer() 方法将给定的{{domxref("WebGLBuffer")}}绑定到目标。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindBuffer()`** 方法将给定的 {{domxref("WebGLBuffer")}} 绑定到目标。
 
 ## 语法
 
@@ -35,7 +35,7 @@ void gl.bindBuffer(target, buffer);
 
 ### 返回值
 
-None.
+无。
 
 ### 异常
 

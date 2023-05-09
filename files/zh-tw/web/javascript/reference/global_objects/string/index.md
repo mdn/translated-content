@@ -146,8 +146,6 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
 console.log(eval(s2.valueOf())); // 回傳數字 4
 ```
 
-> **備註：** 對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章[`StringView` – a C-like representation of strings based on typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays/StringView)。
-
 ## 屬性
 
 - {{jsxref("String.prototype")}}

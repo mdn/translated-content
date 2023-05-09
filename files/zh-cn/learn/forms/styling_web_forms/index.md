@@ -378,7 +378,7 @@ button:focus {
 
 瞧！
 
-> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它 —— 查看 [在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/) (也可以查看[源代码](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example))。
+> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它 —— 查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
 
 ## 总结
 

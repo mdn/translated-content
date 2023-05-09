@@ -97,7 +97,7 @@ const arr = [
   {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' },
+  { id: "undefined" },
 ];
 
 let invalidEntries = 0;
@@ -112,11 +112,11 @@ function filterByID(item) {
 
 const arrByID = arr.filter(filterByID);
 
-console.log('Filtered Array\n', arrByID);
+console.log("过滤后的数组\n", arrByID);
 // 过滤后的数组
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log('无效条目数量 = ', invalidEntries);
+console.log("无效条目数量 =", invalidEntries);
 // 无效条目数量 = 5
 ```
 
@@ -125,7 +125,7 @@ console.log('无效条目数量 = ', invalidEntries);
 下例使用 `filter()` 根据搜索条件来过滤数组内容。
 
 ```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * 根据搜索条件（查询）筛选数组项
@@ -134,8 +134,8 @@ function filterItems(arr, query) {
     return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
 }
 
-console.log(filterItems(fruits, 'ap')); // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
+console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
+console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```
 
 ### 在稀疏数组上使用 filter()
@@ -168,37 +168,37 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 
 ```js
 // 修改每个单词
-let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+let words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 
 const modifiedWords = words.filter((word, index, arr) => {
-  arr[index + 1] += ' extra';
+  arr[index + 1] += " extra";
   return word.length < 6;
 });
 
 console.log(modifiedWords);
-// 注意，在长度为6以下有三个单词，但是由于它们已经被修改，所以返回一个单词
+// 注意，在长度为 6 以下有三个单词，但是由于它们已经被修改，所以返回一个单词
 // ["spray"]
 
 // 添加新单词
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 const appendedWords = words.filter((word, index, arr) => {
-  arr.push('new');
+  arr.push("new");
   return word.length < 6;
 })
 
 console.log(appendedWords);
-// 只有三个符合条件，即使 `words`本身现在有更多字符长度小于 6 的单词
+// 只有三个符合条件，即使 `words` 本身现在有更多字符长度小于 6 的单词
 // ["spray" ,"limit" ,"elite"]
 
 // 删除单词
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 const deleteWords = words.filter((word, index, arr) => {
   arr.pop();
   return word.length < 6;
 })
 
 console.log(deleteWords);
-// 注意，'elite' 也没有获得，因为它在过滤器达到之前就已经从 'words' 弹出了
+// 注意我们没有得到 'elite'，因为它在过滤器访问到它之前就已经从 'words' 弹出了
 // ["spray" ,"limit"]
 ```
 
@@ -213,8 +213,11 @@ console.log(deleteWords);
 ## 参见
 
 - [`core-js` 中 `Array.prototype.filter` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.filter()")}}
