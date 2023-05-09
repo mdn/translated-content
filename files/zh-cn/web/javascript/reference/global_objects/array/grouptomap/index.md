@@ -21,7 +21,7 @@ groupToMap(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 为数组中的每个元素执行的函数。它应该返回一个值（{{Glossary("object", "Object")}} 或{{Glossary("primitive", "基本类型")}}）来指示当前元素的组。该函数被调用时将传入以下参数：
+  - : 为数组中的每个元素执行的函数。它应该返回一个值（{{Glossary("object", "对象")}}或{{Glossary("primitive", "基本类型")}}）来指示当前元素的组。该函数被调用时将传入以下参数：
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`

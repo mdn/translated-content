@@ -18,7 +18,7 @@ at(index)
 ### 参数
 
 - `index`
-  - ：要返回的数组元素的索引 (从零开始)，将其[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。负数索引从数组末尾开始计数——如果 `index < 0`，则会访问 `index + array.length` 位置的元素。
+  - : 要返回的数组元素的索引（从零开始），会被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。负数索引从数组末尾开始计数——如果 `index < 0`，则会访问 `index + array.length` 位置的元素。
 
 ### 返回值
 

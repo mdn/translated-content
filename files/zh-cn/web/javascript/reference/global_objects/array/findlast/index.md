@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 
 - *第一个*匹配的元素，使用 {{jsxref("Array/find", "find()")}}。
 - 数组中最后一个匹配元素的*索引*，使用 {{jsxref("Array/findLastIndex", "findLastIndex()")}}。
-- *某个值的索引*，使用 {{jsxref("Array/indexOf", "indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
+- _某个值的索引_，使用 {{jsxref("Array/indexOf", "indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
 - 该数组中是否*存在*一个值，使用 {{jsxref("Array/includes()", "includes()")}}。同样地，它检查每个元素是否和值相等，而不是使用一个测试函数。
 - 是否有任意一个元素满足提供的测试函数，使用 {{jsxref("Array/some()", "some()")}}。
 

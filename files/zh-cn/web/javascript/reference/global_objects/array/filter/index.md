@@ -112,11 +112,11 @@ function filterByID(item) {
 
 const arrByID = arr.filter(filterByID);
 
-console.log("Filtered Array\n", arrByID);
+console.log("过滤后的数组\n", arrByID);
 // 过滤后的数组
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log("无效条目数量 = ", invalidEntries);
+console.log("无效条目数量 =", invalidEntries);
 // 无效条目数量 = 5
 ```
 
