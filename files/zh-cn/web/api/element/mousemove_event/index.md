@@ -78,7 +78,7 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 
 ## 示例
 
-下面的例子将使用 {{domxref("Element/mousedown_event", "mousedown")}}, `mousemove` 以及 {{domxref("Element/mouseup_event", "mouseup")}} 事件，实现一个允许用户在 HTML [canvas](/zh-CN/docs/Web/API/Canvas_API) 绘图的功能。这个例子的功能很简单：直线的粗细设置为 1，颜色始终为黑色。
+下面的例子将使用 {{domxref("Element/mousedown_event", "mousedown")}}、`mousemove` 以及 {{domxref("Element/mouseup_event", "mouseup")}} 事件，实现一个允许用户在 HTML [canvas](/zh-CN/docs/Web/API/Canvas_API) 上绘图的功能。它的功能很简单：直线的粗细设置为 1，颜色始终为黑色。
 
 当页面加载时，我们使用常量 `myPics` 和 `context` 分别保存将用于绘制的 ID 为 `myPics` 的 canvas 元素和 2d 上下文。
 
