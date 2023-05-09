@@ -167,7 +167,7 @@ function drawLine(context, x1, y1, x2, y2) {
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
