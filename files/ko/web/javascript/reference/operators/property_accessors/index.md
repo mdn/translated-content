@@ -1,7 +1,8 @@
 ---
 title: 속성 접근자
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 **속성 접근자**는 점 또는 괄호 표기법으로 객체의 속성에 접근할 수 있도록 해줍니다.

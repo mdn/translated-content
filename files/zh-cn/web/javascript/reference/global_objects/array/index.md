@@ -161,7 +161,7 @@ console.log(fruits.length); // 2
 | {{jsxref("Array/shift", "shift()")}}           | {{jsxref("Array/slice", "slice(1)")}}                 |
 | {{jsxref("Array/sort", "sort()")}}             | {{jsxref("Array/toSorted", "toSorted()")}}            |
 | {{jsxref("Array/splice", "splice()")}}         | {{jsxref("Array/toSpliced", "toSpliced()")}}          |
-| {{jsxref("Array/unshift", "unshift(v1, v2)")}} | {{jsxref("Array/concat", "toSpliced(0, 0, v1, v2)")}} |
+| {{jsxref("Array/unshift", "unshift(v1, v2)")}} | {{jsxref("Array/toSpliced", "toSpliced(0, 0, v1, v2)")}} |
 
 将改变原数组的方法转换为非修改方法的一种简单方式是使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或 {{jsxref("Array/slice", "slice()")}} 先创建一个副本：
 

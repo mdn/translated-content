@@ -3,7 +3,7 @@ title: 字体平滑
 slug: Web/CSS/font-smooth
 ---
 
-{{ CSSRef }} {{ Non-standard_header }}
+{{CSSRef}} {{ Non-standard_header }}
 
 **`font-smooth`** [CSS](/zh-CN/CSS) 属性用来控制字体渲染时的平滑效果。
 

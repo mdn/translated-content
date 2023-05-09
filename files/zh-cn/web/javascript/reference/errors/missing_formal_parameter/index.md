@@ -68,9 +68,6 @@ greet("Howdy"); // "Howdy"
 log({obj: "value"}); // Object { obj: "value" }
 ```
 
-## 相关内容
+## 参见
 
-- Other errors regarding formal parameters:
-
-  - [SyntaxError: Malformed formal parameter](/zh-CN/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
-  - [SyntaxError: redeclaration of formal parameter "x"](/zh-CN/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)
+- [SyntaxError: redeclaration of formal parameter "x"](/zh-CN/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

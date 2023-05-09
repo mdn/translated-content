@@ -58,7 +58,7 @@ showNotification(title, options)
     - `requireInteraction` {{experimental_inline}}
       - : 画面が十分に大きい端末では、ユーザーがクリックするか閉じるまで通知をアクティブにしておく必要があることを示します。 この値がないか `false` の場合、デスクトップ版の Chrome は約 20 秒後に通知を自動的に最小化します。既定値は `false` です。
     - `silent`
-      - : 設定されている場合、音やバイブレーションは発生しないことを示します。*オプション*の `silent` が `true` で、*オプション*の `vibrate` が存在する場合、TypeError 例外が発生します。既定値値は `false` です。
+      - : 設定されている場合、音やバイブレーションは発生しないことを示します。*オプション*の `silent` が `true` で、*オプション*の `vibrate` が存在する場合、TypeError 例外が発生します。既定値は `false` です。
     - `tag`
       - : 必要に応じてスクリプトを使用して通知を検索、置換、または削除できるようにする所与の通知の ID です。
     - `timestamp`

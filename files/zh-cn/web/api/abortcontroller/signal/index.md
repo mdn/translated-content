@@ -47,7 +47,7 @@ function fetchVideo() {
 
 > **备注：** 当 `abort()` 被调用，`fetch()` promise 将会抛出一个 `AbortError`.
 
-你可以在 github 上找到[完整的可以运行的示例](https://github.com/mdn/dom-examples/tree/master/abort-api)；你还可以看它的[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
+你可以在 GitHub 上找到[完整的可以运行的示例](https://github.com/mdn/dom-examples/tree/main/abort-api)；你还可以看它的[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
 
 ## 规范
 

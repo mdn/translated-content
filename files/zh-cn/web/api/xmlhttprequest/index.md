@@ -45,8 +45,6 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 一个无符号长整型（`unsigned long`）数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。
-- {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : 当请求超时调用的事件处理器。
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : {{domxref("XMLHttpRequestUpload")}}，代表上传进度。
 - {{domxref("XMLHttpRequest.withCredentials")}}
@@ -62,10 +60,6 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
   - : 一个布尔值，如果为真，则在请求时不会强制执行同源策略。
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : 一个布尔值，它指示对象是否是后台服务器端的请求。
-- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : 一个 {{jsxref("ArrayBuffer")}}，把请求的响应作为一个 JavaScript TypedArray。
-- {{domxref("XMLHttpRequest.multipart")}}{{Deprecated_Inline}}
-  - : 这是一个 Gecko 专有属性，是一个布尔值，已在 Firefox/Gecko 22 中被删除。请考虑使用 [Server-Sent Event](/zh-CN/docs/Web/API/Server-sent_events)、[Web Socket](/zh-CN/docs/Web/API/WebSockets_API)、或来自进度事件的 `responseText` 代替。
 
 ### 事件处理器
 
@@ -75,7 +69,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
 更多现代浏览器，包括 Firefox，除了可以设置 `on*` 属性外，也提供标准的监听器 {{domxref("EventTarget.addEventListener", "addEventListener()")}} API 来监听`XMLHttpRequest` 事件。
 
-## 方法
+## 实例方法
 
 - {{domxref("XMLHttpRequest.abort()")}}
   - : 如果请求已被发出，则立刻中止请求。
@@ -84,26 +78,13 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.getResponseHeader()")}}
   - : 返回包含指定响应头的字符串，如果响应尚未收到或响应中不存在该报头，则返回 `null`。
 - {{domxref("XMLHttpRequest.open()")}}
-  - : 初始化一个请求。该方法只能在 JavaScript 代码中使用，若要在 native code 中初始化请求，请使用 [`openRequest()`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)。
+  - : 初始化一个请求。
 - {{domxref("XMLHttpRequest.overrideMimeType()")}}
   - : 覆写由服务器返回的 MIME 类型。
 - {{domxref("XMLHttpRequest.send()")}}
   - : 发送请求。如果请求是异步的（默认），那么该方法将在请求发送后立即返回。
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
-  - : 设置 HTTP 请求头的值。必须在 `open()` 之后、`send()` 之前调用 `setRequestHeader()` 方法。
-
-### 非标准方法
-
-- {{domxref("XMLHttpRequest.init()")}}
-
-  - : 在 C++ 代码中初始化一个 XHR 对象。
-
-    > **警告：** 该方法不能在 JavaScript 代码中使用。
-
-- {{domxref("XMLHttpRequest.openRequest()")}}
-  - : 初始化一个请求。这个方法只能在原生 C++ 代码中使用；如果用 JavaScript 代码来初始化请求，使用 [`open()`](</zh-cn/nsIXMLHttpRequest#open()>) 代替。可参考 `open()` 的文档。
-- {{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}
-  - : `send()` 方法的变体，用来发送二进制数据。
+  - : 设置 HTTP 请求标头的值。必须在 {{domxref("XMLHttpRequest.open", "open()")}} 之后、{{domxref("XMLHttpRequest.send", "send()")}} 之前调用 `setRequestHeader()` 方法。
 
 ## 事件
 

@@ -4,7 +4,7 @@ slug: Web/CSS/filter-function/opacity
 original_slug: Web/CSS/filter-function/opacity()
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 The **`opacity()`** [CSS](/zh-CN/docs/Web/CSS) 函数在输入的图片实例上应用透明度属性，它的结果是一个 {{cssxref("&lt;filter-function&gt;")}}.
 

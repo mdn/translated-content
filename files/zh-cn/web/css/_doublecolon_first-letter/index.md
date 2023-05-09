@@ -3,7 +3,7 @@ title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 [CSS](/zh-CN/CSS) [伪元素](/zh-CN/CSS/Pseudo-elements) `::first-letter`会选中某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes)（块级元素）第一行的第一个字母，并且文字所处的行之前没有其他内容（如图片和内联的表格）。
 
