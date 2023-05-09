@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`values()`** 메서드는 배열의 각 아이템의 값을 순회하는 새로운 [배열 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
+**`values()`** 메서드는 배열의 각 아이템의 값을 순회하는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
 

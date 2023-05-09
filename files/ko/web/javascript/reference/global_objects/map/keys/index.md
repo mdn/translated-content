@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`keys()`** 메서드는 배열에서 각 인덱스의 키를 포함하는 새로운 _[배열 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ 객체를 반환합니다.
+**`keys()`** 메서드는 배열에서 각 인덱스의 키를 포함하는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
