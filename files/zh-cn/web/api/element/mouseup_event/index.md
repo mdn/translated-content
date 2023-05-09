@@ -5,7 +5,7 @@ slug: Web/API/Element/mouseup_event
 
 {{APIRef}}
 
-**`mousedown`** 事件在定点设备（如鼠标或触摸板）按钮在{{domxref("Element", "元素", "", 1)}}内释放时触发。
+**`mousedown`** 事件在定点设备（如鼠标或触摸板）按钮在{{domxref("Element", "元素", "", 1)}}内释放时，在该元素上触发。
 
 `mouseup` 事件与 {{domxref("Element.mousedown_event", "mousedown")}} 事件相对应。
 
