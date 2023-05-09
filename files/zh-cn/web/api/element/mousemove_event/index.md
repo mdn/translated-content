@@ -84,7 +84,7 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 
 当 `mousedown` 事件被触发时，绘图也开始了。首先，我们将鼠标的 `x` 坐标和 `y` 坐标分别赋值给变量 `x` 和 `y`，然后设置 `isDrawing` 为 `true`。
 
-当鼠标在页面上移动时，`mousemove` 事件被触发。当 `isDrawing` 为 true 时，事件处理程序将会调用 `drawLine` 函数，该函数从变量 `x` 和 `y` 所指的位置开始到鼠标现在所在的位置画一条线。
+当鼠标在页面上移动时，`mousemove` 事件被触发。当 `isDrawing` 为 true 时，事件处理器将会调用 `drawLine` 函数，该函数从变量 `x` 和 `y` 所指的位置开始到鼠标现在所在的位置画一条线。
 
 当 `drawLine()` 调用结束时，我们需要把调整后的坐标赋值到 `x` 和 `y` 中。
 
